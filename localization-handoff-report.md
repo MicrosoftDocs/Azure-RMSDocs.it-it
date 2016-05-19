@@ -6,21 +6,21 @@
 ## File List
  Source File | Status | Details 
  ----------- | ------ | ------- 
- [Azure-RMSDocs\index.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/dfacc169483c24cce4dfd02a582b325214243a04/Azure-RMSDocs/index.md) | OutofSyncHandedBackSuccess | [Details](#6360c91fe95537d3c3780f4c5564d2efc83c547f163)
+ [Azure-RMSDocs\deploy-use\configure-usage-rights.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/9624c8e5fc050a045c6eb1effa956d49b66c52e2/Azure-RMSDocs/deploy-use/configure-usage-rights.md) | OutofSyncHandedBackSuccess | [Details](#0c24d253e3f1ab3a87852c69c15c5211d17b433318)
 
 ## Item Details
-##### <a name='6360c91fe95537d3c3780f4c5564d2efc83c547f163'></a> Source: [Azure-RMSDocs\index.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/dfacc169483c24cce4dfd02a582b325214243a04/Azure-RMSDocs/index.md)
+##### <a name='0c24d253e3f1ab3a87852c69c15c5211d17b433318'></a> Source: [Azure-RMSDocs\deploy-use\configure-usage-rights.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/9624c8e5fc050a045c6eb1effa956d49b66c52e2/Azure-RMSDocs/deploy-use/configure-usage-rights.md)
 * Status: OutofSyncHandedBackSuccess
 * Target File: 
-* Handoff File: [index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/0201fba635431a5e0d01f2c261fef9295a9f19c4/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.it-it.xlf)
-* Handoff Datetime: 2016-05-19 01:15:35
+* Handoff File: [configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/1cb2c90419accfe8cc99223db434b83726e0c187/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.it-it.xlf)
+* Handoff Datetime: 2016-05-19 21:10:39
 * Handoff Reason: Include
 * Archive File: 
 * Archive Datetime: 0001-01-01 00:00:00
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [Azure-RMSDocs\index.md](https://github.com/Microsoft/Azure-RMSDocs-pr.it-it/blob/95c2e410380b9b94d5920463e0883a5b89ec9dce/Azure-RMSDocs/index.md)
-* Current Handback File: [index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/d0a0345d513a039aac4496f6026c596f86290b59/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/index.a68f40487a64012c94076ad9808d6bc7b03e9c0e.it-it.xlf)
+* Current Target File: [Azure-RMSDocs\deploy-use\configure-usage-rights.md](https://github.com/Microsoft/Azure-RMSDocs-pr.it-it/blob/95c2e410380b9b94d5920463e0883a5b89ec9dce/Azure-RMSDocs/deploy-use/configure-usage-rights.md)
+* Current Handback File: [configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/d0a0345d513a039aac4496f6026c596f86290b59/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.it-it.xlf)
 * Current Handback Datetime: 2016-05-13 00:05:10
 * [Back to Top](#report-top)
 
