@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [Azure-RMSDocs\includes\rms-quickstart-intro-include.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/5b56229ad5e234663a23812b09a7f934d6738e5a/Azure-RMSDocs/includes/rms-quickstart-intro-include.md) | InSyncHandedBackSuccess | [Details](#20715a7298d29bcf817ddbfc809eb84ead8d97ef153)
 
 ## Item Details
-##### <a name='20715a7298d29bcf817ddbfc809eb84ead8d97ef153'></a> Source: [Azure-RMSDocs\includes\rms-quickstart-intro-include.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/5b56229ad5e234663a23812b09a7f934d6738e5a/Azure-RMSDocs/includes/rms-quickstart-intro-include.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [Azure-RMSDocs\includes\rms-quickstart-intro-include.md](https://github.com/Microsoft/Azure-RMSDocs-pr.it-it/blob/85944878f32b316afe573a06ef67b4a8b880cc8d/Azure-RMSDocs/includes/rms-quickstart-intro-include.md)
-* Handoff File: [rms-quickstart-intro-include.31997a23f9b8ff765da303310452d81dda7d65b4.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/088663159c253e5e54804c5aaa601e03e5caa253/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/rms-quickstart-intro-include.31997a23f9b8ff765da303310452d81dda7d65b4.it-it.xlf)
-* Handoff Datetime: 2016-04-20 22:46:14
-* Handoff Reason: Include
-* Archive File: [rms-quickstart-intro-include.31997a23f9b8ff765da303310452d81dda7d65b4.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/4fbe9d0a790f24bb1e1c833c601a90fe0ab2ccaa/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/rms-quickstart-intro-include.31997a23f9b8ff765da303310452d81dda7d65b4.it-it.xlf)
-* Archive Datetime: 2016-04-26 04:00:55
-* Handback File: [rms-quickstart-intro-include.31997a23f9b8ff765da303310452d81dda7d65b4.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/d58ee30f52b550f432c424afdfaa24d38b15bb31/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/rms-quickstart-intro-include.31997a23f9b8ff765da303310452d81dda7d65b4.it-it.xlf)
-* Handback Datetime: 2016-05-24 14:58:33
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
