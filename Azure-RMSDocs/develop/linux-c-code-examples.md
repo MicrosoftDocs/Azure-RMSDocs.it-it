@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 11acef4b-67f8-4e45-a0e7-d9310213b5f9
-
+ms.assetid: 0F7714CA-1D3E-4846-B187-739825B7DE26
 # optional metadata
 
 #ROBOTS:
@@ -25,17 +24,11 @@ ms.suite: ems
 
 ---
 
-﻿# Esempi di codice Linux
+# Esempi di codice Linux
 
 In questo argomento sono presentati scenari elementi di codice importanti per la versione Linux di RMS SDK.
 
 I frammenti di codice riportati di seguito provengono da applicazioni di esempio, *rms\_sample* e *rmsauth\_sample*. Per ulteriori informazioni, vedere gli [esempi](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples) sul repository GitHub.
-
--   [**Scenario**: accesso alle informazioni sui criteri di protezione da un file protetto](#scenario__access_protection_policy_information_from_a___protected_file)
--   [**Scenario**: creazione di un nuovo file protetto tramite un modello](#scenario__create_a_new_protected_file_using_a_template)
--   [**Scenario**: protezione personalizzata di un file](#scenario__protect_a_file_using_custom_protection)
--   [WorkerThread - un metodo di supporto](#workerthread_-_a_supporting_method)
--   [**Scenario**: autenticazione di RMS](#scenario__rms_authentication)
 
 ## Scenario: accesso alle informazioni sui criteri di protezione da un file protetto
 
@@ -616,6 +609,6 @@ Descrizione: chiamare il metodo **result-&gt; accessToken()**
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 
