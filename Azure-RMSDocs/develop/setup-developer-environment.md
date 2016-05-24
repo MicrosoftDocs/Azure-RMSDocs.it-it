@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 73f7cbbf-8559-4f39-bec9-c8e20f515a78
-
+ms.assetid: 296FC4C0-99C6-4997-AD97-5CEE01221B1A
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Configurare l'ambiente di sviluppo
 
 Gli argomenti seguenti illustrano la configurazione dell'ambiente di sviluppo per il funzionamento con le API SDK di AD RMS per il sistema operativo in uso.
@@ -45,6 +43,6 @@ Gli argomenti seguenti illustrano la configurazione dell'ambiente di sviluppo pe
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

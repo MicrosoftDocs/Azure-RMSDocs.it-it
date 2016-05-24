@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 23e80932-9883-41f3-833d-b263fb419a62
-
+ms.assetid: 728113C9-FCF9-4280-BE1D-6AF5C15E449E
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Introduzione
+# Introduzione
 
 La piattaforma Right Management Services SDK 2.1 consente agli sviluppatori di creare applicazioni che sfruttano la protezione delle informazioni RMS. La piattaforma gestisce procedure di sicurezza complesse, ad esempio la gestione delle chiavi e l’elaborazione delle operazioni di crittografia e decrittografia, e offre un'API semplificata per agevolare lo sviluppo delle applicazioni.
 
@@ -62,7 +61,7 @@ RMS SDK 2.1 supporta una serie di importanti piattaforme client e server. Per al
 **Una sola scrittura**: le applicazioni RMS SDK 2.1 non richiedono la modifica o la ricompilazione del codice per operare con le più nuove funzionalità RMS. Le nuove funzionalità RMS diventano disponibili nell’applicazione esistente non appena vengono aggiunte al server RMS.
 **Coerenza**: RMS SDK 2.1 semplifica la scrittura di applicazioni che rispettano costantemente le diverse configurazioni RMS. Inoltre riduce inoltre notevolmente la quantità dell’interfaccia utente di RMS che lo sviluppatore dell'applicazione deve creare, favorendo un aspetto uniforme e coerente e riducendo la necessità di formazione dell'utente.
 
-### Argomenti correlati
+## Argomenti correlati
 
 * [Esempi di AD RMS](samples.md)
 * [Blog per sviluppatori AD RMS](http://blogs.msdn.com/b/rms/)
@@ -79,6 +78,6 @@ RMS SDK 2.1 supporta una serie di importanti piattaforme client e server. Per al
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

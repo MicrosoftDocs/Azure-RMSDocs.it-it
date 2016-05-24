@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: b3acfcd5-1af5-4f3a-912b-962198c59103
-
+ms.assetid: 3B088F14-81C5-4C78-8DED-F5F153353EE0
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Impostazione della modalità di sicurezza dell'API
 
 È possibile scegliere la modalità di sicurezza eseguita dall'applicazione API file tramite la funzione [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty).
@@ -38,7 +36,7 @@ Per altre informazioni sulla *modalità server*, vedere [Tipi di applicazioni](a
 
  
 
-### Argomenti correlati
+## Argomenti correlati
 
 * [Tipi di applicazioni](application-types.md)
 * [Concetti per sviluppatori](ad-rms-concepts-nav.md)
@@ -52,6 +50,6 @@ Per altre informazioni sulla *modalità server*, vedere [Tipi di applicazioni](a
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

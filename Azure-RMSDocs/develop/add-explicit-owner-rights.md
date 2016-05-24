@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: b2cd9dd4-6590-488e-9efb-27bdab41eff6
-
+ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Aggiungere diritti proprietario espliciti
 
 L'applicazione deve aggiungere in modo esplicito i diritti "proprietario" durante la creazione di una licenza da zero ([**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)).
@@ -119,6 +117,6 @@ A questi utenti vengono aggiunti i due diritti seguenti:
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

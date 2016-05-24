@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: deb9a110-c098-4834-8319-05d5a28a0ccd
-
+ms.assetid: EC831494-7F2C-4C70-9063-B02CDDEA14EE
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Formati di file supportati
 
 L'API file supporta i formati nativi e PFile.
@@ -39,7 +37,7 @@ La versione corrente dell'API file supporta la protezione nativa per i file di M
 
 Gli amministratori possono impostare le chiavi del Registro di sistema per configurare se e come i file devono essere protetti in base all'estensione di file. Per altre informazioni su come configurare la protezione del file quando si usa l'API file, vedere l'articolo relativo alla [configurazione dell'API file](file-api-configuration.md).
 
-### Argomenti correlati
+## Argomenti correlati
 
 * [Note per gli sviluppatori](developer-notes.md)
 * [Configurazione dell'API file](file-api-configuration.md)
@@ -51,6 +49,6 @@ Gli amministratori possono impostare le chiavi del Registro di sistema per confi
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

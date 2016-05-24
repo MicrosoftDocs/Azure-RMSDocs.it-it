@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: a58894d5-3271-46d7-bb1c-fbd22eae8530
-
+ms.assetid: B546B6C1-ADC1-4EBD-95E2-B4A74E4E980B
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Panoramica
 
 Rights Management Services (RMS) è una tecnologia di protezione che consente di proteggere le informazioni digitali da usi non autorizzati. Tramite l’applicazione abilitata all’uso di diritti, i proprietari del contenuto potranno definire gli utenti autorizzati ad aprire, modificare, stampare, inoltrare o eseguire altre operazioni con il relativo contenuto.
@@ -64,6 +62,6 @@ Per iniziare, vedere [Introduzione](getting-started-with-ad-rms-2-0.md).
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

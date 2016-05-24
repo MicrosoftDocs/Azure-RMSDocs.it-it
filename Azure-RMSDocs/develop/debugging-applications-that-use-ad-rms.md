@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: caf031ca-4876-4d42-9fbc-8638f579fb38
-
+ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Eseguire il debug dell'applicazione abilitata all'uso di diritti
 
 L'argomento seguente illustra come eseguire il debug dell'applicazione e usare il registro eventi di Windows.
@@ -72,7 +70,7 @@ Ad esempio, il comando seguente abiliterà il registro eventi MSIPC e imposterà
 
  
 
-### Argomenti correlati
+## Argomenti correlati
 
 * [Modalità d'uso](how-to-use-msipc.md)
  
@@ -83,6 +81,6 @@ Ad esempio, il comando seguente abiliterà il registro eventi MSIPC e imposterà
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

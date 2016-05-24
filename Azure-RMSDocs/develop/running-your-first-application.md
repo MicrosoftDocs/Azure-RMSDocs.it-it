@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 43b611a8-2cc0-49a8-9db9-e81321c38f7a
-
+ms.assetid: 834B7242-31D3-4275-A892-CFE95A61E29E
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Test dell'applicazione abilitata all'uso di diritti
 
 Questo argomento descrive la procedura per portare a termine il test dell'applicazione abilitata all'uso di diritti per SDK Rights Management Services 2.1.
@@ -107,7 +105,7 @@ Per generare un manifesto dell'applicazione mediante la catena di certificati di
 
     Per informazioni su come configurare il client nel computer in uso, vedere [Configurare il client](how-to-configure-the-ad-rms-client-2-0.md). Per informazioni sull'installazione di un server RMS, vedere [Installare e configurare il server](how-to-install-and-configure-an-rms-server.md).
 
-### Argomenti correlati
+## Argomenti correlati
 
 * [Procedura](how-to-use-msipc.md)
 * [Configurare il client](how-to-configure-the-ad-rms-client-2-0.md)
@@ -125,6 +123,6 @@ Per generare un manifesto dell'applicazione mediante la catena di certificati di
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 
