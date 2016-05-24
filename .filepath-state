@@ -398,15 +398,6 @@
   "218a13617c6e595ca6654358bca9043538f4e2ff": [
     "Azure-RMSDocs\\develop\\active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md"
   ],
-  "482a4fdf47624e36569e07a6993672564e44764a": [
-    "Azure-RMSDocs\\develop\\active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md"
-  ],
-  "8c36804bf788fe31a4b4ba8bbd996903172b7601": [
-    "Azure-RMSDocs\\develop\\active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md"
-  ],
-  "a856d9f0ac323bd213c8c9954b6477a4e8e4fd7c": [
-    "Azure-RMSDocs\\develop\\active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md"
-  ],
   "8c186a71befdce2d9671d32aabdeb8d1fe57ee35": [
     "Azure-RMSDocs\\develop\\add-explicit-owner-rights.md"
   ],
@@ -638,12 +629,6 @@
   "6f633d2e7b4850c1985a50c6b3a7a03bbbe8a027": [
     "Azure-RMSDocs\\develop\\how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md"
   ],
-  "cadef4f0459786507cd7faad22da8d21ebae6e36": [
-    "Azure-RMSDocs\\develop\\how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md"
-  ],
-  "7df7759fb727a40e5e55584873f426a49b5ec8d9": [
-    "Azure-RMSDocs\\develop\\how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md"
-  ],
   "b62f18a5d58a63bd20eae8e12ea17b9938f32805": [
     "Azure-RMSDocs\\develop\\how-to-configure-the-ad-rms-client-2-0.md"
   ],
@@ -678,15 +663,6 @@
     "Azure-RMSDocs\\develop\\how-to-set-up-the-pre-production-development-environment.md"
   ],
   "9d4d7e6e3e87f17517b9d60429f908e2edeb03d9": [
-    "Azure-RMSDocs\\develop\\how-to-set-up-the-pre-production-development-environment.md"
-  ],
-  "3070966ce8255fc302cba8be4e8596335679d12c": [
-    "Azure-RMSDocs\\develop\\how-to-set-up-the-pre-production-development-environment.md"
-  ],
-  "6e817c3536e3c22babc5dccace0f71eaf9fd2a0f": [
-    "Azure-RMSDocs\\develop\\how-to-set-up-the-pre-production-development-environment.md"
-  ],
-  "546322e58352573188e0d8a5928182968a8d34e8": [
     "Azure-RMSDocs\\develop\\how-to-set-up-the-pre-production-development-environment.md"
   ],
   "c8f9dbb6579fa029d650f5be254c6bffd9c3eecd": [
