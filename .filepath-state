@@ -524,12 +524,6 @@
   "b46c9eae435dda222606e9bfe7b45b0cb4b1e821": [
     "Azure-RMSDocs\\develop\\code-examples.md"
   ],
-  "feea89627934739127c608117c12943edecca74f": [
-    "Azure-RMSDocs\\develop\\code-examples.md"
-  ],
-  "24e7a1051e80b7774ae2d207b2d550299df07f53": [
-    "Azure-RMSDocs\\develop\\code-examples.md"
-  ],
   "3b935953f9e8da1ecb1359f91176d0297a3ee66e": [
     "Azure-RMSDocs\\develop\\common-error-conditions-and-solutions.md"
   ],
@@ -540,12 +534,6 @@
     "Azure-RMSDocs\\develop\\common-error-conditions-and-solutions.md"
   ],
   "1476cfafbc3ecf619e66fee22f657c1714deffe8": [
-    "Azure-RMSDocs\\develop\\community-resources.md"
-  ],
-  "6d8a64e4e28bcf2aa7d38897744752ea46e430c4": [
-    "Azure-RMSDocs\\develop\\community-resources.md"
-  ],
-  "32417af0749b9c6cb4948eae0a14232ea9c1e63d": [
     "Azure-RMSDocs\\develop\\community-resources.md"
   ],
   "7832f87febd6d9f87a3975c2084caca7aa73b9fc": [
@@ -776,15 +764,6 @@
   "ace7103cfb44d84a7dd6bf64f57c2a47530117e0": [
     "Azure-RMSDocs\\develop\\linux-c-code-examples.md"
   ],
-  "20cc6997a4e8d447f7046a549757a78cc2856141": [
-    "Azure-RMSDocs\\develop\\linux-c-code-examples.md"
-  ],
-  "23cde9e045434e3aa3e5bc005d0f09d6875a5c29": [
-    "Azure-RMSDocs\\develop\\linux-c-code-examples.md"
-  ],
-  "c05ad383a5a49b7904bdb9fc095148d62015488c": [
-    "Azure-RMSDocs\\develop\\linux-c-code-examples.md"
-  ],
   "d6920b8ce09b39d98da9e9c197b17a1f13d21c8e": [
     "Azure-RMSDocs\\develop\\linux-setup.md"
   ],
@@ -816,12 +795,6 @@
     "Azure-RMSDocs\\develop\\samples.md"
   ],
   "3d6e7c2b40ba80988e93186fd68a12e6216b477d": [
-    "Azure-RMSDocs\\develop\\sdk-elements.md"
-  ],
-  "005fa7d6a6d63c99023c990690bd80903ca67f2b": [
-    "Azure-RMSDocs\\develop\\sdk-elements.md"
-  ],
-  "f9d6c7bea54ad90777d092a5846b0a56c3360ebf": [
     "Azure-RMSDocs\\develop\\sdk-elements.md"
   ],
   "b4de8458ace7a70b27120189ee821729836cc97e": [
