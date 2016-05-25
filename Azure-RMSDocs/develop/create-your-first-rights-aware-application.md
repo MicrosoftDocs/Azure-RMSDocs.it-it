@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: c1eb27e1-1d58-4899-9c6d-6e53bc92889e
-
+ms.assetid: C827E6B8-8CF2-4C86-AF97-60D66851827E
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Installare l'SDK
 
 Questo argomento descrive l'installazione degli strumenti per sviluppatori.
@@ -43,7 +41,7 @@ Questo argomento descrive l'installazione degli strumenti per sviluppatori.
 
 Per altre informazioni sui file installati nel sistema da "setup\_sdk.exe", vedere l'articolo relativo ai [file dell'ambiente di sviluppo](sdk-elements.md).
 
-### Argomenti correlati
+## Argomenti correlati
 
 * [Modalità d'uso](how-to-use-msipc.md)
 * [File dell'ambiente di sviluppo](sdk-elements.md)
@@ -55,6 +53,6 @@ Per altre informazioni sui file installati nel sistema da "setup\_sdk.exe", vede
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

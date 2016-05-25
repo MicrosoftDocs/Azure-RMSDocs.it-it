@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 749146d4-a49d-47dc-a43a-d37d96310e18
-
+ms.assetid: 97169FC3-1395-4433-A632-7B0F020FABFE
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Tipi di applicazioni
 
 
@@ -60,7 +58,7 @@ Microsoft Notepad è un'applicazione rich client semplice. Microsoft Office è u
 
 Per altre informazioni sulla protezione delle applicazioni, vedere [Informazioni sulle limitazioni di utilizzo](understanding-usage-restrictions.md).
 
-### Argomenti correlati
+## Argomenti correlati
 
 * [Concetti per sviluppatori](ad-rms-concepts-nav.md)
 * [Esempio IpcDlp](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
@@ -75,6 +73,6 @@ Per altre informazioni sulla protezione delle applicazioni, vedere [Informazioni
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

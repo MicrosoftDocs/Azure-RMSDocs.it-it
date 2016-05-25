@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 8581e996-79b4-4ffc-a63e-2236c83dc954
-
+ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Configurare Visual Studio
+# Configurare Visual Studio
 
 Questo argomento contiene le istruzioni su come configurare un progetto di Visual Studio per usare Rights Management Services SDK 2.1.
 
@@ -74,7 +73,7 @@ Queste istruzioni sono valide per la creazione di un'applicazione nativa a 32 bi
 
     ![Campo dei file di risorse in Esplora soluzioni](../media/original_file_name.png)
 
-### Argomenti correlati
+## Argomenti correlati
 
 * [Procedura](how-to-use-msipc.md)
 * [Installare l'SDK](create-your-first-rights-aware-application.md)
@@ -86,6 +85,6 @@ Queste istruzioni sono valide per la creazione di un'applicazione nativa a 32 bi
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

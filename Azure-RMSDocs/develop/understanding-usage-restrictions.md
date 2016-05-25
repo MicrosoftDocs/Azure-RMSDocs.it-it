@@ -2,7 +2,7 @@
 # required metadata
 
 title: Informazioni sulle restrizioni di utilizzo | Azure RMS
-description:
+description: Tutte le applicazioni abilitate per RMS devono imporre restrizioni di utilizzo.
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 361bbc29-821f-4577-ace6-0aec799039a9
-
+ms.assetid: E388B16C-ECDA-4696-A040-D457D3C96766
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Informazioni sulle restrizioni di utilizzo
+# Informazioni sulle restrizioni di utilizzo
 
 Tutte le applicazioni abilitate per RMS devono imporre restrizioni di utilizzo. Una restrizione di utilizzo è una condizione risultante da un tentativo dell'utente di eseguire un'azione, ad esempio la stampa di un documento, ma i criteri RMS per tale documento non concedono autorizzazioni o diritti per eseguire l'azione (ad esempio, il diritto di stampa).
 
@@ -51,7 +50,7 @@ Tutte le applicazioni abilitate per RMS devono imporre restrizioni di utilizzo. 
 
     Per altre informazioni sull'imposizione di diritti specifici, vedere [Informazioni di riferimento sulle restrizioni di utilizzo](usage-restriction-reference.md).
 
-### Argomenti correlati
+## Argomenti correlati
 
 * [Concetti per sviluppatori](ad-rms-concepts-nav.md)
 * [**IpcAccessCheck**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)
@@ -64,6 +63,6 @@ Tutte le applicazioni abilitate per RMS devono imporre restrizioni di utilizzo. 
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 
