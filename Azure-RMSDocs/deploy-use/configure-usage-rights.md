@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/19/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Configurazione dei diritti di utilizzo per Azure Rights Management
+
+*Si applica a: Azure Rights Management, Office 365*
+
 Quando si imposta la protezione su file o messaggi di posta elettronica mediante Azure Rights Management (Azure RMS) e non si usa un modello, è necessario configurare personalmente i diritti di utilizzo. Inoltre, quando si configurano modelli personalizzati per Azure RMS, si selezionano i diritti di utilizzo che verranno applicati automaticamente quando utenti, amministratori o servizi configurati selezionano il modello. Ad esempio, nel portale di Azure classico è possibile selezionare ruoli che configurano un raggruppamento logico di diritti di utilizzo oppure è possibile configurare singoli diritti.
 
 Usare le informazioni incluse in questo articolo per configurare i diritti di utilizzo desiderati per l'applicazione in uso e comprendere come tali diritti vengono interpretati dalle applicazioni.
@@ -47,8 +50,6 @@ Consente di modificare, riorganizzare, formattare o filtrare il contenuto all'in
 **Nome nei modelli AD RMS**: *Modifica*
 
 **Valore costante o valore API**: *non applicabile*
-
-Nelle applicazioni di Office questo diritto consente anche di salvare il documento.
 
 ---
 
@@ -90,7 +91,7 @@ Questo diritto è disponibile nell’SDK, è disponibile come criterio ad hoc ne
 
 ### Salva con nome, Esporta
 
-Abilita l'opzione per il salvataggio del contenuto con un nome file differente (Salva con nome). A seconda dell'applicazione, il file potrebbe essere salvato senza protezione.
+Abilita l'opzione per il salvataggio del contenuto con un nome file differente (Salva con nome). Per i documenti di Office, il file può essere salvato senza protezione.
 
 **Codifica nei criteri**: EXPORT
 
@@ -108,7 +109,7 @@ Consente di eseguire anche altre opzioni di esportazione nelle applicazioni, ad 
 
 ### Inoltra
 
-Abilita l'opzione per l'inoltro di un messaggio di posta elettronica e per l'aggiunta di destinatari nelle righe *A* e *Cc* .
+Abilita l'opzione per l'inoltro di un messaggio di posta elettronica e per l'aggiunta di destinatari nelle righe *A* e *Cc* . Questo diritto non si applica ai documenti, ma solo ai messaggi di posta elettronica.
 
 **Codifica nei criteri**: FORWARD
 
@@ -206,55 +207,24 @@ Consente all’utente di aprire il documento e visualizzarne il contenuto.
 
 ---
 
-### Visualizza diritti
+### Copia
 
-Consente all’utente di visualizzare i criteri applicati al documento.
+Abilita le opzioni per la copia dei dati, inclusa l'acquisizione di schermate, nello stesso documento o in un altro.
 
-**Codifica nei criteri**: VIEWRIGHTSDATA
+**Codifica nei criteri:** EXTRACT
 
-**Implementazione nei diritti personalizzati di Office:** non implementato.
+**Implementazione nei diritti personalizzati di Office:** come l'opzione di diritto personalizzato *Consenti agli utenti con accesso in lettura di copiare il contenuto*.
 
-**Nome nel portale di Azure classico**: *Visualizza diritti assegnati*
+**Nome nel portale di Azure classico:** *Copia ed estrai contenuto*
 
-**Nome nei modelli AD RMS:** *Visualizza diritti*
+**Nome nei modelli AD RMS:** *Estrai*
 
-**Valore costante o valore API:** IPC_READ_RIGHTSL"VIEWRIGHTSDATA"
+**Costante API o valore:** IPC_GENERIC_EXTRACTL"EXTRACT"
 
----
-
-### Nome comune: Visualizza diritti
-
-Consente all’utente di visualizzare i criteri applicati al documento.
-
-**Codifica nei criteri**: VIEWRIGHTSDATA
-
-**Implementazione nei diritti personalizzati di Office:** non implementato.
-
-**Nome nel portale di Azure classico**: *Visualizza diritti assegnati*
-
-**Nome nei modelli AD RMS:** *Visualizza diritti*
-
-**Valore costante o valore API:** IPC_READ_RIGHTSL"VIEWRIGHTSDATA"
-
-Ignorato da alcune applicazioni.
+In alcune applicazioni consente anche di salvare l'intero documento in un formato non protetto.
 
 ---
 
-### Modifica diritti
-
-Consente all'utente di modificare il criterio applicato al documento. Include la rimozione della protezione.
-
-**Codifica nei criteri**: EDITRIGHTSDATA
-
-**Implementazione nei diritti personalizzati di Office:** non implementato.
-
-**Nome nel portale di Azure classico:** *Modifica diritti*
-
-**Nome nei modelli AD RMS**: *Modifica diritti*
-
-**Valore costante o valore API:** IPC_READ_RIGHTSL"EDITRIGHTSDATA"
-
----
 
 ### Consenti macro
 
@@ -302,6 +272,6 @@ I diritti inclusi con i modelli predefiniti sono i seguenti:
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO3-->
 
 

@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Applicazione Rights Management sharing&colon; Cronologia delle versioni | Azure RMS
+title: Applicazione di condivisione Rights Management&colon; Cronologia delle versioni | Azure RMS
 description:
 keywords:
 author: cabailey
@@ -26,12 +26,15 @@ ms.suite: ems
 ---
 
 # Applicazione di condivisione Rights Management: Cronologia delle versioni
+
+*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+
 Il team di Rights Management aggiorna regolarmente l'applicazione di condivisione di condivisione Rights Management con correzioni e nuove funzionalità. Utilizzare le informazioni seguenti per visualizzare gli elementi nuovi o modificati in una versione. La versione più recente è elencata per prima.
 
 Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
 > [!NOTE]
-> Per commenti o domande sull'applicazione di RMS sharing, inviare un messaggio di posta elettronica a [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
+> Per commenti o domande sull'applicazione di condivisione RMS, inviare un messaggio di posta elettronica a [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
 
 ## Versione 1.0.2004.0
 **Rilasciata**: 11/12/2015
@@ -59,7 +62,7 @@ Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
 -   Supporto per Multi-Factor Authentication (MFA) per Azure RMS, che rimuove inoltre la dipendenza dall’Assistente per l'accesso Microsoft per applicazioni che utilizzano l’autenticazione moderna.
 
-    Per altre informazioni, vedere la sezione [Multi-Factor Authentication (MFA) e Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms) di [Requisiti per Azure Rights Management](../get-started/requirements-azure-rms.md).
+    Per altre informazioni, vedere la sezione [Multi-Factor Authentication (MFA) e Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms) in [Requisiti per Azure Rights Management](../get-started/requirements-azure-rms.md).
 
 ## Versione 1.0.1784.0
 **Rilasciata**: 30/7/2015
@@ -81,7 +84,7 @@ Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
 **Nuove funzionalità**:
 
--   Supporto per rilevamento e revoca dei documenti. Per altre informazioni, vedere [Rilevare e revocare i documenti quando si usa l'applicazione RMS sharing](sharing-app-track-revoke.md).
+-   Supporto per rilevamento e revoca dei documenti. Per altre informazioni, vedere [Rilevare e revocare i documenti quando si usa l'applicazione di condivisione RMS](sharing-app-track-revoke.md).
 
 -   Il supporto del modello quando si sceglie **Condividi file protetto**:
 
@@ -91,7 +94,7 @@ Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
     -   Non si visualizzano più le opzioni per **Consenti consumo su tutti i dispositivi** e **Applica restrizioni d'uso**. Al contrario, **Protezione generica** viene selezionato automaticamente in base al tipo di file.
 
-    Per altre informazioni, vedere [Opzioni della finestra di dialogo per l'applicazione Rights Management sharing](sharing-app-dialog-box.md).
+    Per altre informazioni, vedere [Opzioni della finestra di dialogo per l'applicazione di condivisione Rights Management](sharing-app-dialog-box.md).
 
 ## Versione 1.0.1667.0
 **Rilasciata**: 19/1/2015
@@ -106,10 +109,10 @@ Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
 **Nuove funzionalità**:
 
--   **Supporto per più domini di posta elettronica all'interno dell'organizzazione**: se si usa AD RMS e gli utenti dell'organizzazione dispongono di più domini di posta elettronica, questo aggiornamento consente loro di utilizzare contenuti protetti dagli utenti dell'organizzazione in altri domini. Per altre informazioni, vedere la sezione [Solo AD RMS: Supporto per più domini di posta elettronica all'interno dell'organizzazione](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) della [Guida dell'amministratore dell'applicazione Rights Management sharing](sharing-app-admin-guide.md).
+-   **Supporto per più domini di posta elettronica all'interno dell'organizzazione**: se si usa AD RMS e gli utenti dell'organizzazione dispongono di più domini di posta elettronica, questo aggiornamento consente loro di utilizzare contenuti protetti dagli utenti dell'organizzazione in altri domini. Per altre informazioni, vedere la sezione [Solo AD RMS: Supporto per più domini di posta elettronica all'interno dell'organizzazione](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) in [Guida dell'amministratore dell'applicazione di condivisione Rights Management](sharing-app-admin-guide.md).
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

@@ -28,6 +28,9 @@ ms.suite: ems
 
 # Creare, configurare e pubblicare un modello personalizzato
 
+*Si applica a: Azure Rights Management, Office 365*
+
+
 Il portale di Azure classico consente di creare e gestire modelli personalizzati. È possibile eseguire questa operazione direttamente nel portale di Azure classico oppure accedendo all'interfaccia di amministrazione di Office 365 e scegliendo le **funzionalità avanzate** di Rights Management, che a loro volta reindirizzano al portale di Azure classico.
 
 Per creare, configurare e pubblicare modelli personalizzati per Rights Management, seguire queste procedure.
@@ -36,15 +39,15 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
 
 1.  Seguire una di queste due procedure in base al tipo di accesso scelto, dall'interfaccia di amministrazione di Office 365 o dal portale di Azure classico:
 
-    -   Dall'[interfaccia di amministrazione di Office 365](https://portal.office.com/):
+    -   Dall’ [interfaccia di amministrazione di Office 365](https://portal.office.com/):
 
-        1.  Nel riquadro a sinistra, fare clic su **impostazioni servizio**.
+        1.  Nel riquadro a sinistra fare clic su **impostazioni servizio**.
 
-        2.  Nella pagina **impostazioni servizio** fare clic su **rights management**.
+        2.  Nella pagina **Impostazioni servizio** fare clic su **Rights Management**.
 
         3.  Nella sezione **Proteggere le informazioni** fare clic su **Gestione**.
 
-        4.  Nella sezione **rights management** fare clic su **funzionalità avanzate**.
+        4.  Nella sezione **Rights Management** fare clic su **Funzionalità avanzate**.
 
             > [!NOTE]
             > Se Rights Management non è stato attivato, fare prima clic su **attiva** e confermare l'azione. Per altre informazioni, vedere [Attivazione di Azure Rights Management](activate-service.md).
@@ -55,9 +58,9 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
 
     -   Dal [portale di Azure classico](http://go.microsoft.com/fwlink/p/?LinkID=275081):
 
-        1.  Nel riquadro sinistro fare clic su **ACTIVE DIRECTORY**.
+        1.  Nel riquadro sinistro fare clic su **Active Directory**.
 
-        2.  Nella pagina **active directory** fare clic su **RIGHTS MANAGEMENT**.
+        2.  Nella pagina **Active Directory** fare clic su **Rights Management**.
 
         3.  Selezionare la directory da gestire per Rights Management.
 
@@ -68,7 +71,7 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
 
 2.  Creare un nuovo modello:
 
-    -   Nella pagina di avvio rapido **Introduzione a Rights Management** del portale di Azure classico fare clic su **Creare un nuovo modello di criteri di diritti**.
+    -   Nella pagina di avvio rapido **Introduzione a Rights Management** nel portale di Azure classico fare clic su **Creare un nuovo modello di criteri di diritti**.
 
         Se questa pagina non viene visualizzata immediatamente dopo aver seguito le istruzioni per Office 365, è possibile usare le istruzioni di navigazione precedenti relative al portale di Azure classico.
 
@@ -85,7 +88,7 @@ Nella pagina di avvio rapido **Introduzione a Rights Management** fare clic su *
     > [!NOTE]
     > Gli utenti o i gruppi selezionati devono disporre di un indirizzo di posta elettronica. Questa condizione si verifica quasi sempre in un ambiente di produzione, ma in un ambiente di test semplice può essere necessario aggiungere gli indirizzi di posta elettronica agli account utente o ai gruppi.
 
-    Come procedura consigliata, usare gruppi anziché utenti singoli perché la gestione dei modelli risulterà più agevole. Se si dispone di Active Directory locale e si esegue la sincronizzazione in Azure AD, è possibile utilizzare i gruppi abilitati alla posta che sono gruppi di protezione o gruppi di distribuzione. Se tuttavia si desidera concedere diritti a tutti gli utenti dell'organizzazione, la procedura più efficiente consiste nel copiare uno dei modelli predefiniti piuttosto che specificare più gruppi. Per altre informazioni, vedere l'articolo relativo alla [modalità per copiare un modello](copy-template.md).
+    Come procedura consigliata, usare gruppi anziché utenti singoli perché la gestione dei modelli risulterà più agevole. Se si dispone di Active Directory locale e si esegue la sincronizzazione in Azure AD, è possibile utilizzare i gruppi abilitati alla posta che sono gruppi di protezione o gruppi di distribuzione. Se tuttavia si desidera concedere diritti a tutti gli utenti dell'organizzazione, la procedura più efficiente consiste nel copiare uno dei modelli predefiniti piuttosto che specificare più gruppi. Per altre informazioni, vedere [Come copiare un modello](copy-template.md).
 
     > [!TIP]
     > È quindi possibile aggiungere al modello utenti esterni all'organizzazione usando il [modulo Windows PowerShell per Azure Rights Management](install-powershell.md) e usando uno dei metodi seguenti:
@@ -114,13 +117,13 @@ Nella pagina di avvio rapido **Introduzione a Rights Management** fare clic su *
 
 7.  Nella pagina **VISIBILITÀ DEL MODELLO** selezionare gli utenti e i gruppi che potranno visualizzare e selezionare il modello nelle applicazioni che supportano RMS. Come indicato in precedenza, è consigliabile usare i gruppi anziché gli utenti e i gruppi o gli utenti selezionati dovranno avere un indirizzo di posta elettronica.
 
-8.  Fare clic sul pulsante Avanti e stabilire se è necessario configurare la compatibilità delle applicazioni per il modello di reparto. Per configurarla, fare clic su **COMPATIBILITÀ DELL'APPLICAZIONE**, selezionare la casella di controllo e scegliere **Completa**.
+8.  Fare clic sul pulsante Avanti e stabilire se è necessario configurare la compatibilità delle applicazioni per il modello di reparto. Per configurarla, fare clic su **Compatibilità dell'applicazione**, selezionare la casella di controllo e scegliere **Completa**.
 
     Per quale motivo potrebbe essere necessario configurare la compatibilità delle applicazioni? Non tutte le applicazioni possono supportare i modelli di reparto. A tale scopo, per poter scaricare i modelli, è necessario eseguire prima l'autenticazione dell'applicazione con il servizio RMS. Se il processo di autenticazione non viene eseguito, per impostazione predefinita non viene scaricato alcun modello di reparto. È possibile eseguire l'override di questo comportamento specificando che tutti i modelli di reparto devono essere scaricati, configurando la compatibilità dell’applicazione e selezionando la casella di controllo **Mostra questo modello a tutti gli utenti quando le applicazioni non supportano l'identità utente** .
 
     Ad esempio, se non si configura la compatibilità delle applicazioni per il modello di reparto nell'esempio delle Risorse umane, solo gli utenti del reparto Risorse umane visualizzeranno il modello di reparto quando useranno l'applicazione RMS sharing, ma nessun utente visualizzerà il modello di reparto quando userà Outlook Web Access (OWA) da Exchange Server 2013 poiché OWA di Exchange ed Exchange ActiveSync non supportano i modelli di reparto. Se si esegue l'override di questo comportamento predefinito configurando la compatibilità delle applicazioni, solo gli utenti del reparto Risorse umane visualizzeranno il modello di reparto quando useranno l'applicazione RMS sharing, ma tutti gli utenti visualizzeranno il modello di reparto quando useranno Outlook Web Access (OWA). Se gli utenti usano OWA o Exchange ActiveSync da Exchange Online, i modelli di reparto saranno visibili a tutti gli utenti o a nessun utente, a seconda dello stato del modello (archivio o pubblicato) in Exchange Online.
 
-    Office 2016 supporta in modalità nativa i modelli di reparto, analogamente a Office 2013 a partire dalla versione 15.0.4727.1000, rilasciati nel mese di giugno 2015 come parte di [KB 3054853](https://support.microsoft.com/kb/3054853).
+    Office 2016 supporta in modalità nativa i modelli di reparto, analogamente a Office 2013 a partire dalla versione 15.0.4727.1000 rilasciata nel mese di giugno 2015 come parte di [KB 3054853](https://support.microsoft.com/kb/3054853)).
 
     > [!NOTE]
     > Se si hanno applicazioni che ancora non supportano in modalità nativa i modelli di reparti, è possibile usare uno script personalizzato per il download dei modelli di RMS o altri strumenti per distribuire questi modelli nella cartella locale del client RMS. In queste applicazioni quindi i modelli di reparto potranno essere visualizzati correttamente solo dagli utenti e i gruppi selezionati per l'ambito del modello:
@@ -132,7 +135,7 @@ Nella pagina di avvio rapido **Introduzione a Rights Management** fare clic su *
     > 
     > 1.  Passare al [sito Microsoft Connect](http://www.connect.microsoft.com) e accedere con il proprio account Microsoft.
     > 2.  Fare clic su **Directory** e selezionare la categoria **Visualizza prodotti Connect che attualmente non accettano commenti**.
-    > 3.  Cercare **Rights Management Services** e, in corrispondenza del programma **Microsoft RMS Enterprise Features**, fare clic su **Aggiungi**.
+    > 3.  Cercare **Rights Management Services** e per il programma **Microsoft RMS Enterprise Features** fare clic su **Aggiungi**.
 
 9. Fare clic su **CONFIGURA** e aggiungere le altre lingue usate dagli utenti, nonché il nome e la descrizione del modello in tali lingue. Quando sono presenti utenti multilingue, è importante aggiungere ogni lingua usata e specificare un nome e una descrizione in tale lingua. In tal modo, gli utenti vedranno il nome e la descrizione del modello nella stessa lingua del sistema operativo client di cui dispongono e questo garantisce la piena comprensione dei criteri applicati a un documento o a un messaggio di posta elettronica. In caso di mancata corrispondenza con il sistema operativo client, il nome e la descrizione verranno visualizzati nella lingua definita al momento della creazione del modello.
 
@@ -143,28 +146,28 @@ Nella pagina di avvio rapido **Introduzione a Rights Management** fare clic su *
     |**scadenza contenuto**|Definire una data o un numero di giorni in cui i file protetti tramite il modello non devono essere aperti. È possibile specificare una data o un numero di giorni a partire dal momento in cui la protezione viene applicata al file.<br /><br />Quando si specifica una data, diventa effettiva alla mezzanotte del fuso orario corrente.|
     |**accesso offline**|Usare questa impostazione per far fronte agli eventuali requisiti di sicurezza previsti e, allo stesso tempo, all'esigenza degli utenti di aprire i file protetti quando non dispongono di una connessione Internet.<br /><br />Se si specifica che il contenuto non è disponibile senza una connessione Internet o che è disponibile solo per un determinato numero di giorni, al raggiungimento di tale soglia, gli utenti dovranno eseguire di nuovo l'autenticazione e l'accesso verrà registrato. In questo caso, se le credenziali non sono memorizzate nella cache, verrà chiesto agli utenti di eseguire l'accesso prima di poter aprire il file.<br /><br />Oltre alla riesecuzione dell'autenticazione, verrà nuovamente valutata l'appartenenza degli utenti ai criteri e ai gruppi. Questo significa che gli utenti potrebbero avere risultati di accesso diversi per lo stesso file se dall'ultimo accesso si sono verificati cambiamenti relativi all'appartenenza ai criteri o ai gruppi.|
 
-10. Quando si è convinti che il modello sia configurato in modo appropriato per gli utenti, fare clic su **PUBBLICA** per renderlo visibile agli utenti e quindi su **SALVA**.
+10. Quando si è certi che il modello sia configurato in modo appropriato per gli utenti, fare clic su **Pubblica** per renderlo visibile agli utenti e quindi su **Salva**.
 
-11. Fare clic sul pulsante Indietro nel portale classico per tornare alla pagina **MODELLI** in cui lo stato aggiornato del modello è ora impostato su **Pubblicato**.
+11. Fare clic sul pulsante Indietro nel portale classico per tornare alla pagina **Modelli** in cui lo stato aggiornato del modello è ora impostato su **Pubblicato**.
 
 Per apportare modifiche al modello, selezionarlo e quindi eseguire di nuovo i passaggi di avvio rapido. In alternativa, procedere in uno dei seguenti modi:
 
--   Per aggiungere altri utenti e gruppi e definirne i diritti, Fare clic su **DIRITTI**e quindi su **AGGIUNGI**.
+-   Per aggiungere altri utenti e gruppi e definirne i diritti, fare clic su **Diritti** e quindi su **Aggiungi**.
 
--   Per rimuovere utenti o gruppi selezionati precedentemente, fare clic su **DIRITTI**, selezionare l'utente o il gruppo dall'elenco e quindi fare clic su **ELIMINA**.
+-   Per rimuovere utenti o gruppi selezionati precedentemente, fare clic su **Diritti**, selezionare l'utente o il gruppo dall'elenco e quindi fare clic su **Elimina**.
 
--   Per modificare gli utenti che possono visualizzare i modelli da selezionare dalle applicazioni, fare clic su **AMBITO**, quindi fare clic su **AGGIUNGI** o su **ELIMINA**o su **COMPATIBILITÀ DELL'APPLICAZIONE**.
+-   Per modificare gli utenti che possono visualizzare i modelli da selezionare dalle applicazioni, fare clic su **Ambito**, quindi fare clic su **Aggiungi** o su **Elimina** o su **Compatibilità dell'applicazione**.
 
--   Per nascondere il modello a tutti gli utenti, fare clic su **CONFIGURA**, **ARCHIVIA**e **SALVA**.
+-   Per nascondere il modello a tutti gli utenti, fare clic su **Configura**, **Archivia** e **Salva**.
 
--   Per apportare altre modifiche di configurazione, fare clic su **CONFIGURA**, apportare le modifiche e fare clic su **SALVA**.
+-   Per apportare altre modifiche di configurazione, fare clic su **Configura**, apportare le modifiche e fare clic su **Salva**.
 
 > [!WARNING]
-> Quando si apportano modifiche a un modello salvato in precedenza, le modifiche non saranno visibili ai client finché i modelli non vengono aggiornati nei computer. Per altre informazioni, vedere l'articolo relativo all'[aggiornamento dei modelli per gli utenti](refresh-templates.md).
+> Quando si apportano modifiche a un modello salvato in precedenza, le modifiche non saranno visibili ai client finché i modelli non vengono aggiornati nei computer. Per altre informazioni, vedere [Aggiornamento dei modelli per gli utenti](refresh-templates.md).
 
 ## Vedere anche
 [Configurare modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

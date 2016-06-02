@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/06/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Migrazione da AD RMS ad Azure Rights Management
+
+*Si applica a: Active Directory Rights Management Services, Azure Rights Management*
+
 Usare il set di istruzioni seguente per la migrazione della distribuzione di Active Directory Rights Management Services (AD RMS) ad Azure Rights Management (Azure RMS). Dopo la migrazione gli utenti avranno comunque accesso ai documenti e ai messaggi di posta elettronica che l'organizzazione ha protetto con AD RMS, nonché al nuovo contenuto che verrà protetto con Azure RMS.
 
 Se non si è certi che questa migrazione di AD RMS sia adatta alla propria organizzazione
@@ -42,13 +45,13 @@ Prima di iniziare il processo di migrazione ad Azure RMS, verificare che i prere
 
     Tutte le versioni di AD RMS, da Windows Server 2008 a Windows Server 2012 R2, supportano la migrazione ad Azure RMS:
 
-    - Windows Server 2008 (x86 o x64)
+    - Windows Server 2008 (x86 o x64)
 
     - Windows Server 2008 R2 (x64)
 
-    - Windows Server 2012 (x64)
+    - Windows Server 2012 (x64)
 
-    - Windows Server 2012 R2 (x64)
+    - Windows Server 2012 R2 (x64)
 
     Sono supportate tutte le topologie di AD RMS valide:
 
@@ -182,6 +185,6 @@ Per iniziare la migrazione, passare a [Fase 1: configurazione lato server](migra
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO1-->
 
 

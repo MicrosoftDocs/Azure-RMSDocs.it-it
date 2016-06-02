@@ -29,6 +29,9 @@ ms.suite: ems
 
 # Modalità di controllo da parte degli amministratori degli account creati per RMS per utenti singoli
 
+*Si applica a: Azure Rights Management*
+
+
 Se non si desidera convertire la sottoscrizione di RMS per utenti singoli dell'organizzazione in una sottoscrizione a pagamento, è comunque possibile controllare gli account utente nella directory di Azure creata per l'organizzazione nei modi seguenti:
 
 -   Implementare soluzioni di integrazione delle directory per Azure Active Directory e per l'infrastruttura Servizi di dominio Active Directory. È possibile sincronizzare account e password in modo che gli utenti non debbano creare nuovi account per usare Rights Management e che i criteri associati alle password locali vengano applicati ai nuovi account utente di Azure. È inoltre possibile sincronizzare le password in modo che gli utenti non debbano ricordare una password diversa per usare Rights Management.
@@ -46,9 +49,9 @@ Per controllare gli account utente nella directory di Azure o impedire agli uten
 
 ## Passaggi successivi
 
-Come è possibile determinare se gli utenti, anziché gli amministratori, hanno creato i propri account in Azure Active Directory per RMS per utenti singoli?  Vedere [Come determinare se gli utenti hanno effettuato l'iscrizione per RMS per utenti singoli](rms-for-individuals-identify-sign-up.md).
+Come è possibile determinare se gli utenti, anziché gli amministratori, hanno creato i propri account in Azure Active Directory per RMS per utenti singoli?  Vedere  [Come determinare se gli utenti hanno effettuato l'iscrizione per RMS per utenti singoli](rms-for-individuals-identify-sign-up.md).
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

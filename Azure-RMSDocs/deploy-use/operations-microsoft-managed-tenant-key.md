@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Gestione di Microsoft: operazioni del ciclo di vita della chiave del tenant
+
+*Si applica a: Azure Rights Management, Office 365*
+
 Se la chiave del tenant per Azure Rights Management è gestita da Microsoft (impostazione predefinita), usare le sezioni seguenti per ottenere altre informazioni sulle operazioni del ciclo di vita rilevanti per questa topologia.
 
 ## Revocare la chiave del tenant
@@ -101,6 +104,6 @@ In caso di violazione di sicurezza, l'azione più efficace che l'utente o Micros
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

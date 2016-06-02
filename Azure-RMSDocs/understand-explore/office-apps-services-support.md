@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Applicazioni e servizi Office
+
+*Si applica a: Azure Rights Management, Office 365*
+
 Le applicazioni dell'utente finale, ad esempio Word, Excel, PowerPoint e Outlook, e i servizi Office, ad esempio Exchange e SharePoint, possono usare Microsoft Azure Rights Management per proteggere i dati dell'organizzazione.
 
 ## Applicazioni Office: Word, Excel, PowerPoint, Outlook
@@ -73,8 +76,8 @@ Per altre informazioni sull'uso di Azure RMS con SharePoint, vedere il post segu
 
 ## Passaggi successivi
 
-Per altre informazioni sul supporto di Azure Rights Management da parte di altre applicazioni e servizi, vedere [Supporto di Azure Rights Management da parte delle applicazioni](applications-support.md).
+Per altre informazioni sul supporto di Azure Rights Management da parte di altre applicazioni e servizi, vedere [Supporto di Microsoft Azure Rights Management da parte delle applicazioni](applications-support.md).
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 9728c135-0e7f-4f5c-95ba-1db79e418080
-
+ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Installazione per Android
+# Installazione per Android
 
 Le applicazioni Android possono usare SDK 4.2 Microsoft Rights Management per abilitare la protezione integrata delle informazioni nelle proprie applicazioni con Azure Active Directory Rights Management (AAD RM).
 
@@ -73,28 +72,28 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 -   Aprire l'ambiente di sviluppo Eclipse.
 -   Per creare un nuovo progetto di applicazione Android, nel menu **File**, fare clic su **Nuovo**, fare clic su **Progetto** e quindi selezionare **Progetto di applicazione Android**.
 
-    ![](../media/Android-setup-01c.png)
+    ![Creare una nuova applicazione Android](../media/Android-setup-01c.png)
 
 -   Immettere il nome dell'applicazione. Il nome del progetto e il nome del pacchetto sono compilati in base al nome dell'applicazione.
 -   Fare clic su **Avanti** e selezionare dove si desidera creare l'area di lavoro.
 
-    ![](../media/Android-setup-02a.jpg)
+    ![Immettere il nome dell'applicazione](../media/Android-setup-02a.jpg)
 
 -   Fare clic su **Avanti** e selezionare un'icona per l'applicazione.
 
-    ![](../media/Android-setup-03.png)
+    ![Selezionare un'icona per l'applicazione](../media/Android-setup-03.png)
 
 -   Fare clic su **Avanti** e selezionare **Attività vuota** per creare l'attività.
 
-    ![](../media/Android-setup-04.png)
+    ![Creare l'attività](../media/Android-setup-04.png)
 
 -   Fare clic su **Avanti** e fornire un nome per l'attività. È possibile lasciare *MainActivity* come nome predefinito con un nome di layout di *activity\_main*.
 
-    ![](../media/Android-setup-05a.jpg)
+    ![Specificare un nome per l'attività](../media/Android-setup-05a.jpg)
 
 -   Fare clic su **Fine**.
 
-    ![](../media/Android-setup-06.jpg)
+    ![Terminare la creazione](../media/Android-setup-06.jpg)
 
 -   Il progetto è stato creato, insieme alla classe principale dell'attività *mainactivity. Java*.
 
@@ -105,21 +104,21 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
     In Eclipse, fare clic su **File**. Fare clic su **Importa** dal menu **File**. Nella finestra di dialogo **Importa**, selezionare **Android / Codice Android esistente nell'area di lavoro**.
 
-    ![](../media/Android-setup-07.png)
+    ![Importare l'SDK nell'area di lavoro](../media/Android-setup-07.png)
 
 -   Fare clic su **Avanti**. Esplorare per selezionare la cartella in cui è stato estratto *adrms\_android\_sdk.zip*. L'SDK dovrebbe essere visualizzato nell'elenco come **com.microsoft.rightsmanagement**.
 
-    ![](../media/Android-setup-08c.jpg)
+    ![Esplorare per selezionare la cartella](../media/Android-setup-08c.jpg)
 
 -   Quando fa clic su **Fine**, il progetto dell'SDK viene visualizzato come elemento di pari livello dell'applicazione creata in precedenza.
 
-    ![](../media/Android-setup-09.jpg)
+    ![Il progetto dell'SDK viene visualizzato come elemento di pari livello dell'applicazione](../media/Android-setup-09.jpg)
 
 -   Fare clic con il pulsante destro del mouse sull'icona del **progetto** e visualizzare le proprietà del progetto.
 -   Passare alla scheda **Android**.
 -   Fare clic su **Aggiungi** e quindi selezionare la libreria *com.microsoft.rightsmanagement* dall'area di lavoro.
 
-    ![](../media/Android-setup-10b.jpg)
+    ![Aggiungere la libreria](../media/Android-setup-10b.jpg)
 
 -   Fare clic su **OK**.
 
@@ -127,7 +126,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
     Per aggiungere le autorizzazioni, fare clic su **Aggiungi** e quindi selezionare **Usa autorizzazioni**.
 
-    ![](../media/Android-setup-11d.jpg)
+    ![Aggiungere le autorizzazioni](../media/Android-setup-11d.jpg)
 
 -   È possibile verificare il passaggio manifesto visualizzando il manifesto nell'editor di testo. Assicurarsi che vengano visualizzate le righe seguenti:
 
@@ -152,13 +151,13 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
 [Concetti e termini per sviluppatori](core-concepts.md)
 
-[Informazioni di riferimento sulle API di Android](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement)
+[Informazioni di riferimento sulle API di Android](android-namespaces.md)
 
  
 
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

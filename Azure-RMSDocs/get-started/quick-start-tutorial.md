@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Esercitazione introduttiva per Azure Rights Management
+
+*Si applica a: Azure Rights Management, Office 365*
+
 Passare a: 
 > [!div class="op_single_selector"]
 - [Passaggio 1: Attivare Azure RMS](tutorial-step1.md)
@@ -36,7 +39,7 @@ Passare a:
 
 Usare questa esercitazione per provare rapidamente Microsoft Azure Rights Management (Azure RMS) per l'organizzazione. L'esercitazione è articolata in 5 passaggi, eseguibili in meno di 15 minuti. Verrà attivato il servizio, verrà inviato in modo sicuro tramite e-mail un documento riservato a un altro utente dell'organizzazione e infine sarà possibile rilevare quando il documento viene aperto. Quando viene inviato tramite posta elettronica, il documento riservato viene crittografato mentre è in transito e può essere letto solo dall'utente a cui è stato inviato usando le autorizzazioni impostate dal mittente.
 
-![](../media/AzRMS_QuickStartStepsAll.PNG)
+![Passaggi dell'esercitazione per l'avvio rapido di Azure RMS](../media/AzRMS_QuickStartStepsAll.PNG)
 
 Questa esercitazione è rivolta ai consulenti e agli amministratori IT e consente di valutare Azure Rights Management come soluzione di protezione delle informazioni per un'organizzazione. In un ambiente di produzione le istruzioni per attivare il servizio verrebbero eseguite da un amministratore, mentre quelle per inviare il documento verrebbero eseguite dagli utenti finali. In questa esercitazione sono inclusi entrambi i set di istruzioni, per illustrare lo scenario end-to-end di invio sicuro di un documento riservato a una persona di un'altra organizzazione. Se si verificano problemi per completare questa esercitazione, inviare un messaggio di posta elettronica a [AskIPTeam](mailto:askipteam@microsoft.com?subject=Having%20problems%20with%20the%20Quick%20Start%20tutorial) , che fornisce il supporto necessario.
 
@@ -52,13 +55,12 @@ Per completare questa esercitazione, è necessario quanto segue:
 
 A questo punto, procedere con l'esercitazione.
 
->[!div class="step-by-step"]
-[Passaggio 1 »](tutorial-step1.md)
+>[!div class="step-by-step"] [Passaggio 1 »](tutorial-step1.md)
 
 
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

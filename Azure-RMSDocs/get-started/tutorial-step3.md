@@ -4,35 +4,38 @@
 title: Esercitazione per l'avvio rapido di Azure RMS - Passaggio 3 | Azure RMS
 description: Il terzo passaggio di questa esercitazione consente di provare rapidamente Microsoft Azure Rights Management per l'organizzazione. L'esercitazione è articolata in 5 passaggi, eseguibili in meno di 15 minuti.
 keywords:
-author: Cabailey
+author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
+ms.technology: techgroup-identity
 ms.assetid: c604e749-8918-40e8-8148-6bd000cb2be2
 
 # optional metadata
 
-ROBOTS: 
-audience:
-ms.devlang:
+#ROBOTS:
+#audience:
+#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-ms.tgt_pltfrm:
-ms.technology:
-ms.custom:
+#ms.tgt_pltfrm:
+#ms.custom:
 
 ---
 
 
 # Passaggio 3 dell'esercitazione per l'avvio rapido di Azure RMS: Inviare tramite posta elettronica il documento che si desidera proteggere
 
+*Si applica a: Azure Rights Management, Office 365*
+
+
 Passare a: 
 > [!div class="op_single_selector"]
 - [Introduzione](quick-start-tutorial.md)
 - [Passaggio 1: Attivare Azure RMS](tutorial-step1.md)
-- [Passaggio 2: Installare l'app di condivisione RMS](tutorial-step2.md)
+- [Passaggio 2: Installare l'app RMS sharing](tutorial-step2.md)
 - [Passaggio 3: Inviare il documento riservato tramite posta elettronica](tutorial-step3.md)
 - [Passaggio 4: Leggere il documento](tutorial-step4.md)
 - [Passaggio 5: Tenere traccia del documento](tutorial-step5.md)
@@ -42,7 +45,7 @@ Per questo passaggio, creare e salvare un documento di Word che rappresenta il d
 
 È quindi possibile condividere in modo sicuro il documento tramite posta elettronica.
 
-![](../media/AzRMS_Tutorial_3_Screenshots.png)
+![Esercitazione per l'avvio rapido di Azure RMS - Passaggio 3](../media/AzRMS_Tutorial_3_Screenshots.png)
 
 ### Per condividere in modo sicuro il documento tramite posta elettronica
 
@@ -80,10 +83,9 @@ Ora che è stato inviato il documento protetto, è possibile chiedere ai destina
 |Informazioni sulle opzioni della finestra di dialogo **Condividi file protetto**|[Opzioni della finestra di dialogo per l’applicazione di condivisione Rights Management](../rms-client/sharing-app-dialog-box.md)|
 
 
->[!div class="step-by-step"]
-[« Passaggio 2](tutorial-step2.md)
+>[!div class="step-by-step"] [« Passaggio 2](tutorial-step2.md)
 [Passaggio 4 »](tutorial-step4.md)
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

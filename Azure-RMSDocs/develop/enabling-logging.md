@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: b0aafe75-19c9-47dc-bbba-cf4287399c6e
-
+ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Procedura: Abilitare la registrazione delle prestazioni e dell'errore
 Microsoft Rights Management SDK 4.2 gestisce i log delle diagnosi e delle prestazioni caricati tramite una proprietà a dispositivo singolo.
 
@@ -85,7 +83,7 @@ Abilitare la registrazione automatica
 
     CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
 
-Per altre informazioni sulle impostazioni facoltative, vedere [CustomerExperienceOptions](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_customerexperienceoptionss).
+Per altre informazioni sulle impostazioni facoltative, vedere [CustomerExperienceOptions](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_customerexperienceoptions).
 
 Ottenere l'impostazione del flag di controllo della registrazione corrente
 
@@ -101,6 +99,6 @@ Ottenere l'impostazione del flag di controllo della registrazione corrente
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

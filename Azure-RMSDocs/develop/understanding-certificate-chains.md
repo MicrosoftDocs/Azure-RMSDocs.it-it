@@ -2,7 +2,7 @@
 # required metadata
 
 title: Informazioni sulle catene di certificati | Azure RMS
-description:
+description: Un'applicazione abilitata all'uso di diritti richiede una coppia di chiavi pubbliche e una catena di certificati che fa riferimento a un certificato Microsoft nella radice di attendibilità
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 14694cb0-adc4-4c2f-aff5-22aa132777df
-
+ms.assetid: 6AEA2162-82BF-4867-9285-111CD3FCD2F6
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Informazioni sulle catene di certificati
+# Informazioni sulle catene di certificati
 
 Lo sviluppo di un'applicazione abilitata all'uso di diritti richiede una coppia di chiavi pubblica e una catena di certificati che fa riferimento a un certificato di Microsoft alla radice di attendibilità.
 
@@ -49,7 +48,7 @@ Indipendentemente dall'uso o meno di un certificato di pre-produzione durante lo
 
 Per ulteriori informazioni sulle catene di certificati e la firma dell'applicazione, vedere [Passaggio all'ambiente di produzione](switching-to-the-production-environment.md).
 
-### Argomenti correlati
+## Argomenti correlati
 
 * [Concetti per sviluppatori](ad-rms-concepts-nav.md)
 * [Passaggio all'ambiente di produzione](switching-to-the-production-environment.md)
@@ -58,6 +57,6 @@ Per ulteriori informazioni sulle catene di certificati e la firma dell'applicazi
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

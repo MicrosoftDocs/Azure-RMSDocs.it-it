@@ -6,8 +6,8 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
+ms.date: 05/20/2016
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Scenario - Proteggere i file in una condivisione di file server
+
+*Si applica a: Azure Rights Management, Office 365*
+
 Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management per proteggere tutti i file che si desidera proteggere in un file server per garantire che solo i dipendenti dell'organizzazione possano accedervi, anche se vengono copiati e salvati in un archivio fuori dal controllo del reparto IT o inviati tramite posta elettronica ad altri utenti.
 
 Queste istruzioni usano uno dei modelli predefiniti, che limita l'accesso a tutti i dipendenti con tutti i diritti di utilizzo. Tuttavia, se necessario, è possibile limitare i diritti di accesso e utilizzo tramite la configurazione di un modello personalizzato al posto di un modello predefinito.
@@ -38,8 +41,8 @@ Le istruzioni sono adatte ai casi seguenti:
 
 -   Su tutti i file la protezione viene riapplicata in base a una pianificazione per garantire che le modifiche ai modelli dei criteri dei diritti vengano applicate ai file protetti.
 
-## Istruzioni di distribuzione
-![](../media/AzRMS_AdminBanner.png)
+## Istruzioni sulla distribuzione
+![Istruzioni per l'amministratore per la distribuzione rapida di Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Verificare che siano soddisfatti i requisiti seguenti e quindi seguire le istruzioni per le procedure di supporto prima di passare alla documentazione dell'utente.
 
@@ -50,7 +53,7 @@ Per le istruzioni di funzionamento di questo scenario, sono necessari i requisit
 |---------------|--------------------------------|
 |Azure Rights Management non è attivato|[Attivazione di Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |Si sono sincronizzati gli account utente di Active Directory locali con Azure Active Directory oppure Office 365, compreso il relativo indirizzo di posta elettronica. Ciò è necessario per tutti gli utenti che potrebbero avere la necessità di accedere ai file una volta protetti con FCI e Azure Rights Management.|[Preparazione per Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|Uno dei seguenti:<br /><br />Per usare un modello predefinito per tutti gli utenti: non è stato archiviato il valore predefinito &lt;nome organizzazione&gt; - Riservato<br /><br />Per usare un modello personalizzato per utenti specifici: creare e pubblicare il modello personalizzato|[Configurazione di modelli personalizzati per Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
+|Uno dei seguenti:<br /><br />- Per usare un modello predefinito per tutti gli utenti: non è stato archiviato il modello predefinito, &lt;nome organizzazione&gt; - Riservato<br /><br />- Per usare un modello personalizzato per utenti specifici: il modello personalizzato è stato creato e pubblicato|[Configurazione di modelli personalizzati per Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
 |L’applicazione di condivisione Rights Management è distribuita nei computer degli utenti che eseguono Windows|[Distribuzione automatica dell'applicazione di condivisione Microsoft Rights Management](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
 |È stato scaricato lo strumento di protezione RMS e i prerequisiti per Azure RMS sono stati configurati|Per le istruzioni sul download dello strumento e sui prerequisiti: [Cmdlet di protezione RMS](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />Per configurare altri prerequisiti per Azure RMS, ad esempio l'account dell'entità servizio: [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
@@ -85,13 +88,13 @@ Se i file protetti dispongono di un file con estensione del nome **pfile**, gli 
 
 Tramite il modello seguente, copiare e incollare le istruzioni per gli utenti finali in modo che sappiano come modificare i file protetti in modo generico. Apportare queste modifiche in base all'ambiente:
 
--   Sostituire *&lt; tipo di file &gt;* e *&lt; condivisione di file server&gt;* con il tipo di file che verrà protetto in modo generico e con il nome della condivisione di file server.
+-   Sostituire *&lt;tipo di file&gt;* e *&lt;condivisione di file server&gt;* con il tipo di file che verrà protetto in modo generico e il nome della condivisione di file server.
 
--   Sostituire *&lt; nome organizzazione &gt;* con il nome dell'organizzazione, come viene visualizzato nei modelli predefiniti di Azure Rights Management.
+-   Sostituire *&lt;nome organizzazione&gt;* con il nome dell'organizzazione visualizzato nei modelli predefiniti di Azure Rights Management.
 
 -   Sostituire *&lt;nome organizzazione&gt;* con il nome dell'organizzazione.
 
--   Sostituire *&lt;Istruzioni per salvare il file e rimuovere l'estensione del nome pfile&gt;* con le istruzioni specifiche dell'applicazione per questo tipo di file.
+-   Sostituire *&lt;Istruzioni per salvare il file e rimuovere l'estensione pfile&gt;* con le istruzioni specifiche dell'applicazione per questo tipo di file.
 
 -   Sostituire i dettagli di contatto con istruzioni su come gli utenti possono contattare il supporto tecnico, ad esempio un collegamento di sito Web, indirizzo di posta elettronica o numero di telefono.
 
@@ -99,19 +102,19 @@ Tramite il modello seguente, copiare e incollare le istruzioni per gli utenti fi
 
 La documentazione di esempio mostra come questo set di istruzioni appare agli utenti dopo le personalizzazioni.
 
-![](../media/AzRMS_UsersBanner.png)
+![Documentazione dell'utente del modello per la distribuzione rapida di Azure RMS](../media/AzRMS_UsersBanner.png)
 
-### Come modificare il &lt;tipo di file&gt; dalla &lt; condivisione di file server&gt;
+### Come modificare il &lt;tipo di file&gt; dalla &lt;condivisione di file server&gt;
 
 1.  Fare doppio clic sul file per aprirlo. È possibile che vengano richieste le credenziali.
 
-2.  Viene visualizzato una finestra di dialogo **file protetto** dall'applicazione di condivisione Microsoft Rights Management, che indica che sono previste autorizzazioni per **&lt;nome organizzazione&lt; - Riservato**. In questo modo, questo documento non viene condiviso con altri utenti che non lavorano per &lt;nome organizzazione&gt;.
+2.  Viene visualizzata una finestra di dialogo di **file protetto** dell'applicazione di condivisione Microsoft Rights Management che indica che è necessario rispettare le autorizzazioni per **&lt;nome organizzazione&gt; - Riservato**. Per questa ragione, non condividere questo documento con altri utenti che non lavorano per &lt;nome organizzazione&gt;.
 
 3.  Fare clic su **Apri**.
 
 4.  Per modificare il file, salvare innanzitutto il file e rimuovere l'estensione del nome pfile:
 
-    -   &lt;Istruzioni per salvare il file e rimuovere l'estensione del nome pfile&gt;
+    -   &lt;Istruzioni per salvare il file e rimuovere l'estensione pfile&gt;
 
 5.  È ora possibile modificare e salvare il file normalmente.
 
@@ -128,7 +131,7 @@ Periodicamente, il file sarà protetto nuovamente per aggiungere l'estensione de
     -   *&lt;dettagli contatto&gt;*
 
 ### Esempio di documentazione personalizzata per l'utente
-![](../media/AzRMS_ExampleBanner.png)
+![Esempio di documentazione dell'utente per la distribuzione rapida di Azure RMS](../media/AzRMS_ExampleBanner.png)
 
 #### Come modificare disegni CAD dalla condivisione ProjectNextGen
 
@@ -158,6 +161,6 @@ Periodicamente, il file sarà protetto nuovamente per aggiungere l'estensione de
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Scenario - Mantenere il controllo dei documenti archiviati in SharePoint
+
+*Si applica a: Azure Rights Management, Office 365*
+
 Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management per verificare che i documenti di Office archiviati in SharePoint rimangano sotto controllo tramite librerie protette. Ad esempio, i documenti vengono protetti automaticamente dalle perdite di dati accidentali o previste dagli utenti e l'amministratore può bloccare l'accesso al contenuto anche dopo che questo è stato scaricato o sincronizzato. I file da proteggere dovrebbero essere quelli destinati alla collaborazione interna su documenti o piani di progettazione oppure ad altre consegne. Quando si configurano le raccolte protette per SharePoint, i file di Office archiviati in tali raccolte saranno protetti da Azure Rights Management.
 
 Le istruzioni sono adatte ai casi seguenti:
@@ -36,8 +39,8 @@ Le istruzioni sono adatte ai casi seguenti:
 
 -   Dipendenti che non devono condividere i documenti con utenti esterni all'organizzazione.
 
-## Istruzioni di distribuzione
-![](../media/AzRMS_AdminBanner.png)
+## Istruzioni sulla distribuzione
+![Istruzioni per l'amministratore per la distribuzione rapida di Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Prima di passare alla documentazione utente, verificare che i requisiti e le procedure di supporto seguenti siano soddisfatti.
 
@@ -69,31 +72,31 @@ Non sono disponibili istruzioni procedurali per gli utenti relative a questo sce
 
 Usando il modello seguente, copiare e incollare l'annuncio in una comunicazione per gli utenti finali e apportare tali modifiche in base all'ambiente:
 
-1.  Sostituire ogni istanza di *&lt;nome della raccolta di SharePoint &gt;* con il nome e il collegamento alla raccolta di SharePoint configurata per Azure Rights Management. Se questa comunicazione vale per più di una libreria protetta, modificare le istruzioni.
+1.  Sostituire ogni istanza di *&lt;nome della raccolta di SharePoint&gt;* con il nome e il collegamento alla raccolta di SharePoint configurata per Azure Rights Management. Se questa comunicazione vale per più di una libreria protetta, modificare le istruzioni.
 
-2.  Se è stato configurato **, consentire la protezione di gruppo. Opzione gruppo predefinito**, sostituire *&lt;nome gruppo&gt;* con il nome del gruppo configurato e specificare il &lt;motivo per cui questo gruppo dispone delle autorizzazioni di accesso per collaborare sui file ma non tramite la raccolta di SharePoint&gt;. Se non si configura questa opzione, eliminare questa frase.
+2.  Se è stato configurato **, consentire la protezione di gruppo. l'opzione Gruppo predefinito**, sostituire *&lt;nome gruppo&gt;* con il nome del gruppo configurato e specificare &lt;motivo per il quale il gruppo dispone delle autorizzazioni di accesso per collaborare nei file ma non usando la raccolta di SharePoint&gt;. Se non si configura questa opzione, eliminare questa frase.
 
-3.  Sostituire anche *&lt;dettagli contatto&gt;* con istruzioni su come gli utenti possono contattare il supporto tecnico, ad esempio un collegamento a un sito Web, un indirizzo di posta elettronica o un numero di telefono.
+3.  Sostituire *&lt;dettagli contatto&gt;* con istruzioni su come gli utenti possono contattare il supporto tecnico, ad esempio il collegamento a un sito Web, un indirizzo di posta elettronica o un numero di telefono.
 
 4.  Apportare altre eventuali modifiche a questo annuncio e quindi inviarlo agli utenti.
 
 La documentazione dell'esempio mostra come questo annuncio viene visualizzato dagli utenti, dopo le personalizzazioni.
 
-![](../media/AzRMS_UsersBanner.png)
+![Documentazione dell'utente del modello per la distribuzione rapida di Azure RMS](../media/AzRMS_UsersBanner.png)
 
-### Annuncio IT: Modifiche al sito &lt;nome della raccolta di SharePoint&gt;
-Il sito di SharePoint relativo a **&lt;nome della raccolta di SharePoint&gt;** è ora configurato per la collaborazione protetta. Attualmente, solo i membri del team &lt;nome gruppo&gt; possono aprire questi documenti dal sito, anche se altri utenti li hanno salvati in locale o li hanno inviati tramite posta elettronica. L'eccezione è che è possibile condividerli con i membri del gruppo &lt;nome gruppo&gt; dopo avere scaricato i documenti e specificare il &lt;motivo per cui questo gruppo dispone delle autorizzazioni di accesso per collaborare sui file ma non tramite la raccolta di SharePoint&gt;. Quando si modifica uno di questi file, nella parte superiore del documento viene visualizzato un banner informativo giallo in cui si indica che è un documento protetto e si specificano gli utenti che possono accedervi.
+### Annuncio IT: modifiche al sito &lt;nome della raccolta di SharePoint&gt;
+Il sito di SharePoint, **&lt;nome della raccolta di SharePoint&gt;**, è ora configurato per la collaborazione protetta. Attualmente, solo i membri di &lt;nome gruppo&gt; possono aprire questi documenti dal sito, anche se sono stati salvati in locale o inviati tramite posta elettronica ad altri utenti. È possibile tuttavia condividerli con i membri di &lt;nome gruppo&gt; dopo aver scaricato i documenti, affinché &lt;motivo per il quale il gruppo dispone delle autorizzazioni di accesso per collaborare nei file ma non usando la raccolta di SharePoint&gt;. Quando si modifica uno di questi file, nella parte superiore del documento viene visualizzato un banner informativo giallo in cui si indica che è un documento protetto e si specificano gli utenti che possono accedervi.
 
 Questa modifica consente di impedire agli utenti non autorizzati di accedere ai dati confidenziali della società. I documenti protetti possono essere visualizzati anche da dispositivi mobili ma, per modificarli, è necessario un sistema desktop.
 
-È possibile caricare sul sito &lt;nome del sito SharePoint&gt; solo i documenti che supportano la collaborazione sicura.
+Non sarà possibile caricare i documenti nel sito &lt;nome del sito di SharePoint&gt; se la collaborazione protetta non è supportata.
 
 **Serve assistenza?**
 
 -   Contattare il supporto tecnico: &lt;dettagli contatto&gt;
 
 ### Esempio di documentazione per l'utente
-![](../media/AzRMS_ExampleBanner.png)
+![Esempio di documentazione dell'utente per la distribuzione rapida di Azure RMS](../media/AzRMS_ExampleBanner.png)
 
 #### Annuncio IT: Modifiche apportate al sito relativo a report e previsioni di vendita
 Il sito di SharePoint relativo a **report e previsioni di vendita**è ora configurato per la collaborazione protetta. Attualmente, solo i membri del team Vendite e marketing possono aprire questi documenti dal sito, anche se altri utenti li hanno salvati in locale o li hanno inviati tramite posta elettronica. L'unica eccezione è rappresentata dalla possibilità di condividerli con i membri del team Contabilità dopo averli scaricati, in modo da offrire loro la possibilità di estrarre i dati sulle previsioni mensili. Quando si modifica uno di questi file, nella parte superiore del documento viene visualizzato un banner informativo giallo in cui si indica che è un documento protetto e si specificano gli utenti che possono accedervi.
@@ -108,6 +111,6 @@ Questa modifica consente di impedire agli utenti non autorizzati di accedere ai 
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

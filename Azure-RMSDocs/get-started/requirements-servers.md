@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Requisiti per Azure RMS: server locali che supportano Azure RMS
+
+*Si applica a: Azure Rights Management, Office 365*
+
 I prodotti server locali seguenti sono supportati con Azure RMS quando si usa il connettore Azure RMS, che opera come interfaccia di comunicazione (inoltro) tra i server locali e Azure RMS. Questa configurazione richiede inoltre l'impostazione della sincronizzazione della directory tra le foreste Active Directory e Azure Active Directory.
 
 -   **Exchange Server**:
@@ -38,6 +41,8 @@ I prodotti server locali seguenti sono supportati con Azure RMS quando si usa il
     -   Exchange Server 2010
 
 -   **Office SharePoint Server**:
+
+    -   Office SharePoint Server 2016
 
     -   Office SharePoint Server 2013
 
@@ -62,6 +67,6 @@ Per altre informazioni sulla modalità di configurazione del connettore RMS per 
 Per verificare gli altri requisiti, vedere [Requisiti per Azure Rights Management](requirements-azure-rms.md).
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

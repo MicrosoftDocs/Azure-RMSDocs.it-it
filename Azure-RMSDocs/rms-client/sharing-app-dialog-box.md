@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Opzioni della finestra di dialogo per l’applicazione di condivisione Rights Management
+
+*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+
 Utilizzare queste informazioni per specificare le opzioni nella finestra di dialogo **Aggiungi protezione** o nella finestra di dialogo **Condividi file protetto** dell'applicazione di RMS sharing. Questa finestra di dialogo verrà visualizzata quando si [protegge un file da condividere](sharing-app-protect-by-email.md) oppure si [protegge un file nella posizione](sharing-app-protect-in-place.md) e si scelgono autorizzazioni personalizzate.
 
 > [!IMPORTANT]
@@ -54,11 +57,11 @@ Oltre alle opzioni che è possibile scegliere, è inoltre possibile chiedersi:
 -   Quando si **protegge genericamente un file**, gli utenti non autorizzati non possono aprire il file. Dopo che gli utenti autorizzati hanno aperto il file, potrebbero inoltrarlo non protetto ad altre persone o salvarlo in un percorso a cui potrebbero accedere altri utenti. Tuttavia, essi visualizzano un messaggio che li informa delle autorizzazioni di cui dispongono per il file e viene richiesto loro di accettarle, ma non è possibile applicare questa protezione. Inoltre, quando si protegge in modo generico un file, non è possibile limitare le autorizzazioni in modo diverso dall’autorizzazione. Ad esempio non è possibile limitare il contenuto alla sola visualizzazione o senza consentire la stampa:
 
     > [!NOTE]
-    > Un file protetto in modo generico ha sempre l'estensione **.pfile**.
+    > Un file protetto in modo generico ha sempre l'estensione **pfile**.
 
 -   In confronto, quando si usa la **protezione integrata (nativa)** di Rights Management con le applicazioni che la supportano (ad esempio, i file di Office), la protezione si applica al file anche se il file viene poi inviato a un altro utente o viene salvato in un altro percorso. Quando si proteggono i file, è possibile utilizzare autorizzazioni restrittive come sola lettura o l'autorizzazione per modificare, ma non stampare o copiare. Ad esempio, è possibile selezionare **Visualizzatore - Solo visualizzazione**, in modo che il contenuto non possa essere modificato, stampato o copiato.
 
-Per altre informazioni, vedere la sezione [Livelli di protezione – nativo e generico](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) della [Guida dell'amministratore dell'applicazione Rights Management sharing](sharing-app-admin-guide.md).
+Per altre informazioni tecniche, vedere la sezione [Livelli di protezione – nativo e generico](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) in [Guida dell'amministratore dell'applicazione di condivisione Rights Management](sharing-app-admin-guide.md).
 
 ## Che cos'è il file .ppdf che viene creato automaticamente?
 
@@ -74,13 +77,13 @@ Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights
 
 -   [Esempi per l'utilizzo dell’applicazione di condivisione RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Come procedere](sharing-app-user-guide.md##what-do-you-want-to-do-)
+-   [Come procedere](sharing-app-user-guide.md#what-do-you-want-to-do-)
 
 ## Vedere anche
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

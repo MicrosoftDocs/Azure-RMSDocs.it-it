@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -25,7 +25,10 @@ ms.suite: ems
 
 ---
 
-# Registrazione e analisi dell'utilizzo di Azure Rights Management
+# Registrazione e analisi dell'uso di Rights Management di Windows Azure
+
+*Si applica a: Azure Rights Management, Office 365*
+
 Le informazioni riportate in questo argomento consentono di comprendere l'uso della funzionalità di registrazione dell'utilizzo di Azure Rights Management (Azure RMS). Il servizio Azure Rights Management è in grado di registrare qualsiasi richiesta eseguita per l'organizzazione, incluse le richieste provenienti dagli utenti, le azioni eseguite dagli amministratori di Rights Management nell'organizzazione e quelle eseguite da operatori Microsoft a supporto della distribuzione di Azure Rights Management.
 
 È poi possibile usare i log di Azure Rights Management per supportare gli scenari aziendali seguenti:
@@ -44,8 +47,7 @@ Le informazioni riportate in questo argomento consentono di comprendere l'uso de
 
     Se si verifica una perdita di informazioni, è probabile che all'amministratore vengano richiesti i nominativi degli utenti che hanno avuto accesso a specifici documenti e l'indicazione delle informazioni visualizzate di recente da una persona sospetta. Se si usa Azure Rights Management e la relativa funzione di registrazione, è possibile rispondere a questo tipo di domande. Gli utenti che usano contenuto protetto, infatti, devono sempre ottenere una licenza di Rights Management per aprire immagini e documenti protetti con Azure Rights Management, anche se i file vengono spostati tramite posta elettronica o copiati in unità USB o altri dispositivi di archiviazione. Questo significa che, quando i dati vengono protetti con Azure Rights Management, è possibile usare i log di Azure Rights Management come fonte certa di informazioni per l'esecuzione di analisi a scopo legale.
 
-> [!NOTE]
-> Se si è interessati solo alla registrazione delle attività amministrative di Azure Rights Management e non alle modalità con cui viene usato il servizio, è possibile usare il cmdlet [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) di Windows PowerShell per Azure Rights Management.
+> [!NOTE] Se si è interessati solo alla registrazione delle attività amministrative di Azure Rights Management e non all'utilizzo del servizio da parte degli utenti, è possibile usare il cmdlet [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) di Windows PowerShell per Azure Rights Management.
 > 
 > È possibile anche usare il portale di Azure classico per report generali sull'utilizzo, tra cui **Riepilogo per RMS**, **Utenti attivi RMS**, **Piattaforme dispositivi RMS** e **Utilizzo applicazioni RMS**. Per accedere a questi report dal portale di Azure classico, fare clic su **Active Directory**, selezionare e aprire una directory e quindi fare clic su **REPORT**.
 
@@ -54,8 +56,7 @@ Per altre informazioni sulla funzionalità di registrazione dell'utilizzo di Azu
 ## Come abilitare la funzionalità di registrazione dell'utilizzo di Azure Rights Management
 A partire da febbraio 2016, la funzionalità di registrazione dell'utilizzo di Azure Rights Management è abilitata per impostazione predefinita per tutti i clienti. Questa impostazione è applicabile ai clienti che hanno attivato il servizio Azure RMS prima di febbraio 2016 e ai clienti che attivano il servizio dopo il mese di febbraio 2016. 
 
-> [!NOTE]
-> Non sono previsti costi aggiuntivi per l'archiviazione dei log o per il funzionamento della funzionalità di registrazione.
+> [!NOTE] Non sono previsti costi aggiuntivi per l'archiviazione dei log o per il funzionamento della funzionalità di registrazione.
 > 
 > A differenza della situazione attuale, per usare la funzionalità di registrazione dell'utilizzo di Azure RMS prima del mese di febbraio 2016 occorreva avere una sottoscrizione di Azure e risorse di archiviazione sufficienti in Azure.
 
@@ -151,7 +152,7 @@ Ciascuna delle righe seguenti è un record di log. I valori dei campi seguono lo
 |owner-email|String|Indirizzo di posta elettronica del proprietario del documento.|alice@contoso.com|
 |issuer|String|Indirizzo di posta elettronica del soggetto emittente il documento.|alice@contoso.com (o) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
 |Template-id|String|ID del modello usato per proteggere il documento.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|File-name|String|Nome del documento protetto.|TopSecretDocument.docx|
+|File-name|String|Nome del documento protetto. <br /><br />Attualmente, alcuni file, ad esempio i documenti di Office, vengono visualizzati come GUID anziché come nome di file.|TopSecretDocument.docx|
 |Date-published|Date|Data in cui è stato protetto il documento.|2015-10-15T21:37:00|
 |c-info|String|Informazioni sulla piattaforma client che effettua la richiesta.<br /><br />La stringa specifica varia a seconda dell'applicazione (ad esempio, il sistema operativo o il browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|Address|L'indirizzo IP del client che effettua la richiesta.|64.51.202.144|
@@ -159,9 +160,9 @@ Ciascuna delle righe seguenti è un record di log. I valori dei campi seguono lo
 #### Eccezioni per il campo user-id
 Anche se nel campo user-id è in genere riportato il nome dell'utente che ha effettuato la richiesta, esistono due eccezioni in cui il valore del campo non indica un utente reale:
 
--   Viene visualizzato il valore **'microsoftrmsonline@&lt;YourTenantID&gt;.rms.&lt;region&gt;.aadrm.com'**.
+-   Il valore **'microsoftrmsonline@&lt;YourTenantID&gt;.rms.&lt;region&gt;.aadrm.com'**.
 
-    Questo valore indica che la richiesta viene eseguita da un servizio di Office 365, ad esempio Exchange Online o SharePoint Online. Nella stringa, *&lt;YourTenantID&gt;* indica il GUID del tenant e *&lt;region&gt;* l'area in cui il tenant è registrato. Ad esempio, **na** indica l'America del Nord, **eu** l'Europa e **ap** l'Asia.
+    Questo valore indica che la richiesta viene eseguita da un servizio di Office 365, ad esempio Exchange Online o SharePoint Online. Nella stringa, *&lt;YourTenantID&gt;* è il GUID del tenant, mentre *&lt;region&gt;* è l'area in cui è registrato il tenant. Ad esempio, **na** indica l'America del Nord, **eu** l'Europa e **ap** l'Asia.
 
 -   Si sta usando il connettore RMS.
 
@@ -228,6 +229,6 @@ Per altre informazioni sull'uso di Windows PowerShell per Azure Rights Managemen
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO3-->
 
 

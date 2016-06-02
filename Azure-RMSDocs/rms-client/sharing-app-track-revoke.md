@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -25,7 +25,10 @@ ms.suite: ems
 
 ---
 
-# Rilevare e revocare i documenti quando si utilizza l'applicazione di condivisione RMS
+# Rilevare e revocare i documenti quando si usa l'applicazione di condivisione RMS
+
+*Si applica a: Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+
 Dopo avere protetto i documenti tramite l'applicazione RMS sharing, se l'organizzazione usa Azure Rights Management invece di Active Directory Rights Management Services, è possibile tenere traccia del modo in cui le persone usano i documenti protetti. Se necessario, è anche possibile revocare l'accesso a questi documenti quando si desidera interromperne la condivisione. A tale scopo, usare il **sito di rilevamento del documento**, a cui è possibile accedere dai computer Windows, dai computer Mac e anche da tablet e telefoni.
 
 <div style="padding-top: 56.25%; position: relative; width: 100%;">
@@ -40,19 +43,19 @@ Quando si accede a questo sito, eseguire l'accesso per effettuare il rilevamento
 
 -   Se si desidera configurare notifiche tramite posta elettronica: Fare clic su **Impostazioni** e selezionare come e se ricevere un messaggio di posta elettronica quando si accede al documento.
 
--   Se si hanno domande o si vogliono lasciare commenti e suggerimenti sul sito di rilevamento del documento: Fare clic sull'icona della Guida per l'accesso alle [Domande frequenti relative al rilevamento dei documenti](http://go.microsoft.com/fwlink/?LinkId=523977).
+-   Se si hanno domande o si vogliono lasciare commenti e suggerimenti sul sito di rilevamento dei documenti: fare clic sull'icona della Guida per accedere alle [Domande frequenti relative al rilevamento dei documenti](http://go.microsoft.com/fwlink/?LinkId=523977).
 
 ## Utilizzare Office per accedere al sito di rilevamento del documento
 
--   Per le applicazioni di Office, Word, Excel e PowerPoint: Nella scheda **Home** , nel gruppo **RMS** , fare clic su **Condivisione protetta**, e poi fare clic su **Rileva utilizzo**.
+-   Per le applicazioni di Office, Word, Excel e PowerPoint: nella scheda **Home** nel gruppo **RMS** fare clic su **Condividi file protetto**, e poi fare clic su **Rileva utilizzo**.
 
-    ![](../media/ADRMS_MSRMSApp_OfficeToolbarTrackUsage.png)
+    ![Rilevare l'utilizzo dalle applicazioni di Office quando si usa l'applicazione di condivisione RMS ](../media/ADRMS_MSRMSApp_OfficeToolbarTrackUsage.png)
 
 -   Per Outlook: In Outlook, nella scheda **Home** , nel gruppo  **RMS** , fare clic su **Rileva utilizzo**.
 
-    ![](../media/ADRMS_MSRMSApp_OutlookTrackUsage.png)
+    ![Selezionare Rileva utilizzo da Outlook quando si usa l'applicazione di condivisione RMS ](../media/ADRMS_MSRMSApp_OutlookTrackUsage.png)
 
-Se non vengono visualizzate queste opzioni per RMS, è probabile che l'applicazione di applicazione RMS non sia installata nel computer o che il computer debba essere riavviato per completare l'installazione. Per altre informazioni su come installare l'applicazione, vedere [Scaricare e installare l'applicazione Rights Management sharing](install-sharing-app.md).
+Se non vengono visualizzate queste opzioni per RMS, è probabile che l'applicazione di applicazione RMS non sia installata nel computer o che il computer debba essere riavviato per completare l'installazione. Per altre informazioni sull'installazione dell'applicazione di condivisione, vedere [Scaricare e installare l'applicazione di condivisione Rights Management](install-sharing-app.md).
 
 ### Altri modi per tenere traccia e revocare i documenti
 Oltre a tenere traccia dei documenti nei computer Windows utilizzando applicazioni Office, è anche possibile utilizzare queste alternative:
@@ -65,7 +68,7 @@ Oltre a tenere traccia dei documenti nei computer Windows utilizzando applicazio
 
 #### Tramite l’utilizzo di un browser per accedere al sito di rilevamento dei documenti
 
--   Tramite l’utilizzo di un browser supportato, passare al [sito di rilevamento del documento](http://go.microsoft.com/fwlink/?LinkId=529562).
+-   Usando un browser supportato passare al [sito di rilevamento dei documenti](http://go.microsoft.com/fwlink/?LinkId=529562).
 
     Browser supportati: È consigliabile utilizzare almeno la versione  10 di Internet Explorer, ma è possibile utilizzare uno qualsiasi dei browser seguenti per utilizzare il sito di rilevamento del documento:
 
@@ -83,26 +86,25 @@ Oltre a tenere traccia dei documenti nei computer Windows utilizzando applicazio
 
 -   Fare clic con il pulsante destro del mouse sul file, selezionare **Proteggi tramite RMS**, poi selezionare **Rileva utilizzo**:
 
-    ![](../media/ADRMS_MSRMSApp_ExplorerTrackUsage.png)
+    ![Selezionare Rileva utilizzo da Explorer quando si usa l'applicazione di condivisione RMS](../media/ADRMS_MSRMSApp_ExplorerTrackUsage.png)
 
 #### Utilizzo di un messaggio di posta elettronica di Outlook per accedere al sito di rilevamento del documento
 
 -   In un messaggio di posta elettronica, nella scheda **Messaggio** , nel gruppo  **RMS** , fare clic su **Condivisione protetta**, e poi fare clic su **Traccia utilizzo**:
 
-    ![](../media/ADRMS_MSRMSApp_OutlookMessageTrackUsage.png)
+    ![Selezionare Rileva utilizzo da Outlook quando si usa l'applicazione di condivisione RMS](../media/ADRMS_MSRMSApp_OutlookMessageTrackUsage.png)
 
 ## Esempi e altre istruzioni
 Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights Management e procedure, vedere le sezioni seguenti della Guida dell’utente dell’applicazione di condivisione Rights Management:
 
 -   [Esempi per l'utilizzo dell’applicazione di condivisione RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Come procedere](sharing-app-user-guide.md##what-do-you-want-to-do-)
+-   [Come procedere](sharing-app-user-guide.md#what-do-you-want-to-do-)
 
 ## Vedere anche
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
 
-
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Generare e trasferire la propria chiave del tenant tramite Internet
+
+*Si applica a: Azure Rights Management, Office 365*
+
 Se si vuole [gestire la chiave del tenant](plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-) e trasferirla tramite Internet invece di recarsi in una struttura Microsoft per trasferirla di persona, seguire queste procedure:
 
 
@@ -40,12 +43,12 @@ Per preparare la workstation connessa a Internet, seguire questi 3 passaggi:
 -   [Passaggio 3: Scaricare il set di strumenti BYOK](#step-3-download-the-byok-toolset)
 
 ### Passaggio 1: Installare Windows PowerShell per Azure Rights Management
-Nella workstation connessa a Internet scaricare e installare il modulo Windows PowerShell per Azure Rights Management.
+Dalla workstation connessa a Internet scaricare e installare il modulo Windows PowerShell per Azure Rights Management.
 
 > [!NOTE]
 > Se il modulo Windows PowerShell è stato scaricato in precedenza, eseguire il comando seguente per verificare che la versione in uso sia almeno la versione 2.1.0.0: `(Get-Module aadrm -ListAvailable).Version`
 
-Per istruzioni di installazione, vedere [Installazione di Windows PowerShell per Azure Rights Management](../deploy-use/install-powershell.md).
+Per le istruzioni di installazione, vedere [Installazione di Windows PowerShell per Microsoft Azure Rights Management](../deploy-use/install-powershell.md).
 
 ### Passaggio 2: Ottenere l'ID del tenant di Azure Active Directory
 Avviare Windows PowerShell con l'opzione **Esegui come amministratore** , quindi eseguire i comandi indicati di seguito.
@@ -82,15 +85,15 @@ Accedere all'Area download Microsoft e [scaricare il set di strumenti BYOK](http
 |Asia|AzureRMS-BYOK-tools-AsiaPacific.zip|
 Il set di strumenti include gli elementi seguenti:
 
--   Pacchetto di chiavi per lo scambio delle chiavi con un nome che inizia con **BYOK-KEK-pkg-**.
+-   Pacchetto KEK (Key Exchange Key) il cui nome inizia con **BYOK-KEK-pkg-**.
 
--   Pacchetto relativo all'ambiente di sicurezza con un nome che inizia con **BYOK-SecurityWorld-pkg-**.
+-   Pacchetto dell'ambiente di sicurezza il cui nome inizia con **BYOK-SecurityWorld-pkg-**.
 
 -   Script python denominato **verifykeypackage.py**.
 
 -   File eseguibile dalla riga di comando denominato **KeyTransferRemote.exe**, file di metadati denominato **KeyTransferRemote.exe.config** e DLL associate.
 
--   Componente Visual C++ Redistributable Package denominato **vcredist_x64.exe**.
+-   Pacchetto ridistribuibile Visual C++ denominato **vcredist_x64.exe**.
 
 Copiare il pacchetto in un'unità USB o in un altro dispositivo di archiviazione portatile.
 
@@ -185,7 +188,7 @@ Questo passaggio è facoltativo, ma è consigliato in modo che sia possibile con
 
 2.  Assicurarsi di visualizzare il risultato positivo seguente, che indica il completamento della convalida: **Result:  SUCCESS**
 
-Questo script consente di convalidare la catena di firmatari fino alla chiave radice di Thales. La funzione hash di questa chiave radice è incorporata nello script e il relativo valore deve essere **59178a47 de508c3f 291277ee 184f46c4 f1d9c639**. Si può anche confermare questo valore separatamente sul [sito Web di Thales](http://www.thalesesec.com/).
+Questo script consente di convalidare la catena di firmatari fino alla chiave radice di Thales. La funzione hash di questa chiave radice è incorporata nello script e il relativo valore deve essere **59178a47 de508c3f 291277ee 184f46c4 f1d9c639**. È anche possibile confermare questo valore separatamente visitando il [sito Web Thales](http://www.thalesesec.com/).
 
 A questo punto si può creare una nuova chiave che costituirà la chiave del tenant RMS dell'utente.
 
@@ -223,7 +226,7 @@ Quando si esegue il comando, usare le istruzioni seguenti:
 Questo comando crea un file di chiave in formato token nella cartella %NFAST_KMDATA%\local dell'utente con un nome che inizia con **key_caping_`_`** seguito da un SID. Ad esempio: **key_caping_machine--801c1a878c925fd9df4d62ba001b94701c039e2fb**. Questo file contiene una chiave crittografata.
 
 > [!TIP]
-> È possibile verificare lo stato attuale della configurazione delle chiavi usando il comando `nkminfo –k`.
+> È possibile verificare lo stato attuale della configurazione delle chiavi usando il comando `nkminfo –k` .
 
 Eseguire il backup del file di chiave in formato token in un percorso sicuro.
 
@@ -270,7 +273,7 @@ Quando si esegue questo comando, sostituire *contosokey* con lo stesso valore sp
 
 Verrà richiesto di inserire le schede di ACS dell'ambiente di sicurezza e, se specificati, la password o il PIN.
 
-Al completamento del comando verrà visualizzato il messaggio **Result: SUCCESS** e la copia della chiave del tenant con autorizzazioni ridotte si troverà nel file denominato key_xferacId_*&lt;contosokey&gt;*.
+Al termine dell'esecuzione del comando, verrà visualizzato **Result: SUCCESS** e la copia della chiave del tenant con autorizzazioni ridotte si troverà nel file denominato key_xferacId_*&lt;contosokey&gt;*.
 
 ### Passaggio 2: Verificare la nuova copia della chiave
 Se si desidera, eseguire le utilità Thales per confermare le autorizzazioni minime sulla nuova chiave del tenant:
@@ -380,6 +383,6 @@ Tutti i passaggi necessari per trasferire la propria chiave tramite Internet son
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

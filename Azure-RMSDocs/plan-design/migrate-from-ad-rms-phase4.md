@@ -28,7 +28,10 @@ ms.suite: ems
 
 # Fase 4 della migrazione: attività post-migrazione
 
-Usare le seguenti informazioni per la fase 4 della migrazione da AD RMS ad Azure Rights Management (Azure RMS). Queste procedure illustrano i passaggi 8 e 9 di [Migrazione da AD RMS ad Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
+*Si applica a: Active Directory Rights Management Services, Azure Rights Management*
+
+
+Usare le seguenti informazioni per la fase 4 della migrazione da AD RMS ad Azure Rights Management (Azure RMS). Queste procedure descrivono i passaggi da 8 a 9 di [Migrazione da AD RMS ad Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
 
 
 ## Passaggio 8. Rimuovere le autorizzazioni di AD RMS
@@ -58,6 +61,6 @@ Dopo aver completato la migrazione, rivedere la [guida di orientamento alla dist
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: fcaa5643-64a9-4181-b29b-90211fce7ab5
-
+ms.assetid: 5FB975EE-E4E5-4089-B8E1-CAFD5B9B34EC
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Abilitazione della notifica tramite posta elettronica
 
 La notifica tramite posta elettronica consente al proprietario di un contenuto protetto di ricevere un messaggio quando qualcuno accede al contenuto.
@@ -73,6 +71,6 @@ La tabella seguente contiene i campi dei dati dell'applicazione e le coppie di n
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

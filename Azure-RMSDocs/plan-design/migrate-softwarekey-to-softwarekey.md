@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Passaggio 2&colon; Migrazione da una chiave protetta tramite software a un'altra| Azure RMS
+title: Passaggio 2&colon; Migrazione da una chiave protetta tramite software a un'altra | Azure RMS
 description:
 keywords:
 author: cabailey
@@ -28,6 +28,9 @@ ms.suite: ems
 
 # Passaggio 2: Migrazione da una chiave protetta tramite software a un'altra
 
+*Si applica a: Active Directory Rights Management Services, Azure Rights Management*
+
+
 Queste istruzioni fanno parte del [percorso di migrazione da AD RMS ad Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md) e si applicano solo se la chiave di AD RMS è protetta tramite software e si vuole eseguire la migrazione ad Azure Rights Management con una chiave del tenant protetta tramite software. 
 
 Se non si tratta dello scenario di configurazione prescelto, tornare al [Passaggio 2. Esportare i dati di configurazione da AD RMS e importarli in Azure RMS](migrate-from-ad-rms-to-azure-rms.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms), quindi scegliere una configurazione diversa.
@@ -41,7 +44,7 @@ Usare la procedura seguente per importare la configurazione di AD RMS in Azure R
     > [!TIP]
     > Se il modulo è stato scaricato e installato in precedenza, verificarne il numero di versione eseguendo il comando seguente: `(Get-Module aadrm -ListAvailable).Version`
 
-    Per istruzioni di installazione, vedere [Installazione di Windows PowerShell per Azure Rights Management](../deploy-use/install-powershell.md).
+    Per le istruzioni di installazione, vedere [Installazione di Windows PowerShell per Microsoft Azure Rights Management](../deploy-use/install-powershell.md).
 
 2.  Avviare Windows PowerShell con l'opzione **Esegui come amministratore** e usare il cmdlet [Connect-AadrmService](http://msdn.microsoft.com/library/azure/dn629415.aspx) per connettersi al servizio Azure RMS:
 
@@ -71,6 +74,6 @@ Usare la procedura seguente per importare la configurazione di AD RMS in Azure R
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

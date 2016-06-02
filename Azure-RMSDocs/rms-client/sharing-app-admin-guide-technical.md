@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Panoramica tecnica per l'applicazione di condivisione Microsoft Rights Management
+
+*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+
 
 L'applicazione di condivisione Microsoft Rights Management è un'applicazione facoltativa scaricabile per Microsoft Windows e altre piattaforme e che fornisce le operazioni seguenti:
 
@@ -52,8 +55,8 @@ Applicazione di condivisione Rights Management di Microsoft supporta la protezio
 |Tipo di protezione|Nativo|Generico|
 |----------------------|----------|-----------|
 |Descrizione|Per file di testo, di immagine, di Microsoft Office (file di Word, Excel e PowerPoint), file .pdf e altri tipi di file di applicazione, che supportano AD RMS, la protezione nativa fornisce un forte livello di protezione che include crittografia e applicazione di diritti (autorizzazioni).|Per tutte le altre applicazioni e tipi di file, la protezione generica fornisce un livello di protezione che include sia l’incapsulamento di file mediante l'autenticazione e il tipo di file .pfile per verificare se un utente è autorizzato per aprire il file.|
-|Protezione|I file sono completamente crittografati e la protezione viene applicata nei modi seguenti:<br /><br />Prima di eseguire il rendering del contenuto protetto, deve verificarsi la riuscita dell'autenticazione per coloro che ricevono file tramite posta elettronica o a cui viene concesso l'accesso a esso tramite le autorizzazioni di file o di condivisione.<br /><br />Inoltre, i diritti di utilizzo e i criteri impostati dal proprietario del contenuto quando i file sono protetti vengono completamente applicate quando viene eseguito il rendering del contenuto nel Visualizzatore IP (per i file protetti di testo e immagine) o l'applicazione associata (per tutti gli altri tipi di file supportati).|La protezione dei file viene applicata nei modi seguenti:<br /><br />Prima di eseguire il rendering del contenuto protetto, l'autenticazione deve avere esito positivo per coloro che sono autorizzati ad aprire il file e a cui viene concesso l’accesso ad esso. Se l'autorizzazione ha esito negativo, il file non si apre.<br /><br />I diritti di utilizzo e i criteri impostati dal proprietario del contenuto vengono visualizzati per informare gli utenti autorizzati circa i criteri di utilizzo previsti.<br /><br />Si verifica la registrazione di controllo di utenti autorizzati per l’apertura e l'accesso ai file, tuttavia, non vengono applicati diritti di utilizzo da applicazioni non supportare.|
-|Impostazione predefinita per i tipi di file|Questo è il livello predefinito di protezione per i tipi di file seguenti:<br /><br />File di testo e di immagine<br /><br />File di Microsoft Office (Word, Excel, PowerPoint)<br /><br />Formato di documento portatile (.pdf)<br /><br />Per altre informazioni, vedere la sezione di seguito, [Tipi di file supportati e le estensioni di nome di file](#supported-file-types-and-file-name-extensions).|Questa è la protezione predefinita per tutti gli altri tipi di file (ad esempio con estensione vsdx, rtf e così via) non è supportata tramite la protezione completa.|
+|Protezione|I file sono completamente crittografati e la protezione viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che ricevono il file tramite posta elettronica o a cui viene concesso l'accesso al file tramite autorizzazioni di file o condivisione.<br /><br />- Inoltre, vengono applicati tutti i diritti di utilizzo e i criteri impostati dal proprietario del contenuto per i file protetti quando viene eseguito il rendering del contenuto nel Visualizzatore IP (per i file protetti di testo e immagine) o nell'applicazione associata (per tutti gli altri tipi di file supportati).|La protezione dei file viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che sono autorizzati ad aprire il file e a cui viene concesso l'accesso al file. Se l'autorizzazione ha esito negativo, il file non si apre.<br /><br />- Vengono visualizzati i diritti di utilizzo e i criteri impostati dal proprietario del contenuto per comunicare agli utenti autorizzati i criteri di utilizzo previsti.<br /><br />- Si verifica la registrazione di controllo degli utenti autorizzati all'apertura e all'accesso dei file, ma non vengono applicati diritti di utilizzo da applicazioni non compatibili.|
+|Impostazione predefinita per i tipi di file|Questo è il livello predefinito di protezione per i tipi di file seguenti:<br /><br />- File di testo e immagine<br /><br />- File di Microsoft Office (Word, Excel, PowerPoint)<br /><br />- Formato di documento portatile (.pdf)<br /><br />Per altre informazioni, vedere la sezione di seguito, [Tipi di file supportati e le estensioni di nome di file](#supported-file-types-and-file-name-extensions).|Questa è la protezione predefinita per tutti gli altri tipi di file (ad esempio con estensione vsdx, rtf e così via) non è supportata tramite la protezione completa.|
 È possibile modificare il livello di protezione predefinito che applica l'applicazione di condivisione RMS. È possibile modificare il livello predefinito da nativo a generico, da generico a nativo, e anche impedire l'applicazione di condivisione RMS dalla protezione di applicazione. Per altre informazioni, vedere la sezione [Modifica del livello di protezione predefinito dei file](#changing-the-default-protection-level-of-files) in questo articolo.
 
 ## Tipi di file supportati e le estensioni di nome di file
@@ -63,8 +66,7 @@ Inoltre, quando l'applicazione di condivisione RMS protegge in modo nativo un fi
 
 Per i file protetti in modo generico, l'estensione del nome file originale viene sempre modificata in .pfile.
 
-> [!WARNING]
-> Se si dispone di firewall, proxy web o software di protezione che esaminano e agiscono in base alle estensioni di file, potrebbe essere necessario riconfigurare tali impostazioni per supportare queste nuove estensioni di file.
+> [!WARNING] Se sono presenti firewall, proxy Web o software di protezione che esaminano e agiscono in base alle estensioni di file, potrebbe essere necessario eseguire una riconfigurazione per supportare queste nuove estensioni di file.
 
 |Estensione del nome di file originale|Estensione del nome di file protetti tramite RMS|
 |--------------------------------|-------------------------------------|
@@ -107,11 +109,11 @@ Analogamente, è possibile forzare l'applicazione di condivisione RMS ad applica
 
 Per configurare l'applicazione di condivisione RMS per applicare la protezione generica a tutti i file che, per impostazione predefinita, avrebbe una protezione nativa applicata , apportare le seguenti modifiche al Registro di sistema:
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection**: creare una nuova chiave denominata **&#42;**.
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection**: creare una nuova chiave denominata *.
 
     Questa impostazione indica i file con qualsiasi estensione di file.
 
-2.  Nella chiave appena aggiunta di **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\&#42;**, creare un nuovo valore stringa (REG_SZ) denominato **crittografia** che ha il valore dei dati **Pfile**.
+2.  Nella nuova chiave aggiunta di HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\\\*, creare un nuovo valore stringa (REG_SZ) denominato **Crittografia** con valore di dati **Pfile**.
 
     Questa impostazione determina l’applicazione di condivisione RMS applicando la protezione generica.
 
@@ -142,6 +144,6 @@ Ripetere questi tre passaggi per altri tipi di file che si desidera definire com
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO3-->
 
 

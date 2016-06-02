@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Pianificazione e implementazione della chiave del tenant di Azure Rights Management
+
+*Si applica a: Azure Rights Management, Office 365*
+
 In questo argomento sono contenute informazioni per pianificare e gestire la chiave del tenant RMS (Rights Management Service) per Azure RMS. Anziché affidare a Microsoft la gestione della chiave del tenant (impostazione predefinita), per rispettare i criteri aziendali potrebbe essere necessario, ad esempio, gestire autonomamente la propria chiave del tenant  in base alla modalità BYOK (Bring Your Own Key).
 
 > [!NOTE]
@@ -62,11 +65,11 @@ Se si decide di affidare a Microsoft la gestione della chiave del tenant, Micros
 
 Nei diagrammi seguenti vengono illustrate e confrontate le due opzioni. Nel primo diagramma viene illustrato il minor sovraccarico amministrativo che l'utente deve sostenere nella configurazione predefinita quando Microsoft gestisce la chiave del tenant.
 
-![](../media/RMS_BYOK_cloud.png)
+![Ciclo di vita della chiave del tenant di Azure RMS: chiave gestita da Microsoft, impostazione predefinita](../media/RMS_BYOK_cloud.png)
 
 Nel secondo diagramma vengono illustrati i passaggi aggiuntivi necessari quando l'utente gestisce la propria chiave del tenant.
 
-![](../media/RMS_BYOK_onprem.png)
+![Ciclo di vita della chiave del tenant di Azure RMS: chiave gestita dall'utente, BYOK](../media/RMS_BYOK_onprem.png)
 
 Se si decide di affidare a Microsoft la gestione della chiave del tenant, non è necessaria alcuna azione aggiuntiva per generare la chiave ed è possibile passare direttamente alla sezione [Passaggi successivi](plan-implement-tenant-key.md#next-steps).
 
@@ -90,7 +93,7 @@ Nella tabella seguente sono elencati i prerequisiti per la modalità BYOK.
 |Sottoscrizione che supporta Azure RMS.|Per altre informazioni sulle sottoscrizioni disponibili, vedere [Sottoscrizioni cloud che supportano Azure RMS](../get-started/requirements-subscriptions.md).|
 |Non si usa RMS per singoli utenti o per Exchange Online. Se si usa Exchange Online, si conoscono e si accettano le limitazioni relative all'uso della modalità BYOK con questa configurazione.|Per altre informazioni sulle restrizioni per la modalità BYOK e sulle limitazioni attuali, vedere [Prezzi e restrizioni della modalità BYOK](byok-price-restrictions.md).<br /><br />**Importante**: attualmente, la modalità BYOK non è compatibile con Exchange Online.|
 |Moduli di protezione hardware Thales, smart card e software di supporto.<br /><br />**Nota**: se si esegue la migrazione da AD RMS ad Azure RMS, passando da una chiave software a una chiave hardware, sarà necessaria almeno la versione 11.62 per i driver Thales.|È necessario disporre dell'accesso ai moduli di protezione hardware Thales e averne una conoscenza a livello operativo. Per l'elenco dei modelli compatibili o per acquistare un modulo di protezione hardware qualora non se ne sia già in possesso, vedere la pagina relativa ai [moduli di protezione hardware Thales](http://www.thales-esecurity.com/msrms/buy) .|
-|Se si desidera trasferire la propria chiave del tenant tramite Internet anziché recarsi fisicamente a Redmond negli Stati Uniti, è necessario soddisfare 3 requisiti:<br /><br />Requisito 1: workstation x64 offline con sistema operativo Windows 7 o versioni successive e software nShield di Thales versione 11.62 o successive.<br /><br />Se la workstation esegue Windows 7, è necessario [installare Microsoft .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkId=225702).<br /><br />Requisito 2: workstation connessa a Internet con sistema operativo Windows 7 o versioni successive.<br /><br />Requisito 3: unità USB o altro dispositivo di archiviazione portatile con almeno 16 MB di spazio disponibile.|Tali prerequisiti non sono necessari se ci si reca a Redmond e si trasferisce la propria chiave di persona.<br /><br />Per motivi di sicurezza, si consiglia che la prima workstation non sia connessa a una rete. Questa condizione tuttavia non viene applicata a livello di codice.<br /><br />Nota: nelle istruzioni seguenti si fa riferimento alla prima workstation come **workstation disconnessa**.<br /><br />Se inoltre la propria chiave del tenant è destinata a essere usata in una rete di produzione, si consiglia di usare una seconda workstation separata per scaricare il set di strumenti e caricare la chiave del tenant. A scopo di test è comunque possibile usare la prima workstation.<br /><br />Nota: nelle istruzioni seguenti si fa riferimento alla seconda workstation come **workstation connessa a Internet**.|
+|Se si desidera trasferire la propria chiave del tenant tramite Internet anziché recarsi fisicamente a Redmond negli Stati Uniti, è necessario soddisfare 3 requisiti:<br /><br />1: una workstation x64 offline con sistema operativo Windows 7 o versioni successive e software nShield Thales versione 11.62 o successive.<br /><br />Se la workstation esegue Windows 7, è necessario [installare Microsoft .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkId=225702).<br /><br />2: una workstation connessa a Internet con sistema operativo Windows 7 o versioni successive.<br /><br />3: un'unità USB o altro dispositivo di archiviazione portatile con almeno 16 MB di spazio disponibile.|Tali prerequisiti non sono necessari se ci si reca a Redmond e si trasferisce la propria chiave di persona.<br /><br />Per motivi di sicurezza, si consiglia che la prima workstation non sia connessa a una rete. Questa condizione tuttavia non viene applicata a livello di codice.<br /><br />Nota: nelle istruzioni seguenti si fa riferimento alla prima workstation come **workstation disconnessa**.<br /><br />Se inoltre la propria chiave del tenant è destinata a essere usata in una rete di produzione, si consiglia di usare una seconda workstation separata per scaricare il set di strumenti e caricare la chiave del tenant. A scopo di test è comunque possibile usare la prima workstation.<br /><br />Nota: nelle istruzioni seguenti si fa riferimento alla seconda workstation come **workstation connessa a Internet**.|
 
 Le procedure per generare e usare la propria chiave del tenant dipendono dalle modalità di esecuzione di tali operazioni, ovvero tramite Internet o di persona.
 
@@ -135,7 +138,7 @@ Dopo la pianificazione e, se necessario, la generazione della chiave del tenant,
 
     Se si è deciso di gestire la propria chiave del tenant, la registrazione include informazioni sull'uso della chiave stessa. Vedere l'esempio seguente di un file di log visualizzato in Excel in cui i tipi di richiesta **Decrypt** e **SignDigest** mostrano che la chiave del tenant è attualmente usata.
 
-    ![](../media/RMS_Logging.gif)
+    ![file di log visualizzato in Excel in cui è attualmente usata la chiave del tenant](../media/RMS_Logging.gif)
 
     Per ulteriori informazioni sulla registrazione dei dati di utilizzo, vedere [Registrazione e analisi dell'utilizzo di Azure Rights Management](../deploy-use/log-analyze-usage.md).
 
@@ -145,6 +148,6 @@ Dopo la pianificazione e, se necessario, la generazione della chiave del tenant,
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO3-->
 
 

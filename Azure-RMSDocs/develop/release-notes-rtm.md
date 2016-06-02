@@ -6,13 +6,12 @@ description:
 keywords:
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/03/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 84a93d5b-37e9-4d9c-9b7c-ad00963a68d7
-
+ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 # optional metadata
 
 #ROBOTS:
@@ -25,12 +24,25 @@ ms.suite: ems
 
 ---
 
-﻿
 # Note sulla versione
 
 Questo argomento contiene informazioni importanti su questa versione e le precedenti dell'SDK 2.1 RMS.
 
-## Novità relative all'aggiornamento di dicembre 2015
+## Novità dell'aggiornamento di febbraio 2016 della documentazione dell'SDK
+
+>[!Note]  Gli aggiornamenti della documentazione delle funzionalità in questa sezione si applicano al download dell'SDK con data 11/12/2015.
+
+- **Flusso di autenticazione migliorato**: usando l'autenticazione OAuth2 basata su token tramite [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/). Per altre informazioni sul processo e sulle relative estensioni API, vedere [Autenticazione ADAL per l'applicazione abilitata per RMS](https://msdn.microsoft.com/en-us/library/windows/desktop/mt661865(v=vs.85).aspx).
+- **Aggiornamento ad ADAL**: eseguendo l'aggiornamento dell'applicazione per l'uso dell'autenticazione ADAL anziché l'Assistente per l'accesso a Microsoft Online, l'utente e i clienti potranno:
+
+ - Usare Multi-Factor Authentication
+ - Installare il client RMS 2.1 senza necessità di privilegi amministrativi sul computer
+ - Certificare l'applicazione per Windows 10
+
+- **Il supporto dell'Assistente per l'accesso a Microsoft Online con RMS SDK verrà rimosso.** L'uso dell'Assistente per l'accesso continuerà a essere supportato per 6 mesi, trascorsi i quali verrà sospeso.
+
+
+## Aggiornamento di dicembre 2015
 
 -   In diverse aree sono stati implementati miglioramenti delle prestazioni, tra cui:
 
@@ -43,11 +55,11 @@ Questo argomento contiene informazioni importanti su questa versione e le preced
 
 ## Aggiornamento di maggio 2015
 
--   **Applicazioni di servizio e RMS basato su cloud** - [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key) richiedono tre tipi di informazioni; chiave simmetrica, **AppPrincipalId** e **TenantBposId**. L'argomento è stato aggiornato per fornire informazioni aggiuntive sull'elaborazione di queste informazioni di acquisizione. Per questo aggiornamento, vedere la versione aggiornata di [Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md).
+-   **Applicazioni di servizio e RMS basato su cloud** - [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key) richiede tre tipi di informazioni: chiave simmetrica, **AppPrincipalId** e **TenantBposId**. L'argomento è stato aggiornato per fornire informazioni aggiuntive sull'elaborazione di queste informazioni di acquisizione. Per questo aggiornamento, vedere la versione aggiornata di [Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## Aggiornamento di aprile 2015
 
--   **Il controllo dei documenti** è attualmente possibile grazie a una serie di nuove API. Per altre informazioni, vedere [Controllo del contenuto](tracking-content.md).
+-   **Il controllo dei documenti** è attualmente possibile grazie a una serie di nuove API. Per altre informazioni, vedere [Rilevamento del contenuto](tracking-content.md).
 -   **Tipo di crittografia** -È ora supportato il controllo a livello di API per la selezione del pacchetto di crittografia. Per altre informazioni, vedere [Uso della crittografia](working-with-encryption.md).
 
     **Nota**: nell'API non è più esposto il flag **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS**. Ciò significa che le app future non saranno più compilate se fanno riferimento a questo flag, tuttavia le app già create continueranno a funzionare poiché si rispetta il flag privatamente nel codice API. È possibile comunque ottenere il vantaggio del flag di algoritmi di crittografia precedenti deprecati, semplicemente modificando un flag. Per altre informazioni, vedere [Uso della crittografia](working-with-encryption.md).
@@ -60,8 +72,8 @@ Questo argomento contiene informazioni importanti su questa versione e le preced
 
 ## Aggiornamento di gennaio 2015
 
--   **Aumento delle dimensioni del file protetto (pfile) supportato** - Supporta ora pfile di dimensioni maggiori di 1 gigabyte (1 GB). Per altre informazioni sui pfile, vedere [Formati del File di supporto](supported-file-formats.md).
--   **Miglioramento della registrazione per una migliore diagnostica** - Sui livelli di registrazione sarà visualizzato **ERRORE** o **AVVISO** per i messaggi da rivedere. Tutti gli altri messaggi, incluse le eccezioni ancora visualizzate, saranno registrati come **INFO**.
+-   **Aumento delle dimensioni del file protetto (pfile) supportato** - Supporta ora pfile di dimensioni maggiori di 1 gigabyte (1 GB). Per altre informazioni sui pfile, vedere [Formati di file supportati](supported-file-formats.md).
+-   **Miglioramento della registrazione per una migliore diagnostica** - Sui livelli di registrazione sarà visualizzato **ERRORE** o **AVVISO** per i messaggi da rivedere. Tutti gli altri messaggi, incluse le eccezioni ancora visualizzate, saranno registrati come **INFO**..
 
     È stato scelto questo approccio per evitare perdite di dettagli. A questo punto, solo i messaggi importanti sono visualizzati con livello AVVISO.
 
@@ -71,7 +83,7 @@ Questo argomento contiene informazioni importanti su questa versione e le preced
 ## Aggiornamento di ottobre 2014
 
 -   Aggiornamento dei comportamenti predefiniti del componente API file di SDK. Per altre informazioni, vedere [Configurazione dell'API file](file-api-configuration.md).
--   La Notifica tramite posta elettronica, una nuova funzionalità, è descritta nella sezione Note per gli sviluppatori, [Abilitazione della notifica tramite email](how-to-enable-email-notification.md).
+-   La nuova funzionalità di notifica tramite posta elettronica è descritta nelle note per gli sviluppatori in [Abilitazione della notifica tramite posta elettronica](how-to-enable-email-notification.md).
 
 ## Aggiornamento di luglio 2014
 
@@ -86,7 +98,7 @@ Estensione del componente API File di SDK e offre le funzionalità seguenti:
 
      
 
-    -   [**IpcfOpenFileOnHandle**]()
+    -   [**IpcfOpenFileOnHandle**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfopenfileonhandle)
     -   [**IpcfOpenFileOnILockBytes**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfopenfileonilockbytes)
     -   [**IpcfGetFileProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfgetfileproperty)
     -   [**IpcfLogicalFileRangeToRawFileRange**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcflogicalfilerangetorawfilerange)
@@ -97,11 +109,11 @@ Estensione del componente API File di SDK e offre le funzionalità seguenti:
 ## Aggiornamento di aprile 2014
 
 -   **Uso della memoria API file**, ha subito notevoli miglioramenti, soprattutto per PFile di grandi dimensioni.
--   **L'ID contenuto** è ora accessibile in scrittura tramite la proprietà **IPC\_LI\_CONTENT\_ID**. Per altre informazioni, vedere [**Tipi di proprietà di licenza**](/rights-management/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA).
+-   **L'ID contenuto** è ora accessibile in scrittura tramite la proprietà **IPC\_LI\_CONTENT\_ID**. Per altre informazioni, vedere [**License property types (Tipi di proprietà di licenza)**](/rights-management/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA).
 -   **Requisito del manifesto di produzione**: quando applicazioni o servizi con abilitazione RMS sono in esecuzione in modalità server, il manifesto non sarà più richiesto. Per altre informazioni, vedere [Tipi di applicazioni](application-types.md).
 -   **Aggiornamenti della documentazione**
 
-    **Riorganizzazione** - [Procedura](how-to-use-msipc.md) per chiarire l'ordine dei passaggi di impostazione dell'ambiente e test dell'applicazione.
+    **Documentazione riorganizzata** - Sezioni [Procedura](how-to-use-msipc.md) per descrivere l'ordine dei passaggi di impostazione dell'ambiente e di test dell'applicazione.
 
     **Procedura consigliata di test **: aggiunta di linee guida per l'uso del server locale prima dei test con Azure RMS. Per altre informazioni, vedere [Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
@@ -109,11 +121,11 @@ Estensione del componente API File di SDK e offre le funzionalità seguenti:
 
 -   **Supporto nativo per tutti i tipi di file**
 
-    È possibile aggiungere il supporto nativo per qualsiasi tipo di file (estensione) con questa versione di SDK 2.1 Rights Management Services. Ad esempio, per qualsiasi estensione sarà usato &lt;ext&gt; (non-office and pdf), \*.p&lt;ext&gt se la configurazione di amministrazione per tale estensione è "NATIVA".
+    È possibile aggiungere il supporto nativo per qualsiasi tipo di file (estensione) con questa versione di SDK 2.1 Rights Management Services. Ad esempio, per tutte le estensioni &lt;ext&gt; (non Office e pdf), verrà usato \*.p&lt;ext&gt; se la configurazione dell'amministratore per l'estensione è "NATIVA".
 
-    Per altre informazioni sui tipi di file supportati, vedere [Configurazione API file](file-api-configuration.md).
+    Per altre informazioni sui tipi di file supportati, vedere [Configurazione dell'API file](file-api-configuration.md).
 
--   **Macchine con Windows 7 SP1 e Windows Server 2008 R2 SP1** senza l'aggiornamento, [KB2533623](https://support.microsoft.com/en-us/kb/2533623), potrebbero manifestare il seguente errore di protezione di qualsiasi file di Office "Parametro non corretto. Codice di errore 0x80070057". In tal caso, installare l'aggiornamento e riprovare. Se il problema persiste, contattare l'alias RMS SDK Beta Feedback <rmcstbeta@microsoft.com>.
+-   **Macchine con Windows 7 SP1 e Windows Server 2008 R2 SP1** senza l'aggiornamento, [KB2533623](https://support.microsoft.com/en-us/kb/2533623), potrebbero manifestare il seguente errore di protezione di qualsiasi file di Office "Parametro non corretto. Codice di errore 0x80070057". In tal caso, installare l'aggiornamento e riprovare. Se continuano a verificarsi errori, contattare l'alias RMS SDK Beta Feedback <rmcstbeta@microsoft.com>..
 
     **Nota**: a partire dalla versione di aprile 2015, è stato aggiunto un controllo al processo di installazione per questo KB.
 
@@ -125,7 +137,7 @@ Estensione del componente API File di SDK e offre le funzionalità seguenti:
 
     È possibile proteggere i dati riservati in modo automatico senza dover conoscere i dettagli dell'implementazione Information Rights Management (IRM) usata da diversi formati di file.
 
-    È possibile proteggere file di Microsoft Office, file PDF (Portable Document Format) e selezionati di altro tipo tramite la protezione nativa dei file. Per un elenco completo dei tipi di file che possono essere protetti tramite la protezione nativa, vedere [Configurazione API File](file-api-configuration.md).
+    È possibile proteggere file di Microsoft Office, file PDF (Portable Document Format) e selezionati di altro tipo tramite la protezione nativa dei file. Per un elenco completo dei tipi di file che possono essere protetti con la protezione nativa, vedere [Configurazione dell'API file](file-api-configuration.md).
 
     È possibile proteggere tutti i file, ad eccezione di file di sistema e file di Office usando il formato di File protetto RMS (PFile).
 
@@ -133,9 +145,9 @@ Estensione del componente API File di SDK e offre le funzionalità seguenti:
 
     **Soluzione**: l'applicazione deve aggiungere esplicitamente i diritti di **proprietario** al proprietario della licenza durante la creazione di una licenza da zero, usando [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch). Per altre informazioni, vedere [Aggiungere diritti espliciti di proprietario](add-explicit-owner-rights.md).
 
--   **Problema**: se un'applicazione chiama [**IpcProtectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcprotectwindow) o [**IpcUnprotectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcunprotectwindow) due volte per la stessa finestra usando il relativo handle, SDK 2.1 RMS restituirà un errore di **HRESULT**.
+-   **Problema**: se un'applicazione chiama [**IpcProtectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcprotectwindow) o [**IpcUnprotectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcunprotectwindow) due volte per la stessa finestra usando il relativo handle, RMS SDK 2.1 restituirà un errore in **HRESULT**.
 
-    **Soluzione**: per linee guida specifiche su questo, vedere la sezione Osservazioni in [**IpcProtectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcprotectwindow) e [**IpcUnprotectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcunprotectwindow).
+    **Soluzione**: per linee guida specifiche, vedere la sezione delle osservazioni in [**IpcProtectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcprotectwindow) e [**IpcUnprotectWindow**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcunprotectwindow).
 
 -   **Problema**: quando si compila per diverse architetture, è necessario usare queste linee guida.
 
@@ -169,9 +181,6 @@ Se non è possibile recuperare alcun nome e descrizione, viene restituito un err
  
 
 
-
-
-
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO1-->
 
 

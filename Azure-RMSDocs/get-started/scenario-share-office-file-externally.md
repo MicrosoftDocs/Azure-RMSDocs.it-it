@@ -7,7 +7,7 @@ keywords:
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Scenario - Condividere un file di Office con utenti in un'altra organizzazione
+
+*Si applica a: Azure Rights Management, Office 365*
+
 Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management in modo che gli utenti possano inviare in modo sicuro un file di Office tramite posta elettronica alle persone in un'altra organizzazione. Il file di Office, ad esempio, potrebbe essere un documento di Word, un foglio di calcolo di Excel o una presentazione di PowerPoint contenente informazioni del listino prezzi di un partner, un elenco di prodotti per un rivenditore o un elenco dei tempi di consegna con potenziali clienti. Quando gli utenti seguono le istruzioni, il file allegato al messaggio di posta elettronica sarà protetto da Rights Management di Azure.
 
 Questo scenario è adatto ai casi seguenti:
@@ -38,10 +41,10 @@ Questo scenario è adatto ai casi seguenti:
 
 -   Il dipendente è potenzialmente interessato a sapere quando il documento viene aperto da un utente esterno.
 
-## Istruzioni di distribuzione
-![](../media/AzRMS_AdminBanner.png)
+## Istruzioni sulla distribuzione
+![Istruzioni per l'amministratore per la distribuzione rapida di Azure RMS](../media/AzRMS_AdminBanner.png)
 
-Prima di passare alla documentazione utente, assicurarsi che i requisiti seguenti siano soddisfatti.
+Prima di passare alla documentazione per l'utente, assicurarsi che i requisiti seguenti siano soddisfatti.
 
 ## Requisiti per questo scenario
 Affinché le istruzioni per l'utente per questo scenario funzionino, devono verificarsi le seguenti condizioni:
@@ -57,9 +60,9 @@ Affinché le istruzioni per l'utente per questo scenario funzionino, devono veri
 ## Istruzioni sulla documentazione per l'utente
 Usando il modello seguente, copiare e incollare le istruzioni per l'utente in una comunicazione per gli utenti finali e apportare tali modifiche in base all'ambiente:
 
-1.  Sostituire *&lt;nome del tipo di documento di Office&gt;* con il tipo di documento che gli utenti invieranno. Utilizzare termini specifici e familiari per i loro flussi di lavoro, ad esempio "listino", "tempi di consegna" e "proposta di offerta" anziché "documento di Word" e "foglio di calcolo di Excel". Grazie a questo testo più specifico la probabilità che gli utenti seguano le istruzioni quando lavorano con tali documenti è maggiore.
+1.  Sostituire *&lt;nome del tipo di documento di Office&gt;* con il tipo di documento che verrà inviato dagli utenti. Utilizzare termini specifici e familiari per i loro flussi di lavoro, ad esempio "listino", "tempi di consegna" e "proposta di offerta" anziché "documento di Word" e "foglio di calcolo di Excel". Grazie a questo testo più specifico la probabilità che gli utenti seguano le istruzioni quando lavorano con tali documenti è maggiore.
 
-2.  Sostituire anche *&lt;dettagli contatto&gt;* con istruzioni su come gli utenti possono contattare il supporto tecnico, ad esempio un collegamento di sito Web, un indirizzo di posta elettronica o un numero di telefono.
+2.  Sostituire *&lt;dettagli contatto&gt;* con istruzioni su come gli utenti possono contattare il supporto tecnico, ad esempio il collegamento a un sito Web, un indirizzo di posta elettronica o un numero di telefono.
 
 3.  **Personalizzazioni aggiuntive che si vuole apportare:**
 
@@ -71,38 +74,37 @@ Usando il modello seguente, copiare e incollare le istruzioni per l'utente in un
 
     -   I passaggi non includono l'impostazione di una data di scadenza. Se le informazioni non devono essere usate dopo una determinata data, aggiungere un altro passaggio per impostare una scadenza appropriata, ad esempio 90 giorni dall'invio del messaggio di posta elettronica.
 
-    > [!NOTE]
-    > Per ulteriori informazioni su ciascuna delle opzioni selezionabili dagli utenti, vedere [Opzioni della finestra di dialogo per l'applicazione di condivisione di Rights Management](https://technet.microsoft.com/library/dn574738.aspx)
+    > [!NOTE] Per altre informazioni sulle singole opzioni selezionabili dagli utenti, vedere [Opzioni della finestra di dialogo per l'applicazione di condivisione Rights Management](https://technet.microsoft.com/library/dn574738.aspx)
 
 4.  Apportare altre modifiche a questo set di istruzioni e quindi inviarlo agli utenti.
 
 La documentazione di esempio mostra come questo set di istruzioni appare agli utenti dopo le personalizzazioni.
 
-![](../media/AzRMS_UsersBanner.png)
+![Documentazione dell'utente del modello per la distribuzione rapida di Azure RMS](../media/AzRMS_UsersBanner.png)
 
 ### Come condividere un &lt;nome del tipo di documento di Office&gt;
 
-1.  Creare il messaggio di posta elettronica specificando l'indirizzo o gli indirizzi di posta elettronica, digitare il messaggio e allegare il *&lt;nome del tipo di documento di Office&gt;* al messaggio di posta elettronica. Quindi nella scheda **MESSAGGIO** fare clic su **Condividi file protetto** all’interno del gruppo **RMS** , quindi fare nuovamente clic su **Condividi file protetto** :
+1.  Creare il messaggio di posta elettronica specificando l'indirizzo o gli indirizzi di posta elettronica, digitare il messaggio e allegare *&lt;nome del tipo di documento di Office&gt;* al messaggio di posta elettronica. Quindi nella scheda **MESSAGGIO** fare clic su **Condividi file protetto** all’interno del gruppo **RMS** , quindi fare nuovamente clic su **Condividi file protetto** :
 
-    ![](../media/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
+    ![Schermata sulla condivisione di un documento di Office tramite Outlook](../media/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
 
 2.  Nella finestra di dialogo **Condividi file protetto** selezionare **Visualizzatore - Solo visualizzazione**:
 
-    ![](../media/AzRMS_SharedProtected_ViewerOnly.PNG)
+    ![finestra di dialogo Condividi file protetto - Visualizzatore - Solo visualizzazione](../media/AzRMS_SharedProtected_ViewerOnly.PNG)
 
 3.  Selezionare **Consenti di revocare immediatamente l'accesso a questi documenti**.
 
-    ![](../media/AzRMS_SharedProtected_InstantRevoke.PNG)
+    ![finestra di dialogo Condividi file protetto - revoca immediata](../media/AzRMS_SharedProtected_InstantRevoke.PNG)
 
 4.  Selezionare **Inviami un messaggio di posta elettronica quando qualcuno tenta di aprire questi documenti**:
 
-    ![](../media/AzRMS_SharedProtected_EmailMe.PNG)
+    ![finestra di dialogo Condividi file protetto - Inviami un messaggio di posta elettronica](../media/AzRMS_SharedProtected_EmailMe.PNG)
 
 5.  Fare clic su **Invia subito**.
 
-Quando un utente nella riga **A**, **Cc**o **Ccn** riceve questo messaggio di posta elettronica, viene visualizzato un messaggio che fornisce le istruzioni da seguire per leggere il *&lt;nome del tipo di documento di Office &gt;*allegato. Essi possono leggere il documento su diversi dispositivi, tra cui iPad, iPhone, tablet e telefoni Android, computer Mac e computer Windows.
+Quando un destinatario specificato nella riga **A**, **Cc** o **Ccn** riceve questo messaggio di posta elettronica, viene visualizzato un messaggio che fornisce le istruzioni da seguire per leggere il file *&lt;nome del tipo di documento di Office&gt;* allegato. Essi possono leggere il documento su diversi dispositivi, tra cui iPad, iPhone, tablet e telefoni Android, computer Mac e computer Windows.
 
-Utilizzare il [portale di rilevamento dei documenti](https://track.azurerms.com/) per rilevare se e quando aprono il &lt;nome del tipo di documento di Office&gt; allegato. Considerare di contattarli con una chiamata telefonica di follow-up appena si nota che hanno aperto il &lt;nome del tipo di documento di Office&gt;.
+Usare il [portale di rilevamento dei documenti](https://track.azurerms.com/) per rilevare se e quando aprono il file &lt;nome del tipo di documento di Office&gt; allegato. È possibile contattarli con una chiamata telefonica di follow-up non appena hanno aperto il file &lt;nome del tipo di documento di Office&gt;.
 
 **Serve assistenza?**
 
@@ -117,25 +119,25 @@ Utilizzare il [portale di rilevamento dei documenti](https://track.azurerms.com/
     -   *&lt;dettagli contatto&gt;*
 
 ### Esempio di documentazione personalizzata per l'utente
-![](../media/AzRMS_ExampleBanner.png)
+![Esempio di documentazione dell'utente per la distribuzione rapida di Azure RMS](../media/AzRMS_ExampleBanner.png)
 
 #### Come condividere un listino prezzi con il cliente
 
 1.  Creare il messaggio di posta elettronica specificando l'indirizzo o gli indirizzi di posta elettronica, digitare il messaggio e allegare l’ultimo listino prezzi al messaggio di posta elettronica. Quindi nella scheda **MESSAGGIO** fare clic su **Condividi file protetto** all’interno del gruppo **RMS** , quindi fare nuovamente clic su **Condividi file protetto** :
 
-    ![](../media/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
+    ![Schermata sulla condivisione di un documento di Office tramite Outlook](../media/AzRMSUserInstructions_ShareProtectedRibbon2013.png)
 
 2.  Nella finestra di dialogo **Condividi file protetto** selezionare **Visualizzatore - Solo visualizzazione**:
 
-    ![](../media/AzRMS_SharedProtected_ViewerOnly.PNG)
+    ![finestra di dialogo Condividi file protetto - Visualizzatore - Solo visualizzazione](../media/AzRMS_SharedProtected_ViewerOnly.PNG)
 
 3.  Selezionare **Consenti di revocare immediatamente l'accesso a questi documenti**.
 
-    ![](../media/AzRMS_SharedProtected_InstantRevoke.PNG)
+    ![finestra di dialogo Condividi file protetto - revoca immediata](../media/AzRMS_SharedProtected_InstantRevoke.PNG)
 
 4.  Selezionare **Inviami un messaggio di posta elettronica quando qualcuno tenta di aprire questi documenti**:
 
-    ![](../media/AzRMS_SharedProtected_EmailMe.PNG)
+    ![finestra di dialogo Condividi file protetto - Inviami un messaggio di posta elettronica](../media/AzRMS_SharedProtected_EmailMe.PNG)
 
 5.  Fare clic su **Invia subito**.
 
@@ -157,6 +159,6 @@ Utilizzare il [portale di rilevamento dei documenti](https://track.azurerms.com/
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO2-->
 
 

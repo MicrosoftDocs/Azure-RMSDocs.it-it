@@ -27,7 +27,10 @@ ms.reviewer: mbaldwin
 
 # Distribuzione e uso di Azure RIghts Management
 
+*Si applica a: Azure Rights Management, Office 365*
 
-<!--HONumber=Apr16_HO3-->
+
+
+<!--HONumber=Apr16_HO4-->
 
 

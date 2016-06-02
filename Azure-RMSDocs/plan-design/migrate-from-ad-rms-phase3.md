@@ -28,7 +28,10 @@ ms.suite: ems
 
 # Fase 3 della migrazione: configurazione di servizi di supporto
 
-Usare le seguenti informazioni per la fase 3 della migrazione da AD RMS ad Azure Rights Management (Azure RMS). Queste procedure illustrano i passaggi 6 e 7 di [Migrazione da AD RMS ad Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
+*Si applica a: Active Directory Rights Management Services, Azure Rights Management*
+
+
+Usare le seguenti informazioni per la fase 3 della migrazione da AD RMS ad Azure Rights Management (Azure RMS). Queste procedure descrivono i passaggi da 6 a 7 di [Migrazione da AD RMS ad Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
 
 
 ## Passaggio 6. Configurare l'iterazione IRM per Exchange Online
@@ -79,19 +82,19 @@ Infine, per questo passaggio, se in Azure RMS sono stati importati più domini d
     Set-IRMConfiguration -RefreshServerCertificates
     ```
 
-6.  A questo punto, in ogni computer che esegue Exchange Server reimpostare IIS, accedendo ad esempio a un prompt dei comandi come amministratore e digitando **iisreset**.
+6.  In ogni Exchange Server reimpostare IIS, accedendo ad esempio a un prompt dei comandi come amministratore e digitando **iisreset**.
 
 ### Disabilitare IRM nei computer che eseguono SharePoint Server e rimuovere la configurazione di AD RMS
 
 1.  Assicurarsi che non ci siano documenti estratti da librerie protetti da RMS. In tal caso, non saranno più accessibili alla fine di questa procedura.
 
-2.  Nel sito Web di Amministrazione centrale SharePoint, nella sezione **Avvio veloce** fare clic su **Sicurezza**.
+2.  Nel sito Web Amministrazione centrale SharePoint, nella sezione **Avvio veloce** fare clic su **Sicurezza**.
 
-3.  Nella pagina **Sicurezza** , nella sezione **Criteri informazioni** fare clic su **Configura Information Rights Management**.
+3.  Nella pagina **Sicurezza** nella sezione **Criteri informazioni** fare clic su **Configura Information Rights Management**.
 
-4.  Nella pagina **Information Rights Management** , nella sezione **Information Rights Management** selezionare **Non utilizzare IRM in questo server**, quindi fare clic su **OK**.
+4.  Nella pagina **Information Rights Management** nella sezione **Information Rights Management** selezionare **Non utilizzare IRM in questo server**, quindi fare clic su **OK**.
 
-5.  In ognuno dei computer che eseguono SharePoint Server eliminare il contenuto della cartella \ProgramData\Microsoft\MSIPC\Server\*&lt;SID dell'account che esegue SharePoint Server&gt;*.
+5.  In ogni computer che esegue SharePoint Server eliminare il contenuto della cartella \ProgramData\Microsoft\MSIPC\Server\*&lt;SID dell'account che esegue SharePoint Server&gt;*.
 
 #### Installare e configurare il connettore RMS
 
@@ -103,7 +106,7 @@ Infine, per questo passaggio, se in Azure RMS sono stati importati più domini d
 
     Quando si apportano queste modifiche al Registro di sistema, attenersi alle istruzioni seguenti:
 
-    -   Sostituire *ConnectorFQDN* con il nome definito per il connettore in DNS, ad esempio **rmsconnector.contoso.com**.
+    -   Sostituire *ConnectorFQDN* con il nome definito per il connettore in DNS, Ad esempio, **rmsconnector.contoso.com**.
 
     -   Usare il prefisso HTTP o HTTPS per l'URL del connettore, a seconda che sia stato configurato per comunicare con i server locali usando HTTP o HTTPS.
 
@@ -218,6 +221,6 @@ Dopo aver completato queste procedure, si è pronti a passare alla sezione **Pas
 ## Passaggi successivi
 Per continuare la migrazione, passare a [Fase 4: attività post-migrazione](migrate-from-ad-rms-phase4.md).
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

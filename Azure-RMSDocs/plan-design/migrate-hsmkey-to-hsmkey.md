@@ -27,12 +27,15 @@ ms.suite: ems
 
 # Passaggio 2: Migrazione da una chiave protetta tramite HSM a un'altra
 
+*Si applica a: Active Directory Rights Management Services, Azure Rights Management*
+
+
 Queste istruzioni fanno parte del [percorso di migrazione da AD RMS ad Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md) e si applicano solo se la chiave di AD RMS è protetta tramite HSM e se si vuole eseguire la migrazione ad Azure Rights Management con una chiave del tenant protetta tramite HSM. 
 
 Se non si tratta dello scenario di configurazione prescelto, tornare al [Passaggio 2. Esportare i dati di configurazione da AD RMS e importarli in Azure RMS](migrate-from-ad-rms-to-azure-rms.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms), quindi scegliere una configurazione diversa.
 
 > [!NOTE]
-> Queste istruzioni presuppongono che la chiave di AD RMS sia protetta da modulo. Questa è la situazione comune. Se la chiave di AD RMS è protetta tramite OCS, contattare il team all'indirizzo [AskIPTeam@microsoft.com](mailto: askipteam@microsoft.com?subject=AD%20RMS%20migration%20with%20OCS-protected%20key) prima di eseguire queste istruzioni.
+> Queste istruzioni presuppongono che la chiave di AD RMS sia protetta da modulo. Questa è la situazione comune. Se la chiave di AD RMS è protetta da OCS, contattare [AskIPTeam@microsoft.com](mailto: askipteam@microsoft.com?subject=AD%20RMS%20migration%20with%20OCS-protected%20key) prima di seguire queste istruzioni.
 
 Questa procedura in due parti consente di importare la chiave HSM e la configurazione di AD RMS in Azure RMS. La chiave del tenant di Azure RMS verrà gestita dall'utente (BYOK).
 
@@ -73,6 +76,6 @@ Ora che la chiave HSM è stata preparata per Azure RMS, si è pronti per importa
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

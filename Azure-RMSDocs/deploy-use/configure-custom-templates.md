@@ -26,11 +26,14 @@ ms.suite: ems
 ---
 
 # Configurazione di modelli personalizzati per Azure Rights Management
+
+*Si applica a: Azure Rights Management, Office 365*
+
 Dopo l'[attivazione di Azure Rights Management](activate-service.md) (Azure RMS), gli utenti sono automaticamente in grado di usare due modelli predefiniti che facilitano l'applicazione di criteri ai file riservati allo scopo di limitare l'accesso ai soli utenti autorizzati all'interno dell'organizzazione. Questi due modelli prevedono le seguenti restrizioni relativamente ai criteri per i diritti d'uso:
 
 -   Visualizzazione di sola lettura per il contenuto protetto
 
-    -   Nome visualizzato: **&lt;nome organizzazione&gt; - Solo visualizzazione riservata**
+    -   Nome visualizzato: **&lt;nome organizzazione&gt; - Solo visione riservata**
 
     -   Autorizzazione specifica: Visualizza contenuto
 
@@ -69,6 +72,6 @@ Per configurare e usare i modelli personalizzati, usare le informazioni seguenti
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

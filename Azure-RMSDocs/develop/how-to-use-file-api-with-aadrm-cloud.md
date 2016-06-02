@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 1f726c6a-68a5-421f-8ed9-9cbb051c205b
-
+ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,6 @@ ms.suite: ems
 
 ---
 
-﻿
 # Consentire all'applicazione di servizio di usare RMS basato su cloud
 
 Questo argomento descrive i passaggi per la configurazione dell’applicazione di servizio per l’uso di Azure Rights Management. Per altre informazioni, vedere [Introduzione a Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx).
@@ -177,7 +175,7 @@ Esempio d’uso di [**IpcfDecryptFile**](/rights-management/sdk/2.1/api/win/func
 
 La procedura necessaria per consentire all'applicazione di usare Azure Rights Management è stata completata.
 
-### Argomenti correlati
+## Argomenti correlati
 
 * [Concetti per sviluppatori](ad-rms-concepts-nav.md)
 * [Introduzione a Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx)
@@ -199,6 +197,6 @@ La procedura necessaria per consentire all'applicazione di usare Azure Rights Ma
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

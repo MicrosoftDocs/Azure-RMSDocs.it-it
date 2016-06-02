@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/20/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -27,6 +27,9 @@ ms.suite: ems
 
 
 # Copiare un modello
+
+*Si applica a: Azure Rights Management, Office 365*
+
 Per creare un nuovo modello con le impostazioni molto simili a quelle di un modello già esistente, selezionare il modello originale nella pagina **MODELLI** , fare clic su **COPIA**, specificare un nome univoco e apportare le modifiche desiderate.
 
 > [!IMPORTANT]
@@ -39,6 +42,6 @@ Per creare un nuovo modello con le impostazioni molto simili a quelle di un mode
 ## Vedere anche
 [Configurare modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO3-->
 
 

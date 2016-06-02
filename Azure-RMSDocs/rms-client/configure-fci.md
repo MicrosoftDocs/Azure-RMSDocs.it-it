@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Protezione RMS con l'infrastruttura di classificazione file (FCI, File Classification Infrastructure) per Windows Server
+
+*Si applica a: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+
 Usare questo articolo per ottenere istruzioni e uno script che consentono di usare il client Rights Management (RMS) con lo strumento di protezione RMS per configurare Gestione risorse file server e l'infrastruttura di classificazione file.
 
 Queste soluzioni consentono di proteggere automaticamente tutti i file contenuti in una cartella di un file server che esegue Windows Server o proteggere automaticamente i file che soddisfano criteri specifici. File, ad esempio, che sono stati classificati come contenenti informazioni riservate o personali. Questa soluzione usa Azure Rights Management (Azure RMS) per proteggere i file, perciò è necessario che questa tecnologia sia distribuita nella propria organizzazione.
@@ -33,7 +36,7 @@ Queste soluzioni consentono di proteggere automaticamente tutti i file contenuti
 > [!NOTE]
 > Nonostante Azure RMS includa un [connettore](../deploy-use/deploy-rms-connector.md) che supporta l'infrastruttura di classificazione file, questa soluzione supporta solo la protezione nativa, ad esempio, i file di Office.
 > 
-> Per supportare tutti i tipi di file con l'infrastruttura di classificazione file, è necessario usare il modulo di **protezione RMS** di Windows PowerShell, come descritto in questo articolo. I cmdlet di protezione RMS, come l'applicazione RMS sharing, supportano la protezione generica nonché quella nativa, per cui è possibile proteggere tutti i file. Per altre informazioni sui diversi livelli di protezione, vedere la sezione [Livelli di protezione nativa e generica](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) della [Guida dell'amministratore dell'applicazione di condivisione Rights Management](sharing-app-admin-guide.md).
+> Per supportare tutti i tipi di file con l'infrastruttura di classificazione file, è necessario usare il modulo di **protezione RMS** di Windows PowerShell, come descritto in questo articolo. I cmdlet di protezione RMS, come l'applicazione RMS sharing, supportano la protezione generica nonché quella nativa, per cui è possibile proteggere tutti i file. Per altre informazioni sui diversi livelli di protezione, vedere la sezione [Livelli di protezione – nativo e generico](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) in [Guida dell'amministratore dell'applicazione di condivisione Rights Management](sharing-app-admin-guide.md).
 
 Le istruzioni qui di seguito sono per Windows Server 2012 R2 o Windows Server 2012. Se si eseguono altre versioni supportate di Windows, potrebbe essere necessario adattare alcuni di questi passaggi a causa delle differenze tra la versione del proprio sistema operativo e quello descritto in questo articolo.
 
@@ -60,7 +63,7 @@ Prerequisiti per queste istruzioni:
 
     -   Chiave simmetrica
 
--   Si sono sincronizzati gli account utente di Active Directory locali con Azure Active Directory oppure Office 365, compreso il relativo indirizzo di posta elettronica. Ciò è necessario per tutti gli utenti che potrebbero avere la necessità di accedere ai file una volta protetti con FCI e Azure RMS. Se si completa questo passaggio (ad esempio, in un ambiente di test), l'accesso degli utenti a questi file potrebbe essere bloccato. Se sono necessarie ulteriori informazioni sulla configurazione di questo account, vedere [Preparazione per Azure Rights Management](../plan-design/prepare.md).
+-   Si sono sincronizzati gli account utente di Active Directory locali con Azure Active Directory oppure Office 365, compreso il relativo indirizzo di posta elettronica. Ciò è necessario per tutti gli utenti che potrebbero avere la necessità di accedere ai file una volta protetti con FCI e Azure RMS. Se si completa questo passaggio (ad esempio, in un ambiente di test), l'accesso degli utenti a questi file potrebbe essere bloccato. Se sono necessarie altre informazioni sulla configurazione di questo account, vedere [Preparazione per Azure Rights Management](../plan-design/prepare.md).
 
 -   È stato identificato il modello Rights Management da usare, che proteggerà i file. Assicurarsi di conoscere l'ID per questo modello usando il cmdlet [Get-RMSTemplate](https://msdn.microsoft.com/library/azure/mt433197.aspx) .
 
@@ -219,7 +222,7 @@ Quando si è completata la configurazione per la classificazione, si è pronti p
             ```
             Se Windows non è disponibile sull'unità C:, modificare questo percorso o selezionare questo file.
 
-        -   **Argomento**: Specificare quanto segue, fornendo i propri valori per &lt;percorso&gt; e &lt;ID modello&gt;:
+        -   **Argomento**: Specificare quanto segue immettendo i propri valori per &lt;percorso&gt; e &lt;ID modello&gt;:
 
             ```
             -Noprofile -Command "<path>\RMS-Protect-FCI.ps1 -File '[Source File Path]' -TemplateID <template GUID> -OwnerMail [Source File Owner Email]"
@@ -262,15 +265,15 @@ Quando si è completata la configurazione per la classificazione, si è pronti p
 
     1.  Fare clic su **Regole di classificazione** &gt; **Esegui classificazione con tutte le regole**
 
-    2.  Fare clic su **Attendi il completamento della classificazione**e quindi fare clic su **OK**.
+    2.  Fare clic su **Attendi il completamento della classificazione** e quindi fare clic su **OK**.
 
-2.  Attendere la chiusura della finestra di dialogo **Esecuzione classificazione** e visualizzare i risultati del report visualizzato automaticamente. Verrà visualizzato **1** per il campo **Proprietà** e il numero di file della cartella. Confermare usando Esplora file e selezionando le proprietà dei file nella cartella selezionata. Nella scheda **Classificazione** verrà visualizzato **RMS** come nome proprietà e **Sì** per il **Valore**.
+2.  Attendere la chiusura della finestra di dialogo **Esecuzione classificazione** e visualizzare i risultati del report visualizzato automaticamente. Verrà visualizzato **1** per il campo **Proprietà** e il numero di file della cartella. Confermare usando Esplora file e selezionando le proprietà dei file nella cartella selezionata. Nella scheda **Classificazione** verrà visualizzato **RMS** come nome proprietà e **Sì** come **Valore**.
 
 3.  Eseguire l'attività di gestione file:
 
     1.  Fare clic su **Attività di gestione file** &gt; **Proteggi file con RMS** &gt; **Esegui attività di gestione file**
 
-    2.  Fare clic su **Attendi il completamento dell'attività**e quindi fare clic su **OK**.
+    2.  Fare clic su **Attendi il completamento dell'attività** e quindi fare clic su **OK**.
 
 4.  Attendere la chiusura della finestra di dialogo **Esecuzione attività di gestione file** e visualizzare i risultati del report visualizzato automaticamente. Verrà visualizzato il numero di file contenuti nella cartella selezionata nel campo **File** . Confermare che i file della cartella selezionata sono ora protetti da RMS. Se, ad esempio, la cartella selezionata è C:\FileShare, immettere i dati seguenti in una sessione di Windows PowerShell e confermare che non ci siano file con lo stato **Non protetto**:
 
@@ -300,12 +303,12 @@ Dopo aver verificato che queste operazioni vengono eseguite correttamente, è po
 ## Modifica delle istruzioni per proteggere i file in modo selettivo
 Quando le istruzioni appena descritte risultano efficaci, è molto semplice modificarle per ottenere una configurazione più avanzata. Ad esempio, proteggere i file usando lo stesso script ma solo per i file che contengono informazioni personali e magari selezionare un modello che ha diritti più restrittivi.
 
-A tale scopo, usare una delle proprietà di classificazione predefinite (ad esempio, **Informazioni personali**) o creare una nuova proprietà personale. Creare quindi una nuova regola che usi questa proprietà. Ad esempio, si potrebbe selezionare **Classificazione contenuto**, scegliere la proprietà **Informazioni personali** con un valore **Alto**e configurare la stringa o il modello di espressione che identifica il file da configurare per questa proprietà (ad esempio la stringa "**Data di nascita**").
+A tale scopo, usare una delle proprietà di classificazione predefinite (ad esempio, **Informazioni personali**) o creare una nuova proprietà personale. Creare quindi una nuova regola che usi questa proprietà. Ad esempio, si potrebbe selezionare **Classificazione contenuto**, scegliere la proprietà **Informazioni personali** con un valore **Alto** e configurare la stringa o il modello di espressione che identifica il file da configurare per questa proprietà, ad esempio la stringa "**Data di nascita**").
 
-A questo punto è sufficiente creare una nuova attività di gestione file che usa lo stesso script ma forse con un modello diverso e configurare la condizione per la proprietà di classificazione appena configurata. Ad esempio, invece della condizione configurata in precedenza (la proprietà**RMS** , **Uguale**, **Sì**), selezionare la proprietà **Informazioni personali** con il valore **Operatore** impostato su **Uguale** e il **Valore** **Alto**.
+A questo punto è sufficiente creare una nuova attività di gestione file che usa lo stesso script ma forse con un modello diverso e configurare la condizione per la proprietà di classificazione appena configurata. Ad esempio, invece della condizione configurata in precedenza (la proprietà**RMS**, **Uguale**, **Sì**), selezionare la proprietà **Informazioni personali** con il valore **Operatore** impostato su **Uguale** e il **Valore** **Alto**.
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

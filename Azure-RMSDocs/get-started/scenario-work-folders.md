@@ -6,8 +6,8 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
+ms.date: 05/20/2016
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Scenario - Configurare le cartelle di lavoro per una protezione permanente
+
+*Si applica a: Azure Rights Management, Office 365*
+
 Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management per applicare la protezione permanente ai documenti di Office in [Cartelle di lavoro](https://technet.microsoft.com/library/dn265974.aspx). Cartelle di lavoro usa un servizio di ruolo per i file server che esegue Windows Server, che fornisce un metodo coerente agli utenti per accedere ai file di lavoro dal proprio PC e dai propri dispositivi. Sebbene Cartelle di lavoro fornisca la propria crittografia per proteggere i file, questa protezione viene persa se i file vengono spostati all'esterno dell'ambiente di Cartelle di lavoro. Ad esempio, gli utenti copiano i file sincronizzati e li salvano in un archivio fuori dal controllo del reparto IT o i file vengono inviati tramite posta elettronica ad altri utenti.
 
 La protezione aggiuntiva che fornisce Azure Rights Management consente di evitare la perdita accidentale dei dati e impedire che i file vengano visualizzati da utenti esterni all'organizzazione. A tale scopo, è possibile usare uno dei modelli dei criteri sui diritti incorporati e predefiniti. Tuttavia, prima di distribuire questo scenario, considerare se gli utenti potrebbero dover condividere in modo legittimo uno di questi file con utenti esterni all'organizzazione. Ad esempio, dopo aver lavorato sulla bozza di un listino prezzi, un utente invia tramite messaggio di posta elettronica la versione finale al cliente di un'altra organizzazione. Quando si usa il modello di Rights Management predefinito per Cartelle di lavoro, il cliente dell'organizzazione potrebbe non essere in grado di leggere il documento inviato tramite posta elettronica. È possibile soddisfare questo requisito tramite la creazione di un modello personalizzato che consente agli utenti di applicare al file un nuovo criterio dei diritti, che sostituisce la restrizione originale di tutti i dipendenti alle persone specificate nel messaggio di posta elettronica.
@@ -45,8 +48,8 @@ Le istruzioni sono adatte ai casi seguenti:
 
 -   Per i file che devono essere condivisi con utenti non specificati nel modello dei criteri dei diritti (ad esempio gli utenti di un'altra organizzazione), gli utenti devono applicare un nuovo criterio dei diritti per sostituire la protezione dei criteri dei diritti originale.
 
-## Istruzioni di distribuzione
-![](../media/AzRMS_AdminBanner.png)
+## Istruzioni sulla distribuzione
+![Istruzioni per l'amministratore per la distribuzione rapida di Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Verificare che siano soddisfatti i requisiti seguenti e quindi seguire le istruzioni per le procedure di supporto prima di passare alla documentazione dell'utente.
 
@@ -57,7 +60,7 @@ Per le istruzioni di funzionamento di questo scenario, sono necessari i requisit
 |---------------|--------------------------------|
 |Azure Rights Management non è attivato|[Attivazione di Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |Si sono sincronizzati gli account utente di Active Directory locali con Azure Active Directory oppure Office 365, compreso il relativo indirizzo di posta elettronica. Questa operazione è necessaria per tutti gli utenti che usano Cartelle di lavoro.|[Preparazione per Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|Uno dei seguenti:<br /><br />Per usare un modello predefinito per tutti gli utenti che non consente agli utenti di applicare un nuovo criterio dei diritti: il modello predefinito **&lt;nome organizzazione&gt; - Riservato** non è stato applicato<br /><br />Per usare un modello personalizzato adatto all'applicazione di un nuovo criterio dei diritti da parte degli utenti: usare le istruzioni seguenti per creare un modello personalizzato|[Configurazione di modelli personalizzati per Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
+|Uno dei seguenti:<br /><br />- Per usare un modello predefinito per tutti gli utenti che non consenta di applicare nuovi criteri di diritti: non è stato archiviato il modello predefinito, **&lt;nome organizzazione&gt; - Riservato**<br /><br />- Per usare un modello personalizzato adatto all'applicazione di nuovi criteri di diritti da parte degli utenti: viene creato un modello personalizzato usando le istruzioni seguenti|[Configurazione di modelli personalizzati per Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
 |Il connettore Rights Management è installato, autorizzato per il computer Windows Server e configurato per il ruolo **FCI Server**.|[Distribuzione del connettore di Azure Rights Management](https://technet.microsoft.com/library/dn375964.aspx)|
 |L’applicazione di condivisione Rights Management è distribuita nei computer degli utenti che eseguono Windows|[Distribuzione automatica dell'applicazione di condivisione Microsoft Rights Management](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
 
@@ -65,7 +68,7 @@ Per le istruzioni di funzionamento di questo scenario, sono necessari i requisit
 
 1.  Accedere al portale classico di Azure e passare ai modelli di Azure Rights Management.
 
-2.  Copiare il modello **&lt;nome organizzazione&gt; - Riservato** e specificare un nome e una descrizione per questo scenario di Cartelle di lavoro. Si consiglia quanto segue:
+2.  Copiare il modello **&lt;nome organizzazione&gt; - Riservato** e specificare un nome e una descrizione per questo scenario Cartelle di lavoro. Si consiglia quanto segue:
 
     -   Nome: **Contenuto protetto da Cartelle di lavoro**
 
@@ -101,7 +104,7 @@ Per le istruzioni di funzionamento di questo scenario, sono necessari i requisit
 
     2.  Per l'azione, scegliere **Crittografia RMS** e selezionare un modello:
 
-        -   Se non è stato creato un modello personalizzato perché non si desidera che gli utenti possano condividere i file con altri utenti all'esterno dell'organizzazione, selezionare il nome del modello **&lt;nome organizzazione&gt; - Riservato**. Ad esempio, **VanArsdel, Ltd - Riservato**.
+        -   Se non è stato creato un modello personalizzato perché non si vuole che gli utenti possano condividere i file con altri utenti all'esterno dell'organizzazione, selezionare il nome del modello **&lt;nome organizzazione&gt; - Riservato**. Ad esempio, **VanArsdel, Ltd - Riservato**.
 
         -   Se è stato creato un modello personalizzato tramite le istruzioni precedenti, selezionare questo modello. Ad esempio **Contenuto protetto da Cartelle di lavoro**
 
@@ -125,6 +128,6 @@ Se è stato configurato il modello personalizzato come descritto in questo scena
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

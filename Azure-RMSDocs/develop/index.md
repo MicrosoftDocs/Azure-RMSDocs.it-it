@@ -12,7 +12,6 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 0510ead4-2fe7-4269-885b-fe16bcc69888
-
 # optional metadata
 
 #ROBOTS:
@@ -56,6 +55,6 @@ Questa raccolta di esempi di codice RMS e strumenti di supporto per gli sviluppa
 | [Scenari di utilizzo di Android](https://msdn.microsoft.com/en-us/library/dn758246(v=vs.85).aspx) |Android|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) e versioni successive dell'SDK 4.x|**Esempi di codice Java** che rappresentano importanti scenari di sviluppo per familiarizzare con RMS SDK. Gli esempi includono l'uso del formato Microsoft Protected File, di formati di file protetti personalizzati e di controlli dell'interfaccia utente personalizzati.|
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

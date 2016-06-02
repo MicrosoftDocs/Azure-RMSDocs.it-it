@@ -27,6 +27,9 @@ ms.suite: ems
 
 # Generare e trasferire la propria chiave del tenant di persona
 
+*Si applica a: Azure Rights Management, Office 365*
+
+
 Se si è deciso di [gestire la chiave del tenant](plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-) e la si vuole trasferire di persona anziché tramite Internet, seguire queste procedure.
 
 ## Generare la chiave del tenant
@@ -67,7 +70,7 @@ generatekey --generate simple type=RSA size=2048 protect=module ident=contosokey
 ```
 Quando si esegue il comando, usare le istruzioni seguenti:
 
--   Il parametro **protect** deve essere impostato sul valore **module**, come illustrato. Verrà creata una chiave protetta tramite modulo. Il set di strumenti BYOK non supporta le chiavi protette tramite OCS.
+-   Il parametro **protect** deve essere impostato sul valore **module**, come illustrato. Verrà creata una chiave protetta tramite modulo. Il set di strumenti BYOK non supporta le chiavi protette con OCS.
 
 -   Per le dimensioni della chiave si consigliano 2048 bit, ma sono supportate anche chiavi RSA di 1024 bit per clienti AD RMS esistenti che possiedono tali chiavi e che stanno eseguendo la migrazione ad Azure RMS.
 
@@ -153,6 +156,6 @@ Tutti i passaggi necessari per trasferire la chiave di persona sono stati comple
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

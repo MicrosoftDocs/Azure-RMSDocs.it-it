@@ -2,7 +2,7 @@
 # required metadata
 
 title: Rilevamento del contenuto | Azure RMS
-description:
+description: Linee guida di base per l'implementazione del rilevamento di documenti
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: ca08e01f-690d-46f4-ae0f-a880cc29dabc
-
+ms.assetid: F5089765-9D94-452B-85E0-00D22675D847
 # optional metadata
 
 #ROBOTS:
@@ -25,9 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Rilevamento del contenuto
-
-\[Alcune informazioni si riferiscono al prodotto non definitivo che può essere modificato sostanzialmente prima del rilascio in commercio. Microsoft non fornisce alcuna garanzia, esplicita o implicita, relativamente alle informazioni fornite di seguito.\]
+# Rilevamento del contenuto
 
 Questo argomento illustra le linee guida di base per l'implementazione del rilevamento del contenuto protetto con Rights Management Services SDK 2.1.
 
@@ -120,7 +117,7 @@ Di seguito è riportato un frammento di codice che mostra un esempio di impostaz
                               sendLicenseRegistrationNotificationEmail);
 
 
-### Argomenti correlati
+## Argomenti correlati
 
 
 * [**Tipi di proprietà dei metadati di licenza**](/rights-management/sdk/2.1/api/win/license%20metadata%20property%20types#msipc_license_metadata_property_types)
@@ -137,6 +134,6 @@ Di seguito è riportato un frammento di codice che mostra un esempio di impostaz
  
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

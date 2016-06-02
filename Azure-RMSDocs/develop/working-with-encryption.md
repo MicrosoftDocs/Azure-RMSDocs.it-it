@@ -2,7 +2,7 @@
 # required metadata
 
 title: Uso della crittografia | Azure RMS
-description:
+description: indirizza ai pacchetti di crittografia
 keywords:
 author: bruceperlerms
 manager: mbaldwin
@@ -11,8 +11,7 @@ ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
-ms.assetid: 088c98f9-f06e-4aae-8fac-bc7605e545f5
-
+ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
 # optional metadata
 
 #ROBOTS:
@@ -25,7 +24,7 @@ ms.suite: ems
 
 ---
 
-﻿# Uso della crittografia
+# Uso della crittografia
 
 Questo argomento descrive i pacchetti di crittografia e illustra alcuni frammenti di codice che ne consentono l'uso.
 
@@ -107,6 +106,6 @@ Questo esempio mostra anche la nuova modalità di supporto degli *algoritmi depr
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=May16_HO2-->
 
 

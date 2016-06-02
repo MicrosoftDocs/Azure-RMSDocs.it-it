@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Configurazione degli utenti con privilegi avanzati per Azure Rights Management e servizi di individuazione o ripristino dei dati
+
+*Si applica a: Azure Rights Management, Office 365*
+
 La funzionalità per utenti con privilegi avanzati di Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) garantisce che gli utenti e i servizi autorizzati possano sempre leggere e controllare i dati che Azure RMS consente di proteggere per l'organizzazione. Se necessario, rimuovere la protezione o modificare la protezione applicata in precedenza. Un utente con privilegi avanzati dispone sempre dei diritti completi di proprietario per tutte le licenze concesse dal tenant RMS dell'organizzazione. Questa possibilità viene definita anche "ragionamento sui dati" e riveste un ruolo di importanza critica nel mantenimento del controllo sui dati dell'organizzazione. Ad esempio, utilizzare questa funzionalità per uno qualsiasi dei seguenti scenari:
 
 -   Un dipendente lascia l'organizzazione ed è necessario leggere i file che ha protetto.
@@ -43,7 +46,7 @@ Per impostazione predefinita, questo ruolo non è abilitato e a esso non sono as
 Se è necessario abilitare manualmente la funzionalità per utenti con privilegi avanzati, usare il cmdlet [Enable-AadrmSuperUserFeature](https://msdn.microsoft.com/library/azure/dn629400.aspx) di Windows PowerShell, quindi assegnare utenti o account del servizio in base alla necessità mediante il cmdlet [Add-AadrmSuperUser](https://msdn.microsoft.com/library/azure/dn629411.aspx) o il cmdlet [Set-AadrmSuperUserGroup](https://msdn.microsoft.com/library/azure/mt653943.aspx) e aggiungere utenti o altri gruppi a questo gruppo in base alla necessità. 
 
 > [!NOTE]
-> Se non è stato ancora installato il modulo di Windows PowerShell per [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], vedere [Installazione di Windows PowerShell per Azure Rights Management](install-powershell.md).
+> Se il modulo Windows PowerShell per [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] non è ancora stato installato, vedere [Installazione di Windows PowerShell per Microsoft Azure Rights Management](install-powershell.md).
 
 Le procedure consigliate per la funzionalità per utenti con privilegi avanzati:
 
@@ -66,7 +69,7 @@ L'estratto dal log seguente mostra alcune voci di esempio relative all'uso del c
 ## Opzioni di scripting per gli utenti con privilegi avanzati
 Spesso, la persona cui viene assegnato il ruolo di utente con privilegi avanzati per [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] dovrà rimuovere la protezione da più file, in più posizioni. Sebbene sia possibile effettuare questa operazione manualmente, è più efficiente (e spesso più affidabile) eseguire uno script. A tale scopo, [scaricare lo strumento di protezione RMS](http://www.microsoft.com/en-us/download/details.aspx?id=47256). Poi, usare il cmdlet [Unprotect-RMSFile](https://msdn.microsoft.com/library/azure/mt433200.aspx) e [Protect-RMSFile](https://msdn.microsoft.com/library/azure/mt433201.aspx) come richiesto.
 
-Per ulteriori informazioni su questi cmdlet, vedere [cmdlet protezione RMS](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+Per altre informazioni su questi cmdlet, vedere [Cmdlet di protezione RMS](https://msdn.microsoft.com/library/azure/mt433195.aspx).
 
 > [!NOTE]
 > Il modulo PowerShell di protezione RMS fornito con lo strumento di protezione RMS è diverso da e integra il [modulo Windows PowerShell per Azure Rights Management](administer-powershell.md) principale. Il modulo di protezione RMS supporta sia Azure RMS e sia AD RMS.
@@ -74,6 +77,6 @@ Per ulteriori informazioni su questi cmdlet, vedere [cmdlet protezione RMS](http
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

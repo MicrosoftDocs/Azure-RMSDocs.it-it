@@ -26,9 +26,12 @@ ms.suite: ems
 ---
 
 # Operazioni relative alla chiave del tenant di Azure Rights Management
+
+*Si applica a: Azure Rights Management, Office 365*
+
 A seconda della topologia di chiave del tenant (gestita da Microsoft o dal cliente), i livelli di controllo e di responsabilità per la chiave del tenant di Rights Management di Microsoft Azure (Azure RMS) dopo l'implementazione sono diversi.
 
-Uno scenario in cui l'utente gestisce la propria chiave è denominato scenario BYOK (Bring Your Own Key). Per altre informazioni su questo scenario e su come scegliere tra le due topologie di chiave del tenant, vedere [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
+Uno scenario in cui l'utente gestisce la propria chiave è denominato scenario BYOK (Bring Your Own Key). Per altre informazioni su questo scenario e sulla scelta tra le due topologie di chiave del tenant, vedere [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
 
 Nella tabella seguente vengono indicate le operazioni che è possibile eseguire a seconda della topologia di chiave del tenant di Azure RMS scelta.
 
@@ -51,6 +54,6 @@ Dopo aver identificato la topologia implementata, selezionare una delle sezioni 
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

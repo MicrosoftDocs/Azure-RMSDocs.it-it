@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Altre informazioni sui moduli di protezione hardware Thales e sulle funzionalità aggiunte da Microsoft
+
+*Si applica a: Azure Rights Management, Office 365*
+
 Azure RMS usa i moduli di protezione hardware Thales per proteggere le chiavi quando si gestisce la propria chiave del tenant (scenario "Bring Your Own Key", o BYOK).
 
 Thales e-Security è un fornitore leader a livello mondiale di soluzioni di crittografia dei dati e di sicurezza informatica per i settori finanziario, tecnologico, manifatturiero e pubblico. Basate su un'esperienza di 40 anni nella protezione di informazioni aziendali e degli enti pubblici, le soluzioni Thales vengono usate da quattro delle cinque maggiori società dei settori energetico e aerospaziale e consentono di proteggere più dell'80 percento delle transazioni di pagamento in tutto il mondo.
@@ -36,6 +39,6 @@ Per altre informazioni, vedere la pagina relativa ai [moduli di protezione hardw
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

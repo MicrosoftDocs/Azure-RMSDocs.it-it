@@ -26,7 +26,10 @@ ms.suite: ems
 ---
 
 # Installazione e configurazione del connettore di Azure Rights Management
-Nelle sezioni seguenti vengono fornite informazioni sull’installazione e la configurazione del connettore RMS di Azure Rights Management (RMS). Queste procedure illustrano i passaggi da 1 a 4 di [Distribuzione del connettore di Azure Rights Management](deploy-rms-connector.md).
+
+*Si applica a: Azure Rights Management, Office 365*
+
+Nelle sezioni seguenti vengono fornite informazioni sull’installazione e la configurazione del connettore RMS di Azure Rights Management (RMS). Queste procedure descrivono i passaggi da 1 a 4 di [Distribuzione del connettore di Azure Rights Management](deploy-rms-connector.md).
 
 Prima di iniziare, assicurarsi di aver esaminato e controllato i [prerequisiti](deploy-rms-connector.md#prerequisites-for-the-rms-connector) per questa distribuzione.
 
@@ -38,7 +41,7 @@ Prima di iniziare, assicurarsi di aver esaminato e controllato i [prerequisiti](
     > [!NOTE]
     > Installare un singolo connettore RMS (costituito da più server per assicurare elevati livelli di disponibilità) per tenant (tenant di Office 365 o di Azure AD). A differenza di Active Directory RMS, non è necessario installare un connettore RMS in ogni foresta.
 
-2.  Scaricare i file di origine per il connettore RMS dall' [Area download Microsoft](http://go.microsoft.com/fwlink/?LinkId=314106).
+2.  Scaricare i file di origine per il connettore RMS dall'[Area download Microsoft](http://go.microsoft.com/fwlink/?LinkId=314106).
 
     Per installare il connettore RMS, scaricare il file RMSConnectorSetup.exe.
 
@@ -74,7 +77,7 @@ Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-s
     > [!NOTE]
     > Se si sceglie di usare l'account Amministratore di connettore Microsoft RMS, è necessario innanzitutto eseguire le operazioni seguenti per assegnare il ruolo di amministratore di connettore RMS:
     >
-    > 1.  Sullo stesso computer, scaricare e installare Windows PowerShell per Rights Management. Per altre informazioni, vedere [Installazione di Windows PowerShell per Azure Rights Management](install-powershell.md).
+    > 1.  Sullo stesso computer, scaricare e installare Windows PowerShell per Rights Management. Per altre informazioni, vedere [Installazione di Windows PowerShell per Microsoft Azure Rights Management](install-powershell.md).
     >
     >     Avviare Windows PowerShell con l'opzione **Esegui come amministratore** e usare il comando [Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx) per connettersi al servizio Azure RMS:
     >
@@ -108,12 +111,12 @@ Nella pagina finale della procedura guidata, eseguire le operazioni indicate di 
 
 -   Se si è installato il primo connettore, non selezionare l'opzione **Avvia console di amministrazione del connettore per autorizzare i server** . Questa opzione, infatti, deve essere selezionata dopo l'installazione del secondo (o dell'ultimo) connettore RMS. È invece necessario eseguire di nuovo la procedura guidata su almeno un altro computer. Installare almeno due connettori.
 
--   Se si è installato il secondo (o l'ultimo) connettore, selezionare l'opzione **Avvia console di amministrazione del connettore per autorizzare i server**.
+-   Se si è installato il secondo o l'ultimo connettore, selezionare **Avvia console di amministrazione del connettore per autorizzare i server**.
 
 > [!TIP]
 > A questo punto, è possibile eseguire un test di verifica per testare l'operatività dei servizi Web per il connettore RMS:
 >
-> -   Da un browser Web eseguire la connessione a **http://&lt;indirizzoconnetore&gt;/_wmcs/certification/servercertification.asmx**, sostituendo *&lt;indirizzoconnettore&gt;* con l'indirizzo o il nome del server in cui è installato il connettore RMS. Se la connessione ha esito positivo, viene visualizzata una pagina **ServerCertificationWebService** .
+> -   Da un Web browser, connettersi a **http://&lt;indirizzoconnettore&gt;/_wmcs/certification/servercertification.asmx**, sostituendo *&lt;indirizzoconnettore&gt;* con l'indirizzo o il nome del server in cui è installato il connettore RMS. Se la connessione ha esito positivo, viene visualizzata una pagina **ServerCertificationWebService** .
 
 Se è necessario disinstallare il connettore RMS, eseguire di nuovo la procedura guidata e selezionare l'opzione per la disinstallazione.
 
@@ -128,7 +131,7 @@ Quando si autorizzano i server, tenere presente quanto segue:
 
 -   È possibile aggiungere più server all'elenco come voce singola specificando un gruppo di Active Directory di sicurezza o di distribuzione oppure un account del servizio usato da più di un server. Se si usa questa configurazione, i server del gruppo condividono gli stessi certificati RMS e vengono tutti considerati proprietari del contenuto protetto da ciascuno di essi. Per ridurre il sovraccarico amministrativo, per autorizzare i server di Exchange dell'organizzazione o una server farm di SharePoint si consiglia di usare la configurazione di un gruppo anziché singoli server.
 
-Nella pagina **Server a cui è consentito l'uso del connettore** , fare clic su **Aggiungi**.
+Nella pagina **Server a cui è consentito l'uso del connettore** fare clic su **Aggiungi**.
 
 > [!NOTE]
 > L’autorizzazione dei server in Azure RMS è la configurazione equivalente alla configurazione di AD RMS quando si applicano manualmente i diritti NTFS a ServerCertification.asmx per gli account di servizio o del computer server e si concedono manualmente diritti di utente con privilegi avanzati agli account di Exchange. L'applicazione dei diritti NTFS a ServerCertification.asmx non è necessaria per il connettore.
@@ -147,7 +150,7 @@ Di seguito sono riportate altre informazioni sui diversi ruoli server:
 
     -   Se si configura un server SharePoint 2010 in modo che venga eseguito come sistema locale (non usando un account del servizio), creare manualmente un gruppo di sicurezza nei Servizi di dominio Active Directory e aggiungere a questo gruppo l'oggetto nome computer per il server in questa configurazione.
 
-    -   Se si configura un server SharePoint in modo che usi un account del servizio (procedura consigliata per SharePoint 2010 e unica opzione possibile per SharePoint 2013), effettuare le operazioni seguenti:
+    -   Se un server SharePoint è configurato per l'uso di un account del servizio (procedura consigliata per SharePoint 2010 e unica opzione possibile per SharePoint 2016 e SharePoint 2013), procedere come segue:
 
         1.  Aggiungere l'account del servizio che esegue Amministrazione centrale SharePoint per abilitare la configurazione di SharePoint dalla relativa console di amministrazione.
 
@@ -158,7 +161,7 @@ Di seguito sono riportate altre informazioni sui diversi ruoli server:
 
 -   Per i file server che usano la funzionalità Infrastruttura di classificazione file, i servizi associati vengono eseguiti come account di sistema locale. È quindi necessario autorizzare l'account del computer per i file server (ad esempio SERVERNAME$) o un gruppo contenente tali account di computer.
 
-Una volta completata l'aggiunta dei server all'elenco, fare clic su **Chiudi**.
+Dopo aver aggiunto i server all'elenco, fare clic su **Chiudi**.
 
 Se non si è ancora provveduto, è ora necessario configurare il bilanciamento del carico per i server in cui è installato il connettore RMS. È inoltre opportuno valutare la possibilità di usare HTTPS per le connessioni tra questi server e i server appena autorizzati.
 
@@ -170,7 +173,7 @@ Il nome server dell'URL del connettore può essere qualsiasi nome incluso in uno
 > [!IMPORTANT]
 > Si consiglia di non modificare il nome dopo aver configurato i server di Exchange o SharePoint per l'uso del connettore. Se si modificasse il nome, sarebbe infatti necessario eliminare tali server da tutte le configurazioni IRM e configurarli nuovamente.
 
-Dopo aver creato un nome nel DNS e averlo configurato per un indirizzo IP, impostare il bilanciamento del carico per tale indirizzo, operazione che indirizza il traffico ai server del connettore. A tale scopo è possibile usare qualsiasi servizio di bilanciamento del carico, inclusa la funzionalità Bilanciamento carico di rete di Windows Server. Per altre informazioni, vedere la [guida di distribuzione relativa al bilanciamento del carico](http://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
+Dopo aver creato un nome nel DNS e averlo configurato per un indirizzo IP, impostare il bilanciamento del carico per tale indirizzo, operazione che indirizza il traffico ai server del connettore. A tale scopo è possibile usare qualsiasi servizio di bilanciamento del carico, inclusa la funzionalità Bilanciamento carico di rete di Windows Server. Per altre informazioni, vedere [Load Balancing Deployment Guide (Guida di distribuzione di bilanciamento del carico)](http://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
 
 Usare le impostazioni seguenti per configurare il cluster di Bilanciamento carico di rete:
 
@@ -210,7 +213,7 @@ Se i server del connettore sono installati in una rete che non dispone di connet
 
 2.  Passare a **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\AADRM\Connector**
 
-3.  Aggiungere il valore stringa di **ProxyAddress**, quindi impostare i dati relativi a questo valore su **http://&lt;DominioProxyOIndirizzoIP&gt;:&lt;PortaProxy&gt;**
+3.  Aggiungere il valore stringa **ProxyAddress**, quindi impostare i dati di questo valore su **http://&lt;MyProxyDomainOrIPaddress&gt;:&lt;MyProxyPort&gt;**
 
     Ad esempio: **http://proxyserver.contoso.com:8080**
 
@@ -235,12 +238,12 @@ Per installare lo strumento di amministrazione di connettore RMS, eseguire i fil
 
 -   Per un computer a 64 bit: RMSConnectorSetup.exe
 
-Se non sono stati già scaricati questi file, è possibile farlo dall' [Area download Microsoft](http://go.microsoft.com/fwlink/?LinkId=314106).
+Se non sono stati già scaricati questi file, è possibile farlo dall'[Area download Microsoft](http://go.microsoft.com/fwlink/?LinkId=314106).
 
 
 ## Passaggi successivi
 Dopo l’installazione e la configurazione del connettore RMS, è possibile configurare i server locali per l'uso del connettore stesso. Passare a [Configurazione dei server per il connettore di Azure Rights Management](configure-servers-rms-connector.md).
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

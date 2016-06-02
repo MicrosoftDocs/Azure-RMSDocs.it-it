@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Passaggio 2&colon; Migrazione da una chiave protetta tramite software a una chiave protetta tramite HSM| Azure RMS
+title: Passaggio 2&colon; Migrazione da una chiave protetta tramite software a una chiave protetta tramite HSM | Azure RMS
 description:
 keywords:
 author: cabailey
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Passaggio 2: Migrazione da una chiave protetta tramite software a una chiave protetta tramite HSM
+
+*Si applica a: Active Directory Rights Management Services, Azure Rights Management*
+
 
 Queste istruzioni fanno parte del [percorso di migrazione da AD RMS ad Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md) e si applicano solo se la chiave di AD RMS è protetta tramite software e si vuole eseguire la migrazione ad Azure Rights Management con una chiave del tenant protetta tramite HSM. 
 
@@ -66,9 +69,9 @@ Questa procedura in tre parti consente di importare la configurazione di AD RMS 
 
     Questo comando produce quanto segue:
 
-    -   File di chiave HSM: %NFAST_KMDATA%\local\key_mscapi_&lt;KeyID&gt;
+    -   File di chiave del modulo di protezione hardware: %NFAST_KMDATA%\local\key_mscapi_&lt;KeyID&gt;
 
-    -   File di dati di configurazione di RMS con il certificato concessore di licenze server (SLC) rimosso: %NFAST_KMDATA%\local\no_key_tpd_&lt;KeyID&gt;.xml
+    -   File di dati di configurazione di RMS con SLC rimosso: %NFAST_KMDATA%\local\no_key_tpd_&lt;KeyID&gt;.xml
 
 3.  Se è disponibile più di un file di dati di configurazione di RMS, ripetere il passaggio 2 per il file restanti.
 
@@ -86,7 +89,7 @@ Dopo avere trasferito la chiave del modulo di protezione hardware in Azure RMS, 
 
 ## Parte 3: Importare i dati di configurazione in Azure RMS
 
-1.  Sempre nella workstation connessa a Internet e nella sessione di Windows PowerShell copiare i file di configurazione di RMS con il certificato concessore di licenze server (SLC) rimosso (dalla workstation disconnessa, %NFAST_KMDATA%\local\no_key_tpd_&lt;KeyID&gt;.xml)
+1.  Sempre nella workstation connessa a Internet e nella sessione di Windows PowerShell, copiare i file di configurazione di RMS con SLC rimosso (dalla workstation disconnessa, %NFAST_KMDATA%\local\no_key_tpd_&lt;KeyID&gt;.xml)
 
 2.  Caricare il primo file. Se si hanno più un file XML, perché avevi più domini di pubblicazione trusted, scegliere il file che contiene il dominio di pubblicazione trusted esportato che corrisponde alla chiave di HSM che si desidera utilizzare in Azure RMS per proteggere il contenuto dopo la migrazione. Utilizzare il seguente comando:
 
@@ -110,6 +113,6 @@ Dopo avere trasferito la chiave del modulo di protezione hardware in Azure RMS, 
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 

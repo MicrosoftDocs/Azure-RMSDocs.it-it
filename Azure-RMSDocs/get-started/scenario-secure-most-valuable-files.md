@@ -6,8 +6,8 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
+ms.date: 05/20/2016
+ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
@@ -26,6 +26,9 @@ ms.suite: ems
 ---
 
 # Scenario - Proteggere i file più importanti (few)
+
+*Si applica a: Azure Rights Management, Office 365*
+
 Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management per proteggere in modo manuale e personalizzato un numero limitato di file identificati come i più importanti, garantendo il massimo livello di protezione dall'accesso non autorizzato. In genere questi sono file a cui possono accedere solo alcuni utenti. Ad esempio, le istruzioni per la ricetta di un prodotto alimentare o i piani di acquisizione dell'azienda che non devono essere pubblici prima di una data specifica.
 
 Le istruzioni sono adatte ai casi seguenti:
@@ -42,8 +45,8 @@ Le istruzioni sono adatte ai casi seguenti:
 
 -   L'amministratore deve essere in grado di monitorare chi e quando accede ai file, revocando l'accesso se necessario.
 
-## Istruzioni di distribuzione
-![](../media/AzRMS_AdminBanner.png)
+## Istruzioni sulla distribuzione
+![Istruzioni per l'amministratore per la distribuzione rapida di Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Verificare che siano soddisfatti i requisiti seguenti e quindi seguire le istruzioni per le procedure di supporto prima di passare alla documentazione dell'utente.
 
@@ -52,7 +55,7 @@ Per questo scenario, sono necessari i requisiti seguenti:
 
 |Requisito|Altre informazioni|
 |---------------|--------------------------------|
-|Definizione di account e gruppi per Office 365 o Azure Active Directory:<br /><br />Un gruppo abilitato alla posta elettronica denominato **Accesso con privilegi**, che contiene i pochi utenti che dovrebbero avere accesso a questi documenti riservati<br /><br />Un gruppo abilitato alla posta elettronica denominato **Responsabili della conformità IT**, che contiene gli utenti il cui compito include l'eDiscovery, il monitoraggio e il controllo<br /><br />Un gruppo abilitato alla posta elettronica denominato **Amministratori RMS** e tutti gli amministratori che configurano Azure RMS membri di questo gruppo|[Preparazione per Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
+|Definizione di account e gruppi per Office 365 o Azure Active Directory:<br /><br />- Un gruppo abilitato alla posta elettronica denominato **Accesso con privilegi** che include i pochi utenti che devono avere accesso a questi documenti riservati<br /><br />- Un gruppo abilitato alla posta elettronica denominato **Responsabili della conformità IT** che include gli utenti il cui compito include l'eDiscovery, il monitoraggio e il controllo<br /><br />- Un gruppo abilitato alla posta elettronica denominato **Amministratori RMS** e tutti gli amministratori che configurano Azure RMS membri di questo gruppo|[Preparazione per Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
 |Azure Rights Management non è attivato|[Attivazione di Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |Configurazione di un modello personalizzato, come descritto di seguito|[Configurazione di modelli personalizzati per Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
 |L'applicazione di condivisione Rights Management viene distribuita su un computer Windows, in modo che sia possibile proteggere questi file sul posto, come descritto nella sezione successiva|[Scaricare e installare l’applicazione di condivisione Rights Management](https://technet.microsoft.com/library/dn574734%28v=ws.10%29.aspx)|
@@ -91,8 +94,7 @@ Per questo scenario, sono necessari i requisiti seguenti:
 
 Per altre informazioni sulla protezione dei file sul posto, vedere [Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione di condivisione Rights Management](https://technet.microsoft.com/library/dn574733%28v=ws.10%29.aspx).
 
-> [!TIP]
-> Se il numero di file da proteggere è eccessivo per questo processo manuale, è consigliabile usare lo [strumento di protezione RMS](https://www.microsoft.com/en-us/download/details.aspx?id=47256) per proteggere i file in blocco tramite il modello.
+> [!TIP] Se il numero di file da proteggere è eccessivo per questo processo manuale, è consigliabile usare lo [strumento di protezione RMS](https://www.microsoft.com/en-us/download/details.aspx?id=47256) per proteggere i file in blocco tramite il modello.
 
 ### Per monitorare e, se necessario, revocare l'accesso ai file
 
@@ -109,16 +111,16 @@ Usando il modello seguente, copiare e incollare l'annuncio in una comunicazione 
 
 1.  Specificare i nomi effettivi dei file o usare un riferimento chiaro comprensibile da parete degli utenti autorizzati.
 
-2.  Sostituire *&lt;dettagli contatto&gt;* con le istruzioni sulla modalità in cui questi utenti possono contattare il supporto tecnico o il reparto IT con un canale di supporto in base all'importanza di questi documenti. Ad esempio, fornire un numero di telefono disponibile 24 ore per le chiamate al supporto di importanza elevata.
+2.  Sostituire *&lt;dettagli contatto&gt;* con le istruzioni sulla modalità in cui gli utenti possono contattare il supporto tecnico o il reparto IT con un canale di supporto in base all'importanza di questi documenti. Ad esempio, fornire un numero di telefono disponibile 24 ore per le chiamate al supporto di importanza elevata.
 
 3.  Apportare altre eventuali modifiche a questo annuncio e quindi inviarlo agli utenti.
 
 La documentazione dell'esempio mostra come questo annuncio viene visualizzato dagli utenti, dopo le personalizzazioni.
 
-![](../media/AzRMS_UsersBanner.png)
+![Documentazione dell'utente del modello per la distribuzione rapida di Azure RMS](../media/AzRMS_UsersBanner.png)
 
-### Annuncio IT: Protezione dei documenti top secret di &lt;nome organizzazione &gt;'
-I seguenti file dispongono di un elevato livello di protezione, in modo che solo &lt;utenti con restrizioni&gt; possano accedere e modificare questi file. Per proteggere questi file da accessi non autorizzati, l'applicazione richiederà automaticamente di proteggere i file ogni volta che vengono aperti, in modo che non sia necessaria una connessione Internet per accedervi e potrebbe essere richiesto di immettere le credenziali:
+### Annuncio IT: protezione dei documenti top secret di &lt;nome organizzazione&gt;
+Poiché i file seguenti dispongono di un elevato livello di protezione, solo gli &lt;utenti con restrizioni&gt; possono accedere e modificare i file. Per proteggere questi file da accessi non autorizzati, l'applicazione richiederà automaticamente di proteggere i file ogni volta che vengono aperti, in modo che non sia necessaria una connessione Internet per accedervi e potrebbe essere richiesto di immettere le credenziali:
 
 -   &lt;documento, tipo o posizione top secret 1&gt;
 
@@ -128,10 +130,10 @@ I seguenti file dispongono di un elevato livello di protezione, in modo che solo
 
 **Serve assistenza?**
 
--   Se non è possibile accedere a questi file o se si notano modifiche sospette nel file &lt;azione e dettagli contatto&gt;.
+-   Se non è possibile accedere a questi file o se si notano modifiche sospette nei file, &lt;azione e dettagli contatto&gt;.
 
 #### Esempio di documentazione personalizzata per l'utente
-![](../media/AzRMS_ExampleBanner.png)
+![Esempio di documentazione dell'utente per la distribuzione rapida di Azure RMS](../media/AzRMS_ExampleBanner.png)
 
 ##### Annuncio IT: Protezione dei documenti top secret di VanArsdel
 I seguenti file dispongono di un elevato livello di protezione, in modo che solo le persone nella riga A del messaggio di posta elettronica possano accedere e modificare questi file. Per proteggere questi file da accessi non autorizzati, le applicazioni richiederanno automaticamente di proteggere i file ogni volta che vengono aperti, in modo che non sia necessaria una connessione Internet per aprirli e potrebbe essere richiesto di immettere le credenziali:
@@ -150,6 +152,6 @@ I seguenti file dispongono di un elevato livello di protezione, in modo che solo
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=May16_HO3-->
 
 

@@ -28,13 +28,16 @@ ms.suite: ems
 
 # Impostazioni del Registro di sistema per il connettore Rights Management
 
+*Si applica a: Azure Rights Management, Office 365*
+
+
 Usare le tabelle riportate nelle sezioni seguenti solo se si vuole controllare o aggiungere manualmente impostazioni del Registro di sistema sui server che eseguono Exchange, SharePoint o Windows Server, operazioni che consentono di configurare questi ultimi per l'uso del [connettore RMS](deploy-rms-connector.md). Il metodo consigliato per configurare i server è usare lo strumento di configurazione server per il connettore Microsoft RMS.
 
 Istruzioni per l'uso delle impostazioni:
 
 -   *MicrosoftRMSURL* è l'URL del servizio Microsoft RMS dell'organizzazione. Per individuare questo valore:
 
-    1.  Eseguire il cmdlet [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) per Azure RMS. Se non è stato ancora installato il modulo di Windows PowerShell per Azure RMS, vedere [Installazione di Windows PowerShell per Azure Rights Management](install-powershell.md).
+    1.  Eseguire il cmdlet [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) per Azure RMS. Se non è stato ancora installato il modulo di Windows PowerShell per Azure RMS, vedere [Installazione di Windows PowerShell per Microsoft Azure Rights Management](install-powershell.md).
 
     2.  Nell'output identificare il valore **LicensingIntranetDistributionPointUrl** .
 
@@ -44,7 +47,7 @@ Istruzioni per l'uso delle impostazioni:
 
         **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
--   *ConnectorFQDN* è il nome di bilanciamento del carico definito in DNS per il connettore. ad esempio **rmsconnector.contoso.com**.
+-   *ConnectorFQDN* è il nome di bilanciamento del carico definito in DNS per il connettore. Ad esempio, **rmsconnector.contoso.com**.
 
 -   Usare il prefisso HTTPS per l'URL del connettore se quest'ultimo è stato configurato per comunicare con i server locali mediante tale protocollo. Per altre informazioni, vedere la sezione [Configurazione del connettore RMS per l'uso di HTTPS](deploy-rms-connector.md#BKMK_ConfiguringHTTPS) di questo argomento. Gli URL di Microsoft RMS usano sempre HTTPS.
 
@@ -149,7 +152,7 @@ Istruzioni per l'uso delle impostazioni:
 - https://*ConnectorFQDN*
 
 
-## Impostazioni del Registro di sistema per SharePoint 2013
+## Impostazioni del Registro di sistema di SharePoint 2016 o SharePoint 2013
 
 **Percorso del Registro di sistema:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection
 
@@ -219,6 +222,6 @@ Istruzioni per l'uso delle impostazioni:
 
 Tornare a [Distribuzione del connettore di Azure Rights Management](deploy-rms-connector.md)
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 
