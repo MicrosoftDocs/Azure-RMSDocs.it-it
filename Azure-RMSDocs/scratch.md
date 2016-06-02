@@ -165,6 +165,18 @@ Questo è un esempio di `in-line code`.
 [collegamenti al pulsante](/azure-rms/index.html)
 
 ### Selettore
+
+Testo introduttivo: [!div class="op_single_selector"]
+- [foo](./develop/developers-guide.md)
+- [barra](./develop/developer-notes.md)
+
+Testo introduttivo: > [!div class="op_single_selector"]
+- [foo](./develop/developers-guide.md)
+- [barra](./develop/developer-notes.md)
+
+
+
+
 > [!div class="op_single_selector"]
 - [foo](./develop/developers-guide.md)
 - [barra](./develop/developer-notes.md)
@@ -179,6 +191,6 @@ Questo è un esempio di `in-line code`.
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Apr16_HO4-->
 
 
