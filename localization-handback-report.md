@@ -1,26 +1,11 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 1
+ Total Files | 0
 
 ## File List
- Source File | Status | Details 
- ----------- | ------ | ------- 
- [Azure-RMSDocs\deploy-use\configure-custom-templates.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/8dd8a5c1d52a2f9eaf4c40e3d0368295204327b9/Azure-RMSDocs/deploy-use/configure-custom-templates.md) | InSyncHandedBackSuccess | [Details](#5619e5845625a1b2503aebb965df651d69cb14e511)
 
 ## Item Details
-##### <a name='5619e5845625a1b2503aebb965df651d69cb14e511'></a> Source: [Azure-RMSDocs\deploy-use\configure-custom-templates.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/8dd8a5c1d52a2f9eaf4c40e3d0368295204327b9/Azure-RMSDocs/deploy-use/configure-custom-templates.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [Azure-RMSDocs\deploy-use\configure-custom-templates.md](https://github.com/Microsoft/Azure-RMSDocs-pr.it-it/blob/f772b78489cdcb0ad11408e3608431feadd395c0/Azure-RMSDocs/deploy-use/configure-custom-templates.md)
-* Handoff File: [configure-custom-templates.05b0c1b94b5c1cbb78ae5760b7c9abb1ad1d3890.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/f96cb94587bb882915d5906993c30b127bfda7fe/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/configure-custom-templates.05b0c1b94b5c1cbb78ae5760b7c9abb1ad1d3890.it-it.xlf)
-* Handoff Datetime: 2016-05-31 17:17:11
-* Handoff Reason: Include
-* Archive File: [configure-custom-templates.05b0c1b94b5c1cbb78ae5760b7c9abb1ad1d3890.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/3599ada7178357b455bdeaae60f9749a87eeb8dd/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/configure-custom-templates.05b0c1b94b5c1cbb78ae5760b7c9abb1ad1d3890.it-it.xlf)
-* Archive Datetime: 2016-06-02 03:15:47
-* Handback File: [configure-custom-templates.05b0c1b94b5c1cbb78ae5760b7c9abb1ad1d3890.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/49afcfe0499a4f3047a4f9caf5103612cff9f104/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/configure-custom-templates.05b0c1b94b5c1cbb78ae5760b7c9abb1ad1d3890.it-it.xlf)
-* Handback Datetime: 2016-06-02 22:26:34
-* [Back to Top](#report-top)
-
 
 ## Error Details
 
