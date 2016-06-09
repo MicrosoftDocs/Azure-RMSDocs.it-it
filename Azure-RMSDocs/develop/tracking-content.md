@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Il contenuto di questo SDK non è aggiornato. Per un breve periodo, la [versione attuale](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) della documentazione sarà disponibile su MSDN. **
 # Rilevamento del contenuto
 
 Questo argomento illustra le linee guida di base per l'implementazione del rilevamento del contenuto protetto con Rights Management Services SDK 2.1.
@@ -134,6 +134,6 @@ Di seguito è riportato un frammento di codice che mostra un esempio di impostaz
  
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

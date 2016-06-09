@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Il contenuto di questo SDK non è aggiornato. Per un breve periodo, la [versione attuale](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) della documentazione sarà disponibile su MSDN. **
 # Configurazione dell'API file
 
 
@@ -75,7 +75,7 @@ Impostare il valore della *crittografia* della chiave per specificare il comport
 - *Pfile*: si usa la crittografia PFile. All'estensione originale del file crittografato sarà aggiunto pfile. Dopo la crittografia, ad esempio, l'estensione di un file sarà .txt.pfile.
 
 
-> [AZURE.NOTE] Questa impostazione non incide sui formati di file Office. Ad esempio, se il valore `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` è impostato su & &quot;Pfile”, i file con estensione .docx verranno comunque crittografati con la protezione nativa e l'estensione del file crittografato sarà ancora docx.
+> [AZURE.NOTE] Questa impostazione non incide sui formati di file Office. Ad esempio, se il valore `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` è impostato su &quot;Pfile", i file con estensione docx verranno comunque crittografati con la protezione nativa e l'estensione del file crittografato sarà ancora docx.
 
 L'impostazione di un valore diverso o la mancata impostazione produce il comportamento predefinito.
 
@@ -89,7 +89,7 @@ Se si tenta la crittografia in un tipo di file bloccato, si verifica un errore [
 
 ### API file: dettagli sul supporto dei file
 
-È possibile aggiungere il supporto nativo per qualsiasi tipo di file (estensione). Ad esempio, qualsiasi estensione &lt;ext&gt; (non-office), \*.p&lt;ext&gt; sarà usata se la configurazione di amministrazione per tale estensione è "NATIVA".
+È possibile aggiungere il supporto nativo per qualsiasi tipo di file (estensione). Ad esempio, per tutte le estensioni &lt;ext&gt; (non Office), verrà usato \*.p&lt;ext&gt; se la configurazione dell'amministratore per l'estensione è "NATIVA".
 
 **File di Office**
 
@@ -152,7 +152,7 @@ HKEY_LOCAL_MACHINE
 ## Argomenti correlati
 
 * [Note per gli sviluppatori](developer-notes.md)
-* [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/rights-management/sdk/2.1/api/win/error%20codes)
+* [**\_FILE\_ENCRYPT\_BLOCCATO**](/rights-management/sdk/2.1/api/win/error%20codes)
  
 
  
@@ -161,6 +161,6 @@ HKEY_LOCAL_MACHINE
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Il contenuto di questo SDK non è aggiornato. Per un breve periodo, la [versione attuale](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) della documentazione sarà disponibile su MSDN. **
 # Configurare Visual Studio
 
 Questo argomento contiene le istruzioni su come configurare un progetto di Visual Studio per usare Rights Management Services SDK 2.1.
@@ -42,7 +42,7 @@ Queste istruzioni sono valide per la creazione di un'applicazione nativa a 32 bi
 
 1.  Aggiungere la directory di inclusione di RMS SDK 2.1 al progetto di Visual Studio 2010.
 
-    In **Proprietà di configurazione** selezionare **Directory di VC + +** e aggiungere la directory di inclusione di RMS SDK 2.1 **$(MSIPCSDKDIR)\\inc** nel campo **Directory di inclusione**.
+    In **Proprietà di configurazione** selezionare **Directory di VC++** e aggiungere la directory di inclusione di RMS SDK 2.1 **$(MSIPCSDKDIR)\\inc** nel campo **Directory di inclusione**.
 
     ![Campo delle directory di inclusione in Proprietà di configurazione](../media/include_directories.png)
 
@@ -57,7 +57,7 @@ Queste istruzioni sono valide per la creazione di un'applicazione nativa a 32 bi
 
 3.  Aggiungere i file di libreria di RMS SDK 2.1 come dipendenze di Visual Studio 2010.
 
-    In **Linker** selezionare **Input** e aggiungere i file di libreria di RMS SDK 2.1 **Msipc.lib** e **Msipc\_s.lib** nel campo**Dipendenze aggiuntive**.
+    In **Linker** selezionare **Input** e aggiungere i file di libreria di RMS SDK 2.1 **Msipc.lib** e **Msipc\_s.lib** nel campo **Dipendenze aggiuntive**.
 
     ![Campo delle dipendenze di libreria in Linker](../media/additional_dependencies.png)
 
@@ -85,6 +85,6 @@ Queste istruzioni sono valide per la creazione di un'applicazione nativa a 32 bi
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Il contenuto di questo SDK non è aggiornato. Per un breve periodo, la [versione attuale](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) della documentazione sarà disponibile su MSDN. **
 # Installare e configurare il server
 
 Questo argomento descrive la procedura per installare e configurare un server RMS per il test dell'applicazione abilitata all'uso di diritti.
@@ -102,6 +102,6 @@ La procedura seguente consente di configurare il server RMS e include queste ope
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

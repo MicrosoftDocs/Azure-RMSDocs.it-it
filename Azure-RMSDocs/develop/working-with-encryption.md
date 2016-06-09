@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Il contenuto di questo SDK non è aggiornato. Per un breve periodo, la [versione attuale](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) della documentazione sarà disponibile su MSDN. **
 # Uso della crittografia
 
 Questo argomento descrive i pacchetti di crittografia e illustra alcuni frammenti di codice che ne consentono l'uso.
@@ -44,13 +44,13 @@ A partire dall'[aggiornamento di marzo 2015](release-notes-rtm.md), nell'API e n
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_CBC4K
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_ECB (noto anche come algoritmo deprecato)
 
-I flag del pacchetto di crittografia, vedere [**Crittografia preferita**](/rights-management/sdk/2.1/api/win/constants#msipc_preferred_encryption), possono essere utilizzati in combinazione con il nuovo flag della proprietà di licenza, **IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE**.
+I flag del pacchetto di crittografia, vedere [**Preferred encryption**](/rights-management/sdk/2.1/api/win/constants#msipc_preferred_encryption) (Crittografia preferita), possono essere usati in combinazione con il nuovo flag della proprietà di licenza, **IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE**.
 
 Di seguito sono elencati alcuni frammenti di codice semplici che dimostrano come utilizzare la nuova proprietà di licenza.
 
 ## Algoritmi deprecati
 
-Il flag **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS** non è più esposto nell'API. Ciò significa che le future applicazioni non verranno più compilate se faranno riferimento a questo flag, ma le applicazioni già create con questo flag continueranno a funzionare poiché risulta privato nel codice API.
+Nell'API non è più esposto il flag **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS**. Ciò significa che le future applicazioni non verranno più compilate se faranno riferimento a questo flag, ma le applicazioni già create con questo flag continueranno a funzionare poiché risulta privato nel codice API.
 
 È comunque possibile ottenere il vantaggio del flag obsoleto degli algoritmi di crittografia deprecati modificando semplicemente un flag. Vedere gli esempi seguenti di frammenti di codice.
 
@@ -106,6 +106,6 @@ Questo esempio mostra anche la nuova modalità di supporto degli *algoritmi depr
 
 
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=Jun16_HO1-->
 
 

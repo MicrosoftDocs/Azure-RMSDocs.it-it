@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Il contenuto di questo SDK non è aggiornato. Per un breve periodo, la [versione attuale](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) della documentazione sarà disponibile su MSDN. **
 # IPCHelloWorld - Applicazione di esempio
 
 Questo argomento contiene istruzioni per creare un'applicazione di esempio abilitata all'uso di diritti.
@@ -222,6 +222,6 @@ Per completare la procedura, è anche necessario rilasciare tutte le risorse all
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 05/25/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -86,17 +86,18 @@ Se prima di ottenere la sottoscrizione di valutazione l'organizzazione usava Azu
 ## Sottoscrizione per Enterprise Mobility Suite
 [Versione di valutazione gratuita di 30 giorni](http://go.microsoft.com/fwlink/?LinkId=615385)
 
-Questa sottoscrizione è concepita per le organizzazioni che desiderano usare una combinazione di Azure Active Directory Premium, Windows Intune e Azure Rights Management. Il supporto per l'uso di Azure Rights Management con Office è identico a quello per l’uso della sottoscrizione di Azure Rights Management Premium. 
-Per altre informazioni sulla sottoscrizione per Enterprise Mobility Suite, vedere la [panoramica di Microsoft Enterprise Mobility](http://go.microsoft.com/fwlink/?LinkId=615386).
+Questa sottoscrizione è concepita per le organizzazioni che desiderano usare una combinazione di Azure Active Directory Premium, Windows Intune e Azure Rights Management. Il supporto per l'uso di Azure Rights Management con Office è identico a quello per l’uso della sottoscrizione di Azure Rights Management Premium. Per altre informazioni sulla sottoscrizione per Enterprise Mobility Suite, vedere la [panoramica di Microsoft Enterprise Mobility](http://go.microsoft.com/fwlink/?LinkId=615386).
 
 ## Sottoscrizione a RMS per utenti singoli
 Questa sottoscrizione è concepita per gli utenti singoli di un'organizzazione in cui Azure RMS o AD RMS non è stato distribuito. Questa sottoscrizione consente agli utenti di visualizzare i contenuti protetti da un'organizzazione che usa Azure RMS e di proteggere i propri contenuti.
 
-Per altre informazioni, vedere [RMS per utenti singoli e Azure Rights Management](../understand-explore/rms-for-individuals.md).
+Verrà riportata nel portale di amministrazione di Office 365 come **Rights Management ad hoc** e assegnata automaticamente agli utenti. Non assegnare manualmente la licenza agli utenti e non usare la licenza per amministrare Azure RMS per l'organizzazione. 
+
+Per ulteriori informazioni, vedere [RMS per utenti singoli e Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
 ## Passaggi successivi
 Per verificare gli altri requisiti, vedere [Requisiti per Azure Rights Management](requirements-azure-rms.md).
 
-<!--HONumber=May16_HO2-->
+<!--HONumber=May16_HO5-->
 
 

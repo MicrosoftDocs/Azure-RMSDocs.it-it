@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-
+** Il contenuto di questo SDK non è aggiornato. Per un breve periodo, la [versione attuale](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) della documentazione sarà disponibile su MSDN. **
 # Eseguire il debug dell'applicazione abilitata all'uso di diritti
 
 L'argomento seguente illustra come eseguire il debug dell'applicazione e usare il registro eventi di Windows.
@@ -46,7 +46,7 @@ HKEY_LOCAL_MACHINE
 
 ### Registrazione dell'applicazione tramite il registro eventi di Windows
 
-Il nome del registro eventi è "Microsoft-RMS-MSIPC/Debug". Ciò significa che in Visualizzatore eventi di Windows, il registro viene visualizzato come "Registri applicazioni e servizi\\Microsoft\\RMS\\MSIPC\\Debug"
+Il nome del registro eventi è "Microsoft-RMS-MSIPC/Debug". Ciò significa che in Visualizzatore eventi di Windows, il registro viene visualizzato come "Registri applicazioni e servizi\\Microsoft\\RMS\\MSIPC\\Debug".
 
 **Nota**: il registro è abilitato per impostazione predefinita ed è impostato sul livello di dettaglio 3.
 
@@ -81,6 +81,6 @@ Ad esempio, il comando seguente abiliterà il registro eventi MSIPC e imposterà
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 
