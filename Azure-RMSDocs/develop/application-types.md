@@ -37,7 +37,6 @@ Un’applicazione semplice può essere rappresentata da uno strumento da riga di
 
 ### Applicazioni in modalità server
 
-
 La *modalità server* è destinata ad applicazioni non interattive che utilizzano, proteggono o elaborano contenuto protetto tramite RMS. Un esempio può essere un’applicazione per la *prevenzione della perdita di dati* che viene eseguita come servizio in un file server e che protegge automaticamente i documenti riservati. Per un esempio di questo tipo di applicazione, vedere l’[esempio IpcDlp](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d).
 
 Se l'applicazione usa la *modalità server*, l’autenticazione al server RMS deve avvenire automaticamente. A differenza della *modalità client*, RMS SDK 2.1 non visualizzerà una finestra di richiesta di credenziali se l’autenticazione automatica non riesce. Inoltre, nell’esecuzione in *modalità server* non è necessario alcun manifesto dell'applicazione.
@@ -60,19 +59,12 @@ Per altre informazioni sulla protezione delle applicazioni, vedere [Informazioni
 
 ## Argomenti correlati
 
-* [Concetti per sviluppatori](ad-rms-concepts-nav.md)
 * [Esempio IpcDlp](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
 * [IPCHelloWorld - Applicazione di esempio](how-to-build-your-first-application.md)
 * [Impostazione della modalità di sicurezza dell'API](setting-the-api-security-mode-api-mode.md)
 * [Informazioni sulle restrizioni di utilizzo](understanding-usage-restrictions.md)
- 
-
- 
 
 
-
-
-
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 
