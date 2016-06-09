@@ -1,11 +1,29 @@
 # <a name='report-top'></a> Localization Handback Report
 
 ## Summary
- Total Files | 0
+ Total Files | 1
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [Azure-RMSDocs\develop\deploying-your-application.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/872bb0c20db2ef8d661d321598a2b1fe61d69316/Azure-RMSDocs/develop/deploying-your-application.md) | OutofSyncHandedBackSuccess | [Details](#902721ae3e69afd144c552b8ee0a916958e80afc56)
 
 ## Item Details
+##### <a name='902721ae3e69afd144c552b8ee0a916958e80afc56'></a> Source: [Azure-RMSDocs\develop\deploying-your-application.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/872bb0c20db2ef8d661d321598a2b1fe61d69316/Azure-RMSDocs/develop/deploying-your-application.md)
+* Status: OutofSyncHandedBackSuccess
+* Target File: 
+* Handoff File: [deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/d67acf6a97f37d48c5c569d88678ed3330cd6950/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.it-it.xlf)
+* Handoff Datetime: 2016-06-09 01:49:47
+* Handoff Reason: Include
+* Archive File: [deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/4a7b722379de2596a5227b61b4dd41ec42ff6cdb/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.it-it.xlf)
+* Archive Datetime: 2016-06-09 02:40:07
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
+* Current Target File: [Azure-RMSDocs\develop\deploying-your-application.md](https://github.com/Microsoft/Azure-RMSDocs-pr.it-it/blob/fdd4e69fa5d3ef3f1215200f3a5ee229ca500fda/Azure-RMSDocs/develop/deploying-your-application.md)
+* Current Handback File: [deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/ebc87c61c3a193f71d2b7a961e0eb49b6efdba70/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.it-it.xlf)
+* Current Handback Datetime: 2016-06-09 09:15:36
+* [Back to Top](#report-top)
+
 
 ## Error Details
 

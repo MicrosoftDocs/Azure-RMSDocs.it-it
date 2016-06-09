@@ -1146,9 +1146,9 @@
 * Archive Datetime: 2016-06-09 02:40:07
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
-* Current Target File: [Azure-RMSDocs\develop\deploying-your-application.md](https://github.com/Microsoft/Azure-RMSDocs-pr.it-it/blob/a7d3d9fb88cb0fec8ed4c7f2ae7e5724647c1a66/Azure-RMSDocs/develop/deploying-your-application.md)
-* Current Handback File: [deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/b73cc685532abf06a3375876cf39b51d967017d2/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.it-it.xlf)
-* Current Handback Datetime: 2016-05-25 05:49:11
+* Current Target File: [Azure-RMSDocs\develop\deploying-your-application.md](https://github.com/Microsoft/Azure-RMSDocs-pr.it-it/blob/fdd4e69fa5d3ef3f1215200f3a5ee229ca500fda/Azure-RMSDocs/develop/deploying-your-application.md)
+* Current Handback File: [deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/ebc87c61c3a193f71d2b7a961e0eb49b6efdba70/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.it-it.xlf)
+* Current Handback Datetime: 2016-06-09 09:15:36
 * [Back to Top](#report-top)
 
 ##### <a name='2f2323f32327324611df2b2e8a8824e6896546aa57'></a> Source: [Azure-RMSDocs\develop\developer-notes.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/b588c86fcb4d9d76a402ffd61e4e18f12c069724/Azure-RMSDocs/develop/developer-notes.md)
