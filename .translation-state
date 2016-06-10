@@ -1,6 +1,6 @@
 {
   "LastProcessedCommit": "274b07a6ada30217dcfe8232a8bab0fd707cad3c",
-  "LastTranslatedCommit": "6b760a3200c4f3aa1ec84f1a7431ba72488035d7",
+  "LastTranslatedCommit": "da560e5f1125269a9294672156b4fca5cfa56d94",
   "Items": {
     "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a": {
       "FileHash": "2ed3bf162e9cbb06230b3bd9c0bd960c5c36049a",
@@ -65045,14 +65045,14 @@
       "HandoffPriority": "",
       "HandoffException": null,
       "HandoffFailureTimes": 0,
-      "TargetFileCommit": "e7b9a40169de19fe83591195169c97143855c4ab",
+      "TargetFileCommit": "da560e5f1125269a9294672156b4fca5cfa56d94",
       "TargetFilePath": "Azure-RMSDocs\\deploy-use\\configure-office-apps.md",
       "HandbackFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.it-it\\master\\configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.it-it.xlf",
-      "HandbackFileCommit": "af5872768ab0c01543ec943d801a590c59743892",
-      "HandbackDateTime": "2016-06-02T14:33:20.1902544Z",
+      "HandbackFileCommit": "da2f8d0a4b7d135d505b1a3a1d89d73a724fc1fc",
+      "HandbackDateTime": "2016-06-10T20:19:44.1911502Z",
       "HandbackException": null,
       "HandbackFailureTimes": 0,
-      "UpdatedDateTime": "2016-06-02T14:33:20.1902544Z",
+      "UpdatedDateTime": "2016-06-10T20:19:44.1911502Z",
       "ArchiveFilePath": "ol-handoff\\Microsoft\\Azure-RMSDocs-pr.it-it\\master\\archive\\configure-office-apps.7d4d9ecf4a780b1fbfb3e7d639c2ea1244fbefff.it-it.xlf",
       "ArchiveFileCommit": "8ca9e30447b33fe38aed5d9eb7d5fd23d3205e43",
       "ArchiveFileDateTime": "2016-05-21T18:41:49.6125609Z",
