@@ -23,32 +23,27 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Il contenuto di questo SDK non è aggiornato. Per un breve periodo, la [versione attuale](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) della documentazione sarà disponibile su MSDN. **
 
-# Server AD RMS
-Questo argomento descrive lo scopo e le funzioni del server RMS.
+# Server
 
-Il componente server di Rights Management Services (RMS) è implementato da un set di servizi Web in esecuzione in [Microsoft Internet Information Services](http://www.iis.net/overview) (IIS). È anche possibile usare l'implementazione basata su cloud tramite RMS in Azure. Per altre informazioni sull'uso del servizio Azure Rights Management, vedere [Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md).
+Questo argomento descrive lo scopo e le funzioni del server RMS, per Azure e Windows Server.
 
-Per i server locali, a partire da Windows Server 2008 è possibile installare e configurare il servizio RMS aggiungendolo come ruolo. Per installare il servizio nei sistemi operativi precedenti, scaricarlo dall'Area download Microsoft nella pagina relativa a[Microsoft Windows Rights Management Services con Service Pack 2](http://www.microsoft.com/download/en/details.aspx?id=4909).
+**Azure RMS**: per informazioni sull'uso del servizio Azure Rights Management, vedere [Enable your service application to work with cloud based RMS](how-to-use-file-api-with-aadrm-cloud.md) (Consentire all'applicazione di servizio di usare RMS basato su cloud).
 
-Tra i numerosi servizi Web installati, quelli indicati di seguito sono importanti per lo sviluppo di applicazioni.
+> [AZURE.IMPORTANT] È consigliabile sviluppare e testare l'applicazione tramite Azure RMS.
 
-**Amministrazione**: ospita il sito Web di amministrazione che consente di gestire RMS. Il servizio viene eseguito nei server di certificazione radice e nei server licenze. È possibile usare l'[API di script di Active Directory Rights Management Services](https://msdn.microsoft.com/library/Bb968797) per scrivere script di amministrazione.
+**Windows Server**: per i server locali RMS, a partire da Windows Server 2008 è possibile installare e configurare il servizio RMS aggiungendolo come ruolo. Per installare il servizio nei sistemi operativi precedenti, scaricarlo dall'Area download Microsoft nella pagina relativa a[Microsoft Windows Rights Management Services con Service Pack 2](http://www.microsoft.com/download/en/details.aspx?id=4909).
 
-**Certificazione account**: crea i certificati della macchina che identificano i computer nella gerarchia di certificati RMS e i certificati per account con diritti che associano gli utenti a computer specifici. Per altre informazioni, vedere [Attivazione di un utente](https://msdn.microsoft.com/library/Cc530378).
+Tra i numerosi servizi Web installati, quelli indicati di seguito sono importanti per lo sviluppo di applicazioni per il server RMS in esecuzione su Windows Server.
 
-Questo servizio viene eseguito nel server di certificazione radice.
-
-**Licenza**: rilascia una licenza per l'utente finale che consente agli utenti di utilizzare il contenuto protetto. Il servizio viene eseguito nei server di certificazione radice e nei server licenze.
-
-**Pubblicazione**: crea una [licenza di pubblicazione](https://msdn.microsoft.com/library/Aa362355). Il servizio viene eseguito nei server di certificazione radice e nei server licenze.
-
-**Pre-certificazione**: consente a un server di richiedere un certificato per account con diritti per conto di un utente. Un certificato per account con diritti usa il certificato della macchina dell'attivazione di RMS per associare gli account utente a computer o gruppi di computer specifici e viene usato per consentire agli utenti di usare il contenuto protetto. Il servizio viene eseguito nei server di certificazione radice e nei server licenze.
-
-**Localizzatore del servizio**: fornisce ad Active Directory l'URL dei servizi di certificazione account, licenza e pubblicazione, in modo che i client RMS possano individuarli. Il servizio viene eseguito nei server di certificazione radice e nei server licenze.
-
- 
+| Servizio | Descrizione |
+|---------|-------------|
+| Administration | Ospita il sito Web di amministrazione che consente di gestire RMS. Il servizio viene eseguito nei server di certificazione radice e nei server licenze. È possibile usare l'API di script di Active Directory Rights Management Services per scrivere script di amministrazione.|
+| Certificazione account |Crea i certificati del computer che identificano i computer nella gerarchia di certificati RMS e i certificati per account con diritti che associano gli utenti a computer specifici. Per altre informazioni, vedere Attivazione di un computer e Attivazione di un utente.<p><p>Questo servizio viene eseguito nel server di certificazione radice. |
+|Licenze | Rilascia una *licenza per l'utente finale*. Il servizio viene eseguito nei server di certificazione radice e nei server licenze.|
+|Pubblicazione | Crea una *licenza di pubblicazione* che definisce i criteri che possono essere enumerati in una licenza per l'utente finale. Per altre informazioni, vedere l'articolo [Creating an Issuance License](https://msdn.microsoft.com/library/Aa362355) (Creazione di una licenza di pubblicazione).<p><p>Il servizio viene eseguito nei server di certificazione radice e nei server licenze.|
+|Pre-certificazione | Consente a un server di richiedere un *certificato per account con diritti* per conto di un utente. Il servizio viene eseguito nei server di certificazione radice e nei server licenze.|
+|Localizzatore servizi | Indica ad Active Directory l'URL dei servizi di licenza, pubblicazione e certificazione degli account, in modo che i client RMS possano rilevarli. Il servizio viene eseguito nei server di certificazione radice e nei server licenze.|
 
 ## Argomenti correlati ##
 * [Panoramica](ad-rms-overview.md)
@@ -65,6 +60,6 @@ Questo servizio viene eseguito nel server di certificazione radice.
  
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

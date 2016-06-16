@@ -1,37 +1,25 @@
 ---
-# required metadata
+# metadati obbligatori
 
-title: Consentire all’applicazione di servizio di usare RMS basato su cloud | Azure RMS
-description: Questo argomento descrive i passaggi per la configurazione dell’applicazione di servizio per l’uso di Azure Rights Management.
-keywords:
-author: bruceperlerms
-manager: mbaldwin
-ms.date: 04/28/2016
-ms.topic: article
-ms.prod: azure
-ms.service: rights-management
-ms.technology: techgroup-identity
-ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
-# optional metadata
+titolo: Procedura: Consentire all'applicazione di servizio di usare RMS basato su cloud | Descrizione di Azure RMS: questo argomento descrive i passaggi per la configurazione dell'applicazione di servizio per l'uso di Azure Rights Management.
+keywords: author: bruceperlerms manager: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
+# metadati facoltativi
 
-#ROBOTS:
-audience: developer
+#ROBOT:
+destinatari: sviluppatori
 #ms.devlang:
-ms.reviewer: shubhamp
-ms.suite: ems
+ms.reviewer: shubhamp ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
 ---
-** Il contenuto di questo SDK non è aggiornato. Per un breve periodo, la [versione attuale](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) della documentazione sarà disponibile su MSDN. **
-# Consentire all'applicazione di servizio di usare RMS basato su cloud
+
+# Procedura: Consentire all'applicazione di servizio di usare RMS basato su cloud
 
 Questo argomento descrive i passaggi per la configurazione dell’applicazione di servizio per l’uso di Azure Rights Management. Per altre informazioni, vedere [Introduzione a Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx).
 
 **Importante**  
-È consigliabile prima di tutto testare l'applicazione Rights Management Services SDK 2.1 con l'ambiente di pre-produzione RMS in un server RMS. Quindi, se si vuole consentire al cliente di usare l'applicazione con il servizio Azure RMS, eseguire il test in tale ambiente.
-
-Per usare l'applicazione di servizio RMS SDK 2.1 con Azure RMS, è necessario richiedere un tenant di Azure RMS, se non se ne ha già uno. Inviare un messaggio di posta elettronica a <rmcstbeta@microsoft.com> con la richiesta del tenant.
+Per usare l'applicazione di servizio Rights Management Services SDK 2.1 con Azure RMS, è necessario creare i propri tenant. Per altre informazioni vedere [Azure RMS requirements: Cloud subscriptions that support Azure RMS](/rights-management/get-started/requirements-subscriptions.md) (Requisiti per Azure RMS: sottoscrizioni cloud che supportano Azure RMS)
 
 ## Prerequisiti
 
@@ -43,18 +31,18 @@ Per usare l'applicazione di servizio RMS SDK 2.1 con Azure RMS, è necessario ri
 -   Chiamare [**IpcInitialize**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize).
 -   Impostare [**IpcSetGlobalProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty).
 
+        C++
+        int mode = IPC_API_MODE_SERVER;
+        IpcSetGlobalProperty(IPC_EI_API_MODE, &(mode));
 
-    int mode = IPC_API_MODE_SERVER; IpcSetGlobalProperty(IPC_EI_API_MODE, &(mode));
 
-
-**Nota** Per altre informazioni, vedere [Impostazione della modalità di sicurezza dell’API](setting-the-api-security-mode-api-mode.md)
+  **Nota** Per altre informazioni, vedere [Impostazione della modalità di sicurezza dell’API](setting-the-api-security-mode-api-mode.md)
 
      
-
 -   La procedura seguente rappresenta la configurazione per la creazione dell'istanza di una struttura [**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx) con il membro **pcCredential** ([**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)) popolato con le informazioni di connessione ottenute dal servizio di Azure Rights Management.
--   Usare le informazioni ottenute con la creazione dell'identità del servizio tramite chiave simmetrica (vedere i prerequisiti riportati in precedenza in questo argomento) per impostare i parametri **wszServicePrincipal**, **wszBposTenantId** ed **cbKey** quando si crea l'istanza di una struttura [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key).
+-   Usare le informazioni ottenute con la creazione dell'identità del servizio tramite chiave simmetrica (vedere i prerequisiti riportati in precedenza in questo argomento) per impostare i parametri **wszServicePrincipal**, **wszBposTenantId** e **cbKey** quando si crea l'istanza di una struttura [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key).
 
-**Nota** A causa di una condizione esistente presso il nostro servizio di individuazione, le credenziali tramite chiave simmetrica vengono accettate solo se provenienti dal Nord America e di conseguenza è necessario specificare l’URL del tenant direttamente. Questa operazione viene eseguita tramite il parametro [**IPC\_CONNECTION\_INFO**](/rights-management/sdk/2.1/api/win/ipc_connection_info#msipc_ipc_connection_info) di [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) oppure [**IpcGetTemplateIssuerList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist).
+**Nota** A causa di una condizione esistente presso il nostro servizio di individuazione, le credenziali tramite chiave simmetrica vengono accettate solo se provenienti dal Nord America e di conseguenza è necessario specificare l'URL del tenant direttamente. Questa operazione viene eseguita tramite il parametro [**IPC\_CONNECTION\_INFO**](/rights-management/sdk/2.1/api/win/ipc_connection_info#msipc_ipc_connection_info) di [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) oppure [**IpcGetTemplateIssuerList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist).
 
 ## Generare una chiave simmetrica e raccogliere le informazioni necessarie
 
@@ -65,17 +53,14 @@ Per usare l'applicazione di servizio RMS SDK 2.1 con Azure RMS, è necessario ri
 
 **Nota** Per usare i cmdlet di Powershell, è necessario essere un amministratore tenant.
 
-
 -   Avviare Powershell ed eseguire i comandi seguenti per generare una chiave         `Import-Module MSOnline`
             `Connect-MsolService` (digitare le credenziali di amministratore)         `New-MsolServicePrincipal` (digitare un nome visualizzato)
 -   Dopo la generazione di una chiave simmetrica, verranno visualizzate le informazioni sulla chiave, tra cui la chiave stessa e **AppPrincipalId**.
 
 
-
     La chiave simmetrica seguente è stata creata come la chiave non fornita ZYbF/lTtwE28qplQofCpi2syWd11D83+A3DRlb2Jnv8=
 
     DisplayName : RMSTestApp ServicePrincipalNames : {7d9c1f38-600c-4b4d-8249-22427f016963} ObjectId : 0ee53770-ec86-409e-8939-6d8239880518 AppPrincipalId : 7d9c1f38-600c-4b4d-8249-22427f016963
-
 
 
 ### Istruzioni per individuare **TenantBposId** e **URL**
@@ -162,7 +147,6 @@ La procedura necessaria per consentire all'applicazione di usare Azure Rights Ma
 
 ## Argomenti correlati
 
-* [Concetti per sviluppatori](ad-rms-concepts-nav.md)
 * [Introduzione a Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx)
 * [Introduzione a RMS SDK 2.1](getting-started-with-ad-rms-2-0.md)
 * [Creare un'identità del servizio tramite ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx)
@@ -182,6 +166,6 @@ La procedura necessaria per consentire all'applicazione di usare Azure Rights Ma
  
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

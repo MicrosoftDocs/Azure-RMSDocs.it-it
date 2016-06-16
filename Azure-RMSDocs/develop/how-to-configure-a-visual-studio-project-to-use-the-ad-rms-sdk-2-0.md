@@ -23,14 +23,14 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Il contenuto di questo SDK non è aggiornato. Per un breve periodo, la [versione attuale](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) della documentazione sarà disponibile su MSDN. **
+
 # Configurare Visual Studio
 
 Questo argomento contiene le istruzioni su come configurare un progetto di Visual Studio per usare Rights Management Services SDK 2.1.
 
 ## Prerequisiti
 
--   [Installare l'SDK](create-your-first-rights-aware-application.md)
+-   [Installare l'SDK](install-the-rms-sdk.md)
 
 **Istruzioni**
 
@@ -75,16 +75,12 @@ Queste istruzioni sono valide per la creazione di un'applicazione nativa a 32 bi
 
 ## Argomenti correlati
 
-* [Procedura](how-to-use-msipc.md)
-* [Installare l'SDK](create-your-first-rights-aware-application.md)
+* [Installare l'SDK](install-the-rms-sdk.md)
  
 
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

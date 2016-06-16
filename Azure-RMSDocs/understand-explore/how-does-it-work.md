@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/02/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -66,7 +66,7 @@ Modalità di archiviazione e protezione delle chiavi crittografiche:
 
 - La chiave simmetrica viene protetta mediante la chiave RSA dell'organizzazione ("chiave del tenant di Azure RMS") come parte dei criteri del documento e i criteri vengono anche firmati dall'autore del documento. Questa chiave del tenant è comune a tutti i documenti e a tutti i messaggi di posta elettronica protetti da Azure RMS per l'organizzazione e la chiave può essere modificata solo da un amministratore di Azure RMS se l'organizzazione usa una chiave del tenant gestita dai clienti, nota come chiave di tipo BYOK ("Bring Your Own Key"). 
 
-    La chiave del tenant è protetta nei servizi online di Microsoft, in un ambiente a controllo elevato e sotto attento monitoraggio. Quando si usa una chiave del tenant gestita dai clienti (BYOK), la sicurezza è ottimizzata mediante l'uso di una matrice di moduli di protezione hardware di qualità elevata in ogni area di Azure. Le chiavi non possono essere estratte, esportate o condivise in alcuna circostanza. Per altre informazioni sulla chiave del tenant e la chiave BYOK, vedere [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
+    La chiave del tenant è protetta nei servizi online di Microsoft, in un ambiente a controllo elevato e sotto attento monitoraggio. Quando si usa una chiave del tenant gestita dai clienti (BYOK), la sicurezza è ottimizzata mediante l'uso di una matrice di moduli di protezione hardware di qualità elevata in ogni area di Azure. Le chiavi non possono essere estratte, esportate o condivise in alcuna circostanza. Per altre informazioni sulla gestione della chiave del tenant, vedere [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
 
 - Le licenze e i certificati inviati a un dispositivo Windows sono protetti tramite la chiave privata del dispositivo del client, che viene creata al primo utilizzo di Azure RMS sul dispositivo da parte di un utente. La chiave privata è a sua volta protetta mediante DPAPI sul client, che protegge questi segreti usando una chiave derivata dalla password dell'utente. Nei dispositivi mobili le chiavi vengono usate solo una volta. Non essendo archiviate nei client, queste chiavi non devono essere quindi protette nel dispositivo. 
 
@@ -77,8 +77,7 @@ Per comprendere in modo più dettagliato il funzionamento di Azure RMS, viene il
 
 Dopo aver inizializzato l'ambiente utente, l'utente può quindi proteggere i documenti o utilizzare documenti protetti su quel computer.
 
-> [!NOTE]
-> Se l'utente passa a un altro computer Windows o un altro utente usa lo stesso computer Windows, il processo di inizializzazione viene ripetuto.
+> [!NOTE] Se l'utente passa a un altro computer Windows o un altro utente usa lo stesso computer Windows, il processo di inizializzazione viene ripetuto.
 
 ### Inizializzazione dell'ambiente utente
 Prima che un utente sia in grado di proteggere contenuto o utilizzare contenuto protetto in un computer Windows, è necessario preparare l'ambiente utente sul dispositivo. Questo è un processo unico e si verifica automaticamente senza l'intervento dell'utente quando un utente tenta di proteggere o utilizzare contenuto protetto:
@@ -148,14 +147,13 @@ Le procedure dettagliate precedenti riguardano scenari standard, ma esistono alc
 
 Per altre informazioni su Azure RMS, fare riferimento agli altri argomenti della sezione **Comprendere ed esplorare**, ad esempio [Supporto di Azure Rights Management da parte delle applicazioni](applications-support.md), in cui viene spiegato come è possibile integrare le applicazioni esistenti in Azure RMS per implementare una soluzione di protezione delle informazioni. 
 
-Rivedere l'argomento [Terminologia di Azure Rights Management](../get-started/terminology.md) per acquisire familiarità con i termini relativi alla configurazione e all'uso di Azure RMS. Prima di iniziare la distribuzione, esaminare anche le informazioni riportate in [Requisiti di Azure Rights Management](../get-started/requirements-azure-rms.md). Per informazioni dettagliate e per provare il servizio, vedere [Esercitazione di avvio rapido per Azure Rights Management](../get-started/quick-start-tutorial.md).
+Rivedere l'argomento [Terminologia di Azure Rights Management](../get-started/terminology.md) per acquisire familiarità con i termini relativi alla configurazione e all'uso di Azure RMS. Prima di iniziare la distribuzione, esaminare anche le informazioni riportate in [Requisiti di Azure Rights Management](../get-started/requirements-azure-rms.md). Per approfondire e affrontare un’esercitazione pratica, vedere [Esercitazione di avvio rapido per Azure Rights Management](../get-started/quick-start-tutorial.md).
 
 Quando si è pronti a iniziare la distribuzione di Azure RMS per l'organizzazione, usare la [Guida di orientamento per la distribuzione di Azure Rights Management](../plan-design/deployment-roadmap.md) per i passaggi di distribuzione e i collegamenti alle istruzioni procedurali.
 
-> [!TIP]
-> Per altre informazioni e indicazioni, usare le risorse e i collegamenti disponibili in [Informazioni e supporto per Azure Rights Management](../get-started/information-support.md).
+> [!TIP] Per altre informazioni e indicazioni, usare le risorse e i collegamenti disponibili in [Information and support for Azure Rights Management](../get-started/information-support.md) (Informazioni e supporto di Azure Rights Management).
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

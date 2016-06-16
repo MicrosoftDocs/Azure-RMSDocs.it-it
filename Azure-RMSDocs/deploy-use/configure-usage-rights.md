@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/19/2016
+ms.date: 06/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -43,7 +43,7 @@ Consente di modificare, riorganizzare, formattare o filtrare il contenuto all'in
 
 **Codifica nei criteri**: DOCEDIT
 
-**Implementazione nei diritti personalizzati di Office**: come parte delle opzioni *Modifica* e *Controllo completo*.**
+**Implementazione nei diritti personalizzati di Office**: come parte delle opzioni *Modifica* e *Controllo completo*.
 
 **Nome nel portale di Azure classico**: *Modifica contenuto*
 
@@ -267,11 +267,32 @@ I diritti inclusi con i modelli predefiniti sono i seguenti:
 |&lt;*nome organizzazione*&gt; *- Solo visualizzazione riservata*|Visualizza, Apri, Leggi|
 |&lt;*nome organizzazione*&gt; *- Riservato*|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Visualizza diritti; Consenti macro; Inoltra; Rispondi; Rispondi a tutti|
 
+## Opzione Non inoltrare per i messaggi di posta elettronica
+
+I client di Exchange e i servizi, ad esempio il client Outlook, l'app Outlook Web Access e le regole di trasporto di Exchange, offrono un'opzione per la protezione dei diritti sulle informazioni relativa ai messaggi di posta elettronica: **Non inoltrare**. 
+
+Anche se questa opzione viene visualizzata dagli utenti e dagli amministratori di Exchange come se fosse un modello predefinito di Rights Management selezionabile, l'opzione **Non inoltrare** non è un modello. È per questo motivo che non viene visualizzata nel portale di Azure classico quando si visualizzano e si gestiscono i modelli per Azure RMS. L'opzione **Non inoltrare** è invece un insieme di diritti che viene applicato in modo dinamico dagli utenti ai destinatari di posta elettronica.
+
+Quando l'opzione **Non inoltrare** viene applicata a un messaggio di posta elettronica, i destinatari non possono inoltrarlo, stamparlo, copiarne il contenuto, salvarne gli allegati né salvarlo come un nome diverso. Ad esempio, nel client di Outlook, il pulsante Inoltra non è disponibile, le voci di menu **Salva con nome**, **Salva allegato** e **Stampa** non sono disponibili e non è possibile aggiungere o modificare i destinatari nei campi **A**, **Cc** e **Ccn**.
+
+È importante distinguere tra l'applicazione dell'opzione **Non inoltrare** e l'applicazione di un modello che non concede il diritto di inoltro di un messaggio di posta elettronica: l'opzione **Non inoltrare** usa un elenco dinamico di utenti autorizzati in base ai destinatari scelti dall'utente del messaggio originale, mentre i diritti nel modello sono associati a un elenco statico di utenti autorizzati che l'amministratore ha specificato in precedenza. Qual è la differenza? Si consideri un esempio: 
+
+Un utente vuole inviare per posta elettronica alcune informazioni a utenti specifici del reparto marketing, che non devono condividerle con nessun altro. Dovrà proteggere il messaggio di posta elettronica con un modello che limiti i diritti (visualizzazione, risposta e salvataggio) del reparto marketing?  Oppure dovrà scegliere l'opzione **Non inoltrare**? Entrambe le opzioni impediscono ai destinatari di inoltrare il messaggio di posta elettronica. 
+
+- Se viene applicato il modello, i destinatari possono comunque condividere le informazioni con altri utenti del reparto marketing. Ad esempio, un destinatario potrebbe utilizzare Esplora risorse per trascinare il messaggio di posta elettronica in un percorso condiviso o in un'unità USB. Così il proprietario del messaggio di posta elettronica e tutti gli utenti del reparto marketing che hanno accesso a questo percorso potrebbero visualizzare le informazioni contenute nel messaggio di posta elettronica.
+ 
+- Se invece si applica l'opzione **Non inoltrare**, i destinatari non possono condividere le informazioni con nessun altro utente del reparto marketing spostando il messaggio di posta elettronica in un altro percorso. In questo scenario, solo i destinatari originali e il proprietario del messaggio di posta elettronica saranno in grado di visualizzare le informazioni contenute nel messaggio di posta elettronica.
+
+> [!NOTE] Usare l'opzione **Non inoltrare** quando è importante che soltanto i destinatari selezionati dal mittente possano visualizzare le informazioni contenute nel messaggio di posta elettronica. Utilizzare un modello per i messaggi di posta elettronica per limitare i diritti di un gruppo di persone specificato prima dall'amministratore, a prescindere dai destinatari scelti dal mittente.
+
+
+
+
 ## Vedere anche
 [Configurazione di modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO2-->
 
 

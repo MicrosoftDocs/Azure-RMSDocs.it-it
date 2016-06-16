@@ -49,10 +49,8 @@ Per informazioni sui requisiti di runtime per un particolare elemento di program
 |[Introduzione](getting-started-with-ad-rms-2-0.md)|La piattaforma RMS SDK 2.1 consente agli sviluppatori di creare applicazioni che sfruttano la protezione delle informazioni RMS.|
 |[Note sulla versione](release-notes-rtm.md)|Questo argomento contiene informazioni importanti su questa versione e le precedenti di RMS SDK 2.1.|
 |[Esempi di codice](samples.md)|Questo argomento elenca un set di esempi che usano RMS SDK 2.1, disponibile nell'Area download MSDN.|
-|[Procedura](how-to-use-msipc.md)|Istruzioni dettagliate per scenari e attività con l’uso di RMS SDK 2.1.|
 |[Note per gli sviluppatori](developer-notes.md)|Questa sezione fornisce indicazioni specifiche per vari e importanti scenari di sviluppo.|
-|[Concetti per sviluppatori](ad-rms-concepts-nav.md)|Gli argomenti di questa sezione riguardano i concetti chiave di RMS.|
-|[Riferimento API](/rights-management/sdk/2.1/api/win/constants)|Questa sezione contiene argomenti che illustrano il materiale di riferimento per tutti gli elementi API.|
+|[Informazioni di riferimento sulle API](/rights-management/sdk/2.1/api/win/constants)|Questa sezione contiene argomenti che illustrano il materiale di riferimento per tutti gli elementi API.|
 
  
 
@@ -66,6 +64,6 @@ Per informazioni sui requisiti di runtime per un particolare elemento di program
  
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Il contenuto di questo SDK non è aggiornato. Per un breve periodo, la [versione attuale](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) della documentazione sarà disponibile su MSDN. **
+
 # Informazioni sulle restrizioni di utilizzo
 
 Tutte le applicazioni abilitate per RMS devono imporre restrizioni di utilizzo. Una restrizione di utilizzo è una condizione risultante da un tentativo dell'utente di eseguire un'azione, ad esempio la stampa di un documento, ma i criteri RMS per tale documento non concedono autorizzazioni o diritti per eseguire l'azione (ad esempio, il diritto di stampa).
@@ -52,7 +52,6 @@ Tutte le applicazioni abilitate per RMS devono imporre restrizioni di utilizzo. 
 
 ## Argomenti correlati
 
-* [Concetti per sviluppatori](ad-rms-concepts-nav.md)
 * [**IpcAccessCheck**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)
 * [Informazioni di riferimento sulle restrizioni di utilizzo](usage-restriction-reference.md)
  
@@ -60,9 +59,6 @@ Tutte le applicazioni abilitate per RMS devono imporre restrizioni di utilizzo. 
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

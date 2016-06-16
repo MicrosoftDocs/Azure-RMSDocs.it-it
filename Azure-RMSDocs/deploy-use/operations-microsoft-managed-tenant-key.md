@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/03/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -54,7 +54,7 @@ Per esportare la configurazione di Azure RMS e la chiave del tenant, seguire le 
 
 ### Passaggio 1: Avviare l'esportazione
 
--   A tale scopo, contattare il Servizio Supporto Tecnico Clienti Microsoft. È necessario provare di essere un amministratore di tenant di Azure RMS.
+-   A tale scopo, contattare il Supporto tecnico Microsoft per aprire un **caso di supporto tecnico di Azure Rights Management con una richiesta di esportazione della chiave di Azure RMS**. È necessario dimostrare di essere un amministratore del tenant di Azure RMS ed essere consapevoli che la conferma di questo processo richiede diversi giorni. Il servizio è soggetto ai costi di supporto standard; l'esportazione della chiave del tenant non è un servizio di assistenza gratuito.
 
 ### Passaggio 2: Attendere la verifica
 
@@ -104,6 +104,6 @@ In caso di violazione di sicurezza, l'azione più efficace che l'utente o Micros
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO1-->
 
 

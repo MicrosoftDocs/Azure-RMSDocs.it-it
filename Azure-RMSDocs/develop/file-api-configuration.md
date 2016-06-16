@@ -23,7 +23,7 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Il contenuto di questo SDK non è aggiornato. Per un breve periodo, la [versione attuale](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) della documentazione sarà disponibile su MSDN. **
+
 # Configurazione dell'API file
 
 
@@ -40,46 +40,45 @@ Per ulteriori informazioni sui formati di file supportati, vedere **Dettagli sul
 
 Le sezioni seguenti descrivono le chiavi e valori chiave che controllano la crittografia.
 
-
 ### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection
 
-*Tipo*: chiave
+**Tipo**: chiave
 
-*Descrizione*: contiene la configurazione generale dell'API file.
+**Descrizione**: contiene la configurazione generale dell'API file.
 
 ### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;
 
-*Tipo: chiave
+**Tipo**: chiave
 
-*Descrizione: specifica le informazioni di configurazione per un'estensione file specifica, ad esempio, TXT, JPG e così via.
+**Descrizione**: specifica le informazioni di configurazione di un'estensione file specifica, ad esempio, TXT, JPG e così via.
 
 - Il carattere jolly '*', è consentito, tuttavia, un'impostazione per un'estensione specifica ha la precedenza sull'impostazione con caratteri jolly. Il carattere jolly non influisce sulle impostazioni dei file di Microsoft Office; questi devono essere disabilitati in modo esplicito per tipo di file.
 - Per specificare i file che non hanno un'estensione, usare “.”
 - Non specificare il carattere “.” carattere quando si specifica la chiave per un'estensione di file specifica, ad esempio usare `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\TXT` per specificare le impostazioni per i file con estensione .txt. (non usare `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\.TXT`).
 
-Impostare il valore della *crittografia* della chiave per specificare il comportamento di protezione. Se il valore della *crittografia* non è impostato, si osserva il comportamento predefinito per il tipo di file.
+Impostare il valore della **crittografia** della chiave per specificare il comportamento di protezione. Se il valore della **crittografia** non è impostato, si osserva il comportamento predefinito per il tipo di file.
 
 
 ### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;\Encryption*
 
-*Tipo: REG_SZ.*
+**Tipo**: REG_SZ
 
-*Descrizione: contiene uno dei tre valori:
+**Descrizione**: contiene uno dei tre valori:
 
-- *Off*: la crittografia è disabilitata.
+- **Off**: la crittografia è disabilitata.
 
-> [AZURE.NOTE] Questa impostazione non è rilevante per la decrittografia. È possibile decrittografare qualsiasi file crittografato, se crittografato tramite la protezione nativa o Pfile, purché l'utente disponga del diritto di ESTRAZIONE.
+> [AZURE.NOTE] Questa impostazione non è rilevante per la decrittografia. È possibile decrittografare qualsiasi file crittografato, se crittografato tramite la protezione nativa o Pfile, purché l'utente disponga del diritto di **ESTRAZIONE**.
 
-- *Nativa*: si usa la crittografia nativa. Per i file di Office, il file crittografato avrà la stessa estensione del file originale. Ad esempio, un file con estensione .docx sarà crittografato in un file con estensione .docx. Per altri file a cui può essere applicata la protezione nativa, il file sarà crittografato in un file con un'estensione del formato p**zzz**, dove **zzz** è l'estensione del file originale. Ad esempio, i file con estensione txt sono crittografati in un file con estensione ptxt. Un elenco di estensioni di file a cui può essere applicata la protezione nativa è indicato di seguito.
+- **Nativa**: si usa la crittografia nativa. Per i file di Office, il file crittografato avrà la stessa estensione del file originale. Ad esempio, un file con estensione .docx sarà crittografato in un file con estensione .docx. Per altri file a cui può essere applicata la protezione nativa, il file sarà crittografato in un file con un'estensione del formato p*zzz*, dove *zzz* è l'estensione del file originale. Ad esempio, i file con estensione txt sono crittografati in un file con estensione ptxt. Un elenco di estensioni di file a cui può essere applicata la protezione nativa è indicato di seguito.
 
-- *Pfile*: si usa la crittografia PFile. All'estensione originale del file crittografato sarà aggiunto pfile. Dopo la crittografia, ad esempio, l'estensione di un file sarà .txt.pfile.
+- **Pfile**: si usa la crittografia PFile. All'estensione originale del file crittografato sarà aggiunto pfile. Dopo la crittografia, ad esempio, l'estensione di un file sarà .txt.pfile.
 
 
 > [AZURE.NOTE] Questa impostazione non incide sui formati di file Office. Ad esempio, se il valore `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` è impostato su &quot;Pfile", i file con estensione docx verranno comunque crittografati con la protezione nativa e l'estensione del file crittografato sarà ancora docx.
 
 L'impostazione di un valore diverso o la mancata impostazione produce il comportamento predefinito.
 
-## Comportamento predefinito per i diversi formati dei file**
+## Comportamento predefinito dei diversi formati dei file
 
 -   **File di Office** è abilitata la crittografia nativa.
 -   **File txt, xml, jpg, jpeg, pdf, png, tiff, bmp, gif, giff, jpe, jfif, jif** è abilitata la crittografia nativa (xxx diventa pxxx)
@@ -89,7 +88,7 @@ Se si tenta la crittografia in un tipo di file bloccato, si verifica un errore [
 
 ### API file: dettagli sul supporto dei file
 
-È possibile aggiungere il supporto nativo per qualsiasi tipo di file (estensione). Ad esempio, per tutte le estensioni &lt;ext&gt; (non Office), verrà usato \*.p&lt;ext&gt; se la configurazione dell'amministratore per l'estensione è "NATIVA".
+È possibile aggiungere il supporto nativo per qualsiasi tipo di file (estensione). Ad esempio, per tutte le estensioni &lt;ext&gt; (non Office), verrà usata l'estensione \*p&lt;ext&gt; se la configurazione dell'amministratore per l'estensione è "NATIVA".
 
 **File di Office**
 
@@ -106,7 +105,7 @@ Se si tenta la crittografia in un tipo di file bloccato, si verifica un errore [
 
 **Tutti gli altri formati di file**
 
--   Tipo di protezione = Pfile: sample.*zzz* è crittografato e denominato sample.*zzz*pfile; dove zzz è l'estensione del file originale.
+-   Tipo di protezione = Pfile: sample.*zzz* è crittografato e denominato sample.*zzz*.pfile, dove *zzz* è l'estensione del file originale.
 -   Off: Disabilita la crittografia.
 
 ### Esempi
@@ -152,15 +151,12 @@ HKEY_LOCAL_MACHINE
 ## Argomenti correlati
 
 * [Note per gli sviluppatori](developer-notes.md)
-* [**\_FILE\_ENCRYPT\_BLOCCATO**](/rights-management/sdk/2.1/api/win/error%20codes)
+* [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/rights-management/sdk/2.1/api/win/error%20codes)
  
 
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

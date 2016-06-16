@@ -23,16 +23,15 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Il contenuto di questo SDK non è aggiornato. Per un breve periodo, la [versione attuale](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) della documentazione sarà disponibile su MSDN. **
-# Abilitazione della notifica tramite posta elettronica
+
+# Procedura: Abilitare la notifica tramite posta elettronica
 
 La notifica tramite posta elettronica consente al proprietario di un contenuto protetto di ricevere un messaggio quando qualcuno accede al contenuto.
 
 Per configurare la notifica tramite posta elettronica per una determinata licenza, usare [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) con il parametro di tipo di proprietà *dwPropID* come [**IPC\_LI\_APP\_SPECIFIC\_DATA**](/rights-management/sdk/2.1/api/win/License%20property%20types#msipc_license_property_types_IPC_LI_APP_SPECIFIC_DATA) e i campi dei dati dell'applicazione formattati come [**IPC\_NAME\_VALUE\_LIST**](/rights-management/sdk/2.1/api/win/structures#msipc_ipc_name_value_list).
 
-## C++
+    C++
 
-    ...
     int numDataPairs = 3;
 
     IPC_NAME_VALUE propertyValuePairs [numDataPairs];
@@ -46,7 +45,7 @@ Per configurare la notifica tramite posta elettronica per una determinata licenz
     IPC_NAME_VALUE_LIST emailNotificationAppData = {numDataPairs, propertyValuePairs};
 
     result = IpcSetLicenseProperty( licenseHandle, FALSE, IPC_LI_APP_SPECIFIC_DATA, emailNotificationAppData);
-    ...    
+        
 
 La tabella seguente contiene i campi dei dati dell'applicazione e le coppie di nome e valore delle proprietà per la notifica tramite posta elettronica di RMS.
 
@@ -71,6 +70,6 @@ La tabella seguente contiene i campi dei dati dell'applicazione e le coppie di n
  
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

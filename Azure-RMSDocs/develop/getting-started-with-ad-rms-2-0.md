@@ -23,25 +23,33 @@ ms.suite: ems
 #ms.custom:
 
 ---
-** Il contenuto di questo SDK non è aggiornato. Per un breve periodo, la [versione attuale](https://msdn.microsoft.com/library/windows/desktop/hh535290(v=vs.85).aspx) della documentazione sarà disponibile su MSDN. **
 # Introduzione
 
-La piattaforma Right Management Services SDK 2.1 consente agli sviluppatori di creare applicazioni che sfruttano la protezione delle informazioni RMS. La piattaforma gestisce procedure di sicurezza complesse, ad esempio la gestione delle chiavi e l’elaborazione delle operazioni di crittografia e decrittografia, e offre un'API semplificata per agevolare lo sviluppo delle applicazioni.
+La piattaforma Rights Management Services SDK 2.1 consente agli sviluppatori di creare applicazioni che sfruttano la protezione delle informazioni RMS tramite un server RMS o Azure RMS. La piattaforma gestisce procedure di sicurezza complesse, ad esempio la gestione delle chiavi e l’elaborazione delle operazioni di crittografia e decrittografia, e offre un'API semplificata per agevolare lo sviluppo delle applicazioni.
 
 ## Introduzione a RMS SDK 2.1
 
-Leggere le sezioni riportate più avanti in questo articolo:
+Questo argomento illustra il processo di configurazione ed esecuzione dell'applicazione abilitata all'uso di diritti in un ambiente di testing. Gli argomenti seguenti illustrano come configurare l'ambiente di sviluppo e sono elencati in modo da suggerire un possibile ordine di esecuzione delle attività.
 
--   Perché utilizzare RMS SDK 2.1 per proteggere il contenuto
--   Principi fondamentali
+## Contenuto della sezione
+
+| Argomento | Descrizione |
+|-------|-------------|
+| [note sulla versione](release-notes-rtm.md) | Questo argomento contiene informazioni importanti su questa versione e le precedenti dell'SDK 2.1 RMS.|
+| [Installare l'SDK](install-the-rms-sdk.md) | Questo argomento descrive l'installazione degli strumenti per sviluppatori.|
+| [Configurare Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md) | Questo argomento contiene istruzioni per la configurazione di un progetto di Visual Studio per l'uso di RMS SDK 2.1.|
+| [Sviluppo dell'applicazione](developing-your-application.md) | Questo argomento contiene informazioni essenziali sugli aspetti principali di un'applicazione abilitata per RMS e può essere usato come base per lo sviluppo delle proprio applicazioni.|
+| [Controllo dell'applicazione](running-your-first-application.md) |Questo argomento contiene istruzioni sulla configurazione per il test dell'applicazione.|
+| [Distribuire in ambiente di produzione](deploying-your-application.md) |Questo argomento descrive le opzioni di distribuzione per l'applicazione abilitata all'uso di diritti.|
+
+Una volta eseguite le operazioni preliminari, leggere alcuni degli altri [esempi RMS](samples.md). Per rimanere sempre aggiornati, consultare il nostro [blog per sviluppatori RMS](http://blogs.msdn.com/b/rms/).
+
 
 Provare a utilizzare RMS SDK 2.1 seguendo le indicazioni fornite in questi argomenti:
 
--   [Installare l'SDK](create-your-first-rights-aware-application.md)
+-   [Installare l'SDK](install-the-rms-sdk.md)
 -   [Test dell'applicazione abilitata all'uso di diritti](running-your-first-application.md)
 -   [IPCHelloWorld - Applicazione di esempio](how-to-build-your-first-application.md)
-
-Una volta eseguite le operazioni preliminari, leggere alcuni degli altri [esempi RMS](samples.md). Per rimanere sempre aggiornati, consultare il nostro [blog per sviluppatori RMS](http://blogs.msdn.com/b/rms/).
 
 ### Perché utilizzare RMS SDK 2.1 per proteggere il contenuto
 
@@ -65,19 +73,15 @@ RMS SDK 2.1 supporta una serie di importanti piattaforme client e server. Per al
 
 * [Esempi di AD RMS](samples.md)
 * [Blog per sviluppatori AD RMS](http://blogs.msdn.com/b/rms/)
-* [Installare l'SDK](create-your-first-rights-aware-application.md)
+* [Installare l'SDK](install-the-rms-sdk.md)
 * [IPCHelloWorld - Applicazione di esempio](how-to-build-your-first-application.md)
 * [Panoramica](ad-rms-overview.md)
 * [Piattaforme supportate](supported-platforms.md)
-* [Test dell'applicazione abilitata all'uso di diritti](running-your-first-application.md)
  
 
  
 
 
-
-
-
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 
