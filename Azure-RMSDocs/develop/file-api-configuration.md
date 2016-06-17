@@ -67,14 +67,14 @@ Impostare il valore della **crittografia** della chiave per specificare il compo
 
 - **Off**: la crittografia è disabilitata.
 
-> [AZURE.NOTE] Questa impostazione non è rilevante per la decrittografia. È possibile decrittografare qualsiasi file crittografato, se crittografato tramite la protezione nativa o Pfile, purché l'utente disponga del diritto di **ESTRAZIONE**.
+> [!Note] Questa impostazione non è rilevante per la decrittografia. È possibile decrittografare qualsiasi file crittografato, se crittografato tramite la protezione nativa o Pfile, purché l'utente disponga del diritto di **ESTRAZIONE**.
 
 - **Nativa**: si usa la crittografia nativa. Per i file di Office, il file crittografato avrà la stessa estensione del file originale. Ad esempio, un file con estensione .docx sarà crittografato in un file con estensione .docx. Per altri file a cui può essere applicata la protezione nativa, il file sarà crittografato in un file con un'estensione del formato p*zzz*, dove *zzz* è l'estensione del file originale. Ad esempio, i file con estensione txt sono crittografati in un file con estensione ptxt. Un elenco di estensioni di file a cui può essere applicata la protezione nativa è indicato di seguito.
 
 - **Pfile**: si usa la crittografia PFile. All'estensione originale del file crittografato sarà aggiunto pfile. Dopo la crittografia, ad esempio, l'estensione di un file sarà .txt.pfile.
 
 
-> [AZURE.NOTE] Questa impostazione non incide sui formati di file Office. Ad esempio, se il valore `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` è impostato su &quot;Pfile", i file con estensione docx verranno comunque crittografati con la protezione nativa e l'estensione del file crittografato sarà ancora docx.
+> [!Note] Questa impostazione non incide sui formati di file Office. Ad esempio, se il valore `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` è impostato su &quot;Pfile", i file con estensione docx verranno comunque crittografati con la protezione nativa e l'estensione del file crittografato sarà ancora docx.
 
 L'impostazione di un valore diverso o la mancata impostazione produce il comportamento predefinito.
 
