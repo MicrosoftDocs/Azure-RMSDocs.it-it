@@ -1736,8 +1736,8 @@
 * Archive Datetime: 2016-06-16 13:08:58
 * Handback File: [setting-the-api-security-mode-api-mode.0b56ccf949d2c9ad30125d9a61d606bda60c90e8.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/2201b852daa81c990c6be27a04e797f39eaf9be1/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/setting-the-api-security-mode-api-mode.0b56ccf949d2c9ad30125d9a61d606bda60c90e8.it-it.xlf)
 * Handback Datetime: 2016-06-21 13:35:07
-* Bilingual File: [setting-the-api-security-mode-api-mode.0b56ccf949d2c9ad30125d9a61d606bda60c90e8.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/dd7347426e0d7f9dc066a4f83a3f3340821354b3/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/setting-the-api-security-mode-api-mode.0b56ccf949d2c9ad30125d9a61d606bda60c90e8.it-it.xlf)
-* Bilingual Datetime: 2016-06-16 14:59:43
+* Bilingual File: [setting-the-api-security-mode-api-mode.0b56ccf949d2c9ad30125d9a61d606bda60c90e8.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/2201b852daa81c990c6be27a04e797f39eaf9be1/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/setting-the-api-security-mode-api-mode.0b56ccf949d2c9ad30125d9a61d606bda60c90e8.it-it.xlf)
+* Bilingual Datetime: 2016-06-21 13:36:43
 * [Back to Top](#report-top)
 
 ##### <a name='4bb013f420b02a10e306d92624683c48ceb2582f91'></a> Source: [Azure-RMSDocs\develop\setup-developer-environment.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/6b5bc9612ac17a2d6905200383d9b8df4c504efe/Azure-RMSDocs/develop/setup-developer-environment.md)

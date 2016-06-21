@@ -75014,9 +75014,9 @@
       "ArchiveFileCommit": "2c9284e59363b903cd48717f1a04acd08aff16e6",
       "ArchiveFileDateTime": "2016-06-16T13:08:58.68347Z",
       "ArchiveException": null,
-      "BilingualFilePath": null,
-      "BilingualFileCommit": null,
-      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.it-it\\master\\setting-the-api-security-mode-api-mode.0b56ccf949d2c9ad30125d9a61d606bda60c90e8.it-it.xlf",
+      "BilingualFileCommit": "2201b852daa81c990c6be27a04e797f39eaf9be1",
+      "BilingualDateTime": "2016-06-21T13:36:43.8243509Z",
       "BilingualException": null
     },
     "fdc6fa1ae9b1367eeb1a64aa2ad5c83f8397ad3b": {
