@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 06/03/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -42,7 +42,7 @@ Il processo di ridistribuzione della chiave è denominato anche rollover della c
 
 -   Eventuale violazione della copia master della chiave del tenant (copia in proprio possesso).
 
-Per ridistribuire la chiave del tenant, chiamare il Servizio Supporto Tecnico Clienti Microsoft fornendo prova del proprio ruolo di amministratore di tenant.
+È possibile ridistribuire la chiave del tenant [contattando il supporto tecnico Microsoft](../get-started/information-support#to-contact-microsoft-support) per aprire un **caso di supporto tecnico di Azure Rights Management con una richiesta per ridistribuire la chiave del tenant di Azure RMS**. È necessario dimostrare di essere un amministratore del tenant di Azure RMS ed essere consapevoli che la conferma di questo processo richiede diversi giorni. Il servizio è soggetto ai costi di supporto standard; la ridistribuzione della chiave del tenant non è un servizio di assistenza gratuito.
 
 Quando si ridistribuisce la chiave del tenant, il nuovo contenuto è protetto tramite la nuova chiave. Poiché questo processo viene eseguito per fasi, per un certo periodo di tempo parte del nuovo contenuto continuerà a essere protetto tramite la chiave del tenant precedente. Il contenuto protetto in precedenza rimane tale rispetto alla chiave del tenant precedente. Per supportare questo scenario, Azure RMS mantiene la chiave del tenant precedente in modo da emettere licenze per il vecchio contenuto.
 
@@ -54,7 +54,7 @@ Per esportare la configurazione di Azure RMS e la chiave del tenant, seguire le 
 
 ### Passaggio 1: Avviare l'esportazione
 
--   A tale scopo, contattare il Supporto tecnico Microsoft per aprire un **caso di supporto tecnico di Azure Rights Management con una richiesta di esportazione della chiave di Azure RMS**. È necessario dimostrare di essere un amministratore del tenant di Azure RMS ed essere consapevoli che la conferma di questo processo richiede diversi giorni. Il servizio è soggetto ai costi di supporto standard; l'esportazione della chiave del tenant non è un servizio di assistenza gratuito.
+-   A tale scopo, [contattare il supporto tecnico Microsoft](../get-started/information-support#to-contact-microsoft-support) per aprire un **caso di supporto tecnico di Azure Rights Management con una richiesta di esportazione della chiave di Azure RMS**. È necessario dimostrare di essere un amministratore del tenant di Azure RMS ed essere consapevoli che la conferma di questo processo richiede diversi giorni. Il servizio è soggetto ai costi di supporto standard; l'esportazione della chiave del tenant non è un servizio di assistenza gratuito.
 
 ### Passaggio 2: Attendere la verifica
 
@@ -97,13 +97,13 @@ In caso di violazione di sicurezza, l'azione più efficace che l'utente o Micros
 
 |Descrizione evento imprevisto|Risposta probabile|
 |------------------------|-------------------|
-|Perdita della chiave del tenant.|Ridistribuire la chiave del tenant. Vedere la sezione [Ridistribuire la chiave del tenant](operations-tenant-key.md#re-key-your-tenant-key) in questo articolo.|
+|Perdita della chiave del tenant.|Ridistribuire la chiave del tenant. Vedere la sezione [Ridistribuire la chiave del tenant](operations-tenant-key#re-key-your-tenant-key) in questo articolo.|
 |Diritti di accesso alla chiave del tenant ottenuti da un utente non autorizzato o da malware, ma nessuna perdita della chiave.|La ridistribuzione della chiave del tenant non è sufficiente ed è necessaria un'analisi della causa radice. Se l'utente non autorizzato ha ottenuto l'accesso a causa di un bug del processo o del software, questo problema deve essere risolto.|
 |Vulnerabilità scoperta nell'algoritmo RSA o nella lunghezza della chiave oppure attacchi di forza bruta diventati realizzabili a livello di calcolo.|Microsoft deve aggiornare Azure RMS per supportare nuovi algoritmi e lunghezze maggiori della chiave che siano resilienti e invitare tutti i clienti a rinnovare le proprie chiavi tenant.|
 
 
 
 
-<!--HONumber=Jun16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

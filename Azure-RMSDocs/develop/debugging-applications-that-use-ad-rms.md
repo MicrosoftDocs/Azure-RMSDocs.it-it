@@ -1,14 +1,24 @@
 ---
-# metadati obbligatori
+# required metadata
 
-titolo: Procedura: Eseguire il debug dell'applicazione abilitata all'uso di diritti | Descrizione di Azure RMS: l'argomento seguente illustra come eseguire il debug dell'applicazione e usare il Registro eventi di Windows.
-keywords: author: bruceperlerms manager: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
-# metadati facoltativi
+title: Come eseguire il debug dell'applicazione abilitata all'uso di diritti | Azure RMS
+description: L'argomento seguente illustra come eseguire il debug dell'applicazione e usare il registro eventi di Windows.
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
+# optional metadata
 
-#ROBOT:
-destinatari: sviluppatori
+#ROBOTS:
+audience: developer
 #ms.devlang:
-ms.reviewer: shubhamp ms.suite: ems
+ms.reviewer: shubhamp
+ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 

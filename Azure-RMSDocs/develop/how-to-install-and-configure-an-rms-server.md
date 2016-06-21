@@ -1,14 +1,24 @@
 ---
-# metadati obbligatori
+# required metadata
 
-titolo: Procedura: installare, configurare e testare con un server RMS | Descrizione di Azure RMS: installare e configurare un server RMS per il test dell'applicazione abilitata all'uso di diritti.
-keywords: author: bruceperlerms manager: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
-# metadati facoltativi
+title: Come installare, configurare e testare un server RMS | Azure RMS
+description: Installare e configurare un server RMS per il test dell'applicazione abilitata all'uso di diritti.
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
+# optional metadata
 
-#ROBOT:
-destinatari: sviluppatori
+#ROBOTS:
+audience: developer
 #ms.devlang:
-ms.reviewer: shubhamp ms.suite: ems
+ms.reviewer: shubhamp
+ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
@@ -55,7 +65,7 @@ La procedura seguente consente di configurare il server RMS e include queste ope
 
     Per eseguire test con un server RMS, configurare l'individuazione sul lato server o sul lato client per abilitare Rights Management Services Client 2.1 per individuare e stabilire la comunicazione con il server RMS.
 
-    >![NOTA] I test con Azure RMS non richiedono la configurazione di rilevamento.
+    > [!Note] I test con Azure RMS non richiedono la configurazione di rilevamento.
 
   - Nell'individuazione del server, un amministratore registra un service connection point (SCP) per il cluster radice RMS con Active Directory e il client esegue una query ad Active Directory per individuare SCP e stabilire una connessione con il server.
   - Nell'individuazione del client, configurare le impostazioni di individuazione del servizio RMS nel Registro sul computer su cui è in esecuzione RMS Client 2.1. Queste impostazioni rimandano RMS Client 2.1 al server RMS da usare. Quando sono presenti, l'individuazione non viene eseguita sul lato server.

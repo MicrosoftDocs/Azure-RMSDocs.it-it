@@ -21,11 +21,10 @@
 #### [Esempi di codice iOS/OS X](ios-os-x-code-examples.md)
 #### [Risorse della community](community-resources.md)
 ### [Condizioni e istruzioni per lo sviluppatore](core-concepts.md)
-#### [Procedura: Aggiungere l'autenticazione all'app](authentication-integration.md)
-#### [Procedura: Abilitare la registrazione delle prestazioni e dell'errore](enabling-logging.md)
-#### [Procedura: Ottenere un ID applicazione di Azure](application-id.md)
-#### [Procedura: Usare i diritti predefiniti](built-in-rights-usage-restriction-reference.md)
-#### [Procedura: Usare il rilevamento dei documenti](how-to-use-document-tracking.md)
+#### [Come registrare e abilitare RMS nell'app con Azure AD](authentication-integration.md)
+#### [Come abilitare la registrazione delle prestazioni e dell'errore](enabling-logging.md)
+#### [Come usare i diritti predefiniti](built-in-rights-usage-restriction-reference.md)
+#### [Come usare il rilevamento dei documenti](how-to-use-document-tracking.md)
 #### [Termini](terms.md)
 ### [Informazioni di riferimento sulle API](api-reference-4-2.md)
 #### [Informazioni di riferimento sulle API di Android](android-namespaces.md)
@@ -60,8 +59,14 @@
 #### [Piattaforme supportate](supported-platforms.md)
 #### [Informazioni sulle restrizioni di utilizzo](understanding-usage-restrictions.md)
 #### [Informazioni di riferimento sulle restrizioni di utilizzo](usage-restriction-reference.md)
+### [Riferimento API](api-reference-2-1.md)
+#### [Costanti](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/constants)
+#### [Tipi di dati](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/data types)
+#### [Funzioni](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/functions)
+#### [Strutture](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/structures)
+#### [Codici di errore](https://docs.microsoft.com/en-us/rights-management/sdk/2.1/api/win/Error codes)
 
 
-<!--HONumber=Jun16_HO2-->
+<!--HONumber=Jun16_HO3-->
 
 

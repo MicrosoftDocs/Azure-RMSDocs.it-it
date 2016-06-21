@@ -1,13 +1,24 @@
 ---
-# metadati obbligatori
+# required metadata
 
-titolo: Procedura: Usare le impostazioni di crittografia | Descrizione di Azure RMS: questo articolo indirizza ai pacchetti di crittografia keywords: author: bruceperlerms manager: mbaldwin ms.date: 04/28/2016 ms.topic: article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
-# metadati facoltativi
+title: Come usare le impostazioni di crittografia | Azure RMS
+description: Questo articolo contiene informazioni sui pacchetti di crittografia
+keywords:
+author: bruceperlerms
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
+# optional metadata
 
-#ROBOT:
-destinatari: sviluppatori
+#ROBOTS:
+audience: developer
 #ms.devlang:
-ms.reviewer: shubhamp ms.suite: ems
+ms.reviewer: shubhamp
+ms.suite: ems
 #ms.tgt_pltfrm:
 #ms.custom:
 
