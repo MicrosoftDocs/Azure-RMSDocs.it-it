@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -31,7 +31,7 @@ ms.suite: ems
 *Si applica a: Active Directory Rights Management Services, Azure Rights Management*
 
 
-Usare le seguenti informazioni per la fase 4 della migrazione da AD RMS ad Azure Rights Management (Azure RMS). Queste procedure descrivono i passaggi da 8 a 9 di [Migrazione da AD RMS ad Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
+Usare le seguenti informazioni per la fase 4 della migrazione da AD RMS ad Azure Rights Management (Azure RMS). Queste procedure illustrano i passaggi 8 e 9 di [Migrazione da AD RMS ad Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
 
 
 ## Passaggio 8. Rimuovere le autorizzazioni di AD RMS
@@ -45,15 +45,15 @@ Dopo la rimozione delle autorizzazioni dei server AD RMS, è possibile cogliere 
 ## Passaggio 9. Reimpostare la chiave del tenant di Azure RMS
 Questo passaggio è obbligatorio al termine della migrazione se per la distribuzione di AD RMS è stata usata la Modalità crittografia 1 di RMS. La reimpostazione della chiave crea infatti una nuova chiave del tenant che usa la Modalità crittografia 2 di RMS. L'uso di Azure RMS con la Modalità crittografia 1 è supportato solo durante il processo di migrazione.
 
-Questo passaggio è facoltativo ma consigliato al termine della migrazione, anche se è stata usata la Modalità crittografia 2 di RMS, perché consente di proteggere la chiave del tenant di Azure RMS da possibili violazioni della sicurezza della chiave di AD RMS. Quando si reimposta la chiave del tenant di Azure RMS, un'operazione detta anche "rollover della chiave", viene creata una nuova chiave e la chiave originale viene archiviata. Poiché tuttavia il passaggio da una chiave all'altra non avviene immediatamente, ma nell'arco di alcune settimane, evitare di attendere che si sospetti una violazione della chiave originale, ma reimpostare la chiave del tenant di RMS non appena la migrazione è completata.
+Questo passaggio è facoltativo ma consigliato al termine della migrazione, anche se è stata usata la Modalità crittografia 2 di RMS, perché consente di proteggere la chiave del tenant di Azure RMS da possibili violazioni della sicurezza della chiave di AD RMS. Quando si reimposta la chiave del tenant di Azure RMS, un'operazione detta anche "rollover della chiave", viene creata una nuova chiave e la chiave originale viene archiviata. Poiché tuttavia il passaggio da una chiave all'altra non avviene immediatamente, ma nell'arco di alcune settimane, evitare di attendere che si sospetti una violazione della chiave originale, ma reimpostare la chiave del tenant di Azure RMS non appena la migrazione è completata.
 
 Per reimpostare la chiave del tenant di Azure RMS:
 
--   Se la chiave del tenant di RMS è gestita da Microsoft: Contattare il Servizio Supporto Tecnico Clienti Microsoft e dimostrare di essere l'amministratore del tenant di RMS.
+-   Se la chiave del tenant di Azure RMS è gestita da Microsoft: per eseguire questa operazione, [contattare il supporto Microsoft](../get-started/information-support#to-contact-microsoft-support) e aprire un **caso di supporto relativo ad Azure Rights Management con una richiesta per reimpostare la chiave del tenant di Azure RMS**. È necessario dimostrare di essere un amministratore del tenant di Azure RMS ed essere consapevoli che la conferma di questo processo richiede diversi giorni. Il servizio è soggetto ai costi di supporto standard. La reimpostazione della chiave del tenant non è un servizio di supporto gratuito.
 
--   Se la chiave del tenant di RMS è gestita dall'utente (BYOK): Ripetere la procedura BYOK per generare e creare una nuova chiave tramite Internet o di persona.
+-   Se la chiave del tenant di Azure RMS è gestita dall'utente (BYOK): ripetere la procedura BYOK per generare e creare una nuova chiave tramite Internet o di persona.
 
-Per altre informazioni sulla gestione della chiave del tenant di RMS, vedere [Operazioni relative alla chiave del tenant di Azure Rights Management](../deploy-use/operations-tenant-key.md).
+Per altre informazioni sulla gestione della chiave del tenant di Azure RMS, vedere [Operazioni relative alla chiave del tenant di Azure Rights Management](../deploy-use/operations-tenant-key.md).
 
 ## Passaggi successivi
 
@@ -61,6 +61,6 @@ Dopo aver completato la migrazione, rivedere la [guida di orientamento alla dist
 
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO2-->
 
 

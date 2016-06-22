@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -81,9 +81,9 @@ Usare le informazioni e le procedure descritte in questa sezione se si è deciso
 
 
 > [!IMPORTANT]
-> Se si è già iniziato a usare [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (servizio attivato) e se sono presenti utenti che eseguono Office 2010, prima di eseguire queste procedure contattare il Servizio Supporto Tecnico Clienti Microsoft. A seconda dello scenario e dei requisiti, è comunque possibile usare la modalità BYOK con alcune limitazioni o con passaggi aggiuntivi.
+> Se si è già iniziato a usare [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (servizio attivato) e sono presenti utenti che eseguono Office 2010, [contattare il supporto Microsoft](../get-started/information-support#to-contact-microsoft-support) prima di eseguire queste procedure. A seconda dello scenario e dei requisiti, è comunque possibile usare la modalità BYOK con alcune limitazioni o con passaggi aggiuntivi.
 > 
-> Contattare inoltre il Servizio Supporto Tecnico Clienti Microsoft se nell'organizzazione sono previsti criteri specifici per la gestione delle chiavi.
+> [Contattare il supporto Microsoft](../get-started/information-support#to-contact-microsoft-support) anche quando l'organizzazione prevede criteri specifici per la gestione delle chiavi.
 
 ### Prerequisiti per la modalità BYOK
 Nella tabella seguente sono elencati i prerequisiti per la modalità BYOK.
@@ -114,7 +114,7 @@ Le procedure per generare e usare la propria chiave del tenant dipendono dalle m
     > [!NOTE]
     > La chiave del tenant può spostarsi in modo sicuro tra computer e reti non attendibili perché è crittografata e protetta con autorizzazioni a livello di controllo di accesso, condizione che la rende accessibile solo all'interno dei moduli di protezione hardware dell'utente e di quelli di Microsoft per Azure RMS. È possibile usare gli script disponibili nel set di strumenti per verificare le misure di sicurezza e leggere altre informazioni sul funzionamento in Thales della [gestione delle chiavi hardware nel cloud RMS](https://www.thales-esecurity.com/knowledge-base/white-papers/hardware-key-management-in-the-rms-cloud).
 
--   **Di persona:** In questo caso è necessario contattare il Servizio Supporto Clienti Microsoft per pianificare un appuntamento per il trasferimento della chiave per Azure RMS. È necessario recarsi di persona in un ufficio Microsoft a Redmond, Washington, Stati Uniti, per trasferire la propria chiave del tenant nell'ambiente di sicurezza di Azure RMS.
+-   **Di persona**: in questo caso è necessario [contattare il supporto Microsoft](../get-started/information-support#to-contact-microsoft-support) per pianificare un appuntamento per il trasferimento della chiave per Azure RMS. È necessario recarsi di persona in un ufficio Microsoft a Redmond, Washington, Stati Uniti, per trasferire la propria chiave del tenant nell'ambiente di sicurezza di Azure RMS.
 
 Per istruzioni sulle procedure, selezionare se si intende generare e trasferire la chiave del tenant tramite Internet o di persona: 
 
@@ -148,6 +148,6 @@ Dopo la pianificazione e, se necessario, la generazione della chiave del tenant,
 
 
 
-<!--HONumber=May16_HO3-->
+<!--HONumber=Jun16_HO2-->
 
 

@@ -29,12 +29,11 @@ L'obiettivo di Microsoft Rights Management SDK 4.2 è consentire di creare appli
 
 Gli argomenti seguenti forniscono supporto durante il processo di progettazione per lo sviluppo di applicazioni abilitate per RMS.
 
-- [Procedura: Aggiungere l'autenticazione all'app](authentication-integration.md) - Descrive i concetti fondamentali dell'autenticazione utente per l'app abilitata per RMS.
-- [Procedura: Abilitare la registrazione delle prestazioni e dell'errore](enabling-logging.md) - RMS SDK 4.2 gestisce i log delle diagnosi e delle prestazioni caricati tramite una proprietà a dispositivo singolo.
-- [Procedura: Ottenere un ID applicazione di Azure](application-id.md) - Per la creazione di un'app abilitata per RMS con MS RMS SDK 4.2 è necessario creare un contratto con il team di RMS.
-- [Procedura: Usare i diritti predefiniti](built-in-rights-usage-restriction-reference.md) - Descrive i diritti predefiniti forniti da RMS SDK 4.2 e le restrizioni di utilizzo che un'app deve applicare rispettando tali restrizioni.
-- [Procedura: Usare il rilevamento dei documenti](how-to-use-document-tracking.md) - L'uso della funzionalità di rilevamento dei documenti richiede la comprensione di alcuni aspetti semplici relativi alla gestione dei metadati associati e alla registrazione con il servizio.
-- [Termini](terms.md) - Una raccolta di definizioni di termini specifici di Rights Management Services.
+- [Come registrare l'app e abilitarla per RMS con Azure AD](authentication-integration.md): descrive i concetti fondamentali dell'autenticazione utente per l'app abilitata per RMS.
+- [Come abilitare la registrazione delle prestazioni e degli errori](enabling-logging.md): RMS SDK 4.2 gestisce il caricamento dei log delle diagnosi e delle prestazioni tramite una proprietà a dispositivo singolo.
+- [Come usare i diritti predefiniti](built-in-rights-usage-restriction-reference.md): descrive i diritti predefiniti forniti da RMS SDK 4.2 e le restrizioni di utilizzo che un'app deve applicare in conformità a tali diritti.
+- [Come usare il rilevamento dei documenti](how-to-use-document-tracking.md): per usare la funzionalità di rilevamento dei documenti è necessario comprendere alcuni concetti semplici relativi alla gestione dei metadati associati e alla registrazione con il servizio.
+- [Termini](terms.md): una raccolta di definizioni di termini specifici di Rights Management Services.
 
  
 
@@ -43,6 +42,6 @@ Gli argomenti seguenti forniscono supporto durante il processo di progettazione 
  
 
 
-<!--HONumber=Apr16_HO4-->
+<!--HONumber=Jun16_HO3-->
 
 

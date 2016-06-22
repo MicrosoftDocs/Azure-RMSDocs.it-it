@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/06/2016
+ms.date: 06/14/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -101,7 +101,7 @@ Limitazioni:
 
 -   Se si collabora con partner esterni, ad esempio tramite domini utente trusted o la federazione, anche questi dovranno eseguire la migrazione ad Azure RMS contemporaneamente a quando viene eseguita dall'utente o quanto prima possibile. Per continuare ad accedere ai contenuti precedentemente protetti dall'organizzazione con AD RMS, i partner dovranno apportare modifiche di configurazione al client simili a quelle apportate dall'utente, descritte in questo documento.
 
-    A causa delle differenze di configurazione tra l'utente e i partner, le istruzioni precise per questa riconfigurazione non rientrano nell'ambito di questo documento. Per informazioni, contattare il Servizio Supporto Tecnico Clienti Microsoft.
+    A causa delle differenze di configurazione tra l'utente e i partner, le istruzioni precise per questa riconfigurazione non rientrano nell'ambito di questo documento. Per assistenza, [contattare il supporto Microsoft](../get-started/information-support#support-options-and-community-resources).
 
 ## Panoramica della procedura per la migrazione da AD RMS ad Azure RMS
 
@@ -185,6 +185,6 @@ Per iniziare la migrazione, passare a [Fase 1: configurazione lato server](migra
 
 
 
-<!--HONumber=May16_HO1-->
+<!--HONumber=Jun16_HO2-->
 
 

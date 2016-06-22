@@ -6,7 +6,7 @@ description:
 keywords:
 author: cabailey
 manager: mbaldwin
-ms.date: 05/25/2016
+ms.date: 06/09/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -49,6 +49,8 @@ Ulteriori domande sulle licenze per Azure RMS? Scaricare le **Domande frequenti 
 ## Abbonamento a Office 365
 [Versione di valutazione gratuita di 30 giorni: Enterprise E3](http://go.microsoft.com/fwlink/p/?LinkID=403802)
 
+[Versione di valutazione gratuita di 30 giorni: Enterprise E5](https://go.microsoft.com/fwlink/p/?LinkID=698279)
+
 Questa sottoscrizione è concepita per le organizzazioni che desiderano usare i servizi online di Office e la relativa funzionalità Information Rights Management (IRM), che usa Azure RMS. Tuttavia, non tutte le sottoscrizioni Office 365 includono Azure RMS.
 
 Sottoscrizione  |Include IRM 
@@ -84,7 +86,7 @@ Alla scadenza della sottoscrizione di valutazione, non sarà più possibile acce
 Se prima di ottenere la sottoscrizione di valutazione l'organizzazione usava Azure RMS con una sottoscrizione a RMS per utenti singoli, l'accesso al contenuto protetto in precedenza non viene perduto anche dopo la scadenza della sottoscrizione di valutazione.
 
 ## Sottoscrizione per Enterprise Mobility Suite
-[Versione di valutazione gratuita di 30 giorni](http://go.microsoft.com/fwlink/?LinkId=615385)
+[Versione di valutazione gratuita di 30 giorni](https://portal.office.com/Signup/Signup.aspx?OfferId=2E63A04D-BE0B-4A0F-A8CF-407C1C299221&dl=EMS)
 
 Questa sottoscrizione è concepita per le organizzazioni che desiderano usare una combinazione di Azure Active Directory Premium, Windows Intune e Azure Rights Management. Il supporto per l'uso di Azure Rights Management con Office è identico a quello per l’uso della sottoscrizione di Azure Rights Management Premium. Per altre informazioni sulla sottoscrizione per Enterprise Mobility Suite, vedere la [panoramica di Microsoft Enterprise Mobility](http://go.microsoft.com/fwlink/?LinkId=615386).
 
@@ -98,6 +100,6 @@ Per ulteriori informazioni, vedere [RMS per utenti singoli e Azure Rights Manage
 ## Passaggi successivi
 Per verificare gli altri requisiti, vedere [Requisiti per Azure Rights Management](requirements-azure-rms.md).
 
-<!--HONumber=May16_HO5-->
+<!--HONumber=Jun16_HO2-->
 
 
