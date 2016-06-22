@@ -1,8 +1,8 @@
 ---
 # required metadata
 
-title: Informazioni di riferimento sulle API | Azure RMS
-description: Microsoft Rights Management SDK 4.2 supporta diversi sistemi operativi: Android, iOS, OS X, Linux, Windows Phone e Windows Store.
+title: "Informazioni di riferimento sulle API | Azure RMS"
+description: "Microsoft Rights Management SDK 4.2 supporta diversi sistemi operativi: Android, iOS, OS X, Linux, Windows Phone e Windows Store."
 keywords:
 author: bruceperlerms
 manager: mbaldwin

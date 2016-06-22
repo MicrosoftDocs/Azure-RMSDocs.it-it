@@ -1,7 +1,7 @@
 ---
 # required metadata
 
-title: Gestione di Microsoft: operazioni del ciclo di vita della chiave del tenant | Azure RMS
+title: "Gestione di Microsoft: operazioni del ciclo di vita della chiave del tenant | Azure RMS"
 description:
 keywords:
 author: cabailey

@@ -1,12 +1,28 @@
 ---
-# metadati obbligatori
+# required metadata
 
-title: Esercitazione per l'avvio rapido di Azure RMS - Passaggio 4 | Azure RMS description: Quarto passaggio di un'esercitazione che consente di provare rapidamente Microsoft Azure Rights Management per l'organizzazione. L'esercitazione è articolata in 5 passaggi, eseguibili in meno di 15 minuti.
-keywords: author: cabailey manager: mbaldwin ms.date: 04/28/2016 ms.topic: get-started-article ms.prod: azure ms.service: rights-management ms.technology: techgroup-identity ms.assetid: f8340056-87a1-4daa-8b63-3d95fc381b9c
+title: "Esercitazione per l'avvio rapido di Azure RMS - Passaggio 4 | AZURE RMS"
+description: "Quarto passaggio di un'esercitazione che consente di provare rapidamente Microsoft Azure Rights Management per l'organizzazione. L'esercitazione è articolata in 5 passaggi, eseguibili in meno di 15 minuti."
+keywords:
+author: cabailey
+manager: mbaldwin
+ms.date: 04/28/2016
+ms.topic: get-started-article
+ms.prod: azure
+ms.service: rights-management
+ms.technology: techgroup-identity
+ms.assetid: f8340056-87a1-4daa-8b63-3d95fc381b9c
 
-# metadati facoltativi
+# optional metadata
 
-ROBOTS: audience: ms.devlang: ms.reviewer: esaggese ms.suite: ems ms.tgt_pltfrm: ms.technology: ms.custom:
+ROBOTS:
+audience:
+ms.devlang:
+ms.reviewer: esaggese
+ms.suite: ems
+ms.tgt_pltfrm:
+ms.technology:
+ms.custom:
 
 ---
 
