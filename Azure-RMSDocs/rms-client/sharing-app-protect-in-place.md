@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione Rights Management sharing | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: 7cf6ecb95374c080b9b2e94f948ec53ea5e6bb46
+
 
 ---
 
@@ -29,10 +23,10 @@ ms.suite: ems
 
 *Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
-Quando si protegge un file localmente, esso sostituisce il file originale non protetto. È quindi possibile lasciare il file dove si trova, copiarlo in un'altra cartella o dispositivo o condividere la cartella in cui si trova e il file rimarrà protetto. È possibile anche allegare il file protetto a un messaggio di posta elettronica, sebbene il modo consigliato per condividere un file protetto tramite posta elettronica sia di condividerlo direttamente da Esplora file o da un'applicazione di Office. Vedere [Proteggere un file che si condivide tramite e-mail utilizzando l'applicazione di condivisione Rights Management](sharing-app-protect-by-email.md)).
+Quando si protegge un file localmente, esso sostituisce il file originale non protetto. È quindi possibile lasciare il file dove si trova, copiarlo in un'altra cartella o dispositivo o condividere la cartella in cui si trova e il file rimarrà protetto. È possibile anche allegare il file protetto a un messaggio di posta elettronica, sebbene il modo consigliato per condividere un file protetto tramite posta elettronica sia direttamente da Esplora file o da un'applicazione di Office (vedere [Proteggere un file condiviso tramite posta elettronica usando l'applicazione Rights Management sharing](sharing-app-protect-by-email.md)).
 
 > [!TIP]
-> Se vengono visualizzati errori quando si tenta di proteggere i file, vedere [FAQ for Microsoft Rights Management Sharing Application for Windows (Domande frequenti sull’applicazione di condivisione Microsoft Rights Management per Windows)](http://go.microsoft.com/fwlink/?LinkId=303971).
+> Se vengono visualizzati errori quando si tenta di proteggere i file, fare riferimento alle [Domande frequenti sull’applicazione di condivisione Microsoft Rights Management per Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
 ## Per proteggere un file in un dispositivo (protezione locale)
 
@@ -41,9 +35,9 @@ Quando si protegge un file localmente, esso sostituisce il file originale non pr
     ![Opzione di menu Proteggi sul posto](../media/ADRMS_MSRMSApp_SP_CompanyDefined.png)
 
     > [!NOTE]
-    > Se non viene visualizzata l’opzione **Proteggi tramite RMS** , è probabile che l'applicazione di RMS sharing non sia installata nel computer o che il computer debba essere riavviato per completare l'installazione. Per altre informazioni sull'installazione dell'applicazione di condivisione RMS, vedere [Scaricare e installare l'applicazione di condivisione Rights Management](install-sharing-app.md).
+    > Se non viene visualizzata l’opzione **Proteggi tramite RMS** , è probabile che l'applicazione di RMS sharing non sia installata nel computer o che il computer debba essere riavviato per completare l'installazione. Per altre informazioni su come installare l'applicazione RMS sharing, vedere [Scaricare e installare l'applicazione Rights Management sharing](install-sharing-app.md).
 
-2.  Eseguire una delle operazioni seguenti:
+2.  Effettuare una delle operazioni riportate di seguito:
 
     -   Selezionare un modello di criteri: Queste sono autorizzazioni predefinite che in genere limitano l'accesso e l’utilizzo agli utenti dell'organizzazione. Se ad esempio il nome dell'organizzazione è "Contoso, Ltd", potrebbe essere visualizzato **Contoso, Ltd - Solo visione riservata**. Se questa è la prima volta che si protegge un file nel computer, è necessario innanzitutto selezionare **Protezione definita dall'azienda** per scaricare i modelli.
 
@@ -57,7 +51,7 @@ Quando si protegge un file localmente, esso sostituisce il file originale non pr
 
     ![File protetto con l'icona di blocco per l'applicazione di condivisione RMS](../media/ADRMS_MSRMSApp_Pfile.png)
 
-Se in un secondo momento è necessario rimuovere la protezione da un file, vedere [Rimuovere la protezione da un file mediante l'applicazione di condivisione Rights Management](sharing-app-remove-protection.md).
+Se in un secondo momento è necessario rimuovere la protezione da un file, vedere [Rimuovere la protezione da un file mediante l'applicazione Rights Management sharing](sharing-app-remove-protection.md).
 
 ## Esempi e altre istruzioni
 Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights Management e procedure, vedere le sezioni seguenti della Guida dell’utente dell’applicazione di condivisione Rights Management:
@@ -70,6 +64,7 @@ Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Proteggere un file condiviso tramite posta elettronica usando l'applicazione Rights Management sharing | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: ea7f186e01606ca5e487bdfaab87d1eb0f2f41d3
+
 
 ---
 
@@ -37,7 +31,7 @@ Se l'organizzazione utilizza Azure RMS, è possibile registrare i file protetti 
 
 -   Selezionare un'opzione per ricevere un messaggio e-mail quando qualcuno tenta di aprire gli allegati protetti. Ogni volta che viene eseguito l'accesso al file, verrà comunicato chi ha tentato di aprire il file e quando e se l’operazione ha avuto esito positivo (è stato correttamente autenticato) o meno.
 
--   Usare il sito di rilevamento della documentazione. È anche possibile arrestare la condivisione del file, revocandone l’accesso nel sito di rilevamento documenti. Per altre informazioni, vedere [Rilevare e revocare i documenti quando si usa l'applicazione di condivisione RMS](sharing-app-track-revoke.md).
+-   Usare il sito di rilevamento della documentazione. È anche possibile arrestare la condivisione del file, revocandone l’accesso nel sito di rilevamento documenti. Per altre informazioni, vedere [Rilevare e revocare i documenti quando si usa l'applicazione RMS sharing](sharing-app-track-revoke.md).
 
 ## Tramite Outlook: Per proteggere un file che si condivide tramite e-mail
 
@@ -45,7 +39,7 @@ Se l'organizzazione utilizza Azure RMS, è possibile registrare i file protetti 
 
     ![Componente aggiuntivo di Outlook per l'applicazione RMS sharing](../media/ADRMS_MSRMSApp_SP_OutlookToolbar.png)
 
-    Se questo pulsante non è visualizzato, è probabile che l'applicazione di condivisione RMS non è installata nel computer, non è installata la versione più recente oppure è necessario riavviare il computer per completare l'installazione. Per altre informazioni sull'installazione dell'applicazione di condivisione, vedere [Scaricare e installare l'applicazione di condivisione Rights Management](install-sharing-app.md).
+    Se questo pulsante non è visualizzato, è probabile che l'applicazione di condivisione RMS non è installata nel computer, non è installata la versione più recente oppure è necessario riavviare il computer per completare l'installazione. Per altre informazioni su come installare l'applicazione, vedere [Scaricare e installare l'applicazione Rights Management sharing](install-sharing-app.md).
 
 2.  Specificare le opzioni desiderate per questo file nella [finestra di dialogo Condividi file protetto](sharing-app-dialog-box.md), quindi fare clic su **Invia ora**.
 
@@ -68,9 +62,9 @@ Oltre alla condivisione di un file protetto tramite Outlook, è possibile utiliz
 
         ![Componente aggiuntivo della barra degli strumenti di Office](../media/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
 
-    Se queste opzioni per la protezione non sono visualizzate, è probabile che l'applicazione di condivisione RMS non è installata nel computer, non è installata la versione più recente oppure è necessario riavviare il computer per completare l'installazione. Per altre informazioni sull'installazione dell'applicazione di condivisione, vedere [Scaricare e installare l'applicazione di condivisione Rights Management](install-sharing-app.md).
+    Se queste opzioni per la protezione non sono visualizzate, è probabile che l'applicazione di condivisione RMS non è installata nel computer, non è installata la versione più recente oppure è necessario riavviare il computer per completare l'installazione. Per altre informazioni su come installare l'applicazione, vedere [Scaricare e installare l'applicazione Rights Management sharing](install-sharing-app.md).
 
-2.  Specificare le opzioni desiderate per questo file nella [finestra di dialogo Condividi file protetto](sharing-app-dialog-box.md), quindi fare clic su **Invia**..
+2.  Specificare le opzioni desiderate per questo file nella [finestra di dialogo Condividi file protetto](sharing-app-dialog-box.md), quindi fare clic su **Invia**.
 
 3.  È possibile visualizzare rapidamente una finestra di dialogo indicante che il file è protetto e quindi viene visualizzato un messaggio e-mail creato che indica ai destinatari che gli allegati sono protetti con Microsoft RMS e che devono effettuare l'accesso. Quando si fa clic sul collegamento per accedere, vengono visualizzate le istruzioni e i collegamenti per permettergli di aprire l'allegato protetto.
 
@@ -98,6 +92,7 @@ Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
