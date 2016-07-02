@@ -882,7 +882,7 @@
 * Archive File: [operations-customer-managed-tenant-key.eeb09cd3e91106b69877a23501e05236d2695de0.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/c3064287793f61647a2e8a2bb7c83bd6185702ad/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/operations-customer-managed-tenant-key.eeb09cd3e91106b69877a23501e05236d2695de0.it-it.xlf)
 * Archive Datetime: 2016-07-01 23:49:35
 * Handback File: [operations-customer-managed-tenant-key.eeb09cd3e91106b69877a23501e05236d2695de0.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/edd14915d953f6e7730ed78cc4a919ad0df25729/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/operations-customer-managed-tenant-key.eeb09cd3e91106b69877a23501e05236d2695de0.it-it.xlf)
-* Handback Datetime: 2016-07-02 05:37:58
+* Handback Datetime: 2016-07-02 06:10:56
 * Handback Error: [handback_transform_failed](#496edca2e2323e17216858e2ab4844fdb0aa1fb031handback_transform_failed)
 * Bilingual File: [operations-customer-managed-tenant-key.eeb09cd3e91106b69877a23501e05236d2695de0.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/edd14915d953f6e7730ed78cc4a919ad0df25729/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/operations-customer-managed-tenant-key.eeb09cd3e91106b69877a23501e05236d2695de0.it-it.xlf)
 * Bilingual Datetime: 2016-06-22 12:24:05
