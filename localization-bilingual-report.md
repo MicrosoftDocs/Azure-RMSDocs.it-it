@@ -1,11 +1,43 @@
 # <a name='report-top'></a> Localization Bilingual Report
 
 ## Summary
- Total Files | 0
+ Total Files | 2
 
 ## File List
+ Source File | Status | Details 
+ ----------- | ------ | ------- 
+ [Azure-RMSDocs\develop\how-to-use-adal-authentication.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/4c3625676c7e794ef133c75881f666bae80e0513/Azure-RMSDocs/develop/how-to-use-adal-authentication.md) | InSyncHandedBackSuccess | [Details](#9200ea44671776ced8781c1e13e71871f5bdf01473)
+ [Azure-RMSDocs\includes\firstref_vista.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/firstref_vista.md) | InSyncHandedBackSuccess | [Details](#13ff460ac519f9cd49ce1cf25a819cea78e2772f137)
 
 ## Item Details
+##### <a name='9200ea44671776ced8781c1e13e71871f5bdf01473'></a> Source: [Azure-RMSDocs\develop\how-to-use-adal-authentication.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/4c3625676c7e794ef133c75881f666bae80e0513/Azure-RMSDocs/develop/how-to-use-adal-authentication.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [Azure-RMSDocs\develop\how-to-use-adal-authentication.md](https://github.com/Microsoft/Azure-RMSDocs-pr.it-it/blob/f641706bf0c9398af5b4fc5857fe093b0705113a/Azure-RMSDocs/develop/how-to-use-adal-authentication.md)
+* Handoff File: [how-to-use-adal-authentication.c4db17b2d45abcad3a630251a689204c2a8c1ef2.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/17ce917e5a1140962689c7beb59ce08e210af3b7/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/how-to-use-adal-authentication.c4db17b2d45abcad3a630251a689204c2a8c1ef2.it-it.xlf)
+* Handoff Datetime: 2016-07-01 18:23:07
+* Handoff Reason: Include
+* Archive File: [how-to-use-adal-authentication.c4db17b2d45abcad3a630251a689204c2a8c1ef2.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/c3064287793f61647a2e8a2bb7c83bd6185702ad/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/how-to-use-adal-authentication.c4db17b2d45abcad3a630251a689204c2a8c1ef2.it-it.xlf)
+* Archive Datetime: 2016-07-01 23:49:35
+* Handback File: [how-to-use-adal-authentication.c4db17b2d45abcad3a630251a689204c2a8c1ef2.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/3afdfeafba6e17e09b30a1e7b621ce631f025b7f/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/how-to-use-adal-authentication.c4db17b2d45abcad3a630251a689204c2a8c1ef2.it-it.xlf)
+* Handback Datetime: 2016-07-02 07:48:44
+* Bilingual File: [how-to-use-adal-authentication.c4db17b2d45abcad3a630251a689204c2a8c1ef2.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/3afdfeafba6e17e09b30a1e7b621ce631f025b7f/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/how-to-use-adal-authentication.c4db17b2d45abcad3a630251a689204c2a8c1ef2.it-it.xlf)
+* Bilingual Datetime: 2016-07-02 08:03:58
+* [Back to Top](#report-top)
+
+##### <a name='13ff460ac519f9cd49ce1cf25a819cea78e2772f137'></a> Source: [Azure-RMSDocs\includes\firstref_vista.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/c1cd5adccb8ed07dac9a0535654f21a970575a78/Azure-RMSDocs/includes/firstref_vista.md)
+* Status: InSyncHandedBackSuccess
+* Target File: [Azure-RMSDocs\includes\firstref_vista.md](https://github.com/Microsoft/Azure-RMSDocs-pr.it-it/blob/f641706bf0c9398af5b4fc5857fe093b0705113a/Azure-RMSDocs/includes/firstref_vista.md)
+* Handoff File: [firstref_vista.b310c28c1ca2cc1d43bdfad3aca084ff9d8ee472.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/9f166b5c5d0846ee54c8e62b67af1ae8a4b0c1d8/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/firstref_vista.b310c28c1ca2cc1d43bdfad3aca084ff9d8ee472.it-it.xlf)
+* Handoff Datetime: 2016-06-27 12:41:58
+* Handoff Reason: Include
+* Archive File: [firstref_vista.b310c28c1ca2cc1d43bdfad3aca084ff9d8ee472.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/c3064287793f61647a2e8a2bb7c83bd6185702ad/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/firstref_vista.b310c28c1ca2cc1d43bdfad3aca084ff9d8ee472.it-it.xlf)
+* Archive Datetime: 2016-07-01 23:49:35
+* Handback File: [firstref_vista.b310c28c1ca2cc1d43bdfad3aca084ff9d8ee472.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/3afdfeafba6e17e09b30a1e7b621ce631f025b7f/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/firstref_vista.b310c28c1ca2cc1d43bdfad3aca084ff9d8ee472.it-it.xlf)
+* Handback Datetime: 2016-07-02 07:48:44
+* Bilingual File: [firstref_vista.b310c28c1ca2cc1d43bdfad3aca084ff9d8ee472.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/3afdfeafba6e17e09b30a1e7b621ce631f025b7f/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/firstref_vista.b310c28c1ca2cc1d43bdfad3aca084ff9d8ee472.it-it.xlf)
+* Bilingual Datetime: 2016-07-02 08:03:58
+* [Back to Top](#report-top)
+
 
 ## Error Details
 
