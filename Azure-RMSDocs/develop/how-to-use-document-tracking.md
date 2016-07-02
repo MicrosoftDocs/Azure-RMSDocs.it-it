@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Come usare il rilevamento dei documenti | Azure RMS
-description: La funzionalità di rilevamento dei documenti richiede la comprensione di alcuni aspetti semplici relativi alla gestione dei metadati associati e alla registrazione con il servizio.
-keywords:
+description: "La funzionalità di rilevamento dei documenti richiede la comprensione di alcuni aspetti semplici relativi alla gestione dei metadati associati e alla registrazione con il servizio."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 70E10936-7953-49B0-B0DC-A5E7C4772E60
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ca4982cc86d9c006486540055de7c165adca21da
+ms.openlocfilehash: 9872317c2d5f5f56f28ed2683d7ebc9743041a37
+
 
 ---
 
@@ -67,6 +63,7 @@ La sequenza di passaggi da usare per configurare il rilevamento dei documenti pe
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

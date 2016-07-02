@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Configurare Visual Studio | Azure RMS
-description: Istruzioni su come configurare un progetto di Visual Studio per l’uso di RMS SDK 2.1.
-keywords:
+description: "Istruzioni su come configurare un progetto di Visual Studio per l’uso di RMS SDK 2.1."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 872bb0c20db2ef8d661d321598a2b1fe61d69316
+ms.openlocfilehash: 9747c39742c66735b9619036cb77a914563ecf29
+
 
 ---
 
@@ -81,6 +77,7 @@ Queste istruzioni sono valide per la creazione di un'applicazione nativa a 32 bi
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
