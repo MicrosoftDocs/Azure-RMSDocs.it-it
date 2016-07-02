@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Distribuzione dell'applicazione | Azure RMS
 description: Questo argomento descrive le opzioni di distribuzione per l'applicazione abilitata all'uso di diritti
-keywords:
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 872bb0c20db2ef8d661d321598a2b1fe61d69316
+ms.openlocfilehash: 902721ae3e69afd144c552b8ee0a916958e80afc
+
 
 ---
 
@@ -84,7 +80,8 @@ RMS Client 2.1 è un software per computer client progettato per proteggere l'ac
 RMS Client 2.1 non è un componente del sistema operativo Windows. RMS Client 2.1 è disponibile come download facoltativo che, previa lettura e accettazione del relativo contratto di licenza, può essere distribuito liberamente con un software di terze parti per consentire l'accesso client a contenuti protetti da diritti mediante l'uso e la distribuzione di server RMS nell'ambiente in uso.
 
 
-> [!IMPORTANT] AD RMS Client 2.1 è specifico dell'architettura e deve corrispondere all'architettura del sistema operativo di destinazione.
+> [!IMPORTANT]
+> Il client 2.1 di AD RMS è specifico dell'architettura e deve corrispondere all'architettura del sistema operativo di destinazione.
 
 
 ## Opzioni di installazione di RMS Client 2.1
@@ -137,6 +134,7 @@ Per ulteriori informazioni sull'abilitazione dell'applicazione per l'uso di RMS 
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

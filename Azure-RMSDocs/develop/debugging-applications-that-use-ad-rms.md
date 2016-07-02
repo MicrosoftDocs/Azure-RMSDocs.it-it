@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Come eseguire il debug dell'applicazione abilitata all'uso di diritti | Azure RMS
 description: L'argomento seguente illustra come eseguire il debug dell'applicazione e usare il registro eventi di Windows.
-keywords:
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 29e856e3e9990f81a791c533ddad5a332093d5d3
+ms.openlocfilehash: c00ce9829ce4150cfef74ecd972450b3d787f312
+
 
 ---
 
@@ -78,6 +74,7 @@ Ad esempio, il comando seguente abiliterà il registro eventi MSIPC e imposterà
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
