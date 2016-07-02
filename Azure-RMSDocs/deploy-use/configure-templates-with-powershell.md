@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Guida di riferimento di PowerShell per i modelli personalizzati | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/20/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
+ms.openlocfilehash: 645f9ed4080e3b38fcda9afe148923c021046724
+
 
 ---
 
@@ -35,7 +29,8 @@ Tutte le operazioni che è possibile eseguire nel portale di Azure classico pe
 
 È anche possibile usare l'esportazione e l'importazione per eseguire il backup e il ripristino dei modelli personalizzati. Come procedura consigliata, eseguire regolarmente il backup dei modelli personalizzati, in modo da poter ripristinare facilmente una versione precedente se si apporta una modifica imprevista.
 
-> [!IMPORTANT] Per usare Windows PowerShell per la creazione e la gestione dei modelli di criteri per i diritti di utilizzo di Azure RMS, è necessario usare almeno la versione 2.0.0.0 del [Modulo Windows PowerShell per Azure RMS](http://go.microsoft.com/fwlink/?LinkId=257721).
+> [!IMPORTANT]
+> Per utilizzare Windows PowerShell per creare e gestire i modelli di criteri dei diritti di Azure RMS, è necessario avere almeno la versione 2.0.0.0 del [modulo Windows PowerShell per Azure RMS](http://go.microsoft.com/fwlink/?LinkId=257721).
 > 
 > Se il modulo PowerShell è stato installato in precedenza, eseguire il seguente comando in una finestra di PowerShell per verificare il numero di versione: `(Get-Module aadrm -ListAvailable).Version`
 
@@ -64,6 +59,7 @@ I cmdlet che supportano la creazione e la gestione di modelli sono i seguenti:
 ## Vedere anche
 [Configurare modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
