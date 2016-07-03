@@ -350,9 +350,6 @@
   "c9d5ec961989283c5201a81f862b2da45ed64340": [
     "Azure-RMSDocs\\develop\\developers-guide.md"
   ],
-  "20caaf80b7a4fdd47c9583cdb0c1451cc16a531c": [
-    "Azure-RMSDocs\\develop\\developers-guide.md"
-  ],
   "7d6e1d818c8eb4f6d2e4e7d320e44c7f159eabb4": [
     "Azure-RMSDocs\\get-started\\terminology.md"
   ],
@@ -806,13 +803,7 @@
   "9b912a2a66838dc6e6a3b227bcfe4ac589fe06c1": [
     "Azure-RMSDocs\\develop\\adal-auth.md"
   ],
-  "8b398b1dcd6054437e58ee4abe900d8662ab4fbf": [
-    "Azure-RMSDocs\\develop\\adal-auth.md"
-  ],
   "f995da0698ec5fb4a8e46865b70506ced92f73db": [
-    "Azure-RMSDocs\\develop\\developing-your-application.md"
-  ],
-  "db38a01984b5a59d5ac50db1f3c198b99d45cac9": [
     "Azure-RMSDocs\\develop\\developing-your-application.md"
   ],
   "9200ea44671776ced8781c1e13e71871f5bdf014": [
