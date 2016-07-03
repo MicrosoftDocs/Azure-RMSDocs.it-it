@@ -19,7 +19,7 @@
 * Archive File: [api-reference-4-2.4ee762dd87e1aa9abdd4e77e165aa7864ab22eb0.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/c3064287793f61647a2e8a2bb7c83bd6185702ad/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/api-reference-4-2.4ee762dd87e1aa9abdd4e77e165aa7864ab22eb0.it-it.xlf)
 * Archive Datetime: 2016-07-01 23:49:35
 * Handback File: [api-reference-4-2.4ee762dd87e1aa9abdd4e77e165aa7864ab22eb0.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/edd14915d953f6e7730ed78cc4a919ad0df25729/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/api-reference-4-2.4ee762dd87e1aa9abdd4e77e165aa7864ab22eb0.it-it.xlf)
-* Handback Datetime: 2016-07-03 06:23:54
+* Handback Datetime: 2016-07-03 06:32:45
 * Handback Error: [handback_transform_failed](#25894ed446911a55481d0f2ac628db2f46e477f649handback_transform_failed)
 * Bilingual File: [api-reference-4-2.4ee762dd87e1aa9abdd4e77e165aa7864ab22eb0.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/edd14915d953f6e7730ed78cc4a919ad0df25729/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/api-reference-4-2.4ee762dd87e1aa9abdd4e77e165aa7864ab22eb0.it-it.xlf)
 * Bilingual Datetime: 2016-06-22 12:24:05
@@ -34,7 +34,7 @@
 * Archive File: [api-support.8de1be3c76f16a8ca6e8670d817059480b73fb74.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/c3064287793f61647a2e8a2bb7c83bd6185702ad/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/api-support.8de1be3c76f16a8ca6e8670d817059480b73fb74.it-it.xlf)
 * Archive Datetime: 2016-07-01 23:49:35
 * Handback File: [api-support.8de1be3c76f16a8ca6e8670d817059480b73fb74.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/edd14915d953f6e7730ed78cc4a919ad0df25729/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/api-support.8de1be3c76f16a8ca6e8670d817059480b73fb74.it-it.xlf)
-* Handback Datetime: 2016-07-03 06:23:54
+* Handback Datetime: 2016-07-03 06:32:45
 * Handback Error: [handback_transform_failed](#bb69cda94bf611712eb5b4a74d9ec25d1749da3a373handback_transform_failed)
 * Bilingual File: [api-support.8de1be3c76f16a8ca6e8670d817059480b73fb74.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/edd14915d953f6e7730ed78cc4a919ad0df25729/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/api-support.8de1be3c76f16a8ca6e8670d817059480b73fb74.it-it.xlf)
 * Bilingual Datetime: 2016-06-22 12:24:05
