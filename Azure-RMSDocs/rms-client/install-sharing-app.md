@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Scaricare e installare l'applicazione di condivisione Rights Management | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: 5ec740b4de63c90c9713916dcf104316e727498b
+
 
 ---
 
@@ -37,9 +31,9 @@ Non è necessario essere un amministratore locale per installare l'applicazione 
 
 2.  Nella sezione **Computer** fare clic sull'icona relativa all’ **app RMS per Windows** e salvare il file di installazione **Setup.exe** dell’applicazione di condivisione Microsoft Rights Management.
 
-3.  Fare doppio clic sul file Setup.exe che è stato scaricato. Se viene chiesto di continuare, fare clic su **Sì**.
+3.  Fare doppio clic sul file Setup.exe che è stato scaricato. Se viene richiesto di continuare, fare clic su **Sì**.
 
-4.  Nella pagina **Installazione di Microsoft RMS** fare clic su **Avanti**e attendere il completamento dell'installazione.
+4.  Nella pagina **Installazione di Microsoft RMS** fare clic su **Avanti**e attendere la fine dell'installazione.
 
     > [!NOTE]
     > L'applicazione di condivisione RMS richiede il Framework Microsoft .NET, versione minima 4.0. Il programma di installazione verifica se viene installato e in caso contrario, verrà visualizzato un messaggio con un collegamento per installarlo.
@@ -75,6 +69,7 @@ Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 
