@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Installazione e configurazione del connettore di Azure Rights Management | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/27/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ea4b7539ab311d782c3987a8fd74940aad72e65b
+ms.openlocfilehash: 165292482349e4a233ab4030f49a297f57b041ac
+
 
 ---
 
@@ -29,7 +23,7 @@ ms.suite: ems
 
 *Si applica a: Azure Rights Management, Office 365*
 
-Nelle sezioni seguenti vengono fornite informazioni sull’installazione e la configurazione del connettore RMS di Azure Rights Management (RMS). Queste procedure descrivono i passaggi da 1 a 4 di [Distribuzione del connettore di Azure Rights Management](deploy-rms-connector.md).
+Nelle sezioni seguenti vengono fornite informazioni sull’installazione e la configurazione del connettore RMS di Azure Rights Management (RMS). Queste procedure illustrano i passaggi da 1 a 4 di [Distribuzione del connettore di Azure Rights Management](deploy-rms-connector.md).
 
 Prima di iniziare, assicurarsi di aver esaminato e controllato i [prerequisiti](deploy-rms-connector.md#prerequisites-for-the-rms-connector) per questa distribuzione.
 
@@ -41,7 +35,7 @@ Prima di iniziare, assicurarsi di aver esaminato e controllato i [prerequisiti](
     > [!NOTE]
     > Installare un singolo connettore RMS (costituito da più server per assicurare elevati livelli di disponibilità) per tenant (tenant di Office 365 o di Azure AD). A differenza di Active Directory RMS, non è necessario installare un connettore RMS in ogni foresta.
 
-2.  Scaricare i file di origine per il connettore RMS dall'[Area download Microsoft](http://go.microsoft.com/fwlink/?LinkId=314106).
+2.  Scaricare i file di origine per il connettore RMS dall' [Area download Microsoft](http://go.microsoft.com/fwlink/?LinkId=314106).
 
     Per installare il connettore RMS, scaricare il file RMSConnectorSetup.exe.
 
@@ -62,22 +56,24 @@ Per continuare, immettere un account e una password per configurare il connettor
 ## Immissione delle credenziali
 Per poter configurare il connettore RMS, è necessario immettere le credenziali per un account dotato di privilegi sufficienti per la configurazione del connettore. È ad esempio possibile digitare **admin@contoso.com** e quindi specificare la password per questo account.
 
-Per questa password sono previste alcune limitazioni relative ai caratteri. Non è possibile usare una password che include uno dei caratteri seguenti: e commerciale (**&**), parentesi quadra aperta (**[**), parentesi quadra chiusa (**]**), virgolette semplici (**"**) e apostrofo (**'**). Se la password include uno di questi caratteri, non sarà possibile effettuare l'autenticazione per il connettore RMS e verrà visualizzato un messaggio di errore che indica che la combinazione nome utente e password specificata non è corretta, anche se è possibile effettuare l'accesso usando questo account e questa password per altri scenari. Se questa situazione è applicabile alla password in uso, scegliere un account diverso con una password che non include questi caratteri speciali oppure reimpostare la password, in modo che non includa questi caratteri speciali.
+Per questa password sono previste alcune limitazioni relative ai caratteri. Non è possibile usare una password che includa uno dei caratteri seguenti: e commerciale (**&**), parentesi quadra aperta (**[**), parentesi quadra chiusa (**]**), virgolette semplici (**"**) e apostrofo (**'**). Se la password include uno di questi caratteri, non sarà possibile effettuare l'autenticazione per il connettore RMS e verrà visualizzato un messaggio di errore che indica che la combinazione nome utente e password specificata non è corretta, anche se è possibile effettuare l'accesso usando questo account e questa password per altri scenari. Se questa situazione è applicabile alla password in uso, scegliere un account diverso con una password che non include questi caratteri speciali oppure reimpostare la password, in modo che non includa questi caratteri speciali.
 
 Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), assicurarsi che l'account specificato sia in grado di proteggere il contenuto. Se, ad esempio, è stata limitata la possibilità di proteggere il contenuto per il gruppo "Reparto IT", l'account specificato deve essere un membro del gruppo. In caso contrario, verrà visualizzato il messaggio di errore: **Tentativo di individuare la posizione del servizio di amministrazione e dell’organizzazione non riuscito. Assicurarsi che il servizio Microsoft Rights Management sia abilitato per l’organizzazione.**
 
 È possibile usare un account con uno dei privilegi seguenti:
 
--   **Amministratore tenant di Office 365**: un account che sia un amministratore globale per il tenant di Office 365.
+-   **Amministratore globale per il tenant**: account amministratore globale per il tenant di Office 365 o per il tenant di Azure AD.
 
--   **Amministratore globale di Azure Rights Management**: un account con privilegi di amministratore per il tenant di Azure RMS.
+-   **Amministratore globale di Azure Rights Management**: account in Azure Active Directory a cui è stato assegnato il ruolo di amministratore globale di Azure RMS.
 
--   **Amministratore di connettore Microsoft RMS**: un account di Azure Active Directory a cui sono stati concessi i diritti di installazione e amministrazione del connettore RMS per l'organizzazione.
+-   **Amministratore di connettore di Azure Rights Management**: account di Azure Active Directory a cui sono stati concessi i diritti di installazione e amministrazione del connettore RMS per l'organizzazione.
 
     > [!NOTE]
-    > Se si sceglie di usare l'account Amministratore di connettore Microsoft RMS, è necessario innanzitutto eseguire le operazioni seguenti per assegnare il ruolo di amministratore di connettore RMS:
+    > Il ruolo di amministratore globale di Azure Rights Management e il ruolo di amministratore di connettore di Azure Rights Management vengono assegnati agli account con il cmdlet di Azure RMS [Add-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/dn629417.aspx).
+    > 
+    > Per eseguire il connettore RMS con privilegi minimi, creare un account dedicato a questo scopo e assegnare a questo il ruolo di amministratore di connettore di Azure RMS tramite le operazioni seguenti:
     >
-    > 1.  Sullo stesso computer, scaricare e installare Windows PowerShell per Rights Management. Per altre informazioni, vedere [Installazione di Windows PowerShell per Microsoft Azure Rights Management](install-powershell.md).
+    > 1.  Se non è ancora stato fatto, scaricare e installare Windows PowerShell per Rights Management. Per altre informazioni, vedere [Installazione di Windows PowerShell per Azure Rights Management](install-powershell.md).
     >
     >     Avviare Windows PowerShell con l'opzione **Esegui come amministratore** e usare il comando [Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx) per connettersi al servizio Azure RMS:
     >
@@ -97,9 +93,9 @@ Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-s
     >     ```
     >     Add-AadrmRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
     >     ```
-    >     Ad esempio, digitare: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role " ConnectorAdministrator "**
+    >     Ad esempio, digitare: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
     >
-    >     Anche se questi comandi usano il ruolo ConnectorAdministrator, è possibile usare anche il ruolo GlobalAdministrator.
+    >     Anche se questi comandi assegnano il ruolo di amministratore di connettore, è possibile usare anche il ruolo GlobalAdministrator.
 
 Durante il processo di installazione del connettore RMS, vengono eseguite la convalida e l'installazione di tutti i prerequisiti software, l'installazione di Internet Information Services (se non già presente nel sistema) e l'installazione e configurazione del software del connettore. Viene anche preparata la configurazione di Azure RMS con la creazione degli elementi seguenti:
 
@@ -111,7 +107,7 @@ Nella pagina finale della procedura guidata, eseguire le operazioni indicate di 
 
 -   Se si è installato il primo connettore, non selezionare l'opzione **Avvia console di amministrazione del connettore per autorizzare i server** . Questa opzione, infatti, deve essere selezionata dopo l'installazione del secondo (o dell'ultimo) connettore RMS. È invece necessario eseguire di nuovo la procedura guidata su almeno un altro computer. Installare almeno due connettori.
 
--   Se si è installato il secondo o l'ultimo connettore, selezionare **Avvia console di amministrazione del connettore per autorizzare i server**.
+-   Se si è installato il secondo (o l'ultimo) connettore, selezionare l'opzione **Avvia console di amministrazione del connettore per autorizzare i server**.
 
 > [!TIP]
 > A questo punto, è possibile eseguire un test di verifica per testare l'operatività dei servizi Web per il connettore RMS:
@@ -131,7 +127,7 @@ Quando si autorizzano i server, tenere presente quanto segue:
 
 -   È possibile aggiungere più server all'elenco come voce singola specificando un gruppo di Active Directory di sicurezza o di distribuzione oppure un account del servizio usato da più di un server. Se si usa questa configurazione, i server del gruppo condividono gli stessi certificati RMS e vengono tutti considerati proprietari del contenuto protetto da ciascuno di essi. Per ridurre il sovraccarico amministrativo, per autorizzare i server di Exchange dell'organizzazione o una server farm di SharePoint si consiglia di usare la configurazione di un gruppo anziché singoli server.
 
-Nella pagina **Server a cui è consentito l'uso del connettore** fare clic su **Aggiungi**.
+Nella pagina **Server a cui è consentito l'uso del connettore** , fare clic su **Aggiungi**.
 
 > [!NOTE]
 > L’autorizzazione dei server in Azure RMS è la configurazione equivalente alla configurazione di AD RMS quando si applicano manualmente i diritti NTFS a ServerCertification.asmx per gli account di servizio o del computer server e si concedono manualmente diritti di utente con privilegi avanzati agli account di Exchange. L'applicazione dei diritti NTFS a ServerCertification.asmx non è necessaria per il connettore.
@@ -161,7 +157,7 @@ Di seguito sono riportate altre informazioni sui diversi ruoli server:
 
 -   Per i file server che usano la funzionalità Infrastruttura di classificazione file, i servizi associati vengono eseguiti come account di sistema locale. È quindi necessario autorizzare l'account del computer per i file server (ad esempio SERVERNAME$) o un gruppo contenente tali account di computer.
 
-Dopo aver aggiunto i server all'elenco, fare clic su **Chiudi**.
+Una volta completata l'aggiunta dei server all'elenco, fare clic su **Chiudi**.
 
 Se non si è ancora provveduto, è ora necessario configurare il bilanciamento del carico per i server in cui è installato il connettore RMS. È inoltre opportuno valutare la possibilità di usare HTTPS per le connessioni tra questi server e i server appena autorizzati.
 
@@ -173,7 +169,7 @@ Il nome server dell'URL del connettore può essere qualsiasi nome incluso in uno
 > [!IMPORTANT]
 > Si consiglia di non modificare il nome dopo aver configurato i server di Exchange o SharePoint per l'uso del connettore. Se si modificasse il nome, sarebbe infatti necessario eliminare tali server da tutte le configurazioni IRM e configurarli nuovamente.
 
-Dopo aver creato un nome nel DNS e averlo configurato per un indirizzo IP, impostare il bilanciamento del carico per tale indirizzo, operazione che indirizza il traffico ai server del connettore. A tale scopo è possibile usare qualsiasi servizio di bilanciamento del carico, inclusa la funzionalità Bilanciamento carico di rete di Windows Server. Per altre informazioni, vedere [Load Balancing Deployment Guide (Guida di distribuzione di bilanciamento del carico)](http://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
+Dopo aver creato un nome nel DNS e averlo configurato per un indirizzo IP, impostare il bilanciamento del carico per tale indirizzo, operazione che indirizza il traffico ai server del connettore. A tale scopo è possibile usare qualsiasi servizio di bilanciamento del carico, inclusa la funzionalità Bilanciamento carico di rete di Windows Server. Per altre informazioni, vedere la [guida di distribuzione relativa al bilanciamento del carico](http://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
 
 Usare le impostazioni seguenti per configurare il cluster di Bilanciamento carico di rete:
 
@@ -238,12 +234,13 @@ Per installare lo strumento di amministrazione di connettore RMS, eseguire i fil
 
 -   Per un computer a 64 bit: RMSConnectorSetup.exe
 
-Se non sono stati già scaricati questi file, è possibile farlo dall'[Area download Microsoft](http://go.microsoft.com/fwlink/?LinkId=314106).
+Se non sono stati già scaricati questi file, è possibile farlo dall' [Area download Microsoft](http://go.microsoft.com/fwlink/?LinkId=314106).
 
 
 ## Passaggi successivi
 Dopo l’installazione e la configurazione del connettore RMS, è possibile configurare i server locali per l'uso del connettore stesso. Passare a [Configurazione dei server per il connettore di Azure Rights Management](configure-servers-rms-connector.md).
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

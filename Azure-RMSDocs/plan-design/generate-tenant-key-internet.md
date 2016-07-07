@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Generare e trasferire la propria chiave del tenant tramite Internet | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1bff9b06-8c5a-4b1d-9962-6668219210e6
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 7a9c8b531ec342e7d5daf0cbcacd6597a79e6a55
+ms.openlocfilehash: 20cfa722f7008c52f4fbc219a4de04c50ee3548d
+
 
 ---
 
@@ -48,7 +42,7 @@ Dalla workstation connessa a Internet scaricare e installare il modulo Windows 
 > [!NOTE]
 > Se il modulo Windows PowerShell è stato scaricato in precedenza, eseguire il comando seguente per verificare che la versione in uso sia almeno la versione 2.1.0.0: `(Get-Module aadrm -ListAvailable).Version`
 
-Per le istruzioni di installazione, vedere [Installazione di Windows PowerShell per Microsoft Azure Rights Management](../deploy-use/install-powershell.md).
+Per istruzioni di installazione, vedere [Installazione di Windows PowerShell per Azure Rights Management](../deploy-use/install-powershell.md).
 
 ### Passaggio 2: Ottenere l'ID del tenant di Azure Active Directory
 Avviare Windows PowerShell con l'opzione **Esegui come amministratore** , quindi eseguire i comandi indicati di seguito.
@@ -85,15 +79,15 @@ Accedere all'Area download Microsoft e [scaricare il set di strumenti BYOK](http
 |Asia|AzureRMS-BYOK-tools-AsiaPacific.zip|
 Il set di strumenti include gli elementi seguenti:
 
--   Pacchetto KEK (Key Exchange Key) il cui nome inizia con **BYOK-KEK-pkg-**.
+-   Pacchetto di chiavi per lo scambio delle chiavi con un nome che inizia con **BYOK-KEK-pkg-**.
 
--   Pacchetto dell'ambiente di sicurezza il cui nome inizia con **BYOK-SecurityWorld-pkg-**.
+-   Pacchetto relativo all'ambiente di sicurezza con un nome che inizia con **BYOK-SecurityWorld-pkg-**.
 
 -   Script python denominato **verifykeypackage.py**.
 
 -   File eseguibile dalla riga di comando denominato **KeyTransferRemote.exe**, file di metadati denominato **KeyTransferRemote.exe.config** e DLL associate.
 
--   Pacchetto ridistribuibile Visual C++ denominato **vcredist_x64.exe**.
+-   Componente Visual C++ Redistributable Package denominato **vcredist_x64.exe**.
 
 Copiare il pacchetto in un'unità USB o in un altro dispositivo di archiviazione portatile.
 
@@ -188,7 +182,7 @@ Questo passaggio è facoltativo, ma è consigliato in modo che sia possibile con
 
 2.  Assicurarsi di visualizzare il risultato positivo seguente, che indica il completamento della convalida: **Result:  SUCCESS**
 
-Questo script consente di convalidare la catena di firmatari fino alla chiave radice di Thales. La funzione hash di questa chiave radice è incorporata nello script e il relativo valore deve essere **59178a47 de508c3f 291277ee 184f46c4 f1d9c639**. È anche possibile confermare questo valore separatamente visitando il [sito Web Thales](http://www.thalesesec.com/).
+Questo script consente di convalidare la catena di firmatari fino alla chiave radice di Thales. La funzione hash di questa chiave radice è incorporata nello script e il relativo valore deve essere **59178a47 de508c3f 291277ee 184f46c4 f1d9c639**. Si può anche confermare questo valore separatamente sul [sito Web di Thales](http://www.thalesesec.com/).
 
 A questo punto si può creare una nuova chiave che costituirà la chiave del tenant RMS dell'utente.
 
@@ -269,7 +263,7 @@ Per ridurre le autorizzazioni sulla chiave del tenant, eseguire le operazioni se
         KeyTransferRemote.exe -ModifyAcls -KeyAppName simple -KeyIdentifier contosokey -ExchangeKeyPackage BYOK-KEK-pkg-AP-1 -NewSecurityWorldPackage BYOK-SecurityWorld-pkg-AP-1
         ```
 
-Quando si esegue questo comando, sostituire *contosokey* con lo stesso valore specificato in [Passaggio 1: Creare un ambiente di sicurezza](##step-1-create-a-security-world) nella sezione *Generare la chiave del tenant*.
+Quando si esegue questo comando, sostituire *contosokey* con lo stesso valore specificato in [Passaggio 1: Creare un ambiente di sicurezza](#step-1-create-a-security-world) nella sezione *Generare la chiave del tenant*.
 
 Verrà richiesto di inserire le schede di ACS dell'ambiente di sicurezza e, se specificati, la password o il PIN.
 
@@ -290,7 +284,7 @@ Se si desidera, eseguire le utilità Thales per confermare le autorizzazioni min
     "%nfast_home%\bin\kmfile-dump.exe" "%NFAST_KMDATA%\local\key_xferacld_contosokey"
     ```
 
-Quando si eseguono i comandi, sostituire *contosokey* con lo stesso valore specificato in [Passaggio 1: Creare un ambiente di sicurezza](##step-1-create-a-security-world) nella sezione *Generare la chiave del tenant*.
+Quando si esegue questo comando, sostituire *contosokey* con lo stesso valore specificato in [Passaggio 1: Creare un ambiente di sicurezza](#step-1-create-a-security-world) nella sezione *Generare la chiave del tenant*.
 
 ### Passaggio 3: Crittografare la chiave tramite la chiave per lo scambio di chiavi di Microsoft
 Eseguire uno dei comandi seguenti, a seconda dell'area geografica di appartenenza:
@@ -315,7 +309,7 @@ Eseguire uno dei comandi seguenti, a seconda dell'area geografica di appartenenz
 
 Quando si esegue il comando, usare le istruzioni seguenti:
 
--   Sostituire *contosokey* con l'identificatore usato per generare la chiave in [Passaggio 1: Creare un ambiente di sicurezza](##step-1-create-a-security-world) nella sezione *Generare la chiave del tenant*.
+-   Sostituire *contosokey* con l'identificatore usato per generare la chiave in [Passaggio 1: Creare un ambiente di sicurezza](#step-1-create-a-security-world) nella sezione *Generare la chiave del tenant*.
 
 -   Sostituire *GUID* con il proprio ID tenant di Azure Active Directory recuperato in [Passaggio 2: Ottenere l'ID del tenant di Azure Active Directory](#step-2-get-your-azure-active-directory-tenant-id) nella sezione *Preparare la workstation connessa a Internet*.
 
@@ -383,6 +377,7 @@ Tutti i passaggi necessari per trasferire la propria chiave tramite Internet son
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

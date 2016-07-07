@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Panoramica | Azure RMS
-description: Rights Management Services (RMS) è una tecnologia di protezione che consente di proteggere le informazioni digitali da usi non autorizzati.
-keywords:
+description: "Rights Management Services (RMS) è una tecnologia di protezione che consente di proteggere le informazioni digitali da usi non autorizzati."
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: B546B6C1-ADC1-4EBD-95E2-B4A74E4E980B
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 37f3bc2308caaa8fd5e5c7fc8c56b6dc4d076b97
+
 
 ---
 
@@ -44,7 +39,7 @@ Di seguito vengono riportati solo alcuni degli scenari in cui è possibile utili
 -   I proprietari di una raccolta documenti online desiderano abilitare i diritti a visualizzare, stampare o modificare i documenti in base all'identità dell'utente.
 -   Un'azienda intende pubblicare informazioni riservate sui dipendenti in un sito Web interno limitando la visualizzazione e la modifica dei privilegi a determinati utenti.
 
-Per altre informazioni sul server AD RMS, il client AD RMS e relative funzionalità, vedere il contenuto TechNet relativo alla [documentazione di AD RMS per i professionisti IT](https://TechNet.Microsoft.Com/en-us/library/cc771234.aspx).
+Per altre informazioni sul server AD RMS, il client AD RMS e le relative funzionalità, vedere il contenuto del sito TechNet relativo alla [documentazione di AD RMS per i professionisti IT](https://TechNet.Microsoft.Com/library/cc771234.aspx).
 
 Gli altri argomenti di questa sezione riguardano l'architettura di RMS e le relative implementazioni.
 
@@ -66,6 +61,7 @@ Gli altri argomenti di questa sezione riguardano l'architettura di RMS e le rela
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

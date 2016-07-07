@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Applicazioni e servizi Office | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/30/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 99eb67f6296ad1782c787aabb73a28458c02f367
+ms.openlocfilehash: affb37cc3b991609f5de51370485b10fed932421
+
 
 ---
 
@@ -33,9 +27,9 @@ ms.suite: ems
 Le applicazioni dell'utente finale, ad esempio Word, Excel, PowerPoint e Outlook, e i servizi Office, ad esempio Exchange e SharePoint, possono usare Microsoft Azure Rights Management per proteggere i dati dell'organizzazione.
 
 ## Applicazioni Office: Word, Excel, PowerPoint, Outlook
-Queste applicazioni supportano Rights Management a livello nativo usando Information Rights Management (IRM) e consentono agli utenti di applicare la protezione a un documento salvato oppure a un messaggio e-mail da inviare tramite l'applicazione di modelli o la scelta di impostazioni con un elevato livello di personalizzazione per limitare l'accesso, i diritti e l'uso. 
+Queste applicazioni supportano Rights Management a livello nativo usando Information Rights Management (IRM) e consentono agli utenti di applicare la protezione a un documento salvato oppure a un messaggio e-mail da inviare Gli utenti possono applicare i modelli oppure, per Word, Excel e PowerPoint, possono scegliere impostazioni con un elevato livello di personalizzazione per limitare l'accesso, i diritti e l'uso. 
 
-Gli utenti possono ad esempio configurare un file in modo che possano accedervi solo le persone appartenenti all'organizzazione o per controllare se il file può essere modificato, per impostarne l'accesso in sola lettura o per impedirne la stampa. Per file soggetti a vincoli temporali, è possibile configurare un'ora di scadenza (direttamente oppure applicando un modello) per stabilire il momento in cui non è più possibile accedere al file. Per Outlook, gli utenti possono anche scegliere l'opzione **Non inoltrare** per impedire la perdita di dati.
+Gli utenti possono ad esempio configurare un file di Word in modo che possano accedervi solo le persone appartenenti all'organizzazione o per controllare se un foglio di calcolo Excel può essere modificato, per impostarne l'accesso in sola lettura o per impedirne la stampa. Per file soggetti a vincoli temporali, è possibile configurare un'ora di scadenza (direttamente oppure applicando un modello) per stabilire il momento in cui non è più possibile accedere al file. Oltre a scegliere un modello, per Outlook gli utenti possono scegliere l'opzione **Non inoltrare** per impedire la perdita di dati.
 
 ## Exchange Online ed Exchange Server
 Quando si usa Exchange Online oppure Exchange Server, è possibile usare l'integrazione IRM (Information Rights Management) che fornisce soluzioni di protezione delle informazioni aggiuntive:
@@ -76,8 +70,9 @@ Per altre informazioni sull'uso di Azure RMS con SharePoint, vedere il post segu
 
 ## Passaggi successivi
 
-Per altre informazioni sul supporto di Azure Rights Management da parte di altre applicazioni e servizi, vedere [Supporto di Microsoft Azure Rights Management da parte delle applicazioni](applications-support.md).
+Per altre informazioni sul supporto di Azure Rights Management da parte di altre applicazioni e servizi, vedere [Supporto di Azure Rights Management da parte delle applicazioni](applications-support.md).
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jul16_HO1-->
 
 

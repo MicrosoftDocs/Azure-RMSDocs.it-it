@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Script di Windows PowerShell per la protezione Azure RMS usando l'infrastruttura di classificazione file di Gestione risorse file server | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: a1771c37bffa2af60773a5befdd35c14f684c942
+
 
 ---
 
@@ -29,10 +23,10 @@ ms.suite: ems
 
 *Si applica a: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
 
-Questa pagina contiene lo script di esempio per copiare e modificare, come descritto in [Protezione RMS con l'infrastruttura di classificazione file (FCI, File Classification Infrastructure) per Windows Server](configure-fci.md).
+Questa pagina contiene lo script di esempio per copiare e modificare, come descritto nell'articolo relativo alla [protezione RMS con l'infrastruttura di classificazione file per Windows Server](configure-fci.md).
 
-*&#42;&#42;Dichiarazione di non responsabilità&#42;&#42;: questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo*
-*script di esempio viene fornito "nello stato in cui si trova" senza garanzia di alcun tipo.*
+*&#42;&#42;Dichiarazione di non responsabilità&#42;&#42;: questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script*
+*di esempio viene fornito "nello stato in stato in cui si trova" senza garanzia di alcun tipo.*
 
 ```
 <#
@@ -177,9 +171,10 @@ if (!$Script:isScriptProcess) { exit(-1) } else {exit(0)}
 
 ---
 
-Tornare a [Protezione RMS con l'infrastruttura di classificazione file (FCI, File Classification Infrastructure) per Windows Server](configure-fci.md).
+Tornare all'articolo relativo alla [protezione RMS con l'infrastruttura di classificazione file per Windows Server](configure-fci.md).
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

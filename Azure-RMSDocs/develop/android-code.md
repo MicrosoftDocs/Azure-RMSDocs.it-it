@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Esempi di codice Android | Azure RMS
 description: In questo argomento sono presentati importanti elementi di codice per la versione Android di RMS SDK.
-keywords:
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 58CC2E50-1E4D-4621-A947-25312C3FF519
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 5d8c7ab53f76005d7efbfd2d795da08e41f83941
+
 
 ---
 
@@ -110,7 +105,7 @@ Di seguito sono riportati esempi di codice tratti da un’applicazione di esempi
 
     **Origine**: *MsipcAuthenticationCallback.java*.
 
-    **Descrizione**: in questo passaggio viene mostrato l’uso di ADAL per implementare [**AuthenticationRequestCallback**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) con parametri di autenticazione di esempio. Per altre informazioni sull’uso di ADAL, vedere [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/en-us/library/jj573266.aspx).
+    **Descrizione**: in questo passaggio viene mostrato l’uso di ADAL per implementare [**AuthenticationRequestCallback**](/rights-management/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) con parametri di autenticazione di esempio. Per altre informazioni sull'uso di ADAL, vedere [Active Directory Authentication Library .NET](https://msdn.microsoft.com/library/jj573266.aspx).
 
 
         class MsipcAuthenticationCallback implements AuthenticationRequestCallback
@@ -211,12 +206,7 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
 
 
 
-    CreationCallback<List<TemplateDescriptor>> getTemplatesCreationCallback = new CreationCallback<List<TemplateDescriptor>>()
-      {
-          @Override
-          public Context getContext()
-          {
-              …
+    CreationCallback<List<TemplateDescriptor>> getTemplatesCreationCallback = new CreationCallback<List<TemplateDescriptor>>() { @Override public Context getContext() { …
           }
 
           @Override
@@ -236,30 +226,18 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
           {
              …
           }
-      };
-      try
-      {
-              …
-          mIAsyncControl = TemplateDescriptor.getTemplates(emailId, mRmsAuthCallback, getTemplatesCreationCallback);
-      }
-      catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e)
-      {
-              …
+      }; try { …
+          mIAsyncControl = TemplateDescriptor.getTemplates(emailId, mRmsAuthCallback, getTemplatesCreationCallback); } catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e) { …
       }
 
 
 -    **Passaggio 2**: Creare una classe [**UserPolicy**](/rights-management/sdk/4.2/api/android/userpolicy) usando il primo modello dell'elenco.
 
-    **Source**: *MsipcTaskFragment.java*
+    **Origine**: *MsipcTaskFragment.java*
 
 
 
-      CreationCallback<UserPolicy> userPolicyCreationCallback = new CreationCallback<UserPolicy>()
-      {
-          @Override
-          public Context getContext()
-          {
-              …
+      CreationCallback<UserPolicy> userPolicyCreationCallback = new CreationCallback<UserPolicy>() { @Override public Context getContext() { …
           }
 
           @Override
@@ -279,34 +257,19 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
           {
               …
           }
-      };
-      try
-      {
-           …
-          mIAsyncControl = UserPolicy.create((TemplateDescriptor)selectedDescriptor, mEmailId, mRmsAuthCallback,
-                            UserPolicyCreationFlags.NONE, userPolicyCreationCallback);
-           …
-      }
-      catch (InvalidParameterException e)
-      {
-              …
+      }; try { …
+          mIAsyncControl = UserPolicy.create((TemplateDescriptor)selectedDescriptor, mEmailId, mRmsAuthCallback, UserPolicyCreationFlags.NONE, userPolicyCreationCallback); …
+      } catch (InvalidParameterException e) { …
       }
 
 
 -    **Passaggio 3**: Creare una classe [**ProtectedFileOutputStream**](/rights-management/sdk/4.2/api/android/protectedfileoutputstream#msipcthin2_protectedfileoutputstream_class_java) e scrivere il contenuto.
 
-    **Source**: *MsipcTaskFragment.java*
+    **Origine**: *MsipcTaskFragment.java*
 
 
-    private void createPTxt(final byte[] contentToProtect)
-        {
-             …
-            CreationCallback<ProtectedFileOutputStream> protectedFileOutputStreamCreationCallback = new CreationCallback<ProtectedFileOutputStream>()
-            {
-                @Override
-                public Context getContext()
-                {
-                 …
+    private void createPTxt(final byte[] contentToProtect) { …
+            CreationCallback<ProtectedFileOutputStream> protectedFileOutputStreamCreationCallback = new CreationCallback<ProtectedFileOutputStream>() { @Override public Context getContext() { …
                 }
 
                 @Override
@@ -357,19 +320,14 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
 
 
 
-### Scenario: apertura di un file protetto personalizzato
+### Scenario: aprire di un file protetto personalizzato
 
 -   **Passaggio 1**: Creare un oggetto[**UserPolicy**](/rights-management/sdk/4.2/api/android/userpolicy) da *serializedContentPolicy*.
 
     **Origine**: *MsipcTaskFragment.java*
 
 
-    CreationCallback<UserPolicy> userPolicyCreationCallbackFromSerializedContentPolicy = new CreationCallback<UserPolicy>()
-            {
-                @Override
-                public void onSuccess(UserPolicy userPolicy)
-                {
-                  …
+    CreationCallback<UserPolicy> userPolicyCreationCallbackFromSerializedContentPolicy = new CreationCallback<UserPolicy>() { @Override public void onSuccess(UserPolicy userPolicy) { …
                 }
 
                 @Override
@@ -392,45 +350,27 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
             };
 
 
-    try
-    {
-      ...
+    try {   ...
 
       // Read the serializedContentPolicyLength from the inputStream.
       long serializedContentPolicyLength = readUnsignedInt(inputStream);
 
       // Read the PL bytes from the input stream using the PL size.
-      byte[] serializedContentPolicy = new byte[(int)serializedContentPolicyLength];
-      inputStream.read(serializedContentPolicy);
+      byte[] serializedContentPolicy = new byte[(int)serializedContentPolicyLength]; inputStream.read(serializedContentPolicy);
 
       ...
 
-      UserPolicy.acquire(serializedContentPolicy, null, mRmsAuthCallback, PolicyAcquisitionFlags.NONE,
-              userPolicyCreationCallbackFromSerializedContentPolicy);
-    }
-    catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e)
-    {
-      ...
-    }
-    catch (IOException e)
-    {
-      ...
-    }
+      UserPolicy.acquire(serializedContentPolicy, null, mRmsAuthCallback, PolicyAcquisitionFlags.NONE,           userPolicyCreationCallbackFromSerializedContentPolicy); } catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e) {   ... } catch (IOException e) {   ... }
 
 
 
 -    **Passaggio 2**: Creare una classe [**CustomProtectedInputStream**](/rights-management/sdk/4.2/api/android/customprotectedinputstream#msipcthin2_customprotectedinputstream_class_java) utilizzando la classe [**UserPolicy**](/rights-management/sdk/4.2/api/android/userpolicy) del **Passaggio 1**.
 
-    **Source**: *MsipcTaskFragment.java*
+    **Origine**: *MsipcTaskFragment.java*
 
 
 
-      CreationCallback<CustomProtectedInputStream> customProtectedInputStreamCreationCallback = new CreationCallback<CustomProtectedInputStream>()
-      {
-         @Override
-         public Context getContext()
-         {
-             …
+      CreationCallback<CustomProtectedInputStream> customProtectedInputStreamCreationCallback = new CreationCallback<CustomProtectedInputStream>() { @Override public Context getContext() { …
          }
 
          @Override
@@ -468,65 +408,34 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
          }
      };
 
-    try
-    {
-      ...
+    try {  ...
 
       // Retrieve the encrypted content size.
       long encryptedContentLength = readUnsignedInt(inputStream);
 
       updateTaskStatus(new TaskStatus(TaskState.Starting, "Consuming content", true));
 
-      CustomProtectedInputStream.create(userPolicy, inputStream,
-                                     encryptedContentLength,
-                                     customProtectedInputStreamCreationCallback);
-    }
-    catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e)
-    {
-      ...
-    }
-    catch (IOException e)
-    {
-      ...
-    }
+      CustomProtectedInputStream.create(userPolicy, inputStream,                                 encryptedContentLength,                                 customProtectedInputStreamCreationCallback); } catch (com.microsoft.rightsmanagement.exceptions.InvalidParameterException e) {  ... } catch (IOException e) {  ... }
 
 
 -    **Passaggio 3**: Leggere il contenuto da [**CustomProtectedInputStream**](/rights-management/sdk/4.2/api/android/customprotectedinputstream#msipcthin2_customprotectedinputstream_class_java) in *mDecryptedContent*, quindi chiudere.
 
-    **Source**: *MsipcTaskFragment.java*
+    **Origine**: *MsipcTaskFragment.java*
 
 
-    @Override
-    public void onSuccess(CustomProtectedInputStream customProtectedInputStream)
-    {
-      mUserPolicy = customProtectedInputStream.getUserPolicy();
-      ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+    @Override public void onSuccess(CustomProtectedInputStream customProtectedInputStream) {  mUserPolicy = customProtectedInputStream.getUserPolicy();  ByteArrayOutputStream buffer = new ByteArrayOutputStream();
 
       int nRead;                      
       byte[] dataChunk = new byte[16384];
 
-      try
-      {
-        while ((nRead = customProtectedInputStream.read(dataChunk, 0,
-                                                            dataChunk.length)) != -1)
-        {
-           buffer.write(dataChunk, 0, nRead);
-        }
+      try  {    while ((nRead = customProtectedInputStream.read(dataChunk, 0,                                                        dataChunk.length)) != -1)    {       buffer.write(dataChunk, 0, nRead);    }
 
-        buffer.flush();
-        mDecryptedContent = new String(buffer.toByteArray(), Charset.forName("UTF-8"));
+        buffer.flush();    mDecryptedContent = new String(buffer.toByteArray(), Charset.forName("UTF-8"));
 
-        buffer.close();
-        customProtectedInputStream.close();
-      }
-      catch (IOException e)
-      {
-        ...
-      }
-    }
+        buffer.close();    customProtectedInputStream.close();  }  catch (IOException e)  {    ...  } }
 
 
-### Scenario: creazione di un file protetto personalizzato usando un criterio personalizzato (ad-hoc)
+### Scenario: creare un file protetto personalizzato usando un criterio personalizzato (ad-hoc)
 
 -   **Passaggio 1**: Creare un descrittore di criteri con un indirizzo di posta elettronica fornito dall’utente.
 
@@ -536,29 +445,18 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
 
 
 
-      // create userRights list
-      UserRights userRights = new UserRights(Arrays.asList("consumer@domain.com"),
-        Arrays.asList( CommonRights.View, EditableDocumentRights.Print));
-      ArrayList<UserRights> usersRigthsList = new ArrayList<UserRights>();
-      usersRigthsList.add(userRights);
+      // create userRights list   UserRights userRights = new UserRights(Arrays.asList("consumer@domain.com"),     Arrays.asList( CommonRights.View, EditableDocumentRights.Print));   ArrayList<UserRights> usersRigthsList = new ArrayList<UserRights>();   usersRigthsList.add(userRights);
 
-      // Create PolicyDescriptor using userRights list
-      PolicyDescriptor policyDescriptor = PolicyDescriptor.createPolicyDescriptorFromUserRights(
-                                                             usersRigthsList);
-      policyDescriptor.setOfflineCacheLifetimeInDays(10);
-      policyDescriptor.setContentValidUntil(new Date());
+      // Create PolicyDescriptor using userRights list   PolicyDescriptor policyDescriptor = PolicyDescriptor.createPolicyDescriptorFromUserRights(                                                          usersRigthsList);   policyDescriptor.setOfflineCacheLifetimeInDays(10);   policyDescriptor.setContentValidUntil(new Date());
 
 
 
 -    **Passaggio 2**: Creare una classe personalizzata [**UserPolicy**](/rights-management/sdk/4.2/api/android/userpolicy) dal descrittore del criterio, *selectedDescriptor*.
 
-    **Source**: *MsipcTaskFragment.java*
+    **Origine**: *MsipcTaskFragment.java*
 
 
-       mIAsyncControl = UserPolicy.create((PolicyDescriptor)selectedDescriptor,
-                                              mEmailId, mRmsAuthCallback,
-                                              UserPolicyCreationFlags.NONE,
-                                              userPolicyCreationCallback);
+       mIAsyncControl = UserPolicy.create((PolicyDescriptor)selectedDescriptor,                                          mEmailId, mRmsAuthCallback,                                          UserPolicyCreationFlags.NONE,                                          userPolicyCreationCallback);
 
 
 
@@ -567,14 +465,7 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
     **Origine**: *MsipcTaskFragment.java*
 
 
-    File file = new File(filePath);
-        final OutputStream outputStream = new FileOutputStream(file);
-        CreationCallback<CustomProtectedOutputStream> customProtectedOutputStreamCreationCallback = new CreationCallback<CustomProtectedOutputStream>()
-        {
-            @Override
-            public Context getContext()
-            {
-              …
+    File file = new File(filePath); final OutputStream outputStream = new FileOutputStream(file); CreationCallback<CustomProtectedOutputStream> customProtectedOutputStreamCreationCallback = new CreationCallback<CustomProtectedOutputStream>() { @Override public Context getContext() { …
             }
 
             @Override
@@ -637,6 +528,7 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
  
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

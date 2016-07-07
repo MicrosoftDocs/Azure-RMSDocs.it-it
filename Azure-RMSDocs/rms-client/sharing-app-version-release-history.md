@@ -1,27 +1,20 @@
 ---
-# required metadata
-
 title: Applicazione di condivisione Rights Management&colon; Cronologia delle versioni | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: b19eadd408837ebcd77b3ae2f9520f5286fcf41f
+ms.openlocfilehash: cad9d01735d8e649875bc6bba73d29573891e1d8
+
 
 ---
 
@@ -33,8 +26,21 @@ Il team di Rights Management aggiorna regolarmente l'applicazione di condivision
 
 Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
-> [!NOTE]
-> Per commenti o domande sull'applicazione di condivisione RMS, inviare un messaggio di posta elettronica a [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
+> [!NOTE]Per commenti o domande sull'applicazione di condivisione RMS, inviare un messaggio di posta elettronica a [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
+
+## Versione 1.0.2191.0
+**Rilasciata il**: 16/06/2016
+
+**Correzioni**:
+
+- Il sito del rilevamento dei documenti ora specifica il numero di visualizzazioni corretto per ogni documento rilevato.
+
+- I modelli per tutte le impostazioni locali vengono ora visualizzati come disponibili agli utenti.
+
+- Dopo aver usato Condividi file protetto per un file di PowerPoint, le modifiche apportate alla versione locale del file ora vengono salvate correttamente.
+
+- Risoluzione di alcuni bug minori e miglioramenti per i messaggi di errore.
+
 
 ## Versione 1.0.2004.0
 **Rilasciata**: 11/12/2015
@@ -62,7 +68,7 @@ Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
 -   Supporto per Multi-Factor Authentication (MFA) per Azure RMS, che rimuove inoltre la dipendenza dall’Assistente per l'accesso Microsoft per applicazioni che utilizzano l’autenticazione moderna.
 
-    Per altre informazioni, vedere la sezione [Multi-Factor Authentication (MFA) e Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms) in [Requisiti per Azure Rights Management](../get-started/requirements-azure-rms.md).
+    Per altre informazioni, vedere la sezione [Multi-Factor Authentication (MFA) e Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-rms) di [Requisiti per Azure Rights Management](../get-started/requirements-azure-rms.md).
 
 ## Versione 1.0.1784.0
 **Rilasciata**: 30/7/2015
@@ -84,7 +90,7 @@ Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
 **Nuove funzionalità**:
 
--   Supporto per rilevamento e revoca dei documenti. Per altre informazioni, vedere [Rilevare e revocare i documenti quando si usa l'applicazione di condivisione RMS](sharing-app-track-revoke.md).
+-   Supporto per rilevamento e revoca dei documenti. Per altre informazioni, vedere [Rilevare e revocare i documenti quando si usa l'applicazione RMS sharing](sharing-app-track-revoke.md).
 
 -   Il supporto del modello quando si sceglie **Condividi file protetto**:
 
@@ -94,7 +100,7 @@ Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
     -   Non si visualizzano più le opzioni per **Consenti consumo su tutti i dispositivi** e **Applica restrizioni d'uso**. Al contrario, **Protezione generica** viene selezionato automaticamente in base al tipo di file.
 
-    Per altre informazioni, vedere [Opzioni della finestra di dialogo per l'applicazione di condivisione Rights Management](sharing-app-dialog-box.md).
+    Per altre informazioni, vedere [Opzioni della finestra di dialogo per l'applicazione Rights Management sharing](sharing-app-dialog-box.md).
 
 ## Versione 1.0.1667.0
 **Rilasciata**: 19/1/2015
@@ -109,10 +115,11 @@ Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
 **Nuove funzionalità**:
 
--   **Supporto per più domini di posta elettronica all'interno dell'organizzazione**: se si usa AD RMS e gli utenti dell'organizzazione dispongono di più domini di posta elettronica, questo aggiornamento consente loro di utilizzare contenuti protetti dagli utenti dell'organizzazione in altri domini. Per altre informazioni, vedere la sezione [Solo AD RMS: Supporto per più domini di posta elettronica all'interno dell'organizzazione](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) in [Guida dell'amministratore dell'applicazione di condivisione Rights Management](sharing-app-admin-guide.md).
+-   **Supporto per più domini di posta elettronica all'interno dell'organizzazione**: se si usa AD RMS e gli utenti dell'organizzazione dispongono di più domini di posta elettronica, questo aggiornamento consente loro di utilizzare contenuti protetti dagli utenti dell'organizzazione in altri domini. Per altre informazioni, vedere la sezione [Solo AD RMS: Supporto per più domini di posta elettronica all'interno dell'organizzazione](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) della [Guida dell'amministratore dell'applicazione Rights Management sharing](sharing-app-admin-guide.md).
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO3-->
 
 

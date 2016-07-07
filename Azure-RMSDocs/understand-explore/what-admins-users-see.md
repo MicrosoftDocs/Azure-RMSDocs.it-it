@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Cosa visualizzano gli amministratori e gli utenti? | (Azure RMS)
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/09/2016
+ms.date: 06/28/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 013e0eb4-49a7-4e81-9e4d-f56c0ceb017f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 7a9c8b531ec342e7d5daf0cbcacd6597a79e6a55
+ms.openlocfilehash: 213d077a65abd5115b7e0491dfc9cd8145752b23
+
 
 ---
 
@@ -32,11 +26,12 @@ ms.suite: ems
 
 Questo articolo mostra alcuni esempi tipici di come gli amministratori e gli utenti vedono e possono usare Azure Rights Management (RMS) per proteggere informazioni sensibili o riservate.
 
-> [!NOTE] In questi esempi in cui i dati sono protetti da Azure RMS, il proprietario del contenuto continua ad avere accesso completo ai dati (file o posta elettronica), anche se la protezione applicata concede le autorizzazioni a un gruppo di cui il proprietario non fa parte o anche se la protezione applicata include una data di scadenza.
+> [!NOTE]
+> In questi esempi in cui i dati sono protetti da Azure RMS, il proprietario del contenuto continua ad avere accesso completo ai dati (file o posta elettronica), anche se la protezione applicata concede le autorizzazioni a un gruppo di cui il proprietario non fa parte o anche se la protezione applicata include una data di scadenza.
 >
 > Analogamente, il reparto IT può accedere sempre ai dati protetti senza restrizioni, usando la funzionalità Utente con privilegi avanzati di Rights Management che concede l'accesso delegato a specifici utenti autorizzati o servizi. Inoltre, il personale IT può tenere traccia e monitorare l'utilizzo per i dati che sono stati protetti, ad esempio chi accede ai dati e quando.
 
-Per altre schermate e video che mostrano RMS in azione, vedere il [portale dei servizi di Microsoft Rights Management](http://www.microsoft.com/rms) e il [blog del team Microsoft Rights Management (RMS)](http://blogs.technet.com/b/rms).
+Per altre schermate e video che illustrano RMS in azione, controllare l'[Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) (blog sulla sicurezza e la mobilità aziendale).
 
 ## Attivazione e configurazione di Rights Management
 Sebbene sia possibile usare Windows PowerShell per attivare e configurare Azure RMS, è più semplice procedere dal portale di gestione. Quando il servizio viene attivato, sono disponibili due modelli predefiniti che gli amministratori e gli utenti possono selezionare per applicare la protezione delle informazioni ai file in modo rapido e semplice. È anche possibile creare modelli personalizzati per includere opzioni e impostazioni aggiuntive.
@@ -246,6 +241,7 @@ Se Roberto inoltra il messaggio di posta elettronica con l'allegato o lo salva i
 Dopo avere visto alcuni esempi di ciò che Azure RMS è in grado di fare, è interessante capire come opera. Per informazioni tecniche sul funzionamento di Azure RMS, vedere [Funzionamento di Azure RMS](how-does-it-work.md).
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

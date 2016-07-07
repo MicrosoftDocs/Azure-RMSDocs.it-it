@@ -1,27 +1,20 @@
 ---
-# required metadata
-
 title: Configurazione dei diritti di utilizzo per Azure Rights Management | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/08/2016
+ms.date: 06/16/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: 3883a46440f016138dd50d061a58089253721719
+ms.openlocfilehash: 21b92fae5fd00d80f9afd2e80d21c08bfa47b7b2
+
 
 ---
 
@@ -65,7 +58,7 @@ Consente di salvare il documento nella posizione corrente.
 
 **Nome nei modelli AD RMS**: *Salva*
 
-**Valore costante o valore API**: IPC_GENERIC_WRITEL"EDIT"
+**Costante o valore API**: IPC_GENERIC_WRITE L"EDIT"
 
 Nelle applicazioni di Office questo diritto consente anche di modificare il documento.
 
@@ -83,7 +76,7 @@ Consente di aggiungere annotazioni o commenti al contenuto.
 
 **Nome nei modelli AD RMS**: non implementato.
 
-**Valore costante o valore API**: IPC_GENERIC_COMMENTL"COMMENT"
+**Costante o valore API**: IPC_GENERIC_COMMENT L"COMMENT
 
 Questo diritto è disponibile nell’SDK, è disponibile come criterio ad hoc nel modulo di protezione RMS per Windows PowerShell ed è stato implementato in alcune applicazioni di fornitori di software. Tuttavia, non è ampiamente utilizzato e non è attualmente supportato dalle applicazioni di Office.
 
@@ -101,7 +94,7 @@ Abilita l'opzione per il salvataggio del contenuto con un nome file differente (
 
 **Nome nei modelli AD RMS**: *Esporta (Salva con nome*
 
-**Valore costante o valore API**: IPC_GENERIC_EXPORTL"EXPORT"
+**Costante o valore API**: IPC_GENERIC_EXPORT L"EXPORT"
 
 Consente di eseguire anche altre opzioni di esportazione nelle applicazioni, ad esempio *Invia a OneNote*.
 
@@ -119,7 +112,7 @@ Abilita l'opzione per l'inoltro di un messaggio di posta elettronica e per l'agg
 
 **Nome nei modelli AD RMS:** *Inoltra*
 
-**Valore costante o valore API:** IPC_EMAIL_FORWARDL"FORWARD"
+**Costante o valore API:** IPC_EMAIL_FORWARD L"FORWARD"
 
 Non consente al server d'inoltro di concedere diritti ad altri utenti come parte dell'azione di inoltro.
 
@@ -137,7 +130,7 @@ Concede tutti i diritti al documento. È possibile eseguire tutte le azioni disp
 
 **Nome nei modelli AD RMS:** *Controllo completo*
 
-**Valore costante o valore API**: IPC_GENERIC_ALLL"OWNER"
+**Costante o valore API**: IPC_GENERIC_ALL L"OWNER"
 
 Include la possibilità di rimuovere la protezione.
 
@@ -155,7 +148,7 @@ Abilita le opzioni per la stampa del contenuto.
 
 **Nome nei modelli AD RMS:** *Stampa*
 
-**Valore costante o valore API**: IPC_GENERIC_PRINTL"PRINT"
+**Costante o valore API**: IPC_GENERIC_PRINT L"PRINT
 
 ---
 
@@ -187,7 +180,7 @@ Abilita l'opzione *Rispondi a tutti* in un client di posta elettronica, ma non c
 
 **Nome nei modelli AD RMS:** *Rispondi a tutti*
 
-**Valore costante o valore API:** IPC_EMAIL_REPLYALLL"REPLYALL"
+**Costante o valore API:** IPC_EMAIL_REPLYALL L"REPLYALL"
 
 ---
 
@@ -203,7 +196,7 @@ Consente all’utente di aprire il documento e visualizzarne il contenuto.
 
 **Nome nei modelli AD RMS:** *Visualizza*
 
-**Valore costante o valore API**: IPC_GENERIC_READL"VIEW"
+**Costante o valore API:** IPC_GENERIC_READ L"VIEW"
 
 ---
 
@@ -219,7 +212,7 @@ Abilita le opzioni per la copia dei dati, inclusa l'acquisizione di schermate, n
 
 **Nome nei modelli AD RMS:** *Estrai*
 
-**Costante API o valore:** IPC_GENERIC_EXTRACTL"EXTRACT"
+**Costante o valore API:** IPC_GENERIC_EXTRACTL"EXTRACT"
 
 In alcune applicazioni consente anche di salvare l'intero documento in un formato non protetto.
 
@@ -293,6 +286,7 @@ Un utente vuole inviare per posta elettronica alcune informazioni a utenti speci
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO3-->
 
 

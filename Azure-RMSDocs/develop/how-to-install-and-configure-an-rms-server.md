@@ -1,26 +1,22 @@
 ---
-# required metadata
-
 title: Come installare, configurare e testare un server RMS | Azure RMS
 description: Installare e configurare un server RMS per il test dell'applicazione abilitata all'uso di diritti.
-keywords:
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/28/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 32C7F387-CF7E-4CE0-AFC9-4C63FE1E134A
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: d56c6636cb7a33f104bc3901355c3601266ad30c
+ms.openlocfilehash: b97743d9a5c90cb46b39b4d8a462aa1acd64dfe1
+
 
 ---
 
@@ -65,12 +61,13 @@ La procedura seguente consente di configurare il server RMS e include queste ope
 
     Per eseguire test con un server RMS, configurare l'individuazione sul lato server o sul lato client per abilitare Rights Management Services Client 2.1 per individuare e stabilire la comunicazione con il server RMS.
 
-    > [!Note] I test con Azure RMS non richiedono la configurazione di rilevamento.
+    > [!Note]
+    > I test con Azure RMS non richiedono la configurazione di rilevamento.
 
   - Nell'individuazione del server, un amministratore registra un service connection point (SCP) per il cluster radice RMS con Active Directory e il client esegue una query ad Active Directory per individuare SCP e stabilire una connessione con il server.
   - Nell'individuazione del client, configurare le impostazioni di individuazione del servizio RMS nel Registro sul computer su cui è in esecuzione RMS Client 2.1. Queste impostazioni rimandano RMS Client 2.1 al server RMS da usare. Quando sono presenti, l'individuazione non viene eseguita sul lato server.
 
-  Per configurare l'individuazione sul lato client, è possibile impostare le chiavi del registro seguenti in modo che puntino al server RMS. Per informazioni su come configurare l'individuazione sul lato assistenza, vedere [RMS Client 2.0 Deployment Notes](https://technet.microsoft.com/en-us/library/jj159267(WS.10).aspx) (Note sulla distribuzione di RMS Client 2.0).
+  Per configurare l'individuazione sul lato client, è possibile impostare le chiavi del registro seguenti in modo che puntino al server RMS. Per informazioni su come configurare l'individuazione sul lato servizio, vedere [Note sulla distribuzione del client RMS](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
 
 1. **EnterpriseCertification**
         HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterpriseCertification
@@ -80,9 +77,11 @@ La procedura seguente consente di configurare il server RMS e include queste ope
 2. **EnterprisePublishing**
         HKEY_LOCAL_MACHINE        SOFTWARE          Microsoft            MSIPC              ServiceLocation                EnterprisePublishing **Valore**: (predefinito): [**http|https**]://RMSClusterName/**_wmcs/Licensing**
 
->[!NOTE] Per impostazione predefinita, queste chiavi non sono presenti nel registro e devono essere create.
+>[!NOTE] 
+> Per impostazione predefinita, queste chiavi non sono presenti nel registro e devono essere create.
 
->[!IMPORTANT] Se si esegue un'applicazione a 32 bit su una versione a 64 bit di Windows, è necessario impostare queste chiavi nel percorso della chiave seguente:<p>
+>[!IMPORTANT] 
+> Se si esegue un'applicazione a 32 bit su una versione a 64 bit di Windows, è necessario impostare queste chiavi nel percorso della chiave seguente:<p>
   ```    
   HKEY_LOCAL_MACHINE
     SOFTWARE
@@ -96,6 +95,7 @@ La procedura seguente consente di configurare il server RMS e include queste ope
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

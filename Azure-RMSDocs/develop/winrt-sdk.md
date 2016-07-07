@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Installazione per Windows Store | Azure RMS
 description: Le applicazioni di Windows Store possono usare Microsoft Rights Management SDK 4.2 per abilitare la protezione integrata delle informazioni nell'applicazione.
-keywords:
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 0b8e0fb6d872506ac3529bd137286f0e8fa562ee
+
 
 ---
 
@@ -41,7 +36,7 @@ Questo argomento illustra come impostare l'ambiente per la creazione di nuove ap
 Nel sistema di sviluppo è necessario disporre del software seguente:
 
 -   Sistema operativo [Windows 8.1](http://windows.microsoft.com/en-US/windows-8/meet)
--   [Windows SDK per Windows 8.1](https://msdn.microsoft.com/en-us/windows/desktop/bg162891.aspx)
+-   [Windows SDK per Windows 8.1](https://msdn.microsoft.com/windows/desktop/bg162891.aspx)
 -   Microsoft [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview) o versione successiva o Visual Studio Express 2012, incluso in Windows SDK per Windows 8.0/8.1.
 -   Il pacchetto di MS RMS SDK 4.2 per le applicazioni Windows Store. Per altre informazioni, vedere [Introduzione](get-started.md).
 -   Libreria di autenticazione: è consigliabile usare [Azure AD Authentication Library](https://msdn.microsoft.com/en-us/library/jj573266.aspx) e altre librerie di autenticazione.
@@ -89,6 +84,7 @@ A questo punto si è pronti per creare le nuove app Windows Store personalizzate
 [Informazioni di riferimento sulle API di Windows](/rights-management/sdk/4.2/api/winrt/Microsoft.RightsManagement)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

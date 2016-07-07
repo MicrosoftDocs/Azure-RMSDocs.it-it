@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Termini | Azure RMS
 description: Una raccolta di definizioni di termini specifici di Rights Management Services.
-keywords:
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: adb1f868-0da7-431b-83d1-86f41c2da4ae
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 5779cc10503ad7afe997e031a467021b513fc510
+
 
 ---
 
@@ -29,7 +24,7 @@ ms.suite: ems
 Una raccolta di definizioni di termini specifici di Rights Management Services.
 
 **Algoritmo deprecato**  
-Un'impostazione modale che implementa uno schema di protezione del contenuto precedente che fa riferimento alla modalità di crittografia di un cookbook elettronico. In questo SDK, l'impostazione consente di generare licenze compatibili con la libreria MSDRM usata da [AD Rights Management Services SDK](https://msdn.microsoft.com/en-us/library/windows/desktop/cc530379.aspx).
+Un'impostazione modale che implementa uno schema di protezione del contenuto precedente che fa riferimento alla modalità di crittografia di un cookbook elettronico. In questo SDK, l'impostazione consente di generare licenze compatibili con la libreria MSDRM usata da [AD Rights Management Services SDK](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx).
 
 Questa impostazione può causare la protezione del contenuto da parte dell'applicazione in un modo non conforme allo standard dei clienti per la protezione del contenuto.
 
@@ -49,6 +44,7 @@ Il formato PFile è trasparente allo sviluppatore dell'applicazione in quanto è
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

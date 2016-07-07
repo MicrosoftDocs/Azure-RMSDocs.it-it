@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Esercitazione per l'avvio rapido di Azure RMS - Passaggio 2 | Azure RMS
-description: Il secondo passaggio di questa esercitazione consente di provare rapidamente Microsoft Azure Rights Management per l'organizzazione. L'esercitazione è articolata in 5 passaggi, eseguibili in meno di 15 minuti.
-keywords:
+description: "Il secondo passaggio di questa esercitazione consente di provare rapidamente Microsoft Azure Rights Management per l'organizzazione. L'esercitazione è articolata in 5 passaggi, eseguibili in meno di 15 minuti."
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f32cf2f3-29e2-429c-a0fd-b16cc482484a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: da706bcaf52d0519706898501c563a9a03231dd9
+
 
 ---
 
@@ -71,9 +65,11 @@ A questo punto è possibile iniziare a proteggere i file che contengono le infor
 |Informazioni sulla differenza tra protezione nativa e protezione generica|[Qual è la differenza tra protezione generica e protezione integrata (nativa)?](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection-)|
 
 
->[!div class="step-by-step"] [« Passaggio 1](quick-start-tutorial.md)
-[Passaggio 3 »](tutorial-step3.md)
+>[!div class="step-by-step"]
+[«Passaggio 1](quick-start-tutorial.md)
+[Passaggio 3»](tutorial-step3.md)
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

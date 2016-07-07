@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Note sulla distribuzione del client RMS | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/13/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 2bd8aba91b9b65777c2319baea848e8313cbccda
+ms.openlocfilehash: ffddda9a144b23b64b54df4fe4d25ec62600599d
+
 
 ---
 
@@ -42,7 +36,8 @@ Il client RMS può essere ridistribuito gratuitamente e in bundle con altre appl
 ## Installazione del client RMS
 Il client RMS è incluso in un file eseguibile del programma di installazione denominato **setup_msipc_***<arch>***.exe**, dove *<arch>* è **x86** per i computer client a 32 bit o **x64** per i computer client a 64 bit. Il pacchetto di installazione a 64 bit (x64) installa un file eseguibile di runtime a 32 bit per la compatibilità con applicazioni a 32 bit eseguite sull'installazione di un sistema operativo a 64 bit, nonché un file eseguibile di runtime a 64 bit per il supporto di applicazioni native a 64 bit. Il programma di installazione a 32 bit (x86) non verrà eseguito su un'installazione di Windows a 64 bit.
 
-> [!NOTE] Sono necessari privilegi elevati per installare il client RMS, come ad esempio un membro del gruppo Administrators nel computer locale.
+> [!NOTE]
+> Sono necessari privilegi elevati per installare il client RMS, come ad esempio un membro del gruppo Administrators sul computer locale.
 
 È possibile installare il client RMS usando i metodi di installazione seguenti:
 
@@ -192,7 +187,8 @@ In alternativa all'uso di un punto di connessione del servizio o se tale punto n
 
 2.  Nell'editor del Registro di sistema passare a **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC**.
 
-    > [!IMPORTANT] Se si esegue un'applicazione a 32 bit in un computer a 64 bit, il percorso sarà il seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC**
+    > [!IMPORTANT]
+    > Se si esegue un'applicazione a 32 bit in un computer a 64 bit, il percorso sarà il seguente: **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC**
 
 3.  Per creare la sottochiave ServiceLocation, fare clic con il pulsante destro del mouse su **MSIPC**, scegliere **Nuovo**, fare clic su **Chiave** e quindi digitare **ServiceLocation**.
 
@@ -233,7 +229,8 @@ In alcuni casi, potrebbe essere necessario reindirizzare il traffico durante l'i
 
     **Valore:** https://fabrikam.com/_wmcs/licensing
 
-    > [!NOTE] Se per il server licenze precedente sono specificati sia l'URL Intranet che l'URL Extranet, è necessario impostare un nuovo mapping nome/valore per entrambi gli URL nella chiave LicensingRedirection.
+    > [!NOTE]
+    > Se per il server licenze precedente sono specificati sia l'URL Intranet che l'URL Extranet, è necessario impostare un nuovo mapping nome/valore per entrambi gli URL nella chiave LicensingRedirection.
 
 5.  Ripetere il passaggio precedente per tutti i server da reindirizzare.
 
@@ -241,6 +238,7 @@ In alcuni casi, potrebbe essere necessario reindirizzare il traffico durante l'i
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

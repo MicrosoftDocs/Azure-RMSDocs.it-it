@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Passaggio 2&colon; Migrazione da una chiave protetta tramite software a una chiave protetta tramite HSM | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 7a9c8b531ec342e7d5daf0cbcacd6597a79e6a55
+ms.openlocfilehash: 173641b9dada2673b48a1c210419cb933cdd9f13
+
 
 ---
 
@@ -32,7 +26,7 @@ ms.suite: ems
 
 Queste istruzioni fanno parte del [percorso di migrazione da AD RMS ad Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md) e si applicano solo se la chiave di AD RMS è protetta tramite software e si vuole eseguire la migrazione ad Azure Rights Management con una chiave del tenant protetta tramite HSM. 
 
-Se non si tratta dello scenario di configurazione prescelto, tornare al [Passaggio 2. Esportare i dati di configurazione da AD RMS e importarli in Azure RMS](migrate-from-ad-rms-to-azure-rms.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms), quindi scegliere una configurazione diversa.
+Se non si tratta dello scenario di configurazione prescelto, tornare al [Passaggio 2. Esportare i dati di configurazione da AD RMS e importarli in Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms), quindi scegliere una configurazione diversa.
 
 Questa procedura in tre parti consente di importare la configurazione di AD RMS in Azure RMS. La chiave del tenant di Azure RMS verrà gestita dall'utente (BYOK).
 
@@ -40,7 +34,7 @@ Questa procedura in tre parti consente di importare la configurazione di AD RMS 
 
 ## Parte 1: Estrarre il certificato concessore di licenze server (SLC) dai dati di configurazione e importare la chiave nel modulo di protezione hardware locale
 
-1.  Seguire i passaggi seguenti riportati nella sezione [Implementazione della modalità BYOK](plan-implement-tenant-key.md#BKMK_ImplementBYOK) dell'argomento [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](plan-implement-tenant-key.md):
+1.  Seguire la procedura riportata nella sezione [relativa alla modalità BYOK](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) dell'argomento [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](plan-implement-tenant-key.md), usando la procedura **Generare e trasferire la propria chiave del tenant tramite Internet** con le eccezioni seguenti:
 
     -   **Generare e trasferire la propria chiave del tenant tramite Internet**: **Preparare la workstation connessa a Internet**
 
@@ -79,7 +73,7 @@ Dopo l'estrazione del certificato concessore di licenze server (SLC) in modo da 
 
 ## Parte 2: Creare il pacchetto e trasferire la chiave del modulo di protezione hardware in Azure RMS
 
-1.  Seguire i passaggi seguenti della sezione [Implementazione della modalità BYOK](plan-implement-tenant-key.md#BKMK_ImplementBYOK) di [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](plan-implement-tenant-key.md):
+1.  Seguire i passaggi riportati nella sezione [relativa all'implementazione della modalità BYOK](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) in [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](plan-implement-tenant-key.md):
 
     -   **Generare e trasferire la propria chiave del tenant tramite Internet**: **Preparare la chiave del tenant per il trasferimento**
 
@@ -108,11 +102,12 @@ Dopo avere trasferito la chiave del modulo di protezione hardware in Azure RMS, 
     Disconnect-AadrmService
     ```
 
-È ora possibile andare al [Passaggio 3. Attivare il tenant di RMS](migrate-from-ad-rms-to-azure-rms.md#BKMK_Step3Migration).
+È ora possibile andare al [Passaggio 3. Attivare il tenant di RMS](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
 
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 
