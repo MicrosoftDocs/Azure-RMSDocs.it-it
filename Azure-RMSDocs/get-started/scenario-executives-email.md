@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Scenario - Scambiarsi informazioni con privilegi tra dirigenti | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/20/2016
@@ -12,16 +10,11 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: def8b7e98fd55a3d028978ffc9f8e41e38a5622c
+
 
 ---
 
@@ -56,7 +49,7 @@ Per le istruzioni di funzionamento di questo scenario, sono necessari i requisit
 |Azure Rights Management non è attivato|[Attivazione di Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |Una di queste configurazioni:<br /><br />- Exchange Online è abilitato per Azure Rights Management<br /><br />- Il connettore RMS è installato e configurato per Exchange locale|Per Exchange Online: vedere la sezione **Exchange Online: configurazione di IRM** in [Configurazione di applicazioni per Rights Management di Windows Azure](https://technet.microsoft.com/library/jj585031.aspx).<br /><br />Per Exchange locale: [Distribuzione del connettore di Azure Rights Management](https://technet.microsoft.com/library/dn375964.aspx)|
 |Configurazione di un modello personalizzato, come descritto di seguito|[Configurazione di modelli personalizzati per Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
-|Configurare una regola di protezione del trasporto per IRM, come descritto più avanti in questo articolo|Per Exchange Online: [Creare una regola di protezione del trasporto](https://technet.microsoft.com/library/dd302432.aspx)<br /><br />Per Exchange 2013: [Creare una regola di protezione del trasporto](https://technet.microsoft.com/en-us/library/dd302432%28v=exchg.150%29.asp)<br /><br />Per Exchange 2010: [Creare una regola di protezione del trasporto](https://technet.microsoft.com/en-us/library/dd302432%28v=exchg.141%29.aspx)|
+|Configurare una regola di protezione del trasporto per IRM, come descritto più avanti in questo articolo|Per Exchange Online: [Creare una regola di protezione del trasporto](https://technet.microsoft.com/library/dd302432.aspx)<br /><br />Per Exchange 2013: [Creare una regola di protezione del trasporto](https://technet.microsoft.com/library/dd302432%28v=exchg.150%29.asp)<br /><br />Per Exchange 2010: [Creare una regola di protezione del trasporto](https://technet.microsoft.com/en-us/library/dd302432%28v=exchg.141%29.aspx)|
 
 ### Per configurare il modello personalizzato per i dirigenti:
 
@@ -138,6 +131,7 @@ Quando si inviano informazioni aziendali riservate a un altro dirigente di VanAr
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
