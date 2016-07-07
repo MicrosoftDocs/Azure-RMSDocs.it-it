@@ -79295,9 +79295,9 @@
       "ArchiveFileCommit": "c3064287793f61647a2e8a2bb7c83bd6185702ad",
       "ArchiveFileDateTime": "2016-07-01T23:49:35.4890501Z",
       "ArchiveException": null,
-      "BilingualFilePath": null,
-      "BilingualFileCommit": null,
-      "BilingualDateTime": "0001-01-01T00:00:00",
+      "BilingualFilePath": "ol-handback\\Microsoft\\Azure-RMSDocs-pr.it-it\\master\\release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.it-it.xlf",
+      "BilingualFileCommit": "768a6440f7aa595f21295e76a23b265d2383ec6d",
+      "BilingualDateTime": "2016-07-07T17:49:15.287983Z",
       "BilingualException": null
     },
     "5779cc10503ad7afe997e031a467021b513fc510": {
