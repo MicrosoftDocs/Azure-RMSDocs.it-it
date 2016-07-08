@@ -527,8 +527,8 @@
 * Handoff File: [activate-office365-preview.7708e9e45db9b812160efac75f1066e22858608f.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/52c41e6703ea1cf652df950f432bb979705bbc4d/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/activate-office365-preview.7708e9e45db9b812160efac75f1066e22858608f.it-it.xlf)
 * Handoff Datetime: 2016-07-04 01:21:10
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [activate-office365-preview.7708e9e45db9b812160efac75f1066e22858608f.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/activate-office365-preview.7708e9e45db9b812160efac75f1066e22858608f.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [Azure-RMSDocs\deploy-use\activate-office365-preview.md](https://github.com/Microsoft/Azure-RMSDocs-pr.it-it/blob/f20fac01edb9d5d0d108a500e73b0b90d8ea8de7/Azure-RMSDocs/deploy-use/activate-office365-preview.md)
@@ -685,8 +685,8 @@
 * Handoff File: [configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/3154153fc9b940b8c0e7c4b5e56f5aabd93ce09f/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.it-it.xlf)
 * Handoff Datetime: 2016-07-08 07:18:03
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: [configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.it-it.xlf)
 * Handback Datetime: 2016-07-07 12:33:14
 * Bilingual File: [configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/configure-usage-rights.d1491a3e6b5496052f09d333e0ed56875eebb824.it-it.xlf)
@@ -849,8 +849,8 @@
 * Handoff File: [monitor-rms-connector.f938a97caf781680ad1036c38a0d1535b4565e92.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/a9735604f032aaa83fc80565f4d491bf254a4829/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/monitor-rms-connector.f938a97caf781680ad1036c38a0d1535b4565e92.it-it.xlf)
 * Handoff Datetime: 2016-07-08 17:30:01
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [monitor-rms-connector.f938a97caf781680ad1036c38a0d1535b4565e92.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/monitor-rms-connector.f938a97caf781680ad1036c38a0d1535b4565e92.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [Azure-RMSDocs\deploy-use\monitor-rms-connector.md](https://github.com/Microsoft/Azure-RMSDocs-pr.it-it/blob/f20fac01edb9d5d0d108a500e73b0b90d8ea8de7/Azure-RMSDocs/deploy-use/monitor-rms-connector.md)
@@ -1022,8 +1022,8 @@
 * Handoff File: [ad-rms-client.11dca0848083258df6dedace95b6817391b6833e.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/3154153fc9b940b8c0e7c4b5e56f5aabd93ce09f/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/ad-rms-client.11dca0848083258df6dedace95b6817391b6833e.it-it.xlf)
 * Handoff Datetime: 2016-07-08 07:18:03
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [ad-rms-client.11dca0848083258df6dedace95b6817391b6833e.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/ad-rms-client.11dca0848083258df6dedace95b6817391b6833e.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: [ad-rms-client.11dca0848083258df6dedace95b6817391b6833e.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/ad-rms-client.11dca0848083258df6dedace95b6817391b6833e.it-it.xlf)
 * Handback Datetime: 2016-07-07 12:33:14
 * Bilingual File: [ad-rms-client.11dca0848083258df6dedace95b6817391b6833e.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/ad-rms-client.11dca0848083258df6dedace95b6817391b6833e.it-it.xlf)
@@ -1036,8 +1036,8 @@
 * Handoff File: [ad-rms-overview.da33ed4cf79ed381a6c86754c03e4ed7bc62077a.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/3154153fc9b940b8c0e7c4b5e56f5aabd93ce09f/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/ad-rms-overview.da33ed4cf79ed381a6c86754c03e4ed7bc62077a.it-it.xlf)
 * Handoff Datetime: 2016-07-08 07:18:03
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [ad-rms-overview.da33ed4cf79ed381a6c86754c03e4ed7bc62077a.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/ad-rms-overview.da33ed4cf79ed381a6c86754c03e4ed7bc62077a.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: [ad-rms-overview.da33ed4cf79ed381a6c86754c03e4ed7bc62077a.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/ad-rms-overview.da33ed4cf79ed381a6c86754c03e4ed7bc62077a.it-it.xlf)
 * Handback Datetime: 2016-07-07 12:33:14
 * Bilingual File: [ad-rms-overview.da33ed4cf79ed381a6c86754c03e4ed7bc62077a.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/ad-rms-overview.da33ed4cf79ed381a6c86754c03e4ed7bc62077a.it-it.xlf)
@@ -1064,8 +1064,8 @@
 * Handoff File: [android-code.c54575560080707a5280400f481eb7b21c40af20.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/3154153fc9b940b8c0e7c4b5e56f5aabd93ce09f/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/android-code.c54575560080707a5280400f481eb7b21c40af20.it-it.xlf)
 * Handoff Datetime: 2016-07-08 07:18:03
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [android-code.c54575560080707a5280400f481eb7b21c40af20.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/android-code.c54575560080707a5280400f481eb7b21c40af20.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: [android-code.c54575560080707a5280400f481eb7b21c40af20.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/android-code.c54575560080707a5280400f481eb7b21c40af20.it-it.xlf)
 * Handback Datetime: 2016-07-07 12:33:14
 * Bilingual File: [android-code.c54575560080707a5280400f481eb7b21c40af20.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/android-code.c54575560080707a5280400f481eb7b21c40af20.it-it.xlf)
@@ -1092,8 +1092,8 @@
 * Handoff File: [android-sdk.11c01dde37b53adb51792e58d71e80dc1af71b8f.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/3154153fc9b940b8c0e7c4b5e56f5aabd93ce09f/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/android-sdk.11c01dde37b53adb51792e58d71e80dc1af71b8f.it-it.xlf)
 * Handoff Datetime: 2016-07-08 07:18:03
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [android-sdk.11c01dde37b53adb51792e58d71e80dc1af71b8f.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/android-sdk.11c01dde37b53adb51792e58d71e80dc1af71b8f.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: [android-sdk.11c01dde37b53adb51792e58d71e80dc1af71b8f.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/android-sdk.11c01dde37b53adb51792e58d71e80dc1af71b8f.it-it.xlf)
 * Handback Datetime: 2016-07-07 12:33:14
 * Bilingual File: [android-sdk.11c01dde37b53adb51792e58d71e80dc1af71b8f.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/android-sdk.11c01dde37b53adb51792e58d71e80dc1af71b8f.it-it.xlf)
@@ -1233,8 +1233,8 @@
 * Handoff File: [deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/8d874ab1e4b54b183ae332dfab600aac03d37654/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.it-it.xlf)
 * Handoff Datetime: 2016-07-06 17:29:36
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/deploying-your-application.3864e91a1ee9e182dd8ff5b23cd391c156cc4e29.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [Azure-RMSDocs\develop\deploying-your-application.md](https://github.com/Microsoft/Azure-RMSDocs-pr.it-it/blob/1cc778435a1cbb2b2bf78796efa89d50466a3214/Azure-RMSDocs/develop/deploying-your-application.md)
@@ -1264,8 +1264,8 @@
 * Handoff File: [developers-guide.0ccf7302c782a322ae1f0e93452446d73bcd4df3.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/52c41e6703ea1cf652df950f432bb979705bbc4d/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/developers-guide.0ccf7302c782a322ae1f0e93452446d73bcd4df3.it-it.xlf)
 * Handoff Datetime: 2016-07-04 01:21:10
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [developers-guide.0ccf7302c782a322ae1f0e93452446d73bcd4df3.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/developers-guide.0ccf7302c782a322ae1f0e93452446d73bcd4df3.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: [developers-guide.0ccf7302c782a322ae1f0e93452446d73bcd4df3.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/8566e4ca8baccbf1b85dd0483af2b8373d928c94/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/developers-guide.0ccf7302c782a322ae1f0e93452446d73bcd4df3.it-it.xlf)
 * Handback Datetime: 2016-07-03 01:02:25
 * Bilingual File: [developers-guide.0ccf7302c782a322ae1f0e93452446d73bcd4df3.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/8566e4ca8baccbf1b85dd0483af2b8373d928c94/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/developers-guide.0ccf7302c782a322ae1f0e93452446d73bcd4df3.it-it.xlf)
@@ -1278,8 +1278,8 @@
 * Handoff File: [developing-your-application.8fd29906a628e7dc3c644e93f1a14b01523f9aa6.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/8d874ab1e4b54b183ae332dfab600aac03d37654/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/developing-your-application.8fd29906a628e7dc3c644e93f1a14b01523f9aa6.it-it.xlf)
 * Handoff Datetime: 2016-07-06 17:29:36
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [developing-your-application.8fd29906a628e7dc3c644e93f1a14b01523f9aa6.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/developing-your-application.8fd29906a628e7dc3c644e93f1a14b01523f9aa6.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [Azure-RMSDocs\develop\developing-your-application.md](https://github.com/Microsoft/Azure-RMSDocs-pr.it-it/blob/6d906b6b149a44a3c087463cd6ffd4334ba33c1a/Azure-RMSDocs/develop/developing-your-application.md)
@@ -1489,8 +1489,8 @@
 * Handoff File: [index.a61cb583487d493a2f466b67dabd23a946990ed9.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/52c41e6703ea1cf652df950f432bb979705bbc4d/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/index.a61cb583487d493a2f466b67dabd23a946990ed9.it-it.xlf)
 * Handoff Datetime: 2016-07-04 01:21:10
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [index.a61cb583487d493a2f466b67dabd23a946990ed9.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/index.a61cb583487d493a2f466b67dabd23a946990ed9.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: [index.a61cb583487d493a2f466b67dabd23a946990ed9.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/04dfd306c95968de2417f7b12be3f803ef14bc42/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/index.a61cb583487d493a2f466b67dabd23a946990ed9.it-it.xlf)
 * Handback Datetime: 2016-07-02 07:14:48
 * Bilingual File: [index.a61cb583487d493a2f466b67dabd23a946990ed9.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/04dfd306c95968de2417f7b12be3f803ef14bc42/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/index.a61cb583487d493a2f466b67dabd23a946990ed9.it-it.xlf)
@@ -1517,8 +1517,8 @@
 * Handoff File: [ios-os-x-code-examples.871773d38b38c27254b05260ca964b3d98051094.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/e42f5c497f13f79649efe7099c2c162f53491865/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/ios-os-x-code-examples.871773d38b38c27254b05260ca964b3d98051094.it-it.xlf)
 * Handoff Datetime: 2016-07-06 23:33:42
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [ios-os-x-code-examples.871773d38b38c27254b05260ca964b3d98051094.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/ios-os-x-code-examples.871773d38b38c27254b05260ca964b3d98051094.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [Azure-RMSDocs\develop\ios-os-x-code-examples.md](https://github.com/Microsoft/Azure-RMSDocs-pr.it-it/blob/a1f1c780348b94052d689b66ab6fa39763adc6fc/Azure-RMSDocs/develop/ios-os-x-code-examples.md)
@@ -1534,8 +1534,8 @@
 * Handoff File: [ios-sdk.04f8a23860188d2f8bee6a412cd6aa5accbf4161.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/3154153fc9b940b8c0e7c4b5e56f5aabd93ce09f/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/ios-sdk.04f8a23860188d2f8bee6a412cd6aa5accbf4161.it-it.xlf)
 * Handoff Datetime: 2016-07-08 07:18:03
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [ios-sdk.04f8a23860188d2f8bee6a412cd6aa5accbf4161.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/ios-sdk.04f8a23860188d2f8bee6a412cd6aa5accbf4161.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: [ios-sdk.04f8a23860188d2f8bee6a412cd6aa5accbf4161.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/ios-sdk.04f8a23860188d2f8bee6a412cd6aa5accbf4161.it-it.xlf)
 * Handback Datetime: 2016-07-07 12:33:14
 * Bilingual File: [ios-sdk.04f8a23860188d2f8bee6a412cd6aa5accbf4161.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/ios-sdk.04f8a23860188d2f8bee6a412cd6aa5accbf4161.it-it.xlf)
@@ -1616,8 +1616,8 @@
 * Handoff File: [overview.6e2f032650d36c4e8bc88afe03974bb08b242502.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/3154153fc9b940b8c0e7c4b5e56f5aabd93ce09f/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/overview.6e2f032650d36c4e8bc88afe03974bb08b242502.it-it.xlf)
 * Handoff Datetime: 2016-07-08 07:18:03
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [overview.6e2f032650d36c4e8bc88afe03974bb08b242502.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/overview.6e2f032650d36c4e8bc88afe03974bb08b242502.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: [overview.6e2f032650d36c4e8bc88afe03974bb08b242502.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/overview.6e2f032650d36c4e8bc88afe03974bb08b242502.it-it.xlf)
 * Handback Datetime: 2016-07-07 12:33:14
 * Bilingual File: [overview.6e2f032650d36c4e8bc88afe03974bb08b242502.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/overview.6e2f032650d36c4e8bc88afe03974bb08b242502.it-it.xlf)
@@ -1630,8 +1630,8 @@
 * Handoff File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/3154153fc9b940b8c0e7c4b5e56f5aabd93ce09f/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.it-it.xlf)
 * Handoff Datetime: 2016-07-08 07:18:03
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/768a6440f7aa595f21295e76a23b265d2383ec6d/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.it-it.xlf)
 * Handback Datetime: 2016-07-07 17:41:33
 * Bilingual File: [release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/768a6440f7aa595f21295e76a23b265d2383ec6d/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/release-notes.826b77f06ae23f3a7f33ec7bfe221db9d73fa87b.it-it.xlf)
@@ -1728,8 +1728,8 @@
 * Handoff File: [terms.ac772ab1b278e2aa6b141e2a7ade485fe26fe47f.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/3154153fc9b940b8c0e7c4b5e56f5aabd93ce09f/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/terms.ac772ab1b278e2aa6b141e2a7ade485fe26fe47f.it-it.xlf)
 * Handoff Datetime: 2016-07-08 07:18:03
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [terms.ac772ab1b278e2aa6b141e2a7ade485fe26fe47f.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/terms.ac772ab1b278e2aa6b141e2a7ade485fe26fe47f.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: [terms.ac772ab1b278e2aa6b141e2a7ade485fe26fe47f.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/terms.ac772ab1b278e2aa6b141e2a7ade485fe26fe47f.it-it.xlf)
 * Handback Datetime: 2016-07-07 12:33:14
 * Bilingual File: [terms.ac772ab1b278e2aa6b141e2a7ade485fe26fe47f.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/terms.ac772ab1b278e2aa6b141e2a7ade485fe26fe47f.it-it.xlf)
@@ -1812,8 +1812,8 @@
 * Handoff File: [winrt-sdk.02e6d262a96a9158a66f51de86aff650672298a4.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/3154153fc9b940b8c0e7c4b5e56f5aabd93ce09f/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/winrt-sdk.02e6d262a96a9158a66f51de86aff650672298a4.it-it.xlf)
 * Handoff Datetime: 2016-07-08 07:18:03
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [winrt-sdk.02e6d262a96a9158a66f51de86aff650672298a4.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/winrt-sdk.02e6d262a96a9158a66f51de86aff650672298a4.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: [winrt-sdk.02e6d262a96a9158a66f51de86aff650672298a4.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/winrt-sdk.02e6d262a96a9158a66f51de86aff650672298a4.it-it.xlf)
 * Handback Datetime: 2016-07-07 12:33:14
 * Bilingual File: [winrt-sdk.02e6d262a96a9158a66f51de86aff650672298a4.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/winrt-sdk.02e6d262a96a9158a66f51de86aff650672298a4.it-it.xlf)
@@ -1852,8 +1852,8 @@
 * Handoff File: [faqs.026f9abe86913a512f64fd2a67018fda479e9cd0.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/e42f5c497f13f79649efe7099c2c162f53491865/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/faqs.026f9abe86913a512f64fd2a67018fda479e9cd0.it-it.xlf)
 * Handoff Datetime: 2016-07-06 23:33:42
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [faqs.026f9abe86913a512f64fd2a67018fda479e9cd0.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/faqs.026f9abe86913a512f64fd2a67018fda479e9cd0.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: 
 * Handback Datetime: 0001-01-01 00:00:00
 * Current Target File: [Azure-RMSDocs\get-started\faqs.md](https://github.com/Microsoft/Azure-RMSDocs-pr.it-it/blob/f20fac01edb9d5d0d108a500e73b0b90d8ea8de7/Azure-RMSDocs/get-started/faqs.md)
@@ -1953,8 +1953,8 @@
 * Handoff File: [requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/3154153fc9b940b8c0e7c4b5e56f5aabd93ce09f/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.it-it.xlf)
 * Handoff Datetime: 2016-07-08 07:18:03
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: [requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.it-it.xlf)
 * Handback Datetime: 2016-07-07 12:33:14
 * Bilingual File: [requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/requirements-azure-rms.91ef1526b60553f7a78b9162acbc860f2a8791a9.it-it.xlf)
@@ -2023,8 +2023,8 @@
 * Handoff File: [scenario-executives-email.02fb32c7a1e5b62754681e4d720db2d250184079.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/3154153fc9b940b8c0e7c4b5e56f5aabd93ce09f/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/scenario-executives-email.02fb32c7a1e5b62754681e4d720db2d250184079.it-it.xlf)
 * Handoff Datetime: 2016-07-08 07:18:03
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [scenario-executives-email.02fb32c7a1e5b62754681e4d720db2d250184079.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/scenario-executives-email.02fb32c7a1e5b62754681e4d720db2d250184079.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: [scenario-executives-email.02fb32c7a1e5b62754681e4d720db2d250184079.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/853f304066f46f864366479574133e6d75492dd4/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/scenario-executives-email.02fb32c7a1e5b62754681e4d720db2d250184079.it-it.xlf)
 * Handback Datetime: 2016-07-07 13:28:39
 * Bilingual File: [scenario-executives-email.02fb32c7a1e5b62754681e4d720db2d250184079.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/853f304066f46f864366479574133e6d75492dd4/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/scenario-executives-email.02fb32c7a1e5b62754681e4d720db2d250184079.it-it.xlf)
@@ -4916,8 +4916,8 @@
 * Handoff File: [migrate-from-ad-rms-phase1.bc5aedb6121a7b8c22df639eda41dcc7e7be9c8f.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/3154153fc9b940b8c0e7c4b5e56f5aabd93ce09f/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/migrate-from-ad-rms-phase1.bc5aedb6121a7b8c22df639eda41dcc7e7be9c8f.it-it.xlf)
 * Handoff Datetime: 2016-07-08 07:18:03
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [migrate-from-ad-rms-phase1.bc5aedb6121a7b8c22df639eda41dcc7e7be9c8f.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/migrate-from-ad-rms-phase1.bc5aedb6121a7b8c22df639eda41dcc7e7be9c8f.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: [migrate-from-ad-rms-phase1.bc5aedb6121a7b8c22df639eda41dcc7e7be9c8f.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/migrate-from-ad-rms-phase1.bc5aedb6121a7b8c22df639eda41dcc7e7be9c8f.it-it.xlf)
 * Handback Datetime: 2016-07-07 12:33:14
 * Bilingual File: [migrate-from-ad-rms-phase1.bc5aedb6121a7b8c22df639eda41dcc7e7be9c8f.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/migrate-from-ad-rms-phase1.bc5aedb6121a7b8c22df639eda41dcc7e7be9c8f.it-it.xlf)
@@ -4930,8 +4930,8 @@
 * Handoff File: [migrate-from-ad-rms-phase2.318d35db066c49206b0ca3bcb905627474043548.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/3154153fc9b940b8c0e7c4b5e56f5aabd93ce09f/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/migrate-from-ad-rms-phase2.318d35db066c49206b0ca3bcb905627474043548.it-it.xlf)
 * Handoff Datetime: 2016-07-08 07:18:03
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [migrate-from-ad-rms-phase2.318d35db066c49206b0ca3bcb905627474043548.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/migrate-from-ad-rms-phase2.318d35db066c49206b0ca3bcb905627474043548.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: [migrate-from-ad-rms-phase2.318d35db066c49206b0ca3bcb905627474043548.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/migrate-from-ad-rms-phase2.318d35db066c49206b0ca3bcb905627474043548.it-it.xlf)
 * Handback Datetime: 2016-07-07 12:33:14
 * Bilingual File: [migrate-from-ad-rms-phase2.318d35db066c49206b0ca3bcb905627474043548.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/migrate-from-ad-rms-phase2.318d35db066c49206b0ca3bcb905627474043548.it-it.xlf)
@@ -4944,8 +4944,8 @@
 * Handoff File: [migrate-from-ad-rms-phase3.d217f8acdd7175366a6360bf8f9a10435e95745a.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/3154153fc9b940b8c0e7c4b5e56f5aabd93ce09f/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/migrate-from-ad-rms-phase3.d217f8acdd7175366a6360bf8f9a10435e95745a.it-it.xlf)
 * Handoff Datetime: 2016-07-08 07:18:03
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [migrate-from-ad-rms-phase3.d217f8acdd7175366a6360bf8f9a10435e95745a.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/migrate-from-ad-rms-phase3.d217f8acdd7175366a6360bf8f9a10435e95745a.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: [migrate-from-ad-rms-phase3.d217f8acdd7175366a6360bf8f9a10435e95745a.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/853f304066f46f864366479574133e6d75492dd4/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/migrate-from-ad-rms-phase3.d217f8acdd7175366a6360bf8f9a10435e95745a.it-it.xlf)
 * Handback Datetime: 2016-07-07 13:28:39
 * Bilingual File: [migrate-from-ad-rms-phase3.d217f8acdd7175366a6360bf8f9a10435e95745a.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/853f304066f46f864366479574133e6d75492dd4/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/migrate-from-ad-rms-phase3.d217f8acdd7175366a6360bf8f9a10435e95745a.it-it.xlf)
@@ -5206,8 +5206,8 @@
 * Handoff File: [sharing-app-admin-guide.a9c407820bfd3970390e4d18934868be65839fc1.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/3154153fc9b940b8c0e7c4b5e56f5aabd93ce09f/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/sharing-app-admin-guide.a9c407820bfd3970390e4d18934868be65839fc1.it-it.xlf)
 * Handoff Datetime: 2016-07-08 07:18:03
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [sharing-app-admin-guide.a9c407820bfd3970390e4d18934868be65839fc1.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/sharing-app-admin-guide.a9c407820bfd3970390e4d18934868be65839fc1.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: [sharing-app-admin-guide.a9c407820bfd3970390e4d18934868be65839fc1.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/sharing-app-admin-guide.a9c407820bfd3970390e4d18934868be65839fc1.it-it.xlf)
 * Handback Datetime: 2016-07-07 12:33:14
 * Bilingual File: [sharing-app-admin-guide.a9c407820bfd3970390e4d18934868be65839fc1.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/sharing-app-admin-guide.a9c407820bfd3970390e4d18934868be65839fc1.it-it.xlf)
@@ -5332,8 +5332,8 @@
 * Handoff File: [sharing-app-version-release-history.d583d7f7a589b8ebbf1ed472a53a2d640f9519ef.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/3154153fc9b940b8c0e7c4b5e56f5aabd93ce09f/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/sharing-app-version-release-history.d583d7f7a589b8ebbf1ed472a53a2d640f9519ef.it-it.xlf)
 * Handoff Datetime: 2016-07-08 07:18:03
 * Handoff Reason: Include
-* Archive File: 
-* Archive Datetime: 0001-01-01 00:00:00
+* Archive File: [sharing-app-version-release-history.d583d7f7a589b8ebbf1ed472a53a2d640f9519ef.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/7f57b13979b8320b6c51add0aa579f441cf84951/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/sharing-app-version-release-history.d583d7f7a589b8ebbf1ed472a53a2d640f9519ef.it-it.xlf)
+* Archive Datetime: 2016-07-08 23:32:36
 * Handback File: [sharing-app-version-release-history.d583d7f7a589b8ebbf1ed472a53a2d640f9519ef.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/sharing-app-version-release-history.d583d7f7a589b8ebbf1ed472a53a2d640f9519ef.it-it.xlf)
 * Handback Datetime: 2016-07-07 12:33:14
 * Bilingual File: [sharing-app-version-release-history.d583d7f7a589b8ebbf1ed472a53a2d640f9519ef.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/sharing-app-version-release-history.d583d7f7a589b8ebbf1ed472a53a2d640f9519ef.it-it.xlf)
