@@ -10,8 +10,8 @@
 [ Archive Success Files ](#archive-success-list)| 0
 [ Handback Failed Files ](#handback-failed-list)| 1
 [ Out Of Sync Handback Files ](#outofsync-handback-success-list)| 48
-[ In Sync Handback Files ](#insync-handback-success-list)| 152
-[ Ignored Files ](#ignored-list)| 67
+[ In Sync Handback Files ](#insync-handback-success-list)| 151
+[ Ignored Files ](#ignored-list)| 68
 
 ## <a name='handoff-failed-list'></a> Handoff Failed File List
 
@@ -227,7 +227,6 @@
  [Azure-RMSDocs\deploy-use\install-configure-rms-connector.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/ea4b7539ab311d782c3987a8fd74940aad72e65b/Azure-RMSDocs/deploy-use/install-configure-rms-connector.md) | InSyncHandedBackSuccess | [Details](#165292482349e4a233ab4030f49a297f57b041ac26)
  [Azure-RMSDocs\deploy-use\install-powershell.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/deploy-use/install-powershell.md) | InSyncHandedBackSuccess | [Details](#590148218fdd10e88ba764b2dc523a2213e2c8bb27)
  [Azure-RMSDocs\deploy-use\log-analyze-usage.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/5ab8d4ef132eec9991c0ff789f2b2dfa7bdf2cd8/Azure-RMSDocs/deploy-use/log-analyze-usage.md) | InSyncHandedBackSuccess | [Details](#845a47f526754f291c27a3c2bbd80af736b4499228)
- [Azure-RMSDocs\deploy-use\monitor-rms-connector.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/04fbac4389671ed32f64c0840d81723f8314869c/Azure-RMSDocs/deploy-use/monitor-rms-connector.md) | InSyncHandedBackSuccess | [Details](#4509126c61c4e37d9655d9bd080be3e097cd103f30)
  [Azure-RMSDocs\deploy-use\operations-customer-managed-tenant-key.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/deploy-use/operations-customer-managed-tenant-key.md) | InSyncHandedBackSuccess | [Details](#496edca2e2323e17216858e2ab4844fdb0aa1fb031)
  [Azure-RMSDocs\deploy-use\refresh-templates.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/771f4139b09cccc05f2d1ee52c76b99467c70446/Azure-RMSDocs/deploy-use/refresh-templates.md) | InSyncHandedBackSuccess | [Details](#13c2b79558202d59ec49da3a189a58356518718d34)
  [Azure-RMSDocs\deploy-use\TOC.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/b6dcd8bb1091e9c484e02042adbf993381581a9d/Azure-RMSDocs/deploy-use/TOC.md) | InSyncHandedBackSuccess | [Details](#6bf11174aad9b6e54becf682e0b684c407c0343937)
@@ -371,6 +370,7 @@
  [.openpublishing.publish.config.json](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/823bdc463ff5c512d479f098f1fb3a7c192f4ed8/.openpublishing.publish.config.json) | Ignored | [Details](#0f39cf0b5df23c1e18292cdce1860c2f20347f2c4)
  [Azure-RMSDocs\deploy-use\docfx.json](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/823bdc463ff5c512d479f098f1fb3a7c192f4ed8/Azure-RMSDocs/deploy-use/docfx.json) | Ignored | [Details](#52f40bd51698b95ba5f62c1d054f2b8b2f94969d24)
  [Azure-RMSDocs\deploy-use\md.style](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/823bdc463ff5c512d479f098f1fb3a7c192f4ed8/Azure-RMSDocs/deploy-use/md.style) | Ignored | [Details](#755db60abb7859af5065e2c5ddfbfc6cfb7aeeda29)
+ [Azure-RMSDocs\deploy-use\monitor-rms-connector.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/823bdc463ff5c512d479f098f1fb3a7c192f4ed8/Azure-RMSDocs/deploy-use/monitor-rms-connector.md) | Ignored | [Details](#32c3c93d55bd82f45fa7a081e55ae7ebe8f5956f30)
  [Azure-RMSDocs\develop\docfx.json](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/823bdc463ff5c512d479f098f1fb3a7c192f4ed8/Azure-RMSDocs/develop/docfx.json) | Ignored | [Details](#1817ca056f9a0b0e6aed85bf04892c3f633079d161)
  [Azure-RMSDocs\develop\md.style](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/823bdc463ff5c512d479f098f1fb3a7c192f4ed8/Azure-RMSDocs/develop/md.style) | Ignored | [Details](#755db60abb7859af5065e2c5ddfbfc6cfb7aeeda82)
  [Azure-RMSDocs\docfx.json](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/823bdc463ff5c512d479f098f1fb3a7c192f4ed8/Azure-RMSDocs/docfx.json) | Ignored | [Details](#d47b66074ce65bdee85cce855d81159fbfc073b5100)
@@ -843,18 +843,16 @@
 * Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
-##### <a name='4509126c61c4e37d9655d9bd080be3e097cd103f30'></a> Source: [Azure-RMSDocs\deploy-use\monitor-rms-connector.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/04fbac4389671ed32f64c0840d81723f8314869c/Azure-RMSDocs/deploy-use/monitor-rms-connector.md)
-* Status: InSyncHandedBackSuccess
-* Target File: [Azure-RMSDocs\deploy-use\monitor-rms-connector.md](https://github.com/Microsoft/Azure-RMSDocs-pr.it-it/blob/f20fac01edb9d5d0d108a500e73b0b90d8ea8de7/Azure-RMSDocs/deploy-use/monitor-rms-connector.md)
-* Handoff File: [monitor-rms-connector.f938a97caf781680ad1036c38a0d1535b4565e92.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/91f8dcb6eaa368a8368bd148554de18ed31be7d5/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/monitor-rms-connector.f938a97caf781680ad1036c38a0d1535b4565e92.it-it.xlf)
-* Handoff Datetime: 2016-06-28 10:06:08
-* Handoff Reason: Include
-* Archive File: [monitor-rms-connector.f938a97caf781680ad1036c38a0d1535b4565e92.it-it.xlf](https://github.com/Microsoft/EM.handoff/blob/c3064287793f61647a2e8a2bb7c83bd6185702ad/ol-handoff/Microsoft/Azure-RMSDocs-pr.it-it/master/archive/monitor-rms-connector.f938a97caf781680ad1036c38a0d1535b4565e92.it-it.xlf)
-* Archive Datetime: 2016-07-01 23:49:35
-* Handback File: [monitor-rms-connector.f938a97caf781680ad1036c38a0d1535b4565e92.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/monitor-rms-connector.f938a97caf781680ad1036c38a0d1535b4565e92.it-it.xlf)
-* Handback Datetime: 2016-07-07 12:33:14
-* Bilingual File: [monitor-rms-connector.f938a97caf781680ad1036c38a0d1535b4565e92.it-it.xlf](https://github.com/Microsoft/EM.handback/blob/e7709438c9da3811f0e87d3027def81d549ff18b/ol-handback/Microsoft/Azure-RMSDocs-pr.it-it/master/monitor-rms-connector.f938a97caf781680ad1036c38a0d1535b4565e92.it-it.xlf)
-* Bilingual Datetime: 2016-07-07 12:34:41
+##### <a name='32c3c93d55bd82f45fa7a081e55ae7ebe8f5956f30'></a> Source: [Azure-RMSDocs\deploy-use\monitor-rms-connector.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/823bdc463ff5c512d479f098f1fb3a7c192f4ed8/Azure-RMSDocs/deploy-use/monitor-rms-connector.md)
+* Status: Ignored
+* Target File: 
+* Handoff File: 
+* Handoff Datetime: 0001-01-01 00:00:00
+* Handoff Reason: Ignored
+* Archive File: 
+* Archive Datetime: 0001-01-01 00:00:00
+* Handback File: 
+* Handback Datetime: 0001-01-01 00:00:00
 * [Back to Top](#report-top)
 
 ##### <a name='496edca2e2323e17216858e2ab4844fdb0aa1fb031'></a> Source: [Azure-RMSDocs\deploy-use\operations-customer-managed-tenant-key.md](https://github.com/Microsoft/Azure-RMSDocs-pr/blob/0f355da35dff62ecee111737eb1793ae286dc93e/Azure-RMSDocs/deploy-use/operations-customer-managed-tenant-key.md)
