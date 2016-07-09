@@ -13,6 +13,7 @@ ms.assetid: 8A13494E-C1D7-407D-BCD1-A406915EA578
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
+translationtype: Human Translation
 ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
 ms.openlocfilehash: 417888c5445d702b1f700a8e717fbb746593efc6
 
@@ -66,6 +67,6 @@ Usare la guida [Introduzione](get-started.md) per iniziare il progetto di app pe
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 

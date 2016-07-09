@@ -13,6 +13,7 @@ ms.assetid: adb1f868-0da7-431b-83d1-86f41c2da4ae
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
+translationtype: Human Translation
 ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
 ms.openlocfilehash: 5779cc10503ad7afe997e031a467021b513fc510
 
@@ -45,6 +46,6 @@ Il formato PFile è trasparente allo sviluppatore dell'applicazione in quanto è
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 
