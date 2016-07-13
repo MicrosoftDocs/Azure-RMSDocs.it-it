@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Panoramica tecnica per l'applicazione Rights Management sharing | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/20/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
+ms.openlocfilehash: 4f63cb7911661104113d19ecd84ef7c80a874408
+
 
 ---
 
@@ -66,7 +60,8 @@ Inoltre, quando l'applicazione di condivisione RMS protegge in modo nativo un fi
 
 Per i file protetti in modo generico, l'estensione del nome file originale viene sempre modificata in .pfile.
 
-> [!WARNING] Se sono presenti firewall, proxy Web o software di protezione che esaminano e agiscono in base alle estensioni di file, potrebbe essere necessario eseguire una riconfigurazione per supportare queste nuove estensioni di file.
+> [!WARNING]
+> Se si dispone di firewall, proxy web o software di protezione che esaminano e agiscono in base alle estensioni di file, potrebbe essere necessario riconfigurare tali impostazioni per supportare queste nuove estensioni di file.
 
 |Estensione del nome di file originale|Estensione del nome di file protetti tramite RMS|
 |--------------------------------|-------------------------------------|
@@ -144,6 +139,7 @@ Ripetere questi tre passaggi per altri tipi di file che si desidera definire com
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 
