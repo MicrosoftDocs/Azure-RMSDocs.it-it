@@ -13,8 +13,8 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 64b9cf141b755e4d54907424a7dcbd4ee14fadd7
-ms.openlocfilehash: 758a603dde2c185767ba85229a397fd6e77b1c5b
+ms.sourcegitcommit: b73c83b91a6b00e44ff6c8fe7f8e954bd9713e34
+ms.openlocfilehash: a3ed9e8de496741fae8904481edb1177762a12c0
 
 
 ---
@@ -194,7 +194,7 @@ Vedere la sezione [Requisiti di sicurezza, conformità e normativi](../understan
 
 -   Sito della documentazione di Azure Active Directory: [Azure Active Directory](http://azure.microsoft.com/documentation/services/active-directory/)
 
--   Libreria di Azure Active Directory: [Azure Active Directory](http://msdn.microsoft.com/library/azure/jj673460.aspx)
+-   Libreria di Azure Active Directory: [Azure Active Directory](https://msdn.microsoft.com/library/azure/mt168838.aspx)
 
 -   Libreria di Office 365: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
 
@@ -219,6 +219,6 @@ La pagina delle domande frequenti verrà aggiornata periodicamente e le nuove ag
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Jul16_HO1-->
 
 

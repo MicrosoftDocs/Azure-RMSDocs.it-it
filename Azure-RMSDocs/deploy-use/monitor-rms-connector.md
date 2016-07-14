@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/20/2016
+ms.date: 07/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 04fbac4389671ed32f64c0840d81723f8314869c
-ms.openlocfilehash: 4509126c61c4e37d9655d9bd080be3e097cd103f
+ms.sourcegitcommit: f8e23e8bcbfb25092cb31f7af76d17239f3063a7
+ms.openlocfilehash: 32c3c93d55bd82f45fa7a081e55ae7ebe8f5956f
 
 
 ---
@@ -100,7 +100,7 @@ Avviso **2001**
 
 **Tentativo di accesso non autorizzato al connettore Microsoft RMS.**
 
-Questo evento viene registrato quando un account tenta di connettersi al connettore RMS ma il tentativo ha esito negativo. Il motivo più comune è che l'account che effettua la connessione non è presente nell'elenco di account autorizzati che il connettore RMS scarica da Azure RMS.  Ad esempio, l'elenco più recente non è ancora stato scaricato (l'operazione avviene ogni 15 minuti) o l'account non è presente nell'elenco. 
+Questo evento viene registrato quando un account tenta di connettersi al connettore RMS ma il tentativo ha esito negativo. Il motivo più comune è che l'account che effettua la connessione non è presente nell'elenco di account autorizzati che il connettore RMS scarica da Azure RMS. Ad esempio, l'elenco più recente non è ancora stato scaricato (l'operazione avviene ogni 15 minuti) o l'account non è presente nell'elenco. 
 
 Un altro motivo può essere che il connettore RMS è stato installato nello stesso server che è configurato per usare il connettore. Ad esempio, si installa il connettore RMS in un server che esegue Exchange Server e si autorizza un account di Exchange a usare il connettore. Questa configurazione non è supportata perché il connettore RMS non può identificare correttamente l'account quando questo tenta di connettersi.
 
@@ -140,6 +140,8 @@ Errore **3000**
 
 Questo evento viene registrato ogni volta che il connettore RMS rileva un errore imprevisto, con i dettagli dell'errore nel messaggio di evento.
 
+Una causa possibile può essere identificata dal testo **Richiesta non riuscita con risposta vuota** nel messaggio relativo all'evento. Se viene visualizzato questo testo, è possibile che sia presente un dispositivo di rete che esegue l'ispezione SSL sui pacchetti tra i server locali e il server del connettore RMS. Questa configurazione non è supportata e genererà errori di comunicazione e questo messaggio nel registro eventi.
+
 ----
 
 Errore **3001**
@@ -147,6 +149,8 @@ Errore **3001**
 **Si è verificata un'eccezione durante il download delle informazioni sulle autorizzazioni.**
 
 Questo evento viene registrato se il connettore RMS non scarica l'elenco più recente degli account autorizzati a usare il connettore RMS, con i dettagli dell'errore nel messaggio di evento.
+
+
 
 ----
 
@@ -191,6 +195,6 @@ Se si vuole eseguire una registrazione più dettagliata a scopo di diagnosi, è 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO2-->
 
 
