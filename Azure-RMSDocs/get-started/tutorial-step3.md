@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Esercitazione per l'avvio rapido di Azure RMS - Passaggio 3 | Azure RMS
-description: Il terzo passaggio di questa esercitazione consente di provare rapidamente Microsoft Azure Rights Management per l'organizzazione. L'esercitazione è articolata in 5 passaggi, eseguibili in meno di 15 minuti.
-keywords:
+description: "Il terzo passaggio di questa esercitazione consente di provare rapidamente Microsoft Azure Rights Management per l'organizzazione. L'esercitazione è articolata in 5 passaggi, eseguibili in meno di 15 minuti."
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c604e749-8918-40e8-8148-6bd000cb2be2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: efe389db839f3f70e9cdb9138f6749e2bd2e029f
+
 
 ---
 
@@ -83,9 +77,11 @@ Ora che è stato inviato il documento protetto, è possibile chiedere ai destina
 |Informazioni sulle opzioni della finestra di dialogo **Condividi file protetto**|[Opzioni della finestra di dialogo per l’applicazione di condivisione Rights Management](../rms-client/sharing-app-dialog-box.md)|
 
 
->[!div class="step-by-step"] [« Passaggio 2](tutorial-step2.md)
-[Passaggio 4 »](tutorial-step4.md)
+>[!div class="step-by-step"]
+[«Passaggio 2](tutorial-step2.md)
+[Passaggio 4»](tutorial-step4.md)
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

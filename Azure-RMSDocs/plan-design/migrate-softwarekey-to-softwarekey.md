@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Passaggio 2&colon; Migrazione da una chiave protetta tramite software a un'altra | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: bb152f428c8e0b9a065035aaad2de6353265a562
+ms.openlocfilehash: a739da3fbebc8dfa4c6715fd64ccd72f87d2a686
+
 
 ---
 
@@ -33,7 +27,7 @@ ms.suite: ems
 
 Queste istruzioni fanno parte del [percorso di migrazione da AD RMS ad Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md) e si applicano solo se la chiave di AD RMS è protetta tramite software e si vuole eseguire la migrazione ad Azure Rights Management con una chiave del tenant protetta tramite software. 
 
-Se non si tratta dello scenario di configurazione prescelto, tornare al [Passaggio 2. Esportare i dati di configurazione da AD RMS e importarli in Azure RMS](migrate-from-ad-rms-to-azure-rms.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms), quindi scegliere una configurazione diversa.
+Se non si tratta dello scenario di configurazione prescelto, tornare al [Passaggio 2. Esportare i dati di configurazione da AD RMS e importarli in Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms), quindi scegliere una configurazione diversa.
 
 Usare la procedura seguente per importare la configurazione di AD RMS in Azure RMS. La chiave del tenant di Azure RMS verrà gestita da Microsoft.
 
@@ -44,7 +38,7 @@ Usare la procedura seguente per importare la configurazione di AD RMS in Azure R
     > [!TIP]
     > Se il modulo è stato scaricato e installato in precedenza, verificarne il numero di versione eseguendo il comando seguente: `(Get-Module aadrm -ListAvailable).Version`
 
-    Per le istruzioni di installazione, vedere [Installazione di Windows PowerShell per Microsoft Azure Rights Management](../deploy-use/install-powershell.md).
+    Per istruzioni di installazione, vedere [Installazione di Windows PowerShell per Azure Rights Management](../deploy-use/install-powershell.md).
 
 2.  Avviare Windows PowerShell con l'opzione **Esegui come amministratore** e usare il cmdlet [Connect-AadrmService](http://msdn.microsoft.com/library/azure/dn629415.aspx) per connettersi al servizio Azure RMS:
 
@@ -70,10 +64,11 @@ Usare la procedura seguente per importare la configurazione di AD RMS in Azure R
     Disconnect-AadrmService
     ```
 
-È ora possibile andare al [Passaggio 3. Attivare il tenant di RMS](migrate-from-ad-rms-to-azure-rms.md#BKMK_Step3Migration).
+È ora possibile andare al [Passaggio 3. Attivare il tenant di RMS](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

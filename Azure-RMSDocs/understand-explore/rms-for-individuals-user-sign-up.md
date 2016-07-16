@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Modalità di iscrizione per RMS per utenti singoli | Azure RMS
-description:
-keywords:
+title: "Modalità di iscrizione per RMS per utenti singoli | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: 19252180802c69d6e5d6bf22c71ff3bcba96fb36
+
 
 ---
 
@@ -35,7 +29,7 @@ Il modo più comune con cui gli utenti verranno indirizzati a questa pagina per 
 
 ## Per iscriversi per RMS per utenti singoli
 
-1.  Usando un computer Windows o Mac, passare alla [pagina di Microsoft Rights Management](https://portal.aadrm.com).
+1.  Utilizzando un computer Windows o Mac, passare alla [pagina di Microsoft Rights Management](https://portal.aadrm.com).
 
 2.  Digitare l'indirizzo di posta elettronica usato come indirizzo aziendale, ad esempio **janetm@contoso.com** o **p.dover@fabrikam.com**.
 
@@ -46,7 +40,7 @@ Il modo più comune con cui gli utenti verranno indirizzati a questa pagina per 
 
     Microsoft usa l'indirizzo di posta elettronica per verificare se l'organizzazione ha già una [sottoscrizione pagata che include Azure RMS](../get-started/requirements-subscriptions.md). In tal caso, non è necessario RMS per utenti singoli quindi si verrà connessi immediatamente e l’iscrizione self-service per RMS per utenti singoli verrà annullata. Se non viene trovata una sottoscrizione a pagamento per Azure RMS, si procederà al passaggio successivo.
 
-4.  Attendere un messaggio di posta elettronica di conferma proveniente da Microsoft e inviato all'indirizzo di posta indicato Sarà proveniente da Microsoft (DoNotReply@microsoft.com) e riporterà l'oggetto **Microsoft RMS**..
+4.  Attendere un messaggio di posta elettronica di conferma proveniente da Microsoft e inviato all'indirizzo di posta indicato Sarà proveniente da Microsoft (DoNotReply@microsoft.com) e riporterà l'oggetto **Microsoft RMS**.
 
 5.  Quando si riceve il messaggio di posta elettronica, fare clic sul collegamento presente nelle istruzioni per completare il processo di iscrizione.
 
@@ -70,7 +64,7 @@ Questo è ciò che avviene in background quando un utente effettua l'iscrizione 
 
     Se viene trovato un tenant esistente, viene controllato per sapere se dispone già di una sottoscrizione per Azure RMS. Quando non viene trovata alcuna sottoscrizione, è possibile aggiungere la sottoscrizione gratuita a RMS per utenti singoli.
 
-2.  L'organizzazione riceve gratuitamente la sottoscrizione di RMS per utenti singoli. Ora, questo utente può essere autenticato da Azure e può proteggere i file e leggere i file protetti da altri utenti tramite Azure Rights Management. Per proteggere i file e leggere i file protetti, l'utente deve avere un'applicazione abilitata per RMS, ad esempio l'[applicazione di condivisione Rights Management](../rms-client/sharing-app-windows.md) gratuita.
+2.  L'organizzazione riceve gratuitamente la sottoscrizione di RMS per utenti singoli. Ora, questo utente può essere autenticato da Azure e può proteggere i file e leggere i file protetti da altri utenti tramite Azure Rights Management. Per proteggere i file e leggere i file protetti, l'utente deve avere un'applicazione abilitata per RMS, come l'[applicazione Rights Management sharing](../rms-client/sharing-app-windows.md) gratuita.
 
 3.  Quando un secondo utente della stessa organizzazione richiede una sottoscrizione di RMS per utenti singoli, viene aggiunto un nuovo account utente alla directory di Azure creata in precedenza, usando la sottoscrizione di RMS per utenti singoli dell'organizzazione. Questo secondo utente può eseguire tutte le operazioni che può eseguire il primo (proteggere file e leggere file protetti), ma i due utenti possono ora collaborare più facilmente in modo sicuro perché sono in grado di applicare rapidamente modelli predefiniti ai file per limitare l'accesso agli account presenti nella directory di Azure dell'organizzazione.
 
@@ -92,11 +86,11 @@ Questo processo non prevede costi aggiuntivi per l'organizzazione né attività 
 
         -   [Distribuzione del connettore di Azure Rights Management](../deploy-use/deploy-rms-connector.md)
 
-    -   Eseguire procedure di e-discovery sui dati di proprietà dell'azienda in modo che sia possibile, se richiesto, di decrittografare i file protetti tramite Rights Management. Per altre informazioni, vedere [Configuring super users for Azure Rights Management and discovery services or data eecovery (Configurazione degli utenti con privilegi avanzati per Azure Rights Management e servizi di individuazione o ripristino dei dati)](../deploy-use/configure-super-users.md).
+    -   Eseguire procedure di e-discovery sui dati di proprietà dell'azienda in modo che sia possibile, se richiesto, di decrittografare i file protetti tramite Rights Management. Per altre informazioni, vedere la pagina relativa alla [configurazione degli utenti con privilegi avanzati per Azure Rights Management e servizi di individuazione o ripristino dei dati](../deploy-use/configure-super-users.md).
 
     -   Registrare tutte le attività correlate all'uso di Rights Management nell'organizzazione. Questa operazione è estremamente utile perché consente non solo di monitorare i file protetti e gli utenti che vi hanno effettuato l'accesso, ma anche di identificare potenziali comportamenti sospetti di utenti non autorizzati che tentano di accedere a tali file. Per altre informazioni, vedere [Registrazione e analisi dell'utilizzo di Azure Rights Management](../deploy-use/log-analyze-usage.md).
 
-    -   Fornire agli utenti la possibilità di tenere traccia e revocare i documenti protetti, se queste funzionalità sono supportate dalla [sottoscrizione Azure RMS](https://technet.microsoft.com/dn858608). Per altre informazioni, vedere la sezione [Rilevare e revocare i documenti quando si utilizza l'applicazione di condivisione RMS](../rms-client/sharing-app-track-revoke.md) in [Guida dell'utente dell'applicazione di condivisione Rights Management](../rms-client/sharing-app-user-guide.md).
+    -   Fornire agli utenti la possibilità di tenere traccia e revocare i documenti protetti, se queste funzionalità sono supportate dalla [sottoscrizione Azure RMS](https://technet.microsoft.com/dn858608). Per altre informazioni, vedere [Tenere traccia e revocare i file](../rms-client/sharing-app-track-revoke.md) dalla [Guida dell'utente dell'applicazione RMS sharing](../rms-client/sharing-app-user-guide.md).
 
     -   Implementare una soluzione BYOK in modo da generare la chiave del tenant per Azure Rights Management in locale in base ai propri criteri IT e di trasferirla in modo sicuro a Microsoft tramite un modulo di protezione hardware. Per altre informazioni, vedere [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
 
@@ -107,6 +101,7 @@ Vedere [Modalità di controllo da parte degli amministratori degli account creat
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 

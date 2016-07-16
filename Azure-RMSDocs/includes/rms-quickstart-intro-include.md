@@ -10,13 +10,13 @@ Per completare questa esercitazione, è necessario quanto segue:
 
     Suggerimento: Se è necessario richiedere una sottoscrizione, eseguire questa operazione in anticipo perché talvolta il processo può richiedere alcuni minuti.
 
--   Un account di amministratore per accedere all'interfaccia di amministrazione di Office 365 o al portale di Azure classico, in modo da poter attivare il servizio Rights Management. Questo account deve disporre inoltre di un indirizzo di posta elettronica e di un servizio di posta elettronica funzionante (ad esempio, Exchange Online o Exchange Server).
+-   Un account di amministratore per accedere all'interfaccia di amministrazione di Office 365 o al portale di Azure classico, in modo da poter attivare il servizio Rights Management. Questo account deve disporre inoltre di un indirizzo di posta elettronica e di un servizio di posta elettronica funzionante (ad esempio, Exchange Online o Exchange Server).
 
 -   Un computer che esegue Windows (almeno Windows 7 SP1) e in cui è stato installato Office 2016 o Office 2013 oppure Office 2010.
 
 A questo punto, procedere con l’esercitazione.
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

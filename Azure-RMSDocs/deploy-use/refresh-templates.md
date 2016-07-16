@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Aggiornare i modelli | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/06/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 771f4139b09cccc05f2d1ee52c76b99467c70446
+ms.openlocfilehash: 13c2b79558202d59ec49da3a189a58356518718d
+
 
 ---
 
@@ -34,9 +28,9 @@ Quando si usa Azure RMS, i modelli vengono scaricati automaticamente nei compute
 
 |Applicazione o servizio|Modalità di aggiornamento dei modelli dopo le modifiche|
 |--------------------------|---------------------------------------------|
-|Exchange Online|È necessaria la configurazione manuale per aggiornare i modelli.<br /><br />Per la procedura di configurazione, vedere la sezione seguente [Solo Exchange Online: come configurare Exchange per il download dei modelli personalizzati modificati](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates).|
+|Exchange Online|È necessaria la configurazione manuale per aggiornare i modelli.<br /><br />Per la procedura di configurazione, vedere la sezione seguente: [Solo Exchange Online: come configurare Exchange per il download dei modelli personalizzati modificati](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates).|
 |Office 365|I modelli vengono aggiornati automaticamente e non sono necessari altri passaggi.|
-|Office 2016 e Office 2013:<br /><br />Applicazione RMS sharing per Windows|I modelli vengono aggiornati automaticamente in base a una pianificazione:<br /><br />Per le versioni più recenti di Office, l'intervallo di aggiornamento predefinito è di 7 giorni.<br /><br />Per l'applicazione RMS sharing per Windows, a partire dalla versione 1.0.1784.0 l'intervallo di aggiornamento predefinito è di 1 giorno. Le versioni precedenti prevedono un intervallo di aggiornamento predefinito di 7 giorni.<br /><br />Per anticipare l'esecuzione di un aggiornamento rispetto a questa pianificazione, vedere la sezione seguente [Office 2016, Office 2013 e applicazione di condivisione RMS per Windows: come forzare un aggiornamento per un modello personalizzato modificato](#office-2016-office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template)..|
+|Office 2016 e Office 2013:<br /><br />Applicazione RMS sharing per Windows|I modelli vengono aggiornati automaticamente in base a una pianificazione:<br /><br />Per le versioni più recenti di Office, l'intervallo di aggiornamento predefinito è di 7 giorni.<br /><br />Per l'applicazione RMS sharing per Windows, a partire dalla versione 1.0.1784.0 l'intervallo di aggiornamento predefinito è di 1 giorno. Le versioni precedenti prevedono un intervallo di aggiornamento predefinito di 7 giorni.<br /><br />Per forzare un aggiornamento prima di questa pianificazione, vedere la sezione seguente: [Office 2016, Office 2013 e applicazione RMS sharing per Windows: come forzare un aggiornamento per un modello personalizzato modificato](#office-2016-office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
 |Office 2010|I modelli vengono aggiornati quando gli utenti eseguono l'accesso.<br /><br />Per forzare l'esecuzione di un aggiornamento, chiedere o imporre agli utenti di disconnettersi e rieseguire l'accesso. In alternativa, vedere la sezione seguente [Solo Office 2010: come forzare un aggiornamento per un modello personalizzato modificato](#office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template).|
 Per i dispositivi mobili che usano l'applicazione di RMS sharing, i modelli vengono scaricati automaticamente (e aggiornati se necessario) senza che siano richieste attività di configurazione aggiuntive.
 
@@ -44,7 +38,7 @@ Per i dispositivi mobili che usano l'applicazione di RMS sharing, i modelli veng
 Se Information Rights Management (IRM) è stato già configurato per Exchange Online, i modelli personalizzati non verranno scaricati per gli utenti finché non si apportano le modifiche illustrate di seguito mediante Windows PowerShell in Exchange Online.
 
 > [!NOTE]
-> Per altre informazioni su come usare Windows PowerShell in Exchange Online, vedere [Utilizzo di PowerShell con Exchange Online](https://technet.microsoft.com/library/jj200677%28v=exchg.160%29.aspx).
+> Per altre informazioni su come usare Windows PowerShell in Exchange Online, vedere [Uso di PowerShell con Exchange Online](https://technet.microsoft.com/library/jj200677%28v=exchg.160%29.aspx).
 
 È necessario eseguire questa procedura ogni volta che si modifica un modello.
 
@@ -135,7 +129,7 @@ Modificando il Registro di sistema nei computer che eseguono Office 2016, Office
 
 1.  Utilizzando un editor del Registro di sistema, eliminare i dati per il valore **LastUpdatedTime** . Ad esempio, i dati possono visualizzare **2015-04-20T15:52**; eliminare 2015-04-20T15:52 in modo che non vengano visualizzati dati. Usare le informazioni seguenti per individuare il percorso del Registro di sistema per eliminare i dati con questo valore di registro.
 
-    **Percorso del registro di sistema:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\<*MicrosoftRMS_FQDN*>\Template
+    **Percorso del Registro di sistema:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*MicrosoftRMS_FQDN*>\Template
 
     **Tipo:** REG_SZ
 
@@ -144,7 +138,7 @@ Modificando il Registro di sistema nei computer che eseguono Office 2016, Office
     > [!TIP]
         > Nel percorso del Registro di sistema, <*MicrosoftRMS_FQDN*> fa riferimento all’FQDN del servizio Microsoft RMS. Se si desidera verificare questo valore:
 
-    > 1.  Eseguire il cmdlet [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) per Azure RMS. Se non è stato ancora installato il modulo di Windows PowerShell per Azure RMS, vedere [Installazione di Windows PowerShell per Microsoft Azure Rights Management](install-powershell.md).
+    > 1.  Eseguire il cmdlet [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) per Azure RMS. Se non è stato ancora installato il modulo di Windows PowerShell per Azure RMS, vedere [Installazione di Windows PowerShell per Azure Rights Management](install-powershell.md).
     > 2.  Nell'output identificare il valore **LicensingIntranetDistributionPointUrl** .
     > 
     >     Ad esempio: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
@@ -192,6 +186,7 @@ Modificando il Registro di sistema nei computer che eseguono Office 2010, è pos
 ## Vedere anche
 [Configurare modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

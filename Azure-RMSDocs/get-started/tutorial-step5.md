@@ -1,28 +1,26 @@
 ---
-# required metadata
-
-title: "Esercitazione per l'avvio rapido di Azure RMS - Passaggio 5 | AZURE RMS"
-description: "Ultimo passaggio di un'esercitazione che consente di provare rapidamente Microsoft Azure Rights Management per l'organizzazione. L'esercitazione è articolata in 5 passaggi, eseguibili in meno di 15 minuti."
-keywords:
+title: Esercitazione per l'avvio rapido di Azure RMS - Passaggio 5 | Azure RMS
+description: "L'ultimo passaggio di questa esercitazione consente di provare rapidamente Microsoft Azure Rights Management per l'organizzazione. L'esercitazione è articolata in 5 passaggi, eseguibili in meno di 15 minuti."
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
-ms.technology: techgroup-identity
+ms.technology: 
 ms.assetid: aa06826d-c227-449b-93ea-6ce394608997
-
-# optional metadata
-
-ROBOTS:
-audience:
-ms.devlang:
+ROBOTS: 
+audience: 
+ms.devlang: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.tgt_pltfrm:
-ms.technology:
-ms.custom:
+ms.tgt_pltfrm: 
+ms.custom: 
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: 9c335e054d4aed1a8cca654420a580d02a4c849f
+
 
 ---
 
@@ -83,7 +81,8 @@ Quando si è pronti a iniziare la distribuzione di Azure RMS, usare la [Guida di
 
 In alternativa, per un elenco di scenari specifici con relativi passaggi di configurazione e documentazione dell'utente finale, vedere [Guida alla distribuzione rapida di Azure Rights Management](../get-started/rapid-deployment-guide.md).
 
->[!div class="step-by-step"] [Introduzione](quick-start-tutorial.md)
+>[!div class="step-by-step"]
+[Introduzione](quick-start-tutorial.md)
 [Passaggio 1](tutorial-step1.md)
 [Passaggio 2](tutorial-step2.md)
 [Passaggio 3](tutorial-step3.md)
@@ -91,6 +90,7 @@ In alternativa, per un elenco di scenari specifici con relativi passaggi di conf
 *Passaggio 5*
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

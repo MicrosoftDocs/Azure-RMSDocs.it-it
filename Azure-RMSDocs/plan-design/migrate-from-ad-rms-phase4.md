@@ -1,28 +1,21 @@
 ---
-# required metadata
-
 title: Migrazione da AD RMS ad Azure Rights Management - Fase 4 | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2016
+ms.date: 06/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
-
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ea4dd88ed749092fd02135d8ca25b621f74fe72f
+ms.openlocfilehash: 7ed3569475362272ace055862fe8bb3ee072036a
+
 
 ---
 
@@ -49,7 +42,7 @@ Questo passaggio è facoltativo ma consigliato al termine della migrazione, anch
 
 Per reimpostare la chiave del tenant di Azure RMS:
 
--   Se la chiave del tenant di Azure RMS è gestita da Microsoft: per eseguire questa operazione, [contattare il supporto Microsoft](../get-started/information-support#to-contact-microsoft-support) e aprire un **caso di supporto relativo ad Azure Rights Management con una richiesta per reimpostare la chiave del tenant di Azure RMS**. È necessario dimostrare di essere un amministratore del tenant di Azure RMS ed essere consapevoli che la conferma di questo processo richiede diversi giorni. Il servizio è soggetto ai costi di supporto standard. La reimpostazione della chiave del tenant non è un servizio di supporto gratuito.
+-   Se la chiave del tenant di Azure RMS è gestita da Microsoft: per eseguire questa operazione, [contattare il supporto tecnico Microsoft](../get-started/information-support.md#to-contact-microsoft-support) e aprire un **caso di supporto relativo ad Azure Rights Management con una richiesta per reimpostare la chiave del tenant di Azure RMS**. È necessario dimostrare di essere un amministratore del tenant di Azure RMS ed essere consapevoli che la conferma di questo processo richiede diversi giorni. Il servizio è soggetto ai costi di supporto standard. La reimpostazione della chiave del tenant non è un servizio di supporto gratuito.
 
 -   Se la chiave del tenant di Azure RMS è gestita dall'utente (BYOK): ripetere la procedura BYOK per generare e creare una nuova chiave tramite Internet o di persona.
 
@@ -61,6 +54,7 @@ Dopo aver completato la migrazione, rivedere la [guida di orientamento alla dist
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

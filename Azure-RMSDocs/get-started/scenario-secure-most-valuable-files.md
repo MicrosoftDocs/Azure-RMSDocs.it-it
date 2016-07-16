@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Scenario - Proteggere i file più importanti (few) | Azure RMS
-description:
-keywords:
+title: "Scenario - Proteggere i file più importanti (few) | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/20/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
+ms.openlocfilehash: d4325fb8a0b27d0a8d4fd7451b9d11d10153ed8d
+
 
 ---
 
@@ -94,7 +88,8 @@ Per questo scenario, sono necessari i requisiti seguenti:
 
 Per altre informazioni sulla protezione dei file sul posto, vedere [Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione di condivisione Rights Management](https://technet.microsoft.com/library/dn574733%28v=ws.10%29.aspx).
 
-> [!TIP] Se il numero di file da proteggere è eccessivo per questo processo manuale, è consigliabile usare lo [strumento di protezione RMS](https://www.microsoft.com/en-us/download/details.aspx?id=47256) per proteggere i file in blocco tramite il modello.
+> [!TIP]
+> Se il numero di file da proteggere è eccessivo per questo processo manuale, è consigliabile usare lo [strumento di protezione RMS](https://www.microsoft.com/en-us/download/details.aspx?id=47256) per proteggere i file in blocco tramite il modello.
 
 ### Per monitorare e, se necessario, revocare l'accesso ai file
 
@@ -152,6 +147,7 @@ I seguenti file dispongono di un elevato livello di protezione, in modo che solo
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Pianificazione e implementazione della chiave del tenant di Azure Rights Management | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2016
+ms.date: 06/30/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f01d57759ab80b4946c07a627269550c80114131
+ms.openlocfilehash: aa482dace1086222f63e9165e3089051b5de3e8c
+
 
 ---
 
@@ -81,9 +75,9 @@ Usare le informazioni e le procedure descritte in questa sezione se si è deciso
 
 
 > [!IMPORTANT]
-> Se si è già iniziato a usare [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (servizio attivato) e sono presenti utenti che eseguono Office 2010, [contattare il supporto Microsoft](../get-started/information-support#to-contact-microsoft-support) prima di eseguire queste procedure. A seconda dello scenario e dei requisiti, è comunque possibile usare la modalità BYOK con alcune limitazioni o con passaggi aggiuntivi.
+> Se si è già iniziato a usare [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (il servizio è attivo) e sono presenti utenti che eseguono Office 2010, [contattare il supporto tecnico Microsoft](../get-started/information-support.md#to-contact-microsoft-support) prima di eseguire queste procedure. A seconda dello scenario e dei requisiti, è comunque possibile usare la modalità BYOK con alcune limitazioni o con passaggi aggiuntivi.
 > 
-> [Contattare il supporto Microsoft](../get-started/information-support#to-contact-microsoft-support) anche quando l'organizzazione prevede criteri specifici per la gestione delle chiavi.
+> [Contattare il supporto tecnico Microsoft](../get-started/information-support.md#to-contact-microsoft-support) anche quando l'organizzazione prevede criteri specifici per la gestione delle chiavi.
 
 ### Prerequisiti per la modalità BYOK
 Nella tabella seguente sono elencati i prerequisiti per la modalità BYOK.
@@ -114,7 +108,7 @@ Le procedure per generare e usare la propria chiave del tenant dipendono dalle m
     > [!NOTE]
     > La chiave del tenant può spostarsi in modo sicuro tra computer e reti non attendibili perché è crittografata e protetta con autorizzazioni a livello di controllo di accesso, condizione che la rende accessibile solo all'interno dei moduli di protezione hardware dell'utente e di quelli di Microsoft per Azure RMS. È possibile usare gli script disponibili nel set di strumenti per verificare le misure di sicurezza e leggere altre informazioni sul funzionamento in Thales della [gestione delle chiavi hardware nel cloud RMS](https://www.thales-esecurity.com/knowledge-base/white-papers/hardware-key-management-in-the-rms-cloud).
 
--   **Di persona**: in questo caso è necessario [contattare il supporto Microsoft](../get-started/information-support#to-contact-microsoft-support) per pianificare un appuntamento per il trasferimento della chiave per Azure RMS. È necessario recarsi di persona in un ufficio Microsoft a Redmond, Washington, Stati Uniti, per trasferire la propria chiave del tenant nell'ambiente di sicurezza di Azure RMS.
+-   **Di persona**: in questo caso è necessario [contattare il supporto tecnico Microsoft](../get-started/information-support.md#to-contact-microsoft-support) per pianificare un appuntamento per il trasferimento della chiave per Azure RMS. È necessario recarsi di persona in un ufficio Microsoft a Redmond, Washington, Stati Uniti, per trasferire la propria chiave del tenant nell'ambiente di sicurezza di Azure RMS.
 
 Per istruzioni sulle procedure, selezionare se si intende generare e trasferire la chiave del tenant tramite Internet o di persona: 
 
@@ -136,9 +130,9 @@ Dopo la pianificazione e, se necessario, la generazione della chiave del tenant,
 
 2.  Valutare l'opportunità di usare la registrazione dei dati di utilizzo per tenere traccia di ogni transazione eseguita da RMS.
 
-    Se si è deciso di gestire la propria chiave del tenant, la registrazione include informazioni sull'uso della chiave stessa. Vedere l'esempio seguente di un file di log visualizzato in Excel in cui i tipi di richiesta **Decrypt** e **SignDigest** mostrano che la chiave del tenant è attualmente usata.
+    Se si è deciso di gestire la propria chiave del tenant, la registrazione include informazioni sull'uso della chiave stessa. Vedere il frammento seguente di un file di log visualizzato in Excel in cui i tipi di richiesta **KMSPDecrypt** e **KMSPSignDigest** dimostrano che la chiave del tenant è attualmente usata.
 
-    ![file di log visualizzato in Excel in cui è attualmente usata la chiave del tenant](../media/RMS_Logging.gif)
+    ![file di log visualizzato in Excel in cui è attualmente usata la chiave del tenant](../media/RMS_Logging.png)
 
     Per ulteriori informazioni sulla registrazione dei dati di utilizzo, vedere [Registrazione e analisi dell'utilizzo di Azure Rights Management](../deploy-use/log-analyze-usage.md).
 
@@ -148,6 +142,7 @@ Dopo la pianificazione e, se necessario, la generazione della chiave del tenant,
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO5-->
 
 

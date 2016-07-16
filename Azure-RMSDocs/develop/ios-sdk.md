@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Installazione per iOS e OS X | Azure RMS
 description: Le applicazioni iOS e OS X possono usare RMS SDK 4.2 per abilitare la protezione integrata delle informazioni nella propria applicazione con AAD RM.
-keywords:
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
+ms.openlocfilehash: 821fe1c361dc38b1e33ac66208122de165d02020
+
 
 ---
 
@@ -51,7 +47,7 @@ Nel sistema di sviluppo è consigliabile disporre del software seguente:
 
     Questo SDK consente di sviluppare per iOS 7.0 e OS X 10.8 e versioni successive.
 
--   Libreria di autenticazione: è consigliabile usare [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/en-us/library/jj573266.aspx). Tuttavia, è possibile usare anche altre librerie di autenticazione che supportano OAuth 2.0.
+-   Libreria di autenticazione: è consigliabile usare [Active Directory Authentication Library .NET](https://msdn.microsoft.com/library/jj573266.aspx). Tuttavia, è possibile usare anche altre librerie di autenticazione che supportano OAuth 2.0.
 
     Per altre informazioni, vedere [ADAL per iOS](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios) o [ADAL per OS X](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/tree/OSXUniversal)
 
@@ -122,6 +118,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabil
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jul16_HO2-->
 
 

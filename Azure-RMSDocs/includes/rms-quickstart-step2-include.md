@@ -27,6 +27,6 @@ A questo punto è possibile iniziare a proteggere i file che contengono le infor
 |Informazioni sulla differenza tra protezione nativa e protezione generica   →|[Qual è la differenza tra protezione generica e protezione integrata (nativa)?](../rms-client/sharing-app-dialog-box.md)|
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

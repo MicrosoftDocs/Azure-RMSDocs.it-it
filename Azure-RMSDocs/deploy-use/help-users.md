@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Consentire agli utenti di proteggere i file tramite Azure Rights Management | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 06/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: b6dcd8bb1091e9c484e02042adbf993381581a9d
+ms.openlocfilehash: d48616cb638522e6cda61e7ae96db9480fc14099
+
 
 ---
 
@@ -35,7 +29,8 @@ Dopo aver distribuito e configurato Azure Rights Management (RMS) per l'organizz
 
     Gli utenti devono conoscere come e quando proteggere i documenti e i messaggi di posta elettronica che contengono informazioni riservate. Quando possibile, è necessario fornire queste informazioni per i flussi di lavoro esistenti per poter incorporare i passaggi aggiuntivi in un processo già noto anziché introdurre processi completamente nuovi. Assicurarsi di comunicare loro i vantaggi (e i rischi) specifici dell'azienda nonché di fornire le istruzioni per la protezione di file e di messaggi di posta elettronica. Se sono stati configurati [modelli personalizzati](configure-custom-templates.md), specificare le istruzioni su come selezionarne uno qualora il nome e la descrizione del modello non siano sufficienti per scegliere quello corretto.
 
-    > [!TIP] Video di esempio per gli utenti finali:
+    > [!TIP]
+    > Video di esempio per gli utenti finali:
     >
     > -   [Esperienza utente di Azure RMS](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-user-experience)
     > -   [Revoca e rilevamento dei documenti di Azure RMS](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
@@ -75,12 +70,14 @@ Per istruzioni su come usare questa applicazione per computer Windows, vedere la
 
 Per i dispositivi mobili, vedere le [Domande frequenti sull'applicazione di condivisione Microsoft Rights Management per piattaforme mobili](http://technet.microsoft.com/dn451248).
 
-> [!TIP] Per uno scenario di esempio generale con schermate, vedere [Users safely share attachments with mobile users](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users) (Condivisione sicura di allegati con utenti mobili).
+> [!TIP]
+> Per uno scenario di esempio generale con screenshot, vedere [Condivisione sicura di allegati con utenti mobili](../understand-explore/what-admins-users-see.md#users-safely-share-attachments-with-mobile-users).
 
 ## Uso della protezione delle informazioni con Office 365 oppure Office 2016 o Office 2013
 Se si usa Azure RMS e l'applicazione Rights Management sharing non è installata, gli utenti non visualizzeranno il pulsante **Condividi file protetto** sulla barra multifunzione o il pulsante **Proteggi sul posto** in Esplora file che semplifica la protezione dei file. Tali utenti devono seguire istruzioni simili alle seguenti.
 
-> [!TIP] Per trovare indicazioni e istruzioni specifiche dell'applicazione per l'uso della protezione delle informazioni in tali applicazioni, cercare **IRM** e il nome e la versione dell'applicazione.
+> [!TIP]
+> Per trovare indicazioni e istruzioni specifiche dell'applicazione per l'uso della protezione delle informazioni in tali applicazioni, cercare **IRM** e il nome e la versione dell'applicazione.
 
 #### Per proteggere un documento in Word 2013
 
@@ -88,7 +85,8 @@ Se si usa Azure RMS e l'applicazione Rights Management sharing non è installata
 
 2.  Nel menu **File** , fare clic su **Info**, **Proteggi documento**, **Limita l'accesso**, quindi scegliere un modello per applicare rapidamente i diritti d'utilizzo corretti oppure selezionare **Limita l'accesso** e selezionare manualmente i diritti di utilizzo.
 
-    > [!NOTE] Se è la prima volta che si usa Rights Management, si verrà messi in contatto con il servizio [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] e verranno richieste le credenziali per configurare il client Office IRM.
+    > [!NOTE]
+    > Se è la prima volta che si usa Rights Management, si verrà messi in contatto con il servizio [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] e verranno richieste le credenziali per configurare il client Office IRM.
 
 3.  Salvare il documento.
 
@@ -117,6 +115,7 @@ In modo analogo alla visualizzazione di un documento protetto, quando i destinat
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

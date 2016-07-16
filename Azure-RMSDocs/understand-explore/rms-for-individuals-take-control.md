@@ -1,9 +1,7 @@
 ---
-# required metadata
-
-title: Modalità di controllo da parte degli amministratori degli account creati per RMS per utenti singoli | Azure RMS
-description:
-keywords:
+title: "Modalità di controllo da parte degli amministratori degli account creati per RMS per utenti singoli | Azure RMS"
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
+ms.openlocfilehash: df006a27c97884c47c9bb5fb04bfa181a13b7443
+
 
 ---
 
@@ -49,9 +43,10 @@ Per controllare gli account utente nella directory di Azure o impedire agli uten
 
 ## Passaggi successivi
 
-Come è possibile determinare se gli utenti, anziché gli amministratori, hanno creato i propri account in Azure Active Directory per RMS per utenti singoli?  Vedere  [Come determinare se gli utenti hanno effettuato l'iscrizione per RMS per utenti singoli](rms-for-individuals-identify-sign-up.md).
+Come è possibile determinare se gli utenti, anziché gli amministratori, hanno creato i propri account in Azure Active Directory per RMS per utenti singoli?  Vedere [Come determinare se gli utenti hanno effettuato l'iscrizione per RMS per utenti singoli](rms-for-individuals-identify-sign-up.md).
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jun16_HO4-->
 
 
