@@ -17,6 +17,6 @@ Per completare questa esercitazione, è necessario quanto segue:
 A questo punto, procedere con l’esercitazione.
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
