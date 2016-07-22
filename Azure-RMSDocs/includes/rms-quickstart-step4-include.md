@@ -4,8 +4,8 @@ I destinatari possono usare molti dispositivi per leggere il documento protetto 
 
 Chiedere di leggere il messaggio di posta elettronica inviato. Verrà visualizzato il messaggio di posta elettronica e, prima di esso, il testo seguente:
 
-**Il mittente ha protetto gli allegati con Microsoft RMS. È necessario** [eseguire l'accesso](http://aka.ms/rms)
-      **per aprirli.**
+**Il mittente ha protetto gli allegati con Microsoft RMS. Per aprirli è necessario ** [eseguire l'accesso](http://aka.ms/rms)
+      **.**
 
 Quando si fa clic sul collegamento, vengono visualizzate le istruzioni per installare l'app di condivisione RMS e, se necessario, per accedere a un account gratuito. L'account gratuito concede una sottoscrizione per RMS per utenti singoli. Questa sottoscrizione assicura che gli utenti autorizzati possano sempre leggere un documento protetto, anche se l'organizzazione non dispone di Azure RMS. A questo punto è possibile leggere l'allegato protetto seguendo le istruzioni seguenti.
 
@@ -33,6 +33,6 @@ Ora che il destinatario ha aperto l'allegato e, facoltativamente, lo ha inoltrat
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jul16_HO3-->
 
 

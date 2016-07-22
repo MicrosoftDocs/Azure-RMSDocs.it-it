@@ -37,6 +37,6 @@ Per creare un nuovo modello con le impostazioni molto simili a quelle di un mode
 [Configurare modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

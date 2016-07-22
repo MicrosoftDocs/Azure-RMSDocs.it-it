@@ -63,6 +63,6 @@ Altre informazioni sul supporto di Azure RMS da parte delle applicazioni seguent
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

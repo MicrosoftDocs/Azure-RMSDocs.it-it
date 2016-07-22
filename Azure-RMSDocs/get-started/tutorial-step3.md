@@ -82,6 +82,6 @@ Ora che è stato inviato il documento protetto, è possibile chiedere ai destina
 [Passaggio 4»](tutorial-step4.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

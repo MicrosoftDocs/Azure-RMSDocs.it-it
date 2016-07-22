@@ -46,6 +46,6 @@ Questo argomento identifica le piattaforme client e server di Rights Management 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

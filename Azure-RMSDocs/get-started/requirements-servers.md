@@ -62,6 +62,6 @@ Per verificare gli altri requisiti, vedere [Requisiti per Azure Rights Managemen
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -155,6 +155,6 @@ Utilizzare il [portale di rilevamento dei documenti](https://track.azurerms.com/
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
