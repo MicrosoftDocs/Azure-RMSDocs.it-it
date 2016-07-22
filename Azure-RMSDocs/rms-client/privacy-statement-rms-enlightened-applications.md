@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Informativa sulla privacy di Microsoft Rights Management in applicazioni abilitate per RMS | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: msmbaldwin
 manager: msmbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 751e5e05-fbe2-4769-a5df-1362c0db2108
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 8e8b1dabe3ba2894bec9a87e6d34123d833c699b
+ms.openlocfilehash: 500701acb03aa9f049cc995f14e544e07556bc4f
+
 
 ---
 
@@ -29,7 +23,7 @@ ms.suite: ems
 Si applica a: Funzionalità di Microsoft Rights Management che sono incorporate nelle applicazioni
 
 > [!NOTE]
-> Questa informativa sulla privacy è disponibile in altre lingue nell' [Area download Microsoft](http://www.microsoft.com/download/details.aspx?id=41668).
+> Questa informativa sulla privacy è disponibile in altre lingue dall’ [Area download Microsoft](http://www.microsoft.com/download/details.aspx?id=41668).
 
 Microsoft si impegna a proteggere la privacy producendo software che offre le prestazioni, la potenza e la praticità desiderate direttamente nell'ambiente informatico dell'utente. Questa informativa sulla privacy illustra molte delle procedure di raccolta e utilizzo dei dati del software o servizio client Microsoft Rights Management e degli altri servizi e prodotti o servizi che vengono visualizzati o collegati a questa notifica.
 
@@ -53,7 +47,7 @@ Microsoft non divulgherà credenziali, conferma di lettura e/o informazioni sul 
 Le informazioni raccolte da o inviate a Microsoft dalle applicazioni abilitate da Rights Management possono essere archiviate ed elaborate negli Stati Uniti o in qualsiasi altro paese/area geografica in cui Microsoft o società affiliate, consociate o fornitori di servizi gestiscano le proprie strutture. Microsoft ha aderito all'accordo di Safe Harbor come stabilito dagli Stati Uniti. Ministero del commercio relativamente alla raccolta, all’utilizzo e alla conservazione dei dati provenienti dall'Unione europea, dallo Spazio economico europeo e dalla Svizzera.
 
 ## Microsoft Update
-Quando si utilizzano applicazioni abilitate di Microsoft Rights Management con Windows, è possibile scegliere di partecipare all’aggiornamento di Microsoft. Microsoft Update (MU) è un servizio che offre aggiornamenti per il software Microsoft, tra cui il client Microsoft Rights Management per Windows. Per informazioni dettagliate sulle informazioni raccolte, l'uso delle informazioni e la modifica delle impostazioni, vedere l'[informativa sulla privacy dei servizi di aggiornamento](http://go.microsoft.com/fwlink/?linkid=50142) ([http://go.microsoft.com/fwlink/?linkid=50142](http://go.microsoft.com/fwlink/?linkid=50142)).
+Quando si utilizzano applicazioni abilitate di Microsoft Rights Management con Windows, è possibile scegliere di partecipare all’aggiornamento di Microsoft. Microsoft Update (MU) è un servizio che offre aggiornamenti per il software Microsoft, tra cui il client Microsoft Rights Management per Windows. Per dettagli sulle informazioni raccolte, le modalità di utilizzo e come modificare le impostazioni, vedere l’ [Informativa sulla Privacy dei servizi di aggiornamento](http://go.microsoft.com/fwlink/?linkid=50142) ([http://go.microsoft.com/fwlink/?linkid=50142](http://go.microsoft.com/fwlink/?linkid=50142)).
 
 Scelta/controllo: per l'installazione invisibile all'utente, le applicazioni abilitate per Microsoft Rights Management seguono le stesse impostazioni di Microsoft Update applicate al desktop Windows. Per le installazioni utente, se Microsoft Update non è acceso, potrebbe essere visualizzato un prompt dei comandi durante l'installazione che consente di attivare Microsoft Update. Se si sceglie di eseguire questa operazione, queste impostazioni di Microsoft Update verranno applicate a tutte le applicazioni basate su Windows.
 
@@ -65,6 +59,7 @@ Microsoft aggiornerà occasionalmente la presente informativa sulla privacy per 
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

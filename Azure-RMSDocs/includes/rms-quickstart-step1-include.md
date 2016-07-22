@@ -55,6 +55,6 @@ Anche se la procedura corrispondente non è inclusa in questa esercitazione, è 
 |Informazioni sui modelli predefiniti e su come creare nuovi modelli personalizzati   →|[Configurazione di modelli personalizzati per Azure Rights Management](../deploy-use/create-template.md)|
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

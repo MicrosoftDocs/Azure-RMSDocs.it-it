@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Guida alla distribuzione rapida di Rights Management di Azure | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: 01c2436218e0d7fd80a31cdc037d9dc8933e42f2
+
 
 ---
 
@@ -39,7 +33,8 @@ Gli scenari elencati di seguito sono un esempio di quelli più diffusi. Poiché 
 
 Prima di distribuire queste soluzioni, si può valutare di inviare un annuncio di ampio respiro agli utenti finali per informarli del fatto che sono previste alcune modifiche per proteggere i dati aziendali e che potrebbero essere richieste alcune modifiche. Dopo la tabella seguente è riportata una comunicazione di esempio.
 
-> [!NOTE] Per domande e commenti inerenti questa Guida, usare i meccanismi di commenti e suggerimenti disponibili in questa pagina o inviare un messaggio di posta elettronica a [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
+> [!NOTE]
+> Per eventuali domande e commenti inerenti a questa Guida, usare i meccanismi di commenti e suggerimenti in questa pagina, sfruttare i meccanismi di feedback o inviare un messaggio di posta elettronica all'indirizzo [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
 
 ## Scenari per Azure RMS
 Per distribuire più rapidamente Azure RMS per risolvere problemi aziendali specifici, scegliere gli scenari che meglio soddisfano gli obiettivi aziendali e adattarli ove necessario.
@@ -151,6 +146,7 @@ Le soluzioni implementare risulteranno utili per proteggere i dati preziosi e of
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

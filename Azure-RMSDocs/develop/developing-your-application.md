@@ -1,26 +1,22 @@
 ---
-# required metadata
-
 title: Sviluppo dell'applicazione | Azure RMS
 description: Istruzioni su come sviluppare un'applicazione con RMS SDK 2.1.
-keywords:
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/06/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: cb1a4dfa4465e8f4798866c95d8965eec1b68f6b
+ms.openlocfilehash: 5dcb3fe88cced7945591a08c492b32bdc8895162
+
 
 ---
 
@@ -32,7 +28,8 @@ Questo argomento contiene informazioni essenziali sugli aspetti principali di un
 
 Le istruzioni in questo argomento si basano sull'applicazione di esempio, IPCHelloWorld, che serve a comprendere i concetti di base e il codice di un'applicazione abilitata all'uso di diritti. È possibile scaricare l'intera applicazione di esempio IPCHellowWorld e il file [Webinar_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440) da Microsoft Connect.
 
-> [!Note] Il progetto IPCHelloWorld è già configurato per Rights Management Services SDK 2.1. Per informazioni su come configurare un nuovo progetto per l'uso di RMS SDK 2.1, vedere [Configurare Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md).
+> [!Note] 
+> Il progetto IPCHelloWorld è già configurato per Rights Management Services SDK 2.1. Per informazioni su come configurare un nuovo progetto per l'uso di RMS SDK 2.1, vedere [Configurare Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md).
 
 ## Caricamento di MSIPC.dll
 
@@ -187,6 +184,7 @@ Per completare la procedura, è anche necessario rilasciare tutte le risorse all
 - [Webinar_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440)
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jul16_HO1-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Esercitazione introduttiva per Azure Rights Management | Azure RMS
-description: Un'esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Rights Management per l'organizzazione. L'esercitazione è articolata in 5 passaggi, eseguibili in meno di 15 minuti.
-keywords:
+description: "Un'esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Rights Management per l'organizzazione. L'esercitazione è articolata in 5 passaggi, eseguibili in meno di 15 minuti."
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1db923bf-7d19-4fdd-a413-bfeb58af5e03
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: 7c89aa5f31732464dab2b90a25ad7c50f36c2c99
+
 
 ---
 
@@ -55,12 +49,14 @@ Per completare questa esercitazione, è necessario quanto segue:
 
 A questo punto, procedere con l'esercitazione.
 
->[!div class="step-by-step"] [Passaggio 1 »](tutorial-step1.md)
+>[!div class="step-by-step"]
+[Passaggio 1 »](tutorial-step1.md)
 
 
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

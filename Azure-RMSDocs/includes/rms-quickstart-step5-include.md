@@ -40,6 +40,6 @@ Quando si è pronti a iniziare la distribuzione di Azure RMS, usare la [Guida di
 
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

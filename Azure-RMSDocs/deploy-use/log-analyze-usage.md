@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Registrazione e analisi dell'utilizzo di Azure Rights Management | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/13/2016
+ms.date: 06/30/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 5ab8d4ef132eec9991c0ff789f2b2dfa7bdf2cd8
+ms.openlocfilehash: 845a47f526754f291c27a3c2bbd80af736b44992
+
 
 ---
 
@@ -47,7 +41,8 @@ Le informazioni riportate in questo argomento consentono di comprendere l'uso de
 
     Se si verifica una perdita di informazioni, è probabile che all'amministratore vengano richiesti i nominativi degli utenti che hanno avuto accesso a specifici documenti e l'indicazione delle informazioni visualizzate di recente da una persona sospetta. Se si usa Azure Rights Management e la relativa funzione di registrazione, è possibile rispondere a questo tipo di domande. Gli utenti che usano contenuto protetto, infatti, devono sempre ottenere una licenza di Rights Management per aprire immagini e documenti protetti con Azure Rights Management, anche se i file vengono spostati tramite posta elettronica o copiati in unità USB o altri dispositivi di archiviazione. Questo significa che, quando i dati vengono protetti con Azure Rights Management, è possibile usare i log di Azure Rights Management come fonte certa di informazioni per l'esecuzione di analisi a scopo legale.
 
-> [!NOTE] Se si è interessati solo alla registrazione delle attività amministrative di Azure Rights Management e non all'utilizzo del servizio da parte degli utenti, è possibile usare il cmdlet [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) di Windows PowerShell per Azure Rights Management.
+> [!NOTE]
+> Se si è interessati solo alla registrazione delle attività amministrative di Azure Rights Management e non alle modalità con cui viene usato il servizio, è possibile usare il cmdlet [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) di Windows PowerShell per Azure Rights Management.
 > 
 > È possibile anche usare il portale di Azure classico per report generali sull'utilizzo, tra cui **Riepilogo per RMS**, **Utenti attivi RMS**, **Piattaforme dispositivi RMS** e **Utilizzo applicazioni RMS**. Per accedere a questi report dal portale di Azure classico, fare clic su **Active Directory**, selezionare e aprire una directory e quindi fare clic su **REPORT**.
 
@@ -56,7 +51,8 @@ Per altre informazioni sulla funzionalità di registrazione dell'utilizzo di Azu
 ## Come abilitare la funzionalità di registrazione dell'utilizzo di Azure Rights Management
 A partire da febbraio 2016, la funzionalità di registrazione dell'utilizzo di Azure Rights Management è abilitata per impostazione predefinita per tutti i clienti. Questa impostazione è applicabile ai clienti che hanno attivato il servizio Azure RMS prima di febbraio 2016 e ai clienti che attivano il servizio dopo il mese di febbraio 2016. 
 
-> [!NOTE] Non sono previsti costi aggiuntivi per l'archiviazione dei log o per il funzionamento della funzionalità di registrazione.
+> [!NOTE]
+> Non sono previsti costi aggiuntivi per l'archiviazione dei log o per il funzionamento della funzionalità di registrazione.
 > 
 > A differenza della situazione attuale, per usare la funzionalità di registrazione dell'utilizzo di Azure RMS prima del mese di febbraio 2016 occorreva avere una sottoscrizione di Azure e risorse di archiviazione sufficienti in Azure.
 
@@ -143,17 +139,17 @@ Ciascuna delle righe seguenti è un record di log. I valori dei campi seguono lo
 |--------------|-----------------|---------------|-----------------|
 |date|Date|La data UTC in cui è stata gestita la richiesta.<br /><br />L'origine è l'orologio locale del server che ha gestito la richiesta.|25-06-2013|
 |time|Ora|L'ora in cui è stata gestita la richiesta, in formato UTC 24 ore.<br /><br />L'origine è l'orologio locale del server che ha gestito la richiesta.|21.59.28|
-|row-id|Testo|Il GUID univoco del record di log.<br /><br />Questo valore è utile quando i log vengono aggregati o copiati in un altro formato.|1c3fe7a9-d9e0-4654-97b7-14fafa72ea63|
+|row-id|Testo|Il GUID univoco del record di log. Se non è presente alcun valore, identificare la voce tramite il valore correlation-id.<br /><br />Questo valore è utile quando i log vengono aggregati o copiati in un altro formato.|1c3fe7a9-d9e0-4654-97b7-14fafa72ea63|
 |request-type|Nome|Il nome dell'API RMS richiesta.|AcquireLicense|
-|user-id|String|L'utente che ha effettuato la richiesta.<br /><br />Questo valore è riportato tra virgolette singole. Alcuni tipi di richiesta sono anonimi, e in questo caso il valore è ”.|‘joe@contoso.com’|
-|result|String|La stringa ‘Success’ indica che la richiesta è stata eseguita con esito positivo.<br /><br />Se la richiesta ha avuto esito negativo, il tipo di errore viene riportato tra virgolette singole.|‘Success’|
+|user-id|String|L'utente che ha effettuato la richiesta.<br /><br />Questo valore è riportato tra virgolette singole. Le chiamate da una chiave del tenant gestita dall'utente (BYOK) hanno un valore **"**, che si applica anche quando i tipi di richiesta sono anonimi.|‘joe@contoso.com’|
+|result|String|La stringa 'Success' indica che la richiesta è stata eseguita con esito positivo.<br /><br />Se la richiesta ha avuto esito negativo, il tipo di errore viene riportato tra virgolette singole.|'Success'|
 |correlation-id|Testo|GUID comune tra il log del client e il log del server RMS per una determinata richiesta.<br /><br />Questo valore può essere utile per la risoluzione dei problemi del client.|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|Testo|GUID, riportato tra parentesi graffe, che identifica il contenuto protetto, ad esempio un documento.<br /><br />In questo campo è presente un valore solo se la richiesta è di tipo AcquireLicense. Per tutti gli altri tipi di richiesta il campo è vuoto.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
 |owner-email|String|Indirizzo di posta elettronica del proprietario del documento.|alice@contoso.com|
 |issuer|String|Indirizzo di posta elettronica del soggetto emittente il documento.|alice@contoso.com (o) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
-|Template-id|String|ID del modello usato per proteggere il documento.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|File-name|String|Nome del documento protetto. <br /><br />Attualmente, alcuni file, ad esempio i documenti di Office, vengono visualizzati come GUID anziché come nome di file.|TopSecretDocument.docx|
-|Date-published|Date|Data in cui è stato protetto il documento.|2015-10-15T21:37:00|
+|template-id|String|ID del modello usato per proteggere il documento.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
+|file-name|String|Nome del documento protetto. <br /><br />Attualmente, alcuni file, ad esempio i documenti di Office, vengono visualizzati come GUID anziché come nome di file.|TopSecretDocument.docx|
+|date-published|Date|Data in cui è stato protetto il documento.|2015-10-15T21:37:00|
 |c-info|String|Informazioni sulla piattaforma client che effettua la richiesta.<br /><br />La stringa specifica varia a seconda dell'applicazione (ad esempio, il sistema operativo o il browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|Address|L'indirizzo IP del client che effettua la richiesta.|64.51.202.144|
 
@@ -166,7 +162,7 @@ Anche se nel campo user-id è in genere riportato il nome dell'utente che ha eff
 
 -   Si sta usando il connettore RMS.
 
-    Le richieste provenienti da questo connettore vengono registrate con il nome dell'entità servizio generato automaticamente da RMS quando si installa il connettore RMS.
+    Le richieste provenienti da questo connettore vengono registrate con il nome dell'entità servizio **Aadrm_S-1-7-0**, generato automaticamente quando si installa il connettore RMS.
 
 #### Tipi di richiesta tipici
 Azure Rights Management supporta diversi tipi di richiesta. La tabella seguente elenca i tipi di richiesta più comuni.
@@ -181,7 +177,7 @@ Azure Rights Management supporta diversi tipi di richiesta. La tabella seguente 
 |BECreateEndUserLicenseV1|Viene eseguita una chiamata da un dispositivo mobile per creare un contratto di licenza con l'utente finale.|
 |BEGetAllTemplatesV1|Viene eseguita una chiamata da un dispositivo mobile (back-end) per ottenere tutti i modelli.|
 |Certify|Il client sta certificando la protezione del contenuto.|
-|Decrypt|Il client tenta di decrittografare il contenuto protetto con RMS.|
+|KMSPDecrypt|Il client tenta di decrittografare il contenuto protetto con RMS. Applicabile solo per una chiave del tenant gestita dal cliente (BYOK).|
 |DeleteTemplateById|Viene eseguita una chiamata dal portale di Azure classico per eliminare un modello in base a un ID modello.|
 |ExportTemplateById|Viene eseguita una chiamata dal portale di Azure classico per esportare un modello in base a un ID modello.|
 |FECreateEndUserLicenseV1|Richiesta analoga ad AcquireLicense, ma inviata da dispositivi mobili.|
@@ -199,7 +195,7 @@ Azure Rights Management supporta diversi tipi di richiesta. La tabella seguente 
 |ServerCertify|Viene eseguita una chiamata da un client abilitato per RMS, come SharePoint, per certificare il server.|
 |SetUsageLogFeatureState|Viene eseguita una chiamata per abilitare la funzionalità di registrazione dell'utilizzo.|
 |SetUsageLogStorageAccount|Viene eseguita una chiamata per specificare il percorso dei log di Azure RMS.|
-|SignDigest|Viene eseguita una chiamata quando una chiave viene usata a scopo di firma. In genere, viene eseguita una chiamata per ogni richiesta AcquireLicence (o FECreateEndUserLicenseV1), Certify e GetClientLicensorCert (o FECreatePublishingLicenseV1).|
+|KMSPSignDigest|Viene eseguita una chiamata quando una chiave gestita dal cliente (BYOK) viene usata a scopo di firma. In genere, viene eseguita una chiamata per ogni richiesta AcquireLicence (o FECreateEndUserLicenseV1), Certify e GetClientLicensorCert (o FECreatePublishingLicenseV1).|
 |UpdateTemplate|Viene eseguita una chiamata dal portale di Azure classico per aggiornare un modello esistente.|
 
 ## Riferimenti Windows PowerShell
@@ -229,6 +225,7 @@ Per altre informazioni sull'uso di Windows PowerShell per Azure Rights Managemen
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO5-->
 
 

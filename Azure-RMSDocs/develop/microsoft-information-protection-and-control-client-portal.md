@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Rights Management Services SDK 2.1 | Azure RMS
 description: La piattaforma RMS SDK 2.1 consente agli sviluppatori di creare applicazioni che sfruttano RMS o Azure RMS per la protezione delle informazioni.
-keywords:
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 44D3EB62-7A60-45D9-BA7E-45A06E7D598F
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: cbdb969e9910142f49b078069fc578059f9d8785
+ms.openlocfilehash: bbe381054648a6b68818f3964f6cfefd5da0829c
+
 
 ---
 
@@ -45,10 +41,8 @@ Per informazioni sui requisiti di runtime per un particolare elemento di program
 |Argomento|Descrizione|
 |-----|--------|
 |[Panoramica](ad-rms-overview.md)|Rights Management Services (RMS) è una tecnologia di protezione che consente di proteggere le informazioni digitali da usi non autorizzati.|
-|[Vantaggi di questo SDK](differences-between-ad-rms-and-ad-rms-2-0.md)|Questo argomento descrive come RMS SDK 2.1 rappresenti un significativo miglioramento rispetto all'originale Rights Management Services SDK.|
-|[Introduzione](getting-started-with-ad-rms-2-0.md)|La piattaforma RMS SDK 2.1 consente agli sviluppatori di creare applicazioni che sfruttano la protezione delle informazioni RMS.|
-|[Note sulla versione](release-notes-rtm.md)|Questo argomento contiene informazioni importanti su questa versione e le precedenti di RMS SDK 2.1.|
-|[Esempi di codice](samples.md)|Questo argomento elenca un set di esempi che usano RMS SDK 2.1, disponibile nell'Area download MSDN.|
+|[Guida introduttiva](getting-started-with-ad-rms-2-0.md)|La piattaforma RMS SDK 2.1 consente agli sviluppatori di creare applicazioni che sfruttano la protezione delle informazioni RMS.|
+|[Note sulla versione](release-notes-rtm.md)|Questo argomento contiene informazioni importanti su questa versione e le precedenti dell'SDK 2.1 RMS.|
 |[Note per gli sviluppatori](developer-notes.md)|Questa sezione fornisce indicazioni specifiche per vari e importanti scenari di sviluppo.|
 |[Informazioni di riferimento sulle API](api-reference-2-1.md)|Questa sezione contiene argomenti che illustrano il materiale di riferimento per tutti gli elementi API.|
 
@@ -64,6 +58,7 @@ Per informazioni sui requisiti di runtime per un particolare elemento di program
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Panoramica di Azure Rights Management | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/03/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 965581c8-be3c-43b4-8145-5cefd29c7636
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: fdedb0f1064e98500d3b4edcee283c514851d446
+ms.openlocfilehash: a8c9a55977a285cd30872beeb160b07ce02edcce
+
 
 ---
 
@@ -40,11 +34,12 @@ Azure Rights Management è noto anche con altri nomi. Vedere [l'elenco delle den
 # Passaggi successivi
 Per una migliore comprensione e alcuni esempi, vedere [Informazioni su Microsoft Azure Rights Management](what-is-azure-rms.md).
 
-Se si è pronti a distribuire Azure RMS per l'organizzazione, usare la [Guida di orientamento per la distribuzione di Microsoft Azure Rights Management](../plan-design/deployment-roadmap.md).
+Se si è pronti a distribuire Azure RMS per l'organizzazione, usare la [guida di orientamento per la distribuzione di Azure Rights Management](../plan-design/deployment-roadmap.md).
 
 
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

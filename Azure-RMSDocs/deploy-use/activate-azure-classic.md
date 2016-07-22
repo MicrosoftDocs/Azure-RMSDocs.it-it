@@ -1,27 +1,21 @@
 ---
-# required metadata
-
 title: Come attivare Azure Rights Management dal portale di Azure classico | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/05/2016
+ms.date: 06/27/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 9b0a0227-88ce-44b8-ba3f-31eeaab27ff7
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: b214d7951820c8cb98c5d6f81af3325597ea72ec
+ms.openlocfilehash: 9cde79791e8c2b04d1d7622f5aa69d654a70646e
+
 
 ---
 
@@ -30,32 +24,29 @@ ms.suite: ems
 *Si applica a: Azure Rights Management*
 
 
-Usare queste istruzioni se si ha accesso al portale di Azure. Si ha ad esempio una sottoscrizione per Enterprise Mobility Suite.
+Usare queste istruzioni se si ha accesso al portale di Azure. Ad esempio, se si ha una sottoscrizione per Enterprise Mobility Suite o la sottoscrizione di Azure Rights Management Premium.
 
 > [!TIP]
 > Guardare un video di due minuti: [Come attivare Azure RMS](https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms)
 
-1.  Dopo aver creato un account Azure, [accedere al portale di Azure classico](http://go.microsoft.com/fwlink/p/?LinkID=275081).
+1.  Dopo aver creato un account Azure, [accedere al portale di Azure classico](http://go.microsoft.com/fwlink/p/?LinkID=275081). Usare un account di amministratore globale, ad esempio l'account usato per ottenere la sottoscrizione che include Azure Rights Management.
 
-2.  Nel riquadro sinistro fare clic su **Active Directory**.
+2.  Nel riquadro sinistro fare clic su **ACTIVE DIRECTORY**.
 
-3.  Nella pagina **Active Directory** fare clic su **Rights Management**.
+3.  Nella pagina **active directory** fare clic su **RIGHTS MANAGEMENT**.
 
 4.  Selezionare la directory da gestire per [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], fare clic su **ATTIVA** e quindi confermare l'azione.
 
----
-
-   NOTA: se viene visualizzato un errore di attivazione, è possibile che il piano del servizio o la versione del prodotto non includa [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
-
-   Usare le informazioni disponibili nell'articolo relativo alle [sottoscrizioni cloud che supportano Azure RMS](../get-started/requirements-subscriptions.md) per confermare il supporto per RMS. Per avere assistenza relativamente a tale problema, inviare un messaggio di posta elettronica ad [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
-
----
+    > [!NOTE]
+    >Se viene visualizzato un errore di attivazione, è possibile che il piano del servizio o la versione del prodotto non includano [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)].
+    >
+    >Usare le informazioni disponibili nell'articolo relativo alle [sottoscrizioni cloud che supportano Azure RMS](../get-started/requirements-subscriptions.md) per confermare il supporto per RMS. Per avere assistenza relativamente a tale problema, inviare un messaggio di posta elettronica ad [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
 
-**Stato Rights Management** sarà ora impostato su **Attivo** e l'opzione **Attiva** verrà sostituita da **Disattiva**.
+Come **STATO RIGHTS MANAGEMENT** ora verrà visualizzato **Attivo** e l'opzione **ATTIVA** verrà sostituita da **DISATTIVA**.
 
 ## Valori di stato e descrizioni di Rights Management nel portale di Azure classico
-Oltre allo stato **Attivo** , che indica che il servizio Rights Management è abilitato e pronto all'uso, è possibile che siano visualizzati anche gli stati **Inattivo**, **Non disponibile** o **Non autorizzato**.
+Oltre allo stato **Attivo** , che indica che il servizio Rights Management è abilitato e pronto all'uso, è possibile che siano visualizzati anche gli stati **Inattivo**, **Non disponibile**o **Non autorizzato**.
 
 |Valore dello stato|Descrizione|
 |----------------|---------------|
@@ -67,6 +58,7 @@ Oltre allo stato **Attivo** , che indica che il servizio Rights Management è ab
 ## Passaggi successivi
 Tornare ad [Attivazione di Azure Rights Management](activate-service.md).
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Jun16_HO4-->
 
 

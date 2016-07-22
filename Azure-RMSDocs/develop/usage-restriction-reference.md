@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Informazioni di riferimento sulle restrizioni di utilizzo | Azure RMS
 description: Le restrizioni di utilizzo vengono definite dalle costanti elencate in questo argomento.
-keywords:
+keywords: 
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,15 +10,13 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 16E36039-0FD6-4A0A-82C8-2C9DB19D27DD
-# optional metadata
-
-#ROBOTS:
 audience: developer
-#ms.devlang:
 ms.reviewer: shubhamp
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 2acf8095764e2c222881240985df8bccf8a64173
+ms.openlocfilehash: 9788b067f9395b9e078e76994a2a8a79e95baf06
+
 
 ---
 
@@ -52,6 +48,7 @@ Ogni diritto utente, elencato nella colonna Diritto di AD RMS, presenta una desc
  
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Supporto di Azure Rights Management da parte delle applicazioni | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/13/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 16c2dbbce4234f41941bd3fd92d264df0ae685e2
+ms.openlocfilehash: 15167c4e7dbe0fd401e198c80524b39e4ded250d
+
 
 ---
 
@@ -30,7 +24,8 @@ ms.suite: ems
 *Si applica a: Azure Rights Management, Office 365*
 
 Questo articolo contiene informazioni sulla modalità in cui le applicazioni (ad esempio le applicazioni Office quali Word, Excel, PowerPoint e Outlook) e i servizi (ad esempio Exchange e SharePoint) più comunemente usati dagli utenti sfruttano Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] per proteggere i dati dell'organizzazione. 
-> [!NOTE] Per verificare le applicazioni e le versioni supportate da [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS), vedere [Requisiti per Azure Rights Management](../get-started/requirements-azure-rms.md).
+> [!NOTE]
+> Per verificare le applicazioni e le versioni che [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) supporta, vedere [Requisiti per Azure Rights Management](../get-started/requirements-azure-rms.md).
 
 In alcuni casi, la protezione delle informazioni viene applicata automaticamente in base ai criteri configurati dall'utente, ad esempio nel caso di raccolte SharePoint, file classificati e regole di trasporto di Exchange. In altri casi, gli utenti devono applicare in modo autonomo la protezione delle informazioni selezionando un modello oppure opzioni specifiche, ad esempio nel caso in cui condividono un file tramite e-mail o proteggono un file in locale limitandone l'accesso o l'uso a utenti selezionati oppure a utenti esterni all'organizzazione.
 
@@ -40,7 +35,8 @@ Nei casi in cui gli utenti debbano applicare in modo autonomo la protezione dell
 
 Per altre informazioni sulle modalità di configurazione di queste applicazioni per Azure RMS, vedere [Configurazione di applicazioni per Azure Rights Management](../deploy-use/configure-applications.md).
 
-> [!TIP] Per esempi e screenshot delle applicazioni che usano Azure RMS, vedere [Azure RMS in azione: Cosa vedono gli amministratori e gli utenti](what-admins-users-see.md).
+> [!TIP]
+> Per esempi e schermate delle applicazioni che usano Azure RMS, vedere l'articolo relativo agli [elementi visualizzati da amministratori e utenti](what-admins-users-see.md).
 
 I servizi di ricerca si integrano con Rights Management in modi diversi. Ad esempio: 
 
@@ -66,6 +62,7 @@ Altre informazioni sul supporto di Azure RMS da parte delle applicazioni seguent
 
 
 
-<!--HONumber=May16_HO3-->
+
+<!--HONumber=Jun16_HO4-->
 
 

@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Rimuovere la protezione da un file usando l'applicazione di condivisione Rights Management | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: da95b938-eaad-4c83-a21e-ff1d4872aae4
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: 78ceb74a3dd8492ac5c754eea179525cae819fd0
+
 
 ---
 
@@ -42,7 +36,7 @@ Per rimuovere la protezione da un file (ovvero lasciare un file non protetto) ch
 
     è possibile che vengano richieste le credenziali.
 
-Nota: se non vengono visualizzate queste opzioni, è probabile che l'applicazione di condivisione RMS non sia installata nel computer, che non sia installata la versione più recente o che sia necessario riavviare il computer per completare l'installazione. Per altre informazioni sull'installazione dell'applicazione di condivisione, vedere [Scaricare e installare l'applicazione di condivisione Rights Management](install-sharing-app.md).
+Nota: se non vengono visualizzate queste opzioni, è probabile che l'applicazione di condivisione RMS non sia installata nel computer, che non sia installata la versione più recente o che sia necessario riavviare il computer per completare l'installazione. Per ulteriori informazioni su come installare l’applicazione di condivisione, vedere [Scaricare e installare l’applicazione di condivisione Rights Management](install-sharing-app.md).
 
 Il file protetto originale viene eliminato (ad esempio, Sample.ptxt) e sostituito con un file con lo stesso nome ma con l'estensione del nome del file non protetto (ad esempio Sample.txt).
 
@@ -57,6 +51,7 @@ Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

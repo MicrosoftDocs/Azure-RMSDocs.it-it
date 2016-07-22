@@ -42,6 +42,6 @@ Ora che è stato inviato il documento protetto, è possibile chiedere ai destina
 |Informazioni sulle opzioni della finestra di dialogo **Condividi file protetto** →|[Opzioni della finestra di dialogo per l’applicazione di condivisione Rights Management](../rms-client/sharing-app-dialog-box.md)|
 
 
-<!--HONumber=Apr16_HO3-->
+<!--HONumber=Jun16_HO4-->
 
 

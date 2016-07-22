@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Visualizzare e usare i file che sono stati protetti da Rights Management | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 05/09/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
+ms.openlocfilehash: c243ad02bdbd5bd46ba1b2a4818839df8a7deb7b
+
 
 ---
 
@@ -59,7 +53,7 @@ Come il file verrà aperto dipende da come è stato protetto; è possibile saper
 
     ![Finestra di dialogo per un pfile condiviso tramite posta elettronica quando si usa l'applicazione di condivisione RMS](../media/ADRMS_MSRMSApp_PfilePermission.png)
 
-- **Il file ha l'estensione *ppdf* o è un file di testo o immagine protetto, ad esempio con estensione *ptxt* o *pjpg*)**
+- **Il file ha l'estensione *ppdf* o è un file di testo o immagine protetto, ad esempio con estensione *ptxt* o *pjpg***
 
     Il file è stato protetto in modo nativo come copia di sola lettura.
 
@@ -89,9 +83,9 @@ Se dopo avere aperto il file protetto si vuole eseguire altre operazioni oltre a
 
     Ad esempio, se un file è stato protetto utilizzando il nome di file document.vsdx.pfile, visualizzarlo e in Esplora file salvarlo come document.vsdx.
 
-    Il nuovo file non è più protetto. Se si desidera proteggerlo, è necessario eseguire questa operazione manualmente. Per istruzioni, vedere [Proteggere un file in un dispositivo (protezione locale) mediante l'applicazione di condivisione Rights Management](sharing-app-protect-in-place.md).
+    Il nuovo file non è più protetto. Se si desidera proteggerlo, è necessario eseguire questa operazione manualmente. Per istruzioni, vedere [Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione Rights Management sharing](sharing-app-protect-in-place.md).
 
-- **Il file ha l'estensione *ppdf* o è un file di testo o immagine protetto, ad esempio con estensione *ptxt* o *pjpg*)**
+- **Il file ha l'estensione *ppdf* o è un file di testo o immagine protetto, ad esempio con estensione *ptxt* o *pjpg***
 
     È possibile solo visualizzare il file e se lo si rinomina o lo si sposta, la protezione rimane con il file.
 
@@ -113,6 +107,7 @@ Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

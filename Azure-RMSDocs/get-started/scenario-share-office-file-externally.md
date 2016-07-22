@@ -1,9 +1,7 @@
 ---
-# required metadata
-
 title: Scenario - Condividere un file di Office con utenti in un'altra organizzazione | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
 ms.date: 04/28/2016
@@ -12,16 +10,12 @@ ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
+ms.openlocfilehash: 6a6f9d8c0a98752413a99d30926f2b5bc8af193d
+
 
 ---
 
@@ -74,7 +68,8 @@ Usando il modello seguente, copiare e incollare le istruzioni per l'utente in un
 
     -   I passaggi non includono l'impostazione di una data di scadenza. Se le informazioni non devono essere usate dopo una determinata data, aggiungere un altro passaggio per impostare una scadenza appropriata, ad esempio 90 giorni dall'invio del messaggio di posta elettronica.
 
-    > [!NOTE] Per altre informazioni sulle singole opzioni selezionabili dagli utenti, vedere [Opzioni della finestra di dialogo per l'applicazione di condivisione Rights Management](https://technet.microsoft.com/library/dn574738.aspx)
+    > [!NOTE]
+    > Per ulteriori informazioni su ciascuna delle opzioni selezionabili dagli utenti, vedere [Opzioni della finestra di dialogo per l'applicazione di condivisione di Rights Management](https://technet.microsoft.com/library/dn574738.aspx)
 
 4.  Apportare altre modifiche a questo set di istruzioni e quindi inviarlo agli utenti.
 
@@ -159,6 +154,7 @@ Utilizzare il [portale di rilevamento dei documenti](https://track.azurerms.com/
 
 
 
-<!--HONumber=May16_HO2-->
+
+<!--HONumber=Jun16_HO4-->
 
 

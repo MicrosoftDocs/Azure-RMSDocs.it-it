@@ -1,35 +1,28 @@
 ---
-# required metadata
-
 title: Migrazione da AD RMS ad Azure Rights Management - Fase 2 | Azure RMS
-description:
-keywords:
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 06/23/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
-
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: a9dc45fb5146b0a4d2f013bff9d090723ce95ee5
+ms.openlocfilehash: 1016ecdd77e818840f2a2cfab8212e908291bb89
+
 
 ---
 # Fase 2 della migrazione: configurazione lato client
 
 *Si applica a: Active Directory Rights Management Services, Azure Rights Management*
 
-Usare le seguenti informazioni per la fase 2 della migrazione da AD RMS ad Azure Rights Management (Azure RMS). Queste procedure descrivono il passaggio 5 di [Migrazione da AD RMS ad Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
+Usare le seguenti informazioni per la fase 2 della migrazione da AD RMS ad Azure Rights Management (Azure RMS). Queste procedure illustrano il passaggio 5 di [Migrazione da AD RMS ad Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
 
 
 ## Passaggio 5. Riconfigurare i client per l'uso di Azure RMS
@@ -45,11 +38,42 @@ Per i client Windows:
 
 2.  Seguire le istruzioni nello script di reindirizzamento (Redirect_OnPrem.cmd) per modificare lo script in modo che faccia riferimento al nuovo tenant di Azure RMS.
 
-3.  Nei computer Windows eseguire questi script con privilegi elevati nel contesto dell'utente.
+    > [!IMPORTANT]
+    > Le istruzioni includono la sostituzione degli indirizzi di esempio **adrms** e **adrms.contoso.com** con gli indirizzi dei server AD RMS. Quando si esegue questa operazione, assicurarsi che non siano presenti spazi aggiuntivi prima o dopo gli indirizzi, che interrompono lo script di migrazione e sono molto difficili da identificare come la causa principale del problema. Alcuni strumenti di modifica aggiungono automaticamente uno spazio dopo aver incollato il testo.
 
-Per i client di dispositivi mobili e i computer Mac:
+3. Se gli utenti dispongono di Office 2016: gli script non sono ancora aggiornati per includere la configurazione per Office 2016, pertanto, se gli utenti dispongono di questa versione di Office, è necessario aggiornare manualmente gli script.
 
--   Rimuovere i record SRV in DNS creati al momento della distribuzione dell'[estensione per dispositivi mobili di AD RMS](http://technet.microsoft.com/library/dn673574.aspx).
+    - Per **CleanUpRMS.cmd**, cercare la riga `reg delete HKCU\Software\Microsoft\Office\15.0\Common\DRM /f` e immediatamente al di sotto, aggiungere la riga seguente:
+
+            reg delete HKCU\Software\Microsoft\Office\16.0\Common\DRM /f
+
+    - Per **Redirect_Onprem.cmd**, cercare la riga `reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F1` e immediatamente al di sotto, aggiungere le due righe seguenti:
+
+            reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\DRM" /t REG_SZ /v "DefaultServerUrl" /d "https://%CloudRMS%/_wmcs/licensing" /F 
+
+            reg add "HKEY_CURRENT_USER\Software\Microsoft\Office\16.0\Common\DRM" /t REG_SZ /v "DefaultServer" /d "%CloudRMS%" /F
+
+    Facoltativo: Gli script non fanno riferimento a Office 2016 nei commenti. Se si vuole aggiornare i commenti per riflettere queste aggiunte per Office 2016, apportare le modifiche seguenti a **Redirect_Onprem.cmd**:
+
+    - Cercare `::     or MSIPC (Office 2013) with on-premises AD RMS` e sostituire con quanto segue:
+    
+            ::     or MSIPC (Office 2013 and 2016) with on-premises AD RMS
+
+    - Cercare `echo Redirect SCP for Office 2013` e sostituire con quanto segue:
+    
+            echo Redirect SCP for Office versions based on MSIPC
+
+    - Cercare `echo Redirect MSIPC for Office 2013` e sostituire con quanto segue:
+    
+            echo Redirect MSIPC for Office versions based on MSIPC
+
+4.  Nei computer Windows:
+
+    - Eseguire questi script con privilegi elevati nel contesto dell'utente.
+
+    Per i client di dispositivi mobili e i computer Mac:
+
+    -  Rimuovere i record SRV in DNS creati al momento della distribuzione dell' [estensione per dispositivo mobile di AD RMS](http://technet.microsoft.com/library/dn673574.aspx).
 
 #### Modifiche apportate dagli script di migrazione
 Questa sezione illustra le modifiche apportate dagli script di migrazione. È possibile usare queste informazioni solo a scopo di riferimento o per la risoluzione dei problemi oppure se si preferisce apportare queste modifiche manualmente.
@@ -74,7 +98,7 @@ CleanUpRMS_RUN_Elevated.cmd:
 
     -   HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation
 
--   Eliminare i valori del Registro di sistema seguenti:
+-   Aggiungere i valori del Registro di sistema seguenti:
 
     -   HKEY_CURRENT_USER\Software\Microsoft\Office\15.0\Common\DRM\DefaultServerURL
 
@@ -94,10 +118,10 @@ Redirect_OnPrem.cmd:
 
     -   HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\LicensingRedirection
 
-    Ogni voce include un valore REG_SZ **https://OldRMSserverURL/_wmcs/licensing** con i dati nel formato seguente: **https://&lt;YourTenantURL&gt;/_wmcs/licensing**.
+    Ogni voce include un valore REG_SZ **https://OldRMSserverURL/_wmcs/licensing** con i dati nel formato seguente: **https://&lt;URL del tenant&gt;/_wmcs/licensing**.
 
     > [!NOTE]
-    > *&lt;YourTenantURL&gt;* ha il formato seguente: **{GUID}.rms.[Region].aadrm.com**.
+    > *&lt;L'URL del tenant&gt;* ha il formato seguente: **{GUID}.rms.[Region].aadrm.com**.
     > 
     > Ad esempio: 5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com
     > 
@@ -107,6 +131,7 @@ Redirect_OnPrem.cmd:
 ## Passaggi successivi
 Per continuare la migrazione, passare a [Fase 3: configurazione di servizi di supporto](migrate-from-ad-rms-phase3.md).
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Jul16_HO2-->
 
 
