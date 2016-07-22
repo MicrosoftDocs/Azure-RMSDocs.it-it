@@ -64,6 +64,6 @@ La sequenza di passaggi da usare per configurare il rilevamento dei documenti pe
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
