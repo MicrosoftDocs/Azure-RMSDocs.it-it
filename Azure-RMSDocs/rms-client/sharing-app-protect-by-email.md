@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
-ms.openlocfilehash: ea7f186e01606ca5e487bdfaab87d1eb0f2f41d3
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: 13f44e93ee9c1c0583bd75121aec638fee09b748
 
 
 ---
@@ -72,7 +72,7 @@ Oltre alla condivisione di un file protetto tramite Outlook, è possibile utiliz
 
     ![Messaggio di posta elettronica per Azure RMS](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
-    [Che cos'è il file .ppdf che viene creato automaticamente?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created-)
+    Ci si potrebbe chiedere: [Che cos'è il file .ppdf che viene creato automaticamente?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)
 
 4.  Facoltativo: È possibile modificare qualsiasi elemento nel messaggio e-mail. Ad esempio, è possibile aggiungere o modificare l'oggetto o il testo del messaggio.
 
@@ -86,13 +86,13 @@ Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights
 
 -   [Esempi per l'utilizzo dell’applicazione di condivisione RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Come procedere](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [Come procedere](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Vedere anche
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

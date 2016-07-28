@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/17/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b19eadd408837ebcd77b3ae2f9520f5286fcf41f
-ms.openlocfilehash: cad9d01735d8e649875bc6bba73d29573891e1d8
+ms.sourcegitcommit: e1b7dedd8556f3ccdb1642681cc4e1e5b1d09ccf
+ms.openlocfilehash: ee2860da964b52bc41c0aea219110453f024b954
 
 
 ---
@@ -29,6 +29,16 @@ Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
 > [!NOTE]
 > Per commenti o domande sull'applicazione di RMS sharing, inviare un messaggio di posta elettronica a [AskIPTeam](mailto:AskIPTeam@microsoft.com?subject=RMS%20sharing%20app:%20Feedback%20or%20question).
+
+## Versione 1.0.2217.0
+
+**Rilasciata**: 13/07/2016
+
+**Correzioni**:
+
+- Per gli utenti di organizzazioni che usano la federazione e l'autenticazione a più fattori non viene più visualizzato l'errore 0x800704DC quando proteggono il contenuto.
+
+
 
 ## Versione 1.0.2191.0
 **Rilasciata il**: 16/06/2016
@@ -122,6 +132,6 @@ Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO3-->
 
 

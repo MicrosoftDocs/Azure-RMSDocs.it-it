@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: get-started-article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: 7d6e1d818c8eb4f6d2e4e7d320e44c7f159eabb4
+ms.sourcegitcommit: 0e9551db57cc1295f20368535267ca5a901ae9f2
+ms.openlocfilehash: a95b9679578f6786bd883884cd5c5f84cb6db739
 
 
 ---
@@ -31,6 +31,7 @@ In caso di subbio su una parola, una frase o un acronimo correlati a Microsoft [
 |attivare|Abilitare il servizio [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] in modo che un'organizzazione possa applicare la protezione delle informazioni a documenti e messaggi e-mail. Questa azione abilita le funzionalità di Rights Management anche in Exchange Online e SharePoint Online.|
 |Active Directory Rights Management Services|Spesso abbreviato in *AD RMS*.<br /><br />Ruolo di Windows Server che fornisce la protezione delle informazioni tramite crittografia e criteri che consentono di proteggere documenti, file e messaggi e-mail.|
 |AD RMS|Vedere *Active Directory Rights Management Services*.|
+|Azure Information Protection|Servizio, attualmente in anteprima, che usa funzioni di classificazione, aggiunta di etichette e protezione per proteggere documenti e messaggi di posta elettronica. Azure Rights Management garantisce la protezione tramite criteri di crittografia, identità e autorizzazione.|
 |Azure Rights Management|Spesso abbreviato in *Azure RMS*.<br /><br />Servizio Azure che fornisce la protezione delle informazioni tramite crittografia e criteri che consentono di proteggere documenti, file e messaggi e-mail.  Noto anche come *servizio Azure Rights Management*. I nomi precedenti includono:<br /><br />*Windows Azure Active Directory Rights Management*: spesso abbreviato in servizio Windows Azure AD Rights Management.<br /><br />*RMS Online*: il nome proposto in origine, che è possibile incontrare nei messaggi di errore e nelle voci dei file di log.|
 |Azure RMS|Vedere *Azure Rights Management*.|
 |BYOK|Vedere *bring your own key*.|
@@ -71,6 +72,6 @@ In caso di subbio su una parola, una frase o un acronimo correlati a Microsoft [
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

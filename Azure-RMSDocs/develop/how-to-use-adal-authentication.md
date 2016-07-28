@@ -1,7 +1,7 @@
 ---
 title: Autenticazione ADAL per l'applicazione abilitata per RMS | Azure RMS
 description: Descrive il processo per l'autenticazione con ADAL
-keywords: authentication, RMS, ADAL
+keywords: autenticazione, RMS, ADAL
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 06/28/2016
@@ -124,6 +124,6 @@ C++ extern HRESULT GetADALToken(LPVOID pContext, const IPC_NAME_VALUE_LIST& Para
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO3-->
 
 

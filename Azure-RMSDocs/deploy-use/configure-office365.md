@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 7a2436a6ebb17e4336f1321b8f3742e34ea59689
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: 3592fb7c386eaeddc839c11a494f94d9b7564472
 
 
 ---
@@ -559,7 +559,7 @@ Anche se non è possibile configurare IRM per OneDrive for Business per gli uten
 
     3.  Cercare `$webUrls` e sostituire i valori di esempio con gli URL Web di OneDrive for Business degli utenti, aggiungendo o eliminando il numero di voci in base alle esigenze.
 
-        In alternativa, vedere i commenti nello script su come sostituire questa matrice importando un file CSV contenente tutti gli URL che è necessario configurare.  È stato fornito un altro script di esempio per cercare automaticamente ed estrarre gli URL per popolare questo. file CSV. Quando si è pronti per eseguire questa operazione, espandere la sezione [Script aggiuntivo per l'output di tutti gli URL di OneDrive for Business per un file CSV](#BKMK_Script_OD4B_URLS) immediatamente dopo questi passaggi.
+        In alternativa, vedere i commenti nello script su come sostituire questa matrice importando un file CSV contenente tutti gli URL che è necessario configurare.  È stato fornito un altro script di esempio per cercare automaticamente ed estrarre gli URL per popolare questo. file CSV. Quando si è pronti per eseguire questa operazione, usare la sezione [Script aggiuntivo per l'output di tutti gli URL di OneDrive for Business per un file CSV](#additional-script-to-output-all-onedrive-for-business-urls-to-a-csv-file) immediatamente dopo questi passaggi.
 
         L'URL Web di OneDrive for Business dell'utente è nel formato seguente: https://*&lt;nome tenant&gt;*-my.sharepoint.com/personal/*&lt;nome_utente&gt;*_*&lt;nome tenant&gt;*_com
 
@@ -1106,6 +1106,6 @@ Disconnect-SPOService -ErrorAction SilentlyContinue
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

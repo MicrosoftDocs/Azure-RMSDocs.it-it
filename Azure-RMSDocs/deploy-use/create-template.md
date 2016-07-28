@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2016
+ms.date: 07/15/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 6a2989f4a6d919d9a2a3d301467353f052bd10ea
-ms.openlocfilehash: d67caf4ebbe19e4f67061d006da1fdedea0d5761
+ms.sourcegitcommit: 5737594c679be0702761014425e104e5eade59f3
+ms.openlocfilehash: c240502f2e88ec61bcbee6be778e77a0d5aee66b
 
 
 ---
@@ -26,6 +26,8 @@ ms.openlocfilehash: d67caf4ebbe19e4f67061d006da1fdedea0d5761
 
 
 Il portale di Azure classico consente di creare e gestire modelli personalizzati. È possibile eseguire questa operazione direttamente nel portale di Azure classico oppure accedendo all'interfaccia di amministrazione di Office 365 e scegliendo le **funzionalità avanzate** di Rights Management, che a loro volta reindirizzano al portale di Azure classico.
+
+Per creare e gestire modelli nel portale di Azure classico è necessario il ruolo di amministratore globale. Se il ruolo di amministratore globale per Azure RMS è stato assegnato ad altri utenti, questi possono anche creare e gestire modelli, ma devono usare [PowerShell](configure-templates-with-powershell.md). Per altre informazioni, vedere [È necessario essere un amministratore globale per configurare Azure RMS oppure tale configurazione può essere delegata ad altri amministratori?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
 
 Per creare, configurare e pubblicare modelli personalizzati per Rights Management, seguire queste procedure.
 
@@ -165,6 +167,6 @@ Per apportare modifiche al modello, selezionarlo e quindi eseguire di nuovo i pa
 [Configurare modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

@@ -13,8 +13,8 @@ ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 46e5d3c9ea001d2fa157187a8b78c2dc3e6516f3
+ms.sourcegitcommit: 384a58f32aae8c7d908392e7fd9a1629bc05cdff
+ms.openlocfilehash: d3727eb963532e03137aea2140293fa9c5821db2
 
 
 ---
@@ -43,29 +43,31 @@ Di seguito sono riportati solo alcuni esempi di come è possibile utilizzare l'a
 
 ## Come procedere
 > [!NOTE]
-> Per altre informazioni tecniche, ad esempio sui tipi di file supportati e su come installare questa applicazione su una rete aziendale, vedere la [Guida dell'amministratore dell'applicazione Rights Management sharing](sharing-app-admin-guide.md).
+> Per altre informazioni tecniche, ad esempio sui [tipi di file supportati](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) e su [come installare questa applicazione in una rete aziendale](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application), vedere la [Guida dell'amministratore dell'applicazione di condivisione Rights Management](sharing-app-admin-guide.md).
 
--   [Scaricare e installare l'applicazione di condivisione](install-sharing-app.md)
+- [Scaricare e installare l'applicazione di condivisione](install-sharing-app.md)
 
--   [Proteggere un file in un dispositivo (Proteggere sul posto)](sharing-app-protect-in-place.md)
+- [Proteggere un file in un dispositivo (Proteggere sul posto)](sharing-app-protect-in-place.md)
 
--   [Proteggere un file che si condivide tramite posta elettronica](sharing-app-protect-by-email.md)
+- [Proteggere un file che si condivide tramite posta elettronica](sharing-app-protect-by-email.md)
 
--   [Tenere traccia e revocare i documenti](sharing-app-track-revoke.md)
+- [Modificare le autorizzazioni per i file protetti](sharing-app-reprotect-files.md)
 
--   [Visualizzare e utilizzare i file che sono stati protetti](sharing-app-view-use-files.md)
+- [Tenere traccia e revocare i documenti](sharing-app-track-revoke.md)
 
--   [Rimuovere la protezione da un file](sharing-app-remove-protection.md)
+- [Visualizzare e utilizzare i file che sono stati protetti](sharing-app-view-use-files.md)
 
--   [Utilizzare tasti di scelta rapida](sharing-app-keyboard-shortcuts.md)
+- [Rimuovere la protezione da un file](sharing-app-remove-protection.md)
 
--   [Specificare le impostazioni nella finestra di dialogo](sharing-app-dialog-box.md)
+- [Utilizzare tasti di scelta rapida](sharing-app-keyboard-shortcuts.md)
 
-
-
-
+- [Specificare le impostazioni nella finestra di dialogo](sharing-app-dialog-box.md)
 
 
-<!--HONumber=Jun16_HO4-->
+
+
+
+
+<!--HONumber=Jul16_HO3-->
 
 

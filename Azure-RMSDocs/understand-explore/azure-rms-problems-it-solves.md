@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/02/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e84de6afd80196d4237499718af45c64788c408d
-ms.openlocfilehash: 2863c98390b8fda528c4fe3a1b2ebce3510763b4
+ms.sourcegitcommit: 06f615c993d54ab1e8e4a94d7414302481d919b4
+ms.openlocfilehash: 17756d4e641c10c0522f7a849634ae67630b363b
 
 
 ---
@@ -28,7 +28,7 @@ Usare la seguente tabella per identificare i requisiti aziendali e i possibili p
 
 |Requisito o problema|Soluzione fornita da Azure RMS|
 |--------------------------|-----------------------|
-|Protezione di tutti i tipi di file|√ Nella precedente implementazione di Rights Management era possibile proteggere, usando la protezione nativa, soltanto i file di Office. Per [protezione generica](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection-) si intende che sono supportati tutti i tipi di file.|
+|Protezione di tutti i tipi di file|√ Nella precedente implementazione di Rights Management era possibile proteggere, usando la protezione nativa, soltanto i file di Office. Per [protezione generica](../rms-client/sharing-app-dialog-box.md#what-s-the-difference-between-generic-protection-and-built-in-native-protection) si intende che sono supportati tutti i tipi di file.|
 |Protezione dei file in qualsiasi situazione|√ Quando un file viene salvato in un percorso ([protezione sul posto](../rms-client/sharing-app-protect-in-place.md)), i criteri di protezione rimangono associati al file stesso anche se questo viene copiato in un'area di archiviazione non controllata dal reparto IT, ad esempio un servizio di archiviazione cloud.|
 |Condivisione sicura dei file tramite posta elettronica|√ Quando un file viene condiviso tramite posta elettronica ([condivisione file protetto](../rms-client/sharing-app-protect-by-email.md)), viene protetto come un allegato a un messaggio di posta elettronica, con istruzioni per l'apertura. Il testo del messaggio di posta non viene crittografato, in modo che il destinatario possa sempre leggere le istruzioni. Il documento allegato, tuttavia, è protetto e può essere aperto solo dagli utenti autorizzati, anche se il messaggio di posta elettronica o il documento viene inoltrato ad altre persone.|
 |Controllo e monitoraggio|√ È possibile [controllare e monitorare l'utilizzo](../deploy-use/log-analyze-usage.md) dei file protetti, anche all'esterno dell'organizzazione.<br /><br />Si supponga, ad esempio, di essere un dipendente della società Contoso, Ltd e di lavorare a un progetto comune con tre persone della società Fabrikam, Inc. Si supponga quindi di inviare a queste tre persone un documento protetto e di sola lettura. La funzionalità di controllo di Azure RMS può fornire le seguenti informazioni:<br /><br />- Se e quando le persone specificate in Fabrikam hanno aperto il documento.<br /><br />- Se altre persone che non sono state specificate hanno tentato invano di aprire il documento, forse perché questo era stato inoltrato o salvato in una posizione condivisa e accessibile da altri utenti.<br /><br />- Se una delle persone specificate ha tentato invano di stampare o modificare il documento.|
@@ -73,6 +73,6 @@ Per informazioni sul funzionamento di Azure RMS per gli amministratori e gli ute
 Se si è interessati ad altre informazioni tecniche sul funzionamento di Azure RMS, vedere [Funzionamento di Azure RMS](how-does-it-work.md). 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

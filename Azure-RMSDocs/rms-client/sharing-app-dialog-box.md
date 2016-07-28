@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
-ms.openlocfilehash: 771a80843ca5ab01cd06bd4e76c827469b0e9f00
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: ed2ab42174ce5d83fd60ace1c394515db1450e3d
 
 
 ---
@@ -32,14 +32,14 @@ Utilizzare queste informazioni per specificare le opzioni nella finestra di dial
 
 Oltre alle opzioni che è possibile scegliere, è inoltre possibile chiedersi:
 
--   [Che cos'è il file .ppdf che viene creato automaticamente?](#what-s-the-ppdf-file-that-s-automatically-created-)
+-   [Che cos'è il file .ppdf che viene creato automaticamente?](#what-s-the-ppdf-file-that-s-automatically-created)
 
--   [Qual è la differenza tra protezione generica e protezione integrata (nativa)?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection-)
+-   [Qual è la differenza tra protezione generica e protezione integrata (nativa)?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection)
 
 |Opzione|Descrizione|
 |----------|---------------|
 |**UTENTI**|Se non è ancora stato specificato un indirizzo di posta elettronica di Outlook, digitare gli indirizzi di posta elettronica delle persone che si desidera siano in grado di aprire il file.<br /><br />Si noti che l'app RMS sharing non supporta tutti gli indirizzi di posta elettronica.<br /><br />Se l'organizzazione utilizza la versione locale di Rights Management (AD RMS), gli indirizzi di posta elettronica che è possibile specificare sono limitati alle persone all'interno dell'organizzazione. Quando si applica questo e si tenta di specificare indirizzi di posta elettronica esterni, verrà visualizzato un messaggio che indica che la configurazione aziendale consente la condivisione del contenuto protetto solo all'interno della società. <br /><br /> Se l'organizzazione usa Azure RMS, gli indirizzi di posta elettronica specificati possono essere destinati a persone all'interno dell'organizzazione o a persone in un'altra organizzazione.<br /><br />Ad esempio: **janetm@contoso.com; p.dover@fabrikam.com**<br /><br />Gli indirizzi di posta elettronica personali non sono attualmente supportati dall'app RMS sharing.|
-|**Protezione generica**|Se questa opzione è selezionata, significa che il file selezionato non può essere protetto in modo nativo. Per altre informazioni, vedere. [Qual è la differenza tra protezione generica e protezione integrata (nativa)?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection-) in questa pagina.|
+|**Protezione generica**|Se questa opzione è selezionata, significa che il file selezionato non può essere protetto in modo nativo. Per altre informazioni, vedere. [Qual è la differenza tra protezione generica e protezione integrata (nativa)?](#what-s-the-difference-between-generic-protection-and-built-in-native-protection) in questa pagina.|
 |**Visualizzatore - Solo visualizzazione**<br /><br />**Revisore - Visualizzazione e modifica**<br /><br />**Co-autore - Visualizzazione, modifica, copia e stampa**<br /><br />**Comproprietario – Tutte le autorizzazioni**<br /><br />Nota: tutte queste opzioni hanno un'icona rotonda prima del nome, che rappresenta un globo mondiale. Questa icona viene utilizzata perché in genere si seleziona una di queste opzioni quando si invia l'allegato a un utente in un'altra organizzazione.|Se si desidera definire i diritti del documento protetto, selezionare una delle seguenti opzioni. Fare clic su ogni opzione per visualizzare una descrizione.<br /><br />Quando si sceglie una di queste opzioni, solo gli utenti specificate in **UTENTI** dispongono dei diritti specificati per aprire e utilizzare il documento. Ad esempio, se eseguono l’inoltro ad un altro utente, il documento non viene visualizzato.|
 |Modelli di criteri configurati dall'amministratore.<br /><br />Se ad esempio il nome dell'organizzazione è Contoso, Ltd, potrebbe essere visualizzato **Contoso, Ltd - Solo visione riservata**.<br /><br />Nota: tutte queste opzioni hanno un'icona quadrata prima del nome, che rappresenta l'edificio di una sede. Questa icona viene utilizzata perché in genere si seleziona una di queste opzioni quando si invia l'allegato a un utente nell'organizzazione.|Quando si condivide un documento con le persone che lavorano per l'organizzazione, vengono visualizzati i modelli di criteri disponibili configurati dall'amministratore. Scegliere uno dei seguenti quando non è possibile condividere il documento all'esterno dell'organizzazione.<br /><br />Quando si sceglie una di queste opzioni, l'amministratore definisce i diritti del documento e chi può aprirlo.|
 |**Scadenza dei documenti**|Selezionare questa opzione solo per i file per i quali i tempi sono importanti che gli utenti selezionati non devono essere in grado di aprire dopo una data specificata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (del fuso orario corrente) del giorno specificato, altri utenti non potranno aprire il file.<br /><br />Questa opzione non è disponibile se si seleziona un modello di criteri configurati dall'amministratore.|
@@ -71,7 +71,7 @@ Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights
 
 -   [Esempi per l'utilizzo dell’applicazione di condivisione RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Come procedere](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [Come procedere](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Vedere anche
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
@@ -79,6 +79,6 @@ Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

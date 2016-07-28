@@ -4,7 +4,7 @@ description: Descrive i concetti fondamentali dell'autenticazione utente per l'a
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 07/07/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 56d0538243af49580f24c701ad5097b30f3059b0
-ms.openlocfilehash: 34a82f31b5da46a59627ff559deb46c8445fcdf2
+ms.sourcegitcommit: 04454886841fe7b3482d10e1e32422f28d1c434f
+ms.openlocfilehash: fbe12e339d3fb8fc62aabc34aaa9f5f043e95de9
 
 
 ---
@@ -29,6 +29,9 @@ L'autenticazione utente è un passaggio essenziale per stabilire la comunicazion
 
 ## Registrazione tramite il portale di Azure
 Per iniziare, configurare la registrazione dell'app tramite il portale di Azure seguendo le istruzioni riportate in [Configurare Azure RMS per l'autenticazione ADAL](adal-auth.md). Assicurarsi di copiare e salvare i valori di **ID client** e **URI di reindirizzamento** da questo processo per usarli in seguito.
+
+## Sottoscrivere un contratto di licenza per Rights Management
+Prima di distribuire l'applicazione è necessario sottoscrivere un contratto di licenza per Rights Management con il team Microsoft Rights Management. Per tutti i dettagli, vedere la prima sezione dell'argomento [Distribuire in ambiente di produzione - Richiesta di un contratto di licenza di produzione](deploying-your-application.md).
 
 ## Implementare l'autenticazione utente per l'app
 Ogni API RMS dispone di un callback che è necessario implementare per abilitare l'autenticazione dell'utente. RMS SDK 4.2 userà l'implementazione del callback quando non si fornisce un token di accesso, quando il token di accesso deve essere aggiornato o quando è scaduto.
@@ -271,6 +274,6 @@ Viene ricavato dal passaggio di registrazione precedente tramite il portale di A
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

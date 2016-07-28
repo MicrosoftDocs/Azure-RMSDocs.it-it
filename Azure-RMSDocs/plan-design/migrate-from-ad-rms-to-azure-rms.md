@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/29/2016
+ms.date: 07/13/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea4dd88ed749092fd02135d8ca25b621f74fe72f
-ms.openlocfilehash: b33839ff5ce0d30082f58ff96eb81215b716e46d
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: 8ef46d68594a6e559e050f846a844f566ff8770d
 
 
 ---
@@ -85,7 +85,7 @@ Prima di iniziare il processo di migrazione ad Azure RMS, verificare che i prere
 
 Limitazioni:
 
--   Anche se il processo di migrazione supporta la migrazione della chiave del certificato SLC da un modulo di protezione hardware per Azure RMS, Exchange Online non supporta attualmente questa configurazione. Se si vuole la funzionalità IRM completa con Exchange Online dopo la migrazione ad Azure RMS, la chiave del tenant di Azure RMS deve essere [gestita da Microsoft](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-). In alternativa, è possibile eseguire IRM con la funzionalità ridotta in Exchange Online quando il tenant di Azure RMS è gestito dall'utente (BYOK). Per altre informazioni sull'uso di Exchange Online con Azure RMS, vedere [Passaggio 6. Configurare l’integrazione IRM per Exchange Online](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online).
+-   Anche se il processo di migrazione supporta la migrazione della chiave del certificato SLC da un modulo di protezione hardware per Azure RMS, Exchange Online non supporta attualmente questa configurazione. Se si vuole la funzionalità IRM completa con Exchange Online dopo la migrazione ad Azure RMS, la chiave del tenant di Azure RMS deve essere [gestita da Microsoft](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok). In alternativa, è possibile eseguire IRM con la funzionalità ridotta in Exchange Online quando il tenant di Azure RMS è gestito dall'utente (BYOK). Per altre informazioni sull'uso di Exchange Online con Azure RMS, vedere [Passaggio 6. Configurare l’integrazione IRM per Exchange Online](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online).
 
 -   Se si usano software e client non supportati con Azure RMS, non riusciranno a proteggere o usare il contenuto protetto da Azure RMS. Verificare le sezioni relative alle applicazioni e ai client supportati nell’articolo [Requisiti per Azure Rights Management](../get-started/requirements-azure-rms.md).
 
@@ -180,6 +180,6 @@ Per iniziare la migrazione, passare a [Fase 1: configurazione lato server](migra
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

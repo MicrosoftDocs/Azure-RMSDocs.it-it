@@ -10,11 +10,12 @@
 ### [Applicazione di condivisione Rights Management per Windows](sharing-app-windows.md)
 #### [Applicazione di condivisione Rights Management: Cronologia delle versioni](sharing-app-version-release-history.md)
 #### [Guida dell'amministratore dell'applicazione di condivisione Rights Management](sharing-app-admin-guide.md)
-##### [Panoramica tecnica](sharing-app-admin-guide-technical.md)
+##### [Panoramica tecnica e dettagli sulla protezione](sharing-app-admin-guide-technical.md)
 #### [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 ##### [Scaricare e installare](install-sharing-app.md)
 ##### [Proteggere un file in un dispositivo](sharing-app-protect-in-place.md)
 ##### [Proteggere un file che si condivide tramite posta elettronica](sharing-app-protect-by-email.md)
+##### [Modificare le autorizzazioni per i file protetti](sharing-app-reprotect-files.md)
 ##### [Tenere traccia e revocare i documenti](sharing-app-track-revoke.md)
 ##### [Visualizzare e utilizzare i file protetti](sharing-app-view-use-files.md)
 ##### [Rimuovere la protezione](sharing-app-remove-protection.md)
@@ -22,8 +23,9 @@
 ##### [Opzioni della finestra di dialogo](sharing-app-dialog-box.md)
 ### [Informativa sulla privacy di Microsoft Rights Management in applicazioni abilitate per RMS](privacy-statement-rms-enlightened-applications.md)
 # [Sviluppare e personalizzare le app](/rights-management/develop/developers-guide)
+# [Azure Information Protection (anteprima)](/rights-management/information-protection/what-is-information-protection)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

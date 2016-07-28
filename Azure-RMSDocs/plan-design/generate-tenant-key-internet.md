@@ -13,8 +13,8 @@ ms.assetid: 1bff9b06-8c5a-4b1d-9962-6668219210e6
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7a9c8b531ec342e7d5daf0cbcacd6597a79e6a55
-ms.openlocfilehash: 20cfa722f7008c52f4fbc219a4de04c50ee3548d
+ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
+ms.openlocfilehash: 7ec87b63b31d0b41c93dab7998df63e208308811
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: 20cfa722f7008c52f4fbc219a4de04c50ee3548d
 
 *Si applica a: Azure Rights Management, Office 365*
 
-Se si vuole [gestire la chiave del tenant](plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok-) e trasferirla tramite Internet invece di recarsi in una struttura Microsoft per trasferirla di persona, seguire queste procedure:
+Se si vuole [gestire la chiave del tenant](plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok) e trasferirla tramite Internet invece di recarsi in una struttura Microsoft per trasferirla di persona, seguire queste procedure:
 
 
 ## Preparare la workstation connessa a Internet
@@ -378,6 +378,6 @@ Tutti i passaggi necessari per trasferire la propria chiave tramite Internet son
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 

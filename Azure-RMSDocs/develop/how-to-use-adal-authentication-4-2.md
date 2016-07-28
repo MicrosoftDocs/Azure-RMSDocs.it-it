@@ -1,7 +1,7 @@
 ---
 title: Usare il portale di Azure per eseguire la configurazione per l'autenticazione di RMS | Azure RMS
 description: Descrive il processo per l'autenticazione con ADAL
-keywords: authentication, RMS, ADAL
+keywords: autenticazione, RMS, ADAL
 author: bruceperlerms
 manager: mbaldwin
 ms.date: 06/14/2016
@@ -62,6 +62,6 @@ Questo è un frammento di codice tratto dall'esempio completo di codice per clie
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jul16_HO3-->
 
 
