@@ -21,11 +21,10 @@
 ##### [Rimuovere la protezione](sharing-app-remove-protection.md)
 ##### [Utilizzare tasti di scelta rapida](sharing-app-keyboard-shortcuts.md)
 ##### [Opzioni della finestra di dialogo](sharing-app-dialog-box.md)
-### [Informativa sulla privacy di Microsoft Rights Management in applicazioni abilitate per RMS](privacy-statement-rms-enlightened-applications.md)
 # [Sviluppare e personalizzare le app](/rights-management/develop/developers-guide)
 # [Azure Information Protection (anteprima)](/rights-management/information-protection/what-is-information-protection)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

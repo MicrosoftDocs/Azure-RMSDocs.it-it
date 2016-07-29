@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: 30fad88ff664e2df935c8f2cfd28f8b1fe251f67
+ms.sourcegitcommit: 79397c82d9478cbd55630a376fe2d12f3873ebc4
+ms.openlocfilehash: 4ff6328c0be4cd217390ee802e53e93c90f41c99
 
 
 ---
@@ -28,8 +28,8 @@ Questo argomento illustra come impostare l'ambiente per la creazione di nuove ap
 
 -   [Prerequisiti](#prerequisites)
 -   [Facoltativo](#optional)
--   [Configurazione dell'ambiente di sviluppo](#configuring_your_development_environment_)
--   [Vedere anche](#see_also)
+-   [Configurazione dell'ambiente di sviluppo](#configuring-your-development-environment_)
+-   [Vedere anche](#see-also)
 
 ## Prerequisiti
 
@@ -150,6 +150,6 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Jul16_HO4-->
 
 
