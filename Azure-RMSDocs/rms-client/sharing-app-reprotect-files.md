@@ -4,7 +4,7 @@ description: "Quando un file è protetto da Rights Management, è possibile modi
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/20/2016
+ms.date: 07/27/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 51050497fe128d94e069d0ac010435bea5623af2
-ms.openlocfilehash: 985d3d2f1151b50fcde8f8bb916e984e1de71b00
+ms.sourcegitcommit: e65fe3e6994352296cdf58d4b53de421389790f7
+ms.openlocfilehash: 492f651f9234a8428a0f39da93b332a552894993
 
 
 ---
@@ -32,7 +32,7 @@ Quando un file è protetto da Rights Management, è possibile modificarne le aut
 >
 > Analogamente, se si vuole aggiungere o rimuovere un'autorizzazione, non è sufficiente specificare l'autorizzazione da aggiungere o rimuovere, ma è necessario specificare tutte le autorizzazioni che gli utenti specificati devono avere.
 
-Il proprietario del file da riproteggere (l'utente che, ad esempio, ha originariamente protetto il file tramite l'applicazione di condivisione) ha automaticamente le autorizzazioni per riproteggere il file. Se l'utente non è il proprietario, il fatto che abbia le autorizzazioni necessarie a riproteggere il file dipende dalle autorizzazioni correnti del file protetto. 
+Il proprietario del file da riproteggere (l'utente che, ad esempio, ha originariamente protetto il file tramite l'applicazione di condivisione) ha automaticamente le autorizzazioni per riproteggere il file. Se l'utente non è il proprietario, il fatto che abbia le autorizzazioni necessarie a riproteggere il file dipende dalle autorizzazioni correnti del file protetto. Per proteggere un file, è necessario il [diritto di utilizzo del controllo completo](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions).
 
 Se ad esempio un altro utente ha protetto il file tramite l'applicazione di condivisione Rights Management specificando per l'utente corrente un gruppo di appartenenza e l'autorizzazione personalizzata **Comproprietario**, l'utente corrente sarà in grado di riproteggere il file. Se invece l'altro utente non ha specificato il nome dell'utente corrente né un gruppo di appartenenza per quest'ultimo, oppure se ha selezionato **Revisore – Visualizzazione e Modifica** o un modello che non consente di rimuovere le autorizzazioni, l'utente corrente non sarà in grado di riproteggere il file. Il modo più semplice per scoprirlo è tentare di riproteggere il file.
 
@@ -96,6 +96,6 @@ Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 

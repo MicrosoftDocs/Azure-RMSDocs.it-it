@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4c3625676c7e794ef133c75881f666bae80e0513
-ms.openlocfilehash: ad8c41c9f3f3515a817d508d8f5a8953daf4b440
+ms.sourcegitcommit: 79397c82d9478cbd55630a376fe2d12f3873ebc4
+ms.openlocfilehash: fce408a8c7a1114375745c3783443b87cd80ba78
 
 
 ---
@@ -46,7 +46,7 @@ Per usare l'applicazione di servizio Rights Management Services SDK 2.1 con Azur
 
      
 -   La procedura seguente rappresenta la configurazione per la creazione dell'istanza di una struttura [**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx) con il membro **pcCredential** ([**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)) popolato con le informazioni di connessione ottenute dal servizio di Azure Rights Management.
--   Usare le informazioni ottenute con la creazione dell'identità del servizio tramite chiave simmetrica (vedere i prerequisiti riportati in precedenza in questo argomento) per impostare i parametri **wszServicePrincipal**, **wszBposTenantId** e **cbKey** quando si crea l'istanza di una struttura [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key).
+-   Usare le informazioni ottenute con la creazione dell'identità del servizio tramite chiave simmetrica (vedere i prerequisiti riportati in precedenza in questo argomento) per impostare i parametri **wszServicePrincipal**, **wszBposTenantId** e **cbKey** quando si crea l'istanza di una struttura [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key).
 
 **Nota** A causa di una condizione esistente presso il nostro servizio di individuazione, le credenziali tramite chiave simmetrica vengono accettate solo se provenienti dal Nord America e di conseguenza è necessario specificare l'URL del tenant direttamente. Questa operazione viene eseguita tramite il parametro [**IPC\_CONNECTION\_INFO**](/rights-management/sdk/2.1/api/win/ipc_connection_info#msipc_ipc_connection_info) di [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) oppure [**IpcGetTemplateIssuerList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist).
 
@@ -81,7 +81,7 @@ Per usare l'applicazione di servizio Rights Management Services SDK 2.1 con Azur
     `Get-AadrmConfiguration`
 
 
--   Creare un'istanza di  [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key) e impostare alcuni membri.
+-   Creare un'istanza di [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) e impostare alcuni membri.
 
     // Creare una struttura di chiave.
     IPC_CREDENTIAL_SYMMETRIC_KEY symKey = {0}.
@@ -90,9 +90,9 @@ Per usare l'applicazione di servizio Rights Management Services SDK 2.1 con Azur
     symKey.wszBase64Key = "chiave dell'entità servizio"; symKey.wszAppPrincipalId = "identificatore dell'entità app"; symKey.wszBposTenantId = "identificatore del tenant";
 
 
-Per altre informazioni, vedere [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key).
+Per altre informazioni, vedere [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key).
 
--   Creare l'istanza di una struttura [**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential) contenente l'istanza di [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key).
+-   Creare l'istanza di una struttura [**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential) contenente l'istanza di [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key).
 
 **Nota** I membri *conectionInfo* sono impostati con gli URL ottenuti dalla chiamata precedente a `Get-AadrmConfiguration` e indicati con tali nomi di campo.
 
@@ -160,7 +160,7 @@ La procedura necessaria per consentire all'applicazione di usare Azure Rights Ma
 * [**IpcInitialize**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize)
 * [**IPC\_PROMPT\_CTX**](/rights-management/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx)
 * [**IPC\_CREDENTIAL**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)
-* [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential_symmetric_key)
+* [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/rights-management/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key)
 * [**IpcGetTemplateIssuerList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist)
 * [**IpcGetTemplateList**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
 * [**IpcfDecryptFile**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile)
@@ -173,6 +173,6 @@ La procedura necessaria per consentire all'applicazione di usare Azure Rights Ma
 
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Jul16_HO4-->
 
 

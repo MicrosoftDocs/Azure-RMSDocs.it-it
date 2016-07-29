@@ -13,8 +13,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a58d50b33db95570b43fe1ec0f76bdf490ddd024
-ms.openlocfilehash: 164df467632b38f179d1c1192835f919641331a5
+ms.sourcegitcommit: 0ac4264f20208f999c9ad9bdd2c4759e65ae021b
+ms.openlocfilehash: 5344c38a31aa0ceb894f330f363442bd2c0d9375
 
 
 ---
@@ -124,7 +124,7 @@ Per verificare l'esito positivo, vedere la sezione [Verificare l'esito positivo 
     setup.exe /s /configureO2010Admin /certificationUrl <certification_url>
     ```
 
-3.  In ogni computer in cui si installerà l'applicazione di condivisione RMS ogni utente del computer deve eseguire il comando seguente (non servono privilegi elevati). Esistono diversi modi per ottenere tale scopo, tra cui chiedere agli utenti di eseguire il comando (ad esempio, un collegamento in un messaggio di posta elettronica o un collegamento nel portale di supporto tecnico) oppure è possibile aggiungere i relativi script di accesso:
+3.  In ogni computer in cui si installerà l'applicazione RMS sharing ogni utente di tale computer deve eseguire il comando seguente (non servono privilegi elevati). Esistono diversi modi per ottenere tale scopo, tra cui chiedere agli utenti di eseguire il comando (ad esempio, un collegamento in un messaggio di posta elettronica o un collegamento nel portale di supporto tecnico) oppure è possibile aggiungere i relativi script di accesso:
 
     ```
     bin\RMSSetup.exe /configureO2010Only
@@ -369,6 +369,6 @@ Per informazioni tecniche aggiuntive, inclusa la spiegazione della differenza tr
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO4-->
 
 
