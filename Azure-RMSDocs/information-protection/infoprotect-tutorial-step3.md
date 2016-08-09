@@ -3,22 +3,24 @@ title: Esercitazione introduttiva di Azure Information Protection, passaggio 3 |
 description: "Passaggio 3 dell'esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell'organizzazione. L'esercitazione è articolata in 4 passaggi, eseguibili in meno di 15 minuti."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 translationtype: Human Translation
-ms.sourcegitcommit: 7f85c673cd1e8055d6a27dcc49b5da18a7e12f98
-ms.openlocfilehash: 41ebf56c55d94e9aecf9538d474c8fa2c77ae83e
+ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
+ms.openlocfilehash: 65596a71b07e830377c55dc04b7187251315a634
 
 
 ---
 
 # Passaggio 3: Installare il client di Azure Information Protection 
 
-*Si applica a: Azure Information Protection (anteprima)*
+>*Si applica a: Azure Information Protection (anteprima)*
+
+**[ Informazioni preliminari soggette a modifiche. ]**
 
 In questo passaggio verrà installato il client di Azure Information Protection in modo che i criteri appena configurati vengano scaricati in un PC Windows e le etichette vengano visualizzate nelle applicazioni di Office. 
 
@@ -41,11 +43,16 @@ In questo passaggio verrà installato il client di Azure Information Protection 
 
 È il momento del passaggio finale, in cui è possibile vedere in azione le funzioni di classificazione, aggiunta di etichette e protezione.
 
+|Se si desiderano altre informazioni|Informazioni aggiuntive|
+|--------------------------------|--------------------------|
+|Informazioni sull'installazione del client|[Installazione del client di Azure Information Protection](info-protect-client.md)|
+
+
 >[!div class="step-by-step"]
 [&#171; Passaggio 2](infoprotect-tutorial-step2.md)
 [Passaggio 4 &#187;](infoprotect-tutorial-step4.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

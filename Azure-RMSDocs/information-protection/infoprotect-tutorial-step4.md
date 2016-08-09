@@ -3,22 +3,24 @@ title: Esercitazione introduttiva di Azure Information Protection, passaggio 4 |
 description: "Passaggio 4 dell'esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell'organizzazione. L'esercitazione è articolata in 4 passaggi, eseguibili in meno di 15 minuti."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/15/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: e80ea074fb1f6e571b846969b15c08cf7108b11c
-ms.openlocfilehash: dcb34eb8bfee6232d32245634dc56f717257b644
+ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
+ms.openlocfilehash: cdd8dee1837c34caaeb0f8a1947dea37504e422a
 
 
 ---
 
 # Passaggio 4: Funzioni di classificazione, aggiunta di etichette e protezione in azione 
 
-*Si applica a: Azure Information Protection (anteprima)*
+>*Si applica a: Azure Information Protection (anteprima)*
+
+**[ Informazioni preliminari soggette a modifiche. ]**
 
 Con un documento di Word aperto e il client di Azure Information Protection installato è possibile rendersi conto di quanto sia facile aggiungere etichette e proteggere il documento usando il criterio configurato.
 
@@ -75,6 +77,6 @@ Dopo aver eseguito un test per proprio conto, può essere utile vedere le [doman
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jul16_HO5-->
 
 

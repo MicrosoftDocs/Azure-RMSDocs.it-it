@@ -3,26 +3,28 @@ title: Esercitazione introduttiva di Azure Information Protection, passaggio 2 |
 description: "Passaggio 2 dell'esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell'organizzazione. L'esercitazione è articolata in 4 passaggi, eseguibili in meno di 15 minuti."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/22/2016
+ms.date: 07/29/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 3bf9fe837c7bb268361b8004352192f0540604b9
-ms.openlocfilehash: af2f5eadf3a4993c590f72a8f44e4fea03982505
+ms.sourcegitcommit: cab45baf19af4ab548f5f112946d168d93a95d49
+ms.openlocfilehash: fa17a5b18162ca7ca1ac0cf9a1052dd01d2057aa
 
 
 ---
 
 # Passaggio 2: Configurare e pubblicare criteri di Azure Information Protection
 
-*Si applica a: Azure Information Protection (anteprima)*
+>*Si applica a: Azure Information Protection (anteprima)*
+
+**[ Informazioni preliminari soggette a modifiche. ]**
 
 Il criterio predefinito disponibile con Azure è utilizzabile senza alcuna operazione di configurazione. Tuttavia si esaminerà questo criterio e vi si apporterà qualche modifica.
 
-1. Accedere al portale di Azure tramite questo collegamento speciale per Azure Information Protection: https://portal.azure.com/?microsoft_azure_informationprotection=true
+1. Accedere al [portale di Azure](https://portal.azure.com).
  
 2. Nel menu hub fare clic su **Esplora** e iniziare a digitare **Information** nella casella Filtro. Selezionare **Azure Information Protection**.
 
@@ -44,20 +46,22 @@ Verranno ora modificate le impostazioni di una delle etichette, **Confidential**
 
 2. Nel pannello **Label: Confidential** (Etichetta: Riservato) sono ora visibili le impostazioni disponibili per ogni etichetta. Apportare le modifiche seguenti:
 
-    a. Se per il **modello RMS impostato per la protezione di documenti e messaggi di posta elettronica contenenti questa etichetta** è attivato Azure Rights Management: assicurarsi che **Azure RMS** sia selezionato e quindi fare clic sulla casella a discesa e selezionare il modello predefinito **\<nome dell'organizzazione > - Confidential** (Riservato). Ad esempio, se il nome dell'organizzazione è VanArsdel, Ltd, verrà visualizzata la voce **VanArsdel, Ltd - Confidential** e sarà possibile selezionarla. Se questo modello di Azure Rights Management è disabilitato, selezionare un modello alternativo. Tuttavia, se si seleziona un modello di reparto, assicurarsi che l'account sia incluso nell'ambito.
-
+    a. Se Azure Rights Management è attivato: se nella sezione **Set RMS template for protecting documents and emails containing this label** (Imposta il modello RMS per la protezione dei documenti e messaggi di posta elettronica che contengono questa etichetta), è visualizzato **Select RMS template from** (Selezionare modello RMS da), mantenere il valore predefinito **Azure RMS**. Quindi, per **Select RMS template** (Selezionare il modello RMS), fare clic sull'elenco a discesa e selezionare il modello predefinito **\<Nome organizzazione> - Confidential** (Riservato). Ad esempio, se il nome dell'organizzazione è VanArsdel, Ltd, verrà visualizzata la voce **VanArsdel, Ltd - Confidential** e sarà possibile selezionarla. Se questo modello di Azure Rights Management è disabilitato, selezionare un modello alternativo. Tuttavia, se si seleziona un modello di reparto, assicurarsi che l'account sia incluso nell'ambito.
+    
     Se Azure Rights Management non è attivato, non è possibile usare questa opzione.
-
+    
     b. **Documents with this label have a watermark** (I documenti con questa etichetta hanno una filigrana): fare clic su **On** e nella casella **Watermark Text** (Testo della filigrana) digitare il nome dell'organizzazione. Ad esempio, **VanArsdel, Ltd**. 
-
+    
     c. Fare clic su **Add a new condition** (Aggiungi una nuova condizione) e quindi nel pannello **Condition** (Condizione) selezionare quanto segue:
-
+    
     - **Choose the type of condition** (Scegliere il tipo di condizione): **Built-in** (Predefinita)
-
+    
     - **Select built-in** (Selezionare tipo predefinito): **Credit Card Number** (N. carta di credito)
-
+    
     - **Minimum number of occurrences** (Numero minimo di occorrenze): **1**
-
+    
+    - **Count occurrences with unique values only** (Conteggia solo occorrenze con valori univoci): **Sì**
+    
     - Fare clic su **Save** (Salva) per tornare al pannello **Label: Confidential** (Etichetta: Riservato).
 
 3. Nel pannello **Label: Confidential** (Etichetta: Riservato) **Credit Card Number** (N. carta di credito) è visualizzato come **CONDITION NAME** (NOME CONDIZIONE) **1** **OCCURRENCES** (OCCORRENZE).
@@ -76,12 +80,16 @@ Al termine di questa esercitazione è possibile chiudere il portale di Azure o l
 
 Dopo aver esaminato il criterio predefinito e aver apportato alcune modifiche, il passaggio successivo prevede l'installazione del client di Azure Information Protection.
 
+|Se si desiderano altre informazioni|Informazioni aggiuntive|
+|--------------------------------|--------------------------|
+|Informazioni sulle opzioni di configurazione per i criteri|[Configurazione dei criteri di Azure Information Protection](configure-policy.md)|
+
 
 >[!div class="step-by-step"]
 [&#171; Passaggio 1](infoprotect-tutorial-step1.md)
 [Passaggio 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Jul16_HO5-->
 
 
