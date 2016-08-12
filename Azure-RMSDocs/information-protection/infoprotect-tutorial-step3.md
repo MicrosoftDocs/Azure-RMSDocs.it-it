@@ -3,15 +3,15 @@ title: Esercitazione introduttiva di Azure Information Protection, passaggio 3 |
 description: "Passaggio 3 dell'esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell'organizzazione. L'esercitazione è articolata in 4 passaggi, eseguibili in meno di 15 minuti."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 65596a71b07e830377c55dc04b7187251315a634
+ms.sourcegitcommit: 264f2be6c62dc7fa670171493941332fe7ff20e5
+ms.openlocfilehash: 42649148e58a8ea1baab6317d181c24e6a21d709
 
 
 ---
@@ -37,9 +37,8 @@ In questo passaggio verrà installato il client di Azure Information Protection 
         Fare clic su **Proteggi** > **Guida e commenti e suggerimenti** e nella finestra di dialogo **Microsoft Azure Information Protection** verificare lo stato del client. Deve essere visualizzato il messaggio **Information Protection policy is installed** (Criteri di Information Protection installati) insieme a una data e a un'ora di connessione recenti. Verificare che il nome utente visualizzato sia corretto per il tenant.
 
     - Sotto la barra multifunzione viene visualizzata una nuova barra, la barra Information Protection. Questa barra visualizza il titolo **Sensitivity** (Riservatezza) e l'etichetta predefinita configurata in precedenza, **Internal** (Interno). 
-
-
-![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Client installato](../media/word2013-callouts.png)
+    
+        ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Client installato](../media/word2013-callouts2.png)
 
 È il momento del passaggio finale, in cui è possibile vedere in azione le funzioni di classificazione, aggiunta di etichette e protezione.
 
@@ -53,6 +52,6 @@ In questo passaggio verrà installato il client di Azure Information Protection 
 [Passaggio 4 &#187;](infoprotect-tutorial-step4.md)
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 
