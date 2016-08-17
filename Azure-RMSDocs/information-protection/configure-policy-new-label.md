@@ -3,15 +3,15 @@ title: Come creare una nuova etichetta per Azure Information Protection | Azure 
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 26f22fb616f66332abf87501f782f1f8e8f0c013
+ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
+ms.openlocfilehash: c2f8f3204e3d5947137e7e9111ba4eba2628293b
 
 
 ---
@@ -28,22 +28,22 @@ Si può aggiungere una nuova etichetta oppure aggiungere una nuova etichetta sec
 
 Seguire queste istruzioni per aggiungere una nuova etichetta ai criteri di Azure Information Protection.
 
-1. Accedere al [portale di Azure](https://portal.azure.com).
- 
-2. Nel menu hub fare clic su **Esplora** e iniziare a digitare **Information** nella casella Filtro. Selezionare **Azure Information Protection**.
+1. Se non è già stato fatto, accedere al [portale di Azure](https://portal.azure.com) e quindi passare al pannello **Azure Information Protection**. 
+    
+    Ad esempio, nel menu hub fare clic su **Esplora** e iniziare a digitare **Information** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-3. Nel pannello **Azure Information Protection** effettuare una delle operazioni seguenti:
+2. Nel pannello **Azure Information Protection** effettuare una delle operazioni seguenti:
 
-    - Per creare una nuova etichetta, fare clic su **Add a new label** (Aggiungi nuova etichetta).
+    - Per creare una nuova etichetta, fare clic su **Aggiungi una nuova etichetta**.
 
-    - Per creare una nuova etichetta secondaria, fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida (**...**) per l'etichetta per cui si vuole creare un'etichetta secondaria, quindi scegliere **Add a sub-label** (Aggiungi etichetta secondaria).
+    - Per creare una nuova etichetta secondaria, fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida (**...**) per l'etichetta per cui si vuole creare un'etichetta secondaria, quindi scegliere **Aggiungi un'etichetta secondaria**.
 
-4. Nel pannello **Label** (Etichetta) o **Sub-label** (Etichetta secondaria) selezionare le opzioni desiderate per la nuova etichetta, quindi fare clic su **Save** (Salva).
+3. Nel pannello **Etichetta** o **Etichetta secondaria** selezionare le opzioni desiderate per la nuova etichetta, quindi fare clic su **Salva**.
 
     > [!NOTE]
     >Per informazioni sull'impostazione della protezione, vedere [Come configurare un'etichetta per applicare la protezione](configure-policy-protection.md).
 
-5. Per mettere le modifiche a disposizione degli utenti, nel pannello **Azure Information Protection** fare clic su **Publish** (Pubblica).
+4. Per mettere le modifiche a disposizione degli utenti, nel pannello **Azure Information Protection** fare clic su **Publish** (Pubblica).
 
 ## Passaggi successivi
 
@@ -53,6 +53,6 @@ Per altre informazioni sulla configurazione dei criteri di Azure Information Pro
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

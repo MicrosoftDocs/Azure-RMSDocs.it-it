@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/21/2016
+ms.date: 08/05/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0ac4264f20208f999c9ad9bdd2c4759e65ae021b
-ms.openlocfilehash: 5344c38a31aa0ceb894f330f363442bd2c0d9375
+ms.sourcegitcommit: f7cf74355aa39928fd66a4be13a9b65428da7480
+ms.openlocfilehash: 08226cd930f90bc7c9cda4c65315ee6472fbcf52
 
 
 ---
@@ -351,6 +351,33 @@ Gli URL seguenti vengono utilizzati per il rilevamento dei documenti e devono es
 
 -   https://&#42;.microsoftonline-p.com
 
+### Rilevamento e revoca dei documenti per gli utenti
+
+Quando gli utenti accedono al sito di rilevamento dei documenti, possono rilevare e revocare i documenti condivisi tramite l'applicazione RMS sharing. Quando si accede come amministratore di Azure RMS (amministratore globale), è possibile fare clic sull'icona di amministrazione nella parte superiore destra della pagina per passare alla modalità amministratore in modo da visualizzare i documenti che sono stati condivisi dagli utenti dell'organizzazione.
+
+Le azioni intraprese in modalità amministratore vengono controllate e registrate nei file di log dei dati di utilizzo e, per continuare, è necessario confermare. Per altre informazioni su questa registrazione, vedere la sezione seguente.
+
+Quando si è in modalità amministratore, è quindi possibile eseguire la ricerca in base all'utente o al documento. Se si esegue la ricerca in base all'utente, si visualizzeranno tutti i documenti che l'utente specificato ha condiviso. Se si esegue la ricerca in base al documento, si visualizzeranno tutti gli utenti dell'organizzazione che hanno condiviso tale documento. È quindi possibile analizzare i risultati della ricerca per rilevare i documenti che gli utenti hanno condiviso e, se necessario, revocarli. 
+
+Per uscire dalla modalità amministratore, fare clic su **X** accanto a **Esci dalla modalità amministratore**.
+
+Per istruzioni su come usare il sito di rilevamento dei documenti, vedere [Rilevare e revocare i documenti](sharing-app-track-revoke.md) nella Guida dell'utente.
+
+
+
+### Registrazione dei dati di utilizzo per il sito di rilevamento dei documenti
+
+Nei file di log dei dati di utilizzo sono presenti due campi applicabili al rilevamento dei documenti: **AdminAction** e **ActingAsUser**.
+
+**AdminAction**: questo campo ha un valore true quando un amministratore usa il sito di rilevamento dei documenti in modalità amministratore, ad esempio, per revocare un documento per conto dell'utente o per visualizzare quando il documento è stato condiviso. Questo campo è vuoto quando l'accesso al sito di rilevamento dei documenti viene eseguito dall'utente.
+
+**ActingAsUser**: quando il campo AdminAction è true, questo campo contiene il nome utente per conto del quale agisce l'amministratore per eseguire la ricerca di un utente o del proprietario di un documento. Questo campo è vuoto quando l'accesso al sito di rilevamento dei documenti viene eseguito dall'utente. 
+
+Sono inoltre disponibili tipi di richieste che registrano la modalità in cui utenti e amministratori stanno usando il sito di rilevamento dei documenti. **RevokeAccess**, ad esempio, è il tipo di richiesta usato quando un utente, o un amministratore che agisce per conto dell'utente, revoca un documento nel sito di rilevamento dei documenti. Usare questo tipo di richiesta in combinazione con il campo AdminAction per determinare se il documento è stato revocato dal relativo utente (il campo AdminAction è vuoto) o se un amministratore ha revocato un documento per conto di un utente (il campo AdminAction è true).
+
+
+Per altre informazioni sulla registrazione dei dati di utilizzo, vedere [Registrazione e analisi dell'uso di Azure Rights Management](../deploy-use/log-analyze-usage.md).
+
 ## Solo AD RMS: Supporto per più domini di posta elettronica all'interno dell'organizzazione
 Se si utilizza AD RMS e gli utenti dell'organizzazione hanno più domini di posta elettronica, forse a causa di una fusione o di un’acquisizione, è necessario apportare la seguente modifica al Registro di sistema:
 
@@ -369,6 +396,6 @@ Per informazioni tecniche aggiuntive, inclusa la spiegazione della differenza tr
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO1-->
 
 

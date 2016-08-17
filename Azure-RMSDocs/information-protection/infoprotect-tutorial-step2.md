@@ -3,15 +3,15 @@ title: Esercitazione introduttiva di Azure Information Protection, passaggio 2 |
 description: "Passaggio 2 dell'esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell'organizzazione. L'esercitazione è articolata in 4 passaggi, eseguibili in meno di 15 minuti."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/08/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: cab45baf19af4ab548f5f112946d168d93a95d49
-ms.openlocfilehash: fa17a5b18162ca7ca1ac0cf9a1052dd01d2057aa
+ms.sourcegitcommit: 09cb56aaa0d7d97073623c518aa331d591a376e3
+ms.openlocfilehash: 65d758635b77ee7d6c423a1400a7621e8e05b14d
 
 
 ---
@@ -24,13 +24,20 @@ ms.openlocfilehash: fa17a5b18162ca7ca1ac0cf9a1052dd01d2057aa
 
 Il criterio predefinito disponibile con Azure è utilizzabile senza alcuna operazione di configurazione. Tuttavia si esaminerà questo criterio e vi si apporterà qualche modifica.
 
-1. Accedere al [portale di Azure](https://portal.azure.com).
+1. Accedere al [portale di Azure](https://portal.azure.com). Se si vuole testare la protezione nonché la classificazione e l'applicazione di etichette, accedere come amministratore globale in modo da recuperare i modelli di Azure Rights Management.
  
-2. Nel menu hub fare clic su **Esplora** e iniziare a digitare **Information** nella casella Filtro. Selezionare **Azure Information Protection**.
+2. Nel menu hub: fare clic su **Nuovo** > **Sicurezza e identità** > **Azure Information Protection (anteprima)** > **Crea**.
 
-- Verrà visualizzato il pannello **Azure Information Protection** con il criterio di Information Protection creato automaticamente. Il criterio predefinito contiene le seguenti etichette per la classificazione: **Personal** (Personale), **Public** (Pubblico), **Internal** (Interno), **Confidential** (Riservato) e **Secret** (Segreto). Leggere la descrizione di ognuna per comprendere l'uso a cui è destinata. Si noti che per **Secret** (Segreto) esistono due etichette secondarie: **All Company** (Tutta la società) e **My Group** (Gruppo personale). Questo è un esempio di sottocategorie di una classificazione.
+    Verrà creato il pannello **Azure Information Protection** in modo che al successivo accesso al portale sarà possibile selezionare il servizio dall'elenco **Sfoglia** dell'hub. 
 
-- Per le impostazioni predefinite **Internal** (Interno), **Confidential** (Riservato) e **Secret** (Segreto) sono configurati contrassegni visivi (ad esempio piè di pagina, intestazione, filigrana). Per nessuna delle etichette è impostata la protezione. Le tre impostazioni globali, poi, non sono impostate. I documenti e i messaggi di posta elettronica non devono quindi necessariamente avere un'etichetta. Non esiste un'etichetta predefinita e gli utenti non sono obbligati a giustificare un eventuale abbassamento del livello di riservatezza.
+    > [!TIP] 
+    > Selezionare **Aggiungi al dashboard** per creare un riquadro **Azure Information Protection** nel dashboard, in modo da ignorare il passaggio Sfoglia al successivo accesso al portale.
+
+3.  Analizzare il pannello **Azure Information Protection** principale che illustra il criterio di Information Protection creato automaticamente:
+    
+    - Etichette per la classificazione: **Personal** (Personale), **Public** (Pubblico), **Internal** (Interno), **Confidential** (Riservato) e **Secret** (Segreto). Leggere la descrizione di ognuna per comprendere l'uso a cui è destinata. Si noti che per **Secret** (Segreto) esistono due etichette secondarie: **All Company** (Tutta la società) e **My Group** (Gruppo personale). Questo è un esempio di sottocategorie di una classificazione.
+
+    - Per impostazione predefinita, per le etichette **Internal** (Interno), **Confidential** (Riservato) e **Secret** (Segreto) sono configurati contrassegni visivi (ad esempio piè di pagina, intestazione, filigrana). Per nessuna delle etichette è impostata la protezione. Le tre impostazioni globali, poi, non sono impostate. I documenti e i messaggi di posta elettronica non devono quindi necessariamente avere un'etichetta. Non esiste un'etichetta predefinita e gli utenti non sono obbligati a giustificare un eventuale abbassamento del livello di riservatezza.
 
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Criterio predefinito](../media/info-protect-policy.png)
 
@@ -42,11 +49,11 @@ Nel corso di questa esercitazione verranno modificate alcune impostazioni global
 
 Verranno ora modificate le impostazioni di una delle etichette, **Confidential** (Riservato):
 
-1. Fare clic sulla voce dell'etichetta **Confidential** (Riservato).
+1. Fare clic sull'etichetta **Confidential** (Riservato).
 
 2. Nel pannello **Label: Confidential** (Etichetta: Riservato) sono ora visibili le impostazioni disponibili per ogni etichetta. Apportare le modifiche seguenti:
 
-    a. Se Azure Rights Management è attivato: se nella sezione **Set RMS template for protecting documents and emails containing this label** (Imposta il modello RMS per la protezione dei documenti e messaggi di posta elettronica che contengono questa etichetta), è visualizzato **Select RMS template from** (Selezionare modello RMS da), mantenere il valore predefinito **Azure RMS**. Quindi, per **Select RMS template** (Selezionare il modello RMS), fare clic sull'elenco a discesa e selezionare il modello predefinito **\<Nome organizzazione> - Confidential** (Riservato). Ad esempio, se il nome dell'organizzazione è VanArsdel, Ltd, verrà visualizzata la voce **VanArsdel, Ltd - Confidential** e sarà possibile selezionarla. Se questo modello di Azure Rights Management è disabilitato, selezionare un modello alternativo. Tuttavia, se si seleziona un modello di reparto, assicurarsi che l'account sia incluso nell'ambito.
+    a. Se Azure Rights Management è attivato: se nella sezione **Configurare il modello RMS per la protezione di documenti e messaggi di posta elettronica contenenti questa etichetta**, è visualizzato **Selezionare il modello RMS da**, mantenere il valore predefinito **Azure RMS**. Quindi, per **Select RMS template** (Selezionare il modello RMS), fare clic sull'elenco a discesa e selezionare il modello predefinito **\<Nome organizzazione> - Confidential** (Riservato). Ad esempio, se il nome dell'organizzazione è VanArsdel, Ltd, verrà visualizzata la voce **VanArsdel, Ltd - Confidential** e sarà possibile selezionarla. Se questo modello di Azure Rights Management è disabilitato, selezionare un modello alternativo. Tuttavia, se si seleziona un modello di reparto, assicurarsi che l'account sia incluso nell'ambito.
     
     Se Azure Rights Management non è attivato, non è possibile usare questa opzione.
     
@@ -60,7 +67,7 @@ Verranno ora modificate le impostazioni di una delle etichette, **Confidential**
     
     - **Minimum number of occurrences** (Numero minimo di occorrenze): **1**
     
-    - **Count occurrences with unique values only** (Conteggia solo occorrenze con valori univoci): **Sì**
+    - **Conta solo le occorrenze con valori univoci**: **Sì**
     
     - Fare clic su **Save** (Salva) per tornare al pannello **Label: Confidential** (Etichetta: Riservato).
 
@@ -90,6 +97,6 @@ Dopo aver esaminato il criterio predefinito e aver apportato alcune modifiche, i
 [Passaggio 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

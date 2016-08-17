@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 7d5b58efb4b789ba4f3d897ae3a475cbd2c679e5
+ms.sourcegitcommit: d17bacf8e148622db0e2393f40d3fd37c8f086eb
+ms.openlocfilehash: c61e299cac50069afc119d37fd461cda88a2afd3
 
 
 ---
@@ -39,11 +39,11 @@ L'esercitazione introduttiva consente in pochi minuti di vedere queste caratteri
 
 Si noti che l'anteprima consente di provare il nuovo **piano di servizio Premium P2** e che alcune funzionalità avanzate, ad esempio l'aggiunta automatica di etichette e l'aggiunta di etichette consigliate, potrebbero non essere disponibili nel piano corrente al momento della disponibilità generale. Per informazioni sui diversi piani di servizio (Azure Information Protection Premium P1 e Azure Information Protection Premium P2), vedere il post di blog seguente: [Introducing Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/07/introducing-enterprise-mobility-security/) (Introduzione alla mobilità aziendale + sicurezza).
 
-Questa versione di anteprima presenta le limitazioni seguenti. Per sapere quando saranno disponibili altre funzionalità e nuove caratteristiche, seguire gli annunci in [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) (blog sulla mobilità e la sicurezza aziendale) e nel [sito Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all):
+Questa versione di anteprima presenta le limitazioni seguenti. Per sapere quando saranno disponibili altre funzionalità e nuove caratteristiche, seguire gli annunci in [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) (blog sulla mobilità e la sicurezza aziendale) e nel [sito Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all):
 
 - Manca la funzione di registrazione centralizzata per la classificazione e l'aggiunta di etichette.
 
-- I nomi e le descrizioni delle etichette sono supportati solo in inglese.
+- I nomi e le descrizioni delle etichette sono supportati solo in una lingua.
 
 - Le condizioni per la classificazione automatica devono essere frasi o motivi.
 
@@ -61,11 +61,11 @@ Per la versione di anteprima è possibile usare qualsiasi sottoscrizione che inc
 
 Per configurare i criteri di Azure Information Protection nel portale di Azure è necessaria una sottoscrizione di Azure. Se l'organizzazione non ha una sottoscrizione di Azure, è possibile ottenerne una registrandosi per una versione di valutazione gratuita: andare alla pagina [Microsoft Azure - Introduzione](https://account.windowsazure.com/organization) e seguire le istruzioni.
 
-Qualsiasi modifica ai requisiti di sottoscrizione verrà annunciata in [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services) (blog sulla mobilità e la sicurezza aziendale).
+Qualsiasi modifica ai requisiti di sottoscrizione verrà annunciata in [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) (blog sulla mobilità e la sicurezza aziendale).
 
 ## Devo essere un amministratore globale per provare l'anteprima di Azure Information Protection?
 
-Per la sola versione di anteprima qualsiasi utente autenticato da Azure può visualizzare e configurare i criteri di Azure Information Protection del tenant nel portale di Azure.
+Per la sola versione di anteprima, qualsiasi utente autenticato da Azure può visualizzare e configurare i criteri di Azure Information Protection del tenant per la classificazione e l'aggiunta di etichette nel portale di Azure. Tuttavia, per configurare un'etichetta da applicare a un modello di Azure Rights Management, è necessario accedere come amministratore globale di Azure Active Directory.
 
 Se al momento dell'installazione del [client di Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018) si sceglie di installare i criteri demo, per provare l'anteprima non è neanche necessario accedere al portale. I criteri demo installano in locali il criterio predefinito di Azure Information Protection. È quindi possibile provare ad aggiungere etichette a documenti e a messaggi di posta elettronica, ma per modificare etichette o aggiungerne di nuove sarà necessario accedere al portale di Azure. 
 
@@ -74,7 +74,7 @@ Se si vogliono proteggere i documenti e i messaggi di posta elettronica classifi
 
 ## Azure Information Protection supporta scenari locali e ibridi?
 
-Azure Information Protection è una soluzione basata sul cloud. Se si è interessati agli scenari ibridi, contattare il team di Information Protection inviando un messaggio di posta elettronica all'indirizzo askipteam@microsoft.com.
+Azure Information Protection è una soluzione basata sul cloud. Se si è interessati a distribuire Azure Information Protection per uno scenario ibrido, contattare il team di Information Protection inviando un messaggio di posta elettronica all'indirizzo askipteam@microsoft.com.
 
 ## Quali piattaforme e applicazioni client sono supportate da Azure Information Protection?
 
@@ -150,7 +150,11 @@ Per la classificazione, Azure Information Protection usa metadati persistenti ch
 
 ## Come funzionano il rilevamento e la revoca dei documenti in Azure Information Protection?
 
-Il rilevamento dei documenti per i file classificati e protetti tramite Azure Information Protection funziona allo stesso modo che in Azure Rights Management. Per altre informazioni, vedere [Rilevare e revocare i documenti quando si usa l'applicazione di condivisione RMS](../rms-client/sharing-app-track-revoke.md).
+Il rilevamento dei documenti per i file classificati e protetti tramite Azure Information Protection funziona allo stesso modo che in Azure Rights Management e nell'applicazione RMS sharing. È inoltre possibile accedere al sito di rilevamento dei documenti tramite il client di Azure Information Protection versione 1.0.233 o successiva: 
+
+- In un'applicazione di Office, nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi** > **Rileva utilizzo**. 
+
+Per altre informazioni, vedere [Rilevare e revocare i documenti quando si usa l'applicazione di condivisione RMS](../rms-client/sharing-app-track-revoke.md).
 
 ## In che modo Azure Information Protection applica i criteri configurati dall'utente?
 
@@ -184,6 +188,6 @@ Quindi, visitare il nostro [sito Yammer](https://www.yammer.com/askipteam/#/thre
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

@@ -3,15 +3,15 @@ title: Esercitazione introduttiva di Azure Information Protection | Azure Rights
 description: "Esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell'organizzazione. L'esercitazione è articolata in 4 passaggi, eseguibili in meno di 15 minuti."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 17670eadc7cbf6111ab7fd0a9322e51d401b86e1
+ms.sourcegitcommit: 7d599aef75272eff5527294141bb0eb98d041b1b
+ms.openlocfilehash: 419bfcde6915bd6c8db9cf5ddb268f6d70c83768
 
 
 ---
@@ -38,11 +38,9 @@ Per completare questa esercitazione, è necessario quanto segue:
   > [!TIP] 
   > Se è necessario richiedere una di queste sottoscrizioni o entrambe, eseguire questa operazione in anticipo perché talvolta il processo può richiedere alcuni minuti.
 
-- Un account amministratore globale per accedere all'interfaccia di amministrazione di Office 365 o al portale di Azure classico, se è necessario attivare il servizio Rights Management. Questo account deve disporre inoltre di un indirizzo di posta elettronica e di un servizio di posta elettronica funzionante (ad esempio, Exchange Online o Exchange Server).
+- Un account amministratore globale per accedere all'interfaccia di amministrazione di Office 365 o al portale di Azure classico, se è necessario attivare il servizio Rights Management o selezionare i modelli di Azure RMS nel portale di Azure. Questo account deve disporre inoltre di un indirizzo di posta elettronica e di un servizio di posta elettronica funzionante (ad esempio, Exchange Online o Exchange Server).
 
 - Un computer che esegue Windows (almeno Windows 7 con Service Pack 1) e in cui è installato Office Professional Plus 2016, Office Professional Plus 2013 con Service Pack 1 o Office Professional Plus 2010. 
-
-- Se nell'organizzazione è distribuito Active Directory Rights Management Services (AD RMS), il computer deve appartenere a un gruppo di lavoro e non aver usato AD RMS in precedenza. Ciò è obbligatorio se si vogliono proteggere i documenti e assicurarsi che il computer scarichi modelli solo da Azure Rights Management. Non è supportata la connessione contemporanea del computer ad AD RMS e ad Azure RMS. Per informazioni sulla migrazione, vedere [Migrazione da AD RMS ad Azure Rights Management](../plan-design/migrate-from-ad-rms-to-azure-rms.md).   
 
 A questo punto, procedere con l'esercitazione.
 
@@ -53,6 +51,6 @@ A questo punto, procedere con l'esercitazione.
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

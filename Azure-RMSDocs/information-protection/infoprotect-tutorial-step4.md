@@ -3,15 +3,15 @@ title: Esercitazione introduttiva di Azure Information Protection, passaggio 4 |
 description: "Passaggio 4 dell'esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell'organizzazione. L'esercitazione è articolata in 4 passaggi, eseguibili in meno di 15 minuti."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: cdd8dee1837c34caaeb0f8a1947dea37504e422a
+ms.sourcegitcommit: d17bacf8e148622db0e2393f40d3fd37c8f086eb
+ms.openlocfilehash: a36433167462275e91059f9eb3a2141ffa2797d5
 
 
 ---
@@ -28,7 +28,7 @@ La classificazione e la protezione hanno effetto quando si salva il documento. P
 
 ### Per modificare manualmente l'etichetta predefinita:
 
-- Sulla barra Information Protection, fare clic sull'icona Modifica etichetta accanto a **Internal** (Interno). Verranno visualizzate le etichette disponibili. Scegliere **Personal** (Personale). Verrà richiesto di giustificare l'abbassamento del livello di classificazione. Selezionare **This file no longer requires that classification** (Il file non richiede più questa classificazione) e fare clic su **Conferma**.  
+- Sulla barra di Information Protection scegliere l'etichetta **Personal** (Personale). Verrà richiesto di giustificare l'abbassamento del livello di classificazione. Selezionare **This file no longer requires that classification** (Il file non richiede più questa classificazione) e fare clic su **Conferma**.  
 
     Il valore **Sensitivity** (Riservatezza) cambierà in **Personal** (Personale).
 
@@ -36,7 +36,7 @@ La classificazione e la protezione hanno effetto quando si salva il documento. P
 
 ### Per rimuovere completamente la classificazione:
 
-- Sulla barra Information Protection, fare clic sull'icona Modifica etichetta accanto a **Personale** (Personale). Verranno visualizzate le etichette disponibili. Ma questa volta, anziché scegliere una delle etichette, fare clic sull'icona Rimuovi etichetta. Fare clic su **OK** per confermare e fornire la giustificazione per questa azione.  
+- Sulla barra di Information Protection fare clic sull'icona **Modifica etichetta** accanto a **Personal** (Personale). Verranno visualizzate le etichette disponibili. Ma questa volta, anziché scegliere una delle etichette, fare clic sull'icona **Rimuovi etichetta**. Fare clic su **OK** per confermare e quindi fornire la giustificazione per questa azione.  
 
     Per il valore **Sensitivity** (Riservatezza) verrà visualizzato **Non impostato**, come avviene inizialmente se non si imposta un'etichetta predefinita.
 
@@ -58,7 +58,7 @@ La classificazione e la protezione hanno effetto quando si salva il documento. P
     Se si è scelto di applicare un modello RMS, il documento è protetto anche dal modello di Azure Rights Management specificato, che è possibile confermare quando si fa clic sulla scheda **File** e si visualizzano le informazioni in **Proteggi documento**. Se si usa il modello Confidential (Riservato), verrà visualizzata l'informazione che il documento è riservato agli utenti interni. Gli utenti esterni all'organizzazione non potranno aprire il documento e il suo contenuto non potrà essere copiato o stampato. Il proprietario del documento può copiarne il contenuto e stamparlo, ma se lo invia tramite posta elettronica a un altro utente dell'organizzazione, quest'ultimo non sarà in grado di eseguire queste azioni.
 
 > [!NOTE]
->In caso di problemi durante l'esecuzione di questi passaggi, nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi** e quindi fare clic su **Guida e commenti e suggerimenti**. 
+>In caso di problemi durante l'esecuzione di questi passaggi, nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi** e quindi fare clic su **Guida e commenti**. 
 >
 >Nella finestra di dialogo **Microsoft Azure Information Protection** fare clic su **Invia commenti e suggerimenti**. Verrà inviato un messaggio di posta elettronica al team di Information Protection. Al messaggio verranno allegati automaticamente i file di log del PC per consentire la diagnosi di eventuali problemi.
 
@@ -77,6 +77,6 @@ Dopo aver eseguito un test per proprio conto, può essere utile vedere le [doman
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

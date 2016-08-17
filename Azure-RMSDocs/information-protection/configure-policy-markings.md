@@ -3,15 +3,15 @@ title: Come configurare un'etichetta per i contrassegni visivi per Azure Informa
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 9f2d28e4f162891497a7b0518322338628118b9d
+ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
+ms.openlocfilehash: 78b68c7a502776c6492437e9b8a5c3f1ebf27f95
 
 
 ---
@@ -36,23 +36,41 @@ Altre informazioni su questi contrassegni visivi:
 
     - PowerPoint: le filigrane vengono applicate alla diapositiva master, come immagine di sfondo.
 
+- È possibile specificare una stringa di testo o usare [variabili](#using-variables-in-the-text-string) per creare dinamicamente la stringa di testo quando viene applicata l'intestazione, il piè di pagina o la filigrana. 
+
 Seguire le istruzioni seguenti per configurare i contrassegni visivi per un'etichetta.
 
-1. Accedere al [portale di Azure](https://portal.azure.com).
- 
-2. Nel menu hub fare clic su **Esplora** e iniziare a digitare **Information** nella casella Filtro. Selezionare **Azure Information Protection**.
+1. Se non è già stato fatto, accedere al [portale di Azure](https://portal.azure.com) e quindi passare al pannello **Azure Information Protection**. 
+    
+    Ad esempio, nel menu hub fare clic su **Esplora** e iniziare a digitare **Information** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-3. Nel pannello **Azure Information Protection** selezionare l'etichetta da configurare per i contrassegni visivi.
+2. Nel pannello **Azure Information Protection** selezionare l'etichetta da configurare per i contrassegni visivi.
 
-4. Nel pannello **Label** (Etichetta), nella sezione **Set visual marking (such as header or footer)** (Imposta contrassegno visivo, ad esempio intestazione o piè di pagina), configurare le impostazioni per i contrassegni visivi desiderati e quindi fare clic su **Save** (Salva):
+3. Nel pannello **Etichetta**, nella sezione **Configurare il contrassegno visivo (ad esempio intestazione o piè di pagina)**, configurare le impostazioni per i contrassegni visivi desiderati e quindi fare clic su **Salva**:
 
-    - Per configurare un'intestazione: per **Documents with this label have a header** (I documenti con questa etichetta hanno un'intestazione) selezionare **Sì** se si vuole usare un'intestazione, altrimenti **No**. Se si seleziona **Sì**, specificare il testo, le dimensioni, il colore e l'allineamento per l'intestazione.
+    - Per configurare un'intestazione: per **I documenti con questa etichetta includono un'intestazione** selezionare **Sì** se si vuole usare un'intestazione, altrimenti **No**. Se si seleziona **Sì**, specificare il testo, le dimensioni, il colore e l'allineamento per l'intestazione.
+    
+    - Per configurare un piè di pagina: per **I documenti con questa etichetta includono un piè di pagina** selezionare **Sì** se si vuole usare un piè di pagina, altrimenti **No**. Se si seleziona **Sì**, specificare il testo, le dimensioni, il colore e l'allineamento per il piè di pagina.
+    
+    - Per configurare una filigrana: per **Documents with this label have a watermark** (I documenti con questa etichetta hanno una filigrana) selezionare **Sì** se si vuole usare una filigrana, altrimenti **No**. Se si seleziona **Sì**, specificare il testo, le dimensioni, il colore e il layout per la filigrana. 
 
-    - Per configurare un piè di pagina: per **Documents with this label have a footer** (I documenti con questa etichetta hanno un piè di pagina) selezionare **Sì** se si vuole usare un piè di pagina, altrimenti **No**. Se si seleziona **Sì**, specificare il testo, le dimensioni, il colore e l'allineamento per il piè di pagina.
+4. Per mettere le modifiche a disposizione degli utenti, nel pannello **Azure Information Protection** fare clic su **Publish** (Pubblica).
 
-    - Per configurare una filigrana: per **Documents with this label have a watermark** (I documenti con questa etichetta hanno una filigrana) selezionare **Sì** se si vuole usare una filigrana, altrimenti **No**. Se si seleziona **Sì**, specificare il testo, le dimensioni, il colore e il layout per la filigrana.
+## Uso di variabili nella stringa di testo
 
-5. Per mettere le modifiche a disposizione degli utenti, nel pannello **Azure Information Protection** fare clic su **Publish** (Pubblica).
+Nella stringa di testo è possibile usare le variabili seguenti per l'intestazione, il piè di pagina o la filigrana:
+
+- `${Item.Label}` per l'etichetta selezionata
+
+- `${Item.Name}` per l'oggetto del messaggio di posta elettronica o il nome di file
+
+- `${Item.Location}` per il percorso del file
+
+- `${User.Name}` per il proprietario del documento o del messaggio di posta elettronica
+
+- `${Event.DateTime}` per la data e l'ora in cui è stata impostata l'etichetta selezionata 
+    
+Esempio: se si specifica la stringa `Document: ${item.name} Sensitivity: ${item.label}` per il piè di pagina dell'etichetta Secret (Segreto), il testo del piè di pagina applicato a un documento denominato project.docx sarà **Documento: project.docx Riservatezza: Secret (Segreto)**.
 
 ## Passaggi successivi
 
@@ -62,6 +80,6 @@ Per altre informazioni sulla configurazione dei criteri di Azure Information Pro
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

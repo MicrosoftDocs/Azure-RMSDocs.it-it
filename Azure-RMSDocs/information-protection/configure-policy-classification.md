@@ -3,15 +3,15 @@ title: Come configurare le condizioni per la classificazione automatica e consig
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 9da6bf3687242793002976c3514bda068effd8d7
+ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
+ms.openlocfilehash: 80c201dcf316a5aa5e123645d47c6741f8b61f05
 
 
 ---
@@ -49,15 +49,15 @@ In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per 
 
 ## Per configurare la classificazione consigliata o automatica per un'etichetta
 
-1. Assicurarsi di avere eseguito l'accesso al portale di Azure usando questo collegamento speciale per Azure Information Protection: https://portal.azure.com/?microsoft_azure_informationprotection=true
- 
-2. Nel menu hub fare clic su **Esplora** e iniziare a digitare **Information** nella casella Filtro. Selezionare **Azure Information Protection**.
+1. Se non è già stato fatto, accedere al [portale di Azure](https://portal.azure.com) e quindi passare al pannello **Azure Information Protection**. 
+    
+    Ad esempio, nel menu hub fare clic su **Esplora** e iniziare a digitare **Information** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-3. Nel pannello **Azure Information Protection** selezionare l'etichetta da configurare per la classificazione automatica o suggerita.
+2. Nel pannello **Azure Information Protection** selezionare l'etichetta da configurare per la classificazione automatica o suggerita.
 
-4. Nel pannello **Label** (Etichetta), nella sezione **Configure conditions for automatically applying this label** (Configurare le condizioni per l'applicazione automatica di questa etichetta), fare clic su **Add a new condition** (Aggiungi una nuova condizione).
+3. Nel pannello **Etichetta**, nella sezione **Configurare le condizioni per l'applicazione automatica di questa etichetta**, fare clic su **Aggiungi una nuova condizione**.
 
-5. Nel pannello **Condition** (Condizione) selezionare **Built-in** (Predefinita) se si vuole usare una condizione predefinita oppure **Custom** (Personalizzata) se si vuole specificare una condizione personalizzata, quindi fare clic su **Save** (Salva):
+4. Nel pannello **Condition** (Condizione) selezionare **Built-in** (Predefinita) se si vuole usare una condizione predefinita oppure **Custom** (Personalizzata) se si vuole specificare una condizione personalizzata, quindi fare clic su **Save** (Salva):
 
     - Per **Built-in** (Predefinita), selezionare una delle condizioni disponibili nell'elenco, quindi selezionare il numero minimo di occorrenze e specificare se l'occorrenza deve avere un valore univoco per essere inclusa nel conteggio delle occorrenze.
         
@@ -65,23 +65,23 @@ In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per 
 
     - Per **Custom** (Personalizzata), specificare un nome e una frase di cui cercare la corrispondenza, esclusi i punti interrogativi e i caratteri speciali. Quindi specificare se usare un'espressione regolare per la corrispondenza, se la distinzione tra maiuscole e minuscole è rilevante, il numero minimo di occorrenze e se l'occorrenza deve avere un valore univoco per essere inclusa nel conteggio delle occorrenze.
         
-    **Esempio sulle opzioni relative alle occorrenze**: si seleziona l'opzione predefinita del codice fiscale e si imposta il numero minimo di occorrenze su 2 e in un documento compare due volte lo stesso codice fiscale. Se si imposta **Count occurrences with unique values only** (Conteggia solo occorrenze con valori univoci) su **Sì**, la condizione non è soddisfatta. Se invece si imposta questa opzione su **No**, la condizione è soddisfatta.
+    **Esempio sulle opzioni relative alle occorrenze**: si seleziona l'opzione predefinita del codice fiscale e si imposta il numero minimo di occorrenze su 2 e in un documento compare due volte lo stesso codice fiscale. Se si imposta **Conta solo le occorrenze con valori univoci** su **Sì**, la condizione non è soddisfatta. Se invece si imposta questa opzione su **No**, la condizione è soddisfatta.
 
-6. Nel pannello **Label** (Etichetta) configurare le opzioni seguenti e quindi fare clic su **Save**(Salva):
+5. Nel pannello **Etichetta** configurare le opzioni seguenti e quindi fare clic su **Salva**:
 
     - Scegliere la classificazione automatica o consigliata: per **Select how this label is applied: automatically or recommended to user** (Selezionare come applicare l'etichetta: automaticamente o consigliata all'utente) selezionare **Automatic** (Automatica) o **Recommended** (Consigliata).
 
     - Specificare il testo per la richiesta utente o il suggerimento di criteri: mantenere il testo predefinito o specificare una stringa personalizzata.
 
-7. Per mettere le modifiche a disposizione degli utenti, nel pannello **Azure Information Protection** fare clic su **Publish** (Pubblica).
+6. Per mettere le modifiche a disposizione degli utenti, nel pannello **Azure Information Protection** fare clic su **Publish** (Pubblica).
 
 ## Informazioni sulle condizioni predefinite
 
 Durante il periodo di anteprima è possibile selezionare le condizioni seguenti:
 
-- [SWIFT Code (Codice SWIFT)](#swift-code )
+- [Codice SWIFT](#swift-code )
 
-- [Credit Card Number (Numero carta di credito)](#credit-card-number )
+- [Numero di carta di credito](#credit-card-number )
 
 - [ABA Routing Number (Codice ABA)](#aba-routing-number )
 
@@ -90,7 +90,7 @@ Durante il periodo di anteprima è possibile selezionare le condizioni seguenti:
 - [International Banking Account Number (IBAN)](#international-banking-account-number-iban)
 
 
-### SWIFT Code (Codice SWIFT)
+### Codice SWIFT
 
 Viene trovata la corrispondenza con questo tipo di informazioni quando il contenuto include quanto segue:  
 
@@ -116,7 +116,7 @@ Esempi per il test:
 ----
 
 
-### Credit Card Number (Numero carta di credito)
+### Numero di carta di credito
 
 Viene trovata la corrispondenza con questo tipo di informazioni quando il contenuto include quanto segue:  
 
@@ -225,6 +225,6 @@ Per altre informazioni sulla configurazione dei criteri di Azure Information Pro
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO2-->
 
 

@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/27/2016
+ms.date: 08/09/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e65fe3e6994352296cdf58d4b53de421389790f7
-ms.openlocfilehash: 17a423b8a5a6ec0aeb1121b9ea290ae84d809d9c
+ms.sourcegitcommit: 60f25cdcdabbfbb61072a95e39f84fed79cad871
+ms.openlocfilehash: e656729fa9ea926681e560f40c4f43ce320a0d5e
 
 
 ---
@@ -28,211 +28,24 @@ Quando si imposta la protezione su file o messaggi di posta elettronica mediante
 Usare le informazioni incluse in questo articolo per configurare i diritti di utilizzo desiderati per l'applicazione in uso e comprendere come tali diritti vengono interpretati dalle applicazioni.
 
 ## Diritti di utilizzo e relative descrizioni
-Le sezioni seguenti elencano e descrivono i diritti di utilizzo supportati da Rights Management e le relative modalità d'uso e interpretazione. Sono elencati in base al **Nome comune**, che corrisponde in genere al modo in cui il diritto di utilizzo viene visualizzato o indicato, una versione semplificata del valore costituito da una singola parola e usato nel codice, ovvero il valore **Codifica nei criteri**. Il valore **Costante o valore API** e il nome dell'SDK per una chiamata API MSIPC, usato quando si scrive un'applicazione abilitata per RMS che verifica un diritto di utilizzo o aggiunge un diritto di utilizzo a un criterio.
+Nella tabella seguente sono elencati e descritti i diritti d'uso supportati da supporta Rights Management e come vengono utilizzati e interpretati. Sono elencati in base al **Nome comune**, che corrisponde in genere al modo in cui il diritto di utilizzo viene visualizzato o indicato, una versione semplificata del valore costituito da una singola parola e usato nel codice, ovvero il valore **Codifica nei criteri**. Il valore **Costante o valore API** e il nome dell'SDK per una chiamata API MSIPC, usato quando si scrive un'applicazione abilitata per RMS che verifica un diritto di utilizzo o aggiunge un diritto di utilizzo a un criterio.
+
+
+|Right|Descrizione|Implementazione|
+|-------------------------------|---------------------------|-----------------|
+|Nome comune: **Modifica contenuto, Modifica** <br /><br />Codifica nei criteri: **DOCEDIT**|Consente di modificare, riorganizzare, formattare o filtrare il contenuto all'interno dell'applicazione. Non concede il diritto di salvare la copia modificata.|Diritti personalizzati di Office: come parte delle opzioni **Modifica** e **Controllo completo** <br /><br />Nome nel portale di Azure classico: **Modifica contenuto**<br /><br />Nome nei modelli AD RMS: **Modifica** <br /><br />Valore costante o valore API: non applicabile|
+|Nome comune: **Salva** <br /><br />Codifica nei criteri: **EDIT**|Consente di salvare il documento nella posizione corrente.<br /><br />Nelle applicazioni di Office questo diritto consente anche di modificare il documento.|Diritti personalizzati di Office: come parte delle opzioni **Modifica** e **Controllo completo** <br /><br />Nome nel portale di Azure classico: **Salva file**<br /><br />Nome nei modelli AD RMS: **Salva** <br /><br />Costante o valore API: `IPC_GENERIC_WRITE L"EDIT"`|
+|Nome comune: **Commenta** <br /><br />Codifica nei criteri: **COMMENT**|Consente di aggiungere annotazioni o commenti al contenuto.<br /><br />Questo diritto è disponibile nell’SDK, è disponibile come criterio ad hoc nel modulo di protezione RMS per Windows PowerShell ed è stato implementato in alcune applicazioni di fornitori di software. Tuttavia, non è ampiamente utilizzato e non è attualmente supportato dalle applicazioni di Office.|Diritti personalizzati di Office: non implementato <br /><br />Nome nel portale di Azure classico: non implementato<br /><br />Nome nei modelli AD RMS: non implementato <br /><br />Costante o valore API: `IPC_GENERIC_COMMENT L"COMMENT`|
+|Nome comune: **Salva con nome, Esporta** <br /><br />Codifica nei criteri: **EXPORT**|Abilita l'opzione per il salvataggio del contenuto con un nome file differente (Salva con nome). Per i documenti di Office, il file può essere salvato senza protezione.<br /><br />Consente di eseguire anche altre opzioni di esportazione nelle applicazioni, ad esempio **Invia a OneNote**.|Diritti personalizzati di Office: come parte delle opzioni **Modifica** e **Controllo completo** <br /><br />Nome nel portale di Azure classico: **Esporta contenuto (Salva con nome)**<br /><br />Nome nei modelli AD RMS: **Esporta (Salva con nome)** <br /><br />Costante o valore API: `IPC_GENERIC_EXPORT L"EXPORT"`|
+|Nome comune: **Inoltra** <br /><br />Codifica nei criteri: **FORWARD**|Abilita l'opzione per l'inoltro di un messaggio di posta elettronica e per l'aggiunta di destinatari nelle righe **A** e **Cc** . Questo diritto non si applica ai documenti, ma solo ai messaggi di posta elettronica.<br /><br />Non consente al server d'inoltro di concedere diritti ad altri utenti come parte dell'azione di inoltro.|Diritti personalizzati di Office: negati quando si usa il criterio standard **Non inoltrare**<br /><br />Nome nel portale di Azure classico: **Inoltra**<br /><br />Nome nei modelli AD RMS: **Inoltra** <br /><br />Costante o valore API: `IPC_EMAIL_FORWARD L"FORWARD"`|
+|Nome comune: **Controllo completo** <br /><br />Codifica nei criteri: **OWNER**|Concede tutti i diritti al documento. È possibile eseguire tutte le azioni disponibili.<br /><br />Include la possibilità di rimuovere la protezione e proteggere nuovamente un documento.|Diritti personalizzati di Office: come le opzioni personalizzate **Controllo completo**.<br /><br />Nome nel portale di Azure classico: **Controllo completo**<br /><br />Nome nei modelli AD RMS: **Controllo completo** <br /><br />Costante o valore API: `IPC_GENERIC_ALL L"OWNER"`|
+|Nome comune: **Stampa** <br /><br />Codifica nei criteri: **PRINT**|Abilita le opzioni per la stampa del contenuto.|Diritti personalizzati di Office: come l'opzione **Stampa contenuto** nelle autorizzazioni personalizzate. Non è un'impostazione per ogni destinatario.<br /><br />Nome nel portale di Azure classico: **Stampa**<br /><br />Nome nei modelli AD RMS: **Stampa** <br /><br />Costante o valore API: `IPC_GENERIC_PRINT L"PRINT"`|
+|Nome comune: **Rispondi** <br /><br />Codifica nei criteri: **PRINT**|Abilita l'opzione **Rispondi** in un client di posta elettronica. Non sono consentite modifiche delle righe **A** o **Cc**.|Diritti personalizzati di Office: non applicabile<br /><br />Nome nel portale di Azure classico: **Rispondi**<br /><br />Nome nei modelli AD RMS: **Rispondi** <br /><br />Costante o valore API: `IPC_EMAIL_REPLY`|
+|Nome comune: **Rispondi a tutti** <br /><br />Codifica nei criteri: **REPLYALL**|Abilita l'opzione **Rispondi a tutti** in un client di posta elettronica, ma non consente di aggiungere destinatari nelle righe **A** o **Cc** .|Diritti personalizzati di Office: non applicabile<br /><br />Nome nel portale di Azure classico: **Rispondi a tutti**<br /><br />Nome nei modelli AD RMS: **Rispondi a tutti** <br /><br />Costante o valore API: `IPC_EMAIL_REPLYALL L"REPLYALL"`|
+|Nome comune: **Visualizza, Apri, Leggi** <br /><br />Codifica nei criteri: **VIEW**|Consente all’utente di aprire il documento e visualizzarne il contenuto.|Diritti personalizzati di Office: come il diritto personalizzato **Leggi**, opzione **Visualizza**.<br /><br />Nome nel portale di Azure classico: **Visualizza**<br /><br />Nome nei modelli AD RMS: **Rispondi a tutti** <br /><br />Costante o valore API: `IPC_GENERIC_READ L"VIEW"`|
+|Nome comune: **Copia** <br /><br />Codifica nei criteri: **EXTRACT**|Abilita le opzioni per la copia dei dati, inclusa l'acquisizione di schermate, nello stesso documento o in un altro.<br /><br />In alcune applicazioni consente anche di salvare l'intero documento in un formato non protetto.|Diritti personalizzati di Office: come l'opzione di diritto personalizzato **Consenti agli utenti con accesso in lettura di copiare il contenuto**.<br /><br />Nome nel portale di Azure classico: **Copia ed estrai contenuto**<br /><br />Nome nei modelli AD RMS: **Estrai** <br /><br />Costante o valore API: `IPC_GENERIC_EXTRACT L"EXTRACT"`|
+|Nome comune: **Consenti macro** <br /><br />Codifica nei criteri: **OBJMODEL**|Abilita l'opzione per l'esecuzione di macro o per l'accesso, a livello di programmazione o in remoto, al contenuto di un documento.|Diritti personalizzati di Office: come l'opzione del criterio personalizzato **Consenti accesso a livello di programmazione**. Non è un'impostazione per ogni destinatario.<br /><br />Nome nel portale di Azure classico: **Consenti Macro**<br /><br />Nome nei modelli AD RMS: **Consenti Macro** <br /><br />Valore costante o valore API: non implementato|
 
-
-### Modifica contenuto, Modifica
-
-Consente di modificare, riorganizzare, formattare o filtrare il contenuto all'interno dell'applicazione. Non concede il diritto di salvare la copia modificata.
-
-**Codifica nei criteri**: DOCEDIT
-
-**Implementazione nei diritti personalizzati di Office**: come parte delle opzioni *Modifica* e *Controllo completo*.
-
-**Nome nel portale di Azure classico**: *Modifica contenuto*
-
-**Nome nei modelli AD RMS**: *Modifica*
-
-**Valore costante o valore API**: *non applicabile*
-
----
-
-### Salva
-
-Consente di salvare il documento nella posizione corrente.
-
-**Codifica nei criteri**: EDIT
-
-**Implementazione nei diritti personalizzati di Office**: come parte delle opzioni *Modifica* e *Controllo completo*.
-
-**Nome nel portale di Azure classico**: *Salva file*
-
-**Nome nei modelli AD RMS**: *Salva*
-
-**Costante o valore API**: IPC_GENERIC_WRITE L"EDIT"
-
-Nelle applicazioni di Office questo diritto consente anche di modificare il documento.
-
----
-
-### Commento
-
-Consente di aggiungere annotazioni o commenti al contenuto.
-
-**Codifica nei criteri**: COMMENT
-
-**Implementazione nei diritti personalizzati di Office**: non implementato.
-
-**Nome nel portale di Azure classico**: non implementato.
-
-**Nome nei modelli AD RMS**: non implementato.
-
-**Costante o valore API**: IPC_GENERIC_COMMENT L"COMMENT
-
-Questo diritto è disponibile nell’SDK, è disponibile come criterio ad hoc nel modulo di protezione RMS per Windows PowerShell ed è stato implementato in alcune applicazioni di fornitori di software. Tuttavia, non è ampiamente utilizzato e non è attualmente supportato dalle applicazioni di Office.
-
----
-
-### Salva con nome, Esporta
-
-Abilita l'opzione per il salvataggio del contenuto con un nome file differente (Salva con nome). Per i documenti di Office, il file può essere salvato senza protezione.
-
-**Codifica nei criteri**: EXPORT
-
-**Implementazione nei diritti personalizzati di Office:** come parte delle opzioni *Modifica* e *Controllo completo*.
-
-**Nome nel portale di Azure classico**: *Esporta contenuto (Salva con nome)*
-
-**Nome nei modelli AD RMS**: *Esporta (Salva con nome*
-
-**Costante o valore API**: IPC_GENERIC_EXPORT L"EXPORT"
-
-Consente di eseguire anche altre opzioni di esportazione nelle applicazioni, ad esempio *Invia a OneNote*.
-
----
-
-### Inoltra
-
-Abilita l'opzione per l'inoltro di un messaggio di posta elettronica e per l'aggiunta di destinatari nelle righe *A* e *Cc* . Questo diritto non si applica ai documenti, ma solo ai messaggi di posta elettronica.
-
-**Codifica nei criteri**: FORWARD
-
-**Implementazione nei diritti personalizzati di Office:** negata quando si usa il criterio standard *Non inoltrare*.
-
-**Nome nel portale di Azure classico:** *Inoltra*
-
-**Nome nei modelli AD RMS:** *Inoltra*
-
-**Costante o valore API:** IPC_EMAIL_FORWARD L"FORWARD"
-
-Non consente al server d'inoltro di concedere diritti ad altri utenti come parte dell'azione di inoltro.
-
----
-
-### Controllo completo
-
-Concede tutti i diritti al documento. È possibile eseguire tutte le azioni disponibili.
-
-**Codifica nei criteri**: OWNER
-
-**Implementazione nei diritti personalizzati di Office:** come le opzioni personalizzate *Controllo completo*.
-
-**Nome nel portale di Azure classico:** *Controllo completo*
-
-**Nome nei modelli AD RMS:** *Controllo completo*
-
-**Costante o valore API**: IPC_GENERIC_ALL L"OWNER"
-
-Include la possibilità di rimuovere la protezione e proteggere nuovamente un documento.
-
----
-
-### Stampa
-
-Abilita le opzioni per la stampa del contenuto.
-
-**Codifica nei criteri**: PRINT
-
-**Implementazione nei diritti personalizzati di Office:** come l'opzione *Stampa contenuto* nelle autorizzazioni personalizzate. Non è un'impostazione per ogni destinatario.
-
-**Nome nel portale di Azure classico:** *Stampa*
-
-**Nome nei modelli AD RMS:** *Stampa*
-
-**Costante o valore API**: IPC_GENERIC_PRINT L"PRINT
-
----
-
-### Rispondi
-
-Abilita l'opzione Rispondi in un client di posta elettronica. Non sono consentite modifiche delle righe *A* o *Cc* .
-
-**Codifica nei criteri**: REPLY
-
-**Implementazione nei diritti personalizzati di Office**: non applicabile
-
-**Nome nel portale di Azure classico:** *Rispondi*
-
-**Nome nei modelli AD RMS:** *Rispondi*
-
-**Valore costante o valore API:** IPC_EMAIL_REPLY
-
----
-
-### Rispondi a tutti
-
-Abilita l'opzione *Rispondi a tutti* in un client di posta elettronica, ma non consente di aggiungere destinatari nelle righe *A* o *Cc* .
-
-**Codifica nei criteri**: REPLYALL
-
-**Implementazione nei diritti personalizzati di Office**: non applicabile
-
-**Nome nel portale di Azure classico:** *Rispondi a tutti*
-
-**Nome nei modelli AD RMS:** *Rispondi a tutti*
-
-**Costante o valore API:** IPC_EMAIL_REPLYALL L"REPLYALL"
-
----
-
-### Visualizza, Apri, Leggi
-
-Consente all’utente di aprire il documento e visualizzarne il contenuto.
-
-**Codifica nei criteri**: VIEW
-
-**Implementazione nei diritti personalizzati di Office:** come il diritto personalizzato *Leggi*, opzione *Visualizza*.
-
-**Nome nel portale di Azure classico**: *Visualizza contenuto*
-
-**Nome nei modelli AD RMS:** *Visualizza*
-
-**Costante o valore API:** IPC_GENERIC_READ L"VIEW"
-
----
-
-### Copia
-
-Abilita le opzioni per la copia dei dati, inclusa l'acquisizione di schermate, nello stesso documento o in un altro.
-
-**Codifica nei criteri:** EXTRACT
-
-**Implementazione nei diritti personalizzati di Office:** come l'opzione di diritto personalizzato *Consenti agli utenti con accesso in lettura di copiare il contenuto*.
-
-**Nome nel portale di Azure classico:** *Copia ed estrai contenuto*
-
-**Nome nei modelli AD RMS:** *Estrai*
-
-**Costante o valore API:** IPC_GENERIC_EXTRACTL"EXTRACT"
-
-In alcune applicazioni consente anche di salvare l'intero documento in un formato non protetto.
-
----
-
-
-### Consenti macro
-
-Abilita l'opzione per l'esecuzione di macro o per l'accesso, a livello di programmazione o in remoto, al contenuto di un documento.
-
-**Codifica nei criteri**: OBJMODEL
-
-**Implementazione nei diritti personalizzati di Office:** come l'opzione del criterio personalizzato *Consenti accesso a livello di programmazione*. Non è un'impostazione per ogni destinatario.
-
-**Nome nel portale di Azure classico:** *Consenti Macro*
-
-**Nome nei modelli AD RMS:** *Consenti Macro*
-
-**Valore costante o valore API:** non applicabile
 
 
 ## Diritti inclusi nei livelli di autorizzazioni
@@ -289,6 +102,6 @@ Un utente vuole inviare per posta elettronica alcune informazioni a utenti speci
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO2-->
 
 

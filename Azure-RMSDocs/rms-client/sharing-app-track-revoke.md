@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/10/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,13 +13,13 @@ ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
-ms.openlocfilehash: 406214d90b509bd391cc12ff9033bd07d08300c9
+ms.sourcegitcommit: e9ad2e518b4a7dac608572eb5eb2d99bbda4754e
+ms.openlocfilehash: 4c757494a1fe948ed26b32f86844f7b5896c919b
 
 
 ---
 
-# Rilevare e revocare i documenti quando si usa l'applicazione di condivisione RMS
+# Rilevare e revocare i documenti quando si utilizza l'applicazione di condivisione RMS
 
 *Si applica a: Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
@@ -33,9 +33,11 @@ Quando si accede a questo sito, eseguire l'accesso per effettuare il rilevamento
 
 -   Se è necessario interrompere la condivisione di un documento: Fare clic su **Revocare l'accesso**, si noti il periodo di tempo in cui il documento continuerà a essere disponibile, e decidere se si vuol far sapere agli utenti che si sta revocando l'accesso al documento condiviso in precedenza e inviare un messaggio personalizzato. Quando si revoca un documento, il documento condiviso non viene eliminato ma gli utenti autorizzati non potranno più aprirlo.
 
--   Se si desidera esportare in Excel: Fare clic su **Apri in Excel**, in modo da poter poi modificare i dati e creare le visualizzazioni e i grafici.
+-   Se si vuole esportare in Excel: fare clic su **Esporta in CSV**, in modo da poter poi modificare i dati e creare le visualizzazioni e i grafici.
 
 -   Se si desidera configurare notifiche tramite posta elettronica: Fare clic su **Impostazioni** e selezionare come e se ricevere un messaggio di posta elettronica quando si accede al documento.
+
+- Se si vogliono rilevare e revocare i documenti condivisi per conto di altri utenti: gli amministratori di Azure RMS possono rilevare e revocare i documenti per conto di altri utenti facendo clic sull'icona di amministrazione. Solo gli amministratori visualizzano questa icona.
 
 -   Se si hanno domande o si vogliono lasciare commenti e suggerimenti sul sito di rilevamento del documento: Fare clic sull'icona della Guida per l'accesso alle [Domande frequenti relative al rilevamento dei documenti](http://go.microsoft.com/fwlink/?LinkId=523977).
 
@@ -50,6 +52,11 @@ Quando si accede a questo sito, eseguire l'accesso per effettuare il rilevamento
     ![Selezionare Rileva utilizzo da Outlook quando si usa l'applicazione di condivisione RMS ](../media/ADRMS_MSRMSApp_OutlookTrackUsage.png)
 
 Se non vengono visualizzate queste opzioni per RMS, è probabile che l'applicazione di applicazione RMS non sia installata nel computer o che il computer debba essere riavviato per completare l'installazione. Per altre informazioni su come installare l'applicazione, vedere [Scaricare e installare l'applicazione Rights Management sharing](install-sharing-app.md).
+
+> [!NOTE] 
+> Se è stata installata la versione di anteprima del [client di Azure Information Protection](../information-protection/info-protect-client.md), versione 1.0.233 o successiva, è possibile accedere anche al sito di rilevamento dei documenti usando il pulsante **Proteggi**: 
+> 
+> - In un'applicazione di Office, nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi** > **Rileva utilizzo**. 
 
 ### Altri modi per tenere traccia e revocare i documenti
 Oltre a tenere traccia dei documenti nei computer Windows utilizzando applicazioni Office, è anche possibile utilizzare queste alternative:
@@ -100,6 +107,6 @@ Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO2-->
 
 
