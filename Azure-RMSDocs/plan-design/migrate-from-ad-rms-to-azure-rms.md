@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
-ms.openlocfilehash: 8ef46d68594a6e559e050f846a844f566ff8770d
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 65371b9a3b210743fc160dbad38333ccb12671e6
 
 
 ---
@@ -35,30 +35,31 @@ Se non si è certi che questa migrazione di AD RMS sia adatta alla propria organ
 Prima di iniziare il processo di migrazione ad Azure RMS, verificare che i prerequisiti seguenti siano soddisfatti e accertarsi di avere compreso le possibili limitazioni.
 
 
-- **Distribuzione di RMS supportata**
+- **Distribuzione di RMS supportata:**
+    
+    - Le versioni seguenti di AD RMS supportano una migrazione ad Azure RMS:
+    
+        - Windows Server 2008 R2 (x64)
+        
+        - Windows Server 2012 (x64)
+        
+        - Windows Server 2012 R2 (x64)
+        
+    - Modalità di crittografia 2:
+    
+        - I server e i client di AD RMS devono essere in esecuzione in modalità di crittografia 2 prima di iniziare la migrazione ad Azure RMS. Per altre informazioni, vedere [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx) (Modalità di crittografia di AD RMS).
+        
+    - Sono supportate tutte le topologie di AD RMS valide:
+    
+        - Singola foresta, singolo cluster RMS
+        
+        - Singola foresta, più cluster RMS di sola gestione delle licenze
+        
+        - Più foreste, più cluster RMS
+        
+    Nota: per impostazione predefinita, la migrazione di più cluster RMS viene eseguita a un singolo tenant di Azure RMS. Se si vogliono separare i tenant di Azure RMS, è necessario considerarli come diverse migrazioni. Non è possibile importare una chiave da un cluster RMS in più tenant di Azure RMS.
 
-    Tutte le versioni di AD RMS, da Windows Server 2008 a Windows Server 2012 R2, supportano la migrazione ad Azure RMS:
-
-    - Windows Server 2008 (x86 o x64)
-
-    - Windows Server 2008 R2 (x64)
-
-    - Windows Server 2012 (x64)
-
-    - Windows Server 2012 R2 (x64)
-
-    Sono supportate tutte le topologie di AD RMS valide:
-
-    - Singola foresta, singolo cluster RMS
-
-    - Singola foresta, più cluster RMS di sola gestione delle licenze
-
-    - Più foreste, più cluster RMS
-
-    **Nota**: per impostazione predefinita, la migrazione di più cluster RMS viene eseguita a un singolo tenant di Azure RMS. Per usare diversi tenant di RMS, è necessario considerarli come diverse migrazioni. Non è possibile importare una chiave da un cluster RMS in più tenant di Azure RMS.
-
-
-- **Tutti i requisiti per l'esecuzione di Azure RMS, incluso un tenant di Azure RMS (non attivato)**
+- **Tutti i requisiti per l'esecuzione di Azure RMS, incluso un tenant di Azure RMS (non attivato):**
 
     Vedere [Requisiti per Azure Rights Management](../get-started/requirements-azure-rms.md).
 
@@ -82,6 +83,10 @@ Prima di iniziare il processo di migrazione ad Azure RMS, verificare che i prere
 
     Questa è la sola interruzione del servizio durante il processo di migrazione.
 
+- **Se si vuole gestire la propria chiave del tenant di Azure RMS tramite una chiave protetta da HMS**:
+
+    - Per questa configurazione facoltativa è necessario usare Insieme di credenziali delle chiavi di Azure e una sottoscrizione di Azure che supporti l'insieme di credenziali delle chiavi con chiavi protette tramite HMS. Per altre informazioni, vedere la pagina [dei prezzi di Insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/en-us/pricing/details/key-vault/). 
+
 
 Limitazioni:
 
@@ -100,7 +105,7 @@ Limitazioni:
 ## Panoramica della procedura per la migrazione da AD RMS ad Azure RMS
 
 
-I 9 passaggi della migrazione possono essere suddivisi in 4 fasi eseguibili in momenti diversi e da amministratori diversi.
+I passaggi della migrazione possono essere suddivisi in 4 fasi eseguibili in momenti diversi e da amministratori diversi.
 
 [**FASE 1: CONFIGURAZIONE LATO SERVER PER AD RMS**](migrate-from-ad-rms-phase1.md)
 
@@ -118,11 +123,11 @@ I 9 passaggi della migrazione possono essere suddivisi in 4 fasi eseguibili in m
 
     - **migrazione da una chiave protetta tramite HSM a un’altra**:
 
-        da chiavi archiviate da un modulo di protezione hardware per AD RMS a chiave del tenant di Azure RMS gestita dal cliente (scenario "bring your own key" o BYOK). È necessario eseguire altri passaggi per trasferire la chiave dal modulo di protezione hardware Thales locale al modulo di protezione hardware di Azure RMS. La chiave protetta da HSM esistente deve essere protetta dal modulo. Le chiavi protette da OCS non sono supportate dall'insieme di strumenti BYOK.
+        da chiavi archiviate da un modulo di protezione hardware per AD RMS a chiave del tenant di Azure RMS gestita dal cliente (scenario "bring your own key" o BYOK). È necessario eseguire altri passaggi per trasferire la chiave dal modulo di protezione hardware di Thales locale a Insieme di credenziali delle chiavi di Azure e autorizzare Azure RMS all'uso di tale chiave. La chiave protetta tramite HSM esistente deve essere protetta dal modulo. Le chiavi protette da OCS non sono supportate dai servizi di Rights Management.
 
     - **Migrazione da una chiave protetta tramite software a una chiave protetta tramite HSM**:
 
-        chiavi basate su password gestite a livello centrale in AD RMS a chiave del tenant di Azure RMS gestita dal cliente (scenario "bring your own key" o BYOK). È necessaria la configurazione più estesa, perché è innanzitutto necessario estrarre la chiave software e importarla in un modulo di protezione hardware locale e quindi eseguire i passaggi aggiuntivi per trasferire la chiave dal modulo di protezione hardware Thales locale al modulo di protezione hardware di Azure RMS.
+        chiavi basate su password gestite a livello centrale in AD RMS a chiave del tenant di Azure RMS gestita dal cliente (scenario "bring your own key" o BYOK). È necessaria la configurazione più estesa, perché è innanzitutto necessario estrarre la chiave software e importarla in un modulo di protezione hardware locale e quindi eseguire i passaggi aggiuntivi per trasferire la chiave dal modulo di protezione hardware di Thales locale a un modulo di protezione hardware di Insieme di credenziali delle chiavi di Azure e autorizzare Azure RMS all'uso dell'insieme di credenziali che archivia la chiave.
 
 - **Passaggio 3. Attivare il tenant di Azure RMS**
 
@@ -171,7 +176,7 @@ I 9 passaggi della migrazione possono essere suddivisi in 4 fasi eseguibili in m
 
 - **Passaggio 9: Reimpostare la chiave del tenant di Azure RMS**
 
-    Questo passaggio è obbligatorio se prima della migrazione non era in esecuzione la Modalità crittografia 2. È facoltativo, ma consigliato, per tutte le migrazioni allo scopo di salvaguardare la sicurezza della chiave del tenant di Azure RMS.
+    Questo passaggio è facoltativo ma consigliato se la topologia della chiave del tenant di Azure RMS scelta al passaggio 2 è gestita da Microsoft. Questo passaggio non è applicabile se la topologia della chiave del tenant di Azure RMS scelta è gestita dal cliente (BYOK).
 
 
 ## Passaggi successivi
@@ -180,6 +185,6 @@ Per iniziare la migrazione, passare a [Fase 1: configurazione lato server](migra
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO3-->
 
 
