@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/23/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: defe008a9b78026ccac584bb06762228456a2916
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: efe129422348fb30ce7686a5602cb29a1b46d36d
 
 
 ---
@@ -27,9 +27,12 @@ Usare le informazioni seguenti per la fase 1 della migrazione da AD RMS ad Azure
 
 
 ## Passaggio 1: Scaricare Azure Rights Management Administration Tool
-Passare all'Area download Microsoft e [scaricare Azure Rights Management Administration Tool](http://go.microsoft.com/fwlink/?LinkId=257721), contenente il modulo di amministrazione di Azure RMS per Windows PowerShell.
+Passare all'Area download Microsoft e [scaricare Azure Rights Management Administration Tool](https://go.microsoft.com/fwlink/?LinkId=257721), contenente il modulo di amministrazione di Azure RMS per Windows PowerShell.
 
 Installare lo strumento. Per le istruzioni, vedere [Installazione di Windows PowerShell per Microsoft Azure Rights Management](../deploy-use/install-powershell.md).
+
+> [!NOTE]
+> Se il modulo Windows PowerShell è stato scaricato in precedenza, eseguire il comando seguente per verificare che il numero di versione in uso sia almeno 2.5.0.0: `(Get-Module aadrm -ListAvailable).Version`
 
 ## Passaggio 2: Esportare i dati di configurazione da AD RMS e importarli in Azure RMS
 Questo passaggio è un processo costituito da due parti:
@@ -39,10 +42,20 @@ Questo passaggio è un processo costituito da due parti:
 2.  Importare i dati di configurazione in Azure RMS. Per questo passaggio esistono diversi processi, a seconda della configurazione della distribuzione corrente di AD RMS e della topologia preferita per la chiave del tenant di Azure RMS.
 
 ### Esportare i dati di configurazione da AD RMS.
-Eseguire le operazioni seguenti in tutti i cluster AD RMS, per tutti i domini di pubblicazione trusted con contenuto protetto per l'organizzazione. Non è necessario eseguire questa procedura nei cluster usati per la sola gestione delle licenze.
 
-> [!NOTE]
-> Se si usa Windows Server 2003 Rights Management, invece di queste istruzioni seguire la procedura [Esportare il certificato concessore di licenze server, il dominio utente trusted, il dominio di pubblicazione trusted e la chiave privata RMS](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx) nell'articolo [Migrazione da Windows RMS ad AD RMS in un'infrastruttura diversa](http://technet.microsoft.com/library/jj835767%28v=ws.10%29.aspx).
+> [!IMPORTANT]
+> Prima di eseguire questa procedura, verificare che i server AD RMS siano in esecuzione in modalità di crittografia 2, che rappresenta un requisito per Azure RMS.
+> 
+> Per verificare la modalità di crittografia:
+> 
+> - Per Windows Server 2012 R2 e Windows 2012: proprietà del cluster AD RMS > scheda **Generale**. 
+> 
+> - Per tutte le versioni di AD RMS: usare [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) e l'opzione **AD RMS admin** (Amministratore di AD RMS) per visualizzare la modalità di crittografia nelle **RMS service information** (Informazioni sul servizio RMS).
+> 
+> Assicurarsi che il valore per la modalità di crittografia sia **2**. In caso contrario, vedere le istruzioni per abilitare la modalità di crittografia 2 in [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx) (Modalità di crittografia di AD RMS).
+
+
+Eseguire le operazioni seguenti in tutti i cluster AD RMS, per tutti i domini di pubblicazione trusted con contenuto protetto per l'organizzazione. Non è necessario eseguire questa procedura nei cluster usati per la sola gestione delle licenze.
 
 #### Per esportare i dati di configurazione (informazioni su domini di pubblicazione trusted)
 
@@ -60,7 +73,7 @@ Eseguire le operazioni seguenti in tutti i cluster AD RMS, per tutti i domini di
 
     -   Non selezionare la casella di controllo per salvare il file di dominio trusted in RMS versione 1.0.
 
-Dopo l'esportazione di tutti i domini di pubblicazione trusted, sarà possibile avviare la procedura di importazione dei dati nel modulo di protezione hardware (HSM) di Azure RMS da Thales. Per ulteriori informazioni, 
+Dopo l'esportazione di tutti i domini di pubblicazione trusted, sarà possibile avviare la procedura di importazione dei dati in Azure RMS.
 
 ### Importare i dati di configurazione in Azure RMS
 Le procedure esatte per questo passaggio dipendono dalla configurazione della distribuzione corrente di AD RMS e dalla topologia preferita per la chiave del tenant di Azure RMS.
@@ -78,19 +91,19 @@ La distribuzione corrente di AD RMS userà una delle seguenti configurazioni per
 > [!NOTE]
 > Per altre informazioni sull'uso di moduli di protezione hardware con AD RMS, vedere [Uso di AD RMS con moduli di protezione hardware](http://technet.microsoft.com/library/jj651024.aspx).
 
-Per la topologia di chiave del tenant di Azure RMS esistono due opzioni: la chiave viene gestita da Microsoft (**gestione di Microsoft**) oppure dall'utente (**gestione del cliente**). Quando la chiave del tenant di Azure RMS è gestita dall'utente, viene a volte definita BYOK ("bring your own key") e richiede un modulo di protezione hardware di Thales. Per altre informazioni, vedere l’articolo [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](plan-implement-tenant-key.md).
+Per la topologia della chiave del tenant di Azure RMS esistono due opzioni: la chiave viene gestita da Microsoft (**gestione di Microsoft**) oppure dall'utente (**gestione del cliente**) in Insieme di credenziali delle chiavi di Azure. Quando la chiave del tenant di Azure RMS è gestita dall'utente, viene a volte definita BYOK ("bring your own key") e richiede un modulo di protezione hardware di Thales. Per altre informazioni, vedere l’articolo [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](plan-implement-tenant-key.md).
 
 > [!IMPORTANT]
-> Exchange Online non è attualmente compatibile con la modalità BYOK di Azure RMS.  Se si vuole usare la modalità BYOK dopo la migrazione e si prevede di usare Exchange Online, verificare come questa configurazione riduce la funzionalità IRM per Exchange Online. Rivedere le informazioni fornite in [Prezzi e restrizioni della modalità BYOK](byok-price-restrictions.md) per poter scegliere la migliore topologia di chiave del tenant di Azure RMS per la migrazione.
+> Exchange Online non è attualmente compatibile con la modalità BYOK in Azure RMS.  Se si vuole usare la modalità BYOK dopo la migrazione e si prevede di usare Exchange Online, verificare come questa configurazione riduce la funzionalità IRM per Exchange Online. Rivedere le informazioni fornite in [Prezzi e restrizioni della modalità BYOK](byok-price-restrictions.md) per poter scegliere la migliore topologia di chiave del tenant di Azure RMS per la migrazione.
 
 Usare la tabella seguente per identificare la procedura da eseguire per la migrazione. Le combinazioni non elencate non sono supportate.
 
 |Distribuzione di AD RMS corrente|Topologia di chiave del tenant di Azure RMS scelta|Istruzioni relative alla migrazione|
 |-----------------------------|----------------------------------------|--------------------------|
 |Password di protezione nel database AD RMS|Gestione di Microsoft|Vedere la procedura **Migrazione da una chiave protetta tramite software a un'altra** dopo questa tabella.<br /><br />Questo è il percorso di migrazione più semplice e richiede solo il trasferimento dei dati di configurazione in Azure RMS.|
-|Modulo di protezione hardware tramite un modulo di protezione hardware nShield di Thales|Gestione del cliente (scenario BYOK)|Vedere la procedura **Migrazione da una chiave protetta tramite HSM a un'altra** dopo questa tabella.<br /><br />Sono necessari il set di strumenti BYOK e due procedure per trasferire la chiave dal modulo di protezione hardware locale ai moduli di protezione hardware di Azure RMS e quindi trasferire i dati di configurazione in Azure RMS.|
-|Password di protezione nel database AD RMS|Gestione del cliente (scenario BYOK)|Vedere la procedura di migrazione **Da una chiave protetta tramite software a una chiave protetta tramite HSM** dopo questa tabella.<br /><br />Sono necessari il set di strumenti BYOK e tre procedure, innanzitutto per estrarre la chiave software e importarla nel modulo di protezione hardware locale, quindi trasferire la chiave dal modulo di protezione hardware locale ai moduli di protezione hardware di Azure RMS e infine trasferire i dati di configurazione in Azure RMS.|
-|Modulo di protezione hardware tramite un modulo di protezione hardware di un fornitore diverso da Thales.|Gestione del cliente (scenario BYOK)|Contattare il fornitore del modulo di protezione hardware per istruzioni sul trasferimento della chiave da questo modulo di protezione hardware a un modulo di protezione hardware nShield di Thales. Seguire quindi le istruzioni per la procedura di migrazione **Da una chiave protetta tramite HSM a un’altra** dopo questa tabella.|
+|Modulo di protezione hardware tramite un modulo di protezione hardware nShield di Thales|Gestione del cliente (scenario BYOK)|Vedere la procedura **Migrazione da una chiave protetta tramite HSM a un'altra** dopo questa tabella.<br /><br />Sono necessari il set di strumenti BYOK di Insieme di credenziali delle chiavi di Azure e tre procedure: innanzitutto trasferire la chiave dal modulo di protezione hardware locale ai moduli di protezione hardware di Insieme di credenziali delle chiavi di Azure, quindi autorizzare Azure RMS all'uso della chiave del tenant e infine trasferire i dati di configurazione in Azure RMS.|
+|Password di protezione nel database AD RMS|Gestione del cliente (scenario BYOK)|Vedere la procedura di migrazione **Da una chiave protetta tramite software a una chiave protetta tramite HSM** dopo questa tabella.<br /><br />Sono necessari il set di strumenti BYOK di Insieme di credenziali delle chiavi di Azure e quattro procedure: innanzitutto estrarre la chiave software e importarla nel modulo di protezione hardware locale, quindi trasferire la chiave dal modulo di protezione hardware locale ai moduli di protezione hardware di Azure RMS, successivamente trasferire i dati dell'insieme di credenziali in Azure RMS e infine trasferire i dati di configurazione ad Azure RMS.|
+|Modulo di protezione hardware tramite un modulo di protezione hardware di un fornitore diverso da Thales.|Gestione del cliente (scenario BYOK)|Contattare il fornitore del modulo di protezione hardware per istruzioni sul trasferimento della chiave da questo modulo a un modulo di protezione hardware nShield di Thales. Seguire quindi le istruzioni per la procedura di migrazione **Da una chiave protetta tramite HSM a un’altra** dopo questa tabella.|
 |Protezione con password tramite un provider del servizio di crittografia esterno|Gestione del cliente (scenario BYOK)|Contattare il fornitore del provider del servizio di crittografia per istruzioni sul trasferimento della chiave a un modulo di protezione hardware nShield di Thales. Seguire quindi le istruzioni per la procedura di migrazione **Da una chiave protetta tramite HSM a un’altra** dopo questa tabella.|
 Prima di iniziare queste procedure, assicurarsi che sia possibile accedere ai file con estensione XML creati in precedenza durante l'esportazione dei domini di pubblicazione trusted. Ad esempio, è possibile salvarli su una chiavetta USB che può essere spostata dal server AD RMS alla workstation connessa a Internet.
 
@@ -101,8 +114,8 @@ Prima di iniziare queste procedure, assicurarsi che sia possibile accedere ai fi
 Per completare il passaggio 2, scegliere e selezionare le istruzioni per il percorso di migrazione: 
 
 
-- [Da una chiave protetta tramite software a un’altra](migrate-softwarekey-to-softwarekey.md)
-- [Da una chiave protetta tramite HSM a un’altra](migrate-hsmkey-to-hsmkey.md)
+- [Da una chiave protetta tramite software a un'altra](migrate-softwarekey-to-softwarekey.md)
+- [Da una chiave protetta tramite HSM a un'altra](migrate-hsmkey-to-hsmkey.md)
 - [Da una chiave protetta tramite software a una chiave protetta tramite HSM](migrate-softwarekey-to-hsmkey.md)
 
 
@@ -166,7 +179,7 @@ Se non si è certi che i modelli AD RMS includano il gruppo ANYONE, è possibile
 ### Esempio di script di Windows PowerShell per identificare modelli AD RMS che includono il gruppo ANYONE
 Questa sezione include lo script di esempio per facilitare l'identificazione dei modelli AD RMS per i quali è definito un gruppo ANYONE, come descritto nella sezione precedente.
 
-**Dichiarazione di non responsabilità:** questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene fornito "nello stato in stato in cui si trova" senza garanzia di alcun tipo.*
+**Dichiarazione di non responsabilità:** questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene fornito "nello stato in stato in cui si trova" senza garanzia di alcun tipo.
 
 ```
 import-module adrmsadmin 
@@ -207,6 +220,6 @@ Passare alla [fase 2: configurazione lato client](migrate-from-ad-rms-phase2.md)
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

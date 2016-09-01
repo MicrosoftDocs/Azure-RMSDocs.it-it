@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/05/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2082620eb152aa88af4141b88985adce22769168
-ms.openlocfilehash: fbf614bf7b30165a78f6312267243ad6fdb81435
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 28fed61b674112d2ebeb30a15a6f6217647e0b5f
 
 
 ---
@@ -179,13 +179,13 @@ Azure Rights Management supporta diversi tipi di richiesta. La tabella seguente 
 |BECreateEndUserLicenseV1|Viene eseguita una chiamata da un dispositivo mobile per creare un contratto di licenza con l'utente finale.|
 |BEGetAllTemplatesV1|Viene eseguita una chiamata da un dispositivo mobile (back-end) per ottenere tutti i modelli.|
 |Certify|Il client sta certificando la protezione del contenuto.|
-|KMSPDecrypt|Il client tenta di decrittografare il contenuto protetto con RMS. Applicabile solo per una chiave del tenant gestita dal cliente (BYOK).|
 |DeleteTemplateById|Viene eseguita una chiamata dal portale di Azure classico per eliminare un modello in base a un ID modello.|
 |DocumentEventsCsv|Viene eseguita una chiamata dal sito di rilevamento dei documenti per scaricare il file con estensione csv per un singolo documento.|
 |ExportTemplateById|Viene eseguita una chiamata dal portale di Azure classico per esportare un modello in base a un ID modello.|
 |FECreateEndUserLicenseV1|Richiesta analoga ad AcquireLicense, ma inviata da dispositivi mobili.|
 |FECreatePublishingLicenseV1|Questa richiesta corrisponde a una combinazione di Certify e GetClientLicensorCert ed è inviata da client mobili.|
 |FEGetAllTemplates|Viene eseguita una chiamata da un dispositivo mobile (front-end) per ottenere i modelli.|
+|FindServiceLocationsForUser|Viene eseguita una chiamata per effettuare una query di URL, che consente di chiamare la richiesta Certify o AcquireLicense.|
 |GetAllDocs|Viene eseguita una chiamata dal sito di rilevamento dei documenti per caricare la pagina **Tutti i documenti** relativa a un utente o cercare tutti i documenti del tenant. Usare questo valore con i campi admin-action e acting-as-admin:<br /><br />- admin-action è vuoto: un utente visualizza la pagina **Tutti i documenti** relativa ai propri documenti.<br /><br />- admin-action è true e acting-as-user è vuoto: un amministratore visualizza tutti i documenti relativi al proprio tenant.<br /><br />- admin-action è true e acting-as-user non è vuoto: un amministratore visualizza la pagina **Tutti i documenti** relativa a un utente.|
 |GetAllTemplates|Viene eseguita una chiamata dal portale di Azure classico per ottenere tutti i modelli.|
 |GetClientLicensorCert|Il client richiede un certificato di distribuzione, da usare in un secondo tempo per proteggere i contenuti, da un computer basato su Windows.|
@@ -195,8 +195,11 @@ Azure Rights Management supporta diversi tipi di richiesta. La tabella seguente 
 |GetSingle|Viene eseguita una chiamata dal sito di rilevamento dei documenti per passare alla pagina **Documento singolo**.|
 |GetTenantFunctionalState|Il portale di Azure classico controlla se Azure RMS è attivato.|
 |GetTemplateById|Viene eseguita una chiamata dal portale di Azure classico per ottenere un modello specificando un ID modello.|
-|ExportTemplateById|Viene eseguita una chiamata dal portale di Azure classico per esportare un modello specificando un ID modello.|
-|FindServiceLocationsForUser|Viene eseguita una chiamata per effettuare una query di URL, che consente di chiamare la richiesta Certify o AcquireLicense.|
+|KeyVaultDecryptRequest|Il client tenta di decrittografare il contenuto protetto con RMS. Applicabile solo per una chiave del tenant gestita dal cliente (BYOK) in Insieme di credenziali delle chiavi di Azure.|
+|KeyVaultGetKeyInfoRequest|Viene eseguita una chiamata per verificare che la chiave specificata da usare nell'Insieme di credenziali delle chiavi di Azure per la chiave del tenant Azure RMS sia accessibile e non sia già stata usata.|
+|KeyVaultSignDigest|Viene eseguita una chiamata quando una chiave gestita dal cliente (BYOK) in Insieme di credenziali delle chiavi di Azure viene usata a scopo di firma. In genere, viene eseguita una chiamata per ogni richiesta AcquireLicence (o FECreateEndUserLicenseV1), Certify e GetClientLicensorCert (o FECreatePublishingLicenseV1).|
+|KMSPDecrypt|Il client tenta di decrittografare il contenuto protetto con RMS. Applicabile solo per una chiave del tenant legacy gestita dal cliente (BYOK).|
+|KMSPSignDigest|Viene eseguita una chiamata quando una chiave legacy gestita dal cliente (BYOK) viene usata a scopo di firma. In genere, viene eseguita una chiamata per ogni richiesta AcquireLicence (o FECreateEndUserLicenseV1), Certify e GetClientLicensorCert (o FECreatePublishingLicenseV1).|
 |LoadEventsForMap|Viene eseguita una chiamata dal sito di rilevamento dei documenti per passare alla visualizzazione mappa di un singolo documento.|
 |LoadEventsForSummary|Viene eseguita una chiamata dal sito di rilevamento dei documenti per passare alla visualizzazione sequenza temporale di un singolo documento.|
 |LoadEventsForTimeline|Viene eseguita una chiamata dal sito di rilevamento dei documenti per passare alla visualizzazione mappa di un singolo documento.|
@@ -206,10 +209,8 @@ Azure Rights Management supporta diversi tipi di richiesta. La tabella seguente 
 |ServerCertify|Viene eseguita una chiamata da un client abilitato per RMS, come SharePoint, per certificare il server.|
 |SetUsageLogFeatureState|Viene eseguita una chiamata per abilitare la funzionalità di registrazione dell'utilizzo.|
 |SetUsageLogStorageAccount|Viene eseguita una chiamata per specificare il percorso dei log di Azure RMS.|
-|SignDigest|Viene eseguita una chiamata quando una chiave viene usata a scopo di firma. In genere, viene eseguita una chiamata per ogni richiesta AcquireLicence (o FECreateEndUserLicenseV1), Certify e GetClientLicensorCert (o FECreatePublishingLicenseV1).|
 |UpdateNotificationSettings|Viene eseguita una chiamata dal sito di rilevamento dei documenti per modificare le impostazioni di notifica di un singolo documento.|
 |UpdateTemplate|Viene eseguita una chiamata dal portale di Azure classico per aggiornare un modello esistente.|
-
 
 
 ## Riferimenti Windows PowerShell
@@ -240,6 +241,6 @@ Per altre informazioni sull'uso di Windows PowerShell per Azure Rights Managemen
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO3-->
 
 

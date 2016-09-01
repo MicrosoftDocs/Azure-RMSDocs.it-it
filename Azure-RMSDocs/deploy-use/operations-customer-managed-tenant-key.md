@@ -1,27 +1,21 @@
 ---
-# required metadata
-
-title: "Gestione del cliente: operazioni del ciclo di vita della chiave del tenant | Azure RMS"
-description:
-keywords:
+title: 'Gestione del cliente: operazioni del ciclo di vita della chiave del tenant | Azure RMS'
+description: 
+keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 9bff4e1380dfa3fabab1e8cb9317f3dd31b05a77
+
 
 ---
 
@@ -33,7 +27,10 @@ ms.suite: ems
 Se la gestione della chiave del tenant per Azure Rights Management viene eseguita dall'utente (scenario BYOK), usare le sezioni seguenti per ottenere altre informazioni sulle operazioni del ciclo di vita rilevanti per questa topologia.
 
 ## Revocare la chiave del tenant
+In Insieme di credenziali delle chiavi di Azure è possibile modificare le autorizzazioni per l'insieme di credenziali delle chiavi che contiene la chiave del tenant di Azure RMS in modo che Azure RMS non possa più accedere alla chiave. Tuttavia, se si esegue questa operazione, nessuno sarà in seguito in grado di aprire documenti e messaggi di posta elettronica precedentemente protetti con Azure RMS.
+
 Quando si annulla la sottoscrizione di Azure RMS, l'uso della chiave del tenant in Azure RMS viene interrotto e non è necessaria alcuna azione da parte dell'utente.
+
 
 ## Ridistribuire la chiave del tenant
 Il processo di ridistribuzione della chiave è denominato anche rollover della chiave. Non ridistribuire la chiave tenant a meno che non sia effettivamente necessario. Alcuni client precedenti, ad esempio Office 2010, non erano progettati per gestire in modo efficiente le modifiche delle chiavi. In questo scenario è necessario cancellare lo stato di RMS nei computer tramite Criteri di gruppo o un meccanismo equivalente. In alcuni casi è tuttavia opportuno forzare la ridistribuzione della chiave del tenant, Ad esempio:
@@ -44,15 +41,15 @@ Il processo di ridistribuzione della chiave è denominato anche rollover della c
 
 Quando si ridistribuisce la chiave del tenant, il nuovo contenuto è protetto tramite la nuova chiave. Poiché questo processo viene eseguito per fasi, per un certo periodo di tempo parte del nuovo contenuto continuerà a essere protetto tramite la chiave del tenant precedente. Il contenuto protetto in precedenza rimane tale rispetto alla chiave del tenant precedente. Per supportare questo scenario, Azure RMS mantiene la chiave del tenant precedente in modo da emettere licenze per il vecchio contenuto.
 
-Per reimpostare la chiave del tenant, generare e creare una nuova chiave tramite Internet o di persona, usare le procedure descritte nella sezione [Implementazione della modalità BYOK](..\plan-design\plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) dell'argomento [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](..\plan-design\plan-implement-tenant-key.md).
+Per reimpostare la chiave del tenant, è innanzitutto necessario reimpostare la chiave del tenant di Azure RMS in Insieme di credenziali delle chiavi. Successivamente, è necessario eseguire il cmdlet Add-AadrmKeyVaultKey, specificando il nuovo URL della chiave.
 
 ## Eseguire il backup e il ripristino della chiave del tenant
 L'utente è responsabile del backup della chiave del tenant. Se la chiave del tenant è stata generata dall'utente in un modulo di protezione hardware Thales, per eseguire il backup della chiave è sufficiente eseguire il backup del file della chiave in formato token, del file relativo all'ambiente e delle schede amministrative.
 
-Se la chiave è stata trasferita tramite le procedure descritte nella sezione [Implementazione della modalità BYOK](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) dell'argomento [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](../plan-design/plan-implement-tenant-key.md), Azure RMS manterrà il file della chiave in formato token come protezione da eventuali errori dei nodi di Azure RMS. È tuttavia opportuno tenere presente che questa azione non rappresenta un backup completo. Se ad esempio è necessaria una copia in testo non crittografato della chiave da usare all'esterno di un modulo di protezione hardware Thales, Azure RMS non sarà in grado di recuperarla perché dispone solo di una copia non recuperabile.
+Poiché la chiave è stata trasferita tramite le procedure descritte nella sezione [Implementazione della modalità BYOK](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) dell'argomento [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](../plan-design/plan-implement-tenant-key.md), Insieme di credenziali delle chiavi manterrà il file della chiave in formato token come protezione da eventuali errori dei nodi del servizio. Questo file è associato all'ambiente di sicurezza relativo all'area o all'istanza specifica di Azure. È tuttavia opportuno tenere presente che questa azione non rappresenta un backup completo. Se ad esempio è necessaria una copia in testo non crittografato della chiave da usare all'esterno di un modulo di protezione hardware Thales, Insieme di credenziali delle chiavi di Azure non sarà in grado di recuperarla perché dispone solo di una copia non recuperabile.
 
 ## Esportare la chiave del tenant
-In uno scenario BYOK non è possibile esportare la chiave del tenant da Azure RMS. La copia presente in Azure RMS è non recuperabile. Per eliminare questa chiave in modo che non venga più usata, contattare il Servizio Supporto Tecnico Clienti Microsoft.
+In uno scenario BYOK non è possibile esportare la chiave del tenant da Insieme di credenziali delle chiavi di Azure o da Azure RMS. La copia presente in Insieme di credenziali delle chiavi di Azure è non recuperabile. 
 
 ## Rispondere a una violazione di sicurezza
 Indipendentemente dall'affidabilità, nessun sistema di sicurezza può considerarsi completo se non prevede un processo di risposta alle violazioni di sicurezza. La chiave del tenant può essere violata o rubata e anche se è protetta in modo efficiente, potrebbero essere presenti vulnerabilità nella tecnologia dei moduli di protezione hardware di generazione corrente e nella lunghezza e negli algoritmi correlati alle chiavi correnti.
@@ -66,11 +63,12 @@ In caso di violazione di sicurezza, l'azione più efficace che l'utente o Micros
 |Perdita della chiave del tenant.|Ridistribuire la chiave del tenant. Vedere [Ridistribuire la chiave del tenant](#re-key-your-tenant-key).|
 |Diritti di accesso alla chiave del tenant ottenuti da un utente non autorizzato o da malware, ma nessuna perdita della chiave.|La ridistribuzione della chiave del tenant non è sufficiente ed è necessaria un'analisi della causa radice. Se l'utente non autorizzato ha ottenuto l'accesso a causa di un bug del processo o del software, questo problema deve essere risolto.|
 |Vulnerabilità scoperta nella tecnologia del moduli di protezione hardware di generazione corrente.|Microsoft deve aggiornare i moduli di protezione hardware. Se si ritiene che la vulnerabilità abbia provocato l'esposizione di chiavi, Microsoft inviterà tutti i clienti a rinnovare le chiavi tenant.|
-|Vulnerabilità scoperta nell'algoritmo RSA o nella lunghezza della chiave oppure attacchi di forza bruta diventati realizzabili a livello di calcolo.|Microsoft deve aggiornare Azure RMS per supportare nuovi algoritmi e lunghezze maggiori della chiave che siano resilienti e invitare tutti i clienti a rinnovare le proprie chiavi tenant.|
+|Vulnerabilità scoperta nell'algoritmo RSA o nella lunghezza della chiave oppure attacchi di forza bruta diventati realizzabili a livello di calcolo.|Microsoft deve aggiornare Insieme di credenziali delle chiavi di Azure o Azure RMS per supportare nuovi algoritmi e lunghezze maggiori della chiave che siano resilienti e invitare tutti i clienti a rinnovare le proprie chiavi del tenant.|
 
 
 
 
-<!--HONumber=Apr16_HO4-->
+
+<!--HONumber=Aug16_HO3-->
 
 
