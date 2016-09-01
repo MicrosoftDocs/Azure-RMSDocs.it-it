@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7a9c8b531ec342e7d5daf0cbcacd6597a79e6a55
-ms.openlocfilehash: 173641b9dada2673b48a1c210419cb933cdd9f13
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: bd93e781da7dc34c18e236a90a03dbc8fb012a1c
 
 
 ---
@@ -24,83 +24,138 @@ ms.openlocfilehash: 173641b9dada2673b48a1c210419cb933cdd9f13
 *Si applica a: Active Directory Rights Management Services, Azure Rights Management*
 
 
-Queste istruzioni fanno parte del [percorso di migrazione da AD RMS ad Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md) e si applicano solo se la chiave di AD RMS è protetta tramite software e si vuole eseguire la migrazione ad Azure Rights Management con una chiave del tenant protetta tramite HSM. 
+Queste istruzioni fanno parte del [percorso di migrazione da AD RMS ad Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md) e si applicano solo se la chiave di AD RMS è protetta dal software e se si vuole eseguire la migrazione ad Azure Rights Management con una chiave del tenant protetta tramite HSM in Insieme di credenziali delle chiavi di Azure. 
 
 Se non si tratta dello scenario di configurazione prescelto, tornare al [Passaggio 2. Esportare i dati di configurazione da AD RMS e importarli in Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-rms), quindi scegliere una configurazione diversa.
 
-Questa procedura in tre parti consente di importare la configurazione di AD RMS in Azure RMS. La chiave del tenant di Azure RMS verrà gestita dall'utente (BYOK).
+Questa procedura in quattro parti consente di importare la configurazione di AD RMS in Azure RMS. La chiave del tenant di Azure RMS verrà gestita dall'utente (BYOK) in Insieme di credenziali delle chiavi di Azure.
 
-È innanzitutto necessario estrarre la chiave del certificato concessore di licenze server (SLC) dai dati di configurazione e trasferire la chiave in un modulo di protezione hardware locale di Thales, quindi creare il pacchetto e trasferire la chiave del proprio modulo di protezione hardware in Azure RMS e infine importare i dati di configurazione.
+È innanzitutto necessario estrarre la chiave del certificato concessore di licenze server (SLC) dai dati di configurazione di AD RMS e trasferire la chiave in un modulo di protezione hardware di Thales locale, quindi creare il pacchetto e trasferire la chiave del proprio modulo di protezione hardware in Insieme di credenziali delle chiavi di Azure, autorizzare Azure RMS per l'accesso all'insieme di credenziali e infine importare i dati di configurazione.
 
-## Parte 1: Estrarre il certificato concessore di licenze server (SLC) dai dati di configurazione e importare la chiave nel modulo di protezione hardware locale
+Poiché la chiave del tenant di Azure RMS verrà archiviata e gestita da Insieme di credenziali delle chiavi di Azure, questa parte della migrazione richiede l'amministrazione in Insieme di credenziali delle chiavi di Azure oltre alla chiave di Azure RMS. Se Insieme di credenziali delle chiavi di Azure viene gestito da un amministratore diverso da quello dell'organizzazione, sarà necessario coordinare e collaborare con tale amministratore per completare queste procedure.
 
-1.  Seguire la procedura riportata nella sezione [relativa alla modalità BYOK](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) dell'argomento [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](plan-implement-tenant-key.md), usando la procedura **Generare e trasferire la propria chiave del tenant tramite Internet** con le eccezioni seguenti:
+Prima di iniziare, assicurarsi che l'organizzazione disponga di un insieme di credenziali delle chiavi creato in Insieme di credenziali delle chiavi di Azure che supporta le chiavi protette tramite HSM. Sebbene non sia obbligatorio, si consiglia di avere un insieme di credenziali delle chiavi dedicato per Azure RMS. Questo insieme di credenziali delle chiavi verrà configurato per consentire l'accesso ad Azure RMS, pertanto le chiavi archiviate da questo insieme di credenziali delle chiavi devono essere limitate alle sole chiavi di Azure RMS.
 
-    -   **Generare e trasferire la propria chiave del tenant tramite Internet**: **Preparare la workstation connessa a Internet**
 
-    -   **Generare e trasferire la propria chiave del tenant tramite Internet**: **Preparare la workstation disconnessa**
+> [!TIP]
+> Se è necessario eseguire i passaggi di configurazione per Insieme di credenziali delle chiavi di Azure e non si ha familiarità con questo servizio, può risultare utile prima consultare [Introduzione all'insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
 
-    Non attenersi a questa procedura per generare la chiave del tenant, perché è già disponibile una chiave equivalente nel file di dati di configurazione (con estensione XML) esportati. Si eseguirà invece un comando per estrarre la chiave dal file e importarla nel modulo di protezione hardware locale.
 
-2.  Nella workstation disconnessa eseguire il comando seguente:
+## Parte 1: Estrarre la chiave del certificato concessore di licenze server (SLC) dai dati di configurazione e importare la chiave nel modulo di protezione hardware locale
+
+1.  Amministratore di Insieme di credenziali delle chiavi di Azure: usare i passaggi seguenti nella sezione [Implementazione di BYOK (Bring Your Own Key) per l'insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) della documentazione di Insieme di credenziali delle chiavi di Azure:
+
+    -   **Generare e trasferire la propria chiave al modulo di protezione hardware di Insieme di credenziali delle chiavi di Azure**: [Passaggio 1: Preparare la workstation connessa a Internet](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-1-prepare-your-internet-connected-workstation)
+
+    -   **Generare e trasferire la propria chiave del tenant tramite Internet**: [Passaggio 2: Preparare la workstation disconnessa](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-2-prepare-your-disconnected-workstation)
+
+    Non attenersi a questa procedura per generare la chiave del tenant, perché è già disponibile una chiave equivalente nel file di dati di configurazione (con estensione XML) esportati. Si eseguirà invece uno strumento per estrarre la chiave dal file e importarla nel modulo di protezione hardware locale. Quando viene eseguito, lo strumento crea due file:
+
+    - Un nuovo file dei dati di configurazione senza chiave, che è quindi pronto per essere importato nel tenant di Azure RMS.
+
+    - Un file PEM (contenitore di chiavi) con la chiave, che è quindi pronto per essere importato nel modulo di protezione hardware locale.
+
+2. Amministratore di Azure RMS o di Insieme di credenziali delle chiavi di Azure: nella workstation disconnessa, eseguire lo strumento TpdUtil dal [toolkit di migrazione di Azure RMS](https://go.microsoft.com/fwlink/?LinkId=524619). Ad esempio, se lo strumento è installato nell'unità E in cui si copia il file dei dati di configurazione denominato ContosoTPD.xml:
 
     ```
-    KeyTransferRemote.exe -ImportRmsCentrallyManagedKey -TpdFilePath <TPD> -ProtectionPassword -KeyIdentifier <KeyID> -ExchangeKeyPackage <BYOK-KEK-pka-Region> -NewSecurityWorldPackage <BYOK-SecurityWorld-pkg-Region>
+        E:\TpdUtil.exe /tpd:ContosoTPD.xml /otpd:ContosoTPD.xml /opem:ContosoTPD.pem
     ```
-    Ad esempio, per l'America del Nord: **KeyTransferRemote.exe -ImportRmsCentrallyManagedKey -TpdFilePath E:\contosokey1.xml -ProtectionPassword -KeyIdentifier contosorms1key –- -ExchangeKeyPackage &lt;BYOK-KEK-pka-NA-1&gt; -NewSecurityWorldPackage &lt;BYOK-SecurityWorld-pkg-NA-1&gt;**
 
-    Informazioni aggiuntive:
+    Se è disponibile più di un file dei dati di configurazione di RMS, eseguire tale strumento per i file restanti.
 
-    -   Il parametro ImportRmsCentrallyManagedKey indica che l'operazione consiste nell'importazione della chiave del certificato concessore di licenze server.
+    Per visualizzare la Guida per questo strumento, che include una descrizione, istruzioni sull'utilizzo ed esempi, eseguire TpdUtil.exe senza parametri
 
-    -   Se non si specifica la password nel comando, verrà richiesto di farlo.
+    Informazioni aggiuntive per questo comando:
 
-    -   Il parametro KeyIdentifier riguarda un nome descrittivo della chiave che crea il nome del file di chiave. È necessario usare solo caratteri ASCII minuscoli.
+    - **/tpd**: specifica il percorso completo e il nome del file dei dati di configurazione di AD RMS esportato. Il nome del parametro completo è **TpdFilePath**.
 
-    -   Il parametro ExchangeKeyPackage indica un pacchetto di chiavi per lo scambio delle chiavi specifico dell'area geografica, il cui nome inizia con BYOK-KEK-pkg-.
+    - **/otpd**: specifica il nome del file di output per il file dei dati di configurazione senza la chiave. Il nome del parametro completo è **OutPfxFile**. Se non si specifica questo parametro, l'impostazione predefinita del file di output è il nome del file originale con il suffisso **_keyless** e viene archiviato nella cartella corrente.
 
-    -   Il parametro NewSecurityWorldPackage indica un pacchetto di sicurezza di livello universale specifico dell'area geografica, il cui nome inizia con BYOK-SecurityWorld-pkg-.
+    - **/opem**: specifica il nome del file di output per il file PEM, che contiene la chiave estratta. Il nome del parametro completo è **OutPemFile**. Se non si specifica questo parametro, l'impostazione predefinita del file di output è il nome del file originale con il suffisso **_key** e viene archiviato nella cartella corrente.
 
-    Questo comando produce quanto segue:
+    - Se non si specifica la password quando si esegue questo comando (tramite il nome completo del parametro **TpdPassword** o il nome breve del parametro **pwd**), verrà richiesto di specificarla.
 
-    -   File di chiave del modulo di protezione hardware: %NFAST_KMDATA%\local\key_mscapi_&lt;KeyID&gt;
+3. Nella stessa workstation disconnessa, collegare e configurare il modulo di protezione hardware Thales, in base alla documentazione di Thales. È ora possibile importare la chiave nel modulo di protezione hardware Thales collegato usando il comando seguente in cui è necessario sostituire il proprio nome di file per ContosoTPD.pem:
 
-    -   File di dati di configurazione di RMS con SLC rimosso: %NFAST_KMDATA%\local\no_key_tpd_&lt;KeyID&gt;.xml
+        generatekey --import simple pemreadfile=e:\ContosoTPD.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
 
-3.  Se è disponibile più di un file di dati di configurazione di RMS, ripetere il passaggio 2 per il file restanti.
+    > [!NOTE]
+    >Se si hanno più file, selezionare quello che corrisponde alla chiave HSM che si vuole usare in Azure RMS per proteggere il contenuto dopo la migrazione.
 
-Dopo l'estrazione del certificato concessore di licenze server (SLC) in modo da avere una chiave basata sul modulo di protezione hardware, è possibile creare il pacchetto e trasferirlo in Azure RMS.
+    Questo genera una visualizzazione di output simile alla seguente:
 
-## Parte 2: Creare il pacchetto e trasferire la chiave del modulo di protezione hardware in Azure RMS
+    **key generation parameters:**
 
-1.  Seguire i passaggi riportati nella sezione [relativa all'implementazione della modalità BYOK](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) in [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](plan-implement-tenant-key.md):
+    **operation &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Operation to perform &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; import**
 
-    -   **Generare e trasferire la propria chiave del tenant tramite Internet**: **Preparare la chiave del tenant per il trasferimento**
+    **application &nbsp;&nbsp;&nbsp;&nbsp;Application&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; simple**
 
-    -   **Generare e trasferire la propria chiave del tenant tramite Internet**: **Trasferire la chiave del tenant ad Azure RMS**
+    **verify &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Verify security of configration key&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; yes**
 
-Dopo avere trasferito la chiave del modulo di protezione hardware in Azure RMS, è possibile importare i dati di configurazione di AD RMS, che contengono solo un puntatore alla chiave del tenant appena trasferita.
+    **type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Key type &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RSA**
+
+    **pemreadfile &nbsp;&nbsp; PEM file containing RSA key &nbsp;&nbsp; e:\ContosoTPD.pem**
+
+    **ident &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Key identifier &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; contosobyok**
+
+    **plainname &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Key name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ContosoBYOK**
+
+    **Key successfully imported.**
+
+    **Path to key: C:\ProgramData\nCipher\Key Management Data\local\key_simple_contosobyok**
+
+Questo output conferma che la chiave privata è stata migrata al dispositivo di protezione hardware di Thales locale con una copia crittografata salvata in una chiave (nell'esempio, "key_simple_contosobyok"). 
+
+Ora che la chiave del certificato concessore di licenze server (SLC) è stata estratta e importata nel modulo di protezione hardware locale, si è pronti per creare un pacchetto della chiave protetta tramite HSM e trasferirlo in Insieme di credenziali delle chiavi di Azure.
+
+> [!IMPORTANT]
+> Una volta completato questo passaggio, cancellare in modo sicuro questi file PEM dalla workstation disconnessa per garantire che non siano accessibili da utenti non autorizzati. Per eliminare in modo sicuro tutti i file dall'unità E, eseguire ad esempio "cipher /w:E".
+
+## Parte 2: Creare il pacchetto e trasferire la chiave del modulo di protezione hardware in Insieme di credenziali delle chiavi di Azure
+
+1.  Amministratore di Insieme di credenziali delle chiavi di Azure: usare i passaggi seguenti dalla sezione [Implementazione di BYOK (Bring Your Own Key) per l'insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) della documentazione di Insieme di credenziali delle chiavi di Azure:
+
+    -   [Passaggio 4: Preparare la chiave per il trasferimento](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-4-prepare-your-key-for-transfer)
+
+    -   [Passaggio 5: Trasferire la chiave a Insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-5-transfer-your-key-to-azure-key-vault)
+
+    Non seguire i passaggi per generare la coppia di chiavi, perché si dispone già della chiave. Al contrario, eseguire un comando per trasferire tale chiave (in questo esempio, il parametro KeyIdentifier usa "contosobyok") dal modulo di protezione hardware locale.
+
+    Prima di trasferire la chiave a Insieme di credenziali delle chiavi di Azure, assicurarsi che l'utilità KeyTransferRemote.exe restituisca **Result: SUCCESS** (Risultato: ESITO POSITIVO) quando si crea una copia della chiave con autorizzazioni ridotte (passaggio 4.1) e quando si esegue la crittografia della chiave (passaggio 4.3).
+
+    Quando la chiave viene caricata in Insieme di credenziali delle chiavi di Azure, vengono visualizzate le proprietà della chiave visualizzata, incluso l'ID della chiave. Avrà un aspetto simile a **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Prendere nota dell'URL perché l'amministratore di Azure RMS ne avrà bisogno per indicare ad Azure RMS di usare questa chiave per la chiave del tenant.
+
+    Ora che la chiave HSM è stata trasferita in Insieme di credenziali delle chiavi di Azure, si è pronti per importare i dati di configurazione di AD RMS.
 
 ## Parte 3: Importare i dati di configurazione in Azure RMS
 
-1.  Sempre nella workstation connessa a Internet e nella sessione di Windows PowerShell, copiare i file di configurazione di RMS con SLC rimosso (dalla workstation disconnessa, %NFAST_KMDATA%\local\no_key_tpd_&lt;KeyID&gt;.xml)
+1.  Amministratore di Azure RMS: nella workstation connessa a Internet e nella sessione di PowerShell, copiare i nuovi file di dati di configurazione (con estensione xml) che dispongono della chiave del certificato concessore di licenze server rimossa dopo l'esecuzione dello strumento TpdUtil.
 
-2.  Caricare il primo file. Se si hanno più un file XML, perché avevi più domini di pubblicazione trusted, scegliere il file che contiene il dominio di pubblicazione trusted esportato che corrisponde alla chiave di HSM che si desidera utilizzare in Azure RMS per proteggere il contenuto dopo la migrazione. Utilizzare il seguente comando:
+2. Caricare il primo file con estensione xml, usando il cmdlet [Import-AadrmTpd](https://msdn.microsoft.com/library/dn857523.aspx). Se si hanno più file, perché erano disponibili più domini di pubblicazione trusted, scegliere il file che corrisponde alla chiave di HSM che si vuole usare in Azure RMS per proteggere il contenuto dopo la migrazione.
+
+    Per eseguire questo cmdlet, è necessario l'URL della chiave identificata nel passaggio precedente.
+
+    Ad esempio, usando il valore dell'URL della chiave dal passaggio precedente e un file dei dati di configurazione di C:\contoso_keyless.xml, eseguire:
 
     ```
-    Import-AadrmTpd -TpdFile <PathToNoKeyTpdPackageFile> -ProtectionPassword -HsmKeyFile <PathToKeyTransferPackage> -Active $true -Verbose
+    Import-AadrmTpd -TpdFile "C:\contoso_keyless.xml" -ProtectionPassword –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Active $True -Verbose
     ```
-    Ad esempio: **Import -TpdFile E:\no_key_tpd_contosorms1key.xml -ProtectionPassword -HsmKeyFile E:\KeyTransferPackage-contosorms1key.byok -Active $true -Verbose**
 
-    Quando richiesto, immettere la password specificata in precedenza e confermare che si desidera eseguire questa azione.
+    Quando richiesto, immettere la password specificata in precedenza per il file dei dati di configurazione e confermare che si vuole eseguire questa azione.
 
-3.  Al termine del comando, ripetere il passaggio 2 per ogni restante file XML creato esportando il tuo domini di pubblicazione trusted. Per questi file impostare **-Active** su **false** quando si esegue il comando di importazione. Ad esempio: **Import -TpdFile E:\no_key_tpd_contosorms2key.xml -ProtectionPassword -HsmKeyFile E:\KeyTransferPackage-contosorms1key.byok -Active $false -Verbose**
+    Se è disponibile più di un file di dati di configurazione, ripetere questo comando per i file restanti. Per questi file impostare **-Active** su **false** quando si esegue il comando di importazione.
 
-4.  Usare il cmdlet [Disconnect-AadrmService](http://msdn.microsoft.com/library/windowsazure/dn629416.aspx) per disconnettersi dal servizio Azure RMS:
+
+
+3.  Usare il cmdlet [Disconnect-AadrmService](http://msdn.microsoft.com/library/windowsazure/dn629416.aspx) per disconnettersi dal servizio Azure RMS:
 
     ```
     Disconnect-AadrmService
     ```
+
+    > [!NOTE]
+    > Se successivamente si vuole verificare la chiave del tenant di Azure RMS da usare in Insieme di credenziali delle chiavi di Azure, usare il cmdlet [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) di Azure RMS.
+
 
 È ora possibile andare al [Passaggio 3. Attivare il tenant di RMS](migrate-from-ad-rms-phase1.md#step-3-activate-your-rms-tenant).
 
@@ -108,6 +163,7 @@ Dopo avere trasferito la chiave del modulo di protezione hardware in Azure RMS, 
 
 
 
-<!--HONumber=Jun16_HO4-->
+
+<!--HONumber=Aug16_HO3-->
 
 

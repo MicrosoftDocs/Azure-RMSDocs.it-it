@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 06/30/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f01d57759ab80b4946c07a627269550c80114131
-ms.openlocfilehash: aa482dace1086222f63e9165e3089051b5de3e8c
+ms.sourcegitcommit: a80866576dc7d6400bcebc2fc1c37bc0367bcdf3
+ms.openlocfilehash: ee7b9b5f251856f102651f1e8f379f7bbacea77e
 
 
 ---
@@ -41,21 +41,21 @@ Se si distribuisce Azure RMS con una chiave del tenant gestita da Microsoft, sar
 ## Scegliere la topologia di chiave del tenant: gestione di Microsoft (impostazione predefinita) o BYOK
 È innanzitutto necessario decidere la topologia di chiave del tenant più adatta per l'organizzazione. Per impostazione predefinita, Azure RMS genera la chiave del tenant e gestisce la maggior parte degli aspetti del relativo ciclo di vita. Questa opzione è quella più semplice e prevede il sovraccarico amministrativo minore. Nella maggior parte dei casi non è nemmeno necessario disporre di una chiave del tenant, ma è sufficiente iscriversi ad Azure RMS e la parte rimanente del processo di gestione delle chiavi viene eseguita da Microsoft.
 
-In alternativa, se si desidera il controllo completo sulla chiave del tenant, è possibile creare la propria chiave e conservarne la copia master in locale. Questo scenario viene spesso definito con il termine modalità BYOK e prevede lo schema seguente.
+In alternativa, è possibile esercitare il controllo completo sulla chiave del tenant tramite [Insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/services/key-vault/). Questo scenario implica la creazione della chiave del tenant e la conservazione della copia master in locale. Questo scenario viene spesso definito con il termine modalità BYOK e prevede lo schema seguente.
 
-1.  Generazione della chiave del tenant utente in locale, in base ai criteri IT dell'organizzazione.
+1.  Generazione della chiave del tenant in locale, in base ai criteri IT e ai criteri di sicurezza dell'organizzazione.
 
-2.  Trasferimento sicuro della chiave del tenant da un modulo di protezione hardware di proprietà dell'utente a moduli di protezioni hardware di proprietà e gestiti da Microsoft. Grazie a questo processo, la chiave del tenant non oltrepassa mai i confini dell'ambiente hardware protetto.
+2.  Trasferimento sicuro della chiave del tenant da un modulo di protezione hardware di proprietà dell'utente a moduli di protezioni hardware di proprietà e gestiti da Microsoft tramite Insieme di credenziali delle chiavi di Azure. Grazie a questo processo, la chiave del tenant non oltrepassa mai i confini dell'ambiente hardware protetto.
 
-3.  Quando si trasferisce la chiave del tenant a Microsoft, la protezione viene assicurata da moduli di protezione hardware Thales. Microsoft ha collaborato con Thales per garantire che la chiave del tenant dell'utente non possa essere estratta da moduli di protezione hardware di Microsoft.
+3.  Quando si trasferisce la chiave del tenant a Microsoft, la protezione viene assicurata da Insieme di credenziali delle chiavi di Azure.
 
 Anche se è facoltativo, i log di utilizzo di Azure RMS disponibili in tempo quasi reale sono utili per sapere esattamente come e quando viene usata la chiave del tenant.
 
 > [!NOTE]
-> Come misura di protezione aggiuntiva, Azure RMS usa ambienti di sicurezza separati per i propri data center in America del Nord, nei paesi EMEA (Europa, Medio Oriente e Africa) e in Asia. Quando si gestisce la propria chiave del tenant, quest'ultima è associata all'ambiente di sicurezza in cui è registrato il tenant RMS. Una chiave del tenant di un cliente europeo, ad esempio, non può essere usata in data center che si trovano in America del Nord o in Asia.
+> Come misura di protezione aggiuntiva, Insieme di credenziali delle chiavi di Azure usa domini di sicurezza separati per i propri data center in aree quali America del Nord, nei paesi EMEA (Europa, Medio Oriente e Africa) e in Asia, nonché nelle diverse istanze di Azure, ad esempio Microsoft Azure Germania e Azure per enti pubblici. Quando si gestisce la propria chiave del tenant, quest'ultima è associata al dominio di sicurezza della regione o dell'istanza in cui è registrato il tenant RMS. Una chiave del tenant di un cliente europeo, ad esempio, non può essere usata in data center che si trovano in America del Nord o in Asia.
 
 ## Ciclo di vita della chiave del tenant
-Se si decide di affidare a Microsoft la gestione della chiave del tenant, Microsoft gestisce la maggior parte delle operazioni del ciclo di vita della chiave. Se invece l'utente decide di gestire in modo autonomo la propria chiave del tenant, è responsabile di molte operazione del ciclo di vita della chiave e di alcune procedure aggiuntive.
+Se si decide di affidare a Microsoft la gestione della chiave del tenant, Microsoft gestisce la maggior parte delle operazioni del ciclo di vita della chiave. Se invece l'utente decide di gestire in modo autonomo la propria chiave del tenant, è responsabile di molte operazioni del ciclo di vita della chiave e di alcune procedure aggiuntive in Insieme di credenziali delle chiavi di Azure.
 
 Nei diagrammi seguenti vengono illustrate e confrontate le due opzioni. Nel primo diagramma viene illustrato il minor sovraccarico amministrativo che l'utente deve sostenere nella configurazione predefinita quando Microsoft gestisce la chiave del tenant.
 
@@ -63,7 +63,7 @@ Nei diagrammi seguenti vengono illustrate e confrontate le due opzioni. Nel prim
 
 Nel secondo diagramma vengono illustrati i passaggi aggiuntivi necessari quando l'utente gestisce la propria chiave del tenant.
 
-![Ciclo di vita della chiave del tenant di Azure RMS: chiave gestita dall'utente, BYOK](../media/RMS_BYOK_onprem.png)
+![Ciclo di vita della chiave del tenant di Azure RMS: chiave gestita dall'utente, BYOK](../media/RMS_BYOK_onprem4.png)
 
 Se si decide di affidare a Microsoft la gestione della chiave del tenant, non è necessaria alcuna azione aggiuntiva per generare la chiave ed è possibile passare direttamente alla sezione [Passaggi successivi](plan-implement-tenant-key.md#next-steps).
 
@@ -86,34 +86,28 @@ Nella tabella seguente sono elencati i prerequisiti per la modalità BYOK.
 |---------------|--------------------|
 |Sottoscrizione che supporta Azure RMS.|Per altre informazioni sulle sottoscrizioni disponibili, vedere [Sottoscrizioni cloud che supportano Azure RMS](../get-started/requirements-subscriptions.md).|
 |Non si usa RMS per singoli utenti o per Exchange Online. Se si usa Exchange Online, si conoscono e si accettano le limitazioni relative all'uso della modalità BYOK con questa configurazione.|Per altre informazioni sulle restrizioni per la modalità BYOK e sulle limitazioni attuali, vedere [Prezzi e restrizioni della modalità BYOK](byok-price-restrictions.md).<br /><br />**Importante**: attualmente, la modalità BYOK non è compatibile con Exchange Online.|
-|Moduli di protezione hardware Thales, smart card e software di supporto.<br /><br />**Nota**: se si esegue la migrazione da AD RMS ad Azure RMS, passando da una chiave software a una chiave hardware, sarà necessaria almeno la versione 11.62 per i driver Thales.|È necessario disporre dell'accesso ai moduli di protezione hardware Thales e averne una conoscenza a livello operativo. Per l'elenco dei modelli compatibili o per acquistare un modulo di protezione hardware qualora non se ne sia già in possesso, vedere la pagina relativa ai [moduli di protezione hardware Thales](http://www.thales-esecurity.com/msrms/buy) .|
-|Se si desidera trasferire la propria chiave del tenant tramite Internet anziché recarsi fisicamente a Redmond negli Stati Uniti, è necessario soddisfare 3 requisiti:<br /><br />1: una workstation x64 offline con sistema operativo Windows 7 o versioni successive e software nShield Thales versione 11.62 o successive.<br /><br />Se la workstation esegue Windows 7, è necessario [installare Microsoft .NET Framework 4.5](http://go.microsoft.com/fwlink/?LinkId=225702).<br /><br />2: una workstation connessa a Internet con sistema operativo Windows 7 o versioni successive.<br /><br />3: un'unità USB o altro dispositivo di archiviazione portatile con almeno 16 MB di spazio disponibile.|Tali prerequisiti non sono necessari se ci si reca a Redmond e si trasferisce la propria chiave di persona.<br /><br />Per motivi di sicurezza, si consiglia che la prima workstation non sia connessa a una rete. Questa condizione tuttavia non viene applicata a livello di codice.<br /><br />Nota: nelle istruzioni seguenti si fa riferimento alla prima workstation come **workstation disconnessa**.<br /><br />Se inoltre la propria chiave del tenant è destinata a essere usata in una rete di produzione, si consiglia di usare una seconda workstation separata per scaricare il set di strumenti e caricare la chiave del tenant. A scopo di test è comunque possibile usare la prima workstation.<br /><br />Nota: nelle istruzioni seguenti si fa riferimento alla seconda workstation come **workstation connessa a Internet**.|
+|Tutti i prerequisiti elencati per la modalità BYOK nell'insieme di credenziali delle chiavi.|Vedere [Prerequisiti per la modalità BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) dalla documentazione di Insieme di credenziali delle chiavi di Azure. <br /><br />**Nota**: se si esegue la migrazione da AD RMS ad Azure RMS, passando da una chiave software a una chiave hardware, sarà necessaria almeno la versione 11.62 del firmware Thales.|
+|Il modulo di amministrazione di Azure RMS per Windows PowerShell.|Per istruzioni di installazione, vedere [Installazione di Windows PowerShell per Azure Rights Management](../deploy-use/install-powershell.md). <br /><br />Se il modulo Windows PowerShell è stato installato in precedenza, eseguire il comando seguente per verificare che il numero di versione in uso sia almeno **2.5.0.0**: `(Get-Module aadrm -ListAvailable).Version`|
 
-Le procedure per generare e usare la propria chiave del tenant dipendono dalle modalità di esecuzione di tali operazioni, ovvero tramite Internet o di persona.
+Per altre informazioni sui moduli di protezione hardware Thales e su come vengono usati con Insieme di credenziali delle chiavi di Azure, vedere il [sito Web Thales](https://www.thales-esecurity.com/msrms/cloud).
 
--   **Tramite Internet:** In questo caso sono necessari alcuni passaggi di configurazione aggiuntivi, ad esempio il download e l'uso di un set di strumenti e di cmdlet di Windows PowerShell. Non è necessario tuttavia essere presenti in un ufficio Microsoft per trasferire la chiave del tenant, perché la sicurezza è garantita grazie ai metodi indicati di seguito.
+Per generare e trasferire la propria chiave del tenant in Insieme di credenziali delle chiavi di Azure, seguire le procedure descritte in [Come generare e trasferire chiavi HSM protette per l'insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/) dalla documentazione di Insieme di credenziali delle chiavi di Azure.
 
-    -   La chiave del tenant viene generata in una workstation offline per ridurre la superficie di attacco.
+Quando la chiave viene trasferita all'insieme di credenziali delle chiavi, le viene assegnato un ID, ovvero un URL contenente il nome dell'insieme di credenziali, il contenitore delle chiavi, il nome della chiave e la versione della chiave. Ad esempio: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. È necessario indicare ad Azure RMS di usare questa chiave, specificando l'URL.
 
-    -   La crittografia della chiave del tenant viene eseguita tramite una chiave per lo scambio delle chiavi che rimane crittografata fino al momento del trasferimento ai moduli di protezione hardware di Azure RMS. Solo la versione crittografata della chiave del tenant viene inviata dalla workstation originale.
+Ma prima che Azure RMS possa usare la chiave, deve essere autorizzato all'uso della chiave nell'insieme di credenziali delle chiavi dell'organizzazione. A tale scopo, l'amministratore di Insieme di credenziali delle chiavi di Azure usa il cmdlet PowerShell dell'insieme di credenziali delle chiavi, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx) e concede le autorizzazioni all'entità di servizio **Microsoft.Azure.RMS** di Azure RMS. Ad esempio:
 
-    -   Uno strumento imposta proprietà sulla chiave del tenant che consentono di associarla all'ambiente di sicurezza di Azure RMS. Di conseguenza, dopo che i moduli di protezione hardware di Azure RMS ricevono la chiave del tenant e ne eseguono la decrittografia, sono gli unici componenti a poterla usare. La chiave del tenant non può essere esportata. Questa associazione viene applicata dai moduli di protezione hardware Thales.
+    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign 
 
-    -   La chiave per lo scambio delle chiavi usata per crittografare la chiave del tenant viene generata nei moduli di protezione hardware di Azure RMS e non è esportabile. I moduli di protezione hardware applicano la regola in base alla quale non può esistere una versione non crittografata della chiave per lo scambio delle chiavi all'esterno dei moduli stessi. Il set di strumenti include inoltre un'attestazione di Thales che dichiara che la chiave per lo scambio delle chiavi non è esportabile e che è stata generata in un modulo di protezione hardware originale prodotto da Thales.
+A questo punto è possibile configurare Azure RMS per l'uso di questa chiave come chiave del tenant di Azure RMS dell'organizzazione. Tramite i cmdlet di Azure RMS, è innanzitutto possibile la connessione e l'accesso ad Azure RMS:
 
-    -   Il set di strumenti include un'attestazione di Thales che dichiara che anche l'ambiente di sicurezza di Azure RMS è stato generato in un modulo di protezione hardware originale prodotto da Thales. In questo modo l'utente ha la conferma che Microsoft usa hardware originale.
+    Connect-AadrmService
 
-    -   Microsoft usa chiavi per lo scambio delle chiavi e ambienti di sicurezza separati in ogni area geografica per garantire che sia possibile usare la chiave del tenant solo nei data center presenti nell'area geografica in cui è stata generata. Una chiave del tenant di un cliente europeo, ad esempio, non può essere usata in data center che si trovano in America del Nord o in Asia.
+Successivamente, è necessario eseguire il cmdlet [Use-AadrmKeyVaultKey](https://msdn.microsoft.com/library/azure/mt759829.aspx), specificando l'URL della chiave. Ad esempio:
 
-    > [!NOTE]
-    > La chiave del tenant può spostarsi in modo sicuro tra computer e reti non attendibili perché è crittografata e protetta con autorizzazioni a livello di controllo di accesso, condizione che la rende accessibile solo all'interno dei moduli di protezione hardware dell'utente e di quelli di Microsoft per Azure RMS. È possibile usare gli script disponibili nel set di strumenti per verificare le misure di sicurezza e leggere altre informazioni sul funzionamento in Thales della [gestione delle chiavi hardware nel cloud RMS](https://www.thales-esecurity.com/knowledge-base/white-papers/hardware-key-management-in-the-rms-cloud).
+    Use-AadrmKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
 
--   **Di persona**: in questo caso è necessario [contattare il supporto tecnico Microsoft](../get-started/information-support.md#to-contact-microsoft-support) per pianificare un appuntamento per il trasferimento della chiave per Azure RMS. È necessario recarsi di persona in un ufficio Microsoft a Redmond, Washington, Stati Uniti, per trasferire la propria chiave del tenant nell'ambiente di sicurezza di Azure RMS.
-
-Per istruzioni sulle procedure, selezionare se si intende generare e trasferire la chiave del tenant tramite Internet o di persona: 
-
-- [Tramite Internet](generate-tenant-key-internet.md)
-- [Di persona](generate-tenant-key-in-person.md)
+Se è necessario confermare che l'URL della chiave viene impostato correttamente in Azure RMS, in Insieme di credenziali delle chiavi di Azure è possibile eseguire [Get-AzureKeyVaultKey](https://msdn.microsoft.com/library/dn868053.aspx) per visualizzare l'URL della chiave.
 
 
 ## Passaggi successivi
@@ -122,15 +116,15 @@ Dopo la pianificazione e, se necessario, la generazione della chiave del tenant,
 
 1.  Iniziare a usare la chiave del tenant.
 
-    -   Se non è ancora stato fatto, è ora necessario attivare Rights Management in modo che l'organizzazione possa iniziare a usare RMS. In questo caso gli utenti iniziano immediatamente a usare la chiave del tenant (gestita da Microsoft o gestita in modo autonomo).
+    -   Se non è ancora stato fatto, è ora necessario attivare Rights Management in modo che l'organizzazione possa iniziare a usare RMS. In questo caso, gli utenti iniziano immediatamente a usare la chiave del tenant (gestita da Microsoft o gestita in modo autonomo in Insieme di credenziali delle chiavi di Azure).
 
         Per altre informazioni, vedere [Attivazione di Azure Rights Management](../deploy-use/activate-service.md).
 
     -   Se Rights Management è già stato attivato e si è deciso di gestire la propria chiave del tenant, gli utenti passano gradualmente dalla chiave del tenant precedente a quella nuova e questa transizione in fasi successive può richiedere alcune settimane per essere completata. I documenti e i file protetti con la chiave del tenant precedente rimangono accessibili agli utenti autorizzati.
 
-2.  Valutare l'opportunità di usare la registrazione dei dati di utilizzo per tenere traccia di ogni transazione eseguita da RMS.
+2.  Valutare l'opportunità di usare la registrazione dei dati di utilizzo per tenere traccia di ogni transazione eseguita da Azure Rights Management.
 
-    Se si è deciso di gestire la propria chiave del tenant, la registrazione include informazioni sull'uso della chiave stessa. Vedere il frammento seguente di un file di log visualizzato in Excel in cui i tipi di richiesta **KMSPDecrypt** e **KMSPSignDigest** dimostrano che la chiave del tenant è attualmente usata.
+    Se si è deciso di gestire la propria chiave del tenant, la registrazione include informazioni sull'uso della chiave stessa. Vedere il frammento seguente di un file di log visualizzato in Excel in cui i tipi di richiesta **KeyVaultDecryptRequest** e **KeyVaultSignRequest** dimostrano che la chiave del tenant è attualmente in uso.
 
     ![file di log visualizzato in Excel in cui è attualmente usata la chiave del tenant](../media/RMS_Logging.png)
 
@@ -143,6 +137,6 @@ Dopo la pianificazione e, se necessario, la generazione della chiave del tenant,
 
 
 
-<!--HONumber=Jun16_HO5-->
+<!--HONumber=Aug16_HO3-->
 
 

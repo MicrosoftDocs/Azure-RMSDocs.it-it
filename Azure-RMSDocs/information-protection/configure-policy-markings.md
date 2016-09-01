@@ -3,15 +3,15 @@ title: Come configurare un'etichetta per i contrassegni visivi per Azure Informa
 description: 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 translationtype: Human Translation
-ms.sourcegitcommit: b2263c212a1b869b778767493645f10ad821828f
-ms.openlocfilehash: 78b68c7a502776c6492437e9b8a5c3f1ebf27f95
+ms.sourcegitcommit: b5e7fecca7aeb61221dc1f61aa3e202936b8c042
+ms.openlocfilehash: 2b4f464fa51e0743cb1ce0726c7feb31146b5128
 
 
 ---
@@ -60,17 +60,19 @@ Seguire le istruzioni seguenti per configurare i contrassegni visivi per un'etic
 
 Nella stringa di testo è possibile usare le variabili seguenti per l'intestazione, il piè di pagina o la filigrana:
 
-- `${Item.Label}` per l'etichetta selezionata
+- `${Item.Label}` per l'etichetta selezionata. Ad esempio: interno
 
-- `${Item.Name}` per l'oggetto del messaggio di posta elettronica o il nome di file
+- `${Item.Name}` per l'oggetto del messaggio di posta elettronica o il nome di file. Ad esempio: JulySales.docx
 
-- `${Item.Location}` per il percorso del file
+- `${Item.Location}` per il percorso e il nome di file dei documenti e l'oggetto per i messaggi di posta elettronica. Ad esempio: \\\Sales\2016\Q3\JulyReport.docx
 
-- `${User.Name}` per il proprietario del documento o del messaggio di posta elettronica
+- `${User.Name}` per il proprietario del documento o del messaggio di posta elettronica dal nome utente firmato di Windows. Ad esempio: rsimone
 
-- `${Event.DateTime}` per la data e l'ora in cui è stata impostata l'etichetta selezionata 
+- `${User.PrincipalName}` per il proprietario del documento o del messaggio di posta elettronica, in base al client di Azure Information Protection firmato nell'indirizzo del messaggio di posta elettronica (UPN). Ad esempio: rsimone@vanarsdelltd.com
+
+- `${Event.DateTime}` per la data e l'ora in cui è stata impostata l'etichetta selezionata. Ad esempio: 16/8/2016 13:30
     
-Esempio: se si specifica la stringa `Document: ${item.name} Sensitivity: ${item.label}` per il piè di pagina dell'etichetta Secret (Segreto), il testo del piè di pagina applicato a un documento denominato project.docx sarà **Documento: project.docx Riservatezza: Secret (Segreto)**.
+Esempio: se si specifica la stringa `Document: ${item.name}  Classification: ${item.label}` per il piè di pagina dell'etichetta Secret (Segreto), il testo del piè di pagina applicato a un documento denominato project.docx sarà **Documento: project.docx Classificazione: Secret (Segreto)**.
 
 ## Passaggi successivi
 
@@ -80,6 +82,6 @@ Per altre informazioni sulla configurazione dei criteri di Azure Information Pro
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 

@@ -4,7 +4,7 @@ description:
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/17/2016
 ms.topic: article
 ms.prod: azure
 ms.service: rights-management
@@ -13,8 +13,8 @@ ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: 75cce1d0e5a1cff0d4f6609d0f084fda1af62951
+ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
+ms.openlocfilehash: 6d3cb53fb199bb880a0e61d2b964f297e547a027
 
 
 ---
@@ -42,7 +42,7 @@ Se si è scelta una topologia di chiave del tenant di Azure RMS **gestita dal cl
 ## Passaggio 7. Distribuire il connettore RMS
 Se è stata usata la funzionalità Information Rights Management (IRM) di Exchange Server o di SharePoint Server con AD RMS, è innanzitutto necessario disabilitare IRM su questi server e rimuovere la configurazione di AD RMS. Distribuire quindi il connettore Rights Management (RMS), che funziona come interfaccia di comunicazione (inoltro) tra i server locali e Azure RMS.
 
-Infine, per questo passaggio, se in Azure RMS sono stati importati più domini di pubblicazione trusted usati per proteggere i messaggi di posta elettronica, è necessario modificare manualmente il Registro di sistema nei computer che eseguono Exchange Server per reindirizzare tutti gli URL dei domini di pubblicazione trusted al connettore RMS.
+Infine, per questo passaggio, se sono stati importati più file di configurazione di dati di AD RMS (con estensione xml) in Azure RMS usati per proteggere i messaggi di posta elettronica, è necessario modificare manualmente il Registro di sistema nei computer che eseguono Exchange Server per reindirizzare tutti gli URL dei domini di pubblicazione trusted al connettore RMS.
 
 > [!NOTE]
 > Prima di iniziare, verificare le versioni dei server locali supportate da Azure RMS in [Server locali che supportano Azure RMS](../get-started/requirements-servers.md).
@@ -95,7 +95,7 @@ Infine, per questo passaggio, se in Azure RMS sono stati importati più domini d
 
 #### Solo per Exchange e più domini di pubblicazione trusted: Modificare il Registro di sistema
 
--   In ogni computer che esegue Exchange Server aggiungere manualmente le chiavi del Registro di sistema seguenti per ogni dominio di pubblicazione trusted aggiuntivo importato, per reindirizzare gli URL dei domini di pubblicazione trusted al connettore RMS. Queste voci del Registro di sistema sono specifiche per la migrazione e non vengono aggiunte dallo strumento di configurazione server per il connettore Microsoft RMS.
+-   In ogni computer che esegue Exchange Server aggiungere manualmente le chiavi del Registro di sistema seguenti per ogni file di configurazione di dati (con estensione xml) aggiuntivo importato, per reindirizzare gli URL dei domini di pubblicazione trusted al connettore RMS. Queste voci del Registro di sistema sono specifiche per la migrazione e non vengono aggiunte dallo strumento di configurazione server per il connettore Microsoft RMS.
 
     Quando si apportano queste modifiche al Registro di sistema, attenersi alle istruzioni seguenti:
 
@@ -215,6 +215,6 @@ Dopo aver completato queste procedure, si è pronti a passare alla sezione **Pas
 Per continuare la migrazione, passare a [Fase 4: attività post-migrazione](migrate-from-ad-rms-phase4.md).
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO3-->
 
 
