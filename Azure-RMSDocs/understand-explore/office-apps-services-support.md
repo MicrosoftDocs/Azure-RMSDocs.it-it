@@ -1,20 +1,19 @@
 ---
 title: Applicazioni e servizi Office | Azure RMS
-description: 
-keywords: 
+description: Le applicazioni dell'utente finale, ad esempio Word, Excel, PowerPoint e Outlook, e i servizi Office, ad esempio Exchange e SharePoint, possono usare Microsoft Azure Rights Management per proteggere i dati dell'organizzazione.
 author: cabailey
 manager: mbaldwin
 ms.date: 06/30/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 99eb67f6296ad1782c787aabb73a28458c02f367
-ms.openlocfilehash: affb37cc3b991609f5de51370485b10fed932421
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 93dde9494a430526ebd26e1d5123ad44901ffcbb
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: affb37cc3b991609f5de51370485b10fed932421
 
 # Applicazioni e servizi Office
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 Le applicazioni dell'utente finale, ad esempio Word, Excel, PowerPoint e Outlook, e i servizi Office, ad esempio Exchange e SharePoint, possono usare Microsoft Azure Rights Management per proteggere i dati dell'organizzazione.
 
@@ -55,7 +54,7 @@ La protezione delle informazioni per elenchi e raccolte viene sempre applicata d
 
 È necessario inoltre che il servizio IRM sia abilitato per SharePoint. Specificare quindi il servizio Information Rights Management per una libreria. Nel caso di SharePoint Online e OneDrive for Business, gli utenti possono specificare anche Information Rights Management per la raccolta OneDrive for Business. SharePoint non usa i modelli di criteri di diritti, anche se è possibile selezionare alcune impostazioni di configurazione di SharePoint, molto simili alle impostazioni che possono essere specificate nei modelli.
 
-Se si usa SharePoint Server, è possibile usare le funzionalità di protezione delle informazioni con [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] grazie all'implementazione del connettore RMS, che opera come un relè tra i server locali e il servizio cloud RMS. Per altre informazioni, vedere [Distribuzione del connettore di Azure Rights Management](../deploy-use/deploy-rms-connector.md).
+Se si usa SharePoint Server, è possibile usare le funzionalità di protezione delle informazioni con [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] grazie all'implementazione del connettore RMS, che opera come un relè tra i server locali e il servizio cloud RMS. Per ulteriori informazioni, vedere [Distribuzione del connettore di Azure Rights Management](../deploy-use/deploy-rms-connector.md).
 
 > [!NOTE]
 > Attualmente, ci sono alcune limitazioni quando si usa IRM con SharePoint:
@@ -73,6 +72,6 @@ Per altre informazioni sull'uso di Azure RMS con SharePoint, vedere il post segu
 Per altre informazioni sul supporto di Azure Rights Management da parte di altre applicazioni e servizi, vedere [Supporto di Azure Rights Management da parte delle applicazioni](applications-support.md).
 
 
-<!--HONumber=Jul16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

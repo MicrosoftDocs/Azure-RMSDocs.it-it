@@ -1,27 +1,26 @@
 ---
 title: Migrazione da AD RMS ad Azure Rights Management | Azure RMS
-description: 
-keywords: 
+description: "Usare il set di istruzioni seguente per la migrazione della distribuzione di Active Directory Rights Management Services (AD RMS) ad Azure Rights Management (Azure RMS). Dopo la migrazione gli utenti avranno comunque accesso ai documenti e ai messaggi di posta elettronica che l'organizzazione ha protetto con AD RMS, nonché al nuovo contenuto che verrà protetto con Azure RMS."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/17/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
-ms.openlocfilehash: 65371b9a3b210743fc160dbad38333ccb12671e6
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: bead12db04e6fcf2f9e4af5148d3f8a4ef4089da
 
 
 ---
 
 # Migrazione da AD RMS ad Azure Rights Management
 
-*Si applica a: Active Directory Rights Management Services, Azure Rights Management*
+>*Si applica a: Active Directory Rights Management Services, Azure Rights Management*
 
 Usare il set di istruzioni seguente per la migrazione della distribuzione di Active Directory Rights Management Services (AD RMS) ad Azure Rights Management (Azure RMS). Dopo la migrazione gli utenti avranno comunque accesso ai documenti e ai messaggi di posta elettronica che l'organizzazione ha protetto con AD RMS, nonché al nuovo contenuto che verrà protetto con Azure RMS.
 
@@ -185,6 +184,6 @@ Per iniziare la migrazione, passare a [Fase 1: configurazione lato server](migra
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

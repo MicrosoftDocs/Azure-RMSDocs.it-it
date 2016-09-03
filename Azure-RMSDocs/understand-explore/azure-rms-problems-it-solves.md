@@ -1,20 +1,19 @@
 ---
 title: Problemi risolti da Azure RMS | Azure RMS
-description: 
-keywords: 
+description: Usare la seguente tabella per identificare i requisiti aziendali e i possibili problemi dell'organizzazione e per scoprire la soluzione fornita da Azure RMS.
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 06f615c993d54ab1e8e4a94d7414302481d919b4
-ms.openlocfilehash: 17756d4e641c10c0522f7a849634ae67630b363b
+ms.sourcegitcommit: c7b194493073bcd76fa7a7d06bb31a7811e8cc3e
+ms.openlocfilehash: 7aec5c26acb78cd85eee614a603745f3ee5938a2
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: 17756d4e641c10c0522f7a849634ae67630b363b
 
 # Problemi risolti da Azure RMS
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 Usare la seguente tabella per identificare i requisiti aziendali e i possibili problemi dell'organizzazione e per scoprire la soluzione fornita da Azure RMS.
 
@@ -73,6 +72,6 @@ Per informazioni sul funzionamento di Azure RMS per gli amministratori e gli ute
 Se si è interessati ad altre informazioni tecniche sul funzionamento di Azure RMS, vedere [Funzionamento di Azure RMS](how-does-it-work.md). 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

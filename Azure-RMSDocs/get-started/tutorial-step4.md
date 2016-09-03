@@ -4,9 +4,9 @@ description: "Il quarto passaggio di questa esercitazione consente di provare ra
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 07/13/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: 
 ms.assetid: f8340056-87a1-4daa-8b63-3d95fc381b9c
@@ -18,8 +18,8 @@ ms.suite: ems
 ms.tgt_pltfrm: 
 ms.custom: 
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: 19f536e8d0353c7b0ccbd4de3df646352dc2d748
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 0287f1408c7cd22d0254d135aaa267ec77246e45
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 19f536e8d0353c7b0ccbd4de3df646352dc2d748
 
 # Passaggio 4 dell'esercitazione per l'avvio rapido di Azure RMS: Chiedere ai destinatari di aprire il documento inviato tramite posta elettronica
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 
 Passare a: 
@@ -71,7 +71,7 @@ Ora che il destinatario ha aperto l'allegato e, facoltativamente, lo ha inoltrat
 |--------------------------------|--------------------------|
 |Istruzioni complete per la visualizzazione dei file protetti da Azure Rights Management|[Visualizzare e usare i file che sono stati protetti da Rights Management](../rms-client/sharing-app-view-use-files.md)|
 |Informazioni sulla sottoscrizione gratuita, RMS per utenti singoli|[RMS per utenti singoli e Azure Rights Management](../understand-explore/rms-for-individuals.md)|
-|Informazioni sulle due versioni del file allegato al messaggio di posta elettronica|[Che cos'è il file .ppdf che viene creato automaticamente?](../rms-client/sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created-)|
+|Informazioni sulle due versioni del file allegato al messaggio di posta elettronica|[Che cos'è il file .ppdf che viene creato automaticamente?](../rms-client/sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)|
 
 
 >[!div class="step-by-step"]
@@ -79,6 +79,6 @@ Ora che il destinatario ha aperto l'allegato e, facoltativamente, lo ha inoltrat
 [Passaggio 5»](tutorial-step5.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

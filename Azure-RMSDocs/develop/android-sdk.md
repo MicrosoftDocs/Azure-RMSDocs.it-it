@@ -4,9 +4,9 @@ description: Le applicazioni Android possono usare SDK 4.2 Microsoft Rights Mana
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 79397c82d9478cbd55630a376fe2d12f3873ebc4
-ms.openlocfilehash: 4ff6328c0be4cd217390ee802e53e93c90f41c99
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 72196edd630a1934f2c0b6e755771039fceaa795
 
 
 ---
@@ -42,7 +42,7 @@ Nel sistema di sviluppo si consiglia di disporre del software seguente:
 
      
 
--   Pacchetto SDK MS RMS 4.2 per Android. Per altre informazioni, vedere [Introduzione](get-started.md).
+-   Pacchetto SDK MS RMS 4.2 per Android. Per ulteriori informazioni, vedere [Introduzione](get-started.md).
 
     Questo SDK consente di sviluppare per Android 4.0.3 (API livello 15) e versioni successive.
 
@@ -150,6 +150,6 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
 
 
-<!--HONumber=Jul16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

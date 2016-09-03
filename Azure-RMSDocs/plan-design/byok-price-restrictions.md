@@ -1,27 +1,26 @@
 ---
 title: "Prezzi e restrizioni della modalità BYOK | Azure RMS"
-description: 
-keywords: 
+description: "Le organizzazioni che hanno una sottoscrizione che include Azure Rights Management possono usare chiavi gestite dal cliente (BYOK) in Insieme di credenziali delle chiavi di Azure e registrarne l'utilizzo senza alcun costo aggiuntivo. Tuttavia, per usare Insieme di credenziali delle chiavi di Azure, è necessaria una sottoscrizione di Azure che supporti l'insieme di credenziali delle chiavi con chiavi protette dal modulo di protezione hardware. L'uso di una chiave in Insieme di credenziali delle chiavi di Azure comporta l'addebito di una tariffa mensile. Per altre informazioni, vedere la pagina dei prezzi di Insieme di credenziali delle chiavi di Azure."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/17/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
-ms.openlocfilehash: ece615912d69eda78107c60245620ed36c0affd2
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 8505032a2a12f84c245e834e71d0b7b0d12e894f
 
 
 ---
 
 # Prezzi e restrizioni della modalità BYOK
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 
 Le organizzazioni che hanno una sottoscrizione che include Azure Rights Management possono usare chiavi gestite dal cliente (BYOK) in Insieme di credenziali delle chiavi di Azure e registrarne l'utilizzo senza alcun costo aggiuntivo. Tuttavia, per usare Insieme di credenziali delle chiavi di Azure, è necessaria una sottoscrizione di Azure che supporti l'insieme di credenziali delle chiavi con chiavi protette dal modulo di protezione hardware. L'uso di una chiave in Insieme di credenziali delle chiavi di Azure comporta l'addebito di una tariffa mensile. Per altre informazioni, vedere la pagina [dei prezzi di Insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
@@ -63,6 +62,6 @@ Se si è deciso di usare la configurazione predefinita in cui Microsoft gestisce
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

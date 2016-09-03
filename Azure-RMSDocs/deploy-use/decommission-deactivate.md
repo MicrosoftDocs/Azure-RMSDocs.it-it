@@ -1,27 +1,26 @@
 ---
 title: Rimozione delle autorizzazioni e disattivazione di Azure Rights Management | Azure RMS
-description: 
-keywords: 
+description: "È sempre possibile controllare se l'organizzazione protegge il contenuto tramite Azure RMS e, se si decide di non usare più questa soluzione di protezione delle informazioni, si può essere certi che il contenuto protetto in precedenza non verrà bloccato. Se non è necessario l'accesso continuo a contenuti protetti precedentemente, è sufficiente disattivare il servizio e lasciare scadere la sottoscrizione di Azure Rights Management. Ad esempio, questa modalità è appropriata dopo aver completato la fase di testing prima della distribuzione in un ambiente di produzione."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 8c114336551417fdbf1503ffc8350e3fc28e9c95
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 40e4997f67a078ec781f1e7800599554858777a8
 
 
 ---
 
 # Rimozione delle autorizzazioni e disattivazione di Azure Rights Management
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 È sempre possibile controllare se l'organizzazione protegge il contenuto tramite [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) e, se si decide di non usare più questa soluzione di protezione delle informazioni, si può essere certi che il contenuto protetto in precedenza non verrà bloccato. Se non è necessario l'accesso continuo a contenuti protetti precedentemente, è sufficiente disattivare il servizio e lasciare scadere la sottoscrizione di Azure Rights Management. Ad esempio, questa modalità è appropriata dopo aver completato i test di [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] prima della distribuzione in un ambiente di produzione.
 
@@ -92,6 +91,6 @@ Lo **STATO DI RIGHTS MANAGEMENT** dovrebbe ora essere **Inattivo** e l’opzione
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

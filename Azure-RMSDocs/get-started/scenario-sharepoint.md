@@ -1,27 +1,26 @@
 ---
 title: Scenario - Mantenere il controllo dei documenti archiviati in SharePoint | Azure RMS
-description: 
-keywords: 
+description: "Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management per verificare che i documenti di Office archiviati in SharePoint rimangano sotto controllo tramite librerie protette. Ad esempio, i documenti vengono protetti automaticamente dalle perdite di dati accidentali o previste dagli utenti e l'amministratore può bloccare l'accesso al contenuto anche dopo che questo è stato scaricato o sincronizzato. I file da proteggere dovrebbero essere quelli destinati alla collaborazione interna su documenti o piani di progettazione oppure ad altre consegne. Quando si configurano le raccolte protette per SharePoint, i file di Office archiviati in tali raccolte saranno protetti da Azure Rights Management."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1b6244c7-5ab9-4881-bc8f-6fa960390d89
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: cb028afcbfd9b59f134539c434f4f49efc5e9092
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: f0dfe895820d33eab1d3a69c92e881287072f554
 
 
 ---
 
 # Scenario - Mantenere il controllo dei documenti archiviati in SharePoint
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management per verificare che i documenti di Office archiviati in SharePoint rimangano sotto controllo tramite librerie protette. Ad esempio, i documenti vengono protetti automaticamente dalle perdite di dati accidentali o previste dagli utenti e l'amministratore può bloccare l'accesso al contenuto anche dopo che questo è stato scaricato o sincronizzato. I file da proteggere dovrebbero essere quelli destinati alla collaborazione interna su documenti o piani di progettazione oppure ad altre consegne. Quando si configurano le raccolte protette per SharePoint, i file di Office archiviati in tali raccolte saranno protetti da Azure Rights Management.
 
@@ -106,6 +105,6 @@ Questa modifica consente di impedire agli utenti non autorizzati di accedere ai 
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

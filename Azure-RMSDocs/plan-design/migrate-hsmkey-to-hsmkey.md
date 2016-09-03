@@ -1,27 +1,26 @@
 ---
 title: Passaggio 2&colon; Migrazione da una chiave protetta tramite HSM a un'altra | Azure RMS
-description: 
-keywords: 
+description: "Queste istruzioni fanno parte del percorso di migrazione da AD RMS ad Azure Rights Management e si applicano solo se la chiave di AD RMS è protetta tramite HSM e se si vuole eseguire la migrazione ad Azure Rights Management con una chiave del tenant protetta tramite HSM in Insieme di credenziali delle chiavi di Azure."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
-ms.openlocfilehash: 86f7bd025824b23c8eecdb05b62d83204ae1ccb4
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 690729d16358b7b997d9cd1fd8cabed22ce78df4
 
 
 ---
 
 # Passaggio 2: Migrazione da una chiave protetta tramite HSM a un'altra
 
-*Si applica a: Active Directory Rights Management Services, Azure Rights Management*
+>*Si applica a: Active Directory Rights Management Services, Azure Rights Management*
 
 
 Queste istruzioni fanno parte del [percorso di migrazione da AD RMS ad Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md) e si applicano solo se la chiave di AD RMS è protetta tramite HSM e se si vuole eseguire la migrazione ad Azure Rights Management con una chiave del tenant protetta tramite HSM in Insieme di credenziali delle chiavi di Azure. 
@@ -95,6 +94,6 @@ Queste procedure vengono eseguite dall'amministratore di Azure RMS.
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

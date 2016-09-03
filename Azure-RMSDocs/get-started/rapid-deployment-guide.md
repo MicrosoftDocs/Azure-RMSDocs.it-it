@@ -1,27 +1,26 @@
 ---
 title: Guida alla distribuzione rapida di Rights Management di Azure | Azure RMS
-description: 
-keywords: 
+description: "Usare questa Guida, oltre alle informazioni di configurazione presenti nella sezione Distribuire e usare, che consentono di distribuire e usare Azure Rights Management (Azure RMS) più rapidamente, scegliendo da un elenco di scenari specifici da implementare."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: 01c2436218e0d7fd80a31cdc037d9dc8933e42f2
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 93ef6397be2cd4799bd72975de72028ee6a898ed
 
 
 ---
 
 # Guida alla distribuzione rapida di Rights Management di Azure
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 Usare questa Guida, oltre alle informazioni di configurazione presenti nella sezione **Distribuire e usare**, che consentono di distribuire e usare Azure Rights Management (Azure RMS) più rapidamente, scegliendo da un elenco di scenari specifici da implementare.
 
@@ -147,6 +146,6 @@ Le soluzioni implementare risulteranno utili per proteggere i dati preziosi e of
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

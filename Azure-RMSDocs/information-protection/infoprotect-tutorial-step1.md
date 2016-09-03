@@ -5,13 +5,13 @@ author: cabailey
 manager: mbaldwin
 ms.date: 07/291/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 translationtype: Human Translation
-ms.sourcegitcommit: 93444affe94b280db2c9e4e2960c6902e491dec6
-ms.openlocfilehash: 128952778ec317584e558e409961e2921c4ecd07
+ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
+ms.openlocfilehash: b608ee307bf7388ab7c7ed70cc1286db5df176c8
 
 
 ---
@@ -47,13 +47,13 @@ Quando Azure Rights Management è attivato, è possibile proteggere i documenti 
 
 4.  Fare clic su **Rights Management**.
 
-5.  Nella pagina **RIGHTS MANAGEMENT** fare clic su **Gestione**.
+5.  Nella pagina **RIGHTS MANAGEMENT** fare clic su **Gestisci**.
 
 6.  Nella pagina **Rights Management** fare clic su **attiva**.
 
 7.  Quando viene chiesto **se si desidera attivare Rights Management**, fare clic **attiva**.
 
-Viene visualizzato il messaggio di avvenuta attivazione di Rights management e l'opzione di disattivazione (potrebbe essere necessario aggiornare manualmente la pagina) **** .
+Verranno visualizzati il messaggio **Rights Management è attivato** e l'opzione di disattivazione. Potrebbe essere necessario aggiornare manualmente la pagina.
 
 A questo punto, non scegliere **funzionalità avanzate**. Con questa operazione viene visualizzato il portale di Azure classico in cui è possibile configurare i modelli personalizzati, che non sono necessari per questa esercitazione. Chiudere invece l’interfaccia di amministrazione di Office 365.
 
@@ -86,6 +86,6 @@ Per una distribuzione di produzione è probabilmente consigliabile configurare m
 
 
 
-<!--HONumber=Jul16_HO5-->
+<!--HONumber=Aug16_HO4-->
 
 

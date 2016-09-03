@@ -1,27 +1,26 @@
 ---
 title: Rimuovere la protezione da un file usando l'applicazione di condivisione Rights Management | Azure RMS
-description: 
-keywords: 
+description: "Per rimuovere la protezione da un file (ovvero lasciare un file non protetto) che in precedenza è stato protetto tramite l'applicazione RMS sharing, usare l'opzione Rimuovi protezione da Esplora file."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: da95b938-eaad-4c83-a21e-ff1d4872aae4
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 67129d6cdac124947fc07aa4d42523686227752e
-ms.openlocfilehash: 4aea0c89e5d97a7a0190962e073f0b4bc95bef25
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: b94cd999fef2186ddf67a0e6cebc3349a3586538
 
 
 ---
 
 # Rimuovere la protezione da un file mediante l'applicazione di condivisione Rights Management
 
-*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 Per rimuovere la protezione da un file (ovvero lasciare un file non protetto) che in precedenza è stato protetto utilizzando l'applicazione di condivisione RMS, utilizzare l’opzione **Rimuovi protezione** da Esplora File.
 
@@ -52,6 +51,6 @@ Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

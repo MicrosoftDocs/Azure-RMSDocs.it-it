@@ -1,27 +1,26 @@
 ---
 title: Applicazione di condivisione Rights Management&colon; Cronologia delle versioni | Azure RMS
-description: 
-keywords: 
+description: "Il team di Rights Management aggiorna regolarmente l'applicazione di condivisione di condivisione Rights Management con correzioni e nuove funzionalità. Usare le informazioni seguenti per visualizzare gli elementi nuovi o modificati in una versione. La versione più recente è elencata per prima."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e1b7dedd8556f3ccdb1642681cc4e1e5b1d09ccf
-ms.openlocfilehash: ee2860da964b52bc41c0aea219110453f024b954
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 060324fd6f0a87839ff267b540b9e5024498c242
 
 
 ---
 
 # Applicazione di condivisione Rights Management: Cronologia delle versioni
 
-*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 Il team di Rights Management aggiorna regolarmente l'applicazione di condivisione di condivisione Rights Management con correzioni e nuove funzionalità. Utilizzare le informazioni seguenti per visualizzare gli elementi nuovi o modificati in una versione. La versione più recente è elencata per prima.
 
@@ -132,6 +131,6 @@ Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

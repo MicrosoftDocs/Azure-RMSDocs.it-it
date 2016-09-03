@@ -1,27 +1,26 @@
 ---
 title: Rilevare e revocare i documenti quando si usa l'applicazione RMS sharing | Azure RMS
-description: 
-keywords: 
+description: "Dopo avere protetto i documenti tramite l'applicazione RMS sharing, se l'organizzazione usa Azure Rights Management invece di Active Directory Rights Management Services, è possibile tenere traccia del modo in cui le persone usano i documenti protetti. Se necessario, è anche possibile revocare l'accesso a questi documenti quando si desidera interromperne la condivisione. A tale scopo, utilizzare il sito di rilevamento del documento, a cui è possibile accedere dai computer Windows, i computer Mac e anche da tablet e telefoni."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/10/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e9ad2e518b4a7dac608572eb5eb2d99bbda4754e
-ms.openlocfilehash: 4c757494a1fe948ed26b32f86844f7b5896c919b
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: d27a516339a9687cb5ce117b6a2aa93730863c2d
 
 
 ---
 
 # Rilevare e revocare i documenti quando si utilizza l'applicazione di condivisione RMS
 
-*Si applica a: Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 Dopo avere protetto i documenti tramite l'applicazione RMS sharing, se l'organizzazione usa Azure Rights Management invece di Active Directory Rights Management Services, è possibile tenere traccia del modo in cui le persone usano i documenti protetti. Se necessario, è anche possibile revocare l'accesso a questi documenti quando si desidera interromperne la condivisione. A tale scopo, usare il **sito di rilevamento del documento**, a cui è possibile accedere dai computer Windows, dai computer Mac e anche da tablet e telefoni.
 
@@ -107,6 +106,6 @@ Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 
