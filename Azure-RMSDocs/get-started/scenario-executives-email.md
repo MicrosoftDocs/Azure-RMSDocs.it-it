@@ -1,27 +1,26 @@
 ---
 title: Scenario - Scambiarsi informazioni con privilegi tra dirigenti | Azure RMS
-description: 
-keywords: 
+description: "Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management affinché i dirigenti possano scambiarsi in modo sicuro messaggi e allegati tramite posta elettronica e i criteri limitino automaticamente l'accesso ai dirigenti senza che sia necessario alcun intervento da parte di questi ultimi. I messaggi di posta elettronica e gli eventuali allegati saranno automaticamente protetti da Azure Rights Management."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7dd88d90357c99c69fe4fdde67c1544595e02f8
-ms.openlocfilehash: def8b7e98fd55a3d028978ffc9f8e41e38a5622c
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 3c15175f26c5e3bc0ff824c284beedc639cf9309
 
 
 ---
 
 # Scenario - Scambiarsi informazioni con privilegi tra dirigenti
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management affinché i dirigenti possano scambiarsi in modo sicuro messaggi e allegati tramite posta elettronica e i criteri limitino automaticamente l'accesso ai dirigenti senza che sia necessario alcun intervento da parte di questi ultimi. I messaggi di posta elettronica e gli eventuali allegati saranno automaticamente protetti da Azure Rights Management.
 
@@ -78,7 +77,7 @@ Per le istruzioni di funzionamento di questo scenario, sono necessari i requisit
 
     -   Specificare il gruppo dei **Dirigenti** come mittente e destinatario della regola e delle altre condizioni.
 
-    -   Per l'azione, selezionare **Applica protezione dei diritti al messaggio con...** e quindi selezionare il modello **Dirigenti** configurato.
+    -   Per l'azione, selezionare **Applica protezione dei diritti al messaggio con** e quindi selezionare il modello **Dirigenti** configurato.
 
     -   Aggiungere l'eccezione **DNP** (come abbreviazione di "Non proteggere") o le parole scelte per identificare questa eccezione, da includere nell'oggetto.
 
@@ -133,6 +132,6 @@ Quando si inviano informazioni aziendali riservate a un altro dirigente di VanAr
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 
