@@ -1,27 +1,26 @@
 ---
 title: Scenario - Invio di email aziendali riservate | Azure RMS
-description: 
-keywords: 
+description: Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management in modo che qualsiasi utente dell'organizzazione possa inviare in modo sicuro comunicazioni tramite email non leggibili all'esterno dell'organizzazione.
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: b6f3b06485dda81be2a36035fea7477f4061a8e9
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: e3245f7fb15f7081dbe4552eb9734a4915d1b6f1
 
 
 ---
 
 # Scenario - Invio di email aziendali riservate
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management in modo che qualsiasi utente dell'organizzazione possa inviare in modo sicuro comunicazioni tramite email non leggibili all'esterno dell'organizzazione. Ad esempio, se qualcuno inoltra l'email a qualcuno di un'altra organizzazione o a un account di posta elettronica personale. Le email e gli allegati saranno protetti da Azure Rights Management e da un modello selezionato dagli utenti dal client di posta elettronica.
 
@@ -158,6 +157,6 @@ Le persone a cui si invia l'email saranno in grado di inoltrarla ad altre person
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -3,15 +3,15 @@ title: Esercitazione introduttiva di Azure Information Protection | Azure Rights
 description: "Esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell'organizzazione. L'esercitazione è articolata in 4 passaggi, eseguibili in meno di 15 minuti."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/22/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 7d599aef75272eff5527294141bb0eb98d041b1b
-ms.openlocfilehash: 419bfcde6915bd6c8db9cf5ddb268f6d70c83768
+ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
+ms.openlocfilehash: 6fbe4bd32f1aef57b3bf42aeedea46f618fb5540
 
 
 ---
@@ -31,7 +31,7 @@ In caso di problemi durante l'esecuzione di questa esercitazione o durante l'uso
 ## Prerequisiti 
 Per completare questa esercitazione, è necessario quanto segue:
 
-- Una sottoscrizione che includa Azure Rights Management e consenta l'accesso alla versione di anteprima di Azure Information Protection. Azure Information Protection è disponibile in tutte le aree che supportano Azure Rights Management. Per altre informazioni sulle opzioni di sottoscrizione disponibili e sui collegamenti alle versioni di valutazione gratuite, vedere [Requisiti per Azure RMS: sottoscrizioni cloud che supportano Azure RMS](../get-started/requirements-subscriptions.md).
+- Una sottoscrizione di Office 365 che include la protezione di documenti e messaggi di posta elettronica di Office tramite Azure RMS. Per altre informazioni sulle opzioni di sottoscrizione disponibili e sui collegamenti alle versioni di valutazione gratuite, vedere la sezione relativa alla [sottoscrizione di Office 365](../get-started/requirements-subscriptions.md#office-365-subscription) nella documentazione sui requisiti per Azure RMS.
 
 - Una sottoscrizione di Azure, per accedere al portale di Azure e configurare i criteri di Azure Information Protection. Se l'organizzazione non ha una sottoscrizione di Azure, è possibile ottenerne una registrandosi per una versione di valutazione gratuita: andare alla pagina [Microsoft Azure - Introduzione](https://account.windowsazure.com/organization) e seguire le istruzioni.
 
@@ -51,6 +51,6 @@ A questo punto, procedere con l'esercitazione.
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

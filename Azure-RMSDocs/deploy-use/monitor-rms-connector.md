@@ -1,27 +1,26 @@
 ---
 title: Monitorare il connettore di Azure Rights Management | Azure RMS
-description: 
-keywords: 
+description: "Dopo aver installato e configurato il connettore RMS, è possibile usare i metodi e le informazioni seguenti per monitorare più facilmente il connettore e l'uso di Azure RMS nell'organizzazione."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/08/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f8e23e8bcbfb25092cb31f7af76d17239f3063a7
-ms.openlocfilehash: 32c3c93d55bd82f45fa7a081e55ae7ebe8f5956f
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 11079a491cf9feade86713ef02ccdce79019577a
 
 
 ---
 
 # Monitorare il connettore di Azure Rights Management
 
-*Si applica a: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Si applica a: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
 
 Dopo aver installato e configurato il connettore RMS, è possibile usare i metodi e le informazioni seguenti per monitorare più facilmente il connettore e l'uso di Azure RMS nell'organizzazione.
 
@@ -195,6 +194,6 @@ Se si vuole eseguire una registrazione più dettagliata a scopo di diagnosi, è 
 
 
 
-<!--HONumber=Jul16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,27 +1,26 @@
 ---
 title: Panoramica di Azure Rights Management | Azure RMS
-description: 
-keywords: 
+description: Microsoft Azure Rights Management (Azure RMS) consente di proteggere i dati sensibili dell'organizzazione da accessi non autorizzati e di controllare il modo in cui vengono usati i dati.
 author: cabailey
 manager: mbaldwin
-ms.date: 05/03/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 965581c8-be3c-43b4-8145-5cefd29c7636
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fdedb0f1064e98500d3b4edcee283c514851d446
-ms.openlocfilehash: a8c9a55977a285cd30872beeb160b07ce02edcce
+ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
+ms.openlocfilehash: b6589429693854b73228b2d90de1a787f03663ff
 
 
 ---
 
 # Panoramica di Azure Rights Management
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 Microsoft Azure Rights Management (Azure RMS) consente di proteggere i dati sensibili dell'organizzazione da accessi non autorizzati e di controllare il modo in cui vengono utilizzati i dati. Azure Rights Management è un servizio cloud integrato in altre applicazioni e servizi cloud Microsoft, ad esempio Office 365 e Azure Active Directory. Il servizio può essere usato anche con proprie applicazioni line-of-business e soluzioni di protezione dei dati di fornitori software in locale o sul cloud. 
 
@@ -40,6 +39,6 @@ Se si è pronti a distribuire Azure RMS per l'organizzazione, usare la [guida di
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,39 +1,38 @@
 ---
 title: Scaricare e installare l'applicazione di condivisione Rights Management | Azure RMS
-description: 
-keywords: 
+description: "Non è necessario essere un amministratore locale per installare l'applicazione di condivisione RMS. Tuttavia, se non si ricopre questo ruolo e si usa Office 2010, sono previste alcune limitazioni. Per altre informazioni, vedere la sezione Se non si è un amministratore locale e si usa Office 2010 di questa pagina."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 07/13/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c611fa8a846612fed238e59e5077be67f6f9531a
-ms.openlocfilehash: 5ec740b4de63c90c9713916dcf104316e727498b
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: bda09df1ff51565a4bbf501161c7a4f8cdbbfe22
 
 
 ---
 
 # Scaricare e installare l’applicazione di condivisione Rights Management
 
-*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 Non è necessario essere un amministratore locale per installare l'applicazione di condivisione RMS. Tuttavia, se non si ricopre questo ruolo e si usa Office 2010, sono previste alcune limitazioni. Per ulteriori informazioni, vedere la sezione [Se non si è un amministratore locale e si usa Office 2010](#if-you-are-not-a-local-administrator-and-use-office-2010) di questa pagina.
 
 ## Per scaricare e installare l’applicazione di condivisione Rights Management
 
-1.  Visitare la pagina [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) nel sito Web Microsoft.
+1.  Accedere alla pagina [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) nel sito Web Microsoft.
 
 2.  Nella sezione **Computer** fare clic sull'icona relativa all’ **app RMS per Windows** e salvare il file di installazione **Setup.exe** dell’applicazione di condivisione Microsoft Rights Management.
 
-3.  Fare doppio clic sul file Setup.exe che è stato scaricato. Se viene richiesto di continuare, fare clic su **Sì**.
+3.  Fare doppio clic sul file Setup.exe che è stato scaricato. Se viene chiesto di continuare, fare clic su **Sì**.
 
-4.  Nella pagina **Installazione di Microsoft RMS** fare clic su **Avanti**e attendere la fine dell'installazione.
+4.  Nella pagina **Installazione di Microsoft RMS** fare clic su **Avanti**e attendere il completamento dell'installazione.
 
     > [!NOTE]
     > L'applicazione di condivisione RMS richiede il Framework Microsoft .NET, versione minima 4.0. Il programma di installazione verifica se viene installato e in caso contrario, verrà visualizzato un messaggio con un collegamento per installarlo.
@@ -62,7 +61,7 @@ Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights
 
 -   [Esempi per l'utilizzo dell’applicazione di condivisione RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Come procedere](sharing-app-user-guide.md#what-do-you-want-to-do-)
+-   [Come procedere](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Vedere anche
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
@@ -70,6 +69,6 @@ Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

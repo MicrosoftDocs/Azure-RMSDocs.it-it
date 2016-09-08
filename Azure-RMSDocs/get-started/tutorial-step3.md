@@ -4,17 +4,17 @@ description: "Il terzo passaggio di questa esercitazione consente di provare rap
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: c604e749-8918-40e8-8148-6bd000cb2be2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: efe389db839f3f70e9cdb9138f6749e2bd2e029f
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 62b2303074ccf2b23e29a5770f51b003c8f97780
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: efe389db839f3f70e9cdb9138f6749e2bd2e029f
 
 # Passaggio 3 dell'esercitazione per l'avvio rapido di Azure RMS: Inviare tramite posta elettronica il documento che si desidera proteggere
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 
 Passare a: 
@@ -49,7 +49,7 @@ Per questo passaggio, creare e salvare un documento di Word che rappresenta il d
 
 3.  Digitare un oggetto, ad esempio  **Documento riservato** , quindi digitare un breve messaggio di posta elettronica, ad esempio **Questo documento è riservato e non può essere condiviso con altri utenti.**
 
-4.  Nella scheda **Messaggio** , nel gruppo **RMS** , fare clic su **Condividi file protetto** e quindi fare di nuovo clic su **Condividi file protetto** :
+4.  Nella scheda **Messaggio**, nel gruppo **RMS**, fare clic su **Condividi file protetto** e quindi fare di nuovo clic su **Condividi file protetto**:
 
 5.  Nella finestra di dialogo **Condividi file protetto** :
 
@@ -65,7 +65,7 @@ Per questo passaggio, creare e salvare un documento di Word che rappresenta il d
 
         Per questa opzione è necessario che i destinatari siano connessi a Internet ogni volta che aprono l'allegato. L'opzione offre comunque il vantaggio che, se in un secondo momento si revoca il documento, il successivo tentativo di apertura da parte dei destinatari avrà esito negativo. Se non si seleziona questa opzione, i destinatari potrebbero essere in grado di aprire il documento anche senza una connessione Internet, con lo svantaggio che, se in un secondo momento si revoca il documento, potrebbe verificarsi un ritardo nell’applicazione di tale scelta.
 
-    4.  Fare clic su **Invia subito**.
+    4.  Fare clic su **Invia adesso**.
 
         Il messaggio con l’allegato viene inviato agli indirizzi di posta elettronica specificati. Oltre al messaggio di posta elettronica, vengono visualizzate le istruzioni per leggere il documento allegato e protetto da Azure Rights Management.
 
@@ -82,6 +82,6 @@ Ora che è stato inviato il documento protetto, è possibile chiedere ai destina
 [Passaggio 4»](tutorial-step4.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

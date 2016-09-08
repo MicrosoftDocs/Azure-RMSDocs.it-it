@@ -6,14 +6,14 @@ author: Cabailey
 manager: mbaldwin
 ms.date: 06/29/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.assetid: 7c4798e6-34a0-4c3f-a47f-505764ddf322
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fab51fefed8d3a347a52ab7c118bb40b3cc23b37
-ms.openlocfilehash: 80f2742bbaab9d3252cec6f6c709012ca81218d5
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: c00264e6c8b99d95e8eedf9b91781484611880c3
 
 
 ---
@@ -22,7 +22,7 @@ ms.openlocfilehash: 80f2742bbaab9d3252cec6f6c709012ca81218d5
 
 # Passaggio 1 dell'esercitazione per l'avvio rapido di Azure RMS: Attivare il servizio Rights Management
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 
 Passare a: 
@@ -61,13 +61,13 @@ Anche se si dispone di una sottoscrizione che supporta Azure Rights Management, 
 
 4.  Fare clic su **Rights Management**.
 
-5.  Nella pagina **RIGHTS MANAGEMENT** fare clic su **Gestione**.
+5.  Nella pagina **RIGHTS MANAGEMENT** fare clic su **Gestisci**.
 
 6.  Nella pagina **Rights Management** fare clic su **attiva**.
 
 7.  Quando viene chiesto **se si desidera attivare Rights Management**, fare clic **attiva**.
 
-Viene visualizzato il messaggio di avvenuta attivazione di Rights management e l'opzione di disattivazione (potrebbe essere necessario aggiornare manualmente la pagina) **** .
+Verranno visualizzati il messaggio **Rights Management è attivato** e l'opzione di disattivazione. Potrebbe essere necessario aggiornare manualmente la pagina.
 
 A questo punto, non scegliere **funzionalità avanzate**. Con questa operazione viene infatti visualizzato il portale di Azure classico in cui è possibile configurare i modelli, che non sono necessari per questa esercitazione. Chiudere invece l’interfaccia di amministrazione di Office 365.
 
@@ -100,6 +100,6 @@ Anche se la procedura corrispondente non è inclusa in questa esercitazione, è 
 [Passaggio 2»](tutorial-step2.md)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,20 +1,19 @@
 ---
 title: Requisiti per Azure RMS&#58; sottoscrizioni cloud | Azure RMS
-description: 
-keywords: 
+description: "Per usare Azure Rights Management (Azure RMS), l'organizzazione deve avere almeno una delle sottoscrizioni seguenti con un numero sufficiente di licenze per utenti e servizi che proteggeranno i file e i messaggi di posta elettronica. Se si dispone di un servizio che applicherà la protezione per gli utenti (proprietari dei file o messaggi di posta elettronica), gli utenti richiedono una di queste licenze. Per gli utenti che utilizzano solo (ad esempio, leggere e modificare) questi dati protetti non è necessaria una licenza."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/09/2016
+ms.date: 08/22/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 6a16e890-3c3e-4f47-80ca-176a34bdf8bc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b6dcd8bb1091e9c484e02042adbf993381581a9d
-ms.openlocfilehash: 5e68ba6942b479e9dcbf0e9ac0a3bed0c2d1869d
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 4cac0f039e69e31943bb8773d0761f7e654cc940
 
 
 ---
@@ -22,11 +21,11 @@ ms.openlocfilehash: 5e68ba6942b479e9dcbf0e9ac0a3bed0c2d1869d
 
 # Requisiti per Azure RMS: sottoscrizioni cloud che supportano Azure RMS
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 Per usare Azure Rights Management (Azure RMS), l'organizzazione deve avere almeno una delle sottoscrizioni seguenti con un numero sufficiente di licenze per utenti e servizi che proteggeranno i file e i messaggi di posta elettronica. Se si dispone di un servizio che applicherà la protezione per gli utenti (proprietari dei file o messaggi di posta elettronica), gli utenti richiedono una di queste licenze. Per gli utenti che utilizzano solo (ad esempio, leggere e modificare) questi dati protetti non è necessaria una licenza.
 
--   Office 365
+-   Office 365 (sottoscrizioni specifiche)
 
 -   Azure Rights Management Premium (in precedenza Azure RMS Standalone)
 
@@ -52,9 +51,9 @@ Sottoscrizione  |Include IRM
 Office 365 Business Essentials|No|
 Office 365 Business Premium|No|
 Office 365 Enterprise E1 <br /><br /> Office 365 Education A1|No <br /><br /> No|
-Office 365 Enterprise E3 <br /><br /> Office 365 Education A3 <br /><br /> Office 365 Government G3|Sì <br /><br /> Sì <br /><br /> Sì|
-Office 365 Enterprise E4 <br /><br /> Office 365 Education A4 <br /><br /> Office 365 Government G4|Sì <br /><br /> Sì <br /><br /> Sì|
-Office 365 Enterprise E5 <br /><br /> Office 365 Education A5|Sì <br /><br /> Sì|
+Office 365 Enterprise E3 <br /><br /> Office 365 Education A3 <br /><br /> Office 365 Government G3|sì <br /><br /> Sì <br /><br /> sì|
+Office 365 Enterprise E4 <br /><br /> Office 365 Education A4 <br /><br /> Office 365 Government G4|sì <br /><br /> Sì <br /><br /> sì|
+Office 365 Enterprise E5 <br /><br /> Office 365 Education A5|sì <br /><br /> sì|
 Office 365 Enterprise K1|No|
 SharePoint Piano 1 <br /><br /> SharePoint Piano 2|No <br /><br /> No|
 Exchange Online Piano 1 <br /><br /> Exchange Online Piano 2|No <br /><br /> No|
@@ -95,6 +94,6 @@ Per ulteriori informazioni, vedere [RMS per utenti singoli e Azure Rights Manage
 Per verificare gli altri requisiti, vedere [Requisiti per Azure Rights Management](requirements-azure-rms.md).
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

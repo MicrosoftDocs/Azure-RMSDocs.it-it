@@ -1,27 +1,26 @@
 ---
 title: Guida dell'utente dell'applicazione Rights Management sharing | Azure RMS
-description: 
-keywords: 
+description: L'applicazione Microsoft Rights Management (RMS) sharing per Windows consente di proteggere le immagini e i documenti importanti da persone che non devono essere visualizzati, anche se vengono spediti per posta elettronica o salvati in un altro dispositivo.
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 384a58f32aae8c7d908392e7fd9a1629bc05cdff
-ms.openlocfilehash: d3727eb963532e03137aea2140293fa9c5821db2
+ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
+ms.openlocfilehash: c39e311e8247938cf44068106a9771d2ad7a56e0
 
 
 ---
 
 # Guida dell'utente dell'applicazione di condivisione Rights Management
 
-*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 L’applicazione di condivisione di Microsoft Rights Management (RMS) per Windows consente di proteggere le immagini e i documenti importanti da persone che non devono essere visualizzarli, anche se vengono spediti per posta elettronica o salvati in un altro dispositivo. È anche possibile utilizzare questa applicazione per aprire e utilizzare i file protetti da altri utenti tramite la stessa tecnologia di Rights Management.
 
@@ -39,7 +38,7 @@ Di seguito sono riportati solo alcuni esempi di come è possibile utilizzare l'a
 |**… verificare chi ha aperto la cartella dei documenti protetti e quando, e revocare l'accesso se necessario**<br /><br />È stato condiviso in modo protetto un documento di progettazione riservato con fornitori potenziali e si desidera vedere chi vi ha avuto accesso, quando e da dove. Poi, quando a uno dei fornitori viene affidato il lavoro, si desidera revocare l'accesso al documento originale in modo che le persone che con cui è stato condiviso non possano più leggerlo.|Dopo aver condiviso un documento tramite posta elettronica, si passa al [sito di rilevamento dei documenti](http://go.microsoft.com/fwlink/?LinkId=529562) per controllare chi ha accesso al documento e quando. Quando è necessario interrompere la condivisione, selezionare l'opzione per revocare l'accesso.<br /><br />Procedura dettagliata: [Rilevare e revocare i documenti quando si usa l'applicazione RMS sharing](sharing-app-track-revoke.md).|
 |**… leggere un allegato ricevuto in un messaggio di posta elettronica che contiene un allegato con un file condiviso in modo protetto, ma non è possibile leggerlo in quanto l’azienda a cui si appartiene non utilizza Rights Management**<br /><br />Il mittente del messaggio di posta elettronica è qualcuno considerato attendibile perché ci si è già lavorato in passato e si ritiene che stia inviando informazioni su una potenziale nuova opportunità di business.|Seguire le istruzioni nel messaggio di posta elettronica e fare clic sul collegamento per iscriversi a Microsoft Rights Management. Microsoft conferma che l'organizzazione non dispone di una sottoscrizione che include Azure Rights Management, invia un messaggio di posta elettronica per completare il processo di abbonamento gratuito e accedere con il nuovo account. Si fa click sul secondo collegamento nel messaggio di posta elettronica per installare l'applicazione di condivisione Rights Management e si può poi aprire l'allegato di posta elettronica per leggere la nuova opportunità di business.<br /><br />Procedura dettagliata: [Visualizzare e usare i file che sono stati protetti da Rights Management](sharing-app-view-use-files.md).|
 |**… proteggere i file di informazioni aziendali riservate sul computer portatile in modo che non vi possano accedere utenti esterni all'azienda**<br /><br />Si viaggia molto e si utilizza il computer portatile per accedere e aggiornare i file in una cartella che deve essere protetta da accessi non autorizzati.|Si ha l'applicazione di condivisione RMS installata in un computer portatile. Si utilizza Esplora File per proteggere i file utilizzando un modello, che consente di proteggere rapidamente i file. Se il computer portatile viene rubato, si è tranquilli del fatto che nessuno esterno all'azienda può accedere a questi documenti.<br /><br />Procedura dettagliata: [Proteggere un file in un dispositivo &#40;protezione sul posto&#41; tramite l'applicazione Rights Management sharing](sharing-app-protect-in-place.md).|
-¹ PDF con tecnologia Rendering, Foxit. Copyright © 2003-2014, Foxit Corporation.
+Rendering PDF con tecnologia Foxit ¹. Copyright © 2003-2014, Foxit Corporation.
 
 ## Come procedere
 > [!NOTE]
@@ -68,6 +67,6 @@ Di seguito sono riportati solo alcuni esempi di come è possibile utilizzare l'a
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

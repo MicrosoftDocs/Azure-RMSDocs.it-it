@@ -1,20 +1,19 @@
 ---
 title: Guida dell'amministratore dell'applicazione di condivisione Rights Management | Azure RMS
-description: 
-keywords: 
+description: "Usare le informazioni seguenti se l'utente è responsabile per l'applicazione Microsoft Rights Management sharing di Microsoft in una rete aziendale, o se si desiderano informazioni più tecniche rispetto a quelle presenti in Guida dell'utente dell'applicazione Rights Management sharing o Domande frequenti per l'applicazione Microsoft Rights Management sharing per Windows."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/05/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f7cf74355aa39928fd66a4be13a9b65428da7480
-ms.openlocfilehash: 08226cd930f90bc7c9cda4c65315ee6472fbcf52
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 9b0c608ac30e2a93b898dcc1de9ccfa4cdeedcb4
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: 08226cd930f90bc7c9cda4c65315ee6472fbcf52
 
 # Guida dell'amministratore dell'applicazione di condivisione Rights Management
 
-*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 
 Utilizzare le seguenti informazioni se l'utente è responsabile per l'applicazione di condivisione Rights Management di Microsoft in una rete aziendale, o se si desiderano informazioni più tecniche rispetto a quelle presenti in [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md) o [Domande frequenti per l’applicazione di condivisione Rights Management di Microsoft per Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
@@ -396,6 +395,6 @@ Per informazioni tecniche aggiuntive, inclusa la spiegazione della differenza tr
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 

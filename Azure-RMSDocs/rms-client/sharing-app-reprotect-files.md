@@ -6,22 +6,22 @@ author: cabailey
 manager: mbaldwin
 ms.date: 08/03/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ba029e48b540fda8474eba83322c531ff3daa7b3
-ms.openlocfilehash: a123338e34a8c4585a01782a473a400ecb58f166
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 214890cee5975c05798014ddb8d153faa9ca3998
 
 
 ---
 
 # Modificare le autorizzazioni per i file protetti da Rights Management
 
-*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 Quando un file è protetto da Rights Management, è possibile modificarne le autorizzazioni riproteggendolo e quindi specificando tutti gli utenti che possono accedere al file e le autorizzazioni che si vogliono assegnare a tali utenti.
 
@@ -47,7 +47,7 @@ Se si vogliono rimuovere completamente tutte le autorizzazioni in modo che il fi
     > [!NOTE]
     > Se non viene visualizzata l’opzione **Proteggi tramite RMS** , è probabile che l'applicazione di RMS sharing non sia installata nel computer o che il computer debba essere riavviato per completare l'installazione. Per altre informazioni su come installare l'applicazione RMS sharing, vedere [Scaricare e installare l'applicazione Rights Management sharing](install-sharing-app.md).
 
-2.  Effettuare una delle operazioni riportate di seguito:
+2.  Eseguire una delle operazioni seguenti:
 
     -   Selezionare un modello di criteri: Queste sono autorizzazioni predefinite che in genere limitano l'accesso e l’utilizzo agli utenti dell'organizzazione. Se ad esempio il nome dell'organizzazione è "Contoso, Ltd", potrebbe essere visualizzato **Contoso, Ltd - Solo visione riservata**. Se questa è la prima volta che si protegge un file nel computer, è necessario innanzitutto selezionare **Protezione definita dall'azienda** per scaricare i modelli.
 
@@ -96,6 +96,6 @@ Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights
 
 
 
-<!--HONumber=Aug16_HO1-->
+<!--HONumber=Aug16_HO4-->
 
 
