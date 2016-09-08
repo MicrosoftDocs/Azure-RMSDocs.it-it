@@ -1,27 +1,26 @@
 ---
 title: Supporto di Azure Rights Management da parte delle applicazioni | Azure RMS
-description: 
-keywords: 
+description: "Questo articolo contiene informazioni sulla modalità in cui le applicazioni (ad esempio le applicazioni Office quali Word, Excel, PowerPoint e Outlook) e i servizi (ad esempio Exchange e SharePoint) più comunemente usati dagli utenti sfruttano Microsoft Azure Rights Management per proteggere i dati dell'organizzazione."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/13/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 16c2dbbce4234f41941bd3fd92d264df0ae685e2
-ms.openlocfilehash: 15167c4e7dbe0fd401e198c80524b39e4ded250d
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: df66b53238acecd4173b7d1bc57a611c403ec256
 
 
 ---
 
 # Supporto di Microsoft Azure Rights Management da parte delle applicazioni
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 Questo articolo contiene informazioni sulla modalità in cui le applicazioni (ad esempio le applicazioni Office quali Word, Excel, PowerPoint e Outlook) e i servizi (ad esempio Exchange e SharePoint) più comunemente usati dagli utenti sfruttano Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] per proteggere i dati dell'organizzazione. 
 > [!NOTE]
@@ -63,6 +62,6 @@ Altre informazioni sul supporto di Azure RMS da parte delle applicazioni seguent
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

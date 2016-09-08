@@ -1,27 +1,26 @@
 ---
 title: Verifica di Azure Rights Management | Azure RMS
-description: 
-keywords: 
+description: "Dopo aver attivato Azure RMS e aver eseguito gli eventuali passaggi di configurazione aggiuntivi necessari per l'organizzazione, si può verificare che il servizio funzioni come previsto proteggendo un file o un messaggio di posta elettronica usando un account utente e tentando di aprire e usare tale contenuto protetto con un altro account utente."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bb152f428c8e0b9a065035aaad2de6353265a562
-ms.openlocfilehash: afa1fb35110918b9b97f91534616e1933e13b149
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: b24fa3540e4e9b9cc02ba3bcd83f5864ce8674d6
 
 
 ---
 
 # Verifica di Azure Rights Management
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 Dopo aver attivato [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) e aver eseguito gli eventuali passaggi di configurazione aggiuntivi necessari per l'organizzazione, si può verificare che il servizio funzioni come previsto proteggendo un file o un messaggio di posta elettronica usando un account utente e tentando di aprire e usare tale contenuto protetto con un altro account utente.
 
@@ -34,13 +33,13 @@ Se il test non riesce, rivedere i passaggi di configurazione nella [Guida di ori
 
 ## Passaggi successivi
 
-Si possono monitorare le modalità d'uso della protezione delle informazioni da parte dell'organizzazione usando la registrazione dei dati di utilizzo. Per altre informazioni, vedere [Registrazione e analisi dell'utilizzo di Azure Rights Management](log-analyze-usage.md).
+Si possono monitorare le modalità d'uso della protezione delle informazioni da parte dell'organizzazione usando la registrazione dei dati di utilizzo. Per ulteriori informazioni, vedere [Registrazione e analisi dell'utilizzo di Azure Rights Management](log-analyze-usage.md).
 
 
 
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

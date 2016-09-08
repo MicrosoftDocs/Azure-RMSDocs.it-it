@@ -1,20 +1,19 @@
 ---
 title: Funzionamento di Azure RMS Work | Azure RMS
-description: 
-keywords: 
+description: "Una cosa importante da comprendere sul funzionamento di Azure RMS è che tramite il servizio Rights Management (e Microsoft) non vengono visualizzati o archiviati dati come parte del processo di protezione delle informazioni. Le informazioni protette non vengono mai inviate o archiviate in Azure, a meno di archiviarle in modo esplicito in Azure o di usare un altro servizio cloud che le archivia in Azure. Azure RMS rende i dati di un documento semplicemente illeggibili a chiunque, eccetto gli utenti e i servizi autorizzati."
 author: cabailey
 manager: mbaldwin
 ms.date: 06/02/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d825d6c8b2c8b7a9c34ac940c5a08439a9ae562
-ms.openlocfilehash: 505f2c94bb4fd056b4d2f51c147c6b0b84efac00
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 527af70532f390330fdb65bc27b04bb366289748
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: 505f2c94bb4fd056b4d2f51c147c6b0b84efac00
 
 # Funzionamento di Azure RMS Dietro le quinte
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 Una cosa importante da comprendere sul funzionamento di Azure RMS è che tramite il servizio Rights Management (e Microsoft) non vengono visualizzati o archiviati dati come parte del processo di protezione delle informazioni. Le informazioni protette non vengono mai inviate o archiviate in Azure, a meno di archiviarle in modo esplicito in Azure o di usare un altro servizio cloud che le archivia in Azure. Azure RMS rende i dati di un documento semplicemente illeggibili a chiunque, eccetto gli utenti e i servizi autorizzati:
 
@@ -151,6 +150,6 @@ Quando si è pronti a iniziare la distribuzione di Azure RMS per l'organizzazion
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

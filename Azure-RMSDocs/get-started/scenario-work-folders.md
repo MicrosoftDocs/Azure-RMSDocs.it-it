@@ -1,27 +1,26 @@
 ---
 title: Scenario - Configurare le cartelle di lavoro per una protezione permanente | Azure RMS
-description: 
-keywords: 
+description: Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management per applicare la protezione permanente ai documenti di Office in Cartelle di lavoro.
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: 35ad445e229eac3feeca5522a41b9e3b25fd1180
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 1fdb62af06a3011e1102df0df3f9b61bcdc67edd
 
 
 ---
 
 # Scenario - Configurare le cartelle di lavoro per una protezione permanente
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management per applicare la protezione permanente ai documenti di Office in [Cartelle di lavoro](https://technet.microsoft.com/library/dn265974.aspx). Cartelle di lavoro usa un servizio di ruolo per i file server che esegue Windows Server, che fornisce un metodo coerente agli utenti per accedere ai file di lavoro dal proprio PC e dai propri dispositivi. Sebbene Cartelle di lavoro fornisca la propria crittografia per proteggere i file, questa protezione viene persa se i file vengono spostati all'esterno dell'ambiente di Cartelle di lavoro. Ad esempio, gli utenti copiano i file sincronizzati e li salvano in un archivio fuori dal controllo del reparto IT o i file vengono inviati tramite posta elettronica ad altri utenti.
 
@@ -50,7 +49,7 @@ Verificare che siano soddisfatti i requisiti seguenti e quindi seguire le istruz
 ## Requisiti per questo scenario
 Per le istruzioni di funzionamento di questo scenario, sono necessari i requisiti seguenti:
 
-|Requisito|Se sono necessarie ulteriori informazioni|
+|Requisito|Altre informazioni|
 |---------------|--------------------------------|
 |Azure Rights Management non è attivato|[Attivazione di Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |Si sono sincronizzati gli account utente di Active Directory locali con Azure Active Directory oppure Office 365, compreso il relativo indirizzo di posta elettronica. Questa operazione è necessaria per tutti gli utenti che usano Cartelle di lavoro.|[Preparazione per Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
@@ -123,6 +122,6 @@ Se è stato configurato il modello personalizzato come descritto in questo scena
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

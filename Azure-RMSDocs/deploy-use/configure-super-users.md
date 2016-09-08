@@ -1,27 +1,26 @@
 ---
 title: Configurazione degli utenti con privilegi avanzati per Azure Rights Management e servizi di individuazione o ripristino dei dati | Azure RMS
-description: 
-keywords: 
+description: "La funzionalità per utenti con privilegi avanzati di Azure RMS garantisce che gli utenti e i servizi autorizzati possano sempre leggere e controllare i dati che Azure RMS consente di proteggere per l'organizzazione. Se necessario, rimuovere la protezione o modificare la protezione applicata in precedenza. Un utente con privilegi avanzati dispone sempre dei diritti completi di proprietario per tutte le licenze concesse dal tenant RMS dell'organizzazione. Questa possibilità viene definita anche &quot;ragionamento sui dati&quot; e riveste un ruolo di importanza critica nel mantenimento del controllo sui dati dell'organizzazione."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 0ca9b8d9643f5489c100fa3aa614e89cd396df52
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 32da3f280b7dc8fa0655ae65d904864d80b9a035
 
 
 ---
 
 # Configurazione degli utenti con privilegi avanzati per Azure Rights Management e servizi di individuazione o ripristino dei dati
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 La funzionalità per utenti con privilegi avanzati di Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) garantisce che gli utenti e i servizi autorizzati possano sempre leggere e controllare i dati che Azure RMS consente di proteggere per l'organizzazione. Se necessario, rimuovere la protezione o modificare la protezione applicata in precedenza. Un utente con privilegi avanzati dispone sempre dei diritti completi di proprietario per tutte le licenze concesse dal tenant RMS dell'organizzazione. Questa possibilità viene definita anche "ragionamento sui dati" e riveste un ruolo di importanza critica nel mantenimento del controllo sui dati dell'organizzazione. Ad esempio, utilizzare questa funzionalità per uno qualsiasi dei seguenti scenari:
 
@@ -72,6 +71,6 @@ Per ulteriori informazioni su questi cmdlet, vedere [cmdlet protezione RMS](http
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,27 +1,26 @@
 ---
 title: Applicazione di condivisione Rights Management&colon; installazione e configurazione dei client | Azure RMS
-description: 
-keywords: 
+description: "L'applicazione di condivisione Rights Management (RMS) è necessaria affinché i computer client possano usare Azure RMS con Office 2010 ed è consigliata per tutti i computer e i dispositivi mobili che supportano Azure RMS. L'applicazione di condivisione RMS si integra con le applicazioni di Office installando un componente aggiuntivo di Office per consentire agli utenti di proteggere facilmente i file e i messaggi e-mail direttamente dalla barra multifunzione. Offre anche protezione generica per tipi di file non supportati in modalità nativa da Azure RMS e un sito per il rilevamento dei documenti che permette agli utenti di tenere traccia dei file protetti e di revocarli."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: b9af5dc3-73d4-4147-b7ef-f6803b0d5216
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: d3f923cf6f140c2caa75b7b0c8ac90a42be962a7
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: bf7cd8007b5423efaa13849101af5c4688cf0975
 
 
 ---
 
 # Applicazione Rights Management sharing: installazione e configurazione dei client
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 L'applicazione di condivisione Rights Management (RMS) è necessaria affinché i computer client possano usare Azure RMS con Office 2010 ed è consigliata per tutti i computer e i dispositivi mobili che supportano Azure RMS. L'applicazione di condivisione RMS si integra con le applicazioni di Office installando un componente aggiuntivo di Office per consentire agli utenti di proteggere facilmente i file e i messaggi e-mail direttamente dalla barra multifunzione. Offre anche protezione generica per tipi di file non supportati in modalità nativa da Azure RMS e un sito per il rilevamento dei documenti che permette agli utenti di tenere traccia dei file protetti e di revocarli.
 
@@ -43,6 +42,6 @@ Per installare l'applicazione RMS sharing per le piattaforme mobili, è possibil
 
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,20 +1,19 @@
 ---
 title: Applicazione RMS sharing per piattaforme Windows e mobili | Azure RMS
-description: 
-keywords: 
+description: "L'applicazione RMS sharing è un'applicazione scaricabile gratuita, necessaria per supportare Office 2010, ma consigliata anche per computer Windows e Mac e dispositivi mobili. RMS sharing è particolarmente vantaggiosa perché consente di applicare la protezione generica ad applicazioni e file senza supporto nativo per Rights Management, il che significa che è possibile proteggere tutti i file."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f355da35dff62ecee111737eb1793ae286dc93e
-ms.openlocfilehash: 02f1cf60bdafe748f16d9defa1c8b0cc8a61efb0
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 6304c5c29e2dab176fb9d5a617e1467af00ab504
 
 
 ---
@@ -22,7 +21,7 @@ ms.openlocfilehash: 02f1cf60bdafe748f16d9defa1c8b0cc8a61efb0
 
 # Applicazione RMS sharing per piattaforme Windows e mobili
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 L'applicazione RMS sharing è un'applicazione scaricabile gratuita, necessaria per supportare Office 2010, ma consigliata anche per computer Windows e Mac e dispositivi mobili. L'applicazione è particolarmente vantaggiosa perché consente di applicare la protezione generica ad applicazioni e file senza supporto nativo per [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], il che significa che è possibile proteggere tutti i file. Per altre informazioni sui diversi livelli di protezione, vedere la sezione [Livelli di protezione – nativo e generico](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) della [Guida dell'amministratore dell'applicazione Rights Management sharing](../rms-client/sharing-app-admin-guide.md).
 
@@ -59,6 +58,6 @@ Per altre informazioni sul supporto di Azure Rights Management da parte di altre
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

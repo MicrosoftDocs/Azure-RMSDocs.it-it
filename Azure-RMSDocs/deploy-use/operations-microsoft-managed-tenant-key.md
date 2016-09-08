@@ -1,34 +1,27 @@
 ---
-# required metadata
-
-title: "Gestione di Microsoft: operazioni del ciclo di vita della chiave del tenant | Azure RMS"
-description:
-keywords:
+title: 'Gestione di Microsoft: operazioni del ciclo di vita della chiave del tenant | Azure RMS'
+description: "Se la chiave del tenant per Azure Rights Management è gestita da Microsoft (impostazione predefinita), usare le sezioni seguenti per ottenere altre informazioni sulle operazioni del ciclo di vita rilevanti per questa topologia."
 author: cabailey
 manager: mbaldwin
 ms.date: 06/14/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 1eafab8e36c44bfd98ae613d8094d3510f18038e
+
 
 ---
 
 
 # Gestione di Microsoft: operazioni del ciclo di vita della chiave del tenant
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 Se la chiave del tenant per Azure Rights Management è gestita da Microsoft (impostazione predefinita), usare le sezioni seguenti per ottenere altre informazioni sulle operazioni del ciclo di vita rilevanti per questa topologia.
 
@@ -42,7 +35,7 @@ Il processo di ridistribuzione della chiave è denominato anche rollover della c
 
 -   Eventuale violazione della copia master della chiave del tenant (copia in proprio possesso).
 
-È possibile ridistribuire la chiave del tenant [contattando il supporto tecnico Microsoft](../get-started/information-support#to-contact-microsoft-support) per aprire un **caso di supporto tecnico di Azure Rights Management con una richiesta per ridistribuire la chiave del tenant di Azure RMS**. È necessario dimostrare di essere un amministratore del tenant di Azure RMS ed essere consapevoli che la conferma di questo processo richiede diversi giorni. Il servizio è soggetto ai costi di supporto standard; la ridistribuzione della chiave del tenant non è un servizio di assistenza gratuito.
+È possibile reimpostare la chiave del tenant [contattando il supporto Microsoft](../get-started/information-support.md#to-contact-microsoft-support) per aprire un **caso di supporto tecnico di Azure Rights Management con una richiesta per reimpostare la chiave del tenant di Azure RMS**. È necessario dimostrare di essere un amministratore del tenant di Azure RMS ed essere consapevoli che la conferma di questo processo richiede diversi giorni. Il servizio è soggetto ai costi di supporto standard; la ridistribuzione della chiave del tenant non è un servizio di assistenza gratuito.
 
 Quando si ridistribuisce la chiave del tenant, il nuovo contenuto è protetto tramite la nuova chiave. Poiché questo processo viene eseguito per fasi, per un certo periodo di tempo parte del nuovo contenuto continuerà a essere protetto tramite la chiave del tenant precedente. Il contenuto protetto in precedenza rimane tale rispetto alla chiave del tenant precedente. Per supportare questo scenario, Azure RMS mantiene la chiave del tenant precedente in modo da emettere licenze per il vecchio contenuto.
 
@@ -54,7 +47,7 @@ Per esportare la configurazione di Azure RMS e la chiave del tenant, seguire le 
 
 ### Passaggio 1: Avviare l'esportazione
 
--   A tale scopo, [contattare il supporto tecnico Microsoft](../get-started/information-support#to-contact-microsoft-support) per aprire un **caso di supporto tecnico di Azure Rights Management con una richiesta di esportazione della chiave di Azure RMS**. È necessario dimostrare di essere un amministratore del tenant di Azure RMS ed essere consapevoli che la conferma di questo processo richiede diversi giorni. Il servizio è soggetto ai costi di supporto standard; l'esportazione della chiave del tenant non è un servizio di assistenza gratuito.
+-   A tale scopo, [contattare il supporto tecnico Microsoft](../get-started/information-support.md#to-contact-microsoft-support) per aprire un **caso di supporto tecnico di Azure Rights Management con una richiesta di esportazione della chiave di Azure RMS**. È necessario dimostrare di essere un amministratore del tenant di Azure RMS ed essere consapevoli che la conferma di questo processo richiede diversi giorni. Il servizio è soggetto ai costi di supporto standard; l'esportazione della chiave del tenant non è un servizio di assistenza gratuito.
 
 ### Passaggio 2: Attendere la verifica
 
@@ -97,13 +90,14 @@ In caso di violazione di sicurezza, l'azione più efficace che l'utente o Micros
 
 |Descrizione evento imprevisto|Risposta probabile|
 |------------------------|-------------------|
-|Perdita della chiave del tenant.|Ridistribuire la chiave del tenant. Vedere la sezione [Ridistribuire la chiave del tenant](operations-tenant-key#re-key-your-tenant-key) in questo articolo.|
+|Perdita della chiave del tenant.|Ridistribuire la chiave del tenant. Vedere la sezione [Ridistribuire la chiave del tenant](operations-microsoft-managed-tenant-key.md#re-key-your-tenant-key) in questo articolo.|
 |Diritti di accesso alla chiave del tenant ottenuti da un utente non autorizzato o da malware, ma nessuna perdita della chiave.|La ridistribuzione della chiave del tenant non è sufficiente ed è necessaria un'analisi della causa radice. Se l'utente non autorizzato ha ottenuto l'accesso a causa di un bug del processo o del software, questo problema deve essere risolto.|
 |Vulnerabilità scoperta nell'algoritmo RSA o nella lunghezza della chiave oppure attacchi di forza bruta diventati realizzabili a livello di calcolo.|Microsoft deve aggiornare Azure RMS per supportare nuovi algoritmi e lunghezze maggiori della chiave che siano resilienti e invitare tutti i clienti a rinnovare le proprie chiavi tenant.|
 
 
 
 
-<!--HONumber=Jun16_HO2-->
+
+<!--HONumber=Aug16_HO4-->
 
 

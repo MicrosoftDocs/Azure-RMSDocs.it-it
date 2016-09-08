@@ -1,27 +1,26 @@
 ---
 title: Amministrazione di Rights Management di Windows Azure mediante Windows PowerShell | Azure RMS
-description: 
-keywords: 
+description: "Nonostante sia possibile attivare Microsoft Azure Rights Management (Azure RMS) usando l'interfaccia di amministrazione di Office 365 o il portale di Azure classico, a tale scopo è anche possibile usare il modulo Windows PowerShell per AADRM."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/18/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a80866576dc7d6400bcebc2fc1c37bc0367bcdf3
-ms.openlocfilehash: d2aec9c4a0c462e9abfa145ee14df0144c60e584
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 26988d2e9b6e2ff320e424fa94051afa0055d234
 
 
 ---
 
 # Amministrazione di Rights Management di Windows Azure mediante Windows PowerShell
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 Nonostante sia possibile attivare Microsoft [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (Azure RMS) usando l'interfaccia di amministrazione di [!INCLUDE[o365_2](../includes/o365_2_md.md)] o il portale di Azure classico, a tale scopo è anche possibile usare il modulo Windows PowerShell per [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (AADRM).
 
@@ -54,6 +53,6 @@ Dopo l'attivazione di [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsma
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

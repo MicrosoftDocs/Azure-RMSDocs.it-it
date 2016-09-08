@@ -1,27 +1,26 @@
 ---
 title: Registrazione e analisi dell'utilizzo di Azure Rights Management | Azure RMS
-description: 
-keywords: 
+description: "Le informazioni riportate in questo argomento consentono di comprendere l'uso della funzionalità di registrazione dell'utilizzo di Azure Rights Management (Azure RMS). Il servizio Azure Rights Management è in grado di registrare qualsiasi richiesta eseguita per l'organizzazione, incluse le richieste provenienti dagli utenti, le azioni eseguite dagli amministratori di Rights Management nell'organizzazione e quelle eseguite da operatori Microsoft a supporto della distribuzione di Azure Rights Management."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/17/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 437afd88efebd9719a3db98f8ab0ae07403053f7
-ms.openlocfilehash: 28fed61b674112d2ebeb30a15a6f6217647e0b5f
+ms.sourcegitcommit: c7b194493073bcd76fa7a7d06bb31a7811e8cc3e
+ms.openlocfilehash: 868656f84f39db20f0aee8d148b00af15849fda5
 
 
 ---
 
 # Registrazione e analisi dell'uso di Rights Management di Windows Azure
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 Le informazioni riportate in questo argomento consentono di comprendere l'uso della funzionalità di registrazione dell'utilizzo di Azure Rights Management (Azure RMS). Il servizio Azure Rights Management è in grado di registrare qualsiasi richiesta eseguita per l'organizzazione, incluse le richieste provenienti dagli utenti, le azioni eseguite dagli amministratori di Rights Management nell'organizzazione e quelle eseguite da operatori Microsoft a supporto della distribuzione di Azure Rights Management.
 
@@ -241,6 +240,6 @@ Per altre informazioni sull'uso di Windows PowerShell per Azure Rights Managemen
 
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 

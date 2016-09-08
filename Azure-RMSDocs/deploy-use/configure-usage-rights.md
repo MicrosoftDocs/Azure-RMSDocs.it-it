@@ -1,27 +1,26 @@
 ---
 title: Configurazione dei diritti di utilizzo per Azure Rights Management | Azure RMS
-description: 
-keywords: 
+description: "Quando si imposta la protezione su file o messaggi di posta elettronica mediante Azure Rights Management (Azure RMS) e non si usa un modello, è necessario configurare personalmente i diritti di utilizzo. Inoltre, quando si configurano modelli personalizzati per Azure RMS, si selezionano i diritti di utilizzo che verranno applicati automaticamente quando utenti, amministratori o servizi configurati selezionano il modello."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/09/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 60f25cdcdabbfbb61072a95e39f84fed79cad871
-ms.openlocfilehash: e656729fa9ea926681e560f40c4f43ce320a0d5e
+ms.sourcegitcommit: e1f1bef9ce87dcffb8d3da920f19198aa253e8e6
+ms.openlocfilehash: bbfb00822a03609f5b81808e1e1c4cad8c02be0b
 
 
 ---
 
 # Configurazione dei diritti di utilizzo per Azure Rights Management
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 Quando si imposta la protezione su file o messaggi di posta elettronica mediante Azure Rights Management (Azure RMS) e non si usa un modello, è necessario configurare personalmente i diritti di utilizzo. Inoltre, quando si configurano modelli personalizzati per Azure RMS, si selezionano i diritti di utilizzo che verranno applicati automaticamente quando utenti, amministratori o servizi configurati selezionano il modello. Ad esempio, nel portale di Azure classico è possibile selezionare ruoli che configurano un raggruppamento logico di diritti di utilizzo oppure è possibile configurare singoli diritti.
 
@@ -40,7 +39,7 @@ Nella tabella seguente sono elencati e descritti i diritti d'uso supportati da s
 |Nome comune: **Inoltra** <br /><br />Codifica nei criteri: **FORWARD**|Abilita l'opzione per l'inoltro di un messaggio di posta elettronica e per l'aggiunta di destinatari nelle righe **A** e **Cc** . Questo diritto non si applica ai documenti, ma solo ai messaggi di posta elettronica.<br /><br />Non consente al server d'inoltro di concedere diritti ad altri utenti come parte dell'azione di inoltro.|Diritti personalizzati di Office: negati quando si usa il criterio standard **Non inoltrare**<br /><br />Nome nel portale di Azure classico: **Inoltra**<br /><br />Nome nei modelli AD RMS: **Inoltra** <br /><br />Costante o valore API: `IPC_EMAIL_FORWARD L"FORWARD"`|
 |Nome comune: **Controllo completo** <br /><br />Codifica nei criteri: **OWNER**|Concede tutti i diritti al documento. È possibile eseguire tutte le azioni disponibili.<br /><br />Include la possibilità di rimuovere la protezione e proteggere nuovamente un documento.|Diritti personalizzati di Office: come le opzioni personalizzate **Controllo completo**.<br /><br />Nome nel portale di Azure classico: **Controllo completo**<br /><br />Nome nei modelli AD RMS: **Controllo completo** <br /><br />Costante o valore API: `IPC_GENERIC_ALL L"OWNER"`|
 |Nome comune: **Stampa** <br /><br />Codifica nei criteri: **PRINT**|Abilita le opzioni per la stampa del contenuto.|Diritti personalizzati di Office: come l'opzione **Stampa contenuto** nelle autorizzazioni personalizzate. Non è un'impostazione per ogni destinatario.<br /><br />Nome nel portale di Azure classico: **Stampa**<br /><br />Nome nei modelli AD RMS: **Stampa** <br /><br />Costante o valore API: `IPC_GENERIC_PRINT L"PRINT"`|
-|Nome comune: **Rispondi** <br /><br />Codifica nei criteri: **PRINT**|Abilita l'opzione **Rispondi** in un client di posta elettronica. Non sono consentite modifiche delle righe **A** o **Cc**.|Diritti personalizzati di Office: non applicabile<br /><br />Nome nel portale di Azure classico: **Rispondi**<br /><br />Nome nei modelli AD RMS: **Rispondi** <br /><br />Costante o valore API: `IPC_EMAIL_REPLY`|
+|Nome comune: **Rispondi** <br /><br />Codifica nei criteri: **REPLY**|Abilita l'opzione **Rispondi** in un client di posta elettronica. Non sono consentite modifiche delle righe **A** o **Cc**.|Diritti personalizzati di Office: non applicabile<br /><br />Nome nel portale di Azure classico: **Rispondi**<br /><br />Nome nei modelli AD RMS: **Rispondi** <br /><br />Costante o valore API: `IPC_EMAIL_REPLY`|
 |Nome comune: **Rispondi a tutti** <br /><br />Codifica nei criteri: **REPLYALL**|Abilita l'opzione **Rispondi a tutti** in un client di posta elettronica, ma non consente di aggiungere destinatari nelle righe **A** o **Cc** .|Diritti personalizzati di Office: non applicabile<br /><br />Nome nel portale di Azure classico: **Rispondi a tutti**<br /><br />Nome nei modelli AD RMS: **Rispondi a tutti** <br /><br />Costante o valore API: `IPC_EMAIL_REPLYALL L"REPLYALL"`|
 |Nome comune: **Visualizza, Apri, Leggi** <br /><br />Codifica nei criteri: **VIEW**|Consente all’utente di aprire il documento e visualizzarne il contenuto.|Diritti personalizzati di Office: come il diritto personalizzato **Leggi**, opzione **Visualizza**.<br /><br />Nome nel portale di Azure classico: **Visualizza**<br /><br />Nome nei modelli AD RMS: **Rispondi a tutti** <br /><br />Costante o valore API: `IPC_GENERIC_READ L"VIEW"`|
 |Nome comune: **Copia** <br /><br />Codifica nei criteri: **EXTRACT**|Abilita le opzioni per la copia dei dati, inclusa l'acquisizione di schermate, nello stesso documento o in un altro.<br /><br />In alcune applicazioni consente anche di salvare l'intero documento in un formato non protetto.|Diritti personalizzati di Office: come l'opzione di diritto personalizzato **Consenti agli utenti con accesso in lettura di copiare il contenuto**.<br /><br />Nome nel portale di Azure classico: **Copia ed estrai contenuto**<br /><br />Nome nei modelli AD RMS: **Estrai** <br /><br />Costante o valore API: `IPC_GENERIC_EXTRACT L"EXTRACT"`|
@@ -102,6 +101,6 @@ Un utente vuole inviare per posta elettronica alcune informazioni a utenti speci
 
 
 
-<!--HONumber=Aug16_HO2-->
+<!--HONumber=Aug16_HO4-->
 
 

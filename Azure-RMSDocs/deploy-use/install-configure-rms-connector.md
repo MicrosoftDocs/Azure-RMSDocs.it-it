@@ -1,27 +1,26 @@
 ---
 title: Installazione e configurazione del connettore di Azure Rights Management | Azure RMS
-description: 
-keywords: 
+description: "Nelle sezioni seguenti vengono fornite informazioni sull’installazione e la configurazione del connettore RMS di Azure Rights Management (RMS). Queste procedure illustrano i passaggi da 1 a 4 di Distribuzione del connettore di Azure Rights Management."
 author: cabailey
 manager: mbaldwin
 ms.date: 06/27/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea4b7539ab311d782c3987a8fd74940aad72e65b
-ms.openlocfilehash: 165292482349e4a233ab4030f49a297f57b041ac
+ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
+ms.openlocfilehash: 9160188f6e905db7ef95365a0cc5cfbcb7522101
 
 
 ---
 
 # Installazione e configurazione del connettore di Azure Rights Management
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 Nelle sezioni seguenti vengono fornite informazioni sull’installazione e la configurazione del connettore RMS di Azure Rights Management (RMS). Queste procedure illustrano i passaggi da 1 a 4 di [Distribuzione del connettore di Azure Rights Management](deploy-rms-connector.md).
 
@@ -73,7 +72,7 @@ Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-s
     > 
     > Per eseguire il connettore RMS con privilegi minimi, creare un account dedicato a questo scopo e assegnare a questo il ruolo di amministratore di connettore di Azure RMS tramite le operazioni seguenti:
     >
-    > 1.  Se non è ancora stato fatto, scaricare e installare Windows PowerShell per Rights Management. Per altre informazioni, vedere [Installazione di Windows PowerShell per Azure Rights Management](install-powershell.md).
+    > 1.  Se non è ancora stato fatto, scaricare e installare Windows PowerShell per Rights Management. Per ulteriori informazioni, vedere [Installazione di Windows PowerShell per Azure Rights Management](install-powershell.md).
     >
     >     Avviare Windows PowerShell con l'opzione **Esegui come amministratore** e usare il comando [Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx) per connettersi al servizio Azure RMS:
     >
@@ -241,6 +240,6 @@ Se non sono stati già scaricati questi file, è possibile farlo dall' [Area dow
 Dopo l’installazione e la configurazione del connettore RMS, è possibile configurare i server locali per l'uso del connettore stesso. Passare a [Configurazione dei server per il connettore di Azure Rights Management](configure-servers-rms-connector.md).
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

@@ -1,20 +1,19 @@
 ---
 title: Guida di riferimento di PowerShell per i modelli personalizzati | Azure RMS
-description: 
-keywords: 
+description: "Tutte le operazioni che è possibile eseguire nel portale di Azure classico per creare e gestire modelli possono essere eseguite anche nella riga di comando tramite PowerShell. È inoltre possibile esportare e importare modelli, affinché sia possibile copiarli tra tenant o eseguire modifiche in blocco di proprietà complesse nei modelli, ad esempio nomi e descrizioni in più lingue."
 author: cabailey
 manager: mbaldwin
-ms.date: 05/20/2016
+ms.date: 08/25/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 332e102cb27854314b93a71bfeae82a95c9a7812
-ms.openlocfilehash: 645f9ed4080e3b38fcda9afe148923c021046724
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: 5068021b504e9f943c0d4e57f13d58fc5cb5d391
 
 
 ---
@@ -23,7 +22,7 @@ ms.openlocfilehash: 645f9ed4080e3b38fcda9afe148923c021046724
 
 # Guida di riferimento di PowerShell per i modelli personalizzati
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 Tutte le operazioni che è possibile eseguire nel portale di Azure classico per creare e gestire modelli possono essere eseguite anche nella riga di comando tramite PowerShell. È inoltre possibile esportare e importare modelli, affinché sia possibile copiarli tra tenant o eseguire modifiche in blocco di proprietà complesse nei modelli, ad esempio nomi e descrizioni in più lingue.
 
@@ -34,7 +33,7 @@ Tutte le operazioni che è possibile eseguire nel portale di Azure classico pe
 > 
 > Se il modulo PowerShell è stato installato in precedenza, eseguire il seguente comando in una finestra di PowerShell per verificare il numero di versione: `(Get-Module aadrm -ListAvailable).Version`
 
-Per le istruzioni di installazione, vedere [Installazione di Windows PowerShell per Microsoft Azure Rights Management](install-powershell.md).
+Per istruzioni di installazione, vedere [Installazione di Windows PowerShell per Azure Rights Management](install-powershell.md).
 
 I cmdlet che supportano la creazione e la gestione di modelli sono i seguenti:
 
@@ -60,6 +59,6 @@ I cmdlet che supportano la creazione e la gestione di modelli sono i seguenti:
 [Configurare modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Aug16_HO4-->
 
 

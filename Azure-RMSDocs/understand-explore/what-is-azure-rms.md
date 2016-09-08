@@ -1,33 +1,26 @@
 ---
-# required metadata
-
-title: Informazioni su Microsoft Azure Rights Management | Azure RMS
-description:
-keywords:
+title: Informazioni su Microsoft Azure Rights Management | (Azure RMS)
+description: "Azure Rights Management (RMS Azure) è una soluzione per la protezione delle informazioni destinata alle organizzazioni che vogliono proteggere i dati nell'impegnativo ambiente di lavoro attuale."
 author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2016
+ms.date: 08/24/2016
 ms.topic: article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: esaggese
 ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
+translationtype: Human Translation
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: f6f2b382766ea91ed463c18655efb07d206213af
+
 
 ---
 
 # Informazioni su Microsoft Azure Rights Management
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 
 Azure Rights Management (RMS Azure) è una soluzione per la protezione delle informazioni destinata alle organizzazioni che vogliono proteggere i dati nell'impegnativo ambiente di lavoro attuale.
@@ -43,7 +36,7 @@ Aspetto molto importante, le persone e i servizi autorizzati, ad esempio quelli 
 La figura seguente mostra il funzionamento di Azure RMS come soluzione Rights Management per Office 365, oltre che per server e servizi locali. Indica anche che supporta dispositivi degli utenti di uso comune che eseguono Windows, Mac OS, iOS, Android e Windows Phone.
 
 > [!NOTE]
-È possibile usare Azure RMS con abbonamenti al cloud diversi, inclusi Office 365, Enterprise Mobility Suite e Azure RMS Premium. Per altre informazioni, vedere [Sottoscrizioni cloud che supportano Azure RMS](../get-started/requirements-subscriptions.md).
+È possibile usare Azure RMS con abbonamenti al cloud diversi, inclusi Office 365, Enterprise Mobility Suite e Azure RMS Premium. Per altre informazioni, vedere l'articolo relativo alle [sottoscrizioni cloud che supportano Azure RMS](../get-started/requirements-subscriptions.md).
 
 ![Funzionamento di Azure RMS](../media/AzRMS_elements.png)
 
@@ -59,14 +52,15 @@ Per altre informazioni su Azure RMS:
 
 
 
-Per conoscere nel dettaglio e provare Azure RMS, usare l'[Esercitazione di avvio rapido per Azure Rights Management](../get-started/quick-start-tutorial.md).
+Per approfondire e provare Azure RMS, usare l'[esercitazione di avvio rapido per Azure Rights Management](../get-started/quick-start-tutorial.md).
 
 Tuttavia, se si è pronti a iniziare la distribuzione di Azure RMS per l'organizzazione, usare la [Guida di orientamento per la distribuzione di Azure Rights Management](../plan-design/deployment-roadmap.md) per i passaggi di distribuzione e i collegamenti a istruzioni procedurali.
 
 > [!TIP]
-> Per altre informazioni e indicazioni, usare le risorse e i collegamenti disponibili in [Informazioni e supporto per Azure Rights Management](../get-started/information-support.md).
+> Per altre informazioni e indicazioni, usare le risorse e i collegamenti in [Informazioni e supporto per Azure Rights Management](../get-started/information-support.md).
 
 
-<!--HONumber=May16_HO1-->
+
+<!--HONumber=Aug16_HO4-->
 
 

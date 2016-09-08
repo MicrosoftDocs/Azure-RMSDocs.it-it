@@ -4,9 +4,9 @@ description: "L'ultimo passaggio di questa esercitazione consente di provare rap
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2016
+ms.date: 08/24/2016
 ms.topic: get-started-article
-ms.prod: azure
+ms.prod: 
 ms.service: rights-management
 ms.technology: 
 ms.assetid: aa06826d-c227-449b-93ea-6ce394608997
@@ -18,8 +18,8 @@ ms.suite: ems
 ms.tgt_pltfrm: 
 ms.custom: 
 translationtype: Human Translation
-ms.sourcegitcommit: ed50d87138c428fadfd22cd5b3ef3c7f7e421848
-ms.openlocfilehash: 9c335e054d4aed1a8cca654420a580d02a4c849f
+ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
+ms.openlocfilehash: 5884914e2ff69c4db40d4e874541f42b9a0e7df5
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 9c335e054d4aed1a8cca654420a580d02a4c849f
 
 # Passaggio 5 dell'esercitazione per l'avvio rapido di Azure RMS: Rilevare il documento protetto
 
-*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Rights Management, Office 365*
 
 
 Passare a: 
@@ -56,7 +56,7 @@ Questo passaggio è facoltativo, anche se la maggior parte degli utenti desidera
 
 1.  In Outlook, nella scheda **Home** , nel gruppo **RMS** , fare clic su **Rileva utilizzo**.
 
-2.  Se viene visualizzata la pagina **Proteggi e condividi nelle condizioni** , fare clic su **Accedi** e fornire nuovamente il nome utente e la password.
+2.  Se viene visualizzata la pagina **Proteggere e condividere in base alle proprie esigenze**, fare clic su **Accedi** e inserire nuovamente il nome utente e la password.
 
 3.  Nella pagina **Documenti condivisi** sarà presente il documento allegato al messaggio di posta elettronica, **Confidential.docx**. Al momento è l'unico file visualizzato, ma se vengono condivisi altri documenti protetti, l'elenco si allunga di conseguenza.
 
@@ -91,6 +91,6 @@ In alternativa, per un elenco di scenari specifici con relativi passaggi di conf
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Aug16_HO4-->
 
 
