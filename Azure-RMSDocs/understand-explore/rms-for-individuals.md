@@ -12,8 +12,8 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
-ms.openlocfilehash: 52a76105b182c7fe6aa9a648d1a5d7ae4e4a1a20
+ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
+ms.openlocfilehash: 15be32e029637321bf8e4f7c1a53f918efda7f23
 
 
 ---
@@ -29,7 +29,7 @@ Tali utenti possono iscriversi per ottenere un account aziendale o dell'istituto
 Grazie all'uso dell'applicazione di condivisione Rights Management su computer Windows, questi utenti possono inoltre proteggere i file localmente o inviarli tramite posta elettronica a persone all'interno o all'esterno dell'organizzazione. Se i destinatari del messaggio di posta elettronica inviato fanno parte di un'organizzazione che non gestisce gli account utente in Azure, possono iscriversi anch'essi per ottenere un account RMS per singoli utenti che consente di leggere l'allegato di posta elettronica protetto.
 
 > [!IMPORTANT]
-> Questa sottoscrizione gratuita assicura che le persone autorizzate possano sempre leggere i file protetti. Attualmente è anche possibile usare questa sottoscrizione gratuita per proteggere i documenti e creare nuovi messaggi di posta elettronica protetti. La capacità di creare nuovo contenuto protetto è però riservata solo all'uso della versione di valutazione e potrebbe essere rimossa in futuro. Per altre informazioni e per le eventuali modifiche relative all'uso di RMS per consentire a utenti singoli di proteggere i contenuti, vedere le [condizioni per l'uso del servizio Microsoft Rights Management](https://portal.aadrm.com/Legal/Service).
+> Questa sottoscrizione gratuita assicura che le persone autorizzate possano sempre leggere i file protetti. Attualmente è anche possibile usare questa sottoscrizione gratuita per proteggere i documenti e creare nuovi messaggi di posta elettronica protetti. La capacità di creare nuovo contenuto protetto è però riservata solo all'uso della versione di valutazione e potrebbe essere rimossa in futuro. 
 
 Per altre informazioni su come proteggere i file tramite l'applicazione Rights Management sharing gratuita, vedere la [Guida dell'utente dell'applicazione Rights Management sharing](../rms-client/sharing-app-user-guide.md).
 
@@ -41,6 +41,6 @@ Per istruzioni dettagliate e per una panoramica tecnica di ciò che avviene in b
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 
