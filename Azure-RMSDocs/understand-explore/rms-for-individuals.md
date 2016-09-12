@@ -1,6 +1,6 @@
 ---
 title: RMS per utenti singoli e Azure Rights Management | Azure RMS
-description: "RMS per utenti singoli è una sottoscrizione gratuita self-service per gli utenti di un'organizzazione ai quali sono stati inviati file sensibili protetti da Microsoft Azure Rights Management (Azure RMS), ma che non possono essere autenticati perché il loro reparto IT non gestisce per loro un account di Azure. Ad esempio, il reparto IT non dispone di Office 365 o non utilizza i servizi di Azure."
+description: "Informazioni su RMS per utenti singoli, una sottoscrizione gratuita self-service per gli utenti di un'organizzazione ai quali sono stati inviati file sensibili protetti da Microsoft Azure Rights Management (Azure RMS), ma che non possono essere autenticati perché il loro reparto IT non gestisce per loro un account di Azure."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/24/2016
@@ -12,8 +12,8 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 2e80c1e02e47d07678b38f6d6cb229a9db8307d4
+ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
+ms.openlocfilehash: 52a76105b182c7fe6aa9a648d1a5d7ae4e4a1a20
 
 
 ---
