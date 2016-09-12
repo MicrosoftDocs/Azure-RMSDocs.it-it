@@ -1,9 +1,9 @@
 ---
 title: Rimozione delle autorizzazioni e disattivazione di Azure Rights Management | Azure RMS
-description: "È sempre possibile controllare se l'organizzazione protegge il contenuto tramite Azure RMS e, se si decide di non usare più questa soluzione di protezione delle informazioni, si può essere certi che il contenuto protetto in precedenza non verrà bloccato. Se non è necessario l'accesso continuo a contenuti protetti precedentemente, è sufficiente disattivare il servizio e lasciare scadere la sottoscrizione di Azure Rights Management. Ad esempio, questa modalità è appropriata dopo aver completato la fase di testing prima della distribuzione in un ambiente di produzione."
+description: "Informazioni e istruzioni se si decide di non voler più usare questa soluzione di protezione delle informazioni."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 40e4997f67a078ec781f1e7800599554858777a8
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: 275cc46ba34eae246ccc52682073f1f4f90cb8a7
 
 
 ---
