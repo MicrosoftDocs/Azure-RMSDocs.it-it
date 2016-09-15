@@ -1,17 +1,17 @@
 ---
-title: Esercitazione introduttiva di Azure Information Protection, passaggio 2 | Azure Rights Management
+title: Esercitazione introduttiva di Azure Information Protection, passaggio 2 | Azure Information Protection
 description: "Passaggio 2 dell'esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell'organizzazione. L'esercitazione è articolata in 4 passaggi, eseguibili in meno di 15 minuti."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/08/2016
+ms.date: 09/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 679d03c499ccdd044444c73ebef8f59b281278cd
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: 9125757ba2cce865d73acab341d3e3b6ff36ba57
 
 
 ---
@@ -37,7 +37,7 @@ Il criterio predefinito disponibile con Azure è utilizzabile senza alcuna opera
     
     - Etichette per la classificazione: **Personal** (Personale), **Public** (Pubblico), **Internal** (Interno), **Confidential** (Riservato) e **Secret** (Segreto). Leggere la descrizione di ognuna per comprendere l'uso a cui è destinata. Si noti che per **Secret** (Segreto) esistono due etichette secondarie: **All Company** (Tutta la società) e **My Group** (Gruppo personale). Questo è un esempio di sottocategorie di una classificazione.
 
-    - Per impostazione predefinita, per le etichette **Internal** (Interno), **Confidential** (Riservato) e **Secret** (Segreto) sono configurati contrassegni visivi (ad esempio piè di pagina, intestazione, filigrana). Per nessuna delle etichette è impostata la protezione. Le tre impostazioni globali, poi, non sono impostate. I documenti e i messaggi di posta elettronica non devono quindi necessariamente avere un'etichetta. Non esiste un'etichetta predefinita e gli utenti non sono obbligati a giustificare un eventuale abbassamento del livello di riservatezza.
+    - Per impostazione predefinita, per le etichette **Internal** (Interno), **Confidential** (Riservato) e **Secret** (Segreto) sono configurati contrassegni visivi (ad esempio piè di pagina, intestazione, filigrana). Per nessuna delle etichette è impostata la protezione. Le tre impostazioni globali, poi, non sono impostate. I documenti e i messaggi di posta elettronica non devono quindi necessariamente avere un'etichetta. Non esiste un'etichetta predefinita e gli utenti non sono obbligati a giustificare un eventuale abbassamento del livello di classificazione.
 
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Criterio predefinito](../media/info-protect-policy.png)
 
@@ -45,7 +45,7 @@ Nel corso di questa esercitazione verranno modificate alcune impostazioni global
 
 -  **Select the default label** (Selezionare l'etichetta predefinita): selezionare **Internal** (Interno).
 
-- **Users must provide justification when lowering the sensitivity level** (Gli utenti devono giustificare l'abbassamento del livello di riservatezza): selezionare **On**.
+- **Users must provide justification to set a lower classification label, remove a label, or remove protection. **. (Gli utenti sono obbligati a giustificare un abbassamento del livello di classificazione, la rimozione di un'etichetta o la rimozione della protezione). Impostare su **On** (On).
 
 Verranno ora modificate le impostazioni di una delle etichette, **Confidential** (Riservato):
 
@@ -97,6 +97,6 @@ Dopo aver esaminato il criterio predefinito e aver apportato alcune modifiche, i
 [Passaggio 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

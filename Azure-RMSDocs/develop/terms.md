@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 5340673beb2a6f2dd4acd96fd599c0b90b9991dd
+ms.sourcegitcommit: 99390fb78a9da3bef8a67c8595770a84fb9bb89a
+ms.openlocfilehash: a32bfc59dd72efbcb239845ddabfa9bd3a969127
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: 5340673beb2a6f2dd4acd96fd599c0b90b9991dd
 Una raccolta di definizioni di termini specifici di Rights Management Services.
 
 **Algoritmo deprecato**  
-Un'impostazione modale che implementa uno schema di protezione del contenuto precedente che fa riferimento alla modalità di crittografia di un cookbook elettronico. In questo SDK, l'impostazione consente di generare licenze compatibili con la libreria MSDRM usata da [AD Rights Management Services SDK](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx).
+Un'impostazione modale che implementa uno schema di protezione del contenuto precedente che fa riferimento alla modalità di crittografia ECB (Electronic Codebook). In questo SDK, l'impostazione consente di generare licenze compatibili con la libreria MSDRM usata da [AD Rights Management Services SDK](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx).
 
 Questa impostazione può causare la protezione del contenuto da parte dell'applicazione in un modo non conforme allo standard dei clienti per la protezione del contenuto.
 
@@ -46,6 +46,6 @@ Il formato PFile è trasparente allo sviluppatore dell'applicazione in quanto è
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

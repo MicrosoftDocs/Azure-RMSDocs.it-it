@@ -1,5 +1,5 @@
 ---
-title: Come configurare un'etichetta per applicare la protezione di Rights Management | Azure Rights Management
+title: Come configurare un'etichetta per applicare la protezione di Rights Management | Azure Information Protection
 description: "È possibile proteggere i documenti e i messaggi di posta elettronica più sensibili tramite il servizio Rights Management, che usa criteri di crittografia, identità e autorizzazione per prevenire la perdita di dati. Questa protezione viene applicata quando si configura un'etichetta per usare un modello di Rights Management."
 manager: mbaldwin
 ms.date: 08/15/2016
@@ -9,8 +9,8 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 23e62c82a38e696b0708f3b599d24f3a0f337fd8
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: 9cf13b5b795fc5e236ee3f48914cbbd406ad3e7e
 
 
 ---
@@ -57,7 +57,7 @@ Per altre informazioni su Azure Rights Management e sul relativo funzionamento, 
     
     Nella maggior parte dei casi, selezionare **Azure RMS**. Non selezionare AD RMS a meno che non siano stati letti e compresi i prerequisiti e le restrizioni relativi a questa configurazione, che viene talvolta definita "*hold your own key*" (HYOK). Per altre informazioni, vedere [Requisiti e restrizioni HYOK per la protezione di AD RMS](configure-adrms-restrictions.md).
     
-4. Se si seleziona Azure RMS: per **Selezionare il modello RMS da**, fare clic sulla casella a discesa e selezionare il modello da usare per proteggere i documenti e i messaggi di posta elettronica con questa etichetta.
+4. Se si seleziona Azure RMS: per **selezionare il modello RMS**, fare clic sulla casella di riepilogo a discesa e selezionare il modello o l'opzione Rights Management che si vuole usare per proteggere i documenti e i messaggi di posta elettronica con questa etichetta.
 
     > [!NOTE] 
     > Se si crea un nuovo modello dopo aver aperto il pannello **Etichetta**, chiudere il pannello e tornare al passaggio 2, per fare in modo che Azure recuperi il modello appena creato e ne consenta la selezione.
@@ -78,6 +78,6 @@ Per altre informazioni sulla configurazione dei criteri di Azure Information Pro
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 
