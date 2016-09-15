@@ -1,6 +1,6 @@
 ---
 title: Esercitazione introduttiva di Azure Information Protection, passaggio 1 | Azure Rights Management
-description: "Passaggio 1 dell'esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell'organizzazione. L'esercitazione è articolata in 4 passaggi, eseguibili in circa 10 minuti."
+description: "Passaggio 1 dell'esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell'organizzazione. L'esercitazione è articolata in 4 passaggi, eseguibili in meno di 15 minuti."
 author: cabailey
 manager: mbaldwin
 ms.date: 07/291/2016
@@ -10,8 +10,8 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: b608ee307bf7388ab7c7ed70cc1286db5df176c8
+ms.sourcegitcommit: da0145444a7d0abb6407ed2ccbb581d4dcdd10d6
+ms.openlocfilehash: 38bc0f85acad64d56ef92078ded37a3367c72f10
 
 
 ---

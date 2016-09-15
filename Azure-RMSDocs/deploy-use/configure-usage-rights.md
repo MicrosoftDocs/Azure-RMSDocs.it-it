@@ -1,6 +1,6 @@
 ---
 title: Configurazione dei diritti di utilizzo per Azure Rights Management | Azure RMS
-description: "Quando si imposta la protezione su file o messaggi di posta elettronica mediante Azure Rights Management (Azure RMS) e non si usa un modello, è necessario configurare personalmente i diritti di utilizzo. Inoltre, quando si configurano modelli personalizzati per Azure RMS, si selezionano i diritti di utilizzo che verranno applicati automaticamente quando utenti, amministratori o servizi configurati selezionano il modello."
+description: Informazioni sui diritti specifici usati quando si proteggono i file o i messaggi di posta elettronica tramite Azure Rights Management (Azure RMS) e relativa identificazione.
 author: cabailey
 manager: mbaldwin
 ms.date: 08/25/2016
@@ -12,8 +12,8 @@ ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e1f1bef9ce87dcffb8d3da920f19198aa253e8e6
-ms.openlocfilehash: bbfb00822a03609f5b81808e1e1c4cad8c02be0b
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: ab1b2f652d34183e1d95fd0a387abb10c3aff9b1
 
 
 ---

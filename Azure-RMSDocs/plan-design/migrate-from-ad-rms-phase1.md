@@ -1,9 +1,9 @@
 ---
 title: Migrazione da AD RMS ad Azure Rights Management - Fase 1 | Azure RMS
-description: Usare le informazioni seguenti per la fase 1 della migrazione da AD RMS ad Azure Rights Management (Azure RMS). Queste procedure illustrano i passaggi da 1 a 4 di Migrazione da AD RMS ad Azure Rights Management.
+description: Fase 1 della migrazione da AD RMS ad Azure Rights Management (Azure RMS) che illustra i passaggi da 1 a 4 della migrazione da AD RMS ad Azure Rights Management.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: d4e5502568147a51025434ad78cbfdede3eb3207
+ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
+ms.openlocfilehash: 6a4b80ed44f149116d22efb7781503f5b157f369
 
 
 ---

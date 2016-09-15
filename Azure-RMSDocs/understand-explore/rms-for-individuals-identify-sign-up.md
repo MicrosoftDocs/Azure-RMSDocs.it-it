@@ -1,9 +1,9 @@
 ---
 title: Come determinare se gli utenti hanno effettuato l'iscrizione a RMS per utenti singoli | Azure RMS
-description: "Per sapere se un utente si è iscritto per ottenere RMS per utenti singoli, un amministratore può usare uno o più di questi metodi."
+description: "Per sapere se un utente si è iscritto per ottenere RMS per utenti singoli, È possibile usare uno qualsiasi o una combinazione dei metodi descritti in questo articolo."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: dc8c0a69078ffa3be87a5fb02bf86d9afe2dc27e
+ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
+ms.openlocfilehash: fb9331686f5b04ba7aea8653c412127fd6913033
 
 
 ---

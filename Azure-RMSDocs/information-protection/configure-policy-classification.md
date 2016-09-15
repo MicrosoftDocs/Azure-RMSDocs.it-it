@@ -2,15 +2,15 @@
 title: Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection | Azure Rights Management
 description: "Quando si configurano le condizioni per un'etichetta, è possibile assegnare automaticamente un'etichetta a un documento o messaggio di posta elettronica. In alternativa, è possibile richiedere agli utenti di selezionare l'etichetta consigliata."
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 0e6baca43c7a4f2e91f45222f5f6f233b3eeb438
+ms.sourcegitcommit: 87069b73e5f8959955b9967070bd3bcb5e7dc196
+ms.openlocfilehash: 357b012bd8679d7e24bfe3ae40c3160e4b69c01f
 
 
 ---
@@ -27,7 +27,7 @@ Quando si configurano le condizioni per un'etichetta, è possibile assegnare aut
  
 - La classificazione consigliata si applica a Word, Excel e PowerPoint quando i file vengono salvati.
 
-Quando si configurano le condizioni, è possibile usare schemi predefiniti, come numeri di carta di credito o codici fiscali. In alternativa, è possibile definire una stringa o un modello personalizzato come condizione per la classificazione automatica. Per altre informazioni sulle condizioni, vedere la sezione [Informazioni dalle condizioni predefinite](#information-about-the-built-in-conditions).
+Quando si configurano le condizioni, è possibile usare schemi predefiniti, come numeri di carta di credito o codici fiscali. In alternativa, è possibile definire una stringa o un modello personalizzato come condizione per la classificazione automatica. Queste condizioni si applicano al corpo del testo nei documenti e nei messaggi di posta elettronica, alle intestazioni e ai piè di pagina. Per altre informazioni sulle condizioni, vedere la sezione [Informazioni dalle condizioni predefinite](#information-about-the-built-in-conditions).
 
 Come vengono valutate più condizioni quando si applicano a più etichette:
 
@@ -224,6 +224,6 @@ Per altre informazioni sulla configurazione dei criteri di Azure Information Pro
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

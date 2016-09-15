@@ -1,9 +1,9 @@
 ---
 title: Protezione RMS con l'infrastruttura di classificazione file (FCI, File Classification Infrastructure) per Windows Server | Azure RMS
-description: Usare questo articolo per ottenere istruzioni e uno script che consentono di usare il client Rights Management (RMS) con lo strumento di protezione RMS per configurare Gestione risorse file server e l'infrastruttura di classificazione file.
+description: "Istruzioni per usare il client Rights Management (RMS) con lo strumento di protezione RMS per configurare Gestione risorse file server e la funzionalità Infrastruttura di classificazione file."
 author: cabailey
 manager: mbaldwin
-ms.date: 06/14/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 431eb994070391a78b0b8e34b1afb668f0981f0f
+ms.sourcegitcommit: b8a7a433652e76ff1069f0f0a7465483b13c065c
+ms.openlocfilehash: b350a35d44e743de94446409b1bba4256ca38728
 
 
 ---
@@ -126,7 +126,7 @@ Al termine di queste istruzioni tutti i file della cartella selezionata saranno 
 
     Per altre informazioni sulla firma degli script di Windows PowerShell, vedere [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) nella raccolta di documentazione di PowerShell.
 
-4.  Salvare il file localmente su ogni file server che eseguirà Gestione risorse file con l'interfaccia di classificazione file. Ad esempio, salvare il file in **C:\RMS-Protection**. Proteggere questo file usando le autorizzazioni NTFS in modo che utenti non autorizzati non possano modificarlo.
+4.  Salvare il file localmente su ogni file server che eseguirà Gestione risorse file con l'interfaccia di classificazione file. Ad esempio, salvare il file in **C:\RMS-Protection**. Se si usa un percorso o un nome di cartella diverso, scegliere un percorso e una cartella che non includono spazi. Proteggere questo file usando le autorizzazioni NTFS in modo che utenti non autorizzati non possano modificarlo.
 
 A questo punto si è pronti per iniziare la configurazione di Gestione risorse file server.
 
@@ -303,6 +303,6 @@ A questo punto è sufficiente creare una nuova attività di gestione file che us
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

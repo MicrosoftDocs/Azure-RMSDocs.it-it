@@ -1,9 +1,9 @@
 ---
 title: Rilevare e revocare i documenti quando si usa l'applicazione RMS sharing | Azure RMS
-description: "Dopo avere protetto i documenti tramite l'applicazione RMS sharing, se l'organizzazione usa Azure Rights Management invece di Active Directory Rights Management Services, è possibile tenere traccia del modo in cui le persone usano i documenti protetti. Se necessario, è anche possibile revocare l'accesso a questi documenti quando si desidera interromperne la condivisione. A tale scopo, utilizzare il sito di rilevamento del documento, a cui è possibile accedere dai computer Windows, i computer Mac e anche da tablet e telefoni."
+description: "Dopo che i documenti sono stati protetti usando l'applicazione RMS sharing, è possibile rilevare come tali documenti vengono usati dagli utenti. Se necessario, è anche possibile revocare l'accesso a questi documenti quando si desidera interromperne la condivisione."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: d27a516339a9687cb5ce117b6a2aa93730863c2d
+ms.sourcegitcommit: 44541b6fe2567d23174b26cb42fec0731f5d3f58
+ms.openlocfilehash: 2117291a7204dae86b3a6d378ab6af4d84435417
 
 
 ---

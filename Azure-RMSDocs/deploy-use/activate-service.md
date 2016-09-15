@@ -1,9 +1,9 @@
 ---
 title: Attivazione di Azure Rights Management | Azure RMS
-description: "Quando si attiva Azure RMS, l'organizzazione può iniziare a proteggere i dati importanti usando le applicazioni e i servizi che supportano questa soluzione di protezione delle informazioni. Gli amministratori possono inoltre gestire e monitorare i file e i messaggi di posta elettronica protetti di proprietà dell'azienda. È necessario abilitare il servizio prima di poter iniziare a usare le funzionalità di Information Rights Management (IRM) in Office, SharePoint ed Exchange per proteggere eventuali file sensibili o riservati."
+description: "È necessario attivare Azure RMS prima che l'organizzazione possa iniziare a proteggere i dati importanti usando le applicazioni e i servizi che supportano questa soluzione di protezione delle informazioni."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: d8ec823553934442ecb1e0a0b288eaa6d9c21ea6
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: 2a0e1984e76ae355bfab099e0aced956ef93a7de
 
 
 ---

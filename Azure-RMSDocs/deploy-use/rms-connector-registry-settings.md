@@ -1,9 +1,9 @@
 ---
 title: Impostazioni del Registro di sistema per il connettore RMS | Azure RMS
-description: "Usare le tabelle riportate nelle sezioni seguenti solo se si vuole controllare o aggiungere manualmente impostazioni del Registro di sistema sui server che eseguono Exchange, SharePoint o Windows Server, operazioni che consentono di configurare questi ultimi per l'uso del connettore RMS. Il metodo consigliato per configurare i server è usare lo strumento di configurazione server per il connettore Microsoft RMS."
+description: "Informazioni sulle impostazioni del Registro di sistema sui server tramite il connettore RMS. Il metodo consigliato per configurare tali impostazioni è usare lo strumento di configurazione server per il connettore Microsoft RMS."
 author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 49fff7c2e0c06d26751136b681022f221f80d6cd
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: 5ff109543685049be5e89a12ea037de941736547
 
 
 ---

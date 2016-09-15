@@ -1,9 +1,9 @@
 ---
 title: Installazione e configurazione del connettore di Azure Rights Management | Azure RMS
-description: "Nelle sezioni seguenti vengono fornite informazioni sull’installazione e la configurazione del connettore RMS di Azure Rights Management (RMS). Queste procedure illustrano i passaggi da 1 a 4 di Distribuzione del connettore di Azure Rights Management."
+description: Informazioni sull'installazione e la configurazione del connettore Azure Rights Management (RMS). Queste procedure illustrano i passaggi da 1 a 4 di Distribuzione del connettore di Azure Rights Management.
 author: cabailey
 manager: mbaldwin
-ms.date: 06/27/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 9160188f6e905db7ef95365a0cc5cfbcb7522101
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: c4c619caca525191abe6527ca8f54c37e10cf117
 
 
 ---
