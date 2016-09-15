@@ -1,9 +1,9 @@
 ---
 title: Pianificazione e implementazione della chiave del tenant di Azure Rights Management | Azure RMS
-description: "In questo argomento sono contenute informazioni per pianificare e gestire la chiave del tenant RMS (Rights Management Service) per Azure RMS. Anziché affidare a Microsoft la gestione della chiave del tenant (impostazione predefinita), per rispettare i criteri aziendali potrebbe essere necessario, ad esempio, gestire autonomamente la propria chiave del tenant in base alla modalità BYOK (Bring Your Own Key)."
+description: "Informazioni per pianificare e gestire la chiave del tenant di Rights Management (RMS) per Azure RMS. Anziché affidare a Microsoft la gestione della chiave del tenant (impostazione predefinita), per rispettare i criteri aziendali potrebbe essere necessario, ad esempio, gestire autonomamente la propria chiave del tenant in base alla modalità BYOK (Bring Your Own Key)."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 3a45a12cba766fed074d8b5fcf861164802d2441
+ms.sourcegitcommit: eec7cc8b20435df11d7b8f89c4b9e9d0f039dc55
+ms.openlocfilehash: 25d47ab488474ed756b3139bb9d42d420cea25f7
 
 
 ---
@@ -64,7 +64,7 @@ Nel secondo diagramma vengono illustrati i passaggi aggiuntivi necessari quando 
 
 ![Ciclo di vita della chiave del tenant di Azure RMS: chiave gestita dall'utente, BYOK](../media/RMS_BYOK_onprem4.png)
 
-Se si decide di affidare a Microsoft la gestione della chiave del tenant, non è necessaria alcuna azione aggiuntiva per generare la chiave ed è possibile passare direttamente alla sezione [Passaggi successivi](plan-implement-tenant-key.md#next-steps).
+Se si decide di affidare a Microsoft la gestione della chiave del tenant, non è necessaria alcuna azione aggiuntiva per generare la chiave ed è possibile passare direttamente alla sezione [Passaggi successivi](plan-implement-tenant-key.md#next-steps).  
 
 Se invece si decide di gestire in modo autonomo la propria chiave del tenant, leggere le sezioni seguenti per ottenere altre informazioni.
 
@@ -74,7 +74,7 @@ Usare le informazioni e le procedure descritte in questa sezione se si è deciso
 
 
 > [!IMPORTANT]
-> Se si è già iniziato a usare [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] (il servizio è attivo) e sono presenti utenti che eseguono Office 2010, [contattare il supporto tecnico Microsoft](../get-started/information-support.md#to-contact-microsoft-support) prima di eseguire queste procedure. A seconda dello scenario e dei requisiti, è comunque possibile usare la modalità BYOK con alcune limitazioni o con passaggi aggiuntivi.
+> Se si è iniziato a usare Azure RMS con una chiave del tenant gestita da Microsoft e si vuole gestire la chiave del tenant autonomamente (passare alla modalità BYOK), i documenti e i messaggi di posta elettronica precedentemente protetti saranno comunque accessibili tramite una chiave archiviata. Tuttavia, se sono presenti utenti che eseguono Office 2010, [contattare il supporto tecnico Microsoft](../get-started/information-support.md#to-contact-microsoft-support) prima di eseguire queste procedure. Questi computer necessiteranno di alcuni passaggi di configurazione aggiuntivi.
 > 
 > [Contattare il supporto tecnico Microsoft](../get-started/information-support.md#to-contact-microsoft-support) anche quando l'organizzazione prevede criteri specifici per la gestione delle chiavi.
 
@@ -136,6 +136,6 @@ Dopo la pianificazione e, se necessario, la generazione della chiave del tenant,
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

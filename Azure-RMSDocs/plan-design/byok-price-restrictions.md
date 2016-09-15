@@ -1,9 +1,9 @@
 ---
 title: "Prezzi e restrizioni della modalità BYOK | Azure RMS"
-description: "Le organizzazioni che hanno una sottoscrizione che include Azure Rights Management possono usare chiavi gestite dal cliente (BYOK) in Insieme di credenziali delle chiavi di Azure e registrarne l'utilizzo senza alcun costo aggiuntivo. Tuttavia, per usare Insieme di credenziali delle chiavi di Azure, è necessaria una sottoscrizione di Azure che supporti l'insieme di credenziali delle chiavi con chiavi protette dal modulo di protezione hardware. L'uso di una chiave in Insieme di credenziali delle chiavi di Azure comporta l'addebito di una tariffa mensile. Per altre informazioni, vedere la pagina dei prezzi di Insieme di credenziali delle chiavi di Azure."
+description: Informazioni sulle restrizioni quando si usano chiavi gestite dal cliente (&quot;bring your own key&quot; o BYOK) con Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 8505032a2a12f84c245e834e71d0b7b0d12e894f
+ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
+ms.openlocfilehash: d704f3d9357993bdb01a38cda6f434ab1583b627
 
 
 ---

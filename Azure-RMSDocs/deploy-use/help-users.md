@@ -1,9 +1,9 @@
 ---
 title: Consentire agli utenti di proteggere i file tramite Azure Rights Management | Azure RMS
-description: "Dopo aver distribuito e configurato Azure Rights Management (RMS) per l'organizzazione, è necessario fornire indicazioni e istruzioni agli utenti, agli amministratori e agli addetti del servizio help desk."
+description: Informazioni per fornire istruzioni a utenti, amministratori e addetti del servizio help desk dopo aver distribuito e configurato Azure Rights Management (Azure RMS) per l'organizzazione.
 author: cabailey
 manager: mbaldwin
-ms.date: 06/09/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 329b9cb2fd6507638924f836eb6dffe8ffca43d1
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: 0ff8282d01957af1a0dd59673ae2e94a6d879f39
 
 
 ---

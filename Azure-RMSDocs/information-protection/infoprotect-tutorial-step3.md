@@ -3,15 +3,15 @@ title: Esercitazione introduttiva di Azure Information Protection, passaggio 3 |
 description: "Passaggio 3 dell'esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell'organizzazione. L'esercitazione è articolata in 4 passaggi, eseguibili in meno di 15 minuti."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/10/2016
+ms.date: 08/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 320cd688ba5aabcb966009907d568033149953e3
+ms.sourcegitcommit: ba6887a5c9bab18867d07cfc98e8416bf102c211
+ms.openlocfilehash: 83ee0eef8262cc1fe4d18e9d183509847adddd97
 
 
 ---
@@ -26,7 +26,7 @@ In questo passaggio verrà installato il client di Azure Information Protection 
 
 1. In un PC con Office installato ma in cui Word non sia aperto [scaricare il client di Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018) dall'Area download Microsoft. 
 
-2. Eseguire **AZInfoProtection.exe** e seguire le istruzioni per l'installazione del client.
+2. Eseguire **AzInfoProtection_v233.exe** e attenersi alle istruzioni per l'installazione del client.
 
     Per questa esercitazione non è importante selezionare l'opzione relativa all'installazione di criteri demo. Azure infatti scaricherà il criterio appena configurato, che sostituirà i criteri demo. È tuttavia possibile usare l'opzione relativa ai criteri demo se si vogliono solo provare le etichette predefinite senza connettersi ad Azure Information Protection. 
 
@@ -52,6 +52,6 @@ In questo passaggio verrà installato il client di Azure Information Protection 
 [Passaggio 4 &#187;](infoprotect-tutorial-step4.md)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Aug16_HO5-->
 
 

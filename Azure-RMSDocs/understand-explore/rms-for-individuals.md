@@ -1,6 +1,6 @@
 ---
 title: RMS per utenti singoli e Azure Rights Management | Azure RMS
-description: "RMS per utenti singoli è una sottoscrizione gratuita self-service per gli utenti di un'organizzazione ai quali sono stati inviati file sensibili protetti da Microsoft Azure Rights Management (Azure RMS), ma che non possono essere autenticati perché il loro reparto IT non gestisce per loro un account di Azure. Ad esempio, il reparto IT non dispone di Office 365 o non utilizza i servizi di Azure."
+description: "Informazioni su RMS per utenti singoli, una sottoscrizione gratuita self-service per gli utenti di un'organizzazione ai quali sono stati inviati file sensibili protetti da Microsoft Azure Rights Management (Azure RMS), ma che non possono essere autenticati perché il loro reparto IT non gestisce per loro un account di Azure."
 author: cabailey
 manager: mbaldwin
 ms.date: 08/24/2016
@@ -12,8 +12,8 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 2e80c1e02e47d07678b38f6d6cb229a9db8307d4
+ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
+ms.openlocfilehash: 15be32e029637321bf8e4f7c1a53f918efda7f23
 
 
 ---
@@ -29,7 +29,7 @@ Tali utenti possono iscriversi per ottenere un account aziendale o dell'istituto
 Grazie all'uso dell'applicazione di condivisione Rights Management su computer Windows, questi utenti possono inoltre proteggere i file localmente o inviarli tramite posta elettronica a persone all'interno o all'esterno dell'organizzazione. Se i destinatari del messaggio di posta elettronica inviato fanno parte di un'organizzazione che non gestisce gli account utente in Azure, possono iscriversi anch'essi per ottenere un account RMS per singoli utenti che consente di leggere l'allegato di posta elettronica protetto.
 
 > [!IMPORTANT]
-> Questa sottoscrizione gratuita assicura che le persone autorizzate possano sempre leggere i file protetti. Attualmente è anche possibile usare questa sottoscrizione gratuita per proteggere i documenti e creare nuovi messaggi di posta elettronica protetti. La capacità di creare nuovo contenuto protetto è però riservata solo all'uso della versione di valutazione e potrebbe essere rimossa in futuro. Per altre informazioni e per le eventuali modifiche relative all'uso di RMS per consentire a utenti singoli di proteggere i contenuti, vedere le [condizioni per l'uso del servizio Microsoft Rights Management](https://portal.aadrm.com/Legal/Service).
+> Questa sottoscrizione gratuita assicura che le persone autorizzate possano sempre leggere i file protetti. Attualmente è anche possibile usare questa sottoscrizione gratuita per proteggere i documenti e creare nuovi messaggi di posta elettronica protetti. La capacità di creare nuovo contenuto protetto è però riservata solo all'uso della versione di valutazione e potrebbe essere rimossa in futuro. 
 
 Per altre informazioni su come proteggere i file tramite l'applicazione Rights Management sharing gratuita, vedere la [Guida dell'utente dell'applicazione Rights Management sharing](../rms-client/sharing-app-user-guide.md).
 
@@ -41,6 +41,6 @@ Per istruzioni dettagliate e per una panoramica tecnica di ciò che avviene in b
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

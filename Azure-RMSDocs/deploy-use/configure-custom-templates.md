@@ -1,9 +1,9 @@
 ---
 title: Configurazione di modelli personalizzati per Azure Rights Management | Azure RMS
-description: Dopo l'attivazione di Azure Rights Management (Azure RMS), gli utenti sono automaticamente in grado di usare due modelli predefiniti che facilitano l'applicazione di criteri ai file riservati allo scopo di limitare l'accesso alle sole persone autorizzate all'interno dell'organizzazione. Questi due modelli prevedono le restrizioni seguenti relativamente ai criteri per i diritti d'uso.
+description: Informazioni e istruzioni per gli amministratori per configurare e gestire i modelli dei diritti di utilizzo. I modelli semplificano, per utenti e amministratori, l'applicazione ai file riservati di criteri che limitano l'accesso agli utenti autorizzati.
 author: cabailey
 manager: mbaldwin
-ms.date: 06/03/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 83db5e11a4603523d7c4a86921fbdafb5f6fbfb5
+ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
+ms.openlocfilehash: 4f04a8b892cfb1f1ab62d1810fae172ad8bc9747
 
 
 ---

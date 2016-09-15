@@ -1,9 +1,9 @@
 ---
 title: Applicazioni e servizi Office | Azure RMS
-description: Le applicazioni dell'utente finale, ad esempio Word, Excel, PowerPoint e Outlook, e i servizi Office, ad esempio Exchange e SharePoint, possono usare Microsoft Azure Rights Management per proteggere i dati dell'organizzazione.
+description: Informazioni su come le applicazioni Office, ad esempio Word, Excel, PowerPoint e Outlook, e i servizi Office, ad esempio Exchange e SharePoint, possono usare Microsoft Azure Rights Management per proteggere i dati dell'organizzazione.
 author: cabailey
 manager: mbaldwin
-ms.date: 06/30/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 93dde9494a430526ebd26e1d5123ad44901ffcbb
+ms.sourcegitcommit: f0871436caef79187349d700d190564b08cc9e46
+ms.openlocfilehash: 1e1a52e637671d857fac22c51a635e726fa99b01
 
 
 ---
@@ -61,7 +61,6 @@ Se si usa SharePoint Server, è possibile usare le funzionalità di protezione d
 > 
 > -   Non è possibile usare i modelli predefiniti o personalizzati gestiti nel portale di Azure classico.
 > -   I file con un'estensione di file PPDF per i file PDF protetti non sono supportati. I file con un'estensione di file PDF e che sono protetti a livello nativo da RMS sono supportati quando si usa un programma per leggere i file PDF che supporta RMS a livello nativo.
-> -   Dal momento che Office nei dispositivi mobili non supporta ancora RMS, questi dispositivi devono usare un browser per visualizzare i file protetti con RMS e quelli che sono di sola lettura.
 
 Azure RMS applica le restrizioni d'uso e la crittografia dei dati per i documenti quando questi vengono scaricati da SharePoint e non quando il documento viene creato inizialmente in SharePoint o caricato nella raccolta. Per informazioni su come vengono protetti i documenti di essere scaricati, vedere [Crittografia dei dati in OneDrive for Business e SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) nella documentazione di SharePoint.
 
@@ -72,6 +71,6 @@ Per altre informazioni sull'uso di Azure RMS con SharePoint, vedere il post segu
 Per altre informazioni sul supporto di Azure Rights Management da parte di altre applicazioni e servizi, vedere [Supporto di Azure Rights Management da parte delle applicazioni](applications-support.md).
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

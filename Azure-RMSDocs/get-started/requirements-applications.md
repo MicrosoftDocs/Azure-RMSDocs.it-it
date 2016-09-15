@@ -1,9 +1,9 @@
 ---
 title: Requisiti per Azure RMS&#58; applicazioni | Azure RMS
-description: "Usare la tabella seguente per identificare le applicazioni che offrono supporto nativo per Azure RMS, che è perfettamente integrato in queste applicazioni grazie alle API RMS, usate per supportare le restrizioni d'utilizzo. Queste applicazioni sono anche dette applicazioni abilitate per RMS."
+description: Identificare le applicazioni che offrono supporto nativo per Azure RMS, perfettamente integrato in queste applicazioni grazie alle API RMS, usate per supportare le restrizioni d'utilizzo.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/19/2016
+ms.date: 08/25/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: d3408f954381978287852dd74a38c5903f583dda
+ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
+ms.openlocfilehash: 14eec6f0ad9c1b9abaeff1c70cfbcb66011397a0
 
 
 ---

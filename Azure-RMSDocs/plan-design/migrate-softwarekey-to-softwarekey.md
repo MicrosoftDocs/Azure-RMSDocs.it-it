@@ -1,9 +1,9 @@
 ---
 title: Passaggio 2&colon; Migrazione da una chiave protetta tramite software a un'altra | Azure RMS
-description: "Queste istruzioni fanno parte del percorso di migrazione da AD RMS ad Azure Rights Management e si applicano solo se la chiave di AD RMS è protetta tramite software e si vuole eseguire la migrazione ad Azure Rights Management con una chiave del tenant protetta tramite software."
+description: "Istruzioni che fanno parte del percorso di migrazione da AD RMS ad Azure Rights Management e si applicano solo se la chiave di AD RMS è protetta tramite software e si vuole eseguire la migrazione ad Azure Rights Management con una chiave del tenant protetta tramite software."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 08/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 6597bf4ea54f640c30e98b30363323d874e32c43
+ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
+ms.openlocfilehash: 5ec3d2b275521807c6fd8f9ccfe1136db97d5d79
 
 
 ---
