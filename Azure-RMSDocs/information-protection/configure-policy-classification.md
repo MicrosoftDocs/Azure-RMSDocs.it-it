@@ -1,5 +1,5 @@
 ---
-title: Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection | Azure Rights Management
+title: Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection | Azure Information Protection
 description: "Quando si configurano le condizioni per un'etichetta, è possibile assegnare automaticamente un'etichetta a un documento o messaggio di posta elettronica. In alternativa, è possibile richiedere agli utenti di selezionare l'etichetta consigliata."
 manager: mbaldwin
 ms.date: 08/29/2016
@@ -9,8 +9,8 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: 87069b73e5f8959955b9967070bd3bcb5e7dc196
-ms.openlocfilehash: 357b012bd8679d7e24bfe3ae40c3160e4b69c01f
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: ea69e955e4ba5facb1a8f21a90592c0eaae5425e
 
 
 ---
@@ -224,6 +224,6 @@ Per altre informazioni sulla configurazione dei criteri di Azure Information Pro
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO1-->
 
 

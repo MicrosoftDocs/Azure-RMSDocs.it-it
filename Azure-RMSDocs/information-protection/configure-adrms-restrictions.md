@@ -1,6 +1,6 @@
 ---
-title: Restrizioni HYOK | Azure Rights Management
-description: "Identificare le restrizioni, i prerequisiti e le raccomandazioni se si seleziona la protezione di AD RMS con Azure Information Protection. Questa soluzione è a volte definita &quot;hold your own key&quot; (HYOK)."
+title: Restrizioni HYOK | Azure Information Protection
+description: Identify the limitations, prerequisites, and recommendations if you select AD RMS protection with Azure Information Protection. This solution is sometimes referred to as "hold your own key" (HYOK).
 manager: mbaldwin
 ms.date: 08/25/2016
 ms.topic: article
@@ -9,8 +9,8 @@ ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: da0145444a7d0abb6407ed2ccbb581d4dcdd10d6
-ms.openlocfilehash: 0d6a5013f953931a6bffa28e1c3c1f282a2c668b
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: fe0f492b94cbcc437c722daae9c3c56820593566
 
 
 ---
@@ -94,6 +94,6 @@ Per configurare un'etichetta per la protezione di AD RMS, vedere [Come configura
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

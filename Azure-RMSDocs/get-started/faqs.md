@@ -3,7 +3,7 @@ title: Domande frequenti su Azure Rights Management| Azure RMS
 description: Alcune domande frequenti su Microsoft Azure Rights Management, noto anche come Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/29/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 47328bc0c3cc66e99a98b7c8abc553f25d956404
-ms.openlocfilehash: e485286a0bd42bbcfb46a8aabe4d2ee66d65b4a1
+ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
+ms.openlocfilehash: e0529126fefc9dec6aaa490538971a7573f79431
 
 
 ---
@@ -145,7 +145,7 @@ Le funzionalità RMS supportate presentano alcune differenze per le diverse sott
 
 La sottoscrizione gratuita che supporta Azure RMS (RMS per utenti singoli) supporta l'utilizzo di contenuti protetti da Azure RMS. Per ulteriori informazioni, vedere [RMS per utenti singoli e Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## Dov'è possibile trovare informazioni tecniche sulla sottoscrizione Azure RMS gratuita (RMS per utenti singoli), ad esempio il suo funzionamento, come assumere il controllo degli account e quali sono i domini che non è possibile usare?
+## Dove è possibile trovare informazioni tecniche sulla sottoscrizione gratuita di Azure RMS (RMS per utenti singoli) e, ad esempio, come funziona questo processo e come un amministratore può prendere il controllo degli account creati?
 Le risposte a queste domande sono disponibili nell'articolo [RMS per utenti singoli e Azure Rights Management](../understand-explore/rms-for-individuals.md) e in articoli correlati.
 
 ## Come possiamo riottenere l'accesso ai file che sono stati protetti da un dipendente che ora ha lasciato l'organizzazione?
@@ -223,6 +223,6 @@ La pagina delle domande frequenti verrà aggiornata periodicamente e le nuove ag
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO1-->
 
 
