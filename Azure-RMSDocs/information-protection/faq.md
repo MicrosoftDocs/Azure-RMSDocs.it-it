@@ -3,7 +3,7 @@ title: Domande frequenti per Azure Information Protection (anteprima) | Azure In
 description: Domande sulla versione di anteprima di Azure Information Protection e relative risposte.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0a66851beeedecc3bda92f840f06b56f40c0c4c1
-ms.openlocfilehash: 427b783b41d8977ff07b0fbc929bf0d7afd0721d
+ms.sourcegitcommit: 459cbe65741ea415defced844034f62cfd4654ed
+ms.openlocfilehash: 39334a5cc18f1b45eabd7cf5b4f9b891fb10a5e6
 
 
 ---
@@ -143,6 +143,10 @@ Se necessario, è possibile creare etichette secondarie per descrivere meglio le
 
 Anche se è attualmente possibile impostare contrassegni visivi, protezione e condizioni a entrambi i livelli, quando si usano sottolivelli è necessario configurare queste impostazioni solo in corrispondenza del livello secondario. Se si configurano le stesse impostazioni per l'etichetta padre e per il sottolivello corrispondente, le impostazioni di quest'ultimo hanno la precedenza.
 
+## Quando a un messaggio di posta elettronica viene applicata un'etichetta, eventuali allegati ottengono automaticamente la stessa etichetta?
+
+No. Quando viene applicata un'etichetta a un messaggio di posta elettronica con allegati, tali allegati non ereditano la stessa etichetta. Gli allegati rimangono senza etichetta oppure mantengono un'etichetta applicata separatamente. Tuttavia, se l'etichetta per il messaggio di posta elettronica applica una protezione, tale protezione viene applicata agli allegati.
+
 ## Come è possibile integrare soluzioni DLP e altre applicazioni con Azure Information Protection?
 
 Per la classificazione, Azure Information Protection usa metadati persistenti che includono un'etichetta di testo non crittografata. Queste informazioni possono essere lette da soluzioni DLP e da altre applicazioni. Per i file, questi metadati vengono archiviati all'interno di proprietà personalizzate, per i messaggi di posta elettronica nelle intestazioni dei messaggi.
@@ -187,6 +191,6 @@ Quindi, visitare il nostro [sito Yammer](https://www.yammer.com/askipteam/#/thre
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO2-->
 
 

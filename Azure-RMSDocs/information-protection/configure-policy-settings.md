@@ -2,15 +2,15 @@
 title: Come configurare le impostazioni dei criteri globali per Azure Information Protection | Azure Information Protection
 description: Nei criteri di Azure Information Protection sono disponibili 3 impostazioni valide per tutti gli utenti e tutti i dispositivi.
 manager: mbaldwin
-ms.date: 08/08/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: 872ea7da6f3b72a355a73c8b0589beda86ded20d
+ms.sourcegitcommit: 801ca11da602d4acb9c398c9a89aeb33e45cb0f4
+ms.openlocfilehash: d4e96321069b27ed832af3bfb6d995e0d3c5d450
 
 
 ---
@@ -28,9 +28,9 @@ Nei criteri di Azure Information Protection sono disponibili 3 impostazioni vali
 
 Per configurare queste impostazioni:
 
-1. Se non è già stato fatto, accedere al [portale di Azure](https://portal.azure.com) e quindi passare al pannello **Azure Information Protection**. 
+1. Se non è già stato fatto, in una nuova finestra del browser accedere al [portale di Azure](https://portal.azure.com) e quindi passare al pannello **Azure Information Protection**. 
     
-    Ad esempio, nel menu hub fare clic su **Esplora** e iniziare a digitare **Information** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, nel menu hub fare clic su **More services** (Altre informazioni) e iniziare a digitare **Information** nella casella Filtro. Selezionare **Azure Information Protection**.
 
 2. Nel pannello **Azure Information Protection** configurare queste impostazioni globali:
 
@@ -67,6 +67,6 @@ Per altre informazioni sulla configurazione dei criteri di Azure Information Pro
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

@@ -2,15 +2,15 @@
 title: Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection | Azure Information Protection
 description: "Quando si assegna un'etichetta a un documento o a un messaggio di posta elettronica, è possibile selezionare diverse opzioni per rendere facilmente visibile la classificazione scelta. Questi contrassegni visivi sono un'intestazione, un piè di pagina e una filigrana."
 manager: mbaldwin
-ms.date: 08/17/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 translationtype: Human Translation
-ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
-ms.openlocfilehash: d70bfbe658b1c7d9a5a91c925a554974423699a7
+ms.sourcegitcommit: 801ca11da602d4acb9c398c9a89aeb33e45cb0f4
+ms.openlocfilehash: 999a0937bf741514ae8ee5ef819d4ab901c3304b
 
 
 ---
@@ -39,9 +39,9 @@ Altre informazioni su questi contrassegni visivi:
 
 Seguire le istruzioni seguenti per configurare i contrassegni visivi per un'etichetta.
 
-1. Se non è già stato fatto, accedere al [portale di Azure](https://portal.azure.com) e quindi passare al pannello **Azure Information Protection**. 
+1. Se non è già stato fatto, in una nuova finestra del browser accedere al [portale di Azure](https://portal.azure.com) e quindi passare al pannello **Azure Information Protection**. 
     
-    Ad esempio, nel menu hub fare clic su **Esplora** e iniziare a digitare **Information** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, nel menu hub fare clic su **More services** (Altre informazioni) e iniziare a digitare **Information** nella casella Filtro. Selezionare **Azure Information Protection**.
 
 2. Nel pannello **Azure Information Protection** selezionare l'etichetta da configurare per i contrassegni visivi.
 
@@ -81,6 +81,6 @@ Per altre informazioni sulla configurazione dei criteri di Azure Information Pro
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 
