@@ -15,6 +15,7 @@
 ### [File server che eseguono Windows Server e usano la funzionalità Infrastruttura di classificazione file](file-server-support.md)
 ### [Altre applicazioni che supportano le API RMS](api-support.md)
 ## [Confronto tra Azure RMS e AD RMS](compare-azure-rms-ad-rms.md)
+## [Informazioni su conformità e supporto](compliance.md)
 # [Introduzione](/rights-management/get-started/requirements-azure-rms)
 # [Pianificare e progettare](/rights-management/plan-design/deployment-roadmap)
 # [Distribuire e usare il servizio](/rights-management/deploy-use/activate-service)
@@ -23,6 +24,6 @@
 # [Azure Information Protection (anteprima)](/rights-management/information-protection/what-is-information-protection)
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Sep16_HO2-->
 
 

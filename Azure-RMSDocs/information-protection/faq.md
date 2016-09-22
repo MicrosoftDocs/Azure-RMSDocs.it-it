@@ -3,7 +3,7 @@ title: Domande frequenti per Azure Information Protection (anteprima) | Azure In
 description: Domande sulla versione di anteprima di Azure Information Protection e relative risposte.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/22/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: 55d56786150d38b36ae8185c4a7ac4c8a5c51ba4
+ms.sourcegitcommit: 459cbe65741ea415defced844034f62cfd4654ed
+ms.openlocfilehash: 39334a5cc18f1b45eabd7cf5b4f9b891fb10a5e6
 
 
 ---
@@ -82,7 +82,7 @@ Questa informazione è ora documentata e verrà aggiornata in [Requisiti per Azu
 
 ## In che modo i computer ottengono le informazioni relative ai criteri da Azure Information Protection e con quale frequenza le informazioni vengono aggiornate?
 
-Ogni volta che l'utente apre un'applicazione di Office, il client di Azure Information Protection verifica la disponibilità di una versione più recente dei criteri di Azure Information Protection. Se è disponibile una versione più recente, il client la scarica tramite un collegamento HTTPS per proteggere i dati. 
+Ogni volta che l'utente apre un'applicazione di Office, il client di Azure Information Protection verifica la disponibilità di una versione più recente dei criteri di Azure Information Protection. Anche le applicazioni Office eseguono automaticamente un controllo ogni 24 ore. Se è disponibile una versione più recente, il client la scarica tramite un collegamento HTTPS per proteggere i dati. 
 
 Se sono caricate più istanze dell'applicazione di Office quando viene pubblicato un nuovo criterio di Azure Information Protection, è necessario chiudere tutte le istanze per ottenere la versione più recente dei criteri. Se ad esempio sono aperti due documenti di Word e si vogliono testare i criteri aggiornati di Azure Information Protection in un solo documento, chiudere entrambi i documenti di Word e riaprire quello da usare con i criteri più recenti.
 
@@ -129,7 +129,7 @@ Sì. Per rimuovere la classificazione da un file, aprire il file nell'applicazio
 
 ## È possibile richiedere agli utenti di giustificare il motivo per cui stanno modificando il livello di classificazione?
 
-Sì. Per assicurarsi che gli utenti giustifichino la modifica della classificazione, nel portale di Azure impostare l'opzione **Users must provide justification when lowering the sensitivity level** (Gli utenti devono giustificare l'abbassamento del livello di riservatezza) su **On**. Quando si esegue questa operazione, il motivo dell'azione e la giustificazione vengono registrati nel registro eventi di Windows locale: **Application** > **Microsoft Azure Information Protection**.
+Sì. Per assicurarsi che gli utenti giustifichino la modifica della classificazione, nel portale di Azure impostare l'opzione **Users must provide justification to set a lower classification label, remove a label, or remove protection** (Gli utenti devono giustificare l'abbassamento del livello di classificazione dell'etichetta) su **On** (On). Quando si esegue questa operazione, il motivo dell'azione e la giustificazione vengono registrati nel registro eventi di Windows locale: **Application** > **Microsoft Azure Information Protection**.
 
 ## Come posso proteggere automaticamente il contenuto dopo che è stato classificato?
 
@@ -142,6 +142,10 @@ Un esempio di questa funzione è presente nell'[Esercitazione introduttiva di Az
 Se necessario, è possibile creare etichette secondarie per descrivere meglio le sottocategorie per un'etichetta di riservatezza specifica. Ad esempio, l'etichetta principale **Secret** (Segreto) può contenere etichette secondarie quali **Secret – Legal** (Segreto: legale) e **Secret – Finance** (Segreto: finanziario). È quindi possibile applicare contrassegni visivi di classificazione diversi e modelli di Rights Management diversi a etichette secondarie diverse.
 
 Anche se è attualmente possibile impostare contrassegni visivi, protezione e condizioni a entrambi i livelli, quando si usano sottolivelli è necessario configurare queste impostazioni solo in corrispondenza del livello secondario. Se si configurano le stesse impostazioni per l'etichetta padre e per il sottolivello corrispondente, le impostazioni di quest'ultimo hanno la precedenza.
+
+## Quando a un messaggio di posta elettronica viene applicata un'etichetta, eventuali allegati ottengono automaticamente la stessa etichetta?
+
+No. Quando viene applicata un'etichetta a un messaggio di posta elettronica con allegati, tali allegati non ereditano la stessa etichetta. Gli allegati rimangono senza etichetta oppure mantengono un'etichetta applicata separatamente. Tuttavia, se l'etichetta per il messaggio di posta elettronica applica una protezione, tale protezione viene applicata agli allegati.
 
 ## Come è possibile integrare soluzioni DLP e altre applicazioni con Azure Information Protection?
 
@@ -187,6 +191,6 @@ Quindi, visitare il nostro [sito Yammer](https://www.yammer.com/askipteam/#/thre
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

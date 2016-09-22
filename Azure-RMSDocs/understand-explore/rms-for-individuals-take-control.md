@@ -3,7 +3,7 @@ title: "Modalità di controllo da parte degli amministratori degli account creat
 description: "Informazioni su come è possibile controllare gli account utente in Azure Active Directory se non si vuole convertire la sottoscrizione di RMS per utenti singoli dell'organizzazione in una sottoscrizione a pagamento."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
-ms.openlocfilehash: eb86c9e4f83fcf42599145b10ad8f021e40c208f
+ms.sourcegitcommit: 79d098e47cdfe608bc62ed385a5c8236fb7c6d3c
+ms.openlocfilehash: 6383c1d583eb45973750305e709d8f5d792892b5
 
 
 ---
@@ -31,9 +31,9 @@ Se non si desidera convertire la sottoscrizione di RMS per utenti singoli dell'o
 
 -   È possibile impedire agli utenti di eseguire l'iscrizione per usare Azure Rights Management con la sottoscrizione RMS per utenti singoli. Nella maggior parte dei casi, questa azione non è molto vantaggiosa perché gli utenti condivideranno file senza protezione (con potenziali rischi per la società) o useranno un altro meccanismo di protezione dei file, impedendo al personale del reparto IT di accedere ai dati. Se però si vuole impedire agli utenti di usare RMS per utenti singoli, effettuare una delle operazioni seguenti dopo aver acquisito la proprietà della directory dell'organizzazione in Azure:
 
-    -   Impedire a tutti gli utenti di iscriversi alle sottoscrizioni self-service, incluso RMS per utenti singoli.  Attualmente, non è possibile impostare questo dal servizio; l'impostazione si applica a tutte le sottoscrizioni di Azure che utilizzano il processo self-service. A questo scopo, impostare il parametro **AllowAdHocSubscriptions** su false con il cmdlet [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) del modulo Windows PowerShell per Azure Active Directory. Ad esempio: **Set-MsolCompanySettings -AllowAdHocSubscriptions $false**
+    -   Impedire a tutti gli utenti di iscriversi alle sottoscrizioni self-service, incluso RMS per utenti singoli.  Attualmente, non è possibile impostare questo dal servizio; l'impostazione si applica a tutte le sottoscrizioni di Azure che utilizzano il processo self-service. A questo scopo, impostare il parametro **AllowAdHocSubscriptions** su false con il cmdlet [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) del modulo PowerShell per Azure Active Directory. Ad esempio: **Set-MsolCompanySettings -AllowAdHocSubscriptions $false**
 
-    -   Impedire agli utenti di creare un nuovo account in Azure. In questo modo, solo gli utenti che dispongono già di un account in Azure potranno iscriversi alle sottoscrizioni self-service, incluso RMS per utenti singoli.  A questo scopo, impostare il parametro **AllowEmailVerifiedUsers** su false con il cmdlet [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) del modulo Windows PowerShell per Azure Active Directory. Ad esempio: **Set-MsolCompanySettings -AllowEmailVerifiedUsers $false -AllowAdHocSubscriptions $true**
+    -   Impedire agli utenti di creare un nuovo account in Azure. In questo modo, solo gli utenti che dispongono già di un account in Azure potranno iscriversi alle sottoscrizioni self-service, incluso RMS per utenti singoli.  A questo scopo, impostare il parametro **AllowEmailVerifiedUsers** su false con il cmdlet [Set-MsolCompanySettings](http://technet.microsoft.com/library/dn194127.aspx) del modulo PowerShell per Azure Active Directory. Ad esempio: **Set-MsolCompanySettings -AllowEmailVerifiedUsers $false -AllowAdHocSubscriptions $true**
 
     -   Sincronizzare 'infrastruttura Servizi di dominio Active Directory con Azure Active Directory. In questo modo si impedisce la creazione di nuovi account quando gli utenti si iscrivono a sottoscrizioni self-service come RMS per utenti singoli ed è possibile eliminare o disabilitare account creati in precedenza nella directory di Azure.
 
@@ -46,6 +46,6 @@ Come è possibile determinare se gli utenti, anziché gli amministratori, hanno 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

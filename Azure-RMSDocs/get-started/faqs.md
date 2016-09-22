@@ -3,7 +3,7 @@ title: Domande frequenti su Azure Rights Management| Azure RMS
 description: Alcune domande frequenti su Microsoft Azure Rights Management, noto anche come Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/29/2016
+ms.date: 09/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 47328bc0c3cc66e99a98b7c8abc553f25d956404
-ms.openlocfilehash: e485286a0bd42bbcfb46a8aabe4d2ee66d65b4a1
+ms.sourcegitcommit: 62b72d2debef3421fea4f0e70beed67e5364d7d3
+ms.openlocfilehash: 99b5e4ea74cd6f76a2409d89c3db5d8672b63055
 
 
 ---
@@ -145,7 +145,7 @@ Le funzionalità RMS supportate presentano alcune differenze per le diverse sott
 
 La sottoscrizione gratuita che supporta Azure RMS (RMS per utenti singoli) supporta l'utilizzo di contenuti protetti da Azure RMS. Per ulteriori informazioni, vedere [RMS per utenti singoli e Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## Dov'è possibile trovare informazioni tecniche sulla sottoscrizione Azure RMS gratuita (RMS per utenti singoli), ad esempio il suo funzionamento, come assumere il controllo degli account e quali sono i domini che non è possibile usare?
+## Dove è possibile trovare informazioni tecniche sulla sottoscrizione gratuita di Azure RMS (RMS per utenti singoli) e, ad esempio, come funziona questo processo e come un amministratore può prendere il controllo degli account creati?
 Le risposte a queste domande sono disponibili nell'articolo [RMS per utenti singoli e Azure Rights Management](../understand-explore/rms-for-individuals.md) e in articoli correlati.
 
 ## Come possiamo riottenere l'accesso ai file che sono stati protetti da un dipendente che ora ha lasciato l'organizzazione?
@@ -165,37 +165,8 @@ Come illustrato da questi esempi, anche se tutte le piattaforme e tutto il softw
 Nonostante il nome e l'aspetto, l'opzione **Non inoltrare** non è il contrario dell'inoltro immediato né un modello. Si tratta in realtà di un insieme di diritti che limitano la copia, la stampa, il salvataggio di allegati e l'inoltro dei messaggi di posta elettronica. I diritti vengono applicati dinamicamente agli utenti tramite i destinatari scelti anziché in modo statico in base alle assegnazioni dall'amministratore. Per altre informazioni, vedere la sezione [Do Not Forward option for emails](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) (Opzione Non inoltrare per i messaggi di posta elettronica) dell'articolo [Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights.md) (Configurazione dei diritti di utilizzo per Azure Rights Management).
 
 ## Dov'è possibile reperire le informazioni di supporto per Azure RMS, ad esempio le note legali, le informazioni sulla conformità e i contratti di servizio?
-Azure RMS supporta altri servizi e si basa inoltre su altri servizi. Per informazioni correlate ad Azure RMS, ma non riferite alla modalità di utilizzo del servizio Azure RMS, esaminare le risorse seguenti:
 
-**Note legali e privacy:**
-
--   Per informazioni sul contratto di Microsoft Azure: [Contratto di Microsoft Azure](http://azure.microsoft.com/support/legal/subscription-agreement/)
-
--   Per informazioni sulla privacy di Microsoft Azure: [Informativa sulla privacy di Microsoft Azure](http://azure.microsoft.com/support/legal/privacy-statement/)
-
-**Sicurezza, conformità e controllo:**
-
-Vedere la sezione [Requisiti di sicurezza, conformità e normativi](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements) dell'articolo [Problemi risolti da Azure RMS](../understand-explore/azure-rms-problems-it-solves.md). Inoltre:
-
--   Per le certificazioni esterne per Azure RMS: [Centro protezione di Microsoft Azure](http://azure.microsoft.com/support/trust-center/)
-
--   Per informazioni su FIPS 140: [Convalida di FIPS 140](https://technet.microsoft.com/library/security/cc750357.aspx)
-
-**Contratti di servizio:**
-
--   Contratto di servizio per Azure RMS, per un'area selezionata: [scaricare dalla pagina di ricerca di licenza del prodotto](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
-
-    - Ad esempio, fare clic su **OnlineSvcsConsolidatedSLA(WW)(Inglese)(marzo 2016)** per scaricare il contratto di servizio marzo 2016 per il Nord America.
-
--   Contratto di servizio per Azure Active Directory: [Contratti di servizio](http://azure.microsoft.com/support/legal/sla/)
-
-**Documentazione:**
-
--   Sito della documentazione di Azure Active Directory: [Azure Active Directory](http://azure.microsoft.com/documentation/services/active-directory/)
-
--   Libreria di Azure Active Directory: [Azure Active Directory](https://msdn.microsoft.com/library/azure/mt168838.aspx)
-
--   Libreria di Office 365: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
+Vedere [Compliance and supporting information for Azure Rights Management](../understand-explore/compliance.md) (Informazioni su conformità e supporto per Azure Rights Management).
 
 ## Quali sono le ultime novità sulla nuova funzionalità di classificazione e aggiunta di etichette?
 
@@ -223,6 +194,6 @@ La pagina delle domande frequenti verrà aggiornata periodicamente e le nuove ag
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO2-->
 
 

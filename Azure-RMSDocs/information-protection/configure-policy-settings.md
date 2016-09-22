@@ -1,16 +1,16 @@
 ---
-title: Come configurare le impostazioni dei criteri globali per Azure Information Protection | Azure Rights Management
+title: Come configurare le impostazioni dei criteri globali per Azure Information Protection | Azure Information Protection
 description: Nei criteri di Azure Information Protection sono disponibili 3 impostazioni valide per tutti gli utenti e tutti i dispositivi.
 manager: mbaldwin
-ms.date: 08/08/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 translationtype: Human Translation
-ms.sourcegitcommit: c9f9211e7c1dcf293caf81475515114b5433d6a7
-ms.openlocfilehash: c48f5488e49a54b970f76012e0f2f17fe4158691
+ms.sourcegitcommit: 801ca11da602d4acb9c398c9a89aeb33e45cb0f4
+ms.openlocfilehash: d4e96321069b27ed832af3bfb6d995e0d3c5d450
 
 
 ---
@@ -28,9 +28,9 @@ Nei criteri di Azure Information Protection sono disponibili 3 impostazioni vali
 
 Per configurare queste impostazioni:
 
-1. Se non è già stato fatto, accedere al [portale di Azure](https://portal.azure.com) e quindi passare al pannello **Azure Information Protection**. 
+1. Se non è già stato fatto, in una nuova finestra del browser accedere al [portale di Azure](https://portal.azure.com) e quindi passare al pannello **Azure Information Protection**. 
     
-    Ad esempio, nel menu hub fare clic su **Esplora** e iniziare a digitare **Information** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, nel menu hub fare clic su **More services** (Altre informazioni) e iniziare a digitare **Information** nella casella Filtro. Selezionare **Azure Information Protection**.
 
 2. Nel pannello **Azure Information Protection** configurare queste impostazioni globali:
 
@@ -42,7 +42,7 @@ Per configurare queste impostazioni:
 
     - **Selezionare l'etichetta predefinita**: quando si seleziona questa opzione, selezionare l'etichetta da assegnare ai documenti e ai messaggi di posta elettronica che non hanno un'etichetta. Non è possibile impostare un'etichetta come predefinita se contiene etichette secondarie. 
 
-    - **Users must provide justification when lowering the sensitivity level** (Gli utenti devono giustificare l'abbassamento del livello di riservatezza): quando si imposta questa opzione su **Sì** e un utente cambia l'etichetta di un documento o messaggio di posta elettronica esistente applicando un'etichetta con un livello di riservatezza inferiore, ad esempio da **Secret** (Segreto) a **Public**, all'utente viene richiesto di motivare questa azione. L'utente può ad esempio spiegare che il documento non contiene informazioni riservate. L'azione e la relativa giustificazione vengono registrati nel registro eventi di Windows locale: **Application** > **Microsoft Azure Information Protection**.  
+    - **Users must provide justification to set a lower classification label, remove a label, or remove protection** (Gli utenti sono obbligati a giustificare un abbassamento del livello di classificazione dell'etichetta, la rimozione di un'etichetta o la rimozione della protezione). Quando l'opzione viene impostata su **On** (On) e viene eseguita un'azione qualsiasi, ad esempio viene modificata l'etichetta **Segret** (Segreto) in **Personal** (Personale), all'utente viene chiesto di dare una spiegazione per questa azione. L'utente può ad esempio spiegare che il documento non contiene informazioni riservate. L'azione e la relativa giustificazione vengono registrati nel registro eventi di Windows locale: **Application** > **Microsoft Azure Information Protection**.  
 
     ![Richiesta di Azure Information Protection se la nuova classificazione è inferiore](../media/info-protect-lower-justification.png)
 
@@ -67,6 +67,6 @@ Per altre informazioni sulla configurazione dei criteri di Azure Information Pro
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 
