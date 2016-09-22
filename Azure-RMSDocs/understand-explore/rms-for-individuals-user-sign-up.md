@@ -3,7 +3,7 @@ title: "Modalità di iscrizione per RMS per utenti singoli | Azure RMS"
 description: Istruzioni per eseguire l'iscrizione all'account gratuito e informazioni tecniche sul funzionamento del processo.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
-ms.openlocfilehash: 89aa3a85eedadd091c5f0d596749bb6a631716c6
+ms.sourcegitcommit: 0bd53bde0bfa9b44203b9d2f0f429265a013476c
+ms.openlocfilehash: 25c2ddac40c9eff78101cfaf42d4398be4e8a5cc
 
 
 ---
@@ -22,32 +22,28 @@ ms.openlocfilehash: 89aa3a85eedadd091c5f0d596749bb6a631716c6
 
 >*Si applica a: Azure Rights Management*
 
-Per iscriversi per ottenere l'account gratuito, gli utenti possono visitare la [pagina di Microsoft Rights Management](https://portal.aadrm.com/) e specificare il proprio indirizzo di posta elettronica aziendale o dell'istituto di istruzione. 
-
-Il modo più comune con cui gli utenti verranno indirizzati a questa pagina per l'iscrizione è quando ricevono un messaggio di posta elettronica con un allegato protetto, che contiene istruzioni su come iscriversi. Gli utenti riceveranno un messaggio di posta elettronica di risposta da Microsoft e potranno quindi completare la procedura di iscrizione inserendo i dettagli per creare l'account. Quando riceveranno una conferma tramite posta elettronica da Microsoft, questo messaggio di posta elettronica finale li indirizzerà a una pagina in cui potranno scaricare l'applicazione di condivisione per dispositivi diversi e un collegamento alla Guida dell'utente.
+Per iscriversi per ottenere l'account gratuito, è necessario visitare la [pagina di Microsoft Azure Rights Management](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload)e specificare il proprio indirizzo di posta elettronica aziendale. Il modo più comune con cui si verrà indirizzati a questa pagina per l'iscrizione è quando si riceve un messaggio di posta elettronica con un allegato protetto, che contiene istruzioni per iscriversi. Si riceverà un messaggio di posta elettronica di risposta da Microsoft e sarà quindi possibile completare la procedura di iscrizione inserendo i dettagli per creare l'account. Dopo il completamento, verrà visualizzata una pagina in cui è possibile scaricare l'applicazione di condivisione per vari dispositivi, un collegamento al manuale dell'utente e un collegamento a un elenco aggiornato delle applicazioni che supportano la protezione di Rights Management in modo nativo. 
 
 ## Per iscriversi per RMS per utenti singoli
 
-1.  Utilizzando un computer Windows o Mac, passare alla [pagina di Microsoft Rights Management](https://portal.aadrm.com).
+1.  Se si usa un computer Windows o Mac o un dispositivo mobile, passare alla [pagina di Microsoft Azure Rights Management](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload).
 
 2.  Digitare l'indirizzo di posta elettronica usato come indirizzo aziendale, ad esempio **janetm@contoso.com** o **p.dover@fabrikam.com**.
 
     > [!IMPORTANT]
     > Gli account di posta elettronica personali non sono supportati, pertanto non immettere un account Microsoft (definito in precedenza account Microsoft Live ID) né un altro account personale privato fornito dal proprio provider Internet.
 
-3.  Fare clic sul pulsante **Introduzione**.
+3.  Fare clic su **Accedi**.
 
     Microsoft usa l'indirizzo di posta elettronica per verificare se l'organizzazione ha già una [sottoscrizione pagata che include Azure RMS](../get-started/requirements-subscriptions.md). In tal caso, non è necessario RMS per utenti singoli quindi si verrà connessi immediatamente e l’iscrizione self-service per RMS per utenti singoli verrà annullata. Se non viene trovata una sottoscrizione a pagamento per Azure RMS, si procederà al passaggio successivo.
 
-4.  Attendere un messaggio di posta elettronica di conferma proveniente da Microsoft e inviato all'indirizzo di posta indicato Sarà proveniente da Microsoft (DoNotReply@microsoft.com) e riporterà l'oggetto **Microsoft RMS**.
+4.  Attendere un messaggio di posta elettronica di conferma proveniente da Microsoft e inviato all'indirizzo di posta indicato Il messaggio proviene dal team di Office 365 (support@email.microsoftonline.com) e ha come oggetto il testo **Finish signing up for Microsoft Azure Rights Management (Completare l'iscrizione a Microsoft Azure Rights Management)**.
 
-5.  Quando si riceve il messaggio di posta elettronica, fare clic sul collegamento presente nelle istruzioni per completare il processo di iscrizione.
+5.  Quando si riceve il messaggio di posta elettronica, fare clic su **Yes, that's me (Sì, sono io)** per confermare l'indirizzo di posta elettronica e completare il processo di iscrizione.
 
-6.  Il collegamento consente di accedere a una nuova pagina di **Microsoft Rights Management** in cui indicare i dettagli relativi al proprio account. Digitare il nome, il cognome, immettere e confermare una password di propria scelta, selezionare il paese (o il paese più vicino al proprio se non è elencato) nell'elenco a discesa e quindi fare clic su **Crea**.
+6.  A questo punto viene aperta la pagina **One last thing ...(Un'ultima operazione)** dove specificare i dettagli per l'account. Digitare il nome, il cognome, specificare e confermare una password a scelta e quindi fare clic su **Start (Avvia)**.
 
-7.  Attendere un altro messaggio di posta elettronica di Microsoft che conferma che l'account è pronto per essere usato.
-
-8.  Quando si riceve il messaggio, fare clic sul collegamento per accedere e leggere le istruzioni per scaricare e installare l'applicazione di condivisione oppure fare clic sul collegamento relativo alla guida per leggere la guida dell'utente dell'applicazione di condivisione.
+7. Dopo aver creato l'account, verrà aperta una nuova pagina di Microsoft Rights Management in cui è possibile scaricare e installare l'applicazione di condivisione oppure fare clic sul collegamento [More information (Altre informazioni)](../rms-client/sharing-app-user-guide.md) per leggere il manuale dell'utente dell'applicazione di condivisione.
 
 Dopo avere creato l'account, è possibile iniziare a proteggere i file e a leggere quelli protetti da altri utenti. Quando viene chiesto di accedere per proteggere i file o leggere quelli protetti, immettere l'indirizzo di posta elettronica e la password usati per creare l'account per RMS per utenti singoli.
 
@@ -59,7 +55,7 @@ Questo è ciò che avviene in background quando un utente effettua l'iscrizione 
 1.  Quando il primo utente di un'organizzazione richiede una sottoscrizione di RMS per utenti singoli, il nome di dominio specificato nell'indirizzo di posta elettronica viene controllato per verificare se è già associato a un tenant Azure. Se non è presente alcun tenant esistente, viene creato automaticamente un nuovo tenant e una directory di Azure per l'organizzazione, che contiene un account per il primo utente. A differenza di una sottoscrizione di Azure a pagamento, questo primo account non è un amministratore globale, ma un utente standard. Il nuovo account usa l'indirizzo di posta elettronica e la password che l'utente ha specificato.
 
     > [!NOTE]
-    > Alcuni nomi di dominio non possono essere usati per creare la directory e quindi neanche per RMS per utenti singoli. L'elenco dei nomi di dominio bloccati può essere visualizzato dal seguente file JavaScript Object Notation: [http://portal.aadrm.com/content/blocked_domains.json](http://portal.aadrm.com/content/blocked_domains.json)
+    > Alcuni nomi di dominio non possono essere usati per creare la directory e quindi neanche per RMS per utenti singoli.
 
     Se viene trovato un tenant esistente, viene controllato per sapere se dispone già di una sottoscrizione per Azure RMS. Quando non viene trovata alcuna sottoscrizione, è possibile aggiungere la sottoscrizione gratuita a RMS per utenti singoli.
 
@@ -101,6 +97,6 @@ Vedere [Modalità di controllo da parte degli amministratori degli account creat
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 

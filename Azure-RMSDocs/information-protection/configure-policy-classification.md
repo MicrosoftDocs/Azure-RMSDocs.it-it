@@ -1,16 +1,16 @@
 ---
-title: Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection | Azure Rights Management
+title: Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection | Azure Information Protection
 description: "Quando si configurano le condizioni per un'etichetta, è possibile assegnare automaticamente un'etichetta a un documento o messaggio di posta elettronica. In alternativa, è possibile richiedere agli utenti di selezionare l'etichetta consigliata."
 manager: mbaldwin
-ms.date: 08/29/2016
+ms.date: 09/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: 87069b73e5f8959955b9967070bd3bcb5e7dc196
-ms.openlocfilehash: 357b012bd8679d7e24bfe3ae40c3160e4b69c01f
+ms.sourcegitcommit: 801ca11da602d4acb9c398c9a89aeb33e45cb0f4
+ms.openlocfilehash: 98e8efd574d7e9689da426028d26f528cd6042a4
 
 
 ---
@@ -48,9 +48,9 @@ In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per 
 
 ## Per configurare la classificazione consigliata o automatica per un'etichetta
 
-1. Se non è già stato fatto, accedere al [portale di Azure](https://portal.azure.com) e quindi passare al pannello **Azure Information Protection**. 
+1. Se non è già stato fatto, in una nuova finestra del browser accedere al [portale di Azure](https://portal.azure.com) e quindi passare al pannello **Azure Information Protection**. 
     
-    Ad esempio, nel menu hub fare clic su **Esplora** e iniziare a digitare **Information** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, dal menu principale fare clic su **Altri servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
 2. Nel pannello **Azure Information Protection** selezionare l'etichetta da configurare per la classificazione automatica o suggerita.
 
@@ -224,6 +224,6 @@ Per altre informazioni sulla configurazione dei criteri di Azure Information Pro
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO3-->
 
 

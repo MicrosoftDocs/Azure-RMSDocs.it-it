@@ -1,5 +1,5 @@
 ---
-title: Configurazione dei criteri di Azure Information Protection | Azure RMS
+title: Configurazione di criteri di Azure Information Protection | Azure Information Protection
 description: "Per configurare le funzioni di classificazione, aggiunta di etichette e protezione, è necessario configurare i criteri di Azure Information Protection."
 author: cabailey
 manager: mbaldwin
@@ -12,8 +12,8 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: da0145444a7d0abb6407ed2ccbb581d4dcdd10d6
-ms.openlocfilehash: e5b8054b3b5cb38adf2f5ae1d2f4f399d98f6e23
+ms.sourcegitcommit: 801ca11da602d4acb9c398c9a89aeb33e45cb0f4
+ms.openlocfilehash: ba7acf835439d059874e0512997b2b591193f0c3
 
 
 ---
@@ -28,9 +28,9 @@ Per configurare le funzioni di classificazione, aggiunta di etichette e protezio
 
 Per configurare i criteri di Azure Information Protection nella versione di anteprima di Azure Information Protection:
 
-1. Accedere al [portale di Azure](https://portal.azure.com).
+1. In una nuova finestra del browser accedere al [portale di Azure](https://portal.azure.com).
 
-2. Passare al pannello **Azure Information Protection**: ad esempio, nel menu hub fare clic su **Sfoglia** e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
+2. Passare al pannello **Azure Information Protection**: ad esempio, nel menu hub fare clic su **More services** (Altri servizi) e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
 
     Verrà quindi visualizzato il pannello **Azure Information Protection** in cui è possibile configurare i criteri di Azure Information Protection, che contiene gli elementi seguenti:
 
@@ -80,6 +80,6 @@ Per un esempio di come personalizzare i criteri predefiniti e osservare il compo
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 

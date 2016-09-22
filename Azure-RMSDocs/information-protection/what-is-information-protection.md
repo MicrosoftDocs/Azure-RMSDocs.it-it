@@ -1,17 +1,17 @@
 ---
-title: "Che cos'è Azure Information Protection? | Azure Rights Management"
+title: "Che cos'è Azure Information Protection? | Azure Information Protection"
 description: Panoramica del servizio Azure Information Protection, ora in anteprima.
 author: cabailey
 manager: mbaldwin
-ms.date: 07/29/2016
+ms.date: 09/06/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
-ms.sourcegitcommit: da0145444a7d0abb6407ed2ccbb581d4dcdd10d6
-ms.openlocfilehash: aea4b5224c5489aab89695cc70b65f17aa22bd72
+ms.sourcegitcommit: 6bbac611f9c8bba96fbbba69e8044e494134d792
+ms.openlocfilehash: 3152ef095d39dab4cd2c11594b8d01dffe536ecc
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: aea4b5224c5489aab89695cc70b65f17aa22bd72
 
 Azure Information Protection consente di classificare e proteggere i documenti e i messaggi di posta elettronica, nonché di aggiungere etichette a questi. Quando si classificano i dati, a questi ultimi vengono aggiunte etichette persistenti, in modo che la classificazione sia identificabile in qualsiasi momento, indipendentemente dalla posizione di archiviazione o dagli utenti con cui è condivisa. Le etichette persistenti includono contrassegni visivi, ad esempio un'intestazione, un piè di pagina o una filigrana. Per i dati più sensibili è anche possibile evitare la perdita di dati tramite i criteri di crittografia, identità e autorizzazione di Azure Rights Management. 
 
-Per gli utenti finali, Azure Information Protection si integra facilmente con i flussi di lavoro esistenti tramite l'aggiunta della barra Information Protection alle applicazioni di Office. 
+Per gli utenti finali, Azure Information Protection si integra facilmente con i flussi di lavoro esistenti tramite l'aggiunta della barra Information Protection alle app di Office. 
 
 - Annuncio: [Azure Information Protection – available in Public Preview now!](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/12/azure-information-protection-public-preview-available-now/) (Azure Information Protection ora disponibile in anteprima pubblica)
 
@@ -44,6 +44,6 @@ Per gli utenti finali, Azure Information Protection si integra facilmente con i 
 Introduzione ad Azure Information Protection in quattro semplici passaggi, con l'[Esercitazione introduttiva di Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO1-->
 
 

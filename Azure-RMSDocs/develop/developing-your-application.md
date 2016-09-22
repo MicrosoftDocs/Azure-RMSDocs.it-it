@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
-ms.openlocfilehash: 0dcaf13afb1802c2301c9516b2602aa2f6b7ce7e
+ms.sourcegitcommit: 4141cadf67dc479116c802f9340ba222140194a3
+ms.openlocfilehash: 2d965086fa44d98e8236a6bbd2515fb3afac3f05
 
 
 ---
@@ -26,10 +26,12 @@ Questo argomento contiene informazioni essenziali sugli aspetti principali di un
 
 ## Introduzione
 
-Le istruzioni in questo argomento si basano sull'applicazione di esempio, IPCHelloWorld, che serve a comprendere i concetti di base e il codice di un'applicazione abilitata all'uso di diritti. È possibile scaricare l'intera applicazione di esempio IPCHellowWorld e il file [Webinar_Collateral.zip](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440) da Microsoft Connect.
+Le istruzioni in questo argomento si basano sull'applicazione di esempio *IPCHelloWorld*, che serve a comprendere i concetti di base e il codice di un'applicazione abilitata all'uso di diritti. Il progetto *IPCHelloWorld* è già configurato per Rights Management Services SDK 2.1. Per informazioni su come configurare un nuovo progetto per l'uso di RMS SDK 2.1, vedere [Configurare Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md).
 
-> [!Note] 
-> Il progetto IPCHelloWorld è già configurato per Rights Management Services SDK 2.1. Per informazioni su come configurare un nuovo progetto per l'uso di RMS SDK 2.1, vedere [Configurare Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md).
+È possibile scaricare l'intera applicazione di esempio [IPCHellowWorld](https://connect.microsoft.com/site1170/Downloads/DownloadDetails.aspx?DownloadID=42440) e il file *Webinar_Collateral.zip* da Microsoft Connect.
+> [!Note]
+> Se si riceve un errore di accesso a Microsoft Connect, è possibile che l'utente non sia registrato. Per la registrazione: selezionare [Connect](http://connect.microsoft.com) (Connect), accedere con l'account Microsoft > Directory > Search for Rights Management Services (Cerca Rights Management Services) > Join (Partecipa).
+
 
 ## Caricamento di MSIPC.dll
 
@@ -185,6 +187,6 @@ Per completare la procedura, è anche necessario rilasciare tutte le risorse all
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO2-->
 
 
