@@ -3,7 +3,7 @@ title: Pianificazione e implementazione della chiave del tenant di Azure Rights 
 description: "Informazioni per pianificare e gestire la chiave del tenant di Rights Management (RMS) per Azure RMS. Anziché affidare a Microsoft la gestione della chiave del tenant (impostazione predefinita), per rispettare i criteri aziendali potrebbe essere necessario, ad esempio, gestire autonomamente la propria chiave del tenant in base alla modalità BYOK (Bring Your Own Key)."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/01/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eec7cc8b20435df11d7b8f89c4b9e9d0f039dc55
-ms.openlocfilehash: 25d47ab488474ed756b3139bb9d42d420cea25f7
+ms.sourcegitcommit: df79a02238c7cbadaae450ad8dabc03478de27e9
+ms.openlocfilehash: 0e3e77073898e2ae9f84f555183fb6fcbc7d2d8a
 
 
 ---
@@ -96,7 +96,7 @@ Quando la chiave viene trasferita all'insieme di credenziali delle chiavi, le vi
 
 Ma prima che Azure RMS possa usare la chiave, deve essere autorizzato all'uso della chiave nell'insieme di credenziali delle chiavi dell'organizzazione. A tale scopo, l'amministratore di Insieme di credenziali delle chiavi di Azure usa il cmdlet PowerShell dell'insieme di credenziali delle chiavi, [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/library/mt603625.aspx) e concede le autorizzazioni all'entità di servizio **Microsoft.Azure.RMS** di Azure RMS. Ad esempio:
 
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign 
+    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
 A questo punto è possibile configurare Azure RMS per l'uso di questa chiave come chiave del tenant di Azure RMS dell'organizzazione. Tramite i cmdlet di Azure RMS, è innanzitutto possibile la connessione e l'accesso ad Azure RMS:
 
@@ -136,6 +136,6 @@ Dopo la pianificazione e, se necessario, la generazione della chiave del tenant,
 
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO3-->
 
 

@@ -3,7 +3,7 @@ title: Migrazione da AD RMS ad Azure Rights Management | Azure RMS
 description: "Istruzioni per la migrazione della distribuzione di Active Directory Rights Management Services (AD RMS) ad Azure Rights Management (Azure RMS). Dopo la migrazione gli utenti avranno comunque accesso ai documenti e ai messaggi di posta elettronica che l'organizzazione ha protetto con AD RMS, nonché al nuovo contenuto che verrà protetto con Azure RMS."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: rights-management
@@ -12,8 +12,8 @@ ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
-ms.openlocfilehash: 6aa75f5e6b326068951b3d4d65f337c15a475029
+ms.sourcegitcommit: 5c20772240961bdd3052e55a19eaca21ef7da003
+ms.openlocfilehash: 01c107979265abf0d34060eccf09ca32c0086ab8
 
 
 ---
@@ -46,7 +46,7 @@ Prima di iniziare il processo di migrazione ad Azure RMS, verificare che i prere
         
     - Modalità di crittografia 2:
     
-        - I server e i client di AD RMS devono essere in esecuzione in modalità di crittografia 2 prima di iniziare la migrazione ad Azure RMS. Per altre informazioni, vedere [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx) (Modalità di crittografia di AD RMS).
+        - I server e i client di AD RMS devono essere in esecuzione in modalità di crittografia 2 prima di iniziare la migrazione ad Azure RMS. Anche se la chiave del certificato concessore di licenze server corrente deve usare la modalità di crittografia 2, le chiavi precedenti configurate per la modalità di crittografia 1 sono supportate in Azure RMS come chiavi archiviate. Per altre informazioni sulle modalità di crittografia e su come passare alla modalità di crittografia 2, vedere [Modalità di crittografia di AD RMS](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
         
     - Sono supportate tutte le topologie di AD RMS valide:
     
@@ -184,6 +184,6 @@ Per iniziare la migrazione, passare a [Fase 1: configurazione lato server](migra
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO3-->
 
 
