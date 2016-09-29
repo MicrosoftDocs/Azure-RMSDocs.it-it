@@ -57,7 +57,7 @@ Per altre informazioni su Azure Rights Management e sul relativo funzionamento, 
     
     Nella maggior parte dei casi, selezionare **Azure RMS**. Non selezionare AD RMS a meno che non siano stati letti e compresi i prerequisiti e le restrizioni relativi a questa configurazione, che viene talvolta definita "*hold your own key*" (HYOK). Per altre informazioni, vedere [Requisiti e restrizioni HYOK per la protezione di AD RMS](configure-adrms-restrictions.md).
     
-4. Se si seleziona Azure RMS: per **Select RMS template** (Seleziona modello RMS) fare clic sulla casella di riepilogo a discesa e selezionare il [modello](../deploy-use/configure-custom-templates.md) o l'opzione Rights Management che si vuole usare per proteggere i documenti e i messaggi di posta elettronica con questa etichetta.
+4. Se si seleziona Azure RMS: per **Selezionare il modello RMS** fare clic sulla casella di riepilogo a discesa e selezionare il [modello](../deploy-use/configure-custom-templates.md) o l'opzione Rights Management che si vuole usare per proteggere i documenti e i messaggi di posta elettronica con questa etichetta.
     
     Altre informazioni sulle opzioni:
     
