@@ -1,32 +1,12 @@
-# [Comprendere ed esplorare](/rights-management/understand-explore/azure-rights-management)
+# [Comprendere ed esplorare](/rights-management/understand-explore/what-is-azure-information-protection)
 # [Introduzione](/rights-management/get-started/requirements-azure-rms)
 # [Pianificare e progettare](/rights-management/plan-design/deployment-roadmap)
 # [Distribuire e usare il servizio](/rights-management/deploy-use/activate-service)
 # [Distribuire e usare il client](/rights-management/rms-client/use-client)
 # [Sviluppare e personalizzare le app](/rights-management/develop/developers-guide)
-# [Azure Information Protection (anteprima)](what-is-information-protection.md)
-## [Che cos'è Azure Information Protection?](what-is-information-protection.md)
-## [Requisiti](requirements-azure-infoprotect.md)
-## [Esercitazione per l'avvio rapido](infoprotect-quick-start-tutorial.md)
-### [Passaggio 1: Attivare il servizio Rights Management](infoprotect-tutorial-step1.md)
-### [Passaggio 2: Configurare e pubblicare criteri](infoprotect-tutorial-step2.md)
-### [Passaggio 3: Installare il client](infoprotect-tutorial-step3.md)
-### [Passaggio 4: Servizio in azione](infoprotect-tutorial-step4.md)
-## [Domande frequenti](faq.md)
-## [Configurare i criteri](configure-policy.md)
-### [Criterio predefinito](configure-policy-default.md)
-### [Configurare le impostazioni globali](configure-policy-settings.md)
-### [Creare una nuova etichetta](configure-policy-new-label.md)
-### [Eliminare o riordinare un'etichetta](configure-policy-delete-reorder.md)
-### [Modificare un'etichetta](configure-policy-change-label.md)
-### [Applicare la protezione](configure-policy-protection.md)
-#### [Restrizioni HYOK](configure-adrms-restrictions.md)
-### [Configurare i contrassegni visivi](configure-policy-markings.md)
-### [Configurare le condizioni](configure-policy-classification.md)
-## [Installare il cliente](info-protect-client.md)
-## [Condizioni di licenza software per Azure Information Protection](aip-software-license-terms.md)
+# [Azure Information Protection (anteprima)](/rights-management/understand-explore/what-is-azure-information-protection)
 
 
-<!--HONumber=Sep16_HO1-->
+<!--HONumber=Sep16_HO4-->
 
 
