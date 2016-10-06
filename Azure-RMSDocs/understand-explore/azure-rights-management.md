@@ -1,44 +1,13 @@
 ---
-title: Panoramica di Azure Rights Management | Azure RMS
-description: Microsoft Azure Rights Management (Azure RMS) consente di proteggere i dati sensibili dell'organizzazione da accessi non autorizzati e di controllare il modo in cui vengono usati i dati.
-author: cabailey
-manager: mbaldwin
-ms.date: 08/25/2016
-ms.topic: article
-ms.prod: 
-ms.service: rights-management
-ms.technology: techgroup-identity
-ms.assetid: 965581c8-be3c-43b4-8145-5cefd29c7636
-ms.reviewer: esaggese
-ms.suite: ems
+redirect_url: /information-protection/understand-explore/what-is-information-protection
 translationtype: Human Translation
-ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
-ms.openlocfilehash: b6589429693854b73228b2d90de1a787f03663ff
-
+ms.sourcegitcommit: 3336b75fbc2fce1c9260afb217d909b2b772ed03
+ms.openlocfilehash: 91b2a16929f9de250ca05404e2117b81a05908fc
 
 ---
 
-# Panoramica di Azure Rights Management
-
->*Si applica a: Azure Rights Management, Office 365*
-
-Microsoft Azure Rights Management (Azure RMS) consente di proteggere i dati sensibili dell'organizzazione da accessi non autorizzati e di controllare il modo in cui vengono utilizzati i dati. Azure Rights Management è un servizio cloud integrato in altre applicazioni e servizi cloud Microsoft, ad esempio Office 365 e Azure Active Directory. Il servizio può essere usato anche con proprie applicazioni line-of-business e soluzioni di protezione dei dati di fornitori software in locale o sul cloud. 
-
-Rights Management usa la crittografia, l'identità e i criteri di autorizzazione per proteggere i file e la posta elettronica. Rispetto ai controlli di accesso standard, ad esempio le autorizzazioni NTFS, la protezione applicata tramite Rights Management resta associata ai file e ai messaggi di posta elettronica indipendentemente dalla posizione, che sia all'interno o all'esterno dell'organizzazione, nelle reti, nei file server o nelle applicazioni. Questa soluzione per la protezione delle informazioni favorisce il controllo dei propri dati, anche quando sono condivisi con altre persone.
-
-È ad esempio possibile configurare un file in modo che possano accedervi solo le persone dell'organizzazione oppure decidere se il file può essere modificato o usato esclusivamente in sola lettura o impedire che venga stampato. È possibile configurare i messaggi e-mail in modo analogo e, inoltre, impedire che vengano inoltrati o che venga usata l'opzione Rispondi a tutti. Queste attività di protezione possono essere semplificate per gli utenti finali tramite modelli di criteri standardizzati.
-
-Azure Rights Management è noto anche con altri nomi. Vedere [l'elenco delle denominazioni alternative](azure-rms-aka.md).
-
-# Passaggi successivi
-Per una migliore comprensione e alcuni esempi, vedere [Informazioni su Microsoft Azure Rights Management](what-is-azure-rms.md).
-
-Se si è pronti a distribuire Azure RMS per l'organizzazione, usare la [guida di orientamento per la distribuzione di Azure Rights Management](../plan-design/deployment-roadmap.md).
 
 
-
-
-
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 
