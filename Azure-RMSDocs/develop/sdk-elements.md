@@ -4,18 +4,18 @@ description: Questo argomento illustra i file dell'ambiente di sviluppo e i rela
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: B57AC6F3-733C-42A8-AF83-0E15FBF27C99
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: a3f1e913c92dbee3b889a3d3c0bd6c97317112c9
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: fa85dde3f578f51efa57af78e211d3e712378b61
 
 
 ---
@@ -43,9 +43,9 @@ Rights Management Services SDK 2.1 include i file seguenti, installati nel compu
 |Ipcerror.h|\inc|Contiene i codici di errore pubblici esportati da RMS SDK 2.1.|
 |Ipcfile.h|\inc|Contiene le interfacce File API esportate da RMS SDK 2.1.|
 |Msipc.lib|\lib|Libreria a cui eseguire il collegamento quando si usa RMS SDK 2.1 per creare applicazioni x86.|
-|Msipc_s.lib|\lib|Fornisce il punto di ingresso per [<strong>IpcInitialize</strong>](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize) per le applicazioni x86.|
+|Msipc_s.lib|\lib|Fornisce il punto di ingresso per [<strong>IpcInitialize</strong>](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) per le applicazioni x86.|
 |Msipc.lib|\lib\x64|Libreria a cui eseguire il collegamento quando si usa RMS SDK 2.1 per creare applicazioni x64.|
-|Msipc_s.lib|\lib\x64|Fornisce il punto di ingresso per [<strong>IpcInitialize</strong>](/rights-management/sdk/2.1/api/win/functions#msipc_ipcinitialize) per le applicazioni x64.|
+|Msipc_s.lib|\lib\x64|Fornisce il punto di ingresso per [<strong>IpcInitialize</strong>](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) per le applicazioni x64.|
 |Genmanifest.exe|\tools|Genera un manifesto da utilizzare durante lo sviluppo di un'applicazione abilitata per RMS.|
  
 
@@ -55,6 +55,6 @@ Rights Management Services SDK 2.1 include i file seguenti, installati nel compu
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

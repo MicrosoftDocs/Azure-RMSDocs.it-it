@@ -3,17 +3,17 @@ title: Requisiti per Azure RMS&#58; sottoscrizioni cloud | Azure RMS
 description: "Identificare le sottoscrizioni che è possibile usare per distribuire Azure Rights Management (Azure RMS) nell'organizzazione."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 6a16e890-3c3e-4f47-80ca-176a34bdf8bc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 5c0597ee3882c25fd5c04fbd89990806754bda1a
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: e0c6c9300096a3130cc59406208d51bbafc9e35b
 
 
 ---
@@ -94,6 +94,6 @@ Per ulteriori informazioni, vedere [RMS per utenti singoli e Azure Rights Manage
 Per verificare gli altri requisiti, vedere [Requisiti per Azure Rights Management](requirements-azure-rms.md).
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

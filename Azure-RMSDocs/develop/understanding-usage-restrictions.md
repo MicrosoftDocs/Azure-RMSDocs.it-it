@@ -4,18 +4,18 @@ description: Tutte le applicazioni abilitate per RMS devono imporre restrizioni 
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: E388B16C-ECDA-4696-A040-D457D3C96766
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: df210bd7aff33fda41a278e6aed1108574fe68eb
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 1d1433eb4468fd74689243c1ca63134a406e0f96
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: df210bd7aff33fda41a278e6aed1108574fe68eb
 
 Tutte le applicazioni abilitate per RMS devono imporre restrizioni di utilizzo. Una restrizione di utilizzo è una condizione risultante da un tentativo dell'utente di eseguire un'azione, ad esempio la stampa di un documento, ma i criteri RMS per tale documento non concedono autorizzazioni o diritti per eseguire l'azione (ad esempio, il diritto di stampa).
 
-È possibile eseguire query sulle autorizzazioni di un utente per un documento mediante la funzione [**IpcAccessCheck**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcaccesscheck).
+È possibile eseguire query sulle autorizzazioni di un utente per un documento mediante la funzione [**IpcAccessCheck**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcaccesscheck).
 
 ## Informazioni sulle restrizioni di utilizzo
 
@@ -48,7 +48,7 @@ Tutte le applicazioni abilitate per RMS devono imporre restrizioni di utilizzo. 
 
 ## Argomenti correlati
 
-* [**IpcAccessCheck**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)
+* [**IpcAccessCheck**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)
 * [Informazioni di riferimento sulle restrizioni di utilizzo](usage-restriction-reference.md)
  
 
@@ -56,6 +56,6 @@ Tutte le applicazioni abilitate per RMS devono imporre restrizioni di utilizzo. 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

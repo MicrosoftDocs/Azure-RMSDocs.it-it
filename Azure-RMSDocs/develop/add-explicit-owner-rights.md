@@ -1,35 +1,35 @@
 ---
 title: Come aggiungere diritti proprietario espliciti | Azure RMS
-description: L'applicazione deve aggiungere in modo esplicito i diritti &quot;proprietario&quot; durante la creazione di una licenza da zero.
+description: Your application should explicitly add "Owner" rights when creating a license from scratch.
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 06/28/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d2339ece646fc51410186d43facdea28ac8fdfe
-ms.openlocfilehash: 3fae089850787391f95d7ea1448bd48418ad3ade
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 22016f824263916f5f265d818c51975d42c35799
 
 
 ---
 
 # Procedura: Aggiungere diritti espliciti di proprietario
 
-L'applicazione deve aggiungere in modo esplicito i diritti "proprietario" durante la creazione di una licenza da zero ([**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)).
+L'applicazione deve aggiungere in modo esplicito i diritti "proprietario" durante la creazione di una licenza da zero ([**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)).
 
 ## Prerequisiti
 
-Quando l'applicazione crea un handle di licenza tramite [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch), deve anche concedere diritti completi (autorizzazioni) al proprietario in modo esplicito.
+Quando l'applicazione crea un handle di licenza tramite [**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch), deve anche concedere diritti completi (autorizzazioni) al proprietario in modo esplicito.
 
 >[!NOTE] 
-> L'impostazione di un utente come "proprietario" mediante [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) con la proprietà **IPC\_LI\_OWNER** non concede al proprietario autorizzazioni complete.
+> L'impostazione di un utente come "proprietario" mediante [**IpcSetLicenseProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty) con la proprietà **IPC\_LI\_OWNER** non concede al proprietario autorizzazioni complete.
 
 L'esempio di codice seguente illustra solo i passaggi da eseguire per la creazione e l'aggiunta di diritti specifici a una determinata licenza.
 
@@ -37,7 +37,7 @@ L'esempio di codice seguente illustra solo i passaggi da eseguire per la creazio
  
 ## Passaggio 1: scenario di esempio
 
-In questo esempio i diritti necessari vengono aggiunti a una licenza creata con [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch). L'esempio illustra la creazione e l'assegnazione dei diritti alla licenza tramite un elenco di diritti.
+In questo esempio i diritti necessari vengono aggiunti a una licenza creata con [**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch). L'esempio illustra la creazione e l'assegnazione dei diritti alla licenza tramite un elenco di diritti.
 
 A questi utenti vengono aggiunti i due diritti seguenti:
 
@@ -108,14 +108,14 @@ A questi utenti vengono aggiunti i due diritti seguenti:
 ## Argomenti correlati
 
 * [Note per gli sviluppatori](developer-notes.md)
-* [**IpcCreateLicenseFromScratch**](/rights-management/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)
-* [**IpcSetLicenseProperty**](/rights-management/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty)
+* [**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)
+* [**IpcSetLicenseProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicenseproperty)
  
 
  
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 
