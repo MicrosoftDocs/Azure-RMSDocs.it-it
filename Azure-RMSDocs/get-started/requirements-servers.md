@@ -1,29 +1,31 @@
 ---
-title: Requisiti per Azure RMS&#58; Server locali che supportano Azure Rights Management | Azure RMS
-description: Identificare i prodotti server locali che sono supportati con Azure RMS quando si usa il connettore Azure RMS.
+title: Supporto dei server locali per la protezione dati | Azure Information Protection
+description: Identificare i prodotti server locali che possono usare il servizio Azure Rights Management di Azure Information Protection tramite il connettore di Rights Management.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e7d91f2d-d6a7-4c7e-821f-c94e4be9967d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 0f9f1dc09d1b0d831b1c96d25b7bb763086aa9c9
+ms.sourcegitcommit: 976281d2b1f9c87bbb0806fef98b2520772c507c
+ms.openlocfilehash: 22f63cae58f6dfe7e0381a561ffb348177585809
 
 
 ---
 
 
-# Requisiti per Azure RMS: server locali che supportano Azure RMS
+# Server locali che supportano la protezione dati di Azure Rights Management
 
->*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Information Protection, Office 365*
 
-I prodotti server locali seguenti sono supportati con Azure RMS quando si usa il connettore Azure RMS, che opera come interfaccia di comunicazione (inoltro) tra i server locali e Azure RMS. Questa configurazione richiede inoltre l'impostazione della sincronizzazione della directory tra le foreste Active Directory e Azure Active Directory.
+I prodotti server locali seguenti sono supportati con Azure Information Protection quando si usa il connettore di Azure Rights Management. Il connettore funziona come interfaccia di comunicazione (inoltro) tra i server locali e il servizio Azure Rights Management che è usato da Azure Information Protection per proteggere messaggi di posta elettronica e documenti di Office. 
+
+Per usare questo connettore, è necessario configurare la sincronizzazione delle directory tra le foreste Active Directory e Azure Active Directory.
 
 -   **Exchange Server**:
 
@@ -48,19 +50,19 @@ I prodotti server locali seguenti sono supportati con Azure RMS quando si usa il
     -   Windows Server 2012
 
     > [!NOTE]
-    > Poiché i file server che eseguono Windows Server 2008 R2 non includono un'azione predefinita per le attività di gestione file per l'applicazione della protezione RMS, non sarà possibile usare il connettore RMS per questo scenario. È tuttavia possibile usare Infrastruttura di classificazione file e Azure RMS in questi sistemi operativi se si configura un'attività personalizzata di gestione file per l'esecuzione di un file eseguibile o di uno script in grado di proteggere i file tramite Azure RMS. Ad esempio, uno script di Windows PowerShell che usa i [cmdlet di protezione RMS](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+    > Poiché i file server che eseguono Windows Server 2008 R2 non includono un'azione predefinita per le attività di gestione file per l'applicazione della protezione Rights Management, non sarà possibile usare il connettore di Rights Management per questo scenario. È tuttavia possibile usare Infrastruttura di classificazione file e Azure RMS in questi sistemi operativi se si configura un'attività personalizzata di gestione file per l'esecuzione di un file eseguibile o di uno script in grado di proteggere i file tramite Azure RMS. Ad esempio, uno script di Windows PowerShell che usa i [cmdlet di protezione RMS](https://msdn.microsoft.com/library/azure/mt433195.aspx).
     > 
     > È inoltre possibile utilizzare questi cmdlet con server che eseguono versioni successive di Windows Server, con il vantaggio che questi cmdlet possono proteggere tutti i tipi di file. Il connettore RMS protegge solo i file di Office. Per le istruzioni d'uso, vedere [Protezione RMS con l'infrastruttura di classificazione file (FCI, File Classification Infrastructure) per Windows Server&#40;FCI&#41;](../rms-client/configure-fci.md).
 
-Il connettore RMS è supportato in Windows Server 2012 R2, Windows Server 2012 e Windows Server 2008 R2.
+Il connettore di Rights Management è supportato in Windows Server 2012 R2, Windows Server 2012 e Windows Server 2008 R2.
 
-Per altre informazioni sulla modalità di configurazione del connettore RMS per questi server locali, vedere [Distribuzione del connettore di Azure Rights Management](../deploy-use/deploy-rms-connector.md).
+Per altre informazioni sulla modalità di configurazione del connettore di Rights Management per questi server locali, vedere [Distribuzione del connettore di Azure Rights Management](../deploy-use/deploy-rms-connector.md).
 
 ## Passaggi successivi
 Per verificare gli altri requisiti, vedere [Requisiti per Azure Rights Management](requirements-azure-rms.md).
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

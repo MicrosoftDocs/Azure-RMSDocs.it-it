@@ -3,7 +3,7 @@ title: Configurazione dei diritti di utilizzo per Azure Rights Management | Azur
 description: Informazioni sui diritti specifici usati quando si proteggono i file o i messaggi di posta elettronica tramite il servizio Azure Rights Management di Azure Information Protection e relativa identificazione.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: a11d027789a63ae845812068e34f527f15a02314
+ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
+ms.openlocfilehash: 0b160fff849b9f8bda71fd6ccf07d8fb07487b13
 
 
 ---
@@ -96,11 +96,11 @@ Un utente vuole inviare per posta elettronica alcune informazioni a utenti speci
 
 
 ## Vedere anche
-[Configurazione di modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
+[Configurazione di modelli personalizzati per il servizio Azure Rights Management](configure-custom-templates.md)
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

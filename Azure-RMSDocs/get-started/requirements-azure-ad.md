@@ -1,29 +1,28 @@
 ---
-title: Requisiti per Azure RMS&#58; Directory di Azure AD | Azure RMS
-description: Identificare i requisiti di Azure AD per l'uso di Azure Rights Management (Azure RMS), in modo che gli utenti possano essere autenticati.
+title: Requisiti di Azure Active Directory | Azure Information Protection
+description: Identificare i requisiti di Azure AD per l'uso di Azure Information Protection, in modo che gli utenti possano essere autenticati.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/29/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: b4ac71492ba9ad883d481149a248b919973d7386
+ms.sourcegitcommit: 976281d2b1f9c87bbb0806fef98b2520772c507c
+ms.openlocfilehash: 5be497b09ed1b1342747508611a1cc06ad0edf02
 
 
 ---
 
-# Requisiti per Azure RMS: directory di Azure AD
+# Requisiti di Azure Active Directory per Azure Information Protection
 
->*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Information Protection, Office 365*
 
-
-Per usare Azure Rights Management (Azure RMS), è necessario avere una directory di Azure AD. L'account aziendale per questa directory consente di accedere al portale di Azure classico, in cui è possibile, ad esempio, configurare e gestire i modelli di Rights Management.
+Per usare Azure Information Protection, è necessario avere una directory di Azure AD. L'account aziendale per questa directory consente di accedere al portale di Azure classico, in cui è possibile, ad esempio, configurare e gestire i modelli di Rights Management.
 
 Se non si ha una sottoscrizione di Azure aziendale, è possibile ottenerne una registrandosi per una versione di valutazione gratuita: andare alla pagina [Introduzione - Microsoft Azure](https://account.windowsazure.com/organization) e seguire le istruzioni.
 
@@ -40,14 +39,14 @@ Se si vuole integrare la directory di Azure AD con le foreste di AD locali, vede
 > 
 > -   È necessario usare AD FS nella versione server minima di **Windows Server 2012 R2** oppure un provider di autenticazione alternativo che supporti il protocollo OAuth 2.0.
 
-## Multi-Factor Authentication (MFA) e Azure RMS
-Per utilizzare Multi-Factor Authentication (MFA) con Azure RMS, è necessario almeno uno dei seguenti elementi:
+## Multi-Factor Authentication (MFA) e Azure Information Protection
+Per usare Multi-Factor Authentication (MFA) con Azure Information Protection, è necessario almeno uno degli elementi seguenti:
 
 -   Office 2013 (versione minima):
 
     -   Se si ha Office 2013, è necessario installare anche l'[aggiornamento del 9 giugno 2015 per Office 2013 (KB3054853)](https://support.microsoft.com/kb/3054853). Per altre informazioni su questo aggiornamento e su come l'autenticazione moderna porta Active Directory Authentication Library in Office 2013, vedere il post relativo all'[anteprima pubblica di autenticazione moderna di Office 2013 annunciata](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/) sul blog di Office.
 
--   Applicazione di condivisione Rights Management per Windows:
+-   Applicazione Rights Management sharing per Windows:
 
     -   È necessario avere installato la versione minima 1.0.1908.0, che può essere confermata tramite Pannello di controllo, Programmi e funzionalità. Per altre informazioni sull'applicazione, vedere [Applicazione Rights Management sharing per Windows](../rms-client/sharing-app-windows.md).
 
@@ -70,11 +69,11 @@ Quindi, configurare la soluzione MFA:
         Per altre informazioni su questo scenario, vedere il post relativo al [programma di gestione delle identità per Office 365](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) sul blog di Office.
 
 ## Passaggi successivi
-Per verificare gli altri requisiti, vedere [Requisiti per Azure Rights Management](requirements-azure-rms.md).
+Per verificare gli altri requisiti, vedere [Requisiti per Azure Information Protection](requirements-azure-rms.md).
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO5-->
 
 

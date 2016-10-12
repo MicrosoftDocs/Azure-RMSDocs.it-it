@@ -1,27 +1,27 @@
 ---
-title: Funzionamento di Azure RMS Work | Azure RMS
+title: Funzionamento di Azure RMS | Azure Information Protection
 description: Descrizione del funzionamento di Azure RMS, dei controlli crittografici usati e dei diagrammi dettagliati del funzionamento di questo processo.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
-ms.openlocfilehash: 5fa410e2c2b84a3626cb06a85dc2511b17e085ae
+ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
+ms.openlocfilehash: 5efa5bdf9e11e55ec190c3abe95b1bdc33026c63
 
 
 ---
 
 
-# Funzionamento di Azure RMS Dietro le quinte
+# Funzionamento di Azure RMS: dietro le quinte
 
->*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Information Protection, Office 365*
 
 Una cosa importante da comprendere sul funzionamento di Azure RMS è che tramite il servizio Rights Management (e Microsoft) non vengono visualizzati o archiviati dati come parte del processo di protezione delle informazioni. Le informazioni protette non vengono mai inviate o archiviate in Azure, a meno di archiviarle in modo esplicito in Azure o di usare un altro servizio cloud che le archivia in Azure. Azure RMS rende i dati di un documento semplicemente illeggibili a chiunque, eccetto gli utenti e i servizi autorizzati:
 
@@ -51,7 +51,7 @@ Anche se non è necessario conoscere personalmente il funzionamento di RMS, è p
 
 ###### Nota 1 
 
-La lunghezza di 256 bit viene usata dall'applicazione di condivisione Rights Management per la protezione generica e la protezione nativa quando l'estensione di file è ppdf o si tratta di un file di testo o di immagine protetto, ad esempio con estensione ptxt o pjpg.
+La lunghezza di 256 bit viene usata dall'applicazione Rights Management sharing per la protezione generica e la protezione nativa quando l'estensione di file è ppdf o si tratta di un file di testo o di immagine protetto, ad esempio con estensione ptxt o pjpg.
 
 Modalità di archiviazione e protezione delle chiavi crittografiche:
 
@@ -150,6 +150,6 @@ Quando si è pronti a iniziare la distribuzione di Azure RMS per l'organizzazion
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

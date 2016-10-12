@@ -1,27 +1,27 @@
 ---
-title: File server che eseguono Windows Server e usano l'infrastruttura di classificazione file | Azure RMS
+title: File server che eseguono Windows Server e usano Infrastruttura di classificazione file | Azure Information Protection
 description: Come usare l'infrastruttura di classificazione file di Windows Server con Azure RMS quando si distribuisce il connettore RMS per proteggere automaticamente i documenti di Office.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
-ms.openlocfilehash: 43af3be5b9ff51a72a6382fe88440fd427aa0dbf
+ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
+ms.openlocfilehash: 64c718f91d1d2f516bcac6dd949eef5ef379a306
 
 
 ---
 
 
-# File server che eseguono Windows Server e usano l'infrastruttura di classificazione file
+# File server che eseguono Windows Server e usano Infrastruttura di classificazione file
 
->*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Information Protection, Office 365*
 
 
 Quando si configura Windows Server per usare Infrastruttura di classificazione file, questa funzionalità di Gestione risorse file server può analizzare i file locali per stabilire se contengono dati sensibili I file che soddisfano questi criteri vengono contrassegnati con proprietà di classificazione definite da un amministratore. A questo punto possono essere eseguite azioni automatiche, a seconda della classificazione, ad esempio l'applicazione della protezione delle informazioni usando [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] e la distribuzione del connettore Rights Management (noto anche come connettore RMS). I file di Office vengono automaticamente protetti da Azure RMS.
@@ -32,7 +32,7 @@ I criteri di classificazione sono completamente configurabili ed estendibili e c
 
 Per istruzioni sulla distribuzione e configurazione del connettore RMS per i file di Office, vedere l'articolo relativo alla [distribuzione del connettore Azure Rights Management](../deploy-use/deploy-rms-connector.md).
 
-Per istruzioni sull'uso dello script di Windows PowerShell per tutti i tipi di file, vedere l'articolo relativo [alla protezione RMS con l'infrastruttura di classificazione file per Windows Server](../rms-client/configure-fci.md).
+Per istruzioni sull'uso dello script di Windows PowerShell per tutti i tipi di file, vedere l'articolo [Protezione RMS con Infrastruttura di classificazione file per Windows Server](../rms-client/configure-fci.md).
 
 
 
@@ -43,6 +43,6 @@ Dopo aver compreso in che modo le applicazioni e i servizi supportano Azure RMS,
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 
