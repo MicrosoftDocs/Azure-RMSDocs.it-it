@@ -1,28 +1,28 @@
 ---
-title: Scenario - Condividere un file di Office con utenti in un'altra organizzazione | Azure RMS
-description: Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management in modo che gli utenti possano inviare in modo sicuro un file di Office tramite posta elettronica alle persone in un'altra organizzazione.
+title: Scenario - Condividere un file di Office con utenti in un'altra organizzazione | Azure Information Protection
+description: Questo scenario e la documentazione di supporto per l'utente usano la tecnologia di protezione Azure Rights Management in modo che gli utenti possano inviare in modo sicuro un file di Office tramite posta elettronica alle persone in un'altra organizzazione.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 26e81330c58057aac9629690f1d4fe85e56a64f8
+ms.sourcegitcommit: 03bd68b03d423908e7fbe89efb6aac6773283f2f
+ms.openlocfilehash: 1e8ba22c5fdcf3f17b3cec0a99444975c03ec008
 
 
 ---
 
 # Scenario - Condividere un file di Office con utenti in un'altra organizzazione
 
->*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Information Protection, Office 365*
 
-Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management in modo che gli utenti possano inviare in modo sicuro un file di Office tramite posta elettronica alle persone in un'altra organizzazione. Il file di Office, ad esempio, potrebbe essere un documento di Word, un foglio di calcolo di Excel o una presentazione di PowerPoint contenente informazioni del listino prezzi di un partner, un elenco di prodotti per un rivenditore o un elenco dei tempi di consegna con potenziali clienti. Quando gli utenti seguono le istruzioni, il file allegato al messaggio di posta elettronica sarà protetto da Rights Management di Azure.
+Questo scenario e la documentazione di supporto per l'utente usano la tecnologia di Azure Rights Management in modo che gli utenti possano inviare in modo sicuro un file di Office tramite posta elettronica alle persone in un'altra organizzazione. Il file di Office, ad esempio, potrebbe essere un documento di Word, un foglio di calcolo di Excel o una presentazione di PowerPoint contenente informazioni del listino prezzi di un partner, un elenco di prodotti per un rivenditore o un elenco dei tempi di consegna con potenziali clienti. Quando gli utenti seguono le istruzioni, il file allegato al messaggio di posta elettronica sarà protetto da Rights Management di Azure.
 
 Questo scenario è adatto ai casi seguenti:
 
@@ -44,11 +44,11 @@ Affinché le istruzioni per l'utente per questo scenario funzionino, devono veri
 
 |Requisito|Se sono necessarie ulteriori informazioni|
 |---------------|--------------------------------|
-|Sono stati preparati account e gruppi per Office 365 o Azure Active Directory|[Preparazione per Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
+|Sono stati preparati account e gruppi per Office 365 o Azure Active Directory|[Preparazione per Azure Information Protection](https://technet.microsoft.com/library/jj585029.aspx)|
 |Azure Rights Management non è attivato|[Attivazione di Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|L’applicazione di condivisione Rights Management è distribuita nei computer degli utenti che eseguono Windows|[Distribuzione automatica dell'applicazione di condivisione Microsoft Rights Management](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
-|Gli utenti dispongono di Outlook da Office 2013|Se gli utenti dispongono di Office 2010, sostituire la schermata con una versione equivalente, in modo che l'immagine corrisponda a ciò che gli utenti vedono.|
-|La sottoscrizione di Azure RMS include il rilevamento dei documenti|Se la sottoscrizione per Azure RMS non include la revoca e il rilevamento dei documenti, gli utenti non saranno in grado di completare tutti i passaggi delle istruzioni per l’utente. In questo caso, acquistare una sottoscrizione che supporti queste funzionalità o modificare le istruzioni per l’utente per rimuovere i passaggi che utilizzano queste funzionalità.<br /><br />Per verificare il supporto della propria sottoscrizione: [Confronto tra le offerte di Rights Management Services (RMS)](https://technet.microsoft.com/dn858608)|
+|L'applicazione Rights Management sharing viene distribuita nei computer degli utenti che eseguono Windows|[Distribuzione automatica dell'applicazione Microsoft Rights Management sharing](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
+|Gli utenti dispongono di Outlook da Office 2013|Se gli utenti dispongono di Office 2016 o Office 2010, sostituire lo screenshot con una versione equivalente, in modo che l'immagine corrisponda a ciò che gli utenti vedono.|
+|La sottoscrizione per Azure Information Protection include il rilevamento dei documenti|Se la sottoscrizione non include il rilevamento e la revoca dei documenti, gli utenti non saranno in grado di completare tutti i passaggi delle istruzioni per l'utente. In questo caso, acquistare una sottoscrizione che supporti queste funzionalità o modificare le istruzioni per l’utente per rimuovere i passaggi che utilizzano queste funzionalità.<br /><br />Controllare le informazioni sulle sottoscrizioni nella [pagina dei piani tariffari](https://go.microsoft.com/fwlink/?LinkId=827589) di Azure Information Protection.|
 
 ## Istruzioni sulla documentazione per l'utente
 Usando il modello seguente, copiare e incollare le istruzioni per l'utente in una comunicazione per gli utenti finali e apportare tali modifiche in base all'ambiente:
@@ -63,12 +63,12 @@ Usando il modello seguente, copiare e incollare le istruzioni per l'utente in un
 
     -   Nel passaggio 3, è consigliabile selezionare **Consenti di revocare immediatamente l'accesso a questi documenti** in modo che non si verifichino ritardi se gli utenti revocano il documento in un secondo momento, ma questa opzione richiede che il destinatario abbia sempre una connessione a Internet per aprire l’allegato. Questo passaggio richiede anche di disporre di una sottoscrizione che supporti il rilevamento e la revoca dei documenti. Eliminare questo passaggio se non è adatto per gli utenti.
 
-    -   Nel passaggio 4, è consigliabile l'opzione **Invia un messaggio di posta elettronica quando qualcuno tenta di aprire il documento**. Se gli utenti tracciano i documenti utilizzando il portale di rilevamento dei documenti, è possibile decidere che la notifica tramite posta elettronica non è necessaria ed eliminare questo passaggio.
+    -   Nel passaggio 4, è consigliabile l'opzione **Invia un messaggio di posta elettronica quando qualcuno tenta di aprire il documento**. Se gli utenti tengono traccia dei documenti usando il portale di rilevamento dei documenti, è possibile decidere che la notifica tramite posta elettronica non è necessaria ed eliminare questo passaggio.
 
     -   I passaggi non includono l'impostazione di una data di scadenza. Se le informazioni non devono essere usate dopo una determinata data, aggiungere un altro passaggio per impostare una scadenza appropriata, ad esempio 90 giorni dall'invio del messaggio di posta elettronica.
 
     > [!NOTE]
-    > Per ulteriori informazioni su ciascuna delle opzioni selezionabili dagli utenti, vedere [Opzioni della finestra di dialogo per l'applicazione di condivisione di Rights Management](https://technet.microsoft.com/library/dn574738.aspx)
+    > Per altre informazioni su ciascuna delle opzioni selezionabili dagli utenti, vedere [Opzioni della finestra di dialogo per l'applicazione Rights Management sharing](https://technet.microsoft.com/library/dn574738.aspx)
 
 4.  Apportare altre modifiche a questo set di istruzioni e quindi inviarlo agli utenti.
 
@@ -104,9 +104,9 @@ Usare il [portale di rilevamento dei documenti](https://track.azurerms.com/) per
 
 -   Per informazioni aggiuntive:
 
-    -   [Proteggere un file che si condivide tramite posta elettronica](https://technet.microsoft.com/library/dn574735%28v=ws.10%29.aspx)
+    -   [Proteggere un file che si condivide tramite posta elettronica](../rms-client/sharing-app-protect-by-email.md)
 
-    -   [Tenere traccia e revocare i documenti](https://technet.microsoft.com/library/dn986611.aspx)
+    -   [Tenere traccia dei documenti e revocarli](../rms-client/sharing-app-track-revoke.md)
 
 -   Contattare il supporto tecnico:
 
@@ -143,9 +143,9 @@ Utilizzare il [portale di rilevamento dei documenti](https://track.azurerms.com/
 
 -   Per informazioni aggiuntive:
 
-    -   [Proteggere un file che si condivide tramite posta elettronica](https://technet.microsoft.com/library/dn574735%28v=ws.10%29.aspx)
+    -   [Proteggere un file che si condivide tramite posta elettronica](../rms-client/sharing-app-protect-by-email.md)
 
-    -   [Tenere traccia e revocare i documenti](https://technet.microsoft.com/library/dn986611.aspx)
+    -   [Tenere traccia dei documenti e revocarli](../rms-client/sharing-app-track-revoke.md)
 
 -   Contattare il supporto tecnico:
 
@@ -154,6 +154,6 @@ Utilizzare il [portale di rilevamento dei documenti](https://track.azurerms.com/
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

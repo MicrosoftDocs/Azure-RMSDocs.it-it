@@ -1,19 +1,19 @@
 ---
-title: Cosa visualizzano gli amministratori e gli utenti? | (Azure RMS)
-description: Vedere alcuni esempi tipici di come gli amministratori e gli utenti vedono e possono usare Azure Rights Management (RMS) per proteggere informazioni sensibili o riservate.
+title: Cosa visualizzano gli amministratori e gli utenti? | Azure Information Protection
+description: Vengono presentati alcuni esempi tipici di come gli amministratori e gli utenti vedono e possono usare la tecnologia Azure Rights Management (Azure RMS) per proteggere informazioni sensibili o riservate.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 013e0eb4-49a7-4e81-9e4d-f56c0ceb017f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
-ms.openlocfilehash: 6fbe4841ca3ccd684dd78608d023f6d54735bcaf
+ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
+ms.openlocfilehash: d1f7b24861848f536a80a8b8889a44b41049e40b
 
 
 ---
@@ -21,7 +21,7 @@ ms.openlocfilehash: 6fbe4841ca3ccd684dd78608d023f6d54735bcaf
 
 # Azure RMS in azione: Cosa vedono gli amministratori e gli utenti
 
->*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Information Protection, Office 365*
 
 Questo articolo mostra alcuni esempi tipici di come gli amministratori e gli utenti vedono e possono usare Azure Rights Management (RMS) per proteggere informazioni sensibili o riservate.
 
@@ -151,7 +151,7 @@ Il messaggio di posta elettronica viene crittografato quando lascia l'infrastrut
 
 -   Per ulteriori informazioni sull'uso di Azure RMS con Exchange Online, vedere la sezione [Exchange Online ed Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) di [Supporto di Microsoft Azure Rights Management da parte delle applicazioni](applications-support.md).
 
--   Per istruzioni dettagliate su come configurare Exchange Online per Azure RMS, vedere la sezione [Exchange Online: configurazione di IRM](../deploy-use/configure-office365.md#exchange-online-irm-configuration) di [Configurazione di applicazioni per Rights Management di Windows Azure](../deploy-use/configure-applications.md).
+-   Per istruzioni dettagliate su come configurare Exchange Online per Azure RMS, vedere la sezione [Exchange Online: configurazione di IRM](../deploy-use/configure-office365.md#exchange-online-irm-configuration) di [Configurazione di applicazioni per Azure Rights Management](../deploy-use/configure-applications.md).
 
 ## Protezione automatica dei file con SharePoint Online e librerie protette
 
@@ -185,13 +185,13 @@ Il documento rimane protetto anche se viene rinominato, salvato in un altro perc
 
 -   Per ulteriori informazioni sull'uso di Azure RMS con SharePoint, vedere la sezione [SharePoint Online e SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server) di [Supporto di Microsoft Azure Rights Management da parte delle applicazioni](applications-support.md).
 
--   Per istruzioni dettagliate su come configurare SharePoint per Azure RMS, vedere la sezione [SharePoint Online e OneDrive for Business: configurazione di IRM](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) di [Configurazione di applicazioni per Rights Management di Windows Azure](../deploy-use/configure-applications.md).
+-   Per istruzioni dettagliate su come configurare SharePoint per Azure RMS, vedere la sezione [SharePoint Online e OneDrive for Business: configurazione di IRM](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) di [Configurazione di applicazioni per Azure Rights Management](../deploy-use/configure-applications.md).
 
 ## Condivisione sicura di allegati con utenti mobili
 
 Negli esempi precedenti è stato illustrato come gli amministratori possono applicare automaticamente la protezione delle informazioni ai dati sensibili e riservati. In alcuni casi, però, gli utenti possono avere l'esigenza di applicare autonomamente questa protezione, ad esempio se collaborano con partner di un'altra organizzazione, hanno bisogno di autorizzazioni personalizzate o impostazioni non definite nei modelli, in situazioni specifiche che non rientrano negli esempi precedenti. In questi casi, gli utenti possono applicare autonomamente i modelli di RMS oppure configurare autorizzazioni personalizzate.
 
-Questo esempio illustra come gli utenti possono condividere facilmente un documento con un collaboratore in un'altra società, proteggendo comunque il documento e con la certezza che il destinatario possa leggerlo, anche da un dispositivo mobile. Questo scenario usa l'applicazione di condivisione Rights Management, che è possibile distribuire automaticamente nei computer Windows dell'organizzazione. In alternativa, può essere installata manualmente dagli utenti.
+Questo esempio illustra come gli utenti possono condividere facilmente un documento con un collaboratore in un'altra società, proteggendo comunque il documento e con la certezza che il destinatario possa leggerlo, anche da un dispositivo mobile. Questo scenario usa l'applicazione Rights Management sharing, che è possibile distribuire automaticamente nei computer Windows dell'organizzazione. In alternativa, può essere installata manualmente dagli utenti.
 
 In questo esempio, Alice di Contoso invia un documento di Word riservato tramite posta elettronica a Roberto di Fabrikam. Legge il documento sul suo iPad, ma potrebbe leggerlo altrettanto facilmente anche su un iPhone, su un tablet o telefono Android, su un computer Mac o su un telefono o computer Windows.
 
@@ -231,7 +231,7 @@ Se Roberto inoltra il messaggio di posta elettronica con l'allegato o lo salva i
 
 **Per ulteriori informazioni relative a questo scenario:**
 
-- Per istruzioni dettagliate, vedere [Proteggere un file che si condivide tramite posta elettronica](../rms-client/sharing-app-protect-by-email.md) e [Visualizzare e usare i file che sono stati protetti](../rms-client/sharing-app-view-use-files.md) nella [Guida dell'utente dell'applicazione di condivisione Rights Management](../rms-client/sharing-app-user-guide.md).
+- Per istruzioni dettagliate, vedere [Proteggere un file che si condivide tramite posta elettronica](../rms-client/sharing-app-protect-by-email.md) e [Visualizzare e usare i file che sono stati protetti](../rms-client/sharing-app-view-use-files.md) nella [Guida dell'utente dell'applicazione Rights Management sharing](../rms-client/sharing-app-user-guide.md).
 
 - L'[Esercitazione di avvio rapido per Azure Rights Management](../get-started/quick-start-tutorial.md) include istruzioni dettagliate per questo scenario.
 
@@ -241,6 +241,6 @@ Dopo avere visto alcuni esempi di ciò che Azure RMS è in grado di fare, è int
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

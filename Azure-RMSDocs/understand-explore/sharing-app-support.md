@@ -1,19 +1,19 @@
 ---
-title: Applicazione RMS sharing per piattaforme Windows e mobili | Azure RMS
+title: Applicazione RMS sharing per piattaforme Windows e mobili | Azure Information Protection
 description: Informazioni su come l'applicazione RMS sharing supporta Azure RMS come applicazione scaricabile gratuita, necessaria per supportare Office 2010, ma consigliata anche per computer Windows e Mac e dispositivi mobili.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 43429b44c019144744f39a1f92f144d315c2024c
-ms.openlocfilehash: 21bdcae9432e2edbecaa6eafb35ccefbd3ca372c
+ms.sourcegitcommit: 55fd22b60ad87dadce0ffb89bb658e949670f728
+ms.openlocfilehash: e4b9a13ba29820cd7a19e0b8509966f5d8195353
 
 
 ---
@@ -21,9 +21,9 @@ ms.openlocfilehash: 21bdcae9432e2edbecaa6eafb35ccefbd3ca372c
 
 # Applicazione RMS sharing per piattaforme Windows e mobili
 
->*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Information Protection, Office 365*
 
-L'applicazione RMS sharing è un'applicazione scaricabile gratuita, necessaria per supportare Office 2010, ma consigliata anche per computer Windows e Mac e dispositivi mobili. L'applicazione è particolarmente vantaggiosa perché consente di applicare la protezione generica ad applicazioni e file senza supporto nativo per [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], il che significa che è possibile proteggere tutti i file. Per altre informazioni sui diversi livelli di protezione, vedere la sezione [Livelli di protezione – nativo e generico](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) della [Guida dell'amministratore dell'applicazione Rights Management sharing](../rms-client/sharing-app-admin-guide.md).
+L'applicazione RMS sharing è un'applicazione scaricabile gratuita, necessaria per supportare Office 2010, ma consigliata anche per computer Windows e Mac e dispositivi mobili. L'applicazione RMS sharing è particolarmente vantaggiosa perché consente di applicare la protezione generica ad applicazioni e file senza supporto nativo per il servizio Azure Rights Management, il che significa che tutti i file possono essere protetti. Per altre informazioni sui diversi livelli di protezione, vedere la sezione [Livelli di protezione – nativo e generico](../rms-client/sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) della [Guida dell'amministratore dell'applicazione Rights Management sharing](../rms-client/sharing-app-admin-guide.md).
 
 Quando gli utenti proteggono i file usando l'applicazione RMS sharing, possono anche tenere traccia dei documenti protetti e, se necessario, revocarne l'accesso. A tale scopo, usare il [sito di rilevamento del documento](http://go.microsoft.com/fwlink/?LinkId=529562).
 
@@ -33,15 +33,15 @@ Per computer Windows, l'applicazione RMS sharing si integra in modo semplice con
 
 -   È disponibile una nuova opzione di scelta rapida in Esplora file In questo modo gli utenti possono usare l'opzione **Proteggi sul posto** che consente di visualizzare una semplice finestra di dialogo con le impostazioni usate più di frequente per proteggere file archiviati su un disco.
 
--   Viene installato un visualizzatore per aprire i file protetti con [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] richiamato automaticamente quando non è installata alcuna applicazione in grado di aprire il file protetto.
+-   Viene installato un visualizzatore per aprire i file protetti con il servizio Azure Rights Management, richiamato automaticamente quando non è installata alcuna applicazione in grado di aprire il file protetto.
 
--   È prevista una configurazione back-end per Office 2010 che consente alle versioni di Word, Excel, PowerPoint e Outlook di questa suite di integrarsi facilmente con [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
+-   È prevista una configurazione back-end per Office 2010 che consente alle versioni di Word, Excel, PowerPoint e Outlook di questa famiglia di prodotti di integrarsi facilmente con il servizio Azure Rights Management.
 
-Sebbene sia possibile scaricare l'applicazione di condivisione RMS per Windows e installarla in un singolo computer tramite la [pagina di Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970), è supportata anche una distribuzione aziendale per l'installazione invisibile all'utente e la configurazione personalizzata. Per altre informazioni, vedere le risorse seguenti:
+Sebbene sia possibile scaricare l'applicazione RMS sharing per Windows e installarla in un singolo computer tramite la [pagina di Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970), è supportata anche una distribuzione aziendale per l'installazione invisibile all'utente e la configurazione personalizzata. Per altre informazioni, vedere le risorse seguenti:
 
--   [Guida dell'amministratore dell'applicazione di condivisione Rights Management](../rms-client/sharing-app-admin-guide.md)
+-   [Guida dell'amministratore dell'applicazione Rights Management sharing](../rms-client/sharing-app-admin-guide.md)
 
--   [Guida dell'utente dell'applicazione di condivisione Rights Management](../rms-client/sharing-app-user-guide.md)
+-   [Guida dell'utente dell'applicazione Rights Management sharing](../rms-client/sharing-app-user-guide.md)
 
 L'applicazione RMS sharing per dispositivi mobili supporta i dispositivi di questo tipo usati più di frequente, ad esempio iPad e iPhone nonché dispositivi Android, Windows Phone e Windows RT. Gli utenti possono scaricare questa app dallo Store pertinente cui è possibile accedere dai collegamenti presenti nella [pagina di Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970).
 
@@ -53,11 +53,11 @@ L'applicazione RMS sharing per dispositivi mobili supporta i dispositivi di ques
 
 
 ## Passaggi successivi
-Per altre informazioni sul supporto di Azure Rights Management da parte di altre applicazioni e servizi, vedere [Supporto di Azure Rights Management da parte delle applicazioni](applications-support.md).
+Per informazioni su come altri servizi e applicazioni supportano il servizio Azure Rights Management di Azure Information Protection, vedere [Supporto del servizio Azure Rights Management da parte delle applicazioni](applications-support.md).
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

@@ -1,26 +1,26 @@
 ---
-title: "Prezzi e restrizioni della modalità BYOK | Azure RMS"
-description: Informazioni sulle restrizioni quando si usano chiavi gestite dal cliente (&quot;bring your own key&quot; o BYOK) con Azure RMS.
+title: "Prezzi e restrizioni della modalità BYOK | Azure Information Protection"
+description: Understand the restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
-ms.openlocfilehash: d704f3d9357993bdb01a38cda6f434ab1583b627
+ms.sourcegitcommit: 36e392d7e9a2fc8cec0419a3e66f92b42137bc72
+ms.openlocfilehash: 3ed4f3c770c1c34d2bda7481d8ca405c51d3fe8c
 
 
 ---
 
 # Prezzi e restrizioni della modalità BYOK
 
->*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Information Protection, Office 365*
 
 
 Le organizzazioni che hanno una sottoscrizione che include Azure Rights Management possono usare chiavi gestite dal cliente (BYOK) in Insieme di credenziali delle chiavi di Azure e registrarne l'utilizzo senza alcun costo aggiuntivo. Tuttavia, per usare Insieme di credenziali delle chiavi di Azure, è necessaria una sottoscrizione di Azure che supporti l'insieme di credenziali delle chiavi con chiavi protette dal modulo di protezione hardware. L'uso di una chiave in Insieme di credenziali delle chiavi di Azure comporta l'addebito di una tariffa mensile. Per altre informazioni, vedere la pagina [dei prezzi di Insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
@@ -33,7 +33,7 @@ Se sono presenti utenti che hanno effettuato l'iscrizione per un account gratuit
 
 ![BYOK non supporta Exchange Online](../media/RMS_BYOK_noExchange.png)
 
-La modalità BYOK e la registrazione dell'utilizzo possono essere usate facilmente con ogni applicazione che si integra con Azure RMS, ad esempio servizi cloud come SharePoint Online, server locali che eseguono Exchange e SharePoint che si integrano con Azure RMS usando il connettore RMS e applicazioni client come Office 2016 e Office 2013. È possibile ottenere log di utilizzo indipendentemente dall'applicazione che richiede Azure RMS.
+La modalità BYOK e la registrazione dell'utilizzo possono essere usate facilmente con ogni applicazione che si integra con il servizio Azure Rights Management (Azure RMS) usato da Azure Information Protection. ad esempio servizi cloud come SharePoint Online, server locali che eseguono Exchange e SharePoint che si integrano con Azure RMS usando il connettore RMS e applicazioni client come Office 2016 e Office 2013. È possibile ottenere log di utilizzo indipendentemente dall'applicazione che richiede Azure RMS.
 
 È presente tuttavia un'eccezione, Attualmente, la **modalità BYOK di Azure RMS non è compatibile con Exchange Online**. Se si vuole usare Exchange Online, è consigliabile distribuire Azure RMS con la modalità predefinita per la gestione delle chiavi, in base alla quale Microsoft genera e gestisce la chiave. È possibile passare a BYOK successivamente, ad esempio, quando Exchange Online supporterà la modalità BYOK per Azure RMS. Se non è possibile aspettare, tuttavia, si può distribuire subito Azure RMS con BYOK, con una funzionalità RMS ridotta per Exchange Online (i messaggi di posta elettronica e gli allegati non protetti rimangono completamente funzionanti):
 
@@ -62,6 +62,6 @@ Se si è deciso di usare la configurazione predefinita in cui Microsoft gestisce
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

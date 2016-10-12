@@ -1,28 +1,28 @@
 ---
-title: Configurazione di modelli personalizzati per Azure Rights Management | Azure RMS
+title: Configurazione di modelli personalizzati per il servizio Azure Rights Management | Azure Information Protection
 description: Informazioni e istruzioni per gli amministratori per configurare e gestire i modelli dei diritti di utilizzo. I modelli semplificano, per utenti e amministratori, l'applicazione ai file riservati di criteri che limitano l'accesso agli utenti autorizzati.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: 4f04a8b892cfb1f1ab62d1810fae172ad8bc9747
+ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
+ms.openlocfilehash: d8db7f0346fad1b9c46423875d1e559d41987686
 
 
 ---
 
-# Configurazione di modelli personalizzati per Azure Rights Management
+# Configurazione di modelli personalizzati per il servizio Azure Rights Management
 
->*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Information Protection, Office 365*
 
-Dopo l'[attivazione di Azure Rights Management](activate-service.md) (Azure RMS), gli utenti sono automaticamente in grado di usare due modelli predefiniti che facilitano l'applicazione di criteri ai file riservati allo scopo di limitare l'accesso ai soli utenti autorizzati all'interno dell'organizzazione. Questi due modelli prevedono le seguenti restrizioni relativamente ai criteri per i diritti d'uso:
+Dopo l'[attivazione ](activate-service.md) del servizio Azure Rights Management, gli utenti sono automaticamente in grado di usare due modelli predefiniti che facilitano l'applicazione di criteri di gestione dei diritti ai file riservati allo scopo di limitarne l'accesso agli utenti autorizzati all'interno dell'organizzazione. Questi due modelli prevedono le seguenti restrizioni relativamente ai criteri per i diritti d'uso:
 
 -   Visualizzazione di sola lettura per il contenuto protetto
 
@@ -66,6 +66,6 @@ Per configurare e usare i modelli personalizzati, usare le informazioni seguenti
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

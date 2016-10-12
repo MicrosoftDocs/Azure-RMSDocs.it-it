@@ -1,28 +1,28 @@
 ---
-title: Scenario - Mantenere il controllo dei documenti archiviati in SharePoint | Azure RMS
-description: Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management per verificare che i documenti di Office archiviati in SharePoint rimangano sotto controllo tramite librerie protette.
+title: Scenario - Mantenere il controllo dei documenti archiviati in SharePoint | Azure Information Protection
+description: Questo scenario e la documentazione di supporto per l'utente usano la tecnologia di protezione Azure Rights Management per verificare che i documenti di Office archiviati in SharePoint rimangano sotto controllo tramite librerie protette.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b6244c7-5ab9-4881-bc8f-6fa960390d89
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 048eafc41dcd03c708dca5befbef4e4b9e7113c4
+ms.sourcegitcommit: b61b7068e67103c45aea139cf95dacb851fe70e2
+ms.openlocfilehash: e0e6442e077d6899cbbf88ae2889908e93592815
 
 
 ---
 
 # Scenario - Mantenere il controllo dei documenti archiviati in SharePoint
 
->*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Information Protection, Office 365*
 
-Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management per verificare che i documenti di Office archiviati in SharePoint rimangano sotto controllo tramite librerie protette. Ad esempio, i documenti vengono protetti automaticamente dalle perdite di dati accidentali o previste dagli utenti e l'amministratore può bloccare l'accesso al contenuto anche dopo che questo è stato scaricato o sincronizzato. I file da proteggere dovrebbero essere quelli destinati alla collaborazione interna su documenti o piani di progettazione oppure ad altre consegne. Quando si configurano le raccolte protette per SharePoint, i file di Office archiviati in tali raccolte saranno protetti da Azure Rights Management.
+Questo scenario e la documentazione di supporto per l'utente usano la tecnologia Azure Rights Management di Azure Information Protection per verificare che i documenti di Office archiviati in SharePoint rimangano sotto controllo tramite librerie protette. Ad esempio, i documenti vengono protetti automaticamente dalle perdite di dati accidentali o previste dagli utenti e l'amministratore può bloccare l'accesso al contenuto anche dopo che questo è stato scaricato o sincronizzato. I file da proteggere dovrebbero essere quelli destinati alla collaborazione interna su documenti o piani di progettazione oppure ad altre consegne. Quando si configurano le raccolte protette per SharePoint, i file di Office archiviati in tali raccolte saranno protetti da Azure Rights Management.
 
 Le istruzioni sono adatte ai casi seguenti:
 
@@ -42,9 +42,9 @@ Per questo scenario, sono necessari i requisiti seguenti:
 
 |Requisito|Se sono necessarie ulteriori informazioni|
 |---------------|--------------------------------|
-|Sono stati preparati account e gruppi per Office 365 o Azure Active Directory|[Preparazione per Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|Azure Rights Management non è attivato|[Attivazione di Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|Se si usa SharePoint Server: Distribuzione del connettore RMS e configurarlo per SharePoint|[Distribuzione del connettore di Azure Rights Management](https://technet.microsoft.com/library/dn375964.aspx)|
+|Sono stati preparati account e gruppi per Office 365 o Azure Active Directory|[Preparazione per Azure Information Protection](../plan-design/prepare.md)|
+|Azure Rights Management non è attivato|[Attivazione di Azure Rights Management](../deploy-use/activate-service.md)|
+|Se si usa SharePoint Server: Distribuzione del connettore RMS e configurarlo per SharePoint|[Distribuzione del connettore di Azure Rights Management](../deploy-use/deploy-rms-connector.md)|
 |Configurare le autorizzazioni per il sito SharePoint da protezione|[Gestire le autorizzazioni per un elenco, una raccolta, una cartella, un documento o l'elemento di un elenco](https://support.office.com/en-ca/article/Manage-permissions-for-a-list-library-folder-document-or-list-item-9d13e7df-a770-4646-91ab-e3c117fcef45)<br /><br />[Applicare Information Rights Management a un elenco o a una raccolta](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
 |Configurazione di SharePoint per IRM e le raccolte protette|[Configurare Information Rights Management (IRM) nell'interfaccia di amministrazione di SharePoint](https://support.office.com/en-us/article/Set-up-Information-Rights-Management-IRM-in-SharePoint-admin-center-239ce6eb-4e81-42db-bf86-a01362fed65c)<br /><br />[Applicare Information Rights Management a un elenco o a una raccolta](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)|
 
@@ -105,6 +105,6 @@ Questa modifica consente di impedire agli utenti non autorizzati di accedere ai 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

@@ -1,28 +1,28 @@
 ---
-title: Applicazione di condivisione Rights Management&colon; Cronologia delle versioni | Azure RMS
+title: Applicazione Rights Management sharing&colon; Cronologia delle versioni | Azure Information Protection
 description: "Vedere le novità o cosa è stato modificato nell'applicazione Rights Management sharing per Windows."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
-ms.openlocfilehash: 361fde97756c24fa46df6eda16d7506b4b8aaa3a
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 31b9ad27e1fc640f8fec29067794f952aa6031b6
 
 
 ---
 
-# Applicazione di condivisione Rights Management: Cronologia delle versioni
+# Applicazione Rights Management sharing: Cronologia delle versioni
 
->*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
-Il team di Rights Management aggiorna regolarmente l'applicazione di condivisione di condivisione Rights Management con correzioni e nuove funzionalità. Utilizzare le informazioni seguenti per visualizzare gli elementi nuovi o modificati in una versione. La versione più recente è elencata per prima.
+Il team di Azure Information Protection aggiorna regolarmente l'applicazione Rights Management sharing con correzioni e nuove funzionalità. Utilizzare le informazioni seguenti per visualizzare gli elementi nuovi o modificati in una versione. La versione più recente è elencata per prima.
 
 Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
@@ -68,7 +68,7 @@ Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
 **Nuove funzionalità**:
 
--   Supporto per l'installazione da parte di utenti non amministratori, in modo che anche utenti standard possano installare l'applicazione di condivisione RMS.
+-   Supporto per l'installazione da parte di utenti non amministratori, in modo che anche utenti standard possano installare l'applicazione RMS sharing.
 
     Sono tuttavia previste alcune limitazioni per gli utenti standard che eseguono Office 2010. Per altre informazioni, vedere la sezione relativa agli [utenti che non sono amministratori locali e usano Office 2010](install-sharing-app.md#if-you-are-not-a-local-administrator-and-use-office-2010) nelle istruzioni utente [Scaricare e installare l'applicazione Rights Management sharing](install-sharing-app.md).
 
@@ -101,7 +101,7 @@ Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
 **Nuove funzionalità**:
 
--   Supporto per rilevamento e revoca dei documenti. Per altre informazioni, vedere [Rilevare e revocare i documenti quando si usa l'applicazione RMS sharing](sharing-app-track-revoke.md).
+-   Supporto per rilevamento e revoca dei documenti. Per altre informazioni, vedere [Tenere traccia dei documenti e revocarli quando si usa l'applicazione RMS sharing](sharing-app-track-revoke.md).
 
 -   Il supporto del modello quando si sceglie **Condividi file protetto**:
 
@@ -131,6 +131,6 @@ Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

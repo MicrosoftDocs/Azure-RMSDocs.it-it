@@ -1,36 +1,36 @@
 ---
-title: Proteggere un file condiviso tramite posta elettronica usando l'applicazione Rights Management sharing | Azure RMS
+title: Proteggere un file condiviso tramite posta elettronica usando l'applicazione Rights Management sharing | Azure Information Protection
 description: Istruzioni su come condividere in modo sicuro un documento tramite posta elettronica.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
-ms.openlocfilehash: ff5dd6afaa454c20f35c237e94947dcec9e737f6
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: b4467f73dd9d107681961f99ee038ed889e25b2d
 
 
 ---
 
-# Proteggere un file che si condivide tramite e-mail utilizzando l'applicazione di condivisione Rights Management
+# Proteggere un file che si condivide tramite posta elettronica usando l'applicazione Rights Management sharing
 
->*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 Quando si protegge un file che si condivide tramite e-mail viene creata una nuova versione del file originale. Il file originale rimane non protetto mentre la nuova versione viene protetta e automaticamente allegata a un messaggio e-mail che quindi può essere inviato.
 
-In alcuni casi (per i file creati da Microsoft Word, Excel e PowerPoint), l'applicazione di condivisione RMS crea due versioni del file che viene allegato al messaggio e-mail. La seconda versione del file ha l’estensione di file **.ppdf** ed è una copia shadow in formato PDF del file. Questa versione del file garantisce che i destinatari possano leggere sempre il file, anche se non dispongono della stessa applicazione che è stata utilizzata per crearlo. Questo accade spesso quando gli utenti leggono il messaggio e-mail sui dispositivi mobili e desiderano visualizzare gli allegati e-mail. Per aprire il file hanno bisogno solo dell'applicazione di condivisione RMS. Quindi, possono leggere il file allegato, ma non saranno in grado di modificarlo fino a quando non aprono l'altra versione del file utilizzando un'applicazione che supporta RMS.
+In alcuni casi (per i file creati da Microsoft Word, Excel e PowerPoint), l'applicazione RMS sharing crea due versioni del file che viene allegato al messaggio di posta elettronica. La seconda versione del file ha l’estensione di file **.ppdf** ed è una copia shadow in formato PDF del file. Questa versione del file garantisce che i destinatari possano leggere sempre il file, anche se non dispongono della stessa applicazione che è stata utilizzata per crearlo. Questo accade spesso quando gli utenti leggono il messaggio e-mail sui dispositivi mobili e desiderano visualizzare gli allegati e-mail. Per aprire il file hanno bisogno solo dell'applicazione RMS sharing. Quindi, possono leggere il file allegato, ma non saranno in grado di modificarlo fino a quando non aprono l'altra versione del file usando un'applicazione che supporta un servizio Rights Management.
 
-Se l'organizzazione utilizza Azure RMS, è possibile registrare i file protetti tramite la condivisione:
+Se l'organizzazione usa Azure Information Protection, è possibile tenere traccia dei file protetti tramite la condivisione:
 
 -   Selezionare un'opzione per ricevere un messaggio e-mail quando qualcuno tenta di aprire gli allegati protetti. Ogni volta che viene eseguito l'accesso al file, verrà comunicato chi ha tentato di aprire il file e quando e se l’operazione ha avuto esito positivo (è stato correttamente autenticato) o meno.
 
--   Usare il sito di rilevamento della documentazione. È anche possibile arrestare la condivisione del file, revocandone l’accesso nel sito di rilevamento documenti. Per altre informazioni, vedere [Rilevare e revocare i documenti quando si usa l'applicazione di condivisione RMS](sharing-app-track-revoke.md).
+-   Usare il sito di rilevamento della documentazione. È anche possibile arrestare la condivisione del file, revocandone l’accesso nel sito di rilevamento documenti. Per altre informazioni, vedere [Tenere traccia dei documenti e revocarli quando si usa l'applicazione RMS sharing](sharing-app-track-revoke.md).
 
 ## Tramite Outlook: Per proteggere un file che si condivide tramite e-mail
 
@@ -38,7 +38,7 @@ Se l'organizzazione utilizza Azure RMS, è possibile registrare i file protetti 
 
     ![Componente aggiuntivo di Outlook per l'applicazione RMS sharing](../media/ADRMS_MSRMSApp_SP_OutlookToolbar.png)
 
-    Se questo pulsante non è visualizzato, è probabile che l'applicazione di condivisione RMS non è installata nel computer, non è installata la versione più recente oppure è necessario riavviare il computer per completare l'installazione. Per altre informazioni su come installare l'applicazione, vedere [Scaricare e installare l'applicazione Rights Management sharing](install-sharing-app.md).
+    Se questo pulsante non è visualizzato, è probabile che l'applicazione RMS sharing non sia installata nel computer, che non sia installata la versione più recente o che sia necessario riavviare il computer per completare l'installazione. Per altre informazioni su come installare l'applicazione, vedere [Scaricare e installare l'applicazione Rights Management sharing](install-sharing-app.md).
 
 2.  Specificare le opzioni desiderate per questo file nella [finestra di dialogo Condividi file protetto](sharing-app-dialog-box.md), quindi fare clic su **Invia ora**.
 
@@ -61,7 +61,7 @@ Oltre alla condivisione di un file protetto tramite Outlook, è possibile utiliz
 
         ![Componente aggiuntivo della barra degli strumenti di Office](../media/ADRMS_MSRMSApp_SP_OfficeToolbar.png)
 
-    Se queste opzioni per la protezione non sono visualizzate, è probabile che l'applicazione di condivisione RMS non è installata nel computer, non è installata la versione più recente oppure è necessario riavviare il computer per completare l'installazione. Per altre informazioni su come installare l'applicazione, vedere [Scaricare e installare l'applicazione Rights Management sharing](install-sharing-app.md).
+    Se queste opzioni per la protezione non sono visualizzate, è probabile che l'applicazione RMS sharing non sia installata nel computer, che non sia installata la versione più recente o che sia necessario riavviare il computer per completare l'installazione. Per altre informazioni su come installare l'applicazione, vedere [Scaricare e installare l'applicazione Rights Management sharing](install-sharing-app.md).
 
 2.  Specificare le opzioni desiderate per questo file nella [finestra di dialogo Condividi file protetto](sharing-app-dialog-box.md), quindi fare clic su **Invia**.
 
@@ -69,7 +69,7 @@ Oltre alla condivisione di un file protetto tramite Outlook, è possibile utiliz
 
     Esempio:
 
-    ![Messaggio di posta elettronica per Azure RMS](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
+    ![Messaggio di posta elettronica per Azure Information Protection](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
     Ci si potrebbe chiedere: [Che cos'è il file .ppdf che viene creato automaticamente?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)
 
@@ -81,17 +81,17 @@ Oltre alla condivisione di un file protetto tramite Outlook, è possibile utiliz
 5.  Inviare il messaggio e-mail.
 
 ## Esempi e altre istruzioni
-Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights Management e procedure, vedere le sezioni seguenti della Guida dell’utente dell’applicazione di condivisione Rights Management:
+Per esempi di come è possibile usare l'applicazione Rights Management sharing e informazioni sulle procedure da seguire, vedere le sezioni seguenti della Guida dell'utente dell'applicazione Rights Management sharing:
 
--   [Esempi per l'utilizzo dell’applicazione di condivisione RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
+-   [Esempi per l'uso dell'applicazione RMS sharing](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [Come procedere](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Vedere anche
-[Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
+[Guida dell'utente dell'applicazione Rights Management sharing](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

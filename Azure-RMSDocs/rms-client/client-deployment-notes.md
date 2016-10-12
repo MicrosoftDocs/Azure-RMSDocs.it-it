@@ -1,28 +1,28 @@
 ---
-title: Note sulla distribuzione del client RMS | Azure RMS
+title: Note sulla distribuzione del client RMS | Azure Information Protection
 description: "Il client RMS (client Rights Management Service) versione 2 è anche noto come client MSIPC. Si tratta di un software per computer Windows che comunica con Microsoft Rights Management Services in locale o nel cloud per proteggere l'accesso alle informazioni nonché il loro utilizzo mentre passano attraverso applicazioni e dispositivi all'interno dei confini della propria organizzazione oppure al di fuori di questi confini gestiti. Oltre alle spedizioni con l'applicazione Rights Management sharing per Windows, il client RMS è disponibile come download facoltativo che può essere distribuito gratuitamente con software di terze parti, previo riconoscimento e accettazione del contratto di licenza, in modo che i clienti possano proteggere e utilizzare contenuti protetti dai servizi Rights Management."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: 6d80958fe4d56458b7dee48e7475a37de8a102bd
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 7dc20d52b501b9a6cbf659c3e00d6059352d6631
 
 
 ---
 
 # Note sulla distribuzione del client RMS
 
->*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 7 con SP1, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Vista*
+>*Si applica a: Active Directory Rights Management Services, Azure Information Protectin, Windows 7 con SP1, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Vista*
 
-Il client RMS (client Rights Management Service) versione 2 è anche noto come client MSIPC. Si tratta di un software per computer Windows che comunica con Microsoft Rights Management Services in locale o nel cloud per proteggere l'accesso alle informazioni nonché il loro utilizzo mentre passano attraverso applicazioni e dispositivi all'interno dei confini della propria organizzazione oppure al di fuori di questi confini gestiti. Oltre alle spedizioni con l'[applicazione di condivisione Rights Management per Windows](sharing-app-windows.md), il client RMS è disponibile [come download facoltativo](http://www.microsoft.com/download/details.aspx?id=38396) che può essere distribuito gratuitamente con software di terze parti, previo riconoscimento e accettazione del contratto di licenza, in modo che i clienti possano proteggere e utilizzare contenuti protetti dai servizi Rights Management.
+Il client RMS (client Rights Management Service) versione 2 è anche noto come client MSIPC. Si tratta di un software per computer Windows che comunica con Microsoft Rights Management Services in locale o nel cloud per proteggere l'accesso alle informazioni nonché il loro utilizzo mentre passano attraverso applicazioni e dispositivi all'interno dei confini della propria organizzazione oppure al di fuori di questi confini gestiti. Oltre alla distribuzione con l'[applicazione Rights Management sharing per Windows](sharing-app-windows.md), il client RMS è disponibile [come download facoltativo](http://www.microsoft.com/download/details.aspx?id=38396) che può essere distribuito gratuitamente con software di terze parti, previo riconoscimento e accettazione del contratto di licenza, in modo che i clienti possano proteggere e utilizzare contenuti protetti dai servizi Rights Management.
 
 
 ## Ridistribuzione del client RMS
@@ -238,6 +238,6 @@ In alcuni casi, potrebbe essere necessario reindirizzare il traffico durante l'i
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 
