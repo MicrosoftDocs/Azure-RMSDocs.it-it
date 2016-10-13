@@ -3,7 +3,7 @@ title: Come attivare Azure Rights Management dall'anteprima dell'interfaccia di 
 description: Istruzioni per l'attivazione del servizio Azure Rights Management quando si usa la nuova versione di anteprima dell'interfaccia di amministrazione di Office 365 (anteprima dell'interfaccia di amministrazione di Office 365).
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 805644a7c6dacc00519ad9ac07f39367d0784745
-ms.openlocfilehash: 9f6df7542a96fc04873eff452db4e7b5606e989e
+ms.sourcegitcommit: 565f2479fe1d41aa051dd64752413eb72d644535
+ms.openlocfilehash: ca1547a6ff00b7100cd52c34938bf6e088085f8a
 
 
 ---
@@ -41,9 +41,9 @@ Usare queste istruzioni solo se si usa la nuova versione di anteprima dell'inter
     - Per la ricerca: nella casella di ricerca nella **home page** digitare **Rights Management**, quindi dai risultati della ricerca fare clic su **impostazioni di gestione di Microsoft Azure Rights Management**.
 
         > [!NOTE]
-        >Se si sceglie lo spostamento, a seconda dello schermo, può essere necessario scorrere per visualizzare l'opzione. Tuttavia, se l'opzione non è disponibile nella pagina e non viene restituita nei risultati di ricerca, è possibile che il piano di servizio o la versione del prodotto non includa il servizio Azure Rights Management per Azure Information Protection.
+        >Se si sceglie lo spostamento, a seconda dello schermo, può essere necessario scorrere per visualizzare l'opzione. Tuttavia, se l'opzione non è disponibile nella pagina e non viene restituita nei risultati di ricerca, il piano di servizio potrebbe non includere il servizio Azure Rights Management per Azure Information Protection.
         >
-        >Usare le [informazioni sulle sottoscrizioni](https://go.microsoft.com/fwlink/?LinkId=827589) per verificare che la propria sottoscrizione includa Azure Rights Management. Per avere assistenza relativamente a tale problema, inviare un messaggio di posta elettronica ad [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
+        >Per attivare il servizio Azure Rights Management, è necessario un [piano Azure Information Protection Premium](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) o un [piano di Office 365 che include Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Per avere assistenza relativamente a tale problema, inviare un messaggio di posta elettronica ad [askipteam](mailto:askipteam?subject=I%20cannot%20activate%20RMS).
 
 4. Nella pagina **Rights Management** fare clic su **attiva**.
 
@@ -58,6 +58,6 @@ Tornare ad [Attivazione di Azure Rights Management](activate-service.md).
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

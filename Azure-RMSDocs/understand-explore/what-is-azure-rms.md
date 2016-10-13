@@ -3,7 +3,7 @@ title: Informazioni su Microsoft Azure Rights Management | Azure Information Pro
 description: "Azure Rights Management (Azure RMS) è la tecnologia di protezione usata da Azure Information Protection."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
-ms.openlocfilehash: 21e8bd7bb4b749e0f086a0108bb89778f2d3ce73
+ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
+ms.openlocfilehash: 3582aaba72347e8374f6cb856f52cd129bb83d3e
 
 
 ---
@@ -52,13 +52,13 @@ Per altre informazioni su Azure RMS:
 
 Per approfondire e provare Azure RMS, usare l'[esercitazione di avvio rapido per Azure Rights Management](../get-started/quick-start-tutorial.md).
 
-Tuttavia, se si è pronti a iniziare la distribuzione di Azure Information Protection per l'organizzazione, usare la [Guida di orientamento per la distribuzione di Azure Rights Management](../plan-design/deployment-roadmap.md) per i passaggi di distribuzione e i collegamenti a istruzioni procedurali.
+Tuttavia, se si è pronti a iniziare la distribuzione di Azure Information Protection per l'organizzazione, usare la [Guida di orientamento per la distribuzione di Azure Information Protection](../plan-design/deployment-roadmap.md) per i passaggi di distribuzione e i collegamenti alle istruzioni d'uso.
 
 > [!TIP]
-> Per altre informazioni e indicazioni, usare le risorse e i collegamenti in [Informazioni e supporto per Azure Rights Management](../get-started/information-support.md).
+> Per altre informazioni e indicazioni, usare le risorse e i collegamenti riportati in [Informazioni e supporto per Azure Information Protection](../get-started/information-support.md).
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

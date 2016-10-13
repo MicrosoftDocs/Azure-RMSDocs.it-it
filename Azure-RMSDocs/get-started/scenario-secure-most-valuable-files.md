@@ -3,7 +3,7 @@ title: Scenario - Proteggere (alcuni) file particolarmente importanti | Azure RM
 description: "Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management per proteggere in modo manuale e personalizzato un numero limitato di file identificati come i più importanti, garantendo il massimo livello di protezione dall'accesso non autorizzato."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea299f402e5e188b498bf6e3cacf9d4dc7e0f6e8
-ms.openlocfilehash: 2001b13c15ebfd1c1f939d342ac2a7006c18c0f8
+ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
+ms.openlocfilehash: 6687ed42bca5e773d6bbc97285f12e3c91ff9f32
 
 
 ---
@@ -53,7 +53,7 @@ Per questo scenario, sono necessari i requisiti seguenti:
 |Configurazione di un modello personalizzato, come descritto di seguito|[Configurazione di modelli personalizzati per il servizio Azure Rights Management](../deploy-use/configure-custom-templates.md)|
 |L'applicazione Rights Management sharing viene distribuita su un computer Windows, in modo che sia possibile proteggere questi file sul posto, come descritto nella sezione successiva|[Scaricare e installare l'applicazione Rights Management sharing](../rms-client/install-sharing-app.md)|
 |Gli utenti autorizzati dispongano di una versione minima di Office 2013|Se gli utenti dispongono di Office 2010, è necessario installare anche l'applicazione Rights Management sharing.|
-|La sottoscrizione di Azure RMS include il rilevamento dei documenti|Se la sottoscrizione ad Azure RMS non include il monitoraggio e la revoca dei documenti, non sarà possibile accedere al sito di monitoraggio del documento per vedere chi accede al documento e revocarne l'accesso se necessario. In questo caso, acquistare una sottoscrizione che supporta il monitoraggio dei documenti o accettare questa limitazione. È opportuno considerare anche la funzionalità di [registrazione utilizzo](../deploy-use/log-analyze-usage.md) di Azure RMS, che può fornire informazioni sugli utenti e sul momento in cui ogni file è stato consultato, per rilevare potenziali comportamenti sospetti.<br /><br />Controllare le informazioni sulle sottoscrizioni nella [pagina dei piani tariffari](https://go.microsoft.com/fwlink/?LinkId=827589) di Azure Information Protection.|
+|La sottoscrizione per Azure Information Protection include il rilevamento dei documenti|Se la sottoscrizione non include il rilevamento e la revoca dei documenti, non sarà possibile accedere al sito di rilevamento dei documenti per vedere chi accede ai documenti e, se necessario, per revocarne l'accesso. In questo caso, acquistare una sottoscrizione che supporta il monitoraggio dei documenti o accettare questa limitazione. È opportuno considerare anche le funzionalità di [registrazione dell'utilizzo ](../deploy-use/log-analyze-usage.md) del servizio Azure Rights Management, che può fornire informazioni su quali utenti hanno eseguito l'accesso e quando, per rilevare potenziali comportamenti sospetti.<br /><br />Controllare l'[elenco delle funzionalità](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) dal sito Azure Information Protection.|
 
 ### Per configurare il modello personalizzato
 
@@ -147,6 +147,6 @@ I seguenti file dispongono di un elevato livello di protezione, in modo che solo
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

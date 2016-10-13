@@ -3,7 +3,7 @@ title: Cosa visualizzano gli amministratori e gli utenti? | Azure Information Pr
 description: Vengono presentati alcuni esempi tipici di come gli amministratori e gli utenti vedono e possono usare la tecnologia Azure Rights Management (Azure RMS) per proteggere informazioni sensibili o riservate.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 013e0eb4-49a7-4e81-9e4d-f56c0ceb017f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
-ms.openlocfilehash: d1f7b24861848f536a80a8b8889a44b41049e40b
+ms.sourcegitcommit: 4a6d07e9a24293f054915b5598c63e118c9c1430
+ms.openlocfilehash: 4cc2522a03d1d6003d60e9c87fb8bab3c1454df4
 
 
 ---
@@ -73,9 +73,9 @@ Se si preferisce non mostrare questi modelli agli utenti oppure creare modelli p
 
 **Per ulteriori informazioni relative a questo scenario:**
 
-- Per istruzioni dettagliate, vedere [Attivazione di Azure Rights Management](../deploy-use/activate-service.md) e [Configurazione di modelli personalizzati per Azure Rights Management](../deploy-use/configure-custom-templates.md).
+- Per istruzioni dettagliate, vedere [Attivazione di Azure Rights Management](../deploy-use/activate-service.md) e [Configurazione di modelli personalizzati per il servizio Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
-- Per consentire agli utenti di proteggere i file aziendali importanti, vedere [Consentire agli utenti di proteggere i file mediante Azure Rights Management](../deploy-use/help-users.md).
+- Per consentire agli utenti di proteggere i file aziendali importanti, vedere [Consentire agli utenti di proteggere i file mediante il servizio Azure Rights Management](../deploy-use/help-users.md).
 
 Di seguito sono disponibili alcuni esempi di come gli amministratori possono applicare i modelli per configurare automaticamente la protezione delle informazioni per i file e i messaggi di posta elettronica.
 
@@ -149,7 +149,7 @@ Il messaggio di posta elettronica viene crittografato quando lascia l'infrastrut
 
 **Per ulteriori informazioni relative a questo scenario:**
 
--   Per ulteriori informazioni sull'uso di Azure RMS con Exchange Online, vedere la sezione [Exchange Online ed Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) di [Supporto di Microsoft Azure Rights Management da parte delle applicazioni](applications-support.md).
+-   Per altre informazioni sull'uso di Azure RMS con Exchange Online, vedere la sezione [Exchange Online ed Exchange Server](office-apps-services-support.md#exchange-online-and-exchange-server) di [Supporto del servizio Azure Rights Management da parte delle applicazioni](applications-support.md).
 
 -   Per istruzioni dettagliate su come configurare Exchange Online per Azure RMS, vedere la sezione [Exchange Online: configurazione di IRM](../deploy-use/configure-office365.md#exchange-online-irm-configuration) di [Configurazione di applicazioni per Azure Rights Management](../deploy-use/configure-applications.md).
 
@@ -183,7 +183,7 @@ Il documento rimane protetto anche se viene rinominato, salvato in un altro perc
 
 **Per ulteriori informazioni relative a questo scenario:**
 
--   Per ulteriori informazioni sull'uso di Azure RMS con SharePoint, vedere la sezione [SharePoint Online e SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server) di [Supporto di Microsoft Azure Rights Management da parte delle applicazioni](applications-support.md).
+-   Per altre informazioni sull'uso di Azure RMS con SharePoint, vedere la sezione [SharePoint Online e SharePoint Server](office-apps-services-support.md#sharepoint-online-and-sharepoint-server) di [Supporto del servizio Azure Rights Management da parte delle applicazioni](applications-support.md).
 
 -   Per istruzioni dettagliate su come configurare SharePoint per Azure RMS, vedere la sezione [SharePoint Online e OneDrive for Business: configurazione di IRM](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration) di [Configurazione di applicazioni per Azure Rights Management](../deploy-use/configure-applications.md).
 
@@ -241,6 +241,6 @@ Dopo avere visto alcuni esempi di ciò che Azure RMS è in grado di fare, è int
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

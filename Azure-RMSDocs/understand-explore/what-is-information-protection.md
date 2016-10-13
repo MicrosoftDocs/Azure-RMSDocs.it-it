@@ -10,8 +10,8 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
-ms.sourcegitcommit: c1279e6f2420711f921a8ccae256a80d619e8566
-ms.openlocfilehash: 5891dfa423bb5e0b9871bc60a31572ed4f89a7c7
+ms.sourcegitcommit: 590f12e0c6c6122a6bc0a559940870c18f0e2d39
+ms.openlocfilehash: 350a3cb877674208b4c560bb841135904aee1136
 
 
 ---
@@ -74,7 +74,9 @@ Quando gli utenti condividono i documenti protetti tramite posta elettronica, po
 
 ## Risorse per Azure Information Protection
 
-- Annuncio anteprima: [Azure Information Protection – available in Public Preview now!](https://blogs.technet.microsoft.com/enterprisemobility/2016/07/12/azure-information-protection-public-preview-available-now/) (Azure Information Protection ora disponibile in anteprima pubblica)
+- Annuncio: [Azure Information Protection is now Generally Available](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/04/azure-information-protection-is-now-generally-available/) (Azure Information Protection è ora disponibile a livello generale)
+
+- Versione di valutazione gratuita: [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
 
 - Download del client: [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) (Client di Azure Information Protection)
 
@@ -94,6 +96,6 @@ Configurare e provare a usare Azure Information Protection in cinque passaggi co
 Azure Information Protection o Azure Rights Management è noto anche con altri nomi. Vedere [l'elenco delle denominazioni alternative](azure-rms-aka.md).
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 
