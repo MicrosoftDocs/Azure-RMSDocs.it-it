@@ -1,7 +1,7 @@
-# [Comprendere ed esplorare](/rights-management/understand-explore/azure-rights-management)
-# [Introduzione](/rights-management/get-started/requirements-azure-rms)
+# [Comprendere ed esplorare](/information-protection/understand-explore/what-is-information-protection)
+# [Introduzione](/information-protection/get-started/requirements-azure-rms)
 # [Pianificare e progettare](deployment-roadmap.md)
-## [Guida alla distribuzione](deployment-roadmap.md)
+## [Guida di orientamento per la distribuzione](deployment-roadmap.md)
 ## [Migrazione da AD RMS](migrate-from-ad-rms-to-azure-rms.md)
 ### [Configurazione lato server](migrate-from-ad-rms-phase1.md)
 #### [Da chiave del software a chiave del software](migrate-softwarekey-to-softwarekey.md)
@@ -12,13 +12,12 @@
 ### [Attività post-migrazione](migrate-from-ad-rms-phase4.md)
 ## [Pianificazione e implementazione della chiave del tenant](plan-implement-tenant-key.md)
 ### [Prezzi e restrizioni della modalità BYOK](byok-price-restrictions.md)
-## [Preparazione ad Azure RMS](prepare.md)
-# [Distribuire e usare il servizio](/rights-management/deploy-use/activate-service)
-# [Distribuire e usare il client](/rights-management/rms-client/use-client)
-# [Sviluppare e personalizzare le app](/rights-management/develop/developers-guide)
-# [Azure Information Protection (anteprima)](/rights-management/information-protection/what-is-information-protection)
+## [Preparazione per Azure Information Protection](prepare.md)
+# [Distribuire e usare il servizio](/information-protection/deploy-use/activate-service)
+# [Distribuire e usare il client](/information-protection/rms-client/use-client)
+# [Sviluppare e personalizzare le app](/information-protection/develop/developers-guide)
 
 
-<!--HONumber=Aug16_HO3-->
+<!--HONumber=Sep16_HO4-->
 
 

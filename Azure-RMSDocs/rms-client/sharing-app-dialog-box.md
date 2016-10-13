@@ -1,33 +1,33 @@
 ---
-title: Opzioni della finestra di dialogo per l'applicazione Rights Management sharing | Azure RMS
+title: Opzioni della finestra di dialogo per l'applicazione Rights Management sharing | Azure Information Protection
 description: "Informazioni per specificare le opzioni nella finestra di dialogo Aggiungi protezione o nella finestra di dialogo Condividi file protetto dell'applicazione RMS sharing. Questa finestra di dialogo verrà visualizzata quando si protegge un file da condividere oppure si protegge un file nella posizione e si scelgono autorizzazioni personalizzate."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
-ms.openlocfilehash: 5f652b0e75350656f446c05d2464319ba46e06ad
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: a3a5fc8adf725d9cca0218e788988f718bd07bab
 
 
 ---
 
-# Opzioni della finestra di dialogo per l’applicazione di condivisione Rights Management
+# Opzioni della finestra di dialogo per l'applicazione Rights Management sharing
 
->*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 Utilizzare queste informazioni per specificare le opzioni nella finestra di dialogo **Aggiungi protezione** o nella finestra di dialogo **Condividi file protetto** dell'applicazione di RMS sharing. Questa finestra di dialogo verrà visualizzata quando si [protegge un file da condividere](sharing-app-protect-by-email.md) oppure si [protegge un file nella posizione](sharing-app-protect-in-place.md) e si scelgono autorizzazioni personalizzate.
 
 > [!IMPORTANT]
 > Se le opzioni visualizzate sono diverse da quelle documentate qui, probabilmente non è installata l'ultima versione dell’applicazione di condivisione. È possibile scaricare l'ultima versione dalla pagina di [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) .
 > 
-> Come è possibile sapere se si dispone della versione più recente? Cercare **applicazione di condivisione Microsoft Rights Management** elencata in Programmi e funzionalità e verificare il numero di versione corrispondente. Per visualizzare e utilizzare le opzioni nella tabella, la versione deve essere almeno **1.0.1770.0**. È possibile verificare il numero di versione più recente dalla pagina di download.
+> Come è possibile sapere se si dispone della versione più recente? Cercare l'applicazione **Microsoft Rights Management sharing** elencata in Programmi e funzionalità e verificare il numero di versione corrispondente. Per visualizzare e utilizzare le opzioni nella tabella, la versione deve essere almeno **1.0.1770.0**. È possibile verificare il numero di versione più recente dalla pagina di download.
 
 Oltre alle opzioni che è possibile scegliere, è inoltre possibile chiedersi:
 
@@ -42,8 +42,8 @@ Oltre alle opzioni che è possibile scegliere, è inoltre possibile chiedersi:
 |**Visualizzatore - Solo visualizzazione**<br /><br />**Revisore - Visualizzazione e modifica**<br /><br />**Co-autore - Visualizzazione, modifica, copia e stampa**<br /><br />**Comproprietario – Tutte le autorizzazioni**<br /><br />Nota: tutte queste opzioni hanno un'icona rotonda prima del nome, che rappresenta un globo mondiale. Questa icona viene utilizzata perché in genere si seleziona una di queste opzioni quando si invia l'allegato a un utente in un'altra organizzazione.|Se si desidera definire i diritti del documento protetto, selezionare una delle seguenti opzioni. Fare clic su ogni opzione per visualizzare una descrizione.<br /><br />Quando si sceglie una di queste opzioni, solo gli utenti specificate in **UTENTI** dispongono dei diritti specificati per aprire e utilizzare il documento. Ad esempio, se eseguono l’inoltro ad un altro utente, il documento non viene visualizzato.|
 |Modelli di criteri configurati dall'amministratore.<br /><br />Se ad esempio il nome dell'organizzazione è Contoso, Ltd, potrebbe essere visualizzato **Contoso, Ltd - Solo visione riservata**.<br /><br />Nota: tutte queste opzioni hanno un'icona quadrata prima del nome, che rappresenta l'edificio di una sede. Questa icona viene utilizzata perché in genere si seleziona una di queste opzioni quando si invia l'allegato a un utente nell'organizzazione.|Quando si condivide un documento con le persone che lavorano per l'organizzazione, vengono visualizzati i modelli di criteri disponibili configurati dall'amministratore. Scegliere uno dei seguenti quando non è possibile condividere il documento all'esterno dell'organizzazione.<br /><br />Quando si sceglie una di queste opzioni, l'amministratore definisce i diritti del documento e chi può aprirlo.|
 |**Scadenza dei documenti**|Selezionare questa opzione solo per i file per i quali i tempi sono importanti che gli utenti selezionati non devono essere in grado di aprire dopo una data specificata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (del fuso orario corrente) del giorno specificato, altri utenti non potranno aprire il file.<br /><br />Questa opzione non è disponibile se si seleziona un modello di criteri configurati dall'amministratore.|
-|**Invia un messaggio di posta elettronica quando qualcuno tenta di aprire i documenti**|Nota: questa opzione è attualmente in anteprima.<br /><br />Selezionare questa opzione se si desidera ricevere notifiche di posta elettronica ogni volta che un utente tenta di aprire il documento che si vuole proteggere. Il messaggio di posta elettronica indicherà chi ha tentato di aprire il file, quando e se l’operazione è stata eseguita.<br /><br />Questa opzione è disponibile solo se l'organizzazione utilizza Azure RMS. Se l'organizzazione utilizza la versione locale di Rights Management (AD RMS), questa opzione non verrà visualizzata.|
-|**Consenti di revocare immediatamente l'accesso a questi documenti**|Scegliere questa opzione se potrebbe essere necessario revocare l'accesso ai documenti in un secondo momento utilizzando il sito di rilevamento dei documenti e la revoca deve avvenire immediatamente. Tuttavia, l’impostazione di questa opzione prevede che mentre il documento non è revocato, gli utenti richiedono sempre una connessione a Internet per leggere il documento, ogni volta che accedono ad esso. Potrebbero esistere alcuni scenari in cui gli utenti non possono connettere il proprio dispositivo a Internet e non sono in grado di leggere il documento nel modo previsto.<br /><br />Se non si sceglie questa opzione, è ancora possibile revocare i documenti in un secondo momento, utilizzando il sito di rilevamento dei documenti. Tuttavia, poiché gli utenti non richiedono sempre una connessione a Internet per leggere il documento, non sapranno immediatamente che il documento è revocato e potranno continuare a leggerlo fino all’autenticazione successiva con Azure RMS. Per impostazione predefinita, il numero massimo di giorni per cui qualcuno potrebbe continuare a leggere un documento protetto revocato è 30 giorni, ma un amministratore può modificare questo valore affinché sia minore o maggiore di 30 giorni.<br /><br />Questa opzione è disponibile solo se l'organizzazione utilizza Azure RMS. Se l'organizzazione utilizza la versione locale di Rights Management (AD RMS), questa opzione non verrà visualizzata.|
+|**Invia un messaggio di posta elettronica quando qualcuno tenta di aprire i documenti**|Nota: questa opzione è attualmente in anteprima.<br /><br />Selezionare questa opzione se si desidera ricevere notifiche di posta elettronica ogni volta che un utente tenta di aprire il documento che si vuole proteggere. Il messaggio di posta elettronica indicherà chi ha tentato di aprire il file, quando e se l’operazione è stata eseguita.<br /><br />Questa opzione è disponibile solo se l'organizzazione usa Azure Information Protection. Se l'organizzazione utilizza la versione locale di Rights Management (AD RMS), questa opzione non verrà visualizzata.|
+|**Consenti di revocare immediatamente l'accesso a questi documenti**|Scegliere questa opzione se potrebbe essere necessario revocare l'accesso ai documenti in un secondo momento utilizzando il sito di rilevamento dei documenti e la revoca deve avvenire immediatamente. Tuttavia, l’impostazione di questa opzione prevede che mentre il documento non è revocato, gli utenti richiedono sempre una connessione a Internet per leggere il documento, ogni volta che accedono ad esso. Potrebbero esistere alcuni scenari in cui gli utenti non possono connettere il proprio dispositivo a Internet e non sono in grado di leggere il documento nel modo previsto.<br /><br />Se non si sceglie questa opzione, è ancora possibile revocare i documenti in un secondo momento, utilizzando il sito di rilevamento dei documenti. Tuttavia, poiché gli utenti non richiedono sempre una connessione a Internet per leggere il documento, non sapranno immediatamente che il documento è revocato e potranno continuare a leggerlo fino all’autenticazione successiva con Azure RMS. Per impostazione predefinita, il numero massimo di giorni per cui qualcuno potrebbe continuare a leggere un documento protetto revocato è 30 giorni, ma un amministratore può modificare questo valore affinché sia minore o maggiore di 30 giorni.<br /><br />Questa opzione è disponibile solo se l'organizzazione usa Azure Information Protection. Se l'organizzazione utilizza la versione locale di Rights Management (AD RMS), questa opzione non verrà visualizzata.|
 
 ## Qual è la differenza tra protezione generica e protezione integrata (nativa)?
 
@@ -66,18 +66,18 @@ Per altre informazioni, vedere la sezione [Livelli di protezione – nativo e ge
     > Un file .ppdf viene creato automaticamente quando si condivide con protezione (condivisione tramite posta elettronica), ma non viene creato quando si utilizza la protezione locale.
 
 ## Esempi e altre istruzioni
-Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights Management e procedure, vedere le sezioni seguenti della Guida dell’utente dell’applicazione di condivisione Rights Management:
+Per esempi di come è possibile usare l'applicazione Rights Management sharing e informazioni sulle procedure da seguire, vedere le sezioni seguenti della Guida dell'utente dell'applicazione Rights Management sharing:
 
--   [Esempi per l'utilizzo dell’applicazione di condivisione RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
+-   [Esempi per l'uso dell'applicazione RMS sharing](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [Come procedere](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Vedere anche
-[Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
+[Guida dell'utente dell'applicazione Rights Management sharing](sharing-app-user-guide.md)
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

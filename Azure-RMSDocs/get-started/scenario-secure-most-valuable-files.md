@@ -1,34 +1,34 @@
 ---
-title: "Scenario - Proteggere i file più importanti (few) | Azure RMS"
+title: Scenario - Proteggere (alcuni) file particolarmente importanti | Azure RMS
 description: "Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management per proteggere in modo manuale e personalizzato un numero limitato di file identificati come i più importanti, garantendo il massimo livello di protezione dall'accesso non autorizzato."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 10/05/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 81426cf43f31625c6e83d443fa925f6426eb89da
-ms.openlocfilehash: 5265294a3186c7ccf3f6709ddbb83138605c29f2
+ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
+ms.openlocfilehash: 6687ed42bca5e773d6bbc97285f12e3c91ff9f32
 
 
 ---
 
-# Scenario - Proteggere i file più importanti (few)
+# Scenario - Proteggere (alcuni) file particolarmente importanti
 
->*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Information Protection, Office 365*
 
-Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management per proteggere in modo manuale e personalizzato un numero limitato di file identificati come i più importanti, garantendo il massimo livello di protezione dall'accesso non autorizzato. In genere questi sono file a cui possono accedere solo alcuni utenti. Ad esempio, le istruzioni per la ricetta di un prodotto alimentare o i piani di acquisizione dell'azienda che non devono essere pubblici prima di una data specifica.
+Questo scenario e la documentazione di supporto per l'utente usano la tecnologia Azure Rights Management di Azure Information Protection per proteggere in modo manuale e personalizzato un numero limitato di file identificati come i più importanti, garantendo il massimo livello di protezione dall'accesso non autorizzato. In genere questi sono file a cui possono accedere solo alcuni utenti. Ad esempio, le istruzioni per la ricetta di un prodotto alimentare o i piani di acquisizione dell'azienda che non devono essere pubblici prima di una data specifica.
 
 Le istruzioni sono adatte ai casi seguenti:
 
 -   È stato identificato il piccolo set di file da proteggere.
 
--   I file si presentano in uno dei formati di file Office che supportano Rights Management. Se i file si presentano in altri formati di file (ad esempio CAD) verificare che questi formati supportano Azure RMS e distribuire le applicazioni che supportano in modo nativo Azure RMS. Per altre informazioni, vedere [Supporto di Azure Rights Management da parte delle applicazioni](https://technet.microsoft.com/library/jj585004.aspx).
+-   I file si presentano in uno dei formati di file Office che supportano Rights Management. Se i file si presentano in altri formati di file (ad esempio CAD) verificare che questi formati supportano Azure RMS e distribuire le applicazioni che supportano in modo nativo Azure RMS. Per altre informazioni, vedere [Supporto del servizio Azure Rights Management da parte delle applicazioni](../understand-explore/applications-support.md).
 
 -   I file contengono informazioni estremamente riservate e sensibili che devono essere accessibili solo ad alcuni utenti.
 
@@ -48,12 +48,12 @@ Per questo scenario, sono necessari i requisiti seguenti:
 
 |Requisito|Altre informazioni|
 |---------------|--------------------------------|
-|Definizione di account e gruppi per Office 365 o Azure Active Directory:<br /><br />- Un gruppo abilitato alla posta elettronica denominato **Accesso con privilegi** che include i pochi utenti che devono avere accesso a questi documenti riservati<br /><br />- Un gruppo abilitato alla posta elettronica denominato **Responsabili della conformità IT** che include gli utenti il cui compito include l'eDiscovery, il monitoraggio e il controllo<br /><br />- Un gruppo abilitato alla posta elettronica denominato **Amministratori RMS** e tutti gli amministratori che configurano Azure RMS membri di questo gruppo|[Preparazione per Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|Azure Rights Management non è attivato|[Attivazione di Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|Configurazione di un modello personalizzato, come descritto di seguito|[Configurazione di modelli personalizzati per Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
-|L'applicazione di condivisione Rights Management viene distribuita su un computer Windows, in modo che sia possibile proteggere questi file sul posto, come descritto nella sezione successiva|[Scaricare e installare l’applicazione di condivisione Rights Management](https://technet.microsoft.com/library/dn574734%28v=ws.10%29.aspx)|
-|Gli utenti autorizzati dispongano di una versione minima di Office 2013|Se gli utenti dispongono di Office 2010, è necessario installare anche l'applicazione di condivisione Rights Management.|
-|La sottoscrizione di Azure RMS include il rilevamento dei documenti|Se la sottoscrizione ad Azure RMS non include il monitoraggio e la revoca dei documenti, non sarà possibile accedere al sito di monitoraggio del documento per vedere chi accede al documento e revocarne l'accesso se necessario. In questo caso, acquistare una sottoscrizione che supporta il monitoraggio dei documenti o accettare questa limitazione. È opportuno considerare anche la funzionalità di [registrazione utilizzo](https://technet.microsoft.com/library/dn529121.aspx) di Azure RMS, che può fornire informazioni sugli utenti e sul momento in cui ogni file è stato consultato, per rilevare potenziali comportamenti sospetti.<br /><br />Per verificare il supporto della propria sottoscrizione: [Confronto tra le offerte di Rights Management Services (RMS)](https://technet.microsoft.com/dn858608)|
+|Definizione di account e gruppi per Office 365 o Azure Active Directory:<br /><br />- Un gruppo abilitato alla posta elettronica denominato **Accesso con privilegi** che include i pochi utenti che devono avere accesso a questi documenti riservati<br /><br />- Un gruppo abilitato alla posta elettronica denominato **Responsabili della conformità IT** che include gli utenti il cui compito include l'eDiscovery, il monitoraggio e il controllo<br /><br />- Un gruppo abilitato alla posta elettronica denominato **Amministratori RMS** e tutti gli amministratori che configurano Azure RMS membri di questo gruppo|[Preparazione per Azure Information Protection](../plan-design/deployment-roadmap.md)|
+|Azure Rights Management non è attivato|[Attivazione di Azure Rights Management](../deploy-use/activate-service.md)|
+|Configurazione di un modello personalizzato, come descritto di seguito|[Configurazione di modelli personalizzati per il servizio Azure Rights Management](../deploy-use/configure-custom-templates.md)|
+|L'applicazione Rights Management sharing viene distribuita su un computer Windows, in modo che sia possibile proteggere questi file sul posto, come descritto nella sezione successiva|[Scaricare e installare l'applicazione Rights Management sharing](../rms-client/install-sharing-app.md)|
+|Gli utenti autorizzati dispongano di una versione minima di Office 2013|Se gli utenti dispongono di Office 2010, è necessario installare anche l'applicazione Rights Management sharing.|
+|La sottoscrizione per Azure Information Protection include il rilevamento dei documenti|Se la sottoscrizione non include il rilevamento e la revoca dei documenti, non sarà possibile accedere al sito di rilevamento dei documenti per vedere chi accede ai documenti e, se necessario, per revocarne l'accesso. In questo caso, acquistare una sottoscrizione che supporta il monitoraggio dei documenti o accettare questa limitazione. È opportuno considerare anche le funzionalità di [registrazione dell'utilizzo ](../deploy-use/log-analyze-usage.md) del servizio Azure Rights Management, che può fornire informazioni su quali utenti hanno eseguito l'accesso e quando, per rilevare potenziali comportamenti sospetti.<br /><br />Controllare l'[elenco delle funzionalità](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) dal sito Azure Information Protection.|
 
 ### Per configurare il modello personalizzato
 
@@ -85,7 +85,7 @@ Per questo scenario, sono necessari i requisiti seguenti:
 
 5.  Se si dispone di più file da proteggere in altre cartelle, ripetere i passaggi da 1 a 4 per ogni cartella.
 
-Per altre informazioni sulla protezione dei file sul posto, vedere [Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione di condivisione Rights Management](https://technet.microsoft.com/library/dn574733%28v=ws.10%29.aspx).
+Per altre informazioni sulla protezione dei file sul posto, vedere [Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione Rights Management sharing](../rms-client/sharing-app-protect-in-place.md).
 
 > [!TIP]
 > Se il numero di file da proteggere è eccessivo per questo processo manuale, è consigliabile usare lo [strumento di protezione RMS](https://www.microsoft.com/en-us/download/details.aspx?id=47256) per proteggere i file in blocco tramite il modello.
@@ -147,6 +147,6 @@ I seguenti file dispongono di un elevato livello di protezione, in modo che solo
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

@@ -1,31 +1,56 @@
 ---
-title: "Prezzi e restrizioni della modalità BYOK | Azure RMS"
-description: Informazioni sulle restrizioni quando si usano chiavi gestite dal cliente (&quot;bring your own key&quot; o BYOK) con Azure RMS.
+title: "Prezzi e restrizioni della modalità BYOK | Azure Information Protection"
+description: Understand the restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure RMS.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 10/03/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ada00b6f6298e7d359c73eb38dfdac169eacb708
-ms.openlocfilehash: d704f3d9357993bdb01a38cda6f434ab1583b627
+ms.sourcegitcommit: d7dee4efcff4ccf76f08f9033fdaf89daf095d4e
+ms.openlocfilehash: 86e6ebac4ad8c0782fb27344c30ee1d044be33d0
 
 
 ---
 
 # Prezzi e restrizioni della modalità BYOK
 
->*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Information Protection, Office 365*
 
 
-Le organizzazioni che hanno una sottoscrizione che include Azure Rights Management possono usare chiavi gestite dal cliente (BYOK) in Insieme di credenziali delle chiavi di Azure e registrarne l'utilizzo senza alcun costo aggiuntivo. Tuttavia, per usare Insieme di credenziali delle chiavi di Azure, è necessaria una sottoscrizione di Azure che supporti l'insieme di credenziali delle chiavi con chiavi protette dal modulo di protezione hardware. L'uso di una chiave in Insieme di credenziali delle chiavi di Azure comporta l'addebito di una tariffa mensile. Per altre informazioni, vedere la pagina [dei prezzi di Insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
+Le organizzazioni che hanno una sottoscrizione che include Azure Information Protection possono usare chiavi gestite dal cliente (BYOK) in Insieme di credenziali delle chiavi di Azure e [registrarne l'utilizzo](../deploy-use/log-analyze-usage.md) senza alcun costo aggiuntivo. 
 
-Se sono presenti utenti che hanno effettuato l'iscrizione per un account gratuito tramite RMS per utenti singoli, non è possibile usare la modalità BYOK e la registrazione dell'utilizzo perché questa configurazione non dispone di un amministratore tenant per configurare tali funzionalità.
+Tuttavia, per usare Insieme di credenziali delle chiavi di Azure, è necessaria una sottoscrizione di Azure che supporti l'insieme di credenziali delle chiavi con chiavi protette dal modulo di protezione hardware. L'uso di una chiave in Insieme di credenziali delle chiavi di Azure comporta l'addebito di una tariffa mensile. Per altre informazioni, vedere la pagina [dei prezzi di Insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
+
+Quando si usa Insieme di credenziali delle chiavi di Azure per la chiave del tenant Azure Information Protection, è consigliabile usare un insieme di credenziali delle chiavi dedicato per questa chiave con una sottoscrizione dedicata, per garantire che venga usata solo dal servizio Azure Rights Management. 
+
+## Vantaggi dell'uso di Insieme di credenziali delle chiavi di Azure
+
+Oltre alla funzionalità di registrazione dell'utilizzo di Azure Information Protection, per una maggiore sicurezza è possibile creare riferimenti incrociati con la [registrazione di Insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-logging/) per controllare in modo indipendente se la chiave viene usata solo dal servizio Azure Rights Management. Se necessario, è possibile revocare immediatamente l'accesso alla chiave rimuovendo le autorizzazioni per l'insieme di credenziali delle chiavi.
+
+Altri vantaggi dell'uso di Insieme di credenziali delle chiavi di Azure per la chiave del tenant Azure Information Protection:
+
+- Insieme di credenziali delle chiavi di Azure offre una soluzione di gestione centralizzata delle chiavi coerente per molti servizi basati su cloud o persino locali che usano la crittografia.
+
+- Insieme di credenziali delle chiavi di Azure supporta un numero di interfacce predefinite per la gestione delle chiavi, tra cui PowerShell, l'interfaccia della riga di comando, API REST e il portale di Azure. Altri servizi e strumenti sono stati integrati nell'insieme di credenziali delle chiavi per fornire funzionalità ottimizzate per attività specifiche, ad esempio il monitoraggio. Ad esempio, è possibile analizzare i log di utilizzo delle chiavi con Log Analytics da Operations Management Suite, impostare avvisi quando vengono soddisfatti determinati criteri e così via.
+
+- Insieme di credenziali delle chiavi di Azure fornisce la separazione dei ruoli, una procedura di sicurezza consigliata di comprovata efficacia. Gli amministratori di Azure Information Protection possono concentrarsi sulla gestione della protezione e della classificazione dei dati, mentre gli amministratori di Insieme di credenziali delle chiavi di Azure possono concentrarsi sulla gestione delle chiavi di crittografia e dei criteri speciali che potrebbero essere necessari per la sicurezza o la conformità.
+
+- Alcune organizzazioni hanno restrizioni relative alla posizione della chiave master. Insieme di credenziali delle chiavi di Azure fornisce un alto livello di controllo sull'archiviazione della chiave master perché il servizio è disponibile in molte aree di Azure. Attualmente, è possibile scegliere tra 28 aree di Azure e si prevede di aumentare questo numero. Per altre informazioni, vedere la pagina [Prodotti disponibili in base all'area] (https://azure.microsoft.com/regions/services/) nel sito di Azure.
+
+Oltre alla gestione delle chiavi, Insieme di credenziali delle chiavi di Azure offre agli amministratori della protezione la stessa esperienza di gestione per archiviare, accedere e gestire i certificati e i segreti, ad esempio le password, per altri servizi e applicazioni che usano la crittografia. 
+
+Per altre informazioni su Insieme di credenziali delle chiavi di Azure, vedere [Cos'è l'insieme di credenziali chiave di Azure?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) e visitare il [blog del team di Insieme di credenziali delle chiavi di Azure](https://blogs.technet.microsoft.com/kv/) per le informazioni più recenti e per scoprire come viene usata questa tecnologia dagli altri servizi.
+
+
+## Restrizioni per l'uso di BYOK
+
+Se sono presenti utenti che hanno effettuato l'iscrizione per un account gratuito con RMS per utenti singoli, non è possibile usare BYOK o la registrazione dell'utilizzo perché questa configurazione non ha un amministratore tenant per configurare tali funzionalità.
 
 
 > [!NOTE]
@@ -33,7 +58,7 @@ Se sono presenti utenti che hanno effettuato l'iscrizione per un account gratuit
 
 ![BYOK non supporta Exchange Online](../media/RMS_BYOK_noExchange.png)
 
-La modalità BYOK e la registrazione dell'utilizzo possono essere usate facilmente con ogni applicazione che si integra con Azure RMS, ad esempio servizi cloud come SharePoint Online, server locali che eseguono Exchange e SharePoint che si integrano con Azure RMS usando il connettore RMS e applicazioni client come Office 2016 e Office 2013. È possibile ottenere log di utilizzo indipendentemente dall'applicazione che richiede Azure RMS.
+La modalità BYOK e la registrazione dell'utilizzo possono essere usate facilmente con ogni applicazione che si integra con il servizio Azure Rights Management (Azure RMS) usato da Azure Information Protection. ad esempio servizi cloud come SharePoint Online, server locali che eseguono Exchange e SharePoint che si integrano con Azure RMS usando il connettore RMS e applicazioni client come Office 2016 e Office 2013. È possibile ottenere log di utilizzo indipendentemente dall'applicazione che richiede Azure RMS.
 
 È presente tuttavia un'eccezione, Attualmente, la **modalità BYOK di Azure RMS non è compatibile con Exchange Online**. Se si vuole usare Exchange Online, è consigliabile distribuire Azure RMS con la modalità predefinita per la gestione delle chiavi, in base alla quale Microsoft genera e gestisce la chiave. È possibile passare a BYOK successivamente, ad esempio, quando Exchange Online supporterà la modalità BYOK per Azure RMS. Se non è possibile aspettare, tuttavia, si può distribuire subito Azure RMS con BYOK, con una funzionalità RMS ridotta per Exchange Online (i messaggi di posta elettronica e gli allegati non protetti rimangono completamente funzionanti):
 
@@ -62,6 +87,6 @@ Se si è deciso di usare la configurazione predefinita in cui Microsoft gestisce
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

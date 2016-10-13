@@ -1,28 +1,28 @@
 ---
-title: Scenario - Proteggere i file in una condivisione di file server | Azure RMS
-description: Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management per proteggere tutti i file che si desidera proteggere in un file server per garantire che solo i dipendenti dell'organizzazione possano accedervi, anche se vengono copiati e salvati in un archivio fuori dal controllo del reparto IT o inviati tramite posta elettronica ad altri utenti.
+title: Scenario - Proteggere i file in una condivisione di file server | Azure Information Protection
+description: "Questo scenario e la documentazione di supporto per l'utente usano la tecnologia di protezione Azure Rights Management per proteggere tutti i file desiderati in un file server e garantire così che solo i dipendenti dell'organizzazione possano accedervi, anche se vengono copiati e salvati in un archivio fuori dal controllo del reparto IT o inviati tramite posta elettronica ad altri utenti."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2016
+ms.date: 09/25/2016
 ms.topic: get-started-article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 283c7db3-5730-439e-a215-40a1088ed506
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 024a29d7c7db2e4c0578a95c93e22f8e7a5b173e
-ms.openlocfilehash: adc8ebd3063d8ac4b3710c517f0177fc25a16845
+ms.sourcegitcommit: b61b7068e67103c45aea139cf95dacb851fe70e2
+ms.openlocfilehash: a12276bcf2072ac812ae6b68d9e1cdacbe46adaa
 
 
 ---
 
 # Scenario - Proteggere i file in una condivisione di file server
 
->*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Information Protection, Office 365*
 
-Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management per proteggere tutti i file che si desidera proteggere in un file server per garantire che solo i dipendenti dell'organizzazione possano accedervi, anche se vengono copiati e salvati in un archivio fuori dal controllo del reparto IT o inviati tramite posta elettronica ad altri utenti.
+Questo scenario e la documentazione di supporto per l'utente usano la tecnologia Azure Rights Management di Azure Information Protection per proteggere tutti i file desiderati in un file server e garantire così che solo i dipendenti dell'organizzazione possano accedervi, anche se vengono copiati e salvati in un archivio fuori dal controllo del reparto IT o inviati tramite posta elettronica ad altri utenti.
 
 Queste istruzioni usano uno dei modelli predefiniti, che limita l'accesso a tutti i dipendenti con tutti i diritti di utilizzo. Tuttavia, se necessario, è possibile limitare i diritti di accesso e utilizzo tramite la configurazione di un modello personalizzato al posto di un modello predefinito.
 
@@ -44,10 +44,10 @@ Per le istruzioni di funzionamento di questo scenario, sono necessari i requisit
 
 |Requisito|Altre informazioni|
 |---------------|--------------------------------|
-|Azure Rights Management non è attivato|[Attivazione di Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
-|Si sono sincronizzati gli account utente di Active Directory locali con Azure Active Directory oppure Office 365, compreso il relativo indirizzo di posta elettronica. Ciò è necessario per tutti gli utenti che potrebbero avere la necessità di accedere ai file una volta protetti con FCI e Azure Rights Management.|[Preparazione per Azure Rights Management](https://technet.microsoft.com/library/jj585029.aspx)|
-|Uno dei seguenti:<br /><br />- Per usare un modello predefinito per tutti gli utenti: non è stato archiviato il modello predefinito, &lt;nome organizzazione&gt; - Riservato<br /><br />- Per usare un modello personalizzato per utenti specifici: il modello personalizzato è stato creato e pubblicato|[Configurazione di modelli personalizzati per Azure Rights Management](https://technet.microsoft.com/library/dn642472.aspx)|
-|L’applicazione di condivisione Rights Management è distribuita nei computer degli utenti che eseguono Windows|[Distribuzione automatica dell'applicazione di condivisione Microsoft Rights Management](https://technet.microsoft.com/library/dn339003%28v=ws.10%29.aspx)|
+|Azure Rights Management non è attivato|[Attivazione di Azure Rights Management](../deploy-use/activate-service.md)|
+|Si sono sincronizzati gli account utente di Active Directory locali con Azure Active Directory oppure Office 365, compreso il relativo indirizzo di posta elettronica. Ciò è necessario per tutti gli utenti che potrebbero avere la necessità di accedere ai file una volta protetti con FCI e Azure Rights Management.|[Preparazione per Azure Information Protection](../plan-design/prepare.md)|
+|Uno dei seguenti:<br /><br />- Per usare un modello predefinito per tutti gli utenti: non è stato archiviato il modello predefinito, &lt;nome organizzazione&gt; - Riservato<br /><br />- Per usare un modello personalizzato per utenti specifici: il modello personalizzato è stato creato e pubblicato|[Configurazione di modelli personalizzati per Azure Rights Management](../deploy-use/configure-custom-templates.md)|
+|L'applicazione Rights Management sharing viene distribuita nei computer degli utenti che eseguono Windows|[Distribuzione automatica dell'applicazione Microsoft Rights Management sharing](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |È stato scaricato lo strumento di protezione RMS e i prerequisiti per Azure RMS sono stati configurati|Per le istruzioni sul download dello strumento e sui prerequisiti: [Cmdlet di protezione RMS](https://msdn.microsoft.com/library/mt433195.aspx)<br /><br />Per configurare altri prerequisiti per Azure RMS, ad esempio l'account dell'entità servizio: [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx)|
 
 ### Configurazione di un file server per proteggere tutti i file tramite Azure RMS e Gestione risorse file server con Infrastruttura di classificazione file
@@ -68,7 +68,7 @@ Per le istruzioni di funzionamento di questo scenario, sono necessari i requisit
     ```
     Per usare il modello predefinito che limita l'accesso a tutti i dipendenti con tutti i diritti d'uso, cercare il nome del modello di **&lt;nome organizzazione&gt; - Riservato**. Ad esempio, **VanArsdel, Ltd - Riservato**.
 
-4.  Seguire la procedura dettagliata in [Protezione RMS con l'infrastruttura di classificazione file (FCI, File Classification Infrastructure) per Windows Server](https://technet.microsoft.com/library/mt601315%28v=ws.10%29.aspx).
+4.  Seguire la procedura dettagliata in [Protezione RMS con l'infrastruttura di classificazione file (FCI, File Classification Infrastructure) per Windows Server](../rms-client/configure-fci.md).
 
     Queste istruzioni includono uno script di Windows PowerShell specificato per l'esecuzione come eseguibile personalizzato in Gestione risorse file server. Le istruzioni includono anche le procedure per verificare che i file siano protetti da Azure Rights Management.
 
@@ -101,7 +101,7 @@ La documentazione di esempio mostra come questo set di istruzioni appare agli ut
 
 1.  Fare doppio clic sul file per aprirlo. È possibile che vengano richieste le credenziali.
 
-2.  Viene visualizzata una finestra di dialogo di **file protetto** dell'applicazione di condivisione Microsoft Rights Management che indica che è necessario rispettare le autorizzazioni per **&lt;nome organizzazione&gt; - Riservato**. Per questa ragione, non condividere questo documento con altri utenti che non lavorano per &lt;nome organizzazione&gt;.
+2.  Viene visualizzata una finestra di dialogo del **file protetto** dell'applicazione Microsoft Rights Management sharing, che indica che è necessario rispettare le autorizzazioni per **&lt;nome organizzazione&gt; - Riservato**. Per questa ragione, non condividere questo documento con altri utenti che non lavorano per &lt;nome organizzazione&gt;.
 
 3.  Fare clic su **Apri**.
 
@@ -117,7 +117,7 @@ Periodicamente, il file sarà protetto nuovamente per aggiungere l'estensione de
 
 -   Per informazioni aggiuntive:
 
-    -   [Visualizzare e utilizzare i file che sono stati protetti](https://technet.microsoft.com/library/dn574741%28v=ws.10%29)
+    -   [Visualizzare e utilizzare i file che sono stati protetti](../rms-client/sharing-app-view-use-files.md)
 
 -   Contattare il supporto tecnico:
 
@@ -130,7 +130,7 @@ Periodicamente, il file sarà protetto nuovamente per aggiungere l'estensione de
 
 1.  Fare doppio clic sul file per aprirlo. È possibile che vengano richieste le credenziali.
 
-2.  Viene visualizzato una finestra di dialogo **file protetto** dall'applicazione di condivisione Microsoft Rights Management, che indica che sono previste autorizzazioni per **VanArsdel, Ltd - Riservato**. In questo modo, questo documento non viene condiviso con altri utenti che non lavorano per VanArsdel, Ltd.
+2.  Viene visualizzata una finestra di dialogo del **file protetto** dell'applicazione Microsoft Rights Management sharing, che indica che è necessario rispettare le autorizzazioni per **VanArsdel, Ltd - Riservato**. In questo modo, questo documento non viene condiviso con altri utenti che non lavorano per VanArsdel, Ltd.
 
 3.  Fare clic su **Apri**.
 
@@ -148,13 +148,13 @@ Periodicamente, il file sarà protetto nuovamente per aggiungere l'estensione de
 
 -   Per informazioni aggiuntive:
 
-    -   [Visualizzare e utilizzare i file che sono stati protetti](https://technet.microsoft.com/library/dn574741%28v=ws.10%29)
+    -   [Visualizzare e utilizzare i file che sono stati protetti](../rms-client/sharing-app-view-use-files.md)
 
 -   Contattare l'help desk: helpdesk@vanarsdelltd.com
 
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

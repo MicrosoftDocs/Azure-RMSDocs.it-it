@@ -1,39 +1,39 @@
 ---
-title: Protezione RMS con l'infrastruttura di classificazione file (FCI, File Classification Infrastructure) per Windows Server | Azure RMS
+title: Protezione RMS con Infrastruttura di classificazione file per Windows Server | Azure Information Protection
 description: "Istruzioni per usare il client Rights Management (RMS) con lo strumento di protezione RMS per configurare Gestione risorse file server e la funzionalità Infrastruttura di classificazione file."
 author: cabailey
 manager: mbaldwin
-ms.date: 08/29/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b8a7a433652e76ff1069f0f0a7465483b13c065c
-ms.openlocfilehash: b350a35d44e743de94446409b1bba4256ca38728
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 7e0556e99aa09d4b6f2488cb866b57488a22cacd
 
 
 ---
 
-# Protezione RMS con l'infrastruttura di classificazione file (FCI, File Classification Infrastructure) per Windows Server
+# Protezione RMS con Infrastruttura di classificazione file per Windows Server
 
->*Si applica a: Azure Rights Management, Windows Server 2012, Windows Server 2012 R2*
+>*Si applica a: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
-Usare questo articolo per ottenere istruzioni e uno script che consentono di usare il client Rights Management (RMS) con lo strumento di protezione RMS per configurare Gestione risorse file server e l'infrastruttura di classificazione file.
+Usare questo articolo per ottenere istruzioni e uno script che consentono di usare il client Rights Management (RMS) con lo strumento di protezione RMS per configurare Gestione risorse file server e Infrastruttura di classificazione file (FCI, File Classification Infrastructure).
 
-Queste soluzioni consentono di proteggere automaticamente tutti i file contenuti in una cartella di un file server che esegue Windows Server o proteggere automaticamente i file che soddisfano criteri specifici. File, ad esempio, che sono stati classificati come contenenti informazioni riservate o personali. Questa soluzione usa Azure Rights Management (Azure RMS) per proteggere i file, perciò è necessario che questa tecnologia sia distribuita nella propria organizzazione.
+Queste soluzioni consentono di proteggere automaticamente tutti i file contenuti in una cartella di un file server che esegue Windows Server o proteggere automaticamente i file che soddisfano criteri specifici. File, ad esempio, che sono stati classificati come contenenti informazioni riservate o personali. Questa soluzione usa il servizio Azure Rights Management di Azure Information Protection per proteggere i file. È quindi necessario che questa tecnologia sia distribuita nella propria organizzazione.
 
 > [!NOTE]
-> Nonostante Azure RMS includa un [connettore](../deploy-use/deploy-rms-connector.md) che supporta l'infrastruttura di classificazione file, questa soluzione supporta solo la protezione nativa, ad esempio, i file di Office.
+> Anche se Azure Information Protection include un [connettore](../deploy-use/deploy-rms-connector.md) che supporta Infrastruttura di classificazione file, questa soluzione supporta solo la protezione nativa, ad esempio i file di Office.
 > 
-> Per supportare tutti i tipi di file con l'infrastruttura di classificazione file, è necessario usare il modulo di **protezione RMS** di Windows PowerShell, come descritto in questo articolo. I cmdlet di protezione RMS, come l'applicazione RMS sharing, supportano la protezione generica nonché quella nativa, per cui è possibile proteggere tutti i file. Per altre informazioni sui diversi livelli di protezione, vedere la sezione [Livelli di protezione nativa e generica](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) della [Guida dell'amministratore dell'applicazione di condivisione Rights Management](sharing-app-admin-guide.md).
+> Per supportare tutti i tipi di file con l'infrastruttura di classificazione file, è necessario usare il modulo di **protezione RMS** di Windows PowerShell, come descritto in questo articolo. I cmdlet di protezione RMS, come l'applicazione RMS sharing, supportano la protezione generica nonché quella nativa, per cui è possibile proteggere tutti i file. Per altre informazioni sui diversi livelli di protezione, vedere la sezione [Livelli di protezione nativa e generica](sharing-app-admin-guide-technical.md#levels-of-protection-native-and-generic) della [Guida dell'amministratore dell'applicazione Rights Management sharing](sharing-app-admin-guide.md).
 
 Le istruzioni qui di seguito sono per Windows Server 2012 R2 o Windows Server 2012. Se si eseguono altre versioni supportate di Windows, potrebbe essere necessario adattare alcuni di questi passaggi a causa delle differenze tra la versione del proprio sistema operativo e quello descritto in questo articolo.
 
-## Prerequisiti per la protezione di Azure RMS con l'infrastruttura di classificazione file per Windows Server
+## Prerequisiti per la protezione Azure Rights Management con FCI per Windows Server
 Prerequisiti per queste istruzioni:
 
 -   Su ogni file server su cui si esegue Gestione risorse file con l'infrastruttura di classificazione file:
@@ -48,7 +48,7 @@ Prerequisiti per queste istruzioni:
 
     -   È disponibile una connessione Internet con le impostazioni del computer configurate, se necessario per un server proxy Ad esempio: `netsh winhttp import proxy source=ie`
 
--   I prerequisiti aggiuntivi sono stati configurati per la distribuzione di Azure Rights Management, come descritto in [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx). In particolare, sono disponibili i valori seguenti per connettersi ad Azure RMS usando un'entità servizio:
+-   I prerequisiti aggiuntivi sono stati configurati per la distribuzione di Azure Information Protection, come descritto in [about_RMSProtection_AzureRMS](https://msdn.microsoft.com/library/mt433202.aspx). In particolare, sono disponibili i valori seguenti per connettersi al servizio Azure Rights Management usando un'entità servizio:
 
     -   BposTenantId
 
@@ -56,7 +56,7 @@ Prerequisiti per queste istruzioni:
 
     -   Chiave simmetrica
 
--   Si sono sincronizzati gli account utente di Active Directory locali con Azure Active Directory oppure Office 365, compreso il relativo indirizzo di posta elettronica. Ciò è necessario per tutti gli utenti che potrebbero avere la necessità di accedere ai file una volta protetti con FCI e Azure RMS. Se si completa questo passaggio (ad esempio, in un ambiente di test), l'accesso degli utenti a questi file potrebbe essere bloccato. Se sono necessarie ulteriori informazioni sulla configurazione di questo account, vedere [Preparazione per Azure Rights Management](../plan-design/prepare.md).
+-   Si sono sincronizzati gli account utente di Active Directory locali con Azure Active Directory oppure Office 365, compreso il relativo indirizzo di posta elettronica. Ciò è necessario per tutti gli utenti che potrebbero avere la necessità di accedere ai file una volta protetti da FCI e dal servizio Azure Rights Management. Se non si completa questo passaggio (ad esempio, in un ambiente di test), è possibile che l'accesso degli utenti a questi file sia bloccato. Se sono necessarie altre informazioni sulla configurazione di questo account, vedere [Preparazione per il servizio Azure Rights Management](../plan-design/prepare.md).
 
 -   È stato identificato il modello Rights Management da usare, che proteggerà i file. Assicurarsi di conoscere l'ID per questo modello usando il cmdlet [Get-RMSTemplate](https://msdn.microsoft.com/library/azure/mt433197.aspx) .
 
@@ -94,7 +94,7 @@ Al termine di queste istruzioni tutti i file della cartella selezionata saranno 
 
         `[Parameter(Mandatory = $false)]             [string]$AppPrincipalId = "b5e3f76a-b5c2-4c96-a594-a0807f65bba4",`
 
-    -   Cercare la stringa seguente e sostituirla con la propria chiave simmetrica usata con il cmdlet [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) per connettersi ad Azure RMS:
+    -   Cercare la stringa seguente e sostituirla con la propria chiave simmetrica usata con il cmdlet [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) per connettersi al servizio Azure Rights Management:
 
         ```
         <enter your key here>
@@ -105,7 +105,7 @@ Al termine di queste istruzioni tutti i file della cartella selezionata saranno 
 
         `[string]$SymmetricKey = "zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA="`
 
-    -   Cercare la stringa seguente e sostituirla con il proprio BposTenantId (ID tenant) usato con il cmdlet [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) per connettersi ad Azure RMS:
+    -   Cercare la stringa seguente e sostituirla con il proprio BposTenantId (ID tenant) usato con il cmdlet [Set-RMSServerAuthentication](https://msdn.microsoft.com/library/mt433199.aspx) per connettersi al servizio Azure Rights Management:
 
         ```
         <enter your BposTenantId here>
@@ -116,7 +116,7 @@ Al termine di queste istruzioni tutti i file della cartella selezionata saranno 
 
         `[string]$BposTenantId = "23976bc6-dcd4-4173-9d96-dad1f48efd42",`
 
-    -   Se sul server è in esecuzione Windows Server 2012, potrebbe essere necessario caricare manualmente il modulo RMSProtection all'inizio dello script. Aggiungere il seguente comando o uno equivalente se la cartella "Programmi" è su un'unità diversa da C::
+    -   Se sul server è in esecuzione Windows Server 2012, potrebbe essere necessario caricare manualmente il modulo RMSProtection all'inizio dello script. Aggiungere il comando seguente o uno equivalente se la cartella "Programmi" si trova in un'unità diversa da C:
 
         ```
         Import-Module "C:\Program Files\WindowsPowerShell\Modules\RMSProtection\RMSProtection.dll"
@@ -227,8 +227,7 @@ Quando si è completata la configurazione per la classificazione, si è pronti p
             In questo comando **[Percorso file di origine]** e **[Indirizzo posta elettronica proprietario file di origine]** sono entrambe variabili specifiche dell'infrastruttura di classificazione dei file, per cui digitarle nel comando riportato sopra esattamente così come sono visualizzate. La prima viene usata dall'infrastruttura di classificazione file per specificare in modo automatico il file identificato della cartella e la seconda è per l'infrastruttura di classificazione file per richiamare automaticamente l'indirizzo di posta elettronica del proprietario del file identificato. Questo comando viene ripetuto per ogni file della cartella, che nel nostro esempio è ogni file della cartella C:\FileShare che inoltre ha RMS come proprietà di classificazione file.
 
             > [!NOTE]
-            > Il valore del parametro **-OwnerMail [Indirizzo posta elettronica proprietario file di origine]** garantisce che il proprietario originale del file disponga dei diritti Rights Management del file dopo che quest'ultimo è stato protetto.
- Questo assicura che il proprietario del file originale disponga di tutti i diritti Rights Management per i propri file. Quando i file vengono creati da un utente di dominio, l'indirizzo di posta elettronica viene recuperato automaticamente da Active Directory utilizzando il nome dell'account utente nella proprietà Proprietario del file. Per effettuare questa operazione, il file server deve essere nello stesso dominio o dominio trusted dell’utente.
+            > Il valore del parametro **-OwnerMail [Indirizzo posta elettronica proprietario file di origine]** garantisce che il proprietario originale del file disponga dei diritti Rights Management del file dopo che quest'ultimo è stato protetto. Questo assicura che il proprietario del file originale disponga di tutti i diritti Rights Management per i propri file. Quando i file vengono creati da un utente di dominio, l'indirizzo di posta elettronica viene recuperato automaticamente da Active Directory utilizzando il nome dell'account utente nella proprietà Proprietario del file. Per effettuare questa operazione, il file server deve essere nello stesso dominio o dominio trusted dell’utente.
             > 
             > Quando possibile, assegnare i proprietari originali ai documenti protetti per assicurare che questi utenti continuino ad avere il pieno controllo dei file creati. Tuttavia, se si utilizza la variabile [Indirizzo posta elettronica proprietario file di origine] come indicato sopra e un file non dispone di un utente di dominio definito come proprietario (ad esempio, un account locale è stato utilizzato per creare il file, quindi il proprietario visualizza SYSTEM), lo script non verrà eseguito.
             > 
@@ -303,6 +302,6 @@ A questo punto è sufficiente creare una nuova attività di gestione file che us
 
 
 
-<!--HONumber=Aug16_HO5-->
+<!--HONumber=Sep16_HO4-->
 
 

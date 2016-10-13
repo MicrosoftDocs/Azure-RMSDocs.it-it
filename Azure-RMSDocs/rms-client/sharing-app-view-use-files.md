@@ -1,33 +1,33 @@
 ---
-title: Visualizzare e usare i file che sono stati protetti da Rights Management | Azure RMS
+title: Visualizzare e usare i file che sono stati protetti da Rights Management | Azure Information Protection
 description: Istruzioni per visualizzare e usare un file protetto che rende necessario avere l'applicazione Rights Management (RMS) sharing installata.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
-ms.openlocfilehash: 8d93968c51ad1037e5424df4ee9b724e0c1f89a2
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 3f906815da2acd8f52bd742306d9936a71229c97
 
 
 ---
 
 # Visualizzare e usare i file che sono stati protetti da Rights Management
 
->*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 Quando l'[applicazione Rights Management (RMA) sharing viene installata nel computer in uso](install-sharing-app.md), viene visualizzato un file protetto semplicemente facendo doppio clic su di esso. Il file potrebbe essere un allegato in un messaggio di posta elettronica oppure è possibile vederlo quando si utilizza Esplora file.
 
 > [!NOTE]
-> Prima di poter visualizzare il file protetto, RMS deve prima confermare che si è autorizzati a visualizzare il file, operazione eseguita controllando nome utente e password. In alcuni casi, questo potrebbe essere memorizzato nella cache e non verrà visualizzato un messaggio che richiede l'immissione delle credenziali. In altri casi, verrà richiesto di fornire le credenziali.
+> Per consentire a un utente di visualizzare il file protetto, il servizio Rights Management deve prima verificare che sia autorizzato e a questo scopo controlla il nome utente e la password. In alcuni casi, questo potrebbe essere memorizzato nella cache e non verrà visualizzato un messaggio che richiede l'immissione delle credenziali. In altri casi, verrà richiesto di fornire le credenziali.
 >
-> Se l'organizzazione non utilizza Azure Rights Management (Azure RMS) o AD RMS, è possibile richiedere un account gratuito che accetterà le credenziali in modo che sia possibile aprire i file protetti tramite RMS:
+> Se l'organizzazione non usa Azure Information Protection o AD RMS, è possibile richiedere un account gratuito che accetterà le credenziali in modo che sia possibile aprire i file protetti tramite RMS:
 >
 > -   Per richiedere questo account, fare clic sul collegamento per richiedere [RMS per utenti singoli](http://go.microsoft.com/fwlink/?LinkId=309469).
 >
@@ -50,7 +50,7 @@ Come il file verrà aperto dipende da come è stato protetto; è possibile saper
 
     Quando si apre il file, viene visualizzata una finestra di dialogo del **file protetto** dall'applicazione di condivisione che indica chi ha protetto il file e che è necessario rispettare le autorizzazioni di comproprietario. Fare clic su **Apri** per leggere il file.
 
-    ![Finestra di dialogo per un pfile condiviso tramite posta elettronica quando si usa l'applicazione di condivisione RMS](../media/ADRMS_MSRMSApp_PfilePermission.png)
+    ![Finestra di dialogo per un pfile condiviso tramite posta elettronica quando si usa l'applicazione RMS sharing](../media/ADRMS_MSRMSApp_PfilePermission.png)
 
 - **Il file ha l'estensione *ppdf* o è un file di testo o immagine protetto, ad esempio con estensione *ptxt* o *pjpg***
 
@@ -68,7 +68,7 @@ Come il file verrà aperto dipende da come è stato protetto; è possibile saper
 
 
 
-Per un elenco delle estensioni di file supportate da Rights Management , vedere la sezione [Tipi di file supportati e le estensioni di nome di file](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) della [Guida dell'amministratore dell'applicazione Rights Management sharing](sharing-app-admin-guide.md). Se un'estensione di nome di file non è elencata, eseguire una ricerca sul Web per determinare se si tratta di un'estensione di nome di file supportata da un'altra applicazione.
+Per un elenco completo delle estensioni di file supportate dai servizi Rights Management, vedere la sezione [Tipi ed estensioni di file supportati](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) della [Guida dell'amministratore dell'applicazione Rights Management sharing](sharing-app-admin-guide.md). Se un'estensione di nome di file non è elencata, eseguire una ricerca sul Web per determinare se si tratta di un'estensione di nome di file supportata da un'altra applicazione.
 
 > [!NOTE]
 > Se, dopo avere verificato che il file è protetto tramite Rights Management, non è possibile aprire il file, scaricare e usare lo [strumento RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Seguire le istruzioni visualizzate nello strumento per determinare se nel computer si sono verificati problemi che possono impedire l'apertura di un documento protetto.
@@ -90,23 +90,23 @@ Se dopo avere aperto il file protetto si vuole eseguire altre operazioni oltre a
 
 - **Altre estensioni del nome di file**
 
-    Il dispositivo deve disporre di un'applicazione che riconosca Rights Management per utilizzare questi file. Queste applicazioni vengono chiamate applicazioni abilitate per RMS. Le applicazioni di Office 2016, Office 2013 e Office 2010 (ad esempio Word, Excel, PowerPoint e Outlook) sono esempi di applicazioni abilitate per Rights Management. Tuttavia, anche applicazioni che non provengono da Microsoft, come altre aziende software e applicazioni line-of-business, potrebbero essere abilitate per Rights Management.
+    Il dispositivo deve disporre di un'applicazione che riconosca la protezione Rights Management per usare questi file. Queste applicazioni vengono chiamate applicazioni abilitate per RMS. Le applicazioni di Office 2016, Office 2013 e Office 2010 (come Word, Excel, PowerPoint e Outlook) sono esempi di applicazioni abilitate per Rights Management. Tuttavia, anche applicazioni che non provengono da Microsoft, come altre aziende software e applicazioni line-of-business, potrebbero essere abilitate per Rights Management.
 
     Le applicazioni abilitate per Rights Management sono in grado di aprire i file che sono stati protetti con altre applicazioni abilitate per Rights Management. Anche queste mantengono la protezione applicata ad essi, anche se si modifica il file o lo si salva con un altro nome di file o in un altro percorso. Queste applicazioni consentono di utilizzare il file in base alle autorizzazioni applicate ad esso, in modo che se si dispone delle autorizzazioni per utilizzare il file, è possibile farlo. Ad esempio, si potrebbe essere in grado di modificare il file, ma non di stamparlo.
 
 
 ## Esempi e altre istruzioni
-Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights Management e procedure, vedere le sezioni seguenti della Guida dell’utente dell’applicazione di condivisione Rights Management:
+Per esempi di come è possibile usare l'applicazione Rights Management sharing e informazioni sulle procedure da seguire, vedere le sezioni seguenti della Guida dell'utente dell'applicazione Rights Management sharing:
 
--   [Esempi per l'utilizzo dell’applicazione di condivisione RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
+-   [Esempi per l'uso dell'applicazione RMS sharing](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [Come procedere](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Vedere anche
-[Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
+[Guida dell'utente dell'applicazione Rights Management sharing](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 
