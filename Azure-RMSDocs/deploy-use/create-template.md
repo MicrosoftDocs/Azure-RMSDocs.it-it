@@ -1,19 +1,19 @@
 ---
-title: Creare, configurare e pubblicare un modello personalizzato | Azure RMS
+title: Creare, configurare e pubblicare un modello personalizzato | Azure Information Protection
 description: Istruzioni per creare e gestire modelli personalizzati nel portale di Azure classico. I modelli semplificano l'applicazione, da parte di utenti finali e amministratori, di criteri appropriati per la protezione di documenti e messaggi di posta elettronica.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 10/03/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ad32910b482ca9d92b4ac8f3f123eda195db29cd
-ms.openlocfilehash: 6875d8d4755dc791879838d1f46be87e2e043a3b
+ms.sourcegitcommit: d205e63bdd8819177493837296259c5400a76503
+ms.openlocfilehash: 906bc1e97947cf32b102fdf484b86bc30b9a383d
 
 
 ---
@@ -21,12 +21,12 @@ ms.openlocfilehash: 6875d8d4755dc791879838d1f46be87e2e043a3b
 
 # Creare, configurare e pubblicare un modello personalizzato
 
->*Si applica a: Azure Rights Management, Office 365*
+>*Si applica a: Azure Information Protection, Office 365*
 
 
 Il portale di Azure classico consente di creare e gestire modelli personalizzati. È possibile eseguire questa operazione direttamente nel portale di Azure classico oppure accedendo all'interfaccia di amministrazione di Office 365 e scegliendo le **funzionalità avanzate** di Rights Management, che a loro volta reindirizzano al portale di Azure classico.
 
-Per creare e gestire modelli nel portale di Azure classico è necessario il ruolo di amministratore globale. Se il ruolo di amministratore globale per Azure RMS è stato assegnato ad altri utenti, questi possono anche creare e gestire modelli, ma devono usare [PowerShell](configure-templates-with-powershell.md). Per altre informazioni, vedere [È necessario essere un amministratore globale per configurare Azure RMS oppure tale configurazione può essere delegata ad altri amministratori?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
+Per creare e gestire modelli nel portale di Azure classico è necessario il ruolo di amministratore globale. Se il ruolo di amministratore globale per il servizio Azure Rights Management è stato assegnato ad altri utenti, questi possono anche creare e gestire modelli, ma devono usare [PowerShell](configure-templates-with-powershell.md). Per altre informazioni, vedere [È necessario essere un amministratore globale per configurare Azure RMS oppure tale configurazione può essere delegata ad altri amministratori?](../get-started/faqs.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
 
 Per creare, configurare e pubblicare modelli personalizzati per Rights Management, seguire queste procedure.
 
@@ -45,7 +45,7 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
         4.  Nella sezione **rights management** fare clic su **funzionalità avanzate**.
 
             > [!NOTE]
-            > Se Rights Management non è stato attivato, fare prima clic su **attiva** e confermare l'azione. Per altre informazioni, vedere [Attivazione di Azure Rights Management](activate-service.md).
+            > Se il servizio Rights Management non è stato attivato, fare prima clic su **attiva** e confermare l'azione. Per ulteriori informazioni, vedere l'articolo relativo all'[attivazione di Azure Rights Management](activate-service.md).
             > 
             > Se l'opzione **funzionalità avanzate** non è mai stata selezionata prima, dopo aver attivato Rights Management seguire le istruzioni visualizzate per ottenere una sottoscrizione di Azure gratuita necessaria per accedere al portale di Azure classico.
 
@@ -70,9 +70,11 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
 
         Se questa pagina non viene visualizzata immediatamente dopo aver seguito le istruzioni per Office 365, è possibile usare le istruzioni di navigazione precedenti relative al portale di Azure classico.
 
-3.  Nella pagina **Aggiungi un nuovo modello di criteri di diritti** selezionare la lingua in cui si intende specificare il nome e la descrizione del modello che saranno visibili agli utenti (più avanti si potranno aggiungere altre lingue). Digitare quindi un nome univoco e una descrizione e fare clic sul pulsante Completa.
+3. Nella pagina **Aggiungi un nuovo modello di criteri di diritti** selezionare la lingua in cui si intende specificare il nome e la descrizione del modello che saranno visibili agli utenti (più avanti si potranno aggiungere altre lingue). Digitare quindi un nome univoco e una descrizione e fare clic sul pulsante Completa.
 
-Nella pagina di avvio rapido **Introduzione a Rights Management** fare clic su **Gestire i modelli di criteri di diritti**. Il modello appena creato sarà visualizzato nell'elenco dei modelli con lo stato **Archiviato**. A questo punto il modello è stato creato, ma non è configurato e non è visibile agli utenti.
+    Non includere una virgola o un punto e virgola nel nome del modello o nella descrizione. Non tutti i servizi e le applicazioni che usano i modelli di Rights Management supportano questi caratteri per tali modelli. In questo scenario, questi servizi e applicazioni potrebbero non riuscire a recuperare o usare questi modelli di Azure Rights Management.
+
+4. Nella pagina di avvio rapido **Introduzione a Rights Management** fare clic su **Gestire i modelli di criteri di diritti**. Il modello appena creato sarà visualizzato nell'elenco dei modelli con lo stato **Archiviato**. A questo punto il modello è stato creato, ma non è configurato e non è visibile agli utenti.
 
 ## Per configurare e pubblicare un modello personalizzato
 
@@ -110,7 +112,7 @@ Nella pagina di avvio rapido **Introduzione a Rights Management** fare clic su *
 
     Altre informazioni sui modelli di reparto: per impostazione predefinita, tutti gli utenti nella directory di Azure visualizzano tutti i modelli pubblicati e possono quindi selezionarli dalle applicazioni quando vogliono proteggere il contenuto. Se si vuole consentire solo ad alcuni utenti specifici di visualizzare alcuni dei modelli pubblicati, è necessario definire l'ambito dei modelli per tali utenti. Quindi, solo tali utenti potranno selezionare questi modelli. Gli altri utenti che non sono stati specificati non potranno visualizzare i modelli e pertanto non potranno selezionarli. Questa tecnica semplifica la scelta del modello corretto da parte degli utenti, soprattutto quando si creano modelli che sono progettati per essere usati da gruppi o reparti specifici. Gli utenti visualizzeranno solo i modelli che sono stati progettati per loro.
 
-    Ad esempio, si è creato un modello per il reparto Risorse umane che applica l'autorizzazione di sola lettura ai membri del reparto Finanze. Affinché solo i membri del reparto Risorse umane possano applicare questo modello quando usano l'applicazione di condivisione Rights Management, assegnare l'ambito del modello al gruppo abilitato alla posta elettronica denominato HumanResources. Quindi, solo i membri di questo gruppo potranno visualizzare e applicare questo modello.
+    Ad esempio, si è creato un modello per il reparto Risorse umane che applica l'autorizzazione di sola lettura ai membri del reparto Finanze. Affinché solo i membri del reparto Risorse umane possano applicare questo modello quando usano l'applicazione Rights Management sharing, assegnare l'ambito del modello al gruppo abilitato alla posta elettronica denominato HumanResources. Quindi, solo i membri di questo gruppo potranno visualizzare e applicare questo modello.
 
 7.  Nella pagina **VISIBILITÀ DEL MODELLO** selezionare gli utenti e i gruppi che potranno visualizzare e selezionare il modello nelle applicazioni che supportano RMS. Come indicato in precedenza, è consigliabile usare i gruppi anziché gli utenti e i gruppi o gli utenti selezionati dovranno avere un indirizzo di posta elettronica.
 
@@ -166,6 +168,6 @@ Per apportare modifiche al modello, selezionarlo e quindi eseguire di nuovo i pa
 [Configurare modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

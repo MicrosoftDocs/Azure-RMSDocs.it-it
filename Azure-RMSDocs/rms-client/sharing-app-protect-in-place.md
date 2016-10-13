@@ -1,33 +1,33 @@
 ---
-title: Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione Rights Management sharing | Azure RMS
+title: Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione Rights Management sharing | Azure Information Protection
 description: Istruzioni su come archiviare in modo sicuro un file nel computer, in un server o in un altro dispositivo di archiviazione.
 author: cabailey
 manager: mbaldwin
-ms.date: 08/25/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 035c9eb6cb630cafd5bd7fc7e2371340043ddc5e
-ms.openlocfilehash: 1d719bcce253dea465be7250806385bca3c23a01
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 3d7a4b71f32c37d3ab632114e8147382cfbbcbd1
 
 
 ---
 
-# Proteggere un file in un dispositivo (protezione locale) mediante l'applicazione di condivisione Rights Management
+# Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione Rights Management sharing
 
->*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 Quando si protegge un file localmente, esso sostituisce il file originale non protetto. È quindi possibile lasciare il file dove si trova, copiarlo in un'altra cartella o dispositivo o condividere la cartella in cui si trova e il file rimarrà protetto. È possibile anche allegare il file protetto a un messaggio di posta elettronica, sebbene il modo consigliato per condividere un file protetto tramite posta elettronica sia direttamente da Esplora file o da un'applicazione di Office (vedere [Proteggere un file condiviso tramite posta elettronica usando l'applicazione Rights Management sharing](sharing-app-protect-by-email.md)).
 
 > [!TIP]
-> Se vengono visualizzati errori quando si tenta di proteggere i file, fare riferimento alle [Domande frequenti sull’applicazione di condivisione Microsoft Rights Management per Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
+> Se vengono visualizzati errori quando si tenta di proteggere i file, fare riferimento alle [Domande frequenti sull'applicazione Microsoft Rights Management sharing per Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
-## Per proteggere un file in un dispositivo (protezione locale)
+## Per proteggere un file in un dispositivo (protezione sul posto)
 
 1.  In Esplora file, selezionare un file da proteggere. Fare clic sul pulsante destro del mouse, selezionare **Proteggi tramite RMS**, quindi selezionare **Proteggi sul posto**. Ad esempio:
 
@@ -48,24 +48,24 @@ Quando si protegge un file localmente, esso sostituisce il file originale non pr
 
 3.  È possibile visualizzare rapidamente una finestra di dialogo per indicare che il file è protetto e tornare a Esplora file. I file selezionati sono ora protetti. In alcuni casi (quando l'aggiunta della protezione modifica l'estensione del nome di file), il file originale in Esplora file viene sostituito con un nuovo file con l'icona di blocco della protezione di Rights Management. Ad esempio:
 
-    ![File protetto con l'icona di blocco per l'applicazione di condivisione RMS](../media/ADRMS_MSRMSApp_Pfile.png)
+    ![File protetto con l'icona di blocco per l'applicazione RMS sharing](../media/ADRMS_MSRMSApp_Pfile.png)
 
 Se si cambia idea sulle autorizzazioni o si vuole modificarle in seguito, è sufficiente proteggere il file di nuovo.
 
 Se in un secondo momento è necessario rimuovere la protezione da un file, vedere [Rimuovere la protezione da un file mediante l'applicazione Rights Management sharing](sharing-app-remove-protection.md).
 
 ## Esempi e altre istruzioni
-Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights Management e procedure, vedere le sezioni seguenti della Guida dell’utente dell’applicazione di condivisione Rights Management:
+Per esempi di come è possibile usare l'applicazione Rights Management sharing e informazioni sulle procedure da seguire, vedere le sezioni seguenti della Guida dell'utente dell'applicazione Rights Management sharing:
 
--   [Esempi per l'utilizzo dell’applicazione di condivisione RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
+-   [Esempi per l'uso dell'applicazione RMS sharing](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [Come procedere](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Vedere anche
-[Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
+[Guida dell'utente dell'applicazione Rights Management sharing](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 

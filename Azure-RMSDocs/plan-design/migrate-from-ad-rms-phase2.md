@@ -1,30 +1,30 @@
 ---
-title: Migrazione da AD RMS ad Azure Rights Management - Fase 2 | Azure RMS
-description: Fase 2 della migrazione da AD RMS ad Azure Rights Management (Azure RMS) che illustra il passaggio 5 della migrazione da AD RMS ad Azure Rights Management.
+title: Migrazione da AD RMS ad Azure Information Protection - Fase 2 | Azure Information Protection
+description: Fase 2 della migrazione da AD RMS ad Azure Information Protection. Viene descritto il passaggio 5 della migrazione da AD RMS ad Azure Information Protection.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/09/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4184c8b78d8ca6beb88efad79e0372367c523f2f
-ms.openlocfilehash: 2d8abaec220074531724ce4e95b4aefe23d0b2d6
+ms.sourcegitcommit: 4a6d07e9a24293f054915b5598c63e118c9c1430
+ms.openlocfilehash: c10e8b46fae2158e561421e8e5090d0cd9edbb83
 
 
 ---
 # Fase 2 della migrazione: configurazione lato client
 
->*Si applica a: Active Directory Rights Management Services, Azure Rights Management*
+>*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
-Usare le seguenti informazioni per la fase 2 della migrazione da AD RMS ad Azure Rights Management (Azure RMS). Queste procedure illustrano il passaggio 5 di [Migrazione da AD RMS ad Azure Rights Management](migrate-from-ad-rms-to-azure-rms.md).
+Usare le informazioni seguenti per la fase 2 della migrazione da AD RMS ad Azure Information Protection. Di seguito viene illustrato il passaggio 5 dell'operazione descritta in [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 
-## Passaggio 5. Riconfigurare i client per l'uso di Azure RMS
+## Passaggio 5. Riconfigurare i client per l'uso di Azure Information Protection
 Per i client Windows:
 
 1.  [Scaricare gli script di migrazione](https://go.microsoft.com/fwlink/?LinkId=524619):
@@ -33,9 +33,9 @@ Per i client Windows:
 
     -   Redirect_OnPrem.cmd
 
-    Questi script reimpostano la configurazione nei computer Windows in modo che usino il servizio Azure RMS anziché AD RMS.
+    Questi script reimpostano la configurazione nei computer Windows in modo che usino il servizio Azure Information Protection anziché AD RMS.
 
-2.  Seguire le istruzioni nello script di reindirizzamento (Redirect_OnPrem.cmd) per modificare lo script in modo che faccia riferimento al nuovo tenant di Azure RMS.
+2.  Seguire le istruzioni nello script di reindirizzamento (Redirect_OnPrem.cmd) per modificare lo script in modo che faccia riferimento al nuovo tenant di Azure Information Protection.
 
     > [!IMPORTANT]
     > Le istruzioni includono la sostituzione degli indirizzi di esempio **adrms** e **adrms.contoso.com** con gli indirizzi dei server AD RMS. Quando si esegue questa operazione, assicurarsi che non siano presenti spazi aggiuntivi prima o dopo gli indirizzi, che interrompono lo script di migrazione e sono molto difficili da identificare come la causa principale del problema. Alcuni strumenti di modifica aggiungono automaticamente uno spazio dopo aver incollato il testo.
@@ -131,6 +131,6 @@ Redirect_OnPrem.cmd:
 Per continuare la migrazione, passare a [Fase 3: configurazione di servizi di supporto](migrate-from-ad-rms-phase3.md).
 
 
-<!--HONumber=Sep16_HO2-->
+<!--HONumber=Oct16_HO1-->
 
 

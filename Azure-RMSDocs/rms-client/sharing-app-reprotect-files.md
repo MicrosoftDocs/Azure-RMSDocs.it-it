@@ -1,27 +1,27 @@
 ---
-title: Modificare le autorizzazioni per i file protetti da Rights Management | Azure RMS
+title: Modificare le autorizzazioni per i file protetti da Rights Management | Azure Information Protection
 description: "Quando un file è protetto da Rights Management, è possibile modificarne le autorizzazioni riproteggendolo e quindi specificando tutti gli utenti che possono accedere al file e le autorizzazioni che si vogliono assegnare a tali utenti."
 keywords: 
 author: cabailey
 manager: mbaldwin
-ms.date: 08/03/2016
+ms.date: 09/25/2016
 ms.topic: article
 ms.prod: 
-ms.service: rights-management
+ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 26b043f1f9e7a1e0cd00c2f31c28f7d6685f0232
-ms.openlocfilehash: 214890cee5975c05798014ddb8d153faa9ca3998
+ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
+ms.openlocfilehash: 99dcbeb68cbbe363cfd1e6ded07882f01621e438
 
 
 ---
 
 # Modificare le autorizzazioni per i file protetti da Rights Management
 
->*Si applica a: Active Directory Rights Management Services, Azure Rights Management, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 Quando un file è protetto da Rights Management, è possibile modificarne le autorizzazioni riproteggendolo e quindi specificando tutti gli utenti che possono accedere al file e le autorizzazioni che si vogliono assegnare a tali utenti.
 
@@ -34,7 +34,7 @@ Quando un file è protetto da Rights Management, è possibile modificarne le aut
 
 Il proprietario del file da riproteggere (l'utente che, ad esempio, ha originariamente protetto il file tramite l'applicazione di condivisione) ha automaticamente le autorizzazioni per riproteggere il file. Se l'utente non è il proprietario, il fatto che abbia le autorizzazioni necessarie a riproteggere il file dipende dalle autorizzazioni correnti del file protetto. Per proteggere un file, è necessario il [diritto di utilizzo del controllo completo](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions).
 
-Se ad esempio un altro utente ha protetto il file tramite l'applicazione di condivisione Rights Management specificando per l'utente corrente un gruppo di appartenenza e l'autorizzazione personalizzata **Comproprietario**, l'utente corrente sarà in grado di riproteggere il file. Se invece l'altro utente non ha specificato il nome dell'utente corrente né un gruppo di appartenenza per quest'ultimo, oppure se ha selezionato **Revisore – Visualizzazione e Modifica** o un modello che non consente di rimuovere le autorizzazioni, l'utente corrente non sarà in grado di riproteggere il file. Il modo più semplice per scoprirlo è tentare di riproteggere il file.
+Se ad esempio un altro utente ha protetto il file tramite l'applicazione Rights Management sharing specificando per l'utente corrente un gruppo di appartenenza e l'autorizzazione personalizzata **Comproprietario**, l'utente corrente sarà in grado di riproteggere il file. Se invece l'altro utente non ha specificato il nome dell'utente corrente né un gruppo di appartenenza per quest'ultimo, oppure se ha selezionato **Revisore – Visualizzazione e Modifica** o un modello che non consente di rimuovere le autorizzazioni, l'utente corrente non sarà in grado di riproteggere il file. Il modo più semplice per scoprirlo è tentare di riproteggere il file.
 
 Se si vogliono rimuovere completamente tutte le autorizzazioni in modo che il file non sia più protetto, vedere [Rimuovere la protezione da un file](sharing-app-remove-protection.md).
 
@@ -62,9 +62,9 @@ Se si vogliono rimuovere completamente tutte le autorizzazioni in modo che il fi
     Se si hanno le autorizzazioni necessarie per riproteggere il file, è possibile visualizzare rapidamente una finestra di dialogo per indicare che il file è protetto e tornare a Esplora file. I file selezionati sono ora protetti con le modifiche dell'utente. 
 
 > [!NOTE]
-> Prima di poter riproteggere il file, RMS deve confermare che l'utente è autorizzato a eseguire l'azione sul file e a tale scopo controlla nome utente e password. In alcuni casi, questo potrebbe essere memorizzato nella cache e non verrà visualizzato un messaggio che richiede l'immissione delle credenziali. In altri casi, verrà richiesto di fornire le credenziali.
+> Prima di poter riapplicare la protezione al file, il servizio Rights Management deve verificare che l'utente sia autorizzato a eseguire l'azione sul file e a tale scopo controlla il nome utente e la password. In alcuni casi, questo potrebbe essere memorizzato nella cache e non verrà visualizzato un messaggio che richiede l'immissione delle credenziali. In altri casi, verrà richiesto di fornire le credenziali.
 >
-> Se l'organizzazione non usa Azure Rights Management (Azure RMS) o AD RMS, è possibile richiedere un account gratuito che accetterà le credenziali in modo che sia possibile usare file protetti tramite RMS:
+> Se l'organizzazione non usa Azure Information Protection o AD RMS, è possibile richiedere un account gratuito che accetterà le credenziali in modo che sia possibile usare file protetti tramite RMS:
 >
 > -   Per richiedere questo account, fare clic sul collegamento per richiedere [RMS per utenti singoli](http://go.microsoft.com/fwlink/?LinkId=309469).
 >
@@ -81,21 +81,21 @@ Se si vogliono modificare le autorizzazioni per un file inviato tramite posta el
 
     Poiché non è possibile rimuovere le autorizzazioni precedenti dal file precedentemente inviato tramite posta elettronica, sostituirle solo con una nuova versione. Prendere in considerazione la possibilità di revocare il file inviato in precedenza in modo che i destinatari non possano più aprire quella versione del documento. La revoca è appropriata se è necessario rendere più restrittive le autorizzazioni, ad esempio rimuovendo gli utenti che non devono avere accesso al file o non devono più essere in grado di aprirlo.
 
-    Per revocare un file inviato tramite posta elettronica, vedere [Rilevare e revocare i documenti](sharing-app-track-revoke.md).
+    Per revocare un file inviato tramite posta elettronica, vedere [Tenere traccia dei documenti e revocarli](sharing-app-track-revoke.md).
 
 
 ## Esempi e altre istruzioni
-Per esempi di come è possibile utilizzare l'applicazione di condivisione Rights Management e procedure, vedere le sezioni seguenti della Guida dell’utente dell’applicazione di condivisione Rights Management:
+Per esempi di come è possibile usare l'applicazione Rights Management sharing e informazioni sulle procedure da seguire, vedere le sezioni seguenti della Guida dell'utente dell'applicazione Rights Management sharing:
 
--   [Esempi per l'utilizzo dell’applicazione di condivisione RMS](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
+-   [Esempi per l'uso dell'applicazione RMS sharing](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [Come procedere](sharing-app-user-guide.md#what-do-you-want-to-do)
 
 ## Vedere anche
-[Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
+[Guida dell'utente dell'applicazione Rights Management sharing](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Aug16_HO4-->
+<!--HONumber=Sep16_HO4-->
 
 
