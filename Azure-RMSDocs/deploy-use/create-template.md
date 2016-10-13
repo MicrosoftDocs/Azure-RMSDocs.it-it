@@ -3,7 +3,7 @@ title: Creare, configurare e pubblicare un modello personalizzato | Azure Inform
 description: Istruzioni per creare e gestire modelli personalizzati nel portale di Azure classico. I modelli semplificano l'applicazione, da parte di utenti finali e amministratori, di criteri appropriati per la protezione di documenti e messaggi di posta elettronica.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/03/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 30cd611e128217b2760e66b3391a0702ae0ed7a6
+ms.sourcegitcommit: d205e63bdd8819177493837296259c5400a76503
+ms.openlocfilehash: 906bc1e97947cf32b102fdf484b86bc30b9a383d
 
 
 ---
@@ -70,9 +70,11 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
 
         Se questa pagina non viene visualizzata immediatamente dopo aver seguito le istruzioni per Office 365, è possibile usare le istruzioni di navigazione precedenti relative al portale di Azure classico.
 
-3.  Nella pagina **Aggiungi un nuovo modello di criteri di diritti** selezionare la lingua in cui si intende specificare il nome e la descrizione del modello che saranno visibili agli utenti (più avanti si potranno aggiungere altre lingue). Digitare quindi un nome univoco e una descrizione e fare clic sul pulsante Completa.
+3. Nella pagina **Aggiungi un nuovo modello di criteri di diritti** selezionare la lingua in cui si intende specificare il nome e la descrizione del modello che saranno visibili agli utenti (più avanti si potranno aggiungere altre lingue). Digitare quindi un nome univoco e una descrizione e fare clic sul pulsante Completa.
 
-Nella pagina di avvio rapido **Introduzione a Rights Management** fare clic su **Gestire i modelli di criteri di diritti**. Il modello appena creato sarà visualizzato nell'elenco dei modelli con lo stato **Archiviato**. A questo punto il modello è stato creato, ma non è configurato e non è visibile agli utenti.
+    Non includere una virgola o un punto e virgola nel nome del modello o nella descrizione. Non tutti i servizi e le applicazioni che usano i modelli di Rights Management supportano questi caratteri per tali modelli. In questo scenario, questi servizi e applicazioni potrebbero non riuscire a recuperare o usare questi modelli di Azure Rights Management.
+
+4. Nella pagina di avvio rapido **Introduzione a Rights Management** fare clic su **Gestire i modelli di criteri di diritti**. Il modello appena creato sarà visualizzato nell'elenco dei modelli con lo stato **Archiviato**. A questo punto il modello è stato creato, ma non è configurato e non è visibile agli utenti.
 
 ## Per configurare e pubblicare un modello personalizzato
 
@@ -166,6 +168,6 @@ Per apportare modifiche al modello, selezionarlo e quindi eseguire di nuovo i pa
 [Configurare modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

@@ -4,7 +4,7 @@ description:
 keywords: Alcune domande frequenti riguardanti l'uso dell'app Azure Information Protection per iOS e Android
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ac04af3b503bb7bb1d3c9f4bcee4aff163d73314
-ms.openlocfilehash: 42368b8ee50acf09c6af45182ace1f159a4e5f02
+ms.sourcegitcommit: fd11b55ec8ee11f594c33a5a46694d83b2db6953
+ms.openlocfilehash: ff2b28d9774682abbe77b484b097ea51709a3234
 
 
 ---
@@ -27,7 +27,7 @@ Questa pagina riporta le risposte a domande frequenti sull'app Microsoft Azure I
 
 ## Quali operazioni è possibile eseguire con l'app Azure Information Protection?
 
-Questa app consente di visualizzare messaggi di posta elettronica protetti da diritti (file con estensione rpmsg). Non consente di creare nuovi messaggi o di rispondere a messaggi ricevuti. Questa app consente di visualizzare (ma non di creare o modificare) file PDF, immagini e file di testi protetti da diritti, oltre a qualsiasi formato di file protetto come file con estensione pfile. 
+Questa app consente di visualizzare messaggi di posta elettronica protetti da diritti (file con estensione rpmsg). Questa app consente anche di visualizzare file PDF, immagini e file di testo protetti da diritti, oltre a qualsiasi formato di file protetto come file con estensione pfile. Attualmente, l'app non può essere usata per creare nuovi messaggi di posta elettronica protetti, rispondere ai messaggi oppure creare o modificare i file protetti.
 
 ## È possibile aprire file PDF che si trovano in librerie protette da SharePoint e OneDrive For Business?
 
@@ -64,6 +64,6 @@ Inviare la domanda al [sito Yammer](http://www.yammer.com/AskIPTeam) o [inviare 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

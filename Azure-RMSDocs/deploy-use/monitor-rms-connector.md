@@ -3,7 +3,7 @@ title: Monitorare il connettore di Azure Rights Management | Azure Information P
 description: Informazioni su come monitorare il connettore e l'uso da parte dell'organizzazione del servizio Azure Rights Management di Azure Information Protection.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 954d8b7b62b35f5fdd29e115681d9d5c0da69a86
+ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
+ms.openlocfilehash: af75705e8c256811d1816c2ad52e42e98b4db503
 
 
 ---
@@ -171,7 +171,7 @@ Per altre informazioni e istruzioni, vedere **Details** (Dettagli) e **Install I
 
 La registrazione dei dati relativi all'utilizzo consente di identificare i casi in cui i messaggi di posta elettronica e i documenti vengono protetti e utilizzati. Quando questa operazione viene eseguita tramite il connettore RMS, il campo relativo all'ID utente nei log contiene il nome dell'entità servizio **Aadrm_S-1-7-0** che viene generato automaticamente per il connettore RMS.
 
-Per altre informazioni sulla registrazione dei dati sull'uso, vedere [Registrazione e analisi dell'uso di Azure Rights Management](log-analyze-usage.md).
+Per altre informazioni sulla registrazione dell'utilizzo, vedere [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](log-analyze-usage.md).
 
 Se si vuole eseguire una registrazione più dettagliata a scopo di diagnosi, è possibile usare [Debugview](http://go.microsoft.com/fwlink/?LinkID=309277) da Windows Sysinternals e abilitare la traccia per il connettore RMS modificando il file web.config per il sito predefinito in IIS. A tale scopo, eseguire questa procedura:
 
@@ -192,6 +192,6 @@ Se si vuole eseguire una registrazione più dettagliata a scopo di diagnosi, è 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO1-->
 
 

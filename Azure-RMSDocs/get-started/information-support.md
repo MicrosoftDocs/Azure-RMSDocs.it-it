@@ -3,7 +3,7 @@ title: Informazioni e supporto per gli amministratori riguardo ad Azure Informat
 description: Risorse per gli amministratori, incluse informazioni sulle nuove versioni, opzioni di supporto e istruzioni su come contattare Microsoft per segnalare un problema.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/29/2016
+ms.date: 10/04/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 40fadcda8a92b3427f46183a5e13e5ea5f689930
-ms.openlocfilehash: 9d8a711e43cf9e8003ebc4e1c87d4e1e996ddeb2
+ms.sourcegitcommit: 13579b8cb5516a1d7390db81957c140b8e980982
+ms.openlocfilehash: 1ca9b1d4b3af81a892e001c639ad79ac931233be
 
 
 ---
@@ -29,7 +29,7 @@ Usare le risorse seguenti per comprendere, distribuire e supportare Azure Inform
 |… vedere la documentazione consigliata per il servizio →|Usare la pagina iniziale della [documentazione di Azure Information Protection](https://docs.microsoft.com/information-protection/).|
 |… inviare commenti sulla documentazione o porre una domanda relativa alla documentazione stessa →|Inviare un messaggio di posta elettronica ad [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
 |… ricevere tweet su Information Protection e annunci sugli aggiornamenti della documentazione dal gruppo di prodotto →|Seguire Dan Plastina, che collabora alla gestione del team di Information Protection. Vedere [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy)|
-|… controllare le informazioni sulla sottoscrizione e sulle funzionalità supportate →|Usare la [pagina dei piani tariffari](https://go.microsoft.com/fwlink/?LinkId=827589) del sito Web di Azure Information Protection.|
+|… controllare le informazioni sulla sottoscrizione e sulle funzionalità supportate →|Usare le [informazioni sulla sottoscrizione](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) e l'[elenco delle funzionalità](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) del sito Azure Information Protection.|
 
 
 ## Informazioni sulle nuove versioni
@@ -88,6 +88,6 @@ Risoluzione dei problemi:
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO1-->
 
 
