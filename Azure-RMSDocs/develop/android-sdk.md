@@ -142,7 +142,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
 [Concetti e termini per sviluppatori](core-concepts.md)
 
-[Informazioni di riferimento sulle API di Android](android-namespaces.md)
+[Informazioni di riferimento sulle API di Android](https://msdn.microsoft.com/library/dn758245.aspx)
 
  
 

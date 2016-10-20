@@ -1,6 +1,6 @@
 ---
 title: Installazione per Windows Phone | Azure RMS
-description: Le applicazioni Windows Phone possono usare Microsoft Rights Management SDK 4.2 per abilitare la protezione integrata delle informazioni nell'applicazione.
+description: Le applicazioni Windows Phone possono usare Microsoft Rights Management SDK 4.2 per abilitare la protezione integrata delle informazioni nell&quot;applicazione.
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
@@ -78,7 +78,7 @@ A questo punto si è pronti per creare le nuove app Windows Phone personalizzate
 
 [Sviluppo per Windows Phone](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx)
 
-[Informazioni di riferimento sulle API di Windows](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement)
+[Informazioni di riferimento sulle API di Windows](https://msdn.microsoft.com/library/dn891914.aspx)
 
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
