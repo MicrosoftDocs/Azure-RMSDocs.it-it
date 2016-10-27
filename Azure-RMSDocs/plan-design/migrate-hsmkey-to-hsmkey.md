@@ -1,9 +1,9 @@
 ---
-title: Passaggio 2&colon; Migrazione da una chiave protetta tramite HSM a un'altra| Azure Information Protection
+title: Passaggio 2&colon; Migrazione da una chiave protetta tramite HSM a un&quot;altra| Azure Information Protection
 description: "Istruzioni che fanno parte del percorso di migrazione da AD RMS ad Azure Information Protection e si applicano solo se la chiave di AD RMS è protetta tramite HSM e si vuole eseguire la migrazione ad Azure Information Protection con una chiave del tenant protetta tramite HSM in Insieme di credenziali delle chiavi di Azure."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a61075eb555f6cec1572851bdde6fae85e6310ed
-ms.openlocfilehash: 7db4da1a48bb24ce7680c84fe586a3f96e61c0b7
+ms.sourcegitcommit: bad084502b9b7e55c6e80dccfbd66c3f34b63c7c
+ms.openlocfilehash: 8d9538cb2663edce5fc343ed9710032505c15293
 
 
 ---
@@ -51,7 +51,7 @@ Queste procedure vengono eseguite dall'amministratore di Insieme di credenziali 
 
     Quando la chiave viene caricata in Insieme di credenziali delle chiavi di Azure, vengono visualizzate le proprietà della chiave visualizzata, incluso l'ID della chiave. Avrà un aspetto simile a https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Prendere nota dell'URL perché sarà necessario all'amministratore di Azure Information Protection per indicare al servizio Azure Rights Management di usare questa chiave per la chiave del tenant.
 
-2. Nella workstation connessa a Internet, in una sessione di PowerShell, usare il cmdlet [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.200\).aspx) per autorizzare l'entità servizio denominata Microsoft.Azure.RMS ad accedere all'insieme di credenziali delle chiavi in cui verrà archiviata la chiave del tenant di Azure Information Protection. Le autorizzazioni necessarie sono decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
+2. Nella workstation connessa a Internet, in una sessione di PowerShell, usare il cmdlet [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.300\).aspx) per autorizzare l'entità servizio denominata Microsoft.Azure.RMS ad accedere all'insieme di credenziali delle chiavi in cui verrà archiviata la chiave del tenant di Azure Information Protection. Le autorizzazioni necessarie sono decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
     
     Se ad esempio l'insieme di credenziali delle chiavi creato per Azure Information Protection è denominato contoso-byok-ky e il gruppo di risorse è denominato contoso-byok-rg, eseguire il comando seguente:
     
@@ -64,7 +64,7 @@ Ora che la chiave HSM è stata preparata in Insieme di credenziali delle chiavi 
 
 Queste procedure vengono eseguite dall'amministratore di Azure Information Protection.
 
-1.  Nella workstation connessa a Internet e nella sessione di PowerShell connettersi al servizio Azure Rights Management usando il cmdlet [Connect-AadrmService](https://msdn.microsoft.com/library/dn629415.aspx ).
+1.  Nella workstation connessa a Internet e nella sessione di PowerShell connettersi al servizio Azure Rights Management usando il cmdlet [Connect-AadrmService](https://msdn.microsoft.com/library/dn629415.aspx).
     
     Caricare quindi il file del primo dominio di pubblicazione trusted esportato (con estensione xml) tramite il cmdlet [Import-AadrmTpd](https://msdn.microsoft.com/library/dn857523.aspx). Se si hanno più un file XML, perché avevi più domini di pubblicazione trusted, scegliere il file che contiene il dominio di pubblicazione trusted esportato che corrisponde alla chiave di HSM che si desidera utilizzare in Azure RMS per proteggere il contenuto dopo la migrazione. 
     
@@ -80,7 +80,7 @@ Queste procedure vengono eseguite dall'amministratore di Azure Information Prote
 
 2.  Al termine del comando, ripetere il passaggio 1 per ogni restante file XML creato esportando il tuo domini di pubblicazione trusted. Per questi file impostare **-Active** su **false** quando si esegue il comando di importazione.  
 
-3.  Usare il cmdlet [Disconnect-AadrmService](http://msdn.microsoft.com/library/windowsazure/dn629416.aspx) per disconnettersi dal servizio Azure Rights Management:
+3.  Usare il cmdlet [Disconnect-AadrmService](https://msdn.microsoft.com/library/azure/dn629416.aspx) per disconnettersi dal servizio Azure Rights Management:
 
     ```
     Disconnect-AadrmService
@@ -94,6 +94,6 @@ Queste procedure vengono eseguite dall'amministratore di Azure Information Prote
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 

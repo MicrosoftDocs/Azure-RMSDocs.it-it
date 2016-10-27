@@ -1,6 +1,6 @@
 ---
-title: "Come impostare la modalità di sicurezza dell'API | Azure RMS"
-description: "Scegliere la modalità di sicurezza eseguita dall'applicazione API file."
+title: "Come impostare la modalità di sicurezza dell&quot;API | Azure RMS"
+description: "Scegliere la modalità di sicurezza eseguita dall&quot;applicazione API file."
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
@@ -14,17 +14,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: f10129cb907cafa0e0c717b02153bbcdea012959
+ms.sourcegitcommit: 77e2dfe7f2afb1e70de658850f83f86e9224aea6
+ms.openlocfilehash: 9235fa1c194162689b854493ea31e76c08c40ce7
 
 
 ---
 
 # Procedura: Impostare la modalità di sicurezza dell'API
 
-È possibile scegliere la modalità di sicurezza eseguita dall'applicazione API file tramite la funzione [**IpcSetGlobalProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty).
+È possibile scegliere la modalità di sicurezza in cui viene eseguita l'applicazione API file tramite la funzione [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx).
 
-Per inizializzare l'applicazione con esecuzione in *modalità server*, chiamare la funzione [**IpcSetGlobalProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty) e impostare la modalità di sicurezza su [**IPC\_API\_MODE\_SERVER**](/information-protection/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER). Per impostazione predefinita l'applicazione verrà eseguita in *modalità client*, **IPC\_API\_MODE\_CLIENT**.
+Per inizializzare l'applicazione in modo che venga eseguita in *modalità server*, chiamare la funzione [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx) e impostare la modalità di sicurezza su [IPC\_API\_MODE\_SERVER](https://msdn.microsoft.com/library/hh535236.aspx). Per impostazione predefinita l'applicazione verrà eseguita in *modalità client*, **IPC\_API\_MODE\_CLIENT**.
 
 Per altre informazioni sulla *modalità server*, vedere [Tipi di applicazioni](application-types.md).
 
@@ -33,14 +33,14 @@ Per altre informazioni sulla *modalità server*, vedere [Tipi di applicazioni](a
 ## Argomenti correlati
 
 * [Tipi di applicazioni](application-types.md)
-* [**Valori della modalità API**](/information-protection/sdk/2.1/api/win/api%20mode%20values#msipc_api_mode_values_IPC_API_MODE_SERVER)
-* [**IpcSetGlobalProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty)
+* [Valori della modalità API](https://msdn.microsoft.com/library/hh535236.aspx)
+* [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)
  
 
  
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 

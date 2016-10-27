@@ -1,5 +1,5 @@
 ---
-title: Come consentire all'applicazione di servizio di usare RMS basato su cloud | Azure RMS
+title: Come consentire all&quot;applicazione di servizio di usare RMS basato su cloud | Azure RMS
 description: "Questo argomento descrive i passaggi per la configurazione dell’applicazione di servizio per l’uso di Azure Rights Management."
 keywords: 
 author: bruceperlerms
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 1e95ce00c96fb0ee0d53ce4865a566a00cf62076
+ms.sourcegitcommit: 7df62371ba4a2eea0227c731cf90b3454993f533
+ms.openlocfilehash: 28b85313e278455391040797ea2886bd9247abe2
 
 
 ---
@@ -34,8 +34,8 @@ Per usare l'applicazione di servizio Rights Management Services SDK 2.1 con Azur
 
 ## Connessione al servizio Rights Management di Azure
 
--   Chiamare [**IpcInitialize**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize).
--   Impostare [**IpcSetGlobalProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty).
+-   Chiamare [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx).
+-   Impostare [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx).
 
         C++
         int mode = IPC_API_MODE_SERVER;
@@ -45,10 +45,10 @@ Per usare l'applicazione di servizio Rights Management Services SDK 2.1 con Azur
   **Nota** Per altre informazioni, vedere [Impostazione della modalità di sicurezza dell’API](setting-the-api-security-mode-api-mode.md)
 
      
--   La procedura seguente rappresenta la configurazione per la creazione dell'istanza di una struttura [**IPC\_PROMPT\_CTX**](/information-protection/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx) con il membro **pcCredential** ([**IPC\_CREDENTIAL**](/information-protection/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)) popolato con le informazioni di connessione ottenute dal servizio di Azure Rights Management.
--   Usare le informazioni ottenute con la creazione dell'identità del servizio tramite chiave simmetrica (vedere i prerequisiti riportati in precedenza in questo argomento) per impostare i parametri **wszServicePrincipal**, **wszBposTenantId** e **cbKey** quando si crea l'istanza di una struttura [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/information-protection/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key).
+-   La procedura seguente indica come creare un'istanza di una struttura [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx) con il membro *pcCredential*  ([IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx)) popolato con le informazioni di connessione ottenute dal servizio Azure Rights Management.
+-   Usare le informazioni ottenute dalla creazione dell'identità del servizio tramite chiave simmetrica (vedere i prerequisiti riportati in precedenza in questo argomento) per impostare i parametri *wszServicePrincipal*, *wszBposTenantId* e *cbKey* quando si crea l'istanza di una struttura [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx).
 
-**Nota** A causa di una condizione esistente presso il nostro servizio di individuazione, le credenziali tramite chiave simmetrica vengono accettate solo se provenienti dal Nord America e di conseguenza è necessario specificare l'URL del tenant direttamente. Questa operazione viene eseguita tramite il parametro [**IPC\_CONNECTION\_INFO**](/information-protection/sdk/2.1/api/win/ipc_connection_info#msipc_ipc_connection_info) di [**IpcGetTemplateList**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) oppure [**IpcGetTemplateIssuerList**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist).
+**Nota**: a causa di una condizione esistente con il servizio di individuazione, vengono accettate le credenziali tramite chiave simmetrica solo se provenienti dall'America del Nord, per cui è necessario specificare direttamente l'URL del tenant. Questa operazione viene eseguita tramite il tipo [IPC\_CONNECTION\_INFO](https://msdn.microsoft.com/library/hh535274.aspx) del parametro *pConnectionInfo* in [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) o [IpcGetTemplateIssuerList](https://msdn.microsoft.com/library/hh535266.aspx).
 
 ## Generare una chiave simmetrica e raccogliere le informazioni necessarie
 
@@ -57,16 +57,25 @@ Per usare l'applicazione di servizio Rights Management Services SDK 2.1 con Azur
 -   Installare [Assistente per l’accesso ai Microsoft Online Services](http://go.microsoft.com/fwlink/p/?LinkID=286152)
 -   Installare il [modulo Azure AD Powershell](https://bposast.vo.msecnd.net/MSOPMW/8073.4/amd64/AdministrationConfig-en.msi).
 
-**Nota** Per usare i cmdlet di Powershell, è necessario essere un amministratore tenant.
+**Nota**: per usare i cmdlet di Powershell, è necessario essere un amministratore tenant.
 
--   Avviare Powershell ed eseguire i comandi seguenti per generare una chiave         `Import-Module MSOnline`
-            `Connect-MsolService` (digitare le credenziali di amministratore)         `New-MsolServicePrincipal` (digitare un nome visualizzato)
--   Dopo la generazione di una chiave simmetrica, verranno visualizzate le informazioni sulla chiave, tra cui la chiave stessa e **AppPrincipalId**.
+- Avviare Powershell ed eseguire i comandi seguenti per generare una chiave
 
+    `Import-Module MSOnline`
 
-    La chiave simmetrica seguente è stata creata come la chiave non fornita ZYbF/lTtwE28qplQofCpi2syWd11D83+A3DRlb2Jnv8=
+    `Connect-MsolService` (digitare le credenziali di amministratore)
 
-    DisplayName : RMSTestApp ServicePrincipalNames : {7d9c1f38-600c-4b4d-8249-22427f016963} ObjectId : 0ee53770-ec86-409e-8939-6d8239880518 AppPrincipalId : 7d9c1f38-600c-4b4d-8249-22427f016963
+    `New-MsolServicePrincipal` (digitare un nome visualizzato)
+
+- Dopo la generazione di una chiave simmetrica, verranno visualizzate le informazioni sulla chiave, tra cui la chiave stessa e *AppPrincipalId*.
+
+      The following symmetric key was created as one was not supplied
+      ZYbF/lTtwE28qplQofCpi2syWd11D83+A3DRlb2Jnv8=
+
+      DisplayName : RMSTestApp
+      ServicePrincipalNames : {7d9c1f38-600c-4b4d-8249-22427f016963}
+      ObjectId : 0ee53770-ec86-409e-8939-6d8239880518
+      AppPrincipalId : 7d9c1f38-600c-4b4d-8249-22427f016963
 
 
 ### Istruzioni per individuare **TenantBposId** e **URL**
@@ -81,20 +90,22 @@ Per usare l'applicazione di servizio Rights Management Services SDK 2.1 con Azur
     `Get-AadrmConfiguration`
 
 
--   Creare un'istanza di [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/information-protection/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key) e impostare alcuni membri.
+- Creare un'istanza di [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) e impostare alcuni membri.
 
-    // Creare una struttura di chiave.
-    IPC_CREDENTIAL_SYMMETRIC_KEY symKey = {0}.
+      // Create a key structure.
+      IPC_CREDENTIAL_SYMMETRIC_KEY symKey = {0};
 
-    // Impostare ogni membro con le informazioni ottenute con la creazione del servizio.
-    symKey.wszBase64Key = "chiave dell'entità servizio"; symKey.wszAppPrincipalId = "identificatore dell'entità app"; symKey.wszBposTenantId = "identificatore del tenant";
+      // Set each member with information from service creation.
+      symKey.wszBase64Key = "your service principal key";
+      symKey.wszAppPrincipalId = "your app principal identifier";
+      symKey.wszBposTenantId = "your tenant identifier";
 
 
-Per altre informazioni, vedere [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/information-protection/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key).
+Per altre informazioni, vedere [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx).
 
--   Creare l'istanza di una struttura [**IPC\_CREDENTIAL**](/information-protection/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential) contenente l'istanza di [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/information-protection/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key).
+-   Creare un'istanza di struttura [IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx) che contenga l'istanza [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx).
 
-**Nota** I membri *conectionInfo* sono impostati con gli URL ottenuti dalla chiamata precedente a `Get-AadrmConfiguration` e indicati con tali nomi di campo.
+**Nota**: i membri di *conectionInfo* sono impostati con gli URL ottenuti dalla chiamata precedente a `Get-AadrmConfiguration` e indicati con tali nomi di campo.
 
     // Create a credential structure.
     IPC_CREDENTIAL cred = {0};
@@ -120,7 +131,7 @@ Per altre informazioni, vedere [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/informatio
 ### Identificare un modello e quindi crittografare
 
 -   Selezionare un modello da usare per la crittografia.
-    Chiamare [**IpcGetTemplateList**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist) passando la stessa istanza di [**IPC\_PROMPT\_CTX**](/information-protection/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx).
+    Chiamare [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) passando la stessa istanza di [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx).
 
 
     PCIPC_TIL pTemplates = NULL; IPC_TEMPLATE_ISSUER templateIssuer = (pTemplateIssuerList->aTi)[0];
@@ -128,9 +139,9 @@ Per altre informazioni, vedere [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/informatio
     hr = IpcGetTemplateList(&(templateIssuer.connectionInfo),        IPC_GTL_FLAG_FORCE_DOWNLOAD,        0,        &promptCtx,        NULL,        &pTemplates);
 
 
--   Con il modello citato in precedenza in questo argomento, chiamare [**IpcfEncrcyptFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfile) passando la stessa istanza di [**IPC\_PROMPT\_CTX**](/information-protection/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx).
+-   Con il modello citato in precedenza in questo argomento, chiamare [IpcfEncrcyptFile](https://msdn.microsoft.com/library/dn133059.aspx) passando la stessa istanza di [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx).
 
-Esempio d’uso di [**IpcfEncrcyptFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfile):
+Uso dell'esempio di [IpcfEncrcyptFile](https://msdn.microsoft.com/library/dn133059.aspx):
 
     LPCWSTR wszContentTemplateId = pTemplates->aTi[0].wszID;
     hr = IpcfEncryptFile(wszInputFilePath,
@@ -141,7 +152,7 @@ Esempio d’uso di [**IpcfEncrcyptFile**](/information-protection/sdk/2.1/api/wi
            NULL,
            &wszOutputFilePath);
 
-Esempio d’uso di [**IpcfDecryptFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile):
+Uso dell'esempio di [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx):
 
     hr = IpcfDecryptFile(wszInputFilePath,
            IPCF_DF_FLAG_DEFAULT,
@@ -156,23 +167,23 @@ La procedura necessaria per consentire all'applicazione di usare Azure Rights Ma
 * [Introduzione a Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx)
 * [Introduzione a RMS SDK 2.1](getting-started-with-ad-rms-2-0.md)
 * [Creare un'identità del servizio tramite ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx)
-* [**IpcSetGlobalProperty**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty)
-* [**IpcInitialize**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize)
-* [**IPC\_PROMPT\_CTX**](/information-protection/sdk/2.1/api/win/ipc_prompt_ctx#msipc_ipc_prompt_ctx)
-* [**IPC\_CREDENTIAL**](/information-protection/sdk/2.1/api/win/ipc_credential#msipc_ipc_credential)
-* [**IPC\_CREDENTIAL\_SYMMETRIC\_KEY**](/information-protection/sdk/2.1/api/win/ipc_credential_symmetric_key#msipc_ipc_credential_symmetric_key)
-* [**IpcGetTemplateIssuerList**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplateissuerlist)
-* [**IpcGetTemplateList**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgettemplatelist)
-* [**IpcfDecryptFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfdecryptfile)
-* [**IpcfEncrcyptFile**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfile)
-* [**IpcCreateLicenseFromScratch**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)
-* [**IpcCreateLicenseFromTemplateID**](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromtemplateid)
+* [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx)
+* [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx)
+* [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx)
+* [IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx)
+* [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx)
+* [IpcGetTemplateIssuerList](https://msdn.microsoft.com/library/hh535266.aspx)
+* [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx)
+* [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx)
+* [IpcfEncrcyptFile](https://msdn.microsoft.com/library/dn133059.aspx)
+* [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)
+* [IpcCreateLicenseFromTemplateID](https://msdn.microsoft.com/library/hh535257.aspx)
  
 
  
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 

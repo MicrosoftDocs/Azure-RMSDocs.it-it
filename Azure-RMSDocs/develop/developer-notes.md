@@ -4,7 +4,7 @@ description: Questo argomento illustra indicazioni specifiche per diversi scenar
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: d7e718c2e982702bef16c242370771d991b29db9
+ms.sourcegitcommit: 593b8b505b8bd241c301c95ee6280f93f14901b9
+ms.openlocfilehash: 54ce450600b2a10e6889d2684ce26c9da9f9167e
 
 
 ---
@@ -24,13 +24,13 @@ ms.openlocfilehash: d7e718c2e982702bef16c242370771d991b29db9
 
 Questa sezione descrive le indicazioni specifiche per diversi scenari di sviluppo importanti, nonché informazioni generali sullo sviluppo con questo SDK. Gli scenari in questa sezione sono specifici per la versione corrente di Rights Management Services SDK 2.1 e possono subire modifiche nelle versioni successive.
 - [Procedura: Usare l'autenticazione ADAL](how-to-use-adal-authentication.md): autenticazione con Azure RMS per l'app usando Azure Active Directory Authentication Library (ADAL).
-- [Procedura: Aggiungere diritti proprietario espliciti](add-explicit-owner-rights.md): l'applicazione deve aggiungere in modo esplicito i diritti &quot;proprietario&quot; durante la creazione di una licenza da zero ([IpcCreateLicenseFromScratch](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensefromscratch)).
+- [Procedura: Aggiungere diritti proprietario espliciti](add-explicit-owner-rights.md): l'applicazione deve aggiungere in modo esplicito i diritti "proprietario" durante la creazione di una licenza da zero ([IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)).
 - [Procedura: Eseguire il debug dell'applicazione abilitata all'uso di diritti](debugging-applications-that-use-ad-rms.md): questo argomento illustra come eseguire il debug dell'applicazione e usare il Registro eventi di Windows.
 - [Procedura: Abilitare il rilevamento e la revoca dei documenti](tracking-content.md): questo argomento illustra le linee guida di base per implementare il rilevamento del contenuto del documento, nonché un codice di esempio per aggiornare i metadati e per creare il pulsante **Rileva utilizzo** per l'app.
 - [Procedura: Abilitare la notifica tramite posta elettronica](how-to-enable-email-notification.md): notifica tramite posta elettronica inviata al proprietario di un contenuto protetto quando qualcuno accede al contenuto.
 - [Procedura: Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md): questo argomento descrive i passaggi per la configurazione dell'applicazione di servizio per l'uso di Azure Rights Management.
 - [Procedura: Installare e configurare un server RMS](how-to-install-and-configure-an-rms-server.md): questo argomento descrive la procedura di collegamento a un server RMS o ad Azure RMS per il test dell'applicazione abilitata all'uso di diritti.
-- [Procedura: Impostare la modalità di sicurezza dell'API](setting-the-api-security-mode-api-mode.md): è possibile scegliere la modalità di sicurezza eseguita dall'applicazione API file tramite la funzione [IpcSetGlobalProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty).
+- [Procedura: Impostare la modalità di sicurezza dell'API](setting-the-api-security-mode-api-mode.md): è possibile scegliere la modalità di sicurezza eseguita dall'applicazione API file tramite la funzione [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx).
 - [Procedura: Usare le impostazioni di crittografia](working-with-encryption.md): questo argomento descrive i pacchetti di crittografia e illustra alcuni frammenti di codice che ne consentono l'uso.
 - [Tipi di applicazioni](application-types.md): questo argomento illustra i tipi di applicazioni che è possibile scegliere di creare come abilitate all'uso di diritti.
 - [Configurazione dell'API file](file-api-configuration.md): il comportamento dell'API file può essere configurato tramite le impostazioni del Registro di sistema.
@@ -40,7 +40,7 @@ Questa sezione descrive le indicazioni specifiche per diversi scenari di svilupp
 - [Informazioni di riferimento sulle restrizioni di utilizzo](usage-restriction-reference.md): le restrizioni di utilizzo vengono definite dalle costanti elencate in questo argomento.
 
  
-## Argomenti correlati ##
+## Argomenti correlati
 * [Panoramica](ad-rms-overview.md)
  
 
@@ -48,6 +48,6 @@ Questa sezione descrive le indicazioni specifiche per diversi scenari di svilupp
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 

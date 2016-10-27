@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 3d5d920f628bc39c4c280afa53be0b7199433803
+ms.sourcegitcommit: 04234755fabb10794f5be7c4fc658573bebf6e70
+ms.openlocfilehash: 616d5dd088665abf6e7d435978b021b10c5ac3f5
 
 
 ---
@@ -32,38 +32,33 @@ Dal punto di vista operativo, solo le proprietà relative al **nome contenuto** 
 
 La sequenza di passaggi da usare per configurare il rilevamento dei documenti per un dato contenuto è la seguente:
 
--   Creare un oggetto **metadati di licenza**.
+-   Creare un oggetto **metadati di licenza** e impostare il **nome contenuto** e il **tipo di notifica**. Queste sono le uniche proprietà necessarie.
+   - [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) per Android
+   -  [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx) per iOS
 
-    Per altre informazioni, vedere [**LicenseMetadata**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) o [**MSLicenseMetadata**](/information-protection/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc).
+Scegliere il tipo di criterio: modello o ad hoc:
+- Per il rilevamento dei documenti basato su modello, creare un oggetto **criteri utente** passando i metadati di licenza come parametro.
+  - [UserPolicy.create](https://msdn.microsoft.com/library/dn790887.aspx) per Android
+  - [MSUserPolicy.userPolicyWithTemplateDescriptor](https://msdn.microsoft.com/library/dn790808.aspx) per iOS
 
--   Impostare il **nome contenuto** e il **tipo di notifica**. Queste sono le uniche proprietà necessarie.
+- Per il rilevamento dei documenti su base ad hoc, impostare la proprietà **metadati di licenza** sull’oggetto **descrittore criteri**.
+  - [PolicyDescriptor.setLicenseMetadata](https://msdn.microsoft.com/library/mt573698.aspx) per Android
+  - [MSPolicyDescriptor.licenseMetadata](https://msdn.microsoft.com/library/mt573693.aspx) per iOS
 
-    Per altre informazioni, vedere i metodi di accesso alle proprietà per la classe di metadati di licenza appropriata per la piattaforma, ovvero [**LicenseMetadata**](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_licensemetadata_interface_java) o [**MSLicenseMetadata**](/information-protection/sdk/4.2/api/iOS/mslicensemetadata#msipcthin2_mslicensemetadata_class_objc).
-
--   Per il tipo di criteri, modello o ad hoc:
-
-    -   Per il rilevamento dei documenti basato su modello, creare un oggetto **criteri utente** passando i metadati di licenza come parametro.
-
-        Per altre informazioni, vedere [**UserPolicy.create**](/information-protection/sdk/4.2/api/android/userpolicy#msipcthin2_userpolicy_class_java) e [**MSUserPolicy.userPolicyWithTemplateDescriptor**](/information-protection/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_templatedescriptor_property_objc).
-
-    -   Per il rilevamento dei documenti su base ad hoc, impostare la proprietà **metadati di licenza** sull’oggetto **descrittore criteri**.
-
-        Per altre informazioni, vedere [**PolicyDescriptor.getLicenseMetadata**](/information-protection/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_interface_java), [**PolicyDescriptor.setLicenseMetadata**](/information-protection/sdk/4.2/api/android/policydescriptor#msipcthin2_policydescriptor_setlicensemetadata_java) e [**MSPolicyDescriptor.licenseMetadata**](/information-protection/sdk/4.2/api/iOS/mspolicydescriptor#msipcthin2_mspolicydescriptor_licensemetadata_property_objc).
-
-    **Nota** È possibile accedere direttamente all’oggetto  metadati di licenza solo durante il processo di configurazione del rilevamento dei documenti per i criteri utente specificati. Dopo la creazione dell'oggetto criteri utente, i metadati di licenza associati non sono accessibili, ovvero la modifica dei valori dei metadati di licenza non produce alcun effetto.
+    **Nota** È possibile accedere direttamente all’oggetto  metadati di licenza solo durante il processo di configurazione del rilevamento dei documenti per i criteri utente specificati. Dopo la creazione dell'oggetto criteri utente, i metadati di licenza associati non sono accessibili, ad esempio la modifica dei valori dei metadati di licenza non produce alcun effetto.
 
      
 
--   Chiamare il metodo di registrazione alla piattaforma per il rilevamento dei documenti.
-
-    Vedere [**MSUserPolicy.registerForDocTracking**](/information-protection/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_registerfordoctracking_userid_authenticationcallback_completionblock_method_objc) o [**UserPolicy.registerForDocTracking**](/information-protection/sdk/4.2/api/iOS/msuserpolicy#msipcthin2_msuserpolicy_registerfordoctracking_userid_authenticationcallback_completionblock_method_objc).
-
- 
+-   Chiamare alla fine il metodo di registrazione alla piattaforma per il rilevamento dei documenti.
+  - [UserPolicy.registerForDocTracking asynchronous](https://msdn.microsoft.com/library/mt573699.aspx) o [UserPolicy.registerForDocTracking synchronous](https://msdn.microsoft.com/library/mt631387.aspx) per Android
+  - [MSUserPolicy.registerForDocTracking](https://msdn.microsoft.com/library/mt573694.aspx) per iOS
 
  
 
+ 
 
 
-<!--HONumber=Sep16_HO5-->
+
+<!--HONumber=Oct16_HO4-->
 
 
