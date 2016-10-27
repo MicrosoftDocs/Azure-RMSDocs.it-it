@@ -108,14 +108,11 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabil
 
 * [Concetti e termini per sviluppatori](core-concepts.md)
 
-* [Informazioni di riferimento sulle API di iOS/OS X](/information-protection/sdk/4.2/api/ios/ios)
+* [Informazioni di riferimento sulle API di iOS/OS X](https://msdn.microsoft.com/library/dn758306.aspx)
 
  
 
  
-
-
-
 
 
 

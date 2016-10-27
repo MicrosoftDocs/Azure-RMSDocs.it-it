@@ -3,7 +3,7 @@ title: Aggiornare i modelli | Azure Information Protection
 description: "Quando si usa Azure Rights Management, i modelli vengono scaricati automaticamente nei computer client, in modo che gli utenti possano selezionarli dalle rispettive applicazioni. Può tuttavia essere necessario eseguire alcuni passaggi aggiuntivi se si apportano modifiche ai modelli."
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 2870edc314f3ee6f6e3b8937cbe5b653092c5910
+ms.sourcegitcommit: 67c2f47e1cc8e02c2bb4430421952a146e583e87
+ms.openlocfilehash: a823d79a9305569962ee165b6eadf1d5384c0c0b
 
 
 ---
@@ -29,7 +29,7 @@ Quando si usa il servizio Azure Rights Management di Azure Information Protectio
 |--------------------------|---------------------------------------------|
 |Exchange Online|È necessaria la configurazione manuale per aggiornare i modelli.<br /><br />Per la procedura di configurazione, vedere la sezione seguente: [Solo Exchange Online: come configurare Exchange per il download dei modelli personalizzati modificati](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates).|
 |Office 365|I modelli vengono aggiornati automaticamente e non sono necessari altri passaggi.|
-|Office 2016 e Office 2013<br /><br />Applicazione RMS sharing per Windows|I modelli vengono aggiornati automaticamente in base a una pianificazione:<br /><br />Per le versioni più recenti di Office, l'intervallo di aggiornamento predefinito è di 7 giorni.<br /><br />Per l'applicazione RMS sharing per Windows, a partire dalla versione 1.0.1784.0 l'intervallo di aggiornamento predefinito è di 1 giorno. Le versioni precedenti prevedono un intervallo di aggiornamento predefinito di 7 giorni.<br /><br />Per forzare un aggiornamento prima di questa pianificazione, vedere la sezione seguente: [Office 2016, Office 2013 e applicazione RMS sharing per Windows: come forzare un aggiornamento per un modello personalizzato modificato](#office-2016-office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
+|Office 2016 e Office 2013<br /><br />Applicazione RMS sharing per Windows|I modelli vengono aggiornati automaticamente in base a una pianificazione:<br /><br />Per le versioni più recenti di Office, l'intervallo di aggiornamento predefinito è di 7 giorni.<br /><br />Per l'applicazione RMS sharing per Windows, a partire dalla versione 1.0.1784.0 l'intervallo di aggiornamento predefinito è di 1 giorno. Le versioni precedenti prevedono un intervallo di aggiornamento predefinito di 7 giorni.<br /><br />Per forzare un aggiornamento prima di questa pianificazione, vedere la sezione seguente: [Office 2016, Office 2013 e applicazione RMS sharing per Windows: come forzare un aggiornamento per un modello personalizzato modificato](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
 |Office 2010|I modelli vengono aggiornati quando gli utenti eseguono l'accesso.<br /><br />Per forzare l'esecuzione di un aggiornamento, chiedere o imporre agli utenti di disconnettersi e rieseguire l'accesso. In alternativa, vedere la sezione seguente [Solo Office 2010: come forzare un aggiornamento per un modello personalizzato modificato](#office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template).|
 Per i dispositivi mobili che usano l'applicazione di RMS sharing, i modelli vengono scaricati automaticamente (e aggiornati se necessario) senza che siano richieste attività di configurazione aggiuntive.
 
@@ -186,6 +186,6 @@ Modificando il Registro di sistema nei computer che eseguono Office 2010, è pos
 [Configurare modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO2-->
 
 

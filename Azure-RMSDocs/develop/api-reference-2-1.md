@@ -1,10 +1,10 @@
 ---
 title: Informazioni di riferimento sulle API | Azure RMS
-description: Microsoft Rights Management SDK 2.1 supporta l'abilitazione per RMS dei client Windows.
+description: Microsoft Rights Management SDK 2.1 supporta l&quot;abilitazione per RMS dei client Windows.
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -23,11 +23,11 @@ ms.openlocfilehash: bb20d796e5a852aa9da224cbf218b9a166a9dbd8
 # Informazioni di riferimento sulle API
 
 Microsoft Rights Management SDK 2.1 supporta l'abilitazione per RMS dei client Windows. Per altre informazioni sulle specifiche, vedere [Note sulla versione](release-notes-rtm.md).
-- [Costanti](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/constants)
-- [Tipi di dati](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/data types)
-- [Funzioni](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/functions)
-- [Strutture](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/structures)
-- [Codici di errore](https://docs.microsoft.com/en-us/information-protection/sdk/2.1/api/win/Error codes)
+- [Costanti](https://msdn.microsoft.com/library/hh535291.aspx)
+- [Tipi di dati](https://msdn.microsoft.com/library/hh535288.aspx)
+- [Funzioni](https://msdn.microsoft.com/library/hh535289.aspx)
+- [Strutture](https://msdn.microsoft.com/library/hh535294.aspx)
+- [Codici di errore](https://msdn.microsoft.com/library/hh535248.aspx)
 
 
 
