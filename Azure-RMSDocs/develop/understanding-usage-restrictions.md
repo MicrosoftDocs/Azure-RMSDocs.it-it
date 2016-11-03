@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 1d1433eb4468fd74689243c1ca63134a406e0f96
+ms.sourcegitcommit: cb33a6c784a9b7efca0780771e764b984b51fedd
+ms.openlocfilehash: 3141c4131d83e043e987546900d433e43ee4c946
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: 1d1433eb4468fd74689243c1ca63134a406e0f96
 
 Tutte le applicazioni abilitate per RMS devono imporre restrizioni di utilizzo. Una restrizione di utilizzo è una condizione risultante da un tentativo dell'utente di eseguire un'azione, ad esempio la stampa di un documento, ma i criteri RMS per tale documento non concedono autorizzazioni o diritti per eseguire l'azione (ad esempio, il diritto di stampa).
 
-È possibile eseguire query sulle autorizzazioni di un utente per un documento mediante la funzione [**IpcAccessCheck**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcaccesscheck).
+È possibile eseguire query sulle autorizzazioni di un utente per un documento tramite la funzione [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx).
 
 ## Informazioni sulle restrizioni di utilizzo
 
@@ -48,7 +48,7 @@ Tutte le applicazioni abilitate per RMS devono imporre restrizioni di utilizzo. 
 
 ## Argomenti correlati
 
-* [**IpcAccessCheck**](/information-protection/sdk/2.1/api/win/functions#msipc_ipcaccesscheck)
+* [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx)
 * [Informazioni di riferimento sulle restrizioni di utilizzo](usage-restriction-reference.md)
  
 
@@ -56,6 +56,6 @@ Tutte le applicazioni abilitate per RMS devono imporre restrizioni di utilizzo. 
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 

@@ -1,9 +1,9 @@
 ---
-title: Guida dell'amministratore dell'applicazione Rights Management sharing | Azure Information Protection
-description: Istruzioni e informazioni per gli amministratori in una rete aziendale che sono responsabili della distribuzione dell'applicazione Microsoft Rights Management sharing per Windows.
+title: Guida dell&quot;amministratore dell&quot;applicazione Rights Management sharing | Azure Information Protection
+description: Istruzioni e informazioni per gli amministratori in una rete aziendale che sono responsabili della distribuzione dell&quot;applicazione Microsoft Rights Management sharing per Windows.
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
-ms.openlocfilehash: 4a551f198b0469f82c14120c0c6f2bb7d055afe9
+ms.sourcegitcommit: e5decd2df9135317f2e0da4951a177211342d7ac
+ms.openlocfilehash: e66f0ac6e596840ad940c51db41dbc6f91139e51
 
 
 ---
@@ -170,7 +170,7 @@ Per verificare l'esito positivo, vedere la sezione [Verificare l'esito positivo 
 
 ### Per installare solo l'applicazione RMS sharing e il componente aggiuntivo di Office
 
-1.  Installare il client AD RMS e l'applicazione RMS sharing usando il comando seguente:
+1.  Installare il client AD RMS e l'applicazione di condivisione RMS tramite il comando seguente e specificando una cartella esistente per la creazione del file di log:
 
     -   Per Windows a 64 bit:
 
@@ -185,8 +185,10 @@ Per verificare l'esito positivo, vedere la sezione [Verificare l'esito positivo 
         ```
 
     Ad esempio: `\\server5\apps\rms\x64\setup_ipviewer.exe /norestart /quiet /msicl "MSIRESTARTMANAGERCONTROL=Disable" /log "C:\Log files\ipviewerinstall.log"`
+    
+    Se questo comando ha esito negativo, non verrà visualizzato nessun messaggio di errore perché è stato specificato il parametro **/quiet**. Per risolvere il problema dell'installazione non riuscita, eseguire nuovamente il comando senza il parametro /quiet per visualizzare eventuali messaggi di errore.
 
-2.  Installare il componente aggiuntivo di Office utilizzando i comandi seguenti:
+2.  Installare il componente aggiuntivo di Office tramite i comandi seguenti e specificando una cartella esistente per la creazione del file di log:
 
     -   Per la versione di Office a 64 bit:
 
@@ -201,6 +203,8 @@ Per verificare l'esito positivo, vedere la sezione [Verificare l'esito positivo 
         ```
 
     Ad esempio: `\\server5\apps\rms\msiexec.exe /norestart /quiet MSIRESTARTMANAGERCONTROL=Disable /i "x64\Setup64.msi" /L*v "C:\Log files\rmsofficeinstall.log"`
+    
+    Se questo comando ha esito negativo, non verrà visualizzato nessun messaggio di errore perché è stato specificato il parametro **/quiet**. Per risolvere il problema dell'installazione non riuscita, eseguire nuovamente il comando senza il parametro /quiet per visualizzare eventuali messaggi di errore.
 
 Per verificare l'esito positivo, vedere la sezione [Verificare l'esito positivo dell’installazione](#verifying-installation-success) di questo articolo.
 
@@ -402,6 +406,6 @@ Per informazioni tecniche aggiuntive, inclusa la spiegazione della differenza tr
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO4-->
 
 

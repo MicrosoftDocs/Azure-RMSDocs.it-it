@@ -4,7 +4,7 @@ description: Linee guida sui pacchetti di crittografia di Azure RMS e sui relati
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/19/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: bf27067f832f12ef66f6df92f4008a0d21cdf2aa
+ms.sourcegitcommit: 37d9906b5df00b6ec6eeb6739766c00bd5cef37b
+ms.openlocfilehash: 0ad53fa82f288153f259870b0022378815f097a8
 
 
 ---
@@ -40,13 +40,13 @@ A partire dall'[aggiornamento di marzo 2015](release-notes-rtm.md), nell'API e n
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_CBC4K
 -   IPC\_ENCRYPTION\_PACKAGE \_AES128\_ECB (noto anche come algoritmo deprecato)
 
-I flag del pacchetto di crittografia, vedere [**Preferred encryption**](/information-protection/sdk/2.1/api/win/constants#msipc_preferred_encryption) (Crittografia preferita), possono essere usati in combinazione con il nuovo flag della proprietà di licenza, **IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE**.
+I flag del pacchetto di crittografia (vedere [Preferred encryption](https://msdn.microsoft.com/library/dn974065.aspx)) possono essere usati in combinazione con il flag della proprietà di licenza, *IPC\_LI\_PREFERRED\_ENCRYPTION\_PACKAGE*.
 
 Di seguito sono elencati alcuni frammenti di codice semplici che dimostrano come utilizzare la nuova proprietà di licenza.
 
 ## Algoritmi deprecati
 
-Nell'API non è più esposto il flag **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS**. Ciò significa che le future applicazioni non verranno più compilate se faranno riferimento a questo flag, ma le applicazioni già create con questo flag continueranno a funzionare poiché risulta privato nel codice API.
+Nell'API non è più esposto il flag *IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS*. Ciò significa che le future applicazioni non verranno più compilate se faranno riferimento a questo flag, ma le applicazioni già create con questo flag continueranno a funzionare poiché risulta privato nel codice API.
 
 È comunque possibile ottenere il vantaggio del flag obsoleto degli algoritmi di crittografia deprecati modificando semplicemente un flag. Vedere gli esempi seguenti di frammenti di codice.
 
@@ -84,7 +84,7 @@ Nessuna modifica necessaria nel codice, *AES 256* CBC4K è l'impostazione predef
 Questo esempio mostra anche la nuova modalità di supporto degli *algoritmi deprecati*.
 
     C++
-    
+
     hr = IpcCreateLicenseFromTemplateID(pcTil-&gt;aTi[0].wszID,
                                     0,
                                     NULL,
@@ -103,6 +103,6 @@ Questo esempio mostra anche la nuova modalità di supporto degli *algoritmi depr
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 
