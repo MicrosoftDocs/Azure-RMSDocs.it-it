@@ -1,6 +1,6 @@
 ---
-title: Configurazione dell'API file | Azure RMS
-description: "Il comportamento dell'API file può essere configurato tramite le impostazioni del Registro di sistema."
+title: Configurazione dell&quot;API file | Azure RMS
+description: "Il comportamento dell&quot;API file può essere configurato tramite le impostazioni del Registro di sistema."
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: d949acd4281509bbed05a14e0e26d1549b52a33a
+ms.sourcegitcommit: 734ff9735adbf5aac5824b5c823a1fdcaf245d4e
+ms.openlocfilehash: 92df5a261565b83e71a6bfd1a2d432072815bd27
 
 
 ---
@@ -63,7 +63,7 @@ Impostare il valore della **crittografia** della chiave per specificare il compo
 
 - **Off**: la crittografia è disabilitata.
 
-> [!Note] 
+> [!Note]
 > Questa impostazione non è rilevante per la decrittografia. È possibile decrittografare qualsiasi file crittografato, se crittografato tramite la protezione nativa o Pfile, purché l'utente disponga del diritto di **ESTRAZIONE**.
 
 - **Nativa**: si usa la crittografia nativa. Per i file di Office, il file crittografato avrà la stessa estensione del file originale. Ad esempio, un file con estensione .docx sarà crittografato in un file con estensione .docx. Per altri file a cui può essere applicata la protezione nativa, il file sarà crittografato in un file con un'estensione del formato p*zzz*, dove *zzz* è l'estensione del file originale. Ad esempio, i file con estensione txt sono crittografati in un file con estensione ptxt. Un elenco di estensioni di file a cui può essere applicata la protezione nativa è indicato di seguito.
@@ -71,7 +71,7 @@ Impostare il valore della **crittografia** della chiave per specificare il compo
 - **Pfile**: si usa la crittografia PFile. All'estensione originale del file crittografato sarà aggiunto pfile. Dopo la crittografia, ad esempio, l'estensione di un file sarà .txt.pfile.
 
 
-> [!Note] 
+> [!Note]
 > Questa impostazione non incide sui formati di file Office. Ad esempio, se il valore `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX\Encryption` è impostato su &quot;Pfile", i file con estensione docx verranno comunque crittografati con la protezione nativa e l'estensione del file crittografato sarà ancora docx.
 
 L'impostazione di un valore diverso o la mancata impostazione produce il comportamento predefinito.
@@ -82,7 +82,7 @@ L'impostazione di un valore diverso o la mancata impostazione produce il comport
 -   **File txt, xml, jpg, jpeg, pdf, png, tiff, bmp, gif, giff, jpe, jfif, jif** è abilitata la crittografia nativa (xxx diventa pxxx)
 -   **Tutti gli altri file** è abilitata la crittografia del file protetto (pfile) (xxx diventa xxx.pfile)
 
-Se si tenta la crittografia in un tipo di file bloccato, si verifica un errore [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes).
+Se si tenta di crittografare un tipo di file bloccato, si verifica un errore [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx).
 
 ### API file: dettagli sul supporto dei file
 
@@ -148,14 +148,14 @@ HKEY_LOCAL_MACHINE
 
 ## Argomenti correlati
 
-* [Note per gli sviluppatori](developer-notes.md)
-* [**IPCERROR\_FILE\_ENCRYPT\_BLOCKED**](/information-protection/sdk/2.1/api/win/error%20codes)
+- [Note per gli sviluppatori](developer-notes.md)
+- [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
  
 
  
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 

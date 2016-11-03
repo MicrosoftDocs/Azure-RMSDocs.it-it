@@ -1,6 +1,6 @@
 ---
 title: "File dell’ambiente di sviluppo | Azure RMS"
-description: Questo argomento illustra i file dell'ambiente di sviluppo e i relativi percorsi di installazione nel computer in uso.
+description: Questo argomento illustra i file dell&quot;ambiente di sviluppo e i relativi percorsi di installazione nel computer in uso.
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: fa85dde3f578f51efa57af78e211d3e712378b61
+ms.sourcegitcommit: 4e96ba043584c5d8c140d6804c72cf63362f58c5
+ms.openlocfilehash: a251723b6c42058091d57067724e89a1816bcaa1
 
 
 ---
@@ -43,9 +43,9 @@ Rights Management Services SDK 2.1 include i file seguenti, installati nel compu
 |Ipcerror.h|\inc|Contiene i codici di errore pubblici esportati da RMS SDK 2.1.|
 |Ipcfile.h|\inc|Contiene le interfacce File API esportate da RMS SDK 2.1.|
 |Msipc.lib|\lib|Libreria a cui eseguire il collegamento quando si usa RMS SDK 2.1 per creare applicazioni x86.|
-|Msipc_s.lib|\lib|Fornisce il punto di ingresso per [<strong>IpcInitialize</strong>](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) per le applicazioni x86.|
+|Msipc_s.lib|\lib|Specifica il punto di ingresso per [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) per le applicazioni x86.|
 |Msipc.lib|\lib\x64|Libreria a cui eseguire il collegamento quando si usa RMS SDK 2.1 per creare applicazioni x64.|
-|Msipc_s.lib|\lib\x64|Fornisce il punto di ingresso per [<strong>IpcInitialize</strong>](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) per le applicazioni x64.|
+|Msipc_s.lib|\lib\x64|Specifica il punto di ingresso per [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) per le applicazioni x64.|
 |Genmanifest.exe|\tools|Genera un manifesto da utilizzare durante lo sviluppo di un'applicazione abilitata per RMS.|
  
 
@@ -55,6 +55,6 @@ Rights Management Services SDK 2.1 include i file seguenti, installati nel compu
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 

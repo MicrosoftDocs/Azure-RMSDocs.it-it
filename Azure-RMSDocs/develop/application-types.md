@@ -4,7 +4,7 @@ description: "Questo argomento illustra i tipi di applicazioni che è possibile 
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/20/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: dac322fedd1ac23660abb3b79261e8339ffd81ca
+ms.sourcegitcommit: 1ab93dc8f770e2e49b5846dd6c31f649a55175b0
+ms.openlocfilehash: 77bb95ae54ec0fb699d3b0dd2879bb14fdd3dd28
 
 
 ---
@@ -29,7 +29,7 @@ Rights Management Services SDK 2.1 supporta attualmente i tipi di applicazioni s
 
 ## Applicazioni semplici
 
-Un’applicazione semplice può essere rappresentata da uno strumento da riga di comando progettato per crittografare un file fornito. Per un esempio di applicazione semplice abilitata per l’uso di diritti, vedere [IPCHelloWorld - Applicazione di esempio](how-to-build-your-first-application.md).
+Un’applicazione semplice può essere rappresentata da uno strumento da riga di comando progettato per crittografare un file fornito. Per un'applicazione di esempio semplice abilitata all'uso di diritti, vedere l'implementazione di *IPCHelloWorld*, come descritto in [Sviluppo dell'applicazione](developing-your-application.md).
 
 ### Applicazioni in modalità server
 
@@ -55,13 +55,13 @@ Per altre informazioni sulla protezione delle applicazioni, vedere [Informazioni
 
 ## Argomenti correlati
 
-* [Esempio IpcDlp](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
-* [IPCHelloWorld - Applicazione di esempio](how-to-build-your-first-application.md)
-* [Impostazione della modalità di sicurezza dell'API](setting-the-api-security-mode-api-mode.md)
-* [Informazioni sulle restrizioni di utilizzo](understanding-usage-restrictions.md)
+- [Esempio IpcDlp](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
+- [Sviluppo dell'applicazione](developing-your-application.md)
+- [Impostazione della modalità di sicurezza dell'API](setting-the-api-security-mode-api-mode.md)
+- [Informazioni sulle restrizioni di utilizzo](understanding-usage-restrictions.md)
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Oct16_HO4-->
 
 
