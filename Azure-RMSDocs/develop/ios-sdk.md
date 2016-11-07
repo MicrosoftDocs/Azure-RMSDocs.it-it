@@ -14,13 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 80d79ead119b5dbe86d94f979742ecc2b62d1ef9
+ms.sourcegitcommit: 7c0b885c35dcac0237788a69486d8f736c97c0c4
+ms.openlocfilehash: 96b71d26461559aa8e53960e7e8f3f748b7ebb1d
 
 
 ---
 
-# Installazione per iOS e OS X
+# <a name="ios-and-os-x-setup"></a>Installazione per iOS e OS X
 
 Le applicazioni iOS e OS X possono usare Microsoft Rights Management SDK 4.2 per abilitare la protezione integrata delle informazioni nella propria applicazione con Azure Rights Management (Azure RMS).
 
@@ -34,7 +34,7 @@ Questo argomento illustra come impostare l'ambiente per la creazione di nuove ap
 -   [Configurazione dell'ambiente di sviluppo](#configuring-your-development-environment)
 -   [Vedere anche](#see-also)
 
-## Prerequisiti
+## <a name="prerequisites"></a>Prerequisiti
 
 Nel sistema di sviluppo è consigliabile disporre del software seguente:
 
@@ -53,11 +53,11 @@ Nel sistema di sviluppo è consigliabile disporre del software seguente:
 
 Leggere l'argomento [Novità](release-notes.md) per informazioni sugli aggiornamenti delle API, note sulla versione e domande frequenti (FAQ).
 
-## Facoltativo
+## <a name="optional"></a>Facoltativo
 
 La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabile per le operazioni di consumo e protezione per gli sviluppatori che non intendono creare un’interfaccia utente personalizzata - [Libreria dell'interfaccia utente e app di esempio per iOS](https://github.com/AzureAD/rms-sdk-ui-for-ios).
 
-## Configurazione dell'ambiente di sviluppo
+## <a name="configuring-your-development-environment"></a>Configurazione dell'ambiente di sviluppo
 
 -   Per creare un nuovo progetto, scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.
 -   Selezionare **Single View Application**.
@@ -100,7 +100,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabil
 
 -   A questo punto si è pronti a creare le nuove app iOS/OS X personalizzate.
 
-### Vedere anche
+### <a name="see-also"></a>Vedere anche
 
 * [Introduzione](get-started.md)
 
@@ -116,6 +116,6 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabil
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

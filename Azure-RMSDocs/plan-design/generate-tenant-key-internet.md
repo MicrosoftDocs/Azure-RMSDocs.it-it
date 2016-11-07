@@ -1,6 +1,6 @@
 ---
 title: Generare e trasferire la chiave del tenant tramite Internet&#58; CONTENUTO RIMOSSO | Azure RMS
-description: "Le informazioni contenute in questo articolo sono state rimosse perché non più pertinenti in quanto Azure Rights Management usa l'insieme di credenziali della chiave di Azure per le chiavi del tenant gestite dal cliente (note anche come bring your own key o BYOK)."
+description: "Le informazioni contenute in questo articolo sono state rimosse perché non più pertinenti in quanto Azure Rights Management usa l&quot;insieme di credenziali della chiave di Azure per le chiavi del tenant gestite dal cliente (note anche come bring your own key o BYOK)."
 author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
@@ -19,7 +19,7 @@ ms.openlocfilehash: c2a272cc27a45f7fda8279394fcb681b70dea81b
 ---
 
 
-# Generare e trasferire la chiave del tenant tramite Internet | Azure RMS
+# <a name="generate-and-transfer-your-tenant-key-over-the-internet-retired-content"></a>Generare e trasferire la chiave del tenant tramite Internet | Azure RMS
 
 >*Si applica a: Azure Rights Management, Office 365*
 
@@ -27,6 +27,6 @@ Le informazioni contenute in questo articolo sono state rimosse perché non più
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

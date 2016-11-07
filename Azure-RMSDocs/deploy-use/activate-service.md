@@ -1,6 +1,6 @@
 ---
 title: Attivazione di Azure Rights Management | Azure Information Protection
-description: "È necessario attivare il servizio Azure Rights Management prima che l'organizzazione possa iniziare a proteggere i documenti e i messaggi di posta elettronica usando le applicazioni e i servizi che supportano questa soluzione di protezione delle informazioni."
+description: "È necessario attivare il servizio Azure Rights Management prima che l&quot;organizzazione possa iniziare a proteggere i documenti e i messaggi di posta elettronica usando le applicazioni e i servizi che supportano questa soluzione di protezione delle informazioni."
 author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
@@ -18,7 +18,7 @@ ms.openlocfilehash: 06c71229427743e9669baee1fdbb41f175180b0f
 
 ---
 
-# Attivazione di Azure Rights Management
+# <a name="activating-azure-rights-management"></a>Attivazione di Azure Rights Management
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -36,8 +36,8 @@ Dopo l'attivazione del servizio Azure Rights Management, tutti gli utenti dell'o
 Per istruzioni sull'attivazione del servizio Rights Management dal portale di gestione, specificare se si userà l'interfaccia di amministrazione di Office 365 (versione classica o di anteprima) o il portale di gestione di Azure classico:
 
 
-- [Interfaccia di amministrazione di Office 365 - versione di anteprima](activate-office365-preview.md)
-- [Interfaccia di amministrazione di Office 365 - versione classica](activate-office365-classic.md)
+- [Interfaccia di amministrazione di Office 365 - Versione di anteprima](activate-office365-preview.md)
+- [Interfaccia di amministrazione di Office 365 - Versione classica](activate-office365-classic.md)
 - [Portale di Azure classico](activate-azure-classic.md)
 
 In alternativa, è possibile usare Windows PowerShell per attivare [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]:
@@ -48,7 +48,7 @@ In alternativa, è possibile usare Windows PowerShell per attivare [!INCLUDE[aad
 
 3. Eseguire [Enable-Aadrm](http://msdn.microsoft.com/library/windowsazure/dn629412.aspx) che attiva il servizio Azure Rights Management.
 
-## Configurazione dei controlli di selezione utenti per una distribuzione graduale
+## <a name="configuring-onboarding-controls-for-a-phased-deployment"></a>Configurazione dei controlli di selezione utenti per una distribuzione graduale
 Se non si vuole permettere a tutti gli utenti di proteggere immediatamente i file usando Azure Rights Management, sarà possibile configurare controlli di selezione utenti usando il comando [Set-AadrmOnboardingControlPolicy](http://msdn.microsoft.com/library/azure/dn857521.aspx) di Windows PowerShell. È possibile eseguire questo comando prima o dopo l'attivazione del servizio Azure Rights Management.
 
 > [!IMPORTANT]
@@ -71,7 +71,7 @@ Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $true
 Quando si usano questi controlli di selezione utenti, tutti gli utenti dell'organizzazione potranno utilizzare sempre i contenuti protetti dal sottoinsieme di utenti, ma non potranno applicare direttamente la protezione delle informazioni da applicazioni client. Non potranno ad esempio visualizzare nei client di Office i modelli predefiniti pubblicati automaticamente quando viene attivato il servizio Azure Rights Management oppure eventuali modelli personalizzati configurati dall'utente.  Per ottenere lo stesso risultato, le applicazioni lato server, come Exchange, possono implementare controlli specifici per singoli utenti per l'integrazione con RMS.
 
 
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 Dopo aver attivato [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] per l'organizzazione, usare la [Guida di orientamento per la distribuzione di Azure Information Protection](../plan-design/deployment-roadmap.md) per verificare se sono necessarie altre operazioni di configurazione prima di distribuire Azure Information Protection a utenti e amministratori. 
 
 Ad esempio, per usare [modelli personalizzati](configure-custom-templates.md) per semplificare l'applicazione della protezione delle informazioni ai file, connettere i server locali in modo che usino [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] installando il [connettore di Rights Management](deploy-rms-connector.md) e distribuire l'[applicazione Rights Management sharing](../rms-client/sharing-app-windows.md) che supporta la protezione di tutti i tipi di file su tutti i dispositivi. 
@@ -81,6 +81,6 @@ I servizi di Office, ad esempio Exchange Online e SharePoint Online, richiedono 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

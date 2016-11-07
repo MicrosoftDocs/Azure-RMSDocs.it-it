@@ -14,13 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 148cefbe973eadebf942c826ac19c0ee34823c89
+ms.sourcegitcommit: dc452dac3a86cd9cc39127d5a29106ae87ba94be
+ms.openlocfilehash: 790f0d847c57b9e13d9074298b3e89584dc24760
 
 
 ---
 
-# Installazione per Windows Phone
+# <a name="windows-phone-setup"></a>Installazione per Windows Phone
 
 
 Le applicazioni Windows Phone possono usare Microsoft Rights Management SDK 4.2 per abilitare la protezione integrata delle informazioni nella propria applicazione con Azure Active Directory Rights Management (AAD RM).
@@ -31,7 +31,7 @@ Questo argomento illustra come impostare l'ambiente per la creazione di nuove ap
 -   [Configurazione dell'ambiente di sviluppo](#configuring-your-development-environment)
 -   [Vedere anche](#see-also)
 
-## Prerequisiti
+## <a name="prerequisites"></a>Prerequisiti
 
 
 Nel sistema di sviluppo è necessario disporre del software seguente:
@@ -46,7 +46,7 @@ Leggere l'argomento [Novità](release-notes.md) per informazioni sugli aggiornam
 
 Esaminare le informazioni contenute nella guida relativa allo [sviluppo per Windows Phone](https://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402535.aspx) reperibile in Windows Phone Dev Center.
 
-## Configurazione dell'ambiente di sviluppo
+## <a name="configuring-your-development-environment"></a>Configurazione dell'ambiente di sviluppo
 
 
 -   Aprire *Visual Studio*.
@@ -60,7 +60,7 @@ Esaminare le informazioni contenute nella guida relativa allo [sviluppo per Wind
     ![Aggiungere un riferimento](../media/wpsetup-addref.png)
 
 -   Nella finestra di dialogo **Aggiungi riferimento** fare clic su **Sfoglia** e selezionare il file *Microsoft.RightsManagement.dll* che si trova nella cartella in cui è stato estratto il pacchetto.
--   **App gestite**: per la creazione di un'app gestita, è necessario aggiungere questo riferimento; selezionare **Windows 8.1**-&gt;**Estensioni** e la casella per **Windows Visual C++ Runtime Package for Windows**
+-   **App gestite**: per la creazione di un'app gestita, è necessario aggiungere questo riferimento; selezionare **Windows 8.1**-&gt;**Estensioni** e selezionare la casella **Windows Visual C++ Runtime Package for Windows**
 
     ![Aggiungere le estensioni](../media/wpsetup-refmngr.png)
 
@@ -68,7 +68,7 @@ Esaminare le informazioni contenute nella guida relativa allo [sviluppo per Wind
 
 A questo punto si è pronti per creare le nuove app Windows Phone personalizzate.
 
-### Vedere anche
+### <a name="see-also"></a>Vedere anche
 
 [Introduzione](get-started.md)
 
@@ -93,6 +93,6 @@ A questo punto si è pronti per creare le nuove app Windows Phone personalizzate
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 
