@@ -3,7 +3,7 @@ title: 'Gestione del cliente: operazioni del ciclo di vita della chiave del tena
 description: Informazioni sulle operazioni del ciclo di vita rilevanti se si gestisce la chiave del tenant per Azure Information Protection (scenario &quot;bring your own key&quot; o BYOK).
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: c879d4de6b8b99c401b36e03dd3b16dc8b722344
+ms.sourcegitcommit: f1fff17f76361f8236974c6aeb21ed317c7d9883
+ms.openlocfilehash: 03c2e885bfb997fda2a2f675be3dee6bc8ea8138
 
 
 ---
@@ -45,7 +45,7 @@ Per reimpostare la chiave del tenant, è innanzitutto necessario reimpostare la 
 ## <a name="backup-and-recover-your-tenant-key"></a>Eseguire il backup e il ripristino della chiave del tenant
 L'utente è responsabile del backup della chiave del tenant. Se la chiave del tenant è stata generata dall'utente in un modulo di protezione hardware Thales, per eseguire il backup della chiave è sufficiente eseguire il backup del file della chiave in formato token, del file relativo all'ambiente e delle schede amministrative.
 
-Poiché la chiave è stata trasferita tramite le procedure descritte nella sezione [Implementazione della modalità BYOK](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key) dell'argomento [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](../plan-design/plan-implement-tenant-key.md), Insieme di credenziali delle chiavi manterrà il file della chiave in formato token come protezione da eventuali errori dei nodi del servizio. Questo file è associato all'ambiente di sicurezza relativo all'area o all'istanza specifica di Azure. È tuttavia opportuno tenere presente che questa azione non rappresenta un backup completo. Se ad esempio è necessaria una copia in testo non crittografato della chiave da usare all'esterno di un modulo di protezione hardware Thales, Insieme di credenziali delle chiavi di Azure non sarà in grado di recuperarla perché dispone solo di una copia non recuperabile.
+Poiché la chiave è stata trasferita tramite le procedure descritte nella sezione [Implementazione della modalità BYOK](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key) dell'argomento [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](../plan-design/plan-implement-tenant-key.md), Insieme di credenziali delle chiavi manterrà il file della chiave in formato token come protezione da eventuali errori dei nodi del servizio. Questo file è associato all'ambiente di sicurezza relativo all'area o all'istanza specifica di Azure. È tuttavia opportuno tenere presente che questa azione non rappresenta un backup completo. Se ad esempio è necessaria una copia in testo non crittografato della chiave da usare all'esterno di un modulo di protezione hardware Thales, Insieme di credenziali delle chiavi di Azure non sarà in grado di recuperarla perché dispone solo di una copia non recuperabile.
 
 ## <a name="export-your-tenant-key"></a>Esportare la chiave del tenant
 In uno scenario BYOK non è possibile esportare la chiave del tenant da Insieme di credenziali delle chiavi di Azure o da Azure Information Protection. La copia presente in Insieme di credenziali delle chiavi di Azure è non recuperabile. 
