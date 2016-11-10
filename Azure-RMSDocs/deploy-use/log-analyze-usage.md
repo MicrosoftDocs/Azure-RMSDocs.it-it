@@ -1,6 +1,6 @@
 ---
-title: Registrazione e analisi dell'utilizzo del servizio Azure Rights Management | Azure Information Protection
-description: Informazioni e istruzioni sull'uso della registrazione dell'utilizzo con Azure Rights Management (Azure RMS).
+title: Registrazione e analisi dell&quot;utilizzo del servizio Azure Rights Management | Azure Information Protection
+description: Informazioni e istruzioni sull&quot;uso della registrazione dell&quot;utilizzo con Azure Rights Management (Azure RMS).
 author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
@@ -12,13 +12,13 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e33f1e54c21507999d30dcee2ce63c8eb2d69895
-ms.openlocfilehash: 33520bcfc36ed0a022b87c4b2db1e6fcd7a6eb14
+ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
+ms.openlocfilehash: 9dea728836d52249471d3dde69b63a9a2cd1467c
 
 
 ---
 
-# Registrazione e analisi dell'utilizzo del servizio Azure Rights Management
+# <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registrazione e analisi dell'utilizzo del servizio Azure Rights Management
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -36,7 +36,7 @@ Seguire queste istruzioni per comprendere il modo in cui è possibile usare la r
 
     È possibile, ad esempio, scegliere di ricevere un avviso nel caso in cui si verifichi un improvviso picco di accessi a dati protetti al di fuori del normale orario di lavoro. Un picco di questo tipo potrebbe indicare che un utente malintenzionato sta raccogliendo informazioni da vendere alla concorrenza. È possibile anche scegliere di ricevere un avviso se uno stesso utente sembra accedere ai dati da due indirizzi IP differenti nell'arco di un breve periodo di tempo. Questo evento può indicare infatti che un account utente è stato compromesso.
 
--   **Eseguire analisi forensi**
+-   **Esecuzione di analisi forensi**
 
     Se si verifica una perdita di informazioni, è probabile che all'amministratore vengano richiesti i nominativi degli utenti che hanno avuto accesso a specifici documenti e l'indicazione delle informazioni visualizzate di recente da una persona sospetta. Se si usa la funzione di registrazione, è possibile rispondere a questo tipo di domande. Gli utenti che accedono a contenuto protetto, infatti, devono sempre ottenere una licenza di Rights Management per aprire immagini e documenti protetti con tale servizio, anche se i file vengono spostati tramite posta elettronica o copiati in unità USB o altri dispositivi di archiviazione. Questo significa che, quando si proteggono i dati con il servizio Azure Rights Management, è possibile usare i log come fonte certa di informazioni per l'esecuzione di analisi a scopo legale.
 
@@ -47,7 +47,7 @@ Seguire queste istruzioni per comprendere il modo in cui è possibile usare la r
 
 Per altre informazioni sulla funzionalità di registrazione dell'utilizzo di Azure Rights Management, vedere le sezioni seguenti.
 
-## Come abilitare la funzionalità di registrazione dell'utilizzo di Azure Rights Management
+## <a name="how-to-enable-azure-rights-management-usage-logging"></a>Come abilitare la funzionalità di registrazione dell'utilizzo di Azure Rights Management
 A partire da febbraio 2016, la funzionalità di registrazione dell'utilizzo di Azure Rights Management è abilitata per impostazione predefinita per tutti i clienti. Questa impostazione è applicabile ai clienti che hanno attivato il servizio Azure Rights Management prima del mese di febbraio 2016 e a quelli che attivano il servizio dopo febbraio 2016. 
 
 > [!NOTE]
@@ -57,14 +57,14 @@ A partire da febbraio 2016, la funzionalità di registrazione dell'utilizzo di A
 
 
 
-## Come accedere e usare i log dell'utilizzo di Azure Rights Management
+## <a name="how-to-access-and-use-your-azure-rights-management-usage-logs"></a>Come accedere e usare i log dell'utilizzo di Azure Rights Management
 Il servizio Azure Rights Management scrive i log nell'account di archiviazione di Azure sotto forma di una serie di BLOB. Ciascun blob contiene uno o più record di log in formato W3C esteso. I nomi dei blob sono numeri e corrispondono all'ordine di creazione. La sezione [Come interpretare i log dell'utilizzo di Azure Rights Management](#how-to-interpret-your-azure-rights-management-usage-logs) più avanti in questo argomento contiene altre informazioni sui contenuti dei log e sulla relativa creazione.
 
 In seguito a un'azione di Azure Rights Management, la visualizzazione dei log nell'account di archiviazione può richiedere un po' di tempo. La maggior parte dei log viene visualizzata entro 15 minuti. È consigliabile scaricare i log in uno spazio di archiviazione locale, ad esempio una cartella o un database, oppure in un repository MapReduce.
 
-Per scaricare i log dell'utilizzo, verrà usato il modulo di amministrazione di Azure Rights Management per Windows PowerShell. Per istruzioni di installazione, vedere [Installazione di Windows PowerShell per Azure Rights Management](install-powershell.md). Se il modulo Windows PowerShell è stato scaricato in precedenza, eseguire il comando seguente per verificare che la versione in uso sia almeno la versione **2.4.0.0**: `(Get-Module aadrm -ListAvailable).Version` 
+Per scaricare i log dell'utilizzo, verrà usato il modulo di amministrazione di Azure Rights Management per Windows PowerShell. Per istruzioni di installazione, vedere [Installazione di Windows PowerShell per Azure Rights Management](install-powershell.md). Se il modulo Windows PowerShell è stato scaricato in precedenza, eseguire il comando seguente per verificare che il numero di versione in uso sia almeno **2.4.0.0**: `(Get-Module aadrm -ListAvailable).Version` 
 
-### Per scaricare i log dell'utilizzo con PowerShell
+### <a name="to-download-your-usage-logs-by-using-powershell"></a>Per scaricare i log dell'utilizzo con PowerShell
 
 1.  Avviare Windows PowerShell con l'opzione **Esegui come amministratore** e usare il cmdlet [Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx) per connettersi al servizio Azure Rights Management:
 
@@ -88,22 +88,22 @@ Quando si specifica solo il giorno, come negli esempi, si presuppone che l'ora c
 
 Non è possibile scaricare un intervallo di tempo inferiore a un giorno intero.
 
-Per impostazione predefinita, questo cmdlet usa tre thread per scaricare i log. Se la larghezza di banda è sufficiente e si vuole ridurre il tempo necessario per scaricare i log, usare il parametro -NumberOfThreads, che supporta un valore compreso tra 1 e 32. Ad esempio, se si esegue il comando seguente, il cmdlet genera 10 thread per il download dei log: `Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016 -numberofthreads 10`
+Per impostazione predefinita, questo cmdlet usa tre thread per scaricare i log. Se la larghezza di banda è sufficiente e si vuole ridurre il tempo necessario per scaricare i log, usare il parametro -NumberOfThreads, che supporta un valore compreso tra 1 e 32. Ad esempio, se si esegue il comando seguente il cmdlet genera 10 thread per il download dei log: `Get-AadrmUserLog -Path E:\Logs -fromdate 2/1/2016 –todate 2/14/2016 -numberofthreads 10`
 
 
 > [!TIP]
 > È possibile aggregare tutti i file di log scaricati in un formato CSV mediante [Log Parser di Microsoft](https://www.microsoft.com/download/details.aspx?id=24659), uno strumento che consente di eseguire conversioni tra formati di log noti. È possibile usare questo strumento anche per convertire i dati in formato SYSLOG o per importarli in un database. Dopo aver installato lo strumento, eseguire `LogParser.exe /?` per informazioni e supporto sul relativo uso. 
 >
-> È possibile, ad esempio, eseguire il comando riportato di seguito per importare tutte le informazioni in un file in formato .log: `logparser –i:w3c –o:csv "SELECT * INTO AllLogs.csv FROM *.log"`
+> Ad esempio, se si esegue il comando seguente tutte le informazioni vengono importate in un file in formato .log: `logparser –i:w3c –o:csv "SELECT * INTO AllLogs.csv FROM *.log"`
 
-#### Se la funzionalità di registrazione dell'utilizzo di Azure Rights Management è stata abilitata manualmente prima della modifica relativa alla registrazione del 22 febbraio 2016
+#### <a name="if-you-manually-enabled-azure-rights-management-usage-logging-before-the-logging-change-february-22-2016"></a>Se la funzionalità di registrazione dell'utilizzo di Azure Rights Management è stata abilitata manualmente prima della modifica relativa alla registrazione del 22 febbraio 2016
 
 
 Se la funzionalità di registrazione dell'utilizzo è stata usata prima delle modifica relativa alla registrazione, nell'account di archiviazione di Azure configurato saranno presenti log dell'utilizzo. Microsoft non copierà questi log dall'account di archiviazione nel nuovo account di archiviazione gestito di Azure Rights Management come parte della modifica relativa alla registrazione. L'utente è responsabile della gestione del ciclo di vita dei log generati in precedenza e può usare il cmdlet [Get-AadrmUsageLog](https://msdn.microsoft.com/library/dn629401.aspx) per scaricare i log precedenti. Ad esempio:
 
 - Per scaricare tutti i log disponibili nella cartella E:\logs: `Get-AadrmUsageLog -Path "E:\Logs"`
     
-- Per scaricare uno specifico intervallo di blob: `Get-AadrmUsageLog –Path "E:\Logs" –FromCounter 1024 –ToCounter 2047`
+- Per scaricare un intervallo specifico di BLOB: `Get-AadrmUsageLog –Path "E:\Logs" –FromCounter 1024 –ToCounter 2047`
 
 Si noti che non è necessario scaricare i log usando il cmdlet Get-AadrmUsageLog se si verifica una delle condizioni seguenti:
 
@@ -111,26 +111,26 @@ Si noti che non è necessario scaricare i log usando il cmdlet Get-AadrmUsageLog
 
 - Il servizio Azure Rights Management è stato attivato dopo il 22 febbraio 2016.
 
-## Come interpretare i log dell'utilizzo di Azure Rights Management
+## <a name="how-to-interpret-your-azure-rights-management-usage-logs"></a>Come interpretare i log dell'utilizzo di Azure Rights Management
 Usare le informazioni seguenti come riferimento per interpretare i log dell'utilizzo di Azure Rights Management.
 
-### Sequenza dei log
+### <a name="the-log-sequence"></a>Sequenza dei log
 Il servizio Azure Rights Management scrive i log sotto forma di una serie di BLOB. 
 
 Ogni voce del log ha un timestamp UTC. Poiché il servizio Azure Rights Management viene eseguito su più server in diversi data center, in alcuni casi i log possono sembrare fuori sequenza, anche se sono stati ordinati in base al relativo timestamp. Lo sfasamento è tuttavia minimo, in genere inferiore al minuto, e nella maggior parte dei casi non crea problemi per l'analisi dei log.
 
-### Formato dei blob
+### <a name="the-blob-format"></a>Formato dei blob
 Ciascun blob è scritto in formato di log W3C esteso ed inizia con le due righe seguenti:
 
 **#Software: RMS**
 
-**#Versione: 1.1**
+**#Version: 1.1**
 
 La prima riga indica che si tratta di log di Azure Rights Management, mentre la seconda indica che il resto del BLOB segue la specifica della versione 1.1. È importante che le applicazioni che analizzano questi log verifichino queste due righe prima di procedere con l'analisi della restante parte del blob.
 
 La terza riga è costituita da un elenco di nomi separati da caratteri di tabulazione:
 
-**#Campi: date            time            row-id        request-type           user-id       result          correlation-id          content-id                owner-email           issuer                     template-id             file-name                  date-published      c-info         c-ip            admin-action            acting-as-user**
+**#Fields: date            time            row-id        request-type           user-id       result          correlation-id          content-id                owner-email           issuer                     template-id             file-name                  date-published      c-info         c-ip            admin-action            acting-as-user**
 
 Ciascuna delle righe seguenti è un record di log. I valori dei campi seguono lo stesso ordine della riga precedente e sono separati da caratteri di tabulazione. La tabella riportata di seguito consente di interpretare i campi.
 
@@ -145,7 +145,7 @@ Ciascuna delle righe seguenti è un record di log. I valori dei campi seguono lo
 |correlation-id|Testo|GUID comune tra il log del client e il log del server RMS per una determinata richiesta.<br /><br />Questo valore può essere utile per la risoluzione dei problemi del client.|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|Testo|GUID, riportato tra parentesi graffe, che identifica il contenuto protetto, ad esempio un documento.<br /><br />In questo campo è presente un valore solo se la richiesta è di tipo AcquireLicense. Per tutti gli altri tipi di richiesta il campo è vuoto.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
 |owner-email|String|Indirizzo di posta elettronica del proprietario del documento.|alice@contoso.com|
-|issuer|String|Indirizzo di posta elettronica del soggetto emittente il documento.|alice@contoso.com (o) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
+|issuer|String|Indirizzo di posta elettronica del soggetto emittente il documento.|alice@contoso.com oppure FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
 |template-id|String|ID del modello usato per proteggere il documento.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
 |file-name|String|Nome del documento protetto. <br /><br />Attualmente, alcuni file, ad esempio i documenti di Office, vengono visualizzati come GUID anziché come nome di file.|TopSecretDocument.docx|
 |date-published|Date|Data in cui è stato protetto il documento.|2015-10-15T21:37:00|
@@ -153,7 +153,7 @@ Ciascuna delle righe seguenti è un record di log. I valori dei campi seguono lo
 |c-ip|Address|L'indirizzo IP del client che effettua la richiesta.|64.51.202.144|
 
 
-#### Eccezioni per il campo user-id
+#### <a name="exceptions-for-the-userid-field"></a>Eccezioni per il campo user-id
 Anche se nel campo user-id è in genere riportato il nome dell'utente che ha effettuato la richiesta, esistono due eccezioni in cui il valore del campo non indica un utente reale:
 
 -   Il valore **'microsoftrmsonline@&lt;YourTenantID&gt;.rms.&lt;region&gt;.aadrm.com'**.
@@ -164,7 +164,7 @@ Anche se nel campo user-id è in genere riportato il nome dell'utente che ha eff
 
     Le richieste provenienti da questo connettore vengono registrate con il nome dell'entità servizio **Aadrm_S-1-7-0**, generato automaticamente quando si installa il connettore RMS.
 
-#### Tipi di richiesta tipici
+#### <a name="typical-request-types"></a>Tipi di richiesta tipici
 Il servizio Azure Rights Management supporta diversi tipi di richiesta. La tabella seguente elenca i tipi di richiesta più comuni.
 
 |Tipo di richiesta|Descrizione|
@@ -212,7 +212,7 @@ Il servizio Azure Rights Management supporta diversi tipi di richiesta. La tabel
 |UpdateTemplate|Viene eseguita una chiamata dal portale di Azure classico per aggiornare un modello esistente.|
 
 
-## Riferimenti Windows PowerShell
+## <a name="windows-powershell-reference"></a>Riferimenti Windows PowerShell
 A partire da febbraio 2016, l'unico cmdlet di Windows PowerShell necessario per la funzionalità di registrazione dell'utilizzo di Azure Rights Management è [Get-AadrmUserLog](https://msdn.microsoft.com/library/azure/mt653941.aspx). 
 
 Prima di questa modifica, per i log dell'utilizzo di Azure Rights Management erano necessari i cmdlet seguenti, ora deprecati:  
@@ -240,6 +240,6 @@ Per altre informazioni sull'uso di Windows PowerShell per il servizio Azure Righ
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

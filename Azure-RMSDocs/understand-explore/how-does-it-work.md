@@ -19,7 +19,7 @@ ms.openlocfilehash: dd6c9250102e104ba49b0c08f14d9959cd1228cb
 ---
 
 
-# Funzionamento di Azure RMS: dietro le quinte
+# <a name="how-does-azure-rms-work-under-the-hood"></a>Funzionamento di Azure RMS: dietro le quinte
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -39,7 +39,7 @@ Per una descrizione dettagliata delle operazioni eseguite, vedere la sezione [Pr
 
 Per informazioni tecniche sugli algoritmi e sulle lunghezze delle chiavi usate in Azure RMS, vedere la sezione successiva.
 
-## Controlli crittografici usati in Azure RMS: Algoritmi e lunghezze delle chiavi
+## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Controlli crittografici usati in Azure RMS: Algoritmi e lunghezze delle chiavi
 Anche se non è necessario conoscere personalmente il funzionamento di RMS, è possibile che vengano richieste informazioni sui controlli crittografici usati, per garantire che la protezione sia conforme agli standard del settore.
 
 
@@ -49,7 +49,7 @@ Anche se non è necessario conoscere personalmente il funzionamento di RMS, è p
 |Algoritmo: RSA<br /><br />Lunghezza della chiave: 2048 bit|Protezione della chiave|
 |SHA-256|Firma del certificato|
 
-###### Nota 1 
+###### <a name="footnote-1"></a>Nota 1 
 
 La lunghezza di 256 bit viene usata dall'applicazione Rights Management sharing per la protezione generica e la protezione nativa quando l'estensione di file è ppdf o si tratta di un file di testo o di immagine protetto, ad esempio con estensione ptxt o pjpg.
 
@@ -65,7 +65,7 @@ Modalità di archiviazione e protezione delle chiavi crittografiche:
 
 
 
-## Procedura dettagliata del funzionamento di Azure RMS: primo utilizzo, protezione del contenuto, uso del contenuto
+## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Procedura dettagliata del funzionamento di Azure RMS: primo utilizzo, protezione del contenuto, uso del contenuto
 Per comprendere in modo più dettagliato il funzionamento di Azure RMS, viene illustrato un flusso tipico dopo l'[attivazione del servizio Azure Rights Management](../deploy-use/activate-service.md) e quando un utente usa per la prima volta il servizio Rights Management nel proprio computer Windows (un processo definito a volte **inizializzazione dell'ambiente utente** o bootstrap), **protegge il contenuto** (un documento o un messaggio di posta elettronica) e quindi **utilizza** (apre e modifica) il contenuto protetto da altri.
 
 Dopo aver inizializzato l'ambiente utente, l'utente può quindi proteggere i documenti o utilizzare documenti protetti su quel computer.
@@ -73,7 +73,7 @@ Dopo aver inizializzato l'ambiente utente, l'utente può quindi proteggere i doc
 > [!NOTE]
 > Se l'utente passa a un altro computer Windows o un altro utente usa lo stesso computer Windows, il processo di inizializzazione viene ripetuto.
 
-### Inizializzazione dell'ambiente utente
+### <a name="initializing-the-user-environment"></a>Inizializzazione dell'ambiente utente
 Prima che un utente sia in grado di proteggere contenuto o utilizzare contenuto protetto in un computer Windows, è necessario preparare l'ambiente utente sul dispositivo. Questo è un processo unico e si verifica automaticamente senza l'intervento dell'utente quando un utente tenta di proteggere o utilizzare contenuto protetto:
 
 ![Attivazione del client RMS - Passaggio 1](../media/AzRMS.png)
@@ -88,7 +88,7 @@ Quando l'account dell'utente è federato con Azure Active Directory, l'autentica
 
 Una copia del certificato dell'utente viene archiviata in Azure, in modo che se l'utente passa a un altro dispositivo, i certificati vengono creati usando le stesse chiavi.
 
-### Protezione del contenuto
+### <a name="content-protection"></a>Protezione del contenuto
 Quando un utente protegge un documento, il client RMS esegue le azioni seguenti su un documento non protetto:
 
 ![Protezione del documento RMS - Passaggio 1](../media/AzRMS_documentprotection1.png)
@@ -107,7 +107,7 @@ Il client RMS usa quindi la chiave dell'organizzazione, ottenuta al momento dell
 
 Questo documento può essere archiviato ovunque o condiviso usando qualsiasi metodo. I criteri rimangono sempre incorporati nel documento.
 
-### Utilizzo del contenuto
+### <a name="content-consumption"></a>Utilizzo del contenuto
 Quando un utente vuole utilizzare un documento protetto, il client RMS avvia la richiesta per l'accesso al servizio Azure Rights Management:
 
 ![Uso del documento RMS - Passaggio 1](../media/AzRMS_documentconsumption1.png)
@@ -126,7 +126,7 @@ La chiave simmetrica nuovamente crittografata viene quindi incorporata in un con
 
 Il client decrittografa anche l'elenco di diritti e li passa all'applicazione, che li applica nell'interfaccia utente dell'applicazione.
 
-### Varianti
+### <a name="variations"></a>Varianti
 Le procedure dettagliate precedenti riguardano scenari standard, ma esistono alcune varianti:
 
 -   **Dispositivi mobili**: quando i dispositivi mobili proteggono o utilizzano file con il servizio Azure Rights Management, i flussi del processo sono molto più semplici. I dispositivi mobili non vengono prima sottoposti al processo di inizializzazione utente, perché ogni transazione (di protezione o utilizzo del contenuto) è invece indipendente. Come con i computer Windows, i dispositivi mobili si connettono al servizio Azure Rights Management ed eseguono l'autenticazione. Per proteggere il contenuto, i dispositivi mobili inviano i criteri e il servizio Azure Rights Management invia una licenza di pubblicazione e la chiave simmetrica per proteggere il documento. Per utilizzare il contenuto, quando i dispositivi mobili si connettono al servizio Azure Rights Management ed eseguono l'autenticazione, inviano i criteri del documento al servizio Azure Rights Management e richiedono una licenza d'uso per utilizzare il documento. In risposta, il servizio Azure Rights Management invia le chiavi e le restrizioni necessarie ai dispositivi mobili. Entrambi i processi usano TLS per proteggere lo scambio di chiavi e altre comunicazioni.
@@ -137,7 +137,7 @@ Le procedure dettagliate precedenti riguardano scenari standard, ma esistono alc
 
 -   **PDF protetto (ppdf)**: quando il servizio Azure Rights Management protegge in modo nativo un file di Office, crea anche una copia del file e lo protegge nello stesso modo. L'unica differenza è che la copia del file è nel formato di file PPDF, che l'applicazione RMS sharing è in grado di aprire solo per la visualizzazione. Questo scenario consente di inviare allegati protetti tramite posta elettronica, sapendo che il destinatario di un dispositivo mobile sarà sempre in grado di leggerli, anche se il dispositivo mobile non dispone di un'app che supporta i file di Office protetti in modo nativo.
 
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni sul servizio Azure Rights Management, vedere gli altri articoli della sezione **Comprendere ed esplorare**, ad esempio [Supporto del servizio Azure Rights Management da parte delle applicazioni](applications-support.md), in cui viene spiegato come integrare le applicazioni esistenti in Azure Rights Management per fornire una soluzione di protezione delle informazioni. 
 
@@ -150,6 +150,6 @@ Se si è pronti a iniziare la distribuzione della protezione dati per l'organizz
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 
