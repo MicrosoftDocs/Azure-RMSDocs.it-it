@@ -2,6 +2,7 @@
 title: Funzionamento di Azure RMS | Azure Information Protection
 description: Descrizione del funzionamento di Azure RMS, dei controlli crittografici usati e dei diagrammi dettagliati del funzionamento di questo processo.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: article

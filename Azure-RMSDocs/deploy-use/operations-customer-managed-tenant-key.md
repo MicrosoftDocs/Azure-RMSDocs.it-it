@@ -2,6 +2,7 @@
 title: 'Gestione del cliente: operazioni del ciclo di vita della chiave del tenant | Azure Information Protection'
 description: Informazioni sulle operazioni del ciclo di vita rilevanti se si gestisce la chiave del tenant per Azure Information Protection (scenario &quot;bring your own key&quot; o BYOK).
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/04/2016
 ms.topic: article
