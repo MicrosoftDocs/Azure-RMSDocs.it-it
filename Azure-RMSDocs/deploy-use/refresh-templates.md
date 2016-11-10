@@ -19,7 +19,7 @@ ms.openlocfilehash: a823d79a9305569962ee165b6eadf1d5384c0c0b
 ---
 
 
-# Aggiornamento dei modelli per gli utenti
+# <a name="refreshing-templates-for-users"></a>Aggiornamento dei modelli per gli utenti
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -33,7 +33,7 @@ Quando si usa il servizio Azure Rights Management di Azure Information Protectio
 |Office 2010|I modelli vengono aggiornati quando gli utenti eseguono l'accesso.<br /><br />Per forzare l'esecuzione di un aggiornamento, chiedere o imporre agli utenti di disconnettersi e rieseguire l'accesso. In alternativa, vedere la sezione seguente [Solo Office 2010: come forzare un aggiornamento per un modello personalizzato modificato](#office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template).|
 Per i dispositivi mobili che usano l'applicazione di RMS sharing, i modelli vengono scaricati automaticamente (e aggiornati se necessario) senza che siano richieste attività di configurazione aggiuntive.
 
-## Solo Exchange Online: come configurare Exchange per il download dei modelli personalizzati modificati
+## <a name="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates"></a>Solo Exchange Online: come configurare Exchange per il download dei modelli personalizzati modificati
 Se Information Rights Management (IRM) è stato già configurato per Exchange Online, i modelli personalizzati non verranno scaricati per gli utenti finché non si apportano le modifiche illustrate di seguito mediante Windows PowerShell in Exchange Online.
 
 > [!NOTE]
@@ -41,7 +41,7 @@ Se Information Rights Management (IRM) è stato già configurato per Exchange On
 
 È necessario eseguire questa procedura ogni volta che si modifica un modello.
 
-### Per aggiornare i modelli per Exchange Online
+### <a name="to-update-templates-for-exchange-online"></a>Per aggiornare i modelli per Exchange Online
 
 1.  Usando Windows PowerShell in Exchange Online, connettersi al servizio:
 
@@ -94,13 +94,13 @@ Per impedire agli utenti di visualizzare questi modelli, connettersi al servizio
 Set-RMSTemplate -Identity "<name or GUID of the template>" -Type Archived
 ```
 
-## Office 2016, Office 2013 e applicazione RMS sharing per Windows: come forzare un aggiornamento per un modello personalizzato modificato
+## <a name="office-2016-office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016, Office 2013 e applicazione RMS sharing per Windows: come forzare un aggiornamento per un modello personalizzato modificato
 Modificando il Registro di sistema nei computer che eseguono Office 2016, Office 2013 o l'applicazione Rights Management (RMS) sharing per Windows, è possibile modificare la pianificazione automatica in modo che i modelli modificati vengano aggiornati nei computer più frequentemente rispetto al relativo valore predefinito. È inoltre possibile forzare un aggiornamento immediato eliminando i dati esistenti in un valore del Registro di sistema.
 
 > [!WARNING]
 > L'uso inappropriato dell'editor del Registro di sistema può causare seri problemi che potrebbero richiedere la reinstallazione del sistema operativo. Microsoft non garantisce che sia possibile risolvere i problemi derivanti da un uso non corretto dell'editor del Registro di sistema. L'uso dell'editor del Registro di sistema è di sola responsabilità dell'utente.
 
-### Per modificare la pianificazione automatica
+### <a name="to-change-the-automatic-schedule"></a>Per modificare la pianificazione automatica
 
 1.  Utilizzando un editor del Registro di sistema, creare e impostare uno dei seguenti valori del Registro di sistema:
 
@@ -124,7 +124,7 @@ Modificando il Registro di sistema nei computer che eseguono Office 2016, Office
 
 2.  Se si desidera forzare un aggiornamento immediato dei modelli, passare alla procedura successiva. In caso contrario, riavviare ora le applicazioni di Office e le istanze di Esplora file.
 
-### Per forzare un aggiornamento immediato
+### <a name="to-force-an-immediate-refresh"></a>Per forzare un aggiornamento immediato
 
 1.  Utilizzando un editor del Registro di sistema, eliminare i dati per il valore **LastUpdatedTime** . Ad esempio, i dati possono visualizzare **2015-04-20T15:52**; eliminare 2015-04-20T15:52 in modo che non vengano visualizzati dati. Usare le informazioni seguenti per individuare il percorso del Registro di sistema per eliminare i dati con questo valore di registro.
 
@@ -149,13 +149,13 @@ Modificando il Registro di sistema nei computer che eseguono Office 2016, Office
 
 3.  Riavviare le applicazioni di Office e le istanze di Esplora file.
 
-## Solo Office 2010: come forzare un aggiornamento per un modello personalizzato modificato
+## <a name="office-2010-only-how-to-force-a-refresh-for-a-changed-custom-template"></a>Solo Office 2010: come forzare un aggiornamento per un modello personalizzato modificato
 Modificando il Registro di sistema nei computer che eseguono Office 2010, è possibile impostare un valore in modo che i modelli modificati vengano aggiornati nei computer senza attendere che gli utenti eseguano la disconnessione e si riconnettano. È inoltre possibile forzare un aggiornamento immediato eliminando i dati esistenti in un valore del Registro di sistema.
 
 > [!WARNING]
 > L'uso inappropriato dell'editor del Registro di sistema può causare seri problemi che potrebbero richiedere la reinstallazione del sistema operativo. Microsoft non garantisce che sia possibile risolvere i problemi derivanti da un uso non corretto dell'editor del Registro di sistema. L'uso dell'editor del Registro di sistema è di sola responsabilità dell'utente.
 
-### Per modificare la frequenza di aggiornamento
+### <a name="to-change-the-update-frequency"></a>Per modificare la frequenza di aggiornamento
 
 1.  Utilizzando un editor del Registro di sistema, creare un nuovo valore del registro denominato **UpdateFrequency** e definire un valore intero per i dati, che specifica la frequenza in giorni per il download di tutte le modifiche a un modello scaricato. Utilizzare la seguente tabella per individuare il percorso del Registro di sistema per creare questo nuovo valore del registro.
 
@@ -167,7 +167,7 @@ Modificando il Registro di sistema nei computer che eseguono Office 2010, è pos
 
 2.  Se si desidera forzare un aggiornamento immediato dei modelli, passare alla procedura successiva. In caso contrario, riavviare le applicazioni di Office.
 
-### Per forzare un aggiornamento immediato
+### <a name="to-force-an-immediate-refresh"></a>Per forzare un aggiornamento immediato
 
 1.  Utilizzando un editor del Registro di sistema, eliminare i dati per il valore **LastUpdatedTime** . Ad esempio, i dati possono visualizzare **2015-04-20T15:52**; eliminare 2015-04-20T15:52 in modo che non vengano visualizzati dati. Utilizzare la seguente tabella per individuare il percorso del Registro di sistema per eliminare questo nuovo valore del registro.
 
@@ -182,10 +182,10 @@ Modificando il Registro di sistema nei computer che eseguono Office 2010, è pos
 
 3.  Riavviare le applicazioni di Office.
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 [Configurare modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
 
 
-<!--HONumber=Oct16_HO2-->
+<!--HONumber=Nov16_HO1-->
 
 

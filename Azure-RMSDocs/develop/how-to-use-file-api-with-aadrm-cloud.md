@@ -20,19 +20,19 @@ ms.openlocfilehash: 28b85313e278455391040797ea2886bd9247abe2
 
 ---
 
-# Procedura: Consentire all'applicazione di servizio di usare RMS basato su cloud
+# <a name="howto-enable-your-service-application-to-work-with-cloud-based-rms"></a>Procedura: Consentire all'applicazione di servizio di usare RMS basato su cloud
 
 Questo argomento descrive i passaggi per la configurazione dell’applicazione di servizio per l’uso di Azure Rights Management. Per altre informazioni, vedere [Requisiti per Azure Rights Management](https://technet.microsoft.com/library/jj585016.aspx).
 
 **Importante**  
 Per usare l'applicazione di servizio Rights Management Services SDK 2.1 con Azure RMS, è necessario creare i propri tenant. Per altre informazioni vedere [Requisiti per Azure RMS: sottoscrizioni cloud che supportano Azure RMS](../get-started/requirements-subscriptions.md)
 
-## Prerequisiti
+## <a name="prerequisites"></a>Prerequisiti
 
 -   RMS SDK 2.1 deve essere installato e configurato. Per altre informazioni, vedere [Introduzione a RMS SDK 2.1](getting-started-with-ad-rms-2-0.md).
 -   È necessario [creare un'identità del servizio tramite ACS](https://msdn.microsoft.com/en-us/library/gg185924.aspx) usando l'opzione della chiave simmetrica o tramite altri mezzi e registrare le informazioni sulla chiave ottenute da tale processo.
 
-## Connessione al servizio Rights Management di Azure
+## <a name="connecting-to-the-azure-rights-management-service"></a>Connessione al servizio Rights Management di Azure
 
 -   Chiamare [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx).
 -   Impostare [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx).
@@ -50,9 +50,9 @@ Per usare l'applicazione di servizio Rights Management Services SDK 2.1 con Azur
 
 **Nota**: a causa di una condizione esistente con il servizio di individuazione, vengono accettate le credenziali tramite chiave simmetrica solo se provenienti dall'America del Nord, per cui è necessario specificare direttamente l'URL del tenant. Questa operazione viene eseguita tramite il tipo [IPC\_CONNECTION\_INFO](https://msdn.microsoft.com/library/hh535274.aspx) del parametro *pConnectionInfo* in [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) o [IpcGetTemplateIssuerList](https://msdn.microsoft.com/library/hh535266.aspx).
 
-## Generare una chiave simmetrica e raccogliere le informazioni necessarie
+## <a name="generate-a-symmetric-key-and-collect-the-needed-information"></a>Generare una chiave simmetrica e raccogliere le informazioni necessarie
 
-### Istruzioni per generare una chiave simmetrica
+### <a name="instructions-to-generate-a-symmetric-key"></a>Istruzioni per generare una chiave simmetrica
 
 -   Installare [Assistente per l’accesso ai Microsoft Online Services](http://go.microsoft.com/fwlink/p/?LinkID=286152)
 -   Installare il [modulo Azure AD Powershell](https://bposast.vo.msecnd.net/MSOPMW/8073.4/amd64/AdministrationConfig-en.msi).
@@ -78,7 +78,7 @@ Per usare l'applicazione di servizio Rights Management Services SDK 2.1 con Azur
       AppPrincipalId : 7d9c1f38-600c-4b4d-8249-22427f016963
 
 
-### Istruzioni per individuare **TenantBposId** e **URL**
+### <a name="instructions-to-find-out-tenantbposid-and-urls"></a>Istruzioni per individuare **TenantBposId** e **URL**
 
 -   Installare il [modulo Powershell per Azure RMS](https://technet.microsoft.com/en-us/library/jj585012.aspx).
 -   Avviare Powershell ed eseguire i comandi seguenti per ottenere la configurazione RMS del tenant.
@@ -128,7 +128,7 @@ Per altre informazioni, vedere [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.mi
     promptCtx.hCancelEvent = NULL;
     promptCtx.pcCredential = &cred;
 
-### Identificare un modello e quindi crittografare
+### <a name="identify-a-template-and-then-encrypt"></a>Identificare un modello e quindi crittografare
 
 -   Selezionare un modello da usare per la crittografia.
     Chiamare [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) passando la stessa istanza di [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx).
@@ -162,7 +162,7 @@ Uso dell'esempio di [IpcfDecryptFile](https://msdn.microsoft.com/library/dn13305
 
 La procedura necessaria per consentire all'applicazione di usare Azure Rights Management è stata completata.
 
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
 * [Introduzione a Azure Rights Management](https://technet.microsoft.com/en-us/library/jj585016.aspx)
 * [Introduzione a RMS SDK 2.1](getting-started-with-ad-rms-2-0.md)
@@ -184,6 +184,6 @@ La procedura necessaria per consentire all'applicazione di usare Azure Rights Ma
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

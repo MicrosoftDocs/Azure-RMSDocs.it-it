@@ -14,13 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 90c8c97c720c624ba8f1ca7703b6c79a66f77d08
+ms.sourcegitcommit: ff3b1ce2ec5984c1e79bc9d10c5fc913b4fd3291
+ms.openlocfilehash: 1925eb3a630f61e995886989ad351a8263c9779f
 
 
 ---
 
-# Installazione per Android
+# <a name="android-setup"></a>Installazione per Android
 
 Le applicazioni Android possono usare SDK 4.2 Microsoft Rights Management per abilitare la protezione integrata delle informazioni nelle proprie applicazioni con Azure Active Directory Rights Management (AAD RM).
 
@@ -31,7 +31,7 @@ Questo argomento illustra come impostare l'ambiente per la creazione di nuove ap
 -   [Configurazione dell'ambiente di sviluppo](#configuring-your-development-environment)
 -   [Vedere anche](#see-also)
 
-## Prerequisiti
+## <a name="prerequisites"></a>Prerequisiti
 
 Nel sistema di sviluppo si consiglia di disporre del software seguente:
 
@@ -56,11 +56,11 @@ Nel sistema di sviluppo si consiglia di disporre del software seguente:
 
 Leggere l'argomento [Novità](release-notes.md) per informazioni sugli aggiornamenti dell'API, note sulla versione e domande frequenti (FAQ).
 
-## Facoltativo
+## <a name="optional"></a>Facoltativo
 
 La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per le operazioni di uso e protezione per gli sviluppatori che non intendono creare la propria interfaccia utente personalizzata - [Libreria dell'interfaccia utente e app di esempio per Android](https://github.com/AzureAD/rms-sdk-ui-for-android).
 
-## Configurazione dell'ambiente di sviluppo
+## <a name="configuring-your-development-environment"></a>Configurazione dell'ambiente di sviluppo
 
 **Nota**: versione di anteprima SDK MS RMS 4.2: in questa versione di anteprima, le schermate non sono state aggiornate per riflettere la modifica nel nome di pathes da com/microsoft/protection a com/microsoft/rightsmanagment. Il testo, tuttavia, è stato aggiornato.
 
@@ -134,7 +134,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
 -   A questo punto si è pronti a creare le proprie nuove app Android.
 
-### Vedere anche
+### <a name="see-also"></a>Vedere anche
 
 [Introduzione](get-started.md)
 
@@ -150,6 +150,6 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

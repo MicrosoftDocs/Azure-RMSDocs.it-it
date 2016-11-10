@@ -1,6 +1,6 @@
 ---
 title: Generare e trasferire la chiave del tenant di persona&#58; CONTENUTO RIMOSSO | Azure RMS
-description: "Le informazioni contenute in questo articolo sono state rimosse perché non più pertinenti in quanto Azure Rights Management usa l'insieme di credenziali della chiave di Azure per le chiavi del tenant gestite dal cliente (note anche come bring your own key o BYOK)."
+description: "Le informazioni contenute in questo articolo sono state rimosse perché non più pertinenti in quanto Azure Rights Management usa l&quot;insieme di credenziali della chiave di Azure per le chiavi del tenant gestite dal cliente (note anche come bring your own key o BYOK)."
 author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
@@ -18,13 +18,13 @@ ms.openlocfilehash: 4f8b32fa7961b3d59911cc279ac30a7c497deb5f
 
 ---
 
-# Generare e trasferire la chiave del tenant di persona: CONTENUTO RIMOSSO
+# <a name="generate-and-transfer-your-tenant-key-in-person-retired-content"></a>Generare e trasferire la chiave del tenant di persona: CONTENUTO RIMOSSO
 
 >*Si applica a: Azure Rights Management, Office 365*
 
 Le informazioni contenute in questo articolo sono state rimosse perché non più pertinenti in quanto Azure Rights Management usa l'insieme di credenziali della chiave di Azure per le chiavi del tenant gestite dal cliente (note anche come bring your own key o BYOK). 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 
