@@ -1,21 +1,23 @@
 ---
-title: Come eliminare o riordinare un'etichetta | Azure Information Protection
+title: Come eliminare o riordinare un&quot;etichetta | Azure Information Protection
 description: "È possibile eliminare o riordinare le etichette mostrate sulla barra Information Protection configurandole nel criterio di Azure Information Protection."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 3e73e928c8a0189c275e02c189db5c872993d9dd
+ms.sourcegitcommit: d5b3f3fc473661022a4f17b6587d58a252d07d1a
+ms.openlocfilehash: 0ecc8f58179ea71f3faf4d4816ca7dbf4087826a
 
 
 ---
 
-# Come eliminare o riordinare un'etichetta per Azure Information Protection
+# <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Come eliminare o riordinare un'etichetta per Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
 
@@ -47,14 +49,14 @@ Per apportare le modifiche, seguire queste istruzioni.
 
 3. Per mettere le modifiche a disposizione degli utenti, nel pannello **Azure Information Protection** fare clic su **Publish** (Pubblica).
 
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organization-s-policy).  
-
-
+Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).  
 
 
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Nov16_HO1-->
 
 

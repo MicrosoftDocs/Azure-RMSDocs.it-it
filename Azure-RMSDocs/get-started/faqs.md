@@ -3,7 +3,7 @@ title: Domande frequenti su Azure Information Protection | Azure Information Pro
 description: Alcune domande frequenti su Azure Information Protection e sul relativo servizio di protezione dei dati, Azure Rights Management (Azure RMS).
 author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 10/26/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
-ms.openlocfilehash: d869514a126302522030cfb395b49112c48442dc
+ms.sourcegitcommit: 23065305e68dfd4f924041942a72b95bf9a60957
+ms.openlocfilehash: 5a7d9b9e49c4a682ad9b293147eb6840ca1febf3
 
 
 ---
@@ -45,7 +45,7 @@ Vedere [Informazioni su conformità e supporto per Azure Information Protection]
 
 ## Cosa fare se la domanda non è presente?
 
-In primo luogo, esaminare le domande frequenti relative alle funzionalità di classificazione e assegnazione di etichette o alla protezione dei dati. Il servizio Azure Rights Management (Azure RMS) fornisce la tecnologia di protezione dei dati per Azure Information Protection e Azure RMS può essere usato con o senza le funzionalità per la classificazione e l'assegnazione di etichette: 
+In primo luogo, esaminare le domande frequenti relative alle funzionalità di classificazione e assegnazione di etichette o alla protezione dei dati. Il servizio Azure Rights Management (Azure RMS) fornisce la tecnologia di protezione dati per Azure Information Protection e può essere usato con o senza le funzionalità per la classificazione e l'assegnazione di etichette: 
 
 - [Domande frequenti sulla classificazione e l'assegnazione di etichette](faqs-infoprotect.md)
 
@@ -67,6 +67,6 @@ Inoltre, esistono Domande frequenti progettate per gli utenti finali:
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO4-->
 
 

@@ -1,21 +1,23 @@
 ---
-title: Come configurare un'etichetta per i contrassegni visivi | Azure Information Protection
-description: "Quando si assegna un'etichetta a un documento o a un messaggio di posta elettronica, è possibile selezionare diverse opzioni per rendere facilmente visibile la classificazione scelta. Questi contrassegni visivi sono un'intestazione, un piè di pagina e una filigrana."
+title: Come configurare un&quot;etichetta per i contrassegni visivi | Azure Information Protection
+description: "Quando si assegna un&quot;etichetta a un documento o a un messaggio di posta elettronica, è possibile selezionare diverse opzioni per rendere facilmente visibile la classificazione scelta. Questi contrassegni visivi sono un&quot;intestazione, un piè di pagina e una filigrana."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 5b00975e3e435ec3ab122c3a015a3daf93db3daf
+ms.sourcegitcommit: d5b3f3fc473661022a4f17b6587d58a252d07d1a
+ms.openlocfilehash: eca90185e6225d3f55f979f66f8225d661fe59cd
 
 
 ---
 
-# Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
+# <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
 
@@ -53,7 +55,7 @@ Seguire le istruzioni seguenti per configurare i contrassegni visivi per un'etic
 
 4. Per mettere le modifiche a disposizione degli utenti, nel pannello **Azure Information Protection** fare clic su **Publish** (Pubblica).
 
-## Uso di variabili nella stringa di testo
+## <a name="using-variables-in-the-text-string"></a>Uso di variabili nella stringa di testo
 
 Nella stringa di testo è possibile usare le variabili seguenti per l'intestazione, il piè di pagina o la filigrana:
 
@@ -63,22 +65,22 @@ Nella stringa di testo è possibile usare le variabili seguenti per l'intestazio
 
 - `${Item.Location}` per il percorso e il nome di file dei documenti e l'oggetto per i messaggi di posta elettronica. Ad esempio: \\\Sales\2016\Q3\JulyReport.docx
 
-- `${User.Name}` per il proprietario del documento o del messaggio di posta elettronica dal nome utente firmato di Windows. Ad esempio: rsimone
+- `${User.Name}` per il proprietario del documento o del messaggio di posta elettronica, in base al nome utente connesso a Windows. Ad esempio: rsimone
 
-- `${User.PrincipalName}` per il proprietario del documento o del messaggio di posta elettronica, in base al client di Azure Information Protection firmato nell'indirizzo del messaggio di posta elettronica (UPN). Ad esempio: rsimone@vanarsdelltd.com
+- `${User.PrincipalName}` per il proprietario del documento o del messaggio di posta elettronica, in base all'indirizzo di posta elettronica connesso al client di Azure Information Protection (UPN). ad esempio rsimone@vanarsdelltd.com
 
 - `${Event.DateTime}` per la data e l'ora in cui è stata impostata l'etichetta selezionata. Ad esempio: 16/8/2016 13:30
     
 Esempio: se si specifica la stringa `Document: ${item.name}  Classification: ${item.label}` per il piè di pagina dell'etichetta Secret (Segreto), il testo del piè di pagina applicato a un documento denominato project.docx sarà **Documento: project.docx Classificazione: Secret (Segreto)**.
 
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organization-s-policy).  
-
-
+Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).  
 
 
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Nov16_HO1-->
 
 

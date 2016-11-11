@@ -1,9 +1,10 @@
 ---
-title: Proteggere un file condiviso tramite posta elettronica usando l'applicazione Rights Management sharing | Azure Information Protection
+title: Proteggere un file condiviso tramite posta elettronica usando l&quot;applicazione Rights Management sharing | Azure Information Protection
 description: Istruzioni su come condividere in modo sicuro un documento tramite posta elettronica.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +13,13 @@ ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: b4467f73dd9d107681961f99ee038ed889e25b2d
+ms.sourcegitcommit: addc24fed28cee52b57c7e3bde926d6324478e7b
+ms.openlocfilehash: 1eed5f339ede2d96b1de7e486a04416d1a22c871
 
 
 ---
 
-# Proteggere un file che si condivide tramite posta elettronica usando l'applicazione Rights Management sharing
+# <a name="protect-a-file-that-you-share-by-email-by-using-the-rights-management-sharing-application"></a>Proteggere un file che si condivide tramite posta elettronica usando l'applicazione Rights Management sharing
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
@@ -32,7 +33,7 @@ Se l'organizzazione usa Azure Information Protection, è possibile tenere tracci
 
 -   Usare il sito di rilevamento della documentazione. È anche possibile arrestare la condivisione del file, revocandone l’accesso nel sito di rilevamento documenti. Per altre informazioni, vedere [Tenere traccia dei documenti e revocarli quando si usa l'applicazione RMS sharing](sharing-app-track-revoke.md).
 
-## Tramite Outlook: Per proteggere un file che si condivide tramite e-mail
+## <a name="using-outlook-to-protect-a-file-that-you-share-by-email"></a>Tramite Outlook: Per proteggere un file che si condivide tramite e-mail
 
 1.  Creare il messaggio e-mail e allegare il file. Nella scheda **Messaggio** , nel gruppo **RMS** , fare clic su **Condividi file protetto** e quindi fare di nuovo clic su **Condividi file protetto** :
 
@@ -42,14 +43,14 @@ Se l'organizzazione usa Azure Information Protection, è possibile tenere tracci
 
 2.  Specificare le opzioni desiderate per questo file nella [finestra di dialogo Condividi file protetto](sharing-app-dialog-box.md), quindi fare clic su **Invia ora**.
 
-### Altri modi per proteggere un file che si condivide tramite e-mail
+### <a name="other-ways-to-protect-a-file-that-you-share-by-email"></a>Altri modi per proteggere un file che si condivide tramite e-mail
 Oltre alla condivisione di un file protetto tramite Outlook, è possibile utilizzare queste alternative:
 
 -   Da Esplora file: Questo metodo funziona per tutti i file.
 
 -   Da un'applicazione Office: questo metodo funziona per le applicazioni supportate dall'applicazione RMS sharing usando il componente aggiuntivo di Office in modo da visualizzare il gruppo **RMS** sulla barra multifunzione.
 
-#### Tramite Esplora file o un'applicazione di Office: Per proteggere un file che si condivide tramite e-mail
+#### <a name="using-file-explorer-or-an-office-application-to-protect-a-file-that-you-share-by-email"></a>Tramite Esplora file o un'applicazione di Office: Per proteggere un file che si condivide tramite e-mail
 
 1.  Usare uno dei seguenti metodi:
 
@@ -71,7 +72,7 @@ Oltre alla condivisione di un file protetto tramite Outlook, è possibile utiliz
 
     ![Messaggio di posta elettronica per Azure Information Protection](../media/ADRMS_MSRMSApp_EmailMessage.PNG)
 
-    Ci si potrebbe chiedere: [Che cos'è il file .ppdf che viene creato automaticamente?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)
+    Ci si potrebbe chiedere: [Che cos'è il file .ppdf che viene creato automaticamente?](sharing-app-dialog-box.md#whats-the-ppdf-file-thats-automatically-created)
 
 4.  Facoltativo: È possibile modificare qualsiasi elemento nel messaggio e-mail. Ad esempio, è possibile aggiungere o modificare l'oggetto o il testo del messaggio.
 
@@ -80,18 +81,18 @@ Oltre alla condivisione di un file protetto tramite Outlook, è possibile utiliz
 
 5.  Inviare il messaggio e-mail.
 
-## Esempi e altre istruzioni
+## <a name="examples-and-other-instructions"></a>Esempi e altre istruzioni
 Per esempi di come è possibile usare l'applicazione Rights Management sharing e informazioni sulle procedure da seguire, vedere le sezioni seguenti della Guida dell'utente dell'applicazione Rights Management sharing:
 
 -   [Esempi per l'uso dell'applicazione RMS sharing](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Come procedere](sharing-app-user-guide.md#what-do-you-want-to-do)
+-   [Per saperne di più](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## Vedere anche
-[Guida dell'utente dell'applicazione Rights Management sharing](sharing-app-user-guide.md)
+## <a name="see-also"></a>Vedere anche
+[Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

@@ -1,9 +1,9 @@
 ---
 title: Visualizzare e usare i file che sono stati protetti da Rights Management | Azure Information Protection
-description: Istruzioni per visualizzare e usare un file protetto che rende necessario avere l'applicazione Rights Management (RMS) sharing installata.
+description: Istruzioni per visualizzare e usare un file protetto che rende necessario avere l&quot;applicazione Rights Management (RMS) sharing installata.
 author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: 3f906815da2acd8f52bd742306d9936a71229c97
+ms.sourcegitcommit: 94a8729e7c7e5bb438ac2bd48789a522c8de8cc4
+ms.openlocfilehash: db8d6a9c5959139ee76f022a5cee997bab24e6c9
 
 
 ---
@@ -40,7 +40,7 @@ Utilizzando Esplora file o il messaggio di posta elettronica contenente l'allega
 Se si visualizzano due versioni del file, ma con estensioni del nome di file diverse, aprire il file con estensione .ppdf solo se gli altri file non si aprono. Se non è possibile aprire nemmeno la versione con estensione ppdf, installare innanzitutto l'[applicazione RMS sharing](install-sharing-app.md), che è in grado di aprire i file con estensione del nome di file ppdf.
 
 > [!NOTE]
-> Per altre informazioni, vedere "[Che cos'è il file .ppdf che viene creato automaticamente?](sharing-app-dialog-box.md#what-s-the-ppdf-file-that-s-automatically-created)".
+> Per altre informazioni, vedere [Che cos'è il file .ppdf che viene creato automaticamente?](sharing-app-dialog-box.md#whats-the-ppdf-file-thats-automatically-created)
 
 Come il file verrà aperto dipende da come è stato protetto; è possibile saperlo esaminando l'estensione del file. In ogni caso, l’apertura del file potrebbe essere controllata e rimane controllata finché è protetto. Inoltre, se il file è stato inviato come allegato di posta elettronica, il mittente potrebbe ricevere una notifica tramite posta elettronica ogni volta che si apre il file.
 
@@ -107,6 +107,6 @@ Per esempi di come è possibile usare l'applicazione Rights Management sharing e
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Oct16_HO4-->
 
 

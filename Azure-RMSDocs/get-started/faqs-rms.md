@@ -3,7 +3,7 @@ title: Domande frequenti sul servizio di protezione dei dati, Azure Rights Manag
 description: Domande frequenti sul servizio di protezione dei dati, Azure Rights Management (Azure RMS) di Azure Information Protection.
 author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/24/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
-ms.openlocfilehash: 114dfd2a0f19205432771b5dc17ddcb60f7ec44b
+ms.sourcegitcommit: 6566e0ce901097bcf5f30d76be67522d3464f100
+ms.openlocfilehash: c92e35b0cb9f892f7859511365027c241d0f1ef6
 
 
 ---
@@ -78,7 +78,7 @@ Il servizio Azure Rights Management usa sempre un account di Azure Active Direct
 
 Il metodo di autenticazione per questi account può variare a seconda di come l'amministratore dell’altra organizzazione ha configurato gli account di Azure Active Directory. Ad esempio, è possibile utilizzare password create per questi account, Multi-Factor Authentication (MFA), la federazione o password create in servizi di dominio di Active Directory e quindi sincronizzate con Azure Active Directory.
 
-## È possibile aggiungere utenti all'esterno della mia azienda per i modelli personalizzati?
+## È possibile aggiungere utenti esterni (persone all'esterno della mia azienda) ai modelli personalizzati?
 Sì. La creazione di modelli personalizzati che gli utenti finali (e gli amministratori) possono scegliere dalle applicazioni rende rapida e semplice l’applicazione della protezione delle informazioni, attraverso i criteri specificati. Una delle impostazioni nel modello riguarda chi è in grado di accedere al contenuto ed è possibile specificare utenti e gruppi all'interno dell'organizzazione e utenti al suo esterno.
 
 Per specificare gli utenti esterni all'organizzazione, aggiungerli come contatti a un gruppo da selezionare nel portale di Azure classico quando si configurano i modelli. In alternativa, usare il [modulo Windows PowerShell per Microsoft Azure Rights Management](../deploy-use/install-powershell.md):
@@ -94,7 +94,7 @@ Come il nome opzionale mostra chiaramente, il nuovo tipo di gruppo è ancora in 
 
 
 ## Quali dispositivi e quali tipi di file sono supportati da Azure RMS?
-Per un elenco di dispositivi che supportano il servizio Azure Rights Management, vedere [Requisiti per Azure RMS: dispositivi client che supportano Azure RMS](../get-started/requirements-client-devices.md). Dal momento che non tutti i dispositivi supportati consentono l'uso di tutte le funzionalità di Rights Managament, vedere anche la tabella in [Requisiti per Azure RMS: applicazioni](../get-started/requirements-applications.md).
+Per un elenco dei dispositivi che supportano il servizio Azure Rights Management, vedere [Dispositivi client che supportano la protezione dati di Azure Rights Management](../get-started/requirements-client-devices.md). Dal momento che non tutti i dispositivi supportati consentono l'uso di tutte le funzionalità di Rights Management, assicurarsi di controllare anche la tabella in [Applicazioni che supportano la protezione dati di Azure Rights Management](../get-started/requirements-applications.md).
 
 Il servizio Azure Rights Management può supportare tutti i tipi di file. Per file di testo e di immagine, file di Microsoft Office (Word, Excel e PowerPoint), file con estensione pdf e altri tipi di file di applicazione, Azure Rights Management fornisce la protezione nativa, incluse crittografia e applicazione di diritti (autorizzazioni). Per tutte le altre applicazioni e tipi di file, la protezione generica fornisce funzionalità di incapsulamento e autenticazione dei file che consentono di verificare se un utente è autorizzato ad aprire il file.
 
@@ -110,7 +110,7 @@ Non lasciare che questa limitazione attuale ritardi la distribuzione del servizi
 Tuttavia, se i criteri aziendali richiedono di usare un modulo di protezione hardware (HSM) e ciò altrimenti bloccherebbe la distribuzione di Azure Information Protection, un'altra soluzione consiste nel distribuire subito Azure Information Protection con la modalità BYOK, con funzionalità di protezione di Rights Management ridotte per Exchange. Per altre informazioni, vedere [Prezzi e restrizioni BYOK](../plan-design/byok-price-restrictions.md) da [pianificazione e implementazione della chiave del tenant Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
 
 ## Una funzionalità che cerco non sembra funzionare con le librerie protette di SharePoint, è previsto il supporto per la mia funzionalità?
-Attualmente, SharePoint supporta documenti protetti da Rights Management usando le librerie protette IRM, che non supportano i modelli personalizzati, il rilevamento dei documenti e alcune altre funzionalità. Per ulteriori informazioni, vedere la sezione [SharePoint Online e SharePoint Server](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server) nell'articolo [Servizi e applicazioni di Office](../understand-explore/office-apps-services-support.md).
+Attualmente, SharePoint supporta documenti protetti da Rights Management usando le librerie protette IRM, che non supportano i modelli personalizzati, il rilevamento dei documenti e alcune altre funzionalità. Per altre informazioni, vedere la sezione [SharePoint Online e SharePoint Server](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server) nell'articolo [Servizi e applicazioni di Office](../understand-explore/office-apps-services-support.md).
 
 Se si è interessati a una funzionalità specifica non ancora supportata, assicurarsi di controllare gli annunci nel [blog di Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-rights-management-services).
 
@@ -129,6 +129,18 @@ Utilizzare la funzionalità per utenti con privilegi avanzati di Azure RMS, che 
 
 Per ulteriori informazioni, vedere [Configurazione degli utenti con privilegi avanzati per Rights Management di Azure e servizi di individuazione o ripristino dei dati](../deploy-use/configure-super-users.md).
 
+## Quando si testa una revoca nel sito di rilevamento del documento, viene visualizzato un messaggio che informa che gli utenti possono ancora accedere al documento per 30 giorni. È possibile configurare questo periodo di tempo?
+
+Sì. Questo messaggio indica la licenza d'uso per il file specifico. Una licenza d'uso è un certificato associato a un documento. Viene concesso a un utente che apre un file o un messaggio e-mail protetto. Questo certificato contiene i diritti dell'utente per il file o per il messaggio di posta elettronica e la chiave di crittografia usata per crittografare il contenuto, nonché altre restrizioni di accesso definite nei criteri del documento. Quando il periodo di validità della licenza d'uso scade e l'utente tenta di aprire il file o il messaggio di posta elettronica, è necessario che le credenziali dell'utente vengano inviate di nuovo al servizio Azure Rights Management. 
+
+Se si revoca un file, tale azione può essere imposta solo quando l'utente si autentica al servizio Azure Rights Management. Pertanto, se un file ha un periodo di validità della licenza d'uso di 30 giorni e l'utente ha già aperto il documento, tale utente continuerà ad avere accesso al documento per la durata della licenza d'uso. Quando la licenza d'uso scade, l'utente deve ripetere l'autenticazione e a questo punto verrà negato l'accesso perché il documento è ora revocato.
+
+Il valore predefinito per il periodo di validità della licenza d'uso per un tenant è di 30 giorni ed è possibile configurare questo valore tramite il cmdlet PowerShell, [Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx). Questa impostazione può essere sostituita da un'impostazione più restrittiva in un modello personalizzato. 
+
+L'impostazione del tenant e l'impostazione del modello possono essere ignorate dagli utenti che usano l'applicazione di condivisone di RMS e selezionano l'opzione **Consenti di revocare immediatamente l'accesso a questi documenti**. Questa impostazione determina il periodo di validità della licenza d'uso su 0. 
+
+Per altre informazioni ed esempi su come funziona la licenza d'uso, vedere la descrizione dettagliata di [Set-AadrmMaxUseLicenseValidityTime](https://msdn.microsoft.com/library/azure/dn932063.aspx).
+
 ## Rights Management può impedire l'acquisizione di schermate?
 Non concedendo **Copia** [come diritto di uso](../deploy-use/configure-usage-rights.md), Rights Management può impedire l'acquisizione di schermate dagli strumenti più usati per l'acquisizione di schermate nelle piattaforme Windows (Windows 7, Windows 8.1, Windows 10, Windows Phone) e Android. I dispositivi iOS e Mac, tuttavia, non consentono ad alcuna app di impedire l'acquisizione di schermate e i browser, ad esempio se usati con Outlook Web App e Office Online, non possono impedire l'acquisizione di schermate.
 
@@ -145,6 +157,6 @@ Nonostante il nome e l'aspetto, l'opzione **Non inoltrare** non è il contrario 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Oct16_HO4-->
 
 

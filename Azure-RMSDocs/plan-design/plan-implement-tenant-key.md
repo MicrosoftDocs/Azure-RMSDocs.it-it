@@ -3,7 +3,7 @@ title: Pianificazione e implementazione della chiave del tenant di Azure Rights 
 description: "Informazioni per pianificare e gestire la chiave del tenant di Azure Information Protection. Anziché affidare a Microsoft la gestione della chiave del tenant (impostazione predefinita), per rispettare specifici criteri dell&quot;organizzazione può essere necessario gestire autonomamente la propria chiave del tenant. in base alla modalità BYOK (Bring Your Own Key)."
 author: cabailey
 manager: mbaldwin
-ms.date: 10/14/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: bad084502b9b7e55c6e80dccfbd66c3f34b63c7c
-ms.openlocfilehash: ed35e72a5dbe23aba0817640075d34fd01bd269d
+ms.sourcegitcommit: d5b3f3fc473661022a4f17b6587d58a252d07d1a
+ms.openlocfilehash: b8380389267d77da53a5b87ffd606b6e754de7f3
 
 
 ---
 
-# Pianificazione e implementazione della chiave del tenant di Azure Information Protection
+# <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Pianificazione e implementazione della chiave del tenant di Azure Information Protection
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -37,7 +37,7 @@ Se si distribuisce Azure Information Protection con una chiave del tenant gestit
 |Ottenere la funzionalità IRM completa in Exchange Online con il servizio Azure Rights Management|Gestita da Microsoft|
 |Le chiavi vengono create dall'utente e protette in un modulo di protezione hardware|BYOK<br /><br />Questa configurazione darà attualmente come risultato una funzionalità IRM ridotta in Exchange Online. Per altre informazioni, vedere [Prezzi e restrizioni della modalità BYOK](byok-price-restrictions.md).|
 
-## Scegliere la topologia di chiave del tenant: gestione di Microsoft (impostazione predefinita) o BYOK
+## <a name="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok"></a>Scegliere la topologia di chiave del tenant: gestione di Microsoft (impostazione predefinita) o BYOK
 È innanzitutto necessario decidere la topologia di chiave del tenant più adatta per l'organizzazione. Per impostazione predefinita, Azure Information Protection genera la chiave del tenant e gestisce la maggior parte degli aspetti del relativo ciclo di vita. Questa opzione è quella più semplice e prevede il sovraccarico amministrativo minore. Nella maggior parte dei casi non è nemmeno necessario disporre di una chiave del tenant, ma è sufficiente iscriversi ad Azure Information Protection e la parte rimanente del processo di gestione delle chiavi viene eseguita da Microsoft.
 
 In alternativa, è possibile esercitare il controllo completo sulla chiave del tenant tramite [Insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/services/key-vault/). Questo scenario implica la creazione della chiave del tenant e la conservazione della copia master in locale. Questo scenario viene spesso definito con il termine modalità BYOK e prevede lo schema seguente.
@@ -53,7 +53,7 @@ Anche se facoltativo, può essere utile usare i log di utilizzo di Azure Informa
 > [!NOTE]
 > Come misura di protezione aggiuntiva, Insieme di credenziali delle chiavi di Azure usa domini di sicurezza separati per i propri data center in aree quali America del Nord, nei paesi EMEA (Europa, Medio Oriente e Africa) e in Asia, nonché nelle diverse istanze di Azure, ad esempio Microsoft Azure Germania e Azure per enti pubblici. Quando si gestisce la propria chiave del tenant, quest'ultima è associata al dominio di sicurezza della regione o dell'istanza in cui è registrato il tenant di Azure Information Protection. Una chiave del tenant di un cliente europeo, ad esempio, non può essere usata in data center che si trovano in America del Nord o in Asia.
 
-## Ciclo di vita della chiave del tenant
+## <a name="the-tenant-key-lifecycle"></a>Ciclo di vita della chiave del tenant
 Se si decide di affidare a Microsoft la gestione della chiave del tenant, Microsoft gestisce la maggior parte delle operazioni del ciclo di vita della chiave. Se invece l'utente decide di gestire in modo autonomo la propria chiave del tenant, è responsabile di molte operazioni del ciclo di vita della chiave e di alcune procedure aggiuntive in Insieme di credenziali delle chiavi di Azure.
 
 Nei diagrammi seguenti vengono illustrate e confrontate le due opzioni. Nel primo diagramma viene illustrato il minor sovraccarico amministrativo che l'utente deve sostenere nella configurazione predefinita quando Microsoft gestisce la chiave del tenant.
@@ -68,7 +68,7 @@ Se si decide di affidare a Microsoft la gestione della chiave del tenant, non è
 
 Se invece si decide di gestire in modo autonomo la propria chiave del tenant, leggere le sezioni seguenti per ottenere altre informazioni.
 
-## Implementazione della chiave del tenant di Azure Information Protection
+## <a name="implementing-your-azure-information-protection-tenant-key"></a>Implementazione della chiave del tenant di Azure Information Protection
 
 Usare le informazioni e le procedure descritte in questa sezione se si è deciso di generare e gestire la propria chiave del tenant in base allo schema BYOK.
 
@@ -78,15 +78,15 @@ Usare le informazioni e le procedure descritte in questa sezione se si è deciso
 > 
 > [Contattare il supporto tecnico Microsoft](../get-started/information-support.md#to-contact-microsoft-support) anche quando l'organizzazione prevede criteri specifici per la gestione delle chiavi.
 
-### Prerequisiti per la modalità BYOK
+### <a name="prerequisites-for-byok"></a>Prerequisiti per la modalità BYOK
 Nella tabella seguente sono elencati i prerequisiti per la modalità BYOK.
 
 |Requisito|Altre informazioni|
 |---------------|--------------------|
 |Una sottoscrizione che supporta Azure Information Protection.|Per altre informazioni sulle sottoscrizioni disponibili, vedere la [pagina dei piani tariffari](https://go.microsoft.com/fwlink/?LinkId=827589) di Azure Information Protection.|
 |Non si usa RMS per singoli utenti o per Exchange Online. Se si usa Exchange Online, si conoscono e si accettano le limitazioni relative all'uso della modalità BYOK con questa configurazione.|Per altre informazioni sulle restrizioni per la modalità BYOK e sulle limitazioni attuali, vedere [Prezzi e restrizioni della modalità BYOK](byok-price-restrictions.md).<br /><br />**Importante**: attualmente, la modalità BYOK non è compatibile con Exchange Online.|
-|Tutti i prerequisiti elencati per la modalità BYOK nell'insieme di credenziali delle chiavi.|Vedere [Prerequisiti per la modalità BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) dalla documentazione di Insieme di credenziali delle chiavi di Azure. <br /><br />**Nota**: se si esegue la migrazione da AD RMS ad Azure Information Protection, passando da una chiave software a una chiave hardware, sarà necessaria almeno la versione 11.62 del firmware Thales.|
-|Il modulo di amministrazione di Azure Rights Management per Windows PowerShell.|Per istruzioni di installazione, vedere [Installazione di Windows PowerShell per Azure Rights Management](../deploy-use/install-powershell.md). <br /><br />Se il modulo Windows PowerShell è stato installato in precedenza, eseguire il comando seguente per verificare che il numero di versione in uso sia almeno **2.5.0.0**: `(Get-Module aadrm -ListAvailable).Version`|
+|Tutti i prerequisiti elencati per la modalità BYOK nell'insieme di credenziali delle chiavi, inclusa una sottoscrizione di Azure a pagamento o di valutazione. |Vedere [Prerequisiti per la modalità BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) nella documentazione relativa ad Insieme di credenziali delle chiavi di Azure. <br /><br /> La sottoscrizione gratuita di Azure, che fornisce l'accesso per configurare Azure Active Directory e i modelli personalizzati di Azure Rights Management (**Accesso ad Azure Active Directory**), non è sufficiente per usare Insieme di credenziali delle chiavi di Azure. Per verificare se la propria sottoscrizione di Azure può essere utilizzata per la modalità BYOK, usare i cmdlet di PowerShell per [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx): <br /><br /> 1. Avviare una sessione di Azure PowerShell e accedere al proprio account Azure con il comando seguente: `Login-AzureRmAccount`<br /><br />2. Digitare il comando seguente e verificare che siano visualizzati valori per il nome e l'ID della sottoscrizione e per l'ID del tenant e che lo stato sia attivato: `Get-AzureRmSubscription`<br /><br />Se non viene visualizzato alcun valore e viene semplicemente restituito il prompt, non si dispone di una sottoscrizione di Azure che può essere usata per la modalità BYOK. <br /><br />**Nota**: oltre ai prerequisiti per la modalità BYOK, se si esegue la migrazione da AD RMS ad Azure Information Protection passando da una chiave software a una chiave hardware, sarà necessaria almeno la versione 11.62 del firmware Thales.|
+|Il modulo di amministrazione di Azure Rights Management per Windows PowerShell.|Per istruzioni di installazione, vedere [Installazione di Windows PowerShell per Azure Rights Management](../deploy-use/install-powershell.md). <br /><br />Se il modulo Windows PowerShell è stato installato in precedenza, eseguire il comando seguente per verificare che il numero della versione in uso sia almeno **2.5.0.0**: `(Get-Module aadrm -ListAvailable).Version`|
 
 Per altre informazioni sui moduli di protezione hardware Thales e su come vengono usati con Insieme di credenziali delle chiavi di Azure, vedere il [sito Web Thales](https://www.thales-esecurity.com/msrms/cloud).
 
@@ -109,7 +109,7 @@ Successivamente, è necessario eseguire il cmdlet [Use-AadrmKeyVaultKey](https:/
 Se è necessario verificare che l'URL della chiave sia impostato correttamente nel servizio Azure RMS, è possibile eseguire [Get-AzureKeyVaultKey](https://msdn.microsoft.com/en-us/library/dn868053(v=azure.300\).aspx) nell'insieme di credenziali delle chiavi di Azure per visualizzare l'URL della chiave.
 
 
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
 Dopo la pianificazione e, se necessario, la generazione della chiave del tenant, effettuare le operazioni seguenti:
 
@@ -136,6 +136,6 @@ Dopo la pianificazione e, se necessario, la generazione della chiave del tenant,
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 
