@@ -1,7 +1,8 @@
 ---
-title: Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione Rights Management sharing | Azure Information Protection
+title: Proteggere un file in un dispositivo (protezione sul posto) tramite l&quot;applicazione Rights Management sharing | Azure Information Protection
 description: Istruzioni su come archiviare in modo sicuro un file nel computer, in un server o in un altro dispositivo di archiviazione.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: 3d7a4b71f32c37d3ab632114e8147382cfbbcbd1
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 1b95c1bf1c747808c7baed97daa449f5c8bb234d
 
 
 ---
 
-# Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione Rights Management sharing
+# <a name="protect-a-file-on-a-device-protect-inplace-by-using-the-rights-management-sharing-application"></a>Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione Rights Management sharing
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
@@ -27,7 +28,7 @@ Quando si protegge un file localmente, esso sostituisce il file originale non pr
 > [!TIP]
 > Se vengono visualizzati errori quando si tenta di proteggere i file, fare riferimento alle [Domande frequenti sull'applicazione Microsoft Rights Management sharing per Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
-## Per proteggere un file in un dispositivo (protezione sul posto)
+## <a name="to-protect-a-file-on-a-device-protect-inplace"></a>Per proteggere un file in un dispositivo (protezione sul posto)
 
 1.  In Esplora file, selezionare un file da proteggere. Fare clic sul pulsante destro del mouse, selezionare **Proteggi tramite RMS**, quindi selezionare **Proteggi sul posto**. Ad esempio:
 
@@ -54,18 +55,18 @@ Se si cambia idea sulle autorizzazioni o si vuole modificarle in seguito, è suf
 
 Se in un secondo momento è necessario rimuovere la protezione da un file, vedere [Rimuovere la protezione da un file mediante l'applicazione Rights Management sharing](sharing-app-remove-protection.md).
 
-## Esempi e altre istruzioni
+## <a name="examples-and-other-instructions"></a>Esempi e altre istruzioni
 Per esempi di come è possibile usare l'applicazione Rights Management sharing e informazioni sulle procedure da seguire, vedere le sezioni seguenti della Guida dell'utente dell'applicazione Rights Management sharing:
 
 -   [Esempi per l'uso dell'applicazione RMS sharing](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Come procedere](sharing-app-user-guide.md#what-do-you-want-to-do)
+-   [Per saperne di più](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## Vedere anche
-[Guida dell'utente dell'applicazione Rights Management sharing](sharing-app-user-guide.md)
+## <a name="see-also"></a>Vedere anche
+[Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

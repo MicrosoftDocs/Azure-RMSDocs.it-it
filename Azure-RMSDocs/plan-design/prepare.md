@@ -1,7 +1,8 @@
 ---
 title: Preparazione per la protezione Azure Rights Management| Azure Information Protection
-description: Verificare di aver eseguito tutte le operazioni preliminari all'uso del servizio Azure Rights Management, in modo da consentire all'organizzazione di proteggere documenti e messaggi di posta elettronica.
+description: Verificare di aver eseguito tutte le operazioni preliminari all&quot;uso del servizio Azure Rights Management, in modo da consentire all&quot;organizzazione di proteggere documenti e messaggi di posta elettronica.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 46db6ef6f65a06c42909252cf99884cc5eaaefe4
-ms.openlocfilehash: 5a3df821c70b8cd308f8fb8cc94ee0cff069a3d9
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: facb9bd0d21551e9170cd9be6e9abda24766f9fd
 
 
 ---
 
-# Preparazione per Azure Information Protection
+# <a name="preparing-for-azure-information-protection"></a>Preparazione per Azure Information Protection
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -32,7 +33,7 @@ Prima di distribuire Azure Information Protection per l'organizzazione, verifica
 
     Se si dispone di Exchange Online, è possibile creare e utilizzare i gruppi abilitati alla posta tramite il centro di amministrazione di Exchange. Se si dispone di AD DS locale e si esegue la sincronizzazione in Azure AD, è possibile creare e utilizzare i gruppi abilitati alla posta che sono gruppi di protezione o gruppi di distribuzione.
 
-## Attivare il servizio Rights Management per la protezione dei dati
+## <a name="activate-the-rights-management-service-for-data-protection"></a>Attivare il servizio Rights Management per la protezione dei dati
 Attivare il servizio Rights Management per abilitare questa tecnologia e iniziare a proteggere documenti e messaggi di posta elettronica. Per ulteriori informazioni, vedere l'articolo relativo all'[attivazione di Azure Rights Management](../deploy-use/activate-service.md).
 
 
@@ -40,6 +41,6 @@ Attivare il servizio Rights Management per abilitare questa tecnologia e iniziar
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 
