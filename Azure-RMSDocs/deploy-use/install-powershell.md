@@ -1,7 +1,8 @@
 ---
 title: Installazione di Windows PowerShell per Azure Rights Management | Azure Information Protection
-description: "Istruzioni per l'installazione di Windows PowerShell per il servizio Azure Rights Management di Azure Information Protection. Il nome di questo modulo è AADRM."
+description: "Istruzioni per l&quot;installazione di Windows PowerShell per il servizio Azure Rights Management di Azure Information Protection. Il nome di questo modulo è AADRM."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 97c53d92755ebcadee7de2e32750c00b285224dd
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: c114059e99f3caed4fa5e2c48fe0428cb5847f68
 
 
 ---
 
-# Installazione di Windows PowerShell per Microsoft Azure Rights Management
+# <a name="installing-windows-powershell-for-azure-rights-management"></a>Installazione di Windows PowerShell per Microsoft Azure Rights Management
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -26,7 +27,7 @@ Usare le istruzioni seguenti per l'installazione del modulo Windows PowerShell p
 
 È possibile usare questo modulo di PowerShell per amministrare il servizio Azure Rights Management dalla riga di comando usando qualsiasi computer dotato di connessione a Internet e che soddisfa i prerequisiti elencati nella sezione seguente. Windows PowerShell per [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] supporta l'uso di script per l'automazione oppure può essere necessario per scenari di configurazione avanzata. Per altre informazioni sulle attività di amministrazione e sulle configurazioni supportate dal modulo, vedere l'articolo relativo all'[amministrazione di Azure Rights Management tramite Windows PowerShell](administer-powershell.md).
 
-## Prerequisiti
+## <a name="prerequisites"></a>Prerequisiti
 Questa tabella elenca i prerequisiti per l'installazione e l'uso di Windows PowerShell per [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)].
 
 |Requisito|Altre informazioni|
@@ -41,7 +42,7 @@ Questa tabella elenca i prerequisiti per l'installazione e l'uso di Windows Powe
 > Se è installata una versione precedente del modulo di amministrazione di Rights Management, usare **Programmi e funzionalità** per disinstallare **Amministrazione di Windows Azure AD Rights Management** prima di installare la versione più recente.
 
 
-## Come installare il modulo di amministrazione di Rights Management
+## <a name="how-to-install-the-rights-management-administration-module"></a>Come installare il modulo di amministrazione di Rights Management
 
 1.  Passare all'Area download Microsoft e [scaricare Azure Rights Management Administration Tool](https://go.microsoft.com/fwlink/?LinkId=257721), contenente il modulo di amministrazione di [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] per Windows PowerShell.
 
@@ -51,7 +52,7 @@ Questa tabella elenca i prerequisiti per l'installazione e l'uso di Windows Powe
 
 Windows PowerShell per [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] è ora installato.
 
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 Per visualizzare i cmdlet disponibili, avviare Windows PowerShell con l'opzione **Esegui come amministratore** e digitare quanto segue:
 
 ```
@@ -70,11 +71,11 @@ Prima di poter eseguire i comandi che consentono di configurare il servizio [!IN
 > [!NOTE]
 > Se il servizio Azure Rights Management non è stato ancora attivato, attivarlo usando il cmdlet [Enable-Aadrm](https://msdn.microsoft.com/library/windowsazure/dn629412.aspx) dopo essersi connessi al servizio.
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 [Amministrazione di Azure Rights Management mediante Windows PowerShell](administer-powershell.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

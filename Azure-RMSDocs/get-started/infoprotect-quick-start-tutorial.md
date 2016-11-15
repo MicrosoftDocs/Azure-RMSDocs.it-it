@@ -1,7 +1,8 @@
 ---
 title: Esercitazione introduttiva | Azure Information Protection
-description: Esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell'organizzazione. L'esecuzione dell'esercitazione richiede circa 30 minuti.
+description: Esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell&quot;organizzazione. L&quot;esecuzione dell&quot;esercitazione richiede circa 30 minuti.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/04/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 4f5f7670ce1897a6436e511057fc714c839a8f00
-ms.openlocfilehash: a8c4003d8dbae5d33712860cd1f665de234db5a0
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 9f475892d7999fc3ff10a27d11986dec9cfa94cd
 
 
 ---
 
-# Esercitazione introduttiva di Azure Information Protection 
+# <a name="quick-start-tutorial-for-azure-information-protection"></a>Esercitazione introduttiva di Azure Information Protection 
 
 >*Si applica a: Azure Information Protection*
 
@@ -26,7 +27,7 @@ Questa esercitazione, rivolta ai consulenti e agli amministratori IT, consente d
 
 In caso di problemi riguardanti l'esecuzione di questa esercitazione o l'uso di Azure Information Protection, oppure se si vogliono conoscere le opinioni di altri utenti su questa applicazione, visitare il [sito di Azure Information Protection in Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all).
 
-## Prerequisiti 
+## <a name="prerequisites"></a>Prerequisiti 
 Per completare questa esercitazione, è necessario quanto segue:
 
 - Una sottoscrizione che includa Azure Information Protection con supporto per classificazione, assegnazione di etichette e protezione. Questa esercitazione include alcune delle funzionalità avanzate, ad esempio la classificazione automatica dei dati con consigli per gli utenti e il sito per il rilevamento dei documenti. Assicurarsi che la propria sottoscrizione supporti queste funzionalità. Per altre informazioni, vedere le [informazioni sulla sottoscrizione](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) e l'[elenco delle funzionalità](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) nel sito Azure Information Protection.
@@ -51,6 +52,6 @@ A questo punto, procedere con l'esercitazione.
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

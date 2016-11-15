@@ -1,9 +1,10 @@
 ---
 title: Scenario - Scambiarsi informazioni con privilegi tra dirigenti | Azure Information Protection
-description: "Questo scenario e la documentazione di supporto per l'utente usano la tecnologia di protezione Azure Rights Management affinché i dirigenti possano scambiarsi in modo sicuro messaggi e allegati tramite posta elettronica e i criteri limitino automaticamente l'accesso ai dirigenti senza che sia necessario alcun intervento da parte loro."
+description: "Questo scenario e la documentazione di supporto per l&quot;utente usano la tecnologia di protezione Azure Rights Management affinché i dirigenti possano scambiarsi in modo sicuro messaggi e allegati tramite posta elettronica e i criteri limitino automaticamente l&quot;accesso ai dirigenti senza che sia necessario alcun intervento da parte loro."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/05/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +13,13 @@ ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b61b7068e67103c45aea139cf95dacb851fe70e2
-ms.openlocfilehash: fb25a5f97580e7d912016bbeb304e6470f8cbba0
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: c8c460549df34a746b21f57aa890a52571bf2061
 
 
 ---
 
-# Scenario - Scambiarsi informazioni con privilegi tra dirigenti
+# <a name="scenario-executives-securely-exchange-privileged-information"></a>Scenario - Scambiarsi informazioni con privilegi tra dirigenti
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -34,12 +35,12 @@ Le istruzioni sono adatte ai casi seguenti:
 
 -   I dirigenti dispongono di un modo per eseguire l'override della regola autonomamente se devono inviare un messaggio di posta elettronica non protetto ad altri dirigenti.
 
-## Istruzioni di distribuzione
+## <a name="deployment-instructions"></a>Istruzioni di distribuzione
 ![Istruzioni per l'amministratore per la distribuzione rapida di Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Verificare che siano soddisfatti i requisiti seguenti e quindi seguire le istruzioni per le procedure di supporto prima di passare alla documentazione dell'utente.
 
-## Requisiti per questo scenario
+## <a name="requirements-for-this-scenario"></a>Requisiti per questo scenario
 Per le istruzioni di funzionamento di questo scenario, sono necessari i requisiti seguenti:
 
 |Requisito|Altre informazioni|
@@ -48,10 +49,10 @@ Per le istruzioni di funzionamento di questo scenario, sono necessari i requisit
 |La chiave del tenant di Azure Information Protection è gestita da Microsoft, non viene usato il sistema BYOK|[Pianificazione e implementazione della chiave del tenant di Azure Information Protection](../plan-design/plan-implement-tenant-key.md)|
 |Azure Rights Management non è attivato|[Attivazione di Azure Rights Management](../deploy-use/activate-service.md)|
 |Una di queste configurazioni:<br /><br />- Exchange Online è abilitato per Azure Rights Management<br /><br />- Il connettore RMS è installato e configurato per Exchange locale|Per Exchange Online: vedere le informazioni riportate in [Exchange Online: configurazione di IRM](../deploy-use/configure-office365.md#exchange-online-irm-configuration).<br /><br />Per Exchange locale: [Distribuzione del connettore di Azure Rights Management](../deploy-use/deploy-rms-connector.md)|
-|Configurazione di un modello personalizzato, come descritto di seguito|[Configurazione di modelli personalizzati per Azure Rights Management](../deploy-use/configure-custom-templates.md)|
+|Configurazione di un modello personalizzato, come descritto di seguito|[Configurazione di modelli personalizzati per il servizio Azure Rights Management](../deploy-use/configure-custom-templates.md)|
 |Configurare una regola di protezione del trasporto per IRM, come descritto più avanti in questo articolo|Per Exchange Online: [Mail flow or transport rules](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx) (Regole di trasporto o del flusso di posta elettronica)<br /><br />Per Exchange 2013: [Creare una regola di protezione del trasporto](https://technet.microsoft.com/en-us/library/dd302432(v=exchg.150))<br /><br />Per Exchange 2010: [Creare una regola di protezione del trasporto](https://technet.microsoft.com/library/dd302432(v=exchg.141))|
 
-### Per configurare il modello personalizzato per i dirigenti:
+### <a name="to-configure-the-custom-template-for-executives"></a>Per configurare il modello personalizzato per i dirigenti:
 
 1.  Nel portale classico di Azure: Creare un nuovo modello personalizzato per Azure Rights Management, contenente i valori e le impostazioni seguenti:
 
@@ -69,7 +70,7 @@ Per le istruzioni di funzionamento di questo scenario, sono necessari i requisit
     Import-RMSTrustedPublishingDomain -Name "RMS Online -1" -RefreshTemplates -RMSOnline
     ```
 
-### Per configurare la regola del trasporto per IRM
+### <a name="to-configure-the-transport-rule-for-irm"></a>Per configurare la regola del trasporto per IRM
 
 -   Usare la documentazione di Exchange indicata nella tabella per informazioni sulla procedura per creare la regola del trasporto con le seguenti impostazioni:
 
@@ -83,7 +84,7 @@ Per le istruzioni di funzionamento di questo scenario, sono necessari i requisit
 
     -   Verificare che la regola sia configurata per **Imponi**.
 
-## Istruzioni sulla documentazione per l'utente
+## <a name="user-documentation-instructions"></a>Istruzioni sulla documentazione per l'utente
 A meno che non si desideri fornire istruzioni su come specificare **DNP** o le parole o frasi scelte per l'eccezione nell'oggetto del messaggio di posta elettronica, non esistono istruzioni sulle procedure da fornire agli utenti per questo scenario, perché la protezione dei messaggi di posta elettronica da e verso i dirigenti dell'azienda non richiede alcuna azione speciale da parte degli stessi. I messaggi di posta elettronica e gli eventuali allegati vengono protetti automaticamente in modo che solo i membri del gruppo Dirigenti possano accedervi.
 
 Tuttavia, può essere necessario informare i dirigenti e l'help desk sulla protezione automatica dei messaggi e su come limitare l'uso di tali messaggi. Ad esempio, se i messaggi o gli allegati vengono inoltrati ad altri utenti, non possono essere letti in modo corretto. Se è stato configurata l'eccezione DNP (o una equivalente), verificare che il supporto tecnico sia a conoscenza di questa configurazione in modo che i dirigenti possano eseguire l'override della regola autonomamente, senza richiedere azioni da un amministratore di Exchange.
@@ -104,7 +105,7 @@ La documentazione dell'esempio mostra come questo annuncio viene visualizzato da
 
 ![Documentazione dell'utente del modello per la distribuzione rapida di Azure RMS](../media/AzRMS_UsersBanner.png)
 
-### Annuncio IT: la posta elettronica dei dirigenti di &lt;Nome organizzazione&gt; è ora protetta automaticamente
+### <a name="it-announcement-ltorganization-namegt-executive-emails-are-now-automatically-protected"></a>Annuncio IT: la posta elettronica dei dirigenti di &lt;Nome organizzazione&gt; è ora protetta automaticamente
 Da questo momento, ogni volta che si inviano messaggi di posta elettronica a un altro dirigente di &lt;nome organizzazione&gt; i contenuti dei messaggi e gli eventuali allegati verranno protetti automaticamente in modo che solo un altro dirigente della società possa accedervi per leggere le informazioni, stamparli, copiarli e così via. Questa restrizione si applica anche se il messaggio di posta elettronica viene inoltrato ad altri utenti o se vengono salvati gli allegati. Questa protezione consente di impedire la perdita di dati sensibili e informazioni riservate.
 
 Si noti che se si vuole che altri utenti che non sono dirigenti di &lt;nome organizzazione&gt; possano leggere e modificare le informazioni contenute in questi messaggi di posta elettronica, è necessario inviarle separatamente. In alternativa, per eseguire l'override della protezione automatica, digitare le lettere **DNP** (come abbreviazione di Non proteggere) all'interno dell'oggetto del messaggio di posta elettronica.
@@ -115,23 +116,23 @@ Quando si inviano informazioni aziendali riservate a un altro dirigente di &lt;n
 
 -   Contattare il supporto tecnico: &lt;dettagli contatto&gt;
 
-### Esempio di documentazione per l'utente
+### <a name="example-user-documentation"></a>Esempio di documentazione per l'utente
 ![Esempio di documentazione dell'utente per la distribuzione rapida di Azure RMS](../media/AzRMS_ExampleBanner.png)
 
-#### Annuncio IT: Protezione automatica dei messaggi di posta elettronica dei dirigenti di VanArsdel
+#### <a name="it-announcement-vanarsdel-executive-emails-are-now-automatically-protected"></a>Annuncio IT: Protezione automatica dei messaggi di posta elettronica dei dirigenti di VanArsdel
 Da questo momento, ogni volta che si inviano messaggi di posta elettronica a un altro dirigente della società VanArsdel, i contenuti dei messaggi e gli eventuali allegati verranno protetti automaticamente in modo che solo un altro dirigente della società possa accedervi per leggere le informazioni, stamparlo, copiarlo e così via. Questa restrizione si applica anche se il messaggio di posta elettronica viene inoltrato ad altri utenti o se vengono salvati gli allegati. Questa protezione consente di impedire la perdita di dati sensibili e informazioni riservate.
 
 Si noti che se si desidera che altri utenti non dirigenti di VanArsdel possano leggere e modificare le informazioni contenute in questi messaggi di posta elettronica, è necessario inviarle separatamente. In alternativa, per eseguire l'override della protezione automatica, digitare le lettere **DNP** (come abbreviazione di Non proteggere) all'interno dell'oggetto del messaggio di posta elettronica.
 
-Quando si inviano informazioni aziendali riservate a un altro dirigente di VanArsdel, ricordarsi di inviarle al relativo indirizzo di posta elettronica (*nome*@&lt;vanarsdelltd&gt;) dell'ufficio e non a un indirizzo personale.
+Quando si inviano informazioni aziendali riservate a un altro dirigente di VanArsdel, ricordarsi di inviarle al relativo indirizzo di posta elettronica (*nome*@vanarsdelltd.com)) dell'ufficio e non a un indirizzo personale.
 
 **Serve assistenza?**
 
--   Contattare l'help desk: helpdesk@vanarsdelltd.com
+-   Contattare il supporto tecnico: helpdesk@vanarsdelltd.com
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

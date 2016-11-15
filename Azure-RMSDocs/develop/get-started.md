@@ -1,8 +1,9 @@
 ---
 title: Introduzione | Azure RMS
-description: La guida introduttiva per la prima applicazione si basa sulle guide all'installazione dell'ambiente di sviluppo per ciascuno dei sistemi operativi o delle piattaforme.
+description: La guida introduttiva per la prima applicazione si basa sulle guide all&quot;installazione dell&quot;ambiente di sviluppo per ciascuno dei sistemi operativi o delle piattaforme.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: d4373ed4a0909c5c0c4dceb51f98ace1977cb6f7
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 6e05b2c7444b5440d80bf5c4764b5ada554bbdc7
 
 
 ---
 
-# Introduzione
+# <a name="get-started"></a>Introduzione
 
 Per questa versione di Microsoft Rights Management SDK 4.2, l'approccio introduttivo alla prima applicazione si basa sulle guide all'installazione dell'ambiente di sviluppo per ciascuno dei sistemi operativi o delle piattaforme. Per iniziare a creare l'applicazione abilitata all'uso di diritti, seguire questa procedura:
 
@@ -56,6 +57,6 @@ Per questa versione di Microsoft Rights Management SDK 4.2, l'approccio introdut
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

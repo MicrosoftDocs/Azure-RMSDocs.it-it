@@ -1,8 +1,9 @@
 ---
 title: Come abilitare la revoca e il rilevamento dei documenti | Azure RMS
-description: "Linee guida di base per implementare il rilevamento del contenuto del documento, nonché un codice di esempio per aggiornare i metadati e un pulsante Rileva utilizzo per l'app."
+description: "Linee guida di base per implementare il rilevamento del contenuto del documento, nonché un codice di esempio per aggiornare i metadati e un pulsante Rileva utilizzo per l&quot;app."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -16,19 +17,17 @@ ms.suite: ems
 experimental: true
 experiment_id: priyamo-test-20160729
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 1a98ea095098fdf09809bb8be1e6263b28f3044b
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: a077e9721bde9e812d36dfab46d6215857cb69ab
 
 
 ---
 
-# Rilevamento del contenuto
-
-# Procedura: Abilitare la revoca e il rilevamento dei documenti
+# <a name="howto-enable-document-tracking-and-revocation"></a>Procedura: Abilitare la revoca e il rilevamento dei documenti
 
 Questo argomento illustra le linee guida di base per implementare il rilevamento del contenuto del documento, nonché un codice di esempio per aggiornare i metadati e per creare il pulsante **Rileva utilizzo** per l'app.
 
-## Passaggi per implementare il rilevamento del documento
+## <a name="steps-to-implement-document-tracking"></a>Passaggi per implementare il rilevamento del documento
 
 I passaggi 1 e 2 consentono il rilevamento del documento. Il passaggio 3 consente agli utenti delle app di raggiungere il sito per rilevare e revocare i documenti protetti.
 
@@ -38,7 +37,7 @@ I passaggi 1 e 2 consentono il rilevamento del documento. Il passaggio 3 consent
 
 Seguono i dettagli di implementazione per questi passaggi.
 
-## 1. Aggiungere i metadati associati al rilevamento dei documenti
+## <a name="1-add-document-tracking-metadata"></a>1. Aggiungere i metadati associati al rilevamento dei documenti
 
 Rilevamento dei documenti è una funzionalità del sistema di Rights Management. L'aggiunta di metadati specifici durante il processo di protezione di un documento fa sì che si possa registrare il documento stesso con il portale del servizio di rilevamento, che fornisce quindi diverse opzioni per il rilevamento.
 
@@ -48,12 +47,12 @@ Usare queste API per aggiungere o aggiornare una licenza con i metadati di rilev
 Dal punto di vista operativo, solo le proprietà relative al **nome contenuto** e al **tipo di notifica** sono necessarie per rilevamento dei documenti.
 
 
-- [IpcCreateLicenseMetadataHandle](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
-- [IpcSetLicenseMetadataProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
+- [IpcCreateLicenseMetadataHandle](https://msdn.microsoft.com/library/dn974050.aspx)
+- [IpcSetLicenseMetadataProperty](https://msdn.microsoft.com/library/dn974059.aspx)
 
   È probabile che si imposteranno tutte le proprietà dei metadati, elencate qui sotto in base al tipo.
 
-  Per ulteriori informazioni, vedere [License metadata property types](/information-protection/sdk/2.1/api/win/constants#msipc_license_metadata_property_types) (Tipi di proprietà dei metadati di licenza).
+  Per ulteriori informazioni, vedere [License metadata property types](https://msdn.microsoft.com/library/dn974062.aspx) (Tipi di proprietà dei metadati di licenza).
 
   - **IPC_MD_CONTENT_PATH**
 
@@ -79,19 +78,19 @@ Dal punto di vista operativo, solo le proprietà relative al **nome contenuto** 
 
     Consente di impostare la data di creazione del file
 
-- [IpcSerializeLicenseWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
+- [IpcSerializeLicenseWithMetadata](https://msdn.microsoft.com/library/dn974058.aspx)
 
 Usare l'API appropriata per aggiungere metadati al file o flusso.
 
-- [IpcfEncryptFileWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
-- [IpcfEncryptFileStreamWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
+- [IpcfEncryptFileWithMetadata](https://msdn.microsoft.com/library/dn974052.aspx)
+- [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
 
 Infine, usare questa API per registrare il documento rilevato con il sistema di rilevamento.
 
-- [IpcRegisterLicense](/information-protection/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
+- [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
 
-## 2. Registrare il documento con il servizio RMS
+## <a name="2-register-the-document-with-the-rms-service"></a>2. Registrare il documento con il servizio RMS
 
 Di seguito è riportato un frammento di codice che mostra un esempio di impostazione dei metadati di rilevamento del documento e la chiamata per la registrazione con il sistema di rilevamento.
 
@@ -134,12 +133,12 @@ Di seguito è riportato un frammento di codice che mostra un esempio di impostaz
                         wstrContentName.c_str(),
                         sendLicenseRegistrationNotificationEmail);
 
-## Aggiungere un pulsante **Rileva utilizzo** all'app
+## <a name="add-a-track-usage-button-to-your-app"></a>Aggiungere un pulsante **Rileva utilizzo** all'app
 
 Aggiungere un elemento dell'interfaccia utente **Rileva utilizzo** all'app con uno dei seguenti formati di URL è semplice:
 
 - Usando l'ID contenuto
-  - Ottenere l'ID contenuto utilizzando [IpcGetLicenseProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetlicenseproperty) o [IpcGetSerializedLicenseProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetserializedlicenseproperty) se la licenza viene serializzata e usare la proprietà licenza **IPC_LI_CONTENT_ID**. Per altre informazioni, vedere [License property types](/information-protection/sdk/2.1/api/win/constants#msipc_license_property_types) (Tipi di proprietà di licenza).
+  - Ottenere l'ID contenuto utilizzando [IpcGetLicenseProperty](https://msdn.microsoft.com/library/hh535265.aspx) o [IpcGetSerializedLicenseProperty](https://msdn.microsoft.com/library/hh995038.aspx) se la licenza viene serializzata e usare la proprietà licenza **IPC_LI_CONTENT_ID**. Per altre informazioni, vedere [License property types](https://msdn.microsoft.com/library/hh535287.aspx) (Tipi di proprietà di licenza).
   - Con i metadati **ContentId** e **Issuer**, usare il formato seguente: `https://track.azurerms.com/#/{ContentId}/{Issuer}`
 
     Ad esempio: `https://track.azurerms.com/#/summary/05405df5-8ad6-4905-9f15-fc2ecbd8d0f7/janedoe@microsoft.com`
@@ -150,22 +149,22 @@ Aggiungere un elemento dell'interfaccia utente **Rileva utilizzo** all'app con u
 
 Il client deve soltanto aprire un browser con l'URL appropriato. Il portale di rilevamento dei documenti RMS gestirà l'autenticazione ed eventuali reindirizzamenti necessari.
 
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
-* [Tipi di proprietà dei metadati di licenza](/information-protection/sdk/2.1/api/win/constants#msipc_license_metadata_property_types)
-* [Preferenze di notifica](/information-protection/sdk/2.1/api/win/constants#msipc_notification_preference)
-* [Tipo di notifica](/information-protection/sdk/2.1/api/win/constants#msipc_notification_type)
-* [IpcCreateLicenseMetadataHandle](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreatelicensemetadatahandle)
-* [IpcSetLicenseMetadataProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetlicensemetadataproperty)
-* [IpcSerializeLicenseWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcserializelicensemetadata)
-* [IpcfEncryptFileWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilewithmetadata)
-* [IpcfEncryptFileStreamWithMetadata](/information-protection/sdk/2.1/api/win/functions#msipc_ipcfencryptfilestreamwithmetadata)
-* [IpcRegisterLicense](/information-protection/sdk/2.1/api/win/functions#msipc_ipcregisterlicense)
+* [Tipi di proprietà dei metadati di licenza](https://msdn.microsoft.com/library/dn974062.aspx)
+* [Preferenze di notifica](https://msdn.microsoft.com/library/dn974063.aspx)
+* [Tipo di notifica](https://msdn.microsoft.com/library/dn974064.aspx)
+* [IpcCreateLicenseMetadataHandle](https://msdn.microsoft.com/library/dn974050.aspx)
+* [IpcSetLicenseMetadataProperty](https://msdn.microsoft.com/library/dn974059.aspx)
+* [IpcSerializeLicenseWithMetadata](https://msdn.microsoft.com/library/dn974058.aspx)
+* [IpcfEncryptFileWithMetadata](https://msdn.microsoft.com/library/dn974052.aspx)
+* [IpcfEncryptFileStreamWithMetadata](https://msdn.microsoft.com/library/dn974051.aspx)
+* [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
  
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

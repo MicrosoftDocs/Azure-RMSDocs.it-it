@@ -3,6 +3,7 @@ title: Come installare, configurare e testare un server RMS | Azure RMS
 description: Installare e configurare un server RMS per il test dell&quot;applicazione abilitata all&quot;uso di diritti.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,19 +15,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b7ee098ceaa8ac6b1e0d5d6cbe090042510aa89b
-ms.openlocfilehash: ac7dd8592d6e11905744c4f4e0171fd5b5945c51
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 47f9cf725b864ee22afc7605702992b08cb686dc
 
 
 ---
 
-# Procedura: installare, configurare e testare un server RMS
+# <a name="howto-install-configure-and-test-with-an-rms-server"></a>Procedura: installare, configurare e testare un server RMS
 
 Questo argomento descrive la procedura di collegamento a un server RMS o ad Azure RMS per il test dell'applicazione abilitata all'uso di diritti.
  
-## Istruzioni
+## <a name="instructions"></a>Istruzioni
 
-### Passaggio 1: Configurare il server RMS
+### <a name="step-1-setup-your-rms-server"></a>Passaggio 1: Configurare il server RMS
 
 La procedura seguente consente di configurare il server RMS e include queste operazioni:
 
@@ -39,7 +40,7 @@ La procedura seguente consente di configurare il server RMS e include queste ope
 
     A partire da Windows Server 2008, entrambi i componenti client e server sono inclusi nel sistema operativo. È possibile scaricare i componenti server per i sistemi operativi precedenti dalla posizione indicata di seguito.
 
-    -   [Server RMS v1.0 SP2](http://go.microsoft.com/fwlink/p/?linkid=73722)
+    -   [Server RMS versione 1.0 SP2](http://go.microsoft.com/fwlink/p/?linkid=73722)
 
     Per configurare il componente server in Windows Server 2008, è necessario installare il ruolo AD RMS. Se si stanno sviluppando applicazioni su un sistema operativo server precedente, configurare il Registro di sistema dopo l'installazione del server RMS v1.0 SP2 ma prima del provisioning del servizio RMS.
 
@@ -110,6 +111,6 @@ La procedura seguente consente di configurare il server RMS e include queste ope
 
 
 
-<!--HONumber=Oct16_HO3-->
+<!--HONumber=Nov16_HO2-->
 
 

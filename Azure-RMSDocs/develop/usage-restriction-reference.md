@@ -3,6 +3,7 @@ title: Informazioni di riferimento sulle restrizioni di utilizzo | Azure RMS
 description: Le restrizioni di utilizzo vengono definite dalle costanti elencate in questo argomento.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/19/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 37d9906b5df00b6ec6eeb6739766c00bd5cef37b
-ms.openlocfilehash: e9cc23d220408faf0e010debb1b6cab0c9dc58ba
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f4767c81c246ec6ba53992b9b8e3375e8e02723d
 
 
 ---
 
-# Informazioni di riferimento sulle restrizioni di utilizzo
+# <a name="usage-restriction-reference"></a>Informazioni di riferimento sulle restrizioni di utilizzo
 
 Le restrizioni di utilizzo vengono definite dalle costanti elencate in questo argomento.
 
@@ -49,6 +50,6 @@ Ogni diritto utente, elencato nella colonna Diritto di AD RMS, presenta una desc
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

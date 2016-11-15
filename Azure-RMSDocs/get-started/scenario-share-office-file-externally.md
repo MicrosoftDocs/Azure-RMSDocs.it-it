@@ -1,7 +1,8 @@
 ---
-title: Scenario - Condividere un file di Office con utenti in un'altra organizzazione | Azure Information Protection
-description: Questo scenario e la documentazione di supporto per l'utente usano la tecnologia di protezione Azure Rights Management in modo che gli utenti possano inviare in modo sicuro un file di Office tramite posta elettronica alle persone in un'altra organizzazione.
+title: Scenario - Condividere un file di Office con utenti in un&quot;altra organizzazione | Azure Information Protection
+description: Questo scenario e la documentazione di supporto per l&quot;utente usano la tecnologia di protezione Azure Rights Management in modo che gli utenti possano inviare in modo sicuro un file di Office tramite posta elettronica alle persone in un&quot;altra organizzazione.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
-ms.openlocfilehash: 2a03ae13b269b1a7352dd81fea52fc68bed17d99
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 24b4e542a437a824c6783b02bde5bfb848cdeb3a
 
 
 ---
 
-# Scenario - Condividere un file di Office con utenti in un'altra organizzazione
+# <a name="scenario-share-an-office-file-with-users-in-another-organization"></a>Scenario - Condividere un file di Office con utenti in un'altra organizzazione
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -34,12 +35,12 @@ Questo scenario è adatto ai casi seguenti:
 
 -   Il dipendente è potenzialmente interessato a sapere quando il documento viene aperto da un utente esterno.
 
-## Istruzioni sulla distribuzione
+## <a name="deployment-instructions"></a>Istruzioni sulla distribuzione
 ![Istruzioni per l'amministratore per la distribuzione rapida di Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Prima di passare alla documentazione per l'utente, assicurarsi che i requisiti seguenti siano soddisfatti.
 
-## Requisiti per questo scenario
+## <a name="requirements-for-this-scenario"></a>Requisiti per questo scenario
 Affinché le istruzioni per l'utente per questo scenario funzionino, devono verificarsi le seguenti condizioni:
 
 |Requisito|Se sono necessarie ulteriori informazioni|
@@ -50,14 +51,14 @@ Affinché le istruzioni per l'utente per questo scenario funzionino, devono veri
 |Gli utenti dispongono di Outlook da Office 2013|Se gli utenti dispongono di Office 2016 o Office 2010, sostituire lo screenshot con una versione equivalente, in modo che l'immagine corrisponda a ciò che gli utenti vedono.|
 |La sottoscrizione per Azure Information Protection include il rilevamento dei documenti|Se la sottoscrizione non include il rilevamento e la revoca dei documenti, gli utenti non saranno in grado di completare tutti i passaggi delle istruzioni per l'utente. In questo caso, acquistare una sottoscrizione che supporti queste funzionalità o modificare le istruzioni per l’utente per rimuovere i passaggi che utilizzano queste funzionalità.<br /><br />Controllare l'[elenco delle funzionalità](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) dal sito Azure Information Protection.|
 
-## Istruzioni sulla documentazione per l'utente
+## <a name="user-documentation-instructions"></a>Istruzioni sulla documentazione per l'utente
 Usando il modello seguente, copiare e incollare le istruzioni per l'utente in una comunicazione per gli utenti finali e apportare tali modifiche in base all'ambiente:
 
 1.  Sostituire *&lt;nome del tipo di documento di Office&gt;* con il tipo di documento che verrà inviato dagli utenti. Utilizzare termini specifici e familiari per i loro flussi di lavoro, ad esempio "listino", "tempi di consegna" e "proposta di offerta" anziché "documento di Word" e "foglio di calcolo di Excel". Grazie a questo testo più specifico la probabilità che gli utenti seguano le istruzioni quando lavorano con tali documenti è maggiore.
 
 2.  Sostituire *&lt;dettagli contatto&gt;* con istruzioni su come gli utenti possono contattare il supporto tecnico, ad esempio il collegamento a un sito Web, un indirizzo di posta elettronica o un numero di telefono.
 
-3.  **Personalizzazioni aggiuntive che si vuole apportare:**
+3.  **Modifiche aggiuntive che di vuole apportare:**
 
     -   Nel passaggio 2 suggeriamo **Visualizzatore - Solo visualizzazione** per le autorizzazioni, rendendo il documento allegato, ma non l'originale, di sola lettura per i destinatari. Se questa restrizione non è adatta per il proprio requisito aziendale, modificare questa opzione per un altro set di autorizzazioni, ad esempio **Revisore - Visualizzazione e modifica**.
 
@@ -76,7 +77,7 @@ La documentazione di esempio mostra come questo set di istruzioni appare agli ut
 
 ![Documentazione dell'utente del modello per la distribuzione rapida di Azure RMS](../media/AzRMS_UsersBanner.png)
 
-### Come condividere un &lt;nome del tipo di documento di Office&gt;
+### <a name="how-to-share-a-ltname-of-office-document-typegt"></a>Come condividere un &lt;nome del tipo di documento di Office&gt;
 
 1.  Creare il messaggio di posta elettronica specificando l'indirizzo o gli indirizzi di posta elettronica, digitare il messaggio e allegare *&lt;nome del tipo di documento di Office&gt;* al messaggio di posta elettronica. Quindi nella scheda **MESSAGGIO** fare clic su **Condividi file protetto** all’interno del gruppo **RMS** , quindi fare nuovamente clic su **Condividi file protetto** :
 
@@ -112,10 +113,10 @@ Usare il [portale di rilevamento dei documenti](https://track.azurerms.com/) per
 
     -   *&lt;dettagli contatto&gt;*
 
-### Esempio di documentazione personalizzata per l'utente
+### <a name="example-customized-user-documentation"></a>Esempio di documentazione personalizzata per l'utente
 ![Esempio di documentazione dell'utente per la distribuzione rapida di Azure RMS](../media/AzRMS_ExampleBanner.png)
 
-#### Come condividere un listino prezzi con il cliente
+#### <a name="how-to-share-a-price-list-with-your-customer"></a>Come condividere un listino prezzi con il cliente
 
 1.  Creare il messaggio di posta elettronica specificando l'indirizzo o gli indirizzi di posta elettronica, digitare il messaggio e allegare l’ultimo listino prezzi al messaggio di posta elettronica. Quindi nella scheda **MESSAGGIO** fare clic su **Condividi file protetto** all’interno del gruppo **RMS** , quindi fare nuovamente clic su **Condividi file protetto** :
 
@@ -149,11 +150,11 @@ Utilizzare il [portale di rilevamento dei documenti](https://track.azurerms.com/
 
 -   Contattare il supporto tecnico:
 
-    -   E-mail: helpdesk@vanarsdelltd.com
+    -   Posta elettronica: helpdesk@vanarsdelltd.com
 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

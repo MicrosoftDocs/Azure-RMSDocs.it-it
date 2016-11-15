@@ -1,8 +1,9 @@
 ---
-title: Usare il portale di Azure per eseguire la configurazione per l'autenticazione di RMS | Azure RMS
-description: Descrive il processo per l'autenticazione con ADAL
+title: Usare il portale di Azure per eseguire la configurazione per l&quot;autenticazione di RMS | Azure RMS
+description: Descrive il processo per l&quot;autenticazione con ADAL
 keywords: autenticazione, RMS, ADAL
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,22 +15,22 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: eb9cea79d9e5a7902839d34d9b4f13bdefe5a5d3
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 0bea42f0de08dc521828ccfe3cbff85e32c74aca
 
 
 ---
 
-# Procedura: Usare il portale di Azure per eseguire la configurazione per l'autenticazione di RMS
+# <a name="how-to-use-azure-portal-to-configure-for-rms-authentication"></a>Procedura: Usare il portale di Azure per eseguire la configurazione per l'autenticazione di RMS
 
 Autenticazione con Azure RMS per l'app usando Azure Active Directory Authentication Library (ADAL).
 
 Per questo approccio è necessario che l'applicazione gestisca la propria autenticazione OAuth. Con questo approccio, il client RMS eseguirà un callback definito dall'applicazione quando è necessaria l'autenticazione.
 
-## Eseguire la configurazione tramite il portale di Azure
+## <a name="configure-via-azure-portal"></a>Eseguire la configurazione tramite il portale di Azure
 Per iniziare, eseguire la configurazione tramite il portale di Azure seguendo le istruzioni riportate in [Configurare Azure RMS per l'autenticazione ADAL](adal-auth.md). Assicurarsi di copiare e salvare i valori di *ID client* e *URI di reindirizzamento* da questo processo per usarli in seguito.
 
-## Esempio di codice
+## <a name="code-sample"></a>Esempio di codice
 Questo è un frammento di codice tratto dall'esempio completo di codice per client di dispositivi mobili relativo all'abilitazione di Azure ADAL. Per altre informazioni, vedere l'esempio completo in [MSIPCSampleApp](https://github.com/AzureAD/rms-sdk-ui-for-android/tree/master/samples/MsipcSampleApp).
 
        /**
@@ -55,13 +56,13 @@ Questo è un frammento di codice tratto dall'esempio completo di codice per clie
        }
 
 
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
 - [MSIPCSampleApp](https://github.com/AzureAD/rms-sdk-ui-for-android/tree/master/samples/MsipcSampleApp)
 - [Configurare Azure RMS per l'autenticazione ADAL](adal-auth.md)
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

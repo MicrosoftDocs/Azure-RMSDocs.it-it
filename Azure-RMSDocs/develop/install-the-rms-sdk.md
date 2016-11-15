@@ -1,8 +1,9 @@
 ---
-title: Installare l'SDK | Azure RMS
-description: Questo argomento descrive l'installazione degli strumenti per sviluppatori.
+title: Installare l&quot;SDK | Azure RMS
+description: Questo argomento descrive l&quot;installazione degli strumenti per sviluppatori.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,19 +15,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 8a118e4b5174251122a5798b2674d0c6e79017be
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 8ac3478738693cbc8119ee756f2b0ac566661bea
 
 
 ---
 
-# Installare l'SDK
+# <a name="install-the-sdk"></a>Installare l'SDK
 
 Questo argomento descrive l'installazione degli strumenti per sviluppatori.
 
-## Istruzioni
+## <a name="instructions"></a>Istruzioni
 
-### Installare gli strumenti per sviluppatori
+### <a name="install-the-developer-tools"></a>Installare gli strumenti per sviluppatori
 
 1.  Scaricare [Rights Management Services SDK 2.1](http://www.microsoft.com/en-us/download/details.aspx?id=38397) dall'Area download Microsoft, prestando attenzione a scegliere la versione dell'architettura corretta del computer.
 2.  Eseguire il pacchetto di installazione dal percorso di installazione:
@@ -37,7 +38,7 @@ Questo argomento descrive l'installazione degli strumenti per sviluppatori.
 
 Per altre informazioni sui file installati nel sistema da "setup\_sdk.exe", vedere l'articolo [Development environment files](sdk-elements.md) (File dell'ambiente di sviluppo).
 
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
 * [File dell'ambiente di sviluppo](sdk-elements.md)
  
@@ -46,6 +47,6 @@ Per altre informazioni sui file installati nel sistema da "setup\_sdk.exe", vede
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

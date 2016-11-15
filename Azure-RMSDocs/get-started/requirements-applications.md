@@ -2,8 +2,9 @@
 title: Supporto delle applicazioni per la protezione dati | Azure Information Protection
 description: Identificare le applicazioni che usano le API di RMS per il supporto nativo del servizio Azure Rights Management di Azure Information Protection.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/31/2016
+ms.date: 11/10/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +13,8 @@ ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a036da617d88a65903cfea9df30d5f851bda6e36
-ms.openlocfilehash: 80874b7e15fef7f4e7685774b31410149301c124
+ms.sourcegitcommit: 84072c64f83ec97ac41d6ec030be5eabff263b4b
+ms.openlocfilehash: 32c3c5869ffd7d0bbcbe52a9db6cbb53d89016ec
 
 
 ---
@@ -45,7 +46,7 @@ Informazioni sulle colonne della tabella:
 |**iOS**|Office per iPad e iPhone [[5]](#footnote-5)<br /><br />Office Online [[2]](#footnote-2)<br /><br />TITUS Docs|App Azure Information Protection [[1]](#footnote-1)<br /><br /> Foxit Reader<br /><br />TITUS Docs|App Azure Information Protection [[1]](#footnote-1)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook per iPad e iPhone [[4]](#footnote-4)<br /><br />OWA per iOS [[3]](#footnote-3)<br /><br />TITUS Mail|App Azure Information Protection [[1]](#footnote-1): testo, immagini<br /><br />TITUS Docs: pfile|
 |**Android**|GigaTrust App for Android<br /><br />Office Online [[2]](#footnote-2)<br /><br />Office Mobile (solo Azure RMS) [[1]](#footnote-1)|App Azure Information Protection [[1]](#footnote-1)<br /><br />GigaTrust App for Android<br /><br />Foxit Reader<br /><br />App RMS sharing [[1]](#footnote-1)|9Folders [[4]](#footnote-4)<br /><br />App Azure Information Protection [[1]](#footnote-1)<br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook per Android [[4]](#footnote-4)<br /><br />OWA per Android [[3]](#footnote-3) e [[7]](#footnote-7)<br /><br />Samsung Email (S3 e versioni successive) [[7]](#footnote-7)<br /><br />Classificazione TITUS per dispositivi mobili|App Azure Information Protection [[1]](#footnote-1): testo, immagini|
 |**OS X**|Office 2011 (solo AD RMS)<br /><br />Office 2016 per Mac<br /><br />Office Online [[2]](#footnote-2)|Foxit Reader<br /><br />App RMS sharing [[1]](#footnote-1)|Outlook 2011 (solo AD RMS)<br /><br />Outlook 2016 per Mac<br /><br />Outlook per Mac|App RMS sharing [[1]](#footnote-1): testo, immagini, pfile|
-|**Windows 10 Mobile**|App Office Mobile (solo Azure RMS)[[1]](#footnote-1)|Non supportato|Citrix WorxMail [[6]](#footnote-6)<br /><br />Posta di Outlook|Non supportato|
+|**Windows 10 Mobile**|App Office Mobile (solo Azure RMS) [[1]](#footnote-1)|Non supportato|Citrix WorxMail [[6]](#footnote-6)<br /><br />Posta di Outlook|Non supportato|
 |**Windows RT**|Office 2013 RT<br /><br />Office Online [[2]](#footnote-2)|Non supportato|Outlook 2013 RT<br /><br />App di posta elettronica per Windows<br /><br />Windows Mail [[4]](#footnote-4)|Siemens JT2Go: file JT|
 |**Windows Phone 8.1**|Office Mobile (solo AD RMS)|App RMS sharing [[1]](#footnote-1)|Outlook Mobile [[4]](#footnote-4)|App RMS sharing [[1]](#footnote-1): testo, immagini, pfile|
 |**Blackberry 10**|Non supportato|Non supportato|Posta elettronica Blackberry [[4]](#footnote-4)|Non supportato|
@@ -66,7 +67,7 @@ utilizza Exchange ActiveSync IRM, che deve essere abilitato dall'amministratore 
 Se un destinatario riceve un messaggio di posta elettronica protetto e non usa Exchange come server di posta elettronica oppure se il mittente appartiene a un'altra organizzazione, il contenuto può essere aperto solo con un client di posta elettronica come Outlook Il contenuto non può essere aperto da Outlook Web Access o dai client di posta elettronica per dispositivi mobili con Exchange Active Sync IRM.
 
 ##### <a name="footnote-5"></a>Nota 5
-supporta la visualizzazione e la modifica di documenti protetti. Per altre informazioni, vedere il post sul blog di Office relativo al [supporto per Azure Rights Management disponibile in Office per iPad e iPhone](https://blogs.office.com/2015/07/22/azure-rights-management-support-comes-to-office-for-ipad-and-iphone-2/)
+Supporta la visualizzazione e la modifica di documenti protetti per iOS; supporta la visualizzazione di documenti protetti per Android. Per altre informazioni, vedere il post sul blog di Office relativo al [supporto per Azure Rights Management disponibile in Office per iPad e iPhone](https://blogs.office.com/2015/07/22/azure-rights-management-support-comes-to-office-for-ipad-and-iphone-2/)
 
 ##### <a name="footnote-6"></a>Nota 6
 Per altre informazioni, vedere la [documentazione del prodotto Citrix per WorxMail](http://docs.citrix.com/en-us/worx-mobile-apps/10/xmob-worx-mail.html).
@@ -152,6 +153,6 @@ Per altre informazioni sul supporto di Azure RMS da parte delle applicazioni pi�
 Per informazioni sulle modalità di configurazione delle applicazioni più diffuse per Azure RMS, vedere [Configurazione di applicazioni per Azure Rights Management](../deploy-use/configure-applications.md).
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

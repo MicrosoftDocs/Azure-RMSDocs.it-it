@@ -3,6 +3,7 @@ title: Tipi di applicazioni | Azure RMS
 description: "Questo argomento illustra i tipi di applicazioni che è possibile scegliere di creare come abilitate all’uso di diritti."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/20/2016
 ms.topic: article
@@ -14,24 +15,24 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1ab93dc8f770e2e49b5846dd6c31f649a55175b0
-ms.openlocfilehash: 77bb95ae54ec0fb699d3b0dd2879bb14fdd3dd28
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 20a0906561a79e0826b47981425ae121f07f3d26
 
 
 ---
 
-# Tipi di applicazioni
+# <a name="application-types"></a>Tipi di applicazioni
 
 
 Questo argomento illustra i tipi di applicazioni che è possibile scegliere di creare come abilitate all’uso di diritti.
 
 Rights Management Services SDK 2.1 supporta attualmente i tipi di applicazioni seguenti.
 
-## Applicazioni semplici
+## <a name="simple-applications"></a>Applicazioni semplici
 
 Un’applicazione semplice può essere rappresentata da uno strumento da riga di comando progettato per crittografare un file fornito. Per un'applicazione di esempio semplice abilitata all'uso di diritti, vedere l'implementazione di *IPCHelloWorld*, come descritto in [Sviluppo dell'applicazione](developing-your-application.md).
 
-### Applicazioni in modalità server
+### <a name="server-mode-applications"></a>Applicazioni in modalità server
 
 La *modalità server* è destinata ad applicazioni non interattive che utilizzano, proteggono o elaborano contenuto protetto tramite RMS. Un esempio può essere un’applicazione per la *prevenzione della perdita di dati* che viene eseguita come servizio in un file server e che protegge automaticamente i documenti riservati. Per un esempio di questo tipo di applicazione, vedere l’[esempio IpcDlp](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d).
 
@@ -39,7 +40,7 @@ Se l'applicazione usa la *modalità server*, l’autenticazione al server RMS de
 
 Per altre informazioni sull'impostazione della modalità di sicurezza dell’API, vedere [Impostazione della modalità di sicurezza API](setting-the-api-security-mode-api-mode.md).
 
-### Applicazioni rich client
+### <a name="rich-client-applications"></a>Applicazioni rich client
 
 Un'applicazione rich client consente agli utenti di visualizzare e modificare i dati tramite un'interfaccia utente grafica (GUI). I dati presentati in questa interfaccia GUI sono spesso di alto valore e sensibili al furto o all’esposizione accidentale. Il supporto della protezione delle informazioni consente in genere di migliorare gli scenari esistenti, ma non è il motivo principali per cui si sviluppa l'applicazione.
 
@@ -53,7 +54,7 @@ Microsoft Notepad è un'applicazione rich client semplice. Microsoft Office è u
 
 Per altre informazioni sulla protezione delle applicazioni, vedere [Informazioni sulle limitazioni di utilizzo](understanding-usage-restrictions.md).
 
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
 - [Esempio IpcDlp](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d)
 - [Sviluppo dell'applicazione](developing-your-application.md)
@@ -62,6 +63,6 @@ Per altre informazioni sulla protezione delle applicazioni, vedere [Informazioni
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

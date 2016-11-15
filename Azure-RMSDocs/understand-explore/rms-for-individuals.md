@@ -1,7 +1,8 @@
 ---
 title: RMS per utenti singoli e Azure Information Protection | Azure Information Protection
-description: "Informazioni su RMS per utenti singoli, una sottoscrizione self-service gratuita per gli utenti di un'organizzazione ai quali sono stati inviati file sensibili protetti dal servizio Azure Rights Management, ma che non possono essere autenticati perché il reparto IT non gestisce per loro un account di Azure."
+description: "Informazioni su RMS per utenti singoli, una sottoscrizione self-service gratuita per gli utenti di un&quot;organizzazione ai quali sono stati inviati file sensibili protetti dal servizio Azure Rights Management, ma che non possono essere autenticati perché il reparto IT non gestisce per loro un account di Azure."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d27417bf90dab8c7e8654c68d204dad6297fa0d
-ms.openlocfilehash: 5ce322224da9052b1fa5a3e3d995bbb52e079797
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f89374ec327f51f3e8354aec57f0c0da9ddac585
 
 
 ---
 
-# RMS per utenti singoli e Azure Information Protection
+# <a name="rms-for-individuals-and-azure-information-protection"></a>RMS per utenti singoli e Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
 
@@ -35,12 +36,12 @@ Per altre informazioni su come proteggere i file tramite l'applicazione Rights M
 
 RMS per utenti singoli è un esempio di un abbonamento self-service supportato da Azure Active Directory. Per altre informazioni, vedere [Informazioni sull'iscrizione self-service per Azure](/active-directory/active-directory-self-service-signup) nella documentazione di Azure Active Directory. 
 
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 Per istruzioni dettagliate e per una panoramica tecnica di ciò che avviene in background, vedere [Modalità di iscrizione per RMS per utenti singoli](rms-for-individuals-user-sign-up.md). 
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

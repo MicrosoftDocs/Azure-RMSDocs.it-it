@@ -1,10 +1,11 @@
 ---
-title: Come registrare l'app e abilitarla per RMS con Azure AD | Azure RMS
-description: Descrive i concetti fondamentali dell'autenticazione utente per l'app con abilitazione per RMS.
+title: Come registrare l&quot;app e abilitarla per RMS con Azure AD | Azure RMS
+description: Descrive i concetti fondamentali dell&quot;autenticazione utente per l&quot;app con abilitazione per RMS.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,34 +15,34 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 2f4e0d1990362ab50d90b1a31c3b5db45d2fcdd1
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 96bf5f830c09bb6b2dd781e749a6ee6eaffdba31
 
 
 ---
 
-# Come registrare l'app e abilitarla per RMS con Azure AD
+# <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Come registrare l'app e abilitarla per RMS con Azure AD
 
 Questo argomento illustra i concetti fondamentali relativi alla registrazione e all'abilitazione per RMS dell'app tramite il portale di Azure e all'autenticazione utente con Azure Active Directory Authentication Library (ADAL).
 
-## Autenticazione utente
+## <a name="what-is-user-authentication"></a>Autenticazione utente
 L'autenticazione utente è un passaggio essenziale per stabilire la comunicazione tra l'app del dispositivo e l'infrastruttura di RMS. Questo processo di autenticazione usa il protocollo OAuth 2.0 standard che richiede alcune informazioni fondamentali sull'utente corrente e sulla sua richiesta di autenticazione.
 
-## Registrazione tramite il portale di Azure
+## <a name="registration-via-azure-portal"></a>Registrazione tramite il portale di Azure
 Per iniziare, configurare la registrazione dell'app tramite il portale di Azure seguendo le istruzioni riportate in [Configurare Azure RMS per l'autenticazione ADAL](adal-auth.md). Assicurarsi di copiare e salvare i valori di **ID client** e **URI di reindirizzamento** da questo processo per usarli in seguito.
 
-## Sottoscrivere un contratto di licenza per Rights Management
+## <a name="complete-your-rights-managagment-license-agreement-rmla"></a>Sottoscrivere un contratto di licenza per Rights Management
 Prima di distribuire l'applicazione è necessario sottoscrivere un contratto di licenza per Rights Management con il team Microsoft Rights Management. Per tutti i dettagli, vedere la prima sezione dell'argomento [Distribuire in ambiente di produzione - Richiesta di un contratto di licenza di produzione](deploying-your-application.md).
 
-## Implementare l'autenticazione utente per l'app
+## <a name="implement-user-authentication-for-your-app"></a>Implementare l'autenticazione utente per l'app
 Ogni API RMS dispone di un callback che è necessario implementare per abilitare l'autenticazione dell'utente. RMS SDK 4.2 userà l'implementazione del callback quando non si fornisce un token di accesso, quando il token di accesso deve essere aggiornato o quando è scaduto.
 
-- Android: interfacce [AuthenticationRequestCallback](/information-protection/sdk/4.2/api/android/com.microsoft.rightsmanagement#msipcthin2_authenticationrequestcallback_interface_java) e [AuthenticationCompletionCallback](/information-protection/sdk/4.2/api/android/authenticationcompletioncallback#msipcthin2_authenticationcompletioncallback_interface_java).
-- iOS/OS X: protocollo [MSAuthenticationCallback](/information-protection/sdk/4.2/api/iOS/iOS#msipcthin2_msauthenticationcallback_protocol_objc).
--  Windows Phone/Windows RT: interfaccia [IAuthenticationCallback](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_iauthenticationcallback).
+- Android: interfacce [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) e [AuthenticationCompletionCallback](https://msdn.microsoft.com/library/dn758250.aspx).
+- iOS/OS X: protocollo [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx).
+-  Windows Phone/Windows RT: interfaccia [IAuthenticationCallback](https://msdn.microsoft.com/library/microsoft.rightsmanagement.iauthenticationcallback.aspx).
 - Linux: interfaccia [IAuthenticationCallback](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1IAuthenticationCallback.html).
 
-### Libreria da usare per l'autenticazione
+### <a name="what-library-to-use-for-authentication"></a>Libreria da usare per l'autenticazione
 Per implementare il callback di autenticazione, è necessario scaricare una libreria appropriata e configurare l'ambiente di sviluppo per poterla usare. Per queste piattaforme sono disponibili le librerie ADAL su GitHub.
 
 Ciascuna delle risorse seguenti fornisce informazioni per configurare l'ambiente e usare la libreria.
@@ -55,7 +56,7 @@ Ciascuna delle risorse seguenti fornisce informazioni per configurare l'ambiente
 >[!NOTE]  
 > È consigliabile usare una delle librerie ADAL, anche se possono essere usate altre librerie di autenticazione.
 
-### Parametri di autenticazione
+### <a name="authentication-parameters"></a>Parametri di autenticazione
 
 ADAL richiede alcune informazioni per autenticare un utente ad Azure RMS (o AD RMS). Questi sono i parametri standard di OAuth 2.0 generalmente necessari per qualsiasi app di Azure AD. Le linee guida correnti per l'uso di ADAL sono disponibili nel file README dei repository Github corrispondenti, indicato in precedenza.
 
@@ -66,7 +67,7 @@ ADAL richiede alcune informazioni per autenticare un utente ad Azure RMS (o AD R
 Viene ricavato dal passaggio di registrazione precedente tramite il portale di Azure.
 - **Uri di reindirizzamento**: fornisce la libreria di autenticazione con una destinazione URI per il codice di autenticazione. Per iOS e Android sono necessari formati specifici, descritti nei file README dei repository GitHub corrispondenti di ADAL. Questo valore viene ricavato dal passaggio di registrazione precedente tramite il portale di Azure.
 
->[!NOTE] 
+>[!NOTE]
 > Il parametro **Ambito** non è attualmente usato, ma potrebbe esserlo ed è pertanto riservato per un uso futuro.
 
     Android: `msauth://packagename/Base64UrlencodedSignature`
@@ -76,7 +77,7 @@ Viene ricavato dal passaggio di registrazione precedente tramite il portale di A
 >[!NOTE] 
 > Se l'app non è conforme a queste linee guida, è probabile che i flussi di lavoro di Azure RMS e Azure AD non vadano a buon fine e non siano supportati da Microsoft.com. Inoltre, il Rights Management License Agreement (RMLA) potrebbe essere violato se viene usato un Id Client non valido in un'app di produzione.
 
-### Aspetto di un'implementazione del callback di autenticazione
+### <a name="what-should-an-authentication-callback-implementation-look-like"></a>Aspetto di un'implementazione del callback di autenticazione
 **Esempi di codice di autenticazione**: questo SDK contiene un codice di esempio che illustra l'uso di callback di autenticazione. Per praticità, questi esempi di codice sono rappresentati in questo caso, nonché in ognuno dei seguenti argomenti collegati.
 
 **Autenticazione utente Android**: per altre informazioni, vedere [Esempi di codice Android](android-code.md), **passaggio 2** del primo scenario, "uso di un file protetto RMS".
@@ -274,6 +275,6 @@ Viene ricavato dal passaggio di registrazione precedente tramite il portale di A
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

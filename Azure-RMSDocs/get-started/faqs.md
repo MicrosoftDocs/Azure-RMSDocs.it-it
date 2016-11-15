@@ -2,6 +2,7 @@
 title: Domande frequenti su Azure Information Protection | Azure Information Protection
 description: Alcune domande frequenti su Azure Information Protection e sul relativo servizio di protezione dei dati, Azure Rights Management (Azure RMS).
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/26/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 23065305e68dfd4f924041942a72b95bf9a60957
-ms.openlocfilehash: 5a7d9b9e49c4a682ad9b293147eb6840ca1febf3
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: b98f7960a874ab6e5f1cd4b7225fd9ba89ff1ec3
 
 
 ---
 
-# Domande frequenti su Azure Information Protection
+# <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -26,24 +27,24 @@ Di seguito sono riportate alcune possibili domande su Azure Information Protecti
 
 La pagina delle domande frequenti verrà aggiornata periodicamente e le nuove aggiunte saranno pubblicate negli annunci mensili di aggiornamento della documentazione sul [blog di Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services).
 
-## Quale è la differenza tra Azure Information Protection e Azure Rights Management?
+## <a name="whats-the-difference-between-azure-information-protection-and-azure-rights-management"></a>Quale è la differenza tra Azure Information Protection e Azure Rights Management?
 
 Azure Information Protection offre funzionalità per la classificazione, l'assegnazione di etichette e la protezione per i documenti e i messaggi di posta elettronica di un'organizzazione. La tecnologia di protezione è basata sul servizio Azure Rights Management, che è ora un componente di Azure Information Protection.
 
-## Quale sottoscrizione è necessaria per Azure Information Protection e quali funzionalità sono incluse?
+## <a name="what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included"></a>Quale sottoscrizione è necessaria per Azure Information Protection e quali funzionalità sono incluse?
 Vedere le [informazioni sulla sottoscrizione](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) e l'[elenco delle funzionalità](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) nel sito Azure Information Protection. 
 
 Se si ha un abbonamento a Office 365 che include Rights Management, scaricare il [foglio dati di licenza di Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) dalla pagina **Funzionalità**.
 
-## Secondo alcune voci, sarà presto disponibile una nuova versione di Azure Information Protection. Quando verrà rilasciata?
+## <a name="ive-heard-a-new-release-is-going-to-be-available-soon-for-azure-information-protectionwhen-will-it-be-released"></a>Secondo alcune voci, sarà presto disponibile una nuova versione di Azure Information Protection. Quando verrà rilasciata?
 
-La documentazione tecnica non contiene informazioni sulle versioni future. Per questo tipo di informazioni e per gli annunci di nuove versioni visitare il [blog di Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) e ottenere gli aggiornamenti più recenti da [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) su Twitter. Se si è interessati a una versione di Office, assicurarsi di vedere anche il [blog di Office](https://blogs.office.com/).
+La documentazione tecnica non contiene informazioni sulle versioni future. Per questo tipo di informazioni e per gli annunci di nuove versioni, visitare il [blog di Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services) e ottenere gli aggiornamenti più recenti da [Dan Plastina @TheRMSGuy](https://twitter.com/TheRMSGuy) su Twitter. Se si è interessati a una versione di Office, assicurarsi di vedere anche il [blog di Office](https://blogs.office.com/).
 
-## Dov'è possibile reperire le informazioni di supporto per Azure Information Protection, ad esempio le note legali, le informazioni sulla conformità e i contratti di servizio?
+## <a name="where-can-i-find-supporting-information-for-azure-information-protectionsuch-as-legal-compliance-and-slas"></a>Dov'è possibile reperire le informazioni di supporto per Azure Information Protection, ad esempio le note legali, le informazioni sulla conformità e i contratti di servizio?
 
 Vedere [Informazioni su conformità e supporto per Azure Information Protection](../understand-explore/compliance.md).
 
-## Cosa fare se la domanda non è presente?
+## <a name="what-do-i-do-if-my-question-isnt-here"></a>Cosa fare se la domanda non è presente?
 
 In primo luogo, esaminare le domande frequenti relative alle funzionalità di classificazione e assegnazione di etichette o alla protezione dei dati. Il servizio Azure Rights Management (Azure RMS) fornisce la tecnologia di protezione dati per Azure Information Protection e può essere usato con o senza le funzionalità per la classificazione e l'assegnazione di etichette: 
 
@@ -67,6 +68,6 @@ Inoltre, esistono Domande frequenti progettate per gli utenti finali:
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

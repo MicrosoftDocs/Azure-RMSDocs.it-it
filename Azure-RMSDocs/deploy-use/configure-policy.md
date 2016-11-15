@@ -2,6 +2,7 @@
 title: Configurazione dei criteri | Azure Information Protection
 description: "Per configurare le funzioni di classificazione, aggiunta di etichette e protezione, è necessario configurare i criteri di Azure Information Protection."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 472541f32c429eea34ea0afb76905bee8abf9747
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 055470948a1bf21d4ee1ee83f345f49a98c1bf31
 
 
 ---
 
-# Configurazione dei criteri di Azure Information Protection
+# <a name="configuring-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
 
@@ -51,11 +52,11 @@ Dopo avere apportato le modifiche desiderate, fare clic su **Publish** (Pubblica
 
 Il client di Azure Information Protection ricerca eventuali modifiche ogni volta che viene avviata dell'applicazione di Office supportata e scarica le modifiche come proprio criterio di Azure Information Protection.
 
-## Configurazione dei criteri dell'organizzazione
+## <a name="configuring-your-organizations-policy"></a>Configurazione dei criteri dell'organizzazione
 
 Usare le informazioni seguenti per configurare i criteri di Azure Information Protection:
 
-- [Criterio predefinito di Information Protection](configure-policy-default.md)
+- [Criteri predefiniti di Information Protection](configure-policy-default.md)
 
 - [Come configurare le impostazioni dei criteri globali](configure-policy-settings.md)
 
@@ -71,13 +72,13 @@ Usare le informazioni seguenti per configurare i criteri di Azure Information Pr
 
 - [Come configurare le condizioni per la classificazione automatica e consigliata](configure-policy-classification.md)
 
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
 Per un esempio di come personalizzare i criteri predefiniti e osservare il comportamento risultante in un'applicazione di Office, seguire l'[Esercitazione introduttiva di Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

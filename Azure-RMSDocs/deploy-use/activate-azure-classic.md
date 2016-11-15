@@ -2,6 +2,7 @@
 title: Come attivare Azure Rights Management dal portale di Azure classico | Azure Information Protection
 description: Istruzioni di attivazione per il servizio Azure Rights Management quando si accede al portale di Azure. Ad esempio, se si ha una sottoscrizione per Enterprise Mobility Suite o la sottoscrizione Premium di Azure Information Protection.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 9b0a0227-88ce-44b8-ba3f-31eeaab27ff7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 565f2479fe1d41aa051dd64752413eb72d644535
-ms.openlocfilehash: 74aac58a7b523f98ef627831830577d4fde7d5af
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: fe806c1c2b3f3284b905602a3a10deb79d91425e
 
 
 ---
 
-# Come attivare Azure Rights Management dal portale di Azure classico
+# <a name="how-to-activate-azure-rights-management-from-the-azure-classic-portal"></a>Come attivare Azure Rights Management dal portale di Azure classico
 
 >*Si applica a: Azure Information Protection*
 
@@ -44,7 +45,7 @@ Usare queste istruzioni se si ha accesso al portale di Azure. Ad esempio, se si 
 
 Come **STATO RIGHTS MANAGEMENT** ora verrà visualizzato **Attivo** e l'opzione **ATTIVA** verrà sostituita da **DISATTIVA**.
 
-## Valori di stato e descrizioni di Rights Management nel portale di Azure classico
+## <a name="rights-management-status-values-and-descriptions-in-the-azure-classic-portal"></a>Valori di stato e descrizioni di Rights Management nel portale di Azure classico
 Oltre allo stato **Attivo** , che indica che il servizio Rights Management è abilitato e pronto all'uso, è possibile che siano visualizzati anche gli stati **Inattivo**, **Non disponibile**o **Non autorizzato**.
 
 |Valore dello stato|Descrizione|
@@ -54,10 +55,10 @@ Oltre allo stato **Attivo** , che indica che il servizio Rights Management è ab
 |**Non disponibile**|Il servizio [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] è inattivo. Riprovare.|
 |**Non autorizzato**|Non si dispone delle autorizzazioni necessarie a visualizzare lo stato del servizio [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]. Ad esempio, l'account è bloccato oppure l'utente non è l'amministratore globale del tenant selezionato.|
 
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 Tornare ad [Attivazione di Azure Rights Management](activate-service.md).
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -1,8 +1,9 @@
 ---
-title: Distribuzione dell'applicazione | Azure RMS
-description: Questo argomento descrive le opzioni di distribuzione per l'applicazione abilitata all'uso di diritti
+title: Distribuzione dell&quot;applicazione | Azure RMS
+description: Questo argomento descrive le opzioni di distribuzione per l&quot;applicazione abilitata all&quot;uso di diritti
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,24 +15,24 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 44e90a1de74d62469bd8a99a2d49d1e57d2d0f62
-ms.openlocfilehash: e1bc56fc108101d0af833a84ba52821c8b18736d
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f565294366bdfd06be7fc25ef781eb4900929484
 
 
 ---
 
-# Distribuire in ambiente di produzione
+# <a name="deploy-into-production"></a>Distribuire in ambiente di produzione
 
 
 Questo argomento descrive le opzioni di distribuzione per l'applicazione abilitata all'uso di diritti.
 
-## Richiesta di un contratto di licenza di produzione
+## <a name="request-a-production-license-agreement"></a>Richiesta di un contratto di licenza di produzione
 
  Prima di rilasciare un'applicazione sviluppata con Rights Management Services SDK 2.1, è necessario sottoscrivere un contratto di licenza di produzione per ottenere un certificato di produzione.
 
 È possibile ottenere il certificato sottoscrivendo un contratto di licenza di produzione.
 
-Inviare un messaggio di posta elettronica a [RMLA@microsoft.com](mailto:rmla@microsoft.com) e includere le seguenti informazioni:
+Inviare un messaggio di posta elettronica a [RMLA@microsoft.com](mailto:rmla@microsoft.com) e includere le informazioni seguenti:
 
 - Nome completo dell'azienda
 - Indirizzo fisico dell'azienda (inclusi città, stato, paese o regione e CAP)
@@ -63,11 +64,11 @@ Il team di Active Directory Rights Management Licensing Agreement (ADRMLA) rispo
 Assicurarsi di seguire le istruzioni ricevute dal team ADRMLA. Le istruzioni elencano le informazioni digitali necessarie per compilare la richiesta di certificato. Seguendo le istruzioni dettagliate si ridurranno i ritardi.
 
 
-## Opzioni di installazione e requisiti per Rights Management Service Client 2.1
+## <a name="installation-options-and-requirements-for-rights-management-service-client-21"></a>Opzioni di installazione e requisiti per Rights Management Service Client 2.1
 
 Poiché è stato utilizzato RMS SDK 2.1, è necessario distribuire il client 2.1 di Active Directory Rights Management Service su un computer gestito dall'utente.
 
-### RMS Client 2.1
+### <a name="rms-client-21"></a>RMS Client 2.1
 
 RMS Client 2.1 è un software per computer client progettato per proteggere l'accesso e l'utilizzo di informazioni tra applicazioni che usano RMS, in locale o in un data center Microsoft.
 
@@ -78,7 +79,7 @@ RMS Client 2.1 non è un componente del sistema operativo Windows. RMS Client 2.
 > Il client 2.1 di AD RMS è specifico dell'architettura e deve corrispondere all'architettura del sistema operativo di destinazione.
 
 
-## Opzioni di installazione di RMS Client 2.1
+## <a name="rms-client-21-installation-choices"></a>Opzioni di installazione di RMS Client 2.1
 
 -   **Ridistribuzione di RMS Client 2.1**
 
@@ -99,7 +100,7 @@ RMS Client 2.1 non è un componente del sistema operativo Windows. RMS Client 2.
 
     Se il client è presente, procedere con l'installazione dell'applicazione.
 
-## Abilitazione di Azure Rights Management Services con l'applicazione
+## <a name="enabling-azure-rights-management-services-with-your-application"></a>Abilitazione di Azure Rights Management Services con l'applicazione
 
 > [!NOTE]
 > Se è stata eseguita la migrazione al nuovo modello di ADAL per l'autenticazione, non è necessario installare SIA. Per ulteriori informazioni, vedere [ADAL authentication for your RMS enabled application](adal-auth.md) (Autenticazione ADAL per l'applicazione abilitata per RMS).
@@ -119,7 +120,7 @@ Affinché l'utente finale possa sfruttare i vantaggi dei servizi di Azure Rights
 
 Per ulteriori informazioni sull'abilitazione dell'applicazione per l'uso di RMS per i servizi di Azure Rights Management, vedere [Consentire all'applicazione di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
 * [Assistente per l'accesso a Microsoft Online Services](http://www.microsoft.com/en-us/download/details.aspx?id=28177)
 * [Configurazione di Rights Management](https://TechNet.Microsoft.Com/en-us/library/jj585002.aspx)
@@ -130,6 +131,6 @@ Per ulteriori informazioni sull'abilitazione dell'applicazione per l'uso di RMS 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

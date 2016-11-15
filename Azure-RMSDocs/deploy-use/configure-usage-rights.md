@@ -2,6 +2,7 @@
 title: Configurazione dei diritti di utilizzo per Azure Rights Management | Azure Information Protection
 description: Informazioni sui diritti specifici usati quando si proteggono i file o i messaggi di posta elettronica tramite il servizio Azure Rights Management di Azure Information Protection e relativa identificazione.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
-ms.openlocfilehash: 0b160fff849b9f8bda71fd6ccf07d8fb07487b13
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 16dbee4b90f7c1e5b5c64c751d0c38e6cbccc036
 
 
 ---
 
-# Configurazione dei diritti di utilizzo per Azure Rights Management
+# <a name="configuring-usage-rights-for-azure-rights-management"></a>Configurazione dei diritti di utilizzo per Azure Rights Management
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -26,7 +27,7 @@ Quando si imposta la protezione su file o messaggi di posta elettronica mediante
 
 Usare le informazioni incluse in questo articolo per configurare i diritti di utilizzo desiderati per l'applicazione in uso e comprendere come tali diritti vengono interpretati dalle applicazioni.
 
-## Diritti di utilizzo e relative descrizioni
+## <a name="usage-rights-and-descriptions"></a>Diritti di utilizzo e relative descrizioni
 Nella tabella seguente sono elencati e descritti i diritti d'uso supportati da supporta Rights Management e come vengono utilizzati e interpretati. Sono elencati in base al **Nome comune**, che corrisponde in genere al modo in cui il diritto di utilizzo viene visualizzato o indicato, una versione semplificata del valore costituito da una singola parola e usato nel codice, ovvero il valore **Codifica nei criteri**. Il valore **Costante o valore API** e il nome dell'SDK per una chiamata API MSIPC, usato quando si scrive un'applicazione abilitata per RMS che verifica un diritto di utilizzo o aggiunge un diritto di utilizzo a un criterio.
 
 
@@ -47,7 +48,7 @@ Nella tabella seguente sono elencati e descritti i diritti d'uso supportati da s
 
 
 
-## Diritti inclusi nei livelli di autorizzazioni
+## <a name="rights-included-in-permissions-levels"></a>Diritti inclusi nei livelli di autorizzazioni
 
 Alcune applicazioni raggruppano i diritti di utilizzo in livelli di autorizzazioni, per semplificare la selezione dei diritti di utilizzo che in genere vengono usati insieme. Questi livelli di autorizzazioni consentono di astrarre un livello di complessità dagli utenti, in modo che questi possano scegliere opzioni che sono basate sul ruolo.  Ad esempio, **Revisore** e **Coautore**. Anche se queste opzioni spesso mostrano agli utenti un riepilogo dei diritti, potrebbero non includere tutti i diritti elencati nella tabella precedente.
 
@@ -62,10 +63,10 @@ Usare la tabella seguente per un elenco di questi livelli di autorizzazioni e un
 
 ----
 
-###### Nota 1
+###### <a name="footnote-1"></a>Nota 1
 Non applicabile all'applicazione Microsoft Rights Management sharing per Windows.
 
-## Diritti inclusi nei modelli predefiniti
+## <a name="rights-included-in-the-default-templates"></a>Diritti inclusi nei modelli predefiniti
 I diritti inclusi con i modelli predefiniti sono i seguenti:
 
 |Nome visualizzato|Diritti inclusi (nome comune)|
@@ -73,7 +74,7 @@ I diritti inclusi con i modelli predefiniti sono i seguenti:
 |&lt;*nome organizzazione*&gt; *- Solo visualizzazione riservata*|Visualizza, Apri, Leggi|
 |&lt;*nome organizzazione*&gt; *- Riservato*|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Visualizza diritti; Consenti macro; Inoltra; Rispondi; Rispondi a tutti|
 
-## Opzione Non inoltrare per i messaggi di posta elettronica
+## <a name="do-not-forward-option-for-emails"></a>Opzione Non inoltrare per i messaggi di posta elettronica
 
 I client di Exchange e i servizi, ad esempio il client Outlook, l'app Outlook Web Access e le regole di trasporto di Exchange, offrono un'opzione aggiuntiva per la protezione dei diritti sulle informazioni relativa ai messaggi di posta elettronica: **Non inoltrare**. 
 
@@ -95,12 +96,12 @@ Un utente vuole inviare per posta elettronica alcune informazioni a utenti speci
 
 
 
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 [Configurazione di modelli personalizzati per il servizio Azure Rights Management](configure-custom-templates.md)
 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

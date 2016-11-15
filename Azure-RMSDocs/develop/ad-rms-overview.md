@@ -3,6 +3,7 @@ title: Panoramica - RMS SDK 2.1 | Azure RMS
 description: "Rights Management Services (RMS) è una tecnologia di protezione che consente di proteggere le informazioni digitali da usi non autorizzati."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 82441858230e179a08bfa74e0f6aaf9ed17a62fb
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 816d665314fb77931433e36420b54c3ab6f689b9
 
 
 ---
 
-# Panoramica
+# <a name="overview"></a>Panoramica
 
 Rights Management Services SDK 2.1 è una tecnologia di protezione che consente di proteggere le informazioni digitali da usi non autorizzati. Tramite l’applicazione abilitata all’uso di diritti, i proprietari del contenuto potranno definire gli utenti autorizzati ad aprire, modificare, stampare, inoltrare o eseguire altre operazioni con il relativo contenuto.
 
@@ -42,7 +43,7 @@ Per altre informazioni sul server AD RMS, il client AD RMS e le relative funzion
 
 Gli altri argomenti di questa sezione riguardano l'architettura di RMS e le relative implementazioni.
 
-## In questa sezione
+## <a name="in-this-section"></a>In questa sezione
 
 | Argomento | Descrizione |
 |-------|-------------|
@@ -50,7 +51,7 @@ Gli altri argomenti di questa sezione riguardano l'architettura di RMS e le rela
 |[Server](ad-rms-server.md) | Questo argomento descrive lo scopo e le funzioni del server RMS, per Azure e Windows Server.|
 
 
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
 * [Concetti di RMS](application-types.md)
 * [Introduzione](getting-started-with-ad-rms-2-0.md)
@@ -61,6 +62,6 @@ Gli altri argomenti di questa sezione riguardano l'architettura di RMS e le rela
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

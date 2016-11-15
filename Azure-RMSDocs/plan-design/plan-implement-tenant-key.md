@@ -2,8 +2,9 @@
 title: Pianificazione e implementazione della chiave del tenant di Azure Rights Management | Azure Information Protection
 description: "Informazioni per pianificare e gestire la chiave del tenant di Azure Information Protection. Anziché affidare a Microsoft la gestione della chiave del tenant (impostazione predefinita), per rispettare specifici criteri dell&quot;organizzazione può essere necessario gestire autonomamente la propria chiave del tenant. in base alla modalità BYOK (Bring Your Own Key)."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 11/09/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +13,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b3f3fc473661022a4f17b6587d58a252d07d1a
-ms.openlocfilehash: b8380389267d77da53a5b87ffd606b6e754de7f3
+ms.sourcegitcommit: 84072c64f83ec97ac41d6ec030be5eabff263b4b
+ms.openlocfilehash: afcef2843336e022e63e7895ac3c0488d0aa0e2a
 
 
 ---
@@ -90,9 +91,11 @@ Nella tabella seguente sono elencati i prerequisiti per la modalità BYOK.
 
 Per altre informazioni sui moduli di protezione hardware Thales e su come vengono usati con Insieme di credenziali delle chiavi di Azure, vedere il [sito Web Thales](https://www.thales-esecurity.com/msrms/cloud).
 
+### <a name="instructions-for-byok"></a>Istruzioni per BYOK
+
 Per generare e trasferire la propria chiave del tenant in Insieme di credenziali delle chiavi di Azure, seguire le procedure descritte in [Come generare e trasferire chiavi HSM protette per l'insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/) dalla documentazione di Insieme di credenziali delle chiavi di Azure.
 
-Quando la chiave viene trasferita all'insieme di credenziali delle chiavi, le viene assegnato un ID, ovvero un URL contenente il nome dell'insieme di credenziali, il contenitore delle chiavi, il nome della chiave e la versione della chiave. Ad esempio: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. È necessario indicare al servizio Azure Rights Management di Azure Information Protection di usare questa chiave, specificando l'URL.
+Quando la chiave viene trasferita all'insieme di credenziali delle chiavi, le viene assegnato un ID, ovvero un URL contenente il nome dell'insieme di credenziali delle chiavi, il contenitore delle chiavi, il nome della chiave e la versione della chiave. Ad esempio: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. È necessario indicare al servizio Azure Rights Management di Azure Information Protection di usare questa chiave, specificando l'URL.
 
 Affinché Azure Information Protection possa usare la chiave, il servizio Azure Rights Management deve essere prima autorizzato a usare la chiave nell'insieme di credenziali delle chiavi dell'organizzazione. A tale scopo, l'amministratore dell'insieme di credenziali delle chiavi di Azure usa il cmdlet PowerShell [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.300\).aspx) e concede le autorizzazioni all'entità servizio **Microsoft.Azure.RMS** di Azure Rights Management. Ad esempio:
 
@@ -105,6 +108,11 @@ A questo punto è possibile configurare Azure Information Protection per l'uso d
 Successivamente, è necessario eseguire il cmdlet [Use-AadrmKeyVaultKey](https://msdn.microsoft.com/library/azure/mt759829.aspx), specificando l'URL della chiave. Ad esempio:
 
     Use-AadrmKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
+
+> [!IMPORTANT]
+> In questo esempio, "aaaabbbbcccc111122223333" è la versione della chiave da usare. Se non si specifica la versione, viene usata la versione corrente della chiave senza avviso e il comando sembra funzionare. Tuttavia, se la chiave nell'insieme di credenziali delle chiavi viene aggiornata in un secondo momento (rinnovo), il servizio Azure Rights Management smetterà di funzionare per il tenant, anche se si esegue nuovamente il comando Use-AadrmKeyVaultKey.
+>
+>Assicurarsi di specificare la versione e il nome della chiave quando si esegue questo comando.
 
 Se è necessario verificare che l'URL della chiave sia impostato correttamente nel servizio Azure RMS, è possibile eseguire [Get-AzureKeyVaultKey](https://msdn.microsoft.com/en-us/library/dn868053(v=azure.300\).aspx) nell'insieme di credenziali delle chiavi di Azure per visualizzare l'URL della chiave.
 
@@ -136,6 +144,6 @@ Dopo la pianificazione e, se necessario, la generazione della chiave del tenant,
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 
