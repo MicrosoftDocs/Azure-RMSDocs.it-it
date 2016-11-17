@@ -3,6 +3,7 @@ title: Controllo dell&quot;applicazione | Azure RMS
 description: Istruzioni su come configurare l&quot;applicazione per il test.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

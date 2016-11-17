@@ -1,8 +1,9 @@
 ---
 title: Condizioni e istruzioni per lo sviluppatore | Azure RMS
-description: "L'obiettivo di RMS SDK 4.2 è consentire di creare applicazioni abilitate per AD RMS che sfruttano la protezione delle informazioni di AD RMS nel modo più semplice possibile."
+description: "L&quot;obiettivo di RMS SDK 4.2 è consentire di creare applicazioni abilitate per AD RMS che sfruttano la protezione delle informazioni di AD RMS nel modo più semplice possibile."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,7 +21,7 @@ ms.openlocfilehash: 2ac4ca3e505d78758a01516f66f1e5f4ff4b17b6
 
 ---
 
-# Condizioni e istruzioni per lo sviluppatore
+# <a name="developer-guidance-and-terms"></a>Condizioni e istruzioni per lo sviluppatore
 L'obiettivo di Microsoft Rights Management SDK 4.2 è consentire di creare applicazioni abilitate per AD RMS che sfruttano Active Directory Right Management Services (AD RMS) nel modo più semplice possibile.
 
 Gli argomenti seguenti forniscono supporto durante il processo di progettazione per lo sviluppo di applicazioni abilitate per RMS.

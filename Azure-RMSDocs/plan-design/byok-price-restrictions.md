@@ -2,8 +2,9 @@
 title: "Prezzi e restrizioni della modalità BYOK | Azure Information Protection"
 description: Understand the restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure RMS.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,24 +13,24 @@ ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d7dee4efcff4ccf76f08f9033fdaf89daf095d4e
-ms.openlocfilehash: 86e6ebac4ad8c0782fb27344c30ee1d044be33d0
+ms.sourcegitcommit: f1fff17f76361f8236974c6aeb21ed317c7d9883
+ms.openlocfilehash: e64e87298358b5d1064cda491a10abb48545a98e
 
 
 ---
 
-# Prezzi e restrizioni della modalità BYOK
+# <a name="byok-pricing-and-restrictions"></a>Prezzi e restrizioni della modalità BYOK
 
 >*Si applica a: Azure Information Protection, Office 365*
 
 
-Le organizzazioni che hanno una sottoscrizione che include Azure Information Protection possono usare chiavi gestite dal cliente (BYOK) in Insieme di credenziali delle chiavi di Azure e [registrarne l'utilizzo](../deploy-use/log-analyze-usage.md) senza alcun costo aggiuntivo. 
+Le organizzazioni che hanno una sottoscrizione che include Azure Information Protection possono configurare il tenant di Azure Information Protection per usare una chiave gestita dal cliente (BYOK) e [registrarne l'utilizzo](../deploy-use/log-analyze-usage.md) senza alcun costo aggiuntivo. 
 
-Tuttavia, per usare Insieme di credenziali delle chiavi di Azure, è necessaria una sottoscrizione di Azure che supporti l'insieme di credenziali delle chiavi con chiavi protette dal modulo di protezione hardware. L'uso di una chiave in Insieme di credenziali delle chiavi di Azure comporta l'addebito di una tariffa mensile. Per altre informazioni, vedere la pagina [dei prezzi di Insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
+La chiave deve essere archiviata in Insieme di credenziali delle chiavi di Azure, per il quale è necessario disporre di una sottoscrizione di Azure a pagamento (o di valutazione). È anche necessario usare il livello di servizio Premium di Insieme di credenziali delle chiavi di Azure per supportare le chiavi protette dal modulo di protezione hardware. L'uso di una chiave protetta dal modulo di protezione hardware in Insieme di credenziali delle chiavi di Azure comporta l'addebito di un costo mensile. Per altre informazioni, vedere la pagina [dei prezzi di Insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
 
 Quando si usa Insieme di credenziali delle chiavi di Azure per la chiave del tenant Azure Information Protection, è consigliabile usare un insieme di credenziali delle chiavi dedicato per questa chiave con una sottoscrizione dedicata, per garantire che venga usata solo dal servizio Azure Rights Management. 
 
-## Vantaggi dell'uso di Insieme di credenziali delle chiavi di Azure
+## <a name="benefits-of-using-azure-key-vault"></a>Vantaggi dell'uso di Insieme di credenziali delle chiavi di Azure
 
 Oltre alla funzionalità di registrazione dell'utilizzo di Azure Information Protection, per una maggiore sicurezza è possibile creare riferimenti incrociati con la [registrazione di Insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-logging/) per controllare in modo indipendente se la chiave viene usata solo dal servizio Azure Rights Management. Se necessario, è possibile revocare immediatamente l'accesso alla chiave rimuovendo le autorizzazioni per l'insieme di credenziali delle chiavi.
 
@@ -48,7 +49,7 @@ Oltre alla gestione delle chiavi, Insieme di credenziali delle chiavi di Azure o
 Per altre informazioni su Insieme di credenziali delle chiavi di Azure, vedere [Cos'è l'insieme di credenziali chiave di Azure?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) e visitare il [blog del team di Insieme di credenziali delle chiavi di Azure](https://blogs.technet.microsoft.com/kv/) per le informazioni più recenti e per scoprire come viene usata questa tecnologia dagli altri servizi.
 
 
-## Restrizioni per l'uso di BYOK
+## <a name="restrictions-when-using-byok"></a>Restrizioni per l'uso di BYOK
 
 Se sono presenti utenti che hanno effettuato l'iscrizione per un account gratuito con RMS per utenti singoli, non è possibile usare BYOK o la registrazione dell'utilizzo perché questa configurazione non ha un amministratore tenant per configurare tali funzionalità.
 
@@ -78,15 +79,15 @@ Se si esegue la migrazione ad Azure RMS da AD RMS, la chiave potrebbe essere sta
 
 In alcuni casi l'eccezione relativa alla modalità BYOK di Azure RMS per Exchange Online non costituisce in effetti un problema. Ad esempio, le organizzazioni che devono usare la modalità BYOK e la registrazione eseguono le proprie applicazioni dati, ad esempio Exchange, SharePoint, Office, in locale e usano Azure RMS per funzionalità non facilmente disponibili con istanze locali di AD RMS, ad esempio collaborazione con altre società e accesso da client mobili. Sia la modalità BYOK che la registrazione sono compatibili con questo scenario e consentono all'organizzazione di disporre del controllo completo sulla sottoscrizione di Azure RMS.
 
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
-Per gestire la propria chiave, passare all'articolo relativo all'[implementazione della chiave del tenant di Azure Rights Management](plan-implement-tenant-key.md#implementing-your-azure-rights-management-tenant-key).
+Per gestire la propria chiave, passare all'articolo relativo all'[implementazione della chiave del tenant di Azure Rights Management](plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
 
 Se si è deciso di usare la configurazione predefinita in cui Microsoft gestisce la chiave del tenant, vedere la sezione [Passaggi successivi](plan-implement-tenant-key.md#next-steps) dell'articolo Pianificazione e implementazione della chiave del tenant di Azure Rights Management.
 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

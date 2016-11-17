@@ -3,6 +3,7 @@ title: Panoramica - RMS SDK 4.2 | Azure RMS
 description: AD RMS e AZURE RMS sono tecnologie di protezione che consenteno di proteggere le informazioni digitali da usi non autorizzati.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 390281fbc0a68346ec1cb4b943ddc5919a53fea0
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 65113e57c57621faf9e4625bf224a3f70e9b2e1d
 
 
 ---
 
-# Panoramica
+# <a name="overview"></a>Panoramica
 
 Microsoft Rights Management SDK 4.2 è una tecnologia di protezione delle informazioni disponibile per piattaforme diverse.  È un kit per sviluppatori (SDK, Software Developer Kit) o framework progettato per i computer client e i dispositivi. La sua funzione è quella di proteggere l'accesso e l'utilizzo di informazioni che passano attraverso le applicazioni abilitate all'uso di diritti. Gli SDK per queste piattaforme offrono una API semplice per gli sviluppatori di applicazioni per proteggere o utilizzare il contenuto digitale, recuperare modelli, acquisire criteri da un server e altre attività di gestione dei diritti correlate.
 
@@ -36,7 +37,7 @@ Di seguito sono riportati alcuni possibili scenari:
 
 MS RMS SDK 4.2 può essere scaricato, previa lettura e accettazione del relativo contratto di licenza, e distribuito liberamente con un software di terze parti per consentire l'accesso client a contenuti protetti da diritti mediante l'uso e la distribuzione di server AD RMS nell'ambiente o nei servizi Azure RMS. Per ulteriori informazioni, vedere [Introduzione](get-started.md).
 
-## Caratteristiche di SDK
+## <a name="sdk-highlights"></a>Caratteristiche di SDK
 
 
 MS RMS SDK 4.2 offre alcune nuove funzionalità interessanti che includono quanto segue:
@@ -49,7 +50,7 @@ MS RMS SDK 4.2 offre alcune nuove funzionalità interessanti che includono quant
 
 Usare la guida [Introduzione](get-started.md) per iniziare il progetto di app per dispositivi per le informazioni protette.
 
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
 * [Microsoft Rights Management SDK](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md)
 * [Introduzione](get-started.md)
@@ -64,6 +65,6 @@ Usare la guida [Introduzione](get-started.md) per iniziare il progetto di app pe
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

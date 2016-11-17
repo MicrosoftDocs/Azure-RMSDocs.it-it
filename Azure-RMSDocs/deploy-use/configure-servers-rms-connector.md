@@ -2,6 +2,7 @@
 title: Configurazione dei server per il connettore di Azure Rights Management | Azure Information Protection
 description: Informazioni per configurare i server locali che sfrutteranno il connettore di Azure Rights Management (RMS). Queste procedure illustrano il passaggio 5 di Distribuzione del connettore di Azure Rights Management.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: article

@@ -1,7 +1,8 @@
 ---
 title: Guida alla distribuzione rapida di Azure Information Protection | Azure Information Protection
-description: "Una guida che consente di distribuire e usare più rapidamente Azure Information Protection per proteggere i dati dell'organizzazione. Iniziare scegliendo da un elenco di scenari specifici da implementare."
+description: "Una guida che consente di distribuire e usare più rapidamente Azure Information Protection per proteggere i dati dell&quot;organizzazione. Iniziare scegliendo da un elenco di scenari specifici da implementare."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2c0f3b58a2f1b5233c262bb67cc4a485557ba997
-ms.openlocfilehash: 914362cbabe2e929b988e0f922c3848e8ca7771f
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: d1415913f4a76331088140555b0cfeaa88200871
 
 
 ---
 
-# Guida alla distribuzione rapida di Azure Rights Management
+# <a name="rapid-deployment-guide-for-azure-rights-management"></a>Guida alla distribuzione rapida di Azure Rights Management
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -35,7 +36,7 @@ Prima di distribuire queste soluzioni, si può valutare di inviare un annuncio d
 > [!NOTE]
 > Per eventuali domande e commenti inerenti a questa Guida, usare i meccanismi di commenti e suggerimenti in questa pagina, sfruttare i meccanismi di feedback o inviare un messaggio di posta elettronica all'indirizzo [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
 
-## Scenari per Azure Information Protection
+## <a name="scenarios-for-azure-information-protection"></a>Scenari per Azure Information Protection
 Per distribuire più rapidamente Azure Information Protection per risolvere problemi aziendali specifici, scegliere gli scenari che meglio soddisfano gli obiettivi aziendali e adattarli dove necessario.
 
 
@@ -123,12 +124,12 @@ Vedere: [Scenario - Configurare le cartelle per una protezione permanente](scena
 
 
 
-## Annuncio per gli utenti prima dell'implementazione
+## <a name="announcement-for-users-before-rollout"></a>Annuncio per gli utenti prima dell'implementazione
 È possibile usare il seguente messaggio di comunicazione di esempio per informare gli utenti che la distribuzione di Azure Information Protection comporta l'introduzione di alcune modifiche. Copiare e incollare il testo seguente, da inviare tramite posta elettronica a tutti gli utenti dal team di leadership dell'organizzazione, preferibilmente l'amministratore delegato. È consigliabile apportare modifiche al testo che renderanno il messaggio più pertinente per gli utenti e l'organizzazione.
 
 ![Esempio di banner della documentazione dell'utente per la distribuzione rapida di Azure RMS](../media/AzRMS_ExampleBanner.png)
 
-### Modifiche apportate per la protezione dei dati
+### <a name="changes-were-making-to-safeguard-our-data"></a>Modifiche apportate per la protezione dei dati
 Si è mai desiderato di bloccare l'accesso a un documento inviato ai partner per errore? Ci si è mai chiesti se esiste un modo per sapere quali clienti hanno letto le ultime novità sul prodotto inviate? È necessario condividere informazioni riservate senza preoccuparsi che potrebbero essere inviate a persone che non dovrebbero visualizzarle?
 
 Presto sarà possibile eseguire queste operazioni perché il reparto IT sta apportando alcune modifiche che implementano Microsoft Azure Information Protection come soluzione di protezione dei dati. Molte di queste soluzioni applicheranno automaticamente la protezione necessaria, senza dover eseguire operazioni particolari. Tuttavia, alcune modifiche potrebbero richiedere l'esecuzione di operazioni in modo diverso e in questo caso, il reparto IT invierà le informazioni e le istruzioni, con il supporto dell'help desk in caso di domande o problemi.
@@ -146,6 +147,6 @@ Le soluzioni implementare risulteranno utili per proteggere i dati preziosi e of
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

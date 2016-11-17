@@ -3,6 +3,7 @@ title: Termini | Azure RMS
 description: Una raccolta di definizioni di termini specifici di Rights Management Services.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: cf12a824d3d56ca2df234ba0732d0c4eaae6358e
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 8d6a7553123d36f5a08665949e6417d83bd3912e
 
 
 ---
 
-# Termini
+# <a name="terms"></a>Termini
 
 Una raccolta di definizioni di termini specifici di Rights Management Services.
 
@@ -46,6 +47,6 @@ Il formato PFile è trasparente allo sviluppatore dell'applicazione in quanto è
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

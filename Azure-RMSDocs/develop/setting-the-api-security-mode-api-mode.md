@@ -3,6 +3,7 @@ title: "Come impostare la modalità di sicurezza dell&quot;API | Azure RMS"
 description: "Scegliere la modalità di sicurezza eseguita dall&quot;applicazione API file."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 77e2dfe7f2afb1e70de658850f83f86e9224aea6
-ms.openlocfilehash: 9235fa1c194162689b854493ea31e76c08c40ce7
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f7acef7fa69c836c5d57d8c1705007f919a9dbf2
 
 
 ---
 
-# Procedura: Impostare la modalità di sicurezza dell'API
+# <a name="howto-set-the-api-security-mode"></a>Procedura: Impostare la modalità di sicurezza dell'API
 
 È possibile scegliere la modalità di sicurezza in cui viene eseguita l'applicazione API file tramite la funzione [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx).
 
@@ -30,7 +31,7 @@ Per altre informazioni sulla *modalità server*, vedere [Tipi di applicazioni](a
 
 **Importante**: la modalità di sicurezza deve essere impostata prima di chiamare qualsiasi altra funzione di Rights Management Services SDK 2.1. Dopo averla impostata, la modalità di sicurezza non può essere modificata per il processo corrente.
 
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
 * [Tipi di applicazioni](application-types.md)
 * [Valori della modalità API](https://msdn.microsoft.com/library/hh535236.aspx)
@@ -41,6 +42,6 @@ Per altre informazioni sulla *modalità server*, vedere [Tipi di applicazioni](a
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

@@ -1,7 +1,8 @@
 ---
-title: Scaricare e installare l'applicazione Rights Management sharing | Azure Information Protection
-description: "Istruzioni per l'installazione in modo interattivo dell'applicazione RMS sharing per Windows, affinché sia possibile condividere documenti in modo sicuro con altri utenti."
+title: Scaricare e installare l&quot;applicazione Rights Management sharing | Azure Information Protection
+description: "Istruzioni per l&quot;installazione in modo interattivo dell&quot;applicazione RMS sharing per Windows, affinché sia possibile condividere documenti in modo sicuro con altri utenti."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,19 +13,19 @@ ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: aac3c6c7b5167d729d9ac89d9ae71c50dd1b6a10
-ms.openlocfilehash: c705bfec85bb93cb03d7e3edc9f3ce5949a8b61d
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f1553ebd64f174128e41f55b66582e8791ce9133
 
 
 ---
 
-# Scaricare e installare l'applicazione Rights Management sharing
+# <a name="download-and-install-the-rights-management-sharing-application"></a>Scaricare e installare l'applicazione Rights Management sharing
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 Non è necessario essere un amministratore locale per installare l'applicazione RMS sharing. Tuttavia, se non si ricopre questo ruolo e si usa Office 2010, sono previste alcune limitazioni. Per ulteriori informazioni, vedere la sezione [Se non si è un amministratore locale e si usa Office 2010](#if-you-are-not-a-local-administrator-and-use-office-2010) di questa pagina.
 
-## Per scaricare e installare l'applicazione Rights Management sharing
+## <a name="to-download-and-install-the-rights-management-sharing-application"></a>Per scaricare e installare l'applicazione Rights Management sharing
 
 1.  Accedere alla pagina [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) nel sito Web Microsoft.
 
@@ -41,7 +42,7 @@ Non è necessario essere un amministratore locale per installare l'applicazione 
 
 Ora è possibile iniziare a proteggere i file o a leggere quelli protetti da altri utenti.
 
-## Se non si è un amministratore locale e si usa Office 2010
+## <a name="if-you-are-not-a-local-administrator-and-use-office-2010"></a>Se non si è un amministratore locale e si usa Office 2010
 Se si accede al computer senza diritti amministrativi locali e il programma di installazione rileva che nel sistema è installato Office 2010, verrà visualizzato un messaggio di avviso in cui si specifica che alcuni scenari non sono compatibili con questa configurazione. Questi scenari includono:
 
 -   Se l'organizzazione usa il servizio Azure Rights Management di Azure Information Protection anziché una versione locale di Rights Management:
@@ -56,19 +57,19 @@ Se non si è un amministratore locale ma si usa Office 365 o Office 2013, il mes
 
 È possibile continuare l'installazione tenendo conto di queste limitazioni oppure è possibile interrompere l'installazione e scegliere di effettuarla di nuovo selezionando l'opzione **Esegui come amministratore** quando si esegue il file Setup.exe nel passaggio 3 o di affidarla a un amministratore. Gli amministratori possono infatti [generare lo script dell'installazione](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) in modo che venga eseguita automaticamente.
 
-## Esempi e altre istruzioni
+## <a name="examples-and-other-instructions"></a>Esempi e altre istruzioni
 Per esempi di come è possibile usare l'applicazione Rights Management sharing e informazioni sulle procedure da seguire, vedere le sezioni seguenti della Guida dell'utente dell'applicazione Rights Management sharing:
 
 -   [Esempi per l'uso dell'applicazione RMS sharing](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Come procedere](sharing-app-user-guide.md#what-do-you-want-to-do)
+-   [Per saperne di più](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## Vedere anche
-[Guida dell'utente dell'applicazione Rights Management sharing](sharing-app-user-guide.md)
-
-
+## <a name="see-also"></a>Vedere anche
+[Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Nov16_HO2-->
 
 

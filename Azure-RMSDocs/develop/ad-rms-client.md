@@ -1,8 +1,9 @@
 ---
 title: Client | (Azure RMS)
-description: "AD RMS Client 2.1 è un software per computer client progettato per proteggere l'accesso alle informazioni e il relativo utilizzo"
+description: "AD RMS Client 2.1 è un software per computer client progettato per proteggere l&quot;accesso alle informazioni e il relativo utilizzo"
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 099c27d0bc94503101adc04d1e398ff1eeb4d916
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 1c8d69af23ce094520bac491246a158510a948bb
 
 
 ---
 
-# Client
+# <a name="client"></a>Client
 
 Questo argomento descrive lo scopo e la funzione di Rights Management Service Client 2.1.
 
@@ -32,7 +33,7 @@ Rights Management Services SDK 2.1 funziona con RMS Client 2.1. Le applicazioni 
 
 Per altre informazioni, vedere [Note sulla distribuzione del client RMS](https://TechNet.Microsoft.Com/library/jj159267(WS.10).aspx).
 
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
 * [Panoramica](ad-rms-overview.md)
 * [Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md)
@@ -43,6 +44,6 @@ Per altre informazioni, vedere [Note sulla distribuzione del client RMS](https:/
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

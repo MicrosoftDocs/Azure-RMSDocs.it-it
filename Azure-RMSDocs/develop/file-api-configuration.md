@@ -3,6 +3,7 @@ title: Configurazione dell&quot;API file | Azure RMS
 description: "Il comportamento dell&quot;API file può essere configurato tramite le impostazioni del Registro di sistema."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 734ff9735adbf5aac5824b5c823a1fdcaf245d4e
-ms.openlocfilehash: 92df5a261565b83e71a6bfd1a2d432072815bd27
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 02ba5c914553e8ade9b6cf43e1e2349b91fdaa1b
 
 
 ---
 
-# Configurazione dell'API file
+# <a name="file-api-configuration"></a>Configurazione dell'API file
 
 
 Il comportamento dell'API file può essere configurato tramite le impostazioni del Registro di sistema.
@@ -32,17 +33,17 @@ L'API file offre due tipi di protezione: la protezione nativa e la protezione PF
 
 Per ulteriori informazioni sui formati di file supportati, vedere **Dettagli sul supporto per il file delle API file** in questo argomento.
 
-## Descrizioni e tipi di valore chiave/chiave
+## <a name="keykey-value-types-and-descriptions"></a>Descrizioni e tipi di valore chiave/chiave
 
 Le sezioni seguenti descrivono le chiavi e valori chiave che controllano la crittografia.
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection
+### <a name="hkeylocalmachinesoftwaremicrosoftmsipcfileprotection"></a>HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection
 
 **Tipo**: chiave
 
 **Descrizione**: contiene la configurazione generale dell'API file.
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;
+### <a name="hkeylocalmachinesoftwaremicrosoftmsipcfileprotectionltextgt"></a>HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;
 
 **Tipo**: chiave
 
@@ -55,7 +56,7 @@ Le sezioni seguenti descrivono le chiavi e valori chiave che controllano la crit
 Impostare il valore della **crittografia** della chiave per specificare il comportamento di protezione. Se il valore della **crittografia** non è impostato, si osserva il comportamento predefinito per il tipo di file.
 
 
-### HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;\Encryption*
+### <a name="hkeylocalmachinesoftwaremicrosoftmsipcfileprotectionltextgtencryption"></a>HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\&lt;EXT&gt;\Encryption*
 
 **Tipo**: REG_SZ
 
@@ -76,7 +77,7 @@ Impostare il valore della **crittografia** della chiave per specificare il compo
 
 L'impostazione di un valore diverso o la mancata impostazione produce il comportamento predefinito.
 
-## Comportamento predefinito dei diversi formati dei file
+## <a name="default-behavior-for-different-file-formats"></a>Comportamento predefinito dei diversi formati dei file
 
 -   **File di Office** è abilitata la crittografia nativa.
 -   **File txt, xml, jpg, jpeg, pdf, png, tiff, bmp, gif, giff, jpe, jfif, jif** è abilitata la crittografia nativa (xxx diventa pxxx)
@@ -84,7 +85,7 @@ L'impostazione di un valore diverso o la mancata impostazione produce il comport
 
 Se si tenta di crittografare un tipo di file bloccato, si verifica un errore [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx).
 
-### API file: dettagli sul supporto dei file
+### <a name="file-api-file-support-details"></a>API file: dettagli sul supporto dei file
 
 È possibile aggiungere il supporto nativo per qualsiasi tipo di file (estensione). Ad esempio, per tutte le estensioni &lt;ext&gt; (non Office), verrà usata l'estensione \*p&lt;ext&gt; se la configurazione dell'amministratore per l'estensione è "NATIVA".
 
@@ -106,7 +107,7 @@ Se si tenta di crittografare un tipo di file bloccato, si verifica un errore [IP
 -   Tipo di protezione = Pfile: sample.*zzz* è crittografato e denominato sample.*zzz*.pfile, dove *zzz* è l'estensione del file originale.
 -   Off: Disabilita la crittografia.
 
-### Esempi
+### <a name="examples"></a>Esempi
 
 Le seguenti impostazioni abilitano la crittografia PFile per file con estensione txt. Ai file di Office sarà applicata la protezione nativa (per impostazione predefinita), ai file con estensione .txt sarà applicata la protezione PFile e a tutti gli altri file la protezione sarà bloccata (per impostazione predefinita).
 
@@ -146,7 +147,7 @@ HKEY_LOCAL_MACHINE
                   Encryption = Off
 ```
 
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
 - [Note per gli sviluppatori](developer-notes.md)
 - [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
@@ -156,6 +157,6 @@ HKEY_LOCAL_MACHINE
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

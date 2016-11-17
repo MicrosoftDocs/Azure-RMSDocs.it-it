@@ -1,7 +1,8 @@
 ---
 title: Configurazione di modelli personalizzati per il servizio Azure Rights Management | Azure Information Protection
-description: Informazioni e istruzioni per gli amministratori per configurare e gestire i modelli dei diritti di utilizzo. I modelli semplificano, per utenti e amministratori, l'applicazione ai file riservati di criteri che limitano l'accesso agli utenti autorizzati.
+description: Informazioni e istruzioni per gli amministratori per configurare e gestire i modelli dei diritti di utilizzo. I modelli semplificano, per utenti e amministratori, l&quot;applicazione ai file riservati di criteri che limitano l&quot;accesso agli utenti autorizzati.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: d8db7f0346fad1b9c46423875d1e559d41987686
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: ea64bd17994a9ce38ed0d758ec63156a7f64c732
 
 
 ---
 
-# Configurazione di modelli personalizzati per il servizio Azure Rights Management
+# <a name="configuring-custom-templates-for-the-azure-rights-management-service"></a>Configurazione di modelli personalizzati per il servizio Azure Rights Management
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -66,6 +67,6 @@ Per configurare e usare i modelli personalizzati, usare le informazioni seguenti
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

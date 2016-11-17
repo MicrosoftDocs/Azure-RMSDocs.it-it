@@ -1,7 +1,8 @@
 ---
 title: "Modalità di controllo da parte degli amministratori degli account creati per RMS per utenti singoli | Azure Information Protection"
-description: "Informazioni su come è possibile controllare gli account utente in Azure Active Directory se non si vuole convertire la sottoscrizione di RMS per utenti singoli dell'organizzazione in una sottoscrizione a pagamento."
+description: "Informazioni su come è possibile controllare gli account utente in Azure Active Directory se non si vuole convertire la sottoscrizione di RMS per utenti singoli dell&quot;organizzazione in una sottoscrizione a pagamento."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,15 +13,15 @@ ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2fd29eb6dec94535d0358fe0a2d9c9285fcd7cd1
-ms.openlocfilehash: 6f26faf8a96c388a4640701a12a77e3b4ef60567
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f9999db44758251f7b9b4c8f86549b1ee36e83d3
 
 
 ---
 
 
 
-# Modalità di controllo da parte degli amministratori degli account creati per RMS per utenti singoli
+# <a name="how-administrators-can-control-the-accounts-created-for-rms-for-individuals"></a>Modalità di controllo da parte degli amministratori degli account creati per RMS per utenti singoli
 
 >*Si applica a: Azure Information Protection*
 
@@ -40,12 +41,12 @@ Se non si desidera convertire la sottoscrizione di RMS per utenti singoli dell'o
 Per controllare gli account utente nella directory di Azure o impedire agli utenti di iscriversi a RMS per utenti singoli, è necessario disporre di una sottoscrizione di Azure ed essere proprietari della directory di Azure. Se non si dispone ancora di una sottoscrizione di Azure, è possibile ottenerne una senza alcun costo aggiuntivo. Se durante il processo self-service è stata creata automaticamente una directory, acquisire la proprietà del dominio usato per crearla. Se si dispone già di una directory in Azure, ma gli utenti hanno specificato un nuovo dominio in uso nell'organizzazione, unire il dominio alla directory esistente. Per ulteriori informazioni, vedere le istruzioni in [Cos’è Self-Service Signup per Azure?](https://azure.microsoft.com/documentation/articles/active-directory-self-service-signup/)
 
 
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
 Come è possibile determinare se gli utenti, anziché gli amministratori, hanno creato i propri account in Azure Active Directory per RMS per utenti singoli?  Vedere [Come determinare se gli utenti hanno effettuato l'iscrizione per RMS per utenti singoli](rms-for-individuals-identify-sign-up.md).
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

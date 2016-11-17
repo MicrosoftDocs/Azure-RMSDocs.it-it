@@ -1,7 +1,8 @@
 ---
 title: Configurazione di applicazioni per il servizio Azure Rights Management | Azure Information Protection
-description: Istruzioni che consentono agli amministratori di configurare applicazioni e servizi per supportare il servizio di protezione Azure Rights Management per Azure Information Protection. Ad esempio, le applicazioni di Office quali Word 2013 e Word 2010 e i servizi come Exchange Online (le regole di trasporto, la prevenzione della perdita di dati, l'opzione Non inoltrare e la crittografia messaggi) e SharePoint Online (librerie protette).
+description: Istruzioni che consentono agli amministratori di configurare applicazioni e servizi per supportare il servizio di protezione Azure Rights Management per Azure Information Protection. Ad esempio, le applicazioni di Office quali Word 2013 e Word 2010 e i servizi come Exchange Online (le regole di trasporto, la prevenzione della perdita di dati, l&quot;opzione Non inoltrare e la crittografia messaggi) e SharePoint Online (librerie protette).
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: article
@@ -12,13 +13,13 @@ ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9dee9e7c925258ffd3cd9e783582733e9518d3fa
-ms.openlocfilehash: d141bf56515853f7b6fddda1ddf150b8d3730b78
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: c4b510dac964d0703b7eba8266a244f40b83f403
 
 
 ---
 
-# Configurazione di applicazioni per Azure Rights Management
+# <a name="configuring-applications-for-azure-rights-management"></a>Configurazione di applicazioni per Azure Rights Management
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -48,7 +49,7 @@ Dopo avere distribuito Azure Information Protection per l'organizzazione, usare 
 
     -   [Applicazione RMS sharing per Windows: installazione e configurazione](configure-sharing-app.md#the-rms-sharing-application-for-windows-installation-and-configuration)
 
-    -   [Applicazione RMS sharing per piattaforme mobili: Installazione e gestione](configure-sharing-app.md#the-rms-sharing-application-for-mobile-platforms-installation-and-management)
+    -   [Applicazione RMS sharing per piattaforme mobili: installazione e gestione](configure-sharing-app.md#the-rms-sharing-application-for-mobile-platforms-installation-and-management)
 
 
 Per configurare server locali quali Exchange Server e SharePoint Server, vedere l'articolo relativo alla [distribuzione del connettore Azure Rights Management](deploy-rms-connector.md).
@@ -59,7 +60,7 @@ Per configurare server locali quali Exchange Server e SharePoint Server, vedere 
 
 Oltre a queste applicazioni e a questi servizi, esistono altre applicazioni che supportano le API di Rights Management. Questa categoria include le applicazioni line-of-business scritte internamente mediante Rights Management SDK, nonché le applicazioni di fornitori di software scritte mediante Rights Management SDK. Per tali applicazioni, seguire le istruzioni fornite con esse.
 
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 Dopo aver configurato le applicazioni per il supporto del servizio Azure Rights Management, usare la [Guida di orientamento per la distribuzione di Azure Information Protection](../plan-design/deployment-roadmap.md) per verificare se può essere necessario eseguire operazioni di configurazione aggiuntive prima di distribuire Azure Information Protection a utenti e amministratori. Se tali operazioni non sono necessarie, possono risultare utili le informazioni operative seguenti:
 
 - [Verifica del servizio Azure Rights Management](verify.md)
@@ -74,6 +75,6 @@ Dopo aver configurato le applicazioni per il supporto del servizio Azure Rights 
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

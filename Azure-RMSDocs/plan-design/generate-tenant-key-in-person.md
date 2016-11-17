@@ -2,6 +2,7 @@
 title: Generare e trasferire la chiave del tenant di persona&#58; CONTENUTO RIMOSSO | Azure RMS
 description: "Le informazioni contenute in questo articolo sono state rimosse perché non più pertinenti in quanto Azure Rights Management usa l&quot;insieme di credenziali della chiave di Azure per le chiavi del tenant gestite dal cliente (note anche come bring your own key o BYOK)."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

@@ -3,6 +3,7 @@ title: Istruzioni e informazioni per lo sviluppatore | Azure RMS
 description: Questo argomento illustra indicazioni specifiche per diversi scenari di sviluppo importanti.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/18/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 593b8b505b8bd241c301c95ee6280f93f14901b9
-ms.openlocfilehash: 54ce450600b2a10e6889d2684ce26c9da9f9167e
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 93ed9760d79f2f38d4bee302ebb5c7c6368b1bbe
 
 
 ---
 
-# Istruzioni e informazioni per lo sviluppatore
+# <a name="developer-guidance-and-information"></a>Istruzioni e informazioni per lo sviluppatore
 
 Questa sezione descrive le indicazioni specifiche per diversi scenari di sviluppo importanti, nonché informazioni generali sullo sviluppo con questo SDK. Gli scenari in questa sezione sono specifici per la versione corrente di Rights Management Services SDK 2.1 e possono subire modifiche nelle versioni successive.
 - [Procedura: Usare l'autenticazione ADAL](how-to-use-adal-authentication.md): autenticazione con Azure RMS per l'app usando Azure Active Directory Authentication Library (ADAL).
@@ -40,7 +41,7 @@ Questa sezione descrive le indicazioni specifiche per diversi scenari di svilupp
 - [Informazioni di riferimento sulle restrizioni di utilizzo](usage-restriction-reference.md): le restrizioni di utilizzo vengono definite dalle costanti elencate in questo argomento.
 
  
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 * [Panoramica](ad-rms-overview.md)
  
 
@@ -48,6 +49,6 @@ Questa sezione descrive le indicazioni specifiche per diversi scenari di svilupp
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

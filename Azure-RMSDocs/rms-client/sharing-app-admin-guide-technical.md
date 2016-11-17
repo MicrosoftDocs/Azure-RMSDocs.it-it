@@ -2,6 +2,7 @@
 title: Panoramica tecnica per l&quot;applicazione Rights Management sharing | Azure Information Protection
 description: Dettagli tecnici per gli amministratori sulle reti aziendali che sono responsabili della distribuzione dell&quot;applicazione RMS sharing per Windows.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

@@ -1,21 +1,23 @@
 ---
-title: Come configurare un'etichetta per applicare la protezione di Rights Management | Azure Information Protection
-description: "È possibile proteggere i documenti e i messaggi di posta elettronica più sensibili tramite il servizio Rights Management, che usa criteri di crittografia, identità e autorizzazione per prevenire la perdita di dati. Questa protezione viene applicata quando si configura un'etichetta per usare un modello di Rights Management."
+title: Come configurare un&quot;etichetta per applicare la protezione di Rights Management | Azure Information Protection
+description: "È possibile proteggere i documenti e i messaggi di posta elettronica più sensibili tramite il servizio Rights Management, che usa criteri di crittografia, identità e autorizzazione per prevenire la perdita di dati. Questa protezione viene applicata quando si configura un&quot;etichetta per usare un modello di Rights Management."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: f17cf257607b0f74ca8bdaef13130da2f62dd587
-ms.openlocfilehash: 830e982fc1f0443545942c1deb1a2fc93431be17
+ms.sourcegitcommit: addc24fed28cee52b57c7e3bde926d6324478e7b
+ms.openlocfilehash: 4f3c77df23207c3a76a768a1fe428484339de18f
 
 
 ---
 
-# Come configurare un'etichetta per applicare la protezione di Rights Management
+# <a name="how-to-configure-a-label-to-apply-rights-management-protection"></a>Come configurare un'etichetta per applicare la protezione di Rights Management
 
 >*Si applica a: Azure Information Protection*
 
@@ -23,7 +25,7 @@ ms.openlocfilehash: 830e982fc1f0443545942c1deb1a2fc93431be17
 
 Questo modello può essere uno dei modelli predefiniti che vengono creati automaticamente quando si attiva Azure Rights Management oppure un modello personalizzato. I modelli di reparto di Azure Rights Management sono supportati ma applicano la protezione solo quando l'autore del documento o del messaggio di posta elettronica si trova all'interno dell'ambito configurato del modello. Se l'utente è all'esterno dell'ambito, viene visualizzato un messaggio che indica che Azure Information Protection non può applicare l'etichetta.
 
-## Come funziona la protezione
+## <a name="how-the-protection-works"></a>Come funziona la protezione
 
 Quando un documento o un messaggio di posta elettronica è protetto da Rights Management, viene crittografato quando i dati sono inattivi e in transito e può essere decrittografato solo dagli utenti autorizzati. Questa crittografia rimane associata al documento o messaggio di posta elettronica, anche se viene rinominato. È anche possibile configurare diritti di utilizzo e restrizioni, come negli esempi seguenti:
 
@@ -43,7 +45,7 @@ Per altre informazioni su Azure Rights Management e sul relativo funzionamento, 
 > Per configurare un'etichetta per applicare la protezione di Azure Rights Management, è necessario che sia attivo il servizio Azure Rights Management per l'organizzazione. Se non è ancora stato fatto, vedere [Attivazione di Azure Rights Management](../deploy-use/activate-service.md).
 
 
-## Per configurare un'etichetta per applicare la protezione di Rights Management
+## <a name="to-configure-a-label-to-apply-rights-management-protection"></a>Per configurare un'etichetta per applicare la protezione di Rights Management
 
 1. Se non è già stato fatto, aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale, quindi passare al pannello **Azure Information Protection**. 
 
@@ -77,12 +79,12 @@ Per altre informazioni su Azure Rights Management e sul relativo funzionamento, 
 
 7. Per mettere le modifiche a disposizione degli utenti, nel pannello **Azure Information Protection** fare clic su **Publish** (Pubblica).
 
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organization-s-policy).  
+Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).  
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO1-->
 
 

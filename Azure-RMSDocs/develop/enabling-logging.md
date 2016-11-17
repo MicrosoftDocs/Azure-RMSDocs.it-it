@@ -1,8 +1,9 @@
 ---
-title: Procedura&#58; Abilitare la registrazione delle prestazioni e dell'errore | Azure RMS
+title: Procedura&#58; Abilitare la registrazione delle prestazioni e dell&quot;errore | Azure RMS
 description: "Microsoft Rights Management SDK 4.2 gestisce i log delle diagnosi e delle prestazioni caricati tramite una proprietà a dispositivo singolo."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,17 +15,25 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 118aa3e25c6be9d0bf43141585d79030fc79224a
+ms.sourcegitcommit: ac77c4e0bced244f1cec74f15cbe0d62c9ab4437
+ms.openlocfilehash: 66d24f4ed737526525c041de7aeb96de35b37032
 
 
 ---
 
-# Procedura: Abilitare la registrazione delle prestazioni e dell'errore
+# <a name="how-to-enable-error-and-performance-logging"></a>Procedura: Abilitare la registrazione delle prestazioni e dell'errore
 Microsoft Rights Management SDK 4.2 gestisce i log delle diagnosi e delle prestazioni caricati tramite una proprietà a dispositivo singolo.
 
-## Panoramica ##
-È possibile migliorare l'esperienza degli utenti e la risoluzione dei problemi, consentendo il caricamento automatico delle registrazioni di diagnostica e delle prestazioni in Microsoft. Per rispettare la privacy degli utenti, lo sviluppatore dell'app deve chiedere il consenso all'utente prima di abilitare la registrazione automatica.
+## <a name="overview"></a>Panoramica ##
+È possibile migliorare l'esperienza degli utenti e la risoluzione dei problemi abilitando il caricamento automatico dei dati delle registrazioni della diagnostica, delle prestazioni e della telemetria in Microsoft. 
+
+> [!IMPORTANT] 
+> Per rispettare la privacy degli utenti, lo sviluppatore dell'app deve chiedere il consenso all'utente prima di abilitare la registrazione automatica.
+
+> [!NOTE]
+> Come esempio, ecco un messaggio standard usato da Microsoft per la notifica di registrazione: 
+>
+> *Attivando la registrazione degli errori e delle prestazioni, l’utente accetta l'invio di tali dati a Microsoft.  Microsoft raccoglie i dati sugli errori e sulle prestazioni tramite Internet ("Dati").  Microsoft usa questi dati per offrire e migliorare la qualità, la sicurezza e l'integrità dei prodotti e dei servizi Microsoft.  Vengono analizzate, ad esempio, prestazioni e affidabilità quali le funzionalità usate dagli utenti, la velocità di risposta delle funzionalità, le prestazioni del dispositivo, le interazioni con l'interfaccia utente e tutti i problemi che possono verificarsi durante l'uso del prodotto.  I Dati includono anche informazioni sulla configurazione del software, ad esempio la versione in esecuzione e l'indirizzo IP.*  
 
 Il controllo della registrazione viene gestito tramite due proprietà.
 
@@ -39,7 +48,7 @@ Il controllo della registrazione viene gestito tramite due proprietà.
 
 In ognuno dei frammenti di codice di esempio seguenti, l'applicazione chiamante può impostare o eseguire una query sulla proprietà.
 
-### Android ###
+### <a name="android"></a>Android ###
 Abilitare la registrazione automatica
 
     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
@@ -52,7 +61,7 @@ Ottenere l'impostazione del flag di controllo della registrazione corrente
     SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
     Boolean isLogUploadEnabled = preferences.getBoolean(&quot;IpcCustomerExperienceDataCollectionEnabled&quot;, false);
 
-## iOS ##
+## <a name="ios"></a>iOS ##
 Abilitare la registrazione automatica
 
     NSUserDefaults \*prefs = [NSUserDefaults standardUserDefaults];
@@ -74,12 +83,12 @@ Ottenere l'impostazione del controllo a livello di log
     [[NSUserDefaults standardUserDefaults] boolForKey:@&quot;IpcLogLevel&quot;];
  
 
-## Windows ##
+## <a name="windows"></a>Windows ##
 Abilitare la registrazione automatica
 
     CustomerExperienceConfiguration::Option = CustomerExperienceOptions::LoggingEnabledNow;
 
-Per altre informazioni sulle impostazioni facoltative, vedere [CustomerExperienceOptions](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement#msipcthin2_customerexperienceoptions).
+Per altre informazioni sulle impostazioni facoltative, vedere [CustomerExperienceOptions](https://msdn.microsoft.com/library/microsoft.rightsmanagement.customerexperienceoptions.aspx).
 
 Ottenere l'impostazione del flag di controllo della registrazione corrente
 
@@ -96,6 +105,6 @@ Ottenere l'impostazione del flag di controllo della registrazione corrente
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO1-->
 
 

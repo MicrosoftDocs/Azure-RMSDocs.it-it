@@ -3,6 +3,7 @@ title: Abilitazione della notifica tramite posta elettronica | Azure RMS
 description: La notifica tramite posta elettronica consente al proprietario di un contenuto protetto di ricevere un messaggio quando qualcuno accede al contenuto.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 77e2dfe7f2afb1e70de658850f83f86e9224aea6
-ms.openlocfilehash: 411c549cc865914c6e35ececad99da0a0d46c5d4
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 5da480834485d58028b366c8fbb9a53412cd7c6a
 
 
 ---
 
-# Procedura: Abilitare la notifica tramite posta elettronica
+# <a name="howto-enable-email-notification"></a>Procedura: Abilitare la notifica tramite posta elettronica
 
 La notifica tramite posta elettronica consente al proprietario di un contenuto protetto di ricevere un messaggio quando qualcuno accede al contenuto.
 
@@ -56,7 +57,7 @@ La tabella seguente contiene i campi dei dati dell'applicazione e le coppie di n
 |MS.Notify.TZSN|string|“Ora solare Pacifico”|**Origine:** TimeZoneInfo.Local.StandardName - Nome del fuso orario ora solare.<br><br>Questo valore deve corrispondere al nome localizzato del fuso orario ora solare.|
 |MS.Notify.TZDN|string|"Ora legale Pacifico"|**Origine:** TimeZoneInfo.Local.DaylightName - Nome del fuso orario ora legale.<br><br>Questo valore deve corrispondere al nome localizzato del fuso orario ora legale. Può essere uguale al nome del fuso orario ora solare se il fuso orario non supporta l'ora legale.|
 
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
 - [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx)
 - [IPC\_LI\_APP\_SPECIFIC\_DATA](https://msdn.microsoft.com/library/hh535287.aspx)
@@ -67,6 +68,6 @@ La tabella seguente contiene i campi dei dati dell'applicazione e le coppie di n
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

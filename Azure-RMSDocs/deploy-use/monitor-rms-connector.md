@@ -1,7 +1,8 @@
 ---
 title: Monitorare il connettore di Azure Rights Management | Azure Information Protection
-description: Informazioni su come monitorare il connettore e l'uso da parte dell'organizzazione del servizio Azure Rights Management di Azure Information Protection.
+description: Informazioni su come monitorare il connettore e l&quot;uso da parte dell&quot;organizzazione del servizio Azure Rights Management di Azure Information Protection.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: article
@@ -12,19 +13,19 @@ ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
-ms.openlocfilehash: af75705e8c256811d1816c2ad52e42e98b4db503
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 65d9e0bb46238d9fda31b8fb47e8e4368d96e1b2
 
 
 ---
 
-# Monitorare il connettore di Azure Rights Management
+# <a name="monitor-the-azure-rights-management-connector"></a>Monitorare il connettore di Azure Rights Management
 
 >*Si applica a: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
 
 Dopo aver installato e configurato il connettore RMS, è possibile usare i metodi e le informazioni seguenti per monitorare più facilmente il connettore e l'uso da parte dell'organizzazione del servizio Azure Rights Management di Azure Information Protection.
 
-## Voci del registro eventi dell'applicazione
+## <a name="application-event-log-entries"></a>Voci del registro eventi dell'applicazione
 
 Per registrare le voci relative agli eventi del **connettore di Microsoft RMS** viene usato il registro eventi dell'applicazione. 
 
@@ -41,7 +42,7 @@ Come per tutte le voci di registro eventi, analizzare il messaggio per ottenere 
 
 Oltre a controllare il registro eventi quando si distribuisce il connettore per la prima volta, verificare regolarmente se sono presenti avvisi ed errori. È ad esempio possibile che il connettore funzioni inizialmente come previsto, ma che altri amministratori modifichino le configurazioni dipendenti. Ad esempio, un altro amministratore potrebbe modificare la configurazione del server proxy Web impedendo ai server del connettore RMS di accedere a Internet (errore 3001) o rimuovere un account di computer da un gruppo autorizzato per l'uso del connettore (avviso 2001).
 
-### ID registro eventi e descrizioni
+### <a name="event-log-ids-and-descriptions"></a>ID registro eventi e descrizioni
 
 Usare le sezioni seguenti per identificare gli ID evento, le descrizioni e le informazioni aggiuntive possibili.
 
@@ -113,7 +114,7 @@ Il messaggio di evento contiene informazioni sull'account e sul computer che ten
 
 Avviso **2002**
 
-**Per la connessione dal client elencata di seguito viene utilizzata una connessione (HTTP) non protetta.**
+**Per la connessione dal client elencata di seguito viene usata una connessione (HTTP) non protetta.**
 
 Questo evento viene registrato quando un server locale stabilisce una connessione con esito positivo al connettore RMS, ma la connessione usa un protocollo HTTP (meno sicuro) anziché HTTPS (più sicuro). Viene registrato un evento per ogni account anziché per ogni connessione. Questo evento viene generato nuovamente se l'account passa al protocollo HTTPS ma in seguito ripristina il protocollo HTTP.
 
@@ -125,7 +126,7 @@ Per informazioni su come configurare il connettore RMS per le connessioni HTTPS,
 
 Avviso **2003**
 
-**L'elenco delle autorizzazioni è vuoto. Non sarà possibile utilizzare il servizio finché non viene popolato l'elenco di utenti e gruppi autorizzati per il connettore.**
+**L'elenco delle autorizzazioni è vuoto. Il servizio non sarà utilizzabile fino a quando non viene popolato l'elenco di utenti e gruppi autorizzati per il connettore.**
 
 Questo evento viene registrato quando il connettore RMS non ha un elenco di account autorizzati, quindi nessun server locale può connettersi ad esso. Il connettore RMS scarica l'elenco ogni 15 minuti da Azure RMS. 
 
@@ -135,7 +136,7 @@ Per specificare gli account, usare lo strumento di amministrazione del connettor
 
 Errore **3000**
 
-**Si è verificata un'eccezione non gestita nel connettore RMS Microsoft.**
+**Si è verificata un'eccezione non gestita nel connettore Microsoft RMS.**
 
 Questo evento viene registrato ogni volta che il connettore RMS rileva un errore imprevisto, con i dettagli dell'errore nel messaggio di evento.
 
@@ -153,13 +154,13 @@ Questo evento viene registrato se il connettore RMS non scarica l'elenco più re
 
 ----
 
-## Contatori delle prestazioni
+## <a name="performance-counters"></a>Contatori delle prestazioni
 
 Quando si installa il connettore RMS, vengono creati automaticamente i contatori delle prestazioni del **connettore di Microsoft Rights Management**, che possono essere utili per monitorare le prestazioni relative all'uso del servizio Azure Rights Management tramite il connettore. Se ad esempio si verificano regolarmente ritardi nella protezione di documenti o messaggi di posta elettronica oppure nell'apertura di documenti o messaggi di posta elettronica protetti, i contatori delle prestazioni consentono di determinare se tali ritardi sono dovuti ai tempi di elaborazione sul connettore, ai tempi di elaborazione del servizio Azure Rights Management o a ritardi sulla rete. Per identificare più facilmente il punto in cui si verifica il ritardo, cercare i contatori che includono i valori medi per **Connector Processing Time** (Tempo di elaborazione del connettore), **Service Response Time** (Tempo di risposta del servizio) e **Connector Response Time** (Tempo di risposta del connettore). Ad esempio: **Licensing Successful Batched Request Average Connector Response Time** (Tempo medio di risposta del connettore alle richieste di licenze in batch con esito positivo).
 
 Se di recente sono stati aggiunti nuovi account di server per l'uso del connettore, è utile controllare il contatore **Time since last authorization policy update** (Tempo trascorso dall'ultimo aggiornamento di criteri di autorizzazione) per accertarsi che il connettore abbia scaricato l'elenco da quando è stato aggiornato o se è necessario attendere un po' più di tempo (fino a 15 minuti).
 
-## RMS Analyzer
+## <a name="rms-analyzer"></a>RMS Analyzer
 
 È possibile usare lo strumento Rights Management Services Analyzer per monitorare più facilmente lo stato del connettore e identificare eventuali problemi di configurazione.
 
@@ -167,7 +168,7 @@ Se non si è ancora scaricato questo strumento, è possibile eseguire questa ope
 
 Per altre informazioni e istruzioni, vedere **Details** (Dettagli) e **Install Instructions** (Istruzioni di installazione) nella pagina di download.
 
-## Registrazione
+## <a name="logging"></a>Registrazione
 
 La registrazione dei dati relativi all'utilizzo consente di identificare i casi in cui i messaggi di posta elettronica e i documenti vengono protetti e utilizzati. Quando questa operazione viene eseguita tramite il connettore RMS, il campo relativo all'ID utente nei log contiene il nome dell'entità servizio **Aadrm_S-1-7-0** che viene generato automaticamente per il connettore RMS.
 
@@ -192,6 +193,6 @@ Se si vuole eseguire una registrazione più dettagliata a scopo di diagnosi, è 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

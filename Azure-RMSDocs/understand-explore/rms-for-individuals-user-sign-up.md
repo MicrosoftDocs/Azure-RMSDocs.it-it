@@ -1,9 +1,10 @@
 ---
 title: "Modalità di iscrizione per RMS per utenti singoli | Azure Information Protection"
-description: Istruzioni per eseguire l'iscrizione all'account gratuito e informazioni tecniche sul funzionamento del processo.
+description: Istruzioni per eseguire l&quot;iscrizione all&quot;account gratuito e informazioni tecniche sul funzionamento del processo.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 10/25/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,21 +13,21 @@ ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 78b975c2babad347fc5be7956d504c7283508962
-ms.openlocfilehash: 093bce2835b0606c127d9bcecab5ec353160833c
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 82f59842420667c5ad28a6704c9df0d26043d50c
 
 
 ---
 
-# Modalità di iscrizione per RMS per utenti singoli
+# <a name="how-users-sign-up-for-rms-for-individuals"></a>Modalità di iscrizione per RMS per utenti singoli
 
 >*Si applica a: Azure Information Protection*
 
-Per iscriversi per ottenere l'account gratuito, è necessario visitare la [pagina di Microsoft Azure Rights Management](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload)e specificare il proprio indirizzo di posta elettronica aziendale. Il modo più comune con cui si verrà indirizzati a questa pagina per l'iscrizione è quando si riceve un messaggio di posta elettronica con un allegato protetto, che contiene istruzioni per iscriversi. Si riceverà un messaggio di posta elettronica di risposta da Microsoft e sarà quindi possibile completare la procedura di iscrizione inserendo i dettagli per creare l'account. Dopo il completamento, verrà visualizzata una pagina in cui è possibile scaricare l'applicazione di condivisione per vari dispositivi, un collegamento al manuale dell'utente e un collegamento a un elenco aggiornato delle applicazioni che supportano la protezione di Rights Management in modo nativo. 
+Per iscriversi per ottenere l'account gratuito, è necessario visitare la [pagina di Microsoft Azure Information Protection](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload) e specificare il proprio indirizzo di posta elettronica aziendale. Il modo più comune con cui si verrà indirizzati a questa pagina per l'iscrizione è quando si riceve un messaggio di posta elettronica con un allegato protetto, che contiene istruzioni per iscriversi. Si riceverà un messaggio di posta elettronica di risposta da Microsoft e sarà quindi possibile completare la procedura di iscrizione inserendo i dettagli per creare l'account. Dopo il completamento, verrà visualizzata una pagina in cui è possibile scaricare l'applicazione di condivisione per vari dispositivi, un collegamento al manuale dell'utente e un collegamento a un elenco aggiornato delle applicazioni che supportano la protezione di Rights Management in modo nativo. 
 
-## Per iscriversi per RMS per utenti singoli
+## <a name="to-sign-up-for-rms-for-individuals"></a>Per iscriversi per RMS per utenti singoli
 
-1.  Se si usa un computer Windows o Mac o un dispositivo mobile, passare alla [pagina di Microsoft Azure Rights Management](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload).
+1.  Su un computer Windows o Mac o un dispositivo mobile, andare alla [pagina di Microsoft Azure Information Protection](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload).
 
 2.  Digitare l'indirizzo di posta elettronica usato come indirizzo aziendale, ad esempio **janetm@contoso.com** o **p.dover@fabrikam.com**.
 
@@ -35,9 +36,9 @@ Per iscriversi per ottenere l'account gratuito, è necessario visitare la [pagin
 
 3.  Fare clic su **Accedi**.
 
-    Microsoft usa l'indirizzo di posta elettronica per verificare se l'organizzazione ha già una [sottoscrizione pagata che include Azure RMS](../get-started/requirements-subscriptions.md). In tal caso, non è necessario RMS per utenti singoli quindi si verrà connessi immediatamente e l’iscrizione self-service per RMS per utenti singoli verrà annullata. Se non viene trovata una sottoscrizione a pagamento per Azure RMS, si procederà al passaggio successivo.
+    Microsoft usa l'indirizzo di posta elettronica dell'utente per verificare se l'organizzazione dispone già di una [sottoscrizione a pagamento per Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) o di un [abbonamento a Office 365 che include la protezione dei dati mediante Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). In tal caso, non è necessario RMS per utenti singoli quindi si verrà connessi immediatamente e l’iscrizione self-service per RMS per utenti singoli verrà annullata. Se non viene trovata una sottoscrizione a pagamento, si procederà al passaggio successivo.
 
-4.  Attendere un messaggio di posta elettronica di conferma proveniente da Microsoft e inviato all'indirizzo di posta indicato Il messaggio proviene dal team di Office 365 (support@email.microsoftonline.com) e ha come oggetto il testo **Finish signing up for Microsoft Azure Rights Management (Completare l'iscrizione a Microsoft Azure Rights Management)**.
+4.  Attendere un messaggio di posta elettronica di conferma proveniente da Microsoft e inviato all'indirizzo di posta indicato Il messaggio proviene dal team di Office 365 (support@email.microsoftonline.com) e ha come oggetto il testo **Finish signing up for Microsoft Azure Information Protection** (Completare l'iscrizione a Microsoft Azure Information Protection).
 
 5.  Quando si riceve il messaggio di posta elettronica, fare clic su **Yes, that's me (Sì, sono io)** per confermare l'indirizzo di posta elettronica e completare il processo di iscrizione.
 
@@ -47,7 +48,7 @@ Per iscriversi per ottenere l'account gratuito, è necessario visitare la [pagin
 
 Dopo avere creato l'account, è possibile iniziare a proteggere i file e a leggere quelli protetti da altri utenti. Quando viene chiesto di accedere per proteggere i file o leggere quelli protetti, immettere l'indirizzo di posta elettronica e la password usati per creare l'account per RMS per utenti singoli.
 
-## Panoramica tecnica del processo di registrazione
+## <a name="technical-overview-of-the-signup-process"></a>Panoramica tecnica del processo di registrazione
 RMS per utenti singoli usa un processo di iscrizione self-service impiegato anche da altri servizi che usano la tecnologia basata su Microsoft Cloud per autenticare gli utenti.
 
 Questo è ciò che avviene in background quando un utente effettua l'iscrizione a RMS per utenti singoli e la sua organizzazione non dispone di un abbonamento a Office 365 o di una sottoscrizione di Azure e quindi non dispone di una directory in Azure per autenticare gli utenti:
@@ -87,16 +88,16 @@ Questo processo non prevede costi aggiuntivi per l'organizzazione né attività 
 
     -   Fornire agli utenti la possibilità di rilevare e revocare i documenti protetti, se queste funzionalità sono supportate dalla [sottoscrizione Azure RMS](https://technet.microsoft.com/dn858608). Per altre informazioni, vedere [Tenere traccia dei documenti e revocarli](../rms-client/sharing-app-track-revoke.md) nella [Guida dell'utente dell'applicazione RMS sharing](../rms-client/sharing-app-user-guide.md).
 
-    -   Implementare una soluzione BYOK in modo da generare la chiave del tenant per Azure Rights Management in locale in base ai propri criteri IT e di trasferirla in modo sicuro a Microsoft tramite un modulo di protezione hardware. Per altre informazioni, vedere [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](../plan-design/plan-implement-tenant-key.md).
+    -   Implementare una soluzione BYOK in modo da generare la chiave del tenant per Azure Rights Management in locale in base ai propri criteri IT e trasferirla in modo sicuro a Microsoft tramite un modulo di protezione hardware. Per altre informazioni, vedere [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
 
 
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 Vedere [Modalità di controllo da parte degli amministratori degli account creati per RMS per utenti singoli](rms-for-individuals-take-control.md).
 
 
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

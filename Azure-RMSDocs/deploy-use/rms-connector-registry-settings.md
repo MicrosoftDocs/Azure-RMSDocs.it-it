@@ -2,6 +2,7 @@
 title: Impostazioni del Registro di sistema per il connettore RMS | Azure Information Protection
 description: "Informazioni sulle impostazioni del Registro di sistema sui server tramite il connettore RMS. Il metodo consigliato per configurare tali impostazioni è usare lo strumento di configurazione server per il connettore Microsoft RMS."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,14 +13,14 @@ ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: d5b6a1fc3fa0a19f3a6b65aa7b8815eda7432cd7
-ms.openlocfilehash: 1dd1b26735732f4bef8cf73a566b0f26b7610a82
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: a0132404bb9ccb202c552aaca680659947d9c888
 
 
 ---
 
 
-# Impostazioni del Registro di sistema per il connettore Rights Management
+# <a name="registry-setting-for-the-rights-management-connector"></a>Impostazioni del Registro di sistema per il connettore Rights Management
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -45,7 +46,7 @@ Istruzioni per l'uso delle impostazioni:
 -   Usare il prefisso HTTPS per l'URL del connettore se quest'ultimo è stato configurato per comunicare con i server locali mediante tale protocollo. Per altre informazioni, vedere la sezione [Configurazione del connettore RMS per l'uso di HTTPS](install-configure-rms-connector.md#configuring-the-rms-connector-to-use-https) nelle istruzioni principali. Gli URL di Microsoft RMS usano sempre HTTPS.
 
 
-## Impostazioni del Registro di sistema per Exchange 2016 o Exchange 2013
+## <a name="exchange-2016-or-exchange-2013-registry-settings"></a>Impostazioni del Registro di sistema per Exchange 2016 o Exchange 2013
 
 **Percorso del Registro di sistema:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
@@ -96,7 +97,7 @@ Istruzioni per l'uso delle impostazioni:
 - https://*ConnectorFQDN*
 
 
-## Impostazioni del Registro di sistema per Exchange 2010
+## <a name="exchange-2010-registry-settings"></a>Impostazioni del Registro di sistema per Exchange 2010
 
 **Percorso del Registro di sistema:** HKEY_LOCAL_MACHINE\Software\Microsoft\MSDRM\ServiceLocation\Activation
 
@@ -145,7 +146,7 @@ Istruzioni per l'uso delle impostazioni:
 - https://*ConnectorFQDN*
 
 
-## Impostazioni del Registro di sistema di SharePoint 2016 o SharePoint 2013
+## <a name="sharepoint-2016-or-sharepoint-2013-registry-settings"></a>Impostazioni del Registro di sistema di SharePoint 2016 o SharePoint 2013
 
 **Percorso del Registro di sistema:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\LicensingRedirection
 
@@ -192,7 +193,7 @@ Istruzioni per l'uso delle impostazioni:
 
 
 
-## Impostazioni del Registro di sistema per i file server e la funzionalità Infrastruttura di classificazione file
+## <a name="file-server-and-file-classification-infrastructure-registry-settings"></a>Impostazioni del Registro di sistema per i file server e la funzionalità Infrastruttura di classificazione file
 
 **Percorso del Registro di sistema:** HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSDRM\ServiceLocation\EnterprisePublishing
 
@@ -216,6 +217,6 @@ Istruzioni per l'uso delle impostazioni:
 Tornare a [Distribuzione del connettore di Azure Rights Management](deploy-rms-connector.md)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

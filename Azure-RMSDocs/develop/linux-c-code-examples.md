@@ -3,6 +3,7 @@ title: Esempi di codice Linux | Azure RMS
 description: In questo argomento sono presentati scenari elementi di codice importanti per la versione Linux di RMS SDK.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,19 +15,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 7fa2062e1aabf9c3a6ed054476ed6880ebf0bc5b
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: cb0ce6cc8f4740ffc04b36b02392bed2c5f5490c
 
 
 ---
 
-# Esempi di codice Linux
+# <a name="linux-code-examples"></a>Esempi di codice Linux
 
 In questo argomento sono presentati scenari elementi di codice importanti per la versione Linux di RMS SDK.
 
 I frammenti di codice riportati di seguito provengono da applicazioni di esempio, *rms\_sample* e *rmsauth\_sample*. Per ulteriori informazioni, vedere gli [esempi](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples) sul repository GitHub.
 
-## Scenario: accesso alle informazioni sui criteri di protezione da un file protetto
+## <a name="scenario-access-protection-policy-information-from-a-protected-file"></a>Scenario: accesso alle informazioni sui criteri di protezione da un file protetto
 
 **Apre e legge un file protetto con RMS**
 **Sorgente**: [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
@@ -146,7 +147,7 @@ I frammenti di codice riportati di seguito provengono da applicazioni di esempio
       return fsResult;
     }
 
-## Scenario: creare un nuovo file protetto tramite un modello
+## <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scenario: creare un nuovo file protetto tramite un modello
 
 **Protegge un file con un modello selezionato dall'utente**
 **Sorgente**: [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
@@ -286,7 +287,7 @@ I frammenti di codice riportati di seguito provengono da applicazioni di esempio
     
 
 
-## Scenario: protezione personalizzata di un file
+## <a name="scenario-protect-a-file-using-custom-protection"></a>Scenario: protezione personalizzata di un file
 
 **Protegge un file tramite una protezione personalizzata**
 **Sorgente**: [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
@@ -403,7 +404,7 @@ I frammenti di codice riportati di seguito provengono da applicazioni di esempio
     ConvertToPFileUsingPolicy(policy, inStream, fileExt, outStream);
     
 
-## WorkerThread - un metodo di supporto
+## <a name="workerthread-a-supporting-method"></a>WorkerThread - un metodo di supporto
 
 
 Il *WorkerThread()* viene chiamato da due degli scenari di esempio precedenti, **Creazione di un flusso di file protetto** e **Protezione di un file con un criterio specifico**, nel modo seguente:
@@ -498,7 +499,7 @@ Il *WorkerThread()* viene chiamato da due degli scenari di esempio precedenti, *
     }
 
 
-## scenario: autenticazione di RMS
+## <a name="scenario-rms-authentication"></a>scenario: autenticazione di RMS
 
 Gli esempi seguenti illustrano due diversi approcci di autenticazione, relativi a come ottenere i token oAuth2 per l'autenticazione di Azure con l'interfaccia utente e senza l'interfaccia utente.
 **Acquisizione del token di autenticazione oAuth2 con l'interfaccia utente**
@@ -593,6 +594,6 @@ Descrizione: è possibile impostare il percorso della cache o usare l'impostazio
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

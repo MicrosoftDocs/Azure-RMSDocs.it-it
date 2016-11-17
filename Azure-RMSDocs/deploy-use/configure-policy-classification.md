@@ -1,21 +1,23 @@
 ---
 title: Come configurare le condizioni per la classificazione automatica e consigliata | Azure Information Protection
-description: "Quando si configurano le condizioni per un'etichetta, è possibile assegnare automaticamente un'etichetta a un documento o messaggio di posta elettronica. In alternativa, è possibile richiedere agli utenti di selezionare l'etichetta consigliata."
+description: "Quando si configurano le condizioni per un&quot;etichetta, è possibile assegnare automaticamente un&quot;etichetta a un documento o messaggio di posta elettronica. In alternativa, è possibile richiedere agli utenti di selezionare l&quot;etichetta consigliata."
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: ebb11148718f22c79bb49c82b9855f5e6f2a5b18
-ms.openlocfilehash: 3f7633f29760ceca0ca44fbfe5b99eb33a32c197
+ms.sourcegitcommit: d5b3f3fc473661022a4f17b6587d58a252d07d1a
+ms.openlocfilehash: bd6adab05c4f087f5441d168c3385057ce5b6355
 
 
 ---
 
-# Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection
+# <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
 
@@ -44,7 +46,7 @@ Ecco un esempio di richiesta quando si configura una condizione per l'applicazio
 
 In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per applicare l'etichetta consigliata oppure ignorare il suggerimento chiudendo la barra.
 
-## Per configurare la classificazione consigliata o automatica per un'etichetta
+## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>Per configurare la classificazione consigliata o automatica per un'etichetta
 
 1. Se non è già stato fatto, in una nuova finestra del browser accedere al [portale di Azure](https://portal.azure.com) come amministratore globale e quindi passare al pannello **Azure Information Protection**. 
     
@@ -72,7 +74,7 @@ In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per 
 
 6. Per mettere le modifiche a disposizione degli utenti, nel pannello **Azure Information Protection** fare clic su **Publish** (Pubblica).
 
-## Informazioni sulle condizioni predefinite
+## <a name="information-about-the-builtin-conditions"></a>Informazioni sulle condizioni predefinite
 
 Durante il periodo di anteprima è possibile selezionare le condizioni seguenti:
 
@@ -87,7 +89,7 @@ Durante il periodo di anteprima è possibile selezionare le condizioni seguenti:
 - [International Banking Account Number (IBAN)](#international-banking-account-number-iban)
 
 
-### Codice SWIFT
+### <a name="swift-code"></a>Codice SWIFT
 
 Viene trovata la corrispondenza con questo tipo di informazioni quando il contenuto include quanto segue:  
 
@@ -113,7 +115,7 @@ Esempi per il test:
 ----
 
 
-### Numero di carta di credito
+### <a name="credit-card-number"></a>Numero di carta di credito
 
 Viene trovata la corrispondenza con questo tipo di informazioni quando il contenuto include quanto segue:  
 
@@ -136,7 +138,7 @@ Esempi per il test:
 
 ----
 
-### ABA Routing Number (Codice ABA)
+### <a name="aba-routing-number"></a>ABA Routing Number (Codice ABA)
 
 Viene trovata la corrispondenza con questo tipo di informazioni quando il contenuto include quanto segue:  
 
@@ -173,7 +175,7 @@ Esempi per il test:
 
 ----
 
-### USA Social Security Number (SSN) (Numero di previdenza sociale USA - SSN)
+### <a name="usa-social-security-number-ssn"></a>USA Social Security Number (SSN) (Numero di previdenza sociale USA - SSN)
 
 Viene trovata la corrispondenza con questo tipo di informazioni quando il contenuto include quanto segue:  
 
@@ -199,7 +201,7 @@ Esempi per il test:
 
 ----
 
-### International Banking Account Number (IBAN)
+### <a name="international-banking-account-number-iban"></a>International Banking Account Number (IBAN)
 
 Viene trovata la corrispondenza con questo tipo di informazioni quando il contenuto include quanto segue:  
 
@@ -213,15 +215,15 @@ Esempi per il test:
 - **GB29 NWBK 6016 1331 9268 19 IBAN**
 
 
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organization-s-policy).  
-
-
+Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).  
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+
+
+<!--HONumber=Nov16_HO1-->
 
 
