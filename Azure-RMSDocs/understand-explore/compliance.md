@@ -2,6 +2,7 @@
 title: "Informazioni su conformità e supporto | Azure Information Protection"
 description: "Informazioni di supporto per Azure Information Protection che includono note legali, informazioni sulla conformità e contratti di servizio."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,17 +21,17 @@ ms.openlocfilehash: 5fbc0af13f1acdbd6b7a1a267c9d2be2b90b8a1b
 
 
 
-# Informazioni su conformità e supporto per Azure Information Protection
+# <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Informazioni su conformità e supporto per Azure Information Protection
 
 Azure Information Protection supporta altri servizi e si basa anche su altri servizi. Per informazioni correlate ad Azure Information Protection, ma non riferite alla modalità d'uso del servizio Azure Information Protection, esaminare le risorse seguenti:
 
-## Note legali e privacy
+## <a name="legal-and-privacy"></a>Note legali e privacy
 
 - Per informazioni sul contratto di Microsoft Azure: [Contratto di Microsoft Azure](http://azure.microsoft.com/support/legal/subscription-agreement/)
 
 - Per informazioni sulla privacy di Microsoft Azure: [Informativa sulla privacy di Microsoft Azure](http://azure.microsoft.com/support/legal/privacy-statement/)
 
-## Sicurezza, conformità e controllo
+## <a name="security-compliance-and-auditing"></a>Sicurezza, conformità e controllo
 
 Vedere la sezione [Requisiti di sicurezza, conformità e normativi](../understand-explore/azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements) dell'articolo [Problemi risolti da Azure RMS](../understand-explore/azure-rms-problems-it-solves.md). Inoltre:
 
@@ -38,7 +39,7 @@ Vedere la sezione [Requisiti di sicurezza, conformità e normativi](../understan
 
 - Per informazioni su FIPS 140: [Convalida di FIPS 140](https://technet.microsoft.com/library/security/cc750357.aspx)
 
-## Contratti di servizio
+## <a name="service-level-agreements"></a>Contratti di servizio
 
 - Contratto di servizio per Azure Information Protection, in base all'area selezionata: [scaricare dalla pagina per la ricerca di licenze del prodotto](http://microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&amp;DocumentTypeId=37)
 
@@ -46,7 +47,7 @@ Vedere la sezione [Requisiti di sicurezza, conformità e normativi](../understan
 
 -   Contratto di servizio per Azure Active Directory: [Contratti di servizio](http://azure.microsoft.com/support/legal/sla/)
 
-## Documentazione
+## <a name="documentation"></a>Documentazione
 
 - Documentazione di Azure Active Directory: [Azure Active Directory](/active-directory/)
 

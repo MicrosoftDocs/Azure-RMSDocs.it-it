@@ -1,7 +1,8 @@
 ---
 title: Scenario - Configurare le cartelle di lavoro per una protezione permanente | Azure Information Protection
-description: Questo scenario e la documentazione di supporto per l'utente usano la tecnologia di protezione Azure Rights Management per applicare la protezione permanente ai documenti di Office in Cartelle di lavoro.
+description: Questo scenario e la documentazione di supporto per l&quot;utente usano la tecnologia di protezione Azure Rights Management per applicare la protezione permanente ai documenti di Office in Cartelle di lavoro.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea299f402e5e188b498bf6e3cacf9d4dc7e0f6e8
-ms.openlocfilehash: 966c1b109a02f8193de16eae6f2eacec757f533b
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 0d4b1cdc2620a1f8cf9ddced24a898a38d8e9b57
 
 
 ---
 
-# Scenario - Configurare le cartelle di lavoro per una protezione permanente
+# <a name="scenario-configure-work-folders-for-persistent-protection"></a>Scenario - Configurare le cartelle di lavoro per una protezione permanente
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -41,12 +42,12 @@ Le istruzioni sono adatte ai casi seguenti:
 
 -   Per i file che devono essere condivisi con utenti non specificati nel modello dei criteri dei diritti (ad esempio gli utenti di un'altra organizzazione), gli utenti devono applicare un nuovo criterio dei diritti per sostituire la protezione dei criteri dei diritti originale.
 
-## Istruzioni sulla distribuzione
+## <a name="deployment-instructions"></a>Istruzioni sulla distribuzione
 ![Istruzioni per l'amministratore per la distribuzione rapida di Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Verificare che siano soddisfatti i requisiti seguenti e quindi seguire le istruzioni per le procedure di supporto prima di passare alla documentazione dell'utente.
 
-## Requisiti per questo scenario
+## <a name="requirements-for-this-scenario"></a>Requisiti per questo scenario
 Per le istruzioni di funzionamento di questo scenario, sono necessari i requisiti seguenti:
 
 |Requisito|Altre informazioni|
@@ -57,7 +58,7 @@ Per le istruzioni di funzionamento di questo scenario, sono necessari i requisit
 |Il connettore Rights Management è installato, autorizzato per il computer Windows Server e configurato per il ruolo **FCI Server**.|[Distribuzione del connettore di Azure Rights Management](../deploy-use/deploy-rms-connector.md)|
 |L'applicazione Rights Management sharing viene distribuita nei computer degli utenti che eseguono Windows|[Distribuzione automatica dell'applicazione Microsoft Rights Management sharing](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 
-### Configurazione del modello dei criteri dei diritti personalizzato in modo che gli utenti possano condividere i file di Cartelle di lavoro all'esterno dell'organizzazione
+### <a name="configuring-the-custom-rights-policy-template-so-that-users-can-share-work-folders-files-outside-the-organization"></a>Configurazione del modello dei criteri dei diritti personalizzato in modo che gli utenti possano condividere i file di Cartelle di lavoro all'esterno dell'organizzazione
 
 1.  Accedere al portale classico di Azure e passare ai modelli di Azure Rights Management.
 
@@ -79,7 +80,7 @@ Per le istruzioni di funzionamento di questo scenario, sono necessari i requisit
 
 5.  Salvare il modello.
 
-### Configurazione di Cartelle di lavoro per applicare la protezione permanente ai file di Office
+### <a name="configuring-work-folders-to-apply-persistent-protection-to-office-file"></a>Configurazione di Cartelle di lavoro per applicare la protezione permanente ai file di Office
 
 1.  Implementare Cartelle di lavoro per gli utenti in modo che i file salvati in locale vengano sincronizzate su una cartella del file server, dal nome *condivisione di sincronizzazione*. La condivisione di sincronizzazione sul file server non deve verificarsi nello stesso server che esegue il connettore Rights Management.
 
@@ -109,7 +110,7 @@ Per le istruzioni di funzionamento di questo scenario, sono necessari i requisit
 
 4.  Se si è deciso di proteggere in modo selettivo i file usando l'Infrastruttura di classificazione file, configurare la regola di classificazione e la pianificazione e quindi modificare l'attività di gestione del file per includere la proprietà di classificazione come condizione.
 
-## Istruzioni sulla documentazione per l'utente
+## <a name="user-documentation-instructions"></a>Istruzioni sulla documentazione per l'utente
 Se i file che si desidera proteggere con Azure Rights Management non devono essere condivisi con utenti esterni all'organizzazione, potrebbe non essere necessario fornire agli utenti le istruzioni aggiuntive rispetto a quelle fornite per l'uso di Cartelle di lavoro. Quando gli utenti aprono i file che sono protetti da Azure Rights Management e il modello predefinito, i file si aprono normalmente in Office, con la sola differenza che agli utenti potrebbe essere richiesto di eseguire l'autenticazione. A quel punto gli utenti visualizzeranno un banner informativo nella parte superiore del documento che informa che il contenuto include informazioni proprietarie destinate solo agli utenti interni.
 
 Se è stato configurato il modello personalizzato come descritto in questo scenario, gli utenti visualizzeranno la descrizione del modello nel banner informativo: **Questo contenuto è protetto da Cartelle di lavoro ed è limitato ai soli dipendenti della società. Per condividere il contenuto con utenti esterni all'organizzazione, allegare il documento a un messaggio di posta elettronica e usare la funzione Condividi file protetto.** Sebbene questa descrizione fornisca un riepilogo su come condividere il file all'esterno dell'organizzazione, gli utenti avranno probabilmente necessità di istruzioni dettagliate sull'operazione, in particolare le prime volte. Per supportare questo scenario successivo, usare le istruzioni per utente finale e amministratore [Scenario - Condividere un file di Office con utenti in un'altra organizzazione](scenario-share-office-file-externally.md).
@@ -122,6 +123,6 @@ Se è stato configurato il modello personalizzato come descritto in questo scena
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

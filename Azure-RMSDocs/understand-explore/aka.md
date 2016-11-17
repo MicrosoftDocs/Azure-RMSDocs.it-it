@@ -2,6 +2,7 @@
 title: Altri nomi per Azure Information Protection | Azure Information Protection
 description: "Il nome del servizio Azure Information Protection ha subito molte modifiche ed è possibile che si conosca il servizio con il nome precedente."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -12,14 +13,14 @@ ms.assetid: 0af1b2ff-46a7-4a38-803c-5a730e4ff56d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4591d5c45104108ccf151bb1d7a9382652e585a6
-ms.openlocfilehash: 8d597b0acf0a197b2ee12d250672c9572eb6072a
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 1b5268a13538df1537dbf3ea6f66eeda2b5e2292
 
 
 ---
 
 
-# Altri nomi per Azure Information Protection...
+# <a name="azure-information-protection-also-known-as-"></a>Altri nomi per Azure Information Protection...
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -46,6 +47,6 @@ Per altre informazioni su come acquistare o valutare Azure Information Protectio
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

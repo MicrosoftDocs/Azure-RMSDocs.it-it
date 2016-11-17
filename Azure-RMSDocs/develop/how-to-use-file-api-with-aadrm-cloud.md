@@ -3,6 +3,7 @@ title: Come consentire all&quot;applicazione di servizio di usare RMS basato su 
 description: "Questo argomento descrive i passaggi per la configurazione dell’applicazione di servizio per l’uso di Azure Rights Management."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

@@ -1,8 +1,9 @@
 ---
-title: Autenticazione ADAL per l'applicazione abilitata per RMS | Azure RMS
-description: Descrive il processo per l'autenticazione con ADAL
+title: Autenticazione ADAL per l&quot;applicazione abilitata per RMS | Azure RMS
+description: Descrive il processo per l&quot;autenticazione con ADAL
 keywords: autenticazione, RMS, ADAL
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 3ed49cf7dddb72783ecd3bf1e89454d805552743
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 25b9f1c7ee6ad2eb1d642a72713e0dd24703c2bc
 
 
 ---
 
-# Procedura: Usare l'autenticazione ADAL
+# <a name="howto-use-adal-authentication"></a>Procedura: Usare l'autenticazione ADAL
 
 Autenticazione con Azure RMS per l'app usando Azure Active Directory Authentication Library (ADAL).
 
@@ -30,7 +31,7 @@ Eseguendo l'aggiornamento dell'applicazione per l'uso dell'autenticazione ADAL a
 - Installare il client RMS 2.1 senza necessità di privilegi amministrativi sul computer
 - Certificare l'applicazione per Windows 10
 
-## Due approcci per l'autenticazione
+## <a name="two-approaches-to-authentication"></a>Due approcci per l'autenticazione
 
 In questo argomento sono descritti due approcci per l'autenticazione con i relativi esempi di codice.
 
@@ -38,22 +39,22 @@ In questo argomento sono descritti due approcci per l'autenticazione con i relat
 
   Usare questo approccio per fare in modo che il client RMS visualizzi una richiesta di autenticazione ADAL quando è necessaria l'autenticazione. Per informazioni dettagliate sulla configurazione dell'applicazione, vedere la sezione "Autenticazione interna".
 
-  > [!Note] 
+  > [!Note]
   > Se l'applicazione usa AD RMS SDK 2.1 con l'Assistente per l'accesso, è consigliabile utilizzare il metodo di autenticazione interna come percorso di migrazione dell'applicazione.
 
 - **Autenticazione esterna**: autenticazione OAuth gestita dall'applicazione.
 
   Usare questo approccio per fare in modo che l'applicazione gestisca la propria autenticazione OAuth. Con questo approccio, il client RMS eseguirà un callback definito dall'applicazione quando è necessaria l'autenticazione. Per un esempio dettagliato, vedere "Autenticazione esterna" alla fine di questo argomento.
 
-  > [!Note] 
+  > [!Note]
   > L'autenticazione esterna non implica la possibilità di modificare gli utenti: il client RMS usa sempre l'utente predefinito per un determinato tenant RMS.
 
-## Autenticazione interna
+## <a name="internal-authentication"></a>Autenticazione interna
 
 1. Attenersi alla procedura di configurazione di Azure in [Configurare Azure RMS per l'autenticazione ADAL](adal-auth.md) e tornare al passaggio di inizializzazione delle app seguente.
 2. È ora possibile configurare l'applicazione per l'uso dall'autenticazione ADAL interna inclusa in RMS SDK 2.1.
 
-Per configurare il client RMS, aggiungere una chiamata a [IpcSetGlobalProperty](/information-protection/sdk/2.1/api/win/functions#msipc_ipcsetglobalproperty) dopo la chiamata a [IpcInitialize](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize) per configurare il client RMS. Usare il frammento di codice seguente come esempio.
+Per configurare il client RMS, aggiungere una chiamata a [IpcSetGlobalProperty](https://msdn.microsoft.com/library/hh535270.aspx) dopo la chiamata a [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) per configurare il client RMS. Usare il frammento di codice seguente come esempio.
 
       C++
       IpcInitialize();
@@ -67,7 +68,7 @@ Per configurare il client RMS, aggiungere una chiamata a [IpcSetGlobalProperty](
         //Handle the error
       }
 
-## Autenticazione esterna
+## <a name="external-authentication"></a>Autenticazione esterna
 
 Usare il codice seguente come esempio per la gestione dei token di autenticazione.
 C++ extern HRESULT GetADALToken(LPVOID pContext, const IPC_NAME_VALUE_LIST& Parameters, __out wstring wstrToken) throw();
@@ -109,21 +110,21 @@ C++ extern HRESULT GetADALToken(LPVOID pContext, const IPC_NAME_VALUE_LIST& Para
           return IpcGetKey(pvLicense, 0, &promptContext, NULL, &hKey);
       }
 
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
-* [Tipi di dati](/information-protection/sdk/2.1/api/win/data%20types)
-* [Proprietà di ambiente](/information-protection/sdk/2.1/api/win/environment%20properties#msipc_environment_properties)
-* [IpcCreateOAuth2Token](/information-protection/sdk/2.1/api/win/functions#msipc_ipccreateoauth2token)
-* [IpcGetKey](/information-protection/sdk/2.1/api/win/functions#msipc_ipcgetkey)
-* [IpcInitialize](/information-protection/sdk/2.1/api/win/functions#msipc_ipcinitialize)
-* [IPC_CREDENTIAL](/information-protection/sdk/2.1/api/win/IPC_CREDENTIAL)
-* [IPC_NAME_VALUE_LIST](/information-protection/sdk/2.1/api/win/IPC_NAME_VALUE_LIST)
-* [IPC_OAUTH2_CALLBACK_INFO](/information-protection/sdk/2.1/api/win/ipc_oauth2_callback_info#msipc_ipc_oath2_callback_info)
-* [IPC_PROMPT_CTX](/information-protection/sdk/2.1/api/win/IPC_PROMPT_CTX)
-* [IPC_AAD_APPLICATION_ID](/information-protection/sdk/2.1/api/win/ipc_aad_application_id#msipc_ipc_aad_application_id)
+- [Tipi di dati](https://msdn.microsoft.com/library/hh535288.aspx)
+- [Proprietà di ambiente](https://msdn.microsoft.com/library/hh535247.aspx)
+- [IpcCreateOAuth2Token](https://msdn.microsoft.com/library/mt661866.aspx)
+- [IpcGetKey](https://msdn.microsoft.com/library/hh535263.aspx)
+- [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx)
+- [IPC_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx)
+- [IPC_NAME_VALUE_LIST](https://msdn.microsoft.com/library/hh535277.aspx)
+- [IPC_OAUTH2_CALLBACK_INFO](https://msdn.microsoft.com/library/mt661868.aspx)
+- [IPC_PROMPT_CTX](https://msdn.microsoft.com/library/hh535278.aspx)
+- [IPC_AAD_APPLICATION_ID](https://msdn.microsoft.com/library/mt661867.aspx)
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

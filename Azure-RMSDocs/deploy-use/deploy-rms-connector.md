@@ -2,6 +2,7 @@
 title: Distribuzione del connettore di Azure Rights Management | Azure Information Protection
 description: Istruzioni per distribuire il connettore RMS, che fornisce il servizio di protezione dei dati per le distribuzioni locali esistenti che usano Exchange Server, SharePoint Server o Windows Server e Infrastruttura di classificazione file.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

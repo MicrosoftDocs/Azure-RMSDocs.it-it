@@ -1,8 +1,9 @@
 ---
-title: Come eseguire il debug dell'applicazione abilitata all'uso di diritti | Azure RMS
-description: L'argomento seguente illustra come eseguire il debug dell'applicazione e usare il registro eventi di Windows.
+title: Come eseguire il debug dell&quot;applicazione abilitata all&quot;uso di diritti | Azure RMS
+description: L&quot;argomento seguente illustra come eseguire il debug dell&quot;applicazione e usare il registro eventi di Windows.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,17 +15,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: cab6839a1911bb61185f2ef361b2040ac0d38a6e
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 789c93b6d7ac72ebe1df04300f2885ca2aa23a06
 
 
 ---
 
-# Procedura: Eseguire il debug dell'applicazione abilitata all'uso di diritti
+# <a name="howto-debug-a-rightsenabled-application"></a>Procedura: Eseguire il debug dell'applicazione abilitata all'uso di diritti
 
 L'argomento seguente illustra come eseguire il debug dell'applicazione e usare il registro eventi di Windows.
 
-## Debug dell'applicazione
+## <a name="debugging-your-application"></a>Debug dell'applicazione
 
 In Rights Management Services SDK 2.1, nella versione per gli sviluppatori del runtime, i controlli anti-debug sono disabilitati.
 
@@ -41,7 +42,7 @@ HKEY_LOCAL_MACHINE
             dword
 ```
 
-### Registrazione dell'applicazione tramite il registro eventi di Windows
+### <a name="application-logging-by-using-the-windows-event-log"></a>Registrazione dell'applicazione tramite il registro eventi di Windows
 
 Il nome del registro eventi è "Microsoft-RMS-MSIPC/Debug". Ciò significa che in Visualizzatore eventi di Windows il registro viene visualizzato come "Registri applicazioni e servizi\\Microsoft\\RMS\\MSIPC\\Debug".
 
@@ -67,7 +68,7 @@ Ad esempio, il comando seguente abiliterà il registro eventi MSIPC e imposterà
 
  
 
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
  
 
@@ -75,6 +76,6 @@ Ad esempio, il comando seguente abiliterà il registro eventi MSIPC e imposterà
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

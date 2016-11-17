@@ -2,6 +2,7 @@
 title: Requisiti per Azure Information Protection | Azure Information Protection
 description: Identificare i prerequisiti per distribuire Azure Information Protection per l&quot;organizzazione.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/19/2016
 ms.topic: get-started-article
@@ -12,16 +13,15 @@ ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: efbb95e5f34a45c8a5f17eb61ebb09dfe5c8f65f
-ms.openlocfilehash: 1b69be775b3cd270e4b6ea42a306eb51c15424cb
+ms.sourcegitcommit: 8b456ae32446a2c429f33b76563eef53ea92a902
+ms.openlocfilehash: bbcc5f71eda6b100ad16f33793752b92ddfa4304
 
 
 ---
 
-# Requisiti per Azure Information Protection
+# <a name="requirements-for-azure-information-protection"></a>Requisiti per Azure Information Protection
 
 >*Si applica a: Azure Information Protection, Office 365*
-
 
 Prima di distribuire Azure Information Protection per l'organizzazione, verificare di soddisfare i prerequisiti seguenti. 
 
@@ -55,6 +55,6 @@ Per informazioni sui requisiti aggiuntivi per questo scenario, vedere [Server lo
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

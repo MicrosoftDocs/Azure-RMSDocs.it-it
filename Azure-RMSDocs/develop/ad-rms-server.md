@@ -3,6 +3,7 @@ title: Server AD RMS | Azure RMS
 description: "Il componente server di Rights Management Services (RMS) è implementato da un set di servizi Web in esecuzione in Microsoft Internet Information Services."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 3e2dee5511bc86e44e2e10ff9fc981aa36ccee38
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 498a06a65d61417600cd5501a0d04935cb733c37
 
 
 ---
 
-# Server
+# <a name="server"></a>Server
 
 Questo argomento descrive lo scopo e le funzioni del server RMS, per Azure e Windows Server.
 
@@ -42,7 +43,7 @@ Tra i numerosi servizi Web installati, quelli indicati di seguito sono important
 |Pre-certificazione | Consente a un server di richiedere un *certificato per account con diritti* per conto di un utente. Il servizio viene eseguito nei server di certificazione radice e nei server licenze.|
 |Localizzatore servizi | Indica ad Active Directory l'URL dei servizi di licenza, pubblicazione e certificazione degli account, in modo che i client RMS possano rilevarli. Il servizio viene eseguito nei server di certificazione radice e nei server licenze.|
 
-## Argomenti correlati ##
+## <a name="related-topics"></a>Argomenti correlati ##
 * [Panoramica](ad-rms-overview.md)
 * [Microsoft Internet Information Services](http://www.iis.net/overview)
 * [Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md)
@@ -50,7 +51,7 @@ Tra i numerosi servizi Web installati, quelli indicati di seguito sono important
 * [API di script di Active Directory Rights Management Services](https://msdn.microsoft.com/library/Bb968797)
 * [Attivazione di un computer](https://msdn.microsoft.com/library/Cc530377)
 * [Attivazione di un utente](https://msdn.microsoft.com/library/Cc530378)
-* [Creazione di una licenza di pubblicazione](https://msdn.microsoft.com/library/Aa362355)
+* C[reazione di una licenza di pubblicazione](https://msdn.microsoft.com/library/Aa362355)
 
  
 
@@ -58,6 +59,6 @@ Tra i numerosi servizi Web installati, quelli indicati di seguito sono important
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

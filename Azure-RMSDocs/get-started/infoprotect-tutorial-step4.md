@@ -1,7 +1,8 @@
 ---
 title: Esercitazione introduttiva, passaggio 4 | Azure Rights Management
-description: Passaggio 3 dell'esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell'organizzazione. L'esecuzione dell'esercitazione richiede circa 30 minuti.
+description: Passaggio 3 dell&quot;esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell&quot;organizzazione. L&quot;esecuzione dell&quot;esercitazione richiede circa 30 minuti.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -10,13 +11,13 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: ce1d0a700e0b69d71f5cb2e93f406124bc0ca581
-ms.openlocfilehash: c9ed50317e18e86438b4393ce629d23d433c99fe
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: dc4cf3426bca306b66e2b23c3dd63373f62c9b7c
 
 
 ---
 
-# Passaggio 4: Funzioni di classificazione, aggiunta di etichette e protezione in azione 
+# <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Passaggio 4: Funzioni di classificazione, aggiunta di etichette e protezione in azione 
 
 >*Si applica a: Azure Information Protection*
 
@@ -24,24 +25,24 @@ Con un documento di Word aperto e il client di Azure Information Protection inst
 
 La classificazione e la protezione hanno effetto quando si salva il documento. Prima del salvataggio, tuttavia, il documento verrà usato per dimostrare con quale facilità è possibile aggiungere e modificare etichette.
 
-## Per modificare manualmente l'etichetta predefinita
+## <a name="to-manually-change-our-default-label"></a>Per modificare manualmente l'etichetta predefinita
 
-Sulla barra di Information Protection scegliere l'etichetta **Personal** (Personale). Verrà richiesto di giustificare l'abbassamento del livello di classificazione:
+Sulla barra di Information Protection scegliere l'etichetta **Personale**. Verrà richiesto di giustificare l'abbassamento del livello di classificazione:
 
 ![Esercitazione introduttiva di Azure Information Protection, passaggio 4: Richiesta di giustificazione dell'abbassamento](../media/info-protect-lower-justification.png)
 
-Selezionare **The previous label no longer applies** (L'etichetta precedente non viene più applicata) e fare clic su **Confirm** (Conferma). Il valore **Sensitivity** (Riservatezza) cambierà in **Personal** (Personale).
+Selezionare **L'etichetta precedente non è più applicabile** e fare clic su **Conferma**. Il valore **Sensitivity** (Riservatezza) cambierà in **Personale**.
 
-## Per rimuovere completamente la classificazione
+## <a name="to-remove-the-classification-completely"></a>Per rimuovere completamente la classificazione
 
-Sulla barra di Information Protection fare clic sull'icona **Modifica etichetta** accanto a **Personal** (Personale). Verranno visualizzate le etichette disponibili. Ma questa volta, anziché scegliere una delle etichette, fare clic sull'icona **Rimuovi etichetta**. Fare clic su **OK** per confermare e quindi fornire la giustificazione per questa azione.  
+Sulla barra di Information Protection fare clic sull'icona **Modifica etichetta** accanto a **Personale**. Verranno visualizzate le etichette disponibili. Ma questa volta, anziché scegliere una delle etichette, fare clic sull'icona **Rimuovi etichetta**. Fare clic su **OK** per confermare e quindi fornire la giustificazione per questa azione.  
 
-Per il valore **Sensitivity** (Riservatezza) verrà visualizzato **Not set** (Non impostato), come avviene inizialmente se non si imposta un'etichetta predefinita:
+Per il valore **Sensitivity** (Riservatezza) verrà visualizzato **Non impostato**, come avviene inizialmente se non si imposta un'etichetta predefinita:
 
 ![Esercitazione introduttiva di Azure Information Protection, passaggio 4: Rimuovere la classificazione](../media/sensitivity-not-set.png)
 
 
-## Per visualizzare un messaggio di azione consigliata per l'assegnazione di etichette e la protezione automatica
+## <a name="to-see-a-recommendation-prompt-for-labeling-and-automatic-protection"></a>Per visualizzare un messaggio di azione consigliata per l'assegnazione di etichette e la protezione automatica
 
 1. Nel documento di Word, digitare un numero di carta di credito valido, ad esempio: **4242-4242-4242-4242**. 
 
@@ -63,6 +64,6 @@ I passaggi eseguiti fino a ora hanno consentito di vedere in azione la classific
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

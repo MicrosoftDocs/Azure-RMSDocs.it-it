@@ -1,8 +1,9 @@
 ---
 title: Formati di file supportati | Azure RMS
-description: La versione corrente dell'API file supporta la protezione nativa per i file di MS Office e PDF e la protezione PFile per tutti gli altri formati di file.
+description: La versione corrente dell&quot;API file supporta la protezione nativa per i file di MS Office e PDF e la protezione PFile per tutti gli altri formati di file.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,17 +15,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 0baa6a5ceeba8ae2e276ffe09edb54060671d8be
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f5fa3082e407e207f33f041d22661888a13566b2
 
 
 ---
 
-# Formati di file supportati
+# <a name="supported-file-formats"></a>Formati di file supportati
 
 L'API file supporta i formati nativi e PFile.
 
-## Formati di file supportati
+## <a name="supported-file-formats"></a>Formati di file supportati
 
 La versione corrente dell'API file supporta la protezione nativa per i file di Microsoft Office e Portable Document Files (PDF) e la protezione PFile per tutti gli altri formati di file. Ai file PDF è possibile applicare anche la protezione PFile.
 
@@ -33,7 +34,7 @@ La versione corrente dell'API file supporta la protezione nativa per i file di M
 
 Gli amministratori possono impostare le chiavi del Registro di sistema per configurare se e come i file devono essere protetti in base all'estensione di file. Per altre informazioni su come configurare la protezione del file quando si usa l'API file, vedere l'articolo relativo alla [configurazione dell'API file](file-api-configuration.md).
 
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
 * [Note per gli sviluppatori](developer-notes.md)
 * [Configurazione dell'API file](file-api-configuration.md)
@@ -43,6 +44,6 @@ Gli amministratori possono impostare le chiavi del Registro di sistema per confi
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

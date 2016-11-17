@@ -1,9 +1,10 @@
 ---
 title: Scenario - Invio di posta elettronica aziendale riservata | Azure Information Protection
-description: Questo scenario e la documentazione di supporto per l'utente usano la tecnologia di protezione Azure Rights Management in modo che qualsiasi utente dell'organizzazione possa inviare in modo sicuro comunicazioni tramite posta elettronica non leggibili all'esterno dell'organizzazione.
+description: Questo scenario e la documentazione di supporto per l&quot;utente usano la tecnologia di protezione Azure Rights Management in modo che qualsiasi utente dell&quot;organizzazione possa inviare in modo sicuro comunicazioni tramite posta elettronica non leggibili all&quot;esterno dell&quot;organizzazione.
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/10/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +13,13 @@ ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ea299f402e5e188b498bf6e3cacf9d4dc7e0f6e8
-ms.openlocfilehash: 9fafe78b8393ae36defeecccceb8f4a2d36a3b79
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: f886b72ba18f0f13ac60e08d000b231cd36d1d5f
 
 
 ---
 
-# Scenario - Invio di posta elettronica aziendale riservata
+# <a name="scenario-send-a-companyconfidential-email"></a>Scenario - Invio di posta elettronica aziendale riservata
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -39,12 +40,12 @@ Le istruzioni sono adatte ai casi seguenti:
 
 -   Gli utenti devono selezionare manualmente il modello all'interno del client di posta elettronica.
 
-## Istruzioni sulla distribuzione
+## <a name="deployment-instructions"></a>Istruzioni sulla distribuzione
 ![Istruzioni per l'amministratore per la distribuzione rapida di Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Prima di passare alla documentazione per l'utente, assicurarsi che i requisiti seguenti siano soddisfatti.
 
-## Requisiti per questo scenario
+## <a name="requirements-for-this-scenario"></a>Requisiti per questo scenario
 Per le istruzioni di funzionamento di questo scenario, sono necessari i requisiti seguenti:
 
 |Requisito|Se sono necessarie ulteriori informazioni|
@@ -54,9 +55,9 @@ Per le istruzioni di funzionamento di questo scenario, sono necessari i requisit
 |Azure Rights Management non è attivato|[Attivazione di Azure Rights Management](../deploy-use/activate-service.md)|
 |Uno dei seguenti:<br /><br />- Exchange Online è abilitato per Azure Rights Management<br /><br />- Il connettore RMS è installato e configurato per Exchange locale|Per Exchange Online: vedere la sezione **Exchange Online: configurazione di IRM** in [Office 365: configurazione di client e servizi online](../deploy-use/configure-office365.md).<br /><br />Per Exchange locale: [Distribuzione del connettore di Azure Rights Management](../deploy-use/deploy-rms-connector.md)|
 |Non è stato archiviato il modello di Azure Rights Management predefinito **&lt;organizzazione&gt; - Riservato**. In alternativa, è stato configurato un modello personalizzato per questo scopo, poiché sono necessarie impostazioni più restrittive, oppure solo un sottoinsieme di utenti nell'organizzazione deve poter leggere le email protette.|[Configurazione di modelli personalizzati per il servizio Azure Rights Management](../deploy-use/configure-custom-templates.md)<br /><br />Suggerimento: se sono necessarie impostazioni di criteri di uso più restrittivi, per tutti gli utenti dell'organizzazione, copiare e quindi modificare uno dei modelli predefiniti, anziché crearne uno daccapo.<br /><br />I modelli aggiornati non vengono aggiornati immediatamente per i client di posta elettronica in questo scenario. Per informazioni, vedere l'articolo [Aggiornamento dei modelli per gli utenti](../deploy-use/refresh-templates.md).|
-|Gli utenti che inviano email protette dispongono di Outlook 2013 o 2016 Outlook o Outlook Web Access.<br /><br />Gli utenti che ricevono l'email dispongono di un client di posta elettronica che supporti Azure Rights Management.|È possibile usare Outlook 2010, ma è necessario [installare l'applicazione Rights Management sharing per Windows](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) e modificare di conseguenza le istruzioni utente.<br /><br />Per un elenco dei client di posta elettronica che supportano Azure Rights Management, vedere la colonna **Posta elettronica** nella tabella inclusa in [Requisiti per Azure RMS: applicazioni](../get-started/requirements-applications.md).|
+|Gli utenti che inviano email protette dispongono di Outlook 2013 o 2016 Outlook o Outlook Web Access.<br /><br />Gli utenti che ricevono l'email dispongono di un client di posta elettronica che supporti Azure Rights Management.|È possibile usare Outlook 2010, ma è necessario [installare l'applicazione Rights Management sharing per Windows](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application) e modificare di conseguenza le istruzioni utente.<br /><br />Per un elenco dei client di posta elettronica che supportano Azure Rights Management, vedere la colonna **Posta elettronica** in [Applicazioni che supportano la protezione dati di Azure Rights Management](../get-started/requirements-applications.md).|
 
-## Istruzioni sulla documentazione per l'utente
+## <a name="user-documentation-instructions"></a>Istruzioni sulla documentazione per l'utente
 Usando il modello seguente, copiare e incollare le istruzioni per l'utente in una comunicazione per gli utenti finali e apportare tali modifiche in base all'ambiente:
 
 1.  Sostituire tutte le istanze di *&lt;nome organizzazione&gt;* con il nome dell'organizzazione.
@@ -67,7 +68,7 @@ Usando il modello seguente, copiare e incollare le istruzioni per l'utente in un
 
 4.  Sostituire *&lt;dettagli contatto&gt;* con istruzioni su come gli utenti possono contattare il supporto tecnico, ad esempio il collegamento a un sito Web, un indirizzo di posta elettronica o un numero di telefono.
 
-5.  **Personalizzazioni aggiuntive che si vuole apportare:**
+5.  **Modifiche aggiuntive che di vuole apportare:**
 
     -   Se è possibile limitare le istruzioni a un solo client di posta elettronica, è consigliabile eseguire questa operazione per motivi di semplicità ed eliminare l'altro set di istruzioni.
 
@@ -91,7 +92,7 @@ La documentazione di esempio mostra come questo set di istruzioni appare agli ut
 
 ![Documentazione dell'utente del modello per la distribuzione rapida di Azure RMS](../media/AzRMS_UsersBanner.png)
 
-### Procedura per inviare email che contengono informazioni aziendali riservate tramite Outlook
+### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook"></a>Procedura per inviare email che contengono informazioni aziendali riservate tramite Outlook
 
 1.  In Outlook creare un nuovo messaggio di posta elettronica, aggiungere eventuali allegati e selezionare gli utenti o i gruppi di *&lt;nome organizzazione&gt;*.
 
@@ -101,7 +102,7 @@ La documentazione di esempio mostra come questo set di istruzioni appare agli ut
 
 3.  Inviare il messaggio.
 
-### Procedura per inviare email che contengono informazioni aziendali riservate tramite Outlook Web App
+### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook-web-app"></a>Procedura per inviare email che contengono informazioni aziendali riservate tramite Outlook Web App
 
 1.  In Outlook Web App, creare un nuovo messaggio di posta elettronica, aggiungere eventuali allegati e selezionare gli utenti o i gruppi di *&lt;nome organizzazione&gt;* dalla rubrica.
 
@@ -121,10 +122,10 @@ Le persone che ricevono il messaggio di posta elettronica potranno inoltrarlo ad
 
     -   *&lt;dettagli contatto&gt;*
 
-### Esempio di documentazione personalizzata per l'utente
+### <a name="example-customized-user-documentation"></a>Esempio di documentazione personalizzata per l'utente
 ![Esempio di documentazione dell'utente per la distribuzione rapida di Azure RMS](../media/AzRMS_ExampleBanner.png)
 
-#### Procedura per inviare email che contengono informazioni aziendali riservate tramite Outlook
+#### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook"></a>Procedura per inviare email che contengono informazioni aziendali riservate tramite Outlook
 
 1.  In Outlook, creare una nuova email, aggiungere tutti gli allegati da includere e quindi selezionare gli utenti o i gruppi VanArsdel dalla rubrica.
 
@@ -134,7 +135,7 @@ Le persone che ricevono il messaggio di posta elettronica potranno inoltrarlo ad
 
 3.  Inviare il messaggio.
 
-#### Procedura per inviare email che contengono informazioni aziendali riservate tramite Outlook Web App
+#### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook-web-app"></a>Procedura per inviare email che contengono informazioni aziendali riservate tramite Outlook Web App
 
 1.  In Outlook Web App, creare una nuova email, aggiungere tutti gli allegati da includere e quindi selezionare gli utenti o i gruppi VanArsdel dalla rubrica.
 
@@ -152,11 +153,11 @@ Le persone a cui si invia l'email saranno in grado di inoltrarla ad altre person
 
 -   Contattare il supporto tecnico:
 
-    -   E-mail: helpdesk@vanarsdelltd.com
+    -   Posta elettronica: helpdesk@vanarsdelltd.com
 
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

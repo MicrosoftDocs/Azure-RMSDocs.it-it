@@ -3,8 +3,9 @@ title: Informazioni di riferimento sulle API | Azure RMS
 description: 'Microsoft Rights Management SDK 4.2 supporta diversi sistemi operativi: Android, iOS, OS X, Linux, Windows Phone e Windows Store.'
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/18/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,29 +15,29 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: cab47811d6b7b2b11f5bdcb58c4d72837a209131
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 4f54eb662200bd07a368287cb9e182223132118f
 
 
 ---
 
-# Informazioni di riferimento sulle API
+# <a name="api-reference"></a>Informazioni di riferimento sulle API
 
 Microsoft Rights Management SDK 4.2 supporta diversi sistemi operativi. Per altre informazioni sulle specifiche, vedere [Novità](release-notes.md).
 
-### Apple
-- [Informazioni di riferimento sulle API di iOS/OS X](/information-protection/sdk/4.2/api/iOS/iOS): informazioni di riferimento sulle API per i sistemi operativi Apple iOS e OS X.
+### <a name="apple"></a>Apple
+- [Informazioni di riferimento sulle API di iOS/OS X](https://msdn.microsoft.com/library/dn758306.aspx): informazioni di riferimento sulle API per i sistemi operativi Apple iOS e OS X.
 
-### Google
-- [Spazi dei nomi Android](android-namespaces.md)
+### <a name="google"></a>Google
+- [Spazi dei nomi Android](https://msdn.microsoft.com/library/dn758245.aspx)
 
-### Linux
+### <a name="linux"></a>Linux
 - [Informazioni di riferimento sulle API di Linux](linux-c-api-reference.md): le informazioni di riferimento sulle API per il supporto della versione Linux del sistema operativo sono ospitate in Github - [RMS SDK per C++](http://azuread.github.io/rms-sdk-for-cpp/annotated.html).
 
-### Microsoft
-- [Informazioni di riferimento sulle API di Windows](/information-protection/sdk/4.2/api/winrt/Microsoft.RightsManagement): informazioni di riferimento sulle API per gli SDK delle applicazioni di Windows Phone e Windows Store.
+### <a name="microsoft"></a>Microsoft
+- [Informazioni di riferimento sulle API di Windows](https://msdn.microsoft.com/library/dn891914.aspx): informazioni di riferimento sulle API per gli SDK delle applicazioni di Windows Phone e Windows Store.
 
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
 * [Introduzione](get-started.md)
  
@@ -45,6 +46,6 @@ Microsoft Rights Management SDK 4.2 supporta diversi sistemi operativi. Per altr
 
 
 
-<!--HONumber=Sep16_HO5-->
+<!--HONumber=Nov16_HO2-->
 
 

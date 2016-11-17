@@ -1,21 +1,23 @@
 ---
 title: Installazione del client di Azure Information Protection | Azure Information Protection
 description: Istruzioni per installare il client che aggiunge una barra di protezione delle informazioni alle applicazioni di Office in modo che sia possibile selezionare le etichette di classificazione per i documenti e i messaggi di posta elettronica.
+author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/01/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: 003e76733657bb97c5447e2cdc44049d111d33fa
-ms.openlocfilehash: 2892b091e300b0ef15ca09524d233474bd5de193
+ms.sourcegitcommit: 2f1930f4657278d25ef6dd369866f16e4ba71644
+ms.openlocfilehash: 5e36d046d53b0fdfb6796f2a00e8d0d1325f30c3
 
 
 ---
 
-# Installazione del client di Azure Information Protection
+# <a name="installing-the-azure-information-protection-client"></a>Installazione del client di Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
 
@@ -30,7 +32,7 @@ Scaricare il client di Azure Information Protection dall'[Area download Microsof
 Prima di installare il client, verificare di avere le versioni del sistema operativo e le applicazioni per il client di Azure Information Protection richieste: [Requisiti per Azure Information Protection](../get-started/requirements-azure-rms.md).
 
 
-## Per installare manualmente il client di Azure Information Protection
+## <a name="to-install-the-azure-information-protection-client-manually"></a>Per installare manualmente il client di Azure Information Protection
 
 1. Dopo avere eseguito il [download del client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), eseguire **AzInfoProtection.exe** e seguire le istruzioni per l'installazione del client. Questa installazione richiede autorizzazioni amministrative locali.
 
@@ -38,13 +40,15 @@ Prima di installare il client, verificare di avere le versioni del sistema opera
 
 2. Per iniziare a usare il client di Azure Information Protection: se il computer esegue Office 2010, riavviare il computer. Per altre versioni di Office, riavviare le applicazioni di Office.
 
-## Per installare il client di Azure Information Protection per gli utenti
+## <a name="to-install-the-azure-information-protection-client-for-users"></a>Per installare il client di Azure Information Protection per gli utenti
 
 È possibile creare script e automatizzare l'installazione del client di Azure Information Protection usando le opzioni della riga di comando. Per visualizzare le opzioni di installazione, eseguire `AzInfoProtection.exe /help`.
 
 Ad esempio, per installare automaticamente il client: `AzInfoProtection.exe /passive | quiet`
 
-## Per disinstallare il client di Azure Information Protection
+Il client di Azure Information Protection è anche incluso nel Microsoft Update Catalog, per cui è possibile installare e aggiornare il client tramite qualsiasi servizio di aggiornamento software che usa il catalogo.
+
+## <a name="to-uninstall-the-azure-information-protection-client"></a>Per disinstallare il client di Azure Information Protection
 
 È possibile usare una delle seguenti opzioni:
 
@@ -52,24 +56,34 @@ Ad esempio, per installare automaticamente il client: `AzInfoProtection.exe /pas
 
 - Rieseguire **AzInfoProtection.exe** e fare clic su **Disinstalla** nella pagina **Modifica installazione**. 
 
-- Esegui `AzInfoProtection.exe /uninstall`
+- Eseguire `AzInfoProtection.exe /uninstall`
 
 
-## Per verificare l'installazione, lo stato della connessione o segnalare un problema
+## <a name="to-verify-installation-connection-status-or-report-a-problem"></a>Per verificare l'installazione, lo stato della connessione o segnalare un problema
 
 1. Aprire un'applicazione di Office, quindi nel gruppo **Protection** (Protezione) della scheda **Home** fare clic su **Protect** (Proteggi) e quindi fare clic su **Help and feedback** (Guida e commenti e suggerimenti).
 
 2. Nella finestra di dialogo **Microsoft Azure Information Protection** notare quanto segue:
 
-    - Il valore **Last connection** (Ultima connessione) che indica quando il client si è connesso per l'ultima volta al servizio Azure Information Protection dell'organizzazione. Quando il client si connette al servizio, scarica automaticamente il criterio più recente se rileva variazioni rispetto al criterio corrente. Se si sono apportate modifiche ai criteri dopo l'ora visualizzata, chiudere e riaprire l'applicazione di Office.
+    - Nella sezione **Client status** (Stato del client): usare il valore di **Version** (Versione) per verificare che l'installazione sia stata eseguita correttamente. È anche possibile sapere quando il client si è connesso per l'ultima volta al servizio Azure Information Protection dell'organizzazione e la data di installazione o aggiornamento più recente di Azure Information Protection. Quando il client si connette al servizio, scarica automaticamente il criterio più recente se rileva variazioni rispetto al criterio corrente. Se si sono apportate modifiche ai criteri dopo l'ora visualizzata, chiudere e riaprire l'applicazione di Office.
+    
+        Viene anche mostrato il nome utente visualizzato che identifica l'account usato per autenticare l'utente in Azure Information Protection. Questo nome utente deve corrispondere a un account usato per Office 365 o Azure Active Directory.
 
-    - Il nome utente visualizzato che identifica l'account usato per autenticare l'utente in Azure Information Protection. Questo nome utente deve corrispondere a un account usato per Office 365 o Azure Active Directory.
+    - Nella sezione **Help and feedback** (Guida e commenti e suggerimenti): usare il collegamento **Send feedback** (Invia commenti e suggerimenti) per allegare automaticamente i log del client a un messaggio di posta elettronica da inviare al team di Information Protection per analizzare un problema. 
+    
+        Per informazioni di diagnostica e per reimpostare il client, fare clic su **Run diagnostics** (Esegui diagnostica). Al termine dei test diagnostici, fare clic su **Copy results** (Copia risultati) per incollare le informazioni in un messaggio di posta elettronica da inviare al proprio help desk o al supporto tecnico Microsoft. Al termine dei test, è anche possibile reimpostare il client.
+        
+        Altre informazioni sull'opzione **Reset** (Reimposta):
+        
+        - Non è necessario essere un amministratore locale per usare questa opzione e questa azione non viene registrata nel Visualizzatore eventi. 
+        
+        - A meno che i file non siano bloccati, con questa azione vengono eliminati tutti i file presenti in **%localappdata%\Microsoft\MSIPC**, dove sono archiviati i certificati del client e i modelli per Rights Management. Non vengono eliminati i criteri di Azure Information Protection e i file di log del client, né l'utente viene disconnesso.
+        
+        - Viene eliminata le chiave del Registro di sistema seguente con le relative impostazioni: **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. Se si configurano le impostazioni per questa chiave del Registro di sistema (ad esempio le impostazioni per il reindirizzamento al tenant di Azure Information Protection poiché si sta eseguendo la migrazione da AD RMS e nella rete è ancora presente un punto di connessione del servizio), è necessario riconfigurare le impostazioni del Registro di sistema dopo la reimpostazione del client.
+        
+        - Dopo aver reimpostato il client, è necessario inizializzare nuovamente l'ambiente utente, azione nota anche come "bootstrap", durante la quale verranno scaricati i certificati per il client e i modelli più recenti. A tale scopo, chiudere tutte le istanze di Office e quindi riavviare un'applicazione di Office. Questa azione verifica anche che siano stati scaricati i criteri di Azure Information Protection più recenti. Non eseguire di nuovo i test diagnostici prima che ciò sia stato fatto.
 
-    - La versione del client di Azure Information Protection.
-
-    - Il collegamento **Invia commenti e suggerimenti** che consente di allegare automaticamente i log del client a un messaggio di posta elettronica da inviare al team di Information Protection per l'analisi.
-
-## Tasti di scelta rapida per la barra di Azure Information Protection
+## <a name="keyboard-shortcuts-for-the-azure-information-protection-bar"></a>Tasti di scelta rapida per la barra di Azure Information Protection
 
 Per accedere alla barra di Azure Information Protection tramite i tasti di scelta rapida, usare la combinazione di tasti seguente:
 
@@ -78,7 +92,7 @@ Per accedere alla barra di Azure Information Protection tramite i tasti di scelt
 Quindi usare TAB per selezionare le etichette e altri controlli della barra (le icone **Nascondi etichette** e **Rimuovi etichetta**) e INVIO per selezionarle.
 
 
-## Percorsi di file
+## <a name="file-locations"></a>Percorsi di file
 
 File del client:   
 
@@ -91,14 +105,16 @@ File di log del client e file di criteri attualmente installati:
 - Per i sistemi operativi a 64 e 32 bit: **%localappdata%\Microsoft\MSIP**
 
 
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
 Per modificare le etichette sulla barra Information Protection, è necessario configurare i criteri di Azure Information Protection. Per altre informazioni, veder e[Configurazione dei criteri di Azure Information Protection](../deploy-use/configure-policy.md).
 
-Per un esempio di come personalizzare i criteri predefiniti e osservare il comportamento risultante in un'applicazione di Office, seguire l'[Esercitazione introduttiva di Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md). 
+Per un esempio di come personalizzare i criteri predefiniti e osservare il comportamento risultante in un'applicazione di Office, seguire l'[Esercitazione introduttiva di Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
+
+Per verificare le informazioni sulla versione del client, vedere [Cronologia delle versioni](client-version-release-history.md).
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO1-->
 
 

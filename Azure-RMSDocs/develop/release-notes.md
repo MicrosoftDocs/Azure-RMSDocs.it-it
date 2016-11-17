@@ -2,6 +2,7 @@
 title: "Novità e note sulla versione | Azure RMS"
 description: "Descrive importanti modifiche e funzionalità in questa nuova versione di SDK RMS."
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 10/31/2016
 ms.topic: article

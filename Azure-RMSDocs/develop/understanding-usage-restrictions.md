@@ -3,6 +3,7 @@ title: Informazioni sulle restrizioni di utilizzo | Azure RMS
 description: Tutte le applicazioni abilitate per RMS devono imporre restrizioni di utilizzo.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,19 +15,19 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cb33a6c784a9b7efca0780771e764b984b51fedd
-ms.openlocfilehash: 3141c4131d83e043e987546900d433e43ee4c946
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: cc383728d487cac45e59ef34ca43ba47c4db237b
 
 
 ---
 
-# Informazioni sulle restrizioni di utilizzo
+# <a name="understanding-usage-restrictions"></a>Informazioni sulle restrizioni di utilizzo
 
 Tutte le applicazioni abilitate per RMS devono imporre restrizioni di utilizzo. Una restrizione di utilizzo è una condizione risultante da un tentativo dell'utente di eseguire un'azione, ad esempio la stampa di un documento, ma i criteri RMS per tale documento non concedono autorizzazioni o diritti per eseguire l'azione (ad esempio, il diritto di stampa).
 
 È possibile eseguire query sulle autorizzazioni di un utente per un documento tramite la funzione [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx).
 
-## Informazioni sulle restrizioni di utilizzo
+## <a name="understanding-usage-restrictions"></a>Informazioni sulle restrizioni di utilizzo
 
 -   Acquisire familiarità con i diritti standard di RMS
 
@@ -46,7 +47,7 @@ Tutte le applicazioni abilitate per RMS devono imporre restrizioni di utilizzo. 
 
     Per altre informazioni sull'imposizione di diritti specifici, vedere [Informazioni di riferimento sulle restrizioni di utilizzo](usage-restriction-reference.md).
 
-## Argomenti correlati
+## <a name="related-topics"></a>Argomenti correlati
 
 * [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx)
 * [Informazioni di riferimento sulle restrizioni di utilizzo](usage-restriction-reference.md)
@@ -56,6 +57,6 @@ Tutte le applicazioni abilitate per RMS devono imporre restrizioni di utilizzo. 
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

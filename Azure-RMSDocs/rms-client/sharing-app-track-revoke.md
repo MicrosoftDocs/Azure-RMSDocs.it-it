@@ -1,9 +1,10 @@
 ---
-title: Tenere traccia dei documenti e revocarli quando si usa l'applicazione RMS sharing | Azure Information Protection
-description: "Dopo che i documenti sono stati protetti usando l'applicazione RMS sharing, è possibile rilevare come tali documenti vengono usati dagli utenti. Se necessario, è anche possibile revocare l'accesso a questi documenti quando si desidera interromperne la condivisione."
+title: Tenere traccia dei documenti e revocarli quando si usa l&quot;applicazione RMS sharing | Azure Information Protection
+description: "Dopo che i documenti sono stati protetti usando l&quot;applicazione RMS sharing, è possibile rilevare come tali documenti vengono usati dagli utenti. Se necessario, è anche possibile revocare l&quot;accesso a questi documenti quando si desidera interromperne la condivisione."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 10/04/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +13,13 @@ ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 805644a7c6dacc00519ad9ac07f39367d0784745
-ms.openlocfilehash: b8cc9dd2984f7853e1fbacebbb4f6934f918200e
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 3b5b19ab2dfdf6b797f55134f3063948dcab33d5
 
 
 ---
 
-# Tenere traccia dei documenti e revocarli quando si usa l'applicazione RMS sharing
+# <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>Tenere traccia dei documenti e revocarli quando si usa l'applicazione RMS sharing
 
 >*Si applica a: Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
@@ -28,7 +29,7 @@ Dopo avere protetto i documenti tramite l'applicazione RMS sharing, se l'organiz
 <iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation/player" frameborder="0" allowfullscreen></iframe>
 </div>
 
-Quando si accede a questo sito, eseguire l'accesso per effettuare il rilevamento dei documenti. A condizione che l'organizzazione abbia una [sottoscrizione che supporta il rilevamento e la revoca dei documenti](https://go.microsoft.com/fwlink/?LinkId=827589) e di avere ricevuto una licenza per tale sottoscrizione, è quindi possibile sapere chi ha tentato di aprire i file protetti e se il tentativo ha avuto esito positivo (ovvero se è stata eseguita correttamente l'autenticazione) o meno. Ogni volta che ha tentato di accedere al documento e la sua posizione in quel momento. Inoltre:
+Quando si accede a questo sito, eseguire l'accesso per effettuare il rilevamento dei documenti. A condizione che l'organizzazione abbia una [sottoscrizione che supporta il rilevamento e la revoca dei documenti](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) e di avere ricevuto una licenza per tale sottoscrizione, è quindi possibile sapere chi ha tentato di aprire i file protetti e se il tentativo ha avuto esito positivo (ovvero se è stata eseguita correttamente l'autenticazione) o meno. Ogni volta che ha tentato di accedere al documento e la sua posizione in quel momento. Inoltre:
 
 -   Se è necessario interrompere la condivisione di un documento: Fare clic su **Revocare l'accesso**, si noti il periodo di tempo in cui il documento continuerà a essere disponibile, e decidere se si vuol far sapere agli utenti che si sta revocando l'accesso al documento condiviso in precedenza e inviare un messaggio personalizzato. Quando si revoca un documento, il documento condiviso non viene eliminato ma gli utenti autorizzati non potranno più aprirlo.
 
@@ -40,7 +41,7 @@ Quando si accede a questo sito, eseguire l'accesso per effettuare il rilevamento
 
 -   Se si hanno domande o si vogliono lasciare commenti e suggerimenti sul sito di rilevamento del documento: fare clic sull'icona della Guida per accedere a [Domande frequenti sul rilevamento dei documenti](http://go.microsoft.com/fwlink/?LinkId=523977).
 
-## Utilizzare Office per accedere al sito di rilevamento del documento
+## <a name="using-office-to-access-the-document-tracking-site"></a>Utilizzare Office per accedere al sito di rilevamento del documento
 
 -   Per le applicazioni di Office, Word, Excel e PowerPoint: Nella scheda **Home** , nel gruppo **RMS** , fare clic su **Condivisione protetta**, e poi fare clic su **Rileva utilizzo**.
 
@@ -57,7 +58,7 @@ Se queste opzioni per RMS non sono visualizzate, è probabile che l'applicazione
 > 
 > - In un'applicazione di Office, nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi** > **Rileva utilizzo**. 
 
-### Altri modi per tenere traccia dei documenti e revocarli
+### <a name="other-ways-to-track-and-revoke-your-documents"></a>Altri modi per tenere traccia dei documenti e revocarli
 Oltre a tenere traccia dei documenti nei computer Windows utilizzando applicazioni Office, è anche possibile utilizzare queste alternative:
 
 -   **Tramite un browser web**: Questo metodo funziona per tutti i dispositivi supportati.
@@ -66,7 +67,7 @@ Oltre a tenere traccia dei documenti nei computer Windows utilizzando applicazio
 
 -   **Tramite un messaggio di posta elettronica di Outlook**: Questo metodo funziona per i computer Windows.
 
-#### Tramite l’utilizzo di un browser per accedere al sito di rilevamento dei documenti
+#### <a name="using-a-web-browser-to-access-the-doc-tracking-site"></a>Tramite l’utilizzo di un browser per accedere al sito di rilevamento dei documenti
 
 -   Tramite l’utilizzo di un browser supportato, passare al [sito di rilevamento del documento](http://go.microsoft.com/fwlink/?LinkId=529562).
 
@@ -82,30 +83,30 @@ Oltre a tenere traccia dei documenti nei computer Windows utilizzando applicazio
 
     -   Google Chrome: Almeno la versione  18
 
-#### Utilizzando Esplora File per accedere al sito di rilevamento del documento
+#### <a name="using-file-explorer-to-access-the-doc-tracking-site"></a>Utilizzando Esplora File per accedere al sito di rilevamento del documento
 
 -   Fare clic con il pulsante destro del mouse sul file, selezionare **Proteggi tramite RMS**, poi selezionare **Rileva utilizzo**:
 
     ![Selezionare Rileva utilizzo da Explorer quando si usa l'applicazione RMS sharing](../media/ADRMS_MSRMSApp_ExplorerTrackUsage.png)
 
-#### Utilizzo di un messaggio di posta elettronica di Outlook per accedere al sito di rilevamento del documento
+#### <a name="using-an-outlook-email-message-to-access-the-doc-tracking-site"></a>Utilizzo di un messaggio di posta elettronica di Outlook per accedere al sito di rilevamento del documento
 
 -   In un messaggio di posta elettronica, nella scheda **Messaggio** , nel gruppo  **RMS** , fare clic su **Condivisione protetta**, e poi fare clic su **Traccia utilizzo**:
 
     ![Selezionare Rileva utilizzo da Outlook quando si usa l'applicazione RMS sharing](../media/ADRMS_MSRMSApp_OutlookMessageTrackUsage.png)
 
-## Esempi e altre istruzioni
+## <a name="examples-and-other-instructions"></a>Esempi e altre istruzioni
 Per esempi di come è possibile usare l'applicazione Rights Management sharing e informazioni sulle procedure da seguire, vedere le sezioni seguenti della Guida dell'utente dell'applicazione Rights Management sharing:
 
 -   [Esempi per l'uso dell'applicazione RMS sharing](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
--   [Come procedere](sharing-app-user-guide.md#what-do-you-want-to-do)
+-   [Per saperne di più](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## Vedere anche
-[Guida dell'utente dell'applicazione Rights Management sharing](sharing-app-user-guide.md)
+## <a name="see-also"></a>Vedere anche
+[Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO2-->
 
 

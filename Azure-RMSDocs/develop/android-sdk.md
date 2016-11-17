@@ -3,6 +3,7 @@ title: Installazione per Android | Azure RMS
 description: Le applicazioni Android possono usare SDK 4.2 Microsoft Rights Management per abilitare la protezione integrata nelle proprie applicazioni.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article

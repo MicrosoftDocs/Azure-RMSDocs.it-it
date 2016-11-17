@@ -3,6 +3,7 @@ title: Informazioni di riferimento sulle API di Linux | Azure RMS
 description: Le informazioni di riferimento sulle API per il supporto per la versione Linux del sistema operativo sono ospitate in Github.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -20,7 +21,7 @@ ms.openlocfilehash: 12d7f276a489284586f45d34407ecc48b1b4b2ce
 
 ---
 
-# Informazioni di riferimento sulle API di Linux
+# <a name="linux-api-reference"></a>Informazioni di riferimento sulle API di Linux
 
 Le informazioni di riferimento sulle API per il supporto per la versione Linux del sistema operativo sono ospitate in Github - [RMS SDK per C++](http://azuread.github.io/rms-sdk-for-cpp/annotated.html). Per altre informazioni, vedere [Introduzione](get-started.md).
 

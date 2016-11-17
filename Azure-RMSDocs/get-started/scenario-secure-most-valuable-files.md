@@ -1,7 +1,8 @@
 ---
 title: Scenario - Proteggere (alcuni) file particolarmente importanti | Azure RMS
-description: "Questo scenario e la documentazione di supporto per l'utente usano Azure Rights Management per proteggere in modo manuale e personalizzato un numero limitato di file identificati come i più importanti, garantendo il massimo livello di protezione dall'accesso non autorizzato."
+description: "Questo scenario e la documentazione di supporto per l&quot;utente usano Azure Rights Management per proteggere in modo manuale e personalizzato un numero limitato di file identificati come i più importanti, garantendo il massimo livello di protezione dall&quot;accesso non autorizzato."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/05/2016
 ms.topic: get-started-article
@@ -12,13 +13,13 @@ ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0f5c138b7a27c7577e5bff23d521ba36264ecc2a
-ms.openlocfilehash: 6687ed42bca5e773d6bbc97285f12e3c91ff9f32
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: ad75734c28c51ac68697f96e0e50a5d90314b76e
 
 
 ---
 
-# Scenario - Proteggere (alcuni) file particolarmente importanti
+# <a name="scenario-secure-your-most-few-valuable-files"></a>Scenario - Proteggere (alcuni) file particolarmente importanti
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -38,12 +39,12 @@ Le istruzioni sono adatte ai casi seguenti:
 
 -   L'amministratore deve essere in grado di monitorare chi e quando accede ai file, revocando l'accesso se necessario.
 
-## Istruzioni sulla distribuzione
+## <a name="deployment-instructions"></a>Istruzioni sulla distribuzione
 ![Istruzioni per l'amministratore per la distribuzione rapida di Azure RMS](../media/AzRMS_AdminBanner.png)
 
 Verificare che siano soddisfatti i requisiti seguenti e quindi seguire le istruzioni per le procedure di supporto prima di passare alla documentazione dell'utente.
 
-## Requisiti per questo scenario
+## <a name="requirements-for-this-scenario"></a>Requisiti per questo scenario
 Per questo scenario, sono necessari i requisiti seguenti:
 
 |Requisito|Altre informazioni|
@@ -55,7 +56,7 @@ Per questo scenario, sono necessari i requisiti seguenti:
 |Gli utenti autorizzati dispongano di una versione minima di Office 2013|Se gli utenti dispongono di Office 2010, è necessario installare anche l'applicazione Rights Management sharing.|
 |La sottoscrizione per Azure Information Protection include il rilevamento dei documenti|Se la sottoscrizione non include il rilevamento e la revoca dei documenti, non sarà possibile accedere al sito di rilevamento dei documenti per vedere chi accede ai documenti e, se necessario, per revocarne l'accesso. In questo caso, acquistare una sottoscrizione che supporta il monitoraggio dei documenti o accettare questa limitazione. È opportuno considerare anche le funzionalità di [registrazione dell'utilizzo ](../deploy-use/log-analyze-usage.md) del servizio Azure Rights Management, che può fornire informazioni su quali utenti hanno eseguito l'accesso e quando, per rilevare potenziali comportamenti sospetti.<br /><br />Controllare l'[elenco delle funzionalità](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) dal sito Azure Information Protection.|
 
-### Per configurare il modello personalizzato
+### <a name="to-configure-the-custom-template"></a>Per configurare il modello personalizzato
 
 1.  Nel portale classico di Azure: Creare un nuovo modello personalizzato per Azure Rights Management, contenente i valori e le impostazioni seguenti:
 
@@ -69,7 +70,7 @@ Per questo scenario, sono necessari i requisiti seguenti:
 
 2.  Pubblicare il nuovo modello.
 
-### Per proteggere il file sul posto
+### <a name="to-protect-the-files-inplace"></a>Per proteggere il file sul posto
 
 1.  In Esplora File, passare alla prima cartella che contiene i file da proteggere:
 
@@ -90,7 +91,7 @@ Per altre informazioni sulla protezione dei file sul posto, vedere [Proteggere u
 > [!TIP]
 > Se il numero di file da proteggere è eccessivo per questo processo manuale, è consigliabile usare lo [strumento di protezione RMS](https://www.microsoft.com/en-us/download/details.aspx?id=47256) per proteggere i file in blocco tramite il modello.
 
-### Per monitorare e, se necessario, revocare l'accesso ai file
+### <a name="to-monitor-and-if-necessary-revoke-access-to-the-files"></a>Per monitorare e, se necessario, revocare l'accesso ai file
 
 1.  In Esplora file, fare clic con il pulsante destro del mouse sul file, selezionare **Proteggi tramite RMS** e quindi selezionare **Rileva utilizzo**:
 
@@ -98,7 +99,7 @@ Per altre informazioni sulla protezione dei file sul posto, vedere [Proteggere u
 
 3.  Verificare chi ha eseguito l'accesso ai file protetti, prestando particolare attenzione ai tentativi non riusciti nel caso in cui indicano comportamenti sospetti. Se si ritiene utile, è possibile revocare l'accesso a ogni file.
 
-## Istruzioni sulla documentazione per l'utente
+## <a name="user-documentation-instructions"></a>Istruzioni sulla documentazione per l'utente
 Non sono disponibili istruzioni specifiche per gli utenti relative a questo scenario, in quanto questi file non richiedono alcuna azione particolare da parte degli utenti. I file sono stati protetti da parte dell'utente e verranno monitorati dall'utente. Tuttavia, può essere necessario informare gli utenti e i canali di supporto su quali siano i file protetti e su come limitare l'uso dei documenti. Ad esempio, se un utente autorizzato non dispone di connessione a Internet, non sarà in grado di aprire il file.
 
 Usando il modello seguente, copiare e incollare l'annuncio in una comunicazione per gli utenti finali e apportare tali modifiche:
@@ -113,7 +114,7 @@ La documentazione dell'esempio mostra come questo annuncio viene visualizzato da
 
 ![Documentazione dell'utente del modello per la distribuzione rapida di Azure RMS](../media/AzRMS_UsersBanner.png)
 
-### Annuncio IT: protezione dei documenti top secret di &lt;nome organizzazione&gt;
+### <a name="it-announcement-protecting-ltorganization-namegts-top-secret-documents"></a>Annuncio IT: protezione dei documenti top secret di &lt;nome organizzazione&gt;
 Poiché i file seguenti dispongono di un elevato livello di protezione, solo gli &lt;utenti con restrizioni&gt; possono accedere e modificare i file. Per proteggere questi file da accessi non autorizzati, l'applicazione richiederà automaticamente di proteggere i file ogni volta che vengono aperti, in modo che non sia necessaria una connessione Internet per accedervi e potrebbe essere richiesto di immettere le credenziali:
 
 -   &lt;documento, tipo o posizione top secret 1&gt;
@@ -126,10 +127,10 @@ Poiché i file seguenti dispongono di un elevato livello di protezione, solo gli
 
 -   Se non è possibile accedere a questi file o se si notano modifiche sospette nei file, &lt;azione e dettagli contatto&gt;.
 
-#### Esempio di documentazione personalizzata per l'utente
+#### <a name="example-customized-user-documentation"></a>Esempio di documentazione personalizzata per l'utente
 ![Esempio di documentazione dell'utente per la distribuzione rapida di Azure RMS](../media/AzRMS_ExampleBanner.png)
 
-##### Annuncio IT: Protezione dei documenti top secret di VanArsdel
+##### <a name="it-announcement-protecting-vanarsdels-top-secret-documents"></a>Annuncio IT: Protezione dei documenti top secret di VanArsdel
 I seguenti file dispongono di un elevato livello di protezione, in modo che solo le persone nella riga A del messaggio di posta elettronica possano accedere e modificare questi file. Per proteggere questi file da accessi non autorizzati, le applicazioni richiederanno automaticamente di proteggere i file ogni volta che vengono aperti, in modo che non sia necessaria una connessione Internet per aprirli e potrebbe essere richiesto di immettere le credenziali:
 
 -   Specifiche di progettazione per il nome in codice "Mercury"
@@ -147,6 +148,6 @@ I seguenti file dispongono di un elevato livello di protezione, in modo che solo
 
 
 
-<!--HONumber=Oct16_HO1-->
+<!--HONumber=Nov16_HO2-->
 
 

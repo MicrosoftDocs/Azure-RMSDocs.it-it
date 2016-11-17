@@ -2,6 +2,7 @@
 title: Opzioni della finestra di dialogo per l&quot;applicazione Rights Management sharing | Azure Information Protection
 description: "Informazioni per specificare le opzioni nella finestra di dialogo Aggiungi protezione o nella finestra di dialogo Condividi file protetto dell&quot;applicazione RMS sharing. Questa finestra di dialogo verrà visualizzata quando si protegge un file da condividere oppure si protegge un file nella posizione e si scelgono autorizzazioni personalizzate."
 author: cabailey
+ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/04/2016
 ms.topic: article
