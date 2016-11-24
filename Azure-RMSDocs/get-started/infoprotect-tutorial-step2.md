@@ -4,15 +4,15 @@ description: Passaggio 2 dell&quot;esercitazione introduttiva che consente di pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 3c2523119020232b9044506b2d2a602104e81d0b
+ms.sourcegitcommit: bce1682624b040545d30ca1cc426e4e2f8c38018
+ms.openlocfilehash: 7ba1566a81ca9a3ac45f340f69d3c9e933f015ff
 
 
 ---
@@ -36,7 +36,7 @@ Il criterio predefinito disponibile con Azure è utilizzabile senza alcuna opera
     
     - Etichette per la classificazione: **Personale**, **Public** (Pubblico), **Interno**, **Confidential** (Riservato) e **Secret** (Segreto). Leggere la descrizione di ognuna per comprendere l'uso a cui è destinata. Si noti che per **Secret** (Segreto) esistono due etichette secondarie: **All Company** (Tutta la società) e **My Group** (Gruppo personale). Questo è un esempio di sottocategorie di una classificazione.
 
-    - Per impostazione predefinita, per le etichette **Interno**, **Confidential** (Riservato) e **Secret** (Segreto) sono configurati contrassegni visivi (ad esempio piè di pagina, intestazione, filigrana). Per nessuna delle etichette è impostata la protezione. Le tre impostazioni globali, poi, non sono impostate. I documenti e i messaggi di posta elettronica non devono quindi necessariamente avere un'etichetta. Non esiste un'etichetta predefinita e gli utenti non sono obbligati a giustificare un eventuale abbassamento del livello di classificazione.
+    - Per impostazione predefinita, per le etichette **Interno**, **Confidential** (Riservato) e **Secret** (Segreto) sono configurati contrassegni visivi (ad esempio piè di pagina, intestazione, filigrana). Per nessuna delle etichette è impostata la protezione. Le quattro impostazioni globali, inoltre, non sono impostate: i documenti e i messaggi di posta elettronica non devono necessariamente avere un'etichetta, non esiste un'etichetta predefinita, gli utenti non sono obbligati a giustificare un'eventuale variazione delle etichette e il client non è configurato per un collegamento alla guida personalizzato.
 
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Criterio predefinito](../media/info-protect-policy.png)
 
@@ -122,6 +122,6 @@ Dopo aver esaminato i criteri predefiniti e aver apportato alcune modifiche, il 
 [Passaggio 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 

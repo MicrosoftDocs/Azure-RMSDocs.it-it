@@ -4,15 +4,15 @@ description: Istruzioni per installare il client che aggiunge una barra di prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/01/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: 2f1930f4657278d25ef6dd369866f16e4ba71644
-ms.openlocfilehash: 5e36d046d53b0fdfb6796f2a00e8d0d1325f30c3
+ms.sourcegitcommit: db05149a25b6535d568338140daa2474e48b6711
+ms.openlocfilehash: 984d764d0c1ac41e6baec0b7978f501d7494773d
 
 
 ---
@@ -69,7 +69,9 @@ Il client di Azure Information Protection è anche incluso nel Microsoft Update 
     
         Viene anche mostrato il nome utente visualizzato che identifica l'account usato per autenticare l'utente in Azure Information Protection. Questo nome utente deve corrispondere a un account usato per Office 365 o Azure Active Directory.
 
-    - Nella sezione **Help and feedback** (Guida e commenti e suggerimenti): usare il collegamento **Send feedback** (Invia commenti e suggerimenti) per allegare automaticamente i log del client a un messaggio di posta elettronica da inviare al team di Information Protection per analizzare un problema. 
+    - Nella sezione **Guida e commenti e suggerimenti**: il collegamento **Ulteriori informazioni** reindirizza per impostazione predefinita al sito Web di [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) ma può essere configurato con un URL personalizzato nell'ambito delle [impostazioni globali](../deploy-use/configure-policy-settings.md) dei criteri di Azure Information Protection.
+        
+        Usare il collegamento **Invia commenti e suggerimenti** per allegare automaticamente i log del client a un messaggio di posta elettronica da inviare al team di Information Protection per l'analisi di un problema. 
     
         Per informazioni di diagnostica e per reimpostare il client, fare clic su **Run diagnostics** (Esegui diagnostica). Al termine dei test diagnostici, fare clic su **Copy results** (Copia risultati) per incollare le informazioni in un messaggio di posta elettronica da inviare al proprio help desk o al supporto tecnico Microsoft. Al termine dei test, è anche possibile reimpostare il client.
         
@@ -115,6 +117,6 @@ Per verificare le informazioni sulla versione del client, vedere [Cronologia del
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

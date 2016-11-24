@@ -4,7 +4,7 @@ description: "Informazioni per pianificare e gestire la chiave del tenant di Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/09/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 84072c64f83ec97ac41d6ec030be5eabff263b4b
-ms.openlocfilehash: afcef2843336e022e63e7895ac3c0488d0aa0e2a
+ms.sourcegitcommit: 5f75e36e5939b23a9d077a6fcd659c59d0f71a68
+ms.openlocfilehash: 1e25f9007004d27fd8f52f77a1663e42f751334e
 
 
 ---
@@ -97,9 +97,9 @@ Per generare e trasferire la propria chiave del tenant in Insieme di credenziali
 
 Quando la chiave viene trasferita all'insieme di credenziali delle chiavi, le viene assegnato un ID, ovvero un URL contenente il nome dell'insieme di credenziali delle chiavi, il contenitore delle chiavi, il nome della chiave e la versione della chiave. Ad esempio: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. È necessario indicare al servizio Azure Rights Management di Azure Information Protection di usare questa chiave, specificando l'URL.
 
-Affinché Azure Information Protection possa usare la chiave, il servizio Azure Rights Management deve essere prima autorizzato a usare la chiave nell'insieme di credenziali delle chiavi dell'organizzazione. A tale scopo, l'amministratore dell'insieme di credenziali delle chiavi di Azure usa il cmdlet PowerShell [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.300\).aspx) e concede le autorizzazioni all'entità servizio **Microsoft.Azure.RMS** di Azure Rights Management. Ad esempio:
+Affinché Azure Information Protection possa usare la chiave, il servizio Azure Rights Management deve essere prima autorizzato a usare la chiave nell'insieme di credenziali delle chiavi dell'organizzazione. A tale scopo, l'amministratore dell'insieme di credenziali delle chiavi di Azure usa il cmdlet di PowerShell appropriato [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.300\).aspx) e concede le autorizzazioni all'entità servizio Azure Rights Management usando il GUID 00000012-0000-0000-c000-000000000000. Ad esempio:
 
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName Microsoft.Azure.RMS -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
+    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
 A questo punto è possibile configurare Azure Information Protection per l'uso di questa chiave come chiave del tenant di Azure Information Protection dell'organizzazione. Tramite i cmdlet di Azure RMS, connettersi al servizio Azure Rights Management e accedere:
 
