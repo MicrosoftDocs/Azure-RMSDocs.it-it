@@ -4,7 +4,7 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/27/2016
+ms.date: 11/23/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b3beeaffd5cf5f0e0a629dd6130d780cec3e05d6
-ms.openlocfilehash: ff6573042941640d1cca82d68e85f09c82e3c77b
+ms.sourcegitcommit: 45ca64c8338de3f4b192c61eb437b4acdbb8d799
+ms.openlocfilehash: cdd987bf0670f9e5ef7519119aa886573cf14924
 
 
 ---
@@ -37,8 +37,6 @@ Utilizzare le informazioni seguenti per visualizzare gli elementi nuovi o modifi
 **Data di rilascio**: 27/10/2016
 
 **Correzioni**:
-
-- È possibile applicare correttamente un'etichetta che protegge il contenuto quando si usa Office 2010 e l'ambiente non è stato inizializzato per il servizio Azure Rights Management (operazione nota anche come "bootstrap").
 
 - L'installazione del client viene completata quando il servizio Windows Update è disattivato.
 
@@ -64,6 +62,6 @@ Per altre informazioni sull'installazione del client, vedere [Installazione del 
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Nov16_HO4-->
 
 
