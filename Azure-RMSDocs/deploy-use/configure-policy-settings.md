@@ -4,15 +4,15 @@ description: Nei criteri di Azure Information Protection sono disponibili 3 impo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 11/16/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 translationtype: Human Translation
-ms.sourcegitcommit: addc24fed28cee52b57c7e3bde926d6324478e7b
-ms.openlocfilehash: 970a42e89d09af34e9ff16714682d1de250175f6
+ms.sourcegitcommit: 8fa2ed9ff9ebe5c850ab5681e4dcc1f3d3c676b3
+ms.openlocfilehash: de5f5fbddb84e4444751e9fefbfe6ec3fe3e45e4
 
 
 ---
@@ -21,7 +21,7 @@ ms.openlocfilehash: 970a42e89d09af34e9ff16714682d1de250175f6
 
 >*Si applica a: Azure Information Protection*
 
-Nei criteri di Azure Information Protection sono disponibili 3 impostazioni valide per tutti gli utenti e tutti i dispositivi:
+Nei criteri di Azure Information Protection sono disponibili quattro impostazioni valide per tutti gli utenti e tutti i dispositivi:
 
 ![Impostazioni globali dei criteri di Azure Information Protection](../media/info-protect-policy-settings.png)
 
@@ -48,6 +48,10 @@ Per configurare queste impostazioni:
 
     Questa opzione non è applicabile alle etichette secondarie.
 
+    - **Provide a custom URL for the Azure Information Protection client "Tell me more" web page** (Specifica un URL personalizzato per la pagina Web "Ulteriori informazioni" del client di Azure Information Protection): questo link viene visualizzato nella finestra di dialogo **Microsoft Azure Information Protection** della sezione **Guida e commenti** dopo aver selezionato **Proteggi** > **Guida e commenti** dalla scheda **Home** di un'applicazione Office. Per impostazione predefinita, questo collegamento indirizza l'utente al sito Web di [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection). Se si preferisce che questo collegamento indirizzi l'utente a un'altra pagina Web, è possibile immettere un URL HTTP o HTTPS (consigliato). Non viene effettuato alcun controllo per verificare che l'URL personalizzato sia accessibile o venga correttamente visualizzato su tutti i dispositivi.
+    
+    Per il proprio help desk, ad esempio, è possibile scegliere di immettere la pagina della documentazione Microsoft con informazioni sull'installazione e l'uso del client (**https://docs.microsoft.com/information-protection/rms-client/info-protect-client**) o con informazioni sulla versione di rilascio (**https://docs.microsoft.com/information-protection/rms-client/client-version-release-history**). In alternativa, è possibile pubblicare una pagina Web personalizzata con informazioni sulle modalità di contatto dell'help desk o con un video che illustra agli utenti come usare le etichette configurate in precedenza.
+
 3. Fare clic su **Save** (Salva) per salvare le modifiche.
 
 4. Per mettere le modifiche a disposizione degli utenti, fare clic su **Publish** (Pubblica).
@@ -67,6 +71,6 @@ Per altre informazioni sulla configurazione dei criteri di Azure Information Pro
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO3-->
 
 

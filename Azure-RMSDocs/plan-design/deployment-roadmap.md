@@ -4,7 +4,7 @@ description: Per preparare l&quot;ambiente e per implementare e gestire Azure In
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 11/14/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 884a4528da6fa79d92f39fa08860773bcc5552d3
+ms.sourcegitcommit: 1551b5dc3c5c9740721e3de01d086185966b6016
+ms.openlocfilehash: ce1ed30122b3bff5b045dfbec65c257d348f0122
 
 
 ---
@@ -44,6 +44,9 @@ Scegliere la guida di orientamento per la distribuzione che sia applicabile alla
 
 ### <a name="step-1-confirm-your-subscription-and-assign-user-licenses"></a>Passaggio 1: Verificare la sottoscrizione e assegnare licenze utente
 Esaminare le [informazioni sulle sottoscrizioni](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) e l'[elenco delle funzionalità](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) nel sito Azure Information Protection per verificare che l'organizzazione abbia una sottoscrizione che include le caratteristiche e le funzionalità previste. Assegnare quindi una licenza da tale sottoscrizione a ogni utente dell'organizzazione, che potrà così classificare, etichettare e proteggere documenti e messaggi di posta elettronica.
+
+Nota: non assegnare manualmente licenze utente dalla sottoscrizione gratuita di RMS per singoli utenti e non usare questa licenza per amministrare il servizio Azure Rights Management per la propria organizzazione. Queste licenze vengono visualizzate come **Rights Management Adhoc** (Ad-hoc per Rights Manager) nell'interfaccia di amministrazione di Office 365 e come **RIGHTSMANAGEMENT_ADHOC** quando si esegue il cmdlet di PowerShell per Azure AD, [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx). Per altre informazioni sulle modalità in cui la sottoscrizione di RMS per singoli utenti viene automaticamente concessa e assegnata agli utenti, vedere [RMS per utenti singoli e Azure Information Protection](../understand-explore/rms-for-individuals.md).
+
 
 ### <a name="step-2-prepare-your-tenant-account-to-use-azure-information-protection"></a>Passaggio 2: Preparare l'account tenant per l'uso di Azure Information Protection
 Prima di iniziare a usare Azure Information Protection, eseguire le attività di preparazione seguenti:
@@ -130,6 +133,9 @@ Quando si inizia a usare il servizio Azure Rights Management, è possibile avval
 ### <a name="step-1-confirm-that-you-have-a-subscription-that-includes-azure-rights-management"></a>Passaggio 1: Confermare di avere una sottoscrizione che include Azure Rights Management
 Esaminare le [informazioni sulle sottoscrizioni](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) e l'[elenco delle funzionalità](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) nel sito Azure Information Protection per verificare che l'organizzazione abbia una sottoscrizione che include le caratteristiche e le funzionalità previste. Assegnare quindi una licenza da tale sottoscrizione a ogni utente dell'organizzazione, che potrà così proteggere documenti e messaggi di posta elettronica usando il servizio Azure Rights Management.
 
+Nota: non assegnare manualmente licenze utente dalla sottoscrizione gratuita di RMS per singoli utenti e non usare questa licenza per amministrare il servizio Azure Rights Management per la propria organizzazione. Queste licenze vengono visualizzate come **Rights Management Adhoc** (Ad-hoc per Rights Manager) nell'interfaccia di amministrazione di Office 365 e come **RIGHTSMANAGEMENT_ADHOC** quando si esegue il cmdlet di PowerShell per Azure AD, [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx). Per altre informazioni sulle modalità in cui la sottoscrizione di RMS per singoli utenti viene automaticamente concessa e assegnata agli utenti, vedere [RMS per utenti singoli e Azure Information Protection](../understand-explore/rms-for-individuals.md).
+
+
 ### <a name="step-2-prepare-your-tenant-account-to-use-the-azure-rights-management-service"></a>Passaggio 2: Preparare l'account tenant per l'uso del servizio Azure Rights Management
 Prima di iniziare a usare [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], effettuare la seguente preparazione:
 
@@ -184,6 +190,6 @@ Quando si inizia a usare il servizio Azure Rights Management, è possibile avval
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO3-->
 
 
