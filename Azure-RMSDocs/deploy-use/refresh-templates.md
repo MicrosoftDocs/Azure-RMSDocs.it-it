@@ -62,7 +62,7 @@ Se Information Rights Management (IRM) è stato già configurato per Exchange On
         Import-PSSession $Session
         ```
 
-2.  Usare il cmdlet [Import-RMSTrustedPublishingDomain](http://technet.microsoft.com/library/jj200724%28v=exchg.160%29.aspx) per reimportare il dominio di pubblicazione trusted da Azure RMS:
+2.  Usare il cmdlet [Import-RMSTrustedPublishingDomain](http://technet.microsoft.com/library/jj200724%28v=exchg.160%29.aspx) per reimportare il dominio di pubblicazione trusted da Azure RMS:
 
     ```
     Import-RMSTrustedPublishingDomain -Name "<TPD name>" -RefreshTemplates -RMSOnline
