@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 93ed9760d79f2f38d4bee302ebb5c7c6368b1bbe
+ms.sourcegitcommit: a3d58cc4c430fe2335ff8fbb7e23c77915e6b8ab
+ms.openlocfilehash: c09eebc8a950894038a758d8f968c5e3e5ae2a53
 
 
 ---
@@ -35,10 +35,10 @@ Questa sezione descrive le indicazioni specifiche per diversi scenari di svilupp
 - [Procedura: Usare le impostazioni di crittografia](working-with-encryption.md): questo argomento descrive i pacchetti di crittografia e illustra alcuni frammenti di codice che ne consentono l'uso.
 - [Tipi di applicazioni](application-types.md): questo argomento illustra i tipi di applicazioni che è possibile scegliere di creare come abilitate all'uso di diritti.
 - [Configurazione dell'API file](file-api-configuration.md): il comportamento dell'API file può essere configurato tramite le impostazioni del Registro di sistema.
+- [Linee guida sulla sicurezza](security-guidelines.md): fornisce agli sviluppatori l'orientamento e le indicazioni per l'utilizzo all'interno dell'ecosistema AIP.
 - [Formati di file supportati](supported-file-formats.md): l'API file supporta i formati nativi e PFile
 - [Piattaforme supportate](supported-platforms.md): questo argomento identifica le piattaforme client e server di RMS SDK 2.1 supportate.
-- [Informazioni sulle restrizioni di utilizzo](understanding-usage-restrictions.md): tutte le applicazioni abilitate per RMS devono imporre restrizioni di utilizzo.
-- [Informazioni di riferimento sulle restrizioni di utilizzo](usage-restriction-reference.md): le restrizioni di utilizzo vengono definite dalle costanti elencate in questo argomento.
+- [Informazioni sulle restrizioni di utilizzo](understanding-usage-restrictions.md): tutte le applicazioni abilitate per RMS devono imporre restrizioni di utilizzo, che sono definite dalle costanti elencate in questo argomento.
 
  
 ## <a name="related-topics"></a>Argomenti correlati
@@ -49,6 +49,6 @@ Questa sezione descrive le indicazioni specifiche per diversi scenari di svilupp
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 

@@ -4,15 +4,15 @@ description: Istruzioni per installare il client che aggiunge una barra di prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2016
+ms.date: 11/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: db05149a25b6535d568338140daa2474e48b6711
-ms.openlocfilehash: 984d764d0c1ac41e6baec0b7978f501d7494773d
+ms.sourcegitcommit: 0b9d796b8908a42a7aceb95f3c3319028e9a9dbe
+ms.openlocfilehash: d12916a0b60e27592c3917ab5421196392156506
 
 
 ---
@@ -67,7 +67,7 @@ Il client di Azure Information Protection è anche incluso nel Microsoft Update 
 
     - Nella sezione **Client status** (Stato del client): usare il valore di **Version** (Versione) per verificare che l'installazione sia stata eseguita correttamente. È anche possibile sapere quando il client si è connesso per l'ultima volta al servizio Azure Information Protection dell'organizzazione e la data di installazione o aggiornamento più recente di Azure Information Protection. Quando il client si connette al servizio, scarica automaticamente il criterio più recente se rileva variazioni rispetto al criterio corrente. Se si sono apportate modifiche ai criteri dopo l'ora visualizzata, chiudere e riaprire l'applicazione di Office.
     
-        Viene anche mostrato il nome utente visualizzato che identifica l'account usato per autenticare l'utente in Azure Information Protection. Questo nome utente deve corrispondere a un account usato per Office 365 o Azure Active Directory.
+        Viene anche mostrato il nome utente visualizzato che identifica l'account usato per autenticare l'utente in Azure Information Protection. Questo nome utente deve corrispondere a un account usato per Office 365 o Azure Active Directory e che appartiene a un tenant configurato per Azure Information Protection.
 
     - Nella sezione **Guida e commenti e suggerimenti**: il collegamento **Ulteriori informazioni** reindirizza per impostazione predefinita al sito Web di [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) ma può essere configurato con un URL personalizzato nell'ambito delle [impostazioni globali](../deploy-use/configure-policy-settings.md) dei criteri di Azure Information Protection.
         
@@ -117,6 +117,6 @@ Per verificare le informazioni sulla versione del client, vedere [Cronologia del
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Nov16_HO4-->
 
 

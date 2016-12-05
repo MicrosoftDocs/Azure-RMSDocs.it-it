@@ -4,7 +4,7 @@ description: Questo articolo presenta alcune possibili domande sulla versione di
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/24/2016
+ms.date: 11/23/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: a05b33f5085bf31d4ef1e6a606322fda8b0febe7
+ms.sourcegitcommit: 9d4338a1c89f2a94c744b8f5cc99bce1e54e7dec
+ms.openlocfilehash: 028468e7f4bbcff53187a947038926fbf9af1498
 
 
 ---
@@ -152,6 +152,26 @@ Per altre informazioni, vedere [Tenere traccia dei documenti e revocarli quando 
 
 I file e i messaggi di posta elettronica classificati da Azure Information Protection possono essere utilizzati o modificati da qualsiasi utente, con o senza il client di Azure Information Protection installato. 
 
+## <a name="how-do-i-sign-in-as-a-different-user"></a>Come si accede come utente diverso?
+
+In un ambiente di produzione, in genere non sarebbe necessario accedere come utente diverso quando si usa il client Azure Information Protection. Tuttavia, potrebbe essere necessario eseguire questa operazione se si hanno più tenant, ad esempio se si ha un tenant di prova oltre a Office 365 o un tenant di Azure usato dall'organizzazione.
+
+È possibile verificare con quale account è stato eseguito l'accesso usando la finestra di dialogo di **Microsoft Azure Information Protection**: nell'applicazione di Office, nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi** e quindi su **Guida e commenti**. Il nome dell'account verrà visualizzato nella sezione **Stato del client**.
+
+In particolare quando si usa un account amministratore, assicurarsi di controllare il nome di dominio dell'account di accesso che viene visualizzato. Ad esempio, se si ha un account "amministratore" in due diversi tenant, può essere facile non notare che è stato effettuato l'accesso con il nome dell'account giusto, ma con il dominio errato. Un sintomo di questo errore può essere l'impossibilità di scaricare i criteri di Azure Information Protection o di visualizzare le etichette o un comportamento previsto.
+
+Per accedere come utente diverso, al momento è necessario modificare il Registro di sistema:
+
+1. Usando un editor del Registro di sistema, passare a **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** ed eliminare la chiave **TokenCache**.
+
+2. Riavviare tutte le applicazioni Office aperte e accedere con l'account utente diverso. Se non viene visualizzato un prompt dei comandi nell'applicazione Office per accedere al servizio Azure Information Protection, tornare alla finestra di dialogo **Microsoft Azure Information Protection** e fare clic su **Accedi** dalla sezione **Stato del client** aggiornata.
+
+Inoltre:
+
+- Se si vuole reinizializzare l'ambiente per il servizio Azure Rights Management (noto anche come bootstrap), è possibile farlo usando l'opzione **Reimposta** dello [strumento RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
+
+- Per eliminare i criteri di Azure Information Protection attualmente scaricati eliminare il file **Policy.msip** dalla cartella %localappdata%\Microsoft\MSIP.
+
 ## <a name="how-can-i-report-a-problem-or-send-feedback-for-azure-information-protection"></a>Come è possibile segnalare un problema o inviare commenti e suggerimenti per Azure Information Protection?
 
 Se si incontra un problema con Azure Information Protection e si usa la versione corrente del client: nell'applicazione di Office, nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi** e quindi su **Guida e commenti**. Nella finestra di dialogo **Microsoft Azure Information Protection** fare clic su **Invia commenti e suggerimenti**. Verrà inviato un messaggio di posta elettronica al team di Information Protection. Al messaggio verranno allegati automaticamente i file di log del PC per consentire la diagnosi del problema. 
@@ -159,6 +179,6 @@ Se si incontra un problema con Azure Information Protection e si usa la versione
 Per eventuali domande o commenti, usare il [sito Azure Information Protection in Yammer](https://www.yammer.com/askipteam/). 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 

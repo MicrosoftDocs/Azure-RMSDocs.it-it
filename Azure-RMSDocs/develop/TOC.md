@@ -21,11 +21,11 @@
 #### [Esempi di codice iOS/OS X](ios-os-x-code-examples.md)
 #### [Risorse della community](community-resources.md)
 ### [Condizioni e istruzioni per lo sviluppatore](core-concepts.md)
-#### [Come registrare e abilitare RMS nell'app con Azure AD](authentication-integration.md)
+#### [Come registrare l'app e abilitarla per RMS con Azure AD](authentication-integration.md)
 #### [Come abilitare la registrazione delle prestazioni e dell'errore](enabling-logging.md)
 #### [Come usare i diritti predefiniti](built-in-rights-usage-restriction-reference.md)
 #### [Come usare il rilevamento dei documenti](how-to-use-document-tracking.md)
-#### [Termini](terms.md)
+#### [Condizioni](terms.md)
 ### [Informazioni di riferimento sulle API](api-reference-4-2.md)
 #### [Informazioni di riferimento sulle API di Android](https://msdn.microsoft.com/library/dn758245.aspx)
 #### [Informazioni di riferimento sulle API di Linux](linux-c-api-reference.md)
@@ -55,11 +55,11 @@
 #### [Procedura: Usare le impostazioni di crittografia](working-with-encryption.md)
 #### [Tipi di applicazioni](application-types.md)
 #### [Configurazione dell'API file](file-api-configuration.md)
+#### [Guida alla sicurezza](security-guidelines.md)
 #### [Formati di file supportati](supported-file-formats.md)
 #### [Piattaforme supportate](supported-platforms.md)
 #### [Informazioni sulle restrizioni di utilizzo](understanding-usage-restrictions.md)
-#### [Informazioni di riferimento sulle restrizioni di utilizzo](usage-restriction-reference.md)
-### [Riferimento API](api-reference-2-1.md)
+### [Informazioni di riferimento sulle API](api-reference-2-1.md)
 #### [Costanti](https://msdn.microsoft.com/library/hh535291.aspx)
 #### [Tipi di dati](https://msdn.microsoft.com/library/hh535288.aspx)
 #### [Funzioni](https://msdn.microsoft.com/library/hh535289.aspx)
@@ -67,6 +67,6 @@
 #### [Codici di errore](https://msdn.microsoft.com/library/hh535248.aspx)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Nov16_HO4-->
 
 

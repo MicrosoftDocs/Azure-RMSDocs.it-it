@@ -13,8 +13,8 @@ ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a5654196e9e8a8d6512897f0cd611ce931d5ffe7
-ms.openlocfilehash: 2fbf22b9221db62f89a480330da9b2ecac1b9edc
+ms.sourcegitcommit: 8a0bf034c94cde336451b30783b80ff0c85756b1
+ms.openlocfilehash: f02dfede37045679c9a88c3ada9e5386666bef97
 
 
 ---

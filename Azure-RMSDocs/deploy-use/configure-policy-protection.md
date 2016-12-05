@@ -4,15 +4,15 @@ description: "È possibile proteggere i documenti e i messaggi di posta elettron
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 11/22/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 translationtype: Human Translation
-ms.sourcegitcommit: addc24fed28cee52b57c7e3bde926d6324478e7b
-ms.openlocfilehash: 4f3c77df23207c3a76a768a1fe428484339de18f
+ms.sourcegitcommit: 0a79642c3707be4c8dd75ccc80569ba90da01236
+ms.openlocfilehash: 18e7dfdc91051836093ad5b36fc9a8705d99dcc0
 
 
 ---
@@ -43,6 +43,12 @@ Per altre informazioni su Azure Rights Management e sul relativo funzionamento, 
 
 > [!IMPORTANT]
 > Per configurare un'etichetta per applicare la protezione di Azure Rights Management, è necessario che sia attivo il servizio Azure Rights Management per l'organizzazione. Se non è ancora stato fatto, vedere [Attivazione di Azure Rights Management](../deploy-use/activate-service.md).
+
+Non è necessario configurare Exchange per Information Rights Management (IRM) affinché gli utenti possano applicare etichette in Outlook per proteggere le loro email. Tuttavia, fino a quando Exchange non sarà configurato per IRM, non si potrà usufruire della funzionalità completa della protezione di Rights Management di Azure con Exchange. Ad esempio, gli utenti non potranno visualizzare messaggi di posta elettronica protetti nei telefoni cellulari o con Outlook Web Access, i messaggi di posta elettronica protetti non potranno essere indicizzati per la ricerca e non sarà possibile configurare Exchange Online DLP per la protezione di Rights Management. Per configurare Exchange in modo da supportare questi scenari aggiuntivi, vedere le risorse seguenti:
+
+- Per Exchange Online: vedere le istruzioni per [Exchange Online: configurazione di IRM](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
+
+- Per Exchange locale, è necessario distribuire il [connettore RMS e configurare i server Exchange](../deploy-use/deploy-rms-connector.md). 
 
 
 ## <a name="to-configure-a-label-to-apply-rights-management-protection"></a>Per configurare un'etichetta per applicare la protezione di Rights Management
@@ -85,6 +91,6 @@ Per altre informazioni sulla configurazione dei criteri di Azure Information Pro
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Nov16_HO4-->
 
 
