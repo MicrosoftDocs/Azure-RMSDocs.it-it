@@ -4,15 +4,15 @@ description: Passaggio 2 dell&quot;esercitazione introduttiva che consente di pr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: bce1682624b040545d30ca1cc426e4e2f8c38018
-ms.openlocfilehash: 7ba1566a81ca9a3ac45f340f69d3c9e933f015ff
+ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
+ms.openlocfilehash: 2f996bb974b1d86b137e3a8fba387386276739a2
 
 
 ---
@@ -32,17 +32,21 @@ Il criterio predefinito disponibile con Azure è utilizzabile senza alcuna opera
     > [!TIP] 
     > Selezionare **Aggiungi al dashboard** per creare un riquadro **Azure Information Protection** nel dashboard, in modo da ignorare la ricerca del servizio al successivo accesso al portale.
 
-3.  Analizzare il pannello **Azure Information Protection** principale che illustra il criterio di Information Protection creato automaticamente:
+3.  Esaminare il pannello **Criteri:Globale** visualizzato automaticamente che mostra il criterio predefinito di Information Protection creato automaticamente:
     
     - Etichette per la classificazione: **Personale**, **Public** (Pubblico), **Interno**, **Confidential** (Riservato) e **Secret** (Segreto). Leggere la descrizione di ognuna per comprendere l'uso a cui è destinata. Si noti che per **Secret** (Segreto) esistono due etichette secondarie: **All Company** (Tutta la società) e **My Group** (Gruppo personale). Questo è un esempio di sottocategorie di una classificazione.
 
-    - Per impostazione predefinita, per le etichette **Interno**, **Confidential** (Riservato) e **Secret** (Segreto) sono configurati contrassegni visivi (ad esempio piè di pagina, intestazione, filigrana). Per nessuna delle etichette è impostata la protezione. Le quattro impostazioni globali, inoltre, non sono impostate: i documenti e i messaggi di posta elettronica non devono necessariamente avere un'etichetta, non esiste un'etichetta predefinita, gli utenti non sono obbligati a giustificare un'eventuale variazione delle etichette e il client non è configurato per un collegamento alla guida personalizzato.
-
-    ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Criterio predefinito](../media/info-protect-policy.png)
+    - Per impostazione predefinita, per le etichette **Interno**, **Confidential** (Riservato) e **Secret** (Segreto) sono configurati contrassegni visivi (ad esempio piè di pagina, intestazione, filigrana). Per nessuna delle etichette è impostata la protezione: 
+    
+    ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Criterio predefinito](../media/info-protect-policy-default-labels.png)
+    
+    Alcune impostazioni dei criteri globali, inoltre, non sono impostate: i documenti e i messaggi di posta elettronica non devono necessariamente avere un'etichetta, non esiste un'etichetta predefinita, gli utenti non sono obbligati a giustificare un'eventuale variazione delle etichette e il client non è configurato per un collegamento alla guida personalizzato:
+    
+    ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Criterio predefinito](../media/info-protect-policy-default-settings.png)
 
 ## <a name="changing-the-global-settings-for-a-default-template-and-prompt-for-justification"></a>Modifica delle impostazioni globali per un modello predefinito e richiesta di giustificazione
 
-Nel corso di questa esercitazione verranno modificate alcune impostazioni globali per scoprirne il funzionamento:
+Nel corso di questa esercitazione verranno modificate alcune impostazioni dei criteri globali per scoprirne il funzionamento:
 
 1. Impostare **Selezionare l'etichetta predefinita** su **Interno**.
 
@@ -102,11 +106,11 @@ Verranno ora modificate le impostazioni di una delle etichette, **Confidential**
     
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Digitare le note](../media/step2-type-notes.png)
 
-8. Fare clic su **Salva** su questo pannello **Etichetta: Confidential** (Riservato). Quindi, nel pannello **Azure Information Protection** principale, fare di nuovo clic su **Salva**.
+8. Fare clic su **Salva** su questo pannello **Etichetta: Confidential** (Riservato). Quindi, nel pannello **Criteri: Globale** fare di nuovo clic su **Salva**.
 
-9. Ora che le modifiche sono state apportate e salvate, devono essere rese disponibili agli utenti. A tale scopo fare clic su **Publish** (Pubblica) e su **Sì** per confermare.
+    ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Configurazione del criterio predefinito](../media/info-protect-policy-configured.png)
 
-![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Configurazione del criterio predefinito](../media/info-protect-policy-configured.png)
+9. Ora che le modifiche sono state apportate e salvate, devono essere rese disponibili agli utenti. A tale scopo, nel pannello iniziale di **Azure Information Protection** fare clic su **Publish** (Pubblica) e su **Sì** per confermare.
 
 Al termine di questa esercitazione è possibile chiudere il portale di Azure o lasciarlo aperto per provare altre opzioni di configurazione.
 
@@ -122,6 +126,6 @@ Dopo aver esaminato i criteri predefiniti e aver apportato alcune modifiche, il 
 [Passaggio 3 &#187;](infoprotect-tutorial-step3.md)
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Dec16_HO1-->
 
 

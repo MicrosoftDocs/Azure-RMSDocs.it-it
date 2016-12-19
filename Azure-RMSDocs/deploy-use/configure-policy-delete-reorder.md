@@ -4,15 +4,15 @@ description: "È possibile eliminare o riordinare le etichette mostrate sulla ba
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 translationtype: Human Translation
-ms.sourcegitcommit: d5b3f3fc473661022a4f17b6587d58a252d07d1a
-ms.openlocfilehash: 0ecc8f58179ea71f3faf4d4816ca7dbf4087826a
+ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
+ms.openlocfilehash: 743741fc63adfd959074986aab5c697d817f69c7
 
 
 ---
@@ -39,13 +39,15 @@ Per apportare le modifiche, seguire queste istruzioni.
     
     Ad esempio, dal menu principale fare clic su **Altri servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Nel pannello **Azure Information Protection** eseguire una delle azioni seguenti a seconda dell'operazione da eseguire, ovvero eliminare, disabilitare o riordinare un'etichetta:
+2. Se l'etichetta da eliminare, disabilitare o riordinare si applica a tutti gli utenti, eseguire una delle operazioni seguenti nel pannello **Criteri:Globale**. 
 
     - Per eliminare un'etichetta: fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida (**...**) per l'etichetta che si vuole eliminare, scegliere **Elimina questa etichetta** e fare clic su **Sì** per confermare. Fare clic su **Save** (Salva). 
 
     - Per disabilitare un'etichetta: selezionare l'etichetta che si vuole disabilitare. Nel pannello **Etichetta** per **Abilitato** fare clic su **No**fare clic su **Salva**.
 
     - Per riordinare un'etichetta: fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida (**...**) per l'etichetta che si vuole riordinare, scegliere **Sposta su** o **Sposta giù** fino a quando l'etichetta non è nell'ordine desiderato. Fare clic su **Save** (Salva). 
+
+     Se l'etichetta da eliminare, disabilitare o riordinare si trova in un [criterio con ambito](configure-policy-scope.md) in modo da essere applicata solo agli utenti selezionati, selezionare prima di tutto il criterio con ambito nel pannello iniziale di **Azure Information Protection**.
 
 3. Per mettere le modifiche a disposizione degli utenti, nel pannello **Azure Information Protection** fare clic su **Publish** (Pubblica).
 
@@ -57,6 +59,6 @@ Per altre informazioni sulla configurazione dei criteri di Azure Information Pro
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,7 +4,7 @@ description: "Per configurare le funzioni di classificazione, aggiunta di etiche
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 055470948a1bf21d4ee1ee83f345f49a98c1bf31
+ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
+ms.openlocfilehash: 808f72be7c5b6a1f18a06ecefdfdf7fbf6febff6
 
 
 ---
@@ -31,11 +31,11 @@ Per configurare i criteri di Azure Information Protection:
 
 2. Passare al pannello **Azure Information Protection**: ad esempio, nel menu hub fare clic su **More services** (Altri servizi) e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
 
-    Verrà quindi visualizzato il pannello **Azure Information Protection** in cui è possibile configurare i criteri di Azure Information Protection, che contiene gli elementi seguenti:
-
-    - Titolo e descrizione comando della barra Information Protection visualizzata nelle applicazioni di Office.
+    Verrà quindi visualizzato il pannello di **Azure Information Protection** che apre automaticamente il pannello dei criteri globali di Information Protection assegnati a tutti gli utenti. Contiene gli elementi seguenti che è possibile configurare:
 
     - Etichette che consentono agli utenti di classificare i documenti e i messaggi di posta elettronica.
+
+    - Titolo e descrizione comando della barra Information Protection visualizzata nelle applicazioni di Office.
 
     - Opzione per applicare la classificazione quando gli utenti salvano documenti e inviano messaggi di posta elettronica.
 
@@ -43,6 +43,7 @@ Per configurare i criteri di Azure Information Protection:
 
     - Opzione per richiedere agli utenti di specificare un motivo quando selezionano un'etichetta con un livello di riservatezza inferiore rispetto all'originale.
 
+    - Opzione per fornire un collegamento alla guida personalizzata per gli utenti.
 
 Azure Information Protection include un [criterio predefinito](configure-policy-default.md), che contiene le etichette **Personal** (Personale), **Public** (Pubblico), **Internal** (Interno), **Confidential** (Riservato) e **Secret** (Segreto). È possibile usare le etichette predefinite così come sono oppure personalizzarle, eliminarle e crearne di nuove.
 
@@ -58,7 +59,7 @@ Usare le informazioni seguenti per configurare i criteri di Azure Information Pr
 
 - [Criteri predefiniti di Information Protection](configure-policy-default.md)
 
-- [Come configurare le impostazioni dei criteri globali](configure-policy-settings.md)
+- [Come configurare le impostazioni dei criteri](configure-policy-settings.md)
 
 - [Come creare una nuova etichetta](configure-policy-new-label.md)
 
@@ -72,6 +73,8 @@ Usare le informazioni seguenti per configurare i criteri di Azure Information Pr
 
 - [Come configurare le condizioni per la classificazione automatica e consigliata](configure-policy-classification.md)
 
+- [Come configurare i criteri per utenti specifici con i criteri con ambito](configure-policy-scope.md)
+
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per un esempio di come personalizzare i criteri predefiniti e osservare il comportamento risultante in un'applicazione di Office, seguire l'[Esercitazione introduttiva di Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
@@ -79,6 +82,6 @@ Per un esempio di come personalizzare i criteri predefiniti e osservare il compo
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO1-->
 
 

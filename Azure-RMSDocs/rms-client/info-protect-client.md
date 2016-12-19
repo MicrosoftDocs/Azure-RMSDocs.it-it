@@ -4,15 +4,15 @@ description: Istruzioni per installare il client che aggiunge una barra di prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/21/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: 0b9d796b8908a42a7aceb95f3c3319028e9a9dbe
-ms.openlocfilehash: d12916a0b60e27592c3917ab5421196392156506
+ms.sourcegitcommit: 23c437479c756f2a9335606e686f117d514a38f6
+ms.openlocfilehash: 71972b0a057b1958dfa5e5b4af41b65d5080a086
 
 
 ---
@@ -27,14 +27,13 @@ L'immagine seguente mostra la barra Information Protection e le etichette del [c
 
 ![Barra Azure Information Protection con criterio predefinito](../media/info-protect-bar-default.png)
 
-Scaricare il client di Azure Information Protection dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+Scaricare il client di Azure Information Protection dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Attualmente, è possibile installare la versione di disponibilità generale (GA) e la versione di anteprima. La versione di anteprima include nuove funzionalità a scopo di valutazione ed è soggetta a modifiche. Per altre informazioni, vedere l'annuncio del post di blog seguente: [L'anteprima di dicembre di Azure Information Protection è ora disponibile](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/).
 
-Prima di installare il client, verificare di avere le versioni del sistema operativo e le applicazioni per il client di Azure Information Protection richieste: [Requisiti per Azure Information Protection](../get-started/requirements-azure-rms.md).
-
+Prima di installare il client, verificare di avere le versioni del sistema operativo e le applicazioni per il client di Azure Information Protection richieste: [Requisiti per Azure Information Protection](../get-started/requirements-azure-rms.md). Inoltre, per la versione di anteprima del client, i computer che eseguono Windows 7 SP1 richiedono [KB 2533623](https://support.microsoft.com/en-us/kb/2533623), che può essere installato dopo l'installazione del client. Se questo aggiornamento necessario non è installato, verrà richiesto di installarlo.
 
 ## <a name="to-install-the-azure-information-protection-client-manually"></a>Per installare manualmente il client di Azure Information Protection
 
-1. Dopo avere eseguito il [download del client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), eseguire **AzInfoProtection.exe** e seguire le istruzioni per l'installazione del client. Questa installazione richiede autorizzazioni amministrative locali.
+1. Dopo avere eseguito il [download del client](https://www.microsoft.com/en-us/download/details.aspx?id=53018), eseguire l'eseguibile, ad esempio **AzInfoProtection.exe**, e seguire le istruzioni per l'installazione del client. Questa installazione richiede autorizzazioni amministrative locali.
 
     Selezionare l'opzione per l'installazione di un criterio demo se non si riesce a connettersi a Office 365 o Azure Active Directory, ma si vuole vedere e provare Azure Information Protection sul lato client usando un criterio locale per scopi dimostrativi. Quando il client si connette a un servizio di Azure Information Protection, questo criterio demo viene sostituito dai criteri di Azure Information Protection dell'organizzazione. 
 
@@ -42,11 +41,11 @@ Prima di installare il client, verificare di avere le versioni del sistema opera
 
 ## <a name="to-install-the-azure-information-protection-client-for-users"></a>Per installare il client di Azure Information Protection per gli utenti
 
-È possibile creare script e automatizzare l'installazione del client di Azure Information Protection usando le opzioni della riga di comando. Per visualizzare le opzioni di installazione, eseguire `AzInfoProtection.exe /help`.
+È possibile creare script e automatizzare l'installazione del client di Azure Information Protection usando le opzioni della riga di comando. Per visualizzare le opzioni di installazione, eseguire l'eseguibile con **/help**. Ad esempio: `AzInfoProtection.exe /help`.
 
-Ad esempio, per installare automaticamente il client: `AzInfoProtection.exe /passive | quiet`
+Esempio per installare automaticamente il client: `AzInfoProtection.exe /passive | quiet`
 
-Il client di Azure Information Protection è anche incluso nel Microsoft Update Catalog, per cui è possibile installare e aggiornare il client tramite qualsiasi servizio di aggiornamento software che usa il catalogo.
+La versione di disponibilità generale del client di Azure Information Protection è anche inclusa in Microsoft Update Catalog, per cui è possibile installare e aggiornare il client tramite qualsiasi servizio di aggiornamento software che usa il catalogo. Le versioni di anteprima del client non sono incluse in Microsoft Update Catalog.
 
 ## <a name="to-uninstall-the-azure-information-protection-client"></a>Per disinstallare il client di Azure Information Protection
 
@@ -54,9 +53,9 @@ Il client di Azure Information Protection è anche incluso nel Microsoft Update 
 
 - Per disinstallare un programma, usare il Pannello di controllo: fare clic su **Microsoft Azure Information Protection** > **Disinstalla**
 
-- Rieseguire **AzInfoProtection.exe** e fare clic su **Disinstalla** nella pagina **Modifica installazione**. 
+- Rieseguire l'eseguibile, ad esempio **AzInfoProtection.exe**, e fare clic su **Disinstalla** nella pagina **Modifica installazione**. 
 
-- Eseguire `AzInfoProtection.exe /uninstall`
+- Eseguire l'eseguibile con **/uninstall**. Ad esempio: `AzInfoProtection.exe /uninstall`
 
 
 ## <a name="to-verify-installation-connection-status-or-report-a-problem"></a>Per verificare l'installazione, lo stato della connessione o segnalare un problema
@@ -69,7 +68,7 @@ Il client di Azure Information Protection è anche incluso nel Microsoft Update 
     
         Viene anche mostrato il nome utente visualizzato che identifica l'account usato per autenticare l'utente in Azure Information Protection. Questo nome utente deve corrispondere a un account usato per Office 365 o Azure Active Directory e che appartiene a un tenant configurato per Azure Information Protection.
 
-    - Nella sezione **Guida e commenti e suggerimenti**: il collegamento **Ulteriori informazioni** reindirizza per impostazione predefinita al sito Web di [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) ma può essere configurato con un URL personalizzato nell'ambito delle [impostazioni globali](../deploy-use/configure-policy-settings.md) dei criteri di Azure Information Protection.
+    - Nella sezione **Guida e commenti e suggerimenti**: il collegamento **Ulteriori informazioni** reindirizza per impostazione predefinita al sito Web di [Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection) ma può essere configurato con un URL personalizzato nell'ambito delle [impostazioni dei criteri](../deploy-use/configure-policy-settings.md) di Azure Information Protection.
         
         Usare il collegamento **Invia commenti e suggerimenti** per allegare automaticamente i log del client a un messaggio di posta elettronica da inviare al team di Information Protection per l'analisi di un problema. 
     
@@ -84,6 +83,56 @@ Il client di Azure Information Protection è anche incluso nel Microsoft Update 
         - Viene eliminata le chiave del Registro di sistema seguente con le relative impostazioni: **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. Se si configurano le impostazioni per questa chiave del Registro di sistema (ad esempio le impostazioni per il reindirizzamento al tenant di Azure Information Protection poiché si sta eseguendo la migrazione da AD RMS e nella rete è ancora presente un punto di connessione del servizio), è necessario riconfigurare le impostazioni del Registro di sistema dopo la reimpostazione del client.
         
         - Dopo aver reimpostato il client, è necessario inizializzare nuovamente l'ambiente utente, azione nota anche come "bootstrap", durante la quale verranno scaricati i certificati per il client e i modelli più recenti. A tale scopo, chiudere tutte le istanze di Office e quindi riavviare un'applicazione di Office. Questa azione verifica anche che siano stati scaricati i criteri di Azure Information Protection più recenti. Non eseguire di nuovo i test diagnostici prima che ciò sia stato fatto.
+
+
+## <a name="usage-logging"></a>Registrazione dell'utilizzo
+
+**[Questa funzionalità richiede la versione di anteprima del client ed è soggetta a modifiche].**
+
+Per la versione di anteprima del client di Azure Information Protection, il client registra l'attività utente nel registro eventi locale di Windows **Applicazioni e servizi**, **Azure Information Protection**. Gli eventi includono le informazioni seguenti:
+
+- Data, versione del client, ID criterio
+
+- Nome utente connesso, nome computer
+
+- Nome file e percorso
+
+- Action:
+
+    - Impostare l'etichetta: ID informazioni 101
+    
+    - Impostare l'etichetta (inferiore): ID informazioni 102
+    
+    - Impostare l'etichetta (superiore): ID informazioni 103
+    
+    - Rimuovere l'etichetta: ID informazioni 104
+   
+    - Suggerimento consigliato: ID informazioni 105
+    
+    - Applicare la protezione personalizzata: ID informazioni 201
+    
+    - Rimuovere la protezione personalizzata: ID informazioni 202
+    
+    - Accesso (operativo): ID informazioni 902
+    
+    - Download dei criteri (operativo): ID informazioni 901
+    
+- Origine azione:
+    
+    - Manuale 
+    
+    - Consigliato
+    
+    - Automatico  
+    
+    - Sistema (per l'accesso e il download dei criteri)
+    
+- Etichetta prima e dopo l'azione 
+    
+- Protezione prima e dopo l'azione
+    
+- Giustificazione utente (se applicabile)
+    
 
 ## <a name="keyboard-shortcuts-for-the-azure-information-protection-bar"></a>Tasti di scelta rapida per la barra di Azure Information Protection
 
@@ -117,6 +166,6 @@ Per verificare le informazioni sulla versione del client, vedere [Cronologia del
 
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 
