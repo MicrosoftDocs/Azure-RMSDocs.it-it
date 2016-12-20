@@ -4,7 +4,7 @@ description: "Informazioni per pianificare e gestire la chiave del tenant di Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2016
+ms.date: 12/12/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5f75e36e5939b23a9d077a6fcd659c59d0f71a68
-ms.openlocfilehash: 1e25f9007004d27fd8f52f77a1663e42f751334e
+ms.sourcegitcommit: f0403d85406cc8642654569958e3482a5d991352
+ms.openlocfilehash: 10e51ed108bedc59a66be86b8b27a140f899dd45
 
 
 ---
@@ -112,7 +112,7 @@ Successivamente, è necessario eseguire il cmdlet [Use-AadrmKeyVaultKey](https:/
 > [!IMPORTANT]
 > In questo esempio, "aaaabbbbcccc111122223333" è la versione della chiave da usare. Se non si specifica la versione, viene usata la versione corrente della chiave senza avviso e il comando sembra funzionare. Tuttavia, se la chiave nell'insieme di credenziali delle chiavi viene aggiornata in un secondo momento (rinnovo), il servizio Azure Rights Management smetterà di funzionare per il tenant, anche se si esegue nuovamente il comando Use-AadrmKeyVaultKey.
 >
->Assicurarsi di specificare la versione e il nome della chiave quando si esegue questo comando.
+>Assicurarsi di specificare la versione e il nome della chiave quando si esegue questo comando. È possibile usare il comando [Get-AzureKeyVaultKey](https://docs.microsoft.com/powershell/resourcemanager/azurerm.keyvault\/v2.3.0\/get-azurekeyvaultkey) dell'insieme di credenziali delle chiavi di Azure per ottenere il numero di versione della chiave corrente. Ad esempio: `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
 Se è necessario verificare che l'URL della chiave sia impostato correttamente nel servizio Azure RMS, è possibile eseguire [Get-AzureKeyVaultKey](https://msdn.microsoft.com/en-us/library/dn868053(v=azure.300\).aspx) nell'insieme di credenziali delle chiavi di Azure per visualizzare l'URL della chiave.
 
@@ -144,6 +144,6 @@ Dopo la pianificazione e, se necessario, la generazione della chiave del tenant,
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO2-->
 
 

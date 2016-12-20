@@ -4,7 +4,7 @@ description: "Per configurare impostazioni ed etichette diverse per utenti speci
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 12/09/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
-ms.openlocfilehash: 99d7a2a9580466492edc313329cada315a9966d6
+ms.sourcegitcommit: b0600db864f834e9eb84700eb1a36d3e6a6fbde1
+ms.openlocfilehash: ba4567753fbc6320ea6f9170e4bf46857ab999b4
 
 
 ---
@@ -33,7 +33,7 @@ I criteri con ambiti, analogamente alle etichette, vengono ordinati nel portale 
 
 Poiché un criterio con ambito eredita sempre le etichette e le impostazioni dai criteri globali, tali etichette vengono visualizzate quando si crea o si modifica un criterio con ambito. Tuttavia, non è possibile modificare le etichette dei criteri globali quando si modifica un criterio con ambito. È comunque possibile aggiungere etichette secondarie a queste etichette ereditate.
 
-Se ad esempio si ha un'etichetta denominata Confidential nei criteri globali, tutti gli utenti visualizzeranno questa etichetta. Non è possibile rimuovere né riordinare le etichette con un criterio con ambito. Ma si potrebbe creare un criterio con ambito per il reparto Marketing che aggiunge una nuova etichetta secondaria in Confidential, in modo che questi utenti visualizzino Confidential\Promotions. È possibile quindi creare un altro criterio con ambito per il reparto Vendite che aggiunge una nuova etichetta secondaria in Confidential, in modo che questi utenti visualizzino Confidential\Partners. Ogni etichetta secondaria può quindi essere configurato per diverse impostazioni e l'etichetta secondaria è visibile solo agli utenti dei rispettivi reparti.
+Se ad esempio si ha un'etichetta denominata **Confidential** nei criteri globali, l'etichetta sarà visibile a tutti gli utenti. Non è possibile rimuovere né riordinare le etichette con un criterio con ambito. È possibile tuttavia creare un criterio con ambito per il reparto Marketing che aggiunga una nuova etichetta secondaria a Confidential in modo che gli utenti visualizzino **Confidential \ Promotions**. Viene anche creato un altro criterio con ambito per il reparto Vendite che aggiunge una nuova etichetta secondaria a Confidential in modo che gli utenti visualizzino **Confidential \ Partners**. Ogni etichetta secondaria può quindi essere configurato per diverse impostazioni e l'etichetta secondaria è visibile solo agli utenti dei rispettivi reparti.
 
 
 Per configurare un criterio con ambito per Azure Information Protection:
@@ -63,6 +63,6 @@ Per un esempio di come personalizzare i criteri predefiniti e osservare il compo
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 

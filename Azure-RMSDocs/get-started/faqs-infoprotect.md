@@ -4,7 +4,7 @@ description: Questo articolo presenta alcune possibili domande sulla versione di
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 12/09/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 23c437479c756f2a9335606e686f117d514a38f6
-ms.openlocfilehash: ba67bb149b0128b068c86dcf849e2dd49edbf6a7
+ms.sourcegitcommit: 946daa8dedba71d5887dd96f6853e8d90400bfb1
+ms.openlocfilehash: 125752671ec0ca556cc6967a2a3011fb0bf7d9ab
 
 
 ---
@@ -76,11 +76,13 @@ Azure Information Protection applica protezione ed etichette persistenti ai file
 
 ## <a name="can-i-classify-only-new-data-or-can-i-also-classify-existing-data"></a>È possibile classificare solo nuovi dati o è possibile classificare anche i dati esistenti?
 
-Le azioni dei criteri di Azure Information Protection vengono eseguite al momento del salvataggio dei documenti e dell'invio dei messaggi di posta elettronica, sia per il nuovo contenuto che per le modifiche apportate al contenuto esistente. 
+Le azioni dei criteri di Azure Information Protection vengono eseguite al momento del salvataggio dei documenti e dell'invio dei messaggi di posta elettronica, sia per il nuovo contenuto che per le modifiche apportate al contenuto esistente.
+
+Se è installato il client di anteprima, è anche possibile classificare rapidamente ed eventualmente proteggere i file esistenti da Esplora file. 
 
 ## <a name="can-i-use-azure-information-protection-for-classification-only-without-enforcing-encryption-and-restricting-usage-rights"></a>È possibile usare Azure Information Protection solo per la classificazione, senza applicare la crittografia, e limitare i diritti di utilizzo?
 
-Sì. È possibile configurare un criterio di Azure Information Protection che si limiti ad applicare un'etichetta. In effetti si prevede che questo sarà il caso più frequente per le reti di distribuzione in cui è necessario proteggere solo il subset dei documenti e dei messaggi di posta elettronica che richiedono una gestione dei dati particolare.
+Sì. Se il tipo di file lo consente, è possibile configurare un criterio di Azure Information Protection che applichi solo la classificazione senza alcuna protezione. In effetti si prevede che questo sarà il caso più frequente per le reti di distribuzione in cui è necessario proteggere solo il subset dei documenti e dei messaggi di posta elettronica che richiedono una gestione dei dati particolare.
 
 ## <a name="how-does-automatic-classification-work"></a>Come funziona la classificazione automatica?
 
@@ -100,7 +102,7 @@ Un esempio di questa funzione è presente nell'[Esercitazione introduttiva di Az
 
 ## <a name="can-i-force-all-documents-to-be-classified"></a>È possibile forzare la classificazione di tutti i documenti?
 
-Sì. Se è necessario che gli utenti classifichino tutti i file che salvano, nel portale di Azure impostare l'opzione **All documents and emails must have a label** (Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta) su **On**. 
+Sì. Se è necessario che gli utenti classifichino tutti i file che salvano, nel portale di Azure configurare l'impostazione dei criteri **Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta** su **On**. 
 
 ## <a name="can-i-remove-classification-from-a-file"></a>È possibile rimuovere la classificazione da un file?
 
@@ -117,11 +119,13 @@ Per proteggere automaticamente il contenuto a seconda del livello di classificaz
 
 Un esempio di questa funzione è presente nell'[Esercitazione introduttiva di Azure Information Protection](infoprotect-quick-start-tutorial.md). Per altre informazioni, vedere [Come configurare un'etichetta per applicare la protezione di Rights Management](../deploy-use/configure-policy-protection.md).
 
-## <a name="can-a-file-be-classified-with-two-different-classifications"></a>È possibile assegnare a un file due classificazioni diverse?
+## <a name="can-a-file-have-more-than-one-classification"></a>Un file può avere più di una classificazione?
 
-Se necessario, è possibile creare etichette secondarie per descrivere meglio le sottocategorie per un'etichetta di riservatezza specifica. Ad esempio, l'etichetta principale **Segreto** (Segreto) può contenere etichette secondarie quali **Secret \ Legal** (Segreto \ Legale) e **Secret \ Finance** (Segreto \ Finanziario). È quindi possibile applicare contrassegni visivi di classificazione diversi e modelli di Rights Management diversi a etichette secondarie diverse.
+Poiché gli utenti possono selezionare una sola etichetta alla volta per ogni documento o messaggio di posta elettronica, la classificazione è spesso una sola. Tuttavia, se gli utenti selezionano un'etichetta secondaria, vengono effettivamente applicate due etichette contemporaneamente, ovvero un'etichetta primaria e un'etichetta secondaria. Se si usano etichette secondarie, il file può avere due classificazioni che indicano una relazione padre/figlio per un ulteriore livello di controllo.
 
-Anche se è attualmente possibile impostare contrassegni visivi, protezione e condizioni a entrambi i livelli, quando si usano sottolivelli è necessario configurare queste impostazioni solo in corrispondenza del livello secondario. Se si configurano le stesse impostazioni per l'etichetta padre e per il sottolivello corrispondente, le impostazioni di quest'ultimo hanno la precedenza.
+Ad esempio, l'etichetta **Secret** può contenere le etichette secondarie **Legal** e **Finance**. È possibile applicare contrassegni visivi di classificazione e modelli di Rights Management diversi alle etichette secondarie. L'utente non potrà selezionare l'etichetta**Secret** ma solo una delle relative etichette secondarie, ad esempio **Legal**. Di conseguenza, l'etichetta impostata visualizzata dall'utente sarà **Secret\Legal**. I metadati del file includeranno una proprietà di testo personalizzato per **Secret**, una proprietà di testo personalizzato per **Legal** e un'ulteriore proprietà che contiene entrambi i valori (**Secret Legal**). 
+
+Quando si usano etichette secondarie, non configurare contrassegni visivi, protezione e condizioni nell'etichetta principale. Quando si usano etichette secondarie, configurare queste impostazioni solo nell'etichetta secondaria. Se si configurano le impostazioni nell'etichetta principale e nella relativa etichetta secondaria, le impostazioni dell'etichetta secondaria hanno priorità.
 
 ## <a name="when-an-email-is-labeled-do-any-attachments-automatically-get-the-same-labeling"></a>Quando a un messaggio di posta elettronica viene applicata un'etichetta, eventuali allegati ottengono automaticamente la stessa etichetta?
 
@@ -152,6 +156,9 @@ Quando gli utenti usano l'app Outlook Web Access o un client del dispositivo mob
 
 Se le etichette di Azure Information Protection applicano la protezione di Rights Management, aggiungerla alla configurazione della regola selezionando l'opzione per modificare la sicurezza del messaggio, applicare la protezione dei diritti, quindi selezionare il modello RMS o l'opzione Non inoltrare.
 
+È anche possibile configurare le regole di trasporto per eseguire il mapping inverso: quando viene rilevata un'etichetta di Azure Information Protection, impostare una classificazione dei messaggi di Exchange corrispondente. A tale scopo, eseguire questa procedura:
+
+- Per ogni etichetta di Azure Information Protection, creare una regola di trasporto da applicare quando l'intestazione **msip_labels** include il nome dell'etichetta (ad esempio, **Confidential**) e applicare una classificazione dei messaggi che esegua il mapping a questa etichetta.
 
 ## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>Come è possibile integrare soluzioni DLP e altre applicazioni con Azure Information Protection?
 
@@ -198,6 +205,6 @@ Se si incontra un problema con Azure Information Protection e si usa la versione
 Per eventuali domande o commenti, usare il [sito Azure Information Protection in Yammer](https://www.yammer.com/askipteam/). 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Dec16_HO2-->
 
 
