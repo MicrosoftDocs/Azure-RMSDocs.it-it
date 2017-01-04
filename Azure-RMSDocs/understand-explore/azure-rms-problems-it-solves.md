@@ -4,7 +4,7 @@ description: Identificare i requisiti di protezione delle informazioni o i possi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f1fff17f76361f8236974c6aeb21ed317c7d9883
-ms.openlocfilehash: fda0a8bbbcc0a4b09cb7098d719bb10e431e1622
+ms.sourcegitcommit: 0a8332cf2402139046ba4f1ca13c4b2bb9a333a1
+ms.openlocfilehash: 6f29595f87b3cb7aa57d7037bad96ddca5fc7ea0
 
 
 ---
@@ -40,7 +40,7 @@ Azure RMS è la tecnologia di protezione usata da [Azure Information Protection]
 |Facilità di attivazione|√ L'[attivazione del servizio Rights Management](../deploy-use/activate-service.md) per gli utenti richiede solo pochi clic nel portale di Azure classico.|
 |Scalabilità a livello di intera organizzazione, in base alle esigenze|√ Poiché Azure RMS viene eseguito come servizio cloud e offre l'elasticità tipica di Azure in termini di scalabilità verticale e orizzontale, non è necessario effettuare il provisioning di server locali aggiuntivi o distribuire tali server.|
 |Possibilità di creare criteri semplici e flessibili|√ I [modelli di criteri per i diritti personalizzati](../deploy-use/configure-custom-templates.md) forniscono agli amministratori una soluzione rapida e semplice per applicare i criteri e permettono agli utenti di usare il livello di protezione corretto per ciascun documento, nonché di limitare l'accesso al personale dell'organizzazione.<br /><br />Per condividere a livello aziendale un documento sulle strategie, ad esempio, è possibile applicare a tutti i dipendenti interni un criterio di sola lettura. Nel caso di un documento più riservato, ad esempio un report finanziario, è possibile consentire l'accesso ai soli dirigenti dell'azienda.|
-|Supporto esteso per applicazioni|√ Azure RMS è caratterizzato da una stretta integrazione con applicazioni e servizi di Microsoft Office ed estende il supporto ad altre applicazioni usando l'applicazione RMS sharing.√ Azure RMS è caratterizzato da una stretta integrazione con applicazioni e servizi di Microsoft Office ed estende il supporto ad altre applicazioni usando l'applicazione RMS sharing.<br /><br />√ [Microsoft Rights Management SDK](../develop/developers-guide.md#software-development-kits) fornisce agli sviluppatori interni e ai fornitori di software le API necessarie per la creazione di applicazioni personalizzate con supporto per Azure RMS.<br /><br />Per altre informazioni, vedere [Altre applicazioni che supportano le API RMS](api-support.md).|
+|Supporto esteso per applicazioni|√ Azure RMS è caratterizzato da una stretta integrazione con applicazioni e servizi di Microsoft Office ed estende il supporto ad altre applicazioni usando l'applicazione RMS sharing.√ Azure RMS è caratterizzato da una stretta integrazione con applicazioni e servizi di Microsoft Office ed estende il supporto ad altre applicazioni usando l'applicazione RMS sharing.<br /><br />√ Gli [SDK di Azure Information Protection](../develop/developers-guide.md) forniscono agli sviluppatori interni e ai fornitori di software le API necessarie per la creazione di applicazioni personalizzate con supporto per Azure Information Protection.<br /><br />Per altre informazioni, vedere [Altre applicazioni che supportano le API RMS](api-support.md).|
 |Mantenimento del controllo dei dati da parte del reparto IT|√ Le organizzazioni possono scegliere di gestire la propria chiave del tenant e di usare una soluzione BYOK ("[Bring Your Own Key](../plan-design/plan-implement-tenant-key.md)") e archiviare la chiave del tenant in moduli di protezione hardware (HSM).<br /><br />√ Supporto per il controllo e la [registrazione dell'utilizzo](../deploy-use/log-analyze-usage.md), per consentire agli utenti di eseguire analisi per ottenere informazioni aziendali dettagliate, monitorare i possibili abusi e, in caso di perdita di informazioni, eseguire analisi per scopi legali.<br /><br />√ L'accesso delegato mediante la [funzionalità per utenti con privilegi avanzati](../deploy-use/configure-super-users.md) assicura agli addetti del reparto IT la possibilità di accedere sempre ai contenuti protetti, anche nel caso di documenti protetti da un utente che non fa più parte dell'organizzazione. Paragonate all'accesso delegato, le soluzioni di crittografia peer-to-peer rischiano la perdita dell'accesso ai dati aziendali.<br /><br />√ Sincronizzazione [solo degli attributi della directory richiesti da Azure RMS](/active-directory/active-directory-aadconnectsync-attributes-synchronized#azure-rms) per supportare un'identità comune per gli account Active Directory locali usando uno [strumento di sincronizzazione della directory](/active-directory/active-directory-hybrid-identity-design-considerations-tools-comparison), come Azure AD Connect.<br /><br />√ Abilitazione dell'accesso Single-Sign On senza replicare le password nel cloud usando AD FS.<br /><br />√ Le organizzazioni possono sempre decidere di sospendere l'uso di Azure RMS, senza perdere l'accesso al contenuto protetto in precedenza da Azure RMS. Per informazioni sulle opzioni di rimozione delle autorizzazioni, vedere [Rimozione delle autorizzazioni e disattivazione di Azure Rights Management](../deploy-use/decommission-deactivate.md). Le organizzazioni che hanno distribuito Active Directory Rights Management Services (AD RMS), possono anche [eseguire la migrazione ad Azure RMS](../plan-design/migrate-from-ad-rms-to-azure-rms.md) senza perdere l'accesso ai dati protetti in precedenza da AD RMS.|
 > [!TIP]
 > Gli utenti che hanno già acquisito familiarità con la versione locale di Rights Management, Active Directory Rights Management Services (AD RMS), possono essere interessati alla tabella comparativa disponibile in [Confronto tra Azure Rights Management e AD RMS](compare-azure-rms-ad-rms.md).
@@ -75,6 +75,6 @@ Per informazioni sul funzionamento di Azure RMS per gli amministratori e gli ute
 Se si è interessati ad altre informazioni tecniche sul funzionamento di Azure RMS, vedere [Funzionamento di Azure RMS](how-does-it-work.md). 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

@@ -4,15 +4,15 @@ description: "È possibile modificare o affinare qualsiasi etichetta mostrata su
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 translationtype: Human Translation
-ms.sourcegitcommit: 0046023125fe339ed408edf47c59e36708b01783
-ms.openlocfilehash: 1d92c127581d68bb52979d65ddb8704cad7c8039
+ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
+ms.openlocfilehash: f7b5e9e0bb32e4a04dfb407f11e361d959ebb807
 
 
 ---
@@ -32,9 +32,9 @@ Per modificare un'etichetta, seguire queste istruzioni.
     
     Ad esempio, dal menu principale fare clic su **Altri servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Nel pannello **Azure Information Protection** selezionare l'etichetta da modificare e apportare le modifiche nel pannello **Etichetta** ed eventualmente nei pannelli successivi.
+2. Per modificare un'etichetta dai criteri globali in modo da essere applicata a tutti gli utenti, selezionare l'etichetta da modificare nel pannello **Criteri:Globale**, quindi apportare le modifiche nel pannello **Etichetta** ed eventualmente nei pannelli successivi. Per modificare un'etichetta da un [criterio con ambito](configure-policy-scope.md) in modo da essere applicata agli utenti selezionati, selezionare prima di tutto il criterio nel pannello iniziale di **Azure Information Protection**.
 
-    L'eccezione si verifica quando si vuole riordinare un'etichetta, operazione che si esegue nello stesso pannello **Azure Information Protection**: fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida per l'etichetta, quindi scegliere **Sposta su** o **Sposta giù** fino a quando l'etichetta non è nell'ordine desiderato.
+    L'eccezione si verifica quando si vuole riordinare un'etichetta, operazione che si esegue nel pannello dei criteri dai criteri globali o da un criterio con ambito selezionato: fare clic con il pulsante destro del mouse sull'etichetta o selezionare il menu di scelta rapida per l'etichetta, quindi scegliere **Sposta su** o **Sposta giù** fino a quando l'etichetta non è nell'ordine desiderato.
 
 3. Ogni volta che si apportano modifiche in un pannello, fare clic su **Save** (Salva) in quel pannello per mantenere le modifiche.
 
@@ -52,6 +52,6 @@ Per altre informazioni sulle opzioni disponibili per le etichette e su altre con
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

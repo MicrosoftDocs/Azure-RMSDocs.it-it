@@ -3,7 +3,7 @@
 # [Pianificare e progettare](/information-protection/plan-design/deployment-roadmap)
 # [Distribuire e usare il servizio](activate-service.md)
 ## [Attivazione del servizio](activate-service.md)
-### [Interfaccia di amministrazione di Office 365 - Anteprima](activate-office365-preview.md)
+### [Anteprima dell'interfaccia di amministrazione di Office 365](activate-office365-preview.md)
 ### [Interfaccia di amministrazione classica di Office 365](activate-office365-classic.md)
 ### [Portale di Azure classico](activate-azure-classic.md)
 ## [Configurazione di modelli personalizzati](configure-custom-templates.md)
@@ -20,7 +20,7 @@
 ## [Configurazione di utenti con privilegi avanzati per i servizi di individuazione o il ripristino dei dati](configure-super-users.md)
 ## [Configurazione dei criteri di Information Protection](configure-policy.md)
 ### [Criterio predefinito](configure-policy-default.md)
-### [Configurare le impostazioni globali](configure-policy-settings.md)
+### [Configurare le impostazioni dei criteri](configure-policy-settings.md)
 ### [Creare una nuova etichetta](configure-policy-new-label.md)
 ### [Eliminare o riordinare un'etichetta](configure-policy-delete-reorder.md)
 ### [Modificare un'etichetta](configure-policy-change-label.md)
@@ -28,6 +28,7 @@
 #### [Restrizioni HYOK](configure-adrms-restrictions.md)
 ### [Configurare i contrassegni visivi](configure-policy-markings.md)
 ### [Configurare le condizioni](configure-policy-classification.md)
+### [Configurare i criteri con ambito](configure-policy-scope.md)
 ## [Distribuzione del connettore RMS](deploy-rms-connector.md)
 ### [Installare e configurare il connettore](install-configure-rms-connector.md)
 ### [Configurazione di server](configure-servers-rms-connector.md)
@@ -47,6 +48,6 @@
 
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Dec16_HO1-->
 
 

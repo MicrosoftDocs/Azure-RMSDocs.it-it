@@ -4,7 +4,7 @@ description: Risorse per gli amministratori, incluse informazioni sulle nuove ve
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/11/2016
+ms.date: 11/29/2016
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 757b0e1a65d54f81b00c6513ee85ded4fe753684
-ms.openlocfilehash: 37f42c4b9f4e4b41e96b3e1e6a74a6c3d7deb254
+ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
+ms.openlocfilehash: 0a9f88f179e5ac936211e61f8bf6dae9ec83506f
 
 
 ---
@@ -36,7 +36,7 @@ Usare le risorse seguenti per comprendere, distribuire e supportare Azure Inform
 ## <a name="information-about-new-releases-and-updated-documentation"></a>Informazioni sulle nuove versioni e sulla documentazione aggiornata
 Il team di prodotto di Information Protection pubblica annunci sulle nuove versioni e sugli aggiornamenti nel [blog di Enterprise Mobility and Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services). Questi post del blog sono complementari alla documentazione e alle informazioni di supporto sul prodotto.
 
-Alla fine di ogni mese viene visualizzato un riepilogo delle modifiche apportate alla documentazione dal titolo "**Azure Information Protection Documentation Update for \<month, year>**" ("Aggiornamento della documentazione di Azure Information Protection, <mese anno>"). Questi post sono contraddistinti dal tag di tipo di contenuto [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) (Aggiornamenti) e includono aggiornamenti alla documentazione relativi alle nuove versioni, nonché correzioni e chiarimenti inerenti alle versioni esistenti.
+Alla fine di ogni mese viene visualizzato un riepilogo delle modifiche apportate alla documentazione dal titolo "**Azure Information Protection Documentation Update for \<month year>**" ("Aggiornamento della documentazione di Azure Information Protection, <mese anno>"). Questi post sono contraddistinti dal tag di tipo di contenuto [**Updates**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) (Aggiornamenti) e includono aggiornamenti alla documentazione relativi alle nuove versioni, nonché correzioni e chiarimenti inerenti alle versioni esistenti.
 
 > [!TIP]
 > Se si sviluppano applicazioni che usano i servizi Microsoft Rights Management (Azure RMS o AD RMS), vedere anche il blog [Active Directory Rights Management Services (AD RMS) Developer's Corner](https://blogs.msdn.microsoft.com/rms/) (Angolo dello sviluppatore di Active Directory Rights Management Services (AD RMS)).
@@ -93,6 +93,6 @@ Risoluzione dei problemi:
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO1-->
 
 
