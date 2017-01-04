@@ -4,15 +4,15 @@ description: "Azure Information Protection offre etichette predefinite personali
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 translationtype: Human Translation
-ms.sourcegitcommit: addc24fed28cee52b57c7e3bde926d6324478e7b
-ms.openlocfilehash: bedf1cb43be9a70c2b3252fa730f46d83574e954
+ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
+ms.openlocfilehash: 1b0a908f6a372703ce06e3434307a81fd53c020c
 
 
 ---
@@ -31,11 +31,14 @@ Seguire queste istruzioni per aggiungere una nuova etichetta ai criteri di Azure
     
     Ad esempio, dal menu principale fare clic su **Altri servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Nel pannello **Azure Information Protection** effettuare una delle operazioni seguenti:
+2. Se la nuova etichetta da aggiungere verrà applicata a tutti gli utenti, eseguire una delle operazioni seguenti nel pannello **Criteri:Globale**. 
 
     - Per creare una nuova etichetta, fare clic su **Aggiungi una nuova etichetta**.
 
     - Per creare una nuova etichetta secondaria, fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida (**...**) per l'etichetta per cui si vuole creare un'etichetta secondaria, quindi scegliere **Aggiungi un'etichetta secondaria**.
+
+
+     Se la nuova etichetta da aggiungere si trova in un [criterio con ambito](configure-policy-scope.md) in modo da essere applicata solo agli utenti selezionati, selezionare prima di tutto il criterio con ambito nel pannello iniziale di **Azure Information Protection**.
 
 3. Nel pannello **Etichetta** o **Etichetta secondaria** selezionare le opzioni desiderate per la nuova etichetta, quindi fare clic su **Salva**.
 
@@ -52,6 +55,6 @@ Per altre informazioni sulla configurazione dei criteri di Azure Information Pro
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

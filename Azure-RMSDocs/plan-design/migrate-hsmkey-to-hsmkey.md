@@ -4,7 +4,7 @@ description: "Istruzioni che fanno parte del percorso di migrazione da AD RMS ad
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2016
+ms.date: 11/23/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5f75e36e5939b23a9d077a6fcd659c59d0f71a68
-ms.openlocfilehash: 9db60e1e841cd1f821501d402986dbd05a577f6f
+ms.sourcegitcommit: 5aac7b9fae12642c9846a70c5d271c7600af4096
+ms.openlocfilehash: 5def3aa722afd29b99ef18c100d71a447c22554f
 
 
 ---
@@ -79,7 +79,7 @@ Queste procedure vengono eseguite dall'amministratore di Azure Information Prote
     
     Quando richiesto, immettere la password specificata in precedenza e confermare che si desidera eseguire questa azione.
 
-2.  Al termine del comando, ripetere il passaggio 1 per ogni restante file XML creato esportando il tuo domini di pubblicazione trusted. Per questi file impostare **-Active** su **false** quando si esegue il comando di importazione.  
+2.  Al termine del comando, ripetere il passaggio 1 per ogni restante file con estensione xml creato esportando i propri domini di pubblicazione trusted. Ad esempio, è necessario avere almeno un file aggiuntivo da importare in caso di aggiornamento del cluster AD RMS per la modalità di crittografia 2. Per questi file impostare **-Active** su **false** quando si esegue il comando di importazione.  
 
 3.  Usare il cmdlet [Disconnect-AadrmService](https://msdn.microsoft.com/library/azure/dn629416.aspx) per disconnettersi dal servizio Azure Rights Management:
 
@@ -95,6 +95,6 @@ Queste procedure vengono eseguite dall'amministratore di Azure Information Prote
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 

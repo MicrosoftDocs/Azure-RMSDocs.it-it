@@ -20,7 +20,7 @@ ms.openlocfilehash: 03c2e885bfb997fda2a2f675be3dee6bc8ea8138
 ---
 
 
-# <a name="customermanaged-tenant-key-lifecycle-operations"></a>Gestione del cliente: operazioni del ciclo di vita della chiave del tenant
+# <a name="customer-managed-tenant-key-lifecycle-operations"></a>Gestione del cliente: operazioni del ciclo di vita della chiave del tenant
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -32,7 +32,7 @@ In Insieme di credenziali delle chiavi di Azure è possibile modificare le autor
 Quando si annulla la sottoscrizione di Azure Information Protection, l'uso della chiave del tenant in Azure Information Protection viene interrotto e non è necessaria alcuna azione da parte dell'utente.
 
 
-## <a name="rekey-your-tenant-key"></a>Ridistribuire la chiave del tenant
+## <a name="re-key-your-tenant-key"></a>Ridistribuire la chiave del tenant
 Il processo di ridistribuzione della chiave è denominato anche rollover della chiave. Non ridistribuire la chiave tenant a meno che non sia effettivamente necessario. Alcuni client precedenti, ad esempio Office 2010, non erano progettati per gestire in modo efficiente le modifiche delle chiavi. In questo scenario è necessario cancellare lo stato di Rights Management nei computer tramite Criteri di gruppo o un meccanismo equivalente. In alcuni casi è tuttavia opportuno forzare la ridistribuzione della chiave del tenant, Ad esempio:
 
 -   La società è stata divisa in due o più società. Quando si ridistribuisce la chiave del tenant, la nuova società non potrà accedere al nuovo contenuto pubblicato dai dipendenti e sarà in grado di accedere al vecchio contenuto se dispone di una copia della chiave del tenant precedente.

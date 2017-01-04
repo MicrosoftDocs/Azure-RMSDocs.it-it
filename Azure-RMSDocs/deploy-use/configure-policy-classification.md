@@ -4,15 +4,15 @@ description: "Quando si configurano le condizioni per un&quot;etichetta, è poss
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 11/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: d5b3f3fc473661022a4f17b6587d58a252d07d1a
-ms.openlocfilehash: bd6adab05c4f087f5441d168c3385057ce5b6355
+ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
+ms.openlocfilehash: 4211adef1696a1b615bd3f25df568f4b5149c186
 
 
 ---
@@ -52,7 +52,9 @@ In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per 
     
     Ad esempio, dal menu principale fare clic su **Altri servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Nel pannello **Azure Information Protection** selezionare l'etichetta da configurare per la classificazione automatica o suggerita.
+2. Se l'etichetta da configurare per la classificazione automatica o consigliata verrà applicata a tutti gli utenti, selezionare l'etichetta da modificare nel pannello **Criteri:Globale**, quindi apportare le modifiche nel pannello **Etichetta** ed eventualmente nei pannelli successivi. 
+
+     Se l'etichetta da configurare si trova in un [criterio con ambito](configure-policy-scope.md) in modo da essere applicata solo agli utenti selezionati, selezionare prima di tutto il criterio con ambito nel pannello iniziale di **Azure Information Protection**.  
 
 3. Nel pannello **Etichetta**, nella sezione **Configurare le condizioni per l'applicazione automatica di questa etichetta**, fare clic su **Aggiungi una nuova condizione**.
 
@@ -74,7 +76,7 @@ In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per 
 
 6. Per mettere le modifiche a disposizione degli utenti, nel pannello **Azure Information Protection** fare clic su **Publish** (Pubblica).
 
-## <a name="information-about-the-builtin-conditions"></a>Informazioni sulle condizioni predefinite
+## <a name="information-about-the-built-in-conditions"></a>Informazioni sulle condizioni predefinite
 
 Durante il periodo di anteprima è possibile selezionare le condizioni seguenti:
 
@@ -224,6 +226,6 @@ Per altre informazioni sulla configurazione dei criteri di Azure Information Pro
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Dec16_HO1-->
 
 

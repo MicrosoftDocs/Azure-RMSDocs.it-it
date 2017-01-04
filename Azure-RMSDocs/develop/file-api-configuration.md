@@ -85,7 +85,7 @@ L'impostazione di un valore diverso o la mancata impostazione produce il comport
 
 Se si tenta di crittografare un tipo di file bloccato, si verifica un errore [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx).
 
-### <a name="file-api-file-support-details"></a>API file: dettagli sul supporto dei file
+### <a name="file-api---file-support-details"></a>API file: dettagli sul supporto dei file
 
 È possibile aggiungere il supporto nativo per qualsiasi tipo di file (estensione). Ad esempio, per tutte le estensioni &lt;ext&gt; (non Office), verrà usata l'estensione \*p&lt;ext&gt; se la configurazione dell'amministratore per l'estensione è "NATIVA".
 
@@ -151,10 +151,8 @@ HKEY_LOCAL_MACHINE
 
 - [Note per gli sviluppatori](developer-notes.md)
 - [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 <!--HONumber=Nov16_HO3-->

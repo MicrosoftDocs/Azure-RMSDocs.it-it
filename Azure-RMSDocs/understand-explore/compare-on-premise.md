@@ -13,8 +13,8 @@ ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: cf9dba0e6e194e4613f715496f79aa9fdb2fe597
-ms.openlocfilehash: c649534dc43742d46de4d9044495c85ce734aa80
+ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
+ms.openlocfilehash: 9ef82e670e8239194d3111c4a6d75e2727034104
 
 
 ---
@@ -74,10 +74,11 @@ Azure Information Protection è conforme a FIPS 140-2 quando la chiave del tenan
 ## <a name="next-steps"></a>Passaggi successivi
 Se si vuole passare da AD RMS ad Azure Information Protection, vedere [Migrazione da AD RMS ad Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO1-->
 
 

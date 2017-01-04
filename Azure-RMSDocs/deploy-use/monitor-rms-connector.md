@@ -4,7 +4,7 @@ description: Informazioni su come monitorare il connettore e l&quot;uso da parte
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 11/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 65d9e0bb46238d9fda31b8fb47e8e4368d96e1b2
+ms.sourcegitcommit: e5939bb469af198a74d81724c5417eb63db7732b
+ms.openlocfilehash: bf73a79218fa8dba2b90115d0c1573a29f791023
 
 
 ---
@@ -162,9 +162,11 @@ Se di recente sono stati aggiunti nuovi account di server per l'uso del connetto
 
 ## <a name="rms-analyzer"></a>RMS Analyzer
 
-È possibile usare lo strumento Rights Management Services Analyzer per monitorare più facilmente lo stato del connettore e identificare eventuali problemi di configurazione.
+Sebbene questo strumento venga fornito con il supporto "così com'è", è possibile usare lo strumento Rights Management Services Analyzer per monitorare più facilmente lo stato del connettore e identificare eventuali problemi di configurazione. Se non si è ancora scaricato questo strumento, è possibile farlo dall'[Area download](https://www.microsoft.com/en-us/download/details.aspx?id=46437). 
 
-Se non si è ancora scaricato questo strumento, è possibile eseguire questa operazione dall'[Area download](https://www.microsoft.com/en-us/download/details.aspx?id=46437) e quindi installare lo strumento in qualsiasi computer che dispone dell'accesso a Internet e che può connettersi al connettore RMS. Eseguire lo strumento e nella pagina iniziale** **selezionare l'opzione **Azure RMS connector** (Connettore Azure RMS).
+Accedere a uno dei server configurati per il connettore RMS con un account autorizzato a usare il connettore per tale carico di lavoro. Ad esempio, se è stato configurato il connettore RMS per Exchange, accedere a tale server con uno degli account autorizzati per Exchange nello strumento di configurazione del connettore RMS. Eseguire quindi lo strumento RMS Analyzer con l'opzione **Esegui come amministratore**.
+
+Dopo il caricamento dello strumento selezionare l'opzione **Azure RMS connector** (Connettore Azure RMS) nella** **pagina iniziale. Immettere l'URL del connettore RMS come indirizzo attivo e fare clic sulla freccia verde. Verranno visualizzati i dettagli del tenant a conferma che il connettore può connettersi correttamente al servizio Azure Rights Management. Se questo test iniziale non riesce, assicurarsi di verificare la configurazione del server proxy e i firewall che potrebbero bloccare il traffico del server. Dopo la visualizzazione corretta dei dettagli del tenant è possibile continuare a eseguire i test diagnostici per il carico di lavoro del server controllando elementi quali numeri di versione supportati, prerequisiti e impostazioni del Registro di sistema.
 
 Per altre informazioni e istruzioni, vedere **Details** (Dettagli) e **Install Instructions** (Istruzioni di installazione) nella pagina di download.
 
@@ -193,6 +195,6 @@ Se si vuole eseguire una registrazione più dettagliata a scopo di diagnosi, è 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO5-->
 
 

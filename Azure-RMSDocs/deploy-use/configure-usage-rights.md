@@ -4,7 +4,7 @@ description: Informazioni sui diritti specifici usati quando si proteggono i fil
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 12/07/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 16dbee4b90f7c1e5b5c64c751d0c38e6cbccc036
+ms.sourcegitcommit: 1107f484f204e64d76c389daef4d9decbfbb20e8
+ms.openlocfilehash: 46c15d7594110d48f34b1648b2afb17738712720
 
 
 ---
@@ -36,7 +36,7 @@ Nella tabella seguente sono elencati e descritti i diritti d'uso supportati da s
 |Nome comune: **Modifica contenuto, Modifica** <br /><br />Codifica nei criteri: **DOCEDIT**|Consente di modificare, riorganizzare, formattare o filtrare il contenuto all'interno dell'applicazione. Non concede il diritto di salvare la copia modificata.|Diritti personalizzati di Office: come parte delle opzioni **Modifica** e **Controllo completo** <br /><br />Nome nel portale di Azure classico: **Modifica contenuto**<br /><br />Nome nei modelli AD RMS: **Modifica** <br /><br />Valore costante o valore API: non applicabile|
 |Nome comune: **Salva** <br /><br />Codifica nei criteri: **EDIT**|Consente di salvare il documento nella posizione corrente.<br /><br />Nelle applicazioni di Office questo diritto consente anche di modificare il documento.|Diritti personalizzati di Office: come parte delle opzioni **Modifica** e **Controllo completo** <br /><br />Nome nel portale di Azure classico: **Salva file**<br /><br />Nome nei modelli AD RMS: **Salva** <br /><br />Costante o valore API: `IPC_GENERIC_WRITE L"EDIT"`|
 |Nome comune: **Commenta** <br /><br />Codifica nei criteri: **COMMENT**|Consente di aggiungere annotazioni o commenti al contenuto.<br /><br />Questo diritto è disponibile nell’SDK, è disponibile come criterio ad hoc nel modulo di protezione RMS per Windows PowerShell ed è stato implementato in alcune applicazioni di fornitori di software. Tuttavia, non è ampiamente utilizzato e non è attualmente supportato dalle applicazioni di Office.|Diritti personalizzati di Office: non implementato <br /><br />Nome nel portale di Azure classico: non implementato<br /><br />Nome nei modelli AD RMS: non implementato <br /><br />Costante o valore API: `IPC_GENERIC_COMMENT L"COMMENT`|
-|Nome comune: **Salva con nome, Esporta** <br /><br />Codifica nei criteri: **EXPORT**|Abilita l'opzione per il salvataggio del contenuto con un nome file differente (Salva con nome). Per i documenti di Office, il file può essere salvato senza protezione.<br /><br />Consente di eseguire anche altre opzioni di esportazione nelle applicazioni, ad esempio **Invia a OneNote**.|Diritti personalizzati di Office: come parte delle opzioni **Modifica** e **Controllo completo** <br /><br />Nome nel portale di Azure classico: **Esporta contenuto (Salva con nome)**<br /><br />Nome nei modelli AD RMS: **Esporta (Salva con nome)** <br /><br />Costante o valore API: `IPC_GENERIC_EXPORT L"EXPORT"`|
+|Nome comune: **Salva con nome, Esporta** <br /><br />Codifica nei criteri: **EXPORT**|Abilita l'opzione per il salvataggio del contenuto con un nome file differente (Salva con nome). Per i documenti di Office e il client di Azure Information Protection, il file può essere salvato senza protezione.<br /><br />Consente di eseguire anche altre opzioni di esportazione nelle applicazioni, ad esempio **Invia a OneNote**.|Diritti personalizzati di Office: come parte delle opzioni **Modifica** e **Controllo completo** <br /><br />Nome nel portale di Azure classico: **Esporta contenuto (Salva con nome)**<br /><br />Nome nei modelli AD RMS: **Esporta (Salva con nome)** <br /><br />Costante o valore API: `IPC_GENERIC_EXPORT L"EXPORT"`|
 |Nome comune: **Inoltra** <br /><br />Codifica nei criteri: **FORWARD**|Abilita l'opzione per l'inoltro di un messaggio di posta elettronica e per l'aggiunta di destinatari nelle righe **A** e **Cc** . Questo diritto non si applica ai documenti, ma solo ai messaggi di posta elettronica.<br /><br />Non consente al server d'inoltro di concedere diritti ad altri utenti come parte dell'azione di inoltro.|Diritti personalizzati di Office: negati quando si usa il criterio standard **Non inoltrare**<br /><br />Nome nel portale di Azure classico: **Inoltra**<br /><br />Nome nei modelli AD RMS: **Inoltra** <br /><br />Costante o valore API: `IPC_EMAIL_FORWARD L"FORWARD"`|
 |Nome comune: **Controllo completo** <br /><br />Codifica nei criteri: **OWNER**|Concede tutti i diritti al documento. È possibile eseguire tutte le azioni disponibili.<br /><br />Include la possibilità di rimuovere la protezione e proteggere nuovamente un documento.|Diritti personalizzati di Office: come le opzioni personalizzate **Controllo completo**.<br /><br />Nome nel portale di Azure classico: **Controllo completo**<br /><br />Nome nei modelli AD RMS: **Controllo completo** <br /><br />Costante o valore API: `IPC_GENERIC_ALL L"OWNER"`|
 |Nome comune: **Stampa** <br /><br />Codifica nei criteri: **PRINT**|Abilita le opzioni per la stampa del contenuto.|Diritti personalizzati di Office: come l'opzione **Stampa contenuto** nelle autorizzazioni personalizzate. Non è un'impostazione per ogni destinatario.<br /><br />Nome nel portale di Azure classico: **Stampa**<br /><br />Nome nei modelli AD RMS: **Stampa** <br /><br />Costante o valore API: `IPC_GENERIC_PRINT L"PRINT"`|
@@ -56,15 +56,19 @@ Usare la tabella seguente per un elenco di questi livelli di autorizzazioni e un
 
 |Livello di autorizzazioni|Applicazioni|Diritti inclusi (nome comune)|
 |---------------------|----------------|---------------------------------|
-|Visualizzatore|Portale di Azure classico<br /><br />Applicazione Rights Management sharing per Windows|Visualizza, Apri, Leggi; Rispondi; Rispondi a tutti|
-|Revisore|Portale di Azure classico<br /><br />Applicazione Rights Management sharing per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Rispondi [[1]](#footnote-1); Rispondi a tutti [[1]](#footnote-1); Inoltra [[1]](#footnote-1)|
-|Coautore|Portale di Azure classico<br /><br />Applicazione Rights Management sharing per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Copia; Visualizza diritti; Consenti macro; Salva con nome, Esporta; Stampa; Rispondi [[1]](#footnote-1); Rispondi a tutti [[1]](#footnote-1); Inoltra [[1]](#footnote-1)|
-|Comproprietario|Portale di Azure classico<br /><br />Applicazione Rights Management sharing per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Copia; Visualizza diritti; Consenti macro; Salva con nome, Esporta; Stampa; Rispondi [[1]](#footnote-1); Rispondi a tutti [[1]](#footnote-1); Inoltra [[1]](#footnote-1); Controllo completo|
+|Visualizzatore|Portale di Azure classico<br /><br />Applicazione Rights Management sharing per Windows<br /><br />Client di Azure Information Protection per Windows (anteprima)|Visualizza, Apri, Leggi; Rispondi; Rispondi a tutti|
+|Revisore|Portale di Azure classico<br /><br />Applicazione Rights Management sharing per Windows<br /><br />Client di Azure Information Protection per Windows (anteprima)|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Rispondi [[1]](#footnote-1); Rispondi a tutti [[1]](#footnote-1); Inoltra [[1]](#footnote-1)|
+|Coautore|Portale di Azure classico<br /><br />Applicazione Rights Management sharing per Windows<br /><br />Client di Azure Information Protection per Windows (anteprima)|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Copia; Visualizza diritti; Consenti macro; Salva con nome, Esporta [[2]](#footnote-2); Stampa; Rispondi [[1]](#footnote-1); Rispondi a tutti [[1]](#footnote-1); Inoltra [[1]](#footnote-1)|
+|Comproprietario|Portale di Azure classico<br /><br />Applicazione Rights Management sharing per Windows<br /><br />Client di Azure Information Protection per Windows (anteprima)|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Copia; Visualizza diritti; Consenti macro; Salva con nome, Esporta; Stampa; Rispondi [[1]](#footnote-1); Rispondi a tutti [[1]](#footnote-1); Inoltra [[1]](#footnote-1); Controllo completo|
 
 ----
 
 ###### <a name="footnote-1"></a>Nota 1
-Non applicabile all'applicazione Microsoft Rights Management sharing per Windows.
+Non applicabile per l'applicazione di condivisione Rights Management per Windows o il client di Azure Information Protection per Windows (anteprima).
+
+###### <a name="footnote-2"></a>Nota 2
+Non incluso nel client di Azure Information Protection per Windows (anteprima). In questo client, il diritto di utilizzo dell'esportazione include la possibilità di rimuovere la protezione.
+
 
 ## <a name="rights-included-in-the-default-templates"></a>Diritti inclusi nei modelli predefiniti
 I diritti inclusi con i modelli predefiniti sono i seguenti:
@@ -102,6 +106,6 @@ Un utente vuole inviare per posta elettronica alcune informazioni a utenti speci
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Dec16_HO1-->
 
 

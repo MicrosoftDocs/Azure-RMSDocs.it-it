@@ -4,7 +4,7 @@ description: Fase 1 della migrazione da AD RMS ad Azure Information Protection. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 11/23/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,13 @@ ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 2db4041d7839d32a4d8f0bd468aa114d45665c27
+ms.sourcegitcommit: 750919e3d8be88a1a1028d83c89ece55ea4e8690
+ms.openlocfilehash: 65ab175da5c5ab74090bf6bdb88af766dc55e334
 
 
 ---
 
-# <a name="migration-phase-1-serverside-configuration-for-ad-rms"></a>Fase 1 della migrazione: configurazione lato server per AD RMS
+# <a name="migration-phase-1---server-side-configuration-for-ad-rms"></a>Fase 1 della migrazione: configurazione lato server per AD RMS
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
@@ -74,6 +74,11 @@ Eseguire le operazioni seguenti in tutti i cluster AD RMS, per tutti i domini di
     -   Non selezionare la casella di controllo per salvare il file di dominio trusted in RMS versione 1.0.
 
 Dopo l'esportazione di tutti i domini di pubblicazione trusted, sarà possibile avviare la procedura di importazione dei dati in Azure Information Protection.
+
+Si noti che i domini di pubblicazione trusted includono le chiavi per decrittografare i file protetti in precedenza, dunque è importante che si esportino (e successivamente importino in Azure) tutti i domini di pubblicazione trusted e non solo quello attualmente attivo.
+
+Ad esempio, si avranno più domini di pubblicazione trusted se sono stati aggiornati i server AD RMS dalla modalità di crittografia 1 alla modalità di crittografia 2. Se non si esporta e importa il dominio di pubblicazione trusted che contiene la chiave archiviata che usava la modalità di crittografia 1, alla fine della migrazione gli utenti non riusciranno ad aprire il contenuto protetto con la chiave di modalità di crittografia 1.
+
 
 ### <a name="import-the-configuration-data-to-azure-information-protection"></a>Importare i dati di configurazione in Azure Information Protection
 Le procedure esatte per questo passaggio dipendono dalla configurazione della distribuzione corrente di AD RMS e dalla topologia preferita per la chiave del tenant di Azure Information Protection.
@@ -220,6 +225,6 @@ Passare alla [fase 2: configurazione lato client](migrate-from-ad-rms-phase2.md)
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Nov16_HO4-->
 
 
