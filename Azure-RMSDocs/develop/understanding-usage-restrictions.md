@@ -73,10 +73,7 @@ Ogni diritto utente, elencato nella colonna Diritto di AD RMS, presenta una desc
 
 * [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx)
 
- 
-
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 <!--HONumber=Nov16_HO4-->

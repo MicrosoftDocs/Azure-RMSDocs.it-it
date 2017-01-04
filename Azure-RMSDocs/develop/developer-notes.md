@@ -43,10 +43,8 @@ Questa sezione descrive le indicazioni specifiche per diversi scenari di svilupp
  
 ## <a name="related-topics"></a>Argomenti correlati
 * [Panoramica](ad-rms-overview.md)
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 <!--HONumber=Nov16_HO4-->

@@ -74,6 +74,7 @@ Azure Information Protection è conforme a FIPS 140-2 quando la chiave del tenan
 ## <a name="next-steps"></a>Passaggi successivi
 Se si vuole passare da AD RMS ad Azure Information Protection, vedere [Migrazione da AD RMS ad Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
