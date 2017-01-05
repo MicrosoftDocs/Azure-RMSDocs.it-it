@@ -11,11 +11,11 @@ Questo passaggio è facoltativo, anche se la maggior parte degli utenti desidera
 
 ![Schermate dell'esercitazione di Azure RMS](../media/AzRMS_Tutorial_5_Screenshots.png)
 
-#### Per rilevare il documento protetto
+#### <a name="to-track-your-protected-document"></a>Per rilevare il documento protetto
 
 1.  In Outlook, nella scheda **Home** , nel gruppo **RMS** , fare clic su **Rileva utilizzo**.
 
-2.  Se viene visualizzata la pagina **Proteggi e condividi nelle condizioni** , fare clic su **Accedi** e fornire nuovamente il nome utente e la password.
+2.  Se viene visualizzata la pagina **Proteggere e condividere in base alle proprie esigenze**, fare clic su **Accedi** e inserire nuovamente il nome utente e la password.
 
 3.  Nella pagina **Documenti condivisi** sarà presente il documento allegato al messaggio di posta elettronica, **Confidential.docx**. Al momento è l'unico file visualizzato, ma se vengono condivisi altri documenti protetti, l'elenco si allunga di conseguenza.
 
@@ -29,17 +29,17 @@ Questo passaggio è facoltativo, anche se la maggior parte degli utenti desidera
 
 |Se si desiderano altre informazioni|Informazioni aggiuntive|
 |--------------------------------|--------------------------|
-|Istruzioni complete per il rilevamento dei documenti   →|[Rilevare e revocare i documenti quando si usa l'applicazione di condivisione RMS](../rms-client/sharing-app-track-revoke.md)|
+|Istruzioni complete per il rilevamento dei documenti   →|[Tenere traccia dei documenti e revocarli quando si usa l'applicazione RMS sharing](../rms-client/sharing-app-track-revoke.md)|
 |Video di due minuti che spiega e illustra il rilevamento dei documenti   →|[Revoca e rilevamento dei documenti di Azure RMS](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)|
-|Per la risoluzione dei problemi e le domande dei clienti   →|[Domande frequenti relative al rilevamento dei documenti](https://technet.microsoft.com/dn947488)|
+|Per la risoluzione dei problemi e le domande dei clienti   →|[Domande frequenti sul rilevamento dei documenti](https://technet.microsoft.com/dn947488)|
 
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 In questa esercitazione è stato esaminato un solo scenario relativo a come Azure RMS può semplificare la protezione dei dati. Per altri usi comuni, vedere [Azure RMS in azione](../understand-explore/what-admins-users-see.md). In questo articolo sono presenti altre sezioni che potrebbero risultare utili, ad esempio quelle relative al funzionamento di Azure RMS e ai problemi aziendali che questo componente può risolvere.
 
 Quando si è pronti a iniziare la distribuzione di Azure RMS, usare la [Guida di orientamento per la distribuzione di Azure Rights Management](../plan-design/deployment-roadmap.md) per i passaggi di distribuzione e i collegamenti alle istruzioni procedurali.
 
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 
