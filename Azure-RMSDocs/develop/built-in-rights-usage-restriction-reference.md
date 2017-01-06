@@ -3,6 +3,7 @@ title: Procedura&#58; Usare i diritti predefiniti | Azure RMS
 description: Descrive i diritti predefiniti forniti da RMS SDK 4.2 e le restrizioni di utilizzo che un&quot;app deve applicare rispettando tali restrizioni.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -16,19 +17,19 @@ ms.suite: ems
 experimental: true
 experiment_id: priyamo-TableVsFlatList-20160805
 translationtype: Human Translation
-ms.sourcegitcommit: dc40edaf8856ece3c40d1bfc4674a357f2c055ea
-ms.openlocfilehash: 3d897f191368b7af6fd339603e183583fa9b4a27
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 710d543b99c6226a350b26a1f1facf124a548485
 
 
 ---
 
-# Procedura: Usare i diritti predefiniti
+# <a name="how-to-use-built-in-rights"></a>Procedura: Usare i diritti predefiniti
 
 Questo argomento descrive i diritti predefiniti forniti da Microsoft Rights Management SDK 4.2 e le restrizioni di utilizzo che un'app deve applicare rispettando tali restrizioni. Il codice seguente illustra i diritti predefiniti, i diritti comuni, i diritti di modifica del documento e i diritti sui messaggi di posta elettronica con la descrizione e il valore derivante dal sistema operativo.
 
 **Nota**: per i dettagli sull'SDK di Linux, vedere file di origine *rights.h*.
 
-## Diritti comuni
+## <a name="common-rights"></a>Diritti comuni
 
 **Tutti**: una raccolta di tutti i diritti comuni.
 - Android: [CommonRights.All](https://msdn.microsoft.com/library/dn758258.aspx)
@@ -51,7 +52,7 @@ Questo argomento descrive i diritti predefiniti forniti da Microsoft Rights Mana
 
  
 
-## Diritti di modifica del documento
+## <a name="editable-document-rights"></a>Diritti di modifica del documento
 **Tutti**: una raccolta che contiene tutti i diritti di modifica del documento.
 - Android: [EditableDocumentRights.All](https://msdn.microsoft.com/library/dn758284.aspx)
 - iOS e OS X: [MSEditableDocumentRights all](https://msdn.microsoft.com/library/dn758318.aspx)
@@ -93,7 +94,7 @@ Questo argomento descrive i diritti predefiniti forniti da Microsoft Rights Mana
 
  
 
-## Diritti sui messaggi di posta elettronica
+## <a name="email-rights"></a>Diritti sui messaggi di posta elettronica
 
 **Tutti**: una raccolta che contiene tutti i diritti sui messaggi di posta elettronica.
 - Android: [EmailRights.All](https://msdn.microsoft.com/library/dn758285.aspx)
@@ -135,14 +136,9 @@ Questo argomento descrive i diritti predefiniti forniti da Microsoft Rights Mana
 - Windows Store e Windows Phone: [EmailRights.ReplyAll](https://msdn.microsoft.com/library/microsoft.rightsmanagement.emailrights.replyall.aspx)
 - Linux: [EmailRights::ReplyAll](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1EmailRights.html)
 
- 
-
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

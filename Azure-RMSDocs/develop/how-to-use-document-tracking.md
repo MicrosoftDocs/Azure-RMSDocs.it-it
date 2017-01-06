@@ -3,6 +3,7 @@ title: Come usare il rilevamento dei documenti | Azure RMS
 description: "La funzionalità di rilevamento dei documenti richiede la comprensione di alcuni aspetti semplici relativi alla gestione dei metadati associati e alla registrazione con il servizio."
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,17 +15,17 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 04234755fabb10794f5be7c4fc658573bebf6e70
-ms.openlocfilehash: 616d5dd088665abf6e7d435978b021b10c5ac3f5
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 157055d8e6c91887c0f8e7ca2124806bb37e3f3e
 
 
 ---
 
-# Procedura: Usare il rilevamento dei documenti
+# <a name="how-to-use-document-tracking"></a>Procedura: Usare il rilevamento dei documenti
 
 L'uso della funzionalità di rilevamento dei documenti richiede la comprensione di alcuni aspetti semplici relativi alla gestione dei metadati associati e alla registrazione con il servizio.
 
-## Gestione dei metadati associati al rilevamento dei documenti
+## <a name="managing-document-tracking-metadata"></a>Gestione dei metadati associati al rilevamento dei documenti
 
 Tutti i sistemi operativi che supportano il rilevamento dei documenti presentano implementazioni simili, tra cui un set di proprietà che rappresentano i metadati, un nuovo parametro aggiunto ai metodi di creazione dei criteri utente e un metodo per la registrazione dei criteri di cui tenere traccia con il servizio di rilevamento dei documenti.
 
@@ -53,12 +54,9 @@ Scegliere il tipo di criterio: modello o ad hoc:
   - [UserPolicy.registerForDocTracking asynchronous](https://msdn.microsoft.com/library/mt573699.aspx) o [UserPolicy.registerForDocTracking synchronous](https://msdn.microsoft.com/library/mt631387.aspx) per Android
   - [MSUserPolicy.registerForDocTracking](https://msdn.microsoft.com/library/mt573694.aspx) per iOS
 
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 
