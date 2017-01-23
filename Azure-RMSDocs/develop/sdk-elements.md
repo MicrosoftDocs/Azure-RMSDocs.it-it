@@ -3,6 +3,7 @@ title: "File dell’ambiente di sviluppo | Azure RMS"
 description: Questo argomento illustra i file dell&quot;ambiente di sviluppo e i relativi percorsi di installazione nel computer in uso.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4e96ba043584c5d8c140d6804c72cf63362f58c5
-ms.openlocfilehash: a251723b6c42058091d57067724e89a1816bcaa1
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 6443c1955db5ab25caea349575cb376a6ce8dac2
 
 
 ---
 
-# File dell'ambiente di sviluppo
+# <a name="development-environment-files"></a>File dell'ambiente di sviluppo
 
 Questo argomento illustra i file dell'ambiente di sviluppo e i relativi percorsi di installazione nel computer in uso.
 
@@ -47,14 +48,10 @@ Rights Management Services SDK 2.1 include i file seguenti, installati nel compu
 |Msipc.lib|\lib\x64|Libreria a cui eseguire il collegamento quando si usa RMS SDK 2.1 per creare applicazioni x64.|
 |Msipc_s.lib|\lib\x64|Specifica il punto di ingresso per [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) per le applicazioni x64.|
 |Genmanifest.exe|\tools|Genera un manifesto da utilizzare durante lo sviluppo di un'applicazione abilitata per RMS.|
- 
 
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 

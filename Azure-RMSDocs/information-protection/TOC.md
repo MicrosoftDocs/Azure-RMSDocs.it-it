@@ -7,6 +7,6 @@
 # [Azure Information Protection (anteprima)](/information-protection/understand-explore/what-is-azure-information-protection)
 
 
-<!--HONumber=Sep16_HO4-->
+<!--HONumber=Jan17_HO2-->
 
 

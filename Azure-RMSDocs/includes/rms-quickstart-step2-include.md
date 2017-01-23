@@ -6,7 +6,7 @@ Questa applicazione può essere scaricata gratuitamente e offre un'installazione
 
 ![Schermate di installazione di RMS](../media/AzRMS_Tutorial_2_Screenshots.png)
 
-#### Per scaricare e installare l’applicazione di condivisione Rights Management
+#### <a name="to-download-and-install-the-rights-management-sharing-application"></a>Per scaricare e installare l'applicazione Rights Management sharing
 
 1.  Accedere alla pagina [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) nel sito Web Microsoft.
 
@@ -27,6 +27,6 @@ A questo punto è possibile iniziare a proteggere i file che contengono le infor
 |Informazioni sulla differenza tra protezione nativa e protezione generica   →|[Qual è la differenza tra protezione generica e protezione integrata (nativa)?](../rms-client/sharing-app-dialog-box.md)|
 
 
-<!--HONumber=Jul16_HO3-->
+<!--HONumber=Jan17_HO1-->
 
 

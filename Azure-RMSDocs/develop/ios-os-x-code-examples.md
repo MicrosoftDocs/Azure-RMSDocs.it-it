@@ -3,6 +3,7 @@ title: Esempi di codice iOS/OS X | Azure RMS
 description: Questo argomento presenta importanti elementi di codice per la versione iOS/OS X di RMS SDK.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: faa1f33d1151a2d4700cc64556510994c708a414
-ms.openlocfilehash: ef311877b1deb71a62d3554e513ef6fdab443c28
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: cd2436b20a489835aec650c2c5a19d0b0cc50eff
 
 
 ---
 
-# Esempi di codice iOS/OS X
+# <a name="iosos-x-code-examples"></a>Esempi di codice iOS/OS X
 
 Questo argomento presenta importanti elementi di codice per la versione iOS/OS X di RMS SDK.
 
@@ -28,12 +29,12 @@ Questo argomento presenta importanti elementi di codice per la versione iOS/OS X
 
 
 
-## Uso di Microsoft Rights Management SDK 4.2: scenari principali
+## <a name="using-the-microsoft-rights-management-sdk-42---key-scenarios"></a>Uso di Microsoft Rights Management SDK 4.2: scenari principali
 
 
 Di seguito sono riportati esempi di codice **Objective C** tratti da un'applicazione di esempio di dimensioni maggiori che rappresenta scenari di sviluppo importanti per l'orientamento in questo SDK. Questi esempi illustrano l'uso del formato Microsoft Protected File definito come file protetto, l'uso di formati di file protetti personalizzati e l'uso di controlli di interfaccia utente personalizzati.
 
-### Scenario: utilizzo di un file protetto RMS
+### <a name="scenario-consume-an-rms-protected-file"></a>Scenario: utilizzo di un file protetto RMS
 
 
 - **Passaggio 1**: Creare un oggetto [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx)
@@ -109,7 +110,7 @@ Di seguito sono riportati esempi di codice **Objective C** tratti da un'applicaz
             }
         }
 
-### Scenario: creare un nuovo file protetto tramite un modello
+### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scenario: creare un nuovo file protetto tramite un modello
 
 Questo scenario inizia con il recupero di un elenco di modelli, [MSTemplateDescriptor](https://msdn.microsoft.com/library/dn790785.aspx), prosegue con la selezione del primo modello per creare un criterio e termina con la creazione e la scrittura nel nuovo file protetto.
 
@@ -154,7 +155,7 @@ Questo scenario inizia con il recupero di un elenco di modelli, [MSTemplateDescr
             }];
         }
 
-### Scenario: aprire di un file protetto personalizzato
+### <a name="scenario-open-a-custom-protected-file"></a>Scenario: aprire di un file protetto personalizzato
 
 
 -   **Passaggio 1**: Creare una classe [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) da *serializedContentPolicy*.
@@ -212,7 +213,7 @@ Questo scenario inizia con il recupero di un elenco di modelli, [MSTemplateDescr
             }];
          }
 
-### Scenario: creare un file protetto personalizzato usando un criterio personalizzato (ad-hoc)
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>Scenario: creare un file protetto personalizzato usando un criterio personalizzato (ad-hoc)
 
 
 -   **Passaggio 1**: Creare un descrittore di criteri con un indirizzo di posta elettronica fornito dall'utente.
@@ -279,8 +280,9 @@ Questo scenario inizia con il recupero di un elenco di modelli, [MSTemplateDescr
             }];
           }
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 
