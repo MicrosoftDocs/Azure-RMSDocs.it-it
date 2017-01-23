@@ -1,5 +1,7 @@
+## <a name="comments"></a>Commenti
+
 Prima di inserire i commenti, esaminare le [regole interne](../house-rules.md).
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO2-->
 
 

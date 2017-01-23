@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 561ed44582fe2c73cf40ac082bf67e91d37fb351
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 2208115db6f5e416dd460c081d3d76d8fc5f927b
 
 
 ---
@@ -52,15 +52,9 @@ In Github sono ospitati due argomenti con informazioni aggiuntive su questo SDK 
 
 * [Concetti e termini per sviluppatori](core-concepts.md)
 
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO1-->
 
 

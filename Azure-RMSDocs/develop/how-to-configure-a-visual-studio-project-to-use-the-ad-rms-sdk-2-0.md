@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 91efe573952d70613b3d52c7ee879da5c807da8e
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: fa884b43cef8183ec967cffb48a463ba8ba0f2fa
 
 
 ---
@@ -73,12 +73,10 @@ Queste istruzioni sono valide per la creazione di un'applicazione nativa a 32 bi
 ## <a name="related-topics"></a>Argomenti correlati
 
 * [Installare l'SDK](install-the-rms-sdk.md)
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

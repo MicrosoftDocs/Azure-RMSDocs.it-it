@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 65113e57c57621faf9e4625bf224a3f70e9b2e1d
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 19afce2a84e979ca1a25ec2ff6473dd3d6edd610
 
 
 ---
@@ -56,15 +56,10 @@ Usare la guida [Introduzione](get-started.md) per iniziare il progetto di app pe
 * [Introduzione](get-started.md)
 * [Azure AD Authentication Library](https://msdn.microsoft.com/en-us/library/jj573266.aspx)
 * [Account GitHub](https://github.com/AzureAD/)
- 
 
- 
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

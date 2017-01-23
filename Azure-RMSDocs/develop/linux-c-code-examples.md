@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: cb0ce6cc8f4740ffc04b36b02392bed2c5f5490c
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ca3ec0fdde3b8aa2eeebf056c5e155daf79573b0
 
 
 ---
@@ -404,7 +404,7 @@ I frammenti di codice riportati di seguito provengono da applicazioni di esempio
     ConvertToPFileUsingPolicy(policy, inStream, fileExt, outStream);
     
 
-## <a name="workerthread-a-supporting-method"></a>WorkerThread - un metodo di supporto
+## <a name="workerthread---a-supporting-method"></a>WorkerThread - un metodo di supporto
 
 
 Il *WorkerThread()* viene chiamato da due degli scenari di esempio precedenti, **Creazione di un flusso di file protetto** e **Protezione di un file con un criterio specifico**, nel modo seguente:
@@ -591,9 +591,9 @@ Descrizione: è possibile impostare il percorso della cache o usare l'impostazio
 
 **Nota**  Uno qualsiasi dei metodi della libreria di autenticazione può generare **rmsauth::Exception**
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

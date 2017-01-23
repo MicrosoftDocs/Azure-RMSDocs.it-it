@@ -15,8 +15,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: d481ee096213af79a7852f1afa6d075d389a4212
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ff150ef29d7ad90e1c53894175a27cfe1f1a4d8e
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: d481ee096213af79a7852f1afa6d075d389a4212
 
 Questo argomento contiene informazioni importanti su questa versione e le precedenti dell'SDK 2.1 RMS.
 
-## <a name="new-for-the-february-2016-sdk-documentation-update"></a>Novità dell'aggiornamento di febbraio 2016 della documentazione dell'SDK
+## <a name="new-for-the-february-2016---sdk-documentation-update"></a>Novità dell'aggiornamento di febbraio 2016 della documentazione dell'SDK
 
 >[!Note]
 > Gli aggiornamenti della documentazione delle funzionalità in questa sezione si applicano al download dell'SDK con data 11/12/2015.
@@ -161,13 +161,9 @@ Estensione del componente API File di SDK e offre le funzionalità seguenti:
 
 Se non è possibile recuperare alcun nome e descrizione, viene restituito un errore. Può esistere un solo nome e una descrizione per un LCID specifico.
 
-
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -14,8 +14,8 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 60e64b1fb1184aaa51b6664ecb5288d6ff861413
-ms.openlocfilehash: 04364bc5daec881fe3c55d5cd41e7be11ac91ae7
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: febd7d90a1a762de73894724f3cf3401aec0d7b9
 
 
 ---
@@ -65,7 +65,7 @@ Con questa versione, è ora disponibile la versione 4.2 SDK RMS per i dispositiv
 -   Aggiornamenti per migliorare i messaggi di errore e l'esperienza di risoluzione dei problemi.
 -   Miglioramenti significativi delle prestazioni per le operazioni di crittografia.
 
-### <a name="july-2015-update-adds-support-for-linux-c-development"></a>Aggiornamento di luglio 2015: aggiunta del supporto per Linux / sviluppo C++
+### <a name="july-2015-update---adds-support-for-linux--c-development"></a>Aggiornamento di luglio 2015: aggiunta del supporto per Linux / sviluppo C++
 
 Questa versione aggiunge le funzionalità seguenti:
 
@@ -73,7 +73,7 @@ Questa versione aggiunge le funzionalità seguenti:
 
     Per altre informazioni, vedere [Introduzione](get-started.md).
 
-### <a name="may-2015-update-adds-logging-control"></a>Aggiornamento di maggio 2015: aggiunta del controllo di registrazione
+### <a name="may-2015-update---adds-logging-control"></a>Aggiornamento di maggio 2015: aggiunta del controllo di registrazione
 
 Questa versione aggiunge il supporto per le funzionalità seguenti:
 
@@ -91,15 +91,15 @@ Questa versione aggiunge il supporto per le funzionalità seguenti:
 
     Per altre informazioni, vedere [MSProtection:resetStateWithCompletionBlock](https://msdn.microsoft.com/library/mt210991.aspx).
 
-### <a name="february-2015-update-adds-windows-store-application-support"></a>Aggiornamento di febbraio 2015: aggiunta del supporto di applicazioni Windows Store
+### <a name="february-2015-update---adds-windows-store-application-support"></a>Aggiornamento di febbraio 2015: aggiunta del supporto di applicazioni Windows Store
 
 Questa versione aggiunge il supporto per applicazioni Windows Store e offre la parità funzionale con la versione per Windows Phone, Android e iOS/OS X di SDK 4.1 RMS.
 
-### <a name="january-2015-update-adds-winphone-platform-support"></a>Aggiornamento di gennaio 2015: aggiunta del supporto della piattaforma WinPhone
+### <a name="january-2015-update---adds-winphone-platform-support"></a>Aggiornamento di gennaio 2015: aggiunta del supporto della piattaforma WinPhone
 
 Questa versione aggiunge il supporto per il sistema operativo Windows Phone e offre la parità funzionale con la versione per Android e iOS/OS X di SDK 4.1 RMS.
 
-### <a name="october-2014-update-upgrade-to-microsoft-rms-sdk-41"></a>Aggiornamento di ottobre 2014: l'aggiornamento a SDK 4.1 Microsoft RMS
+### <a name="october-2014-update---upgrade-to-microsoft-rms-sdk-41"></a>Aggiornamento di ottobre 2014: l'aggiornamento a SDK 4.1 Microsoft RMS
 
 La versione 4.1 di SDK RMS aggiunge le nuove funzionalità seguenti a Google Android e Apple iOS / OS X.
 
@@ -217,12 +217,9 @@ Questa sezione descrive le informazioni sulle versioni correnti e precedenti di 
 
 **R**: L'SDK di OS X funziona con Xcode 4.6 e versioni successive soltanto, nonché con OS X è 10.8 e versioni successive.
 
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO1-->
 
 

@@ -6,15 +6,15 @@ Per questo passaggio, creare e salvare un documento di Word che rappresenta il d
 
 ![Condivisione di Azure RMS per schermate di posta elettronica](../media/AzRMS_Tutorial_3_Screenshots.png)
 
-#### Per condividere in modo sicuro il documento tramite posta elettronica
+#### <a name="to-safely-share-your-document-by-email"></a>Per condividere in modo sicuro il documento tramite posta elettronica
 
 1.  Usando Outlook, creare un nuovo messaggio e allegare il file appena creato.
 
-2.  Nella casella **A** digitare uno o più indirizzi di posta elettronica aziendali. Assicurarsi di specificare un indirizzo di posta elettronica aziendale, ad esempio **janetm@contoso.com** o **p.dover@fabrikam.com**. Azure Rights Management, infatti, non supporta gli indirizzi di posta elettronica personali che è possibile usare a casa dal proprio provider Internet. Non è importante se la persona a cui si sta inviando il messaggio dispone o meno di Azure Rights Management.
+2.  Nella casella **A** digitare uno o più indirizzi di posta elettronica aziendali. Assicurarsi di specificare un indirizzo di posta elettronica aziendale, ad esempio **janetm@contoso.com** o **p.dover@fabrikam.com**. Azure Rights Management, infatti, non supporta gli indirizzi di posta elettronica personali che vengono generalmente assegnati dal provider di servizi Internet usato a casa. Non è importante se la persona a cui si sta inviando il messaggio dispone o meno di Azure Rights Management.
 
 3.  Digitare un oggetto, ad esempio  **Documento riservato** , quindi digitare un breve messaggio di posta elettronica, ad esempio **Questo documento è riservato e non può essere condiviso con altri utenti.**
 
-4.  Nella scheda **Messaggio** , nel gruppo **RMS** , fare clic su **Condividi file protetto** e quindi fare di nuovo clic su **Condividi file protetto** :
+4.  Nella scheda **Messaggio**, nel gruppo **RMS**, fare clic su **Condividi file protetto** e quindi fare di nuovo clic su **Condividi file protetto**:
 
 5.  Nella finestra di dialogo **Condividi file protetto** :
 
@@ -30,7 +30,7 @@ Per questo passaggio, creare e salvare un documento di Word che rappresenta il d
 
         Per questa opzione è necessario che i destinatari siano connessi a Internet ogni volta che aprono l'allegato. L'opzione offre comunque il vantaggio che, se in un secondo momento si revoca il documento, il successivo tentativo di apertura da parte dei destinatari avrà esito negativo. Se non si seleziona questa opzione, i destinatari potrebbero essere in grado di aprire il documento anche senza una connessione Internet, con lo svantaggio che, se in un secondo momento si revoca il documento, potrebbe verificarsi un ritardo nell’applicazione di tale scelta.
 
-    4.  Fare clic su **Invia subito**.
+    4.  Fare clic su **Invia adesso**.
 
         Il messaggio con l’allegato viene inviato agli indirizzi di posta elettronica specificati. Oltre al messaggio di posta elettronica, vengono visualizzate le istruzioni per leggere il documento allegato e protetto da Azure Rights Management.
 
@@ -38,10 +38,10 @@ Ora che è stato inviato il documento protetto, è possibile chiedere ai destina
 
 |Se si desiderano altre informazioni|Informazioni aggiuntive|
 |--------------------------------|--------------------------|
-|Istruzioni complete e metodi alternativi per la protezione dei file condivisi tramite posta elettronica   →|[Proteggere un file che si condivide tramite posta elettronica usando l'applicazione di condivisione Rights Management](../rms-client/sharing-app-protect-by-email.md)|
-|Informazioni sulle opzioni della finestra di dialogo **Condividi file protetto** →|[Opzioni della finestra di dialogo per l’applicazione di condivisione Rights Management](../rms-client/sharing-app-dialog-box.md)|
+|Istruzioni complete e metodi alternativi per la protezione dei file condivisi tramite posta elettronica   →|[Proteggere un file che si condivide tramite posta elettronica usando l'applicazione Rights Management sharing](../rms-client/sharing-app-protect-by-email.md)|
+|Informazioni sulle opzioni della finestra di dialogo **Condividi file protetto** →|[Opzioni della finestra di dialogo per l'applicazione Rights Management sharing](../rms-client/sharing-app-dialog-box.md)|
 
 
-<!--HONumber=Jun16_HO4-->
+<!--HONumber=Jan17_HO1-->
 
 
