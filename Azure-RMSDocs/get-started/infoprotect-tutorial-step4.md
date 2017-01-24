@@ -65,6 +65,6 @@ I passaggi eseguiti fino a ora hanno consentito di vedere in azione la classific
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

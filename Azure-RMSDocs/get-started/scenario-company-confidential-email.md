@@ -13,13 +13,13 @@ ms.assetid: 950799e9-2289-48c7-b95a-f54a8ead520a
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: f886b72ba18f0f13ac60e08d000b231cd36d1d5f
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 3c5576936c07d3921ef8fd70f9542e62383d0751
 
 
 ---
 
-# <a name="scenario-send-a-companyconfidential-email"></a>Scenario - Invio di posta elettronica aziendale riservata
+# <a name="scenario---send-a-company-confidential-email"></a>Scenario - Invio di posta elettronica aziendale riservata
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -92,7 +92,7 @@ La documentazione di esempio mostra come questo set di istruzioni appare agli ut
 
 ![Documentazione dell'utente del modello per la distribuzione rapida di Azure RMS](../media/AzRMS_UsersBanner.png)
 
-### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook"></a>Procedura per inviare email che contengono informazioni aziendali riservate tramite Outlook
+### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook"></a>Procedura per inviare email che contengono informazioni aziendali riservate tramite Outlook
 
 1.  In Outlook creare un nuovo messaggio di posta elettronica, aggiungere eventuali allegati e selezionare gli utenti o i gruppi di *&lt;nome organizzazione&gt;*.
 
@@ -102,7 +102,7 @@ La documentazione di esempio mostra come questo set di istruzioni appare agli ut
 
 3.  Inviare il messaggio.
 
-### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook-web-app"></a>Procedura per inviare email che contengono informazioni aziendali riservate tramite Outlook Web App
+### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook-web-app"></a>Procedura per inviare email che contengono informazioni aziendali riservate tramite Outlook Web App
 
 1.  In Outlook Web App, creare un nuovo messaggio di posta elettronica, aggiungere eventuali allegati e selezionare gli utenti o i gruppi di *&lt;nome organizzazione&gt;* dalla rubrica.
 
@@ -125,7 +125,7 @@ Le persone che ricevono il messaggio di posta elettronica potranno inoltrarlo ad
 ### <a name="example-customized-user-documentation"></a>Esempio di documentazione personalizzata per l'utente
 ![Esempio di documentazione dell'utente per la distribuzione rapida di Azure RMS](../media/AzRMS_ExampleBanner.png)
 
-#### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook"></a>Procedura per inviare email che contengono informazioni aziendali riservate tramite Outlook
+#### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook"></a>Procedura per inviare email che contengono informazioni aziendali riservate tramite Outlook
 
 1.  In Outlook, creare una nuova email, aggiungere tutti gli allegati da includere e quindi selezionare gli utenti o i gruppi VanArsdel dalla rubrica.
 
@@ -135,7 +135,7 @@ Le persone che ricevono il messaggio di posta elettronica potranno inoltrarlo ad
 
 3.  Inviare il messaggio.
 
-#### <a name="how-to-send-emails-that-contain-companyconfidential-information-using-outlook-web-app"></a>Procedura per inviare email che contengono informazioni aziendali riservate tramite Outlook Web App
+#### <a name="how-to-send-emails-that-contain-company-confidential-information-using-outlook-web-app"></a>Procedura per inviare email che contengono informazioni aziendali riservate tramite Outlook Web App
 
 1.  In Outlook Web App, creare una nuova email, aggiungere tutti gli allegati da includere e quindi selezionare gli utenti o i gruppi VanArsdel dalla rubrica.
 
@@ -155,9 +155,10 @@ Le persone a cui si invia l'email saranno in grado di inoltrarla ad altre person
 
     -   Posta elettronica: helpdesk@vanarsdelltd.com
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

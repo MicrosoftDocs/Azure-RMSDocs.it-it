@@ -13,13 +13,13 @@ ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 0d4b1cdc2620a1f8cf9ddced24a898a38d8e9b57
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 942b9bfffbd4a43c922ada87220f4eecb78f1d11
 
 
 ---
 
-# <a name="scenario-configure-work-folders-for-persistent-protection"></a>Scenario - Configurare le cartelle di lavoro per una protezione permanente
+# <a name="scenario---configure-work-folders-for-persistent-protection"></a>Scenario - Configurare le cartelle di lavoro per una protezione permanente
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -120,9 +120,9 @@ Se è stato configurato il modello personalizzato come descritto in questo scena
 > 
 > Dopo un intervallo di tempo, se si scopre che esistono molte richieste di utenti, è possibile decidere di definire il proprio modello personalizzato per questo scenario che conceda solo a specifici utenti (ad esempio responsabili o supporto tecnico) l'opzione Comproprietario, mentre agli utenti standard vengono concessi diritti di Coautore o qualsiasi altro [diritto](../deploy-use/configure-usage-rights.md) si ritenga adatto.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

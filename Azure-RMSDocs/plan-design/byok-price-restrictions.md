@@ -1,6 +1,6 @@
 ---
 title: "Prezzi e restrizioni della modalità BYOK | Azure Information Protection"
-description: Understand the restrictions when you use customer-managed keys (known as "bring your own key", or BYOK) with Azure RMS.
+description: Informazioni sulle restrizioni quando si usano chiavi gestite dal cliente (&quot;bring your own key&quot; o BYOK) con Azure RMS.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -13,8 +13,8 @@ ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f1fff17f76361f8236974c6aeb21ed317c7d9883
-ms.openlocfilehash: e64e87298358b5d1064cda491a10abb48545a98e
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 2e8a00d4c8d38387645d015d3f69a4d568fc9683
 
 
 ---
@@ -85,9 +85,10 @@ Per gestire la propria chiave, passare all'articolo relativo all'[implementazion
 
 Se si è deciso di usare la configurazione predefinita in cui Microsoft gestisce la chiave del tenant, vedere la sezione [Passaggi successivi](plan-implement-tenant-key.md#next-steps) dell'articolo Pianificazione e implementazione della chiave del tenant di Azure Rights Management.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

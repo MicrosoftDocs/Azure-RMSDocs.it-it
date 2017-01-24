@@ -13,8 +13,8 @@ ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f5ed228f1434761208095fd15d36a6bf05e07154
-ms.openlocfilehash: 82269c1b224df944db2bbc40f36ca111cb1ac160
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: 05cb9695d83ba10cc2d7b69d8a1e29a61cb4beb7
 
 
 ---
@@ -33,7 +33,9 @@ In modo analogo, molti fornitori di software offrono soluzioni di protezione del
 
 Per informazioni su come altri servizi e applicazioni supportano il servizio Azure Rights Management, vedere [Supporto del servizio Azure Rights Management da parte delle applicazioni](applications-support.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Dec16_HO1-->
+
+<!--HONumber=Jan17_HO4-->
 
 

@@ -1,18 +1,18 @@
 ---
 title: Restrizioni HYOK | Azure Information Protection
-description: Identify the limitations, prerequisites, and recommendations if you select AD RMS protection with Azure Information Protection. This solution is sometimes referred to as "hold your own key" (HYOK).
+description: "Identificare le restrizioni, i prerequisiti e le raccomandazioni se si seleziona la protezione di AD RMS con Azure Information Protection. Questa soluzione è a volte definita &quot;hold your own key&quot; (HYOK)."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 01/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
-ms.openlocfilehash: e4ed4513728180179876ff49797f96e9f0f785b3
+ms.sourcegitcommit: 22af60687ad030e686ba843ced6d450487353a0e
+ms.openlocfilehash: 66c19b296ce170d0f7f5317c87bee532edd9bb78
 
 
 ---
@@ -66,6 +66,8 @@ Verificare che la distribuzione di AD RMS attiva soddisfi i requisiti seguenti p
     
     - [Modalità di crittografia 2](https://technet.microsoft.com/library/hh867439.aspx): è possibile verificare la versione della modalità di crittografia del cluster AD RMS e il relativo stato di integrità tramite lo [strumento RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437).   
     
+    - In Active Directory non è registrato un punto di connessione del servizio (SCP). Il punto SCP non viene usato quando si usa la protezione di AD RMS con Azure Information Protection. Se è stato registrato un punto di connessione del servizio per la distribuzione di AD RMS, è necessario rimuoverlo per il corretto funzionamento dell'[individuazione dei servizi](../rms-client/client-deployment-notes.md#rms-service-discovery) per la protezione di Azure Rights Management.
+    
     - I server AD RMS sono configurati per l'uso di SSL/TLS con un certificato x.509 valido considerato attendibile dai client di connessione: necessario per gli ambienti di produzione, ma non per scopi di testing o valutazione.
     
     - Modelli di diritti configurati.
@@ -100,8 +102,9 @@ Per altre informazioni su questa funzionalità di anteprima, vedere l'annuncio d
 
 Per configurare un'etichetta per la protezione di AD RMS, vedere [Come configurare un'etichetta per applicare la protezione di Rights Management](../deploy-use/configure-policy-protection.md). 
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

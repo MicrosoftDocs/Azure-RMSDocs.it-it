@@ -13,13 +13,13 @@ ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: c8c460549df34a746b21f57aa890a52571bf2061
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: cb7cbe24589030e5fd1b2b2f9589f47e3f0b780e
 
 
 ---
 
-# <a name="scenario-executives-securely-exchange-privileged-information"></a>Scenario - Scambiarsi informazioni con privilegi tra dirigenti
+# <a name="scenario---executives-securely-exchange-privileged-information"></a>Scenario - Scambiarsi informazioni con privilegi tra dirigenti
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -130,9 +130,10 @@ Quando si inviano informazioni aziendali riservate a un altro dirigente di VanAr
 
 -   Contattare il supporto tecnico: helpdesk@vanarsdelltd.com
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

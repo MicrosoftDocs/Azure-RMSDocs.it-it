@@ -13,8 +13,8 @@ ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0e66bfa436bf811b34cf3cfe1b2d68a6a4e137c2
-ms.openlocfilehash: dd6c9250102e104ba49b0c08f14d9959cd1228cb
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: 91a5485b2860edf6f2095027e1c0d69ec96141d7
 
 
 ---
@@ -52,7 +52,7 @@ Anche se non è necessario conoscere personalmente il funzionamento di RMS, è p
 
 ###### <a name="footnote-1"></a>Nota 1 
 
-La lunghezza di 256 bit viene usata dall'applicazione Rights Management sharing per la protezione generica e la protezione nativa quando l'estensione di file è ppdf o si tratta di un file di testo o di immagine protetto, ad esempio con estensione ptxt o pjpg.
+La lunghezza di&256; bit viene usata dall'applicazione Rights Management sharing per la protezione generica e la protezione nativa quando l'estensione di file è ppdf o si tratta di un file di testo o di immagine protetto, ad esempio con estensione ptxt o pjpg.
 
 Modalità di archiviazione e protezione delle chiavi crittografiche:
 
@@ -149,8 +149,9 @@ Se si è pronti a iniziare la distribuzione della protezione dati per l'organizz
 > [!TIP]
 > Per altre informazioni e indicazioni, usare le risorse e i collegamenti riportati in [Informazioni e supporto per Azure Information Protection](../get-started/information-support.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

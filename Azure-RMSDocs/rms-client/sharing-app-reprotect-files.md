@@ -14,8 +14,8 @@ ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 531c75846fb88e6f1d9d802df19b275e12e0fdae
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: c0bfd99229e4d93c91fe8f9efafd887aa7562328
 
 
 ---
@@ -39,7 +39,7 @@ Se ad esempio un altro utente ha protetto il file tramite l'applicazione Rights 
 
 Se si vogliono rimuovere completamente tutte le autorizzazioni in modo che il file non sia più protetto, vedere [Rimuovere la protezione da un file](sharing-app-remove-protection.md).
 
-## <a name="to-reprotect-a-file-inplace"></a>Per riproteggere un file sul posto
+## <a name="to-re-protect-a-file-in-place"></a>Per riproteggere un file sul posto
 
 1.  In Esplora file, selezionare un file da proteggere. Fare clic sul pulsante destro del mouse, selezionare **Proteggi tramite RMS**, quindi selezionare **Proteggi sul posto**. Ad esempio:
 
@@ -72,7 +72,7 @@ Se si vogliono rimuovere completamente tutte le autorizzazioni in modo che il fi
 >     Quando si effettua l'iscrizione, utilizzare l'indirizzo di posta elettronica della società anziché un indirizzo di posta elettronica personale. Se si esegue l'iscrizione perché è stato inviato un allegato protetto tramite posta elettronica, utilizzare lo stesso indirizzo di posta elettronica utilizzato per inviare il messaggio di posta elettronica.
 > -   Per ulteriori informazioni, vedere [RMS per utenti singoli e Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## <a name="to-reprotect-a-file-that-you-have-emailed"></a>Per riproteggere un file inviato tramite posta elettronica
+## <a name="to-re-protect-a-file-that-you-have-emailed"></a>Per riproteggere un file inviato tramite posta elettronica
 
 Se si vogliono modificare le autorizzazioni per un file inviato tramite posta elettronica:
 
@@ -95,8 +95,9 @@ Per esempi di come è possibile usare l'applicazione Rights Management sharing e
 ## <a name="see-also"></a>Vedere anche
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

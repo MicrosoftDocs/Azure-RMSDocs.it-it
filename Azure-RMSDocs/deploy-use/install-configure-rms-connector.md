@@ -13,8 +13,8 @@ ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: babd3b14cba61aa49cb448c1d132b279dc9ad5da
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: b7ad3ae66536d7c04003d5a2161b0fda0eb80a3b
 
 
 ---
@@ -240,7 +240,9 @@ Se non sono stati già scaricati questi file, è possibile farlo dall' [Area dow
 ## <a name="next-steps"></a>Passaggi successivi
 Dopo l’installazione e la configurazione del connettore RMS, è possibile configurare i server locali per l'uso del connettore stesso. Passare a [Configurazione dei server per il connettore di Azure Rights Management](configure-servers-rms-connector.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Nov16_HO2-->
+
+<!--HONumber=Jan17_HO4-->
 
 

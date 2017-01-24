@@ -13,8 +13,8 @@ ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0a8332cf2402139046ba4f1ca13c4b2bb9a333a1
-ms.openlocfilehash: 6f29595f87b3cb7aa57d7037bad96ddca5fc7ea0
+ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
+ms.openlocfilehash: d7b97a810e113cfeed1c115b8a75dba36f06745c
 
 
 ---
@@ -36,7 +36,7 @@ Azure RMS è la tecnologia di protezione usata da [Azure Information Protection]
 |Controllo e monitoraggio|√ È possibile [controllare e monitorare l'utilizzo](../deploy-use/log-analyze-usage.md) dei file protetti, anche all'esterno dell'organizzazione.<br /><br />Si supponga, ad esempio, di essere un dipendente della società Contoso, Ltd e di lavorare a un progetto comune con tre persone della società Fabrikam, Inc. Si supponga quindi di inviare a queste tre persone un documento protetto e di sola lettura. La funzionalità di controllo di Azure RMS può fornire le seguenti informazioni:<br /><br />- Se e quando le persone specificate in Fabrikam hanno aperto il documento.<br /><br />- Se altre persone che non sono state specificate hanno tentato invano di aprire il documento, forse perché questo era stato inoltrato o salvato in una posizione condivisa e accessibile da altri utenti.<br /><br />- Se una delle persone specificate ha tentato invano di stampare o modificare il documento.|
 |Supporto per tutti i dispositivi di uso comune, non solo dei computer Windows|√ I [dispositivi supportati](../get-started/requirements-client-devices.md) includono:<br /><br />- Computer e telefoni Windows<br /><br />- Computer Mac<br /><br />- Tablet e telefoni iOS<br /><br />- Tablet e telefoni Android|
 |Supporto della collaborazione business-to-business|√ Poiché Azure RMS è un servizio cloud, per poter condividere contenuti protetti con altre organizzazioni non è necessario configurare esplicitamente dei trust con queste ultime. Se queste organizzazioni dispongono già di una directory di Office 365 o di Azure AD, la collaborazione tra organizzazioni è supportata automaticamente. In caso contrario, gli utenti possono registrarsi per ottenere una sottoscrizione gratuita a [RMS per utenti singoli](rms-for-individuals.md).|
-|Supporto per servizi locali e per Office 365|√ Oltre a garantire [facile integrazione con Office 365](office-apps-services-support.md), Azure RMS può essere usato anche con i servizi locali seguenti quando si distribuisce il [connettore RMS](../deploy-use/deploy-rms-connector.md):<br /><br />- Exchange Server 2016<br /><br />- SharePoint Server<br /><br />- Windows Server con la funzionalità Infrastruttura di classificazione file|
+|Supporto per servizi locali e per Office 365|√ Oltre a garantire [facile integrazione con Office 365](office-apps-services-support.md), Azure RMS può essere usato anche con i servizi locali seguenti quando si distribuisce il [connettore RMS](../deploy-use/deploy-rms-connector.md):<br /><br />- Exchange Server&2016;<br /><br />- SharePoint Server<br /><br />- Windows Server con la funzionalità Infrastruttura di classificazione file|
 |Facilità di attivazione|√ L'[attivazione del servizio Rights Management](../deploy-use/activate-service.md) per gli utenti richiede solo pochi clic nel portale di Azure classico.|
 |Scalabilità a livello di intera organizzazione, in base alle esigenze|√ Poiché Azure RMS viene eseguito come servizio cloud e offre l'elasticità tipica di Azure in termini di scalabilità verticale e orizzontale, non è necessario effettuare il provisioning di server locali aggiuntivi o distribuire tali server.|
 |Possibilità di creare criteri semplici e flessibili|√ I [modelli di criteri per i diritti personalizzati](../deploy-use/configure-custom-templates.md) forniscono agli amministratori una soluzione rapida e semplice per applicare i criteri e permettono agli utenti di usare il livello di protezione corretto per ciascun documento, nonché di limitare l'accesso al personale dell'organizzazione.<br /><br />Per condividere a livello aziendale un documento sulle strategie, ad esempio, è possibile applicare a tutti i dipendenti interni un criterio di sola lettura. Nel caso di un documento più riservato, ad esempio un report finanziario, è possibile consentire l'accesso ai soli dirigenti dell'azienda.|
@@ -72,9 +72,11 @@ Per altre informazioni su queste certificazioni esterne, vedere il [Centro prote
 
 Per informazioni sul funzionamento di Azure RMS per gli amministratori e gli utenti, vedere [Azure RMS in azione](what-admins-users-see.md).
 
-Se si è interessati ad altre informazioni tecniche sul funzionamento di Azure RMS, vedere [Funzionamento di Azure RMS](how-does-it-work.md). 
+Se si è interessati ad altre informazioni tecniche sul funzionamento di Azure RMS, vedere [Funzionamento di Azure RMS](how-does-it-work.md).
+
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 
