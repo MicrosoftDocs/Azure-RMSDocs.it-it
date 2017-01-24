@@ -13,13 +13,13 @@ ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 1b95c1bf1c747808c7baed97daa449f5c8bb234d
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 9ae44cf7beba0f4af3078eedeac352e9792d497c
 
 
 ---
 
-# <a name="protect-a-file-on-a-device-protect-inplace-by-using-the-rights-management-sharing-application"></a>Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione Rights Management sharing
+# <a name="protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application"></a>Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione Rights Management sharing
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
@@ -28,7 +28,7 @@ Quando si protegge un file localmente, esso sostituisce il file originale non pr
 > [!TIP]
 > Se vengono visualizzati errori quando si tenta di proteggere i file, fare riferimento alle [Domande frequenti sull'applicazione Microsoft Rights Management sharing per Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
-## <a name="to-protect-a-file-on-a-device-protect-inplace"></a>Per proteggere un file in un dispositivo (protezione sul posto)
+## <a name="to-protect-a-file-on-a-device-protect-in-place"></a>Per proteggere un file in un dispositivo (protezione sul posto)
 
 1.  In Esplora file, selezionare un file da proteggere. Fare clic sul pulsante destro del mouse, selezionare **Proteggi tramite RMS**, quindi selezionare **Proteggi sul posto**. Ad esempio:
 
@@ -65,8 +65,9 @@ Per esempi di come è possibile usare l'applicazione Rights Management sharing e
 ## <a name="see-also"></a>Vedere anche
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

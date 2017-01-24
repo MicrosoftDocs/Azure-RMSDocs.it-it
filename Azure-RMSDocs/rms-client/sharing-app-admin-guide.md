@@ -13,8 +13,8 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c9a5bcf46597ee65e2e0f36199f19935f8997048
-ms.openlocfilehash: adab568d173845f411fe5913786b137508485ef6
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 53bd4b52b73c4a487f7d5aa655fd9b372bb7ada3
 
 
 ---
@@ -169,7 +169,7 @@ Per verificare l'esito positivo, vedere la sezione [Verificare l'esito positivo 
 
 Per verificare l'esito positivo, vedere la sezione [Verificare l'esito positivo dell’installazione](#verifying-installation-success) di questo articolo.
 
-### <a name="to-install-the-rms-sharing-application-and-office-addin-only"></a>Per installare solo l'applicazione RMS sharing e il componente aggiuntivo di Office
+### <a name="to-install-the-rms-sharing-application-and-office-add-in-only"></a>Per installare solo l'applicazione RMS sharing e il componente aggiuntivo di Office
 
 1.  Installare il client AD RMS e l'applicazione di condivisione RMS tramite il comando seguente e specificando una cartella esistente per la creazione del file di log:
 
@@ -273,7 +273,7 @@ Per verificare l'esito positivo, vedere la sezione [Verificare l'esito positivo 
 
         DefaultUser="&lt;default_user&gt;"
 
-### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-addin-only"></a>Per verificare l'esito positivo dell'installazione solo per l'applicazione RMS sharing e il componente aggiuntivo di Office
+### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-add-in-only"></a>Per verificare l'esito positivo dell'installazione solo per l'applicazione RMS sharing e il componente aggiuntivo di Office
 
 1.  Per verificare l'esito positivo del comando Setup_ipviewer.exe, cercare il testo seguente nel file di log di installazione: **Installazione riuscita o stato di errore: 0**
 
@@ -310,7 +310,7 @@ Non tutti i comandi di installazione necessari per tali distribuzioni supportano
         x86\setup_ipviewer.exe /uninstall /quiet
         ```
 
-### <a name="to-uninstall-the-office-addin"></a>Per disinstallare il componente aggiuntivo di Office
+### <a name="to-uninstall-the-office-add-in"></a>Per disinstallare il componente aggiuntivo di Office
 
 -   Usare i seguenti comandi:
 
@@ -404,9 +404,10 @@ Se non si apporta questa modifica al Registro di sistema, gli utenti potrebbero 
 ## <a name="next-steps"></a>Passaggi successivi
 Per informazioni tecniche aggiuntive, inclusa la spiegazione della differenza tra i livelli di protezione (nativi e generici), i tipi di file supportati, le estensioni del nome dei file e la modalità di modifica del livello di protezione predefinito, vedere [Panoramica tecnica dell'applicazione Rights Management sharing](sharing-app-admin-guide-technical.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 
