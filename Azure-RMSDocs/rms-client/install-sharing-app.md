@@ -4,7 +4,7 @@ description: "Istruzioni per l&quot;installazione in modo interattivo dell&quot;
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection

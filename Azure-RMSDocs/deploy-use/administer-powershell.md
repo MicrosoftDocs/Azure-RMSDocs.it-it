@@ -4,7 +4,7 @@ description: Informazioni su come usare il modulo di Windows PowerShell per il s
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/19/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
