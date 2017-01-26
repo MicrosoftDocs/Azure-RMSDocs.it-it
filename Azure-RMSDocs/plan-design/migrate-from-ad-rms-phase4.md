@@ -13,13 +13,13 @@ ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 3786fa2529b442f7d31603be09f9b80f1a46d171
-ms.openlocfilehash: 238cc238e62db4a74ce2b10e0e68803cc66b718f
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 9c78ac81a90d46ab8d56cd205474fdf85f486c3d
 
 
 ---
 
-# <a name="migration-phase-4-post-migration-tasks"></a>Fase 4 della migrazione: attività post-migrazione
+# <a name="migration-phase-4---post-migration-tasks"></a>Fase 4 della migrazione: attività post-migrazione
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Office 365*
 
@@ -35,7 +35,7 @@ Monitorare l'attività dei server AD RMS, ad esempio controllando le [richieste 
 
 Dopo la rimozione delle autorizzazioni dei server AD RMS, è possibile cogliere l'opportunità per esaminare i modelli nel portale di Azure classico e consolidarli in modo che gli utenti ne abbiano meno da scegliere oppure riconfigurarli o eventualmente aggiungerne di nuovi. Potrebbe anche essere il momento opportuno per pubblicare i modelli predefiniti. Per altre informazioni, vedere [Configurazione di modelli personalizzati per il servizio Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
-## <a name="step-9-rekey-your-azure-information-protection-tenant-key"></a>Passaggio 9. Reimpostare la chiave del tenant di Azure Information Protection
+## <a name="step-9-re-key-your-azure-information-protection-tenant-key"></a>Passaggio 9. Reimpostare la chiave del tenant di Azure Information Protection
 Questo passaggio è applicabile solo se la topologia della chiave del tenant scelta è gestita da Microsoft anziché dal cliente (BYOK con Insieme di credenziali delle chiavi di Azure).
 
 Questo passaggio è facoltativo, ma consigliato quando la chiave del tenant di Azure Information Protection è gestita da Microsoft ed è stata eseguita la migrazione da AD RMS. La reimpostazione della chiave in questo scenario consente di proteggere la chiave del tenant di Azure Information Protection da possibili violazioni della sicurezza per la chiave di AD RMS.
@@ -51,9 +51,10 @@ Per altre informazioni sulla gestione della chiave del tenant di Azure Informati
 
 Dopo aver completato la migrazione, rivedere la [Guida di orientamento per la distribuzione](deployment-roadmap.md) per identificare eventuali altre attività di distribuzione che può essere necessario eseguire.
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO4-->
 
 

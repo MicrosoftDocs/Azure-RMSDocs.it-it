@@ -13,8 +13,8 @@ ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 8d10bc4aeeed6f5b3d150f6e765c6457f5741409
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ec1bdd126c53405af62069d8f440b51e5bb4aad7
 
 
 ---
@@ -36,11 +36,12 @@ Se il test non riesce, rivedere i passaggi di configurazione nella [Guida di ori
 
 È possibile monitorare il modo in cui l'organizzazione usa il servizio Azure Rights Management mediante la registrazione dei dati di utilizzo. Per altre informazioni, vedere [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](log-analyze-usage.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

@@ -14,8 +14,8 @@ ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0a79642c3707be4c8dd75ccc80569ba90da01236
-ms.openlocfilehash: b8b973766852fcace6e070e73fa87072ad4b3524
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 5e063b19eb6d4e1b389357155e1cbbb893add73d
 
 
 ---
@@ -133,7 +133,9 @@ Provare a condividere altri documenti, a tenere traccia del modo in cui vengono 
 
 Può essere utile leggere alcune delle [domande frequenti](faqs.md) relative ad Azure Information Protection e consultare altri articoli della documentazione. Se tuttavia si è pronti a iniziare la distribuzione di Azure Information Protection nell'organizzazione, leggere le informazioni riportate nella [Guida di orientamento per la distribuzione di Azure Information Protection](../plan-design/deployment-roadmap.md). 
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Nov16_HO4-->
+
+<!--HONumber=Jan17_HO4-->
 
 

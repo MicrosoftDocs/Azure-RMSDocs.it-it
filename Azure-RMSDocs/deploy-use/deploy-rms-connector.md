@@ -13,8 +13,8 @@ ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 386453578a5ea8eeb874d7f27badb8f041dda659
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: eaa1d7a0a74fa68f9bf1d15f348dbb45d14cee9a
 
 
 ---
@@ -36,7 +36,7 @@ Il connettore RMS è un servizio di piccole dimensioni installato localmente su 
 ![Panoramica dell'architettura del connettore RMS](../media/RMS_connector.png)
 
 
-### <a name="onpremises-servers-supported"></a>Server locali supportati
+### <a name="on-premises-servers-supported"></a>Server locali supportati
 
 Il connettore RMS supporta i server locali seguenti: Exchange Server, SharePoint Server e i file server che eseguono Windows Server e usano la funzionalità Infrastruttura di classificazione file per classificare e applicare criteri ai documenti Office presenti in una cartella. 
 
@@ -50,7 +50,7 @@ Per informazioni sulle versioni dei server locali supportate dal connettore RMS,
 
 È possibile usare il connettore RMS anche se alcuni utenti si connettono ai servizi online, in uno scenario ibrido. Ad esempio, le caselle postali di alcuni utenti utilizzano Exchange Online e le caselle postali di alcuni utenti utilizzano Exchange Server. Dopo aver installato il connettore RMS, tutti gli utenti possono proteggere e utilizzare messaggi di posta elettronica e allegati tramite Azure RMS e la protezione delle informazioni funziona in modo uniforme nelle due configurazioni di distribuzione.
 
-### <a name="support-for-customermanaged-keys-byok"></a>Supporto per le chiavi gestite dal cliente (BYOK)
+### <a name="support-for-customer-managed-keys-byok"></a>Supporto per le chiavi gestite dal cliente (BYOK)
 
 Se si gestisce la propria chiave del tenant per Azure RMS (scenario BYOK, Bring Your Own Key), il connettore RMS e i server locali che usano tale chiave non accedono al modulo di protezione hardware (HSM) in cui è contenuta. Questo perché tutte le operazioni di crittografia che usano la chiave del tenant vengono eseguite in Azure RMS e non in locale.
 
@@ -97,7 +97,9 @@ Il connettore non verifica automaticamente tutti i [prerequisiti](deploy-rms-con
 
 Procedere al Passaggio 1: [Installazione e configurazione del connettore di Azure Rights Management](install-configure-rms-connector.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Nov16_HO1-->
+
+<!--HONumber=Jan17_HO4-->
 
 
