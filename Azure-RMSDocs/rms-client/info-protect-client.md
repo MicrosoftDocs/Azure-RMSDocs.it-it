@@ -4,15 +4,15 @@ description: Istruzioni per installare il client che aggiunge una barra di prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/13/2017
+ms.date: 01/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4445adff-4c5a-450f-aff8-88bf5bd4ca78
 translationtype: Human Translation
-ms.sourcegitcommit: bd3cbea29183c39abaa66aa5dcec8a14ad0b0757
-ms.openlocfilehash: bccddf228b33bcd8d36ef6af55dea9015cad34d0
+ms.sourcegitcommit: 6012049162d0ac9ee53476640ab3a4bcac18287f
+ms.openlocfilehash: 92d6b6f13d124c8c7ab7735fa170890263c9011b
 
 
 ---
@@ -70,7 +70,7 @@ Esempio per l'installazione invisibile all'utente solo del modulo di PowerShell,
 
 Durante l'installazione della versione di anteprima del client nei computer che eseguono Office 2010, specificare il parametro **ServiceLocation** se gli utenti non sono amministratori locali nei propri computer. Per altre informazioni, vedere la sezione seguente.
 
-La versione di disponibilità generale del client di Azure Information Protection è anche inclusa in Microsoft Update Catalog, per cui è possibile installare e aggiornare il client tramite qualsiasi servizio di aggiornamento software che usa il catalogo. Le versioni di anteprima del client non sono incluse in Microsoft Update Catalog.
+Il client di Azure Information Protection è anche incluso nel Microsoft Update Catalog, per cui è possibile installare e aggiornare il client tramite qualsiasi servizio di aggiornamento software che usa il catalogo. 
 
 ### <a name="preview-version-and-office-2010-only"></a>Versione di anteprima e solo Office 2010
 
@@ -223,6 +223,6 @@ Per verificare le informazioni sulla versione del client, vedere [Cronologia del
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Jan17_HO5-->
 
 
