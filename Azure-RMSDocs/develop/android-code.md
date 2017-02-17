@@ -3,6 +3,7 @@ title: Esempi di codice Android | Azure RMS
 description: In questo argomento sono presentati importanti elementi di codice per la versione Android di RMS SDK.
 keywords: 
 author: bruceperlerms
+ms.author: bruceper
 manager: mbaldwin
 ms.date: 09/25/2016
 ms.topic: article
@@ -14,20 +15,20 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 503a99f01335f3085b5d13c9faaf0a6f05063490
-ms.openlocfilehash: febc212cb6bc4b91058aa0e9f18d1e51f751b552
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 847d19feaea442da66296565f0ffb5b0663ad170
 
 
 ---
 
-# Esempi di codice Android
+# <a name="android-code-examples"></a>Esempi di codice Android
 
 In questo argomento sono presentati importanti elementi di codice per la versione Android di RMS SDK.
 
 **Nota** Nel codice di esempio e nelle descrizioni che seguono, viene usato il termine MSIPC (Microsoft Information Protection and Control) per fare riferimento al processo client.
 
 
-## Uso di Microsoft Rights Management SDK 4.2 - Scenari principali
+## <a name="using-the-microsoft-rights-management-sdk-42---key-scenarios"></a>Uso di Microsoft Rights Management SDK 4.2 - Scenari principali
 
 Di seguito sono riportati esempi di codice tratti da un’applicazione di esempio di dimensioni maggiori che rappresenta scenari di sviluppo importanti per l’orientamento in questo SDK. Questi esempi illustrano l’uso del formato Microsoft Protected File definito come file protetto, l’uso di formati di file protetti personalizzati e l’uso di controlli di interfaccia utente personalizzati.
 
@@ -35,7 +36,7 @@ Di seguito sono riportati esempi di codice tratti da un’applicazione di esempi
 
 È disponibile l’applicazione di esempio *MSIPCSampleApp* da usare con questo SDK per il sistema operativo Android. Per accedere a questa applicazione di esempio, vedere [rms-sdk-ui-for-android](https://github.com/AzureAD/rms-sdk-ui-for-android) su GitHub.
 
-### Scenario: utilizzo di un file protetto RMS
+### <a name="scenario-consume-an-rms-protected-file"></a>Scenario: utilizzo di un file protetto RMS
 
 -   **Passaggio 1**: Creare un oggetto [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx)
 
@@ -197,7 +198,7 @@ Di seguito sono riportati esempi di codice tratti da un’applicazione di esempi
                 }
 
 
-### Scenario: creare un nuovo file protetto tramite un modello
+### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scenario: creare un nuovo file protetto tramite un modello
 
 Questo scenario inizia con il recupero di un elenco di modelli e la selezione del primo di essi per creare un criterio e procede quindi con la creazione e la scrittura di contenuto nel nuovo file protetto.
 
@@ -321,7 +322,7 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
 
 
 
-### Scenario: aprire di un file protetto personalizzato
+### <a name="scenario-open-a-custom-protected-file"></a>Scenario: aprire di un file protetto personalizzato
 
 -   **Passaggio 1**: Creare un oggetto[UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) da *serializedContentPolicy*.
 
@@ -436,7 +437,7 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
         buffer.close();    customProtectedInputStream.close();  }  catch (IOException e)  {    ...  } }
 
 
-### Scenario: creare un file protetto personalizzato usando un criterio personalizzato (ad-hoc)
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-ad-hoc-policy"></a>Scenario: creare un file protetto personalizzato usando un criterio personalizzato (ad-hoc)
 
 -   **Passaggio 1**: Creare un descrittore di criteri con un indirizzo di posta elettronica fornito dall’utente.
 
@@ -523,13 +524,9 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
           …
         }
 
-
- 
-
- 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Oct16_HO4-->
+<!--HONumber=Jan17_HO4-->
 
 

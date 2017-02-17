@@ -5,7 +5,7 @@ keywords: Alcune domande frequenti riguardanti l&quot;uso dell&quot;app Azure In
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2016
+ms.date: 01/06/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -14,8 +14,8 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 2c2a0281041f8f9241fd0e733f3c1b08099bae33
+ms.sourcegitcommit: f478f65eecb47b6d0f41ece413ce576b6935b916
+ms.openlocfilehash: 9a03ccf3326b51f5c9c19102a1e9d003562cead6
 
 
 ---
@@ -33,6 +33,16 @@ L'app consente di visualizzare i messaggi di posta elettronica protetti da dirit
 ## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive-for-business"></a>È possibile aprire file PDF che si trovano in librerie protette da SharePoint e OneDrive For Business?
 
 Sì, è possibile aprire file PDF protetti che altri utenti hanno condiviso tramite SharePoint e OneDrive for Business. Toccare il collegamento e scegliere l'app per aprire il file automaticamente. 
+
+## <a name="can-my-mobile-device-run-the-azure-information-protection-app"></a>È possibile eseguire l'app Azure Information Protection in un dispositivo mobile?
+
+L'app Azure Information Protection supporta **iOS 8** o **Android 4.4** come versione minima.
+
+Se sono disponibili queste versioni o versioni successive, è possibile installare l'app per eseguirla nel dispositivo mobile:
+
+- Se il dispositivo mobile è gestito da Microsoft Intune, l'app Azure Information Protection dovrebbe essere disponibile per l'installazione dal portale aziendale.
+
+- Se il dispositivo mobile non è gestito da Microsoft Intune o l'app Azure Information Protection non è disponibile dal portale aziendale, è possibile installare l'app direttamente dagli store iTunes e Google Play oppure facendo clic sull'icona di iOS o Android nella sezione **Dispositivi mobili** nella [pagina di download di Azure Information Protection](https://portal.azurerms.com/#/download). 
 
 ## <a name="how-do-i-get-started-with-the-viewer-app"></a>Come si può iniziare a usare l'app visualizzatore?
 
@@ -60,8 +70,9 @@ Nell'app passare a **Settings (Impostazioni)** > **Send feedback (Invia feedback
 
 Inviare la domanda al [sito Yammer](https://www.yammer.com/AskIPTeam) o [inviare un messaggio di posta elettronica al team di Information Protection](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

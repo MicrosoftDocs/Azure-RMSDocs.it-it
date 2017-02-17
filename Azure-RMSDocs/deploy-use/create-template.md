@@ -4,7 +4,7 @@ description: Istruzioni per creare e gestire modelli personalizzati nel portale 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2016
+ms.date: 01/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0046023125fe339ed408edf47c59e36708b01783
-ms.openlocfilehash: 00661951513647add0c638e0eeb9e9fe38fa2d8d
+ms.sourcegitcommit: 5b7a73c153edfdc7db3a55ee714b05f65d5090f4
+ms.openlocfilehash: 41a4406803cb0de4af607c7494258fc57d5217f7
 
 
 ---
@@ -35,15 +35,9 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
 
 1.  Seguire una di queste due procedure in base al tipo di accesso scelto, dall'interfaccia di amministrazione di Office 365 o dal portale di Azure classico:
 
-    -   Dall’ [interfaccia di amministrazione di Office 365](https://portal.office.com/):
+    -   Dall'**interfaccia di amministrazione di Office 365** il percorso è diverso se si usa la versione di anteprima dell'interfaccia di amministrazione di Office 365 (e quale versione) o l'interfaccia di amministrazione classica di Office 365. Per tutte le versioni è comunque possibile passare direttamente alla pagina [Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx): 
 
-        1.  Nel riquadro a sinistra, fare clic su **impostazioni servizio**.
-
-        2.  Nella pagina **impostazioni servizio** fare clic su **rights management**.
-
-        3.  Nella sezione **Proteggere le informazioni** fare clic su **Gestione**.
-
-        4.  Nella sezione **rights management** fare clic su **funzionalità avanzate**.
+        1.  Nella sezione **Configurazione aggiuntiva** fare clic su **Funzionalità avanzate**.
 
             > [!NOTE]
             > Se il servizio Rights Management non è stato attivato, fare prima clic su **attiva** e confermare l'azione. Per ulteriori informazioni, vedere l'articolo relativo all'[attivazione di Azure Rights Management](activate-service.md).
@@ -98,7 +92,7 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
 
 3.  Fare clic sul pulsante Avanti, quindi assegnare agli utenti e ai gruppi selezionati uno dei diritti elencati.
 
-    Per altre informazioni su ogni diritto (e per i diritti personalizzati), usare la descrizione visualizzata. Informazioni più dettagliate sono inoltre disponibili nell'articolo relativo alla [configurazione dei diritti di utilizzo per Azure Rights Management](configure-usage-rights.md). Tuttavia, le applicazioni che supportano RMS possono implementare questi diritti in modo diverso. Consultare la relativa documentazione ed eseguire test personalizzati con le applicazioni usate dagli utenti per controllare il comportamento prima di distribuire il modello per gli utenti. Per fare in modo che il modello sia visibile solo agli amministratori per eseguirne il test, rendere questo modello un modello di reparto (passaggio 6).
+    Per altre informazioni su ogni diritto (e per i diritti personalizzati), usare la descrizione visualizzata. Informazioni più dettagliate sono inoltre disponibili nell'articolo relativo alla [configurazione dei diritti di utilizzo per Azure Rights Management](configure-usage-rights.md). Tuttavia, le applicazioni che supportano Rights Management possono implementare questi diritti in modo diverso. Consultare la relativa documentazione ed eseguire test personalizzati con le applicazioni usate dagli utenti per controllare il comportamento prima di distribuire il modello per gli utenti. Per fare in modo che il modello sia visibile solo agli amministratori per eseguirne il test, rendere questo modello un modello di reparto (passaggio 6).
 
 4.  Se si seleziona **Personalizzato**, fare clic sul pulsante Avanti e quindi selezionare i diritti personalizzati.
 
@@ -141,10 +135,10 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
 
     Verificare quindi se si desideri apportare modifiche alle impostazioni riportate di seguito.
 
-    |Impostazione|Altre informazioni|
-    |-----------|--------------------|
-    |**scadenza contenuto**|Definire una data o un numero di giorni in cui i file protetti tramite il modello non devono essere aperti. È possibile specificare una data o un numero di giorni a partire dal momento in cui la protezione viene applicata al file.<br /><br />Quando si specifica una data, diventa effettiva alla mezzanotte del fuso orario corrente.|
-    |**accesso offline**|Usare questa impostazione per far fronte agli eventuali requisiti di sicurezza previsti e, allo stesso tempo, all'esigenza degli utenti di aprire i file protetti quando non dispongono di una connessione Internet.<br /><br />Se si specifica che il contenuto non è disponibile senza una connessione Internet o che è disponibile solo per un determinato numero di giorni, al raggiungimento di tale soglia, gli utenti dovranno eseguire di nuovo l'autenticazione e l'accesso verrà registrato. In questo caso, se le credenziali non sono memorizzate nella cache, verrà chiesto agli utenti di eseguire l'accesso prima di poter aprire il file.<br /><br />Oltre alla riesecuzione dell'autenticazione, verrà nuovamente valutata l'appartenenza degli utenti ai criteri e ai gruppi. Questo significa che gli utenti potrebbero avere risultati di accesso diversi per lo stesso file se dall'ultimo accesso si sono verificati cambiamenti relativi all'appartenenza ai criteri o ai gruppi.|
+    |Impostazione|Altre informazioni| Impostazione consigliata
+    |-----------|--------------------|--------------------|
+    |**scadenza contenuto**|Definire una data o un numero di giorni in cui i file protetti tramite il modello non devono essere aperti. È possibile specificare una data o un numero di giorni a partire dal momento in cui la protezione viene applicata al file.<br /><br />Quando si specifica una data, diventa effettiva alla mezzanotte del fuso orario corrente.|**Nessuna scadenza contenuto**, a meno che non esista un requisito temporale specifico per il contenuto.|
+    |**accesso offline**|Usare questa impostazione per far fronte agli eventuali requisiti di sicurezza previsti e, allo stesso tempo, all'esigenza degli utenti di aprire i file protetti quando non dispongono di una connessione Internet.<br /><br />Se si specifica che il contenuto non è disponibile senza una connessione Internet o che è disponibile solo per un determinato numero di giorni, al raggiungimento di tale soglia, gli utenti dovranno eseguire di nuovo l'autenticazione e l'accesso verrà registrato. In questo caso, se le credenziali non sono memorizzate nella cache, verrà chiesto agli utenti di eseguire l'accesso prima di poter aprire il file.<br /><br />Oltre alla riesecuzione dell'autenticazione, verrà nuovamente valutata l'appartenenza degli utenti ai criteri e ai gruppi. Questo significa che gli utenti potrebbero avere risultati di accesso diversi per lo stesso file se dall'ultimo accesso si sono verificati cambiamenti relativi all'appartenenza ai criteri o ai gruppi.|A seconda della sensibilità del contenuto:<br /><br />- **Numero di giorni per cui il contenuto è disponibile senza una connessione a Internet** = **7** per i dati aziendali sensibili che potrebbero causare danni all'azienda in caso di condivisione con persone non autorizzate. Questa raccomandazione offre un equo compromesso tra sicurezza e flessibilità. Sono esempi di questo tipo di contenuto i contratti, i report sulla sicurezza, i riepiloghi previsionali e i dati sulle vendite.<br /><br />- **Il contenuto è disponibile solo con una connessione a Internet** per i dati aziendali molto sensibili che potrebbero causare danni all'azienda in caso di condivisione con persone non autorizzate. Questa raccomandazione privilegia la sicurezza rispetto alla flessibilità. Sono esempi di questo tipo di contenuto le informazioni su dipendenti e clienti, le password, il codice sorgente e i rendiconti finanziari preannunciati.|
 
 10. Quando si è convinti che il modello sia configurato in modo appropriato per gli utenti, fare clic su **PUBBLICA** per renderlo visibile agli utenti e quindi su **SALVA**.
 
@@ -168,7 +162,9 @@ Per apportare modifiche al modello, selezionarlo e quindi eseguire di nuovo i pa
 ## <a name="see-also"></a>Vedere anche
 [Configurare modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Nov16_HO1-->
+
+<!--HONumber=Jan17_HO4-->
 
 

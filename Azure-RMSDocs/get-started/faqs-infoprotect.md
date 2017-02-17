@@ -4,7 +4,7 @@ description: Questo articolo presenta alcune possibili domande sulla versione di
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/09/2016
+ms.date: 12/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 946daa8dedba71d5887dd96f6853e8d90400bfb1
-ms.openlocfilehash: 125752671ec0ca556cc6967a2a3011fb0bf7d9ab
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 8bb0058940eaf1663ec82b38bc37c33400ea8b87
 
 
 ---
@@ -188,7 +188,7 @@ In particolare quando si usa un account amministratore, assicurarsi di controlla
 
 Per accedere come utente diverso, al momento è necessario modificare il Registro di sistema:
 
-1. Usando un editor del Registro di sistema, passare a **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** ed eliminare la chiave **TokenCache**.
+1. Usando un editor del Registro di sistema, passare a **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** ed eliminare il valore **TokenCache**.
 
 2. Riavviare tutte le applicazioni Office aperte e accedere con l'account utente diverso. Se non viene visualizzato un prompt dei comandi nell'applicazione Office per accedere al servizio Azure Information Protection, tornare alla finestra di dialogo **Microsoft Azure Information Protection** e fare clic su **Accedi** dalla sezione **Stato del client** aggiornata.
 
@@ -204,7 +204,9 @@ Se si incontra un problema con Azure Information Protection e si usa la versione
 
 Per eventuali domande o commenti, usare il [sito Azure Information Protection in Yammer](https://www.yammer.com/askipteam/). 
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-<!--HONumber=Dec16_HO2-->
+
+<!--HONumber=Jan17_HO4-->
 
 

@@ -4,7 +4,7 @@ description: "Per configurare impostazioni ed etichette diverse per utenti speci
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/09/2016
+ms.date: 12/21/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b0600db864f834e9eb84700eb1a36d3e6a6fbde1
-ms.openlocfilehash: ba4567753fbc6320ea6f9170e4bf46857ab999b4
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: ba201561345d5e6b9f22a65ca1785553fed58e08
 
 
 ---
@@ -54,15 +54,19 @@ Per configurare un criterio con ambito per Azure Information Protection:
 
 6. Dopo avere apportato le modifiche desiderate a questo criterio con ambito, nel pannello iniziale di **Azure Information Protection** assicurarsi che il criterio con ambito sia nell'ordine in cui si vuole applicarlo. Questo aspetto è importante quando si seleziona lo stesso utente per più criteri con ambito. Fare quindi clic su **Pubblica**. 
 
-Il client di Azure Information Protection ricerca eventuali modifiche ogni volta che viene avviata un'applicazione di Office supportata. e scarica le modifiche nei criteri globali o nei criteri con ambito applicati a tale utente.
+Il client di Azure Information Protection ricerca eventuali modifiche ogni volta che viene avviata un'applicazione di Office supportata o viene aperto Esplora file. Il client scarica le eventuali modifiche dei criteri globali o dei criteri con ambito applicabili a tale utente.
+
+> [!TIP]
+> Dopo aver salvato i criteri con ambito, è possibile usare **Editor tra criteri** nel pannello iniziale **Azure Information Protection** per visualizzare e riconfigurare tutte le etichette dai criteri di Azure Information Protection. Questo metodo fornisce un modo semplice per confrontare le etichette da più criteri (i criteri globali e tutti i criteri con ambito). Questo editor non consente tuttavia di aggiungere o riordinare le etichette, né di visualizzare o configurare le impostazioni dei criteri.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per un esempio di come personalizzare i criteri predefiniti e osservare il comportamento risultante in un'applicazione di Office, seguire l'[Esercitazione introduttiva di Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Dec16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

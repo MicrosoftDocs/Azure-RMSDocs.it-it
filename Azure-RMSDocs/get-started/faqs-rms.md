@@ -13,8 +13,8 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: eb9b9c1308abe6b1b5803cba7ba254d54cbac812
-ms.openlocfilehash: d3d11dba936ca8901b701008e55df8d73be8bded
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: 181357691df02c8532a6f28eef689dcacdfd937f
 
 
 ---
@@ -159,11 +159,12 @@ Come illustrato da questi esempi, anche se tutte le piattaforme e tutto il softw
 
 Nonostante il nome e l'aspetto, l'opzione **Non inoltrare** non è il contrario dell'inoltro immediato né un modello. Si tratta in realtà di un insieme di diritti che limitano la copia, la stampa, il salvataggio di allegati e l'inoltro dei messaggi di posta elettronica. I diritti vengono applicati dinamicamente agli utenti tramite i destinatari scelti anziché in modo statico in base alle assegnazioni dall'amministratore. Per altre informazioni, vedere la sezione [Do Not Forward option for emails](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails) (Opzione Non inoltrare per i messaggi di posta elettronica) dell'articolo [Configuring usage rights for Azure Rights Management](../deploy-use/configure-usage-rights.md) (Configurazione dei diritti di utilizzo per Azure Rights Management).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
 
-<!--HONumber=Nov16_HO3-->
+<!--HONumber=Jan17_HO4-->
 
 
