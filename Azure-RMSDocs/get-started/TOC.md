@@ -13,7 +13,7 @@
 ## [Esercitazione introduttiva](infoprotect-quick-start-tutorial.md)
 ### [Passaggio 1: Attivare il servizio](infoprotect-tutorial-step1.md)
 ### [Passaggio 2: Configurare e pubblicare criteri](infoprotect-tutorial-step2.md)
-### [Passaggio 3: Installare il client e l'applicazione](infoprotect-tutorial-step3.md)
+### [Passaggio 3: Installare il client](infoprotect-tutorial-step3.md)
 ### [Passaggio 4: Servizio in azione - Assegnazione di etichette, classificazione e protezione](infoprotect-tutorial-step4.md)
 ### [Passaggio 5: Servizio in azione - Condivisione di file protetti e rilevamento](infoprotect-tutorial-step5.md)
 ## [Guida alla distribuzione rapida](rapid-deployment-guide.md)
@@ -31,6 +31,6 @@
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 
