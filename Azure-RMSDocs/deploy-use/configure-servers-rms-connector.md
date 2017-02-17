@@ -4,7 +4,7 @@ description: Informazioni per configurare i server locali che sfrutteranno il co
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/11/2016
+ms.date: 12/29/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: afbaf9bfc2b898d8dece415a26045ec52f7deaac
-ms.openlocfilehash: 15d017cda5e390a6fd2b639ef451a15422981ae4
+ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
+ms.openlocfilehash: f262d64a1903eb47bf5f54577fa68df9d43c7f2d
 
 
 ---
@@ -248,14 +248,17 @@ Per usare il connettore RMS e la funzionalità Infrastruttura di classificazione
 3.  Creare regole di classificazione e attività di gestione di file per proteggere i documenti con la crittografia RMS e quindi specificare un modello RMS per applicare automaticamente criteri RMS. Per altre informazioni, vedere la [panoramica di gestione risorse del file server](http://technet.microsoft.com/library/hh831701.aspx) nella libreria della documentazione di Windows Server.
 
 ## <a name="next-steps"></a>Passaggi successivi
-Dopo aver installato e configurato il connettore RMS e configurato i server per l'uso di tale connettore, gli amministratori IT e gli utenti possono proteggere e gestire messaggi di posta elettronica e documenti mediante Azure RMS. Per facilitare questa operazione per gli utenti, distribuire l'applicazione RMS sharing, che installa un componente aggiuntivo per Office e aggiunge nuove opzioni al menu di scelta rapida di Esplora file. Per altre informazioni, vedere [Guida dell'amministratore dell'applicazione Rights Management sharing](../rms-client/sharing-app-admin-guide.md).
+Dopo aver installato e configurato il connettore RMS e configurato i server per l'uso di tale connettore, gli amministratori IT e gli utenti possono proteggere e gestire messaggi di posta elettronica e documenti mediante il servizio Azure Rights Management. Per facilitare questa operazione per gli utenti, distribuire l'applicazione RMS sharing, che installa un componente aggiuntivo per Office e aggiunge nuove opzioni al menu di scelta rapida di Esplora file. Per altre informazioni, vedere [Guida dell'amministratore dell'applicazione Rights Management sharing](../rms-client/sharing-app-admin-guide.md).
+
+Si noti che se si configurano modelli di reparto da usare con le regole di trasporto di Exchange o l'infrastruttura di classificazione file (FCI, File Classification Infrastructure) per Windows Server, la configurazione dell'ambito deve includere l'opzione di compatibilità dell'applicazione in modo che la casella di controllo **Mostra questo modello a tutti gli utenti quando le applicazioni non supportano l'identità utente** sia selezionata.
 
 È possibile usare [Guida di orientamento per la distribuzione di Azure Information Protection](../plan-design/deployment-roadmap.md) per verificare se sono necessarie altre operazioni di configurazione prima di distribuire [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] a utenti e amministratori.
 
 Per monitorare il connettore RMS, vedere [Monitorare il connettore di Azure Rights Management](monitor-rms-connector.md). 
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO2-->
+<!--HONumber=Jan17_HO4-->
 
 

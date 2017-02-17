@@ -4,7 +4,7 @@ description: Istruzioni su come classificare e proteggere documenti e messaggi d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 01/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e6d4cc50259b9d9bb73a75c648f9e6915562accf
-ms.openlocfilehash: e1d61fbe1d74a4a57d9a1fdf518aeb0242d0f7ad
+ms.sourcegitcommit: 171a47f9c22dec24f72f8f21392d6577efd807a5
+ms.openlocfilehash: d050629999c3a886eb8d422f4f38c22d586e0824
 
 
 ---
@@ -53,17 +53,17 @@ Per un elenco dei tipi di file supportati da Esplora file, vedere la sezione [Ti
 
 2. Nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** usare le etichette in modo analogo a un'applicazione di Office, che consente di impostare la classificazione e la protezione come definito dall'amministratore. Se non è possibile selezionare un'etichetta, ovvero non è disponibile, il file selezionato non supporta la classificazione ma è possibile proteggerlo.
 
-3. Per proteggere il file, scegliere tra le impostazioni di protezione definite dall'amministratore per l'etichetta selezionata (**Automatico, in base all'etichetta di classificazione selezionata**) o specificare le proprie impostazioni (**Esegui l'override con le autorizzazioni personalizzate**).
+3. Per specificare impostazioni di protezione personalizzate invece di usare quelle eventualmente incluse dall'amministratore con l'etichetta selezionata, selezionare **Proteggi con autorizzazioni personalizzate**.
     
-    L'opzione di override non usa alcuna impostazione di protezione che l'amministratore potrebbe avere definito per l'etichetta scelta. In alternativa, è possibile specificare le proprie impostazioni di protezione. 
+    Le eventuali autorizzazioni personalizzate specificate sostituiscono le impostazioni di protezione che l'amministratore potrebbe avere definito per l'etichetta scelta e non sono aggiuntive.  
 
-4. Se si seleziona l'opzione di override, specificare le opzioni seguenti:
+4. Se si seleziona l'opzione per le autorizzazioni personalizzate, specificare le informazioni seguenti:
 
     - **Selezionare le autorizzazioni**: selezionare il livello di accesso da assegnare agli utenti per la protezione del file o dei file selezionati.
     
     - **Selezionare gli utenti**: specificare gli utenti che devono avere le autorizzazioni selezionate per il file o i file. Per gli utenti e i gruppi all'interno dell'organizzazione è possibile usare la Rubrica per cercarli e selezionarli. Per gli utenti di un'altra organizzazione è necessario specificare l'indirizzo di posta elettronica completo. Assicurarsi di usare un indirizzo di posta elettronica aziendale perché gli indirizzi di posta elettronica personali non sono attualmente supportati.
         
-    - **Scadenza dell'accesso**: selezionare questa opzione solo per i file per cui il fattore tempo è importante in modo tale che gli utenti specificati non potranno aprire il file o i file selezionati dopo una data specificata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno selezionato, gli utenti specificati non potranno aprire il file.
+    - **Scadenza dell'accesso**: selezionare questa opzione solo per i file per cui il fattore tempo è importante in modo tale che gli utenti specificati non possano aprire il file o i file selezionati dopo una data specificata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno selezionato, gli utenti specificati non potranno aprire il file.
 
 5. Fare clic su **Applica**, quindi su **Chiudi**.
 
@@ -108,9 +108,10 @@ Per le istruzioni d'uso, vedere le sezioni seguenti della Guida per l'utente di 
 
 -   [Per saperne di più](client-user-guide.md#what-do-you-want-to-do)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 
