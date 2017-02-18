@@ -1,11 +1,11 @@
 ---
-title: Termini | Azure RMS
-description: Una raccolta di definizioni di termini specifici di Rights Management Services.
+title: Terminologia di Azure Information Protection per sviluppatori | Documentazione Microsoft
+description: Una raccolta di definizioni di termini specifici di Rights Management Services per gli sviluppatori.
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -15,15 +15,15 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 38ed5a7128813f52cb62b906b0a5cef4e6d990be
+ms.sourcegitcommit: 9c0977c57ea8e85b6750fe1f5a063059ee343db9
+ms.openlocfilehash: 4ecf686d8e7e26909c8bda4a2d0df7fc61f413bb
 
 
 ---
 
 # <a name="terms"></a>Termini
 
-Una raccolta di definizioni di termini specifici di Rights Management Services.
+Una raccolta di definizioni di termini specifici di Azure Information Protection per gli sviluppatori.
 
 **Algoritmo deprecato**  
 Un'impostazione modale che implementa uno schema di protezione del contenuto precedente che fa riferimento alla modalità di crittografia ECB (Electronic Codebook). In questo SDK, l'impostazione consente di generare licenze compatibili con la libreria MSDRM usata da [AD Rights Management Services SDK](https://msdn.microsoft.com/library/windows/desktop/cc530379.aspx).
@@ -42,6 +42,6 @@ Il formato PFile è trasparente allo sviluppatore dell'applicazione in quanto è
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO1-->
+<!--HONumber=Jan17_HO4-->
 
 

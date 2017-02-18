@@ -1,11 +1,11 @@
 ---
-title: Istruzioni e informazioni per lo sviluppatore | Azure RMS
-description: Questo argomento illustra indicazioni specifiche per diversi scenari di sviluppo importanti.
+title: Istruzioni per sviluppatori per Azure Information Protection SDK 2.1 | Documentazione Microsoft
+description: Una raccolta di argomenti con procedure per lo sviluppo con AIP SDK 2.1
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 10/18/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -15,13 +15,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a3d58cc4c430fe2335ff8fbb7e23c77915e6b8ab
-ms.openlocfilehash: c09eebc8a950894038a758d8f968c5e3e5ae2a53
+ms.sourcegitcommit: 5df7da98abf4e7c8e39b610fe374d67cf2954338
+ms.openlocfilehash: 1c10eb8f7a68138761931d1c8a1715a03b7ff0a9
 
 
 ---
 
-# <a name="developer-guidance-and-information"></a>Istruzioni e informazioni per lo sviluppatore
+# <a name="developer-guidance"></a>Istruzioni per sviluppatori
 
 Questa sezione descrive le indicazioni specifiche per diversi scenari di sviluppo importanti, nonché informazioni generali sullo sviluppo con questo SDK. Gli scenari in questa sezione sono specifici per la versione corrente di Rights Management Services SDK 2.1 e possono subire modifiche nelle versioni successive.
 - [Procedura: Usare l'autenticazione ADAL](how-to-use-adal-authentication.md): autenticazione con Azure RMS per l'app usando Azure Active Directory Authentication Library (ADAL).
@@ -47,6 +47,6 @@ Questa sezione descrive le indicazioni specifiche per diversi scenari di svilupp
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Nov16_HO4-->
+<!--HONumber=Jan17_HO4-->
 
 
