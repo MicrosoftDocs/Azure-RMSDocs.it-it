@@ -25,7 +25,7 @@
 ### [Creare una nuova etichetta](configure-policy-new-label.md)
 ### [Eliminare o riordinare un'etichetta](configure-policy-delete-reorder.md)
 ### [Modificare un'etichetta](configure-policy-change-label.md)
-### [Applicare la protezione](configure-policy-protection.md)
+### [Configurare la protezione](configure-policy-protection.md)
 #### [Restrizioni HYOK](configure-adrms-restrictions.md)
 ### [Configurare i contrassegni visivi](configure-policy-markings.md)
 ### [Configurare le condizioni](configure-policy-classification.md)
@@ -49,6 +49,6 @@
 
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO3-->
 
 
