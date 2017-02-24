@@ -4,7 +4,7 @@ description: Sono ora disponibili tre generazioni di Rights Management SDK.
 keywords: 
 author: bruceperlerms
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
