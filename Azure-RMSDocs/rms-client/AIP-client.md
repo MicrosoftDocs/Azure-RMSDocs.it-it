@@ -1,5 +1,5 @@
 ---
-title: Client Azure Information Protection per Windows | Azure Information Protection
+title: Client Azure Information Protection per Windows
 description: "Risorse informative per il client Azure Information Protection per Windows. Questo client scaricabile gratuito è ideale per le organizzazioni che vogliono classificare e proteggere documenti e messaggi di posta elettronica."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,8 @@ ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: aef657af767d1839c24d4e3ecb192a7e651475d5
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: dca5f00dcad1e6e1db2e8558f7ce214dd81a9064
 
 
 ---
@@ -41,6 +41,6 @@ Il client Azure Information Protection per Windows è un client scaricabile grat
 
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 

@@ -1,18 +1,18 @@
 ---
-title: Esercitazione introduttiva | Azure Information Protection
+title: Esercitazione introduttiva di Azure Information Protection
 description: Esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell&quot;organizzazione. L&quot;esecuzione dell&quot;esercitazione richiede circa 20 minuti.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 4d61cf28be8e41cad20ff2dbc3be2c71eac9d2ad
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 78d019adfeed4f2bc9cb0924fa8f9b932862819a
 
 
 ---
@@ -53,6 +53,6 @@ A questo punto, procedere con l'esercitazione.
 
 
 
-<!--HONumber=Feb17_HO2-->
+<!--HONumber=Feb17_HO4-->
 
 
