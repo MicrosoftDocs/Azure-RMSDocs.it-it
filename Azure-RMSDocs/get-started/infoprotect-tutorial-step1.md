@@ -1,6 +1,6 @@
 ---
 title: Esercitazione introduttiva, passaggio 1 | Azure Information Protection
-description: Passaggio 1 dell&quot;esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell&quot;organizzazione. L&quot;esecuzione dell&quot;esercitazione richiede circa 30 minuti.
+description: Passaggio 1 dell&quot;esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell&quot;organizzazione. L&quot;esecuzione dell&quot;esercitazione richiede circa 20 minuti.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -11,8 +11,8 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 1b9a65619e2cbe9def71379dffc6c1df1729cdfa
+ms.sourcegitcommit: 420da63412f10431d29c01bad317c69cf72b66ad
+ms.openlocfilehash: a2631af6bf972a8c88d37e42149b90fb96f71763
 
 
 ---
@@ -24,7 +24,7 @@ ms.openlocfilehash: 1b9a65619e2cbe9def71379dffc6c1df1729cdfa
 > [!NOTE]
 >Se il servizio Azure Rights Management è già stato attivato per il tenant, proseguire con il [passaggio successivo](infoprotect-tutorial-step2.md). 
 
-Quando il servizio Azure Rights Management è attivato, è possibile proteggere i messaggi di posta elettronica e i documenti più sensibili dell'organizzazione e tenere traccia del modo in cui sono usati quando vengono condivisi con altri utenti. È possibile attivare questo servizio in diversi modi, inclusi l'uso di Windows PowerShell e lo spostamento tra i portali di amministrazione.
+Quando il servizio Azure Rights Management è attivato, è possibile proteggere i messaggi di posta elettronica e i documenti più sensibili dell'organizzazione e tenere traccia del modo in cui i documenti protetti vengono usati quando vengono condivisi con altri utenti. È possibile attivare questo servizio in diversi modi, inclusi l'uso di Windows PowerShell e lo spostamento tra i portali di amministrazione.
 
 Ai fini di questa esercitazione, si passerà direttamente alla pagina di attivazione per gli amministratori di Office 365, che è la stessa per il portale di Office 365 classico e l'anteprima dell'interfaccia di amministrazione di Office 365. 
 
@@ -59,6 +59,6 @@ Quelle sopra indicate sono tutte le operazioni da eseguire per il primo passaggi
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

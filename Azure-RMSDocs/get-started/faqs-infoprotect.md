@@ -1,10 +1,10 @@
 ---
 title: Domande frequenti sulla classificazione e l&quot;assegnazione di etichette | Azure Information Protection
-description: Questo articolo presenta alcune possibili domande sulla versione di anteprima di Azure Information Protection e le relative risposte.
+description: Questo articolo presenta alcune possibili domande su Azure Information Protection e le relative risposte.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/21/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 8bb0058940eaf1663ec82b38bc37c33400ea8b87
+ms.sourcegitcommit: fb68fc152e7f1d323cce71e3873475c78f7bbc15
+ms.openlocfilehash: ad94507f4aea48172ed3c3f74f6d12e3c67cc18e
 
 
 ---
@@ -27,7 +27,9 @@ Di seguito sono riportate alcune possibili domande sulle funzionalità di classi
 
 ## <a name="what-can-i-do-with-the-classification-capabilities-in-azure-information-protection"></a>Che cosa si può fare con le funzionalità di classificazione di Azure Information Protection?
 
-Il client di Azure Information Protection aggiunge alle applicazioni di Microsoft Office una barra che consente di visualizzare e modificare le etichette di classificazione assegnate ai dati. La classificazione può essere eseguita manualmente o, scelta consigliata, applicata automaticamente. Per le classificazioni specificate, i dati possono essere protetti tramite un servizio Rights Management.  
+Il client Azure Information Protection aggiunge alle applicazioni di Microsoft Office una barra che consente agli utenti di visualizzare e assegnare le etichette di classificazione ai messaggi di posta elettronica e ai documenti di Office.
+
+La classificazione può essere applicata per impostazione predefinita, eseguita manualmente, consigliata o applicata automaticamente quando vengono rilevati dati sensibili. Queste etichette possono anche proteggere automaticamente i dati mediante un servizio Rights Management. Oltre ai messaggi di posta elettronica e ai documenti di Office, è possibile classificare e proteggere altri file usando Esplora file e facendo clic con il pulsante destro del mouse su un file, più file o una cartella. In alternativa, è possibile usare PowerShell dalla riga di comando, per eseguire più velocemente operazioni di classificazione e protezione in blocco.
 
 Le etichette e il comportamento delle classificazioni vengono configurati nel portale di Azure. Per valutare molto rapidamente Azure Information Protection, è possibile usare criteri predefiniti. In alternativa, è possibile creare criteri completamente personalizzati. È possibile modificare i colori, i nomi e l'ordine delle etichette di classificazione visibili agli utenti. È anche possibile configurare descrizioni e contrassegni visivi di classificazione, ad esempio l'intestazione, il piè di pagina o una filigrana.
 
@@ -47,7 +49,7 @@ La versione corrente presenta le limitazioni seguenti. Per sapere quando saranno
 
 - L'SDK per partner e sviluppatori non è disponibile.
 
-Alcune delle limitazioni elencate in precedenza sono ora disponibili in anteprima. Per altre informazioni, vedere l'annuncio del post di blog: [L'anteprima di dicembre di Azure Information Protection è ora disponibile](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/).
+Alcune delle limitazioni elencate in precedenza sono state risolte con la versione di febbraio del nuovo client. Per altre informazioni, vedere l'annuncio del post di blog.
 
 
 ## <a name="do-i-need-to-be-a-global-admin-to-try-azure-information-protection"></a>È necessario essere un amministratore globale per provare Azure Information Protection?
@@ -78,7 +80,7 @@ Azure Information Protection applica protezione ed etichette persistenti ai file
 
 Le azioni dei criteri di Azure Information Protection vengono eseguite al momento del salvataggio dei documenti e dell'invio dei messaggi di posta elettronica, sia per il nuovo contenuto che per le modifiche apportate al contenuto esistente.
 
-Se è installato il client di anteprima, è anche possibile classificare rapidamente ed eventualmente proteggere i file esistenti da Esplora file. 
+Se è installata la versione più recente del client, è anche possibile classificare rapidamente, ed eventualmente proteggere, i file esistenti da Esplora file. 
 
 ## <a name="can-i-use-azure-information-protection-for-classification-only-without-enforcing-encryption-and-restricting-usage-rights"></a>È possibile usare Azure Information Protection solo per la classificazione, senza applicare la crittografia, e limitare i diritti di utilizzo?
 
@@ -90,7 +92,7 @@ Nel portale di Azure è possibile usare motivi predefiniti, ad esempio numeri di
 
 Un esempio di questa funzione è presente nell'[Esercitazione introduttiva di Azure Information Protection](infoprotect-quick-start-tutorial.md). 
 
-L'accuratezza della classificazione dipende dalla configurazione della regola di classificazione, che si basa su condizioni. Attualmente le condizioni supportano motivi di testo ed espressioni regolari. Per una spiegazione delle opzioni disponibili durante l'anteprima, con alcuni esempi consigliati da provare, vedere [Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection](../deploy-use/configure-policy-classification.md). Il rilevamento viene eseguito quando il documento viene salvato o quando il messaggio di posta elettronica viene inviato.
+L'accuratezza della classificazione dipende dalla configurazione della regola di classificazione, che si basa su condizioni. Attualmente le condizioni supportano motivi di testo ed espressioni regolari. Per una spiegazione delle opzioni disponibili, con alcuni esempi consigliati da provare, vedere [Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection](../deploy-use/configure-policy-classification.md). Il rilevamento viene eseguito quando il documento viene salvato o quando il messaggio di posta elettronica viene inviato.
 
 Per ottenere la migliore esperienza utente e garantire la continuità aziendale, è consigliabile iniziare con azioni con consigli per gli utenti anziché con azioni completamente automatiche. In questo modo gli utenti possono accettare l'azione di aggiunta di etichette o di protezione oppure possono ignorare i suggerimenti.   
 
@@ -106,8 +108,7 @@ Sì. Se è necessario che gli utenti classifichino tutti i file che salvano, nel
 
 ## <a name="can-i-remove-classification-from-a-file"></a>È possibile rimuovere la classificazione da un file?
 
-Sì. Per rimuovere la classificazione da un file, aprire il file nell'applicazione di Office, fare clic sull'icona **Modifica etichetta** sulla barra Information Protection, fare clic sull'icona **Rimuovi etichetta** e quindi fare clic su **OK** per confermare l'azione. 
-
+Sì. Questo argomento è trattato nella guida per l'utente: [Rimuovere le etichette di classificazione e la protezione da file e messaggi di posta elettronica](../rms-client/client-remove-label-protection.md) 
 
 ## <a name="can-i-prompt-users-to-justify-why-they-are-changing-the-classification-level"></a>È possibile richiedere agli utenti di giustificare il motivo per cui stanno modificando il livello di classificazione?
 
@@ -133,7 +134,7 @@ No. Quando viene applicata un'etichetta a un messaggio di posta elettronica con 
 
 ## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Qual è la differenza tra la classificazione dei messaggi di posta elettronica di Azure Information Protection e la classificazione dei messaggi di Exchange?
 
-La classificazione dei messaggi di Exchange è una funzionalità precedente che consente di classificare i messaggi di posta elettronica e viene implementata indipendentemente dalla classificazione di Azure Information Protection. Tuttavia, è possibile integrare le due soluzioni in modo che quando gli utenti classificano un messaggio di posta elettronica con Outlook Web App e in alcune applicazioni di posta per dispositivi mobili, vengono automaticamente aggiunti la classificazione di Azure Information Protection e i contrassegni di etichetta corrispondenti. Exchange aggiunge la classificazione e la versione di anteprima del client di Azure Information Protection applica le impostazioni di etichetta corrispondenti per tale classificazione.
+La classificazione dei messaggi di Exchange è una funzionalità precedente che consente di classificare i messaggi di posta elettronica e viene implementata indipendentemente dalla classificazione di Azure Information Protection. Tuttavia, è possibile integrare le due soluzioni in modo che quando gli utenti classificano un messaggio di posta elettronica con Outlook Web App e in alcune applicazioni di posta per dispositivi mobili, vengono automaticamente aggiunti la classificazione di Azure Information Protection e i contrassegni di etichetta corrispondenti. Exchange aggiunge la classificazione e il client Azure Information Protection applica le impostazioni delle etichette corrispondenti per tale classificazione.
 
 Sebbene Outlook Web App non supporta ancora in modo nativo la protezione e la classificazione di Azure Information Protection, è possibile adottare questa stessa tecnica per usare le etichette con questo client di posta elettronica oltre al client Outlook sul desktop.
 
@@ -152,7 +153,7 @@ Quando gli utenti usano l'app Outlook Web Access o un client del dispositivo mob
 
 - La regola di Exchange rileva la classificazione di Exchange e di conseguenza modifica l'intestazione del messaggio per aggiungere la classificazione di Azure Information Protection.
 
-- Quando i destinatari che eseguono la versione di anteprima del client di Azure Information Protection visualizzano il messaggio di posta elettronica in Outlook, vedranno l'etichetta di Azure Information Protection assegnata e l'eventuale intestazione, piè di pagina o filigrana corrispondente del messaggio di posta elettronica. 
+- Quando i destinatari che eseguono il client Azure Information Protection visualizzano il messaggio di posta elettronica in Outlook, vedranno l'etichetta di Azure Information Protection assegnata e l'eventuale intestazione, piè di pagina o filigrana corrispondente del messaggio di posta elettronica. 
 
 Se le etichette di Azure Information Protection applicano la protezione di Rights Management, aggiungerla alla configurazione della regola selezionando l'opzione per modificare la sicurezza del messaggio, applicare la protezione dei diritti, quindi selezionare il modello RMS o l'opzione Non inoltrare.
 
@@ -166,11 +167,9 @@ Per la classificazione, Azure Information Protection usa metadati persistenti ch
 
 ## <a name="how-does-document-tracking-and-revocation-work-for-azure-information-protection"></a>Come funzionano il rilevamento e la revoca dei documenti in Azure Information Protection?
 
-Il rilevamento dei documenti per i file classificati e protetti tramite Azure Information Protection è integrato con la tecnologia di protezione Azure Rights Management e con l'applicazione RMS sharing. È inoltre possibile accedere al sito di rilevamento dei documenti tramite il client di Azure Information Protection versione 1.0.233 o successiva: 
+Il rilevamento dei documenti per i file classificati e protetti tramite Azure Information Protection funziona con la versione più recente del client Azure Information Protection (versione 1.3.155.2 o successiva). 
 
-- In un'applicazione di Office, nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi** > **Rileva utilizzo**. 
-
-Per altre informazioni, vedere [Tenere traccia dei documenti e revocarli quando si usa l'applicazione RMS sharing](../rms-client/sharing-app-track-revoke.md).
+Per altre informazioni, vedere [Tenere traccia dei documenti protetti e revocarli quando si usa Azure Information Protection](../rms-client/client-track-revoke.md).
 
 ## <a name="can-i-control-which-users-can-use-azure-information-protection-to-classify-and-protect-content"></a>È possibile avere il controllo su quali utenti possono usare Azure Information Protection per classificare e proteggere il contenuto?
 
@@ -200,13 +199,15 @@ Inoltre:
 
 ## <a name="how-can-i-report-a-problem-or-send-feedback-for-azure-information-protection"></a>Come è possibile segnalare un problema o inviare commenti e suggerimenti per Azure Information Protection?
 
-Se si incontra un problema con Azure Information Protection e si usa la versione corrente del client: nell'applicazione di Office, nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi** e quindi su **Guida e commenti**. Nella finestra di dialogo **Microsoft Azure Information Protection** fare clic su **Invia commenti e suggerimenti**. Verrà inviato un messaggio di posta elettronica al team di Information Protection. Al messaggio verranno allegati automaticamente i file di log del PC per consentire la diagnosi del problema. 
+Per il supporto tecnico, usare i canali di supporto standard oppure [contattare il supporto tecnico Microsoft](information-support.md#to-contact-microsoft-support).
 
-Per eventuali domande o commenti, usare il [sito Azure Information Protection in Yammer](https://www.yammer.com/askipteam/). 
+Per inviare feedback, ad esempio suggerimenti di possibili miglioramenti o nuove funzionalità: nel gruppo **Protezione** della scheda **Home** dell'applicazione di Office fare clic su **Proteggi** e quindi su **Guida e commenti**. Nella finestra di dialogo **Microsoft Azure Information Protection** fare clic su **Invia commenti e suggerimenti**. Verrà inviato un messaggio di posta elettronica al team di Information Protection. Al messaggio verranno allegati automaticamente i file di log del PC. 
+
+È anche possibile rivolgersi al team di ingegneri nel [sito di Yammer per Azure Information Protection](https://www.yammer.com/askipteam/). 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

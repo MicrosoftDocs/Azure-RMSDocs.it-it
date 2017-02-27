@@ -4,7 +4,7 @@ description: Informazioni e istruzioni per gli amministratori per configurare e 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: bab64fcb5f4ac208bfc7f1f385c558a77e9eb796
+ms.sourcegitcommit: efab4cdc455237b4bb064252dfe6702ec40539d2
+ms.openlocfilehash: a5a27e9d1d12381b7c4c945596480171f7265552
 
 
 ---
@@ -37,7 +37,7 @@ Dopo l'[attivazione ](activate-service.md) del servizio Azure Rights Management,
 
     -   Autorizzazioni specifiche: Visualizza contenuto, Salva file, Modifica contenuto, Visualizza diritti assegnati, Consenti macro, Inoltra, Rispondi, Rispondi a tutti
 
-Inoltre, l'[applicazione RMS sharing](../rms-client/sharing-app-windows.md) consente agli utenti di definire il proprio set di autorizzazioni. Per il client di Outlook e Outlook Web Access, gli utenti possono selezionare l'opzione [Non inoltrare](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails).
+Il [client Azure Information Protection](../rms-client/aip-client.md) consente inoltre agli utenti di definire set di autorizzazioni personalizzati. Per il client di Outlook e Outlook Web Access, gli utenti possono selezionare l'opzione [Non inoltrare](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails).
 
 Per molte organizzazioni, i modelli predefiniti potrebbero essere sufficienti. È tuttavia possibile creare modelli personalizzati di criteri per i diritti d'uso, se lo si desidera. È possibile decidere di creare un modello personalizzato per diversi motivi, tra cui i seguenti:
 
@@ -68,6 +68,6 @@ Per configurare e usare i modelli personalizzati, usare le informazioni seguenti
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

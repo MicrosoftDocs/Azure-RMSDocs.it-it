@@ -1,18 +1,18 @@
 ---
 title: Esercitazione introduttiva, passaggio 4 | Azure Rights Management
-description: Passaggio 3 dell&quot;esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell&quot;organizzazione. L&quot;esecuzione dell&quot;esercitazione richiede circa 30 minuti.
+description: Passaggio 3 dell&quot;esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell&quot;organizzazione. L&quot;esecuzione dell&quot;esercitazione richiede circa 20 minuti.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: bcf1e9ee7a2d6cf8fb264533f150b350ce0a9e56
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: bf438f4f7617b4cc05df7f4a7067c5ac57fd1d06
 
 
 ---
@@ -35,7 +35,7 @@ Selezionare **L'etichetta precedente non è più applicabile** e fare clic su **
 
 ## <a name="to-remove-the-classification-completely"></a>Per rimuovere completamente la classificazione
 
-Sulla barra di Information Protection fare clic sull'icona **Modifica etichetta** accanto a **Personale**. Verranno visualizzate le etichette disponibili. Ma questa volta, anziché scegliere una delle etichette, fare clic sull'icona **Rimuovi etichetta**. Fare clic su **OK** per confermare e quindi fornire la giustificazione per questa azione.  
+Sulla barra di Information Protection fare clic sull'icona **Modifica l'etichetta** accanto a **Personale**. Verranno visualizzate le etichette disponibili. Questa volta, invece di scegliere una delle etichette, fare clic sull'icona **Elimina l'etichetta**. Digitare "Il documento non richiede la classificazione" e fare clic su **Conferma**.  
 
 Per il valore **Sensitivity** (Riservatezza) verrà visualizzato **Non impostato**, come avviene inizialmente se non si imposta un'etichetta predefinita:
 
@@ -56,7 +56,17 @@ Per il valore **Sensitivity** (Riservatezza) verrà visualizzato **Non impostato
 
     Il documento è protetto anche dal modello di Azure Rights Management specificato, che è possibile confermare quando si fa clic sulla scheda **File** e si visualizzano le informazioni in **Proteggi documento**. Se si usa il modello Confidential (Riservato), verrà visualizzata l'informazione che il documento è riservato agli utenti interni. Gli utenti esterni all'organizzazione non potranno aprire il documento e il suo contenuto non potrà essere copiato o stampato. Il proprietario del documento può copiarne il contenuto e stamparlo, ma se lo invia tramite posta elettronica a un altro utente dell'organizzazione, quest'ultimo non sarà in grado di eseguire queste azioni.
 
+4. È ora possibile chiudere il documento.
+
 I passaggi eseguiti fino a ora hanno consentito di vedere in azione la classificazione, l'assegnazione di etichette e la protezione. Nei passaggi successivi verrà mostrato come proteggere i documenti anche quando vengono condivisi con altri utenti dell'organizzazione. Verrà inoltre mostrato come è possibile tenere traccia del modo in cui tali documenti vengono usati e verrà spiegato come revocarne l'accesso.
+
+|Se si desiderano altre informazioni|Informazioni aggiuntive|
+|--------------------------------|--------------------------|
+|Istruzioni complete per l'assegnazione di etichette e la protezione dei file |[Classificare e proteggere un file o un messaggio di posta elettronica](../rms-client/client-classify-protect.md)|
+
+
+
+
 
 >[!div class="step-by-step"]
 [&#171; Passaggio 3](infoprotect-tutorial-step3.md)
@@ -65,6 +75,6 @@ I passaggi eseguiti fino a ora hanno consentito di vedere in azione la classific
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

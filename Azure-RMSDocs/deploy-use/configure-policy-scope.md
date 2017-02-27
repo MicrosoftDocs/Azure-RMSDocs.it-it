@@ -4,7 +4,7 @@ description: "Per configurare impostazioni ed etichette diverse per utenti speci
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/21/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: ba201561345d5e6b9f22a65ca1785553fed58e08
+ms.sourcegitcommit: fb68fc152e7f1d323cce71e3873475c78f7bbc15
+ms.openlocfilehash: 6818d514c303b3e3ee61189e62769dc72f36b668
 
 
 ---
@@ -23,9 +23,7 @@ ms.openlocfilehash: ba201561345d5e6b9f22a65ca1785553fed58e08
 
 >*Si applica a: Azure Information Protection*
 
-**[Questa funzionalità è disponibile in anteprima ed è soggetta a modifiche].**
-
-Quando i criteri di Azure Information Protection vengono scaricati nei computer in cui è installato il [client di Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018), a tutti gli utenti vengono applicate le impostazioni e le etichette dei criteri predefiniti o le modifiche configurate per i criteri globali. Se si vuole integrare questi criteri per utenti specifici con impostazioni ed etichette diverse, è necessario creare un **criterio con ambito** (attualmente in anteprima) configurato per tali utenti.
+Quando i criteri di Azure Information Protection vengono scaricati nei computer in cui è installato il [client di Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018), a tutti gli utenti vengono applicate le impostazioni e le etichette dei criteri predefiniti o le modifiche configurate per i criteri globali. Se si vuole integrare questi criteri per utenti specifici con impostazioni ed etichette diverse, è necessario creare un **criterio con ambito** configurato per tali utenti.
 
 Tutti gli utenti riceveranno i criteri globali contenenti titolo della barra e descrizione comando, impostazioni globali ed etichette globali di Information Protection. Se sono stati configurati criteri con ambito per utenti specifici, tali utenti riceveranno le impostazioni e le etichette aggiuntive. 
 
@@ -42,7 +40,7 @@ Per configurare un criterio con ambito per Azure Information Protection:
 
 2. Passare al pannello **Azure Information Protection**: ad esempio, nel menu hub fare clic su **More services** (Altri servizi) e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
 
-    Nel pannello iniziale di **Azure Information Protection** selezionare **Aggiungi un nuovo criterio (ANTEPRIMA)**. Verrà quindi visualizzato il secondo pannello usato per mostrare l'aggiornamento dei criteri globali, in modo da potere configurare il nuovo criterio con ambito.
+    Nel pannello iniziale di **Azure Information Protection** selezionare **Aggiungi un nuovo criterio**. Verrà quindi visualizzato il secondo pannello usato per mostrare l'aggiornamento dei criteri globali, in modo da potere configurare il nuovo criterio con ambito.
 
 3. Specificare un nome e una descrizione per il criterio visibile solo agli amministratori nel portale di Azure. Il nome deve essere univoco nel tenant. Fare quindi clic su **Selezionare gli utenti/gruppi a cui viene applicato il criterio** e nei pannelli successivi è possibile cercare e selezionare gli utenti e i gruppi per questo criterio. Le etichette e le impostazioni configurate in questo criterio con ambito verranno applicate solo a tali utenti. 
 
@@ -67,6 +65,6 @@ Per un esempio di come personalizzare i criteri predefiniti e osservare il compo
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

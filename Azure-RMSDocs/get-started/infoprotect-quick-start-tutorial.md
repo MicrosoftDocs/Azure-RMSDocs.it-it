@@ -1,18 +1,18 @@
 ---
 title: Esercitazione introduttiva | Azure Information Protection
-description: Esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell&quot;organizzazione. L&quot;esecuzione dell&quot;esercitazione richiede circa 30 minuti.
+description: Esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell&quot;organizzazione. L&quot;esecuzione dell&quot;esercitazione richiede circa 20 minuti.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/04/2016
+ms.date: 02/08/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 2a601d075245280d30b78d9c38bbb09e6387f8be
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 4d61cf28be8e41cad20ff2dbc3be2c71eac9d2ad
 
 
 ---
@@ -21,9 +21,9 @@ ms.openlocfilehash: 2a601d075245280d30b78d9c38bbb09e6387f8be
 
 >*Si applica a: Azure Information Protection*
 
-Usare questa esercitazione introduttiva per provare rapidamente Microsoft Azure Information in cinque passaggi la cui esecuzione richiede circa 30 minuti. Questa esercitazione è stata pensata come demo autoguidata che consente di comprendere rapidamente alcune delle caratteristiche e delle funzionalità offerte da Azure Information Protection. Non include tutte le funzionalità disponibili e non deve essere considerata come una guida alla distribuzione per l'organizzazione. Se si vuole distribuire Azure Information Protection nell'organizzazione, vedere la [Guida di orientamento per la distribuzione](../plan-design/deployment-roadmap.md). 
+Usare questa esercitazione per provare rapidamente Azure Information Protection in cinque passaggi la cui esecuzione richiede circa 20 minuti. Questa esercitazione è stata pensata come demo autoguidata che consente di comprendere rapidamente alcune delle caratteristiche e delle funzionalità offerte da Azure Information Protection. Non include tutte le funzionalità disponibili e non deve essere considerata come una guida alla distribuzione per l'organizzazione. Se si vuole distribuire Azure Information Protection nell'organizzazione, vedere la [Guida di orientamento per la distribuzione](../plan-design/deployment-roadmap.md). 
 
-Questa esercitazione, rivolta ai consulenti e agli amministratori IT, consente di valutare Azure Information Protection come soluzione di protezione delle informazioni aziendali per un'organizzazione. In un ambiente di produzione i passaggi per configurare i criteri di Information Protection e installare il client e l'applicazione per gli utenti vengono normalmente eseguiti da un amministratore. I passaggi riguardanti l'aggiunta di un'etichetta a un documento, la condivisione sicura di un documento tramite posta elettronica e il rilevamento dei documenti vengono eseguiti dagli utenti finali. L'esercitazione include tutti questi passaggi per mostrare tipici scenari end-to-end di classificazione, assegnazione di etichette e protezione dei dati dell'organizzazione. 
+Questa esercitazione, rivolta ai consulenti e agli amministratori IT, consente di valutare Azure Information Protection come soluzione di protezione delle informazioni aziendali per un'organizzazione. In un ambiente di produzione i passaggi per configurare i criteri di Information Protection e installare il client per gli utenti vengono normalmente eseguiti da un amministratore. I passaggi riguardanti l'aggiunta di un'etichetta a un documento, la condivisione sicura di un documento tramite posta elettronica e il rilevamento dei documenti vengono eseguiti dagli utenti finali. L'esercitazione include tutti questi passaggi per mostrare tipici scenari end-to-end di classificazione, assegnazione di etichette e protezione dei dati dell'organizzazione. 
 
 In caso di problemi riguardanti l'esecuzione di questa esercitazione o l'uso di Azure Information Protection, oppure se si vogliono conoscere le opinioni di altri utenti su questa applicazione, visitare il [sito di Azure Information Protection in Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all).
 
@@ -53,6 +53,6 @@ A questo punto, procedere con l'esercitazione.
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

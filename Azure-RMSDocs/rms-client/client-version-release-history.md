@@ -4,7 +4,7 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 77c448230aef0b3364822f38ace4f490bfc2db5f
+ms.sourcegitcommit: a55a35ae0f0a3e0c60e6a0289a23888b2eda7fb5
+ms.openlocfilehash: 1f021eee1535abb09d4a4715c819935e21eb89dd
 
 
 ---
@@ -27,12 +27,38 @@ Il team di Azure Information Protection aggiorna regolarmente il client di Azure
 
 Utilizzare le informazioni seguenti per visualizzare gli elementi nuovi o modificati in una versione. La versione più recente è elencata per prima. L'elenco non contiene le versioni rilasciate prima della data di disponibilità generale.
 
-Oltre alla versione corrente, è ora disponibile una versione di **anteprima** del client di Azure Information Protection che è possibile scaricare solo dall'Area download Microsoft. Offre le stesse funzionalità dell'applicazione di condivisione Rights Management per Windows con le opzioni del menu di scelta rapida in Esplora file e un visualizzatore per i file protetti. Per altre informazioni, vedere l'[annuncio del post di blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/) e la documentazione preliminare: [Guida per l'utente di Azure Information Protection](client-user-guide.md).
-
 > [!NOTE]
 > Poiché non sono riportate le correzioni minori, in caso di un problema con il client di Azure Information Protection, verificare prima che non si tratti di un problema della versione più recente.
 >  
-> Se il problema permane, aprire un'applicazione di Office e nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi** e quindi su **Guida e commenti e suggerimenti**. Fare clic sul collegamento **Invia commenti e suggerimenti**, che consente di allegare automaticamente i log del client a un messaggio di posta elettronica da inviare al team di Information Protection per l'analisi. Per le opzioni di supporto, vedere le informazioni riportate in [Opzioni di supporto e risorse per la community](../get-started/information-support.md#support-options-and-community-resources).
+> Se il problema persiste, vedere le informazioni contenute in [Opzioni di supporto e risorse della community](../get-started/information-support.md#support-options-and-community-resources). È anche possibile rivolgersi al team di Azure Information Protection nel [sito di Yammer](https://www.yammer.com/askipteam/).
+
+## <a name="version-131552"></a>Versione 1.3.155.2
+
+**Data di rilascio**: 08/02/2017
+
+**Nuovi requisiti**:
+
+Microsoft .NET Framework
+
+- Questa versione del client Azure Information Protection richiede Microsoft .NET Framework 4.6.2 come versione minima. Se questo non è presente, il programma di installazione prova a scaricarlo e installarlo. Al termine dell'installazione del client Azure Information Protection, potrebbe essere necessario riavviare il computer.
+
+- Se il visualizzatore Azure Information Protection viene installato separatamente, è necessario Microsoft .NET Framework 4.5.2 come versione minima. Se questo non è presente, il programma di installazione non lo scarica e installa.
+
+**Nuove funzionalità**:
+
+- Nuovo client unificato che riunisce le funzionalità dell'applicazione di condivisione Rights Management per Windows e il client Azure Information Protection. Include:
+    
+    - Integrazione con Esplora file (clic con il pulsante destro del mouse) per l'applicazione di etichette e protezione. Supporta altri formati di file e la selezione di più file.
+    - Un visualizzatore per documenti protetti (include PDF protetti per SharePoint).
+    - Cmdlet di PowerShell per ottenere e impostare etichette per i file archiviati in locale o in condivisioni di rete. Questi cmdlet vengono installati con i cmdlet forniti in precedenza con lo strumento di protezione RMS (modulo RMSProtection).
+    - Log di utilizzo del client che registrano informazioni, ad esempio su quale etichetta è stata applicata, come e da chi.
+
+Questa versione del client è la [versione con disponibilità generale](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/) del client in anteprima annunciato per la prima volta nel mese di dicembre 2016. Per altre informazioni su questa versione del client, vedere le guide seguenti:
+
+- [Guida per l'amministratore del client di Azure Information Protection](client-admin-guide.md)
+
+- [Guida per l'utente di Azure Information Protection](client-user-guide.md)
+
 
 ## <a name="version-1240"></a>Versione 1.2.4.0
 
@@ -50,7 +76,7 @@ Oltre alla versione corrente, è ora disponibile una versione di **anteprima** d
 
 - Opzione per test diagnostici e ripristino che l'utente può eseguire dall'applicazione di Office quando è installato il client di Azure Information Protection: nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi**, scegliere **Guida e commenti e suggerimenti** e quindi **Esegui diagnostica**. 
 
-    Per altre informazioni su questa opzione, vedere la sezione [Per verificare l'installazione, lo stato della connessione o segnalare un problema](info-protect-client.md#to-verify-installation-connection-status-or-report-a-problem) della documentazione relativa all'installazione del client.
+    Per altre informazioni su questa opzione, vedere la sezione [Per verificare l'installazione o lo stato di connessione o inviare commenti e suggerimenti](client-admin-guide.md#to-verify-installation-connection-status-or-send-feedback) della documentazione relativa all'installazione del client.
 
 ## <a name="version-11230"></a>Versione 1.1.23.0
 
@@ -60,11 +86,16 @@ Disponibilità generale.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sull'installazione del client, vedere [Installazione del client di Azure Information Protection](info-protect-client.md).
+Per altre informazioni sull'installazione del client:
+
+- Per utenti: [Scaricare e installare il client](install-client-app.md)
+
+- Per amministratori: [Guida per l'amministratore del client di Azure Information Protection](client-admin-guide.md)
+
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

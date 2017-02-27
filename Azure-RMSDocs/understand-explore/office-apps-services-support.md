@@ -4,7 +4,7 @@ description: Informazioni su come le applicazioni di Office, come Word, Excel, P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/31/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: 2e895f51e21d5f8cb45a43719d47ba6987c13a09
+ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
+ms.openlocfilehash: d2d33329457e181b55489834daf595da81bc7ada
 
 
 ---
@@ -30,6 +30,8 @@ Le applicazioni di Office, come Word, Excel, PowerPoint e Outlook, e i servizi O
 Queste applicazioni supportano Rights Management a livello nativo usando Information Rights Management (IRM) e consentono agli utenti di applicare la protezione a un documento salvato oppure a un messaggio e-mail da inviare Gli utenti possono applicare i modelli oppure, per Word, Excel e PowerPoint, possono scegliere impostazioni con un elevato livello di personalizzazione per limitare l'accesso, i diritti e l'uso. 
 
 Gli utenti possono ad esempio configurare un file di Word in modo che possano accedervi solo le persone appartenenti all'organizzazione o per controllare se un foglio di calcolo Excel può essere modificato, per impostarne l'accesso in sola lettura o per impedirne la stampa. Per file soggetti a vincoli temporali, è possibile configurare un'ora di scadenza (direttamente oppure applicando un modello) per stabilire il momento in cui non è più possibile accedere al file. Oltre a scegliere un modello, per Outlook gli utenti possono scegliere l'opzione **Non inoltrare** per impedire la perdita di dati.
+
+Oltre al supporto di IRM nativo, queste applicazioni supportano la barra di Azure Information Protection che viene installata con il [client Azure Information Protection](../rms-client/aip-client.md ). Questa barra mostra le etichette che consentono agli utenti di applicare automaticamente e con maggiore facilità la protezione di Rights Management a documenti e messaggi di posta elettronica che contengono dati sensibili.
 
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online ed Exchange Server
 Quando si usa Exchange Online oppure Exchange Server, è possibile usare l'integrazione IRM (Information Rights Management) che fornisce soluzioni di protezione delle informazioni aggiuntive:
@@ -64,7 +66,7 @@ Se si usa SharePoint Server, è possibile usare le funzionalità di protezione d
 > - I file con un'estensione di file PPDF per i file PDF protetti non sono supportati. I file con estensione pdf e protetti a livello nativo da Rights Management sono supportati se si usa un programma per la lettura dei file PDF che supporta Rights Management a livello nativo.
 
 
-Azure RMS applica le restrizioni d'uso e la crittografia dei dati per i documenti quando questi vengono scaricati da SharePoint e non quando il documento viene creato inizialmente in SharePoint o caricato nella raccolta. Per informazioni su come vengono protetti i documenti di essere scaricati, vedere [Crittografia dei dati in OneDrive for Business e SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) nella documentazione di SharePoint.
+Azure Rights Management applica restrizioni di utilizzo e la crittografia dei dati ai documenti quando vengono scaricati da SharePoint e non quando il documento viene creato per la prima volta in SharePoint o caricato nella raccolta. Per informazioni su come vengono protetti i documenti di essere scaricati, vedere [Crittografia dei dati in OneDrive for Business e SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) nella documentazione di SharePoint.
 
 Per altre informazioni sull'uso del servizio Azure Rights Management con SharePoint, vedere il post seguente del blog di Office: [Novità di Information Rights Management in SharePoint e SharePoint Online](http://blogs.office.com/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
 
@@ -75,6 +77,6 @@ Per informazioni su come altri servizi e applicazioni supportano il servizio Azu
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

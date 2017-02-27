@@ -4,7 +4,7 @@ description: Istruzioni per creare e gestire modelli personalizzati nel portale 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/11/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5b7a73c153edfdc7db3a55ee714b05f65d5090f4
-ms.openlocfilehash: 41a4406803cb0de4af607c7494258fc57d5217f7
+ms.sourcegitcommit: 4d9cf4f9ab3f73d2b1ba06eb74541f2982d24677
+ms.openlocfilehash: 66158f74951e7226482e58cf94e4249486b4dc7b
 
 
 ---
@@ -85,10 +85,10 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
     > [!TIP]
     > È possibile aggiungere al modello utenti esterni all'organizzazione ("utenti esterni") selezionando un gruppo abilitato per la posta elettronica contenente i contatti da Office 365 o Exchange Online. In questo modo è possibile assegnare diritti agli utenti allo stesso modo in cui si assegnano diritti agli utenti nell'organizzazione. Ad esempio, è possibile impedire ai clienti di modificare un listino prezzi che viene loro inviato. Non usare questa configurazione del modello per proteggere messaggi di posta elettronica se gli utenti esterni all'organizzazione leggono i messaggi di posta elettronica protetti tramite Outlook Web App.
     > 
-    > È possibile anche aggiungere al modello utenti esterni all'organizzazione in un secondo momento usando il [modulo Windows PowerShell per Azure Rights Management](install-powershell.md) e usando uno dei metodi seguenti:
+    > Successivamente, è anche possibile aggiungere al modello utenti esterni all'organizzazione, scegliendo **utenti specifici**, **gruppi** o **tutti gli utenti dell'organizzazione**. A tale scopo, usare il [modulo di Windows PowerShell per Azure Rights Management](install-powershell.md) e uno dei metodi seguenti:
     > 
-    > -  **Usare un oggetto di definizione dei diritti per aggiornare un modello**: specificare gli indirizzi di posta elettronica esterni e i relativi diritti in un oggetto di definizione dei diritti, che verrà quindi usato per aggiornare il modello. È possibile specificare l'oggetto di definizione dei diritti usando il cmdlet [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) per creare una variabile e quindi fornire questa variabile al parametro -RightsDefinition con il cmdlet [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) per modificare un modello esistente. Tuttavia, se si stanno aggiungendo questi utenti a un modello esistente, sarà necessario definire anche gli oggetti di definizione dei diritti per i gruppi esistenti nei modelli e non solo i nuovi utenti esterni.
-    > -  **Esportare, modificare e importare il modello aggiornato**: usare il cmdlet [Export-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx) per esportare il modello in un file che è possibile modificare in modo da aggiungere gli indirizzi di posta elettronica esterni degli utenti e i relativi diritti rispetto a gruppi e diritti esistenti. Usare quindi il cmdlet [Import-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx) per importare di nuovo le modifiche in Azure RMS.
+    > -  **Usare un oggetto di definizione dei diritti per aggiornare un modello**: specificare gli utenti esterni (tramite indirizzo di posta elettronica dell'utente, indirizzo di posta elettronica del gruppo o un dominio per tutti gli utenti dell'organizzazione) e i relativi diritti in un oggetto di definizione dei diritti. Usare quindi l'oggetto di definizione dei diritti per aggiornare il modello. È possibile specificare l'oggetto di definizione dei diritti usando il cmdlet [New-AadrmRightsDefinition](/powershell/aadrm/vlatest/new-aadrmrightsdefinition) per creare una variabile e quindi fornire questa variabile al parametro -RightsDefinition con il cmdlet [Set-AadrmTemplateProperty](/powershell/aadrm/vlatest/set-aadrmtemplateproperty) per modificare un modello esistente. Tuttavia, se si stanno aggiungendo questi utenti a un modello esistente, sarà necessario definire anche gli oggetti di definizione dei diritti per i gruppi esistenti nei modelli e non solo i nuovi utenti esterni.
+    > -  **Esportare, modificare e importare il modello aggiornato**: usare il cmdlet [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate) per esportare il modello in un file che è possibile modificare in modo da aggiungere gli utenti esterni (tramite indirizzo di posta elettronica dell'utente, indirizzo di posta elettronica del gruppo o un dominio per tutti gli utenti dell'organizzazione) e i relativi diritti ai gruppi e diritti esistenti. Usare quindi il cmdlet [Import-AadrmTemplate](/powershell/aadrm/vlatest/import-aadrmtemplate) per importare di nuovo le modifiche in Azure RMS.
 
 3.  Fare clic sul pulsante Avanti, quindi assegnare agli utenti e ai gruppi selezionati uno dei diritti elencati.
 
@@ -107,7 +107,7 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
 
     Altre informazioni sui modelli di reparto: per impostazione predefinita, tutti gli utenti nella directory di Azure visualizzano tutti i modelli pubblicati e possono quindi selezionarli dalle applicazioni quando vogliono proteggere il contenuto. Se si vuole consentire solo ad alcuni utenti specifici di visualizzare alcuni dei modelli pubblicati, è necessario definire l'ambito dei modelli per tali utenti. Quindi, solo tali utenti potranno selezionare questi modelli. Gli altri utenti che non sono stati specificati non potranno visualizzare i modelli e pertanto non potranno selezionarli. Questa tecnica semplifica la scelta del modello corretto da parte degli utenti, soprattutto quando si creano modelli che sono progettati per essere usati da gruppi o reparti specifici. Gli utenti visualizzeranno solo i modelli che sono stati progettati per loro.
 
-    Ad esempio, si è creato un modello per il reparto Risorse umane che applica l'autorizzazione di sola lettura ai membri del reparto Finanze. Affinché solo i membri del reparto Risorse umane possano applicare questo modello quando usano l'applicazione Rights Management sharing, assegnare l'ambito del modello al gruppo abilitato alla posta elettronica denominato HumanResources. Quindi, solo i membri di questo gruppo potranno visualizzare e applicare questo modello.
+    Ad esempio, si è creato un modello per il reparto Risorse umane che applica l'autorizzazione di sola lettura ai membri del reparto Finanze. Affinché solo i membri del reparto Risorse umane possano applicare questo modello quando usano il client Azure Information Protection, assegnare l'ambito del modello al gruppo abilitato alla posta elettronica denominato HumanResources. Solo i membri di questo gruppo potranno quindi applicare il modello. Se inoltre gli utenti eseguono il client Azure Information Protection in [modalità di sola protezione](../rms-client/client-protection-only-mode.md), non vedranno il modello.
 
 7.  Nella pagina **VISIBILITÀ DEL MODELLO** selezionare gli utenti e i gruppi che potranno visualizzare e selezionare il modello nelle applicazioni che supportano RMS. Come indicato in precedenza, è consigliabile usare i gruppi anziché gli utenti e i gruppi o gli utenti selezionati dovranno avere un indirizzo di posta elettronica.
 
@@ -115,7 +115,7 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
 
     Per quale motivo potrebbe essere necessario configurare la compatibilità delle applicazioni? Non tutte le applicazioni possono supportare i modelli di reparto. A tale scopo, per poter scaricare i modelli, è necessario eseguire prima l'autenticazione dell'applicazione con il servizio RMS. Se il processo di autenticazione non viene eseguito, per impostazione predefinita non viene scaricato alcun modello di reparto. È possibile eseguire l'override di questo comportamento specificando che tutti i modelli di reparto devono essere scaricati, configurando la compatibilità dell’applicazione e selezionando la casella di controllo **Mostra questo modello a tutti gli utenti quando le applicazioni non supportano l'identità utente** .
 
-    Ad esempio, se non si configura la compatibilità delle applicazioni per il modello di reparto nell'esempio delle Risorse umane, solo gli utenti del reparto Risorse umane visualizzeranno il modello di reparto quando useranno l'applicazione RMS sharing, ma nessun utente visualizzerà il modello di reparto quando userà Outlook Web Access (OWA) da Exchange Server 2013 poiché OWA di Exchange ed Exchange ActiveSync non supportano i modelli di reparto. Se si esegue l'override di questo comportamento predefinito configurando la compatibilità delle applicazioni, solo gli utenti del reparto Risorse umane visualizzeranno il modello di reparto quando useranno l'applicazione RMS sharing, ma tutti gli utenti visualizzeranno il modello di reparto quando useranno Outlook Web Access (OWA). Se gli utenti usano OWA o Exchange ActiveSync da Exchange Online, i modelli di reparto saranno visibili a tutti gli utenti o a nessun utente, a seconda dello stato del modello (archivio o pubblicato) in Exchange Online.
+    Ad esempio, se non si configura la compatibilità delle applicazioni per il modello di reparto nell'esempio delle Risorse umane, solo gli utenti del reparto Risorse umane visualizzeranno il modello di reparto quando useranno il client Azure Information Protection in [modalità di sola protezione](../rms-client/client-protection-only-mode.md), ma nessun utente visualizzerà il modello di reparto quando userà Outlook Web Access (OWA) da Exchange Server 2013 poiché OWA di Exchange ed Exchange ActiveSync attualmente non supportano i modelli di reparto. Se si esegue l'override di questo comportamento predefinito configurando la compatibilità delle applicazioni, solo gli utenti del reparto Risorse umane visualizzeranno il modello di reparto quando useranno il client Azure Information Protection in modalità di sola protezione, ma tutti gli utenti visualizzeranno il modello di reparto quando useranno Outlook Web Access (OWA). Se gli utenti usano OWA o Exchange ActiveSync da Exchange Online, i modelli di reparto saranno visibili a tutti gli utenti o a nessun utente, a seconda dello stato del modello (archivio o pubblicato) in Exchange Online.
 
     Office 2016 supporta in modalità nativa i modelli di reparto, analogamente a Office 2013 a partire dalla versione 15.0.4727.1000 rilasciata nel mese di giugno 2015 come parte di [KB 3054853](https://support.microsoft.com/kb/3054853).
 
@@ -165,6 +165,6 @@ Per apportare modifiche al modello, selezionarlo e quindi eseguire di nuovo i pa
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

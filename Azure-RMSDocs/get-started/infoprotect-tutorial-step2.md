@@ -1,18 +1,18 @@
 ---
-title: Esercitazione introduttiva, passaggio 1 | Azure Information Protection
-description: Passaggio 2 dell&quot;esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell&quot;organizzazione. L&quot;esecuzione dell&quot;esercitazione richiede circa 30 minuti.
+title: Esercitazione introduttiva - Passaggio 2 | Azure Information Protection
+description: Passaggio 2 dell&quot;esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell&quot;organizzazione. L&quot;esecuzione dell&quot;esercitazione richiede circa 20 minuti.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 00d78bf12a7f400b3dfa7e35ada25177170e2d23
+ms.sourcegitcommit: 8ad1ff05f642571bfe7f4170cb88e29d05515e59
+ms.openlocfilehash: f3ec39af7bdbc63169c09eefa54c29cfc4cee40b
 
 
 ---
@@ -32,7 +32,7 @@ Il criterio predefinito disponibile con Azure è utilizzabile senza alcuna opera
     > [!TIP] 
     > Selezionare **Aggiungi al dashboard** per creare un riquadro **Azure Information Protection** nel dashboard, in modo da ignorare la ricerca del servizio al successivo accesso al portale.
 
-3.  Esaminare il pannello **Criteri:Globale** visualizzato automaticamente che mostra il criterio predefinito di Information Protection creato automaticamente:
+3.  Nel pannello di Azure Information Protection fare clic su **Globale** e analizzare il pannello **Criteri: Globale** che illustra i criteri predefiniti di Information Protection creati automaticamente:
     
     - Etichette per la classificazione: **Personale**, **Public** (Pubblico), **Interno**, **Confidential** (Riservato) e **Secret** (Segreto). Leggere la descrizione di ognuna per comprendere l'uso a cui è destinata. Si noti che per **Secret** (Segreto) esistono due etichette secondarie: **All Company** (Tutta la società) e **My Group** (Gruppo personale). Questo è un esempio di sottocategorie di una classificazione.
 
@@ -114,7 +114,7 @@ Verranno ora modificate le impostazioni di una delle etichette, **Confidential**
 
 Al termine di questa esercitazione è possibile chiudere il portale di Azure o lasciarlo aperto per provare altre opzioni di configurazione.
 
-Dopo aver esaminato i criteri predefiniti e aver apportato alcune modifiche, il passaggio successivo prevede l'installazione del client di Azure Information Protection e l'applicazione Rights Management sharing.
+Dopo aver esaminato il criterio predefinito e aver apportato alcune modifiche, il passaggio successivo prevede l'installazione del client di Azure Information Protection.
 
 |Se si desiderano altre informazioni|Informazioni aggiuntive|
 |--------------------------------|--------------------------|
@@ -128,6 +128,6 @@ Dopo aver esaminato i criteri predefiniti e aver apportato alcune modifiche, il 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

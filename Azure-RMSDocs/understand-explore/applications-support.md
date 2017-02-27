@@ -4,7 +4,7 @@ description: "Informazioni su come le applicazioni (ad esempio, le applicazioni 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: f3e0be224f2a9e587f5be1bbdbbdb3e81b7a4bca
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 53a77c0e312f44fe2210ed19ead6dedeb36a5a78
 
 
 ---
@@ -27,7 +27,7 @@ Usare le informazioni seguenti per comprendere come le applicazioni (ad esempio 
 > [!NOTE]
 > Per verificare le applicazioni e le versioni supportate dal servizio Azure Rights Management, vedere [Requisiti per Azure RMS: applicazioni](../get-started/requirements-applications.md).
 
-In alcuni casi, il servizio Azure Rights Management applica automaticamente la protezione, in base ai criteri configurati dagli amministratori, ad esempio nel caso di raccolte SharePoint, file classificati e regole di trasporto di Exchange. In altri casi, gli utenti finali devono applicare in modo autonomo la protezione delle informazioni selezionando un modello oppure opzioni specifiche, ad esempio nel caso in cui condividono un file tramite e-mail o proteggono un file in locale limitandone l'accesso o l'uso a utenti selezionati oppure a utenti esterni all'organizzazione.
+In alcuni casi, il servizio Azure Rights Management applica automaticamente la protezione, in base ai criteri configurati dagli amministratori, ad esempio nel caso di raccolte di SharePoint e regole di trasporto di Exchange. In altri casi, gli utenti finali devono applicare in modo autonomo la protezione delle informazioni dalle loro applicazioni, ad esempio selezionando un'etichetta di classificazione configurata per applicare un modello, selezionando direttamente un modello o selezionando opzioni specifiche. Un caso tipico di protezione applicata dagli utenti si verifica quando gli utenti proteggono un file da condividere limitandone l'accesso o l'uso a utenti selezionati oppure a utenti esterni all'organizzazione.
 
 I modelli semplificano agli utenti e agli amministratori che configurano i criteri l'applicazione del livello corretto di protezione e la limitazione dell'accesso a persone all'interno dell'organizzazione. Anche se nel servizio Azure Rights Management sono disponibili due modelli predefiniti, sarà possibile creare modelli personalizzati per ridurre i tempi qualora sia necessario specificare opzioni singole. Per altre informazioni, vedere [Configurazione di modelli personalizzati per il servizio Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
@@ -64,6 +64,6 @@ Altre informazioni sul supporto del servizio Azure Rights Management da parte de
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

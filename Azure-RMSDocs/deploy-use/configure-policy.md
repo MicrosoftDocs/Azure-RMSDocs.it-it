@@ -4,7 +4,7 @@ description: "Per configurare le funzioni di classificazione, aggiunta di etiche
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 01/13/2016
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 10c7d307cceb1ca5f1b9bf857fdbe9aea0dc321d
+ms.sourcegitcommit: 8ad1ff05f642571bfe7f4170cb88e29d05515e59
+ms.openlocfilehash: 2ad10e378c14dbaef09ccd321379a0dbd7c0d23d
 
 
 ---
@@ -31,7 +31,7 @@ Per configurare i criteri di Azure Information Protection:
 
 2. Passare al pannello **Azure Information Protection**: ad esempio, nel menu hub fare clic su **More services** (Altri servizi) e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
 
-    Verrà quindi visualizzato il pannello di **Azure Information Protection** che apre automaticamente il pannello dei criteri globali di Information Protection assegnati a tutti gli utenti. Contiene gli elementi seguenti che è possibile configurare:
+    Verrà quindi visualizzato il pannello di **Azure Information Protection**, dove è possibile aprire il criterio **Globale** assegnato a tutti gli utenti. È anche possibile aggiungere e modificare i criteri con ambito. Il criterio **Globale** di Azure Information Protection contiene gli elementi seguenti che è possibile configurare:
 
     - Etichette che consentono agli utenti di classificare i documenti e i messaggi di posta elettronica.
 
@@ -83,6 +83,6 @@ Per un esempio di come personalizzare i criteri predefiniti e osservare il compo
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

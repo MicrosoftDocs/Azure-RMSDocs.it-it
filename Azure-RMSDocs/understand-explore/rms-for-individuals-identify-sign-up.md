@@ -4,7 +4,7 @@ description: "Per sapere se un utente si è iscritto per ottenere RMS per utenti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/24/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: ac980951f9b4cef9816706a23e3807fbe40a62f5
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 5dae8412277be37cd3ff8cfe76c71a8109277146
 
 
 ---
@@ -28,15 +28,15 @@ Per sapere se un utente si è iscritto per ottenere RMS per utenti singoli, un a
 
 -   Chiedere agli utenti in che modo proteggono i file riservati, in particolar modo quando collaborano con altre persone all'esterno dell'organizzazione.
 
--   Quando è disponibile una sottoscrizione di Azure per l'organizzazione, usare il cmdlet [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) per verificare se **RIGHTSMANAGEMENT_ADHOC** viene restituito come una delle sottoscrizioni. Se restituito, si tratta di RMS per le singole sottoscrizioni concesse all'organizzazione, con un pool di unità attive disponibili per permettere agli utenti di usare il processo di iscrizione self-service.
+-   Quando si ha una sottoscrizione di Azure per l'organizzazione, usare il cmdlet [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) per verificare se agli utenti è assegnata la licenza **RIGHTSMANAGEMENT_ADHOC**. Questa licenza è associata alla sottoscrizione di RMS per utenti singoli concessa all'organizzazione, con un pool di unità attive disponibili per permettere agli utenti di usare il processo di iscrizione self-service.
 
--   Usare una soluzione di gestione di sistema, ad esempio System Center Configuration Manager, per tenere traccia del software installato e di quello in uso. L'applicazione Rights Management sharing viene eseguita tramite il programma **ipviewer.exe** ed è possibile [scaricare e installare l'applicazione](http://go.microsoft.com/fwlink/?LinkId=303970) gratuitamente per identificare altre caratteristiche dell'applicazione che è possibile usare a scopo di inventario del software.
+-   Usare una soluzione di gestione di sistema, ad esempio System Center Configuration Manager, per tenere traccia del software installato e di quello in uso. Cercare, ad esempio, **MSIP.App.exe**, usato dal client Azure Information Protection, e **ipviewer.exe** per l'applicazione di condivisione Rights Management. È possibile scaricare e installare questo client e questa applicazione gratuitamente, per identificare altre caratteristiche da usare per l'inventario software.
 
--   Prestare attenzione alle estensioni dei nomi di file creati dall'applicazione Rights Management sharing. Le estensioni .pfile e .ppdf sono gli esempi più evidenti, ma esistono altri file la cui estensione viene modificata quando sono protetti in modalità nativa con il servizio Rights Management. Per altre informazioni, vedere la sezione [Tipi ed estensioni di file supportati](../rms-client/sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) nella [Guida dell'amministratore dell'applicazione Rights Management sharing](http://technet.microsoft.com/library/dn339003.aspx).
+-   Prestare attenzione alle estensioni di file create dal client Azure Information Protection o dall'applicazione di condivisione Rights Management. Le estensioni .pfile e .ppdf sono gli esempi più evidenti, ma esistono altri file la cui estensione viene modificata quando sono protetti in modalità nativa con il servizio Rights Management. Per altre informazioni, vedere la sezione [Tipi di file supportati per la protezione](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection) nella Guida dell'amministratore del client Azure Information Protection.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

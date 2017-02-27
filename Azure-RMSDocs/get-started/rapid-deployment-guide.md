@@ -1,10 +1,10 @@
 ---
-title: Guida alla distribuzione rapida di Azure Information Protection | Azure Information Protection
-description: "Una guida che consente di distribuire e usare più rapidamente Azure Information Protection per proteggere i dati dell&quot;organizzazione. Iniziare scegliendo da un elenco di scenari specifici da implementare."
+title: Guida alla distribuzione rapida di Azure Rights Management | Azure Information Protection
+description: "Una guida che consente di distribuire e usare più rapidamente il servizio Azure Rights Management per proteggere i dati dell&quot;organizzazione. Iniziare scegliendo da un elenco di scenari specifici da implementare."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 12bc1ed0759364273e66d260b9282fbfe42abbe0
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: abe3de4cb972053179a87023c91509168ffeffc4
 
 
 ---
@@ -23,7 +23,10 @@ ms.openlocfilehash: 12bc1ed0759364273e66d260b9282fbfe42abbe0
 
 >*Si applica a: Azure Information Protection, Office 365*
 
-Usare questa Guida, oltre alle informazioni di configurazione presenti nella sezione **Distribuire e usare**, per distribuire e usare Azure Information Protection più rapidamente, scegliendo da un elenco di scenari specifici da implementare.
+Usare questa guida in aggiunta alle informazioni di configurazione presenti nella sezione relativa a **distribuzione e uso** per distribuire e usare più rapidamente una soluzione di sola protezione che usa il servizio Azure Rights Management di Azure Information Protection. Scegliere da un elenco di scenari specifici da implementare.
+
+> [!NOTE]
+> Al momento, la giuda contiene scenari per la sola protezione e non contiene scenari per la classificazione e la protezione o il client Azure Information Protection. 
 
 Questi scenari contengono sia istruzioni per l'amministratore sia documentazione di accompagnamento per gli utenti finali. Prima di distribuire la documentazione (istruzioni o annunci) agli utenti finali, è opportuno personalizzarla in base agli specifici requisiti aziendali e ai flussi di lavoro esistenti. Un set di istruzioni o un annuncio di esempio mostrano il potenziale aspetto della documentazione finale dell'utente finale.
 
@@ -33,8 +36,7 @@ Gli scenari elencati di seguito sono un esempio di quelli più diffusi. Poiché 
 
 Prima di distribuire queste soluzioni, si può valutare di inviare un annuncio di ampio respiro agli utenti finali per informarli del fatto che sono previste alcune modifiche per proteggere i dati aziendali e che potrebbero essere richieste alcune modifiche. Dopo la tabella seguente è riportata una comunicazione di esempio.
 
-> [!NOTE]
-> Per eventuali domande e commenti inerenti a questa Guida, usare i meccanismi di commenti e suggerimenti in questa pagina, sfruttare i meccanismi di feedback o inviare un messaggio di posta elettronica all'indirizzo [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
+Per eventuali domande e commenti inerenti a questa Guida, usare i meccanismi di commenti e suggerimenti in questa pagina, sfruttare i meccanismi di feedback o inviare un messaggio di posta elettronica all'indirizzo [AskIPTeam@Microsoft.com](mailto:%20askipteam@microsoft.com?subject=Rapid%20Deployment%20Guide%20feedback).
 
 ## <a name="scenarios-for-azure-information-protection"></a>Scenari per Azure Information Protection
 Per distribuire più rapidamente Azure Information Protection per risolvere problemi aziendali specifici, scegliere gli scenari che meglio soddisfano gli obiettivi aziendali e adattarli dove necessario.
@@ -148,6 +150,6 @@ Le soluzioni implementare risulteranno utili per proteggere i dati preziosi e of
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

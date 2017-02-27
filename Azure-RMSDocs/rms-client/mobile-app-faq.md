@@ -5,7 +5,7 @@ keywords: Alcune domande frequenti riguardanti l&quot;uso dell&quot;app Azure In
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/06/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -14,8 +14,8 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f478f65eecb47b6d0f41ece413ce576b6935b916
-ms.openlocfilehash: 9a03ccf3326b51f5c9c19102a1e9d003562cead6
+ms.sourcegitcommit: 0dc8e4d772ef65e3425203e78c5e569f4e107b8e
+ms.openlocfilehash: a6900a6dadd0c323958f42ff441cbcf936a0f582
 
 
 ---
@@ -30,9 +30,11 @@ Questa pagina riporta le risposte a domande frequenti sull'app Microsoft Azure I
 
 L'app consente di visualizzare i messaggi di posta elettronica protetti da diritti (file con estensione rpmsg) se l'app di posta elettronica in uso non supporta la protezione dei dati di gestione dei diritti in modo nativo. Questa app consente anche di visualizzare file PDF, file di testo e di immagini protetti da diritti. Attualmente, l'app non può essere usata per creare nuovi messaggi di posta elettronica protetti, rispondere ai messaggi oppure creare o modificare i file protetti.
 
-## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive-for-business"></a>È possibile aprire file PDF che si trovano in librerie protette da SharePoint e OneDrive For Business?
+## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive-for-business"></a>È possibile aprire file PDF che si trovano in librerie protette di SharePoint e OneDrive for Business?
 
 Sì, è possibile aprire file PDF protetti che altri utenti hanno condiviso tramite SharePoint e OneDrive for Business. Toccare il collegamento e scegliere l'app per aprire il file automaticamente. 
+
+Questa app può anche aprire i file PDF protetti all'esterno di SharePoint e OneDrive for Business (file PPDF e PDF protetti).
 
 ## <a name="can-my-mobile-device-run-the-azure-information-protection-app"></a>È possibile eseguire l'app Azure Information Protection in un dispositivo mobile?
 
@@ -73,6 +75,6 @@ Inviare la domanda al [sito Yammer](https://www.yammer.com/AskIPTeam) o [inviare
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

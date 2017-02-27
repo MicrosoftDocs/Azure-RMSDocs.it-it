@@ -4,7 +4,7 @@ description: Informazioni su ridistribuzione, installazione, sistemi operativi s
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/28/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: d40a8b2062b0b8ccb2dd6115d179e45e64181798
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: ff9f1ba390fcad0569972fc65a2425266fd918b4
 
 
 ---
@@ -25,7 +25,7 @@ ms.openlocfilehash: d40a8b2062b0b8ccb2dd6115d179e45e64181798
 
 Il client RMS (client Rights Management Service) versione 2 è anche noto come client MSIPC. Si tratta di un software per computer Windows che comunica con Microsoft Rights Management Services in locale o nel cloud per proteggere l'accesso alle informazioni nonché il loro utilizzo mentre passano attraverso applicazioni e dispositivi all'interno dei confini della propria organizzazione oppure al di fuori di questi confini gestiti. 
 
-Oltre alla distribuzione con l'[applicazione di condivisione Rights Management per Windows](sharing-app-windows.md), il client RMS è disponibile [come download facoltativo](http://www.microsoft.com/download/details.aspx?id=38396) che può essere distribuito gratuitamente con software di terze parti, previo riconoscimento e accettazione del contratto di licenza, in modo che i client possano proteggere e utilizzare contenuti protetti dai servizi Rights Management.
+Oltre a essere incluso con il [client Azure Information Protection per Windows](aip-client.md), il client RMS è disponibile [come download facoltativo](http://www.microsoft.com/download/details.aspx?id=38396) che è possibile, dopo aver letto e accettato il contratto di licenza, distribuire gratuitamente con software di terze parti, in modo da permettere ai clienti di proteggere e usare contenuto protetto tramite Rights Management Services.
 
 
 ## <a name="redistributing-the-rms-client"></a>Ridistribuzione del client RMS
@@ -60,7 +60,7 @@ Il client RMS è supportato con i sistemi operativi seguenti:
 |Sistema operativo Windows Server|Sistema operativo Windows Client|
 |-----------------------------------|-----------------------------------|
 |Windows Server 2016|Windows 10|
-|R2 per Windows Server 2012|Windows 8.1|
+|Windows Server 2012 R2|Windows 8.1|
 |Windows Server 2012|Windows 8|
 |Windows Server 2008 R2|Windows 7 con almeno SP1|
 |Windows Server 2008 (solo AD RMS)|Windows Vista con almeno SP2 (solo AD RMS)|
@@ -94,7 +94,7 @@ Se si installa questo client RMS usando l'opzione di installazione invisibile al
 La sezione seguente contiene le informazioni di impostazione sul client RMS. Queste informazioni potrebbero essere utili in caso di problemi con le applicazioni o i servizi che usano il client RMS.
 
 > [!NOTE]
-> Alcune impostazioni dipendono dall'esecuzione eventuale dell'applicazione con il supporto predefinito per RMS come applicazione in modalità client (come Microsoft Word e Outlook o l'applicazione RMS sharing) oppure come applicazione in modalità server (come SharePoint e Exchange). Nelle tabelle seguenti queste impostazioni sono identificate rispettivamente come **Modalità client** e **Modalità server**.
+> Alcune impostazioni dipendono dal fatto che l'applicazione RMS venga eseguita come applicazione in modalità client, come Microsoft Word e Outlook o il client Azure Information Protection con Esplora file, oppure come applicazione in modalità server, come SharePoint ed Exchange. Nelle tabelle seguenti queste impostazioni sono identificate rispettivamente come **Modalità client** e **Modalità server**.
 
 ### <a name="where-the-rms-client-stores-licenses-on-client-computers"></a>Dove il client RMS archivia le licenze nei computer client
 Il client RMS archivia le licenze sul disco locale e memorizza anche nella cache alcune informazioni nel registro di sistema di Windows.
@@ -261,6 +261,6 @@ In alcuni casi, potrebbe essere necessario reindirizzare il traffico durante l'i
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

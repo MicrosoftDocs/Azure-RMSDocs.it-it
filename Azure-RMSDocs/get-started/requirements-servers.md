@@ -4,7 +4,7 @@ description: Identificare i prodotti server locali che possono usare il servizio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: e7d91f2d-d6a7-4c7e-821f-c94e4be9967d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: c46ee88b18cabab7a8a32d5c971c1fad72ec162e
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 815f543c3dc296c508523fe9e09cb80e41d4f85b
 
 
 ---
@@ -51,11 +51,11 @@ Per usare questo connettore, è necessario configurare la sincronizzazione delle
     -   Windows Server 2012
 
     > [!NOTE]
-    > Poiché i file server che eseguono Windows Server 2008 R2 non includono un'azione predefinita per le attività di gestione file per l'applicazione della protezione Rights Management, non sarà possibile usare il connettore di Rights Management per questo scenario. È tuttavia possibile usare Infrastruttura di classificazione file e Azure RMS in questi sistemi operativi se si configura un'attività personalizzata di gestione file per l'esecuzione di un file eseguibile o di uno script in grado di proteggere i file tramite Azure RMS. Ad esempio, uno script di Windows PowerShell che usa i [cmdlet di protezione RMS](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+    > Poiché i file server che eseguono Windows Server 2008 R2 non includono un'azione predefinita per le attività di gestione file per l'applicazione della protezione Rights Management, non sarà possibile usare il connettore di Rights Management per questo scenario. È tuttavia possibile usare Infrastruttura di classificazione file e Azure RMS in questi sistemi operativi se si configura un'attività personalizzata di gestione file per l'esecuzione di un file eseguibile o di uno script in grado di proteggere i file tramite Azure RMS. Ad esempio, uno script di Windows PowerShell che usa i [cmdlet di AzureInformationProtection](/powershell/azureinformationprotection/vlatest/aip).
     > 
     > È inoltre possibile utilizzare questi cmdlet con server che eseguono versioni successive di Windows Server, con il vantaggio che questi cmdlet possono proteggere tutti i tipi di file. Il connettore RMS protegge solo i file di Office. Per le istruzioni d'uso, vedere [Protezione RMS con l'infrastruttura di classificazione file (FCI, File Classification Infrastructure) per Windows Server&#40;FCI&#41;](../rms-client/configure-fci.md).
 
-Il connettore di Rights Management è supportato in Windows Server 2012 R2, Windows Server 2012 e Windows Server 2008 R2.
+Il connettore Rights Management è supportato in Windows Server 2016, Windows Server 2012 R2, Windows Server 2012 e Windows Server 2008 R2.
 
 Per altre informazioni sulla modalità di configurazione del connettore di Rights Management per questi server locali, vedere [Distribuzione del connettore di Azure Rights Management](../deploy-use/deploy-rms-connector.md).
 
@@ -65,6 +65,6 @@ Per verificare gli altri requisiti, vedere [Requisiti per Azure Rights Managemen
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

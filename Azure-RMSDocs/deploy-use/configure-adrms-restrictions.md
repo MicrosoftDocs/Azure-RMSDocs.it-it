@@ -4,15 +4,15 @@ description: "Identificare le restrizioni, i prerequisiti e le raccomandazioni s
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/13/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 translationtype: Human Translation
-ms.sourcegitcommit: 22af60687ad030e686ba843ced6d450487353a0e
-ms.openlocfilehash: 66c19b296ce170d0f7f5317c87bee532edd9bb78
+ms.sourcegitcommit: fb68fc152e7f1d323cce71e3873475c78f7bbc15
+ms.openlocfilehash: afb676dc133c23123cd3cce6d3c6367b4e80911a
 
 
 ---
@@ -35,7 +35,7 @@ Azure RMS consente di proteggere i documenti e i messaggi di posta elettronica d
 
 Tuttavia, può essere necessario proteggere specifici documenti e messaggi di posta elettronica con una chiave ospitata in locale. Ad esempio, questa può essere necessaria per motivi normativi e di conformità. 
 
-Questa configurazione viene a volte definita HYOK, ossia "hold your own key" ed è supportata da Azure Information Protection quando si dispone di una distribuzione di Active Directory Rights Management Services (AD RMS) attiva con i requisiti descritti nella sezione seguente. Questa funzionalità è ancora in stato di anteprima.
+Questa configurazione viene a volte definita HYOK, ossia "hold your own key" ed è supportata da Azure Information Protection quando si dispone di una distribuzione di Active Directory Rights Management Services (AD RMS) attiva con i requisiti descritti nella sezione seguente.
 
 In questo scenario HYOK, i criteri dei diritti e la chiave privata dell'organizzazione che protegge tali criteri vengono gestiti e conservati in locale, mentre i criteri di Azure Information Protection per l'applicazione di etichette e la classificazione vengono gestiti e archiviati in Azure. Come con la protezione di Azure RMS, le informazioni protette con AD RMS non vengono mai inviate al cloud.
 
@@ -98,13 +98,13 @@ Quando si configura un'etichetta per la protezione di AD RMS, è necessario spec
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni su questa funzionalità di anteprima, vedere l'annuncio del post di blog [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/) (Azure Information Protection con HYOK (Hold Your Own Key)).
+Per altre informazioni su questa funzionalità, vedere l'annuncio del post di blog [Azure Information Protection with HYOK (Hold Your Own Key)](https://blogs.technet.microsoft.com/enterprisemobility/2016/08/10/azure-information-protection-with-hyok-hold-your-own-key/) (Azure Information Protection con HYOK (Hold Your Own Key)).
 
 Per configurare un'etichetta per la protezione di AD RMS, vedere [Come configurare un'etichetta per applicare la protezione di Rights Management](../deploy-use/configure-policy-protection.md). 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

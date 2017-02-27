@@ -4,7 +4,7 @@ description: Come usare l&quot;infrastruttura di classificazione file di Windows
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c8ffebad1130c8ba084c0feb83aa3ec54692ad54
-ms.openlocfilehash: 589f0ff68e1e58c0903eb40dcfd0697a500c8491
+ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
+ms.openlocfilehash: dd94145bc2a6f338bb8a8c0ac0712ed1c86517d4
 
 
 ---
@@ -27,7 +27,7 @@ ms.openlocfilehash: 589f0ff68e1e58c0903eb40dcfd0697a500c8491
 
 Quando si configura Windows Server per usare Infrastruttura di classificazione file, questa funzionalità di Gestione risorse file server può analizzare i file locali per stabilire se contengono dati sensibili I file che soddisfano questi criteri vengono contrassegnati con proprietà di classificazione definite da un amministratore. A questo punto possono essere eseguite azioni automatiche, a seconda della classificazione, ad esempio l'applicazione della protezione delle informazioni usando [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] e la distribuzione del connettore Rights Management (noto anche come connettore RMS). I file di Office vengono automaticamente protetti da Azure RMS.
 
-Per proteggere tutti i tipi di file, non si userà il connettore RMS, ma si deve invece eseguire uno script di Windows PowerShell, usando i cmdlet dello [strumento di protezione di RMS](https://www.microsoft.com/en-us/download/details.aspx?id=47256).
+Per proteggere tutti i tipi di file, non si userà il connettore RMS, ma si eseguirà invece uno script di Windows PowerShell che usa i cmdlet del [modulo Azure Information Protection](../rms-client/client-admin-guide-powershell.md).
 
 I criteri di classificazione sono completamente configurabili ed estendibili e consentono in tal modo di impedire la perdita potenziale di dati da parte di utenti autorizzati o meno. Tali criteri consentono inoltre di ridurre il rischio di perdita di dati da parte di amministratori di rete perché è possibile configurarli in modo che agli amministratori non venga richiesto l'accesso ai file.
 
@@ -45,6 +45,6 @@ Dopo aver compreso in che modo le applicazioni e i servizi supportano Azure RMS,
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

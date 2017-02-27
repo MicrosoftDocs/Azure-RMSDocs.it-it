@@ -4,7 +4,7 @@ description: Alcune domande frequenti su Azure Information Protection e sul rela
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/26/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: d55c21efebc0a3053c7b54b363a0085838a245b8
+ms.sourcegitcommit: d704751bcc7a968c204d0bab0dc55776411d9593
+ms.openlocfilehash: c62a8c087907914e249e119b288b9e3c557d04ea
 
 
 ---
@@ -56,19 +56,18 @@ Per eventuali altri dubbi, usare i collegamenti e le risorse elencate in [Inform
 
 Inoltre, esistono Domande frequenti progettate per gli utenti finali:
 
--   [Domande frequenti sull'applicazione Rights Management sharing per Windows](https://technet.microsoft.com/dn467883)
-
--   [Domande frequenti sull'applicazione Rights Management sharing per piattaforme mobili e Mac](https://technet.microsoft.com/dn451248)
-
 - [Domande frequenti sull'app Azure Information Protection per iOS e Android](../rms-client/mobile-app-faq.md)
 
--   [Domande frequenti sul rilevamento dei documenti](http://go.microsoft.com/fwlink/?LinkId=523977)
+- [Domande frequenti sull'app RMS per computer Mac e dispositivi Windows Phone](https://technet.microsoft.com/dn451248)
+
+- [Domande frequenti sull'applicazione Rights Management sharing per Windows](https://technet.microsoft.com/dn467883)
+
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

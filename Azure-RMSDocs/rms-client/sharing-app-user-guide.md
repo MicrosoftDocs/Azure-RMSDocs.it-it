@@ -4,7 +4,7 @@ description: L&quot;applicazione Microsoft Rights Management (RMS) sharing per W
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 8acc80758eb27cfbe537b705342220418c22fa96
+ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
+ms.openlocfilehash: 1acc6563f8b5da498cb58db46a93160a1fa94022
 
 
 ---
@@ -22,6 +22,9 @@ ms.openlocfilehash: 8acc80758eb27cfbe537b705342220418c22fa96
 # <a name="rights-management-sharing-application-user-guide"></a>Guida dell'utente dell'applicazione Rights Management sharing
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+
+> [!IMPORTANT]
+> **Notifica di fine del supporto**: l'applicazione di condivisione Rights Management per Windows verrà sostituita dal [client Azure Information Protection](aip-client.md). Il supporto per questa applicazione precedente terminerà il 31 gennaio 2018. 
 
 L'applicazione Microsoft Rights Management (RMS) sharing per Windows consente di proteggere le immagini e i documenti importanti da persone che non devono essere visualizzarli, anche se vengono inviati tramite posta elettronica o salvati in un altro dispositivo. È anche possibile eseguire questa applicazione per aprire e usare i file protetti da altri utenti tramite la stessa tecnologia di protezione Rights Management.
 
@@ -69,6 +72,6 @@ Rendering PDF con tecnologia Foxit ¹. Copyright © 2003-2014, Foxit Corporation
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 

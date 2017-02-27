@@ -4,7 +4,7 @@ description: Fase 4 della migrazione da AD RMS ad Azure Information Protection. 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/26/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 9c78ac81a90d46ab8d56cd205474fdf85f486c3d
+ms.sourcegitcommit: e45bbfe0fc2b064d987016cac8af8c4f57d465c9
+ms.openlocfilehash: e10b271872935b7903a3e1bcfe2e8287e693c613
 
 
 ---
@@ -29,7 +29,17 @@ Usare le informazioni seguenti per la fase 4 della migrazione da AD RMS ad Azure
 
 ## <a name="step-8-decommission-ad-rms"></a>Passaggio 8. Rimuovere le autorizzazioni di AD RMS
 
-rimuovere il punto di connessione del servizio da Active Directory per impedire ai computer di individuare l'infrastruttura Rights Management locale. Questo passaggio è facoltativo per i client esistenti di cui è stata eseguita la migrazione, a seguito del reindirizzamento configurato nel Registro di sistema (ad esempio eseguendo lo script di migrazione). Tuttavia, la rimozione del punto di connessione del servizio impedirà ai nuovi client e potenzialmente ai servizi e agli strumenti correlati a RMS di trovare il punto di connessione del servizio al termine della migrazione, quando tutte le connessioni dovrebbero essere state trasferite al servizio Azure Rights Management. Per rimuovere il punto di connessione del servizio, usare lo strumento AD SCP Register da [Rights Management Services Administration Toolkit](http://www.microsoft.com/download/details.aspx?id=1479).
+rimuovere il punto di connessione del servizio da Active Directory per impedire ai computer di individuare l'infrastruttura Rights Management locale. Questo passaggio è facoltativo per i client esistenti di cui è stata eseguita la migrazione, a seguito del reindirizzamento configurato nel Registro di sistema (ad esempio eseguendo lo script di migrazione). Tuttavia, la rimozione del punto di connessione del servizio impedirà ai nuovi client e potenzialmente ai servizi e agli strumenti correlati a RMS di trovare il punto di connessione del servizio al termine della migrazione, quando tutte le connessioni dovrebbero essere state trasferite al servizio Azure Rights Management. 
+
+Per rimuovere il punto di connessione del servizio, assicurarsi di avere eseguito l'accesso come amministratore aziendale del dominio e quindi seguire questa procedura:
+
+1. Nella console di Active Directory Rights Management Services fare clic con il pulsante destro del mouse sul cluster AD RMS e quindi scegliere **Proprietà**.
+
+2. Fare clic sulla scheda **SCP** .
+
+3. Selezionare la casella di controllo **Cambia SCP** .
+
+4. Selezionare **Rimuovi SCP corrente** e quindi fare clic su **OK**.
 
 Monitorare l'attività dei server AD RMS, ad esempio controllando le [richieste nel report di integrità del sistema ](https://technet.microsoft.com/library/ee221012%28v=ws.10%29.aspx) o la [tabella ServiceRequest](http://technet.microsoft.com/library/dd772686%28v=ws.10%29.aspx) oppure [controllando l'accesso utente ai contenuti protetti](http://social.technet.microsoft.com/wiki/contents/articles/3440.ad-rms-frequently-asked-questions-faq.aspx). Dopo aver verificato che i client RMS non comunicano più con questi server e che usano Azure Information Protection, è possibile rimuovere il ruolo del server AD RMS da questi server. Se si usano server dedicati, per precauzione è preferibile arrestare innanzitutto i server per un certo periodo di tempo. In questo modo si verifica che non vengano segnalati problemi che potrebbero richiederne il riavvio, così da garantire la continuità del servizio mentre si esaminano i motivi per cui i client non usano Azure Information Protection.
 
@@ -55,6 +65,6 @@ Dopo aver completato la migrazione, rivedere la [Guida di orientamento per la di
 
 
 
-<!--HONumber=Jan17_HO4-->
+<!--HONumber=Feb17_HO2-->
 
 
