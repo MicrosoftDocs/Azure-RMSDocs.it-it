@@ -1,5 +1,5 @@
 ---
-title: Guida dell&quot;amministratore dell&quot;applicazione Rights Management sharing | Azure Information Protection
+title: Guida dell&quot;amministratore dell&quot;applicazione RMS sharing - AIP
 description: Istruzioni e informazioni per gli amministratori in una rete aziendale che sono responsabili della distribuzione dell&quot;applicazione Microsoft Rights Management sharing per Windows.
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 156474cce6bb9026d56d65eff5acc5ce4ae7edf6
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: ee9d92752bb2839df859d01e80d3b0ecaeb678f9
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -269,7 +270,7 @@ Per verificare l'esito positivo, vedere la sezione [Verificare l'esito positivo 
 
     -   [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation]
 
-        @="&lt;URL certificazione&gt;"
+        @="&lt;certification url&gt;"
 
     -   [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM]
 
@@ -407,9 +408,4 @@ Se non si apporta questa modifica al Registro di sistema, gli utenti potrebbero 
 Per informazioni tecniche aggiuntive, inclusa la spiegazione della differenza tra i livelli di protezione (nativi e generici), i tipi di file supportati, le estensioni del nome dei file e la modalità di modifica del livello di protezione predefinito, vedere [Panoramica tecnica dell'applicazione Rights Management sharing](sharing-app-admin-guide-technical.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

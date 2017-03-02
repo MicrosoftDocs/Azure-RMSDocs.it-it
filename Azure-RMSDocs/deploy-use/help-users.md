@@ -1,5 +1,5 @@
 ---
-title: Consentire agli utenti di proteggere i file mediante il servizio Azure Rights Management | Azure Information Protection
+title: Consentire agli utenti di proteggere i file con Azure RMS - AIP
 description: Informazioni per fornire istruzioni a utenti, amministratori e addetti del servizio help desk dopo aver distribuito e configurato il servizio Azure Rights Management di Azure Information Protection.
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
-ms.openlocfilehash: 0af15bf3238d020b1ee45b45bc780256c88b5e55
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 61f7a7208b13a28f2e8cfb85489cceb2a2caf077
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -109,10 +110,5 @@ In modo analogo alla visualizzazione di un documento protetto, quando i destinat
 In modo analogo alla visualizzazione di un documento protetto, quando i destinatari ricevono il messaggio di posta elettronica vengono prima autenticati. Se sono autorizzati a visualizzare il messaggio di posta elettronica, quest'ultimo viene aperto con i diritti d'uso limitati indicati per l'utente specifico. Se ad esempio è stata selezionata l'opzione **Non rispondere a tutti**, l'opzione **RISPONDI A TUTTI** nella finestra del messaggio non è disponibile.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

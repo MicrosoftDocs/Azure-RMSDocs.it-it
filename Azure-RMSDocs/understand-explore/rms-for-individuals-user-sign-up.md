@@ -1,5 +1,5 @@
 ---
-title: "Modalità di iscrizione per RMS per utenti singoli | Azure Information Protection"
+title: "Modalità di iscrizione a RMS per utenti singoli - AIP"
 description: Istruzioni per eseguire l&quot;iscrizione all&quot;account gratuito e informazioni tecniche sul funzionamento del processo.
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 57e7cb922c0701dbe1088d205cfc56a69dcc4e05
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 1134bff1935b3fada661865f31104e0316e8fecd
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -95,8 +96,3 @@ Questo processo non prevede costi aggiuntivi per l'organizzazione né attività 
 Vedere [Modalità di controllo da parte degli amministratori degli account creati per RMS per utenti singoli](rms-for-individuals-take-control.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

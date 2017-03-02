@@ -1,5 +1,5 @@
 ---
-title: Guida alla distribuzione rapida di Azure Rights Management | Azure Information Protection
+title: Guida alla distribuzione rapida di Azure RMS - AIP
 description: "Una guida che consente di distribuire e usare più rapidamente il servizio Azure Rights Management per proteggere i dati dell&quot;organizzazione. Iniziare scegliendo da un elenco di scenari specifici da implementare."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: c994d616-cff6-4930-9228-a7f7d198a160
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: abe3de4cb972053179a87023c91509168ffeffc4
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 2e50dc9d53550f35f5c589cdb1b384e0abf585e0
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -147,9 +148,4 @@ Uno dei beni più preziosi dell'organizzazione sono i suoi dati, i dati generati
 Le soluzioni implementare risulteranno utili per proteggere i dati preziosi e offrono gli strumenti per mantenere il controllo dei dati. Grazie per la collaborazione mentre è in corso l'implementazione di tali modifiche.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

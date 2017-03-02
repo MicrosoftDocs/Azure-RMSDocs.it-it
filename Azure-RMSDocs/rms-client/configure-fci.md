@@ -1,5 +1,5 @@
 ---
-title: Protezione RMS con Infrastruttura di classificazione file per Windows Server | Azure Information Protection
+title: Protezione di Azure RMS con l&quot;infrastruttura di classificazione file per Windows Server - AIP
 description: "Istruzioni per usare il client Rights Management (RMS) con lo strumento di protezione RMS per configurare Gestione risorse file server e la funzionalità Infrastruttura di classificazione file."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 06419438281e0d5a0b976e506d45be2b4eaaef70
-ms.openlocfilehash: da7ab2f9fcd3919cd7143a407e54d2270449760d
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 58a0f117100ff5d19dfd6fee2ac4dd61c6bea36b
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -287,9 +288,4 @@ A tale scopo, usare una delle proprietà di classificazione predefinite (ad esem
 A questo punto è sufficiente creare una nuova attività di gestione file che usa lo stesso script ma forse con un modello diverso e configurare la condizione per la proprietà di classificazione appena configurata. Ad esempio, invece della condizione configurata in precedenza (la proprietà**RMS** , **Uguale**, **Sì**), selezionare la proprietà **Informazioni personali** con il valore **Operatore** impostato su **Uguale** e il **Valore** **Alto**.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

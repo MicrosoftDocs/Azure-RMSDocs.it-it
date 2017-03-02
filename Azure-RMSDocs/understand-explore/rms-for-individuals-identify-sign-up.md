@@ -1,5 +1,5 @@
 ---
-title: Come determinare se gli utenti hanno effettuato l&quot;iscrizione a RMS per utenti singoli | Azure Information Protection
+title: Determinare se gli utenti hanno effettuato l&quot;iscrizione a RMS per utenti singoli - AIP
 description: "Per sapere se un utente si è iscritto per ottenere RMS per utenti singoli, È possibile usare uno qualsiasi o una combinazione dei metodi descritti in questo articolo."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 5dae8412277be37cd3ff8cfe76c71a8109277146
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: e696bf596255b5e28aa5589cfc18715f100c5b07
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -35,8 +36,3 @@ Per sapere se un utente si è iscritto per ottenere RMS per utenti singoli, un a
 -   Prestare attenzione alle estensioni di file create dal client Azure Information Protection o dall'applicazione di condivisione Rights Management. Le estensioni .pfile e .ppdf sono gli esempi più evidenti, ma esistono altri file la cui estensione viene modificata quando sono protetti in modalità nativa con il servizio Rights Management. Per altre informazioni, vedere la sezione [Tipi di file supportati per la protezione](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection) nella Guida dell'amministratore del client Azure Information Protection.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

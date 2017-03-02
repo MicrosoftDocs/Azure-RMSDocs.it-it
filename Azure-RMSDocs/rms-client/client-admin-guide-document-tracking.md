@@ -1,5 +1,5 @@
 ---
-title: Configurazione e uso del rilevamento dei documenti per Azure Information Protection | Azure Information Protection
+title: Rilevamento dei documenti per Azure Information Protection
 description: Istruzioni e informazioni per amministratori per configurare e usare il rilevamento dei documenti per Azure Information Protection.
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 569c60d502ddcf3169ec0955a76312a50451ec72
-ms.openlocfilehash: a50a358f6552eb4ddd4cde982f2aa01504c1d555
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: aa3b80b7369348f87adc440d6f7a91977aa0fc7c
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -85,9 +86,4 @@ Dopo aver configurato il sito di rilevamento dei documenti per il client Azure I
 - [Comandi di PowerShell](client-admin-guide-powershell.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

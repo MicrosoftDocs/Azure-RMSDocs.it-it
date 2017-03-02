@@ -1,5 +1,5 @@
 ---
-title: Configurazione degli utenti con privilegi avanzati per Azure Rights Management e servizi di individuazione o ripristino dei dati | Azure Information Protection
+title: Configurare utenti con privilegi avanzati per Azure Rights Management - AIP
 description: "Informazioni sulla funzionalità per utenti con privilegi avanzati del servizio Azure Rights Management di Azure Information Protection e relativa implementazione in modo che gli utenti e i servizi autorizzati possano sempre leggere e controllare i dati che Azure Rights Management protegge per l&quot;organizzazione. Questa possibilità viene definita anche &quot;ragionamento sui dati&quot; e riveste un ruolo di importanza critica nel mantenimento del controllo sui dati dell&quot;organizzazione."
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: bb7b459456fd8fb43997f73b39880d7110f92442
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f1c50d67ba03cee9846e81f98aad6da0da33a951
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -71,10 +72,5 @@ Per altre informazioni su questi cmdlet, vedere [Uso di PowerShell con il client
 > Il modulo AIP sostituisce il modulo di protezione RMS di PowerShell installato con lo strumento di protezione RMS. Entrambi questi moduli si differenziano dal [modulo di Windows PowerShell per Azure Rights Management](administer-powershell.md) principale e lo integrano. Il modulo AIP supporta Azure Information Protection, il servizio Azure Rights Management (Azure RMS) per Azure Information Protection e Active Directory Rights Management Services (AD RMS).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

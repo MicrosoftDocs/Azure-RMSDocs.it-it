@@ -1,10 +1,10 @@
 ---
-title: Guida dell&quot;amministratore del client Azure Information Protection | Azure Information Protection
+title: Guida dell&quot;amministratore del client Azure Information Protection
 description: Istruzioni e informazioni per gli amministratori in una rete aziendale che sono responsabili della distribuzione del client Azure Information Protection per Windows.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid:
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f82c7964b16ad984ad920059e2f61f19ad0f471a
-ms.openlocfilehash: dff30520c149c29663c340b70a12c427b31659b9
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: b6a8477078a333aa23ccfe5904af3582216a1e96
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -78,6 +79,8 @@ Inoltre:
 
 - Se il visualizzatore Azure Information Protection viene installato separatamente, è necessario Microsoft .NET Framework 4.5.2 come versione minima. Se questo non è presente, il programma di installazione non lo scarica e installa.
 
+- Il modulo PowerShell richiede Windows PowerShell versione 4.0, che potrebbe essere necessario installare in sistemi operativi precedenti. Per altre informazioni, vedere [How to Install Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx) (Come installare Windows PowerShell 4.0). Per verificare quale versione di Windows PowerShell è in esecuzione, digitare **$PSVersionTable** in una sessione di PowerShell.
+
 - I computer con Windows 7 Service Pack 1 richiedono l'aggiornamento [KB 2533623](https://support.microsoft.com/en-us/kb/2533623), che può essere installato dopo l'installazione del client. Se questo aggiornamento obbligatorio non viene installato, viene richiesto di installarlo.
 
 > [!NOTE]
@@ -105,7 +108,9 @@ Oltre all'uso delle istruzioni seguenti, il client Azure Information Protection 
     
     - Per le altre versioni di Office, riavviare tutte le applicazioni di Office e tutte le istanze di Esplora file. 
         
-
+5. È possibile verificare che l'installazione sia stata completata controllando il file di log di installazione nella cartella %temp%. Questo file ha il formato di denominazione seguente: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`. Ad esempio: **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
+    
+    In questo file di log, cercare la stringa seguente: **Product: Microsoft Azure Information Protection -- Installation completed successfully.** (Prodotto: Microsoft Azure Information Protection -- Installazione completata.)
 
 ### <a name="additional-instructions-for-office-2010-only"></a>Istruzioni aggiuntive solo per Office 2010
 
@@ -189,9 +194,4 @@ Dopo aver installato il client Azure Information Protection, vedere gli argoment
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 

@@ -1,5 +1,5 @@
 ---
-title: Guida dell&quot;utente dell&quot;applicazione Rights Management sharing | Azure Information Protection
+title: Guida dell&quot;utente dell&quot;app RMS sharing - AIP
 description: L&quot;applicazione Microsoft Rights Management (RMS) sharing per Windows consente di proteggere le immagini e i documenti importanti da persone che non devono essere visualizzati, anche se vengono spediti per posta elettronica o salvati in un altro dispositivo.
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 1acc6563f8b5da498cb58db46a93160a1fa94022
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 439b97bd6a23789b6729e2dc5b62777450f4cb63
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -68,10 +69,5 @@ Rendering PDF con tecnologia Foxit ¹. Copyright © 2003-2014, Foxit Corporation
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Feb17_HO2-->
 
 

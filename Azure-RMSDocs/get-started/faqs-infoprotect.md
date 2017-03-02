@@ -1,5 +1,5 @@
 ---
-title: Domande frequenti sulla classificazione e l&quot;assegnazione di etichette | Azure Information Protection
+title: Domande frequenti sulla classificazione e l&quot;assegnazione di etichette - AIP
 description: Questo articolo presenta alcune possibili domande su Azure Information Protection e le relative risposte.
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: fb68fc152e7f1d323cce71e3873475c78f7bbc15
-ms.openlocfilehash: ad94507f4aea48172ed3c3f74f6d12e3c67cc18e
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: dfa89dc4c216807fdebd57dce202a7983a18d9fb
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -118,7 +119,7 @@ Sì. Per assicurarsi che gli utenti giustifichino la modifica della classificazi
 
 Per proteggere automaticamente il contenuto a seconda del livello di classificazione specificato, nel portale di Azure è possibile selezionare un modello di Rights Management.
 
-Un esempio di questa funzione è presente nell'[Esercitazione introduttiva di Azure Information Protection](infoprotect-quick-start-tutorial.md). Per altre informazioni, vedere [Come configurare un'etichetta per applicare la protezione di Rights Management](../deploy-use/configure-policy-protection.md).
+Un esempio di questa funzione è presente nell'[Esercitazione introduttiva di Azure Information Protection](infoprotect-quick-start-tutorial.md). Per altre informazioni, vedere [Come configurare un'etichetta per la protezione di Rights Management](../deploy-use/configure-policy-protection.md).
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>Un file può avere più di una classificazione?
 
@@ -206,8 +207,3 @@ Per inviare feedback, ad esempio suggerimenti di possibili miglioramenti o nuove
 È anche possibile rivolgersi al team di ingegneri nel [sito di Yammer per Azure Information Protection](https://www.yammer.com/askipteam/). 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

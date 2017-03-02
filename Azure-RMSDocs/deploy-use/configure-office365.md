@@ -1,5 +1,5 @@
 ---
-title: Office 365&colon; configurazione di client e servizi online | Azure Information Protection
+title: Office 365&colon; configurare client e servizi online - AIP
 description: Informazioni e istruzioni per gli amministratori per configurare Office 365 per l&quot;uso con il servizio Azure Rights Management di Azure Information Protection.
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
-ms.openlocfilehash: 2b90ba203c8d1874eab193d24d16117af2442449
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f0f486620f4b13dc8d94fee742eec2f8e4753d78
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -561,7 +562,7 @@ Anche se non è possibile configurare IRM per OneDrive for Business per gli uten
 
     2.  Cercare `$tenantAdmin` e sostituire il valore di esempio con il proprio account di amministratore globale completo per Office 365.
 
-        Questo valore corrisponde a quello usato per accedere come amministratore globale al portale di amministrazione di Office 365 e ha il formato seguente: user_name@*&lt;nome dominio tenant&gt;*.com
+        Questo valore corrisponde a quello usato per accedere come amministratore globale al portale di amministrazione di Office 365 e ha il seguente formato: nome_utente@*&lt;nome dominio tenant&gt;*.com
 
         Ad esempio, se il nome utente dell'amministratore globale di Office 365 è "admin" per il dominio del tenant " contoso.com", si specificherà: **admin@contoso.com**
 
@@ -1112,9 +1113,4 @@ Disconnect-SPOService -ErrorAction SilentlyContinue
 ```
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO2-->
-
 
