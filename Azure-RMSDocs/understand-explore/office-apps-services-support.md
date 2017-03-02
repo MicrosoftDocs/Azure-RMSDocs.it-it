@@ -1,5 +1,5 @@
 ---
-title: Applicazioni e servizi Office | Azure Information Protection
+title: App e servizi di Office con Azure Information Protection
 description: Informazioni su come le applicazioni di Office, come Word, Excel, PowerPoint e Outlook, e i servizi di Office, come Exchange e SharePoint, possono usare il servizio Azure Rights Management per proteggere i dati dell&quot;organizzazione.
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4cdac14d3a77ea7bcce23b914bc3be0a1f46d2b5
-ms.openlocfilehash: d2d33329457e181b55489834daf595da81bc7ada
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3e77cebd642b2b9e983f5cbc81e43e1cc437dc5d
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -75,8 +76,3 @@ Per altre informazioni sull'uso del servizio Azure Rights Management con SharePo
 Per informazioni su come altri servizi e applicazioni supportano il servizio Azure Rights Management di Azure Information Protection, vedere [Supporto del servizio Azure Rights Management da parte delle applicazioni](applications-support.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-

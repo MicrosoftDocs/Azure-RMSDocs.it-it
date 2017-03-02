@@ -1,5 +1,5 @@
 ---
-title: Distribuzione del connettore di Azure Rights Management | Azure Information Protection
+title: Distribuire il connettore di Rights Management - AIP
 description: Istruzioni per distribuire il connettore RMS, che fornisce il servizio di protezione dei dati per le distribuzioni locali esistenti che usano Exchange Server, SharePoint Server o Windows Server e Infrastruttura di classificazione file.
 author: cabailey
 ms.author: cabailey
@@ -13,8 +13,9 @@ ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: ffed64826982756072456be18cced0226b6bb6cc
-ms.openlocfilehash: 5d33e0a8a9c6efbe937a53ae964b2972bf41580c
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 93246a239476331f8fc117560c8ce45420eea674
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -98,8 +99,3 @@ Il connettore non verifica automaticamente tutti i [prerequisiti](deploy-rms-con
 Procedere al Passaggio 1: [Installazione e configurazione del connettore di Azure Rights Management](install-configure-rms-connector.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO2-->
-
-
