@@ -17,6 +17,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
 ms.openlocfilehash: 337c819436e3675eb0ba745717d700002d5184b0
+ms.lasthandoff: 01/28/2017
 
 
 ---
@@ -113,8 +114,3 @@ A questi utenti vengono aggiunti i due diritti seguenti:
 - [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-
