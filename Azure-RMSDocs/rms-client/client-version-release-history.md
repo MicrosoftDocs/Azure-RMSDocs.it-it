@@ -4,7 +4,7 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: fec4ca2541b28fd9d91286fceaee0466fc445364
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 343ac5f79902379e45efcb6979a115ba4c00d1c5
+ms.openlocfilehash: 503cb76825d0092e8562d39281b1d702edaf6438
+ms.lasthandoff: 03/02/2017
 
 
 ---
@@ -77,7 +77,7 @@ Questa versione del client è la [versione con disponibilità generale](https://
 
 - Opzione per test diagnostici e ripristino che l'utente può eseguire dall'applicazione di Office quando è installato il client di Azure Information Protection: nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi**, scegliere **Guida e commenti e suggerimenti** e quindi **Esegui diagnostica**. 
 
-    Per altre informazioni su questa opzione, vedere la sezione [Per verificare l'installazione o lo stato di connessione o inviare commenti e suggerimenti](client-admin-guide.md#to-verify-installation-connection-status-or-send-feedback) della documentazione relativa all'installazione del client.
+    Per altre informazioni su questa opzione, vedere la sezione [Per verificare l'installazione o lo stato di connessione o inviare commenti e suggerimenti](client-admin-guide.md#additional-checks-to-verify-installation-connection-status-or-send-feedback) della documentazione relativa all'installazione del client.
 
 ## <a name="version-11230"></a>Versione 1.1.23.0
 
