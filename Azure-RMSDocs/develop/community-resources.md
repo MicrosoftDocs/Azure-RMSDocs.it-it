@@ -17,6 +17,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 91a91b55c0dad4cf83d76d18b75e6b0d91c67190
 ms.openlocfilehash: d9ec87cea94248fb0bb34856d0ff7bd343da26f0
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -42,8 +43,3 @@ Nella sezione di Rights Management Services sul sito Connect è possibile trovar
 >-   Fare clic su **Partecipa** per registrarsi
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

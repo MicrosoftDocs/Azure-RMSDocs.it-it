@@ -17,6 +17,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 5df7da98abf4e7c8e39b610fe374d67cf2954338
 ms.openlocfilehash: 9906d300debd4d28e21b8fab2c44c30574d47f4b
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -32,8 +33,3 @@ Gli argomenti seguenti forniscono supporto durante il processo di progettazione 
 - [Come usare il rilevamento dei documenti](how-to-use-document-tracking.md): per usare la funzionalità di rilevamento dei documenti è necessario comprendere alcuni concetti semplici relativi alla gestione dei metadati associati e alla registrazione con il servizio.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

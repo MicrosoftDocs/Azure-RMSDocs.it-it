@@ -17,6 +17,7 @@ ms.suite: ems
 translationtype: Human Translation
 ms.sourcegitcommit: 9c0977c57ea8e85b6750fe1f5a063059ee343db9
 ms.openlocfilehash: 4ecf686d8e7e26909c8bda4a2d0df7fc61f413bb
+ms.lasthandoff: 01/24/2017
 
 
 ---
@@ -40,8 +41,3 @@ Il formato PFile è trasparente allo sviluppatore dell'applicazione in quanto è
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-
