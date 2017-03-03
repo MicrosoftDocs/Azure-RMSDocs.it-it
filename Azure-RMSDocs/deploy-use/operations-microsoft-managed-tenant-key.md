@@ -1,10 +1,10 @@
 ---
-title: 'Gestione di Microsoft: operazioni del ciclo di vita della chiave del tenant | Azure Information Protection'
+title: Gestione di Microsoft - Operazioni del ciclo di vita della chiave del tenant AIP
 description: Informazioni sulle operazioni del ciclo di vita rilevanti se Microsoft gestisce la chiave del tenant per Azure Information Protection (impostazione predefinita).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 0aad5eeb88dd471ece1bf6425a4efe8050bbdf2c
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: caacc4174ddb63e9c9091c0df294b93cf947a7c4
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -96,10 +97,5 @@ In caso di violazione di sicurezza, l'azione più efficace che l'utente o Micros
 |Vulnerabilità scoperta nell'algoritmo RSA o nella lunghezza della chiave oppure attacchi di forza bruta diventati realizzabili a livello di calcolo.|Microsoft deve aggiornare Azure Information Protection per supportare nuovi algoritmi e lunghezze maggiori della chiave che siano resilienti e invitare tutti i clienti a rinnovare le proprie chiavi del tenant.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-
-<!--HONumber=Jan17_HO4-->
 
 

@@ -1,5 +1,5 @@
 ---
-title: Eseguire la migrazione di AD RMS-Azure Information Protection - Fase 4
+title: Eseguire la migrazione da AD RMS ad Azure Information Protection - Fase 4
 description: Fase 4 della migrazione da AD RMS ad Azure Information Protection. Vengono descritti i passaggi 8 e 9 della migrazione da AD RMS ad Azure Information Protection.
 author: cabailey
 ms.author: cabailey

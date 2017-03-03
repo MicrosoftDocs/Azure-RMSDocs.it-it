@@ -1,10 +1,10 @@
 ---
-title: 'Gestione del cliente: operazioni del ciclo di vita della chiave del tenant | Azure Information Protection'
+title: Gestione del cliente - Operazioni del ciclo di vita della chiave del tenant AIP
 description: Informazioni sulle operazioni del ciclo di vita rilevanti se si gestisce la chiave del tenant per Azure Information Protection (scenario &quot;bring your own key&quot; o BYOK).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 92918ceae563d0e32d39543938862497c6437372
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: fa92a0f3179c884b7e5fc278525a471a27cb2a96
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -66,10 +67,5 @@ In caso di violazione di sicurezza, l'azione più efficace che l'utente o Micros
 |Vulnerabilità scoperta nell'algoritmo RSA o nella lunghezza della chiave oppure attacchi di forza bruta diventati realizzabili a livello di calcolo.|Microsoft deve aggiornare Insieme di credenziali delle chiavi di Azure o Azure Information Protection per supportare nuovi algoritmi e lunghezze maggiori della chiave che siano resilienti e invitare tutti i clienti a rinnovare le proprie chiavi del tenant.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-
-<!--HONumber=Jan17_HO4-->
 
 

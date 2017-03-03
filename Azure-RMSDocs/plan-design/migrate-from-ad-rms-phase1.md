@@ -1,10 +1,10 @@
 ---
-title: Migrazione da AD RMS ad Azure Information Protection - Fase 1 | Azure Information Protection
+title: Eseguire la migrazione da AD RMS ad Azure Information Protection - Fase 1
 description: Fase 1 della migrazione da AD RMS ad Azure Information Protection. Vengono descritti i passaggi da 1 a 4 della migrazione da AD RMS ad Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 774ea4fe8bb5e0ae7335bb3c106b57393167ee39
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: d38d7f89ba780b519ebe4a182161deb5bc9331b5
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -165,7 +166,7 @@ Se i modelli personalizzati sono stati creati prima della migrazione, prima o do
 
 ## <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>Procedura da seguire se i modelli in AD RMS hanno usato il gruppo **ANYONE**
 
-Se i modelli in AD RMS hanno usato il gruppo **ANYONE**, questo gruppo viene rimosso automaticamente quando si importano i modelli in Azure Information Protection. È necessario aggiungere manualmente il gruppo o gli utenti equivalenti e gli stessi diritti ai modelli importati. Il gruppo equivalente per Azure Information Protection è denominato **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<tenant_name>.onmicrosoft.com**. Ad esempio, questo gruppo può essere simile al seguente per Contoso: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
+Se i modelli in AD RMS hanno usato il gruppo **ANYONE**, questo gruppo viene rimosso automaticamente quando si importano i modelli in Azure Information Protection. È necessario aggiungere manualmente il gruppo o gli utenti equivalenti e gli stessi diritti ai modelli importati. Il gruppo equivalente per Azure Information Protection viene denominato **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@<nome_tenant>.onmicrosoft.com**. Ad esempio, questo gruppo può essere simile al seguente per Contoso: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**.
 
 Se non si è certi che i modelli AD RMS includano il gruppo ANYONE, è possibile usare lo script di Windows PowerShell di esempio qui riportato per identificare questi modelli. Per altre informazioni sull'uso di Windows PowerShell con AD RMS, vedere l'articolo relativo all'[uso di Windows PowerShell per amministrare AD RMS](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
@@ -223,9 +224,4 @@ Remove-PSDrive MyRmsAdmin -force
 Passare alla [fase 2: configurazione lato client](migrate-from-ad-rms-phase2.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

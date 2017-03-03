@@ -1,10 +1,10 @@
 ---
-title: Migrazione da AD RMS ad Azure Information Protection | Azure Information Protection
+title: Eseguire la migrazione da AD RMS ad Azure Information Protection
 description: "Istruzioni per la migrazione della distribuzione di Active Directory Rights Management Services (AD RMS) ad Azure Information Protection. Dopo la migrazione, gli utenti avranno comunque accesso ai documenti e ai messaggi di posta elettronica che l&quot;organizzazione ha protetto tramite AD RMS, nonché al nuovo contenuto che verrà protetto con Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/27/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 30a154d67db81441cd48c56681ddb6552fc4cd18
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 12bd5b89cf9957521c7d7b4fb573e4ffcd6c865d
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -198,9 +199,4 @@ I passaggi della migrazione possono essere suddivisi in 4 fasi eseguibili in mom
 Per iniziare la migrazione, passare a [Fase 1: configurazione lato server](migrate-from-ad-rms-phase1.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

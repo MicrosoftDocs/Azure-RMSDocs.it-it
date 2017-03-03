@@ -4,7 +4,7 @@ description: "È preferibile creare le applicazioni abilitate per RMS usando le 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 12/06/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
@@ -13,8 +13,9 @@ ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: f477af5bdf8094fed26d18150b8b8a876de51089
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: ea2783ec76505681ab60aee9d995e347d4310cad
+ms.lasthandoff: 02/24/2017
 
 ---
 
@@ -53,8 +54,8 @@ Microsoft non testa o esamina i risultati dei test relativi al rispetto degli st
 
 |Livello standard|    Descrizione|
 |---|---|
-|Standard minimo|  Un'applicazione che gestisce le informazioni protette da AIP deve essere determinata in modo da rispettare lo standard minimo prima che l'applicazione possa essere firmata con il certificato di produzione ricevuto da Microsoft. I partner in genere usano il certificato di gerarchia di produzione solo al momento del rilascio della versione finale del software, quando i test interni hanno già verificato che l'applicazione soddisfa tale standard minimo. Soddisfare lo standard minimo non costituisce, né può essere interpretato come, una garanzia di sicurezza da parte di Microsoft. Microsoft non testa o esamina i risultati dei test relativi al rispetto degli standard minimi; spetta al partner assicurarsi che siano soddisfatti gli standard minimi.|
-|Standard consigliato|  Le linee guida consigliate tracciano un percorso alla migliorata sicurezza delle applicazioni e forniscono un'indicazione di come AIP potrebbe evolvere con l'implementazione di altri criteri di sicurezza. I fornitori potrebbero tentare di differenziare le proprie applicazioni creandole in base a questo livello più elevato di sicurezza.|
+|Standard minimo|    Un'applicazione che gestisce le informazioni protette da AIP deve essere determinata in modo da rispettare lo standard minimo prima che l'applicazione possa essere firmata con il certificato di produzione ricevuto da Microsoft. I partner in genere usano il certificato di gerarchia di produzione solo al momento del rilascio della versione finale del software, quando i test interni hanno già verificato che l'applicazione soddisfa tale standard minimo. Soddisfare lo standard minimo non costituisce, né può essere interpretato come, una garanzia di sicurezza da parte di Microsoft. Microsoft non testa o esamina i risultati dei test relativi al rispetto degli standard minimi; spetta al partner assicurarsi che siano soddisfatti gli standard minimi.|
+|Standard consigliato|    Le linee guida consigliate tracciano un percorso alla migliorata sicurezza delle applicazioni e forniscono un'indicazione di come AIP potrebbe evolvere con l'implementazione di altri criteri di sicurezza. I fornitori potrebbero tentare di differenziare le proprie applicazioni creandole in base a questo livello più elevato di sicurezza.|
 |Standard preferito|    Questa è la categoria più elevata di sicurezza attualmente definita. I fornitori che sviluppano applicazioni commercializzate come estremamente sicure devono puntare a questo standard. Le applicazioni che rispettano questo standard possono risultare meno vulnerabili agli attacchi.|
 
 
@@ -95,8 +96,3 @@ Standard consigliato    Attualmente nessuno.
 Standard preferito    Attualmente nessuno.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

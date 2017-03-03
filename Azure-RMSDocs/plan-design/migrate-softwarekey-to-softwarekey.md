@@ -1,10 +1,10 @@
 ---
-title: Passaggio 2&colon; Migrazione da una chiave protetta tramite software a un&quot;altra | Azure Information Protection
+title: Eseguire la migrazione da una chiave protetta tramite software a un&quot;altra - AIP
 description: "Istruzioni che fanno parte del percorso di migrazione da AD RMS ad Azure Information Protection e si applicano solo se la chiave di AD RMS è protetta tramite software e si vuole eseguire la migrazione ad Azure Information Protection con una chiave del tenant protetta tramite software."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: ed9bc164a69eb15733ceb2f1b3cb4f4bd740b4d9
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 707d31d8cd2f012a4223a3654b2c1bbcefa2d1a8
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -68,10 +69,5 @@ Usare la procedura seguente per importare la configurazione di AD RMS in Azure I
 È ora possibile andare al [Passaggio 3. Attivare il tenant di Azure Information Protection](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-
-<!--HONumber=Jan17_HO4-->
 
 

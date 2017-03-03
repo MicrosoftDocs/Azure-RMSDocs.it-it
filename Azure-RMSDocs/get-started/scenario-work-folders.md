@@ -1,10 +1,10 @@
 ---
-title: Scenario - Configurare le cartelle di lavoro per una protezione permanente | Azure Information Protection
+title: Scenario AIP - Configurare le cartelle di lavoro per la protezione di RMS
 description: Questo scenario e la documentazione di supporto per l&quot;utente usano la tecnologia di protezione Azure Rights Management per applicare la protezione permanente ai documenti di Office in Cartelle di lavoro.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 942b9bfffbd4a43c922ada87220f4eecb78f1d11
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 1fa655cd91746d8e5c19f6a9eca0d93a3be8fb23
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -121,8 +122,3 @@ Se è stato configurato il modello personalizzato come descritto in questo scena
 > Dopo un intervallo di tempo, se si scopre che esistono molte richieste di utenti, è possibile decidere di definire il proprio modello personalizzato per questo scenario che conceda solo a specifici utenti (ad esempio responsabili o supporto tecnico) l'opzione Comproprietario, mentre agli utenti standard vengono concessi diritti di Coautore o qualsiasi altro [diritto](../deploy-use/configure-usage-rights.md) si ritenga adatto.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

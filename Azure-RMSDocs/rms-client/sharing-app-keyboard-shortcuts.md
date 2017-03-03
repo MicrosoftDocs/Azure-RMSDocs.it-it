@@ -1,10 +1,10 @@
 ---
-title: Usare i tasti di scelta rapida nell&quot;applicazione Rights Management sharing | Azure Information Protection
+title: Tasti di scelta rapida nell&quot;app RMS sharing - AIP
 description: Istruzioni sull&quot;uso dei tasti di scelta rapida con l&quot;applicazione RMS sharing per Windows.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 72760134-94e0-4699-b20c-07b96aa061f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 61fa812d43ea65cd77bca2edd9b71eacf90f8acb
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: ebb40568e63cf51a8b6473ca872f1e0ed9ec30ea
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -40,8 +41,3 @@ Per esempi di come è possibile usare l'applicazione Rights Management sharing e
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

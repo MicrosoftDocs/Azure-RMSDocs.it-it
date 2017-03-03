@@ -1,18 +1,19 @@
 ---
-title: Come modificare o personalizzare un&quot;etichetta esistente | Azure Information Protection
+title: Modificare un&quot;etichetta di Azure Information Protection
 description: "È possibile modificare o affinare qualsiasi etichetta mostrata sulla barra Information Protection configurandola nei criteri di Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: ca792464e616ad08370e065a0a99405740ec1e3f
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 332160a0b2403313acc66f9b196ac068e370fb5c
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -49,10 +50,5 @@ Per altre informazioni sulle opzioni disponibili per le etichette e su altre con
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Jan17_HO4-->
 
 

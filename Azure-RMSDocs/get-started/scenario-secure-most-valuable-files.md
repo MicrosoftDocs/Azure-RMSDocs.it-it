@@ -1,10 +1,10 @@
 ---
-title: Scenario - Proteggere (alcuni) file particolarmente importanti | Azure RMS
+title: Scenario AIP - Proteggere (alcuni) file particolarmente importanti
 description: "Questo scenario e la documentazione di supporto per l&quot;utente usano Azure Rights Management per proteggere in modo manuale e personalizzato un numero limitato di file identificati come i più importanti, garantendo il massimo livello di protezione dall&quot;accesso non autorizzato."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 0f2fb608be647e967d8e5857414f25ebba1d4d29
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f096a4ad7333d24c7bce0dd729b40ebb203726c5
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -146,8 +147,3 @@ I seguenti file dispongono di un elevato livello di protezione, in modo che solo
 -   Se non è possibile accedere a questi file o se si notano modifiche sospette, chiamare la linea di supporto aperta 24 ore che è stata inviata all'utente dal reparto IT tramite un messaggio di posta elettronica protetto.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

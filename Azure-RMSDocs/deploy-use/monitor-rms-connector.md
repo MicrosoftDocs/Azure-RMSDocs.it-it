@@ -1,10 +1,10 @@
 ---
-title: Monitorare il connettore di Azure Rights Management | Azure Information Protection
+title: Monitorare il connettore di Rights Management - AIP
 description: Informazioni su come monitorare il connettore e l&quot;uso da parte dell&quot;organizzazione del servizio Azure Rights Management di Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 0af2ad5107cfa958e3309352304f6bdbee4f7316
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3d9f2e20abe0a4abce3220d53d6373d9c2baf8ee
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -193,9 +194,4 @@ Se si vuole eseguire una registrazione più dettagliata a scopo di diagnosi, è 
 5.  Una volta acquisite le tracce necessarie, ripristinare la riga nel passaggio 3, quindi arrestare e riavviare IIS.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO4-->
-
 

@@ -1,10 +1,10 @@
 ---
-title: Scenario - Mantenere il controllo dei documenti archiviati in SharePoint | Azure Information Protection
+title: Scenario AIP - Controllo dei documenti archiviati in SharePoint
 description: Questo scenario e la documentazione di supporto per l&quot;utente usano la tecnologia di protezione Azure Rights Management per verificare che i documenti di Office archiviati in SharePoint rimangano sotto controllo tramite librerie protette.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 1b6244c7-5ab9-4881-bc8f-6fa960390d89
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 1c25f1c8792f7d6d99930dd01c3f3c92a56bbd8a
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3d5d1c818323a3723f6837ebe8fedd4995efb467
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -104,8 +105,3 @@ Questa modifica consente di impedire agli utenti non autorizzati di accedere ai 
 -   Contattare il supporto tecnico: helpdesk@vanarsdelltd.com
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

@@ -1,39 +1,40 @@
 ---
-title: Microsoft Rights Management SDK 4.2 | Azure RMS
-description: "RMS SDK 4.2 è un&quot;API semplificata di prossima generazione che consente un&quot;esperienza di sviluppo leggero per l&quot;aggiornamento di app per dispositivi con protezione delle informazioni."
+title: Rights Management SDK 4.2 - AIP
+description: "RMS SDK 4.2 è un&quot;API semplificata di prossima generazione che consente un&quot;esperienza di sviluppo leggero per l&quot;aggiornamento di app per dispositivi con tecnologia di gestione dei diritti."
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4ee4fa26-b4f7-478f-b360-be6f421c5718
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 98902b25bbade72c4d2c5ee3a2a5306bc863d103
+ms.sourcegitcommit: 56c06be077d3d6dc3945cf9fa65d61236ed28536
+ms.openlocfilehash: 3649c678b1f264ed463306d9f2184788b8b4a030
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="microsoft-rights-management-sdk-42"></a>Microsoft Rights Management SDK 4.2
+# <a name="rights-management-sdk-42"></a>Rights Management SDK 4.2
 
-## <a name="purpose"></a>Scopo ##
+## <a name="purpose"></a>Scopo
 
-Microsoft Rights Management SDK 4.2 è un'API semplificata di prossima generazione che consente un'esperienza di sviluppo leggero per l'aggiornamento di app per dispositivi con protezione delle informazioni tramite Microsoft Rights Management Services. Gli sviluppatori possono creare app che utilizzano Active Directory Rights Management Services (AD RMS) o Azure Rights Management per la protezione delle informazioni, proteggere o utilizzare le informazioni e al contempo gestire in modo trasparente procedure di protezione complesse come gestione delle chiavi, crittografia e decrittografia, creazione di criteri e autorizzazioni, caching sicuro e comunicazione con i servizi AD RMS e Azure RMS.
+Rights Management SDK 4.2 è un'API semplificata di prossima generazione che consente un'esperienza di sviluppo leggero per l'aggiornamento di app per dispositivi con protezione delle informazioni tramite Rights Management Services. Gli sviluppatori possono creare app che utilizzano Active Directory Rights Management Services (AD RMS) o Azure Rights Management per la protezione delle informazioni, proteggere o utilizzare le informazioni e al contempo gestire in modo trasparente procedure di protezione complesse come gestione delle chiavi, crittografia e decrittografia, creazione di criteri e autorizzazioni, caching sicuro e comunicazione con i servizi AD RMS e Azure RMS.
 
-## <a name="developer-audience"></a>Sviluppatori ##
+## <a name="developer-audience"></a>Sviluppatori
 
-Le API di MS RMS SDK 4.2 utilizzano linguaggi e modelli di programmazione standard per ogni sistema operativo e di conseguenza sono semplici e versatili da utilizzare.
+Le API di RMS SDK 4.2 usano linguaggi e modelli di programmazione standard per ogni sistema operativo e sono pertanto versatili e semplici da usare.
 
-## <a name="supported-operating-systems"></a>Sistemi operativi supportati ##
+## <a name="supported-operating-systems"></a>Sistemi operativi supportati
 
-La versione MS RMS SDK 4.2 è disponibile per i sistemi operativi seguenti:
+La versione RMS SDK 4.2 è disponibile per i sistemi operativi seguenti:
 
 - Google Android
 - Apple iOS e Mac OS X
@@ -41,19 +42,14 @@ La versione MS RMS SDK 4.2 è disponibile per i sistemi operativi seguenti:
 - Windows Store
 - Portable C++ per sistemi operativi basati su Linux
 
-## <a name="sections"></a>Sezioni ##
+## <a name="sections"></a>Sezioni
 
-[Panoramica:](overview.md) Microsoft Rights Management Services (AD RMS e Azure RMS) è una tecnologia di protezione che consente di proteggere le informazioni digitali da usi non autorizzati. Tramite le applicazioni abilitate all’uso di diritti, i proprietari del contenuto potranno definire gli utenti autorizzati ad aprire, modificare, stampare, inoltrare o eseguire altre operazioni con il relativo contenuto.
+[Panoramica](overview.md): Rights Management Services è una tecnologia che consente di proteggere le informazioni digitali da usi non autorizzati. Tramite le applicazioni abilitate all’uso di diritti, i proprietari del contenuto potranno definire gli utenti autorizzati ad aprire, modificare, stampare, inoltrare o eseguire altre operazioni con il relativo contenuto.
 
-[Introduzione](get-started.md): per questa versione di MS RMS SDK 4.2, l'approccio introduttivo per la prima applicazione si basa sulle guide all'installazione dell'ambiente di sviluppo per ciascuno dei sistemi operativi o delle piattaforme.
+[Introduzione](get-started.md): per questa versione di RMS SDK 4.2, l'approccio iniziale per una prima applicazione si basa sulle guide di installazione dell'ambiente di sviluppo per ogni sistema operativo o piattaforma.
 
-[Condizioni e istruzioni per lo sviluppatore](core-concepts.md): l'obiettivo di MS RMS SDK 4.2 è consentire di creare applicazioni abilitate per AD RMS che sfruttano Active Directory Right Management Services (AD RMS) nel modo più semplice possibile.
+[Condizioni e istruzioni per lo sviluppatore](core-concepts.md): l'obiettivo di RMS SDK 4.2 è consentire di creare applicazioni abilitate per AD RMS che sfruttano Right Management Services, nel modo più semplice possibile.
 
-[Informazioni di riferimento sulle API](api-reference-4-2.md): MS RMS SDK 4.2 supporta vari sistemi operativi indicati nel sommario che segue.
+[Informazioni di riferimento sulle API](api-reference-4-2.md): RMS SDK 4.2 supporta vari sistemi operativi indicati nel sommario seguente.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

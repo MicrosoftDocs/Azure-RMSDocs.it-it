@@ -1,10 +1,10 @@
 ---
-title: Registrazione e analisi dell&quot;utilizzo del servizio Azure Rights Management | Azure Information Protection
+title: Registrare e analizzare l&quot;utilizzo del servizio Azure RMS - AIP
 description: Informazioni e istruzioni sull&quot;uso della registrazione dell&quot;utilizzo con Azure Rights Management (Azure RMS).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: ca8694a26f0f9b537a3e3a6b1f468d89cefe6206
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 89c0cae4b0549a0dd86ede26ef3eed0f09200419
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -146,7 +147,7 @@ Ciascuna delle righe seguenti è un record di log. I valori dei campi seguono lo
 |correlation-id|Testo|GUID comune tra il log del client e il log del server RMS per una determinata richiesta.<br /><br />Questo valore può essere utile per la risoluzione dei problemi del client.|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|Testo|GUID, riportato tra parentesi graffe, che identifica il contenuto protetto, ad esempio un documento.<br /><br />In questo campo è presente un valore solo se la richiesta è di tipo AcquireLicense. Per tutti gli altri tipi di richiesta il campo è vuoto.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
 |owner-email|String|Indirizzo di posta elettronica del proprietario del documento.|alice@contoso.com|
-|issuer|String|Indirizzo di posta elettronica del soggetto emittente il documento.|alice@contoso.com oppure FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
+|issuer|String|Indirizzo di posta elettronica del soggetto emittente il documento.|alice@contoso.com (oppure) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
 |template-id|String|ID del modello usato per proteggere il documento.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
 |file-name|String|Nome del documento protetto. <br /><br />Attualmente, alcuni file, ad esempio i documenti di Office, vengono visualizzati come GUID anziché come nome di file.|TopSecretDocument.docx|
 |date-published|Date|Data in cui è stato protetto il documento.|2015-10-15T21:37:00|
@@ -238,10 +239,5 @@ Per altre informazioni sull'uso di Windows PowerShell per il servizio Azure Righ
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Jan17_HO4-->
 
 
