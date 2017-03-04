@@ -37,8 +37,3 @@
 ##### [Usare i tasti di scelta rapida](sharing-app-keyboard-shortcuts.md)
 ##### [Opzioni della finestra di dialogo](sharing-app-dialog-box.md)
 # [Sviluppare e personalizzare le app](/information-protection/develop/developers-guide)
-
-
-<!--HONumber=Feb17_HO2-->
-
-
