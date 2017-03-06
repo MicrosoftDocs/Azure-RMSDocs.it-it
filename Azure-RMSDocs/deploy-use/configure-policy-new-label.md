@@ -4,7 +4,7 @@ description: "Azure Information Protection offre etichette predefinite personali
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -37,8 +37,7 @@ Seguire queste istruzioni per aggiungere una nuova etichetta ai criteri di Azure
     - Per creare una nuova etichetta, fare clic su **Aggiungi una nuova etichetta**.
 
     - Per creare una nuova etichetta secondaria, fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida (**...**) per l'etichetta per cui si vuole creare un'etichetta secondaria, quindi scegliere **Aggiungi un'etichetta secondaria**.
-
-
+    
      Se la nuova etichetta da aggiungere si trova in un [criterio con ambito](configure-policy-scope.md) in modo da essere applicata solo agli utenti selezionati, selezionare prima di tutto il criterio con ambito nel pannello iniziale di **Azure Information Protection**.
 
 3. Nel pannello **Etichetta** o **Etichetta secondaria** selezionare le opzioni desiderate per la nuova etichetta, quindi fare clic su **Salva**.
