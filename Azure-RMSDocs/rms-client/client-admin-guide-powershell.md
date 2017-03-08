@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per amministratori per gestire il client 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 865a30bb85c1e9e2f8331ae3a85960e005de5b07
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 17824b007444e9539ffc0374bf39f0984efa494c
+ms.openlocfilehash: d180b0ff4390df45a61b7d50913c267fb3cf35e1
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -36,6 +36,7 @@ Il modulo AzureInformationProtection include tutti i cmdlet per Rights Managemen
 |[Get-AIPFileStatus](/powershell/azureinformationprotection/vlatest/get-aipfilestatus)|Per una cartella condivisa, identifica tutti i file con un'etichetta specifica.|
 |[Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel)|Per una cartella condivisa, applica un'etichetta specificata a tutti i file privi di etichetta.|
 
+Per un elenco di tutti i cmdlet e le informazioni della guida corrispondenti, vedere [AzureInformationProtection Module](/powershell/azureinformationprotection/vlatest/aip) (Modulo AzureInformationProtection).
 
 Questo modulo viene installato in **\Programmi (x86)\Microsoft Azure Information Protection** e aggiunge questa cartella alla variabile di sistema **PSModulePath**. Il file DLL per questo modulo si chiama **AIP.dll**.
 
