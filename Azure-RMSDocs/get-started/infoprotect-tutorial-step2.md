@@ -1,19 +1,19 @@
 ---
 title: Esercitazione per l&quot;avvio rapido - Passaggio 2 - AIP
-description: Passaggio 2 dell&quot;esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell&quot;organizzazione. L&quot;esecuzione dell&quot;esercitazione richiede circa 20 minuti.
+description: 'Passaggio 2 di un&quot;esercitazione introduttiva per provare rapidamente a usare Azure Information Protection: configurare i criteri.'
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 39dfa8a1c4dabf32f8b62f08a674152f41a5b96a
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: cecf91a6e8bea14002f6760ddbde15e934cb7ef7
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -63,13 +63,13 @@ Verranno ora modificate le impostazioni di una delle etichette, **Confidential**
 
 2. Nel pannello **Etichetta: Riservato** individuare la sezione **Set permissions for documents and emails containing this label** (Impostare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta).
 
-    Selezionare l'opzione **Protezione**:
+    Selezionare **Proteggi** e quindi l'opzione **Protezione**:
     
     ![Configurare la protezione per un'etichetta di Azure Information Protection](../media/info-protect-protection-bar.png) 
     
-    Per effetto di questa operazione viene aperto il pannello **Autorizzazioni**.
+    Per effetto di questa operazione viene aperto il pannello **Protezione**.
     
-3. Nel pannello **Autorizzazioni** verificare che le opzioni **Azure RMS** e **Seleziona modello** siano selezionate e quindi fare clic sulla casella a discesa e selezionare il modello predefinito **\<nome dell'organizzazione> - Riservato**.     
+3. Nel pannello **Protezione** verificare che le opzioni **Azure RMS** e **Seleziona modello** siano selezionate e quindi fare clic sulla casella a discesa e selezionare il modello predefinito **\<nome dell'organizzazione> - Riservato**.     
     
     Ad esempio, se il nome dell'organizzazione è VanArsdel, Ltd, verrà visualizzata la voce **VanArsdel, Ltd - Confidential** e sarà possibile selezionarla: 
     
@@ -77,7 +77,7 @@ Verranno ora modificate le impostazioni di una delle etichette, **Confidential**
     
     Se questo modello di Azure Rights Management è disabilitato, selezionare un modello alternativo. Tuttavia, se si seleziona un modello di reparto, assicurarsi che l'account sia incluso nell'ambito.
     
-4. Fare clic su **Fine** per salvare le modifiche e chiudere il pannello **Autorizzazioni**.
+4. Fare clic su **OK** per salvare le modifiche e chiudere il pannello **Protezione**.
 
 5. Nel pannello **Etichetta: Riservato** individuare la sezione **Configurare il contrassegno visivo**:
     

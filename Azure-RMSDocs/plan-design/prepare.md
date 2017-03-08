@@ -4,7 +4,7 @@ description: Verificare di aver eseguito tutte le operazioni preliminari all&quo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 909becbdf902d552a967506b80f173e59cf756c7
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 11ebd66a1ae05535814af159523bd49b7921d46d
+ms.openlocfilehash: fc80a4a65bd5fae1b8604c316a4e2354bbe8c8be
+ms.lasthandoff: 02/25/2017
 
 
 ---
@@ -33,6 +33,10 @@ Prima di distribuire Azure Information Protection per l'organizzazione, verifica
 -   Gruppi abilitati alla posta nel cloud da usare con Azure Information Protection. Possono essere gruppi predefiniti o gruppi creati manualmente, che contengono utenti che useranno documenti e messaggi di posta elettronica protetti.
 
     Se si dispone di Exchange Online, è possibile creare e utilizzare i gruppi abilitati alla posta tramite il centro di amministrazione di Exchange. Se si dispone di AD DS locale e si esegue la sincronizzazione in Azure AD, è possibile creare e utilizzare i gruppi abilitati alla posta che sono gruppi di protezione o gruppi di distribuzione.
+
+### <a name="group-membership-caching"></a>Memorizzazione nella cache dell'appartenenza ai gruppi
+
+Per motivi di prestazioni, l'appartenenza ai gruppi viene memorizzata nella cache dal servizio Azure Rights Management. Ciò significa che le modifiche all'appartenenza ai gruppi possono richiedere fino a tre ore per diventare effettive e questo periodo di tempo è soggetto a variazioni. Ricordare di scomporre questo ritardo per tutte le attività di modifica e test eseguite quando si usano gruppi nella configurazione del servizio Azure Rights Management, ad esempio quando si configurano [modelli personalizzati](../deploy-use/configure-custom-templates.md) o quando si usa un gruppo per la [funzionalità per utenti con privilegi avanzati](../deploy-use/configure-super-users.md). 
 
 ## <a name="activate-the-rights-management-service-for-data-protection"></a>Attivare il servizio Rights Management per la protezione dei dati
 Attivare il servizio Rights Management per abilitare questa tecnologia e iniziare a proteggere documenti e messaggi di posta elettronica. Per ulteriori informazioni, vedere l'articolo relativo all'[attivazione di Azure Rights Management](../deploy-use/activate-service.md).

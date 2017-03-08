@@ -1,5 +1,5 @@
 ---
-title: Istruzioni per sviluppatori per Azure Information Protection SDK 2.1 | Documentazione Microsoft
+title: Istruzioni per sviluppatori per Azure Information Protection SDK 2.1 | Microsoft Docs
 description: Una raccolta di argomenti con procedure per lo sviluppo con AIP SDK 2.1
 keywords: 
 author: bruceperlerms
@@ -15,9 +15,9 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5df7da98abf4e7c8e39b610fe374d67cf2954338
-ms.openlocfilehash: 1c10eb8f7a68138761931d1c8a1715a03b7ff0a9
-ms.lasthandoff: 01/24/2017
+ms.sourcegitcommit: 3b56c14d4ec1faf940e8b7d350d2680625cac795
+ms.openlocfilehash: 268d474e11f70961263b1cbbcc5eca926e880416
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -28,6 +28,7 @@ Questa sezione descrive le indicazioni specifiche per diversi scenari di svilupp
 - [Procedura: Usare l'autenticazione ADAL](how-to-use-adal-authentication.md): autenticazione con Azure RMS per l'app usando Azure Active Directory Authentication Library (ADAL).
 - [Procedura: Aggiungere diritti proprietario espliciti](add-explicit-owner-rights.md): l'applicazione deve aggiungere in modo esplicito i diritti "proprietario" durante la creazione di una licenza da zero ([IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)).
 - [Procedura: Eseguire il debug dell'applicazione abilitata all'uso di diritti](debugging-applications-that-use-ad-rms.md): questo argomento illustra come eseguire il debug dell'applicazione e usare il Registro eventi di Windows.
+- [Procedura: Distribuire un'app nel tenant del cliente](how-to-deploy-app.md): illustra i passaggi per la distribuzione di un'app dal tenant Azure AD di sviluppo a un tenant Azure AD di produzione.
 - [Procedura: Abilitare il rilevamento e la revoca dei documenti](tracking-content.md): questo argomento illustra le linee guida di base per implementare il rilevamento del contenuto del documento, nonché un codice di esempio per aggiornare i metadati e per creare il pulsante **Rileva utilizzo** per l'app.
 - [Procedura: Abilitare la notifica tramite posta elettronica](how-to-enable-email-notification.md): notifica tramite posta elettronica inviata al proprietario di un contenuto protetto quando qualcuno accede al contenuto.
 - [Procedura: Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md): questo argomento descrive i passaggi per la configurazione dell'applicazione di servizio per l'uso di Azure Rights Management.

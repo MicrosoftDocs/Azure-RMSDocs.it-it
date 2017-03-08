@@ -4,7 +4,7 @@ description: Istruzioni per creare e gestire modelli personalizzati nel portale 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: ebc0ad13952f2036f997fc5ba9207f02d1571021
+ms.sourcegitcommit: 11971a176b9c5f413bbe6daa208c062a131343be
+ms.openlocfilehash: 5ab725294d93540f35c395eca08f5f3fbc6ae392
 ms.lasthandoff: 02/24/2017
 
 
@@ -81,7 +81,9 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
     > [!NOTE]
     > Gli utenti o i gruppi selezionati devono disporre di un indirizzo di posta elettronica. Questa condizione si verifica quasi sempre in un ambiente di produzione, ma in un ambiente di test semplice può essere necessario aggiungere gli indirizzi di posta elettronica agli account utente o ai gruppi.
 
-    Come procedura consigliata, usare gruppi anziché utenti singoli perché la gestione dei modelli risulterà più agevole. Se si dispone di Active Directory locale e si esegue la sincronizzazione in Azure AD, è possibile utilizzare i gruppi abilitati alla posta che sono gruppi di protezione o gruppi di distribuzione. Se tuttavia si desidera concedere diritti a tutti gli utenti dell'organizzazione, la procedura più efficiente consiste nel copiare uno dei modelli predefiniti piuttosto che specificare più gruppi. Per altre informazioni, vedere [Copy a template](copy-template.md) (Copiare un modello).
+    Come procedura consigliata, usare gruppi anziché utenti singoli perché la gestione dei modelli risulterà più agevole. Tuttavia, se si apportano modifiche al gruppo, tenere presente che, per motivi di prestazioni, Azure Rights Management [memorizza nella cache l'appartenenza ai gruppi](../plan-design/prepare.md#group-membership-caching). 
+    
+    Se si dispone di Active Directory locale e si esegue la sincronizzazione in Azure AD, è possibile utilizzare i gruppi abilitati alla posta che sono gruppi di protezione o gruppi di distribuzione. Per concedere diritti a tutti gli utenti dell'organizzazione, la procedura più efficiente consiste nel copiare uno dei modelli predefiniti anziché specificare più gruppi. Per altre informazioni, vedere [Copy a template](copy-template.md) (Copiare un modello).
 
     > [!TIP]
     > È possibile aggiungere al modello utenti esterni all'organizzazione ("utenti esterni") selezionando un gruppo abilitato per la posta elettronica contenente i contatti da Office 365 o Exchange Online. In questo modo è possibile assegnare diritti agli utenti allo stesso modo in cui si assegnano diritti agli utenti nell'organizzazione. Ad esempio, è possibile impedire ai clienti di modificare un listino prezzi che viene loro inviato. Non usare questa configurazione del modello per proteggere messaggi di posta elettronica se gli utenti esterni all'organizzazione leggono i messaggi di posta elettronica protetti tramite Outlook Web App.

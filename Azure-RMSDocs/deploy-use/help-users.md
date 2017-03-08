@@ -4,7 +4,7 @@ description: Informazioni per fornire istruzioni a utenti, amministratori e adde
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,9 +13,9 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 61f7a7208b13a28f2e8cfb85489cceb2a2caf077
-ms.lasthandoff: 02/24/2017
+ms.sourcegitcommit: 1300b0abb3cb59ad09075418ab8c911466740a2c
+ms.openlocfilehash: f1d2db08951c1d017ea4f011855d99423fa9d577
+ms.lasthandoff: 03/03/2017
 
 
 ---
@@ -43,6 +43,8 @@ Dopo aver distribuito e configurato Azure Information Protection per l'organizza
 -   **Informazioni per il supporto tecnico:**
 
     Uno degli strumenti più utili per il supporto tecnico è [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Gli operatori del supporto tecnico possono eseguirlo con l'opzione di amministratore di Azure RMS e possono richiedere agli utenti di eseguirlo con l'opzione utente di Azure RMS. Questo strumento consente non solo di identificare eventuali problemi, ma anche di risolvere quelli individuati e, se non risolti, di registrare log di traccia.
+    
+    Se gli utenti eseguono il client Azure Information Protection, gli operatori del supporto tecnico possono chiedere loro di usare l'opzione **Guida e commenti**, **Esegui diagnostica** e successivamente reimpostare il client. Tuttavia, a differenza di quanto avviene per RMS Analyzer, la reimpostazione non determina la disconnessione dell'utente o la ripetizione del bootstrap del client e non è prevista alcuna correzione automatica.
 
     Se sono presenti richieste legittime per ottenere diritti completi di accesso a documenti protetti, ad esempio una richiesta da parte del reparto legale o di un responsabile dopo che un dipendente ha lasciato l'organizzazione, verificare che il supporto tecnico abbia definito le procedure per richiederlo usando la [funzionalità per utenti con privilegi avanzati](configure-super-users.md) di Azure Rights Management.
 

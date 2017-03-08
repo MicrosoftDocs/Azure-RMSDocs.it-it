@@ -4,7 +4,7 @@ description: Istruzioni per gli utenti per installare il client di Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/17/2017
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 37bddeed5b81ce1cd6b881db0b71345bcf4cad49
+ms.sourcegitcommit: 92ad7198aad17664062b8d007fa95524fe535443
+ms.openlocfilehash: d4820070aff013b42ee49f4c7b81e78ffbc7a049
 ms.lasthandoff: 02/24/2017
 
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 02/24/2017
 
 # <a name="download-and-install-the-azure-information-protection-client"></a>Scaricare e installare il client di Azure Information Protection
 
-Se il client di Azure Information Protection non viene installato dall'amministratore, è possibile procedere autonomamente. Per installare questo client, è necessario essere un amministratore locale per il PC. 
+Se il client di Azure Information Protection non viene installato dall'amministratore, è possibile procedere autonomamente. Per installare questo client è necessario essere un amministratore locale del PC in modo che sia possibile assegnare etichette a documenti e messaggi di posta elettronica e proteggerli.
 
 Inoltre:
 
@@ -34,7 +34,7 @@ Inoltre:
 
 1.  Accedere alla pagina [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) nel sito Web Microsoft.
 
-    In questa pagina sono disponibili collegamenti per tutti i dispositivi più diffusi, in modo da consentire di scaricare facilmente un'eventuale app visualizzatore necessaria per aprire i file protetti. Tuttavia, in questa procedura si installerà il client completo, che consente di assegnare etichette ai file e proteggerli. 
+    In questa pagina sono disponibili collegamenti per tutti i dispositivi più diffusi, in modo da consentire di scaricare facilmente un'eventuale app visualizzatore necessaria per aprire i file protetti. Se non si è un amministratore locale del PC, è comunque possibile installare l'app visualizzatore per Windows. Tuttavia, in questa procedura si installerà il client completo, che consente di assegnare etichette ai file e proteggerli. 
 
 2. Individuare la sezione del **client Azure Information Protection** e fare clic sull'icona di Windows. Fare clic su **Download** e salvare il file **AzInfoProtection.exe**.     
 
