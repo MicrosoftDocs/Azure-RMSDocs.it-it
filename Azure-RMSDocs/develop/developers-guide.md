@@ -4,7 +4,7 @@ description: Gli sviluppatori possono usare Azure Information Protection per pro
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 02/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
 translationtype: Human Translation
-ms.sourcegitcommit: a8cb4f9bf0c38e25045fcd1a01deaa993bc862c8
-ms.openlocfilehash: 7f3c9f95ea86655d04e385eee7fd9c8cc0096ce9
+ms.sourcegitcommit: 9a8b37f8e4e6d3a22c5ae4b43ffb82bfd0482037
+ms.openlocfilehash: ee257e733177077caaf3cf3b579a1b3718479121
+ms.lasthandoff: 02/10/2017
 
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guida per gli sviluppatori di Azure Information Protection
@@ -35,7 +36,7 @@ Le applicazioni di servizio forniscono le funzionalità per proteggere le inform
 - [IpcDIp](https://github.com/Azure-Samples/active-directory-dotnet-rms) è un'applicazione DLP abilitata per RMS di esempio che illustra i passaggi di base che devono essere eseguiti da un'applicazione DLP abilitata per RMS mediante l'API file di RMS per la protezione e l'utilizzo di contenuto con restrizioni.
 - [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms) è un esempio che illustra come usare RMS SDK nelle applicazioni Azure per proteggere i dati in un'archiviazione BLOB di Azure.
 - [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) è un esempio che illustra come creare un'applicazione Windows che controlla le directory nel file system e applica i criteri di protezione RMS a ogni modifica, ad esempio per i file modificati o i file aggiunti.
-- [ProtectFilesInDir](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/EncryptFilesInDir) è un esempio di applicazione console semplice che accetta una directory come input e consente di proteggere tutti i file solo in tale directory, senza ricorsione.
+- [ProtectFilesInDir](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/ProtectFilesInDir) è un esempio di applicazione console semplice che accetta una directory come input e consente di proteggere tutti i file solo in tale directory, senza ricorsione.
 
 ## <a name="powershell-guides"></a>Guide di PowerShell
 
@@ -65,7 +66,12 @@ La versione 4.2 è basata su client REST con API specifiche del sistema operativ
 
 Le guide seguenti illustrano i passaggi di configurazione specifici del sistema operativo per un ambiente di sviluppo di applicazioni usando strumenti comuni.
 
-|[![configurazione di iOS/OSX](../media/develop/ios-icon.png)](ios-sdk.md) | [![configurazione di Android](../media/develop/android-icon.png)](android-sdk.md) | [![configurazione di Windows Phone](../media/develop/windows-phone-icon.png)](windows-phone-apps.md) | [![configurazione del Servizio Windows](../media/develop/windows-icon.png)](install-the-rms-sdk.md) | [![configurazione di Linux](../media/develop/linux-icon.png)](linux-setup.md) |
+[![Installazione per iOS e OS X](../media/develop/ios-icon.png)](ios-sdk.md)
+[![Installazione per Android](../media/develop/android-icon.png)](android-sdk.md)
+[![Installazione per Windows Phone](../media/develop/windows-phone-icon.png)](windows-phone-apps.md)
+[![Installazione del servizio di Windows](../media/develop/windows-icon.png)](install-the-rms-sdk.md)
+[![Installazione per Linux](../media/develop/linux-icon.png)](linux-setup.md)
+
 
 ## <a name="how-tos"></a>Procedure
 
@@ -74,8 +80,10 @@ Ognuno degli argomenti seguenti contiene indicazioni specifiche per un aspetto d
 ### <a name="general"></a>Generale
 
 - [Procedura: Abilitare la revoca e il rilevamento dei documenti (servizio)](tracking-content.md)
+- [Come distribuire il client](../rms-client/client-deployment-notes.md)
 - [Procedura: Installare e configurare un server RMS (servizio)](how-to-install-and-configure-an-rms-server.md)
 - [Procedura: Usare il rilevamento dei documenti (utente)](how-to-use-document-tracking.md)
+
 
 ### <a name="security-and-authentication"></a>Sicurezza e autenticazione
 
@@ -135,8 +143,3 @@ Questi video sono tratti dalla conferenza Microsoft 2016 Ignite
 - [Terminologia di Azure Information Protection - ITPro](../get-started/terminology.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-
