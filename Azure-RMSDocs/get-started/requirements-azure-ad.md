@@ -1,10 +1,10 @@
 ---
-title: Requisiti di Azure Active Directory | Azure Information Protection
+title: Requisiti di Azure Active Directory per AIP
 description: Identificare i requisiti di Azure AD per l&quot;uso di Azure Information Protection, in modo che gli utenti possano essere autenticati.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: a38b4f201a05ece08f06b18797a146adecf59053
-ms.openlocfilehash: 1246bfcf3a389e2dcd7a9ef922c3f40150611640
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 1422db06905f342f930bce5cd63eb4e08fc8076a
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -52,9 +53,13 @@ Per usare Multi-Factor Authentication (MFA) con Azure Information Protection, è
 
     -   Se si ha Office 2013, è necessario installare anche l'[aggiornamento del 9 giugno 2015 per Office 2013 (KB3054853)](https://support.microsoft.com/kb/3054853). Per altre informazioni su questo aggiornamento e su come l'autenticazione moderna porta Active Directory Authentication Library in Office 2013, vedere il post relativo all'[anteprima pubblica di autenticazione moderna di Office 2013 annunciata](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/) sul blog di Office.
 
+- Client Azure Information Protection:
+
+    - Il [client Azure Information Protection](../rms-client/aip-client.md) per Windows e per iOS e Android ha sempre supportato MFA. Non è richiesta una versione minima. 
+
 -   Applicazione Rights Management sharing per Windows:
 
-    -   È necessario avere installato la versione minima 1.0.1908.0, che può essere confermata tramite Pannello di controllo, Programmi e funzionalità. Per altre informazioni sull'applicazione, vedere [Applicazione Rights Management sharing per Windows](../rms-client/sharing-app-windows.md).
+    -   È necessario avere installato la versione minima 1.0.1908.0, che può essere confermata tramite Pannello di controllo, Programmi e funzionalità. L'applicazione di condivisione Rights Management è stata ora sostituita dal client Azure Information Protection. Per altre informazioni sull'applicazione, vedere [Applicazione Rights Management sharing per Windows](../rms-client/sharing-app-windows.md).
 
 -   App di condivisione Rights Management per dispositivi mobili e computer Mac:
 
@@ -77,9 +82,5 @@ Quindi, configurare la soluzione MFA:
 ## <a name="next-steps"></a>Passaggi successivi
 Per verificare gli altri requisiti, vedere [Requisiti per Azure Information Protection](requirements-azure-rms.md).
 
-
-
-
-<!--HONumber=Dec16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

@@ -1,18 +1,19 @@
 ---
-title: Esercitazione introduttiva, passaggio 1 | Azure Information Protection
-description: Passaggio 2 dell&quot;esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell&quot;organizzazione. L&quot;esecuzione dell&quot;esercitazione richiede circa 30 minuti.
+title: Esercitazione per l&quot;avvio rapido - Passaggio 2 - AIP
+description: 'Passaggio 2 di un&quot;esercitazione introduttiva per provare rapidamente a usare Azure Information Protection: configurare i criteri.'
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
 translationtype: Human Translation
-ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
-ms.openlocfilehash: 2f996bb974b1d86b137e3a8fba387386276739a2
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: cecf91a6e8bea14002f6760ddbde15e934cb7ef7
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -32,7 +33,7 @@ Il criterio predefinito disponibile con Azure è utilizzabile senza alcuna opera
     > [!TIP] 
     > Selezionare **Aggiungi al dashboard** per creare un riquadro **Azure Information Protection** nel dashboard, in modo da ignorare la ricerca del servizio al successivo accesso al portale.
 
-3.  Esaminare il pannello **Criteri:Globale** visualizzato automaticamente che mostra il criterio predefinito di Information Protection creato automaticamente:
+3.  Nel pannello di Azure Information Protection fare clic su **Globale** e analizzare il pannello **Criteri: Globale** che illustra i criteri predefiniti di Information Protection creati automaticamente:
     
     - Etichette per la classificazione: **Personale**, **Public** (Pubblico), **Interno**, **Confidential** (Riservato) e **Secret** (Segreto). Leggere la descrizione di ognuna per comprendere l'uso a cui è destinata. Si noti che per **Secret** (Segreto) esistono due etichette secondarie: **All Company** (Tutta la società) e **My Group** (Gruppo personale). Questo è un esempio di sottocategorie di una classificazione.
 
@@ -60,9 +61,15 @@ Verranno ora modificate le impostazioni di una delle etichette, **Confidential**
     
     Nel nuovo pannello **Etichetta: Confidential** (Riservato) sono ora visibili le impostazioni disponibili per ogni etichetta. 
 
-2. Nel pannello **Etichetta: Confidential** (Riservato) individuare la sezione **Configurare il modello RMS per la protezione di documenti e messaggi di posta elettronica contenenti questa etichetta**:
+2. Nel pannello **Etichetta: Riservato** individuare la sezione **Set permissions for documents and emails containing this label** (Impostare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta).
+
+    Selezionare **Proteggi** e quindi l'opzione **Protezione**:
     
-    Per l'opzione **Selezionare il modello RMS da** mantenere l'impostazione predefinita **Azure RMS**. Quindi, per **Select RMS template** (Selezionare il modello RMS), fare clic sull'elenco a discesa e selezionare il modello predefinito **\<Nome organizzazione> - Confidential** (Riservato). 
+    ![Configurare la protezione per un'etichetta di Azure Information Protection](../media/info-protect-protection-bar.png) 
+    
+    Per effetto di questa operazione viene aperto il pannello **Protezione**.
+    
+3. Nel pannello **Protezione** verificare che le opzioni **Azure RMS** e **Seleziona modello** siano selezionate e quindi fare clic sulla casella a discesa e selezionare il modello predefinito **\<nome dell'organizzazione> - Riservato**.     
     
     Ad esempio, se il nome dell'organizzazione è VanArsdel, Ltd, verrà visualizzata la voce **VanArsdel, Ltd - Confidential** e sarà possibile selezionarla: 
     
@@ -70,7 +77,9 @@ Verranno ora modificate le impostazioni di una delle etichette, **Confidential**
     
     Se questo modello di Azure Rights Management è disabilitato, selezionare un modello alternativo. Tuttavia, se si seleziona un modello di reparto, assicurarsi che l'account sia incluso nell'ambito.
     
-3. Individuare la sezione **Configurare il contrassegno visivo**:
+4. Fare clic su **OK** per salvare le modifiche e chiudere il pannello **Protezione**.
+
+5. Nel pannello **Etichetta: Riservato** individuare la sezione **Configurare il contrassegno visivo**:
     
     Per l'opzione **I documenti con questa etichetta includono un'intestazione** fare clic su **On** e quindi, nella casella **Testo della filigrana**, digitare il nome dell'organizzazione. Ad esempio, **VanArsdel, Ltd**: 
     
@@ -78,7 +87,7 @@ Verranno ora modificate le impostazioni di una delle etichette, **Confidential**
     
     Anche se è possibile modificare le dimensioni, il colore e il layout delle filigrane, per il momento verranno mantenute le impostazioni predefinite.
     
-4. Individuare la sezione **Configurare le condizioni per l'applicazione automatica di questa etichetta**:
+6. Individuare la sezione **Configurare le condizioni per l'applicazione automatica di questa etichetta**:
     
     Fare clic su **Add a new condition** (Aggiungi una nuova condizione) e quindi nel pannello **Condition** (Condizione) selezionare quanto segue:
     
@@ -94,27 +103,27 @@ Verranno ora modificate le impostazioni di una delle etichette, **Confidential**
     
     Fare clic su **Salva** per tornare al pannello **Etichetta: Confidential** (Riservato).
 
-5. Nel pannello **Etichetta: Confidential** (Riservato) **Numero carta di credito** è visualizzato come **NOME DELLA CONDIZIONE** **1** **OCCORRENZE**:
+7. Nel pannello **Etichetta: Confidential** (Riservato) **Numero carta di credito** è visualizzato come **NOME DELLA CONDIZIONE** **1** **OCCORRENZE**:
     
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Configurare la condizione della carta di credito](../media/step2-see-condition.png)
 
-6. Per **Specificare se l'etichetta viene applicata automaticamente o se viene consigliata all'utente**: mantenere l'impostazione predefinita **Consigliata** e non modificare il suggerimento per i criteri predefiniti:
+8. Per **Specificare se l'etichetta viene applicata automaticamente o se viene consigliata all'utente**: mantenere l'impostazione predefinita **Consigliata** e non modificare il suggerimento per i criteri predefiniti:
     
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Classificazione consigliata](../media/step2-keep-recommended.png)
 
-7. Nella casella **Immettere note per la manutenzione interna** digitare **For testing purposes only** (Solo a scopo di test):
+9. Nella casella **Immettere note per la manutenzione interna** digitare **For testing purposes only** (Solo a scopo di test):
     
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Digitare le note](../media/step2-type-notes.png)
 
-8. Fare clic su **Salva** su questo pannello **Etichetta: Confidential** (Riservato). Quindi, nel pannello **Criteri: Globale** fare di nuovo clic su **Salva**.
+10. Fare clic su **Salva** su questo pannello **Etichetta: Confidential** (Riservato). Quindi, nel pannello **Criteri: Globale** fare di nuovo clic su **Salva**.
 
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Configurazione del criterio predefinito](../media/info-protect-policy-configured.png)
 
-9. Ora che le modifiche sono state apportate e salvate, devono essere rese disponibili agli utenti. A tale scopo, nel pannello iniziale di **Azure Information Protection** fare clic su **Publish** (Pubblica) e su **Sì** per confermare.
+11. Ora che le modifiche sono state apportate e salvate, devono essere rese disponibili agli utenti. A tale scopo, nel pannello iniziale di **Azure Information Protection** fare clic su **Publish** (Pubblica) e su **Sì** per confermare.
 
 Al termine di questa esercitazione è possibile chiudere il portale di Azure o lasciarlo aperto per provare altre opzioni di configurazione.
 
-Dopo aver esaminato i criteri predefiniti e aver apportato alcune modifiche, il passaggio successivo prevede l'installazione del client di Azure Information Protection e l'applicazione Rights Management sharing.
+Dopo aver esaminato il criterio predefinito e aver apportato alcune modifiche, il passaggio successivo prevede l'installazione del client di Azure Information Protection.
 
 |Se si desiderano altre informazioni|Informazioni aggiuntive|
 |--------------------------------|--------------------------|
@@ -125,7 +134,4 @@ Dopo aver esaminato i criteri predefiniti e aver apportato alcune modifiche, il 
 [&#171; Passaggio 1](infoprotect-tutorial-step1.md)
 [Passaggio 3 &#187;](infoprotect-tutorial-step3.md)
 
-
-<!--HONumber=Dec16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

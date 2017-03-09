@@ -1,10 +1,10 @@
 ---
-title: Creare, configurare e pubblicare un modello personalizzato | Azure Information Protection
+title: Configurare e pubblicare un modello personalizzato di Azure RMS
 description: Istruzioni per creare e gestire modelli personalizzati nel portale di Azure classico. I modelli semplificano l&quot;applicazione, da parte di utenti finali e amministratori, di criteri appropriati per la protezione di documenti e messaggi di posta elettronica.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0046023125fe339ed408edf47c59e36708b01783
-ms.openlocfilehash: 00661951513647add0c638e0eeb9e9fe38fa2d8d
+ms.sourcegitcommit: 11971a176b9c5f413bbe6daa208c062a131343be
+ms.openlocfilehash: 5ab725294d93540f35c395eca08f5f3fbc6ae392
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -35,15 +36,9 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
 
 1.  Seguire una di queste due procedure in base al tipo di accesso scelto, dall'interfaccia di amministrazione di Office 365 o dal portale di Azure classico:
 
-    -   Dall’ [interfaccia di amministrazione di Office 365](https://portal.office.com/):
+    -   Dall'**interfaccia di amministrazione di Office 365** il percorso è diverso se si usa la versione di anteprima dell'interfaccia di amministrazione di Office 365 (e quale versione) o l'interfaccia di amministrazione classica di Office 365. Per tutte le versioni è comunque possibile passare direttamente alla pagina [Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx): 
 
-        1.  Nel riquadro a sinistra, fare clic su **impostazioni servizio**.
-
-        2.  Nella pagina **impostazioni servizio** fare clic su **rights management**.
-
-        3.  Nella sezione **Proteggere le informazioni** fare clic su **Gestione**.
-
-        4.  Nella sezione **rights management** fare clic su **funzionalità avanzate**.
+        1.  Nella sezione **Configurazione aggiuntiva** fare clic su **Funzionalità avanzate**.
 
             > [!NOTE]
             > Se il servizio Rights Management non è stato attivato, fare prima clic su **attiva** e confermare l'azione. Per ulteriori informazioni, vedere l'articolo relativo all'[attivazione di Azure Rights Management](activate-service.md).
@@ -86,19 +81,21 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
     > [!NOTE]
     > Gli utenti o i gruppi selezionati devono disporre di un indirizzo di posta elettronica. Questa condizione si verifica quasi sempre in un ambiente di produzione, ma in un ambiente di test semplice può essere necessario aggiungere gli indirizzi di posta elettronica agli account utente o ai gruppi.
 
-    Come procedura consigliata, usare gruppi anziché utenti singoli perché la gestione dei modelli risulterà più agevole. Se si dispone di Active Directory locale e si esegue la sincronizzazione in Azure AD, è possibile utilizzare i gruppi abilitati alla posta che sono gruppi di protezione o gruppi di distribuzione. Se tuttavia si desidera concedere diritti a tutti gli utenti dell'organizzazione, la procedura più efficiente consiste nel copiare uno dei modelli predefiniti piuttosto che specificare più gruppi. Per altre informazioni, vedere [Copy a template](copy-template.md) (Copiare un modello).
+    Come procedura consigliata, usare gruppi anziché utenti singoli perché la gestione dei modelli risulterà più agevole. Tuttavia, se si apportano modifiche al gruppo, tenere presente che, per motivi di prestazioni, Azure Rights Management [memorizza nella cache l'appartenenza ai gruppi](../plan-design/prepare.md#group-membership-caching). 
+    
+    Se si dispone di Active Directory locale e si esegue la sincronizzazione in Azure AD, è possibile utilizzare i gruppi abilitati alla posta che sono gruppi di protezione o gruppi di distribuzione. Per concedere diritti a tutti gli utenti dell'organizzazione, la procedura più efficiente consiste nel copiare uno dei modelli predefiniti anziché specificare più gruppi. Per altre informazioni, vedere [Copy a template](copy-template.md) (Copiare un modello).
 
     > [!TIP]
     > È possibile aggiungere al modello utenti esterni all'organizzazione ("utenti esterni") selezionando un gruppo abilitato per la posta elettronica contenente i contatti da Office 365 o Exchange Online. In questo modo è possibile assegnare diritti agli utenti allo stesso modo in cui si assegnano diritti agli utenti nell'organizzazione. Ad esempio, è possibile impedire ai clienti di modificare un listino prezzi che viene loro inviato. Non usare questa configurazione del modello per proteggere messaggi di posta elettronica se gli utenti esterni all'organizzazione leggono i messaggi di posta elettronica protetti tramite Outlook Web App.
     > 
-    > È possibile anche aggiungere al modello utenti esterni all'organizzazione in un secondo momento usando il [modulo Windows PowerShell per Azure Rights Management](install-powershell.md) e usando uno dei metodi seguenti:
+    > Successivamente, è anche possibile aggiungere al modello utenti esterni all'organizzazione, scegliendo **utenti specifici**, **gruppi** o **tutti gli utenti dell'organizzazione**. A tale scopo, usare il [modulo di Windows PowerShell per Azure Rights Management](install-powershell.md) e uno dei metodi seguenti:
     > 
-    > -  **Usare un oggetto di definizione dei diritti per aggiornare un modello**: specificare gli indirizzi di posta elettronica esterni e i relativi diritti in un oggetto di definizione dei diritti, che verrà quindi usato per aggiornare il modello. È possibile specificare l'oggetto di definizione dei diritti usando il cmdlet [New-AadrmRightsDefinition](https://msdn.microsoft.com/library/azure/dn727080.aspx) per creare una variabile e quindi fornire questa variabile al parametro -RightsDefinition con il cmdlet [Set-AadrmTemplateProperty](https://msdn.microsoft.com/library/azure/dn727076.aspx) per modificare un modello esistente. Tuttavia, se si stanno aggiungendo questi utenti a un modello esistente, sarà necessario definire anche gli oggetti di definizione dei diritti per i gruppi esistenti nei modelli e non solo i nuovi utenti esterni.
-    > -  **Esportare, modificare e importare il modello aggiornato**: usare il cmdlet [Export-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727078.aspx) per esportare il modello in un file che è possibile modificare in modo da aggiungere gli indirizzi di posta elettronica esterni degli utenti e i relativi diritti rispetto a gruppi e diritti esistenti. Usare quindi il cmdlet [Import-AadrmTemplate](https://msdn.microsoft.com/library/azure/dn727077.aspx) per importare di nuovo le modifiche in Azure RMS.
+    > -  **Usare un oggetto di definizione dei diritti per aggiornare un modello**: specificare gli utenti esterni (tramite indirizzo di posta elettronica dell'utente, indirizzo di posta elettronica del gruppo o un dominio per tutti gli utenti dell'organizzazione) e i relativi diritti in un oggetto di definizione dei diritti. Usare quindi l'oggetto di definizione dei diritti per aggiornare il modello. È possibile specificare l'oggetto di definizione dei diritti usando il cmdlet [New-AadrmRightsDefinition](/powershell/aadrm/vlatest/new-aadrmrightsdefinition) per creare una variabile e quindi fornire questa variabile al parametro -RightsDefinition con il cmdlet [Set-AadrmTemplateProperty](/powershell/aadrm/vlatest/set-aadrmtemplateproperty) per modificare un modello esistente. Tuttavia, se si stanno aggiungendo questi utenti a un modello esistente, sarà necessario definire anche gli oggetti di definizione dei diritti per i gruppi esistenti nei modelli e non solo i nuovi utenti esterni.
+    > -  **Esportare, modificare e importare il modello aggiornato**: usare il cmdlet [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate) per esportare il modello in un file che è possibile modificare in modo da aggiungere gli utenti esterni (tramite indirizzo di posta elettronica dell'utente, indirizzo di posta elettronica del gruppo o un dominio per tutti gli utenti dell'organizzazione) e i relativi diritti ai gruppi e diritti esistenti. Usare quindi il cmdlet [Import-AadrmTemplate](/powershell/aadrm/vlatest/import-aadrmtemplate) per importare di nuovo le modifiche in Azure RMS.
 
 3.  Fare clic sul pulsante Avanti, quindi assegnare agli utenti e ai gruppi selezionati uno dei diritti elencati.
 
-    Per altre informazioni su ogni diritto (e per i diritti personalizzati), usare la descrizione visualizzata. Informazioni più dettagliate sono inoltre disponibili nell'articolo relativo alla [configurazione dei diritti di utilizzo per Azure Rights Management](configure-usage-rights.md). Tuttavia, le applicazioni che supportano RMS possono implementare questi diritti in modo diverso. Consultare la relativa documentazione ed eseguire test personalizzati con le applicazioni usate dagli utenti per controllare il comportamento prima di distribuire il modello per gli utenti. Per fare in modo che il modello sia visibile solo agli amministratori per eseguirne il test, rendere questo modello un modello di reparto (passaggio 6).
+    Per altre informazioni su ogni diritto (e per i diritti personalizzati), usare la descrizione visualizzata. Informazioni più dettagliate sono inoltre disponibili nell'articolo relativo alla [configurazione dei diritti di utilizzo per Azure Rights Management](configure-usage-rights.md). Tuttavia, le applicazioni che supportano Rights Management possono implementare questi diritti in modo diverso. Consultare la relativa documentazione ed eseguire test personalizzati con le applicazioni usate dagli utenti per controllare il comportamento prima di distribuire il modello per gli utenti. Per fare in modo che il modello sia visibile solo agli amministratori per eseguirne il test, rendere questo modello un modello di reparto (passaggio 6).
 
 4.  Se si seleziona **Personalizzato**, fare clic sul pulsante Avanti e quindi selezionare i diritti personalizzati.
 
@@ -113,7 +110,7 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
 
     Altre informazioni sui modelli di reparto: per impostazione predefinita, tutti gli utenti nella directory di Azure visualizzano tutti i modelli pubblicati e possono quindi selezionarli dalle applicazioni quando vogliono proteggere il contenuto. Se si vuole consentire solo ad alcuni utenti specifici di visualizzare alcuni dei modelli pubblicati, è necessario definire l'ambito dei modelli per tali utenti. Quindi, solo tali utenti potranno selezionare questi modelli. Gli altri utenti che non sono stati specificati non potranno visualizzare i modelli e pertanto non potranno selezionarli. Questa tecnica semplifica la scelta del modello corretto da parte degli utenti, soprattutto quando si creano modelli che sono progettati per essere usati da gruppi o reparti specifici. Gli utenti visualizzeranno solo i modelli che sono stati progettati per loro.
 
-    Ad esempio, si è creato un modello per il reparto Risorse umane che applica l'autorizzazione di sola lettura ai membri del reparto Finanze. Affinché solo i membri del reparto Risorse umane possano applicare questo modello quando usano l'applicazione Rights Management sharing, assegnare l'ambito del modello al gruppo abilitato alla posta elettronica denominato HumanResources. Quindi, solo i membri di questo gruppo potranno visualizzare e applicare questo modello.
+    Ad esempio, si è creato un modello per il reparto Risorse umane che applica l'autorizzazione di sola lettura ai membri del reparto Finanze. Affinché solo i membri del reparto Risorse umane possano applicare questo modello quando usano il client Azure Information Protection, assegnare l'ambito del modello al gruppo abilitato alla posta elettronica denominato HumanResources. Solo i membri di questo gruppo potranno quindi applicare il modello. Se inoltre gli utenti eseguono il client Azure Information Protection in [modalità di sola protezione](../rms-client/client-protection-only-mode.md), non vedranno il modello.
 
 7.  Nella pagina **VISIBILITÀ DEL MODELLO** selezionare gli utenti e i gruppi che potranno visualizzare e selezionare il modello nelle applicazioni che supportano RMS. Come indicato in precedenza, è consigliabile usare i gruppi anziché gli utenti e i gruppi o gli utenti selezionati dovranno avere un indirizzo di posta elettronica.
 
@@ -121,7 +118,7 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
 
     Per quale motivo potrebbe essere necessario configurare la compatibilità delle applicazioni? Non tutte le applicazioni possono supportare i modelli di reparto. A tale scopo, per poter scaricare i modelli, è necessario eseguire prima l'autenticazione dell'applicazione con il servizio RMS. Se il processo di autenticazione non viene eseguito, per impostazione predefinita non viene scaricato alcun modello di reparto. È possibile eseguire l'override di questo comportamento specificando che tutti i modelli di reparto devono essere scaricati, configurando la compatibilità dell’applicazione e selezionando la casella di controllo **Mostra questo modello a tutti gli utenti quando le applicazioni non supportano l'identità utente** .
 
-    Ad esempio, se non si configura la compatibilità delle applicazioni per il modello di reparto nell'esempio delle Risorse umane, solo gli utenti del reparto Risorse umane visualizzeranno il modello di reparto quando useranno l'applicazione RMS sharing, ma nessun utente visualizzerà il modello di reparto quando userà Outlook Web Access (OWA) da Exchange Server 2013 poiché OWA di Exchange ed Exchange ActiveSync non supportano i modelli di reparto. Se si esegue l'override di questo comportamento predefinito configurando la compatibilità delle applicazioni, solo gli utenti del reparto Risorse umane visualizzeranno il modello di reparto quando useranno l'applicazione RMS sharing, ma tutti gli utenti visualizzeranno il modello di reparto quando useranno Outlook Web Access (OWA). Se gli utenti usano OWA o Exchange ActiveSync da Exchange Online, i modelli di reparto saranno visibili a tutti gli utenti o a nessun utente, a seconda dello stato del modello (archivio o pubblicato) in Exchange Online.
+    Ad esempio, se non si configura la compatibilità delle applicazioni per il modello di reparto nell'esempio delle Risorse umane, solo gli utenti del reparto Risorse umane visualizzeranno il modello di reparto quando useranno il client Azure Information Protection in [modalità di sola protezione](../rms-client/client-protection-only-mode.md), ma nessun utente visualizzerà il modello di reparto quando userà Outlook Web Access (OWA) da Exchange Server 2013 poiché OWA di Exchange ed Exchange ActiveSync attualmente non supportano i modelli di reparto. Se si esegue l'override di questo comportamento predefinito configurando la compatibilità delle applicazioni, solo gli utenti del reparto Risorse umane visualizzeranno il modello di reparto quando useranno il client Azure Information Protection in modalità di sola protezione, ma tutti gli utenti visualizzeranno il modello di reparto quando useranno Outlook Web Access (OWA). Se gli utenti usano OWA o Exchange ActiveSync da Exchange Online, i modelli di reparto saranno visibili a tutti gli utenti o a nessun utente, a seconda dello stato del modello (archivio o pubblicato) in Exchange Online.
 
     Office 2016 supporta in modalità nativa i modelli di reparto, analogamente a Office 2013 a partire dalla versione 15.0.4727.1000 rilasciata nel mese di giugno 2015 come parte di [KB 3054853](https://support.microsoft.com/kb/3054853).
 
@@ -141,10 +138,10 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
 
     Verificare quindi se si desideri apportare modifiche alle impostazioni riportate di seguito.
 
-    |Impostazione|Altre informazioni|
-    |-----------|--------------------|
-    |**scadenza contenuto**|Definire una data o un numero di giorni in cui i file protetti tramite il modello non devono essere aperti. È possibile specificare una data o un numero di giorni a partire dal momento in cui la protezione viene applicata al file.<br /><br />Quando si specifica una data, diventa effettiva alla mezzanotte del fuso orario corrente.|
-    |**accesso offline**|Usare questa impostazione per far fronte agli eventuali requisiti di sicurezza previsti e, allo stesso tempo, all'esigenza degli utenti di aprire i file protetti quando non dispongono di una connessione Internet.<br /><br />Se si specifica che il contenuto non è disponibile senza una connessione Internet o che è disponibile solo per un determinato numero di giorni, al raggiungimento di tale soglia, gli utenti dovranno eseguire di nuovo l'autenticazione e l'accesso verrà registrato. In questo caso, se le credenziali non sono memorizzate nella cache, verrà chiesto agli utenti di eseguire l'accesso prima di poter aprire il file.<br /><br />Oltre alla riesecuzione dell'autenticazione, verrà nuovamente valutata l'appartenenza degli utenti ai criteri e ai gruppi. Questo significa che gli utenti potrebbero avere risultati di accesso diversi per lo stesso file se dall'ultimo accesso si sono verificati cambiamenti relativi all'appartenenza ai criteri o ai gruppi.|
+    |Impostazione|Altre informazioni| Impostazione consigliata
+    |-----------|--------------------|--------------------|
+    |**scadenza contenuto**|Definire una data o un numero di giorni in cui i file protetti tramite il modello non devono essere aperti. È possibile specificare una data o un numero di giorni a partire dal momento in cui la protezione viene applicata al file.<br /><br />Quando si specifica una data, diventa effettiva alla mezzanotte del fuso orario corrente.|**Nessuna scadenza contenuto**, a meno che non esista un requisito temporale specifico per il contenuto.|
+    |**accesso offline**|Usare questa impostazione per far fronte agli eventuali requisiti di sicurezza previsti e, allo stesso tempo, all'esigenza degli utenti di aprire i file protetti quando non dispongono di una connessione Internet.<br /><br />Se si specifica che il contenuto non è disponibile senza una connessione Internet o che è disponibile solo per un determinato numero di giorni, al raggiungimento di tale soglia, gli utenti dovranno eseguire di nuovo l'autenticazione e l'accesso verrà registrato. In questo caso, se le credenziali non sono memorizzate nella cache, verrà chiesto agli utenti di eseguire l'accesso prima di poter aprire il file.<br /><br />Oltre alla riesecuzione dell'autenticazione, verrà nuovamente valutata l'appartenenza degli utenti ai criteri e ai gruppi. Questo significa che gli utenti potrebbero avere risultati di accesso diversi per lo stesso file se dall'ultimo accesso si sono verificati cambiamenti relativi all'appartenenza ai criteri o ai gruppi.|A seconda della sensibilità del contenuto:<br /><br />- **Numero di giorni per cui il contenuto è disponibile senza una connessione a Internet** = **7** per i dati aziendali sensibili che potrebbero causare danni all'azienda in caso di condivisione con persone non autorizzate. Questa raccomandazione offre un equo compromesso tra sicurezza e flessibilità. Sono esempi di questo tipo di contenuto i contratti, i report sulla sicurezza, i riepiloghi previsionali e i dati sulle vendite.<br /><br />- **Il contenuto è disponibile solo con una connessione a Internet** per i dati aziendali molto sensibili che potrebbero causare danni all'azienda in caso di condivisione con persone non autorizzate. Questa raccomandazione privilegia la sicurezza rispetto alla flessibilità. Sono esempi di questo tipo di contenuto le informazioni su dipendenti e clienti, le password, il codice sorgente e i rendiconti finanziari preannunciati.|
 
 10. Quando si è convinti che il modello sia configurato in modo appropriato per gli utenti, fare clic su **PUBBLICA** per renderlo visibile agli utenti e quindi su **SALVA**.
 
@@ -168,7 +165,4 @@ Per apportare modifiche al modello, selezionarlo e quindi eseguire di nuovo i pa
 ## <a name="see-also"></a>Vedere anche
 [Configurare modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
 
-
-<!--HONumber=Nov16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

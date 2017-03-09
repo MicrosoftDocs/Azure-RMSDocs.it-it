@@ -1,10 +1,10 @@
 ---
-title: Funzionamento di Azure RMS | Azure Information Protection
+title: Funzionamento di Azure RMS - Azure Information Protection
 description: Descrizione del funzionamento di Azure RMS, dei controlli crittografici usati e dei diagrammi dettagliati del funzionamento di questo processo.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0e66bfa436bf811b34cf3cfe1b2d68a6a4e137c2
-ms.openlocfilehash: dd6c9250102e104ba49b0c08f14d9959cd1228cb
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3140f678c29771fc3328e312bc7e55d309554e66
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -52,7 +53,7 @@ Anche se non è necessario conoscere personalmente il funzionamento di RMS, è p
 
 ###### <a name="footnote-1"></a>Nota 1 
 
-La lunghezza di 256 bit viene usata dall'applicazione Rights Management sharing per la protezione generica e la protezione nativa quando l'estensione di file è ppdf o si tratta di un file di testo o di immagine protetto, ad esempio con estensione ptxt o pjpg.
+La lunghezza di&256; bit viene usata dal client Azure Information Protection e dall'applicazione di condivisione Rights Management per la protezione generica e la protezione nativa quando il file ha estensione PPDF o è un file di testo o di immagine protetto, ad esempio con estensione PTXT o PJPG.
 
 Modalità di archiviazione e protezione delle chiavi crittografiche:
 
@@ -77,13 +78,13 @@ Dopo aver inizializzato l'ambiente utente, l'utente può quindi proteggere i doc
 ### <a name="initializing-the-user-environment"></a>Inizializzazione dell'ambiente utente
 Prima che un utente sia in grado di proteggere contenuto o utilizzare contenuto protetto in un computer Windows, è necessario preparare l'ambiente utente sul dispositivo. Questo è un processo unico e si verifica automaticamente senza l'intervento dell'utente quando un utente tenta di proteggere o utilizzare contenuto protetto:
 
-![Attivazione del client RMS - Passaggio 1](../media/AzRMS.png)
+![Flusso di attivazione client RMS - passaggio 1, autenticazione del client](../media/AzRMS.png)
 
 **Cosa avviene nel passaggio 1**: il client RMS nel computer si connette prima di tutto al servizio Azure Rights Management e autentica l'utente usando il relativo account Azure Active Directory.
 
 Quando l'account dell'utente è federato con Azure Active Directory, l'autenticazione avviene automaticamente e all'utente non vengono richieste le credenziali.
 
-![Attivazione del client RMS - Passaggio 2](../media/AzRMS_useractivation2.png)
+![Attivazione del client RMS - passaggio 2, i certificati vengono scaricati nel client](../media/AzRMS_useractivation2.png)
 
 **Cosa avviene nel passaggio 2**: dopo l'autenticazione dell'utente, la connessione viene reindirizzata automaticamente al tenant di Azure Information Protection dell'organizzazione, che emette i certificati per consentire all'utente di autenticarsi al servizio Azure Rights Management in modo da utilizzare il contenuto protetto e proteggere il contenuto offline.
 
@@ -92,17 +93,17 @@ Una copia del certificato dell'utente viene archiviata in Azure, in modo che se 
 ### <a name="content-protection"></a>Protezione del contenuto
 Quando un utente protegge un documento, il client RMS esegue le azioni seguenti su un documento non protetto:
 
-![Protezione del documento RMS - Passaggio 1](../media/AzRMS_documentprotection1.png)
+![Protezione del documento RMS - passaggio 1, il documento viene crittografato](../media/AzRMS_documentprotection1.png)
 
 **Cosa avviene nel passaggio 1**: il client RMS crea una chiave casuale (la chiave simmetrica) e crittografa il documento usando questa chiave con l'algoritmo di crittografia simmetrica AES.
 
-![Protezione del documento RMS - Passaggio 2](../media/AzRMS_documentprotection2.png)
+![Protezione del documento RMS - passaggio 2, viene creato il criterio](../media/AzRMS_documentprotection2.png)
 
 **Cosa avviene nel passaggio 2**: il client RMS crea quindi un certificato che include un criterio per il documento, in base a un modello o indicando i diritti specifici per il documento. Questo criterio include i diritti per utenti o gruppi diversi e altre limitazioni, ad esempio una data di scadenza.
 
 Il client RMS usa quindi la chiave dell'organizzazione, ottenuta al momento dell'inizializzazione dell'ambiente utente, per crittografare i criteri e la chiave simmetrica. Il client RMS firma anche i criteri con il certificato dell'utente ottenuto al momento dell'inizializzazione dell'ambiente.
 
-![Protezione del documento RMS - Passaggio 3](../media/AzRMS_documentprotection3.png)
+![Protezione del documento RMS - passaggio 3, i criteri vengono incorporati nel documento](../media/AzRMS_documentprotection3.png)
 
 **Cosa avviene nel passaggio 3**: infine, il client RMS incorpora i criteri in un file con il corpo del documento crittografato in precedenza, che insieme costituiscono un documento protetto.
 
@@ -111,21 +112,25 @@ Questo documento può essere archiviato ovunque o condiviso usando qualsiasi met
 ### <a name="content-consumption"></a>Utilizzo del contenuto
 Quando un utente vuole utilizzare un documento protetto, il client RMS avvia la richiesta per l'accesso al servizio Azure Rights Management:
 
-![Uso del documento RMS - Passaggio 1](../media/AzRMS_documentconsumption1.png)
+![Uso del documento RMS - passaggio 1, l'utente viene autenticato e ottiene l'elenco dei diritti](../media/AzRMS_documentconsumption1.png)
 
 **Cosa avviene nel passaggio 1**: l'utente autenticato invia i criteri del documento e i certificati dell'utente al servizio Azure Rights Management. Il servizio decrittografa e valuta i criteri e compila un elenco di diritti (se presenti) di cui l'utente dispone per il documento.
 
-![Uso del documento RMS - Passaggio 2](../media/AzRMS_documentconsumption2.png)
+![Uso del documento RMS - passaggio 2, il contratto di licenza con l'utente finale viene restituito al client](../media/AzRMS_documentconsumption2.png)
 
 **Cosa avviene nel passaggio 2**: il servizio estrae quindi la chiave simmetrica AES dai criteri decrittografati. Questa chiave viene quindi crittografata con la chiave pubblica RSA dell'utente ottenuta con la richiesta.
 
 La chiave simmetrica nuovamente crittografata viene quindi incorporata in un contratto di licenza con l'utente finale crittografato con l'elenco dei diritti utente, che viene quindi restituito al client RMS.
 
-![Uso del documento RMS - Passaggio 3](../media/AzRMS_documentconsumption3.png)
+![Uso del documento RMS - passaggio 3, il documento viene decrittografato e i diritti vengono applicati](../media/AzRMS_documentconsumption3.png)
 
 **Cosa avviene nel passaggio 3**: infine, il client RMS accetta il contratto di licenza con l'utente finale crittografato e lo decrittografa con la propria chiave privata utente. In questo modo il client RMS decrittografa il corpo del documento quando è necessario e ne esegue il rendering sullo schermo.
 
 Il client decrittografa anche l'elenco di diritti e li passa all'applicazione, che li applica nell'interfaccia utente dell'applicazione.
+
+> [!NOTE]
+> Quando gli utenti esterni all'organizzazione usano il contenuto che è stato protetto, il flusso di utilizzo è lo stesso. In questo scenario viene modificata soltanto la modalità di autenticazione dell'utente. Per altre informazioni, vedere [Quando condivido un documento protetto con qualcuno all'esterno della mia azienda, come viene autenticato questo utente?](../get-started/faqs-rms.md#when-i-share-a-protected-document-with-somebody-outside-my-company-how-does-that-user-get-authenticated)
+
 
 ### <a name="variations"></a>Varianti
 Le procedure dettagliate precedenti riguardano scenari standard, ma esistono alcune varianti:
@@ -136,7 +141,7 @@ Le procedure dettagliate precedenti riguardano scenari standard, ma esistono alc
 
 -   **Protezione generica (pfile)**: quando il servizio Azure Rights Management protegge un file in modo generico, il flusso è fondamentalmente quello della protezione del contenuto, con la differenza che il client RMS crea i criteri che concedono tutti i diritti. Quando si usa il file, questo viene decrittografato prima di essere passato all'applicazione di destinazione. Questo scenario consente di proteggere tutti i file, anche se non supportano RMS in modo nativo.
 
--   **PDF protetto (ppdf)**: quando il servizio Azure Rights Management protegge in modo nativo un file di Office, crea anche una copia del file e lo protegge nello stesso modo. L'unica differenza è che la copia del file è nel formato di file PPDF, che l'applicazione RMS sharing è in grado di aprire solo per la visualizzazione. Questo scenario consente di inviare allegati protetti tramite posta elettronica, sapendo che il destinatario di un dispositivo mobile sarà sempre in grado di leggerli, anche se il dispositivo mobile non dispone di un'app che supporta i file di Office protetti in modo nativo.
+-   **PDF protetto (ppdf)**: quando il servizio Azure Rights Management protegge in modo nativo un file di Office, crea anche una copia del file e lo protegge nello stesso modo. L'unica differenza è che la copia del file è nel formato di file PPDF, che il visualizzatore del client Azure Information Protection e l'applicazione RMS sharing sono in grado di aprire solo per la visualizzazione. Questo scenario consente di inviare allegati protetti tramite posta elettronica, sapendo che il destinatario di un dispositivo mobile sarà sempre in grado di leggerli, anche se il dispositivo mobile non dispone di un'app che supporta i file di Office protetti in modo nativo.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
@@ -149,8 +154,4 @@ Se si è pronti a iniziare la distribuzione della protezione dati per l'organizz
 > [!TIP]
 > Per altre informazioni e indicazioni, usare le risorse e i collegamenti riportati in [Informazioni e supporto per Azure Information Protection](../get-started/information-support.md).
 
-
-
-<!--HONumber=Nov16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -1,10 +1,10 @@
 ---
-title: Configurazione degli utenti con privilegi avanzati per Azure Rights Management e servizi di individuazione o ripristino dei dati | Azure Information Protection
+title: Configurare utenti con privilegi avanzati per Azure Rights Management - AIP
 description: "Informazioni sulla funzionalità per utenti con privilegi avanzati del servizio Azure Rights Management di Azure Information Protection e relativa implementazione in modo che gli utenti e i servizi autorizzati possano sempre leggere e controllare i dati che Azure Rights Management protegge per l&quot;organizzazione. Questa possibilità viene definita anche &quot;ragionamento sui dati&quot; e riveste un ruolo di importanza critica nel mantenimento del controllo sui dati dell&quot;organizzazione."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 70c74678ec0ef0b583b2784177520d0ea8a5b7e8
+ms.sourcegitcommit: 07236a2820e4d8d4d594eda755cb025d21b96d12
+ms.openlocfilehash: 591ca9ba080da9565e0143d887e3db179b810862
+ms.lasthandoff: 02/25/2017
 
 
 ---
@@ -37,7 +38,9 @@ La funzionalità per utenti con privilegi avanzati del servizio Azure Rights Man
 
 Per impostazione predefinita, questo ruolo non è abilitato e a esso non sono assegnati utenti. Viene abilitata automaticamente per l'utente se si configura il connettore Rights Management per Exchange, e non è necessaria per i servizi standard che eseguono Exchange Online, SharePoint Online o SharePoint Server.
 
-Se è necessario abilitare manualmente la funzionalità per utenti con privilegi avanzati, usare il cmdlet [Enable-AadrmSuperUserFeature](https://msdn.microsoft.com/library/azure/dn629400.aspx) di Windows PowerShell, quindi assegnare utenti o account del servizio in base alla necessità mediante il cmdlet [Add-AadrmSuperUser](https://msdn.microsoft.com/library/azure/dn629411.aspx) o il cmdlet [Set-AadrmSuperUserGroup](https://msdn.microsoft.com/library/azure/mt653943.aspx) e aggiungere utenti o altri gruppi a questo gruppo in base alla necessità. 
+Se è necessario abilitare manualmente la funzionalità per utenti con privilegi avanzati, usare il cmdlet [Enable-AadrmSuperUserFeature](/powershell/aadrm/vlatest/enable-aadrmsuperuserfeature) di PowerShell e quindi assegnare utenti (o account del servizio) mediante il cmdlet [Add-AadrmSuperUser](/powershell/aadrm/vlatest/add-aadrmsuperuser) o [Set-AadrmSuperUserGroup](/powershell/aadrm/vlatest/set-aadrmsuperusergroup) e aggiungere utenti (o altri gruppi) a questo gruppo in base alla necessità. 
+
+Anche se un gruppo per utenti con privilegi avanzati è più facile da gestire, tenere presente che, per motivi di prestazioni, Azure Rights Management [memorizza nella cache l'appartenenza ai gruppi](../plan-design/prepare.md#group-membership-caching). Pertanto, se è necessario assegnare privilegi avanzati a un nuovo utente per decrittografare immediatamente il contenuto, aggiungere l'utente usando Add-AadrmSuperUser, anziché aggiungerlo a un gruppo esistente configurato tramite Set-AadrmSuperUserGroup.
 
 > [!NOTE]
 > Se non è stato ancora installato il modulo di Windows PowerShell per [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)], vedere [Installazione di Windows PowerShell per Azure Rights Management](install-powershell.md).
@@ -52,26 +55,24 @@ Le procedure consigliate per la funzionalità per utenti con privilegi avanzati:
 
 L'estratto dal log seguente mostra alcune voci di esempio relative all'uso del cmdlet Get-AadrmAdminLog. In questo esempio, l'amministratore di Contoso Ltd verifica che la funzionalità per utenti con privilegi avanzati sia disabilitata, aggiunge Richard Simone come utente con privilegi avanzati, controlla che Richard sia l'unico utente con privilegi avanzati configurato per il servizio Azure Rights Management e quindi abilita la funzionalità per utenti con privilegi avanzati in modo che Richard sia in grado di decrittografare alcuni file che sono stati protetti da un dipendente che ora ha lasciato l'azienda.
 
-`2015-08-01T18:58:20    admin@contoso.com   GetSuperUserFeatureState    Passed  Disabled`
+`2015-08-01T18:58:20    admin@contoso.com    GetSuperUserFeatureState    Passed    Disabled`
 
-`2015-08-01T18:59:44    admin@contoso.com   AddSuperUser -id rsimone@contoso.com    Passed  True`
+`2015-08-01T18:59:44    admin@contoso.com    AddSuperUser -id rsimone@contoso.com    Passed    True`
 
-`2015-08-01T19:00:51    admin@contoso.com   GetSuperUser    Passed  rsimone@contoso.com`
+`2015-08-01T19:00:51    admin@contoso.com    GetSuperUser    Passed    rsimone@contoso.com`
 
-`2015-08-01T19:01:45    admin@contoso.com   SetSuperUserFeatureState -state Enabled Passed  True`
+`2015-08-01T19:01:45    admin@contoso.com    SetSuperUserFeatureState -state Enabled    Passed    True`
 
 ## <a name="scripting-options-for-super-users"></a>Opzioni di scripting per gli utenti con privilegi avanzati
-Spesso, la persona cui viene assegnato il ruolo di utente con privilegi avanzati per [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] dovrà rimuovere la protezione da più file, in più posizioni. Sebbene sia possibile effettuare questa operazione manualmente, è più efficiente (e spesso più affidabile) eseguire uno script. A tale scopo, [scaricare lo strumento di protezione RMS](http://www.microsoft.com/en-us/download/details.aspx?id=47256). Poi, usare il cmdlet [Unprotect-RMSFile](https://msdn.microsoft.com/library/azure/mt433200.aspx) e [Protect-RMSFile](https://msdn.microsoft.com/library/azure/mt433201.aspx) come richiesto.
+Spesso, la persona cui viene assegnato il ruolo di utente con privilegi avanzati per [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] dovrà rimuovere la protezione da più file, in più posizioni. Sebbene sia possibile effettuare questa operazione manualmente, è più efficiente (e spesso più affidabile) eseguire uno script. A tale scopo, è possibile usare i cmdlet [Unprotect-RMSFile](/powershell/azureinformationprotection/vlatest/unprotect-rmsfile) e [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile) come necessario. 
 
-Per ulteriori informazioni su questi cmdlet, vedere [cmdlet protezione RMS](https://msdn.microsoft.com/library/azure/mt433195.aspx).
+Se si usano la classificazione e la protezione, è anche possibile usare [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) per applicare una nuova etichetta che non applica la protezione oppure rimuovere l'etichetta che ha applicato la protezione. 
+
+Per altre informazioni su questi cmdlet, vedere [Uso di PowerShell con il client Azure Information Protection](../rms-client/client-admin-guide-powershell.md) nella Guida dell'amministratore del client Azure Information Protection.
 
 > [!NOTE]
-> Il modulo PowerShell di protezione RMS fornito con lo strumento di protezione RMS è diverso da e integra il [modulo Windows PowerShell per Azure Rights Management](administer-powershell.md) principale. Il modulo di protezione RMS supporta sia il servizio Azure Rights Management (Azure RMS) per Azure Information Protection sia Active Directory Rights Management Services (AD RMS).
+> Il modulo AIP sostituisce il modulo di protezione RMS di PowerShell installato con lo strumento di protezione RMS. Entrambi questi moduli si differenziano dal [modulo di Windows PowerShell per Azure Rights Management](administer-powershell.md) principale e lo integrano. Il modulo AIP supporta Azure Information Protection, il servizio Azure Rights Management (Azure RMS) per Azure Information Protection e Active Directory Rights Management Services (AD RMS).
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

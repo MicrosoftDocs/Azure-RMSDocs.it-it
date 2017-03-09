@@ -1,10 +1,10 @@
 ---
-title: Supporto del servizio Azure Rights Management da parte delle applicazioni | Azure Information Protection
+title: Supporto di Azure Rights Management da parte delle app - AIP
 description: "Informazioni su come le applicazioni (ad esempio, le applicazioni di Office come Word, Excel, PowerPoint e Outlook) e i servizi (ad esempio, Exchange e SharePoint) più comunemente usati dagli utenti sfruttano il servizio Azure Rights Management di Azure Information Protection per proteggere i documenti e i messaggi di posta elettronica dell&quot;organizzazione."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: fdb862b0d4f3d0a6b3411b38a314e28b5f1f9edc
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 7553e2719195448c71653ead9950f92bac3928c5
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -27,7 +28,7 @@ Usare le informazioni seguenti per comprendere come le applicazioni (ad esempio 
 > [!NOTE]
 > Per verificare le applicazioni e le versioni supportate dal servizio Azure Rights Management, vedere [Requisiti per Azure RMS: applicazioni](../get-started/requirements-applications.md).
 
-In alcuni casi, il servizio Azure Rights Management applica automaticamente la protezione, in base ai criteri configurati dagli amministratori, ad esempio nel caso di raccolte SharePoint, file classificati e regole di trasporto di Exchange. In altri casi, gli utenti finali devono applicare in modo autonomo la protezione delle informazioni selezionando un modello oppure opzioni specifiche, ad esempio nel caso in cui condividono un file tramite e-mail o proteggono un file in locale limitandone l'accesso o l'uso a utenti selezionati oppure a utenti esterni all'organizzazione.
+In alcuni casi, il servizio Azure Rights Management applica automaticamente la protezione, in base ai criteri configurati dagli amministratori, ad esempio nel caso di raccolte di SharePoint e regole di trasporto di Exchange. In altri casi, gli utenti finali devono applicare in modo autonomo la protezione delle informazioni dalle loro applicazioni, ad esempio selezionando un'etichetta di classificazione configurata per applicare un modello, selezionando direttamente un modello o selezionando opzioni specifiche. Un caso tipico di protezione applicata dagli utenti si verifica quando gli utenti proteggono un file da condividere limitandone l'accesso o l'uso a utenti selezionati oppure a utenti esterni all'organizzazione.
 
 I modelli semplificano agli utenti e agli amministratori che configurano i criteri l'applicazione del livello corretto di protezione e la limitazione dell'accesso a persone all'interno dell'organizzazione. Anche se nel servizio Azure Rights Management sono disponibili due modelli predefiniti, sarà possibile creare modelli personalizzati per ridurre i tempi qualora sia necessario specificare opzioni singole. Per altre informazioni, vedere [Configurazione di modelli personalizzati per il servizio Azure Rights Management](../deploy-use/configure-custom-templates.md).
 
@@ -60,9 +61,5 @@ Altre informazioni sul supporto del servizio Azure Rights Management da parte de
 
 -   [Altre applicazioni che supportano le API RMS](api-support.md)
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

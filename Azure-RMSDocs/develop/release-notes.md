@@ -4,7 +4,7 @@ description: "Descrive importanti modifiche e funzionalità in questa nuova vers
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 10/31/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection

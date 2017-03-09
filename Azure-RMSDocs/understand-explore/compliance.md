@@ -1,10 +1,10 @@
 ---
-title: "Informazioni su conformità e supporto | Azure Information Protection"
+title: "Conformità e supporto per Azure Information Protection"
 description: "Informazioni di supporto per Azure Information Protection che includono note legali, informazioni sulla conformità e contratti di servizio."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 291198ed501854de1aa7ddbfc80cd7a7f1b4849c
-ms.openlocfilehash: a853aaa993bbb5e15e6c4b80d4c6f0581b6e9090
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: a7d6c5775f9f3ddedd2177054731b26443a0d2d9
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -55,9 +56,5 @@ Per informazioni tecniche approfondite sul funzionamento della tecnologia di pro
 
 - Libreria di Office 365: [Office 365](http://technet.microsoft.com/library/dn127064%28v=office.14%29.aspx)
 
-
-
-
-<!--HONumber=Nov16_HO5-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

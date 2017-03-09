@@ -1,10 +1,10 @@
 ---
-title: Visualizzare e usare i file che sono stati protetti da Rights Management | Azure Information Protection
+title: Visualizzare e usare i file protetti con il client AIP
 description: Istruzioni per visualizzare e usare un file protetto che richiede l&quot;installazione del client di Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
-ms.openlocfilehash: b08b7e055f05729057f5137a7d523ff452a58f48
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 408b57c5ff5ce3688763ef7b4c4b87b123ca4ea3
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -23,27 +24,40 @@ ms.openlocfilehash: b08b7e055f05729057f5137a7d523ff452a58f48
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 
-**[Questa versione del client è in anteprima e soggetta a modifiche].**
+Per visualizzare un file protetto, spesso è sufficiente aprirlo. Ad esempio, è possibile fare doppio clic su un allegato in un messaggio di posta elettronica o fare doppio clic su un file in Esplora file oppure è possibile fare clic su un collegamento a un file.
 
-Quando il [client di Azure Information Protection viene installato nel computer in uso](install-client-app.md), è possibile visualizzare un file protetto aprendo semplicemente il file. Ad esempio, è possibile fare doppio clic su un allegato in un messaggio di posta elettronica o fare doppio clic su un file in Esplora file oppure è possibile fare clic su un collegamento a un file.
+Se non si riesce ad aprire il file, è possibile usare il **visualizzatore Azure Information Protection** per aprirlo. Questo visualizzatore viene automaticamente installato con il client Azure Information Protection oppure può essere installato separatamente. Il client e il visualizzatore possono essere entrambi installati dalla pagina [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) del sito Web Microsoft. Per altre informazioni sull'installazione del client, vedere [Scaricare e installare il client Azure Information Protection](install-client-app.md).
 
 > [!NOTE]
-> Per consentire a un utente di visualizzare il file protetto, il servizio Rights Management deve prima verificare che sia autorizzato e a questo scopo controlla il nome utente e la password. In alcuni casi, questo potrebbe essere memorizzato nella cache e non verrà visualizzato un messaggio che richiede l'immissione delle credenziali. In altri casi, verrà richiesto di fornire le credenziali.
->
-> Se l'organizzazione non ha un account basato su cloud (per Office 365 o Azure) e non usa AD RMS, è possibile richiedere un account gratuito che accetterà le credenziali in modo che sia possibile aprire i file protetti tramite Rights Management:
->
-> -   Per richiedere questo account, fare clic sul collegamento per richiedere [RMS per utenti singoli](http://go.microsoft.com/fwlink/?LinkId=309469).
->
->     Quando si effettua l'iscrizione, utilizzare l'indirizzo di posta elettronica della società anziché un indirizzo di posta elettronica personale. Se si esegue l'iscrizione perché è stato inviato un allegato protetto tramite posta elettronica, utilizzare lo stesso indirizzo di posta elettronica utilizzato per inviare il messaggio di posta elettronica.
-> -   Per ulteriori informazioni, vedere [RMS per utenti singoli e Azure Rights Management](../understand-explore/rms-for-individuals.md).
+> Benché l'installazione del client fornisca più funzionalità, richiede autorizzazioni di amministratore locale e la funzionalità completa richiede un servizio corrispondente per l'organizzazione:
+> 
+> - Azure Information Protection
+> 
+> - Azure Rights Management
+> 
+> - Active Directory Rights Management Services 
+> 
+> Installare il visualizzatore se si è ricevuto un documento protetto da un utente di un'altra organizzazione o se non si possiedono autorizzazioni di amministratore locale per il PC.
+
+## <a name="prompts-for-authentication"></a>Richieste di autorizzazione
+
+Prima di poter visualizzare il file protetto, il servizio Rights Management usato per proteggere il file deve prima di tutto verificare che siano presenti le autorizzazioni necessarie per la visualizzazione del file. A questo scopo, il servizio controlla il nome utente e la password. In alcuni casi, questo potrebbe essere memorizzato nella cache e non verrà visualizzato un messaggio che richiede l'immissione delle credenziali. In altri casi, verrà richiesto di fornire le credenziali.
+
+Se l'organizzazione non ha un account basato sul cloud (per Office 365 o Azure) e non usa una versione locale equivalente (AD RMS), è possibile richiedere un account gratuito che accetterà le credenziali in modo da permettere l'apertura dei file protetti tramite Rights Management:
+
+-   Per richiedere questo account, fare clic sul collegamento per richiedere [RMS per utenti singoli](http://go.microsoft.com/fwlink/?LinkId=309469).
+    
+    Quando si effettua l'iscrizione, utilizzare l'indirizzo di posta elettronica della società anziché un indirizzo di posta elettronica personale. Se si esegue l'iscrizione perché è stato inviato un allegato protetto tramite posta elettronica, utilizzare lo stesso indirizzo di posta elettronica utilizzato per inviare il messaggio di posta elettronica.
+    
+-   Per ulteriori informazioni, vedere [RMS per utenti singoli e Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
 ## <a name="to-view-and-use-a-protected-file"></a>Visualizzare e usare un file protetto
 
-1. Aprire il file protetto (ad esempio, facendo doppio clic sul file o sull'allegato oppure facendo clic sul collegamento al file). Se viene chiesto di selezionare un'app, selezionare l'app **visualizzatore Azure Information Protection (anteprima)**. 
+1. Aprire il file protetto (ad esempio, facendo doppio clic sul file o sull'allegato oppure facendo clic sul collegamento al file). Se viene chiesto di selezionare un'app, selezionare l'app **Visualizzatore Azure Information Protection**. 
 
 2. Se viene visualizzata una pagina di **accesso** o **iscrizione**: fare clic su **Accedi** e immettere le credenziali. Se il file protetto è stato inviato come allegato, assicurarsi di specificare lo stesso indirizzo di posta elettronica usato per l'invio del file.
     
-    Se l'account specificato non viene accettato, vedere la nota nella parte superiore della pagina. Iscriversi per un account gratuito e tornare a queste istruzioni.
+    Se l'account specificato non viene accettato, vedere la sezione [Richieste di autorizzazione](#prompts-for-authentication) in questa pagina. Iscriversi per un account gratuito e tornare a queste istruzioni.
 
 3. Una versione di sola lettura del file viene aperta nel **visualizzatore Azure Information Protection**. Se si hanno autorizzazioni sufficienti, è possibile stampare il file e modificarlo. 
 
@@ -60,12 +74,9 @@ Quando il [client di Azure Information Protection viene installato nel computer 
 
 
 ## <a name="other-instructions"></a>Altre istruzioni
-Per le istruzioni d'uso, vedere le sezioni seguenti della Guida per l'utente di Azure Information Protection:
+Ulteriori procedure nella Guida per l'utente di Azure Information Protection:
 
 -   [Per saperne di più](client-user-guide.md#what-do-you-want-to-do)
 
 
-
-<!--HONumber=Dec16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

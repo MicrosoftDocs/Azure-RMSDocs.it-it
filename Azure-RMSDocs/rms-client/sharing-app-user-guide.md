@@ -1,10 +1,10 @@
 ---
-title: Guida dell&quot;utente dell&quot;applicazione Rights Management sharing | Azure Information Protection
+title: Guida dell&quot;utente dell&quot;app RMS sharing - AIP
 description: L&quot;applicazione Microsoft Rights Management (RMS) sharing per Windows consente di proteggere le immagini e i documenti importanti da persone che non devono essere visualizzati, anche se vengono spediti per posta elettronica o salvati in un altro dispositivo.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: eaf6d02c-aa36-4915-856e-49bb71ab1484
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: d6c88b1b9bc53dddea000ecff65abb73d06eb7ee
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 439b97bd6a23789b6729e2dc5b62777450f4cb63
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -22,6 +23,9 @@ ms.openlocfilehash: d6c88b1b9bc53dddea000ecff65abb73d06eb7ee
 # <a name="rights-management-sharing-application-user-guide"></a>Guida dell'utente dell'applicazione Rights Management sharing
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+
+> [!IMPORTANT]
+> **Notifica di fine del supporto**: l'applicazione di condivisione Rights Management per Windows verrà sostituita dal [client Azure Information Protection](aip-client.md). Il supporto per questa applicazione precedente terminerà il 31 gennaio 2018. 
 
 L'applicazione Microsoft Rights Management (RMS) sharing per Windows consente di proteggere le immagini e i documenti importanti da persone che non devono essere visualizzarli, anche se vengono inviati tramite posta elettronica o salvati in un altro dispositivo. È anche possibile eseguire questa applicazione per aprire e usare i file protetti da altri utenti tramite la stessa tecnologia di protezione Rights Management.
 
@@ -63,11 +67,7 @@ Rendering PDF con tecnologia Foxit ¹. Copyright © 2003-2014, Foxit Corporation
 
 - [Specificare le impostazioni nella finestra di dialogo](sharing-app-dialog-box.md)
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
 
 

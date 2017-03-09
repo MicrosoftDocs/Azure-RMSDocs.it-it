@@ -1,10 +1,10 @@
 ---
-title: Guida dell&quot;amministratore dell&quot;applicazione Rights Management sharing | Azure Information Protection
+title: Guida dell&quot;amministratore dell&quot;applicazione RMS sharing - AIP
 description: Istruzioni e informazioni per gli amministratori in una rete aziendale che sono responsabili della distribuzione dell&quot;applicazione Microsoft Rights Management sharing per Windows.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/11/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: c9a5bcf46597ee65e2e0f36199f19935f8997048
-ms.openlocfilehash: adab568d173845f411fe5913786b137508485ef6
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: ee9d92752bb2839df859d01e80d3b0ecaeb678f9
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -24,6 +25,8 @@ ms.openlocfilehash: adab568d173845f411fe5913786b137508485ef6
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
+> [!IMPORTANT]
+> **Notifica di fine del supporto**: l'applicazione di condivisione Rights Management per Windows verrà sostituita dal [client Azure Information Protection](aip-client.md). Il supporto per questa applicazione precedente terminerà il 31 gennaio 2018. 
 
 Usare le informazioni seguenti se l'utente è responsabile dell'applicazione Microsoft Rights Management sharing in una rete aziendale o se si vogliono informazioni più tecniche rispetto a quelle presenti in [Guida dell'utente dell'applicazione Rights Management sharing](sharing-app-user-guide.md) o [Domande frequenti sull'applicazione Microsoft Rights Management sharing per Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
@@ -169,7 +172,7 @@ Per verificare l'esito positivo, vedere la sezione [Verificare l'esito positivo 
 
 Per verificare l'esito positivo, vedere la sezione [Verificare l'esito positivo dell’installazione](#verifying-installation-success) di questo articolo.
 
-### <a name="to-install-the-rms-sharing-application-and-office-addin-only"></a>Per installare solo l'applicazione RMS sharing e il componente aggiuntivo di Office
+### <a name="to-install-the-rms-sharing-application-and-office-add-in-only"></a>Per installare solo l'applicazione RMS sharing e il componente aggiuntivo di Office
 
 1.  Installare il client AD RMS e l'applicazione di condivisione RMS tramite il comando seguente e specificando una cartella esistente per la creazione del file di log:
 
@@ -267,13 +270,13 @@ Per verificare l'esito positivo, vedere la sezione [Verificare l'esito positivo 
 
     -   [HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSDRM\ServiceLocation\Activation]
 
-        @="&lt;URL certificazione&gt;"
+        @="&lt;certification url&gt;"
 
     -   [HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM]
 
         DefaultUser="&lt;default_user&gt;"
 
-### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-addin-only"></a>Per verificare l'esito positivo dell'installazione solo per l'applicazione RMS sharing e il componente aggiuntivo di Office
+### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-add-in-only"></a>Per verificare l'esito positivo dell'installazione solo per l'applicazione RMS sharing e il componente aggiuntivo di Office
 
 1.  Per verificare l'esito positivo del comando Setup_ipviewer.exe, cercare il testo seguente nel file di log di installazione: **Installazione riuscita o stato di errore: 0**
 
@@ -310,7 +313,7 @@ Non tutti i comandi di installazione necessari per tali distribuzioni supportano
         x86\setup_ipviewer.exe /uninstall /quiet
         ```
 
-### <a name="to-uninstall-the-office-addin"></a>Per disinstallare il componente aggiuntivo di Office
+### <a name="to-uninstall-the-office-add-in"></a>Per disinstallare il componente aggiuntivo di Office
 
 -   Usare i seguenti comandi:
 
@@ -404,9 +407,5 @@ Se non si apporta questa modifica al Registro di sistema, gli utenti potrebbero 
 ## <a name="next-steps"></a>Passaggi successivi
 Per informazioni tecniche aggiuntive, inclusa la spiegazione della differenza tra i livelli di protezione (nativi e generici), i tipi di file supportati, le estensioni del nome dei file e la modalità di modifica del livello di protezione predefinito, vedere [Panoramica tecnica dell'applicazione Rights Management sharing](sharing-app-admin-guide-technical.md).
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

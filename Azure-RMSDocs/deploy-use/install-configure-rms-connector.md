@@ -1,10 +1,10 @@
 ---
-title: Installazione e configurazione del connettore di Azure Rights Management | Azure Information Protection
+title: Installare e configurare il connettore di Rights Management - AIP
 description: Informazioni sull&quot;installazione e la configurazione del connettore Azure Rights Management (RMS). Queste procedure illustrano i passaggi da 1 a 4 di Distribuzione del connettore di Azure Rights Management.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: babd3b14cba61aa49cb448c1d132b279dc9ad5da
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 365d4a661a26e687da0445d9c31c644ed9d3ca12
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -240,7 +241,4 @@ Se non sono stati già scaricati questi file, è possibile farlo dall' [Area dow
 ## <a name="next-steps"></a>Passaggi successivi
 Dopo l’installazione e la configurazione del connettore RMS, è possibile configurare i server locali per l'uso del connettore stesso. Passare a [Configurazione dei server per il connettore di Azure Rights Management](configure-servers-rms-connector.md).
 
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -1,10 +1,10 @@
 ---
-title: "Modalità di controllo da parte degli amministratori degli account creati per RMS per utenti singoli | Azure Information Protection"
+title: Controllare gli account creati per RMS per utenti singoli - AIP
 description: "Informazioni su come è possibile controllare gli account utente in Azure Active Directory se non si vuole convertire la sottoscrizione di RMS per utenti singoli dell&quot;organizzazione in una sottoscrizione a pagamento."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a83880d0-f0f9-4a32-9e00-2f6635d7cc8d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: f9999db44758251f7b9b4c8f86549b1ee36e83d3
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: ff8cd150ce438a7b9ad5203dfb6d9d01c1a0d85a
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -45,8 +46,4 @@ Per controllare gli account utente nella directory di Azure o impedire agli uten
 
 Come è possibile determinare se gli utenti, anziché gli amministratori, hanno creato i propri account in Azure Active Directory per RMS per utenti singoli?  Vedere [Come determinare se gli utenti hanno effettuato l'iscrizione per RMS per utenti singoli](rms-for-individuals-identify-sign-up.md).
 
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

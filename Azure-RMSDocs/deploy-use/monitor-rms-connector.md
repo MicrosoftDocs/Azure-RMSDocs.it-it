@@ -1,10 +1,10 @@
 ---
-title: Monitorare il connettore di Azure Rights Management | Azure Information Protection
+title: Monitorare il connettore di Rights Management - AIP
 description: Informazioni su come monitorare il connettore e l&quot;uso da parte dell&quot;organizzazione del servizio Azure Rights Management di Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: e5939bb469af198a74d81724c5417eb63db7732b
-ms.openlocfilehash: bf73a79218fa8dba2b90115d0c1573a29f791023
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3d9f2e20abe0a4abce3220d53d6373d9c2baf8ee
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -84,7 +85,7 @@ Informazione **1004**
 
 **L'elenco degli account autorizzati è stato aggiornato.**
 
-Questo evento viene registrato quando il connettore RMS ha scaricato un elenco aggiornato di account (account esistenti e le eventuali modifiche) autorizzati a usare il connettore RMS. Questo elenco viene scaricato ogni 15 minuti, a condizione che il connettore RMS riesca a comunicare con il servizio Azure Rights Management.
+Questo evento viene registrato quando il connettore RMS ha scaricato un elenco aggiornato di account (account esistenti e le eventuali modifiche) autorizzati a usare il connettore RMS. Questo elenco viene scaricato ogni&15; minuti, a condizione che il connettore RMS riesca a comunicare con il servizio Azure Rights Management.
 
 ----
 
@@ -192,9 +193,5 @@ Se si vuole eseguire una registrazione più dettagliata a scopo di diagnosi, è 
 
 5.  Una volta acquisite le tracce necessarie, ripristinare la riga nel passaggio 3, quindi arrestare e riavviare IIS.
 
-
-
-
-<!--HONumber=Nov16_HO5-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

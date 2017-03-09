@@ -1,10 +1,10 @@
 ---
-title: Supporto dei dispositivi client per la protezione dati | Azure Information Protection
+title: Supporto dei dispositivi client per la protezione dei dati - AIP
 description: Identificare i dispositivi che supportano il servizio Azure Rights Management di Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/06/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 93f8021d-43c5-47fe-ad63-8a1bacff9971
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 587aaff16ce57cd39ce5dc7eb30fd21f37442cda
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f560ce654c611a885b54d9609405fb4b1bf7af1d
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -44,9 +45,11 @@ I seguenti sistemi operativi per dispositivi mobili supportano il servizio Azure
 
 -   **Windows Phone**: Windows Phone 8.1
 
--   **Telefoni e tablet Android**: la versione minima di Android è 4.0.3
+-   **Telefoni e tablet Android**: la versione minima di Android è 4.4
 
 -   **iPhone e iPad**: la versione minima di iOS è 7.0
+     
+    Eccezione: il client di Azure Information Protection per iOS e Android supporta iOS 8 come versione minima.
 
 -   **Tablet Windows**: Windows 10 Mobile e Windows 8.1 RT
 
@@ -54,9 +57,5 @@ I seguenti sistemi operativi per dispositivi mobili supportano il servizio Azure
 ## <a name="next-steps"></a>Passaggi successivi
 Per verificare gli altri requisiti, vedere [Requisiti per Azure Information Protection](requirements-azure-rms.md).
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

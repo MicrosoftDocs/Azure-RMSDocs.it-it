@@ -1,10 +1,10 @@
 ---
-title: Configurazione di applicazioni per il servizio Azure Rights Management | Azure Information Protection
+title: Configurazione di applicazioni per Azure Rights Management - AIP
 description: Istruzioni che consentono agli amministratori di configurare applicazioni e servizi per supportare il servizio di protezione Azure Rights Management per Azure Information Protection. Ad esempio, le applicazioni di Office quali Word 2013 e Word 2010 e i servizi come Exchange Online (le regole di trasporto, la prevenzione della perdita di dati, l&quot;opzione Non inoltrare e la crittografia messaggi) e SharePoint Online (librerie protette).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: c4b510dac964d0703b7eba8266a244f40b83f403
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 8161315fcb3c3beb40b5273db799a5a3f37e4a7e
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -26,9 +27,9 @@ ms.openlocfilehash: c4b510dac964d0703b7eba8266a244f40b83f403
 > [!NOTE]
 > Queste informazioni sono destinate agli amministratori e ai consulenti IT che hanno distribuito Azure Information Protection. Per informazioni su come usare la funzionalità Rights Management per una specifica applicazione o aprire un file protetto da diritti, vedere la guida e le informazioni aggiuntive fornite con l'applicazione.
 >
-> Ad esempio, per le applicazioni Office fare clic sull'icona della Guida e immettere i termini di ricerca, ad esempio **Rights Management** o **IRM**. Per l'applicazione RMS sharing per Windows, vedere la [Guida dell'utente dell'applicazione Rights Management sharing](../rms-client/sharing-app-user-guide.md).
+> Ad esempio, per le applicazioni Office fare clic sull'icona della Guida e immettere i termini di ricerca, ad esempio **Rights Management** o **IRM**. Per il client Azure Information Protection per Windows, vedere la [Guida per l'utente del client Azure Information Protection](../rms-client/client-user-guide.md).
 
-Dopo avere distribuito Azure Information Protection per l'organizzazione, usare le informazioni seguenti per configurare applicazioni e servizi per il supporto del servizio Azure Rights Management di Azure Information Protection. Sono incluse le applicazioni di Office quali Word 2013 e Word 2010 e i servizi come Exchange Online (le regole di trasporto, la prevenzione della perdita di dati, l'opzione Non inoltrare e la crittografia messaggi) e SharePoint Online (librerie protette). Per informazioni sul supporto di Rights Management da parte di queste applicazioni e di questi servizi, vedere [Supporto del servizio Azure Rights Management da parte delle applicazioni](../understand-explore/applications-support.md).
+Dopo avere distribuito Azure Information Protection per l'organizzazione, usare le informazioni seguenti per configurare le applicazioni, il client Azure Information Protection e i servizi. Ad esempio, le applicazioni di Office come Word 2016, Word 2013 e Word 2010 e i servizi come Exchange Online (regole di trasporto, prevenzione della perdita dei dati, opzione Non inoltrare e Message Encryption) e SharePoint Online (librerie protette). Per informazioni su come questi servizi e applicazioni supportano il servizio di protezione dei dati di Azure Information Protection, vedere [Supporto del servizio Azure Rights Management da parte delle applicazioni](../understand-explore/applications-support.md).
 
 > [!IMPORTANT]
 > Per informazioni sulle versioni supportate e altri requisiti, vedere [Requisiti per Azure Rights Management](../get-started/requirements-azure-rms.md).
@@ -45,11 +46,9 @@ Dopo avere distribuito Azure Information Protection per l'organizzazione, usare 
 
     -   [Office 2010](configure-office-apps.md#office-2010)
 
+-   [Client Azure Information Protection: installazione e configurazione dei client](configure-sharing-app.md)
+
 -   [Applicazione Rights Management sharing: installazione e configurazione dei client](configure-sharing-app.md)
-
-    -   [Applicazione RMS sharing per Windows: installazione e configurazione](configure-sharing-app.md#the-rms-sharing-application-for-windows-installation-and-configuration)
-
-    -   [Applicazione RMS sharing per piattaforme mobili: installazione e gestione](configure-sharing-app.md#the-rms-sharing-application-for-mobile-platforms-installation-and-management)
 
 
 Per configurare server locali quali Exchange Server e SharePoint Server, vedere l'articolo relativo alla [distribuzione del connettore Azure Rights Management](deploy-rms-connector.md).
@@ -71,10 +70,6 @@ Dopo aver configurato le applicazioni per il supporto del servizio Azure Rights 
 
 - [Operazioni relative alla chiave del tenant di Azure Information Protection](operations-tenant-key.md)
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

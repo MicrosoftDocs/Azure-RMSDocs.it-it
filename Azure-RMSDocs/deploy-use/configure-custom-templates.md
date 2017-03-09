@@ -1,10 +1,10 @@
 ---
-title: Configurazione di modelli personalizzati per il servizio Azure Rights Management | Azure Information Protection
+title: Configurare modelli personalizzati per Azure RMS - AIP
 description: Informazioni e istruzioni per gli amministratori per configurare e gestire i modelli dei diritti di utilizzo. I modelli semplificano, per utenti e amministratori, l&quot;applicazione ai file riservati di criteri che limitano l&quot;accesso agli utenti autorizzati.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: ea64bd17994a9ce38ed0d758ec63156a7f64c732
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 0818f8e65f2065e70ef66732819d21aa85c912fa
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -37,7 +38,7 @@ Dopo l'[attivazione ](activate-service.md) del servizio Azure Rights Management,
 
     -   Autorizzazioni specifiche: Visualizza contenuto, Salva file, Modifica contenuto, Visualizza diritti assegnati, Consenti macro, Inoltra, Rispondi, Rispondi a tutti
 
-Inoltre, l'[applicazione RMS sharing](../rms-client/sharing-app-windows.md) consente agli utenti di definire il proprio set di autorizzazioni. Per il client di Outlook e Outlook Web Access, gli utenti possono selezionare l'opzione [Non inoltrare](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails).
+Il [client Azure Information Protection](../rms-client/aip-client.md) consente inoltre agli utenti di definire set di autorizzazioni personalizzati. Per il client di Outlook e Outlook Web Access, gli utenti possono selezionare l'opzione [Non inoltrare](../deploy-use/configure-usage-rights.md#do-not-forward-option-for-emails).
 
 Per molte organizzazioni, i modelli predefiniti potrebbero essere sufficienti. È tuttavia possibile creare modelli personalizzati di criteri per i diritti d'uso, se lo si desidera. È possibile decidere di creare un modello personalizzato per diversi motivi, tra cui i seguenti:
 
@@ -63,10 +64,6 @@ Per configurare e usare i modelli personalizzati, usare le informazioni seguenti
 
 -   [Usare PowerShell per gestire i modelli](configure-templates-with-powershell.md)
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

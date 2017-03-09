@@ -1,10 +1,10 @@
 ---
-title: Scenario - Scambiarsi informazioni con privilegi tra dirigenti | Azure Information Protection
+title: Scenario AIP - Scambiarsi informazioni con privilegi tra dirigenti
 description: "Questo scenario e la documentazione di supporto per l&quot;utente usano la tecnologia di protezione Azure Rights Management affinché i dirigenti possano scambiarsi in modo sicuro messaggi e allegati tramite posta elettronica e i criteri limitino automaticamente l&quot;accesso ai dirigenti senza che sia necessario alcun intervento da parte loro."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: c8c460549df34a746b21f57aa890a52571bf2061
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 1407a7bee800fec0ba8498d0439586378003ed54
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="scenario-executives-securely-exchange-privileged-information"></a>Scenario - Scambiarsi informazioni con privilegi tra dirigenti
+# <a name="scenario---executives-securely-exchange-privileged-information"></a>Scenario - Scambiarsi informazioni con privilegi tra dirigenti
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -124,15 +125,11 @@ Da questo momento, ogni volta che si inviano messaggi di posta elettronica a un 
 
 Si noti che se si desidera che altri utenti non dirigenti di VanArsdel possano leggere e modificare le informazioni contenute in questi messaggi di posta elettronica, è necessario inviarle separatamente. In alternativa, per eseguire l'override della protezione automatica, digitare le lettere **DNP** (come abbreviazione di Non proteggere) all'interno dell'oggetto del messaggio di posta elettronica.
 
-Quando si inviano informazioni aziendali riservate a un altro dirigente di VanArsdel, ricordarsi di inviarle al relativo indirizzo di posta elettronica (*nome*@vanarsdelltd.com)) dell'ufficio e non a un indirizzo personale.
+Quando si inviano informazioni aziendali riservate a un altro dirigente di VanArsdel, ricordarsi di inviarle al relativo indirizzo di posta elettronica (*nome*@vanarsdelltd.com) dell'ufficio e non a un indirizzo personale.
 
 **Serve assistenza?**
 
 -   Contattare il supporto tecnico: helpdesk@vanarsdelltd.com
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

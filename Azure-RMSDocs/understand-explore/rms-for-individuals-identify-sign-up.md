@@ -1,10 +1,10 @@
 ---
-title: Come determinare se gli utenti hanno effettuato l&quot;iscrizione a RMS per utenti singoli | Azure Information Protection
+title: Determinare se gli utenti hanno effettuato l&quot;iscrizione a RMS per utenti singoli - AIP
 description: "Per sapere se un utente si è iscritto per ottenere RMS per utenti singoli, È possibile usare uno qualsiasi o una combinazione dei metodi descritti in questo articolo."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/24/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a36c3d99-a794-4f7a-aafb-64a950f1fcf9
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: b9979d48af7146f8021de840248f71cb1399b777
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: e696bf596255b5e28aa5589cfc18715f100c5b07
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -28,15 +29,10 @@ Per sapere se un utente si è iscritto per ottenere RMS per utenti singoli, un a
 
 -   Chiedere agli utenti in che modo proteggono i file riservati, in particolar modo quando collaborano con altre persone all'esterno dell'organizzazione.
 
--   Quando è disponibile una sottoscrizione di Azure per l'organizzazione, usare il cmdlet [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) per verificare se **RIGHTSMANAGEMENT_ADHOC** viene restituito come una delle sottoscrizioni. Se restituito, si tratta di RMS per le singole sottoscrizioni concesse all'organizzazione, con un pool di unità attive disponibili per permettere agli utenti di usare il processo di iscrizione self-service.
+-   Quando si ha una sottoscrizione di Azure per l'organizzazione, usare il cmdlet [Get-MsolAccountSku](https://msdn.microsoft.com/library/azure/dn194118.aspx) per verificare se agli utenti è assegnata la licenza **RIGHTSMANAGEMENT_ADHOC**. Questa licenza è associata alla sottoscrizione di RMS per utenti singoli concessa all'organizzazione, con un pool di unità attive disponibili per permettere agli utenti di usare il processo di iscrizione self-service.
 
--   Usare una soluzione di gestione di sistema, ad esempio System Center Configuration Manager, per tenere traccia del software installato e di quello in uso. L'applicazione Rights Management sharing viene eseguita tramite il programma **ipviewer.exe** ed è possibile [scaricare e installare l'applicazione](http://go.microsoft.com/fwlink/?LinkId=303970) gratuitamente per identificare altre caratteristiche dell'applicazione che è possibile usare a scopo di inventario del software.
+-   Usare una soluzione di gestione di sistema, ad esempio System Center Configuration Manager, per tenere traccia del software installato e di quello in uso. Cercare, ad esempio, **MSIP.App.exe**, usato dal client Azure Information Protection, e **ipviewer.exe** per l'applicazione di condivisione Rights Management. È possibile scaricare e installare questo client e questa applicazione gratuitamente, per identificare altre caratteristiche da usare per l'inventario software.
 
--   Prestare attenzione alle estensioni dei nomi di file creati dall'applicazione Rights Management sharing. Le estensioni .pfile e .ppdf sono gli esempi più evidenti, ma esistono altri file la cui estensione viene modificata quando sono protetti in modalità nativa con il servizio Rights Management. Per altre informazioni, vedere la sezione [Tipi ed estensioni di file supportati](../rms-client/sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) nella [Guida dell'amministratore dell'applicazione Rights Management sharing](http://technet.microsoft.com/library/dn339003.aspx).
+-   Prestare attenzione alle estensioni di file create dal client Azure Information Protection o dall'applicazione di condivisione Rights Management. Le estensioni .pfile e .ppdf sono gli esempi più evidenti, ma esistono altri file la cui estensione viene modificata quando sono protetti in modalità nativa con il servizio Rights Management. Per altre informazioni, vedere la sezione [Tipi di file supportati per la protezione](../rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection) nella Guida dell'amministratore del client Azure Information Protection.
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

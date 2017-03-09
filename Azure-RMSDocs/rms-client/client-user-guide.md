@@ -1,20 +1,20 @@
 ---
-title: Guida per l&quot;utente di Azure Information Protection | Azure Information Protection
+title: Guida per l&quot;utente di Azure Information Protection
 description: Il client di Azure Information Protection per Windows consente di proteggere i documenti e i messaggi di posta elettronica importanti dagli utenti che non sono autorizzati a visualizzarli, anche se il messaggio di posta elettronica viene inoltrato o se il documento viene salvato in un altro percorso.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2cf46bf9-7d23-4f49-b5c1-7ed7b71c858f
-ms.reviewer: esaggese
+ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 1107f484f204e64d76c389daef4d9decbfbb20e8
-ms.openlocfilehash: 467109cedb0318b89efb67b565b1c0e604019eb5
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3facc7898e048af6f715410c73c43309419bf957
 
 
 ---
@@ -23,13 +23,10 @@ ms.openlocfilehash: 467109cedb0318b89efb67b565b1c0e604019eb5
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 
-**[Questa versione del client è in anteprima e soggetta a modifiche].**
-
 Il client di Azure Information Protection per Windows consente di proteggere i documenti e i messaggi di posta elettronica importanti dagli utenti che non sono autorizzati a visualizzarli, anche se il messaggio di posta elettronica viene inoltrato o se il documento viene salvato in un altro percorso. È anche possibile usare questo client per aprire documenti protetti da altri utenti tramite la tecnologia di protezione Rights Management da Azure Information Protection.
 
 È sufficiente avere un computer che esegua almeno Windows 7 con Service Pack 1. Quindi scaricare e installare questo client gratuito da Microsoft.
 
-In caso di domande per le quali non si trova risposta in questa Guida, vedere il [sito di Azure Information Protection in Yammer](https://www.yammer.com/AskIPTeam). 
 
 ## <a name="what-do-you-want-to-do"></a>Come procedere
 
@@ -41,13 +38,18 @@ In caso di domande per le quali non si trova risposta in questa Guida, vedere il
 
 - [Aprire i file che sono stati protetti](client-view-use-files.md)
 
+- [Rimuovere etichette e protezione da file e messaggi di posta elettronica](client-remove-label-protection.md)
+
+- [Attività eseguite in precedenza con l'applicazione RMS sharing](upgrade-client-app.md)
 
 
+> [!NOTE]
+> Per altre informazioni tecniche, gli amministratori responsabili del client Azure Information Protection in una rete aziendale, possono vedere la [Guida dell'amministratore del client Azure Information Protection](client-admin-guide.md). 
 
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
-
-<!--HONumber=Dec16_HO1-->
+<!--HONumber=Feb17_HO4-->
 
 

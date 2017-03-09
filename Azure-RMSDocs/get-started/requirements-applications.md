@@ -1,10 +1,10 @@
 ---
-title: Supporto delle applicazioni per la protezione dati | Azure Information Protection
+title: Supporto delle applicazioni per la protezione dei dati RMS - AIP
 description: Identificare le applicazioni che usano le API di RMS per il supporto nativo del servizio Azure Rights Management di Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/14/2016
+ms.date: 02/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4ffe5949c080073f8acaadd7780b2c68b4b155f8
-ms.openlocfilehash: 1381a93b3a4f262c1747fa136467132137421ecb
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: d8a3c8a054412280df341edd4078294c3e05979e
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -33,16 +34,16 @@ Se non diversamente indicato, le funzionalità supportate sono valide sia per Az
 
 Informazioni sulle colonne della tabella:
 
--   **PDF protetto**: file caratterizzati dall'estensione ppdf e creati automaticamente quando si usa l'applicazione RMS sharing per condividere file di Office e file PDF tramite posta elettronica. L'applicazione RMS sharing, l'app Azure Information Protection per iOS e Android e il client di Azure Information Protection per Windows (anteprima) includono un lettore per i file PDF protetti. Se in precedenza sono stati creati file PDF protetti tramite Azure RMS o AD RMS, per continuare a leggere questi file su dispositivi Windows, iOS e Android, è possibile usare Foxit Reader e Nitro Pro.
+-   **PDF protetto**: file caratterizzati dall'estensione ppdf e creati automaticamente quando si usa l'applicazione RMS sharing per condividere file di Office e file PDF tramite posta elettronica. L'applicazione RMS sharing, l'app Azure Information Protection per iOS e Android e il client Azure Information Protection per Windows includono un lettore per i file PDF protetti. Se in precedenza sono stati creati file PDF protetti tramite Azure RMS o AD RMS, per continuare a leggere questi file su dispositivi Windows, iOS e Android, è possibile usare Foxit Reader e Nitro Pro.
 
 -   **Posta elettronica**: i client di posta elettronica elencati possono proteggere il messaggio di posta elettronica stesso, proteggendo quindi automaticamente eventuali file allegati. In questo scenario la funzionalità di anteprima del client può visualizzare il contenuto protetto (messaggio e allegato) ai destinatari autorizzati. Se tuttavia un messaggio di posta elettronica non è protetto ma l'allegato è protetto, la funzionalità di anteprima del client non potrà visualizzare l'allegato protetto ai destinatari autorizzati.
 
--   **Altri tipi di file**: file di testo e di immagine con estensioni quali txt, xml, jpg e jpeg. L'estensione cambia dopo che i file vengono protetti in modo nativo da Rights Management e diventano di sola lettura. I file che non possono essere protetti in modo nativo, dopo essere stati protetti in modo generico da Rights Management hanno un'estensione di tipo pfile. Per altre informazioni, vedere [Guida dell'amministratore dell'applicazione Rights Management sharing](../rms-client/sharing-app-admin-guide.md).
+-   **Altri tipi di file**: file di testo e di immagine con estensioni quali txt, xml, jpg e jpeg. L'estensione cambia dopo che i file vengono protetti in modo nativo da Rights Management e diventano di sola lettura. I file che non possono essere protetti in modo nativo, dopo essere stati protetti in modo generico da Rights Management hanno un'estensione di tipo pfile. Per altre informazioni, vedere [Tipi di file supportati](../rms-client/client-admin-guide-file-types.md) nella Guida dell'amministratore del client Azure Information Protection.
 
 
 |**Sistema operativo dispositivo**|Word, Excel, PowerPoint|PDF protetto|Posta elettronica|Altri tipi di file|
 |-------------------------------|---------------------------|-----------------|---------|--------------------|
-|**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />App Office Mobile (solo Azure RMS) [[1]](#footnote-1)<br /><br />Office Online [[2]](#footnote-2)|Client di Azure Information Protection per Windows (anteprima)<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />App di condivisione RMS|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Outlook Web App (OWA) [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4)|Client di Azure Information Protection per Windows (anteprima): testo, immagini, pfile<br /><br />Applicazione RMS sharing per Windows: testo, immagini, pfile<br /><br />Plug-in SealPath RMS per AutoCAD [[8]](#footnote-8): .dwg<br />|
+|**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />App Office Mobile (solo Azure RMS) [[1]](#footnote-1)<br /><br />Office Online [[2]](#footnote-2)|Client Azure Information Protection per Windows <br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />App di condivisione RMS|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Outlook Web App (OWA) [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4)|Client Azure Information Protection per Windows: testo, immagini, pfile<br /><br />Applicazione RMS sharing per Windows: testo, immagini, pfile<br /><br />Plug-in SealPath RMS per AutoCAD [[8]](#footnote-8): .dwg<br />|
 |**iOS**|Office per iPad e iPhone [[5]](#footnote-5)<br /><br />Office Online [[2]](#footnote-2)<br /><br />TITUS Docs|App Azure Information Protection [[1]](#footnote-1)<br /><br /> Foxit Reader<br /><br />TITUS Docs|App Azure Information Protection [[1]](#footnote-1)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook per iPad e iPhone [[4]](#footnote-4)<br /><br />OWA per iOS [[3]](#footnote-3)<br /><br />TITUS Mail|App Azure Information Protection [[1]](#footnote-1): testo, immagini<br /><br />TITUS Docs: pfile|
 |**Android**|GigaTrust App for Android<br /><br />Office Online [[2]](#footnote-2)<br /><br />Office Mobile (solo Azure RMS) [[1]](#footnote-1)|App Azure Information Protection [[1]](#footnote-1)<br /><br />GigaTrust App for Android<br /><br />Foxit Reader<br /><br />App RMS sharing [[1]](#footnote-1)|9Folders [[4]](#footnote-4)<br /><br />App Azure Information Protection [[1]](#footnote-1)<br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook per Android [[4]](#footnote-4)<br /><br />OWA per Android [[3]](#footnote-3) e [[7]](#footnote-7)<br /><br />Samsung Email (S3 e versioni successive) [[7]](#footnote-7)<br /><br />Classificazione TITUS per dispositivi mobili|App Azure Information Protection [[1]](#footnote-1): testo, immagini|
 |**OS X**|Office 2011 (solo AD RMS)<br /><br />Office 2016 per Mac<br /><br />Office Online [[2]](#footnote-2)|Foxit Reader<br /><br />App RMS sharing [[1]](#footnote-1)|Outlook 2011 (solo AD RMS)<br /><br />Outlook 2016 per Mac<br /><br />Outlook per Mac|App RMS sharing [[1]](#footnote-1): testo, immagini, pfile|
@@ -76,7 +77,7 @@ Per altre informazioni, vedere la [documentazione del prodotto Citrix per WorxMa
 Per altre informazioni, vedere il post sul blog di Office relativo a [OWA per Android ora disponibile su dispositivi specifici](http://blogs.office.com/2014/06/11/owa-for-android-now-available-on-select-devices/)
 
 ###### <a name="footnote-8"></a>Nota 8
-Per altre informazioni, vedere il post seguente nel blog di Enterprise and Mobility: [SealPath offre protezione RMS per AutoCAD: (https://blogs.technet.microsoft.com/enterprisemobility/2015/09/08/sealpath-brings-rms-protection-to-autocad/)
+Per altre informazioni, vedere il post seguente nel blog di Enterprise and Mobility: [SealPath brings RMS protection to AutoCAD](https://blogs.technet.microsoft.com/enterprisemobility/2015/09/08/sealpath-brings-rms-protection-to-autocad/) (SealPath offre protezione RMS per AutoCAD)
 
 
 ## <a name="more-information-about-azure-rms-support-for-office"></a>Altre informazioni sul supporto di Azure RMS per Office
@@ -95,7 +96,7 @@ Tutte le edizioni di Office, ad eccezione di Office 2007, possono utilizzare il 
 
 Azure RMS con Office Professional Plus 2010 oppure Office Professional 2010:
 
-- Richiede l'applicazione Rights Management sharing per Windows
+- Richiede il client Azure Information Protection per Windows o l'applicazione di condivisione Rights Management per Windows
 
 - Non supportato in Windows 10
 
@@ -110,28 +111,34 @@ Se i dispositivi iOS e Android sono registrati da Microsoft Intune, è possibile
 Per altre informazioni, vedere [Domande frequenti sull'app Azure Information Protection per iOS e Android](../rms-client/mobile-app-faq.md).
 
 
-## <a name="more-information-about-the-azure-information-protection-client-for-windows-preview"></a>Altre informazioni sul client di Azure Information Protection per Windows (anteprima)
+## <a name="more-information-about-the-azure-information-protection-client-for-windows"></a>Altre informazioni sul client Azure Information Protection per Windows
 
-Questa versione di anteprima del client di Azure Information Protection serve come valutazione e feedback. Sostituirà l'applicazione di condivisione Rights Management per Windows esistente. 
+Questo client sostituisce ora l'applicazione di condivisione Rights Management per Windows. 
 
-Per altre informazioni su questa versione di anteprima del client, vedere l'[annuncio nel post di blog](https://blogs.technet.microsoft.com/enterprisemobility/2016/12/07/azure-information-protection-december-preview-now-available/) e la [Guida per l'utente in anteprima](../rms-client/client-user-guide.md).
+Per altre informazioni, vedere le risorse seguenti:
+
+- [Guida per l'amministratore del client di Azure Information Protection](../rms-client/client-admin-guide.md)
+
+- [Guida per l'utente del client Azure Information Protection](../rms-client/client-user-guide.md)
+
+- [Domande frequenti sull'app Azure Information Protection per iOS e Android](../rms-client/mobile-app-faq.md)
+
+Per scaricare l'app desiderata, fare clic sul collegamento corrispondente nella [pagina di Microsoft Azure Information Protection](http://go.microsoft.com/fwlink/?LinkId=303970).
 
 ## <a name="more-information-about-the-rights-management-sharing-application"></a>Altre informazioni sull'applicazione Rights Management sharing
 
-Per altre informazioni sull'applicazione Rights Management sharing per Windows, vedere le risorse seguenti:
+Questa applicazione verrà sostituita dal client Azure Information Protection. È ancora necessaria per i computer Mac e i dispositivi mobili Windows Phone. 
+
+Per altre informazioni, vedere le risorse seguenti:
 
 -   [Guida dell'amministratore dell'applicazione di condivisione Rights Management](../rms-client/sharing-app-admin-guide.md)
 
 -   [Guida dell'utente dell'applicazione di condivisione Rights Management](../rms-client/sharing-app-user-guide.md)
 
-Per altre informazioni sull'applicazione Rights Management sharing per piattaforme mobili, vedere le risorse seguenti:
-
--   Per scaricare l'applicazione desiderata, fare clic sul collegamento corrispondente nella pagina [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970)
-
 -   [Domande frequenti sull'applicazione di condivisione Microsoft Rights Management per piattaforme mobili](https://technet.microsoft.com/dn451248)
 
-> [!NOTE]
-> L'applicazione RMS sharing per iOS e Android è stata sostituita dall'app Azure Information Protection.
+Per scaricare l'app per computer Mac e per dispositivi Windows Phone, fare clic sul collegamento corrispondente nella [pagina di Microsoft Azure Information Protection](http://go.microsoft.com/fwlink/?LinkId=303970).
+
 
 ## <a name="more-information-about-other-applications-that-support-azure-information-protection"></a>Altre informazioni su ulteriori applicazioni che supportano Azure Information Protection
 
@@ -153,7 +160,7 @@ Le applicazioni chi non sono attualmente supportate da Azure RMS sono le seguen
 
 -   XPS Viewer
  
-L'applicazione RMS sharing prevede inoltre le restrizioni seguenti:
+L'applicazione RMS sharing e il client Azure Information Protection prevedono inoltre le restrizioni seguenti:
 
 -   Per i computer Windows, la versione minima richiesta è Windows 7 Service Pack 1
 
@@ -166,7 +173,4 @@ Per altre informazioni sul supporto di Azure RMS da parte delle applicazioni pi�
 
 Per informazioni sulle modalità di configurazione delle applicazioni più diffuse per Azure RMS, vedere [Configurazione di applicazioni per Azure Rights Management](../deploy-use/configure-applications.md).
 
-
-<!--HONumber=Dec16_HO3-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
