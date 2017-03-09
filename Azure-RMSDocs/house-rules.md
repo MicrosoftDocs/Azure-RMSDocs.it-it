@@ -1,10 +1,10 @@
 ---
-title: Regole interne per i commenti dei clienti nel sito della documentazione Microsoft per Azure Information Protection | Azure Information Protection
+title: Regole interne per i commenti dei clienti - AIP
 description: "Ambito e finalità per i commenti e le note a margine di Livefyre per la documentazione di Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: 4eafbe72-f537-4e66-80ae-d11894d373f7
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 4347e1759c1690436eb37482831c97b93ac8fd5a
-ms.openlocfilehash: 958135678a9b48ca59b3d377439f5cf4b3d1efd7
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 587c4f188603f49605191a15d71180441f16e3c9
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="house-rules-for-customer-comments-on-the-documentation-site-for-azure-information-protection"></a>Regole interne per i commenti dei clienti nel sito della documentazione per Azure Information Protection
+# <a name="house-rules-for-comments-on-the-azure-information-protection-documentation"></a>Regole interne per i commenti nella documentazione di Azure Information Protection
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -40,10 +41,5 @@ Non usare i commenti e le note a margine di Livefyre per quanto segue:
 Altre risorse sono disponibili in [Informazioni e supporto per Azure Information Protection](./get-started/information-support.md). 
 
 Nota: i dipendenti Microsoft dovranno usare i canali di comunicazione interni.
-
-
-
-
-<!--HONumber=Jan17_HO1-->
 
 

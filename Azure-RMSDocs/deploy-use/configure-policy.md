@@ -1,10 +1,10 @@
 ---
-title: Configurazione dei criteri | Azure Information Protection
+title: Configurare i criteri di Azure Information Protection
 description: "Per configurare le funzioni di classificazione, aggiunta di etichette e protezione, è necessario configurare i criteri di Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5d1a5e3b85d5450bcb2064a6c3b95e6ad802eea3
-ms.openlocfilehash: 808f72be7c5b6a1f18a06ecefdfdf7fbf6febff6
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 2510c14fc10411783838516f45fdfd06fd73350d
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -31,7 +32,7 @@ Per configurare i criteri di Azure Information Protection:
 
 2. Passare al pannello **Azure Information Protection**: ad esempio, nel menu hub fare clic su **More services** (Altri servizi) e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
 
-    Verrà quindi visualizzato il pannello di **Azure Information Protection** che apre automaticamente il pannello dei criteri globali di Information Protection assegnati a tutti gli utenti. Contiene gli elementi seguenti che è possibile configurare:
+    Verrà quindi visualizzato il pannello di **Azure Information Protection**, dove è possibile aprire il criterio **Globale** assegnato a tutti gli utenti. È anche possibile aggiungere e modificare i criteri con ambito. Il criterio **Globale** di Azure Information Protection contiene gli elementi seguenti che è possibile configurare:
 
     - Etichette che consentono agli utenti di classificare i documenti e i messaggi di posta elettronica.
 
@@ -67,7 +68,7 @@ Usare le informazioni seguenti per configurare i criteri di Azure Information Pr
 
 - [Come modificare o personalizzare un'etichetta esistente](configure-policy-change-label.md)
 
-- [Come configurare un'etichetta per applicare la protezione](configure-policy-protection.md)
+- [Come configurare un'etichetta per la protezione](configure-policy-protection.md)
 
 - [Come configurare un'etichetta per applicare i contrassegni visivi](configure-policy-markings.md)
 
@@ -79,9 +80,5 @@ Usare le informazioni seguenti per configurare i criteri di Azure Information Pr
 
 Per un esempio di come personalizzare i criteri predefiniti e osservare il comportamento risultante in un'applicazione di Office, seguire l'[Esercitazione introduttiva di Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
-
-
-
-<!--HONumber=Dec16_HO1-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

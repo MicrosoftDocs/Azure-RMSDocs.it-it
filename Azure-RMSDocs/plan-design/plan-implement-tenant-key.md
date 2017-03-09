@@ -1,10 +1,10 @@
 ---
-title: Pianificazione e implementazione della chiave del tenant di Azure Rights Management | Azure Information Protection
+title: Chiave del tenant di Azure Information Protection
 description: "Informazioni per pianificare e gestire la chiave del tenant di Azure Information Protection. Anziché affidare a Microsoft la gestione della chiave del tenant (impostazione predefinita), per rispettare specifici criteri dell&quot;organizzazione può essere necessario gestire autonomamente la propria chiave del tenant. in base alla modalità BYOK (Bring Your Own Key)."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2016
+ms.date: 02/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f0403d85406cc8642654569958e3482a5d991352
-ms.openlocfilehash: 10e51ed108bedc59a66be86b8b27a140f899dd45
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3d2e667f78eeccecb0bd837a9020ff188f67fb50
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -85,8 +86,8 @@ Nella tabella seguente sono elencati i prerequisiti per la modalità BYOK.
 |Requisito|Altre informazioni|
 |---------------|--------------------|
 |Una sottoscrizione che supporta Azure Information Protection.|Per altre informazioni sulle sottoscrizioni disponibili, vedere la [pagina dei piani tariffari](https://go.microsoft.com/fwlink/?LinkId=827589) di Azure Information Protection.|
-|Non si usa RMS per singoli utenti o per Exchange Online. Se si usa Exchange Online, si conoscono e si accettano le limitazioni relative all'uso della modalità BYOK con questa configurazione.|Per altre informazioni sulle restrizioni per la modalità BYOK e sulle limitazioni attuali, vedere [Prezzi e restrizioni della modalità BYOK](byok-price-restrictions.md).<br /><br />**Importante**: attualmente, la modalità BYOK non è compatibile con Exchange Online.|
-|Tutti i prerequisiti elencati per la modalità BYOK nell'insieme di credenziali delle chiavi, inclusa una sottoscrizione di Azure a pagamento o di valutazione. |Vedere [Prerequisiti per la modalità BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) nella documentazione relativa ad Insieme di credenziali delle chiavi di Azure. <br /><br /> La sottoscrizione gratuita di Azure, che fornisce l'accesso per configurare Azure Active Directory e i modelli personalizzati di Azure Rights Management (**Accesso ad Azure Active Directory**), non è sufficiente per usare Insieme di credenziali delle chiavi di Azure. Per verificare se la propria sottoscrizione di Azure può essere utilizzata per la modalità BYOK, usare i cmdlet di PowerShell per [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx): <br /><br /> 1. Avviare una sessione di Azure PowerShell e accedere al proprio account Azure con il comando seguente: `Login-AzureRmAccount`<br /><br />2. Digitare il comando seguente e verificare che siano visualizzati valori per il nome e l'ID della sottoscrizione e per l'ID del tenant e che lo stato sia attivato: `Get-AzureRmSubscription`<br /><br />Se non viene visualizzato alcun valore e viene semplicemente restituito il prompt, non si dispone di una sottoscrizione di Azure che può essere usata per la modalità BYOK. <br /><br />**Nota**: oltre ai prerequisiti per la modalità BYOK, se si esegue la migrazione da AD RMS ad Azure Information Protection passando da una chiave software a una chiave hardware, sarà necessaria almeno la versione 11.62 del firmware Thales.|
+|Non si usa RMS per singoli utenti o per Exchange Online.<br /><br /> Se si usa Exchange Online, si conoscono e si accettano le limitazioni relative all'uso della modalità BYOK con questa configurazione.|Per altre informazioni sulle restrizioni per la modalità BYOK e sulle limitazioni attuali, vedere [Prezzi e restrizioni della modalità BYOK](byok-price-restrictions.md).<br /><br />**Importante**: attualmente, la modalità BYOK non è compatibile con Exchange Online.|
+|Tutti i prerequisiti elencati per la modalità BYOK di Key Vault, inclusa una sottoscrizione di Azure a pagamento o di valutazione per il tenant esistente di Azure Information Protection. |Vedere [Prerequisiti per la modalità BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) nella documentazione relativa ad Insieme di credenziali delle chiavi di Azure. <br /><br /> La sottoscrizione gratuita di Azure, che fornisce l'accesso per configurare Azure Active Directory e i modelli personalizzati di Azure Rights Management (**Accesso ad Azure Active Directory**), non è sufficiente per usare Insieme di credenziali delle chiavi di Azure. Per verificare se la propria sottoscrizione di Azure può essere utilizzata per la modalità BYOK, usare i cmdlet di PowerShell per [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx): <br /><br /> 1. Avviare una sessione di Azure PowerShell con l'opzione **Esegui come amministratore** e accedere come amministratore globale per il tenant di Azure Information Protection con il comando seguente: `Login-AzureRmAccount`<br /><br />2. Digitare il comando seguente e verificare che siano visualizzati valori per il nome e l'ID della sottoscrizione e per l'ID del tenant di Azure Information Protection e che lo stato sia abilitato: `Get-AzureRmSubscription`<br /><br />Se non viene visualizzato alcun valore e viene semplicemente restituito il prompt, non si dispone di una sottoscrizione di Azure che può essere usata per la modalità BYOK. <br /><br />**Nota**: oltre ai prerequisiti per la modalità BYOK, se si esegue la migrazione da AD RMS ad Azure Information Protection passando da una chiave software a una chiave hardware, sarà necessaria almeno la versione 11.62 del firmware Thales.|
 |Il modulo di amministrazione di Azure Rights Management per Windows PowerShell.|Per istruzioni di installazione, vedere [Installazione di Windows PowerShell per Azure Rights Management](../deploy-use/install-powershell.md). <br /><br />Se il modulo Windows PowerShell è stato installato in precedenza, eseguire il comando seguente per verificare che il numero della versione in uso sia almeno **2.5.0.0**: `(Get-Module aadrm -ListAvailable).Version`|
 
 Per altre informazioni sui moduli di protezione hardware Thales e su come vengono usati con Insieme di credenziali delle chiavi di Azure, vedere il [sito Web Thales](https://www.thales-esecurity.com/msrms/cloud).
@@ -141,9 +142,5 @@ Dopo la pianificazione e, se necessario, la generazione della chiave del tenant,
 
     Per altre informazioni, vedere [Operazioni relative alla chiave del tenant di Azure Rights Management](../deploy-use/operations-tenant-key.md).
 
-
-
-
-<!--HONumber=Dec16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

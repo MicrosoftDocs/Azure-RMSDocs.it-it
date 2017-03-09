@@ -1,11 +1,11 @@
 ---
-title: Esercitazione introduttiva, passaggio 5 | Azure Information Protection
-description: Passaggio 5 dell&quot;esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell&quot;organizzazione. L&quot;esecuzione dell&quot;esercitazione richiede circa 30 minuti.
+title: Esercitazione per l&quot;avvio rapido - Passaggio 5 - AIP
+description: 'Passaggio 5 di un&quot;esercitazione introduttiva per provare rapidamente a usare Azure Information Protection: condividere file protetti e tenere traccia del documento.'
 keywords: 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2016
+ms.date: 02/28/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -14,8 +14,9 @@ ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 0a79642c3707be4c8dd75ccc80569ba90da01236
-ms.openlocfilehash: b8b973766852fcace6e070e73fa87072ad4b3524
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: ea34b900855d43cb1458438b1d15a16fd7cf01bf
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -25,67 +26,59 @@ ms.openlocfilehash: b8b973766852fcace6e070e73fa87072ad4b3524
 
 >*Si applica a: Azure Information Protection*
 
-Per questo passaggio finale dell'esercitazione, individuare un documento di Word già creato da inviare a un partner o a un collaboratore. Ai fini di questa esercitazione non è importante l’effettivo contenuto del testo. Verrà tuttavia definito un testo, in modo verificare con maggiore semplicità che il destinatario autorizzato possa leggerlo.
+Per questo passaggio finale dell'esercitazione, individuare un documento di Word o un foglio di calcolo di Excel già creato da inviare a un partner o a un collaboratore. Ai fini di questa esercitazione non è importante l’effettivo contenuto del testo. Verrà tuttavia definito un testo, in modo verificare con maggiore semplicità che il destinatario autorizzato possa leggerlo.
 
 È quindi possibile condividere in modo sicuro il documento tramite posta elettronica. 
 
 ## <a name="to-safely-share-your-document-by-email"></a>Per condividere in modo sicuro il documento tramite posta elettronica
 
-1.  Aprire il documento in Word. Si noterà che l'etichetta predefinita **Interno** viene ancora applicata automaticamente. 
+1. In Esplora file fare clic con il pulsante destro del mouse sul documento e scegliere **Classifica e proteggi**. Verrà visualizzata la finestra di dialogo **Classifica e proteggi - Azure Information Protection**:
 
-2.  Nella scheda **Home**, nel gruppo **RMS**, fare clic su **Condividi file protetto** e quindi scegliere nuovamente **Condividi file protetto** dal menu:
+    ![Esercitazione introduttiva di Azure Information Protection, passaggio 5: comando Classifica e proteggi](../media/classify-protect-dialog.png)
 
-    ![Esercitazione introduttiva di Azure Information Protection, passaggio 5: Condividere i file protetti](../media/share-protected-callout.png)
+2. Selezionare **Proteggi con autorizzazioni personalizzate** per visualizzare opzioni aggiuntive.
 
-    Viene visualizzata la finestra di dialogo **Condividi file protetto**, simile a quella riportata di seguito:
+3. Per **Selezionare le autorizzazioni** mantenere il valore predefinito **Visualizzatore - Solo visualizzazione**.
 
-    ![Esercitazione introduttiva di Azure Information Protection, passaggio 5: Finestra di dialogo Condividi file protetto](../media/example-share-protected-dialog.png)
+    In questo modo i destinatari potranno visualizzare il documento, ma non modificarlo o stamparlo.
 
-3. Nella casella **UTENTI** digitare uno o più indirizzi di posta elettronica aziendali, così come avviene di solito per inviare un documento a un utente con cui l'organizzazione intrattiene relazioni commerciali. In alternativa, è possibile specificare l'indirizzo di posta elettronica di un collaboratore. Assicurarsi di specificare un indirizzo di posta elettronica aziendale, ad esempio **janetm@contoso.com** o **p.dover@fabrikam.com**, perché attualmente Azure Information Protection non supporta gli indirizzi di posta elettronica personali. 
+4. Per **Selezionare gli utenti** digitare uno o più indirizzi di posta elettronica aziendali, come si farebbe per inviare un documento a un utente con cui l'organizzazione intrattiene relazioni commerciali. Assicurarsi di specificare un indirizzo di posta elettronica aziendale, ad esempio **janetm@contoso.com** o **p.dover@fabrikam.com**, perché attualmente Azure Information Protection non supporta gli indirizzi di posta elettronica personali. 
 
-    Non è importante se la persona a cui si sta inviando il messaggio dispone o meno di Azure Information Protection.
+    In alternativa, fare clic sulla Rubrica per selezionare l'indirizzo di posta elettronica di un collega:
 
-4. Selezionare **Visualizzatore - Solo visualizzazione**.
-
-    In questo modo i destinatari saranno in grado di visualizzare il documento, ma non di modificarlo o stamparlo.
-
-5. Selezionare l'opzione per l' **invio di un messaggio di posta elettronica quando qualcuno tenta di aprire il documento**.
-
-    Si riceverà una notifica tramite posta elettronica ogni volta che i destinatari tentano di aprire l'allegato. La notifica verrà inviata anche quando qualcun altro tenta di aprire il messaggio, ad esempio se il destinatario lo inoltra a un collega. Se il documento viene inoltrato, l'accesso viene negato e, in base ai dettagli dell'utente, sarà possibile decidere se inviare a tale persona una copia del documento che potrà aprire.
-
-6. Selezionare l'opzione per la **revoca immediata dell'accesso a specifici documenti**.
-
-    Per questa opzione è necessario che i destinatari siano connessi a Internet ogni volta che aprono l'allegato. L'opzione offre comunque il vantaggio che, se in un secondo momento si revoca il documento, il successivo tentativo di apertura da parte dei destinatari avrà esito negativo. 
-
-4.  Fare clic su **Invia** per visualizzare un messaggio di posta elettronica pronto per l'invio ai destinatari specificati e con un testo di istruzioni predefinito. Ad esempio:
-
-    ![Messaggio di posta elettronica di esempio per la condivisione di file protetti](../media/example-email-share-protected.png)
+    ![Esercitazione introduttiva di Azure Information Protection, passaggio 5: Proteggi con autorizzazioni personalizzate](../media/protect-custom-permissions.png)  
     
-    **NOTA**: se Outlook è stato aperto al momento dell'installazione del client di Azure Information Protection, la barra di Information Protection mostrata nella figura precedente non verrà visualizzata. Questa barra non è usata specificamente in questo passaggio riguardante la condivisione di documenti protetti e quindi non è necessario chiudere e riaprire Outlook per completare l'esercitazione. Se Outlook è stato aperto dopo l'installazione del client di Azure Information Protection, si noterà che questo messaggio di posta elettronica, così come il documento di Word alla prima apertura, riporta l'etichetta **Interno**, applicata per impostazione predefinita a seguito della configurazione di questa impostazione globale nei criteri di Azure Information Protection.
-    
-    Sono presenti due allegati: il documento di Word originale e un file con lo stesso nome ma con estensione **ppdf**. La versione con estensione ppdf è un file PDF protetto creato automaticamente dall'applicazione Rights Management sharing nel caso in cui il destinatario non disponga di una versione di Office che supporta i documenti protetti. Questo file aggiuntivo consente al destinatario di leggere il documento protetto usando il visualizzatore installato con l'applicazione Rights Management sharing.
+    Dopo aver specificato gli indirizzi, copiarli negli Appunti perché verranno usati in un passaggio successivo.
 
-    Fare clic su **Invia** nel messaggio di posta elettronica.
+5. Fare clic su **Applica** e attendere la visualizzazione del messaggio **Operazione completata** per vedere i risultati. Fare quindi clic su **Chiudi**.
 
-Ora che è stato inviato il documento protetto, è possibile chiedere ai destinatari di attenderne l'arrivo e quindi di aprirlo. Non chiudere Word, poiché verrà usato di nuovo nella procedura finale per tenere traccia del documento condiviso.
+4. In Esplora file fare di nuovo clic con il pulsante destro del mouse su un file e, questa volta, scegliere **Invia a** > **Destinatario posta**. Il documento verrà così allegato a un messaggio di posta elettronica con un testo predefinito che sarà possibile modificare.
+
+5. Prima di modificare il testo predefinito, incollare gli indirizzi di posta elettronica specificati in precedenza nella casella **A**. 
+
+6. Facoltativamente, digitare l'oggetto desiderato nella casella **Oggetto**, ad esempio: **Sto condividendo un documento protetto**. 
+
+7. Modificare la descrizione predefinita del messaggio in base a ciò che si vuole comunicare ai destinatari. Aggiungere tuttavia il testo seguente:
+
+    **Questo file è protetto con Microsoft Azure Information Protection. In caso di primo utilizzo, vedere queste istruzioni: https://aka.ms/rms-signup.** 
+
+    ![Esercitazione introduttiva di Azure Information Protection, passaggio 5: Condividere un documento protetto tramite posta elettronica](../media/share-protected-email.png)
+
+    Fare clic su **Invia**.
+
+Ora che è stato inviato il documento protetto, è possibile chiedere ai destinatari di attenderne l'arrivo e quindi di aprirlo. 
 
 ## <a name="ask-your-recipients-to-open-the-emailed-document"></a>Chiedere ai destinatari di aprire il documento inviato tramite posta elettronica
 
 I destinatari possono usare molti dispositivi per leggere il documento protetto inviato come allegato di posta elettronica. I dispositivi includono iPad, iPhone, tablet e telefoni Android, computer Mac e computer Windows.
 
-Chiedere di leggere il messaggio di posta elettronica inviato. Supponendo che questa sia la prima volta che i destinatari ricevono allegati protetti da Rights Management, chiedere loro di fare clic sul collegamento di istruzioni. Verrà visualizzata la pagina [Schermata iniziale di Microsoft RMS](https://portal.azurerms.com/#/rmshelp), con istruzioni per installare l'applicazione RMS sharing e, se necessario, per iscriversi e ottenere un account gratuito. A questo punto è possibile leggere l'allegato protetto.
+Chiedere di leggere il messaggio di posta elettronica inviato. Supponendo che questa sia la prima volta che i destinatari ricevono allegati protetti da Rights Management, chiedere loro di fare clic sul collegamento di istruzioni. Verrà quindi visualizzata la pagina** **iniziale di Microsoft Azure Information Protection, in cui viene richiesto di immettere l'indirizzo di posta elettronica dell'ufficio.
+
+Facendo clic su **Iscriviti**, Azure Information Protection controllerà se l'organizzazione ha una sottoscrizione che include il servizio di protezione dei dati Azure Rights Management. In caso contrario, è possibile richiedere un account gratuito.
 
 ### <a name="instructions-for-recipient-to-view-the-protected-document-attachment"></a>Istruzioni per il destinatario: Per visualizzare l'allegato del documento protetto
 
-1. Aprire uno degli allegati per leggere il documento:
-    
-    - Se sul dispositivo si dispone di una versione di Office che supporta Rights Management:
-    
-        -  Aprire il documento con estensione di file **docx**.
-        
-    - Se non si dispone di una versione di Office che supporta Rights Management, non si è sicuri o si vuole semplicemente provare il visualizzatore dall'applicazione Rights Management sharing: 
-    
-        - Aprire il documento con estensione **ppdf**.
+1. In un computer o un dispositivo mobile con Office installato, aprire l'allegato per leggere il documento.  
 
 2.  Se vengono richiesti il nome utente e la password, immettere il nome utente nello stesso formato dell'indirizzo di posta elettronica usato per inviare il messaggio di posta elettronica e l’allegato, ad esempio **janetm@contoso.com** o **p.dover@fabrikam.com**. Come password digitare quella fornita al momento dell'iscrizione a RMS per utenti singoli. In alternativa, se l'organizzazione dispone di un servizio cloud quale Office 365 o usa Azure, immettere la normale password aziendale.
 
@@ -93,11 +86,15 @@ Chiedere di leggere il messaggio di posta elettronica inviato. Supponendo che qu
 
 Come passaggio facoltativo, il destinatario dovrebbe inoltrare il messaggio di posta elettronica ad altri utenti non inclusi nel messaggio originale. Queste persone non saranno in grado di aprire l'allegato. Se vengono accettati per il nome utente, l'accesso al documento verrà comunque negato.
 
-Ora che il destinatario ha aperto l'allegato e, facoltativamente, lo ha inoltrato a qualcun altro, si prevede di ricevere una notifica tramite posta elettronica che segnala questa attività. I messaggi di posta elettronica, tuttavia, vanno facilmente persi nel corso tempo. Il modo migliore per rilevare chi ha avuto accesso al documento consiste nell'usare il sito di rilevamento dei documenti, come illustrato nella procedura finale.
+Ora che il destinatario ha aperto l'allegato e, facoltativamente, lo ha inoltrato a qualcun altro, è possibile tenere traccia del documento.
 
 ## <a name="to-track-your-protected-document"></a>Per rilevare il documento protetto
 
-1.  Di nuovo in Word, nel gruppo **RMS** della scheda **Home** fare clic su **Condividi file protetto** e quindi scegliere **Rileva utilizzo** dal menu:
+1.  Aprire il documento protetto e condiviso. Un messaggio informativo indica le impostazioni di protezione personalizzata specificate:
+
+    ![Messaggio informativo per la protezione personalizzata](../media/information-banner-custom-protection.png)
+
+2.  Nella scheda **Home** fare clic su **Proteggi** > **Rileva e revoca**:
 
     ![Opzione Rileva utilizzo](../media/track-usage-callout.png)
 
@@ -119,10 +116,9 @@ Ora che il destinatario ha aperto l'allegato e, facoltativamente, lo ha inoltrat
 
 |Se si desiderano altre informazioni|Informazioni aggiuntive|
 |--------------------------------|--------------------------|
-|Istruzioni complete e metodi alternativi per la protezione dei file condivisi tramite posta elettronica|[Proteggere un file che si condivide tramite posta elettronica usando l'applicazione Rights Management sharing](../rms-client/sharing-app-protect-by-email.md)|
-|Informazioni sulle opzioni della finestra di dialogo **Condividi file protetto**|[Opzioni della finestra di dialogo per l'applicazione Rights Management sharing](../rms-client/sharing-app-dialog-box.md)|
+|Istruzioni complete per la protezione dei file in modo da poterli condividere in tutta sicurezza|[Classificare e proteggere un file o un messaggio di posta elettronica](../rms-client/client-classify-protect.md)|
 |Account gratuito per l'iscrizione di altri utenti|[RMS per utenti singoli e Azure Rights Management](../understand-explore/rms-for-individuals.md)|
-|Uso del sito di rilevamento dei documenti|[Tenere traccia dei documenti e revocarli](../rms-client/sharing-app-track-revoke.md)
+|Uso del sito di rilevamento dei documenti|[Tenere traccia dei documenti e revocarli](../rms-client/client-track-revoke.md)
 
 
 ## <a name="next-steps"></a>Passaggi successivi
@@ -133,7 +129,4 @@ Provare a condividere altri documenti, a tenere traccia del modo in cui vengono 
 
 Può essere utile leggere alcune delle [domande frequenti](faqs.md) relative ad Azure Information Protection e consultare altri articoli della documentazione. Se tuttavia si è pronti a iniziare la distribuzione di Azure Information Protection nell'organizzazione, leggere le informazioni riportate nella [Guida di orientamento per la distribuzione di Azure Information Protection](../plan-design/deployment-roadmap.md). 
 
-
-<!--HONumber=Nov16_HO4-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

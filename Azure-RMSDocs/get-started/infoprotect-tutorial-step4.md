@@ -1,18 +1,19 @@
 ---
-title: Esercitazione introduttiva, passaggio 4 | Azure Rights Management
-description: Passaggio 3 dell&quot;esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell&quot;organizzazione. L&quot;esecuzione dell&quot;esercitazione richiede circa 30 minuti.
+title: Esercitazione per l&quot;avvio rapido - Passaggio 4 - AIP
+description: 'Passaggio 4 di un&quot;esercitazione introduttiva per provare rapidamente a usare Azure Information Protection: vedere in azione le funzioni di aggiunta di etichette e protezione.'
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: bcf1e9ee7a2d6cf8fb264533f150b350ce0a9e56
+ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
+ms.openlocfilehash: 8260da1905c6701675b5490e3919ae708f46a5a9
+ms.lasthandoff: 03/01/2017
 
 
 ---
@@ -27,15 +28,33 @@ La classificazione e la protezione hanno effetto quando si salva il documento. P
 
 ## <a name="to-manually-change-our-default-label"></a>Per modificare manualmente l'etichetta predefinita
 
-Sulla barra di Information Protection scegliere l'etichetta **Personale**. Verrà richiesto di giustificare l'abbassamento del livello di classificazione:
+Sulla barra di Information Protection selezionare l'etichetta **Secret** (Segreto) in modo da verificare come vengono visualizzate le etichette secondarie:
+
+![Esercitazione introduttiva di Azure Information Protection, passaggio 4: scegliere un'etichetta secondaria](../media/info-protect-sub-labels.png)
+
+Selezionare **All Company** (Tutta la società). Si noterà che le altre etichette non vengono più visualizzate sulla barra ora che si è selezionata un'etichetta per il documento. Il valore **Sensitivity** (Riservatezza) diventa **Secret \ All Company** (Segreto \ Tutta la società) con una corrispondente variazione del colore dell'etichetta:
+
+![Esercitazione introduttiva di Azure Information Protection, passaggio 4: etichetta secondaria selezionata](../media/info-protect-sub-label-selected.png)
+
+Sulla barra di Information Protection fare clic sull'icona **Modifica l'etichetta** accanto a **Secret \ All Company** (Segreto \ Tutta la società):
+
+![Esercitazione introduttiva di Azure Information Protection, passaggio 4: icona Modifica l'etichetta](../media/info-protect-edit-label-selected.png)
+
+Verranno visualizzate le etichette disponibili.
+
+Selezionare l'etichetta **Personale**. Poiché si è selezionata un'etichetta classificata a un livello inferiore rispetto all'etichetta selezionata in precedenza per questo documento, viene chiesto di giustificare il motivo per cui si sta abbassando il livello di classificazione:
 
 ![Esercitazione introduttiva di Azure Information Protection, passaggio 4: Richiesta di giustificazione dell'abbassamento](../media/info-protect-lower-justification.png)
 
-Selezionare **L'etichetta precedente non è più applicabile** e fare clic su **Conferma**. Il valore **Sensitivity** (Riservatezza) cambierà in **Personale**.
+Selezionare **L'etichetta precedente non è più applicabile** e fare clic su **Conferma**. Il valore **Sensitivity** (Riservatezza) diventa **Personale** e le altre etichette vengono nuovamente nascoste.
 
 ## <a name="to-remove-the-classification-completely"></a>Per rimuovere completamente la classificazione
 
-Sulla barra di Information Protection fare clic sull'icona **Modifica etichetta** accanto a **Personale**. Verranno visualizzate le etichette disponibili. Ma questa volta, anziché scegliere una delle etichette, fare clic sull'icona **Rimuovi etichetta**. Fare clic su **OK** per confermare e quindi fornire la giustificazione per questa azione.  
+Sulla barra di Information Protection, fare nuovamente clic sull'icona **Modifica l'etichetta**. Tuttavia, anziché scegliere una delle etichette, fare clic sull'icona **Elimina l'etichetta**:
+
+![Esercitazione introduttiva di Azure Information Protection, passaggio 4: icona Elimina l'etichetta](../media/delete-icon-from-personal.png)
+
+Questa volta, quando richiesto, digitare "Il documento non richiede la classificazione" e fare clic su **Conferma**.  
 
 Per il valore **Sensitivity** (Riservatezza) verrà visualizzato **Non impostato**, come avviene inizialmente se non si imposta un'etichetta predefinita:
 
@@ -56,15 +75,20 @@ Per il valore **Sensitivity** (Riservatezza) verrà visualizzato **Non impostato
 
     Il documento è protetto anche dal modello di Azure Rights Management specificato, che è possibile confermare quando si fa clic sulla scheda **File** e si visualizzano le informazioni in **Proteggi documento**. Se si usa il modello Confidential (Riservato), verrà visualizzata l'informazione che il documento è riservato agli utenti interni. Gli utenti esterni all'organizzazione non potranno aprire il documento e il suo contenuto non potrà essere copiato o stampato. Il proprietario del documento può copiarne il contenuto e stamparlo, ma se lo invia tramite posta elettronica a un altro utente dell'organizzazione, quest'ultimo non sarà in grado di eseguire queste azioni.
 
+4. È ora possibile chiudere il documento.
+
 I passaggi eseguiti fino a ora hanno consentito di vedere in azione la classificazione, l'assegnazione di etichette e la protezione. Nei passaggi successivi verrà mostrato come proteggere i documenti anche quando vengono condivisi con altri utenti dell'organizzazione. Verrà inoltre mostrato come è possibile tenere traccia del modo in cui tali documenti vengono usati e verrà spiegato come revocarne l'accesso.
+
+|Se si desiderano altre informazioni|Informazioni aggiuntive|
+|--------------------------------|--------------------------|
+|Istruzioni complete per l'assegnazione di etichette e la protezione dei file |[Classificare e proteggere un file o un messaggio di posta elettronica](../rms-client/client-classify-protect.md)|
+
+
+
+
 
 >[!div class="step-by-step"]
 [&#171; Passaggio 3](infoprotect-tutorial-step3.md)
 [Passaggio 5 &#187;](infoprotect-tutorial-step5.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO2-->
-
-

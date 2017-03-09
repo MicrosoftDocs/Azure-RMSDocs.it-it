@@ -1,10 +1,10 @@
 ---
-title: Panoramica tecnica per l&quot;applicazione Rights Management sharing | Azure Information Protection
+title: Panoramica tecnica per l&quot;app RMS sharing - AIP
 description: Dettagli tecnici per gli amministratori sulle reti aziendali che sono responsabili della distribuzione dell&quot;applicazione RMS sharing per Windows.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 88b03e5e844e78db5dc8ac5f116d19899c5f354f
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 532a379aa303e65d111d6ba0e360f34082b25014
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -43,7 +44,7 @@ Con la versione di RMS del mese di ottobre 2013, è possibile proteggere i docum
 
 Per informazioni sulla distribuzione, vedere [Distribuzione automatica dell'applicazione Microsoft Rights Management sharing](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)
 
-## <a name="levels-of-protection-native-and-generic"></a>Livelli di protezione – nativo e generico
+## <a name="levels-of-protection--native-and-generic"></a>Livelli di protezione – nativo e generico
 L'applicazione Microsoft Rights Management sharing supporta la protezione a due livelli diversi, come descritto nella tabella seguente.
 
 |Tipo di protezione|Nativo|Generico|
@@ -75,7 +76,6 @@ Per i file protetti in modo generico, l'estensione del nome file originale viene
 |.tiff|.ptiff|
 |.bmp|.pbmp|
 |.gif|.pgif|
-|.giff|.pgiff|
 |.jpe|.pjpe|
 |.jfif|.pjfif|
 |.jt|.pjt|
@@ -102,25 +102,25 @@ Analogamente, è possibile forzare l'applicazione RMS sharing ad applicare la pr
 
 È inoltre possibile forzare l'applicazione RMS sharing a bloccare la protezione dei file, ossia non applicare né la protezione nativa né quella generica. Ad esempio, questa potrebbe essere necessaria se si dispone di un'applicazione automatica o di un servizio che deve essere in grado di aprire un file specifico per elaborare il relativo contenuto. Quando si blocca la protezione per un tipo di file, gli utenti non possono usare l'applicazione RMS sharing per proteggere un file del tipo specificato. Quando tentano, viene visualizzato un messaggio in base al quale l'amministratore ha impedito la protezione ed è necessario annullare la loro azione per proteggere il file.
 
-Per configurare l'applicazione RMS sharing in modo da applicare la protezione generica a tutti i file a cui verrebbe applicata la protezione nativa per impostazione predefinita, apportare le modifiche seguenti al Registro di sistema:
+Per configurare l'applicazione RMS sharing in modo da applicare la protezione generica a tutti i file a cui verrebbe applicata la protezione nativa per impostazione predefinita, apportare le modifiche seguenti al Registro di sistema. Si noti che se le chiavi RmsSharingApp e FileProtection non esistono, è necessario crearle manualmente.
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection**: creare una nuova chiave denominata *.
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: creare una nuova chiave denominata *.
 
     Questa impostazione indica i file con qualsiasi estensione di file.
 
-2.  Nella nuova chiave aggiunta HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\\\*, creare un nuovo valore stringa (REG_SZ) denominato **Crittografia** con valore di dati **Pfile**.
+2.  Nella nuova chiave aggiunta HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\\\*, creare un nuovo valore stringa (REG_SZ) denominato **Encryption** con valore di dati **Pfile**.
 
     Questa impostazione ha come risultato l'applicazione della protezione generica di RMS sharing.
 
 Queste due impostazioni hanno come risultato l'applicazione della protezione generica di RMS sharing a tutti i file con un nome che include un'estensione. Se questo è l'obiettivo, non è richiesta alcuna ulteriore configurazione. Tuttavia, è possibile definire eccezioni per specifici tipi di file, in modo che siano protetti comunque in modo nativo. A tale scopo, è necessario eseguire tre modifiche aggiuntive del Registro di sistema per ogni tipo di file:
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection**: aggiungere una nuova chiave con il nome dell'estensione di nome file (senza il punto iniziale).
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: aggiungere una nuova chiave con il nome dell'estensione di nome file (senza il punto iniziale).
 
     Ad esempio, i file con estensione del nome di file .docx, creano una chiave denominata **DOCX**.
 
-2.  Nella chiave del tipo di file appena aggiunto (ad esempio, **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\DOCX**), creare un nuovo valore DWORD denominato **AllowPFILEEncryption** con un valore di **0**.
+2.  Nella chiave del tipo di file appena aggiunta (ad esempio, **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\DOCX**), creare un nuovo valore DWORD denominato **AllowPFILEEncryption** con valore **0**.
 
-3.  Nella chiave del tipo di file appena aggiunto (ad esempio, **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RMSSharingApp\FileProtection\DOCX**), creare un nuovo valore stringa denominato **crittografia** con un valore **nativo**.
+3.  Nella chiave del tipo di file appena aggiunta (ad esempio, **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\DOCX**), creare un nuovo valore stringa denominato **Encryption** con valore **Native**.
 
 In seguito a queste impostazioni, tutti i file sono protetti in modo generico ad eccezione dei file con estensione docx, che sono protetti in modo nativo dall'applicazione RMS sharing.
 
@@ -137,9 +137,5 @@ Ripetere questi tre passaggi per altri tipi di file da definire come eccezioni, 
 ## <a name="see-also"></a>Vedere anche
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
-
-
-
-<!--HONumber=Nov16_HO1-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

@@ -1,10 +1,10 @@
 ---
-title: Passaggio 2&colon; Migrazione da una chiave protetta tramite software a una chiave protetta tramite HSM | Azure Information Protection
+title: Eseguire la migrazione da una chiave protetta tramite software a una chiave protetta tramite HSM - AIP
 description: "Istruzioni che fanno parte del percorso di migrazione da AD RMS ad Azure Information Protection e si applicano solo se la chiave di AD RMS è protetta tramite software e si vuole eseguire la migrazione ad Azure Information Protection con una chiave del tenant protetta tramite HSM in Insieme di credenziali delle chiavi di Azure."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/23/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 5aac7b9fae12642c9846a70c5d271c7600af4096
-ms.openlocfilehash: 7a10b0f1fceca58a80145962dfaedddeea64dd64
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 4126bd34615307347d387217b8ad4f39ba69cad8
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -159,11 +160,7 @@ Ora che la chiave del certificato concessore di licenze server (SLC) è stata es
 
 È ora possibile andare al [Passaggio 3. Attivare il tenant di Azure Information Protection](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Nov16_HO4-->
 
 

@@ -1,10 +1,10 @@
 ---
-title: Scenario - Proteggere (alcuni) file particolarmente importanti | Azure RMS
+title: Scenario AIP - Proteggere (alcuni) file particolarmente importanti
 description: "Questo scenario e la documentazione di supporto per l&quot;utente usano Azure Rights Management per proteggere in modo manuale e personalizzato un numero limitato di file identificati come i più importanti, garantendo il massimo livello di protezione dall&quot;accesso non autorizzato."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: ad75734c28c51ac68697f96e0e50a5d90314b76e
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f096a4ad7333d24c7bce0dd729b40ebb203726c5
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="scenario-secure-your-most-few-valuable-files"></a>Scenario - Proteggere (alcuni) file particolarmente importanti
+# <a name="scenario---secure-your-most-few-valuable-files"></a>Scenario - Proteggere (alcuni) file particolarmente importanti
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -70,7 +71,7 @@ Per questo scenario, sono necessari i requisiti seguenti:
 
 2.  Pubblicare il nuovo modello.
 
-### <a name="to-protect-the-files-inplace"></a>Per proteggere il file sul posto
+### <a name="to-protect-the-files-in-place"></a>Per proteggere il file sul posto
 
 1.  In Esplora File, passare alla prima cartella che contiene i file da proteggere:
 
@@ -145,9 +146,4 @@ I seguenti file dispongono di un elevato livello di protezione, in modo che solo
 
 -   Se non è possibile accedere a questi file o se si notano modifiche sospette, chiamare la linea di supporto aperta 24 ore che è stata inviata all'utente dal reparto IT tramite un messaggio di posta elettronica protetto.
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

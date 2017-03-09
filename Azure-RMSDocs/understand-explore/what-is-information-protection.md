@@ -1,18 +1,19 @@
 ---
-title: "Che cos&quot;è Azure Information Protection? | Azure Information Protection"
+title: "Che cos&quot;è Azure Information Protection?"
 description: Informazioni generali sul servizio Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/12/2016
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
 translationtype: Human Translation
-ms.sourcegitcommit: dfcaa9a1fef0a4a2011f1385d849c4c2887a022e
-ms.openlocfilehash: ab8aa40f0ed3947264de9d07cd6fa7a7030a6964
+ms.sourcegitcommit: 1085966a885d1cd8223e277be632ce6dae5de294
+ms.openlocfilehash: 61dfc23fa16b12688b79f2b7ffac645c9cc93584
+ms.lasthandoff: 02/27/2017
 
 
 ---
@@ -31,7 +32,7 @@ Dopo che il contenuto è stato classificato (e facoltativamente protetto), è po
 
 ## <a name="how-labels-apply-classification"></a>Modalità di classificazione in base alle etichette
 
-Per applicare la classificazione a documenti e messaggi di posta elettronica si usano le etichette di Azure Information Protection. In questo modo, la classificazione è identificabile in qualsiasi momento, indipendentemente dalla posizione di archiviazione dei dati o dagli utenti con cui è condivisa. Le etichette persistenti includono contrassegni visivi, ad esempio un'intestazione, un piè di pagina o una filigrana. A file e intestazioni di messaggi di posta elettronica in testo non crittografato vengono aggiunti metadati in modo che altri servizi, ad esempio soluzioni di prevenzione della perdita di dati, possano identificare la classificazione e agire in modo appropriato. 
+Per applicare la classificazione a documenti e messaggi di posta elettronica si usano le etichette di Azure Information Protection. In questo modo, la classificazione è identificabile in qualsiasi momento, indipendentemente dalla posizione di archiviazione dei dati o dagli utenti con cui è condivisa. Le etichette includono contrassegni visivi, ad esempio un'intestazione, un piè di pagina o una filigrana. A file e intestazioni di messaggi di posta elettronica in testo non crittografato vengono aggiunti metadati in modo che altri servizi, ad esempio soluzioni di prevenzione della perdita di dati, possano identificare la classificazione e agire in modo appropriato. 
 
 Ad esempio, il messaggio di posta elettronica seguente è stato classificato come "Internal" (Interno). Questa etichetta viene aggiunta come piè di pagina al messaggio di posta elettronica, come indicatore visivo per tutti i destinatari allo scopo di segnalare che il messaggio è destinato a uso interno e non deve essere inviato all'esterno dell'organizzazione. Questa etichetta viene inoltre incorporata nelle intestazioni dei messaggi di posta elettronica in modo che i servizi di posta elettronica possano esaminare questo valore e creare una voce di controllo o impedirne l'invio all'esterno dell'organizzazione.
 
@@ -42,7 +43,7 @@ Ad esempio, il messaggio di posta elettronica seguente è stato classificato com
 
 Per la protezione viene usata la tecnologia *Azure Rights Management* (spesso abbreviata in Azure RMS). Questa tecnologia è integrata in altri servizi e applicazioni cloud Microsoft, ad esempio Office 365 e Azure Active Directory. Il servizio può essere usato anche con proprie applicazioni line-of-business e soluzioni di protezione dei dati di fornitori software in locale o sul cloud.
 
-Questa tecnologia di protezione usa criteri di crittografia, identità e autorizzazione. Analogamente alle etichette persistenti, la protezione applicata tramite Rights Management rimane associata ai documenti e ai messaggi di posta elettronica indipendentemente dalla posizione: all'interno o all'esterno dell'organizzazione, in reti, file server o applicazioni. Questa soluzione per la protezione delle informazioni favorisce il controllo dei propri dati, anche quando sono condivisi con altre persone.
+Questa tecnologia di protezione usa criteri di crittografia, identità e autorizzazione. Analogamente alle etichette, la protezione applicata tramite Rights Management rimane associata ai documenti e ai messaggi di posta elettronica indipendentemente dalla posizione: all'interno o all'esterno dell'organizzazione, in reti, file server o applicazioni. Questa soluzione per la protezione delle informazioni favorisce il controllo dei propri dati, anche quando sono condivisi con altre persone.
 
 È ad esempio possibile configurare un documento di report o un foglio di calcolo di previsione delle vendite in modo che possano accedervi solo le persone appartenenti all'organizzazione e per controllare se tale documento può essere modificato oppure se può essere impostato come file di sola lettura o non stampabile. È possibile configurare i messaggi e-mail in modo analogo e, inoltre, impedire che vengano inoltrati o che venga usata l'opzione Rispondi a tutti. Queste attività di protezione possono essere semplificate tramite *modelli di Rights Management*.
 
@@ -54,7 +55,7 @@ Questi modelli possono far parte della configurazione di un'etichetta, in modo c
 
 Questo esempio mostra come è possibile selezionare un modello per un'etichetta quando si configurano i criteri di Azure Information Protection dal portale di Azure:
 
-![Esempio di selezione di modelli nel portale di Azure](../media/templates-infoprotection-callouts.png)
+![Esempio di selezione di modelli nel portale di Azure](../media/info-protect-template-callout.png)
 
 Gli stessi modelli possono essere selezionati dall'interfaccia di amministrazione di Exchange per configurare regole del flusso di posta elettronica di Exchange Online, che supportano la tecnologia Azure Rights Management:
 
@@ -66,11 +67,21 @@ Per altre informazioni sulla tecnologia di protezione Azure Rights Management, v
 
 Azure Information Protection si integra con i flussi di lavoro esistenti degli utenti finali quando viene installato il client di Azure Information Protection. Il client installa la barra di Information Protection nelle applicazioni di Office, come illustrato nella prima immagine. La stessa barra viene aggiunta a Excel, PowerPoint e Outlook. Ad esempio:
 
-![Esempio di barra di Azure Information Protection in Excel](../media/excel2013-infoprotect-bar2.png)
+![Esempio di barra di Azure Information Protection in Excel](../media/excel2016-infoprotect-bar.png)
 
 Questa barra di Information Protection consente agli utenti finali di selezionare con facilità le etichette per la classificazione corretta, e quando necessario, le etichette possono anche proteggere automaticamente i documenti e i messaggi di posta elettronica.
 
-Quando gli utenti condividono i documenti protetti tramite posta elettronica, possono usare un sito di rilevamento per monitorare gli utenti che accedono ai documenti e gli orari di accesso. Se sospettano un uso improprio, possono anche revocare l'accesso ai documenti.
+Per classificare e proteggere altri tipi di file e per supportare più file contemporaneamente, gli utenti possono fare clic con il pulsante destro del mouse su più file o su una cartella in Esplora file di Windows:
+
+![Comando Classifica e proteggi nel menu di scelta rapida in Esplora file con Azure Information Protection](../media/right-click-classify-protect-folder.png)
+
+Quando l'utente sceglie l'opzione di menu **Classifica e proteggi** in Esplora file, può quindi selezionare un'etichetta in modo analogo a quando si usa la barra di Information Protection nelle app desktop di Office. Se necessario, è anche possibile impostare autorizzazioni personalizzate.
+
+Gli utenti esperti (e gli amministratori) potrebbero trovare più comodo usare i comandi di PowerShell per gestire e impostare in modo più efficiente la classificazione e la protezione per più file. I comandi di PowerShell per queste operazioni sono inclusi automaticamente nel client, ma è anche possibile installare il modulo di PowerShell separatamente.
+
+Quando un documento viene protetto, utenti e amministratori possono usare un sito di rilevamento dei documenti per monitorare gli utenti che accedono ai documenti e gli orari di accesso. Se sospettano un uso improprio, possono anche revocare l'accesso ai documenti:
+
+![Icona per la revoca dell'accesso nel sito di rilevamento dei documenti](../media/tracking-site-revoke-access-icon.png)
 
 
 ## <a name="resources-for-azure-information-protection"></a>Risorse per Azure Information Protection
@@ -85,9 +96,9 @@ Quando gli utenti condividono i documenti protetti tramite posta elettronica, po
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
 
-- Panoramica video
+- Video: "Top 5 Tips for Information Protection" (5 suggerimenti fondamentali per Information Protection)
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/N9Ip0m6d3G0" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GWcnZFMPcnE" frameborder="0" allowfullscreen></iframe>
 
     Microsoft Ignite 2016 offre anche numerose sessioni on demand per Azure Information Protection:
 
@@ -104,15 +115,10 @@ Quando gli utenti condividono i documenti protetti tramite posta elettronica, po
 
 ## <a name="next-steps"></a>Passaggi successivi
 
+Leggere il post di blog [Azure Information Protection: Ready, set, protect!](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/) (Azure Information Protection: una soluzione immediata ed efficiente per la protezione)
+
 Configurare e provare a usare Azure Information Protection in cinque passaggi con [Esercitazione introduttiva di Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 
-Azure Information Protection o Azure Rights Management è noto anche con altri nomi. Vedere [l'elenco delle denominazioni alternative](azure-rms-aka.md).
-
-## <a name="comments"></a>Commenti
+Azure Information Protection e Azure Rights Management sono noti anche con altri nomi? Vedere [l'elenco delle denominazioni alternative](azure-rms-aka.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Dec16_HO2-->
-
-

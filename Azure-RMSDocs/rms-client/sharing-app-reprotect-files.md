@@ -1,11 +1,11 @@
 ---
-title: Modificare le autorizzazioni per i file protetti da Rights Management | Azure Information Protection
+title: Modificare le autorizzazioni sui file protetti da RMS - AIP
 description: "Quando un file è protetto da Rights Management, è possibile modificarne le autorizzazioni riproteggendolo e quindi specificando tutti gli utenti che possono accedere al file e le autorizzazioni che si vogliono assegnare a tali utenti."
 keywords: 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,8 +14,9 @@ ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 531c75846fb88e6f1d9d802df19b275e12e0fdae
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 3290b9436f75c2d0d37c401dd2e0be11bcf2d554
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -39,7 +40,7 @@ Se ad esempio un altro utente ha protetto il file tramite l'applicazione Rights 
 
 Se si vogliono rimuovere completamente tutte le autorizzazioni in modo che il file non sia più protetto, vedere [Rimuovere la protezione da un file](sharing-app-remove-protection.md).
 
-## <a name="to-reprotect-a-file-inplace"></a>Per riproteggere un file sul posto
+## <a name="to-re-protect-a-file-in-place"></a>Per riproteggere un file sul posto
 
 1.  In Esplora file, selezionare un file da proteggere. Fare clic sul pulsante destro del mouse, selezionare **Proteggi tramite RMS**, quindi selezionare **Proteggi sul posto**. Ad esempio:
 
@@ -72,7 +73,7 @@ Se si vogliono rimuovere completamente tutte le autorizzazioni in modo che il fi
 >     Quando si effettua l'iscrizione, utilizzare l'indirizzo di posta elettronica della società anziché un indirizzo di posta elettronica personale. Se si esegue l'iscrizione perché è stato inviato un allegato protetto tramite posta elettronica, utilizzare lo stesso indirizzo di posta elettronica utilizzato per inviare il messaggio di posta elettronica.
 > -   Per ulteriori informazioni, vedere [RMS per utenti singoli e Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## <a name="to-reprotect-a-file-that-you-have-emailed"></a>Per riproteggere un file inviato tramite posta elettronica
+## <a name="to-re-protect-a-file-that-you-have-emailed"></a>Per riproteggere un file inviato tramite posta elettronica
 
 Se si vogliono modificare le autorizzazioni per un file inviato tramite posta elettronica:
 
@@ -95,8 +96,4 @@ Per esempi di come è possibile usare l'applicazione Rights Management sharing e
 ## <a name="see-also"></a>Vedere anche
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

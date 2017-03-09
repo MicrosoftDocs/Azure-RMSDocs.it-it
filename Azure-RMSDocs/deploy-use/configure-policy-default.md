@@ -1,18 +1,19 @@
 ---
-title: Criteri predefiniti | Azure Information Protection
+title: Criteri predefiniti per Azure Information Protection
 description: "Informazioni sulla configurazione dei criteri predefiniti per Azure Information Protection. Se si modificano i criteri predefiniti, è possibile fare riferimento a questi valori per ripristinare le impostazioni predefinite dei criteri."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/04/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
 translationtype: Human Translation
-ms.sourcegitcommit: d5b3f3fc473661022a4f17b6587d58a252d07d1a
-ms.openlocfilehash: 5c3d3962d72a0dc3d08bdb869f6b00f4524477b5
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: d4e67ace9cf56ffdb4e8335dd514e1568bccb9b6
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -40,7 +41,7 @@ Le informazioni seguenti sono utili per comprendere come viene configurato il cr
 |Confidential (Riservato)|Questi dati includono informazioni aziendali riservate. L'esposizione di questi dati a utenti non autorizzati potrebbe arrecare un danno all'organizzazione. Esempi di informazioni riservate sono i dati relativi ai dipendenti, progetti o contratti di singoli clienti e i dati degli account di vendita.|**Abilitato**: on <br /><br />**Colore**: arancione<br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 |Secret (Segreto)|Questi dati includono informazioni estremamente riservate dell'azienda, che devono essere protette. L'esposizione dei dati segreti a utenti non autorizzati potrebbe arrecare un grave danno all'organizzazione. Sono informazioni segrete, ad esempio, i dati di identificazione personale, i record dei clienti, il codice sorgente e i rendiconti finanziari annunciati in anticipo.|**Abilitato**: on <br /><br />**Colore**: rosso<br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 
-## <a name="sublabels"></a>Etichette secondarie
+## <a name="sub-labels"></a>Etichette secondarie
 
 |Label|Descrizione comando|Impostazioni|
 |-------------------------------|---------------------------|-----------------|
@@ -60,8 +61,4 @@ Le informazioni seguenti sono utili per comprendere come viene configurato il cr
 
 Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy). 
 
-
-
-<!--HONumber=Nov16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

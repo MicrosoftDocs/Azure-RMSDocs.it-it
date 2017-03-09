@@ -1,10 +1,10 @@
 ---
-title: 'Altre applicazioni che supportano le API di Rights Management: installazione e configurazione| Azure Information Protection'
+title: 'Altre app che supportano le API di RMS: installazione e configurazione - AIP'
 description: "Informazioni su come il servizio Azure Rights Management di Azure Information Protection può supportare altre applicazioni per proteggere i dati dell&quot;organizzazione."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: c50a8cbb-d12f-4a0e-bc29-74c463e6ac3e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: f5ed228f1434761208095fd15d36a6bf05e07154
-ms.openlocfilehash: 82269c1b224df944db2bbc40f36ca111cb1ac160
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 0b48cdb5fc233886c41a1c8b963e1353c14dce75
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -33,7 +34,4 @@ In modo analogo, molti fornitori di software offrono soluzioni di protezione del
 
 Per informazioni su come altri servizi e applicazioni supportano il servizio Azure Rights Management, vedere [Supporto del servizio Azure Rights Management da parte delle applicazioni](applications-support.md).
 
-
-<!--HONumber=Dec16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

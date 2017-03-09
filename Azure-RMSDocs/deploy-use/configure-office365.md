@@ -1,10 +1,10 @@
 ---
-title: Office 365&colon; configurazione di client e servizi online | Azure Information Protection
+title: Office 365&colon; configurare client e servizi online - AIP
 description: Informazioni e istruzioni per gli amministratori per configurare Office 365 per l&quot;uso con il servizio Azure Rights Management di Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 6c71f9b140fa52ab65dab76297a8763b3a980512
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: f0f486620f4b13dc8d94fee742eec2f8e4753d78
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -25,7 +26,7 @@ ms.openlocfilehash: 6c71f9b140fa52ab65dab76297a8763b3a980512
 
 Dal momento che Office 365 supporta in modo nativo il servizio Azure Rights Management di Azure Information Protection, non è necessario eseguire alcuna attività di configurazione dei computer client per supportare le funzionalità IRM (Information Rights Management) per applicazioni quali Word, Excel, PowerPoint, Outlook e Outlook Web App. Tutti gli utenti devono solo eseguire l'accesso alle applicazioni di Office con le proprie credenziali di [!INCLUDE[o365_1](../includes/o365_1_md.md)] per poter proteggere file e messaggi e-mail e per usare file e messaggi e-mail protetti da altri.
 
-È tuttavia consigliabile usare tali applicazioni insieme all'applicazione Rights Management sharing, in modo che gli utenti possano beneficiare dei vantaggi offerti dal componente aggiuntivo di Office. Per altre informazioni, vedere [Applicazione Rights Management sharing: installazione e configurazione dei client](configure-sharing-app.md).
+È tuttavia consigliabile usare tali applicazioni insieme al client Azure Information Protection, in modo che gli utenti possano sfruttare i vantaggi offerti dal componente aggiuntivo per Office e il supporto per altri tipi di file. Per altre informazioni, vedere [Client Azure Information Protection: installazione e configurazione dei client](configure-client.md).
 
 ## <a name="exchange-online-irm-configuration"></a>Exchange Online: configurazione di IRM
 Per configurare Exchange Online per il supporto del servizio Azure Rights Management, è necessario configurare il servizio IRM (Information Rights Management) per Exchange Online. A tale scopo, è possibile usare Windows PowerShell (senza bisogno di installare un modulo separato) ed eseguire i [comandi PowerShell per Exchange Online](https://technet.microsoft.com/library/jj200677.aspx).
@@ -48,14 +49,14 @@ I passaggi seguenti offrono un set tipico di comandi da eseguire per abilitare E
     Per accedere, digitare quanto segue:
 
     ```
-    $Cred = Get-Credential
+    $UserCredential = Get-Credential
     ```
     Nella finestra di dialogo **Richiesta credenziali di Windows PowerShell** specificare il nome utente e la password di Office 365.
 
 3.  Connettersi al servizio Exchange Online eseguendo i due comandi seguenti:
 
     ```
-    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell/ -Credential $Cred -Authentication Basic –AllowRedirection
+    $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
     ```
 
     ```
@@ -141,6 +142,9 @@ Per altre informazioni sulla crittografia dei messaggi, vedere [Crittografia in 
 
 ## <a name="sharepoint-online-and-onedrive-for-business-irm-configuration"></a>SharePoint Online e OneDrive for Business: configurazione di IRM
 Per configurare SharePoint Online e OneDrive for Business allo scopo di supportare il servizio Azure Rights Management, è necessario abilitare prima il servizio IRM (Information Rights Management) per SharePoint Online usando l'interfaccia di amministrazione di SharePoint. I proprietari del sito possono quindi proteggere con IRM i propri elenchi e le proprie raccolte documenti di SharePoint e gli utenti possono proteggere con IRM la propria raccolta di OneDrive for Business, in modo che i documenti salvati in tale posizione e condivisi con altri utenti vengano protetti automaticamente dal servizio Azure Rights Management.
+
+> [!NOTE]
+> Le librerie protette da IRM per SharePoint e OneDrive for Business supportano solo il download online, a meno che non si usi il client di sincronizzazione precedente, ovvero il client di sincronizzazione di OneDrive for Business (Groove.exe). Il nuovo [client di sincronizzazione di OneDrive (OneDrive.exe)](https://support.office.com/article/Enable-users-to-sync-SharePoint-files-with-the-new-OneDrive-sync-client-22e1f635-fb89-49e0-a176-edab26f69614) attualmente non supporta la protezione di Rights Management. 
 
 Per abilitare il servizio IRM (Information Rights Management) per SharePoint Online, vedere le istruzioni seguenti dal sito Web di Office:
 
@@ -558,7 +562,7 @@ Anche se non è possibile configurare IRM per OneDrive for Business per gli uten
 
     2.  Cercare `$tenantAdmin` e sostituire il valore di esempio con il proprio account di amministratore globale completo per Office 365.
 
-        Questo valore corrisponde a quello usato per accedere come amministratore globale al portale di amministrazione di Office 365 e ha il formato seguente: user_name@*&lt;nome dominio tenant&gt;*.com
+        Questo valore corrisponde a quello usato per accedere come amministratore globale al portale di amministrazione di Office 365 e ha il seguente formato: nome_utente@*&lt;nome dominio tenant&gt;*.com
 
         Ad esempio, se il nome utente dell'amministratore globale di Office 365 è "admin" per il dominio del tenant " contoso.com", si specificherà: **admin@contoso.com**
 
@@ -1108,9 +1112,5 @@ function Add-CredentialToCredentialCache
 Disconnect-SPOService -ErrorAction SilentlyContinue
 ```
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

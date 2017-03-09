@@ -1,10 +1,10 @@
 ---
-title: 'Gestione di Microsoft: operazioni del ciclo di vita della chiave del tenant | Azure Information Protection'
+title: Gestione di Microsoft - Operazioni del ciclo di vita della chiave del tenant AIP
 description: Informazioni sulle operazioni del ciclo di vita rilevanti se Microsoft gestisce la chiave del tenant per Azure Information Protection (impostazione predefinita).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,14 +13,15 @@ ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 49df2de156d5859d9192d8b179e4ba7ef2d653ea
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: caacc4174ddb63e9c9091c0df294b93cf947a7c4
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
 
-# <a name="microsoftmanaged-tenant-key-lifecycle-operations"></a>Gestione di Microsoft: operazioni del ciclo di vita della chiave del tenant
+# <a name="microsoft-managed-tenant-key-lifecycle-operations"></a>Gestione di Microsoft: operazioni del ciclo di vita della chiave del tenant
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -29,7 +30,7 @@ Se la chiave del tenant per Azure Information Protection viene gestita da Micros
 ## <a name="revoke-your-tenant-key"></a>Revocare la chiave del tenant
 Quando si annulla la sottoscrizione di Azure Information Protection, l'uso della chiave del tenant in Azure Information Protection viene interrotto e non è necessaria alcuna azione da parte dell'utente.
 
-## <a name="rekey-your-tenant-key"></a>Ridistribuire la chiave del tenant
+## <a name="re-key-your-tenant-key"></a>Ridistribuire la chiave del tenant
 Il processo di ridistribuzione della chiave è denominato anche rollover della chiave. Non ridistribuire la chiave tenant a meno che non sia effettivamente necessario. Alcuni client precedenti, ad esempio Office 2010, non erano progettati per gestire in modo efficiente le modifiche delle chiavi. In questo scenario è necessario cancellare lo stato di Rights Management nei computer tramite Criteri di gruppo o un meccanismo equivalente. In alcuni casi è tuttavia opportuno forzare la ridistribuzione della chiave del tenant, Ad esempio:
 
 -   La società è stata divisa in due o più società. Quando si ridistribuisce la chiave del tenant, la nuova società non potrà accedere al nuovo contenuto pubblicato dai dipendenti e sarà in grado di accedere al vecchio contenuto se dispone di una copia della chiave del tenant precedente.
@@ -95,10 +96,6 @@ In caso di violazione di sicurezza, l'azione più efficace che l'utente o Micros
 |Diritti di accesso alla chiave del tenant ottenuti da un utente non autorizzato o da malware, ma nessuna perdita della chiave.|La ridistribuzione della chiave del tenant non è sufficiente ed è necessaria un'analisi della causa radice. Se l'utente non autorizzato ha ottenuto l'accesso a causa di un bug del processo o del software, questo problema deve essere risolto.|
 |Vulnerabilità scoperta nell'algoritmo RSA o nella lunghezza della chiave oppure attacchi di forza bruta diventati realizzabili a livello di calcolo.|Microsoft deve aggiornare Azure Information Protection per supportare nuovi algoritmi e lunghezze maggiori della chiave che siano resilienti e invitare tutti i clienti a rinnovare le proprie chiavi del tenant.|
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

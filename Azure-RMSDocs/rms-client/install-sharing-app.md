@@ -1,10 +1,10 @@
 ---
-title: Scaricare e installare l&quot;applicazione Rights Management sharing | Azure Information Protection
+title: Scaricare e installare l&quot;app RMS sharing - AIP
 description: "Istruzioni per l&quot;installazione in modo interattivo dell&quot;applicazione RMS sharing per Windows, affinché sia possibile condividere documenti in modo sicuro con altri utenti."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 01/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: f1553ebd64f174128e41f55b66582e8791ce9133
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 9c954f750c6f49d3db1bf6383efa2805f291682c
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -67,9 +68,5 @@ Per esempi di come è possibile usare l'applicazione Rights Management sharing e
 ## <a name="see-also"></a>Vedere anche
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

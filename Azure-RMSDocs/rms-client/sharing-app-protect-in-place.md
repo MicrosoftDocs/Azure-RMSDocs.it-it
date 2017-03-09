@@ -1,10 +1,10 @@
 ---
-title: Proteggere un file in un dispositivo (protezione sul posto) tramite l&quot;applicazione Rights Management sharing | Azure Information Protection
+title: Proteggere sul posto tramite l&quot;app RMS sharing - AIP
 description: Istruzioni su come archiviare in modo sicuro un file nel computer, in un server o in un altro dispositivo di archiviazione.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 1b95c1bf1c747808c7baed97daa449f5c8bb234d
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: a0654dba53f493551b2cc4d1fbb8790f246e0c18
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="protect-a-file-on-a-device-protect-inplace-by-using-the-rights-management-sharing-application"></a>Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione Rights Management sharing
+# <a name="protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application"></a>Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione Rights Management sharing
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
@@ -28,7 +29,7 @@ Quando si protegge un file localmente, esso sostituisce il file originale non pr
 > [!TIP]
 > Se vengono visualizzati errori quando si tenta di proteggere i file, fare riferimento alle [Domande frequenti sull'applicazione Microsoft Rights Management sharing per Windows](http://go.microsoft.com/fwlink/?LinkId=303971).
 
-## <a name="to-protect-a-file-on-a-device-protect-inplace"></a>Per proteggere un file in un dispositivo (protezione sul posto)
+## <a name="to-protect-a-file-on-a-device-protect-in-place"></a>Per proteggere un file in un dispositivo (protezione sul posto)
 
 1.  In Esplora file, selezionare un file da proteggere. Fare clic sul pulsante destro del mouse, selezionare **Proteggi tramite RMS**, quindi selezionare **Proteggi sul posto**. Ad esempio:
 
@@ -65,8 +66,4 @@ Per esempi di come è possibile usare l'applicazione Rights Management sharing e
 ## <a name="see-also"></a>Vedere anche
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

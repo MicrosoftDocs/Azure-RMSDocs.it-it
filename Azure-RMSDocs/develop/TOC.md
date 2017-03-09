@@ -20,12 +20,11 @@
 #### [Esempi di codice Linux](linux-c-code-examples.md)
 #### [Esempi di codice iOS/OS X](ios-os-x-code-examples.md)
 #### [Risorse della community](community-resources.md)
-### [Condizioni e istruzioni per lo sviluppatore](core-concepts.md)
+### [Istruzioni per sviluppatori](core-concepts.md)
 #### [Come registrare l'app e abilitarla per RMS con Azure AD](authentication-integration.md)
 #### [Come abilitare la registrazione delle prestazioni e dell'errore](enabling-logging.md)
 #### [Come usare i diritti predefiniti](built-in-rights-usage-restriction-reference.md)
 #### [Come usare il rilevamento dei documenti](how-to-use-document-tracking.md)
-#### [Condizioni](terms.md)
 ### [Informazioni di riferimento sulle API](api-reference-4-2.md)
 #### [Informazioni di riferimento sulle API di Android](https://msdn.microsoft.com/library/dn758245.aspx)
 #### [Informazioni di riferimento sulle API di Linux](linux-c-api-reference.md)
@@ -42,11 +41,12 @@
 #### [Sviluppo dell'applicazione](developing-your-application.md)
 #### [Controllo dell'applicazione](how-to-set-up-your-test-environment.md)
 #### [Distribuire in ambiente di produzione](deploying-your-application.md)
-### [Istruzioni e informazioni per lo sviluppatore](Developer-notes.md)
+### [Istruzioni per sviluppatori](Developer-notes.md)
 #### [Procedura: Usare l'autenticazione ADAL](how-to-use-adal-authentication.md)
 ##### [Configurare Azure RMS per l'autenticazione ADAL](adal-auth.md)
 #### [Procedura: Aggiungere diritti espliciti di proprietario](add-explicit-owner-rights.md)
 #### [Procedura: Eseguire il debug dell'applicazione abilitata all'uso di diritti](debugging-applications-that-use-ad-rms.md)
+#### [Procedura: Distribuire un'app](how-to-deploy-app.md)
 #### [Procedura: Abilitare la revoca e il rilevamento dei documenti](tracking-content.md)
 #### [Procedura: Abilitare la notifica tramite posta elettronica](how-to-enable-email-notification.md)
 #### [Procedura: Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md)
@@ -65,8 +65,4 @@
 #### [Funzioni](https://msdn.microsoft.com/library/hh535289.aspx)
 #### [Strutture](https://msdn.microsoft.com/library/hh535294.aspx)
 #### [Codici di errore](https://msdn.microsoft.com/library/hh535248.aspx)
-
-
-<!--HONumber=Jan17_HO2-->
-
-
+## [Condizioni](terms.md) 

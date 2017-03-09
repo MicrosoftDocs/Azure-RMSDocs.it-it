@@ -1,10 +1,10 @@
 ---
-title: File server che eseguono Windows Server e usano Infrastruttura di classificazione file | Azure Information Protection
+title: File server che usano l&quot;infrastruttura di classificazione file - Azure Information Protection
 description: Come usare l&quot;infrastruttura di classificazione file di Windows Server con Azure RMS quando si distribuisce il connettore RMS per proteggere automaticamente i documenti di Office.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 1d9213aa6be382510558020411d1667fd2866ca7
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 909ff4f7c96af65172604bb903173dd38d95dcf9
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.openlocfilehash: 1d9213aa6be382510558020411d1667fd2866ca7
 
 Quando si configura Windows Server per usare Infrastruttura di classificazione file, questa funzionalità di Gestione risorse file server può analizzare i file locali per stabilire se contengono dati sensibili I file che soddisfano questi criteri vengono contrassegnati con proprietà di classificazione definite da un amministratore. A questo punto possono essere eseguite azioni automatiche, a seconda della classificazione, ad esempio l'applicazione della protezione delle informazioni usando [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] e la distribuzione del connettore Rights Management (noto anche come connettore RMS). I file di Office vengono automaticamente protetti da Azure RMS.
 
-Per proteggere tutti i tipi di file, non si userà il connettore RMS, ma si deve invece eseguire uno script di Windows PowerShell, usando i cmdlet dello [strumento di protezione di RMS](https://www.microsoft.com/en-us/download/details.aspx?id=47256).
+Per proteggere tutti i tipi di file, non si userà il connettore RMS, ma si eseguirà invece uno script di Windows PowerShell che usa i cmdlet del [modulo Azure Information Protection](../rms-client/client-admin-guide-powershell.md).
 
 I criteri di classificazione sono completamente configurabili ed estendibili e consentono in tal modo di impedire la perdita potenziale di dati da parte di utenti autorizzati o meno. Tali criteri consentono inoltre di ridurre il rischio di perdita di dati da parte di amministratori di rete perché è possibile configurarli in modo che agli amministratori non venga richiesto l'accesso ai file.
 
@@ -40,10 +41,6 @@ Per istruzioni sull'uso dello script di Windows PowerShell per tutti i tipi di f
 ## <a name="next-steps"></a>Passaggi successivi
 Dopo aver compreso in che modo le applicazioni e i servizi supportano Azure RMS, si potrebbe essere interessati a un confronto tra Azure RMS con la versione locale di Rights Management, Active Directory Rights Management Services (AD RMS). Per un confronto delle funzionalità, dei requisiti e dei controlli di sicurezza, vedere [Confronto tra Azure Rights Management e AD RMS](compare-azure-rms-ad-rms.md).
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

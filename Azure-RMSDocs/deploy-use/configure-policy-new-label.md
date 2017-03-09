@@ -1,18 +1,19 @@
 ---
-title: Come creare una nuova etichetta | Azure Information Protection
+title: Nuova etichetta per Azure Information Protection
 description: "Azure Information Protection offre etichette predefinite personalizzabili, ma è anche possibile creare etichette proprie da mostrare all&quot;utente sulla barra Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2016
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 translationtype: Human Translation
-ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
-ms.openlocfilehash: 1b0a908f6a372703ce06e3434307a81fd53c020c
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 602fef628f882eb79fe78b5acf89bde1721aa0ec
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -36,8 +37,7 @@ Seguire queste istruzioni per aggiungere una nuova etichetta ai criteri di Azure
     - Per creare una nuova etichetta, fare clic su **Aggiungi una nuova etichetta**.
 
     - Per creare una nuova etichetta secondaria, fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida (**...**) per l'etichetta per cui si vuole creare un'etichetta secondaria, quindi scegliere **Aggiungi un'etichetta secondaria**.
-
-
+    
      Se la nuova etichetta da aggiungere si trova in un [criterio con ambito](configure-policy-scope.md) in modo da essere applicata solo agli utenti selezionati, selezionare prima di tutto il criterio con ambito nel pannello iniziale di **Azure Information Protection**.
 
 3. Nel pannello **Etichetta** o **Etichetta secondaria** selezionare le opzioni desiderate per la nuova etichetta, quindi fare clic su **Salva**.
@@ -51,10 +51,6 @@ Seguire queste istruzioni per aggiungere una nuova etichetta ai criteri di Azure
 
 Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).  
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

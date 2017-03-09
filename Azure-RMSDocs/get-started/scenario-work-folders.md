@@ -1,10 +1,10 @@
 ---
-title: Scenario - Configurare le cartelle di lavoro per una protezione permanente | Azure Information Protection
+title: Scenario AIP - Configurare le cartelle di lavoro per la protezione di RMS
 description: Questo scenario e la documentazione di supporto per l&quot;utente usano la tecnologia di protezione Azure Rights Management per applicare la protezione permanente ai documenti di Office in Cartelle di lavoro.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/23/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,13 +13,14 @@ ms.assetid: 1f189345-a69e-4bf5-8a45-eb0fe5bb542b
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 0d4b1cdc2620a1f8cf9ddced24a898a38d8e9b57
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 1fa655cd91746d8e5c19f6a9eca0d93a3be8fb23
+ms.lasthandoff: 02/24/2017
 
 
 ---
 
-# <a name="scenario-configure-work-folders-for-persistent-protection"></a>Scenario - Configurare le cartelle di lavoro per una protezione permanente
+# <a name="scenario---configure-work-folders-for-persistent-protection"></a>Scenario - Configurare le cartelle di lavoro per una protezione permanente
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -120,9 +121,4 @@ Se è stato configurato il modello personalizzato come descritto in questo scena
 > 
 > Dopo un intervallo di tempo, se si scopre che esistono molte richieste di utenti, è possibile decidere di definire il proprio modello personalizzato per questo scenario che conceda solo a specifici utenti (ad esempio responsabili o supporto tecnico) l'opzione Comproprietario, mentre agli utenti standard vengono concessi diritti di Coautore o qualsiasi altro [diritto](../deploy-use/configure-usage-rights.md) si ritenga adatto.
 
-
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

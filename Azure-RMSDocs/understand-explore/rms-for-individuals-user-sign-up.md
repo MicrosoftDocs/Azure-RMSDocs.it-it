@@ -1,10 +1,10 @@
 ---
-title: "Modalità di iscrizione per RMS per utenti singoli | Azure Information Protection"
+title: "Modalità di iscrizione a RMS per utenti singoli - AIP"
 description: Istruzioni per eseguire l&quot;iscrizione all&quot;account gratuito e informazioni tecniche sul funzionamento del processo.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/25/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 82f59842420667c5ad28a6704c9df0d26043d50c
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 1134bff1935b3fada661865f31104e0316e8fecd
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -23,7 +24,7 @@ ms.openlocfilehash: 82f59842420667c5ad28a6704c9df0d26043d50c
 
 >*Si applica a: Azure Information Protection*
 
-Per iscriversi per ottenere l'account gratuito, è necessario visitare la [pagina di Microsoft Azure Information Protection](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload) e specificare il proprio indirizzo di posta elettronica aziendale. Il modo più comune con cui si verrà indirizzati a questa pagina per l'iscrizione è quando si riceve un messaggio di posta elettronica con un allegato protetto, che contiene istruzioni per iscriversi. Si riceverà un messaggio di posta elettronica di risposta da Microsoft e sarà quindi possibile completare la procedura di iscrizione inserendo i dettagli per creare l'account. Dopo il completamento, verrà visualizzata una pagina in cui è possibile scaricare l'applicazione di condivisione per vari dispositivi, un collegamento al manuale dell'utente e un collegamento a un elenco aggiornato delle applicazioni che supportano la protezione di Rights Management in modo nativo. 
+Per iscriversi per ottenere l'account gratuito, è necessario visitare la [pagina di Microsoft Azure Information Protection](https://portal.office.com/signup?sku=rms&ru=https%3A%2F%2Fportal.azurerms.com%2F%23%2Fdownload) e specificare il proprio indirizzo di posta elettronica aziendale. Il modo più comune con cui si verrà indirizzati a questa pagina per l'iscrizione è quando si riceve un messaggio di posta elettronica con un allegato protetto, che contiene istruzioni per iscriversi. Si riceverà un messaggio di posta elettronica di risposta da Microsoft e sarà quindi possibile completare la procedura di iscrizione inserendo i dettagli per creare l'account. Dopo il completamento, verrà visualizzata una pagina in cui è possibile scaricare Azure Information Protection per diversi dispositivi, con un collegamento alla guida per l'utente e un collegamento all'elenco aggiornato delle applicazioni che supportano la protezione di Rights Management in modo nativo. 
 
 ## <a name="to-sign-up-for-rms-for-individuals"></a>Per iscriversi per RMS per utenti singoli
 
@@ -44,11 +45,11 @@ Per iscriversi per ottenere l'account gratuito, è necessario visitare la [pagin
 
 6.  A questo punto viene aperta la pagina **One last thing ...(Un'ultima operazione)** dove specificare i dettagli per l'account. Digitare il nome, il cognome, specificare e confermare una password a scelta e quindi fare clic su **Start (Avvia)**.
 
-7. Dopo aver creato l'account, verrà aperta una nuova pagina di Microsoft Rights Management in cui è possibile scaricare e installare l'applicazione di condivisione oppure fare clic sul collegamento [More information (Altre informazioni)](../rms-client/sharing-app-user-guide.md) per leggere il manuale dell'utente dell'applicazione di condivisione.
+7. Dopo aver creato l'account, verrà visualizzata una nuova pagina di Microsoft Azure Information Protection in cui è possibile scaricare e installare il client Azure Information Protection oppure fare clic sul collegamento alla [guida per l'utente](../rms-client/client-user-guide.md) per le procedure per i computer Windows.
 
 Dopo avere creato l'account, è possibile iniziare a proteggere i file e a leggere quelli protetti da altri utenti. Quando viene chiesto di accedere per proteggere i file o leggere quelli protetti, immettere l'indirizzo di posta elettronica e la password usati per creare l'account per RMS per utenti singoli.
 
-## <a name="technical-overview-of-the-signup-process"></a>Panoramica tecnica del processo di registrazione
+## <a name="technical-overview-of-the-sign-up-process"></a>Panoramica tecnica del processo di registrazione
 RMS per utenti singoli usa un processo di iscrizione self-service impiegato anche da altri servizi che usano la tecnologia basata su Microsoft Cloud per autenticare gli utenti.
 
 Questo è ciò che avviene in background quando un utente effettua l'iscrizione a RMS per utenti singoli e la sua organizzazione non dispone di un abbonamento a Office 365 o di una sottoscrizione di Azure e quindi non dispone di una directory in Azure per autenticare gli utenti:
@@ -60,7 +61,7 @@ Questo è ciò che avviene in background quando un utente effettua l'iscrizione 
 
     Se viene trovato un tenant esistente, viene controllato per sapere se dispone già di una sottoscrizione per Azure RMS. Quando non viene trovata alcuna sottoscrizione, è possibile aggiungere la sottoscrizione gratuita a RMS per utenti singoli.
 
-2.  L'organizzazione riceve gratuitamente la sottoscrizione di RMS per utenti singoli. Ora, questo utente può essere autenticato da Azure e può proteggere i file e leggere i file protetti da altri utenti tramite Azure Rights Management. Per proteggere i file e leggere i file protetti, l'utente deve avere un'applicazione abilitata per RMS, come l'[applicazione Rights Management sharing](../rms-client/sharing-app-windows.md) gratuita.
+2.  L'organizzazione riceve gratuitamente la sottoscrizione di RMS per utenti singoli. Ora, questo utente può essere autenticato da Azure e può proteggere i file e leggere i file protetti da altri utenti tramite Azure Rights Management. Per proteggere i file e leggere i file protetti, l'utente deve avere un'applicazione abilitata per RMS, come il [client Azure Information Protection](../rms-client/aip-client.md) gratuito.
 
 3.  Quando un secondo utente della stessa organizzazione richiede una sottoscrizione di RMS per utenti singoli, viene aggiunto un nuovo account utente alla directory di Azure creata in precedenza, usando la sottoscrizione di RMS per utenti singoli dell'organizzazione. Questo secondo utente può eseguire tutte le operazioni che può eseguire il primo (proteggere file e leggere file protetti), ma i due utenti possono ora collaborare più facilmente in modo sicuro perché sono in grado di applicare rapidamente modelli predefiniti ai file per limitare l'accesso agli account presenti nella directory di Azure dell'organizzazione.
 
@@ -94,10 +95,4 @@ Questo processo non prevede costi aggiuntivi per l'organizzazione né attività 
 ## <a name="next-steps"></a>Passaggi successivi
 Vedere [Modalità di controllo da parte degli amministratori degli account creati per RMS per utenti singoli](rms-for-individuals-take-control.md).
 
-
-
-
-
-<!--HONumber=Nov16_HO2-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

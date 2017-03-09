@@ -1,10 +1,10 @@
 ---
-title: Aggiornare i modelli | Azure Information Protection
+title: Aggiornare i modelli di Azure RMS - AIP
 description: "Quando si usa Azure Rights Management, i modelli vengono scaricati automaticamente nei computer client, in modo che gli utenti possano selezionarli dalle rispettive applicazioni. Può tuttavia essere necessario eseguire alcuni passaggi aggiuntivi se si apportano modifiche ai modelli."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/12/2016
+ms.date: 01/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 9d8354f2d68f211d349226970fd2f83dd0ce810b
-ms.openlocfilehash: 2cfe5fd787811cae71bb08c458bd6767e4bc35e4
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: 84056058eedccf354cefb86792d92949bcfb22e8
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -49,13 +50,13 @@ Se Information Rights Management (IRM) è stato già configurato per Exchange On
     1.  Fornire il nome utente di Office 365 e la password:
 
         ```
-        $Cred = Get-Credential
+        $UserCredential = Get-Credential
         ```
 
     2.  Connettersi al servizio Exchange Online eseguendo i due comandi seguenti:
 
         ```
-        $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://ps.outlook.com/powershell/ -Credential $Cred -Authentication Basic –AllowRedirection
+        $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
         ```
 
         ```
@@ -186,7 +187,4 @@ Modificando il Registro di sistema nei computer che eseguono Office 2010, è pos
 ## <a name="see-also"></a>Vedere anche
 [Configurare modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
 
-
-<!--HONumber=Dec16_HO1-->
-
-
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -5,18 +5,19 @@ keywords:
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 10/20/2016
+ms.date: 02/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: ff150ef29d7ad90e1c53894175a27cfe1f1a4d8e
+ms.sourcegitcommit: 8af3161946b2dfc6ea58d0565491d8e59736d565
+ms.openlocfilehash: 2f4c11f7661a814849ccea41c60edfc2ad2287e8
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -25,7 +26,13 @@ ms.openlocfilehash: ff150ef29d7ad90e1c53894175a27cfe1f1a4d8e
 
 Questo argomento contiene informazioni importanti su questa versione e le precedenti dell'SDK 2.1 RMS.
 
-## <a name="new-for-the-february-2016---sdk-documentation-update"></a>Novità dell'aggiornamento di febbraio 2016 della documentazione dell'SDK
+## <a name="new-for-the-february-2017---sdk-documentation-update"></a>Novità dell'aggiornamento di febbraio 2017 della documentazione dell'SDK
+>[!Note]  
+> Gli aggiornamenti della documentazione in questa sezione si applicano alla versione del download dell'SDK 1.03102.0221.
+ 
+- **Raccolta dei dati**: è ora disponibile la funzionalità di raccolta delle informazioni relative agli errori e alle prestazioni delle applicazioni. Questa funzionalità è controllata tramite la nuova proprietà *IPC_EI_DATA_COLLECTION_ENABLED*, inclusa nelle [proprietà di ambiente](https://msdn.microsoft.com/en-us/library/hh535247.aspx), ed è possibile eseguirne l'override a livello amministrativo. 
+
+## <a name="february-2016---sdk-documentation-update"></a>Aggiornamento di febbraio 2016 della documentazione dell'SDK
 
 >[!Note]
 > Gli aggiornamenti della documentazione delle funzionalità in questa sezione si applicano al download dell'SDK con data 11/12/2015.
@@ -68,7 +75,7 @@ Questo argomento contiene informazioni importanti su questa versione e le preced
 
 ## <a name="january-2015-update"></a>Aggiornamento di gennaio 2015
 
--   **Aumento delle dimensioni del file protetto (pfile) supportato** - Supporta ora pfile di dimensioni maggiori di 1 gigabyte (1 GB). Per altre informazioni su pfile, vedere [Supported File Formats](supported-file-formats.md) (Formati file supportati).
+-   **Aumento delle dimensioni del file protetto (pfile) supportato** - Supporta ora pfile di dimensioni maggiori di&1; gigabyte (1 GB). Per altre informazioni su pfile, vedere [Supported File Formats](supported-file-formats.md) (Formati file supportati).
 -   **Miglioramento della registrazione per una migliore diagnostica** - Sui livelli di registrazione sarà visualizzato **ERRORE** o **AVVISO** per i messaggi da rivedere. Tutti gli altri messaggi, incluse le eccezioni ancora visualizzate, saranno registrati come **INFO**.
 
     È stato scelto questo approccio per evitare perdite di dettagli. A questo punto, solo i messaggi importanti sono visualizzati con livello AVVISO.
@@ -162,8 +169,3 @@ Estensione del componente API File di SDK e offre le funzionalità seguenti:
 Se non è possibile recuperare alcun nome e descrizione, viene restituito un errore. Può esistere un solo nome e una descrizione per un LCID specifico.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

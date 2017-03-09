@@ -1,10 +1,10 @@
 ---
-title: Registrazione e analisi dell&quot;utilizzo del servizio Azure Rights Management | Azure Information Protection
+title: Registrare e analizzare l&quot;utilizzo del servizio Azure RMS - AIP
 description: Informazioni e istruzioni sull&quot;uso della registrazione dell&quot;utilizzo con Azure Rights Management (Azure RMS).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2016
+ms.date: 02/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,9 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 translationtype: Human Translation
-ms.sourcegitcommit: b4abffcbe6e49ea25f3cf493a1e68fcd6ea25b26
-ms.openlocfilehash: 9dea728836d52249471d3dde69b63a9a2cd1467c
+ms.sourcegitcommit: 17824b007444e9539ffc0374bf39f0984efa494c
+ms.openlocfilehash: 5deea0dce593aae09c498e8b6696205890e9f232
+ms.lasthandoff: 02/28/2017
 
 
 ---
@@ -67,7 +68,7 @@ Per scaricare i log dell'utilizzo, verrà usato il modulo di amministrazione di 
 
 ### <a name="to-download-your-usage-logs-by-using-powershell"></a>Per scaricare i log dell'utilizzo con PowerShell
 
-1.  Avviare Windows PowerShell con l'opzione **Esegui come amministratore** e usare il cmdlet [Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx) per connettersi al servizio Azure Rights Management:
+1.  Avviare Windows PowerShell con l'opzione **Esegui come amministratore** e usare il cmdlet [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice) per connettersi al servizio Azure Rights Management:
 
     ```
     Connect-AadrmService
@@ -100,7 +101,7 @@ Per impostazione predefinita, questo cmdlet usa tre thread per scaricare i log. 
 #### <a name="if-you-manually-enabled-azure-rights-management-usage-logging-before-the-logging-change-february-22-2016"></a>Se la funzionalità di registrazione dell'utilizzo di Azure Rights Management è stata abilitata manualmente prima della modifica relativa alla registrazione del 22 febbraio 2016
 
 
-Se la funzionalità di registrazione dell'utilizzo è stata usata prima delle modifica relativa alla registrazione, nell'account di archiviazione di Azure configurato saranno presenti log dell'utilizzo. Microsoft non copierà questi log dall'account di archiviazione nel nuovo account di archiviazione gestito di Azure Rights Management come parte della modifica relativa alla registrazione. L'utente è responsabile della gestione del ciclo di vita dei log generati in precedenza e può usare il cmdlet [Get-AadrmUsageLog](https://msdn.microsoft.com/library/dn629401.aspx) per scaricare i log precedenti. Ad esempio:
+Se la funzionalità di registrazione dell'utilizzo è stata usata prima delle modifica relativa alla registrazione, nell'account di archiviazione di Azure configurato saranno presenti log dell'utilizzo. Microsoft non copierà questi log dall'account di archiviazione nel nuovo account di archiviazione gestito di Azure Rights Management come parte della modifica relativa alla registrazione. L'utente è responsabile della gestione del ciclo di vita dei log generati in precedenza e può usare il cmdlet [Get-AadrmUsageLog](/powershell/aadrm/vlatest/get-aadrmusagelog) per scaricare i log precedenti. Ad esempio:
 
 - Per scaricare tutti i log disponibili nella cartella E:\logs: `Get-AadrmUsageLog -Path "E:\Logs"`
     
@@ -145,16 +146,18 @@ Ciascuna delle righe seguenti è un record di log. I valori dei campi seguono lo
 |result|String|La stringa 'Success' indica che la richiesta è stata eseguita con esito positivo.<br /><br />Se la richiesta ha avuto esito negativo, il tipo di errore viene riportato tra virgolette singole.|'Success'|
 |correlation-id|Testo|GUID comune tra il log del client e il log del server RMS per una determinata richiesta.<br /><br />Questo valore può essere utile per la risoluzione dei problemi del client.|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|Testo|GUID, riportato tra parentesi graffe, che identifica il contenuto protetto, ad esempio un documento.<br /><br />In questo campo è presente un valore solo se la richiesta è di tipo AcquireLicense. Per tutti gli altri tipi di richiesta il campo è vuoto.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
-|owner-email|String|Indirizzo di posta elettronica del proprietario del documento.|alice@contoso.com|
-|issuer|String|Indirizzo di posta elettronica del soggetto emittente il documento.|alice@contoso.com oppure FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
-|template-id|String|ID del modello usato per proteggere il documento.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|file-name|String|Nome del documento protetto. <br /><br />Attualmente, alcuni file, ad esempio i documenti di Office, vengono visualizzati come GUID anziché come nome di file.|TopSecretDocument.docx|
-|date-published|Date|Data in cui è stato protetto il documento.|2015-10-15T21:37:00|
+|owner-email|String|Indirizzo di posta elettronica del proprietario del documento.<br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.|alice@contoso.com|
+|issuer|String|Indirizzo di posta elettronica del soggetto emittente il documento. <br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.|alice@contoso.com (oppure) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
+|template-id|String|ID del modello usato per proteggere il documento. <br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
+|file-name|String|Nome del documento protetto. <br /><br />Attualmente, alcuni file, ad esempio i documenti di Office, vengono visualizzati come GUID anziché come nome di file.<br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.|TopSecretDocument.docx|
+|date-published|Date|Data in cui è stato protetto il documento.<br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.|2015-10-15T21:37:00|
 |c-info|String|Informazioni sulla piattaforma client che effettua la richiesta.<br /><br />La stringa specifica varia a seconda dell'applicazione (ad esempio, il sistema operativo o il browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|Address|L'indirizzo IP del client che effettua la richiesta.|64.51.202.144|
+|admin-action|Bool|Indica se un amministratore ha eseguito l'accesso al sito di rilevamento dei documenti in modalità Amministratore.|True|
+|acting-as-user|String|Indirizzo di posta elettronica dell'utente per il quale un amministratore accede al sito di rilevamento dei documenti. |'joe@contoso.com'|
 
 
-#### <a name="exceptions-for-the-userid-field"></a>Eccezioni per il campo user-id
+#### <a name="exceptions-for-the-user-id-field"></a>Eccezioni per il campo user-id
 Anche se nel campo user-id è in genere riportato il nome dell'utente che ha effettuato la richiesta, esistono due eccezioni in cui il valore del campo non indica un utente reale:
 
 -   Il valore **'microsoftrmsonline@&lt;YourTenantID&gt;.rms.&lt;region&gt;.aadrm.com'**.
@@ -236,11 +239,7 @@ Se la risorsa di archiviazione di Azure include log precedenti alla modifica rel
 
 Per altre informazioni sull'uso di Windows PowerShell per il servizio Azure Rights Management, vedere [Amministrazione del servizio Azure Rights Management mediante Windows PowerShell](administer-powershell.md).
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Nov16_HO1-->
 
 

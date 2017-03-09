@@ -1,18 +1,19 @@
 ---
-title: Come configurare le condizioni per la classificazione automatica e consigliata | Azure Information Protection
+title: Configurare le condizioni per un&quot;etichetta di Azure Information Protection
 description: "Quando si configurano le condizioni per un&quot;etichetta, è possibile assegnare automaticamente un&quot;etichetta a un documento o messaggio di posta elettronica. In alternativa, è possibile richiedere agli utenti di selezionare l&quot;etichetta consigliata."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2016
+ms.date: 02/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 translationtype: Human Translation
-ms.sourcegitcommit: 4fcfcebc7da5a22a91911d70d4d787dc525d3485
-ms.openlocfilehash: 4211adef1696a1b615bd3f25df568f4b5149c186
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: fd410002d2841c834f40a98c77534169ca09aa70
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -78,7 +79,7 @@ In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per 
 
 ## <a name="information-about-the-built-in-conditions"></a>Informazioni sulle condizioni predefinite
 
-Durante il periodo di anteprima è possibile selezionare le condizioni seguenti:
+È possibile selezionare le condizioni seguenti:
 
 - [Codice SWIFT](#swift-code )
 
@@ -221,11 +222,7 @@ Esempi per il test:
 
 Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).  
 
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
-
-
-
-
-<!--HONumber=Dec16_HO1-->
 
 

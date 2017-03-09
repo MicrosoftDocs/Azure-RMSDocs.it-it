@@ -1,18 +1,19 @@
 ---
-title: Come eliminare o riordinare un&quot;etichetta | Azure Information Protection
+title: Eliminare o riordinare un&quot;etichetta per Azure Information Protection
 description: "È possibile eliminare o riordinare le etichette mostrate sulla barra Information Protection configurandole nel criterio di Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/13/2016
+ms.date: 02/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 translationtype: Human Translation
-ms.sourcegitcommit: 55895dd6fd0e106c33914a232e2d00d98e8a154a
-ms.openlocfilehash: 195a4ff44d0edc9d35ee30786bdddbcc821fc106
+ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
+ms.openlocfilehash: df667a8580af71d808752d569a6148852faec82c
+ms.lasthandoff: 02/24/2017
 
 
 ---
@@ -27,7 +28,7 @@ ms.openlocfilehash: 195a4ff44d0edc9d35ee30786bdddbcc821fc106
 
 Quando si elimina un'etichetta che è stata applicata a documenti e messaggi di posta elettronica e si pubblica il criterio di Azure Information Protection, l'etichetta viene rimossa automaticamente dai documenti o messaggi di posta elettronica quando vengono successivamente aperti dal client Azure Information Protection.
 
-Anziché eliminare un'etichetta, è possibile limitarsi a disabilitarla per mantenerla e impedirne la visualizzazione sulla barra di Information Protection.
+Prima di eliminare un'etichetta, valutarne la disabilitazione in alternativa. Quando si disabilita un'etichetta applicata a documenti e messaggi di posta elettronica, l'etichetta applicata non verrà rimossa da questi documenti e messaggi di posta elettronica, ma non sarà più visualizzata come etichetta selezionabile dagli utenti nella barra di Information Protection. La disabilitazione di un'etichetta consente anche di mantenere la configurazione originale nel caso si voglia consentire agli utenti di selezionare l'etichetta in un secondo momento, quando sarà sufficiente riabilitarla.
 
 Ordinare le etichette in modo che gli utenti le vedano in una progressione logica sulla barra Information Protection. Ad esempio, ordinare le etichette per livello crescente di riservatezza, in modo che l'etichetta della minima riservatezza venga mostrata per prima e quella della massima riservatezza per ultima. Il [criterio predefinito](configure-policy-default.md) usa questa configurazione.
 
@@ -57,10 +58,6 @@ Per apportare le modifiche, seguire queste istruzioni.
 
 Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).  
 
-
-
-
-
-<!--HONumber=Dec16_HO2-->
+[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 
