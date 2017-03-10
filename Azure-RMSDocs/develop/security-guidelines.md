@@ -12,13 +12,10 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: ea2783ec76505681ab60aee9d995e347d4310cad
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: e940dfd1d3a053c14ea1adb6e72f4cde7d26bba0
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="security-best-practices-for-azure-information-protection"></a>Procedure ottimali di sicurezza per Azure Information Protection
 
 L'SDK (Software Development Kit) di Azure Information Protection (AIP) rappresenta un solido sistema per la pubblicazione e l'utilizzo di informazioni protette di ogni tipo. Per rendere un sistema AIP il più sicuro possibile, tutte le applicazioni abilitate per AIP devono essere create usando le procedure consigliate di AIP. Tutte le applicazioni abilitate per AIP condividono la responsabilità di aiutare a mantenere la sicurezza di questo ecosistema. Identificare i rischi per la sicurezza e fornire soluzioni correttive per tali rischi introdotti durante lo sviluppo delle applicazioni aiuta a ridurre al minimo la possibilità di un'implementazione del software meno sicura.

@@ -14,13 +14,10 @@ ms.assetid: 9f4cbd16-58e5-421f-a472-8d279e952760
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 4dd09720f55f07c08350cdeb79a0c9ec3aaede9e
-
-
+ms.openlocfilehash: 18c9f1f694601aea105eb5a7d97deb0da7f15730
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="get-started"></a>Introduzione
 
 Per questa versione di Microsoft Rights Management SDK 4.2, l'approccio introduttivo alla prima applicazione si basa sulle guide all'installazione dell'ambiente di sviluppo per ciascuno dei sistemi operativi o delle piattaforme. Per iniziare a creare l'applicazione abilitata all'uso di diritti, seguire questa procedura:
@@ -56,8 +53,3 @@ Per questa versione di Microsoft Rights Management SDK 4.2, l'approccio introdut
   |[Risorse della community](community-resources.md)|Active Directory Rights Management Services è supportato anche da una comunità crescente di sviluppatori su più piattaforme.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

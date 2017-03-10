@@ -14,13 +14,10 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: b5f1d44d950cd020c4b15d5f9505752bc960fa88
-
-
+ms.openlocfilehash: 46aba2289f0e3a41cc2fb09db3d5727cd77feb40
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="developing-your-application"></a>Sviluppo dell'applicazione
 
 In questo esempio verrà creata una semplice applicazione console che interagisce con il servizio Azure Information Protection (AIP).  Verrà usato come input il percorso di un documento da proteggere, quindi verrà applicata la protezione con criteri ad hoc o un modello di Azure. L'applicazione applicherà quindi i criteri corretti in base agli input, creando un documento con informazioni protette. Il codice di esempio che verrà usato è l'[applicazione di test Azure IP](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test) e si trova in Github.
@@ -232,8 +229,3 @@ Dopo avere eseguito tutti i passaggi di creazione ed esecuzione, gli output dell
 6. Immettere infine alcuni metadati dei criteri: nome dei criteri, descrizione e nome visualizzato dell'autorità di certificazione (tenant di Azure AD) ![output dell'app - passaggio 6](../media/develop/app-output-6.png)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Feb17_HO4-->
-
-

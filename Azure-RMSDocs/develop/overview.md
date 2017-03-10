@@ -14,13 +14,10 @@ ms.assetid: 8A13494E-C1D7-407D-BCD1-A406915EA578
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 19afce2a84e979ca1a25ec2ff6473dd3d6edd610
-
-
+ms.openlocfilehash: 3ad124e672dd3c4cbaaf1ac6b9e123e112e59cc4
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="overview"></a>Panoramica
 
 Microsoft Rights Management SDK 4.2 è una tecnologia di protezione delle informazioni disponibile per piattaforme diverse.  È un kit per sviluppatori (SDK, Software Developer Kit) o framework progettato per i computer client e i dispositivi. La sua funzione è quella di proteggere l'accesso e l'utilizzo di informazioni che passano attraverso le applicazioni abilitate all'uso di diritti. Gli SDK per queste piattaforme offrono una API semplice per gli sviluppatori di applicazioni per proteggere o utilizzare il contenuto digitale, recuperare modelli, acquisire criteri da un server e altre attività di gestione dei diritti correlate.
@@ -58,8 +55,3 @@ Usare la guida [Introduzione](get-started.md) per iniziare il progetto di app pe
 * [Account GitHub](https://github.com/AzureAD/)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

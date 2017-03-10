@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
 ms.reviewer: eymanor
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: d435c583075e2a76ad657cb442630771beb1c68f
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 24d69693254670cc5f777f8a8d1cb3a714357505
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Attività eseguite in precedenza con l'applicazione RMS sharing
 
 Di recente è stato eseguito l'aggiornamento dall'applicazione di condivisione Microsoft Rights Management (nota anche come "app RMS sharing") al client Azure Information Protection? 
@@ -52,4 +48,3 @@ Per trovare un'opzione specifica dell'applicazione RMS sharing, controllare la t
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]  
-
