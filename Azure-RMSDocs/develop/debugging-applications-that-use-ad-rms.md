@@ -14,13 +14,10 @@ ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: da5a9fa1a2c2eaccb6768914a0c425983b14fdbe
-
-
+ms.openlocfilehash: 128f472eb69a52bd8a7cf2e8103ee520d83ee92c
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-to-debug-a-rights-enabled-application"></a>Procedura: Eseguire il debug dell'applicazione abilitata all'uso di diritti
 
 L'argomento seguente illustra come eseguire il debug dell'applicazione e usare il registro eventi di Windows.
@@ -67,8 +64,3 @@ Ad esempio, il comando seguente abiliterà il registro eventi MSIPC e imposterà
 **Nota**: nel menu **Visualizza** del Visualizzatore eventi di Windows selezionare **Visualizza registri analitici e di debug** per rendere visibile il registro di debug MSIPC.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

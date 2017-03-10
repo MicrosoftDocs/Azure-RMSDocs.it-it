@@ -12,13 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 8c9d61e5-75da-4785-9942-1c6313879fd5
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 382b599e7001e993fa614c95b70e747d500aedda
-
-
+ms.openlocfilehash: d7bf6d58bca32adfaef26001285598a593c7b7b5
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="more-information-about-thales-hsms-and-microsoft-additions-retired-content"></a>Altre informazioni sui moduli di protezione hardware Thales e sulle funzionalità aggiunte da Microsoft: CONTENUTO RIMOSSO
 
 >*Si applica a: Azure Rights Management, Office 365*
@@ -26,9 +23,3 @@ ms.openlocfilehash: 382b599e7001e993fa614c95b70e747d500aedda
 Le informazioni contenute in questo articolo sono state rimosse perché non più pertinenti in quanto Azure Rights Management usa l'insieme di credenziali della chiave di Azure per le chiavi del tenant gestite dal cliente (note anche come bring your own key o BYOK). 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Jan17_HO1-->
-
-

@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 707d31d8cd2f012a4223a3654b2c1bbcefa2d1a8
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: dfdea977819434cc4a6d164fecb5727a22fca26f
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave protetta tramite software a un'altra
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Office 365*
@@ -69,5 +64,4 @@ Usare la procedura seguente per importare la configurazione di AD RMS in Azure I
 È ora possibile andare al [Passaggio 3. Attivare il tenant di Azure Information Protection](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

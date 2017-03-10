@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 31dc851eeb8e5e20ccc71cf9477a9192ae55deba
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 9c4265995a5c7974a9f88da2dcebc02d490a7de0
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="windows-powershell-script-for-azure-rms-protection-by-using-file-server-resource-manager-fci"></a>Script di Windows PowerShell per la protezione Azure RMS usando l'infrastruttura di classificazione file di Gestione risorse file server
 
 >*Si applica a: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*

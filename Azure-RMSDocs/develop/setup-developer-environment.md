@@ -14,13 +14,10 @@ ms.assetid: 296FC4C0-99C6-4997-AD97-5CEE01221B1A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: bde72c5da6ae30a78221d226f650285a9c4fc83e
-
-
+ms.openlocfilehash: 0c00ecdac59ef6c1b1a90856b44a79f35fef758a
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="setup-developer-environment"></a>Configurare l'ambiente di sviluppo
 
 Gli argomenti seguenti illustrano la configurazione dell'ambiente di sviluppo per il funzionamento con le API SDK di AD RMS per il sistema operativo in uso.
@@ -35,8 +32,3 @@ Gli argomenti seguenti illustrano la configurazione dell'ambiente di sviluppo pe
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

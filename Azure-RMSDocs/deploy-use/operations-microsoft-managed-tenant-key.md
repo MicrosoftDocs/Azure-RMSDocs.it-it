@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: caacc4174ddb63e9c9091c0df294b93cf947a7c4
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 0b4e9cd5350f942203129979b05bc1344fb37aa5
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="microsoft-managed-tenant-key-lifecycle-operations"></a>Gestione di Microsoft: operazioni del ciclo di vita della chiave del tenant
 
 >*Si applica a: Azure Information Protection, Office 365*
@@ -97,5 +92,4 @@ In caso di violazione di sicurezza, l'azione più efficace che l'utente o Micros
 |Vulnerabilità scoperta nell'algoritmo RSA o nella lunghezza della chiave oppure attacchi di forza bruta diventati realizzabili a livello di calcolo.|Microsoft deve aggiornare Azure Information Protection per supportare nuovi algoritmi e lunghezze maggiori della chiave che siano resilienti e invitare tutti i clienti a rinnovare le proprie chiavi del tenant.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
