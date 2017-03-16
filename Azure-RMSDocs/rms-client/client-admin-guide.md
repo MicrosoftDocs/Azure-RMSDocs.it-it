@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per gli amministratori in una rete aziend
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/24/2017
+ms.date: 03/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: eymanor
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
-ms.openlocfilehash: b0ddf66acf0db37d0396647a5518ccf48195019c
-ms.lasthandoff: 03/01/2017
-
-
+ms.openlocfilehash: adb444f7777304ed40b5b5f988e4efb73268ae14
+ms.sourcegitcommit: cbdbabd626fa5b91c418d84cd6228c9ca94a2525
+translationtype: HT
 ---
-
-
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
@@ -81,7 +76,9 @@ Inoltre:
 
 - Il modulo PowerShell richiede Windows PowerShell versione 4.0, che potrebbe essere necessario installare in sistemi operativi precedenti. Per altre informazioni, vedere [How to Install Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx) (Come installare Windows PowerShell 4.0). Il programma di installazione non controlla né installa questo prerequisito per l'utente. Per verificare quale versione di Windows PowerShell è in esecuzione, digitare **$PSVersionTable** in una sessione di PowerShell.
 
-- I computer con Windows 7 Service Pack 1 richiedono l'aggiornamento [KB 2533623](https://support.microsoft.com/en-us/kb/2533623), che può essere installato dopo l'installazione del client. Se questo aggiornamento obbligatorio non viene installato, viene richiesto di installarlo.
+- I computer con Windows 7 Service Pack 1 richiedono l'aggiornamento KB 2533623. Per altre informazioni su questo aggiornamento, vedere [Avviso di sicurezza Microsoft: possibile esecuzione di codice remoto durante un caricamento della libreria non protetto](https://support.microsoft.com/en-us/kb/2533623). Questo aggiornamento può essere installato direttamente dall'utente. In alternativa, è possibile sostituirlo con un altro aggiornamento che lo installa automaticamente.
+    
+    Se questo aggiornamento richiesto non è installato, l'installazione client avvisa che è necessario installarlo. Questo aggiornamento può essere installato dopo l'installazione del client. Alcune azioni, tuttavia, verranno bloccate e verrà visualizzato di nuovo l'avviso.  
 
 > [!NOTE]
 > Per l'installazione sono necessarie autorizzazioni di amministratore locale.
@@ -89,8 +86,10 @@ Inoltre:
 Oltre all'uso delle istruzioni seguenti, il client Azure Information Protection è anche incluso in Microsoft Update Catalog, in modo da poter installare e aggiornare il client usando qualsiasi servizio di aggiornamento software che usa il catalogo. 
 
 1. Scaricare il client di Azure Information Protection dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+    
+    Se è disponibile una versione di anteprima, mantenerla solo a scopo di test. Le versioni di questo tipo non sono progettate per l'uso in un ambiente di produzione. 
 
-2. Per un'installazione predefinita, eseguire semplicemente il file eseguibile **AzInfoProtection.exe**. Al contrario, per visualizzare le opzioni di installazione, eseguire prima di tutto l'eseguibile con **/help**: `AzInfoProtection.exe /help`
+2. Per un'installazione predefinita, basta eseguire il file eseguibile, ad esempio **AzInfoProtection.exe**. Al contrario, per visualizzare le opzioni di installazione, eseguire prima di tutto l'eseguibile con **/help**: `AzInfoProtection.exe /help`
 
    Esempio per installare automaticamente il client: `AzInfoProtection.exe /quiet`
    
@@ -196,4 +195,3 @@ Dopo aver installato il client Azure Information Protection, vedere gli argoment
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

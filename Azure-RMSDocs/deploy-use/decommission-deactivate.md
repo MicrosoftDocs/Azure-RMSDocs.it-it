@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: b88d4587be0549ea7364c9745c218865480a8d18
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: f577337cf7ce904a82ff23b165fdc7befe319092
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="decommissioning-and-deactivating-azure-rights-management"></a>Rimozione delle autorizzazioni e disattivazione di Azure Rights Management
 
 >*Si applica a: Azure Information Protection, Office 365*
@@ -57,22 +53,13 @@ Per disattivare [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanageme
 
 #### <a name="to-deactivate-rights-management-from-the-office-365-admin-center"></a>Per disattivare Rights Management mediante l'interfaccia di amministrazione di Office 365
 
-1.  [Accedere a Office 365 con l'account aziendale o dell'istituto di istruzione](https://portal.office.com/) con i privilegi di amministratore per la distribuzione di Office 365.
+1. Accedere alla [pagina Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) per gli amministratori di Office 365.
+    
+    Se viene chiesto di effettuare l'accesso, usare un account di amministratore globale di Office 365.    
 
-2.  Se l'interfaccia di amministrazione di Office 365 non viene visualizzata automaticamente, selezionare l'icona di avvio delle app in alto a sinistra e scegliere **Amministratore**. Il riquadro **Amministratore** viene visualizzato solo dagli amministratori di Office 365.
+2. Nella pagina **rights management** fare clic su **disattiva**.
 
-    > [!TIP]
-    > Per la guida all'interfaccia di amministrazione, vedere [Informazioni sull'interfaccia di amministrazione di Office 365 - Guida per gli amministratori](https://support.office.com/article/About-the-Office-365-admin-center-Admin-Help-58537702-d421-4d02-8141-e128e3703547).
-
-3.  Nel riquadro sinistro fare clic su **IMPOSTAZIONI SERVIZIO**.
-
-4.  Fare clic su **Rights Management**.
-
-5.  Nella pagina **RIGHTS MANAGEMENT** fare clic su **Gestione**.
-
-6.  Nella pagina **rights management** fare clic su **disattiva**.
-
-7.  Quando viene chiesto **Si desidera disattivare Rights Management?**fare clic su **disattiva**.
+3.  Quando viene chiesto **Si desidera disattivare Rights Management?**fare clic su **disattiva**.
 
 Verrà visualizzato il messaggio che indica che **Rights Management non è attivato** con l'opzione per l'attivazione.
 
@@ -84,11 +71,10 @@ Verrà visualizzato il messaggio che indica che **Rights Management non è attiv
 
 3.  Nella pagina **active directory** fare clic su **RIGHTS MANAGEMENT**.
 
-4.  Selezionare la directory da gestire per [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], fare clic su **DISATTIVA** e confermare l'azione.
+4.  Verificare che il nome del tenant sia selezionato, fare clic su **DISATTIVA** e confermare l'azione.
 
 Lo **STATO DI RIGHTS MANAGEMENT** dovrebbe ora essere **Inattivo** e l’opzione **DISATTIVA** viene sostituita da **ATTIVA**.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 

@@ -4,27 +4,25 @@ description: "Quando si assegna un&quot;etichetta a un documento o a un messaggi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 4ddacf2be34cb7921dfbe282a0476a8cd47de2cf
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: f1ac1ed3aada5d332764db962794d8d6b5428bd7
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
 
 Quando si assegna un'etichetta a un documento o a un messaggio di posta elettronica, è possibile selezionare diverse opzioni per rendere facilmente visibile la classificazione scelta. Questi contrassegni visivi sono un'intestazione, un piè di pagina e una filigrana:
 
-I contrassegni visivi vengono applicati ai documenti di Word, Excel e PowerPoint quando viene applicata l'etichetta e quando viene salvato il documento. Per i messaggi di posta elettronica, i contrassegni visivi vengono applicati all'invio del messaggio.
+I contrassegni visivi vengono applicati ai documenti di Word, Excel e PowerPoint quando viene applicata l'etichetta e quando il file viene salvato in queste applicazioni di Office. Per i messaggi di posta elettronica, i contrassegni visivi vengono applicati quando il messaggio viene inviato da Outlook.
+
+I contrassegni visivi non vengono applicati ai documenti quando l'etichetta viene applicata con Esplora file e un comando del menu di scelta rapida oppure quando un documento viene classificato tramite PowerShell.
 
 Altre informazioni su questi contrassegni visivi:
 
@@ -81,5 +79,4 @@ Esempio: se si specifica la stringa `Document: ${item.name}  Classification: ${i
 Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
