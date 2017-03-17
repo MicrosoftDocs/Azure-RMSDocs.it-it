@@ -2,7 +2,7 @@ Usare questa esercitazione per provare rapidamente Microsoft Azure Rights Manage
 
 ![Esercitazione di avvio rapido per la procedura](../media/AzRMS_QuickStartStepsAll.PNG)
 
-Questa esercitazione è rivolta ai consulenti e agli amministratori IT e consente di valutare Azure Rights Management come soluzione di protezione delle informazioni per un'organizzazione. In un ambiente di produzione le istruzioni per attivare il servizio verrebbero eseguite da un amministratore, mentre quelle per inviare il documento verrebbero eseguite dagli utenti finali. In questa esercitazione sono inclusi entrambi i set di istruzioni, per illustrare lo scenario end-to-end di invio sicuro di un documento riservato a una persona di un'altra organizzazione. Se si verificano problemi per completare questa esercitazione, inviare un messaggio di posta elettronica a [AskIPTeam](mailto:askipteam@microsoft.com?subject=Having%20problems%20with%20the%20Quick%20Start%20tutorial) , che fornisce il supporto necessario.
+Questa esercitazione è rivolta ai consulenti e agli amministratori IT e consente di valutare Azure Rights Management come soluzione di protezione delle informazioni per un'organizzazione. In un ambiente di produzione le istruzioni per attivare il servizio verrebbero eseguite da un amministratore, mentre quelle per inviare il documento verrebbero eseguite dagli utenti finali. In questa esercitazione sono inclusi entrambi i set di istruzioni, per illustrare lo scenario end-to-end di invio sicuro di un documento riservato a una persona di un'altra organizzazione. In caso di difficoltà a completare questa esercitazione, inviare un messaggio di posta elettronica a [AskIPTeam](mailto:askipteam@microsoft.com?subject=Having%20problems%20with%20the%20Quick%20Start%20tutorial), che fornisce il supporto necessario.
 
 Per completare questa esercitazione, è necessario quanto segue:
 
@@ -14,9 +14,4 @@ Per completare questa esercitazione, è necessario quanto segue:
 
 -   Un computer che esegue Windows (almeno Windows 7 SP1) e in cui è stato installato Office 2016 o Office 2013 oppure Office 2010.
 
-A questo punto, procedere con l’esercitazione.
-
-
-<!--HONumber=Jul16_HO3-->
-
-
+A questo punto, procedere con l'esercitazione.
