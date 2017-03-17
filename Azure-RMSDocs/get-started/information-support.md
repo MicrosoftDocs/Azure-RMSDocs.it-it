@@ -4,7 +4,7 @@ description: Risorse per gli amministratori, incluse informazioni sulle nuove ve
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/01/2017
+ms.date: 03/15/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 82a377e0b28e3f6614e8d79b5dae0e6f0abb9945
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: d5566f7d2c3ac802f2d8078241be3057d2cb2529
+ms.sourcegitcommit: 117e4016794d0cb9b7bd95603fb6c79114d65360
 translationtype: HT
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informazioni e supporto per Azure Information Protection
@@ -45,7 +45,7 @@ Le sezioni seguenti consentono di accedere a informazioni sulle opzioni di suppo
 
 Se si dispone del supporto tecnico Premier, visitare il [portale per i clienti Premier Support](https://premier.microsoft.com/) per segnalare eventi imprevisti, cercare soluzioni e ottenere assistenza.
 
-Se si è idonei a **FastTrack**: è possibile usufruire del FastTrack Center Benefit quando si acquistano almeno 150 licenze di Azure Information Protection in un piano idoneo. Il FastTrack Center Benefit consente di collaborare con gli specialisti Microsoft per valutare, correggere e attivare servizi idonei. Per altre informazioni, vedere [FastTrack Center Benefit per Azure Rights Management](https://technet.microsoft.com/library/mt607025.aspx).
+Se si è idonei a **FastTrack**: è possibile usufruire del FastTrack Center Benefit quando si acquistano almeno 150 licenze di Azure Information Protection in un piano idoneo. Il FastTrack Center Benefit consente di collaborare con gli specialisti Microsoft per valutare, correggere e attivare servizi idonei. Per altre informazioni, vedere [FastTrack Center Benefit per Azure Rights Management](/enterprise-mobility-security/Solutions/enterprise-mobility-fasttrack-program).
 
 Per altri clienti, usare i canali di supporto seguenti, a seconda di come si è ottenuto Azure Information Protection:
 
