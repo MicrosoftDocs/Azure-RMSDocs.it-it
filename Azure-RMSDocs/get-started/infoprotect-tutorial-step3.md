@@ -4,14 +4,14 @@ description: 'Passaggio 3 di un&quot;esercitazione introduttiva per provare rapi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
-ms.openlocfilehash: 30bb78ede8d882e18bca516d0d8da4c3946f000b
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 61c0d2c97ae1db15bf2ec5c4586aa54270502117
+ms.sourcegitcommit: d5ce1bce5e63b3e510033ff9d4d246dd3511ed7c
 translationtype: HT
 ---
 # <a name="step-3-install-the-client"></a>Passaggio 3: Installare il client

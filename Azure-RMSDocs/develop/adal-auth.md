@@ -1,11 +1,11 @@
 ---
-title: Configurare un&quot;app per l&quot;autenticazione ADAL | Documentazione Microsoft
+title: Configurare un&quot;app per l&quot;autenticazione ADAL - AIP
 description: Passaggi per configurare l&quot;app Azure Information Protection per l&quot;uso dell&quot;autenticazione basata su ADAL di Azure
 keywords: autenticazione, RMS, ADAL, Informatin Protection,
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,8 +14,8 @@ ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 880f022e53aa6c12b26d2d64782521de88d29399
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 27674aac7962c7a2f79fda8ccd6f90c366574b9b
+ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
 translationtype: HT
 ---
 # <a name="configure-your-app-for-adal-authentication"></a>Configurare un'app per l'autenticazione ADAL
@@ -67,7 +67,7 @@ Dopo aver effettuato l'iscrizione a Microsoft Azure:
 ![Assegnare un nome all'applicazione](../media/TellUsInput.png)
 
 - Aggiungere un URI di reindirizzamento e scegliere Avanti.
-  È necessario che l'URI di reindirizzamento sia un URI valido e univoco nella directory. Ad esempio, è possibile specificare `com.mycompany.myapplication://authorize`.
+  È necessario che l'URI di reindirizzamento sia un URI valido e univoco nella directory. Ad esempio, è possibile specificare `https://contoso.azurewebsites.net/.auth/login/done`.
 
 ![Aggiungere un URI di reindirizzamento](../media/RedirectURI.png)
 

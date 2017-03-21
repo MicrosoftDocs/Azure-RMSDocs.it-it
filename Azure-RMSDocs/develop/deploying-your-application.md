@@ -1,21 +1,21 @@
 ---
-title: Distribuzione dell&quot;applicazione
+title: Distribuzione dell&quot;applicazione - AIP
 description: Questo argomento illustra il processo di distribuzione dell&quot;applicazione
 keywords: distribuire, RMS, Azure Information Protection
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: aaff9ff7cda961ab0d61115f84197e2c5c7ef8b0
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: a78520f3cdf316c7264cb0ca88460858b5a2bf07
+ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
 translationtype: HT
 ---
 # <a name="deploy-into-production"></a>Distribuire in ambiente di produzione
@@ -96,14 +96,13 @@ Se il client non è presente, trasmettere un messaggio di errore che indica dove
 
 Se il client è presente, procedere con l'installazione dell'applicazione.
 
-## <a name="enabling-azure-information-protection--rights-management-services-with-your-application"></a>Abilitazione di Azure Information Protection/Rights Management Services con l'applicazione
+## <a name="enabling-azure-information-protection-services-with-your-application"></a>Abilitazione dei servizi Azure Information Protection con l'applicazione
 
 > [!NOTE]
 > Se è stata eseguita la migrazione al nuovo modello di ADAL per l'autenticazione, non è necessario installare l'**Assistente per l'accesso ai Microsoft Online Services**. Per ulteriori informazioni, vedere [ADAL authentication for your RMS enabled application](adal-auth.md) (Autenticazione ADAL per l'applicazione abilitata per RMS).
 > Inoltre, è possibile **certificare l'applicazione per Windows 10**. Eseguendo l'aggiornamento dell'applicazione per l'uso dell'autenticazione ADAL anziché dell'Assistente per l'accesso a Microsoft Online, l'utente e i clienti potranno: Installare RMS Client 2.1 senza necessità di privilegi amministrativi sul computer
 
-
-Affinché l'utente finale possa sfruttare i vantaggi dei servizi Information Protection/Rights Management, è necessario distribuire l'*Assistente per l'accesso ai Microsoft Online Services*. Lo sviluppatore dell'applicazione non sa se l'utente finale userà Information Protection tramite RMS (in locale) o tramite Azure Information Protection.
+Affinché l'utente finale possa sfruttare i vantaggi dei servizi Information Protection, è necessario distribuire l'*Assistente per l'accesso ai Microsoft Online Services*. Lo sviluppatore dell'applicazione non sa se l'utente finale userà Information Protection tramite RMS (in locale) o tramite Azure Information Protection.
 
 
 > [!IMPORTANT]
@@ -113,6 +112,8 @@ Affinché l'utente finale possa sfruttare i vantaggi dei servizi Information Pro
 -   Scaricare l'[Assistente per l'accesso ai Microsoft Online Services](http://www.microsoft.com/en-us/download/details.aspx?id=28177) dall'Area download Microsoft.
 -   Assicurarsi che la distribuzione di un'applicazione abilitata all'uso di diritti includa una verifica dei prerequisiti per la selezione di questo servizio.
 -   Per eseguire i test e per l'uso dei servizi online da parte degli utenti finali, vedere l'argomento di TechNet [Configurazione di Rights Management](https://TechNet.Microsoft.Com/en-us/library/jj585002.aspx).
+
+È inoltre necessario usare questa guida per configurare l'app: [Come configurare un'applicazione del servizio app per usare l'account di accesso di Azure Active Directory](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication).
 
 Per ulteriori informazioni sull'abilitazione dell'applicazione per l'uso di RMS per i servizi di Azure Rights Management, vedere [Consentire all'applicazione di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md).
 

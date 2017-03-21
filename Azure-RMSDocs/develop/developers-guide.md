@@ -1,10 +1,10 @@
 ---
-title: Guida per gli sviluppatori di Azure Information Protection | Documentazione Microsoft
+title: Guida per gli sviluppatori - AIP
 description: Gli sviluppatori possono usare Azure Information Protection per proteggere e gestire file di tutti i tipi
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/09/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: ea8a0f60997ca5d569f10969abfb9b010f0918da
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: fbd76e377c8b11b8e64187685144010dce9bbb25
+ms.sourcegitcommit: ee432bdb6783bfe311a7ebbc9a5f20a7c2ae759c
 translationtype: HT
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guida per gli sviluppatori di Azure Information Protection
@@ -79,9 +79,9 @@ Ognuno degli argomenti seguenti contiene indicazioni specifiche per un aspetto d
 
 - [Procedura: Abilitare la revoca e il rilevamento dei documenti (servizio)](tracking-content.md)
 - [Come distribuire il client](../rms-client/client-deployment-notes.md)
+- [Come distribuire l'app di servizio in un altro tenant] (how-to-deploy-app.md)
 - [Procedura: Installare e configurare un server RMS (servizio)](how-to-install-and-configure-an-rms-server.md)
 - [Procedura: Usare il rilevamento dei documenti (utente)](how-to-use-document-tracking.md)
-
 
 ### <a name="security-and-authentication"></a>Sicurezza e autenticazione
 

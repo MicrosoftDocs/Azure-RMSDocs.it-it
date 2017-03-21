@@ -4,7 +4,7 @@ description: "Per configurare le funzioni di classificazione, aggiunta di etiche
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 64a3daa57d71087d11098a1e71465f17b6b8f3b7
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: faf296a92abb6636bd516e41a6e44d4580984146
+ms.sourcegitcommit: 117e4016794d0cb9b7bd95603fb6c79114d65360
 translationtype: HT
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
@@ -48,7 +48,14 @@ Quando si apportano modifiche in un pannello di Azure Information Protection, fa
 
 Dopo avere apportato le modifiche desiderate, fare clic su **Publish** (Pubblica). 
 
-Il client di Azure Information Protection ricerca eventuali modifiche ogni volta che viene avviata dell'applicazione di Office supportata e scarica le modifiche come proprio criterio di Azure Information Protection.
+Il client Azure Information Protection verifica la disponibilità di eventuali modifiche ogni volta che viene avviata un'applicazione di Office supportata e scarica le modifiche come criteri di Azure Information Protection più recenti. I criteri del client vengono aggiornati anche nei modi seguenti:
+
+- Quando si fa clic con il pulsante destro del mouse per classificare e proteggere un file o una cartella.
+
+- Quando si eseguono i cmdlet di PowerShell per l'assegnazione di etichette e la protezione (Get-AIPFileStatus e Set-AIPFileLabel).
+
+- Ogni 24 ore.
+
 
 ## <a name="configuring-your-organizations-policy"></a>Configurazione dei criteri dell'organizzazione
 

@@ -1,21 +1,21 @@
 ---
-title: Come registrare l&quot;app e abilitarla per RMS con Azure AD | Azure RMS
+title: Come registrare l&quot;app con Azure AD - AIP
 description: Descrive i concetti fondamentali dell&quot;autenticazione utente per l&quot;app con abilitazione per RMS.
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 0c06a498c62b61c106572e049f8ef40fdb07485f
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: a98b4eb3bd7705faf268a544f4efa7ba41712816
+ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
 translationtype: HT
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Come registrare l'app e abilitarla per RMS con Azure AD
@@ -28,8 +28,8 @@ L'autenticazione utente è un passaggio essenziale per stabilire la comunicazion
 ## <a name="registration-via-azure-portal"></a>Registrazione tramite il portale di Azure
 Per iniziare, configurare la registrazione dell'app tramite il portale di Azure seguendo le istruzioni riportate in [Configurare Azure RMS per l'autenticazione ADAL](adal-auth.md). Assicurarsi di copiare e salvare i valori di **ID client** e **URI di reindirizzamento** da questo processo per usarli in seguito.
 
-## <a name="complete-your-rights-managagment-license-agreement-rmla"></a>Sottoscrivere un contratto di licenza per Rights Management
-Prima di distribuire l'applicazione è necessario sottoscrivere un contratto di licenza per Rights Management con il team Microsoft Rights Management. Per tutti i dettagli, vedere la prima sezione dell'argomento [Distribuire in ambiente di produzione - Richiesta di un contratto di licenza di produzione](deploying-your-application.md).
+## <a name="complete-your-information-protection-integration-agreement-ipia"></a>Sottoscrivere il contratto per l'integrazione di Information Protection (IPIA)
+Prima di distribuire l'applicazione è necessario sottoscrivere un contratto per l'integrazione di Information Protection (IPIA, Information Protection Integration Agreement) con il team di Microsoft Information Protection. Per tutti i dettagli, vedere la prima sezione dell'argomento [Distribuire in ambiente di produzione](deploying-your-application.md).
 
 ## <a name="implement-user-authentication-for-your-app"></a>Implementare l'autenticazione utente per l'app
 Ogni API RMS dispone di un callback che è necessario implementare per abilitare l'autenticazione dell'utente. RMS SDK 4.2 userà l'implementazione del callback quando non si fornisce un token di accesso, quando il token di accesso deve essere aggiornato o quando è scaduto.
