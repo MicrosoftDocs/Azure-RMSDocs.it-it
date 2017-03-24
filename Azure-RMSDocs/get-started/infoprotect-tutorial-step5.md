@@ -5,7 +5,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 03/21/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5bf04b9d7c2de6fbdfe2a5c19b82343088ff8f89
-ms.sourcegitcommit: d5ce1bce5e63b3e510033ff9d4d246dd3511ed7c
+ms.openlocfilehash: 2b59cbd99430b5474280acc02b1a2c4a2738c793
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
 translationtype: HT
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Passaggio 5: Vedere in azione la condivisione di file protetti e tenere traccia del documento 
@@ -57,7 +57,7 @@ Per questo passaggio finale dell'esercitazione, individuare un documento di Word
 
     **Questo file è protetto con Microsoft Azure Information Protection. In caso di primo utilizzo, vedere queste istruzioni: https://aka.ms/rms-signup.** 
 
-    ![Esercitazione introduttiva di Azure Information Protection, passaggio 5: Condividere un documento protetto tramite posta elettronica](../media/share-protected-email.png)
+    ![Esercitazione introduttiva di Azure Information Protection, passaggio 5: Condividere un documento protetto tramite posta elettronica](../media/share-protected-emailv2.png)
 
     Fare clic su **Invia**.
 
@@ -91,7 +91,7 @@ Ora che il destinatario ha aperto l'allegato e, facoltativamente, lo ha inoltrat
 
 2.  Nella scheda **Home** fare clic su **Proteggi** > **Rileva e revoca**:
 
-    ![Opzione Rileva utilizzo](../media/track-usage-callout.png)
+    ![Opzione Rileva utilizzo](../media/track-usage-calloutv2.png)
 
     In questo modo si passa al sito di rilevamento dei documenti.
 
