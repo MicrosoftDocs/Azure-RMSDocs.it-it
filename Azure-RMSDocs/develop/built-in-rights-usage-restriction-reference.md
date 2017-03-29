@@ -34,7 +34,7 @@ Questo argomento descrive i diritti predefiniti forniti da Microsoft Rights Mana
 - Windows Store e Windows Phone: [CommonRights.All</strong>](https://msdn.microsoft.com/library/microsoft.rightsmanagement.commonrights.all.aspx)
 - Linux: [CommonRights::All](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1CommonRights.html)
 
-** Proprietario**: il diritto di proprietario concede il controllo completo sul contenuto protetto.
+**Proprietario**: il diritto di proprietario concede il controllo completo sul contenuto protetto.
 - Android: [<strong>CommonRights.Owner](https://msdn.microsoft.com/library/dn758258.aspx)
 - iOS e OS X: [MSCommonRights owner](https://msdn.microsoft.com/library/dn758314.aspx)
 - Windows Store e Windows Phone: [CommonRights.Owner](https://msdn.microsoft.com/library/microsoft.rightsmanagement.commonrights.owner.aspx)
