@@ -4,7 +4,7 @@ description: "Per configurare le funzioni di classificazione, aggiunta di etiche
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: faf296a92abb6636bd516e41a6e44d4580984146
-ms.sourcegitcommit: 117e4016794d0cb9b7bd95603fb6c79114d65360
+ms.openlocfilehash: b946dff4782d1b5571aa0438d1681030f0de092f
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
 translationtype: HT
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
@@ -40,9 +40,11 @@ Per configurare i criteri di Azure Information Protection:
 
     - Opzione per richiedere agli utenti di specificare un motivo quando selezionano un'etichetta con un livello di riservatezza inferiore rispetto all'originale.
 
+    - Opzione per etichettare automaticamente un messaggio di posta elettronica, in base ai relativi allegati.
+
     - Opzione per fornire un collegamento alla guida personalizzata per gli utenti.
 
-Azure Information Protection include un [criterio predefinito](configure-policy-default.md), che contiene le etichette **Personal** (Personale), **Public** (Pubblico), **Internal** (Interno), **Confidential** (Riservato) e **Secret** (Segreto). È possibile usare le etichette predefinite così come sono oppure personalizzarle, eliminarle e crearne di nuove.
+Azure Information Protection viene distribuito con [criteri predefiniti](configure-policy-default.md), che contengono cinque etichette principali. Queste etichette sono utilizzabili con l'intera gamma di dati che un'organizzazione in genere crea e archivia, dalla classificazione minima dei dati personali alla classificazione più elevata di dati particolarmente riservati. È possibile usare le etichette predefinite così come sono oppure personalizzarle, eliminarle e crearne di nuove.
 
 Quando si apportano modifiche in un pannello di Azure Information Protection, fare clic su **Save** (Salva) per salvare le modifiche oppure su **Discard** (Ignora) per ripristinare le ultime impostazioni salvate. 
 

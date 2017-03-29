@@ -10,8 +10,8 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
-ms.openlocfilehash: e800818f87ab5b0b39ffdc244f871c04305039ae
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 4111fbaf678509cfb5b961f19dcc4b62f77c7a4a
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
 translationtype: HT
 ---
 # <a name="how-to-change-or-customize-an-existing-label-for-azure-information-protection"></a>Come modificare o personalizzare un'etichetta esistente per Azure Information Protection
@@ -29,7 +29,7 @@ Per modificare un'etichetta, seguire queste istruzioni.
     
     Ad esempio, dal menu principale fare clic su **Altri servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Per modificare un'etichetta dai criteri globali in modo da essere applicata a tutti gli utenti, selezionare l'etichetta da modificare nel pannello **Criteri:Globale**, quindi apportare le modifiche nel pannello **Etichetta** ed eventualmente nei pannelli successivi. Per modificare un'etichetta da un [criterio con ambito](configure-policy-scope.md) in modo da essere applicata agli utenti selezionati, selezionare prima di tutto il criterio nel pannello iniziale di **Azure Information Protection**.
+2. Per modificare un'etichetta dai criteri globali in modo che sia applicata a tutti gli utenti, selezionare l'etichetta da modificare nel pannello **Policy: Global** (Criteri: Globale), quindi apportare le modifiche nel pannello **Label** (Etichetta) ed eventualmente nei pannelli successivi. Per modificare un'etichetta da un [criterio con ambito](configure-policy-scope.md) in modo da essere applicata agli utenti selezionati, selezionare prima di tutto il criterio nel pannello iniziale di **Azure Information Protection**.
 
     L'eccezione si verifica quando si vuole riordinare un'etichetta, operazione che si esegue nel pannello dei criteri dai criteri globali o da un criterio con ambito selezionato: fare clic con il pulsante destro del mouse sull'etichetta o selezionare il menu di scelta rapida per l'etichetta, quindi scegliere **Sposta su** o **Sposta giù** fino a quando l'etichetta non è nell'ordine desiderato.
 
