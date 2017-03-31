@@ -4,7 +4,7 @@ description: "Di seguito sono riportate alcune possibili domande sulle funzional
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 03/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 6af0a81b31fb0a2e5437428dc8373dd997b18406
-ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+ms.openlocfilehash: 7f2bd30603f88ec72ee51f980c40903362cfdeba
+ms.sourcegitcommit: 8733730882bea6f505f4c6d53d4bdf08c3106f40
 translationtype: HT
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Domande frequenti sulla classificazione e l'assegnazione di etichette in Azure Information Protection
@@ -97,26 +97,5 @@ Se le etichette di Azure Information Protection applicano la protezione di Right
 
 Per la classificazione, Azure Information Protection usa metadati persistenti che includono un'etichetta di testo non crittografata. Queste informazioni possono essere lette da soluzioni DLP e da altre applicazioni. Per i file, questi metadati vengono archiviati all'interno di proprietà personalizzate, per i messaggi di posta elettronica nelle intestazioni dei messaggi.
 
-## <a name="how-do-i-sign-in-as-a-different-user"></a>Come si accede come utente diverso?
-
-In un ambiente di produzione, in genere non sarebbe necessario accedere come utente diverso quando si usa il client Azure Information Protection. Tuttavia, potrebbe essere necessario eseguire questa operazione se si hanno più tenant, ad esempio se si ha un tenant di prova oltre a Office 365 o un tenant di Azure usato dall'organizzazione.
-
-È possibile verificare con quale account è stato eseguito l'accesso usando la finestra di dialogo di **Microsoft Azure Information Protection**: nell'applicazione di Office, nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi** e quindi su **Guida e commenti**. Il nome dell'account verrà visualizzato nella sezione **Stato del client**.
-
-In particolare quando si usa un account amministratore, assicurarsi di controllare il nome di dominio dell'account di accesso che viene visualizzato. Ad esempio, se si ha un account "amministratore" in due diversi tenant, può essere facile non notare che è stato effettuato l'accesso con il nome dell'account giusto, ma con il dominio errato. Un sintomo di questo errore può essere l'impossibilità di scaricare i criteri di Azure Information Protection o di visualizzare le etichette o un comportamento previsto.
-
-Per accedere come utente diverso, al momento è necessario modificare il Registro di sistema:
-
-1. Usando un editor del Registro di sistema, passare a **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** ed eliminare il valore **TokenCache**.
-
-2. Riavviare tutte le applicazioni Office aperte e accedere con l'account utente diverso. Se non viene visualizzato un prompt dei comandi nell'applicazione Office per accedere al servizio Azure Information Protection, tornare alla finestra di dialogo **Microsoft Azure Information Protection** e fare clic su **Accedi** dalla sezione **Stato del client** aggiornata.
-
-Inoltre:
-
-- Se si usa Single Sign-On, è necessario disconnettersi da Windows e accedere con un account utente diverso dopo aver modificato il Registro di sistema. Il client Azure Information Protection eseguirà automaticamente l'autenticazione tramite l'account utente usato per l'accesso.
-
-- Se si vuole reinizializzare l'ambiente per il servizio Azure Rights Management (noto anche come bootstrap), è possibile farlo usando l'opzione **Reimposta** dello [strumento RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437).
-
-- Per eliminare i criteri di Azure Information Protection attualmente scaricati eliminare il file **Policy.msip** dalla cartella %localappdata%\Microsoft\MSIP.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
