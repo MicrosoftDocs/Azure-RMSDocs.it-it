@@ -4,14 +4,14 @@ description: 'Passaggio 2 di un&quot;esercitazione introduttiva per provare rapi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 03/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 7db581d07698edf50fda8379d622e35414ad3671
-ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+ms.openlocfilehash: 98e65768651c77b4cc0616142e6b7515d275b7a9
+ms.sourcegitcommit: 8ae83a9fc03bf2ee39ea758835ef52156f19784d
 translationtype: HT
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passaggio 2: Configurare e pubblicare criteri di Azure Information Protection
@@ -29,11 +29,9 @@ Il criterio predefinito disponibile con Azure è utilizzabile senza alcuna opera
     > [!TIP] 
     > Selezionare **Aggiungi al dashboard** per creare un riquadro **Azure Information Protection** nel dashboard, in modo da ignorare la ricerca del servizio al successivo accesso al portale.
 
-3.  Nel pannello di Azure Information Protection fare clic su **Global** e scorrere il pannello **Policy: Global** (Criteri: Globale) che visualizza i criteri predefiniti di Information Protection creati automaticamente per il tenant.
+3.  Esaminare il pannello **Criteri: Globale** visualizzato che mostra i criteri predefiniti di Information Protection creati automaticamente per il tenant:
     
-    Nel pannello **Policy: Global** (Criteri: Globale), si noterà quanto segue:
-    
-    - Etichette per la classificazione: **Personal**, **Public**, **General**, **Confidential** (Riservato) e **Highly Confidential** (Riservatezza elevata). Si noti che le ultime due etichette possono essere estese per visualizzare le etichette secondarie: **All Employees** (Tutti i dipendenti) e **Anyone (not protected)** (Chiunque (senza protezione)) che offrono esempi su come una classificazione può avere sottocategorie.
+    - Etichette per la classificazione: **Personal**, **Public**, **General**, **Confidential** (Riservato) e **Highly Confidential** (Riservatezza elevata). Le ultime due etichette si espandono per visualizzare le etichette secondarie **Tutti i dipendenti** e **Chiunque (senza protezione)**, offrendo esempi di come una classificazione può avere sottocategorie.
     
        > [!NOTE]
        > I criteri predefiniti potrebbero essere leggermente diversi da quelli illustrati in questa esercitazione. Ad esempio, si ha un'etichetta denominata **Internal** anziché **General**, e **Secret** anziché **Highly Confidential** (Riservatezza elevata). In questo caso, è possibile che si stia usando una versione precedente dei criteri predefiniti. Oppure è possibile che tali modifiche siano state apportate manualmente prima di iniziare l'esercitazione.
