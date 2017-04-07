@@ -4,7 +4,7 @@ description: "In caso di dubbio su una parola, un&quot;espressione o un acronimo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/08/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: a5cfa773d440e92fe9d3e88e242dfb25f7174400
-
-
+ms.openlocfilehash: 5fecc61fb77625047a5ebedad4ff906fe8c27bbe
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="terminology-for-azure-information-protection"></a>Terminologia di Azure Information Protection
 
 >*Si applica a: Azure Information Protection, Office 365*
@@ -64,15 +61,10 @@ In caso di dubbio su una parola, un'espressione o un acronimo correlato a Micros
 |connettore RMS|Vedere *Connettore Rights Management*.|
 |RMS per utenti singoli|Sottoscrizione gratuita per l'uso di [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] quando l'organizzazione non ha una sottoscrizione a Office 365 o Azure Active Directory.|
 |App RMS sharing|Vedere *Applicazione Rights Management sharing*.|
+|Modalità di sola protezione|Modalità operativa per il client di Azure Information Protection quando non sono presenti criteri di Azure Information Protection per l'applicazione delle etichette. In questa modalità le etichette di classificazione non vengono visualizzate, ma gli utenti possono applicare la protezione di Rights Management.|
 |utente con privilegi avanzati|Gruppo di amministratori altamente affidabili che possono decrittografare e aprire i file protetti dall'organizzazione tramite un servizio Rights Management. In genere, questo livello di accesso è obbligatorio per documenti eDiscovery legali e team di controllo.|
 |chiave del tenant|Nota anche come chiave del certificato concessore di licenze server (SLC).<br /><br />Chiave univoca di un'organizzazione che protegge tutte le funzionalità di crittografia di [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] correlate alla chiave del tenant.|
 |rimuovere la protezione|Rimuovere da file o messaggi di posta elettronica i controlli di Rights Management, applicati tramite criteri di crittografia, identità e controllo di accesso per la protezione dei dati.|
 |licenza d'uso|Certificato associato a un documento che viene concesso a un utente che apre un file o un messaggio di posta elettronica protetto da un servizio Rights Management. Questo certificato contiene i diritti dell'utente per il file o il messaggio e-mail e la chiave di crittografia usata per crittografare il contenuto, nonché ulteriori restrizioni di accesso definite nei criteri del documento.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-
-<!--HONumber=Feb17_HO4-->
-
-

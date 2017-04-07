@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 93f8021d-43c5-47fe-ad63-8a1bacff9971
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: f560ce654c611a885b54d9609405fb4b1bf7af1d
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 72ec5e755e3a5defe753741ed4061c30b2db7e82
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="client-devices-that-support-azure-rights-management-data-protection"></a>Dispositivi client che supportano la protezione dati di Azure Rights Management
 
 >*Si applica a: Azure Information Protection, Office 365*
@@ -58,4 +53,3 @@ I seguenti sistemi operativi per dispositivi mobili supportano il servizio Azure
 Per verificare gli altri requisiti, vedere [Requisiti per Azure Information Protection](requirements-azure-rms.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

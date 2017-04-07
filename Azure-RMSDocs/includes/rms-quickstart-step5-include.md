@@ -38,8 +38,3 @@ In questa esercitazione è stato esaminato un solo scenario relativo a come Azur
 
 Quando si è pronti a iniziare la distribuzione di Azure RMS, usare la [Guida di orientamento per la distribuzione di Azure Rights Management](../plan-design/deployment-roadmap.md) per i passaggi di distribuzione e i collegamenti alle istruzioni procedurali.
 
-
-
-<!--HONumber=Jan17_HO1-->
-
-

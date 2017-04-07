@@ -13,14 +13,10 @@ ms.assetid: 0510ead4-2fe7-4269-885b-fe16bcc69888
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 85cd61e564b066458618c02b4ac20cddf6b7e183
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: c408d7a8f068e2de6616534a58161a86482a2a9c
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="rms-developers-guide"></a>Guida per gli sviluppatori RMS
 
 ## <a name="overview"></a>Panoramica ##

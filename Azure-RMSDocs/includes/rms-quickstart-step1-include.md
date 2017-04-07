@@ -53,8 +53,3 @@ Anche se la procedura corrispondente non è inclusa in questa esercitazione, è 
 |--------------------------------|--------------------------|
 |Informazioni sull'attivazione di Rights Management e sul controllo di chi può proteggere file e messaggi di posta elettronica quando il servizio è attivato   →|[Attivazione di Azure Rights Management](../deploy-use/activate-azure-classic.md)|
 |Informazioni sui modelli predefiniti e su come creare nuovi modelli personalizzati   →|[Configurazione di modelli personalizzati per Azure Rights Management](../deploy-use/create-template.md)|
-
-
-<!--HONumber=Jan17_HO1-->
-
-

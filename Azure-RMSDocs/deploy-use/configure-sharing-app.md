@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: b9af5dc3-73d4-4147-b7ef-f6803b0d5216
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: af5541ab5dcec7224d1048121460b58b1ca13c48
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 4c04c832201fa6b1a76e5e3fe190c7cf022bee5d
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="rights-management-sharing-application-installation-and-configuration-for-clients"></a>Applicazione Rights Management sharing: installazione e configurazione dei client
 
 >*Si applica a: Azure Information Protection, Office 365*
@@ -42,6 +38,5 @@ Non è più possibile scaricare l'app RMS sharing per iOS e Android da questa pa
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 

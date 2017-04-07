@@ -1,11 +1,11 @@
 ---
-title: Configurare un&quot;app per l&quot;autenticazione ADAL | Documentazione Microsoft
+title: Configurare un&quot;app per l&quot;autenticazione ADAL - AIP
 description: Passaggi per configurare l&quot;app Azure Information Protection per l&quot;uso dell&quot;autenticazione basata su ADAL di Azure
 keywords: autenticazione, RMS, ADAL, Informatin Protection,
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 01/23/2017
+ms.date: 03/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,13 +14,10 @@ ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: b7415265d0e27896df2bdf6a62e7c875ba681345
-ms.openlocfilehash: d51730af8a1f410ad890087200f64864eceb2268
-
-
+ms.openlocfilehash: 27674aac7962c7a2f79fda8ccd6f90c366574b9b
+ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
+translationtype: HT
 ---
-
 # <a name="configure-your-app-for-adal-authentication"></a>Configurare un'app per l'autenticazione ADAL
 
 Questo argomento illustra i passaggi per configurare un'app per l'autenticazione basata su ADAL (Azure Active Directory Authentication Library) di Azure.
@@ -70,7 +67,7 @@ Dopo aver effettuato l'iscrizione a Microsoft Azure:
 ![Assegnare un nome all'applicazione](../media/TellUsInput.png)
 
 - Aggiungere un URI di reindirizzamento e scegliere Avanti.
-  È necessario che l'URI di reindirizzamento sia un URI valido e univoco nella directory. Ad esempio, è possibile specificare `com.mycompany.myapplication://authorize`.
+  È necessario che l'URI di reindirizzamento sia un URI valido e univoco nella directory. Ad esempio, è possibile specificare `https://contoso.azurewebsites.net/.auth/login/done`.
 
 ![Aggiungere un URI di reindirizzamento](../media/RedirectURI.png)
 
@@ -105,8 +102,3 @@ Dopo aver effettuato l'iscrizione a Microsoft Azure:
 ![Selezionare Salva](../media/SaveApplication.png)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO4-->
-
-

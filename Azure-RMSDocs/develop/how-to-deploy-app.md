@@ -14,14 +14,10 @@ ms.assetid: 34dc6d6f-cfe4-4848-9b11-8d90c4b38ef7
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: de843f475c86f27af63951a5e95986ff2a679e10
-ms.openlocfilehash: 4b0d2efbd8d48bb77f14662cd71ff4e05e35de19
-ms.lasthandoff: 02/28/2017
-
-
+ms.openlocfilehash: 7f117cd95bb10cb3729211c73aa03ae589b2b03d
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="deploying-a-service-application-into-a-different-tenant"></a>Distribuzione di un'applicazione di servizio a un tenant diverso
 
 Questo articolo descrive il processo di distribuzione di un'applicazione di servizio. In questo scenario si eseguirà la transizione dell'applicazione dal tenant AD di sviluppo in cui è stata originariamente registrata al tenant AD di produzione di un'altra società.

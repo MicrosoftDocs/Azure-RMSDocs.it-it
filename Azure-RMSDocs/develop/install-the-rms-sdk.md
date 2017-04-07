@@ -14,13 +14,10 @@ ms.assetid: C827E6B8-8CF2-4C86-AF97-60D66851827E
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: 226a813d88a0e867b9fc4fe17e7d75f50ddd2372
-
-
+ms.openlocfilehash: 52d4778a0a411a59bef43f5de7965b7dfdda8549
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="install-the-sdk"></a>Installare l'SDK
 
 Questo argomento descrive l'installazione degli strumenti per sviluppatori.
@@ -43,8 +40,3 @@ Per altre informazioni sui file installati nel sistema da "setup\_sdk.exe", vede
 * [File dell'ambiente di sviluppo](sdk-elements.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-

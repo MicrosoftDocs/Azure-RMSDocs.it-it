@@ -4,7 +4,7 @@ description: "Istruzioni per la migrazione della distribuzione di Active Directo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 12bd5b89cf9957521c7d7b4fb573e4ffcd6c865d
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: b82132d45f1d671c11355c44104dacf521e18082
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrazione da AD RMS ad Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Office 365*
@@ -59,12 +55,6 @@ Prima di iniziare il processo di migrazione ad Azure Information Protection, ver
         
         - Windows Server 2016 (x64)
         
-    - Modalità di crittografia 2:
-
-        - I server e i client di AD RMS devono essere in esecuzione in modalità di crittografia 2 prima di iniziare la migrazione ad Azure Information Protection.
-        
-        Anche se la chiave del certificato concessore di licenze server (SLC) corrente deve usare la modalità di crittografia 2, le chiavi precedenti configurate per la modalità di crittografia 1 sono supportate in Azure Information Protection come chiavi archiviate. Per altre informazioni sulle modalità di crittografia e su come passare alla modalità di crittografia 2, vedere [Modalità di crittografia di AD RMS](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx).
-        
     - Sono supportate tutte le topologie di AD RMS valide:
     
         - Singola foresta, singolo cluster RMS
@@ -73,7 +63,7 @@ Prima di iniziare il processo di migrazione ad Azure Information Protection, ver
         
         - Più foreste, più cluster RMS
         
-    Nota: per impostazione predefinita, viene eseguita la migrazione di più cluster RMS a un singolo tenant di Azure Information Protection. Se si vuole separare i tenant di Azure Information Protection, è necessario considerarli come diverse migrazioni. Non è possibile importare una chiave da un cluster RMS in più tenant di Azure Information Protection.
+    Nota: per impostazione predefinita, viene eseguita la migrazione di più cluster AD RMS a un singolo tenant di Azure Information Protection. Se si vuole separare i tenant di Azure Information Protection, è necessario considerarli come diverse migrazioni. Non è possibile importare una chiave da un cluster RMS in più tenant di Azure Information Protection.
 
 - **Tutti i requisiti per l'esecuzione di Azure Information Protection, incluso un tenant di Azure Information Protection (non attivato):**
 
@@ -101,10 +91,25 @@ Prima di iniziare il processo di migrazione ad Azure Information Protection, ver
 
 - **Se si vuole gestire la propria chiave del tenant di Azure Information Protection tramite una chiave protetta da HSM**:
 
-    - Per questa configurazione facoltativa è necessario usare Insieme di credenziali delle chiavi di Azure e una sottoscrizione di Azure che supporti l'insieme di credenziali delle chiavi con chiavi protette tramite HMS. Per altre informazioni, vedere la pagina [dei prezzi di Insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/en-us/pricing/details/key-vault/). 
+    - Per questa configurazione facoltativa è necessario usare Azure Key Vault e una sottoscrizione di Azure che supporti l'insieme di credenziali delle chiavi con chiavi protette tramite HMS. Per altre informazioni, vedere la [pagina dei prezzi di Azure Key Vault](https://azure.microsoft.com/en-us/pricing/details/key-vault/). 
 
 
-Limitazioni:
+### <a name="cryptographic-mode-considerations"></a>Considerazioni sulla modalità di crittografia
+
+Anche se non costituisce un prerequisito per la migrazione, è consigliabile che i client e i server AD RMS siano in esecuzione in Modalità crittografia 2 prima dell'avvio della migrazione. 
+
+Per altre informazioni sulle diverse modalità e su come eseguire l'aggiornamento, vedere [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx) (Modalità di crittografia AD RMS).
+
+Se il cluster AD RMS è in esecuzione in Modalità crittografia 1 e non è possibile aggiornarlo, dopo il completamento della migrazione è necessario reimpostare la chiave del tenant di Azure Information Protection. Con la reimpostazione della chiave viene creata una nuova chiave del tenant che usa la Modalità crittografia 2. L'uso del servizio Azure Rights Management con la Modalità crittografia 1 è supportato solo durante il processo di migrazione.
+
+Per verificare la modalità di crittografia AD RMS:
+ 
+- Per Windows Server 2012 R2 e Windows 2012: proprietà del cluster AD RMS > scheda **Generale**. 
+
+- Per tutte le versioni di AD RMS: usare [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) e l'opzione **AD RMS admin** (Amministratore di AD RMS) per visualizzare la modalità di crittografia in **RMS service information** (Informazioni sul servizio RMS).
+
+
+### <a name="migration-limitations"></a>Limitazioni della migrazione
 
 -   Anche se il processo di migrazione supporta la migrazione della chiave del certificato concessore di licenze server (SLC) in un modulo di protezione hardware (HSM) per Azure Information Protection, Exchange Online non supporta attualmente questa configurazione per il servizio Rights Management usato da Azure Information Protection. Se si vuole la funzionalità IRM completa con Exchange Online dopo la migrazione ad Azure Information Protection, la chiave del tenant di Azure Information Protection deve essere [gestita da Microsoft](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok). In alternativa, è possibile eseguire IRM con funzionalità ridotta in Exchange Online quando il tenant di Azure Information Protection è gestito dall'utente (BYOK). Per altre informazioni sull'uso di Exchange Online con il servizio Azure Rights Management, vedere [Passaggio 6. Configurare l’integrazione IRM per Exchange Online](migrate-from-ad-rms-phase3.md#step-6-configure-irm-integration-for-exchange-online).
 
@@ -139,11 +144,11 @@ I passaggi della migrazione possono essere suddivisi in 4 fasi eseguibili in mom
 
     - **Migrazione da una chiave protetta tramite HSM a un'altra**:
 
-        Da chiavi archiviate da un modulo di protezione hardware per AD RMS a chiave del tenant di Azure Information Protection gestita dal cliente (scenario "bring your own key" o BYOK). È necessario eseguire altri passaggi per trasferire la chiave dal modulo di protezione hardware di Thales locale a Insieme di credenziali delle chiavi di Azure e autorizzare il servizio Azure Rights Management all'uso di tale chiave. La chiave protetta tramite HSM esistente deve essere protetta dal modulo. Le chiavi protette da OCS non sono supportate dai servizi di Rights Management.
+        Da chiavi archiviate da un modulo di protezione hardware per AD RMS a chiave del tenant di Azure Information Protection gestita dal cliente (scenario "bring your own key" o BYOK). È necessario eseguire altri passaggi per trasferire la chiave dal modulo di protezione hardware di Thales locale ad Azure Key Vault e autorizzare il servizio Azure Rights Management all'uso di tale chiave. La chiave protetta tramite HSM esistente deve essere protetta dal modulo. Le chiavi protette da OCS non sono supportate dai servizi di Rights Management.
 
     - **Migrazione da una chiave protetta tramite software a una chiave protetta tramite HSM**:
 
-        Da chiavi basate su password gestite a livello centrale in AD RMS a chiave del tenant di Azure Information Protection gestita dal cliente (scenario "bring your own key" o BYOK). È necessaria la configurazione più estesa, perché è innanzitutto necessario estrarre la chiave software e importarla in un modulo di protezione hardware locale e quindi eseguire i passaggi aggiuntivi per trasferire la chiave dal modulo di protezione hardware di Thales locale a un modulo di protezione hardware di Insieme di credenziali delle chiavi di Azure e autorizzare il servizio Azure Rights Management all'uso dell'insieme di credenziali che archivia la chiave.
+        Da chiavi basate su password gestite a livello centrale in AD RMS a chiave del tenant di Azure Information Protection gestita dal cliente (scenario "bring your own key" o BYOK). È necessaria la configurazione più estesa, perché è innanzitutto necessario estrarre la chiave software e importarla in un modulo di protezione hardware locale e quindi eseguire i passaggi aggiuntivi per trasferire la chiave dal modulo di protezione hardware di Thales locale a un modulo di protezione hardware di Azure Key Vault e autorizzare il servizio Azure Rights Management all'uso dell'insieme di credenziali che archivia la chiave.
 
 - **Passaggio 3: Attivare il tenant di Azure Information Protection**
 
@@ -192,11 +197,10 @@ I passaggi della migrazione possono essere suddivisi in 4 fasi eseguibili in mom
 
 - **Passaggio 9: Reimpostare la chiave del tenant di Azure Information Protection**
 
-    Questo passaggio è facoltativo ma consigliato se la topologia della chiave del tenant di Azure Information Protection scelta al passaggio 2 è gestita da Microsoft. Questo passaggio non è applicabile se la topologia della chiave del tenant di Azure Information Protection scelta è gestita dal cliente (BYOK).
+    Questo passaggio è obbligatorio se prima della migrazione non era in esecuzione la Modalità crittografia 2. È facoltativo, ma consigliato, per tutte le migrazioni, allo scopo di salvaguardare la sicurezza della chiave del tenant di Azure Information Protection.
 
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per iniziare la migrazione, passare a [Fase 1: configurazione lato server](migrate-from-ad-rms-phase1.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

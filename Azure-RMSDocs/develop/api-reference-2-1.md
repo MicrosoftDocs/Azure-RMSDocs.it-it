@@ -14,14 +14,10 @@ ms.assetid: 6dcfa840-026b-4728-b53c-2c9c730fcf84
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 61efd11cde36c5f2507a91112cfc3711c1bedfca
-ms.openlocfilehash: a94472b5c240f895bc34b953a93fc78cee67a206
-ms.lasthandoff: 01/24/2017
-
-
+ms.openlocfilehash: 15cb1686fcdf92ebe078e816123dc8db4edd629c
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="api-reference"></a>Informazioni di riferimento sulle API
 
 Microsoft Rights Management SDK 2.1 supporta l'abilitazione per RMS dei client Windows. Per altre informazioni sulle specifiche, vedere [Note sulla versione](release-notes-rtm.md).

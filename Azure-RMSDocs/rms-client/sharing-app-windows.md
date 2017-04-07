@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 0bcafd705949012363f1ad04193e25246bf1f412
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 7767ec1cc1b500432b57ca69af5baba01b624698
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="rights-management-sharing-application-for-windows"></a>Applicazione Rights Management sharing per Windows
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection*
@@ -45,4 +41,3 @@ L'applicazione Rights Management sharing per Windows (nota anche come "app RMS s
 [Domande frequenti sull'applicazione Rights Management sharing per Windows](http://technet.microsoft.com/dn467883)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

@@ -4,7 +4,7 @@ description: Istruzioni su come classificare e proteggere documenti e messaggi d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 3db62d81976267155764abf7e45598628259710d
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: edc8c7227a0f2b493a64f25a26a64aef3a314e39
+ms.sourcegitcommit: df8492aa3687974dc6105dc415c2d959f32e6630
+translationtype: HT
 ---
-
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Classificare e proteggere un file o un messaggio di posta elettronica tramite Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
@@ -32,9 +28,9 @@ Tuttavia, è possibile classificare e proteggere i file tramite **Esplora file**
 
 I file protetti possono essere condivisi con altri utenti in tutta sicurezza. È ad esempio possibile allegare il file a un messaggio di posta elettronica o inviare un invito dal sito di SharePoint.
 
-Se si condividono regolarmente file con utenti esterni all'organizzazione, l'amministratore potrebbe avere configurato un'etichetta che imposta la protezione in modo da consentire la lettura ai destinatari desiderati. In alternativa, è possibile usare [Esplora file per impostare autorizzazioni personalizzate](#using-file-explorer-to-classify-and-protect-files) per un file prima di condividerlo. 
+Se si condividono regolarmente file con utenti esterni all'organizzazione, l'amministratore potrebbe avere configurato un'etichetta che imposta la protezione in modo da consentire la lettura ai destinatari desiderati. In alternativa, prima di condividere un file è possibile usare l'[app di Office](#set-custom-permissions-for-a-document) o [Esplora file](#using-file-explorer-to-classify-and-protect-files) per impostare autorizzazioni personalizzate per tale file. 
 
-Se si impostano autorizzazioni personalizzate e il file è già protetto per uso interno, effettuare prima una copia. Usare la copia per impostare le autorizzazioni personalizzate.  
+Se si impostano autorizzazioni personalizzate e il file è già protetto per uso interno, eseguirne prima una copia per mantenere le autorizzazioni originali. Usare quindi la copia per impostare le autorizzazioni personalizzate.  
 
 Quando il file è protetto con le autorizzazioni personalizzate, usare il meccanismo di condivisione standard per condividerlo. Se le persone con cui si condivide il file ricevono un file protetto per la prima volta, potrebbe essere necessario fornire loro le istruzioni per visualizzarlo. A tale scopo, è possibile copiare e incollare il messaggio seguente: **Questo file è protetto con Microsoft Azure Information Protection. In caso di primo utilizzo, vedere queste [istruzioni](https://aka.ms/rms-signup).**
 
@@ -68,6 +64,29 @@ Oltre a selezionare manualmente le etichette, è anche possibile applicarle nei 
 - Se l'etichetta mancante serve per applicare la protezione, l'edizione di Office in uso potrebbe non supportare l'applicazione della protezione di Rights Management. Per verificare, fare clic su **Proteggi** > **Guida e commenti** e controllare se nella sezione **Stato del client** è presente il messaggio **Questo client non ha la licenza per Office Professional Plus**. 
 
 - L'etichetta potrebbe essere in un criterio con ambito che non include l'account in uso. Rivolgersi all'help desk o all'amministratore.
+
+### <a name="set-custom-permissions-for-a-document"></a>Impostare autorizzazioni personalizzate per un documento
+
+È possibile specificare impostazioni di protezione personalizzate per i documenti anziché usare quelle eventualmente incluse dall'amministratore con l'etichetta selezionata.
+
+1. Nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi** > **Autorizzazioni personalizzate**:
+
+    ![Opzione Autorizzazioni personalizzate](../media/custom-permissions-callout.png)
+    
+    Si noti che le autorizzazioni personalizzate specificate non vengono aggiunte ma sono usate in sostituzione delle eventuali impostazioni di protezione definite dall'amministratore per l'etichetta scelta.  
+
+2. Nella finestra di dialogo **Microsoft Azure Information Protection** specificare quanto segue:
+
+    - **Proteggi con autorizzazioni personalizzate**: assicurarsi che questa opzione sia selezionata in modo da poter specificare e applicare le autorizzazioni personalizzate. Deselezionare questa opzione per rimuovere le eventuali autorizzazioni personalizzate.
+    
+    - **Selezionare le autorizzazioni**: se si vuole proteggere il file in modo da ottenere l'accesso esclusivo, selezionare **Solo per l'utente**. In caso contrario, scegliere Seleziona un livello di accesso per assegnare un livello di accesso a determinati utenti.
+
+    - **Selezionare gli utenti, i gruppi o le organizzazioni**: specificare gli utenti che devono avere le autorizzazioni selezionate per uno o più file. Digitare l'indirizzo di posta elettronica completo di uno o più utenti o di un gruppo oppure il nome di dominio di un'organizzazione per tutti gli utenti dell'organizzazione. Si noti che gli indirizzi di posta elettronica personali non sono attualmente supportati.
+        
+    - **Scadenza dell'accesso**: selezionare questa opzione solo per i file per cui il fattore tempo è importante in modo tale che gli utenti specificati non potranno aprire il file o i file selezionati dopo una data specificata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno selezionato, gli utenti specificati non potranno aprire il file.
+
+5. Fare clic su **Applica** e attendere che venga visualizzato il messaggio **Le autorizzazioni personalizzate sono state applicate**. e quindi fare clic su **Chiudi**.
+
 
 ### <a name="keyboard-shortcuts-for-the-azure-information-protection-bar"></a>Tasti di scelta rapida per la barra di Azure Information Protection
 
@@ -135,4 +154,3 @@ Ulteriori procedure nella Guida per l'utente di Azure Information Protection:
 -   [Per saperne di più](client-user-guide.md#what-do-you-want-to-do)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

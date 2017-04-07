@@ -14,13 +14,10 @@ ms.assetid: 634df601-79d2-4bc2-b845-4df886d7c589
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 7068e0529409eb783f16bc207a17be27cd5d82a8
-ms.openlocfilehash: c0236d42bd508641b658318a90bed31effed4daa
-
-
+ms.openlocfilehash: 1f6b8c75e7d9ef6d01226b5a1d2ece4de773a1d5
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="code-examples"></a>Esempi di codice
 
 Microsoft Rights Management SDK 4.2 include il codice di esempio e progetti di lavoro per alcuni sistemi operativi supportati.
@@ -39,8 +36,3 @@ Questo argomento introduce importanti elementi di codice per la versione associa
 - [Esempi di codice iOS/OS X](ios-os-x-code-examples.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
-
-<!--HONumber=Jan17_HO1-->
-
-
