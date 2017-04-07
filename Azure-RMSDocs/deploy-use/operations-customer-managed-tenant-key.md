@@ -4,7 +4,7 @@ description: Informazioni sulle operazioni del ciclo di vita rilevanti se si ges
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 03/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: fa92a0f3179c884b7e5fc278525a471a27cb2a96
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 198de18664e2f94209ab3c7224e89c5a9d4c3196
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="customer-managed-tenant-key-lifecycle-operations"></a>Gestione del cliente: operazioni del ciclo di vita della chiave del tenant
 
 >*Si applica a: Azure Information Protection, Office 365*
@@ -28,7 +23,7 @@ ms.lasthandoff: 02/24/2017
 Se la chiave del tenant per Azure Information Protection viene gestita dall'utente (scenario "bring your own key" o BYOK), usare le sezioni seguenti per ottenere altre informazioni sulle operazioni del ciclo di vita rilevanti per questa topologia.
 
 ## <a name="revoke-your-tenant-key"></a>Revocare la chiave del tenant
-In Insieme di credenziali delle chiavi di Azure è possibile modificare le autorizzazioni per l'insieme di credenziali delle chiavi contenente la chiave del tenant di Azure Information Protection in modo che il servizio Azure Rights Management non possa più accedere alla chiave. Tuttavia, se si esegue questa operazione, nessuno sarà successivamente in grado di aprire documenti e messaggi di posta elettronica precedentemente protetti con il servizio Azure Rights Management.
+In Azure Key Vault è possibile modificare le autorizzazioni per l'insieme di credenziali delle chiavi contenente la chiave del tenant di Azure Information Protection in modo che il servizio Azure Rights Management non possa più accedere alla chiave. Tuttavia, se si esegue questa operazione, nessuno sarà successivamente in grado di aprire documenti e messaggi di posta elettronica precedentemente protetti con il servizio Azure Rights Management.
 
 Quando si annulla la sottoscrizione di Azure Information Protection, l'uso della chiave del tenant in Azure Information Protection viene interrotto e non è necessaria alcuna azione da parte dell'utente.
 
@@ -42,15 +37,15 @@ Il processo di ridistribuzione della chiave è denominato anche rollover della c
 
 Quando si ridistribuisce la chiave del tenant, il nuovo contenuto è protetto tramite la nuova chiave. Poiché questo processo viene eseguito per fasi, per un certo periodo di tempo parte del nuovo contenuto continuerà a essere protetto tramite la chiave del tenant precedente. Il contenuto protetto in precedenza rimane tale rispetto alla chiave del tenant precedente. Per supportare questo scenario, Azure Information Protection mantiene la chiave del tenant precedente in modo da emettere licenze per il vecchio contenuto.
 
-Per reimpostare la chiave del tenant, è innanzitutto necessario reimpostare la chiave del tenant di Azure Information Protection in Insieme di credenziali delle chiavi. Successivamente, è necessario eseguire il cmdlet Add-AadrmKeyVaultKey, specificando il nuovo URL della chiave.
+Per reimpostare la chiave del tenant, è innanzitutto necessario reimpostare la chiave del tenant di Azure Information Protection in Insieme di credenziali delle chiavi. Eseguire nuovamente il cmdlet [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkey) specificando l'URL della nuova chiave.
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Eseguire il backup e il ripristino della chiave del tenant
 L'utente è responsabile del backup della chiave del tenant. Se la chiave del tenant è stata generata dall'utente in un modulo di protezione hardware Thales, per eseguire il backup della chiave è sufficiente eseguire il backup del file della chiave in formato token, del file relativo all'ambiente e delle schede amministrative.
 
-Poiché la chiave è stata trasferita tramite le procedure descritte nella sezione [Implementazione della modalità BYOK](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key) dell'argomento [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](../plan-design/plan-implement-tenant-key.md), Insieme di credenziali delle chiavi manterrà il file della chiave in formato token come protezione da eventuali errori dei nodi del servizio. Questo file è associato all'ambiente di sicurezza relativo all'area o all'istanza specifica di Azure. È tuttavia opportuno tenere presente che questa azione non rappresenta un backup completo. Se ad esempio è necessaria una copia in testo non crittografato della chiave da usare all'esterno di un modulo di protezione hardware Thales, Insieme di credenziali delle chiavi di Azure non sarà in grado di recuperarla perché dispone solo di una copia non recuperabile.
+Poiché la chiave è stata trasferita tramite le procedure descritte nella sezione [Implementazione della modalità BYOK](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key) dell'argomento [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](../plan-design/plan-implement-tenant-key.md), Insieme di credenziali delle chiavi manterrà il file della chiave in formato token come protezione da eventuali errori dei nodi del servizio. Questo file è associato all'ambiente di sicurezza relativo all'area o all'istanza specifica di Azure. È tuttavia opportuno tenere presente che questa azione non rappresenta un backup completo. Se ad esempio è necessaria una copia in testo non crittografato della chiave da usare all'esterno di un modulo di protezione hardware Thales, Azure Key Vault non sarà in grado di recuperarla perché dispone solo di una copia non recuperabile.
 
 ## <a name="export-your-tenant-key"></a>Esportare la chiave del tenant
-In uno scenario BYOK non è possibile esportare la chiave del tenant da Insieme di credenziali delle chiavi di Azure o da Azure Information Protection. La copia presente in Insieme di credenziali delle chiavi di Azure è non recuperabile. 
+In uno scenario BYOK non è possibile esportare la chiave del tenant da Azure Key Vault o da Azure Information Protection. La copia presente in Azure Key Vault non è recuperabile. 
 
 ## <a name="respond-to-a-breach"></a>Rispondere a una violazione di sicurezza
 Indipendentemente dall'affidabilità, nessun sistema di sicurezza può considerarsi completo se non prevede un processo di risposta alle violazioni di sicurezza. La chiave del tenant può essere violata o rubata e anche se è protetta in modo efficiente, potrebbero essere presenti vulnerabilità nella tecnologia dei moduli di protezione hardware di generazione corrente e nella lunghezza e negli algoritmi correlati alle chiavi correnti.
@@ -64,8 +59,7 @@ In caso di violazione di sicurezza, l'azione più efficace che l'utente o Micros
 |Perdita della chiave del tenant.|Ridistribuire la chiave del tenant. Vedere [Ridistribuire la chiave del tenant](#re-key-your-tenant-key).|
 |Diritti di accesso alla chiave del tenant ottenuti da un utente non autorizzato o da malware, ma nessuna perdita della chiave.|La ridistribuzione della chiave del tenant non è sufficiente ed è necessaria un'analisi della causa radice. Se l'utente non autorizzato ha ottenuto l'accesso a causa di un bug del processo o del software, questo problema deve essere risolto.|
 |Vulnerabilità scoperta nella tecnologia del moduli di protezione hardware di generazione corrente.|Microsoft deve aggiornare i moduli di protezione hardware. Se si ritiene che la vulnerabilità abbia provocato l'esposizione di chiavi, Microsoft inviterà tutti i clienti a rinnovare le chiavi tenant.|
-|Vulnerabilità scoperta nell'algoritmo RSA o nella lunghezza della chiave oppure attacchi di forza bruta diventati realizzabili a livello di calcolo.|Microsoft deve aggiornare Insieme di credenziali delle chiavi di Azure o Azure Information Protection per supportare nuovi algoritmi e lunghezze maggiori della chiave che siano resilienti e invitare tutti i clienti a rinnovare le proprie chiavi del tenant.|
+|Vulnerabilità scoperta nell'algoritmo RSA o nella lunghezza della chiave oppure attacchi di forza bruta diventati realizzabili a livello di calcolo.|Microsoft deve aggiornare Azure Key Vault o Azure Information Protection per supportare nuovi algoritmi e lunghezze maggiori della chiave che siano resilienti e invitare tutti i clienti a rinnovare le proprie chiavi del tenant.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

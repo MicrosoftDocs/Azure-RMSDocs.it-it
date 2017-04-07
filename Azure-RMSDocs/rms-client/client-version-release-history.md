@@ -4,7 +4,7 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/01/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,26 +12,51 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 343ac5f79902379e45efcb6979a115ba4c00d1c5
-ms.openlocfilehash: 503cb76825d0092e8562d39281b1d702edaf6438
-ms.lasthandoff: 03/02/2017
-
-
+ms.openlocfilehash: 70c358954a39b02610a77ec81074379dc574158b
+ms.sourcegitcommit: d5ce1bce5e63b3e510033ff9d4d246dd3511ed7c
+translationtype: HT
 ---
-
 # <a name="azure-information-protection-client-version-release-history"></a>Client di Azure Information Protection: cronologia delle versioni
 
 >*Si applica a: Azure Information Protection*
 
-Il team di Azure Information Protection aggiorna regolarmente il client di Azure Information Protection con correzioni e nuove funzionalità. Il client è incluso nel Microsoft Update Catalog (categoria **Azure Information Protection**) ed è sempre possibile scaricare la versione più recente dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+Il team di Azure Information Protection aggiorna regolarmente il client di Azure Information Protection con correzioni e nuove funzionalità. Il client è incluso nel Microsoft Update Catalog (categoria **Azure Information Protection**) ed è sempre possibile scaricare la versione di disponibilità generale più recente e la prossima versione (la versione di anteprima) dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-Utilizzare le informazioni seguenti per visualizzare gli elementi nuovi o modificati in una versione. La versione più recente è elencata per prima. L'elenco non contiene le versioni rilasciate prima della data di disponibilità generale.
+Le versioni di anteprima non devono essere distribuite agli utenti finali nelle reti di produzione, ma possono essere usate per visualizzare e provare le nuove funzionalità e correzioni che saranno disponibili nella prossima versione di disponibilità generale. 
+
+Usare le informazioni seguenti per visualizzare gli elementi nuovi o modificati di una versione di disponibilità generale. La versione più recente è elencata per prima. Per informazioni sulla versione di anteprima corrente, vedere le informazioni riportate nella pagina di download.
 
 > [!NOTE]
-> Poiché non sono riportate le correzioni minori, in caso di un problema con il client di Azure Information Protection, verificare prima che non si tratti di un problema della versione più recente.
+> Poiché le correzioni di minore rilevanza non sono elencate, se si verifica un problema con il client di Azure Information Protection, controllare prima che tale problema non riguardi la versione di disponibilità generale più recente. In caso affermativo, verificare la versione di anteprima corrente.
 >  
 > Se il problema persiste, vedere le informazioni contenute in [Opzioni di supporto e risorse della community](../get-started/information-support.md#support-options-and-community-resources). È anche possibile rivolgersi al team di Azure Information Protection nel [sito di Yammer](https://www.yammer.com/askipteam/).
+
+## <a name="version-14210"></a>Versione 1.4.21.0
+
+**Data di rilascio**: 15/03/2017
+
+**Modifica dei requisiti:**
+
+La versione precedente ha introdotto il nuovo prerequisito di Microsoft .NET Framework 4.6.2 per il client completo. Anche se non è consigliabile, è possibile ignorare questo prerequisito con il parametro di installazione personalizzata **DowngradeDotNetRequirement**. Per altre informazioni, vedere la [sezione relativa all'installazione del client](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) nella Guida dell'amministratore.
+
+
+**Correzioni**:
+
+- Supporto per le unità mappate per classificare e proteggere i file.
+
+- Supporto per file di grandi dimensioni (>250 MB) nel visualizzatore. 
+
+- Quando è configurata la modalità HYOK, Outlook può applicare etichette configurate per l'uso di modelli di Azure Rights Management o AD RMS.
+
+
+**Nuove funzionalità**:
+
+- Possibilità di impostare autorizzazioni personalizzate dall'applicazione di Office, in modo da definire impostazioni di protezione personali, per gruppi esterni o per tutti gli utenti di un'altra organizzazione. Per altre informazioni, vedere [Impostare autorizzazioni personalizzate per un documento](client-classify-protect.md#set-custom-permissions-for-a-document) nella Guida dell'utente.
+    
+- I file PDF supportano ora etichette che applicano solo la classificazione.
+
+- Per i file PDF, il visualizzatore supporta ora opzioni che consentono di eseguire varie operazioni, come la ricerca, lo zoom e la rotazione. Per usare queste opzioni, fare clic con il pulsante destro del mouse sul file quando viene aperto nel visualizzatore.
+
 
 ## <a name="version-131552"></a>Versione 1.3.155.2
 
@@ -77,7 +102,7 @@ Questa versione del client è la [versione con disponibilità generale](https://
 
 - Opzione per test diagnostici e ripristino che l'utente può eseguire dall'applicazione di Office quando è installato il client di Azure Information Protection: nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi**, scegliere **Guida e commenti e suggerimenti** e quindi **Esegui diagnostica**. 
 
-    Per altre informazioni su questa opzione, vedere la sezione [Per verificare l'installazione o lo stato di connessione o inviare commenti e suggerimenti](client-admin-guide.md#additional-checks-to-verify-installation-connection-status-or-send-feedback) della documentazione relativa all'installazione del client.
+    Per altre informazioni su questa opzione, vedere la sezione [Controlli aggiuntivi e risoluzione dei problemi](client-admin-guide.md#additional-checks-and-troubleshooting) nella Guida dell'amministratore.
 
 ## <a name="version-11230"></a>Versione 1.1.23.0
 

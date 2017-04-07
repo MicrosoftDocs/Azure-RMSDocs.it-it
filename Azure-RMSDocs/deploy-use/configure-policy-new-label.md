@@ -4,27 +4,23 @@ description: "Azure Information Protection offre etichette predefinite personali
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/06/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 602fef628f882eb79fe78b5acf89bde1721aa0ec
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: ff0a5af172fa7ae20406ab4362a02a9de3fff5c0
+ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
+translationtype: HT
 ---
-
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Come creare una nuova etichetta per Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
 
 Azure Information Protection offre etichette predefinite personalizzabili, ma è anche possibile creare etichette proprie da mostrare all'utente sulla barra Information Protection.
 
-Si può aggiungere una nuova etichetta oppure aggiungere una nuova etichetta secondaria a un'etichetta esistente quando è necessario un ulteriore livello di classificazione. Ad esempio, l'etichetta **Secret** (Segreto) inclusa nel [criterio predefinito](configure-policy-default.md) contiene etichette secondarie.
+Si può aggiungere una nuova etichetta oppure aggiungere una nuova etichetta secondaria a un'etichetta esistente quando è necessario un ulteriore livello di classificazione. Ad esempio, l'ultima etichetta dei [criteri predefiniti](configure-policy-default.md) include etichette secondarie.
 
 Seguire queste istruzioni per aggiungere una nuova etichetta ai criteri di Azure Information Protection.
 
@@ -32,7 +28,7 @@ Seguire queste istruzioni per aggiungere una nuova etichetta ai criteri di Azure
     
     Ad esempio, dal menu principale fare clic su **Altri servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Se la nuova etichetta da aggiungere verrà applicata a tutti gli utenti, eseguire una delle operazioni seguenti nel pannello **Criteri:Globale**. 
+2. Se la nuova etichetta che si vuole aggiungere verrà applicata a tutti gli utenti, eseguire una delle operazioni seguenti nel pannello **Policy: Global** (Criteri: Globale). 
 
     - Per creare una nuova etichetta, fare clic su **Aggiungi una nuova etichetta**.
 
@@ -52,5 +48,4 @@ Seguire queste istruzioni per aggiungere una nuova etichetta ai criteri di Azure
 Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

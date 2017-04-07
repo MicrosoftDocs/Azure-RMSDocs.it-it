@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: c05521faed2cd8a7f9d32d81cd6899161e858153
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: ab3b25ebd04565f8cd0e9236c1241f38d4a2e8b2
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="byok-pricing-and-restrictions"></a>Prezzi e restrizioni della modalità BYOK
 
 >*Si applica a: Azure Information Protection, Office 365*
@@ -87,4 +83,3 @@ Per gestire la propria chiave, passare all'articolo relativo all'[implementazion
 Se si è deciso di usare la configurazione predefinita in cui Microsoft gestisce la chiave del tenant, vedere la sezione [Passaggi successivi](plan-implement-tenant-key.md#next-steps) dell'articolo Pianificazione e implementazione della chiave del tenant di Azure Rights Management.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

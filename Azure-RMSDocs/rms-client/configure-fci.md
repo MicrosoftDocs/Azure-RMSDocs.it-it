@@ -4,7 +4,7 @@ description: "Istruzioni per usare il client Rights Management (RMS) con lo stru
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 58a0f117100ff5d19dfd6fee2ac4dd61c6bea36b
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 5e1a193ab54e5d0d85e4f7a22f53ac0b9b39036c
+ms.sourcegitcommit: 047e6dfe8f44fd13585e902df5ea871b5d0adccb
+translationtype: HT
 ---
-
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protezione RMS con l'infrastruttura di classificazione file (FCI, File Classification Infrastructure) per Windows Server
 
->*Si applica a: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
+>*Si applica a: Azure Information Protection, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
 
 Usare questo articolo per ottenere istruzioni e uno script che consentono di usare il client Azure Information Protection e PowerShell per configurare Gestione risorse file server e Infrastruttura di classificazione file (FCI, File Classification Infrastructure).
 
@@ -44,7 +40,7 @@ Prerequisiti per queste istruzioni:
 
     -   È stata identificata una cartella locale che contiene file da proteggere con Rights Management. Ad esempio, C:\FileShare.
 
-    -   È stato installato il modulo AzureInformationProtection e sono stati configurati i prerequisiti per Azure Rights Management. Per altre informazioni, vedere [Uso di PowerShell con il client Azure Information Protection](client-admin-guide-powershell.md). In particolare, sono disponibili i valori seguenti per connettersi al servizio Azure Rights Management usando un'entità servizio: **BposTenantId**, **AppPrincipalId** e **Chiave simmetrica**.
+    -   È stato installato il modulo AzureInformationProtection e sono stati configurati i prerequisiti per Azure Rights Management. Per altre informazioni, vedere [Uso di PowerShell con il client Azure Information Protection](client-admin-guide-powershell.md). In particolare, sono disponibili i valori seguenti per connettersi al servizio Azure Rights Management usando un'entità servizio: **BposTenantId**, **AppPrincipalId** e **Chiave simmetrica**. 
 
     -   Se si vuole modificare il livello predefinito di protezione (nativa o generica) per estensioni di file specifiche, si deve modificare il Registro di sistema come descritto nella sezione relativa alla [modifica del livello di protezione predefinito dei file](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) della guida dell'amministratore.
 
@@ -52,7 +48,7 @@ Prerequisiti per queste istruzioni:
 
 -   Si sono sincronizzati gli account utente di Active Directory locali con Azure Active Directory oppure Office 365, compreso il relativo indirizzo di posta elettronica. Ciò è necessario per tutti gli utenti che potrebbero avere la necessità di accedere ai file una volta protetti da FCI e dal servizio Azure Rights Management. Se non si completa questo passaggio (ad esempio, in un ambiente di test), è possibile che l'accesso degli utenti a questi file sia bloccato. Se sono necessarie altre informazioni sulla configurazione di questo account, vedere [Preparazione per il servizio Azure Rights Management](../plan-design/prepare.md).
 
--   È stato identificato il modello Rights Management da usare, che proteggerà i file. Assicurarsi di conoscere l'ID per questo modello usando il cmdlet [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) .
+-   Sono stati scaricati i modelli di Rights Management nel file server ed è stato identificato l'ID del modello che proteggerà i file. A tale scopo, usare il cmdlet [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate). Questo scenario non supporta i modelli di reparto. Pertanto, è necessario usare un modello non configurato per un ambito oppure la configurazione dell'ambito deve includere l'opzione di compatibilità dell'applicazione, in modo che la casella di controllo **Mostra questo modello a tutti gli utenti quando le applicazioni non supportano l'identità utente** sia selezionata.
 
 ## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection"></a>Istruzioni per configurare Infrastruttura di classificazione file di Gestione risorse file server per la protezione di Azure Rights Management
 Seguire queste istruzioni per proteggere automaticamente tutti i file di una cartella usando uno script di Windows PowerShell come attività personalizzata. Eseguire questa procedura secondo l'ordine seguente:
@@ -70,6 +66,8 @@ Seguire queste istruzioni per proteggere automaticamente tutti i file di una car
 6.  Testare la configurazione eseguendo manualmente la regola e l'attività
 
 Al termine di queste istruzioni tutti i file della cartella selezionata saranno classificati con la proprietà personalizzata di RMS e saranno protetti da Rights Management. Per una configurazione più complessa che protegge in modo selettivo alcuni file e non altri, è possibile creare o usare una proprietà e una regola di classificazione diverse con un'attività di gestione file che protegge solo quei file.
+
+Si tenga presente che, se si apportano modifiche al modello di Rights Management usato per Infrastruttura di classificazione file, è necessario eseguire `Get-RMSTemplate -Force` sul computer del file server per ottenere il modello aggiornato. Il modello aggiornato verrà quindi usato per proteggere i nuovi file. Se le modifiche apportate al modello sono abbastanza importanti da rendere necessaria una nuova protezione dei file nel file server, è possibile effettuare questa operazione eseguendo il cmdlet Protect-RMSFile in modo interattivo con un account dotato dei diritti di esportazione e controllo completo sui file. È inoltre necessario eseguire `Get-RMSTemplate -Force` sul computer del file server se si pubblica un nuovo modello da usare per Infrastruttura di classificazione file.
 
 ### <a name="save-the-windows-powershell-script"></a>Salvare uno script di Windows PowerShell
 
@@ -288,4 +286,3 @@ A tale scopo, usare una delle proprietà di classificazione predefinite (ad esem
 A questo punto è sufficiente creare una nuova attività di gestione file che usa lo stesso script ma forse con un modello diverso e configurare la condizione per la proprietà di classificazione appena configurata. Ad esempio, invece della condizione configurata in precedenza (la proprietà**RMS** , **Uguale**, **Sì**), selezionare la proprietà **Informazioni personali** con il valore **Operatore** impostato su **Uguale** e il **Valore** **Alto**.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

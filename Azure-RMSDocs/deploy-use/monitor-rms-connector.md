@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 3d9f2e20abe0a4abce3220d53d6373d9c2baf8ee
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: a5a40277c95e376042fc77b7ba39bfc66a948fde
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="monitor-the-azure-rights-management-connector"></a>Monitorare il connettore di Azure Rights Management
 
 >*Si applica a: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
@@ -167,7 +163,7 @@ Sebbene questo strumento venga fornito con il supporto "così com'è", è possib
 
 Accedere a uno dei server configurati per il connettore RMS con un account autorizzato a usare il connettore per tale carico di lavoro. Ad esempio, se è stato configurato il connettore RMS per Exchange, accedere a tale server con uno degli account autorizzati per Exchange nello strumento di configurazione del connettore RMS. Eseguire quindi lo strumento RMS Analyzer con l'opzione **Esegui come amministratore**.
 
-Dopo il caricamento dello strumento selezionare l'opzione **Azure RMS connector** (Connettore Azure RMS) nella** **pagina iniziale. Immettere l'URL del connettore RMS come indirizzo attivo e fare clic sulla freccia verde. Verranno visualizzati i dettagli del tenant a conferma che il connettore può connettersi correttamente al servizio Azure Rights Management. Se questo test iniziale non riesce, assicurarsi di verificare la configurazione del server proxy e i firewall che potrebbero bloccare il traffico del server. Dopo la visualizzazione corretta dei dettagli del tenant è possibile continuare a eseguire i test diagnostici per il carico di lavoro del server controllando elementi quali numeri di versione supportati, prerequisiti e impostazioni del Registro di sistema.
+Dopo il caricamento dello strumento selezionare l'opzione **Azure RMS connector** (Connettore Azure RMS) nella****pagina iniziale. Immettere l'URL del connettore RMS come indirizzo attivo e fare clic sulla freccia verde. Verranno visualizzati i dettagli del tenant a conferma che il connettore può connettersi correttamente al servizio Azure Rights Management. Se questo test iniziale non riesce, assicurarsi di verificare la configurazione del server proxy e i firewall che potrebbero bloccare il traffico del server. Dopo la visualizzazione corretta dei dettagli del tenant è possibile continuare a eseguire i test diagnostici per il carico di lavoro del server controllando elementi quali numeri di versione supportati, prerequisiti e impostazioni del Registro di sistema.
 
 Per altre informazioni e istruzioni, vedere **Details** (Dettagli) e **Install Instructions** (Istruzioni di installazione) nella pagina di download.
 
@@ -194,4 +190,3 @@ Se si vuole eseguire una registrazione più dettagliata a scopo di diagnosi, è 
 5.  Una volta acquisite le tracce necessarie, ripristinare la riga nel passaggio 3, quindi arrestare e riavviare IIS.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

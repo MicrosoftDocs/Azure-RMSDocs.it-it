@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: b864f8223865661184ce5742e23313e88cae1db5
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 30b94ca0c14fc9958e9d5bb07554f2ac656ece7a
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS per utenti singoli e Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
@@ -41,4 +37,3 @@ RMS per utenti singoli è un esempio di un abbonamento self-service supportato d
 Per istruzioni dettagliate e per una panoramica tecnica di ciò che avviene in background, vedere [Modalità di iscrizione per RMS per utenti singoli](rms-for-individuals-user-sign-up.md). 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-

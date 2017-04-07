@@ -5,8 +5,3 @@
 # [Distribuire e usare il client](/information-protection/rms-client/use-client)
 # [Sviluppare e personalizzare le app](/information-protection/develop/developers-guide)
 # [Azure Information Protection (anteprima)](/information-protection/understand-explore/what-is-azure-information-protection)
-
-
-<!--HONumber=Jan17_HO4-->
-
-

@@ -47,8 +47,3 @@
 # [Distribuire e usare il client](/information-protection/rms-client/use-client)
 # [Sviluppare e personalizzare le app](/information-protection/develop/developers-guide)
 
-
-
-<!--HONumber=Feb17_HO3-->
-
-

@@ -4,20 +4,16 @@ description: 'Passaggio 3 di un&quot;esercitazione introduttiva per provare rapi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/28/2017
+ms.date: 03/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
-translationtype: Human Translation
-ms.sourcegitcommit: 611b65589bdd8aa495fbfbd4a67c30a5fb9c387a
-ms.openlocfilehash: 340cce9bec3eae7e507b5a33ebd380a38e9e7f19
-ms.lasthandoff: 03/01/2017
-
-
+ms.openlocfilehash: ba10ce73d5bd9cbfa65d373e247b440150be826b
+ms.sourcegitcommit: 9f542a5599ca6332b4b69ebbbbfb9ffdf5464731
+translationtype: HT
 ---
-
 # <a name="step-3-install-the-client"></a>Passaggio 3: Installare il client
 
 >*Si applica a: Azure Information Protection*
@@ -33,7 +29,7 @@ In questo passaggio verrà installato il client di Azure Information Protection 
 
     Per questa esercitazione non è importante selezionare l'opzione relativa all'installazione di criteri demo. Azure infatti scaricherà il criterio appena configurato, che sostituirà i criteri demo. È tuttavia possibile usare l'opzione relativa ai criteri demo se si vogliono solo provare le etichette predefinite senza connettersi ad Azure Information Protection. 
 
-## <a name="verify-the-installations"></a>Verificare le installazioni
+## <a name="verify-the-installation"></a>Verificare l'installazione
 
 Verificare che l'installazione sia stata completata correttamente aprendo Word e un nuovo documento vuoto. Non salvare ancora il documento. Se viene richiesto di immettere il nome utente e la password, immettere i dettagli relativi all'account amministratore globale. 
 
@@ -41,13 +37,13 @@ Se si installa il client per la prima volta, verrà visualizzata una pagina** *
 
 Quando il documento viene caricato, vengono visualizzati due nuovi elementi:
 
-- Nella scheda **Home** un nuovo gruppo **Protezione** con il pulsante **Proteggi**.
+![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Client installato](../media/word2016-calloutsv2.png)
+
+- Un nuovo gruppo **Protection** (Protezione) nella scheda **Home** con un pulsante denominato **Protect** (Proteggi).
 
     Fare clic su **Proteggi** > **Guida e commenti e suggerimenti** e nella finestra di dialogo **Microsoft Azure Information Protection** verificare lo stato del client. Dovrebbe venire visualizzata l'indicazione **Connesso come** seguita dal nome dell'utente. Dovrebbe inoltre venire visualizzata un'indicazione di data e ora per l'ultima connessione e per l'installazione dei criteri di Information Protection. Verificare che il nome utente visualizzato sia corretto per il tenant.
 
-- La nuova barra di Information Protection sotto la barra multifunzione. Questa barra visualizza il titolo **Sensitivity** (Riservatezza) e l'etichetta predefinita configurata in precedenza, **Interno**. 
-    
-    ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Client installato](../media/word2013-callouts2.png)
+- La nuova barra di Information Protection sotto la barra multifunzione. Questa barra visualizza il titolo **Sensitivity** (Riservatezza) e l'etichetta predefinita configurata come **General**. 
 
 A questo punto è possibile vedere Azure Information Protection in azione.
 

@@ -25,8 +25,3 @@ A questo punto è possibile iniziare a proteggere i file che contengono le infor
 |Informazioni su un'installazione locale dell'applicazione di condivisione Rights Management per Windows e istruzioni per l’utente   →|[Guida dell'utente dell'applicazione di condivisione Rights Management](../rms-client/sharing-app-user-guide.md)|
 |Informazioni su un'installazione tramite script dell'applicazione di condivisione Rights Management per Windows e altre informazioni tecniche   →|[Guida dell'amministratore dell'applicazione di condivisione Rights Management](../rms-client/sharing-app-admin-guide.md)|
 |Informazioni sulla differenza tra protezione nativa e protezione generica   →|[Qual è la differenza tra protezione generica e protezione integrata (nativa)?](../rms-client/sharing-app-dialog-box.md)|
-
-
-<!--HONumber=Jan17_HO1-->
-
-

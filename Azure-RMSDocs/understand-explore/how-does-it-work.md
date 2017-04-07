@@ -4,7 +4,7 @@ description: Descrizione del funzionamento di Azure RMS, dei controlli crittogra
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,15 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 2131f40b51f34de7637c242909f10952b1fa7d9f
-ms.openlocfilehash: 3140f678c29771fc3328e312bc7e55d309554e66
-ms.lasthandoff: 02/24/2017
-
-
+ms.openlocfilehash: 1dcdb7017be2e2bdfbefcfaa348be977ed67f8c0
+ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+translationtype: HT
 ---
-
-
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funzionamento di Azure RMS: dietro le quinte
 
 >*Si applica a: Azure Information Protection, Office 365*
@@ -48,23 +43,32 @@ Anche se non è necessario conoscere personalmente il funzionamento di RMS, è p
 |Controlli crittografici|Uso in Azure RMS|
 |-|-|
 |Algoritmo: AES<br /><br />Lunghezza della chiave: 128 e 256 bit [[1]](#footnote-1)|Protezione della documentazione|
-|Algoritmo: RSA<br /><br />Lunghezza della chiave: 2048 bit|Protezione della chiave|
+|Algoritmo: RSA<br /><br />Lunghezza della chiave: 2048 bit [[2]](#footnote-2)|Protezione della chiave|
 |SHA-256|Firma del certificato|
 
 ###### <a name="footnote-1"></a>Nota 1 
 
 La lunghezza di&256; bit viene usata dal client Azure Information Protection e dall'applicazione di condivisione Rights Management per la protezione generica e la protezione nativa quando il file ha estensione PPDF o è un file di testo o di immagine protetto, ad esempio con estensione PTXT o PJPG.
 
-Modalità di archiviazione e protezione delle chiavi crittografiche:
+###### <a name="footnote-2"></a>Nota 2
 
-- Per ogni documento o messaggio di posta elettronica protetto da Azure RMS, viene creata una singola chiave AES ("chiave simmetrica") e tale chiave viene incorporata nel documento e viene salvata in modo permanente nelle diverse edizioni del documento. 
+2048 bit è la lunghezza della chiave quando il servizio Azure Rights Management è attivato. La lunghezza di&1024; bit è supportata per gli scenari facoltativi seguenti:
 
-- La chiave simmetrica viene protetta dalla chiave RSA dell'organizzazione ("chiave del tenant di Azure Information Protection") nell'ambito dei criteri del documento e i criteri vengono anche firmati dall'autore del documento. Questa chiave del tenant è comune a tutti i documenti e a tutti i messaggi di posta elettronica protetti da Azure RMS per l'organizzazione e la chiave può essere modificata solo da un amministratore di Azure Information Protection se l'organizzazione usa una chiave del tenant gestita dai clienti, nota come chiave di tipo BYOK ("Bring Your Own Key"). 
+- Durante la migrazione da un'istanza locale, se il cluster AD RMS è in esecuzione in Modalità crittografia 1 e non può essere aggiornato alla Modalità crittografia 2.
 
-    La chiave del tenant è protetta nei servizi online di Microsoft, in un ambiente a controllo elevato e sotto attento monitoraggio. Quando si usa una chiave del tenant gestita dai clienti (BYOK), la sicurezza è ottimizzata mediante l'uso di una matrice di moduli di protezione hardware di qualità elevata in ogni area di Azure. Le chiavi non possono essere estratte, esportate o condivise in alcuna circostanza. Per altre informazioni sulla chiave del tenant e su BYOK, vedere [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
+- Per le chiavi archiviate che sono state create in locale prima della migrazione in modo che il contenuto protetto da AD RMS possa continuare a essere aperto dopo la migrazione ad Azure Rights Management.
 
-- Le licenze e i certificati inviati a un dispositivo Windows sono protetti tramite la chiave privata del dispositivo del client, che viene creata al primo utilizzo di Azure RMS sul dispositivo da parte di un utente. La chiave privata è a sua volta protetta mediante DPAPI sul client, che protegge questi segreti usando una chiave derivata dalla password dell'utente. Nei dispositivi mobili le chiavi vengono usate solo una volta. Non essendo archiviate nei client, queste chiavi non devono essere quindi protette nel dispositivo. 
+- Se i clienti scelgono di usare la chiave di tipo BYOK (Bring Your Own Key) con Azure Key Vault. È preferibile non imporre una dimensione minima della chiave di 2048 bit.
 
+### <a name="how-the-azure-rms-cryptographic-keys-are-stored-and-secured"></a>Modalità di archiviazione e protezione delle chiavi crittografiche di Azure RMS
+
+Per ogni documento o messaggio di posta elettronica protetto da Azure RMS, viene creata una singola chiave AES ("chiave simmetrica") e tale chiave viene incorporata nel documento e viene salvata in modo permanente nelle diverse edizioni del documento. 
+
+La chiave simmetrica viene protetta dalla chiave RSA dell'organizzazione ("chiave del tenant di Azure Information Protection") nell'ambito dei criteri del documento e i criteri vengono anche firmati dall'autore del documento. Questa chiave del tenant è comune a tutti i documenti e a tutti i messaggi di posta elettronica protetti dal servizio Azure Rights Management per l'organizzazione e la chiave può essere modificata solo da un amministratore di Azure Information Protection se l'organizzazione usa una chiave del tenant gestita dai clienti, nota come chiave di tipo BYOK (Bring Your Own Key). 
+
+La chiave del tenant è protetta nei servizi online di Microsoft, in un ambiente a controllo elevato e sotto attento monitoraggio. Quando si usa una chiave del tenant gestita dai clienti (BYOK), la sicurezza è ottimizzata mediante l'uso di una matrice di moduli di protezione hardware di qualità elevata in ogni area di Azure. Le chiavi non possono essere estratte, esportate o condivise in alcuna circostanza. Per altre informazioni sulla chiave del tenant e su BYOK, vedere [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
+
+Le licenze e i certificati inviati a un dispositivo Windows sono protetti tramite la chiave privata del dispositivo del client, che viene creata al primo utilizzo di Azure RMS sul dispositivo da parte di un utente. La chiave privata è a sua volta protetta mediante DPAPI sul client, che protegge questi segreti usando una chiave derivata dalla password dell'utente. Nei dispositivi mobili le chiavi vengono usate solo una volta. Non essendo archiviate nei client, queste chiavi non devono essere quindi protette nel dispositivo. 
 
 
 ## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Procedura dettagliata del funzionamento di Azure RMS: primo utilizzo, protezione del contenuto, uso del contenuto

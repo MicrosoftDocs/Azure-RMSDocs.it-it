@@ -4,7 +4,7 @@ description: Verificare di aver eseguito tutte le operazioni preliminari all&quo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/24/2017
+ms.date: 03/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,14 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-translationtype: Human Translation
-ms.sourcegitcommit: 11ebd66a1ae05535814af159523bd49b7921d46d
-ms.openlocfilehash: fc80a4a65bd5fae1b8604c316a4e2354bbe8c8be
-ms.lasthandoff: 02/25/2017
-
-
+ms.openlocfilehash: 4b074f9a9a3d72b4d1ab5810b69e92b4792b0711
+ms.sourcegitcommit: 16fec44713c7064959ebb520b9f0857744fecce9
+translationtype: HT
 ---
-
 # <a name="preparing-for-azure-information-protection"></a>Preparazione per Azure Information Protection
 
 >*Si applica a: Azure Information Protection, Office 365*
@@ -38,10 +34,17 @@ Prima di distribuire Azure Information Protection per l'organizzazione, verifica
 
 Per motivi di prestazioni, l'appartenenza ai gruppi viene memorizzata nella cache dal servizio Azure Rights Management. Ciò significa che le modifiche all'appartenenza ai gruppi possono richiedere fino a tre ore per diventare effettive e questo periodo di tempo è soggetto a variazioni. Ricordare di scomporre questo ritardo per tutte le attività di modifica e test eseguite quando si usano gruppi nella configurazione del servizio Azure Rights Management, ad esempio quando si configurano [modelli personalizzati](../deploy-use/configure-custom-templates.md) o quando si usa un gruppo per la [funzionalità per utenti con privilegi avanzati](../deploy-use/configure-super-users.md). 
 
+### <a name="considerations-if-email-addresses-change"></a>Considerazioni in caso di modifica degli indirizzi di posta elettronica
+
+Quando si configurano diritti di utilizzo per utenti o gruppi e si selezionano questi ultimi in base al nome visualizzato, al momento della selezione viene salvato e usato l'indirizzo di posta elettronica dell'oggetto. Se successivamente l'indirizzo di posta elettronica viene modificato, gli utenti selezionati non verranno autorizzati.
+
+In caso di modifica degli indirizzi di posta elettronica, è consigliabile aggiungere l'indirizzo di posta elettronica precedente come indirizzo proxy (detto anche alias o indirizzo alternativo) all'utente o al gruppo, in modo da mantenere i diritti di utilizzo assegnati in precedenza. Se non è possibile eseguire questa operazione, è necessario rimuovere l'utente o il gruppo dalla configurazione e selezionarlo nuovamente per salvare l'indirizzo di posta elettronica aggiornato da usare per il nuovo contenuto protetto.
+
+I modelli personalizzati di Rights Management offrono un esempio di dove selezionare utenti o gruppi in base al nome visualizzato per assegnare i diritti di utilizzo. Gli utenti possono effettuare questa selezione quando configurano autorizzazioni personalizzate con il client Azure Information Protection.
+
 ## <a name="activate-the-rights-management-service-for-data-protection"></a>Attivare il servizio Rights Management per la protezione dei dati
 Attivare il servizio Rights Management per abilitare questa tecnologia e iniziare a proteggere documenti e messaggi di posta elettronica. Per ulteriori informazioni, vedere l'articolo relativo all'[attivazione di Azure Rights Management](../deploy-use/activate-service.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 
 

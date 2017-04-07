@@ -40,8 +40,3 @@ Ora che è stato inviato il documento protetto, è possibile chiedere ai destina
 |--------------------------------|--------------------------|
 |Istruzioni complete e metodi alternativi per la protezione dei file condivisi tramite posta elettronica   →|[Proteggere un file che si condivide tramite posta elettronica usando l'applicazione Rights Management sharing](../rms-client/sharing-app-protect-by-email.md)|
 |Informazioni sulle opzioni della finestra di dialogo **Condividi file protetto** →|[Opzioni della finestra di dialogo per l'applicazione Rights Management sharing](../rms-client/sharing-app-dialog-box.md)|
-
-
-<!--HONumber=Jan17_HO1-->
-
-

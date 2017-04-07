@@ -31,8 +31,3 @@ Ora che il destinatario ha aperto l'allegato e, facoltativamente, lo ha inoltrat
 |Informazioni sulla sottoscrizione gratuita, RMS per utenti singoli   →|[RMS per utenti singoli e Azure Rights Management](../understand-explore/rms-for-individuals.md)|
 |Informazioni sulle due versioni del file allegato al messaggio e-mail   →|[Che cos'è il file .ppdf che viene creato automaticamente?](../rms-client/sharing-app-dialog-box.md)|
 
-
-
-<!--HONumber=Jan17_HO1-->
-
-
