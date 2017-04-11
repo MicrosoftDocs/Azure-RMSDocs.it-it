@@ -4,7 +4,7 @@ description: "Di seguito sono riportate alcune possibili domande sulle funzional
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/29/2017
+ms.date: 03/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 7f2bd30603f88ec72ee51f980c40903362cfdeba
-ms.sourcegitcommit: 8733730882bea6f505f4c6d53d4bdf08c3106f40
+ms.openlocfilehash: b6980bdcecb02471159f7873e80a05d234726d0e
+ms.sourcegitcommit: 85aaded97659bbc0a3932569aab29b1bf472fea4
 translationtype: HT
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Domande frequenti sulla classificazione e l'assegnazione di etichette in Azure Information Protection
@@ -64,6 +64,10 @@ Quando si usano etichette secondarie, non configurare contrassegni visivi, prote
 
 No. Quando viene applicata un'etichetta a un messaggio di posta elettronica con allegati, tali allegati non ereditano la stessa etichetta. Gli allegati rimangono senza etichetta oppure mantengono un'etichetta applicata separatamente. Tuttavia, se l'etichetta per il messaggio di posta elettronica applica una protezione, tale protezione viene applicata agli allegati.
 
+## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>Come è possibile integrare soluzioni DLP e altre applicazioni con Azure Information Protection?
+
+Per la classificazione, Azure Information Protection usa metadati persistenti che includono un'etichetta di testo non crittografata. Queste informazioni possono essere lette da soluzioni DLP e da altre applicazioni. Per i file, questi metadati vengono archiviati all'interno di proprietà personalizzate, per i messaggi di posta elettronica nelle intestazioni dei messaggi.
+
 ## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Qual è la differenza tra la classificazione dei messaggi di posta elettronica di Azure Information Protection e la classificazione dei messaggi di Exchange?
 
 La classificazione dei messaggi di Exchange è una funzionalità precedente che consente di classificare i messaggi di posta elettronica e viene implementata indipendentemente dalla classificazione di Azure Information Protection. Tuttavia, è possibile integrare le due soluzioni in modo che quando gli utenti classificano un messaggio di posta elettronica con Outlook Web App e in alcune applicazioni di posta per dispositivi mobili, vengono automaticamente aggiunti la classificazione di Azure Information Protection e i contrassegni di etichetta corrispondenti. Exchange aggiunge la classificazione e il client Azure Information Protection applica le impostazioni delle etichette corrispondenti per tale classificazione.
@@ -76,10 +80,15 @@ Per ottenere questa soluzione:
 
 2. Creare una regola di trasporto di Exchange per ogni etichetta: applicare la regola quando le proprietà del messaggio includono la classificazione configurata e modificare le proprietà del messaggio per impostare un'intestazione del messaggio. 
 
-    Per l'intestazione del messaggio, le informazioni da specificare sono disponibili nelle proprietà di un file Office classificato tramite l'etichetta di Azure Information Protection. Identificare la proprietà del file con il formato **MSIP_Label_<GUID>Enabled** e specificare questa stringa per l'intestazione del messaggio, quindi specificare **True** per il valore dell'intestazione. Ad esempio, l'intestazione del messaggio potrebbe essere simile a questa stringa: **MSIP_Label_132616b8-f72d-5d1e-aec1-dfd89eb8c5b2_Enabled**
+    Per l'intestazione del messaggio, è possibile trovare le informazioni da specificare nelle intestazioni Internet di un messaggio di posta elettronica inviato e classificato tramite l'etichetta di Azure Information Protection. Cercare l'intestazione **msip_labels** e la stringa immediatamente successiva fino al punto e virgola incluso. Usando l'esempio precedente:
+    
+    **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
+    
+    Quindi, per l'intestazione del messaggio nella regola, specificare **msip_labels** per l'intestazione e la parte rimanente della stringa per il valore dell'intestazione. Ad esempio:
+    
+    ![Regola di trasporto di Exchange Online di esempio che imposta l'intestazione del messaggio per un'etichetta di Azure Information Protection specifica](../media/exchange-rule-for-message-header.png)
 
-
-Quando gli utenti usano l'app Outlook Web Access o un client del dispositivo mobile che supporta la protezione di Rights Management, si verifica quanto segue: 
+Prima di eseguire il test, tenere presente che spesso si verifica un ritardo quando vengono create o modificate le regole di trasporto, ad esempio un'attesa di un'ora. Tuttavia, se la regola è attiva, quando gli utenti usano l'app di accesso Web di Outlook o un client del dispositivo mobile che supporta la protezione con Rights Management si verifica quanto segue: 
 
 - Gli utenti selezionano la classificazione dei messaggi di Exchange e inviano il messaggio di posta elettronica.
 
@@ -91,11 +100,7 @@ Se le etichette di Azure Information Protection applicano la protezione di Right
 
 È anche possibile configurare le regole di trasporto per eseguire il mapping inverso: quando viene rilevata un'etichetta di Azure Information Protection, impostare una classificazione dei messaggi di Exchange corrispondente. A tale scopo, eseguire questa procedura:
 
-- Per ogni etichetta di Azure Information Protection, creare una regola di trasporto da applicare quando l'intestazione **msip_labels** include il nome dell'etichetta (ad esempio, **Confidential**) e applicare una classificazione dei messaggi che esegua il mapping a questa etichetta.
-
-## <a name="how-can-dlp-solutions-and-other-applications-integrate-with-azure-information-protection"></a>Come è possibile integrare soluzioni DLP e altre applicazioni con Azure Information Protection?
-
-Per la classificazione, Azure Information Protection usa metadati persistenti che includono un'etichetta di testo non crittografata. Queste informazioni possono essere lette da soluzioni DLP e da altre applicazioni. Per i file, questi metadati vengono archiviati all'interno di proprietà personalizzate, per i messaggi di posta elettronica nelle intestazioni dei messaggi.
+- Per ogni etichetta di Azure Information Protection, creare una regola di trasporto da applicare quando l'intestazione **msip_labels** include il nome dell'etichetta (ad esempio, **General**) e applicare una classificazione dei messaggi che esegua il mapping a questa etichetta.
 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

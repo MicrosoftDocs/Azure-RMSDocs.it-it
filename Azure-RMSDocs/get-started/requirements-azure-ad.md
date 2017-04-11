@@ -4,7 +4,7 @@ description: Identificare i requisiti di Azure AD per l&quot;uso di Azure Inform
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/05/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fa0a9351177b44b4d770e37d24aee85e1e313c2d
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 729d66e8d55d045b74ac5c794cf83ddcc2848d35
+ms.sourcegitcommit: 1671466a42e7e00e1cc2702b1f609fb112aac7db
 translationtype: HT
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Requisiti di Azure Active Directory per Azure Information Protection
@@ -36,7 +36,13 @@ Se si vuole integrare la directory di Azure AD con le foreste di AD locali, vede
 
 Computer che eseguono Office 2010: 
 
+- Per autenticarsi ad Azure Information Protection e al relativo servizio di protezione dei dati, Azure Rights Management, questi computer richiedono il [client di Azure Information Protection](../rms-client/aip-client.md) (scelta consigliata) o l'[applicazione di condivisione Rights Management per Windows](../rms-client/sharing-app-windows.md).
+
 - Gli account utente federati, ad esempio AD FS, devono usare l'Autenticazione integrata di Windows. L'autenticazione basata su moduli in questo scenario non riuscirà ad autenticare gli utenti per Azure Information Protection.
+
+Supporto dell'autenticazione basata sui certificati:
+
+- L'app Azure Information Protection per Android supporta l'autenticazione basata sui certificati se si dispone almeno della versione 5.0 di Android. Per istruzioni per la configurazione dell'autenticazione basata sui certificati, vedere [Get started with certificate-based authentication in Azure Active Directory](/active-directory/active-directory-certificate-based-authentication-get-started) (Introduzione all'autenticazione basata sui certificati in Azure Active Directory).
 
 Dispositivi mobili o computer Mac che eseguono l'autenticazione locale tramite AD FS o un provider di autenticazione equivalente:
 
@@ -47,7 +53,7 @@ Per usare Multi-Factor Authentication (MFA) con Azure Information Protection, è
 
 -   Office 2013 (versione minima):
 
-    -   Se si ha Office 2013, è necessario installare anche l'[aggiornamento del 9 giugno 2015 per Office 2013 (KB3054853)](https://support.microsoft.com/kb/3054853). Per altre informazioni su questo aggiornamento e su come l'autenticazione moderna porta Active Directory Authentication Library in Office 2013, vedere il post relativo all'[anteprima pubblica di autenticazione moderna di Office 2013 annunciata](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/) sul blog di Office.
+    -   Se si ha Office 2013, per supportare Active Directory Authentication Library (ADAL) può essere necessario installare un aggiornamento aggiuntivo, ad esempio l'[aggiornamento del 9 giugno 2015 per 2013 Office (KB3054853)](https://support.microsoft.com/kb/3054853). Per altre informazioni su questo aggiornamento e su come l'autenticazione moderna porta Active Directory Authentication Library in Office 2013, vedere il post relativo all'[anteprima pubblica di autenticazione moderna di Office 2013 annunciata](https://blogs.office.com/2015/03/23/office-2013-modern-authentication-public-preview-announced/) sul blog di Office.
 
 - Client Azure Information Protection:
 
@@ -55,7 +61,7 @@ Per usare Multi-Factor Authentication (MFA) con Azure Information Protection, è
 
 -   Applicazione Rights Management sharing per Windows:
 
-    -   È necessario avere installato la versione minima 1.0.1908.0, che può essere confermata tramite Pannello di controllo, Programmi e funzionalità. L'applicazione di condivisione Rights Management è stata ora sostituita dal client Azure Information Protection. Per altre informazioni sull'applicazione, vedere [Applicazione Rights Management sharing per Windows](../rms-client/sharing-app-windows.md).
+    -   È necessario avere installato la versione minima 1.0.1908.0, che può essere confermata tramite Pannello di controllo, Programmi e funzionalità. L'applicazione di condivisione Rights Management è stata ora sostituita dal client Azure Information Protection. Per altre informazioni sull'applicazione di condivisione, vedere [Applicazione di condivisione Rights Management per Windows](../rms-client/sharing-app-windows.md).
 
 -   App di condivisione Rights Management per dispositivi mobili e computer Mac:
 

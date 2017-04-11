@@ -4,7 +4,7 @@ description: Risorse per gli amministratori, incluse informazioni sulle nuove ve
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/30/2017
+ms.date: 04/04/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5e836d99c59cbd055b219aab6499a67fb62bd1a5
-ms.sourcegitcommit: 8733730882bea6f505f4c6d53d4bdf08c3106f40
+ms.openlocfilehash: c3838c29d26c8c1bed196ad0a86c63f5f78ad9cc
+ms.sourcegitcommit: d2bd2ddc68d9b5a095b57235b28a3b7e9307bd9b
 translationtype: HT
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informazioni e supporto per Azure Information Protection
@@ -49,13 +49,17 @@ Se si è idonei a **FastTrack**: è possibile usufruire del FastTrack Center Ben
 
 Per altri clienti, usare i canali di supporto seguenti, a seconda di come si è ottenuto Azure Information Protection:
 
-- **Azure Information Protection Premium** (autonomo): aprire una [richiesta di supporto nel portale di Azure](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade). Quando richiesto, nel pannello **Informazioni di base** scegliere **Tecnico** come **Tipo di problema** e **Sottoscrizione con supporto tecnico incluso** per l'opzione **Sottoscrizione**.
-
-- **Azure Information Protection con una sottoscrizione a Office 365**: vedere [Contattare il supporto di Office 365 per le aziende - Guida per gli amministratori](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) per numeri di telefono e informazioni su come contattare il supporto tramite il portale di amministrazione di Office 365. 
-
-- **Azure Information Protection con Enterprise Mobility + Security (EMS)**: se si dispone anche di Office 365, è possibile usare i [canali di supporto di Office 365](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b). Per altre informazioni, vedere [Enterprise Mobility Suite: Support FAQ](https://technet.microsoft.com/dn932057.aspx) (Enterprise Mobility Suite: domande frequenti sul supporto).
-
-- **Azure Information Protection con Secure Productive Enterprise (SPE)**: usare i [canali di supporto di Office 365](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).
+- **Azure Information Protection** (autonomo): 
+    - Creare una **Nuova richiesta di supporto** da [Guida e supporto](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) nel Portale di Azure. Quando richiesto, nel pannello **Informazioni di base** scegliere **Tecnico** come **Tipo di problema** e **Sottoscrizione con supporto tecnico incluso** per l'opzione **Sottoscrizione**.
+    
+- **Azure Information Protection con un abbonamento a Office 365**: 
+    - Vedere [Contattare il supporto di Office 365 per le aziende - Guida per gli amministratori](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) per numeri di telefono e informazioni su come contattare il supporto tramite il portale di amministrazione di Office 365. 
+    
+- **Azure Information Protection con Enterprise Mobility + Security (EMS)**: 
+    - Creare una **Nuova richiesta di supporto** da [Guida e supporto](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) nel Portale di Azure. Quando richiesto, nel pannello **Informazioni di base** scegliere **Tecnico** come **Tipo di problema** e **Sottoscrizione con supporto tecnico incluso** per l'opzione **Sottoscrizione**.
+    
+- **Azure Information Protection con Secure Productive Enterprise (SPE)**: 
+    - Usare i [canali di supporto di Office 365](https://support.office.com/article/Contact-Office-365-for-business-support-Admin-Help-32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).
 
 Per altre opzioni di supporto, rivolgersi al proprio contatto Microsoft. 
 

@@ -5,7 +5,7 @@ keywords: Alcune domande frequenti riguardanti l&quot;uso dell&quot;app Azure In
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/05/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.technology: techgroup-identity
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bc3d92cb0dc23ddd2d1f81daf2fc589ad4862977
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: d797dd31c44d985becc92ec81266afbe23cd970c
+ms.sourcegitcommit: 1671466a42e7e00e1cc2702b1f609fb112aac7db
 translationtype: HT
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Domande frequenti sull'app Microsoft Azure Information Protection per iOS e Android
@@ -45,7 +45,7 @@ Se sono disponibili queste versioni o versioni successive, è possibile installa
 
 ## <a name="how-do-i-get-started-with-the-viewer-app"></a>Come si può iniziare a usare l'app visualizzatore?
 
-Dopo aver installato l'app, non è necessario eseguire altre operazioni. Attendere finché non viene visualizzato un file o un messaggio di posta elettronica protetto e quindi scegliere il **visualizzatore dell'API** per aprirlo. Verrà quindi chiesto di accedere con l'account aziendale o dell'istituto di istruzione. Dopo l'autenticazione delle credenziali, sarà quindi possibile leggere il contenuto.
+Dopo aver installato l'app, non è necessario eseguire altre operazioni. Attendere finché non viene visualizzato un file o un messaggio di posta elettronica protetto e quindi scegliere il **visualizzatore dell'API** per aprirlo. Verrà quindi chiesto di accedere con l'account aziendale o dell'istituto di istruzione oppure di selezionare un certificato. Dopo l'autenticazione delle credenziali, sarà quindi possibile leggere il contenuto.
 
 Tuttavia, se non si vuole attendere, è possibile usare le istruzioni seguenti per inviare un file o un messaggio di posta elettronica protetto per visualizzare: [Introduzione all'app Microsoft Azure Information Protection per iOS e Android](mobile-app-get-started.md) 
 ## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>Quali credenziali usare per accedere all'app?

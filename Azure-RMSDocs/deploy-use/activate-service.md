@@ -4,7 +4,7 @@ description: "È necessario attivare il servizio Azure Rights Management prima c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 03/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5f03b34b825b9fc693741336c54ee4049f636741
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 0e7feff31adb118439dfce082a831bdc51bc4a87
+ms.sourcegitcommit: 58d1f87763f8756621a6cba6dfe51e26ec38cd48
 translationtype: HT
 ---
 # <a name="activating-azure-rights-management"></a>Attivazione di Azure Rights Management
@@ -57,17 +57,25 @@ Se non si vuole permettere a tutti gli utenti di proteggere immediatamente i fil
 Se, ad esempio, inizialmente si vuole permettere solo agli amministratori del gruppo "IT department" (con ID oggetto fbb99ded-32a0-45f1-b038-38b519009503) di proteggere i contenuti per finalità di test, usare il comando seguente:
 
 ```
-Set-AadrmOnboardingControlPolicy – SecurityGroupObjectId fbb99ded-32a0-45f1-b038-38b519009503
-```
-Si noti che per questa opzione di configurazione è necessario specificare un gruppo. Non è possibile specificare singoli utenti. Per ottenere l'ID oggetto per il gruppo, usare Azure AD PowerShell, ad esempio per la [versione 1.0](https://msdn.microsoft.com/library/azure/jj151815\(v=azure.98\).aspx) del modulo, usare il comando [Get-MsolGroup](https://msdn.microsoft.com/library/azure/dn194130\(v=azure.98\).aspx).
-
-In alternativa, se si vuole assicurare che solo gli utenti con licenza valida per l'uso di Azure Information Protection possano proteggere i contenuti:
-
-```
-Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $true
+Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False -SecurityGroupObjectId "fbb99ded-32a0-45f1-b038-38b519009503"
 ```
 
-Per altre informazioni su questo cmdlet ed esempi aggiuntivi, vedere la guida di [Set-AadrmOnboardingControlPolicy](https://msdn.microsoft.com/library/dn857521.aspx).
+Si noti che per questa opzione di configurazione è necessario specificare un gruppo. Non è possibile specificare singoli utenti. Per ottenere l'ID oggetto per il gruppo, è possibile usare Azure AD PowerShell, ad esempio usare il comando [Get-MsolGroup](/powershell/msonline/v1/get-msolgroup) per la versione 1.0 del modulo. Oppure, è possibile copiare valore **ID oggetto** del gruppo dal portale di Azure.
+
+In alternativa, per fare in modo che solo gli utenti con licenza valida per l'uso di Azure Information Protection possano proteggere i contenuti:
+
+```
+Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $True
+```
+
+Quando i controlli di caricamento non sono più necessari, se è stata usata l'opzione di gruppo o di gestione licenze, eseguire:
+
+```
+Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
+```
+
+
+Per altre informazioni su questo cmdlet ed esempi aggiuntivi, vedere la guida di [Set-AadrmOnboardingControlPolicy](/powershell/aadrm/vlatest/set-aadrmonboardingcontrolpolicy).
 
 Quando si usano questi controlli di selezione utenti, tutti gli utenti dell'organizzazione potranno utilizzare sempre i contenuti protetti dal sottoinsieme di utenti, ma non potranno applicare direttamente la protezione delle informazioni da applicazioni client. Non potranno ad esempio visualizzare nei client di Office i modelli predefiniti pubblicati automaticamente quando viene attivato il servizio Azure Rights Management oppure eventuali modelli personalizzati configurati dall'utente.  Per ottenere lo stesso risultato, le applicazioni lato server, come Exchange, possono implementare controlli specifici per singoli utenti per l'integrazione con RMS.
 
