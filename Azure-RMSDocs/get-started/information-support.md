@@ -4,7 +4,7 @@ description: Risorse per gli amministratori, incluse informazioni sulle nuove ve
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/04/2017
+ms.date: 04/07/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c3838c29d26c8c1bed196ad0a86c63f5f78ad9cc
-ms.sourcegitcommit: d2bd2ddc68d9b5a095b57235b28a3b7e9307bd9b
+ms.openlocfilehash: c8afaa635f34f6d052cd646387d37f68bbcdff45
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informazioni e supporto per Azure Information Protection
@@ -27,7 +27,7 @@ Usare le risorse seguenti per comprendere, distribuire e supportare Azure Inform
 |Vedere la documentazione consigliata per il servizio →|Usare la pagina iniziale della [documentazione di Azure Information Protection](https://docs.microsoft.com/information-protection/).|
 |Inviare commenti sulla documentazione o porre una domanda relativa alla documentazione stessa →|Inviare un messaggio di posta elettronica ad [askipteam](mailto:%20askipteam@microsoft.com?subject=Documentation%20feedback)|
 |Ricevere tweet su Information Protection e annunci sugli aggiornamenti della documentazione dal gruppo di prodotto →|Seguire Dan Plastina, che collabora alla gestione del team di Information Protection. Vedere [Dan Plastina @DanPlastina](https://twitter.com/DanPlastina)|
-|Controllare le informazioni sull'abbonamento e sulle funzionalità supportate →|Usare le [informazioni sulla sottoscrizione](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) e l'[elenco delle funzionalità](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) del sito Azure Information Protection.|
+|Controllare le informazioni sull'abbonamento e sulle funzionalità supportate →|Usare le [informazioni sulla sottoscrizione](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e l'[elenco delle funzionalità](https://www.microsoft.com/cloud-platform/azure-information-protection-features) del sito Azure Information Protection.|
 
 
 ## <a name="information-about-new-releases-and-updated-documentation"></a>Informazioni sulle nuove versioni e sulla documentazione aggiornata
