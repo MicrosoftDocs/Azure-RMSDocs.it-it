@@ -4,7 +4,7 @@ description: "Istruzioni che fanno parte del percorso di migrazione da AD RMS ad
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 04/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3b9350462f363ed365c3f37aabad79ce7338b531
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: d2e504b2ed387a5bce721fac12e017064006169d
+ms.sourcegitcommit: 384461f0e3fccd73cd7eda3229b02e51099538d4
 translationtype: HT
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave protetta tramite software a una chiave protetta tramite HSM
@@ -23,7 +23,7 @@ translationtype: HT
 
 Istruzioni che fanno parte del [percorso di migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e si applicano solo se la chiave di AD RMS è protetta tramite software e si vuole eseguire la migrazione ad Azure Information Protection con una chiave del tenant protetta tramite HSM in Insieme di credenziali delle chiavi di Azure. 
 
-Se non si tratta dello scenario di configurazione prescelto, tornare al [Passaggio 2. Esportare i dati di configurazione da AD RMS e importarli in Azure RMS](migrate-from-ad-rms-phase1.md#step-2-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection), quindi scegliere una configurazione diversa.
+Se non si tratta dello scenario di configurazione scelto, tornare al [Passaggio 4. Esportare i dati di configurazione da AD RMS e importarli in Azure RMS](migrate-from-ad-rms-phase2.md#step-4-export-configuration-data-from-ad-rms-and-import-it-to-azure-information-protection), quindi scegliere una configurazione diversa.
 
 Si tratta di una procedura in quattro parti per importare la configurazione di AD RMS in Azure Information Protection. La chiave del tenant di Azure Information Protection verrà gestita dall'utente (BYOK) in Insieme di credenziali delle chiavi di Azure.
 
@@ -110,25 +110,25 @@ Ora che la chiave del certificato concessore di licenze server (SLC) è stata es
 
 ## <a name="part-2-package-and-transfer-your-hsm-key-to-azure-key-vault"></a>Parte 2: Creare il pacchetto e trasferire la chiave del modulo di protezione hardware in Insieme di credenziali delle chiavi di Azure
 
-1.  Amministratore di Insieme di credenziali delle chiavi di Azure: usare i passaggi seguenti dalla sezione [Implementazione di BYOK (Bring Your Own Key) per l'insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) della documentazione di Insieme di credenziali delle chiavi di Azure:
+Amministratore di Insieme di credenziali delle chiavi di Azure: usare i passaggi seguenti dalla sezione [Implementazione di BYOK (Bring Your Own Key) per l'insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) della documentazione di Insieme di credenziali delle chiavi di Azure:
 
-    -   [Passaggio 4: Preparare la chiave per il trasferimento](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-4-prepare-your-key-for-transfer)
+- [Passaggio 4: Preparare la chiave per il trasferimento](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-4-prepare-your-key-for-transfer)
 
-    -   [Passaggio 5: Trasferire la chiave a Insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-5-transfer-your-key-to-azure-key-vault)
+- [Passaggio 5: Trasferire la chiave a Insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-5-transfer-your-key-to-azure-key-vault)
 
-    Non seguire i passaggi per generare la coppia di chiavi, perché si dispone già della chiave. Al contrario, eseguire un comando per trasferire tale chiave (in questo esempio, il parametro KeyIdentifier usa "contosobyok") dal modulo di protezione hardware locale.
+Non seguire i passaggi per generare la coppia di chiavi, perché si dispone già della chiave. Al contrario, eseguire un comando per trasferire tale chiave (in questo esempio, il parametro KeyIdentifier usa "contosobyok") dal modulo di protezione hardware locale.
 
-    Prima di trasferire la chiave a Insieme di credenziali delle chiavi di Azure, assicurarsi che l'utilità KeyTransferRemote.exe restituisca **Result: SUCCESS** (Risultato: ESITO POSITIVO) quando si crea una copia della chiave con autorizzazioni ridotte (passaggio 4.1) e quando si esegue la crittografia della chiave (passaggio 4.3).
+Prima di trasferire la chiave a Insieme di credenziali delle chiavi di Azure, assicurarsi che l'utilità KeyTransferRemote.exe restituisca **Result: SUCCESS** (Risultato: ESITO POSITIVO) quando si crea una copia della chiave con autorizzazioni ridotte (passaggio 4.1) e quando si esegue la crittografia della chiave (passaggio 4.3).
 
-    Quando la chiave viene caricata in Insieme di credenziali delle chiavi di Azure, vengono visualizzate le proprietà della chiave visualizzata, incluso l'ID della chiave. Avrà un aspetto simile a **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Prendere nota dell'URL perché sarà necessario all'amministratore di Azure Information Protection per indicare al servizio Azure Rights Management di Azure Information Protection di usare questa chiave per la chiave del tenant.
+Quando la chiave viene caricata in Insieme di credenziali delle chiavi di Azure, vengono visualizzate le proprietà della chiave visualizzata, incluso l'ID della chiave. Avrà un aspetto simile a **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Prendere nota dell'URL perché sarà necessario all'amministratore di Azure Information Protection per indicare al servizio Azure Rights Management di Azure Information Protection di usare questa chiave per la chiave del tenant.
 
-    Ora che la chiave HSM è stata trasferita in Insieme di credenziali delle chiavi di Azure, si è pronti per importare i dati di configurazione di AD RMS.
+Ora che la chiave HSM è stata trasferita in Insieme di credenziali delle chiavi di Azure, si è pronti per importare i dati di configurazione di AD RMS.
 
 ## <a name="part-3-import-the-configuration-data-to-azure-information-protection"></a>Parte 3: Importare i dati di configurazione in Azure Information Protection
 
 1.  Amministratore di Azure Information Protection: nella workstation connessa a Internet e nella sessione di PowerShell copiare i nuovi file di dati di configurazione (con estensione xml) la cui chiave del certificato concessore di licenze server è stata rimossa dopo l'esecuzione dello strumento TpdUtil.
 
-2. Caricare il primo file con estensione xml, usando il cmdlet [Import-AadrmTpd](https://msdn.microsoft.com/library/dn857523.aspx). Se si hanno più file, perché erano disponibili più domini di pubblicazione trusted, scegliere il file corrispondente alla chiave HSM che si vuole usare in Azure Information Protection per proteggere il contenuto dopo la migrazione.
+2. Caricare il primo file con estensione xml, usando il cmdlet [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd). Se si hanno più file, perché erano disponibili più domini di pubblicazione trusted, scegliere il file corrispondente alla chiave HSM che si vuole usare in Azure Information Protection per proteggere il contenuto dopo la migrazione.
 
     Per eseguire questo cmdlet, è necessario l'URL della chiave identificata nel passaggio precedente.
 
@@ -144,17 +144,17 @@ Ora che la chiave del certificato concessore di licenze server (SLC) è stata es
 
 
 
-3.  Usare il cmdlet [Disconnect-AadrmService](https://msdn.microsoft.com/library/azure/dn629416.aspx) per disconnettersi dal servizio Azure Rights Management:
+3.  Usare il cmdlet [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) per disconnettersi dal servizio Azure Rights Management:
 
     ```
     Disconnect-AadrmService
     ```
 
     > [!NOTE]
-    > Se successivamente si deve confermare quale chiave viene usata dal tenant di Azure Information Protection in Insieme di credenziali delle chiavi di Azure, usare il cmdlet [Get-AadrmKeys](https://msdn.microsoft.com/library/dn629420.aspx) di Azure RMS.
+    > Se successivamente si deve confermare quale chiave viene usata dal tenant di Azure Information Protection in Insieme di credenziali delle chiavi di Azure, usare il cmdlet [Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys) di Azure RMS.
 
 
-È ora possibile andare al [Passaggio 3. Attivare il tenant di Azure Information Protection](migrate-from-ad-rms-phase1.md#step-3-activate-your-azure-information-protection-tenant).
+È ora possibile andare al [Passaggio 5. Attivare il tenant di Azure Information Protection](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

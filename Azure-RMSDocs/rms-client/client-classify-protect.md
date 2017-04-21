@@ -4,7 +4,7 @@ description: Istruzioni su come classificare e proteggere documenti e messaggi d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/16/2017
+ms.date: 04/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: edc8c7227a0f2b493a64f25a26a64aef3a314e39
-ms.sourcegitcommit: df8492aa3687974dc6105dc415c2d959f32e6630
+ms.openlocfilehash: f461b349440043bcf5d8624731eda86968194462
+ms.sourcegitcommit: 52b7502e7049358f9fc0a418625bb460bb81479f
 translationtype: HT
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Classificare e proteggere un file o un messaggio di posta elettronica tramite Azure Information Protection
@@ -133,7 +133,7 @@ La guida dell'amministratore contiene un elenco completo dei tipi di file suppor
 
     - **Selezionare le autorizzazioni**: selezionare il livello di accesso da assegnare agli utenti per la protezione del file o dei file selezionati.
     
-    - **Selezionare gli utenti**: specificare gli utenti che devono avere le autorizzazioni selezionate per il file o i file. Per gli utenti e i gruppi all'interno dell'organizzazione è possibile usare la Rubrica per cercarli e selezionarli. Per gli utenti di un'altra organizzazione è necessario specificare l'indirizzo di posta elettronica completo. Assicurarsi di usare un indirizzo di posta elettronica aziendale perché gli indirizzi di posta elettronica personali non sono attualmente supportati.
+    - **Selezionare gli utenti**: specificare gli utenti che devono avere le autorizzazioni selezionate per il file o i file. Digitare l'indirizzo di posta elettronica completo di uno o più utenti o di un gruppo oppure il nome di dominio di un'organizzazione per tutti gli utenti dell'organizzazione. Si noti che gli indirizzi di posta elettronica personali non sono attualmente supportati.
         
     - **Scadenza dell'accesso**: selezionare questa opzione solo per i file per cui il fattore tempo è importante in modo tale che gli utenti specificati non potranno aprire il file o i file selezionati dopo una data specificata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno selezionato, gli utenti specificati non potranno aprire il file.
 

@@ -5,7 +5,7 @@ keywords: Come visualizzare file o messaggi di posta elettronica con l&quot;app 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/06/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,8 +13,8 @@ ms.technology: techgroup-identity
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 24e1b9df2284abde20d5308a313019d666afed5d
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 96ab267f22abf31d39a77dcc5450b28a583096e8
+ms.sourcegitcommit: 81b5c111627246a4094ef87da17d260f66ae985c
 translationtype: HT
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Introduzione all'app Microsoft Azure Information Protection per iOS e Android
@@ -31,9 +31,9 @@ Accedere a uno dei file supportati dall'app dal dispositivo mobile per aprire il
 
 - **Un file PDF protetto tramite diritti**: da un computer Windows usare il client Azure Information Protection per [proteggere un file PDF](client-classify-protect.md) e quindi inviare a se stessi il file PDF protetto tramite diritti come allegato di un messaggio di posta elettronica. In alternativa, caricare un file PDF in una raccolta protetta di SharePoint e condividerlo usando l'indirizzo di posta elettronica.
 
-- **Un file PTXT o PJPG o PPNG**: da un computer Windows usare il client Azure Information Protection per proteggere un file di testo o immagine e quindi inviare a se stessi il file protetto come allegato di un messaggio di posta elettronica. Per l'elenco completo dei tipi di file che è possibile usare per il test, vedere la sezione [Tipi di file supportati per la protezione e relative estensioni](client-admin-guide-file-types.md#supported-file-types-for-protection-and-their-file-name-extensions) della Guida dell'amministratore del client Azure Information Protection. 
+- **Un file PTXT o PJPG o PPNG**: da un computer Windows usare il client Azure Information Protection per proteggere un file di testo o immagine e quindi inviare a se stessi il file protetto come allegato di un messaggio di posta elettronica. Per l'elenco completo dei tipi di file che è possibile usare per il test, vedere la prima tabella nella sezione [Tipi di file supportati per la classificazione e la protezione](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) della Guida dell'amministratore del client Azure Information Protection. 
 
-Per visualizzare questi file nell'app visualizzatore Azure Information Protection, toccare l'allegato di posta elettronica o il collegamento. Quando viene chiesto di selezionare un'app per aprire i file, selezionare l'app visualizzatore **AIP**. Verrà quindi chiesto di accedere con l'account aziendale o dell'istituto di istruzione. Dopo aver eseguito l'autenticazione, l'app Azure Information Protection visualizza il messaggio di posta elettronica o il file da leggere.
+Per visualizzare questi file nell'app visualizzatore Azure Information Protection, toccare l'allegato di posta elettronica o il collegamento. Quando viene chiesto di selezionare un'app per aprire i file, selezionare l'app visualizzatore **AIP**. Verrà quindi chiesto di accedere con l'account aziendale o dell'istituto di istruzione oppure di selezionare un certificato. Dopo l'autenticazione delle credenziali, l'app Azure Information Protection visualizza il messaggio di posta elettronica o il file da leggere.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

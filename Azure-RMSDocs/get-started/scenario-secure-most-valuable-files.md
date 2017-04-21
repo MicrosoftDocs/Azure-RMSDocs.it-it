@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 95f1844a-612c-4e67-bbe6-4b6b92295221
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f509efb599bd17d5a76c08e24a7d503394415785
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 8a0ca5fa2d7aa6f1f8f8b5ccab0a3a3bd122b50c
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="scenario---secure-your-most-few-valuable-files"></a>Scenario - Proteggere (alcuni) file particolarmente importanti
@@ -51,7 +51,7 @@ Per questo scenario, sono necessari i requisiti seguenti:
 |Configurazione di un modello personalizzato, come descritto di seguito|[Configurazione di modelli personalizzati per il servizio Azure Rights Management](../deploy-use/configure-custom-templates.md)|
 |L'applicazione Rights Management sharing viene distribuita su un computer Windows, in modo che sia possibile proteggere questi file sul posto, come descritto nella sezione successiva|[Scaricare e installare l'applicazione Rights Management sharing](../rms-client/install-sharing-app.md)|
 |Gli utenti autorizzati dispongano di una versione minima di Office 2013|Se gli utenti dispongono di Office 2010, è necessario installare anche l'applicazione Rights Management sharing.|
-|La sottoscrizione per Azure Information Protection include il rilevamento dei documenti|Se la sottoscrizione non include il rilevamento e la revoca dei documenti, non sarà possibile accedere al sito di rilevamento dei documenti per vedere chi accede ai documenti e, se necessario, per revocarne l'accesso. In questo caso, acquistare una sottoscrizione che supporta il monitoraggio dei documenti o accettare questa limitazione. È opportuno considerare anche le funzionalità di [registrazione dell'utilizzo ](../deploy-use/log-analyze-usage.md) del servizio Azure Rights Management, che può fornire informazioni su quali utenti hanno eseguito l'accesso e quando, per rilevare potenziali comportamenti sospetti.<br /><br />Controllare l'[elenco delle funzionalità](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) dal sito Azure Information Protection.|
+|La sottoscrizione per Azure Information Protection include il rilevamento dei documenti|Se la sottoscrizione non include il rilevamento e la revoca dei documenti, non sarà possibile accedere al sito di rilevamento dei documenti per vedere chi accede ai documenti e, se necessario, per revocarne l'accesso. In questo caso, acquistare una sottoscrizione che supporta il monitoraggio dei documenti o accettare questa limitazione. È opportuno considerare anche le funzionalità di [registrazione dell'utilizzo ](../deploy-use/log-analyze-usage.md) del servizio Azure Rights Management, che può fornire informazioni su quali utenti hanno eseguito l'accesso e quando, per rilevare potenziali comportamenti sospetti.<br /><br />Controllare l'[elenco delle funzionalità](https://www.microsoft.com/cloud-platform/azure-information-protection-features) dal sito Azure Information Protection.|
 
 ### <a name="to-configure-the-custom-template"></a>Per configurare il modello personalizzato
 

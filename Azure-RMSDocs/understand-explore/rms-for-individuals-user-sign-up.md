@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: a60731bd-f78d-4f00-bb3e-354637b312ab
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 12f681ccfbcd7da2192df2be057f92d31a856bda
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 859ec4aa127b995ca9acb6409b8644a0c87d7ffd
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="how-users-sign-up-for-rms-for-individuals"></a>Modalità di iscrizione per RMS per utenti singoli
@@ -33,7 +33,7 @@ Per iscriversi per ottenere l'account gratuito, è necessario visitare la [pagin
 
 3.  Fare clic su **Accedi**.
 
-    Microsoft usa l'indirizzo di posta elettronica dell'utente per verificare se l'organizzazione dispone già di una [sottoscrizione a pagamento per Azure Information Protection](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) o di un [abbonamento a Office 365 che include la protezione dei dati mediante Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). In tal caso, non è necessario RMS per utenti singoli quindi si verrà connessi immediatamente e l’iscrizione self-service per RMS per utenti singoli verrà annullata. Se non viene trovata una sottoscrizione a pagamento, si procederà al passaggio successivo.
+    Microsoft usa l'indirizzo di posta elettronica dell'utente per verificare se l'organizzazione dispone già di una [sottoscrizione a pagamento per Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) o di un [abbonamento a Office 365 che include la protezione dei dati mediante Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). In tal caso, non è necessario RMS per utenti singoli quindi si verrà connessi immediatamente e l’iscrizione self-service per RMS per utenti singoli verrà annullata. Se non viene trovata una sottoscrizione a pagamento, si procederà al passaggio successivo.
 
 4.  Attendere un messaggio di posta elettronica di conferma proveniente da Microsoft e inviato all'indirizzo di posta indicato Il messaggio proviene dal team di Office 365 (support@email.microsoftonline.com) e ha come oggetto il testo **Finish signing up for Microsoft Azure Information Protection** (Completare l'iscrizione a Microsoft Azure Information Protection).
 
@@ -83,7 +83,7 @@ Questo processo non prevede costi aggiuntivi per l'organizzazione né attività 
 
     -   Registrare tutte le attività correlate all'uso di Rights Management nell'organizzazione. Questa operazione è estremamente utile perché consente non solo di monitorare i file protetti e gli utenti che vi hanno effettuato l'accesso, ma anche di identificare potenziali comportamenti sospetti di utenti non autorizzati che tentano di accedere a tali file. Per altre informazioni, vedere [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](../deploy-use/log-analyze-usage.md).
 
-    -   Fornire agli utenti la possibilità di rilevare e revocare i documenti protetti, se queste funzionalità sono supportate dalla [sottoscrizione](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features). Per altre informazioni, vedere la sezione [Tenere traccia dei documenti e revocarli](../rms-client/client-track-revoke.md) della [Guida per l'utente di Azure Information Protection](../rms-client/client-user-guide.md).
+    -   Fornire agli utenti la possibilità di rilevare e revocare i documenti protetti, se queste funzionalità sono supportate dalla [sottoscrizione](https://www.microsoft.com/cloud-platform/azure-information-protection-features). Per altre informazioni, vedere la sezione [Tenere traccia dei documenti e revocarli](../rms-client/client-track-revoke.md) della [Guida per l'utente di Azure Information Protection](../rms-client/client-user-guide.md).
 
     -   Implementare una soluzione BYOK in modo da generare la chiave del tenant per Azure Rights Management in locale in base ai propri criteri IT e trasferirla in modo sicuro a Microsoft tramite un modulo di protezione hardware. Per altre informazioni, vedere [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
 

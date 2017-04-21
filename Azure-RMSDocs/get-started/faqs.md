@@ -4,7 +4,7 @@ description: Alcune domande frequenti su Azure Information Protection e sul rela
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/17/2017
+ms.date: 04/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 987936c79325c33a8c553dea1a6594933df5f7d8
-ms.sourcegitcommit: d959f0a9ba347a5dde77aac45a5d9f88d7cfdfb2
+ms.openlocfilehash: b27a4b536e135526bb7e1b4236e88b85b6ea84b1
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
@@ -29,7 +29,7 @@ La pagina delle domande frequenti verrà aggiornata periodicamente e le nuove ag
 Azure Information Protection offre funzionalità per la classificazione, l'assegnazione di etichette e la protezione per i documenti e i messaggi di posta elettronica di un'organizzazione. La tecnologia di protezione è basata sul servizio Azure Rights Management, che è ora un componente di Azure Information Protection.
 
 ## <a name="what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included"></a>Quale sottoscrizione è necessaria per Azure Information Protection e quali funzionalità sono incluse?
-Vedere le [informazioni sulla sottoscrizione](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-pricing) e l'[elenco delle funzionalità](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) nel sito Azure Information Protection. 
+Vedere le [informazioni sulla sottoscrizione](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e l'[elenco delle funzionalità](https://www.microsoft.com/cloud-platform/azure-information-protection-features) nel sito Azure Information Protection. 
 
 Se si ha un abbonamento a Office 365 che include Rights Management, scaricare il [foglio dati di licenza di Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf) dalla pagina **Funzionalità**.
 
