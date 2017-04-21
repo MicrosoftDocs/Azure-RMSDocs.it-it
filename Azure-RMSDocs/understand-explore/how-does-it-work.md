@@ -4,7 +4,7 @@ description: Descrizione del funzionamento di Azure RMS, dei controlli crittogra
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/06/2017
+ms.date: 04/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,19 +12,19 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1dcdb7017be2e2bdfbefcfaa348be977ed67f8c0
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: a5f189ab5ad1df43b14fa0b6d23bf4f0eef88142
+ms.sourcegitcommit: d44105d4d45fabf0f1d90765304e4b43dd97c0fc
 translationtype: HT
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funzionamento di Azure RMS: dietro le quinte
 
 >*Si applica a: Azure Information Protection, Office 365*
 
-Una cosa importante da comprendere sul funzionamento di Azure RMS è che tramite il servizio Rights Management (e Microsoft) non vengono visualizzati o archiviati dati come parte del processo di protezione delle informazioni. Le informazioni protette non vengono mai inviate o archiviate in Azure, a meno di archiviarle in modo esplicito in Azure o di usare un altro servizio cloud che le archivia in Azure. Azure RMS rende i dati di un documento semplicemente illeggibili a chiunque, eccetto gli utenti e i servizi autorizzati:
+Relativamente al funzionamento di Azure RMS è importante sapere che il servizio Rights Management e Microsoft non considerano o archiviano i dati come parte del processo di protezione delle informazioni. Le informazioni protette non vengono mai inviate o archiviate in Azure, a meno di archiviarle in modo esplicito in Azure o di usare un altro servizio cloud che le archivia in Azure. Azure RMS rende i dati di un documento semplicemente illeggibili a chiunque, eccetto gli utenti e i servizi autorizzati:
 
--   I dati vengono crittografati a livello di applicazione e includono un criterio che definisce l'uso autorizzato del documento.
+- I dati vengono crittografati a livello di applicazione e includono un criterio che definisce l'uso autorizzato del documento.
 
--   Quando un documento protetto viene usato da un utente legittimo o viene elaborato da un servizio autorizzato, i dati contenuti nel documento vengono decrittografati e vengono applicati i diritti definiti nei criteri.
+- Quando un documento protetto viene usato da un utente legittimo o viene elaborato da un servizio autorizzato, i dati contenuti nel documento vengono decrittografati e vengono applicati i diritti definiti nei criteri.
 
 A livello generale, è possibile vedere il funzionamento del processo nell'immagine seguente. Un documento contenente la formula segreta viene protetto e quindi aperto da un utente o un servizio autorizzato. Il documento è protetto da una chiave simmetrica (la chiave verde nell'immagine), che è univoca per ogni documento e viene inserita nell'intestazione del file, dove è protetta dalla chiave radice del tenant di Azure Information Protection (la chiave rossa nell'immagine). La chiave del tenant può essere generata e gestita da Microsoft oppure direttamente dall'utente.
 
@@ -48,11 +48,11 @@ Anche se non è necessario conoscere personalmente il funzionamento di RMS, è p
 
 ###### <a name="footnote-1"></a>Nota 1 
 
-La lunghezza di&256; bit viene usata dal client Azure Information Protection e dall'applicazione di condivisione Rights Management per la protezione generica e la protezione nativa quando il file ha estensione PPDF o è un file di testo o di immagine protetto, ad esempio con estensione PTXT o PJPG.
+La lunghezza di 256 bit viene usata dal client Azure Information Protection e dall'applicazione di condivisione Rights Management per la protezione generica e la protezione nativa quando il file ha estensione PPDF o è un file di testo o di immagine protetto, ad esempio con estensione PTXT o PJPG.
 
 ###### <a name="footnote-2"></a>Nota 2
 
-2048 bit è la lunghezza della chiave quando il servizio Azure Rights Management è attivato. La lunghezza di&1024; bit è supportata per gli scenari facoltativi seguenti:
+2048 bit è la lunghezza della chiave quando il servizio Azure Rights Management è attivato. La lunghezza di 1024 bit è supportata per gli scenari facoltativi seguenti:
 
 - Durante la migrazione da un'istanza locale, se il cluster AD RMS è in esecuzione in Modalità crittografia 1 e non può essere aggiornato alla Modalità crittografia 2.
 
@@ -68,7 +68,7 @@ La chiave simmetrica viene protetta dalla chiave RSA dell'organizzazione ("chiav
 
 La chiave del tenant è protetta nei servizi online di Microsoft, in un ambiente a controllo elevato e sotto attento monitoraggio. Quando si usa una chiave del tenant gestita dai clienti (BYOK), la sicurezza è ottimizzata mediante l'uso di una matrice di moduli di protezione hardware di qualità elevata in ogni area di Azure. Le chiavi non possono essere estratte, esportate o condivise in alcuna circostanza. Per altre informazioni sulla chiave del tenant e su BYOK, vedere [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
 
-Le licenze e i certificati inviati a un dispositivo Windows sono protetti tramite la chiave privata del dispositivo del client, che viene creata al primo utilizzo di Azure RMS sul dispositivo da parte di un utente. La chiave privata è a sua volta protetta mediante DPAPI sul client, che protegge questi segreti usando una chiave derivata dalla password dell'utente. Nei dispositivi mobili le chiavi vengono usate solo una volta. Non essendo archiviate nei client, queste chiavi non devono essere quindi protette nel dispositivo. 
+Le licenze e i certificati inviati a un dispositivo Windows sono protetti tramite la chiave privata del dispositivo del client, che viene creata al primo utilizzo di Azure RMS sul dispositivo da parte di un utente. Questa chiave privata è a sua volta protetta con DPAPI nel client che protegge questi segreti usando una chiave derivata dalla password dell'utente. Nei dispositivi mobili le chiavi vengono usate solo una volta. Non essendo archiviate nei client, queste chiavi non devono essere quindi protette nel dispositivo. 
 
 
 ## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Procedura dettagliata del funzionamento di Azure RMS: primo utilizzo, protezione del contenuto, uso del contenuto
@@ -103,7 +103,9 @@ Quando un utente protegge un documento, il client RMS esegue le azioni seguenti 
 
 ![Protezione del documento RMS - passaggio 2, viene creato il criterio](../media/AzRMS_documentprotection2.png)
 
-**Cosa avviene nel passaggio 2**: il client RMS crea quindi un certificato che include un criterio per il documento, in base a un modello o indicando i diritti specifici per il documento. Questo criterio include i diritti per utenti o gruppi diversi e altre limitazioni, ad esempio una data di scadenza.
+**Cosa avviene nel passaggio 2**: il client RMS crea quindi un certificato che include i criteri per il documento contenenti i [diritti di utilizzo](../deploy-use/configure-usage-rights.md) per utenti e gruppi e altre restrizioni, ad esempio una data di scadenza. Queste impostazioni possono essere definite in un modello configurato in precedenza da un amministratore o specificate quando il contenuto viene protetto (sono chiamate anche "criteri ad hoc").   
+
+L'attributo usato per identificare gli utenti e i gruppi selezionati è l'attributo proxyAddress di Azure AD che memorizza tutti gli indirizzi di posta elettronica di un utente o un gruppo.
 
 Il client RMS usa quindi la chiave dell'organizzazione, ottenuta al momento dell'inizializzazione dell'ambiente utente, per crittografare i criteri e la chiave simmetrica. Il client RMS firma anche i criteri con il certificato dell'utente ottenuto al momento dell'inizializzazione dell'ambiente.
 
@@ -118,7 +120,7 @@ Quando un utente vuole utilizzare un documento protetto, il client RMS avvia la 
 
 ![Uso del documento RMS - passaggio 1, l'utente viene autenticato e ottiene l'elenco dei diritti](../media/AzRMS_documentconsumption1.png)
 
-**Cosa avviene nel passaggio 1**: l'utente autenticato invia i criteri del documento e i certificati dell'utente al servizio Azure Rights Management. Il servizio decrittografa e valuta i criteri e compila un elenco di diritti (se presenti) di cui l'utente dispone per il documento.
+**Cosa avviene nel passaggio 1**: l'utente autenticato invia i criteri del documento e i certificati dell'utente al servizio Azure Rights Management. Il servizio decrittografa e valuta i criteri e compila un elenco di diritti (se presenti) di cui l'utente dispone per il documento. Per identificare l'utente, viene usato proxyAttribute di Azure AD per l'account dell'utente e i gruppi di cui l'utente è membro. Per motivi di prestazioni, l'appartenenza ai gruppi è [memorizzata nella cache](../plan-design/prepare.md#group-membership-caching).
 
 ![Uso del documento RMS - passaggio 2, il contratto di licenza con l'utente finale viene restituito al client](../media/AzRMS_documentconsumption2.png)
 

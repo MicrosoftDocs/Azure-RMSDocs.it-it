@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 629717055620af93c5870fff4ef833dc7931e622
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 89c563ebcf62dc80cbda15048780adf5e414e70b
+ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
 translationtype: HT
 ---
 # <a name="scenario---share-an-office-file-with-users-in-another-organization"></a>Scenario - Condividere un file di Office con utenti in un'altra organizzazione
@@ -46,7 +46,7 @@ Affinché le istruzioni per l'utente per questo scenario funzionino, devono veri
 |Azure Rights Management non è attivato|[Attivazione di Azure Rights Management](https://technet.microsoft.com/library/jj658941.aspx)|
 |L'applicazione Rights Management sharing viene distribuita nei computer degli utenti che eseguono Windows|[Distribuzione automatica dell'applicazione Microsoft Rights Management sharing](../rms-client/sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)|
 |Gli utenti dispongono di Outlook da Office 2013|Se gli utenti dispongono di Office 2016 o Office 2010, sostituire lo screenshot con una versione equivalente, in modo che l'immagine corrisponda a ciò che gli utenti vedono.|
-|La sottoscrizione per Azure Information Protection include il rilevamento dei documenti|Se la sottoscrizione non include il rilevamento e la revoca dei documenti, gli utenti non saranno in grado di completare tutti i passaggi delle istruzioni per l'utente. In questo caso, acquistare una sottoscrizione che supporti queste funzionalità o modificare le istruzioni per l’utente per rimuovere i passaggi che utilizzano queste funzionalità.<br /><br />Controllare l'[elenco delle funzionalità](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features) dal sito Azure Information Protection.|
+|La sottoscrizione per Azure Information Protection include il rilevamento dei documenti|Se la sottoscrizione non include il rilevamento e la revoca dei documenti, gli utenti non saranno in grado di completare tutti i passaggi delle istruzioni per l'utente. In questo caso, acquistare una sottoscrizione che supporti queste funzionalità o modificare le istruzioni per l’utente per rimuovere i passaggi che utilizzano queste funzionalità.<br /><br />Controllare l'[elenco delle funzionalità](https://www.microsoft.com/cloud-platform/azure-information-protection-features) dal sito Azure Information Protection.|
 
 ## <a name="user-documentation-instructions"></a>Istruzioni sulla documentazione per l'utente
 Usando il modello seguente, copiare e incollare le istruzioni per l'utente in una comunicazione per gli utenti finali e apportare tali modifiche in base all'ambiente:
