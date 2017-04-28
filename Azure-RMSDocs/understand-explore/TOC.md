@@ -3,7 +3,6 @@
 ### [Noto anche come...](aka.md)
 ### [Informazioni su Microsoft Azure Rights Management](what-is-azure-rms.md)
 #### [Quali problemi contribuisce a risolvere?](azure-rms-problems-it-solves.md)
-#### [Cosa visualizzano gli amministratori e gli utenti?](what-admins-users-see.md)
 #### [Come funziona BitLocker?](how-does-it-work.md)
 ## [RMS per utenti singoli e Azure Information Protection](rms-for-individuals.md)
 ### [Modalità di iscrizione per RMS per utenti singoli](rms-for-individuals-user-sign-up.md)

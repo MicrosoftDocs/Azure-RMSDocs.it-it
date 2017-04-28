@@ -81,7 +81,7 @@ Informazione **1004**
 
 **L'elenco degli account autorizzati è stato aggiornato.**
 
-Questo evento viene registrato quando il connettore RMS ha scaricato un elenco aggiornato di account (account esistenti e le eventuali modifiche) autorizzati a usare il connettore RMS. Questo elenco viene scaricato ogni&15; minuti, a condizione che il connettore RMS riesca a comunicare con il servizio Azure Rights Management.
+Questo evento viene registrato quando il connettore RMS ha scaricato un elenco aggiornato di account (account esistenti e le eventuali modifiche) autorizzati a usare il connettore RMS. Questo elenco viene scaricato ogni 15 minuti, a condizione che il connettore RMS riesca a comunicare con il servizio Azure Rights Management.
 
 ----
 
@@ -163,7 +163,7 @@ Sebbene questo strumento venga fornito con il supporto "così com'è", è possib
 
 Accedere a uno dei server configurati per il connettore RMS con un account autorizzato a usare il connettore per tale carico di lavoro. Ad esempio, se è stato configurato il connettore RMS per Exchange, accedere a tale server con uno degli account autorizzati per Exchange nello strumento di configurazione del connettore RMS. Eseguire quindi lo strumento RMS Analyzer con l'opzione **Esegui come amministratore**.
 
-Dopo il caricamento dello strumento selezionare l'opzione **Azure RMS connector** (Connettore Azure RMS) nella****pagina iniziale. Immettere l'URL del connettore RMS come indirizzo attivo e fare clic sulla freccia verde. Verranno visualizzati i dettagli del tenant a conferma che il connettore può connettersi correttamente al servizio Azure Rights Management. Se questo test iniziale non riesce, assicurarsi di verificare la configurazione del server proxy e i firewall che potrebbero bloccare il traffico del server. Dopo la visualizzazione corretta dei dettagli del tenant è possibile continuare a eseguire i test diagnostici per il carico di lavoro del server controllando elementi quali numeri di versione supportati, prerequisiti e impostazioni del Registro di sistema.
+Dopo il caricamento dello strumento selezionare l'opzione **Azure RMS connector** (Connettore Azure RMS) nella**** pagina iniziale. Immettere l'URL del connettore RMS come indirizzo attivo e fare clic sulla freccia verde. Verranno visualizzati i dettagli del tenant a conferma che il connettore può connettersi correttamente al servizio Azure Rights Management. Se questo test iniziale non riesce, assicurarsi di verificare la configurazione del server proxy e i firewall che potrebbero bloccare il traffico del server. Dopo la visualizzazione corretta dei dettagli del tenant è possibile continuare a eseguire i test diagnostici per il carico di lavoro del server controllando elementi quali numeri di versione supportati, prerequisiti e impostazioni del Registro di sistema.
 
 Per altre informazioni e istruzioni, vedere **Details** (Dettagli) e **Install Instructions** (Istruzioni di installazione) nella pagina di download.
 
