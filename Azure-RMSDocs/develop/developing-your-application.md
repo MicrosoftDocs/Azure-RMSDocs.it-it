@@ -211,7 +211,7 @@ Se si selezionano i criteri ad hoc, l'utente dell'applicazione deve fornire gli 
 
 Dopo avere eseguito tutti i passaggi di creazione ed esecuzione, gli output dell'applicazione dovrebbero essere simili ai seguenti:
 
-1. Viene chiesto di selezionare un metodo di crittografia.
+1.Viene chiesto di selezionare un metodo di crittografia.
 ![output dell'app - passaggio 1](../media/develop/app-output-1.png)
 
 2. Viene chiesto di specificare il percorso del file da proteggere.
