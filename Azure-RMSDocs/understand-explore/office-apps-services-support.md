@@ -4,7 +4,7 @@ description: Informazioni su come le applicazioni di Office, come Word, Excel, P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9fe4e6173f864711009479e77ff162c307c750e5
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: 5c106d46befc2a2d3c42ba8840dac65a243220d9
+ms.sourcegitcommit: 9edcb4a55a331e02f999c78d97eb0beb21f96f07
 translationtype: HT
 ---
 # <a name="office-applications-and-services"></a>Applicazioni e servizi Office
@@ -27,7 +27,13 @@ Queste applicazioni supportano Rights Management a livello nativo usando Informa
 
 Gli utenti possono ad esempio configurare un file di Word in modo che possano accedervi solo le persone appartenenti all'organizzazione o per controllare se un foglio di calcolo Excel può essere modificato, per impostarne l'accesso in sola lettura o per impedirne la stampa. Per file soggetti a vincoli temporali, è possibile configurare un'ora di scadenza (direttamente oppure applicando un modello) per stabilire il momento in cui non è più possibile accedere al file. Oltre a scegliere un modello, per Outlook gli utenti possono scegliere l'opzione **Non inoltrare** per impedire la perdita di dati.
 
-Oltre al supporto di IRM nativo, queste applicazioni supportano la barra di Azure Information Protection che viene installata con il [client Azure Information Protection](../rms-client/aip-client.md ). Questa barra mostra le etichette che consentono agli utenti di applicare automaticamente e con maggiore facilità la protezione di Rights Management a documenti e messaggi di posta elettronica che contengono dati sensibili.
+Oltre al supporto di IRM nativo, queste applicazioni supportano la barra di Azure Information Protection che viene installata con il [client Azure Information Protection](../rms-client/aip-client.md). Questa barra mostra le etichette che consentono agli utenti di applicare automaticamente e con maggiore facilità la protezione di Rights Management a documenti e messaggi di posta elettronica che contengono dati sensibili.
+
+Se si è pronti per la configurazione delle app di Office e del client Azure Information Protection:
+
+- Per configurare le app di Office, vedere [App di Office: configurazione dei client](../deploy-use/configure-office-apps.md).
+
+- Per installare e configurare il client Azure Information Protection, vedere [Client Azure Information Protection: installazione e configurazione dei client](../deploy-use/configure-client.md).
 
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online ed Exchange Server
 Quando si usa Exchange Online oppure Exchange Server, è possibile usare l'integrazione IRM (Information Rights Management) che fornisce soluzioni di protezione delle informazioni aggiuntive:
@@ -44,30 +50,50 @@ Quando si usa Exchange Online oppure Exchange Server, è possibile usare l'integ
 
 -   **Crittografia dei messaggi di Office 365** che usa regole di trasporto per inviare messaggi di posta elettronica crittografati a persone all'esterno dell'organizzazione e che comporta la lettura del messaggio in un browser con un'interfaccia analoga a Outlook Web App. Nei messaggi e-mail crittografati della società è possibile personalizzare il testo della dichiarazione di non responsabilità e dell'intestazione nonché aggiungere il logo della società. Per altre informazioni, vedere [Crittografia messaggi di Office 365](https://office.microsoft.com/o365-message-encryption-FX104179182.aspx) nel sito Web di Office.
 
-Se si usa Exchange Server, è possibile usare le funzionalità di protezione delle informazioni con il servizio Azure Rights Management grazie all'implementazione del connettore RMS, che opera come un relè tra i server locali e il servizio cloud Azure Rights Management. Per ulteriori informazioni, vedere [Distribuzione del connettore di Azure Rights Management](../deploy-use/deploy-rms-connector.md).
+Se si usa Exchange Server, è possibile usare le funzionalità di protezione delle informazioni con il servizio Azure Rights Management grazie all'implementazione del connettore RMS, che opera come un relè tra i server locali e il servizio cloud Azure Rights Management.
+
+Se si è pronti per la configurazione di Exchange per IRM:
+
+- Per Exchange Online, vedere [Exchange Online: configurazione di IRM](../deploy-use/configure-office365.md#exchange-online-irm-configuration).
+
+- Per Exchange locale, vedere [Distribuzione del connettore di Azure Rights Management](../deploy-use/deploy-rms-connector.md).
+
 
 ## <a name="sharepoint-online-and-sharepoint-server"></a>SharePoint Online e SharePoint Server
-Quando si usa SharePoint Online o SharePoint Server, è possibile usare l'integrazione IRM (Information Rights Management) che consente agli amministratori di proteggere elenchi o raccolte, in modo che quando un utente estrae un documento il file venga protetto per consentirne la visualizzazione e l'uso solo alle persone autorizzate in base ai criteri di protezione delle informazioni specificati. Il file ad esempio potrebbe essere di sola lettura, potrebbe esserne stata disabilitata la copia del testo oppure potrebbe esserne stato impedito il salvataggio di una copia locale e la stampa.
 
-La protezione delle informazioni per elenchi e raccolte viene sempre applicata da un amministratore e mai da un utente finale. e viene applicata a livello di elenco o di raccolta per tutti i documenti contenuti anziché sui file singoli.  Se si usa SharePoint Online, gli utenti possono anche applicare IRM alla raccolta OneDrive for Business.
+Quando si usa SharePoint Online o SharePoint Server è possibile proteggere i documenti con Information Rights Management (IRM). Questa configurazione consente agli amministratori di proteggere elenchi o raccolte in modo che, se un utente estrae un documento, il file scaricato sia protetto e solo le persone autorizzate possano visualizzarlo e usarlo in base ai criteri di protezione delle informazioni specificati. Il file ad esempio potrebbe essere di sola lettura, potrebbe esserne stata disabilitata la copia del testo oppure potrebbe esserne stato impedito il salvataggio di una copia locale e la stampa.
 
-È necessario inoltre che il servizio IRM sia abilitato per SharePoint. Specificare quindi il servizio Information Rights Management per una libreria. Nel caso di SharePoint Online e OneDrive for Business, gli utenti possono specificare anche Information Rights Management per la raccolta OneDrive for Business. SharePoint non usa i modelli di criteri di diritti, anche se è possibile selezionare alcune impostazioni di configurazione di SharePoint, molto simili alle impostazioni che possono essere specificate nei modelli.
+La protezione delle informazioni per elenchi e raccolte di SharePoint viene sempre configurata da un amministratore e mai da un utente finale. Le autorizzazioni vengono impostate a livello di sito e per impostazione predefinita vengono ereditate da qualsiasi elenco o raccolta in tale sito. Se si usa SharePoint Online, gli utenti possono anche configurare la propria raccolta OneDrive for Business per la protezione IRM.
 
-Se si usa SharePoint Server, è possibile usare le funzionalità di protezione delle informazioni con il servizio Azure Rights Management grazie all'implementazione del connettore RMS, che opera come un relè tra i server locali e il servizio cloud Rights Management. Per ulteriori informazioni, vedere [Distribuzione del connettore di Azure Rights Management](../deploy-use/deploy-rms-connector.md).
+Per ottenere un controllo più granulare, è possibile configurare un elenco o una raccolta nel sito in modo che non erediti più le autorizzazioni dal relativo padre. È quindi possibile configurare a livello di elenco o raccolta le autorizzazioni IRM, a cui successivamente verrà fatto riferimento come ad "autorizzazioni univoche". Tuttavia, le autorizzazioni vengono sempre impostate a livello di contenitore. Non è possibile impostare autorizzazioni su singoli file. 
+
+È necessario inoltre che il servizio IRM sia abilitato per SharePoint. Quindi, si specificano le autorizzazioni IRM per una raccolta. Nel caso di SharePoint Online e OneDrive for Business, gli utenti possono specificare anche autorizzazioni IRM per la propria raccolta OneDrive for Business. SharePoint non usa modelli di criteri per i diritti, anche se è possibile selezionare impostazioni di configurazione di SharePoint molto simili ad alcune impostazioni che si possono specificare nei modelli.
+
+Se si usa SharePoint Server, è possibile usare questo tipo di protezione IRM distribuendo il connettore di Azure Rights Management. Il connettore funziona come un relè tra i server locali e il servizio cloud di Rights Management. Per ulteriori informazioni, vedere [Distribuzione del connettore di Azure Rights Management](../deploy-use/deploy-rms-connector.md).
 
 > [!NOTE]
-> Attualmente, ci sono alcune limitazioni quando si usa IRM con SharePoint:
+> Attualmente esistono alcune limitazioni quando si usa il servizio IRM per SharePoint:
 > 
-> - Non è possibile usare i modelli predefiniti o personalizzati gestiti nel portale di Azure classico.
+> - Non è possibile usare i modelli predefiniti o personalizzati gestiti nel portale di Azure classico. 
+> 
 > - I file con un'estensione di file PPDF per i file PDF protetti non sono supportati. I file con estensione pdf e protetti a livello nativo da Rights Management sono supportati se si usa un programma per la lettura dei file PDF che supporta Rights Management a livello nativo.
 
 
-Azure Rights Management applica restrizioni di utilizzo e la crittografia dei dati ai documenti quando vengono scaricati da SharePoint e non quando il documento viene creato per la prima volta in SharePoint o caricato nella raccolta. Per informazioni su come vengono protetti i documenti di essere scaricati, vedere [Crittografia dei dati in OneDrive for Business e SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) nella documentazione di SharePoint.
+Quando si usa la protezione IRM, il servizio Azure Rights Management applica restrizioni di utilizzo e la crittografia dei dati ai documenti quando vengono scaricati da SharePoint e non quando il documento viene creato per la prima volta in SharePoint o caricato nella raccolta. Per informazioni su come vengono protetti i documenti di essere scaricati, vedere [Crittografia dei dati in OneDrive for Business e SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) nella documentazione di SharePoint.
 
-Per altre informazioni sull'uso del servizio Azure Rights Management con SharePoint, vedere il post seguente del blog di Office: [Novità di Information Rights Management in SharePoint e SharePoint Online](http://blogs.office.com/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
+Anche se non è molto recente, il post seguente del blog di Office contiene altre informazioni che possono risultare utili: [Novità di Information Rights Management in SharePoint e SharePoint Online](https://blogs.office.com/2012/11/09/whats-new-with-information-rights-management-in-sharepoint-and-sharepoint-online/)
+
+Se si è pronti per la configurazione di SharePoint per IRM:
+
+- Per SharePoint Online, vedere [SharePoint Online e OneDrive for Business: configurazione di IRM](../deploy-use/configure-office365.md#sharepoint-online-and-onedrive-for-business-irm-configuration).
+
+- Per SharePoint Server, vedere [Distribuzione del connettore di Azure Rights Management](../deploy-use/deploy-rms-connector.md).
+
 
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per informazioni su come altri servizi e applicazioni supportano il servizio Azure Rights Management di Azure Information Protection, vedere [Supporto del servizio Azure Rights Management da parte delle applicazioni](applications-support.md).
+
+Se si è pronti per iniziare la distribuzione, che include la configurazione di tali applicazioni e servizi, vedere la [Guida di orientamento per la distribuzione di Azure Information Protection](/plan-design/deployment-roadmap.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

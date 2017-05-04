@@ -4,14 +4,14 @@ description: 'Passaggio 2 di un&quot;esercitazione introduttiva per provare rapi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/27/2017
+ms.date: 04/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 98e65768651c77b4cc0616142e6b7515d275b7a9
-ms.sourcegitcommit: 8ae83a9fc03bf2ee39ea758835ef52156f19784d
+ms.openlocfilehash: 9a2392df400356e7937db49cec3e0fe1e3d0f228
+ms.sourcegitcommit: d814d2876cf56e8fff0b107a5e3ec6df2aeda9ae
 translationtype: HT
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passaggio 2: Configurare e pubblicare criteri di Azure Information Protection
@@ -20,7 +20,7 @@ translationtype: HT
 
 Il criterio predefinito disponibile con Azure è utilizzabile senza alcuna operazione di configurazione. Tuttavia si esaminerà questo criterio e vi si apporterà qualche modifica.
 
-1. In una nuova finestra del browser accedere al [portale di Azure](https://portal.azure.com) come amministratore globale del tenant.
+1. In una nuova finestra del browser accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza per il tenant.
 
 2. Nel menu hub fare clic su **Nuovo** e quindi, nell'elenco **Marketplace**, selezionare **Sicurezza e identità**. Nel pannello**Sicurezza e identità**, nell'elenco **App in primo piano**, selezionare **Azure Information Protection**. Nel pannello **Azure Information Protection** fare clic su **Crea**.
 
@@ -74,7 +74,7 @@ Se l'etichetta **Confidential** (Riservato) non ha etichette secondarie perché 
     
     Per effetto di questa operazione viene aperto il pannello **Protezione**.
     
-3. Nel pannello **Protezione** verificare che le opzioni **Azure RMS** e **Seleziona modello** siano selezionate e quindi fare clic sulla casella a discesa e selezionare il modello predefinito **\<nome dell'organizzazione> - Riservato**.     
+3. Nel pannello **Protezione** verificare che l'opzione **Azure RMS** sia selezionata, che sia possibile **selezionare un modello predefinito**, quindi fare clic sulla casella di riepilogo e selezionare il modello predefinito **\<nome dell'organizzazione> - Riservato**.     
     
     Ad esempio, se il nome dell'organizzazione è VanArsdel, Ltd, verrà visualizzata la voce **VanArsdel, Ltd - Confidential** e sarà possibile selezionarla: 
     
