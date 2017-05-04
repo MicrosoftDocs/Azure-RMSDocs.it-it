@@ -4,7 +4,7 @@ description: Informazioni e istruzioni per gli amministratori per configurare Of
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/05/2017
+ms.date: 04/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 091e29319ed3b29937e57c15488234466003e46e
-ms.sourcegitcommit: 1f65f71f742063e2bebcac88f72180d3aa4318a4
+ms.openlocfilehash: e67fc5be09ca8dae0117cf644f5878d83449ee4f
+ms.sourcegitcommit: 9edcb4a55a331e02f999c78d97eb0beb21f96f07
 translationtype: HT
 ---
 # <a name="office-365-configuration-for-clients-and-online-services"></a>Office 365: configurazione di client e servizi online
@@ -25,6 +25,8 @@ Dal momento che Office 365 supporta in modo nativo il servizio Azure Rights Mana
 È tuttavia consigliabile usare tali applicazioni insieme al client Azure Information Protection, in modo che gli utenti possano sfruttare i vantaggi offerti dal componente aggiuntivo per Office e il supporto per altri tipi di file. Per altre informazioni, vedere [Client Azure Information Protection: installazione e configurazione dei client](configure-client.md).
 
 ## <a name="exchange-online-irm-configuration"></a>Exchange Online: configurazione di IRM
+Per informazioni sul funzionamento di IRM per Exchange Online con il servizio Azure Rights Management, vedere [Exchange Online ed Exchange Server](../understand-explore/office-apps-services-support.md#exchange-online-and-exchange-server) nella sezione **Comprendere ed esplorare**.
+
 Per configurare Exchange Online per il supporto del servizio Azure Rights Management, è necessario configurare il servizio IRM (Information Rights Management) per Exchange Online. A tale scopo, è possibile usare Windows PowerShell (senza bisogno di installare un modulo separato) ed eseguire i [comandi PowerShell per Exchange Online](https://technet.microsoft.com/library/jj200677.aspx).
 
 > [!NOTE]
@@ -137,6 +139,9 @@ Si è quindi pronti per configurare le [regole di trasporto](https://technet.mic
 Per altre informazioni sulla crittografia dei messaggi, vedere [Crittografia in Office 365](https://technet.microsoft.com/library/dn569286.aspx) nella libreria di Exchange.
 
 ## <a name="sharepoint-online-and-onedrive-for-business-irm-configuration"></a>SharePoint Online e OneDrive for Business: configurazione di IRM
+
+Per informazioni sul funzionamento di IRM per SharePoint Online con il servizio Azure Rights Management, vedere [SharePoint Online e SharePoint Server](../understand-explore/office-apps-services-support.md#sharepoint-online-and-sharepoint-server) nella sezione **Comprendere ed esplorare**.
+
 Per configurare SharePoint Online e OneDrive for Business allo scopo di supportare il servizio Azure Rights Management, è necessario abilitare prima il servizio IRM (Information Rights Management) per SharePoint Online usando l'interfaccia di amministrazione di SharePoint. I proprietari del sito possono quindi proteggere con IRM i propri elenchi e le proprie raccolte documenti di SharePoint e gli utenti possono proteggere con IRM la propria raccolta di OneDrive for Business, in modo che i documenti salvati in tale posizione e condivisi con altri utenti vengano protetti automaticamente dal servizio Azure Rights Management.
 
 > [!NOTE]
@@ -144,14 +149,14 @@ Per configurare SharePoint Online e OneDrive for Business allo scopo di supporta
 
 Per abilitare il servizio IRM (Information Rights Management) per SharePoint Online, vedere le istruzioni seguenti dal sito Web Office:
 
--   [Configurare Information Rights Management (IRM) nell'interfaccia di amministrazione di SharePoint](http://office.microsoft.com/office365-sharepoint-online-enterprise-help/set-up-information-rights-management-irm-insharepoint-online-HA102895193.aspx)
+- [Configurare Information Rights Management (IRM) nell'interfaccia di amministrazione di SharePoint](https://office.microsoft.com/office365-sharepoint-online-enterprise-help/set-up-information-rights-management-irm-insharepoint-online-HA102895193.aspx)
 
 Questa configurazione viene eseguita dall'amministratore di Office 365.
 
 ### <a name="configuring-irm-for-libraries-and-lists"></a>Configurazione di IRM per le raccolte e gli elenchi
 Dopo l'abilitazione del servizio IRM per SharePoint, i proprietari dei siti possono proteggere con IRM le proprie raccolte documenti e i propri elenchi di SharePoint. Per le istruzioni, vedere le informazioni seguenti nel sito Web Office:
 
--   [Applicare Information Rights Management a un elenco o a una raccolta](http://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)
+- [Applicare Information Rights Management a un elenco o a una raccolta](https://office.microsoft.com/sharepoint-help/apply-information-rights-management-to-a-list-or-library-HA102891460.aspx)
 
 Questa configurazione viene eseguita dall'amministratore del sito di SharePoint.
 
@@ -179,9 +184,9 @@ Poiché questa configurazione si basa sugli utenti e non è l’amministratore a
 #### <a name="configuration-for-administrators"></a>Configurazione per gli amministratori
 Anche se non è possibile configurare IRM per OneDrive for Business per gli utenti per le aziende usando il centro di amministrazione di SharePoint, è possibile farlo tramite Windows PowerShell. Per attivare IRM per queste librerie, attenersi alla seguente procedura:
 
-1.  Scaricare e installare l’[SDK dei componenti client di SharePoint Online](http://www.microsoft.com/en-us/download/details.aspx?id=42038).
+1.  Scaricare e installare l’[SDK dei componenti client di SharePoint Online](https://www.microsoft.com/en-us/download/details.aspx?id=42038).
 
-2.  Scaricare e installare [SharePoint Online Management Shell](http://www.microsoft.com/en-us/download/details.aspx?id=35588).
+2.  Scaricare e installare [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588).
 
 3.  Copiare il contenuto del seguente script e denominare il file Set-IRMOnOneDriveForBusiness.ps1 nel computer in uso.
 
@@ -198,10 +203,10 @@ Anche se non è possibile configurare IRM per OneDrive for Business per gli uten
      Script Installation Requirements:
 
        SharePoint Online Client Components SDK
-       http://www.microsoft.com/en-us/download/details.aspx?id=42038
+       https://www.microsoft.com/en-us/download/details.aspx?id=42038
 
        SharePoint Online Management Shell
-       http://www.microsoft.com/en-us/download/details.aspx?id=35588
+       https://www.microsoft.com/en-us/download/details.aspx?id=35588
 
     ======
     #>

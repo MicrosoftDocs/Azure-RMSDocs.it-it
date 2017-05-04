@@ -4,7 +4,7 @@ description: Descrizione del funzionamento di Azure RMS, dei controlli crittogra
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/03/2017
+ms.date: 04/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,8 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a5f189ab5ad1df43b14fa0b6d23bf4f0eef88142
-ms.sourcegitcommit: d44105d4d45fabf0f1d90765304e4b43dd97c0fc
+ms.openlocfilehash: d3d174fabb4189d2f4ca7755b6355293261318d4
+ms.sourcegitcommit: 55d8a769084c6422f80aefc5f7c6594ea6855bfa
 translationtype: HT
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funzionamento di Azure RMS: dietro le quinte
@@ -120,7 +120,7 @@ Quando un utente vuole utilizzare un documento protetto, il client RMS avvia la 
 
 ![Uso del documento RMS - passaggio 1, l'utente viene autenticato e ottiene l'elenco dei diritti](../media/AzRMS_documentconsumption1.png)
 
-**Cosa avviene nel passaggio 1**: l'utente autenticato invia i criteri del documento e i certificati dell'utente al servizio Azure Rights Management. Il servizio decrittografa e valuta i criteri e compila un elenco di diritti (se presenti) di cui l'utente dispone per il documento. Per identificare l'utente, viene usato proxyAttribute di Azure AD per l'account dell'utente e i gruppi di cui l'utente è membro. Per motivi di prestazioni, l'appartenenza ai gruppi è [memorizzata nella cache](../plan-design/prepare.md#group-membership-caching).
+**Cosa avviene nel passaggio 1**: l'utente autenticato invia i criteri del documento e i certificati dell'utente al servizio Azure Rights Management. Il servizio decrittografa e valuta i criteri e compila un elenco di diritti (se presenti) di cui l'utente dispone per il documento. Per identificare l'utente, viene usato l'attributo proxyAddress di Azure AD per l'account dell'utente e i gruppi di cui l'utente è membro. Per motivi di prestazioni, l'appartenenza ai gruppi è [memorizzata nella cache](../plan-design/prepare.md#group-membership-caching).
 
 ![Uso del documento RMS - passaggio 2, il contratto di licenza con l'utente finale viene restituito al client](../media/AzRMS_documentconsumption2.png)
 
