@@ -16,7 +16,8 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 3f08823903b9da03c10e27c82d3edeb3067efd8e
 ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: it-IT
 ---
 # <a name="how-to-install-configure-and-test-with-an-rms-server"></a>Procedura: installare, configurare e testare un server RMS
 
@@ -37,7 +38,7 @@ La procedura seguente consente di configurare il server RMS e include queste ope
 
     A partire da Windows Server 2008, entrambi i componenti client e server sono inclusi nel sistema operativo. È possibile scaricare i componenti server per i sistemi operativi precedenti dalla posizione indicata di seguito.
 
-    -   [Server RMS versione&1;.0 SP2](http://go.microsoft.com/fwlink/p/?linkid=73722)
+    -   [Server RMS versione 1.0 SP2](http://go.microsoft.com/fwlink/p/?linkid=73722)
 
     Per configurare il componente server in Windows Server 2008, è necessario installare il ruolo AD RMS. Se si stanno sviluppando applicazioni su un sistema operativo server precedente, configurare il Registro di sistema dopo l'installazione del server RMS v1.0 SP2 ma prima del provisioning del servizio RMS.
 
