@@ -4,7 +4,7 @@ description: "Per configurare le funzioni di classificazione, aggiunta di etiche
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 05/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8b6bd6e44fb39c3787e2fe63577c7e7fd9948025
-ms.sourcegitcommit: d814d2876cf56e8fff0b107a5e3ec6df2aeda9ae
-translationtype: HT
+ms.openlocfilehash: f412d36e8c58d874360c55c5c90416c2629ed69e
+ms.sourcegitcommit: e3974cc1490581414084669632cad54b12b05d5a
+ms.translationtype: HT
+ms.contentlocale: it-IT
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -58,6 +59,8 @@ Il client Azure Information Protection verifica la disponibilità di eventuali m
 
 - Ogni 24 ore.
 
+>[!NOTE]
+>Quando il client scarica i criteri, prevedere un'attesa di alcuni minuti prima che ritorni completamente operativo. Il tempo effettivo varia a seconda di fattori quali le dimensioni e la complessità della configurazione dei criteri e la connettività di rete. Se l'azione risultante delle etichette non corrisponde alle ultime modifiche, attendere fino a 15 minuti e riprovare.
 
 ## <a name="configuring-your-organizations-policy"></a>Configurazione dei criteri dell'organizzazione
 

@@ -4,15 +4,16 @@ description: "Azure Information Protection offre etichette predefinite personali
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 05/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-ms.openlocfilehash: ee5366826f77403246b7e0b302220236dbe04298
-ms.sourcegitcommit: d814d2876cf56e8fff0b107a5e3ec6df2aeda9ae
-translationtype: HT
+ms.openlocfilehash: 91feb6dfd9421d7c5cccf53b45f8a0f35e74007d
+ms.sourcegitcommit: e3974cc1490581414084669632cad54b12b05d5a
+ms.translationtype: HT
+ms.contentlocale: it-IT
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Come creare una nuova etichetta per Azure Information Protection
 
@@ -37,9 +38,8 @@ Seguire queste istruzioni per aggiungere una nuova etichetta ai criteri di Azure
      Se la nuova etichetta da aggiungere si trova in un [criterio con ambito](configure-policy-scope.md) in modo da essere applicata solo agli utenti selezionati, selezionare prima di tutto il criterio con ambito nel pannello iniziale di **Azure Information Protection**.
 
 3. Nel pannello **Etichetta** o **Etichetta secondaria** selezionare le opzioni desiderate per la nuova etichetta, quindi fare clic su **Salva**.
-
-    > [!NOTE]
-    >Per informazioni sull'impostazione della protezione, vedere [Come configurare un'etichetta per applicare la protezione](configure-policy-protection.md).
+    
+    Si noti che alle nuove etichette viene assegnato automaticamente il colore nero. Scegliere un colore distintivo dall'elenco dei colori o immettere un codice tripletta esadecimale per i componenti rosso, verde e blu (RGB) del colore. Ad esempio, **#DAA520**. Se è necessario un riferimento per questi codici, un utile punto di partenza è costituito dall'articolo [Colors by Name](https://msdn.microsoft.com/library/aa358802\(v=vs.85) (Colori per nome) disponibile nella documentazione MSDN; inoltre, questi codici sono presenti in molti programmi di modifica delle immagini, come Microsoft Paint, in cui scegliendo un colore personalizzato da una tavolozza vengono visualizzati automaticamente i valori RGB.
 
 4. Per mettere le modifiche a disposizione degli utenti, nel pannello **Azure Information Protection** fare clic su **Publish** (Pubblica).
 
