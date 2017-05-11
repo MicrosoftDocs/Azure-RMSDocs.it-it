@@ -4,7 +4,7 @@ description: Dettagli tecnici sui tipi di file supportati, le estensioni di file
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 05/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 84a0d335d0be97180c904182c98f6fa9ad46a0de
-ms.sourcegitcommit: 81b5c111627246a4094ef87da17d260f66ae985c
-translationtype: HT
+ms.openlocfilehash: ffd2ed8aa59c3d9eb1ab6d36a9ccac71d449d978
+ms.sourcegitcommit: dabea768a37aa56635b9123f628c1c2b2d6a0f55
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 05/08/2017
 ---
 # <a name="file-types-supported-by-the-azure-information-protection-client"></a>Tipi di file supportati dal client Azure Information Protection
 
@@ -94,7 +96,6 @@ Questi tipi di file vengono identificati separatamente perché quando sono prote
 |.jfif|.pjfif|
 |.jt|.pjt|
 
-
 La tabella successiva elenca i rimanenti tipi di file che supportano la protezione nativa in base al client di Azure Information Protection e che possono anche essere classificati. Questi sono riconoscibili come tipi di file delle app di Microsoft Office. 
 
 Per questi file, l'estensione del nome di file rimane invariata dopo che il file è stato protetto da un servizio Rights Management.
@@ -118,17 +119,19 @@ Analogamente, è possibile forzare il client Azure Information Protection ad app
 
 Per configurare il client Azure Information Protection per l'applicazione della protezione generica a tutti i file per impostazione predefinita, apportare le modifiche seguenti al Registro di sistema. Se la chiave FileProtection non esiste, è necessario crearla manualmente.
 
-1. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**: creare una nuova chiave denominata *.
+1. Creare una nuova chiave denominata * per il percorso del Registro di sistema seguente, che indica i file con qualsiasi estensione del nome file:
+    
+    - Per la versione a 32 bit di Windows: **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
+    
+    - Per la versione a 64 bit di Windows: **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection**
 
-    Questa impostazione indica i file con qualsiasi estensione di file.
-
-2. Nella nuova chiave aggiunta di HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\* creare un nuovo valore stringa (REG_SZ) denominato **Encryption**, con valore dati **Pfile**.
+2. Nella nuova chiave aggiunta (ad esempio HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*), creare un nuovo valore stringa (REG_SZ) denominato **Encryption** con valore dati **Pfile**.
 
     Questa impostazione ha come risultato l'applicazione della protezione generica da parte del client Azure Information Protection.
 
 Queste due impostazioni hanno come risultato l'applicazione della protezione generica da parte del client Azure Information Protection a tutti i file dotati di estensione. Se questo è l'obiettivo, non è richiesta alcuna ulteriore configurazione. Tuttavia, è possibile definire eccezioni per specifici tipi di file, in modo che siano protetti comunque in modo nativo. A tale scopo, è necessario eseguire tre modifiche aggiuntive del Registro di sistema per ogni tipo di file:
 
-1. **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**: aggiungere una nuova chiave con nome corrispondente all'estensione del file (senza il punto iniziale).
+1. Per **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** (Windows a 32 bit) o **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (Windows a 64 bit): aggiungere una nuova chiave con nome corrispondente all'estensione del nome file senza il punto iniziale.
 
     Ad esempio, i file con estensione del nome di file .docx, creano una chiave denominata **DOCX**.
 
