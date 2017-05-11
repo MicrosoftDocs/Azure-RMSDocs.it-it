@@ -4,7 +4,7 @@ description: "Istruzioni che fanno parte del percorso di migrazione da AD RMS ad
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 936b6e66c7ca0f94e437b91847166b51cf939b3f
-ms.sourcegitcommit: 384461f0e3fccd73cd7eda3229b02e51099538d4
-translationtype: HT
+ms.openlocfilehash: 113a3718bb2b7cd505b43e5f2c7146e88dea1d05
+ms.sourcegitcommit: 9c033b7f5a6cbb20275aeecd48ff5071964eb587
+ms.translationtype: HT
+ms.contentlocale: it-IT
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave protetta tramite HSM a un'altra
 
@@ -43,13 +44,13 @@ Prima di iniziare, assicurarsi che l'organizzazione disponga di un insieme di cr
 
 Queste procedure vengono eseguite dall'amministratore di Insieme di credenziali delle chiavi di Azure.
 
-1.  Seguire le istruzioni della documentazione di Insieme di credenziali delle chiavi di Azure, usando [Implementazione di BYOK (Bring Your Own Key) per l'insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) con l'eccezione seguente:
+1. Per ogni chiave del certificato concessore di licenze server da archiviare in Azure Key Vault, seguire le istruzioni della documentazione di Azure Key Vault, usando [Implementazione di BYOK (Bring Your Own Key) per Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) con l'eccezione seguente:
 
     - Non eseguire la procedura per **generare la chiave del tenant**, perché ne esiste già una equivalente nella distribuzione di AD RMS. È invece necessario identificare la chiave usata dal server AD RMS dall'installazione di Thales e usare questa chiave durante la migrazione. I file di chiave crittografati di Thales sono in genere denominati **key<*nomeAppChiave*><*identificatoreChiave*>** in locale nel server.
 
     Quando la chiave viene caricata in Insieme di credenziali delle chiavi di Azure, vengono visualizzate le proprietà della chiave visualizzata, incluso l'ID della chiave. Avrà un aspetto simile a https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Prendere nota dell'URL perché sarà necessario all'amministratore di Azure Information Protection per indicare al servizio Azure Rights Management di usare questa chiave per la chiave del tenant.
 
-2. Nella workstation connessa a Internet, in una sessione di PowerShell, usare il cmdlet [Set-AzureRmKeyVaultAccessPolicy](/powershell/resourcemanager/azurerm.keyvault/v2.7.0/set-azurermkeyvaultaccesspolicy) per autorizzare l'entità di servizio di Azure Rights Management ad accedere all'insieme di credenziali delle chiavi in cui verrà archiviata la chiave del tenant di Azure Information Protection. Le autorizzazioni necessarie sono decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
+2. Nella workstation connessa a Internet, in una sessione di PowerShell, usare il cmdlet [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) per autorizzare l'entità di servizio di Azure Rights Management ad accedere all'insieme di credenziali delle chiavi in cui verrà archiviata la chiave del tenant di Azure Information Protection. Le autorizzazioni necessarie sono decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
     
     Se ad esempio l'insieme di credenziali delle chiavi creato per Azure Information Protection è denominato contoso-byok-ky e il gruppo di risorse è denominato contoso-byok-rg, eseguire il comando seguente:
     
@@ -62,21 +63,27 @@ Ora che la chiave HSM è stata preparata in Insieme di credenziali delle chiavi 
 
 Queste procedure vengono eseguite dall'amministratore di Azure Information Protection.
 
-1.  Nella workstation connessa a Internet e nella sessione di PowerShell connettersi al servizio Azure Rights Management usando il cmdlet [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice).
+1. Nella workstation connessa a Internet e nella sessione di PowerShell connettersi al servizio Azure Rights Management usando il cmdlet [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice).
     
-    Caricare quindi il file del primo dominio di pubblicazione trusted esportato (con estensione xml) tramite il cmdlet [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd). Se si hanno più un file XML, perché avevi più domini di pubblicazione trusted, scegliere il file che contiene il dominio di pubblicazione trusted esportato che corrisponde alla chiave di HSM che si desidera utilizzare in Azure RMS per proteggere il contenuto dopo la migrazione. 
+    Caricare quindi ogni file del dominio di pubblicazione trusted (con estensione xml) tramite il cmdlet [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd). Ad esempio, è necessario avere almeno un file aggiuntivo da importare in caso di aggiornamento del cluster AD RMS per la modalità di crittografia 2.
     
-    Per eseguire questo cmdlet, è necessario l'URL della chiave identificata nel passaggio precedente.
+    Per eseguire questo cmdlet, sono necessari la password specificata in precedenza per ogni file di dati di configurazione e l'URL della chiave identificata nel passaggio precedente.
     
-    Ad esempio, usando il valore dell'URL della chiave dal passaggio precedente e un file di dominio di pubblicazione trusted di C:\contoso-tpd1.xml, eseguire:
+    Ad esempio, usando il file di dati di configurazione C:\contoso-tpd1.xml e il valore dell'URL della chiave dal passaggio precedente, eseguire prima di tutto il comando seguente per archiviare la password:
     
     ```
-    Import-AadrmTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Active $True -Verbose
+    $TPD_Password = Read-Host -AsSecureString
     ```
     
-    Quando richiesto, immettere la password specificata in precedenza e confermare che si desidera eseguire questa azione.
+    Immettere la password specificata per esportare il file di dati di configurazione. Eseguire quindi il comando seguente e confermare che si vuole eseguire questa azione:
+    
+    ```
+    Import-AadrmTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword $TPD_Password –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
+    ```
+    
+    Durante l'importazione, la chiave del certificato concessore di licenze server viene importata e impostata automaticamente come archiviata.
 
-2.  Al termine del comando, ripetere il passaggio 1 per ogni restante file con estensione xml creato esportando i propri domini di pubblicazione trusted. Ad esempio, è necessario avere almeno un file aggiuntivo da importare in caso di aggiornamento del cluster AD RMS per la modalità di crittografia 2. Per questi file impostare **-Active** su **false** quando si esegue il comando di importazione.  
+2.  Dopo aver caricato ogni file, eseguire [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) per specificare quale chiave importata corrisponde alla chiave del certificato concessore di licenze server attualmente attiva nel cluster AD RMS. Questa chiave diventerà la chiave del tenant attiva per il servizio Azure Rights Management.
 
 3.  Usare il cmdlet [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) per disconnettersi dal servizio Azure Rights Management:
 
@@ -84,9 +91,9 @@ Queste procedure vengono eseguite dall'amministratore di Azure Information Prote
     Disconnect-AadrmService
     ```
 
-    > [!NOTE]
-    > Se successivamente si deve confermare quale chiave viene usata dal tenant di Azure Information Protection in Insieme di credenziali delle chiavi di Azure, usare il cmdlet [Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys) di Azure RMS.
+Se successivamente si deve confermare quale chiave viene usata dal tenant di Azure Information Protection in Insieme di credenziali delle chiavi di Azure, usare il cmdlet [Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys) di Azure RMS.
 
-È ora possibile andare al [Passaggio 5. Attivare il tenant di Azure Information Protection](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
+È ora possibile andare al [Passaggio 5. Attivare il servizio Azure Rights Management](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
+
