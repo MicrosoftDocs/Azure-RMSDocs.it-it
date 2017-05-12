@@ -16,7 +16,8 @@ ms.reviewer: kartikk
 ms.suite: ems
 ms.openlocfilehash: 8afff75366e7891ac7f00a1fa28e2939978a8b74
 ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: it-IT
 ---
 # <a name="release-notes"></a>Note sulla versione
 
@@ -65,7 +66,7 @@ Questo argomento contiene informazioni importanti su questa versione e le preced
 
 ## <a name="january-2015-update"></a>Aggiornamento di gennaio 2015
 
--   **Aumento delle dimensioni del file protetto (pfile) supportato** - Supporta ora pfile di dimensioni maggiori di&1; gigabyte (1 GB). Per altre informazioni su pfile, vedere [Supported File Formats](supported-file-formats.md) (Formati file supportati).
+-   **Aumento delle dimensioni del file protetto (pfile) supportato** - Supporta ora pfile di dimensioni maggiori di 1 gigabyte (1 GB). Per altre informazioni su pfile, vedere [Supported File Formats](supported-file-formats.md) (Formati file supportati).
 -   **Miglioramento della registrazione per una migliore diagnostica** - Sui livelli di registrazione sarà visualizzato **ERRORE** o **AVVISO** per i messaggi da rivedere. Tutti gli altri messaggi, incluse le eccezioni ancora visualizzate, saranno registrati come **INFO**.
 
     È stato scelto questo approccio per evitare perdite di dettagli. A questo punto, solo i messaggi importanti sono visualizzati con livello AVVISO.
@@ -104,7 +105,7 @@ Estensione del componente API File di SDK e offre le funzionalità seguenti:
 -   **Requisito del manifesto di produzione**: quando applicazioni o servizi con abilitazione RMS sono in esecuzione in modalità server, il manifesto non sarà più richiesto. Per altre informazioni, vedere [Tipi di applicazioni](application-types.md).
 -   **Aggiornamenti della documentazione**
 
-    **Procedura consigliata di test **: aggiunta di linee guida per l'uso del server locale prima dei test con Azure RMS. Per altre informazioni, vedere [Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md).
+    **Procedura consigliata di test**: aggiunta di linee guida per l'uso del server locale prima dei test con Azure RMS. Per altre informazioni, vedere [Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## <a name="important-developer-notes"></a>Note importanti per gli sviluppatori
 
