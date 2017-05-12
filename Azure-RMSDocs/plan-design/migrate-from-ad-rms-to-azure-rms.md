@@ -4,7 +4,7 @@ description: "Istruzioni per la migrazione della distribuzione di Active Directo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 89ccb599fe21c409d36b9d0ab28e274e6aedaf1e
-ms.sourcegitcommit: 384461f0e3fccd73cd7eda3229b02e51099538d4
-translationtype: HT
+ms.openlocfilehash: cc11c4c9cfa9a6886180782c4ae88068bf280895
+ms.sourcegitcommit: b471c20eda011a7b75ee801c34081fb4773b64dc
+ms.translationtype: HT
+ms.contentlocale: it-IT
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrazione da AD RMS ad Azure Information Protection
 
@@ -83,7 +84,7 @@ Prima di iniziare il processo di migrazione ad Azure Information Protection, ver
 
     - Gruppi abilitati alla posta elettronica in Azure Active Directory
 
-    Vedere [Preparazione per Azure Information Protection](prepare.md).
+    Vedere [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md).
 
 - **Se è stata usata la funzionalità Information Rights Management (IRM) di Exchange Server** (ad esempio le regole di trasporto e Outlook Web Access) o SharePoint Server con AD RMS:
 
@@ -118,10 +119,6 @@ Per verificare la modalità di crittografia AD RMS:
 -   Anche se il processo di migrazione supporta la migrazione della chiave del certificato concessore di licenze server (SLC) in un modulo di protezione hardware (HSM) per Azure Information Protection, Exchange Online non supporta attualmente questa configurazione per il servizio Rights Management usato da Azure Information Protection. Se si vuole la funzionalità IRM completa con Exchange Online dopo la migrazione ad Azure Information Protection, la chiave del tenant di Azure Information Protection deve essere [gestita da Microsoft](../plan-design/plan-implement-tenant-key.md#choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok). In alternativa, è possibile eseguire IRM con funzionalità ridotta in Exchange Online quando la chiave del tenant di Azure Information Protection è gestita dall'utente (BYOK). Per altre informazioni sull'uso di Exchange Online con il servizio Azure Rights Management, vedere [Passaggio 8. Configurare l’integrazione IRM per Exchange Online](migrate-from-ad-rms-phase4.md#step-8-configure-irm-integration-for-exchange-online).
 
 -   Se sono presenti software e client non supportati dal servizio Rights Management usato da Azure Information Protection, questi non saranno in grado di proteggere o utilizzare il contenuto protetto da Azure Rights Management. Verificare le sezioni relative alle applicazioni e ai client supportati nell’articolo [Requisiti di Azure Rights Management](../get-started/requirements-azure-rms.md).
-
--   Se si importa la chiave locale in Azure Information Protection come archiviata (non si imposta il dominio di pubblicazione trusted come attivo durante il processo di importazione) e si esegue la migrazione degli utenti in batch per una migrazione graduale, il nuovo contenuto protetto dagli utenti di cui è stata eseguita la migrazione non sarà accessibile agli utenti che rimangono in AD RMS. In questo scenario, quando possibile, eseguire la migrazione degli utenti in tempi brevi e in batch logici, in modo che, quelli che collaborano tra loro, vengano sottoposti a migrazione insieme.
-
-    Questa limitazione non viene applicata quando si imposta il dominio di pubblicazione trusted come attivo durante il processo di importazione, perché tutti gli utenti proteggeranno il contenuto usando la stessa chiave. Si consiglia questa configurazione perché consente di eseguire la migrazione di tutti gli utenti in modo indipendente e con gradualità.
 
 -   Se la distribuzione di AD RMS è configurata per collaborare con partner esterni, ad esempio tramite domini utente trusted o federazione, anche questi dovranno eseguire la migrazione ad Azure Information Protection allo stesso tempo della migrazione o il prima possibile dopo la migrazione. Per continuare ad accedere ai contenuti precedentemente protetti dall'organizzazione usando Azure Information Protection, i partner dovranno apportare modifiche di configurazione al client simili a quelle apportate dall'utente e descritte in questo documento.
 
@@ -165,7 +162,7 @@ I passaggi della migrazione possono essere suddivisi in 5 fasi eseguibili in mom
 
 - **Passaggio 4: Esportare i dati di configurazione da AD RMS e importarli in Azure Information Protection**
 
-    Si esportano i dati di configurazione (chiavi, modelli, URL) da AD RMS in un file XML e quindi si carica il file nel servizio Azure Rights Management da Azure Information Protection usando il cmdlet Import-AadrmTpd di PowerShell. Potrebbero essere necessari altri passaggi, a seconda della configurazione della chiave di AD RMS:
+    Si esportano i dati di configurazione (chiavi, modelli, URL) da AD RMS in un file XML e quindi si carica il file nel servizio Azure Rights Management da Azure Information Protection usando il cmdlet Import-AadrmTpd di PowerShell. Identificare quindi la chiave del certificato concessore di licenze server da usare come chiave del tenant per il servizio Azure Rights Management. Potrebbero essere necessari altri passaggi, a seconda della configurazione della chiave di AD RMS:
 
     - **Migrazione da una chiave protetta tramite software a un'altra**:
 
@@ -181,7 +178,7 @@ I passaggi della migrazione possono essere suddivisi in 5 fasi eseguibili in mom
 
 - **Passaggio 5. Attivare il servizio Azure Rights Management**
 
-    Se possibile, eseguire questo passaggio dopo il processo di importazione, non prima.
+    Se possibile, eseguire questo passaggio dopo il processo di importazione, non prima. Se il servizio è stato attivato prima dell'importazione, sono necessari passaggi aggiuntivi.
 
 - **Passaggio 6. Configurare i modelli importati**
 
