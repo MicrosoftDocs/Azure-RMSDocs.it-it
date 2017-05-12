@@ -4,15 +4,16 @@ description: Identificare le restrizioni, i prerequisiti e le raccomandazioni se
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 05/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: b9217412778309917a5d259d09ab52a7bf121b41
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 984bc844187a419cb73ab30527278d1762b70fcb
+ms.sourcegitcommit: 45053160d956587fcf45e021065e452a4c48aa4c
+ms.translationtype: HT
+ms.contentlocale: it-IT
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Requisiti e restrizioni HYOK per la protezione di AD RMS
 
@@ -62,6 +63,8 @@ Oltre a non supportare i vantaggi elencati che si ottengono quando si usa la pro
 - Non usare l'opzione **Non inoltrare** quando si configura un'etichetta per la protezione di Azure RMS. È inoltre necessario indicare agli utenti di non selezionare manualmente questa opzione in Outlook. 
 
     Se l'opzione Non inoltrare viene applicata da un'etichetta o manualmente dagli utenti, l'opzione può essere applicata dalla distribuzione di AD RMS piuttosto che dal servizio di Azure Rights Management designato. In questo scenario, gli utenti esterni con cui sono state effettuate condivisioni non saranno in grado di aprire messaggi di posta elettronica con l'opzione Non inoltrare applicata.
+
+- Se gli utenti configurano autorizzazioni personalizzate e si usa la protezione di AD RMS (HYOK) o di Azure RMS, i documenti e i messaggi di posta elettronica sono sempre protetti da Azure Rights Management.
 
 - Se gli utenti scelgono un'etichetta in Outlook che applica la protezione di AD RMS e quindi cambiano idea prima di inviare la posta elettronica e selezionano un'etichetta che applica la protezione di Azure RMS, la nuova etichetta selezionata non viene applicata. In tal caso, viene visualizzato il messaggio di errore seguente: **Azure Information Protection non può applicare questa etichetta. Non si hanno le autorizzazioni necessarie per eseguire questa azione.**
     
