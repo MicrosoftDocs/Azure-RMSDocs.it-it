@@ -4,7 +4,7 @@ description: "Informazioni su come le applicazioni (ad esempio, le applicazioni 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 04/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c7c91c09ebcd7dcc35c7d91e056b5f83f93d53cd
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: db9f67c5baeea678bf288f4f10237ff4517d905b
+ms.sourcegitcommit: 3ff6c072a228994308402778c493727cc682c6b7
+ms.translationtype: HT
+ms.contentlocale: it-IT
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Supporto del servizio Azure Rights Management da parte delle applicazioni
 
@@ -31,9 +32,6 @@ I modelli semplificano agli utenti e agli amministratori che configurano i crite
 Nei casi in cui gli utenti debbano applicare in modo autonomo la protezione delle informazioni, assicurarsi di fornire loro istruzioni e linee guida sulle modalità e sul momento in cui eseguire l'operazione. Le istruzioni devono essere specifiche per l'applicazione e le versioni usate e per le modalità di uso, mentre le linee guida relative al momento e alle modalità di applicazione della protezione delle informazioni devono essere appropriate per l'azienda. Per altre informazioni, vedere [Consentire agli utenti di proteggere i file tramite Azure Rights Management](../deploy-use/help-users.md).
 
 Per altre informazioni sulle modalità di configurazione di queste applicazioni per il servizio Azure Rights Management di Azure Information Protection, vedere [Configurazione di applicazioni per Azure Rights Management](../deploy-use/configure-applications.md).
-
-> [!TIP]
-> Per esempi e screenshot delle applicazioni che usano il servizio Azure Rights Management, vedere [Azure RMS in azione: Cosa vedono gli amministratori e gli utenti](what-admins-users-see.md).
 
 I servizi di ricerca si integrano con Rights Management in modi diversi. Ad esempio: 
 

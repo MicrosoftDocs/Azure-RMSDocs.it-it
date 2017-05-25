@@ -4,7 +4,7 @@ description: Fase 2 della migrazione da AD RMS ad Azure Information Protection, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a2ef28f2db2a22a766d658294a7d68b0dc6eebb2
-ms.sourcegitcommit: 89e13f6be15a96293e0af0b2529a2e39563a63b6
-translationtype: HT
+ms.openlocfilehash: f93458b5b2788aa2c7d780a9d0d2939e16221559
+ms.sourcegitcommit: 237ce3a0cc4921da5a08ed5753e6491403298194
+ms.translationtype: HT
+ms.contentlocale: it-IT
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 della migrazione: configurazione lato server per AD RMS
 
@@ -52,7 +53,7 @@ Eseguire le operazioni seguenti in tutti i cluster AD RMS, per tutti i domini di
 
 Dopo l'esportazione di tutti i domini di pubblicazione trusted, sarà possibile avviare la procedura di importazione dei dati in Azure Information Protection.
 
-Si noti che i domini di pubblicazione trusted includono le chiavi per decrittografare i file protetti in precedenza, dunque è importante che si esportino (e successivamente importino in Azure) tutti i domini di pubblicazione trusted e non solo quello attualmente attivo.
+Si noti che i domini di pubblicazione trusted includono le chiavi del certificato concessore licenze server per decrittografare i file protetti in precedenza, quindi è importante esportare (e successivamente importare in Azure) tutti i domini di pubblicazione trusted e non solo quello attualmente attivo.
 
 Ad esempio, si avranno più domini di pubblicazione trusted se sono stati aggiornati i server AD RMS dalla modalità di crittografia 1 alla modalità di crittografia 2. Se non si esporta e importa il dominio di pubblicazione trusted che contiene la chiave archiviata che usava la modalità di crittografia 1, alla fine della migrazione gli utenti non riusciranno ad aprire il contenuto protetto con la chiave di modalità di crittografia 1.
 

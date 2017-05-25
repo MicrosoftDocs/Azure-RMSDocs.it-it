@@ -4,7 +4,7 @@ description: Identificare le applicazioni che usano le API di RMS per il support
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/05/2017
+ms.date: 04/20/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 27c970216c2bc0166529270db11304f83f553a07
-ms.sourcegitcommit: 1f65f71f742063e2bebcac88f72180d3aa4318a4
-translationtype: HT
+ms.openlocfilehash: 4ae74cd40811f7af1da0c7288f574617f6fdaefa
+ms.sourcegitcommit: c7078f822cbcbb2bb33b841e8597c2a4163a54da
+ms.translationtype: HT
+ms.contentlocale: it-IT
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applicazioni che supportano la protezione dati di Azure Rights Management
 
@@ -25,7 +26,7 @@ Usare le tabelle seguenti per identificare le applicazioni e le soluzioni che su
 
 Per queste applicazioni e soluzioni, il supporto di Rights Management è perfettamente integrato mediante l'uso delle API di Rights Management per le restrizioni di utilizzo. Queste applicazioni e soluzioni sono anche note come "abilitate per RMS".
 
-Se non diversamente indicato, le funzionalità supportate sono valide sia per Azure RMS che per AD RMS. Per il supporto di AD RMS in iOS, Android, OS X e Windows Phone 8.1 è inoltre richiesta l'[estensione per dispositivi mobili Active Directory Rights Management Services](https://technet.microsoft.com/library/dn673574.aspx).
+Se non diversamente indicato, le funzionalità supportate sono valide sia per Azure RMS che per AD RMS. Per il supporto di AD RMS in iOS, Android, macOS e Windows Phone 8.1 è inoltre richiesta l'[estensione per dispositivi mobili Active Directory Rights Management Services](https://technet.microsoft.com/library/dn673574.aspx).
 
 ## <a name="rms-enlightened-applications"></a>Applicazioni abilitate per RMS
 
@@ -44,7 +45,7 @@ Informazioni sulle colonne della tabella:
 |-------------------------------|---------------------------|-----------------|---------|--------------------|
 |**Windows**|Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />App Office Mobile (solo Azure RMS) [[1]](#footnote-1)<br /><br />Office Online [[2]](#footnote-2)|Client Azure Information Protection per Windows <br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />App di condivisione RMS|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Outlook Web App (OWA) [[3]](#footnote-3)<br /><br />Windows Mail [[4]](#footnote-4)|Client Azure Information Protection per Windows: testo, immagini, pfile<br /><br />Applicazione RMS sharing per Windows: testo, immagini, pfile<br /><br />Plug-in SealPath RMS per AutoCAD [[8]](#footnote-8): .dwg<br />|
 |**iOS**|Office per iPad e iPhone [[5]](#footnote-5)<br /><br />Office Online [[2]](#footnote-2)<br /><br />TITUS Docs|App Azure Information Protection [[1]](#footnote-1)<br /><br /> Foxit Reader<br /><br />TITUS Docs|App Azure Information Protection [[1]](#footnote-1)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook per iPad e iPhone [[4]](#footnote-4)<br /><br />OWA per iOS [[3]](#footnote-3)<br /><br />TITUS Mail|App Azure Information Protection [[1]](#footnote-1): testo, immagini<br /><br />TITUS Docs: pfile|
-|**Android**|GigaTrust App for Android<br /><br />Office Online [[2]](#footnote-2)<br /><br />Office Mobile (solo Azure RMS) [[1]](#footnote-1)|App Azure Information Protection [[1]](#footnote-1)<br /><br />GigaTrust App for Android<br /><br />Foxit Reader<br /><br />App RMS sharing [[1]](#footnote-1)|9Folders [[4]](#footnote-4)<br /><br />App Azure Information Protection [[1]](#footnote-1)<br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook per Android [[4]](#footnote-4)<br /><br />OWA per Android [[3]](#footnote-3) e [[7]](#footnote-7)<br /><br />Samsung Email (S3 e versioni successive) [[7]](#footnote-7)<br /><br />Classificazione TITUS per dispositivi mobili|App Azure Information Protection [[1]](#footnote-1): testo, immagini|
+|**Android**|GigaTrust App for Android<br /><br />Office Online [[2]](#footnote-2)<br /><br />Office Mobile [[1]](#footnote-1)|App Azure Information Protection [[1]](#footnote-1)<br /><br />GigaTrust App for Android<br /><br />Foxit Reader<br /><br />App RMS sharing [[1]](#footnote-1)|9Folders [[4]](#footnote-4)<br /><br />App Azure Information Protection [[1]](#footnote-1)<br /><br />GigaTrust App for Android [[4]](#footnote-4)<br /><br />Citrix WorxMail [[6]](#footnote-6)<br /><br />NitroDesk [[4]](#footnote-4)<br /><br />Outlook per Android [[4]](#footnote-4)<br /><br />OWA per Android [[3]](#footnote-3) e [[7]](#footnote-7)<br /><br />Samsung Email (S3 e versioni successive) [[7]](#footnote-7)<br /><br />Classificazione TITUS per dispositivi mobili|App Azure Information Protection [[1]](#footnote-1): testo, immagini|
 |**macOS**|Office 2011 (solo AD RMS)<br /><br />Office 2016 per Mac<br /><br />Office Online [[2]](#footnote-2)|Foxit Reader<br /><br />App RMS sharing [[1]](#footnote-1)|Outlook 2011 (solo AD RMS)<br /><br />Outlook 2016 per Mac<br /><br />Outlook per Mac|App RMS sharing [[1]](#footnote-1): testo, immagini, pfile|
 |**Windows 10 Mobile**|App Office Mobile (solo Azure RMS) [[1]](#footnote-1)|Non supportato|Citrix WorxMail [[6]](#footnote-6)<br /><br />Posta di Outlook|Non supportato|
 |**Windows RT**|Office 2013 RT<br /><br />Office Online [[2]](#footnote-2)|Non supportato|Outlook 2013 RT<br /><br />App di posta elettronica per Windows<br /><br />Windows Mail [[4]](#footnote-4)|Siemens JT2Go: file JT|
@@ -182,7 +183,7 @@ Se si è un fornitore di software e si ha una soluzione per questa tabella non i
 |Sealpath|Sealpath Technologies|Integrazione con strumenti di progettazione CAD, ad esempio AutoCAD e Siemens Jt2GO.
 |SecRMM|Sqaudra Technologies |Protezione dei documenti per i supporti rimovibili.
 |Security Sheriff|CryptZone |Gestione degli accessi in SharePoint e protezione dei documenti, in base alla classificazione e alle autorizzazioni di accesso.
-
+|Symantec DLP|Symantec |Rilevamento e monitoraggio per i file protetti.
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per verificare gli altri requisiti, vedere [Requisiti per Azure Information Protection](requirements-azure-rms.md).

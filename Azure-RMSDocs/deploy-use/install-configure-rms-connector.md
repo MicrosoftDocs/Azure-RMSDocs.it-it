@@ -4,7 +4,7 @@ description: Informazioni sull&quot;installazione e la configurazione del connet
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 04/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 100ac0f42d82eb02635187dbb0c91422d3097872
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 21eab2a693147b4e6562a8bcdff8cece7d706432
+ms.sourcegitcommit: 9c033b7f5a6cbb20275aeecd48ff5071964eb587
+ms.translationtype: HT
+ms.contentlocale: it-IT
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installazione e configurazione del connettore di Azure Rights Management
 
@@ -53,7 +54,7 @@ Per continuare, immettere un account e una password per configurare il connettor
 ## <a name="entering-credentials"></a>Immissione delle credenziali
 Per poter configurare il connettore RMS, è necessario immettere le credenziali per un account dotato di privilegi sufficienti per la configurazione del connettore. È ad esempio possibile digitare **admin@contoso.com** e quindi specificare la password per questo account.
 
-Per questa password sono previste alcune limitazioni relative ai caratteri. Non è possibile usare una password che includa uno dei caratteri seguenti: e commerciale (**&**), parentesi quadra aperta (**[**), parentesi quadra chiusa (**]**), virgolette semplici (**"**) e apostrofo (**'**). Se la password include uno di questi caratteri, non sarà possibile effettuare l'autenticazione per il connettore RMS e verrà visualizzato un messaggio di errore che indica che la combinazione nome utente e password specificata non è corretta, anche se è possibile effettuare l'accesso usando questo account e questa password per altri scenari. Se questa situazione è applicabile alla password in uso, scegliere un account diverso con una password che non include questi caratteri speciali oppure reimpostare la password, in modo che non includa questi caratteri speciali.
+Per questa password sono previste alcune limitazioni relative ai caratteri. Non è possibile usare una password che includa uno dei caratteri seguenti: e commerciale (**&**), parentesi quadra aperta (**[**), parentesi quadra chiusa (**]**), virgolette semplici (**"**) e apostrofo (**'**). Se la password include uno di questi caratteri, non sarà possibile effettuare l'autenticazione per il connettore RMS e verrà visualizzato il messaggio di errore **La combinazione nome utente e password specificata non è corretta**, anche se è possibile effettuare l'accesso usando questo account e questa password per altri scenari. Se questa situazione è applicabile alla password in uso, scegliere un account diverso con una password che non include questi caratteri speciali oppure reimpostare la password, in modo che non includa questi caratteri speciali.
 
 Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), assicurarsi che l'account specificato sia in grado di proteggere il contenuto. Se, ad esempio, è stata limitata la possibilità di proteggere il contenuto per il gruppo "Reparto IT", l'account specificato deve essere un membro del gruppo. In caso contrario, verrà visualizzato il messaggio di errore: **Tentativo di individuare la posizione del servizio di amministrazione e dell’organizzazione non riuscito. Assicurarsi che il servizio Microsoft Rights Management sia abilitato per l’organizzazione.**
 

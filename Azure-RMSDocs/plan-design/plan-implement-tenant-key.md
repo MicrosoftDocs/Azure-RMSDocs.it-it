@@ -4,7 +4,7 @@ description: "Informazioni per pianificare e gestire la chiave del tenant di Azu
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/31/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 23dea6c33b05989aed97faa6665eb4eef0811767
-ms.sourcegitcommit: 384461f0e3fccd73cd7eda3229b02e51099538d4
-translationtype: HT
+ms.openlocfilehash: 860834fdfa666ab6919962a06417a6ed0088dd3d
+ms.sourcegitcommit: 237ce3a0cc4921da5a08ed5753e6491403298194
+ms.translationtype: HT
+ms.contentlocale: it-IT
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Pianificazione e implementazione della chiave del tenant di Azure Information Protection
 
@@ -27,13 +28,14 @@ Usare le informazioni presenti in questo articolo per pianificare e gestire la c
 
 **Panoramica:** Usare la tabella seguente come guida rapida per la topologia consigliata delle chiavi del tenant. Per altre informazioni, vedere quindi la documentazione aggiuntiva.
 
-Se si distribuisce Azure Information Protection con una chiave del tenant gestita da Microsoft, sarà possibile passare alla modalità BYOK in un secondo momento. Non è tuttavia attualmente possibile passare dalla modalità BYOK alla gestione da parte di Microsoft per la chiave del tenant di Azure Information Protection.
-
 |Requisito aziendale|Topologia di chiave del tenant consigliata|
 |------------------------|-----------------------------------|
 |Distribuire Azure Information Protection rapidamente e senza ricorrere a hardware speciale|Gestita da Microsoft|
 |Ottenere la funzionalità IRM completa in Exchange Online con il servizio Azure Rights Management|Gestita da Microsoft|
 |Le chiavi vengono create dall'utente e protette in un modulo di protezione hardware|BYOK<br /><br />Questa configurazione darà attualmente come risultato una funzionalità IRM ridotta in Exchange Online. Per altre informazioni, vedere [Prezzi e restrizioni della modalità BYOK](byok-price-restrictions.md).|
+
+Se necessario, è possibile modificare la topologia di chiave del tenant dopo la distribuzione, usando il cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties).
+
 
 ## <a name="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok"></a>Scegliere la topologia di chiave del tenant: gestione di Microsoft (impostazione predefinita) o BYOK
 È innanzitutto necessario decidere la topologia di chiave del tenant più adatta per l'organizzazione. Per impostazione predefinita, Azure Information Protection genera la chiave del tenant e gestisce la maggior parte degli aspetti del relativo ciclo di vita. Questa opzione è quella più semplice e prevede il sovraccarico amministrativo minore. Nella maggior parte dei casi non è nemmeno necessario disporre di una chiave del tenant, ma è sufficiente iscriversi ad Azure Information Protection e la parte rimanente del processo di gestione delle chiavi viene eseguita da Microsoft.
@@ -84,7 +86,7 @@ Nella tabella seguente sono elencati i prerequisiti per la modalità BYOK.
 |Una sottoscrizione che supporta Azure Information Protection.|Per altre informazioni sulle sottoscrizioni disponibili, vedere la [pagina dei piani tariffari](https://go.microsoft.com/fwlink/?LinkId=827589) di Azure Information Protection.|
 |Non si usa RMS per singoli utenti o per Exchange Online.<br /><br /> Se si usa Exchange Online, si conoscono e si accettano le limitazioni relative all'uso della modalità BYOK con questa configurazione.|Per altre informazioni sulle restrizioni per la modalità BYOK e sulle limitazioni attuali, vedere [Prezzi e restrizioni della modalità BYOK](byok-price-restrictions.md).<br /><br />**Importante**: attualmente, la modalità BYOK non è compatibile con Exchange Online.|
 |Tutti i prerequisiti elencati per la modalità BYOK di Key Vault, inclusa una sottoscrizione di Azure a pagamento o di valutazione per il tenant esistente di Azure Information Protection. |Vedere [Prerequisiti per la modalità BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) nella documentazione relativa ad Insieme di credenziali delle chiavi di Azure. <br /><br /> La sottoscrizione gratuita di Azure, che fornisce l'accesso per configurare Azure Active Directory e i modelli personalizzati di Azure Rights Management (**Accesso ad Azure Active Directory**), non è sufficiente per usare Insieme di credenziali delle chiavi di Azure. Per verificare se la propria sottoscrizione di Azure può essere utilizzata per la modalità BYOK, usare i cmdlet di PowerShell per [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx): <br /><br /> 1. Avviare una sessione di Azure PowerShell con l'opzione **Esegui come amministratore** e accedere come amministratore globale per il tenant di Azure Information Protection con il comando seguente: `Login-AzureRmAccount`<br /><br />2. Digitare il comando seguente e verificare che siano visualizzati valori per il nome e l'ID della sottoscrizione e per l'ID del tenant di Azure Information Protection e che lo stato sia abilitato: `Get-AzureRmSubscription`<br /><br />Se non viene visualizzato alcun valore e viene semplicemente restituito il prompt, non si dispone di una sottoscrizione di Azure che può essere usata per la modalità BYOK. <br /><br />**Nota**: oltre ai prerequisiti per la modalità BYOK, se si esegue la migrazione da AD RMS ad Azure Information Protection passando da una chiave software a una chiave hardware, sarà necessaria almeno la versione 11.62 del firmware Thales.|
-|Il modulo di amministrazione di Azure Rights Management per Windows PowerShell.|Per istruzioni di installazione, vedere [Installazione di Windows PowerShell per Azure Rights Management](../deploy-use/install-powershell.md). <br /><br />Se il modulo Windows PowerShell è stato installato in precedenza, eseguire il comando seguente per verificare che il numero della versione in uso sia almeno **2.5.0.0**: `(Get-Module aadrm -ListAvailable).Version`|
+|Il modulo di amministrazione di Azure Rights Management per Windows PowerShell.|Per istruzioni di installazione, vedere [Installazione di Windows PowerShell per Azure Rights Management](../deploy-use/install-powershell.md). <br /><br />Se il modulo Windows PowerShell è stato installato in precedenza, eseguire il comando seguente per verificare che il numero della versione in uso sia almeno **2.9.0.0**: `(Get-Module aadrm -ListAvailable).Version`|
 
 Per altre informazioni sui moduli di protezione hardware Thales e su come vengono usati con Insieme di credenziali delle chiavi di Azure, vedere il [sito Web Thales](https://www.thales-esecurity.com/msrms/cloud).
 
@@ -94,7 +96,7 @@ Per generare e trasferire la propria chiave del tenant in Insieme di credenziali
 
 Quando la chiave viene trasferita all'insieme di credenziali delle chiavi, le viene assegnato un ID, ovvero un URL contenente il nome dell'insieme di credenziali delle chiavi, il contenitore delle chiavi, il nome della chiave e la versione della chiave. Ad esempio: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. È necessario indicare al servizio Azure Rights Management di Azure Information Protection di usare questa chiave, specificando l'URL.
 
-Affinché Azure Information Protection possa usare la chiave, il servizio Azure Rights Management deve essere prima autorizzato a usare la chiave nell'insieme di credenziali delle chiavi dell'organizzazione. A tale scopo, l'amministratore dell'insieme di credenziali delle chiavi di Azure usa il cmdlet di PowerShell appropriato [Set-AzureRmKeyVaultAccessPolicy](https://msdn.microsoft.com/en-us/library/mt603625(v=azure.300\).aspx) e concede le autorizzazioni all'entità servizio Azure Rights Management usando il GUID 00000012-0000-0000-c000-000000000000. Ad esempio:
+Affinché Azure Information Protection possa usare la chiave, il servizio Azure Rights Management deve essere prima autorizzato a usare la chiave nell'insieme di credenziali delle chiavi dell'organizzazione. A tale scopo, l'amministratore dell'insieme di credenziali delle chiavi di Azure usa il cmdlet di PowerShell appropriato [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) e concede le autorizzazioni all'entità servizio Azure Rights Management usando il GUID 00000012-0000-0000-c000-000000000000. Ad esempio:
 
     Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
@@ -102,16 +104,18 @@ A questo punto è possibile configurare Azure Information Protection per l'uso d
 
     Connect-AadrmService
 
-Successivamente, è necessario eseguire il cmdlet [Use-AadrmKeyVaultKey](https://msdn.microsoft.com/library/azure/mt759829.aspx), specificando l'URL della chiave. Ad esempio:
+Successivamente, è necessario eseguire il cmdlet [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey), specificando l'URL della chiave. Ad esempio:
 
     Use-AadrmKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
 
 > [!IMPORTANT]
 > In questo esempio, "aaaabbbbcccc111122223333" è la versione della chiave da usare. Se non si specifica la versione, viene usata la versione corrente della chiave senza avviso e il comando sembra funzionare. Tuttavia, se la chiave nell'insieme di credenziali delle chiavi viene aggiornata in un secondo momento (rinnovo), il servizio Azure Rights Management smetterà di funzionare per il tenant, anche se si esegue nuovamente il comando Use-AadrmKeyVaultKey.
 >
->Assicurarsi di specificare la versione e il nome della chiave quando si esegue questo comando. È possibile usare il comando [Get-AzureKeyVaultKey](https://docs.microsoft.com/powershell/resourcemanager/azurerm.keyvault\/v2.3.0\/get-azurekeyvaultkey) dell'insieme di credenziali delle chiavi di Azure per ottenere il numero di versione della chiave corrente. Ad esempio: `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
+>Assicurarsi di specificare la versione e il nome della chiave quando si esegue questo comando. È possibile usare il comando [Get-AzureKeyVaultKey](/powershell/resourcemanager/azurerm.keyvault\get-azurekeyvaultkey) dell'insieme di credenziali delle chiavi di Azure per ottenere il numero di versione della chiave corrente. Ad esempio: `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
-Se è necessario verificare che l'URL della chiave sia impostato correttamente nel servizio Azure RMS, è possibile eseguire [Get-AzureKeyVaultKey](https://msdn.microsoft.com/en-us/library/dn868053(v=azure.300\).aspx) nell'insieme di credenziali delle chiavi di Azure per visualizzare l'URL della chiave.
+Se è necessario confermare che l'URL della chiave è impostato correttamente nel servizio Azure RMS, in Insieme di credenziali delle chiavi di Azure è possibile eseguire [Get-AzureKeyVaultKey](/powershell/resourcemanager/azurerm.keyvault\get-azurekeyvaultkey) per visualizzare l'URL della chiave.
+
+Infine, se il servizio di Azure Rights Management è già attivato, eseguire [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) per indicare ad Azure Rights Management di usare questa chiave come chiave del tenant attivo per il servizio Azure Rights Management. Se non si esegue questo passaggio, Azure Rights Management continuerà a usare la chiave gestita da Microsoft, creata automaticamente al momento dell'attivazione del servizio.
 
 
 ## <a name="next-steps"></a>Passaggi successivi
@@ -119,23 +123,23 @@ Se è necessario verificare che l'URL della chiave sia impostato correttamente n
 Dopo la pianificazione e, se necessario, la generazione della chiave del tenant, effettuare le operazioni seguenti:
 
 1.  Iniziare a usare la chiave del tenant.
-
-    -   Se non è ancora stato fatto, è ora necessario attivare il servizio Rights Management in modo che l'organizzazione possa iniziare a usare Azure Information Protection. In questo caso, gli utenti iniziano immediatamente a usare la chiave del tenant (gestita da Microsoft o gestita in modo autonomo in Insieme di credenziali delle chiavi di Azure).
-
+    
+    - Se non è ancora stato fatto, è ora necessario attivare il servizio Rights Management in modo che l'organizzazione possa iniziare a usare Azure Information Protection. In questo caso, gli utenti iniziano immediatamente a usare la chiave del tenant (gestita da Microsoft o gestita in modo autonomo in Insieme di credenziali delle chiavi di Azure).
+    
         Per altre informazioni, vedere [Attivazione di Azure Rights Management](../deploy-use/activate-service.md).
-
-    -   Se il servizio Rights Management è già stato attivato e si è deciso di gestire la propria chiave del tenant, gli utenti passano gradualmente dalla chiave del tenant precedente a quella nuova e il completamento di questa transizione in fasi successive può richiedere alcune settimane. I documenti e i file protetti con la chiave del tenant precedente rimangono accessibili agli utenti autorizzati.
-
-2.  Valutare l'opportunità di usare la registrazione dei dati di utilizzo per tenere traccia di ogni transazione eseguita dal servizio Azure Rights Management.
-
+        
+    - Se il servizio Rights Management è già stato attivato e si è deciso di gestire la propria chiave del tenant, gli utenti passano gradualmente dalla chiave del tenant precedente a quella nuova e il completamento di questa transizione in fasi successive può richiedere alcune settimane. I documenti e i file protetti con la chiave del tenant precedente rimangono accessibili agli utenti autorizzati.
+        
+2. Valutare l'opportunità di usare la registrazione dei dati di utilizzo per tenere traccia di ogni transazione eseguita dal servizio Azure Rights Management.
+    
     Se si è deciso di gestire la propria chiave del tenant, la registrazione include informazioni sull'uso della chiave stessa. Vedere il frammento seguente di un file di log visualizzato in Excel in cui i tipi di richiesta **KeyVaultDecryptRequest** e **KeyVaultSignRequest** dimostrano che la chiave del tenant è attualmente in uso.
-
+    
     ![file di log visualizzato in Excel in cui è attualmente usata la chiave del tenant](../media/RMS_Logging.png)
-
+    
     Per altre informazioni sulla registrazione dell'utilizzo, vedere [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](../deploy-use/log-analyze-usage.md).
-
+    
 3.  Gestire la propria chiave del tenant.
-
+    
     Per altre informazioni, vedere [Operazioni relative alla chiave del tenant di Azure Rights Management](../deploy-use/operations-tenant-key.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
