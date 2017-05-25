@@ -4,7 +4,7 @@ description: "Istruzioni che fanno parte del percorso di migrazione da AD RMS ad
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d2e504b2ed387a5bce721fac12e017064006169d
-ms.sourcegitcommit: 384461f0e3fccd73cd7eda3229b02e51099538d4
-translationtype: HT
+ms.openlocfilehash: bcb0d7ffe9576f02e6388451f16a8341ee4325c2
+ms.sourcegitcommit: 237ce3a0cc4921da5a08ed5753e6491403298194
+ms.translationtype: HT
+ms.contentlocale: it-IT
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave protetta tramite software a una chiave protetta tramite HSM
 
@@ -35,16 +36,16 @@ Prima di iniziare, assicurarsi che l'organizzazione disponga di un insieme di cr
 
 
 > [!TIP]
-> Se è necessario eseguire i passaggi di configurazione per Insieme di credenziali delle chiavi di Azure e non si ha familiarità con questo servizio, può risultare utile prima consultare [Introduzione all'insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/). 
+> Se è necessario eseguire i passaggi di configurazione per Insieme di credenziali delle chiavi di Azure e non si ha familiarità con questo servizio, può risultare utile prima consultare [Introduzione all'insieme di credenziali delle chiavi di Azure](/azure/key-vault/key-vault-get-started). 
 
 
 ## <a name="part-1-extract-your-slc-key-from-the-configuration-data-and-import-the-key-to-your-on-premises-hsm"></a>Parte 1: Estrarre la chiave del certificato concessore di licenze server (SLC) dai dati di configurazione e importare la chiave nel modulo di protezione hardware locale
 
-1.  Amministratore di Insieme di credenziali delle chiavi di Azure: usare i passaggi seguenti nella sezione [Implementazione di BYOK (Bring Your Own Key) per l'insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) della documentazione di Insieme di credenziali delle chiavi di Azure:
+1.  Amministratore di Azure Key Vault: per ogni chiave del certificato concessore di licenze server esportata che si vuole archiviare in Azure Key Vault usare i passaggi seguenti nella sezione [Implementazione di BYOK (Bring Your Own Key) per Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault) della documentazione di Azure Key Vault:
 
-    -   **Generare e trasferire la propria chiave al modulo di protezione hardware di Insieme di credenziali delle chiavi di Azure**: [Passaggio 1: Preparare la workstation connessa a Internet](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-1-prepare-your-internet-connected-workstation)
+    -   **Generare e trasferire la propria chiave al modulo di protezione hardware di Insieme di credenziali delle chiavi di Azure**: [Passaggio 1: Preparare la workstation connessa a Internet](/azure/key-vault-hsm-protected-keys/#step-1-prepare-your-internet-connected-workstation)
 
-    -   **Generare e trasferire la propria chiave del tenant tramite Internet**: [Passaggio 2: Preparare la workstation disconnessa](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-2-prepare-your-disconnected-workstation)
+    -   **Generare e trasferire la propria chiave del tenant tramite Internet**: [Passaggio 2: Preparare la workstation disconnessa](/azure/key-vault-hsm-protected-keys/#step-2-prepare-your-disconnected-workstation)
 
     Non attenersi a questa procedura per generare la chiave del tenant, perché è già disponibile una chiave equivalente nel file di dati di configurazione (con estensione XML) esportati. Si eseguirà invece uno strumento per estrarre la chiave dal file e importarla nel modulo di protezione hardware locale. Quando viene eseguito, lo strumento crea due file:
 
@@ -110,7 +111,7 @@ Ora che la chiave del certificato concessore di licenze server (SLC) è stata es
 
 ## <a name="part-2-package-and-transfer-your-hsm-key-to-azure-key-vault"></a>Parte 2: Creare il pacchetto e trasferire la chiave del modulo di protezione hardware in Insieme di credenziali delle chiavi di Azure
 
-Amministratore di Insieme di credenziali delle chiavi di Azure: usare i passaggi seguenti dalla sezione [Implementazione di BYOK (Bring Your Own Key) per l'insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) della documentazione di Insieme di credenziali delle chiavi di Azure:
+Amministratore di Azure Key Vault: per ogni chiave del certificato concessore di licenze server esportata che si vuole archiviare in Azure Key Vault usare i passaggi seguenti nella sezione [Implementazione di BYOK (Bring Your Own Key) per Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azure-key-vault) della documentazione di Azure Key Vault:
 
 - [Passaggio 4: Preparare la chiave per il trasferimento](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-4-prepare-your-key-for-transfer)
 
@@ -122,40 +123,48 @@ Prima di trasferire la chiave a Insieme di credenziali delle chiavi di Azure, as
 
 Quando la chiave viene caricata in Insieme di credenziali delle chiavi di Azure, vengono visualizzate le proprietà della chiave visualizzata, incluso l'ID della chiave. Avrà un aspetto simile a **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Prendere nota dell'URL perché sarà necessario all'amministratore di Azure Information Protection per indicare al servizio Azure Rights Management di Azure Information Protection di usare questa chiave per la chiave del tenant.
 
+Usare quindi il cmdlet [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) per autorizzare l'entità di servizio di Azure Rights Management ad accedere all'insieme di credenziali delle chiavi. Le autorizzazioni necessarie sono decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
+
+Se ad esempio l'insieme di credenziali delle chiavi creato per Azure Information Protection è denominato contosorms-byok-kv e il gruppo di risorse è denominato contosorms-byok-rg, eseguire il comando seguente:
+    
+    Set-AzureRmKeyVaultAccessPolicy -VaultName "contosorms-byok-kv" -ResourceGroupName "contosorms-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
+
 Ora che la chiave HSM è stata trasferita in Insieme di credenziali delle chiavi di Azure, si è pronti per importare i dati di configurazione di AD RMS.
 
 ## <a name="part-3-import-the-configuration-data-to-azure-information-protection"></a>Parte 3: Importare i dati di configurazione in Azure Information Protection
 
-1.  Amministratore di Azure Information Protection: nella workstation connessa a Internet e nella sessione di PowerShell copiare i nuovi file di dati di configurazione (con estensione xml) la cui chiave del certificato concessore di licenze server è stata rimossa dopo l'esecuzione dello strumento TpdUtil.
+1. Amministratore di Azure Information Protection: nella workstation connessa a Internet e nella sessione di PowerShell copiare i nuovi file di dati di configurazione (con estensione xml) la cui chiave del certificato concessore di licenze server è stata rimossa dopo l'esecuzione dello strumento TpdUtil.
 
-2. Caricare il primo file con estensione xml, usando il cmdlet [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd). Se si hanno più file, perché erano disponibili più domini di pubblicazione trusted, scegliere il file corrispondente alla chiave HSM che si vuole usare in Azure Information Protection per proteggere il contenuto dopo la migrazione.
+2. Caricare ogni file con estensione xml usando il cmdlet [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd). Ad esempio, è necessario avere almeno un file aggiuntivo da importare in caso di aggiornamento del cluster AD RMS per la modalità di crittografia 2.
 
-    Per eseguire questo cmdlet, è necessario l'URL della chiave identificata nel passaggio precedente.
+    Per eseguire questo cmdlet, sono necessari la password specificata in precedenza per il file di dati di configurazione e l'URL della chiave identificata nel passaggio precedente.
 
-    Ad esempio, usando il valore dell'URL della chiave dal passaggio precedente e un file dei dati di configurazione di C:\contoso_keyless.xml, eseguire:
+    Ad esempio, usando il file di dati di configurazione C:\contoso_keyless.xml e il valore dell'URL della chiave dal passaggio precedente, eseguire prima di tutto il comando seguente per archiviare la password:
+    
+    ```
+    $TPD_Password = Read-Host -AsSecureString
+    ```
+    
+   Immettere la password specificata per esportare il file di dati di configurazione. Eseguire quindi il comando seguente e confermare che si vuole eseguire questa azione:
 
     ```
-    Import-AadrmTpd -TpdFile "C:\contoso_keyless.xml" -ProtectionPassword –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Active $True -Verbose
+    Import-AadrmTpd -TpdFile "C:\contoso_keyless.xml" -ProtectionPassword $TPD_Password –KeyVaultStringUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
     ```
 
-    Quando richiesto, immettere la password specificata in precedenza per il file dei dati di configurazione e confermare che si vuole eseguire questa azione.
+    Durante l'importazione, la chiave del certificato concessore di licenze server viene importata e impostata automaticamente come archiviata.
 
-    Se è disponibile più di un file di dati di configurazione, ripetere questo comando per i file restanti. Ad esempio, è necessario avere almeno un file aggiuntivo da importare in caso di aggiornamento del cluster AD RMS per la modalità di crittografia 2. Per questi file impostare **-Active** su **false** quando si esegue il comando di importazione.
+3. Dopo aver caricato ogni file, eseguire [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) per specificare quale chiave importata corrisponde alla chiave del certificato concessore di licenze server attualmente attiva nel cluster AD RMS.
 
-
-
-3.  Usare il cmdlet [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) per disconnettersi dal servizio Azure Rights Management:
+4. Usare il cmdlet [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) per disconnettersi dal servizio Azure Rights Management:
 
     ```
     Disconnect-AadrmService
     ```
 
-    > [!NOTE]
-    > Se successivamente si deve confermare quale chiave viene usata dal tenant di Azure Information Protection in Insieme di credenziali delle chiavi di Azure, usare il cmdlet [Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys) di Azure RMS.
+Se successivamente si deve confermare quale chiave viene usata dal tenant di Azure Information Protection in Insieme di credenziali delle chiavi di Azure, usare il cmdlet [Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys) di Azure RMS.
 
 
-È ora possibile andare al [Passaggio 5. Attivare il tenant di Azure Information Protection](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
+È ora possibile andare al [Passaggio 5. Attivare il servizio Azure Rights Management](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

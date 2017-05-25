@@ -4,7 +4,7 @@ description: "Istruzioni che fanno parte del percorso di migrazione da AD RMS ad
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 04/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,10 @@ ms.technology: techgroup-identity
 ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 60370cc34184b28f5cdecf6ad51f9ba58dd4816a
-ms.sourcegitcommit: 77b0936bea2700eb12b580e5738e077d447d5686
-translationtype: HT
+ms.openlocfilehash: ef3b3f08dfc73703f2bb05943645176c22134a02
+ms.sourcegitcommit: 237ce3a0cc4921da5a08ed5753e6491403298194
+ms.translationtype: HT
+ms.contentlocale: it-IT
 ---
 # <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave protetta tramite software a un'altra
 
@@ -36,16 +37,20 @@ Usare la procedura seguente per importare la configurazione di AD RMS in Azure I
     ```
     Quando richiesto, immettere le credenziali dell'amministratore del tenant [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]. In genere, viene usato un account amministratore globale per Azure Active Directory o Office 365.
 
-2. Usare il cmdlet [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) per caricare il file del primo dominio di pubblicazione trusted esportato (file con estensione xml). Se si hanno più file con estensione xml, perché erano disponibili più domini di pubblicazione trusted, scegliere il file contenente il dominio di pubblicazione trusted esportato che si vuole usare in Azure Information Protection per proteggere il contenuto dopo la migrazione. Utilizzare il seguente comando:
-
-    ```
-    Import-AadrmTpd -TpdFile <PathToTpdPackageFile> -ProtectionPassword <secure string> -Active $True -Verbose
-    ```
-    È possibile usare [ConvertTo-SecureString - AsPlaintext](https://technet.microsoft.com/library/hh849818.aspx) o [Read-Host](https://technet.microsoft.com/library/hh849945.aspx) per specificare la password come stringa sicura. Quando si usa ConvertTo-SecureString e la password contiene caratteri speciali, immettere la password tra virgolette singole o caratteri speciali di escape.
+2. Usare il cmdlet [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd) per caricare ogni file di dominio di pubblicazione trusted esportato (con estensione xml). Ad esempio, è necessario avere almeno un file aggiuntivo da importare in caso di aggiornamento del cluster AD RMS per la modalità di crittografia 2. 
     
-    Ad esempio:eseguire innanzitutto **$TPD_Password = Read-Host - AsSecureString** e immettere la password specificata in precedenza. Eseguire quindi **Import-AadrmTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Active $true -Verbose**. Quando richiesto, confermare che si vuole eseguire questa azione.
+    Per eseguire questo cmdlet, sarà necessaria la password specificata in precedenza per ogni file di dati di configurazione. 
     
-3.  Al termine del comando, ripetere il passaggio 3 per ogni restante file con estensione xml creato esportando i propri domini di pubblicazione trusted. Ad esempio, è necessario avere almeno un file aggiuntivo da importare in caso di aggiornamento del cluster AD RMS per la modalità di crittografia 2. Per questi file impostare **-Active** su **false** quando si esegue il comando di importazione. Ad esempio: **Import-AadrmTpd -TpdFile E:\contosokey2.xml -ProtectionPassword $TPD_Password -Active $false -Verbose**
+    Ad esempio, eseguire prima di tutto il comando seguente per archiviare la password:
+    
+        $TPD_Password = Read-Host -AsSecureString
+    
+    Immettere la password specificata per esportare il primo file di dati di configurazione. Usando E:\contosokey1.xml come esempio per il file di configurazione, eseguire quindi il comando seguente e confermare che si vuole eseguire questa azione:
+    ```
+    Import-AadrmTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Verbose
+    ```
+    
+3. Dopo aver caricato ogni file, eseguire [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) per identificare la chiave importata corrispondente alla chiave del certificato concessore di licenze server attualmente attiva in AD RMS. Questa chiave diventerà la chiave del tenant attiva per il servizio Azure Rights Management.
 
 4.  Usare il cmdlet [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) per disconnettersi dal servizio Azure Rights Management:
 
@@ -53,8 +58,7 @@ Usare la procedura seguente per importare la configurazione di AD RMS in Azure I
     Disconnect-AadrmService
     ```
 
-
-È ora possibile andare al [Passaggio 5. Attivare il tenant di Azure Information Protection](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
+È ora possibile andare al [Passaggio 5. Attivare il servizio Azure Rights Management](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
