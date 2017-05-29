@@ -15,7 +15,8 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 2b59cbd99430b5474280acc02b1a2c4a2738c793
 ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: it-IT
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Passaggio 5: Vedere in azione la condivisione di file protetti e tenere traccia del documento 
 
@@ -67,7 +68,7 @@ Ora che è stato inviato il documento protetto, è possibile chiedere ai destina
 
 I destinatari possono usare molti dispositivi per leggere il documento protetto inviato come allegato di posta elettronica. I dispositivi includono iPad, iPhone, tablet e telefoni Android, computer Mac e computer Windows.
 
-Chiedere di leggere il messaggio di posta elettronica inviato. Supponendo che questa sia la prima volta che i destinatari ricevono allegati protetti da Rights Management, chiedere loro di fare clic sul collegamento di istruzioni. Verrà quindi visualizzata la pagina** **iniziale di Microsoft Azure Information Protection, in cui viene richiesto di immettere l'indirizzo di posta elettronica dell'ufficio.
+Chiedere di leggere il messaggio di posta elettronica inviato. Supponendo che questa sia la prima volta che i destinatari ricevono allegati protetti da Rights Management, chiedere loro di fare clic sul collegamento di istruzioni. Verrà quindi visualizzata la pagina **iniziale** di Microsoft Azure Information Protection, in cui viene richiesto di immettere l'indirizzo di posta elettronica dell'ufficio.
 
 Facendo clic su **Iscriviti**, Azure Information Protection controllerà se l'organizzazione ha una sottoscrizione che include il servizio di protezione dei dati Azure Rights Management. In caso contrario, è possibile richiedere un account gratuito.
 

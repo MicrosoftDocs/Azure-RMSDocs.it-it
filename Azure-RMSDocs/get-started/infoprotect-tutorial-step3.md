@@ -12,7 +12,8 @@ ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
 ms.openlocfilehash: ba10ce73d5bd9cbfa65d373e247b440150be826b
 ms.sourcegitcommit: 9f542a5599ca6332b4b69ebbbbfb9ffdf5464731
-translationtype: HT
+ms.translationtype: HT
+ms.contentlocale: it-IT
 ---
 # <a name="step-3-install-the-client"></a>Passaggio 3: Installare il client
 
@@ -33,7 +34,7 @@ In questo passaggio verrà installato il client di Azure Information Protection 
 
 Verificare che l'installazione sia stata completata correttamente aprendo Word e un nuovo documento vuoto. Non salvare ancora il documento. Se viene richiesto di immettere il nome utente e la password, immettere i dettagli relativi all'account amministratore globale. 
 
-Se si installa il client per la prima volta, verrà visualizzata una pagina** **iniziale con istruzioni di base. Dopo aver letto le informazioni, fare clic su **Chiudi**.
+Se si installa il client per la prima volta, verrà visualizzata una pagina **iniziale** con istruzioni di base. Dopo aver letto le informazioni, fare clic su **Chiudi**.
 
 Quando il documento viene caricato, vengono visualizzati due nuovi elementi:
 
