@@ -1,6 +1,6 @@
 ---
 title: Scenario AIP - Proteggere i file in una condivisione di file server
-description: "Questo scenario e la documentazione di supporto per l&quot;utente usano la tecnologia di protezione Azure Rights Management per proteggere tutti i file desiderati in un file server e garantire così che solo i dipendenti dell&quot;organizzazione possano accedervi, anche se vengono copiati e salvati in un archivio fuori dal controllo del reparto IT o inviati tramite posta elettronica ad altri utenti."
+description: "Questo scenario e la documentazione di supporto per l'utente usano la tecnologia di protezione Azure Rights Management per proteggere tutti i file desiderati in un file server e garantire così che solo i dipendenti dell'organizzazione possano accedervi, anche se vengono copiati e salvati in un archivio fuori dal controllo del reparto IT o inviati tramite posta elettronica ad altri utenti."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 283c7db3-5730-439e-a215-40a1088ed506
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7c7d75c5d8af7e3a723068a719e6850b44a06585
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: e9cd548d2f2335753349d6a0248c81c0d76c6c97
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="scenario---protect-files-on-a-file-server-share"></a>Scenario - Proteggere i file in una condivisione di file server
 

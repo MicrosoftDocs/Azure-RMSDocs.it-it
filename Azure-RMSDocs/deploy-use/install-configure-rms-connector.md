@@ -1,10 +1,10 @@
 ---
 title: Installare e configurare il connettore di Rights Management - AIP
-description: Informazioni sull&quot;installazione e la configurazione del connettore Azure Rights Management (RMS). Queste procedure illustrano i passaggi da 1 a 4 di Distribuzione del connettore di Azure Rights Management.
+description: Informazioni sull'installazione e la configurazione del connettore Azure Rights Management (RMS). Queste procedure illustrano i passaggi da 1 a 4 di Distribuzione del connettore di Azure Rights Management.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/19/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,10 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 21eab2a693147b4e6562a8bcdff8cece7d706432
-ms.sourcegitcommit: 9c033b7f5a6cbb20275aeecd48ff5071964eb587
+ms.openlocfilehash: d03cb1ff146839e4de805b66f5b2e6a3df851430
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installazione e configurazione del connettore di Azure Rights Management
 
@@ -67,18 +68,18 @@ Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-s
 -   **Amministratore di connettore di Azure Rights Management**: account di Azure Active Directory a cui sono stati concessi i diritti di installazione e amministrazione del connettore RMS per l'organizzazione.
 
     > [!NOTE]
-    > Il ruolo di amministratore globale di Azure Rights Management e il ruolo di amministratore di connettore di Azure Rights Management vengono assegnati agli account con il cmdlet di Azure RMS [Add-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/dn629417.aspx).
+    > Il ruolo di amministratore globale di Azure Rights Management e il ruolo di amministratore di connettore di Azure Rights Management vengono assegnati agli account con il cmdlet di Azure RMS [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator).
     > 
     > Per eseguire il connettore RMS con privilegi minimi, creare un account dedicato a questo scopo e assegnare a questo il ruolo di amministratore di connettore di Azure RMS tramite le operazioni seguenti:
     >
     > 1.  Se non è ancora stato fatto, scaricare e installare Windows PowerShell per Rights Management. Per ulteriori informazioni, vedere [Installazione di Windows PowerShell per Azure Rights Management](install-powershell.md).
     >
-    >     Avviare Windows PowerShell con l'opzione **Esegui come amministratore** e usare il comando [Connect-AadrmService](https://msdn.microsoft.com/library/azure/dn629415.aspx) per connettersi al servizio Azure RMS:
+    >     Avviare Windows PowerShell con l'opzione **Esegui come amministratore** e usare il comando [Connect-AadrmService](/powershell/module/aadrm/connect-aadrmservice) per connettersi al servizio Azure RMS:
     >
     >     ```
     >     Connect-AadrmService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
     >     ```
-    > 2.  Eseguire quindi il comando [Add-AadrmRoleBasedAdministrator](https://msdn.microsoft.com/library/azure/dn629417.aspx) usando solo uno dei parametri seguenti:
+    > 2.  Eseguire quindi il comando [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) usando solo uno dei parametri seguenti:
     >
     >     ```
     >     Add-AadrmRoleBasedAdministrator -EmailAddress <email address> -Role "ConnectorAdministrator"
@@ -220,7 +221,7 @@ Se i server del connettore sono installati in una rete che non dispone di connet
 
 -   Almeno 1 GB di RAM.
 
--   Almeno 64 GB di spazio su disco.
+-   Almeno 64 GB di spazio su disco.
 
 -   Almeno un'interfaccia di rete.
 

@@ -1,6 +1,6 @@
 ---
 title: Scenario AIP - Scambiarsi informazioni con privilegi tra dirigenti
-description: "Questo scenario e la documentazione di supporto per l&quot;utente usano la tecnologia di protezione Azure Rights Management affinché i dirigenti possano scambiarsi in modo sicuro messaggi e allegati tramite posta elettronica e i criteri limitino automaticamente l&quot;accesso ai dirigenti senza che sia necessario alcun intervento da parte loro."
+description: "Questo scenario e la documentazione di supporto per l'utente usano la tecnologia di protezione Azure Rights Management affinché i dirigenti possano scambiarsi in modo sicuro messaggi e allegati tramite posta elettronica e i criteri limitino automaticamente l'accesso ai dirigenti senza che sia necessario alcun intervento da parte loro."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: e18cf5df-859e-4028-8d19-39b0842df33d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3e4b1d6115d861e692197d9cb3fc850b7574e32e
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 1407a7bee800fec0ba8498d0439586378003ed54
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="scenario---executives-securely-exchange-privileged-information"></a>Scenario - Scambiarsi informazioni con privilegi tra dirigenti
 
