@@ -1,6 +1,6 @@
 ---
 title: Supporto di Azure Rights Management da parte delle app - AIP
-description: "Informazioni su come le applicazioni (ad esempio, le applicazioni di Office come Word, Excel, PowerPoint e Outlook) e i servizi (ad esempio, Exchange e SharePoint) più comunemente usati dagli utenti sfruttano il servizio Azure Rights Management di Azure Information Protection per proteggere i documenti e i messaggi di posta elettronica dell&quot;organizzazione."
+description: "Informazioni su come le applicazioni (ad esempio, le applicazioni di Office come Word, Excel, PowerPoint e Outlook) e i servizi (ad esempio, Exchange e SharePoint) più comunemente usati dagli utenti sfruttano il servizio Azure Rights Management di Azure Information Protection per proteggere i documenti e i messaggi di posta elettronica dell'organizzazione."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -13,9 +13,10 @@ ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: db9f67c5baeea678bf288f4f10237ff4517d905b
-ms.sourcegitcommit: 3ff6c072a228994308402778c493727cc682c6b7
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Supporto del servizio Azure Rights Management da parte delle applicazioni
 

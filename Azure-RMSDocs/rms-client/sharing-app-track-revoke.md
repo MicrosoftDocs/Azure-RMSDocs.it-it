@@ -1,6 +1,6 @@
 ---
-title: Tenere traccia dei documenti e revocarli con l&quot;app RMS sharing - AIP
-description: "Dopo che i documenti sono stati protetti usando l&quot;applicazione RMS sharing, è possibile rilevare come tali documenti vengono usati dagli utenti. Se necessario, è anche possibile revocare l&quot;accesso a questi documenti quando si desidera interromperne la condivisione."
+title: Tenere traccia dei documenti e revocarli con l'app RMS sharing - AIP
+description: "Dopo che i documenti sono stati protetti usando l'applicazione RMS sharing, è possibile rilevare come tali documenti vengono usati dagli utenti. Se necessario, è anche possibile revocare l'accesso a questi documenti quando si desidera interromperne la condivisione."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2889d0b44231969b6ea190b8d3dec0c9753b2688
-ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
-translationtype: HT
+ms.openlocfilehash: 34025b7080b4365c0c1fdd77355e78a7c8742ce2
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>Tenere traccia dei documenti e revocarli quando si usa l'applicazione RMS sharing
 

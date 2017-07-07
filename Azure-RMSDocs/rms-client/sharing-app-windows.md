@@ -1,6 +1,6 @@
 ---
 title: Applicazione Rights Management sharing per Windows - AIP
-description: "Risorse informative per l&quot;applicazione Rights Management sharing per Windows. Questa è un&quot;applicazione gratuita e scaricabile per organizzazioni che usano Active Directory Rights Management Services (AD RMS) o Azure Information Protection e per organizzazioni che non possiedono la propria infrastruttura di protezione delle informazioni ma vogliono utilizzare il contenuto protetto da altre organizzazioni che usano Azure Information Protection."
+description: "Risorse informative per l'applicazione Rights Management sharing per Windows. Questa è un'applicazione gratuita e scaricabile per organizzazioni che usano Active Directory Rights Management Services (AD RMS) o Azure Information Protection e per organizzazioni che non possiedono la propria infrastruttura di protezione delle informazioni ma vogliono utilizzare il contenuto protetto da altre organizzazioni che usano Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -13,8 +13,10 @@ ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 8ad723e96692919303fe946368c429b8c233d6ef
-ms.sourcegitcommit: ed954c84c9009d205638f0ad54fdbfc02ef5b92c
-translationtype: HT
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="rights-management-sharing-application-for-windows"></a>Applicazione Rights Management sharing per Windows
 

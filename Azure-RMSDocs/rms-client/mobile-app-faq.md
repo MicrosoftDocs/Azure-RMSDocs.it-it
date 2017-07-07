@@ -1,7 +1,7 @@
 ---
-title: Domande frequenti sull&quot;app Azure Information Protection per iOS e Android
+title: Domande frequenti sull'app Azure Information Protection per iOS e Android
 description: 
-keywords: Alcune domande frequenti riguardanti l&quot;uso dell&quot;app Azure Information Protection per iOS e Android
+keywords: Alcune domande frequenti riguardanti l'uso dell'app Azure Information Protection per iOS e Android
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -13,9 +13,11 @@ ms.technology: techgroup-identity
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d797dd31c44d985becc92ec81266afbe23cd970c
-ms.sourcegitcommit: 1671466a42e7e00e1cc2702b1f609fb112aac7db
-translationtype: HT
+ms.openlocfilehash: 5ea28525653966d2de609c118bd18079cff99b2d
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Domande frequenti sull'app Microsoft Azure Information Protection per iOS e Android
 
