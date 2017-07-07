@@ -1,6 +1,6 @@
 ---
 title: Scenario AIP - Condividere i file di Office con utenti esterni
-description: Questo scenario e la documentazione di supporto per l&quot;utente usano la tecnologia di protezione Azure Rights Management in modo che gli utenti possano inviare in modo sicuro un file di Office tramite posta elettronica alle persone in un&quot;altra organizzazione.
+description: Questo scenario e la documentazione di supporto per l'utente usano la tecnologia di protezione Azure Rights Management in modo che gli utenti possano inviare in modo sicuro un file di Office tramite posta elettronica alle persone in un'altra organizzazione.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: c10a4d7b-f57a-4a43-b66e-477777be59cc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 89c563ebcf62dc80cbda15048780adf5e414e70b
-ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
-translationtype: HT
+ms.openlocfilehash: bf7fac8cf06281fd75376fc3d5d2fa4fe17a6a33
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="scenario---share-an-office-file-with-users-in-another-organization"></a>Scenario - Condividere un file di Office con utenti in un'altra organizzazione
 

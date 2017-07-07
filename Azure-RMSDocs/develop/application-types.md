@@ -14,9 +14,11 @@ ms.assetid: 97169FC3-1395-4433-A632-7B0F020FABFE
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: f93df5f204350a56f8280f299c04478cc1b5dfba
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: f7ebcb3a432a4521a71e3cc80c20b1af64e051c7
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="application-types"></a>Tipi di applicazioni
 
@@ -31,7 +33,7 @@ Un’applicazione semplice può essere rappresentata da uno strumento da riga di
 
 ### <a name="server-mode-applications"></a>Applicazioni in modalità server
 
-La *modalità server* è destinata ad applicazioni non interattive che utilizzano, proteggono o elaborano contenuto protetto tramite RMS. Un esempio può essere un’applicazione per la *prevenzione della perdita di dati* che viene eseguita come servizio in un file server e che protegge automaticamente i documenti riservati. Per un esempio di questo tipo di applicazione, vedere l’[esempio IpcDlp](https://Code.MSDN.Microsoft.Com/IpcDlp-Sample-Application-d30bb99d).
+La *modalità server* è destinata ad applicazioni non interattive che utilizzano, proteggono o elaborano contenuto protetto tramite RMS. Un esempio può essere un’applicazione per la *prevenzione della perdita di dati* che viene eseguita come servizio in un file server e che protegge automaticamente i documenti riservati. Per un esempio di questo tipo di applicazione, vedere l’[esempio IpcDlp](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcDlpApp).
 
 Se l'applicazione usa la *modalità server*, l’autenticazione al server RMS deve avvenire automaticamente. A differenza della *modalità client*, RMS SDK 2.1 non visualizzerà una finestra di richiesta di credenziali se l’autenticazione automatica non riesce. Inoltre, nell’esecuzione in *modalità server* non è necessario alcun manifesto dell'applicazione.
 
