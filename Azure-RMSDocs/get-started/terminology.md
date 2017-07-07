@@ -1,6 +1,6 @@
 ---
 title: Terminologia di Azure Information Protection
-description: "In caso di dubbio su una parola, un&quot;espressione o un acronimo correlato a Microsoft Azure Information Protection, è possibile trovare qui i termini e le abbreviazioni specifici di Azure Information Protection o che assumono un particolare significato se usati nel contesto di questo servizio."
+description: "In caso di dubbio su una parola, un'espressione o un acronimo correlato a Microsoft Azure Information Protection, è possibile trovare qui i termini e le abbreviazioni specifici di Azure Information Protection o che assumono un particolare significato se usati nel contesto di questo servizio."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -12,10 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7ed60b1a2c02007668a11fdf8278bf196ee84521
-ms.sourcegitcommit: 9c033b7f5a6cbb20275aeecd48ff5071964eb587
+ms.openlocfilehash: f2c0053a8f1f4cde5193b65e5b8e521a2b6934c1
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologia di Azure Information Protection
 

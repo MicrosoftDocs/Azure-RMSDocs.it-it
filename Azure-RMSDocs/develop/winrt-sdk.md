@@ -1,6 +1,6 @@
 ---
 title: Installazione per Windows Store | Azure RMS
-description: Le applicazioni di Windows Store possono usare Microsoft Rights Management SDK 4.2 per abilitare la protezione integrata delle informazioni nell&quot;applicazione.
+description: Le applicazioni di Windows Store possono usare Microsoft Rights Management SDK 4.2 per abilitare la protezione integrata delle informazioni nell'applicazione.
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
@@ -14,9 +14,11 @@ ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: e10588c166beb48d98aba619d9e2269d5f808f3a
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 9180684ee216befaf9a2661724830bf72af039d1
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="windows-store-setup"></a>Installazione per Windows Store
 

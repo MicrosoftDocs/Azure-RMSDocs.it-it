@@ -1,6 +1,6 @@
 ---
-title: Controllo dell&quot;applicazione | Azure RMS
-description: Istruzioni su come configurare l&quot;applicazione per il test.
+title: Controllo dell'applicazione | Azure RMS
+description: Istruzioni su come configurare l'applicazione per il test.
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
@@ -14,9 +14,11 @@ ms.assetid: E480D8D6-F070-43D1-B2B0-6921459C3437
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: a4306d69fd08f4839c0b02fd3e0a2acbbbc28721
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: b88fa08e17ab2fdc78809c24eb665a2cf44fa3ec
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="testing-your-application"></a>Controllo dell'applicazione
 

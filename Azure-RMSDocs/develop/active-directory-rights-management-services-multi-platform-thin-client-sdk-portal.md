@@ -1,6 +1,6 @@
 ---
 title: Rights Management SDK 4.2 - AIP
-description: "RMS SDK 4.2 è un&quot;API semplificata di prossima generazione che consente un&quot;esperienza di sviluppo leggero per l&quot;aggiornamento di app per dispositivi con tecnologia di gestione dei diritti."
+description: "RMS SDK 4.2 è un'API semplificata di prossima generazione che consente un'esperienza di sviluppo leggero per l'aggiornamento di app per dispositivi con tecnologia di gestione dei diritti."
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
@@ -14,9 +14,11 @@ ms.assetid: 4ee4fa26-b4f7-478f-b360-be6f421c5718
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: a7369ccce6c13219bcf77c8ebeb41c753962ba11
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 25e78c5943abd48a0b1ee9aa93edd07667b4e8e8
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="rights-management-sdk-42"></a>Rights Management SDK 4.2
 

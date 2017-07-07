@@ -1,6 +1,6 @@
 ---
-title: Come registrare l&quot;app con Azure AD - AIP
-description: Descrive i concetti fondamentali dell&quot;autenticazione utente per l&quot;app con abilitazione per RMS.
+title: Come registrare l'app con Azure AD - AIP
+description: Descrive i concetti fondamentali dell'autenticazione utente per l'app con abilitazione per RMS.
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
@@ -14,9 +14,11 @@ ms.assetid: 200D9B23-F35D-4165-9AC4-C482A5CE1D28
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: a98b4eb3bd7705faf268a544f4efa7ba41712816
-ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
-translationtype: HT
+ms.openlocfilehash: 6034f922cccbe7e91bf420543749f1de6091e4e3
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="how-to-register-and-rms-enable-your-app-with-azure-ad"></a>Come registrare l'app e abilitarla per RMS con Azure AD
 
