@@ -1,5 +1,5 @@
 ---
-title: Guida per l&quot;utente di Azure Information Protection
+title: Guida per l'utente di Azure Information Protection
 description: Il client di Azure Information Protection per Windows consente di proteggere i documenti e i messaggi di posta elettronica importanti dagli utenti che non sono autorizzati a visualizzarli, anche se il messaggio di posta elettronica viene inoltrato o se il documento viene salvato in un altro percorso.
 author: cabailey
 ms.author: cabailey
@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 2cf46bf9-7d23-4f49-b5c1-7ed7b71c858f
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8a6f68782bb3f5c96e71fb5efa2b18960c2140ea
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 3facc7898e048af6f715410c73c43309419bf957
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="azure-information-protection-user-guide"></a>Guida per l'utente di Azure Information Protection
 

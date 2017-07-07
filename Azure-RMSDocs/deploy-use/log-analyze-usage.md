@@ -1,10 +1,10 @@
 ---
-title: Registrare e analizzare l&quot;utilizzo del servizio Azure RMS - AIP
-description: Informazioni e istruzioni sull&quot;uso della registrazione dell&quot;utilizzo con Azure Rights Management (Azure RMS).
+title: Registrare e analizzare l'utilizzo del servizio Azure RMS - AIP
+description: Informazioni e istruzioni sull'uso della registrazione dell'utilizzo con Azure Rights Management (Azure RMS).
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/24/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fd4fa09da3bffe9abdec5754185659393fdbf531
-ms.sourcegitcommit: 96410e06941ec414032d72cf96491884dc11aba0
-translationtype: HT
+ms.openlocfilehash: 92b64867486f64dd5920c578faeb411104f00ebd
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registrazione e analisi dell'utilizzo del servizio Azure Rights Management
 
@@ -39,7 +41,7 @@ Seguire queste istruzioni per comprendere il modo in cui è possibile usare la r
     Se si verifica una perdita di informazioni, è probabile che all'amministratore vengano richiesti i nominativi degli utenti che hanno avuto accesso a specifici documenti e l'indicazione delle informazioni visualizzate di recente da una persona sospetta. Se si usa la funzione di registrazione, è possibile rispondere a questo tipo di domande. Gli utenti che accedono a contenuto protetto, infatti, devono sempre ottenere una licenza di Rights Management per aprire immagini e documenti protetti con tale servizio, anche se i file vengono spostati tramite posta elettronica o copiati in unità USB o altri dispositivi di archiviazione. Questo significa che, quando si proteggono i dati con il servizio Azure Rights Management, è possibile usare i log come fonte certa di informazioni per l'esecuzione di analisi a scopo legale.
 
 > [!NOTE]
-> Se si è interessati solo alla funzione di registrazione delle attività amministrative del servizio Azure Rights Management e non alle modalità con cui viene usato il servizio stesso, è possibile usare il cmdlet [Get-AadrmAdminLog](https://msdn.microsoft.com/library/azure/dn629430.aspx) di Windows PowerShell per Azure Rights Management.
+> Se si è interessati solo alla funzione di registrazione delle attività amministrative del servizio Azure Rights Management e non alle modalità con cui viene usato il servizio stesso, è possibile usare il cmdlet [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) di Windows PowerShell per Azure Rights Management.
 > 
 > È possibile anche usare il portale di Azure classico per report generali sull'utilizzo, tra cui **Riepilogo per RMS**, **Utenti attivi RMS**, **Piattaforme dispositivi RMS** e **Utilizzo applicazioni RMS**. Per accedere a questi report dal portale di Azure classico, fare clic su **Active Directory**, selezionare e aprire una directory e quindi fare clic su **REPORT**.
 
@@ -213,23 +215,23 @@ Il servizio Azure Rights Management supporta diversi tipi di richiesta. La tabel
 
 
 ## <a name="windows-powershell-reference"></a>Riferimenti Windows PowerShell
-A partire da febbraio 2016, l'unico cmdlet di Windows PowerShell necessario per la funzionalità di registrazione dell'utilizzo di Azure Rights Management è [Get-AadrmUserLog](https://msdn.microsoft.com/library/azure/mt653941.aspx). 
+A partire da febbraio 2016, l'unico cmdlet di Windows PowerShell necessario per la funzionalità di registrazione dell'utilizzo di Azure Rights Management è [Get-AadrmUserLog](/powershell/module/aadrm/get-aadrmuserlog). 
 
 Prima di questa modifica, per i log dell'utilizzo di Azure Rights Management erano necessari i cmdlet seguenti, ora deprecati:  
 
--   [Disable-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629404.aspx)
+-   [Disable-AadrmUsageLogFeature](/powershell/module/aadrm/disable-aadrmusagelogfeature)
 
--   [Enable-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629421.aspx)
+-   [Enable-AadrmUsageLogFeature](/powershell/module/aadrm/enable-aadrmusagelogfeature)
 
--   [Get-AadrmUsageLog](https://msdn.microsoft.com/library/azure/dn629401.aspx)
+-   [Get-AadrmUsageLog](/powershell/module/aadrm/get-aadrmusagelog)
 
--   [Get-AadrmUsageLogFeature](https://msdn.microsoft.com/library/azure/dn629425.aspx)
+-   [Get-AadrmUsageLogFeature](/powershell/module/aadrm/get-aadrmusagelogfeature)
 
--   [Get-AadrmUsageLogLastCounterValue](https://msdn.microsoft.com/library/azure/dn629423.aspx)
+-   [Get-AadrmUsageLogLastCounterValue](/powershell/module/aadrm/get-aadrmusageloglastcountervalue)
 
--   [Get-AadrmUsageLogStorageAccount](https://msdn.microsoft.com/library/azure/dn629419.aspx)
+-   [Get-AadrmUsageLogStorageAccount](/powershell/module/aadrm/get-aadrmusagelogstorageaccount)
 
--   [Set-AadrmUsageLogStorageAccount](https://msdn.microsoft.com/library/azure/dn629426.aspx)
+-   [Set-AadrmUsageLogStorageAccount](/powershell/module/aadrm/set-aadrmusagelogstorageaccount)
 
 Se la risorsa di archiviazione di Azure include log precedenti alla modifica relativa alla registrazione di Azure Rights Management, è possibile scaricarli usando questi cmdlet meno recenti, con Get-AadrmUsageLog e Get-AadrmUsageLogLastCounterValue, in base alla procedura consentita in precedenza. Tutti i nuovi log dell'utilizzo, tuttavia, scriveranno nella nuova risorsa di archiviazione di Azure RMS e devono essere scaricati con Get-AadrmUserLog.
 

@@ -1,5 +1,5 @@
 ---
-title: Come consentire all&quot;applicazione di servizio di usare RMS basato su cloud | Azure RMS
+title: Come consentire all'applicazione di servizio di usare RMS basato su cloud | Azure RMS
 description: "Questo argomento descrive i passaggi per la configurazione dell’applicazione di servizio per l’uso di Azure Rights Management."
 keywords: 
 author: bruceperlerms
@@ -14,9 +14,11 @@ ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 06b34002fe3a5558383083a0e0aa3755715f780b
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 015a32453a92ab05d3ca99ed462e48ee9f5149eb
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>Procedura: Consentire all'applicazione di servizio di usare RMS basato su cloud
 

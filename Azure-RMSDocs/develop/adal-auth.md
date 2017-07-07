@@ -1,6 +1,6 @@
 ---
-title: Configurare un&quot;app per l&quot;autenticazione ADAL - AIP
-description: Passaggi per configurare l&quot;app Azure Information Protection per l&quot;uso dell&quot;autenticazione basata su ADAL di Azure
+title: Configurare un'app per l'autenticazione ADAL - AIP
+description: Passaggi per configurare l'app Azure Information Protection per l'uso dell'autenticazione basata su ADAL di Azure
 keywords: autenticazione, RMS, ADAL, Informatin Protection,
 author: bruceperlerms
 ms.author: bruceper
@@ -14,9 +14,11 @@ ms.assetid: f89f59b7-33d1-4ab3-bb64-1e9bda269935
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 27674aac7962c7a2f79fda8ccd6f90c366574b9b
-ms.sourcegitcommit: 262f88c4f46e29f3747271276c62913b4cefe4f7
-translationtype: HT
+ms.openlocfilehash: 32e85caec907cedfb45ade1156cb90ccdd68f96d
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="configure-your-app-for-adal-authentication"></a>Configurare un'app per l'autenticazione ADAL
 
