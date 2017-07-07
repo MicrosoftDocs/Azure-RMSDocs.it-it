@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9b67159136de154b934f70991fcb10799a4cbbb2
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: b7879dd85c2e46823cfe9c8f1f4482952a8db8aa
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="rms-client-deployment-notes"></a>Note sulla distribuzione del client RMS
 
@@ -66,7 +68,7 @@ Il client RMS è supportato con i sistemi operativi seguenti:
 Il client RMS è supportato nelle piattaforme di elaborazione x86 e x64.
 
 ### <a name="where-is-the--rms-client-installed"></a>Qual è il percorso in cui viene installato il client RMS?
-Per impostazione predefinita, il client RMS è installato in %ProgramFiles%\Active Directory Rights Management Services Client 2.<minor version number>.
+Per impostazione predefinita, il client RMS è installato in %ProgramFiles%\Active Directory Rights Management Services Client 2<minor version number>.
 
 ### <a name="what-files--are-associated-with-the-rms-client-software"></a>Quali sono i file associati al software del client RMS?
 I file seguenti sono installati come parte del software del client RMS:

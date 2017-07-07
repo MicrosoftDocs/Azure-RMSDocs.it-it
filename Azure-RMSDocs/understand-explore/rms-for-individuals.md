@@ -1,6 +1,6 @@
 ---
 title: RMS per utenti singoli e Azure Information Protection
-description: "Informazioni su RMS per utenti singoli, una sottoscrizione self-service gratuita per gli utenti di un&quot;organizzazione ai quali sono stati inviati file sensibili protetti dal servizio Azure Rights Management, ma che non possono essere autenticati perché il reparto IT non gestisce per loro un account di Azure."
+description: "Informazioni su RMS per utenti singoli, una sottoscrizione self-service gratuita per gli utenti di un'organizzazione ai quali sono stati inviati file sensibili protetti dal servizio Azure Rights Management, ma che non possono essere autenticati perché il reparto IT non gestisce per loro un account di Azure."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -12,9 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 30b94ca0c14fc9958e9d5bb07554f2ac656ece7a
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: b864f8223865661184ce5742e23313e88cae1db5
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS per utenti singoli e Azure Information Protection
 
