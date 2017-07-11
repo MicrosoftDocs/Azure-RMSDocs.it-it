@@ -1,6 +1,6 @@
 ---
-title: Aprire file protetti da RMS con l&quot;app RMS sharing - AIP
-description: Istruzioni per visualizzare e usare un file protetto che rende necessario avere l&quot;applicazione Rights Management (RMS) sharing installata.
+title: Aprire file protetti da RMS con l'app RMS sharing - AIP
+description: Istruzioni per visualizzare e usare un file protetto che rende necessario avere l'applicazione Rights Management (RMS) sharing installata.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -12,12 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 43f083ffaf8aefd9b79b2cb64a6408e565818b9b
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
+ms.openlocfilehash: a10162139f2b188640c446477fd9b4756d48c31e
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Visualizzare e usare i file che sono stati protetti da Rights Management
+<a id="view-and-use-files-that-have-been-protected-by-rights-management" class="xliff"></a>
+
+# Visualizzare e usare i file che sono stati protetti da Rights Management
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
@@ -33,7 +36,9 @@ Quando l'[applicazione Rights Management (RMA) sharing viene installata nel comp
 >     Quando si effettua l'iscrizione, utilizzare l'indirizzo di posta elettronica della società anziché un indirizzo di posta elettronica personale. Se si esegue l'iscrizione perché è stato inviato un allegato protetto tramite posta elettronica, utilizzare lo stesso indirizzo di posta elettronica utilizzato per inviare il messaggio di posta elettronica.
 > -   Per ulteriori informazioni, vedere [RMS per utenti singoli e Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-## <a name="to-view-a-protected-file"></a>Per visualizzare un file protetto
+<a id="to-view-a-protected-file" class="xliff"></a>
+
+## Per visualizzare un file protetto
 Utilizzando Esplora file o il messaggio di posta elettronica contenente l'allegato, fare doppio clic sul file protetto e immettere le credenziali se viene richiesto.
 
 Se si visualizzano due versioni del file, ma con estensioni del nome di file diverse, aprire il file con estensione .ppdf solo se gli altri file non si aprono. Se non è possibile aprire nemmeno la versione con estensione ppdf, installare innanzitutto l'[applicazione RMS sharing](install-sharing-app.md), che è in grado di aprire i file con estensione del nome di file ppdf.
@@ -43,7 +48,7 @@ Se si visualizzano due versioni del file, ma con estensioni del nome di file div
 
 Come il file verrà aperto dipende da come è stato protetto; è possibile saperlo esaminando l'estensione del file. In ogni caso, l’apertura del file potrebbe essere controllata e rimane controllata finché è protetto. Inoltre, se il file è stato inviato come allegato di posta elettronica, il mittente potrebbe ricevere una notifica tramite posta elettronica ogni volta che si apre il file.
 
-- **Il file ha l'estensione* .pfile***
+- **Il file ha estensione *PFILE***
 
     Il file è stato protetto in modo generico.
 
@@ -51,7 +56,7 @@ Come il file verrà aperto dipende da come è stato protetto; è possibile saper
 
     ![Finestra di dialogo per un pfile condiviso tramite posta elettronica quando si usa l'applicazione RMS sharing](../media/ADRMS_MSRMSApp_PfilePermission.png)
 
-- **Il file ha l'estensione* .ppdf* o è un file di testo o immagine protetto, ad esempio con estensione *.ptxt* o *.pjpg***
+- **Il file ha estensione *PPDF* o è un file di testo o immagine protetto, ad esempio *PTXT* o *PJPG***
 
     Il file è stato protetto in modo nativo come copia di sola lettura.
 
@@ -72,10 +77,12 @@ Per un elenco completo delle estensioni di file supportate dai servizi Rights Ma
 > [!NOTE]
 > Se, dopo avere verificato che il file è protetto tramite Rights Management, non è possibile aprire il file, scaricare e usare lo [strumento RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437). Seguire le istruzioni visualizzate nello strumento per determinare se nel computer si sono verificati problemi che possono impedire l'apertura di un documento protetto.
 
-## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>Per utilizzare i file protetti (ad esempio, modificare e stampare il file)
+<a id="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file" class="xliff"></a>
+
+## Per utilizzare i file protetti (ad esempio, modificare e stampare il file)
 Se dopo avere aperto il file protetto si vuole eseguire altre operazioni oltre alla lettura (ad esempio, modifica, copia e stampa), seguire le istruzioni in base all'estensione del nome di file:
 
-- **Il file ha l'estensione* .pfile***
+- **Il file ha estensione *PFILE***
 
     Salvare il file aperto e assegnargli una nuova estensione del nome di file associata all'applicazione che si desidera utilizzare.
 
@@ -83,7 +90,7 @@ Se dopo avere aperto il file protetto si vuole eseguire altre operazioni oltre a
 
     Il nuovo file non è più protetto. Se si desidera proteggerlo, è necessario eseguire questa operazione manualmente. Per istruzioni, vedere [Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione Rights Management sharing](sharing-app-protect-in-place.md).
 
-- **Il file ha l'estensione* .ppdf* o è un file di testo o immagine protetto, ad esempio con estensione *.ptxt* o *.pjpg***
+- **Il file ha estensione *PPDF* o è un file di testo o immagine protetto, ad esempio *PTXT* o *PJPG***
 
     È possibile solo visualizzare il file e se lo si rinomina o lo si sposta, la protezione rimane con il file.
 
@@ -94,14 +101,18 @@ Se dopo avere aperto il file protetto si vuole eseguire altre operazioni oltre a
     Le applicazioni abilitate per Rights Management sono in grado di aprire i file che sono stati protetti con altre applicazioni abilitate per Rights Management. Anche queste mantengono la protezione applicata ad essi, anche se si modifica il file o lo si salva con un altro nome di file o in un altro percorso. Queste applicazioni consentono di utilizzare il file in base alle autorizzazioni applicate ad esso, in modo che se si dispone delle autorizzazioni per utilizzare il file, è possibile farlo. Ad esempio, si potrebbe essere in grado di modificare il file, ma non di stamparlo.
 
 
-## <a name="examples-and-other-instructions"></a>Esempi e altre istruzioni
+<a id="examples-and-other-instructions" class="xliff"></a>
+
+## Esempi e altre istruzioni
 Per esempi di come è possibile usare l'applicazione Rights Management sharing e informazioni sulle procedure da seguire, vedere le sezioni seguenti della Guida dell'utente dell'applicazione Rights Management sharing:
 
 -   [Esempi per l'uso dell'applicazione RMS sharing](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [Per saperne di più](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-## <a name="see-also"></a>Vedere anche
+<a id="see-also" class="xliff"></a>
+
+## Vedere anche
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

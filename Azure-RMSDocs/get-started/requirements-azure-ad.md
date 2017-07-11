@@ -1,6 +1,6 @@
 ---
 title: Requisiti di Azure Active Directory per AIP
-description: Identificare i requisiti di Azure AD per l&quot;uso di Azure Information Protection, in modo che gli utenti possano essere autenticati.
+description: Identificare i requisiti di Azure AD per l'uso di Azure Information Protection, in modo che gli utenti possano essere autenticati.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -12,12 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2022f86a32725ef9dfcf5692b1194348f6c39f3b
-ms.sourcegitcommit: b471c20eda011a7b75ee801c34081fb4773b64dc
+ms.openlocfilehash: 27ce787cbf5370634f6b1e15903cc981f08656a2
+ms.sourcegitcommit: 505a2c182bcd5a87a7dcb43b9aa1e43244f4c537
 ms.translationtype: HT
 ms.contentlocale: it-IT
+ms.lasthandoff: 07/03/2017
 ---
-# <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Requisiti di Azure Active Directory per Azure Information Protection
+<a id="azure-active-directory-requirements-for-azure-information-protection" class="xliff"></a>
+
+# Requisiti di Azure Active Directory per Azure Information Protection
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -33,7 +36,9 @@ Per altre informazioni, vedere le risorse seguenti contenute nella documentazion
 
 Se si vuole integrare la directory di Azure AD con le foreste di AD locali, vedere [Integrazione delle identità locali con Azure Active Directory](/active-directory/active-directory-aadconnect).
 
-### <a name="scenarios-that-have-specific-requirements"></a>Scenari che hanno requisiti specifici 
+<a id="scenarios-that-have-specific-requirements" class="xliff"></a>
+
+### Scenari che hanno requisiti specifici 
 
 Computer che eseguono Office 2010: 
 
@@ -43,7 +48,7 @@ Computer che eseguono Office 2010:
 
 Supporto dell'autenticazione basata sui certificati:
 
-- L'app Azure Information Protection per Android supporta l'autenticazione basata sui certificati se si dispone almeno della versione 5.0 di Android. Per istruzioni per la configurazione dell'autenticazione basata sui certificati, vedere [Get started with certificate-based authentication in Azure Active Directory](/azure/active-directory/active-directory-certificate-based-authentication-get-started) (Introduzione all'autenticazione basata sui certificati in Azure Active Directory).
+- Le app Azure Information Protection per iOS e Android supportano l'autenticazione basata su certificati. Per istruzioni per la configurazione dell'autenticazione basata sui certificati, vedere [Get started with certificate-based authentication in Azure Active Directory](/azure/active-directory/active-directory-certificate-based-authentication-get-started) (Introduzione all'autenticazione basata sui certificati in Azure Active Directory).
 
 Il valore del nome UPN degli utenti non corrisponde al rispettivo indirizzo di posta elettronica:
 
@@ -55,7 +60,9 @@ Dispositivi mobili o computer Mac che eseguono l'autenticazione locale tramite A
 
 - È necessario usare AD FS nella versione server minima di **Windows Server 2012 R2** oppure un provider di autenticazione alternativo che supporti il protocollo OAuth 2.0.
 
-## <a name="multi-factor-authentication-mfa-and-azure-information-protection"></a>Multi-Factor Authentication (MFA) e Azure Information Protection
+<a id="multi-factor-authentication-mfa-and-azure-information-protection" class="xliff"></a>
+
+## Multi-Factor Authentication (MFA) e Azure Information Protection
 Per usare Multi-Factor Authentication (MFA) con Azure Information Protection, è necessario almeno uno degli elementi seguenti:
 
 -   Office 2013 (versione minima):
@@ -88,7 +95,9 @@ Quindi, configurare la soluzione MFA:
 
         Per altre informazioni su questo scenario, vedere il post relativo al [programma di gestione delle identità per Office 365](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) sul blog di Office.
 
-## <a name="next-steps"></a>Passaggi successivi
+<a id="next-steps" class="xliff"></a>
+
+## Passaggi successivi
 Per verificare gli altri requisiti, vedere [Requisiti per Azure Information Protection](requirements-azure-rms.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

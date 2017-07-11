@@ -1,6 +1,6 @@
 ---
 title: Problemi risolti da Azure Rights Management - AIP
-description: Identificare i requisiti o i possibili problemi dell&quot;organizzazione e scoprire la soluzione offerta dalla tecnologia Azure RMS.
+description: Identificare i requisiti o i possibili problemi dell'organizzazione e scoprire la soluzione offerta dalla tecnologia Azure RMS.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -13,10 +13,14 @@ ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 65b9d369308505e74e0dde8d96973f9985d209a0
-ms.sourcegitcommit: 3ff6c072a228994308402778c493727cc682c6b7
-translationtype: HT
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="what-problems-does-azure-rms-solve"></a>Problemi risolti da Azure RMS
+<a id="what-problems-does-azure-rms-solve" class="xliff"></a>
+
+# Problemi risolti da Azure RMS
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -41,7 +45,9 @@ Azure RMS è la tecnologia di protezione usata da [Azure Information Protection]
 > [!TIP]
 > Gli utenti che hanno già acquisito familiarità con la versione locale di Rights Management, Active Directory Rights Management Services (AD RMS), possono essere interessati alla tabella comparativa disponibile in [Confronto tra Azure Rights Management e AD RMS](compare-azure-rms-ad-rms.md).
 
-## <a name="security-compliance-and-regulatory-requirements"></a>Requisiti di sicurezza, conformità e normativi
+<a id="security-compliance-and-regulatory-requirements" class="xliff"></a>
+
+## Requisiti di sicurezza, conformità e normativi
 Azure Rights Management supporta i requisiti di sicurezza, conformità e normativi seguenti:
 
 √ Uso di crittografia standard del settore e supporto per FIPS 140-2. Per altre informazioni, vedere [Controlli crittografici usati in Azure RMS: algoritmi e lunghezze delle chiavi](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
@@ -64,7 +70,9 @@ Azure Rights Management supporta i requisiti di sicurezza, conformità e normati
 
 Per altre informazioni su queste certificazioni esterne, vedere il [Centro protezione Azure](http://azure.microsoft.com/support/trust-center/compliance/).
 
-## <a name="next-steps"></a>Passaggi successivi
+<a id="next-steps" class="xliff"></a>
+
+## Passaggi successivi
 
 Per altre informazioni tecniche sul funzionamento del servizio Azure Rights Management, vedere [Funzionamento di Azure RMS](how-does-it-work.md).
 

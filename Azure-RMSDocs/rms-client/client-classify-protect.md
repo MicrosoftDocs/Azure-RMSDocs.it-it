@@ -4,7 +4,7 @@ description: Istruzioni su come classificare e proteggere documenti e messaggi d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/20/2017
+ms.date: 06/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f461b349440043bcf5d8624731eda86968194462
-ms.sourcegitcommit: 52b7502e7049358f9fc0a418625bb460bb81479f
-translationtype: HT
+ms.openlocfilehash: 960fe1abf2fa4f5b8976f190454d31849736298a
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Classificare e proteggere un file o un messaggio di posta elettronica tramite Azure Information Protection
+<a id="classify-and-protect-a-file-or-email-by-using-azure-information-protection" class="xliff"></a>
+
+# Classificare e proteggere un file o un messaggio di posta elettronica tramite Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 
@@ -24,7 +28,9 @@ Il modo più semplice per classificare e proteggere i documenti e i messaggi di 
 
 Tuttavia, è possibile classificare e proteggere i file tramite **Esplora file**, che supporta altri tipi di file e consente di classificare e proteggere più file contemporaneamente. Questo metodo supporta la protezione di documenti di Office, file PDF, file di testo e immagine e un'ampia gamma di altri file. 
 
-### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Condividere in modo sicuro un file con utenti esterni all'organizzazione
+<a id="safely-share-a-file-with-people-outside-your-organization" class="xliff"></a>
+
+### Condividere in modo sicuro un file con utenti esterni all'organizzazione
 
 I file protetti possono essere condivisi con altri utenti in tutta sicurezza. È ad esempio possibile allegare il file a un messaggio di posta elettronica o inviare un invito dal sito di SharePoint.
 
@@ -35,7 +41,9 @@ Se si impostano autorizzazioni personalizzate e il file è già protetto per uso
 Quando il file è protetto con le autorizzazioni personalizzate, usare il meccanismo di condivisione standard per condividerlo. Se le persone con cui si condivide il file ricevono un file protetto per la prima volta, potrebbe essere necessario fornire loro le istruzioni per visualizzarlo. A tale scopo, è possibile copiare e incollare il messaggio seguente: **Questo file è protetto con Microsoft Azure Information Protection. In caso di primo utilizzo, vedere queste [istruzioni](https://aka.ms/rms-signup).**
 
 
-## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Uso delle app di Office per classificare e proteggere documenti e messaggi di posta elettronica
+<a id="using-office-apps-to-classify-and-protect-your-documents-and-emails" class="xliff"></a>
+
+## Uso delle app di Office per classificare e proteggere documenti e messaggi di posta elettronica
 
 Usare la barra di Azure Information Protection e selezionare una delle etichette configurate. 
 
@@ -51,13 +59,19 @@ Oltre a selezionare manualmente le etichette, è anche possibile applicarle nei 
 
 - L'amministratore ha configurato indicazioni per la selezione di un'etichetta specifica quando vengono rilevati dati sensibili. È possibile accettare il suggerimento (l'etichetta viene applicata) o rifiutarlo (l'etichetta consigliata non viene applicata).
 
-### <a name="exceptions-for-the-azure-information-protection-bar"></a>Eccezioni per la barra di Azure Information Protection 
+<a id="exceptions-for-the-azure-information-protection-bar" class="xliff"></a>
 
-##### <a name="dont-see-this-information-protection-bar-in-your-office-apps"></a>La barra di Information Protection non viene visualizzata nelle app di Office?
+### Eccezioni per la barra di Azure Information Protection 
+
+<a id="dont-see-this-information-protection-bar-in-your-office-apps" class="xliff"></a>
+
+##### La barra di Information Protection non viene visualizzata nelle app di Office?
 
 - Il client Azure Information Protection potrebbe non essere [installato](install-client-app.md) oppure potrebbe essere in esecuzione in [modalità di sola protezione](client-protection-only-mode.md).
  
-##### <a name="is-the-label-that-you-expect-to-see-not-displayed-on-the-bar"></a>Sulla barra non è visualizzata un'etichetta che ci si aspetterebbe di vedere? 
+<a id="is-the-label-that-you-expect-to-see-not-displayed-on-the-bar" class="xliff"></a>
+
+##### Sulla barra non è visualizzata un'etichetta che ci si aspetterebbe di vedere? 
 
 - Se l'amministratore ha configurato di recente una nuova etichetta, provare a chiudere tutte le istanze dell'app di Office e riaprirle. In questo modo, verrà eseguito un controllo della presenza di modifiche alle etichette.
 
@@ -65,7 +79,9 @@ Oltre a selezionare manualmente le etichette, è anche possibile applicarle nei 
 
 - L'etichetta potrebbe essere in un criterio con ambito che non include l'account in uso. Rivolgersi all'help desk o all'amministratore.
 
-### <a name="set-custom-permissions-for-a-document"></a>Impostare autorizzazioni personalizzate per un documento
+<a id="set-custom-permissions-for-a-document" class="xliff"></a>
+
+### Impostare autorizzazioni personalizzate per un documento
 
 È possibile specificare impostazioni di protezione personalizzate per i documenti anziché usare quelle eventualmente incluse dall'amministratore con l'etichetta selezionata.
 
@@ -79,16 +95,18 @@ Oltre a selezionare manualmente le etichette, è anche possibile applicarle nei 
 
     - **Proteggi con autorizzazioni personalizzate**: assicurarsi che questa opzione sia selezionata in modo da poter specificare e applicare le autorizzazioni personalizzate. Deselezionare questa opzione per rimuovere le eventuali autorizzazioni personalizzate.
     
-    - **Selezionare le autorizzazioni**: se si vuole proteggere il file in modo da ottenere l'accesso esclusivo, selezionare **Solo per l'utente**. In caso contrario, scegliere Seleziona un livello di accesso per assegnare un livello di accesso a determinati utenti.
+    - **Selezionare le autorizzazioni**: se si vuole proteggere il file in modo da ottenere l'accesso esclusivo, selezionare **Solo per l'utente**. In caso contrario, selezionare il livello di accesso che dovrà essere assegnato agli utenti.
 
     - **Selezionare gli utenti, i gruppi o le organizzazioni**: specificare gli utenti che devono avere le autorizzazioni selezionate per uno o più file. Digitare l'indirizzo di posta elettronica completo di uno o più utenti o di un gruppo oppure il nome di dominio di un'organizzazione per tutti gli utenti dell'organizzazione. Si noti che gli indirizzi di posta elettronica personali non sono attualmente supportati.
         
-    - **Scadenza dell'accesso**: selezionare questa opzione solo per i file per cui il fattore tempo è importante in modo tale che gli utenti specificati non potranno aprire il file o i file selezionati dopo una data specificata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno selezionato, gli utenti specificati non potranno aprire il file.
+    - **Scadenza dell'accesso**: selezionare questa opzione solo per i file per cui il fattore tempo è importante in modo tale che gli utenti specificati non siano in grado di aprire il file o i file selezionati dopo una data specificata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno impostato gli utenti specificati non saranno in grado di aprire il file.
 
 5. Fare clic su **Applica** e attendere che venga visualizzato il messaggio **Le autorizzazioni personalizzate sono state applicate**. e quindi fare clic su **Chiudi**.
 
 
-### <a name="keyboard-shortcuts-for-the-azure-information-protection-bar"></a>Tasti di scelta rapida per la barra di Azure Information Protection
+<a id="keyboard-shortcuts-for-the-azure-information-protection-bar" class="xliff"></a>
+
+### Tasti di scelta rapida per la barra di Azure Information Protection
 
 Per accedere alla barra di Azure Information Protection tramite i tasti di scelta rapida, usare la combinazione di tasti seguente:
 
@@ -96,7 +114,9 @@ Per accedere alla barra di Azure Information Protection tramite i tasti di scelt
 
 Usare quindi TAB per passare tra le etichette e altri controlli sulla barra (le icone **Nascondi le etichette** e **Elimina l'etichetta**) e INVIO per selezionarle.
 
-## <a name="using-file-explorer-to-classify-and-protect-files"></a>Uso di Esplora file per classificare e proteggere file
+<a id="using-file-explorer-to-classify-and-protect-files" class="xliff"></a>
+
+## Uso di Esplora file per classificare e proteggere file
 
 Quando si usa Esplora file, è possibile classificare e proteggere rapidamente un singolo file, più file o una cartella. 
 
@@ -109,7 +129,9 @@ Alcuni file vengono esclusi automaticamente dalla classificazione e dalla protez
 La guida dell'amministratore contiene un elenco completo dei tipi di file supportati e dei file e delle cartelle che vengono automaticamente esclusi: [Tipi di file supportati dal client Azure Information Protection](client-admin-guide-file-types.md).
 
 
-### <a name="to-classify-and-protect-a-file-by-using-file-explorer"></a>Per classificare e proteggere un file mediante Esplora file
+<a id="to-classify-and-protect-a-file-by-using-file-explorer" class="xliff"></a>
+
+### Per classificare e proteggere un file mediante Esplora file
 
 1. In Esplora File selezionare un file, più file o una cartella. Fare clic con il pulsante destro del mouse e scegliere **Classifica e proteggi**. Ad esempio:
     
@@ -133,9 +155,11 @@ La guida dell'amministratore contiene un elenco completo dei tipi di file suppor
 
     - **Selezionare le autorizzazioni**: selezionare il livello di accesso da assegnare agli utenti per la protezione del file o dei file selezionati.
     
-    - **Selezionare gli utenti**: specificare gli utenti che devono avere le autorizzazioni selezionate per il file o i file. Digitare l'indirizzo di posta elettronica completo di uno o più utenti o di un gruppo oppure il nome di dominio di un'organizzazione per tutti gli utenti dell'organizzazione. Si noti che gli indirizzi di posta elettronica personali non sono attualmente supportati.
+    - **Selezionare gli utenti**: specificare gli utenti che devono avere le autorizzazioni selezionate per il file o i file. È possibile selezionarli dalla Rubrica, ad esempio nel caso in cui siano persone della propria organizzazione e contatti di altre organizzazioni. Per gli altri utenti, digitare l'indirizzo di posta elettronica completo dell'utente, l'indirizzo di posta elettronica di un gruppo oppure un nome di dominio di un'organizzazione per tutti gli utenti di quell'organizzazione. Si noti che gli indirizzi di posta elettronica personali non sono attualmente supportati.
         
-    - **Scadenza dell'accesso**: selezionare questa opzione solo per i file per cui il fattore tempo è importante in modo tale che gli utenti specificati non potranno aprire il file o i file selezionati dopo una data specificata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno selezionato, gli utenti specificati non potranno aprire il file.
+    - **Scadenza dell'accesso**: selezionare questa opzione solo per i file per cui il fattore tempo è importante in modo tale che gli utenti specificati non siano in grado di aprire il file o i file selezionati dopo una data specificata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno impostato gli utenti specificati non saranno in grado di aprire il file.
+    
+    Si noti che se questa impostazione in precedenza è stata configurata usando le autorizzazioni personalizzate di un'app di Office 2010, la data di scadenza specificata non viene visualizzata in questa finestra di dialogo, ma la data viene comunque impostata. Questo è un problema di visualizzazione che riguarda solo la data di scadenza configurata in Office 2010.
 
 5. Fare clic su **Applica** e attendere la visualizzazione del messaggio **Operazione completata** per vedere i risultati. e quindi fare clic su **Chiudi**.
 
@@ -148,7 +172,9 @@ Se si cambia idea sulla classificazione e la protezione o se in seguito è neces
 La classificazione e la protezione specificate rimangono associate al file, anche se si invia il file per posta elettronica o lo si salva in un altro percorso. Se si protegge il file, è possibile tenere traccia del modo in cui gli utenti lo usano e se necessario revocarne l'accesso. Per altre informazioni, vedere [Tenere traccia dei documenti protetti e revocarli quando si usa Azure Information Protection](client-track-revoke.md). 
 
 
-## <a name="other-instructions"></a>Altre istruzioni
+<a id="other-instructions" class="xliff"></a>
+
+## Altre istruzioni
 Ulteriori procedure nella Guida per l'utente di Azure Information Protection:
 
 -   [Per saperne di più](client-user-guide.md#what-do-you-want-to-do)

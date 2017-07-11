@@ -1,6 +1,6 @@
 ---
 title: Configurare modelli personalizzati per Azure RMS - AIP
-description: Informazioni e istruzioni per gli amministratori per configurare e gestire i modelli dei diritti di utilizzo. I modelli semplificano, per utenti e amministratori, l&quot;applicazione ai file riservati di criteri che limitano l&quot;accesso agli utenti autorizzati.
+description: Informazioni e istruzioni per gli amministratori per configurare e gestire i modelli dei diritti di utilizzo. I modelli semplificano, per utenti e amministratori, l'applicazione ai file riservati di criteri che limitano l'accesso agli utenti autorizzati.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -12,11 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 1775d8d0-9a59-42c8-914f-ce285b71ac1c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 27ffbc6eb9e88840f1b33c59b76bdaa5d028cc36
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: d141589c9dc9d90cf3a507db77f624c849f955b5
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="configuring-custom-templates-for-the-azure-rights-management-service"></a>Configurazione di modelli personalizzati per il servizio Azure Rights Management
+<a id="configuring-custom-templates-for-the-azure-rights-management-service" class="xliff"></a>
+
+# Configurazione di modelli personalizzati per il servizio Azure Rights Management
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -59,6 +63,10 @@ Per configurare e usare i modelli personalizzati, usare le informazioni seguenti
 -   [Come aggiornare i modelli per gli utenti](refresh-templates.md)
 
 -   [Usare PowerShell per gestire i modelli](configure-templates-with-powershell.md)
+
+> [!TIP]
+> È in corso lo spostamento di modelli e nuove opzioni per la configurazione della protezione di Azure Rights Management nel portale di Azure. Questa funzionalità è attualmente in anteprima. Per altre informazioni, vedere l'annuncio del post di blog seguente: [Azure Information Protection unified administration now in Preview](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/) (Anteprima ora disponibile di Azure Information Protection) 
+
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

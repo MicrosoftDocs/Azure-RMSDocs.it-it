@@ -1,20 +1,24 @@
 ---
-title: Esercitazione per l&quot;avvio rapido - Passaggio 2 - AIP
-description: 'Passaggio 2 di un&quot;esercitazione introduttiva per provare rapidamente a usare Azure Information Protection: configurare i criteri.'
+title: Esercitazione per l'avvio rapido - Passaggio 2 - AIP
+description: 'Passaggio 2 di un''esercitazione introduttiva per provare rapidamente a usare Azure Information Protection: configurare i criteri.'
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 05/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 9a2392df400356e7937db49cec3e0fe1e3d0f228
-ms.sourcegitcommit: d814d2876cf56e8fff0b107a5e3ec6df2aeda9ae
-translationtype: HT
+ms.openlocfilehash: b91bfea99170b747bb199b3c966ae8c89fae5359
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passaggio 2: Configurare e pubblicare criteri di Azure Information Protection
+<a id="step-2-configure-and-publish-the-azure-information-protection-policy" class="xliff"></a>
+
+# Passaggio 2: Configurare e pubblicare criteri di Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
 
@@ -29,7 +33,7 @@ Il criterio predefinito disponibile con Azure è utilizzabile senza alcuna opera
     > [!TIP] 
     > Selezionare **Aggiungi al dashboard** per creare un riquadro **Azure Information Protection** nel dashboard, in modo da ignorare la ricerca del servizio al successivo accesso al portale.
 
-3.  Esaminare il pannello **Criteri: Globale** visualizzato che mostra i criteri predefiniti di Information Protection creati automaticamente per il tenant:
+3. Leggere le informazioni disponibili nella pagina **Avvio rapido** che si apre automaticamente quando ci si connette al servizio per la prima volta. È possibile tornare a questa pagina in un secondo momento. Per questa esercitazione, fare clic su **Criteri globali** per aprire il pannello **Criteri: globali**. Questo pannello, che si apre automaticamente per connessioni successive al servizio, visualizza i criteri predefiniti di Information Protection creati automaticamente per il tenant:
     
     - Etichette per la classificazione: **Personal**, **Public**, **General**, **Confidential** (Riservato) e **Highly Confidential** (Riservatezza elevata). Le ultime due etichette si espandono per visualizzare le etichette secondarie **Tutti i dipendenti** e **Chiunque (senza protezione)**, offrendo esempi di come una classificazione può avere sottocategorie.
     
@@ -46,7 +50,9 @@ Il criterio predefinito disponibile con Azure è utilizzabile senza alcuna opera
     
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Criterio predefinito](../media/info-protect-policy-default-settings.png)
 
-## <a name="changing-the-settings-for-a-default-label-and-prompt-for-justification"></a>Modifica delle impostazioni per un'etichetta predefinita e per la richiesta di giustificazione
+<a id="changing-the-settings-for-a-default-label-and-prompt-for-justification" class="xliff"></a>
+
+## Modifica delle impostazioni per un'etichetta predefinita e per la richiesta di giustificazione
 
 Nel corso di questa esercitazione verranno modificate alcune impostazioni dei criteri per poterne osservare il funzionamento:
 
@@ -56,7 +62,9 @@ Nel corso di questa esercitazione verranno modificate alcune impostazioni dei cr
 
 2. Impostare **Gli utenti devono fornire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione** su **On**.
 
-## <a name="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification"></a>Configurazione di un'etichetta per la protezione, di una filigrana e di una condizione per la richiesta di classificazione
+<a id="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification" class="xliff"></a>
+
+## Configurazione di un'etichetta per la protezione, di una filigrana e di una condizione per la richiesta di classificazione
 
 Verranno modificate ora le impostazioni di una delle etichette secondarie, ovvero **All Employees** (Tutti i dipendenti) dall'etichetta principale **Confidential** (Riservato). 
 

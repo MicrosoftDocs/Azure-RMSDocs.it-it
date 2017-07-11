@@ -1,10 +1,10 @@
 ---
 title: Configurare e pubblicare un modello personalizzato di Azure RMS
-description: Istruzioni per creare e gestire modelli personalizzati nel portale di Azure classico. I modelli semplificano l&quot;applicazione, da parte di utenti finali e amministratori, di criteri appropriati per la protezione di documenti e messaggi di posta elettronica.
+description: Istruzioni per creare e gestire modelli personalizzati nel portale di Azure classico. I modelli semplificano l'applicazione, da parte di utenti finali e amministratori, di criteri appropriati per la protezione di documenti e messaggi di posta elettronica.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/28/2017
+ms.date: 05/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,26 +12,35 @@ ms.technology: techgroup-identity
 ms.assetid: d6e9aa0c-1694-4a53-8898-4939f31cc13f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fe569124494f837e770e5f1f8c6de0c2188a6e40
-ms.sourcegitcommit: ed954c84c9009d205638f0ad54fdbfc02ef5b92c
-translationtype: HT
+ms.openlocfilehash: 56a17c745ba55c2c7b97bd444be42e3554e795b9
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="create-configure-and-publish-a-custom-template"></a>Creare, configurare e pubblicare un modello personalizzato
+<a id="create-configure-and-publish-a-custom-template" class="xliff"></a>
+
+# Creare, configurare e pubblicare un modello personalizzato
 
 >*Si applica a: Azure Information Protection, Office 365*
 
 
 Il portale di Azure classico consente di creare e gestire modelli personalizzati. È possibile eseguire questa operazione direttamente nel portale di Azure classico oppure accedendo all'interfaccia di amministrazione di Office 365 e scegliendo le **funzionalità avanzate** di Rights Management, che a loro volta reindirizzano al portale di Azure classico.
 
+> [!TIP]
+> È in corso lo spostamento di modelli e nuove opzioni per la configurazione della protezione di Azure Rights Management nel portale di Azure. Questa funzionalità è attualmente disponibile nell'anteprima. Per altre informazioni, vedere l'annuncio del post di blog relativo all'[amministrazione unificata di Azure Information Protection disponibile nell'anteprima](https://blogs.technet.microsoft.com/enterprisemobility/2017/04/26/azure-information-protection-unified-administration-now-in-preview/) 
+
 Per creare e gestire modelli nel portale di Azure classico è necessario il ruolo di amministratore globale. Se il ruolo di amministratore globale per il servizio Azure Rights Management è stato assegnato ad altri utenti, questi possono anche creare e gestire modelli, ma devono usare [PowerShell](configure-templates-with-powershell.md). Per altre informazioni, vedere [È necessario essere un amministratore globale per configurare Azure RMS oppure tale configurazione può essere delegata ad altri amministratori?](../get-started/faqs-rms.md#do-you-need-to-be-a-global-admin-to-configure-azure-rms-or-can-i-delegate-to-other-administrators) 
 
 Per creare, configurare e pubblicare modelli personalizzati per Rights Management, seguire queste procedure.
 
-## <a name="to-create-a-custom-template"></a>Per creare un modello personalizzato
+<a id="to-create-a-custom-template" class="xliff"></a>
+
+## Per creare un modello personalizzato
 
 1.  Seguire una di queste due procedure in base al tipo di accesso scelto, dall'interfaccia di amministrazione di Office 365 o dal portale di Azure classico:
 
-    -   Dall'**interfaccia di amministrazione di Office 365** il percorso è diverso se si usa la versione di anteprima dell'interfaccia di amministrazione di Office 365 (e quale versione) o l'interfaccia di amministrazione classica di Office 365. Per tutte le versioni è comunque possibile passare direttamente alla pagina [Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx): 
+    -   Dall'**interfaccia di amministrazione di Office 365** è possibile passare direttamente alla pagina di [Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx): 
 
         1.  Nella sezione **Configurazione aggiuntiva** fare clic su **Funzionalità avanzate**.
 
@@ -67,7 +76,9 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
 
 4. Nella pagina di avvio rapido **Introduzione a Rights Management** fare clic su **Gestire i modelli di criteri di diritti**. Il modello appena creato sarà visualizzato nell'elenco dei modelli con lo stato **Archiviato**. A questo punto il modello è stato creato, ma non è configurato e non è visibile agli utenti.
 
-## <a name="to-configure-and-publish-a-custom-template"></a>Per configurare e pubblicare un modello personalizzato
+<a id="to-configure-and-publish-a-custom-template" class="xliff"></a>
+
+## Per configurare e pubblicare un modello personalizzato
 
 1.  Selezionare il modello appena creato nella pagina **MODELLI** del portale di Azure classico.
 
@@ -159,7 +170,9 @@ Per apportare modifiche al modello, selezionarlo e quindi eseguire di nuovo i pa
 > [!WARNING]
 > Quando si apportano modifiche a un modello salvato in precedenza, le modifiche non saranno visibili ai client finché i modelli non vengono aggiornati nei computer. Per altre informazioni, vedere l'articolo relativo all'[aggiornamento dei modelli per gli utenti](refresh-templates.md).
 
-## <a name="see-also"></a>Vedere anche
+<a id="see-also" class="xliff"></a>
+
+## Vedere anche
 [Configurare modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

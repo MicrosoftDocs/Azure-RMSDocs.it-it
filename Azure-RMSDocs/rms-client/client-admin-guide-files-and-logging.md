@@ -1,10 +1,10 @@
 ---
-title: File e registrazione dell&quot;utilizzo del client Azure Information Protection
-description: Informazioni sui file e sulla registrazione dell&quot;utilizzo per il client Azure Information Protection per Windows.
+title: File e registrazione dell'utilizzo del client Azure Information Protection
+description: Informazioni sui file e sulla registrazione dell'utilizzo per il client Azure Information Protection per Windows.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 05/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,19 +12,25 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 78c355acd1bc87347ef2d4b02ffbb24f2c08bc70
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: bf695772d545daca602903e156903da2aadaae7a
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="azure-information-protection-client-files-and-client-usage-logging"></a>File e registrazione dell'utilizzo del client Azure Information Protection
+<a id="azure-information-protection-client-files-and-client-usage-logging" class="xliff"></a>
 
->*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
+# File e registrazione dell'utilizzo del client Azure Information Protection
+
+>*Si applica a: AD RMS, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012*
 
 Dopo aver installato il client Azure Information Protection, potrebbe essere necessario individuare il percorso dei file e monitorare l'utilizzo del client.
 
-## <a name="file-locations-for-the-azure-information-protection-client"></a>Percorsi dei file per il client Azure Information Protection
+<a id="file-locations-for-the-azure-information-protection-client" class="xliff"></a>
 
-File del client:    
+## Percorsi dei file per il client Azure Information Protection
+
+File del client:   
 
 - Per i sistemi operativi a 64 bit: **\Programmi (x86)\Microsoft Azure Information Protection**
 
@@ -34,7 +40,9 @@ File di log del client e file di criteri attualmente installati:
 
 - Per i sistemi operativi a 64 e 32 bit: **%localappdata%\Microsoft\MSIP**
 
-## <a name="usage-logging-for-the-azure-information-protection-client"></a>Registrazione dell'utilizzo per il client Azure Information Protection
+<a id="usage-logging-for-the-azure-information-protection-client" class="xliff"></a>
+
+## Registrazione dell'utilizzo per il client Azure Information Protection
 
 Il client registra l'attività dell'utente nel registro eventi locale **Applicazioni e servizi** di Windows, **Azure Information Protection**. Gli eventi includono le informazioni seguenti:
 
@@ -85,9 +93,12 @@ Per informazioni sulla registrazione dell'utilizzo per il servizio Azure Rights 
 
 
 
-## <a name="next-steps"></a>Passaggi successivi
+<a id="next-steps" class="xliff"></a>
+
+## Passaggi successivi
 Dopo aver identificato tutti i file di log associati al client Azure Information Protection, vedere gli argomenti seguenti per altre informazioni che potrebbero essere necessarie per supportare il client:
 
+- [Personalizzazioni](client-admin-guide-customizations.md)
 
 - [Rilevamento dei documenti](client-admin-guide-document-tracking.md)
 
