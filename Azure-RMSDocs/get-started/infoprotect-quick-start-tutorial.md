@@ -1,20 +1,24 @@
 ---
 title: Esercitazione introduttiva di Azure Information Protection
-description: Esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell&quot;organizzazione. L&quot;esecuzione dell&quot;esercitazione richiede circa 20 minuti.
+description: Esercitazione introduttiva che consente di provare rapidamente Microsoft Azure Information Protection nell'organizzazione. L'esecuzione dell'esercitazione richiede circa 20 minuti.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/07/2017
+ms.date: 05/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 13dbb47088c33f72bdb0acdbb7cba1245df14f7f
-ms.sourcegitcommit: 7b773ca5bf1abf30e527c34717ecb2dc96f88033
-translationtype: HT
+ms.openlocfilehash: 023330bbd3909290e098bd7379d8cc2a24d36672
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="quick-start-tutorial-for-azure-information-protection"></a>Esercitazione introduttiva di Azure Information Protection 
+<a id="quick-start-tutorial-for-azure-information-protection" class="xliff"></a>
+
+# Esercitazione introduttiva di Azure Information Protection 
 
 >*Si applica a: Azure Information Protection*
 
@@ -24,17 +28,17 @@ Questa esercitazione, rivolta ai consulenti e agli amministratori IT, consente d
 
 In caso di problemi riguardanti l'esecuzione di questa esercitazione o l'uso di Azure Information Protection, oppure se si vogliono conoscere le opinioni di altri utenti su questa applicazione, visitare il [sito di Azure Information Protection in Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all).
 
-## <a name="prerequisites"></a>Prerequisiti 
+<a id="prerequisites" class="xliff"></a>
+
+## Prerequisiti 
 Per completare questa esercitazione, è necessario quanto segue:
 
-- Una sottoscrizione che includa Azure Information Protection con supporto per classificazione, assegnazione di etichette e protezione. Questa esercitazione include alcune delle funzionalità avanzate, ad esempio la classificazione automatica dei dati con consigli per gli utenti e il sito per il rilevamento dei documenti. Assicurarsi che la propria sottoscrizione supporti queste funzionalità. Per altre informazioni, vedere le [informazioni sulla sottoscrizione](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e l'[elenco delle funzionalità](https://www.microsoft.com/cloud-platform/azure-information-protection-features) nel sito Azure Information Protection.
+- Una sottoscrizione che includa Azure Information Protection con supporto per classificazione, assegnazione di etichette e protezione. Questa esercitazione include alcune delle funzionalità avanzate, ad esempio la classificazione automatica dei dati con consigli per gli utenti e il sito per il rilevamento dei documenti. Per questa esercitazione, assicurarsi di avere una sottoscrizione che supporti queste funzionalità. Per altre informazioni, vedere le [informazioni sulla sottoscrizione](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e l'[elenco delle funzionalità](https://www.microsoft.com/cloud-platform/azure-information-protection-features) nel sito Azure Information Protection.
     
     Se non si ha una sottoscrizione per queste funzionalità, è possibile iscriversi per una valutazione gratuita di [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7).
     
-- Una sottoscrizione di Azure, per accedere al portale di Azure e configurare i criteri di Azure Information Protection. Se l'organizzazione non ha una sottoscrizione di Azure, è possibile ottenerne una registrandosi per una versione di valutazione gratuita: andare alla pagina [Microsoft Azure - Introduzione](https://account.windowsazure.com/organization) e seguire le istruzioni.
-
   > [!TIP] 
-  > Se è necessario richiedere una o più di queste sottoscrizioni, eseguire questa operazione in anticipo perché talvolta il processo può richiedere alcuni minuti.
+  > Se è necessario richiedere una sottoscrizione, eseguire questa operazione in anticipo perché talvolta il processo può richiedere tempo.
 
 - Un account di amministratore globale per accedere al portale di Azure e configurare i criteri di Azure Information Protection. Questo account deve disporre inoltre di un indirizzo di posta elettronica e di un servizio di posta elettronica funzionante (ad esempio, Exchange Online o Exchange Server).
 

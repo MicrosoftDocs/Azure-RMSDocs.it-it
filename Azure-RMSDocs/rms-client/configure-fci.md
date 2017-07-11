@@ -1,10 +1,10 @@
 ---
-title: Protezione di Azure RMS con l&quot;infrastruttura di classificazione file per Windows Server - AIP
+title: Protezione di Azure RMS con l'infrastruttura di classificazione file per Windows Server - AIP
 description: "Istruzioni per usare il client Rights Management (RMS) con lo strumento di protezione RMS per configurare Gestione risorse file server e la funzionalità Infrastruttura di classificazione file."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/04/2017
+ms.date: 05/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,12 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f3bdfee3a3dfa60c7cc81a553f3c889c30134a6a
-ms.sourcegitcommit: b471c20eda011a7b75ee801c34081fb4773b64dc
+ms.openlocfilehash: b56955d8a01876f4107cafa5b1b8df922c0f8ad0
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protezione RMS con l'infrastruttura di classificazione file (FCI, File Classification Infrastructure) per Windows Server
+<a id="rms-protection-with-windows-server-file-classification-infrastructure-fci" class="xliff"></a>
+
+# Protezione RMS con l'infrastruttura di classificazione file (FCI, File Classification Infrastructure) per Windows Server
 
 >*Si applica a: Azure Information Protection, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
 
@@ -32,7 +35,9 @@ Questa soluzione consente di proteggere automaticamente tutti i file contenuti i
 
 Le istruzioni qui di seguito sono per Windows Server 2012 R2 o Windows Server 2012. Se si eseguono altre versioni supportate di Windows, potrebbe essere necessario adattare alcuni di questi passaggi a causa delle differenze tra la versione del proprio sistema operativo e quello descritto in questo articolo.
 
-## <a name="prerequisites-for-azure-rights-management-protection-with-windows-server-fci"></a>Prerequisiti per la protezione Azure Rights Management con FCI per Windows Server
+<a id="prerequisites-for-azure-rights-management-protection-with-windows-server-fci" class="xliff"></a>
+
+## Prerequisiti per la protezione Azure Rights Management con FCI per Windows Server
 Prerequisiti per queste istruzioni:
 
 -  Su ogni file server su cui si esegue Gestione risorse file con l'infrastruttura di classificazione file:
@@ -41,7 +46,11 @@ Prerequisiti per queste istruzioni:
     
     - È stata identificata una cartella locale che contiene file da proteggere con Rights Management. Ad esempio, C:\FileShare.
     
-    - È stato installato il modulo AzureInformationProtection e sono stati configurati i prerequisiti per Azure Rights Management. Per altre informazioni, vedere [Uso di PowerShell con il client Azure Information Protection](client-admin-guide-powershell.md). In particolare, sono disponibili i valori seguenti per connettersi al servizio Azure Rights Management usando un'entità servizio: **BposTenantId**, **AppPrincipalId** e **Chiave simmetrica**. 
+    - È stato installato il modulo di PowerShell AzureInformationProtection e sono stati configurati i prerequisiti per connettere il modulo al servizio Azure Rights Management.
+    
+    Il modulo di PowerShell AzureInformationProtection è incluso nel client Azure Information Protection. Per le istruzioni di installazione, vedere [Come installare il client Azure Information Protection per gli utenti](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) nella guida dell'amministratore di Azure Information Protection. Se necessario, è possibile installare il modulo di PowerShell usando il parametro `PowerShellOnly=true`.
+    
+    I [prerequisiti per l'uso di questo modulo di PowerShell](client-admin-guide-powershell.md#azure-information-protection-service-and-azure-rights-management-service) includono l'attivazione del servizio Azure Rights Management, la creazione di un'entità servizio e la modifica del Registro di sistema se il tenant si trova al di fuori del Nord America. Prima di iniziare a seguire le istruzioni riportate in questo articolo, assicurarsi di avere i valori di **BposTenantId**, **AppPrincipalId** e **della chiave simmetrica** come descritto nei prerequisiti. 
     
     - Se si vuole modificare il livello predefinito di protezione (nativa o generica) per estensioni di file specifiche, si deve modificare il Registro di sistema come descritto nella sezione relativa alla [modifica del livello di protezione predefinito dei file](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) della guida dell'amministratore.
     
@@ -51,7 +60,9 @@ Prerequisiti per queste istruzioni:
     
 - Sono stati scaricati i modelli di Rights Management nel file server ed è stato identificato l'ID del modello che proteggerà i file. A tale scopo, usare il cmdlet [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate). Questo scenario non supporta i modelli di reparto. Pertanto, è necessario usare un modello non configurato per un ambito oppure la configurazione dell'ambito deve includere l'opzione di compatibilità dell'applicazione, in modo che la casella di controllo **Mostra questo modello a tutti gli utenti quando le applicazioni non supportano l'identità utente** sia selezionata.
 
-## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection"></a>Istruzioni per configurare Infrastruttura di classificazione file di Gestione risorse file server per la protezione di Azure Rights Management
+<a id="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection" class="xliff"></a>
+
+## Istruzioni per configurare Infrastruttura di classificazione file di Gestione risorse file server per la protezione di Azure Rights Management
 Seguire queste istruzioni per proteggere automaticamente tutti i file di una cartella usando uno script di Windows PowerShell come attività personalizzata. Eseguire questa procedura secondo l'ordine seguente:
 
 1. Salvare lo script di PowerShell
@@ -70,7 +81,9 @@ Al termine di queste istruzioni tutti i file della cartella selezionata saranno 
 
 Si tenga presente che, se si apportano modifiche al modello di Rights Management usato per Infrastruttura di classificazione file, è necessario eseguire `Get-RMSTemplate -Force` sul computer del file server per ottenere il modello aggiornato. Il modello aggiornato verrà quindi usato per proteggere i nuovi file. Se le modifiche apportate al modello sono abbastanza importanti da rendere necessaria una nuova protezione dei file nel file server, è possibile effettuare questa operazione eseguendo il cmdlet Protect-RMSFile in modo interattivo con un account dotato dei diritti di esportazione e controllo completo sui file. È inoltre necessario eseguire `Get-RMSTemplate -Force` sul computer del file server se si pubblica un nuovo modello da usare per Infrastruttura di classificazione file.
 
-### <a name="save-the-windows-powershell-script"></a>Salvare uno script di Windows PowerShell
+<a id="save-the-windows-powershell-script" class="xliff"></a>
+
+### Salvare uno script di Windows PowerShell
 
 1.  Copiare il contenuto dello [script di Windows PowerShell](fci-script.md) per la protezione Azure RMS usando Gestione risorse file server. Incollare il contenuto dello script e il nome del file **RMS-Protect-FCI.ps1** nel proprio computer.
 
@@ -117,7 +130,9 @@ Si tenga presente che, se si apportano modifiche al modello di Rights Management
 
 A questo punto si è pronti per iniziare la configurazione di Gestione risorse file server.
 
-### <a name="create-a-classification-property-for-rights-management-rms"></a>Creare una proprietà di classificazione per Rights Management (RMS)
+<a id="create-a-classification-property-for-rights-management-rms" class="xliff"></a>
+
+### Creare una proprietà di classificazione per Rights Management (RMS)
 
 -   In Gestione classificazioni di Gestione risorse file server creare una nuova proprietà locale:
 
@@ -131,7 +146,9 @@ A questo punto si è pronti per iniziare la configurazione di Gestione risorse f
 
 È ora possibile creare una regola di classificazione che usa questa proprietà.
 
-### <a name="create-a-classification-rule-classify-for-rms"></a>Creare una regola di classificazione (Classifica per RMS)
+<a id="create-a-classification-rule-classify-for-rms" class="xliff"></a>
+
+### Creare una regola di classificazione (Classifica per RMS)
 
 -   Creare una nuova regola di classificazione:
 
@@ -159,7 +176,9 @@ A questo punto si è pronti per iniziare la configurazione di Gestione risorse f
 
 Nonostante sia possibile eseguire manualmente le regole di classificazione per le operazioni in corso, si vuole che questa regola venga eseguita in una pianificazione in modo tale che i nuovi file vengano classificati con la proprietà RMS.
 
-### <a name="configure-the-classification-schedule"></a>Configurare la pianificazione di classificazione
+<a id="configure-the-classification-schedule" class="xliff"></a>
+
+### Configurare la pianificazione di classificazione
 
 -   Nella scheda **Classificazione automatica** :
 
@@ -173,7 +192,9 @@ Nonostante sia possibile eseguire manualmente le regole di classificazione per l
 
 Quando si è completata la configurazione per la classificazione, si è pronti per la configurazione di un'attività di gestione per applicare la protezione RMS ai file.
 
-### <a name="create-a-custom-file-management-task-protect-files-with-rms"></a>Creare un'attività personalizzata di gestione file (Proteggi file con RMS)
+<a id="create-a-custom-file-management-task-protect-files-with-rms" class="xliff"></a>
+
+### Creare un'attività personalizzata di gestione file (Proteggi file con RMS)
 
 -   In **Attività di gestione file**creare una nuova attività di gestione file:
 
@@ -238,7 +259,9 @@ Quando si è completata la configurazione per la classificazione, si è pronti p
 
         -   **Esegui in modo continuo sui nuovi file**: Selezionare questa casella di controllo.
 
-### <a name="test-the-configuration-by-manually-running-the-rule-and-task"></a>Testare la configurazione eseguendo manualmente la regola e l'attività
+<a id="test-the-configuration-by-manually-running-the-rule-and-task" class="xliff"></a>
+
+### Testare la configurazione eseguendo manualmente la regola e l'attività
 
 1.  Eseguire la regola di classificazione:
 
@@ -278,7 +301,9 @@ Quando si è completata la configurazione per la classificazione, si è pronti p
 
 Dopo aver verificato che queste operazioni vengono eseguite correttamente, è possibile chiudere Gestione risorse file. I file nuovi vengono classificati e protetti automaticamente quando vengono eseguite le attività pianificate. 
 
-## <a name="modifying-the-instructions-to-selectively-protect-files"></a>Modifica delle istruzioni per proteggere i file in modo selettivo
+<a id="modifying-the-instructions-to-selectively-protect-files" class="xliff"></a>
+
+## Modifica delle istruzioni per proteggere i file in modo selettivo
 Quando le istruzioni appena descritte risultano efficaci, è molto semplice modificarle per ottenere una configurazione più avanzata. Ad esempio, proteggere i file usando lo stesso script ma solo per i file che contengono informazioni personali e magari selezionare un modello che ha diritti più restrittivi.
 
 A tale scopo, usare una delle proprietà di classificazione predefinite (ad esempio, **Informazioni personali**) o creare una nuova proprietà personale. Creare quindi una nuova regola che usi questa proprietà. Ad esempio, si potrebbe selezionare **Classificazione contenuto**, scegliere la proprietà **Informazioni personali** con un valore **Alto**e configurare la stringa o il modello di espressione che identifica il file da configurare per questa proprietà (ad esempio la stringa "**Data di nascita**").

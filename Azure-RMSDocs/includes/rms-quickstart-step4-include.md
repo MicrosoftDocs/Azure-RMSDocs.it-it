@@ -4,14 +4,15 @@ I destinatari possono usare molti dispositivi per leggere il documento protetto 
 
 Chiedere di leggere il messaggio di posta elettronica inviato. Verrà visualizzato il messaggio di posta elettronica e, prima di esso, il testo seguente:
 
-**Il mittente ha protetto gli allegati con Microsoft RMS. Per aprirli è necessario ** [eseguire l'accesso](http://aka.ms/rms)
-      **.**
+**Il mittente ha protetto gli allegati con Microsoft RMS. Per aprirli è necessario**  [accedere](http://aka.ms/rms)**.**
 
 Quando si fa clic sul collegamento, vengono visualizzate le istruzioni per installare l'app di condivisione RMS e, se necessario, per accedere a un account gratuito. L'account gratuito concede una sottoscrizione per RMS per utenti singoli. Questa sottoscrizione assicura che gli utenti autorizzati possano sempre leggere un documento protetto, anche se l'organizzazione non dispone di Azure RMS. A questo punto è possibile leggere l'allegato protetto seguendo le istruzioni seguenti.
 
 ![Screenshot dell'esercitazione di RM](../media/AzRMS_Tutorial_4_Screenshots.png)
 
-#### <a name="to-view-the-protected-document-attachment"></a>Per visualizzare l'allegato del documento protetto
+<a id="to-view-the-protected-document-attachment" class="xliff"></a>
+
+#### Per visualizzare l'allegato del documento protetto
 
 1.  Poiché si tratta di un documento di Word protetto da Azure Rights Management, il messaggio di posta elettronica presenta due allegati. Si tratta in effetti di due versioni dello stesso file con estensioni diverse. Aprire la versione con l'estensione di nome di file **ppdf** (**Confidential.ppdf**).
 

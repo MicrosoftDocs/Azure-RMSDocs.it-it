@@ -1,20 +1,24 @@
 ---
-title: "Che cos&quot;è Azure Information Protection?"
+title: "Che cos'è Azure Information Protection?"
 description: Informazioni generali sul servizio Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: fc25cd11d950199f7ccd8e4e86e4d915c7fb6a95
-ms.sourcegitcommit: f0402cf14506b4c61a156a2baf7e69b7b16883a1
-translationtype: HT
+ms.openlocfilehash: 0ca0c2aa3d7b21c3e1143af51c9518aa85b7ee93
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="what-is-azure-information-protection"></a>Che cos'è Azure Information Protection?
+<a id="what-is-azure-information-protection" class="xliff"></a>
+
+# Che cos'è Azure Information Protection?
 
 >*Si applica a: Azure Information Protection*
 
@@ -26,16 +30,20 @@ L'immagine seguente mostra un esempio di Azure Information Protection in azione.
 
 Dopo che il contenuto è stato classificato (e facoltativamente protetto), è possibile rilevare e controllare come viene usato. È possibile analizzare i flussi di dati per ottenere informazioni sulle attività aziendali, rilevare comportamenti a rischio e adottare misure correttive, tenere traccia dell'accesso ai documenti, impedire la perdita o l'uso improprio di dati e così via.
 
-## <a name="how-labels-apply-classification"></a>Modalità di classificazione in base alle etichette
+<a id="how-labels-apply-classification" class="xliff"></a>
 
-Per applicare la classificazione a documenti e messaggi di posta elettronica si usano le etichette di Azure Information Protection. In questo modo, la classificazione è identificabile in qualsiasi momento, indipendentemente dalla posizione di archiviazione dei dati o dagli utenti con cui è condivisa. Le etichette includono contrassegni visivi, ad esempio un'intestazione, un piè di pagina o una filigrana. A file e intestazioni di messaggi di posta elettronica in testo non crittografato vengono aggiunti metadati in modo che altri servizi, ad esempio soluzioni di prevenzione della perdita di dati, possano identificare la classificazione e agire in modo appropriato. 
+## Modalità di classificazione in base alle etichette
+
+Le etichette di Azure Information Protection consentono di applicare la classificazione a documenti e messaggi di posta elettronica. In questo modo, la classificazione è identificabile in qualsiasi momento, indipendentemente dalla posizione di archiviazione dei dati o dagli utenti con cui è condivisa. Le etichette includono contrassegni visivi, ad esempio un'intestazione, un piè di pagina o una filigrana. A file e intestazioni di messaggi di posta elettronica in testo non crittografato vengono aggiunti metadati in modo che altri servizi, ad esempio soluzioni di prevenzione della perdita di dati, possano identificare la classificazione e agire in modo appropriato. 
 
 Ad esempio, il messaggio di posta elettronica seguente è stato classificato come "Internal" (Interno). Questa etichetta viene aggiunta come piè di pagina al messaggio di posta elettronica, come indicatore visivo per tutti i destinatari allo scopo di segnalare che il messaggio è destinato a uso interno e non deve essere inviato all'esterno dell'organizzazione. Questa etichetta viene inoltre incorporata nelle intestazioni dei messaggi di posta elettronica in modo che i servizi di posta elettronica possano esaminare questo valore e creare una voce di controllo o impedirne l'invio all'esterno dell'organizzazione.
 
 ![Piè di pagina e intestazioni del messaggio di posta elettronica di esempio che mostrano la classificazione di Azure Information Protection](../media/example-email-footerv2.png)
 
 
-## <a name="how-data-is-protected"></a>Modalità di protezione dei dati
+<a id="how-data-is-protected" class="xliff"></a>
+
+## Modalità di protezione dei dati
 
 Per la protezione viene usata la tecnologia *Azure Rights Management* (spesso abbreviata in Azure RMS). Questa tecnologia è integrata in altri servizi e applicazioni cloud Microsoft, ad esempio Office 365 e Azure Active Directory. Il servizio può essere usato anche con proprie applicazioni line-of-business e soluzioni di protezione dei dati di fornitori software in locale o sul cloud.
 
@@ -43,7 +51,9 @@ Questa tecnologia di protezione usa criteri di crittografia, identità e autoriz
 
 È ad esempio possibile configurare un documento di report o un foglio di calcolo di previsione delle vendite in modo che possano accedervi solo le persone appartenenti all'organizzazione e per controllare se tale documento può essere modificato oppure se può essere impostato come file di sola lettura o non stampabile. È possibile configurare i messaggi e-mail in modo analogo e, inoltre, impedire che vengano inoltrati o che venga usata l'opzione Rispondi a tutti. Queste attività di protezione possono essere semplificate tramite *modelli di Rights Management*.
 
-### <a name="rights-management-templates"></a>Modelli di Rights Management
+<a id="rights-management-templates" class="xliff"></a>
+
+### Modelli di Rights Management
 
 Non appena si attiva il servizio Azure Rights Management, vengono creati due modelli predefiniti che limitano l'accesso ai dati agli utenti all'interno dell'organizzazione. È possibile usare questi modelli per evitare immediatamente la perdita di dati dell'organizzazione. È inoltre possibile integrare questi modelli predefiniti configurando modelli personalizzati che applicano controlli più restrittivi.
 
@@ -59,7 +69,9 @@ Gli stessi modelli possono essere selezionati dall'interfaccia di amministrazion
 
 Per altre informazioni sulla tecnologia di protezione Azure Rights Management, vedere [Informazioni su Microsoft Azure Rights Management](what-is-azure-rms.md).
 
-## <a name="integration-with-end-user-workflows"></a>Integrazione con i flussi di lavoro degli utenti finali
+<a id="integration-with-end-user-workflows" class="xliff"></a>
+
+## Integrazione con i flussi di lavoro degli utenti finali
 
 Azure Information Protection si integra con i flussi di lavoro esistenti degli utenti finali quando viene installato il client di Azure Information Protection. Il client installa la barra di Information Protection nelle applicazioni di Office, come illustrato nella prima immagine. La stessa barra viene aggiunta a Excel, PowerPoint e Outlook. Ad esempio:
 
@@ -80,7 +92,9 @@ Quando un documento viene protetto, utenti e amministratori possono usare un sit
 ![Icona per la revoca dell'accesso nel sito di rilevamento dei documenti](../media/tracking-site-revoke-access-icon.png)
 
 
-## <a name="resources-for-azure-information-protection"></a>Risorse per Azure Information Protection
+<a id="resources-for-azure-information-protection" class="xliff"></a>
+
+## Risorse per Azure Information Protection
 
 - Annuncio: [Azure Information Protection is now Generally Available](https://blogs.technet.microsoft.com/enterprisemobility/2016/10/04/azure-information-protection-is-now-generally-available/) (Azure Information Protection è ora disponibile a livello generale)
 
@@ -109,7 +123,9 @@ Quando un documento viene protetto, utenti e amministratori possono usare un sit
     - [BRK2128: Inviare posta elettronica sicura a tutti gli utenti con Microsoft Office 365 e Azure Information Protection](https://myignite.microsoft.com/videos?q=BRK2128)
 
 
-## <a name="next-steps"></a>Passaggi successivi
+<a id="next-steps" class="xliff"></a>
+
+## Passaggi successivi
 
 Leggere il post di blog [Azure Information Protection: Ready, set, protect!](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/) (Azure Information Protection: una soluzione immediata ed efficiente per la protezione)
 

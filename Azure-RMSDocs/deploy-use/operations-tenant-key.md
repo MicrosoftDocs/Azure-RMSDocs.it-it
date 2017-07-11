@@ -4,7 +4,7 @@ description: "Identificare i diversi livelli di controllo e responsabilità per 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 05/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 24368df01f680958310b8d01c4f9a5a939e6f706
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: 10ce24e72dae1225505592508d4bf88cadb131a2
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="operations-for-your-azure-information-protection-tenant-key"></a>Operazioni relative alla chiave del tenant di Azure Information Protection
+<a id="operations-for-your-azure-information-protection-tenant-key" class="xliff"></a>
+
+# Operazioni relative alla chiave del tenant di Azure Information Protection
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -36,8 +40,9 @@ Nella tabella seguente vengono indicate le operazioni che è possibile eseguire 
 
 Dopo aver identificato la topologia implementata, selezionare una delle sezioni seguenti per ottenere altre informazioni su queste operazioni per la chiave del tenant di Azure Information Protection:
 
-
 - [Chiave del tenant gestita da Microsoft](operations-microsoft-managed-tenant-key.md)
 - [Chiave del tenant gestita dal cliente](operations-customer-managed-tenant-key.md)
+
+Se tuttavia si vuole creare una chiave del tenant di Azure Information Protection importando un dominio di pubblicazione trusted (TPD) da AD RMS, l'operazione di importazione fa parte della [migrazione da AD RMS ad Azure Information Protection](../plan-design/migrate-from-ad-rms-to-azure-rms.md).  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -4,7 +4,7 @@ description: "Quando si usa Azure Rights Management, i modelli vengono scaricati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/25/2017
+ms.date: 05/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6f02bffa99719d5cd987bc0fa9c84baabe191ec5
-ms.sourcegitcommit: 2358f76f9a039daff7d70ea68967a45362d3da35
-translationtype: HT
+ms.openlocfilehash: 374c807862d4922679e8622ee0d0d5a16a156bb0
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="refreshing-templates-for-users"></a>Aggiornamento dei modelli per gli utenti
+<a id="refreshing-templates-for-users-and-services" class="xliff"></a>
+
+# Aggiornamento di modelli per utenti e servizi
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -32,8 +36,11 @@ Quando si usa il servizio Azure Rights Management di Azure Information Protectio
 |Office 2016 per Mac|I modelli vengono aggiornati automaticamente e non sono necessari altri passaggi.|
 |App RMS sharing per computer Mac|I modelli vengono aggiornati automaticamente e non sono necessari altri passaggi.|
 
+Se per le applicazioni client è necessario scaricare un modello (iniziale o aggiornato con le modifiche), prevedere un'attesa fino a 15 minuti prima che il download sia completato e che i modelli nuovi o aggiornati siano completamente funzionali. Il tempo effettivo varia a seconda di fattori quali le dimensioni e la complessità della configurazione dei modelli e la connettività di rete. 
 
-## <a name="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates"></a>Solo Exchange Online: come configurare Exchange per il download dei modelli personalizzati modificati
+<a id="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates" class="xliff"></a>
+
+## Solo Exchange Online: come configurare Exchange per il download dei modelli personalizzati modificati
 Se Information Rights Management (IRM) è stato già configurato per Exchange Online, i modelli personalizzati non verranno scaricati per gli utenti finché non si apportano le modifiche illustrate di seguito mediante Windows PowerShell in Exchange Online.
 
 > [!NOTE]
@@ -41,7 +48,9 @@ Se Information Rights Management (IRM) è stato già configurato per Exchange On
 
 È necessario eseguire questa procedura ogni volta che si modifica un modello.
 
-### <a name="to-update-templates-for-exchange-online"></a>Per aggiornare i modelli per Exchange Online
+<a id="to-update-templates-for-exchange-online" class="xliff"></a>
+
+### Per aggiornare i modelli per Exchange Online
 
 1.  Usando Windows PowerShell in Exchange Online, connettersi al servizio:
 
@@ -94,13 +103,17 @@ Per impedire agli utenti di visualizzare questi modelli, connettersi al servizio
 Set-RMSTemplate -Identity "<name or GUID of the template>" -Type Archived
 ```
 
-## <a name="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016, Office 2013 e applicazione RMS sharing per Windows: come forzare un aggiornamento per un modello personalizzato modificato
+<a id="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template" class="xliff"></a>
+
+## Office 2016, Office 2013 e applicazione RMS sharing per Windows: come forzare un aggiornamento per un modello personalizzato modificato
 Modificando il Registro di sistema nei computer che eseguono Office 2016, Office 2013 o l'applicazione Rights Management (RMS) sharing per Windows, è possibile modificare la pianificazione automatica in modo che i modelli modificati vengano aggiornati nei computer più frequentemente rispetto al relativo valore predefinito. È inoltre possibile forzare un aggiornamento immediato eliminando i dati esistenti in un valore del Registro di sistema.
 
 > [!WARNING]
 > L'uso inappropriato dell'editor del Registro di sistema può causare seri problemi che potrebbero richiedere la reinstallazione del sistema operativo. Microsoft non garantisce che sia possibile risolvere i problemi derivanti da un uso non corretto dell'editor del Registro di sistema. L'uso dell'editor del Registro di sistema è di sola responsabilità dell'utente.
 
-### <a name="to-change-the-automatic-schedule"></a>Per modificare la pianificazione automatica
+<a id="to-change-the-automatic-schedule" class="xliff"></a>
+
+### Per modificare la pianificazione automatica
 
 1.  Utilizzando un editor del Registro di sistema, creare e impostare uno dei seguenti valori del Registro di sistema:
 
@@ -124,7 +137,9 @@ Modificando il Registro di sistema nei computer che eseguono Office 2016, Office
 
 2.  Se si desidera forzare un aggiornamento immediato dei modelli, passare alla procedura successiva. In caso contrario, riavviare ora le applicazioni di Office e le istanze di Esplora file.
 
-### <a name="to-force-an-immediate-refresh"></a>Per forzare un aggiornamento immediato
+<a id="to-force-an-immediate-refresh" class="xliff"></a>
+
+### Per forzare un aggiornamento immediato
 
 1.  Utilizzando un editor del Registro di sistema, eliminare i dati per il valore **LastUpdatedTime** . Ad esempio, i dati possono visualizzare **2015-04-20T15:52**; eliminare 2015-04-20T15:52 in modo che non vengano visualizzati dati. Usare le informazioni seguenti per individuare il percorso del Registro di sistema per eliminare i dati con questo valore di registro.
 
@@ -150,7 +165,9 @@ Modificando il Registro di sistema nei computer che eseguono Office 2016, Office
 3.  Riavviare le applicazioni di Office e le istanze di Esplora file.
 
 
-## <a name="see-also"></a>Vedere anche
+<a id="see-also" class="xliff"></a>
+
+## Vedere anche
 [Configurare modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

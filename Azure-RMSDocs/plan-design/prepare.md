@@ -1,6 +1,6 @@
 ---
 title: Preparare utenti e gruppi per Azure Information Protection
-description: Controllare di avere gli account utente e di gruppo necessari per iniziare a classificare, etichettare e proteggere i documenti e i messaggi di posta elettronica dell&quot;organizzazione.
+description: Controllare di avere gli account utente e di gruppo necessari per iniziare a classificare, etichettare e proteggere i documenti e i messaggi di posta elettronica dell'organizzazione.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -13,11 +13,14 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 362c5108238a0561c35d72faa556417f0f0f8566
-ms.sourcegitcommit: 0e46a9687f237cf6d551c183dd006337ec835b86
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
 ms.translationtype: HT
 ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparazione di utenti e gruppi per Azure Information Protection
+<a id="preparing-users-and-groups-for-azure-information-protection" class="xliff"></a>
+
+# Preparazione di utenti e gruppi per Azure Information Protection
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -37,7 +40,9 @@ Prima di distribuire Azure Information Protection per l'organizzazione, assicura
 
 Se si usano i primi tre metodi dell'elenco, gli utenti e i gruppi vengono creati automaticamente in Azure AD e i relativi account possono essere usati direttamente in Azure Information Protection. Molte reti aziendali, tuttavia, creano e gestiscono utenti e gruppi all'interno di una directory locale. Azure Information Protection non è in grado si usare direttamente questi account, che devono pertanto essere sincronizzati in AD.
 
-## <a name="how-users-and-groups-are-used-by-azure-information-protection"></a>Uso di utenti e gruppi con Azure Information Protection
+<a id="how-users-and-groups-are-used-by-azure-information-protection" class="xliff"></a>
+
+## Uso di utenti e gruppi con Azure Information Protection
 
 Sono possibili tre scenari di uso di utenti e gruppi con Azure Information Protection:
 
@@ -59,7 +64,9 @@ Sono possibili tre scenari di uso di utenti e gruppi con Azure Information Prote
 
 - Controlli di onboarding a supporto di una distribuzione a più fasi.
 
-## <a name="azure-information-protection-requirements-for-user-accounts"></a>Requisiti di Azure Information Protection per gli account utente
+<a id="azure-information-protection-requirements-for-user-accounts" class="xliff"></a>
+
+## Requisiti di Azure Information Protection per gli account utente
 
 Per l'assegnazione di etichette:
 
@@ -79,11 +86,15 @@ Per assegnare diritti di utilizzo e controlli di accesso e configurare il serviz
 
 - L'attributo **userPrincipalName di Azure AD** viene usato solo se per un account nel tenant non sono presenti valori nell'attributo proxyAddresses di Azure AD, ad esempio se nel portale di Azure o per Office 365 si crea un utente senza una cassetta postale.
 
-### <a name="assigning-usage-rights-and-access-controls-to-external-users"></a>Assegnazione di diritti di utilizzo e di controlli di accesso a utenti esterni
+<a id="assigning-usage-rights-and-access-controls-to-external-users" class="xliff"></a>
+
+### Assegnazione di diritti di utilizzo e di controlli di accesso a utenti esterni
 
 Oltre che per autorizzare gli utenti del tenant, Azure Information Protection usa gli attributi proxyAddresses e userPrincipalName di Azure AD allo stesso modo per autorizzare gli utenti di un altro tenant.
 
-## <a name="azure-information-protection-requirements-for-group-accounts"></a>Requisiti di Azure Information Protection per gli account di gruppo
+<a id="azure-information-protection-requirements-for-group-accounts" class="xliff"></a>
+
+## Requisiti di Azure Information Protection per gli account di gruppo
 
 Per l'assegnazione di etichette:
 
@@ -101,11 +112,15 @@ Per la configurazione del servizio Rights Management di Azure:
     
 - Per l'amministrazione delegata del servizio Azure Rights Management è possibile usare qualsiasi tipo di gruppo in Azure AD (con o senza un indirizzo di posta elettronica) di un dominio verificato nel tenant.
 
-### <a name="assigning-usage-rights-and-access-controls-to-external-groups"></a>Assegnazione di diritti di utilizzo e di controlli di accesso a gruppi esterni
+<a id="assigning-usage-rights-and-access-controls-to-external-groups" class="xliff"></a>
+
+### Assegnazione di diritti di utilizzo e di controlli di accesso a gruppi esterni
 
 Oltre che per autorizzare i gruppi del tenant, Azure Information Protection usa l'attributo proxyAddresses di Azure AD allo stesso modo per autorizzare i gruppi di un altro tenant.
 
-## <a name="using-accounts-from-active-directory-on-premises-for-azure-information-protection"></a>Uso di account di Active Directory locale per Azure Information Protection
+<a id="using-accounts-from-active-directory-on-premises-for-azure-information-protection" class="xliff"></a>
+
+## Uso di account di Active Directory locale per Azure Information Protection
 
 Se con Azure Information Protection si vogliono usare account gestiti in locale, è necessario sincronizzare questi ultimi in Azure AD. Per semplificare la distribuzione, è consigliabile usare [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect). È tuttavia possibile usare qualsiasi metodo di sincronizzazione di directory che consenta di ottenere lo stesso risultato.
 
@@ -113,7 +128,9 @@ Quando si sincronizzano gli account, non è necessario sincronizzare tutti gli a
 
 Dall'elenco degli attributi per Azure Rights Management risulta che gli attributi di AD locale per cui è richiesta la sincronizzazione per gli utenti sono **mail**, **proxyAddresses** e **userPrincipalName**. I valori di **mail** e **proxyAddresses** vengono sincronizzati nell'attributo proxyAddresses di Azure AD. Per altre informazioni, vedere [How the proxyAddresses attribute is populated in Azure AD](https://support.microsoft.com/help/3190357/how-the-proxyaddresses-attribute-is-populated-in-azure-ad) (Come vengono inseriti valori nell'attributo proxyAddresses di Azure AD)
 
-## <a name="confirming-your-users-and-groups-are-prepared-for-azure-information-protection"></a>Verifica della preparazione di utenti e gruppi per Azure Information Protection
+<a id="confirming-your-users-and-groups-are-prepared-for-azure-information-protection" class="xliff"></a>
+
+## Verifica della preparazione di utenti e gruppi per Azure Information Protection
 
 È possibile usare Azure AD PowerShell per confermare che utenti e gruppi possono essere usati con Azure Information Protection. È possibile usare PowerShell anche per confermare i valori utilizzabili per autorizzare gli utenti e i gruppi. 
 
@@ -128,7 +145,9 @@ Configurare quindi la sessione di PowerShell in modo che non consenta il troncam
 
     $Formatenumerationlimit =-1
 
-### <a name="confirm-user-accounts-are-ready-for-azure-information-protection"></a>Confermare che gli account utente sono pronti per Azure Information Protection
+<a id="confirm-user-accounts-are-ready-for-azure-information-protection" class="xliff"></a>
+
+### Confermare che gli account utente sono pronti per Azure Information Protection
 
 Per confermare gli account utente, eseguire il comando seguente:
 
@@ -168,7 +187,9 @@ Nella maggior parte dei casi il valore di UserPrincipalName corrisponde a uno de
 > 
 > Ad esempio: `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
 
-### <a name="confirm-group-accounts-are-ready-for-azure-information-protection"></a>Confermare che gli account di gruppo sono pronti per Azure Information Protection
+<a id="confirm-group-accounts-are-ready-for-azure-information-protection" class="xliff"></a>
+
+### Confermare che gli account di gruppo sono pronti per Azure Information Protection
 
 Per confermare gli account di gruppo, usare il comando seguente:
          
@@ -182,7 +203,9 @@ Per i due scenari di configurazione del servizio Azure Rights Management che usa
 
     Get-MsolGroup | where {$_.GroupType -eq "Security"}
 
-## <a name="considerations-for-azure-information-protection-if-email-addresses-change"></a>Considerazioni su Azure Information Protection in caso di modifica di indirizzi di posta elettronica
+<a id="considerations-for-azure-information-protection-if-email-addresses-change" class="xliff"></a>
+
+## Considerazioni su Azure Information Protection in caso di modifica di indirizzi di posta elettronica
 
 Se si modifica l'indirizzo di posta elettronica di un utente o di un gruppo, è consigliabile aggiungere l'indirizzo di posta elettronica precedente come secondo indirizzo di posta elettronica (detto anche indirizzo proxy, alias o indirizzo di posta elettronica alternativo) per l'utente o il gruppo. Quando si esegue questa operazione, l'indirizzo di posta elettronica precedente viene aggiunto all'attributo proxyAddresses di Azure AD. Questo tipo di amministrazione degli account garantisce la continuità aziendale per i diritti di utilizzo e per le altre configurazioni salvate quando era in uso l'indirizzo di posta elettronica precedente. 
 
@@ -190,14 +213,18 @@ Se non è possibile eseguire questa operazione, all'utente o al gruppo con il nu
 
 Si noti che è raro che per un gruppo venga modificato l'indirizzo di posta elettronica. Se si assegnano diritti di utilizzo a un gruppo anziché a utenti singoli e l'indirizzo di posta elettronica di uno o più utenti cambia, non si verificano problemi. In questo scenario, i diritti di utilizzo vengono assegnati all'indirizzo di posta elettronica del gruppi e non agli indirizzi di posta elettronica dei singoli utenti. Questo è il metodo usato dagli amministratori con maggiore frequenza, oltre che il metodo consigliato, per la configurazione dei diritti di utilizzo che proteggono documenti e messaggi di posta elettronica. In genere, tuttavia, gli utenti assegnano autorizzazioni personalizzate a utenti singoli. Poiché non è sempre possibile sapere se per concedere l'accesso è stato usato un account utente o di gruppo, il metodo più sicuro è aggiungere sempre l'indirizzo di posta elettronica precedente come secondo indirizzo di posta elettronica.
 
-## <a name="group-membership-caching-by-azure-rights-management"></a>Caching dell'appartenenza a gruppi da parte di Azure Rights Management
+<a id="group-membership-caching-by-azure-rights-management" class="xliff"></a>
+
+## Caching dell'appartenenza a gruppi da parte di Azure Rights Management
 
 Per motivi di prestazioni, l'appartenenza ai gruppi viene memorizzata nella cache dal servizio Azure Rights Management. Ciò significa che, per i gruppi usati da Azure Rights Management, le modifiche all'appartenenza in Azure AD possono richiedere fino a tre ore per diventare effettive. Questo periodo di tempo è soggetto a variazioni. 
 
 Se si usano gruppi in Azure Rights Management, si ricordi di tenere conto di questo ritardo in caso di modifiche o esecuzione di test, ad esempio in caso di assegnazione di diritti di utilizzo o di configurazione del servizio Azure Rights Management. 
 
 
-## <a name="next-steps"></a>Passaggi successivi
+<a id="next-steps" class="xliff"></a>
+
+## Passaggi successivi
 
 Dopo aver confermato che gli utenti e i gruppi sono utilizzabili con Azure Information Protection e che tutto è pronto per iniziare ad applicare la protezione a documenti e messaggi di posta elettronica, attivare il servizio Rights Management per abilitare il servizio di protezione dati. Per ulteriori informazioni, vedere l'articolo relativo all'[attivazione di Azure Rights Management](../deploy-use/activate-service.md).
 

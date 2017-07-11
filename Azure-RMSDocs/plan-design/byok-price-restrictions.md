@@ -1,10 +1,10 @@
 ---
 title: "Prezzi e restrizioni della modalità BYOK - Azure Information Protection"
-description: Informazioni sulle restrizioni quando si usano chiavi gestite dal cliente (&quot;bring your own key&quot; o BYOK) con Azure RMS.
+description: Informazioni sulle restrizioni quando si usano chiavi gestite dal cliente ("bring your own key" o BYOK) con Azure RMS.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 06/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ab3b25ebd04565f8cd0e9236c1241f38d4a2e8b2
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: cfc4243d15112545219f82964d09ce9ce238355d
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="byok-pricing-and-restrictions"></a>Prezzi e restrizioni della modalità BYOK
+<a id="byok-pricing-and-restrictions" class="xliff"></a>
+
+# Prezzi e restrizioni della modalità BYOK
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -27,7 +31,9 @@ La chiave deve essere archiviata in Insieme di credenziali delle chiavi di Azure
 
 Quando si usa Insieme di credenziali delle chiavi di Azure per la chiave del tenant Azure Information Protection, è consigliabile usare un insieme di credenziali delle chiavi dedicato per questa chiave con una sottoscrizione dedicata, per garantire che venga usata solo dal servizio Azure Rights Management. 
 
-## <a name="benefits-of-using-azure-key-vault"></a>Vantaggi dell'uso di Insieme di credenziali delle chiavi di Azure
+<a id="benefits-of-using-azure-key-vault" class="xliff"></a>
+
+## Vantaggi dell'uso di Insieme di credenziali delle chiavi di Azure
 
 Oltre alla funzionalità di registrazione dell'utilizzo di Azure Information Protection, per una maggiore sicurezza è possibile creare riferimenti incrociati con la [registrazione di Insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-logging/) per controllare in modo indipendente se la chiave viene usata solo dal servizio Azure Rights Management. Se necessario, è possibile revocare immediatamente l'accesso alla chiave rimuovendo le autorizzazioni per l'insieme di credenziali delle chiavi.
 
@@ -46,19 +52,17 @@ Oltre alla gestione delle chiavi, Insieme di credenziali delle chiavi di Azure o
 Per altre informazioni su Insieme di credenziali delle chiavi di Azure, vedere [Cos'è l'insieme di credenziali chiave di Azure?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/) e visitare il [blog del team di Insieme di credenziali delle chiavi di Azure](https://blogs.technet.microsoft.com/kv/) per le informazioni più recenti e per scoprire come viene usata questa tecnologia dagli altri servizi.
 
 
-## <a name="restrictions-when-using-byok"></a>Restrizioni per l'uso di BYOK
+<a id="restrictions-when-using-byok" class="xliff"></a>
 
-Se sono presenti utenti che hanno effettuato l'iscrizione per un account gratuito con RMS per utenti singoli, non è possibile usare BYOK o la registrazione dell'utilizzo perché questa configurazione non ha un amministratore tenant per configurare tali funzionalità.
-
-
-> [!NOTE]
-> Per altre informazioni, vedere [RMS per utenti singoli e Azure Rights Management](../understand-explore/rms-for-individuals.md).
-
-![BYOK non supporta Exchange Online](../media/RMS_BYOK_noExchange.png)
+## Restrizioni per l'uso di BYOK
 
 La modalità BYOK e la registrazione dell'utilizzo possono essere usate facilmente con ogni applicazione che si integra con il servizio Azure Rights Management (Azure RMS) usato da Azure Information Protection. ad esempio servizi cloud come SharePoint Online, server locali che eseguono Exchange e SharePoint che si integrano con Azure RMS usando il connettore RMS e applicazioni client come Office 2016 e Office 2013. È possibile ottenere log di utilizzo indipendentemente dall'applicazione che richiede Azure RMS.
 
-È presente tuttavia un'eccezione, Attualmente, la **modalità BYOK di Azure RMS non è compatibile con Exchange Online**. Se si vuole usare Exchange Online, è consigliabile distribuire Azure RMS con la modalità predefinita per la gestione delle chiavi, in base alla quale Microsoft genera e gestisce la chiave. È possibile passare a BYOK successivamente, ad esempio, quando Exchange Online supporterà la modalità BYOK per Azure RMS. Se non è possibile aspettare, tuttavia, si può distribuire subito Azure RMS con BYOK, con una funzionalità RMS ridotta per Exchange Online (i messaggi di posta elettronica e gli allegati non protetti rimangono completamente funzionanti):
+Esiste però un'eccezione. Attualmente, la modalità **BYOK di Azure RMS non è compatibile con Exchange Online**:
+
+![BYOK non supporta Exchange Online](../media/RMS_BYOK_noExchange.png)
+
+Se si vuole usare Exchange Online, è consigliabile distribuire Azure RMS con la modalità predefinita per la gestione delle chiavi, in base alla quale Microsoft genera e gestisce la chiave. È possibile passare a BYOK successivamente, ad esempio, quando Exchange Online supporterà la modalità BYOK per Azure RMS. Se non è possibile aspettare, tuttavia, si può distribuire subito Azure RMS con BYOK, con una funzionalità RMS ridotta per Exchange Online (i messaggi di posta elettronica e gli allegati non protetti rimangono completamente funzionanti):
 
 -   I messaggi di posta elettronica protetti o gli allegati protetti in Outlook Web Access non possono essere visualizzati.
 
@@ -76,7 +80,9 @@ Se si esegue la migrazione ad Azure RMS da AD RMS, la chiave potrebbe essere sta
 
 In alcuni casi l'eccezione relativa alla modalità BYOK di Azure RMS per Exchange Online non costituisce in effetti un problema. Ad esempio, le organizzazioni che devono usare la modalità BYOK e la registrazione eseguono le proprie applicazioni dati, ad esempio Exchange, SharePoint, Office, in locale e usano Azure RMS per funzionalità non facilmente disponibili con istanze locali di AD RMS, ad esempio collaborazione con altre società e accesso da client mobili. Sia la modalità BYOK che la registrazione sono compatibili con questo scenario e consentono all'organizzazione di disporre del controllo completo sulla sottoscrizione di Azure RMS.
 
-## <a name="next-steps"></a>Passaggi successivi
+<a id="next-steps" class="xliff"></a>
+
+## Passaggi successivi
 
 Per gestire la propria chiave, passare all'articolo relativo all'[implementazione della chiave del tenant di Azure Rights Management](plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
 

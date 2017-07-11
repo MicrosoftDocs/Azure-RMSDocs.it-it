@@ -1,10 +1,10 @@
 ---
-title: Panoramica tecnica per l&quot;app RMS sharing - AIP
-description: Dettagli tecnici per gli amministratori sulle reti aziendali che sono responsabili della distribuzione dell&quot;applicazione RMS sharing per Windows.
+title: Panoramica tecnica per l'app RMS sharing - AIP
+description: Dettagli tecnici per gli amministratori sulle reti aziendali che sono responsabili della distribuzione dell'applicazione RMS sharing per Windows.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 06/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e168c68cfeb14b40c0922426e2d226c28dac26ff
-ms.sourcegitcommit: 31e128cc1b917bf767987f0b2144b7f3b6288f2e
-translationtype: HT
+ms.openlocfilehash: b1bb3308dc6e0561109602411fea3e63252fb9d4
+ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 06/30/2017
 ---
-# <a name="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application"></a>Panoramica tecnica e dettagli sulla protezione per l'applicazione Microsoft Rights Management sharing
+<a id="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application" class="xliff"></a>
+
+# Panoramica tecnica e dettagli sulla protezione per l'applicazione Microsoft Rights Management sharing
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
@@ -39,7 +43,9 @@ Con la versione di RMS del mese di ottobre 2013, è possibile proteggere i docum
 
 Per informazioni sulla distribuzione, vedere [Distribuzione automatica dell'applicazione Microsoft Rights Management sharing](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)
 
-## <a name="levels-of-protection--native-and-generic"></a>Livelli di protezione – nativo e generico
+<a id="levels-of-protection--native-and-generic" class="xliff"></a>
+
+## Livelli di protezione – nativo e generico
 L'applicazione Microsoft Rights Management sharing supporta la protezione a due livelli diversi, come descritto nella tabella seguente.
 
 |Tipo di protezione|Nativo|Generico|
@@ -49,7 +55,9 @@ L'applicazione Microsoft Rights Management sharing supporta la protezione a due 
 |Impostazione predefinita per i tipi di file|Questo è il livello predefinito di protezione per i tipi di file seguenti:<br /><br />- File di testo e immagine<br /><br />- File di Microsoft Office (Word, Excel, PowerPoint)<br /><br />- Formato di documento portatile (.pdf)<br /><br />Per altre informazioni, vedere la sezione di seguito, [Tipi ed estensioni di file supportati](#supported-file-types-and-file-name-extensions).|Questa è la protezione predefinita per tutti gli altri tipi di file (ad esempio con estensione vsdx, rtf e così via) non è supportata tramite la protezione completa.|
 È possibile modificare il livello di protezione predefinito che applica l'applicazione RMS sharing. È possibile modificare il livello predefinito da nativo a generico, da generico a nativo, e anche impedire all'applicazione RMS sharing di applicare la protezione. Per altre informazioni, vedere la sezione [Modifica del livello di protezione predefinito dei file](#changing-the-default-protection-level-of-files) in questo articolo.
 
-## <a name="supported-file-types-and-file-name-extensions"></a>Tipi ed estensioni di file supportati
+<a id="supported-file-types-and-file-name-extensions" class="xliff"></a>
+
+## Tipi ed estensioni di file supportati
 Nella tabella seguente sono elencati i tipi di file supportati in modo nativo dall'applicazione Microsoft Rights Management sharing. Per questi tipi di file, l'estensione del nome file originale viene modificato quando viene applicato il prodotto nativo, e questi file diventano di sola lettura.
 
 Inoltre, quando l'applicazione RMS sharing protegge in modo nativo un file di Word, Excel o PowerPoint che gli utenti proteggono tramite la condivisione, questa azione crea automaticamente un secondo file che è una copia dell'originale con lo stesso nome ma con estensione **ppdf** ¹. Questa versione del file garantisce che i destinatari che installano l'applicazione RMS sharing possano sempre aprire il file in cui è applicata la protezione nativa.
@@ -64,7 +72,7 @@ Per i file protetti in modo generico, l'estensione del nome file originale viene
 |.txt|.ptxt|
 |.xml|.pxml|
 |.jpg|.pjpg|
-|.jpeg|.ppng|
+|.jpeg|.pjeg|
 |.pdf|.ppdf|
 |.png|.ppng|
 |.tif|.ptif|
@@ -82,7 +90,9 @@ La tabella seguente elenca i tipi di file che l'applicazione Microsoft Rights Ma
 |----------------------------------|----------------------------------|
 |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm|.pptx<br /><br />.thmx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
 
-### <a name="changing-the-default-protection-level-of-files"></a>Modifica del livello di protezione predefinito dei file
+<a id="changing-the-default-protection-level-of-files" class="xliff"></a>
+
+### Modifica del livello di protezione predefinito dei file
 È possibile cambiare il modo in cui l'applicazione RMS sharing protegge i file modificando il Registro di sistema. Ad esempio, è possibile forzare i file che supportano la protezione nativa ad essere protetti in modo generico dall'applicazione RMS sharing.
 
 Motivi per cui è possibile eseguire questa operazione:
@@ -129,7 +139,9 @@ Ripetere questi tre passaggi per altri tipi di file da definire come eccezioni, 
 
 -   **Off**: Protezione di blocco
 
-## <a name="see-also"></a>Vedere anche
+<a id="see-also" class="xliff"></a>
+
+## Vedere anche
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
