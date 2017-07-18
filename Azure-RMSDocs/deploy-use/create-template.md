@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="create-configure-and-publish-a-custom-template" class="xliff"></a>
-
-# Creare, configurare e pubblicare un modello personalizzato
+# <a name="create-configure-and-publish-a-custom-template"></a>Creare, configurare e pubblicare un modello personalizzato
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -34,9 +32,7 @@ Per creare e gestire modelli nel portale di Azure classico è necessario il ruol
 
 Per creare, configurare e pubblicare modelli personalizzati per Rights Management, seguire queste procedure.
 
-<a id="to-create-a-custom-template" class="xliff"></a>
-
-## Per creare un modello personalizzato
+## <a name="to-create-a-custom-template"></a>Per creare un modello personalizzato
 
 1.  Seguire una di queste due procedure in base al tipo di accesso scelto, dall'interfaccia di amministrazione di Office 365 o dal portale di Azure classico:
 
@@ -76,9 +72,7 @@ Per creare, configurare e pubblicare modelli personalizzati per Rights Managemen
 
 4. Nella pagina di avvio rapido **Introduzione a Rights Management** fare clic su **Gestire i modelli di criteri di diritti**. Il modello appena creato sarà visualizzato nell'elenco dei modelli con lo stato **Archiviato**. A questo punto il modello è stato creato, ma non è configurato e non è visibile agli utenti.
 
-<a id="to-configure-and-publish-a-custom-template" class="xliff"></a>
-
-## Per configurare e pubblicare un modello personalizzato
+## <a name="to-configure-and-publish-a-custom-template"></a>Per configurare e pubblicare un modello personalizzato
 
 1.  Selezionare il modello appena creato nella pagina **MODELLI** del portale di Azure classico.
 
@@ -170,9 +164,7 @@ Per apportare modifiche al modello, selezionarlo e quindi eseguire di nuovo i pa
 > [!WARNING]
 > Quando si apportano modifiche a un modello salvato in precedenza, le modifiche non saranno visibili ai client finché i modelli non vengono aggiornati nei computer. Per altre informazioni, vedere l'articolo relativo all'[aggiornamento dei modelli per gli utenti](refresh-templates.md).
 
-<a id="see-also" class="xliff"></a>
-
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 [Configurare modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

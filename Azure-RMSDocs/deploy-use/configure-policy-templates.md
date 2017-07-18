@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="configuring-and-managing-templates-in-the-azure-information-protection-policy" class="xliff"></a>
-
-# Configurazione e gestione dei modelli nei criteri di Azure Information Protection
+# <a name="configuring-and-managing-templates-in-the-azure-information-protection-policy"></a>Configurazione e gestione dei modelli nei criteri di Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
 
@@ -43,9 +41,7 @@ I modelli di Rights Management sono ora integrati con i criteri di Azure Informa
 - I modelli di Rights Management per il tenant sono visualizzati come etichette e attualmente sono disponibili anche le impostazioni di configurazione specifiche della classificazione e dell'etichettatura. 
 
 
-<a id="considerations-for-templates-in-the-azure-portal" class="xliff"></a>
-
-## Considerazioni sui modelli nel portale di Azure
+## <a name="considerations-for-templates-in-the-azure-portal"></a>Considerazioni sui modelli nel portale di Azure
 
 Prima di modificare i modelli o convertirli in etichette nel portale di Azure, tenere presente le seguenti modifiche nell'implementazione rispetto alla gestione dei modelli nel portale di Azure classico. Si prevede che alcune limitazioni vengano risolte nell'anteprima:
 
@@ -69,9 +65,7 @@ Prima di modificare i modelli o convertirli in etichette nel portale di Azure, t
 
 - Poiché non è possibile creare un nuovo modello dal contenitore **Modelli**, creare un'etichetta con l'impostazione **Proteggi** e configurare i diritti di utilizzo e le impostazioni dal pannello **Protezione**. Per istruzioni complete, vedere [Per creare un nuovo modello](#to-create-a-new-template).
 
-<a id="to-configure-the-templates-in-the-azure-information-protection-policy" class="xliff"></a>
-
-## Per configurare i modelli nei criteri di Azure Information Protection
+## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Per configurare i modelli nei criteri di Azure Information Protection
 
 1. In una nuova finestra del browser accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza.
 
@@ -93,9 +87,7 @@ Prima di modificare i modelli o convertirli in etichette nel portale di Azure, t
 
 6. Per rendere disponibili le modifiche per le applicazioni e i servizi degli utenti, nel pannello **Azure Information Protection** fare clic su **Pubblica**.
 
-<a id="to-convert-templates-to-labels" class="xliff"></a>
-
-## Per convertire i modelli in etichette
+## <a name="to-convert-templates-to-labels"></a>Per convertire i modelli in etichette
 
 Se si ha una sottoscrizione che include la classificazione, l'etichettatura e la protezione, è possibile convertire un modello in etichetta. Quando si esegue questa operazione, il modello originale viene mantenuto ma viene visualizzato nel portale di Azure incluso in una nuova etichetta.
 
@@ -115,9 +107,7 @@ Quando si converte un modello in etichetta:
 
 - Il modello originale non è più visualizzato in **Modelli** e per modificarlo nel portale di Azure è ora necessario modificare l'etichetta creata. Il modello rimane disponibile per il servizio Azure Rights Management e può essere gestito con i [comandi di PowerShell](administer-powershell.md).  
 
-<a id="to-create-a-new-template" class="xliff"></a>
-
-## Per creare un nuovo modello
+## <a name="to-create-a-new-template"></a>Per creare un nuovo modello
 
 Quando si crea una nuova etichetta con l'impostazione di protezione **Azure RMS**, viene creato un nuovo modello personalizzato che può essere usato dai servizi e dalle applicazioni che si integrano con i modelli di Rights Management.
 
@@ -138,9 +128,7 @@ Quando si crea una nuova etichetta con l'impostazione di protezione **Azure RMS*
 5. Per rendere disponibili i modelli per le applicazioni e i servizi degli utenti, nel pannello **Azure Information Protection** fare clic su **Pubblica**.
 
 
-<a id="next-steps" class="xliff"></a>
-
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
 Come avviene per tutte le modifiche apportate ai criteri di Azure Information Protection, il download di questi modelli potrebbe richiedere fino a 15 minuti in un computer che esegue il client Azure Information Protection. Per informazioni sul download e l'aggiornamento dei modelli nei computer e nei servizi, vedere [Aggiornamento dei modelli per gli utenti](refresh-templates.md).
 

@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="administering-the-azure-rights-management-service-by-using-windows-powershell" class="xliff"></a>
-
-# Amministrazione del servizio Azure Rights Management tramite Windows PowerShell
+# <a name="administering-the-azure-rights-management-service-by-using-windows-powershell"></a>Amministrazione del servizio Azure Rights Management tramite Windows PowerShell
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -37,9 +35,7 @@ Per un elenco completo dei cmdlet disponibili per questo modulo e le relative in
 
 Oltre a questo modulo di PowerShell sul lato servizio, il client Azure Information Protection installa un modulo supplementare di PowerShell, **AzureInformationProtection**. Questo modulo client supporta la classificazione e la protezione di più file in modo che, ad esempio, sia possibile proteggere in blocco tutti i file in una cartella. Per altre informazioni, vedere [Uso di PowerShell con il client Azure Information Protection](../rms-client/client-admin-guide-powershell.md) nella guida dell'amministratore.
 
-<a id="cmdlets-grouped-by-administration-task" class="xliff"></a>
-
-## Cmdlet raggruppati in base all'attività di amministrazione
+## <a name="cmdlets-grouped-by-administration-task"></a>Cmdlet raggruppati in base all'attività di amministrazione
 
 |Se è necessario…|…usare i seguenti cmdlet|
 |-------------------|------------------------------|

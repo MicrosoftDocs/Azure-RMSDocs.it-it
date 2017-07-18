@@ -10,9 +10,7 @@ Quando si fa clic sul collegamento, vengono visualizzate le istruzioni per insta
 
 ![Screenshot dell'esercitazione di RM](../media/AzRMS_Tutorial_4_Screenshots.png)
 
-<a id="to-view-the-protected-document-attachment" class="xliff"></a>
-
-#### Per visualizzare l'allegato del documento protetto
+#### <a name="to-view-the-protected-document-attachment"></a>Per visualizzare l'allegato del documento protetto
 
 1.  Poiché si tratta di un documento di Word protetto da Azure Rights Management, il messaggio di posta elettronica presenta due allegati. Si tratta in effetti di due versioni dello stesso file con estensioni diverse. Aprire la versione con l'estensione di nome di file **ppdf** (**Confidential.ppdf**).
 

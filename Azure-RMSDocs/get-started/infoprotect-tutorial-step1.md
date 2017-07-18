@@ -16,9 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="step-1-activate-the-rights-management-service" class="xliff"></a>
-
-# Passaggio 1: Attivare il servizio Rights Management
+# <a name="step-1-activate-the-rights-management-service"></a>Passaggio 1: Attivare il servizio Rights Management
  
 >*Si applica a: Azure Information Protection*
 
@@ -31,9 +29,7 @@ Quando il servizio Azure Rights Management è attivato, è possibile proteggere 
 
 Per questa esercitazione, si passerà direttamente alla pagina di attivazione del portale per gli amministratori di Office 365. Se invece si preferisce non passare direttamente a questa pagina, ma usare il portale di amministrazione di Office 365, vedere le istruzioni complete riportate nell'articolo [Attivazione di Azure Rights Management](../deploy-use/activate-service.md). Seguire queste istruzioni anche se si ha accesso al portale di Azure ma non al portale di amministrazione di Office 365.
 
-<a id="to-activate-the-rights-management-service" class="xliff"></a>
-
-## Per attivare il servizio Rights Management
+## <a name="to-activate-the-rights-management-service"></a>Per attivare il servizio Rights Management
 
 1. Aprire una nuova finestra del browser e passare direttamente alla [pagina di attivazione di Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) per gli amministratori di Office 365.
     

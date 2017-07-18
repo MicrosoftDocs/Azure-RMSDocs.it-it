@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="what-problems-does-azure-rms-solve" class="xliff"></a>
-
-# Problemi risolti da Azure RMS
+# <a name="what-problems-does-azure-rms-solve"></a>Problemi risolti da Azure RMS
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -45,9 +43,7 @@ Azure RMS è la tecnologia di protezione usata da [Azure Information Protection]
 > [!TIP]
 > Gli utenti che hanno già acquisito familiarità con la versione locale di Rights Management, Active Directory Rights Management Services (AD RMS), possono essere interessati alla tabella comparativa disponibile in [Confronto tra Azure Rights Management e AD RMS](compare-azure-rms-ad-rms.md).
 
-<a id="security-compliance-and-regulatory-requirements" class="xliff"></a>
-
-## Requisiti di sicurezza, conformità e normativi
+## <a name="security-compliance-and-regulatory-requirements"></a>Requisiti di sicurezza, conformità e normativi
 Azure Rights Management supporta i requisiti di sicurezza, conformità e normativi seguenti:
 
 √ Uso di crittografia standard del settore e supporto per FIPS 140-2. Per altre informazioni, vedere [Controlli crittografici usati in Azure RMS: algoritmi e lunghezze delle chiavi](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
@@ -70,9 +66,7 @@ Azure Rights Management supporta i requisiti di sicurezza, conformità e normati
 
 Per altre informazioni su queste certificazioni esterne, vedere il [Centro protezione Azure](http://azure.microsoft.com/support/trust-center/compliance/).
 
-<a id="next-steps" class="xliff"></a>
-
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni tecniche sul funzionamento del servizio Azure Rights Management, vedere [Funzionamento di Azure RMS](how-does-it-work.md).
 

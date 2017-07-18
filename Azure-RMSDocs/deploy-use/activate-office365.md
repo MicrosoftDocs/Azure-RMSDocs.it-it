@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="how-to-activate-azure-rights-management-from-the-office-365-admin-center" class="xliff"></a>
-
-# Come attivare Azure Rights Management dall'interfaccia di amministrazione di Office 365
+# <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Come attivare Azure Rights Management dall'interfaccia di amministrazione di Office 365
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -51,9 +49,7 @@ Seguire queste istruzioni se si accede al servizio Azure Rights Management dall'
 Verranno quindi visualizzati il messaggio **Rights Management è attivato** e l'opzione di disattivazione.
 
 
-<a id="next-steps" class="xliff"></a>
-
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 Tornare ad [Attivazione di Azure Rights Management](activate-service.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

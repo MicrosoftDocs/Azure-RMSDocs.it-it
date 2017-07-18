@@ -19,9 +19,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="step-5-see-sharing-of-protected-files-in-action-and-track-your-document" class="xliff"></a>
-
-# Passaggio 5: Vedere in azione la condivisione di file protetti e tenere traccia del documento 
+# <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Passaggio 5: Vedere in azione la condivisione di file protetti e tenere traccia del documento 
 
 >*Si applica a: Azure Information Protection*
 
@@ -29,9 +27,7 @@ Per questo passaggio finale dell'esercitazione, individuare un documento di Word
 
 È quindi possibile condividere in modo sicuro il documento tramite posta elettronica. 
 
-<a id="to-safely-share-your-document-by-email" class="xliff"></a>
-
-## Per condividere in modo sicuro il documento tramite posta elettronica
+## <a name="to-safely-share-your-document-by-email"></a>Per condividere in modo sicuro il documento tramite posta elettronica
 
 1. In Esplora file fare clic con il pulsante destro del mouse sul documento e scegliere **Classifica e proteggi**. Verrà visualizzata la finestra di dialogo **Classifica e proteggi - Azure Information Protection**:
 
@@ -69,9 +65,7 @@ Per questo passaggio finale dell'esercitazione, individuare un documento di Word
 
 Ora che è stato inviato il documento protetto, è possibile chiedere ai destinatari di attenderne l'arrivo e quindi di aprirlo. 
 
-<a id="ask-your-recipients-to-open-the-emailed-document" class="xliff"></a>
-
-## Chiedere ai destinatari di aprire il documento inviato tramite posta elettronica
+## <a name="ask-your-recipients-to-open-the-emailed-document"></a>Chiedere ai destinatari di aprire il documento inviato tramite posta elettronica
 
 I destinatari possono usare molti dispositivi per leggere il documento protetto inviato come allegato di posta elettronica. I dispositivi includono iPad, iPhone, tablet e telefoni Android, computer Mac e computer Windows.
 
@@ -79,9 +73,7 @@ Chiedere di leggere il messaggio di posta elettronica inviato. Supponendo che qu
 
 Facendo clic su **Iscriviti**, Azure Information Protection controllerà se l'organizzazione ha una sottoscrizione che include il servizio di protezione dei dati Azure Rights Management. In caso contrario, è possibile richiedere un account gratuito.
 
-<a id="instructions-for-recipient-to-view-the-protected-document-attachment" class="xliff"></a>
-
-### Istruzioni per il destinatario: Per visualizzare l'allegato del documento protetto
+### <a name="instructions-for-recipient-to-view-the-protected-document-attachment"></a>Istruzioni per il destinatario: Per visualizzare l'allegato del documento protetto
 
 1. In un computer o un dispositivo mobile con Office installato, aprire l'allegato per leggere il documento.  
 
@@ -93,9 +85,7 @@ Come passaggio facoltativo, il destinatario dovrebbe inoltrare il messaggio di p
 
 Ora che il destinatario ha aperto l'allegato e, facoltativamente, lo ha inoltrato a qualcun altro, è possibile tenere traccia del documento.
 
-<a id="to-track-your-protected-document" class="xliff"></a>
-
-## Per rilevare il documento protetto
+## <a name="to-track-your-protected-document"></a>Per rilevare il documento protetto
 
 1.  Aprire il documento protetto e condiviso. Un messaggio informativo indica le impostazioni di protezione personalizzata specificate:
 
@@ -128,9 +118,7 @@ Ora che il destinatario ha aperto l'allegato e, facoltativamente, lo ha inoltrat
 |Uso del sito di rilevamento dei documenti|[Tenere traccia dei documenti e revocarli](../rms-client/client-track-revoke.md)
 
 
-<a id="next-steps" class="xliff"></a>
-
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
 Dopo aver esaminato il criterio predefinito di Azure Information Protection e dopo aver scoperto come personalizzarlo, oltre ad aver appreso come funziona l'aggiunta di etichette per un documento di Word, è consigliabile provare qualcuna delle altre impostazioni e verificarne il funzionamento in altre applicazioni di Office che supportano Azure Information Protection: Excel, PowerPoint, Outlook. Se al momento dell'installazione del client di Azure Information Protection queste applicazioni erano aperte, chiuderle e riaprirle prima di provare a usarle con Azure Information Protection.
 
