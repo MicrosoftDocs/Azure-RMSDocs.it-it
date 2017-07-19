@@ -16,9 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/05/2017
 ---
-<a id="how-to-configure-labels-for-different-languages-in-azure-information-protection" class="xliff"></a>
-
-# Come configurare etichette per lingue diverse in Azure Information Protection
+# <a name="how-to-configure-labels-for-different-languages-in-azure-information-protection"></a>Come configurare etichette per lingue diverse in Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
 
@@ -29,9 +27,7 @@ Per impostazione predefinita, i nomi e le descrizioni delle etichette supportano
 
 Selezionare le lingue che corrispondono alle impostazioni lingua degli utenti per Office e Windows. Tali nomi e descrizioni di etichette vengono poi visualizzati rispettivamente nella barra di Azure Information Protection nelle app di Office e nella casella di dialogo **Classifica e proteggi - Azure Information Protection**. Per altre informazioni su quale lingua venga scelta, vedere la sezione [Come il client di Azure Information Protection determina la lingua da visualizzare](#how-the-azure-information-protection-client-determines-the-language-to- display) in questa pagina. 
 
-<a id="to-configure-labels-to-display-in-different-languages" class="xliff"></a>
-
-## Per configurare le etichette da visualizzare in lingue diverse
+## <a name="to-configure-labels-to-display-in-different-languages"></a>Per configurare le etichette da visualizzare in lingue diverse
 
 1. Se non è già stato fatto, in una nuova finestra del browser accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza e quindi passare al pannello **Azure Information Protection**. 
     
@@ -66,9 +62,7 @@ Selezionare le lingue che corrispondono alle impostazioni lingua degli utenti pe
     
     Al termine dell'importazione, i nomi e le descrizioni delle etichette localizzate verranno scaricati per gli utenti alla pubblicazione successiva dei criteri di Azure Information Protection. È possibile fare clic su **Pubblica** dal pannello **Criteri globali** o **Criteri con ambito**.
 
-<a id="how-the-azure-information-protection-client-determines-the-language-to-display" class="xliff"></a>
-
-## Come il client di Azure Information Protection determina la lingua da visualizzare
+## <a name="how-the-azure-information-protection-client-determines-the-language-to-display"></a>Come il client di Azure Information Protection determina la lingua da visualizzare
 
 Quando gli utenti scaricano un criterio di Azure Information Protection che supporta lingue diverse, la lingua con cui vengono visualizzati i nomi di etichetta e le descrizioni dei comandi per gli utenti è determinata dalla logica seguente:
 
@@ -84,9 +78,7 @@ Quando gli utenti scaricano un criterio di Azure Information Protection che supp
 
 - Quando non è presente alcuna corrispondenza con la lingua del sistema operativo, le descrizioni e i nomi delle etichette vengono visualizzati nella lingua specificata per impostazione predefinita per tutti gli utenti. Tale lingua è in genere l'inglese, ovvero la lingua usata nel criterio predefinito.
 
-<a id="when-localized-label-names-are-not-used" class="xliff"></a>
-
-## Quando non vengono usati i nomi di etichetta localizzati
+## <a name="when-localized-label-names-are-not-used"></a>Quando non vengono usati i nomi di etichetta localizzati
 
 Negli scenari seguenti non vengono usati nomi di etichette, ed etichette secondarie, localizzati. Per garantire la coerenza nel tenant, per gli oggetti seguenti viene sempre usata la lingua predefinita:
 
@@ -97,9 +89,7 @@ Negli scenari seguenti non vengono usati nomi di etichette, ed etichette seconda
 - Metadati documento e intestazioni di posta elettronica
 
 
-<a id="next-steps" class="xliff"></a>
-
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni sulle opzioni disponibili per le etichette e su altre configurazioni dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).
 
