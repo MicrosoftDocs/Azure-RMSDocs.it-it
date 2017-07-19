@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="rights-management-sharing-application-user-guide" class="xliff"></a>
-
-# Guida dell'utente dell'applicazione Rights Management sharing
+# <a name="rights-management-sharing-application-user-guide"></a>Guida dell'utente dell'applicazione Rights Management sharing
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
@@ -33,9 +31,7 @@ L'applicazione Microsoft Rights Management (RMS) sharing per Windows consente di
 
 In caso di domande per le quali non si trova risposta in questa Guida, vedere [Domande frequenti sull'applicazione Microsoft Rights Management sharing per Windows](http://go.microsoft.com/fwlink/?LinkId=303971). Questa pagina include anche alcune informazioni sulla risoluzione dei problemi, nel caso se ne verificassero.
 
-<a id="examples-for-using-the-rms-sharing-application" class="xliff"></a>
-
-## Esempi per l'uso dell'applicazione RMS sharing
+## <a name="examples-for-using-the-rms-sharing-application"></a>Esempi per l'uso dell'applicazione RMS sharing
 Di seguito sono riportati solo alcuni esempi di come è possibile usare l'applicazione RMS sharing per proteggere i file.
 
 |Si desidera...|Come effettuare questa operazione|
@@ -47,9 +43,7 @@ Di seguito sono riportati solo alcuni esempi di come è possibile usare l'applic
 |**... proteggere i file di informazioni aziendali riservate sul computer portatile in modo che non vi possano accedere utenti esterni all'azienda**<br /><br />Si viaggia molto e si utilizza il computer portatile per accedere e aggiornare i file in una cartella che deve essere protetta da accessi non autorizzati.|Si ha l'applicazione RMS sharing installata in un computer portatile. Si utilizza Esplora File per proteggere i file utilizzando un modello, che consente di proteggere rapidamente i file. Se il computer portatile viene rubato, si è tranquilli del fatto che nessuno esterno all'azienda può accedere a questi documenti.<br /><br />Procedura dettagliata: [Proteggere un file in un dispositivo &#40;protezione sul posto&#41; tramite l'applicazione Rights Management sharing](sharing-app-protect-in-place.md).|
 Rendering PDF con tecnologia Foxit ¹. Copyright © 2003-2014, Foxit Corporation.
 
-<a id="what-do-you-want-to-do" class="xliff"></a>
-
-## Come procedere
+## <a name="what-do-you-want-to-do"></a>Come procedere
 > [!NOTE]
 > Per altre informazioni tecniche, ad esempio sui [tipi di file supportati](sharing-app-admin-guide-technical.md#supported-file-types-and-file-name-extensions) e su [come installare questa applicazione in una rete aziendale](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application), vedere la [Guida dell'amministratore dell'applicazione Rights Management sharing](sharing-app-admin-guide.md).
 

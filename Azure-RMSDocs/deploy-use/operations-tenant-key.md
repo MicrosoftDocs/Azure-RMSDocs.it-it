@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="operations-for-your-azure-information-protection-tenant-key" class="xliff"></a>
-
-# Operazioni relative alla chiave del tenant di Azure Information Protection
+# <a name="operations-for-your-azure-information-protection-tenant-key"></a>Operazioni relative alla chiave del tenant di Azure Information Protection
 
 >*Si applica a: Azure Information Protection, Office 365*
 
