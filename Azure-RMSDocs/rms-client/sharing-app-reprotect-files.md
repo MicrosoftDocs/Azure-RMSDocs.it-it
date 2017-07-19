@@ -19,9 +19,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="change-permissions-on-files-that-have-been-protected-by-rights-management" class="xliff"></a>
-
-# Modificare le autorizzazioni per i file protetti da Rights Management
+# <a name="change-permissions-on-files-that-have-been-protected-by-rights-management"></a>Modificare le autorizzazioni per i file protetti da Rights Management
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
@@ -40,9 +38,7 @@ Se ad esempio un altro utente ha protetto il file tramite l'applicazione Rights 
 
 Se si vogliono rimuovere completamente tutte le autorizzazioni in modo che il file non sia più protetto, vedere [Rimuovere la protezione da un file](sharing-app-remove-protection.md).
 
-<a id="to-re-protect-a-file-in-place" class="xliff"></a>
-
-## Per riproteggere un file sul posto
+## <a name="to-re-protect-a-file-in-place"></a>Per riproteggere un file sul posto
 
 1.  In Esplora file, selezionare un file da proteggere. Fare clic sul pulsante destro del mouse, selezionare **Proteggi tramite RMS**, quindi selezionare **Proteggi sul posto**. Ad esempio:
 
@@ -75,9 +71,7 @@ Se si vogliono rimuovere completamente tutte le autorizzazioni in modo che il fi
 >     Quando si effettua l'iscrizione, utilizzare l'indirizzo di posta elettronica della società anziché un indirizzo di posta elettronica personale. Se si esegue l'iscrizione perché è stato inviato un allegato protetto tramite posta elettronica, utilizzare lo stesso indirizzo di posta elettronica utilizzato per inviare il messaggio di posta elettronica.
 > -   Per ulteriori informazioni, vedere [RMS per utenti singoli e Azure Rights Management](../understand-explore/rms-for-individuals.md).
 
-<a id="to-re-protect-a-file-that-you-have-emailed" class="xliff"></a>
-
-## Per riproteggere un file inviato tramite posta elettronica
+## <a name="to-re-protect-a-file-that-you-have-emailed"></a>Per riproteggere un file inviato tramite posta elettronica
 
 Se si vogliono modificare le autorizzazioni per un file inviato tramite posta elettronica:
 
@@ -90,18 +84,14 @@ Se si vogliono modificare le autorizzazioni per un file inviato tramite posta el
     Per revocare un file inviato tramite posta elettronica, vedere [Tenere traccia dei documenti e revocarli](sharing-app-track-revoke.md).
 
 
-<a id="examples-and-other-instructions" class="xliff"></a>
-
-## Esempi e altre istruzioni
+## <a name="examples-and-other-instructions"></a>Esempi e altre istruzioni
 Per esempi di come è possibile usare l'applicazione Rights Management sharing e informazioni sulle procedure da seguire, vedere le sezioni seguenti della Guida dell'utente dell'applicazione Rights Management sharing:
 
 -   [Esempi per l'uso dell'applicazione RMS sharing](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
 -   [Per saperne di più](sharing-app-user-guide.md#what-do-you-want-to-do)
 
-<a id="see-also" class="xliff"></a>
-
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

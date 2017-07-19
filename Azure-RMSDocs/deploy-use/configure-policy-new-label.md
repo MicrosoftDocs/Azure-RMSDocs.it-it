@@ -16,9 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="how-to-create-a-new-label-for-azure-information-protection" class="xliff"></a>
-
-# Come creare una nuova etichetta per Azure Information Protection
+# <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Come creare una nuova etichetta per Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
 
@@ -48,9 +46,7 @@ Seguire queste istruzioni per aggiungere una nuova etichetta ai criteri di Azure
 
 5. Per visualizzare il nuovo nome di etichetta e la descrizione in lingue diverse per gli utenti, seguire le procedure descritte in [How to configure labels for different languages](configure-policy-languages.md) (Come configurare le etichette per lingue diverse). 
 
-<a id="next-steps" class="xliff"></a>
-
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).  
 

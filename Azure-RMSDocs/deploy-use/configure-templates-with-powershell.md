@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="powershell-reference-for-custom-templates" class="xliff"></a>
-
-# Guida di riferimento di PowerShell per i modelli personalizzati
+# <a name="powershell-reference-for-custom-templates"></a>Guida di riferimento di PowerShell per i modelli personalizzati
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -55,9 +53,7 @@ I cmdlet che supportano la creazione e la gestione di modelli sono i seguenti:
 
 
 
-<a id="see-also" class="xliff"></a>
-
-## Vedere anche
+## <a name="see-also"></a>Vedere anche
 [Configurare modelli personalizzati per Azure Rights Management](configure-custom-templates.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

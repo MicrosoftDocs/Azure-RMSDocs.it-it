@@ -18,9 +18,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="activating-azure-rights-management" class="xliff"></a>
-
-# Attivazione di Azure Rights Management
+# <a name="activating-azure-rights-management"></a>Attivazione di Azure Rights Management
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -55,9 +53,7 @@ In alternativa, è possibile usare PowerShell per attivare [!INCLUDE[aad_rightsm
 
 3. Eseguire [Enable-Aadrm](/powershell/module/aadrm/enable-aadrm) che attiva il servizio Azure Rights Management.
 
-<a id="configuring-onboarding-controls-for-a-phased-deployment" class="xliff"></a>
-
-## Configurazione dei controlli di selezione utenti per una distribuzione graduale
+## <a name="configuring-onboarding-controls-for-a-phased-deployment"></a>Configurazione dei controlli di selezione utenti per una distribuzione graduale
 Se non si vuole permettere a tutti gli utenti di proteggere immediatamente i file usando Azure Rights Management, sarà possibile configurare controlli di selezione utenti usando il comando [Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy) di PowerShell. È possibile eseguire questo comando prima o dopo l'attivazione del servizio Azure Rights Management.
 
 > [!IMPORTANT]
@@ -91,9 +87,7 @@ Per altre informazioni su questo cmdlet ed esempi aggiuntivi, vedere la guida di
 Quando si usano questi controlli di selezione utenti, tutti gli utenti dell'organizzazione potranno utilizzare sempre i contenuti protetti dal sottoinsieme di utenti, ma non potranno applicare direttamente la protezione delle informazioni da applicazioni client. Non potranno ad esempio visualizzare nei client di Office i modelli predefiniti pubblicati automaticamente quando viene attivato il servizio Azure Rights Management oppure eventuali modelli personalizzati configurati dall'utente.  Per ottenere lo stesso risultato, le applicazioni lato server, come Exchange, possono implementare controlli specifici per singoli utenti per l'integrazione con RMS.
 
 
-<a id="next-steps" class="xliff"></a>
-
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 Dopo aver attivato [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] per l'organizzazione, usare la [Guida di orientamento per la distribuzione di Azure Information Protection](../plan-design/deployment-roadmap.md) per verificare se sono necessarie altre operazioni di configurazione prima di distribuire Azure Information Protection a utenti e amministratori. 
 
 Ad esempio, per usare [modelli personalizzati](configure-custom-templates.md) per semplificare l'applicazione della protezione delle informazioni ai file, connettere i server locali in modo che usino [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] installando il [connettore Rights Management](deploy-rms-connector.md) e distribuire il [client Azure Information Protection](../rms-client/aip-client.md) che supporta la protezione di tutti i tipi di file su tutti i dispositivi. 

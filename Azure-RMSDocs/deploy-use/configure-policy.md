@@ -18,17 +18,13 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="configuring-azure-information-protection-policy" class="xliff"></a>
-
-# Configurazione dei criteri di Azure Information Protection
+# <a name="configuring-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
 
 Per configurare le funzioni di classificazione, aggiunta di etichette e protezione, è necessario configurare i criteri di Azure Information Protection. Questi criteri vengono quindi scaricati nei computer in cui è installato il [client di Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-<a id="subscription-support" class="xliff"></a>
-
-## Supporto della sottoscrizione
+## <a name="subscription-support"></a>Supporto della sottoscrizione
 
 I criteri di Azure Information Protection supportano vari livelli di sottoscrizioni:
 
@@ -46,9 +42,7 @@ Per altre informazioni sulle sottoscrizioni, vedere [Quale sottoscrizione è nec
 
 Per altre informazioni su come configurare i criteri di ambito, vedere [Come configurare i criteri di Azure Information Protection per utenti specifici con i criteri con ambito](configure-policy-scope.md).
 
-<a id="how-to-configure-the-azure-information-protection-policy" class="xliff"></a>
-
-## Come configurare i criteri di Azure Information Protection
+## <a name="how-to-configure-the-azure-information-protection-policy"></a>Come configurare i criteri di Azure Information Protection
 
 1. In una nuova finestra del browser accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza.
 
@@ -91,9 +85,7 @@ Il client Azure Information Protection verifica la disponibilità di eventuali m
 >[!NOTE]
 >Quando il client scarica i criteri, prevedere un'attesa di alcuni minuti prima che ritorni completamente operativo. Il tempo effettivo varia a seconda di fattori quali le dimensioni e la complessità della configurazione dei criteri e la connettività di rete. Se l'azione risultante delle etichette non corrisponde alle ultime modifiche, attendere fino a 15 minuti e riprovare.
 
-<a id="configuring-your-organizations-policy" class="xliff"></a>
-
-### Configurazione dei criteri dell'organizzazione
+### <a name="configuring-your-organizations-policy"></a>Configurazione dei criteri dell'organizzazione
 
 Usare le informazioni seguenti per configurare i criteri di Azure Information Protection:
 
@@ -119,9 +111,7 @@ Usare le informazioni seguenti per configurare i criteri di Azure Information Pr
 
 - [Come configurare etichette per lingue diverse](configure-policy-languages.md)
 
-<a id="next-steps" class="xliff"></a>
-
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
 Per un esempio di come personalizzare i criteri predefiniti e osservare il comportamento risultante in un'applicazione di Office, seguire l'[Esercitazione introduttiva di Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
 

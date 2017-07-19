@@ -16,9 +16,7 @@ ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 06/30/2017
 ---
-<a id="how-to-change-or-customize-an-existing-label-for-azure-information-protection" class="xliff"></a>
-
-# Come modificare o personalizzare un'etichetta esistente per Azure Information Protection
+# <a name="how-to-change-or-customize-an-existing-label-for-azure-information-protection"></a>Come modificare o personalizzare un'etichetta esistente per Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
 
@@ -46,9 +44,7 @@ Per modificare un'etichetta, seguire queste istruzioni.
 > [!TIP]
 >Per ripristinare i valori predefiniti per una delle etichette predefinite, usare le informazioni fornite in [Criterio predefinito di Information Protection](configure-policy-default.md).
 
-<a id="next-steps" class="xliff"></a>
-
-## Passaggi successivi
+## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni sulle opzioni disponibili per le etichette e su altre configurazioni dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).
 
