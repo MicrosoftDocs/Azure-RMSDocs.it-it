@@ -5,7 +5,7 @@ keywords: Alcune domande frequenti riguardanti l'uso dell'app Azure Information 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/05/2017
+ms.date: 07/08/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.technology: techgroup-identity
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5ea28525653966d2de609c118bd18079cff99b2d
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: dc6b9ee8c557ce04019534c4713c526265c207e0
+ms.sourcegitcommit: 0b097f0817fee0fb025caef3c46fdd887c782a43
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/07/2017
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Domande frequenti sull'app Microsoft Azure Information Protection per iOS e Android
 
@@ -60,7 +60,9 @@ Non ancora. Attualmente è possibile accedere solo con l'indirizzo di posta elet
 
 ## <a name="which-file-extensions-can-i-open-with-this-app"></a>Quali estensioni di file è possibile aprire con questa app?
 
-È possibile aprire i file con estensione rpmsg, pdf, ppdf, pjpg e ptxt, oltre ad altri numerosi formati di file di testo e immagine.
+È possibile aprire i file con estensione rpmsg, pdf, ppdf, pjpg, pjpeg, ptiff, ppng, ptxt, pxml e altri formati di file di testo e immagine.
+
+Per l'elenco completo delle estensioni dei nomi di file di testo e immagine, vedere la prima tabella in [Tipi di file supportati per la classificazione e la protezione](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) nella Guida dell'amministratore.
 
 ##  <a name="how-do-i-provide-feedback-about-this-app"></a>In che modo è possibile fornire feedback sull'app?
 

@@ -4,7 +4,7 @@ description: Informazioni sull'installazione e la configurazione del connettore 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/30/2017
+ms.date: 07/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d03cb1ff146839e4de805b66f5b2e6a3df851430
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: e3444ee0812d54988ad12461e0f492fe07637209
+ms.sourcegitcommit: 1128ccda089727ac4a638e99532516474cef0ef4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/11/2017
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installazione e configurazione del connettore di Azure Rights Management
 
@@ -32,7 +32,7 @@ Prima di iniziare, assicurarsi di aver esaminato e controllato i [prerequisiti](
 1.  Identificare i computer (almeno due) su cui verrà eseguito il connettore RMS. È necessario che tali computer siano conformi alle specifiche minime elencate nei prerequisiti.
 
     > [!NOTE]
-    > Installare un singolo connettore RMS (costituito da più server per assicurare elevati livelli di disponibilità) per tenant (tenant di Office 365 o di Azure AD). A differenza di Active Directory RMS, non è necessario installare un connettore RMS in ogni foresta.
+    > Installare un singolo connettore RMS (costituito da più server per la disponibilità elevata) per ogni tenant (tenant di Office 365 o di Azure AD). A differenza di Active Directory RMS, non è necessario installare un connettore RMS in ogni foresta.
 
 2.  Scaricare i file di origine per il connettore RMS dall' [Area download Microsoft](http://go.microsoft.com/fwlink/?LinkId=314106).
 
@@ -55,7 +55,7 @@ Per continuare, immettere un account e una password per configurare il connettor
 ## <a name="entering-credentials"></a>Immissione delle credenziali
 Per poter configurare il connettore RMS, è necessario immettere le credenziali per un account dotato di privilegi sufficienti per la configurazione del connettore. È ad esempio possibile digitare **admin@contoso.com** e quindi specificare la password per questo account.
 
-Per questa password sono previste alcune limitazioni relative ai caratteri. Non è possibile usare una password che includa uno dei caratteri seguenti: e commerciale (**&**), parentesi quadra aperta (**[**), parentesi quadra chiusa (**]**), virgolette semplici (**"**) e apostrofo (**'**). Se la password include uno di questi caratteri, non sarà possibile effettuare l'autenticazione per il connettore RMS e verrà visualizzato il messaggio di errore **La combinazione nome utente e password specificata non è corretta**, anche se è possibile effettuare l'accesso usando questo account e questa password per altri scenari. Se questa situazione è applicabile alla password in uso, scegliere un account diverso con una password che non include questi caratteri speciali oppure reimpostare la password, in modo che non includa questi caratteri speciali.
+Questo account non deve richiedere l'autenticazione a più fattori (MFA, Multi-Factor Authentication) perché il connettore non supporta l'autenticazione MFA. Sono previste anche alcune limitazioni per i caratteri della password del connettore. Non è possibile usare una password che includa uno dei caratteri seguenti: e commerciale (**&**), parentesi quadra aperta (**[**), parentesi quadra chiusa (**]**), virgolette semplici (**"**) e apostrofo (**'**). Se la password include uno di questi caratteri non è possibile effettuare l'autenticazione per il connettore RMS e viene visualizzato il messaggio di errore **La combinazione nome utente e password specificata non è corretta**, anche se l'accesso con questo account e questa password funziona in altri scenari. Se si verifica questa situazione per la password in uso, scegliere un account diverso con una password che non include questi caratteri speciali oppure reimpostare la password in modo che non includa i caratteri speciali.
 
 Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), assicurarsi che l'account specificato sia in grado di proteggere il contenuto. Se, ad esempio, è stata limitata la possibilità di proteggere il contenuto per il gruppo "Reparto IT", l'account specificato deve essere un membro del gruppo. In caso contrario, verrà visualizzato il messaggio di errore: **Tentativo di individuare la posizione del servizio di amministrazione e dell’organizzazione non riuscito. Assicurarsi che il servizio Microsoft Rights Management sia abilitato per l’organizzazione.**
 
@@ -98,7 +98,7 @@ Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-s
 
 Durante il processo di installazione del connettore RMS, vengono eseguite la convalida e l'installazione di tutti i prerequisiti software, l'installazione di Internet Information Services (se non già presente nel sistema) e l'installazione e configurazione del software del connettore. Viene anche preparata la configurazione di Azure RMS con la creazione degli elementi seguenti:
 
--   Una tabella vuota relativa ai server autorizzati a usare il connettore per le comunicazioni con Azure RMS. I server verranno inseriti nella tabella in un secondo momento.
+-   Una tabella vuota relativa ai server autorizzati a usare il connettore per le comunicazioni con Azure RMS. I server vengono aggiunti alla tabella in un secondo momento.
 
 -   Un set di token di sicurezza per il connettore, che autorizzano operazioni con Azure RMS. Questi token vengono scaricati da Azure RMS e installati nel computer locale nel Registro di sistema. Sono protetti tramite l’interfaccia di programmazione dell’applicazione di protezione dei dati (DPAPI) e le credenziali dell'account Sistema locale.
 
@@ -122,9 +122,9 @@ Per definire tali server, eseguire lo strumento di amministrazione di connettore
 
 Quando si autorizzano i server, tenere presente quanto segue:
 
--   Ai server aggiunti all'elenco verranno concessi privilegi speciali. A tutti gli account specificati per il ruolo di Exchange Server nella configurazione del connettore verrà concesso il [ruolo utente con privilegi avanzati](configure-super-users.md) in Azure RMS, che consente l'accesso a tutto il contenuto per questo tenant di RMS. La funzionalità di utente con privilegi avanzati viene attivata automaticamente a questo punto, se necessario. Per evitare i rischi per la sicurezza dovuti all'elevazione dei privilegi, specificare solo gli account usati dai server di Exchange dell'organizzazione. A tutti i server configurati come server di SharePoint o file server che usano FCI verranno concessi i privilegi di utente normale.
+- I server aggiunti all'elenco godono di privilegi speciali. A tutti gli account specificati per il ruolo Exchange Server nella configurazione del connettore viene concesso il [ruolo utente con privilegi avanzati](configure-super-users.md) in Azure RMS, che consente l'accesso a tutto il contenuto per questo tenant di RMS. La funzionalità di utente con privilegi avanzati viene attivata automaticamente a questo punto, se necessario. Per evitare i rischi per la sicurezza dovuti all'elevazione dei privilegi, specificare solo gli account usati dai server di Exchange dell'organizzazione. A tutti i server configurati come server di SharePoint o file server che usano FCI vengono concessi i privilegi di utente normale.
 
--   È possibile aggiungere più server all'elenco come voce singola specificando un gruppo di Active Directory di sicurezza o di distribuzione oppure un account del servizio usato da più di un server. Se si usa questa configurazione, i server del gruppo condividono gli stessi certificati RMS e vengono tutti considerati proprietari del contenuto protetto da ciascuno di essi. Per ridurre il sovraccarico amministrativo, per autorizzare i server di Exchange dell'organizzazione o una server farm di SharePoint si consiglia di usare la configurazione di un gruppo anziché singoli server.
+- È possibile aggiungere più server all'elenco come voce singola specificando un gruppo di Active Directory di sicurezza o di distribuzione oppure un account del servizio usato da più di un server. Se si usa questa configurazione i server del gruppo condividono gli stessi certificati RMS e sono considerati tutti proprietari del contenuto protetto da ognuno di essi. Per ridurre il sovraccarico amministrativo, per autorizzare i server di Exchange dell'organizzazione o una server farm di SharePoint si consiglia di usare la configurazione di un gruppo anziché singoli server.
 
 Nella pagina **Server a cui è consentito l'uso del connettore** , fare clic su **Aggiungi**.
 
@@ -180,7 +180,7 @@ Usare le impostazioni seguenti per configurare il cluster di Bilanciamento caric
 
 -   Metodo di distribuzione: Uguale
 
-Questo nome definito per il sistema con carico bilanciato (per i server che eseguono il servizio del connettore RMS) è il nome del connettore RMS dell'organizzazione che verrà usato in un secondo momento, quando si configurano i server locali per l'uso di Azure RMS.
+Questo nome definito per il sistema con carico bilanciato (per i server che eseguono il servizio del connettore RMS) è il nome del connettore RMS dell'organizzazione che viene usato in seguito quando si configurano i server locali per l'uso di Azure RMS.
 
 ## <a name="configuring-the-rms-connector-to-use-https"></a>Configurazione del connettore RMS per l'uso di HTTPS
 > [!NOTE]
@@ -188,7 +188,7 @@ Questo nome definito per il sistema con carico bilanciato (per i server che eseg
 
 Anche se TLS o SSL è facoltativo per il connettore RMS, se ne consiglia comunque l'uso per qualsiasi servizio basato su HTTP con esigenze particolari a livello di sicurezza. Questa configurazione esegue l'autenticazione dei server che eseguono il connettore ai server di Exchange e SharePoint che lo usano. Inoltre, tutti i dati inviati da questi server al connettore vengono crittografati.
 
-Per abilitare il connettore RMS all'uso di TLS, è necessario installare su ciascuno dei server che esegue tale connettore un certificato di autenticazione server contenente il nome da usare per il connettore stesso. Se, ad esempio, il nome del connettore RMS definito nel DNS è **rmsconnector.contoso.com**, distribuire un certificato di autenticazione server che contiene **rmsconnector.contoso.com** come nome comune nel soggetto del certificato. In alternativa, specificare **rmsconnector.contoso.com** nel nome alternativo del certificato come valore DNS. Il certificato non deve includere il nome del server. In IIS, associare quindi il certificato al sito Web predefinito.
+Per abilitare il connettore RMS all'uso di TLS è necessario installare su ogni server che esegue tale connettore un certificato di autenticazione server contenente il nome usato per il connettore stesso. Se, ad esempio, il nome del connettore RMS definito nel DNS è **rmsconnector.contoso.com**, distribuire un certificato di autenticazione server che contiene **rmsconnector.contoso.com** come nome comune nel soggetto del certificato. In alternativa, specificare **rmsconnector.contoso.com** nel nome alternativo del certificato come valore DNS. Il certificato non deve includere il nome del server. In IIS, associare quindi il certificato al sito Web predefinito.
 
 Se si usa l'opzione HTTPS, assicurarsi che tutti i server che eseguono il connettore dispongano di un certificato di autenticazione server valido concatenato a un'autorità di certificazione (CA) radice considerata attendibile dai server di Exchange e SharePoint dell'organizzazione. Inoltre, se l'autorità di certificazione (CA) che ha emesso i certificati per i server del connettore pubblica un elenco di revoche di certificati (CRL), è necessario che i server di Exchange e SharePoint siano in grado di scaricare tale CRL.
 
@@ -197,7 +197,7 @@ Se si usa l'opzione HTTPS, assicurarsi che tutti i server che eseguono il connet
 >
 > -   Se per distribuire i certificati di autenticazione server si usano Servizi certificati Active Directory e un'autorità di certificazione (CA) globale (enterprise), è possibile duplicare e quindi usare il modello di certificato del server Web. Questo modello di certificato usa **Fornito nella richiesta** per il nome soggetto del certificato. Questo significa che, quando si richiede il certificato, è possibile fornire il nome di dominio completo del nome del connettore RMS come nome soggetto del certificato o come nome alternativo del soggetto.
 > -   Se si usa una CA autonoma o si acquista il certificato da un'altra società, vedere la sezione relativa alla [configurazione dei certificati del server Internet (IIS 7)](http://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx) nella raccolta di documentazione relativa al [Server Web (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) su TechNet.
-> -   Per configurare IIS per l'uso del certificato, vedere la sezione relativa all'[aggiunta di un'associazione a un sito (IIS 7)](http://technet.microsoft.com/library/cc731692.aspx) nella raccolta di documentazione relativa al [Server Web (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) su TechNet.
+> -   Per configurare IIS per l'uso del certificato, vedere la sezione relativa all'[Add a Binding to a Site (IIS 7)](http://technet.microsoft.com/library/cc731692.aspx) (Aggiungere un'associazione a un sito - IIS 7) nella raccolta di documentazione [Web Server (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) (Server Web - IIS) su TechNet.
 
 ## <a name="configuring-the-rms-connector-for-a-web-proxy-server"></a>Configurazione del connettore RMS per un server proxy Web
 Se i server del connettore sono installati in una rete che non dispone di connettività Internet diretta e richiede la configurazione manuale di un server proxy Web per l'accesso a Internet in uscita, è necessario configurare il Registro di sistema dei server per il connettore RMS.

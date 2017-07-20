@@ -4,21 +4,19 @@ description: Esercitazione introduttiva che consente di provare rapidamente Micr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/25/2017
+ms.date: 07/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 023330bbd3909290e098bd7379d8cc2a24d36672
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 9afee2da9cb6fdd787dfb6bdafe2ae64fdef9475
+ms.sourcegitcommit: ea03477312b64c0a846701e46d991fe2c85b3a1f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/10/2017
 ---
-<a id="quick-start-tutorial-for-azure-information-protection" class="xliff"></a>
-
-# Esercitazione introduttiva di Azure Information Protection 
+# <a name="quick-start-tutorial-for-azure-information-protection"></a>Esercitazione introduttiva di Azure Information Protection 
 
 >*Si applica a: Azure Information Protection*
 
@@ -28,10 +26,8 @@ Questa esercitazione, rivolta ai consulenti e agli amministratori IT, consente d
 
 In caso di problemi riguardanti l'esecuzione di questa esercitazione o l'uso di Azure Information Protection, oppure se si vogliono conoscere le opinioni di altri utenti su questa applicazione, visitare il [sito di Azure Information Protection in Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all).
 
-<a id="prerequisites" class="xliff"></a>
-
-## Prerequisiti 
-Per completare questa esercitazione, è necessario quanto segue:
+## <a name="prerequisites"></a>Prerequisiti 
+Per completare questa esercitazione è necessario quanto segue:
 
 - Una sottoscrizione che includa Azure Information Protection con supporto per classificazione, assegnazione di etichette e protezione. Questa esercitazione include alcune delle funzionalità avanzate, ad esempio la classificazione automatica dei dati con consigli per gli utenti e il sito per il rilevamento dei documenti. Per questa esercitazione, assicurarsi di avere una sottoscrizione che supporti queste funzionalità. Per altre informazioni, vedere le [informazioni sulla sottoscrizione](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e l'[elenco delle funzionalità](https://www.microsoft.com/cloud-platform/azure-information-protection-features) nel sito Azure Information Protection.
     
@@ -42,7 +38,7 @@ Per completare questa esercitazione, è necessario quanto segue:
 
 - Un account di amministratore globale per accedere al portale di Azure e configurare i criteri di Azure Information Protection. Questo account deve disporre inoltre di un indirizzo di posta elettronica e di un servizio di posta elettronica funzionante (ad esempio, Exchange Online o Exchange Server).
 
-- Un computer che esegue Windows (almeno Windows 7 con Service Pack 1) e in cui è installato Office 365 ProPlus con le app di Office 2016 o 2013, Office Professional Plus 2016, Office Professional Plus 2013 con Service Pack 1 o Office Professional Plus 2010. 
+- Un computer che esegue Windows (almeno Windows 7 con Service Pack 1) e in cui è installato Office 365 ProPlus con le app di Office 2016 o 2013, Office Professional Plus 2016, Office Professional Plus 2013 con Service Pack 1 o Office Professional Plus 2010 con Service Pack 2. È necessario aver eseguito l'accesso alle app di Office mediante l'account cloud.
 
 A questo punto, procedere con l'esercitazione.
 
