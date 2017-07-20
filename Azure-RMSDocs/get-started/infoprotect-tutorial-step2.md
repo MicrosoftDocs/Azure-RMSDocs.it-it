@@ -4,21 +4,19 @@ description: 'Passaggio 2 di un''esercitazione introduttiva per provare rapidame
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 07/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: b91bfea99170b747bb199b3c966ae8c89fae5359
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: f6cd01357db99ee9d299606172aa85f7e2f44ba0
+ms.sourcegitcommit: 1dee39e5e3b222b4aab2b6c4284b82927148407e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/13/2017
 ---
-<a id="step-2-configure-and-publish-the-azure-information-protection-policy" class="xliff"></a>
-
-# Passaggio 2: Configurare e pubblicare criteri di Azure Information Protection
+# <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passaggio 2: Configurare e pubblicare criteri di Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
 
@@ -46,13 +44,11 @@ Il criterio predefinito disponibile con Azure è utilizzabile senza alcuna opera
     
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Criterio predefinito](../media/info-protect-policy-default-labelsv2.png)
     
-    Alcune impostazioni dei criteri non sono definite, ad esempio, tutti i documenti e i messaggi di posta elettronica non devono avere un'etichetta, non c'è un'etichetta predefinita e gli utenti non devono specificare una giustificazione quando modificano le etichette:
+    Anche alcune impostazioni dei criteri non sono definite. Ad esempio non tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta, non è presente un'etichetta predefinita e gli utenti non devono dare una giustificazione quando modificano le etichette:
     
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Criterio predefinito](../media/info-protect-policy-default-settings.png)
 
-<a id="changing-the-settings-for-a-default-label-and-prompt-for-justification" class="xliff"></a>
-
-## Modifica delle impostazioni per un'etichetta predefinita e per la richiesta di giustificazione
+## <a name="changing-the-settings-for-a-default-label-and-prompt-for-justification"></a>Modifica delle impostazioni per un'etichetta predefinita e per la richiesta di giustificazione
 
 Nel corso di questa esercitazione verranno modificate alcune impostazioni dei criteri per poterne osservare il funzionamento:
 
@@ -62,13 +58,11 @@ Nel corso di questa esercitazione verranno modificate alcune impostazioni dei cr
 
 2. Impostare **Gli utenti devono fornire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione** su **On**.
 
-<a id="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification" class="xliff"></a>
-
-## Configurazione di un'etichetta per la protezione, di una filigrana e di una condizione per la richiesta di classificazione
+## <a name="configuring-a-label-for-protection-a-watermark-and-a-condition-to-prompt-for-classification"></a>Configurazione di un'etichetta per la protezione, di una filigrana e di una condizione per la richiesta di classificazione
 
 Verranno modificate ora le impostazioni di una delle etichette secondarie, ovvero **All Employees** (Tutti i dipendenti) dall'etichetta principale **Confidential** (Riservato). 
 
-Se l'etichetta **Confidential** (Riservato) non ha etichette secondarie perché si sta usando una versione precedente dei criteri, è possibile usare l'etichetta **Confidential** (Riservato) come alternativa. I passaggi di configurazione saranno gli stessi, ma il nome del pannello dell'etichetta sarà **Confidential** (Riservato) anziché **All Employees** (Tutti i dipendenti).
+Se l'etichetta **Confidential** (Riservato) non ha etichette secondarie perché si sta usando una versione precedente dei criteri, è possibile usare l'etichetta **Confidential** (Riservato) come alternativa. I passaggi di configurazione sono gli stessi, ma il nome del pannello dell'etichetta è **Confidential** (Riservato) anziché **All Employees** (Tutti i dipendenti).
 
 1. Assicurarsi che l'etichetta **Confidential** (Riservato) sia espansa e selezionare **All Employees** (Tutti i dipendenti) da tale etichetta.
     
@@ -82,9 +76,11 @@ Se l'etichetta **Confidential** (Riservato) non ha etichette secondarie perché 
     
     Per effetto di questa operazione viene aperto il pannello **Protezione**.
     
-3. Nel pannello **Protezione** verificare che l'opzione **Azure RMS** sia selezionata, che sia possibile **selezionare un modello predefinito**, quindi fare clic sulla casella di riepilogo e selezionare il modello predefinito **\<nome dell'organizzazione> - Riservato**.     
+3. Nel pannello **Protezione** verificare che siano selezionate le opzioni **Azure RMS** e **Seleziona un modello predefinito**. Quindi fare clic sulla casella di riepilogo a discesa e scegliere il modello predefinito che consente a tutti gli utenti dell'organizzazione di visualizzare e modificare il contenuto protetto. 
     
-    Ad esempio, se il nome dell'organizzazione è VanArsdel, Ltd, verrà visualizzata la voce **VanArsdel, Ltd - Confidential** e sarà possibile selezionarla: 
+    Se il servizio Azure Rights Management è stato attivato recentemente il nome del modello è **Riservato\Tutti i dipendenti**. 
+    
+    Se il servizio Azure Rights Management era già attivato prima dell'inizio di questa esercitazione, il nome del modello predefinito potrebbe essere **\<nome organizzazione > - Riservato**. Se ad esempio il nome dell'organizzazione è VanArsdel viene visualizzato il nome **VanArsdel, Ltd - Riservato** e sarà possibile selezionarlo: 
     
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Impostare la protezione di Azure RMS](../media/step2-select-rms-template.png)
     
@@ -118,7 +114,7 @@ Se l'etichetta **Confidential** (Riservato) non ha etichette secondarie perché 
     
     Fare clic su **Save** (Salva) per tornare al pannello **Label: All Employees** (Etichetta: Tutti i dipendenti).
 
-7. Nel pannello **Label: All Employees** (Etichetta: Tutti i dipendenti) si noterà che **Credit Card Number** (Numero della carta di credito) viene visualizzato come **CONDITION NAME** (Nome della condizione), con il valore **1** in **OCCURRENCES** (Occorrenze):
+7. Nel pannello **Etichetta: Tutti i dipendenti** si può osservare che **Numero carta di credito** è visualizzato come **Nome della condizione** con **1** **Occorrenze**:
     
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Configurare la condizione della carta di credito](../media/step2-see-condition.png)
 
