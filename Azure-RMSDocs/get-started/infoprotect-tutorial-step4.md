@@ -4,17 +4,17 @@ description: 'Passaggio 4 di un''esercitazione introduttiva per provare rapidame
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 07/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
-ms.openlocfilehash: 9a21c10404582000a55ee0cea554aad9b5a552b3
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: d397ed8290d8b792b55ee78865cdbd41e330f8a9
+ms.sourcegitcommit: d42c6bb914563ae798d4171bb017c85b7077abfb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/14/2017
 ---
 # <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Passaggio 4: Funzioni di classificazione, aggiunta di etichette e protezione in azione 
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 06/30/2017
 
 Con un documento di Word aperto e il client di Azure Information Protection installato è possibile rendersi conto di quanto sia facile aggiungere etichette e proteggere il documento usando il criterio configurato.
 
-La classificazione e la protezione hanno effetto quando si salva il documento. Prima del salvataggio, tuttavia, il documento verrà usato per dimostrare con quale facilità è possibile aggiungere e modificare etichette.
+La classificazione e la protezione hanno effetto quando si salva il documento. Prima del salvataggio, tuttavia, il documento verrà usato per dimostrare con quale facilità è possibile applicare e modificare le etichette.
 
 ## <a name="to-manually-change-our-default-label"></a>Per modificare manualmente l'etichetta predefinita
 
@@ -40,7 +40,7 @@ Sulla barra di Information Protection fare clic sull'icona **Edit Label** (Modif
 
 Verranno visualizzate le etichette disponibili.
 
-Selezionare la prima etichetta, **Personal**. Poiché si è selezionata un'etichetta classificata a un livello inferiore rispetto all'etichetta selezionata in precedenza per questo documento, viene chiesto di giustificare il motivo per cui si sta abbassando il livello di classificazione:
+Selezionare la prima etichetta, **Personal**. Poiché è stata selezionata un'etichetta classificata a un livello inferiore rispetto a quella selezionata in precedenza per questo documento, viene chiesto di giustificare il motivo per cui si sta abbassando il livello di classificazione:
 
 ![Esercitazione introduttiva di Azure Information Protection, passaggio 4: Richiesta di giustificazione dell'abbassamento](../media/info-protect-lower-justification.png)
 
@@ -54,7 +54,7 @@ Sulla barra di Information Protection, fare nuovamente clic sull'icona **Modific
 
 Questa volta, quando richiesto, digitare "Il documento non richiede la classificazione" e fare clic su **Conferma**.  
 
-Per il valore **Sensitivity** (Riservatezza) verrà visualizzato **Non impostato**, come avviene inizialmente se non si imposta un'etichetta predefinita:
+Per il valore **Sensitivity** (Riservatezza) viene visualizzato **Non impostato**, come avviene inizialmente se non si imposta un'etichetta predefinita:
 
 ![Esercitazione introduttiva di Azure Information Protection, passaggio 4: Rimuovere la classificazione](../media/sensitivity-not-setv2.png)
 
@@ -69,7 +69,7 @@ Per il valore **Sensitivity** (Riservatezza) verrà visualizzato **Non impostato
 
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 4: Messaggio di azione consigliata](../media/change-nowv2.png)
 
-    Oltre al documento che indica ora che l'etichetta configurata è applicata, ad esempio **Confidential \ All Employees** (Riservato \ Tutti i dipendenti), verrà immediatamente visualizzata la filigrana del nome dell'organizzazione sulla pagina e viene anche applicato il piè di pagina **Classified as Confidential** (Classificato come Riservato). 
+    Oltre al documento che indica ora che l'etichetta configurata è applicata, ad esempio **Confidential \ All Employees** (Riservato \ Tutti i dipendenti), verrà immediatamente visualizzata la filigrana del nome dell'organizzazione sulla pagina e viene anche applicato il piè di pagina **Classificato come Riservato**. 
 
     Il documento è protetto anche dal modello di Azure Rights Management specificato, che è possibile confermare quando si fa clic sulla scheda **File** e si visualizzano le informazioni in **Proteggi documento**. Se si usa il modello Confidential (Riservato), verrà visualizzata l'informazione che il documento è riservato agli utenti interni. Gli utenti esterni all'organizzazione non potranno aprire il documento e il suo contenuto non potrà essere copiato o stampato. Il proprietario del documento può copiarne il contenuto e stamparlo, ma se lo invia tramite posta elettronica a un altro utente dell'organizzazione, quest'ultimo non sarà in grado di eseguire queste azioni.
 
