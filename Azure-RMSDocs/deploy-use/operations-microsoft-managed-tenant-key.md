@@ -4,7 +4,7 @@ description: Informazioni sulle operazioni del ciclo di vita rilevanti se Micros
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: caacc4174ddb63e9c9091c0df294b93cf947a7c4
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: cacaa10d1a5cbf3a2de903cd4e9f893b546e5609
+ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/20/2017
 ---
 # <a name="microsoft-managed-tenant-key-lifecycle-operations"></a>Gestione di Microsoft: operazioni del ciclo di vita della chiave del tenant
 
@@ -27,16 +27,16 @@ Se la chiave del tenant per Azure Information Protection viene gestita da Micros
 ## <a name="revoke-your-tenant-key"></a>Revocare la chiave del tenant
 Quando si annulla la sottoscrizione di Azure Information Protection, l'uso della chiave del tenant in Azure Information Protection viene interrotto e non è necessaria alcuna azione da parte dell'utente.
 
-## <a name="re-key-your-tenant-key"></a>Ridistribuire la chiave del tenant
-Il processo di ridistribuzione della chiave è denominato anche rollover della chiave. Non ridistribuire la chiave tenant a meno che non sia effettivamente necessario. Alcuni client precedenti, ad esempio Office 2010, non erano progettati per gestire in modo efficiente le modifiche delle chiavi. In questo scenario è necessario cancellare lo stato di Rights Management nei computer tramite Criteri di gruppo o un meccanismo equivalente. In alcuni casi è tuttavia opportuno forzare la ridistribuzione della chiave del tenant, Ad esempio:
+## <a name="rekey-your-tenant-key"></a>Reimpostare la chiave del tenant
+Il processo di reimpostazione della chiave è noto anche come rollover della chiave. Non reimpostare la chiave del tenant a meno che non sia effettivamente necessario. Alcuni client precedenti, ad esempio Office 2010, non erano progettati per gestire in modo efficiente le modifiche delle chiavi. In questo scenario è necessario cancellare lo stato di Rights Management nei computer tramite Criteri di gruppo o un meccanismo equivalente. In alcuni casi è tuttavia opportuno forzare la reimpostazione della chiave del tenant. Ad esempio:
 
--   La società è stata divisa in due o più società. Quando si ridistribuisce la chiave del tenant, la nuova società non potrà accedere al nuovo contenuto pubblicato dai dipendenti e sarà in grado di accedere al vecchio contenuto se dispone di una copia della chiave del tenant precedente.
+-   La società è stata divisa in due o più società. Quando si reimposta la chiave del tenant, la nuova società non potrà accedere al nuovo contenuto pubblicato dai dipendenti e sarà in grado di accedere al vecchio contenuto se dispone di una copia della chiave del tenant precedente.
 
 -   Eventuale violazione della copia master della chiave del tenant (copia in proprio possesso).
 
-È possibile reimpostare la chiave del tenant [contattando il supporto Microsoft](../get-started/information-support.md#to-contact-microsoft-support) per aprire un **caso di supporto tecnico di Azure Information Protection con una richiesta per reimpostare la chiave del tenant di Azure Information Protection**. È necessario dimostrare di essere un amministratore del tenant di Azure Information Protection. Si tenga presente che la conferma di questo processo richiede diversi giorni. Il servizio è soggetto ai costi di supporto standard; la ridistribuzione della chiave del tenant non è un servizio di assistenza gratuito.
+È possibile reimpostare la chiave del tenant [contattando il supporto Microsoft](../get-started/information-support.md#to-contact-microsoft-support) per aprire un **caso di supporto tecnico di Azure Information Protection con una richiesta per reimpostare la chiave del tenant di Azure Information Protection**. È necessario dimostrare di essere un amministratore del tenant di Azure Information Protection. Si tenga presente che la conferma di questo processo richiede diversi giorni. Il servizio è soggetto ai costi di supporto standard. La ridistribuzione della chiave del tenant non è un servizio di assistenza gratuito.
 
-Quando si ridistribuisce la chiave del tenant, il nuovo contenuto è protetto tramite la nuova chiave. Poiché questo processo viene eseguito per fasi, per un certo periodo di tempo parte del nuovo contenuto continuerà a essere protetto tramite la chiave del tenant precedente. Il contenuto protetto in precedenza rimane tale rispetto alla chiave del tenant precedente. Per supportare questo scenario, Azure Information Protection mantiene la chiave del tenant precedente in modo da emettere licenze per il vecchio contenuto.
+Quando si reimposta la chiave del tenant, il nuovo contenuto è protetto tramite la nuova chiave. Dato che questo processo viene eseguito per fasi, quindi per un certo periodo di tempo, parte del nuovo contenuto continua a essere protetto tramite la chiave del tenant precedente. Il contenuto protetto in precedenza rimane tale rispetto alla chiave del tenant precedente. Per supportare questo scenario, Azure Information Protection mantiene la chiave del tenant precedente in modo da emettere licenze per il vecchio contenuto.
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Eseguire il backup e il ripristino della chiave del tenant
 Microsoft è responsabile delle operazioni di backup della chiave del tenant e non è necessaria alcuna azione da parte dell'utente.
@@ -46,15 +46,15 @@ Per esportare la configurazione di Azure Information Protection e la chiave del 
 
 ### <a name="step-1-initiate-export"></a>Passaggio 1: Avviare l'esportazione
 
--   A tale scopo, [contattare il supporto tecnico Microsoft](../get-started/information-support.md#to-contact-microsoft-support) per aprire un **caso di supporto tecnico di Azure Information Protection con una richiesta di esportazione della chiave di Azure Information Protection**. È necessario dimostrare di essere un amministratore del tenant di Azure Information Protection. Si tenga presente che la conferma di questo processo richiede diversi giorni. Il servizio è soggetto ai costi di supporto standard; l'esportazione della chiave del tenant non è un servizio di assistenza gratuito.
+-   A tale scopo, [contattare il supporto tecnico Microsoft](../get-started/information-support.md#to-contact-microsoft-support) per aprire un **caso di supporto tecnico di Azure Information Protection con una richiesta di esportazione della chiave di Azure Information Protection**. È necessario dimostrare di essere un amministratore del tenant di Azure Information Protection. Si tenga presente che la conferma di questo processo richiede diversi giorni. Il servizio è soggetto ai costi di supporto standard. L'esportazione della chiave del tenant non è un servizio di assistenza gratuito.
 
 ### <a name="step-2-wait-for-verification"></a>Passaggio 2: Attendere la verifica
 
--   Microsoft verifica che la richiesta di rilasciare la chiave del tenant di Azure Information Protection sia legittima. L'operazione può richiedere fino a 3 settimane.
+-   Microsoft verifica che la richiesta di rilasciare la chiave del tenant di Azure Information Protection sia legittima. L'operazione può richiedere fino a tre settimane.
 
 ### <a name="step-3-receive-key-instructions-from-css"></a>Passaggio 3: Ricevere istruzioni sulla chiave dal Servizio Supporto Tecnico Clienti Microsoft
 
--   Il Servizio Supporto Tecnico Clienti Microsoft invierà la configurazione di Azure Information Protection e la chiave del tenant crittografata in un file protetto da password con estensione tpd. A tale scopo, il Servizio Supporto Tecnico Clienti Microsoft invia all'utente che ha avviato l'esportazione un messaggio di posta elettronica in cui è disponibile uno strumento da eseguire da un prompt dei comandi nel modo seguente:
+-   Il Servizio Supporto Tecnico Clienti Microsoft invia la configurazione di Azure Information Protection e la chiave del tenant crittografata in un file protetto da password. L'estensione del file è **tpd**. A tale scopo, il Servizio Supporto Tecnico Clienti Microsoft invia all'utente che ha avviato l'esportazione un messaggio di posta elettronica in cui è disponibile uno strumento da eseguire da un prompt dei comandi nel modo seguente:
 
     ```
     AadrmTpd.exe -createkey
@@ -66,11 +66,11 @@ Per esportare la configurazione di Azure Information Protection e la chiave del 
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
     ```
-    L'output del comando deve essere costituito da due file, ovvero il file con estensione tpd protetto da password e un file che ne contiene la password. Per scopi di riferimento incrociato, a entrambi deve essere associato lo stesso GUID come file di chiave pubblica e privata utilizzati per l’esecuzione del comando AadrmTpd.exe -createkey:
+    L'output del comando deve essere costituito da due file, ovvero il file con estensione tpd protetto da password e un file che ne contiene la password. I file hanno un nuovo GUID, ad esempio:
+     
+    - Password-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
 
-    -   Password-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt
-
-    -   ExportedTPD-FA29D0FE-5049-4C8E-931B-96C6152B0441.xml
+    - ExportedTPD-5E4C2018-8C8C-4548-8705-E3218AA1544E.xml
 
     Eseguire il backup di questi file e archiviarli in modo sicuro per garantire che sia possibile decrittografare contenuto protetto tramite la chiave del tenant specifica. Se inoltre si esegue la migrazione ad AD RMS, è possibile importare il file con estensione tpd (il file che inizia con **ExportedTDP**) nel proprio server AD RMS.
 
@@ -89,8 +89,8 @@ In caso di violazione di sicurezza, l'azione più efficace che l'utente o Micros
 
 |Descrizione evento imprevisto|Risposta probabile|
 |------------------------|-------------------|
-|Perdita della chiave del tenant.|Ridistribuire la chiave del tenant. Vedere la sezione [Ridistribuire la chiave del tenant](operations-microsoft-managed-tenant-key.md#re-key-your-tenant-key) in questo articolo.|
-|Diritti di accesso alla chiave del tenant ottenuti da un utente non autorizzato o da malware, ma nessuna perdita della chiave.|La ridistribuzione della chiave del tenant non è sufficiente ed è necessaria un'analisi della causa radice. Se l'utente non autorizzato ha ottenuto l'accesso a causa di un bug del processo o del software, questo problema deve essere risolto.|
+|Perdita della chiave del tenant.|Reimpostare la chiave del tenant. Vedere la sezione [Reimpostare la chiave del tenant](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key) in questo articolo.|
+|Diritti di accesso alla chiave del tenant ottenuti da un utente non autorizzato o da malware, ma nessuna perdita della chiave.|La reimpostazione della chiave del tenant non è sufficiente ed è necessaria un'analisi della causa radice. Se l'utente non autorizzato ha ottenuto l'accesso a causa di un bug del processo o del software, questo problema deve essere risolto.|
 |Vulnerabilità scoperta nell'algoritmo RSA o nella lunghezza della chiave oppure attacchi di forza bruta diventati realizzabili a livello di calcolo.|Microsoft deve aggiornare Azure Information Protection per supportare nuovi algoritmi e lunghezze maggiori della chiave che siano resilienti e invitare tutti i clienti a rinnovare le proprie chiavi del tenant.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

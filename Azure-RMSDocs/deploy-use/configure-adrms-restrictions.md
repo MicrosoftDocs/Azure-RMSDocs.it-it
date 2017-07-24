@@ -4,17 +4,17 @@ description: Identificare le restrizioni, i prerequisiti e le raccomandazioni se
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/07/2017
+ms.date: 07/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: f1ae8d75b3fd3900b7c863be332656b71c647e1f
-ms.sourcegitcommit: 834b6bcab70a185018b4876b2d24b145e5089ac4
+ms.openlocfilehash: ac4068885df92c58ecba2a90e7aa0aeaaa34e8e9
+ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/07/2017
+ms.lasthandoff: 07/17/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Requisiti e restrizioni HYOK per la protezione di AD RMS
 
@@ -64,6 +64,8 @@ Oltre a non supportare i vantaggi elencati che si ottengono quando si usa la pro
 - Non usare l'opzione **Non inoltrare** quando si configura un'etichetta per la protezione di Azure RMS. È inoltre necessario indicare agli utenti di non selezionare manualmente questa opzione in Outlook. 
 
     Se l'opzione Non inoltrare viene applicata da un'etichetta o manualmente dagli utenti, l'opzione può essere applicata dalla distribuzione di AD RMS piuttosto che dal servizio di Azure Rights Management designato. In questo scenario, gli utenti esterni con cui si condividono dati non possono aprire messaggi di posta elettronica ai quali è applicata l'opzione Non inoltrare.
+    
+    A partire dalla versione 1.9.58.0 del client Azure Information Protection (attualmente in anteprima), il pulsante **Non inoltrare** in Outlook usa sempre Azure RMS. Questa impostazione non influisce sull'opzione di menu **Non inoltrare** di Outlook o sull'opzione **Non inoltrare** quando si configura un'etichetta per la protezione. Se questo non è il comportamento voluto, è possibile nascondere il pulsante **Non inoltrare** in Outlook configurando un'[impostazione client avanzata](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook).
 
 - Se gli utenti configurano autorizzazioni personalizzate e si usa la protezione di AD RMS (HYOK) o di Azure RMS, i documenti e i messaggi di posta elettronica sono sempre protetti da Azure Rights Management.
 

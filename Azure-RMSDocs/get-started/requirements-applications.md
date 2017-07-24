@@ -4,7 +4,7 @@ description: Identificare le applicazioni che usano le API di RMS per il support
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 07/17/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8291a21bb27ef3ef3000609c94b71de1de5ba75a
-ms.sourcegitcommit: c1932dae169e9454ac24c1cc12eaf48dec7c3c49
+ms.openlocfilehash: 9b2395ad67bfee226bf10f36613cb6465eb0b019
+ms.sourcegitcommit: 0fd2e63822280ec96ab957e22868c63de9ef3d47
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/18/2017
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applicazioni che supportano la protezione dati di Azure Rights Management
 
@@ -83,7 +83,9 @@ Per altre informazioni, vedere il post seguente nel blog di Enterprise and Mobil
 
 ### <a name="more-information-about-azure-rms-support-for-office"></a>Altre informazioni sul supporto di Azure RMS per Office
 
-Azure RMS si integra perfettamente nelle applicazioni Word, Excel, PowerPoint e Outlook, dove questa funzionalità viene spesso denominata Information Rights Management (IRM). Le seguenti edizioni di client di Office supportano la protezione dei file e dei messaggi di posta elettronica tramite Azure RMS:
+Azure RMS si integra perfettamente nelle applicazioni Word, Excel, PowerPoint e Outlook, dove questa funzionalità viene spesso denominata Information Rights Management (IRM). 
+
+Le edizioni client di Office seguenti supportano la protezione dei file e dei messaggi di posta elettronica nei computer Windows tramite Azure RMS:
 
 - Office 365 ProPlus: Office 2016 e Office 2013
 
@@ -102,6 +104,12 @@ Azure RMS con Office Professional Plus 2010 con Service Pack 2 o Office Professi
 - Non supportato in Windows 10
 
 - Non supporta l'autenticazione basata su moduli per gli account utente federati. Questi account devono usare l'Autenticazione integrata di Windows.
+
+Le edizioni client di Office seguenti supportano la protezione dei file e dei messaggi di posta elettronica in macOS tramite Azure RMS:
+
+- Office 365 ProPlus: Office 2016
+
+- Office 2016 per Mac
 
 ### <a name="more-information-about-the-azure-information-protection-app-for-ios-and-android"></a>Altre informazioni sull'app Azure Information Protection per iOS e Android
 

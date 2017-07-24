@@ -4,17 +4,17 @@ description: 'Passaggio 4 di un''esercitazione introduttiva per provare rapidame
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/14/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
-ms.openlocfilehash: d397ed8290d8b792b55ee78865cdbd41e330f8a9
-ms.sourcegitcommit: d42c6bb914563ae798d4171bb017c85b7077abfb
+ms.openlocfilehash: 5ceb351e72ec30015697d2b27111ae76fb3b2b58
+ms.sourcegitcommit: 64ba794e7844a74b1e25db0d44b90060e3ae1468
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/19/2017
 ---
 # <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Passaggio 4: Funzioni di classificazione, aggiunta di etichette e protezione in azione 
 
@@ -80,9 +80,7 @@ I passaggi eseguiti fino a ora hanno consentito di vedere in azione la classific
 |Se si desiderano altre informazioni|Informazioni aggiuntive|
 |--------------------------------|--------------------------|
 |Istruzioni complete per l'assegnazione di etichette e la protezione dei file |[Classificare e proteggere un file o un messaggio di posta elettronica](../rms-client/client-classify-protect.md)|
-
-
-
+|Posizione di registrazione dell'attività di assegnazione etichette |[Registrazione dell'utilizzo per il client Azure Information Protection](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client)|
 
 
 >[!div class="step-by-step"]

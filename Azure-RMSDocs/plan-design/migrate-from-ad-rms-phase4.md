@@ -4,7 +4,7 @@ description: Fase 4 della migrazione da AD RMS ad Azure Information Protection c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 07/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4157148c0109317851ed2f128a5ae74603d82af2
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 6c93f38b0ae725c1bc1d3423baf64931593af3b7
+ms.sourcegitcommit: 64ba794e7844a74b1e25db0d44b90060e3ae1468
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/19/2017
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Fase 4 della migrazione: configurazione dei servizi di supporto
 
@@ -75,7 +75,7 @@ Usare le istruzioni incluse nell'articolo [Distribuzione del connettore di Azure
 
         $irmConfig = Get-IRMConfiguration
         $list = $irmConfig.LicensingLocation 
-        $list + "<Your Tenant URL>/_wmcs/licensing"
+        $list += "<Your Tenant URL>/_wmcs/licensing"
         Set-IRMConfiguration -LicensingLocation $list
 
 3.  Disattivare ora le funzionalità IRM per i messaggi inviati a destinatari interni:

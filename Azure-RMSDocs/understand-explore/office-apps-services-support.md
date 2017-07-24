@@ -4,7 +4,7 @@ description: Informazioni su come le applicazioni di Office, come Word, Excel, P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/11/2017
+ms.date: 07/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7fe044ab9b8e253e3095af5828a33926271bc42b
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: d812476d882525b1fd5686418151188e57afa80d
+ms.sourcegitcommit: 724b0b5d7a3ab694643988148ca68c0eac769f1e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/21/2017
 ---
 # <a name="office-applications-and-services"></a>Applicazioni e servizi Office
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 06/30/2017
 Le applicazioni di Office, come Word, Excel, PowerPoint e Outlook, e i servizi Office, come Exchange e SharePoint, possono usare il servizio Azure Rights Management di Azure Information Protection per proteggere i dati dell'organizzazione.
 
 ## <a name="office-applications-word-excel-powerpoint-outlook"></a>Applicazioni Office: Word, Excel, PowerPoint, Outlook
-Queste applicazioni supportano Rights Management a livello nativo usando Information Rights Management (IRM) e consentono agli utenti di applicare la protezione a un documento salvato oppure a un messaggio e-mail da inviare Gli utenti possono applicare i modelli oppure, per Word, Excel e PowerPoint, possono scegliere impostazioni con un elevato livello di personalizzazione per limitare l'accesso, i diritti e l'uso. 
+Queste applicazioni supportano Rights Management a livello nativo usando Information Rights Management (IRM) e consentono agli utenti di applicare la protezione a un documento salvato oppure a un messaggio e-mail da inviare Gli utenti possono applicare i modelli oppure, per Word, Excel e PowerPoint, possono scegliere impostazioni personalizzate per limitare l'accesso, i diritti e l'utilizzo. 
 
 Gli utenti possono ad esempio configurare un file di Word in modo che possano accedervi solo le persone appartenenti all'organizzazione o per controllare se un foglio di calcolo Excel può essere modificato, per impostarne l'accesso in sola lettura o per impedirne la stampa. Per file soggetti a vincoli temporali, è possibile configurare un'ora di scadenza (direttamente oppure applicando un modello) per stabilire il momento in cui non è più possibile accedere al file. Oltre a scegliere un modello, per Outlook gli utenti possono scegliere l'opzione **Non inoltrare** per impedire la perdita di dati.
 
@@ -44,11 +44,11 @@ Quando si usa Exchange Online oppure Exchange Server, è possibile usare l'integ
 
 -   Supporto RMS per **Outlook Web App**, implementato in modo analogo al client Outlook, in modo che gli utenti possano proteggere i messaggi di posta elettronica tramite modelli o tramite la specifica di singole opzioni e che possano leggere e usare i messaggi di posta elettronica ricevuti in modo protetto.
 
--   **Regole di protezione** per client Outlook che un amministratore configura per applicare automaticamente modelli di Rights Management ai messaggi di posta elettronica per destinatari specifici. Quando ad esempio vengono inviati messaggi e-mail interni all'ufficio legale dell'organizzazione, è possibile configurare tali messaggi in modo che possano essere letti solo dai membri dell'ufficio e che non possano essere inoltrati. Prima di inviare il messaggio e-mail gli utenti vedono la regola di protezione applicata e, per impostazione predefinita, possono rimuoverla se ritengono non sia necessaria. I messaggi e-mail vengono crittografati prima dell'invio. Per altre informazioni, vedere [Regole di protezione di Outlook](https://technet.microsoft.com/library/dd638178%28v=exchg.150%29.aspx) e [Creare una regola di protezione di Outlook](https://technet.microsoft.com/library/dd638196%28v=exchg.150%29.aspx) nella libreria di Exchange.
+-   **Regole di protezione** per client Outlook che un amministratore configura per applicare automaticamente modelli di Rights Management ai messaggi di posta elettronica per destinatari specifici. Quando ad esempio vengono inviati messaggi e-mail interni all'ufficio legale dell'organizzazione, è possibile configurare tali messaggi in modo che possano essere letti solo dai membri dell'ufficio e che non possano essere inoltrati. Prima di inviare il messaggio di posta elettronica gli utenti vedono la regola di protezione applicata e, per impostazione predefinita, possono rimuovere la protezione se ritengono non sia necessaria. I messaggi e-mail vengono crittografati prima dell'invio. Per altre informazioni, vedere [Regole di protezione di Outlook](https://technet.microsoft.com/library/dd638178%28v=exchg.150%29.aspx) e [Creare una regola di protezione di Outlook](https://technet.microsoft.com/library/dd638196%28v=exchg.150%29.aspx) nella libreria di Exchange.
 
 -   **Regole di trasporto** che un amministratore configura per applicare automaticamente modelli di Rights Management a messaggi di posta elettronica in base a determinate proprietà, ad esempio mittente, destinatario, oggetto del messaggio e contenuto. Tali regole sono concettualmente analoghe alle regole di protezione, ma non consentono agli utenti di rimuovere la protezione, possono essere applicate a Outlook Web Access e a messaggi e-mail inviati da dispositivi mobili e non crittografano i messaggi e-mail prima che vengano inviati dal client. Per altre informazioni, vedere [Creare una regola di protezione del trasporto](https://technet.microsoft.com/library/dd302432.aspx) nella libreria di Exchange.
 
--   **Criteri di prevenzione della perdita dei dati** che contengono set di condizioni per filtrare i messaggi di posta elettronica e intraprendere azioni per prevenire la perdita di dati nel caso di informazioni riservate o sensibili, ad esempio quelle personali o correlate alla carta di credito. Quando si rilevano dati sensibili, è possibile usare i suggerimenti relativi ai criteri per avvertire gli utenti che potrebbe essere necessario applicare la protezione in base alle informazioni presenti nel messaggio e-mail. Per altre informazioni, vedere [Prevenzione della perdita di dati](https://technet.microsoft.com/library/jj150527%28v=exchg.150%29.aspx) nella libreria di Exchange.
+-   **Criteri di prevenzione della perdita dei dati** che contengono set di condizioni per filtrare i messaggi di posta elettronica e intraprendere azioni per prevenire la perdita di dati nel caso di informazioni riservate o sensibili, ad esempio quelle personali o correlate alla carta di credito. Quando si rilevano dati sensibili, è possibile usare i suggerimenti relativi ai criteri per avvertire gli utenti che potrebbe essere necessario applicare la protezione in base alle informazioni presenti nel messaggio e-mail. Per altre informazioni, vedere [Prevenzione della perdita di dati](https://technet.microsoft.com/library/jj150527(v=exchg.160).aspx) nella libreria di Exchange.
 
 -   **Crittografia dei messaggi di Office 365** che usa regole di trasporto per inviare messaggi di posta elettronica crittografati a persone all'esterno dell'organizzazione e che comporta la lettura del messaggio in un browser con un'interfaccia analoga a Outlook Web App. Nei messaggi e-mail crittografati della società è possibile personalizzare il testo della dichiarazione di non responsabilità e dell'intestazione nonché aggiungere il logo della società. Per altre informazioni, vedere [Crittografia messaggi di Office 365](https://office.microsoft.com/o365-message-encryption-FX104179182.aspx) nel sito Web di Office.
 
@@ -69,9 +69,9 @@ Per impostazione predefinita, la protezione è limitata alla persona che scarica
 
 La protezione delle informazioni per elenchi e raccolte di SharePoint viene sempre configurata da un amministratore e mai da un utente finale. Le autorizzazioni vengono impostate a livello di sito e per impostazione predefinita vengono ereditate da qualsiasi elenco o raccolta in tale sito. Se si usa SharePoint Online, gli utenti possono anche configurare la propria raccolta OneDrive for Business per la protezione IRM.
 
-Per ottenere un controllo più granulare, è possibile configurare un elenco o una raccolta nel sito in modo che non erediti più le autorizzazioni dal relativo padre. È quindi possibile configurare a livello di elenco o raccolta le autorizzazioni IRM, a cui successivamente verrà fatto riferimento come ad "autorizzazioni univoche". Tuttavia, le autorizzazioni vengono sempre impostate a livello di contenitore. Non è possibile impostare autorizzazioni su singoli file. 
+Per ottenere un controllo più granulare, è possibile configurare un elenco o una raccolta nel sito in modo che non erediti più le autorizzazioni dal relativo padre. È quindi possibile configurare a livello di elenco o raccolta le autorizzazioni IRM, a cui successivamente viene fatto riferimento come "autorizzazioni univoche". Tuttavia, le autorizzazioni vengono sempre impostate a livello di contenitore. Non è possibile impostare autorizzazioni su singoli file. 
 
-È necessario inoltre che il servizio IRM sia abilitato per SharePoint. Quindi, si specificano le autorizzazioni IRM per una raccolta. Nel caso di SharePoint Online e OneDrive for Business, gli utenti possono specificare anche autorizzazioni IRM per la propria raccolta OneDrive for Business. SharePoint non usa modelli di criteri per i diritti, anche se è possibile selezionare impostazioni di configurazione di SharePoint molto simili ad alcune impostazioni che si possono specificare nei modelli.
+È necessario inoltre che il servizio IRM sia abilitato per SharePoint. Quindi, si specificano le autorizzazioni IRM per una raccolta. Per SharePoint Online e OneDrive for Business, gli utenti possono specificare anche autorizzazioni IRM per la propria raccolta OneDrive for Business. SharePoint non usa modelli di criteri per i diritti, anche se è possibile selezionare impostazioni di configurazione di SharePoint molto simili ad alcune impostazioni che si possono specificare nei modelli.
 
 Se si usa SharePoint Server, è possibile usare questo tipo di protezione IRM distribuendo il connettore di Azure Rights Management. Il connettore funziona come un relè tra i server locali e il servizio cloud di Rights Management. Per ulteriori informazioni, vedere [Distribuzione del connettore di Azure Rights Management](../deploy-use/deploy-rms-connector.md).
 
@@ -96,8 +96,10 @@ Se si è pronti per la configurazione di SharePoint per IRM:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
+Se si usa Office 365, può essere interessante leggere il documento [File Protection Solutions in Office 365](https://technet.microsoft.com/library/dn919927.aspx#BKMK_O365fileprotect) (Soluzioni di protezione dei file in Office 365), che indica le funzionalità consigliate per la protezione dei file in Office 365.
+
 Per informazioni su come altri servizi e applicazioni supportano il servizio Azure Rights Management di Azure Information Protection, vedere [Supporto del servizio Azure Rights Management da parte delle applicazioni](applications-support.md).
 
-Se si è pronti per iniziare la distribuzione, che include la configurazione di tali applicazioni e servizi, vedere la [Guida di orientamento per la distribuzione di Azure Information Protection](/plan-design/deployment-roadmap.md).
+Se si è pronti per iniziare la distribuzione, che include la configurazione di tali applicazioni e servizi, vedere la [Guida di orientamento per la distribuzione di Azure Information Protection](../plan-design/deployment-roadmap.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

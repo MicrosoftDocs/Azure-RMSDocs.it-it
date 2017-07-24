@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5b5f8b336e1946bc4c394b9154eed50844b6b72b
-ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.openlocfilehash: 41e9e8aff35727a40413e0bf18e46f1ad14e9222
+ms.sourcegitcommit: 724b0b5d7a3ab694643988148ca68c0eac769f1e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/21/2017
 ---
 # <a name="custom-configurations-for-the-azure-information-protection-client"></a>Configurazioni personalizzate per il client Azure Information Protection
 
@@ -56,25 +56,33 @@ Indipendentemente da questa impostazione, il client Azure Information Protection
 
 ## <a name="sign-in-as-a-different-user"></a>Accedere come utente diverso
 
-In un ambiente di produzione, in genere gli utenti non hanno bisogno di accedere con un nome utente diverso quando usano il client Azure Information Protection. Per un amministratore, tuttavia, può essere necessario accedere con le credenziali di un altro utente. Si supponga, ad esempio, di avere un tenant di test, oltre al tenant di Office 365 o di Azure usato in produzione dall'organizzazione.
+In un ambiente di produzione, in genere gli utenti non hanno bisogno di accedere con un nome utente diverso quando usano il client Azure Information Protection. Per un amministratore, tuttavia, può essere necessario accedere con le credenziali di un altro utente durante una fase di testing. 
 
 È possibile verificare con quale account è stato eseguito l'accesso usando la finestra di dialogo di **Microsoft Azure Information Protection**: nell'applicazione di Office, nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi** e quindi su **Guida e commenti**. Il nome dell'account verrà visualizzato nella sezione **Stato del client**.
 
-In particolare quando si usa un account amministratore, assicurarsi di controllare il nome di dominio dell'account di accesso che viene visualizzato. Ad esempio, se si ha un account "amministratore" in due diversi tenant, può essere facile non notare che è stato effettuato l'accesso con il nome dell'account giusto, ma con il dominio errato. Un sintomo dell'uso di un account non corretto è l'impossibilità di scaricare i criteri di Azure Information Protection, di visualizzare le etichette corrette o di ottenere il comportamento previsto.
+Assicurarsi di controllare anche il nome di dominio dell'account di accesso che viene visualizzato. Può essere facile non notare che è stato effettuato l'accesso con il nome dell'account giusto, ma con il dominio errato. Un sintomo dell'uso di un account non corretto è l'impossibilità di scaricare i criteri di Azure Information Protection, di visualizzare le etichette corrette o di ottenere il comportamento previsto.
 
 Per accedere come utente diverso:
 
-1. Usando un editor del Registro di sistema, passare a **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** ed eliminare il valore **TokenCache** (con i dati associati).
+1. A seconda della versione del client di Azure Information Protection: 
+    
+    - Per la versione disponibile a livello generale del client Azure Information Protection: usando un editor del Registro di sistema, passare a **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP** ed eliminare il valore **TokenCache** (con i dati associati).
+    
+    - Per la versione di anteprima corrente del client Azure Information Protection: passare a **%localappdata%\Microsoft\MSIP** ed eliminare il file **TokenCache**.
 
 2. Riavviare tutte le applicazioni Office aperte e accedere con l'account utente diverso. Se non viene visualizzato un prompt dei comandi nell'applicazione Office per accedere al servizio Azure Information Protection, tornare alla finestra di dialogo **Microsoft Azure Information Protection** e fare clic su **Accedi** dalla sezione **Stato del client** aggiornata.
 
 Inoltre:
+
+- Questa soluzione è supportata per l'accesso come utente diverso dallo stesso tenant. Non è supportata per l'accesso come utente diverso da un diverso tenant. Per testare Azure Information Protection con più tenant, usare computer diversi.
 
 - Se si usa la funzione Single Sign-On, è necessario uscire da Windows, modificare il Registro di sistema e quindi accedere con un account utente diverso. Il client di Azure Information Protection esegue quindi automaticamente l'autenticazione tramite l'account utente usato per l'accesso.
 
 - Se si vogliono reimpostare le impostazioni utente per il servizio Azure Rights Management, è possibile farlo tramite l'opzione **Guida e commenti**.
 
 - Per eliminare i criteri di Azure Information Protection attualmente scaricati, rimuovere il file **Policy.msip** dalla cartella **%localappdata%\Microsoft\MSIP**.
+
+- Se è disponibile la versione di anteprima corrente del client Azure Information Protection, è possibile usare l'opzione **Ripristina le impostazioni** in **Guida e commenti e suggerimenti** per disconnettersi ed eliminare i criteri di Azure Information Protection scaricati.
 
 ## <a name="hide-the-classify-and-protect-menu-option-in-windows-file-explorer"></a>Nascondere l'opzione di menu Classifica e proteggi in Esplora file di Windows
 

@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per gli amministratori in una rete aziend
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 07/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 491d3191a713bf30ef0da58e359249869d3c82a9
-ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.openlocfilehash: 036fae62087bf71e0f3bf5ef2859acac701c5e62
+ms.sourcegitcommit: 724b0b5d7a3ab694643988148ca68c0eac769f1e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 07/21/2017
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
@@ -252,16 +252,46 @@ L'opzione **Esporta log** consente di raccogliere e allegare automaticamente i f
 
 Per visualizzare informazioni di diagnostica e reimpostare il client, selezionare **Esegui la diagnostica**. Al termine dei test di diagnostica, fare clic su **Copy results** (Copia risultati) per incollare le informazioni in un messaggio di posta elettronica che l'amministratore e gli utenti finali possono inviare rispettivamente al supporto tecnico Microsoft e all'help desk. Al termine dei test, è anche possibile reimpostare il client.
 
-Altre informazioni sull'opzione **Reset** (Reimposta):
+> [!NOTE]
+> Nella versione di anteprima del client l'opzione **Esegui diagnostica** è stata rimossa e sostituta con **Ripristina impostazioni**. È inoltre [cambiato](#more-information-about-the-reset-option-for-the-current-preview-version-of-the-azure-information-protection-client) il comportamento per questa opzione.
+
+#### <a name="more-information-about-the-reset-option-for-the-general-availability-ga-version-of-the-azure-information-protection-client"></a>Altre informazioni sull'opzione di reimpostazione per la versione disponibile a livello generale del client Azure Information Protection
 
 - Non è necessario essere un amministratore locale per usare questa opzione e questa azione non viene registrata nel Visualizzatore eventi. 
 
-- A meno che i file non siano bloccati, con questa azione vengono eliminati tutti i file presenti in **%localappdata%\Microsoft\MSIPC**, dove sono archiviati i certificati del client e i modelli per Rights Management. Non vengono eliminati i criteri di Azure Information Protection e i file di log del client, né l'utente viene disconnesso.
+- A meno che i file non siano bloccati, con questa azione vengono eliminati tutti i file presenti in **%LocalAppData%\Microsoft\MSIPC**, dove sono archiviati i certificati del client e i modelli per Rights Management. Non vengono eliminati i criteri di Azure Information Protection e i file di log del client, né l'utente viene disconnesso.
 
 - Viene eliminata le chiave del Registro di sistema seguente con le relative impostazioni: **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. Se sono state configurate impostazioni per questa chiave del Registro di sistema, dopo la reimpostazione del client è necessario riconfigurare le impostazioni del Registro di sistema. Un esempio è il caso in cui sono state configurate le impostazioni per il reindirizzamento al tenant di Azure Information Protection, poiché si sta eseguendo la migrazione da AD RMS e nella rete è ancora presente un punto di connessione del servizio.
 
 - Dopo aver reimpostato il client è necessario reinizializzare l'ambiente utente. In questo modo verranno scaricati i certificati per il client e i modelli più recenti. A tale scopo, chiudere tutte le istanze di Office e quindi riavviare un'applicazione di Office. Questa azione verifica anche che siano stati scaricati i criteri di Azure Information Protection più recenti. Non eseguire di nuovo i test diagnostici prima che ciò sia stato fatto.
 
+#### <a name="more-information-about-the-reset-option-for-the-current-preview-version-of-the-azure-information-protection-client"></a>Altre informazioni sull'opzione di reimpostazione per la versione di anteprima corrente del client Azure Information Protection
+
+- Non è necessario essere un amministratore locale per usare questa opzione e questa azione non viene registrata nel Visualizzatore eventi. 
+
+- A meno che i file non siano bloccati, questa azione elimina tutti i file nelle posizioni seguenti. Questi file includono i certificati client, i modelli di Rights Management, i criteri di Azure Information Protection e le credenziali utente memorizzate nella cache. I file di log del client non vengono eliminati.
+    
+    - %LocalAppData%\Microsoft\DRM
+    
+    - %LocalAppData%\Microsoft\MSIPC
+    
+    - %LocalAppData%\Microsoft\MSIP\Policy.msip
+    
+    - %LocalAppData%\Microsoft\MSIP\TokenCache
+
+- Vengono eliminate le chiavi e le impostazioni del Registro di sistema seguenti. Se sono state configurate impostazioni per chiavi del Registro di sistema in questo elenco, dopo la reimpostazione del client è necessario riconfigurarle. Un esempio è il caso in cui sono state configurate le impostazioni per il reindirizzamento al tenant di Azure Information Protection, poiché si sta eseguendo la migrazione da AD RMS, e nella rete è ancora presente un punto di connessione del servizio:
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
+    
+    - HKEY_CURRENT-USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
+
+- L'utente connesso viene disconnesso.
 
 ### <a name="client-status-section"></a>Sezione **Stato del client**
 
