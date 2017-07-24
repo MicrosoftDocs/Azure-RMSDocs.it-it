@@ -4,7 +4,7 @@ description: "Identificare i diversi livelli di controllo e responsabilità per 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/11/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 10ce24e72dae1225505592508d4bf88cadb131a2
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 52e9b4694eaafe5dbba1af04fb53dd6b1b627d23
+ms.sourcegitcommit: 64ba794e7844a74b1e25db0d44b90060e3ae1468
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/19/2017
 ---
 # <a name="operations-for-your-azure-information-protection-tenant-key"></a>Operazioni relative alla chiave del tenant di Azure Information Protection
 
@@ -30,8 +30,8 @@ Nella tabella seguente vengono indicate le operazioni che è possibile eseguire 
 
 |Operazione del ciclo di vita|Gestione di Microsoft (impostazione predefinita)|Gestione del cliente (scenario BYOK)|
 |-----------------------|-------------------------------|---------------------------|
-|Revocare la chiave del tenant|No (automatica)|sì|
-|Ridistribuire la chiave del tenant|sì|sì|
+|Revocare la chiave del tenant|No (automatica)|Sì|
+|Reimpostare la chiave del tenant|sì|sì|
 |Eseguire il backup e il ripristino della chiave del tenant|No|sì|
 |Esportare la chiave del tenant|sì|No|
 |Rispondere a una violazione di sicurezza|sì|sì|

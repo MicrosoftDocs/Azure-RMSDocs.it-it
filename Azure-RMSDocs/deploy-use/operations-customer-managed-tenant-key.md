@@ -4,7 +4,7 @@ description: Informazioni sulle operazioni del ciclo di vita rilevanti se si ges
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 781e534566fe01bca4583d2fb5a1a430db77429b
-ms.sourcegitcommit: 1dee39e5e3b222b4aab2b6c4284b82927148407e
+ms.openlocfilehash: 1f96c6be6b1b6b52450351ce0ec8994aac6f026e
+ms.sourcegitcommit: 64ba794e7844a74b1e25db0d44b90060e3ae1468
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/19/2017
 ---
 # <a name="customer-managed-tenant-key-lifecycle-operations"></a>Gestione del cliente: operazioni del ciclo di vita della chiave del tenant
 
@@ -29,17 +29,16 @@ In Azure Key Vault è possibile modificare le autorizzazioni per l'insieme di cr
 
 Quando si annulla la sottoscrizione di Azure Information Protection, l'uso della chiave del tenant in Azure Information Protection viene interrotto e non è necessaria alcuna azione da parte dell'utente.
 
+## <a name="rekey-your-tenant-key"></a>Reimpostare la chiave del tenant
+Il processo di reimpostazione della chiave è noto anche come rollover della chiave. Non reimpostare la chiave del tenant a meno che non sia effettivamente necessario. Alcuni client precedenti, ad esempio Office 2010, non erano progettati per gestire in modo efficiente le modifiche delle chiavi. In questo scenario è necessario cancellare lo stato di Rights Management nei computer tramite Criteri di gruppo o un meccanismo equivalente. In alcuni casi è tuttavia opportuno forzare la reimpostazione della chiave del tenant. Ad esempio:
 
-## <a name="re-key-your-tenant-key"></a>Ridistribuire la chiave del tenant
-Il processo di ridistribuzione della chiave è denominato anche rollover della chiave. Non ridistribuire la chiave tenant a meno che non sia effettivamente necessario. Alcuni client precedenti, ad esempio Office 2010, non erano progettati per gestire in modo efficiente le modifiche delle chiavi. In questo scenario è necessario cancellare lo stato di Rights Management nei computer tramite Criteri di gruppo o un meccanismo equivalente. In alcuni casi è tuttavia opportuno forzare la ridistribuzione della chiave del tenant, Ad esempio:
-
--   La società è stata divisa in due o più società. Quando si ridistribuisce la chiave del tenant, la nuova società non potrà accedere al nuovo contenuto pubblicato dai dipendenti e sarà in grado di accedere al vecchio contenuto se dispone di una copia della chiave del tenant precedente.
+-   La società è stata divisa in due o più società. Quando si reimposta la chiave del tenant, la nuova società non potrà accedere al nuovo contenuto pubblicato dai dipendenti e sarà in grado di accedere al vecchio contenuto se dispone di una copia della chiave del tenant precedente.
 
 -   Eventuale violazione della copia master della chiave del tenant (copia in proprio possesso).
 
-Quando si ridistribuisce la chiave del tenant, il nuovo contenuto è protetto tramite la nuova chiave. Poiché questo processo viene eseguito per fasi, per un certo periodo di tempo parte del nuovo contenuto continuerà a essere protetto tramite la chiave del tenant precedente. Il contenuto protetto in precedenza rimane tale rispetto alla chiave del tenant precedente. Per supportare questo scenario, Azure Information Protection mantiene la chiave del tenant precedente in modo da emettere licenze per il vecchio contenuto.
+Quando si reimposta la chiave del tenant, il nuovo contenuto è protetto tramite la nuova chiave. Poiché questo processo viene eseguito per fasi, per un certo periodo di tempo parte del nuovo contenuto continuerà a essere protetto tramite la chiave del tenant precedente. Il contenuto protetto in precedenza rimane tale rispetto alla chiave del tenant precedente. Per supportare questo scenario, Azure Information Protection mantiene la chiave del tenant precedente in modo da emettere licenze per il vecchio contenuto.
 
-Per reimpostare la chiave del tenant, è innanzitutto necessario reimpostare la chiave del tenant di Azure Information Protection in Insieme di credenziali delle chiavi. Eseguire nuovamente il cmdlet [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) specificando l'URL della nuova chiave.
+Per reimpostare la chiave del tenant, è innanzitutto necessario reimpostare la chiave del tenant di Azure Information Protection in Key Vault. Eseguire nuovamente il cmdlet [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey) specificando l'URL della nuova chiave.
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Eseguire il backup e il ripristino della chiave del tenant
 L'utente è responsabile del backup della chiave del tenant. Se la chiave del tenant è stata generata dall'utente in un modulo di protezione hardware Thales, per eseguire il backup della chiave è sufficiente eseguire il backup del file della chiave in formato token, del file relativo all'ambiente e delle schede amministrative.
@@ -58,8 +57,8 @@ In caso di violazione di sicurezza, l'azione più efficace che l'utente o Micros
 
 |Descrizione evento imprevisto|Risposta probabile|
 |------------------------|-------------------|
-|Perdita della chiave del tenant.|Ridistribuire la chiave del tenant. Vedere [Ridistribuire la chiave del tenant](#re-key-your-tenant-key).|
-|Diritti di accesso alla chiave del tenant ottenuti da un utente non autorizzato o da malware, ma nessuna perdita della chiave.|La ridistribuzione della chiave del tenant non è sufficiente ed è necessaria un'analisi della causa radice. Se l'utente non autorizzato ha ottenuto l'accesso a causa di un bug del processo o del software, questo problema deve essere risolto.|
+|Perdita della chiave del tenant.|Reimpostare la chiave del tenant. Vedere [Reimpostare la chiave del tenant](#rkey-your-tenant-key).|
+|Diritti di accesso alla chiave del tenant ottenuti da un utente non autorizzato o da malware, ma nessuna perdita della chiave.|La reimpostazione della chiave del tenant non è sufficiente ed è necessaria un'analisi della causa radice. Se l'utente non autorizzato ha ottenuto l'accesso a causa di un bug del processo o del software, questo problema deve essere risolto.|
 |Vulnerabilità scoperta nella tecnologia del moduli di protezione hardware di generazione corrente.|Microsoft deve aggiornare i moduli di protezione hardware. Se si ritiene che la vulnerabilità abbia provocato l'esposizione di chiavi, Microsoft inviterà tutti i clienti a rinnovare le chiavi tenant.|
 |Vulnerabilità scoperta nell'algoritmo RSA o nella lunghezza della chiave oppure attacchi di forza bruta diventati realizzabili a livello di calcolo.|Microsoft deve aggiornare Azure Key Vault o Azure Information Protection per supportare nuovi algoritmi e lunghezze maggiori della chiave che siano resilienti e invitare tutti i clienti a rinnovare le proprie chiavi del tenant.|
 

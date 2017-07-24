@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per amministratori per gestire il client 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 07/19/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2f8ad221d1193f5a6f40cc773548b9342ffd6659
-ms.sourcegitcommit: 0fd2e63822280ec96ab957e22868c63de9ef3d47
+ms.openlocfilehash: 8dd4917b23b3732e0d835f957191db9c4578f60d
+ms.sourcegitcommit: 64ba794e7844a74b1e25db0d44b90060e3ae1468
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/19/2017
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Uso di PowerShell con il client Azure Information Protection
 
@@ -432,7 +432,7 @@ Se si esegue questo cmdlet senza parametri, l'account acquisisce un token di acc
 
 Per determinare la scadenza del token di accesso, eseguire questo cmdlet con parametri. Il cmdlet consente di configurare il token di accesso per un anno, due anni o senza alcuna scadenza. Per questa configurazione sono necessarie due applicazioni registrate in Azure Active Directory: **un'app Web o un'applicazione API** e un'**applicazione nativa**. I parametri del cmdlet usano valori provenienti da queste applicazioni.
 
-Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di etichette nel contesto dell'account utente creato. Se si vogliono usare più account, per ognuno di questi devono essere registrate applicazioni specifiche in Azure AD. È pertanto necessario eseguire questo cmdlet per ogni account.
+Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di etichette nel contesto dell'account utente creato.
 
 ### <a name="to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication"></a>Per creare e configurare le applicazioni di Azure AD per Set-AIPAuthentication
 
@@ -444,15 +444,17 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
     
     - Nome: **AIPOnBehalfOf**
     
+    Se preferibile, specificare un nome diverso. Deve essere univoco per ogni tenant.
+    
     - Tipo di applicazione: **App Web/API**
     
     - URL di accesso: **http://localhost**
-    
-4. Selezionare l'applicazione appena creata, **AIPOnBehalfOf**, e nel pannello **Impostazioni** selezionare **Proprietà**. Nel pannello **Proprietà** copiare il valore di **ID applicazione** e quindi chiudere il pannello. 
+
+4. Selezionare l'applicazione appena creata, ad esempio **AIPOnBehalfOf**, quindi selezionare **Proprietà** nel pannello **Impostazioni**. Nel pannello **Proprietà** copiare il valore di **ID applicazione** e quindi chiudere il pannello. 
     
     Questo valore viene usato per il parametro `WebAppId` quando si esegue il cmdlet Set-AIPAuthentication.
 
-5. Nel pannello **Impostazioni** selezionare **Chiavi**. Aggiungere una nuova chiave specificando una descrizione e la scelta relativa alla durata (1 anno, 2 anni o nessuna scadenza). Selezionare quindi **Salva**e copiare la stringa del **Valore** visualizzata. È importante salvare la stringa, perché non verrà più visualizzata e non potrà essere recuperata.
+5. Nel pannello **Impostazioni** selezionare **Chiavi**. Aggiungere una nuova chiave specificando una descrizione e la scelta relativa alla durata (1 anno, 2 anni o nessuna scadenza). Selezionare quindi **Salva**e copiare la stringa del **Valore** visualizzata. È importante salvare la stringa, perché non verrà più visualizzata e non potrà essere recuperata. Come per qualsiasi chiave usata, archiviare il valore salvato in modo sicuro e limitare l'accesso.
     
     Questo valore viene usato per il parametro `WebAppKey` quando si esegue il cmdlet Set-AIPAuthentication.
 
@@ -460,11 +462,13 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
     
     - Nome: **AIPClient**
     
+    Se preferibile, specificare un nome diverso. Deve essere univoco per ogni tenant.
+    
     - Tipo di applicazione: **Nativa**
     
     - URL di accesso: **http://localhost**
 
-7. Selezionare l'applicazione appena creata, **AIPClient**, e nel pannello **Impostazioni**selezionare **Proprietà**. Nel pannello **Proprietà** copiare il valore di **ID applicazione** e quindi chiudere il pannello.
+7. Selezionare l'applicazione appena creata, ad esempio **AIPClient**, quindi selezionare **Proprietà** nel pannello **Impostazioni**. Nel pannello **Proprietà** copiare il valore di **ID applicazione** e quindi chiudere il pannello.
     
     Questo valore viene usato per il parametro `NativeAppId` quando si esegue il cmdlet Set-AIPAuthentication.
 
