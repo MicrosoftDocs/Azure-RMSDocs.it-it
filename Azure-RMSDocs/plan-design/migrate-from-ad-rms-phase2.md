@@ -4,7 +4,7 @@ description: Fase 2 della migrazione da AD RMS ad Azure Information Protection, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7fb7beccf2f9fdf788f13e76796702ff64bffbbc
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 24e832c63ce7ff4f774bbc2ec10a7b35f72e050a
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 della migrazione: configurazione lato server per AD RMS
 
@@ -62,7 +62,7 @@ Ad esempio, si avranno più domini di pubblicazione trusted se sono stati aggior
 ### <a name="import-the-configuration-data-to-azure-information-protection"></a>Importare i dati di configurazione in Azure Information Protection
 Le procedure esatte per questo passaggio dipendono dalla configurazione della distribuzione corrente di AD RMS e dalla topologia preferita per la chiave del tenant di Azure Information Protection.
 
-La distribuzione corrente di AD RMS userà una delle seguenti configurazioni per la chiave del certificato concessore di licenze server (SLC):
+La distribuzione corrente di AD RMS usa una delle seguenti configurazioni per la chiave del certificato concessore di licenze server (SLC):
 
 - Password di protezione nel database AD RMS. Questa è la configurazione predefinita.
 
@@ -80,16 +80,19 @@ Per la topologia della chiave del tenant di Azure Information Protection esiston
 > [!IMPORTANT]
 > Exchange Online non è attualmente compatibile con la modalità BYOK in Azure Information Protection. Se si vuole usare la modalità BYOK dopo la migrazione e si prevede di usare Exchange Online, verificare come questa configurazione riduce la funzionalità IRM per Exchange Online. Rivedere le informazioni fornite in [Prezzi e restrizioni della modalità BYOK](byok-price-restrictions.md) per poter scegliere la migliore topologia di chiave del tenant di Azure Information Protection per la migrazione.
 
-Usare la tabella seguente per identificare la procedura da eseguire per la migrazione. Le combinazioni non elencate non sono supportate.
+Usare la tabella seguente per identificare la procedura da eseguire per la migrazione. 
 
 |Distribuzione di AD RMS corrente|Topologia di chiave del tenant di Azure Information Protection scelta|Istruzioni relative alla migrazione|
 |-----------------------------|----------------------------------------|--------------------------|
 |Password di protezione nel database AD RMS|Gestione di Microsoft|Vedere la procedura **Migrazione da una chiave protetta tramite software a un'altra** dopo questa tabella.<br /><br />Questo è il percorso di migrazione più semplice e richiede solo il trasferimento dei dati di configurazione ad Azure Information Protection.|
-|Modulo di protezione hardware tramite un modulo di protezione hardware nShield di Thales|Gestione del cliente (scenario BYOK)|Vedere la procedura **Migrazione da una chiave protetta tramite HSM a un'altra** dopo questa tabella.<br /><br />Sono necessari il set di strumenti BYOK di Insieme di credenziali delle chiavi di Azure e tre procedure: innanzitutto trasferire la chiave dal modulo di protezione hardware locale ai moduli di protezione hardware di Insieme di credenziali delle chiavi di Azure, quindi autorizzare il servizio Azure Rights Management di Azure Information Protection all'uso della chiave del tenant e infine trasferire i dati di configurazione in Azure Information Protection.|
+|Modulo di protezione hardware tramite un modulo di protezione hardware nShield di Thales |Gestione del cliente (scenario BYOK)|Vedere la procedura **Migrazione da una chiave protetta tramite HSM a un'altra** dopo questa tabella.<br /><br />Sono necessari il set di strumenti BYOK di Azure Key Vault e tre procedure: il trasferimento della chiave dal modulo di protezione hardware locale ai moduli di protezione hardware di Azure Key Vault, l'autorizzazione del servizio Azure Rights Management di Azure Information Protection all'uso della chiave del tenant e infine il trasferimento dei dati di configurazione in Azure Information Protection.|
 |Password di protezione nel database AD RMS|Gestione del cliente (scenario BYOK)|Vedere la procedura di migrazione **Da una chiave protetta tramite software a una chiave protetta tramite HSM** dopo questa tabella.<br /><br />Sono necessari il set di strumenti BYOK di Insieme di credenziali delle chiavi di Azure e quattro procedure: innanzitutto estrarre la chiave software e importarla nel modulo di protezione hardware locale, quindi trasferire la chiave dal modulo di protezione hardware locale ai moduli di protezione hardware di Azure Information Protection, successivamente trasferire i dati dell'insieme di credenziali in Azure Information Protection e infine trasferire i dati di configurazione in Azure Information Protection.|
-|Modulo di protezione hardware tramite un modulo di protezione hardware di un fornitore diverso da Thales.|Gestione del cliente (scenario BYOK)|Contattare il fornitore del modulo di protezione hardware per istruzioni sul trasferimento della chiave da questo modulo a un modulo di protezione hardware nShield di Thales. Seguire quindi le istruzioni per la procedura di migrazione **Da una chiave protetta tramite HSM a un’altra** dopo questa tabella.|
-|Protezione con password tramite un provider del servizio di crittografia esterno|Gestione del cliente (scenario BYOK)|Contattare il fornitore del provider del servizio di crittografia per istruzioni sul trasferimento della chiave a un modulo di protezione hardware nShield di Thales. Seguire quindi le istruzioni per la procedura di migrazione **Da una chiave protetta tramite HSM a un’altra** dopo questa tabella.|
-Prima di iniziare queste procedure, assicurarsi che sia possibile accedere ai file con estensione XML creati in precedenza durante l'esportazione dei domini di pubblicazione trusted. Ad esempio, è possibile salvarli su una chiavetta USB che può essere spostata dal server AD RMS alla workstation connessa a Internet.
+|Modulo di protezione hardware tramite un modulo di protezione hardware di un fornitore diverso da Thales. |Gestione del cliente (scenario BYOK)|Per istruzioni sul trasferimento della chiave da questo modulo a un modulo di protezione hardware nShield di Thales, contattare il fornitore del modulo di protezione hardware. Seguire quindi le istruzioni per la procedura di migrazione **Da una chiave protetta tramite HSM a un’altra** dopo questa tabella.|
+|Protezione con password tramite un provider del servizio di crittografia esterno|Gestione del cliente (scenario BYOK)|Per istruzioni sul trasferimento della chiave a un modulo di protezione hardware nShield di Thales, contattare il fornitore del servizio di crittografia. Seguire quindi le istruzioni per la procedura di migrazione **Da una chiave protetta tramite HSM a un’altra** dopo questa tabella.|
+
+Se la chiave protetta tramite modulo di protezione hardware non è esportabile, è comunque possibile eseguire la migrazione ad Azure Information Protection configurando il cluster AD RMS con la modalità di sola lettura. In questa modalità è comunque possibile aprire il contenuto protetto in precedenza, ma il contenuto appena protetto usa una nuova chiave del tenant gestita dall'utente (BYOK) o gestita da Microsoft. Per altre informazioni, vedere [An update is available for Office to support migrations from AD RMS to Azure RMS](https://support.microsoft.com/help/4023955/an-update-is-available-for-office-to-support-migrations-from-ad-rms-to) (È disponibile un aggiornamento con cui Office supporta le migrazioni da AD RMS ad Azure RMS).
+
+Prima di iniziare queste procedure per la migrazione di chiavi, verificare che sia possibile accedere ai file con estensione XML creati in precedenza durante l'esportazione dei domini di pubblicazione trusted. Ad esempio, è possibile salvarli su una chiavetta USB che può essere spostata dal server AD RMS alla workstation connessa a Internet.
 
 > [!NOTE]
 > Indipendentemente dalla modalità di archiviazione di questi file, per proteggerli attenersi alle procedure consigliate per la sicurezza, poiché tali dati includono la chiave privata.
@@ -112,11 +115,11 @@ Aprire una sessione di PowerShell ed eseguire i comandi seguenti:
     
         Enable-Aadrmservice
 
-**Che cosa accade se il tenant di Azure Information Protection è già attivato?** Se il servizio Azure Rights Management è già attivato per l'organizzazione, gli utenti potrebbero avere già usato Azure Information Protection per proteggere il contenuto con una chiave del tenant generata automaticamente (e con i modelli predefiniti) invece che con le chiavi (e i modelli) esistenti inclusi in AD RMS. È improbabile che ciò accada su computer ben gestiti nella Intranet, perché verranno automaticamente configurati per l'infrastruttura AD RMS. Può però verificarsi su computer di un gruppo di lavoro o su computer che non si connettono spesso alla Intranet. Dal momento che sfortunatamente è anche difficile identificare questi computer, si consiglia di non attivare il servizio prima di importare i dati di configurazione da AD RMS.
+**Che cosa accade se il tenant di Azure Information Protection è già attivato?** Se il servizio Azure Rights Management è già attivato per l'organizzazione, gli utenti potrebbero avere già usato Azure Information Protection per proteggere il contenuto con una chiave del tenant generata automaticamente (e con i modelli predefiniti) invece che con le chiavi (e i modelli) esistenti inclusi in AD RMS. È poco probabile che questo accada in computer gestiti correttamente nell'intranet, perché questi sono automaticamente configurati per l'infrastruttura AD RMS. Può però verificarsi su computer di un gruppo di lavoro o su computer che non si connettono spesso alla Intranet. Dal momento che sfortunatamente è anche difficile identificare questi computer, si consiglia di non attivare il servizio prima di importare i dati di configurazione da AD RMS.
 
 Se il tenant di Azure Information Protection è già attivato ed è possibile identificare questi computer, assicurarsi di eseguire lo script CleanUpRMS.cmd nei computer, come descritto nel [Passaggio 7](migrate-from-ad-rms-phase3.md#step-7-reconfigure-clients-to-use-azure-information-protection). L'esecuzione dello script li obbliga a reinizializzare l'ambiente utente e quindi a scaricare la chiave del tenant aggiornata e i modelli importati.
 
-Se sono stati creati anche modelli personalizzati che si vuole usare dopo la migrazione, è necessario esportarli e importarli. Questa procedura viene descritta nel passaggio successivo. 
+Se sono stati creati anche modelli personalizzati da usare dopo la migrazione, è necessario esportare e importare questi modelli. Questa procedura viene descritta nel passaggio successivo. 
 
 ## <a name="step-6-configure-imported-templates"></a>Passaggio 6. Configurare i modelli importati
 

@@ -4,7 +4,7 @@ description: Informazioni sui diritti specifici usati quando si proteggono i fil
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/26/2017
+ms.date: 07/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ed06deca76ed1241f0c9b3f104fd922263c5a6cd
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: a093ca8cdd02448c877554ff87e971e956eab789
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configurazione dei diritti di utilizzo per Azure Rights Management
 
@@ -78,8 +78,8 @@ I diritti inclusi con i modelli predefiniti sono i seguenti:
 
 |Nome visualizzato|Diritti inclusi (nome comune)|
 |----------------|---------------------------------|
-|&lt;*nome organizzazione*&gt; *- Solo visualizzazione riservata*|Visualizza, Apri, Leggi|
-|&lt;*nome organizzazione*&gt; *- Riservato*|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Visualizza diritti; Consenti macro; Inoltra; Rispondi; Rispondi a tutti|
+|&lt;*nome organizzazione*&gt; *- Solo visualizzazione riservata* <br /><br />o<br /><br /> *Riservatezza elevata\Tutti i dipendenti*|Visualizza, Apri, Leggi|
+|&lt;*nome organizzazione*&gt; *- Riservato* <br /><br />o <br /><br />*Riservato\Tutti i dipendenti*|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Visualizza diritti; Consenti macro; Inoltra; Rispondi; Rispondi a tutti|
 
 ## <a name="do-not-forward-option-for-emails"></a>Opzione Non inoltrare per i messaggi di posta elettronica
 

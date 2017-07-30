@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: f6cd01357db99ee9d299606172aa85f7e2f44ba0
-ms.sourcegitcommit: 1dee39e5e3b222b4aab2b6c4284b82927148407e
+ms.openlocfilehash: db87ffaa15802f081439f7983ef1060a60c0b24c
+ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/13/2017
+ms.lasthandoff: 07/27/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passaggio 2: Configurare e pubblicare criteri di Azure Information Protection
 
@@ -78,9 +78,9 @@ Se l'etichetta **Confidential** (Riservato) non ha etichette secondarie perché 
     
 3. Nel pannello **Protezione** verificare che siano selezionate le opzioni **Azure RMS** e **Seleziona un modello predefinito**. Quindi fare clic sulla casella di riepilogo a discesa e scegliere il modello predefinito che consente a tutti gli utenti dell'organizzazione di visualizzare e modificare il contenuto protetto. 
     
-    Se il servizio Azure Rights Management è stato attivato recentemente il nome del modello è **Riservato\Tutti i dipendenti**. 
+    Se la sottoscrizione è stata ottenuta di recente, il nome del modello è **Riservato\Tutti i dipendenti**. 
     
-    Se il servizio Azure Rights Management era già attivato prima dell'inizio di questa esercitazione, il nome del modello predefinito potrebbe essere **\<nome organizzazione > - Riservato**. Se ad esempio il nome dell'organizzazione è VanArsdel viene visualizzato il nome **VanArsdel, Ltd - Riservato** e sarà possibile selezionarlo: 
+    Se la sottoscrizione è attiva da un certo tempo il nome del modello può essere  **\<nome organizzazione >, riservato**. Se ad esempio il nome dell'organizzazione è VanArsdel viene visualizzato il nome **VanArsdel, Ltd - Riservato** e sarà possibile selezionarlo: 
     
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Impostare la protezione di Azure RMS](../media/step2-select-rms-template.png)
     
