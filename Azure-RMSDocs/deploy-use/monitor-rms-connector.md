@@ -4,7 +4,7 @@ description: Informazioni su come monitorare il connettore e l'uso da parte dell
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/18/2017
+ms.date: 08/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c7d9e5a948aa0e81341eb99038302677268c522e
-ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.openlocfilehash: e759d47e45455616cac34d2b5703a567907a826f
+ms.sourcegitcommit: 2a1c690ca84611e5774ac8fac0fb4caba09fef2e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Monitorare il connettore di Azure Rights Management
 
@@ -33,7 +33,7 @@ Ad esempio, eventi informativi di questo tipo:
 - ID 1000 per confermare che il servizio del connettore è stato avviato
 
 - ID 1002 quando un server stabilisce la connessione al connettore RMS
-- 
+
 - ID 1004 ogni volta che l'elenco dei singoli account autorizzati viene scaricato nel connettore 
 
 Se il connettore non è stato configurato per l'uso di HTTPS, è possibile che venga visualizzato un avviso con ID 2002 per segnalare che un client sta usando una connessione non sicura (HTTP).
