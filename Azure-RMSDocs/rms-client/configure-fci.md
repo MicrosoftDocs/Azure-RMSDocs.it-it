@@ -4,7 +4,7 @@ description: "Istruzioni per usare il client Rights Management (RMS) con lo stru
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/18/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b56955d8a01876f4107cafa5b1b8df922c0f8ad0
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: e67bc3d82c1269343cd4e64f8a608a2a86d381ef
+ms.sourcegitcommit: 7cd6ff39731c7abe990a72a49bc10d104f47764d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/01/2017
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protezione RMS con l'infrastruttura di classificazione file (FCI, File Classification Infrastructure) per Windows Server
 
@@ -46,11 +46,11 @@ Prerequisiti per queste istruzioni:
     
     Il modulo di PowerShell AzureInformationProtection è incluso nel client Azure Information Protection. Per le istruzioni di installazione, vedere [Come installare il client Azure Information Protection per gli utenti](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) nella guida dell'amministratore di Azure Information Protection. Se necessario, è possibile installare il modulo di PowerShell usando il parametro `PowerShellOnly=true`.
     
-    I [prerequisiti per l'uso di questo modulo di PowerShell](client-admin-guide-powershell.md#azure-information-protection-service-and-azure-rights-management-service) includono l'attivazione del servizio Azure Rights Management, la creazione di un'entità servizio e la modifica del Registro di sistema se il tenant si trova al di fuori del Nord America. Prima di iniziare a seguire le istruzioni riportate in questo articolo, assicurarsi di avere i valori di **BposTenantId**, **AppPrincipalId** e **della chiave simmetrica** come descritto nei prerequisiti. 
+    I [prerequisiti per l'uso di questo modulo di PowerShell](client-admin-guide-powershell.md#azure-information-protection-and-azure-rights-management-service) includono l'attivazione del servizio Azure Rights Management, la creazione di un'entità servizio e la modifica del Registro di sistema se il tenant si trova al di fuori del Nord America. Prima di iniziare a seguire le istruzioni riportate in questo articolo, assicurarsi di avere i valori di **BposTenantId**, **AppPrincipalId** e **della chiave simmetrica** come descritto nei prerequisiti. 
     
     - Se si vuole modificare il livello predefinito di protezione (nativa o generica) per estensioni di file specifiche, si deve modificare il Registro di sistema come descritto nella sezione relativa alla [modifica del livello di protezione predefinito dei file](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) della guida dell'amministratore.
     
-    - È disponibile una connessione Internet con le impostazioni del computer configurate, se necessario per un server proxy Ad esempio: `netsh winhttp import proxy source=ie`
+    - È disponibile una connessione Internet con le impostazioni del computer configurate, se necessario per un server proxy. Ad esempio: `netsh winhttp import proxy source=ie`
     
 - L'utente ha sincronizzato gli account utente di Active Directory locali e i relativi indirizzi di posta elettronica con Azure Active Directory oppure con Office 365. Ciò è necessario per tutti gli utenti che potrebbero avere la necessità di accedere ai file una volta protetti da FCI e dal servizio Azure Rights Management. Se non si completa questo passaggio (ad esempio, in un ambiente di test), è possibile che l'accesso degli utenti a questi file sia bloccato. Per altre informazioni su questi requisiti, vedere [Preparazione di utenti e gruppi per Azure Information Protection](../plan-design/prepare.md).
     
@@ -216,14 +216,14 @@ Quando si è completata la configurazione per la classificazione, si è pronti p
 
             `-Noprofile -Command "C:\RMS-Protection\RMS-Protect-FCI.ps1 -File '[Source File Path]' -TemplateID e6ee2481-26b9-45e5-b34a-f744eacd53b0 -OwnerMail [Source File Owner Email]"`
 
-            In questo comando **[Percorso file di origine]** e **[Indirizzo posta elettronica proprietario file di origine]** sono entrambe variabili specifiche dell'infrastruttura di classificazione dei file, per cui digitarle nel comando riportato sopra esattamente così come sono visualizzate. La prima viene usata dall'infrastruttura di classificazione file per specificare in modo automatico il file identificato della cartella e la seconda è per l'infrastruttura di classificazione file per richiamare automaticamente l'indirizzo di posta elettronica del proprietario del file identificato. Questo comando viene ripetuto per ogni file della cartella, che nel nostro esempio è ogni file della cartella C:\FileShare che inoltre ha RMS come proprietà di classificazione file.
+            In questo comando **[Percorso file di origine]** e **[Indirizzo posta elettronica proprietario file di origine]** sono entrambe variabili specifiche dell'infrastruttura di classificazione dei file, per cui digitarle nel comando precedente esattamente così come sono visualizzate. La prima variabile viene usata dall'infrastruttura di classificazione file per specificare in modo automatico il file identificato della cartella e la seconda è per l'infrastruttura di classificazione file per richiamare automaticamente l'indirizzo di posta elettronica del proprietario del file identificato. Questo comando viene ripetuto per ogni file della cartella, che nel nostro esempio è ogni file della cartella C:\FileShare che inoltre ha RMS come proprietà di classificazione file.
 
             > [!NOTE]
-            > Il valore del parametro **-OwnerMail [Indirizzo posta elettronica proprietario file di origine]** garantisce che il proprietario originale del file disponga dei diritti Rights Management del file dopo che quest'ultimo è stato protetto. Questo assicura che il proprietario del file originale disponga di tutti i diritti Rights Management per i propri file. Quando i file vengono creati da un utente di dominio, l'indirizzo di posta elettronica viene recuperato automaticamente da Active Directory utilizzando il nome dell'account utente nella proprietà Proprietario del file. Per effettuare questa operazione, il file server deve essere nello stesso dominio o dominio trusted dell’utente.
+            > Il valore del parametro **-OwnerMail [Indirizzo posta elettronica proprietario file di origine]** garantisce che il proprietario originale del file disponga dei diritti Rights Management del file dopo che quest'ultimo è stato protetto. Questa configurazione assicura che il proprietario del file originale disponga di tutti i diritti Rights Management per i propri file. Quando i file vengono creati da un utente di dominio, l'indirizzo di posta elettronica viene recuperato automaticamente da Active Directory utilizzando il nome dell'account utente nella proprietà Proprietario del file. Per effettuare questa operazione, il file server deve essere nello stesso dominio o dominio trusted dell’utente.
             > 
-            > Quando possibile, assegnare i proprietari originali ai documenti protetti per assicurare che questi utenti continuino ad avere il pieno controllo dei file creati. Tuttavia, se si utilizza la variabile [Indirizzo posta elettronica proprietario file di origine] come indicato sopra e un file non dispone di un utente di dominio definito come proprietario (ad esempio, un account locale è stato utilizzato per creare il file, quindi il proprietario visualizza SYSTEM), lo script non verrà eseguito.
+            > Quando possibile, assegnare i proprietari originali ai documenti protetti per assicurare che questi utenti continuino ad avere il pieno controllo dei file creati. Tuttavia, se si usa la variabile [Indirizzo posta elettronica proprietario file di origine] come indicato nel comando precedente e un file non dispone di un utente di dominio definito come proprietario (ad esempio, un account locale è stato usato per creare il file, quindi il proprietario visualizza SYSTEM), lo script non verrà eseguito.
             > 
-            > Per i file che non hanno un utente di dominio come proprietario, è possibile copiare e salvare questi file come utente di dominio in modo da diventare il proprietario solo di questi file. In alternativa, se si dispone di autorizzazioni, è possibile modificare manualmente il proprietario.  O, in alternativa, è possibile fornire un indirizzo di posta elettronica specifico (come indirizzo personale o di gruppo per il reparto IT) anziché la variabile [Indirizzo posta elettronica proprietario file di origine], il che significa che tutti i file protetti con questo script utilizzeranno questo indirizzo di posta elettronica per definire il nuovo proprietario.
+            > Per i file che non hanno un utente di dominio come proprietario, è possibile copiare e salvare questi file come utente di dominio in modo da diventare il proprietario solo di questi file. In alternativa, se si dispone di autorizzazioni, è possibile modificare manualmente il proprietario.  O, in alternativa, è possibile fornire un indirizzo di posta elettronica specifico (come indirizzo personale o di gruppo per il reparto IT) anziché la variabile [Indirizzo posta elettronica proprietario file di origine], il che significa che tutti i file protetti con questo script useranno questo indirizzo di posta elettronica per definire il nuovo proprietario.
 
     -   **Esegui il comando come**: Selezionare **Sistema locale**
 
@@ -259,7 +259,7 @@ Quando si è completata la configurazione per la classificazione, si è pronti p
 
     2.  Fare clic su **Attendi il completamento dell'attività**e quindi fare clic su **OK**.
 
-4.  Attendere la chiusura della finestra di dialogo **Esecuzione attività di gestione file** e visualizzare i risultati del report visualizzato automaticamente. Verrà visualizzato il numero di file contenuti nella cartella selezionata nel campo **File** . Confermare che i file della cartella selezionata sono ora protetti con Rights Management. Ad esempio, se la cartella selezionata è C:\FileShare, digitare quanto segue in una sessione di Windows PowerShell e confermare che non sono presenti file con stato **Non protetto**:
+4.  Attendere la chiusura della finestra di dialogo **Esecuzione attività di gestione file** e visualizzare i risultati del report visualizzato automaticamente. Verrà visualizzato il numero di file contenuti nella cartella selezionata nel campo **File** . Confermare che i file della cartella selezionata sono ora protetti con Rights Management. Ad esempio, se la cartella selezionata è C:\FileShare, digitare il comando seguente in una sessione di Windows PowerShell e confermare che non sono presenti file con stato **Non protetto**:
 
     ```
     foreach ($file in (Get-ChildItem -Path C:\FileShare -Force | where {!$_.PSIsContainer})) {Get-RMSFileStatus -f $file.PSPath}
@@ -278,15 +278,15 @@ Quando si è completata la configurazione per la classificazione, si è pronti p
     >     ```
     >     -   Se lo script viene eseguito correttamente in questa sessione di Windows PowerShell, verificare le voci relative a **Executive** e **Argomento** nell'azione per le attività di gestione file.  Se si è specificato **-OwnerEmail [Indirizzo posta elettronica proprietario file di origine]**, provare a rimuovere questo parametro.
     > 
-    >         Se l'attività di gestione dei file funziona correttamente senza **-OwnerEmail [Indirizzo posta elettronica proprietario file di origine]**, verificare che i file non protetti abbiano un utente di dominio elencato come proprietario del file, piuttosto che **SYSTEM**.  Per effettuare questa operazione, usare la scheda **Sicurezza** per le proprietà del file, quindi fare clic su **Avanzate**. Il valore **proprietario** visualizzato immediatamente dopo il **nome** del file. Inoltre, verificare che il file server si trova nello stesso dominio o in un dominio trusted per ricercare l'indirizzo di posta elettronica dell'utente dai servizi di dominio Active Directory.
+    >         Se l'attività di gestione dei file funziona correttamente senza **-OwnerEmail [Indirizzo posta elettronica proprietario file di origine]**, verificare che i file non protetti abbiano un utente di dominio elencato come proprietario del file, piuttosto che **SYSTEM**.  Per effettuare questa verifica, usare la scheda **Sicurezza** per le proprietà del file, quindi fare clic su **Avanzate**. Il valore **proprietario** visualizzato immediatamente dopo il **nome** del file. Inoltre, verificare che il file server si trova nello stesso dominio o in un dominio trusted per ricercare l'indirizzo di posta elettronica dell'utente da Active Directory Domain Service.
     > -   Se si visualizza il numero corretto di file nel report, ma i file non sono protetti, provare a proteggerli manualmente usando il cmdlet [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile) per vedere se sono visualizzati eventuali errori.
 
 Dopo aver verificato che queste operazioni vengono eseguite correttamente, è possibile chiudere Gestione risorse file. I file nuovi vengono classificati e protetti automaticamente quando vengono eseguite le attività pianificate. 
 
 ## <a name="modifying-the-instructions-to-selectively-protect-files"></a>Modifica delle istruzioni per proteggere i file in modo selettivo
-Quando le istruzioni appena descritte risultano efficaci, è molto semplice modificarle per ottenere una configurazione più avanzata. Ad esempio, proteggere i file usando lo stesso script ma solo per i file che contengono informazioni personali e magari selezionare un modello che ha diritti più restrittivi.
+Quando le istruzioni appena descritte risultano efficaci, è semplice modificarle per ottenere una configurazione più avanzata. Ad esempio, proteggere i file usando lo stesso script ma solo per i file che contengono informazioni personali e magari selezionare un modello che ha diritti più restrittivi.
 
-A tale scopo, usare una delle proprietà di classificazione predefinite (ad esempio, **Informazioni personali**) o creare una nuova proprietà personale. Creare quindi una nuova regola che usi questa proprietà. Ad esempio, si potrebbe selezionare **Classificazione contenuto**, scegliere la proprietà **Informazioni personali** con un valore **Alto**e configurare la stringa o il modello di espressione che identifica il file da configurare per questa proprietà (ad esempio la stringa "**Data di nascita**").
+Per effettuare questa modifica, usare una delle proprietà di classificazione predefinite (ad esempio, **Informazioni personali**) o creare una nuova proprietà personale. Creare quindi una nuova regola che usi questa proprietà. Ad esempio, si potrebbe selezionare **Classificazione contenuto**, scegliere la proprietà **Informazioni personali** con un valore **Alto**e configurare la stringa o il modello di espressione che identifica il file da configurare per questa proprietà (ad esempio la stringa "**Data di nascita**").
 
 A questo punto è sufficiente creare una nuova attività di gestione file che usa lo stesso script ma forse con un modello diverso e configurare la condizione per la proprietà di classificazione appena configurata. Ad esempio, invece della condizione configurata in precedenza (la proprietà**RMS** , **Uguale**, **Sì**), selezionare la proprietà **Informazioni personali** con il valore **Operatore** impostato su **Uguale** e il **Valore** **Alto**.
 
