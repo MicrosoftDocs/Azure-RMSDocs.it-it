@@ -4,7 +4,7 @@ description: Informazioni per gli amministratori sulla distribuzione dell'applic
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 07/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: b9af5dc3-73d4-4147-b7ef-f6803b0d5216
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: af5541ab5dcec7224d1048121460b58b1ca13c48
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 65b4a60909f93090fa2e6d27660e1ed20f410955
+ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/28/2017
 ---
 # <a name="rights-management-sharing-application-installation-and-configuration-for-clients"></a>Applicazione Rights Management sharing: installazione e configurazione dei client
 
 >*Si applica a: Azure Information Protection, Office 365*
 
 > [!IMPORTANT]
-> **Notifica di fine del supporto**: l'applicazione di condivisione Rights Management per Windows verrà sostituita dal [client Azure Information Protection](../rms-client/aip-client.md). Il supporto per questa applicazione precedente terminerà il 31 gennaio 2018. 
+> **Notifica di fine del supporto**: l'applicazione di condivisione Rights Management per Windows verrà sostituita dal [client Azure Information Protection](../rms-client/aip-client.md). Il supporto per questa applicazione precedente terminerà il 31 gennaio 2019. 
  
 L'applicazione RMS sharing offre supporto per l'autenticazione per Office 2010 e si integra con le applicazioni di Office tramite l'installazione di un componente aggiuntivo per Office, per consentire agli utenti di proteggere con facilità i file e i messaggi di posta elettronica direttamente dalla barra multifunzione. Questa applicazione offre anche protezione generica per tipi di file non supportati in modalità nativa dal servizio Azure Rights Management e un sito di rilevamento dei documenti che permette agli utenti di tenere traccia dei file protetti e di revocarli.
 

@@ -12,17 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ac14cb491c39f57c7a0f81d71300db3917587cd9
-ms.sourcegitcommit: 55c36739e1d9f3f0cf2e1777fe4302b443a49b8e
+ms.openlocfilehash: 2a079dbc1df01c8c9402d7d79e3f587f13b44654
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Requisiti di Azure Active Directory per Azure Information Protection
 
 >*Si applica a: Azure Information Protection, Office 365*
 
-Per usare Azure Information Protection, è necessario avere una directory di Azure AD. L'account aziendale per questa directory consente di accedere al portale di Azure classico, in cui è possibile, ad esempio, configurare e gestire i modelli di Rights Management.
+Per usare Azure Information Protection, è necessario avere una directory di Azure AD. L'account aziendale per questa directory consente di accedere al portale di Azure, in cui è possibile, ad esempio, configurare e gestire i modelli di Rights Management.
 
 Se l'organizzazione non ha una sottoscrizione di Azure, è possibile ottenerne una registrandosi per una versione di valutazione gratuita. Passare alla pagina di [introduzione ad Azure](https://account.windowsazure.com/organization) e seguire le istruzioni.
 

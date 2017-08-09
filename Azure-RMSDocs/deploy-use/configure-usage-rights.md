@@ -4,7 +4,7 @@ description: Informazioni sui diritti specifici usati quando si proteggono i fil
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/24/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a093ca8cdd02448c877554ff87e971e956eab789
-ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
+ms.openlocfilehash: 62ea1579b61b096e1f7fe6900d72b1b8077c9ff1
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configurazione dei diritti di utilizzo per Azure Rights Management
 
 >*Si applica a: Azure Information Protection, Office 365*
 
-Quando si imposta la protezione su file o messaggi di posta elettronica mediante il servizio Azure Rights Management di Azure Information Protection e non si usa un modello, è necessario configurare personalmente i diritti di utilizzo. Inoltre, quando si configurano modelli personalizzati per Azure Rights Management, si selezionano i diritti di utilizzo che verranno applicati automaticamente quando utenti, amministratori o servizi configurati selezionano il modello. Ad esempio, nel portale di Azure classico è possibile selezionare ruoli che configurano un raggruppamento logico di diritti di utilizzo oppure configurare i singoli diritti.
+Quando si imposta la protezione su file o messaggi di posta elettronica mediante il servizio Azure Rights Management di Azure Information Protection e non si usa un modello, è necessario configurare personalmente i diritti di utilizzo. Inoltre, quando si configurano dei modelli o delle etichette per la protezione di Azure Rights Management, si selezionano i diritti di utilizzo che verranno applicati automaticamente quando utenti, amministratori o servizi configurati selezionano il modello o l'etichetta. Ad esempio, nel portale di Azure è possibile selezionare ruoli che configurano un raggruppamento logico di diritti di utilizzo oppure è possibile configurare singoli diritti.
 
 Usare le informazioni incluse in questo articolo per configurare i diritti di utilizzo desiderati per l'applicazione in uso e comprendere come tali diritti vengono interpretati dalle applicazioni.
 
@@ -85,7 +85,7 @@ I diritti inclusi con i modelli predefiniti sono i seguenti:
 
 I client di Exchange e i servizi, ad esempio il client Outlook, l'app Outlook Web Access e le regole di trasporto di Exchange, offrono un'opzione aggiuntiva per la protezione dei diritti sulle informazioni relativa ai messaggi di posta elettronica: **Non inoltrare**. 
 
-Anche se questa opzione viene visualizzata dagli utenti e dagli amministratori di Exchange come se fosse un modello predefinito di Rights Management selezionabile, l'opzione **Non inoltrare** non è un modello. È per questo motivo che non viene visualizzata nel portale di Azure classico quando si visualizzano e si gestiscono i modelli per Azure Rights Management. L'opzione **Non inoltrare** è invece un insieme di diritti che viene applicato in modo dinamico dagli utenti ai destinatari di posta elettronica.
+Anche se questa opzione viene visualizzata dagli utenti e dagli amministratori di Exchange come se fosse un modello predefinito di Rights Management selezionabile, l'opzione **Non inoltrare** non è un modello. È per questo motivo che non viene visualizzata nel portale di Azure quando si visualizzano e si gestiscono i modelli per Azure Rights Management. L'opzione **Non inoltrare** è invece un insieme di diritti che viene applicato in modo dinamico dagli utenti ai destinatari di posta elettronica.
 
 Quando l'opzione **Non inoltrare** viene applicata a un messaggio di posta elettronica, i destinatari non possono inoltrarlo, stamparlo, copiarne il contenuto, salvarne gli allegati né salvarlo come un nome diverso. Ad esempio, nel client di Outlook, il pulsante Inoltra non è disponibile, le voci di menu **Salva con nome**, **Salva allegato** e **Stampa** non sono disponibili e non è possibile aggiungere o modificare i destinatari nei campi **A**, **Cc** e **Ccn**.
 
@@ -129,7 +129,7 @@ Il proprietario di Rights Management per un documento o un messaggio di posta el
 Si noti che il proprietario di Rights Management è indipendente dal proprietario del file system di Windows. Spesso coincidono ma possono essere diversi, anche se non si usano gli SDK o PowerShell.
 
 ## <a name="see-also"></a>Vedere anche
-[Configurazione di modelli personalizzati per il servizio Azure Rights Management](configure-custom-templates.md)
+[Configurazione e gestione dei modelli per Azure Information Protection](configure-policy-templates.md))
 
 [Configurazione degli utenti con privilegi avanzati per Azure Rights Management e servizi di individuazione o ripristino dei dati](configure-super-users.md)
 

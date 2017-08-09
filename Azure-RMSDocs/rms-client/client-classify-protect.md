@@ -4,7 +4,7 @@ description: Istruzioni su come classificare e proteggere documenti e messaggi d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/06/2017
+ms.date: 08/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 960fe1abf2fa4f5b8976f190454d31849736298a
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: c7678be03106719af4679ae06e2aaa84aff8ca3e
+ms.sourcegitcommit: 87f0c7a8f9f1fdf7eece0f9d0c114ecf91f57683
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/03/2017
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Classificare e proteggere un file o un messaggio di posta elettronica tramite Azure Information Protection
 
@@ -24,18 +24,19 @@ ms.lasthandoff: 06/30/2017
 
 Il modo più semplice per classificare e proteggere i documenti e i messaggi di posta elettronica è durante la creazione o la modifica all'interno delle app desktop di Office: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
-Tuttavia, è possibile classificare e proteggere i file tramite **Esplora file**, che supporta altri tipi di file e consente di classificare e proteggere più file contemporaneamente. Questo metodo supporta la protezione di documenti di Office, file PDF, file di testo e immagine e un'ampia gamma di altri file. 
+Tuttavia, è anche possibile classificare e proteggere i file tramite **Esplora file**. Questo metodo supporta altri tipi di file ed è un modo pratico per classificare e proteggere più file contemporaneamente. Questo metodo supporta la protezione di documenti di Office, file PDF, file di testo e immagine e un'ampia gamma di altri file. 
+
+Se l'etichetta applica la protezione, un documento protetto non è adatto per essere salvato in OneDrive o SharePoint. Questi percorsi non supportano le operazioni seguenti per i file protetti: Creazione condivisa, Office Online, ricerca, anteprima di documenti, anteprima di video ed eDiscovery. 
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Condividere in modo sicuro un file con utenti esterni all'organizzazione
 
-I file protetti possono essere condivisi con altri utenti in tutta sicurezza. È ad esempio possibile allegare il file a un messaggio di posta elettronica o inviare un invito dal sito di SharePoint.
+I file protetti possono essere condivisi con altri utenti in tutta sicurezza. Ad esempio, allegare il file a un messaggio di posta elettronica.
 
 Se si condividono regolarmente file con utenti esterni all'organizzazione, l'amministratore potrebbe avere configurato un'etichetta che imposta la protezione in modo da consentire la lettura ai destinatari desiderati. In alternativa, prima di condividere un file è possibile usare l'[app di Office](#set-custom-permissions-for-a-document) o [Esplora file](#using-file-explorer-to-classify-and-protect-files) per impostare autorizzazioni personalizzate per tale file. 
 
 Se si impostano autorizzazioni personalizzate e il file è già protetto per uso interno, eseguirne prima una copia per mantenere le autorizzazioni originali. Usare quindi la copia per impostare le autorizzazioni personalizzate.  
 
 Quando il file è protetto con le autorizzazioni personalizzate, usare il meccanismo di condivisione standard per condividerlo. Se le persone con cui si condivide il file ricevono un file protetto per la prima volta, potrebbe essere necessario fornire loro le istruzioni per visualizzarlo. A tale scopo, è possibile copiare e incollare il messaggio seguente: **Questo file è protetto con Microsoft Azure Information Protection. In caso di primo utilizzo, vedere queste [istruzioni](https://aka.ms/rms-signup).**
-
 
 ## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Uso delle app di Office per classificare e proteggere documenti e messaggi di posta elettronica
 
@@ -63,7 +64,7 @@ Oltre a selezionare manualmente le etichette, è anche possibile applicarle nei 
 
 - Se l'amministratore ha configurato di recente una nuova etichetta, provare a chiudere tutte le istanze dell'app di Office e riaprirle. In questo modo, verrà eseguito un controllo della presenza di modifiche alle etichette.
 
-- Se l'etichetta mancante serve per applicare la protezione, l'edizione di Office in uso potrebbe non supportare l'applicazione della protezione di Rights Management. Per verificare, fare clic su **Proteggi** > **Guida e commenti** e controllare se nella sezione **Stato del client** è presente il messaggio **Questo client non ha la licenza per Office Professional Plus**. 
+- Se l'etichetta mancante serve per applicare la protezione, l'edizione di Office in uso potrebbe non supportare l'applicazione della protezione di Rights Management. Per verificare, fare clic su **Proteggi** > **Commenti e suggerimenti**. Controllare se nella sezione **Stato del client** è presente il messaggio **Questo client non ha la licenza per Office Professional Plus.** 
 
 - L'etichetta potrebbe essere in un criterio con ambito che non include l'account in uso. Rivolgersi all'help desk o all'amministratore.
 
@@ -84,8 +85,10 @@ Oltre a selezionare manualmente le etichette, è anche possibile applicarle nei 
     - **Selezionare le autorizzazioni**: se si vuole proteggere il file in modo da ottenere l'accesso esclusivo, selezionare **Solo per l'utente**. In caso contrario, selezionare il livello di accesso che dovrà essere assegnato agli utenti.
 
     - **Selezionare gli utenti, i gruppi o le organizzazioni**: specificare gli utenti che devono avere le autorizzazioni selezionate per uno o più file. Digitare l'indirizzo di posta elettronica completo di uno o più utenti o di un gruppo oppure il nome di dominio di un'organizzazione per tutti gli utenti dell'organizzazione. Si noti che gli indirizzi di posta elettronica personali non sono attualmente supportati.
+    
+    Se si dispone della versione di anteprima corrente del client Azure Information Protection, è possibile usare in alternativa il pulsante **Seleziona utenti, gruppi o organizzazione**. Questo pulsante consente di visualizzare la finestra di dialogo **Seleziona utenti e gruppi** per il servizio Active Directory locale. Se gli utenti o gruppi che si desidera specificare si trovano in Active Directory, è possibile cercarli e selezionarli da questa finestra di dialogo. Per usare questa opzione, il computer deve essere connesso alla rete interna e appartenere al dominio; è anche necessario disporre di un server di Active Directory locale. Se una di queste condizioni non è soddisfatta viene visualizzato il messaggio seguente: **Impossibile individuare alcuna posizione. L'applicazione non può aprire la finestra di dialogo richiesta.**
         
-    - **Scadenza dell'accesso**: selezionare questa opzione solo per i file per cui il fattore tempo è importante in modo tale che gli utenti specificati non siano in grado di aprire il file o i file selezionati dopo una data specificata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno impostato gli utenti specificati non saranno in grado di aprire il file.
+    - **Scadenza dell'accesso**: selezionare questa opzione solo per i file per cui il fattore tempo è importante in modo tale che gli utenti specificati non potranno aprire il file o i file selezionati dopo una data impostata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno impostato, gli utenti specificati non potranno aprire il file.
 
 5. Fare clic su **Applica** e attendere che venga visualizzato il messaggio **Le autorizzazioni personalizzate sono state applicate**. e quindi fare clic su **Chiudi**.
 
@@ -135,7 +138,9 @@ La guida dell'amministratore contiene un elenco completo dei tipi di file suppor
 
     - **Selezionare le autorizzazioni**: selezionare il livello di accesso da assegnare agli utenti per la protezione del file o dei file selezionati.
     
-    - **Selezionare gli utenti**: specificare gli utenti che devono avere le autorizzazioni selezionate per il file o i file. È possibile selezionarli dalla Rubrica, ad esempio nel caso in cui siano persone della propria organizzazione e contatti di altre organizzazioni. Per gli altri utenti, digitare l'indirizzo di posta elettronica completo dell'utente, l'indirizzo di posta elettronica di un gruppo oppure un nome di dominio di un'organizzazione per tutti gli utenti di quell'organizzazione. Si noti che gli indirizzi di posta elettronica personali non sono attualmente supportati.
+    - **Selezionare gli utenti, i gruppi o le organizzazioni**: specificare gli utenti che devono avere le autorizzazioni selezionate per uno o più file. Digitare l'indirizzo di posta elettronica completo di uno o più utenti o di un gruppo oppure il nome di dominio di un'organizzazione per tutti gli utenti dell'organizzazione. Si noti che gli indirizzi di posta elettronica personali non sono attualmente supportati.
+    
+    In alternativa, è possibile usare il pulsante **Seleziona utenti, gruppi o organizzazione** per selezionare gli utenti o i gruppi dalla Rubrica. Se si dispone della versione di anteprima corrente del client Azure Information Protection, questo pulsante visualizza la finestra di dialogo **Seleziona utenti e gruppi** per il servizio Active Directory locale. Se gli utenti o gruppi che si desidera specificare si trovano in Active Directory, è possibile cercarli e selezionarli da questa finestra di dialogo. Per usare questa opzione, il computer deve essere connesso alla rete interna e appartenere al dominio; è anche necessario disporre di un server di Active Directory locale. Se una di queste condizioni non è soddisfatta viene visualizzato il messaggio seguente: **Impossibile individuare alcuna posizione. L'applicazione non può aprire la finestra di dialogo richiesta.**
         
     - **Scadenza dell'accesso**: selezionare questa opzione solo per i file per cui il fattore tempo è importante in modo tale che gli utenti specificati non siano in grado di aprire il file o i file selezionati dopo una data specificata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno impostato gli utenti specificati non saranno in grado di aprire il file.
     

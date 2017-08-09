@@ -4,7 +4,7 @@ description: Istruzioni di attivazione per il servizio Azure Rights Management q
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,20 @@ ms.technology: techgroup-identity
 ms.assetid: 9b0a0227-88ce-44b8-ba3f-31eeaab27ff7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1066ff9dc628c5df379fe3ce9126b42639ed23b1
-ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
+ms.openlocfilehash: d757d4fa93bfb1277ed38a955f563bcd2595fe4e
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-classic-portal"></a>Come attivare Azure Rights Management dal portale di Azure classico
 
 >*Si applica a: Azure Information Protection*
 
+> [!NOTE]
+>Questa funzionalità è in fase di spostamento sul portale di Azure ed è attualmente in anteprima. Per altre informazioni, vedere [Come attivare Azure Rights Management dal portale di Azure](activate-azure.md).
 
-Usare queste istruzioni se si ha accesso al portale di Azure. Ad esempio, se si ha una sottoscrizione per Enterprise Mobility Suite o la sottoscrizione Premium di Azure Information Protection.
+Usare queste istruzioni se si ha accesso al portale di Azure classico. Ad esempio, se si ha una sottoscrizione per Enterprise Mobility Suite o la sottoscrizione Premium di Azure Information Protection.
 
 > [!TIP]
 > Guardare un video di due minuti: [Come attivare Azure RMS](https://channel9.msdn.com/series/pit-stop-enterprise-mobility-suite/activate-azure-rms)
@@ -55,6 +57,6 @@ Oltre allo stato **Attivo** , che indica che il servizio Rights Management è ab
 |**Non autorizzato**|Non si dispone delle autorizzazioni necessarie a visualizzare lo stato del servizio [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)]. Ad esempio, l'account è bloccato oppure l'utente non è l'amministratore globale del tenant selezionato.|
 
 ## <a name="next-steps"></a>Passaggi successivi
-Tornare ad [Attivazione di Azure Rights Management](activate-service.md).
+Riprendere la lettura di [Attivazione di Azure Rights Management](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
