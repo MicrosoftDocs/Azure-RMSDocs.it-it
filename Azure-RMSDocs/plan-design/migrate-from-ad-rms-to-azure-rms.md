@@ -4,7 +4,7 @@ description: "Istruzioni per la migrazione della distribuzione di Active Directo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6ce3936b36a716cfdc2651cda9f59eb9b552eeb3
-ms.sourcegitcommit: 52ad844cd42479a56b1ae0e56ba0614f088d8a1a
+ms.openlocfilehash: 1e9a124e4b115491c014bb54977cdb9d922cad45
+ms.sourcegitcommit: 238657f9450f18213c2b9fb453174df0ce1f1aef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrazione da AD RMS ad Azure Information Protection
 
@@ -102,18 +102,15 @@ Prima di iniziare il processo di migrazione ad Azure Information Protection, ver
 
 ### <a name="cryptographic-mode-considerations"></a>Considerazioni sulla modalità di crittografia
 
-Anche se non costituisce un prerequisito per la migrazione, è consigliabile che i client e i server AD RMS siano in esecuzione in Modalità crittografia 2 prima dell'avvio della migrazione. 
+Se il cluster AD RMS è attualmente in modalità crittografia 1, non aggiornare il cluster alla modalità crittografia 2 prima di iniziare la migrazione. Eseguire invece la migrazione con la modalità crittografia 1 e reimpostare la chiave del tenant al termine della migrazione, come una delle attività di post-migrazione.
 
-Per altre informazioni sulle diverse modalità e su come eseguire l'aggiornamento, vedere [AD RMS Cryptographic Modes](https://technet.microsoft.com/library/hh867439(v=ws.10).aspx) (Modalità di crittografia AD RMS).
-
-Se il cluster AD RMS è in esecuzione in Modalità crittografia 1 e non è possibile aggiornarlo, dopo il completamento della migrazione è necessario reimpostare la chiave del tenant di Azure Information Protection. Con la reimpostazione della chiave viene creata una nuova chiave del tenant che usa la Modalità crittografia 2. L'uso del servizio Azure Rights Management con la Modalità crittografia 1 è supportato solo durante il processo di migrazione.
+La modalità crittografia 1 è supportata solo durante il processo di migrazione.
 
 Per verificare la modalità di crittografia AD RMS:
  
 - Per Windows Server 2012 R2 e Windows 2012: proprietà del cluster AD RMS > scheda **Generale**. 
 
 - Per tutte le versioni di AD RMS: usare [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) e l'opzione **AD RMS admin** (Amministratore di AD RMS) per visualizzare la modalità di crittografia in **RMS service information** (Informazioni sul servizio RMS).
-
 
 ### <a name="migration-limitations"></a>Limitazioni della migrazione
 
