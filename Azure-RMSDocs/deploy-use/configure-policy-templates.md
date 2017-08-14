@@ -4,7 +4,7 @@ description: "Attualmente in anteprima, è ora possibile configurare e gestire i
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b9c6b808de6c5967885f4937965b4e0e759668f3
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: dc39a52ca09ec7818b70a5bac320024bdc4de657
+ms.sourcegitcommit: 4186c8fadea7bcd32cce7d468916374a9cdf151b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/09/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurazione e gestione dei modelli per Azure Information Protection
 
@@ -32,7 +32,7 @@ I modelli di Rights Management sono ora integrati con i criteri di Azure Informa
 
 **Se si ha una sottoscrizione che include la classificazione, l'etichettatura e la protezione (Azure Information Protection P1 o P2):**
 
-- I modelli di Rights Management che non sono integrati con le etichette per il tenant vengono visualizzati nella sezione **Modelli** dopo le etichette nel pannello **Azure Information Protection - criteri globali**. È possibile convertire i modelli in etichette o continuare a gestirli come modelli separati e collegarsi a essi quando si configura la protezione per le etichette. 
+- I modelli di Rights Management che non sono integrati con le etichette per il tenant vengono visualizzati nella sezione **Modelli** dopo le etichette nel pannello **Azure Information Protection - criteri globali**. È possibile convertire i modelli in etichette o collegarsi a essi quando si configura la protezione per le etichette. 
 
 **Se si ha una sottoscrizione che include solo la protezione (una sottoscrizione Office 365 con il servizio Azure Rights Management):**
 
@@ -69,7 +69,7 @@ Se si è ottenuto la sottoscrizione di Azure Information Protection qualche temp
 - **\<nome dell'organizzazione> - Solo visualizzazione riservata** per la visualizzazione di sola lettura per il contenuto protetto. 
 
 >[!NOTE]
->Se non vengono visualizzati nel pannello **Azure Information Protection - criteri globali**, i modelli predefiniti vengono convertiti in etichette. Continuano a esistere come modelli ma, nel portale di Azure, essi vengono visualizzati come parte di una configurazione di etichetta che include la protezione Azure RMS. È sempre possibile verificare quali sono i modelli del tenant eseguendo [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) dal [modulo PowerShell di AADRM](administer-powershell.md).
+>Se non vengono visualizzati nel pannello **Azure Information Protection - criteri globali**, i modelli predefiniti vengono convertiti in etichette o collegati a un'etichetta. Continuano a esistere come modelli ma, nel portale di Azure, essi vengono visualizzati come parte di una configurazione di etichetta che include la protezione Azure RMS. È sempre possibile verificare quali sono i modelli del tenant eseguendo [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) dal [modulo PowerShell di AADRM](administer-powershell.md).
 >
 >È possibile convertire manualmente i modelli, come illustrato nella sezione successiva, [Per convertire i modelli in etichette](#to-convert-templates-to-labels), quindi rinominarli se si desidera. In alternativa, saranno convertiti automaticamente per l'utente se il criterio di Azure Information Protection è stato creato di recente e il servizio di Azure Rights Management per il tenant è stato attivato in quel momento.
 

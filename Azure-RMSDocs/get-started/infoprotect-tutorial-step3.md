@@ -4,17 +4,17 @@ description: 'Passaggio 3 di un''esercitazione introduttiva per provare rapidame
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 209815b9-81c9-430c-a82f-32cac991449b
-ms.openlocfilehash: 0edde6cb304a4ad6b34d53ee798a5fbf7ede3b48
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: c3260d82c13c01bb16b22e472d57720777e82f7b
+ms.sourcegitcommit: a4f4edcbf0f0a7de74d1dcec9ce6e661c6882a74
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/07/2017
 ---
 # <a name="step-3-install-the-client"></a>Passaggio 3: Installare il client
 
@@ -25,9 +25,11 @@ In questo passaggio verrà installato il client di Azure Information Protection 
 
 ## <a name="install-the-azure-information-protection-client"></a>Installare il client di Azure Information Protection
 
-1. In un PC con Office installato ma in cui Word non sia aperto [scaricare il client di Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018) dall'Area download Microsoft. 
+1. In un PC con Office installato ma in cui Word non sia aperto accedere all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricare **AzInfoProtection.exe**. Si tratta della versione con disponibilità generale del client supportata nelle reti di produzione. Tuttavia, se si vuole provare la versione di anteprima corrente che dispone di tutte le funzionalità e correzioni più recenti, scaricare **AzInfoProtection_PREVIEW_1.10.52.0.exe**.
+    
+    È possibile usare entrambe le versioni del client per questa esercitazione, ma le immagini corrispondono alla versione con disponibilità generale e l'esercitazione non include le funzionalità nuove della versione di anteprima del client.
 
-2. Eseguire **AzInfoProtection.exe** e seguire le istruzioni per l'installazione del client.
+2. Eseguire il file eseguibile appena scaricato e seguire le istruzioni per installare il client.
 
     Per questa esercitazione non è importante selezionare l'opzione relativa all'installazione di criteri demo. Azure infatti scaricherà il criterio appena configurato, che sostituirà i criteri demo. È tuttavia possibile usare l'opzione relativa ai criteri demo se si vogliono solo provare le etichette predefinite senza connettersi ad Azure Information Protection. 
 
@@ -45,7 +47,7 @@ Quando il documento viene caricato, vengono visualizzati due nuovi elementi:
 
     Fare clic su **Proteggi** > **Guida e commenti e suggerimenti** e nella finestra di dialogo **Microsoft Azure Information Protection** verificare lo stato del client. Dovrebbe venire visualizzata l'indicazione **Connesso come** seguita dal nome dell'utente. Dovrebbe inoltre venire visualizzata un'indicazione di data e ora per l'ultima connessione e per l'installazione dei criteri di Information Protection. Verificare che il nome utente visualizzato sia corretto per il tenant.
 
-- La nuova barra di Information Protection sotto la barra multifunzione. Questa barra visualizza il titolo **Sensitivity** (Riservatezza) e l'etichetta predefinita configurata come **General**. 
+- La nuova barra di Information Protection sotto la barra multifunzione. Visualizza il titolo **Sensibilità** e le etichette illustrate nel portale di Azure. 
 
 A questo punto è possibile vedere Azure Information Protection in azione.
 
