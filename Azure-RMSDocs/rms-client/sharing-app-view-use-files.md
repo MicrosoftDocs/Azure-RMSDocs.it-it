@@ -52,7 +52,7 @@ Come il file verrà aperto dipende da come è stato protetto; è possibile saper
 
     ![Finestra di dialogo per un pfile condiviso tramite posta elettronica quando si usa l'applicazione RMS sharing](../media/ADRMS_MSRMSApp_PfilePermission.png)
 
-- **Il file ha estensione *PPDF* o è un file di testo o immagine protetto, ad esempio *PTXT* o *PJPG***
+- **Il file ha estensione *.ppdf* o è un file di testo o immagine protetto, ad esempio *.ptxt* o *.pjpg***
 
     Il file è stato protetto in modo nativo come copia di sola lettura.
 
@@ -81,7 +81,7 @@ Se dopo avere aperto il file protetto si vuole eseguire altre operazioni oltre a
 
     Il nuovo file non è più protetto. Se si desidera proteggerlo, è necessario eseguire questa operazione manualmente. Per istruzioni, vedere [Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione Rights Management sharing](sharing-app-protect-in-place.md).
 
-- **Il file ha estensione *PPDF* o è un file di testo o immagine protetto, ad esempio *PTXT* o *PJPG***
+- **Il file ha estensione *.ppdf* o è un file di testo o immagine protetto, ad esempio *.ptxt* o *.pjpg***
 
     È possibile solo visualizzare il file e se lo si rinomina o lo si sposta, la protezione rimane con il file.
 
