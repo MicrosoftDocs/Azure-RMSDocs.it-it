@@ -4,17 +4,17 @@ description: 'Passaggio 2 di un''esercitazione introduttiva per provare rapidame
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/13/2017
+ms.date: 07/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: db87ffaa15802f081439f7983ef1060a60c0b24c
-ms.sourcegitcommit: 7bec3dfe3ce61793a33d53691046c5b2bdba3fb9
+ms.openlocfilehash: 86857d9fe744ee8b8949bdf247a360492ceb8165
+ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/27/2017
+ms.lasthandoff: 07/31/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passaggio 2: Configurare e pubblicare criteri di Azure Information Protection
 
@@ -33,18 +33,18 @@ Il criterio predefinito disponibile con Azure è utilizzabile senza alcuna opera
 
 3. Leggere le informazioni disponibili nella pagina **Avvio rapido** che si apre automaticamente quando ci si connette al servizio per la prima volta. È possibile tornare a questa pagina in un secondo momento. Per questa esercitazione, fare clic su **Criteri globali** per aprire il pannello **Criteri: globali**. Questo pannello, che si apre automaticamente per connessioni successive al servizio, visualizza i criteri predefiniti di Information Protection creati automaticamente per il tenant:
     
-    - Etichette per la classificazione: **Personal**, **Public**, **General**, **Confidential** (Riservato) e **Highly Confidential** (Riservatezza elevata). Le ultime due etichette si espandono per visualizzare le etichette secondarie **Tutti i dipendenti** e **Chiunque (senza protezione)**, offrendo esempi di come una classificazione può avere sottocategorie.
+    - Etichette per la classificazione: **Personal**, **Public**, **General**, **Confidential** (Riservato) e **Highly Confidential** (Riservatezza elevata). Le ultime due etichette possono essere estese per visualizzare le etichette secondarie, che includono **All Employees** (Tutti i dipendenti) e **Anyone (not protected)** (Chiunque - senza protezione) che offrono esempi su come una classificazione può avere sottocategorie.
     
        > [!NOTE]
-       > I criteri predefiniti potrebbero essere leggermente diversi da quelli illustrati in questa esercitazione. Ad esempio, si ha un'etichetta denominata **Internal** anziché **General**, e **Secret** anziché **Highly Confidential** (Riservatezza elevata). In questo caso, è possibile che si stia usando una versione precedente dei criteri predefiniti. Oppure è possibile che tali modifiche siano state apportate manualmente prima di iniziare l'esercitazione.
+       > I criteri predefiniti potrebbero essere leggermente diversi da quelli illustrati in questa esercitazione. Ad esempio, si ha un'etichetta denominata **Internal** anziché **General**, e **Secret** anziché **Highly Confidential** (Riservatezza elevata). In alternativa, si dispone di un'etichetta secondaria aggiuntiva denominata **Recipients Only** (solo destinatari). Questo perché sono disponibili diverse versioni del criterio predefinito, a seconda di quando è stato creato per il tenant. Oppure è possibile che tali modifiche siano state apportate manualmente prima di iniziare l'esercitazione.
        > 
        > Se i criteri predefiniti hanno un aspetto diverso, è comunque possibile eseguire l'esercitazione, ma è necessario tenere presente queste modifiche quando si leggono le istruzioni e si fa riferimento alle immagini incluse di seguito. Se si vogliono modificare i criteri predefiniti in modo che corrispondano ai criteri predefiniti correnti, vedere [Criteri predefiniti di Azure Information Protection](../deploy-use/configure-policy-default.md).
 
-    - Con la configurazione predefinita, alcune etichette non hanno contrassegni visivi configurati, ad esempio piè di pagina, intestazione, filigrana, e per nessuna delle etichette è impostata la protezione: 
+    - Con la configurazione predefinita, alcune etichette non hanno contrassegni visivi configurati, ad esempio piè di pagina, intestazione, filigrana. A seconda dei criteri predefiniti, alcune etichette potrebbero avere impostata la protezione oppure no. Ecco un esempio.
     
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Criterio predefinito](../media/info-protect-policy-default-labelsv2.png)
     
-    Anche alcune impostazioni dei criteri non sono definite. Ad esempio non tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta, non è presente un'etichetta predefinita e gli utenti non devono dare una giustificazione quando modificano le etichette:
+    Anche alcune impostazioni dei criteri non sono definite. Non tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta, non è presente un'etichetta predefinita e gli utenti non devono dare una giustificazione quando modificano le etichette:
     
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Criterio predefinito](../media/info-protect-policy-default-settings.png)
 
@@ -64,19 +64,19 @@ Verranno modificate ora le impostazioni di una delle etichette secondarie, ovver
 
 Se l'etichetta **Confidential** (Riservato) non ha etichette secondarie perché si sta usando una versione precedente dei criteri, è possibile usare l'etichetta **Confidential** (Riservato) come alternativa. I passaggi di configurazione sono gli stessi, ma il nome del pannello dell'etichetta è **Confidential** (Riservato) anziché **All Employees** (Tutti i dipendenti).
 
-1. Assicurarsi che l'etichetta **Confidential** (Riservato) sia espansa e selezionare **All Employees** (Tutti i dipendenti) da tale etichetta.
-    
-    Nel nuovo pannello **Label: All Employees** (Etichetta: Tutti i dipendenti) sono ora visibili le impostazioni disponibili per ogni etichetta. 
+1. Assicurarsi che l'etichetta **Confidential** sia espansa per mostrare le etichette secondarie, quindi per l'etichetta **All Employees** (Tutti i dipendenti) prendere nota se **Azure RMS** viene visualizzato nella colonna **PROTECTION** (Protezione) o meno. In caso affermativo, il criterio predefinito è quello più recente e la protezione per questa etichetta viene configurata automaticamente. Se la colonna è vuota, sarà necessario configurare la protezione in un passaggio successivo.
+
+    Selezionare l'etichetta secondaria **All Employees** (Tutti i dipendenti); nel nuovo pannello **Label: All Employees** (Etichetta: Tutti i dipendenti) sono ora visibili le impostazioni disponibili per ogni etichetta. 
 
 2. Leggere il testo **Description** (Descrizione) per questa etichetta. Descrive come l'etichetta selezionata deve essere usata ed è visibile agli utenti come descrizione comando, per aiutarli a decidere quale etichetta selezionare.
 
-3. Identificare la sezione **Set permissions for documents and emails containing this label** (Configurare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta) e selezionare **Protect** (Proteggi):
+3. Se la protezione è già configurata per l'etichetta, andare al passaggio 5.
     
-    ![Configurare la protezione per un'etichetta di Azure Information Protection](../media/info-protect-protection-barv2.png) 
+    Se la protezione non è configurata per l'etichetta, identificare la sezione **Set permissions for documents and emails containing this label** (Configurare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta). Selezionare **Proteggi** e quindi la barra **Protezione**:
     
-    Per effetto di questa operazione viene aperto il pannello **Protezione**.
+    ![Configurare la protezione per un'etichetta di Azure Information Protection](../media/info-protect-protection-bar-configured.png) 
     
-3. Nel pannello **Protezione** verificare che siano selezionate le opzioni **Azure RMS** e **Seleziona un modello predefinito**. Quindi fare clic sulla casella di riepilogo a discesa e scegliere il modello predefinito che consente a tutti gli utenti dell'organizzazione di visualizzare e modificare il contenuto protetto. 
+4. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure RMS**, quindi scegliere **Seleziona un modello predefinito**. Fare clic sulla casella di riepilogo a discesa e scegliere il modello predefinito che consente a tutti gli utenti dell'organizzazione di visualizzare e modificare il contenuto protetto. 
     
     Se la sottoscrizione è stata ottenuta di recente, il nome del modello è **Riservato\Tutti i dipendenti**. 
     
@@ -86,7 +86,7 @@ Se l'etichetta **Confidential** (Riservato) non ha etichette secondarie perché 
     
     Se questo modello di Azure Rights Management è disabilitato, selezionare un modello alternativo. Tuttavia, se si seleziona un modello di reparto, assicurarsi che l'account sia incluso nell'ambito.
     
-4. Fare clic su **OK** per salvare le modifiche e chiudere il pannello **Protection** (Protezione). È possibile vedere questa modifica di configurazione nel pannello **Label: All Employees** (Etichetta: Tutti i dipendenti):
+4. Fare clic su **OK** per salvare le modifiche e chiudere il pannello **Protection** (Protezione). Verrà visualizzata la barra Protezione aggiornata nel pannello **Label: All Employees** (Etichetta: Tutti i dipendenti). Ad esempio:
     
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: protezione configurata di Azure RMS](../media/protection-bar-configured.png)
     
@@ -128,11 +128,11 @@ Se l'etichetta **Confidential** (Riservato) non ha etichette secondarie perché 
 
 10. Fare clic su **Save** (Salva) nel pannello **Label: All Employees** (Etichetta: Tutti i dipendenti). Quindi, nel pannello **Criteri: Globale** fare di nuovo clic su **Salva**.
     
-    A questo punto, le etichette visualizzano la protezione di Azure RMS dell'etichetta appena configurata:
+    Se è stata configurata l'etichetta per la protezione, l'etichetta è ora aggiornata per mostrare la protezione di Azure RMS:
 
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Configurazione del criterio predefinito](../media/info-protect-policy-configuredv2.png)
     
-    E le impostazioni sono configurate con le modifiche per l'etichetta predefinita e la giustificazione:
+    Si vedrà anche che le impostazioni sono configurate con le modifiche per l'etichetta predefinita e la giustificazione:
     
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: impostazioni configurate](../media/info-protect-settings-configuredv2.png)
     
@@ -147,6 +147,7 @@ Dopo aver esaminato il criterio predefinito e aver apportato alcune modifiche, i
 |Se si desiderano altre informazioni|Informazioni aggiuntive|
 |--------------------------------|--------------------------|
 |Informazioni sulle opzioni di configurazione per i criteri|[Configurazione dei criteri di Azure Information Protection](../deploy-use/configure-policy.md)|
+|Set di configurazione nel criterio predefinito|[Criteri predefiniti di Azure Information Protection](../deploy-use/configure-policy-default.md)|
 
 
 >[!div class="step-by-step"]
