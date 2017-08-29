@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per amministratori per gestire il client 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/01/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 618e8b6a160ccc699658bf8c317c40ed2ded3bee
-ms.sourcegitcommit: 87f0c7a8f9f1fdf7eece0f9d0c114ecf91f57683
+ms.openlocfilehash: 6077b9eba8ee04bf22c17612183f3d41b6b71e35
+ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/24/2017
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Uso di PowerShell con il client Azure Information Protection
 
@@ -77,7 +77,7 @@ Oltre ai prerequisiti per l'installazione del modulo AzureInformationProtection,
 
 4. Per le aree al di fuori dell'America del Nord: 
     
-    - Modificare il Registro di sistema per l'autenticazione al servizio.
+    - Modificare il Registro di sistema per l'individuazione del servizio.
 
 #### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>Prerequisito 1: il servizio Azure Rights Management deve essere attivato
 
@@ -229,12 +229,9 @@ Per altre informazioni, vedere [Configurazione degli utenti con privilegi avanza
 > [!NOTE]
 > Per usare il proprio account per l'autenticazione al servizio Azure Rights Management, non è necessario eseguire Set-RMSServerAuthentication prima di proteggere i file o rimuoverne la protezione o di ottenere modelli.
 
-
-
-
 #### <a name="prerequisite-4-for-regions-outside-north-america"></a>Prerequisito 4: Per le aree al di fuori dell'America del Nord
 
-Per l'autenticazione al di fuori dell'area America del Nord di Azure, è necessario modificare il Registro di sistema come indicato di seguito. Se il tenant Azure Information Protection si trova in America del Nord, ignorare questo passaggio:
+Quando si usa un account dell'entità di sicurezza del servizio per proteggere i file e scaricare i modelli al di fuori dell'area America del Nord di Azure, è necessario modificare il Registro di sistema: 
 
 1. Eseguire di nuovo il cmdlet Get-AadrmConfiguration e annotare i valori di **CertificationExtranetDistributionPointUrl** e **LicensingExtranetDistributionPointUrl**.
 

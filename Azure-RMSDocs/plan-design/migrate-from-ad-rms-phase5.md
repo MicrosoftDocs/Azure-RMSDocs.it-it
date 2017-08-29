@@ -4,7 +4,7 @@ description: Fase 5 della migrazione da AD RMS ad Azure Information Protection c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/07/2017
+ms.date: 08/24/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: aeffd9780001f4c91ea8600f11d8fc3b36abce73
-ms.sourcegitcommit: 238657f9450f18213c2b9fb453174df0ce1f1aef
+ms.openlocfilehash: 11775c64cbd5abd7c10a145a2d48f335db2d5b69
+ms.sourcegitcommit: 8251e4db274519a2eb8033d3135a22c27130bd30
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/25/2017
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Fase 5 della migrazione: attività post-migrazione
 
@@ -71,19 +71,27 @@ Per rimuovere i controlli di onboarding:
     Nell'output, **License** deve includere **False** e non c'è nessun GUID visualizzato in **SecurityGroupOjbectId**
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Passaggio 12. Reimpostare la chiave del tenant di Azure Information Protection
-Questo passaggio è obbligatorio al termine della migrazione se per la distribuzione di AD RMS è stata usata la Modalità crittografia 1 di RMS. La reimpostazione della chiave crea infatti una nuova chiave del tenant che usa la Modalità crittografia 2 di RMS. La Modalità crittografia 1 è supportata per Azure Information Protection solo durante il processo di migrazione.
 
-La reimpostazione della chiave al termine della migrazione consente di proteggere la chiave del tenant di Azure Information Protection da possibili violazioni della sicurezza per la chiave di AD RMS.
+Questo passaggio è consigliato al termine della migrazione, se per la distribuzione di AD RMS è stata usata la Modalità crittografia 1 di RMS. La reimpostazione delle chiavi dà come risultato una protezione che usa la Modalità di crittografia 2 di RMS. 
 
-Quando si reimposta la chiave del tenant di Azure Information Protection, un'operazione detta anche "rollover della chiave", viene creata una nuova chiave e la chiave originale viene archiviata. Tuttavia, dato che il passaggio da una chiave all'altra non avviene immediatamente, ma nell'arco di alcune settimane, evitare di attendere che si sospetti una violazione della chiave originale, ma reimpostare la chiave del tenant di Azure Information Protection non appena la migrazione è completata.
+Anche se per la distribuzione di AD RMS è stata usata la Modalità crittografia 2, è comunque consigliabile eseguire questo passaggio poiché una nuova chiave consente di proteggere il tenant da possibili violazioni della protezione della chiave di AD RMS.
+
+Si ricorda tuttavia di non procedere alla reimpostazione delle chiavi se si usa Exchange Online con AD RMS. Exchange Online non supporta la modifica della modalità di crittografia. 
+
+Quando si reimposta la chiave del tenant di Azure Information Protection (operazione detta anche "rollover della chiave"), la chiave attualmente attiva viene archiviata e Azure Information Protection inizia a usare una chiave diversa specificata dall'utente. Questa nuova chiave può essere una chiave creata in Azure Key Vault o la chiave predefinita creata automaticamente per il tenant.
+
+Il passaggio da una chiave all'altra non avviene immediatamente, ma richiede alcune settimane. Per questo motivo, se si sospetta una violazione della chiave originale, procedere alla reimpostazione non appena la migrazione è completata.
 
 Per reimpostare la chiave del tenant di Azure Information Protection:
 
-- Se la chiave del tenant è gestita da Microsoft, contattare il [supporto tecnico Microsoft](../get-started/information-support.md#to-contact-microsoft-support) e aprire un **caso di supporto relativo ad Azure Information Protection con una richiesta riguardante la reimpostazione della chiave di Azure Information Protection dopo la migrazione da AD RMS**. È necessario dimostrare di essere un amministratore del tenant di Azure Information Protection. Si tenga presente che la conferma di questo processo richiede diversi giorni. Il servizio è soggetto ai costi di supporto standard. La reimpostazione della chiave del tenant non è un servizio di assistenza gratuito.
+- **Se la chiave del tenant è gestita da Microsoft**: eseguire il cmdlet PowerShell [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) e specificare l'identificatore per la chiave creata automaticamente per il tenant. È possibile identificare il valore da specificare eseguendo il cmdlet [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys). La chiave creata automaticamente per il tenant porta la data di creazione meno recente, in modo da poterla identificare usando il comando seguente:
+    
+        (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- Se la chiave del tenant è gestita dall'utente (BYOK): in Azure Key Vault reimpostare la chiave che si sta usando per il tenant di Azure Information Protection e quindi eseguire nuovamente il cmdlet [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) per specificare l'URL della nuova chiave. 
+- **Se la chiave del tenant è gestita dall'utente (BYOK):** in Azure Key Vault ripetere il processo di creazione della chiave che si sta usando per il tenant di Azure Information Protection, quindi eseguire nuovamente il cmdlet [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) per specificare l'URI della nuova chiave. 
 
 Per altre informazioni sulla gestione della chiave del tenant di Azure Information Protection, vedere [Operazioni relative alla chiave del tenant di Azure Rights Management](../deploy-use/operations-tenant-key.md).
+
 
 ## <a name="next-steps"></a>Passaggi successivi
 
