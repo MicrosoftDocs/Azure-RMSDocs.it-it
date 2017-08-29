@@ -4,7 +4,7 @@ description: Descrizione del funzionamento di Azure RMS, dei controlli crittogra
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/28/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3d53e57b8bff94c39426b37755c643c1dc9d9fde
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 26c82884c706c8397eae63197ed0307faa3562d3
+ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/24/2017
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funzionamento di Azure RMS: dietro le quinte
 
@@ -56,11 +56,13 @@ La lunghezza di 256 bit viene usata dal client Azure Information Protection e da
 
 2048 bit è la lunghezza della chiave quando il servizio Azure Rights Management è attivato. La lunghezza di 1024 bit è supportata per gli scenari facoltativi seguenti:
 
-- Durante la migrazione da un'istanza locale, se il cluster AD RMS è in esecuzione in Modalità crittografia 1 e non può essere aggiornato alla Modalità crittografia 2.
+- Durante la migrazione da locale, se il cluster AD RMS è in esecuzione in Modalità crittografia 1.
+
+- Dopo la migrazione da locale, se il cluster AD RMS ha usato Exchange Online.
 
 - Per le chiavi archiviate che sono state create in locale prima della migrazione in modo che il contenuto protetto da AD RMS possa continuare a essere aperto dopo la migrazione ad Azure Rights Management.
 
-- Se i clienti scelgono di usare la chiave di tipo BYOK (Bring Your Own Key) con Azure Key Vault. È preferibile non imporre una dimensione minima della chiave di 2048 bit.
+- Se i clienti scelgono di usare la chiave di tipo BYOK (Bring Your Own Key) con Azure Key Vault. Azure Information Protection supporta lunghezze della chiave di 1024 bit e 2048 bit. Per una maggiore sicurezza, si consiglia una lunghezza della chiave di 2048 bit.
 
 ### <a name="how-the-azure-rms-cryptographic-keys-are-stored-and-secured"></a>Modalità di archiviazione e protezione delle chiavi crittografiche di Azure RMS
 
@@ -68,7 +70,7 @@ Per ogni documento o messaggio di posta elettronica protetto da Azure RMS, viene
 
 La chiave simmetrica viene protetta dalla chiave RSA dell'organizzazione ("chiave del tenant di Azure Information Protection") nell'ambito dei criteri del documento e i criteri vengono anche firmati dall'autore del documento. Questa chiave del tenant è comune a tutti i documenti e a tutti i messaggi di posta elettronica protetti dal servizio Azure Rights Management per l'organizzazione e la chiave può essere modificata solo da un amministratore di Azure Information Protection se l'organizzazione usa una chiave del tenant gestita dai clienti, nota come chiave di tipo BYOK (Bring Your Own Key). 
 
-La chiave del tenant è protetta nei servizi online di Microsoft, in un ambiente a controllo elevato e sotto attento monitoraggio. Quando si usa una chiave del tenant gestita dai clienti (BYOK), la sicurezza è ottimizzata mediante l'uso di una matrice di moduli di protezione hardware di qualità elevata in ogni area di Azure. Le chiavi non possono essere estratte, esportate o condivise in alcuna circostanza. Per altre informazioni sulla chiave del tenant e su BYOK, vedere [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
+La chiave del tenant è protetta nei servizi online di Microsoft, in un ambiente a controllo elevato e sotto attento monitoraggio. Quando si usa una chiave del tenant gestita dal cliente (BYOK), la sicurezza è ottimizzata mediante l'uso di una matrice di moduli di protezione hardware di qualità elevata (HSM) in ogni area di Azure. Le chiavi non possono essere estratte, esportate o condivise in alcuna circostanza. Per altre informazioni sulla chiave del tenant e su BYOK, vedere [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
 
 Le licenze e i certificati inviati a un dispositivo Windows sono protetti tramite la chiave privata del dispositivo del client, che viene creata al primo utilizzo di Azure RMS sul dispositivo da parte di un utente. Questa chiave privata è a sua volta protetta con DPAPI nel client che protegge questi segreti usando una chiave derivata dalla password dell'utente. Nei dispositivi mobili le chiavi vengono usate solo una volta. Non essendo archiviate nei client, queste chiavi non devono essere quindi protette nel dispositivo. 
 
@@ -149,7 +151,7 @@ Le procedure dettagliate precedenti riguardano scenari standard, ma esistono alc
 
 -   **Protezione generica (pfile)**: quando il servizio Azure Rights Management protegge un file in modo generico, il flusso è fondamentalmente quello della protezione del contenuto, con la differenza che il client RMS crea i criteri che concedono tutti i diritti. Quando si usa il file, questo viene decrittografato prima di essere passato all'applicazione di destinazione. Questo scenario consente di proteggere tutti i file, anche se non supportano RMS in modo nativo.
 
--   **PDF protetto (ppdf)**: quando il servizio Azure Rights Management protegge in modo nativo un file di Office, crea anche una copia del file e lo protegge nello stesso modo. L'unica differenza è che la copia del file è nel formato di file PPDF, che il visualizzatore del client Azure Information Protection e l'applicazione RMS sharing sono in grado di aprire solo per la visualizzazione. Questo scenario consente di inviare allegati protetti tramite posta elettronica, sapendo che il destinatario di un dispositivo mobile sarà sempre in grado di leggerli, anche se il dispositivo mobile non dispone di un'app che supporta i file di Office protetti in modo nativo.
+-   **PDF protetto (ppdf)**: quando il servizio Azure Rights Management protegge in modo nativo un file di Office, crea anche una copia del file e lo protegge nello stesso modo. L'unica differenza è che la copia del file è nel formato di file PPDF, che il visualizzatore del client Azure Information Protection e l'applicazione RMS sharing sono in grado di aprire solo per la visualizzazione. Questo scenario consente di inviare allegati protetti tramite posta elettronica, con la consapevolezza che il destinatario sarà sempre in grado di leggerli su un dispositivo mobile, anche se non dispone di un'app che supporti i file di Office protetti in modo nativo.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

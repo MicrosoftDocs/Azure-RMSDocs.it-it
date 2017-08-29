@@ -4,7 +4,7 @@ description: Fase 3 della migrazione da AD RMS ad Azure Information Protection, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 08/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 27dc3de51c72d0142ac3dbdbd97c02c0241e902d
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 35bd2d176cb71c54a489d4f4b8faca4d668a7867
+ms.sourcegitcommit: c960f1d2140dea11e54cbeb37d53d1512621d90c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/23/2017
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Fase 3 della migrazione: configurazione lato client
 
@@ -24,24 +24,29 @@ ms.lasthandoff: 06/30/2017
 
 Usare le informazioni seguenti per la fase 3 della migrazione da AD RMS ad Azure Information Protection. Queste procedure illustrano il passaggio 7 della [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-Se non è possibile migrare tutti i client in una sola volta, eseguire queste procedure per batch di client. Per ogni utente che ha un computer Windows per cui si vuole eseguire la migrazione in batch, aggiungere l'utente al gruppo **AIPMigrated** creato in precedenza.
-
 ## <a name="step-7-reconfigure-clients-to-use-azure-information-protection"></a>Passaggio 7. Riconfigurare i client per l'uso di Azure Information Protection
 
-Questo passaggio usa script di migrazione per riconfigurare i client AD RMS. Gli script reimpostano la configurazione nei computer Windows in modo che usino il servizio Azure Rights Management anziché AD RMS: 
+Per i client di dispositivi mobili e i computer Mac:
 
-**CleanUpRMS.cmd**:
+- Rimuovere i record SRV in DNS creati al momento della distribuzione dell' [estensione per dispositivo mobile di AD RMS](http://technet.microsoft.com/library/dn673574.aspx).
 
-- Elimina il contenuto di tutte le cartelle e le chiavi del Registro di sistema usate dal client AD RMS per archiviare la configurazione. Queste informazioni includono il percorso del cluster AD RMS del client.
+Per i client Windows:
 
-**MigrateClient.cmd**:
+- Usare gli script di migrazione seguenti per riconfigurare i client AD RMS. Gli script reimpostano la configurazione nei computer Windows in modo che usino il servizio Azure Rights Management anziché AD RMS: 
+    
+    **CleanUpRMS.cmd**
+    
+    - Elimina il contenuto di tutte le cartelle e le chiavi del Registro di sistema usate dal client AD RMS per archiviare la configurazione. Queste informazioni includono il percorso del cluster AD RMS del client.
+    
+    **MigrateClient.cmd**
+    
+    - Configura il client per inizializzare l'ambiente utente (bootstrap) per il servizio di Azure Rights Management.
+    
+    - Configura il client per connettersi al servizio Azure Rights Management per ottenere licenze d'uso per il contenuto protetto dal cluster AD RMS. 
 
-- Configura il client per inizializzare l'ambiente utente (bootstrap) per il servizio di Azure Rights Management.
+Se non è possibile migrare tutti i client di Windows in una sola volta, eseguire le procedure seguenti per batch di client. Per ogni utente che ha un computer Windows per cui si vuole eseguire la migrazione in batch, aggiungere l'utente al gruppo **AIPMigrated** creato in precedenza.
 
--  Configura il client per connettersi al servizio Azure Rights Management per ottenere licenze d'uso per il contenuto protetto dal cluster AD RMS. 
-
-
-### <a name="client-reconfiguration-by-using-registry-edits"></a>Riconfigurazione di client tramite modifiche del Registro di sistema
+### <a name="windows-client-reconfiguration-by-using-registry-edits"></a>Riconfigurazione di client di Windows tramite modifiche del Registro di sistema
 
 1. Ritornare agli script di migrazione **CleanUpRMS.cmd** e **MigrateClient.cmd** estratti in precedenza.
 
@@ -54,8 +59,7 @@ Questo passaggio usa script di migrazione per riconfigurare i client AD RMS. Gli
 
     Se è necessario recuperare l'URL del servizio Azure Rights Management per *&lt;URL tenant&gt;*, vedere nelle sezioni precedenti l'argomento [Per identificare l'URL del servizio Azure Rights Management](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 
-3.  Eseguire **CleanUpRMS.cmd** e quindi **MigrateClient.cmd** nei computer client usati dai membri del gruppo **AIPMigrated**. Ad esempio, creare un oggetto Criteri di gruppo che esegue questi script e lo assegna a questo gruppo di utenti.
-
+3.  Eseguire **CleanUpRMS.cmd** e poi **MigrateClient.cmd** nei computer Windows client usati dai membri del gruppo **AIPMigrated**. Ad esempio, creare un oggetto Criteri di gruppo che esegue questi script e lo assegna a questo gruppo di utenti.
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per continuare la migrazione, passare a [Fase 4: configurazione di servizi di supporto](migrate-from-ad-rms-phase3.md).
