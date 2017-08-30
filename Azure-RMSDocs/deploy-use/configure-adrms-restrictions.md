@@ -4,17 +4,17 @@ description: Identificare le restrizioni, i prerequisiti e le raccomandazioni se
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/17/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: ac4068885df92c58ecba2a90e7aa0aeaaa34e8e9
-ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.openlocfilehash: 4730c2e27a78ec8bf106f43b3ac7097a40e0555d
+ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Requisiti e restrizioni HYOK per la protezione di AD RMS
 
@@ -83,7 +83,7 @@ Verificare che la distribuzione di AD RMS attiva soddisfi i requisiti seguenti p
     
     - Cluster radice di AD RMS singolo.
     
-    - [Modalità di crittografia 2](https://technet.microsoft.com/library/hh867439.aspx): è possibile verificare la versione della modalità di crittografia del cluster AD RMS e il relativo stato di integrità tramite lo [strumento RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437).   
+    - [Modalità crittografia 2](https://technet.microsoft.com/library/hh867439.aspx): è possibile verificare la modalità controllando le proprietà del cluster AD RMS nella scheda **Generale**.
     
     - In Active Directory non è registrato un punto di connessione del servizio (SCP): il punto SCP non viene usato quando si usa la protezione di AD RMS con Azure Information Protection. Se è stato registrato un punto di connessione del servizio per la distribuzione di AD RMS è necessario rimuoverlo, per garantire il corretto funzionamento dell'[individuazione dei servizi](../rms-client/client-deployment-notes.md#rms-service-discovery) della protezione di Azure Rights Management.
     

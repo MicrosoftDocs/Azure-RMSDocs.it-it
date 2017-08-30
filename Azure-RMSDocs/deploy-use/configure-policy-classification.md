@@ -4,17 +4,17 @@ description: "Quando si configurano le condizioni per un'etichetta, è possibile
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 510375dec4fc4e28197270e62655375698580b95
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 3aad6eb4956b6565e44c4b1019c984a28cb41fdc
+ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection
 
@@ -37,13 +37,13 @@ Come vengono valutate più condizioni quando si applicano a più etichette:
 3. Viene applicata l'ultima etichetta secondaria.
 
 > [!TIP]
->Per ottenere la migliore esperienza utente e garantire la continuità aziendale, è consigliabile iniziare con la classificazione consigliata dall'utente anziché quella automatica. Con questa configurazione, gli utenti hanno la possibilità di accettare l'azione di etichettatura o protezione o di ignorare questi suggerimenti se non sono adatti al messaggio di posta elettronica o documento in questione.
+>Per ottenere la migliore esperienza utente e garantire la continuità aziendale, è consigliabile iniziare con la classificazione consigliata dall'utente anziché quella automatica. Con questa configurazione, gli utenti possono accettare l'azione di etichettatura o protezione o ignorare questi suggerimenti se non sono adatti al messaggio di posta elettronica o documento in questione.
 
 Ecco un esempio di richiesta quando si configura una condizione per l'applicazione di un'etichetta come azione consigliata, con un suggerimento di criterio personalizzato:
 
-![Rilevamento e indicazione di Azure Information Protection](../media/info-protect-recommend-callouts.png)
+![Rilevamento e indicazione di Azure Information Protection](../media/info-protect-recommend-calloutsv2.png)
 
-In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per applicare l'etichetta consigliata oppure ignorare il suggerimento chiudendo la barra.
+In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per applicare l'etichetta consigliata oppure ignorare il suggerimento selezionando **Dismiss** (Ignora).
 
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>Per configurare la classificazione consigliata o automatica per un'etichetta
 
@@ -51,7 +51,7 @@ In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per 
     
     Ad esempio, dal menu principale fare clic su **Altri servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Se l'etichetta che si vuole configurare per la classificazione automatica o consigliata verrà applicata a tutti gli utenti, selezionare l'etichetta da modificare nel pannello **Policy: Global** (Criteri: Globale), quindi apportare le modifiche nel pannello **Label** (Etichetta) ed eventualmente nei pannelli successivi. 
+2. Se l'etichetta che si vuole configurare per la classificazione automatica o consigliata si applica a tutti gli utenti, selezionare l'etichetta da modificare nel pannello **Policy: Global** (Criteri: Globale), quindi apportare le modifiche nel pannello **Label** (Etichetta) ed eventualmente nei pannelli successivi. 
 
      Se l'etichetta da configurare si trova in un [criterio con ambito](configure-policy-scope.md) in modo da essere applicata solo agli utenti selezionati, selezionare prima di tutto il criterio con ambito nel pannello iniziale di **Azure Information Protection**.  
 

@@ -4,27 +4,23 @@ description: "Quando si assegna un'etichetta a un documento o a un messaggio di 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 08/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: efc60ee6126a6a0b2798f66c46c2242942878829
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: a65299651abd97adb0fc7641be2f2f3c6f1d8d2f
+ms.sourcegitcommit: adb38b008656ac706920a8488fd2beafedadbc97
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/16/2017
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
 
-Quando si assegna un'etichetta a un documento o a un messaggio di posta elettronica, è possibile selezionare diverse opzioni per rendere facilmente visibile la classificazione scelta. Questi contrassegni visivi sono un'intestazione, un piè di pagina e una filigrana:
-
-I contrassegni visivi vengono applicati ai documenti di Word, Excel e PowerPoint quando viene applicata l'etichetta e quando il file viene salvato in queste applicazioni di Office. Per i messaggi di posta elettronica, i contrassegni visivi vengono applicati quando il messaggio viene inviato da Outlook.
-
-I contrassegni visivi non vengono applicati ai documenti quando l'etichetta viene applicata con Esplora file e un comando del menu di scelta rapida oppure quando un documento viene classificato tramite PowerShell.
+Quando si assegna un'etichetta a un documento o a un messaggio di posta elettronica, è possibile selezionare diverse opzioni per rendere facilmente visibile la classificazione scelta. Questi contrassegni visivi sono un'intestazione, un piè di pagina e una filigrana.
 
 Altre informazioni su questi contrassegni visivi:
 
@@ -33,10 +29,32 @@ Altre informazioni su questi contrassegni visivi:
 - Le filigrane si applicano a Word, Excel e PowerPoint:
 
     - Excel: le filigrane sono visibili solo nelle modalità Layout di pagina e Anteprima di stampa, oltre che sulla stampa.
-
+    
     - PowerPoint: le filigrane vengono applicate alla diapositiva master, come immagine di sfondo.
+    
+    - Quando si usa la versione di anteprima corrente del client di Azure Information Protection, sono supportate più righe di testo.
 
 - È possibile specificare una stringa di testo o usare [variabili](#using-variables-in-the-text-string) per creare dinamicamente la stringa di testo quando viene applicata l'intestazione, il piè di pagina o la filigrana.
+
+## <a name="when-visual-markings-are-applied"></a>Quando vengono applicati i contrassegni visivi
+
+Per i messaggi di posta elettronica, i contrassegni visivi vengono applicati quando il messaggio viene inviato da Outlook.
+
+Per i documenti, i contrassegni visivi vengono applicati come segue:
+
+- Per la **versione disponibile a livello generale** del client di Azure Information Protection: 
+    
+    - In un'app di Office, i contrassegni visivi da un'etichetta vengono applicati insieme a quest'ultima e ogni volta che il documento viene salvato. 
+    
+    - Quando a un documento viene applicata un'etichetta usando Esplora file o PowerShell, i contrassegni visivi non vengono applicati subito ma solo quando tale documento viene aperto in un'app di Office o quando viene salvato.
+
+- Per la **versione di anteprima corrente** del client di Azure Information Protection: 
+    
+    - In un'app di Office, i contrassegni visivi da un'etichetta vengono applicati insieme a quest'ultima. Vengono inoltre applicati quando un documento con etichetta viene aperto e quindi salvato per la prima volta.  
+    
+    - Quando a un documento viene applicata un'etichetta usando Esplora file o Powershell, i contrassegni visivi non vengono applicati subito ma solo quando tale documento viene aperto in un'app di Office e salvato per la prima volta.
+
+## <a name="to-configure-visual-markings-for-a-label"></a>Per configurare i contrassegni visivi per un'etichetta
 
 Seguire le istruzioni seguenti per configurare i contrassegni visivi per un'etichetta.
 

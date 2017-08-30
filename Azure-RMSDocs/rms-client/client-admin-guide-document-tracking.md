@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per amministratori per configurare e usar
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f815fb9f9f1092ce83e9edc72f91381d3e8b46f3
-ms.sourcegitcommit: 12c9a4e3fe8e92d816f0a13003062f20dd2716df
+ms.openlocfilehash: dd8b2dcf785d47ec779b314072fb5edddf556163
+ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="configuring-and-using-document-tracking-for-azure-information-protection"></a>Configurazione e uso del rilevamento dei documenti per Azure Information Protection
 
@@ -32,11 +32,13 @@ Il cmdlet disabilita l'accesso al sito di rilevamento dei documenti in modo che 
 
 Quando è abilitato, il sito di rilevamento dei documenti visualizza, per impostazione predefinita, informazioni quali gli indirizzi di posta elettronica delle persone che hanno tentato di accedere ai documenti protetti, quando queste persone hanno tentato di accedere e la relativa posizione. Questo livello di informazioni può essere molto utile per determinare come vengono usati i documenti condivisi e se tali documenti devono essere revocati quando si rileva un'attività sospetta. Tuttavia, per motivi di privacy, può essere necessario disabilitare queste informazioni per alcuni o tutti gli utenti. 
 
-Se per alcuni utenti questa attività non deve essere rilevata, aggiungerli a un gruppo archiviato in Azure AD e specificare il gruppo con il cmdlet [Set-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Set-AadrmDoNotTrackUserGroup). Quando si esegue questo cmdlet è necessario specificare un singolo gruppo. Tuttavia, il gruppo può contenere gruppi nidificati. 
+Se per alcuni utenti questa attività non deve essere rilevata da altri, aggiungerli a un gruppo archiviato in Azure AD e specificare il gruppo con il cmdlet [Set-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Set-AadrmDoNotTrackUserGroup). Quando si esegue questo cmdlet è necessario specificare un singolo gruppo. Tuttavia, il gruppo può contenere gruppi nidificati. 
 
-Per questi membri del gruppo, l'attività correlata ai documenti che altri utenti hanno condiviso con loro non viene registrata nel sito di rilevamento dei documenti. Inoltre, non vengono inviate notifiche di posta elettronica all'utente che ha condiviso il documento.
+Per questi membri del gruppo, gli utenti non possono visualizzare attività nel sito di rilevamento dei documenti se queste ultime sono legate a documenti condivisi con loro. Inoltre, non vengono inviate notifiche di posta elettronica all'utente che ha condiviso il documento.
 
 Quando si usa questa configurazione, tutti gli utenti possono comunque usare il sito di rilevamento dei documenti e revocare l'accesso ai documenti protetti. Tuttavia non visualizzano l'attività per gli utenti specificati usando il cmdlet Set-AadrmDoNotTrackUserGroup.
+
+Questa impostazione si applica solo agli utenti finali. Gli amministratori di Azure Information Protection possono sempre tenere traccia delle attività di tutti gli utenti, anche quando vengono specificati usando Set-AadrmDoNotTrackUserGroup. Per altre informazioni su come gli amministratori possono tenere traccia dei per gli utenti, vedere la sezione [Rilevamento e revoca dei documenti per gli utenti](#tracking-and-revoking-documents-for-users).
 
 È possibile usare [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) se questa opzione non è più necessaria. Oppure, per rimuovere gli utenti in modo selettivo, rimuoverli dal gruppo tenendo presente che [il gruppo viene memorizzato nella cache](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management). È possibile verificare se questa opzione è attualmente in uso con il cmdlet [Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup). Per eseguire i cmdlet per questa configurazione del gruppo, è necessario avere almeno la versione **2.10.0.0** del modulo Azure Rights Management (AADRM) per PowerShell.
 

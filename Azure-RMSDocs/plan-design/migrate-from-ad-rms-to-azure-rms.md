@@ -4,7 +4,7 @@ description: "Istruzioni per la migrazione della distribuzione di Active Directo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/07/2017
+ms.date: 08/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1e9a124e4b115491c014bb54977cdb9d922cad45
-ms.sourcegitcommit: 238657f9450f18213c2b9fb453174df0ce1f1aef
+ms.openlocfilehash: 8f81eee3c15b771e60c24a83f66d13a4a654a7e3
+ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/07/2017
+ms.lasthandoff: 08/11/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrazione da AD RMS ad Azure Information Protection
 
@@ -110,7 +110,7 @@ Per verificare la modalità di crittografia AD RMS:
  
 - Per Windows Server 2012 R2 e Windows 2012: proprietà del cluster AD RMS > scheda **Generale**. 
 
-- Per tutte le versioni di AD RMS: usare [RMS Analyzer](https://www.microsoft.com/en-us/download/details.aspx?id=46437) e l'opzione **AD RMS admin** (Amministratore di AD RMS) per visualizzare la modalità di crittografia in **RMS service information** (Informazioni sul servizio RMS).
+- Per Windows Server 2008 R2: verificare che sia installato l'hotfix relativo alla [lunghezza della chiave RSA aumentata a 2048 bit per AD RMS in Windows Server 2008 R2 e in Windows Server 2008](https://support.microsoft.com/help/2627272/rsa-key-length-is-increased-to-2048-bits-for-ad-rms-in-windows-server ). In caso contrario, il cluster AD RMS viene eseguito in modalità crittografia 1.
 
 ### <a name="migration-limitations"></a>Limitazioni della migrazione
 
