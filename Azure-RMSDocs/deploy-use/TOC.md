@@ -4,7 +4,6 @@
 # [Distribuire e usare il servizio](activate-service.md)
 ## [Attivazione del servizio](activate-service.md)
 ### [Interfaccia di amministrazione di Office 365](activate-office365.md)
-### [Portale di Azure classico](activate-azure-classic.md)
 ### [Portale di Azure](activate-azure.md)
 ## [Configurazione di applicazioni](configure-applications.md)
 ### [Office 365](configure-office365.md)
