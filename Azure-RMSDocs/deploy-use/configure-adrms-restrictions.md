@@ -4,17 +4,17 @@ description: Identificare le restrizioni, i prerequisiti e le raccomandazioni se
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: 4730c2e27a78ec8bf106f43b3ac7097a40e0555d
-ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
+ms.openlocfilehash: 80e7cb411132fa3c3fdff7f8c80febde68b071fa
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Requisiti e restrizioni HYOK per la protezione di AD RMS
 
@@ -61,13 +61,17 @@ Oltre a non supportare i vantaggi elencati che si ottengono quando si usa la pro
 
 - Non supporta Office 2010 o Office 2007.
 
-- Non usare l'opzione **Non inoltrare** quando si configura un'etichetta per la protezione di Azure RMS. È inoltre necessario indicare agli utenti di non selezionare manualmente questa opzione in Outlook. 
+- Richiedere agli utenti di non selezionare **Non inoltrare** in Outlook oppure fornire istruzioni specifiche. 
 
-    Se l'opzione Non inoltrare viene applicata da un'etichetta o manualmente dagli utenti, l'opzione può essere applicata dalla distribuzione di AD RMS piuttosto che dal servizio di Azure Rights Management designato. In questo scenario, gli utenti esterni con cui si condividono dati non possono aprire messaggi di posta elettronica ai quali è applicata l'opzione Non inoltrare.
+    È possibile configurare un'etichetta in modo che **Non inoltrare** usi HYOK o il servizio Azure Rights Management. In alternativa gli utenti possono selezionare direttamente Non inoltrare. Possono selezionare questa opzione con il pulsante **Non inoltrare** della scheda **Messaggio** della barra multifunzione di Office oppure con le opzioni di menu di Outlook. Le opzioni di menu **Non inoltrare** si trovano in **File** > **Autorizzazioni**e in corrispondenza del pulsante **Autorizzazioni** della scheda **Opzioni** della barra multifunzione. 
     
-    A partire dalla versione 1.9.58.0 del client Azure Information Protection (attualmente in anteprima), il pulsante **Non inoltrare** in Outlook usa sempre Azure RMS. Questa impostazione non influisce sull'opzione di menu **Non inoltrare** di Outlook o sull'opzione **Non inoltrare** quando si configura un'etichetta per la protezione. Se questo non è il comportamento voluto, è possibile nascondere il pulsante **Non inoltrare** in Outlook configurando un'[impostazione client avanzata](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook).
+    Quando gli utenti selezionano il pulsante Non inoltrare, è possibile che venga usato Azure RMS o AD RMS in base a una scelta non deterministica. Quando gli utenti selezionano **Non inoltrare** in un'opzione di menu di Outlook possono scegliere tra Azure RMS e AD RMS, ma potrebbero non sapere quale opzione selezionare per il loro messaggio di posta elettronica. In entrambi gli scenari se viene usato AD RMS quando dovrebbe essere usato Azure RMS, è possibile che gli utenti con cui si gestiscono condivisioni esterne non riescano ad aprire i messaggi di posta elettronica.
+    
+    La versione di anteprima corrente del client Azure Information Protection usa sempre Azure RMS quando gli utenti selezionano il pulsante **Non inoltrare** in Outlook. Se questo non è il comportamento voluto, è possibile nascondere il pulsante **Non inoltrare** in Outlook configurando un'[impostazione client avanzata](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook). 
 
-- Se gli utenti configurano autorizzazioni personalizzate e si usa la protezione di AD RMS (HYOK) o di Azure RMS, i documenti e i messaggi di posta elettronica sono sempre protetti da Azure Rights Management.
+- Per la versione di disponibilità generale corrente del client Azure Information Protection, se gli utenti configurano autorizzazioni personalizzate e si usa la protezione di AD RMS (HYOK) o di Azure RMS, i documenti e i messaggi di posta elettronica sono sempre protetti da Azure Rights Management. Questa limitazione non è valida per la versione di anteprima corrente del client.
+
+- Se si configurano autorizzazioni definite dall'utente per Word, Excel, PowerPoint e File Explorer, che è supportato con la versione di anteprima corrente del client Azure Information Protection, in File Explorer la protezione viene sempre applicata con Azure RMS anziché con HYOK (AD RMS). 
 
 - Se gli utenti scelgono un'etichetta in Outlook che applica la protezione di AD RMS e quindi cambiano idea prima di inviare la posta elettronica e selezionano un'etichetta che applica la protezione di Azure RMS, la nuova etichetta selezionata non viene applicata. In tal caso, viene visualizzato il messaggio di errore seguente: **Azure Information Protection non può applicare questa etichetta. Non si hanno le autorizzazioni necessarie per eseguire questa azione.**
     
@@ -107,9 +111,11 @@ Per informazioni sulla distribuzione e istruzioni per AD RMS, vedere [Active Dir
 
 ## <a name="locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label"></a>Individuazione delle informazioni per specificare la protezione di AD RMS con un'etichetta di Azure Information Protection
 
-Quando si configura un'etichetta per la protezione di **HYOK (AD RMS)**, è necessario specificare il GUID del modello e l'URL di gestione licenze del cluster AD RMS. Questi due valori sono disponibili nella console di Active Directory Rights Management Services:
+Quando si configura un'etichetta per la protezione **HYOK (AD RMS)** è necessario specificare l'URL di licenza del cluster AD RMS. È anche necessario specificare un modello configurato per le autorizzazioni da concedere agli utenti oppure consentire agli utenti di definire le autorizzazioni e gli utenti. 
 
-- Per individuare il modello GUID: espandere il cluster e fare clic su **Modelli di criteri per i diritti di utilizzo**. In **Modelli di criteri per i diritti di utilizzo distribuiti** è quindi possibile copiare il GUID del modello che si vuole usare. Ad esempio: 82bf3474-6efe-4fa1-8827-d1bd93339119
+I valori del GUID del modello e dell'URL sono disponibili nella console di Active Directory Rights Management Services:
+
+- Per individuare il GUID di un modello, espandere il cluster e fare clic su **Modelli di criteri per i diritti di utilizzo**. In **Modelli di criteri per i diritti di utilizzo distribuiti** è quindi possibile copiare il GUID del modello che si vuole usare. Ad esempio: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
 - Per individuare l'URL di gestione licenze: fare clic sul nome del cluster. In **Dettagli cluster** copiare il valore **Gestione licenze** ad eccezione della stringa **/_wmcs/licensing**. Ad esempio: https://rmscluster.contoso.com 
     

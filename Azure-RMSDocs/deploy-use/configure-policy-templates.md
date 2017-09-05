@@ -1,10 +1,10 @@
 ---
-title: Configurare e gestire i modelli nei criteri di Azure Information Protection
-description: "Attualmente in anteprima, è ora possibile configurare e gestire i modelli di Rights Management dai criteri di Azure Information Protection."
+title: Configurare e gestire i modelli per Azure Information Protection
+description: "È possibile configurare e gestire i modelli di Rights Management dal portale di Azure."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/09/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dc39a52ca09ec7818b70a5bac320024bdc4de657
-ms.sourcegitcommit: 4186c8fadea7bcd32cce7d468916374a9cdf151b
+ms.openlocfilehash: 5075c8cbab441a376595baabd7863005b15b84e3
+ms.sourcegitcommit: 5bcb916106021f624a69d620bbcc2c4a51398771
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurazione e gestione dei modelli per Azure Information Protection
 
@@ -40,33 +40,40 @@ I modelli di Rights Management sono ora integrati con i criteri di Azure Informa
 
 ## <a name="default-templates"></a>Modelli predefiniti
 
-Quando si ottiene la sottoscrizione ad Azure Information Protection o per una sottoscrizione Office 365 che include il servizio di Azure Rights Management, vengono creati automaticamente due modelli predefiniti per il tenant che limitano l'accesso agli utenti autorizzati all'interno dell'organizzazione. Questi due modelli prevedono le restrizioni seguenti: 
+Quando si ottiene la sottoscrizione ad Azure Information Protection o per una sottoscrizione Office 365 che include il servizio di Azure Rights Management, vengono creati automaticamente due modelli predefiniti per il tenant che limitano l'accesso agli utenti autorizzati all'interno dell'organizzazione. Quando vengono creati, questi due modelli prevedono le restrizioni seguenti: 
 
 - Autorizzazioni di lettura o modifica per il contenuto protetto
     
-    -Autorizzazioni specifiche: Visualizza contenuto, Salva file, Modifica contenuto, Visualizza diritti assegnati, Consenti macro, Inoltra, Rispondi, Rispondi a tutti
+    - **Autorizzazioni specifiche**: Visualizza contenuto, Salva file, Modifica contenuto, Visualizza diritti assegnati, Consenti macro, Inoltra, Rispondi, Rispondi a tutti
 
 - Visualizzazione di sola lettura per il contenuto protetto
     
-    - Autorizzazione specifica: Visualizza contenuto
+    - **Autorizzazione specifica**: Visualizza contenuto
 
-Questi modelli semplificano l'attivazione immediata della protezione dei dati sensibili dell'organizzazione. Questi modelli possono essere usati con le etichette di Azure Information Protection o autonomamente con [applicazioni e servizi](../understand-explore/applications-support.md) che possono usare i modelli di Rights Management.
+I modelli sono configurati in modo da consentire l'accesso offline per sette giorni e non hanno una data di scadenza.
+
+>[!NOTE]
+> È possibile modificare queste impostazioni e i nomi e le descrizioni dei modelli predefiniti. Questa capacità non era attivata con il portale di Azure classico e non è supportata per PowerShell.
+
+Questi modelli predefiniti semplificano l'attivazione immediata della protezione dei dati sensibili dell'organizzazione. Questi modelli possono essere usati con le etichette di Azure Information Protection o autonomamente con [applicazioni e servizi](../understand-explore/applications-support.md) che possono usare i modelli di Rights Management.
 
 È anche possibile creare modelli personalizzati. Anche se è probabile che siano necessari solo alcuni modelli, è possibile configurare fino a 500 modelli personalizzati salvati in Azure.
 
 ### <a name="default-template-names"></a>Nomi del modello predefinito
 
-Se è stata recentemente ottenuta una sottoscrizione di Azure Information Protection, i nomi dei modelli predefiniti sono i seguenti:
+Se è stata attivata recentemente una sottoscrizione ad Azure Information Protection, i modelli predefiniti vengono creati con i nomi seguenti:
 
 - **Riservato\Tutti i dipendenti** per le autorizzazioni di lettura o modifica per il contenuto protetto.
 
 - **Riservatezza elevata\Tutti i dipendenti** per la visualizzazione di sola lettura per il contenuto protetto.
 
-Se si è ottenuto la sottoscrizione di Azure Information Protection qualche tempo fa, o se non dispone di una sottoscrizione di Azure Information Protection ma si dispone di una sottoscrizione Office 365 che include Azure Rights Management, i nomi dei modelli predefiniti saranno i seguenti:
+Se la sottoscrizione ad Azure Information Protection è stata attivata tempo addietro o se non si dispone di una sottoscrizione ad Azure Information Protection ma si dispone di una sottoscrizione a Office 365 che include Azure Rights Management, i modelli predefiniti vengono creati con i nomi seguenti:
 
 - **\<nome dell'organizzazione> - Riservato** per le autorizzazioni di lettura o modifica per il contenuto protetto.
 
 - **\<nome dell'organizzazione> - Solo visualizzazione riservata** per la visualizzazione di sola lettura per il contenuto protetto. 
+
+È possibile rinominare e riconfigurare questi modelli predefiniti quando si usa il portale di Azure.
 
 >[!NOTE]
 >Se non vengono visualizzati nel pannello **Azure Information Protection - criteri globali**, i modelli predefiniti vengono convertiti in etichette o collegati a un'etichetta. Continuano a esistere come modelli ma, nel portale di Azure, essi vengono visualizzati come parte di una configurazione di etichetta che include la protezione Azure RMS. È sempre possibile verificare quali sono i modelli del tenant eseguendo [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) dal [modulo PowerShell di AADRM](administer-powershell.md).
@@ -96,21 +103,21 @@ Prima di modificare i modelli o convertirli in etichette, assicurarsi di essere 
     
     Inoltre, attualmente non è possibile specificare l'impostazione di compatibilità dell'applicazione per un modello di reparto. Se necessario, è possibile specificarla usando PowerShell con il cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty).
 
-- Attualmente, i modelli che sono stati configurati per più lingue tramite il portale di Azure classico o PowerShell non visualizzano le lingue per il nome e le descrizioni, ma sono mantenuti.
-
-- Durante la conversione o il collegamento di un modello a un'etichetta, questo non può più essere usato da altre etichette.
+- Durante la conversione o il collegamento di un modello a un'etichetta, questo non può più essere usato da altre etichette. Inoltre questo modello non è più visualizzato nella sezione **Modelli**.
 
 - Non è possibile creare un nuovo modello dal contenitore **Modelli**. È invece possibile creare un'etichetta con l'impostazione **Proteggi** e configurare i diritti di utilizzo e le impostazioni dal pannello **Protezione**. Per istruzioni complete, vedere [Per creare un nuovo modello](#to-create-a-new-template).
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Per configurare i modelli nei criteri di Azure Information Protection
 
-1. In una nuova finestra del browser accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza.
+1. Se non è già stato fatto, aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza. Quindi passare al pannello **Azure Information Protection**. 
+    
+    Ad esempio, dal menu principale fare clic su **Altri servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Passare al pannello **Azure Information Protection**: ad esempio, nel menu hub fare clic su **More services** (Altri servizi) e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
+2. Se il nuovo modello da configurare è destinato a tutti gli utenti, restare nel pannello **Azure Information Protection - Criteri globali**.
+    
+    Se il modello da configurare si trova in un [criterio con ambito](configure-policy-scope.md) per essere applicato solo agli utenti selezionati, nel menu **CRITERI** selezionare **Criteri con ambito**. Selezionare quindi i criteri con ambito nel pannello **Azure Information Protection - Criteri con ambito**.
 
-2. Se il modello da configurare verrà applicato a tutti gli utenti, selezionare **Globale** nel pannello **Azure Information Protection**. Tuttavia, se il modello da configurare si trova in un [criterio con ambito](configure-policy-scope.md) in modo da essere applicato solo agli utenti selezionati, selezionare il criterio con ambito.
-
-3. Nel pannello dei criteri individuare il modello che si vuole configurare:
+3. Nel pannello **Azure Information Protection - Criteri globali** o nel pannello **Criteri:\<nome>** individuare il modello da configurare:
     
     - Se si ha una sottoscrizione che include la classificazione, l'etichettatura e la protezione: espandere **Modelli** dopo le etichette.
     
@@ -122,7 +129,10 @@ Prima di modificare i modelli o convertirli in etichette, assicurarsi di essere 
     
     Fare clic su **OK** per mantenere le modifiche e nel pannello **Etichetta** fare clic su **Salva**.
 
-6. Per rendere disponibili le modifiche per le applicazioni e i servizi degli utenti, nel pannello **Azure Information Protection** fare clic su **Pubblica**.
+6. Per rendere disponibili le modifiche per le applicazioni e i servizi degli utenti, nel pannello **Azure Information Protection** iniziale fare clic su **Pubblica**.
+
+> [!NOTE]
+> È anche possibile modificare un modello usando il pulsante **Modifica modello** del pannello **Protezione** se è stata configurata un'etichetta per l'uso di un modello predefinito. Se nessun'altra etichetta usa il modello selezionato, questo pulsante converte il modello in un'etichetta e attiva il passaggio 5. Per altre informazioni su cosa accade quando i modelli vengono convertiti in etichette, vedere la sezione seguente.
 
 ## <a name="to-convert-templates-to-labels"></a>Per convertire i modelli in etichette
 
@@ -132,7 +142,9 @@ Ad esempio, se si converte un'etichetta denominata **Marketing** che concede dir
 
 Sebbene non sia necessario convertire tutti i modelli in etichette, se si esegue questa operazione le impostazioni di protezione saranno completamente integrate con la funzionalità delle etichette e non sarà necessario gestire le impostazioni separatamente.
 
-Per convertire un modello in un'etichetta, fare clic con il pulsante destro del mouse sul modello e selezionare **Converti in etichetta**. In alternativa, usare il menu di scelta rapida per selezionare questa opzione.
+Per convertire un modello in un'etichetta, fare clic con il pulsante destro del mouse sul modello e selezionare **Converti in etichetta**. In alternativa, usare il menu di scelta rapida per selezionare questa opzione. 
+
+È anche possibile convertire un modello in un'etichetta quando si configura un'etichetta per la protezione e un modello predefinito, usando il pulsante **Modifica modello**. 
 
 Quando si converte un modello in etichetta:
 
@@ -148,21 +160,23 @@ Quando si converte un modello in etichetta:
 
 Quando si crea una nuova etichetta con l'impostazione di protezione **Azure RMS**, viene creato un nuovo modello personalizzato che può essere usato dai servizi e dalle applicazioni che si integrano con i modelli di Rights Management.
 
-1. Se il nuovo modello che si vuole creare verrà applicato a tutti gli utenti, nel pannello **Criteri: Globale** fare clic su **Aggiungi una nuova etichetta**.
+1. Se il nuovo modello è destinato a tutti gli utenti, restare nel pannello **Azure Information Protection - Criteri globali**.
     
-     Se il nuovo modello che si vuole creare è un modello di reparto da applicare solo agli utenti selezionati, innanzitutto selezionare o creare un criterio con ambito dal pannello iniziale **Azure Information Protection**.
+     Se il modello da configurare è un modello di reparto e come tale verrà applicato solo agli utenti selezionati, nel menu **CRITERI** selezionare **Criteri con ambito**. Quindi creare o selezionare i [criteri con ambito](configure-policy-scope.md) nel pannello **Azure Information Protection - Criteri con ambito**.
 
-2. Nel pannello **Etichetta** mantenere il valore predefinito **Abilitato**: **Attivata** per pubblicare il nuovo modello o modificare l'impostazione in **Disattivata** per creare il modello come modello archiviato. Immettere quindi un nome di etichetta e una descrizione per il nome del modello e la descrizione.
+2. Nel pannello **Azure Information Protection - Criteri globali** o nel pannello **Criteri:\<nome>** fare clic su **Aggiungi una nuova etichetta**.
 
-3. Per **Configurare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta** selezionare **Proteggi**, quindi selezionare **Protezione**:
+3. Nel pannello **Etichetta** mantenere il valore predefinito **Abilitato**: **Attivata** per pubblicare il nuovo modello o modificare l'impostazione in **Disattivata** per creare il modello come modello archiviato. Immettere quindi un nome di etichetta e una descrizione per il nome del modello e la descrizione.
+
+4. Per **Configurare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta** selezionare **Proteggi**, quindi selezionare **Protezione**:
     
-     ![Configurare la protezione per un'etichetta di Azure Information Protection](../media/info-protect-protection-bar.png)
+     ![Configurare la protezione per un'etichetta di Azure Information Protection](../media/info-protect-protection-bar-configured.png)
 
-4. Nel pannello **Protezione** è possibile modificare le autorizzazioni, la scadenza del contenuto e le impostazioni dell'accesso offline. Per altre informazioni sulla configurazione delle impostazioni di protezione, vedere [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md)
+5. Nel pannello **Protezione** è possibile modificare le autorizzazioni, la scadenza del contenuto e le impostazioni dell'accesso offline. Per altre informazioni sulla configurazione delle impostazioni di protezione, vedere [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md)
     
     Fare clic su **OK** per mantenere le modifiche e nel pannello **Etichetta** fare clic su **Salva**.
 
-5. Per rendere disponibili i modelli per le applicazioni e i servizi degli utenti, nel pannello **Azure Information Protection** fare clic su **Pubblica**.
+6. Per rendere disponibili i modelli per le applicazioni e i servizi degli utenti, nel pannello **Azure Information Protection** iniziale fare clic su **Pubblica**.
 
 
 ## <a name="next-steps"></a>Passaggi successivi

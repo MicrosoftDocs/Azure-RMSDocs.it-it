@@ -4,17 +4,17 @@ description: 'Passaggio 4 di un''esercitazione introduttiva per provare rapidame
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/19/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
-ms.openlocfilehash: 5ceb351e72ec30015697d2b27111ae76fb3b2b58
-ms.sourcegitcommit: 64ba794e7844a74b1e25db0d44b90060e3ae1468
+ms.openlocfilehash: 3a5e3fc018bb19480a52729345ad2ac6d4c851be
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Passaggio 4: Funzioni di classificazione, aggiunta di etichette e protezione in azione 
 
@@ -54,24 +54,23 @@ Sulla barra di Information Protection, fare nuovamente clic sull'icona **Modific
 
 Questa volta, quando richiesto, digitare "Il documento non richiede la classificazione" e fare clic su **Conferma**.  
 
-Per il valore **Sensitivity** (Riservatezza) viene visualizzato **Non impostato**, come avviene inizialmente se non si imposta un'etichetta predefinita:
-
-![Esercitazione introduttiva di Azure Information Protection, passaggio 4: Rimuovere la classificazione](../media/sensitivity-not-setv2.png)
-
+Per il valore **Sensitivity** (Riservatezza) viene visualizzato **Non impostato**, come avviene inizialmente se non si imposta un'etichetta predefinita.
 
 ## <a name="to-see-a-recommendation-prompt-for-labeling-and-automatic-protection"></a>Per visualizzare un messaggio di azione consigliata per l'assegnazione di etichette e la protezione automatica
 
 1. Nel documento di Word, digitare un numero di carta di credito valido, ad esempio: **4242-4242-4242-4242**. 
 
-2. Salvare il documento con qualsiasi nome file e qualsiasi percorso. 
+2. Salvare il documento in locale con qualsiasi nome file. 
 
 3. Viene visualizzata ora un prompt per applicare l'etichetta configurata per la protezione quando vengono rilevati numeri di carta di credito. Se non si è d'accordo con il suggerimento, l'impostazione dei criteri consente di rifiutarlo, selezionando **Dismiss** (Ignora). La disponibilità di un suggerimento con la possibilità di ignorarlo consente agli utenti di ridurre i falsi positivi quando si usa una classificazione automatica. Per questa esercitazione, fare clic su **Change now** (Modifica ora).
 
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 4: Messaggio di azione consigliata](../media/change-nowv2.png)
 
-    Oltre al documento che indica ora che l'etichetta configurata è applicata, ad esempio **Confidential \ All Employees** (Riservato \ Tutti i dipendenti), verrà immediatamente visualizzata la filigrana del nome dell'organizzazione sulla pagina e viene anche applicato il piè di pagina **Classificato come Riservato**. 
+    Oltre al documento che indica ora che l'etichetta configurata è applicata, ad esempio **Confidential\Finance** (Riservato\Contabilità), verrà immediatamente visualizzata la filigrana del nome dell'organizzazione sulla pagina e viene anche applicato il piè di pagina **Classificato come Riservato**. 
 
-    Il documento è protetto anche dal modello di Azure Rights Management specificato, che è possibile confermare quando si fa clic sulla scheda **File** e si visualizzano le informazioni in **Proteggi documento**. Se si usa il modello Confidential (Riservato), verrà visualizzata l'informazione che il documento è riservato agli utenti interni. Gli utenti esterni all'organizzazione non potranno aprire il documento e il suo contenuto non potrà essere copiato o stampato. Il proprietario del documento può copiarne il contenuto e stamparlo, ma se lo invia tramite posta elettronica a un altro utente dell'organizzazione, quest'ultimo non sarà in grado di eseguire queste azioni.
+    Il documento è protetto anche con le autorizzazioni specificate per questa etichetta. È possibile verificare se il documento è protetto facendo clic sulla scheda **File** e visualizzare le informazioni per **Proteggi documento**. Il documento risulta protetto da **Confidential\Finance** (Riservato\Contabilità) e la descrizione dell'etichetta. 
+    
+    A causa della configurazione di protezione dell'etichetta, solo i dipendenti possono aprire il documento e alcune azioni sono limitate. Ad esempio, poiché non sono autorizzati a stampare, copiare ed estrarre il contenuto, non possono stampare il documento o eseguire una copia dello stesso. Tali restrizioni consentono di evitare la perdita di dati. Il proprietario del documento può stamparlo e copiarne il contenuto, ma se invia il documento via posta elettronica a un altro utente dell'organizzazione, quest'ultimo non sarà in grado di eseguire queste operazioni.
 
 4. È ora possibile chiudere il documento.
 

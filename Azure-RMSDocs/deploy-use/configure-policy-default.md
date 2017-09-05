@@ -4,17 +4,17 @@ description: "Informazioni sulla configurazione dei criteri predefiniti per Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: 51b5f7d332a86c16ceb6928ea99039812dd54802
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 712d273e735d2c9fc791a1f15c3f8dc9e917a1c3
+ms.sourcegitcommit: 5bcb916106021f624a69d620bbcc2c4a51398771
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Criteri predefiniti di Azure Information Protection
 
@@ -44,6 +44,8 @@ Quando queste etichette secondarie non vengono configurate automaticamente per l
 
 Quando viene applicata alle etichette secondarie per **Tutti i dipendenti**, la protezione è configurata usando i modelli predefiniti che vengono convertiti automaticamente in etichette nel portale di Azure. Per altre informazioni sui modelli, vedere [Configurazione e gestione dei modelli per Azure Information Protection](configure-policy-templates.md).
 
+Dal 30 agosto 2017 questa versione dei criteri predefiniti include versioni tradotte dei nomi delle etichette e delle descrizioni. 
+
 #### <a name="more-information-about-the-recipients-only-sub-label"></a>Ulteriori informazioni sull'etichetta secondaria Solo i destinatari
 
 Gli utenti vedono questa etichetta solo in Outlook. Non visualizzano questa etichetta in Word, Excel, PowerPoint o da Esplora File. 
@@ -68,16 +70,16 @@ Quando gli utenti selezionano questa etichetta, l'opzione Non inoltrare di Outlo
 |-------------------------------|---------------------------|-----------------|
 |Confidential \ All Employees (Riservato \ Tutti i dipendenti)|Dati riservati che richiedono protezione, ma che garantiscono autorizzazioni complete a tutti i dipendenti. I proprietari dei dati possono tenere traccia e revocare il relativo contenuto.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />Classified as Confidential (Classificato come riservato)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: Azure RMS [[1]](#footnote-1)|
 |Confidential \ Anyone (not protected) (Riservato \ Chiunque (senza protezione))|Dati che non richiedono protezione. Usare questa opzione con cautela e giustificazione aziendale appropriata.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />Classified as Confidential (Classificato come riservato) <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
-|Riservato\Solo i destinatari|Dati riservati che richiedono protezione e che possono essere visualizzati soltanto dai destinatari.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (posta elettronica)<br /><br />Classified as Confidential (Classificato come riservato) <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: non inoltrare|
+|Riservato\Solo i destinatari|Dati riservati che richiedono protezione e che possono essere visualizzati soltanto dai destinatari.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (posta elettronica)<br /><br />Classified as Confidential (Classificato come riservato) <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: Configura le autorizzazioni definite dall'utente (anteprima), In Outlook applica Non inoltrare|
 |Highly Confidential \ All Employees (Riservatezza elevata \ Tutti i dipendenti)|Dati particolarmente riservati che garantiscono a tutti i dipendenti autorizzazioni di visualizzazione, modifica e risposta per il relativo contenuto. I proprietari dei dati possono tenere traccia e revocare il relativo contenuto.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />Classified as Highly Confidential (Classificato con riservatezza elevata)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: Azure RMS [[2]](#footnote-2)|
 |Highly Confidential \ Anyone (not protected) (Riservatezza elevata \ Chiunque (senza protezione))|Dati che non richiedono protezione. Usare questa opzione con cautela e giustificazione aziendale appropriata.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />Classified as Highly Confidential (Classificato con riservatezza elevata)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
-|Riservatezza elevata\Solo i destinatari|Dati altamente riservati che richiedono protezione e che possono essere visualizzati soltanto dai destinatari.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (posta elettronica)<br /><br />Classified as Highly Confidential (Classificato con riservatezza elevata) <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: non inoltrare|
+|Riservatezza elevata\Solo i destinatari|Dati altamente riservati che richiedono protezione e che possono essere visualizzati soltanto dai destinatari.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (posta elettronica)<br /><br />Classified as Highly Confidential (Classificato con riservatezza elevata) <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: Configura le autorizzazioni definite dall'utente (anteprima), In Outlook applica Non inoltrare|
 
 ###### <a name="footnote-1"></a>Nota 1
-Le impostazioni di protezione usano il modello predefinito, **Riservato\Tutti i dipendenti**.
+Le autorizzazioni di protezione corrispondono a quelle del [modello predefinito](configure-policy-templates.md#default-templates), **Riservato\Tutti i dipendenti**.
 
 ###### <a name="footnote-2"></a>Nota 2 
-Le impostazioni di protezione usano il modello predefinito, **Riservatezza elevata\Tutti i dipendenti**.
+Le autorizzazioni di protezione corrispondono a quelle del [modello predefinito](configure-policy-templates.md#default-templates), **Riservatezza elevata\Tutti i dipendenti**.
 
 
 ### <a name="information-protection-bar"></a>Barra Information Protection

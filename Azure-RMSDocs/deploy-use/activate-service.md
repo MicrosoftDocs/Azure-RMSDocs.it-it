@@ -4,7 +4,7 @@ description: "È necessario attivare il servizio Azure Rights Management prima c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f6d13d05c7139635c9a43770e418c1d7e11f880e
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 6aa009795e45281df1c9406357f810b8d25302bc
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="activating-azure-rights-management"></a>Attivazione di Azure Rights Management
 
@@ -42,11 +42,9 @@ Prima di attivare [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanage
 
 Dopo l'attivazione del servizio Azure Rights Management, tutti gli utenti dell'organizzazione potranno applicare la protezione delle informazioni ai propri file e tutti gli utenti potranno aprire (utilizzare) i file protetti da questo servizio. Se si preferisce, tuttavia, è possibile limitare l'applicazione della protezione delle informazioni solo ad alcuni utenti, usando i controlli di selezione utenti per una distribuzione graduale. Per altre informazioni, vedere la sezione [Configurazione dei controlli di selezione utenti per una distribuzione graduale](#configuring-onboarding-controls-for-a-phased-deployment) di questo articolo.
 
-Per istruzioni sull'attivazione del servizio Rights Management dal portale di gestione, specificare se si userà l'interfaccia di amministrazione di Office 365, il portale di Azure classico o il portale di Azure (quest'ultimo metodo è attualmente in anteprima):
+Per istruzioni sull'attivazione del servizio Rights Management dal portale di gestione, specificare se si userà l'interfaccia di amministrazione di Office 365 o il portale di Azure:
 
 - [**Interfaccia di amministrazione di Office 365**](activate-office365.md) -richiede l'account di amministratore globale
-
-- [**Portale di Azure classico**](activate-azure-classic.md) -richiede l'account di amministratore globale
 
 - [**Portale di Azure**](activate-azure.md) - richiede l'account di amministratore globale o [account di amministratore della sicurezza](https://docs.microsoft.com/azure/active-directory/active-directory-assign-admin-roles)
 

@@ -4,7 +4,7 @@ description: "Informazioni e istruzioni se si decide di non voler più usare que
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 277630708fb1d88d59b418146d0e42615ebf495c
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: bebc3bf5593c2e8d166645b6cc18ad02d739d9ba
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="decommissioning-and-deactivating-azure-rights-management"></a>Rimozione delle autorizzazioni e disattivazione di Azure Rights Management
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 07/31/2017
 
 È sempre possibile controllare se l'organizzazione protegge il contenuto tramite il servizio di Azure Rights Management da Azure Information Protection. Se si decide di non usare più questa soluzione di protezione delle informazioni, si è certi che il contenuto protetto in precedenza non sia bloccato.
 
-Se non è necessario l'accesso continuo a contenuti protetti in precedenza, è sufficiente disattivare il servizio e lasciare scadere la sottoscrizione di Azure Information Protection. Ad esempio, è opportuno adottare questa soluzione dopo aver completato i test di Azure Information Protection prima della distribuzione in un ambiente di produzione.
+Se non è necessario l'accesso continuo a contenuti protetti in precedenza, disattivare il servizio e lasciare scadere la sottoscrizione di Azure Information Protection. Ad esempio, è opportuno adottare questa soluzione dopo aver completato i test di Azure Information Protection prima della distribuzione in un ambiente di produzione.
 
 Tuttavia, se Azure Information Protection è stato implementato nell'ambiente di produzione e nei documenti e messaggi di posta elettronica protetti, assicurarsi di disporre di una copia della chiave del tenant di Azure Information Protection prima di disattivare il servizio Azure Rights Management. Assicurarsi di disporre di una copia della chiave prima della scadenza della sottoscrizione per assicurarsi che sia possibile mantenere l'accesso al contenuto protetto da Azure Rights Management dopo la disattivazione del servizio. Se si è usata la soluzione BYOK (Bring Your Own Key) con cui si genera e gestisce la propria chiave in un modulo HSM, si dispone già della chiave del tenant di Azure Information Protection. Ma se è stata gestita da Microsoft (impostazione predefinita), vedere le istruzioni per l'esportazione della chiave del tenant nell’articolo [Operazioni relative alla chiave del tenant di Azure Rights Management](operations-tenant-key.md).
 
@@ -67,29 +67,15 @@ Per disattivare [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanageme
 
 Verrà visualizzato il messaggio che indica che **Rights Management non è attivato** con l'opzione per l'attivazione.
 
-#### <a name="to-deactivate-rights-management-from-the-azure-classic-portal"></a>Per disattivare Rights Management dal portale di Azure classico
-
-1.  Accedere al [portale di Azure classico](http://go.microsoft.com/fwlink/p/?LinkID=275081).
-
-2.  Nel riquadro sinistro fare clic su **ACTIVE DIRECTORY**.
-
-3.  Nella pagina **active directory** fare clic su **RIGHTS MANAGEMENT**.
-
-4.  Verificare che il nome del tenant sia selezionato, fare clic su **DISATTIVA** e confermare l'azione.
-
-Lo **STATO DI RIGHTS MANAGEMENT** dovrebbe ora essere **Inattivo** e l’opzione **DISATTIVA** viene sostituita da **ATTIVA**.
-
 #### <a name="to-deactivate-rights-management-from-the-azure-portal"></a>Per disattivare Rights Management dal portale di Azure
 
-Questo metodo è attualmente disponibile in anteprima.
-
-1. Se non è già stato fatto, aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza e quindi passare al pannello **Azure Information Protection**.
+1. Se non è già stato fatto, aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza. Quindi passare al pannello **Azure Information Protection**.
     
     Ad esempio, dal menu principale fare clic su **Altri servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Nel pannello iniziale di **Azure Information Protection** selezionare **RMS Settings (Preview)** (Impostazioni RMS: anteprima). 
+2. Nel pannello iniziale di **Azure Information Protection** selezionare **Impostazioni di RMS**. 
 
-3.  Nel pannello di **Azure Information Protection - RMS Settings (Preview)** (Impostazioni RMS: anteprima) selezionare **Disattiva** . Selezionare **Sì** per confermare la scelta.
+3.  Nel pannello **Azure Information Protection - Impostazioni di RMS** selezionare **Disattiva** . Selezionare **Sì** per confermare la scelta.
 
 Sulla barra delle informazioni verrà visualizzato **Disattivazione completata** mentre **Disattiva** è stato sostituito da **Attiva**. 
 

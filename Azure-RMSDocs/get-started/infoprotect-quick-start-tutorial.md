@@ -4,17 +4,17 @@ description: Esercitazione introduttiva che consente di provare rapidamente Micr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 9afee2da9cb6fdd787dfb6bdafe2ae64fdef9475
-ms.sourcegitcommit: ea03477312b64c0a846701e46d991fe2c85b3a1f
+ms.openlocfilehash: 34a20c3e83b2d3d6fde15d1226535ccb90431126
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Esercitazione introduttiva di Azure Information Protection 
 
@@ -36,9 +36,11 @@ Per completare questa esercitazione è necessario quanto segue:
   > [!TIP] 
   > Se è necessario richiedere una sottoscrizione, eseguire questa operazione in anticipo perché talvolta il processo può richiedere tempo.
 
-- Un account di amministratore globale per accedere al portale di Azure e configurare i criteri di Azure Information Protection. Questo account deve disporre inoltre di un indirizzo di posta elettronica e di un servizio di posta elettronica funzionante (ad esempio, Exchange Online o Exchange Server).
+- Un account di amministratore globale o un account di amministratore della sicurezza per accedere al portale di Azure e configurare i criteri di Azure Information Protection. Questo account deve avere inoltre un indirizzo di posta elettronica e un servizio di posta elettronica funzionante, ad esempio Exchange Online.
 
-- Un computer che esegue Windows (almeno Windows 7 con Service Pack 1) e in cui è installato Office 365 ProPlus con le app di Office 2016 o 2013, Office Professional Plus 2016, Office Professional Plus 2013 con Service Pack 1 o Office Professional Plus 2010 con Service Pack 2. È necessario aver eseguito l'accesso alle app di Office mediante l'account cloud.
+- Un computer che esegue Windows (almeno Windows 7 con Service Pack 1) e in cui è installato Office 365 ProPlus con le app di Office 2016 o 2013, Office Professional Plus 2016, Office Professional Plus 2013 con Service Pack 1 o Office Professional Plus 2010 con Service Pack 2. 
+    
+    Per usare queste applicazioni con Azure Information Protection, è necessaria una [sottoscrizione a Office 365 che includa l'utilizzo del servizio Azure Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Ad esempio, una sottoscrizione di Office 365 E3 o Office 365 E5. Se si usa una licenza da questa sottoscrizione, è necessario mantenere l'accesso alle applicazioni di Office.
 
 A questo punto, procedere con l'esercitazione.
 

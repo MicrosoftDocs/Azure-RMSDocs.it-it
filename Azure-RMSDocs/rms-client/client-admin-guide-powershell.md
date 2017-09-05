@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per amministratori per gestire il client 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6077b9eba8ee04bf22c17612183f3d41b6b71e35
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 3a4a84356d59692dd3693b4bbaa00a3e39c95597
+ms.sourcegitcommit: adeab31c7aa99eab115dd12035fc5d9dffec4e9c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 08/29/2017
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Uso di PowerShell con il client Azure Information Protection
 
@@ -220,7 +220,7 @@ Il comando di esempio sarà simile al seguente:
 
     Set-RMSServerAuthentication -Key zIeMu8zNJ6U377CLtppkhkbl4gjodmYSXUVwAO5ycgA=-AppPrincipalId b5e3f76a-b5c2-4c96-a594-a0807f65bba4-BposTenantId 23976bc6-dcd4-4173-9d96-dad1f48efd42
 
-Come mostrato nel comando precedente, è possibile specificare i valori con un singolo comando oppure digitare semplicemente Set-RMSServerAuthentication e specificare i valori uno per uno quando richiesto. Al termine dell'esecuzione del comando viene visualizzato il messaggio "**The RmsServerAuthentication is set to ON**" (Autenticazione server RMS impostata su ON), che indica che il client è ora in modalità server. Questo messaggio non conferma la riuscita dell'autenticazione con i valori specificati, ma indica l'esito positivo del passaggio alla modalità server.
+Come illustrato nel comando precedente, è possibile specificare i valori con un singolo comando, usando uno script da eseguire in modo non interattivo. A scopo di test è tuttavia possibile digitare solo Set-RMSServerAuthentication e indicare i valori uno alla volta quando vengono richiesti. Al termine dell'esecuzione del comando il client funziona in "modalità server", adatta per l'uso non interattivo, ad esempio per gli script e l'infrastruttura di classificazione file per Windows Server.
 
 Valutare se impostare l'entità servizio come utente con privilegi avanzati: per garantire che l'entità servizio possa sempre rimuovere la protezione dei file per altri utenti, è possibile configurarla come utente con privilegi avanzati. Usare lo stesso cmdlet per Azure RMS, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), usato per configurare un account utente standard come utente con privilegi avanzati, ma specificare il parametro **-ServicePrincipalId** con il valore di AppPrincipalId.
 
