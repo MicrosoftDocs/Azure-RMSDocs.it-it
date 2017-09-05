@@ -4,7 +4,7 @@ description: "Di seguito sono riportate alcune possibili domande sulle funzional
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/12/2017
+ms.date: 08/31/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 80efd633bc814af1ac28e4b6bf2d0b3062b27d01
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 2ac8211b338b9d35bb7962455a117d02f9c1fa32
+ms.sourcegitcommit: 4b7f025e9f78d25c6f3079cceb42bc33f3f3a612
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/01/2017
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Domande frequenti sulla classificazione e l'assegnazione di etichette in Azure Information Protection
 
@@ -30,19 +30,15 @@ L'esercitazione introduttiva consente in pochi minuti di vedere queste caratteri
 
 Per sapere quando saranno disponibili altre funzionalità e nuove caratteristiche per la classificazione, seguire gli annunci nel [blog di Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) e nel [sito Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all). Nella versione corrente sono presenti alcune limitazioni, incluse le seguenti:
 
-- I nomi e le descrizioni delle etichette sono supportati solo in una lingua. Il supporto multilingue è tuttavia ora in anteprima. Per altre informazioni, vedere [How to configure labels for different languages](../deploy-use/configure-policy-languages.md) (Come configurare etichette per lingue diverse).
+- I nomi e le descrizioni delle etichette sono supportati solo in una lingua. Il supporto multilingue è tuttavia ora in anteprima. Per altre informazioni, vedere [Come configurare etichette e modelli per varie lingue in Azure Information Protection](../deploy-use/configure-policy-languages.md).
 
 - Manca la funzione di registrazione centralizzata per la classificazione e l'aggiunta di etichette.
 
-- Le condizioni per la classificazione automatica devono essere frasi o motivi.
-
-- Non sono disponibili funzionalità di assegnazione di etichette per le app di Office per dispositivi mobili (iOS e Android) e computer Mac o per Office Web Apps (Office Online).
+- Non sono disponibili funzionalità di assegnazione di etichette nelle app di Office per dispositivi mobili (iOS e Android) e computer Mac o per Office Web Apps (Office Online).
 
 - Le funzionalità di classificazione e assegnazione di etichette non sono integrate con Exchange Online o SharePoint Online.
 
-- Nell'SDK per sviluppatori e partner non sono ancora incluse le funzionalità di classificazione e assegnazione di etichette.
-
-Nella versione di febbraio, molte delle limitazioni precedenti sono state rimosse. Per altre informazioni, vedere l'[annuncio del post di blog](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/).
+Per richiedere nuove funzionalità e votare per le richieste, visitare il [sito User Voice](https://msip.uservoice.com/) per Azure Information Protection.
 
 ## <a name="do-i-need-to-be-a-global-admin-to-configure-classification-and-labels"></a>È necessario essere un amministratore globale per configurare la classificazione e le etichette?
 

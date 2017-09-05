@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
-ms.openlocfilehash: ff32ea4759b46683398a86c0a549d50710f9a943
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 343b38caa14d3f67a932eedae37ed10c55f371ff
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="how-to-change-or-customize-an-existing-label-for-azure-information-protection"></a>Come modificare o personalizzare un'etichetta esistente per Azure Information Protection
 
@@ -26,12 +26,11 @@ Ad esempio, si può cambiare il nome, la descrizione comando, il colore e l'ordi
 
 Per modificare un'etichetta, seguire queste istruzioni.
 
-
-1. Se non è già stato fatto, in una nuova finestra del browser accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza e quindi passare al pannello **Azure Information Protection**. 
+1. Se non è già stato fatto, aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza. Quindi passare al pannello **Azure Information Protection**. 
     
     Ad esempio, dal menu principale fare clic su **Altri servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Per modificare un'etichetta dai criteri globali in modo che sia applicata a tutti gli utenti, selezionare l'etichetta da modificare nel pannello **Policy: Global** (Criteri: Globale), quindi apportare le modifiche nel pannello **Label** (Etichetta) ed eventualmente nei pannelli successivi. Per modificare un'etichetta da un [criterio con ambito](configure-policy-scope.md) in modo da essere applicata agli utenti selezionati, selezionare prima di tutto il criterio nel pannello iniziale di **Azure Information Protection**.
+2. Per modificare un'etichetta nei criteri globali in modo che sia applicata a tutti gli utenti, selezionare l'etichetta da modificare nel pannello **Azure Information Protection - Criteri globali** ed eventualmente nei pannelli successivi. Per modificare un'etichetta nei [criteri con ambito](configure-policy-scope.md) in modo che sia applicata solo agli utenti selezionati, per prima cosa selezionare **Criteri con ambito** nel menu **CRITERI**. Selezionare quindi i criteri con ambito nel pannello **Azure Information Protection - Criteri con ambito**.
 
     L'eccezione si verifica quando si vuole riordinare un'etichetta, operazione che si esegue nel pannello dei criteri dai criteri globali o da un criterio con ambito selezionato: fare clic con il pulsante destro del mouse sull'etichetta o selezionare il menu di scelta rapida per l'etichetta, quindi scegliere **Sposta su** o **Sposta giù** fino a quando l'etichetta non è nell'ordine desiderato.
 

@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d3138cd16e1bd86d63243feea30d23db9aa45bdb
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: e790b669298bb40b3397150d1b2c3ed7e26c10ab
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Come configurare i criteri di Azure Information Protection per utenti specifici con i criteri con ambito
 
@@ -35,26 +35,30 @@ Se ad esempio si ha un'etichetta denominata **Confidential** nei criteri globali
 
 Per configurare un criterio con ambito per Azure Information Protection:
 
-1. In una nuova finestra del browser accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza.
+1. Se non è già stato fatto, aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza. Quindi passare al pannello **Azure Information Protection**. 
 
-2. Passare al pannello **Azure Information Protection**: ad esempio, nel menu hub fare clic su **More services** (Altri servizi) e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
+    Ad esempio, dal menu principale fare clic su **Altri servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-    Nel pannello iniziale di **Azure Information Protection** selezionare **Aggiungi un nuovo criterio**. Verrà quindi visualizzato il secondo pannello usato per mostrare l'aggiornamento dei criteri globali, in modo da potere configurare il nuovo criterio con ambito.
+2. Nel menu **CRITERI** selezionare **Criteri con ambito**.
 
-3. Specificare un nome e una descrizione per il criterio visibile solo agli amministratori nel portale di Azure. Il nome deve essere univoco nel tenant. Fare quindi clic su **Selezionare gli utenti/gruppi a cui viene applicato il criterio** e nei pannelli successivi è possibile cercare e selezionare gli utenti e i gruppi per questo criterio. Le etichette e le impostazioni configurate in questo criterio con ambito verranno applicate solo a tali utenti.
+3. Nel pannello **Azure Information Protection - Criteri con ambito** selezionare **Aggiungi un nuovo criterio**. Viene visualizzato il pannello **Criteri** con i criteri globali esistenti. Nel pannello ora è possibile configurare i nuovi criteri con ambito.
 
-4. A questo punto creare nuove etichette o configurare le impostazioni dei criteri con ambito. I criteri globali vengono sempre applicati per primi, pertanto è possibile integrare i criteri globali con nuove etichette ed eseguire l'override delle impostazioni globali. Ad esempio, i criteri globali potrebbero non avere alcuna etichetta predefinita specificata ed è possibile configurare un'etichetta predefinita diversa in criteri con ambito diversi per reparti specifici.
+4. Specificare un nome e una descrizione per il criterio visibile solo agli amministratori nel portale di Azure. Il nome deve essere univoco nel tenant. Quindi selezionare **Specify which users/groups get this policy** (Specificare gli utenti e i gruppi ai quali applicare i criteri) e nei pannelli successivi cercare e selezionare gli utenti e i gruppi per i criteri. Le etichette e le impostazioni configurate in questo criterio con ambito verranno applicate solo a tali utenti.
+
+5. A questo punto creare nuove etichette o configurare le impostazioni dei criteri con ambito. I criteri globali vengono sempre applicati per primi, pertanto è possibile integrare i criteri globali con nuove etichette ed eseguire l'override delle impostazioni globali. Ad esempio, i criteri globali potrebbero non avere alcuna etichetta predefinita specificata ed è possibile configurare un'etichetta predefinita diversa in criteri con ambito diversi per reparti specifici.
 
     Se è necessario ottenere informazioni sulla configurazione delle impostazioni o delle etichette, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).
 
-5. Analogamente alla modifica dei criteri globali, quando si apportano modifiche in un pannello di Azure Information Protection, fare clic su **Salva** per salvare le modifiche oppure su **Rimuovi** per ripristinare le ultime impostazioni salvate. 
+6. Analogamente alla modifica dei criteri globali, quando si apportano modifiche in un pannello di Azure Information Protection, fare clic su **Salva** per salvare le modifiche oppure su **Rimuovi** per ripristinare le ultime impostazioni salvate. 
 
-6. Dopo avere apportato le modifiche desiderate a questo criterio con ambito, nel pannello iniziale di **Azure Information Protection** assicurarsi che il criterio con ambito sia nell'ordine in cui si vuole applicarlo. Questo aspetto è importante quando si seleziona lo stesso utente per più criteri con ambito. Fare quindi clic su **Pubblica**. 
+7. Una volta completate le modifiche ai criteri con ambito, nel pannello **Azure Information Protection - Criteri con ambito** iniziale verificare che questi criteri con ambito siano visualizzati nell'ordine in cui si desidera che vengano applicati. Questo aspetto è importante quando si seleziona lo stesso utente per più criteri con ambito. Per modificare l'ordine, selezionare il menu di scelta rapida (**...**) e scegliere **Sposta su** o **Sposta giù**. 
+
+8. Per distribuire le modifiche, fare clic su **Pubblica**. 
 
 Il client di Azure Information Protection ricerca eventuali modifiche ogni volta che viene avviata un'applicazione di Office supportata o viene aperto Esplora file. Il client scarica le eventuali modifiche dei criteri globali o dei criteri con ambito applicabili a tale utente.
 
 > [!TIP]
-> Dopo aver salvato i criteri con ambito, è possibile usare **Editor tra criteri** nel pannello iniziale **Azure Information Protection** per visualizzare e riconfigurare tutte le etichette dai criteri di Azure Information Protection. Questo metodo fornisce un modo semplice per confrontare le etichette da più criteri (i criteri globali e tutti i criteri con ambito). Questo editor non consente tuttavia di aggiungere o riordinare le etichette, né di visualizzare o configurare le impostazioni dei criteri.
+> Dopo aver salvato i criteri con ambito, nella sezione **CRITERI** è possibile usare l'opzione **Tutti - Visualizzazione tra criteri** per visualizzare e riconfigurare tutte le etichette dai criteri di Azure Information Protection. Questo è un metodo semplice per confrontare le etichette tra i criteri globali e tutti i criteri con ambito. 
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -4,17 +4,17 @@ description: "Quando si configurano le condizioni per un'etichetta, è possibile
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/11/2017
+ms.date: 08/30/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 3aad6eb4956b6565e44c4b1019c984a28cb41fdc
-ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
+ms.openlocfilehash: ef84f3ceb8f732dd475b4db8eae489e715d4b7da
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection
 
@@ -26,7 +26,7 @@ Quando si configurano le condizioni per un'etichetta, è possibile assegnare aut
  
 - La classificazione consigliata si applica a Word, Excel e PowerPoint quando i file vengono salvati.
 
-Quando si configurano le condizioni, è possibile usare schemi predefiniti, come numeri di carta di credito o codici fiscali. In alternativa, è possibile definire una stringa o un modello personalizzato come condizione per la classificazione automatica. Queste condizioni si applicano al corpo del testo nei documenti e nei messaggi di posta elettronica, alle intestazioni e ai piè di pagina. Per altre informazioni sulle condizioni, vedere la sezione [Informazioni dalle condizioni predefinite](#information-about-the-built-in-conditions).
+Quando si configurano le condizioni è possibile usare schemi predefiniti, come **Numero della carta di credito** o **USA Social Security Number (SSN)** (Social Security Number - USA). In alternativa, è possibile definire una stringa o un modello personalizzato come condizione per la classificazione automatica. Queste condizioni si applicano al corpo del testo nei documenti e nei messaggi di posta elettronica, alle intestazioni e ai piè di pagina. Per altre informazioni sulle condizioni, vedere la sezione [Dettagli sui tipi di informazioni](#details-about-the-information-types).
 
 Come vengono valutate più condizioni quando si applicano a più etichette:
 
@@ -47,37 +47,42 @@ In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per 
 
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>Per configurare la classificazione consigliata o automatica per un'etichetta
 
-1. Se non è già stato fatto, in una nuova finestra del browser accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza e quindi passare al pannello **Azure Information Protection**. 
+1. Se non è già stato fatto, aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza. Quindi passare al pannello **Azure Information Protection**. 
     
     Ad esempio, dal menu principale fare clic su **Altri servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Se l'etichetta che si vuole configurare per la classificazione automatica o consigliata si applica a tutti gli utenti, selezionare l'etichetta da modificare nel pannello **Policy: Global** (Criteri: Globale), quindi apportare le modifiche nel pannello **Label** (Etichetta) ed eventualmente nei pannelli successivi. 
+2. Se l'etichetta da configurare viene applicata a tutti gli utenti, restare nel pannello **Azure Information Protection - Criteri globali**.
+    
+    Se l'etichetta da configurare si trova in un [criterio con ambito](configure-policy-scope.md) in modo da essere applicata solo agli utenti selezionati, nel menu **CRITERI** selezionare **Criteri con ambito**. Selezionare quindi i criteri con ambito nel pannello **Azure Information Protection - Criteri con ambito**.
 
-     Se l'etichetta da configurare si trova in un [criterio con ambito](configure-policy-scope.md) in modo da essere applicata solo agli utenti selezionati, selezionare prima di tutto il criterio con ambito nel pannello iniziale di **Azure Information Protection**.  
+3. Nel pannello **Azure Information Protection - Criteri globali** o nel pannello **Criteri:\<nome>** selezionare l'etichetta da configurare. 
 
-3. Nel pannello **Etichetta**, nella sezione **Configurare le condizioni per l'applicazione automatica di questa etichetta**, fare clic su **Aggiungi una nuova condizione**.
+4. Nel pannello **Etichetta**, nella sezione **Configurare le condizioni per l'applicazione automatica di questa etichetta**, fare clic su **Aggiungi una nuova condizione**.
 
-4. Nel pannello **Condition** (Condizione) selezionare **Built-in** (Predefinita) se si vuole usare una condizione predefinita oppure **Custom** (Personalizzata) se si vuole specificare una condizione personalizzata, quindi fare clic su **Save** (Salva):
-
-    - Per **Built-in** (Predefinita), selezionare una delle condizioni disponibili nell'elenco, quindi selezionare il numero minimo di occorrenze e specificare se l'occorrenza deve avere un valore univoco per essere inclusa nel conteggio delle occorrenze.
+5. Nel pannello **Condizione** selezionare **Tipi di informazioni** se si vuole usare una condizione predefinita oppure **Personalizzata** se si vuole specificare una condizione personalizzata, quindi fare clic su **Salva**:
+    - Per **Tipi di informazioni** selezionare una delle condizioni disponibili nell'elenco, quindi selezionare il numero minimo di occorrenze e specificare se l'occorrenza deve avere un valore univoco per essere inclusa nel conteggio delle occorrenze.
         
-        Per altre informazioni sulle regole di rilevamento per queste condizioni e alcuni esempi, vedere la sezione [Informazioni sulle condizioni predefinite](#information-about-the-built-in-conditions).
-
+        Per disporre dell'elenco completo di condizioni è necessario usare la versione di anteprima corrente del client Azure Information Protection. Se si usa la versione di disponibilità generale corrente del client sono supportate solo le cinque condizioni seguenti: **Codice SWIFT**, **Numero della carta di credito**, **ABA Routing Number** (Codice ABA), **USA Social Security Number (SSN)** (Numero di previdenza sociale USA - SSN) e **International Banking Account Number (IBAN)**. [Altre informazioni](#details-about-the-information-types)
+    
     - Per **Custom** (Personalizzata), specificare un nome e una frase di cui cercare la corrispondenza, esclusi i punti interrogativi e i caratteri speciali. Quindi specificare se usare un'espressione regolare per la corrispondenza, se la distinzione tra maiuscole e minuscole è rilevante, il numero minimo di occorrenze e se l'occorrenza deve avere un valore univoco per essere inclusa nel conteggio delle occorrenze.
+        
+        Se si dispone della versione di anteprima corrente del client Azure Information Protection, le espressioni regolari usano i criteri delle espressione regolari di Office 365. Per altre informazioni, vedere [Definizione di corrispondenze basate su espressioni regolari](https://technet.microsoft.com/library/jj674702(v=exchg.150).aspx#Anchor_2) nella documentazione di Office. 
         
     **Esempio sulle opzioni relative alle occorrenze**: si seleziona l'opzione predefinita del codice fiscale e si imposta il numero minimo di occorrenze su 2 e in un documento compare due volte lo stesso codice fiscale. Se si imposta **Conta solo le occorrenze con valori univoci** su **Sì**, la condizione non è soddisfatta. Se invece si imposta questa opzione su **No**, la condizione è soddisfatta.
 
-5. Nel pannello **Etichetta** configurare le opzioni seguenti e quindi fare clic su **Salva**:
-
+6. Nel pannello **Etichetta** configurare le opzioni seguenti e quindi fare clic su **Salva**:
+    
     - Scegliere la classificazione automatica o consigliata: per **Select how this label is applied: automatically or recommended to user** (Selezionare come applicare l'etichetta: automaticamente o consigliata all'utente) selezionare **Automatic** (Automatica) o **Recommended** (Consigliata).
-
+    
     - Specificare il testo per la richiesta utente o il suggerimento di criteri: mantenere il testo predefinito o specificare una stringa personalizzata.
 
-6. Per mettere le modifiche a disposizione degli utenti, nel pannello **Azure Information Protection** fare clic su **Publish** (Pubblica).
+7. Per mettere le modifiche a disposizione degli utenti, nel pannello iniziale di **Azure Information Protection** fare clic su **Publish** (Pubblica).
 
-## <a name="information-about-the-built-in-conditions"></a>Informazioni sulle condizioni predefinite
+## <a name="details-about-the-information-types"></a>Dettagli sui tipi di informazioni
 
-È possibile selezionare le condizioni seguenti:
+Se si dispone della versione di anteprima corrente del client Azure Information Protection è supportato l'elenco completo dei tipi di informazioni, nonché l'uso dei tipi di informazioni riservate e del rilevamento di modelli della prevenzione perdita dei dati (DLP) di Office 365. È possibile scegliere tra vari tipi di informazioni riservate comuni. Alcuni tipi sono specifici per determinate aree. Per altre informazioni, vedere [Elementi cercati dai tipi di informazioni riservate](https://support.office.com/article/What-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b) nella documentazione di Office. Quando Azure Information Protection valuta questi tipi di informazioni non usa l'impostazione del livello di attendibilità DLP di Office, ma ricerca corrispondenze in base al livello di attendibilità più basso.  
+
+Se si dispone della versione di disponibilità generale corrente del client sono supportati solo i seguenti tipi di informazioni:
 
 - [Codice SWIFT](#swift-code )
 
@@ -89,6 +94,7 @@ In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per 
 
 - [International Banking Account Number (IBAN)](#international-banking-account-number-iban)
 
+Vedere le sezioni seguenti per altre informazioni su ciascun tipo di informazioni nella versione di disponibilità generale corrente del client.
 
 ### <a name="swift-code"></a>Codice SWIFT
 

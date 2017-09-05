@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 88843833b87eb054f534a7c85e6a7c2e52797e9b
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 7f3b64e5e4b0dfbccf694a986a85f1c207580915
+ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/30/2017
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -48,7 +48,7 @@ Per altre informazioni su come configurare i criteri di ambito, vedere [Come con
 
 2. Passare al pannello **Azure Information Protection**: ad esempio, nel menu hub fare clic su **More services** (Altri servizi) e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
     
-    Quando ci si connette al servizio per la prima volta, si apre automaticamente la pagina **Avvio rapido**. Per configurare i criteri ottenuti da tutti gli utenti, fare clic su **Criteri globali** per aprire il pannello **Criteri: globali**. Questo pannello si aprirà automaticamente per le connessioni successive al servizio in modo che sia possibile visualizzare e modificare i criteri globali ottenuti da tutti gli utenti. 
+    Quando ci si connette al servizio per la prima volta viene aperto automaticamente il pannello **Azure Information Protection - Avvio rapido**. Per configurare criteri destinati a tutti gli utenti, nel menu **CRITERI** selezionare **Criteri globali** per aprire il pannello **Azure Information Protection - Criteri globali**. Questo pannello si aprirà automaticamente per le connessioni successive al servizio in modo che sia possibile visualizzare e modificare i criteri globali ottenuti da tutti gli utenti. 
     
     I criteri di Azure Information Protection contengono gli elementi seguenti che è possibile configurare:
     
@@ -70,7 +70,7 @@ Azure Information Protection viene distribuito con [criteri predefiniti](configu
 
 È possibile usare le etichette predefinite così come sono oppure personalizzarle, eliminarle e crearne di nuove. Per altre informazioni, usare i collegamenti nella sezione successiva per individuare le opzioni rilevanti e sapere come configurarle. 
 
-Quando si apportano modifiche in un pannello di Azure Information Protection, fare clic su **Save** (Salva) per salvare le modifiche oppure su **Discard** (Ignora) per ripristinare le ultime impostazioni salvate. 
+Quando si apportano modifiche in un pannello di Azure Information Protection, fare clic su **Save** (Salva) per salvare le modifiche oppure su **Discard** (Ignora) per ripristinare le ultime impostazioni salvate.
 
 Dopo avere apportato le modifiche desiderate, fare clic su **Publish** (Pubblica). 
 
