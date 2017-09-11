@@ -4,7 +4,7 @@ description: Istruzioni su come classificare e proteggere documenti e messaggi d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/08/2017
+ms.date: 08/04/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 954b69213c055c4b94981fabef40df29aa0e19ba
-ms.sourcegitcommit: 5a087ff509162a98f3d09fda4ef5a114028e5664
+ms.openlocfilehash: 5e8329a441dcc871a155ef1b1484544732bec212
+ms.sourcegitcommit: 23aeb2bcce05968b850313333e359c99dd99a56f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 09/05/2017
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Classificare e proteggere un file o un messaggio di posta elettronica tramite Azure Information Protection
 
@@ -85,8 +85,6 @@ Oltre a selezionare manualmente le etichette, è anche possibile applicarle nei 
     - **Selezionare le autorizzazioni**: se si vuole proteggere il file in modo da ottenere l'accesso esclusivo, selezionare **Solo per l'utente**. In caso contrario, selezionare il livello di accesso che dovrà essere assegnato agli utenti.
 
     - **Selezionare gli utenti, i gruppi o le organizzazioni**: specificare gli utenti che devono avere le autorizzazioni selezionate per uno o più file. Digitare l'indirizzo di posta elettronica completo di uno o più utenti o di un gruppo oppure il nome di dominio di un'organizzazione per tutti gli utenti dell'organizzazione. Si noti che gli indirizzi di posta elettronica personali non sono attualmente supportati.
-    
-    Se si dispone della versione di anteprima corrente del client Azure Information Protection, è possibile usare in alternativa il pulsante **Seleziona utenti, gruppi o organizzazione**. Questo pulsante consente di visualizzare la finestra di dialogo **Seleziona utenti e gruppi** per il servizio Active Directory locale. Se gli utenti o gruppi che si desidera specificare si trovano in Active Directory, è possibile cercarli e selezionarli da questa finestra di dialogo. Per usare questa opzione, il computer deve essere connesso alla rete interna e appartenere al dominio; è anche necessario disporre di un server di Active Directory locale. Se una di queste condizioni non è soddisfatta viene visualizzato il messaggio seguente: **Impossibile individuare alcuna posizione. L'applicazione non può aprire la finestra di dialogo richiesta.**
         
     - **Scadenza dell'accesso**: selezionare questa opzione solo per i file per cui il fattore tempo è importante in modo tale che gli utenti specificati non potranno aprire il file o i file selezionati dopo una data impostata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno impostato, gli utenti specificati non potranno aprire il file.
 
@@ -131,7 +129,7 @@ La guida dell'amministratore contiene un elenco completo dei tipi di file suppor
     
     - **Selezionare gli utenti, i gruppi o le organizzazioni**: specificare gli utenti che devono avere le autorizzazioni selezionate per uno o più file. Digitare l'indirizzo di posta elettronica completo di uno o più utenti o di un gruppo oppure il nome di dominio di un'organizzazione per tutti gli utenti dell'organizzazione. Si noti che gli indirizzi di posta elettronica personali non sono attualmente supportati.
     
-    In alternativa, è possibile usare il pulsante **Seleziona utenti, gruppi o organizzazione** per selezionare gli utenti o i gruppi dalla Rubrica. Se si dispone della versione di anteprima corrente del client Azure Information Protection, questo pulsante visualizza la finestra di dialogo **Seleziona utenti e gruppi** per il servizio Active Directory locale. Se gli utenti o gruppi che si desidera specificare si trovano in Active Directory, è possibile cercarli e selezionarli da questa finestra di dialogo. Per usare questa opzione, il computer deve essere connesso alla rete interna e appartenere al dominio; è anche necessario disporre di un server di Active Directory locale. Se una di queste condizioni non è soddisfatta viene visualizzato il messaggio seguente: **Impossibile individuare alcuna posizione. L'applicazione non può aprire la finestra di dialogo richiesta.**
+    In alternativa, è possibile usare l'icona a forma di rubrica per selezionare utenti o gruppi dalla Rubrica di Outlook.
         
     - **Scadenza dell'accesso**: selezionare questa opzione solo per i file per cui il fattore tempo è importante in modo tale che gli utenti specificati non siano in grado di aprire il file o i file selezionati dopo una data specificata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno impostato gli utenti specificati non saranno in grado di aprire il file.
     

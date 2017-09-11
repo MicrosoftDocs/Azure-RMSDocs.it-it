@@ -4,7 +4,7 @@ description: "Informazioni per gli utenti che eseguono il client Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,24 +12,30 @@ ms.technology: techgroup-identity
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 55254496b23e49fe7e2dbd19721a824739004b21
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 84644f717a6005245847c9e9598b87c5af885aa7
+ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="protection-only-mode-for-the-azure-information-protection-client"></a>Modalità di sola protezione per il client Azure Information Protection
 
-Quando si esegue il client Azure Information Protection senza criteri, viene visualizzato in modalità di **sola protezione**. Ad esempio, quando si usa Esplora file, fare clic con il pulsante destro del mouse e scegliere **Classifica e proteggi**:
+Quando il client Azure Information Protection non dispone di etichette per classificare i documenti e i messaggi di posta elettronica, viene eseguito in modalità di **sola protezione**. In questa modalità, ad esempio, potrebbe essere visualizzato quanto segue quando si usa Esplora file, si fa clic con il pulsante destro del mouse e si sceglie **Classifica e proteggi**:
 
 ![Modalità di sola protezione](../media/protection-only-mode.png)
 
- Questa modalità viene eseguita negli scenari seguenti:
+La modalità di sola protezione viene eseguita negli scenari seguenti:
 
-- L'organizzazione non ha una sottoscrizione per Azure Information Protection (per la classificazione e la protezione dei dati), ma ha una sottoscrizione per il servizio Azure Rights Management (per la protezione dei dati con Office 365). 
-    - Si tratta di uno scenario supportato ed è possibile usare il client Azure Information Protection per proteggere i file e visualizzare i file protetti.
+- L'organizzazione non ha una sottoscrizione per Azure Information Protection che include le funzionalità di classificazione ed etichettatura, ma ha un abbonamento a Office 365 che include la protezione dati con il servizio Azure Rights Management. 
+    
+    - È possibile usare il client Azure Information Protection per proteggere i file e visualizzare i file protetti. Non è possibile classificare o etichettare documenti e messaggi di posta elettronica.
+
+- L'organizzazione dispone di una sottoscrizione per Azure Information Protection solo per un subset di utenti:
+    
+    - Per questa combinazione di sottoscrizioni, è responsabilità dell'amministratore assicurarsi che solo il subset di utenti possa usare le funzionalità di classificazione ed etichettatura. Gli altri utenti devono eseguire il client Azure Information Protection in modalità di sola protezione. 
 
 - L'organizzazione ha una sottoscrizione per Azure Information Protection, ma non è possibile scaricare i relativi criteri. 
+    
     - Ciò può accadere a causa di un errore di configurazione o di accesso. Contattare l'help desk o l'amministratore. Nel frattempo potrebbe comunque essere possibile usare il client Azure Information Protection per proteggere i file e visualizzare i file protetti.
 
 ## <a name="limitations-for-protection-only-mode"></a>Limitazioni per la modalità di sola protezione
