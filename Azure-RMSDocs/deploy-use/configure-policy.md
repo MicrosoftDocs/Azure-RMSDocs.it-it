@@ -4,7 +4,7 @@ description: "Per configurare le funzioni di classificazione, aggiunta di etiche
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 7f3b64e5e4b0dfbccf694a986a85f1c207580915
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: 23f41199f03bb6a6530f668c20c030b52613d3c2
+ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="configuring-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -26,7 +26,7 @@ Per configurare le funzioni di classificazione, aggiunta di etichette e protezio
 
 ## <a name="subscription-support"></a>Supporto della sottoscrizione
 
-I criteri di Azure Information Protection supportano vari livelli di sottoscrizioni:
+Azure Information Protection supporta livelli diversi di sottoscrizioni:
 
 - Azure Information Protection P2: supporta tutte le funzionalità di classificazione, etichettatura e protezione.
 
@@ -34,13 +34,16 @@ I criteri di Azure Information Protection supportano vari livelli di sottoscrizi
 
 - Office 365 con il servizio Azure Rights Management: supporta le funzionalità di protezione, ma non quelle di classificazione ed etichettatura.
 
-Le opzioni che richiedono una sottoscrizione di Azure Information Protection P2 sono ora identificate nel portale.
+Le opzioni che richiedono una sottoscrizione di Azure Information Protection P2 sono identificate nel portale.
 
-Se per gli utenti del tenant esiste una combinazione di sottoscrizioni , è necessario verificare che i criteri di Azure Information Protection scaricati dagli utenti non contengano opzioni non concesse in licenza ai relativi account. Quando si configurano opzioni non concesse in licenza a tutti gli utenti, usare criteri con ambito in modo che gli utenti non siano configurati per usare le funzionalità per le quali hanno una licenza.
+Se l'organizzazione dispone di varie sottoscrizioni, è responsabilità dell'organizzazione assicurarsi che gli utenti non usino funzionalità non concesse in licenza per l'uso al loro account. Il client Azure Information Protection non gestisce il controllo e l'applicazione delle licenze. Quando si configurano opzioni per le quali non tutti gli utenti hanno una licenza, usare criteri con ambito o un'impostazione del Registro di sistema per garantire che l'organizzazione mantenga la conformità con le licenze:
+
+- **Se l'organizzazione dispone di una combinazione di licenze di Azure Information Protection P1 e Azure Information Protection P2**: per gli utenti con licenza P2, creare e usare uno o più [criteri con ambito](configure-policy-scope.md) quando si configurano le opzioni che richiedono una licenza di Azure Information Protection P2. Assicurarsi che i criteri globali non contengano opzioni che richiedono una licenza di Azure Information Protection P2.
+
+- **Se l'organizzazione dispone di una sottoscrizione di Azure Information Protection, ma alcuni utenti hanno solo una licenza per Office 365 che include il servizio Azure Rights Management**: modificare il Registro di sistema nei computer degli utenti che non hanno una licenza di Azure Information Protection, in modo che non scarichino i criteri di Azure Information Protection. Per istruzioni, vedere la personalizzazione seguente nella guida per l'amministratore: [Applicare la modalità di sola protezione quando l'organizzazione dispone di licenze miste](../rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
 
 Per altre informazioni sulle sottoscrizioni, vedere [Quale sottoscrizione è necessaria per Azure Information Protection e quali funzionalità sono incluse?](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
-Per altre informazioni su come configurare i criteri di ambito, vedere [Come configurare i criteri di Azure Information Protection per utenti specifici con i criteri con ambito](configure-policy-scope.md).
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Come configurare i criteri di Azure Information Protection
 

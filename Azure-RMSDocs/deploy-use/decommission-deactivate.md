@@ -4,7 +4,7 @@ description: "Informazioni e istruzioni se si decide di non voler più usare que
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/05/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bebc3bf5593c2e8d166645b6cc18ad02d739d9ba
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: 33566381cf4d45c82f7f1a5ab210bccfd953fa49
+ms.sourcegitcommit: eea0e4eacfeb7307b94181c28626177b4467623d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/06/2017
 ---
 # <a name="decommissioning-and-deactivating-azure-rights-management"></a>Rimozione delle autorizzazioni e disattivazione di Azure Rights Management
 
@@ -36,16 +36,18 @@ Quando si dispone della chiave del tenant di Azure Information Protection, è po
 |Se si verifica questo...|… effettuare la seguente operazione:|
 |----------------------------|--------------|
 |Si vuole che tutti gli utenti continuino a usare Rights Management, ma che usino una soluzione locale anziché Azure Information Protection    →|Usare il cmdlet [Set-AadrmMigrationUrl](/powershell/module/aadrm/Set-AadrmMigrationUrl) per indirizzare gli utenti esistenti alla distribuzione locale quando utilizzano il contenuto protetto dopo questa modifica. Gli utenti utilizzeranno automaticamente l'installazione di AD RMS per utilizzare il contenuto protetto.<br /><br />Perché gli utenti possano usare il contenuto protetto prima di questa modifica, reindirizzare i client alla distribuzione locale tramite la chiave del Registro di sistema **LicensingRedirection** per Office 2016 o Office 2013. Per istruzioni, vedere la [sezione sull'individuazione dei servizi](../rms-client/client-deployment-notes.md) nelle note sulla distribuzione dei client di RMS e la chiave del Registro di sistema **LicenseServerRedirection** per Office 2010, come descritto nelle [impostazioni del Registro di Office](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).|
-|Si desidera interrompere completamente l'utilizzo delle tecnologie di Rights Management    →|Concedere a un amministratore designato [diritti di utente con privilegi avanzati](../deploy-use/configure-super-users.md) e assegnare a questa persona lo [Strumento di protezione di RMS](http://www.microsoft.com/en-us/download/details.aspx?id=47256).<br /><br />L'amministratore può quindi usare lo strumento per decrittografare i file in blocco nelle cartelle che erano protette dal servizio Azure Rights Management. I file tornano allo stato non protetto e pertanto possono essere letti senza una tecnologia di Rights Management, come ad esempio Azure Information Protection o AD RMS. Poiché questo strumento può essere usato con il servizio Azure Rights Management di Azure Information Protection e con AD RMS, è possibile scegliere di decrittografare i file prima o dopo la disattivazione del servizio Azure Rights Management, o con una combinazione dei servizi.|
+|Si desidera interrompere completamente l'utilizzo delle tecnologie di Rights Management    →|Concedere a un amministratore designato [diritti utente con privilegi avanzati](../deploy-use/configure-super-users.md) e installare il [client Azure Information Protection](../rms-client/client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) per questo utente.<br /><br />L'amministratore può quindi usare il modulo di PowerShell da questo client per decrittografare i file in blocco nelle cartelle protette dal servizio Azure Rights Management. I file tornano allo stato non protetto e pertanto possono essere letti senza una tecnologia di Rights Management, come ad esempio Azure Information Protection o AD RMS. Poiché questo modulo di PowerShell può essere usato con il servizio Azure Rights Management sia da Azure Information Protection che da AD RMS, è possibile scegliere di decrittografare i file prima o dopo la disattivazione del servizio Azure Rights Management, o con una combinazione.|
 |Non è possibile identificare tutti i file che erano protetti dal servizio Azure Rights Management da Azure Information Protection, oppure si desidera che tutti gli utenti siano in grado di leggere automaticamente i file protetti che sono stati saltati    →|Distribuire un’impostazione del registro su tutti i computer client usando la chiave di registro **LicensingRedirection** per Office 2016 e Office 2013, come descritto nella [sezione sull’individuazione del servizio](../rms-client/client-deployment-notes.md) nelle note sulla distribuzione dei client di RMS, e la chiave di registro **LicenseServerRedirection** per Office 2010, come descritto in [Impostazioni del registro di Office](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).<br /><br />Distribuire anche un'altra impostazione del registro per impedire agli utenti di proteggere nuovi file impostando **DisableCreation** su **1**, come descritto nelle [Impostazioni del registro di Office](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).|
-|Si desidera un servizio di ripristino manuale controllato per tutti i file che non erano disponibili    →|Concedere [diritti di utente con privilegi avanzati](../deploy-use/configure-super-users.md) a utenti designati in un gruppo di ripristino dei dati e fornire loro lo [Strumento di protezione di RMS](http://www.microsoft.com/en-us/download/details.aspx?id=47256) , in modo che possano rimuovere la protezione dei file quando richiesto dagli utenti standard.<br /><br />Distribuire su tutti i computer l'impostazione del registro che impedisce agli utenti di proteggere nuovi file impostando **DisableCreation** su **1**, come descritto nelle [Impostazioni del registro di Office](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).|
+|Si desidera un servizio di ripristino manuale controllato per tutti i file che non erano disponibili    →|Concedere [diritti di utente con privilegi avanzati](../deploy-use/configure-super-users.md) a utenti designati in un gruppo di ripristino dei dati e installare il [client Azure Information Protection](../rms-client/client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) per questi utenti, in modo che possano rimuovere la protezione dei file quando richiesto dagli utenti standard.<br /><br />Distribuire su tutti i computer l'impostazione del registro che impedisce agli utenti di proteggere nuovi file impostando **DisableCreation** su **1**, come descritto nelle [Impostazioni del registro di Office](https://technet.microsoft.com/library/dd772637%28v=ws.10%29.aspx).|
 Per ulteriori informazioni sulle procedure in questa tabella, vedere le risorse seguenti:
 
--   Per informazioni su AD RMS e riferimenti sulla distribuzione, vedere [Panoramica di Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx).
+- Per informazioni su AD RMS e riferimenti sulla distribuzione, vedere [Panoramica di Active Directory Rights Management Services](https://technet.microsoft.com/library/hh831364.aspx).
 
--   Per istruzioni sull'importazione della chiave tenant di Azure Information Protection come file TPD, vedere [Aggiungere un dominio di pubblicazione trusted](https://technet.microsoft.com/library/cc771460.aspx).
+- Per istruzioni sull'importazione della chiave tenant di Azure Information Protection come file TPD, vedere [Aggiungere un dominio di pubblicazione trusted](https://technet.microsoft.com/library/cc771460.aspx).
 
--   Per installare il modulo di Windows PowerShell per Azure Rights Management e impostare l'URL di migrazione, vedere [Installazione di Windows PowerShell per Azure Rights Management](install-powershell.md).
+- Per installare il modulo di Windows PowerShell per Azure Rights Management e impostare l'URL di migrazione, vedere [Installazione di Windows PowerShell per Azure Rights Management](install-powershell.md).
+
+- Per usare PowerShell con il client Azure Information Protection, vedere [Uso di PowerShell con il client Azure Information Protection](../rms-client/client-admin-guide-powershell.md).
 
 Quando si è pronti per disattivare il servizio Azure Rights Management dell'organizzazione, usare le istruzioni seguenti.
 
