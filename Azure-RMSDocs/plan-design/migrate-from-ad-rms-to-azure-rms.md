@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8f81eee3c15b771e60c24a83f66d13a4a654a7e3
-ms.sourcegitcommit: 17f593b099dddcbb1cf0422353d594ab964b2736
+ms.openlocfilehash: a4337d197e08cd75b974594fdd797c9bb383c1f9
+ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/24/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrazione da AD RMS ad Azure Information Protection
 
@@ -102,9 +102,7 @@ Prima di iniziare il processo di migrazione ad Azure Information Protection, ver
 
 ### <a name="cryptographic-mode-considerations"></a>Considerazioni sulla modalità di crittografia
 
-Se il cluster AD RMS è attualmente in modalità crittografia 1, non aggiornare il cluster alla modalità crittografia 2 prima di iniziare la migrazione. Eseguire invece la migrazione con la modalità crittografia 1 e reimpostare la chiave del tenant al termine della migrazione, come una delle attività di post-migrazione.
-
-La modalità crittografia 1 è supportata solo durante il processo di migrazione.
+Se il cluster AD RMS è attualmente in modalità crittografia 1, non aggiornare il cluster alla modalità crittografia 2 prima di iniziare la migrazione. Eseguire invece la migrazione con la modalità crittografia 1; è possibile reimpostare la chiave del tenant al termine della migrazione, come una delle attività di post-migrazione.
 
 Per verificare la modalità di crittografia AD RMS:
  
@@ -215,7 +213,7 @@ I passaggi della migrazione possono essere suddivisi in cinque fasi eseguibili i
 
 - **Passaggio 12: reimpostare la chiave del tenant di Azure Information Protection**
 
-    Questo passaggio è obbligatorio se prima della migrazione non era in esecuzione la Modalità crittografia 2. È facoltativo, ma consigliato, per tutte le migrazioni, allo scopo di salvaguardare la sicurezza della chiave del tenant di Azure Information Protection.
+    Questo passaggio è consigliato se non era in esecuzione la modalità crittografia 2 prima della migrazione.
 
 
 ## <a name="next-steps"></a>Passaggi successivi
