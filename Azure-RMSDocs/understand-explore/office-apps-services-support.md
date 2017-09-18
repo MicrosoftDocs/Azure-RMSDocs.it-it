@@ -4,7 +4,7 @@ description: Informazioni su come le applicazioni di Office, come Word e Outlook
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/27/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5e4d753c6c58394c257466269c5a4f50df6c6fc4
-ms.sourcegitcommit: 869e42f35a851c412164a71b1f657621af07b2f5
+ms.openlocfilehash: ede24547a01bc38e528ce02dac9abe0ade396c2d
+ms.sourcegitcommit: 6636defa6eca24360f15fb9ef93c2b82dc36cf76
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Informazioni su come le applicazioni e i servizi di Office supportano Azure Rights Management 
 
@@ -48,7 +48,7 @@ Quando si usa Exchange Online o Exchange Server è possibile configurare le opzi
 
 -   **Regole di trasporto** che un amministratore configura per applicare automaticamente modelli di protezione della posta elettronica. Queste regole sono basate su proprietà quali il mittente, il destinatario, l'oggetto e il contenuto del messaggio. Queste regole sono concettualmente analoghe alle regole di protezione, ma non consentono agli utenti di rimuovere la protezione. Le regole possono essere applicate ad Outlook sul Web e ai messaggi di posta elettronica inviati da dispositivi mobili. Inoltre, queste regole non crittografano i messaggi di posta elettronica prima che vengano inviati dal client. Per altre informazioni, vedere [Creare una regola di protezione del trasporto](https://technet.microsoft.com/library/dd302432.aspx) nella libreria di Exchange.
 
--   **Criteri di prevenzione della perdita dei dati** che contengono set di condizioni per filtrare i messaggi di posta elettronica e intraprendere azioni per prevenire la perdita di dati nel caso di informazioni riservate o sensibili, ad esempio quelle personali o correlate alla carta di credito. Quando si rilevano dati sensibili, è possibile usare i suggerimenti relativi ai criteri per avvertire gli utenti che potrebbe essere necessario applicare la protezione. Per altre informazioni, vedere [Prevenzione della perdita di dati](https://technet.microsoft.com/library/jj150527(v=exchg.160).aspx) nella libreria di Exchange.
+-   **Criteri di prevenzione della perdita dei dati** che contengono set di condizioni per filtrare i messaggi di posta elettronica e intraprendere azioni per prevenire la perdita di dati nel caso di informazioni riservate o sensibili, ad esempio quelle personali o correlate alla carta di credito. Quando si rilevano dati sensibili, è possibile usare i suggerimenti relativi ai criteri per avvertire gli utenti che potrebbe essere necessario applicare la protezione. Per altre informazioni, vedere [Prevenzione della perdita dei dati](https://technet.microsoft.com/library/jj150527(v=exchg.160\).aspx) nella libreria di Exchange.
 
 -   **Crittografia dei messaggi di Office 365** che usa regole di trasporto per inviare messaggi di posta elettronica crittografati a persone all'esterno dell'organizzazione e che comporta la lettura del messaggio in un browser con un'interfaccia analoga ad Outlook sul Web. Nei messaggi e-mail crittografati della società è possibile personalizzare il testo della dichiarazione di non responsabilità e dell'intestazione nonché aggiungere il logo della società. Per altre informazioni, vedere [Crittografia messaggi di Office 365](https://office.microsoft.com/o365-message-encryption-FX104179182.aspx) nel sito Web di Office.
 
@@ -82,7 +82,9 @@ Se si usa SharePoint Server, è possibile usare questo tipo di protezione IRM di
 > 
 > - I file con un'estensione di file .ppdf per i file PDF protetti non sono supportati. I file con estensione .pdf e protetti a livello nativo da Rights Management sono supportati se si usa un programma per la lettura dei file PDF che supporta Rights Management a livello nativo.
 > 
-> - Se si protegge un file e quindi il file viene caricato in una raccolta di SharePoint o OneDrive, le seguenti funzionalità del file vengono disattivate: Creazione condivisa, Office Online, ricerca, anteprima dei documenti, anteprima dei video e eDiscovery.
+> - La creazione condivisa non è supportata. Dato che è necessario estrarre e scaricare un documento da una libreria protetta con IRM, il documento può essere modificato da un solo utente alla volta.
+
+Per le librerie non protette con IRM, se si protegge un file e quindi il file viene caricato in SharePoint o OneDrive, le seguenti funzionalità del file vengono disattivate: Creazione condivisa, Office Online, ricerca, anteprima dei documenti, anteprima dei video, eDiscovery e prevenzione della perdita di dati (DLP).
 
 Quando si usa la protezione IRM per SharePoint il servizio Azure Rights Management applica restrizioni d'uso e crittografia dei dati ai documenti quando questi vengono scaricati da SharePoint, e non quando il documento viene creato per la prima volta in SharePoint o caricato nella raccolta. Per informazioni su come vengono protetti i documenti di essere scaricati, vedere [Crittografia dei dati in OneDrive for Business e SharePoint Online](https://technet.microsoft.com/library/dn905447.aspx) nella documentazione di SharePoint.
 

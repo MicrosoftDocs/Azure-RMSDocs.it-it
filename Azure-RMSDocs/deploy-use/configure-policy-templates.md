@@ -4,7 +4,7 @@ description: "È possibile configurare e gestire i modelli di Rights Management 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5075c8cbab441a376595baabd7863005b15b84e3
-ms.sourcegitcommit: 5bcb916106021f624a69d620bbcc2c4a51398771
+ms.openlocfilehash: 1094c0a711b3691b8186baafc06d1fb72daf5613
+ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurazione e gestione dei modelli per Azure Information Protection
 
@@ -103,9 +103,9 @@ Prima di modificare i modelli o convertirli in etichette, assicurarsi di essere 
     
     Inoltre, attualmente non è possibile specificare l'impostazione di compatibilità dell'applicazione per un modello di reparto. Se necessario, è possibile specificarla usando PowerShell con il cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty).
 
-- Durante la conversione o il collegamento di un modello a un'etichetta, questo non può più essere usato da altre etichette. Inoltre questo modello non è più visualizzato nella sezione **Modelli**.
+- Durante la conversione o il collegamento di un modello a un'etichetta, questo non può più essere usato da altre etichette. Questo modello non è più visualizzato anche nella sezione **Modelli** o **Protection templates** (Modelli di protezione). La sezione verrà rinominata.
 
-- Non è possibile creare un nuovo modello dal contenitore **Modelli**. È invece possibile creare un'etichetta con l'impostazione **Proteggi** e configurare i diritti di utilizzo e le impostazioni dal pannello **Protezione**. Per istruzioni complete, vedere [Per creare un nuovo modello](#to-create-a-new-template).
+- Non è possibile creare un nuovo modello dal contenitore **Modelli** o **Protection templates** (Modelli di protezione). È invece possibile creare un'etichetta con l'impostazione **Proteggi** e configurare i diritti di utilizzo e le impostazioni dal pannello **Protezione**. Per istruzioni complete, vedere [Per creare un nuovo modello](#to-create-a-new-template).
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Per configurare i modelli nei criteri di Azure Information Protection
 
@@ -119,11 +119,11 @@ Prima di modificare i modelli o convertirli in etichette, assicurarsi di essere 
 
 3. Nel pannello **Azure Information Protection - Criteri globali** o nel pannello **Criteri:\<nome>** individuare il modello da configurare:
     
-    - Se si ha una sottoscrizione che include la classificazione, l'etichettatura e la protezione: espandere **Modelli** dopo le etichette.
+    - Se si ha una sottoscrizione che include la classificazione, l'etichettatura e la protezione, espandere **Modelli** o **Protection templates** (Modelli di protezione) dopo le etichette.
     
     - Se si ha una sottoscrizione che include solo la protezione: i modelli vengono visualizzati come etichette.
 
-4. Selezionare il modello e, se necessario, modificare il nome del modello e la descrizione nel pannello **Etichetta** modificando **Nome etichetta** e **Descrizione**. Selezionare quindi **Protezione** con valore **Azure RMS** per aprire il pannello **Protezione**.
+4. Selezionare il modello e, se necessario, modificare il nome del modello e la descrizione nel pannello **Etichetta** modificando **Nome etichetta** e **Descrizione**. Selezionare quindi **Protezione** con il valore **Azure RMS** o **Azure (cloud key)** (Azure - Chiave cloud) per aprire il pannello **Protezione**.
 
 5. Nel pannello **Protezione** è possibile modificare le autorizzazioni, la scadenza del contenuto e le impostazioni dell'accesso offline. Per altre informazioni sulla configurazione delle impostazioni di protezione, vedere [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md)
     
@@ -154,11 +154,11 @@ Quando si converte un modello in etichetta:
 
 - Le impostazioni di protezione vengono mantenute e, se necessario, è possibile modificarle e aggiungere altre impostazioni di etichetta, ad esempio gli indicatori visivi e le condizioni.
 
-- Il modello originale non viene più visualizzato in **Modelli** e non può essere selezionato come modello predefinito quando si configura la protezione per un'etichetta. Per modificare questo modello nel portale di Azure è ora possibile modificare l'etichetta che è stata creata durante la conversione del modello. Il modello rimane disponibile per il servizio Azure Rights Management e può essere gestito con i [comandi di PowerShell](administer-powershell.md).  
+- Il modello originale non viene più visualizzato in **Modelli** o **Protection templates** (Modelli di protezione) e non può essere selezionato come modello predefinito quando si configura la protezione per un'etichetta. Per modificare questo modello nel portale di Azure è ora possibile modificare l'etichetta che è stata creata durante la conversione del modello. Il modello rimane disponibile per il servizio Azure Rights Management e può essere gestito con i [comandi di PowerShell](administer-powershell.md).  
 
 ## <a name="to-create-a-new-template"></a>Per creare un nuovo modello
 
-Quando si crea una nuova etichetta con l'impostazione di protezione **Azure RMS**, viene creato un nuovo modello personalizzato che può essere usato dai servizi e dalle applicazioni che si integrano con i modelli di Rights Management.
+Quando si crea una nuova etichetta con l'impostazione di protezione **Azure RMS** o **Azure (cloud key)** (Azure - Chiave cloud) viene creato un nuovo modello personalizzato, che può essere usato dai servizi e dalle applicazioni che si integrano con i modelli di Rights Management.
 
 1. Se il nuovo modello è destinato a tutti gli utenti, restare nel pannello **Azure Information Protection - Criteri globali**.
     

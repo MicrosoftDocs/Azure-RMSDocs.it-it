@@ -4,17 +4,17 @@ description: 'Passaggio 2 di un''esercitazione introduttiva per provare rapidame
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: dbe198f84ed092f815e2c419d039d4f926fb5892
-ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
+ms.openlocfilehash: cf84cef5d6bc4d3df32a4e3c8bc3a6ac7380655c
+ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passaggio 2: Configurare e pubblicare criteri di Azure Information Protection
 
@@ -67,7 +67,7 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
     
     ![Configurare la protezione per un'etichetta di Azure Information Protection](../media/info-protect-protection-bar-configured.png) 
     
-4. Nel pannello **Protezione** verificare che siano selezionate le opzioni **Azure RMS** e **Imposta autorizzazioni**. Selezionare quindi **Aggiungi autorizzazioni**.
+4. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure RMS** o **Azure (cloud key)** (Azure - Chiave cloud). L'opzione verrà rinominata. Assicurarsi che sia selezionata anche **Set Permissions** (Configura le autorizzazioni). Selezionare quindi **Aggiungi autorizzazioni**.
 
 5. Nel pannello **Aggiungi autorizzazioni** selezionare **Aggiungi \<nome organizzazione >- Tutti i membri**. Se ad esempio il nome dell'organizzazione è VanArsdel Ltd, viene visualizzata la seguente opzione da selezionare:
     
@@ -123,7 +123,7 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
 
 13. Fare clic su **Salva** nel pannello **Etichetta secondaria**. Quindi, nel pannello **Criteri: Globale** fare di nuovo clic su **Salva**.
     
-    È ora possibile visualizzare la nuova etichetta secondaria, configurata per i contrassegni visivi e la protezione di Azure RMS:
+    Viene visualizzata la nuova sottoetichetta, configurata per i contrassegni visivi e la protezione. Ad esempio:
 
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Configurazione del criterio predefinito](../media/info-protect-policy-configuredv2.png)
     
