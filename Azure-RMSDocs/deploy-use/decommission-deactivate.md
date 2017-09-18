@@ -4,7 +4,7 @@ description: "Informazioni e istruzioni se si decide di non voler più usare que
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/05/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 33566381cf4d45c82f7f1a5ab210bccfd953fa49
-ms.sourcegitcommit: eea0e4eacfeb7307b94181c28626177b4467623d
+ms.openlocfilehash: 1f8d7a56cec4df8f0ef50f4f83ef662ad8923f17
+ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="decommissioning-and-deactivating-azure-rights-management"></a>Rimozione delle autorizzazioni e disattivazione di Azure Rights Management
 
@@ -75,9 +75,9 @@ Verrà visualizzato il messaggio che indica che **Rights Management non è attiv
     
     Ad esempio, dal menu principale fare clic su **Altri servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Nel pannello iniziale di **Azure Information Protection** selezionare **Impostazioni di RMS**. 
+2. Nel pannello iniziale di **Azure Information Protection** selezionare **RMS Settings (Preview)** (Impostazioni RMS: anteprima) o **Protection activation** (Attivazione protezione). L'opzione verrà rinominata. 
 
-3.  Nel pannello **Azure Information Protection - Impostazioni di RMS** selezionare **Disattiva** . Selezionare **Sì** per confermare la scelta.
+3.  Nel pannello **Azure Information Protection - RMS Settings** (Azure Information Protection - Impostazioni RMS) o **Azure Information Protection - Protection activation** (Azure Information Protection - Attivazione protezione), selezionare **Disattiva**. Selezionare **Sì** per confermare la scelta.
 
 Sulla barra delle informazioni verrà visualizzato **Disattivazione completata** mentre **Disattiva** è stato sostituito da **Attiva**. 
 

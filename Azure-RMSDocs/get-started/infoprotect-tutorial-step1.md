@@ -4,17 +4,17 @@ description: 'Passaggio 1 di un''esercitazione introduttiva per provare rapidame
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: ac28e18573ec1bd8f0a3f1e715a8c8e1b7c2854e
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: e80d47d1a477c03296b9a2e0eb4373929cfaa66b
+ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/13/2017
 ---
 # <a name="step-1-activate-the-rights-management-service"></a>Passaggio 1: Attivare il servizio Rights Management
  
@@ -40,15 +40,15 @@ Per questa esercitazione si userà il portale di Azure, dove vengono anche confi
     > [!TIP] 
     > Selezionare **Aggiungi al dashboard** per creare un riquadro **Azure Information Protection** nel dashboard, in modo da ignorare la ricerca del servizio al successivo accesso al portale.
 
-4. Leggere le informazioni disponibili nella pagina **Avvio rapido** che si apre automaticamente quando ci si connette al servizio per la prima volta. È possibile tornare a questa pagina in un secondo momento. Per questa esercitazione, selezionare **Impostazioni di RMS**.  
+4. Leggere le informazioni disponibili nella pagina **Avvio rapido** che si apre automaticamente quando ci si connette al servizio per la prima volta. È possibile tornare a questa pagina in un secondo momento. Per questa esercitazione, selezionare **Impostazioni di RMS** o **Protection activation** (Attivazione protezione). L'opzione verrà rinominata. 
 
 5. Ora è possibile vedere se il servizio Azure Rights Management è attivato per il tenant. 
     
-    - Se il servizio è attivato, viene visualizzato il messaggio di conferma seguente:
+    - Se il servizio è attivato viene visualizzata una conferma simile alla seguente:
         
         ![Stato di Azure Information Protection per Azure RMS](../media/info-protect-azurerms-activated.png)
         
-    - Se il servizio non è attivato, le informazioni sullo stato indicano questa condizione e viene visualizzata l'opzione per l'attivazione:
+    - Se il servizio non è attivato, le informazioni sullo stato indicano questa condizione e viene visualizzata l'opzione per l'attivazione. Ad esempio:
         
         ![Stato di Azure Information Protection per Azure RMS](../media/info-protect-azurerms-deactivated.png)
 
