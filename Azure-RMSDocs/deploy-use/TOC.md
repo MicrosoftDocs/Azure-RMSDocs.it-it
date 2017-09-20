@@ -26,6 +26,7 @@
 ### [Configurare e gestire i modelli](configure-policy-templates.md)
 #### [Aggiornare i modelli per gli utenti](refresh-templates.md)
 #### [Informazioni di riferimento su PowerShell](configure-templates-with-powershell.md)
+#### [Migrazione dal portale di Azure classico](migrate-portal.md)
 ### [Configurare le lingue](configure-policy-languages.md)
 ## [Distribuzione del connettore RMS](deploy-rms-connector.md)
 ### [Installare e configurare il connettore](install-configure-rms-connector.md)
