@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per amministratori per gestire il client 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3a4a84356d59692dd3693b4bbaa00a3e39c95597
-ms.sourcegitcommit: adeab31c7aa99eab115dd12035fc5d9dffec4e9c
+ms.openlocfilehash: 99cb5d1ca256977cb07c41bbe153e5ca248b9efd
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="using-powershell-with-the-azure-information-protection-client"></a>Uso di PowerShell con il client Azure Information Protection
 
@@ -26,13 +26,15 @@ Quando si installa il client di Azure Information Protection, vengono installati
 
 I cmdlet vengono installati con il modulo **AzureInformationProtection** di PowerShell. Questo modulo sostituisce il modulo RMSProtection installato con lo strumento di protezione RMS. Se quando si installa il client Azure Information Protection è già installato lo strumento RMSProtection, questo viene automaticamente disinstallato.
 
-Il modulo AzureInformationProtection include tutti i cmdlet per Rights Management dello strumento di protezione RMS e tre nuovi cmdlet che usano il servizio Azure Information Protection (AIP) per le etichette:
+Il modulo AzureInformationProtection include tutti i cmdlet per Rights Management dello strumento di protezione RMS. Sono inoltre disponibili nuovi cmdlet che usano il servizio Azure Information Protection (AIP) per l'assegnazione di etichette. Ad esempio:
 
 |Cmdlet per le etichette|Esempio di utilizzo|
 |----------------|---------------|
 |[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)|Per una cartella condivisa, identifica tutti i file con un'etichetta specifica.|
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|Per una cartella condivisa, esaminare il contenuto dei file e quindi etichettare automaticamente i file senza etichetta, in base alle condizioni specificate.|
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|Per una cartella condivisa, applica un'etichetta specificata a tutti i file privi di etichetta.|
+|[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipsuthentication)|Assegna etichette ai file in modo non interattivo, ad esempio tramite uno script che viene eseguito in base a una pianificazione.|
+
 
 Per un elenco di tutti i cmdlet e le informazioni della guida corrispondenti, vedere [AzureInformationProtection Module](/powershell/module/azureinformationprotection) (Modulo AzureInformationProtection). All'interno di una sessione di PowerShell, digitare `Get-Help <cmdlet name> -online` per visualizzare la Guida più recente e per le lingue supportate diverse dall'inglese.  
 
@@ -95,7 +97,7 @@ Per poter rimuovere la protezione dai file, è necessario avere diritti di utili
 
 È possibile connettersi direttamente al servizio Azure Rights Management in modo non interattivo per proteggere i file o rimuoverne la protezione.
 
-È necessario usare un'entità servizio per connettersi al servizio Azure Rights in modo non interattivo, usando il cmdlet `Set-RMSServerAuthentication`. È necessario eseguire questa operazione per ogni sessione di Windows PowerShell che esegue cmdlet che si connettono direttamente al servizio Azure Rights Management. Prima di eseguire il cmdlet, assicurarsi di aver ottenuto questi tre identificatori:
+È necessario usare l'account di un'entità servizio per connettersi al servizio Azure Rights Management in modo non interattivo, usando il cmdlet `Set-RMSServerAuthentication`. È necessario eseguire questa operazione per ogni sessione di Windows PowerShell che esegue cmdlet che si connettono direttamente al servizio Azure Rights Management. Prima di eseguire il cmdlet, assicurarsi di aver ottenuto questi tre identificatori:
 
 - BposTenantId
 
@@ -222,7 +224,7 @@ Il comando di esempio sarà simile al seguente:
 
 Come illustrato nel comando precedente, è possibile specificare i valori con un singolo comando, usando uno script da eseguire in modo non interattivo. A scopo di test è tuttavia possibile digitare solo Set-RMSServerAuthentication e indicare i valori uno alla volta quando vengono richiesti. Al termine dell'esecuzione del comando il client funziona in "modalità server", adatta per l'uso non interattivo, ad esempio per gli script e l'infrastruttura di classificazione file per Windows Server.
 
-Valutare se impostare l'entità servizio come utente con privilegi avanzati: per garantire che l'entità servizio possa sempre rimuovere la protezione dei file per altri utenti, è possibile configurarla come utente con privilegi avanzati. Usare lo stesso cmdlet per Azure RMS, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), usato per configurare un account utente standard come utente con privilegi avanzati, ma specificare il parametro **-ServicePrincipalId** con il valore di AppPrincipalId.
+Valutare se impostare l'account dell'entità servizio come utente con privilegi avanzati: per garantire che l'account dell'entità servizio possa sempre rimuovere la protezione dei file per altri utenti, è possibile configurarlo come utente con privilegi avanzati. Usare lo stesso cmdlet per Azure RMS, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), usato per configurare un account utente standard come utente con privilegi avanzati, ma specificare il parametro **-ServicePrincipalId** con il valore di AppPrincipalId.
 
 Per altre informazioni, vedere [Configurazione degli utenti con privilegi avanzati per Rights Management di Azure e servizi di individuazione o ripristino dei dati](../deploy-use/configure-super-users.md).
 
@@ -259,7 +261,7 @@ L'uso di etichette per classificare e proteggere i file è più efficiente, perc
 
 Per proteggere i file o rimuoverne la protezione tramite la connessione diretta al servizio Azure Rights Management, tuttavia, è in genere necessario eseguire una serie di cmdlet, come descritto di seguito.
 
-Innanzitutto, se è necessario eseguire l'autenticazione al servizio Azure Rights Management con un'entità servizio invece che con il proprio account, in una sessione di Powershell digitare:
+Innanzitutto, se è necessario eseguire l'autenticazione al servizio Azure Rights Management con l'account di un'entità servizio invece che con il proprio account, in una sessione di PowerShell digitare:
 
     Set-RMSServerAuthentication
 
@@ -340,7 +342,7 @@ Leggere questa sezione prima di iniziare a usare i comandi di PowerShell per la 
 
 ### <a name="prerequisites"></a>Prerequisiti
 
-Oltre ai prerequisiti per l'installazione del modulo AzureInformationProtection, l'account deve avere autorizzazioni di lettura ed esecuzione per accedere a ServerCertification.asmx:
+Oltre ai prerequisiti per l'installazione del modulo AzureInformationProtection, l'account usato per proteggere o rimuovere la protezione dei file deve avere autorizzazioni di lettura ed esecuzione per accedere a ServerCertification.asmx:
 
 1. Accedere a un server AD RMS.
 
@@ -356,7 +358,9 @@ Oltre ai prerequisiti per l'installazione del modulo AzureInformationProtection,
 
 7. Nella finestra di dialogo **Autorizzazioni per ServerCertification.asmx** fare clic su **Aggiungi**. 
 
-8. Aggiungere il nome dell'account. Se altri amministratori di AD RMS useranno questi cmdlet per la protezione o la rimozione della protezione dei file, aggiungere anche i loro nomi.
+8. Aggiungere il nome dell'account. Se altri amministratori di AD RMS o account del servizio useranno questi cmdlet per la protezione o la rimozione della protezione dei file, aggiungere anche tali account. 
+    
+    Per proteggere o rimuovere la protezione dei file in modo non interattivo, aggiungere gli account computer rilevanti. Ad esempio, aggiungere l'account computer del computer Windows Server che è configurato per Infrastruttura di classificazione file e che userà uno script di PowerShell per proteggere i file. Questo scenario richiede la versione di anteprima corrente del client Azure Information Protection.
 
 9. Nella colonna **Consenti** assicurarsi che siano selezionate le caselle di controllo **Lettura/esecuzione** e **Lettura**.
 
@@ -435,7 +439,7 @@ L'output potrebbe essere simile al seguente:
     --------                              ------
     \\Server1\Documents\Test1.docx        Protected
 
-Per rimuovere la protezione di un file, è necessario avere gli stessi diritti di proprietario o di estrazione usati per la protezione del file oppure essere un utente con privilegi avanzati per AD RMS. Usare quindi il cmdlet Unprotect. Ad esempio:
+Per rimuovere la protezione di un file, è necessario avere gli stessi diritti di utilizzo di proprietario o di estrazione usati per la protezione del file oppure essere un utente con privilegi avanzati per AD RMS. Usare quindi il cmdlet Unprotect. Ad esempio:
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -447,7 +451,7 @@ L'output potrebbe essere simile al seguente:
 
 ## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>Come assegnare un'etichetta ai file in modo non interattivo per Azure Information Protection
 
-A partire dalla versione 1.8.41.0 del client di Azure Information Protection (attualmente in anteprima), è possibile eseguire i cmdlet di assegnazione di etichette in modo non interattivo tramite il cmdlet **Set AIPAuthentication**.
+È possibile eseguire i cmdlet per l'assegnazione delle etichette in modo non interattivo tramite il cmdlet **Set-AIPAuthentication**.
 
 Per impostazione predefinita, quando si eseguono i cmdlet per l'assegnazione di etichette, i comandi vengono eseguiti nel contesto utente personale in una sessione interattiva di PowerShell. Per eseguirli senza interventi da parte dell'utente, creare un nuovo account utente di Azure AD per questo scopo. Nel contesto di tale utente, quindi, eseguire il cmdlet Set-AIPAuthentication per impostare e archiviare le credenziali usando un token di accesso da Azure AD. Questo account utente viene quindi autenticato e avviato per il servizio Azure Rights Management. L'account scarica i criteri di Azure Information Protection ed eventuali modelli di Rights Management usati dalle etichette.
 

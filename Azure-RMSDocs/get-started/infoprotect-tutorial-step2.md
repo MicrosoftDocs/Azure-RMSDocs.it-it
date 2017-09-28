@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: cf84cef5d6bc4d3df32a4e3c8bc3a6ac7380655c
-ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
+ms.openlocfilehash: 4fb571f84e9916fb5573d551ec0f0bf374e5df2f
+ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passaggio 2: Configurare e pubblicare criteri di Azure Information Protection
 
@@ -67,7 +67,7 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
     
     ![Configurare la protezione per un'etichetta di Azure Information Protection](../media/info-protect-protection-bar-configured.png) 
     
-4. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure RMS** o **Azure (cloud key)** (Azure - Chiave cloud). L'opzione verrà rinominata. Assicurarsi che sia selezionata anche **Set Permissions** (Configura le autorizzazioni). Selezionare quindi **Aggiungi autorizzazioni**.
+4. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (cloud key)** (Azure - Chiave cloud). Questa opzione usa il servizio Azure Rights Management per proteggere documenti e messaggi di posta elettronica. Assicurarsi che sia selezionata anche **Set Permissions** (Configura le autorizzazioni). Selezionare quindi **Aggiungi autorizzazioni**.
 
 5. Nel pannello **Aggiungi autorizzazioni** selezionare **Aggiungi \<nome organizzazione >- Tutti i membri**. Se ad esempio il nome dell'organizzazione è VanArsdel Ltd, viene visualizzata la seguente opzione da selezionare:
     
@@ -103,7 +103,7 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
     
     a. **Scegliere il tipo di condizione**: mantenere il valore predefinito di **Tipi di informazioni**.
     
-    b. Nella casella di ricerca **Selezionare i tipi di informazioni** digitare **numero di carta di credito**. quindi selezionare **Numero carta di credito** dai risultati della ricerca.
+    b. Nella casella di ricerca **Selezionare i tipi di informazioni** digitare **numero di carta di credito**. Selezionare quindi **Numero carta di credito** nei risultati della ricerca.
     
     c. **Numero minimo di occorrenze**: mantenere il valore predefinito **1**.
     
