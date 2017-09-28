@@ -4,17 +4,17 @@ description: Identificare le restrizioni, i prerequisiti e le raccomandazioni se
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/13/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: ef39c5489e63a67e0880e4faab4d9675a49f5f90
-ms.sourcegitcommit: 4e31a4797eb8df64af3ae8932d2b49839e7a4524
+ms.openlocfilehash: cceacbe94983e66bdde6de0947ae59b44e29a54e
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Requisiti e restrizioni HYOK per la protezione di AD RMS
 
@@ -65,13 +65,11 @@ Oltre a non supportare i vantaggi elencati che si ottengono quando si usa la pro
 
     È possibile configurare un'etichetta in modo che **Non inoltrare** usi HYOK o il servizio Azure Rights Management. In alternativa gli utenti possono selezionare direttamente Non inoltrare. Possono selezionare questa opzione con il pulsante **Non inoltrare** della scheda **Messaggio** della barra multifunzione di Office oppure con le opzioni di menu di Outlook. Le opzioni di menu **Non inoltrare** si trovano in **File** > **Autorizzazioni**e in corrispondenza del pulsante **Autorizzazioni** della scheda **Opzioni** della barra multifunzione. 
     
-    Quando gli utenti selezionano il pulsante Non inoltrare, è possibile che venga usato Azure RMS o AD RMS in base a una scelta non deterministica. Quando gli utenti selezionano **Non inoltrare** in un'opzione di menu di Outlook possono scegliere tra Azure RMS e AD RMS, ma potrebbero non sapere quale opzione selezionare per il loro messaggio di posta elettronica. In entrambi gli scenari se viene usato AD RMS quando dovrebbe essere usato Azure RMS, è possibile che gli utenti con cui si gestiscono condivisioni esterne non riescano ad aprire i messaggi di posta elettronica.
+    Il client Azure Information Protection usa sempre Azure RMS quando gli utenti selezionano il pulsante **Non inoltrare** in Outlook. Se questo non è il comportamento voluto, è possibile nascondere il pulsante **Non inoltrare** in Outlook configurando un'[impostazione client avanzata](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook). 
     
-    La versione di anteprima corrente del client Azure Information Protection usa sempre Azure RMS quando gli utenti selezionano il pulsante **Non inoltrare** in Outlook. Se questo non è il comportamento voluto, è possibile nascondere il pulsante **Non inoltrare** in Outlook configurando un'[impostazione client avanzata](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook). 
+    Quando gli utenti selezionano **Non inoltrare** in un'opzione di menu di Outlook possono scegliere tra Azure RMS e AD RMS, ma potrebbero non sapere quale opzione selezionare per il loro messaggio di posta elettronica. Se viene usato AD RMS quando dovrebbe essere usato Azure RMS, è possibile che gli utenti con cui si gestiscono condivisioni esterne non riescano ad aprire i messaggi di posta elettronica.
 
-- Per la versione di disponibilità generale corrente del client Azure Information Protection, se gli utenti configurano autorizzazioni personalizzate e si usa la protezione di AD RMS (HYOK) o di Azure RMS, i documenti e i messaggi di posta elettronica sono sempre protetti da Azure Rights Management. Questa limitazione non è valida per la versione di anteprima corrente del client.
-
-- Se si configurano autorizzazioni definite dall'utente per Word, Excel, PowerPoint e File Explorer, che è supportato con la versione di anteprima corrente del client Azure Information Protection, in File Explorer la protezione viene sempre applicata con Azure RMS anziché con HYOK (AD RMS). 
+- Se si configurano autorizzazioni definite dall'utente per Word, Excel, PowerPoint e File Explorer, in File Explorer la protezione viene sempre applicata con Azure RMS anziché con HYOK (AD RMS). Questa limitazione non è valida per la versione di anteprima corrente del client.
 
 - Se gli utenti scelgono un'etichetta in Outlook che applica la protezione di AD RMS e quindi cambiano idea prima di inviare la posta elettronica e selezionano un'etichetta che applica la protezione di Azure RMS, la nuova etichetta selezionata non viene applicata. In tal caso, viene visualizzato il messaggio di errore seguente: **Azure Information Protection non può applicare questa etichetta. Non si hanno le autorizzazioni necessarie per eseguire questa azione.**
     

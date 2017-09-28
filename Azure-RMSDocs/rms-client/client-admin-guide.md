@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per gli amministratori in una rete aziend
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f07d39e5110ae9bfb58a81585a042e8afdbbc639
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: 6786ffde8d9903ee5c9d553159710052a6d5e7a2
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
@@ -269,22 +269,9 @@ Usare il collegamento **Invia commenti e suggerimenti** per inviare suggerimenti
 
 L'opzione **Esporta log** consente di raccogliere e allegare automaticamente i file di log relativi al client Azure Information Protection se ne è stato chiesto l'invio al supporto tecnico Microsoft. Questa opzione può essere usata anche dagli utenti finali per inviare i file di log all'help desk.
 
-Per visualizzare informazioni di diagnostica e reimpostare il client, selezionare **Esegui la diagnostica**. Al termine dei test di diagnostica, fare clic su **Copy results** (Copia risultati) per incollare le informazioni in un messaggio di posta elettronica che l'amministratore e gli utenti finali possono inviare rispettivamente al supporto tecnico Microsoft e all'help desk. Al termine dei test, è anche possibile reimpostare il client.
+L'opzione **Ripristina le impostazioni** consente di disconnettere l'utente, eliminare i criteri di Azure Information Protection scaricati e ripristinare le impostazioni utente per il servizio Azure Rights Management.
 
-> [!NOTE]
-> Nella versione di anteprima del client l'opzione **Esegui diagnostica** è stata rimossa e sostituta con **Ripristina impostazioni**. È inoltre [cambiato](#more-information-about-the-reset-option-for-the-current-preview-version-of-the-azure-information-protection-client) il comportamento per questa opzione.
-
-#### <a name="more-information-about-the-reset-option-for-the-general-availability-ga-version-of-the-azure-information-protection-client"></a>Altre informazioni sull'opzione di reimpostazione per la versione disponibile a livello generale del client Azure Information Protection
-
-- Non è necessario essere un amministratore locale per usare questa opzione e questa azione non viene registrata nel Visualizzatore eventi. 
-
-- A meno che i file non siano bloccati, con questa azione vengono eliminati tutti i file presenti in **%LocalAppData%\Microsoft\MSIPC**, dove sono archiviati i certificati del client e i modelli per Rights Management. Non vengono eliminati i criteri di Azure Information Protection e i file di log del client, né l'utente viene disconnesso.
-
-- Viene eliminata le chiave del Registro di sistema seguente con le relative impostazioni: **HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC**. Se sono state configurate impostazioni per questa chiave del Registro di sistema, dopo la reimpostazione del client è necessario riconfigurare le impostazioni del Registro di sistema. Un esempio è il caso in cui sono state configurate le impostazioni per il reindirizzamento al tenant di Azure Information Protection, poiché si sta eseguendo la migrazione da AD RMS e nella rete è ancora presente un punto di connessione del servizio.
-
-- Dopo aver reimpostato il client è necessario reinizializzare l'ambiente utente. In questo modo verranno scaricati i certificati per il client e i modelli più recenti. A tale scopo, chiudere tutte le istanze di Office e quindi riavviare un'applicazione di Office. Questa azione verifica anche che siano stati scaricati i criteri di Azure Information Protection più recenti. Non eseguire di nuovo i test diagnostici prima che ciò sia stato fatto.
-
-#### <a name="more-information-about-the-reset-option-for-the-current-preview-version-of-the-azure-information-protection-client"></a>Altre informazioni sull'opzione di reimpostazione per la versione di anteprima corrente del client Azure Information Protection
+#### <a name="more-information-about-the-reset-settings-option"></a>Altre informazioni sull'opzione Ripristina le impostazioni
 
 - Non è necessario essere un amministratore locale per usare questa opzione e questa azione non viene registrata nel Visualizzatore eventi. 
 

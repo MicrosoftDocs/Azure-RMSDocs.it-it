@@ -5,7 +5,7 @@ keywords:
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 09/18/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c9964e013d24bb1f42acb5f1e7a180d2a85a8576
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 6d62b6dd588b035ded582a87f5faf04a04df6ab6
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Passaggio 5: Vedere in azione la condivisione di file protetti e tenere traccia del documento 
 
@@ -39,9 +39,11 @@ Per questo passaggio finale dell'esercitazione, individuare un documento di Word
 
     In questo modo i destinatari potranno visualizzare il documento, ma non modificarlo o stamparlo.
 
-4. Per **Selezionare gli utenti** digitare uno o più indirizzi di posta elettronica aziendali, come si farebbe per inviare un documento a un utente con cui l'organizzazione intrattiene relazioni commerciali. Assicurarsi di specificare un indirizzo di posta elettronica aziendale, ad esempio **janetm@contoso.com** o **p.dover@fabrikam.com**, perché attualmente Azure Information Protection non supporta gli indirizzi di posta elettronica personali. 
+4. Per **Selezionare gli utenti** digitare uno o più indirizzi di posta elettronica aziendali, come si farebbe per inviare un documento a un utente con cui l'organizzazione intrattiene relazioni commerciali. Per specificare più indirizzi usare un punto e virgola o premere INVIO. 
 
-    In alternativa, fare clic sulla Rubrica per selezionare l'indirizzo di posta elettronica di un collega:
+    Assicurarsi di specificare un indirizzo di posta elettronica aziendale, ad esempio **janetm@contoso.com** o **p.dover@fabrikam.com**, perché attualmente Azure Information Protection non supporta gli indirizzi di posta elettronica personali per questo scenario. 
+
+    In alternativa fare clic sull'icona **Seleziona utenti, gruppi o organizzazione** per selezionare l'indirizzo di posta elettronica di un collega:
 
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 5: Proteggi con autorizzazioni personalizzate](../media/protect-custom-permissions.png)  
     
@@ -93,7 +95,7 @@ Ora che il destinatario ha aperto l'allegato e, facoltativamente, lo ha inoltrat
 
 2.  Nella scheda **Home** fare clic su **Proteggi** > **Rileva e revoca**:
 
-    ![Opzione Rileva utilizzo](../media/track-usage-calloutv2.png)
+    ![Opzione Rileva utilizzo](../media/track-usage-calloutv3.png)
 
     In questo modo si passa al sito di rilevamento dei documenti.
 

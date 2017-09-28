@@ -4,17 +4,17 @@ description: "Quando si configurano le condizioni per un'etichetta, è possibile
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 09ee8587e6b254584f70dbe2475063831fd5b845
-ms.sourcegitcommit: 6636defa6eca24360f15fb9ef93c2b82dc36cf76
+ms.openlocfilehash: aa41d4f34f0ed43682f9ba426ec18204457980c3
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection
 
@@ -26,7 +26,7 @@ Quando si configurano le condizioni per un'etichetta, è possibile assegnare aut
  
 - La classificazione consigliata si applica a Word, Excel e PowerPoint quando i file vengono salvati.
 
-Quando si configurano le condizioni è possibile usare schemi predefiniti, come **Numero della carta di credito** o **USA Social Security Number (SSN)** (Social Security Number - USA). In alternativa, è possibile definire una stringa o un modello personalizzato come condizione per la classificazione automatica. Queste condizioni si applicano al corpo del testo nei documenti e nei messaggi di posta elettronica, alle intestazioni e ai piè di pagina. Per altre informazioni sulle condizioni, vedere la sezione [Dettagli sui tipi di informazioni](#details-about-the-information-types).
+Quando si configurano le condizioni è possibile usare schemi predefiniti, come **Numero della carta di credito** o **USA Social Security Number (SSN)** (Social Security Number - USA). In alternativa, è possibile definire una stringa o un modello personalizzato come condizione per la classificazione automatica. Queste condizioni si applicano al corpo del testo nei documenti e nei messaggi di posta elettronica, alle intestazioni e ai piè di pagina. Per altre informazioni sulle condizioni, vedere il passaggio 5 nella [procedura seguente](#to-configure-recommended-or-automatic-classification-for-a-label).
 
 Come vengono valutate più condizioni quando si applicano a più etichette:
 
@@ -59,174 +59,30 @@ In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per 
 
 4. Nel pannello **Etichetta**, nella sezione **Configurare le condizioni per l'applicazione automatica di questa etichetta**, fare clic su **Aggiungi una nuova condizione**.
 
-5. Nel pannello **Condizione** selezionare **Tipi di informazioni** se si vuole usare una condizione predefinita oppure **Personalizzata** se si vuole specificare una condizione personalizzata, quindi fare clic su **Salva**:
+5. Nel pannello **Condizione** selezionare **Tipi di informazioni** se si vuole usare una condizione predefinita oppure **Personalizzata** se si vuole specificare una condizione personalizzata:
     - Per **Tipi di informazioni** selezionare una delle condizioni disponibili nell'elenco, quindi selezionare il numero minimo di occorrenze e specificare se l'occorrenza deve avere un valore univoco per essere inclusa nel conteggio delle occorrenze.
         
-        Per disporre dell'elenco completo di condizioni è necessario usare la versione di anteprima corrente del client Azure Information Protection. Se si usa la versione di disponibilità generale corrente del client sono supportate solo le cinque condizioni seguenti: **Codice SWIFT**, **Numero della carta di credito**, **ABA Routing Number** (Codice ABA), **USA Social Security Number (SSN)** (Numero di previdenza sociale USA - SSN) e **International Banking Account Number (IBAN)**. [Altre informazioni](#details-about-the-information-types)
+        I tipi di informazioni usano il rilevamento di modelli e i tipi di informazioni riservate della prevenzione perdita dei dati (DLP) di Office 365. È possibile scegliere tra vari tipi di informazioni riservate comuni. Alcuni tipi sono specifici per determinate aree. Per altre informazioni, vedere [Elementi cercati dai tipi di informazioni riservate](https://support.office.com/article/What-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b) nella documentazione di Office. 
+        
+        L'elenco dei tipi di informazioni selezionabili nel portale di Azure viene aggiornato periodicamente per includere i nuovi tipi aggiunti a DLP di Office. L'elenco esclude tuttavia i tipi di informazioni riservate specificati dall'utente e caricati come pacchetto di regole nel Centro sicurezza e conformità di Office 365. 
+        
+        Quando Azure Information Protection valuta i tipi di informazioni selezionati non usa l'impostazione del livello di attendibilità DLP di Office, ma ricerca corrispondenze in base al livello di attendibilità più basso.
     
     - Per **Custom** (Personalizzata), specificare un nome e una frase di cui cercare la corrispondenza, esclusi i punti interrogativi e i caratteri speciali. Quindi specificare se usare un'espressione regolare per la corrispondenza, se la distinzione tra maiuscole e minuscole è rilevante, il numero minimo di occorrenze e se l'occorrenza deve avere un valore univoco per essere inclusa nel conteggio delle occorrenze.
         
-        Se si dispone della versione di anteprima corrente del client Azure Information Protection, le espressioni regolari usano i criteri delle espressione regolari di Office 365. Per altre informazioni, vedere [Definizione di corrispondenze basate su espressioni regolari](https://technet.microsoft.com/library/jj674702(v=exchg.150).aspx#Anchor_2) nella documentazione di Office. 
+        Le espressioni regolari usano i criteri di espressione regolare di Office 365. Per altre informazioni, vedere [Definizione di corrispondenze basate su espressioni regolari](https://technet.microsoft.com/library/jj674702(v=exchg.150).aspx#Anchor_2) nella documentazione di Office.
         
-    **Esempio sulle opzioni relative alle occorrenze**: si seleziona l'opzione predefinita del codice fiscale e si imposta il numero minimo di occorrenze su 2 e in un documento compare due volte lo stesso codice fiscale. Se si imposta **Conta solo le occorrenze con valori univoci** su **Sì**, la condizione non è soddisfatta. Se invece si imposta questa opzione su **No**, la condizione è soddisfatta.
+6. Decidere se modificare i valori **Numero minimo di occorrenze** e **Conta solo le occorrenze con valori univoci**, quindi selezionare **Salva**. 
+    
+    Esempio per le opzioni relative alle occorrenze: si seleziona il tipo di informazioni per il codice fiscale, si imposta il numero minimo di occorrenze su 2 e in un documento compare due volte lo stesso codice fiscale. Se si imposta **Conta solo le occorrenze con valori univoci** su **Sì**, la condizione non è soddisfatta. Se invece si imposta questa opzione su **No**, la condizione è soddisfatta.
 
-6. Nel pannello **Etichetta** configurare le opzioni seguenti e quindi fare clic su **Salva**:
+7. Tornare al pannello **Etichetta**, configurare le opzioni seguenti e quindi fare clic su **Salva**:
     
     - Scegliere la classificazione automatica o consigliata: per **Select how this label is applied: automatically or recommended to user** (Selezionare come applicare l'etichetta: automaticamente o consigliata all'utente) selezionare **Automatic** (Automatica) o **Recommended** (Consigliata).
     
     - Specificare il testo per la richiesta utente o il suggerimento di criteri: mantenere il testo predefinito o specificare una stringa personalizzata.
 
-7. Per mettere le modifiche a disposizione degli utenti, nel pannello iniziale di **Azure Information Protection** fare clic su **Publish** (Pubblica).
-
-## <a name="details-about-the-information-types"></a>Dettagli sui tipi di informazioni
-
-Se è presente la versione di anteprima corrente del client Azure Information Protection, il client supporta tutti i tipi di informazioni visualizzati nel portale:
-
-- I tipi di informazioni usano il rilevamento di modelli e i tipi di informazioni riservate della prevenzione perdita dei dati (DLP) incorporati in Office 365. È possibile scegliere tra vari tipi di informazioni riservate comuni. Alcuni tipi sono specifici per determinate aree. Per altre informazioni sui tipi di informazioni selezionabili, vedere [Elementi cercati dai tipi di informazioni riservate](https://support.office.com/article/What-the-sensitive-information-types-look-for-fd505979-76be-4d9f-b459-abef3fc9e86b) nella documentazione di Office. 
-
-- L'elenco dei tipi di informazioni selezionabili nel portale di Azure viene aggiornato periodicamente per includere i nuovi tipi aggiunti a DLP di Office. L'elenco esclude tuttavia i tipi di informazioni riservate specificati dall'utente e caricati come pacchetto di regole nel Centro sicurezza e conformità di Office 365. 
-
-- Quando Azure Information Protection valuta i tipi di informazioni selezionati non usa l'impostazione del livello di attendibilità DLP di Office, ma ricerca corrispondenze in base al livello di attendibilità più basso.
-
-Se si dispone della versione di disponibilità generale corrente del client sono supportati solo i seguenti tipi di informazioni:
-
-- [Codice SWIFT](#swift-code )
-
-- [Numero di carta di credito](#credit-card-number )
-
-- [ABA Routing Number (Codice ABA)](#aba-routing-number )
-
-- [USA Social Security Number (SSN) (Numero di previdenza sociale USA - SSN)](#usa-social-security-number-ssn)
-
-- [International Banking Account Number (IBAN)](#international-banking-account-number-iban)
-
-Vedere le sezioni seguenti per altre informazioni su ciascun tipo di informazioni nella versione di disponibilità generale corrente del client.
-
-### <a name="swift-code"></a>Codice SWIFT
-
-Viene trovata la corrispondenza con questo tipo di informazioni quando il contenuto include quanto segue:  
-
-1. Una delle frasi seguenti: **swift**, **swiftnumber**, **swiftroutingnumber** 
-
-2. Un codice Swift, in un modello formattato:  
-
-    a. 4 lettere (codice della banca)  
-
-    b. 2 lettere (codice del paese)  
-
-    c. 2 lettere o cifre (codice località)  
-
-    d. 3 lettere o cifre facoltative (codice filiale)  
-
-
-Esempi per il test:
-
-- **NEDSZAJJXXX Swiftroutingnumber**
-
-- **NEDSZAJJ100 Swiftnumber** 
-
-----
-
-
-### <a name="credit-card-number"></a>Numero di carta di credito
-
-Viene trovata la corrispondenza con questo tipo di informazioni quando il contenuto include quanto segue:  
-
-- Un numero di carta di credito valido, in un modello formattato o non formattato, che supera il [controllo di Luhn](https://wikipedia.org/wiki/Luhn_algorithm). Le informazioni di questo tipo rilevano le carte dei principali circuiti a livello mondiale, tra cui Visa, MasterCard, Discover Card, American Express e Diner.
-
-    - **Formattato**:
-    
-        - 16 numeri: (nnnn-nnnn-nnnn-nnnn)  
-        
-    - **Non formattato**:
-    
-        - (nnnnnnnnnnnnnnnn)  
-
-
-Esempi per il test:
-
-- **4242-4242-4242-4242**
-
-- **4242424242424242** 
-
-----
-
-### <a name="aba-routing-number"></a>ABA Routing Number (Codice ABA)
-
-Viene trovata la corrispondenza con questo tipo di informazioni quando il contenuto include quanto segue:  
-
-1. Almeno una delle frasi seguenti: **aba**, **rtn**, **routing number** 
-
-2. Un codice ABA, che include 9 cifre in un modello formattato o non formattato: 
-
-    - **Formattato**: 
-        
-        a. Quattro cifre che iniziano con 0, 1, 2, 3, 6, 7 o 8 
-        
-        b. Trattino 
-        
-        c. Quattro cifre 
-        
-        d. Trattino 
-        
-        e. Una cifra 
-        
-        Esempio: 3456-9876-1 ABA 
-        
-    - **Non formattato**: 
-        
-        9 cifre consecutive che iniziano con 0, 1, 2, 3, 6, 7 o 8 
-        
-        Esempio: 345698761 RTN 
- 
-
-Esempi per il test:
-
-- **3456-9876-1 ABA**
-
-- **345698761 RTN** 
-
-----
-
-### <a name="usa-social-security-number-ssn"></a>USA Social Security Number (SSN) (Numero di previdenza sociale USA - SSN)
-
-Viene trovata la corrispondenza con questo tipo di informazioni quando il contenuto include quanto segue:  
-
-1. Almeno una delle frasi seguenti: **ssn**, **social security**, **ssid**, **ss#** 
-
-2. Un numero di previdenza sociale: 9 cifre, che possono essere in un modello formattato o non formattato:
-
-    - **Formattato**: 
-    
-        - Nove cifre nel formato seguente: nnn-nn-nnnn OPPURE nnn nn nnnn 
-        
-    - **Non formattato**: 
-    
-        - Nove cifre nel formato seguente: nnnnnnnnn 
-
-
-Esempi per il test:
-
-- **SSN 123-45-6789**
-
-- **SS# 123456789** 
-
-
-----
-
-### <a name="international-banking-account-number-iban"></a>International Banking Account Number (IBAN)
-
-Viene trovata la corrispondenza con questo tipo di informazioni quando il contenuto include quanto segue:  
-
-1. La frase seguente: **IBAN** 
-
-2. Un codice IBAN: inizia con un codice paese (due lettere), seguito da cifre di verifica (due cifre), quindi dal numero BBAN (fino a un massimo di 30 cifre).
-
-
-Esempi per il test:
-
-- **GB29 NWBK 6016 1331 9268 19 IBAN**
-
+8. Per mettere le modifiche a disposizione degli utenti, nel pannello iniziale di **Azure Information Protection** fare clic su **Publish** (Pubblica).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -1,10 +1,10 @@
 ---
 title: Rimuovere le autorizzazioni e disattivare Azure RMS
-description: "Informazioni e istruzioni se si decide di non voler più usare questo servizio di protezione delle informazioni da Azure Information Protection."
+description: "Informazioni e istruzioni se si decide di non voler più usare il servizio di protezione basato sul cloud da Azure Information Protection."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 0b1c2064-0d01-45ae-a541-cebd7fd762ad
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1f8d7a56cec4df8f0ef50f4f83ef662ad8923f17
-ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
+ms.openlocfilehash: a4ed44939e9853373f272d916e0765572dc0590a
+ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/22/2017
 ---
-# <a name="decommissioning-and-deactivating-azure-rights-management"></a>Rimozione delle autorizzazioni e disattivazione di Azure Rights Management
+# <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Rimozione delle autorizzazioni e disattivazione della protezione per Azure Information Protection
 
 >*Si applica a: Azure Information Protection, Office 365*
 
@@ -75,9 +75,9 @@ Verrà visualizzato il messaggio che indica che **Rights Management non è attiv
     
     Ad esempio, dal menu principale fare clic su **Altri servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Nel pannello iniziale di **Azure Information Protection** selezionare **RMS Settings (Preview)** (Impostazioni RMS: anteprima) o **Protection activation** (Attivazione protezione). L'opzione verrà rinominata. 
+2. Nel pannello iniziale di **Azure Information Protection** selezionare **Protection activation** (Attivazione protezione). 
 
-3.  Nel pannello **Azure Information Protection - RMS Settings** (Azure Information Protection - Impostazioni RMS) o **Azure Information Protection - Protection activation** (Azure Information Protection - Attivazione protezione), selezionare **Disattiva**. Selezionare **Sì** per confermare la scelta.
+3.  Nel pannello **Azure Information Protection - Protection activation** (Azure Information Protection - Attivazione protezione) selezionare **Disattiva**. Selezionare **Sì** per confermare la scelta.
 
 Sulla barra delle informazioni verrà visualizzato **Disattivazione completata** mentre **Disattiva** è stato sostituito da **Attiva**. 
 

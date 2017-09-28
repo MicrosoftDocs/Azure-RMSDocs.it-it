@@ -4,7 +4,7 @@ description: Istruzioni su come classificare e proteggere documenti e messaggi d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/04/2017
+ms.date: 09/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5e8329a441dcc871a155ef1b1484544732bec212
-ms.sourcegitcommit: 23aeb2bcce05968b850313333e359c99dd99a56f
+ms.openlocfilehash: b82904da81b73f0ae7ab5ab758a4cf3a982eb6ee
+ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 09/18/2017
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Classificare e proteggere un file o un messaggio di posta elettronica tramite Azure Information Protection
 
@@ -42,11 +42,14 @@ Quando il file è protetto con le autorizzazioni personalizzate, usare il meccan
 
 Usare la barra di Azure Information Protection e selezionare una delle etichette configurate. 
 
-L'immagine seguente mostra ad esempio che il documento non è ancora stato etichettato perché il valore di **Sensibilità** è **Non impostato**. Per impostare un'etichetta, ad esempio "Interno", fare clic su **Interno**. Se non si è certi dell'etichetta da applicare al documento o al messaggio di posta elettronica corrente, usare le descrizioni comando delle etichette per altre informazioni su ogni etichetta e su quando applicarla.
+L'immagine seguente mostra ad esempio che il documento non è ancora stato etichettato perché il valore di **Sensibilità** è **Non impostato**. Per impostare un'etichetta, ad esempio "Generale", fare clic su **Generale**. Se non si è certi dell'etichetta da applicare al documento o al messaggio di posta elettronica corrente, usare le descrizioni comando delle etichette per altre informazioni su ogni etichetta e su quando applicarla. 
 
 ![Esempio della barra di Azure Information Protection](../media/info-protect-bar-not-set-callout.png)
 
 Se al documento è già applicata un'etichetta e si desidera modificarla, è possibile selezionare un'etichetta diversa. Se le etichette non sono visualizzate sulla barra, fare prima clic sull'icona **Modifica l'etichetta** accanto al valore corrente dell'etichetta.
+
+> [!TIP]
+> È inoltre possibile selezionare le etichette dal pulsante **Proteggi** nella scheda **File**.
 
 Oltre a selezionare manualmente le etichette, è anche possibile applicarle nei modi seguenti:
 
@@ -83,9 +86,11 @@ Oltre a selezionare manualmente le etichette, è anche possibile applicarle nei 
     - **Proteggi con autorizzazioni personalizzate**: assicurarsi che questa opzione sia selezionata in modo da poter specificare e applicare le autorizzazioni personalizzate. Deselezionare questa opzione per rimuovere le eventuali autorizzazioni personalizzate.
     
     - **Selezionare le autorizzazioni**: se si vuole proteggere il file in modo da ottenere l'accesso esclusivo, selezionare **Solo per l'utente**. In caso contrario, selezionare il livello di accesso che dovrà essere assegnato agli utenti.
-
+    
     - **Selezionare gli utenti, i gruppi o le organizzazioni**: specificare gli utenti che devono avere le autorizzazioni selezionate per uno o più file. Digitare l'indirizzo di posta elettronica completo di uno o più utenti o di un gruppo oppure il nome di dominio di un'organizzazione per tutti gli utenti dell'organizzazione. Si noti che gli indirizzi di posta elettronica personali non sono attualmente supportati.
         
+        Se si dispone della versione di anteprima corrente del client, è anche possibile usare l'icona a forma di rubrica per selezionare utenti o gruppi dalla Rubrica di Outlook.
+    
     - **Scadenza dell'accesso**: selezionare questa opzione solo per i file per cui il fattore tempo è importante in modo tale che gli utenti specificati non potranno aprire il file o i file selezionati dopo una data impostata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno impostato, gli utenti specificati non potranno aprire il file.
 
 5. Fare clic su **Applica** e attendere che venga visualizzato il messaggio **Le autorizzazioni personalizzate sono state applicate**. e quindi fare clic su **Chiudi**.

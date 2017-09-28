@@ -4,7 +4,7 @@ description: "È possibile configurare e gestire i modelli di Rights Management 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/12/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 1094c0a711b3691b8186baafc06d1fb72daf5613
-ms.sourcegitcommit: 94a9b6714c555b95f6064088e77ed94f08224a15
+ms.openlocfilehash: c27f239467bf546479827c7ca215a8892553e9c0
+ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/22/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurazione e gestione dei modelli per Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
 
 >[!NOTE]
->Questa funzionalità sostituisce la configurazione di modelli personalizzati nel portale di Azure classico.
+>Questa funzionalità sostituisce la configurazione di modelli personalizzati nel portale di Azure classico. Per un riferimento rapido a istruzioni procedurali, vedere [Tasks that you used to do with the Azure classic portal](migrate-portal.md) (Attività che si eseguivano con il portale di Azure classico).
 >
 >Sebbene sia sempre possibile creare e gestire modelli sul portale di Azure classico, non è consigliabile gestire gli stessi modelli dal portale di Azure classico e dal portale di Azure. L'implementazione per la configurazione di modelli in questi portali è cambiata, pertanto lo stesso modello di configurazione nei diversi portali può comportare una configurazione non affidabile.
 
@@ -109,8 +109,7 @@ Prima di modificare i modelli o convertirli in etichette, assicurarsi di essere 
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Per configurare i modelli nei criteri di Azure Information Protection
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza. Quindi passare al pannello **Azure Information Protection**. 
-    
+1. Se non è già stato fatto, aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza. Quindi passare al pannello **Azure Information Protection**.     
     Ad esempio, dal menu principale fare clic su **Altri servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
 2. Se il nuovo modello da configurare è destinato a tutti gli utenti, restare nel pannello **Azure Information Protection - Criteri globali**.
@@ -119,11 +118,11 @@ Prima di modificare i modelli o convertirli in etichette, assicurarsi di essere 
 
 3. Nel pannello **Azure Information Protection - Criteri globali** o nel pannello **Criteri:\<nome>** individuare il modello da configurare:
     
-    - Se si ha una sottoscrizione che include la classificazione, l'etichettatura e la protezione, espandere **Modelli** o **Protection templates** (Modelli di protezione) dopo le etichette.
+    - Se si ha una sottoscrizione che include la classificazione, l'etichettatura e la protezione: espandere **Protection templates** (Modelli di protezione) dopo le etichette.
     
     - Se si ha una sottoscrizione che include solo la protezione: i modelli vengono visualizzati come etichette.
 
-4. Selezionare il modello e, se necessario, modificare il nome del modello e la descrizione nel pannello **Etichetta** modificando **Nome etichetta** e **Descrizione**. Selezionare quindi **Protezione** con il valore **Azure RMS** o **Azure (cloud key)** (Azure - Chiave cloud) per aprire il pannello **Protezione**.
+4. Selezionare il modello e, se necessario, modificare il nome del modello e la descrizione nel pannello **Etichetta** modificando **Nome etichetta** e **Descrizione**. Selezionare quindi **Protezione** con il valore **Azure (cloud key)** (Azure - Chiave cloud) per aprire il pannello **Protezione**.
 
 5. Nel pannello **Protezione** è possibile modificare le autorizzazioni, la scadenza del contenuto e le impostazioni dell'accesso offline. Per altre informazioni sulla configurazione delle impostazioni di protezione, vedere [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md)
     
