@@ -4,7 +4,7 @@ description: "Per configurare le funzioni di classificazione, aggiunta di etiche
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/07/2017
+ms.date: 09/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 4c656ed4e7fdb7945b6ccf466a1138cdb68a2189
-ms.sourcegitcommit: f7ef0f040ae4af4bf1283ebcb0750b65b6939313
+ms.openlocfilehash: 660f29506e22feb742edf4041d7baed0cf749b8c
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2017
+ms.lasthandoff: 09/23/2017
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -71,7 +71,9 @@ Per altre informazioni sulle sottoscrizioni, vedere [Quale sottoscrizione è nec
 
 Azure Information Protection viene distribuito con [criteri predefiniti](configure-policy-default.md), che contengono cinque etichette principali. Queste etichette sono utilizzabili con l'intera gamma di dati che un'organizzazione in genere crea e archivia, dalla classificazione minima dei dati personali alla classificazione più elevata di dati particolarmente riservati. 
 
-È possibile usare le etichette predefinite così come sono oppure personalizzarle, eliminarle e crearne di nuove. Per altre informazioni, usare i collegamenti nella sezione successiva per individuare le opzioni rilevanti e sapere come configurarle. 
+È possibile usare le etichette predefinite così come sono oppure personalizzarle, eliminarle e crearne di nuove. Per altre informazioni, usare i collegamenti nella sezione successiva per individuare le opzioni rilevanti e sapere come configurarle.
+
+È possibile creare qualsiasi numero di etichette. Tuttavia, se le etichette diventano troppo numerose e non consentono agli utenti di individuare e selezionare l'etichetta appropriata con facilità, creare criteri con ambito in modo che gli utenti visualizzino solo le etichette rilevanti. Il limite massimo di etichette per l'applicazione della protezione è 500.
 
 Quando si apportano modifiche in un pannello di Azure Information Protection, fare clic su **Save** (Salva) per salvare le modifiche oppure su **Discard** (Ignora) per ripristinare le ultime impostazioni salvate.
 

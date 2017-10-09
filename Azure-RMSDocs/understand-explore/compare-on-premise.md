@@ -4,7 +4,7 @@ description: "Se già si conosce o si è distribuito in precedenza Active Direct
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7b3a49925fc0486f7be161da501a59c1ec2ebdfc
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 4e9aa6a3e1742fc88f3c1e8e297f1391e2e89b75
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/23/2017
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Confronto tra Azure Information Protection e AD RMS
 
@@ -52,6 +52,7 @@ Per altre informazioni e differenze, vedere la tabella seguente per un confronto
 |-----------------------------------------------------------------------------------------|--------------------------------------------------------|
 |Supporta le funzionalità IRM (Information Rights Management) nei Microsoft Online Services come Exchange Online e SharePoint Online, nonché Office 365.<br /><br />Supporta inoltre i prodotti server Microsoft locali, ad esempio Exchange Server, SharePoint Server e i file server che eseguono Windows Server e l'infrastruttura di classificazione file.|Supporta i prodotti server Microsoft locali, ad esempio Exchange Server, SharePoint Server e i file server che eseguono Windows Server e l'infrastruttura di classificazione file.|
 |Consente il trust implicito tra le organizzazioni e gli utenti in qualsiasi organizzazione. Questo significa che è possibile condividere il contenuto protetto tra gli utenti all'interno della stessa organizzazione o in organizzazioni diverse quando gli utenti dispongono di [!INCLUDE[o365_1](../includes/o365_1_md.md)] o [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] oppure si iscrivono a RMS per singoli.|I trust devono essere definiti in modo esplicito in una relazione punto a punto diretta tra due organizzazioni mediante domini utente affidabili o trust federativi creati mediante Active Directory Federation Services (AD FS).|
+|Se non esiste alcuna relazione di trust, inviare agli utenti un messaggio di posta elettronica protetto (con documenti di Office allegati protetti automaticamente) tramite la federazione con provider basati su social network o con un passcode monouso, usando un Web browser per la visualizzazione.|Se non esiste alcuna relazione di trust, non supporta l'invio di posta elettronica di protezione.|
 |Fornisce due modelli predefiniti di criteri per i diritti di utilizzo che limitano l'accesso al contenuto per l'organizzazione: uno fornisce la visualizzazione in sola lettura del contenuto protetto e l'altro fornisce le autorizzazioni di scrittura o modifica del contenuto protetto.<br /><br />È anche possibile creare modelli personalizzati, inclusi modelli di reparto, visibili solo per un sottoinsieme di utenti. Per altre informazioni, vedere [Configurazione e gestione dei modelli per Azure Information Protection](../deploy-use/configure-policy-templates.md).<br /><br />Gli utenti inoltre possono definire un proprio set di autorizzazioni se i modelli non sono sufficienti.|Non sono disponibili modelli predefiniti; è quindi necessario crearli e distribuirli. Per altre informazioni, vedere [Considerazioni sui modelli di criteri di AD RMS](http://go.microsoft.com/fwlink/?LinkId=154765).<br /><br />Gli utenti inoltre possono definire un proprio set di autorizzazioni se i modelli non sono sufficienti.|
 |La versione minima supportata di Microsoft Office è Office 2010, che richiede il [client Azure Information Protection](../rms-client/aip-client.md) o l'applicazione RMS sharing.<br /><br />Microsoft Office per Mac:<br /><br />- Microsoft Office per Mac 2016: supportato<br /><br />- Microsoft Office per Mac 2011: non supportato|La versione minima supportata di Microsoft Office è Office 2007.<br /><br />Microsoft Office per Mac:<br /><br />- Microsoft Office per Mac 2016: supportato<br /><br />- Microsoft Office per Mac 2011: supportato|
 |Supporta il [client Azure Information Protection](../rms-client/aip-client.md) per Windows, iOS e Android. I computer Mac e i dispositivi Windows Phone continuano a essere supportati dall'app RMS sharing.<br /><br />Il client Azure Information Protection supporta inoltre quanto segue:<br /><br />- Condivisione con utenti di un'altra organizzazione.<br /><br />- Sito di rilevamento dei documenti per gli utenti che include la possibilità di revocare un documento.|Supporta il [client Azure Information Protection](../rms-client/aip-client.md) per Windows, iOS e Android. I computer Mac e i dispositivi Windows Phone continuano a essere supportati dall'app RMS sharing. Non sono tuttavia supportati la condivisione con persone di un'altra organizzazione, il sito di rilevamento dei documenti e la possibilità per gli utenti di revocare i documenti.|

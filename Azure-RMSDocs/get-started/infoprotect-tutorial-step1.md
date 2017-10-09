@@ -1,6 +1,6 @@
 ---
 title: Esercitazione per l'avvio rapido - Passaggio 1 - AIP
-description: 'Passaggio 1 di un''esercitazione introduttiva per provare rapidamente a usare Azure Information Protection: attivare il servizio Azure Rights Management.'
+description: Attivare il servizio di protezione. Passaggio 1 di un'esercitazione introduttiva che consente di provare rapidamente a usare Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -10,20 +10,20 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: c168f54d873d8e5b1f2d455c9ae2d12cda8926b3
-ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
+ms.openlocfilehash: 91eb9ec61f4fa1ebd7aac3cf0c244878ef450bb9
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/28/2017
 ---
-# <a name="step-1-activate-the-rights-management-service"></a>Passaggio 1: Attivare il servizio Rights Management
+# <a name="step-1-activate-protection"></a>Passaggio 1: Attivare la protezione
  
 >*Si applica a: Azure Information Protection*
 
 > [!NOTE]
 >Anche se è già stato attivato il servizio Azure Rights Management per il tenant, completare questo passaggio per confermare lo stato di attivazione. Le istruzioni includono l'accesso al portale di Azure e la creazione del pannello Azure Information Protection, in modo da essere pronti per il passaggio 2. 
 
-Quando il servizio Azure Rights Management è attivato, è possibile proteggere i messaggi di posta elettronica e i documenti più sensibili dell'organizzazione e tenere traccia del modo in cui i documenti protetti vengono usati quando vengono condivisi con altri utenti. È possibile attivare questo servizio in vari modi, inclusi l'uso di Windows PowerShell e i portali di amministrazione.
+Quando il servizio Azure Rights Management è attivato, è possibile proteggere i messaggi di posta elettronica e i documenti più sensibili dell'organizzazione e tenere traccia del modo in cui i documenti protetti vengono usati quando vengono condivisi con altri utenti. È possibile attivare la protezione in modi diversi, usando ad esempio Windows PowerShell e i portali di amministrazione.
 
 Per questa esercitazione si userà il portale di Azure, dove vengono anche configurate le etichette per gli utenti. 
 

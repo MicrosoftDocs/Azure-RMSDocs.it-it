@@ -4,7 +4,7 @@ description: Informazioni sulle operazioni del ciclo di vita rilevanti nel caso 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e4a484660aaf5a1820b04892ff006c08cceb5080
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 5aaf4393e39412a8c8b18678f4edea7a61c148dc
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 09/23/2017
 ---
-# <a name="microsoft-managed-tenant-key-lifecycle-operations"></a>Gestione di Microsoft: operazioni del ciclo di vita della chiave del tenant
+# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gestione di Microsoft: operazioni del ciclo di vita della chiave del tenant
 
 >*Si applica a: Azure Information Protection, Office 365*
 
-Se la chiave del tenant per Azure Information Protection viene gestita da Microsoft (impostazione predefinita), usare le sezioni seguenti per ottenere altre informazioni sulle operazioni del ciclo di vita rilevanti per questa topologia.
+Se la chiave del tenant per Azure Information Protection viene gestita da Microsoft (impostazione predefinita), usare le sezioni seguenti per ottenere altre informazioni sulle operazioni del ciclo di vita pertinenti a questa topologia.
 
 ## <a name="revoke-your-tenant-key"></a>Revocare la chiave del tenant
 Quando si annulla la sottoscrizione di Azure Information Protection, l'uso della chiave del tenant in Azure Information Protection viene interrotto e non è necessaria alcuna azione da parte dell'utente.
@@ -38,6 +38,8 @@ Ecco alcuni casi in cui potrebbe essere necessario reimpostare una chiave per Az
 
 - La società è stata divisa in due o più società. Quando si reimposta la chiave del tenant, la nuova società non potrà accedere al nuovo contenuto pubblicato dai dipendenti e sarà in grado di accedere al vecchio contenuto se dispone di una copia della chiave del tenant precedente.
 
+- Si vuole passare da una topologia di gestione delle chiavi a un'altra.
+
 - Si sospetta una violazione della copia master della chiave del tenant in possesso dell'utente.
 
 Per reimpostare una chiave, è possibile selezionare una chiave diversa gestita da Microsoft come chiave del tenant dell'utente, ma non è possibile creare una nuova chiave gestita da Microsoft. Per creare una nuova chiave, è necessario modificare la topologia della chiave per consentirne la gestione da parte del cliente (BYOK).
@@ -48,7 +50,7 @@ Per selezionare una chiave diversa come chiave attiva del tenant per Azure Infor
 
     (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-Per modificare la topologia di chiave per permettere la gestione da parte del cliente (BYOK), vedere [Implementazione della chiave del tenant di Azure Information Protection](../plan-design/plan-implement-tenant-key.md#implementing-your-azure-information-protection-tenant-key).
+Per modificare la topologia di chiave in modo che venga gestita dal cliente (BYOK), vedere [Implementazione dello scenario BYOK per la chiave del tenant di Azure Information Protection](../plan-design/plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
 
 ## <a name="backup-and-recover-your-tenant-key"></a>Eseguire il backup e il ripristino della chiave del tenant
 Microsoft è responsabile delle operazioni di backup della chiave del tenant e non è necessaria alcuna azione da parte dell'utente.
@@ -62,11 +64,11 @@ Per esportare la configurazione di Azure Information Protection e la chiave del 
 
 ### <a name="step-2-wait-for-verification"></a>Passaggio 2: Attendere la verifica
 
--   Microsoft verifica che la richiesta di rilasciare la chiave del tenant di Azure Information Protection sia legittima. L'operazione può richiedere fino a tre settimane.
+- Microsoft verifica che la richiesta di rilasciare la chiave del tenant di Azure Information Protection sia legittima. L'operazione può richiedere fino a tre settimane.
 
 ### <a name="step-3-receive-key-instructions-from-css"></a>Passaggio 3: Ricevere istruzioni sulla chiave dal Servizio Supporto Tecnico Clienti Microsoft
 
--   Il Servizio Supporto Tecnico Clienti Microsoft invia la configurazione di Azure Information Protection e la chiave del tenant crittografata in un file protetto da password. L'estensione del file è **tpd**. A tale scopo, il Servizio Supporto Tecnico Clienti Microsoft invia all'utente che ha avviato l'esportazione un messaggio di posta elettronica in cui è disponibile uno strumento da eseguire da un prompt dei comandi nel modo seguente:
+- Il Servizio Supporto Tecnico Clienti Microsoft invia la configurazione di Azure Information Protection e la chiave del tenant crittografata in un file protetto da password. L'estensione del file è **tpd**. A tale scopo, il Servizio Supporto Tecnico Clienti Microsoft invia all'utente che ha avviato l'esportazione un messaggio di posta elettronica in cui è disponibile uno strumento da eseguire da un prompt dei comandi nel modo seguente:
 
     ```
     AadrmTpd.exe -createkey
@@ -95,7 +97,7 @@ Se si esporta della chiave del tenant perché non si vuole più usare Azure Info
 ## <a name="respond-to-a-breach"></a>Rispondere a una violazione di sicurezza
 Indipendentemente dall'affidabilità, nessun sistema di sicurezza può considerarsi completo se non prevede un processo di risposta alle violazioni di sicurezza. La chiave del tenant può essere violata o rubata e anche se è protetta in modo efficiente, potrebbero essere presenti vulnerabilità nella tecnologia attuale della chiave o nella lunghezza e negli algoritmi correlati alle chiavi attuali.
 
-Microsoft ha predisposto un team apposito per rispondere agli eventi imprevisti correlati alla sicurezza che possono verificarsi nei suoi prodotti e servizi. Non appena riceve un report plausibile su un evento imprevisto, il team si attiva per esaminarne l'ambito, la causa radice e le soluzioni. Se l'evento imprevisto influisce sulle risorse dell'utente, Microsoft invierà un messaggio di posta elettronica di notifica agli amministratori di tenant di Azure Information Protection all'indirizzo indicato al momento della sottoscrizione.
+Microsoft ha predisposto un team apposito per rispondere agli eventi imprevisti correlati alla sicurezza che possono verificarsi nei suoi prodotti e servizi. Non appena riceve un report plausibile su un evento imprevisto, il team si attiva per esaminarne l'ambito, la causa radice e le soluzioni. Se l'evento imprevisto influisce sulle risorse dell'utente, Microsoft invierà una notifica via posta elettronica agli amministratori di tenant di Azure Information Protection usando l'indirizzo e-mail indicato al momento della sottoscrizione.
 
 In caso di violazione di sicurezza, l'azione più efficace che l'utente o Microsoft possa intraprendere dipende dall'ambito della violazione stessa. Microsoft collaborerà con l'utente durante l'intero processo. Nella tabella seguente vengono descritte alcune situazioni tipiche e la risposta più probabile, sebbene la risposta esatta dipenda da tutte le informazioni raccolte durante l'analisi.
 

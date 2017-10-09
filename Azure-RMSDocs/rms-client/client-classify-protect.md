@@ -4,7 +4,7 @@ description: Istruzioni su come classificare e proteggere documenti e messaggi d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b82904da81b73f0ae7ab5ab758a4cf3a982eb6ee
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 996835254652a307f66c472fdc74707a59041fe0
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 09/23/2017
 ---
 # <a name="classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Classificare e proteggere un file o un messaggio di posta elettronica tramite Azure Information Protection
 
@@ -32,9 +32,7 @@ Se l'etichetta applica la protezione, un documento protetto non è adatto per es
 
 I file protetti possono essere condivisi con altri utenti in tutta sicurezza. Ad esempio, allegare il file a un messaggio di posta elettronica.
 
-Se si condividono regolarmente file con utenti esterni all'organizzazione, l'amministratore potrebbe avere configurato un'etichetta che imposta la protezione in modo da consentire la lettura ai destinatari desiderati. In alternativa, prima di condividere un file è possibile usare l'[app di Office](#set-custom-permissions-for-a-document) o [Esplora file](#using-file-explorer-to-classify-and-protect-files) per impostare autorizzazioni personalizzate per tale file. 
-
-Se si impostano autorizzazioni personalizzate e il file è già protetto per uso interno, eseguirne prima una copia per mantenere le autorizzazioni originali. Usare quindi la copia per impostare le autorizzazioni personalizzate.  
+Se si condividono regolarmente file con utenti esterni all'organizzazione, l'amministratore potrebbe avere configurato un'etichetta che imposta la protezione in modo da consentire la lettura ai destinatari desiderati. In alternativa, prima di condividere un file è possibile usare l'[app di Office](#set-custom-permissions-for-a-document) o [Esplora file](#using-file-explorer-to-classify-and-protect-files) per impostare autorizzazioni personalizzate per tale file. Se si impostano autorizzazioni personalizzate e il file è già protetto per uso interno, eseguirne prima una copia per mantenere le autorizzazioni originali. Usare quindi la copia per impostare le autorizzazioni personalizzate.  
 
 Quando il file è protetto con le autorizzazioni personalizzate, usare il meccanismo di condivisione standard per condividerlo. Se le persone con cui si condivide il file ricevono un file protetto per la prima volta, potrebbe essere necessario fornire loro le istruzioni per visualizzarlo. A tale scopo, è possibile copiare e incollare il messaggio seguente: **Questo file è protetto con Microsoft Azure Information Protection. In caso di primo utilizzo, vedere queste [istruzioni](https://aka.ms/rms-signup).**
 
@@ -94,6 +92,16 @@ Oltre a selezionare manualmente le etichette, è anche possibile applicarle nei 
     - **Scadenza dell'accesso**: selezionare questa opzione solo per i file per cui il fattore tempo è importante in modo tale che gli utenti specificati non potranno aprire il file o i file selezionati dopo una data impostata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno impostato, gli utenti specificati non potranno aprire il file.
 
 5. Fare clic su **Applica** e attendere che venga visualizzato il messaggio **Le autorizzazioni personalizzate sono state applicate**. e quindi fare clic su **Chiudi**.
+
+### <a name="safely-sharing-by-email"></a>Condivisione sicura tramite posta elettronica
+
+Se si vogliono condividere documenti di Office tramite posta elettronica, è possibile allegare i documenti a messaggi di posta elettronica protetti. In questo modo ogni documento viene protetto automaticamente con le stesse restrizioni applicate al messaggio corrispondente. 
+
+È tuttavia consigliabile prima proteggere il documento e quindi allegarlo al messaggio di posta elettronica. Proteggere anche il messaggio se quest'ultimo contiene informazioni riservate. Proteggere il documento prima di allegarlo a un messaggio di posta elettronica garantisce i due vantaggi seguenti:
+
+- Possibilità di tenere traccia e, se necessario, di revocare il documento dopo che è stato inviato.
+
+- Possibilità di applicare al documento autorizzazioni diverse da quelle applicate al messaggio di posta elettronica.
 
 ## <a name="using-file-explorer-to-classify-and-protect-files"></a>Uso di Esplora file per classificare e proteggere file
 
