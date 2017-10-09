@@ -4,7 +4,7 @@ description: "Quando si usa Azure Rights Management, i modelli vengono scaricati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 09/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a9a4e01bd23f7f6107b4021cc792839cf38ee3b5
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 9a5feea87df01507520da6a118372de0f6364452
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aggiornamento di modelli per utenti e servizi
 
@@ -26,7 +26,7 @@ Quando si usa il servizio Azure Rights Management di Azure Information Protectio
 
 |Applicazione o servizio|Modalità di aggiornamento dei modelli dopo le modifiche|
 |--------------------------|---------------------------------------------|
-|Exchange Online<br /><br />Applicabile per regole di trasporto, regole DLP e Outlook Web App|È necessaria la configurazione manuale per aggiornare i modelli.<br /><br />Per la procedura di configurazione, vedere la sezione seguente: [Solo Exchange Online: come configurare Exchange per il download dei modelli personalizzati modificati](#exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates).|
+|Exchange Online<br /><br />Applicabile per regole di trasporto e Outlook Web App |Vengono aggiornati automaticamente in un'ora e non sono necessari altri passaggi.<br /><br />Nel caso in cui si usi [Office 365 Message Encryption con le nuove funzionalità](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Se Exchange Online è stato precedentemente configurato per l'uso del servizio Azure Rights Management importando il dominio di pubblicazione trusted (TPD), usare le stesse istruzioni per abilitare le nuove funzionalità in Exchange Online.|
 |Client Azure Information Protection|I modelli vengono aggiornati automaticamente ogni volta che si aggiornano i criteri di Azure Information Protection nel client:<br /><br /> - Quando viene aperta un'applicazione di Office che supporta la barra di Azure Information Protection. <br /><br /> - Quando si fa clic con il pulsante destro del mouse per classificare e proteggere un file o una cartella. <br /><br /> - Quando si eseguono i cmdlet di PowerShell per l'assegnazione di etichette e la protezione (Get-AIPFileStatus e Set-AIPFileLabel).<br /><br /> - Ogni 24 ore.<br /><br /> Inoltre, poiché il client Azure Information Protection è strettamente integrato con Office, i modelli aggiornati per Office 2016 o Office 2013 verranno aggiornati anche per il client Azure Information Protection.|
 |Office 2016 e Office 2013<br /><br />Applicazione RMS sharing per Windows|I modelli vengono aggiornati automaticamente in base a una pianificazione:<br /><br />- Per le versioni più recenti di Office: l'intervallo di aggiornamento predefinito è di 7 giorni.<br /><br />- Per l'applicazione RMS sharing per Windows: a partire dalla versione 1.0.1784.0 l'intervallo di aggiornamento predefinito è di 1 giorno. Le versioni precedenti prevedono un intervallo di aggiornamento predefinito di 7 giorni.<br /><br />Per anticipare l'esecuzione di un aggiornamento rispetto a questa pianificazione, vedere la sezione [Office 2016, Office 2013 e applicazione RMS sharing per Windows: come forzare un aggiornamento per un modello personalizzato modificato](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
 |Office 2010|I modelli vengono aggiornati automaticamente quando gli utenti si disconnettono da Windows, eseguono nuovamente l'accesso e attendono al massimo un'ora.|
@@ -35,67 +35,6 @@ Quando si usa il servizio Azure Rights Management di Azure Information Protectio
 |App RMS sharing per computer Mac|I modelli vengono aggiornati automaticamente e non sono necessari altri passaggi.|
 
 Se per le applicazioni client è necessario scaricare un modello (iniziale o aggiornato con le modifiche), prevedere un'attesa fino a 15 minuti prima che il download sia completato e che i modelli nuovi o aggiornati siano completamente funzionali. Il tempo effettivo varia a seconda di fattori quali le dimensioni e la complessità della configurazione dei modelli e la connettività di rete. 
-
-## <a name="exchange-online-only-how-to-configure-exchange-to-download-changed-custom-templates"></a>Solo Exchange Online: come configurare Exchange per il download dei modelli personalizzati modificati
-Se Information Rights Management (IRM) è stato già configurato per Exchange Online, i modelli personalizzati non verranno scaricati per gli utenti finché non si apportano le modifiche illustrate di seguito mediante Windows PowerShell in Exchange Online.
-
-> [!NOTE]
-> Per altre informazioni su come usare Windows PowerShell in Exchange Online, vedere [Uso di PowerShell con Exchange Online](https://technet.microsoft.com/library/jj200677%28v=exchg.160%29.aspx).
-
-È necessario eseguire questa procedura ogni volta che si modifica un modello.
-
-### <a name="to-update-templates-for-exchange-online"></a>Per aggiornare i modelli per Exchange Online
-
-1.  Usando Windows PowerShell in Exchange Online, connettersi al servizio:
-
-    1.  Fornire il nome utente di Office 365 e la password:
-
-        ```
-        $UserCredential = Get-Credential
-        ```
-
-    2.  Connettersi al servizio Exchange Online eseguendo i due comandi seguenti:
-
-        ```
-        $Session = New-PSSession -ConfigurationName Microsoft.Exchange -ConnectionUri https://outlook.office365.com/powershell-liveid/ -Credential $UserCredential -Authentication Basic -AllowRedirection
-        ```
-
-        ```
-        Import-PSSession $Session
-        ```
-
-2.  Usare il cmdlet [Import-RMSTrustedPublishingDomain](http://technet.microsoft.com/library/jj200724%28v=exchg.160%29.aspx) per reimportare il dominio di pubblicazione trusted da Azure RMS:
-
-    ```
-    Import-RMSTrustedPublishingDomain -Name "<TPD name>" -RefreshTemplates -RMSOnline
-    ```
-    Ad esempio, se il nome del dominio di pubblicazione trusted è **RMS Online - 1** (un nome tipico per molte organizzazioni), immettere: **Import-RMSTrustedPublishingDomain -Name "RMS Online - 1" -RefreshTemplates -RMSOnline**
-
-    > [!NOTE]
-    > Per verificare il nome del dominio di pubblicazione trusted, è possibile usare il cmdlet [Get-RMSTrustedPublishingDomain](http://technet.microsoft.com/library/jj200707%28v=exchg.160%29.aspx) .
-
-3.  Per verificare che i modelli siano stati importati correttamente, attendere alcuni minuti, quindi eseguire il cmdlet [Get-RMSTemplate](http://technet.microsoft.com/library/dd297960%28v=exchg.160%29.aspx) e impostare Type su All. Ad esempio:
-
-    ```
-    Get-RMSTemplate -TrustedPublishingDomain "RMS Online - 1" -Type All
-    ```
-    > [!TIP]
-    > È utile conservare una copia dell'output affinché sia possibile copiare facilmente i nomi di modello o GUID se si archivia un modello in un secondo momento.
-
-4.  Per ogni modello importato da rendere disponibile in Outlook Web App è necessario usare il cmdlet [Set-RMSTemplate](http://technet.microsoft.com/library/hh529923%28v=exchg.160%29.aspx) e impostare Type su Distributed:
-
-    ```
-    Set-RMSTemplate -Identity "<name  or GUID of the template>" -Type Distributed
-    ```
-    Poiché Outlook Web Access memorizza nella cache l'interfaccia utente per 24 ore, gli utenti potrebbero non vedere il nuovo modello per un intervallo di tempo che può raggiungere un giorno.
-
-Inoltre, se si archivia un modello (personalizzato o predefinito) e si usa Exchange Online con Office 365, gli utenti continueranno a vedere i modelli archiviati se si avvalgono di Outlook Web App o di dispositivi mobili che usano il protocollo Exchange ActiveSync.
-
-Per impedire agli utenti di visualizzare questi modelli, connettersi al servizio mediante Windows PowerShell in Exchange Online, quindi usare il cmdlet [Set-RMSTemplate](http://technet.microsoft.com/library/hh529923%28v=exchg.160%29.aspx) eseguendo il comando seguente:
-
-```
-Set-RMSTemplate -Identity "<name or GUID of the template>" -Type Archived
-```
 
 ## <a name="office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template"></a>Office 2016, Office 2013 e applicazione RMS sharing per Windows: come forzare un aggiornamento per un modello personalizzato modificato
 Modificando il Registro di sistema nei computer che eseguono Office 2016, Office 2013 o l'applicazione Rights Management (RMS) sharing per Windows, è possibile modificare la pianificazione automatica in modo che i modelli modificati vengano aggiornati nei computer più frequentemente rispetto al relativo valore predefinito. È inoltre possibile forzare un aggiornamento immediato eliminando i dati esistenti in un valore del Registro di sistema.
@@ -142,10 +81,10 @@ Modificando il Registro di sistema nei computer che eseguono Office 2016, Office
 
     > 1.  Eseguire il cmdlet [Get-AadrmConfiguration](https://msdn.microsoft.com/library/windowsazure/dn629410.aspx) per Azure RMS. Se non è stato ancora installato il modulo di Windows PowerShell per Azure RMS, vedere [Installazione di Windows PowerShell per Azure Rights Management](install-powershell.md).
     > 2.  Nell'output identificare il valore **LicensingIntranetDistributionPointUrl** .
-    > 
+    >
     >     Ad esempio: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
     > 3.  In questo valore rimuovere **https://** e **/_wmcs/licensing** da questa stringa. Il valore rimanente è l’FQDN del servizio Microsoft RMS. Nell'esempio, il valore dell'FQDN di Microsoft RMS è il seguente:
-    > 
+    >
     >     **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
 2.  Eliminare la cartella seguente e tutti i file in essa contenuti: **%localappdata%\Microsoft\MSIPC\Templates**

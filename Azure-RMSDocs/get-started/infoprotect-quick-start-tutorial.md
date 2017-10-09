@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 34a20c3e83b2d3d6fde15d1226535ccb90431126
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: c851eb1ecf1551caee1ab2a6aac6f05c550cb96b
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Esercitazione introduttiva di Azure Information Protection 
 
@@ -36,7 +36,7 @@ Per completare questa esercitazione è necessario quanto segue:
   > [!TIP] 
   > Se è necessario richiedere una sottoscrizione, eseguire questa operazione in anticipo perché talvolta il processo può richiedere tempo.
 
-- Un account di amministratore globale o un account di amministratore della sicurezza per accedere al portale di Azure e configurare i criteri di Azure Information Protection. Questo account deve avere inoltre un indirizzo di posta elettronica e un servizio di posta elettronica funzionante, ad esempio Exchange Online.
+- Un account di amministratore globale o un account di amministratore della sicurezza per accedere al portale di Azure, attivare la protezione e configurare i criteri di Azure Information Protection. Questo account deve avere inoltre un indirizzo di posta elettronica e un servizio di posta elettronica funzionante, ad esempio Exchange Online.
 
 - Un computer che esegue Windows (almeno Windows 7 con Service Pack 1) e in cui è installato Office 365 ProPlus con le app di Office 2016 o 2013, Office Professional Plus 2016, Office Professional Plus 2013 con Service Pack 1 o Office Professional Plus 2010 con Service Pack 2. 
     

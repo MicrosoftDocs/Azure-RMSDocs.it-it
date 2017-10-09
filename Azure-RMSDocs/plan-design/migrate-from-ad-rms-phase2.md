@@ -4,7 +4,7 @@ description: Fase 2 della migrazione da AD RMS ad Azure Information Protection, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/19/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3274cb1ddd457647159034b955c47e9ab775f00c
-ms.sourcegitcommit: f7ef0f040ae4af4bf1283ebcb0750b65b6939313
+ms.openlocfilehash: db8f8de9cdda00f5983ff448aa895a5767d953b1
+ms.sourcegitcommit: dd567f8395bb55e4ca174ef1d72b1a14cf7735e1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/20/2017
+ms.lasthandoff: 09/29/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 della migrazione: configurazione lato server per AD RMS
 
@@ -75,10 +75,7 @@ La distribuzione corrente di AD RMS usa una delle seguenti configurazioni per la
 > [!NOTE]
 > Per altre informazioni sull'uso di moduli di protezione hardware con AD RMS, vedere [Uso di AD RMS con moduli di protezione hardware](http://technet.microsoft.com/library/jj651024.aspx).
 
-Per la topologia della chiave del tenant di Azure Information Protection esistono due opzioni: la chiave viene gestita da Microsoft (**gestione di Microsoft**) oppure dall'utente (**gestione del cliente**) in Insieme di credenziali delle chiavi di Azure. Quando la chiave del tenant di Azure Information Protection è gestita dall'utente, viene a volte definita BYOK (Bring Your Own Key) e richiede un modulo di protezione hardware di Thales. Per altre informazioni, vedere l'articolo [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md).
-
-> [!IMPORTANT]
-> Exchange Online non è attualmente compatibile con la modalità BYOK in Azure Information Protection. Se si vuole usare la modalità BYOK dopo la migrazione e si prevede di usare Exchange Online, verificare come questa configurazione riduce la funzionalità IRM per Exchange Online. Rivedere le informazioni fornite in [Prezzi e restrizioni della modalità BYOK](byok-price-restrictions.md) per poter scegliere la migliore topologia di chiave del tenant di Azure Information Protection per la migrazione.
+Per la topologia della chiave del tenant di Azure Information Protection esistono due opzioni: la chiave viene gestita da Microsoft (**gestione di Microsoft**) oppure dall'utente (**gestione del cliente**) in Insieme di credenziali delle chiavi di Azure. Quando la chiave del tenant di Azure Information Protection è gestita dall'utente, viene a volte definita BYOK (Bring Your Own Key). Per altre informazioni, vedere l'articolo [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md).
 
 Usare la tabella seguente per identificare la procedura da eseguire per la migrazione. 
 

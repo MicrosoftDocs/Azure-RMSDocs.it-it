@@ -4,7 +4,7 @@ description: Informazioni su come le applicazioni di Office, come Word e Outlook
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2017
+ms.date: 09/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ede24547a01bc38e528ce02dac9abe0ade396c2d
-ms.sourcegitcommit: 6636defa6eca24360f15fb9ef93c2b82dc36cf76
+ms.openlocfilehash: eb40f6d2b43f175af71fd58b3bef4eb3d992152b
+ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/28/2017
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Informazioni su come le applicazioni e i servizi di Office supportano Azure Rights Management 
 
@@ -50,7 +50,7 @@ Quando si usa Exchange Online o Exchange Server è possibile configurare le opzi
 
 -   **Criteri di prevenzione della perdita dei dati** che contengono set di condizioni per filtrare i messaggi di posta elettronica e intraprendere azioni per prevenire la perdita di dati nel caso di informazioni riservate o sensibili, ad esempio quelle personali o correlate alla carta di credito. Quando si rilevano dati sensibili, è possibile usare i suggerimenti relativi ai criteri per avvertire gli utenti che potrebbe essere necessario applicare la protezione. Per altre informazioni, vedere [Prevenzione della perdita dei dati](https://technet.microsoft.com/library/jj150527(v=exchg.160\).aspx) nella libreria di Exchange.
 
--   **Crittografia dei messaggi di Office 365** che usa regole di trasporto per inviare messaggi di posta elettronica crittografati a persone all'esterno dell'organizzazione e che comporta la lettura del messaggio in un browser con un'interfaccia analoga ad Outlook sul Web. Nei messaggi e-mail crittografati della società è possibile personalizzare il testo della dichiarazione di non responsabilità e dell'intestazione nonché aggiungere il logo della società. Per altre informazioni, vedere [Crittografia messaggi di Office 365](https://office.microsoft.com/o365-message-encryption-FX104179182.aspx) nel sito Web di Office.
+-   **Office 365 Message Encryption** che supporta l'invio di un messaggio di posta elettronica protetto e di documenti di Office protetti come allegati a qualsiasi indirizzo in un dispositivo qualunque. Per gli account utente che non usano Azure AD. Questa esperienza Web supporta i provider di identità basati su social network e un passcode monouso. Per altre informazioni, vedere [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) (Impostare le nuove funzionalità di Office 365 Message Encryption basate su Azure Information Protection).
 
 Se si usa Exchange locale, è possibile usare le funzionalità IRM con il servizio di Azure Rights Management tramite la distribuzione del connettore Azure Rights Management. Il connettore funziona come un relè tra i server locali e il servizio di Azure Rights Management.
 

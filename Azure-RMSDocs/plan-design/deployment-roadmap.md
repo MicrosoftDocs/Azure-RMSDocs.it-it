@@ -4,7 +4,7 @@ description: Per preparare l'ambiente e per implementare e gestire Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 09/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fabb31e2945b47cda688129d7ecd7cc3c26fd802
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 2a3e9eec089999d6ef2ab6fbb738260be23f6bb8
+ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/23/2017
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Guida di orientamento per la distribuzione di Azure Information Protection
 
@@ -78,7 +78,7 @@ In questa fase, non selezionare l'opzione per proteggere documenti e messaggi di
 
 Quando gli utenti sono in grado di assegnare etichette ai documenti e ai messaggi di posta elettronica, si è pronti per iniziare a introdurre la protezione dei dati più sensibili. Questa fase richiede le attività di preparazione seguenti per il servizio Azure Rights Management:
 
-1. Decidere se si desidera che Microsoft gestisca la chiave del tenant (impostazione predefinita) oppure generare e gestire personalmente la chiave del tenant. Questo servizio è noto come BYOK (Bring Your Own Key). Si noti che attualmente non è possibile usare il servizio BYOK se si usa Exchange Online. Per altre informazioni, vedere [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md).
+1. Decidere se si desidera che Microsoft gestisca la chiave del tenant (impostazione predefinita) oppure generare e gestire personalmente la chiave del tenant. Questo servizio è noto come BYOK (Bring Your Own Key). Per altre informazioni, vedere [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md).
 
 2. Installare il modulo di Windows PowerShell per [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] in almeno un computer dotato di accesso a Internet. È possibile eseguire questo passaggio subito o più avanti. Per altre informazioni, vedere [Installazione di Windows PowerShell per il servizio Azure Rights Management](../deploy-use/install-powershell.md).
 
@@ -98,9 +98,9 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
     
     Modificare i criteri di Azure Information Protection in modo da usare una o più etichette per applicare la protezione di Rights Management. Per altre informazioni, vedere [Come configurare un'etichetta per la protezione di Rights Management](../deploy-use/configure-policy-protection.md).
     
-    Si noti che in Outlook gli utenti possono applicare etichette per attivare la protezione di Rights Management anche se Exchange non è configurato per i servizi Information Rights Management (IRM). Tuttavia, fino a quando Exchange non sarà configurato per IRM, l'organizzazione non potrà usufruire della funzionalità completa della protezione di Rights Management di Azure con Exchange. Questa configurazione aggiuntiva è inclusa nell'elenco seguente, 2 per Exchange Online e 5 per Exchange locale. 
+    Si noti che in Outlook gli utenti possono applicare etichette per attivare la protezione di Rights Management anche se Exchange non è configurato per i servizi Information Rights Management (IRM). Tuttavia, finché Exchange non sarà configurato per IRM o per [Office 365 Message Encryption con nuove funzionalità](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), l'organizzazione non potrà usufruire in modo completo della protezione di Azure Rights Management con Exchange. Questa configurazione aggiuntiva è inclusa nell'elenco seguente, 2 per Exchange Online e 5 per Exchange locale. 
 
-2. Configurare le applicazioni e i servizi di Office per IRM
+2. Configurare le applicazioni e i servizi di Office
     
     Configurare le applicazioni e i servizi di Office per le funzionalità di IRM (Information Rights Management) in SharePoint Online o Exchange Online. Per ulteriori informazioni, vedere [Configurazione delle applicazioni per Azure Rights Management](../deploy-use/configure-applications.md).
 
@@ -144,7 +144,7 @@ Prima di iniziare a usare [!INCLUDE[aad_rightsmanagement_2](../includes/aad_righ
 
 1.  Verificare che il tenant di Office 365 contenga gli account utente e i gruppi che Azure Information Protection dovrà usare per autenticare gli utenti dell'organizzazione. Se necessario, creare questi account e gruppi o sincronizzarli dalla directory locale. Per altre informazioni, vedere [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md).
 
-2. Decidere se si desidera che Microsoft gestisca la chiave del tenant (impostazione predefinita) oppure generare e gestire personalmente la chiave del tenant. Questo servizio è noto come BYOK (Bring Your Own Key). Si noti che attualmente non è possibile usare il servizio BYOK se si usa Exchange Online. Per altre informazioni, vedere [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md).
+2. Decidere se si desidera che Microsoft gestisca la chiave del tenant (impostazione predefinita) oppure generare e gestire personalmente la chiave del tenant. Questo servizio è noto come BYOK (Bring Your Own Key). Per altre informazioni, vedere [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md).
 
 3. Installare il modulo di Windows PowerShell per [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] in almeno un computer dotato di accesso a Internet. È possibile eseguire questo passaggio subito o più avanti. Per ulteriori informazioni, vedere [Installazione di Windows PowerShell per Azure Rights Management](../deploy-use/install-powershell.md).
 
@@ -156,7 +156,7 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
 
 -   Modelli personalizzati se i modelli predefiniti non sono sufficienti per l'organizzazione. È possibile eseguire questo passaggio subito o più avanti. Per altre informazioni, vedere [Configurazione e gestione dei modelli per Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
--   Registrazione dei dati di utilizzo per monitorare le modalità con cui l'organizzazione usa Rights Management. È possibile eseguire questo passaggio subito o più avanti. Per altre informazioni, vedere [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](../deploy-use/log-analyze-usage.md).
+- Registrazione dei dati di utilizzo per monitorare le modalità con cui l'organizzazione usa Rights Management. È possibile eseguire questo passaggio subito o più avanti. Per altre informazioni, vedere [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](../deploy-use/log-analyze-usage.md).
 
 ### <a name="step-3-install-the-client-and-configure-applications-and-services-for-rights-management"></a>Passaggio 3: Installare il client e configurare le applicazioni e i servizi per Rights Management
 
@@ -164,7 +164,7 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
     
     Installare Azure Information Protection per gli utenti, per supportare Office 2010, per proteggere file diversi dai messaggi di posta elettronica e dai documenti di Office e per tenere traccia dei documenti protetti. Fornire agli utenti istruzioni per l'uso di questo client. Per altre informazioni, vedere [Client Azure Information Protection per Windows](../rms-client/aip-client.md).
 
-2. Configurare le applicazioni e i servizi di Office per IRM
+2. Configurare le applicazioni e i servizi di Office
     
     Configurare le applicazioni e i servizi di Office per le funzionalità di IRM (Information Rights Management) in SharePoint Online o Exchange Online. Per ulteriori informazioni, vedere [Configurazione delle applicazioni per Azure Rights Management](../deploy-use/configure-applications.md).
 

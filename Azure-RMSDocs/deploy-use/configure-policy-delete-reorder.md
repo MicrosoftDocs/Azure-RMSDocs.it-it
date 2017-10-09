@@ -4,27 +4,39 @@ description: "È possibile eliminare o riordinare le etichette mostrate sulla ba
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/23/2017
+ms.date: 09/26/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: 2d11eb649ecec835d2ddf0045d8672c5b45af95f
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: f17e149dcd8cfb7398909cbe3a83cdcf71b80b33
+ms.sourcegitcommit: 2bca892231ca8393b88bd5da7d0890a573770a09
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 10/03/2017
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Come eliminare o riordinare un'etichetta per Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
 
-È possibile eliminare o riordinare le etichette mostrate sulla barra Information Protection configurandole nel criterio di Azure Information Protection.
+È possibile eliminare o riordinare le etichette visualizzate sulla barra Information Protection selezionando le azioni nei criteri di Azure Information Protection.
 
 ![Eliminare o riordinare le etichette nel criterio di Azure Information Protection](../media/info-protect-contextmenu.png)
 
 Quando si elimina un'etichetta che è stata applicata a documenti e messaggi di posta elettronica e si pubblica il criterio di Azure Information Protection, l'etichetta viene rimossa automaticamente dai documenti o messaggi di posta elettronica quando vengono successivamente aperti dal client Azure Information Protection.
+
+Tuttavia, nel caso di un'etichetta per l'applicazione della protezione, la protezione non viene rimossa. Le impostazioni di protezione dall'etichetta vengono mantenute e visualizzate nei **modelli di protezione**. Il modello può essere ora convertito in una nuova etichetta o collegato a un'etichetta. Sebbene il modello venga mantenuto, non è possibile creare una nuova etichetta con lo stesso nome dell'etichetta eliminata. Se si vuole eseguire questa operazione, sono disponibili le opzioni seguenti:
+
+- Convertire il modello in un'etichetta. 
+    
+    Questa azione è consigliata perché, se necessario, è possibile cambiare il nome del modello e modificare le impostazioni di protezione.
+
+- Usare PowerShell per rinominare il modello o eliminarlo.
+    
+    Prima di eseguire questa azione, valutare se altri amministratori o servizi usano il modello e lo identificano con il nome corrente. Eliminare un modello solo se non è necessario aprire documenti o messaggi di posta elettronica protetti dal modello.
+
+Per altre informazioni sulla gestione dei modelli di protezione, vedere [Configurazione e gestione dei modelli per Azure Information Protection](configure-policy-templates.md).
 
 Prima di eliminare un'etichetta, valutarne la disabilitazione in alternativa. Quando si disabilita un'etichetta applicata a documenti e messaggi di posta elettronica, l'etichetta applicata non verrà rimossa da questi documenti e messaggi di posta elettronica, ma non sarà più visualizzata come etichetta selezionabile dagli utenti nella barra di Information Protection. La disabilitazione di un'etichetta consente anche di mantenere la configurazione originale nel caso si voglia consentire agli utenti di selezionare l'etichetta in un secondo momento, quando sarà sufficiente riabilitarla.
 
