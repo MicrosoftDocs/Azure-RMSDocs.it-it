@@ -4,7 +4,7 @@ description: Dettagli tecnici sui tipi di file supportati, le estensioni di file
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/03/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9db73573eb6ccb6ab5f09d926e395a31f94404ea
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 5a3d13861e3eff0cfaf4a92eb005b8192f2b447c
+ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/04/2017
 ---
 # <a name="file-types-supported-by-the-azure-information-protection-client"></a>Tipi di file supportati dal client Azure Information Protection
 
@@ -176,6 +176,22 @@ Per impedire agli utenti di modificare file critici per il funzionamento del com
     - Programmi (\Programmi e \Programmi (x86))
     - ProgramData 
     - \AppData (per tutti gli utenti)
+
+### <a name="files-that-cannot-be-protected-by-default"></a>File che non possono essere protetti per impostazione predefinita
+
+I file protetti da password non possono essere protetti in modo nativo dal client di Azure Information Protection. Spesso sono i file con estensione pdf ad essere protetti da password, ma anche altre applicazioni, come ad esempio le app di Office,offrono questa funzionalità.
+
+Non è possibile proteggere, o annullare la protezione, di file con estensione pdf con il client di Azure Information Protection per Windows anche nei casi seguenti:
+
+- File PDF basato su modulo.
+
+- File PDF protetto con estensione pdf. 
+    
+    Il client di Azure Information Protection può proteggere un file PDF non protetto e proteggere nuovamente un file PDF protetto con estensione ppdf.
+
+Come soluzione alternativa per questi file, è possibile abilitare la protezione generica seguendo le istruzioni della sezione [Modifica del livello di protezione predefinito dei file](#changing-the-default-protection-level-of-files). Tuttavia, questo metodo modifica il livello di protezione per tutti i file con estensione pdf, a livello di computer. Non è possibile definire la protezione generica solo per i file che soddisfano i criteri elencati.
+
+Se la protezione di tali file è importante, è possibile copiarli temporaneamente in un altro computer per la protezione generica e quindi copiarli nuovamente nel computer di origine.
 
 
 ## <a name="next-steps"></a>Passaggi successivi
