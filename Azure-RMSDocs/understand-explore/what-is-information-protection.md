@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 1564f6dc0a21017151254b1ae1fab1586761e766
-ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
+ms.openlocfilehash: 1cbbad16590bde0fa6278764fe9351b1a4e0b996
+ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/10/2017
 ---
 # <a name="what-is-azure-information-protection"></a>Che cos'è Azure Information Protection?
 
@@ -88,6 +88,8 @@ Quando un documento viene protetto, utenti e amministratori possono usare un sit
 
 - Download del client: [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) (Client di Azure Information Protection)
 
+- Download di un manuale dell'utente personalizzabile: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Manuale d'uso di Azure Information Protection per utenti finali)
+
 - Domande frequenti: [Domande frequenti su Azure Information Protection](../get-started/faqs.md)
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all)
@@ -102,6 +104,8 @@ Quando un documento viene protetto, utenti e amministratori possono usare un sit
 - [Accelerate Azure information protection deployment and adoption](https://myignite.microsoft.com/videos/53454) (Velocizzare l'adozione e la distribuzione di Azure Information Protection)
 
 - [Discover what’s new in Azure Information Protection and learn about the roadmap and strategy](https://myignite.microsoft.com/videos/53453) (Novità in Azure Information Protection e informazioni su guida di orientamento e strategia)
+
+- [Encryption key management strategies for compliance](https://myignite.microsoft.com/videos/53455) (Strategie di gestione delle chiavi di crittografia per la conformità)
 
 - [Protect and control your sensitive emails with new Office 365 Message Encryption capabilities](https://myignite.microsoft.com/videos/53230) (Proteggere e controllare i messaggi di posta elettronica riservati con le nuove funzionalità di Office 365 Message Encryption)
 

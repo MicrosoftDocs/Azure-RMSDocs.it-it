@@ -4,7 +4,7 @@ description: Fase 3 della migrazione da AD RMS ad Azure Information Protection, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/22/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 35bd2d176cb71c54a489d4f4b8faca4d668a7867
-ms.sourcegitcommit: c960f1d2140dea11e54cbeb37d53d1512621d90c
+ms.openlocfilehash: 5de30d095e1c279babb8f8be74a5a9b9d54db204
+ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Fase 3 della migrazione: configurazione lato client
 
@@ -24,33 +24,47 @@ ms.lasthandoff: 08/23/2017
 
 Usare le informazioni seguenti per la fase 3 della migrazione da AD RMS ad Azure Information Protection. Queste procedure illustrano il passaggio 7 della [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-## <a name="step-7-reconfigure-clients-to-use-azure-information-protection"></a>Passaggio 7. Riconfigurare i client per l'uso di Azure Information Protection
+## <a name="step-7-reconfigure-windows-computers-to-use-azure-information-protection"></a>Passaggio 7. Riconfigurare i computer Windows per usare Azure Information Protection
 
-Per i client di dispositivi mobili e i computer Mac:
+Usare due script di migrazione per riconfigurare i client AD RMS in computer Windows:
 
-- Rimuovere i record SRV in DNS creati al momento della distribuzione dell' [estensione per dispositivo mobile di AD RMS](http://technet.microsoft.com/library/dn673574.aspx).
+- Migrate-Client.cmd
 
-Per i client Windows:
+- Migrate-User.cmd
 
-- Usare gli script di migrazione seguenti per riconfigurare i client AD RMS. Gli script reimpostano la configurazione nei computer Windows in modo che usino il servizio Azure Rights Management anziché AD RMS: 
-    
-    **CleanUpRMS.cmd**
-    
-    - Elimina il contenuto di tutte le cartelle e le chiavi del Registro di sistema usate dal client AD RMS per archiviare la configurazione. Queste informazioni includono il percorso del cluster AD RMS del client.
-    
-    **MigrateClient.cmd**
-    
-    - Configura il client per inizializzare l'ambiente utente (bootstrap) per il servizio di Azure Rights Management.
-    
-    - Configura il client per connettersi al servizio Azure Rights Management per ottenere licenze d'uso per il contenuto protetto dal cluster AD RMS. 
+Lo script di configurazione client (Migrate-Client.cmd) configura le impostazioni a livello di computer nel Registro di sistema. Deve pertanto essere eseguito in un contesto di protezione che consenta di apportare modifiche di questo genere. È quindi solitamente necessario seguire questi metodi:
+
+- Usare Criteri di gruppo per eseguire lo script come script di avvio del computer.
+
+- Usare Criteri di gruppo Installazione software per assegnare lo script al computer.
+
+- Usare una soluzione di distribuzione software per distribuire lo script nei computer. Usare ad esempio i [pacchetti e programmi](/sccm/apps/deploy-use/packages-and-programs) in System Center Configuration Manager. In **Modalità esecuzione** nelle proprietà del pacchetto e del programma specificare che lo script viene eseguito con autorizzazioni amministrative nel dispositivo. 
+
+- Se l'utente dispone di privilegi di amministratore locale, usare uno script di accesso.
+
+Lo script di configurazione utente (Migrate-User.cmd) configura le impostazioni a livello utente e pulisce l'archivio licenze client. È quindi necessario eseguire questo script nel contesto dell'utente effettivo. Ad esempio:
+
+- Usare uno script di accesso.
+
+- Usare Criteri di gruppo Installazione software per pubblicare lo script che l'utente deve eseguire.
+
+- Usare una soluzione di distribuzione software per distribuire lo script agli utenti. Usare ad esempio i [pacchetti e programmi](/sccm/apps/deploy-use/packages-and-programs) in System Center Configuration Manager. In **Modalità esecuzione** nelle proprietà del pacchetto e del programma specificare che lo script viene eseguito con le autorizzazioni dell'utente. 
+
+- Chiedere all'utente di eseguire lo script dopo aver eseguito l'accesso al computer.
+
+I due script includono un numero di versione e non vengono rieseguiti fino a quando il numero di versione viene modificato. Ciò significa che è possibile lasciare gli script presenti fino a quando la migrazione non è stata completata. Se invece gli script vengono modificati e si vuole che i computer e gli utenti li rieseguano nei computer Windows, aggiornare la riga seguente nei due script incrementando il valore:
+
+    SET Version=20170427
+
+Lo script di configurazione utente è progettato per essere eseguito dopo lo script di configurazione client e usa il numero di versione specificato in questo controllo. Si interrompe se lo script di configurazione client con lo stesso numero di versione non è stato eseguito. Con questo controllo si verifica che i due script siano eseguiti nella sequenza corretta. 
 
 Se non è possibile migrare tutti i client di Windows in una sola volta, eseguire le procedure seguenti per batch di client. Per ogni utente che ha un computer Windows per cui si vuole eseguire la migrazione in batch, aggiungere l'utente al gruppo **AIPMigrated** creato in precedenza.
 
 ### <a name="windows-client-reconfiguration-by-using-registry-edits"></a>Riconfigurazione di client di Windows tramite modifiche del Registro di sistema
 
-1. Ritornare agli script di migrazione **CleanUpRMS.cmd** e **MigrateClient.cmd** estratti in precedenza.
+1. Tornare agli script di migrazione **Migrate-Client.cmd** e **Migrate-User.cmd** che sono stati precedentemente estratti durante il download di questi script nella [fase di preparazione](migrate-from-ad-rms-phase1.md#step-2-prepare-for-client-migration).
 
-2.  Seguire le istruzioni in **MigrateClient.cmd** per modificare lo script in modo che contenga l'URL del servizio Azure Rights Management del tenant, e anche i nomi dell'URL di gestione licenze Extranet del cluster AD RMS e dell'URL di gestione licenze intranet.
+2.  Seguire le istruzioni in **Migrate-Client.cmd** per modificare lo script in modo che contenga l'URL del servizio Azure Rights Management del tenant e i nomi server dell'URL di gestione licenze Extranet del cluster AD RMS e dell'URL di gestione licenze Intranet. A questo punto incrementare la versione dello script, come spiegato in precedenza. Per tener traccia delle versioni degli script, è consigliabile usare la data corrente nel formato seguente: AAAAMMGG
 
     > [!IMPORTANT]
     > Come in precedenza, prestare attenzione a non introdurre spazi aggiuntivi prima o dopo gli indirizzi.
@@ -59,7 +73,7 @@ Se non è possibile migrare tutti i client di Windows in una sola volta, eseguir
 
     Se è necessario recuperare l'URL del servizio Azure Rights Management per *&lt;URL tenant&gt;*, vedere nelle sezioni precedenti l'argomento [Per identificare l'URL del servizio Azure Rights Management](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 
-3.  Eseguire **CleanUpRMS.cmd** e poi **MigrateClient.cmd** nei computer Windows client usati dai membri del gruppo **AIPMigrated**. Ad esempio, creare un oggetto Criteri di gruppo che esegue questi script e lo assegna a questo gruppo di utenti.
+3. Seguendo le istruzioni all'inizio di questo passaggio, configurare i metodi di distribuzione script per eseguire **Migrate-Client.cmd** e **Migrate-User.cmd** nei computer client Windows che vengono usati dai membri del gruppo AIPMigrated. 
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per continuare la migrazione, passare a [Fase 4: configurazione di servizi di supporto](migrate-from-ad-rms-phase3.md).
