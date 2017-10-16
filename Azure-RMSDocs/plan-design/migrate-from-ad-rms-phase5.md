@@ -4,7 +4,7 @@ description: Fase 5 della migrazione da AD RMS ad Azure Information Protection c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/24/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 11775c64cbd5abd7c10a145a2d48f335db2d5b69
-ms.sourcegitcommit: 8251e4db274519a2eb8033d3135a22c27130bd30
+ms.openlocfilehash: db6cb1c6327808616ee98b9e5b14f2a92a590bff
+ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Fase 5 della migrazione: attività post-migrazione
 
@@ -48,11 +48,35 @@ Dopo aver effettuato il deprovisioning dei server AD RMS, è anche possibile esa
 >[!IMPORTANT]
 > Alla fine della migrazione, il cluster AD RMS non può essere usato con Azure Information Protection e con l'opzione HYOK (Hold Your Own Key). Se si decide di usare l'opzione HYOK per un'etichetta di Azure Information Protection, a causa dei reindirizzamenti ora disponibili, il cluster AD RMS in uso deve avere vari URL di gestione licenze per quelli nei cluster migrati.
 
-## <a name="step-11-remove-onboarding-controls"></a>Passaggio 11. Rimuovere i controlli di onboarding
+## <a name="step-11-reconfigure-mobile-device-clients-and-mac-computers-and-remove-onboarding-controls"></a>Passaggio 11. Riconfigurare i client dispositivo mobile e i computer Mac e rimuovere i controlli di onboarding
 
-Dopo che tutti i client esistenti sono stati migrati ad Azure Information Protection, non c'è nessun motivo per continuare a usare i controlli di onboarding e mantenere il gruppo **AIPMigrated** creato per il processo di migrazione. 
+Per client dispositivo mobili e computer MAC: rimuovere i record DNS SRV creati al momento della distribuzione dell'[estensione per dispositivo mobile di AD RMS](http://technet.microsoft.com/library/dn673574.aspx).
 
-Rimuovere prima i controlli di onboarding e quindi eliminare il gruppo **AIPMigrated** e qualsiasi attività di distribuzione software creata per distribuire i reindirizzamenti.
+Dopo che queste modifiche DNS sono state propagate, questi client individueranno e inizieranno a usare automaticamente il servizio Azure Rights Management. I computer Mac che eseguono Mac Office memorizzano invece le informazioni nella cache di AD RMS. Per questi computer, questo processo può durare fino a 30 giorni. 
+
+Per forzare i computer Mac a eseguire immediatamente il processo di individuazione, cercare "adal" nel keychain ed eliminare tutte le voci ADAL. Eseguire poi i comandi seguenti in questi computer:
+
+````
+
+rm -r ~/Library/Cache/MSRightsManagement
+
+rm -r ~/Library/Caches/com.microsoft.RMS-XPCService
+
+rm -r ~/Library/Caches/Microsoft\ Rights\ Management\ Services
+
+rm -r ~/Library/Containers/com.microsoft.RMS-XPCService
+
+rm -r ~/Library/Containers/com.microsoft.RMSTestApp
+
+rm ~/Library/Group\ Containers/UBF8T346G9.Office/DRM.plist
+
+killall cfprefsd
+
+````
+
+Dopo che tutti i computer Windows esistenti sono stati migrati in Azure Information Protection, non c'è nessun motivo per continuare a usare i controlli di onboarding e mantenere il gruppo **AIPMigrated** creato per il processo di migrazione. 
+
+Rimuovere prima i controlli di onboarding ed eliminare poi il gruppo **AIPMigrated** e qualsiasi metodo di distribuzione software creato per distribuire gli script di migrazione.
 
 Per rimuovere i controlli di onboarding:
 
@@ -63,6 +87,8 @@ Per rimuovere i controlli di onboarding:
 2. Eseguire il comando seguente e immettere **Y** per confermare:
 
         Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
+    
+    Si noti che questo comando rimuove qualsiasi applicazione della licenza per il servizio di protezione Azure Rights Management, in modo che tutti i computer possano proteggere documenti e messaggi di posta elettronica.
 
 3. Verificare che i controlli di selezione non siano più impostati:
 

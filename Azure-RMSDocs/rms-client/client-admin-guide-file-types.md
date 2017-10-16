@@ -4,7 +4,7 @@ description: Dettagli tecnici sui tipi di file supportati, le estensioni di file
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/03/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5a3d13861e3eff0cfaf4a92eb005b8192f2b447c
-ms.sourcegitcommit: 4d730631ea8c16c7150b794722bb23921f1b2008
+ms.openlocfilehash: 0bd9bbdc6b29e8cd9497712dddb7205f3d8372b1
+ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/11/2017
 ---
 # <a name="file-types-supported-by-the-azure-information-protection-client"></a>Tipi di file supportati dal client Azure Information Protection
 
@@ -34,7 +34,7 @@ Usare le informazioni seguenti per verificare quali tipi di file sono supportati
 
 ## <a name="file-types-supported-for-classification-only"></a>Tipi di file supportati solo per la classificazione
 
-Per i tipi di file seguenti è supportata solo la classificazione. Altri tipi di file supportano la classificazione se sono anche protetti. Vedere la sezione [Tipi di file supportati per la classificazione e la protezione](#supported-file-types-for-classification-and-protection).
+I tipi di file seguenti possono essere classificati anche se non sono protetti.
 
 - **Adobe Portable Document Format**: .pdf
 
@@ -45,15 +45,22 @@ Per i tipi di file seguenti è supportata solo la classificazione. Altri tipi di
 - **Microsoft Publisher**: .pub
 
 - **Microsoft Office 97, Office 2010, Office 2003**: .xls, .xlt, .doc, .dot, .ppt, .pps, .pot
+
 - **Microsoft XPS**: .xps .oxps
 
-- **Immagini**: .jpg, .jpe, .jpeg, .jif, .jfif, .jfi.png, .tif, .tiff
+- **Immagini**: con estensione jpg, jpe, jpeg, jif, jfif, jfi, png, tif e tiff
 
 - **Autodesk Design Review 2013**: .dwfx
 
 - **Adobe Photoshop**: .psd
 
 - **Digital Negative**: .dng
+
+Tipi di file aggiuntivi supportano la classificazione anche quando sono protetti. Per altre informazioni su questi file, vedere la sezione [Tipi di file supportati per la classificazione e la protezione](#supported-file-types-for-classification-and-protection).
+
+Ad esempio, nei [criteri predefiniti](../deploy-use/configure-policy-default.md) correnti l'etichetta **Generale** si applica alla classificazione e non alla protezione. È possibile applicare l'etichetta **Generale** a un file denominato sales.pdf, ma non a un file denominato sales.txt. 
+
+Anche nei criteri predefiniti correnti l'etichetta **Riservato \ Tutti i dipendenti** si applica a classificazione e protezione. È possibile applicare questa etichetta a un file denominato sales.pdf, ma non a un file denominato sales.txt. È possibile applicare solo la protezione a questi file, senza applicare la classificazione.
 
 ## <a name="file-types-supported-for-protection"></a>Tipi di file supportati per la protezione
 
@@ -108,13 +115,15 @@ Questi tipi di file vengono identificati separatamente perché quando sono prote
 |.jfif|.pjfif|
 |.jt|.pjt|
 
+
 La tabella successiva elenca i rimanenti tipi di file che supportano la protezione nativa in base al client di Azure Information Protection e che possono anche essere classificati. Questi sono riconoscibili come tipi di file delle app di Microsoft Office. 
 
 Per questi file, l'estensione del nome di file rimane invariata dopo che il file è stato protetto da un servizio Rights Management.
 
 |Tipi di file supportati da Office|Tipi di file supportati da Office|
 |----------------------------------|----------------------------------|
-|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm|.pptx<br /><br />.thmx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
+|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.pptx<br /><br />.thmx|.vsdm<br /><br />.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
+
 
 ### <a name="changing-the-default-protection-level-of-files"></a>Modifica del livello di protezione predefinito dei file
 È possibile modificare il modo in cui il client Azure Information Protection protegge i file modificando il Registro di sistema. Ad esempio, è possibile forzare la protezione generica da parte del client Azure Information Protection per i file che supportano la protezione nativa.
@@ -181,15 +190,15 @@ Per impedire agli utenti di modificare file critici per il funzionamento del com
 
 I file protetti da password non possono essere protetti in modo nativo dal client di Azure Information Protection. Spesso sono i file con estensione pdf ad essere protetti da password, ma anche altre applicazioni, come ad esempio le app di Office,offrono questa funzionalità.
 
-Non è possibile proteggere, o annullare la protezione, di file con estensione pdf con il client di Azure Information Protection per Windows anche nei casi seguenti:
+Con il client di Azure Information Protection per Windows è possibile visualizzare i file seguenti, ma non è possibile proteggere o rimuovere la protezione di file PDF anche nei casi seguenti:
 
 - File PDF basato su modulo.
 
 - File PDF protetto con estensione pdf. 
     
-    Il client di Azure Information Protection può proteggere un file PDF non protetto e proteggere nuovamente un file PDF protetto con estensione ppdf.
+    Il client di Azure Information Protection può proteggere un file PDF non protetto e può rimuovere la protezione di un file PDF protetto, o riproteggerlo, se il nome file ha estensione ppdf.
 
-Come soluzione alternativa per questi file, è possibile abilitare la protezione generica seguendo le istruzioni della sezione [Modifica del livello di protezione predefinito dei file](#changing-the-default-protection-level-of-files). Tuttavia, questo metodo modifica il livello di protezione per tutti i file con estensione pdf, a livello di computer. Non è possibile definire la protezione generica solo per i file che soddisfano i criteri elencati.
+Come soluzione alternativa per proteggere questi file, è possibile abilitare la protezione generica seguendo le istruzioni della sezione [Modifica del livello di protezione predefinito dei file](#changing-the-default-protection-level-of-files). Tuttavia, questo metodo modifica il livello di protezione per tutti i file con estensione pdf, a livello di computer. Non è possibile definire la protezione generica solo per i file che soddisfano i criteri elencati.
 
 Se la protezione di tali file è importante, è possibile copiarli temporaneamente in un altro computer per la protezione generica e quindi copiarli nuovamente nel computer di origine.
 

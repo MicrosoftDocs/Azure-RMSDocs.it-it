@@ -4,7 +4,7 @@ description: Fase 2 della migrazione da AD RMS ad Azure Information Protection, 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: db8f8de9cdda00f5983ff448aa895a5767d953b1
-ms.sourcegitcommit: dd567f8395bb55e4ca174ef1d72b1a14cf7735e1
+ms.openlocfilehash: c81d7131bfb2a5f1e0742cd8dd55d52e3a65984a
+ms.sourcegitcommit: 45c23b3b353ad0e438292cb1cd8d1b13061620e1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/12/2017
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 della migrazione: configurazione lato server per AD RMS
 
@@ -112,11 +112,7 @@ Aprire una sessione di PowerShell ed eseguire i comandi seguenti:
     
         Enable-Aadrm
 
-**Che cosa accade se il tenant di Azure Information Protection è già attivato?** Se il servizio Azure Rights Management è già attivato per l'organizzazione, gli utenti potrebbero avere già usato Azure Information Protection per proteggere il contenuto con una chiave del tenant generata automaticamente (e con i modelli predefiniti) invece che con le chiavi (e i modelli) esistenti inclusi in AD RMS. È poco probabile che questo accada in computer gestiti correttamente nell'intranet, perché questi sono automaticamente configurati per l'infrastruttura AD RMS. Può però verificarsi su computer di un gruppo di lavoro o su computer che non si connettono spesso alla Intranet. Dal momento che sfortunatamente è anche difficile identificare questi computer, si consiglia di non attivare il servizio prima di importare i dati di configurazione da AD RMS.
-
-Se il tenant di Azure Information Protection è già attivato ed è possibile identificare questi computer, assicurarsi di eseguire lo script CleanUpRMS.cmd nei computer, come descritto nel [Passaggio 7](migrate-from-ad-rms-phase3.md#step-7-reconfigure-clients-to-use-azure-information-protection). L'esecuzione dello script li obbliga a reinizializzare l'ambiente utente e quindi a scaricare la chiave del tenant aggiornata e i modelli importati.
-
-Se sono stati creati anche modelli personalizzati da usare dopo la migrazione, è necessario esportare e importare questi modelli. Questa procedura viene descritta nel passaggio successivo. 
+**Che cosa accade se il tenant di Azure Information Protection è già attivato?** Se il servizio Azure Rights Management è già attivato per l'organizzazione e sono stati creati modelli personalizzati che si vogliono usare dopo la migrazione, è necessario esportare e importare questi modelli. Questa procedura viene descritta nel passaggio successivo. 
 
 ## <a name="step-6-configure-imported-templates"></a>Passaggio 6. Configurare i modelli importati
 

@@ -4,7 +4,7 @@ description: Informazioni sui diritti specifici usati quando si proteggono i fil
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 10/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a1fa8edb262f7ee35b91e069ac5556124c0bc754
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: f82eb8bc415b064793c1efd9b7b88795b1ec6ff2
+ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/10/2017
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configurazione dei diritti di utilizzo per Azure Rights Management
 
@@ -27,12 +27,12 @@ Quando si imposta la protezione su file o messaggi di posta elettronica mediante
 Usare le informazioni incluse in questo articolo per configurare i diritti di utilizzo desiderati per l'applicazione in uso e comprendere come tali diritti vengono interpretati dalle applicazioni.
 
 ## <a name="usage-rights-and-descriptions"></a>Diritti di utilizzo e relative descrizioni
-Nella tabella seguente sono elencati e descritti i diritti d'uso supportati da supporta Rights Management e come vengono utilizzati e interpretati. Sono elencati in base al **Nome comune**, che corrisponde in genere al modo in cui il diritto di utilizzo viene visualizzato o indicato, una versione semplificata del valore costituito da una singola parola e usato nel codice, ovvero il valore **Codifica nei criteri**. 
+Nella tabella seguente sono elencati e descritti i diritti d'uso supportati da supporta Rights Management e come vengono utilizzati e interpretati. Sono elencati in base al **nome comune**, che corrisponde in genere al modo in cui il diritto di utilizzo viene visualizzato o indicato, una versione semplificata del valore costituito da una singola parola e usato nel codice, ovvero il valore **Codifica nei criteri**. 
 
 Il valore **Costante o valore API** e il nome dell'SDK per una chiamata API MSIPC, usato quando si scrive un'applicazione abilitata per RMS che verifica un diritto di utilizzo o aggiunge un diritto di utilizzo a un criterio.
 
 
-|Right|Descrizione|Implementazione|
+|Diritto di utilizzo|Descrizione|Implementazione|
 |-------------------------------|---------------------------|-----------------|
 |Nome comune: **Modifica contenuto, Modifica** <br /><br />Codifica nei criteri: **DOCEDIT**|Consente di modificare, riorganizzare, formattare o filtrare il contenuto all'interno dell'applicazione. Non concede il diritto di salvare la copia modificata.|Diritti personalizzati di Office: come parte delle opzioni **Modifica** e **Controllo completo** <br /><br />Nome nel portale di Azure classico: **Modifica contenuto**<br /><br />Nome nel portale di Azure: incluso in **Modifica e salva**<br /><br />Nome nei modelli AD RMS: **Modifica** <br /><br />Valore costante o valore API: non applicabile|
 |Nome comune: **Salva** <br /><br />Codifica nei criteri: **EDIT**|Consente di salvare il documento nella posizione corrente.<br /><br />Nelle applicazioni di Office questo diritto consente anche di modificare il documento.|Diritti personalizzati di Office: come parte delle opzioni **Modifica** e **Controllo completo** <br /><br />Nome nel portale di Azure classico: **Salva file**<br /><br />Nome nel portale di Azure: incluso in **Modifica e salva**<br /><br />Nome nei modelli AD RMS: **Salva** <br /><br />Costante o valore API: `IPC_GENERIC_WRITE L"EDIT"`|
@@ -51,9 +51,9 @@ Il valore **Costante o valore API** e il nome dell'SDK per una chiamata API MSIP
 
 Alcune applicazioni raggruppano i diritti di utilizzo in livelli di autorizzazioni, per semplificare la selezione dei diritti di utilizzo che in genere vengono usati insieme. Questi livelli di autorizzazioni consentono di astrarre un livello di complessità dagli utenti, in modo che questi possano scegliere opzioni che sono basate sul ruolo.  Ad esempio, **Revisore** e **Coautore**. Anche se queste opzioni spesso mostrano agli utenti un riepilogo dei diritti, potrebbero non includere tutti i diritti elencati nella tabella precedente.
 
-Usare la tabella seguente per un elenco di questi livelli di autorizzazioni e un elenco completo dei diritti che contengono.
+Usare la tabella seguente per un elenco di questi livelli di autorizzazioni e un elenco completo dei diritti di utilizzo che contengono. I diritti di utilizzo vengono elencati in base al relativo [nome comune](#usage-rights-and-descriptions).
 
-|Livello di autorizzazioni|Applicazioni|Diritti inclusi (nome comune)|
+|Livello di autorizzazioni|Applicazioni|Diritti di utilizzo inclusi|
 |---------------------|----------------|---------------------------------|
 |Visualizzatore|Portale di Azure classico <br /><br />Portale di Azure<br /><br /> Applicazione Rights Management sharing per Windows<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Rispondi; Rispondi a tutti; Consenti macro [[1]](#footnote-1)<br /><br />Nota: per i messaggi di posta elettronica, usare Revisore anziché questo livello di autorizzazione per garantire che una risposta a un messaggio venga ricevuta come messaggio di posta elettronica e non come allegato. Revisore è richiesto anche quando si invia un messaggio di posta elettronica a un'altra organizzazione che usa il client Outlook o Outlook Web App. Oppure per gli utenti dell'organizzazione che non devono usare il servizio Azure Rights Management perché sono stati implementati i [controlli di onboarding](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|
 |Revisore|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Applicazione Rights Management sharing per Windows<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Rispondi: Rispondi a tutti [[2]](#footnote-2); Inoltra [[2]](#footnote-2); Consenti macro [[1]](#footnote-1)|
@@ -74,12 +74,14 @@ Non incluso nel client Azure Information Protection per Windows. In questo clien
 
 
 ## <a name="rights-included-in-the-default-templates"></a>Diritti inclusi nei modelli predefiniti
-I diritti inclusi con i modelli predefiniti sono i seguenti:
+Nella tabella seguente sono elencati i diritti di utilizzo inclusi quando vengono creati i modelli predefiniti. I diritti di utilizzo vengono elencati in base al relativo [nome comune](#usage-rights-and-descriptions).
 
-|Nome visualizzato|Diritti inclusi (nome comune)|
-|----------------|---------------------------------|
-|&lt;*nome organizzazione*&gt; *- Solo visualizzazione riservata* <br /><br />o<br /><br /> *Riservatezza elevata\Tutti i dipendenti*|Visualizza, Apri, Leggi|
-|&lt;*nome organizzazione*&gt; *- Riservato* <br /><br />o <br /><br />*Riservato\Tutti i dipendenti*|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Visualizza diritti; Consenti macro; Inoltra; Rispondi; Rispondi a tutti|
+Questi modelli predefiniti vengono creati al momento dell'acquisto della sottoscrizione e i nomi e i diritti di utilizzo possono essere [modificati](configure-policy-templates.md) nel portale di Azure. 
+
+|Nome visualizzato del modello|Diritti di utilizzo dal 6 ottobre 2017 alla data corrente|Diritti di utilizzo prima del 6 ottobre 2017|
+|----------------|--------------------|----------|
+|\<*nome organizzazione> - Solo visualizzazione riservata* <br /><br />o<br /><br /> *Riservatezza elevata\Tutti i dipendenti*|Visualizza, Apri, Leggi; Copia; Consenti macro; Stampa; Inoltra; Rispondi; Rispondi a tutti; Salva; Modifica contenuto, Modifica|Visualizza, Apri, Leggi|
+|\<*nome organizzazione>- Riservato* <br /><br />o <br /><br />*Riservato\Tutti i dipendenti*|Visualizza, Apri, Leggi; Salva con nome, Esporta; Copia; Consenti macro; Stampa; Inoltra; Rispondi; Rispondi a tutti; Salva; Modifica contenuto, Modifica; Controllo completo|Visualizza, Apri, Leggi; Salva con nome, Esporta; Modifica contenuto, Modifica; Consenti macro; Inoltra; Rispondi; Rispondi a tutti|
 
 ## <a name="do-not-forward-option-for-emails"></a>Opzione Non inoltrare per i messaggi di posta elettronica
 
@@ -122,11 +124,30 @@ In questi scenari l'emittente di Rights Management può assegnare il proprietari
 
 Quando l'emittente di Rights Management avvia la protezione per conto degli utenti, con l'assegnazione del proprietario di Rights Management, il proprietario originale del documento o messaggio di posta elettronica ha lo stesso livello di controllo del contenuto protetto che avrebbe se avesse avviato personalmente la protezione. 
 
-Ad esempio, l'utente che ha creato il documento può stamparlo anche se ora è protetto da un modello che non include il diritto di utilizzo Stampa. Lo stesso utente può sempre accedere al proprio documento, indipendentemente dall'eventuale impostazione di accesso offline o data di scadenza configurata nel modello. Inoltre, poiché il proprietario di Rights Management ha il diritto di utilizzo Controllo completo, tale utente può anche proteggere nuovamente il documento per concedere l'accesso ad altri utenti (a questo punto l'utente diventa l'emittente di Rights Management, nonché il proprietario di Rights Management) e persino rimuovere la protezione. Tuttavia, solo l'emittente di Rights Management può rilevare e revocare un documento.
+Ad esempio, l'utente che ha creato il documento può stamparlo anche se ora è protetto da un modello che non include il diritto di utilizzo Stampa. Lo stesso utente può sempre accedere al proprio documento, indipendentemente dall'eventuale impostazione di accesso offline o data di scadenza configurata nel modello. Poiché il proprietario di Rights Management ha il diritto di utilizzo Controllo completo, tale utente può anche proteggere nuovamente il documento per concedere l'accesso ad altri utenti (a questo punto l'utente diventa l'emittente di Rights Management, nonché il proprietario di Rights Management) e persino rimuovere la protezione. Tuttavia, solo l'emittente di Rights Management può rilevare e revocare un documento.
 
 Il proprietario di Rights Management per un documento o un messaggio di posta elettronica viene registrato come campo **owner-email** nei [log di utilizzo](log-analyze-usage.md#how-to-interpret-your-azure-rights-management-usage-logs).
 
 Si noti che il proprietario di Rights Management è indipendente dal proprietario del file system di Windows. Spesso coincidono ma possono essere diversi, anche se non si usano gli SDK o PowerShell.
+
+## <a name="rights-management-use-license"></a>Licenza d'uso di Rights Management
+
+Quando un utente apre un documento o messaggio di posta elettronica protetto da Azure Rights Management, gli viene concessa una licenza d'uso di Rights Management per il contenuto. Questa licenza d'uso è un certificato che contiene i diritti di utilizzo dell'utente per il documento o messaggio di posta elettronica e la chiave di crittografia usata per crittografare il contenuto. La licenza d'uso contiene anche una data di scadenza, se è stata impostata, e il periodo di validità della licenza d'uso.
+
+Per la durata della licenza d'uso, all'utente non viene richiesto di ripetere l'autenticazione o specificare una nuova autorizzazione. Ciò consente all'utente di continuare ad aprire il documento o messaggio di posta elettronica protetto senza una connessione Internet. Quando scade il periodo di validità della licenza d'uso, al successivo accesso al documento o messaggio di posta elettronica protetto l'utente deve ripetere l'autenticazione o specificare una nuova autorizzazione. 
+
+Quando i documenti e messaggi di posta elettronica sono protetti tramite un'etichetta o modello che definisce le impostazioni di protezione, è possibile modificare queste impostazioni nell'etichetta o modello senza che sia necessario proteggere nuovamente il contenuto. Se l'utente ha già accesso al contenuto, le modifiche vengono applicate dopo la scadenza del contratto di licenza. Quando tuttavia gli utenti applicano autorizzazioni personalizzate (note anche come criteri per i diritti di utilizzo ad hoc) e queste autorizzazioni devono essere modificate dopo che il documento o messaggio di posta elettronica viene protetto, il contenuto deve essere protetto nuovamente con le nuove autorizzazioni. Le autorizzazioni personalizzate per un messaggio di posta elettronica vengono implementate con l'opzione Non inoltrare.
+
+Il valore predefinito per il periodo di validità della licenza d'uso per un tenant è di 30 giorni ed è possibile configurare questo valore tramite il cmdlet PowerShell, [Set-AadrmMaxUseLicenseValidityTime](/powershell/module/aadrm/set-aadrmmaxuselicensevaliditytime). È possibile configurare un'impostazione più restrittiva per il momento dell'applicazione della protezione tramite un'etichetta o un modello:
+
+- Quando si configura un'etichetta o un modello nel portale di Azure, il periodo di validità della licenza d'uso assume il valore specificato nell'impostazione **Consenti l'accesso offline**. 
+    
+    Per altre informazioni e istruzioni per configurare questa impostazione nel portale di Azure, vedere la tabella nel passaggio 9 dell'articolo [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md).
+
+- Quando si configura un modello tramite PowerShell, il periodo di validità della licenza d'uso assume il valore specificato nel parametro *LicenseValidityDuration* nei cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) e [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate).
+    
+    Per altre informazioni e istruzioni per configurare questa impostazione tramite PowerShell, vedere la guida relativa a ogni cmdlet.
+
 
 ## <a name="see-also"></a>Vedere anche
 [Configurazione e gestione dei modelli per Azure Information Protection](configure-policy-templates.md)
