@@ -98,7 +98,7 @@ Il tipo di carattere predefinito per le intestazioni, i piè di pagina e il test
 
 È possibile scegliere un colore nell'elenco dei colori disponibile o specificare un colore personalizzato immettendo un codice tripletta esadecimale per i componenti rosso, verde e blu (RGB) del colore. Ad esempio, **#DAA520**. 
 
-Se è necessario un riferimento per questi codici un punto di partenza utile può essere il file [Colors by Name](https://msdn.microsoft.com/library/aa358802\(v=vs.85).aspx (Colori per nome.aspx), disponibile nella documentazione MSDN. È anche possibile trovare i codici in molte applicazioni per la modifica di immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
+Se è necessario un riferimento per questi codici un punto di partenza utile può essere il file [Colors by Name](https://msdn.microsoft.com/library/aa358802\(v=vs.85).aspx) (Colori per nome.aspx), disponibile nella documentazione MSDN. È anche possibile trovare i codici in molte applicazioni per la modifica di immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
