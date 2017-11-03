@@ -16,6 +16,7 @@
 ##### [Comandi di PowerShell](client-admin-guide-powershell.md)
 #### [Guida per l'utente di Azure Information Protection](client-user-guide.md)
 ##### [Scaricare e installare il client](install-client-app.md)
+##### [Classificare un file o un messaggio di posta elettronica](client-classify.md)
 ##### [Classificare e proteggere un file o un messaggio di posta elettronica](client-classify-protect.md)
 ##### [Tenere traccia dei documenti e revocarli](client-track-revoke.md)
 ##### [Aprire i file che sono stati protetti](client-view-use-files.md)
