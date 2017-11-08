@@ -4,17 +4,17 @@ description: "Quando si assegna un'etichetta a un documento o a un messaggio di 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2017
+ms.date: 10/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 0da5df139d98f0468f49e7e3f17cd1cd2358a015
-ms.sourcegitcommit: 76bf1f93b02fd75bead8ccdaaf34da1a6aad571f
+ms.openlocfilehash: ff444afb1912239ec817882c76fc735f6d35ed1e
+ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
@@ -93,6 +93,8 @@ Esempio: se si specifica la stringa `Document: ${item.name}  Classification: ${i
 Questa impostazione è attualmente disponibile in anteprima.
 
 Il tipo di carattere predefinito per le intestazioni, i piè di pagina e il testo della filigrana è Calibri. Se si specifica il nome di un tipo di carattere alternativo, verificare che il tipo sia presente nei dispositivi client che applicheranno i marcatori visivi. In caso contrario verrà usato un tipo di carattere scelto su base non deterministica. 
+
+Se si usa la versione di anteprima del client Azure Information Protection e il tipo di carattere specificato non è disponibile, il client usa il tipo di carattere Calibri.
 
 ### <a name="setting-the-font-color"></a>Impostazione del colore del carattere
 

@@ -4,28 +4,28 @@ description: Gli sviluppatori possono usare Azure Information Protection per pro
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: ea13c3dbf37dd22a6e93786390bd6be4da7a6959
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: a9a94744aa2eacb3ddb4bbda3989ae857ff708fd
+ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guida per gli sviluppatori di Azure Information Protection
 
-Questa guida serve a comprendere gli strumenti per l'estensione e l'integrazione con il servizio Rights Management di Azure Information Protection. Lo scopo di questa guida è consentire agli sviluppatori che vogliono sfruttare il sistema di Rights Management di creare diversi tipi di applicazioni per varie piattaforme supportate.
+Questa guida serve a comprendere gli strumenti per l'estensione e l'integrazione con il servizio Rights Management di Azure Information Protection.
 
->L'SDK corrente di Azure Information Protection contiene il componente Rights Management mentre la classificazione e l'aggiunta di etichette sono in fase di sviluppo.
+>Il SDK di Azure Information Protection include il componente Rights Management. È in corso lo sviluppo di un componente di classificazione e un componente di assegnazione etichette.
 
 ## <a name="service-applications"></a>Applicazioni di servizio
 
-Le applicazioni di servizio forniscono le funzionalità per proteggere le informazioni durante l'esportazione da un sistema di gestione dei contenuti aziendali, da un'applicazione aziendale o da una soluzione aziendale basata su cloud. Le applicazioni di prevenzione della perdita dei dati (DLP) e Cloud Application Security (CAS) sono esempi di applicazioni di servizio. L'SDK per lo sviluppo di applicazioni di servizio è disponibile tramite due modelli di programmazione.
+Le applicazioni di servizio forniscono funzionalità per proteggere le informazioni durante l'esportazione da un sistema di gestione dei contenuti aziendali, da un'applicazione aziendale o da una soluzione aziendale basata su cloud. Le applicazioni di prevenzione della perdita dei dati (DLP) e Cloud Application Security (CAS) sono esempi di applicazioni di servizio. L'SDK per lo sviluppo di applicazioni di servizio è disponibile tramite due modelli di programmazione.
 
 - [C++](https://www.microsoft.com/en-us/download/details.aspx?id=38397)
 - [API gestita da C#](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcManagedAPI)
@@ -39,15 +39,12 @@ Le applicazioni di servizio forniscono le funzionalità per proteggere le inform
 
 ## <a name="powershell-guides"></a>Guide di PowerShell
 
-Questi script usati in genere dagli amministratori di Azure Rights Management sono utili per sviluppare e testare le applicazioni di servizio.
-
-- I [cmdlet di Azure Rights Management](https://msdn.microsoft.com/library/azure/dn629398.aspx) consentono di amministrare Azure RMS dalla riga di comando. Oltre a consentire l'automazione, questi cmdlet supportano una serie di processi affidabili e ripetuti in grado di ridurre il sovraccarico amministrativo. Inoltre, per alcune configurazioni e operazioni avanzate di Azure RMS è necessario Azure PowerShell.
-- I [cmdlet di protezione RMS](https://msdn.microsoft.com/library/azure/mt433195.aspx) possono essere usati con la protezione dati di Azure Rights Management (Azure RMS) da Azure Information Protection o con Active Directory Rights Management Services (AD RMS) e integrano altri moduli PowerShell per queste distribuzioni di Rights Management. Usare i cmdlet di protezione RMS per proteggere e rimuovere in blocco la protezione di file di qualsiasi tipo.
+I cmdlet PowerShell, usati dagli amministratori di Azure Rights Management, sono utili anche per sviluppare e testare le applicazioni di servizio. Per altre informazioni, vedere [Uso di PowerShell con il client Azure Information Protection](/information-protection/rms-client/client-admin-guide-powershell).
 
 ## <a name="user-applications"></a>Applicazioni utente
 
 Le applicazioni utente possono essere create con RMS SDK 2.1 o RMS SDK 4.2.
-La versione 4.2 è basata su client REST con API specifiche del sistema operativo per alcuni dei sistemi operativi più diffusi, tra cui iOS/OSX, Android, Linux e Windows. La versione 2.1 viene usata per creare le applicazioni native basate su Windows.
+La versione 4.2 è basata su client REST con API specifiche del sistema operativo per alcuni dei sistemi operativi più diffusi, tra cui iOS/OSX, Android, Linux e Windows. La versione 2.1 viene usata per creare applicazioni native basate su Windows.
 
 ### <a name="user-application-development-guides"></a>Guide di sviluppo per le applicazioni utente
 
@@ -105,11 +102,11 @@ Ognuno degli argomenti seguenti contiene indicazioni specifiche per un aspetto d
 
 [Introduzione ad Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection)
 
-Questi video sono tratti dalla conferenza Microsoft 2016 Ignite
+Questi video sono tratti dalla conferenza Microsoft Ignite 2016
 
 - [Sicurezza della posta elettronica all'interno dell'organizzazione](https://myignite.microsoft.com/videos/2787)
 - [Adottare una soluzione completa basata sulle identità per la protezione e la condivisione sicura dei dati](https://myignite.microsoft.com/videos/2784)
-- [Scoprire come la classificazione, le etichette e la protezione offrono una sicurezza permanente dei dati](https://myignite.microsoft.com/videos/2786)
+- [Informazioni su come la classificazione, le etichette e la protezione offrono una sicurezza permanente dei dati](https://myignite.microsoft.com/videos/2786)
 
 ## <a name="other-resources"></a>Altre risorse
 
@@ -122,6 +119,17 @@ Questi video sono tratti dalla conferenza Microsoft 2016 Ignite
 - [Formati di file supportati](supported-file-formats.md)
 - [Piattaforme supportate](supported-platforms.md)
 - [Informazioni sulle restrizioni di utilizzo](understanding-usage-restrictions.md)
+
+### <a name="message-protocol-and-file-formats"></a>Protocolli e formati file dei messaggi
+
+- [Protocollo Client-to-Server](https://msdn.microsoft.com/library/cc243191.aspx)
+- [Protocollo Rights-Managed Email Object](https://msdn.microsoft.com/library/cc463909(v=EXCHG.80).aspx)
+- [Formato di file Compound File Binary](https://msdn.microsoft.com/library/dd942138.aspx)
+
+#### <a name="rights-managed-email-message"></a>Messaggio di posta elettronica gestito da diritti
+
+- [Formato di file msg (parte 1)](https://blogs.msdn.microsoft.com/openspecification/2009/11/06/msg-file-format-part-1/)
+- [Formato di file msg (parte 2)](https://blogs.msdn.microsoft.com/openspecification/2010/06/20/msg-file-format-rights-managed-email-message-part-2/)
 
 ### <a name="api-reference"></a>Informazioni di riferimento sulle API
 
@@ -139,7 +147,7 @@ Questi video sono tratti dalla conferenza Microsoft 2016 Ignite
 
 ### <a name="see-also"></a>Vedere anche
 
-- [Terminologia degli sviluppatori](terms.md)
+- [Terminologia per sviluppatori](terms.md)
 - [Terminologia di Azure Information Protection - ITPro](../get-started/terminology.md)
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

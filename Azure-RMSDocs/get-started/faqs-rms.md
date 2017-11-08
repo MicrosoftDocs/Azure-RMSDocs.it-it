@@ -4,7 +4,7 @@ description: Domande frequenti sul servizio di protezione dei dati, Azure Rights
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/09/2017
+ms.date: 11/01/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9983b088b5856f8c2223d05624c3bee21b80fd15
-ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
+ms.openlocfilehash: 038cb3a81bac9f16055038f33d825daed6642479
+ms.sourcegitcommit: 91585427fe62956fd78d4e7897ec8abe55b3c11d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Domande frequenti sulla protezione dei dati in Azure Information Protection
 
@@ -124,16 +124,24 @@ Se si protegge un messaggio di posta elettronica che include come allegato un do
 
 ## <a name="can-i-add-external-users-people-from-outside-my-company-to-custom-templates"></a>È possibile aggiungere utenti esterni (persone all'esterno della mia azienda) ai modelli personalizzati?
 
-Sì. Quando si converte un modello in un'etichetta nel portale di Azure, è possibile configurare le [impostazioni di protezione](../deploy-use/configure-policy-protection.md) in modo da aggiungere le autorizzazioni a utenti e gruppi esterni all'organizzazione e anche a tutti gli utenti di un'altra organizzazione. In alternativa, è possibile eseguire questa operazione tramite PowerShell.
+Sì. Le [impostazioni di protezione](../deploy-use/configure-policy-protection.md) che è possibile configurare nel portale di Azure consentono di aggiungere le autorizzazioni a utenti e gruppi esterni all'organizzazione e anche a tutti gli utenti di un'altra organizzazione. A meno che il modello non venga usato esclusivamente per inviare messaggi di posta elettronica tramite le [nuove funzionalità di Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), non aggiungere account dalle identità dei profili personali (ad esempio Gmail e Microsoft) o altri account non presenti in Azure AD.
 
-Per altre informazioni sulla conversione di modelli personalizzati in etichette in modo da poter aggiungere facilmente utenti esterni, vedere [Configurazione e gestione dei modelli per Azure Information Protection](../deploy-use/configure-policy-templates.md).
+Si noti che, in presenza di eventuali etichette di Azure Information Protection, è prima necessario convertire il modello personalizzato in un'etichetta per poter configurare queste impostazioni di protezione nel portale di Azure. Per altre informazioni, vedere [Configurazione e gestione dei modelli per Azure Information Protection](../deploy-use/configure-policy-templates.md).
+
+In alternativa, è possibile aggiungere utenti esterni a modelli (ed etichette) personalizzati tramite PowerShell. Questa configurazione richiede l'uso di un oggetto di definizione dei diritti per l'aggiornamento del modello:
+
+1. Specificare gli indirizzi di posta elettronica esterni e i relativi diritti in un oggetto di definizione dei diritti usando il cmdlet [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) per creare una variabile.
+
+2. Specificare questa variabile nel parametro RightsDefinition con il cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty).
+    
+    Quando si aggiungono utenti a un modello esistente, oltre ai nuovi utenti è necessario definire gli oggetti di definizione dei diritti per gli utenti esistenti nei modelli. Per questo scenario, potrebbe risultare utile leggere il paragrafo **Example 3: Add new users and rights to a custom template** (Esempio 3: Aggiungere nuovi utenti e diritti a un modello personalizzato) della sezione [Examples](/powershell/module/aadrm/set-aadrmtemplateproperty#examples) (Esempi) per il cmdlet. 
 
 ## <a name="what-type-of-groups-can-i-use-with-azure-rms"></a>Quali tipi di gruppi è possibile usare con Azure RMS?
 Per la maggior parte degli scenari è possibile usare qualsiasi tipo di gruppo di Azure AD che dispone di un indirizzo di posta elettronica. Questa regola empirica è sempre valida quando si assegnano i diritti di utilizzo, ma esistono alcune eccezioni per l'amministrazione del servizio Azure Rights Management. Per altre informazioni, vedere [Requisiti di Azure Information Protection per gli account di gruppo](../plan-design/prepare.md#azure-information-protection-requirements-for-group-accounts).
 
 ## <a name="how-do-i-send-a-protected-email-to-a-gmail-or-hotmail-account"></a>Come si invia un messaggio di posta elettronica protetto a un account Gmail o Hotmail?
 
-Quando si usa Exchange Online e il servizio Azure Rights Management, è sufficiente inviare il messaggio di posta elettronica come messaggio protetto. Ad esempio, è possibile selezionare il nuovo pulsante **Proteggi** nella barra dei comandi in Outlook sul Web, usare l'opzione Non inoltrare di Outlook, selezionare un'etichetta di Azure Information Protection che applica la protezione da Azure Rights Management o ancora applicare la protezione mediante regole di trasporto di Exchange Online.
+Quando si usa Exchange Online e il servizio Azure Rights Management, è sufficiente inviare il messaggio di posta elettronica all'utente come messaggio protetto. Ad esempio, è possibile selezionare il nuovo pulsante **Proteggi** nella barra dei comandi in Outlook sul web, usare il pulsante o l'opzione di menu **Non inoltrare** di Outlook. In alternativa, è possibile selezionare un'etichetta di Azure Information Protection che applica automaticamente il comando Non inoltrare e classifica il messaggio di posta elettronica. 
 
 Il destinatario visualizza un'opzione per accedere al proprio account Gmail, Yahoo o Microsoft e quindi può leggere il messaggio di posta elettronica protetto. In alternativa il destinatario può optare per un passcode monouso e leggere il messaggio di posta elettronica in un browser.
 

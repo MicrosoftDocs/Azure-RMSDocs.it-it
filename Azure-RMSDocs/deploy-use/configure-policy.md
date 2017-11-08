@@ -4,7 +4,7 @@ description: "Per configurare le funzioni di classificazione, aggiunta di etiche
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/21/2017
+ms.date: 10/25/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 660f29506e22feb742edf4041d7baed0cf749b8c
-ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
+ms.openlocfilehash: b04c7881f982b33094107b6de33920a83b17b960
+ms.sourcegitcommit: a7cdf911088fdf663e43894484530ea15150284f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 10/25/2017
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -44,14 +44,30 @@ Se l'organizzazione dispone di varie sottoscrizioni, è responsabilità dell'org
 
 Per altre informazioni sulle sottoscrizioni, vedere [Quale sottoscrizione è necessaria per Azure Information Protection e quali funzionalità sono incluse?](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
+## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Per accedere al pannello Azure Information Protection per la prima volta
+
+1. Accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza per il tenant.
+
+2. Nel menu hub fare clic su **Nuovo** e quindi, nell'elenco **Marketplace**, selezionare **Sicurezza e identità**. 
+    
+3. Nell'elenco **App in primo piano** del pannello **Sicurezza e identità** selezionare **Azure Information Protection**. Quindi fare clic su **Crea** nel pannello **Azure Information Protection**.
+    
+    Questa azione consente di creare il pannello **Azure Information Protection** per il tenant, in modo che al successivo accesso al portale sia possibile selezionare il servizio dall'elenco **Altri servizi** dell'hub. 
+    
+    > [!TIP] 
+    > Selezionare **Aggiungi al dashboard** per creare un riquadro **Azure Information Protection** nel dashboard, in modo da ignorare la ricerca del servizio al successivo accesso al portale.
+
+4. Quando ci si connette al servizio per la prima volta viene visualizzata automaticamente la pagina **Avvio rapido**. Consultare le risorse suggerite o usare le altre opzioni di menu. Usare la procedura seguente per configurare le etichette selezionabili dagli utenti.
+
+Quando si accede di nuovo al pannello **Azure Information Protection** viene selezionata automaticamente l'opzione **CRITERI** > **Criteri globali** che consente di configurare etichette per tutti gli utenti. È possibile tornare alla pagina **Avvio rapido** selezionandola nel menu **GENERALE**.
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Come configurare i criteri di Azure Information Protection
 
-1. In una nuova finestra del browser accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza.
+1. Verificare di aver eseguito l'accesso al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza.
 
-2. Passare al pannello **Azure Information Protection**: ad esempio, nel menu hub fare clic su **More services** (Altri servizi) e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
+2. Se necessario, passare al pannello **Azure Information Protection**: ad esempio, nel menu hub fare clic su **Altri servizi** e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
     
-    Quando ci si connette al servizio per la prima volta viene aperto automaticamente il pannello **Azure Information Protection - Avvio rapido**. Per configurare criteri destinati a tutti gli utenti, nel menu **CRITERI** selezionare **Criteri globali** per aprire il pannello **Azure Information Protection - Criteri globali**. Questo pannello si aprirà automaticamente per le connessioni successive al servizio in modo che sia possibile visualizzare e modificare i criteri globali ottenuti da tutti gli utenti. 
+    Il pannello **Azure Information Protection - Criteri globali** viene aperto automaticamente per consentire di visualizzare e modificare i criteri globali disponibili per tutti gli utenti. 
     
     I criteri di Azure Information Protection contengono gli elementi seguenti che è possibile configurare:
     
@@ -69,7 +85,9 @@ Per altre informazioni sulle sottoscrizioni, vedere [Quale sottoscrizione è nec
     
     - Opzione per fornire un collegamento alla guida personalizzata per gli utenti.
 
-Azure Information Protection viene distribuito con [criteri predefiniti](configure-policy-default.md), che contengono cinque etichette principali. Queste etichette sono utilizzabili con l'intera gamma di dati che un'organizzazione in genere crea e archivia, dalla classificazione minima dei dati personali alla classificazione più elevata di dati particolarmente riservati. 
+Azure Information Protection viene distribuito con [criteri predefiniti](configure-policy-default.md), che contengono cinque etichette principali. Due di queste etichette contengono etichette secondarie che forniscono sottocategorie in caso di necessità. Quando un'etichetta è configurata con etichette secondarie, gli utenti non possono selezionare l'etichetta principale ma devono selezionare una delle etichette secondarie.
+
+Le etichette di Azure Information Protection possono essere usate con l'intera gamma di dati che in genere vengono creati e archiviati da un'organizzazione, dalla classificazione minima per i dati personali alla classificazione più elevata per dati particolarmente riservati. 
 
 È possibile usare le etichette predefinite così come sono oppure personalizzarle, eliminarle e crearne di nuove. Per altre informazioni, usare i collegamenti nella sezione successiva per individuare le opzioni rilevanti e sapere come configurarle.
 
@@ -86,6 +104,9 @@ Il client Azure Information Protection verifica la disponibilità di eventuali m
 - Quando si eseguono i [cmdlet di PowerShell](../rms-client/client-admin-guide-powershell.md) per l'etichettatura e la protezione (Get-AIPFileStatus, Set-AIPFileClassification e Set-AIPFileLabel).
 
 - Ogni 24 ore.
+
+- Per il [servizio scanner di Azure Information Protection](deploy-aip-scanner.md): all'avvio del servizio e ogni ora.
+
 
 >[!NOTE]
 >Quando il client scarica i criteri, prevedere un'attesa di alcuni minuti prima che ritorni completamente operativo. Il tempo effettivo varia a seconda di fattori quali le dimensioni e la complessità della configurazione dei criteri e la connettività di rete. Se l'azione risultante delle etichette non corrisponde alle ultime modifiche, attendere fino a 15 minuti e riprovare.

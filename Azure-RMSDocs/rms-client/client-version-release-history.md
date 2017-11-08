@@ -4,7 +4,7 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/09/2017
+ms.date: 10/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,26 +12,32 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ccd6d0cec6a71527fad0303369baad90dd733958
-ms.sourcegitcommit: bcc2f69475f811245d2beaf79c67a3d8569c4821
+ms.openlocfilehash: ec73c1e0c0c2d5ef959f15975b2a972086a3bcff
+ms.sourcegitcommit: 91585427fe62956fd78d4e7897ec8abe55b3c11d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2017
+ms.lasthandoff: 11/02/2017
 ---
 # <a name="azure-information-protection-client-version-release-history"></a>Client di Azure Information Protection: cronologia delle versioni
 
 >*Si applica a: Azure Information Protection*
 
-Il team di Azure Information Protection aggiorna regolarmente il client di Azure Information Protection con correzioni e nuove funzionalità. Il client è incluso nel Microsoft Update Catalog (categoria **Azure Information Protection**) ed è sempre possibile scaricare la versione di disponibilità generale più recente e quella successiva (versione di anteprima) dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+Il team di Azure Information Protection aggiorna regolarmente il client di Azure Information Protection con correzioni e nuove funzionalità. Il client è incluso in Microsoft Update Catalog (categoria **Azure Information Protection**) ed è sempre possibile scaricare la versione di disponibilità generale più recente e la versione di anteprima corrente dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
 
 Le versioni di anteprima non devono essere distribuite agli utenti finali nelle reti di produzione, ma possono essere usate per visualizzare e provare le nuove funzionalità e correzioni che saranno disponibili nella prossima versione di disponibilità generale. 
 
-Usare le informazioni seguenti per visualizzare gli elementi nuovi o modificati di una versione di disponibilità generale. La versione più recente è elencata per prima. Per le modifiche alla versione di anteprima corrente, vedere le informazioni riportate nella pagina di download.
+Usare le informazioni seguenti per visualizzare gli elementi nuovi o modificati di una versione di disponibilità generale. La versione più recente è elencata per prima. 
 
 > [!NOTE]
 > Poiché le correzioni di minore rilevanza non sono elencate, se si verifica un problema con il client di Azure Information Protection, controllare prima che tale problema non riguardi la versione di disponibilità generale più recente. In caso affermativo, verificare la versione di anteprima corrente.
 >  
-> Se il problema persiste, vedere le informazioni contenute in [Opzioni di supporto e risorse della community](../get-started/information-support.md#support-options-and-community-resources). È anche possibile rivolgersi al team di Azure Information Protection nel [sito di Yammer](https://www.yammer.com/askipteam/).
+> Per il supporto tecnico, vedere le informazioni riportate in [Opzioni di supporto e risorse per la community](../get-started/information-support.md#support-options-and-community-resources). È anche possibile rivolgersi al team di Azure Information Protection nel [sito di Yammer](https://www.yammer.com/askipteam/).
+
+## <a name="versions-later-than-110560"></a>Versioni successive alla versione 1.10.56.0
+
+Se si usa una versione del client successiva alla versione 1.10.56.0, si tratta di una build di anteprima per scopi di testing e valutazione. 
+
+Per informazioni sulle novità o sulle modifiche della versione di anteprima corrente dall'ultima versione di disponibilità generale del client, vedere la sezione **Dettagli** nella [pagina di download](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
 
 ## <a name="version-110560"></a>Versione 1.10.56.0
 
@@ -41,9 +47,9 @@ Questa versione include MSIPC versione 1.0.3219.0619 del client RMS.
 
 **Nuove funzionalità**:
 
-- Supporto per le etichette configurate per le azioni definite dall'utente. Per Outlook, questa etichetta si applica automaticamente all'opzione Non inoltrare di Outlook. Per Word, Excel, PowerPoint ed Esplora file, questa etichetta richiede all'utente di specificare autorizzazioni personalizzate. Per altre informazioni, vedere [Configurare un'etichetta di Azure Information Protection per la protezione](../deploy-use/configure-policy-protection.md).
-
 - Supporto per le nuove condizioni di prevenzione della perdita dei dati (DLP) di Office 365 che è possibile configurare per un'etichetta. Per altre informazioni, vedere [Configurare le condizioni per un'etichetta di Azure Information Protection](../deploy-use/configure-policy-classification.md).
+
+- Supporto per le etichette configurate per le azioni definite dall'utente. Per Outlook, questa etichetta si applica automaticamente all'opzione Non inoltrare di Outlook. Per Word, Excel, PowerPoint ed Esplora file, questa etichetta richiede all'utente di specificare autorizzazioni personalizzate. Per altre informazioni, vedere [Configurare un'etichetta di Azure Information Protection per la protezione](../deploy-use/configure-policy-protection.md).
 
 - Le etichette vengono visualizzate dal pulsante **Proteggi** sulla barra multifunzione di Office, oltre a essere visualizzate sulla barra di Information Protection. 
 
@@ -115,7 +121,7 @@ Questa versione include MSIPC versione 1.0.2217.1 del client RMS.
 
 **Modifica dei requisiti:**
 
-La versione precedente ha introdotto il nuovo prerequisito di Microsoft .NET Framework 4.6.2 per il client completo. Anche se non è consigliabile, è possibile ignorare questo prerequisito con il parametro di installazione personalizzata **DowngradeDotNetRequirement**. Per altre informazioni, vedere la [sezione relativa all'installazione del client](client-admin-guide.md#how-to-install-the-azure-information-protection-client-for-users) nella Guida dell'amministratore.
+La versione precedente ha introdotto il nuovo prerequisito di Microsoft .NET Framework 4.6.2 per il client completo. Anche se non è consigliabile, è possibile ignorare questo prerequisito con il parametro di installazione personalizzata **DowngradeDotNetRequirement**. Per altre informazioni, vedere [Installare il client Azure Information Protection per gli utenti](client-admin-guide-install.md) nella guida dell'amministratore.
 
 **Nuove funzionalità**:
 
@@ -169,7 +175,7 @@ Questa versione del client è la [versione con disponibilità generale](https://
 
 - Opzione per test diagnostici e ripristino che l'utente può eseguire dall'applicazione di Office quando è installato il client di Azure Information Protection: nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi**, scegliere **Guida e commenti e suggerimenti** e quindi **Esegui diagnostica**. 
 
-    Per altre informazioni su questa opzione, vedere la sezione [Controlli aggiuntivi e risoluzione dei problemi](client-admin-guide.md#additional-checks-and-troubleshooting) nella Guida dell'amministratore.
+    Per altre informazioni su questa opzione, vedere la sezione [Controlli aggiuntivi e risoluzione dei problemi](client-admin-guide.md#installation-checks-and-troubleshooting) nella Guida dell'amministratore.
 
 **Correzioni**:
 

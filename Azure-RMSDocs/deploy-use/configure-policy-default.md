@@ -4,17 +4,17 @@ description: "Informazioni sulla configurazione dei criteri predefiniti per Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: 712d273e735d2c9fc791a1f15c3f8dc9e917a1c3
-ms.sourcegitcommit: 5bcb916106021f624a69d620bbcc2c4a51398771
+ms.openlocfilehash: 86b04d47797f7e3201dd4fd7b7e5a9c662254d12
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Criteri predefiniti di Azure Information Protection
 
@@ -44,7 +44,7 @@ Quando queste etichette secondarie non vengono configurate automaticamente per l
 
 Quando viene applicata alle etichette secondarie per **Tutti i dipendenti**, la protezione è configurata usando i modelli predefiniti che vengono convertiti automaticamente in etichette nel portale di Azure. Per altre informazioni sui modelli, vedere [Configurazione e gestione dei modelli per Azure Information Protection](configure-policy-templates.md).
 
-Dal 30 agosto 2017 questa versione dei criteri predefiniti include versioni tradotte dei nomi delle etichette e delle descrizioni. 
+Dal 30 agosto 2017 questa versione dei criteri predefiniti include versioni in più lingue dei nomi delle etichette e delle descrizioni. 
 
 #### <a name="more-information-about-the-recipients-only-sub-label"></a>Ulteriori informazioni sull'etichetta secondaria Solo i destinatari
 
@@ -68,10 +68,10 @@ Quando gli utenti selezionano questa etichetta, l'opzione Non inoltrare di Outlo
 
 |Label|Descrizione comando|Impostazioni|
 |-------------------------------|---------------------------|-----------------|
-|Confidential \ All Employees (Riservato \ Tutti i dipendenti)|Dati riservati che richiedono protezione, ma che garantiscono autorizzazioni complete a tutti i dipendenti. I proprietari dei dati possono tenere traccia e revocare il relativo contenuto.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />Classified as Confidential (Classificato come riservato)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: Azure RMS [[1]](#footnote-1)|
+|Confidential \ All Employees (Riservato \ Tutti i dipendenti)|Dati riservati che richiedono protezione, ma che garantiscono autorizzazioni complete a tutti i dipendenti. I proprietari dei dati possono tenere traccia e revocare il relativo contenuto.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />Classified as Confidential (Classificato come riservato)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: Azure (chiave cloud) [[1]](#footnote-1)|
 |Confidential \ Anyone (not protected) (Riservato \ Chiunque (senza protezione))|Dati che non richiedono protezione. Usare questa opzione con cautela e giustificazione aziendale appropriata.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />Classified as Confidential (Classificato come riservato) <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 |Riservato\Solo i destinatari|Dati riservati che richiedono protezione e che possono essere visualizzati soltanto dai destinatari.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (posta elettronica)<br /><br />Classified as Confidential (Classificato come riservato) <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: Configura le autorizzazioni definite dall'utente (anteprima), In Outlook applica Non inoltrare|
-|Highly Confidential \ All Employees (Riservatezza elevata \ Tutti i dipendenti)|Dati particolarmente riservati che garantiscono a tutti i dipendenti autorizzazioni di visualizzazione, modifica e risposta per il relativo contenuto. I proprietari dei dati possono tenere traccia e revocare il relativo contenuto.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />Classified as Highly Confidential (Classificato con riservatezza elevata)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: Azure RMS [[2]](#footnote-2)|
+|Highly Confidential \ All Employees (Riservatezza elevata \ Tutti i dipendenti)|Dati particolarmente riservati che garantiscono a tutti i dipendenti autorizzazioni di visualizzazione, modifica e risposta per il relativo contenuto. I proprietari dei dati possono tenere traccia e revocare il relativo contenuto.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />Classified as Highly Confidential (Classificato con riservatezza elevata)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: Azure (chiave cloud) [[2]](#footnote-2)|
 |Highly Confidential \ Anyone (not protected) (Riservatezza elevata \ Chiunque (senza protezione))|Dati che non richiedono protezione. Usare questa opzione con cautela e giustificazione aziendale appropriata.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />Classified as Highly Confidential (Classificato con riservatezza elevata)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 |Riservatezza elevata\Solo i destinatari|Dati altamente riservati che richiedono protezione e che possono essere visualizzati soltanto dai destinatari.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (posta elettronica)<br /><br />Classified as Highly Confidential (Classificato con riservatezza elevata) <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: Configura le autorizzazioni definite dall'utente (anteprima), In Outlook applica Non inoltrare|
 
@@ -103,7 +103,7 @@ Le autorizzazioni di protezione corrispondono a quelle del [modello predefinito]
 
 ## <a name="default-policy-before-july-31-2017"></a>Criteri predefiniti prima del 31 luglio 2017
 
-Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richiedono protezione e anche al rilevamento e alla revoca dei dati. I criteri non configurano tale protezione per queste etichette, per cui è necessario eseguire altri passaggi per completare questa descrizione. Ad esempio, configurare l'etichetta per applicare la protezione di Azure RMS o usare una soluzione di prevenzione della perdita dei dati (DLP). Prima di poter rilevare e revocare un documento tramite il sito di rilevamento dei documenti, il documento deve essere protetto da Azure RMS e rilevato dalla persona che ha protetto il documento. 
+Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richiedono protezione e anche al rilevamento e alla revoca dei dati. I criteri non configurano tale protezione per queste etichette, per cui è necessario eseguire altri passaggi per completare questa descrizione. Ad esempio configurare l'etichetta per applicare la protezione o usare una soluzione di prevenzione della perdita dei dati (DLP). Prima di poter essere rilevato e revocato tramite il sito di rilevamento dei documenti, un documento deve essere protetto dal servizio Azure Rights Management e rilevato dalla persona che lo ha protetto. 
 
 
 ### <a name="labels"></a>Etichette
