@@ -4,7 +4,7 @@ description: "Dopo aver protetto i documenti, è possibile tenere traccia del mo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8a908097e4207889b6441e3224e7e4110fa2f9ae
-ms.sourcegitcommit: ea03477312b64c0a846701e46d991fe2c85b3a1f
+ms.openlocfilehash: d5c8d326b68b5f60e8223112d2d5bd28ed3925bc
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Tenere traccia dei documenti e revocarli quando si usa Azure Information Protection
+# <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guida dell'utente: Rilevare i documenti e revocarne l'accesso quando si usa Azure Information Protection
 
 >*Si applica a: Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 
@@ -49,6 +49,8 @@ Quando si accede a questo sito, eseguire l'accesso per effettuare il rilevamento
     - Gli amministratori di Azure Information Protection possono fare clic sull'icona di amministrazione per rilevare e revocare documenti protetti per gli utenti, se tali utenti hanno registrato i rispettivi documenti nel sito di rilevamento dei documenti. Solo gli amministratori possono visualizzare questa icona:
         
         ![Icona di amministrazione nel sito di rilevamento dei documenti](../media/tracking-site-admin-icon.png)
+        
+        Se si è un amministratore globale e l'icona non è visibile, significa che non sono stati ancora condivisi documenti. In questo caso, usare l'URL seguente per accedere al sito di rilevamento dei documenti: https://portal.azurerms.com/#/admin
 
 A meno che non sia un amministratore, l'utente può rilevare e revocare solo i documenti che ha protetto. Non è possibile rilevare i messaggi di posta elettronica protetti usando il sito di rilevamento dei documenti.
 
@@ -109,5 +111,8 @@ Dopo aver registrato i documenti protetti tramite le app di Office o Esplora fil
 Ulteriori procedure nella Guida per l'utente di Azure Information Protection:
 
 - [Per saperne di più](client-user-guide.md#what-do-you-want-to-do)
+
+## <a name="additional-information-for-administrators"></a>Informazioni aggiuntive per gli amministratori    
+Vedere [Configurazione e uso del rilevamento dei documenti per Azure Information Protection](client-admin-guide-document-tracking.md) nella [Guida dell'amministratore](client-admin-guide.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

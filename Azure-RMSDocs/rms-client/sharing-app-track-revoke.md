@@ -4,7 +4,7 @@ description: "Dopo che i documenti sono stati protetti usando l'applicazione RMS
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 10/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 34025b7080b4365c0c1fdd77355e78a7c8742ce2
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 71f08e7500fbc9326bed3a5b37d694ecc5e37984
+ms.sourcegitcommit: 02e48f0e5137ba777ec9a2bccde08130e6075c20
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 10/19/2017
 ---
 # <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>Tenere traccia dei documenti e revocarli quando si usa l'applicazione RMS sharing
 
@@ -37,6 +37,8 @@ Quando si accede a questo sito, eseguire l'accesso per effettuare il rilevamento
 -   Se si desidera configurare notifiche tramite posta elettronica: Fare clic su **Impostazioni** e selezionare come e se ricevere un messaggio di posta elettronica quando si accede al documento.
 
 - Se si vuole tenere traccia dei documenti condivisi e revocarli per conto di altri utenti: gli amministratori di Azure Information Protection possono eseguire queste operazioni facendo clic sull'icona di amministrazione. Solo gli amministratori visualizzano questa icona.
+    
+    Nota: se pur essendo un amministratore globale l'utente non visualizza questa icona, significa che non sono stati ancora condivisi documenti. In questo caso, usare l'URL seguente per accedere al sito di rilevamento dei documenti: https://portal.azurerms.com/#/admin
 
 -   Se si hanno domande o si vogliono lasciare commenti e suggerimenti sul sito di rilevamento del documento: fare clic sull'icona della Guida per accedere a [Domande frequenti sul rilevamento dei documenti](http://go.microsoft.com/fwlink/?LinkId=523977).
 

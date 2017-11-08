@@ -1,11 +1,11 @@
 ---
-title: Note sulla versione | Azure RMS
-description: 
+title: Note sulla versione
+description: Aggiornamenti all'SDK per revisione e altre informazioni per sviluppatori.
 keywords: 
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/27/2017
+ms.date: 10/18/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -14,22 +14,27 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 875584683bcf1d35037691f21ac7d78d17806a07
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 52733dd7cac356879408e774c79331d705a71ea0
+ms.sourcegitcommit: 02e48f0e5137ba777ec9a2bccde08130e6075c20
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 10/19/2017
 ---
 # <a name="release-notes"></a>Note sulla versione
 
-Questo argomento contiene informazioni importanti su questa versione e le precedenti dell'SDK 2.1 RMS.
+Questo articolo contiene informazioni importanti su questa versione e le versioni precedenti di RMS SDK 2.1.
+
+## <a name="october-2017---update"></a>Aggiornamento di ottobre 2017
+
+- Aggiunta di due nuove API per l'inizializzazione e l'annullamento dell'inizializzazione dell'ambiente. Per informazioni, vedere [IpcInitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx) e [IpcUninitializeEnvironment](https://msdn.microsoft.com/library/hh535289.aspx).
+- Ora sono supportati i tipi di file di Visio. Per altre informazioni, vedere [Configurazione dell'API file](file-api-configuration.md).
 
 ## <a name="february-2016---sdk-documentation-update"></a>Aggiornamento di febbraio 2016 della documentazione dell'SDK
 
 >[!Note]
 > Gli aggiornamenti della documentazione delle funzionalità in questa sezione si applicano al download dell'SDK con data 11/12/2015.
 
-- **Flusso di autenticazione migliorato**: usando l'autenticazione OAuth2 basata su token tramite [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/). Per altre informazioni su questo processo e sulle relative estensioni API, vedere [ADAL authentication for your RMS enabled application](how-to-use-adal-authentication.md) (Autenticazione ADAL per l'applicazione abilitata per RMS).
+- **Flusso di autenticazione migliorato** usando l'autenticazione OAuth2 basata su token tramite [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/). Per altre informazioni su questo processo e sulle relative estensioni API, vedere [ADAL authentication for your RMS enabled application](how-to-use-adal-authentication.md) (Autenticazione ADAL per l'applicazione abilitata per RMS).
 
 - **Aggiornamento ad ADAL**: eseguendo l'aggiornamento dell'applicazione per l'uso dell'autenticazione ADAL anziché l'Assistente per l'accesso a Microsoft Online, l'utente e i clienti potranno:
 
@@ -37,7 +42,7 @@ Questo argomento contiene informazioni importanti su questa versione e le preced
  - Installare il client RMS 2.1 senza necessità di privilegi amministrativi sul computer
  - Certificare l'applicazione per Windows 10
 
-- **Il supporto dell'Assistente per l'accesso a Microsoft Online con RMS SDK verrà rimosso.** L'uso dell'Assistente per l'accesso continuerà a essere supportato per 6 mesi, trascorsi i quali verrà sospeso.
+- **Il supporto dell'Assistente per l'accesso a Microsoft Online con RMS SDK verrà rimosso.** L'Assistente per l'accesso continuerà a essere supportato per sei mesi, dopodiché il supporto verrà sospeso.
 
 
 ## <a name="december-2015-update"></a>Aggiornamento di dicembre 2015
@@ -48,11 +53,11 @@ Questo argomento contiene informazioni importanti su questa versione e le preced
 
 - Numerosi aggiornamenti per migliorare i messaggi di errore e l'esperienza di risoluzione dei problemi.
 - Si noti inoltre che è stato aggiornato anche l'elenco delle [le piattaforme supportate](supported-platforms.md).
-- La necessità dell'ambiente di pre-produzione e dell'utilizzo di manifesti dell'applicazione è stato rimosso a partire da RMS SDK 2.1. Queste sezioni del set di documentazione per gli sviluppatori sono state rimosse e l'intera documentazione è stata semplificata e riorganizzata.
+- La necessità dell'ambiente di pre-produzione e dell'uso del manifesto dell'applicazione è stata rimossa a partire da RMS SDK 2.1. Queste sezioni del set di documentazione per gli sviluppatori sono state rimosse e l'intera documentazione è stata semplificata e riorganizzata.
 
 ## <a name="may-2015-update"></a>Aggiornamento di maggio 2015
 
--   **App di servizio e RMS basato su cloud** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) richiede tre tipi di informazioni: chiave simmetrica, **AppPrincipalId** e **TenantBposId**. L'argomento è stato aggiornato per offrire linee guide sull'elaborazione di queste informazioni. Per questo aggiornamento, vedere la versione aggiornata di [Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md).
+-   **App di servizio e RMS basato su cloud** - [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) richiede tre tipi di informazioni: chiave simmetrica, **AppPrincipalId** e **TenantBposId**. L'articolo è stato aggiornato per offrire linee guida sull'elaborazione di queste informazioni. Per questo aggiornamento, vedere la versione aggiornata di [Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
 ## <a name="april-2015-update"></a>Aggiornamento di aprile 2015
 
@@ -68,7 +73,7 @@ Questo argomento contiene informazioni importanti su questa versione e le preced
 ## <a name="january-2015-update"></a>Aggiornamento di gennaio 2015
 
 -   **Aumento delle dimensioni del file protetto (pfile) supportato** - Supporta ora pfile di dimensioni maggiori di 1 gigabyte (1 GB). Per altre informazioni su pfile, vedere [Supported File Formats](supported-file-formats.md) (Formati file supportati).
--   **Miglioramento della registrazione per una migliore diagnostica** - Sui livelli di registrazione sarà visualizzato **ERRORE** o **AVVISO** per i messaggi da rivedere. Tutti gli altri messaggi, incluse le eccezioni ancora visualizzate, saranno registrati come **INFO**.
+-   **Miglioramento della registrazione per una migliore diagnostica** - Sui livelli di registrazione sarà visualizzato **ERRORE** o **AVVISO** per i messaggi da rivedere. Tutti gli altri messaggi incluse le eccezioni ancora visualizzate saranno registrati come **INFO**.
 
     È stato scelto questo approccio per evitare perdite di dettagli. A questo punto, solo i messaggi importanti sono visualizzati con livello AVVISO.
 
@@ -78,18 +83,18 @@ Questo argomento contiene informazioni importanti su questa versione e le preced
 ## <a name="october-2014-update"></a>Aggiornamento di ottobre 2014
 
 -   Aggiornamento dei comportamenti predefiniti del componente API file di SDK. Per altre informazioni, vedere [Configurazione dell'API file](file-api-configuration.md).
--   La Notifica tramite posta elettronica, una nuova funzionalità, è descritta nella sezione Note per gli sviluppatori, [Abilitazione della notifica tramite email](how-to-enable-email-notification.md).
+-   La nuova funzionalità Notifica tramite posta elettronica è descritta nell'articolo [Abilitazione della notifica tramite email](how-to-enable-email-notification.md) delle note per gli sviluppatori.
 
 ## <a name="july-2014-update"></a>Aggiornamento di luglio 2014
 
-Estensione del componente API File di SDK e offre le funzionalità seguenti:
+Il componente API File dell'SDK è stato integrato e ora offre le funzionalità seguenti:
 
 -   Identifica il programma di protezione da usare.
 -   Fornisce la protezione RMS a livello di granularità di un file.
 
     Funzioni aggiunte in questa versione:
 
-    **Nota**: sono stati aggiunti altri tipi di dati di supporto e strutture, non elencati in questo articolo, per le estensioni dell'API file. Tutti gli argomenti aggiornati per questa versione sono contrassegnati come **preliminari e soggetti a modifiche**.
+    **Nota**: sono stati aggiunti altri tipi di dati di supporto e strutture, non elencati in questo articolo, per le estensioni dell'API file. Tutti gli articoli aggiornati per questa versione sono contrassegnati come **preliminari e soggetti a modifiche**.
 
     -   [IpcfOpenFileOnHandle](https://msdn.microsoft.com/library/dn771751.aspx)
     -   [IpcfOpenFileOnILockBytes](https://msdn.microsoft.com/library/dn771752.aspx)

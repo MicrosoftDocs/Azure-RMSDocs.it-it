@@ -5,7 +5,7 @@ keywords: Come visualizzare file o messaggi di posta elettronica con l'app Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/06/2017
+ms.date: 10/16/2017
 ms.topic: article
 ms.prod: azure
 ms.service: information-protection
@@ -13,19 +13,26 @@ ms.technology: techgroup-identity
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 351074937c45866f882d51b19e3cd3e4792ae649
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: db44f73c20d7440d403b1d3a7a7ea0201f8a7abb
+ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Introduzione all'app Microsoft Azure Information Protection per iOS e Android
 
 *Si applica a: Active Directory Rights Management Services, Azure Information Protection*
 
-La maggior parte degli utenti useranno l'app Azure Information Protection automaticamente quando devono aprire un file o un messaggio di posta elettronica protetto. Se l'amministratore vuole testare l'app per gli utenti o semplicemente provarla prima, può usare le istruzioni seguenti.
+Prima di usare le istruzioni riportate in questa pagina, leggere le [domande frequenti per l'app Azure Information Protection per iOS e Android](mobile-app-faq.md). La pagina descrive lo scopo dell'app e i dispositivi supportati e contiene informazioni di base sull'uso dell'app.
 
-Accedere a uno dei file supportati dall'app dal dispositivo mobile per aprire il visualizzatore. Ad esempio:
+La maggior parte degli utenti usa l'app Azure Information Protection per aprire un file o un messaggio di posta elettronica protetto. Se l'amministratore vuole testare l'app per gli utenti o semplicemente provarla prima, può usare le istruzioni seguenti.
+
+> [!NOTE]
+> Evitare di aprire l'app prima di selezionare i documenti e i messaggi di posta elettronica da visualizzare. Aprire il documento o il messaggio di posta elettronica, quindi selezionare l'app per visualizzarlo.
+>
+> In modo analogo, accedere all'app solo dopo aver ricevuto la richiesta corrispondente.
+
+Per usare le istruzioni seguenti è necessario accedere dal dispositivo mobile a uno dei file supportati dall'app. Ad esempio:
 
 - **Un file con estensione rpmsg**: si tratta di un messaggio di posta elettronica protetto da diritti visualizzato come allegato in un messaggio di posta elettronica quando l'app di posta elettronica del dispositivo mobile non supporta la protezione dei dati di gestione dei diritti in modo nativo. 
     
@@ -39,8 +46,8 @@ Per visualizzare questi file nell'app visualizzatore Azure Information Protectio
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Se si hanno altre domande su questa app, controllare se sono state risolte in [Domande frequenti sull'app Azure Information Protection per iOS e Android](mobile-app-faq.md). 
+Per domande o commenti e suggerimenti sull'app non presenti nelle [domande frequenti](mobile-app-faq.md), visitare il [sito Yammer](https://www.yammer.com/AskIPTeam).
 
-Per altre domande, visitare il [sito di Yammer](https://www.yammer.com/AskIPTeam) o [inviare un messaggio di posta elettronica al team di Information Protection](mailto:askIPteam@microsoft.com?subject=Question%20about%20Azure%20Information%20Protection%20app).
+Se l'app non funziona come descritto, vedere le risorse elencate nella pagina delle [regole interne](../house-rules.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

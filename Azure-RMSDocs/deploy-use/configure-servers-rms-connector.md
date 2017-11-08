@@ -4,7 +4,7 @@ description: Informazioni per configurare i server locali che sfrutteranno il co
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 10/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8837b6187aee8bc041df7185527470297e913f49
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 674acfafb305d8ac6ff530710ba311160c850288
+ms.sourcegitcommit: 8ba50d1fc813214b6e66baea140e626c74c5a518
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 10/16/2017
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configurazione dei server per il connettore di Azure Rights Management
 
@@ -198,7 +198,7 @@ Per usare un connettore RMS, è necessario che i server di SharePoint eseguano u
 
 ### <a name="to-configure-sharepoint-servers-to-use-the-connector"></a>Per configurare server di SharePoint per l'uso del connettore
 
-1. Assicurarsi che i server di SharePoint siano autorizzati a usare il connettore RMS tramite lo strumento di amministrazione del connettore RMS e le informazioni della sezione [Autorizzazione dei server all'uso del connettore RMS](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector). Questa configurazione è necessaria in modo tale che Exchange possa usare il connettore RMS.
+1. Assicurarsi che i server di SharePoint siano autorizzati a usare il connettore RMS tramite lo strumento di amministrazione del connettore RMS e le informazioni della sezione [Autorizzazione dei server all'uso del connettore RMS](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector). Questa configurazione è necessaria per consentire ai server di SharePoint di usare il connettore RMS.
 
 2.  Sui server di SharePoint che comunicano con il connettore RMS, effettuare una delle seguenti operazioni:
 
@@ -230,7 +230,7 @@ Per usare il connettore RMS e la funzionalità Infrastruttura di classificazione
 
 ### <a name="to-configure-file-servers-to-use-the-connector"></a>Per configurare file server per l'uso del connettore
 
-1.  Assicurarsi che i file server siano autorizzati a usare il connettore RMS tramite lo strumento di amministrazione del connettore RMS e le informazioni della sezione [Autorizzazione dei server all'uso del connettore RMS](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector). Questa configurazione è necessaria in modo tale che Exchange possa usare il connettore RMS.
+1.  Assicurarsi che i file server siano autorizzati a usare il connettore RMS tramite lo strumento di amministrazione del connettore RMS e le informazioni della sezione [Autorizzazione dei server all'uso del connettore RMS](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector). Questa configurazione è necessaria per consentire ai file server di usare il connettore RMS.
 
 2.  Sui file server configurati per Infrastruttura di classificazione file e che comunicheranno con il connettore RMS, effettuare una delle seguenti operazioni:
 

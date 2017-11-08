@@ -5,20 +5,20 @@ keywords:
 author: bruceperlerms
 ms.author: bruceper
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 10/11/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
-ms.reviewer: shubhamp
+ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 42c772b870c700da84d5dfaf04c1ac5c2cd51f96
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 252300e1d370a0c9b8260fb93315782dd01787c7
+ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 10/17/2017
 ---
 # <a name="file-api-configuration"></a>Configurazione dell'API file
 
@@ -30,7 +30,7 @@ L'API file offre due tipi di protezione: la protezione nativa e la protezione PF
 -   **Protezione nativa**: il file è protetto in un formato di AD RMS su cui si basa il tipo MIME (estensione del file).
 -   **Protezione PFile**: il file è protetto in base al formato di File di protetto AD RMS (PFile).
 
-Per ulteriori informazioni sui formati di file supportati, vedere **Dettagli sul supporto per il file delle API file** in questo argomento.
+Per altre informazioni sui formati di file supportati, vedere **API file: dettagli sul supporto dei file** in questo articolo.
 
 ## <a name="keykey-value-types-and-descriptions"></a>Descrizioni e tipi di valore chiave/chiave
 
@@ -48,11 +48,11 @@ Le sezioni seguenti descrivono le chiavi e valori chiave che controllano la crit
 
 **Descrizione**: specifica le informazioni di configurazione di un'estensione file specifica, ad esempio, TXT, JPG e così via.
 
-- Il carattere jolly '*', è consentito, tuttavia, un'impostazione per un'estensione specifica ha la precedenza sull'impostazione con caratteri jolly. Il carattere jolly non influisce sulle impostazioni dei file di Microsoft Office; questi devono essere disabilitati in modo esplicito per tipo di file.
+- Il carattere jolly "*" è consentito, ma l'impostazione con un'estensione specifica ha la precedenza sull'impostazione con il carattere jolly. Il carattere jolly non influisce sulle impostazioni dei file di Microsoft Office; questi devono essere disabilitati in modo esplicito per tipo di file.
 - Per specificare i file che non hanno un'estensione, usare “.”
-- Non specificare il carattere “.” carattere quando si specifica la chiave per un'estensione di file specifica, ad esempio usare `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\TXT` per specificare le impostazioni per i file con estensione .txt. (non usare `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\.TXT`).
+- Non usare il carattere "." quando si specifica la chiave per una determinata estensione di file. Usare ad esempio `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\TXT` per specificare le impostazioni per i file con estensione txt. (non usare `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\.TXT`).
 
-Impostare il valore della **crittografia** della chiave per specificare il comportamento di protezione. Se il valore della **crittografia** non è impostato, si osserva il comportamento predefinito per il tipo di file.
+Per specificare il comportamento di protezione, impostare il valore della **crittografia** della chiave. Se il valore della **crittografia** non è impostato, si osserva il comportamento predefinito per il tipo di file.
 
 
 ### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>\Encryption*`
@@ -66,7 +66,7 @@ Impostare il valore della **crittografia** della chiave per specificare il compo
 > [!Note]
 > Questa impostazione non è rilevante per la decrittografia. È possibile decrittografare qualsiasi file crittografato, se crittografato tramite la protezione nativa o Pfile, purché l'utente disponga del diritto di **ESTRAZIONE**.
 
-- **Nativa**: si usa la crittografia nativa. Per i file di Office, il file crittografato avrà la stessa estensione del file originale. Ad esempio, un file con estensione .docx sarà crittografato in un file con estensione .docx. Per altri file a cui può essere applicata la protezione nativa, il file sarà crittografato in un file con un'estensione del formato p*zzz*, dove *zzz* è l'estensione del file originale. Ad esempio, i file con estensione txt sono crittografati in un file con estensione ptxt. Un elenco di estensioni di file a cui può essere applicata la protezione nativa è indicato di seguito.
+- **Nativa**: si usa la crittografia nativa. Per i file di Office, il file crittografato avrà la stessa estensione del file originale. Ad esempio, un file con estensione .docx sarà crittografato in un file con estensione .docx. Per altri file a cui può essere applicata la protezione nativa, il file sarà crittografato in un file con un'estensione del formato p*zzz*, dove *zzz* è l'estensione del file originale. Ad esempio i file con estensione txt vengono crittografati in un file con estensione ptxt. Di seguito viene fornito un elenco di estensioni di file a cui può essere applicata la protezione nativa.
 
 - **Pfile**: si usa la crittografia PFile. All'estensione originale del file crittografato sarà aggiunto pfile. Dopo la crittografia, ad esempio, l'estensione di un file sarà .txt.pfile.
 
@@ -86,11 +86,11 @@ Se si tenta di crittografare un tipo di file bloccato, si verifica un errore [IP
 
 ### <a name="file-api---file-support-details"></a>API file: dettagli sul supporto dei file
 
-È possibile aggiungere il supporto nativo per qualsiasi tipo di file (estensione). Ad esempio, per tutte le estensioni &lt;ext&gt; (non Office), verrà usata l'estensione \*p&lt;ext&gt; se la configurazione dell'amministratore per l'estensione è "NATIVA".
+È possibile aggiungere il supporto nativo per qualsiasi tipo (estensione) di file. Ad esempio, per tutte le estensioni &lt;ext&gt; (non Office), verrà usata l'estensione \*p&lt;ext&gt; se la configurazione dell'amministratore per l'estensione è "NATIVA".
 
 **File di Office**
 
--   Estensioni di file: doc, dot, xla, xls, xlt, pps, ppt, docm, docx, dotm, dotx, xlam, xlsb, xlsm, xlsx, ppam, xltx, xps, potm, potx, ppsx, ppsm, pptm, pptx, thmx.
+-   Estensioni di file: doc, dot, xla, xls, xlt, pps, ppt, docm, docx, dotm, dotx, xlam, xlsb, xlsm, xlsx, ppam, xltx, xps, potm, potx, ppsx, ppsm, pptm, pptx, thmx, vsdx, vsdm, vssx, vssm, vstx e vstm. 
 -   Tipo di protezione = Nativa (impostazione predefinita): sample.docx viene crittografato in sample.docx
 -   Tipo di protezione = Pfile: per i file Office ha lo stesso effetto della crittografia Nativa.
 -   Off: Disabilita la crittografia.
@@ -146,7 +146,7 @@ HKEY_LOCAL_MACHINE
                   Encryption = Off
 ```
 
-## <a name="related-topics"></a>Argomenti correlati
+## <a name="related-articles"></a>Articoli correlati
 
 - [Note per gli sviluppatori](developer-notes.md)
 - [IPCERROR\_FILE\_ENCRYPT\_BLOCKED](https://msdn.microsoft.com/library/hh535248.aspx)

@@ -4,7 +4,7 @@ description: Informazioni sui file e sulla registrazione dell'utilizzo per il cl
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,13 +12,13 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d1802fbd3c659b154d585224a3f7b412b8995e5b
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 64e6e17beb134fca1e51b35b39ff9f130c88ecbb
+ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="azure-information-protection-client-files-and-client-usage-logging"></a>File e registrazione dell'utilizzo del client Azure Information Protection
+# <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guida dell'amministratore: File e registrazione dell'utilizzo del client Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
@@ -76,9 +76,9 @@ Il client registra l'attività dell'utente nel registro eventi locale **Applicaz
     
     - Sistema (per l'accesso e il download dei criteri)
     
-    - DefaultAutomatic
+    - Predefinito
         
-        Questa azione origine **DefaultAutomatic** è solo per il client di anteprima e fa riferimento all'etichetta impostata tramite l'opzione **Selezionare l'etichetta predefinita** nei criteri di Azure Information Protection.
+        Questa azione di origine **Predefinito** è solo per il client di anteprima e fa riferimento all'etichetta impostata tramite l'opzione **Selezionare l'etichetta predefinita** nei criteri di Azure Information Protection.
 
     
 - Etichetta prima e dopo l'azione 

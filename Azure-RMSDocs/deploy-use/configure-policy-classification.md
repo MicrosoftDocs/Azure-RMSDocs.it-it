@@ -4,40 +4,27 @@ description: "Quando si configurano le condizioni per un'etichetta, è possibile
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 10/23/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: aa41d4f34f0ed43682f9ba426ec18204457980c3
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 1c37f1b05126b8e8d9a5e64f033c503f27a8a1fc
+ms.sourcegitcommit: a8140a7215c8704f34c247f602e1f12eb7b49aa2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 10/23/2017
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection
 
 >*Si applica a: Azure Information Protection*
 
-Quando si configurano le condizioni per un'etichetta, è possibile assegnare automaticamente un'etichetta a un documento o messaggio di posta elettronica. In alternativa, è possibile richiedere agli utenti di selezionare l'etichetta consigliata: 
+Quando si configurano le condizioni per un'etichetta, è possibile assegnare automaticamente un'etichetta a un documento o messaggio di posta elettronica. In alternativa, è possibile richiedere agli utenti di selezionare l'etichetta consigliata. 
 
-- La classificazione automatica si applica a Word, Excel e PowerPoint quando i file vengono salvati e si applica a Outlook quando i messaggi di posta elettronica vengono inviati. Non è possibile usare la classificazione automatica per i file che sono stati etichettati manualmente in precedenza.
- 
-- La classificazione consigliata si applica a Word, Excel e PowerPoint quando i file vengono salvati.
+Quando si configurano queste condizioni è possibile usare schemi predefiniti come **Numero della carta di credito** o **USA Social Security Number (SSN)** (Social Security Number - USA). In alternativa, è possibile definire una stringa o un modello personalizzato come condizione per la classificazione automatica. Queste condizioni si applicano al corpo del testo nei documenti e nei messaggi di posta elettronica, alle intestazioni e ai piè di pagina. Per altre informazioni sulle condizioni, vedere il passaggio 5 nella [procedura seguente](#to-configure-recommended-or-automatic-classification-for-a-label).
 
-Quando si configurano le condizioni è possibile usare schemi predefiniti, come **Numero della carta di credito** o **USA Social Security Number (SSN)** (Social Security Number - USA). In alternativa, è possibile definire una stringa o un modello personalizzato come condizione per la classificazione automatica. Queste condizioni si applicano al corpo del testo nei documenti e nei messaggi di posta elettronica, alle intestazioni e ai piè di pagina. Per altre informazioni sulle condizioni, vedere il passaggio 5 nella [procedura seguente](#to-configure-recommended-or-automatic-classification-for-a-label).
-
-Come vengono valutate più condizioni quando si applicano a più etichette:
-
-1. Le etichette sono ordinate per la valutazione, in base alla relativa posizione specificata nel criterio: l'etichetta posizionata per prima occupa la posizione più bassa (minore riservatezza) e l'etichetta posizionata per ultima occupa la posizione più alta (massima riservatezza).
-
-2. Viene applicata l'etichetta per la massima riservatezza.
- 
-3. Viene applicata l'ultima etichetta secondaria.
-
-> [!TIP]
->Per ottenere la migliore esperienza utente e garantire la continuità aziendale, è consigliabile iniziare con la classificazione consigliata dall'utente anziché quella automatica. Con questa configurazione, gli utenti possono accettare l'azione di etichettatura o protezione o ignorare questi suggerimenti se non sono adatti al messaggio di posta elettronica o documento in questione.
+Per ottenere la migliore esperienza utente e garantire la continuità aziendale, è consigliabile iniziare con la classificazione consigliata dall'utente anziché quella automatica. Con questa configurazione gli utenti possono accettare la classificazione e la protezione associata o ignorare questi suggerimenti se non sono adatti al messaggio di posta elettronica o al documento in questione.
 
 Ecco un esempio di richiesta quando si configura una condizione per l'applicazione di un'etichetta come azione consigliata, con un suggerimento di criterio personalizzato:
 
@@ -45,10 +32,54 @@ Ecco un esempio di richiesta quando si configura una condizione per l'applicazio
 
 In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per applicare l'etichetta consigliata oppure ignorare il suggerimento selezionando **Dismiss** (Ignora).
 
+> [!IMPORTANT]
+>Non configurare un'etichetta per la classificazione automatica e un'autorizzazione definita dall'utente. L'opzione per le autorizzazioni definite dall'utente è un'[impostazione di protezione](configure-policy-protection.md) che consente agli utenti di specificare a chi vengono concesse le autorizzazioni.
+>
+>Quando un'etichetta viene configurata per la classificazione automatica e per le autorizzazioni definite dall'utente, il contenuto viene verificato in base alle condizioni e l'impostazione di autorizzazione definita dall'utente non viene applicata. È possibile usare la classificazione e le autorizzazioni definite dall'utente consigliate.
+
+## <a name="how-automatic-or-recommended-labels-are-applied"></a>Come vengono applicate le etichette di elaborazione automatica o consigliata
+
+**Per la versione disponibile a livello generale del client di Azure Information Protection:**
+
+- La classificazione automatica si applica a Word, Excel e PowerPoint quando i documenti vengono salvati e a Outlook quando i messaggi di posta elettronica vengono inviati. 
+    
+    Non è possibile usare la classificazione automatica per documenti e messaggi di posta elettronica che in precedenza sono stati etichettati manualmente o automaticamente con una classificazione superiore. 
+
+- La classificazione consigliata si applica a Word, Excel e PowerPoint quando i documenti vengono salvati. Non è possibile usare la classificazione consigliata per Outlook.
+    
+    È possibile usare la classificazione consigliata per documenti che sono stati etichettati in precedenza, con o senza una classificazione superiore. 
+
+
+**Per la versione di anteprima corrente del client di Azure Information Protection:**
+
+- La classificazione automatica si applica a Word, Excel, PowerPoint e Outlook. Nel caso dei documenti la classificazione automatica viene eseguita [in modo continuo in background](#more-information-about-running-continuously). Per Outlook la classificazione automatica viene eseguita quando vengono inviati i messaggi di posta elettronica. 
+    
+    Non è possibile usare la classificazione automatica per documenti che in precedenza sono stati etichettati manualmente o automaticamente con una classificazione superiore. L'eccezione a questo comportamento è l'uso dello scanner di Azure Information Protection con il parametro OverrideLabel impostato su On (abilitato).
+
+- La classificazione consigliata si applica a Word, Excel e PowerPoint. Per questi documenti la classificazione consigliata viene eseguita [in modo continuo in background](#more-information-about-running-continuously). Non è possibile usare la classificazione consigliata per Outlook.
+    
+    È possibile usare la classificazione consigliata per documenti che sono stati etichettati in precedenza, con o senza una classificazione superiore. 
+
+#### <a name="more-information-about-running-continuously"></a>Altre informazioni sull'esecuzione continua
+
+La versione di anteprima corrente del client Azure Information Protection verifica periodicamente nei documenti le regole di condizione specificate. Questo comportamento abilita la classificazione automatica e consigliata e la protezione dei documenti archiviati in SharePoint Online. I file di grandi dimensioni vengono salvati più rapidamente perché le regole di condizione sono già state eseguite. 
+
+Le regole di condizione non vengono eseguite in tempo reale durante la digitazione. Vengono eseguite periodicamente come attività in background se il documento viene modificato. 
+
+### <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>Come vengono valutate più condizioni quando si applicano a più di un'etichetta
+
+Per la versione disponibile a livello generale e la versione di anteprima corrente del client di Azure Information Protection:
+
+1. Le etichette sono ordinate per la valutazione, in base alla relativa posizione specificata nel criterio: l'etichetta posizionata per prima occupa la posizione più bassa (minore riservatezza) e l'etichetta posizionata per ultima occupa la posizione più alta (massima riservatezza).
+
+2. Viene applicata l'etichetta per la massima riservatezza.
+ 
+3. Viene applicata l'ultima etichetta secondaria.
+
+
 ## <a name="to-configure-recommended-or-automatic-classification-for-a-label"></a>Per configurare la classificazione consigliata o automatica per un'etichetta
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza. Quindi passare al pannello **Azure Information Protection**. 
-    
+1. Se non è già stato fatto, aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza. Quindi passare al pannello **Azure Information Protection**.     
     Ad esempio, dal menu principale fare clic su **Altri servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
 2. Se l'etichetta da configurare viene applicata a tutti gli utenti, restare nel pannello **Azure Information Protection - Criteri globali**.
@@ -86,8 +117,9 @@ In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).  
+È consigliabile distribuire lo [scanner di Azure Information Protection](deploy-aip-scanner.md), che può usare le regole di classificazione automatica per trovare, classificare e proteggere i file in condivisioni di rete e archivi di file locali.  
+
+Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
-
 

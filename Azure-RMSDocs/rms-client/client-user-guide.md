@@ -4,7 +4,7 @@ description: Il client di Azure Information Protection per Windows consente di p
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/08/2017
+ms.date: 11/02/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 2cf46bf9-7d23-4f49-b5c1-7ed7b71c858f
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3facc7898e048af6f715410c73c43309419bf957
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: f1ea192bcacc856b1a4452e2ad3b21f4de45d511
+ms.sourcegitcommit: 92bbef77091c66300e0d2acce60c064ffe314752
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 11/03/2017
 ---
 # <a name="azure-information-protection-user-guide"></a>Guida per l'utente di Azure Information Protection
 
@@ -30,6 +30,8 @@ Il client di Azure Information Protection per Windows consente di proteggere i d
 ## <a name="what-do-you-want-to-do"></a>Come procedere
 
 - [Scaricare e installare il client di Azure Information Protection](install-client-app.md)
+
+- [Classificare un file o un messaggio di posta elettronica](client-classify.md)
 
 - [Classificare e proteggere un file o un messaggio di posta elettronica](client-classify-protect.md)
 
