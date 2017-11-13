@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire lo scanner di Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/02/2017
+ms.date: 11/07/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 924a9e0b19203f60827693adecc9b74fa62edef1
-ms.sourcegitcommit: 92bbef77091c66300e0d2acce60c064ffe314752
+ms.openlocfilehash: 5df68e177d9e3d77a4fd9441e07f1779fa714b23
+ms.sourcegitcommit: a63b3ac3949e66cc38e20d7f14ac129b8e3224c3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -41,7 +41,7 @@ Dopo aver configurato i [criteri di Azure Information Protection](configure-poli
 
 ![Panoramica dello scanner di Azure Information Protection](../media/infoprotect-scanner.png)
 
-Per la classificazione automatica vengono usati i tipi di informazioni riservate e il rilevamento di modelli della prevenzione della perdita di dati (DLP) predefiniti in Office 365 o i criteri di espressione regolare di Office 365. Poiché usa il client di Azure Information Protection, lo scanner è in grado di classificare e proteggere gli stessi [tipi di file](../rms-client/client-admin-guide-file-types.md).
+Lo scanner può controllare tutti i file indicizzabili da Windows, tramite iFilter installati nel computer. In seguito, per stabilire se i file devono essere etichettati, lo scanner usa il rilevamento di modelli e di tipi di dati sensibili della prevenzione della perdita di dati (DLP) predefiniti in Office 365 o i modelli regex di Office 365. Poiché usa il client di Azure Information Protection, lo scanner è in grado di classificare e proteggere gli stessi [tipi di file](../rms-client/client-admin-guide-file-types.md).
 
 È possibile eseguire lo scanner solo in modalità di individuazione, in cui si usano i report per verificare che cosa accadrebbe se i file fossero etichettati. Oppure è possibile eseguire lo scanner per applicare automaticamente le etichette.
 
@@ -52,7 +52,7 @@ Prima di installare lo scanner di Azure Information Protection, verificare che i
 
 |Requisito|Altre informazioni|
 |---------------|--------------------|
-|Computer Windows Server per eseguire il servizio scanner:<br /><br />- 4 processi<br /><br />- 4 GB di RAM|Windows Server 2016 o Windows Server 2012 R2.<br /><br />Questo server può essere un computer fisico o virtuale con una connessione di rete veloce e affidabile agli archivi dati da analizzare. <br /><br />Verificare che il server usi la [connettività Internet](../get-started/requirements.md#firewalls-and-network-infrastructure) necessaria per Azure Information Protection. In alternativa, è necessario configurarlo come [computer disconnesso](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers).|
+|Computer Windows Server per eseguire il servizio scanner:<br /><br />- 4 processi<br /><br />- 4 GB di RAM|Windows Server 2016 o Windows Server 2012 R2. <br /><br />Nota: per scopi di test o valutazione in un ambiente non di produzione, è possibile usare un sistema operativo client Windows [supportato dal client di Azure Information Protection](../get-started/requirements.md#client-devices).<br /><br />Il computer può essere un computer fisico o virtuale con una connessione di rete veloce e affidabile agli archivi dati da analizzare. <br /><br />Verificare che il computer abbia la [connettività Internet](../get-started/requirements.md#firewalls-and-network-infrastructure) necessaria per Azure Information Protection. In alternativa, è necessario configurarlo come [computer disconnesso](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). |
 |SQL Server per archiviare la configurazione dello scanner:<br /><br />- Istanza locale o remota|SQL Server 2012 R2 è la versione minima per le edizioni seguenti:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express|
 |Account del servizio per eseguire il servizio scanner|Questo account deve essere un account di Active Directory sincronizzato con Azure AD, con i seguenti requisiti aggiuntivi:<br /><br />- Diritto di **accesso locale**. Questo diritto è richiesto per l'installazione e la configurazione dello scanner, ma non per il funzionamento. È necessario concedere questo diritto all'account del servizio, ma è possibile rimuoverlo dopo avere verificato che lo scanner è in grado di individuare, classificare e proteggere i file.<br /><br />- Diritto di **accesso come servizio**. Questo diritto viene concesso automaticamente all'account del servizio durante l'installazione dello scanner ed è richiesto per l'installazione, la configurazione e il funzionamento dello scanner. <br /><br />- Autorizzazioni per i repository di dati: è necessario concedere le autorizzazioni per la **lettura** e la **scrittura** per analizzare i file e quindi applicare la classificazione e la protezione ai file che soddisfano le condizioni indicate nei criteri di Azure Information Protection. Per eseguire lo scanner solo in modalità di individuazione, è sufficiente l'autorizzazione per la **lettura**.<br /><br />- Per le etichette che riproteggono o rimuovono la protezione: per garantire che lo scanner abbia sempre accesso ai file protetti, trasformare l'account in un [utente con privilegi avanzati](configure-super-users.md) per il servizio Azure Rights Management e verificare che sia abilitata la funzionalità per utenti con privilegi avanzati. Per altre informazioni sui requisiti dell'account per l'applicazione della protezione, vedere [Preparazione di utenti e gruppi per Azure Information Protection](../plan-design/prepare.md).|
 |Il client di Azure Information Protection è installato nel computer Windows Server|Attualmente lo scanner di Azure Information Protection richiede la versione di anteprima del client di Azure Information Protection.<br /><br />Se si preferisce, è possibile installare il client solo con il modulo di PowerShell (AzureInformationProtection) usato per installare e configurare lo scanner.<br /><br />Per istruzioni sull'installazione del client, vedere la [guida per l'amministratore](../rms-client/client-admin-guide.md).|
@@ -129,7 +129,7 @@ Con la configurazione predefinita dello scanner ora è possibile eseguire la pri
 
 1. Usando **Strumenti di amministrazione** > **Servizi**, avviare il servizio **Azure Information Protection Scanner**.
 
-2. Attendere che lo scanner completi il proprio ciclo. Quando lo scanner ha eseguito la ricerca per indicizzazione di tutti i file negli archivi dati specificati, il servizio si arresta. Per verificare che il servizio si sia arrestato, usare il log eventi dell'**applicazione** di Windows, **Azure Information Protection Scanner**. Cercare l'ID evento informativo **911**.
+2. Attendere che lo scanner completi il proprio ciclo. Quando lo scanner ha eseguito la ricerca per indicizzazione di tutti i file negli archivi dati specificati, il servizio si arresta. Per verificare che il servizio si sia arrestato, usare il registro eventi locale di **applicazioni e servizi** di Windows, **Azure Information Protection**. Cercare l'ID evento informativo **911**.
 
 3. Esaminare i report archiviati in %*localappdata*%\Microsoft\MSIP\Scanner\Reports con formato di file CSV. Con la configurazione predefinita dello scanner, solo i file che soddisfano le condizioni per la classificazione automatica vengono inclusi nei report.
     
@@ -178,7 +178,7 @@ Altri cmdlet per lo scanner consentono di modificare l'account del servizio e il
 
 ## <a name="event-log-ids-and-descriptions"></a>ID registro eventi e descrizioni
 
-Usare le sezioni seguenti per identificare gli ID evento e le descrizioni possibili per lo scanner.
+Usare le sezioni seguenti per identificare gli ID evento e le descrizioni possibili per lo scanner. Gli eventi vengono registrati nel server su cui viene seguito il servizio scanner, nel registro eventi di **applicazioni e servizi** di Windows, **Azure Information Protection**.
 
 -----
 
@@ -202,9 +202,9 @@ Informazione **913**
 
 **Lo scanner si è arrestato perché è impostato su Never.**
 
-Questo evento viene registrato quando lo scanner è configurato per essere eseguito una volta anziché continuamente e il servizio scanner di Azure Information Protection è stato riavviato manualmente dopo l'avvio del computer.  
+L'evento viene registrato quando lo scanner è configurato per essere eseguito una volta anziché continuamente e il servizio scanner di Azure Information Protection è stato riavviato manualmente dopo l'avvio del computer.  
 
-Per analizzare di nuovo i file, è necessario avviare manualmente il servizio. Per modificare questo comportamento in modo che lo scanner venga eseguito continuamente, usare il cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) e impostare il parametro **Schedule** su **Continuous**.
+Per analizzare nuovamente i file, è necessario impostare la pianificazione su **Una volta** o **Continuo** e riavviare manualmente il servizio. Per modificare la pianificazione, usare il cmdlet [Set AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) e il parametro **Pianificazione**.
 
 ----
 
