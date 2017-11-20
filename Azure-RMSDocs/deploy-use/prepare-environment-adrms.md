@@ -4,7 +4,7 @@ description: Informazioni aggiuntive per un'implementazione di Azure Rights Mana
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 11/10/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2e8f6596216e06e2af773c0a19a2c5eaafd096b8
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: b20bbc1fe0de90b9b0151098e1b77d3c7a98c431
+ms.sourcegitcommit: e9a24fc5303b21f5eeebf16afed44db0d163ac77
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="preparing-the-environment-for-azure-rights-management-when-you-also-have-active-directory-rights-management-services-ad-rms"></a>Preparazione dell'ambiente per Azure Rights Management quando è presente anche Active Directory Rights Management Services (AD RMS)
 
@@ -24,9 +24,9 @@ ms.lasthandoff: 08/30/2017
 
 Indicazioni importanti da seguire se si sta già usando Active Directory Rights Management Services (AD RMS) e si verifica quanto segue:
 
-## <a name="you-see-an-option-to-activate-azure-rms-when-you-configure-azure-information-protection"></a>Quando si configura Azure Information Protection viene visualizzata un'opzione per l'attivazione di Azure RMS
+## <a name="you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection"></a>Quando si configura Azure Information Protection viene visualizzata un'opzione per attivare la protezione
 
-Il pannello **Azure Information Protection - Impostazioni di RMS** include un'opzione per l'attivazione del servizio Azure Rights Management (Azure RMS). 
+Il pannello **Azure Information Protection - Attivazione della protezione** include un'opzione per attivare il servizio Azure Rights Management (Azure RMS). 
 
 Se si usa anche Active Directory Rights Management Services (AD RMS), non selezionare **Attiva**. L'attivazione di Azure Rights Management quando è già presente AD RMS non è compatibile. Questo scenario non è supportato e restituisce risultati non prevedibili, pertanto è importante non attivare Azure Rights Management in questa fase. 
 
