@@ -1,10 +1,10 @@
 ---
-title: Client di Azure Information Protection&colon; cronologia delle versioni
-description: Informazioni sugli elementi nuovi o modificati in una versione del client di Azure Information Protection per Windows.
+title: Client di Azure Information Protection&colon; cronologia delle versioni e criteri per il supporto
+description: Informazioni sugli elementi nuovi o modificati in una versione del client di Azure Information Protection per Windows e sui criteri del ciclo di vita per il supporto.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/20/2017
+ms.date: 11/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,24 +12,33 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ec73c1e0c0c2d5ef959f15975b2a972086a3bcff
-ms.sourcegitcommit: 91585427fe62956fd78d4e7897ec8abe55b3c11d
+ms.openlocfilehash: e107d796ebda1b1942e19ede8c794f79defbf64e
+ms.sourcegitcommit: fd3932ab19a00229b56efc3e301abaf9cff3f70b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 11/17/2017
 ---
-# <a name="azure-information-protection-client-version-release-history"></a>Client di Azure Information Protection: cronologia delle versioni
+# <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto
 
 >*Si applica a: Azure Information Protection*
 
-Il team di Azure Information Protection aggiorna regolarmente il client di Azure Information Protection con correzioni e nuove funzionalità. Il client è incluso in Microsoft Update Catalog (categoria **Azure Information Protection**) ed è sempre possibile scaricare la versione di disponibilità generale più recente e la versione di anteprima corrente dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+Il team di Azure Information Protection aggiorna regolarmente il client di Azure Information Protection con correzioni e nuove funzionalità. 
 
-Le versioni di anteprima non devono essere distribuite agli utenti finali nelle reti di produzione, ma possono essere usate per visualizzare e provare le nuove funzionalità e correzioni che saranno disponibili nella prossima versione di disponibilità generale. 
+È possibile scaricare la versione disponibile a livello generale più recente e la versione di anteprima corrente dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Queste versioni sono incluse anche nel catalogo di Microsoft Update (categoria: **Azure Information Protection**), in modo da poter distribuire il client tramite WSUS o Configuration Manager o altri meccanismi di distribuzione di software che usano Microsoft Update.
 
-Usare le informazioni seguenti per visualizzare gli elementi nuovi o modificati di una versione di disponibilità generale. La versione più recente è elencata per prima. 
+### <a name="servicing-information-and-timelines"></a>Informazioni e tempistiche di manutenzione
+
+Le versioni disponibili a livello generale del client Azure Information Protection sono supportate per un periodo di 6 mesi dalla data di rilascio. Le correzioni e le nuove funzionalità sono sempre valide per l'ultima versione disponibile a livello generale e non verranno applicate alle versioni precedenti.
+
+Le versioni di anteprima non devono essere distribuite agli utenti finali nelle reti di produzione, ma è possibile usare la versione di anteprima più recente per visualizzare e provare le nuove funzionalità e correzioni che saranno disponibili nella prossima versione disponibile a livello generale. Non sono supportate le versioni di anteprima non aggiornate.
+
+### <a name="release-history"></a>Cronologia delle versioni
+
+Usare le informazioni seguenti per scoprire le novità o le modifiche per una versione supportata del client di Azure Information Protection per Windows. La versione più recente è elencata per prima. 
+
 
 > [!NOTE]
-> Poiché le correzioni di minore rilevanza non sono elencate, se si verifica un problema con il client di Azure Information Protection, controllare prima che tale problema non riguardi la versione di disponibilità generale più recente. In caso affermativo, verificare la versione di anteprima corrente.
+> Dato che le correzioni di minore rilevanza non sono elencate, se si verifica un problema con il client di Azure Information Protection, è consigliabile controllare se tale problema è stato risolto con la versione disponibile a livello generale più recente. Se il problema persiste, verificare la versione di anteprima corrente.
 >  
 > Per il supporto tecnico, vedere le informazioni riportate in [Opzioni di supporto e risorse per la community](../get-started/information-support.md#support-options-and-community-resources). È anche possibile rivolgersi al team di Azure Information Protection nel [sito di Yammer](https://www.yammer.com/askipteam/).
 
@@ -115,86 +124,9 @@ Questa versione include MSIPC versione 1.0.2217.1 del client RMS.
     
     Anche per queste applicazioni, per migliorare le prestazioni per Office 2016 con SharePoint Online e OneDrive for Business, l'assegnazione di etichette automatica e consigliata viene applicata quando si chiude il file anziché quando si salva il file (salvataggio automatico o selezionato dall'utente). Analogamente, se è abilitata l'impostazione che richiede l'**assegnazione di un'etichetta a tutti i documenti e messaggi di posta elettronica**, agli utenti non viene chiesto di selezionare un'etichetta finché il file non viene chiuso. L'eccezione è per Word 2016 ed Excel 2016 e l'utente seleziona l'opzione **Salva con nome**. Quindi, questa azione attiva i comportamenti relativi alle etichette, se sono configurati. 
 
-## <a name="version-14210"></a>Versione 1.4.21.0
-
-**Data di rilascio**: 15/03/2017
-
-**Modifica dei requisiti:**
-
-La versione precedente ha introdotto il nuovo prerequisito di Microsoft .NET Framework 4.6.2 per il client completo. Anche se non è consigliabile, è possibile ignorare questo prerequisito con il parametro di installazione personalizzata **DowngradeDotNetRequirement**. Per altre informazioni, vedere [Installare il client Azure Information Protection per gli utenti](client-admin-guide-install.md) nella guida dell'amministratore.
-
-**Nuove funzionalità**:
-
-- Possibilità di impostare autorizzazioni personalizzate dall'applicazione di Office, in modo da definire impostazioni di protezione personali, per gruppi esterni o per tutti gli utenti di un'altra organizzazione. Per altre informazioni, vedere [Impostare autorizzazioni personalizzate per un documento](client-classify-protect.md#set-custom-permissions-for-a-document) nella Guida dell'utente.
-    
-- I file PDF supportano ora etichette che applicano solo la classificazione.
-
-- Per i file PDF, il visualizzatore supporta ora opzioni che consentono di eseguire varie operazioni, come la ricerca, lo zoom e la rotazione. Per usare queste opzioni, fare clic con il pulsante destro del mouse sul file quando viene aperto nel visualizzatore.
-
-**Correzioni**:
-
-- Supporto per le unità mappate per classificare e proteggere i file.
-
-- Supporto per file di grandi dimensioni (maggiori di 250 MB) nel visualizzatore del client Azure Information Protection. 
-
-- Quando è configurata la modalità HYOK, Outlook può applicare etichette configurate per l'uso di modelli di Azure Rights Management o AD RMS.
-
-## <a name="version-131552"></a>Versione 1.3.155.2
-
-**Data di rilascio**: 08/02/2017
-
-**Nuovi requisiti**:
-
-Microsoft .NET Framework
-
-- Questa versione del client Azure Information Protection richiede Microsoft .NET Framework 4.6.2 come versione minima. Se questo non è presente, il programma di installazione prova a scaricarlo e installarlo. Al termine dell'installazione del client Azure Information Protection, potrebbe essere necessario riavviare il computer.
-
-- Se il visualizzatore Azure Information Protection viene installato separatamente, è necessario Microsoft .NET Framework 4.5.2 come versione minima. Se questo non è presente, il programma di installazione non lo scarica e installa.
-
-**Nuove funzionalità**:
-
-- Nuovo client unificato che riunisce le funzionalità dell'applicazione di condivisione Rights Management per Windows e il client Azure Information Protection. Include:
-    
-    - Integrazione con Esplora file (clic con il pulsante destro del mouse) per l'applicazione di etichette e protezione. Supporta altri formati di file e la selezione di più file.
-    - Un visualizzatore per documenti protetti (include PDF protetti per SharePoint).
-    - Cmdlet di PowerShell per ottenere e impostare etichette per i file archiviati in locale o in condivisioni di rete. Questi cmdlet vengono installati con i cmdlet forniti in precedenza con lo strumento di protezione RMS (modulo RMSProtection).
-    - Log di utilizzo del client che registrano informazioni, ad esempio su quale etichetta è stata applicata, come e da chi.
-
-Questa versione del client è la [versione con disponibilità generale](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/08/azure-information-protection-december-update-moves-to-general-availability/) del client in anteprima annunciato per la prima volta nel mese di dicembre 2016. Per altre informazioni su questa versione del client, vedere le guide seguenti:
-
-- [Guida per l'amministratore del client di Azure Information Protection](client-admin-guide.md)
-
-- [Guida per l'utente di Azure Information Protection](client-user-guide.md)
-
-
-## <a name="version-1240"></a>Versione 1.2.4.0
-
-**Data di rilascio**: 27/10/2016
-
-**Nuove funzionalità**:
-
-- Opzione per test diagnostici e ripristino che l'utente può eseguire dall'applicazione di Office quando è installato il client di Azure Information Protection: nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi**, scegliere **Guida e commenti e suggerimenti** e quindi **Esegui diagnostica**. 
-
-    Per altre informazioni su questa opzione, vedere la sezione [Controlli aggiuntivi e risoluzione dei problemi](client-admin-guide.md#installation-checks-and-troubleshooting) nella Guida dell'amministratore.
-
-**Correzioni**:
-
-- L'installazione del client viene completata quando il servizio Windows Update è disattivato.
-
-- In Office 2016, quando si salva un documento ed è configurata un'etichetta per un'intestazione o un piè di pagina, il cursore non passa all'intestazione o al piè di pagina.
-
-- La classificazione automatica funziona in Word per il testo nelle caselle di testo combinate.
-
-
-## <a name="version-11230"></a>Versione 1.1.23.0
-
-**Data di rilascio**: 01/10/2016
-
-Disponibilità generale.
-
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sull'installazione e l'uso del client:
+Per altre informazioni sull'installazione e l'uso del client: 
 
 - Per utenti: [Scaricare e installare il client](install-client-app.md)
 

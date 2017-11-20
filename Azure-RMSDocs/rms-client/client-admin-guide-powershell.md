@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per amministratori per gestire il client 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/09/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 197e3c8e908849665231040fd86cd79bd47cd1eb
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: dc3545c8212907786aa2fcf11e819b4cbdcf1ab5
+ms.sourcegitcommit: 4c6d9c55ff5dc5dbb10dc8a5abed9319fd3efb98
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/13/2017
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
 
@@ -454,11 +454,14 @@ L'output potrebbe essere simile al seguente:
 
 ## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>Come assegnare un'etichetta ai file in modo non interattivo per Azure Information Protection
 
-È possibile eseguire i cmdlet per l'assegnazione delle etichette in modo non interattivo tramite il cmdlet **Set-AIPAuthentication**.
+È possibile eseguire i cmdlet per l'assegnazione delle etichette in modo non interattivo tramite il cmdlet **Set-AIPAuthentication**. È necessario un intervento non interattivo anche per lo scanner di Azure Information Protection, attualmente in anteprima.
 
 Per impostazione predefinita, quando si eseguono i cmdlet per l'assegnazione di etichette, i comandi vengono eseguiti nel contesto utente personale in una sessione interattiva di PowerShell. Per eseguirli senza interventi da parte dell'utente, creare un nuovo account utente di Azure AD per questo scopo. Nel contesto di tale utente, quindi, eseguire il cmdlet Set-AIPAuthentication per impostare e archiviare le credenziali usando un token di accesso da Azure AD. Questo account utente viene quindi autenticato e avviato per il servizio Azure Rights Management. L'account scarica i criteri di Azure Information Protection ed eventuali modelli di Rights Management usati dalle etichette.
 
-La prima volta che si esegue questo cmdlet viene richiesto di accedere ad Azure Information Protection. Specificare il nome dell'account utente e la password creata per l'esecuzione senza intervento dell'utente. Questo account può quindi eseguire i cmdlet di assegnazione di etichette in modo non interattivo fino alla scadenza del token di autenticazione. Quando il token scade, eseguire nuovamente il cmdlet per acquisire un nuovo token:
+> [!NOTE]
+> Se si usano [criteri con ambito](../deploy-use/configure-policy-scope.md) tenere presente che potrebbe essere necessario aggiungere questo account ai criteri con ambito.
+
+La prima volta che si esegue questo cmdlet viene richiesto di accedere ad Azure Information Protection. Specificare il nome e la password dell'account utente creato per l'esecuzione senza intervento dell'utente. Questo account può quindi eseguire i cmdlet di assegnazione di etichette in modo non interattivo fino alla scadenza del token di autenticazione. Quando il token scade, eseguire nuovamente il cmdlet per acquisire un nuovo token:
 
 Se si esegue questo cmdlet senza parametri, l'account acquisisce un token di accesso valido per 90 giorni o fino alla scadenza della password.  
 
@@ -512,6 +515,13 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
     
     La configurazione delle due app è completata e i valori necessari per eseguire [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con parametri sono disponibili.
 
+
+> [!TIP]
+> Se Set AIPAuthentication non riesce e sono state usate app esistenti invece di creare nuove app con le istruzioni precedenti, potrebbe essere necessario reimpostare le autorizzazioni necessarie per le app. Ciò è vero anche se sono state seguite le istruzioni per creare nuove app per Set-AIPAuthentication, ma sono state poi modificate le impostazioni delle app.
+> 
+> Per reimpostare le autorizzazioni necessarie, per entrambe le app, seguire questa procedura di configurazione: selezionare **Tutte le impostazioni** > **Autorizzazioni necessarie** > **Concedi autorizzazioni** e fare clic su **Sì** per confermare.
+> 
+> In alternativa, creare nuove app usando le istruzioni precedenti.
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per le informazioni della Guida sui cmdlet, all'interno di una sessione di PowerShell digitare `Get-Help <cmdlet name> cmdlet`. Per ottenere le informazioni più aggiornate, usare il parametro -online. Ad esempio: 
