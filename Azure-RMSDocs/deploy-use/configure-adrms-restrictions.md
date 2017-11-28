@@ -4,17 +4,17 @@ description: Identificare le restrizioni, i prerequisiti e le raccomandazioni se
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: cceacbe94983e66bdde6de0947ae59b44e29a54e
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 8684188a4c01f9e90ee073d1d378e55dba1fc1eb
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hold-your-own-key-hyok-requirements-and-restrictions-for-ad-rms-protection"></a>Requisiti e restrizioni HYOK per la protezione di AD RMS
 
@@ -65,7 +65,7 @@ Oltre a non supportare i vantaggi elencati che si ottengono quando si usa la pro
 
     È possibile configurare un'etichetta in modo che **Non inoltrare** usi HYOK o il servizio Azure Rights Management. In alternativa gli utenti possono selezionare direttamente Non inoltrare. Possono selezionare questa opzione con il pulsante **Non inoltrare** della scheda **Messaggio** della barra multifunzione di Office oppure con le opzioni di menu di Outlook. Le opzioni di menu **Non inoltrare** si trovano in **File** > **Autorizzazioni**e in corrispondenza del pulsante **Autorizzazioni** della scheda **Opzioni** della barra multifunzione. 
     
-    Il client Azure Information Protection usa sempre Azure RMS quando gli utenti selezionano il pulsante **Non inoltrare** in Outlook. Se questo non è il comportamento voluto, è possibile nascondere il pulsante **Non inoltrare** in Outlook configurando un'[impostazione client avanzata](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook). 
+    Il client Azure Information Protection usa sempre Azure RMS quando gli utenti selezionano il pulsante **Non inoltrare** in Outlook. Se questo non è il comportamento desiderato, è possibile nascondere questo pulsante impostando l'[impostazione dei criteri ](../deploy-use/configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon** (Aggiungi il pulsante Non inoltrare alla barra multifunzione Outlook) su **Off** (Disattiva). 
     
     Quando gli utenti selezionano **Non inoltrare** in un'opzione di menu di Outlook possono scegliere tra Azure RMS e AD RMS, ma potrebbero non sapere quale opzione selezionare per il loro messaggio di posta elettronica. Se viene usato AD RMS quando dovrebbe essere usato Azure RMS, è possibile che gli utenti con cui si gestiscono condivisioni esterne non riescano ad aprire i messaggi di posta elettronica.
 

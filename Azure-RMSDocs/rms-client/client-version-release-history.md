@@ -4,7 +4,7 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e107d796ebda1b1942e19ede8c794f79defbf64e
-ms.sourcegitcommit: fd3932ab19a00229b56efc3e301abaf9cff3f70b
+ms.openlocfilehash: c3c0acad413ddbbcd1caccd4f1a73c7b0884ae7c
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto
 
@@ -28,14 +28,13 @@ Il team di Azure Information Protection aggiorna regolarmente il client di Azure
 
 ### <a name="servicing-information-and-timelines"></a>Informazioni e tempistiche di manutenzione
 
-Le versioni disponibili a livello generale del client Azure Information Protection sono supportate per un periodo di 6 mesi dalla data di rilascio. Le correzioni e le nuove funzionalità sono sempre valide per l'ultima versione disponibile a livello generale e non verranno applicate alle versioni precedenti.
+Le versioni disponibili a livello generale del client Azure Information Protection sono supportate per un periodo di sei mesi dalla data di rilascio. Le correzioni e le nuove funzionalità sono sempre valide per l'ultima versione disponibile a livello generale e non verranno applicate alle versioni precedenti.
 
 Le versioni di anteprima non devono essere distribuite agli utenti finali nelle reti di produzione, ma è possibile usare la versione di anteprima più recente per visualizzare e provare le nuove funzionalità e correzioni che saranno disponibili nella prossima versione disponibile a livello generale. Non sono supportate le versioni di anteprima non aggiornate.
 
 ### <a name="release-history"></a>Cronologia delle versioni
 
 Usare le informazioni seguenti per scoprire le novità o le modifiche per una versione supportata del client di Azure Information Protection per Windows. La versione più recente è elencata per prima. 
-
 
 > [!NOTE]
 > Dato che le correzioni di minore rilevanza non sono elencate, se si verifica un problema con il client di Azure Information Protection, è consigliabile controllare se tale problema è stato risolto con la versione disponibile a livello generale più recente. Se il problema persiste, verificare la versione di anteprima corrente.
@@ -60,17 +59,19 @@ Questa versione include MSIPC versione 1.0.3219.0619 del client RMS.
 
 - Supporto per le etichette configurate per le azioni definite dall'utente. Per Outlook, questa etichetta si applica automaticamente all'opzione Non inoltrare di Outlook. Per Word, Excel, PowerPoint ed Esplora file, questa etichetta richiede all'utente di specificare autorizzazioni personalizzate. Per altre informazioni, vedere [Configurare un'etichetta di Azure Information Protection per la protezione](../deploy-use/configure-policy-protection.md).
 
+- Le etichette supportano più lingue. A partire da 30 agosto 2017, i [criteri predefiniti](../deploy-use/configure-policy-default.md) includono il supporto per più lingue, visualizzate agli utenti in questa versione del client. Per visualizzare le etichette nella lingua preferita dai criteri predefiniti prima di questa data e per le etichette configurate, vedere [Come configurare etichette per lingue diverse in Azure Information Protection](../deploy-use/configure-policy-languages.md).
+
 - Le etichette vengono visualizzate dal pulsante **Proteggi** sulla barra multifunzione di Office, oltre a essere visualizzate sulla barra di Information Protection. 
 
 - Protezione nativa per tipi di file Visio seguenti con estensione vsdm,vsdx, vssm, vssx, vstm e vstx
 
 - Supporto per configurazioni client avanzate che è possibile configurare nel portale di Azure. Le configurazioni comprendono:
     
-    - [Nascondere il pulsante Non inoltrare in Outlook](../rms-client/client-admin-guide-customizations.md#hide-the-do-not-forward-button-in-outlook)
+    - [Nascondere o visualizzare il pulsante Non inoltrare in Outlook](../rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook)
     
-    - [Rendere non disponibili agli utenti le opzioni relative alle autorizzazioni personalizzate](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-unavailable-to-users)
+    - [Rendere disponibili o non disponibili agli utenti le opzioni relative alle autorizzazioni personalizzate](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-available-or-unavailable-to-users)
     
-    - [Nascondere in modo permanente la barra di Azure Information Protection](../rms-client/client-admin-guide-customizations.md#make-the-custom-permissions-options-unavailable-to-users)
+    - [Nascondere in modo permanente la barra di Azure Information Protection](../rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar)
     
     - [Abilitare la classificazione consigliata in Outlook](../rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
 

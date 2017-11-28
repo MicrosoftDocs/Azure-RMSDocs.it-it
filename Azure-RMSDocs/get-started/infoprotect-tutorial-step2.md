@@ -4,17 +4,17 @@ description: 'Passaggio 2 di un''esercitazione introduttiva per provare rapidame
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2017
+ms.date: 11/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: cf9c30baab257c9a90c3383eaf6bfcadd0275184
-ms.sourcegitcommit: 63a8186d727bec185903a5201f3b1efc9b4fa8b5
+ms.openlocfilehash: 0e10a1809aaf792ac8c5960e30917aabd5c44548
+ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passaggio 2: Configurare e pubblicare criteri di Azure Information Protection
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 11/14/2017
 
 Il criterio predefinito disponibile con Azure è utilizzabile senza alcuna operazione di configurazione. Tuttavia si esaminerà questo criterio e vi si apporterà qualche modifica.
 
-1. Sempre nel portale di Azure selezionare **Criteri globali** per aprire il pannello **Criteri: Globale**. Questo pannello si apre automaticamente alle successive connessioni al servizio e visualizza i criteri predefiniti di Information Protection creati per il tenant.
+1. Continuando dal [passaggio 1](infoprotect-tutorial-step1.md) e sempre nel portale di Azure selezionare **Criteri globali** per aprire il pannello **Criteri: Globale**. Questo pannello si apre automaticamente alle successive connessioni al servizio e visualizza i criteri predefiniti di Information Protection creati per il tenant.
 
 2. Dedicare alcuni minuti ad acquisire familiarità con le etichette visualizzate:
     

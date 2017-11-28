@@ -4,7 +4,7 @@ description: Istruzioni su come classificare e proteggere documenti e messaggi d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/02/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 13d751bf9754ba3645cb7bb7417e7f5be394eb27
-ms.sourcegitcommit: 769057f5ffb366fc645bff542a32b2eab4f20c70
+ms.openlocfilehash: 683764d005e3223f6e5bdaa49b1d4c881a8daed4
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/06/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Guida dell'utente: Classificare e proteggere un file o un messaggio di posta elettronica tramite Azure Information Protection
 
@@ -41,16 +41,13 @@ Quando il file è protetto con le autorizzazioni personalizzate, usare il meccan
 
 ## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Uso delle app di Office per classificare e proteggere documenti e messaggi di posta elettronica
 
-Usare la barra di Azure Information Protection e selezionare una delle etichette configurate. 
+Usare la barra di Azure Information Protection o il pulsante **Proteggi** sulla barra multifunzione per selezionare una delle etichette configurate. 
 
-L'immagine seguente mostra ad esempio che il documento non è ancora stato etichettato perché il valore di **Sensibilità** è **Non impostato**. Per impostare un'etichetta, ad esempio "Generale", fare clic su **Generale**. Se non si è certi dell'etichetta da applicare al documento o al messaggio di posta elettronica corrente, usare le descrizioni comando delle etichette per altre informazioni su ogni etichetta e su quando applicarla. 
+L'immagine seguente mostra ad esempio che il documento non è ancora stato etichettato perché il valore di **Sensibilità** è **Non impostato** sulla barra di Azure Information Protection. Per impostare un'etichetta, ad esempio "Generale", fare clic su **Generale**. Se non si è certi dell'etichetta da applicare al documento o al messaggio di posta elettronica corrente, usare le descrizioni comando delle etichette per altre informazioni su ogni etichetta e su quando applicarla. 
 
 ![Esempio della barra di Azure Information Protection](../media/info-protect-bar-not-set-callout.png)
 
 Se al documento è già applicata un'etichetta e si desidera modificarla, è possibile selezionare un'etichetta diversa. Se le etichette non sono visualizzate sulla barra, fare prima clic sull'icona **Modifica l'etichetta** accanto al valore corrente dell'etichetta.
-
-> [!TIP]
-> È inoltre possibile selezionare le etichette dal pulsante **Proteggi** nella scheda **File**.
 
 Oltre a selezionare manualmente le etichette, è anche possibile applicarle nei modi seguenti:
 
@@ -62,9 +59,17 @@ Oltre a selezionare manualmente le etichette, è anche possibile applicarle nei 
 
 ##### <a name="dont-see-this-information-protection-bar-in-your-office-apps"></a>La barra di Information Protection non viene visualizzata nelle app di Office?
 
-- Il client Azure Information Protection potrebbe non essere [installato](install-client-app.md) oppure potrebbe essere in esecuzione in [modalità di sola protezione](client-protection-only-mode.md).
+Motivi possibili:
+
+- Il client Azure Information Protection non è [installato](install-client-app.md).
+
+- Il client è installato, ma l'amministratore ha configurato un'impostazione per non visualizzare la barra. In alternativa, selezionare le etichette dal pulsante **Proteggi** nella scheda **File** sulla barra multifunzione di Office. 
+
+- Il client è in esecuzione in [modalità di sola protezione](client-protection-only-mode.md).
  
-##### <a name="is-the-label-that-you-expect-to-see-not-displayed-on-the-bar"></a>Sulla barra non è visualizzata un'etichetta che ci si aspetterebbe di vedere? 
+##### <a name="is-the-label-that-you-expect-to-see-not-displayed"></a>Un'etichetta che ci si aspetta di vedere non è visualizzata? 
+
+Motivi possibili:
 
 - Se l'amministratore ha configurato di recente una nuova etichetta, provare a chiudere tutte le istanze dell'app di Office e riaprirle. In questo modo, verrà eseguito un controllo della presenza di modifiche alle etichette.
 
@@ -74,11 +79,13 @@ Oltre a selezionare manualmente le etichette, è anche possibile applicarle nei 
 
 ### <a name="set-custom-permissions-for-a-document"></a>Impostare autorizzazioni personalizzate per un documento
 
-È possibile specificare impostazioni di protezione personalizzate per i documenti anziché usare quelle eventualmente incluse dall'amministratore con l'etichetta selezionata.
+Se consentito dall'amministratore, è possibile specificare impostazioni di protezione personalizzate per i documenti anziché usare quelle eventualmente incluse dall'amministratore con l'etichetta selezionata.
 
 1. Nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi** > **Autorizzazioni personalizzate**:
 
     ![Opzione Autorizzazioni personalizzate](../media/custom-permissions-callout.png)
+    
+    Se non è possibile selezionare **Autorizzazioni personalizzate**, l'amministratore non consente l'uso di questa opzione.
     
     Si noti che le autorizzazioni personalizzate specificate non vengono aggiunte ma sono usate in sostituzione delle eventuali impostazioni di protezione definite dall'amministratore per l'etichetta scelta.  
 
@@ -135,7 +142,9 @@ La guida dell'amministratore contiene un elenco completo dei tipi di file suppor
     
     ![Nessuna etichetta nella finestra di dialogo Classifica e proteggi - Azure Information Protection**](../media/info-protect-dialog-labels-protection-only.png)
     
-3. Per specificare impostazioni di protezione personalizzate invece di usare quelle eventualmente incluse dall'amministratore con l'etichetta selezionata, selezionare **Proteggi con autorizzazioni personalizzate**.
+3. Se consentito dall'amministratore, è possibile specificare impostazioni di protezione personalizzate anziché usare quelle eventualmente incluse dall'amministratore con l'etichetta selezionata. A tale scopo, selezionare **Proteggi con autorizzazioni personalizzate**.
+    
+    Se non è possibile selezionare **Proteggi con autorizzazioni personalizzate**, l'amministratore non consente l'uso di questa opzione.
     
     Le eventuali autorizzazioni personalizzate specificate sostituiscono le impostazioni di protezione che l'amministratore potrebbe avere definito per l'etichetta scelta e non sono aggiuntive.  
 

@@ -4,7 +4,7 @@ description: Informazioni sui file e sulla registrazione dell'utilizzo per il cl
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 64e6e17beb134fca1e51b35b39ff9f130c88ecbb
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: 33047865430004f91eb85ec7e32bbfc3f2f6bbde
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guida dell'amministratore: File e registrazione dell'utilizzo del client Azure Information Protection
 
@@ -38,7 +38,7 @@ File di log del client e file di criteri attualmente installati:
 
 ## <a name="usage-logging-for-the-azure-information-protection-client"></a>Registrazione dell'utilizzo per il client Azure Information Protection
 
-Il client registra l'attività dell'utente nel registro eventi locale **Applicazioni e servizi** di Windows, **Azure Information Protection**. Gli eventi includono le informazioni seguenti:
+Il client registra l'attività dell'utente nel registro eventi locale di Windows **Applicazioni e servizi** > **Azure Information Protection**. Gli eventi includono le informazioni seguenti:
 
 - Data, versione del client, ID criterio
 
