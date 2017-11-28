@@ -4,17 +4,17 @@ description: "È possibile proteggere i documenti e i messaggi di posta elettron
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/30/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: f6661668a73b708f292261dde70181bd22bdf332
-ms.sourcegitcommit: 8c02aa2c6abc301a52a7f8ad9ee9d0ecd0b810f7
+ms.openlocfilehash: 17f95d9875320c64d2983fcd176e371ee45d2f48
+ms.sourcegitcommit: 9de66368b75ffd003289f998c7b1e78736736524
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
@@ -87,9 +87,11 @@ Non è necessario configurare Exchange per Information Rights Management (IRM) p
         
         Se si sceglie l'opzione per Word, Excel, PowerPoint e File Explorer, quando l'opzione è impostata l'etichetta viene visualizzata in queste applicazioni. Quando gli utenti applicano l'etichetta viene visualizzata la finestra di dialogo che consente loro di selezionare le autorizzazioni personalizzate. Nella finestra di dialogo gli utenti devono specificare gli utenti o i gruppi, le autorizzazioni e una data di scadenza. Verificare che gli utenti dispongano di istruzioni e linee guida per specificare questi valori.
     
-    - **Seleziona un modello predefinito**: per usare uno dei modelli predefiniti o un modello personalizzato che è stato configurato. Questo modello deve essere pubblicato (non archiviato) e non deve essere già collegato a un'altra etichetta. Quando si seleziona questa opzione è possibile usare il pulsante **Modifica modello** per [convertire il modello in un'etichetta](configure-policy-templates.md#to-convert-templates-to-labels).
+    - **Seleziona un modello predefinito**: per usare uno dei modelli predefiniti o un modello personalizzato che è stato configurato. Si noti che questa opzione non viene visualizzata se si sta modificando un'etichetta che usava in precedenza l'opzione **Imposta autorizzazioni**.
     
-    Suggerimento: se si usa il pulsante **Modifica modello** può risultare utile consultare [Tasks that you used to do with the Azure classic portal](migrate-portal.md) (Attività che si eseguivano con il portale di Azure classico).
+    Per selezionare un modello predefinito, il modello deve essere pubblicato (non archiviato) e non deve essere già collegato a un'altra etichetta. Quando si seleziona questa opzione è possibile usare il pulsante **Modifica modello** per [convertire il modello in un'etichetta](configure-policy-templates.md#to-convert-templates-to-labels).
+    
+    Suggerimento: se si creano e usano regolarmente modelli personalizzati, può risultare utile consultare [Attività che precedentemente venivano eseguite con il portale di Azure classico](migrate-portal.md).
 
 8. Se è stata selezionata l'opzione **Imposta autorizzazioni** per **Azure (cloud key)** (Azure - Chiave cloud), questa opzione consente di configurare le stesse impostazioni configurabili in un modello. 
     

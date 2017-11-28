@@ -4,7 +4,7 @@ description: "È possibile configurare e gestire i modelli di Rights Management 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/06/2017
+ms.date: 11/17/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5afd71e059ef22eed61347e6916b9cbb6c2dc7f0
-ms.sourcegitcommit: 326930de25b259c18469f4100ec5774a04bedc7b
+ms.openlocfilehash: 74f3f9e22e5607c8b85b752bcd3881d5b7a092b1
+ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurazione e gestione dei modelli per Azure Information Protection
 
@@ -32,11 +32,11 @@ I modelli di Rights Management sono ora integrati con i criteri di Azure Informa
 
 **Se si ha una sottoscrizione che include la classificazione, l'etichettatura e la protezione (Azure Information Protection P1 o P2):**
 
-- I modelli di Rights Management che non sono integrati con le etichette per il tenant vengono visualizzati nella sezione **Modelli** dopo le etichette nel pannello **Azure Information Protection - criteri globali**. È possibile convertire i modelli in etichette o collegarsi a essi quando si configura la protezione per le etichette. 
+- I modelli di Rights Management che non sono integrati con le etichette per il tenant vengono visualizzati nella sezione **Protection templates** (Modelli di protezione) dopo le etichette nel pannello **Azure Information Protection - Criteri globali**. È possibile convertire i modelli in etichette o collegarsi a essi quando si configura la protezione per le etichette. 
 
 **Se si ha una sottoscrizione che include solo la protezione (una sottoscrizione Office 365 con il servizio Azure Rights Management):**
 
-- I modelli di Rights Management per il tenant vengono visualizzati nel pannello **Azure Information Protection - criteri globali**, sezione **Modelli**. Non viene visualizzata alcuna etichetta. Sono visualizzate anche le impostazioni di configurazione specifiche per la classificazione e assegnazione di etichette, che tuttavia non hanno alcun effetto sui modelli né possono essere configurate. 
+- I modelli di Rights Management per il tenant vengono visualizzati nel pannello **Azure Information Protection - Criteri globali**, sezione **Protection templates** (Modelli di protezione). Non viene visualizzata alcuna etichetta. Sono visualizzate anche le impostazioni di configurazione specifiche per la classificazione e assegnazione di etichette, che tuttavia non hanno alcun effetto sui modelli né possono essere configurate. 
 
 ## <a name="default-templates"></a>Modelli predefiniti
 
@@ -95,9 +95,9 @@ Prima di modificare i modelli o convertirli in etichette, assicurarsi di essere 
     
     Inoltre, attualmente non è possibile specificare l'impostazione di compatibilità dell'applicazione per un modello di reparto. Se necessario, è possibile specificare l'impostazione di compatibilità dell'applicazione usando PowerShell con il cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty).
 
-- Durante la conversione o il collegamento di un modello a un'etichetta, questo non può più essere usato da altre etichette. Questo modello non è più visualizzato anche nella sezione **Modelli** o **Protection templates** (Modelli di protezione). La sezione verrà rinominata.
+- Durante la conversione o il collegamento di un modello a un'etichetta, questo non può più essere usato da altre etichette. Inoltre, questo modello non viene più visualizzato nella sezione **Protection templates** (Modelli di protezione). 
 
-- Non è possibile creare un nuovo modello dal contenitore **Modelli** o **Protection templates** (Modelli di protezione). È invece possibile creare un'etichetta con l'impostazione **Proteggi** e configurare i diritti di utilizzo e le impostazioni dal pannello **Protezione**. Per istruzioni complete, vedere [Per creare un nuovo modello](#to-create-a-new-template).
+- Non è possibile creare un nuovo modello dalla sezione **Protection templates** (Modelli di protezione). È invece possibile creare un'etichetta con l'impostazione **Proteggi** e configurare i diritti di utilizzo e le impostazioni dal pannello **Protezione**. Per istruzioni complete, vedere [Per creare un nuovo modello](#to-create-a-new-template).
 
 ## <a name="to-configure-the-templates-in-the-azure-information-protection-policy"></a>Per configurare i modelli nei criteri di Azure Information Protection
 
@@ -145,7 +145,7 @@ Quando si converte un modello in etichetta:
 
 - Le impostazioni di protezione vengono mantenute e, se necessario, è possibile modificarle e aggiungere altre impostazioni di etichetta, ad esempio gli indicatori visivi e le condizioni.
 
-- Il modello originale non viene più visualizzato in **Modelli** o **Protection templates** (Modelli di protezione) e non può essere selezionato come modello predefinito quando si configura la protezione per un'etichetta. Per modificare questo modello nel portale di Azure è ora possibile modificare l'etichetta che è stata creata durante la conversione del modello. Il modello rimane disponibile per il servizio Azure Rights Management e può essere gestito con i [comandi di PowerShell](administer-powershell.md).  
+- Il modello originale non viene più visualizzato in **Protection templates** (Modelli di protezione) e non può essere selezionato come modello predefinito quando si configura la protezione per un'etichetta. Per modificare questo modello nel portale di Azure è ora possibile modificare l'etichetta che è stata creata durante la conversione del modello. Il modello rimane disponibile per il servizio Azure Rights Management e può essere gestito con i [comandi di PowerShell](administer-powershell.md).  
 
 ## <a name="to-create-a-new-template"></a>Per creare un nuovo modello
 

@@ -4,7 +4,7 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/13/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 67ef633fe429eef208f1f24e71a274959ad7077b
-ms.sourcegitcommit: 8810f9d68489a89601c43ce0aacff737728b1d02
+ms.openlocfilehash: 0bd05c0553cdcab792c674c6945d7dfea5f02eaf
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -117,46 +117,40 @@ Quando si esporta il criterio, questa azione carica un file compresso con più v
 2. Rinominare il file identificato come **Policy.msip**, quindi copiare la cartella **%LocalAppData%\Microsoft\MSIP** nei computer in cui è installato il client Azure Information Protection. 
 
 
-## <a name="hide-the-do-not-forward-button-in-outlook"></a>Nascondere il pulsante Non inoltrare in Outlook
+## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Nascondere o visualizzare il pulsante Non inoltrare in Outlook
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
+Il metodo consigliato per configurare questa opzione è tramite l'[impostazione dei criteri](../deploy-use/configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon** (Aggiungi il pulsante Non inoltrare alla barra multifunzione di Outlook). Tuttavia, è possibile configurare questa opzione anche tramite un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) configurata nel portale di Azure.
 
-Quando è configurata, questa impostazione nasconde il pulsante **Non inoltrare** della barra multifunzione in Outlook. Questa opzione, però, non viene nascosta nel menu di Office.
+Quando è configurata, questa impostazione nasconde o visualizza il pulsante **Non inoltrare** sulla barra multifunzione in Outlook. Questa impostazione non influisce sull'opzione Non inoltrare nei menu di Office.
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 - Chiave: **DisableDNF**
 
-- Valore: **True**
+- Valore: **True** per nascondere il pulsante o **False** per visualizzarlo
 
-## <a name="make-the-custom-permissions-options-unavailable-to-users"></a>Rendere non disponibili agli utenti le opzioni relative alle autorizzazioni personalizzate
+## <a name="make-the-custom-permissions-options-available-or-unavailable-to-users"></a>Rendere disponibili o non disponibili agli utenti le opzioni relative alle autorizzazioni personalizzate
 
-> [!IMPORTANT]
-> A meno che non si stia usando la versione di anteprima corrente del client, non usare questa opzione se sono state configurate etichette per le autorizzazioni definite dall'utente per Word, Excel, PowerPoint ed Esplora file. In caso contrario, quando viene applicata l'etichetta, agli utenti non viene chiesto di configurare le autorizzazioni personalizzate. Il risultato è che il documento viene etichettato ma non protetto come previsto.
+Il metodo consigliato per configurare questa opzione è tramite l'[impostazione dei criteri](../deploy-use/configure-policy-settings.md) **Make the custom permissions option available for users** (Rendi disponibile l'opzione per le autorizzazioni personalizzate). Tuttavia, è possibile configurare questa opzione anche tramite un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) configurata nel portale di Azure. 
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
-
-Quando si configura questa impostazione e si pubblicano i criteri per gli utenti, le opzioni relative alle autorizzazioni personalizzate presenti nelle posizioni seguenti non sono più disponibili per la selezione da parte degli utenti:
-
-- Nelle applicazioni di Office: scheda **Home** > gruppo **Protezione** > **Proteggi** > **Autorizzazioni personalizzate**
-
-- In File Explorer fare clic con il pulsante destro del mouse su > **Classifica e proteggi** > **Autorizzazioni personalizzate**
-
-Questa impostazione non influisce sulle autorizzazioni personalizzate che è possibile configurare dalle opzioni del menu di Office. 
+Quando si configura questa impostazione e si pubblicano i criteri per gli utenti, le opzioni per le autorizzazioni personalizzate diventano disponibili per gli utenti in modo che possano selezionare impostazioni di protezione personali oppure non sono disponibili e quindi gli utenti non possono selezionare impostazioni di protezione personali, se non richiesto.
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 - Chiave: **EnableCustomPermissions**
 
-- Valore: **False**
+- Valore: **True** per rendere disponibile l'opzione per le autorizzazioni personalizzate o **False** per non renderla disponibile
+
+> [!IMPORTANT]
+> A meno che non si stia usando la versione di anteprima corrente del client, non impostare questa opzione su **False** se sono state configurate etichette per le autorizzazioni definite dall'utente per Word, Excel, PowerPoint ed Esplora file. In caso contrario, quando viene applicata l'etichetta, agli utenti non viene chiesto di configurare le autorizzazioni personalizzate. Il risultato è che il documento viene etichettato ma non protetto come previsto.
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Nascondere in modo permanente la barra di Azure Information Protection
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Usarla solo quando l'[impostazione dei criteri](../deploy-use/configure-policy-settings.md) **Display the Information Protection bar in Office apps** (Visualizza la barra di Information Protection nelle app di Office) è impostata su **On** (Attiva).
 
 Quando si configura questa impostazione, si pubblicano i criteri per gli utenti e un utente sceglie di non visualizzare la barra di Azure Information Protection nelle applicazioni di Office, la barra rimane nascosta. Ciò si verifica se l'utente deseleziona l'opzione **Mostra barra**: nella scheda **Home**, nel gruppo **Protezione**, fare clic sul pulsante **Proteggi**. Questa impostazione non ha alcun effetto se l'utente chiude la barra tramite l'icona **Chiudi questa barra**.
 
-Anche se la barra di Azure Information Protection rimane nascosta, gli utenti possono visualizzarla temporaneamente per selezionare un'etichetta, se è stata configurata la classificazione consigliata o se un documento o un messaggio di posta elettronica deve avere un'etichetta. L'impostazione, poi, non influisce sulle etichette configurate dall'utente connesso o da altri utenti, ad esempio la classificazione manuale o automatica, o sull'impostazione di un'etichetta predefinita.
+Anche se la barra di Azure Information Protection rimane nascosta, gli utenti possono visualizzarla temporaneamente per selezionare un'etichetta, se è stata configurata la classificazione consigliata o se un documento o un messaggio di posta elettronica deve avere un'etichetta. 
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
@@ -219,6 +213,8 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 - Chiave 2: **SyncPropertyState**
 
 - Valore chiave 2: **OneWay**
+
+Usare queste chiavi e i valori corrispondenti per una sola proprietà personalizzata.
 
 Si supponga, ad esempio, di avere una colonna di SharePoint denominata **Classificazione** con i valori possibili **Pubblico**, **Generale** e **Riservato**. I documenti sono archiviati in SharePoint e viene loro assegnato uno di questi valori impostati per la proprietà Classificazione.
 

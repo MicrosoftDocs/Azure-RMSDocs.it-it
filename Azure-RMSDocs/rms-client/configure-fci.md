@@ -4,7 +4,7 @@ description: "Istruzioni per usare il client Rights Management (RMS) con lo stru
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/20/2017
+ms.date: 11/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cd580b14e35697d00a3c42abd51d2afc94d6959d
-ms.sourcegitcommit: 73973986ae7086e6f30cab579187241fd98bef61
+ms.openlocfilehash: dfa751ef7cd4c8405fa02299576cb57083d63495
+ms.sourcegitcommit: 228953e96609b3c5ec8deddaab91be59650d9006
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protezione RMS con l'infrastruttura di classificazione file (FCI, File Classification Infrastructure) per Windows Server
 
@@ -289,5 +289,9 @@ Quando le istruzioni appena descritte risultano efficaci, è semplice modificarl
 Per effettuare questa modifica, usare una delle proprietà di classificazione predefinite (ad esempio, **Informazioni personali**) o creare una nuova proprietà personale. Creare quindi una nuova regola che usi questa proprietà. Ad esempio, si potrebbe selezionare **Classificazione contenuto**, scegliere la proprietà **Informazioni personali** con un valore **Alto**e configurare la stringa o il modello di espressione che identifica il file da configurare per questa proprietà (ad esempio la stringa "**Data di nascita**").
 
 A questo punto è sufficiente creare una nuova attività di gestione file che usa lo stesso script ma forse con un modello diverso e configurare la condizione per la proprietà di classificazione appena configurata. Ad esempio, invece della condizione configurata in precedenza (la proprietà**RMS** , **Uguale**, **Sì**), selezionare la proprietà **Informazioni personali** con il valore **Operatore** impostato su **Uguale** e il **Valore** **Alto**.
+
+## <a name="next-steps"></a>Passaggi successivi
+
+Scoprire [Qual è la differenza tra Infrastruttura di classificazione file di Windows Server e lo scanner di Azure Information Protection](../get-started/faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner). 
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

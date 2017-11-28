@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per gli amministratori in una rete aziend
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/20/2017
+ms.date: 11/20/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 96eb4a9fde5c5664a41ad7f68c550af697e8216f
-ms.sourcegitcommit: 73973986ae7086e6f30cab579187241fd98bef61
+ms.openlocfilehash: c338fe4258d6d8b20a4d8c285bc821981810b409
+ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
@@ -46,7 +46,7 @@ Ad esempio:
 
 Il client Azure Information Protection include gli elementi seguenti:
 
-- Un componente aggiuntivo di Office che installa la barra di Azure Information Protection per consentire agli utenti di selezionare le etichette di classificazione e un pulsante **Proteggi** sulla barra multifunzione per offrire altre opzioni. Per Outlook, viene aggiunto anche un pulsante **Non inoltrare** alla barra multifunzione.
+- Un componente aggiuntivo di Office che installa la barra di Azure Information Protection per consentire agli utenti di selezionare le etichette di classificazione e un pulsante **Proteggi** sulla barra multifunzione per offrire altre opzioni. Per Outlook, è disponibile anche un pulsante **Non inoltrare** per la barra multifunzione.
 
 - Esplora file, opzioni tramite clic con il pulsante destro del mouse per l'applicazione di etichette di classificazione e della protezione ai file.
 
@@ -127,7 +127,9 @@ L'opzione **Ripristina le impostazioni** consente di disconnettere l'utente, eli
     
     - %LocalAppData%\Microsoft\MSIP\TokenCache
 
-- Vengono eliminate le chiavi e le impostazioni del Registro di sistema seguenti. Se sono state configurate impostazioni per chiavi del Registro di sistema in questo elenco, dopo la reimpostazione del client è necessario riconfigurarle. Un esempio è il caso in cui sono state configurate le impostazioni per il reindirizzamento al tenant di Azure Information Protection, poiché si sta eseguendo la migrazione da AD RMS, e nella rete è ancora presente un punto di connessione del servizio:
+- Vengono eliminate le chiavi e le impostazioni del Registro di sistema seguenti. Se sono stati impostati valori personalizzati per queste chiavi del Registro di sistema, dopo la reimpostazione del client è necessario riconfigurarli. 
+    
+    Per le reti aziendali, queste impostazioni vengono in genere configurate tramite Criteri di gruppo e in questo caso vengono automaticamente riapplicate al momento dell'aggiornamento dei Criteri di gruppo nel computer. Potrebbero essere tuttavia presenti impostazioni configurate una sola volta tramite script o manualmente. In questi casi, è necessario intervenire per riconfigurare queste impostazioni. Ad esempio, è possibile che i computer eseguano un script una sola volta per configurare le impostazioni per il reindirizzamento ad Azure Information Protection, poiché si sta eseguendo la migrazione da AD RMS e nella rete è ancora presente un punto di connessione del servizio. Dopo aver reimpostato il client, il computer deve eseguire nuovamente lo script.
     
     - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
     

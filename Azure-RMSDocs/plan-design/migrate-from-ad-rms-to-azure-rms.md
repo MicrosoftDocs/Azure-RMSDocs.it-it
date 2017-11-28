@@ -4,7 +4,7 @@ description: "Istruzioni per la migrazione della distribuzione di Active Directo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/10/2017
+ms.date: 11/16/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1b1c7a084aa5d81a0abfd50021b95ae8af32d034
-ms.sourcegitcommit: e9a24fc5303b21f5eeebf16afed44db0d163ac77
+ms.openlocfilehash: a65e1178594e14c7d8f4faaedee96d827a9412e5
+ms.sourcegitcommit: 9b975e66b12a3836003c6c4de139ded4bbf370bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrazione da AD RMS ad Azure Information Protection
 
@@ -202,11 +202,13 @@ I passaggi della migrazione possono essere suddivisi in cinque fasi eseguibili i
 
     Dopo aver verificato che tutti i computer Windows usano il servizio Azure Rights Management e non accedono più ai server AD RMS, è possibile effettuare il deprovisioning della distribuzione di AD RMS.
 
-- **Passaggio 11: Riconfigurare i client dispositivo mobile e i computer Mac e rimuovere i controlli di onboarding**
+- **Passaggio 11: Completare le attività di migrazione dei client**
 
     Se è stata distribuita l'[estensione per dispositivi mobili](http://technet.microsoft.com/library/dn673574.aspx) per supportare dispositivi mobili, ad esempio telefoni iOS e iPad, telefoni e tablet Android, Windows Phone e computer Mac, è necessario rimuovere i record SRV in DNS che reindirizzavano questi client all'uso di AD RMS. 
     
     I controlli di onboarding configurati durante la fase di preparazione non sono più necessari. Tuttavia, se non sono stati usati controlli di onboarding perché si è scelto di eseguire la migrazione di tutti gli elementi contemporaneamente, anziché eseguire una migrazione graduale, è possibile ignorare le istruzioni per rimuovere i controlli di onboarding.
+    
+    Se i computer Windows eseguono Office 2010, verificare se è necessario disabilitare l'attività **AD RMS Rights Policy Template Management (Automated)** (Gestione modelli di criteri per i diritti di utilizzo AD RMS - Automatizzata).
 
 - **Passaggio 12: Reimpostare la chiave del tenant di Azure Information Protection**
 
