@@ -4,7 +4,7 @@ description: "È possibile configurare e gestire i modelli di Rights Management 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/17/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 74f3f9e22e5607c8b85b752bcd3881d5b7a092b1
-ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
+ms.openlocfilehash: bb6aeea8f939614b9c1903d8e006815228f99723
+ms.sourcegitcommit: f6ba613445463c3c4c64b1620095d54b48194650
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurazione e gestione dei modelli per Azure Information Protection
 
@@ -53,13 +53,13 @@ Questi modelli predefiniti semplificano l'attivazione immediata della protezione
 
 ### <a name="default-template-names"></a>Nomi del modello predefinito
 
-Se è stata attivata recentemente una sottoscrizione ad Azure Information Protection, i modelli predefiniti vengono creati con i nomi seguenti:
+Se è stata attivata recentemente una sottoscrizione, i modelli predefiniti vengono creati con i nomi seguenti:
 
 - **Riservato\Tutti i dipendenti** che concede le autorizzazioni di lettura e modifica per il contenuto protetto.
 
 - **Riservatezza elevata\Tutti i dipendenti** che concede le autorizzazioni di sola lettura per il contenuto protetto.
 
-Se la sottoscrizione ad Azure Information Protection è stata attivata tempo addietro o se non si dispone di una sottoscrizione ad Azure Information Protection ma si dispone di una sottoscrizione a Office 365 che include Azure Rights Management, i modelli predefiniti vengono creati con i nomi seguenti:
+Se la sottoscrizione è stata attivata in passato, i modelli predefiniti vengono creati con i nomi seguenti:
 
 - **\<nome dell'organizzazione> - Riservato** che concede le autorizzazioni di lettura e modifica per il contenuto protetto.
 

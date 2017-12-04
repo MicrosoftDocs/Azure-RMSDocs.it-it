@@ -4,7 +4,7 @@ description: Controllare di avere gli account utente e di gruppo necessari per i
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/22/2017
+ms.date: 09/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 41269f709df4b00a6f127e81aa060a062ab1005f
-ms.sourcegitcommit: cd3320fa34acb90f05d5d3e0e83604cdd46bd9a9
+ms.openlocfilehash: 8f29aec107c344489ae38afabfa79129fd3fa000
+ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/23/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparazione di utenti e gruppi per Azure Information Protection
 
@@ -207,7 +207,7 @@ Per i due scenari di configurazione del servizio Azure Rights Management che usa
 
 Se si modifica l'indirizzo di posta elettronica di un utente o di un gruppo, è consigliabile aggiungere l'indirizzo di posta elettronica precedente come secondo indirizzo di posta elettronica (detto anche indirizzo proxy, alias o indirizzo di posta elettronica alternativo) per l'utente o il gruppo. Quando si esegue questa operazione, l'indirizzo di posta elettronica precedente viene aggiunto all'attributo proxyAddresses di Azure AD. Questo tipo di amministrazione degli account garantisce la continuità aziendale per i diritti di utilizzo e per le altre configurazioni salvate quando era in uso l'indirizzo di posta elettronica precedente. 
 
-Se non è possibile eseguire questa operazione, all'utente o al gruppo con il nuovo indirizzo di posta elettronica potrebbe essere negato l'accesso a documenti e messaggi di posta elettronica protetti in precedenza. L'utente o il gruppo, poi, potrebbe presentare problemi di configurazione per le impostazioni in cui è ancora usato l'indirizzo precedente. In questo caso, è necessario salvare il nuovo indirizzo di posta elettronica eseguendo di nuovo la configurazione.
+Se non è possibile eseguire questa operazione, all'utente o al gruppo con il nuovo indirizzo di posta elettronica potrebbe essere negato l'accesso a documenti e messaggi di posta elettronica protetti in precedenza con l'indirizzo di posta elettronica precedente. In questo caso, è necessario ripetere la configurazione di protezione per salvare il nuovo indirizzo di posta elettronica. Ad esempio, se all'utente o al gruppo sono stati concessi i diritti di utilizzo nei modelli o nelle etichette, modificare i modelli o le etichette e specificare il nuovo indirizzo di posta elettronica con gli stessi diritti di utilizzo concessi all'indirizzo di posta elettronica precedente.
 
 Si noti che è raro che per un gruppo venga modificato l'indirizzo di posta elettronica. Se si assegnano diritti di utilizzo a un gruppo anziché a utenti singoli e l'indirizzo di posta elettronica di uno o più utenti cambia, non si verificano problemi. In questo scenario, i diritti di utilizzo vengono assegnati all'indirizzo di posta elettronica del gruppi e non agli indirizzi di posta elettronica dei singoli utenti. Questo è il metodo usato dagli amministratori con maggiore frequenza, oltre che il metodo consigliato, per la configurazione dei diritti di utilizzo che proteggono documenti e messaggi di posta elettronica. In genere, tuttavia, gli utenti assegnano autorizzazioni personalizzate a utenti singoli. Poiché non è sempre possibile sapere se per concedere l'accesso è stato usato un account utente o di gruppo, il metodo più sicuro è aggiungere sempre l'indirizzo di posta elettronica precedente come secondo indirizzo di posta elettronica.
 
