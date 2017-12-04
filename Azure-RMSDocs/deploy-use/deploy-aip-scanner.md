@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire lo scanner di Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 6dfda21368713c652df6c815dbb3895517182af1
-ms.sourcegitcommit: 228953e96609b3c5ec8deddaab91be59650d9006
+ms.openlocfilehash: 690cbc194be79a4e4fe9d85cda0e731d31d33822
+ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -52,7 +52,7 @@ Prima di installare lo scanner di Azure Information Protection, verificare che i
 
 |Requisito|Altre informazioni|
 |---------------|--------------------|
-|Computer Windows Server per eseguire il servizio scanner:<br /><br />- 4 processi<br /><br />- 4 GB di RAM|Windows Server 2016 o Windows Server 2012 R2. <br /><br />Nota: per scopi di test o valutazione in un ambiente non di produzione, è possibile usare un sistema operativo client Windows [supportato dal client di Azure Information Protection](../get-started/requirements.md#client-devices).<br /><br />Il computer può essere un computer fisico o virtuale con una connessione di rete veloce e affidabile agli archivi dati da analizzare. <br /><br />Verificare che il computer abbia la [connettività Internet](../get-started/requirements.md#firewalls-and-network-infrastructure) necessaria per Azure Information Protection. In alternativa, è necessario configurarlo come [computer disconnesso](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). |
+|Computer Windows Server per eseguire il servizio scanner:<br /><br />- 4 processori<br /><br />- 4 GB di RAM|Windows Server 2016 o Windows Server 2012 R2. <br /><br />Nota: per scopi di test o valutazione in un ambiente non di produzione, è possibile usare un sistema operativo client Windows [supportato dal client di Azure Information Protection](../get-started/requirements.md#client-devices).<br /><br />Il computer può essere un computer fisico o virtuale con una connessione di rete veloce e affidabile agli archivi dati da analizzare. <br /><br />Verificare che il computer abbia la [connettività Internet](../get-started/requirements.md#firewalls-and-network-infrastructure) necessaria per Azure Information Protection. In alternativa, è necessario configurarlo come [computer disconnesso](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). |
 |SQL Server per archiviare la configurazione dello scanner:<br /><br />- Istanza locale o remota|SQL Server 2012 è la versione minima per le edizioni seguenti:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express|
 |Account del servizio per eseguire il servizio scanner|Questo account deve essere un account di Active Directory sincronizzato con Azure AD, con i seguenti requisiti aggiuntivi:<br /><br />- Diritto di **accesso locale**. Questo diritto è richiesto per l'installazione e la configurazione dello scanner, ma non per il funzionamento. È necessario concedere questo diritto all'account del servizio, ma è possibile rimuoverlo dopo avere verificato che lo scanner è in grado di individuare, classificare e proteggere i file.<br /><br />- Diritto di **accesso come servizio**. Questo diritto viene concesso automaticamente all'account del servizio durante l'installazione dello scanner ed è richiesto per l'installazione, la configurazione e il funzionamento dello scanner. <br /><br />- Autorizzazioni per i repository di dati: è necessario concedere le autorizzazioni per la **lettura** e la **scrittura** per analizzare i file e quindi applicare la classificazione e la protezione ai file che soddisfano le condizioni indicate nei criteri di Azure Information Protection. Per eseguire lo scanner solo in modalità di individuazione, è sufficiente l'autorizzazione per la **lettura**.<br /><br />- Per le etichette che riproteggono o rimuovono la protezione: per garantire che lo scanner abbia sempre accesso ai file protetti, trasformare l'account in un [utente con privilegi avanzati](configure-super-users.md) per il servizio Azure Rights Management e verificare che sia abilitata la funzionalità per utenti con privilegi avanzati. Per altre informazioni sui requisiti dell'account per l'applicazione della protezione, vedere [Preparazione di utenti e gruppi per Azure Information Protection](../plan-design/prepare.md).|
 |Il client di Azure Information Protection è installato nel computer Windows Server|Attualmente lo scanner di Azure Information Protection richiede la versione di anteprima del client di Azure Information Protection.<br /><br />Se si preferisce, è possibile installare il client solo con il modulo di PowerShell (AzureInformationProtection) usato per installare e configurare lo scanner.<br /><br />Per istruzioni sull'installazione del client, vedere la [guida per l'amministratore](../rms-client/client-admin-guide.md).|
@@ -78,6 +78,8 @@ Prima di installare lo scanner di Azure Information Protection, verificare che i
     - Per un'istanza denominata: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER`
     
     - Per SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS`
+    
+    Usare la Guida in linea di questo cmdlet per visualizzare [esempi più dettagliati](/powershell/module/azureinformationprotection/set-aipscannerconfiguration#examples).
 
 4. Verificare che il servizio è ora installato usando **Strumenti di amministrazione** > **Servizi**. 
     
@@ -162,6 +164,48 @@ Per il primo ciclo di analisi, lo scanner analizza tutti i file negli archivi da
 È possibile imporre allo scanner di ripetere l'analisi di tutti i file eseguendo [Set AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) con il parametro `-Type` impostato su **Full**. Questa configurazione è utile quando si vuole che i report includano tutti i file e viene in genere usata quando lo scanner viene eseguito in modalità di individuazione. Al termine di un'analisi completa, il tipo di analisi diventa automaticamente incrementale in modo che per le analisi successive vengono analizzati solo i file nuovi o modificati.
 
 Inoltre, tutti i file vengono controllati quando lo scanner scarica un criterio di Azure Information Protection con condizioni nuove o modificate. Lo scanner aggiorna i criteri ogni ora e all'avvio del servizio.
+
+## <a name="optimizing-the-performance-of-the-azure-information-protection-scanner"></a>Ottimizzazione delle prestazioni dello scanner di Azure Information Protection
+
+Per ottimizzare le prestazioni dello scanner:
+
+- **Disporre di una connessione di rete ad alta velocità e affidabile tra il computer dello scanner e l'archivio dei dati analizzati**
+    
+    Ad esempio, inserire il computer dello scanner nella stessa rete LAN o (scelta consigliata) nello stesso segmento di rete dell'archivio dei dati analizzati.
+    
+    La qualità della connessione di rete influisce sulle prestazioni dello scanner perché per controllare i file lo scanner trasferisce il contenuto dei file nel computer che esegue il servizio di analisi. Quando si riduce o si elimina il numero di hop di rete per i dati, si riduce anche il carico sulla rete. 
+
+- **Verificare che il computer dello scanner abbia risorse del processore disponibili**
+    
+    La ricerca di una corrispondenza nel contenuto dei file in base alle condizioni configurate e la crittografia e la decrittografia dei file sono operazioni che richiedono un uso intensivo del processore. Monitorare i cicli di analisi tipici degli archivi dati specificati per identificare se una mancanza di risorse del processore influisce negativamente sulle prestazioni dello scanner.
+    
+- **Non eseguire l'analisi delle cartelle locali nel computer che esegue il servizio di analisi**
+    
+    Se sono presenti cartelle da analizzare in un server di Windows, installare lo scanner in un computer diverso e configurare le cartelle come condivisioni di rete da analizzare. La separazione delle due funzioni di hosting dei file e di analisi dei file fa in modo che le risorse di elaborazione di questi servizi non siano in competizione tra loro.
+
+Altri fattori che influenzano le prestazioni dello scanner:
+
+- Carico corrente e tempi di risposta degli archivi dati che contengono i file da analizzare
+
+- Esecuzione dello scanner in modalità di individuazione o applicazione
+    
+    La modalità di individuazione ha in genere una velocità di analisi maggiore rispetto alla modalità di applicazione poiché l'individuazione richiede una sola azione di lettura dei file, mentre la modalità di applicazione richiede azioni di lettura e scrittura.
+
+- Modifica delle condizioni in Azure Information Protection
+    
+    Il primo ciclo di analisi nel quale lo scanner deve controllare ogni file richiede più tempo rispetto ai cicli di analisi successivi in cui, per impostazione predefinita, vengono analizzati solo i file nuovi e modificati. Tuttavia, se si modificano le condizioni nei criteri di Azure Information Protection, tutti i file vengono analizzati nuovamente come descritto nella [sezione precedente](#when-files-are-rescanned-by-the-azure-information-protection-scanner).
+
+- Livello di registrazione selezionato
+    
+    È possibile scegliere tra **Debug**, **Info** (Informazioni), **Error** (Errore) e **Off** (Disattivato) per i report dello scanner. **Off** (Disattivato) offre le prestazioni migliori; **Debug** rallenta considerevolmente lo scanner ed è consigliabile usarlo solo per la ricerca e la risoluzione dei problemi. Per altre informazioni, vedere il parametro *ReportLevel* del cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
+
+- File:
+    
+    - I file di Office vengono analizzati più rapidamente rispetto ai file PDF.
+    
+    - I file non protetti sono più veloci da analizzare rispetto ai file protetti.
+    
+    - I file di grandi dimensioni richiedono più tempo per l'analisi rispetto ai file di piccole dimensioni.
 
 ## <a name="list-of-cmdlets-for-the-azure-information-protection-scanner"></a>Elenco di cmdlet per lo scanner di Azure Information Protection 
 

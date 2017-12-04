@@ -4,17 +4,17 @@ description: "È possibile proteggere i documenti e i messaggi di posta elettron
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 17f95d9875320c64d2983fcd176e371ee45d2f48
-ms.sourcegitcommit: 9de66368b75ffd003289f998c7b1e78736736524
+ms.openlocfilehash: 1b16d3ab7923592a011b6be39586a02a378f39f0
+ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
@@ -101,7 +101,7 @@ Non è necessario configurare Exchange per Information Rights Management (IRM) p
         
         Gli utenti o i gruppi selezionati devono disporre di un indirizzo di posta elettronica. Questa condizione si verifica quasi sempre in un ambiente di produzione, ma in un ambiente di test semplice può essere necessario aggiungere gli indirizzi di posta elettronica agli account utente o ai gruppi.
         
-    - Scegliere **Immettere i dettagli** per specificare manualmente gli indirizzi di posta elettronica dei singoli utenti o gruppi (interni o esterni) o per specificare tutti gli utenti in un'altra organizzazione immettendo un nome di dominio di tale organizzazione. 
+    - Scegliere **Immettere i dettagli** per specificare manualmente gli indirizzi di posta elettronica dei singoli utenti o gruppi (interni o esterni) o per specificare tutti gli utenti in un'altra organizzazione immettendo un nome di dominio di tale organizzazione. Non inserire i nomi di dominio dei provider di social network che supportano gli account di posta elettronica personali. Ad esempio, non immettere **gmail.com**, **hotmail.com** o **outlook.com**.
         
     >[!NOTE]
     >Se un indirizzo di posta elettronica viene modificato dopo che si è selezionato l'utente o il gruppo, vedere la sezione [Considerazioni in caso di modifica degli indirizzi di posta elettronica](../plan-design/prepare.md#considerations-for-azure-information-protection-if-email-addresses-change) della documentazione relativa alla pianificazione.

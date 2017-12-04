@@ -4,7 +4,7 @@ description: Risorse per gli amministratori, incluse informazioni sulle nuove ve
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/08/2017
+ms.date: 11/29/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 89f0863f11d43a19a81b31a648de13fd1733df75
-ms.sourcegitcommit: a63b3ac3949e66cc38e20d7f14ac129b8e3224c3
+ms.openlocfilehash: 91ba855bb9bd9c41c81ae819b7b3afee1f04adb8
+ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informazioni e supporto per Azure Information Protection
 
@@ -26,7 +26,7 @@ Usare le risorse seguenti per comprendere, distribuire e supportare Azure Inform
 
 |Per...|.. effettuare la seguente operazione:|
 |----------------|---------------|
-|Consultare la documentazione usata più di frequente|Leggere le cinque pagine principali: <br /><br />[Introduzione - App AIP per iOS e Android](../rms-client/mobile-app-get-started.md) <br /><br /> [Che cos'è Azure Information Protection?](../understand-explore/what-is-information-protection.md)<br /><br /> [Informazioni su Microsoft Azure Rights Management](../understand-explore/what-is-azure-rms.md)<br /><br />[Attivazione di Azure Rights Management](../deploy-use/activate-service.md)<br /><br />[Requisiti per Azure Information Protection](../get-started/requirements.md)|
+|Consultare la documentazione usata più di frequente|Leggere le cinque pagine principali:<br /><br /> - [Che cos'è Azure Information Protection?](../understand-explore/what-is-information-protection.md)<br /> - [Informazioni su Microsoft Azure Rights Management](../understand-explore/what-is-azure-rms.md)<br />- [Introduzione - App AIP per iOS e Android](../rms-client/mobile-app-get-started.md) <br />- [Attivazione di Azure Rights Management](../deploy-use/activate-service.md)<br />- [Requisiti per Azure Information Protection](../get-started/requirements.md)|
 |Interagire con il team di prodotto e i propri colleghi|Visitare il [sito di Yammer](https://www.yammer.com/AskIPTeam) per Azure Information Protection.|
 |Richiedere una nuova funzionalità o modifica di funzionalità|Visitare il [sito User Voice](https://msip.uservoice.com) per Azure Information Protection|
 |Ricevere tweet dal gruppo di prodotto|Seguire [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) su Twitter.|
@@ -83,12 +83,14 @@ Risoluzione dei problemi:
 
 - Se il connettore di Rights Management è stato distribuito nei server locali, vedere le informazioni sul [monitoraggio](../deploy-use/monitor-rms-connector.md), che includono dettagli sulle voci del registro eventi, sui contatori delle prestazioni e sulla registrazione.
 
-- Per il client Azure Information Protection per Windows, vedere la sezione [Controlli aggiuntivi e risoluzione dei problemi](../rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) nella guida dell'amministratore.
+- Per il client Azure Information Protection per Windows, vedere la sezione [Controlli aggiuntivi e risoluzione dei problemi](../rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) nella guida dell'amministratore e verificare di usare una [versione supportata](../rms-client/client-version-release-history.md#servicing-information-and-timelines).
 
 ### <a name="community-resources"></a>Risorse della community
 
 Si consiglia di visitare il [sito di Yammer per Azure Information Protection](https://www.yammer.com/AskIPTeam). Questa risorsa offre risposte dirette dal team di Azure Information Protection, oltre al vantaggio di condividere esperienze e conoscenze con altri amministratori e consulenti.
 
-Se non si ha accesso a Yammer, visitare il [forum di TechNet per Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
+Fare riferimento alla [community IT](https:/techcommunity.microsoft.com) che include una sezione per [Azure Information Protection](https:/techcommunity.microsoft.com/t5/Azure-Information-Protection/bd-p/Azure-Information-Protection) per porre domande e condividere informazioni.
+
+Se non si ha accesso a questi siti, visitare il [forum di TechNet per Microsoft RMS (Cloud)](https://social.technet.microsoft.com/Forums/en-US/home?forum=rmscloud).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

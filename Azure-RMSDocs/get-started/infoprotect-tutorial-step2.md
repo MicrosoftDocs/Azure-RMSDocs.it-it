@@ -4,17 +4,17 @@ description: 'Passaggio 2 di un''esercitazione introduttiva per provare rapidame
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/17/2017
+ms.date: 11/29/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 0e10a1809aaf792ac8c5960e30917aabd5c44548
-ms.sourcegitcommit: 0ef66a8479b4105c00bf1b1df46d2ddf044b7670
+ms.openlocfilehash: 3dd58454709dd5a73edc23578f12e79d85a9b9c9
+ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passaggio 2: Configurare e pubblicare criteri di Azure Information Protection
 
@@ -50,6 +50,10 @@ Nel corso di questa esercitazione verranno modificate alcune impostazioni dei cr
     Se non si ha questa etichetta perché si sta usando una versione precedente dei criteri, scegliere **Internal** come etichetta equivalente.
 
 2. Impostare l'opzione **Gli utenti devono fornire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione** su **On**.
+
+3. Individuare anche l'impostazione **Make the custom permissions option available to users** (Rendi l'opzione delle autorizzazioni personalizzate disponibile per gli utenti). Se è impostata su **Off** (Disattivata), impostarla su **On** (Attivata).
+    
+    È possibile che non sia necessario modificare questa impostazione poiché il valore predefinito dipende dalla propria sottoscrizione. Le autorizzazioni personalizzate verranno usate in seguito nell'esercitazione per condividere un documento protetto con l'utente specificato quando si fa clic con il pulsante destro del mouse sul file in Esplora file.
 
 ## <a name="creating-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>Creazione di una nuova etichetta per la protezione, di contrassegni visivi e di una condizione per la richiesta di classificazione
 
@@ -142,7 +146,7 @@ Dopo aver esaminato il criterio predefinito e aver apportato alcune modifiche, i
 |Se si desiderano altre informazioni|Informazioni aggiuntive|
 |--------------------------------|--------------------------|
 |Informazioni sui criteri predefiniti e sulle diverse versioni|[Criteri predefiniti di Azure Information Protection](../deploy-use/configure-policy-default.md)|
-|Informazioni sulle opzioni di configurazione per i criteri|[Configurazione dei criteri di Azure Information Protection](../deploy-use/configure-policy.md)|
+|Informazioni sulla configurazione dei criteri|[Configurazione dei criteri di Azure Information Protection](../deploy-use/configure-policy.md)|
 |Istruzioni dettagliate per la configurazione di un'etichetta per la protezione|[Come configurare un'etichetta per la protezione di Rights Management](../deploy-use/configure-policy-protection.md)|
 |Informazioni dettagliate sulle autorizzazioni|[Configurazione dei diritti di utilizzo per Azure Rights Management](../deploy-use/configure-usage-rights.md)|
 
