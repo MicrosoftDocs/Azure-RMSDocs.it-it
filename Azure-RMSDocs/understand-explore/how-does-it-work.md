@@ -4,7 +4,7 @@ description: Descrizione del funzionamento di Azure RMS, dei controlli crittogra
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/23/2017
+ms.date: 12/06/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,17 +12,17 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 26c82884c706c8397eae63197ed0307faa3562d3
-ms.sourcegitcommit: 0fa5dd38c9d66ee2ecb47dfdc9f2add12731485e
+ms.openlocfilehash: 1a7075287eebe2c68534de95d01cef455ebe63b5
+ms.sourcegitcommit: f185b1d742c345a465927f88e606413421fe1150
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/24/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funzionamento di Azure RMS: dietro le quinte
 
 >*Si applica a: Azure Information Protection, Office 365*
 
-Relativamente al funzionamento di Azure RMS è importante sapere che il servizio Rights Management e Microsoft non considerano o archiviano i dati come parte del processo di protezione delle informazioni. Le informazioni protette non vengono mai inviate o archiviate in Azure, a meno di archiviarle in modo esplicito in Azure o di usare un altro servizio cloud che le archivia in Azure. Azure RMS rende i dati di un documento semplicemente illeggibili a chiunque, eccetto gli utenti e i servizi autorizzati:
+Relativamente al funzionamento di Azure RMS è importante sapere che questo servizio di protezione dati di Azure Information Protection non considera o archivia i dati come parte del processo di protezione. Le informazioni protette non vengono mai inviate o archiviate in Azure, a meno che non vengano archiviate in modo esplicito in Azure o non venga usato un altro servizio cloud che le archivia in Azure. Azure RMS rende i dati di un documento semplicemente illeggibili a chiunque, eccetto gli utenti e i servizi autorizzati:
 
 - I dati vengono crittografati a livello di applicazione e includono un criterio che definisce l'uso autorizzato del documento.
 
@@ -39,7 +39,7 @@ Per una descrizione dettagliata delle operazioni eseguite, vedere la sezione [Pr
 Per informazioni tecniche sugli algoritmi e sulle lunghezze delle chiavi usate in Azure RMS, vedere la sezione successiva.
 
 ## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Controlli crittografici usati in Azure RMS: Algoritmi e lunghezze delle chiavi
-Anche se non è necessario conoscere personalmente il funzionamento di RMS, è possibile che vengano richieste informazioni sui controlli crittografici usati, per garantire che la protezione sia conforme agli standard del settore.
+Anche se non è necessario conoscere nel dettaglio il funzionamento di questa tecnologia, è possibile che vengano richieste informazioni sui controlli crittografici usati, ad esempio per verificare che la sicurezza sia conforme agli standard di settore.
 
 
 |Controlli crittografici|Uso in Azure RMS|
@@ -54,13 +54,13 @@ La lunghezza di 256 bit viene usata dal client Azure Information Protection e da
 
 ###### <a name="footnote-2"></a>Nota 2
 
-2048 bit è la lunghezza della chiave quando il servizio Azure Rights Management è attivato. La lunghezza di 1024 bit è supportata per gli scenari facoltativi seguenti:
+2048 bit è la lunghezza della chiave al momento dell'attivazione del servizio Azure Rights Management. La lunghezza di 1024 bit è supportata per gli scenari facoltativi seguenti:
 
 - Durante la migrazione da locale, se il cluster AD RMS è in esecuzione in Modalità crittografia 1.
 
 - Dopo la migrazione da locale, se il cluster AD RMS ha usato Exchange Online.
 
-- Per le chiavi archiviate che sono state create in locale prima della migrazione in modo che il contenuto protetto da AD RMS possa continuare a essere aperto dopo la migrazione ad Azure Rights Management.
+- Per le chiavi archiviate create in locale prima della migrazione in modo che il contenuto protetto da AD RMS possa continuare a essere aperto dopo la migrazione ad Azure Rights Management.
 
 - Se i clienti scelgono di usare la chiave di tipo BYOK (Bring Your Own Key) con Azure Key Vault. Azure Information Protection supporta lunghezze della chiave di 1024 bit e 2048 bit. Per una maggiore sicurezza, si consiglia una lunghezza della chiave di 2048 bit.
 
