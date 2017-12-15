@@ -11,11 +11,11 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: a9a94744aa2eacb3ddb4bbda3989ae857ff708fd
-ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
+ms.openlocfilehash: 2aba222457dfb56cca29e1a2948cc08041552d9f
+ms.sourcegitcommit: f3d5a1de317b9bd114d802b3965bf6b679d7ccf2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guida per gli sviluppatori di Azure Information Protection
 
@@ -27,7 +27,7 @@ Questa guida serve a comprendere gli strumenti per l'estensione e l'integrazione
 
 Le applicazioni di servizio forniscono funzionalità per proteggere le informazioni durante l'esportazione da un sistema di gestione dei contenuti aziendali, da un'applicazione aziendale o da una soluzione aziendale basata su cloud. Le applicazioni di prevenzione della perdita dei dati (DLP) e Cloud Application Security (CAS) sono esempi di applicazioni di servizio. L'SDK per lo sviluppo di applicazioni di servizio è disponibile tramite due modelli di programmazione.
 
-- [C++](https://www.microsoft.com/en-us/download/details.aspx?id=38397)
+- [C++](https://www.microsoft.com/download/details.aspx?id=38397)
 - [API gestita da C#](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcManagedAPI)
 
 ### <a name="examples-of-service-applications"></a>Esempi di applicazioni di servizio
@@ -84,7 +84,7 @@ Ognuno degli argomenti seguenti contiene indicazioni specifiche per un aspetto d
 
 ### <a name="security-and-authentication"></a>Sicurezza e autenticazione
 
-- [Come configurare un'applicazione del servizio app per usare l'account di accesso di Azure Active Directory](https://docs.microsoft.com/en-us/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
+- [Come configurare un'applicazione del servizio app per usare l'account di accesso di Azure Active Directory](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-how-to-configure-active-directory-authentication)
 - [Procedura: Usare l'autenticazione ADAL](how-to-use-adal-authentication.md)
 - [Configurare Azure RMS per l'autenticazione ADAL (servizio)](adal-auth.md)
 - [Procedura: Impostare la modalità di sicurezza dell'API (servizio)](setting-the-api-security-mode-api-mode.md)
@@ -112,7 +112,7 @@ Questi video sono tratti dalla conferenza Microsoft Ignite 2016
 
 - [Guida per le procedura di sicurezza consigliate](security-guidelines.md)
 - [Blog per sviluppatori RMS](https://blogs.msdn.microsoft.com/rms/)
-- [Domande frequenti su Azure Information Protection](https://docs.microsoft.com/en-us/information-protection/get-started/faqs)
+- [Domande frequenti su Azure Information Protection](https://docs.microsoft.com/information-protection/get-started/faqs)
 
 ### <a name="support-articles"></a>Articoli di supporto
 
@@ -133,17 +133,17 @@ Questi video sono tratti dalla conferenza Microsoft Ignite 2016
 
 ### <a name="api-reference"></a>Informazioni di riferimento sulle API
 
-- [Informazioni di riferimento sulle API di Windows](https://msdn.microsoft.com/en-us/library/hh535292.aspx)
+- [Informazioni di riferimento sulle API di Windows](https://msdn.microsoft.com/library/hh535292.aspx)
   - [Codici di errore di Windows SDK](https://msdn.microsoft.com/library/hh535248.aspx)
 - [Informazioni di riferimento sulle API per Windows Phone e Windows Store](https://msdn.microsoft.com/library/dn891914.aspx)
-- [Informazioni di riferimento sulle API di iOS/OSX](https://msdn.microsoft.com/en-us/library/dn758306.aspx)
-- [Informazioni di riferimento sulle API di Android](https://msdn.microsoft.com/en-us/library/dn758245.aspx)
+- [Informazioni di riferimento sulle API di iOS/OSX](https://msdn.microsoft.com/library/dn758306.aspx)
+- [Informazioni di riferimento sulle API di Android](https://msdn.microsoft.com/library/dn758245.aspx)
 - [Informazioni di riferimento sulle API di Linux](http://azuread.github.io/rms-sdk-for-cpp/annotated.html)
 
 ### <a name="previous-versions"></a>Versioni precedenti
 
-- [AD RMS SDK](https://msdn.microsoft.com/en-us/library/cc530379.aspx) è la prima versione di RMS SDK.
-- [Strumento di scripting di AD RMS](https://msdn.microsoft.com/en-us/library/bb968797.aspx) è uno strumento di amministrazione per un'installazione di AD RMS.
+- [AD RMS SDK](https://msdn.microsoft.com/library/cc530379.aspx) è la prima versione di RMS SDK.
+- [Strumento di scripting di AD RMS](https://msdn.microsoft.com/library/bb968797.aspx) è uno strumento di amministrazione per un'installazione di AD RMS.
 
 ### <a name="see-also"></a>Vedere anche
 
