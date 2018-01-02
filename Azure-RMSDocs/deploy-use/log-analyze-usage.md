@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ebfd7ce4266061cef3099fb8fb096c95b01e6fb4
-ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
+ms.openlocfilehash: a7a983ed075e41ee6f3328634b451107e579134d
+ms.sourcegitcommit: e089661f23f199b122b0ca9ba4748792b349bc27
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registrazione e analisi dell'utilizzo del servizio Azure Rights Management
 

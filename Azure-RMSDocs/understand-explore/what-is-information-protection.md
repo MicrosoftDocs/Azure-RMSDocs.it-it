@@ -4,17 +4,17 @@ description: Informazioni generali sul servizio Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/01/2017
+ms.date: 12/08/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 7e16be928a12142b695f2eac60bdbd3e353c3119
-ms.sourcegitcommit: 43d77093d97509170bbdfa72bc28e1c2100228ee
+ms.openlocfilehash: 18ec6241d09eb8de2417dd939237de0544a401e8
+ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="what-is-azure-information-protection"></a>Che cos'è Azure Information Protection?
 
@@ -45,13 +45,13 @@ Questa tecnologia di protezione usa criteri di crittografia, identità e autoriz
 
 È ad esempio possibile configurare un documento di report o un foglio di calcolo di previsione delle vendite in modo che possano accedervi solo le persone appartenenti all'organizzazione e per controllare se tale documento può essere modificato oppure se può essere impostato come file di sola lettura o non stampabile. È possibile configurare in modo analogo i messaggi di posta elettronica e anche impedire che vengano inoltrati o che venga usata l'opzione Rispondi a tutti. 
 
-Queste impostazioni di protezione possono essere parte della configurazione di etichetta in modo che gli utenti classifichino e proteggano i documenti e i messaggi di posta elettronica semplicemente applicando l'etichetta. Le stesse impostazioni di protezione, tuttavia, possono essere usate dalle applicazioni e dai servizi che supportano la protezione ma non l'assegnazione di etichette. Per le applicazioni e i servizi di questo tipo, le impostazioni di protezione vengono rilevate come *modelli di Rights Management*.
+Queste impostazioni di protezione possono essere parte della configurazione di etichetta in modo che gli utenti classifichino e proteggano i documenti e i messaggi di posta elettronica semplicemente applicando l'etichetta. Le stesse impostazioni di protezione, tuttavia, possono essere usate dalle applicazioni e dai servizi che supportano la protezione ma non l'assegnazione di etichette. Per le applicazioni e i servizi di questo tipo, le impostazioni di protezione diventano disponibili come *modelli di Rights Management*.
 
 ### <a name="rights-management-templates"></a>Modelli di Rights Management
 
 Non appena si attiva il servizio Azure Rights Management, sono disponibili due modelli predefiniti che limitano l'accesso ai dati agli utenti all'interno dell'organizzazione. È possibile usare questi modelli per evitare immediatamente la perdita di dati dell'organizzazione. È anche possibile integrare questi modelli predefiniti configurando impostazioni di protezione personalizzate che applicano controlli più restrittivi.
 
-Quando si crea un'etichetta per Azure Information Protection che include le impostazioni di protezione, viene automaticamente creato un modello di Rights Management corrispondente. Il modello può quindi essere usato con le applicazioni e i servizi che supportano Azure Rights Management.
+Quando si crea un'etichetta per Azure Information Protection che include le impostazioni di protezione, viene automaticamente creato un modello di Rights Management corrispondente. Il modello può quindi essere usato anche con le applicazioni e i servizi che supportano Azure Rights Management.
 
 Ad esempio, dall'interfaccia di amministrazione di Exchange è possibile configurare le regole del flusso di posta elettronica di Exchange Online per l'uso di questi modelli:
 
@@ -59,7 +59,7 @@ Ad esempio, dall'interfaccia di amministrazione di Exchange è possibile configu
 
 Per altre informazioni sulla tecnologia di protezione Azure Rights Management, vedere [Informazioni su Microsoft Azure Rights Management](what-is-azure-rms.md).
 
-## <a name="integration-with-end-user-workflows"></a>Integrazione con i flussi di lavoro degli utenti finali
+## <a name="integration-with-end-user-workflows-for-documents-and-emails"></a>Integrazione con i flussi di lavoro dell'utente finale per i documenti e i messaggi di posta elettronica
 
 Azure Information Protection si integra con i flussi di lavoro esistenti degli utenti finali quando viene installato il client di Azure Information Protection. Il client installa la barra di Information Protection nelle applicazioni di Office, come illustrato nella prima immagine che visualizza la barra in Word. La stessa barra di Information Protection viene aggiunta a Excel, PowerPoint e Outlook. Ad esempio:
 
@@ -79,6 +79,25 @@ Quando un documento viene protetto, utenti e amministratori possono usare un sit
 
 ![Icona per la revoca dell'accesso nel sito di rilevamento dei documenti](../media/tracking-site-revoke-access-icon.png)
 
+### <a name="additional-integration-for-email"></a>Integrazione aggiuntiva per la posta elettronica
+
+Usando Azure Information Protection con Exchange Online si ottiene un ulteriore vantaggio, ovvero la possibilità di inviare messaggi di posta elettronica protetti a qualsiasi utente, con la certezza che possano essere letti su qualsiasi dispositivo.
+
+Ad esempio, gli utenti hanno l'esigenza di inviare informazioni riservate ad account di posta elettronica personali **Gmail**, **Hotmail** o **Microsoft** oppure a utenti che non hanno un account per Office 365 o in Azure AD. Questi messaggi di posta elettronica deve essere crittografati sia nella posizione di archiviazione che in transito e devono essere letti solo dai destinatari originali.
+
+Questo scenario richiede le [nuove funzionalità di Crittografia messaggi di Office 365](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801). Se i destinatari non possono aprire il messaggio di posta elettronica protetto nel client di posta elettronica nativo, possono usare un passcode monouso per leggere le informazioni riservate in un browser.
+
+Un utente di Gmail, ad esempio, visualizza quanto segue in un messaggio di posta elettronica:
+
+![Esperienza per i destinatari Gmail per Crittografia messaggi di Office 365 e Azure Information Protection](../media/ome-message.png)
+
+Per gli utenti che inviano il messaggio di posta elettronica, il flusso di lavoro è uguale a quello previsto per l'invio di un messaggio di posta elettronica protetto a un utente nella propria organizzazione. Ad esempio, possono selezionare il pulsante **Non inoltrare** che il client di Azure Information Protection consente di aggiungere alla barra multifunzione di Outlook. Questa funzionalità Non inoltre può anche essere integrata in una etichetta selezionabile dagli utenti, in modo che il messaggio di posta elettronica venga classificato oltre che protetto:
+
+![Selezione di un'etichetta configurata per Non inoltrare](../media/recipients-only-label.png)
+
+In alternativa, è possibile fornire automaticamente protezione agli utenti, usando regole del flusso di posta elettronica che applicano la protezione dei diritti. 
+
+Quando si allegano documenti di Office a questi messaggi di posta elettronica, anche i documenti allegati vengono protetti automaticamente.
 
 ## <a name="resources-for-azure-information-protection"></a>Risorse per Azure Information Protection
 

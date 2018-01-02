@@ -10,11 +10,11 @@ ms.prod:
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: ff444afb1912239ec817882c76fc735f6d35ed1e
-ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
+ms.openlocfilehash: 99aba6560f9dcdbd564f317e8d9e0ce89845f4a9
+ms.sourcegitcommit: f78f5209f0e19c6edfd1815d76e0e9750b4ce71d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
@@ -100,7 +100,7 @@ Se si usa la versione di anteprima del client Azure Information Protection e il 
 
 È possibile scegliere un colore nell'elenco dei colori disponibile o specificare un colore personalizzato immettendo un codice tripletta esadecimale per i componenti rosso, verde e blu (RGB) del colore. Ad esempio, **#DAA520**. 
 
-Se è necessario un riferimento per questi codici un punto di partenza utile può essere il file [Colors by Name](https://msdn.microsoft.com/library/aa358802\(v=vs.85).aspx) (Colori per nome.aspx), disponibile nella documentazione MSDN. È anche possibile trovare i codici in molte applicazioni per la modifica di immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
+Se sono necessarie informazioni di riferimento per questi codici, un punto di partenza utile può essere [Colors by Name](https://msdn.microsoft.com/library/aa358802\(v=vs.85\).aspx) (Colori per nome) nella documentazione MSDN. È anche possibile trovare i codici in molte applicazioni per la modifica di immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
