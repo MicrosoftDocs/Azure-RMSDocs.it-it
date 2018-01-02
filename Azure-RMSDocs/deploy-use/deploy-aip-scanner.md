@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire lo scanner di Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 12/12/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 986603d54b69fcf85bafecef2691fbd44af94942
-ms.sourcegitcommit: c5408506170bdb00d9e677b02161b9f61d4d5d3c
+ms.openlocfilehash: 3e78fd3c306136c57b75e74c8846e38670e9eb94
+ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/11/2017
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -65,21 +65,23 @@ Prima di installare lo scanner di Azure Information Protection, verificare che i
 
 2. Aprire una sessione di Windows PowerShell con l'opzione **Esegui come amministratore**.
 
-3. Eseguire il cmdlet [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), che specifica l'istanza di SQL Server in cui creare un database per lo scanner di Azure Information Protection. Quando richiesto, inserire le credenziali per l'account del servizio scanner (\<dominio\nome utente>) e la password: 
+3. Eseguire il cmdlet [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), che specifica l'istanza di SQL Server in cui creare un database per lo scanner di Azure Information Protection: 
     
     ```
     Install-AIPScanner -SqlServerInstance <database name>
     ```
     
     Esempi:
-        
-    - Per un'istanza predefinita: `Install-AIPScanner -SqlServerInstance SQLSERVER1`
     
-    - Per un'istanza denominata: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER`
+    Per un'istanza predefinita: `Install-AIPScanner -SqlServerInstance SQLSERVER1`
     
-    - Per SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS`
+    Per un'istanza denominata: `Install-AIPScanner -SqlServerInstance SQLSERVER1\AIPSCANNER`
+    
+    Per SQL Server Express: `Install-AIPScanner -SqlServerInstance SQLSERVER1\SQLEXPRESS`
     
     Usare la Guida in linea di questo cmdlet per visualizzare [esempi più dettagliati](/powershell/module/azureinformationprotection/install-aipscanner#examples).
+    
+    Quando richiesto, specificare le credenziali per l'account del servizio scanner (\<dominio\nome utente>) e la password.
 
 4. Verificare che il servizio è ora installato usando **Strumenti di amministrazione** > **Servizi**. 
     
@@ -115,7 +117,7 @@ Versioni di SharePoint supportate: SharePoint Server 2016 e SharePoint Server 20
     
         Add-AIPScannerRepository -Path <path>
     
-    ad esempio `Add-AIPScannerRepository -Path \\NAS\Documents`
+    Ad esempio: `Add-AIPScannerRepository -Path \\NAS\Documents`
     
     Per altri esempi, vedere la [guida online](/powershell/module/azureinformationprotection/Add-AIPScannerRepository#examples) per questo cmdlet.
 
