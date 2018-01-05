@@ -4,7 +4,7 @@ description: "Di seguito sono riportate alcune possibili domande sulle funzional
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 4332b37a3c89cb68d8e090e44666f2620d5b0064
-ms.sourcegitcommit: fd3932ab19a00229b56efc3e301abaf9cff3f70b
+ms.openlocfilehash: 7bc1e4021eeb2620857577f3970d1da9db21b6e8
+ms.sourcegitcommit: 51b93125988e6e63077b1df721985b89059f425e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Domande frequenti sulla classificazione e l'assegnazione di etichette in Azure Information Protection
 
@@ -29,8 +29,6 @@ Di seguito sono riportate alcune possibili domande sulle funzionalità di classi
 L'esercitazione introduttiva consente in pochi minuti di vedere queste caratteristiche in pratica: [Esercitazione introduttiva di Azure Information Protection](infoprotect-quick-start-tutorial.md).
 
 Per sapere quando saranno disponibili altre funzionalità e nuove caratteristiche per la classificazione, seguire gli annunci nel [blog di Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) e nel [sito Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all). Nella versione corrente sono presenti alcune limitazioni, incluse le seguenti:
-
-- I nomi e le descrizioni delle etichette sono supportati solo in una lingua. Il supporto multilingue è tuttavia ora in anteprima. Per altre informazioni, vedere [Come configurare etichette e modelli per varie lingue in Azure Information Protection](../deploy-use/configure-policy-languages.md).
 
 - Manca la funzione di registrazione centralizzata per la classificazione e l'aggiunta di etichette.
 
