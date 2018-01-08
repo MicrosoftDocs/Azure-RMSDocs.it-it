@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per amministratori per gestire il client 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/09/2017
+ms.date: 01/03/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: dc3545c8212907786aa2fcf11e819b4cbdcf1ab5
-ms.sourcegitcommit: 4c6d9c55ff5dc5dbb10dc8a5abed9319fd3efb98
+ms.openlocfilehash: aee9a9f665d3aa0a0e8a8c568f3abbd044469fc7
+ms.sourcegitcommit: 6c7874f54b8b983d3ac547bb23a51e02c68ee67b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
 
@@ -260,7 +260,7 @@ Quando si usa un account dell'entità di sicurezza del servizio per proteggere i
 
 ### <a name="example-scenarios-for-using-the-cmdlets-for-azure-information-protection-and-the-azure-rights-management-service"></a>Scenari di esempio per l'uso dei cmdlet per Azure Information Protection e il servizio Azure Rights Management
 
-L'uso di etichette per classificare e proteggere i file è più efficiente, perché richiede solo due cmdlet, che possono essere eseguiti indipendentemente o insieme: [Get-AIPFileStatus](/powershell/azureinformationprotection/vlatest/get-aipfilestatus) e [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel). Per altre informazioni ed esempi, usare la guida per questi due cmdlet.
+L'uso di etichette per classificare e proteggere i file è più efficiente, perché richiede solo due cmdlet, che possono essere eseguiti indipendentemente o insieme: [Get-AIPFileStatus](/powershell/azureinformationprotection/get-aipfilestatus) e [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel). Per altre informazioni ed esempi, usare la guida per questi due cmdlet.
 
 Per proteggere i file o rimuoverne la protezione tramite la connessione diretta al servizio Azure Rights Management, tuttavia, è in genere necessario eseguire una serie di cmdlet, come descritto di seguito.
 
@@ -487,13 +487,15 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
 
 4. Selezionare l'applicazione appena creata, ad esempio **AIPOnBehalfOf**, quindi selezionare **Proprietà** nel pannello **Impostazioni**. Nel pannello **Proprietà** copiare il valore di **ID applicazione** e quindi chiudere il pannello. 
     
-    Questo valore viene usato per il parametro `WebAppId` quando si esegue il cmdlet Set-AIPAuthentication.
+    Questo valore viene usato per il parametro `WebAppId` quando si esegue il cmdlet Set-AIPAuthentication. Incollarlo e salvarlo per riferimento futuro.
 
-5. Nel pannello **Impostazioni** selezionare **Chiavi**. Aggiungere una nuova chiave specificando una descrizione e la scelta relativa alla durata (1 anno, 2 anni o nessuna scadenza). Selezionare quindi **Salva**e copiare la stringa del **Valore** visualizzata. È importante salvare la stringa, perché non verrà più visualizzata e non potrà essere recuperata. Come per qualsiasi chiave usata, archiviare il valore salvato in modo sicuro e limitare l'accesso.
+5. Nel pannello **Impostazioni** selezionare **Autorizzazioni necessarie**. Nel pannello **Autorizzazioni necessarie** selezionare **Concedi autorizzazioni**, fare clic su **Sì** per confermare e quindi chiudere il pannello.
+
+6. Ancora nel pannello **Impostazioni** selezionare **Chiavi**. Aggiungere una nuova chiave specificando una descrizione e la scelta relativa alla durata (1 anno, 2 anni o nessuna scadenza). Selezionare quindi **Salva**e copiare la stringa del **Valore** visualizzata. È importante salvare la stringa, perché non verrà più visualizzata e non potrà essere recuperata. Come per qualsiasi chiave usata, archiviare il valore salvato in modo sicuro e limitare l'accesso.
     
     Questo valore viene usato per il parametro `WebAppKey` quando si esegue il cmdlet Set-AIPAuthentication.
 
-6. Tornando al pannello **Registrazioni per l'app**, selezionare **Registrazione nuova applicazione** per creare l'applicazione nativa. Nell'etichetta **Crea** specificare i valori seguenti e quindi fare clic su **Crea**:
+7. Tornando al pannello **Registrazioni per l'app**, selezionare **Registrazione nuova applicazione** per creare l'applicazione nativa. Nell'etichetta **Crea** specificare i valori seguenti e quindi fare clic su **Crea**:
     
     - Nome: **AIPClient**
     
@@ -503,25 +505,19 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
     
     - URL di accesso: **http://localhost**
 
-7. Selezionare l'applicazione appena creata, ad esempio **AIPClient**, quindi selezionare **Proprietà** nel pannello **Impostazioni**. Nel pannello **Proprietà** copiare il valore di **ID applicazione** e quindi chiudere il pannello.
+8. Selezionare l'applicazione appena creata, ad esempio **AIPClient**, quindi selezionare **Proprietà** nel pannello **Impostazioni**. Nel pannello **Proprietà** copiare il valore di **ID applicazione** e quindi chiudere il pannello.
     
-    Questo valore viene usato per il parametro `NativeAppId` quando si esegue il cmdlet Set-AIPAuthentication.
+    Questo valore viene usato per il parametro `NativeAppId` quando si esegue il cmdlet Set-AIPAuthentication. Incollarlo e salvarlo per riferimento futuro.
 
-8. Nel pannello **Impostazioni** selezionare **Autorizzazioni necessarie**. 
+9. Nel pannello **Impostazioni** selezionare **Autorizzazioni necessarie**. 
 
-9. Nel pannello **Autorizzazioni necessarie** fare clic su **Aggiungi**e quindi fare clic su **Selezionare un'API**. Nella casella di ricerca digitare **AIPOnBehalfOf**. Selezionare questo valore nella casella di riepilogo e quindi fare clic su **Seleziona**.
+10. Nel pannello **Autorizzazioni necessarie** fare clic su **Aggiungi**e quindi fare clic su **Selezionare un'API**. Nella casella di ricerca digitare **AIPOnBehalfOf**. Selezionare questo valore nella casella di riepilogo e quindi fare clic su **Seleziona**.
 
-10. Nel pannello **Abilita accesso** selezionare **AIPOnBehalfOf**, fare clic su **Seleziona**e quindi fare clic su **Chiudi**.
+11. Nel pannello **Abilita accesso** selezionare **AIPOnBehalfOf**, fare clic su **Seleziona**e quindi fare clic su **Chiudi**.
+
+12. Nel pannello **Autorizzazioni necessarie** selezionare **Concedi autorizzazioni**, fare clic su **Sì** per confermare e quindi chiudere il pannello.
     
-    La configurazione delle due app è completata e i valori necessari per eseguire [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con parametri sono disponibili.
-
-
-> [!TIP]
-> Se Set AIPAuthentication non riesce e sono state usate app esistenti invece di creare nuove app con le istruzioni precedenti, potrebbe essere necessario reimpostare le autorizzazioni necessarie per le app. Ciò è vero anche se sono state seguite le istruzioni per creare nuove app per Set-AIPAuthentication, ma sono state poi modificate le impostazioni delle app.
-> 
-> Per reimpostare le autorizzazioni necessarie, per entrambe le app, seguire questa procedura di configurazione: selezionare **Tutte le impostazioni** > **Autorizzazioni necessarie** > **Concedi autorizzazioni** e fare clic su **Sì** per confermare.
-> 
-> In alternativa, creare nuove app usando le istruzioni precedenti.
+La configurazione delle due app è completata e i valori necessari per eseguire [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con parametri sono disponibili.
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per le informazioni della Guida sui cmdlet, all'interno di una sessione di PowerShell digitare `Get-Help <cmdlet name> cmdlet`. Per ottenere le informazioni più aggiornate, usare il parametro -online. Ad esempio: 

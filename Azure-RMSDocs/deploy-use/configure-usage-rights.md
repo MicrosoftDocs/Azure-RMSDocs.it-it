@@ -4,7 +4,7 @@ description: Informazioni sui diritti specifici usati quando si proteggono i fil
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/06/2017
+ms.date: 01/02/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f82eb8bc415b064793c1efd9b7b88795b1ec6ff2
-ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
+ms.openlocfilehash: 5d57f1cc7728fef1b877fc25fce01bbc9c768b3c
+ms.sourcegitcommit: 24b35e27b3aa861ae8ba6bacab571b0071b058d7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configurazione dei diritti di utilizzo per Azure Rights Management
 
@@ -57,8 +57,8 @@ Usare la tabella seguente per un elenco di questi livelli di autorizzazioni e un
 |---------------------|----------------|---------------------------------|
 |Visualizzatore|Portale di Azure classico <br /><br />Portale di Azure<br /><br /> Applicazione Rights Management sharing per Windows<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Rispondi; Rispondi a tutti; Consenti macro [[1]](#footnote-1)<br /><br />Nota: per i messaggi di posta elettronica, usare Revisore anziché questo livello di autorizzazione per garantire che una risposta a un messaggio venga ricevuta come messaggio di posta elettronica e non come allegato. Revisore è richiesto anche quando si invia un messaggio di posta elettronica a un'altra organizzazione che usa il client Outlook o Outlook Web App. Oppure per gli utenti dell'organizzazione che non devono usare il servizio Azure Rights Management perché sono stati implementati i [controlli di onboarding](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|
 |Revisore|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Applicazione Rights Management sharing per Windows<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Rispondi: Rispondi a tutti [[2]](#footnote-2); Inoltra [[2]](#footnote-2); Consenti macro [[1]](#footnote-1)|
-|Coautore|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Applicazione Rights Management sharing per Windows<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Copia; Visualizza diritti; Consenti macro; Salva con nome, Esporta [[3]](#footnote-3); Stampa; Rispondi [[2]](#footnote-2); Rispondi a tutti [[2]](#footnote-2); Inoltra [[2]](#footnote-2)|
-|Comproprietario|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Applicazione Rights Management sharing per Windows<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Copia; Visualizza diritti; Consenti macro; Salva con nome, Esporta; Stampa; Rispondi [[2]](#footnote-2); Rispondi a tutti [[2]](#footnote-2); Inoltra [[2]](#footnote-2); Controllo completo|
+|Coautore|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Applicazione Rights Management sharing per Windows<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Copia; Consenti macro; Salva con nome, Esporta [[3]](#footnote-3); Stampa; Rispondi [[2]](#footnote-2); Rispondi a tutti [[2]](#footnote-2); Inoltra [[2]](#footnote-2)|
+|Comproprietario|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Applicazione Rights Management sharing per Windows<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Copia; Consenti macro; Salva con nome, Esporta; Stampa; Rispondi [[2]](#footnote-2); Rispondi a tutti [[2]](#footnote-2); Inoltra [[2]](#footnote-2); Controllo completo|
 
 ----
 
@@ -70,8 +70,7 @@ Per il client di Azure Information Protection per Windows, questo diritto è att
 Non applicabile al client Azure Information Protection per Windows o all'applicazione di condivisione Rights Management per Windows.
 
 ###### <a name="footnote-3"></a>Nota 3
-Non incluso nel client Azure Information Protection per Windows. In questo client, il diritto di utilizzo dell'esportazione include la possibilità di rimuovere la protezione.
-
+Non incluso nel portale di Azure o nel client Azure Information Protection per Windows.
 
 ## <a name="rights-included-in-the-default-templates"></a>Diritti inclusi nei modelli predefiniti
 Nella tabella seguente sono elencati i diritti di utilizzo inclusi quando vengono creati i modelli predefiniti. I diritti di utilizzo vengono elencati in base al relativo [nome comune](#usage-rights-and-descriptions).

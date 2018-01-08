@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per gli amministratori per la distribuzio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 01/04/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 675afc962da542a03b90bea2dcb5d004829e361a
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: d4ad7c3419d3ad83389baece95c1e30c32f06da6
+ms.sourcegitcommit: 7b90b3692bbef6fafab41c0f8c56bd4350985f37
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guida dell'amministratore: Installare il client Azure Information Protection per gli utenti
 
@@ -50,6 +50,12 @@ Verificare quindi gli altri prerequisiti che possono essere necessari per il cli
     
     Se questo aggiornamento richiesto non è installato, l'installazione client avvisa che è necessario installarlo. Questo aggiornamento può essere installato dopo l'installazione del client. Alcune azioni, tuttavia, verranno bloccate e verrà visualizzato di nuovo l'avviso.  
 
+- Visual C++ Redistributable per Visual Studio 2015 (versione a 32 bit)
+    
+    Per i computer che eseguono Windows 7 Service Pack 1, installare **vc_redist.x86.exe** dalla pagina di download seguente: [Visual C++ Redistributable per Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+    
+    L'installazione del client non verifica il rispetto di questo prerequisito, che è tuttavia necessario perché il client di Azure Information Protection possa classificare e proteggere i file PDF.
+
 - Non disabilitare il componente aggiuntivo **Microsoft Azure Information Protection** per le applicazioni di Office
     
     Se è stata configurata l'impostazione criteri di gruppo **Elenco dei componenti aggiuntivi gestiti**, includere il componente aggiuntivo Microsoft Azure Information Protection per le applicazioni Office specificando i seguenti identificatori ProgID per Azure Information Protection e impostare l'opzione su **1: The add-in is always enabled** (1: Sempre attivato).
@@ -65,6 +71,14 @@ Verificare quindi gli altri prerequisiti che possono essere necessari per il cli
     Se l'impostazione criteri di gruppo **Elenco dei componenti aggiuntivi gestiti** non è stata configurata, può risultare necessario configurarla quando si ricevono report indicanti che il componente aggiuntivo Microsoft Azure Information Protection sta per essere disattivato. Quando questo componente aggiuntivo viene disattivato, gli utenti non visualizzano la barra di Azure Information Protection nell'applicazione di Office.
     
     Per altre informazioni su questa impostazione criteri di gruppo, vedere [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) (Nessun componente aggiuntivo caricato a causa di impostazioni criteri di gruppo per Office 2013 e Office 2016).
+
+- Per Office 16.0.8628.2010 e versioni successive (A portata di clic): abilitare il supporto legacy per i monitor
+    
+    Per evitare la visualizzazione della barra di Azure Information Protection al di fuori delle applicazioni di Office per queste versioni di Office, abilitare il supporto legacy per i monitor. Per configurare le applicazioni di Office: **File** > **Generale** > **Opzioni interfaccia utente**:
+    
+    - Se l'opzione **When using multiple displays** (Quando si usano più schermi) è impostata su **Optimize for best appearance** (Ottimizza in modo da ottenere l'aspetto migliore), selezionare **Optimize for compatibility (application restart required)** (Ottimizza per compatibilità (riavvio necessario)). 
+        
+    - Se è selezionata l'opzione **Use best settings for my display** (Usa le impostazioni più adatte al mio schermo), deselezionarla.
 
 > [!IMPORTANT]
 > L'installazione del client Azure Information Protection richiede autorizzazioni amministrative locali.
@@ -157,7 +171,7 @@ Per il supporto degli aggiornamenti automatici tramite Windows Update e per l'in
 
 Se l'installazione di questa versione più recente di Microsoft .NET Framework non è una soluzione efficace, è possibile installare il client con il parametro **DowngradeDotNetRequirement=True**, in modo da ignorare questo requisito se è installato Microsoft .NET Framework versione 4.5.1.
 
-Ad esempio: `AzInfoProtection.exe DowngradeDotNetRequirement=True`
+ad esempio `AzInfoProtection.exe DowngradeDotNetRequirement=True`
 
 È consigliabile usare questo parametro con cautela, tenendo presente che sono stati segnalati problemi di blocco delle applicazioni di Office quando il client Azure Information Protection viene usato con questa versione precedente di Microsoft .NET Framework. Se si riscontrano problemi di blocco delle applicazioni, eseguire l'aggiornamento alla versione consigliata prima di provare altre soluzioni. 
 
@@ -183,8 +197,8 @@ Se si usa Intune per il metodo di distribuzione del software, usare queste istru
     |Office 2010|Windows 8.1 e Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numero di versione nel nome file: v3|Installare se non è installato KB2843630 o KB2919355|
     |Office 2010|Windows 8 e Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numero di versione nel nome file: v3|Installare|
     |Office 2010|Windows 7|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Numero di versione nel nome file: v3|Installare se non è installato KB3125574|
+    |Non applicabile|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Installare|
     |Non applicabile|Windows 7|KB2627273 <br /><br /> Numero di versione incluso nel nome file: v4|Uninstall|
-    
 
 3. Per un'installazione predefinita, eseguire il file MSI con **/quiet/**, ad esempio, `AzInfoProtection.msi /quiet`. Tuttavia, può essere necessario specificare parametri di installazione aggiuntivi, che sono documentati nelle [istruzioni del programma di installazione del file eseguibile](#to-install-the-azure-information-protection-client-by-using-the-executable-installer).  
 

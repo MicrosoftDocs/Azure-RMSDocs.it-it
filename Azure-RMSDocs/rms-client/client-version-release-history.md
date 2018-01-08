@@ -4,7 +4,7 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 12/22/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c3c0acad413ddbbcd1caccd4f1a73c7b0884ae7c
-ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
+ms.openlocfilehash: 20ee380a48fa8fb303a5c71f43df17b8740b0cb4
+ms.sourcegitcommit: fc9a4487e2a0bc3481a814c7c308939868d52db9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto
 
@@ -28,7 +28,7 @@ Il team di Azure Information Protection aggiorna regolarmente il client di Azure
 
 ### <a name="servicing-information-and-timelines"></a>Informazioni e tempistiche di manutenzione
 
-Le versioni disponibili a livello generale del client Azure Information Protection sono supportate per un periodo di sei mesi dalla data di rilascio. Le correzioni e le nuove funzionalità sono sempre valide per l'ultima versione disponibile a livello generale e non verranno applicate alle versioni precedenti.
+Ogni versione con disponibilità generale del client di Azure Information Protection è supportata per un massimo di sei mesi dopo il rilascio della versione con disponibilità generale successiva. Le versioni del client non supportate non sono incluse in questa pagina. Le correzioni e le nuove funzionalità sono sempre valide per l'ultima versione disponibile a livello generale e non verranno applicate alle versioni precedenti.
 
 Le versioni di anteprima non devono essere distribuite agli utenti finali nelle reti di produzione, ma è possibile usare la versione di anteprima più recente per visualizzare e provare le nuove funzionalità e correzioni che saranno disponibili nella prossima versione disponibile a livello generale. Non sono supportate le versioni di anteprima non aggiornate.
 
