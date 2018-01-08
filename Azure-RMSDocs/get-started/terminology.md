@@ -4,7 +4,7 @@ description: "In caso di dubbio su una parola, un'espressione o un acronimo corr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/18/2017
+ms.date: 12/15/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f2c0053a8f1f4cde5193b65e5b8e521a2b6934c1
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: da20ac2ea327b5b97f021c85f62d97b9aa1b9824
+ms.sourcegitcommit: fc205eae0c0b378d41da5f1eceb0c699e60ad66f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 12/18/2017
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologia di Azure Information Protection
 
@@ -26,8 +26,8 @@ In caso di dubbio su una parola, un'espressione o un acronimo correlato a Micros
 
 |Termine|Definizione|
 |--------|--------------|
-|AADRM|Nome del modulo di Windows PowerShell per il servizio Azure Rights Management, derivato dall'abbreviazione non ufficiale di [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] quando era denominato precedentemente (Windows) Azure Active Directory Rights Management.|
-|attivare|Abilitare il servizio [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] in modo che un'organizzazione possa proteggere i propri documenti e messaggi di posta elettronica. Questa azione abilita le funzionalità di Rights Management anche in Exchange Online e SharePoint Online.|
+|AADRM|Nome del modulo di Windows PowerShell per il servizio Azure Rights Management, derivato dall'abbreviazione non ufficiale di Azure Rights Management quando in precedenza era denominato (Windows) Azure Active Directory Rights Management.|
+|attivare|Consente di abilitare il servizio Azure Rights Management in modo che un'organizzazione possa proteggere i propri documenti e i propri messaggi di posta elettronica. Questa azione abilita le funzionalità di Rights Management anche in Exchange Online e SharePoint Online.|
 |Active Directory Rights Management Services|Spesso abbreviato in *AD RMS*.<br /><br />Ruolo di Windows Server che fornisce la protezione basata sulla gestione dei diritti tramite crittografia e criteri che consentono di proteggere documenti, file e messaggi di posta elettronica.|
 |AD RMS|Vedere *Active Directory Rights Management Services*.|
 |Azure Information Protection|Servizio basato sul cloud che usa funzionalità di classificazione, assegnazione di etichette e protezione per proteggere documenti e messaggi di posta elettronica. Azure Rights Management garantisce la protezione tramite criteri di crittografia, identità e autorizzazione.|
@@ -58,12 +58,14 @@ In caso di dubbio su una parola, un'espressione o un acronimo correlato a Micros
 |proteggere|Applicare i controlli di Rights Management a file o messaggi di posta elettronica tramite criteri di crittografia, identità e controllo di accesso per proteggere i dati.|
 |pubblicare|Proteggere un file per impedirne l'uso e l'accesso da parte di utenti non autorizzati.|
 |connettore Rights Management|Servizio di inoltro proxy in uscita che può essere distribuito per servizi locali, ad esempio Exchange Server e SharePoint, per proteggere i dati mediante il servizio Azure Rights Management.|
+|Autorità di certificazione di Rights Management|Account che ha protetto un documento o un messaggio di posta elettronica.|
+|Proprietario di Rights Management|Account che mantiene il controllo completo di un documento o di un messaggio di posta elettronica protetto. A questo account è automaticamente concesso il diritto di utilizzo Controllo completo di Rights Management, senza alcuna data di scadenza o impostazione modalità offline.|
 |servizi Rights Management|Termine generico che fa riferimento sia alla versione cloud di [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] ([!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)]) sia alla versione locale di [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] (AD RMS).|
 |Applicazione Rights Management sharing|Applicazione facoltativa per Windows e per i più diffusi dispositivi mobili, che supporta la condivisione sicura di file sul posto e tramite posta elettronica, ora sostituita dal client Azure Information Protection.|
 |RMS|Vedere *Servizi Rights Management*.|
 |connettore RMS|Vedere *Connettore Rights Management*.|
 |RMS per utenti singoli|Sottoscrizione gratuita per l'uso di [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] quando l'organizzazione non ha una sottoscrizione a Office 365 o Azure Active Directory.|
-|App RMS sharing|Vedere *Applicazione Rights Management sharing*.|
+|App di condivisione RMS|Vedere *Applicazione Rights Management sharing*.|
 |Modalità di sola protezione|Modalità operativa per il client di Azure Information Protection quando non sono presenti criteri di Azure Information Protection per l'applicazione delle etichette. In questa modalità le etichette di classificazione non vengono visualizzate, ma gli utenti possono applicare la protezione di Rights Management.|
 |utente con privilegi avanzati|Gruppo di amministratori altamente affidabili che possono decrittografare e aprire i file protetti dall'organizzazione tramite un servizio Rights Management. In genere, questo livello di accesso è obbligatorio per documenti eDiscovery legali e team di controllo.|
 |chiave del tenant|Nota anche come chiave del certificato concessore di licenze server (SLC).<br /><br />Chiave univoca di un'organizzazione che protegge tutte le funzionalità di crittografia di [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] correlate alla chiave del tenant.|

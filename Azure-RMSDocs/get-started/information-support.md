@@ -4,7 +4,7 @@ description: Risorse per gli amministratori, incluse informazioni sulle nuove ve
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2017
+ms.date: 12/29/2017
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d6937e86fd0fd544ff2030e52d03c32daa67a134
-ms.sourcegitcommit: a9376b5431dc6ae9819833146a84fc1dd5e685fb
+ms.openlocfilehash: e1fb9251722656811752f7d47cb52388b5d18dc5
+ms.sourcegitcommit: 42c1e72320197534f720ca78bf25da9f139a17de
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informazioni e supporto per Azure Information Protection
 
@@ -24,25 +24,21 @@ ms.lasthandoff: 12/08/2017
 
 Usare le risorse seguenti per comprendere, distribuire e supportare Azure Information Protection per l'organizzazione.
 
-|Per...|.. effettuare la seguente operazione:|
+|Per...|...effettuare l'operazione seguente:|
 |----------------|---------------|
 |Consultare la documentazione usata più di frequente|Leggere le cinque pagine principali:<br /><br /> - [Che cos'è Azure Information Protection?](../understand-explore/what-is-information-protection.md)<br /> - [Informazioni su Microsoft Azure Rights Management](../understand-explore/what-is-azure-rms.md)<br />- [Introduzione - App AIP per iOS e Android](../rms-client/mobile-app-get-started.md) <br />- [Attivazione di Azure Rights Management](../deploy-use/activate-service.md)<br />- [Requisiti per Azure Information Protection](../get-started/requirements.md)|
 |Interagire con il team di prodotto e i propri colleghi|Visitare il [sito di Yammer](https://www.yammer.com/AskIPTeam) per Azure Information Protection.|
-|Richiedere una nuova funzionalità o modifica di funzionalità|Visitare il [sito User Voice](https://msip.uservoice.com) per Azure Information Protection|
+|Richiedere una nuova funzionalità o modifica di funzionalità|Visitare il sito [User Voice](https://msip.uservoice.com) per Azure Information Protection.|
 |Ricevere tweet dal gruppo di prodotto|Seguire [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) su Twitter.|
 |Controllare le informazioni sulla sottoscrizione e le funzionalità supportate|Usare le [informazioni sulla sottoscrizione](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e l'[elenco delle funzionalità](https://www.microsoft.com/cloud-platform/azure-information-protection-features) del sito Azure Information Protection.|
 
 
-## <a name="information-about-new-releases-and-updated-documentation"></a>Informazioni sulle nuove versioni e sulla documentazione aggiornata
-Il team di prodotto di Azure Information Protection pubblica annunci sulle nuove versioni e sugli aggiornamenti in [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) (Blog di Enterprise Mobility and Security). Questi post del blog sono complementari alla documentazione e alle informazioni di supporto sul prodotto.
+## <a name="information-about-new-releases-and-updates"></a>Informazioni sulle nuove versioni e sugli aggiornamenti
+Il team di prodotto di Azure Information Protection pubblica annunci sulle nuove versioni nel blog [Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). Questi post del blog sono complementari alla documentazione e alle informazioni di supporto sul prodotto.
 
-Ogni mese pubblichiamo i seguenti [**aggiornamenti**](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) per continuare a essere aggiornati:
+Il Principal Group PM Manager per la protezione delle informazioni e la difesa dalle minacce, poi, pubblica regolarmente [aggiornamenti](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates) per informare gli utenti delle ultime novità.
 
-- Un aggiornamento di stato per le novità e gli sviluppi futuri. Questi post sono denominati: "**Aggiornamento di stato di Azure Information Protection – \<mese anno>**"
-
-- Un riepilogo delle modifiche alla documentazione che include la documentazione per tutte le nuove versioni, gli aggiornamenti a supporto di istruzioni, le correzioni e i chiarimenti per le versioni esistenti. Questi post sono denominati: "**Aggiornamento della documentazione di Azure Information Protection per \<mese anno>**" 
-
-Altre informazioni sulle nuove funzionalità e sulle anteprime sono disponibili nel [sito di Yammer](https://www.yammer.com/AskIPTeam) per Azure Information Protection, in cui è anche possibile porre domande su Azure Information Protection. Per proporre o votare nuove funzionalità, visitare il sito [User Voice](https://msip.uservoice.com) per Azure Information Protection.
+Un riepilogo delle modifiche alla documentazione viene pubblicato ogni mese nel [blog tecnico di Azure Information Protection](https://aka.ms/AIPblog). I riepiloghi precedenti sono stati pubblicati nel blog [Enterprise Mobility + Security](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection). Questi aggiornamenti alla documentazione includono informazioni relative a tutte le nuove versioni, aggiornamenti a supporto di istruzioni e anche correzioni e chiarimenti per le versioni esistenti. Questi post si intitolano: "**Azure Information Protection Documentation Update for \<mese anno>**" (Aggiornamento della documentazione di Azure Information Protection per <mese anno>).
 
 ## <a name="support-options-and-community-resources"></a>Opzioni di supporto e risorse per la community
 Le sezioni seguenti consentono di accedere a informazioni sulle opzioni di supporto e di risoluzione dei problemi e alle risorse della community:

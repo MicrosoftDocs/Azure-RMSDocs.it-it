@@ -4,7 +4,7 @@ description: "Panoramica delle attività di amministrazione nel portale di Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/01/2017
+ms.date: 12/14/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 194c746298024ef294c8a6a6fa0361d21cbd869e
-ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
+ms.openlocfilehash: 2764c1349847ca862147a5cc9f21fbd9c4a83624
+ms.sourcegitcommit: 2a7f20684a041385e2d2425ab886e46917d2da9a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Attività che precedentemente venivano eseguite con il portale di Azure classico
 
@@ -31,7 +31,9 @@ Questo articolo contiene suggerimenti per chi ha sempre usato il portale di Azur
 
 ## <a name="how-to-do-your-familiar-admin-tasks"></a>Come eseguire le attività di amministrazione più comuni
 
-Usare le informazioni seguenti per una transizione rapida al nuovo portale:
+Usare le informazioni seguenti per una transizione rapida al nuovo portale.
+
+Per gestire i modelli, i clienti con una sottoscrizione per Office 365 US Government (Government Community Cloud) non possono attualmente usare il portale di Azure e devono usare [PowerShell](configure-templates-with-powershell.md). 
 
 |Portale di Azure classico|Come eseguire questa operazione nel portale di Azure
 |-----------|--------------------|
@@ -42,7 +44,7 @@ Usare le informazioni seguenti per una transizione rapida al nuovo portale:
 |Creare un modello con ambito|Creare criteri con ambito e creare un'etichetta in tale ambito che applichi la protezione. <br /><br />Per altre informazioni, vedere [Come configurare i criteri di Azure Information Protection per utenti specifici con i criteri con ambito](configure-policy-scope.md).
 |Copiare un modello|Non è possibile copiare un modello nel portale di Azure. Se si vuole che due etichette abbiano le stesse impostazioni di protezione, è necessario impostare le autorizzazioni in ogni etichetta. <br /><br />Per altre informazioni, vedere [Per configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md#to-configure-a-label-for-rights-management-protection).
 |Eliminare un modello|L'eliminazione di modelli può comportare che alcuni dati risultino inaccessibili, pertanto il portale di Azure non supporta questa azione. Tuttavia, è possibile eliminare l'etichetta e quindi usare il cmdlet di PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) per rimuovere il modello. <br /><br />Per altre informazioni, vedere [Come eliminare o riordinare un'etichetta per Azure Information Protection](configure-policy-delete-reorder.md).
-|Supporto per più lingue|Dalla selezione di menu **GESTISCI** selezionare **Lingue (anteprima)** per esportare i campi personalizzabili che includono il nome e la descrizione del modello. Tradurre le stringhe e importarle nel portale. <br /><br />Per altre informazioni, vedere [Come configurare etichette e modelli per varie lingue in Azure Information Protection](configure-policy-languages.md).
+|Supporto per più lingue|Dalla selezione di menu **GESTISCI** selezionare **Lingue** per esportare i campi personalizzabili che includono il nome e la descrizione del modello. Tradurre le stringhe e importarle nel portale. <br /><br />Per altre informazioni, vedere [Come configurare etichette e modelli per varie lingue in Azure Information Protection](configure-policy-languages.md).
 |Report Web di Rights Management|Usare il cmdlet di PowerShell [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog) per scaricare i log di utilizzo per il servizio Azure Rights Management. È quindi possibile usare i dati per creare report personalizzati. <br /><br />Per altre informazioni, vedere [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](log-analyze-usage.md).<br /><br />Suggerimento: cercare gli annunci nel [Enterprise Mobility and Security Blog](https://blogs.technet.microsoft.com/enterprisemobility/?product=azure-information-protection) (Blog su Enterprise Mobility + Security) per una nuova soluzione di creazione di report centralizzata per Azure Information Protection. 
 |Attivare e disattivare il servizio Rights Management|Dalle opzioni del menu **GESTISCI** selezionare **Impostazioni di RMS** o **Protection activation** (Attivazione protezione). L'opzione verrà rinominata.<br /><br />Per altre informazioni, vedere [Come attivare Azure Rights Management dal portale di Azure](activate-azure.md).
 

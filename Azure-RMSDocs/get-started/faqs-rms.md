@@ -4,7 +4,7 @@ description: Domande frequenti sul servizio di protezione dei dati, Azure Rights
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/03/2017
+ms.date: 01/03/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fb2af56222f686149e40afcd54b20c04114c2a1f
-ms.sourcegitcommit: 79aa9838956f755994efcb97cef6dd5d1892f06f
+ms.openlocfilehash: b23fe95721c442529237ea72d30b3df490ad02dc
+ms.sourcegitcommit: 6c7874f54b8b983d3ac547bb23a51e02c68ee67b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Domande frequenti sulla protezione dei dati in Azure Information Protection
 
@@ -97,7 +97,9 @@ Se il documento è stato protetto usando un'etichetta o un modello, non è neces
 
 In alternativa, se è già stato configurato un gruppo per le autorizzazioni necessarie, è possibile modificare l'appartenenza al gruppo per includere o escludere gli utenti e non è necessario modificare l'etichetta o il modello. Potrebbe verificarsi un piccolo ritardo prima che le modifiche abbiano effetto, poiché l'appartenenza al gruppo viene [memorizzata nella cache](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management) dal servizio Azure Rights Management.
 
-Se il documento è stato protetto usando le autorizzazioni personalizzate, non è possibile modificare le autorizzazioni per il documento esistente. È necessario proteggere di nuovo il documento e specificare tutti gli utenti e tutti i diritti di utilizzo che sono necessari per la nuova versione del documento. Per proteggere nuovamente un documento protetto, è necessario avere il diritto di utilizzo Controllo completo. 
+Se il documento è stato protetto usando le autorizzazioni personalizzate, non è possibile modificare le autorizzazioni per il documento esistente. È necessario proteggere di nuovo il documento e specificare tutti gli utenti e tutti i diritti di utilizzo che sono necessari per la nuova versione del documento. Per proteggere nuovamente un documento protetto, è necessario avere il diritto di utilizzo Controllo completo.
+
+Suggerimento: per verificare se un documento è protetto da un modello o da un'autorizzazione personalizzata, usare il cmdlet di PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus). Per le autorizzazioni personalizzate è sempre visibile la descrizione **Accesso limitato** per il modello, con un ID di modello univoco che non viene visualizzato quando si esegue [Get-RMSTemplate](/powershell/module/azureinformationprotection/get-rmstemplate).
 
 ## <a name="i-have-a-hybrid-deployment-of-exchange-with-some-users-on-exchange-online-and-others-on-exchange-serveris-this-supported-by-azure-rms"></a>Dispongo di una distribuzione ibrida di Exchange con alcuni utenti su Exchange Online e altri su Exchange Server; questo è supportato da Azure RMS?
 Assolutamente e l'aspetto interessante è che gli utenti saranno in grado di proteggere e utilizzare senza problemi messaggi di posta elettronica e allegati protetti con le due distribuzioni di Exchange. Per questa configurazione, [attivare Azure RMS](../deploy-use/activate-service.md) e [abilitare IRM per Exchange Online](https://technet.microsoft.com/library/dn151475%28v=exchg.150%29.aspx), quindi [distribuire e configurare il connettore RMS](../deploy-use/deploy-rms-connector.md) per Exchange Server.
