@@ -4,7 +4,7 @@ description: Informazioni e istruzioni sull'uso della registrazione dell'utilizz
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/07/2017
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a7a983ed075e41ee6f3328634b451107e579134d
-ms.sourcegitcommit: e089661f23f199b122b0ca9ba4748792b349bc27
+ms.openlocfilehash: cf919749b74727412ab6fa76cc52a5c71b69efcd
+ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registrazione e analisi dell'utilizzo del servizio Azure Rights Management
 
@@ -45,7 +45,6 @@ Oltre alla registrazione dell'utilizzo, sono disponibili anche le opzioni di reg
 |Opzione di registrazione|Descrizione|
 |----------------|---------------|
 |Log amministrazione|Registra le attività amministrative per il servizio Azure Rights Management. Ad esempio, se il servizio è disattivato, quando viene abilitata la funzionalità di utente con privilegi avanzati e quando agli utenti vengono delegate autorizzazioni di amministratore per il servizio. <br /><br />Per altre informazioni, vedere il cmdlet di PowerShell [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog).|
-|Report Web|Report generali sull'utilizzo dal portale di Azure classico: **Riepilogo per RMS**, **Utenti attivi RMS**, **Piattaforme dispositivi RMS** e **Utilizzo applicazioni RMS**. <br /><br />Per accedere a questi report dal portale di Azure classico, fare clic su **Active Directory**, selezionare e aprire una directory e quindi fare clic su **REPORT**.|
 |Rilevamento dei documenti|Consente agli utenti di tenere traccia e revocare i documenti sottoposti a rilevamento con client Azure Information Protection o l'app RMS sharing. Gli amministratori globali possono inoltre eseguire il rilevamento di questi documenti per conto degli utenti. <br /><br />Per altre informazioni, vedere [Configurazione e uso del rilevamento dei documenti per Azure Information Protection](../rms-client/client-admin-guide-document-tracking.md).|
 |Log eventi client|Attività di utilizzo per il client Azure Information Protection, registrata nel registro eventi locale di Windows **Applicazioni e servizi**, **Azure Information Protection**. <br /><br />Per altre informazioni, vedere [Registrazione dell'utilizzo per il client Azure Information Protection](../rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
 |File di log client|Log per la risoluzione dei problemi per il client Azure Information Protection, disponibili in **%localappdata%\Microsoft\MSIP**. <br /><br />Questi file sono progettati per il supporto tecnico Microsoft.|
@@ -145,20 +144,20 @@ Ciascuna delle righe seguenti è un record di log. I valori dei campi seguono lo
 |date|Date|La data UTC in cui è stata gestita la richiesta.<br /><br />L'origine è l'orologio locale del server che ha gestito la richiesta.|25-06-2013|
 |time|Ora|L'ora in cui è stata gestita la richiesta, in formato UTC 24 ore.<br /><br />L'origine è l'orologio locale del server che ha gestito la richiesta.|21.59.28|
 |row-id|Testo|Il GUID univoco del record di log. Se non è presente alcun valore, identificare la voce tramite il valore correlation-id.<br /><br />Questo valore è utile quando i log vengono aggregati o copiati in un altro formato.|1c3fe7a9-d9e0-4654-97b7-14fafa72ea63|
-|request-type|Nome|Il nome dell'API RMS richiesta.|AcquireLicense|
-|user-id|String|L'utente che ha effettuato la richiesta.<br /><br />Questo valore è riportato tra virgolette singole. Le chiamate da una chiave del tenant gestita dall'utente (BYOK) hanno un valore **"**, che si applica anche quando i tipi di richiesta sono anonimi.|‘joe@contoso.com’|
-|result|String|La stringa 'Success' indica che la richiesta è stata eseguita con esito positivo.<br /><br />Se la richiesta ha avuto esito negativo, il tipo di errore viene riportato tra virgolette singole.|'Success'|
+|request-type|Name|Il nome dell'API RMS richiesta.|AcquireLicense|
+|user-id|Stringa|L'utente che ha effettuato la richiesta.<br /><br />Questo valore è riportato tra virgolette singole. Le chiamate da una chiave del tenant gestita dall'utente (BYOK) hanno un valore **"**, che si applica anche quando i tipi di richiesta sono anonimi.|‘joe@contoso.com’|
+|result|Stringa|La stringa 'Success' indica che la richiesta è stata eseguita con esito positivo.<br /><br />Se la richiesta ha avuto esito negativo, il tipo di errore viene riportato tra virgolette singole.|'Success'|
 |correlation-id|Testo|GUID comune tra il log del client e il log del server RMS per una determinata richiesta.<br /><br />Questo valore può essere utile per la risoluzione dei problemi del client.|cab52088-8925-4371-be34-4b71a3112356|
 |content-id|Testo|GUID, riportato tra parentesi graffe, che identifica il contenuto protetto, ad esempio un documento.<br /><br />In questo campo è presente un valore solo se la richiesta è di tipo AcquireLicense. Per tutti gli altri tipi di richiesta il campo è vuoto.|{bb4af47b-cfed-4719-831d-71b98191a4f2}|
-|owner-email|String|Indirizzo di posta elettronica del proprietario del documento.<br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.|alice@contoso.com|
-|issuer|String|Indirizzo di posta elettronica del soggetto emittente il documento. <br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.|alice@contoso.com (oppure) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
-|template-id|String|ID del modello usato per proteggere il documento. <br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
-|file-name|String|Nome file di un documento protetto che viene controllato tramite il client Azure Information Protection per Windows o l'applicazione di condivisione Rights Management per Windows. <br /><br />Attualmente, alcuni file, ad esempio i documenti di Office, vengono visualizzati come GUID anziché come nome di file.<br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.|TopSecretDocument.docx|
+|owner-email|Stringa|Indirizzo di posta elettronica del proprietario del documento.<br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.|alice@contoso.com|
+|issuer|Stringa|Indirizzo di posta elettronica del soggetto emittente il documento. <br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.|alice@contoso.com (oppure) FederatedEmail.4c1f4d-93bf-00a95fa1e042@contoso.onmicrosoft.com'|
+|template-id|Stringa|ID del modello usato per proteggere il documento. <br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.|{6d9371a6-4e2d-4e97-9a38-202233fed26e}|
+|file-name|Stringa|Nome file di un documento protetto che viene controllato tramite il client Azure Information Protection per Windows o l'applicazione di condivisione Rights Management per Windows. <br /><br />Attualmente, alcuni file, ad esempio i documenti di Office, vengono visualizzati come GUID anziché come nome di file.<br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.|TopSecretDocument.docx|
 |date-published|Date|Data in cui è stato protetto il documento.<br /><br /> Questo campo è vuoto se il tipo di richiesta è RevokeAccess.|2015-10-15T21:37:00|
-|c-info|String|Informazioni sulla piattaforma client che effettua la richiesta.<br /><br />La stringa specifica varia a seconda dell'applicazione (ad esempio, il sistema operativo o il browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
+|c-info|Stringa|Informazioni sulla piattaforma client che effettua la richiesta.<br /><br />La stringa specifica varia a seconda dell'applicazione (ad esempio, il sistema operativo o il browser).|'MSIPC;version=1.0.623.47;AppName=WINWORD.EXE;AppVersion=15.0.4753.1000;AppArch=x86;OSName=Windows;OSVersion=6.1.7601;OSArch=amd64'|
 |c-ip|Address|L'indirizzo IP del client che effettua la richiesta.|64.51.202.144|
 |admin-action|Bool|Indica se un amministratore ha eseguito l'accesso al sito di rilevamento dei documenti in modalità Amministratore.|True|
-|acting-as-user|String|Indirizzo di posta elettronica dell'utente per il quale un amministratore accede al sito di rilevamento dei documenti. |'joe@contoso.com'|
+|acting-as-user|Stringa|Indirizzo di posta elettronica dell'utente per il quale un amministratore accede al sito di rilevamento dei documenti. |'joe@contoso.com'|
 
 
 #### <a name="exceptions-for-the-user-id-field"></a>Eccezioni per il campo user-id

@@ -2,8 +2,8 @@
 title: Installazione per Android | Azure RMS
 description: Le applicazioni Android possono usare SDK 4.2 Microsoft Rights Management per abilitare la protezione integrata nelle proprie applicazioni.
 keywords: 
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
@@ -14,11 +14,11 @@ ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 7a575b869adec5da1b8a61eed772256fe7469551
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: cf81959a7ef4f20ab550dcec1c295e5045f321f3
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="android-setup"></a>Installazione per Android
 
@@ -42,7 +42,7 @@ Nel sistema di sviluppo si consiglia di disporre del software seguente:
 
      
 
--   Pacchetto SDK MS RMS 4.2 per Android. Per ulteriori informazioni, vedere [Introduzione](get-started.md).
+-   Pacchetto SDK MS RMS 4.2 per Android. Per altre informazioni, vedere [Introduzione](get-started.md).
 
     Questo SDK consente di sviluppare per Android 4.0.3 (API livello 15) e versioni successive.
 
@@ -126,9 +126,14 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
 -   È possibile verificare il passaggio manifesto visualizzando il manifesto nell'editor di testo. Assicurarsi che vengano visualizzate le righe seguenti:
 
-
-    <uses-sdk      android:minSdkVersion="15"      android:targetSdkVersion="19"/> <uses-permission android:name="android.permission.INTERNET"/> <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/> <uses-permission/>
-
+   ```
+    <uses-sdk
+         android:minSdkVersion="15"
+         android:targetSdkVersion="19"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission/>
+   ```
 
 **Nota** SDK usa *android.support.v4*
 
