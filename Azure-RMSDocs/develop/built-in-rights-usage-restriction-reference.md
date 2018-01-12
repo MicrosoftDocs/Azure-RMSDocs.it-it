@@ -2,8 +2,8 @@
 title: Procedura&#58; Usare i diritti predefiniti | Azure RMS
 description: Descrive i diritti predefiniti forniti da RMS SDK 4.2 e le restrizioni di utilizzo che un'app deve applicare rispettando tali restrizioni.
 keywords: 
-author: bruceperlerms
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
@@ -14,13 +14,11 @@ ms.assetid: 9142dd29-f1f4-4c2f-82ac-534f14b8bba1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-experimental: True
-experiment_id: priyamo-TableVsFlatList-20160805
-ms.openlocfilehash: ecc6e420633c42cc5044e9df0a5d86c604a5b24e
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 3340b1c1f3c4495db9092ed741049f50d64596cb
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="how-to-use-built-in-rights"></a>Procedura: Usare i diritti predefiniti
 
@@ -36,7 +34,7 @@ Questo argomento descrive i diritti predefiniti forniti da Microsoft Rights Mana
 - Windows Store e Windows Phone: [CommonRights.All</strong>](https://msdn.microsoft.com/library/microsoft.rightsmanagement.commonrights.all.aspx)
 - Linux: [CommonRights::All](http://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1CommonRights.html)
 
-**Proprietario**: il diritto di proprietario concede il controllo completo sul contenuto protetto.
+ **Proprietario**: il diritto di proprietario concede il controllo completo sul contenuto protetto.
 - Android: [<strong>CommonRights.Owner](https://msdn.microsoft.com/library/dn758258.aspx)
 - iOS e OS X: [MSCommonRights owner](https://msdn.microsoft.com/library/dn758314.aspx)
 - Windows Store e Windows Phone: [CommonRights.Owner](https://msdn.microsoft.com/library/microsoft.rightsmanagement.commonrights.owner.aspx)
