@@ -1,8 +1,8 @@
 ---
 title: Guida per gli sviluppatori di Azure Information Protection
 description: Gli sviluppatori possono usare Azure Information Protection per proteggere e gestire file di tutti i tipi
-author: BrucePerlerMS
-ms.author: bruceper
+author: lleonard-msft
+ms.author: alleonar
 manager: mbaldwin
 ms.date: 10/11/2017
 ms.topic: article
@@ -11,11 +11,11 @@ ms.technology: techgroup-identity
 ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 2aba222457dfb56cca29e1a2948cc08041552d9f
-ms.sourcegitcommit: f3d5a1de317b9bd114d802b3965bf6b679d7ccf2
+ms.openlocfilehash: a32f4d774b67007ccc6638e3151bd6038e3f274c
+ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guida per gli sviluppatori di Azure Information Protection
 
@@ -98,15 +98,9 @@ Ognuno degli argomenti seguenti contiene indicazioni specifiche per un aspetto d
 - [Come usare i diritti predefiniti (utente)](built-in-rights-usage-restriction-reference.md)
 - [Come abilitare la registrazione delle prestazioni e dell'errore (utente)](enabling-logging.md)
 
-## <a name="videos"></a>Video
+## <a name="introduction-and-datasheets"></a>Introduzione e fogli dati
 
 [Introduzione ad Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection)
-
-Questi video sono tratti dalla conferenza Microsoft Ignite 2016
-
-- [Sicurezza della posta elettronica all'interno dell'organizzazione](https://myignite.microsoft.com/videos/2787)
-- [Adottare una soluzione completa basata sulle identità per la protezione e la condivisione sicura dei dati](https://myignite.microsoft.com/videos/2784)
-- [Informazioni su come la classificazione, le etichette e la protezione offrono una sicurezza permanente dei dati](https://myignite.microsoft.com/videos/2786)
 
 ## <a name="other-resources"></a>Altre risorse
 

@@ -1,23 +1,9 @@
+# <a name="required-metadata"></a>metadati obbligatori
+
+title: Novità e note sulla versione: descrizione di funzionalità e modifiche importanti nella versione corrente e nelle versioni precedenti.
+author: lleonard-msft ms.author: alleonar manager: mbaldwin ms.date: 09/25/2017 ms.topic: article ms.service: information-protection ms.technology: techgroup-identity ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af audience: developer ms.reviewer: kartikk ms.suite: ems
 ---
-title: "Novità e note sulla versione"
-description: "Descrive importanti modifiche e funzionalità in questa versione e nelle versioni precedenti."
-author: bruceperlerms
-ms.author: bruceper
-manager: mbaldwin
-ms.date: 09/25/2017
-ms.topic: article
-ms.service: information-protection
-ms.technology: techgroup-identity
-ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
-audience: developer
-ms.reviewer: kartikk
-ms.suite: ems
-ms.openlocfilehash: 6587685e3bd40d696ce24a9aa0ed80d1f6f43f55
-ms.sourcegitcommit: 965108d50739148864b2ae7dcc661ae65f1b154c
-ms.translationtype: HT
-ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2017
----
+
 # <a name="whats-new-and-release-notes"></a>Novità e note sulla versione
 
 ## <a name="whats-new"></a>Novità

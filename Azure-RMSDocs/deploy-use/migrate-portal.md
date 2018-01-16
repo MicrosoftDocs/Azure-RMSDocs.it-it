@@ -4,7 +4,7 @@ description: "Panoramica delle attività di amministrazione nel portale di Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/14/2017
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 2764c1349847ca862147a5cc9f21fbd9c4a83624
-ms.sourcegitcommit: 2a7f20684a041385e2d2425ab886e46917d2da9a
+ms.openlocfilehash: 367189865266e85df967c398b17153d970241e98
+ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Attività che precedentemente venivano eseguite con il portale di Azure classico
 
@@ -24,16 +24,16 @@ ms.lasthandoff: 01/03/2018
 
 Questo articolo contiene suggerimenti per chi ha sempre usato il portale di Azure classico per la gestione del servizio Azure Rights Management e ora ha bisogno di aiuto per la transizione al portale di Azure. 
 
-> [!NOTE]
-> Il portale di Azure classico verrà ritirato l'**8 gennaio 2018**. Dopo questa data, se si tenta di usare il portale, si verrà automaticamente reindirizzati al nuovo portale di Azure. 
-> 
-> Per altre informazioni, vedere l'annuncio del post [Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/) (Verso il futuro dell'amministrazione di Azure AD: ritiro del portale di Azure classico) del blog. Per l'estensione temporanea alla data di ritiro originale, vedere [Update on retirement of Azure AD classic portal experience and migration of conditional access policies](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/) (Aggiornamento sul ritiro dell'esperienza del portale di Azure AD classico e sulla migrazione dei criteri di accesso condizionale).
+Il portale di Azure classico è stato ritirato l'**8 gennaio 2018**. A partire da tale data non è più possibile gestire il servizio Azure Rights Management e i modelli personalizzati dal portale classico. Se si tenta di accedere al portale classico, viene visualizzato un collegamento che consente di passare al nuovo portale di Azure. 
+
+Per altre informazioni sul ritiro del portale classico, vedere il post del blog [Marching into the future of the Azure AD admin experience: retiring the Azure classic portal](https://blogs.technet.microsoft.com/enterprisemobility/2017/09/18/marching-into-the-future-of-the-azure-ad-admin-experience-retiring-the-azure-classic-portal/) (Verso il futuro dell'amministrazione di Azure AD: ritiro del portale di Azure classico). Per l'estensione temporanea alla data di ritiro originale, vedere [Update on retirement of Azure AD classic portal experience and migration of conditional access policies](https://cloudblogs.microsoft.com/enterprisemobility/2017/11/29/update-on-retirement-of-azure-ad-classic-portal-experience-and-migration-of-conditional-access-policies/) (Aggiornamento sul ritiro dell'esperienza del portale di Azure AD classico e sulla migrazione dei criteri di accesso condizionale).
 
 ## <a name="how-to-do-your-familiar-admin-tasks"></a>Come eseguire le attività di amministrazione più comuni
 
-Usare le informazioni seguenti per una transizione rapida al nuovo portale.
+Usare le informazioni seguenti per una transizione rapida al portale aggiornato.
 
 Per gestire i modelli, i clienti con una sottoscrizione per Office 365 US Government (Government Community Cloud) non possono attualmente usare il portale di Azure e devono usare [PowerShell](configure-templates-with-powershell.md). 
+
 
 |Portale di Azure classico|Come eseguire questa operazione nel portale di Azure
 |-----------|--------------------|

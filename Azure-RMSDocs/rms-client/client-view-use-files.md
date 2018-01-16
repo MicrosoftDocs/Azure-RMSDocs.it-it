@@ -4,7 +4,7 @@ description: Istruzioni per visualizzare e usare un documento protetto che richi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 01/10/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a2eb82d81945793eb0b29d05ff8c6bd995481faf
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: aa222d484e67d5f1e08ac08b3839100de8390e4e
+ms.sourcegitcommit: d4c63df8436b2e490f196585fcb78afe8c2e8de8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guida dell'utente: Visualizzare e usare file protetti con Rights Management
 
@@ -31,11 +31,11 @@ Viene automaticamente installato con il client Azure Information Protection oppu
 > [!NOTE]
 > Benché l'installazione del client fornisca più funzionalità, richiede autorizzazioni di amministratore locale e la funzionalità completa richiede un servizio corrispondente per l'organizzazione:
 > 
-> - Azure Information Protection
+>-Azure Information Protection
 > 
-> - Azure Rights Management
+>-Azure Rights Management
 > 
-> - Active Directory Rights Management Services 
+>-Active Directory Rights Management Services 
 > 
 > Installare il visualizzatore se si è ricevuto un documento protetto da un utente di un'altra organizzazione o se non si possiedono autorizzazioni di amministratore locale per il PC.
 
@@ -48,7 +48,7 @@ Se tuttavia si usa un dispositivo iOS o Android, è possibile usare l'app di Azu
 
 ## <a name="prompts-for-authentication"></a>Richieste di autorizzazione
 
-Prima di poter visualizzare il file protetto, il servizio Rights Management usato per proteggere il file deve prima di tutto verificare che siano presenti le autorizzazioni necessarie per la visualizzazione del file. A questo scopo, il servizio controlla il nome utente e la password. In alcuni casi, questo potrebbe essere memorizzato nella cache e non verrà visualizzato un messaggio che richiede l'immissione delle credenziali. In altri casi, verrà richiesto di fornire le credenziali.
+Prima di poter visualizzare il file protetto, il servizio Rights Management usato per proteggere il file deve prima di tutto verificare che siano presenti le autorizzazioni necessarie per la visualizzazione del file. Il servizio esegue tale controllo verificando il nome utente e la password. In alcuni casi, le credenziali possono essere memorizzate nella cache e non verrà visualizzato un messaggio che richiede di eseguire l'accesso. In altri casi, verrà richiesto di immettere le credenziali.
 
 Se l'organizzazione non può mettere a disposizione dell'utente un account basato sul cloud (per Office 365 o Azure) e non usa una versione locale equivalente (AD RMS), sono disponibili due opzioni:
 
@@ -75,7 +75,9 @@ Se l'organizzazione non può mettere a disposizione dell'utente un account basat
 5. Per aprire altri file protetti, è possibile visualizzarli direttamente nel visualizzatore usando l'opzione **Apri**. Il file selezionato sostituisce il file originale nel visualizzatore. 
 
 > [!TIP]
-> Se il file protetto non si apre, è possibile usare l'opzione **Esegui diagnostica** in **Proteggi** > **Guida e commenti** nel client Azure Information Protection per verificare l'eventuale presenza nel computer di problemi che impediscono l'apertura di un documento protetto.
+> Se il file protetto non si apre e nel sistema è installato il client di Azure Information Protection completo, provare con l'opzione **Ripristina le impostazioni**. Per accedere all'opzione, da un'app di Office, selezionare il pulsante **Proteggi** > **Guida e commenti** > **Ripristina le impostazioni**. 
+> 
+> [Altre informazioni sull'opzione Ripristina le impostazioni](client-admin-guide.md#more-information-about-the-reset-settings-option)
 
 ## <a name="other-instructions"></a>Altre istruzioni
 Ulteriori procedure nella Guida per l'utente di Azure Information Protection:

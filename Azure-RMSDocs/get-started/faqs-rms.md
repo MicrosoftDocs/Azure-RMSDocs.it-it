@@ -4,7 +4,7 @@ description: Domande frequenti sul servizio di protezione dei dati, Azure Rights
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/03/2018
+ms.date: 01/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b23fe95721c442529237ea72d30b3df490ad02dc
-ms.sourcegitcommit: 6c7874f54b8b983d3ac547bb23a51e02c68ee67b
+ms.openlocfilehash: d2f88d35550b47a4f73e87eeca9ecd6309a3c73e
+ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Domande frequenti sulla protezione dei dati in Azure Information Protection
 
@@ -70,7 +70,7 @@ Come è possibile capire dal nome, il primo ruolo concede le autorizzazioni nece
 
 Alcune osservazioni:
 
-- Solo gli amministratori globali per Office 365 e gli amministratori globali per Azure AD possono configurare Azure RMS tramite l'interfaccia di amministrazione di Office 365 o il portale di Azure classico. Se si usa il portale di Azure per Azure Information Protection è possibile anche accedere come amministratore della sicurezza.
+- Solo gli amministratori globali per Office 365 e gli amministratori globali per Azure AD possono configurare Azure RMS tramite l'interfaccia di amministrazione di Office 365. Se si usa il portale di Azure per Azure Information Protection è possibile accedere come amministratore globale o come amministratore della sicurezza.
 
 - Gli utenti a cui viene assegnato il ruolo di amministratore globale per Azure RMS devono configurare Azure RMS tramite i comandi di Azure RMS PowerShell. Per trovare con più facilità i cmdlet giusti per attività specifiche, vedere [Amministrazione di Azure Rights Management mediante Windows PowerShell](../deploy-use/administer-powershell.md).
 
