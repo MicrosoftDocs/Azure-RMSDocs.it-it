@@ -2,20 +2,20 @@
 title: Come rinnovare la chiave simmetrica in Azure Information Protection
 description: Questo articolo illustra il processo di rinnovo di una chiave simmetrica in Azure Information Protection.
 keywords: 
-author: kkanakas
+author: lleonard-msft
 manager: mbaldwin
-ms.author: kartikk
+ms.author: alleonar
 ms.date: 03/27/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a0b8c8f0-6ed5-48bb-8155-ac4f319ec178
-ms.openlocfilehash: 6153067c308206cb93ad99de1075913c68d1fa3b
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 159e5b58883490e4417ecbdb9815340c9ccaa66d
+ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-renew-the-symmetric-key-in-azure-information-protection"></a>Procedura: Rinnovare la chiave simmetrica in Azure Information Protection
 
@@ -23,7 +23,7 @@ Una **chiave simmetrica** è un'informazione segreta che consente di crittografa
 
 In Azure Active Directory (Azure AD), quando si crea un oggetto entità servizio per rappresentare un'applicazione, il processo genera anche una chiave simmetrica a 256 bit per verificare l'applicazione. Per impostazione predefinita, la chiave simmetrica è valida un anno. 
 
-I passaggi seguenti illustrano come rinnovare la chiave simmetrica. 
+La procedura seguente illustra come rinnovare la chiave simmetrica. 
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -60,7 +60,7 @@ EndDate : 3/22/2018 3:27:53 PM
 Usage : Verify
 ```
 
-La chiave simmetrica creata nell'esempio precedente scade il 3/22/2018 alle 3:27:53PM (22 marzo 2018 alle 15:27:53). Per continuare a usare l'entità servizio oltre la data di scadenza, è necessario rinnovare la chiave simmetrica. A questo scopo, usare il comando [`New-MsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential). 
+La chiave simmetrica scade il 22/3/2018 alle ore 15.27.53. Per usare l'entità servizio oltre la data di scadenza, è necessario rinnovare la chiave simmetrica. A tale scopo, usare il comando [`New-MsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/new-msolserviceprincipalcredential). 
 
 ```
 New-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963
@@ -71,10 +71,10 @@ Questo comando crea una nuova chiave simmetrica per **AppPrincipalId** specifica
 ```
 The following symmetric key was created as one was not supplied ON8YYaMYNmwSfMX625Ei4eC6N1zaeCxbc219W090v28-
 ```
-È possibile usare il comando [`GetMsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/get-msolserviceprincipalcredential) per verificare che la nuova chiave simmetrica è associata all'entità servizio corretta come illustrato. Si noti che il comando elenca tutte le chiavi che sono attualmente associate all'entità servizio.
+È possibile usare il comando [`GetMsolServicePrincipalCredential`](https://docs.microsoft.com/powershell/msonline/v1/get-msolserviceprincipalcredential) per verificare che la nuova chiave simmetrica è associata all'entità servizio corretta come illustrato. Si noti che il comando elenca tutte le chiavi attualmente associate all'entità servizio.
 
 ```
-Get-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963 -ReturnKeyValues true
+Get-MsolServicePrincipalCredential -AppPrincipalId 7d9c1f38-600c-4b4d-8249-22427f016963 -ReturnKeyValues $true
 
 Type : Symmetric
 Value :

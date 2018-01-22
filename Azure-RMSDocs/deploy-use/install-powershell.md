@@ -4,7 +4,7 @@ description: "Istruzioni per l'installazione di Windows PowerShell per il serviz
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/27/2017
+ms.date: 01/17/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5dae84eea9e67be75530d69b6124b97c7c29f8a3
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 0deb1b47036a4439f393bf7351c5d149a8e85559
+ms.sourcegitcommit: 152b4855e23f443c04ac27fedfdc1dcc9fda8949
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="installing-windows-powershell-for-azure-rights-management"></a>Installazione di Windows PowerShell per Microsoft Azure Rights Management
 
@@ -43,9 +43,9 @@ Questa tabella elenca i prerequisiti per l'installazione e l'uso di Windows Powe
 
 ## <a name="how-to-install-the-rights-management-administration-module"></a>Come installare il modulo di amministrazione di Rights Management
 
-1.  Passare all'Area download Microsoft e [scaricare Azure Rights Management Administration Tool](https://go.microsoft.com/fwlink/?LinkId=257721), contenente il modulo di amministrazione di [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] per Windows PowerShell.
+1. Passare all'Area download Microsoft e individuare [Azure Rights Management Administration Tool](https://go.microsoft.com/fwlink/?LinkId=257721), contenente il modulo di amministrazione di [!INCLUDE[aad_rightsmanagement_1](../includes/aad_rightsmanagement_1_md.md)] per Windows PowerShell.
 
-2.  Nella cartella locale in cui è stato scaricato e salvato il file del programma di installazione di [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)] fare doppio clic sul file eseguibile scaricato per la propria piattaforma (WindowsAzureADRightsManagementAdministration_x64 o WindowsAzureADRightsManagementAdministration_x86.exe) per avviare l'installazione guidata dell'amministrazione di Azure AD Rights Management.
+2. Scaricare e salvare il file del programma di installazione [!INCLUDE[aad_rightsmanagement_2](../includes/aad_rightsmanagement_2_md.md)], **WindowsAzureADRightsManagementAdministration_x64**. Quindi fare doppio clic su questo file per avviare l'installazione guidata di Amministrazione di Azure AD Rights Management.
 
 3.  Completare la procedura guidata.
 
