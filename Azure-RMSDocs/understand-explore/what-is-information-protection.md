@@ -4,17 +4,17 @@ description: Informazioni generali sul servizio Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/08/2017
+ms.date: 01/24/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 18ec6241d09eb8de2417dd939237de0544a401e8
-ms.sourcegitcommit: 9b229852c59441f9387bab1d5f28a3c5d9017696
+ms.openlocfilehash: 0eeb9a6cf8eb819c19a32dbcf76e4d0104c18b99
+ms.sourcegitcommit: ae4cdee7211796182c47a11c1853232464673834
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="what-is-azure-information-protection"></a>Che cos'è Azure Information Protection?
 
@@ -131,8 +131,8 @@ Quando si allegano documenti di Office a questi messaggi di posta elettronica, a
 
 Leggere il post di blog [Azure Information Protection: Ready, set, protect!](https://blogs.technet.microsoft.com/enterprisemobility/2017/02/21/azure-information-protection-ready-set-protect/) (Azure Information Protection: una soluzione immediata ed efficiente per la protezione)
 
-Configurare e provare a usare Azure Information Protection in cinque passaggi con [Esercitazione introduttiva di Azure Information Protection](../get-started/infoprotect-quick-start-tutorial.md).
+Configurare e provare a usare Azure Information Protection in cinque passaggi con l'[esercitazione introduttiva](../get-started/infoprotect-quick-start-tutorial.md). Oppure se si vuole distribuire il servizio nella propria organizzazione, vedere la [Guida di orientamento per la distribuzione di Azure Information Protection](../plan-design/deployment-roadmap.md).
 
-Azure Information Protection e Azure Rights Management sono noti anche con altri nomi? Vedere [l'elenco delle denominazioni alternative](azure-rms-aka.md).
+Azure Information Protection è noto anche con un altro nome? Vedere [l'elenco delle denominazioni alternative del servizio](azure-rms-aka.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

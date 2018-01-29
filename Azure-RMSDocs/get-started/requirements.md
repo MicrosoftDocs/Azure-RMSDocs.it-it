@@ -4,7 +4,7 @@ description: Identificare i prerequisiti per distribuire Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/18/2018
+ms.date: 01/22/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 21faf358d5e0aa137e615dab9b411ecdcd5a7a73
-ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
+ms.openlocfilehash: 9496696791c343b01f5c311cb140333bcbbe7b2c
+ms.sourcegitcommit: eeeb1123349ab5e7eb2d352509670af6217123de
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisiti per Azure Information Protection
 
@@ -85,6 +85,8 @@ Il client Azure Information Protection consente di etichettare e proteggere docu
 
 Con le altre edizioni di Office non è possibile proteggere i documenti e i messaggi di posta elettronica usando un servizio Rights Management. Per queste edizioni Azure Information Protection è supportato solo per la classificazione. Le etichette che applicano la protezione non vengono visualizzate sulla barra di Azure Information Protection. 
 
+Il client di Azure Information Protection non supporta più versioni di Office sullo stesso computer. Il client inoltre non supporta il passaggio tra gli account utente in Office.
+
 Per informazioni sulle edizioni di Office che supportano il servizio di protezione dati, vedere [Applicazioni che supportano la protezione dati di Azure Rights Management](requirements-applications.md).
 
 ## <a name="firewalls-and-network-infrastructure"></a>Firewall e infrastruttura di rete
@@ -103,7 +105,7 @@ Oltre alle informazioni nell'articolo di Office, le istruzioni seguenti sono spe
     
     - Suggerimento: grazie alla modalità di visualizzazione delle connessioni protette in Chrome, è possibile usare questo browser per verificare rapidamente se la connessione client viene terminata prima di raggiungere il servizio Azure Rights Management. Immettere l'URL seguente nella barra degli indirizzi del browser:`https://admin.na.aadrm.com/admin/admin.svc` 
     
-        Non preoccuparsi di ciò che viene visualizzato nella finestra del browser. Fare invece clic sull'icona a forma di lucchetto nella barra degli indirizzi per visualizzare le informazioni sul sito. Le informazioni sul sito consentono di visualizzare l'autorità di certificazione (CA) emittente. Se il certificato non è emesso da una CA Microsoft, è molto probabile che la connessione dal client al servizio venga terminata e richieda interventi di riconfigurazione nel firewall. L'immagine seguente mostra un esempio di CA emittente Microsoft. Se risulta che il certificato è emesso da una CA interna, questa configurazione non è compatibile con Azure Information Protection.
+        Non preoccuparsi di ciò che viene visualizzato nella finestra del browser. Fare invece clic sull'icona a forma di lucchetto nella barra degli indirizzi per visualizzare le informazioni sul sito. Le informazioni sul sito consentono di visualizzare l'autorità di certificazione (CA) emittente. Se il certificato non è emesso da una CA Microsoft, è molto probabile che la connessione protetta dal client al servizio venga terminata e richieda interventi di riconfigurazione nel firewall. L'immagine seguente mostra un esempio di CA emittente Microsoft. Se risulta che il certificato è emesso da una CA interna, questa configurazione non è compatibile con Azure Information Protection.
         
         ![Controllo del certificato emesso per le connessioni di Azure Information Protection](../media/certificate-checking.png)
 

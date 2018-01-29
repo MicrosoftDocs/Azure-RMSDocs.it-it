@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per gli amministratori per la distribuzio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/18/2018
+ms.date: 01/24/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3ff9a63f5b8565cac131e7b69a674fc8be902d0f
-ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
+ms.openlocfilehash: 0af9b6847c920d486d727cb6748b84aa581012d1
+ms.sourcegitcommit: d3b82dd8dbafb86ddbe698cdcd0edee445fff416
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guida dell'amministratore: Installare il client Azure Information Protection per gli utenti
 
@@ -74,11 +74,15 @@ Verificare quindi gli altri prerequisiti che possono essere necessari per il cli
 
 - Per Office 16.0.8628.2010 e versioni successive (A portata di clic): abilitare il supporto legacy per i monitor
     
-    Per evitare la visualizzazione della barra di Azure Information Protection al di fuori delle applicazioni di Office per queste versioni di Office, abilitare il supporto legacy per i monitor. Per configurare le applicazioni di Office: **File** > **Opzioni** > **Generale** > **Opzioni interfaccia utente**:
+    Per evitare la visualizzazione della barra di Azure Information Protection al di fuori delle applicazioni di Office per queste versioni di Office, è necessario abilitare il supporto legacy per i monitor. Quando la barra non viene visualizzata correttamente in questo scenario, è possibile visualizzarla come **AdxTaskPane**. 
+    
+    Per configurare le applicazioni di Office per questo requisito: **File** > **Opzioni** > **Generale** > **Opzioni interfaccia utente**:
     
     - Se l'opzione **When using multiple displays** (Quando si usano più schermi) è impostata su **Optimize for best appearance** (Ottimizza in modo da ottenere l'aspetto migliore), selezionare **Optimize for compatibility (application restart required)** (Ottimizza per compatibilità (riavvio necessario)). 
         
     - Se è selezionata l'opzione **Use best settings for my display** (Usa le impostazioni più adatte al mio schermo), deselezionarla.
+    
+    - Se non viene visualizzata nessuna di queste opzioni, non è richiesta alcuna configurazione aggiuntiva.
 
 > [!IMPORTANT]
 > L'installazione del client Azure Information Protection richiede autorizzazioni amministrative locali.
