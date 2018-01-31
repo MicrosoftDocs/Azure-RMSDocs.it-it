@@ -66,7 +66,7 @@ Con questa versione, è ora disponibile la versione 4.2 SDK RMS per i dispositiv
 
     [Metodo sincrono UserPolicy.acquire](https://msdn.microsoft.com/library/mt631384.aspx)
 
-    [Metodo sincrono UserPolicy.create (PolicyDescriptor…)**](https://msdn.microsoft.com/library/mt631385.aspx)
+    [Metodo sincrono UserPolicy.create (PolicyDescriptor…)** ](https://msdn.microsoft.com/library/mt631385.aspx)
 
     [Metodo sincrono UserPolicy.create (TemplateDescriptor...)](https://msdn.microsoft.com/library/mt631386.aspx)
 
