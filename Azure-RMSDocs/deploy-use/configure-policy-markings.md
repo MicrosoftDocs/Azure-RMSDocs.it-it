@@ -4,17 +4,17 @@ description: "Quando si assegna un'etichetta a un documento o a un messaggio di 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2017
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 99aba6560f9dcdbd564f317e8d9e0ce89845f4a9
-ms.sourcegitcommit: f78f5209f0e19c6edfd1815d76e0e9750b4ce71d
+ms.openlocfilehash: 01208dda12b5989e546c1042b48c17e166d48687
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
@@ -87,6 +87,38 @@ Nella stringa di testo è possibile usare le variabili seguenti per l'intestazio
 - `${Event.DateTime}` per la data e l'ora in cui è stata impostata l'etichetta selezionata. Ad esempio: 16/8/2016 13:30
 
 Esempio: se si specifica la stringa `Document: ${item.name}  Classification: ${item.label}` per il piè di pagina dell'etichetta **General**, il testo del piè di pagina applicato a un documento denominato project.docx sarà **Document: project.docx  Classification: General** (Documento: project.docx Classificazione: Generale).
+
+## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Impostazione di contrassegni visivi diversi per Word, Excel, PowerPoint e Outlook
+
+Questa impostazione è attualmente disponibile in anteprima e richiede la versione in anteprima del client Azure Information Protection.
+
+Per impostazione predefinita, i contrassegni visivi specificati vengono applicati a Word, Excel, PowerPoint e Outlook. Tuttavia, è possibile specificare i contrassegni visivi per tipo di applicazione di Office quando si usa un'istruzione con variabile "If.App" nella stringa di testo e identificare il tipo di applicazione usando i valori **Word**, **Excel**, **PowerPoint**, o **Outlook**. È anche possibile abbreviare questi valori, operazione necessaria se si desidera specificarne più di uno nella stessa istruzione If.App.
+
+Usare la sintassi seguente:
+
+    ${If.App.<application type>}<your visual markings text> ${If.End}
+
+La distinzione in questa istruzione supporta la distinzione tra maiuscole e minuscole.
+
+Esempi:
+
+- **Impostare il testo dell'intestazione solo per i documenti di Word:**
+    
+    `${If.App.Word}This Word document is sensitive ${If.End}`
+    
+    Solo nelle intestazioni dei documenti di Word, l'etichetta applica il testo dell'intestazione "Questo documento di Word è sensibile". Non viene applicato alcun testo dell'intestazione ad altre applicazioni di Office.
+
+- **Impostare il testo a piè di pagina per Word, Excel e Outlook e testo a piè di pagina diverso per PowerPoint:**
+    
+    `${If.App.WXO}This content is confidential. ${If.End}${If.App.PowerPoint}This presentation is confidential. ${If.End}`
+    
+    In Word, Excel e Outlook, l'etichetta applica il testo a piè di pagina "Questo contenuto è riservato". In PowerPoint,l'etichetta applica il testo a piè di pagina "Questa presentazione è riservata".
+
+- **Impostare il testo della filigrana specifico per Word e PowerPoint e quindi il testo della filigrana per Word, Excel e PowerPoint:**
+    
+    `${If.App.WP}This content is ${If.End}Confidential`
+    
+    In Word e Power Point l'etichetta applica il testo della filigrana "Questo contenuto è riservato". In Excel, l'etichetta applica il testo della filigrana "Riservato". In Outlook, l'etichetta non ha alcun testo della filigrana perché le filigrane come contrassegni visivi non sono supportate per Outlook.
 
 ### <a name="setting-the-font-name"></a>Impostazione del nome del tipo di carattere
 

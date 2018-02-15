@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per amministratori per gestire il client 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/03/2018
+ms.date: 02/06/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: aee9a9f665d3aa0a0e8a8c568f3abbd044469fc7
-ms.sourcegitcommit: 6c7874f54b8b983d3ac547bb23a51e02c68ee67b
+ms.openlocfilehash: 27799ff64e8c224c64b0ffc858b79818650d74af
+ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
 
@@ -461,7 +461,11 @@ Per impostazione predefinita, quando si eseguono i cmdlet per l'assegnazione di 
 > [!NOTE]
 > Se si usano [criteri con ambito](../deploy-use/configure-policy-scope.md) tenere presente che potrebbe essere necessario aggiungere questo account ai criteri con ambito.
 
-La prima volta che si esegue questo cmdlet viene richiesto di accedere ad Azure Information Protection. Specificare il nome e la password dell'account utente creato per l'esecuzione senza intervento dell'utente. Questo account può quindi eseguire i cmdlet di assegnazione di etichette in modo non interattivo fino alla scadenza del token di autenticazione. Quando il token scade, eseguire nuovamente il cmdlet per acquisire un nuovo token:
+La prima volta che si esegue questo cmdlet viene richiesto di accedere ad Azure Information Protection. Specificare il nome e la password dell'account utente creato per l'esecuzione senza intervento dell'utente. Questo account può quindi eseguire i cmdlet di assegnazione di etichette in modo non interattivo fino alla scadenza del token di autenticazione. 
+
+Per eseguire il primo accesso interattivo, l'account utente deve disporre del diritto di **accesso locale**. Questo diritto è standard per gli account utente, ma i criteri aziendali potrebbero non consentire questa configurazione per gli account del servizio. In questo caso è possibile eseguire Set-AIPAuthentication con il parametro *Token* per completare l'autenticazione senza che venga richiesto di eseguire l'accesso. È possibile eseguire questo comando come attività pianificata e concedere all'account il diritto di livello inferiore **Accesso come processo batch**. Per altre informazioni, vedere le sezioni seguenti: 
+
+Quando il token scade, eseguire nuovamente il cmdlet per acquisire un nuovo token.
 
 Se si esegue questo cmdlet senza parametri, l'account acquisisce un token di accesso valido per 90 giorni o fino alla scadenza della password.  
 
@@ -517,7 +521,85 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
 
 12. Nel pannello **Autorizzazioni necessarie** selezionare **Concedi autorizzazioni**, fare clic su **Sì** per confermare e quindi chiudere il pannello.
     
-La configurazione delle due app è completata e i valori necessari per eseguire [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con parametri sono disponibili.
+La configurazione delle due app è stata completata e i valori necessari per eseguire [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con i parametri *WebAppId*, *WebAppKey* e *NativeAppId* sono disponibili. Ad esempio:
+
+`Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
+
+Eseguire questo comando nel contesto dell'account per l'assegnazione di etichette e la protezione di documenti in modalità non interattiva. Un esempio è un account utente per gli script di PowerShell o l'account del servizio per eseguire lo scanner di Azure Information Protection.  
+
+La prima volta che si esegue questo comando viene richiesto di eseguire l'accesso, creando e archiviando in modo sicuro il token di accesso per l'account in %localappdata%\Microsoft\MSIP. Dopo questo accesso iniziale è possibile assegnare etichette e proteggere i file in modalità non interattiva nel computer. Tuttavia, se si usa un account del servizio per l'assegnazione di etichette e la protezione di file che non è in grado di accedere in modo interattivo, seguire le istruzioni nella sezione seguente per consentire all'account del servizio di eseguire l'autenticazione tramite un token.
+
+### <a name="specify-and-use-the-token-parameter-for-set-aipauthentication"></a>Specificare e usare il parametro Token per Set-AIPAuthentication
+
+> [!NOTE]
+> Questa opzione è in anteprima e richiede la versione di anteprima corrente del client Azure Information Protection.
+
+Per non eseguire l'accesso interattivo iniziale per un account che assegna etichette e protegge i file, seguire i passaggi e le istruzioni seguenti. In genere, questi passaggi aggiuntivi sono necessari solo se a questo account non è possibile concedere il diritto di **accesso locale**, ma è stato concesso il diritto **Accesso come processo batch**. Ad esempio, ciò potrebbe verificarsi con l'account del servizio personale che esegue lo scanner di Azure Information Protection.
+
+1. Creare uno script di PowerShell nel computer locale.
+
+2. Eseguire Set-AIPAuthentication per ottenere un token di accesso e copiarlo negli Appunti.
+
+2. Modificare lo script di PowerShell in modo da includere il token.
+
+3. Creare un'attività che esegua lo script di PowerShell nel contesto dell'account del servizio per l'assegnazione di etichette e la protezione di file.
+
+4. Confermare che il token è stato salvato per l'account del servizio ed eliminare lo script di PowerShell.
+
+
+#### <a name="step-1-create-a-powershell-script-on-your-local-computer"></a>Passaggio 1: Creare uno script di PowerShell nel computer locale
+
+1. Nel computer in uso creare un nuovo script di PowerShell denominato Aipauthentication.ps1.
+
+2. Copiare e incollare il comando seguente nello script:
+    
+         Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application > -Token <token value>
+
+3. Seguendo le istruzioni nella sezione precedente modificare questo comando specificando i valori personalizzati per i parametri **WebAppId**, **WebAppkey** e **NativeAppId**. In questo momento non è disponibile il valore per il parametro **Token** che si specificherà in seguito. 
+    
+    ad esempio `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f -Token <token value>`
+    
+#### <a name="step-2-run-set-aipauthentication-to-get-an-access-token-and-copy-it-to-the-clipboard"></a>Passaggio 2: Eseguire Set-AIPAuthentication per ottenere un token di accesso e copiarlo negli Appunti
+
+1. Aprire una sessione di Windows PowerShell.
+
+2. Usando gli stessi valori specificati nello script, eseguire il comando seguente:
+    
+        (Set-AIPAuthentication -WebAppId <ID of the "Web app / API" application>  -WebAppKey <key value generated in the "Web app / API" application> -NativeAppId <ID of the "Native" application >).token | clip
+    
+    ad esempio `(Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f").token | clip`
+
+#### <a name="step-3-modify-the-powershell-script-to-supply-the-token"></a>Passaggio 3: Modificare lo script di PowerShell in modo da fornire il token
+
+1. Nello script di PowerShell specificare il valore del token incollando la stringa dagli Appunti e salvare il file.
+
+2. Firmare lo script. Se non si firma lo script (condizione più sicura), è necessario configurare Windows PowerShell nel computer che eseguirà i comandi di assegnazione di etichette. Eseguire, ad esempio, la sessione di Windows PowerShell con l'opzione **Esegui come amministratore** e digitare: `Set-ExecutionPolicy RemoteSigned`. Questa configurazione, tuttavia, consente l'esecuzione di tutti gli script non firmati quando sono archiviati in questo computer (condizione meno sicura).
+    
+    Per altre informazioni sulla firma degli script di Windows PowerShell, vedere [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing) nella raccolta di documentazione di PowerShell.
+
+3. Copiare questo script di PowerShell nel computer che assegnerà le etichette e proteggerà i file ed eliminerà l'originale nel computer in uso. Ad esempio, copiare lo script di PowerShell in C:\Scripts\Aipauthentication.ps1 in un computer Windows Server.
+
+#### <a name="step-4-create-a-task-that-runs-the-powershell-script"></a>Passaggio 4: Creare un'attività che esegua lo script di PowerShell
+
+1. Assicurarsi che l'account del servizio per l'assegnazione di etichette e la protezione di file disponga del diritto **Accesso come processo batch**.
+
+2. Nel computer che assegnerà le etichette e proteggerà i file aprire l'Utilità di pianificazione e creare una nuova attività. Configurare questa attività per l'esecuzione come account del servizio per l'assegnazione di etichette e la protezione di file, quindi configurare i valori seguenti per **Azioni**:
+    
+    - **Azione**: `Start a program`
+    - **Programma/script**: `Powershell.exe`
+    - **Aggiungere argomenti (facoltativo)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
+    
+    Per la riga dell'argomento specificare il percorso e il nome file, se sono diversi da quelli indicati nell'esempio.
+
+3. Eseguire manualmente questa attività.
+
+#### <a name="step-4-confirm-that-the-token-is-saved-and-delete-the-powershell-script"></a>Passaggio 4: Confermare che il token è stato salvato ed eliminare lo script di PowerShell
+
+1. Confermare che il token è ora archiviato nella cartella %localappdata%\Microsoft\MSIP per il profilo dell'account del servizio. Questo valore è protetto dall'account del servizio.
+
+2. Eliminare lo script di PowerShell contenente il valore del token, ad esempio Aipauthentication.ps1.
+    
+    Facoltativamente, eliminare l'attività. Se il token scade, è necessario ripetere questa procedura; in questo caso, potrebbe essere più opportuno uscire dall'attività configurata in modo che sia pronta per una nuova esecuzione quando si copia il nuovo script di PowerShell con il nuovo valore del token.
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per le informazioni della Guida sui cmdlet, all'interno di una sessione di PowerShell digitare `Get-Help <cmdlet name> cmdlet`. Per ottenere le informazioni più aggiornate, usare il parametro -online. Ad esempio: 

@@ -1,10 +1,10 @@
 ---
 title: Rilevamento dei documenti per Azure Information Protection
-description: Istruzioni e informazioni per amministratori per configurare e usare il rilevamento dei documenti per Azure Information Protection.
+description: Istruzioni e informazioni per gli amministratori sulla configurazione e l'uso del rilevamento dei documenti per Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 01/29/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,40 +12,40 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bca186ebe78d79926a6ef775b1f5be7006e89df5
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: bbbc9a274ea815577109276bceb0b08617f03809
+ms.sourcegitcommit: 972acdb468ac32a28e3e24c90694aff4b75206fc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guida dell'amministratore: Configurazione e uso del rilevamento dei documenti per Azure Information Protection
+# <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guida dell'amministratore: configurazione e uso del rilevamento dei documenti per Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
-Se si dispone di una [sottoscrizione che supporta il rilevamento dei documenti](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), il sito di rilevamento dei documenti è abilitato per impostazione predefinita per tutti gli utenti dell'organizzazione. Il rilevamento dei documenti consente di indicare a utenti e amministratori quando è stato eseguito l'accesso a un documento protetto e, se necessario, se è possibile revocare un documento rilevato.
+Se dispone di una [sottoscrizione che supporta il rilevamento dei documenti](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), il sito di rilevamento dei documenti è abilitato per impostazione predefinita per tutti gli utenti dell'organizzazione. Il rilevamento dei documenti fornisce informazioni, per utenti e amministratori, su quando si è verificato l'accesso a un documento protetto; se necessario, è possibile revocare un documento rilevato.
 
 ## <a name="privacy-controls-for-your-document-tracking-site"></a>Controlli sulla privacy per il sito di rilevamento dei documenti
 
-Se la visualizzazione di tutte le informazioni sul rilevamento dei documenti non è consentita nell'organizzazione a causa dei requisiti di privacy, è possibile disabilitare il rilevamento dei documenti usando il cmdlet [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature). 
+Se la visualizzazione di tutte le informazioni di rilevamento dei documenti non è consentita all'interno dell'organizzazione a causa dei requisiti sulla privacy, è possibile disabilitare il rilevamento dei documenti tramite il cmdlet [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature). 
 
-Il cmdlet disabilita l'accesso al sito di rilevamento dei documenti in modo che tutti gli utenti dell'organizzazione non possano rilevare o revocare l'accesso ai documenti che hanno protetto. È possibile riabilitare il rilevamento dei documenti in qualsiasi momento usando [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) e verificare se il rilevamento dei documenti è attualmente abilitato o disabilitato usando [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature). Per eseguire questi cmdlet, è necessario avere almeno la versione **2.3.0.0** del modulo Azure Rights Management (AADRM) per PowerShell. 
+Questo cmdlet disabilita l'accesso al sito di rilevamento dei documenti impedendo a tutti gli utenti dell'organizzazione di rilevare o revocare l'accesso ai documenti protetti. È possibile riabilitare il rilevamento dei documenti in qualsiasi momento, tramite il cmdlet [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) e si può verificare se il rilevamento dei documenti è attualmente abilitato o disabilitato usando [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature). Per eseguire questi cmdlet è necessario disporre almeno della versione **2.3.0.0** del modulo Azure Rights Management (AADRM) per PowerShell. 
 
-Quando è abilitato, il sito di rilevamento dei documenti visualizza, per impostazione predefinita, informazioni quali gli indirizzi di posta elettronica delle persone che hanno tentato di accedere ai documenti protetti, quando queste persone hanno tentato di accedere e la relativa posizione. Questo livello di informazioni può essere molto utile per determinare come vengono usati i documenti condivisi e se tali documenti devono essere revocati quando si rileva un'attività sospetta. Tuttavia, per motivi di privacy, può essere necessario disabilitare queste informazioni per alcuni o tutti gli utenti. 
+Quando il sito di rilevamento dei documenti è abilitato, per impostazione predefinita vengono visualizzate informazioni quali gli indirizzi di posta elettronica delle persone che hanno tentato di accedere a documenti protetti, quando hanno tentato l'accesso e la loro posizione. Questo livello di informazioni può essere utile per determinare come vengono usati i documenti condivisi e se debbano essere revocati in caso di attività sospetta. Tuttavia, per motivi di privacy, potrebbe essere necessario disabilitare queste informazioni relative ad alcuni o tutti gli utenti. 
 
-Se per alcuni utenti questa attività non deve essere rilevata da altri, aggiungerli a un gruppo archiviato in Azure AD e specificare il gruppo con il cmdlet [Set-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Set-AadrmDoNotTrackUserGroup). Quando si esegue questo cmdlet è necessario specificare un singolo gruppo. Tuttavia, il gruppo può contenere gruppi nidificati. 
+Se sono presenti utenti le cui attività non devono essere rilevate da altri utenti, aggiungerli a un gruppo archiviato in Azure AD e specificare il gruppo con il cmdlet [Set-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Set-AadrmDoNotTrackUserGroup). Quando si esegue questo cmdlet è necessario specificare un singolo gruppo, ma esso può contenere gruppi annidati. 
 
-Per questi membri del gruppo, gli utenti non possono visualizzare attività nel sito di rilevamento dei documenti se queste ultime sono legate a documenti condivisi con loro. Inoltre, non vengono inviate notifiche di posta elettronica all'utente che ha condiviso il documento.
+Gli utenti non possono vedere le attività dei membri di questo gruppo nel sito di rilevamento, quando queste attività sono correlate a documenti che hanno condiviso con loro. Inoltre non vengono inviate notifiche tramite posta elettronica all'utente che ha condiviso il documento.
 
-Quando si usa questa configurazione, tutti gli utenti possono comunque usare il sito di rilevamento dei documenti e revocare l'accesso ai documenti protetti. Tuttavia non visualizzano l'attività per gli utenti specificati usando il cmdlet Set-AadrmDoNotTrackUserGroup.
+Con questa configurazione tutti gli utenti possono comunque usare il sito di rilevamento dei documenti e revocare l'accesso ai documenti protetti, tuttavia non vedranno le attività degli utenti che sono stati specificati con il cmdlet Set-AadrmDoNotTrackUserGroup.
 
-Questa impostazione si applica solo agli utenti finali. Gli amministratori di Azure Information Protection possono sempre tenere traccia delle attività di tutti gli utenti, anche quando vengono specificati usando Set-AadrmDoNotTrackUserGroup. Per altre informazioni su come gli amministratori possono tenere traccia dei per gli utenti, vedere la sezione [Rilevamento e revoca dei documenti per gli utenti](#tracking-and-revoking-documents-for-users).
+Questa impostazione influisce solo sugli utenti finali. Gli amministratori di Azure Information Protection possono sempre rilevare le attività di tutti gli utenti, anche quando sono stati specificati con Set-AadrmDoNotTrackUserGroup. Per altre informazioni su come gli amministratori possono rilevare i documenti per gli utenti, vedere la sezione [Rilevamento e revoca dei documenti per gli utenti](#tracking-and-revoking-documents-for-users).
 
-È possibile usare [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) se questa opzione non è più necessaria. Oppure, per rimuovere gli utenti in modo selettivo, rimuoverli dal gruppo tenendo presente che [il gruppo viene memorizzato nella cache](../plan-design/prepare.md#group-membership-caching-by-azure-rights-management). È possibile verificare se questa opzione è attualmente in uso con il cmdlet [Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup). Per eseguire i cmdlet per questa configurazione del gruppo, è necessario avere almeno la versione **2.10.0.0** del modulo Azure Rights Management (AADRM) per PowerShell.
+Quando questa opzione non è più necessaria, si può usare il cmdlet [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup). È possibile rimuovere in modo selettivo gli utenti eliminandoli dal gruppo, ma bisogna tenere in considerazione la [memorizzazione di gruppo nella cache](../plan-design/prepare.md#group-membership-caching-by-azure-information-protection). Si può controllare se questa opzione è attualmente in uso tramite [Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup). Per eseguire i cmdlet per questa configurazione di gruppo è necessario disporre almeno della versione **2.10.0.0** del modulo Azure Rights Management (AADRM) per PowerShell.
 
-Per altre informazioni su ognuno dei cmdlet indicati, usare i relativi collegamenti. Per le istruzioni di installazione del modulo PowerShell, vedere [Installazione di Windows PowerShell per Microsoft Azure Rights Management](../deploy-use/install-powershell.md). Se il modulo è stato scaricato e installato in precedenza, verificarne il numero di versione eseguendo: `(Get-Module aadrm –ListAvailable).Version`
+Per altre informazioni su ciascuno di questi cmdlet, usare i collegamenti forniti. Per le istruzioni di installazione del modulo PowerShell, vedere [Installazione di Windows PowerShell per Azure Rights Management](../deploy-use/install-powershell.md). Se il modulo è già stato scaricato e installato, controllare il numero di versione eseguendo: `(Get-Module aadrm –ListAvailable).Version`
 
 
-## <a name="destination-urls-used-by-the-document-tracking-site"></a>URL di destinazione usati dal sito di rilevamento dei documenti
+## <a name="destination-urls-used-by-the-document-tracking-site"></a>URL di destinazione utilizzati dal sito di rilevamento dei documenti
 
 Gli URL seguenti vengono usati per il rilevamento dei documenti e devono essere consentiti su tutti i dispositivi e servizi tra i client che eseguono il client Azure Information Protection e Internet. Ad esempio, aggiungere gli URL ai firewall o ai siti attendibili se si usa Internet Explorer con protezione avanzata.
 
@@ -57,38 +57,38 @@ Gli URL seguenti vengono usati per il rilevamento dei documenti e devono essere 
 
 - `https://ecn.dev.virtualearth.net`
 
-Questi URL sono standard per il servizio Azure Rights Management, ad eccezione dell'URL virtualearth.net usato nelle mappe di Bing per visualizzare la posizione dell'utente.
+Questi URL sono standard per il servizio Azure Rights Management, eccetto l'URL virtualearth.net utilizzato per le mappe Bing per mostrare la posizione dell'utente.
 
 ## <a name="tracking-and-revoking-documents-for-users"></a>Rilevamento e revoca dei documenti per gli utenti
 
-Quando gli utenti accedono al sito di rilevamento dei documenti, possono rilevare e revocare i documenti protetti tramite il client Azure Information Protection o condivisi tramite l'applicazione di condivisione Rights Management. Quando si accede come amministratore di Azure Information Protection (amministratore globale), è possibile fare clic sull'icona di amministrazione per passare alla modalità amministratore. Questa modalità consente di visualizzare i documenti che gli utenti dell'organizzazione hanno selezionato per tenerne traccia con il client Azure Information Protection o per condividerli con l'applicazione di condivisione Rights Management:
+Quando l'utente accede al sito di rilevamento dei documenti può rilevare e revocare i documenti che ha protetto tramite il client Azure Information Protection o condiviso tramite l'applicazione di condivisione di Rights Management. Quando si accede come amministratore di Azure Information Protection (amministratore globale), è possibile fare clic sull'icona di amministrazione per passare alla modalità di amministratore. Questa modalità consente di visualizzare i documenti che gli utenti dell'organizzazione hanno selezionato per il rilevamento mediante il client Azure Information Protection o condiviso tramite l'applicazione di condivisione di Rights Management:
 
 ![Icona di amministrazione nel sito di rilevamento dei documenti](../media/tracking-site-admin-icon.png)
 
 > [!NOTE] 
-> Se si è un amministratore globale e l'icona non è visibile, significa che non sono stati ancora condivisi documenti. In questo caso, usare l'URL seguente per accedere al sito di rilevamento dei documenti: https://portal.azurerms.com/#/admin
+> Se questa icona non compare per un amministratore globale, è perché l'amministratore non ha ancora condiviso documenti. In questo caso usare il seguente URL per accedere al sito di rilevamento dei documenti: https://portal.azurerms.com/#/admin
 
-Le azioni intraprese in modalità amministratore vengono controllate e registrate nei file di log dei dati di utilizzo e, per continuare, è necessario confermare. Per altre informazioni su questa registrazione, vedere la sezione seguente.
+Le azioni eseguite in modalità amministratore vengono controllate e registrate nei file di log di utilizzo e per continuare è necessario confermare. Per altre informazioni su questa registrazione, vedere la sezione successiva.
 
-Quando si è in modalità amministratore, è quindi possibile eseguire la ricerca in base all'utente o al documento. Se si esegue la ricerca per utente, è possibile visualizzare tutti i documenti che l'utente specificato ha selezionato per tenerne traccia con il client Azure Information Protection o per condividerli con l'applicazione di condivisione Rights Management. 
+Quando si è in modalità amministratore è possibile eseguire ricerche per utente o per documento. Se si esegue una ricerca per utente, si vedono tutti i documenti che l'utente ha selezionato per il rilevamento mediante il client Azure Information Protection o condiviso tramite l'applicazione di condivisione di Rights Management. 
 
-Se si esegue la ricerca per documento è possibile visualizzare tutti gli utenti dell'organizzazione che hanno tenuto traccia del documento con il client Azure Information Protection o che l'hanno condiviso con l'applicazione di condivisione Rights Management. È quindi possibile analizzare i risultati della ricerca per rilevare i documenti che gli utenti hanno protetto e revocarli se necessario. 
+Se si esegue una ricerca per documento, si vedono tutti gli utenti dell'organizzazione che hanno rilevato il documento mediante il client Azure Information Protection o l'hanno condiviso tramite l'applicazione di condivisione di Rights Management. È quindi possibile esaminare i risultati della ricerca per rilevare i documenti che gli utenti hanno protetto e revocare tali documenti se necessario. 
 
-Per uscire dalla modalità amministratore, fare clic su **X** accanto a **Esci dalla modalità amministratore**:
+Per uscire dalla modalità amministratore, fare clic sulla **X** accanto a **Esci dalla modalità amministratore**:
 
-![Opzione Esci dalla modalità amministratore nel sito di rilevamento dei documenti](../media/tracking-site-exit-admin-icon.png)
+![Uscire dalla modalità amministratore nel sito di rilevamento dei documenti](../media/tracking-site-exit-admin-icon.png)
 
-Per istruzioni su come usare il sito di rilevamento dei documenti, vedere [Tenere traccia dei documenti e revocarli](client-track-revoke.md) nella Guida dell'utente.
+Per istruzioni su come usare il sito di rilevamento dei documenti, vedere [Rilevare e revocare i documenti](client-track-revoke.md) nella Guida dell'utente.
 
-## <a name="usage-logging-for-the-document-tracking-site"></a>Registrazione dei dati di utilizzo per il sito di rilevamento dei documenti
+## <a name="usage-logging-for-the-document-tracking-site"></a>Registrazione dell'utilizzo per il sito di rilevamento dei documenti
 
-Nei file di log dei dati di utilizzo sono presenti due campi applicabili al rilevamento dei documenti: **AdminAction** e **ActingAsUser**.
+Due campi nei file di log di utilizzo riguardano il rilevamento dei documenti: **AdminAction** e **ActingAsUser**.
 
-**AdminAction**: questo campo ha un valore true quando un amministratore usa il sito di rilevamento dei documenti in modalità amministratore, ad esempio, per revocare un documento per conto dell'utente o per visualizzare quando il documento è stato condiviso. Questo campo è vuoto quando l'accesso al sito di rilevamento dei documenti viene eseguito dall'utente.
+**AdminAction**: questo campo ha il valore true quando un amministratore usa il sito di rilevamento dei documenti in modalità amministratore, ad esempio per revocare un documento per conto di un utente o per vedere quando è stato condiviso. Il campo è vuoto quando l'utente accede al sito di rilevamento dei documenti.
 
-**ActingAsUser**: quando il campo AdminAction è true, questo campo contiene il nome utente per conto del quale agisce l'amministratore per eseguire la ricerca di un utente o del proprietario di un documento. Questo campo è vuoto quando l'accesso al sito di rilevamento dei documenti viene eseguito dall'utente. 
+**ActingAsUser**: quando il campo AdminAction è true, questo campo contiene il nome utente per conto del quale l'amministratore opera, ad esempio l'utente cercato o il proprietario del documento. Il campo è vuoto quando l'utente accede al sito di rilevamento dei documenti. 
 
-Sono inoltre disponibili tipi di richieste che registrano la modalità in cui utenti e amministratori stanno usando il sito di rilevamento dei documenti. **RevokeAccess**, ad esempio, è il tipo di richiesta usato quando un utente, o un amministratore che agisce per conto dell'utente, revoca un documento nel sito di rilevamento dei documenti. Usare questo tipo di richiesta in combinazione con il campo AdminAction per determinare se il documento è stato revocato dal relativo utente (il campo AdminAction è vuoto) o se un amministratore ha revocato un documento per conto di un utente (il campo AdminAction è true).
+Sono inoltre disponibili tipi di richiesta che registrano nel log informazioni su come utenti e amministratori usano il sito di rilevamento dei documenti. Ad esempio, **RevokeAccess** è il tipo di richiesta quando un utente o un amministratore per conto di un utente ha revocato un documento nel sito di rilevamento dei documenti. Usare questo tipo di richiesta in combinazione con il campo AdminAction per determinare se l'utente ha revocato un proprio documento (il campo AdminAction è vuoto) o un amministratore ha revocato un documento per conto dell'utente (il campo AdminAction è true).
 
 
 Per altre informazioni sulla registrazione dell'utilizzo, vedere [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](../deploy-use/log-analyze-usage.md)
@@ -96,11 +96,11 @@ Per altre informazioni sulla registrazione dell'utilizzo, vedere [Registrazione 
 
 
 ## <a name="next-steps"></a>Passaggi successivi
-Dopo aver configurato il sito di rilevamento dei documenti per il client Azure Information Protection, vedere gli argomenti seguenti per altre informazioni che potrebbero essere necessarie per supportare il client:
+Dopo aver configurato il sito di rilevamento dei documenti per il client Azure Information Protection, vedere gli argomenti seguenti per altre informazioni che potrebbero essere necessarie per il supporto di questo client:
 
 - [Personalizzazioni](client-admin-guide-customizations.md)
 
-- [File del client e registrazione dell'utilizzo](client-admin-guide-files-and-logging.md)
+- [File client e registrazione dell'utilizzo](client-admin-guide-files-and-logging.md)
 
 - [Tipi di file supportati](client-admin-guide-file-types.md)
 
