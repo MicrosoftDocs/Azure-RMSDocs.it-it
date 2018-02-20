@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per gli amministratori in una rete aziend
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/20/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c338fe4258d6d8b20a4d8c285bc821981810b409
-ms.sourcegitcommit: f1d0b899e6d79ebef3829f24711f947316bca8ef
+ms.openlocfilehash: a7412378655ea75500bd1339c0ba41f677fe4d9a
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
@@ -54,7 +54,7 @@ Il client Azure Information Protection include gli elementi seguenti:
 
 - Un modulo di PowerShell per applicare e rimuovere etichette di classificazione e la protezione dei file. 
     
-    Questo modulo include i cmdlet per installare e configurare lo [scanner Azure Information Protection](../deploy-use/deploy-aip-scanner.md) (attualmente in anteprima) eseguito come servizio in Windows Server. Questo servizio consente di individuare, classificare e proteggere i file in archivi dati come le condivisioni di rete e le raccolte di SharePoint Server.
+    Questo modulo include i cmdlet per installare e configurare lo [scanner Azure Information Protection](../deploy-use/deploy-aip-scanner.md) eseguito come servizio in Windows Server. Questo servizio consente di individuare, classificare e proteggere i file in archivi dati come le condivisioni di rete e le raccolte di SharePoint Server.
 
 - Il client Rights Management che comunica con Azure Rights Management (Azure RMS) o Active Directory Rights Management Services (AD RMS).
 
@@ -73,7 +73,7 @@ Distribuire il client Azure Information Protection in uno o più dei casi seguen
 
 - Si vuole eseguire script che classifichino (e, facoltativamente, proteggano) documenti tramite comandi di PowerShell.
 
-- Si vuole eseguire un servizio che individua, classifica e, facoltativamente, protegge i file archiviati in locale. Il servizio scanner è attualmente disponibile in versione di anteprima.
+- Si vuole eseguire un servizio che individua, classifica e, facoltativamente, protegge i file archiviati in locale.
 
 - Si vuole visualizzare documenti protetti quando non è installata un'applicazione nativa per visualizzare i file o questa applicazione non è in grado di aprire i documenti.
 
@@ -171,7 +171,7 @@ Per disinstallare il client è possibile usare una delle opzioni seguenti:
 
 - Rieseguire l'eseguibile, ad esempio **AzInfoProtection.exe**, e fare clic su **Disinstalla** nella pagina **Modifica installazione**. 
 
-- Eseguire l'eseguibile con **/uninstall**. Ad esempio: `AzInfoProtection.exe /uninstall`
+- Eseguire l'eseguibile con **/uninstall**. ad esempio `AzInfoProtection.exe /uninstall`
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per installare il client, vedere [Installare il client Azure Information Protection per gli utenti](client-admin-guide-install.md).

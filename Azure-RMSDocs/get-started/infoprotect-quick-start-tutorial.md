@@ -4,17 +4,17 @@ description: Esercitazione introduttiva che consente di provare rapidamente Micr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: c851eb1ecf1551caee1ab2a6aac6f05c550cb96b
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: a93b226f80382d4c751ca88d037398939db9d61b
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Esercitazione introduttiva di Azure Information Protection 
 
@@ -36,7 +36,7 @@ Per completare questa esercitazione è necessario quanto segue:
   > [!TIP] 
   > Se è necessario richiedere una sottoscrizione, eseguire questa operazione in anticipo perché talvolta il processo può richiedere tempo.
 
-- Un account di amministratore globale o un account di amministratore della sicurezza per accedere al portale di Azure, attivare la protezione e configurare i criteri di Azure Information Protection. Questo account deve avere inoltre un indirizzo di posta elettronica e un servizio di posta elettronica funzionante, ad esempio Exchange Online.
+- Un account di amministratore globale per accedere al portale di Azure, attivare la protezione e configurare i criteri di Azure Information Protection. In alternativa, è possibile usare un account che dispone di uno dei ruoli amministrativi seguenti: [Amministratore di Information Protection o Amministratore della sicurezza](/azure/active-directory/active-directory-assign-admin-roles-azure-portal). Questo account deve avere inoltre un indirizzo di posta elettronica e un servizio di posta elettronica funzionante, ad esempio Exchange Online.
 
 - Un computer che esegue Windows (almeno Windows 7 con Service Pack 1) e in cui è installato Office 365 ProPlus con le app di Office 2016 o 2013, Office Professional Plus 2016, Office Professional Plus 2013 con Service Pack 1 o Office Professional Plus 2010 con Service Pack 2. 
     

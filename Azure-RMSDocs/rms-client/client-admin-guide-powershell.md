@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per amministratori per gestire il client 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 27799ff64e8c224c64b0ffc858b79818650d74af
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: a6ca8145768559a556b051974f59620a0750c660
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
 
@@ -24,9 +24,7 @@ ms.lasthandoff: 02/09/2018
 
 Quando si installa il client di Azure Information Protection, vengono installati automaticamente i comandi di PowerShell. Ciò consente di gestire il client eseguendo i comandi che è possibile inserire negli script per l'automazione.
 
-I cmdlet vengono installati con il modulo **AzureInformationProtection** di PowerShell. Questo modulo sostituisce il modulo RMSProtection installato con lo strumento di protezione RMS. Se quando si installa il client Azure Information Protection è già installato lo strumento RMSProtection, questo viene automaticamente disinstallato.
-
-Il modulo AzureInformationProtection include tutti i cmdlet per Rights Management dello strumento di protezione RMS. Sono inoltre disponibili nuovi cmdlet che usano il servizio Azure Information Protection (AIP) per l'assegnazione di etichette. Ad esempio:
+I cmdlet vengono installati con il modulo **AzureInformationProtection** di PowerShell. Questo modulo include tutti i cmdlet per Rights Management dello strumento di protezione RMS (non più supportato). Sono inoltre disponibili nuovi cmdlet che usano il servizio Azure Information Protection (AIP) per l'assegnazione di etichette. Ad esempio:
 
 |Cmdlet per le etichette|Esempio di utilizzo|
 |----------------|---------------|
@@ -36,13 +34,13 @@ Il modulo AzureInformationProtection include tutti i cmdlet per Rights Managemen
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Assegna etichette ai file in modo non interattivo, ad esempio tramite uno script che viene eseguito in base a una pianificazione.|
 
 
-Inoltre, lo [scanner Azure Information Protection ](../deploy-use/deploy-aip-scanner.md), attualmente disponibile in versione di anteprima, usa i cmdlet per installare e configurare un servizio in Windows Server. Lo scanner consente quindi di individuare, classificare e proteggere i file negli archivi dati.
+Inoltre, lo [scanner Azure Information Protection](../deploy-use/deploy-aip-scanner.md) usa i cmdlet per installare e configurare un servizio in Windows Server. Lo scanner consente quindi di individuare, classificare e proteggere i file negli archivi dati.
 
 Per un elenco di tutti i cmdlet e le informazioni della guida corrispondenti, vedere [AzureInformationProtection Module](/powershell/module/azureinformationprotection) (Modulo AzureInformationProtection). All'interno di una sessione di PowerShell digitare `Get-Help <cmdlet name> -online` per visualizzare le informazioni della guida più recenti.  
 
 Questo modulo viene installato in **\Programmi (x86)\Microsoft Azure Information Protection** e aggiunge questa cartella alla variabile di sistema **PSModulePath**. Il file DLL per questo modulo si chiama **AIP.dll**.
 
-Come per il modulo RMSProtection, la versione corrente del modulo AzureInformationProtection impone le limitazioni seguenti:
+La versione corrente del modulo AzureInformationProtection impone le limitazioni seguenti:
 
 - È possibile rimuovere la protezione di cartelle personali di Outlook (file PST), ma non è attualmente possibile proteggere in modo nativo questi file o altri file contenitore tramite questo modulo di PowerShell.
 
@@ -147,7 +145,7 @@ Eseguire il cmdlet Get-AadrmConfiguration dal modulo di Windows PowerShell Azure
     
 4. Eseguire `Get-AadrmConfiguration` ed eseguire una copia del valore di BPOSId.
     
-    Di seguito è riportato un esempio dell'output di Get-AadrmConfiguration:
+    Un esempio dell'output di Get-AadrmConfiguration:
     
             BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
         
@@ -454,7 +452,7 @@ L'output potrebbe essere simile al seguente:
 
 ## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>Come assegnare un'etichetta ai file in modo non interattivo per Azure Information Protection
 
-È possibile eseguire i cmdlet per l'assegnazione delle etichette in modo non interattivo tramite il cmdlet **Set-AIPAuthentication**. È necessario un intervento non interattivo anche per lo scanner di Azure Information Protection, attualmente in anteprima.
+È possibile eseguire i cmdlet per l'assegnazione delle etichette in modo non interattivo tramite il cmdlet **Set-AIPAuthentication**. È necessario un intervento non interattivo anche per lo scanner di Azure Information Protection.
 
 Per impostazione predefinita, quando si eseguono i cmdlet per l'assegnazione di etichette, i comandi vengono eseguiti nel contesto utente personale in una sessione interattiva di PowerShell. Per eseguirli senza interventi da parte dell'utente, creare un nuovo account utente di Azure AD per questo scopo. Nel contesto di tale utente, quindi, eseguire il cmdlet Set-AIPAuthentication per impostare e archiviare le credenziali usando un token di accesso da Azure AD. Questo account utente viene quindi autenticato e avviato per il servizio Azure Rights Management. L'account scarica i criteri di Azure Information Protection ed eventuali modelli di Rights Management usati dalle etichette.
 
@@ -521,6 +519,7 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
 
 12. Nel pannello **Autorizzazioni necessarie** selezionare **Concedi autorizzazioni**, fare clic su **Sì** per confermare e quindi chiudere il pannello.
     
+
 La configurazione delle due app è stata completata e i valori necessari per eseguire [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con i parametri *WebAppId*, *WebAppKey* e *NativeAppId* sono disponibili. Ad esempio:
 
 `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
@@ -532,7 +531,7 @@ La prima volta che si esegue questo comando viene richiesto di eseguire l'access
 ### <a name="specify-and-use-the-token-parameter-for-set-aipauthentication"></a>Specificare e usare il parametro Token per Set-AIPAuthentication
 
 > [!NOTE]
-> Questa opzione è in anteprima e richiede la versione di anteprima corrente del client Azure Information Protection.
+> Questa opzione richiede la versione disponibile a livello generale dello scanner di Azure Information Protection o la versione di anteprima corrente del client di Azure Information Protection.
 
 Per non eseguire l'accesso interattivo iniziale per un account che assegna etichette e protegge i file, seguire i passaggi e le istruzioni seguenti. In genere, questi passaggi aggiuntivi sono necessari solo se a questo account non è possibile concedere il diritto di **accesso locale**, ma è stato concesso il diritto **Accesso come processo batch**. Ad esempio, ciò potrebbe verificarsi con l'account del servizio personale che esegue lo scanner di Azure Information Protection.
 
@@ -540,12 +539,11 @@ Per non eseguire l'accesso interattivo iniziale per un account che assegna etich
 
 2. Eseguire Set-AIPAuthentication per ottenere un token di accesso e copiarlo negli Appunti.
 
-2. Modificare lo script di PowerShell in modo da includere il token.
+3. Modificare lo script di PowerShell in modo da includere il token.
 
-3. Creare un'attività che esegua lo script di PowerShell nel contesto dell'account del servizio per l'assegnazione di etichette e la protezione di file.
+4. Creare un'attività che esegua lo script di PowerShell nel contesto dell'account del servizio per l'assegnazione di etichette e la protezione di file.
 
-4. Confermare che il token è stato salvato per l'account del servizio ed eliminare lo script di PowerShell.
-
+5. Confermare che il token è stato salvato per l'account del servizio ed eliminare lo script di PowerShell.
 
 #### <a name="step-1-create-a-powershell-script-on-your-local-computer"></a>Passaggio 1: Creare uno script di PowerShell nel computer locale
 
