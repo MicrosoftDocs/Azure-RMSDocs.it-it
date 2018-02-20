@@ -4,7 +4,7 @@ description: "Informazioni per gli utenti che eseguono il client Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/02/2018
+ms.date: 02/14/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: ea865f91751ed171779c587d1af4cb0f4226a59e
-ms.sourcegitcommit: bc47834ae7180491ed1d9bc9f69eab398bcdc0a8
+ms.openlocfilehash: 201415526b57d691d999ddba6af2451df4d36de4
+ms.sourcegitcommit: 2733b1df2ebdda02b60d9471db29e545552f99ff
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>Guida dell'utente: Modalità di sola protezione per il client Azure Information Protection
 
@@ -33,6 +33,10 @@ La modalità di sola protezione viene eseguita negli scenari seguenti:
 - L'organizzazione dispone di una sottoscrizione per Azure Information Protection solo per un subset di utenti:
     
     - Per questa combinazione di sottoscrizioni, è responsabilità dell'amministratore assicurarsi che solo il subset di utenti possa usare le funzionalità di classificazione ed etichettatura. Gli altri utenti devono eseguire il client Azure Information Protection in modalità di sola protezione. 
+
+- L'organizzazione dispone di una sottoscrizione per Azure Information Protection, ma non è configurata alcuna etichetta.
+    
+    - Ciò può verificarsi quando tutte le etichette nei criteri globali sono disabilitate e l'account non è stato aggiunto a criteri con ambito. È possibile che il reparto IT abbia appena iniziato a distribuire Azure Information Protection, ma non abbia ancora fornito le etichette per classificare i documenti e i messaggi di posta elettronica. Nel frattempo, è possibile usare il client Azure Information Protection per proteggere i file e visualizzare i file protetti.
 
 - L'organizzazione ha una sottoscrizione per Azure Information Protection, ma non è possibile scaricare i relativi criteri. 
     

@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per gli amministratori per la distribuzio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 02/13/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d91c52ac5ae1f70ed664e54a549c906d934fdb16
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: 92e4f6c05378b36165db0628f14941b0ccd26cb7
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guida dell'amministratore: Installare il client Azure Information Protection per gli utenti
 
@@ -211,7 +211,11 @@ Se si usa Intune per il metodo di distribuzione del software, usare queste istru
 
 ## <a name="how-to-install-the-azure-information-protection-scanner"></a>Come installare lo scanner Azure Information Protection
 
-La versione di anteprima corrente del client Azure Information Protection include lo scanner Azure Information Protection. Il modulo PowerShell incluso nel client contiene i cmdlet per installare e configurare lo scanner.
+Attualmente, la versione disponibile a livello generale dello scanner di Azure Information Protection è un download distinto denominato **AzInfoProtectionScanner.exe** nell'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Le versioni successive dello scanner saranno incluse nel client di Azure Information Protection.
+
+La versione di anteprima corrente del client Azure Information Protection include anche lo scanner Azure Information Protection. 
+
+Il modulo PowerShell incluso con lo scanner e il client di anteprima contiene i cmdlet per installare e configurare lo scanner.
 
 Per installare il client per lo scanner, seguire le istruzioni delle sezioni precedenti. Si noti che se non si necessita di tutti i componenti del client, ad esempio il componente aggiuntivo di Office e il visualizzatore, è possibile installare soltanto il modulo PowerShell. È possibile, ad esempio, eseguire l'eseguibile con `PowerShellOnly=true /quiet`.
 

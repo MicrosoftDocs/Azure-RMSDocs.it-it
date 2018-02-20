@@ -4,7 +4,7 @@ description: "Per configurare le funzioni di classificazione, aggiunta di etiche
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/25/2017
+ms.date: 02/13/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b04c7881f982b33094107b6de33920a83b17b960
-ms.sourcegitcommit: a7cdf911088fdf663e43894484530ea15150284f
+ms.openlocfilehash: 6b0556755597fe20755e7b798a24498a780b87b5
+ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -44,9 +44,24 @@ Se l'organizzazione dispone di varie sottoscrizioni, è responsabilità dell'org
 
 Per altre informazioni sulle sottoscrizioni, vedere [Quale sottoscrizione è necessaria per Azure Information Protection e quali funzionalità sono incluse?](../get-started/faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
+## <a name="signing-in-to-the-azure-portal"></a>Accesso al portale di Azure
+
+Per accedere al portale di Azure per configurare e gestire Azure Information Protection:
+
+- Usare il seguente collegamento: https://portal.azure.com
+
+- Usare un account che dispone di uno dei seguenti [ruoli di amministratore](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
+    
+    - **Amministratore di Information Protection** (attualmente disponibile in anteprima)
+
+    - **Amministratore della sicurezza**
+
+    - **Amministratore globale / Amministratore società**
+
+
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Per accedere al pannello Azure Information Protection per la prima volta
 
-1. Accedere al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza per il tenant.
+1. Accedere al portale di Azure.
 
 2. Nel menu hub fare clic su **Nuovo** e quindi, nell'elenco **Marketplace**, selezionare **Sicurezza e identità**. 
     
@@ -63,7 +78,7 @@ Quando si accede di nuovo al pannello **Azure Information Protection** viene sel
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Come configurare i criteri di Azure Information Protection
 
-1. Verificare di aver eseguito l'accesso al [portale di Azure](https://portal.azure.com) come amministratore globale o della sicurezza.
+1. Assicurarsi di avere eseguito l'accesso al portale di Azure usando uno di questi ruoli amministrativi: Amministratore di Information Protection, Amministratore della sicurezza o Amministratore globale. Vedere la [sezione precedente](#signing-in-to-the-azure-portal) per altre informazioni su questi ruoli amministrativi.
 
 2. Se necessario, passare al pannello **Azure Information Protection**: ad esempio, nel menu hub fare clic su **Altri servizi** e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
     
