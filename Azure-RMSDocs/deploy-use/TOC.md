@@ -42,7 +42,7 @@
 ### [Gestione del cliente](operations-customer-managed-tenant-key.md)
 ## [Rimozione delle autorizzazioni e disattivazione](decommission-deactivate.md)
 ## [Amministrazione con PowerShell](administer-powershell.md)
-### [Installazione di Windows PowerShell per Azure RMS](install-powershell.md)
+### [Installazione del modulo PowerShell AADRM](install-powershell.md)
 # [Distribuire e usare il client](/information-protection/rms-client/use-client)
 # [Sviluppare e personalizzare le app](/information-protection/develop/developers-guide)
 
