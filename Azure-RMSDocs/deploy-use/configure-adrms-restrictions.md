@@ -89,7 +89,7 @@ Verificare che la distribuzione di AD RMS attiva soddisfi i requisiti seguenti p
         
         - Più foreste con cluster radice AD RMS indipendenti e utenti che non dispongono di accesso ai contenuti protetti dagli utenti delle altre foreste.
         
-        - Più foreste con cluster AD RMS in ognuna di esse. Ogni cluster AD RMS condivide un URL di gestione licenze che fa riferimento allo stesso cluster AD RMS. In questo cluster AD RMS è necessario importare tutti i certificati di dominio utente trusted (TUD) da tutti gli altri cluster AD RMS. Per altre informazioni su questa topologia, vedere [Trusted User Domains](Domini utente trusted) (https://technet.microsoft.com/library/dd983944(v=ws.10\).aspx).
+        - Più foreste con cluster AD RMS in ognuna di esse. Ogni cluster AD RMS condivide un URL di gestione licenze che fa riferimento allo stesso cluster AD RMS. In questo cluster AD RMS è necessario importare tutti i certificati di dominio utente trusted (TUD) da tutti gli altri cluster AD RMS. Per altre informazioni su questa topologia, vedere [Trusted User Domains (Domini utente trusted)](https://technet.microsoft.com/library/dd983944(v=ws.10\).aspx).
         
     Quando si hanno più cluster AD RMS in foreste diverse, eliminare le etichette presenti nei criteri globali che applicano la protezione HYOK (AD RMS) e configurare [criteri con ambito](configure-policy-scope.md) per ogni cluster. Quindi assegnare gli utenti di ogni cluster ai criteri con ambito corrispondenti, evitando di usare gruppi per i quali un utente viene assegnato a più criteri con ambito. In seguito a questa assegnazione ogni utente deve avere etichette per un solo cluster AD RMS. 
     
