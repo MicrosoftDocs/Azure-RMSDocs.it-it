@@ -101,7 +101,7 @@ Analogamente, è possibile forzare l'applicazione RMS sharing ad applicare la pr
 
 Per configurare l'applicazione RMS sharing in modo da applicare la protezione generica a tutti i file a cui verrebbe applicata la protezione nativa per impostazione predefinita, apportare le modifiche seguenti al Registro di sistema. Si noti che se le chiavi RmsSharingApp e FileProtection non esistono, è necessario crearle manualmente.
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: creare una nuova chiave denominata *.
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: creare una nuova chiave denominata \*.
 
     Questa impostazione indica i file con qualsiasi estensione di file.
 
