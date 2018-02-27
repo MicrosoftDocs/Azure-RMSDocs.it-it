@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4cd74b6fcee53acc99e0c89d7cbb606d8aab2d54
-ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
+ms.openlocfilehash: 46ed6ac05e696ec65527d39ab38c312f6aba8411
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>Guida dell'amministratore dell'applicazione Rights Management sharing
 
@@ -185,7 +185,7 @@ Per verificare l'esito positivo, vedere la sezione [Verificare l'esito positivo 
         X86\setup_ipviewer.exe /norestart /quiet /msicl "MSIRESTARTMANAGERCONTROL=Disable" /log "<log file path and name>"
         ```
 
-    Ad esempio: `\\server5\apps\rms\x64\setup_ipviewer.exe /norestart /quiet /msicl "MSIRESTARTMANAGERCONTROL=Disable" /log "C:\Log files\ipviewerinstall.log"`
+    ad esempio `\\server5\apps\rms\x64\setup_ipviewer.exe /norestart /quiet /msicl "MSIRESTARTMANAGERCONTROL=Disable" /log "C:\Log files\ipviewerinstall.log"`
     
     Se questo comando ha esito negativo, non verrà visualizzato nessun messaggio di errore perché è stato specificato il parametro **/quiet**. Per risolvere il problema dell'installazione non riuscita, eseguire nuovamente il comando senza il parametro /quiet per visualizzare eventuali messaggi di errore.
 
@@ -203,7 +203,7 @@ Per verificare l'esito positivo, vedere la sezione [Verificare l'esito positivo 
         msiexec.exe /norestart /quiet MSIRESTARTMANAGERCONTROL=Disable /i "x86\Setup.msi" /L*v "<log file path and name>"
         ```
 
-    Ad esempio: `\\server5\apps\rms\msiexec.exe /norestart /quiet MSIRESTARTMANAGERCONTROL=Disable /i "x64\Setup64.msi" /L*v "C:\Log files\rmsofficeinstall.log"`
+    ad esempio `\\server5\apps\rms\msiexec.exe /norestart /quiet MSIRESTARTMANAGERCONTROL=Disable /i "x64\Setup64.msi" /L*v "C:\Log files\rmsofficeinstall.log"`
     
     Se questo comando ha esito negativo, non verrà visualizzato nessun messaggio di errore perché è stato specificato il parametro **/quiet**. Per risolvere il problema dell'installazione non riuscita, eseguire nuovamente il comando senza il parametro /quiet per visualizzare eventuali messaggi di errore.
 
@@ -344,7 +344,7 @@ Poiché l'applicazione RMS sharing non è supportata da WSUS, è possibile usare
 ## <a name="azure-information-protection-only-configuring-document-tracking"></a>Solo Azure Information Protection: Configurazione del rilevamento dei documenti
 Se si dispone di una [sottoscrizione che supporta il rilevamento dei documenti](https://www.microsoft.com/cloud-platform/azure-information-protection-features), il sito di rilevamento dei documenti è abilitato per impostazione predefinita per tutti gli utenti dell'organizzazione. Il rilevamento dei documenti mostra informazioni quali indirizzi di posta elettronica delle persone che hanno tentato di accedere ai documenti protetti condivisi dagli utenti, nel momento in cui queste persone hanno tentato di accedere, e la loro posizione. Se la visualizzazione di queste informazioni non è consentita all'interno dell'organizzazione a causa dei requisiti sulla privacy, è possibile disabilitare l'accesso al sito di rilevamento dei documenti tramite il cmdlet [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature). È possibile riabilitare l'accesso al sito in qualsiasi momento utilizzando [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature), ed è possibile verificare se l'accesso è attualmente abilitato o disabilitato utilizzando [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature).
 
-Per eseguire questi cmdlet, è necessario disporre almeno della versione **2.3.0.0** del modulo Azure Rights Management per Windows PowerShell. Per istruzioni di installazione, vedere [Installazione di Windows PowerShell per Azure Rights Management](../deploy-use/install-powershell.md).
+Per eseguire questi cmdlet, è necessario disporre almeno della versione **2.3.0.0** del modulo Azure Rights Management per Windows PowerShell. Per le istruzioni di installazione, vedere [Installazione del modulo PowerShell AADRM](../deploy-use/install-powershell.md).
 
 > [!TIP]
 > Se il modulo è stato scaricato e installato in precedenza, verificarne il numero di versione eseguendo: `(Get-Module aadrm –ListAvailable).Version`

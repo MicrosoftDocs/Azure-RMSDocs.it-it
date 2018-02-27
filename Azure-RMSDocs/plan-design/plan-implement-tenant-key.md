@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9e8b7f3bbebe50fb6f219142a17961dc8b565f6c
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: 7a3ed134c84c5293ecc2391fdaec32ccfc425910
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Pianificazione e implementazione della chiave del tenant di Azure Information Protection
 
@@ -72,7 +72,7 @@ Per creare la chiave, sono disponibili le opzioni seguenti:
 
 Tra queste opzioni BYOK, l'opzione usata più di frequente è rappresentata da una chiave protetta dal modulo di protezione hardware creata in locale e trasferita in Key Vault come chiave protetta dal modulo di protezione hardware. Sebbene preveda il maggior sovraccarico amministrativo, questa opzione potrebbe essere necessaria per consentire all'organizzazione di essere conforme a normative specifiche. I moduli di protezione hardware usati da Azure Key Vault hanno la convalida FIPS 140-2 Livello 2.
 
-Con questa opzione, vengono eseguite le operazioni seguenti:
+e prevede lo schema seguente.
 
 1. Generazione della chiave del tenant in locale, in base ai criteri IT e ai criteri di sicurezza dell'organizzazione. Questa chiave è la copia master. Rimane in locale e l'utente è responsabile dell'esecuzione del backup.
 
@@ -82,7 +82,7 @@ Con questa opzione, vengono eseguite le operazioni seguenti:
 
 > [!NOTE]
 
-> Come misura di protezione aggiuntiva, Azure Key Vault usa domini di sicurezza separati per i propri data center in aree quali America del Nord, nei paesi EMEA (Europa, Medio Oriente e Africa) e in Asia. Azure Key Vault usa anche istanze diverse di Azure, ad esempio Microsoft Azure Germania e Azure per enti pubblici. 
+> Come misura di protezione aggiuntiva, Insieme di credenziali delle chiavi di Azure usa domini di sicurezza separati per i propri data center in aree quali America del Nord, nei paesi EMEA (Europa, Medio Oriente e Africa) e in Asia, Azure Key Vault usa anche istanze diverse di Azure, ad esempio Microsoft Azure Germania e Azure per enti pubblici. 
 
 Anche se facoltativo, può essere utile usare i log di utilizzo di Azure Information Protection disponibili in tempo quasi reale per sapere esattamente come e quando viene usata la chiave del tenant.
 
@@ -110,7 +110,7 @@ Nella tabella seguente sono elencati i prerequisiti per la modalità BYOK.
 |---------------|--------------------|
 |Il tenant di Azure Information Protection deve avere una sottoscrizione di Azure. Se non è disponibile una sottoscrizione, è possibile creare un [account gratuito](https://azure.microsoft.com/pricing/free-trial/). <br /><br /> Per usare una chiave protetta dal modulo di protezione hardware, è necessario avere un piano tariffario Premium di Azure Key Vault.|La sottoscrizione gratuita di Azure, che fornisce l'accesso per configurare Azure Active Directory e i modelli personalizzati di Azure Rights Management (**Accesso ad Azure Active Directory**), non è sufficiente per usare Insieme di credenziali delle chiavi di Azure. Per verificare se la propria sottoscrizione di Azure può essere utilizzata per la modalità BYOK, usare i cmdlet di PowerShell per [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx): <br /><br /> 1. Avviare una sessione di Azure PowerShell con l'opzione **Esegui come amministratore** e accedere come amministratore globale per il tenant di Azure Information Protection con il comando seguente: `Login-AzureRmAccount`<br /><br />2. Digitare il comando seguente e verificare che siano visualizzati valori per il nome e l'ID della sottoscrizione e per l'ID del tenant di Azure Information Protection e che lo stato sia abilitato: `Get-AzureRmSubscription`<br /><br />Se non viene visualizzato alcun valore e viene semplicemente restituito il prompt, non si dispone di una sottoscrizione di Azure che può essere usata per la modalità BYOK. <br /><br />**Nota**: oltre ai prerequisiti per la modalità BYOK, se si esegue la migrazione da AD RMS ad Azure Information Protection passando da una chiave software a una chiave hardware, sarà necessaria almeno la versione 11.62 del firmware Thales.|
 |Per usare una chiave protetta dal modulo di protezione hardware creata in locale: tutti i prerequisiti indicati per BYOK di Key Vault. |Vedere [Prerequisiti per la modalità BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) nella documentazione relativa ad Insieme di credenziali delle chiavi di Azure. <br /><br /> **Nota**: oltre ai prerequisiti per la modalità BYOK, se si esegue la migrazione da AD RMS ad Azure Information Protection passando da una chiave software a una chiave hardware, sarà necessaria almeno la versione 11.62 del firmware Thales.|
-|Il modulo di amministrazione di Azure Rights Management per Windows PowerShell.|Per istruzioni di installazione, vedere [Installazione di Windows PowerShell per Azure Rights Management](../deploy-use/install-powershell.md). <br /><br />Se il modulo Windows PowerShell è stato installato in precedenza, eseguire il comando seguente per verificare che il numero della versione in uso sia almeno **2.9.0.0**: `(Get-Module aadrm -ListAvailable).Version`|
+|Il modulo di amministrazione di Azure Rights Management per Windows PowerShell.|Per le istruzioni di installazione, vedere [Installazione del modulo PowerShell AADRM](../deploy-use/install-powershell.md). <br /><br />Se il modulo Windows PowerShell è stato installato in precedenza, eseguire il comando seguente per verificare che il numero della versione in uso sia almeno **2.9.0.0**: `(Get-Module aadrm -ListAvailable).Version`|
 
 Per altre informazioni sui moduli di protezione hardware Thales e su come vengono usati con Insieme di credenziali delle chiavi di Azure, vedere il [sito Web Thales](https://www.thales-esecurity.com/msrms/cloud).
 
@@ -166,7 +166,7 @@ Successivamente, è necessario eseguire il cmdlet [Use-AadrmKeyVaultKey](/powers
 > [!IMPORTANT]
 > In questo esempio, "aaaabbbbcccc111122223333" è la versione della chiave da usare. Se non si specifica la versione, viene usata la versione corrente della chiave senza avviso e il comando sembra funzionare. Tuttavia, se la chiave nell'insieme di credenziali delle chiavi viene aggiornata in un secondo momento (rinnovo), il servizio Azure Rights Management smetterà di funzionare per il tenant, anche se si esegue nuovamente il comando Use-AadrmKeyVaultKey.
 >
->Assicurarsi di specificare la versione e il nome della chiave quando si esegue questo comando. È possibile usare il comando [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault\get-azurekeyvaultkey) dell'insieme di credenziali delle chiavi di Azure per ottenere il numero di versione della chiave corrente. Ad esempio: `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
+>Assicurarsi di specificare la versione e il nome della chiave quando si esegue questo comando. È possibile usare il comando [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault\get-azurekeyvaultkey) dell'insieme di credenziali delle chiavi di Azure per ottenere il numero di versione della chiave corrente. ad esempio `Get-AzureKeyVaultKey -VaultName 'contosorms-kv' -KeyName 'contosorms-byok'`
 
 Per verificare se l'URL della chiave è impostato correttamente per Azure Information Protection: in Azure Key Vault, eseguire [Get-AzureKeyVaultKey](/powershell/module/azurerm.keyvault\get-azurekeyvaultkey) per visualizzare l'URL della chiave.
 

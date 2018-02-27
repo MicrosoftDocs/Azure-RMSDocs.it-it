@@ -4,7 +4,7 @@ description: Istruzioni per l'attivazione della protezione nel portale di Azure,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.custom: askipteam
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4c492f3a9075d5c560c2ec83b1371dc374b77bba
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: 709af7b7484c39fc52ec60394641656761ad5c5d
+ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-portal"></a>Attivare Azure Rights Management dal portale di Azure
 
@@ -27,7 +27,7 @@ Usare queste istruzioni se si desidera attivare il servizio di Azure Rights Mana
 
 1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**.
     
-    Ad esempio, nel menu hub fare clic su **More services** (Altre informazioni) e iniziare a digitare **Information** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
     
     Se non si è ancora eseguito l'accesso al pannello Azure Information Protection, vedere i [passaggi aggiuntivi](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time) che è necessario eseguire una sola volta per aggiungere questo pannello al portale.
     

@@ -4,7 +4,7 @@ description: Dettagli tecnici sui tipi di file supportati, le estensioni di file
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e1adb23e00b447d5633b37b310e3b9ce96d0becf
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: e9b281fbce9ad423249137c5dfff5a6f88dd2178
+ms.sourcegitcommit: bf3967c5b74d2bc57b0f93239a297ccd56682178
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guida dell'amministratore: Tipi di file supportati dal client Azure Information Protection
 
@@ -30,7 +30,7 @@ Il client Azure Information Protection permette di applicare quanto segue a docu
 
 - Solo protezione
 
-Usare le informazioni seguenti per verificare quali tipi di file sono supportati, i diversi livelli di protezione e come modificare il livello di protezione predefinito, nonché quali file vengono automaticamente esclusi (ignorati) dalla classificazione e dalla protezione.
+Usare le informazioni seguenti per verificare quali tipi di file sono supportati dal client di Azure Information Protection, comprendere i diversi livelli di protezione e come modificare il livello di protezione predefinito e individuare quali file vengono automaticamente esclusi (ignorati) dalla classificazione e dalla protezione.
 
 ## <a name="file-types-supported-for-classification-only"></a>Tipi di file supportati solo per la classificazione
 
@@ -38,13 +38,9 @@ I tipi di file seguenti possono essere classificati anche se non sono protetti.
 
 - **Adobe Portable Document Format**: .pdf
 
-- **Microsoft Visio**: .vsdx, .vsdm, .vssx, .vssm, .vsd, .vdw, .vst
-
 - **Microsoft Project**: .mpp, .mpt
 
 - **Microsoft Publisher**: .pub
-
-- **Microsoft Office 97, Office 2010, Office 2003**: .xls, .xlt, .doc, .dot, .ppt, .pps, .pot
 
 - **Microsoft XPS**: .xps .oxps
 
@@ -55,6 +51,12 @@ I tipi di file seguenti possono essere classificati anche se non sono protetti.
 - **Adobe Photoshop**: .psd
 
 - **Digital Negative**: .dng
+
+- **Microsoft Office**: i tipi di file nella tabella seguente:
+    
+    |Tipo di file Office|Tipo di file Office|
+    |----------------------------------|----------------------------------|
+    |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vdw<br /><br />.vsd<br /><br />.vsdm|.vsdx<br /><br />.vss<br /><br />.vssm<br /><br />.vst<br /><br />.vstm<br /><br />.vssx<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx|
 
 Tipi di file aggiuntivi supportano la classificazione anche quando sono protetti. Per altre informazioni su questi file, vedere la sezione [Tipi di file supportati per la classificazione e la protezione](#supported-file-types-for-classification-and-protection).
 
@@ -69,7 +71,7 @@ Il client Azure Information Protection supporta la protezione a due livelli dive
 |Tipo di protezione|Nativo|Generico|
 |----------------------|----------|-----------|
 |Descrizione|Per file di testo e immagine, file di Microsoft Office (Word, Excel e PowerPoint), file con estensione pdf e altri tipi di file di applicazione che supportano un servizio Rights Management, la protezione nativa offre un forte livello di protezione che include crittografia e applicazione di diritti (autorizzazioni).|Per tutte le altre applicazioni e tipi di file, la protezione generica fornisce un livello di protezione che include sia l’incapsulamento di file mediante l'autenticazione e il tipo di file .pfile per verificare se un utente è autorizzato per aprire il file.|
-|Protezione|La protezione dei file viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che ricevono il file tramite posta elettronica o a cui viene concesso l'accesso al file tramite autorizzazioni di file o condivisione.<br /><br />- Inoltre, vengono applicati tutti i diritti di utilizzo e i criteri impostati dal proprietario del contenuto per i file protetti quando viene eseguito il rendering del contenuto nel visualizzatore Azure Information Protection (per i file di testo e immagine protetti) o nell'applicazione associata (per tutti gli altri tipi di file supportati).|La protezione dei file viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che sono autorizzati ad aprire il file e a cui viene concesso l'accesso al file. Se l'autorizzazione ha esito negativo, il file non si apre.<br /><br />- Vengono visualizzati i diritti di utilizzo e i criteri impostati dal proprietario del contenuto per comunicare agli utenti autorizzati i criteri di utilizzo previsti.<br /><br />- Viene effettuata la registrazione di controllo dell'apertura di file e dell'accesso a questi da parte di utenti autorizzati. I diritti di utilizzo, tuttavia, non vengono applicati.|
+|Protezione|La protezione dei file viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che ricevono il file tramite posta elettronica o a cui viene concesso l'accesso al file tramite autorizzazioni di file o condivisione.<br /><br />- Vengono anche applicati tutti i diritti di utilizzo e i criteri impostati dal proprietario del contenuto al momento dell'applicazione della protezione ai file quando viene eseguito il rendering del contenuto nel visualizzatore Azure Information Protection (per i file di testo e immagine protetti) o nell'applicazione associata (per tutti gli altri tipi di file supportati).|La protezione dei file viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che sono autorizzati ad aprire il file e a cui viene concesso l'accesso al file. Se l'autorizzazione ha esito negativo, il file non si apre.<br /><br />- Vengono visualizzati i diritti di utilizzo e i criteri impostati dal proprietario del contenuto per comunicare agli utenti autorizzati i criteri di utilizzo previsti.<br /><br />- Viene effettuata la registrazione di controllo dell'apertura di file e dell'accesso a questi da parte di utenti autorizzati. I diritti di utilizzo, tuttavia, non vengono applicati.|
 |Impostazione predefinita per i tipi di file|Questo è il livello predefinito di protezione per i tipi di file seguenti:<br /><br />- File di testo e immagine<br /><br />- File di Microsoft Office (Word, Excel, PowerPoint)<br /><br />- Formato di documento portatile (.pdf)<br /><br />Per altre informazioni, vedere la sezione che segue, [Tipi di file supportati per la classificazione e la protezione](#supported-file-types-for-classification-and-protection).|Questa è la protezione predefinita per tutti gli altri tipi di file (ad esempio i file con estensione vsdx, rtf e così via) che non sono supportati dalla protezione nativa.|
 
 È possibile modificare il livello di protezione predefinito applicato dal client Azure Information Protection. È possibile modificare il livello predefinito da nativo a generico, da generico a nativo e anche impedire al client Azure Information Protection di applicare la protezione. Per altre informazioni, vedere la sezione [Modifica del livello di protezione predefinito dei file](#changing-the-default-protection-level-of-files) in questo articolo.
@@ -101,7 +103,7 @@ La tabella seguente elenca un subset di tipi di file che supportano la protezion
 Questi tipi di file vengono identificati separatamente perché quando sono protetti in modo nativo l'estensione del nome file originale viene modificata e i file diventano di sola lettura. Si noti che se i file sono protetti in modo generico, l'estensione del nome file originale viene sempre modificata in pfile.
 
 > [!WARNING]
-> Se si dispone di firewall, proxy web o software di protezione che esaminano e agiscono in base alle estensioni di file, potrebbe essere necessario riconfigurare tali impostazioni per supportare queste nuove estensioni di file.
+> Se si dispone di firewall, proxy Web o software di protezione che esaminano e agiscono in base alle estensioni di file, potrebbe essere necessario riconfigurare tali software e dispositivi di rete per supportare queste nuove estensioni.
 
 |Estensione dei file originali|Estensione dei file protetti|
 |--------------------------------|-------------------------------------|
@@ -126,7 +128,7 @@ Per questi file, l'estensione del nome di file rimane invariata dopo che il file
 
 |Tipi di file supportati da Office|Tipi di file supportati da Office|
 |----------------------------------|----------------------------------|
-|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.pptx<br /><br />.thmx|.vsdm<br /><br />.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
+|.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vsdm|.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
 
 
 ### <a name="changing-the-default-protection-level-of-files"></a>Modifica del livello di protezione predefinito dei file
@@ -138,9 +140,9 @@ Motivi per cui è possibile eseguire questa operazione:
 
 - Per ospitare i sistemi di sicurezza che intervengono sui file tramite l'estensione del nome di file e possono essere riconfigurati per adattare l'estensione .pfile ma non possono essere riconfigurati per gestire più estensioni di nome di file per la protezione nativa.
 
-Analogamente, è possibile forzare il client Azure Information Protection ad applicare la protezione nativa ai file ai quali, per impostazione predefinita, viene applicata la protezione generica. Questo potrebbe essere appropriato se si dispone di un'applicazione che supporta APIs RMS, ad esempio, un'applicazione line-of-business scritta per gli sviluppatori interni o un'applicazione acquistata da un fornitore di software indipendenti (ISV).
+Analogamente, è possibile forzare il client Azure Information Protection ad applicare la protezione nativa ai file ai quali, per impostazione predefinita, viene applicata la protezione generica. Questa azione potrebbe essere appropriata se si ha un'applicazione che supporta le API RMS, ad esempio, un'applicazione line-of-business scritta da sviluppatori interni oppure acquistata da un fornitore di software indipendente (ISV).
 
-È anche possibile forzare il client Azure Information Protection a bloccare la protezione dei file, ovvero a non applicare la protezione nativa o quella generica. Ad esempio, questa potrebbe essere necessaria se si dispone di un'applicazione automatica o di un servizio che deve essere in grado di aprire un file specifico per elaborare il relativo contenuto. Quando si blocca la protezione per un tipo di file, gli utenti non possono usare il client Azure Information Protection per proteggere un file del tipo specificato. Quando tentano, viene visualizzato un messaggio in base al quale l'amministratore ha impedito la protezione ed è necessario annullare la loro azione per proteggere il file.
+È anche possibile forzare il client Azure Information Protection a bloccare la protezione dei file, ovvero a non applicare la protezione nativa o quella generica. Ad esempio, questa azione potrebbe essere necessaria se si ha un'applicazione automatica o un servizio che deve essere in grado di aprire un file specifico per elaborare il relativo contenuto. Quando si blocca la protezione per un tipo di file, gli utenti non possono usare il client Azure Information Protection per proteggere un file del tipo specificato. Quando tentano, viene visualizzato un messaggio in base al quale l'amministratore ha impedito la protezione ed è necessario annullare la loro azione per proteggere il file.
 
 Per configurare il client Azure Information Protection per l'applicazione della protezione generica a tutti i file per impostazione predefinita, apportare le modifiche seguenti al Registro di sistema. Se la chiave FileProtection non esiste, è necessario crearla manualmente.
 
@@ -164,7 +166,7 @@ Queste due impostazioni hanno come risultato l'applicazione della protezione gen
 
 3. Nella nuova chiave aggiunta per il tipo di file, ad esempio **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\DOCX**, creare un nuovo valore stringa denominato **Encryption** con valore **Native**.
 
-Come conseguenza di queste impostazioni, a tutti i file viene applicata la protezione generica, ad eccezione dei file con estensione docx, che vengono protetti in modo nativo dal client Azure Information Protection.
+In seguito a queste impostazioni, tutti i file sono protetti in modo generico ad eccezione dei file con estensione docx, che sono protetti in modo nativo dal client di Azure Information Protection.
 
 Ripetere questi tre passaggi per altri tipi di file da definire come eccezioni, in quanto supportano la protezione nativa e non si vuole vengano protetti in modo generico dal client Azure Information Protection.
 
@@ -215,7 +217,7 @@ I file contenitore sono file che contengono altri file, ad esempio i file con es
 Se è presente un file contenitore che include file classificati e protetti, è necessario estrarre i file per modificarne le impostazioni di classificazione o protezione. È possibile tuttavia rimuovere la protezione per tutti i file contenuti nei file contenitore supportati usando il cmdlet [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile).
 
 ## <a name="next-steps"></a>Passaggi successivi
-Dopo aver identificato i tipi di file supportati dal client Azure Information Protection, vedere gli argomenti seguenti per altre informazioni che potrebbero essere necessarie per supportare il client:
+Dopo aver identificato i tipi di file supportati dal client di Azure Information Protection, vedere le risorse seguenti per altre informazioni che potrebbero essere necessarie per supportare il client:
 
 - [Personalizzazioni](client-admin-guide-customizations.md)
 

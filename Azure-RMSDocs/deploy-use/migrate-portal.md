@@ -4,7 +4,7 @@ description: "Panoramica delle attività di amministrazione nel portale di Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 5f160d766abb4a81864ac1ff466362b8ae24027d
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: 25604d8537aedb4421b460850ce34723c8047964
+ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Attività che precedentemente venivano eseguite con il portale di Azure classico
 
@@ -37,7 +37,7 @@ Per gestire i modelli, i clienti con una sottoscrizione per Office 365 US Govern
 
 |Portale di Azure classico|Come eseguire questa operazione nel portale di Azure
 |-----------|--------------------|
-|Accedere alle impostazioni di configurazione per la prima volta|1. [Accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal).<br /><br />2. Nel menu hub fare clic su **Nuovo** e quindi, nell'elenco **Marketplace**, selezionare **Sicurezza e identità**.<br /><br />3. Nell'elenco **App in primo piano** del pannello **Sicurezza e identità** selezionare **Azure Information Protection**. Quindi fare clic su **Crea** nel pannello **Azure Information Protection**.<br /><br />Questa azione consente di creare il pannello **Azure Information Protection** in modo che al successivo accesso al portale sarà possibile selezionare il servizio dall'elenco **Altri servizi** dell'hub.
+|Accedere alle impostazioni di configurazione per la prima volta|1. [Accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal).<br /><br />2. Nel menu hub fare clic su **Crea una risorsa**, quindi nell'elenco **Marketplace** selezionare **Sicurezza e identità**.<br /><br />3. Nell'elenco **App in primo piano** del pannello **Sicurezza e identità** selezionare **Azure Information Protection**. Quindi fare clic su **Crea** nel pannello **Azure Information Protection**.<br /><br />Questa azione consente di creare il pannello **Azure Information Protection** in modo che al successivo accesso al portale sia possibile selezionare il servizio dall'elenco **Tutti i servizi** dell'hub.
 |Creare un nuovo modello|Creare un'etichetta che applica la protezione e usare **Impostare le autorizzazioni** per definire le autorizzazioni, la scadenza e l'accesso offline. <br /><br />Dietro le quinte, la configurazione crea un nuovo modello predefinito accessibile dai servizi e dalle applicazioni che si integrano con i modelli di Rights Management.<br /><br />Per altre informazioni, vedere [Per creare un nuovo modello](configure-policy-templates.md#to-create-a-new-template).
 |Modificare le proprietà del modello: <br /><br />- Nome e descrizione del modello<br /><br />- Diritti di utilizzo, scadenza del contenuto e impostazioni di accesso offline|Se non è già stato fatto, [convertire il modello in etichetta](configure-policy-templates.md#to-convert-templates-to-labels) e quindi eseguire le operazioni seguenti<br /><br />1. Modificare il nome e la descrizione dell'etichetta<br /><br />2. Modificare le impostazioni di protezione dell'etichetta per aggiornare le autorizzazioni, la scadenza e le impostazioni dell'accesso offline.<br /><br />Per altre informazioni, vedere [Per configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md#to-configure-a-label-for-rights-management-protection).
 |Archiviare un modello|Impostare lo stato dell'etichetta su **Disabilitato**.

@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire lo scanner di Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/14/2018
+ms.date: 02/16/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 02257ddd15886d01aa0e4e8c136078fb21bb4875
-ms.sourcegitcommit: 2733b1df2ebdda02b60d9471db29e545552f99ff
+ms.openlocfilehash: bfe4074710bd93c92e383056f587994ec805b6c2
+ms.sourcegitcommit: 4234de57201411cd9b292492fddc683df0e6b4cc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -50,7 +50,7 @@ Prima di installare lo scanner di Azure Information Protection, verificare che i
 |Requisito|Altre informazioni|
 |---------------|--------------------|
 |Computer Windows Server per eseguire il servizio scanner:<br /><br />- 4 processori<br /><br />- 4 GB di RAM|Windows Server 2016 o Windows Server 2012 R2. <br /><br />Nota: per scopi di test o valutazione in un ambiente non di produzione, è possibile usare un sistema operativo client Windows [supportato dal client di Azure Information Protection](../get-started/requirements.md#client-devices).<br /><br />Il computer può essere un computer fisico o virtuale con una connessione di rete veloce e affidabile agli archivi dati da analizzare. <br /><br />Verificare che il computer abbia la [connettività Internet](../get-started/requirements.md#firewalls-and-network-infrastructure) necessaria per Azure Information Protection. In alternativa, è necessario configurarlo come [computer disconnesso](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). |
-|SQL Server per archiviare la configurazione dello scanner:<br /><br />- Istanza locale o remota|SQL Server 2012 è la versione minima per le edizioni seguenti:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express|
+|SQL Server per archiviare la configurazione dello scanner:<br /><br />- Istanza locale o remota<br /><br />- Ruolo Sysadmin per installare lo scanner|SQL Server 2012 è la versione minima per le edizioni seguenti:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />L'account che installa lo scanner richiede le autorizzazioni di scrittura nel database master (deve essere un membro del ruolo db_datawriter). Il processo di installazione concede il ruolo db-owner all'account del servizio che esegue lo scanner. In alternativa, è possibile creare manualmente il database AzInfoProtectionScanner prima di installare lo scanner e assegnare il ruolo db-owner all'account del servizio scanner.|
 |Account del servizio per eseguire il servizio scanner|Questo account deve essere un account di Active Directory sincronizzato con Azure AD, con i seguenti requisiti aggiuntivi:<br /><br />- Diritto di **accesso locale**. Questo diritto è richiesto per l'installazione e la configurazione dello scanner, ma non per il funzionamento. È necessario concedere questo diritto all'account del servizio, ma è possibile rimuoverlo dopo avere verificato che lo scanner è in grado di individuare, classificare e proteggere i file. <br /><br />Nota: se criteri interni non consentono agli account del servizio di disporre di questo diritto, ma è possibile concedere il diritto di **Accesso come processo batch**, è possibile soddisfare il requisito tramite una configurazione aggiuntiva. Per istruzioni, vedere [Specify and use the Token parameter for Set-AIPAuthentication](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) (Specificare e usare il parametro Token per Set-AIPAuthentication) nella Guida dell'amministratore.<br /><br />- Diritto di **accesso come servizio**. Questo diritto viene concesso automaticamente all'account del servizio durante l'installazione dello scanner ed è richiesto per l'installazione, la configurazione e il funzionamento dello scanner. <br /><br />- Autorizzazioni per i repository di dati: è necessario concedere le autorizzazioni per la **lettura** e la **scrittura** per analizzare i file e quindi applicare la classificazione e la protezione ai file che soddisfano le condizioni indicate nei criteri di Azure Information Protection. Per eseguire lo scanner solo in modalità di individuazione, è sufficiente l'autorizzazione per la **lettura**.<br /><br />- Per le etichette che riproteggono o rimuovono la protezione: per garantire che lo scanner abbia sempre accesso ai file protetti, trasformare l'account in un [utente con privilegi avanzati](configure-super-users.md) per il servizio Azure Rights Management e verificare che sia abilitata la funzionalità per utenti con privilegi avanzati. Per altre informazioni sui requisiti dell'account per l'applicazione della protezione, vedere [Preparazione di utenti e gruppi per Azure Information Protection](../plan-design/prepare.md).|
 |Lo scanner di Azure Information Protection è installato nel computer Windows Server|Attualmente, lo scanner di Azure Information Protection è un download distinto denominato **AzInfoProtectionScanner.exe** nell'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Le versioni successive dello scanner saranno incluse nel client di Azure Information Protection.|
 |Etichette configurate che applicano la classificazione automatica e, facoltativamente, la protezione|Per altre informazioni sulle modalità di configurazione delle condizioni, vedere [Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection](configure-policy-classification.md).<br /><br />Per altre informazioni sulla configurazione delle etichette che applicano la protezione ai file, vedere [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md).<br /><br />Queste etichette possono essere nei criteri globali oppure in uno o più [criteri con ambito](configure-policy-scope.md).|

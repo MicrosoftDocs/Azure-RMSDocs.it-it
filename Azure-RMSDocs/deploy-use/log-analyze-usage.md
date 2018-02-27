@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cf919749b74727412ab6fa76cc52a5c71b69efcd
-ms.sourcegitcommit: fc789ce08821e031d3a2b22d850b4318302d3585
+ms.openlocfilehash: 09d076299f70718b65bb3746486f559a880a2660
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registrazione e analisi dell'utilizzo del servizio Azure Rights Management
 
@@ -67,7 +67,7 @@ Il servizio Azure Rights Management scrive i log nell'account di archiviazione d
 
 In seguito a un'azione di Azure Rights Management, la visualizzazione dei log nell'account di archiviazione può richiedere un po' di tempo. La maggior parte dei log viene visualizzata entro 15 minuti. È consigliabile scaricare i log in uno spazio di archiviazione locale, ad esempio una cartella o un database, oppure in un repository MapReduce.
 
-Per scaricare i log dell'utilizzo, verrà usato il modulo di amministrazione di Azure Rights Management per Windows PowerShell. Per istruzioni di installazione, vedere [Installazione di Windows PowerShell per Azure Rights Management](install-powershell.md). Se il modulo Windows PowerShell è stato scaricato in precedenza, eseguire il comando seguente per verificare che il numero di versione in uso sia almeno **2.4.0.0**: `(Get-Module aadrm -ListAvailable).Version` 
+Per scaricare i log dell'utilizzo, verrà usato il modulo di amministrazione di Azure Rights Management per Windows PowerShell. Per le istruzioni di installazione, vedere [Installazione del modulo PowerShell AADRM](install-powershell.md). Se il modulo Windows PowerShell è stato scaricato in precedenza, eseguire il comando seguente per verificare che il numero di versione in uso sia almeno **2.4.0.0**: `(Get-Module aadrm -ListAvailable).Version` 
 
 ### <a name="to-download-your-usage-logs-by-using-powershell"></a>Per scaricare i log dell'utilizzo con PowerShell
 
