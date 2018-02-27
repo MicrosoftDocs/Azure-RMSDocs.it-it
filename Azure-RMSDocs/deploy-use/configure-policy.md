@@ -4,7 +4,7 @@ description: "Per configurare le funzioni di classificazione, aggiunta di etiche
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6b0556755597fe20755e7b798a24498a780b87b5
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: 67d38d19408c67c5da8db188395e00a7d3f9d999
+ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -63,11 +63,11 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
 
 1. Accedere al portale di Azure.
 
-2. Nel menu hub fare clic su **Nuovo** e quindi, nell'elenco **Marketplace**, selezionare **Sicurezza e identità**. 
+2. Nel menu hub fare clic su **Crea una risorsa**, quindi nell'elenco **Marketplace** selezionare **Sicurezza e identità**. 
     
 3. Nell'elenco **App in primo piano** del pannello **Sicurezza e identità** selezionare **Azure Information Protection**. Quindi fare clic su **Crea** nel pannello **Azure Information Protection**.
     
-    Questa azione consente di creare il pannello **Azure Information Protection** per il tenant, in modo che al successivo accesso al portale sia possibile selezionare il servizio dall'elenco **Altri servizi** dell'hub. 
+    Questa azione consente di creare il pannello **Azure Information Protection** per il tenant, in modo che al successivo accesso al portale sia possibile selezionare il servizio dall'elenco **Tutti i servizi** dell'hub. 
     
     > [!TIP] 
     > Selezionare **Aggiungi al dashboard** per creare un riquadro **Azure Information Protection** nel dashboard, in modo da ignorare la ricerca del servizio al successivo accesso al portale.
@@ -80,7 +80,7 @@ Quando si accede di nuovo al pannello **Azure Information Protection** viene sel
 
 1. Assicurarsi di avere eseguito l'accesso al portale di Azure usando uno di questi ruoli amministrativi: Amministratore di Information Protection, Amministratore della sicurezza o Amministratore globale. Vedere la [sezione precedente](#signing-in-to-the-azure-portal) per altre informazioni su questi ruoli amministrativi.
 
-2. Se necessario, passare al pannello **Azure Information Protection**: ad esempio, nel menu hub fare clic su **Altri servizi** e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
+2. Se necessario, passare al pannello **Azure Information Protection**: ad esempio, nel menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
     
     Il pannello **Azure Information Protection - Criteri globali** viene aperto automaticamente per consentire di visualizzare e modificare i criteri globali disponibili per tutti gli utenti. 
     

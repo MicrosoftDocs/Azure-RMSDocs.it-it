@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 92e4f6c05378b36165db0628f14941b0ccd26cb7
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: a62c8c1c27855b25e5de69bd162d524bf1851890
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guida dell'amministratore: Installare il client Azure Information Protection per gli utenti
 
@@ -158,7 +158,7 @@ Usare la procedura seguente per identificare il valore da specificare per il par
 
 1. Da una sessione di PowerShell eseguire prima di tutto [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) e specificare le credenziali di amministratore per connettersi al servizio Azure Rights Management. Eseguire quindi [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration). 
  
-    Se non è stato ancora installato il modulo di PowerShell per il servizio Azure Rights Management, vedere [Installazione di Windows PowerShell per Azure Rights Management](../deploy-use/install-powershell.md).
+    Se non è stato ancora installato il modulo di PowerShell per il servizio Azure Rights Management, vedere [Installazione del modulo PowerShell AADRM](../deploy-use/install-powershell.md).
 
 2. Nell'output identificare il valore **LicensingIntranetDistributionPointUrl** .
 

@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: A1C99424-D986-4A5A-B2E1-6D18EEF11B21
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: 833cd9ea62b33c780eb40288784880962585cb38
-ms.sourcegitcommit: 0fd2e63822280ec96ab957e22868c63de9ef3d47
+ms.openlocfilehash: a75b67f72410170500bf9ad3b93bdd6165c5af2d
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="add-aadrmkey"></a>Add-AadrmKey
 
@@ -24,5 +24,5 @@ Questo cmdlet viene ora rimosso dalla versione più recente del modulo Azure Rig
 
 Usare in alternativa [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey). Per altre informazioni, vedere [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](../plan-design/plan-implement-tenant-key.md).
 
-Aggiornare anche la versione del modulo in modo che sia **2.9.0.0** o successiva. Per le istruzioni, vedere [Installazione di Windows PowerShell per Microsoft Azure Rights Management](install-powershell.md).
+Aggiornare anche la versione del modulo in modo che sia **2.9.0.0** o successiva. Per le istruzioni, vedere [Installazione del modulo PowerShell AADRM](install-powershell.md).
 

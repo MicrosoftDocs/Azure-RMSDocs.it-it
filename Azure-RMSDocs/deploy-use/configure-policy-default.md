@@ -4,17 +4,17 @@ description: "Informazioni sulla configurazione dei criteri predefiniti per Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/23/2017
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: 86b04d47797f7e3201dd4fd7b7e5a9c662254d12
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: da8557be0a70cee0e7a207a8ed285f6e843ac626
+ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Criteri predefiniti di Azure Information Protection
 
@@ -30,7 +30,7 @@ Quando un amministratore si connette per la prima volta al servizio Azure Inform
 
 Questa versione dei criteri predefiniti è del 31 luglio 2017.
 
-Il criterio predefinito viene creato solo se il servizio Azure Rights Management è stato attivato quando il criterio è stato creato. Se questo servizio non è stato attivato, il criterio predefinito non configurerà la protezione per le seguenti etichette secondarie:
+Il criterio predefinito viene creato solo se il servizio Azure Rights Management è stato [attivato](activate-service.md) quando il criterio è stato creato. Se questo servizio non è stato attivato, il criterio predefinito non configurerà la protezione per le seguenti etichette secondarie:
 
 - **Riservato\Tutti i dipendenti**
 
@@ -46,7 +46,7 @@ Quando viene applicata alle etichette secondarie per **Tutti i dipendenti**, la 
 
 Dal 30 agosto 2017 questa versione dei criteri predefiniti include versioni in più lingue dei nomi delle etichette e delle descrizioni. 
 
-#### <a name="more-information-about-the-recipients-only-sub-label"></a>Ulteriori informazioni sull'etichetta secondaria Solo i destinatari
+#### <a name="more-information-about-the-recipients-only-sublabel"></a>Ulteriori informazioni sull'etichetta secondaria Solo i destinatari
 
 Gli utenti vedono questa etichetta solo in Outlook. Non visualizzano questa etichetta in Word, Excel, PowerPoint o da Esplora File. 
 
@@ -64,7 +64,7 @@ Quando gli utenti selezionano questa etichetta, l'opzione Non inoltrare di Outlo
 |Highly Confidential (Riservatezza elevata)|Dati aziendali particolarmente riservati che potrebbero causare danni all'azienda se condivisi con utenti non autorizzati. Sono esempi di questo tipo di contenuto le informazioni su dipendenti e clienti, le password, il codice sorgente e i rendiconti finanziari preannunciati.|**Abilitato**: on <br /><br />**Colore**: rosso<br /><br />**Contrassegni visivi**: off<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 
 
-### <a name="sub-labels"></a>Etichette secondarie
+### <a name="sublabels"></a>Etichette secondarie
 
 |Label|Descrizione comando|Impostazioni|
 |-------------------------------|---------------------------|-----------------|
@@ -84,7 +84,7 @@ Le autorizzazioni di protezione corrispondono a quelle del [modello predefinito]
 
 ### <a name="information-protection-bar"></a>Barra Information Protection
 
-|Impostazioni|Valore|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
 |Titolo|Sensibilità|
 |Descrizione comando|Etichetta corrente per questo contenuto. Questa impostazione identifica il rischio per l'azienda se questo contenuto è condiviso con persone non autorizzate all'interno o all'esterno dell'organizzazione.|
@@ -92,7 +92,7 @@ Le autorizzazioni di protezione corrispondono a quelle del [modello predefinito]
 
 ### <a name="settings"></a>Impostazioni
 
-|Impostazioni|Valore|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
 |Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta applicata automaticamente o dagli utenti|Off|
 |Selezionare l'etichetta predefinita|Nessuno|
@@ -117,7 +117,7 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 |Highly Confidential (Riservatezza elevata)|Dati aziendali particolarmente riservati che potrebbero causare danni all'azienda se condivisi con utenti non autorizzati. Sono esempi di questo tipo di contenuto le informazioni su dipendenti e clienti, le password, il codice sorgente e i rendiconti finanziari preannunciati.|**Abilitato**: on <br /><br />**Colore**: rosso<br /><br />**Contrassegni visivi**: off<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 
 
-### <a name="sub-labels"></a>Etichette secondarie
+### <a name="sublabels"></a>Etichette secondarie
 
 |Label|Descrizione comando|Impostazioni|
 |-------------------------------|---------------------------|-----------------|
@@ -128,7 +128,7 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 
 ### <a name="information-protection-bar"></a>Barra Information Protection
 
-|Impostazioni|Valore|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
 |Titolo|Sensibilità|
 |Descrizione comando|Etichetta corrente per questo contenuto. Questa impostazione identifica il rischio per l'azienda se questo contenuto è condiviso con persone non autorizzate all'interno o all'esterno dell'organizzazione.|
@@ -136,7 +136,7 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 
 ### <a name="settings"></a>Impostazioni
 
-|Impostazioni|Valore|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
 |Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta applicata automaticamente o dagli utenti|Off|
 |Selezionare l'etichetta predefinita|Nessuno|
@@ -157,7 +157,7 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 |Secret (Segreto)|Questi dati includono informazioni estremamente riservate dell'azienda, che devono essere protette. L'esposizione dei dati segreti a utenti non autorizzati potrebbe arrecare un grave danno all'organizzazione. Sono informazioni segrete, ad esempio, i dati di identificazione personale, i record dei clienti, il codice sorgente e i rendiconti finanziari annunciati in anticipo.|**Abilitato**: on <br /><br />**Colore**: rosso<br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica):<br /><br /> Riservatezza: Secret (Segreto)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 
 
-### <a name="sub-labels"></a>Etichette secondarie
+### <a name="sublabels"></a>Etichette secondarie
 
 |Label|Descrizione comando|Impostazioni|
 |-------------------------------|---------------------------|-----------------|
@@ -166,7 +166,7 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 
 ### <a name="information-protection-bar"></a>Barra Information Protection
 
-|Impostazioni|Valore|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
 |Titolo|Sensibilità|
 |Descrizione comando|La riservatezza delle informazioni è suddivisa in quattro livelli, ovvero Public (Pubblico), Internal (Interno), Confidential (Riservato) e Secret (Segreto), che consentono di identificare il rischio derivante dall'esposizione delle informazioni a utenti non autorizzati all'interno o all'esterno dell'azienda.|
@@ -174,7 +174,7 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 
 ### <a name="settings"></a>Impostazioni
 
-|Impostazioni|Valore|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
 |Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta applicata automaticamente o dagli utenti|Off|
 |Selezionare l'etichetta predefinita|Nessuno|

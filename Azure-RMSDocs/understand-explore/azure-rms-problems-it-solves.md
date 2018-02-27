@@ -4,7 +4,7 @@ description: Identificare i requisiti o i possibili problemi dell'organizzazione
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: b551c62d-5ac6-4359-85b3-90693e77b37f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0bf2b22e7297a18c035431ef42359c305095f33d
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 76ffef5259d9ecc16f78cbcde40862d7686b714c
+ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="what-problems-does-azure-rms-solve"></a>Problemi risolti da Azure RMS
 
@@ -35,7 +35,7 @@ Azure RMS è la tecnologia di protezione usata da [Azure Information Protection]
 |Supporto di tutti i dispositivi di uso comune e non solo dei computer Windows|√ I [dispositivi supportati](../get-started/requirements-client-devices.md) includono:<br /><br />- Computer e telefoni Windows<br /><br />- Computer Mac<br /><br />- Tablet e telefoni iOS<br /><br />- Tablet e telefoni Android|
 |Supporto della collaborazione business-to-business|√ Poiché Azure Rights Management è un servizio cloud, per poter condividere contenuti protetti con altre organizzazioni non è necessario configurare esplicitamente trust con queste ultime. Se queste organizzazioni dispongono già di una directory di Office 365 o di Azure AD, la collaborazione tra organizzazioni è supportata automaticamente. In caso contrario, gli utenti possono registrarsi per ottenere una sottoscrizione gratuita a [RMS per utenti singoli](rms-for-individuals.md).|
 |Supporto per servizi locali e per Office 365|√ Oltre a garantire [facile integrazione con Office 365](office-apps-services-support.md), Azure Rights Management può essere usato anche con i servizi locali seguenti quando si distribuisce il [connettore RMS](../deploy-use/deploy-rms-connector.md):<br /><br />- Exchange Server 2016<br /><br />- SharePoint Server<br /><br />- Windows Server con la funzionalità Infrastruttura di classificazione file|
-|Facilità di attivazione|√ L'[attivazione del servizio Rights Management](../deploy-use/activate-service.md) per gli utenti richiede solo pochi clic nel portale di gestione. In alternativa, se si preferisce il controllo della riga di comando, sono sufficienti due comandi di PowerShell.|
+|Facilità di attivazione|√ Per le nuove sottoscrizioni, l'attivazione è automatica. Per le sottoscrizione esistenti, è possibile [attivare il servizio Rights Management](../deploy-use/activate-service.md) con solo pochi clic nel portale di gestione. In alternativa, se si preferisce il controllo della riga di comando, sono sufficienti due comandi di PowerShell.|
 |Scalabilità a livello di intera organizzazione, in base alle esigenze|√ Poiché Azure Rights Management viene eseguito come servizio cloud e offre l'elasticità tipica di Azure in termini di scalabilità verticale e orizzontale, non è necessario effettuare il provisioning di server locali aggiuntivi o distribuire tali server.|
 |Possibilità di creare criteri semplici e flessibili|√ I [Modelli di protezione personalizzati](../deploy-use/configure-policy-templates.md) forniscono agli amministratori una soluzione rapida e semplice per applicare i criteri e permettono agli utenti di usare il livello di protezione corretto per ciascun documento, nonché di limitare l'accesso al personale dell'organizzazione.<br /><br />Per condividere a livello aziendale un documento sulle strategie, ad esempio, è possibile applicare a tutti i dipendenti interni un criterio di sola lettura. Nel caso di un documento più riservato, ad esempio un report finanziario, è possibile consentire l'accesso ai soli dirigenti dell'azienda.|
 |Supporto esteso per applicazioni|√ Azure Rights Management offre una stretta integrazione con applicazioni e servizi di Microsoft Office ed estende il supporto ad altre applicazioni tramite il [client Azure Information Protection](../rms-client/aip-client.md ).<br /><br />√ Gli [SDK di Azure Information Protection](../develop/developers-guide.md) forniscono agli sviluppatori interni e ai fornitori di software le API necessarie per la creazione di applicazioni personalizzate con supporto per Azure Information Protection.<br /><br />Per altre informazioni, vedere [Altre applicazioni che supportano le API di Rights Management](api-support.md).|

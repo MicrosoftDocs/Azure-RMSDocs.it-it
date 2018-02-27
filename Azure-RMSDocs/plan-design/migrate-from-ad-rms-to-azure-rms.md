@@ -4,7 +4,7 @@ description: "Istruzioni per la migrazione della distribuzione di Active Directo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/16/2017
+ms.date: 02/20/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a65e1178594e14c7d8f4faaedee96d827a9412e5
-ms.sourcegitcommit: 9b975e66b12a3836003c6c4de139ded4bbf370bf
+ms.openlocfilehash: 2ba3ae79308ddee15dc77700b7b660fd4bd91b49
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrazione da AD RMS ad Azure Information Protection
 
@@ -140,9 +140,9 @@ I passaggi della migrazione possono essere suddivisi in cinque fasi eseguibili i
 
 [**FASE 1: PREPARAZIONE DELLA MIGRAZIONE**](migrate-from-ad-rms-phase1.md)
 
-- **Passaggio 1: scaricare Azure Rights Management Administration Tool e identificare l'URL tenant**
+- **Passaggio 1: Installare il modulo PowerShell AADRM e identificare l'URL del tenant**
 
-    Per il processo di migrazione è necessario eseguire uno o più cmdlet di PowerShell dal modulo di Azure RMS installato con Azure RMS Management Administration Tool. È anche necessario conoscere l'URL del servizio Azure Rights Management del tenant per completare molti dei passaggi della migrazione. È possibile identificare questo valore tramite PowerShell.
+    Il processo di migrazione prevede l'esecuzione di uno o più dei cmdlet PowerShell dal modulo AADRM. È necessario conoscere l'URL del servizio Azure Rights Management del tenant per completare molti passaggi necessari per la migrazione ed è possibile identificare questo valore tramite PowerShell.
 
 - **Passaggio 2: Preparare la migrazione client**
 

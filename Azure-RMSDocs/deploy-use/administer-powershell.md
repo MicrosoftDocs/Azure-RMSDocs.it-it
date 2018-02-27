@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 597590dbf33dd43329d27ccadf081e5e8d9fd0b6
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: cdd35669360b172d456254c1e8e9f1d980117cdb
+ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="administering-the-azure-rights-management-service-by-using-windows-powershell"></a>Amministrazione del servizio Azure Rights Management tramite Windows PowerShell
 
@@ -29,7 +29,7 @@ La tabella nella sezione seguente elenca alcuni degli scenari di configurazione 
 Per un elenco completo dei cmdlet disponibili per questo modulo e le relative informazioni, vedere [AADRM](/powershell/module/aadrm/?view=azureipps#aadrm).
 
 > [!NOTE]
-> Per installare questo modulo di PowerShell, vedere [Installazione di Windows PowerShell per Microsoft Azure Rights Management](install-powershell.md).
+> Per installare il modulo PowerShell, vedere [Installazione del modulo PowerShell AADRM](install-powershell.md).
 
 Oltre a questo modulo di PowerShell sul lato servizio, il client Azure Information Protection installa un modulo supplementare di PowerShell, **AzureInformationProtection**. Questo modulo client supporta la classificazione e la protezione di più file in modo che, ad esempio, sia possibile proteggere in blocco tutti i file in una cartella. Per altre informazioni, vedere [Uso di PowerShell con il client Azure Information Protection](../rms-client/client-admin-guide-powershell.md) nella guida dell'amministratore.
 
