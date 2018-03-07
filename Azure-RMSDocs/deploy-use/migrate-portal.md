@@ -4,7 +4,7 @@ description: "Panoramica delle attività di amministrazione nel portale di Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 25604d8537aedb4421b460850ce34723c8047964
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: 066e6e028012aa47953f0fe9ce80556f0f0ac6d4
+ms.sourcegitcommit: bb6be1812beb6adf73203c352f73ef3006416848
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Attività che precedentemente venivano eseguite con il portale di Azure classico
 
@@ -46,7 +46,7 @@ Per gestire i modelli, i clienti con una sottoscrizione per Office 365 US Govern
 |Eliminare un modello|L'eliminazione di modelli può comportare che alcuni dati risultino inaccessibili, pertanto il portale di Azure non supporta questa azione. Tuttavia, è possibile eliminare l'etichetta e quindi usare il cmdlet di PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) per rimuovere il modello. <br /><br />Per altre informazioni, vedere [Come eliminare o riordinare un'etichetta per Azure Information Protection](configure-policy-delete-reorder.md).
 |Supporto per più lingue|Dalla selezione di menu **GESTISCI** selezionare **Lingue** per esportare i campi personalizzabili che includono il nome e la descrizione del modello. Tradurre le stringhe e importarle nel portale. <br /><br />Per altre informazioni, vedere [Come configurare etichette e modelli per varie lingue in Azure Information Protection](configure-policy-languages.md).
 |Report Web di Rights Management|Usare il cmdlet di PowerShell [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog) per scaricare i log di utilizzo per il servizio Azure Rights Management. È quindi possibile usare i dati per creare report personalizzati. <br /><br />Per altre informazioni, vedere [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](log-analyze-usage.md).<br /><br />Suggerimento: cercare gli annunci nel [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection) (Blog su Enterprise Mobility + Security) per una nuova soluzione di creazione di report centralizzata per Azure Information Protection.
-|Attivare e disattivare il servizio Rights Management|Dalle opzioni del menu **GESTISCI** selezionare **Impostazioni di RMS** o **Protection activation** (Attivazione protezione). L'opzione verrà rinominata.<br /><br />Per altre informazioni, vedere [Come attivare Azure Rights Management dal portale di Azure](activate-azure.md).
+|Attivare e disattivare il servizio Rights Management|Scegliere **Attivazione della protezione** dal menu **Gestisci**.<br /><br />Per altre informazioni, vedere [Come attivare Azure Rights Management dal portale di Azure](activate-azure.md).
 
 Prima di modificare i modelli o convertirli in etichette nel portale di Azure, vedere [Considerazioni sui modelli nel portale di Azure](configure-policy-templates.md#considerations-for-templates-in-the-azure-portal).
 
@@ -59,7 +59,7 @@ Nuove funzionalità nel portale di Azure:
 
 - È possibile convertire i modelli in etichette, in modo da gestire un singolo oggetto anziché gestire un modello e un'etichetta separatamente. Per le istruzioni, vedere [Per convertire i modelli in etichette](configure-policy-templates.md#to-convert-templates-to-labels).
 
-- Supporto per altri ruoli amministrativi: mentre prima, per configurare Azure Rights Management, era necessario accedere al portale di Azure classico come amministratore globale, ora è possibile accedere al portale di Azure per configurare Azure Information Protection tramite un account con uno dei ruoli amministrativi seguenti: Amministratore globale, Amministratore della sicurezza o Amministratore di Information Protection. Per altre informazioni su ciascuno di questi ruoli, vedere la sezione [Ruoli disponibili](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) della documentazione di Azure Active Directory.
+- Supporto per altri ruoli amministrativi: mentre prima, per configurare Azure Rights Management, era necessario accedere al portale di Azure classico come amministratore globale, ora è possibile accedere al portale di Azure per configurare Azure Information Protection tramite un account con uno dei ruoli amministrativi seguenti: **Amministratore globale**, **Amministratore della sicurezza** o **Amministratore di Information Protection**. Per altre informazioni su ciascuno di questi ruoli, vedere la sezione [Ruoli disponibili](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) della documentazione di Azure Active Directory.
 
 Il supporto dei cmdlet di PowerShell per creare e gestire i modelli e per attivare e disattivare il servizio rimane invariato.
 

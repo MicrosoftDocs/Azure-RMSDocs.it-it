@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire lo scanner di Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/16/2018
+ms.date: 02/22/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: bfe4074710bd93c92e383056f587994ec805b6c2
-ms.sourcegitcommit: 4234de57201411cd9b292492fddc683df0e6b4cc
+ms.openlocfilehash: badc9ea2db84e0537ab394ccb616c0d172469e35
+ms.sourcegitcommit: 240378d216e386ad760460c50b7a664099c669e9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -202,7 +202,10 @@ Per il primo ciclo di analisi, lo scanner analizza tutti i file negli archivi da
 
 È possibile imporre allo scanner di ripetere l'analisi di tutti i file eseguendo [Set AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) con il parametro `-Type` impostato su **Full**. Questa configurazione è utile quando si vuole che i report includano tutti i file e viene in genere usata quando lo scanner viene eseguito in modalità di individuazione. Al termine di un'analisi completa, il tipo di analisi diventa automaticamente incrementale in modo che per le analisi successive vengono analizzati solo i file nuovi o modificati.
 
-Inoltre, tutti i file vengono controllati quando lo scanner scarica un criterio di Azure Information Protection con condizioni nuove o modificate. Lo scanner aggiorna i criteri ogni ora e all'avvio del servizio.
+Inoltre, tutti i file vengono controllati quando lo scanner scarica un criterio di Azure Information Protection con condizioni nuove o modificate. Lo scanner aggiorna i criteri ogni ora, all'avvio del servizio e quando risalgono a più di un'ora prima.
+
+> [!TIP]
+> Se è necessario aggiornare i criteri prima di questo intervallo di un'ora, ad esempio durante un periodo di test, eliminare manualmente il file dei criteri, **%LocalAppData%\Microsoft\MSIP\Policy.msip** e riavviare il servizio scanner di Azure Information Protection.
 
 ## <a name="optimizing-the-performance-of-the-azure-information-protection-scanner"></a>Ottimizzazione delle prestazioni dello scanner di Azure Information Protection
 

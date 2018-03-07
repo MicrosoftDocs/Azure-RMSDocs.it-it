@@ -4,7 +4,7 @@ description: Fase 4 della migrazione da AD RMS ad Azure Information Protection c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/22/2017
+ms.date: 02/27/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: beda6273c306a55130223c7b4b9ed9fc4d088fac
-ms.sourcegitcommit: 228953e96609b3c5ec8deddaab91be59650d9006
+ms.openlocfilehash: d516d9c82ce0c7bfd35dbb839cd861a301c3443f
+ms.sourcegitcommit: bb6be1812beb6adf73203c352f73ef3006416848
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Fase 4 della migrazione: configurazione dei servizi di supporto
 
@@ -31,9 +31,15 @@ Usare le informazioni seguenti per la fase 4 della migrazione da AD RMS ad Azure
 
 Indipendentemente dalla topologia di chiave del tenant di Azure Information Protection scelta, eseguire le operazioni seguenti:
 
-1. Per configurare Exchange Online per l'uso del servizio Azure Rights Management, vedere [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) (Impostare le nuove funzionalità di Office 365 Message Encryption basate su Azure Information Protection). 
+1. Eseguire il comando di Exchange Online [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx). Se occorre assistenza per l'esecuzione di questo comando, vedere le istruzioni dettagliate in [Exchange Online: configurazione di IRM](/..deploy-use/configure-office365.md#exchange-online-irm-configuration).
+    
+    Nell'output controllare se il parametro **AzureRMSLicensingEnabled** è impostato su **True**:
+    
+    - Se AzureRMSLicensingEnabled è impostato su **True**, non è necessaria alcuna configurazione aggiuntiva per questo passaggio. 
+    
+    - Se il parametro AzureRMSLicensingEnabled è impostato su **False**, eseguire i comandi in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) (Impostare le nuove funzionalità di Office 365 Message Encryption basate su Azure Information Protection). 
 
-2. Oltre alla configurazione standard per abilitare IRM per Exchange Online, eseguire i comandi di PowerShell seguenti per assicurarsi che gli utenti saranno in grado di leggere i messaggi di posta elettronica inviati con la protezione di AD RMS.
+2. Eseguire i comandi di PowerShell seguenti per assicurarsi che gli utenti siano in grado di leggere i messaggi di posta elettronica inviati con la protezione di AD RMS.
 
     Sostituire *\<dominio.impresa>* con il nome di dominio dell'organizzazione.
 

@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5ab34172a4e822373161752142d9e082014285e1
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: de42f0d87f42c304c2df906fe037816be7f2ba25
+ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="preparing-the-environment-for-azure-rights-management-when-you-also-have-active-directory-rights-management-services-ad-rms"></a>Preparazione dell'ambiente per Azure Rights Management quando è presente anche Active Directory Rights Management Services (AD RMS)
 
@@ -24,13 +24,13 @@ ms.lasthandoff: 02/23/2018
 
 Indicazioni importanti da seguire se si usa già Active Directory Rights Management Services (AD RMS) e in presenza di uno degli scenari seguenti:
 
-- [La sottoscrizione che include Azure Rights Management è stata acquistata nel mese di febbraio 2018 o successivamente](#your-subscription-was-purchased-during-or-after-february-2018).
+- [La sottoscrizione che include Azure Rights Management è stata acquistata durante il mese di febbraio 2018 o successivamente](#your-subscription-was-purchased-during-or-after-february-2018).
 
 - [Quando si configura il criterio di Azure Information Protection nel portale di Azure, viene visualizzata un'opzione che consente di attivare la protezione](#you-see-an-option-to activate-azure-rights-management-when-you-configure-azure-information-protection)
 
 ## <a name="your-subscription-was-purchased-during-or-after-february-2018"></a>La sottoscrizione è stata acquistata nel mese di febbraio 2018 o successivamente
 
-Se la sottoscrizione che include Azure Rights Management è stata acquistata nel mese di febbraio 2018 o successivamente, il servizio Azure Rights Management viene attivato per impostazione predefinita. Se si usa anche Active Directory Rights Management Services (AD RMS), la combinazione dei due servizi non è compatibile. Se non vengono eseguiti altri passaggi, è possibile che all'avvio alcuni computer usino automaticamente il servizio Azure Rights Management e si connettano anche al cluster AD RMS. Questo scenario non è supportato e restituisce risultati non prevedibili, pertanto è importante disattivare Azure Rights Management appena possibile. 
+Verso la fine di febbraio 2018, le nuove sottoscrizioni che includono Azure Information Protection attivano il servizio di Azure Rights Management per impostazione predefinita. Se il servizio viene attivato automaticamente e si usa anche Active Directory Rights Management Services (AD RMS), questa combinazione non è compatibile. Se non vengono eseguiti altri passaggi, è possibile che all'avvio alcuni computer usino automaticamente il servizio Azure Rights Management e si connettano anche al cluster AD RMS. Questo scenario non è supportato e restituisce risultati non prevedibili, pertanto è importante disattivare Azure Rights Management appena possibile. 
 
 Quando i computer sono pronti per il passaggio da AD RMS al servizio Azure Rights Management, è possibile avviare un processo di migrazione. Uno dei passaggi della migrazione è la riattivazione del servizio, ma questa operazione viene eseguita solo dopo aver esportato le informazioni di configurazione da AD RMS nel servizio Azure Rights Management. In tal modo si garantisce che sia possibile aprire i documenti e messaggi di posta elettronica protetti in precedenza da AD RMS.
 
