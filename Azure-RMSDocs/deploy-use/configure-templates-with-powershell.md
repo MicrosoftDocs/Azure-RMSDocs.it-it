@@ -1,10 +1,10 @@
 ---
-title: PowerShell per modelli personalizzati di Azure RMS - AIP
-description: "Tutte le operazioni che è possibile eseguire nel portale di Azure per creare e gestire modelli di gestione dei diritti possono essere eseguite anche dalla riga di comando tramite PowerShell. È inoltre possibile esportare e importare modelli, affinché sia possibile copiarli tra tenant o eseguire modifiche in blocco di proprietà complesse nei modelli, ad esempio nomi e descrizioni in più lingue."
+title: PowerShell per i modelli di protezione - Azure Information Protection
+description: "Tutte le operazioni che è possibile eseguire nel portale di Azure per creare e gestire i modelli di protezione possono essere eseguite anche nella riga di comando tramite PowerShell. È inoltre possibile esportare e importare modelli, affinché sia possibile copiarli tra tenant o eseguire modifiche in blocco di proprietà complesse nei modelli, ad esempio nomi e descrizioni in più lingue."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 02/23/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,28 +12,25 @@ ms.technology: techgroup-identity
 ms.assetid: 30ee2f77-ce16-4113-bcda-6089131849ec
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d8e31eb4f573a149ae39c32c89607775de61bfce
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: 051144562b1c26a22953f6e83a41b4902404fd2f
+ms.sourcegitcommit: 85250f5ea80c2ee22197058ff2f65a79503b0f0c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="powershell-reference-for-custom-templates"></a>Guida di riferimento di PowerShell per i modelli personalizzati
+# <a name="powershell-reference-for-protection-templates"></a>Informazioni di riferimento su PowerShell per i modelli di protezione
 
 >*Si applica a: Azure Information Protection, Office 365*
 
-Tutte le operazioni che è possibile eseguire nel portale di Azure per creare e gestire modelli possono essere eseguite anche nella riga di comando tramite PowerShell. È inoltre possibile esportare e importare modelli, affinché sia possibile copiarli tra tenant o eseguire modifiche in blocco di proprietà complesse nei modelli, ad esempio nomi e descrizioni in più lingue.
+Le impostazioni di protezione di Azure Information Protection vengono salvate in modelli di protezione. Tutte le operazioni che è possibile eseguire nel portale di Azure per creare e gestire le impostazioni di protezione possono essere eseguite anche nella riga di comando tramite PowerShell. 
 
-È anche possibile usare l'esportazione e l'importazione per eseguire il backup e il ripristino dei modelli personalizzati. Come procedura consigliata, eseguire regolarmente il backup dei modelli personalizzati, in modo da poter ripristinare facilmente una versione precedente se si apporta una modifica imprevista.
+È anche possibile esportare e importare i modelli di protezione. Queste due azioni consentono di copiare i modelli di protezione tra tenant o apportare modifiche in blocco per proprietà complesse, come i nomi e le descrizioni in più lingue.
 
-> [!IMPORTANT]
-> Se si vuole usare PowerShell per creare e gestire i modelli di Azure Rights Management, è necessario avere almeno la versione 2.0.0.0 del [modulo Windows PowerShell per Azure RMS](https://go.microsoft.com/fwlink/?LinkId=257721).
-> 
-> Se il modulo PowerShell è stato installato in precedenza, eseguire il comando seguente in una finestra di PowerShell per verificare il numero di versione: `(Get-Module aadrm -ListAvailable).Version`
+È anche possibile usare l'esportazione e l'importazione per eseguire il backup e il ripristino dei modelli di protezione. Come procedura consigliata, eseguire regolarmente il backup dei modelli. In questo modo, se si apporta una modifica non appropriata alle impostazioni di protezione, è possibile ripristinare facilmente una versione precedente.
 
 Per le istruzioni di installazione, vedere [Installazione del modulo PowerShell AADRM](install-powershell.md).
 
-I cmdlet che supportano la creazione e la gestione di modelli sono i seguenti:
+I cmdlet che supportano la creazione e la gestione dei modelli di protezione sono i seguenti:
 
 - [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate)
 
