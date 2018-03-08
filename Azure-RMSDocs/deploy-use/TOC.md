@@ -19,7 +19,7 @@
 ### [Eliminare o riordinare un'etichetta](configure-policy-delete-reorder.md)
 ### [Modificare un'etichetta](configure-policy-change-label.md)
 ### [Configurare la protezione](configure-policy-protection.md)
-#### [Restrizioni HYOK](configure-adrms-restrictions.md)
+#### [HYOK](configure-adrms-restrictions.md)
 ### [Configurare i contrassegni visivi](configure-policy-markings.md)
 ### [Configurare le condizioni](configure-policy-classification.md)
 ### [Configurare i criteri con ambito](configure-policy-scope.md)
