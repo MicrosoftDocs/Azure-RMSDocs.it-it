@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2cf486a5319d6addcd150351054d44db62c250b0
-ms.sourcegitcommit: 9b975e66b12a3836003c6c4de139ded4bbf370bf
+ms.openlocfilehash: 0c15bcca607992a2782611286205509377f9fd4d
+ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Fase 5 della migrazione: attività post-migrazione
 
@@ -103,8 +103,6 @@ Infine, se si usa Office 2010 ed è stata abilitata l'attività **AD RMS Rights 
 Questo passaggio è consigliato al termine della migrazione, se per la distribuzione di AD RMS è stata usata la Modalità crittografia 1 di RMS. La reimpostazione delle chiavi dà come risultato una protezione che usa la Modalità di crittografia 2 di RMS. 
 
 Anche se per la distribuzione di AD RMS è stata usata la Modalità crittografia 2, è comunque consigliabile eseguire questo passaggio poiché una nuova chiave consente di proteggere il tenant da possibili violazioni della protezione della chiave di AD RMS.
-
-Si ricorda tuttavia di non procedere alla reimpostazione delle chiavi se si usa Exchange Online con AD RMS. Exchange Online non supporta la modifica della modalità di crittografia. 
 
 Quando si reimposta la chiave del tenant di Azure Information Protection (operazione detta anche "rollover della chiave"), la chiave attualmente attiva viene archiviata e Azure Information Protection inizia a usare una chiave diversa specificata dall'utente. Questa nuova chiave può essere una chiave creata in Azure Key Vault o la chiave predefinita creata automaticamente per il tenant.
 
