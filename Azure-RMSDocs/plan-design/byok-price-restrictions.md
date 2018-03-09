@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 614adfa0aca5b65750704d45f52355780c19c137
-ms.sourcegitcommit: 6bfbf08b935a7a60e437af44aab72db13f87eff1
+ms.openlocfilehash: 6e0f63857e3b11af82dae18c23080aa849a9d03b
+ms.sourcegitcommit: 25146c649d5f4c95debebdf3823785139f2d9ea1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="byok-pricing-and-restrictions"></a>Prezzi e restrizioni della modalità BYOK
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/12/2018
 
 Le organizzazioni che hanno una sottoscrizione che include Azure Information Protection possono configurare il tenant di Azure Information Protection per usare una chiave gestita dal cliente (BYOK) e [registrarne l'utilizzo](../deploy-use/log-analyze-usage.md) senza alcun costo aggiuntivo. 
 
-La chiave deve essere archiviata in Azure Key Vault per il quale è necessaria una sottoscrizione di Azure. Per usare una chiave protetta dal modulo di protezione hardware, è necessario che il livello di servizio di Azure Key Vault sia Premium. L'uso di una chiave in Insieme di credenziali delle chiavi di Azure comporta l'addebito di una tariffa mensile. Per altre informazioni, vedere la [pagina dei prezzi di Azure Key Vault](https://azure.microsoft.com/en-us/pricing/details/key-vault/).
+La chiave deve essere archiviata in Azure Key Vault per il quale è necessaria una sottoscrizione di Azure. Per usare una chiave protetta dal modulo di protezione hardware, è necessario che il livello di servizio di Azure Key Vault sia Premium. L'uso di una chiave in Insieme di credenziali delle chiavi di Azure comporta l'addebito di una tariffa mensile. Per altre informazioni, vedere la [pagina dei prezzi di Azure Key Vault](https://azure.microsoft.com/pricing/details/key-vault/).
 
 Quando si usa l'Insieme di credenziali delle chiavi di Azure per la chiave del tenant Azure Information Protection, è consigliabile usare un insieme di credenziali delle chiavi dedicato per questa chiave per garantire che venga usata solo dal servizio Azure Rights Management. Questa configurazione assicura che le chiamate da altri servizi non comportino il superamento dei [limiti del servizio](/azure/key-vault/key-vault-service-limits) per l'insieme di credenziali delle chiavi che potrebbe limitare i tempi di risposta per il servizio di Azure Rights Management.  
 
