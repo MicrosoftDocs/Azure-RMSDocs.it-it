@@ -4,7 +4,7 @@ description: Identificare i prerequisiti per distribuire Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/26/2018
+ms.date: 03/07/2018
 ms.topic: get-started-article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f256d8d972c8f74152f40b92bc5adb8bbc340fc7
-ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
+ms.openlocfilehash: 20726f99a10328fac777dc22cb59372db0ab384d
+ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisiti per Azure Information Protection
 
@@ -26,11 +26,11 @@ Prima di distribuire Azure Information Protection per l'organizzazione, verifica
 
 ## <a name="subscription-for-azure-information-protection"></a>Sottoscrizione di Azure Information Protection
 
-**Per le funzionalità di classificazione, etichettatura e protezione**: è necessario un [piano di Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing). 
+**Per le funzionalità di classificazione, etichettatura e protezione**: è necessario un [piano di Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). 
 
-**Per la sola funzionalità di protezione**: è necessario un [piano di Office 365 che include Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
+**Per la sola funzionalità di protezione**: è necessario un [piano di Office 365 che include Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
-Per verificare che la sottoscrizione dell'organizzazione includa le funzionalità di Azure Information Protection che si vogliono usare, esaminare le [informazioni sulla sottoscrizione](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e l'[elenco delle funzionalità](https://www.microsoft.com/cloud-platform/azure-information-protection-features) nel sito di Azure Information Protection.
+Per assicurarsi che la sottoscrizione dell'organizzazione includa le funzionalità di Azure Information Protection da usare, esaminare l'elenco delle funzionalità nella pagina [Prezzi di Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection).
 
 > [!TIP]
 > Per verificare se il piano disponibile di Office 365 o la versione autonoma di Exchange Online supporta le [nuove funzionalità di Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801) per inviare messaggi di posta elettronica protetti a indirizzi di posta elettronica personali, ad esempio, Gmail, Yahoo e Microsoft, vedere le risorse seguenti:
@@ -71,7 +71,7 @@ I dispositivi seguenti supportano il client di Azure Information Protection, che
 
 - Windows Server 2012 R2 e Windows Server 2012
 
-- Windows Server 2008 R2 
+- Windows Server 2008 R2 
 
 Per le versioni server elencate, il client Azure Information Protection è supportato per Servizi Desktop remoto. Se si eliminano profili utente quando si usa il client Azure Information Protection con Servizi Desktop remoto, non eliminare la cartella **%Appdata%\Microsoft\Protect**.
 

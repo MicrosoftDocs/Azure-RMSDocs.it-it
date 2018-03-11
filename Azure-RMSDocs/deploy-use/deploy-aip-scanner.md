@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire lo scanner di Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/22/2018
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: badc9ea2db84e0537ab394ccb616c0d172469e35
-ms.sourcegitcommit: 240378d216e386ad760460c50b7a664099c669e9
+ms.openlocfilehash: 3c15fe1e43f5a9d93ad70e6ac401592bbd41754b
+ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -47,7 +47,7 @@ Si noti che lo scanner non individua e non applica etichette in tempo reale. Eff
 ## <a name="prerequisites-for-the-azure-information-protection-scanner"></a>Prerequisiti per lo scanner di Azure Information Protection
 Prima di installare lo scanner di Azure Information Protection, verificare che i requisiti seguenti siano soddisfatti.
 
-|Requisito|Altre informazioni|
+|Requisito|Ulteriori informazioni|
 |---------------|--------------------|
 |Computer Windows Server per eseguire il servizio scanner:<br /><br />- 4 processori<br /><br />- 4 GB di RAM|Windows Server 2016 o Windows Server 2012 R2. <br /><br />Nota: per scopi di test o valutazione in un ambiente non di produzione, è possibile usare un sistema operativo client Windows [supportato dal client di Azure Information Protection](../get-started/requirements.md#client-devices).<br /><br />Il computer può essere un computer fisico o virtuale con una connessione di rete veloce e affidabile agli archivi dati da analizzare. <br /><br />Verificare che il computer abbia la [connettività Internet](../get-started/requirements.md#firewalls-and-network-infrastructure) necessaria per Azure Information Protection. In alternativa, è necessario configurarlo come [computer disconnesso](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). |
 |SQL Server per archiviare la configurazione dello scanner:<br /><br />- Istanza locale o remota<br /><br />- Ruolo Sysadmin per installare lo scanner|SQL Server 2012 è la versione minima per le edizioni seguenti:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />L'account che installa lo scanner richiede le autorizzazioni di scrittura nel database master (deve essere un membro del ruolo db_datawriter). Il processo di installazione concede il ruolo db-owner all'account del servizio che esegue lo scanner. In alternativa, è possibile creare manualmente il database AzInfoProtectionScanner prima di installare lo scanner e assegnare il ruolo db-owner all'account del servizio scanner.|
@@ -68,7 +68,7 @@ Prima di installare lo scanner di Azure Information Protection, verificare che i
     Install-AIPScanner -SqlServerInstance <database name>
     ```
     
-    Esempi:
+    Di seguito sono riportati alcuni esempi.
     
     Per un'istanza predefinita: `Install-AIPScanner -SqlServerInstance SQLSERVER1`
     
@@ -178,7 +178,7 @@ Per i tipi di file rimanenti, lo scanner applica l'etichetta predefinita nei cri
 |Tipo di applicazione|Tipo file|
 |--------------------------------|-------------------------------------|
 |Progetto|.mpp; .mpt|
-|Pubblicazione|.pub|
+|Autore|.pub|
 |Visio|.vsd; .vdw; .vst; .vss; .vsdx; .vsdm; .vssx; .vssm; .vstx; .vstm|
 |XPS|.xps; .oxps; .dwfx|
 |SolidWorks|.sldprt; .slddrw; .sldasm|
@@ -202,10 +202,14 @@ Per il primo ciclo di analisi, lo scanner analizza tutti i file negli archivi da
 
 È possibile imporre allo scanner di ripetere l'analisi di tutti i file eseguendo [Set AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) con il parametro `-Type` impostato su **Full**. Questa configurazione è utile quando si vuole che i report includano tutti i file e viene in genere usata quando lo scanner viene eseguito in modalità di individuazione. Al termine di un'analisi completa, il tipo di analisi diventa automaticamente incrementale in modo che per le analisi successive vengono analizzati solo i file nuovi o modificati.
 
-Inoltre, tutti i file vengono controllati quando lo scanner scarica un criterio di Azure Information Protection con condizioni nuove o modificate. Lo scanner aggiorna i criteri ogni ora, all'avvio del servizio e quando risalgono a più di un'ora prima.
+Inoltre, tutti i file vengono controllati quando lo scanner scarica un criterio di Azure Information Protection con condizioni nuove o modificate. Lo scanner aggiorna i criteri ogni ora, all'avvio del servizio e quando risalgono a più di un'ora prima.  
 
 > [!TIP]
-> Se è necessario aggiornare i criteri prima di questo intervallo di un'ora, ad esempio durante un periodo di test, eliminare manualmente il file dei criteri, **%LocalAppData%\Microsoft\MSIP\Policy.msip** e riavviare il servizio scanner di Azure Information Protection.
+> Se è necessario aggiornare i criteri prima di questo intervallo di un'ora, ad esempio durante un periodo di test, eliminare manualmente il file dei criteri **Policy.msip** da **%LocalAppData%\Microsoft\MSIP\Policy.msip** e **%LocalAppData%\Microsoft\MSIP\Scanner**. Riavviare il servizio scanner di Azure Information Protection.
+> 
+> Se sono state modificate le impostazioni di protezione dei criteri, attendere 15 minuti dal salvataggio delle impostazioni di protezione prima di riavviare il servizio.
+
+Se lo scanner ha scaricato criteri per cui non sono state configurate condizioni automatiche, la copia del file dei criteri nella cartella dello scanner non viene aggiornata. In questo scenario, è necessario eliminare il file **%LocalAppData%\Microsoft\MSIP\Scanner\Policy.msip** prima che lo scanner possa usare un nuovo file dei criteri scaricato con etichette calcolate correttamente per le condizioni automatiche.
 
 ## <a name="optimizing-the-performance-of-the-azure-information-protection-scanner"></a>Ottimizzazione delle prestazioni dello scanner di Azure Information Protection
 

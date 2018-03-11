@@ -4,17 +4,17 @@ description: Esercitazione introduttiva che consente di provare rapidamente Micr
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 03/08/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: a93b226f80382d4c751ca88d037398939db9d61b
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: e20b3e4d84b2230cf7bcbc64c31970fd53d5a7ae
+ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Esercitazione introduttiva di Azure Information Protection 
 
@@ -29,7 +29,7 @@ In caso di problemi riguardanti l'esecuzione di questa esercitazione o l'uso di 
 ## <a name="prerequisites"></a>Prerequisiti 
 Per completare questa esercitazione è necessario quanto segue:
 
-- Una sottoscrizione che includa Azure Information Protection con supporto per classificazione, assegnazione di etichette e protezione. Questa esercitazione include alcune delle funzionalità avanzate, ad esempio la classificazione automatica dei dati con consigli per gli utenti e il sito per il rilevamento dei documenti. Per questa esercitazione, assicurarsi di avere una sottoscrizione che supporti queste funzionalità. Per altre informazioni, vedere le [informazioni sulla sottoscrizione](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) e l'[elenco delle funzionalità](https://www.microsoft.com/cloud-platform/azure-information-protection-features) nel sito Azure Information Protection.
+- Una sottoscrizione che includa Azure Information Protection con supporto per classificazione, assegnazione di etichette e protezione. Questa esercitazione include alcune delle funzionalità avanzate, ad esempio la classificazione automatica dei dati con consigli per gli utenti e il sito per il rilevamento dei documenti. Per questa esercitazione, assicurarsi di avere una sottoscrizione che supporti queste funzionalità. Per altre informazioni, vedere l'elenco delle funzionalità nella pagina [Prezzi di Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection).
     
     Se non si ha una sottoscrizione per queste funzionalità, è possibile iscriversi per una valutazione gratuita di [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7).
     
