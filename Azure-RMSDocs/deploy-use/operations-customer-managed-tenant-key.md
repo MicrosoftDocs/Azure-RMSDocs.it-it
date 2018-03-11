@@ -4,7 +4,7 @@ description: Informazioni sulle operazioni del ciclo di vita necessarie per la g
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/10/2017
+ms.date: 03/07/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 47f2e19e7eed107a44ac1bed744015c878876e9f
-ms.sourcegitcommit: db0c5185aab9ba4f71b9d2aa1dd87681dfe7c1b5
+ms.openlocfilehash: 70d34253300e2bef442cdd7d8cf2c06ac8a9fd88
+ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Operazioni del ciclo di vita della chiave del tenant gestite dal cliente
 
@@ -59,7 +59,7 @@ Per altre informazioni su ognuna di queste fasi:
 ## <a name="backup-and-recover-your-tenant-key"></a>Eseguire il backup e il ripristino della chiave del tenant
 L'utente che gestisce la chiave del tenant è anche responsabile del backup della chiave usata da Azure Information Protection. 
 
-Se la chiave del tenant è stata generata in locale in un modulo di protezione hardware Thales, per eseguire il backup della chiave è necessario eseguire il backup del file della chiave in formato token, del file relativo all'ambiente e delle schede amministrative. Quando la chiave viene trasferita in Azure Key Vault, il servizio salva il file della chiave in formato token come protezione da eventuali errori dei nodi del servizio. Questo file è associato all'ambiente di sicurezza relativo all'area o all'istanza specifica di Azure. È tuttavia opportuno tenere presente che questa azione non rappresenta un backup completo. Se ad esempio è necessaria una copia in testo normale della chiave da usare al di fuori di un modulo di protezione hardware Thales, Azure Key Vault non sarà in grado di recuperarla perché dispone solo di una copia non recuperabile.
+Se la chiave del tenant è stata generata in locale in un modulo di protezione hardware Thales, per eseguire il backup della chiave è necessario eseguire il backup del file della chiave in formato token, del file relativo all'ambiente e delle schede amministrative. Quando la chiave viene trasferita in Azure Key Vault, il servizio salva il file della chiave in formato token come protezione da eventuali errori dei nodi del servizio. Questo file è associato all'ambiente di sicurezza relativo all'area o all'istanza specifica di Azure. È tuttavia opportuno tenere presente che questo file di chiave in formato token non rappresenta un backup completo. Se ad esempio è necessaria una copia in testo normale della chiave da usare al di fuori di un modulo di protezione hardware Thales, Azure Key Vault non sarà in grado di recuperarla perché dispone solo di una copia non recuperabile.
 
 Azure Key Vault contiene un [cmdlet di backup](/powershell/module/azurerm.keyvault/Backup-AzureKeyVaultKey). Scaricarlo e archiviarlo in un file per eseguire il backup di una chiave. Il contenuto scaricato è crittografato e può quindi essere usato solo in Azure Key Vault. 
 
@@ -75,10 +75,10 @@ In caso di violazione di sicurezza, l'azione più efficace che l'utente o Micros
 
 |Descrizione evento imprevisto|Risposta probabile|
 |------------------------|-------------------|
-|Perdita della chiave del tenant.|Reimpostare la chiave del tenant. Vedere [Reimpostare la chiave del tenant](#rkey-your-tenant-key).|
+|Perdita della chiave del tenant.|Reimpostare la chiave del tenant. Vedere [Reimpostare la chiave del tenant](#rekey-your-tenant-key).|
 |Diritti di accesso alla chiave del tenant ottenuti da un utente non autorizzato o da malware, ma nessuna perdita della chiave.|La reimpostazione della chiave del tenant non è sufficiente ed è necessaria un'analisi della causa radice. Se l'utente non autorizzato ha ottenuto l'accesso a causa di un bug del processo o del software, questo problema deve essere risolto.|
-|Vulnerabilità scoperta nella tecnologia del moduli di protezione hardware di generazione corrente.|Microsoft deve aggiornare i moduli di protezione hardware. Se si ritiene che la vulnerabilità abbia provocato l'esposizione di chiavi, Microsoft inviterà tutti i clienti a rinnovare le proprie chiavi del tenant.|
-|Vulnerabilità scoperta nell'algoritmo RSA o nella lunghezza della chiave oppure attacchi di forza bruta diventati realizzabili a livello di calcolo.|Microsoft deve aggiornare Azure Key Vault o Azure Information Protection per supportare nuovi algoritmi e lunghezze maggiori della chiave che siano resilienti e invitare tutti i clienti a rinnovare le proprie chiavi del tenant.|
+|Vulnerabilità scoperta nella tecnologia del moduli di protezione hardware di generazione corrente.|Microsoft deve aggiornare i moduli di protezione hardware. Se si ritiene che la vulnerabilità abbia provocato l'esposizione di chiavi, Microsoft inviterà tutti i clienti a reimpostare le proprie chiavi del tenant.|
+|Vulnerabilità scoperta nell'algoritmo RSA o nella lunghezza della chiave oppure attacchi di forza bruta diventati realizzabili a livello di calcolo.|Microsoft deve aggiornare Azure Key Vault o Azure Information Protection per supportare nuovi algoritmi e lunghezze maggiori della chiave che siano resilienti e invitare tutti i clienti a reimpostare la propria chiave del tenant.|
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
