@@ -4,17 +4,17 @@ description: "Informazioni sulla configurazione dei criteri predefiniti per Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 03/09/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: da8557be0a70cee0e7a207a8ed285f6e843ac626
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: d89acde3a2d9e4db529c429fdedf2f3ed05e2fe5
+ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Criteri predefiniti di Azure Information Protection
 
@@ -30,7 +30,11 @@ Quando un amministratore si connette per la prima volta al servizio Azure Inform
 
 Questa versione dei criteri predefiniti è del 31 luglio 2017.
 
-Il criterio predefinito viene creato solo se il servizio Azure Rights Management è stato [attivato](activate-service.md) quando il criterio è stato creato. Se questo servizio non è stato attivato, il criterio predefinito non configurerà la protezione per le seguenti etichette secondarie:
+I criteri predefiniti vengono creati al momento dell'attivazione del servizio Azure Rights Management, come nel caso dei nuovi tenant a partire da febbraio 2018. Per altre informazioni, vedere l'annuncio del post di blog [Improvements to the protection stack in Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection) (Miglioramenti dello stack di protezione in Azure Information Protection).
+
+I criteri predefiniti vengono creati anche se è stato [attivato il servizio](activate-service.md) manualmente prima di creare i criteri. 
+
+Se il servizio non è stato attivato, i criteri predefiniti non configurano la protezione per le seguenti etichette secondarie:
 
 - **Riservato\Tutti i dipendenti**
 
@@ -44,7 +48,7 @@ Quando queste etichette secondarie non vengono configurate automaticamente per l
 
 Quando viene applicata alle etichette secondarie per **Tutti i dipendenti**, la protezione è configurata usando i modelli predefiniti che vengono convertiti automaticamente in etichette nel portale di Azure. Per altre informazioni sui modelli, vedere [Configurazione e gestione dei modelli per Azure Information Protection](configure-policy-templates.md).
 
-Dal 30 agosto 2017 questa versione dei criteri predefiniti include versioni in più lingue dei nomi delle etichette e delle descrizioni. 
+A partire dal 30 agosto 2017 questa versione dei criteri predefiniti include versioni in più lingue dei nomi delle etichette e delle descrizioni. 
 
 #### <a name="more-information-about-the-recipients-only-sublabel"></a>Ulteriori informazioni sull'etichetta secondaria Solo i destinatari
 
