@@ -4,7 +4,7 @@ description: "Per configurare le funzioni di classificazione, aggiunta di etiche
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/22/2017
+ms.date: 03/15/2017
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 9ff8109240dee992563a0dde68a4980d0ebd955e
-ms.sourcegitcommit: 240378d216e386ad760460c50b7a664099c669e9
+ms.openlocfilehash: 9dda33998de8f37af5dd5acd1c234a8029cc6d02
+ms.sourcegitcommit: 2749d8d41fd374a9e4e2697a684eeb2bf85082d8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -48,11 +48,11 @@ Per altre informazioni sulle sottoscrizioni, vedere [Quale sottoscrizione è nec
 
 Per accedere al portale di Azure per configurare e gestire Azure Information Protection:
 
-- Usare il seguente collegamento: https://portal.azure.com
+- Usare il collegamento seguente: https://portal.azure.com
 
 - Usare un account che dispone di uno dei seguenti [ruoli di amministratore](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-    - **Amministratore di Information Protection** (attualmente disponibile in anteprima)
+    - **Amministratore di Information Protection**
 
     - **Amministratore della sicurezza**
 

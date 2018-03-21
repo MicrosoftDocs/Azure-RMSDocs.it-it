@@ -4,7 +4,7 @@ description: Informazioni sui diritti specifici usati quando si proteggono i fil
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2018
+ms.date: 03/14/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: faa00eee76e6c084db1a4dfb1d477e491fae5fee
-ms.sourcegitcommit: 3e9b3c2206807e82cc4721a50862b74152906f63
+ms.openlocfilehash: 8411fd46305da69e8fe06ae3851d5066695cdc24
+ms.sourcegitcommit: 29d3d4760131eb2642e17b0732f852b6d8cfe314
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configurazione dei diritti di utilizzo per Azure Rights Management
 
@@ -95,7 +95,7 @@ Questi modelli predefiniti vengono creati al momento dell'acquisto della sottosc
 
 ## <a name="do-not-forward-option-for-emails"></a>Opzione Non inoltrare per i messaggi di posta elettronica
 
-I client di Exchange e i servizi, ad esempio il client Outlook, l'app Outlook Web Access e le regole di trasporto di Exchange, offrono un'opzione aggiuntiva per la protezione dei diritti sulle informazioni relativa ai messaggi di posta elettronica: **Non inoltrare**. 
+I client e i servizi di Exchange, ad esempio il client Outlook, l'app Outlook Web Access e le regole del flusso di posta di Exchange, offrono un'opzione aggiuntiva per la protezione dei diritti sulle informazioni relativa ai messaggi di posta elettronica: **Non inoltrare**. 
 
 Anche se questa opzione viene visualizzata dagli utenti e dagli amministratori di Exchange come se fosse un modello predefinito di Rights Management selezionabile, l'opzione **Non inoltrare** non è un modello. È per questo motivo che non viene visualizzata nel portale di Azure quando si visualizzano e si gestiscono i modelli per Azure Rights Management. L'opzione **Non inoltrare** è invece un insieme di diritti che viene applicato in modo dinamico dagli utenti ai destinatari di posta elettronica.
 
@@ -116,7 +116,7 @@ Un utente vuole inviare per posta elettronica alcune informazioni a utenti speci
 
 Quando Exchange Online usa le nuove funzionalità per Office 365 Message Encryption, diventa disponibile una nuova opzione di posta elettronica: **Encrypt-Only (Solo crittografia)**.
 
-Questa opzione viene distribuita ai tenant che usano Exchange Online, inizialmente solo per Outlook sul web e come opzione di protezione dei diritti aggiuntiva per una regola di trasporto. Per altre informazioni, vedere l'annuncio nel post di blog seguente dal team di Office: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018) (Distribuzione di Solo crittografia per Office 365 Message Encryption).
+Questa opzione viene distribuita ai tenant che usano Exchange Online, inizialmente solo per Outlook sul Web e come opzione di protezione dei diritti aggiuntiva per una regola del flusso di posta. Per altre informazioni, vedere l'annuncio nel post di blog seguente dal team di Office: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018) (Distribuzione di Solo crittografia per Office 365 Message Encryption).
 
 Quando questa opzione è selezionata, il messaggio di posta elettronica viene crittografato e i destinatari devono essere autenticati. Quindi, i destinatari dispongono di tutti i diritti di utilizzo, ad eccezione del controllo completo. Questa combinazione di diritti di utilizzo implica che i destinatari non hanno restrizioni, ad eccezione del fatto che non possono rimuovere la protezione. Un destinatario può ad esempio, copiare, stampare e inoltrare il messaggio di posta elettronica. Analogamente, è possibile salvare, copiare e stampare qualunque documento di Office che venga allegato e protetto automaticamente.
 
@@ -165,7 +165,6 @@ Il valore predefinito per il periodo di validità della licenza d'uso per un ten
 - Quando si configura un modello tramite PowerShell, il periodo di validità della licenza d'uso assume il valore specificato nel parametro *LicenseValidityDuration* nei cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) e [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate).
     
     Per altre informazioni e istruzioni per configurare questa impostazione tramite PowerShell, vedere la guida relativa a ogni cmdlet.
-
 
 ## <a name="see-also"></a>Vedere anche
 [Configurazione e gestione dei modelli per Azure Information Protection](configure-policy-templates.md)

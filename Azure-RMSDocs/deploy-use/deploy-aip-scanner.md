@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire lo scanner di Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/08/2018
+ms.date: 03/09/2018
 ms.topic: article
 ms.prod: 
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 3c15fe1e43f5a9d93ad70e6ac401592bbd41754b
-ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
+ms.openlocfilehash: f3c302b2379262a6dac87873cb607cf3cd408bcd
+ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -47,7 +47,7 @@ Si noti che lo scanner non individua e non applica etichette in tempo reale. Eff
 ## <a name="prerequisites-for-the-azure-information-protection-scanner"></a>Prerequisiti per lo scanner di Azure Information Protection
 Prima di installare lo scanner di Azure Information Protection, verificare che i requisiti seguenti siano soddisfatti.
 
-|Requisito|Ulteriori informazioni|
+|Requisito|Altre informazioni|
 |---------------|--------------------|
 |Computer Windows Server per eseguire il servizio scanner:<br /><br />- 4 processori<br /><br />- 4 GB di RAM|Windows Server 2016 o Windows Server 2012 R2. <br /><br />Nota: per scopi di test o valutazione in un ambiente non di produzione, è possibile usare un sistema operativo client Windows [supportato dal client di Azure Information Protection](../get-started/requirements.md#client-devices).<br /><br />Il computer può essere un computer fisico o virtuale con una connessione di rete veloce e affidabile agli archivi dati da analizzare. <br /><br />Verificare che il computer abbia la [connettività Internet](../get-started/requirements.md#firewalls-and-network-infrastructure) necessaria per Azure Information Protection. In alternativa, è necessario configurarlo come [computer disconnesso](../rms-client/client-admin-guide-customizations.md#support-for-disconnected-computers). |
 |SQL Server per archiviare la configurazione dello scanner:<br /><br />- Istanza locale o remota<br /><br />- Ruolo Sysadmin per installare lo scanner|SQL Server 2012 è la versione minima per le edizioni seguenti:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />L'account che installa lo scanner richiede le autorizzazioni di scrittura nel database master (deve essere un membro del ruolo db_datawriter). Il processo di installazione concede il ruolo db-owner all'account del servizio che esegue lo scanner. In alternativa, è possibile creare manualmente il database AzInfoProtectionScanner prima di installare lo scanner e assegnare il ruolo db-owner all'account del servizio scanner.|
@@ -58,7 +58,7 @@ Prima di installare lo scanner di Azure Information Protection, verificare che i
 
 ## <a name="install-the-azure-information-protection-scanner"></a>Installare lo scanner di Azure Information Protection
 
-1. Usando l'account del servizio creato per eseguire lo scanner, accedere al computer Windows Server in cui verrà eseguito lo scanner.
+1. Accedere al computer Windows Server che eseguirà lo scanner. Usare un account con diritti di amministratore locale e con le autorizzazioni per scrivere nel database master di SQL Server.
 
 2. Aprire una sessione di Windows PowerShell con l'opzione **Esegui come amministratore**.
 
@@ -68,7 +68,7 @@ Prima di installare lo scanner di Azure Information Protection, verificare che i
     Install-AIPScanner -SqlServerInstance <database name>
     ```
     
-    Di seguito sono riportati alcuni esempi.
+    Esempi:
     
     Per un'istanza predefinita: `Install-AIPScanner -SqlServerInstance SQLSERVER1`
     
@@ -92,15 +92,17 @@ Ora che è stato installato lo scanner, è necessario ottenere un token di Azure
     
     Per creare queste applicazioni, seguire le istruzioni della sezione [Come assegnare un'etichetta ai file in modo non interattivo per Azure Information Protection](../rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) della guida per l'amministratore.
 
-2. Dal computer Windows Server in cui viene mantenuto l'accesso con l'account del servizio scanner eseguire [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), specificando i valori copiati dal passaggio precedente:
+2. Dal computer Windows Server, se all'account del servizio scanner è stato concesso il diritto di **accesso locale** per l'installazione: accedere con questo account e avviare una sessione di PowerShell. Eseguire [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) specificando i valori copiati nel passaggio precedente:
     
     ```
     Set-AIPAuthentication -webAppId <ID of the "Web app / API" application>  -webAppKey <key value generated in the "Web app / API" application> -nativeAppId <ID of the "Native" application >
     ```
+    
+    Quando richiesto, specificare la password per le credenziali dell'account del servizio per Azure AD e quindi fare clic su **Accetto**.
+    
+    Se all'account del servizio scanner non è possibile concedere il diritto di **accesso locale** per l'installazione: seguire le istruzioni nella sezione [Specificare e usare il parametro Token per Set-AIPAuthentication](../rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) della Guida dell'amministratore. 
 
-3. Quando richiesto, specificare la password per le credenziali dell'account del servizio per Azure AD e quindi fare clic su **Accetto**.
-
-Lo scanner ora ha un token per l'autenticazione ad Azure AD, che può essere valido per un anno, due anni, o senza scadenza, in base alla configurazione dell'**app Web/API** in Azure AD. Quando il token scade, è necessario ripetere i passaggi da 1 a 3.
+Lo scanner ora ha un token per l'autenticazione ad Azure AD, che può essere valido per un anno, due anni, o senza scadenza, in base alla configurazione dell'**app Web/API** in Azure AD. Quando il token scade, è necessario ripetere i passaggi 1 e 2.
 
 A questo punto si è pronti a specificare gli archivi dati da analizzare. 
 
@@ -178,7 +180,7 @@ Per i tipi di file rimanenti, lo scanner applica l'etichetta predefinita nei cri
 |Tipo di applicazione|Tipo file|
 |--------------------------------|-------------------------------------|
 |Progetto|.mpp; .mpt|
-|Autore|.pub|
+|Pubblicazione|.pub|
 |Visio|.vsd; .vdw; .vst; .vss; .vsdx; .vsdm; .vssx; .vssm; .vstx; .vstm|
 |XPS|.xps; .oxps; .dwfx|
 |SolidWorks|.sldprt; .slddrw; .sldasm|
@@ -209,7 +211,7 @@ Inoltre, tutti i file vengono controllati quando lo scanner scarica un criterio 
 > 
 > Se sono state modificate le impostazioni di protezione dei criteri, attendere 15 minuti dal salvataggio delle impostazioni di protezione prima di riavviare il servizio.
 
-Se lo scanner ha scaricato criteri per cui non sono state configurate condizioni automatiche, la copia del file dei criteri nella cartella dello scanner non viene aggiornata. In questo scenario, è necessario eliminare il file **%LocalAppData%\Microsoft\MSIP\Scanner\Policy.msip** prima che lo scanner possa usare un nuovo file dei criteri scaricato con etichette calcolate correttamente per le condizioni automatiche.
+Se lo scanner ha scaricato criteri per cui non sono state configurate condizioni automatiche, la copia del file dei criteri nella cartella dello scanner non viene aggiornata. In questo scenario, è necessario eliminare il file di criteri **Policy.msip** sia da **%LocalAppData%\Microsoft\MSIP\Policy.msip** che da **%LocalAppData%\Microsoft\MSIP\Scanner** prima che lo scanner possa usare un nuovo file dei criteri scaricato con etichette calcolate correttamente per le condizioni automatiche.
 
 ## <a name="optimizing-the-performance-of-the-azure-information-protection-scanner"></a>Ottimizzazione delle prestazioni dello scanner di Azure Information Protection
 
