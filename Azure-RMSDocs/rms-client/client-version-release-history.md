@@ -4,19 +4,19 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/06/2018
+ms.date: 03/19/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 19390c05719ebfee7e3442437d3f5bdfd303c652
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: 10fe839ff24994af0c50fff6aeac303d57a19ea6
+ms.sourcegitcommit: 65d6b0ecfbca5071afe29e63aea6226ad7a911b8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto
 
@@ -154,30 +154,6 @@ Correzioni per una migliore esperienza utente, che includono:
 - Convalida e-mail quando gli utenti specificano autorizzazioni personalizzate. Inoltre, è ora possibile specificare più indirizzi e-mail premendo INVIO.
 
 - L'etichetta padre non viene visualizzata quando tutte le relative etichette secondarie sono configurate per la protezione e il client non dispone di un'edizione di Office che supporta la protezione. 
-
-## <a name="version-172100"></a>Versione 1.7.210.0
-
-**Rilasciata**: 06/06/2017
-
-Questa versione include MSIPC versione 1.0.2217.1 del client RMS.
-
-**Nuove funzionalità**:
-
-- Nuovo cmdlet di PowerShell [Set-AIPFileClassification](/powershell/module/azureinformationprotection/Set-AIPFileClassification). Quando viene eseguito, questo cmdlet controlla il contenuto dei file e applica automaticamente le etichette ai file senza etichetta, in base alle condizioni specificate nei criteri di Azure Information Protection.
-
-**Correzioni**:
-
-- Tutti i cmdlet di classificazione e assegnazione di etichette sono ora supportati nei computer che non sono connessi a Internet ma usano criteri validi di Azure Information Protection.
-
-- Per coerenza, un parametro di output del cmdlet [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) viene modificato da inglese britannico (**IsLabelled**) a inglese americano (**IsLabeled**). Se si usano script o processi automatizzati che cercano questo parametro, aggiornare l'ortografia del parametro.
-
-- Correzioni generale per la stabilità che includono:
-
-    - Per Outlook: correzioni di arresti anomali del sistema, uso elevato della memoria e problemi di visualizzazione per i menu.
-    
-    - Per Word, Excel e PowerPoint: correzioni di uso elevato della CPU, problemi di visualizzazione durante il salvataggio di file di Excel di grandi dimensioni o applicazioni che non rispondono. 
-    
-    Anche per queste applicazioni, per migliorare le prestazioni per Office 2016 con SharePoint Online e OneDrive for Business, l'assegnazione di etichette automatica e consigliata viene applicata quando si chiude il file anziché quando si salva il file (salvataggio automatico o selezionato dall'utente). Analogamente, se è abilitata l'impostazione che richiede l'**assegnazione di un'etichetta a tutti i documenti e messaggi di posta elettronica**, agli utenti non viene chiesto di selezionare un'etichetta finché il file non viene chiuso. L'eccezione è per Word 2016 ed Excel 2016 e l'utente seleziona l'opzione **Salva con nome**. Quindi, questa azione attiva i comportamenti relativi alle etichette, se sono configurati. 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
