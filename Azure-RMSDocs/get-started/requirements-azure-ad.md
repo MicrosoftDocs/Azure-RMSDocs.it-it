@@ -4,19 +4,19 @@ description: Identificare i requisiti di Azure AD per l'uso di Azure Information
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2017
+ms.date: 03/19/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2a079dbc1df01c8c9402d7d79e3f587f13b44654
-ms.sourcegitcommit: 55a71f83947e7b178930aaa85a8716e993ffc063
+ms.openlocfilehash: 62c9bba17c561fda86393ed4e76c00895613d0e3
+ms.sourcegitcommit: 1b44f6bd25b756fa85fa5f47aa4c0486f9486832
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Requisiti di Azure Active Directory per Azure Information Protection
 
@@ -89,7 +89,13 @@ Quindi, configurare la soluzione MFA:
 
         Per altre informazioni su questo scenario, vedere il post relativo al [programma di gestione delle identità per Office 365](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) sul blog di Office.
 
-Il connettore Rights Management non supporta l'autenticazione MFA. Se si distribuisce il connettore per i server locali usare un account per il connettore che non richiede l'autenticazione MFA.
+Il connettore Rights Management e lo scanner di Azure Information Protection non supportano l'autenticazione a più fattori. Se si distribuisce il connettore o lo scanner, gli account seguenti non richiedono l'autenticazione a più fattori:
+
+- L'account che installa e configura il connettore.
+
+- L'account dell'entità servizio in Azure AD **Aadrm_S-1-7-0**, creato dal connettore.
+ 
+- L'account del servizio che esegue lo scanner.
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per verificare gli altri requisiti, vedere [Requisiti per Azure Information Protection](requirements-azure-rms.md).

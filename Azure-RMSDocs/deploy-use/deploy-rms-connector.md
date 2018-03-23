@@ -6,17 +6,17 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/07/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 90e7e33f-9ecc-497b-89c5-09205ffc5066
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6560381eb07d582d817d00cc76be880998f676f2
-ms.sourcegitcommit: 6000258a9f973a3ab8e608eda57b88a469e7b754
+ms.openlocfilehash: 87746ad526f191907ad2670604c357e5e926b84e
+ms.sourcegitcommit: 758e0cfeb6c05f4c6f5310dc36fbf0c02c256eed
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Distribuzione del connettore di Azure Rights Management
 
@@ -51,7 +51,7 @@ Per informazioni sulle versioni dei server locali supportate dal connettore RMS,
 
 Se si gestisce la propria chiave del tenant per Azure RMS (scenario BYOK, Bring Your Own Key), il connettore RMS e i server locali che usano tale chiave non accedono al modulo di protezione hardware (HSM) in cui è contenuta. Questo perché tutte le operazioni di crittografia che usano la chiave del tenant vengono eseguite in Azure RMS e non in locale.
 
-Per altre informazioni su questo scenario per la gestione della chiave del tenant, vedere [Pianificazione e implementazione della chiave del tenant di Azure Rights Management](../plan-design\plan-implement-tenant-key.md).
+Per altre informazioni su questo scenario per la gestione della chiave del tenant, vedere [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](../plan-design\plan-implement-tenant-key.md).
 
 ## <a name="prerequisites-for-the-rms-connector"></a>Prerequisiti per l'installazione del connettore RMS
 Prima di installare il connettore RMS, accertarsi che i requisiti seguenti siano soddisfatti.

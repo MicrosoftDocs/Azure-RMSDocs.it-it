@@ -4,19 +4,19 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/13/2018
+ms.date: 03/20/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 662ed627fc6138e1ff16efb731b209964784432f
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: e5c71068f979c13b2d8c9ee7c9c5c43e2ad3a7ad
+ms.sourcegitcommit: 32b233bc1f8cef0885d9f4782874f1781170b83d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -202,9 +202,91 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 - Valore: \<**ID etichetta**> o **Nessuna**
 
+## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette
+
+Questa opzione di configurazione è attualmente in anteprima ed è soggetta a modifiche. Questa opzione di configurazione richiede inoltre la versione di anteprima del client.
+
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
+
+Per i documenti di Office e i documenti PDF con etichette assegnate da Secure Islands, è possibile riassegnare etichette di Azure Information Protection a questi documenti usando un mapping definito appositamente. È anche possibile usare questo metodo per riutilizzare le etichette da altre soluzioni quando sono applicate a documenti di Office. 
+
+Con questa opzione di configurazione, la nuova etichetta di Azure Information Protection viene applicata mediante il client di Azure Information Protection come indicato di seguito:
+
+- Per i documenti di Office: quando il documento viene aperto nell'app desktop, la nuova etichetta di Azure Information Protection viene visualizzata come impostata e viene applicata quando il documento viene salvato.
+
+- Per Esplora file: nella finestra di dialogo Azure Information Protection, la nuova etichetta di Azure Information Protection viene visualizzata come impostata e viene applicata quando l'utente seleziona **Applica**. Se l'utente seleziona **Annulla** la nuova etichetta non viene applicata.
+
+- Per PowerShell: [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) applica la nuova etichetta di Azure Information Protection. [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) non visualizza la nuova etichetta di Azure Information Protection finché non viene impostata da un altro metodo.
+
+- Per lo scanner di Azure Information Protection: l'individuazione segnala quando la nuova etichetta di Azure Information Protection viene impostata e può essere applicata con la modalità di imposizione.
+
+Per questa configurazione è necessario specificare un'impostazione client avanzata denominata **LabelbyCustomProperty** per ogni etichetta di Azure Information Protection che si vuole mappare all'etichetta precedente. Per ogni voce impostare quindi il valore usando la sintassi seguente:
+
+`[Azure Information Protection label ID],[migration rule name],[Secure Islands custom property name],[Secure Islands metadata Regex value]`
+
+Il valore dell'ID etichetta è visualizzato nel pannello **Etichetta**, quando si visualizzano o si configurano i criteri di Azure Information Protection nel portale di Azure. Per specificare un'etichetta secondaria, l'etichetta padre deve essere nello stesso ambito o nei criteri globali.
+
+Specificare un nome di regola di migrazione a propria scelta. Usare un nome descrittivo che consente di identificare come deve essere eseguito il mapping di una o più etichette dalla soluzione precedente imprevisto a un'etichetta di Azure Information Protection. Il nome viene visualizzato nei report dello scanner e nel Visualizzatore eventi. 
+
+### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Esempio 1: Mapping uno-a-uno con lo stesso nome di etichetta
+
+I documenti con l'etichetta di Secure Islands "Riservato" devono essere rietichettati come "Riservato" da Azure Information Protection.
+
+In questo esempio:
+
+- L'etichetta di Azure Information Protection **Riservato** ha l'ID etichetta 1ace2cc3-14bc-4142-9125-bf946a70542c. 
+
+- L'etichetta di Secure Islands è archiviata nella proprietà personalizzata denominata **Classificazione**.
+
+L'impostazione client avanzata è la seguente:
+
+    
+|Name|Valore|
+|---------------------|---------|
+|LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c, "L'etichetta Secure Islands è Riservato",Classificazione,Riservato|
+
+### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>Esempio 2: Mapping uno-a-uno per un altro nome di etichetta
+
+I documenti con l'etichetta di Secure Islands "Sensibile" devono essere rietichettati come "Riservatezza elevata" da Azure Information Protection.
+
+In questo esempio:
+
+- L'etichetta di Azure Information Protection **Riservatezza elevata** ha l'ID etichetta 3e9df74d-3168-48af-8b11-037e3021813f.
+
+- L'etichetta di Secure Islands è archiviata nella proprietà personalizzata denominata **Classificazione**.
+
+L'impostazione client avanzata è la seguente:
+
+    
+|Name|Valore|
+|---------------------|---------|
+|LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f, "L'etichetta Secure Islands è Sensibile",Classificazione,Sensibile|
+
+
+### <a name="example-3-many-to-one-mapping-of-label-names"></a>Esempio 3: Mapping molti-a-uno di nomi di etichetta
+
+Sono disponibili due etichette di Secure Islands che includono la parola "Interno" e si vuole che i documenti con queste etichette di Secure Islands vengano rietichettati come "Generale" da Azure Information Protection.
+
+In questo esempio:
+
+- L'etichetta di Azure Information Protection **Generale** ha l'ID etichetta 2beb8fe7-8293-444c-9768-7fdc6f75014d.
+
+- L'etichetta di Secure Islands è archiviata nella proprietà personalizzata denominata **Classificazione**.
+
+L'impostazione client avanzata è la seguente:
+
+    
+|Name|Valore|
+|---------------------|---------|
+|LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d,"L'etichetta Secure Islands contiene Interno",Classificazione,.\*Interno.\*|
+
+
 ## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>Etichettare un documento di Office usando una proprietà personalizzata esistente
 
-Questa opzione di configurazione è attualmente in anteprima ed è soggetta a modifiche. 
+Questa opzione di configurazione è attualmente in anteprima ed è soggetta a modifiche.
+
+> [!NOTE]
+> Se si usa questa configurazione e la configurazione della sezione precedente per eseguire la migrazione da un'altra soluzione di assegnazione etichette, l'impostazione di migrazione delle etichette ha la precedenza. 
 
 Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
 

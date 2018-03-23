@@ -1,22 +1,22 @@
 ---
-title: "Prezzi e restrizioni della modalità BYOK - Azure Information Protection"
+title: Prezzi e restrizioni della modalità BYOK - Azure Information Protection
 description: Informazioni sulle restrizioni quando si usano chiavi gestite dal cliente ("bring your own key" o BYOK) con Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 12/07/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6e0f63857e3b11af82dae18c23080aa849a9d03b
-ms.sourcegitcommit: 25146c649d5f4c95debebdf3823785139f2d9ea1
+ms.openlocfilehash: ac9324a0418a557682714b6f2b5621a2d9f7530e
+ms.sourcegitcommit: 758e0cfeb6c05f4c6f5310dc36fbf0c02c256eed
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="byok-pricing-and-restrictions"></a>Prezzi e restrizioni della modalità BYOK
 
@@ -59,8 +59,8 @@ Se IRM di Exchange Online è stato precedentemente abilitato importando il domin
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per gestire la propria chiave, passare all'articolo relativo all'[implementazione della chiave del tenant di Azure Rights Management](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
+Se si è deciso di gestire la propria chiave, vedere [Implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
 
-Se si è deciso di usare la configurazione predefinita in cui Microsoft gestisce la chiave del tenant, vedere la sezione [Passaggi successivi](plan-implement-tenant-key.md#next-steps) dell'articolo Pianificazione e implementazione della chiave del tenant di Azure Rights Management.
+Se si è deciso di usare la configurazione predefinita in cui Microsoft gestisce la chiave del tenant, vedere la sezione [Passaggi successivi](plan-implement-tenant-key.md#next-steps) dell'articolo Pianificazione e implementazione della chiave del tenant di Azure Information Protection.
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
