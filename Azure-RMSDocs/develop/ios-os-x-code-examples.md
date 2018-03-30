@@ -1,24 +1,24 @@
 ---
 title: Esempi di codice iOS/OS X | Azure RMS
 description: Questo argomento presenta importanti elementi di codice per la versione iOS/OS X di RMS SDK.
-keywords: 
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: a610bd7983ffcf5e56cad4038375ed6c9b3f5e0a
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 121296ed8d2e160bd602ae9d88843eb1580f17f6
+ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="iosos-x-code-examples"></a>Esempi di codice iOS/OS X
 
@@ -217,7 +217,7 @@ Questo scenario inizia con il recupero di un elenco di modelli, [MSTemplateDescr
 
 -   **Passaggio 1**: Creare un descrittore di criteri con un indirizzo di posta elettronica fornito dall’utente.
 
-    **Descrizione**: in pratica vengono creati gli oggetti [MSUserRights](https://msdn.microsoft.com/en-us/library/dn790811.aspx) e [MSPolicyDescriptor](https://msdn.microsoft.com/library/dn758339.aspx) usando gli input dell'utente dall'interfaccia del dispositivo.
+    **Descrizione**: in pratica vengono creati gli oggetti [MSUserRights](https://msdn.microsoft.com/library/dn790811.aspx) e [MSPolicyDescriptor](https://msdn.microsoft.com/library/dn758339.aspx) usando gli input dell'utente dall'interfaccia del dispositivo.
 
         + (void)policyDescriptor
         {
