@@ -4,7 +4,7 @@ description: Informazioni sui diritti specifici usati quando si proteggono i fil
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2018
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d597be35e509fae655ee18fe9fc0344603385382
-ms.sourcegitcommit: 58cd89cc6f6407648854e2e2d28a61325b5c8922
+ms.openlocfilehash: 0ec4710618227573fa7442a8fe1f0bd52b2c8f6f
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configurazione dei diritti di utilizzo per Azure Rights Management
 
->*Si applica a: Azure Information Protection, Office 365*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Quando si imposta la protezione su file o messaggi di posta elettronica mediante il servizio Azure Rights Management di Azure Information Protection e non si usa un modello, è necessario configurare personalmente i diritti di utilizzo. Inoltre, quando si configurano dei modelli o delle etichette per la protezione di Azure Rights Management, si selezionano i diritti di utilizzo che verranno applicati automaticamente quando utenti, amministratori o servizi configurati selezionano il modello o l'etichetta. Ad esempio, nel portale di Azure è possibile selezionare ruoli che configurano un raggruppamento logico di diritti di utilizzo oppure è possibile configurare singoli diritti.
 
@@ -97,11 +97,15 @@ Questi modelli predefiniti vengono creati al momento dell'acquisto della sottosc
 
 I client e i servizi di Exchange, ad esempio il client Outlook, l'app Outlook Web Access e le regole del flusso di posta di Exchange, offrono un'opzione aggiuntiva per la protezione dei diritti sulle informazioni relativa ai messaggi di posta elettronica: **Non inoltrare**. 
 
-Anche se questa opzione viene visualizzata dagli utenti e dagli amministratori di Exchange come se fosse un modello predefinito di Rights Management selezionabile, l'opzione **Non inoltrare** non è un modello. È per questo motivo che non viene visualizzata nel portale di Azure quando si visualizzano e si gestiscono i modelli per Azure Rights Management. L'opzione **Non inoltrare** è invece un insieme di diritti che viene applicato in modo dinamico dagli utenti ai destinatari di posta elettronica.
+Anche se questa opzione viene visualizzata dagli utenti e dagli amministratori di Exchange come se fosse un modello predefinito di Rights Management selezionabile, l'opzione **Non inoltrare** non è un modello. È per questo motivo che non viene visualizzata nel portale di Azure quando si visualizzano e si gestiscono i modelli di protezione. L'opzione **Non inoltrare** è invece un set di diritti di utilizzo che viene applicato in modo dinamico dagli utenti ai destinatari di posta elettronica.
 
 Quando l'opzione **Non inoltrare** viene applicata a un messaggio di posta elettronica, il messaggio di posta elettronica viene crittografato e i destinatari devono essere autenticati. Quindi, i destinatari non possono inoltrarlo, stamparlo, copiarne il contenuto, salvarne gli allegati né salvarlo come un nome diverso. Ad esempio, nel client di Outlook, il pulsante Inoltra non è disponibile, le voci di menu **Salva con nome**, **Salva allegato** e **Stampa** non sono disponibili e non è possibile aggiungere o modificare i destinatari nei campi **A**, **Cc** o **Ccn**.
 
-È importante distinguere tra l'applicazione dell'opzione **Non inoltrare** e l'applicazione di un modello che non concede il diritto di inoltro di un messaggio di posta elettronica: l'opzione **Non inoltrare** usa un elenco dinamico di utenti autorizzati in base ai destinatari scelti dall'utente del messaggio originale, mentre i diritti nel modello sono associati a un elenco statico di utenti autorizzati che l'amministratore ha specificato in precedenza. Qual è la differenza? Si consideri un esempio: 
+I [documenti di Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) non protetti allegati al messaggio di posta elettronica ereditano automaticamente le stesse restrizioni. I diritti di utilizzo applicati a questi documenti sono **Modifica contenuto, Modifica**; **Salva**; **Visualizza, Apri, Leggi** e **Consenti macro**. Se si preferiscono diritti di utilizzo diversi per un allegato o se l'allegato non è un documento di Office che supporta questa protezione ereditata, proteggere il file prima di allegarlo al messaggio di posta elettronica. È quindi possibile assegnare i diritti di utilizzo specifici necessari per il file. 
+
+### <a name="difference-between-do-not-forward-and-not-granting-the-forward-usage-right"></a>Differenza tra Non inoltrare e non concedere il diritto di utilizzo Inoltra
+
+È importante distinguere tra l'applicazione dell'opzione **Non inoltrare** e l'applicazione di un modello che non concede il diritto di utilizzo **Inoltra** a un messaggio di posta elettronica: l'opzione **Non inoltrare** usa un elenco dinamico di utenti autorizzati in base ai destinatari scelti dall'utente del messaggio originale, mentre i diritti nel modello sono associati a un elenco statico di utenti autorizzati che l'amministratore ha specificato in precedenza. Qual è la differenza? Si consideri un esempio: 
 
 Un utente vuole inviare per posta elettronica alcune informazioni a utenti specifici del reparto marketing, che non devono condividerle con nessun altro. Dovrà proteggere il messaggio di posta elettronica con un modello che limiti i diritti (visualizzazione, risposta e salvataggio) del reparto marketing?  Oppure dovrà scegliere l'opzione **Non inoltrare**? Entrambe le opzioni impediscono ai destinatari di inoltrare il messaggio di posta elettronica. 
 
@@ -118,7 +122,9 @@ Quando Exchange Online usa le nuove funzionalità per Office 365 Message Encrypt
 
 Questa opzione viene distribuita ai tenant che usano Exchange Online, inizialmente solo per Outlook sul Web e come opzione di protezione dei diritti aggiuntiva per una regola del flusso di posta. Per altre informazioni, vedere l'annuncio nel post di blog seguente dal team di Office: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018) (Distribuzione di Solo crittografia per Office 365 Message Encryption).
 
-Quando questa opzione è selezionata, il messaggio di posta elettronica viene crittografato e i destinatari devono essere autenticati. Quindi, i destinatari dispongono di tutti i diritti di utilizzo, ad eccezione del controllo completo. Questa combinazione di diritti di utilizzo implica che i destinatari non hanno restrizioni, ad eccezione del fatto che non possono rimuovere la protezione. Un destinatario può ad esempio, copiare, stampare e inoltrare il messaggio di posta elettronica. Analogamente, è possibile salvare, copiare e stampare qualunque documento di Office che venga allegato e protetto automaticamente.
+Quando questa opzione è selezionata, il messaggio di posta elettronica viene crittografato e i destinatari devono essere autenticati. Quindi, i destinatari hanno tutti i diritti di utilizzo, a eccezione di **Salva con nome, Esporta** e **Controllo completo**. Questa combinazione di diritti di utilizzo implica che i destinatari non hanno restrizioni, ad eccezione del fatto che non possono rimuovere la protezione. Un destinatario può ad esempio, copiare dal messaggio di posta elettronica, stamparlo e inoltrarlo. 
+
+Analogamente, i [documenti di Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) non protetti allegati al messaggio di posta elettronica ereditano le stesse autorizzazioni. Questi documenti vengono automaticamente protetti e possono essere salvati, modificati, copiati e stampati dai destinatari. Quando il documento viene salvato da un destinatario, può essere salvato con un nuovo nome e persino con un formato diverso. Sono tuttavia disponibili solo formati di file che supportano la protezione in modo che il documento non possa essere salvato senza la protezione originale. Se si preferiscono diritti di utilizzo diversi per un allegato o se l'allegato non è un documento di Office che supporta questa protezione ereditata, proteggere il file prima di allegarlo al messaggio di posta elettronica. È quindi possibile assegnare i diritti di utilizzo specifici necessari per il file.
 
 ## <a name="rights-management-issuer-and-rights-management-owner"></a>Emittente di Rights Management e proprietario di Rights Management
 

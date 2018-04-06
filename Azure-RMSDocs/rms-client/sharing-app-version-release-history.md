@@ -1,27 +1,27 @@
 ---
 title: App RMS sharing&colon; cronologia delle versioni - AIP
-description: "Vedere le novità o cosa è stato modificato nell'applicazione Rights Management sharing per Windows."
+description: Vedere le novità o cosa è stato modificato nell'applicazione Rights Management sharing per Windows.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.custom: askipteam
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ed3725f65d5e1b357a2cd1cda1e28a8ddcb8fae6
-ms.sourcegitcommit: 79aa9838956f755994efcb97cef6dd5d1892f06f
+ms.openlocfilehash: 1e3dc88f69b1fb4ed178f3f2d1268c47fae13621
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="rights-management-sharing-application-version-release-history"></a>Applicazione Rights Management sharing: Cronologia delle versioni
 
->*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 Il team di Azure Information Protection aggiorna regolarmente l'applicazione Rights Management sharing con correzioni e nuove funzionalità. Utilizzare le informazioni seguenti per visualizzare gli elementi nuovi o modificati in una versione. La versione più recente è elencata per prima.
 
@@ -102,7 +102,7 @@ Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
 **Nuove funzionalità**:
 
--   Supporto per rilevamento e revoca dei documenti. Per altre informazioni, vedere [Tenere traccia dei documenti e revocarli quando si usa l'applicazione RMS sharing](sharing-app-track-revoke.md).
+-   Supporto per rilevamento e revoca dei documenti. Per altre informazioni, vedere [Rilevare e revocare i documenti quando si usa l'applicazione RMS sharing](sharing-app-track-revoke.md).
 
 -   Il supporto del modello quando si sceglie **Condividi file protetto**:
 

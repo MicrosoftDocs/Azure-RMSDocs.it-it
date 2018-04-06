@@ -1,24 +1,27 @@
 ---
-title: "Modalità di sola protezione per Azure Information Protection"
-description: "Informazioni per gli utenti che eseguono il client Azure Information Protection in modalità di sola protezione."
+title: Modalità di sola protezione per Azure Information Protection
+description: Informazioni per gli utenti che eseguono il client Azure Information Protection in modalità di sola protezione.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/14/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 201415526b57d691d999ddba6af2451df4d36de4
-ms.sourcegitcommit: 2733b1df2ebdda02b60d9471db29e545552f99ff
+ms.openlocfilehash: aed3c59465f822e27411eb84df793bf7ad63b061
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>Guida dell'utente: Modalità di sola protezione per il client Azure Information Protection
+
+>*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
+
 
 Quando il client Azure Information Protection non dispone di etichette per classificare i documenti e i messaggi di posta elettronica, viene eseguito in modalità di **sola protezione**. In questa modalità, ad esempio, potrebbe essere visualizzato quanto segue quando si usa Esplora file, si fa clic con il pulsante destro del mouse e si sceglie **Classifica e proteggi**:
 

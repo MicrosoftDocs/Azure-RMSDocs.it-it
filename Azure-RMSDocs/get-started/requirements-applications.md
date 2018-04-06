@@ -4,23 +4,23 @@ description: Identificare le applicazioni che usano le API di RMS per il support
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/10/2017
+ms.date: 03/28/2018
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9e8e9bd9e8c8c15d11661202cfa11abeec76376f
-ms.sourcegitcommit: e9a24fc5303b21f5eeebf16afed44db0d163ac77
+ms.openlocfilehash: 27187bce4247b2807b75ddc75839daf81a45ed7a
+ms.sourcegitcommit: aca094874febf59eddf84b0da325f4f1f61404d1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applicazioni che supportano la protezione dati di Azure Rights Management
 
->*Si applica a: Azure Information Protection, Office 365*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 Usare le tabelle seguenti per identificare le applicazioni e le soluzioni che supportano il servizio Azure Rights Management (Azure RMS) a livello nativo, che garantisce la protezione dei dati per Azure Information Protection.
@@ -81,6 +81,8 @@ Azure RMS si integra perfettamente nelle applicazioni Word, Excel, PowerPoint e 
 Le famiglie di prodotti client di Office seguenti supportano la protezione dei file e dei messaggi di posta elettronica nei computer Windows tramite Azure RMS:
 
 - Office 365 ProPlus: Office 2016 e Office 2013
+    
+    Queste edizioni di Office sono incluse nella maggior parte, ma non in tutte le sottoscrizione di Office 365 che includono la protezione dati di Azure Information Protection. Controllare le informazioni sulla sottoscrizione per verificare se Office 365 ProPlus è incluso. Queste informazioni si possono trovare anche nel [foglio dati di Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 - Office Professional Plus 2016
 

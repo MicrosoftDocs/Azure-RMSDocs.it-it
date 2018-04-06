@@ -1,26 +1,29 @@
 ---
 title: Scaricare e installare l'app RMS sharing - AIP
-description: "Istruzioni per l'installazione in modo interattivo dell'applicazione RMS sharing per Windows, affinché sia possibile condividere documenti in modo sicuro con altri utenti."
+description: Istruzioni per l'installazione in modo interattivo dell'applicazione RMS sharing per Windows, affinché sia possibile condividere documenti in modo sicuro con altri utenti.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9c954f750c6f49d3db1bf6383efa2805f291682c
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 6c9fe3e28cb44812a6f3a5830546128975522b5f
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="download-and-install-the-rights-management-sharing-application"></a>Scaricare e installare l'applicazione Rights Management sharing
 
->*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+
+> [!IMPORTANT]
+> **Notifica di fine del supporto**: l'applicazione di condivisione Rights Management per Windows verrà sostituita dal [client Azure Information Protection](aip-client.md). Il supporto per questa applicazione precedente terminerà il 31 gennaio 2019.
 
 Non è necessario essere un amministratore locale per installare l'applicazione RMS sharing. Tuttavia, se non si ricopre questo ruolo e si usa Office 2010, sono previste alcune limitazioni. Per ulteriori informazioni, vedere la sezione [Se non si è un amministratore locale e si usa Office 2010](#if-you-are-not-a-local-administrator-and-use-office-2010) di questa pagina.
 

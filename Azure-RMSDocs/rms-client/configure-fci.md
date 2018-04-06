@@ -1,26 +1,26 @@
 ---
 title: Protezione di Azure RMS con l'infrastruttura di classificazione file per Windows Server - AIP
-description: "Istruzioni per usare il client Rights Management (RMS) con il client Azure Information Protection per configurare Gestione risorse file server e la funzionalità Infrastruttura di classificazione file."
+description: Istruzioni per usare il client Rights Management (RMS) con il client Azure Information Protection per configurare Gestione risorse file server e la funzionalità Infrastruttura di classificazione file.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/13/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 49133bec323b00541c92ac3739fafab266cc92cf
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: be2c1a7c0432d3054eb5eced844ba42f402481d6
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protezione RMS con Infrastruttura di classificazione file per Windows Server
 
->*Si applica a: Azure Information Protection, Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
 
 Usare questo articolo per ottenere istruzioni e uno script che consentono di usare il client Azure Information Protection e PowerShell per configurare Gestione risorse file server e Infrastruttura di classificazione file (FCI, File Classification Infrastructure).
 

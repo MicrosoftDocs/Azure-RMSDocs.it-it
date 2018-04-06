@@ -4,23 +4,23 @@ description: Istruzioni e informazioni per amministratori per gestire il client 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2018
+ms.date: 03/26/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5bd2af4da402c0096cb58bba1d44684ad73656d6
-ms.sourcegitcommit: 335c854eb5c6f387a9369d4b6f1e22160517e6ce
+ms.openlocfilehash: 32ae599bc9251fd1504adc2b7c60190e9d78f5fd
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
 
->*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
 Quando si installa il client di Azure Information Protection, vengono installati automaticamente i comandi di PowerShell. Ciò consente di gestire il client eseguendo i comandi che è possibile inserire negli script per l'automazione.
 
@@ -238,9 +238,11 @@ Quando si usa un account dell'entità di sicurezza del servizio per proteggere i
 
 1. Eseguire di nuovo il cmdlet Get-AadrmConfiguration e annotare i valori di **CertificationExtranetDistributionPointUrl** e **LicensingExtranetDistributionPointUrl**.
 
-2. In ogni computer in cui si eseguiranno i cmdlet del modulo AzureInformationProtection aprire l'editor del Registro di sistema e passare a `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC`
+2. In ogni computer in cui si eseguiranno i cmdlet di AzureInformationProtection aprire l'editor del Registro di sistema.
 
-3. Se la chiave **ServiceLocation** non è visibile, crearla, in modo che il percorso del Registro di sistema indichi **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation**
+3. Andare al percorso seguente: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation`. 
+    
+    Se la chiave **MSIPC** o **ServiceLocation** non viene visualizzata, crearla.
 
 4. Per la chiave **ServiceLocation** creare due chiavi, se non esistono, chiamate **EnterpriseCertification** e **EnterprisePublishing**. 
     

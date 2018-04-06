@@ -1,24 +1,24 @@
 ---
 title: Note sulla versione
 description: Aggiornamenti all'SDK per revisione e altre informazioni per sviluppatori.
-keywords: 
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 10/18/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: f05191f2c2700e59bb83a79d025ba181b799ab5a
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 74f4eacb7601d137e8eb459fad3853ac5ec52e97
+ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="release-notes"></a>Note sulla versione
 
@@ -34,7 +34,7 @@ Questo articolo contiene informazioni importanti su questa versione e le version
 >[!Note]
 > Gli aggiornamenti della documentazione delle funzionalità in questa sezione si applicano al download dell'SDK con data 11/12/2015.
 
-- **Flusso di autenticazione migliorato** usando l'autenticazione OAuth2 basata su token tramite [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/en-us/documentation/articles/active-directory-authentication-libraries/). Per altre informazioni su questo processo e sulle relative estensioni API, vedere [ADAL authentication for your RMS enabled application](how-to-use-adal-authentication.md) (Autenticazione ADAL per l'applicazione abilitata per RMS).
+- **Flusso di autenticazione migliorato** usando l'autenticazione OAuth2 basata su token tramite [Azure Active Directory Authentication Library (ADAL)](https://azure.microsoft.com/documentation/articles/active-directory-authentication-libraries/). Per altre informazioni su questo processo e sulle relative estensioni API, vedere [ADAL authentication for your RMS enabled application](how-to-use-adal-authentication.md) (Autenticazione ADAL per l'applicazione abilitata per RMS).
 
 - **Aggiornamento ad ADAL**: eseguendo l'aggiornamento dell'applicazione per l'uso dell'autenticazione ADAL anziché l'Assistente per l'accesso a Microsoft Online, l'utente e i clienti potranno:
 
@@ -121,7 +121,7 @@ Il componente API File dell'SDK è stato integrato e ora offre le funzionalità 
 
     Per altre informazioni sui tipi di file supportati, vedere [Configurazione API file](file-api-configuration.md).
 
--   **Macchine con Windows 7 SP1 e Windows Server 2008 R2 SP1** senza l'aggiornamento, [KB2533623](https://support.microsoft.com/en-us/kb/2533623), potrebbero manifestare il seguente errore di protezione di qualsiasi file di Office "Parametro non corretto. Codice di errore 0x80070057". In tal caso, installare l'aggiornamento e riprovare. Se il problema persiste, contattare l'alias RMS SDK Beta Feedback <rmcstbeta@microsoft.com>.
+-   **Macchine con Windows 7 SP1 e Windows Server 2008 R2 SP1** senza l'aggiornamento, [KB2533623](https://support.microsoft.com/kb/2533623), potrebbero manifestare il seguente errore di protezione di qualsiasi file di Office "Parametro non corretto. Codice di errore 0x80070057". In tal caso, installare l'aggiornamento e riprovare. Se il problema persiste, contattare l'alias RMS SDK Beta Feedback <rmcstbeta@microsoft.com>.
 
     **Nota**: a partire dalla versione di aprile 2015, è stato aggiunto un controllo al processo di installazione per questo KB.
 
@@ -139,7 +139,7 @@ Il componente API File dell'SDK è stato integrato e ora offre le funzionalità 
 
     L'API file viene implementata tramite le quattro nuove funzioni seguenti: [IpcfDecryptFile](https://msdn.microsoft.com/library/dn133058.aspx), [IpcfEncryptFile](https://msdn.microsoft.com/library/dn133059.aspx), [IpcfGetSerializedLicenseFromFile](https://msdn.microsoft.com/library/dn133060.aspx) e [IpcfIsFileEncrypted](https://msdn.microsoft.com/library/dn133061.aspx).
 
-    L'API file richiede che Rights Management Service Client 2.1 sia installato nel computer client e che il computer disponga di connettività a un server RMS. Per altre informazioni sul server RMS, il client RMS e le relative funzionalità, vedere il contenuto TechNet relativo alla [documentazione di RMS per i professionisti IT](https://technet.microsoft.com/en-us/library/cc771234(v=ws.10).aspx).
+    L'API file richiede che Rights Management Service Client 2.1 sia installato nel computer client e che il computer disponga di connettività a un server RMS. Per altre informazioni sul server RMS, il client RMS e le relative funzionalità, vedere il contenuto TechNet relativo alla [documentazione di RMS per i professionisti IT](https://technet.microsoft.com/library/cc771234(v=ws.10).aspx).
 
 -   **Problema**: durante la creazione di una licenza da zero, i diritti di proprietà devono essere concessi esplicitamente.
 

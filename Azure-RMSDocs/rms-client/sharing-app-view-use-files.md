@@ -6,21 +6,21 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 07/18/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0a510d559573e942b8a2bf392f36a1300dfbfb7a
-ms.sourcegitcommit: 1c3ebf4ad64b55db4fec3ad007fca71ab7d38c02
+ms.openlocfilehash: 393db5da6f2a563b073b071e873a8c5d555a76e6
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Visualizzare e usare i file che sono stati protetti da Rights Management
 
->*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 Quando l'[applicazione Rights Management (RMA) sharing viene installata nel computer in uso](install-sharing-app.md), viene visualizzato un file protetto semplicemente facendo doppio clic su di esso. Il file potrebbe essere un allegato in un messaggio di posta elettronica oppure è possibile vederlo quando si utilizza Esplora file.
 
@@ -44,7 +44,7 @@ Se si visualizzano due versioni del file, ma con estensioni del nome di file div
 
 Come il file verrà aperto dipende da come è stato protetto; è possibile saperlo esaminando l'estensione del file. In ogni caso, l’apertura del file potrebbe essere controllata e rimane controllata finché è protetto. Inoltre, se il file è stato inviato come allegato di posta elettronica, il mittente potrebbe ricevere una notifica tramite posta elettronica ogni volta che si apre il file.
 
-- **Il file ha*.pfile* estensione del nome di file**
+- **Il file ha estensione del nome di file *.pfile***
 
     Il file è stato protetto in modo generico.
 
@@ -73,7 +73,7 @@ Per un elenco completo delle estensioni di file supportate dai servizi Rights Ma
 ## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>Per utilizzare i file protetti (ad esempio, modificare e stampare il file)
 Se dopo avere aperto il file protetto si vuole eseguire altre operazioni oltre alla lettura (ad esempio, modifica, copia e stampa), seguire le istruzioni in base all'estensione del nome di file:
 
-- **Il file ha*.pfile* estensione del nome di file**
+- **Il file ha estensione del nome di file *.pfile***
 
     Salvare il file aperto e assegnargli una nuova estensione del nome di file associata all'applicazione che si desidera utilizzare.
 
@@ -81,7 +81,7 @@ Se dopo avere aperto il file protetto si vuole eseguire altre operazioni oltre a
 
     Il nuovo file non è più protetto. Se si desidera proteggerlo, è necessario eseguire questa operazione manualmente. Per istruzioni, vedere [Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione Rights Management sharing](sharing-app-protect-in-place.md).
 
-- **Il file ha estensione *.ppdf* o è un file di testo o immagine protetto, (ad esempio *.ptxt* o *.pjpg*)**
+- **Il file ha estensione *PPDF* o è un file di testo o immagine protetto, ad esempio *PTXT* o *PJPG***
 
     È possibile solo visualizzare il file e se lo si rinomina o lo si sposta, la protezione rimane con il file.
 

@@ -1,26 +1,26 @@
 ---
 title: Tenere traccia dei documenti e revocarli con l'app RMS sharing - AIP
-description: "Dopo che i documenti sono stati protetti usando l'applicazione RMS sharing, è possibile rilevare come tali documenti vengono usati dagli utenti. Se necessario, è anche possibile revocare l'accesso a questi documenti quando si desidera interromperne la condivisione."
+description: Dopo che i documenti sono stati protetti usando l'applicazione RMS sharing, è possibile rilevare come tali documenti vengono usati dagli utenti. Se necessario, è anche possibile revocare l'accesso a questi documenti quando si desidera interromperne la condivisione.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/18/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 71f08e7500fbc9326bed3a5b37d694ecc5e37984
-ms.sourcegitcommit: 02e48f0e5137ba777ec9a2bccde08130e6075c20
+ms.openlocfilehash: 86da59d624d197aaad25e3f6fb04cfdd47ad1c3e
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/19/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>Tenere traccia dei documenti e revocarli quando si usa l'applicazione RMS sharing
 
->*Si applica a: Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 Dopo avere protetto i documenti tramite l'applicazione RMS sharing, se l'organizzazione usa Azure Information Protection invece di Active Directory Rights Management Services, è possibile tenere traccia del modo in cui le persone usano i documenti protetti. Se necessario, è anche possibile revocare l'accesso a questi documenti quando si desidera interromperne la condivisione. A tale scopo, usare il **sito di rilevamento del documento**, a cui è possibile accedere dai computer Windows, dai computer Mac e anche da tablet e telefoni.
 
@@ -74,7 +74,7 @@ Oltre a tenere traccia dei documenti nei computer Windows utilizzando applicazio
 
     Browser supportati: È consigliabile utilizzare almeno la versione  10 di Internet Explorer, ma è possibile utilizzare uno qualsiasi dei browser seguenti per utilizzare il sito di rilevamento del documento:
 
-    -   Internet Explorer: Almeno la versione  10
+    -   Internet Explorer: almeno la versione 10
 
     -   Internet Explorer 9 con almeno MS12-037: aggiornamento cumulativo della sicurezza per Internet Explorer: 12 giugno 2012
 

@@ -6,21 +6,21 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/02/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 2cf46bf9-7d23-4f49-b5c1-7ed7b71c858f
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f1ea192bcacc856b1a4452e2ad3b21f4de45d511
-ms.sourcegitcommit: 92bbef77091c66300e0d2acce60c064ffe314752
+ms.openlocfilehash: 1e6ce5660a0ccc8385c6ab728c4d2c1c202023ed
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="azure-information-protection-user-guide"></a>Guida per l'utente di Azure Information Protection
 
->*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
+>*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 
 Il client di Azure Information Protection per Windows consente di proteggere i documenti e i messaggi di posta elettronica importanti dagli utenti che non sono autorizzati a visualizzarli, anche se il messaggio di posta elettronica viene inoltrato o se il documento viene salvato in un altro percorso. È anche possibile usare questo client per aprire documenti protetti da altri utenti tramite la tecnologia di protezione Rights Management da Azure Information Protection.
 

@@ -4,23 +4,23 @@ description: Informazioni e istruzioni per gli amministratori per configurare Of
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/27/2018
+ms.date: 03/27/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 25ba730c38261c035c63e8137260cbee55c828ad
-ms.sourcegitcommit: 01249fc29fccf6931ebf2f5d0138706e6ae2db9c
+ms.openlocfilehash: ecf30ece9370a732e0bf302be5733273b64eea1a
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="office-365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: configurazione per i client e i servizi online da usare con il servizio Azure Rights Management
 
->*Si applica a: Azure Information Protection, Office 365*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Dal momento che Office 365 supporta in modo nativo il servizio Azure Rights Management di Azure Information Protection, non è necessario eseguire alcuna attività di configurazione dei computer client per supportare le funzionalità IRM (Information Rights Management) per applicazioni quali Word, Excel, PowerPoint, Outlook e Outlook sul Web. Gli utenti dovranno solo eseguire l'accesso alle applicazioni Office con le proprie credenziali [!INCLUDE[o365_1](../includes/o365_1_md.md)]. Potranno quindi proteggere file e messaggi di posta elettronica e usare file e messaggi di posta elettronica protetti da altri utenti.
 
@@ -80,7 +80,7 @@ Per informazioni sul funzionamento di IRM per SharePoint Online con il servizio 
 Per configurare SharePoint Online e OneDrive for Business allo scopo di supportare il servizio Azure Rights Management, è necessario abilitare prima il servizio IRM (Information Rights Management) per SharePoint Online usando l'interfaccia di amministrazione di SharePoint. I proprietari del sito possono quindi proteggere con IRM i propri elenchi e le proprie raccolte documenti di SharePoint e gli utenti possono proteggere con IRM la propria raccolta di OneDrive for Business, in modo che i documenti salvati in tale posizione e condivisi con altri utenti vengano protetti automaticamente dal servizio Azure Rights Management.
 
 > [!NOTE]
-> Per le raccolte per SharePoint protette con IRM e OneDrive for Business è necessario usare l'ultima versione del client di sincronizzazione di OneDrive (OneDrive.exe). Per altre informazioni, vedere [Enable users to sync IRM-protected files with the OneDrive sync client](https://support.office.com/en-us/article/6778d4de-b5f8-423c-af43-a1b2449e9b99) (Abilitare gli utenti per la sincronizzazione di file protetti con IRM con il client di sincronizzazione di OneDrive).
+> Per le raccolte per SharePoint protette con IRM e OneDrive for Business è necessario usare l'ultima versione del client di sincronizzazione di OneDrive (OneDrive.exe). Per altre informazioni, vedere [Distribuire il nuovo client di sincronizzazione di OneDrive in un ambiente aziendale](https://support.office.com/article/Deploy-the-new-OneDrive-sync-client-in-an-enterprise-environment-3f3a511c-30c6-404a-98bf-76f95c519668).
 
 Per abilitare il servizio IRM (Information Rights Management) per SharePoint Online, vedere le istruzioni seguenti dal sito Web Office:
 
@@ -96,25 +96,29 @@ Dopo l'abilitazione del servizio IRM per SharePoint, i proprietari dei siti poss
 Questa configurazione viene eseguita dall'amministratore del sito di SharePoint.
 
 ### <a name="configuring-irm-for-onedrive-for-business"></a>Configurazione di IRM per OneDrive for Business
-Dopo aver abilitato il servizio IRM per SharePoint Online, è possibile configurare la libreria dei documenti OneDrive for Business degli utenti per la protezione di Rights Management.  Gli utenti possono configurarla autonomamente usando l’icona **Impostazioni** in OneDrive. Anche se gli amministratori non possono configurare Rights Management per OneDrive for Business degli utenti usando il centro di amministrazione di SharePoint, è possibile farlo tramite Windows PowerShell.
+Dopo aver abilitato il servizio IRM per SharePoint Online, è possibile configurare la libreria dei documenti OneDrive for Business degli utenti o le singole cartelle per la protezione di Rights Management. Gli utenti possono configurarla autonomamente usando il sito Web OneDrive. Anche se gli amministratori non possono configurare questa protezione per gli utenti usando il centro di amministrazione di SharePoint, è possibile farlo tramite Windows PowerShell.
 
 > [!NOTE]
 > Per ulteriori informazioni sulla configurazione di OneDrive for Business, vedere la documentazione di Office [Impostare OneDrive for Business in Office 365](https://support.office.com/article/Set-up-OneDrive-for-Business-in-Office-365-3e21f8f0-e0a1-43be-aa3e-8c0236bf11bb).
 
 #### <a name="configuration-for-users"></a>Configurazione per gli utenti
-Dare agli utenti queste istruzioni affinché essi possano configurare la loro copia di OneDrive for Business e proteggere i propri file di lavoro tramite IRM.
+Dare agli utenti le istruzioni seguenti perché possano configurare la propria copia di OneDrive for Business per proteggere i file di lavoro.
 
-1.  In OneDrive fare clic sull'icona **Impostazioni** per aprire il menu Impostazioni e quindi fare clic su **Contenuto del sito**.
+1. Accedere a Office 365 con l'account aziendale o dell'istituto di istruzione e andare al [sito Web OneDrive](https://portal.office.com/onedrive).
 
-2.  Posizionare il puntatore del mouse sul riquadro **Documenti**, scegliere i puntini di sospensione (**...**) e quindi fare clic su **IMPOSTAZIONI**.
+2. Nella parte inferiore del riquadro di spostamento selezionare **Return to classic OneDrive** (Torna a OneDrive classico).
 
-3.  Nella pagina **Impostazioni** nella sezione **Autorizzazioni e gestione** , fare clic su **Information Rights Management**.
+3. Selezionare l'icona **Impostazioni**. Nel riquadro **Impostazioni**, se **Barra multifunzione** è impostato su **No**, selezionare questa impostazione per attivare la barra multifunzione.
 
-4.  Nella pagina **Impostazioni Information Rights Management** selezionare la casella di controllo **Limita autorizzazioni per la libreria durante il download** specificare il nome scelto e una descrizione per le autorizzazioni, quindi, facoltativamente, fare clic su **MOSTRA OPZIONI** per definire configurazioni facoltative e quindi fare clic su **OK**.
+4. Per configurare tutti i file di OneDrive for Business da proteggere, selezionare la scheda **LIBRERIA** dalla barra multifunzione e quindi selezionare **Impostazioni libreria**. Per selezionare tutti i file di una cartella specifica da proteggere, selezionare prima la cartella.
+
+5. Nella pagina **Documenti > Impostazioni**, nella sezione **Autorizzazioni e gestione** selezionare **Information Rights Management**.
+
+6. Nella pagina **Impostazioni Information Rights Management** selezionare la casella di controllo **Limita autorizzazioni per la libreria durante il download**. Specificare il nome scelto e una descrizione per le autorizzazioni e, facoltativamente, fare clic su **MOSTRA OPZIONI** per impostare le configurazioni facoltative e quindi fare clic su **OK**.
 
     Per altre informazioni sulle opzioni di configurazione, vedere le istruzioni in [Applicare la protezione Information Rights Management a un elenco o una raccolta](https://support.office.com/article/Apply-Information-Rights-Management-to-a-list-or-library-3bdb5c4e-94fc-4741-b02f-4e7cc3c54aa1) nella documentazione di Office.
 
-Poiché questa configurazione si basa sugli utenti e non è l’amministratore a proteggere tramite IRM la loro libreria OneDrive for Business, è necessario informare gli utenti sui benefici derivanti dal proteggere i propri file e come farlo. Ad esempio, spiegare agli utenti che, quando condividono un documento da OneDrive for Business, solo le persone da loro autorizzate potranno accedere al documento con le restrizioni configurate, anche se il file viene rinominato e copiato altrove.
+Poiché questa configurazione si basa sugli utenti e non è l'amministratore a proteggere tramite IRM i file di OneDrive for Business, è necessario informare gli utenti sui benefici derivanti dal proteggere i propri file e come farlo. Ad esempio, spiegare agli utenti che, quando condividono un documento da OneDrive for Business, solo le persone da loro autorizzate potranno accedere al documento con le restrizioni configurate, anche se il file viene rinominato e copiato altrove.
 
 #### <a name="configuration-for-administrators"></a>Configurazione per gli amministratori
 Anche se non è possibile configurare IRM per OneDrive for Business per gli utenti per le aziende usando il centro di amministrazione di SharePoint, è possibile farlo tramite Windows PowerShell. Per attivare IRM per queste librerie, attenersi alla seguente procedura:
@@ -508,7 +512,7 @@ Anche se non è possibile configurare IRM per OneDrive for Business per gli uten
 
         L'URL Web di OneDrive for Business dell'utente è nel formato seguente: https://*&lt;nome tenant&gt;*-my.sharepoint.com/personal/*&lt;nome_utente&gt;*_*&lt;nome tenant&gt;*_com
 
-        Ad esempio, se l'utente nel tenant contoso dispone di un nome utente di "rsimone", si specificherà: **https://contoso-my.sharepoint.com/personal/rsimone_contoso_com**
+        Ad esempio, se il nome dell'utente del tenant contoso è "rsimone", si specificherà: **https://contoso-my.sharepoint.com/personal/rsimone_contoso_com**
 
     4.  Poiché si sta usando lo script per configurare OneDrive for Business, non modificare il valore di **Documenti** per la variabile `$listTitle`.
 
@@ -523,7 +527,7 @@ Anche se non è possibile configurare IRM per OneDrive for Business per gli uten
 > [!TIP]
 > È inoltre possibile usare questo script per configurare IRM per una libreria di SharePoint Online. Per questa configurazione, probabilmente si desidererà attivare l'opzione aggiuntiva **Non consentire il caricamento di documenti che non supportano IRM**, per assicurare che la libreria contenga solo documenti protetti.    A tale scopo, aggiungere il parametro `-IrmReject` per il comando Set-IrmConfiguration nello script.
 >
-> Inoltre potrebbe essere necessario modificare la variabile `$webUrls` (ad esempio, **https://contoso.sharepoint.com**) e la variabile `$listTitle` (ad esempio, **$Reports**).
+> Potrebbe anche essere necessario modificare la variabile `$webUrls` (ad esempio, **https://contoso.sharepoint.com**) e la variabile `$listTitle` (ad esempio, **$Reports**).
 
 Se è necessario disabilitare IRM per le librerie OneDrive for Business dell'utente, vedere la sezione [Script per disattivare IRM per OneDrive for Business](#script-to-disable-irm-for-onedrive-for-business).
 

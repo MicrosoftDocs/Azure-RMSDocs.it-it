@@ -6,21 +6,21 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/16/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 674acfafb305d8ac6ff530710ba311160c850288
-ms.sourcegitcommit: 8ba50d1fc813214b6e66baea140e626c74c5a518
+ms.openlocfilehash: c15c18f7d0a0f43e4f91193ee4a11b324f0187f2
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configurazione dei server per il connettore di Azure Rights Management
 
->*Si applica a: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2012, Windows Server 2012 R2*
 
 
 Usare le informazioni seguenti per configurare il server locale che sfrutterà il connettore di Azure Rights Management (RMS). Queste procedure illustrano il passaggio 5 di [Distribuzione del connettore di Azure Rights Management](deploy-rms-connector.md).
@@ -106,7 +106,7 @@ Dopo aver apportato modifiche alla configurazione di questi server, è necessari
     Get-help .\GenConnectorConfig.ps1 -detailed
     ```
 
-Per eseguire lo script è necessario immettere l'URL del connettore RMS dell'organizzazione. Immettere il prefisso del protocollo (HTTP:// o HTTPS://) e il nome del connettore definito nel DNS per l'indirizzo di bilanciamento del carico del connettore stesso, ad esempio https://connector.contoso.com. Lo strumento usa quindi tale URL per contattare i server che eseguono il connettore RMS e ottenere altri parametri usati per creare le configurazioni richieste.
+Per eseguire lo script è necessario immettere l'URL del connettore RMS dell'organizzazione. Immettere il prefisso del protocollo (HTTP:// o HTTPS://) e il nome del connettore definito nel DNS per l'indirizzo di bilanciamento del carico del connettore stesso, Ad esempio, https://connector.contoso.com Lo strumento usa quindi tale URL per contattare i server che eseguono il connettore RMS e ottenere altri parametri usati per creare le configurazioni richieste.
 
 > [!IMPORTANT]
 > Quando si esegue questo strumento, assicurarsi di specificare il nome del connettore RMS con carico bilanciato per l'organizzazione e non il nome di un singolo server che esegue il servizio del connettore RMS.
@@ -224,7 +224,7 @@ Per usare un connettore RMS, è necessario che i server di SharePoint eseguano u
 ## <a name="configuring-a-file-server-for-file-classification-infrastructure-to-use-the-connector"></a>Configurazione di un file server per consentire l'uso del connettore alla funzionalità Infrastruttura di classificazione file
 Per usare il connettore RMS e la funzionalità Infrastruttura di classificazione file per proteggere i documenti di Office, è necessario che il file server esegua uno dei sistemi operativi seguenti:
 
--   Windows Server 2012 R2
+-   R2 per Windows Server 2012
 
 -   Windows Server 2012
 

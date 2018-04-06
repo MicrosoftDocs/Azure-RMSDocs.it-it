@@ -1,24 +1,24 @@
 ---
 title: Esercitazione per l'avvio rapido - Passaggio 4 - AIP
-description: 'Passaggio 4 di un''esercitazione introduttiva per provare rapidamente a usare Azure Information Protection: vedere in azione le funzioni di aggiunta di etichette e protezione.'
+description: "Passaggio 4 di un'esercitazione introduttiva per provare rapidamente a usare Azure Information Protection: vedere in azione le funzioni di aggiunta di etichette e protezione."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/30/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
-ms.openlocfilehash: 3a5e3fc018bb19480a52729345ad2ac6d4c851be
-ms.sourcegitcommit: 13e95906c24687eb281d43b403dcd080912c54ec
+ms.openlocfilehash: f92953acfe652238ef8a36f67cdd8051324c6f18
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Passaggio 4: Funzioni di classificazione, aggiunta di etichette e protezione in azione 
 
->*Si applica a: Azure Information Protection*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Con un documento di Word aperto e il client di Azure Information Protection installato è possibile rendersi conto di quanto sia facile aggiungere etichette e proteggere il documento usando il criterio configurato.
 
