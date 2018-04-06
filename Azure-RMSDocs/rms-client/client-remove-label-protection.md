@@ -6,21 +6,21 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 10/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
-ms.assetid: 
+ms.assetid: ''
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b7651b39760f9ebf71970ec744d553a71f5e9c9c
-ms.sourcegitcommit: 832d3ef5f9c41d6adb18a8cf5304f6048cc7252e
+ms.openlocfilehash: 6e68a3ab1aca0d32f8105bad7d2b5e8985dab1ae
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Guida dell'utente: Rimuovere etichette e protezione da file e messaggi di posta elettronica etichettati tramite Azure Information Protection o protetti tramite Rights Management
 
->*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
+>*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 
 Quando il [client Azure Information Protection viene installato nel computer](install-client-app.md), è possibile rimuovere etichette di classificazione e protezione da file e messaggi di posta elettronica.
 

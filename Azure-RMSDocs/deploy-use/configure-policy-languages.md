@@ -1,24 +1,24 @@
 ---
 title: Configurare etichette e modelli per varie lingue in Azure Information Protection
-description: "È possibile aggiungere il supporto di varie lingue per le etichette che gli utenti visualizzano sulla barra di Information Protection e per i modelli visualizzati dagli utenti, specificando le lingue nei criteri di Azure Information Protection e importando le traduzioni."
+description: È possibile aggiungere il supporto di varie lingue per le etichette che gli utenti visualizzano sulla barra di Information Protection e per i modelli visualizzati dagli utenti, specificando le lingue nei criteri di Azure Information Protection e importando le traduzioni.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/20/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: dee720e99a3671dec788e048fac6f28c3992daa0
-ms.sourcegitcommit: 67750454f8fa86d12772a0075a1d01a69f167bcb
+ms.openlocfilehash: b3341237d494766242ef790798ad1f97404919e9
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Come configurare etichette e modelli per varie lingue in Azure Information Protection
 
->*Si applica a: Azure Information Protection*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Anche se le etichette predefinite per Azure Information Protection supportano più lingue, è necessario configurare il supporto per i nomi di etichetta e le descrizioni specificate. Per questa configurazione è necessario:
 

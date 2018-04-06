@@ -1,27 +1,27 @@
 ---
 title: Esercitazione per l'avvio rapido - Passaggio 5 - AIP
-description: 'Passaggio 5 di un''esercitazione introduttiva per provare rapidamente a usare Azure Information Protection: condividere file protetti e tenere traccia del documento.'
-keywords: 
+description: "Passaggio 5 di un'esercitazione introduttiva per provare rapidamente a usare Azure Information Protection: condividere file protetti e tenere traccia del documento."
+keywords: ''
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/18/2017
 ms.topic: get-started-article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6d62b6dd588b035ded582a87f5faf04a04df6ab6
-ms.sourcegitcommit: 2f1936753adf8d2fbea780d0a3878afa621daab5
+ms.openlocfilehash: 718c15769e5719d5e8dde612cf66e4215f1e235d
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Passaggio 5: Vedere in azione la condivisione di file protetti e tenere traccia del documento 
 
->*Si applica a: Azure Information Protection*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Per questo passaggio finale dell'esercitazione, individuare un documento di Word o un foglio di calcolo di Excel già creato da inviare a un partner o a un collaboratore. Ai fini di questa esercitazione non è importante l’effettivo contenuto del testo. Verrà tuttavia definito un testo, in modo verificare con maggiore semplicità che il destinatario autorizzato possa leggerlo.
 

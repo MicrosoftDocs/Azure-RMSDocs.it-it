@@ -6,21 +6,21 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 01/30/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 87ae9b546a791c20b71625f938265c584980ae43
-ms.sourcegitcommit: d32d1f5afa5ee9501615a6ecc4af8a4cd4901eae
+ms.openlocfilehash: a81585ae1acb791dcf33f8d047268a9e4e9f2f2e
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guida dell'utente: Visualizzare e usare file protetti con Rights Management
 
->*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
+>*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 
 Per visualizzare un documento protetto, spesso è sufficiente aprirlo. Ad esempio, è possibile fare doppio clic su un allegato in un messaggio di posta elettronica o fare doppio clic su un file in Esplora file oppure è possibile fare clic su un collegamento a un file.
 

@@ -4,7 +4,7 @@ description: Identificare i prerequisiti per distribuire Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/21/2018
+ms.date: 03/26/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,15 +12,15 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9542eb6f679d931de556f706afa3b51cfd9d2bb8
-ms.sourcegitcommit: 58cd89cc6f6407648854e2e2d28a61325b5c8922
+ms.openlocfilehash: 91c7ec9b7d9c0ed1d85ccbdd0b4c7750fd5b007c
+ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisiti per Azure Information Protection
 
->*Si applica a: Azure Information Protection, Office 365*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Prima di distribuire Azure Information Protection per l'organizzazione, verificare di soddisfare i prerequisiti seguenti. 
 
@@ -86,6 +86,8 @@ Quando il client Azure Information Protection protegge i dati tramite il servizi
 Il client Azure Information Protection consente di etichettare e proteggere documenti e messaggi di posta elettronica usando le applicazioni di Office **Word**, **Excel**, **PowerPoint** e **Outlook** delle edizioni di Office seguenti:
 
 - Office 365 ProPlus con le app di Office 2016 o 2013 (installazione basata su A portata di clic o Windows Installer)
+    
+    Queste edizioni di Office sono incluse nella maggior parte, ma non in tutte le sottoscrizione di Office 365 che includono la protezione dati di Azure Information Protection. Controllare le informazioni sulla sottoscrizione per verificare se Office 365 ProPlus è incluso. Queste informazioni si possono trovare anche nel [foglio dati di Azure Information Protection](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
 - Office Professional Plus 2016
 
@@ -93,7 +95,7 @@ Il client Azure Information Protection consente di etichettare e proteggere docu
 
 - Office Professional Plus 2010 con Service Pack 2
 
-Con le altre edizioni di Office non è possibile proteggere i documenti e i messaggi di posta elettronica usando un servizio Rights Management. Per queste edizioni Azure Information Protection è supportato solo per la classificazione. Le etichette che applicano la protezione non vengono visualizzate sulla barra di Azure Information Protection. 
+Con le altre edizioni di Office non è possibile proteggere i documenti e i messaggi di posta elettronica usando un servizio Rights Management. Per queste edizioni Azure Information Protection è supportato solo per la classificazione. Di conseguenza, le etichette che applicano la protezione non vengono visualizzate dagli utenti sulla barra di Azure Information Protection o dal pulsante **Proteggi** sulla barra multifunzione di Office. 
 
 Il client di Azure Information Protection non supporta più versioni di Office sullo stesso computer. Il client inoltre non supporta il passaggio tra gli account utente in Office.
 

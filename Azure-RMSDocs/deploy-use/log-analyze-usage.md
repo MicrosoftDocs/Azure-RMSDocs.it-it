@@ -6,21 +6,21 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 01/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 09d076299f70718b65bb3746486f559a880a2660
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: b4a9c6b259e5863bb5be276f89beb0de33002ca4
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registrazione e analisi dell'utilizzo del servizio Azure Rights Management
 
->*Si applica a: Azure Information Protection, Office 365*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Seguire queste istruzioni per comprendere il modo in cui è possibile usare la registrazione dell'utilizzo per il servizio Azure Rights Management di Azure Information Protection. Questo servizio garantisce la protezione dati per i documenti e i messaggi di posta elettronica dell'organizzazione e può registrare qualsiasi richiesta. Sono esempi di richieste le azioni eseguite dagli utenti per proteggere documenti e messaggi di posta elettronica e per usare questi contenuti, le azioni eseguite dagli amministratori del servizio e le azioni eseguite da operatori Microsoft per il supporto delle distribuzioni di Azure Information Protection. 
 

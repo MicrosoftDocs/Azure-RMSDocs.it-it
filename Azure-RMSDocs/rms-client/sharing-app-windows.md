@@ -1,26 +1,26 @@
 ---
 title: Applicazione Rights Management sharing per Windows - AIP
-description: "Risorse informative per l'applicazione Rights Management sharing per Windows. Questa è un'applicazione gratuita e scaricabile per organizzazioni che usano Active Directory Rights Management Services (AD RMS) o Azure Information Protection e per organizzazioni che non possiedono la propria infrastruttura di protezione delle informazioni ma vogliono utilizzare il contenuto protetto da altre organizzazioni che usano Azure Information Protection."
+description: Risorse informative per l'applicazione Rights Management sharing per Windows. Questa è un'applicazione gratuita e scaricabile per organizzazioni che usano Active Directory Rights Management Services (AD RMS) o Azure Information Protection e per organizzazioni che non possiedono la propria infrastruttura di protezione delle informazioni ma vogliono utilizzare il contenuto protetto da altre organizzazioni che usano Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 07/27/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a496ed482f6973f03c63b3792fd1f3ccc4b9403e
-ms.sourcegitcommit: d7bdf865a06df2150b261c98b66503c1db7fed11
+ms.openlocfilehash: 4a5541e076fa4324c4a79df4d18daacc6b3dafb5
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/28/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="rights-management-sharing-application-for-windows"></a>Applicazione Rights Management sharing per Windows
 
->*Si applica a: Active Directory Rights Management Services, Azure Information Protection*
+>*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 > [!IMPORTANT]
 > **Notifica di fine del supporto**: l'applicazione di condivisione Rights Management per Windows verrà sostituita dal [client Azure Information Protection](aip-client.md). Il supporto per questa applicazione precedente terminerà il 31 gennaio 2019. 

@@ -6,19 +6,19 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/08/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: e20b3e4d84b2230cf7bcbc64c31970fd53d5a7ae
-ms.sourcegitcommit: c2aecb470d0aab89baae237b892dcd82b3ad223e
+ms.openlocfilehash: 997c4c873eb7c9340fb765f513c1e06cd3725fdd
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Esercitazione introduttiva di Azure Information Protection 
 
->*Si applica a: Azure Information Protection*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Usare questa esercitazione per provare rapidamente Azure Information Protection in cinque passaggi la cui esecuzione richiede circa 20 minuti. Questa esercitazione è stata pensata come demo autoguidata che consente di comprendere rapidamente alcune delle caratteristiche e delle funzionalità offerte da Azure Information Protection. Non include tutte le funzionalità disponibili e non deve essere considerata come una guida alla distribuzione per l'organizzazione. Se si vuole distribuire Azure Information Protection nell'organizzazione, vedere la [Guida di orientamento per la distribuzione](../plan-design/deployment-roadmap.md). 
 

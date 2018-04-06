@@ -6,21 +6,21 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 06/02/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b1bb3308dc6e0561109602411fea3e63252fb9d4
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: c4f37d2c3e7a90171662d91a4f78d61b629dd650
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application"></a>Panoramica tecnica e dettagli sulla protezione per l'applicazione Microsoft Rights Management sharing
 
->*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 
 L'applicazione Microsoft Rights Management sharing è un'applicazione facoltativa scaricabile per Microsoft Windows e altre piattaforme e che fornisce le operazioni seguenti:
@@ -101,7 +101,7 @@ Analogamente, è possibile forzare l'applicazione RMS sharing ad applicare la pr
 
 Per configurare l'applicazione RMS sharing in modo da applicare la protezione generica a tutti i file a cui verrebbe applicata la protezione nativa per impostazione predefinita, apportare le modifiche seguenti al Registro di sistema. Si noti che se le chiavi RmsSharingApp e FileProtection non esistono, è necessario crearle manualmente.
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: creare una nuova chiave denominata \*.
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: creare una nuova chiave denominata *.
 
     Questa impostazione indica i file con qualsiasi estensione di file.
 

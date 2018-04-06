@@ -6,22 +6,22 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/13/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bf640c7faf6bcd5ce7467547095b44f09e72fa8c
-ms.sourcegitcommit: c157636577db2e2a2ba5df81eb985800cdb82054
+ms.openlocfilehash: b1968f277ca7c9237487d4d767b8a85eb15a9331
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Domande frequenti sulla protezione dei dati in Azure Information Protection
 
->*Si applica a: Azure Information Protection, Office 365*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Di seguito sono riportate alcune possibili domande sul servizio di protezione dei dati, Azure Rights Management, di Azure Information Protection e le relative risposte.
 
@@ -156,7 +156,7 @@ Aprire Outlook e creare un profilo mediante l'account aziendale o dell'istituto 
 
 Per proteggere un messaggio di posta elettronica o un documento: nella scheda **Opzioni** fare clic su **Autorizzazioni** e scegliere un'opzione o un modello che protegge il messaggio di posta elettronica o il documento.
 
-Per tenere traccia di un documento dopo averlo protetto: da un computer Windows nel quale è installato il client Azure Information Protection, registrare il documento con il sito di rilevamento dei documenti tramite un'applicazione di Office o Esplora file. Per le relative istruzioni, vedere [Tenere traccia dei documenti e revocarli](../rms-client/client-track-revoke.md). Dal computer Mac ora è possibile usare il Web browser e accedere al sito di rilevamento dei documenti (https://track.azurerms.com) per rilevare e revocare il documento.
+Per tenere traccia di un documento dopo averlo protetto: da un computer Windows nel quale è installato il client Azure Information Protection, registrare il documento con il sito di rilevamento dei documenti tramite un'applicazione di Office o Esplora file. Per le relative istruzioni, vedere [Tenere traccia dei documenti e revocarli](../rms-client/client-track-revoke.md). Dal computer Mac ora è possibile usare il Web browser e accedere al sito di rilevamento dei documenti (https://track.azurerms.com)) per rilevare e revocare il documento.
 
 ## <a name="when-i-open-an-rms-protected-office-document-does-the-associated-temporary-file-become-rms-protected-as-well"></a>Quando si apre un documento di Office protetto da RMS, anche il file temporaneo associato è protetto da RMS?
 No. In questo scenario, il file temporaneo associato non contiene i dati del documento originale, ma solo i dati immessi dall'utente mentre il file è aperto. A differenza del file originale, il file temporaneo non è destinato alla condivisione e rimarrà disponibile nel dispositivo, protetto dai controlli di protezione locali, ad esempio BitLocker ed EFS.

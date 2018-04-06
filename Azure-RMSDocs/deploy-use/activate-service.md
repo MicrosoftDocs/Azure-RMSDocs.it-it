@@ -1,26 +1,26 @@
 ---
 title: Attivazione di Azure Rights Management - AIP
-description: "È necessario attivare il servizio Azure Rights Management prima che l'organizzazione possa iniziare a proteggere i documenti e i messaggi di posta elettronica usando le applicazioni e i servizi che supportano questa soluzione di protezione delle informazioni."
+description: È necessario attivare il servizio Azure Rights Management prima che l'organizzazione possa iniziare a proteggere i documenti e i messaggi di posta elettronica usando le applicazioni e i servizi che supportano questa soluzione di protezione delle informazioni.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/21/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d521b105b3cc8077a5e30a825007e18f9b5a59f0
-ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
+ms.openlocfilehash: 7c257b16737a916d597be858fcfeaf6c475bb423
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="activating-azure-rights-management"></a>Attivazione di Azure Rights Management
 
->*Si applica a: Azure Information Protection, Office 365*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!NOTE]
 > Le informazioni sulla configurazione sono riservate agli amministratori responsabili di un servizio applicato a tutti gli utenti all'interno di un'organizzazione. Per informazioni su come usare la funzionalità Rights Management per una specifica applicazione o aprire un file o un messaggio di posta elettronica protetto da diritti, vedere la guida e le informazioni aggiuntive fornite con l'applicazione.

@@ -6,21 +6,21 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e759d47e45455616cac34d2b5703a567907a826f
-ms.sourcegitcommit: 2a1c690ca84611e5774ac8fac0fb4caba09fef2e
+ms.openlocfilehash: 0c4526cb2a80c0fdbe55a1f90c324282accb7eb0
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Monitorare il connettore di Azure Rights Management
 
->*Si applica a: Azure Information Protection, Windows Server 2012, Windows Server 2012 R2*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2012, Windows Server 2012 R2*
 
 Dopo aver installato e configurato il connettore RMS, è possibile usare i metodi e le informazioni seguenti per monitorare più facilmente il connettore e l'uso da parte dell'organizzazione del servizio Azure Rights Management da Azure Information Protection.
 

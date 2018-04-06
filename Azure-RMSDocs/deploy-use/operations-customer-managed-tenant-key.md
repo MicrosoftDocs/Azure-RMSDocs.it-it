@@ -6,21 +6,21 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 03/07/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 70d34253300e2bef442cdd7d8cf2c06ac8a9fd88
-ms.sourcegitcommit: dd53f3dc2ea2456ab512e3a541d251924018444e
+ms.openlocfilehash: 16ded8f9bbe06069e1fefb925166af491d1b0caa
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Operazioni del ciclo di vita della chiave del tenant gestite dal cliente
 
->*Si applica a: Azure Information Protection, Office 365*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Se la chiave del tenant per Azure Information Protection viene gestita dall'utente (scenario "bring your own key" o BYOK), usare le sezioni seguenti per ottenere altre informazioni sulle operazioni del ciclo di vita rilevanti per questa topologia.
 

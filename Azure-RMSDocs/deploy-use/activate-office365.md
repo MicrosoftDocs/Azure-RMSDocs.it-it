@@ -6,28 +6,28 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/03/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.custom: askipteam
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a614e65e4c8e401c9add41d4594d8261eef69d12
-ms.sourcegitcommit: 79aa9838956f755994efcb97cef6dd5d1892f06f
+ms.openlocfilehash: 77d511cc466441ffc28d813be9a0ec86ff3d8fa7
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Come attivare Azure Rights Management dall'interfaccia di amministrazione di Office 365
 
->*Si applica a: Azure Information Protection, Office 365*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Seguire queste istruzioni se si accede al servizio Azure Rights Management dall'interfaccia di amministrazione di Office 365, se si ha ad esempio una sottoscrizione a Office 365 E3 o Office 365 E5.
 
 1. Dopo avere sottoscritto un piano di Office 365 che include Rights Management, [accedere a Office 365](https://portal.office.com/) con un account aziendale o dell'istituto di istruzione che ha il ruolo Amministratore globale per la distribuzione di Office 365.
 
-2. Se l'interfaccia di amministrazione di Office 365 non viene visualizzata automaticamente, selezionare l'icona di avvio delle app in alto a sinistra e scegliere **Amministratore**. Il riquadro **Amministratore** viene visualizzato solo dagli amministratori di Office 365.
+2. Se l'interfaccia di amministrazione di Office 365 non viene visualizzata automaticamente, selezionare l'icona di avvio dell'app in alto a sinistra e scegliere **Amministratore**. Il riquadro **Amministratore** viene visualizzato solo dagli amministratori di Office 365.
 
     > [!TIP]
     > Per la guida all'interfaccia di amministrazione, vedere [Informazioni sull'interfaccia di amministrazione di Office 365](https://support.office.com/article/About-the-Office-365-Admin-Center-758befc4-0888-4009-9f14-0d147402fd23).
@@ -45,7 +45,7 @@ Seguire queste istruzioni se si accede al servizio Azure Rights Management dall'
     
     Per assistenza sull'attivazione del servizio o domande sui requisiti per la sottoscrizione, [contattare il supporto tecnico Microsoft](../get-started/information-support.md#to-contact-microsoft-support) o usare i canali di supporto standard.
 
-4. Nella pagina **Rights Management** fare clic su **attiva**.
+4. Nella pagina **rights management** fare clic su **Attiva**.
 
 5. Quando viene visualizzata la richiesta **Attivare Rights Management?**, fare clic su **Attiva**.
 

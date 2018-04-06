@@ -1,24 +1,24 @@
 ---
 title: Esercitazione per l'avvio rapido - Passaggio 2 - AIP
-description: 'Passaggio 2 di un''esercitazione introduttiva per provare rapidamente a usare Azure Information Protection: configurare i criteri.'
+description: "Passaggio 2 di un'esercitazione introduttiva per provare rapidamente a usare Azure Information Protection: configurare i criteri."
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 11/29/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 3dd58454709dd5a73edc23578f12e79d85a9b9c9
-ms.sourcegitcommit: 8d47080abab0be9b16672fee0d885ebe00f7f5f3
+ms.openlocfilehash: fecf9887937d3d17347e85759e2ed10b124ae8a1
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passaggio 2: Configurare e pubblicare criteri di Azure Information Protection
 
->*Si applica a: Azure Information Protection*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Il criterio predefinito disponibile con Azure è utilizzabile senza alcuna operazione di configurazione. Tuttavia si esaminerà questo criterio e vi si apporterà qualche modifica.
 

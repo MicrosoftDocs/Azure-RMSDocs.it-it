@@ -6,21 +6,21 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 09/25/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: eb40f6d2b43f175af71fd58b3bef4eb3d992152b
-ms.sourcegitcommit: faaab68064f365c977dfd1890f7c8b05a144a95c
+ms.openlocfilehash: be1c41c2f17720d522770f9e023c7468602ceb67
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Informazioni su come le applicazioni e i servizi di Office supportano Azure Rights Management 
 
->*Si applica a: Azure Information Protection, Office 365*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Le applicazioni di Office e i servizi Office possono usare il servizio Azure Rights Management di Azure Information Protection per proteggere i dati dell'organizzazione. Le applicazioni di Office sono Word, Excel, PowerPoint e Outlook. I servizi di Office sono Exchange e SharePoint. Le configurazioni di Office che supportano il servizio Azure Rights Management spesso usano il termine **Information Rights Management (IRM)**.
 
@@ -48,7 +48,7 @@ Quando si usa Exchange Online o Exchange Server è possibile configurare le opzi
 
 -   **Regole di trasporto** che un amministratore configura per applicare automaticamente modelli di protezione della posta elettronica. Queste regole sono basate su proprietà quali il mittente, il destinatario, l'oggetto e il contenuto del messaggio. Queste regole sono concettualmente analoghe alle regole di protezione, ma non consentono agli utenti di rimuovere la protezione. Le regole possono essere applicate ad Outlook sul Web e ai messaggi di posta elettronica inviati da dispositivi mobili. Inoltre, queste regole non crittografano i messaggi di posta elettronica prima che vengano inviati dal client. Per altre informazioni, vedere [Creare una regola di protezione del trasporto](https://technet.microsoft.com/library/dd302432.aspx) nella libreria di Exchange.
 
--   **Criteri di prevenzione della perdita dei dati** che contengono set di condizioni per filtrare i messaggi di posta elettronica e intraprendere azioni per prevenire la perdita di dati nel caso di informazioni riservate o sensibili, ad esempio quelle personali o correlate alla carta di credito. Quando si rilevano dati sensibili, è possibile usare i suggerimenti relativi ai criteri per avvertire gli utenti che potrebbe essere necessario applicare la protezione. Per altre informazioni, vedere [Prevenzione della perdita dei dati](https://technet.microsoft.com/library/jj150527(v=exchg.160\).aspx) nella libreria di Exchange.
+-   **Criteri di prevenzione della perdita dei dati** che contengono set di condizioni per filtrare i messaggi di posta elettronica e intraprendere azioni per prevenire la perdita di dati nel caso di informazioni riservate o sensibili, ad esempio quelle personali o correlate alla carta di credito. Quando si rilevano dati sensibili, è possibile usare i suggerimenti relativi ai criteri per avvertire gli utenti che potrebbe essere necessario applicare la protezione. Per altre informazioni, vedere [Prevenzione della perdita di dati](https://technet.microsoft.com/library/jj150527(v=exchg.160\).aspx) nella libreria di Exchange.
 
 -   **Office 365 Message Encryption** che supporta l'invio di un messaggio di posta elettronica protetto e di documenti di Office protetti come allegati a qualsiasi indirizzo in un dispositivo qualunque. Per gli account utente che non usano Azure AD. Questa esperienza Web supporta i provider di identità basati su social network e un passcode monouso. Per altre informazioni, vedere [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) (Impostare le nuove funzionalità di Office 365 Message Encryption basate su Azure Information Protection).
 

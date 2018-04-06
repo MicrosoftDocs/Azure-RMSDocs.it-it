@@ -1,26 +1,26 @@
 ---
 title: Opzioni della finestra di dialogo per l'app RMS sharing - AIP
-description: "Informazioni per specificare le opzioni nella finestra di dialogo Aggiungi protezione o nella finestra di dialogo Condividi file protetto dell'applicazione RMS sharing. Questa finestra di dialogo verrà visualizzata quando si protegge un file da condividere oppure si protegge un file nella posizione e si scelgono autorizzazioni personalizzate."
+description: Informazioni per specificare le opzioni nella finestra di dialogo Aggiungi protezione o nella finestra di dialogo Condividi file protetto dell'applicazione RMS sharing. Questa finestra di dialogo verrà visualizzata quando si protegge un file da condividere oppure si protegge un file nella posizione e si scelgono autorizzazioni personalizzate.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 190d8ac29bec0fc3825eb9fe099e06bd16e2112f
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 429be436bc1a9fec3d31933d9cb6e8f88de7506a
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="dialog-box-options-for-the-rights-management-sharing-application"></a>Opzioni della finestra di dialogo per l'applicazione Rights Management sharing
 
->*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 Utilizzare queste informazioni per specificare le opzioni nella finestra di dialogo **Aggiungi protezione** o nella finestra di dialogo **Condividi file protetto** dell'applicazione di RMS sharing. Questa finestra di dialogo verrà visualizzata quando si [protegge un file da condividere](sharing-app-protect-by-email.md) oppure si [protegge un file nella posizione](sharing-app-protect-in-place.md) e si scelgono autorizzazioni personalizzate.
 

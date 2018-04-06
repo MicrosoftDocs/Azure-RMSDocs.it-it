@@ -1,24 +1,24 @@
 ---
 title: Configurare un'etichetta di Azure Information Protection per la protezione
-description: "È possibile proteggere i documenti e i messaggi di posta elettronica più sensibili configurando un'etichetta per l'uso della protezione di Rights Management."
+description: È possibile proteggere i documenti e i messaggi di posta elettronica più sensibili configurando un'etichetta per l'uso della protezione di Rights Management.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2018
+ms.date: 03/26/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: a00c6e669f01a8166b53ae1ae0a5a63737253d61
-ms.sourcegitcommit: 23d98a405057d61a737313c8dfef042996131d3e
+ms.openlocfilehash: d27dcff090aa33cb5c7a3bcb6641ac635ed8a104
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
->*Si applica a: Azure Information Protection*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 Non è possibile proteggere i documenti e i messaggi di posta elettronica più sensibili usando un servizio Rights Management. Questo servizio usa la crittografia, l'identità e i criteri di autorizzazione per prevenire la perdita di dati. Questa protezione viene applicata con un'etichetta configurata per l'uso della protezione Rights Management per documenti e messaggi di posta elettronica. Gli utenti possono anche selezionare il pulsante **Non inoltrare** in Outlook. 
 
@@ -63,7 +63,9 @@ Non è necessario configurare Exchange per Information Rights Management (IRM) p
         
         Le impostazioni di protezione configurate in precedenza vengono mantenute come un modello di protezione archiviato e verranno visualizzate di nuovo se si reimposta l'opzione su **Proteggi**. Questo modello non è visualizzato nel portale di Azure, ma è comunque possibile gestirlo con [PowerShell](configure-templates-with-powershell.md) se necessario. Questo comportamento indica che il contenuto rimane accessibile se ha questa etichetta con le impostazioni di protezione applicate in precedenza.
     
-    - **Proteggi**: selezionare questa opzione per applicare la protezione e quindi procedere con il passaggio 5.
+    - **Proteggi**: selezionare questa opzione per applicare la protezione e quindi procedere con il passaggio 5 per configurare le impostazioni di protezione.
+    
+    Nota: in questa fase è possibile salvare una nuova etichetta senza ulteriore configurazione. In tal caso, l'etichetta viene configurata per applicare la protezione in modo che solo la persona che applica l'etichetta possa aprire il documento o il messaggio di posta elettronica senza restrizioni di utilizzo. In alcuni casi, potrebbe essere questo il risultato richiesto, in modo che un utente possa salvare un file in qualsiasi posizione ed essere certo che nessun altro possa aprirlo. Se questo risultato corrisponde al requisito e non è necessario che altri utenti collaborino al contenuto protetto, andare direttamente al passaggio 12 invece che al 5.
     
     - **Rimuovi la protezione**: selezionare questa opzione per rimuovere la protezione se un documento o un messaggio di posta elettronica è protetto. Procedere quindi con il passaggio 11.
         
@@ -229,8 +231,9 @@ I nuovi utenti aggiunti potranno aprire i documenti e i messaggi di posta elettr
 Questa etichetta non può essere limitata a Outlook ma fornisce controlli meno restrittivi rispetto all'uso di Non inoltrare. Un esempio è il caso in cui si vuole che i destinatari possano copiare dati dal messaggio di posta elettronica o da un allegato oppure che possano stampare e salvare un allegato.
 
 Se si specificano utenti esterni che non hanno un account di Azure AD, assicurarsi di chiedere agli utenti di non usare l'etichetta per i documenti, ma solo per i messaggi di posta elettronica. Per il supporto di questi utenti esterni Exchange Online deve essere configurato anche per le [nuove funzionalità di Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e).  
+
 > [!NOTE]
-> Exchange Online sta distribuendo una nuova opzione: [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails) (Solo crittografia). Questa opzione non è disponibile per la configurazione delle etichette.
+> Exchange Online sta distribuendo una nuova opzione: [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails) (Solo crittografia). Questa opzione non è disponibile per la configurazione delle etichette. È tuttavia possibile usare questo esempio per configurare un'etichetta con lo stesso set di diritti di utilizzo.
 
 Quando gli utenti specificano gli indirizzi di posta elettronica nella casella **A** gli indirizzi devono essere quelli degli utenti specificati per questa configurazione di etichetta. Dato che gli utenti possono appartenere a gruppi e avere più di un indirizzo di posta elettronica, l'indirizzo di posta elettronica che specificano non deve corrispondere esattamente a quello specificato per le autorizzazioni, anche se questo è il modo più semplice per garantire che il destinatario venga autorizzato. Per altre informazioni sull'applicazione delle autorizzazioni agli utenti, vedere [Preparazione di utenti e gruppi per Azure Information Protection](../plan-design/prepare.md). 
 
@@ -242,9 +245,11 @@ Quando gli utenti specificano gli indirizzi di posta elettronica nella casella *
     
     Ripetere questo passaggio per specificare gli altri utenti che avranno le stesse autorizzazioni.
 
-4. In **Scegliere le autorizzazioni dai valori preimpostati** selezionare le autorizzazioni da concedere: **Comproprietario**, **Coautore**, **Revisore** o **Personalizzate**. 
+4. In **Scegliere le autorizzazioni dai valori preimpostati** selezionare le autorizzazioni da concedere: **Comproprietario**, **Coautore**, **Revisore** o **Personalizzate**.
     
-    Nota: non selezionare **Visualizzatore** per i messaggi di posta elettronica. Se si seleziona **Personalizzate** verificare di includere l'opzione **Modifica e salva**. 
+    Nota: non selezionare **Visualizzatore** per i messaggi di posta elettronica. Se si seleziona **Personalizzate** verificare di includere l'opzione **Modifica e salva**.
+    
+    Per selezionare le stesse autorizzazioni corrispondenti alla nuova opzione **Encrypt-Only** (Solo crittografia) di Exchange Online, selezionare **Personalizzate**. Selezionare quindi tutte le autorizzazioni tranne **Salva con nome, Esporta (EXPORT)** e **Controllo completo (OWNER)**.
 
 5. Ripetere i passaggi 3 e 4 per specificare altri utenti con autorizzazioni diverse.
 

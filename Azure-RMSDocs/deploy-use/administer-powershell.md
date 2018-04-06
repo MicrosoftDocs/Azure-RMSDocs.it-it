@@ -6,21 +6,21 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/13/2018
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cdd35669360b172d456254c1e8e9f1d980117cdb
-ms.sourcegitcommit: 31c79d948ec3089a4dc65639f1842c07c7aecba6
+ms.openlocfilehash: 55142c61b5ba7ee8b800bae94231401e74be9a38
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="administering-the-azure-rights-management-service-by-using-windows-powershell"></a>Amministrazione del servizio Azure Rights Management tramite Windows PowerShell
 
->*Si applica a: Azure Information Protection, Office 365*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 È necessario usare PowerShell per l'amministrazione del servizio Azure Rights Management per Azure Information Protection? Potrebbe non essere necessario, se tutte le configurazioni possono essere eseguite nel portale di Azure o nel portale di Office 365. È tuttavia necessario usare PowerShell per alcune configurazioni avanzate. Potrebbe inoltre essere preferibile usare PowerShell per disporre di una maggiore efficienza di controllo dalla riga di comando e dello scripting.
 

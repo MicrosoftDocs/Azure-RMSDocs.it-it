@@ -6,21 +6,21 @@ ms.author: cabailey
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 33920329-5247-4f6c-8651-6227afb4a1fa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a0654dba53f493551b2cc4d1fbb8790f246e0c18
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 0d819fd242e57402a790e9acb40ffa48eeb701b4
+ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="protect-a-file-on-a-device-protect-in-place-by-using-the-rights-management-sharing-application"></a>Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione Rights Management sharing
 
->*Si applica a: Active Directory Rights Management Services, Azure Information Protection, Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
+>*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 Quando si protegge un file localmente, esso sostituisce il file originale non protetto. È quindi possibile lasciare il file dove si trova, copiarlo in un'altra cartella o dispositivo o condividere la cartella in cui si trova e il file rimarrà protetto. È possibile anche allegare il file protetto a un messaggio di posta elettronica, sebbene il modo consigliato per condividere un file protetto tramite posta elettronica sia direttamente da Esplora file o da un'applicazione di Office (vedere [Proteggere un file condiviso tramite posta elettronica usando l'applicazione Rights Management sharing](sharing-app-protect-by-email.md)).
 
