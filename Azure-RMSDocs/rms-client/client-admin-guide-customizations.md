@@ -4,7 +4,7 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/22/2018
+ms.date: 04/02/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 47b7a82ba7dc6ba7dc3fc21ed114452578b62593
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 08412c2c1cf1182b6d8bdae6e68d53d0b46f4b41
+ms.sourcegitcommit: b17432ed155394111c878eb57b5fa7adf9df9755
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -201,6 +201,20 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 - Chiave: **OutlookDefaultLabel**
 
 - Valore: \<**ID etichetta**> o **Nessuna**
+
+## <a name="turn-off-classification-running-continuously-in-the-background"></a>Disattivare l'esecuzione continua della classificazione in background
+
+Questa opzione di configurazione è attualmente in anteprima ed è soggetta a modifiche. Questa opzione di configurazione richiede inoltre la versione di anteprima del client.
+
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
+
+Quando si configura questa impostazione, la versione di anteprima del client Azure Information Protection non verifica periodicamente nei documenti le regole di condizione specificate. Invece le etichette automatiche e consigliate vengono applicate [come nella versione di disponibilità generale del client Azure Information Protection](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied). Questa impostazione può essere necessaria per motivi di prestazioni.
+
+Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
+
+- Chiave: **RunPolicyInBackground**
+
+- Valore: **False**
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette
 
