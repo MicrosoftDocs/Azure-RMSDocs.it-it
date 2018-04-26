@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per amministratori per gestire il client 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/26/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 32ae599bc9251fd1504adc2b7c60190e9d78f5fd
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: c791baa300fff3c251c49ddb92b6bf3765933a99
+ms.sourcegitcommit: 2eb5245b6afb291eae5ba87034e1698f096139dc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
 
@@ -363,7 +363,7 @@ Oltre ai prerequisiti per l'installazione del modulo AzureInformationProtection,
 
 8. Aggiungere il nome dell'account. Se altri amministratori di AD RMS o account del servizio useranno questi cmdlet per la protezione o la rimozione della protezione dei file, aggiungere anche tali account. 
     
-    Per proteggere o rimuovere la protezione dei file in modo non interattivo, aggiungere gli account computer rilevanti. Ad esempio, aggiungere l'account computer del computer Windows Server che è configurato per Infrastruttura di classificazione file e che userà uno script di PowerShell per proteggere i file. Questo scenario richiede la versione di anteprima corrente del client Azure Information Protection.
+    Per proteggere o rimuovere la protezione dei file in modo non interattivo, aggiungere gli account computer rilevanti. Ad esempio, aggiungere l'account computer del computer Windows Server che è configurato per Infrastruttura di classificazione file e che userà uno script di PowerShell per proteggere i file.
 
 9. Nella colonna **Consenti** assicurarsi che siano selezionate le caselle di controllo **Lettura/esecuzione** e **Lettura**.
 
@@ -531,9 +531,6 @@ Eseguire questo comando nel contesto dell'account per l'assegnazione di etichett
 La prima volta che si esegue questo comando viene richiesto di eseguire l'accesso, creando e archiviando in modo sicuro il token di accesso per l'account in %localappdata%\Microsoft\MSIP. Dopo questo accesso iniziale è possibile assegnare etichette e proteggere i file in modalità non interattiva nel computer. Tuttavia, se si usa un account del servizio per l'assegnazione di etichette e la protezione di file che non è in grado di accedere in modo interattivo, seguire le istruzioni nella sezione seguente per consentire all'account del servizio di eseguire l'autenticazione tramite un token.
 
 ### <a name="specify-and-use-the-token-parameter-for-set-aipauthentication"></a>Specificare e usare il parametro Token per Set-AIPAuthentication
-
-> [!NOTE]
-> Questa opzione richiede la versione disponibile a livello generale dello scanner di Azure Information Protection o la versione di anteprima corrente del client di Azure Information Protection.
 
 Per non eseguire l'accesso interattivo iniziale per un account che assegna etichette e protegge i file, seguire i passaggi e le istruzioni seguenti. In genere, questi passaggi aggiuntivi sono necessari solo se a questo account non è possibile concedere il diritto di **accesso locale**, ma è stato concesso il diritto **Accesso come processo batch**. Ad esempio, ciò potrebbe verificarsi con l'account del servizio personale che esegue lo scanner di Azure Information Protection.
 

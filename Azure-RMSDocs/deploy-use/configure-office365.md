@@ -4,7 +4,7 @@ description: Informazioni e istruzioni per gli amministratori per configurare Of
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/27/2018
+ms.date: 04/24/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ecf30ece9370a732e0bf302be5733273b64eea1a
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 22182613f3bc12e5ed5aec0079c7b3e54ba8f69d
+ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="office-365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: configurazione per i client e i servizi online da usare con il servizio Azure Rights Management
 
@@ -110,7 +110,7 @@ Dare agli utenti le istruzioni seguenti perché possano configurare la propria c
 
 3. Selezionare l'icona **Impostazioni**. Nel riquadro **Impostazioni**, se **Barra multifunzione** è impostato su **No**, selezionare questa impostazione per attivare la barra multifunzione.
 
-4. Per configurare tutti i file di OneDrive for Business da proteggere, selezionare la scheda **LIBRERIA** dalla barra multifunzione e quindi selezionare **Impostazioni libreria**. Per selezionare tutti i file di una cartella specifica da proteggere, selezionare prima la cartella.
+4. Per configurare tutti i file di OneDrive for Business da proteggere, selezionare la scheda **LIBRERIA** dalla barra multifunzione e quindi selezionare **Impostazioni libreria**.
 
 5. Nella pagina **Documenti > Impostazioni**, nella sezione **Autorizzazioni e gestione** selezionare **Information Rights Management**.
 
