@@ -16,6 +16,7 @@
 ### [Criterio predefinito](configure-policy-default.md)
 ### [Configurare le impostazioni dei criteri](configure-policy-settings.md)
 ### [Creare una nuova etichetta](configure-policy-new-label.md)
+### [Aggiungere o rimuovere un'etichetta](configure-policy-add-remove-label.md)
 ### [Eliminare o riordinare un'etichetta](configure-policy-delete-reorder.md)
 ### [Modificare un'etichetta](configure-policy-change-label.md)
 ### [Configurare la protezione](configure-policy-protection.md)
