@@ -4,7 +4,7 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/23/2018
+ms.date: 04/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bb48a3e35d18c111d3df1907b7cc7a2832e0ae13
-ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
+ms.openlocfilehash: 80f0b29b05f3a63972f7bc45e14ee721cf289a86
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -27,9 +27,6 @@ Usare le informazioni seguenti per le configurazioni avanzate che possono essere
 Alcune di queste impostazioni richiedono la modifica del Registro di sistema e alcune usano impostazioni avanzate che è necessario configurare nel Portale di Azure e quindi pubblicare perché i client possano scaricarle.  
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Come configurare le impostazioni avanzate di configurazione del client nel portale
-
->[!NOTE]
-> Queste istruzioni riflettono gli ultimi aggiornamenti al portale di Azure. Se l'opzione di menu **CLASSIFICAZIONI** non compare ed è ancora visibile l'opzione **Pubblica** opzione, le istruzioni di spostamento non corrisponderanno esattamente ciò che viene visualizzato. In tal caso, provare a tornare a questa procedura dopo un paio di giorni, quando il tenant sarà aggiornato alle ultime modifiche.
 
 1. Se non è già stato fatto, in una nuova finestra del browser accedere al [portale di Azure](../deploy-use/configure-policy.md#signing-in-to-the-azure-portal) e quindi passare al pannello **Azure Information Protection**.
 
