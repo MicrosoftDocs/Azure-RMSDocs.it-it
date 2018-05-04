@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per amministratori per configurare e usar
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2018
+ms.date: 04/13/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 04b6f65495c6b7251d000ff438ecab20c3a44db7
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: e24d91f04dc3186a9451546c8a962c49129f326b
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guida dell'amministratore: Configurazione e uso del rilevamento dei documenti per Azure Information Protection
 
@@ -24,11 +24,17 @@ ms.lasthandoff: 03/28/2018
 
 Se si dispone di una [sottoscrizione che supporta il rilevamento dei documenti](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), il sito di rilevamento dei documenti è abilitato per impostazione predefinita per tutti gli utenti dell'organizzazione. Il rilevamento dei documenti consente di indicare a utenti e amministratori quando è stato eseguito l'accesso a un documento protetto e, se necessario, se è possibile revocare un documento rilevato.
 
-## <a name="privacy-controls-for-your-document-tracking-site"></a>Controlli sulla privacy per il sito di rilevamento dei documenti
+## <a name="using-powershell-to-manage-the-document-tracking-site"></a>Uso di PowerShell per gestire il sito di rilevamento dei documenti
+
+Le sezioni seguenti contengono informazioni su come gestire il sito di rilevamento dei documenti tramite PowerShell. Per le istruzioni di installazione del modulo PowerShell, vedere [Installazione del modulo PowerShell AADRM](../deploy-use/install-powershell.md). Se il modulo è stato scaricato e installato in precedenza, verificarne il numero di versione eseguendo: `(Get-Module aadrm –ListAvailable).Version`
+
+Per altre informazioni su ognuno dei cmdlet, usare i relativi collegamenti.
+
+### <a name="privacy-controls-for-your-document-tracking-site"></a>Controlli sulla privacy per il sito di rilevamento dei documenti
 
 Se la visualizzazione di tutte le informazioni sul rilevamento dei documenti non è consentita nell'organizzazione a causa dei requisiti di privacy, è possibile disabilitare il rilevamento dei documenti usando il cmdlet [Disable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/disable-aadrmdocumenttrackingfeature). 
 
-Il cmdlet disabilita l'accesso al sito di rilevamento dei documenti in modo che tutti gli utenti dell'organizzazione non possano rilevare o revocare l'accesso ai documenti che hanno protetto. È possibile riabilitare il rilevamento dei documenti in qualsiasi momento usando [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) e verificare se il rilevamento dei documenti è attualmente abilitato o disabilitato usando [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature). Per eseguire questi cmdlet, è necessario avere almeno la versione **2.3.0.0** del modulo Azure Rights Management (AADRM) per PowerShell. 
+Il cmdlet disabilita l'accesso al sito di rilevamento dei documenti in modo che tutti gli utenti dell'organizzazione non possano rilevare o revocare l'accesso ai documenti che hanno protetto. È possibile riabilitare il rilevamento dei documenti in qualsiasi momento usando [Enable-AadrmDocumentTrackingFeature](/powershell/module/aadrm/enable-aadrmdocumenttrackingfeature) e verificare se il rilevamento dei documenti è attualmente abilitato o disabilitato usando [Get-AadrmDocumentTrackingFeature](/powershell/module/aadrm/get-aadrmdocumenttrackingfeature). Per eseguire questi cmdlet, è necessario avere almeno la versione **2.3.0.0** del modulo AADRM per PowerShell. 
 
 Quando è abilitato, il sito di rilevamento dei documenti visualizza, per impostazione predefinita, informazioni quali gli indirizzi di posta elettronica delle persone che hanno tentato di accedere ai documenti protetti, quando queste persone hanno tentato di accedere e la relativa posizione. Questo livello di informazioni può essere molto utile per determinare come vengono usati i documenti condivisi e se tali documenti devono essere revocati quando si rileva un'attività sospetta. Tuttavia, per motivi di privacy, può essere necessario disabilitare queste informazioni per alcuni o tutti gli utenti. 
 
@@ -40,11 +46,19 @@ Quando si usa questa configurazione, tutti gli utenti possono comunque usare il 
 
 Questa impostazione si applica solo agli utenti finali. Gli amministratori di Azure Information Protection possono sempre tenere traccia delle attività di tutti gli utenti, anche quando vengono specificati usando Set-AadrmDoNotTrackUserGroup. Per altre informazioni su come gli amministratori possono tenere traccia dei per gli utenti, vedere la sezione [Rilevamento e revoca dei documenti per gli utenti](#tracking-and-revoking-documents-for-users).
 
-È possibile usare [Clear-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/Clear-AadrmDoNotTrackUserGroup) se questa opzione non è più necessaria. Oppure, per rimuovere gli utenti in modo selettivo, rimuoverli dal gruppo tenendo presente che [il gruppo viene memorizzato nella cache](../plan-design/prepare.md#group-membership-caching-by-azure-information-protection). È possibile verificare se questa opzione è attualmente in uso con il cmdlet [Get-AadrmDoNotTrackUserGroup](/powershell/module/aadrm/get-AadrmDoNotTrackUserGroup). Per eseguire i cmdlet per questa configurazione del gruppo, è necessario avere almeno la versione **2.10.0.0** del modulo Azure Rights Management (AADRM) per PowerShell.
 
-Per altre informazioni su ognuno dei cmdlet indicati, usare i relativi collegamenti. Per le istruzioni di installazione del modulo PowerShell, vedere [Installazione del modulo PowerShell AADRM](../deploy-use/install-powershell.md). Se il modulo è stato scaricato e installato in precedenza, verificarne il numero di versione eseguendo: `(Get-Module aadrm –ListAvailable).Version`
+### <a name="logging-information-from-the-document-tracking-site"></a>Informazioni di registrazione dal sito di rilevamento dei documenti
 
+Quando si dispone almeno della versione **2.13.0.0** del modulo AADRM, è possibile usare i cmdlet seguenti per scaricare le informazioni di registrazione dal sito di rilevamento dei documenti:
 
+- [Get-AadrmTrackingLog](/powershell/module/aadrm/Get-AadrmTrackingLog)
+    
+    Questo cmdlet restituisce informazioni di rilevamento sui documenti protetti per un utente specificato che ha protetto i documenti (emittente di Rights Management) o ha avuto accesso a documenti protetti. Usare questo cmdlet per rispondere alla domanda "A quali documenti protetti ha eseguito l'accesso un utente specificato o quali documenti protetti ha rilevato?"
+
+- [Get-AadrmDocumentLog](/powershell/module/aadrm/Get-AadrmDocumentLog)
+    
+    Questo cmdlet restituisce informazioni di protezione sui documenti rilevati per un utente specificato se tale utente ha protetto documenti (emittente di Rights Management) o era proprietario di Rights Management per i documenti oppure se i documenti protetti erano configurati per consentire l'accesso direttamente all'utente. Usare questo cmdlet per rispondere alla domanda "In che modo sono protetti i documenti per un utente specificato?"
+ 
 ## <a name="destination-urls-used-by-the-document-tracking-site"></a>URL di destinazione usati dal sito di rilevamento dei documenti
 
 Gli URL seguenti vengono usati per il rilevamento dei documenti e devono essere consentiti su tutti i dispositivi e servizi tra i client che eseguono il client Azure Information Protection e Internet. Ad esempio, aggiungere gli URL ai firewall o ai siti attendibili se si usa Internet Explorer con protezione avanzata.

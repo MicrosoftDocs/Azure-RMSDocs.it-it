@@ -12,25 +12,25 @@ ms.technology: techgroup-identity
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fadaac4b5ea7828c53544485b1685226176a2a75
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: df2d97fd8abdf7c2f210d857287d3590838222db
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS per utenti singoli e Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-RMS per utenti singoli è una sottoscrizione self-service gratuita per gli utenti che devono aprire file protetti da Azure Information Protection. Se questi utenti non possono essere autenticati da Azure Active Directory e l'organizzazione non usa Active Directory Rights Management (AD RMS), questo servizio di iscrizione gratuito consente di creare un account in Azure Active Directory per un utente. Di conseguenza, questi utenti ora possono effettuare l'autenticazione usando l'indirizzo di posta elettronica aziendale e quindi leggere i file protetti nei computer o dispositivi mobili.
+RMS per utenti singoli è una sottoscrizione self-service gratuita per gli utenti che devono aprire file protetti da Azure Information Protection. Se questi utenti non possono essere autenticati da Azure Active Directory, questo servizio di iscrizione gratuito consente di creare un account in Azure Active Directory per un utente. Di conseguenza, questi utenti ora possono effettuare l'autenticazione usando l'indirizzo di posta elettronica aziendale e quindi leggere i file protetti nei computer o dispositivi mobili.
 
-RMS per utenti singoli usa l'iscrizione self-service di Azure Active Directory. Se gli utenti hanno creato account per l'organizzazione, come amministratore dell'organizzazione, è possibile rivendicare la proprietà e assumere il controllo dei loro account. 
+RMS per utenti singoli usa l'iscrizione self-service di Azure Active Directory. Se gli utenti hanno creato account per l'organizzazione usando questa sottoscrizione, l'amministratore dell'organizzazione può rivendicare la proprietà e [assumere il controllo dei loro account](/active-directory/domains-admin-takeover#external-admin-takeover). 
 
 
 > [!NOTE]
 > Questa sottoscrizione gratuita consente di garantire che le persone autorizzate esterne all'organizzazione possano sempre leggere i file protetti dall'organizzazione. Un'altra opzione è l'invio di documenti via posta elettronica usando la [Crittografia messaggi di Office 365 con nuove funzionalità](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). La soluzione tramite posta elettronica funziona per tutti gli indirizzi di posta elettronica in tutti i dispositivi ed è il metodo consigliato per condividere in modo sicuro le informazioni e visualizzare i documenti di Office tramite posta elettronica con persone esterne all'organizzazione. 
 
-Per iscriversi per ottenere l'account gratuito, passare alla [pagina di Microsoft Azure Information Protection](https://aka.ms/rms-signup) e specificare il proprio indirizzo di posta elettronica aziendale. Si riceve un messaggio di posta elettronica di risposta da Microsoft ed è quindi possibile completare la procedura di iscrizione immettendo i dettagli per creare l'account. 
+Per iscriversi per ottenere l'account gratuito, gli utenti devono passare alla [pagina di Microsoft Azure Information Protection](https://aka.ms/rms-signup) e specificare il proprio indirizzo di posta elettronica aziendale. Gli utenti riceveranno un messaggio di posta elettronica di risposta da Microsoft e potranno quindi completare la procedura di iscrizione inserendo i dettagli per creare l'account. 
 
 Dopo aver creato l'account, viene visualizzata la pagina finale con collegamenti per scaricare il client o il visualizzatore di Azure Information Protection per diversi dispositivi, con un collegamento alla guida per l'utente e un collegamento all'elenco aggiornato delle applicazioni che supportano la protezione di Rights Management in modo nativo. 
 

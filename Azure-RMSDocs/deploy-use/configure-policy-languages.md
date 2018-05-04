@@ -4,21 +4,24 @@ description: È possibile aggiungere il supporto di varie lingue per le etichett
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: b3341237d494766242ef790798ad1f97404919e9
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 09bf1d5bd1e9435fe0b665243deeea8873bb368e
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Come configurare etichette e modelli per varie lingue in Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+
+>[!NOTE]
+> Questo articolo riflette gli ultimi aggiornamenti apportati al portale di Azure, che consentono di creare un'etichetta in modo indipendente dai criteri globali o da criteri con ambito. Inoltre, l'opzione per la pubblicazione dei criteri è stata rimossa. Se il tenant non è ancora aggiornato per queste modifiche, ad esempio se è ancora visibile l'opzione **Pubblica** per Azure Information Protection mentre l'opzione di menu **CLASSIFICAZIONI** non compare, attendere qualche giorno e quindi tornare a queste istruzioni.
 
 Anche se le etichette predefinite per Azure Information Protection supportano più lingue, è necessario configurare il supporto per i nomi di etichetta e le descrizioni specificate. Per questa configurazione è necessario:
 
@@ -44,11 +47,9 @@ Selezionare le lingue che corrispondono alle impostazioni lingua degli utenti pe
     
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Nel menu **GESTISCI** selezionare **Lingue**.
+2. Dall'opzione di menu **GESTISCI** > **Lingue**: nel pannello **Azure Information Protection - Lingue** selezionare **Aggiungi una nuova lingua per la conversione**. Selezionare le lingue da aggiungere, quindi scegliere **OK**. È possibile digitare il nome della lingua nella casella di ricerca o scorrere l'elenco delle lingue disponibili.
 
-3. Nel pannello **Azure Information Protection - Lingue** selezionare **Aggiungi una nuova lingua per la conversione**. Selezionare le lingue da aggiungere, quindi scegliere **OK**. È possibile digitare il nome della lingua nella casella di ricerca o scorrere l'elenco delle lingue disponibili.
-
-4. Le lingue selezionate vengono visualizzate nel pannello **Azure Information Protection - Lingue**:
+3. Le lingue selezionate vengono visualizzate nel pannello **Azure Information Protection - Lingue**:
     
     - Per aggiungere un'altra lingua selezionare **Aggiungi una nuova lingua per la conversione** e ripetere il passaggio precedente. 
         
@@ -57,19 +58,19 @@ Selezionare le lingue che corrispondono alle impostazioni lingua degli utenti pe
         
     - Nel caso in cui si voglia modificare la scelta di una lingua, selezionare una voce dall'elenco e fare clic su **Rimuovi**.
 
-5. Quando tutte le lingue che si vuole supportare sono elencate, selezionare la casella di controllo accanto a **NOME LINGUA** per selezionare tutte le voci, o in alternativa, selezionare le singole voci, e fare clic su **Esporta** per salvare una copia locale dei nomi e delle descrizioni delle etichette esistenti in un file. 
+4. Quando tutte le lingue che si vuole supportare sono elencate, selezionare la casella di controllo accanto a **NOME LINGUA** per selezionare tutte le voci, o in alternativa, selezionare le singole voci, e fare clic su **Esporta** per salvare una copia locale dei nomi e delle descrizioni delle etichette esistenti in un file. 
     
     Il file scaricato viene denominato **exported localization.zip** e viene salvato nella cartella Download locale. È anche possibile accedere selezionando il nome del file nella barra di stato del portale di Azure.
 
-6. Estrarre i file da **exported localization.zip** in modo da avere file con estensione xml per ogni lingua selezionata per il download. 
+5. Estrarre i file da **exported localization.zip** in modo da avere file con estensione xml per ogni lingua selezionata per il download. 
 
-7. Modificare ogni file con estensione xml: per ogni stringa all'interno di tag `<LocalizedText>`, immettere le traduzioni per ogni lingua scelta. 
+6. Modificare ogni file con estensione xml: per ogni stringa all'interno di tag `<LocalizedText>`, immettere le traduzioni per ogni lingua scelta. 
 
-8. Quando è stato modificato ogni file con estensione xml, creare una nuova cartella compressa contenente i file. La cartella compressa può avere qualsiasi nome, ma deve avere estensione zip.
+7. Quando è stato modificato ogni file con estensione xml, creare una nuova cartella compressa contenente i file. La cartella compressa può avere qualsiasi nome, ma deve avere estensione zip.
 
-9. Tornare al pannello **Azure Information Protection - Lingue** e selezionare **Importa**. Si noti che se questa opzione non è disponibile, è necessario deselezionare per prima cosa la casella di controllo **NOME LINGUA** o le caselle di controllo per le lingue selezionate singolarmente.
+8. Tornare al pannello **Azure Information Protection - Lingue** e selezionare **Importa**. Si noti che se questa opzione non è disponibile, è necessario deselezionare per prima cosa la casella di controllo **NOME LINGUA** o le caselle di controllo per le lingue selezionate singolarmente.
     
-    Dopo il completamento dell'importazione i nomi e le descrizioni localizzati vengono scaricati per gli utenti alla successiva pubblicazione dei criteri di Azure Information Protection. È possibile fare clic su **Pubblica** dal pannello **Criteri globali** o **Criteri con ambito**.
+    Dopo il completamento dell'importazione i nomi e le descrizioni localizzati vengono scaricati per gli utenti.
 
 ## <a name="how-the-azure-information-protection-client-determines-the-language-to-display"></a>Come il client di Azure Information Protection determina la lingua da visualizzare
 

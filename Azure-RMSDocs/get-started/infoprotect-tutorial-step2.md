@@ -4,25 +4,28 @@ description: "Passaggio 2 di un'esercitazione introduttiva per provare rapidamen
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/29/2017
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: fecf9887937d3d17347e85759e2ed10b124ae8a1
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: e2850a0f67f18febdbd98e59d01b2f28b00bff2a
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
-# <a name="step-2-configure-and-publish-the-azure-information-protection-policy"></a>Passaggio 2: Configurare e pubblicare criteri di Azure Information Protection
+# <a name="step-2-configure-the-azure-information-protection-policy"></a>Passaggio 2: Configurare i criteri di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
+>[!NOTE]
+> Questo passaggio dell'esercitazione riflette gli ultimi aggiornamenti al portale di Azure. Se l'opzione di menu **CLASSIFICAZIONI** non compare ed è ancora visibile l'opzione **Pubblica** opzione, le istruzioni di spostamento non corrisponderanno esattamente ciò che viene visualizzato. In tal caso, provare a tornare a questo passaggio dell'esercitazione dopo un paio di giorni, quando il tenant sarà aggiornato alle ultime modifiche.
+
 Il criterio predefinito disponibile con Azure è utilizzabile senza alcuna operazione di configurazione. Tuttavia si esaminerà questo criterio e vi si apporterà qualche modifica.
 
-1. Continuando dal [passaggio 1](infoprotect-tutorial-step1.md) e sempre nel portale di Azure selezionare **Criteri globali** per aprire il pannello **Criteri: Globale**. Questo pannello si apre automaticamente alle successive connessioni al servizio e visualizza i criteri predefiniti di Information Protection creati per il tenant.
+1. Continuando dal [passaggio 1](infoprotect-tutorial-step1.md) e sempre nel portale di Azure selezionare **CLASSIFICAZIONI** > **Criteri** > **Globale**Criteri globali per aprire il pannello **Criteri: Globale**. Questo pannello mostra i criteri predefiniti di Azure Information Protection creati per il tenant.
 
 2. Dedicare alcuni minuti ad acquisire familiarità con le etichette visualizzate:
     
@@ -135,10 +138,6 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
     
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: impostazioni configurate](../media/info-protect-settings-configuredv2.png)
     
-14. Ora che le modifiche sono state apportate e salvate, devono essere rese disponibili agli utenti. A tale scopo fare clic su **Pubblica** e su **Sì** per confermare.
-
-    ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: pubblicare i criteri configurati](../media/info-protect-publish.png)
-
 Al termine di questa esercitazione è possibile chiudere il portale di Azure o lasciarlo aperto per provare altre opzioni di configurazione.
 
 Dopo aver esaminato il criterio predefinito e aver apportato alcune modifiche, il passaggio successivo prevede l'installazione del client di Azure Information Protection.

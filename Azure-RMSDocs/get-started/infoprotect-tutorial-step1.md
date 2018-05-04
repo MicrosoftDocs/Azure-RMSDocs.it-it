@@ -4,30 +4,30 @@ description: Attivare il servizio di protezione. Passaggio 1 di un'esercitazione
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: f6dbb143-96f7-4a9c-8208-be9280d69de9
-ms.openlocfilehash: cfeed994bb23469694e906132e175aabf925290e
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 5dcc63f6ffbd7402c94258fe0d8677908c603e1f
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="step-1-activate-protection"></a>Passaggio 1: Attivare la protezione
  
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 > [!NOTE]
->Anche se il servizio Azure Rights Management è già attivato per il tenant, completare questo passaggio per confermare lo stato di attivazione. Le istruzioni includono l'accesso al portale di Azure e la creazione del pannello Azure Information Protection per prepararsi al passaggio 2.
+>Anche se la protezione è già attivata per il tenant, completare questo passaggio per confermare lo stato di attivazione. Le istruzioni includono l'accesso al portale di Azure e la creazione del pannello Azure Information Protection per prepararsi al passaggio 2.
 
-Quando il servizio Azure Rights Management è attivato, è possibile proteggere i messaggi di posta elettronica e i documenti più sensibili dell'organizzazione e controllare come vengono usati quando sono condivisi con altri utenti. 
+Quando è attivata la protezione di Azure Information Protection, è attivato, è possibile proteggere i messaggi di posta elettronica e i documenti più sensibili dell'organizzazione e controllare come vengono usati quando sono condivisi con altri utenti. 
 
 Esistono diversi modi per attivare la protezione. È possibile usare PowerShell e i portali di amministrazione. In questa esercitazione si usa il portale di Azure, dove vengono anche configurate le etichette per gli utenti. 
 
-## <a name="to-activate-the-azure-rights-management-service"></a>Per attivare il servizio Azure Rights Management
+## <a name="to-activate-protection"></a>Per attivare la protezione
 
 1. Accedere al [portale di Azure](https://portal.azure.com) usando l'account di amministratore globale per il tenant. 
     
@@ -42,19 +42,19 @@ Esistono diversi modi per attivare la protezione. È possibile usare PowerShell 
     > [!TIP] 
     > Selezionare **Aggiungi al dashboard** per creare un riquadro **Azure Information Protection** nel dashboard, in modo da ignorare la ricerca del servizio al successivo accesso al portale.
 
-4. Leggere le informazioni disponibili nella pagina **Avvio rapido** che si apre automaticamente quando ci si connette al servizio per la prima volta. È possibile tornare a questa pagina in un secondo momento. Per questa esercitazione, selezionare **Protection activation** (Attivazione protezione). 
+4. Leggere le informazioni disponibili nella pagina **Avvio rapido** che si apre automaticamente quando ci si connette al servizio per la prima volta. È possibile tornare a questa pagina in un secondo momento. Per questa esercitazione, selezionare **GESTISCI** > **Attivazione della protezione**. 
 
-5. Ora è possibile vedere se il servizio Azure Rights Management è attivato per il tenant. 
+5. Ora è possibile vedere se la protezione è attivata per il tenant. 
     
-    - Se il servizio è attivato, viene visualizzato il messaggio di conferma seguente:
+    - Se la protezione è attivata, viene visualizzato il messaggio di conferma seguente:
         
         ![Stato di Azure Information Protection per Azure RMS](../media/info-protect-azurerms-activated.png)
         
-    - Se il servizio non è attivato, le informazioni sullo stato indicano questa condizione e viene visualizzata l'opzione per l'attivazione:
+    - Se la protezione non è attivata, le informazioni sullo stato indicano questa condizione e viene visualizzata l'opzione per l'attivazione:
         
         ![Stato di Azure Information Protection per Azure RMS](../media/info-protect-azurerms-deactivated.png)
 
-6. Se il servizio non è attivato, selezionare **Attiva**. 
+6. Se la protezione non è attivata, selezionare **Attiva**. 
 
     Una volta completata l'attivazione, sulla barra delle informazioni verrà visualizzato il messaggio **Activation finished successfully** (Attivazione completata).
 
@@ -62,7 +62,7 @@ Quelle sopra indicate sono tutte le operazioni da eseguire per il primo passaggi
 
 |Se si desiderano altre informazioni|Informazioni aggiuntive|
 |--------------------------------|--------------------------|
-|Informazioni sull'attivazione di Rights Management|[Attivazione di Azure Rights Management](../deploy-use/activate-service.md)|
+|Informazioni sull'attivazione della protezione|[Attivazione di Azure Rights Management](../deploy-use/activate-service.md)|
 
 
 >[!div class="step-by-step"]

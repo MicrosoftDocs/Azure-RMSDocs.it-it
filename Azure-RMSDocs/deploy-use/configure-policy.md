@@ -4,7 +4,7 @@ description: Per configurare le funzioni di classificazione, aggiunta di etichet
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/15/2017
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,15 +12,18 @@ ms.technology: techgroup-identity
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a0194b1cf6b1b134c3fd37ae9f042f117570d9ce
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: e8d641fd3165346ab052daad7ec7040b0d9e543f
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+
+>[!NOTE]
+> Questo articolo riflette gli ultimi aggiornamenti apportati al portale di Azure, che consentono di creare un'etichetta in modo indipendente dai criteri globali o da criteri con ambito. Inoltre, l'opzione per la pubblicazione dei criteri è stata rimossa. Se il tenant non è ancora aggiornato per queste modifiche, ad esempio se è ancora visibile l'opzione **Pubblica** per Azure Information Protection mentre l'opzione di menu **CLASSIFICAZIONI** non compare, attendere qualche giorno e quindi tornare a queste istruzioni.
 
 Per configurare le funzioni di classificazione, aggiunta di etichette e protezione, è necessario configurare i criteri di Azure Information Protection. Questi criteri vengono quindi scaricati nei computer in cui è installato il [client di Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
@@ -74,7 +77,7 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
 
 4. Quando ci si connette al servizio per la prima volta viene visualizzata automaticamente la pagina **Avvio rapido**. Consultare le risorse suggerite o usare le altre opzioni di menu. Usare la procedura seguente per configurare le etichette selezionabili dagli utenti.
 
-Quando si accede di nuovo al pannello **Azure Information Protection** viene selezionata automaticamente l'opzione **CRITERI** > **Criteri globali** che consente di configurare etichette per tutti gli utenti. È possibile tornare alla pagina **Avvio rapido** selezionandola nel menu **GENERALE**.
+Quando si accede di nuovo al pannello **Azure Information Protection** viene selezionata automaticamente l'opzione **Etichette**, che consente di visualizzare e configurare etichette per tutti gli utenti. È possibile tornare alla pagina **Avvio rapido** selezionandola nel menu **GENERALE**.
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Come configurare i criteri di Azure Information Protection
 
@@ -82,21 +85,29 @@ Quando si accede di nuovo al pannello **Azure Information Protection** viene sel
 
 2. Se necessario, passare al pannello **Azure Information Protection**: ad esempio, nel menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
     
-    Il pannello **Azure Information Protection - Criteri globali** viene aperto automaticamente per consentire di visualizzare e modificare i criteri globali disponibili per tutti gli utenti. 
+    Il pannello **Azure Information Protection - Etichette** viene aperto automaticamente per consentire la visualizzazione e la modifica delle etichette esistenti. Le etichette possono essere rese disponibili per tutti gli utenti, per utenti selezionati o per nessun utente, aggiungendole o rimuovendole da un criterio.
+
+3. Per visualizzare e modificare i criteri, selezionare **Criteri** nelle opzioni di menu. Per visualizzare e modificare il criterio ottenuto da tutti gli utenti, selezionare il criterio **Globale**. Per creare un criterio personalizzato per gli utenti selezionati, selezionare **Aggiungi un nuovo criterio**.
     
-    I criteri di Azure Information Protection contengono gli elementi seguenti che è possibile configurare:
+    Un criterio di Azure Information Protection contiene gli elementi seguenti che è possibile configurare:
     
-    - Etichette che consentono agli utenti di classificare i documenti e i messaggi di posta elettronica.
+    - Etichette incluse che consentono ad amministratori e utenti di classificare documenti e messaggi di posta elettronica.
     
     - Titolo e descrizione comando della barra Information Protection visualizzata nelle applicazioni di Office.
     
-    - Opzione per applicare la classificazione quando gli utenti salvano documenti e inviano messaggi di posta elettronica.
-    
     - Opzione per impostare un'etichetta predefinita come punto di partenza per la classificazione di documenti e messaggi di posta elettronica.
+     
+    - Opzione per applicare la classificazione quando gli utenti salvano documenti e inviano messaggi di posta elettronica.
     
     - Opzione per richiedere agli utenti di specificare un motivo quando selezionano un'etichetta con un livello di riservatezza inferiore rispetto all'originale.
     
     - Opzione per etichettare automaticamente un messaggio di posta elettronica, in base ai relativi allegati.
+
+    - Opzione per controllare se la barra di Information Protection viene visualizzata nelle applicazioni di Office.
+
+    - Opzione per controllare se il pulsante Non inoltrare viene visualizzato in Outlook.
+    
+    - Opzione per consentire agli utenti di specificare le proprie autorizzazioni per i documenti.
     
     - Opzione per fornire un collegamento alla guida personalizzata per gli utenti.
 
@@ -108,9 +119,7 @@ Le etichette di Azure Information Protection possono essere usate con l'intera g
 
 È possibile creare qualsiasi numero di etichette. Tuttavia, se le etichette diventano troppo numerose e non consentono agli utenti di individuare e selezionare l'etichetta appropriata con facilità, creare criteri con ambito in modo che gli utenti visualizzino solo le etichette rilevanti. Il limite massimo di etichette per l'applicazione della protezione è 500.
 
-Quando si apportano modifiche in un pannello di Azure Information Protection, fare clic su **Save** (Salva) per salvare le modifiche oppure su **Discard** (Ignora) per ripristinare le ultime impostazioni salvate.
-
-Dopo avere apportato le modifiche desiderate, fare clic su **Publish** (Pubblica). 
+Quando si apportano modifiche in un pannello di Azure Information Protection, fare clic su **Save** (Salva) per salvare le modifiche oppure su **Discard** (Ignora) per ripristinare le ultime impostazioni salvate. Quando si salvano le modifiche a un criterio o si apportano modifiche alle etichette aggiunte ai criteri, le modifiche vengono pubblicate automaticamente. Non è presente un'opzione di pubblicazione separata.
 
 Il client Azure Information Protection verifica la disponibilità di eventuali modifiche ogni volta che viene avviata un'applicazione di Office supportata e scarica le modifiche come criteri di Azure Information Protection più recenti. I criteri del client vengono aggiornati anche nei modi seguenti:
 
@@ -136,6 +145,8 @@ Usare le informazioni seguenti per configurare i criteri di Azure Information Pr
 
 - [Come creare una nuova etichetta](configure-policy-new-label.md)
 
+- [Come aggiungere o rimuovere un'etichetta](configure-policy-add-remove-label.md)
+ 
 - [Come eliminare o riordinare un'etichetta](configure-policy-delete-reorder.md)
 
 - [Come modificare o personalizzare un'etichetta esistente](configure-policy-change-label.md)

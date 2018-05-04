@@ -1,32 +1,35 @@
 ---
 title: Eliminare o riordinare un'etichetta per Azure Information Protection
-description: È possibile eliminare o riordinare le etichette mostrate sulla barra Information Protection configurandole nel criterio di Azure Information Protection.
+description: È possibile eliminare o riordinare le etichette di Azure Information Protection visualizzate dagli utenti.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 04/22/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: c24cd0bb9aae5b3a6b830151579d70561d56f7e0
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 6b790eddb4e111333cbd78fc0b8ec09963393494
+ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Come eliminare o riordinare un'etichetta per Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-È possibile eliminare o riordinare le etichette visualizzate sulla barra Information Protection selezionando le azioni nei criteri di Azure Information Protection.
+>[!NOTE]
+> Questo articolo riflette gli ultimi aggiornamenti apportati al portale di Azure, che consentono di creare un'etichetta in modo indipendente dai criteri globali o da criteri con ambito. Inoltre, l'opzione per la pubblicazione dei criteri è stata rimossa. Se il tenant non è ancora aggiornato per queste modifiche, ad esempio se è ancora visibile l'opzione **Pubblica** per Azure Information Protection mentre l'opzione di menu **CLASSIFICAZIONI** non compare, attendere qualche giorno e quindi tornare a queste istruzioni.
+
+È possibile eliminare o riordinare le etichette di Azure Information Protection che gli utenti vedono nelle applicazioni di Office selezionando le azioni corrispondenti per le etichette.
 
 ![Eliminare o riordinare le etichette nel criterio di Azure Information Protection](../media/info-protect-contextmenu.png)
 
-Quando si elimina un'etichetta che è stata applicata a documenti e messaggi di posta elettronica e si pubblica il criterio di Azure Information Protection, l'etichetta viene rimossa automaticamente dai documenti o messaggi di posta elettronica quando vengono successivamente aperti dal client Azure Information Protection.
+Quando si elimina un'etichetta applicata a documenti e messaggi di posta elettronica, alla successiva apertura di tali documenti e massaggi da parte del client di Azure Information Protection gli utenti vedranno lo stato dell'etichetta come **Non impostato**. Tuttavia, le informazioni dell'etichetta restano nei metadati e possono ancora essere lette dai servizi che cercano queste informazioni di etichetta.
 
-Tuttavia, nel caso di un'etichetta per l'applicazione della protezione, la protezione non viene rimossa. Le impostazioni di protezione dall'etichetta vengono mantenute e visualizzate nei **modelli di protezione**. Il modello può essere ora convertito in una nuova etichetta o collegato a un'etichetta. Sebbene il modello venga mantenuto, non è possibile creare una nuova etichetta con lo stesso nome dell'etichetta eliminata. Se si vuole eseguire questa operazione, sono disponibili le opzioni seguenti:
+Inoltre, se l'etichetta eliminata applicava la protezione, la protezione non viene rimossa. Le impostazioni di protezione dall'etichetta vengono mantenute e visualizzate nella sezione **Modelli di protezione**. Il modello può essere ora convertito in una nuova etichetta o collegato a un'etichetta. Sebbene il modello venga mantenuto, non è possibile creare una nuova etichetta con lo stesso nome dell'etichetta eliminata. Se si vuole eseguire questa operazione, sono disponibili le opzioni seguenti:
 
 - Convertire il modello in un'etichetta. 
     
@@ -38,7 +41,11 @@ Tuttavia, nel caso di un'etichetta per l'applicazione della protezione, la prote
 
 Per altre informazioni sulla gestione dei modelli di protezione, vedere [Configurazione e gestione dei modelli per Azure Information Protection](configure-policy-templates.md).
 
-Prima di eliminare un'etichetta, valutarne la disabilitazione in alternativa. Quando si disabilita un'etichetta applicata a documenti e messaggi di posta elettronica, l'etichetta applicata non viene rimossa da questi documenti e messaggi di posta elettronica, ma non è più visualizzata come etichetta selezionabile dagli utenti nella barra di Information Protection. La disabilitazione di un'etichetta consente anche di mantenere la configurazione originale nel caso si voglia consentire agli utenti di selezionare l'etichetta in un secondo momento, quando sarà sufficiente riabilitarla.
+Prima di eliminare un'etichetta, valutare piuttosto la possibilità di disabilitarla o rimuoverla dal criterio:
+    
+- Quando si disabilita un'etichetta applicata a documenti e messaggi di posta elettronica, l'etichetta non viene rimossa da questi documenti e messaggi. Quello che accade è che rimane nel criterio, ma non viene più visualizzata come un'etichetta che gli utenti possono selezionare sulla barra di Information Protection. La disabilitazione di un'etichetta consente di mantenere la configurazione originale nel caso si voglia consentire agli utenti nello stesso criterio di selezionare l'etichetta in un secondo momento, quando sarà sufficiente riabilitarla.
+
+- Inoltre, quando si rimuove un'etichetta da un criterio, l'etichetta applicata non viene rimossa da questi documenti e messaggi di posta elettronica. Quando però si rimuove l'etichetta dal criterio, diventa disponibile per essere aggiunta a un altro criterio. Per altre informazioni, vedere [Aggiungere o rimuovere un'etichetta a o da un criterio di Azure Information Protection](configure-policy-add-remove-label.md).
 
 Ordinare le etichette in modo che gli utenti le vedano in una progressione logica sulla barra Information Protection. Ad esempio, ordinare le etichette per livello crescente di riservatezza, in modo che l'etichetta della minima riservatezza venga mostrata per prima e quella della massima riservatezza per ultima. I [criteri predefiniti](configure-policy-default.md) usano questa configurazione e riflettono la riservatezza sempre maggiore nei nomi di etichetta.
 
@@ -52,19 +59,13 @@ Per apportare le modifiche, seguire queste istruzioni.
     
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Se l'etichetta da configurare viene applicata a tutti gli utenti, restare nel pannello **Azure Information Protection - Criteri globali**.
-    
-    Se l'etichetta da configurare si trova in un [criterio con ambito](configure-policy-scope.md) in modo da essere applicata solo agli utenti selezionati, nel menu **CRITERI** selezionare **Criteri con ambito**. Selezionare quindi i criteri con ambito nel pannello **Azure Information Protection - Criteri con ambito**.
+2. Dall'opzione di menu **CLASSIFICAZIONI** > **Etichette**: nel pannello **Azure Information Protection - Etichette** eseguire una o più delle operazioni seguenti: 
 
-3. Nel pannello **Azure Information Protection - Criteri globali** o nel pannello **Criteri:\<nome>**, eseguire una o più delle operazioni seguenti: 
+    - Per eliminare un'etichetta: fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida (**...**) per l'etichetta che si vuole eliminare, scegliere **Elimina questa etichetta** e fare clic su **OK** per confermare. 
 
-    - Per eliminare un'etichetta: fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida (**...**) per l'etichetta che si vuole eliminare, scegliere **Elimina questa etichetta** e fare clic su **Sì** per confermare. Fare clic su **Save** (Salva). 
+    - Per disabilitare un'etichetta: selezionare l'etichetta che si vuole disabilitare. Nel pannello **Etichetta** per **Abilitato** selezionare **No** e quindi fare clic su **Salva**.
 
-    - Per disabilitare un'etichetta: selezionare l'etichetta che si vuole disabilitare. Nel pannello **Etichetta** per **Abilitato** fare clic su **No**fare clic su **Salva**.
-
-    - Per riordinare un'etichetta: fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida (**...**) per l'etichetta che si vuole riordinare, scegliere **Sposta su** o **Sposta giù** fino a quando l'etichetta non è nell'ordine desiderato. Fare clic su **Save** (Salva). 
-
-4. Per mettere le modifiche a disposizione degli utenti, nel pannello **Azure Information Protection** fare clic su **Publish** (Pubblica).
+    - Per riordinare un'etichetta: fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida (**...**) per l'etichetta che si vuole riordinare, scegliere **Sposta su** o **Sposta giù** fino a quando l'etichetta non è nell'ordine desiderato.  
 
 ## <a name="next-steps"></a>Passaggi successivi
 

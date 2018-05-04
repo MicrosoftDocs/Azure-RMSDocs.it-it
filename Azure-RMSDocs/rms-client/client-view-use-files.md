@@ -4,7 +4,7 @@ description: Istruzioni per visualizzare e usare un documento protetto che richi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/30/2018
+ms.date: 04/17/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a81585ae1acb791dcf33f8d047268a9e4e9f2f2e
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: eb631b0153ce047177ef12887c025303acfac1db
+ms.sourcegitcommit: c207a2f592d167a4a0b6c4427259683e2087f143
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guida dell'utente: Visualizzare e usare file protetti con Rights Management
 
@@ -70,9 +70,9 @@ Se l'organizzazione non può mettere a disposizione dell'utente un account basat
     
     Per altre informazioni sulle autorizzazioni e sui diritti di utilizzo di ciascuna autorizzazione, vedere [Diritti inclusi nei livelli di autorizzazioni](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels).
 
-4. Per modificare il file, fare clic su **Salva con nome**, che consente di salvare il file senza protezione con l'estensione del nome file originale. È quindi possibile modificare il file usando l'applicazione associata al tipo di file.
+4. Per modificare il file, fare clic su **Salva con nome**, che consente di salvare il file senza l'etichetta e senza protezione con l'estensione del nome file originale. È quindi possibile modificare il file usando l'applicazione associata al tipo di file. 
     
-    Non sarà possibile successivamente usare Esplora file e fare click con il pulsante destro sul nuovo file salvato e proteggerlo di nuovo. Il problema noto è risolto nella versione di anteprima corrente del client Azure Information. Per l'anteprima del client, scegliendo **Salva come** si rimuove l'etichetta oltre alla protezione. Facendo click con il pulsante destro sul file, si riapplica l'etichetta che, a sua volta, riapplica la protezione.
+    Dopo aver completato la modifica del file, in Esplora file fare clic con il pulsante destro del mouse sul file per riapplicare l'etichetta, riapplicando così anche la protezione.
 
 5. Per aprire altri file protetti, è possibile visualizzarli direttamente nel visualizzatore usando l'opzione **Apri**. Il file selezionato sostituisce il file originale nel visualizzatore. 
 

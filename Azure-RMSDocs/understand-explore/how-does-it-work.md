@@ -4,7 +4,7 @@ description: Descrizione del funzionamento di Azure RMS, dei controlli crittogra
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2018
+ms.date: 04/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a261e356e167687190cc71eed4b2da715ab45697
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 321b18946c934878a422bd28a115c06d443b8d18
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funzionamento di Azure RMS: dietro le quinte
 
@@ -96,7 +96,9 @@ Quando l'account dell'utente è federato con Azure Active Directory, l'autentica
 
 **Cosa avviene nel passaggio 2**: dopo l'autenticazione dell'utente, la connessione viene reindirizzata automaticamente al tenant di Azure Information Protection dell'organizzazione, che emette i certificati per consentire all'utente di autenticarsi al servizio Azure Rights Management in modo da utilizzare il contenuto protetto e proteggere il contenuto offline.
 
-Una copia del certificato dell'utente viene archiviata in Azure, in modo che se l'utente passa a un altro dispositivo, i certificati vengono creati usando le stesse chiavi.
+Uno di questi certificati è il certificato per account con diritti. Questo certificato autentica l'utente in Azure Active Directory ed è valido per 31 giorni. Il certificato viene rinnovato automaticamente dal client RMS, a condizione che l'account utente sia ancora presente in Azure Active Directory e che sia abilitato. Questo certificato non può essere configurato da un amministratore. 
+
+Una copia del certificato viene archiviata in Azure, in modo che se l'utente passa a un altro dispositivo, i certificati vengono creati usando le stesse chiavi.
 
 ### <a name="content-protection"></a>Protezione del contenuto
 Quando un utente protegge un documento, il client RMS esegue le azioni seguenti su un documento non protetto:

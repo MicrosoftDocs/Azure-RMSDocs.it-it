@@ -4,7 +4,7 @@ description: Informazioni sui diritti specifici usati quando si proteggono i fil
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/26/2018
+ms.date: 04/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0ec4710618227573fa7442a8fe1f0bd52b2c8f6f
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 297e530406c33ca50d1e8287509e4c3a6f3c7a80
+ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configurazione dei diritti di utilizzo per Azure Rights Management
 
@@ -158,7 +158,9 @@ Si noti che il proprietario di Rights Management è indipendente dal proprietari
 
 Quando un utente apre un documento o messaggio di posta elettronica protetto da Azure Rights Management, gli viene concessa una licenza d'uso di Rights Management per il contenuto. Questa licenza d'uso è un certificato che contiene i diritti di utilizzo dell'utente per il documento o messaggio di posta elettronica e la chiave di crittografia usata per crittografare il contenuto. La licenza d'uso contiene anche una data di scadenza, se è stata impostata, e il periodo di validità della licenza d'uso.
 
-Per la durata della licenza d'uso, all'utente non viene richiesto di ripetere l'autenticazione o specificare una nuova autorizzazione. Ciò consente all'utente di continuare ad aprire il documento o messaggio di posta elettronica protetto senza una connessione Internet. Quando scade il periodo di validità della licenza d'uso, al successivo accesso al documento o messaggio di posta elettronica protetto l'utente deve ripetere l'autenticazione o specificare una nuova autorizzazione. 
+Per aprire il contenuto un utente deve avere una licenza d'uso valida oltre che un suo certificato per account con diritti, un certificato che viene concesso quando [viene inizializzato l'ambiente utente](../understand-explore/how-does-it-work.md#initializing-the-user-environment) e che viene rinnovato ogni 31 giorni.
+
+Per la durata della licenza d'uso, all'utente non viene richiesto di ripetere l'autenticazione o specificare una nuova autorizzazione per il contenuto. Ciò consente all'utente di continuare ad aprire il documento o messaggio di posta elettronica protetto senza una connessione Internet. Quando scade il periodo di validità della licenza d'uso, al successivo accesso al documento o messaggio di posta elettronica protetto l'utente deve ripetere l'autenticazione o specificare una nuova autorizzazione. 
 
 Quando i documenti e messaggi di posta elettronica sono protetti tramite un'etichetta o modello che definisce le impostazioni di protezione, è possibile modificare queste impostazioni nell'etichetta o modello senza che sia necessario proteggere nuovamente il contenuto. Se l'utente ha già accesso al contenuto, le modifiche vengono applicate dopo la scadenza del contratto di licenza. Quando tuttavia gli utenti applicano autorizzazioni personalizzate (note anche come criteri per i diritti di utilizzo ad hoc) e queste autorizzazioni devono essere modificate dopo che il documento o messaggio di posta elettronica viene protetto, il contenuto deve essere protetto nuovamente con le nuove autorizzazioni. Le autorizzazioni personalizzate per un messaggio di posta elettronica vengono implementate con l'opzione Non inoltrare.
 
