@@ -4,7 +4,7 @@ description: Risorse per gli amministratori, incluse informazioni sulle nuove ve
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/23/2018
+ms.date: 05/01/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9eafa28bb6a259c7f845f54268a30c8cdc6fc988
-ms.sourcegitcommit: 5892db302bdf96538ecb3af8e3c2f678f5d1ebe2
+ms.openlocfilehash: 3ed8c53c235520d53c3d0a3666aa4aba45c174f5
+ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informazioni e supporto per Azure Information Protection
 
@@ -26,7 +26,7 @@ Usare le risorse seguenti per comprendere, distribuire e supportare Azure Inform
 
 |Per...|...effettuare l'operazione seguente:|
 |----------------|---------------|
-|Consultare la documentazione usata più di frequente|Leggere le cinque pagine principali:<br /><br /> - [Configurazione dei diritti di utilizzo per Azure Rights Management](../deploy-use/configure-usage-rights.md)<br /> - [Domande frequenti su Azure Information Protection](../get-started/faqs.md)<br />- [Requisiti per Azure Information Protection](requirements.md) <br />- [Distribuire lo scanner di Azure Information Protection](../deploy-use/deploy-aip-scanner.md)<br />- [Criteri predefiniti di Azure Information Protection](../deploy-use/configure-policy-default.md)|
+|Consultare la documentazione usata più di frequente|Leggere le cinque pagine principali:<br /><br /> - [Che cos'è Azure Information Protection?](../understand-explore/what-is-information-protection.md)<br /> - [Installare il client Azure Information Protection per gli utenti](../rms-client/client-admin-guide-install.md)<br />- [Requisiti per Azure Information Protection](requirements.md) <br />- [Distribuire lo scanner di Azure Information Protection](../deploy-use/deploy-aip-scanner.md)<br />- [Criteri predefiniti di Azure Information Protection](../deploy-use/configure-policy-default.md)|
 |Interagire con il team di prodotto e i propri colleghi|Visitare il [sito di Yammer](https://www.yammer.com/AskIPTeam) per Azure Information Protection.|
 |Richiedere una nuova funzionalità o modifica di funzionalità|Visitare il sito [User Voice](https://msip.uservoice.com) per Azure Information Protection.|
 |Ricevere tweet dal gruppo di prodotto|Seguire [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) su Twitter.|
@@ -37,8 +37,6 @@ Usare le risorse seguenti per comprendere, distribuire e supportare Azure Inform
 Il team di prodotto di Azure Information Protection pubblica annunci sulle nuove versioni e sugli aggiornamenti in [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection) (Blog di Enterprise Mobility and Security). Questi post del blog sono complementari alla documentazione e alle informazioni di supporto sul prodotto.
 
 Inoltre, un riepilogo delle modifiche alla documentazione viene pubblicato ogni mese nel [blog tecnico di Azure Information Protection](https://aka.ms/AIPblog). Questi aggiornamenti alla documentazione includono informazioni relative a tutte le nuove versioni, aggiornamenti a supporto di istruzioni e anche correzioni e chiarimenti per le versioni esistenti. Questi post si intitolano: "**Azure Information Protection Documentation Update for \<mese anno>**" (Aggiornamento della documentazione di Azure Information Protection per <mese anno>).
-
-I riepiloghi precedenti sono stati pubblicati nel blog [Enterprise Mobility + Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection,azure-rights-management-services&content-type=updates). 
 
 ## <a name="support-options-and-community-resources"></a>Opzioni di supporto e risorse per la community
 Le sezioni seguenti consentono di accedere a informazioni sulle opzioni di supporto e di risoluzione dei problemi e alle risorse della community:
