@@ -4,7 +4,7 @@ description: Controllare di avere gli account utente e di gruppo necessari per i
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 05/07/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7d9c58649eb06b614a25e28c909d34318ea80133
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 760fe51d8c864ff28f599dd3cf1f84ae72c03343
+ms.sourcegitcommit: 2b031166026b4b6dd87e0dbaec44a99204c8691c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparazione di utenti e gruppi per Azure Information Protection
 
@@ -41,24 +41,6 @@ Se si usano i primi tre metodi dell'elenco, gli utenti e i gruppi vengono creati
 ## <a name="how-users-and-groups-are-used-by-azure-information-protection"></a>Uso di utenti e gruppi con Azure Information Protection
 
 Sono possibili tre scenari di uso di utenti e gruppi con Azure Information Protection:
-
-- **Per l'assegnazione di etichette agli utenti** quando si usano etichettatura e classificazione. Solo gli amministratori possono selezionare questi gruppi:
-    
-    - I criteri di Azure Information Protection predefiniti vengono assegnati automaticamente a tutti gli utenti all'interno di Azure AD del tenant. È anche possibile, tuttavia, assegnare etichette aggiuntive a utenti o gruppi specifici tramite criteri con ambito.
-
-- **Assegnazione di diritti di utilizzo e di controlli di accesso** se per la protezione di documenti e messaggi di posta elettronica si usa il servizio Azure Rights Management. Gli amministratori e gli utenti possono selezionare questi utenti e questi gruppi:
-
-    - I diritti di utilizzo determinano se un utente può aprire un documento o un messaggio di posta elettronica e come può usarlo, ad esempio se può solo leggerlo, leggerlo e stamparlo o leggerlo e modificarlo.
-
-    - I controlli di accesso includono una data di scadenza e specificano se per l'accesso è necessaria una connessione a Internet.
-
-- **Configurazione del servizio Azure Rights Management** per il supporto di scenari specifici. Pertanto solo gli amministratori possono selezionare questi gruppi. Ecco alcuni esempi di elementi configurabili:
-
-    - Utenti con privilegi avanzati. I servizi o gli utenti designati possono aprire contenuto crittografato, se necessario a scopo di eDiscovery o recupero dei dati.
-
-    - Amministrazione delegata del servizio Azure Rights Management.
-
-    - Controlli di onboarding a supporto di una distribuzione a più fasi.
 
 **Assegnazione di etichette agli utenti** al momento della configurazione dei criteri di Azure Information Protection, per consentire l'applicazione di etichette ai documenti e ai messaggi di posta elettronica. Solo gli amministratori possono selezionare questi utenti e questi gruppi:
 
@@ -187,7 +169,7 @@ Nella maggior parte dei casi il valore di UserPrincipalName corrisponde a uno de
 > [!TIP]
 > Per una gestione più semplice, ad esempio per eseguire ricerche e modifiche in blocco per l'importazione, è possibile usare il cmdlet Export-Csv per esportare i risultati in un foglio di calcolo.
 >
-> ad esempio `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
+> Ad esempio: `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
 
 ### <a name="confirm-group-accounts-are-ready-for-azure-information-protection"></a>Confermare che gli account di gruppo sono pronti per Azure Information Protection
 
