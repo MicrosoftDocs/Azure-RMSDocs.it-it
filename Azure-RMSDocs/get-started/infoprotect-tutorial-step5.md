@@ -5,7 +5,7 @@ keywords: ''
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2017
+ms.date: 05/09/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -13,11 +13,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 718c15769e5719d5e8dde612cf66e4215f1e235d
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 7c6acb5a4b5c8f33193cbf5d8833201e0d68287e
+ms.sourcegitcommit: 342b0bd8c57eb621714609ec28234dd07fe95d1e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Passaggio 5: Vedere in azione la condivisione di file protetti e tenere traccia del documento 
 
@@ -103,17 +103,17 @@ Ora che il destinatario ha aperto l'allegato e, facoltativamente, lo ha inoltrat
 
 3.  Nella pagina **Documenti condivisi** verrà visualizzato il nome del documento condiviso. Al momento è l'unico file visualizzato, ma se vengono condivisi altri documenti protetti, l'elenco si allunga di conseguenza.
 
-    In questa pagina viene indicato quando il documento è stato condiviso (quando è stato inviato il messaggio di posta elettronica con l'allegato protetto), la data dell'ultima attività e il nome del destinatario a cui è stato inviato il messaggio. Fare clic sul nome del documento per altri dettagli.
+    In questa pagina viene indicato quando il documento è stato condiviso (quando è stato inviato il messaggio di posta elettronica con l'allegato protetto), lo stato corrente del documento (attivo, revocato o scaduto) e il nome del destinatario a cui è stato inviato il messaggio. Fare clic sul nome del documento per altri dettagli.
 
-4.  Nella nuova pagina, che ha il nome del file selezionato, verranno visualizzati i dettagli di riepilogo solo per il documento in questione e un elenco di altre opzioni disponibili per quest'ultimo (**Elenco**, **Sequenza temporale**, **Mappa**e **Impostazioni**).
+4.  Nella nuova pagina, che ha il nome del file selezionato, verranno visualizzati i dettagli di riepilogo solo per il documento in questione e un elenco di altre opzioni disponibili per quest'ultimo (**Elenco**, **Sequenza temporale**, **Mappa** e **Impostazioni**).
 
-    Fare clic su ogni opzione per esplorare i diversi modi di rilevare il documento protetto. In alternativa, sempre nella pagina **Riepilogo** , fare clic su **Apri in Excel** per esportare le informazioni in un foglio di calcolo oppure fare clic su **Revoca accesso** per arrestare la condivisione del documento.
+    Fare clic su ogni opzione per esplorare i diversi modi di rilevare il documento protetto. In alternativa, sempre nella pagina **Riepilogo**, fare clic su **Apri in Excel** per esportare le informazioni in un foglio di calcolo oppure fare clic su **Revoca accesso** per arrestare la condivisione del documento.
 
-È possibile tornare a questo sito per rilevare altre attività relative al documento protetto o, se necessario, per revocare l'accesso. È anche possibile accedere al sito dal dispositivo mobile o dal tablet, usando un browser con il collegamento seguente: [rilevamento documenti](http://go.microsoft.com/fwlink/?LinkId=529562)
+È possibile tornare a questo sito per rilevare altre attività relative al documento protetto o, se necessario, per revocare l'accesso. È anche possibile accedere al sito dal dispositivo mobile o dal tablet, usando un browser con il collegamento seguente: [rilevamento dei documenti](http://go.microsoft.com/fwlink/?LinkId=529562)
 
 
 
-|Se si desiderano altre informazioni|Informazioni aggiuntive|
+|Se si desiderano altre informazioni|Altre informazioni|
 |--------------------------------|--------------------------|
 |Istruzioni complete per la protezione dei file in modo da poterli condividere in tutta sicurezza|[Classificare e proteggere un file o un messaggio di posta elettronica](../rms-client/client-classify-protect.md)|
 |Account gratuito per l'iscrizione di altri utenti|[RMS per utenti singoli e Azure Rights Management](../understand-explore/rms-for-individuals.md)|

@@ -4,17 +4,17 @@ description: "Passaggio 2 di un'esercitazione introduttiva per provare rapidamen
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 05/09/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 3b9dbbc16fe26d7f111d37dbcd28d6477372a5d9
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: ffae0c9ef0e9ffd1fc9a4c25ef5c60e8da6de5ca
+ms.sourcegitcommit: 342b0bd8c57eb621714609ec28234dd07fe95d1e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>Passaggio 2: Configurare i criteri di Azure Information Protection
 
@@ -55,11 +55,13 @@ Nel corso di questa esercitazione verranno modificate alcune impostazioni dei cr
     
     È possibile che non sia necessario modificare questa impostazione poiché il valore predefinito dipende dalla propria sottoscrizione. Le autorizzazioni personalizzate verranno usate in seguito nell'esercitazione per condividere un documento protetto con l'utente specificato quando si fa clic con il pulsante destro del mouse sul file in Esplora file.
 
+4. Selezionare **Salva** nel pannello **Criteri: Globale** e, se viene richiesto di confermare l'operazione, selezionare **OK**. Chiudere il pannello.
+
 ## <a name="creating-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>Creazione di una nuova etichetta per la protezione, di contrassegni visivi e di una condizione per la richiesta di classificazione
 
 Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato).
 
-1. Fare clic con il pulsante destro del mouse sull'etichetta **Confidential** e selezionare **Aggiungi un'etichetta secondaria**.
+1. Dall'opzione di menu **CLASSIFICAZIONI** > **Etichette**: fare clic con il pulsante destro del mouse sull'etichetta **Confidential** (Riservato), quindi selezionare **Aggiungi un'etichetta secondaria**.
     
     Se non esiste un'etichetta denominata **Confidential**, è possibile selezionare un'altra etichetta o crearne una nuova e procedere con l'esercitazione con piccole differenze.
 
@@ -125,9 +127,13 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
 
 12. Nella casella **Enter notes for internal housekeeping** (Note per la gestione interna) digitare **For testing purposes only** (Solo a scopo di test).
 
-13. Fare clic su **Salva** nel pannello **Etichetta secondaria**. Quindi, nel pannello **Criteri: Globale** fare di nuovo clic su **Salva**.
-    
-    Viene visualizzata la nuova sottoetichetta, configurata per i contrassegni visivi e la protezione. Ad esempio:
+13. Fare clic su **Salva** nel pannello **Etichetta secondaria**. Se viene richiesto di confermare, fare clic su **OK**. La nuova etichetta viene creata e salvata, ma non viene ancora aggiunta a un criterio.
+
+14. Dall'opzione di menu **CLASSIFICAZIONI** > **Criteri**: selezionare di nuovo **Globale** e quindi selezionare il collegamento **Aggiungi o rimuovi etichette** dopo le etichette.
+
+15. Nel pannello **Criteri: Aggiungi o rimuovi etichette** selezionare l'etichetta appena creata, l'etichetta secondaria denominata **Finance** (Contabilità), quindi fare clic su **OK**.
+
+16. Nel pannello **Criteri: Globale** è ora possibile vedere la nuova etichetta secondaria nei criteri globali, configurata per i contrassegni visivi e la protezione. Ad esempio:
 
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Configurazione del criterio predefinito](../media/info-protect-policy-configuredv2.png)
     
@@ -135,11 +141,14 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
     
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: impostazioni configurate](../media/info-protect-settings-configuredv2.png)
     
+
+17. Fare clic su **Salva** nel pannello **Criteri: Globale**. Se viene richiesto di confermare l'azione, fare clic su **OK**.
+
 Al termine di questa esercitazione è possibile chiudere il portale di Azure o lasciarlo aperto per provare altre opzioni di configurazione.
 
 Dopo aver esaminato il criterio predefinito e aver apportato alcune modifiche, il passaggio successivo prevede l'installazione del client di Azure Information Protection.
 
-|Se si desiderano altre informazioni|Informazioni aggiuntive|
+|Se si desiderano altre informazioni|Altre informazioni|
 |--------------------------------|--------------------------|
 |Informazioni sui criteri predefiniti e sulle diverse versioni|[Criteri predefiniti di Azure Information Protection](../deploy-use/configure-policy-default.md)|
 |Informazioni sulla configurazione dei criteri|[Configurazione dei criteri di Azure Information Protection](../deploy-use/configure-policy.md)|

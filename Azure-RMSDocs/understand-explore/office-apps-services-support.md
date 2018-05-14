@@ -4,7 +4,7 @@ description: Informazioni su come le applicazioni di Office, come Word e Outlook
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 05/04/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: be1c41c2f17720d522770f9e023c7468602ceb67
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: caf89d6df51adcd556db319a8140cbe936102ef3
+ms.sourcegitcommit: fa64f9c2a4d367d7586d64def0fd02764ad2e00b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/06/2018
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Informazioni su come le applicazioni e i servizi di Office supportano Azure Rights Management 
 
@@ -38,7 +38,7 @@ Se si è pronti per la configurazione delle app di Office e del client Azure Inf
 - Per installare e configurare il client Azure Information Protection, vedere [Client Azure Information Protection: installazione e configurazione dei client](../deploy-use/configure-client.md).
 
 ## <a name="exchange-online-and-exchange-server"></a>Exchange Online ed Exchange Server
-Quando si usa Exchange Online o Exchange Server è possibile configurare le opzioni di Information Rights Management (IRM) che supportano Azure Rights Management. Questa configurazione consente a Exchange di offrire le soluzioni di protezione seguenti:
+Quando si usa Exchange Online o Exchange Server, è possibile configurare le opzioni di Information Rights Management (IRM) che supportano Azure Rights Management. Questa configurazione consente a Exchange di offrire le soluzioni di protezione seguenti:
 
 -   **Exchange ActiveSync IRM** per proteggere dispositivi mobili e usare messaggi di posta elettronica protetti.
 
@@ -46,7 +46,7 @@ Quando si usa Exchange Online o Exchange Server è possibile configurare le opzi
 
 -   **Regole di protezione** per client Outlook che un amministratore configura per applicare automaticamente modelli di protezione ai messaggi di posta elettronica per destinatari specifici. Quando ad esempio vengono inviati messaggi e-mail interni all'ufficio legale dell'organizzazione, è possibile configurare tali messaggi in modo che possano essere letti solo dai membri dell'ufficio e che non possano essere inoltrati. Prima di inviare il messaggio di posta elettronica gli utenti vedono la regola di protezione applicata e, per impostazione predefinita, possono rimuovere la protezione se ritengono non sia necessaria. I messaggi e-mail vengono crittografati prima dell'invio. Per altre informazioni, vedere [Regole di protezione di Outlook](https://technet.microsoft.com/library/dd638178%28v=exchg.150%29.aspx) e [Creare una regola di protezione di Outlook](https://technet.microsoft.com/library/dd638196%28v=exchg.150%29.aspx) nella libreria di Exchange.
 
--   **Regole di trasporto** che un amministratore configura per applicare automaticamente modelli di protezione della posta elettronica. Queste regole sono basate su proprietà quali il mittente, il destinatario, l'oggetto e il contenuto del messaggio. Queste regole sono concettualmente analoghe alle regole di protezione, ma non consentono agli utenti di rimuovere la protezione. Le regole possono essere applicate ad Outlook sul Web e ai messaggi di posta elettronica inviati da dispositivi mobili. Inoltre, queste regole non crittografano i messaggi di posta elettronica prima che vengano inviati dal client. Per altre informazioni, vedere [Creare una regola di protezione del trasporto](https://technet.microsoft.com/library/dd302432.aspx) nella libreria di Exchange.
+-   **Regole del flusso di posta** che un amministratore configura per applicare automaticamente modelli di protezione della posta elettronica. Queste regole sono basate su proprietà quali il mittente, il destinatario, l'oggetto e il contenuto del messaggio. Queste regole sono concettualmente analoghe alle regole di protezione, ma non consentono agli utenti di rimuovere la protezione. Le regole possono essere applicate ad Outlook sul Web e ai messaggi di posta elettronica inviati da dispositivi mobili. Inoltre, queste regole non crittografano i messaggi di posta elettronica prima che vengano inviati dal client. Per altre informazioni, vedere [Creare una regola di protezione del trasporto](https://technet.microsoft.com/library/dd302432.aspx) nella libreria di Exchange.
 
 -   **Criteri di prevenzione della perdita dei dati** che contengono set di condizioni per filtrare i messaggi di posta elettronica e intraprendere azioni per prevenire la perdita di dati nel caso di informazioni riservate o sensibili, ad esempio quelle personali o correlate alla carta di credito. Quando si rilevano dati sensibili, è possibile usare i suggerimenti relativi ai criteri per avvertire gli utenti che potrebbe essere necessario applicare la protezione. Per altre informazioni, vedere [Prevenzione della perdita di dati](https://technet.microsoft.com/library/jj150527(v=exchg.160\).aspx) nella libreria di Exchange.
 
@@ -78,11 +78,11 @@ Se si usa SharePoint Server, è possibile usare questo tipo di protezione IRM di
 > [!NOTE]
 > Attualmente esistono alcune limitazioni quando si usa il servizio IRM per SharePoint:
 > 
-> - Non è possibile usare i modelli predefiniti o personalizzati gestiti nel portale di Azure. 
+> - Non è possibile usare i modelli di protezione predefiniti o personalizzati gestiti nel portale di Azure. 
 > 
-> - I file con un'estensione di file .ppdf per i file PDF protetti non sono supportati. I file con estensione .pdf e protetti a livello nativo da Rights Management sono supportati se si usa un programma per la lettura dei file PDF che supporta Rights Management a livello nativo.
+> - I file con un'estensione di file .ppdf per i file PDF protetti non sono supportati. I file con estensione PDF sono supportati e, una volta scaricati, possono essere aperti tramite un'applicazione PDF che supporta in modo nativo Rights Management. Ad esempio, il client di Azure Information Protection per Windows include un visualizzatore per questi file PDF protetti. Visualizzatori PDF alternativi sono elencati nella [tabella delle applicazioni abilitate per RMS](../get-started/requirements-applications.md#rms-enlightened-applications).
 > 
-> - La creazione condivisa non è supportata. Dato che è necessario estrarre e scaricare un documento da una libreria protetta con IRM, il documento può essere modificato da un solo utente alla volta.
+> - La creazione condivisa, ovvero la modifica di un documento da parte di più utenti contemporaneamente, non è supportata. Per modificare un documento in una libreria protetta tramite IRM, è innanzitutto necessario estrarre il documento, scaricarlo e quindi modificarlo nell'applicazione Office. Di conseguenza, solo un utente alla volta può modificare il documento.
 
 Per le librerie non protette con IRM, se si protegge un file e quindi il file viene caricato in SharePoint o OneDrive, le seguenti funzionalità del file vengono disattivate: Creazione condivisa, Office Online, ricerca, anteprima dei documenti, anteprima dei video, eDiscovery e prevenzione della perdita di dati (DLP).
 
@@ -99,7 +99,7 @@ Se si è pronti per la configurazione di SharePoint per IRM:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Se si usa Office 365, può essere interessante leggere il documento [File Protection Solutions in Office 365](https://technet.microsoft.com/library/dn919927.aspx#BKMK_O365fileprotect) (Soluzioni di protezione dei file in Office 365), che indica le funzionalità consigliate per la protezione dei file in Office 365.
+Se si usa Office 365, può essere interessante leggere il documento [File Protection Solutions in Office 365](/office365/enterprise/microsoft-cloud-it-architecture-resources#BKMK_O365fileprotect) (Soluzioni di protezione dei file in Office 365), che indica le funzionalità consigliate per la protezione dei file in Office 365.
 
 Per informazioni su come altri servizi e applicazioni supportano il servizio Azure Rights Management di Azure Information Protection, vedere [Supporto del servizio Azure Rights Management da parte delle applicazioni](applications-support.md).
 
