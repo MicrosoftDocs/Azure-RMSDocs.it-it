@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per amministratori per gestire il client 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/17/2018
+ms.date: 05/16/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,11 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c791baa300fff3c251c49ddb92b6bf3765933a99
-ms.sourcegitcommit: 2eb5245b6afb291eae5ba87034e1698f096139dc
+ms.openlocfilehash: b4376d9f2b0cde836b37553eb83efd8068e6c2f8
+ms.sourcegitcommit: 373e05ff0c411d29cc5b61c36edaf5a203becc14
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
 
@@ -39,6 +39,8 @@ Inoltre, lo [scanner Azure Information Protection](../deploy-use/deploy-aip-scan
 Per un elenco di tutti i cmdlet e le informazioni della guida corrispondenti, vedere [AzureInformationProtection Module](/powershell/module/azureinformationprotection) (Modulo AzureInformationProtection). All'interno di una sessione di PowerShell digitare `Get-Help <cmdlet name> -online` per visualizzare le informazioni della guida più recenti.  
 
 Questo modulo viene installato in **\Programmi (x86)\Microsoft Azure Information Protection** e aggiunge questa cartella alla variabile di sistema **PSModulePath**. Il file DLL per questo modulo si chiama **AIP.dll**.
+
+Attualmente, se si installa il modulo con un account utente e si eseguono i cmdlet nello stesso computer come un altro utente, è prima necessario eseguire il comando `Import-Module AzureInformationProtection`. In questo scenario, il modulo non viene caricato automaticamente alla prima esecuzione di un cmdlet.
 
 La versione corrente del modulo AzureInformationProtection impone le limitazioni seguenti:
 
