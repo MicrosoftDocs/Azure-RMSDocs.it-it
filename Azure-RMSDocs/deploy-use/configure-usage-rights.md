@@ -4,7 +4,7 @@ description: Informazioni sui diritti specifici usati quando si proteggono i fil
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/02/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f5006ef3d0401b6a7f018be1f65979c079cf04fc
-ms.sourcegitcommit: fdcfc006108f61fcd380ff6f3c3208c78ecf4056
+ms.openlocfilehash: 697fa4674699fd3b24f7f7353ff9f9d476040bd8
+ms.sourcegitcommit: c41490096af48e778947739e320e0dc8511f6c68
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/21/2018
+ms.locfileid: "34423358"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configurazione dei diritti di utilizzo per Azure Rights Management
 
@@ -168,7 +169,7 @@ Il valore predefinito per il periodo di validità della licenza d'uso per un ten
 
 - Quando si configura un'etichetta o un modello nel portale di Azure, il periodo di validità della licenza d'uso assume il valore specificato nell'impostazione **Consenti l'accesso offline**. 
     
-    Per altre informazioni e istruzioni per configurare questa impostazione nel portale di Azure, vedere la tabella nel passaggio 9 dell'articolo [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md).
+    Per altre informazioni e istruzioni per configurare questa impostazione nel portale di Azure, vedere la tabella [Informazioni sulle impostazioni di protezione](../deploy-use/configure-policy-protection.md#information-about-the-protection-settings) nell'articolo relativo a come configurare un'etichetta per la protezione di Rights Management.
 
 - Quando si configura un modello tramite PowerShell, il periodo di validità della licenza d'uso assume il valore specificato nel parametro *LicenseValidityDuration* nei cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) e [Add-AadrmTemplate](/powershell/module/aadrm/add-aadrmtemplate).
     

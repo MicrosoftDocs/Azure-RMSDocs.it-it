@@ -4,7 +4,7 @@ description: Controllare di avere gli account utente e di gruppo necessari per i
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/07/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 760fe51d8c864ff28f599dd3cf1f84ae72c03343
-ms.sourcegitcommit: 2b031166026b4b6dd87e0dbaec44a99204c8691c
+ms.openlocfilehash: bb38d33972fb99596fcde8bc54e53c38e3817336
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444113"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparazione di utenti e gruppi per Azure Information Protection
 
@@ -84,7 +85,11 @@ Per assegnare diritti di utilizzo e controlli di accesso e configurare il serviz
 
 Oltre che per autorizzare gli utenti del tenant, Azure Information Protection usa gli attributi proxyAddresses e userPrincipalName di Azure AD allo stesso modo per autorizzare gli utenti di un altro tenant.
 
-Quando si invia un messaggio e-mail crittografato tramite Office 365 Message Encryption con nuove funzionalità a un utente che non ha un account in Azure AD, l'autenticazione dell'utente viene eseguita tramite la federazione con un provider di identità basato su social network oppure con un passcode monouso. L'indirizzo e-mail specificato nel messaggio di posta elettronica protetto viene quindi usato per l'autorizzazione dell'utente.
+Altri metodi di autorizzazione:
+
+- Azure Information Protection può autorizzare gli indirizzi di posta elettronica che non si trovano in Azure AD quando questi vengono autenticati con un account Microsoft. Non tutte le applicazioni, tuttavia, possono aprire contenuti protetti quando viene usato un account Microsoft per l'autenticazione. [Altre informazioni](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+
+- Quando si invia un messaggio e-mail crittografato tramite Office 365 Message Encryption con nuove funzionalità a un utente che non ha un account in Azure AD, l'autenticazione dell'utente viene eseguita tramite la federazione con un provider di identità basato su social network oppure con un passcode monouso. L'indirizzo e-mail specificato nel messaggio di posta elettronica protetto viene quindi usato per l'autorizzazione dell'utente.
 
 ## <a name="azure-information-protection-requirements-for-group-accounts"></a>Requisiti di Azure Information Protection per gli account di gruppo
 
@@ -169,7 +174,7 @@ Nella maggior parte dei casi il valore di UserPrincipalName corrisponde a uno de
 > [!TIP]
 > Per una gestione più semplice, ad esempio per eseguire ricerche e modifiche in blocco per l'importazione, è possibile usare il cmdlet Export-Csv per esportare i risultati in un foglio di calcolo.
 >
-> Ad esempio: `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
+> ad esempio `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
 
 ### <a name="confirm-group-accounts-are-ready-for-azure-information-protection"></a>Confermare che gli account di gruppo sono pronti per Azure Information Protection
 

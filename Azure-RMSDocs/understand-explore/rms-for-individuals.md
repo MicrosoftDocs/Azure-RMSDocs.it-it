@@ -4,7 +4,7 @@ description: Informazioni su RMS per utenti singoli, una sottoscrizione self-ser
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/19/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: df2d97fd8abdf7c2f210d857287d3590838222db
-ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
+ms.openlocfilehash: 358ef172192b3bed65dd8f1853705c8f189cbf97
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444317"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS per utenti singoli e Azure Information Protection
 
@@ -28,7 +29,9 @@ RMS per utenti singoli usa l'iscrizione self-service di Azure Active Directory. 
 
 
 > [!NOTE]
-> Questa sottoscrizione gratuita consente di garantire che le persone autorizzate esterne all'organizzazione possano sempre leggere i file protetti dall'organizzazione. Un'altra opzione è l'invio di documenti via posta elettronica usando la [Crittografia messaggi di Office 365 con nuove funzionalità](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). La soluzione tramite posta elettronica funziona per tutti gli indirizzi di posta elettronica in tutti i dispositivi ed è il metodo consigliato per condividere in modo sicuro le informazioni e visualizzare i documenti di Office tramite posta elettronica con persone esterne all'organizzazione. 
+> Questa sottoscrizione gratuita consente di garantire che le persone autorizzate esterne all'organizzazione possano sempre leggere i file protetti dall'organizzazione. Un'altra opzione è l'invio di documenti via posta elettronica usando la [Crittografia messaggi di Office 365 con nuove funzionalità](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Questa soluzione tramite posta elettronica funziona per tutti gli indirizzi di posta elettronica in tutti i dispositivi ed è il metodo consigliato per condividere in modo sicuro le informazioni e visualizzare documenti di Office in un browser insieme a utenti esterni all'organizzazione.
+> 
+> Un'altra soluzione consiste nell'uso di account Microsoft. Non tutte le applicazioni, tuttavia, possono aprire contenuti protetti quando viene usato un account Microsoft per l'autenticazione. [Altre informazioni](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
 
 Per iscriversi per ottenere l'account gratuito, gli utenti devono passare alla [pagina di Microsoft Azure Information Protection](https://aka.ms/rms-signup) e specificare il proprio indirizzo di posta elettronica aziendale. Gli utenti riceveranno un messaggio di posta elettronica di risposta da Microsoft e potranno quindi completare la procedura di iscrizione inserendo i dettagli per creare l'account. 
 

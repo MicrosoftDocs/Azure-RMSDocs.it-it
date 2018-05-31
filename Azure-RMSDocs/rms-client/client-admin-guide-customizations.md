@@ -4,7 +4,7 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/11/2018
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: de7829532139556b6407506d61bc89de936b3739
-ms.sourcegitcommit: 9e2719ab070fa2d1e3ac8f6f11e57640939a1dff
+ms.openlocfilehash: c0e1011da16c9e3e91595cd06375cb744aa8fe00
+ms.sourcegitcommit: 10f530fa1a43928581da4830a32f020c96736bc8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/21/2018
+ms.locfileid: "34402269"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -54,6 +55,8 @@ Indipendentemente da questa impostazione, il client Azure Information Protection
 
 ## <a name="suppress-the-initial-congratulations-welcome-page"></a>Eliminare la pagina introduttiva "Congratulazioni!"
 
+Nella versione di anteprima del client non è più visualizzata la pagina introduttiva "Congratulazioni".
+
 Quando il client di Azure Information Protection viene installato per la prima volta in un computer e un utente apre Word, Excel, PowerPoint o Outlook, una pagina **Complimenti!** mostra, attraverso brevi istruzioni, come usare la nuova barra Information Protection per selezionare le etichette. È possibile eliminare questa pagina, modificando il registro.
 
 1. Se la chiave del Registro di sistema seguente non esiste, crearla:
@@ -64,13 +67,15 @@ Quando il client di Azure Information Protection viene installato per la prima v
 
 ## <a name="suppress-the-whats-new-in-azure-information-protection-page"></a>Eliminare la pagina "Novità di Azure Information Protection" pagina
 
+Nella versione di anteprima del client non è più visualizzata la pagina relativa alle novità di Azure Information Protection .
+
 Quando il client di Azure Information Protection viene installato per la prima volta o aggiornato in un computer ed è visualizzata la barra di Azure Information Protection in Word, Excel, PowerPoint e Outlook, viene aperta una pagina **Novità di Azure Information Protection** per informare gli utenti delle autorizzazioni personalizzate e dell'opzione Rileva utilizzo. È possibile eliminare questa pagina, modificando il registro.
 
 1. Se la chiave del Registro di sistema seguente non esiste, crearla:
     
     **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP**
 
-2.  Se un valore stringa (REG-SZ) denominato **WhatsNewVersion** non esiste, crearlo e impostare il valore dei dati su **1.4**.
+2. Se un valore stringa (REG-SZ) denominato **WhatsNewVersion** non esiste, crearlo e impostare il valore dei dati su **1.4**.
 
 ## <a name="sign-in-as-a-different-user"></a>Accedere come utente diverso
 
@@ -356,6 +361,25 @@ Si supponga, ad esempio, di avere una colonna di SharePoint denominata **Classif
 Per etichettare un documento di Office con uno di questi valori di classificazione, impostare **SyncPropertyName** su **Classificazione** e **SyncPropertyState** a  **OneWay**. 
 
 A questo punto, quando un utente apre e salva uno di questi documenti di Office, il documento viene etichettato come **Pubblico**, **Generale** o **Riservato** se sono presenti etichette con questi nomi nei criteri di Azure Information Protection. In assenza di etichette con questi nomi, il documento rimane senza etichetta.
+
+## <a name="disable-the-low-integrity-level-for-the-scanner"></a>Disabilitare il livello di integrità basso per lo scanner
+
+Questa opzione di configurazione è attualmente in anteprima ed è soggetta a modifiche. Richiede inoltre la versione di anteprima corrente del client Azure Information Protection.
+
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
+
+Per impostazione predefinita, la versione di anteprima dello scanner di Azure Information Protection viene eseguita con un livello di integrità basso. Questa impostazione offre un maggiore isolamento di sicurezza, ma influisce negativamente sulle prestazioni. Il livello di integrità basso è appropriato se si esegue lo scanner con un account con privilegi (ad esempio un account amministratore locale) in quanto questa impostazione aiuta a proteggere il computer che esegue lo scanner.
+
+Quando, tuttavia, l'account del servizio che esegue lo scanner ha solo i diritti indicati nei [prerequisiti dello scanner](../deploy-use/deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner), il livello di integrità basso non è necessario e non è consigliato perché influisce negativamente sulle prestazioni. 
+
+Per altre informazioni sui livelli di integrità di Windows, vedere [What is the Windows Integrity Mechanism?](https://msdn.microsoft.com/library/bb625957.aspx) (Informazioni sul meccanismo di integrità di Windows)
+
+Per configurare questa impostazione avanzata in modo che lo scanner venga eseguito con un livello di integrità assegnato automaticamente da Windows (un account utente standard viene eseguito con un livello di integrità medio), immettere le stringhe seguenti:
+
+- Chiave: **ProcessUsingLowIntegrity**
+
+- Valore: **False**
+
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Integrazione con la classificazione dei messaggi di Exchange per una soluzione di etichettatura dei dispositivi mobili
 

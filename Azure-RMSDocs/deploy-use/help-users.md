@@ -4,7 +4,7 @@ description: Informazioni per fornire istruzioni a utenti, amministratori e adde
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/20/2017
+ms.date: 05/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 468550dd2389407b20d66adb814a7487988180bd
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 0243961b4dfdf3bb8c8b04059793098b26880615
+ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 05/22/2018
+ms.locfileid: "34444266"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Consentire agli utenti di proteggere i file mediante il servizio Azure Rights Management
 
@@ -49,7 +50,7 @@ Dopo aver distribuito e configurato Azure Information Protection per l'organizza
     
     - **Guida per l'accesso**
         
-        Quando il servizio Azure Rights Management deve autenticare un utente e non può usare le credenziali memorizzate nella cache, è possibile che all'utente venga chiesto di immettere le credenziali. Le credenziali richieste sono costituite dal nome dell'account aziendale o dell'istituto di istruzione e dalla password associata al tenant di Office 365 o di Azure Active Directory. Le credenziali richieste non sono relative a un account Microsoft (in precedenza Microsoft Live ID) né a un account di posta elettronica personale, perché tali account non sono attualmente supportati dal servizio Azure Rights Management. 
+        Quando il servizio Azure Rights Management deve autenticare un utente e non può usare le credenziali memorizzate nella cache, è possibile che all'utente venga chiesto di immettere le credenziali. Le credenziali richieste sono in genere quelle per l'account aziendale o dell'istituto di istruzione dell'utente e per la password associati al tenant di Office 365 o di Azure Active Directory. Anche se il servizio Azure Rights Management può autenticare account Azure AD, alcune applicazioni possono aprire contenuti protetti anche quando viene usato un account Microsoft per l'autenticazione. [Altre informazioni](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
         
         Fornire agli utenti e agli addetti del servizio help desk istruzioni sugli account da usare nel caso in cui gli utenti debbano immettere le proprie credenziali quando dispongono di applicazioni che usano il servizio Azure Rights Management.
         
@@ -57,7 +58,7 @@ Dopo aver distribuito e configurato Azure Information Protection per l'organizza
         
         Verificare che gli utenti abbiano le istruzioni appropriate per le applicazioni usate e che stiano usando applicazioni e dispositivi supportati dal servizio Azure Rights Management. Per altre informazioni sui dispositivi e le applicazioni supportate, vedere [Requisiti per Azure Rights Management](../get-started/requirements-azure-rms.md).
         
-        L'autenticazione e l'autorizzazione si basano su account e gruppi di Azure Active Directory. Per verificare se un utente o un gruppo specifico può essere autorizzato a consumare contenuto protetto, usare i controlli di verifica in [Preparazione di utenti e gruppi per Azure Information Protection](../plan-design/prepare.md).
+        Per verificare se un utente o un gruppo specifico può essere autorizzato da Azure Active Directory a proteggere o utilizzare contenuti protetti, usare i controlli di verifica presentati in [Preparazione di utenti e gruppi per Azure Information Protection](../plan-design/prepare.md).
         
         Se un utente indica che è in grado di aprire il contenuto protetto ma non ha i diritti necessari, il problema può essere dovuto al fatto che l'utente non è incluso nel gruppo corretto configurato per un modello di Rights Management, oppure che il [modello debba essere riconfigurato](configure-policy-templates.md) per l'utente o il gruppo. 
         
