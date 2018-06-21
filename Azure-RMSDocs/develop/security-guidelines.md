@@ -17,6 +17,7 @@ ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 03/29/2018
+ms.locfileid: "30258776"
 ---
 # <a name="security-best-practices-for-azure-information-protection"></a>Procedure ottimali di sicurezza per Azure Information Protection
 

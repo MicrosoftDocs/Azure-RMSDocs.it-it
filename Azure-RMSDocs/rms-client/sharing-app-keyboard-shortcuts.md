@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30206955"
 ---
 # <a name="use-keyboard-shortcuts-in-the-rights-management-sharing-application"></a>Usare i tasti di scelta rapida nell'applicazione Rights Management sharing
 
