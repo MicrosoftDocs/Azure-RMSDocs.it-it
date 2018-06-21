@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30206234"
 ---
 # <a name="how-file-servers-that-run-windows-server-and-use-file-classification-infrastructure-fci-support-azure-rights-management"></a>Informazioni su come i file server che eseguono Windows Server e usano l'infrastruttura di classificazione file supportano Azure Rights Management
 

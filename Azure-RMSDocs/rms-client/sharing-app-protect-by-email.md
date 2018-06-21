@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30206496"
 ---
 # <a name="protect-a-file-that-you-share-by-email-by-using-the-rights-management-sharing-application"></a>Proteggere un file che si condivide tramite posta elettronica usando l'applicazione Rights Management sharing
 

@@ -16,6 +16,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27765528"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guida per gli sviluppatori di Azure Information Protection
 

@@ -1,13 +1,13 @@
 ---
 title: Come usare le impostazioni di crittografia | Azure RMS
 description: Linee guida sui pacchetti di crittografia di Azure RMS e sui relativi frammenti di codice.
-keywords: 
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27765255"
 ---
 # <a name="how-to-work-with-encryption-settings"></a>Procedura: Usare le impostazioni di crittografia
 

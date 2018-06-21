@@ -1,13 +1,13 @@
 ---
 title: Come eseguire il debug dell'applicazione abilitata all'uso di diritti | Azure RMS
 description: L'argomento seguente illustra come eseguire il debug dell'applicazione e usare il registro eventi di Windows.
-keywords: 
+keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: article
-ms.prod: 
+ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
@@ -19,6 +19,7 @@ ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/11/2018
+ms.locfileid: "27765443"
 ---
 # <a name="how-to-debug-a-rights-enabled-application"></a>Procedura: Eseguire il debug dell'applicazione abilitata all'uso di diritti
 

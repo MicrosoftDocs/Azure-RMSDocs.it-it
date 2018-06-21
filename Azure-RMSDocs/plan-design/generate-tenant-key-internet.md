@@ -17,6 +17,7 @@ ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 03/28/2018
+ms.locfileid: "30205166"
 ---
 # <a name="generate-and-transfer-your-tenant-key--over-the-internet-retired-content"></a>Generare e trasferire la chiave del tenant tramite Internet | Azure RMS
 
