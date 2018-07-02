@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per gli amministratori per la distribuzio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b8cd6aeb13398bdfd65ba3e743e3e12bf3cc5f53
-ms.sourcegitcommit: c41490096af48e778947739e320e0dc8511f6c68
+ms.openlocfilehash: 511fea3a6176cf047eb4c1568d2efa755c46f39c
+ms.sourcegitcommit: e0a47ccee898b50907374cc74fcfd9abf59cd98d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/21/2018
-ms.locfileid: "34423290"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36949828"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guida dell'amministratore: Installare il client Azure Information Protection per gli utenti
 
@@ -74,14 +74,6 @@ Verificare quindi gli altri prerequisiti che possono essere necessari per il cli
     Se l'impostazione criteri di gruppo **Elenco dei componenti aggiuntivi gestiti** non è stata configurata, può risultare necessario configurarla quando si ricevono report indicanti che il componente aggiuntivo Microsoft Azure Information Protection sta per essere disattivato. Quando questo componente aggiuntivo viene disattivato, gli utenti non visualizzano la barra di Azure Information Protection nell'applicazione di Office.
     
     Per altre informazioni su questa impostazione criteri di gruppo, vedere [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) (Nessun componente aggiuntivo caricato a causa di impostazioni criteri di gruppo per Office 2013 e Office 2016).
-
-- Per Office A portata di clic versione 16.0.9324.1000 e versioni successive: abilitare il supporto legacy per i monitor
-    
-    Per evitare la visualizzazione della barra di Azure Information Protection al di fuori di Outlook per le versioni A portata di clic identificate, è necessario abilitare il supporto legacy per i monitor. Quando la barra non viene visualizzata correttamente in questo scenario, è possibile visualizzarla come **AdxTaskPane**. 
-    
-    Per configurare Outlook per questo requisito: **File** > **Opzioni** > **Generale**:
-    
-    - Nella sezione **Opzioni interfaccia utente** deselezionare l'opzione **Use best settings for my display** (Usa le impostazioni più adatte al mio schermo), se è selezionata.
 
 > [!IMPORTANT]
 > L'installazione del client Azure Information Protection richiede autorizzazioni amministrative locali.
