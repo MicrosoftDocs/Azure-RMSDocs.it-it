@@ -4,7 +4,7 @@ description: È necessario attivare il servizio Azure Rights Management prima ch
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/21/2018
+ms.date: 06/29/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7c257b16737a916d597be858fcfeaf6c475bb423
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 8e8a5062efe3b14f1867cf8440dc91c368a810f5
+ms.sourcegitcommit: 6bdc1e5c328ad3b63aeb6f60ba9905551261a7a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 06/30/2018
+ms.locfileid: "37137781"
 ---
 # <a name="activating-azure-rights-management"></a>Attivazione di Azure Rights Management
 
@@ -36,11 +37,13 @@ Quando il servizio Azure Rights Management per Azure Information Protection è a
 
 Quanto Azure Rights Management è incluso in un piano di servizio, non è necessario attivare il servizio:
 
-- Se la sottoscrizione che include Azure Rights Management o Azure Information Protection risale alla fine di **febbraio 2018** o a un periodo successivo, il servizio viene attivato automaticamente. Non è necessario attivare il servizio, a meno che Azure Rights Management sia stato disattivato dall'utente o da un altro amministratore globale.
+- **Se la sottoscrizione che include Azure Rights Management o Azure Information Protection risale alla fine di febbraio 2018 o a un periodo successivo:** il servizio viene attivato automaticamente. Non è necessario attivare il servizio, a meno che Azure Rights Management sia stato disattivato dall'utente o da un altro amministratore globale.
 
-- Se la sottoscrizione risale a un mese precedente, il servizio deve essere attivato. 
+- **Se la sottoscrizione che include Azure Rights Management o Azure Information Protection risale a febbraio 2018 o prima:** Microsoft sta iniziando ad attivare il servizio Azure Rights Management per queste sottoscrizioni se il tenant usa Exchange Online. Per queste sottoscrizioni, l'implementazione dell'attivazione automatica inizierà l'1 agosto 2018 quando il servizio verrà automaticamente attivato a meno che **AutomaticServiceUpdateEnabled** non risulti impostato su **false** quando si esegue [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps). 
 
-Dopo l'attivazione del servizio Azure Rights Management, tutti gli utenti dell'organizzazione potranno applicare la protezione delle informazioni ai propri file e tutti gli utenti potranno aprire (utilizzare) i file protetti da questo servizio. Se si preferisce, tuttavia, è possibile limitare l'applicazione della protezione delle informazioni solo ad alcuni utenti, usando i controlli di selezione utenti per una distribuzione graduale. Per altre informazioni, vedere la sezione [Configurazione dei controlli di selezione utenti per una distribuzione graduale](#configuring-onboarding-controls-for-a-phased-deployment) di questo articolo.
+Se nessuno degli scenari successivi è applicabile, è necessario attivare manualmente il servizio di protezione. 
+
+Dopo l'attivazione del servizio, tutti gli utenti dell'organizzazione potranno applicare la protezione delle informazioni ai propri documenti e messaggi di posta elettronica e tutti gli utenti potranno aprire (utilizzare) i documenti e i messaggi di posta elettronica protetti da questo servizio. Se si preferisce, tuttavia, è possibile limitare l'applicazione della protezione delle informazioni solo ad alcuni utenti, usando i controlli di selezione utenti per una distribuzione graduale. Per altre informazioni, vedere la sezione [Configurazione dei controlli di selezione utenti per una distribuzione graduale](#configuring-onboarding-controls-for-a-phased-deployment) di questo articolo.
 
 ## <a name="how-to-activate-or-confirm-the-status-of-the-azure-rights-management-service"></a>Come attivare o confermare lo stato del servizio Azure Rights Management 
 
@@ -53,7 +56,7 @@ Per usare questa soluzione di protezione dati, l'organizzazione deve essere in p
 
 - Un [piano Office 365 che includa Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
-Dopo l'attivazione del servizio Azure Rights Management, tutti gli utenti dell'organizzazione potranno applicare la protezione delle informazioni ai propri file e tutti gli utenti potranno aprire (utilizzare) i file protetti da questo servizio. Se si preferisce, tuttavia, è possibile limitare l'applicazione della protezione delle informazioni solo ad alcuni utenti, usando i controlli di selezione utenti per una distribuzione graduale. Per altre informazioni, vedere la sezione [Configurazione dei controlli di selezione utenti per una distribuzione graduale](#configuring-onboarding-controls-for-a-phased-deployment) di questo articolo.
+Dopo l'attivazione del servizio Azure Rights Management, tutti gli utenti dell'organizzazione potranno applicare la protezione delle informazioni ai propri documenti e messaggi di posta elettronica e tutti gli utenti potranno aprire (utilizzare) i documenti e i messaggi di posta elettronica protetti da questo servizio. Se si preferisce, tuttavia, è possibile limitare l'applicazione della protezione delle informazioni solo ad alcuni utenti, usando i controlli di selezione utenti per una distribuzione graduale. Per altre informazioni, vedere la sezione [Configurazione dei controlli di selezione utenti per una distribuzione graduale](#configuring-onboarding-controls-for-a-phased-deployment) di questo articolo.
 
 ## <a name="choosing-your-activation-method"></a>Scelta del metodo di attivazione
 
@@ -74,7 +77,7 @@ In alternativa, è possibile usare i comandi PowerShell seguenti:
 4. Per attivare il servizio, eseguire [Enable-Aadrm](/powershell/aadrm/vlatest/enable-aadrm).
 
 ## <a name="configuring-onboarding-controls-for-a-phased-deployment"></a>Configurazione dei controlli di selezione utenti per una distribuzione graduale
-Se non si vuole permettere a tutti gli utenti di proteggere immediatamente i file usando Azure Rights Management, sarà possibile configurare controlli di selezione utenti usando il comando [Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy) di PowerShell. È possibile eseguire questo comando prima o dopo l'attivazione del servizio Azure Rights Management.
+Se non si vuole permettere a tutti gli utenti di proteggere immediatamente i documenti e i messaggi di posta elettronica usando Azure Rights Management, sarà possibile configurare controlli di selezione utenti usando il comando [Set-AadrmOnboardingControlPolicy](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy) di PowerShell. È possibile eseguire questo comando prima o dopo l'attivazione del servizio Azure Rights Management.
 
 > [!IMPORTANT]
 > Per usare questo comando, è necessaria almeno la versione **2.1.0.0** del [modulo di PowerShell per Azure Rights Management](https://go.microsoft.com/fwlink/?LinkId=257721).
@@ -103,7 +106,7 @@ Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
 
 Per altre informazioni su questo cmdlet ed esempi aggiuntivi, vedere la guida di [Set-AadrmOnboardingControlPolicy](/powershell/aadrm/vlatest/set-aadrmonboardingcontrolpolicy).
 
-Quando si usano questi controlli di selezione utenti, tutti gli utenti dell'organizzazione potranno utilizzare sempre i contenuti protetti dal sottoinsieme di utenti, ma non potranno applicare direttamente la protezione delle informazioni da applicazioni client. Non potranno ad esempio visualizzare nei client di Office i modelli predefiniti pubblicati automaticamente quando viene attivato il servizio Azure Rights Management oppure eventuali modelli personalizzati configurati dall'utente.  Per ottenere lo stesso risultato, le applicazioni lato server, come Exchange, possono implementare controlli specifici per singoli utenti per l'integrazione con RMS.
+Quando si usano questi controlli di selezione utenti, tutti gli utenti dell'organizzazione potranno utilizzare sempre i contenuti protetti dal sottoinsieme di utenti, ma non potranno applicare direttamente la protezione delle informazioni da applicazioni client. Non potranno ad esempio visualizzare nei client di Office i modelli predefiniti pubblicati automaticamente quando viene attivato il servizio Azure Rights Management oppure eventuali modelli personalizzati configurati dall'utente. Per ottenere lo stesso risultato, le applicazioni lato server, come Exchange, possono implementare controlli specifici per singoli utenti per l'integrazione con RMS.
 
 
 ## <a name="next-steps"></a>Passaggi successivi

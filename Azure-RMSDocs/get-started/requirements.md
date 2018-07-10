@@ -4,7 +4,7 @@ description: Identificare i prerequisiti per distribuire Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/18/2018
+ms.date: 06/27/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9cdb205488c300f1df1e002be105765a90ce1a1a
-ms.sourcegitcommit: 09072591f1aa9878d063feb78ffcc4accec63fd1
+ms.openlocfilehash: 18168f89c762011146f7f3f131079f5a502820ac
+ms.sourcegitcommit: 3f524c5af39bee39169f86d9c4e72c661c960d83
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/18/2018
-ms.locfileid: "34308172"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37069377"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisiti per Azure Information Protection
 
@@ -83,6 +83,8 @@ I dispositivi seguenti supportano il client di Azure Information Protection, che
 Per le versioni server elencate, il client Azure Information Protection è supportato per Servizi Desktop remoto. Se si eliminano profili utente quando si usa il client Azure Information Protection con Servizi Desktop remoto, non eliminare la cartella **%Appdata%\Microsoft\Protect**.
 
 Quando il client Azure Information Protection protegge i dati tramite il servizio Azure Rights Management, i dati possono essere usati dagli [stessi dispositivi](requirements-client-devices.md) (Windows, Mac, iOS, Android) che supportano il servizio Azure Rights Management.
+
+Il client Azure Information Protection ha [altri prerequisiti](../rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client) elencati nella guida dell'amministratore.
 
 ## <a name="applications"></a>Applicazioni
 

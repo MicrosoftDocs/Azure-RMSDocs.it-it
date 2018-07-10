@@ -4,18 +4,18 @@ description: È possibile proteggere i documenti e i messaggi di posta elettroni
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 00305b1ba4f9ff750dd0fde9eb6a524cead39094
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: 0cac50caf3a7ecf9189d7731f1248e543871be9a
+ms.sourcegitcommit: 3f524c5af39bee39169f86d9c4e72c661c960d83
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444215"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37068941"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
@@ -100,13 +100,26 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
     
     Suggerimento: se si creano e usano regolarmente modelli personalizzati, può risultare utile consultare [Attività che precedentemente venivano eseguite con il portale di Azure classico](migrate-portal.md).
 
+    - **Seleziona un modello predefinito**: per usare uno dei modelli predefiniti o un modello personalizzato che è stato configurato. Si noti che questa opzione non viene visualizzata se si sta modificando un'etichetta che usava in precedenza l'opzione **Imposta autorizzazioni**.
+    
+    Per selezionare un modello predefinito, il modello deve essere pubblicato (non archiviato) e non deve essere già collegato a un'altra etichetta. Quando si seleziona questa opzione è possibile usare il pulsante **Modifica modello** per [convertire il modello in un'etichetta](configure-policy-templates.md#to-convert-templates-to-labels).
+    
+    Suggerimento: se si creano e usano regolarmente modelli personalizzati, può risultare utile consultare [Attività che precedentemente venivano eseguite con il portale di Azure classico](migrate-portal.md).
+
 7. Se è stata selezionata l'opzione **Imposta autorizzazioni** per **Azure (cloud key)** (Azure - Chiave cloud), questa opzione consente di configurare le stesse impostazioni configurabili in un modello. 
     
     Selezionare **Aggiungere autorizzazioni**, quindi, nel pannello **Aggiungere autorizzazioni**, selezionare il primo set di utenti e gruppi che avranno il diritto di usare il contenuto che verrà protetto per l'etichetta selezionata:
     
-    - Scegliere **Selezionare un elemento nell'elenco** per aggiungere tutti gli utenti dell'organizzazione selezionando **Aggiungi \<nome organizzazione> - Tutti i membri**. Questa impostazione consente di escludere gli account guest. In alternativa, passare alla directory.
+    - Scegliere **Selezionare dall'elenco** in cui è possibile aggiungere tutti gli utenti dell'organizzazione selezionando **Aggiungi \<nome organizzazione> - Tutti i membri**. Questa impostazione consente di escludere gli account guest. In alternativa è possibile selezionare **Add any authenticated users (Preview)** (Aggiungi qualsiasi utente autenticato - Anteprima) o passare alla directory.
         
-        Gli utenti o i gruppi selezionati devono disporre di un indirizzo di posta elettronica. In un ambiente di produzione, utenti e gruppi quasi mai hanno un indirizzo di posta elettronica, ma in un ambiente di test semplice può essere necessario aggiungere gli indirizzi di posta elettronica agli account utente o ai gruppi.
+        Quando si scelgono tutti i membri o si passa alla directory, gli utenti o i gruppi devono avere un indirizzo di posta elettronica. In un ambiente di produzione, utenti e gruppi quasi mai hanno un indirizzo di posta elettronica, ma in un ambiente di test semplice può essere necessario aggiungere gli indirizzi di posta elettronica agli account utente o ai gruppi.
+        
+        ###### <a name="more-information-about-add-any-authenticated-users"></a>Altre informazioni su **Add any authenticated users** (Aggiungi qualsiasi utente autenticato) 
+        Questa impostazione non limita chi può accedere al contenuto protetto dall'etichetta, pur crittografando il contenuto e fornendo le opzioni per limitare come usare il contenuto (autorizzazioni) e come accedervi (scadenza e accesso offline). L'applicazione che apre il contenuto protetto deve tuttavia poter supportare l'autenticazione in uso. Per questo motivo, i provider di servizi di social networking federati, ad esempio Google, e l'autenticazione di passcode monouso devono essere usati solo per la posta elettronica e solo quando si usano Exchange Online e le nuove funzionalità di Office 365 Message Encryption. Gli account Microsoft possono essere usati con il visualizzatore Azure Information Protection e Office 2016 A portata di clic. 
+        
+        Alcuni scenari tipici per l'impostazione relativa agli utenti autenticati: - Non è importante chi visualizza il contenuto, ma si vuole limitare il modo in cui viene usato. Ad esempio, non si vuole che il contenuto venga modificato, copiato o stampato.
+            - Non è necessario limitare chi accede al contenuto, ma si vuole tenere traccia di chi lo apre e, potenzialmente, lo revoca.
+            - Esiste un requisito in base al quale il contenuto deve essere crittografato quando è inattivo e quando è in transito, ma non sono necessari controlli di accesso.     
         
     - Scegliere **Immettere i dettagli** per specificare manualmente gli indirizzi di posta elettronica dei singoli utenti o gruppi (interni o esterni) o per specificare tutti gli utenti in un'altra organizzazione immettendo un nome di dominio di tale organizzazione. È anche possibile usare questa opzione per i provider di social networking, immettendo i nomi di dominio, ad esempio **gmail.com**, **hotmail.com** oppure **outlook.com**.
         
@@ -188,7 +201,7 @@ Gli utenti digitano l'indirizzo di posta elettronica Gmail nella casella **A**. 
 
 4. Se è selezionata, deselezionare l'opzione **In Word, Excel, PowerPoint e File Explorer richiedi all'utente le autorizzazioni personalizzate**.
 
-5. Fare clic su **OK** nel pannello **Protezione**.
+5. Fare clic su **OK** nel pannello **Protezione** e quindi fare clic su **Salva** nel pannello **Etichetta**.
 
 
 ### <a name="example-2-label-that-restricts-read-only-permission-to-all-users-in-another-organization-and-that-supports-immediate-revocation"></a>Esempio 2: etichetta che limita l'autorizzazione di sola lettura a tutti gli utenti di un'altra organizzazione e supporta la revoca immediata
@@ -209,7 +222,7 @@ Questa etichetta non è adatta per i messaggi di posta elettronica.
 
 6. Nel pannello **Protezione** in **Consenti l'accesso offline** selezionare **Mai**.
 
-7. Fare clic su **OK** nel pannello **Protezione**.
+7. Fare clic su **OK** nel pannello **Protezione** e quindi fare clic su **Salva** nel pannello **Etichetta**.
 
 
 ### <a name="example-3-add-external-users-to-an-existing-label"></a>Esempio 3: aggiungere utenti esterni a un'etichetta esistente
@@ -228,7 +241,7 @@ I nuovi utenti aggiunti potranno aprire i documenti e i messaggi di posta elettr
 
 6. Ripetere i passaggi 4 e 5 per ogni utente o gruppo che si vuole aggiungere a questa etichetta. Fare quindi clic su **OK**.
 
-7. Nel pannello **Protezione** fare clic su **OK**.
+7. Fare clic su **OK** nel pannello **Protezione** e quindi fare clic su **Salva** nel pannello **Etichetta**.
 
 ### <a name="example-4-label-for-protected-email-that-supports-less-restrictive-permissions-than-do-not-forward"></a>Esempio 4: etichetta per la posta elettronica protetta che supporta autorizzazioni meno restrittive rispetto a Non inoltrare
 
@@ -238,11 +251,11 @@ Se si specificano gli utenti esterni che non hanno un account in Azure AD:
 
 - L'etichetta è appropriata per i messaggi di posta elettronica quando Exchange Online usa le [nuove funzionalità di Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
  
-- Per gli allegati di Office protetti automaticamente, questi documenti possono essere visualizzati nel browser. Per modificare questi documenti, scaricarli e modificarli con Office 2016 A portata di clic e un account Microsoft che usa lo stesso indirizzo di posta elettronica. [Altre informazioni](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- Per gli allegati di Office protetti automaticamente, questi documenti possono essere visualizzati in un browser. Per modificare questi documenti, scaricarli e modificarli con Office 2016 A portata di clic e un account Microsoft che usa lo stesso indirizzo di posta elettronica. [Altre informazioni](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 
 > [!NOTE]
-> Exchange Online sta distribuendo una nuova opzione: [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails) (Solo crittografia). Questa opzione non è disponibile per la configurazione delle etichette. È tuttavia possibile usare questo esempio per configurare un'etichetta con lo stesso set di diritti di utilizzo.
+> Exchange Online sta distribuendo una nuova opzione: [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails) (Solo crittografia). Questa opzione non è disponibile per la configurazione delle etichette. È tuttavia possibile, quando si conoscono i destinatari, usare questo esempio per configurare un'etichetta con lo stesso set di diritti di utilizzo. 
 
 Quando gli utenti specificano gli indirizzi di posta elettronica nella casella **A** gli indirizzi devono essere quelli degli utenti specificati per questa configurazione di etichetta. Dato che gli utenti possono appartenere a gruppi e avere più di un indirizzo di posta elettronica, l'indirizzo di posta elettronica che specificano non deve corrispondere esattamente a quello specificato per le autorizzazioni, anche se questo è il modo più semplice per garantire che il destinatario venga autorizzato. Per altre informazioni sull'applicazione delle autorizzazioni agli utenti, vedere [Preparazione di utenti e gruppi per Azure Information Protection](../plan-design/prepare.md). 
 
@@ -264,10 +277,30 @@ Quando gli utenti specificano gli indirizzi di posta elettronica nella casella *
 
 6. Fare clic su **OK** nel pannello **Aggiungi autorizzazioni**.
 
-7. Nel pannello **Protezione** fare clic su **OK**.
+7. Fare clic su **OK** nel pannello **Protezione** e quindi fare clic su **Salva** nel pannello **Etichetta**.
+
+
+### <a name="example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it"></a>Esempio 5: Etichetta che crittografa il contenuto, ma non limita chi può accedervi
+
+Questa configurazione offre il vantaggio che non è necessario specificare utenti, gruppi o domini per proteggere un documento o un messaggio di posta elettronica. Il contenuto verrà ugualmente crittografato ed è tuttavia possibile specificare i diritti di utilizzo, una data di scadenza e l'accesso offline. Usare questa configurazione solo quando non è necessario limitare chi può aprire il documento o il messaggio di posta elettronica protetto. [Altre informazioni su questa impostazione](#more-information-about-add-any-authenticated-users)
+
+1. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)**.
+    
+2. Verificare che sia selezionata l'opzione **Configura le autorizzazioni**, quindi fare clic su **Aggiungi autorizzazioni**.
+
+3. Nel pannello **Aggiungi autorizzazioni** nella scheda **Selezionare dall'elenco** selezionare **Add any authenticated users (Preview)** (Aggiungi qualsiasi utente autenticato - Anteprima).
+
+4. Selezionare le autorizzazioni desiderate e fare clic su **OK**.
+
+5. Nel pannello **Protezione** configurare le impostazioni per **Scadenza del contenuto** e **Consenti l'accesso offline**, se necessario, e quindi fare clic su **OK**.
+
+6. Nel pannello **Etichetta** selezionare **Salva**.
+
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).  
+Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy). 
+
+Anche le regole del flusso di posta di Exchange possono applicare la protezione, in base alle etichette. Per altre informazioni ed esempi, vedere [Configurazione delle regole del flusso di posta per le etichette di Exchange Online](configure-exo-rules.md).  
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]

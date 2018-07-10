@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per amministratori per configurare e usar
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/13/2018
+ms.date: 06/26/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e24d91f04dc3186a9451546c8a962c49129f326b
-ms.sourcegitcommit: affda7572064edaf9e3b63d88f4a18d0d6932b13
+ms.openlocfilehash: fbf672fbdbc5fcc0538a5c5bac6b656fac3fddc7
+ms.sourcegitcommit: e0a47ccee898b50907374cc74fcfd9abf59cd98d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/16/2018
-ms.locfileid: "31008982"
+ms.lasthandoff: 06/26/2018
+ms.locfileid: "36949767"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guida dell'amministratore: Configurazione e uso del rilevamento dei documenti per Azure Information Protection
 
@@ -76,9 +76,11 @@ Questi URL sono standard per il servizio Azure Rights Management, ad eccezione d
 
 ## <a name="tracking-and-revoking-documents-for-users"></a>Rilevamento e revoca dei documenti per gli utenti
 
-Quando gli utenti accedono al sito di rilevamento dei documenti, possono rilevare e revocare i documenti protetti tramite il client Azure Information Protection o condivisi tramite l'applicazione di condivisione Rights Management. Quando si accede come amministratore di Azure Information Protection (amministratore globale), è possibile fare clic sull'icona di amministrazione per passare alla modalità amministratore. Questa modalità consente di visualizzare i documenti che gli utenti dell'organizzazione hanno selezionato per tenerne traccia con il client Azure Information Protection o per condividerli con l'applicazione di condivisione Rights Management:
+Quando gli utenti accedono al sito di rilevamento dei documenti, possono rilevare e revocare i documenti protetti tramite il client Azure Information Protection o condivisi tramite l'applicazione di condivisione Rights Management. Quando si accede come amministratore di globale di Azure AD per il tenant, è possibile fare clic sull'icona di amministrazione per passare alla modalità amministratore. Gli altri ruoli di amministratore non supportano questa modalità per il sito di rilevamento dei documenti. 
 
 ![Icona di amministrazione nel sito di rilevamento dei documenti](../media/tracking-site-admin-icon.png)
+
+La modalità amministratore consente di visualizzare i documenti che gli utenti dell'organizzazione hanno selezionato per tenerne traccia con il client Azure Information Protection o per condividerli con l'applicazione di condivisione Rights Management.
 
 > [!NOTE] 
 > Se si è un amministratore globale e l'icona non è visibile, significa che non sono stati ancora condivisi documenti. In questo caso, usare l'URL seguente per accedere al sito di rilevamento dei documenti: https://portal.azurerms.com/#/admin

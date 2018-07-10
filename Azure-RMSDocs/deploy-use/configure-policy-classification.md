@@ -4,18 +4,18 @@ description: Quando si configurano le condizioni per un'etichetta, è possibile 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 06/27/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 053d8dfd51d8c79cdc733f4395226c12ab6e2102
-ms.sourcegitcommit: 87d73477b7ae9134b5956d648c390d2027a82010
+ms.openlocfilehash: c7ef58cd42a793cacb3b64aec33d2cd0a0b105f4
+ms.sourcegitcommit: 3f524c5af39bee39169f86d9c4e72c661c960d83
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32326753"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37068882"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection
 
@@ -44,7 +44,7 @@ In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per 
     
     Non è possibile usare la classificazione automatica per documenti e messaggi di posta elettronica che in precedenza sono stati etichettati manualmente o automaticamente con una classificazione superiore. 
 
-- La classificazione consigliata si applica a Word, Excel e PowerPoint quando i documenti vengono salvati. Non è possibile usare la classificazione consigliata per Outlook.
+- La classificazione consigliata si applica a Word, Excel e PowerPoint quando i documenti vengono salvati. È possibile usare la classificazione consigliata per Outlook solo se si configura un'[impostazione client avanzata](../rms-client/client-admin-guide-customizations.md#enable-recommended-classification-in-outlook) attualmente in anteprima.
     
     Non è possibile usare la classificazione consigliata per documenti che sono stati etichettati in precedenza con una classificazione superiore. 
 

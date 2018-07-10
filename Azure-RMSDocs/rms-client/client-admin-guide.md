@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per gli amministratori in una rete aziend
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 06/19/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 17fa8d2269bce0d6ef01506bcbadafd01fc768b6
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: 50eefe938a4d37dc63d2209a71b5a06f84a24587
+ms.sourcegitcommit: b5cefaefdd460ed5249db8747f232972b470c619
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444232"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36263314"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
@@ -168,9 +168,19 @@ Tuttavia, i nomi e le descrizioni delle etichette specificati non vengono automa
 
 Il team di Azure Information Protection aggiorna regolarmente il client Azure Information Protection con correzioni e nuove funzionalità. Gli annunci vengono pubblicati nel [sito Yammer](https://www.yammer.com/AskIPTeam) del team.
 
-Se il client è stato installato usando il file eseguibile o i file di Windows Installer, è necessario scaricare manualmente le nuove versioni dall'Area download Microsoft per installare gli aggiornamenti per il client. Quando si installa il client mediante Windows Update, le nuove versioni diventano automaticamente disponibili per il download nel catalogo alcune settimane dopo il rilascio. 
+Se si usa Windows Update, il client Azure Information Protection aggiorna automaticamente la versione del client disponibile a livello generale, indipendentemente dal modo in cui è stato installato il client. Le nuove versioni del client vengono pubblicate nel catalogo alcune settimane dopo il rilascio.
+
+In alternativa, è possibile aggiornare manualmente il client scaricando la nuova versione dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Installare quindi la nuova versione per aggiornare il client. È necessario usare questo metodo per aggiornare le versioni di anteprima.
+
+Quando si esegue l'aggiornamento manuale, disinstallare prima la versione precedente solo se si sta modificando il metodo di installazione, ad esempio se si passa dalla versione eseguibile (EXE) del client alla versione di Windows Installer (MSI) del client, oppure se è necessario installare una versione precedente del client, ad esempio se è stata installata la versione di anteprima corrente per i test e ora è necessario tornare alla versione disponibile a livello generale corrente.
 
 Fare riferimento a [cronologia delle versioni e criteri per il supporto](../rms-client/client-version-release-history.md) per comprendere i criteri di supporto per il client Azure Information Protection, le versioni attualmente supportate e le novità e le modifiche per le versioni supportate. 
+
+### <a name="upgrading-the-azure-information-protection-scanner"></a>Aggiornamento dello scanner di Azure Information Protection
+
+Per aggiornare lo scanner di Azure Information Protection, installare la versione più recente del client di Azure Information Protection.
+
+Se la versione del client installata in precedenza era la 1.26.6.0 o precedente, eseguire nuovamente il comando di installazione dello scanner con [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner). Verranno mantenute le impostazioni di configurazione per i repository e lo scanner. Reinstallando lo scanner, vengono concesse allo scanner le autorizzazioni di eliminazione account del servizio per il database dello scanner, che saranno necessarie per i report.
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Disinstallazione del client Azure Information Protection
 

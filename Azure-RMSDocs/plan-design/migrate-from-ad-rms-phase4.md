@@ -4,7 +4,7 @@ description: Fase 4 della migrazione da AD RMS ad Azure Information Protection c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2018
+ms.date: 06/20/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7aaec205863bf855cc68887f3eafed27386ee49f
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 254e3ecc1292d2b9db0e291f9c45af343f3ccb9c
+ms.sourcegitcommit: 93e83ed71250e408e11fb098551e486282494013
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36324306"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Fase 4 della migrazione: configurazione dei servizi di supporto
 
@@ -34,7 +35,9 @@ Usare le informazioni seguenti per la fase 4 della migrazione da AD RMS ad Azure
 
 Indipendentemente dalla topologia di chiave del tenant di Azure Information Protection scelta, eseguire le operazioni seguenti:
 
-1. Per garantire che gli utenti siano in grado di leggere i messaggi di posta elettronica inviati tramite la protezione di AD RMS, assicurarsi di disporre di un record DNS SRV per il cluster AD RMS. Se non è stato creato il record DNS SRV per la riconfigurazione dei client nel passaggio 7, è possibile creare ora questo record per il supporto di Exchange Online. [Istruzioni](migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection)
+1. Per decrittografare i messaggi di posta elettronica protetti da AD RMS, Exchange Online deve sapere che l'URL di AD RMS per il cluster corrisponde alla chiave disponibile nel tenant. Questa operazione viene eseguita con il record DNS SRV per il cluster di AD RMS che viene usato anche per riconfigurare i client di Office per l'uso di Azure Information Protection. Se non è stato creato il record DNS SRV per la riconfigurazione dei client nel passaggio 7, è possibile creare ora questo record per il supporto di Exchange Online. [Istruzioni](migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection)
+    
+    Quando questo record DNS è applicato, gli utenti che usano Outlook nei client di posta elettronica Web e per dispositivi mobili potranno visualizzare i messaggi di posta elettronica protetti da AD RMS in tali app ed Exchange potrà usare la chiave importata da AD RMS per decrittografare, indicizzare, registrare e proteggere il contenuto protetto da AD RMS.  
 
 2. Eseguire il comando di Exchange Online [Get-IRMConfiguration](https://technet.microsoft.com/library/dd776120(v=exchg.160\).aspx). Se occorre assistenza per l'esecuzione di questo comando, vedere le istruzioni dettagliate in [Exchange Online: configurazione di IRM](/..deploy-use/configure-office365.md#exchange-online-irm-configuration).
     
@@ -118,12 +121,9 @@ Usare le istruzioni incluse nell'articolo [Distribuzione del connettore di Azure
 
 #### <a name="registry-edits-for-exchange"></a>Modifiche al Registro di sistema per Exchange
 
-In tutti i server Exchange, rimuovere i valori del Registro di sistema aggiunti per LicenseServerRedirection durante la fase di preparazione. Questi valori sono stati aggiunti nei percorsi seguenti:
+Per tutti i server di Exchange, aggiungere i valori del Registro di sistema seguenti a LicenseServerRedirection, a seconda delle versioni di Exchange:
 
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v15\IRM\LicenseServerRedirection
-
-HKLM\SOFTWARE\Microsoft\ExchangeServer\v14\IRM\LicenseServerRedirection
-
+---
 
 Per Exchange 2013 ed Exchange 2016: modifica 1 del Registro di sistema:
 
@@ -147,7 +147,7 @@ Uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazio
 
 ---
 
-Per Exchange 2013 - modifica 2 del Registro di sistema:
+Exchange 2013 - modifica 2 del Registro di sistema:
 
 **Percorso del Registro di sistema:**
 
