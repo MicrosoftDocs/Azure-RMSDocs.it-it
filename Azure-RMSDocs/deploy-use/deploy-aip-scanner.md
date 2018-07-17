@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire lo scanner di Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 07/03/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 0b663f8f514aadf51b0ad549761d90d30e07811d
-ms.sourcegitcommit: 92bb6d3163e455250a84281dac62b5af82f8c4f1
+ms.openlocfilehash: 3df9e33542d40d00f601ded599b454b2a9f8f045
+ms.sourcegitcommit: 666308d042c079b2d6bedfbe85ab0bf2450f255b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37042882"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37433632"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -47,7 +47,7 @@ Lo scanner può controllare tutti i file indicizzabili da Windows, tramite iFilt
 
 Si noti che lo scanner non individua e non applica etichette in tempo reale. Effettua sistematicamente una ricerca per indicizzazione nei file presenti negli archivi dati specificati ed è possibile configurare questo ciclo in modo da eseguirlo una o più volte.
 
-È possibile specificare i tipi di file da includere o escludere dall'analisi. Per limitare i file esaminati dallo scanner, definire un elenco di tipi di file tramite [Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileType).
+È possibile specificare i tipi di file da includere o escludere dall'analisi. Per limitare i file esaminati dallo scanner, definire un elenco di tipi di file tramite [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes).
 
 
 ## <a name="prerequisites-for-the-azure-information-protection-scanner"></a>Prerequisiti per lo scanner di Azure Information Protection
@@ -220,7 +220,7 @@ Poiché la pianificazione è stata configurata in modo da essere eseguita contin
 
 Lo scanner ignora automaticamente i file [esclusi dalla classificazione e dalla protezione](../rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-client), ad esempio file eseguibili e file di sistema.
 
-È possibile modificare questo comportamento definendo un elenco di tipi di file da includere o escludere dall'analisi. Quando si specifica questo elenco e non si specifica un repository di dati, l'elenco si applica a tutti i repository di dati per cui non è stato specificato un elenco. Per specificare questo elenco, usare [Set-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileType). Dopo aver specificato l'elenco di tipi di file, è possibile aggiungere un nuovo tipo di file all'elenco usando [Add-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileType) e rimuovere un tipo di file dall'elenco usando [Remove-AIPScannerScannedFileType](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileType).
+È possibile modificare questo comportamento definendo un elenco di tipi di file da includere o escludere dall'analisi. Quando si specifica questo elenco e non si specifica un repository di dati, l'elenco si applica a tutti i repository di dati per cui non è stato specificato un elenco. Per specificare questo elenco, usare [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). Dopo aver specificato l'elenco di tipi di file, è possibile aggiungere un nuovo tipo di file all'elenco usando [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes) e rimuovere un tipo di file dall'elenco usando [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes).
 
 Quindi lo scanner usa iFilter di Windows per analizzare i tipi di file seguenti. Per questi tipi di file, il documento viene contrassegnato in base alle condizioni specificate per le etichette.
 
