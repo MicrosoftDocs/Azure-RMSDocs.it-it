@@ -4,7 +4,7 @@ description: Istruzioni su come classificare e proteggere documenti e messaggi d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 07/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 223dd5681b6b5c6911a90cf6540b2ab4c9d7f54e
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: 07abfb8da932dea6fe29507cca9f3066eaf546cf
+ms.sourcegitcommit: 56a49619c0c52fa5296810b27161f23b3380eab9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444139"
+ms.lasthandoff: 07/13/2018
+ms.locfileid: "39029900"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Guida dell'utente: Classificare e proteggere un file o un messaggio di posta elettronica tramite Azure Information Protection
 
@@ -89,7 +89,7 @@ Se consentito dall'amministratore, è possibile specificare impostazioni di prot
 
     ![Opzione Autorizzazioni personalizzate](../media/custom-permissions-callout.png)
     
-    Se non è possibile selezionare **Autorizzazioni personalizzate**, l'amministratore non consente l'uso di questa opzione.
+    Se l'opzione **Autorizzazioni personalizzate** non è visualizzata, l'amministratore non consente l'uso di questa opzione.
     
     Si noti che le autorizzazioni personalizzate specificate non vengono aggiunte ma sono usate in sostituzione delle eventuali impostazioni di protezione definite dall'amministratore per l'etichetta scelta.  
 
@@ -148,7 +148,7 @@ La guida dell'amministratore contiene un elenco completo dei tipi di file suppor
     
 3. Se consentito dall'amministratore, è possibile specificare impostazioni di protezione personalizzate anziché usare quelle eventualmente incluse dall'amministratore con l'etichetta selezionata. A tale scopo, selezionare **Proteggi con autorizzazioni personalizzate**.
     
-    Se non è possibile selezionare **Proteggi con autorizzazioni personalizzate**, l'amministratore non consente l'uso di questa opzione.
+    Se l'opzione **Proteggi con autorizzazioni personalizzate** non è visualizzata, l'amministratore non consente l'uso di questa opzione.
     
     Le eventuali autorizzazioni personalizzate specificate sostituiscono le impostazioni di protezione che l'amministratore potrebbe avere definito per l'etichetta scelta e non sono aggiuntive.  
 
@@ -181,6 +181,8 @@ Ulteriori procedure nella Guida per l'utente di Azure Information Protection:
 -   [Per saperne di più](client-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Informazioni aggiuntive per gli amministratori    
-Vedere [Configurazione dei criteri di Azure Information Protection](../deploy-use/configure-policy.md).
+Per istruzioni sulla configurazione per abilitare l'impostazione dei criteri **Make the custom permissions option available to users** (Rendi l'opzione delle autorizzazioni personalizzate disponibile per gli utenti), vedere [Come configurare le impostazioni dei criteri per Azure Information Protection](../deploy-use/configure-policy-settings.md).
+
+Altre istruzioni sulla configurazione: [Configurazione dei criteri di Azure Information Protection](../deploy-use/configure-policy.md).
 
 [!INCLUDE[Commenting house rules](../includes/houserules.md)]
