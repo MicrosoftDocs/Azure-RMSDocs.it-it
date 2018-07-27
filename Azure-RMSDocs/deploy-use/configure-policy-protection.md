@@ -4,18 +4,18 @@ description: È possibile proteggere i documenti e i messaggi di posta elettroni
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 07/23/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 0cac50caf3a7ecf9189d7731f1248e543871be9a
-ms.sourcegitcommit: 3f524c5af39bee39169f86d9c4e72c661c960d83
+ms.openlocfilehash: c551c83a41a7fbf6340a9e5fbd867b825a971ad6
+ms.sourcegitcommit: dc46351ac5a9646499b90e9565260c3ecd45d305
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37068941"
+ms.lasthandoff: 07/24/2018
+ms.locfileid: "39217893"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
@@ -94,12 +94,6 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
         
         Se si sceglie l'opzione per Word, Excel, PowerPoint e File Explorer, quando l'opzione è impostata l'etichetta viene visualizzata in queste applicazioni. Quando gli utenti applicano l'etichetta viene visualizzata la finestra di dialogo che consente loro di selezionare le autorizzazioni personalizzate. Nella finestra di dialogo gli utenti devono specificare gli utenti o i gruppi, le autorizzazioni e una data di scadenza. Verificare che gli utenti dispongano di istruzioni e linee guida per specificare questi valori.
     
-    - **Seleziona un modello predefinito**: per usare uno dei modelli predefiniti o un modello personalizzato che è stato configurato. Si noti che questa opzione non viene visualizzata se si sta modificando un'etichetta che usava in precedenza l'opzione **Imposta autorizzazioni**.
-    
-    Per selezionare un modello predefinito, il modello deve essere pubblicato (non archiviato) e non deve essere già collegato a un'altra etichetta. Quando si seleziona questa opzione è possibile usare il pulsante **Modifica modello** per [convertire il modello in un'etichetta](configure-policy-templates.md#to-convert-templates-to-labels).
-    
-    Suggerimento: se si creano e usano regolarmente modelli personalizzati, può risultare utile consultare [Attività che precedentemente venivano eseguite con il portale di Azure classico](migrate-portal.md).
-
     - **Seleziona un modello predefinito**: per usare uno dei modelli predefiniti o un modello personalizzato che è stato configurato. Si noti che questa opzione non viene visualizzata se si sta modificando un'etichetta che usava in precedenza l'opzione **Imposta autorizzazioni**.
     
     Per selezionare un modello predefinito, il modello deve essere pubblicato (non archiviato) e non deve essere già collegato a un'altra etichetta. Quando si seleziona questa opzione è possibile usare il pulsante **Modifica modello** per [convertire il modello in un'etichetta](configure-policy-templates.md#to-convert-templates-to-labels).
