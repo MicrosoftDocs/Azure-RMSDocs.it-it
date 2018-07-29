@@ -4,18 +4,18 @@ description: "Passaggio 2 di un'esercitazione introduttiva per provare rapidamen
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/09/2018
+ms.date: 07/21/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: ffae0c9ef0e9ffd1fc9a4c25ef5c60e8da6de5ca
-ms.sourcegitcommit: 342b0bd8c57eb621714609ec28234dd07fe95d1e
+ms.openlocfilehash: 994b9fb3db3c4a1616896ffac7fcd68b0aff7887
+ms.sourcegitcommit: c7e943700189eeaad3f4c919cc0fa3410fd4df5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33946369"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39204459"
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>Passaggio 2: Configurare i criteri di Azure Information Protection
 
@@ -38,7 +38,7 @@ Il criterio predefinito disponibile con Azure è utilizzabile senza alcuna opera
     
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Criterio predefinito](../media/info-protect-policy-default-labelsv2.png)
     
-3. Come si può vedere, esistono alcune impostazioni dei criteri. Ad esempio non è presente un'etichetta predefinita (non tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta) e gli utenti non devono dare una giustificazione quando modificano le etichette:
+3. Dopo le etichette, nella sezione **Configure settings to display and apply on Information Protection end users** (Configurare le impostazioni da visualizzare e applicare per gli utenti finali di Information Protection) vengono visualizzate anche alcune impostazioni dei criteri. Ad esempio non è presente un'etichetta predefinita (non tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta) e gli utenti non devono dare una giustificazione quando modificano le etichette:
     
     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Criterio predefinito](../media/info-protect-policy-default-settings.png)
 
@@ -52,7 +52,7 @@ Nel corso di questa esercitazione verranno modificate alcune impostazioni dei cr
 
 2. Impostare l'opzione **Gli utenti devono fornire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione** su **On**.
 
-3. Individuare anche l'impostazione **Make the custom permissions option available to users** (Rendi l'opzione delle autorizzazioni personalizzate disponibile per gli utenti). Se è impostata su **Off** (Disattivata), impostarla su **On** (Attivata).
+3. Individuare anche l'impostazione **Make the custom permissions option available to users** (Rendi l'opzione delle autorizzazioni personalizzate disponibile per gli utenti). Se questa impostazione è **Off** impostarla su **On**.
     
     È possibile che non sia necessario modificare questa impostazione poiché il valore predefinito dipende dalla propria sottoscrizione. Le autorizzazioni personalizzate verranno usate in seguito nell'esercitazione per condividere un documento protetto con l'utente specificato quando si fa clic con il pulsante destro del mouse sul file in Esplora file.
 
@@ -74,7 +74,7 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
     
     ![Configurare la protezione per un'etichetta di Azure Information Protection](../media/info-protect-protection-bar-configured.png) 
     
-4. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (cloud key)** (Azure - Chiave cloud). Questa opzione usa il servizio Azure Rights Management per proteggere documenti e messaggi di posta elettronica. Assicurarsi che sia selezionata anche **Set Permissions** (Configura le autorizzazioni). Selezionare quindi **Aggiungi autorizzazioni**.
+4. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (cloud key)** (Azure - Chiave cloud). Questa opzione usa il servizio Azure Rights Management per proteggere documenti e messaggi di posta elettronica. Assicurarsi anche che l'opzione **Imposta autorizzazioni** sia selezionata. Selezionare quindi **Aggiungi autorizzazioni**.
 
 5. Nel pannello **Aggiungi autorizzazioni** selezionare **Aggiungi \<nome organizzazione >- Tutti i membri**. Se ad esempio il nome dell'organizzazione è VanArsdel Ltd, viene visualizzata la seguente opzione da selezionare:
     
@@ -149,7 +149,7 @@ Al termine di questa esercitazione è possibile chiudere il portale di Azure o l
 
 Dopo aver esaminato il criterio predefinito e aver apportato alcune modifiche, il passaggio successivo prevede l'installazione del client di Azure Information Protection.
 
-|Se si desiderano altre informazioni|Altre informazioni|
+|Se si desiderano altre informazioni|Informazioni aggiuntive|
 |--------------------------------|--------------------------|
 |Informazioni sui criteri predefiniti e sulle diverse versioni|[Criteri predefiniti di Azure Information Protection](../deploy-use/configure-policy-default.md)|
 |Informazioni sulla configurazione dei criteri|[Configurazione dei criteri di Azure Information Protection](../deploy-use/configure-policy.md)|
