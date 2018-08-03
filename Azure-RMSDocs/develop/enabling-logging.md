@@ -14,12 +14,12 @@ ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 906746990fd08a749d2879fbc04b054e49e65f01
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 68ed6db23caf5cab0a98e4704a36366c721d4194
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27764485"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373390"
 ---
 # <a name="how-to-enable-error-and-performance-logging"></a>Procedura: Abilitare la registrazione delle prestazioni e dell'errore
 Microsoft Rights Management SDK 4.2 gestisce i log delle diagnosi e delle prestazioni caricati tramite una proprietà a dispositivo singolo.
@@ -98,5 +98,3 @@ Ottenere l'impostazione del flag di controllo della registrazione corrente
 **Nota**: i frammenti di codice Windows precedenti sono in C++. Per C\#, aggiornare la sintassi con '.' al posto di '::'.
 
 **Linux/C++**: questo SDK include alcune registrazioni di base meno ampie di quelle delle altre piattaforme. Per altre informazioni, vedere la sezione **Risoluzione dei problemi** del file "README.md" in [RMS SDK per C++ portabile](https://github.com/AzureAD/rms-sdk-for-cpp#troubleshooting).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

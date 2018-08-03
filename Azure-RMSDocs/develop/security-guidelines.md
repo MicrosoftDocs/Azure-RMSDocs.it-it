@@ -12,12 +12,12 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 6c3669c1ada24afcf3b9ec48ea5bb9c38939b47e
-ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
+ms.openlocfilehash: 194e676807145dffdf326fe782f4b4051876552d
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2018
-ms.locfileid: "30258776"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39371850"
 ---
 # <a name="security-best-practices-for-azure-information-protection"></a>Procedure ottimali di sicurezza per Azure Information Protection
 
@@ -94,5 +94,3 @@ L'API consente a un utente di decrittografare o no le informazioni, che non hann
 - Eventuali diritti che vengono ricavati per inclusione nei nuovi diritti implementati da un'applicazione devono essere mappati alla nuova terminologia. Ad esempio, un nuovo diritto denominato GESTIONE potrebbe includere come diritti separati STAMPA, COPIA e MODIFICA.
 Standard consigliato    Attualmente nessuno.
 Standard preferito    Attualmente nessuno.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
