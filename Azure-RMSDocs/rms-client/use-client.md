@@ -13,12 +13,12 @@ ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ROBOTS: noindex,nofollow
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: efbc164b27e1dfe1b839e2ace893c4e3c5e656aa
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: f9dcd216a3591dee9fc328dac9d17d9338a9a978
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30205130"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39474427"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -48,6 +48,4 @@ L'applicazione di condivisione Rights Management per Windows e lo strumento di p
 
 
 ## <a name="see-also"></a>Vedere anche
-[Confronto tra Azure Information Protection e AD RMS](../understand-explore/compare-azure-rms-ad-rms.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
+[Confronto tra Azure Information Protection e AD RMS](../compare-on-premise.md)

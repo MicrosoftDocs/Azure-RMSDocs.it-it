@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bb38d33972fb99596fcde8bc54e53c38e3817336
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: e14844a5bd1b0ace4085eaaa9c15be6b3c814146
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444113"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473747"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparazione di utenti e gruppi per Azure Information Protection
 
@@ -87,7 +87,7 @@ Oltre che per autorizzare gli utenti del tenant, Azure Information Protection us
 
 Altri metodi di autorizzazione:
 
-- Azure Information Protection può autorizzare gli indirizzi di posta elettronica che non si trovano in Azure AD quando questi vengono autenticati con un account Microsoft. Non tutte le applicazioni, tuttavia, possono aprire contenuti protetti quando viene usato un account Microsoft per l'autenticazione. [Altre informazioni](../get-started/secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- Azure Information Protection può autorizzare gli indirizzi di posta elettronica che non si trovano in Azure AD quando questi vengono autenticati con un account Microsoft. Non tutte le applicazioni, tuttavia, possono aprire contenuti protetti quando viene usato un account Microsoft per l'autenticazione. [Altre informazioni](../secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 - Quando si invia un messaggio e-mail crittografato tramite Office 365 Message Encryption con nuove funzionalità a un utente che non ha un account in Azure AD, l'autenticazione dell'utente viene eseguita tramite la federazione con un provider di identità basato su social network oppure con un passcode monouso. L'indirizzo e-mail specificato nel messaggio di posta elettronica protetto viene quindi usato per l'autorizzazione dell'utente.
 
@@ -215,4 +215,3 @@ Dopo aver confermato che gli utenti e i gruppi sono utilizzabili con Azure Infor
 
 Per altre informazioni sul controllo dello stato di attivazione, vedere [Attivazione di Azure Rights Management](../deploy-use/activate-service.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

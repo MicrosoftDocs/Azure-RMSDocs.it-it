@@ -14,12 +14,12 @@ ms.assetid: 728113C9-FCF9-4280-BE1D-6AF5C15E449E
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: a3e0773ddc1971777017f0e6832efc61e28d3ec6
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: d62621cca53132a872958a38365a621c7bb8ece4
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765121"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370728"
 ---
 # <a name="getting-started"></a>Guida introduttiva
 
@@ -71,5 +71,3 @@ RMS SDK 2.1 supporta una serie di importanti piattaforme client e server. Per al
 
 * [Guida per gli sviluppatori RMS](developers-guide.md)
 * [Blog per sviluppatori AD RMS](http://blogs.msdn.com/b/rms/)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

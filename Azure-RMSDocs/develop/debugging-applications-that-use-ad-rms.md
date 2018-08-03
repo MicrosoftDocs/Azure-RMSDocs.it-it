@@ -14,12 +14,12 @@ ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: adab957779dac2baec22cb73b060f9a8a0075a1a
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: e778b734e3fb41477f3991c843f02621139b27d9
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765443"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375120"
 ---
 # <a name="how-to-debug-a-rights-enabled-application"></a>Procedura: Eseguire il debug dell'applicazione abilitata all'uso di diritti
 
@@ -65,5 +65,3 @@ Ad esempio, il comando seguente abiliterà il registro eventi MSIPC e imposterà
 **wevtutil sl Microsoft-RMS-MSIPC/Debug /e:true /l:4**
 
 **Nota**: nel menu **Visualizza** del Visualizzatore eventi di Windows selezionare **Visualizza registri analitici e di debug** per rendere visibile il registro di debug MSIPC.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 610a1e5f147ab8ce0cca3adb59191d145d01a1ae
-ms.sourcegitcommit: 78d368a4480cc1febedc8535c6c3e184e69caf7f
+ms.openlocfilehash: c62179f67d7b7176886f6bb8c003a1cb58868a58
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37088277"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372217"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guida dell'utente: Rilevare i documenti e revocarne l'accesso quando si usa Azure Information Protection
 
@@ -117,5 +117,3 @@ Ulteriori procedure nella Guida per l'utente di Azure Information Protection:
 
 ## <a name="additional-information-for-administrators"></a>Informazioni aggiuntive per gli amministratori    
 Vedere [Configurazione e uso del rilevamento dei documenti per Azure Information Protection](client-admin-guide-document-tracking.md) nella [Guida dell'amministratore](client-admin-guide.md).
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

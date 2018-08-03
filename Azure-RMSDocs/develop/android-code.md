@@ -14,12 +14,12 @@ ms.assetid: 58CC2E50-1E4D-4621-A947-25312C3FF519
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: f23f8d1d4deddb1a0ee70a755cf94637396337c0
-ms.sourcegitcommit: dca4534a0aa7f63c0c525c9a3ce445088d1362bb
+ms.openlocfilehash: 96872a15d99e72c467ad968189fdd5e6e26ebf61
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/19/2018
-ms.locfileid: "27927125"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39370575"
 ---
 # <a name="android-code-examples"></a>Esempi di codice Android
 
@@ -627,5 +627,3 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
           …
         }
     ```
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

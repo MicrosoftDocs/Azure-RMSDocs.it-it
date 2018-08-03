@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: cbb34f8417f3f4d63369399ffe962e7c957f65a6
-ms.sourcegitcommit: 3f524c5af39bee39169f86d9c4e72c661c960d83
+ms.openlocfilehash: cebfc618e4d1660bbae371d1f54f764b67f642b0
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37069598"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372785"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configurazione delle regole del flusso di posta di Exchange Online per le etichette di Azure Information Protection
 
@@ -131,4 +131,3 @@ Per informazioni sulla creazione e la configurazione delle etichette da usare co
 Per classificare i messaggi di posta elettronica contenenti allegati, considerare la possibilità di usare l'[impostazione dei criteri](configure-policy-settings.md) di Azure Information Protection seguente: **Per i messaggi di posta elettronica con allegati, applicare un'etichetta corrispondente alla classificazione più elevata di questi allegati**.
 
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

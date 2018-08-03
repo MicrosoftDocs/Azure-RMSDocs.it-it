@@ -14,12 +14,12 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 794e0b89f58944c6734992c57e1ad3a7aa58238a
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: ecbc6ced2b67f3f378a03e98cd6a12b488efbce4
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765817"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373040"
 ---
 # <a name="developing-your-application"></a>Sviluppo dell'applicazione
 
@@ -231,4 +231,3 @@ Dopo avere eseguito tutti i passaggi di creazione ed esecuzione, gli output dell
 
 6. Immettere infine alcuni metadati dei criteri: nome dei criteri, descrizione e nome visualizzato dell'autorità di certificazione (tenant di Azure AD) ![output dell'app - passaggio 6](../media/develop/app-output-6.png)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

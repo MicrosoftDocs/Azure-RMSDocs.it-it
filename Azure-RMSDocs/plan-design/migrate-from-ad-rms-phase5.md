@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0330b8a18c52d76ba3aa926e66085b1f33f4dd0f
-ms.sourcegitcommit: 0fda9ea4a7b91d4bb3a9e4f9d5cc4106ce1e2d43
+ms.openlocfilehash: 39eb09eaf3810ec8cb7152499d704be47e6ad045
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38973478"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372176"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Fase 5 della migrazione: attività post-migrazione
 
@@ -124,4 +124,3 @@ Per altre informazioni sulla gestione della chiave del tenant di Azure Informati
 
 Dopo aver completato la migrazione, rivedere la [guida di orientamento alla distribuzione](deployment-roadmap.md) per identificare eventuali altre attività di distribuzione che può essere necessario eseguire.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

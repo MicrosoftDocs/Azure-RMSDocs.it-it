@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: ba56e6b165cd378c957b2c54bd41ce54f1830797
-ms.sourcegitcommit: 1b0c387b2848b7dfaee0b0548dde7e41383ffe6e
+ms.openlocfilehash: fed57de220a5448a16a866fae76969eb4f9332de
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39138305"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473866"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurazione e gestione dei modelli per Azure Information Protection
 
@@ -46,7 +46,7 @@ I modelli sono configurati in modo da consentire l'accesso offline per sette gio
 >[!NOTE]
 > È possibile modificare queste impostazioni e i nomi e le descrizioni dei modelli predefiniti. Questa capacità non era attivata con il portale di Azure classico e non è supportata per PowerShell.
 
-Questi modelli predefiniti semplificano l'attivazione immediata della protezione dei dati sensibili dell'organizzazione. Questi modelli possono essere usati con le etichette di Azure Information Protection o autonomamente con [applicazioni e servizi](../understand-explore/applications-support.md) che possono usare i modelli di Rights Management.
+Questi modelli predefiniti semplificano l'attivazione immediata della protezione dei dati sensibili dell'organizzazione. Questi modelli possono essere usati con le etichette di Azure Information Protection o autonomamente con [applicazioni e servizi](../applications-support.md) che possono usare i modelli di Rights Management.
 
 È anche possibile creare modelli personalizzati. Anche se è probabile che siano necessari solo alcuni modelli, è possibile configurare fino a 500 modelli personalizzati salvati in Azure.
 
@@ -164,4 +164,3 @@ Tutte le operazioni che è possibile configurare nel portale di Azure per creare
 
 Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).  
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

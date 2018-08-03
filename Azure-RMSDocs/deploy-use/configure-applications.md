@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2477432e53a3aaeee89781a8bd7a595315e86561
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 3e7949075e7bd2a307bc74dfba082decdb1902a5
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30207737"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473264"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Configurazione di applicazioni per Azure Rights Management
 
@@ -28,10 +28,10 @@ ms.locfileid: "30207737"
 >
 > Ad esempio, per le applicazioni Office fare clic sull'icona della Guida e immettere i termini di ricerca, ad esempio **Rights Management** o **IRM**. Per il client Azure Information Protection per Windows, vedere la [Guida per l'utente del client Azure Information Protection](../rms-client/client-user-guide.md).
 
-Dopo avere distribuito Azure Information Protection per l'organizzazione, usare le informazioni seguenti per configurare le applicazioni, il client Azure Information Protection e i servizi. Ad esempio, le applicazioni di Office come Word 2016, Word 2013 e Word 2010 e i servizi come Exchange Online (regole di trasporto, prevenzione della perdita dei dati, opzione Non inoltrare e Message Encryption) e SharePoint Online (librerie protette). Per informazioni su come questi servizi e applicazioni supportano il servizio di protezione dei dati di Azure Information Protection, vedere [Supporto del servizio Azure Rights Management da parte delle applicazioni](../understand-explore/applications-support.md).
+Dopo avere distribuito Azure Information Protection per l'organizzazione, usare le informazioni seguenti per configurare le applicazioni, il client Azure Information Protection e i servizi. Ad esempio, le applicazioni di Office come Word 2016, Word 2013 e Word 2010 e i servizi come Exchange Online (regole di trasporto, prevenzione della perdita dei dati, opzione Non inoltrare e Message Encryption) e SharePoint Online (librerie protette). Per informazioni su come questi servizi e applicazioni supportano il servizio di protezione dei dati di Azure Information Protection, vedere [Supporto del servizio Azure Rights Management da parte delle applicazioni](../applications-support.md).
 
 > [!IMPORTANT]
-> Per informazioni sulle versioni supportate e altri requisiti, vedere [Requisiti per Azure Rights Management](../get-started/requirements-azure-rms.md).
+> Per informazioni sulle versioni supportate e altri requisiti, vedere [Requisiti per Azure Rights Management](../requirements.md).
 
 -   [Office 365: configurazione di client e servizi online](configure-office365.md)
 
@@ -65,5 +65,4 @@ Dopo aver configurato le applicazioni per il supporto del servizio Azure Rights 
 
 - [Operazioni relative alla chiave del tenant di Azure Information Protection](operations-tenant-key.md)
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 

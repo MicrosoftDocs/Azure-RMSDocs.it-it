@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: f0fc9b01b042c3210abf69804d552607d92c5928
-ms.sourcegitcommit: aae04d78ff301921a4e29ac23bd932fb24a83dbe
+ms.openlocfilehash: f42e1318e8be0d805216cffd402a9b87a1259e1e
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34444346"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473849"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gestire i dati personali per Azure Information Protection
 
@@ -254,7 +254,7 @@ Per eliminare dati personali nei file di log dei client e nei log dello scanner 
 Usare i tre passaggi seguenti per richiedere a Microsoft di eliminare i dati personali nei log di rilevamento dei documenti, nei log di amministrazione o nei log sull'utilizzo per il servizio Azure Rights Management. 
 
 **Passaggio 1: Generare la richiesta di eliminazione**
-[Contattare il supporto tecnico Microsoft](../get-started/information-support.md#to-contact-microsoft-support) per aprire un caso di supporto per Azure Information Protection con una richiesta di eliminazione dei dati dal tenant. È necessario dimostrare di essere un amministratore del tenant di Azure Information Protection e tenere presente che la conferma di questo processo richiede diversi giorni. Nell'inviare la richiesta, è necessario fornire informazioni aggiuntive, a seconda dei dati che devono essere eliminati.
+[Contattare il supporto tecnico Microsoft](../information-support.md#to-contact-microsoft-support) per aprire un caso di supporto per Azure Information Protection con una richiesta di eliminazione dei dati dal tenant. È necessario dimostrare di essere un amministratore del tenant di Azure Information Protection e tenere presente che la conferma di questo processo richiede diversi giorni. Nell'inviare la richiesta, è necessario fornire informazioni aggiuntive, a seconda dei dati che devono essere eliminati.
 
 - Per eliminare il log di amministrazione, specificare la **data di fine**. Verranno eliminati tutti i log di amministrazione fino alla data di fine specificata.
 - Per eliminare i log sull'utilizzo, specificare la **data di fine**. Verranno eliminati tutti i log sull'utilizzo fino alla data di fine specificata.
@@ -277,4 +277,3 @@ Solo gli utenti cui sono state assegnate [autorizzazioni di amministratore](#sec
 
 Per le azioni di eliminazione, la richiesta di supporto funge da audit trail e percorso di segnalazione per le azioni eseguite da Microsoft. Dopo l'eliminazione, i dati eliminati non saranno disponibili per la ricerca o l'esportazione e l'amministratore potrà verificare questo aspetto usando i cmdlet Get del modulo AADRM.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

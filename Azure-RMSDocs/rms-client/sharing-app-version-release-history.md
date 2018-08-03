@@ -13,12 +13,12 @@ ms.custom: askipteam
 ms.assetid: 6751bd90-959f-4eba-91ed-6588ac983762
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1e3dc88f69b1fb4ed178f3f2d1268c47fae13621
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 1ebeef2847a8404d5970673acd3163b336cf0406
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30208618"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473356"
 ---
 # <a name="rights-management-sharing-application-version-release-history"></a>Applicazione Rights Management sharing: Cronologia delle versioni
 
@@ -81,7 +81,7 @@ Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
 -   Supporto per Multi-Factor Authentication (MFA) per Azure RMS, che rimuove inoltre la dipendenza dall’Assistente per l'accesso Microsoft per applicazioni che utilizzano l’autenticazione moderna.
 
-    Per altre informazioni, vedere la sezione [Multi-Factor Authentication (MFA) e Azure RMS](../get-started/requirements-azure-ad.md#multi-factor-authentication-mfa-and-azure-information-protection) di [Requisiti di Azure Active Directory per Azure Information Protection](../get-started/requirements-azure-ad.md).
+    Per altre informazioni, vedere la sezione [Multi-Factor Authentication (MFA) e Azure RMS](../requirements-servers.md) di [Requisiti di Azure Active Directory per Azure Information Protection](../requirements-servers.md).
 
 ## <a name="version-1017840"></a>Versione 1.0.1784.0
 **Rilasciata**: 30/7/2015
@@ -130,4 +130,3 @@ Non sono elencate le versioni precedenti al 1 gennaio 2015.
 
 -   **Supporto per più domini di posta elettronica all'interno dell'organizzazione**: se si usa AD RMS e gli utenti dell'organizzazione dispongono di più domini di posta elettronica, questo aggiornamento consente loro di utilizzare contenuti protetti dagli utenti dell'organizzazione in altri domini. Per altre informazioni, vedere la sezione [Solo AD RMS: Supporto per più domini di posta elettronica all'interno dell'organizzazione](sharing-app-admin-guide.md#ad-rms-only-support-for-multiple-email-domains-within-your-organization) della [Guida dell'amministratore dell'applicazione Rights Management sharing](sharing-app-admin-guide.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: eb631b0153ce047177ef12887c025303acfac1db
-ms.sourcegitcommit: c207a2f592d167a4a0b6c4427259683e2087f143
+ms.openlocfilehash: a9b09347531bc27c965222e5d8b3c23fe593cd72
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/18/2018
-ms.locfileid: "31441863"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473325"
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guida dell'utente: Visualizzare e usare file protetti con Rights Management
 
@@ -40,7 +40,7 @@ Viene automaticamente installato con il client Azure Information Protection oppu
 > 
 > Installare il visualizzatore se si è ricevuto un documento protetto da un utente di un'altra organizzazione o se non si possiedono autorizzazioni di amministratore locale per il PC.
 
-Per essere in grado di aprire un documento protetto, l'applicazione deve essere "abilitata per RMS". Le applicazioni Office e il visualizzatore Azure Information Protection sono esempi di applicazioni abilitate per RMS. Per visualizzare un elenco di applicazioni per tipo e i dispositivi supportati, vedere la [tabella delle applicazioni abilitate per RMS](../get-started/requirements-applications.md#rms-enlightened-applications).  
+Per essere in grado di aprire un documento protetto, l'applicazione deve essere "abilitata per RMS". Le applicazioni Office e il visualizzatore Azure Information Protection sono esempi di applicazioni abilitate per RMS. Per visualizzare un elenco di applicazioni per tipo e i dispositivi supportati, vedere la [tabella delle applicazioni abilitate per RMS](../requirements-applications.md#rms-enlightened-applications).  
 ## <a name="messagerpmsg-as-an-email-attachment"></a>Message.rpmsg come allegato di posta elettronica
 
 Se **message.rpmsg** appare come file allegato in un messaggio di posta elettronica, non si tratta di un documento protetto, ma di un messaggio di posta elettronica protetto visualizzato come allegato. Non è possibile usare il visualizzatore Azure Information Protection per Windows per visualizzare questo messaggio di posta elettronica protetto in un computer Windows. È invece necessaria un'applicazione di posta elettronica per Windows che supporti la protezione di Rights Management, ad esempio Office Outlook. Oppure si può usare Outlook sul Web.
@@ -87,5 +87,3 @@ Ulteriori procedure nella Guida per l'utente di Azure Information Protection:
 
 -   [Per saperne di più](client-user-guide.md#what-do-you-want-to-do)
 
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

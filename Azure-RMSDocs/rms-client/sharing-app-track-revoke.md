@@ -12,20 +12,20 @@ ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 80c184892af6f82e744d32d96d562f2fadf9b859
-ms.sourcegitcommit: 6a67fc50bd8b8a06974de647c15115a673f0217c
+ms.openlocfilehash: d6d53635a7f86c9ecc27f654885f9d66569f2b1e
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33821097"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39374240"
 ---
-# <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>Tenere traccia dei documenti e revocarli quando si usa l'applicazione di condivisione RMS
+# <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>Tenere traccia dei documenti e revocarli quando si usa l'applicazione RMS sharing
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 Dopo avere protetto i documenti tramite l'applicazione RMS sharing, se l'organizzazione usa Azure Information Protection invece di Active Directory Rights Management Services, è possibile tenere traccia del modo in cui le persone usano i documenti protetti. Se necessario, è anche possibile revocare l'accesso a questi documenti quando si desidera interromperne la condivisione. A tale scopo, usare il **sito di rilevamento del documento**, a cui è possibile accedere dai computer Windows, dai computer Mac e anche da tablet e telefoni.
 
-Quando si accede a questo sito, eseguire l'accesso per effettuare il rilevamento dei documenti. A condizione che l'organizzazione abbia una [sottoscrizione che supporta il rilevamento e la revoca dei documenti](https://www.microsoft.com/cloud-platform/azure-information-protection-features) e di avere ricevuto una licenza per tale sottoscrizione, è quindi possibile sapere chi ha tentato di aprire i file protetti e se il tentativo ha avuto esito positivo (ovvero se è stata eseguita correttamente l'autenticazione) o meno. nonché verificare ogni tentativo di accesso al documento e la posizione dell'utente in quel momento. Tuttavia, in rari casi, la posizione segnalata potrebbe non essere accurata, ad esempio quando un utente che apre un documento protetto usa una connessione VPN o il computer dispone di un indirizzo IPv6.
+Quando si accede a questo sito, eseguire l'accesso per effettuare il rilevamento dei documenti. A condizione che l'organizzazione abbia una [sottoscrizione che supporta il rilevamento e la revoca dei documenti](https://www.microsoft.com/cloud-platform/azure-information-protection-features) e di avere ricevuto una licenza per tale sottoscrizione, è quindi possibile sapere chi ha tentato di aprire i file protetti e se il tentativo ha avuto esito positivo (ovvero se è stata eseguita correttamente l'autenticazione) o meno. Ogni volta che ha tentato di accedere al documento e la sua posizione in quel momento. Tuttavia, in rari casi, la posizione segnalata potrebbe non essere accurata, ad esempio quando un utente che apre un documento protetto usa una connessione VPN o il computer dispone di un indirizzo IPv6.
 
 Azioni che è possibile eseguire nel sito di rilevamento dei documenti:
 
@@ -96,7 +96,7 @@ Oltre a tenere traccia dei documenti nei computer Windows utilizzando applicazio
     ![Selezionare Rileva utilizzo da Outlook quando si usa l'applicazione RMS sharing](../media/ADRMS_MSRMSApp_OutlookMessageTrackUsage.png)
 
 ## <a name="examples-and-other-instructions"></a>Esempi e altre istruzioni
-Per esempi e istruzioni procedurali su come usare l'applicazione di condivisione Rights Management, vedere le sezioni seguenti del relativo manuale dell'utente:
+Per esempi di come è possibile usare l'applicazione Rights Management sharing e informazioni sulle procedure da seguire, vedere le sezioni seguenti della Guida dell'utente dell'applicazione Rights Management sharing:
 
 -   [Esempi per l'uso dell'applicazione RMS sharing](sharing-app-user-guide.md#examples-for-using-the-rms-sharing-application)
 
@@ -104,5 +104,3 @@ Per esempi e istruzioni procedurali su come usare l'applicazione di condivisione
 
 ## <a name="see-also"></a>Vedere anche
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

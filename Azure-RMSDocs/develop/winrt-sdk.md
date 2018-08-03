@@ -14,12 +14,12 @@ ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: dde2b47ddf91c6f79d50df5ad776d981c1494047
-ms.sourcegitcommit: 8e622a93ff8d07a180e3be6e8b14748354e640bd
+ms.openlocfilehash: 330ce41da93004209e6fe00c46fa8491d0fbcd49
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2018
-ms.locfileid: "30259007"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39375198"
 ---
 # <a name="windows-store-setup"></a>Installazione per Windows Store
 
@@ -84,5 +84,3 @@ A questo punto si è pronti per creare le nuove app Windows Store personalizzate
 [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
 
 [Informazioni di riferimento sulle API di Windows](https://msdn.microsoft.com/library/dn891914.aspx)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

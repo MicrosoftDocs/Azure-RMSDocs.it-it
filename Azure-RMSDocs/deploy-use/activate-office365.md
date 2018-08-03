@@ -13,12 +13,12 @@ ms.custom: askipteam
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 77d511cc466441ffc28d813be9a0ec86ff3d8fa7
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 9cc8d49b62155354b96ad04f76c335be2124f15a
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30205037"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473509"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Come attivare Azure Rights Management dall'interfaccia di amministrazione di Office 365
 
@@ -44,7 +44,7 @@ Seguire queste istruzioni se si accede al servizio Azure Rights Management dall'
     >
     >Per attivare il servizio Azure Rights Management, è necessario un [piano Azure Information Protection Premium](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) o un [piano di Office 365 che include Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). 
     
-    Per assistenza sull'attivazione del servizio o domande sui requisiti per la sottoscrizione, [contattare il supporto tecnico Microsoft](../get-started/information-support.md#to-contact-microsoft-support) o usare i canali di supporto standard.
+    Per assistenza sull'attivazione del servizio o domande sui requisiti per la sottoscrizione, [contattare il supporto tecnico Microsoft](../information-support.md#to-contact-microsoft-support) o usare i canali di supporto standard.
 
 4. Nella pagina **rights management** fare clic su **Attiva**.
 
@@ -56,4 +56,3 @@ Verranno quindi visualizzati il messaggio **Rights Management è attivato** e l'
 ## <a name="next-steps"></a>Passaggi successivi
 Riprendere la lettura di [Attivazione di Azure Rights Management](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

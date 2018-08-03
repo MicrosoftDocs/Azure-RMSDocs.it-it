@@ -13,12 +13,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 766acd68d1c5c5f59530b0b61fadee315185ec4a
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: a503c4232847828bf32d889f4702fbfed39463ad
+ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30207802"
+ms.lasthandoff: 08/02/2018
+ms.locfileid: "39473713"
 ---
 # <a name="change-permissions-on-files-that-have-been-protected-by-rights-management"></a>Modificare le autorizzazioni per i file protetti da Rights Management
 
@@ -70,7 +70,7 @@ Se si vogliono rimuovere completamente tutte le autorizzazioni in modo che il fi
 > -   Per richiedere questo account, fare clic sul collegamento per richiedere [RMS per utenti singoli](http://go.microsoft.com/fwlink/?LinkId=309469).
 >
 >     Quando si effettua l'iscrizione, utilizzare l'indirizzo di posta elettronica della società anziché un indirizzo di posta elettronica personale. Se si esegue l'iscrizione perché è stato inviato un allegato protetto tramite posta elettronica, utilizzare lo stesso indirizzo di posta elettronica utilizzato per inviare il messaggio di posta elettronica.
-> -   Per ulteriori informazioni, vedere [RMS per utenti singoli e Azure Rights Management](../understand-explore/rms-for-individuals.md).
+> -   Per ulteriori informazioni, vedere [RMS per utenti singoli e Azure Rights Management](../rms-for-individuals.md).
 
 ## <a name="to-re-protect-a-file-that-you-have-emailed"></a>Per riproteggere un file inviato tramite posta elettronica
 
@@ -94,5 +94,3 @@ Per esempi di come è possibile usare l'applicazione Rights Management sharing e
 
 ## <a name="see-also"></a>Vedere anche
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

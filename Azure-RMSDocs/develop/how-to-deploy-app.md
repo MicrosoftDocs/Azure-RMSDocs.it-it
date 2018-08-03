@@ -14,12 +14,12 @@ ms.assetid: 34dc6d6f-cfe4-4848-9b11-8d90c4b38ef7
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 3b7ff758abeb3f1ddc1ae82349233e437d05dacc
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 3299981f6e45cc8c82da66e2fce07cece552c81f
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
-ms.locfileid: "20232837"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372275"
 ---
 # <a name="deploying-a-service-application-into-a-different-tenant"></a>Distribuzione di un'applicazione di servizio a un tenant diverso
 
@@ -51,5 +51,3 @@ Se è stato deciso di non fornire all'amministratore IT di *ABC* una finestra di
 ## <a name="flow-2-abc-it-administrator-provides-the-key-to-the-coolapp-team"></a>Flusso 2: l'amministratore IT di *ABC* fornisce la chiave al team di *CoolApp*
 
 Dopo che l'amministratore IT di *ABC* ha creato l'entità servizio, come illustrato in **Figura 1**, *ABC* fornisce le informazioni al team di *CoolApp*. A sua volta, il team di *CoolApp* procede a incorporare le informazioni nell'applicazione di *CoolApp* per consentirne l'uso al tenant di *ABC*.
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

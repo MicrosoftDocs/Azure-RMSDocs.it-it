@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4c1cd1d3-78dd-4f90-8b37-dcc9205a6736
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 71bc303aaadf6856cce2f63db0acf5280fbe172b
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: a8ab30fc9b4f8775ef2bb9503c620a8811b18b8d
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30206496"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39373686"
 ---
 # <a name="protect-a-file-that-you-share-by-email-by-using-the-rights-management-sharing-application"></a>Proteggere un file che si condivide tramite posta elettronica usando l'applicazione Rights Management sharing
 
@@ -90,5 +90,3 @@ Per esempi di come è possibile usare l'applicazione Rights Management sharing e
 
 ## <a name="see-also"></a>Vedere anche
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

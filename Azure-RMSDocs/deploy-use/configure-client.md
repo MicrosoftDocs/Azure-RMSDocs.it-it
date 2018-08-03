@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 54e66d8ffde33e3e73b24e39fa609686fa2601b0
-ms.sourcegitcommit: dbbfadc72f4005f81c9f28c515119bc3098201ce
+ms.openlocfilehash: 6953d72b3114c00a25c135754d9eea0db6563cb1
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/28/2018
-ms.locfileid: "30204799"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39372248"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Client Azure Information Protection: installazione e configurazione per i client
 
@@ -41,6 +41,5 @@ Per installare il client Azure Information Protection per queste piattaforme per
 
 **Se è installato Microsoft Intune**: poiché l'app Azure Information Protection include Microsoft Intune App Software Development Kit, quando i dispositivi iOS e Android sono registrati da Intune, è possibile distribuire e gestire il visualizzatore Azure Information Protection per questi dispositivi. Per altre informazioni, vedere l'articolo relativo alla [configurazione e distribuzione dei criteri di gestione delle applicazioni per dispositivi mobili nella console di Microsoft Intune](/intune/deploy-use/configure-and-deploy-mobile-application-management-policies-in-the-microsoft-intune-console) nella documentazione di Intune Per il passaggio 2, usare le istruzioni per pubblicare un'app gestita da criteri.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
 
 

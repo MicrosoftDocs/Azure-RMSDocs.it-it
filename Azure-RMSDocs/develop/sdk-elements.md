@@ -14,12 +14,12 @@ ms.assetid: B57AC6F3-733C-42A8-AF83-0E15FBF27C99
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: f79c0d60bf460c0f8cca68f6b0447303a383c686
-ms.sourcegitcommit: 93124ef58e471277c7793130f1a82af33dabcea9
+ms.openlocfilehash: 2fe2745a0966c7ff6d9d0c9a2c1b3dd5d73156ac
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/11/2018
-ms.locfileid: "27765783"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39369956"
 ---
 # <a name="development-environment-files"></a>File dell'ambiente di sviluppo
 
@@ -48,5 +48,3 @@ Rights Management Services SDK 2.1 include i file seguenti, installati nel compu
 |Msipc.lib|\lib\x64|Libreria a cui eseguire il collegamento quando si usa RMS SDK 2.1 per creare applicazioni x64.|
 |Msipc_s.lib|\lib\x64|Specifica il punto di ingresso per [IpcInitialize](https://msdn.microsoft.com/library/jj127295.aspx) per le applicazioni x64.|
 |Genmanifest.exe|\tools|Genera un manifesto da utilizzare durante lo sviluppo di un'applicazione abilitata per RMS.|
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]

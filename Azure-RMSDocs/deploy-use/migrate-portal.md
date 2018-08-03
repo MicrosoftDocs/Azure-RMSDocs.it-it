@@ -4,7 +4,7 @@ description: Panoramica delle attività di amministrazione nel portale di Azure 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/22/2018
+ms.date: 06/14/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: ff1cae1695ac37c3e884053e6633a631e236efbe
-ms.sourcegitcommit: 94d1c7c795e305444e9fde17ad73e46f242bcfa9
+ms.openlocfilehash: 0eb56adc41c18427a2f5058affc525ecfbbf68ba
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376525"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Attività che precedentemente venivano eseguite con il portale di Azure classico
 
@@ -31,9 +32,6 @@ Per altre informazioni sul ritiro del portale classico, vedere il post del blog 
 ## <a name="how-to-do-your-familiar-admin-tasks"></a>Come eseguire le attività di amministrazione più comuni
 
 Usare le informazioni seguenti per una transizione rapida al portale aggiornato.
-
-Per gestire i modelli, i clienti con una sottoscrizione per Office 365 US Government (Government Community Cloud) non possono attualmente usare il portale di Azure e devono usare [PowerShell](configure-templates-with-powershell.md).
-
 
 |Portale di Azure classico|Come eseguire questa operazione nel portale di Azure
 |-----------|--------------------|
@@ -66,4 +64,3 @@ Il supporto dei cmdlet di PowerShell per creare e gestire i modelli e per attiva
 ## <a name="see-also"></a>Vedere anche
 Per altre informazioni, vedere [Configurazione e gestione dei modelli per Azure Information Protection](../deploy-use/configure-policy-templates.md).
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
