@@ -4,7 +4,7 @@ description: Informazioni su installazione, sistemi operativi supportati, impost
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/04/2018
+ms.date: 06/12/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,11 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: df86d75cd7337fa4642a9b758312923a3577325f
-ms.sourcegitcommit: 40ac805183589a1c8ef22bc1bd9556bcc92f65e6
+ms.openlocfilehash: 751f1a5bf2728a848bd450ce1081a15ea1e35456
+ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39376535"
 ---
 # <a name="rms-client-deployment-notes"></a>Note sulla distribuzione del client RMS
 
@@ -172,13 +173,15 @@ Per eseguire l'individuazione del servizio, il client RMS esegue una serie di co
     *\<URL del tenant\>* ha il formato seguente: **{GUID}.rms.[Region].aadrm.com**. È possibile individuare questo valore identificando il valore **RightsManagementServiceId** quando si esegue il cmdlet [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) per Azure RMS.
 
 > [!NOTE]
-> Esistono tre importanti eccezioni a questo flusso di individuazione del servizio:
+> Per questo flusso di individuazione del servizio esistono quattro eccezioni importanti:
 > 
 > - Poiché i dispositivi mobili sono i più adatti per l'uso di un servizio cloud, per impostazione predefinita usano l'individuazione del servizio per il servizio Azure Rights Management (https://discover.aadrm.com)). Per forzare l'impostazione predefinita in modo che i dispositivi mobili usino AD RMS anziché il servizio Azure Rights Management, è necessario specificare i record SRV nel DNS e installare l'estensione per dispositivi mobili, come illustrato in [Estensione di Active Directory Rights Management Services per dispositivi mobili](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx). 
 >
-> - Quando il servizio Rights Management viene richiamato da un'etichetta di Azure Information Protection, l'individuazione del servizio non viene eseguita. L'URL viene invece specificato direttamente nell'impostazione dell'etichetta configurata nei criteri di Azure Information Protection.  
-
+> - Quando il servizio Rights Management viene richiamato da un'etichetta di Azure Information Protection, l'individuazione del servizio non viene eseguita. L'URL viene invece specificato direttamente nell'impostazione dell'etichetta configurata nei criteri di Azure Information Protection. 
+>  
 > - Quando un utente esegue l'accesso da un'applicazione di Office, vengono utilizzati il nome utente e il dominio dell'autenticazione per identificare il tenant di Azure Information Protection da usare. In questo caso, le impostazioni del Registro di sistema non sono necessarie e il punto di connessione del servizio non viene controllato.
+> 
+> - Dopo aver configurato il [reindirizzamento DNS](../plan-design/migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) per le app desktop A portata di clic di Office 2016, il client RMS individua il servizio Azure Rights Management quando gli viene negato l'accesso al cluster AD RMS trovato in precedenza. Questa azione di negazione attiva nel client la ricerca del record SRV, che reindirizza il client stesso al servizio Azure Rights Management per il tenant. Il record SRV, poi, consente a Exchange Online di decrittografare i messaggi di posta elettronica protetti dal cluster AD RMS. 
 
 ### <a name="ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory"></a>Solo AD RMS: abilitazione dell'individuazione del servizio sul lato server usando Active Directory
 Se l'account ha privilegi sufficienti (Enterprise Admins e amministratore locale per il server AD RMS), è possibile registrare automaticamente un punto di connessione del servizio durante l'installazione del server del cluster radice di AD RMS. Se nella foresta esiste già un punto di connessione del servizio, è necessario prima eliminare il punto di connessione del servizio esistente prima di poterne registrare uno nuovo.
@@ -259,4 +262,3 @@ In alcuni casi, potrebbe essere necessario reindirizzare il traffico durante l'i
 
 6.  Chiudere l'editor del Registro di sistema.
 
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
