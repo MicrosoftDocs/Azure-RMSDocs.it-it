@@ -4,7 +4,7 @@ description: Informazioni per gli utenti che eseguono il client Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/14/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d55ef8caa7540cba2cd783613f5ea373ba1d545c
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: ce7d502a4d8f3515be67762cfa39a695a5b562fd
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39372394"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575761"
 ---
 # <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>Guida dell'utente: Modalità di sola protezione per il client Azure Information Protection
 
@@ -57,7 +57,7 @@ La modalità di sola protezione viene eseguita negli scenari seguenti:
 
 ## <a name="supported-tasks-for-protection-only-mode"></a>Attività supportate per la modalità di sola protezione
 
-- Proteggere documenti e messaggi di posta elettronica (e rimuovere la protezione) dalle app di Office usando la funzionalità Information Rights Management (IRM) di Office. Ad esempio: fare clic su **File** > **Info** > **Proteggi documento** > **Limita accesso**. Per altre informazioni, vedere [Uso della protezione delle informazioni con Office 365 oppure Office 2016 o Office 2013](../deploy-use/help-users.md).
+- Proteggere documenti e messaggi di posta elettronica (e rimuovere la protezione) dalle app di Office usando la funzionalità Information Rights Management (IRM) di Office. Ad esempio: fare clic su **File** > **Info** > **Proteggi documento** > **Limita accesso**. Per altre informazioni, vedere [Uso della protezione delle informazioni con Office 365 oppure Office 2016 o Office 2013](../help-users.md).
 
 - Proteggere i file (e rimuovere la protezione) usando Esplora file di Windows: fare clic con il pulsante destro del mouse su uno o più file o su una cartella > **Classifica e proteggi**. Per applicare la protezione configurata dall'amministratore, nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** fare clic su **Seleziona modello** e scegliere uno dei modelli disponibili.
 

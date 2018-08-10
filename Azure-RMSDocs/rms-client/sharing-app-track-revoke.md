@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d6d53635a7f86c9ecc27f654885f9d66569f2b1e
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 4c515388df31d0541ee88a21fa88da761a5cde30
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39374240"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489053"
 ---
 # <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>Tenere traccia dei documenti e revocarli quando si usa l'applicazione RMS sharing
 
@@ -54,7 +54,7 @@ Azioni che è possibile eseguire nel sito di rilevamento dei documenti:
 Se queste opzioni per RMS non sono visualizzate, è probabile che l'applicazione RMS sharing non sia installata nel computer o che il computer debba essere riavviato per completare l'installazione. Per altre informazioni su come installare l'applicazione, vedere [Scaricare e installare l'applicazione Rights Management sharing](install-sharing-app.md).
 
 > [!NOTE] 
-> Se è stato installato il [client di Azure Information Protection](../rms-client/info-protect-client.md), è possibile accedere anche al sito di rilevamento dei documenti usando il pulsante **Proteggi**: 
+> Se è stato installato il [client di Azure Information Protection](info-protect-client.md), è possibile accedere anche al sito di rilevamento dei documenti usando il pulsante **Proteggi**: 
 > 
 > - In un'applicazione di Office, nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi** > **Rileva utilizzo**. 
 

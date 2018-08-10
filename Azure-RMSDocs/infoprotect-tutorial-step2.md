@@ -10,12 +10,12 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 3bc193c2-0be0-4c8e-8910-5d2cee5b14f7
-ms.openlocfilehash: 403d5d2222438136e5d449dbe4b26b693ad566d0
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: eb99fb447702dd2f453c1caacbb8ccd341ed127b
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474638"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489485"
 ---
 # <a name="step-2-configure-the-azure-information-protection-policy"></a>Passaggio 2: Configurare i criteri di Azure Information Protection
 
@@ -32,7 +32,7 @@ Il criterio predefinito disponibile con Azure è utilizzabile senza alcuna opera
        > [!NOTE]
        > I criteri predefiniti potrebbero essere leggermente diversi da quelli illustrati in questa esercitazione. Ad esempio, si ha un'etichetta denominata **Internal** anziché **General**, e **Secret** anziché **Highly Confidential** (Riservatezza elevata). Forse non sono disponibili le etichette denominate **Recipients Only** (Solo destinatari) o non è disponibile alcuna etichetta. Queste modifiche avvengono perché esistono diverse versioni del criterio predefinito, a seconda di quando è stato creato per il tenant. Oppure è possibile che tali modifiche siano state apportate manualmente prima di iniziare l'esercitazione.
        > 
-       > Se i criteri predefiniti hanno un aspetto diverso, è comunque possibile eseguire l'esercitazione, ma è necessario tenere presente queste modifiche quando si leggono le istruzioni e si fa riferimento alle immagini incluse di seguito. Se si vogliono modificare i criteri predefiniti in modo che corrispondano ai criteri predefiniti correnti, vedere [Criteri predefiniti di Azure Information Protection](./deploy-use/configure-policy-default.md).
+       > Se i criteri predefiniti hanno un aspetto diverso, è comunque possibile eseguire l'esercitazione, ma è necessario tenere presente queste modifiche quando si leggono le istruzioni e si fa riferimento alle immagini incluse di seguito. Se si vogliono modificare i criteri predefiniti in modo che corrispondano ai criteri predefiniti correnti, vedere [Criteri predefiniti di Azure Information Protection](configure-policy-default.md).
     
     - Con la configurazione predefinita, alcune etichette non hanno contrassegni visivi configurati. I contrassegni visivi sono il piè di pagina, l'intestazione e la filigrana. In base ai criteri predefiniti, per alcune etichette può essere impostata una protezione. Ad esempio: 
     
@@ -151,10 +151,10 @@ Dopo aver esaminato il criterio predefinito e aver apportato alcune modifiche, i
 
 |Se si desiderano altre informazioni|Informazioni aggiuntive|
 |--------------------------------|--------------------------|
-|Informazioni sui criteri predefiniti e sulle diverse versioni|[Criteri predefiniti di Azure Information Protection](./deploy-use/configure-policy-default.md)|
-|Informazioni sulla configurazione dei criteri|[Configurazione dei criteri di Azure Information Protection](./deploy-use/configure-policy.md)|
-|Istruzioni dettagliate per la configurazione di un'etichetta per la protezione|[Come configurare un'etichetta per la protezione di Rights Management](./deploy-use/configure-policy-protection.md)|
-|Informazioni dettagliate sulle autorizzazioni|[Configurazione dei diritti di utilizzo per Azure Rights Management](./deploy-use/configure-usage-rights.md)|
+|Informazioni sui criteri predefiniti e sulle diverse versioni|[Criteri predefiniti di Azure Information Protection](configure-policy-default.md)|
+|Informazioni sulla configurazione dei criteri|[Configurazione dei criteri di Azure Information Protection](configure-policy.md)|
+|Istruzioni dettagliate per la configurazione di un'etichetta per la protezione|[Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md)|
+|Informazioni dettagliate sulle autorizzazioni|[Configurazione dei diritti di utilizzo per Azure Rights Management](configure-usage-rights.md)|
 
 
 

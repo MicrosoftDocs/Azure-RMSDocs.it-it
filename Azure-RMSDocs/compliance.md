@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1e4db3996a201909fcf861a4190cbe6647a7326c
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 55d3b303a84a557ad5f65760d963221878a7b521
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474618"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488852"
 ---
 # <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Informazioni su conformità e supporto per Azure Information Protection
 
@@ -33,7 +33,7 @@ Tuttavia, alcune informazioni rilevanti possono essere utili al consulente legal
 
 - Tutte le chiavi di crittografia usate da Azure Information Protection sono protette con una chiave radice specifica del cliente che usa RSA 2048 bit. È comunque supportato anche RSA 1024 per compatibilità con versioni precedenti. [Altre informazioni](./how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
 
-- Le chiavi radice specifiche del cliente sono gestite da Microsoft o ne viene eseguito il provisioning dal cliente in un modulo di protezione hardware Thales in base al modello "[Bring Your Own Key](./plan-design/plan-implement-tenant-key.md)" (BYOK). Azure Information Protection supporta anche funzionalità limitate con una chiave locale usando il modello "[Hold Your Own Key](./deploy-use/configure-adrms-restrictions.md)" (HYOK) per il contenuto a cui si applicano requisiti che indicano che non deve essere protetto con un chiave basata sul cloud.
+- Le chiavi radice specifiche del cliente sono gestite da Microsoft o ne viene eseguito il provisioning dal cliente in un modulo di protezione hardware Thales in base al modello "[Bring Your Own Key](plan-implement-tenant-key.md)" (BYOK). Azure Information Protection supporta anche funzionalità limitate con una chiave locale usando il modello "[Hold Your Own Key](configure-adrms-restrictions.md)" (HYOK) per il contenuto a cui si applicano requisiti che indicano che non deve essere protetto con un chiave basata sul cloud.
 
 - Il servizio Azure Information Protection è ospitato in data center regionali in tutto il mondo. Le chiavi e i criteri di Azure Information Protection rimangono sempre nell'area di distribuzione originale.
  

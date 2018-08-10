@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per gli amministratori per la distribuzio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: af9cfca4d328dba7646c1c319744476fe0e6b43f
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 5c162b1a25332c977d2c4976338854904abfcc54
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474172"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575550"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guida dell'amministratore: Installare il client Azure Information Protection per gli utenti
 
@@ -117,7 +117,7 @@ Usare le istruzioni riportate di seguito per installare il client quando non si 
 
     - Se nel computer viene eseguito Office 2010, riavviare il computer. 
         
-        Se il client non è stato installato con il parametro ServiceLocation, quando si apre per la prima volta una delle applicazioni di Office che usano la barra di Azure Information Protection, ad esempio Word, è necessario confermare tutti i messaggi relativi all'aggiornamento del Registro di sistema per il primo utilizzo. Per il popolamento delle chiavi del Registro di sistema, viene usata l'[individuazione dei servizi](../rms-client/client-deployment-notes.md#rms-service-discovery). 
+        Se il client non è stato installato con il parametro ServiceLocation, quando si apre per la prima volta una delle applicazioni di Office che usano la barra di Azure Information Protection, ad esempio Word, è necessario confermare tutti i messaggi relativi all'aggiornamento del Registro di sistema per il primo utilizzo. Per il popolamento delle chiavi del Registro di sistema, viene usata l'[individuazione dei servizi](client-deployment-notes.md#rms-service-discovery). 
     
     - Per le altre versioni di Office, riavviare tutte le applicazioni di Office e tutte le istanze di Esplora file. 
         
@@ -147,7 +147,7 @@ Usare la procedura seguente per identificare il valore da specificare per il par
 
 1. Da una sessione di PowerShell eseguire prima di tutto [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) e specificare le credenziali di amministratore per connettersi al servizio Azure Rights Management. Eseguire quindi [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration). 
  
-    Se non è stato ancora installato il modulo di PowerShell per il servizio Azure Rights Management, vedere [Installazione del modulo PowerShell AADRM](../deploy-use/install-powershell.md).
+    Se non è stato ancora installato il modulo di PowerShell per il servizio Azure Rights Management, vedere [Installazione del modulo PowerShell AADRM](../install-powershell.md).
 
 2. Nell'output identificare il valore **LicensingIntranetDistributionPointUrl** .
 
@@ -202,7 +202,7 @@ Se si usa Intune per il metodo di distribuzione del software, usare queste istru
 
 Il modulo PowerShell incluso con il client di Azure Information Protection contiene i cmdlet per installare e configurare lo scanner. Per usare lo scanner è tuttavia necessario installare la versione completa del client. Non è possibile installare solo il modulo PowerShell.
 
-Per installare il client per lo scanner, seguire le istruzioni delle sezioni precedenti. A questo punto è possibile installare lo scanner. Per istruzioni, vedere [Distribuzione dello scanner Azure Information Protection per classificare e proteggere automaticamente i file](../deploy-use/deploy-aip-scanner.md).
+Per installare il client per lo scanner, seguire le istruzioni delle sezioni precedenti. A questo punto è possibile installare lo scanner. Per istruzioni, vedere [Distribuzione dello scanner Azure Information Protection per classificare e proteggere automaticamente i file](../deploy-aip-scanner.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 Dopo aver installato il client Azure Information Protection, vedere gli argomenti seguenti per altre informazioni che potrebbero essere necessarie per supportare il client:

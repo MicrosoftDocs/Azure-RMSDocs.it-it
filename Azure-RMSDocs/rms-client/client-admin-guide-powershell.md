@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per amministratori per gestire il client 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/26/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 7853cfc577329e04a1f378a419f0e1ef3eca0f2a
-ms.sourcegitcommit: 6cbd03b28873b192dc730556c6dd5a7da6e705df
+ms.openlocfilehash: 69aa0078f854c04c6eaf360e8f17a0597523f832
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39411071"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575642"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
 
@@ -39,7 +39,7 @@ I cmdlet vengono installati con il modulo **AzureInformationProtection** di Powe
 > 
 > Per Windows Server 2016 è possibile usare la stessa impostazione di Criteri di gruppo quando si installano i modelli amministrativi più recenti (con estensione admx) per Windows 10.
 
-Lo [scanner Azure Information Protection](../deploy-use/deploy-aip-scanner.md) usa i cmdlet dal modulo AzureInformationProtection per installare e configurare un servizio in Windows Server. Lo scanner consente quindi di individuare, classificare e proteggere i file negli archivi dati.
+Lo [scanner Azure Information Protection](../deploy-aip-scanner.md) usa i cmdlet dal modulo AzureInformationProtection per installare e configurare un servizio in Windows Server. Lo scanner consente quindi di individuare, classificare e proteggere i file negli archivi dati.
 
 Per un elenco di tutti i cmdlet e le informazioni della guida corrispondenti, vedere [AzureInformationProtection Module](/powershell/module/azureinformationprotection) (Modulo AzureInformationProtection). All'interno di una sessione di PowerShell digitare `Get-Help <cmdlet name> -online` per visualizzare le informazioni della guida più recenti.  
 
@@ -92,13 +92,13 @@ Oltre ai prerequisiti per l'installazione del modulo AzureInformationProtection,
 
 Questo prerequisito è valido se la protezione dei dati viene applicata tramite etichette o connessione diretta al servizio Azure Rights Management.
 
-Se il tenant Azure Information Protection non è attivato, vedere le istruzioni in [Attivazione di Azure Rights Management](../deploy-use/activate-service.md).
+Se il tenant Azure Information Protection non è attivato, vedere le istruzioni in [Attivazione di Azure Rights Management](../activate-service.md).
 
 #### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>Prerequisito 2: per rimuovere la protezione dai file per altri utenti tramite il proprio account
 
 Gli scenari tipici per la rimozione della protezione dai file per altri utenti includono l'individuazione dei dati o il ripristino dei dati. Se si usano etichette per applicare la protezione, è possibile rimuovere la protezione impostando una nuova etichetta che non applica protezione oppure rimuovendo l'etichetta. Tuttavia, è più probabile che si sceglierà di connettersi direttamente al servizio Azure Rights Management per rimuovere la protezione.
 
-Per poter rimuovere la protezione dai file, è necessario avere diritti di utilizzo per Rights Management oppure un account utente con privilegi avanzati. Per l'individuazione dei dati o il ripristino dei dati, viene in genere usata la funzionalità per utenti con privilegi avanzati. Per abilitare questa funzionalità e configurare l'account come utente con privilegi avanzati, vedere [Configurazione degli utenti con privilegi avanzati per Azure Rights Management e servizi di individuazione o ripristino dei dati](../deploy-use/configure-super-users.md).
+Per poter rimuovere la protezione dai file, è necessario avere diritti di utilizzo per Rights Management oppure un account utente con privilegi avanzati. Per l'individuazione dei dati o il ripristino dei dati, viene in genere usata la funzionalità per utenti con privilegi avanzati. Per abilitare questa funzionalità e configurare l'account come utente con privilegi avanzati, vedere [Configurazione degli utenti con privilegi avanzati per Azure Rights Management e servizi di individuazione o ripristino dei dati](../configure-super-users.md).
 
 #### <a name="prerequisite-3-to-protect-or-unprotect-files-without-user-interaction"></a>Prerequisito 3: per proteggere i file o rimuoverne la protezione senza interazione da parte dell'utente
 
@@ -140,7 +140,7 @@ Nelle sezioni successive viene illustrato come ottenere e specificare manualment
 
 Eseguire il cmdlet Get-AadrmConfiguration dal modulo di Windows PowerShell Azure per RMS:
 
-1. Se questo modulo non è ancora installato nel computer, vedere [Installazione del modulo PowerShell AADRM](../deploy-use/install-powershell.md).
+1. Se questo modulo non è ancora installato nel computer, vedere [Installazione del modulo PowerShell AADRM](../install-powershell.md).
 
 2. Avviare Windows PowerShell usando l'opzione **Esegui come amministratore**.
 
@@ -234,7 +234,7 @@ Come illustrato nel comando precedente, è possibile specificare i valori con un
 
 Valutare se impostare l'account dell'entità servizio come utente con privilegi avanzati: per garantire che l'account dell'entità servizio possa sempre rimuovere la protezione dei file per altri utenti, è possibile configurarlo come utente con privilegi avanzati. Usare lo stesso cmdlet per Azure RMS, [Add-AadrmSuperUser](/powershell/aadrm/vlatest/Add-AadrmSuperUser.md), usato per configurare un account utente standard come utente con privilegi avanzati, ma specificare il parametro **-ServicePrincipalId** con il valore di AppPrincipalId.
 
-Per altre informazioni, vedere [Configurazione degli utenti con privilegi avanzati per Rights Management di Azure e servizi di individuazione o ripristino dei dati](../deploy-use/configure-super-users.md).
+Per altre informazioni, vedere [Configurazione degli utenti con privilegi avanzati per Rights Management di Azure e servizi di individuazione o ripristino dei dati](../configure-super-users.md).
 
 > [!NOTE]
 > Per usare il proprio account per l'autenticazione al servizio Azure Rights Management, non è necessario eseguire Set-RMSServerAuthentication prima di proteggere i file o rimuoverne la protezione o di ottenere modelli.
@@ -466,7 +466,7 @@ L'output potrebbe essere simile al seguente:
 Per impostazione predefinita, quando si eseguono i cmdlet per l'assegnazione di etichette, i comandi vengono eseguiti nel contesto utente personale in una sessione interattiva di PowerShell. Per eseguirli senza interventi da parte dell'utente, creare un nuovo account utente di Azure AD per questo scopo. Nel contesto di tale utente, quindi, eseguire il cmdlet Set-AIPAuthentication per impostare e archiviare le credenziali usando un token di accesso da Azure AD. Questo account utente viene quindi autenticato e avviato per il servizio Azure Rights Management. L'account scarica i criteri di Azure Information Protection ed eventuali modelli di Rights Management usati dalle etichette.
 
 > [!NOTE]
-> Se si usano [criteri con ambito](../deploy-use/configure-policy-scope.md) tenere presente che potrebbe essere necessario aggiungere questo account ai criteri con ambito.
+> Se si usano [criteri con ambito](../configure-policy-scope.md) tenere presente che potrebbe essere necessario aggiungere questo account ai criteri con ambito.
 
 La prima volta che si esegue questo cmdlet viene richiesto di accedere ad Azure Information Protection. Specificare il nome e la password dell'account utente creato per l'esecuzione senza intervento dell'utente. Questo account può quindi eseguire i cmdlet di assegnazione di etichette in modo non interattivo fino alla scadenza del token di autenticazione. 
 

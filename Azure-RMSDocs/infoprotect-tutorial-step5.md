@@ -13,12 +13,12 @@ ms.technology: techgroup-identity
 ms.assetid: 4e59a3b3-f0f4-4535-8b96-cac68303d855
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 01bf7e0e090482a74c8f5e162bb8771cf8ee941b
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 288b945f785f3f12226d48ad7a91aab8a2747c77
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474578"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489349"
 ---
 # <a name="step-5-see-sharing-of-protected-files-in-action-and-track-your-document"></a>Passaggio 5: Vedere in azione la condivisione di file protetti e tenere traccia del documento 
 
@@ -127,4 +127,4 @@ Dopo aver esaminato il criterio predefinito di Azure Information Protection e do
 
 Provare a condividere altri documenti, a tenere traccia del modo in cui vengono usati e a verificare il funzionamento della revoca dell'accesso ai documenti.
 
-Può essere utile tornare alla pagina **Avvio rapido** nel portale di Azure, leggere alcune delle [domande frequenti](faqs.md) relative ad Azure Information Protection e vedere altri articoli della documentazione. Se tuttavia si è pronti a iniziare la distribuzione di Azure Information Protection nell'organizzazione, leggere le informazioni riportate nella [Guida di orientamento per la distribuzione di Azure Information Protection](./plan-design/deployment-roadmap.md). 
+Può essere utile tornare alla pagina **Avvio rapido** nel portale di Azure, leggere alcune delle [domande frequenti](faqs.md) relative ad Azure Information Protection e vedere altri articoli della documentazione. Se tuttavia si è pronti a iniziare la distribuzione di Azure Information Protection nell'organizzazione, leggere le informazioni riportate nella [Guida di orientamento per la distribuzione di Azure Information Protection](deployment-roadmap.md). 

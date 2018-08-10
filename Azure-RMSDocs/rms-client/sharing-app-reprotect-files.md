@@ -13,12 +13,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5ac121b3-d7a0-40e4-8fe7-90bf4cf796f1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a503c4232847828bf32d889f4702fbfed39463ad
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 15df93cfe3a88e3aaafefcb0df05579a726e6d84
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39473713"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575829"
 ---
 # <a name="change-permissions-on-files-that-have-been-protected-by-rights-management"></a>Modificare le autorizzazioni per i file protetti da Rights Management
 
@@ -33,7 +33,7 @@ Quando un file è protetto da Rights Management, è possibile modificarne le aut
 >
 > Analogamente, se si vuole aggiungere o rimuovere un'autorizzazione, non è sufficiente specificare l'autorizzazione da aggiungere o rimuovere, ma è necessario specificare tutte le autorizzazioni che gli utenti specificati devono avere.
 
-Il proprietario del file da riproteggere (l'utente che, ad esempio, ha originariamente protetto il file tramite l'applicazione di condivisione) ha automaticamente le autorizzazioni per riproteggere il file. Se l'utente non è il proprietario, il fatto che abbia le autorizzazioni necessarie a riproteggere il file dipende dalle autorizzazioni correnti del file protetto. Per proteggere un file, è necessario il [diritto di utilizzo del controllo completo](../deploy-use/configure-usage-rights.md#usage-rights-and-descriptions).
+Il proprietario del file da riproteggere (l'utente che, ad esempio, ha originariamente protetto il file tramite l'applicazione di condivisione) ha automaticamente le autorizzazioni per riproteggere il file. Se l'utente non è il proprietario, il fatto che abbia le autorizzazioni necessarie a riproteggere il file dipende dalle autorizzazioni correnti del file protetto. Per proteggere un file, è necessario il [diritto di utilizzo del controllo completo](../configure-usage-rights.md#usage-rights-and-descriptions).
 
 Se ad esempio un altro utente ha protetto il file tramite l'applicazione Rights Management sharing specificando per l'utente corrente un gruppo di appartenenza e l'autorizzazione personalizzata **Comproprietario**, l'utente corrente sarà in grado di riproteggere il file. Se invece l'altro utente non ha specificato il nome dell'utente corrente né un gruppo di appartenenza per quest'ultimo, oppure se ha selezionato **Revisore – Visualizzazione e Modifica** o un modello che non consente di rimuovere le autorizzazioni, l'utente corrente non sarà in grado di riproteggere il file. Il modo più semplice per scoprirlo è tentare di riproteggere il file.
 

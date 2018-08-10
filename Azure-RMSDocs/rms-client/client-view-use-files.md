@@ -4,7 +4,7 @@ description: Istruzioni per visualizzare e usare un documento protetto che richi
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/17/2018
+ms.date: 08/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a9b09347531bc27c965222e5d8b3c23fe593cd72
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 84a41cb828d2ccd931191f5f0fcf094e3903fb21
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39473325"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575499"
 ---
 # <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Guida dell'utente: Visualizzare e usare file protetti con Rights Management
 
@@ -69,7 +69,7 @@ Se l'organizzazione non può mettere a disposizione dell'utente un account basat
 
     È possibile controllare le autorizzazioni per il file facendo clic su **Autorizzazioni**. Nella finestra di dialogo **Autorizzazioni** è possibile anche identificare il proprietario del file da contattare se si vuole richiedere una nuova versione del file con autorizzazioni aggiuntive.
     
-    Per altre informazioni sulle autorizzazioni e sui diritti di utilizzo di ciascuna autorizzazione, vedere [Diritti inclusi nei livelli di autorizzazioni](../deploy-use/configure-usage-rights.md#rights-included-in-permissions-levels).
+    Per altre informazioni sulle autorizzazioni e sui diritti di utilizzo di ciascuna autorizzazione, vedere [Diritti inclusi nei livelli di autorizzazioni](../configure-usage-rights.md#rights-included-in-permissions-levels).
 
 4. Per modificare il file, fare clic su **Salva con nome**, che consente di salvare il file senza l'etichetta e senza protezione con l'estensione del nome file originale. È quindi possibile modificare il file usando l'applicazione associata al tipo di file. 
     

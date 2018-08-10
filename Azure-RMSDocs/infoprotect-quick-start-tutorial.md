@@ -10,18 +10,18 @@ ms.prod: ''
 ms.service: information-protection
 ms.technology: techgroup-identity
 ms.assetid: 1260b9e5-dba1-41de-84fd-609076587842
-ms.openlocfilehash: 601b60d7ece2cf1c67865b25b6e897b8f2905dc8
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: b060288efd080397f754d6aecd71abc4bbaabf81
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39475148"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39488811"
 ---
 # <a name="quick-start-tutorial-for-azure-information-protection"></a>Esercitazione introduttiva di Azure Information Protection 
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Usare questa esercitazione per provare rapidamente Azure Information Protection in cinque passaggi la cui esecuzione richiede circa 20 minuti. Questa esercitazione è stata pensata come demo autoguidata che consente di comprendere rapidamente alcune delle caratteristiche e delle funzionalità offerte da Azure Information Protection. Non include tutte le funzionalità disponibili e non deve essere considerata come una guida alla distribuzione per l'organizzazione. Se si vuole distribuire Azure Information Protection nell'organizzazione, vedere la [Guida di orientamento per la distribuzione](./plan-design/deployment-roadmap.md). 
+Usare questa esercitazione per provare rapidamente Azure Information Protection in cinque passaggi la cui esecuzione richiede circa 20 minuti. Questa esercitazione è stata pensata come demo autoguidata che consente di comprendere rapidamente alcune delle caratteristiche e delle funzionalità offerte da Azure Information Protection. Non include tutte le funzionalità disponibili e non deve essere considerata come una guida alla distribuzione per l'organizzazione. Se si vuole distribuire Azure Information Protection nell'organizzazione, vedere la [Guida di orientamento per la distribuzione](deployment-roadmap.md). 
 
 Questa esercitazione, rivolta ai consulenti e agli amministratori IT, consente di valutare Azure Information Protection come soluzione di protezione delle informazioni aziendali per un'organizzazione. In un ambiente di produzione i passaggi per configurare i criteri di Information Protection e installare il client per gli utenti vengono normalmente eseguiti da un amministratore. I passaggi riguardanti l'aggiunta di un'etichetta a un documento, la condivisione sicura di un documento tramite posta elettronica e il rilevamento dei documenti vengono eseguiti dagli utenti finali. L'esercitazione include tutti questi passaggi per mostrare tipici scenari end-to-end di classificazione, assegnazione di etichette e protezione dei dati dell'organizzazione. 
 

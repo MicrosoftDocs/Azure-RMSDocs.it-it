@@ -12,12 +12,12 @@ ms.service: information-protection
 ms.technology: techgroup-identity
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: 194e676807145dffdf326fe782f4b4051876552d
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: cb4195b1b63c39d1d6e47d1c94d2f7e1c2c83e63
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371850"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575846"
 ---
 # <a name="security-best-practices-for-azure-information-protection"></a>Procedure ottimali di sicurezza per Azure Information Protection
 
@@ -81,7 +81,7 @@ AIP non supporta la modifica del codice in fase di esecuzione o la modifica dell
 
 Se l'applicazione non interpreta né applica correttamente i diritti espressi nella licenza di pubblicazione di AIP, le informazioni potrebbero essere rese disponibili in modi non previsti dal proprietario. Un esempio è un'applicazione che consente a un utente di salvare informazioni non crittografate in nuovi supporti quando la licenza di pubblicazione conferisce unicamente il diritto di visualizzarle.
 
-Il sistema AIP organizza i diritti in pochi raggruppamenti. Per altre informazioni, vedere [Configurazione dei diritti di utilizzo per Azure Rights Management](../deploy-use/configure-usage-rights.md).
+Il sistema AIP organizza i diritti in pochi raggruppamenti. Per altre informazioni, vedere [Configurazione dei diritti di utilizzo per Azure Rights Management](../configure-usage-rights.md).
 
 ### <a name="azure-information-protection"></a>Azure Information Protection  
 L'API consente a un utente di decrittografare o no le informazioni, che non hanno alcuna protezione inerente. Se un utente ha il diritto di decrittografare le informazioni, l'API lo permette e l'applicazione è responsabile della gestione o della protezione delle informazioni dopo che sono state messe al sicuro. Un'applicazione è responsabile della gestione del suo ambiente e della sua interfaccia al fine di impedire l'uso non autorizzato delle informazioni; ad esempio, la disattivazione dei pulsanti **Stampa** e **Copia** se una licenza concede solo il diritto di RIPRODUZIONE. Il gruppo di test dovrebbe verificare che l'applicazione agisca correttamente su tutti i diritti di licenza che riconosce.

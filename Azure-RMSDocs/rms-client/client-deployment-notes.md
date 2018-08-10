@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 751f1a5bf2728a848bd450ce1081a15ea1e35456
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 571545905a0fac6bb1ea9b80c351b96f9f70899b
+ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39376535"
+ms.lasthandoff: 08/03/2018
+ms.locfileid: "39489444"
 ---
 # <a name="rms-client-deployment-notes"></a>Note sulla distribuzione del client RMS
 
@@ -158,7 +158,7 @@ Per eseguire l'individuazione del servizio, il client RMS esegue una serie di co
 
 1. **Registro di sistema di Windows nel computer locale**: se le impostazioni dell'individuazione del servizio sono configurate nel Registro di sistema, verranno provate prima queste impostazioni. 
 
-    Per impostazione predefinita, queste impostazioni non sono configurate nel Registro di sistema, ma un amministratore può configurarle per AD RMS come illustrato nella [sezione seguente](#enabling-client-side-service-discovery-by-using-the-windows-registry). In genere l'amministratore configura queste impostazioni per il servizio Azure Rights Management durante il [processo di migrazione](../plan-design/migrate-from-ad-rms-phase2.md) da AD RMS ad Azure Information Protection.
+    Per impostazione predefinita, queste impostazioni non sono configurate nel Registro di sistema, ma un amministratore può configurarle per AD RMS come illustrato nella [sezione seguente](#enabling-client-side-service-discovery-by-using-the-windows-registry). In genere l'amministratore configura queste impostazioni per il servizio Azure Rights Management durante il [processo di migrazione](../migrate-from-ad-rms-phase2.md) da AD RMS ad Azure Information Protection.
 
 2. **Servizi di dominio Active Directory**: un computer aggiunto al dominio esegue una query in Active Directory relativamente a un punto di connessione del servizio (SCP). 
 
@@ -181,7 +181,7 @@ Per eseguire l'individuazione del servizio, il client RMS esegue una serie di co
 >  
 > - Quando un utente esegue l'accesso da un'applicazione di Office, vengono utilizzati il nome utente e il dominio dell'autenticazione per identificare il tenant di Azure Information Protection da usare. In questo caso, le impostazioni del Registro di sistema non sono necessarie e il punto di connessione del servizio non viene controllato.
 > 
-> - Dopo aver configurato il [reindirizzamento DNS](../plan-design/migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) per le app desktop A portata di clic di Office 2016, il client RMS individua il servizio Azure Rights Management quando gli viene negato l'accesso al cluster AD RMS trovato in precedenza. Questa azione di negazione attiva nel client la ricerca del record SRV, che reindirizza il client stesso al servizio Azure Rights Management per il tenant. Il record SRV, poi, consente a Exchange Online di decrittografare i messaggi di posta elettronica protetti dal cluster AD RMS. 
+> - Dopo aver configurato il [reindirizzamento DNS](../migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) per le app desktop A portata di clic di Office 2016, il client RMS individua il servizio Azure Rights Management quando gli viene negato l'accesso al cluster AD RMS trovato in precedenza. Questa azione di negazione attiva nel client la ricerca del record SRV, che reindirizza il client stesso al servizio Azure Rights Management per il tenant. Il record SRV, poi, consente a Exchange Online di decrittografare i messaggi di posta elettronica protetti dal cluster AD RMS. 
 
 ### <a name="ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory"></a>Solo AD RMS: abilitazione dell'individuazione del servizio sul lato server usando Active Directory
 Se l'account ha privilegi sufficienti (Enterprise Admins e amministratore locale per il server AD RMS), è possibile registrare automaticamente un punto di connessione del servizio durante l'installazione del server del cluster radice di AD RMS. Se nella foresta esiste già un punto di connessione del servizio, è necessario prima eliminare il punto di connessione del servizio esistente prima di poterne registrare uno nuovo.
