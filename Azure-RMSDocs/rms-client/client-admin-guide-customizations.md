@@ -4,7 +4,7 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 08/08/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 7bc9e67ae029cedc734f3060fe43f62367a805ba
-ms.sourcegitcommit: 44ff610dec678604c449d42cc0b0863ca8224009
+ms.openlocfilehash: 2008a40e03e502c4dad85826d957434b218b151e
+ms.sourcegitcommit: 1eddd81dc659ffa38872b81a1bf4b5f69f71c30e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39371493"
+ms.lasthandoff: 08/08/2018
+ms.locfileid: "39631572"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -29,7 +29,7 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Come configurare le impostazioni avanzate di configurazione del client nel portale
 
-1. Se non è già stato fatto, in una nuova finestra del browser accedere al [portale di Azure](../deploy-use/configure-policy.md#signing-in-to-the-azure-portal) e quindi passare al pannello **Azure Information Protection**.
+1. Se non è già stato fatto, in una nuova finestra del browser accedere al [portale di Azure](../configure-policy.md#signing-in-to-the-azure-portal) e quindi passare al pannello **Azure Information Protection**.
 
 2. Dall'opzione di menu **CLASSIFICAZIONI** > **Etichette**: selezionare **Criteri**.
 
@@ -51,7 +51,7 @@ Individuare il nome di valore seguente e quindi impostare i dati del valore su *
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
-Indipendentemente da questa impostazione, il client Azure Information Protection segue il normale [processo di individuazione del servizio RMS](../rms-client/client-deployment-notes.md#rms-service-discovery) per trovare il proprio cluster AD RMS.
+Indipendentemente da questa impostazione, il client Azure Information Protection segue il normale [processo di individuazione del servizio RMS](client-deployment-notes.md#rms-service-discovery) per trovare il proprio cluster AD RMS.
 
 ## <a name="sign-in-as-a-different-user"></a>Accedere come utente diverso
 
@@ -78,7 +78,7 @@ Inoltre:
 
 ## <a name="enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses"></a>Applicare la modalità di sola protezione quando l'organizzazione dispone di licenze miste
 
-Se l'organizzazione non ha alcuna licenza per Azure Information Protection, ma dispone di licenze per Office 365 che includono il servizio Azure Rights Management per la protezione dei dati, il client Azure Information Protection per Windows viene eseguito automaticamente in [modalità di sola protezione](../rms-client/client-protection-only-mode.md).
+Se l'organizzazione non ha alcuna licenza per Azure Information Protection, ma dispone di licenze per Office 365 che includono il servizio Azure Rights Management per la protezione dei dati, il client Azure Information Protection per Windows viene eseguito automaticamente in [modalità di sola protezione](client-protection-only-mode.md).
 
 Tuttavia, se l'organizzazione ha una sottoscrizione per Azure Information Protection, tutti i computer Windows possono scaricare i criteri di Azure Information Protection per impostazione predefinita. Il client Azure Information Protection non gestisce il controllo e l'applicazione delle licenze. 
 
@@ -104,9 +104,9 @@ Individuare il nome di valore seguente e impostare i dati del valore su **0**:
 
 **HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\EnablePolicyDownload** 
 
-Verificare che nel client sia presente un file di criteri validi denominato **Policy.msip**, nella cartella **%LocalAppData%\Microsoft\MSIP**. Se necessario, è possibile esportare i criteri globali o i criteri con ambito dal portale di Azure e copiare il file esportato nel computer client. È anche possibile usare questo metodo per sostituire un file di criteri non aggiornato con i criteri pubblicati più recenti. Esportare i criteri, tuttavia, non supporta lo scenario in cui un utente appartiene a più di un criterio con ambito.
+Verificare che nel client sia presente un file di criteri validi denominato **Policy.msip**, nella cartella **%LocalAppData%\Microsoft\MSIP**. Se necessario, è possibile esportare i criteri globali o i criteri con ambito dal portale di Azure e copiare il file esportato nel computer client. È anche possibile usare questo metodo per sostituire un file di criteri non aggiornato con i criteri pubblicati più recenti. Esportare i criteri, tuttavia, non supporta lo scenario in cui un utente appartiene a più di un criterio con ambito. Tenere anche presente che se gli utenti selezionano l'opzione **Ripristina le impostazioni** in [Guida e commenti](client-admin-guide.md#help-and-feedback-section), questa azione elimina il file dei criteri e rende il client inutilizzabile fino a quando non si sostituisce manualmente il file dei criteri o il client si connette al servizio per scaricare i criteri.
 
-Quando si esporta il criterio, questa azione carica un file compresso con più versioni dei criteri che corrispondono a versioni diverse del client Azure Information Protection:
+Quando si esportano i criteri dal portale di Azure, viene scaricato un file ZIP che contiene più versioni dei criteri. Queste versioni dei criteri corrispondono a versioni diverse del client Azure Information Protection:
 
 1. Decomprimere il file e usare la tabella seguente per identificare il file di criteri necessario. 
     
@@ -122,7 +122,7 @@ Quando si esporta il criterio, questa azione carica un file compresso con più v
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Nascondere o visualizzare il pulsante Non inoltrare in Outlook
 
-Il metodo consigliato per configurare questa opzione è tramite l'[impostazione dei criteri](../deploy-use/configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon** (Aggiungi il pulsante Non inoltrare alla barra multifunzione di Outlook). Tuttavia, è possibile configurare questa opzione anche tramite un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) configurata nel portale di Azure.
+Il metodo consigliato per configurare questa opzione è tramite l'[impostazione dei criteri](../configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon** (Aggiungi il pulsante Non inoltrare alla barra multifunzione di Outlook). Tuttavia, è possibile configurare questa opzione anche tramite un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) configurata nel portale di Azure.
 
 Quando è configurata, questa impostazione nasconde o visualizza il pulsante **Non inoltrare** sulla barra multifunzione in Outlook. Questa impostazione non influisce sull'opzione Non inoltrare nei menu di Office.
 
@@ -134,7 +134,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="make-the-custom-permissions-options-available-or-unavailable-to-users"></a>Rendere disponibili o non disponibili agli utenti le opzioni relative alle autorizzazioni personalizzate
 
-Il metodo consigliato per configurare questa opzione è tramite l'[impostazione dei criteri](../deploy-use/configure-policy-settings.md) **Make the custom permissions option available for users** (Rendi disponibile l'opzione per le autorizzazioni personalizzate). Tuttavia, è possibile configurare questa opzione anche tramite un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) configurata nel portale di Azure. 
+Il metodo consigliato per configurare questa opzione è tramite l'[impostazione dei criteri](../configure-policy-settings.md) **Make the custom permissions option available for users** (Rendi disponibile l'opzione per le autorizzazioni personalizzate). Tuttavia, è possibile configurare questa opzione anche tramite un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) configurata nel portale di Azure. 
 
 Quando si configura questa impostazione e si pubblicano i criteri per gli utenti, le opzioni per le autorizzazioni personalizzate diventano visibili per gli utenti in modo che possano selezionare impostazioni di protezione personali oppure sono nascoste e quindi gli utenti non possono selezionare impostazioni di protezione personali, se non richiesto.
 
@@ -147,7 +147,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Nascondere in modo permanente la barra di Azure Information Protection
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Usarla solo quando l'[impostazione dei criteri](../deploy-use/configure-policy-settings.md) **Display the Information Protection bar in Office apps** (Visualizza la barra di Information Protection nelle app di Office) è impostata su **On** (Attiva).
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Usarla solo quando l'[impostazione dei criteri](../configure-policy-settings.md) **Display the Information Protection bar in Office apps** (Visualizza la barra di Information Protection nelle app di Office) è impostata su **On** (Attiva).
 
 Quando si configura questa impostazione, si pubblicano i criteri per gli utenti e un utente sceglie di non visualizzare la barra di Azure Information Protection nelle applicazioni di Office, la barra rimane nascosta. Ciò si verifica se l'utente deseleziona l'opzione **Mostra barra**: nella scheda **Home**, nel gruppo **Protezione**, fare clic sul pulsante **Proteggi**. Questa impostazione non ha alcun effetto se l'utente chiude la barra tramite l'icona **Chiudi questa barra**.
 
@@ -193,7 +193,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
 
-Se si usa l'[impostazione dei criteri](../deploy-use/configure-policy-settings.md) **Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**, agli utenti viene richiesto di selezionare un'etichetta quando salvano per la prima volta un documento di Office e quando inviano un messaggio di posta elettronica. Per i documenti, gli utenti possono selezionare **Non ora** per chiudere temporaneamente la richiesta di selezionare un'etichetta e tornare al documento. Non possono però chiudere il documento salvato senza etichettarlo. 
+Se si usa l'[impostazione dei criteri](../configure-policy-settings.md) **Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**, agli utenti viene richiesto di selezionare un'etichetta quando salvano per la prima volta un documento di Office e quando inviano un messaggio di posta elettronica. Per i documenti, gli utenti possono selezionare **Non ora** per chiudere temporaneamente la richiesta di selezionare un'etichetta e tornare al documento. Non possono però chiudere il documento salvato senza etichettarlo. 
 
 Quando si configura questa impostazione l'opzione **Non ora** viene rimossa. In questo modo, quando il documento viene salvato per la prima volta gli utenti sono obbligati a selezionare un'etichetta.
 
@@ -209,15 +209,11 @@ Questa opzione di configurazione è attualmente in anteprima ed è soggetta a mo
 
 Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
 
-Quando si configura questa impostazione, il [comportamento predefinito](../deploy-use/configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) del client Azure Information Protection rispetto all'applicazione delle etichette automatiche e consigliate cambia come segue:
+Quando si configura questa impostazione, cambia il [comportamento predefinito](../configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) del client Azure Information Protection rispetto all'applicazione delle etichette automatiche e consigliate ai documenti: 
 
-- La classificazione automatica si applica a Word, Excel, PowerPoint e Outlook. Nel caso dei documenti la classificazione automatica viene eseguita in modo continuo in background. Per Outlook la classificazione automatica viene eseguita quando vengono inviati i messaggi di posta elettronica. 
-    
-    Non è possibile usare la classificazione automatica per documenti che in precedenza sono stati etichettati manualmente o automaticamente con una classificazione superiore. L'eccezione a questo comportamento è l'uso dello scanner di Azure Information Protection con il parametro OverrideLabel impostato su On (abilitato).
+- Per Word, Excel e PowerPoint, la classificazione automatica viene eseguita in modo continuo in background.  
 
-- La classificazione consigliata si applica a Word, Excel e PowerPoint. Per questi documenti la classificazione consigliata viene eseguita in modo continuo in background. Non è possibile usare la classificazione consigliata per Outlook.
-    
-    È possibile usare la classificazione consigliata per documenti che sono stati etichettati in precedenza, con o senza una classificazione superiore. 
+Il comportamento rimane invariato per Outlook.
 
 Quando il client di Azure Information Protection verifica periodicamente nei documenti le regole di condizione specificate, questo comportamento abilita la classificazione automatica e consigliata e la protezione dei documenti archiviati in SharePoint Online. I file di grandi dimensioni vengono salvati più rapidamente perché le regole di condizione sono già state eseguite. 
 
@@ -383,7 +379,7 @@ Usare queste chiavi e i valori corrispondenti per una sola proprietà personaliz
 
 Si supponga, ad esempio, di avere una colonna di SharePoint denominata **Classificazione** con i valori possibili **Pubblico**, **Generale** e **Riservatezza elevata\Tutti i dipendenti**. I documenti vengono archiviati in SharePoint, con i valori **Pubblico**, **Generale** o **Riservatezza elevata\Tutti i dipendenti** impostati per la proprietà Classificazione.
 
-Per etichettare un documento di Office con uno di questi valori di classificazione, impostare **SyncPropertyName** su **Classificazione** e **SyncPropertyState** a  **OneWay**. 
+Per etichettare un documento di Office con uno di questi valori di classificazione, impostare **SyncPropertyName** su **Classificazione** e **SyncPropertyState** a **OneWay**. 
 
 A questo punto, quando un utente apre e salva uno di questi documenti di Office, il documento viene etichettato come **Pubblico**, **Generale** o **Riservatezza elevata\Tutti i dipendenti** se sono presenti etichette con questi nomi nei criteri di Azure Information Protection. In assenza di etichette con questi nomi, il documento rimane senza etichetta.
 
@@ -393,7 +389,7 @@ Questa configurazione usa un'[impostazione avanzata del client](#how-to-configur
 
 Per impostazione predefinita, lo scanner di Azure Information Protection viene eseguito con un livello di integrità basso. Questa impostazione offre un maggiore isolamento di sicurezza, ma influisce negativamente sulle prestazioni. Il livello di integrità basso è appropriato se si esegue lo scanner con un account con privilegi (ad esempio un account amministratore locale) in quanto questa impostazione aiuta a proteggere il computer che esegue lo scanner.
 
-Quando, tuttavia, l'account del servizio che esegue lo scanner ha solo i diritti indicati nei [prerequisiti dello scanner](../deploy-use/deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner), il livello di integrità basso non è necessario e non è consigliato perché influisce negativamente sulle prestazioni. 
+Quando, tuttavia, l'account del servizio che esegue lo scanner ha solo i diritti indicati nei [prerequisiti dello scanner](../deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner), il livello di integrità basso non è necessario e non è consigliato perché influisce negativamente sulle prestazioni. 
 
 Per altre informazioni sui livelli di integrità di Windows, vedere [What is the Windows Integrity Mechanism?](https://msdn.microsoft.com/library/bb625957.aspx) (Informazioni sul meccanismo di integrità di Windows)
 
