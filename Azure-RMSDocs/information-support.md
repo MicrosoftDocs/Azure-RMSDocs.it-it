@@ -1,10 +1,10 @@
 ---
-title: Informazioni per amministratori e supporto per Azure Information Protection
+title: Informazioni e supporto per Azure Information Protection
 description: Risorse per gli amministratori, incluse informazioni sulle nuove versioni, opzioni di supporto e istruzioni su come contattare Microsoft per segnalare un problema.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/31/2018
+ms.date: 08/06/2018
 ms.topic: get-started-article
 ms.prod: ''
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.technology: techgroup-identity
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 427f758dd541c111f5a5554221983f10072b6ffd
-ms.sourcegitcommit: 949bf02d5d12bef8e26d89ad5d6a0d5cc7826135
+ms.openlocfilehash: 0b0c83e987ad2fa1e6e8638970e2f4450024997a
+ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2018
-ms.locfileid: "39474678"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39575533"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informazioni e supporto per Azure Information Protection
 
@@ -27,15 +27,15 @@ Usare le risorse seguenti per comprendere, distribuire e supportare Azure Inform
 
 |Per...|...effettuare l'operazione seguente:|
 |----------------|---------------|
-|Consultare la documentazione usata più di frequente|Leggere le cinque pagine principali:<br /><br /> - [Che cos'è Azure Information Protection?](./what-is-information-protection.md)<br /> - [Installare il client Azure Information Protection per gli utenti](./rms-client/client-admin-guide-install.md)<br />- [Requisiti per Azure Information Protection](requirements.md) <br />- [Distribuire lo scanner di Azure Information Protection](./deploy-use/deploy-aip-scanner.md)<br />- [Criteri predefiniti di Azure Information Protection](./deploy-use/configure-policy-default.md)|
-|Interagire con il team di prodotto e i propri colleghi|Visitare il [sito di Yammer](https://www.yammer.com/AskIPTeam) per Azure Information Protection.|
-|Richiedere una nuova funzionalità o modifica di funzionalità|Vedere il sito [UserVoice](https://msip.uservoice.com) per Azure Information Protection e usare l'indirizzo di posta elettronica aziendale per accedere.|
-|Ricevere tweet dal gruppo di prodotto|Seguire [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) su Twitter.|
+|Ottenere informazioni sulle versioni nuove e future|Vedere la sezione [Informazioni sulle nuove versioni e sugli aggiornamenti](#information-about-new-releases-and-updates) in questa pagina.|
+|Ottenere assistenza per il prodotto|Vedere la sezione [Opzioni di supporto e risorse della community](#support-options-and-community-resources) in questa pagina.|
 |Controllare le informazioni sulla sottoscrizione e le funzionalità supportate|Usare le informazioni sulla sottoscrizione e l'elenco delle funzionalità nella pagina [Prezzi di Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection).|
-
+|Richiedere una nuova funzionalità o modifica di funzionalità|Vedere il sito [UserVoice](https://msip.uservoice.com) per Azure Information Protection e usare l'indirizzo di posta elettronica aziendale per accedere.|
+|Interagire con il team di prodotto e i propri colleghi|Visitare il [sito di Yammer](https://www.yammer.com/AskIPTeam) per Azure Information Protection.|
+|Comprendere un termine specifico di Azure Information Protection|Cercare il termine o l'abbreviazione nella pagina della [terminologia](terminology.md).|
 
 ## <a name="information-about-new-releases-and-updates"></a>Informazioni sulle nuove versioni e sugli aggiornamenti
-Il team di prodotto di Azure Information Protection pubblica annunci sulle nuove versioni e sugli aggiornamenti in [Enterprise Mobility and Security Blog](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection) (Blog di Enterprise Mobility and Security). Questi post del blog sono complementari alla documentazione e alle informazioni di supporto sul prodotto.
+Il team di prodotto di Azure Information Protection pubblica annunci sulle nuove versioni principali nel [blog Enterprise Mobility + Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection). Le versioni minori vengono annunciate nel [sito Yammer](https://www.yammer.com/AskIPTeam) di Azure Information Protection e può anche risultare utile verificare lo stato delle funzionalità richieste nel [sito UserVoice](https://msip.uservoice.com).
 
 Inoltre, un riepilogo delle modifiche alla documentazione viene pubblicato ogni mese nel [blog tecnico di Azure Information Protection](https://aka.ms/AIPblog). Questi aggiornamenti alla documentazione includono informazioni relative a tutte le nuove versioni, aggiornamenti a supporto di istruzioni e anche correzioni e chiarimenti per le versioni esistenti. Questi post si intitolano: "**Azure Information Protection Documentation Update for \<mese anno>**" (Aggiornamento della documentazione di Azure Information Protection per <mese anno>).
 
@@ -76,9 +76,9 @@ Risoluzione dei problemi:
 
 - In caso di domande su un'istruzione di supporto per Azure Information Protection, vedere le informazioni riportate in [Requisiti](requirements.md), aggiornate regolarmente.
 
-- Per informazioni per il supporto agli utenti finali, all'help desk e agli amministratori che devono configurare servizi e applicazioni che usano Azure Information Protection, vedere [Consentire agli utenti di proteggere i file](./deploy-use/help-users.md).
+- Per informazioni per il supporto agli utenti finali, all'help desk e agli amministratori che devono configurare servizi e applicazioni che usano il servizio di protezione da Azure Information Protection, vedere [Consentire agli utenti di proteggere i file](help-users.md).
 
-- Se il connettore di Rights Management è stato distribuito nei server locali, vedere le informazioni sul [monitoraggio](./deploy-use/monitor-rms-connector.md), che includono dettagli sulle voci del registro eventi, sui contatori delle prestazioni e sulla registrazione.
+- Se il connettore di Rights Management è stato distribuito nei server locali, vedere le informazioni sul [monitoraggio](monitor-rms-connector.md), che includono dettagli sulle voci del registro eventi, sui contatori delle prestazioni e sulla registrazione.
 
 - Per il client Azure Information Protection per Windows, vedere la sezione [Controlli aggiuntivi e risoluzione dei problemi](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) nella guida dell'amministratore e verificare di usare una [versione supportata](./rms-client/client-version-release-history.md#servicing-information-and-timelines).
 
