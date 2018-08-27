@@ -4,20 +4,18 @@ description: Identificare i prerequisiti per distribuire Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/27/2018
+ms.date: 08/22/2018
 ms.topic: get-started-article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 98c4f32e0964b736c16d28ada37a1d59ee565d41
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 03b97ca4324b9352db7abec37666e7de262e6f39
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39489366"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42808035"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisiti per Azure Information Protection
 
@@ -108,19 +106,15 @@ Per informazioni sulle edizioni di Office che supportano il servizio di protezio
 
 ## <a name="firewalls-and-network-infrastructure"></a>Firewall e infrastruttura di rete
 
-Se è presente un firewall o dispositivi di rete simili configurati per consentire connessioni specifiche, vedere le informazioni relative ad **Azure Rights Management (RMS)** nella sezione [Portale e condivisione di Office 365](https://support.office.com/en-us/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US#bkmk_portal-identity) dell'articolo [URL e intervalli di indirizzi IP per Office 365](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2).
-
-Usare le istruzioni in questo articolo per mantenersi aggiornati sulle modifiche apportate a queste informazioni tramite la sottoscrizione a un feed RSS.
+Se si ha un firewall o simili dispositivi di rete intermedi che devono essere configurati per consentire connessioni specifiche, i requisiti di connettività di rete sono inclusi nell'articolo di Office [Office 365 URLs and IP address ranges](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) (URL e intervalli di indirizzi IP per Office 365). Vedere la sezione **Microsoft 365 Common and Office Online** (Comuni per Microsoft 365 e Office Online).
 
 Oltre alle informazioni nell'articolo di Office, le istruzioni seguenti sono specifiche per Azure Information Protection:
 
 - Consentire il traffico HTTPS sulla porta TCP 443 per **api.informationprotection.azure.com**.
 
-- Consentire il traffico HTTPS sulla porta TCP 443 per **mobile.pipe.aria.microsoft.com**.
-
 - Se si usa un proxy Web che richiede l'autenticazione, configurarlo per l'uso dell'autenticazione integrata di Windows con le credenziali di accesso di Active Directory dell'utente.
 
-- Non terminare le connessioni TLS dal client al servizio (ad esempio per il controllo a livello di pacchetti) per Azure Rights Management. In questo modo viene interrotta l'associazione del certificato usata dai client RMS con le autorità di certificazione gestite da Microsoft per la protezione delle comunicazioni con il servizio Azure Rights Management.
+- Non terminare la connessione TLS dal client al servizio, ad esempio per il controllo a livello di pacchetti, all'URL **aadrm.com**. In questo modo viene interrotta l'associazione del certificato usata dai client RMS con le autorità di certificazione gestite da Microsoft per la protezione delle comunicazioni con il servizio Azure Rights Management.
     
     - Suggerimento: grazie alla modalità di visualizzazione delle connessioni protette in Chrome, è possibile usare questo browser per verificare rapidamente se la connessione client viene terminata prima di raggiungere il servizio Azure Rights Management. Immettere l'URL seguente nella barra degli indirizzi del browser:`https://admin.na.aadrm.com/admin/admin.svc` 
     

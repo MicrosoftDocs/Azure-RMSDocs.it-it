@@ -4,20 +4,18 @@ description: Istruzioni per installare, configurare ed eseguire lo scanner di Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 08/21/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 1545c7bd931ab6aa4a76ddfd256a916d31d262bc
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 77d24243d4f6b38338b2a6d709a252cc4859a2b3
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490564"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42806052"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -246,9 +244,14 @@ Quindi lo scanner usa iFilter di Windows per analizzare i tipi di file seguenti.
 |Word|.docx; .docm; .dotm; .dotx|
 |Excel|.xls; .xlt; .xlsx; .xltx; .xltm; .xlsm; .xlsb|
 |PowerPoint|.ppt; .pps; .pot; .pptx; .ppsx; .pptm; .ppsm; .potx; .potm|
-|PDF|.pdf|
+|PDF |.pdf|
 |Testo|.txt; .xml; .csv|
 
+Per impostazione predefinita, solo i tipi di file di Office sono protetti dallo scanner, quindi i file PDF e i file di testo non sono protetti a meno che non si [modifichi il Registro di sistema](develop/file-api-configuration.md) per specificare i tipi di file:
+
+- Se non si aggiunge il tipo di file PDF al Registro di sistema: i file con questa estensione saranno etichettati, ma se l'etichetta è configurata per la protezione, non viene applicata la protezione.
+
+- Se non si aggiungono i tipi di file con estensione txt, xml o csv al Registro di sistema: i file con queste estensioni non saranno etichettati perché questi tipi di file non supportano solo la classificazione.
 
 Infine, per i tipi di file rimanenti, lo scanner applica l'etichetta predefinita nei criteri di Azure Information Protection oppure l'etichetta predefinita configurata per lo scanner.
 
@@ -270,7 +273,11 @@ Infine, per i tipi di file rimanenti, lo scanner applica l'etichetta predefinita
 
 Quando lo scanner applica un'etichetta con la protezione, per impostazione predefinita, solo i tipi di file di Office vengono protetti. È possibile modificare questo comportamento in modo che vengano protetti altri tipi di file. Quando tuttavia un'etichetta applica la protezione generica ai documenti, l'estensione del nome file viene modificata in pfile. Inoltre, il file diventa di sola lettura fino a quando non è aperto da un utente autorizzato e salvato nel formato nativo. Anche file di testo e immagini possono modificare la propria estensione del nome file e diventare di sola lettura. 
 
-Per modificare il comportamento predefinito dello scanner, ad esempio per la protezione generica di altri tipi di file, è necessario modificare manualmente il Registro di sistema e specificare i tipi di file aggiuntivi da proteggere. Per informazioni, vedere [Configurazione dell'API file](develop/file-api-configuration.md) nelle linee guida per sviluppatori. Per fare riferimento alla protezione generica, questa documentazione per sviluppatori usa il termine "PFile". Per lo scanner, è necessario specificare estensioni di nome file specifiche e non è possibile usare il carattere jolly `*`.
+Per modificare il comportamento predefinito dello scanner, ad esempio per la protezione generica di altri tipi di file, è necessario modificare manualmente il Registro di sistema e specificare i tipi di file aggiuntivi da proteggere. Per informazioni, vedere [Configurazione dell'API file](develop/file-api-configuration.md) nelle linee guida per sviluppatori. Per fare riferimento alla protezione generica, questa documentazione per sviluppatori usa il termine "PFile". Inoltre, specificatamente per lo scanner:
+
+- È necessario specificare estensioni di nome file specifiche e non è possibile usare il carattere jolly `*`.
+
+- Lo scanner ha il proprio comportamento predefinito: solo i formati di file di Office sono protetti per impostazione predefinita. Qualsiasi altro formato di file non aggiunto al Registro di sistema non sarà protetto dallo scanner.
 
 ## <a name="when-files-are-rescanned"></a>Ripetizione dell'analisi dei file
 

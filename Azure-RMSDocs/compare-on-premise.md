@@ -4,20 +4,18 @@ description: Se già si conosce o si è distribuito in precedenza Active Directo
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 08/16/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a5bf7bd4a4d82c40346694d243403ea2684174d9
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: bc93e9674c2f37f1e78487e5c5d051d63a5ed630
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39489298"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42804764"
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Confronto tra Azure Information Protection e AD RMS
 
@@ -55,7 +53,7 @@ Per altre informazioni e differenze, vedere la tabella seguente per un confronto
 |Abilita automaticamente la collaborazione sicura su documenti con qualsiasi organizzazione che usa Azure AD per l'autenticazione. Questo significa che le organizzazioni possono proteggere i documenti che condividono internamente o con altre organizzazioni.|La collaborazione sicura sui documenti all'esterno dell'organizzazione richiede la definizione di relazioni di trust di autenticazione in modo esplicito in una relazione point-to-point diretta tra le due organizzazioni. È necessario configurare domini utente trusted o relazioni di trust federative mediante Active Directory Federation Services (AD FS).|
 |Inviare un messaggio di posta elettronica protetto (eventualmente con documenti di Office allegati protetti automaticamente) agli utenti quando non esiste alcuna relazione di trust di autenticazione. Questo scenario è reso possibile usando la federazione con provider social o un passcode monouso e un browser Web per la visualizzazione.|Non è supportato l'invio di posta elettronica protetta se non esiste alcuna relazione di trust di autenticazione.|
 |Fornisce due modelli predefiniti di criteri per i diritti di utilizzo che limitano l'accesso al contenuto per l'organizzazione: uno fornisce la visualizzazione in sola lettura del contenuto protetto e l'altro fornisce le autorizzazioni di scrittura o modifica del contenuto protetto.<br /><br />È anche possibile creare modelli personalizzati, inclusi modelli di reparto, visibili solo a un sottoinsieme di utenti. Per altre informazioni, vedere [Configurazione e gestione dei modelli per Azure Information Protection](configure-policy-templates.md).<br /><br />Gli utenti inoltre possono definire un proprio set di autorizzazioni se i modelli non sono sufficienti.|Non sono disponibili modelli predefiniti. È quindi necessario creare e distribuire modelli utente. Per altre informazioni, vedere [Considerazioni sui modelli di criteri di AD RMS](http://go.microsoft.com/fwlink/?LinkId=154765).<br /><br />Gli utenti inoltre possono definire un proprio set di autorizzazioni se i modelli non sono sufficienti.|
-|La versione minima supportata di Microsoft Office è Office 2010, che richiede il [client Azure Information Protection](./rms-client/aip-client.md) o l'applicazione RMS sharing.<br /><br />Microsoft Office per Mac:<br /><br />- Microsoft Office per Mac 2016: supportato<br /><br />- Microsoft Office per Mac 2011: non supportato|La versione minima supportata di Microsoft Office è Office 2007.<br /><br />Microsoft Office per Mac:<br /><br />- Microsoft Office per Mac 2016: supportato<br /><br />- Microsoft Office per Mac 2011: supportato|
+|La versione minima supportata di Microsoft Office è Office 2010, che richiede il [client Azure Information Protection](./rms-client/aip-client.md) o l'applicazione RMS sharing.<br /><br />Microsoft Office per Mac:<br /><br />- Microsoft Office per Mac 2016: supportato|La versione minima supportata di Microsoft Office è Office 2010.<br /><br />Microsoft Office per Mac:<br /><br />- Microsoft Office per Mac 2016: supportato|
 |Supporta il [client Azure Information Protection](./rms-client/aip-client.md) per Windows, iOS e Android. I computer Mac e i dispositivi Windows Phone continuano a essere supportati dall'app RMS sharing.<br /><br />Il client Azure Information Protection supporta inoltre quanto segue:<br /><br />- Condivisione con utenti di un'altra organizzazione.<br /><br />- Sito di rilevamento dei documenti per gli utenti che include la possibilità di revocare un documento.|Supporta il [client Azure Information Protection](./rms-client/aip-client.md) per Windows, iOS e Android. I computer Mac e i dispositivi Windows Phone continuano a essere supportati dall'app RMS sharing. Non sono tuttavia supportati la condivisione con persone di un'altra organizzazione, il sito di rilevamento dei documenti e la possibilità per gli utenti di revocare i documenti.|
 |Con il client Azure Information Protection è possibile classificare e proteggere la maggior parte dei [tipi di file](./rms-client/client-admin-guide-file-types.md).<br /><br />Per altre applicazioni, controllare la tabella [Requisiti per Azure RMS: applicazioni](./requirements-applications.md).|Con il client Azure Information Protection è possibile proteggere la maggior parte dei [tipi di file](./rms-client/client-admin-guide-file-types.md).<br /><br />Per altre applicazioni, controllare la tabella [Requisiti per Azure RMS: applicazioni](./requirements-applications.md).|
 |La versione minima supportata del client Windows è Windows 7 SP1.|La versione minima supportata del client Windows è Windows 7 SP1.|

@@ -4,20 +4,18 @@ description: Informazioni per pianificare e gestire la chiave del tenant di Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 08/21/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 05aee77b60b5fd5a7239b51665e2afb122704afb
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 65f1b158e9745efa39d4088dcb615016ddecb206
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490124"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42807270"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Pianificazione e implementazione della chiave del tenant di Azure Information Protection
 
@@ -36,14 +34,13 @@ Che cos'è la chiave del tenant di Azure Information Protection?
 |Requisito aziendale|Topologia di chiave del tenant consigliata|
 |------------------------|-----------------------------------|
 |Distribuire Azure Information Protection in modo rapido e senza hardware speciali, software aggiuntivo o una sottoscrizione di Azure.<br /><br />Ad esempio: esecuzione del test degli ambienti e quando l'organizzazione non ha i requisiti normativi per la gestione delle chiavi.|Gestita da Microsoft|
-|Normative di conformità, sicurezza aggiuntiva e controllo su tutte le operazioni del ciclo di vita. <br /><br />Ad esempio: la chiave deve essere protetta da un modulo di protezione hardware (HSM).|BYOK [[1]](#footnote-1)|
+|Normative di conformità, sicurezza aggiuntiva e controllo su tutte le operazioni del ciclo di vita. <br /><br />Ad esempio: la chiave deve essere protetta da un modulo di protezione hardware (HSM).|BYOK|
 
 
 Se necessario, è possibile modificare la topologia di chiave del tenant dopo la distribuzione, usando il cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties).
 
 
 ## <a name="choose-your-tenant-key-topology-managed-by-microsoft-the-default-or-managed-by-you-byok"></a>Scegliere la topologia di chiave del tenant: gestione di Microsoft (impostazione predefinita) o BYOK
-È innanzitutto necessario decidere la topologia di chiave del tenant più adatta per l'organizzazione. Per impostazione predefinita, Azure Information Protection genera la chiave del tenant e gestisce la maggior parte degli aspetti del relativo ciclo di vita. Questa opzione è quella più semplice e prevede il sovraccarico amministrativo minore. Nella maggior parte dei casi non è nemmeno necessario disporre di una chiave del tenant, ma è sufficiente iscriversi ad Azure Information Protection e la parte rimanente del processo di gestione delle chiavi viene eseguita da Microsoft.
 
 Individuare la topologia di chiave del tenant più adatta per l'organizzazione:
 
@@ -93,7 +90,7 @@ Se si decide di affidare a Microsoft la gestione della chiave del tenant:
 
 - Se non si sta eseguendo una migrazione da AD RMS, non è necessaria alcuna azione aggiuntiva per generare la chiave per il tenant ed è possibile passare direttamente alla sezione [Passaggi successivi](plan-implement-tenant-key.md#next-steps).
 
-- Se si usa AD RMS e si vuole passare ad Azure Information Protection, usare le istruzioni per la migrazione descritte in Migrazione da AD RMS ad Azure Information Protection. 
+- Se si usa AD RMS e si vuole passare ad Azure Information Protection, usare le istruzioni per la migrazione in [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md). 
 
 Se invece si decide di gestire in modo autonomo la propria chiave del tenant, leggere le sezioni seguenti per ottenere altre informazioni.
 
@@ -181,11 +178,11 @@ Dopo aver eseguito la pianificazione e, se necessario, creato e configurato la c
 
 1.  Iniziare a usare la chiave del tenant.
     
-    - Se non è ancora stato fatto, è ora necessario attivare il servizio Rights Management in modo che l'organizzazione possa iniziare a usare Azure Information Protection. Gli utenti iniziano immediatamente a usare la chiave del tenant (gestita da Microsoft o gestita dall'utente in Azure Key Vault).
+    - Se il servizio di protezione non è già attivato, è ora necessario attivare il servizio Rights Management in modo che l'organizzazione possa iniziare a usare Azure Information Protection. Gli utenti iniziano immediatamente a usare la chiave del tenant (gestita da Microsoft o gestita dall'utente in Azure Key Vault).
     
         Per altre informazioni, vedere [Attivazione di Azure Rights Management](./activate-service.md).
         
-    - Se il servizio Rights Management è già stato attivato e si è deciso di gestire la propria chiave del tenant, gli utenti passano gradualmente dalla chiave del tenant precedente a quella nuova e il completamento di questa transizione in fasi successive può richiedere alcune settimane. I documenti e i file protetti con la chiave del tenant precedente rimangono accessibili agli utenti autorizzati.
+    - Se il servizio Rights Management è già stato attivato e si è deciso di gestire la propria chiave del tenant, gli utenti passano gradualmente dalla chiave del tenant precedente a quella nuova. Il completamento di questa transizione in fasi successive può richiedere alcune settimane. I documenti e i file protetti con la chiave del tenant precedente rimangono accessibili agli utenti autorizzati.
         
 2. Valutare l'opportunità di usare la registrazione dei dati di utilizzo per tenere traccia di ogni transazione eseguita dal servizio Azure Rights Management.
     

@@ -4,20 +4,18 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/09/2018
+ms.date: 08/13/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1c41e1e6622dc76a2a2afe68a48d0761573ccf06
-ms.sourcegitcommit: 6eab0086306a4e12cbcf7d8578cb5fd42abe1e66
+ms.openlocfilehash: b9f7381daac2398af459adbb945c548a6ca194c4
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2018
-ms.locfileid: "40020601"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42806239"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto
 
@@ -62,7 +60,7 @@ Questa versione include MSIPC versione 1.0.3557.524 del client RMS.
 
 - Per lo scanner di Azure Information Protection:
 
-    - Nuovo cmdlet [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): deve essere eseguito una sola volta dopo l'aggiornamento dalla versione 1.26.6.0 o versioni precedenti.
+    - Nuovo cmdlet [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): deve essere eseguito una sola volta dopo l'aggiornamento da tutte le versioni precedenti.
     
     - Nuovo cmdlet [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): ottiene lo stato corrente del servizio per lo scanner.  
     

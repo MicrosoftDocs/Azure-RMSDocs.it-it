@@ -4,20 +4,18 @@ description: Istruzioni per rimuovere etichette di classificazione e protezione 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 08/21/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: ''
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f74354ea3c588093b4fefcf98ce0b4cbf807aedb
-ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
+ms.openlocfilehash: a18014a210607b2c9a38cc4c68e955e01403c986
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39575778"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42805783"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Guida dell'utente: Rimuovere etichette e protezione da file e messaggi di posta elettronica etichettati tramite Azure Information Protection o protetti tramite Rights Management
 
@@ -28,7 +26,7 @@ Quando il [client Azure Information Protection viene installato nel computer](in
 Quando l'etichetta rimossa è configurata per l'applicazione della protezione, questa azione comporta anche la rimozione della protezione dal file. Potrebbe essere richiesto di registrare il motivo della rimozione dell'etichetta.
 
 > [!IMPORTANT]
-> Per rimuovere la protezione, è necessario essere il proprietario del file oppure aver ricevuto le autorizzazioni per la rimozione della protezione (autorizzazione Estrai o Controllo completo di Rights Management).
+> Per rimuovere la protezione, è necessario essere il proprietario del file oppure aver ricevuto le autorizzazioni per la rimozione della protezione (autorizzazione **Esporta** o **Controllo completo** di Rights Management).
 
 Se si vuole scegliere un'altra etichetta o un set diverso di impostazioni di protezione, non è necessario rimuovere l'etichetta o la protezione. È invece possibile scegliere una nuova etichetta e, se necessario, definire autorizzazioni personalizzate, a condizione che questa configurazione sia autorizzata dall'amministratore. 
 

@@ -4,20 +4,18 @@ description: Istruzioni e informazioni per gli amministratori in una rete aziend
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 08/13/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f9189de08c7089087ba37964a9d7acee3f537d02
-ms.sourcegitcommit: a437d527131ca48d2c1b21742b5346605648952b
+ms.openlocfilehash: f0f3c6a5f46024083d8e4d105dd535abc1b46552
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39575676"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42805443"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
@@ -204,11 +202,13 @@ Per aggiornare lo scanner di Azure Information Protection, installare la version
 
 Per la versione di disponibilità generale (GA) corrente: 
 
-- Se la versione del client installata in precedenza era la 1.26.6.0 o precedente, eseguire nuovamente il comando di installazione dello scanner con [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner). Verranno mantenute le impostazioni di configurazione per i repository e lo scanner. Reinstallando lo scanner, vengono concesse allo scanner le autorizzazioni di eliminazione account del servizio per il database dello scanner, che saranno necessarie per i report.
+- Eseguire nuovamente il comando di installazione dello scanner con [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner). Verranno mantenute le impostazioni di configurazione per i repository e lo scanner. Reinstallando lo scanner, vengono concesse allo scanner le autorizzazioni di eliminazione account del servizio per il database dello scanner, che saranno necessarie per i report.
 
 Per la versione di anteprima: 
 
-- Se la versione precedente del client installata era la 1.26.6.0 o versioni precedenti, eseguire [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) dopo l'installazione del client. Verranno mantenute le impostazioni di configurazione per i repository e lo scanner. L'esecuzione di questo cmdlet è necessaria per aggiornare lo schema del database per lo scanner. Se necessario, l'account del servizio dello scanner riceve anche autorizzazioni di eliminazione per il database dello scanner. Fino a quando non si esegue questo cmdlet di aggiornamento, lo scanner non viene eseguito.
+- Eseguire [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) dopo l'installazione del client. Verranno mantenute le impostazioni di configurazione per i repository e lo scanner. L'esecuzione di questo cmdlet è necessaria per aggiornare lo schema del database per lo scanner. Se necessario, l'account del servizio dello scanner riceve anche autorizzazioni di eliminazione per il database dello scanner. 
+    
+    Fino a quando non si esegue questo cmdlet di aggiornamento, lo scanner non viene eseguito e viene visualizzato in genere l'ID evento **1000** nel registro eventi di Windows, con il messaggio di errore seguente: **Nome di oggetto non valido 'ScannerStatus'**.
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Disinstallazione del client Azure Information Protection
 

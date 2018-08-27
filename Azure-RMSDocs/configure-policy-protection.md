@@ -4,18 +4,16 @@ description: È possibile proteggere i documenti e i messaggi di posta elettroni
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/02/2018
+ms.date: 08/14/2018
 ms.topic: article
-ms.prod: ''
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: b41add3430fbf00a372a5ec54d1ecd8c27fa7fa6
-ms.sourcegitcommit: 5fdf013fe05b65517b56245e1807875d80be6e70
+ms.openlocfilehash: 16cb22a7f16b82056d58d569dc0d65b3b16d0ae1
+ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "39490674"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42807073"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
@@ -90,9 +88,9 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
     
     - **Configura le autorizzazioni definite dall'utente (anteprima)**: consente agli utenti di specificare a chi vengono concesse autorizzazioni e quali sono queste autorizzazioni. È quindi possibile completare l'impostazione dell'opzione e scegliere solo Outlook oppure Word, Excel, PowerPoint e File Explorer. Questa opzione non è supportata e non funziona quando viene configurata un'etichetta per la [classificazione automatica](configure-policy-classification.md).
         
-        Se si sceglie l'opzione per Outlook l'etichetta viene visualizzata in Outlook e il comportamento quando gli utenti applicano l'etichetta è uguale a quello generato dall'opzione Non inoltrare.
+        Se si sceglie l'opzione per Outlook l'etichetta viene visualizzata in Outlook e il comportamento quando gli utenti applicano l'etichetta è uguale a quello generato dall'opzione [Non inoltrare](configure-usage-rights.md#do-not-forward-option-for-emails).
         
-        Se si sceglie l'opzione per Word, Excel, PowerPoint e File Explorer, quando l'opzione è impostata l'etichetta viene visualizzata in queste applicazioni. Quando gli utenti applicano l'etichetta viene visualizzata la finestra di dialogo che consente loro di selezionare le autorizzazioni personalizzate. Nella finestra di dialogo gli utenti devono specificare gli utenti o i gruppi, le autorizzazioni e una data di scadenza. Verificare che gli utenti dispongano di istruzioni e linee guida per specificare questi valori.
+        Se si sceglie l'opzione per Word, Excel, PowerPoint e File Explorer, quando l'opzione è impostata l'etichetta viene visualizzata in queste applicazioni. Quando gli utenti applicano l'etichetta viene visualizzata la finestra di dialogo che consente loro di selezionare le autorizzazioni personalizzate. In questa finestra di dialogo gli utenti possono scegliere uno dei [livelli di autorizzazione predefiniti](configure-usage-rights.md#rights-included-in-permissions-levels), passare a o specificare utenti o gruppi e, facoltativamente, impostare una data di scadenza. Verificare che gli utenti dispongano di istruzioni e linee guida per specificare questi valori.
     
     - **Seleziona un modello predefinito**: per usare uno dei modelli predefiniti o un modello personalizzato che è stato configurato. Si noti che questa opzione non viene visualizzata per le nuove etichette o se si sta modificando un'etichetta che in precedenza usava l'opzione **Configura le autorizzazioni**.
     
@@ -110,10 +108,11 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
         
         ###### <a name="more-information-about-add-any-authenticated-users"></a>Altre informazioni su **Add any authenticated users** (Aggiungi qualsiasi utente autenticato) 
         Questa impostazione non limita chi può accedere al contenuto protetto dall'etichetta, pur crittografando il contenuto e fornendo le opzioni per limitare come usare il contenuto (autorizzazioni) e come accedervi (scadenza e accesso offline). L'applicazione che apre il contenuto protetto deve tuttavia poter supportare l'autenticazione in uso. Per questo motivo, i provider di servizi di social networking federati, ad esempio Google, e l'autenticazione di passcode monouso devono essere usati solo per la posta elettronica e solo quando si usano Exchange Online e le nuove funzionalità di Office 365 Message Encryption. Gli account Microsoft possono essere usati con il visualizzatore Azure Information Protection e Office 2016 A portata di clic. 
-        
-        Alcuni scenari tipici per l'impostazione relativa agli utenti autenticati: - Non è importante chi visualizza il contenuto, ma si vuole limitare il modo in cui viene usato. Ad esempio, non si vuole che il contenuto venga modificato, copiato o stampato.
-            - Non è necessario limitare chi accede al contenuto, ma si vuole tenere traccia di chi lo apre e, potenzialmente, lo revoca.
-            - Esiste un requisito in base al quale il contenuto deve essere crittografato quando è inattivo e quando è in transito, ma non sono necessari controlli di accesso.     
+          
+        Alcuni scenari tipici per l'impostazione Aggiungi eventuali utenti autenticati:  
+                - Non è importante chi visualizza il contenuto, ma si vuole limitare il modo in cui viene usato. Ad esempio, non si vuole che il contenuto venga modificato, copiato o stampato.  
+                - Non è necessario limitare chi accede al contenuto, ma si vuole tenere traccia di chi lo apre e, potenzialmente, lo revoca.  
+                - Esiste un requisito in base al quale il contenuto deve essere crittografato quando è inattivo e quando è in transito, ma non sono necessari controlli di accesso.  
         
     - Scegliere **Immettere i dettagli** per specificare manualmente gli indirizzi di posta elettronica dei singoli utenti o gruppi (interni o esterni) o per specificare tutti gli utenti in un'altra organizzazione immettendo un nome di dominio di tale organizzazione. È anche possibile usare questa opzione per i provider di social networking, immettendo i nomi di dominio, ad esempio **gmail.com**, **hotmail.com** oppure **outlook.com**.
         
@@ -156,9 +155,9 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
     
     L'opzione per le autorizzazioni definite dall'utente consente agli utenti di specificare a chi vengono concesse autorizzazioni e quali sono queste autorizzazioni. È quindi possibile completare l'impostazione dell'opzione e scegliere solo Outlook (impostazione predefinita) oppure Word, Excel, PowerPoint e File Explorer. Questa opzione non è supportata e non funziona quando viene configurata un'etichetta per la [classificazione automatica](configure-policy-classification.md).
     
-    Se si sceglie l'opzione per Outlook l'etichetta viene visualizzata in Outlook e il comportamento quando gli utenti applicano l'etichetta è uguale a quello generato dall'opzione Non inoltrare.
+    Se si sceglie l'opzione per Outlook l'etichetta viene visualizzata in Outlook e il comportamento quando gli utenti applicano l'etichetta è uguale a quello generato dall'opzione [Non inoltrare](configure-usage-rights.md#do-not-forward-option-for-emails).
     
-    Se si sceglie l'opzione per Word, Excel, PowerPoint e File Explorer l'etichetta viene visualizzata in queste applicazioni. Quando gli utenti applicano l'etichetta viene visualizzata la finestra di dialogo che consente loro di selezionare le autorizzazioni personalizzate. Nella finestra di dialogo gli utenti devono specificare gli utenti o i gruppi, le autorizzazioni e una data di scadenza. Verificare che gli utenti dispongano di istruzioni e linee guida per specificare questi valori.
+    Se si sceglie l'opzione per Word, Excel, PowerPoint e File Explorer, quando l'opzione è impostata l'etichetta viene visualizzata in queste applicazioni. Quando gli utenti applicano l'etichetta viene visualizzata la finestra di dialogo che consente loro di selezionare le autorizzazioni personalizzate. In questa finestra di dialogo gli utenti possono scegliere uno dei [livelli di autorizzazione predefiniti](configure-usage-rights.md#rights-included-in-permissions-levels), passare a o specificare utenti o gruppi e, facoltativamente, impostare una data di scadenza. Verificare che gli utenti dispongano di istruzioni e linee guida per specificare questi valori.
 
 10. Fare clic su **OK** per chiudere il pannello **Protezione** e visualizzare la scelta **Definito dall'utente** o il modello selezionato per l'opzione **Protezione** nel pannello **Etichetta**.
 
