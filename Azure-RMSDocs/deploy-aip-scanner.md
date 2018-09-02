@@ -4,18 +4,18 @@ description: Istruzioni per installare, configurare ed eseguire lo scanner di Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 08/28/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 77d24243d4f6b38338b2a6d709a252cc4859a2b3
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: ddf9ebcdce4cf51e35dfc76b099194873796919f
+ms.sourcegitcommit: 8cde6611ab6d95d816e1c80267cacd32443f31cb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42806052"
+ms.lasthandoff: 08/28/2018
+ms.locfileid: "43117886"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -275,9 +275,9 @@ Quando lo scanner applica un'etichetta con la protezione, per impostazione prede
 
 Per modificare il comportamento predefinito dello scanner, ad esempio per la protezione generica di altri tipi di file, è necessario modificare manualmente il Registro di sistema e specificare i tipi di file aggiuntivi da proteggere. Per informazioni, vedere [Configurazione dell'API file](develop/file-api-configuration.md) nelle linee guida per sviluppatori. Per fare riferimento alla protezione generica, questa documentazione per sviluppatori usa il termine "PFile". Inoltre, specificatamente per lo scanner:
 
-- È necessario specificare estensioni di nome file specifiche e non è possibile usare il carattere jolly `*`.
+- Lo scanner ha il proprio comportamento predefinito: solo i formati di file di Office sono protetti per impostazione predefinita. Se il Registro di sistema non viene modificato, tutti gli altri tipi di file non verranno protetti dallo scanner.
 
-- Lo scanner ha il proprio comportamento predefinito: solo i formati di file di Office sono protetti per impostazione predefinita. Qualsiasi altro formato di file non aggiunto al Registro di sistema non sarà protetto dallo scanner.
+- A meno che non si usi la versione di anteprima corrente, è necessario specificare estensioni specifiche e non è possibile usare il carattere jolly `*`. La versione di anteprima dello scanner supporta questo carattere jolly.
 
 ## <a name="when-files-are-rescanned"></a>Ripetizione dell'analisi dei file
 

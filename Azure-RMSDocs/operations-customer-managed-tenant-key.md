@@ -4,18 +4,18 @@ description: Informazioni sulle operazioni del ciclo di vita necessarie per la g
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/07/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e910ad5226310f0c76de437c30e95fb7f6ba8f87
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 4dd322c95d9aadc6df73e426fb92d2bb77312ed4
+ms.sourcegitcommit: 0bc877840b168d05a16964b4ed0d28a9ed33f871
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42804054"
+ms.lasthandoff: 08/30/2018
+ms.locfileid: "43298039"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Operazioni del ciclo di vita della chiave del tenant gestite dal cliente
 
@@ -41,7 +41,7 @@ Ecco alcuni casi in cui potrebbe essere necessario reimpostare una chiave per Az
 
 - Si sospetta una violazione della copia master della chiave del tenant in possesso dell'utente.
 
-Per reimpostare la chiave su un'altra chiave gestita, è possibile creare una nuova chiave in Azure Key Vault o usarne una già presente in Azure Key Vault. Seguire quindi le stesse procedure usate per implementare lo scenario BYOK per Azure Information Protection.
+Per reimpostare la chiave su un'altra chiave gestita, è possibile creare una nuova chiave in Azure Key Vault o usarne una già presente in Azure Key Vault. Seguire quindi le stesse procedure usate per implementare lo scenario BYOK per Azure Information Protection. 
 
 1. Solo nel caso in cui la nuova chiave sia in un insieme di credenziali delle chiavi diverso da quello già in uso per Azure Information Protection è necessario autorizzare Azure Information Protection all'uso di questo insieme di credenziali delle chiavi, tramite il cmdlet [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy).
 
@@ -52,6 +52,8 @@ Per reimpostare la chiave su un'altra chiave gestita, è possibile creare una nu
 Per altre informazioni su ognuna di queste fasi:
 
 - Per reimpostare la chiave su un'altra chiave gestita, vedere [Implementazione dello scenario BYOK per la chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
+    
+    Se si esegue la reimpostazione di una chiave protetta tramite HSM creata in locale e trasferita in Key Vault, è possibile usare lo stesso ambiente di sicurezza e accedere alle schede nello stesso modo usato per la chiave corrente.
 
 - Per reimpostare la chiave, passando a una chiave gestita da Microsoft, vedere la sezione [Reimpostare la chiave del tenant](operations-microsoft-managed-tenant-key.md#rekey-your-tenant-key) per le operazioni gestite da Microsoft.
 

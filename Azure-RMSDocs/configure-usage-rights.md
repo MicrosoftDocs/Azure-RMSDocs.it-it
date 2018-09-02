@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 61d57cb33175c3c3e87d615cee65e2b82f21ab74
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 9f7c9ef4e6a6eccc1f42fa60a78550f53d4a64b6
+ms.sourcegitcommit: b2d5c77bf8a0271d8d23f170314c0f49c3a328b1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808773"
+ms.lasthandoff: 08/24/2018
+ms.locfileid: "42920670"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configurazione dei diritti di utilizzo per Azure Rights Management
 
@@ -98,7 +98,7 @@ I client e i servizi di Exchange, ad esempio il client Outlook, l'app Outlook We
 
 Anche se questa opzione viene visualizzata dagli utenti e dagli amministratori di Exchange come se fosse un modello predefinito di Rights Management selezionabile, l'opzione **Non inoltrare** non è un modello. È per questo motivo che non viene visualizzata nel portale di Azure quando si visualizzano e si gestiscono i modelli di protezione. L'opzione **Non inoltrare** è invece un set di diritti di utilizzo che viene applicato in modo dinamico dagli utenti ai destinatari di posta elettronica.
 
-Quando l'opzione **Non inoltrare** viene applicata a un messaggio di posta elettronica, il messaggio di posta elettronica viene crittografato e i destinatari devono essere autenticati. Quindi, i destinatari non possono inoltrarlo, stamparlo, copiarne il contenuto, salvarne gli allegati né salvarlo come un nome diverso. Ad esempio, nel client di Outlook, il pulsante Inoltra non è disponibile, le voci di menu **Salva con nome**, **Salva allegato** e **Stampa** non sono disponibili e non è possibile aggiungere o modificare i destinatari nei campi **A**, **Cc** o **Ccn**.
+Quando l'opzione **Non inoltrare** viene applicata a un messaggio di posta elettronica, il messaggio di posta elettronica viene crittografato e i destinatari devono essere autenticati. I destinatari quindi non possono inoltrarlo, stamparlo o copiarne il contenuto. Ad esempio, nel client di Outlook, il pulsante Inoltra non è disponibile, le voci di menu **Salva con nome** e **Stampa** non sono disponibili e non è possibile aggiungere o modificare i destinatari nei campi **A**, **Cc** o **Ccn**.
 
 I [documenti di Office](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) non protetti allegati al messaggio di posta elettronica ereditano automaticamente le stesse restrizioni. I diritti di utilizzo applicati a questi documenti sono **Modifica contenuto, Modifica**; **Salva**; **Visualizza, Apri, Leggi** e **Consenti macro**. Se si preferiscono diritti di utilizzo diversi per un allegato o se l'allegato non è un documento di Office che supporta questa protezione ereditata, proteggere il file prima di allegarlo al messaggio di posta elettronica. È quindi possibile assegnare i diritti di utilizzo specifici necessari per il file. 
 
@@ -127,9 +127,9 @@ Analogamente, i [documenti di Office](https://support.office.com/article/bb643d3
 
 In alternativa, è possibile modificare l'ereditarietà di protezione dei documenti usando uno dei parametri di configurazione seguenti impostati con il comando di [PowerShell per Exchange Online](/powershell/exchange/exchange-online/connect-to-exchange-online-powershell/connect-to-exchange-online-powershell?view=exchange-ps) **Set-IRMConfiguration** . Usare queste opzioni quando non è necessario mantenere la protezione originale per il documento dopo l'autenticazione dell'utente:
 
-- Per rimuovere la protezione del documento solo per i destinatari che visualizzano il documento nel browser (in genere perché viene inviato all'indirizzo di un provider di social networking come Gmail): `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`. Quando questi destinatari scaricano il documento, viene rimossa la protezione.
+- Per rimuovere la protezione del documento per tutti i destinatari: `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true`. Quando i destinatari aprono il messaggio di posta elettronica, il documento non è protetto.
 
-- Per rimuovere sempre la protezione del documento per tutti i destinatari: `Set-IRMConfiguration -DecryptAttachmentForEncryptOnly $true`. Quando i destinatari aprono il messaggio di posta elettronica, il documento non è protetto.
+- Per rimuovere la protezione del documento solo per i destinatari che visualizzano il documento nel browser (in genere perché viene inviato all'indirizzo di un provider di social networking come Gmail): `Set-IRMConfiguration -DecryptAttachmentFromPortal $true`. Quando questi destinatari scaricano il documento, viene rimossa la protezione.
 
 Per altre informazioni sulla rimozione della protezione solo per i destinatari che visualizzano il documento nel browser, vedere il post del blog di Office [Admin control for attachments now available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Admin-control-for-attachments-now-available-in-Office-365/ba-p/204007) (Il controllo amministrativo per gli allegati è ora disponibile in Office 365 Message Encryption). Se è necessario che un documento allegato mantenga la protezione originale, vedere [Proteggere la collaborazione ai documenti tramite Azure Information Protection](secure-collaboration-documents.md).
 

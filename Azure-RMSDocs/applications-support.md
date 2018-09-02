@@ -4,18 +4,18 @@ description: Informazioni su come le applicazioni (ad esempio, le applicazioni d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2017
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b2c21ba2c7030b0757aeb0fd901b900863a962d1
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: f468e82f71914e15aacc4a1a9c1d38e0fe5b4372
+ms.sourcegitcommit: b0c4fe8c522987a7863958ffdc6866a91ebabf86
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807542"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43242123"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Supporto del servizio Azure Rights Management da parte delle applicazioni
 
@@ -40,7 +40,7 @@ I servizi di ricerca si integrano con Rights Management in modi diversi. Ad esem
 
 - SharePoint Online e SharePoint Server applicano la protezione di Rights Management ai file solo durante il download. Questa implementazione significa che i risultati di indicizzazione e ricerca in SharePoint non sono interessati da questa soluzione di protezione del documento. Tuttavia, se si vuole archiviare un documento in SharePoint senza restituirlo nei risultati di ricerca, proteggerlo tramite RMS prima di caricarlo in SharePoint.
 
-- Poiché Windows Desktop Search usa un indice condiviso tra i diversi utenti del dispositivo, per garantire la sicurezza dei dati dei documenti protetti non esegue l'indicizzazione dei file protetti. Ciò significa che anche se i risultati di ricerca non includono i file che sono stati protetti, sia ha la garanzia che i file contenenti dati sensibili non vengono visualizzati nei risultati di ricerca di altri utenti che possono accedere o connettersi al PC. 
+- Poiché Windows Desktop Search usa un indice condiviso tra i diversi utenti del dispositivo, per garantire la sicurezza dei dati dei documenti protetti non esegue l'indicizzazione dei file protetti. Ciò significa che anche se i risultati di ricerca non includono i file che sono stati protetti, si ha la garanzia che i file contenenti dati sensibili non vengano visualizzati nei risultati di ricerca di altri utenti che possono accedere o connettersi al PC. 
 
 ## <a name="next-steps"></a>Passaggi successivi
 

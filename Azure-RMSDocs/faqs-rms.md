@@ -4,19 +4,19 @@ description: Domande frequenti sul servizio di protezione dei dati, Azure Rights
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0964d6de3f06d8620de89d9c4c9cca65a64b71c1
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 67a3720f38faab750f04e91d7a4848cf88ae4eef
+ms.sourcegitcommit: b0c4fe8c522987a7863958ffdc6866a91ebabf86
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805954"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43242215"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Domande frequenti sulla protezione dei dati in Azure Information Protection
 
@@ -73,7 +73,7 @@ Per altre informazioni sui modelli nel portale di Azure, vedere [Configurazione 
 
 ## <a name="ive-protected-a-document-and-now-want-to-change-the-usage-rights-or-add-usersdo-i-need-to-reprotect-the-document"></a>Se si vuole modificare i diritti di utilizzo o aggiungere utenti a un documento protetto, è necessario proteggerlo nuovamente?
 
-Se il documento è stato protetto usando un'etichetta o un modello, non è necessario proteggerlo nuovamente. Modificare l'etichetta o il modello apportando le modifiche ai diritti di utilizzo o aggiungendo nuovi gruppi o utenti, e salvare e pubblicare le modifiche:
+Se il documento è stato protetto usando un'etichetta o un modello, non è necessario proteggerlo nuovamente. Modificare l'etichetta o il modello apportando le modifiche ai diritti di utilizzo o aggiungendo nuovi gruppi o utenti, e salvare le modifiche:
 
 - Quando un utente non ha eseguito l'accesso al documento prima che venissero apportate le modifiche, le modifiche diventano effettive non appena l'utente apre il documento.
 

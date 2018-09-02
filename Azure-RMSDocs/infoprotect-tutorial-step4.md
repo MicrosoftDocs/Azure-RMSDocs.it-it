@@ -4,16 +4,16 @@ description: "Passaggio 4 di un'esercitazione introduttiva per provare rapidamen
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/30/2017
+ms.date: 08/29/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 468748c1-49d6-4c3e-a612-9c584acdc782
-ms.openlocfilehash: caa7ea12daf9bd946e967dc71bcc5ed275e1a965
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 2429a56163c79468bab681a9544c828c6d218392
+ms.sourcegitcommit: b0c4fe8c522987a7863958ffdc6866a91ebabf86
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42803226"
+ms.lasthandoff: 08/29/2018
+ms.locfileid: "43242191"
 ---
 # <a name="step-4-see-classification-labeling-and-protection-in-action"></a>Passaggio 4: Funzioni di classificazione, aggiunta di etichette e protezione in azione 
 
@@ -69,7 +69,7 @@ Per il valore **Sensitivity** (Riservatezza) viene visualizzato **Non impostato*
 
     Il documento è protetto anche con le autorizzazioni specificate per questa etichetta. È possibile verificare se il documento è protetto facendo clic sulla scheda **File** e visualizzare le informazioni per **Proteggi documento**. Il documento risulta protetto da **Confidential\Finance** (Riservato\Contabilità) e la descrizione dell'etichetta. 
     
-    A causa della configurazione di protezione dell'etichetta, solo i dipendenti possono aprire il documento e alcune azioni sono limitate. Ad esempio, poiché non sono autorizzati a stampare, copiare ed estrarre il contenuto, non possono stampare il documento o eseguire una copia dello stesso. Tali restrizioni consentono di evitare la perdita di dati. Il proprietario del documento può stamparlo e copiarne il contenuto, ma se invia il documento via posta elettronica a un altro utente dell'organizzazione, quest'ultimo non sarà in grado di eseguire queste operazioni.
+    A causa della configurazione di protezione dell'etichetta, solo i dipendenti possono aprire il documento e alcune azioni sono limitate. Ad esempio, poiché non sono autorizzati a stampare, copiare ed estrarre il contenuto, non possono stampare il documento o eseguire una copia dello stesso. Tali restrizioni consentono di evitare la perdita di dati. Il proprietario del documento può stamparlo e copiarne il contenuto. Tuttavia, se si invia il documento via posta elettronica a un altro utente dell'organizzazione, quest'ultimo non potrà eseguire queste operazioni.
 
 4. È ora possibile chiudere il documento.
 
