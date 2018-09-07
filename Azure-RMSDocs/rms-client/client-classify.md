@@ -4,18 +4,18 @@ description: Istruzioni per la classificazione di documenti e messaggi di posta 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2017
+ms.date: 08/31/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: d65c7690-fab7-4823-845c-8c73903e9c79
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a7c92c85dafd11c5bd3cfb6ae16a0f62d34b6e53
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: ee88a5aa0aee8b4ecd300a57710f73c2263cfa0f
+ms.sourcegitcommit: 99b33cee47bc4588174d44e90ade16edba12ee44
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807879"
+ms.lasthandoff: 08/31/2018
+ms.locfileid: "43380596"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-azure-information-protection"></a>Guida dell'utente: Classificare un file o un messaggio di posta elettronica tramite Azure Information Protection
 
