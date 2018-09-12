@@ -4,18 +4,18 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 09/04/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8a91b39b0f503ebb53b8b652de21423ef4cae9c8
-ms.sourcegitcommit: 0bc877840b168d05a16964b4ed0d28a9ed33f871
+ms.openlocfilehash: 3e6d5f30e3db48eced850649976ac4da56271622
+ms.sourcegitcommit: a42bb93adbb5be2cd39606fed3de0785ac52dd65
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43298015"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43703931"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -309,6 +309,8 @@ Il valore dell'ID etichetta è visualizzato nel pannello **Etichetta**, quando s
 
 Specificare un nome di regola di migrazione a propria scelta. Usare un nome descrittivo che consente di identificare come deve essere eseguito il mapping di una o più etichette dalla soluzione precedente imprevisto a un'etichetta di Azure Information Protection. Il nome viene visualizzato nei report dello scanner e nel Visualizzatore eventi. 
 
+Tenere presente che questa impostazione non rimuove tutti i contrassegni visivi che potrebbero essere stati applicati dall'etichetta precedente. Per rimuovere le intestazioni e i piè di pagina, vedere la sezione successiva [Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette](#remove-headers-and-footers-from-other-labeling-solutions).
+
 ### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Esempio 1: Mapping uno-a-uno con lo stesso nome di etichetta
 
 I documenti con l'etichetta di Secure Islands "Riservato" devono essere rietichettati come "Riservato" da Azure Information Protection.
@@ -362,10 +364,107 @@ L'impostazione client avanzata è la seguente:
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d,"L'etichetta Secure Islands contiene Interno",Classificazione,.\*Interno.\*|
 
 
+## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette
+
+Questa opzione di configurazione è attualmente in anteprima ed è soggetta a modifiche. Richiede anche la versione di anteprima del client Azure Information Protection.
+
+Questa configurazione usa più [impostazioni client avanzate](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che devono essere configurate nel portale di Azure.
+
+Queste impostazioni consentono di rimuovere o sostituire le intestazioni o i piè di pagina dai documenti quando questi contrassegni visivi sono stati applicati da un'altra soluzione di assegnazione etichette. Ad esempio, il piè di pagina precedente contiene il nome di un'etichetta precedente di cui è stata eseguita la migrazione ad Azure Information Protection con un nuovo nome di etichetta e un proprio piè di pagina.
+
+Quando il client ottiene questa configurazione nei relativi criteri, le intestazioni e i piè di pagina precedenti vengono rimossi o sostituiti quando il documento viene aperto nell'app di Office e al documento vengono applicate le etichette di Azure Information Protection.
+
+Questa configurazione non è supportata per Outlook e tenere presente che quando viene usata con Word, Excel e PowerPoint, può influire negativamente sulle prestazioni di queste app per gli utenti. La configurazione consente di definire le impostazioni per ogni applicazione, ad esempio la ricerca di testo nelle intestazioni e nei piè di pagina di documenti di Word, ma non nei fogli di calcolo di Excel o nelle presentazioni di PowerPoint.
+
+Poiché i criteri di ricerca influiscono sulle prestazioni per gli utenti, è consigliabile limitare i tipi di applicazioni di Office (**W**ord, **E**xcel, **P**owerPoint) solo a quelli in cui deve essere eseguita la ricerca:
+
+- Chiave: **RemoveExternalContentMarkingInApp**
+
+- Valore: \<**tipi di applicazioni di Office WXP**> 
+
+Esempi:
+
+- Per eseguire la ricerca solo in documenti di Word, specificare **W**.
+
+- Per eseguire la ricerca in documenti di Word e presentazioni di PowerPoint, specificare **WP**.
+
+Sarà necessaria almeno un'altra impostazione client avanzata, **ExternalContentMarkingToRemove**, per specificare il contenuto dell'intestazione o del piè di pagina e il modo in cui rimuoverlo o sostituirlo.
+
+### <a name="how-to-configure-externalcontentmarkingtoremove"></a>Come configurare ExternalContentMarkingToRemove
+
+Quando si specifica il valore stringa per la chiave **ExternalContentMarkingToRemove**, sono disponibili tre opzioni che usano le espressioni regolari:
+
+- Corrispondenza parziale per rimuovere tutto il contenuto dell'intestazione o del piè di pagina.
+    
+    Esempio: le intestazioni o i piè di pagina contengono la stringa **TEXT TO REMOVE**. Per rimuovere completamente le intestazioni o i piè di pagina, specificare il valore: `*TEXT*`.
+
+- Corrispondenza completa per rimuovere solo determinate parole nell'intestazione o nel piè di pagina.
+    
+    Esempio: le intestazioni o i piè di pagina contengono la stringa **TEXT TO REMOVE**. Per rimuovere solo la parola **TEXT**, lasciando la stringa **TO REMOVE** nell'intestazione o nel piè di pagina, specificare il valore: `TEXT `.
+
+- Corrispondenza completa per rimuovere tutto il contenuto dell'intestazione o del piè di pagina.
+    
+    Esempio: le intestazioni o i piè di pagina contengono la stringa **TEXT TO REMOVE**. Per rimuovere le intestazioni o i piè di pagina che contengono esattamente questa stringa, specificare il valore: `^TEXT TO REMOVE$`.
+    
+
+I criteri di ricerca per la stringa specificata non fanno distinzione tra maiuscole e minuscole. La lunghezza massima della stringa è 255 caratteri.
+
+Poiché alcuni documenti potrebbero includere caratteri invisibili o tipi diversi di spazi o tabulazioni, la stringa specificata per una frase potrebbe non essere rilevata. Quando possibile, specificare una singola parola distintiva per il valore e assicurarsi di testare i risultati prima della distribuzione nell'ambiente di produzione.
+
+- Chiave: **ExternalContentMarkingToRemove**
+
+- Valore: \<**stringa da confrontare, definita come espressione regolare**> 
+
+#### <a name="multiline-headers-or-footers"></a>Intestazioni o piè di pagina su più righe
+
+Se il testo di un'intestazione o un piè di pagina è su più righe, creare una chiave e un valore per ogni riga. Si supponga, ad esempio, di avere il piè di pagina seguente con due righe:
+
+**The file is classified as Confidential**
+
+**Label applied manually**
+
+Per rimuovere il piè di pagina su più righe, creare le due voci seguenti:
+
+- Chiave 1: **ExternalContentMarkingToRemove**
+
+- Valore chiave 1: **\*Confidential***
+
+- Chiave 2: **ExternalContentMarkingToRemove**
+
+- Valore chiave 2: **\*Label applied*** 
+
+#### <a name="optimization-for-powerpoint"></a>Ottimizzazione per PowerPoint
+
+I piè di pagina in PowerPoint vengono implementati come forme. Per evitare la rimozione di forme che contengono il testo specificato ma non sono intestazioni o piè di pagina, usare un'impostazione client avanzata aggiuntiva denominata **PowerPointShapeNameToRemove**. È consigliabile usare questa impostazione anche per evitare di controllare il testo in tutte le forme, essendo un processo a elevato utilizzo di risorse.
+
+Se non si specifica questa impostazione client avanzata aggiuntiva e PowerPoint è incluso nel valore della chiave **RemoveExternalContentMarkingInApp**, il testo specificato nel valore **ExternalContentMarkingToRemove** verrà ricercato in tutte le forme. 
+
+Per trovare il nome della forma usata come intestazione o piè di pagina:
+
+1. In PowerPoint visualizzare il riquadro **Selezione**: scheda **Formato** > gruppo **Disponi** > **Riquadro di selezione**.
+
+2. Selezionare la forma sulla diapositiva contenente l'intestazione o il piè di pagina. Il nome della forma selezionata viene evidenziato nel riquadro **Selezione**.
+
+Usare il nome della forma per specificare un valore stringa per la chiave **PowerPointShapeNameToRemove**. 
+
+Esempio: il nome della forma è **fc**. Per rimuovere la forma con questo nome, specificare il valore: `fc`.
+
+- Chiave: **PowerPointShapeNameToRemove**
+
+- Valore: \<**nome delle forma di PowerPoint**> 
+
+Quando si hanno più forme di PowerPoint da rimuovere, creare tante chiavi **PowerPointShapeNameToRemove** quante sono le forme da rimuovere. Per ogni voce specificare il nome della forma da rimuovere.
+
+Per impostazione predefinita, il testo delle intestazioni e dei piè di pagina viene cercato solo negli schemi diapositiva. Per estendere la ricerca a tutte le diapositive, che è un processo con un utilizzo maggiore di risorse, usare un'impostazione client avanzata aggiuntiva denominata **RemoveExternalContentMarkingInAllSlides**:
+
+- Chiave: **RemoveExternalContentMarkingInAllSlides**
+
+- Valore: **True**
+
 ## <a name="label-an-office-document-by-using-an-existing-custom-property"></a>Etichettare un documento di Office usando una proprietà personalizzata esistente
 
 > [!NOTE]
-> Se si usa questa configurazione e la configurazione della sezione precedente per eseguire la migrazione da un'altra soluzione di assegnazione etichette, l'impostazione di migrazione delle etichette ha la precedenza. 
+> Se si usa questa configurazione e la configurazione per [eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions), l'impostazione di migrazione delle etichette ha la precedenza. 
 
 Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
 
