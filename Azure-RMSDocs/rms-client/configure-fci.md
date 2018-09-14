@@ -4,18 +4,18 @@ description: Istruzioni per usare il client Rights Management (RMS) con il clien
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
-ms.topic: article
+ms.date: 09/12/2018
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e8eed649c89e854a4499260af15af8af510a39ea
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 8c97e4591343c0c6f04c39b5fa162acb1feacdd1
+ms.sourcegitcommit: 62da5075a6b3d13e4688d2d7d82beff53cade440
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42804685"
+ms.lasthandoff: 09/13/2018
+ms.locfileid: "45540089"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protezione RMS con Infrastruttura di classificazione file per Windows Server
 
@@ -209,11 +209,11 @@ Quando si è completata la configurazione per la classificazione, si è pronti p
         -   **Argomento**: Specificare quanto segue immettendo i propri valori per &lt;percorso&gt; e &lt;ID modello&gt;:
 
             ```
-            -Noprofile -Command "<path>\RMS-Protect-FCI.ps1 -File '[Source File Path]' -TemplateID <template GUID> -OwnerMail [Source File Owner Email]"
+            -Noprofile -Command "<path>\RMS-Protect-FCI.ps1 -File '[Source File Path]' -TemplateID <template GUID> -OwnerMail '[Source File Owner Email]'"
             ```
             Se, ad esempio, si copia lo script in C:\RMS-Protection e l'ID modello identificato dai prerequisiti è e6ee2481-26b9-45e5-b34a-f744eacd53b0, specificare quanto segue:
 
-            `-Noprofile -Command "C:\RMS-Protection\RMS-Protect-FCI.ps1 -File '[Source File Path]' -TemplateID e6ee2481-26b9-45e5-b34a-f744eacd53b0 -OwnerMail [Source File Owner Email]"`
+            `-Noprofile -Command "C:\RMS-Protection\RMS-Protect-FCI.ps1 -File '[Source File Path]' -TemplateID e6ee2481-26b9-45e5-b34a-f744eacd53b0 -OwnerMail '[Source File Owner Email]'"`
 
             In questo comando **[Percorso file di origine]** e **[Indirizzo posta elettronica proprietario file di origine]** sono entrambe variabili specifiche dell'infrastruttura di classificazione dei file, per cui digitarle nel comando precedente esattamente così come sono visualizzate. La prima variabile viene usata dall'infrastruttura di classificazione file per specificare in modo automatico il file identificato della cartella e la seconda è per l'infrastruttura di classificazione file per richiamare automaticamente l'indirizzo di posta elettronica del proprietario del file identificato. Questo comando viene ripetuto per ogni file della cartella, che nel nostro esempio è ogni file della cartella C:\FileShare che inoltre ha RMS come proprietà di classificazione file.
 

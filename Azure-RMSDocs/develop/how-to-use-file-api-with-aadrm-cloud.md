@@ -6,18 +6,18 @@ author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
 ms.date: 02/23/2017
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 54aeb019ff258ecd8a281b1a05add7e27b5d49f3
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 8c047aaf0d78c9389720345551b9c19038b82ad1
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807626"
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "44149668"
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>Procedura: Consentire all'applicazione di servizio di usare RMS basato su cloud
 
