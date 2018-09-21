@@ -3,21 +3,21 @@ title: Come distribuire un'app - AIP
 description: Questo articolo descrive il processo di distribuzione di un'applicazione di servizio in un tenant diverso da quello per cui è stata originariamente sviluppata.
 keywords: ''
 author: kkanakas
-ms.author: kartikk
+ms.author: kartikka
 manager: mbaldwin
 ms.date: 02/27/2017
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 34dc6d6f-cfe4-4848-9b11-8d90c4b38ef7
 audience: developer
-ms.reviewer: kartikk
+ms.reviewer: kartikka
 ms.suite: ems
-ms.openlocfilehash: 878f19d56b4a2714c0495925ddfb88918a2a92a6
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: a7f31be3e7885e206d24ca4f193270b3ca1aa242
+ms.sourcegitcommit: 07af86511a394274f10cf1340de4cf4bad6d1675
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44145831"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46473784"
 ---
 # <a name="deploying-a-service-application-into-a-different-tenant"></a>Distribuzione di un'applicazione di servizio a un tenant diverso
 
