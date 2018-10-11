@@ -51,7 +51,7 @@ Come il file verrà aperto dipende da come è stato protetto; è possibile saper
 
     ![Finestra di dialogo per un pfile condiviso tramite posta elettronica quando si usa l'applicazione RMS sharing](../media/ADRMS_MSRMSApp_PfilePermission.png)
 
-- **Il file ha estensione *PPDF* o è un file di testo o immagine protetto, ad esempio *PTXT* o *PJPG*.**
+- **Il file ha estensione *PPDF* o è un file di testo o immagine protetto, ad esempio *PTXT* o *PJPG***
 
     Il file è stato protetto in modo nativo come copia di sola lettura.
 
