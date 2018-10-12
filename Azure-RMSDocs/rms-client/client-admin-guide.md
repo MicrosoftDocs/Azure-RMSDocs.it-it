@@ -4,18 +4,18 @@ description: Istruzioni e informazioni per gli amministratori in una rete aziend
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 09/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 63e84e8a5d072f0bb57bb72754f97ca8963a2c76
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: c415868045e2064696181217f66262e90887e25a
+ms.sourcegitcommit: 7d477c418f3e5d8950c73af154c1575c84791ccc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149107"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403013"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
@@ -106,9 +106,7 @@ Dopo aver installato il client, usare l'opzione **Guida e commenti** per aprire 
 
 Il collegamento **Altre informazioni** reindirizza per impostazione predefinita al sito Web [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection), ma è possibile configurarlo con un URL personalizzato nelle [impostazioni dei criteri](../configure-policy-settings.md) di Azure Information Protection.
 
-Usare il collegamento **Invia commenti e suggerimenti** (versioni di disponibilità generale) per inviare suggerimenti o richieste al team di Information Protection. Non usare questa opzione se si vuole ottenere supporto tecnico. In questo caso, vedere invece [Opzioni di supporto e risorse per la community](../information-support.md#support-options-and-community-resources). 
-
-Il collegamento **Segnala un problema** sostituisce il collegamento **Invia commenti e suggerimenti** nella versione di anteprima del client. Per impostazione predefinita, questa opzione invia un messaggio di posta elettronica a Microsoft, ma è possibile configurare la stringa HTTP per gli utenti specificando un'[impostazione del client avanzata](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link). Ad esempio, è possibile specificare l'indirizzo di posta elettronica dell'help desk.
+Il collegamento **Segnala un problema** viene visualizzato nelle versioni di anteprima del client e non nelle versioni con disponibilità generale. Per impostazione predefinita, questa opzione invia un messaggio di posta elettronica a Microsoft, ma è possibile configurare la stringa HTTP per gli utenti specificando un'[impostazione del client avanzata](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link). Ad esempio, è possibile specificare l'indirizzo di posta elettronica dell'help desk.
 
 L'opzione **Esporta log** consente di raccogliere e allegare automaticamente i file di log relativi al client Azure Information Protection se ne è stato chiesto l'invio al supporto tecnico Microsoft. Questa opzione può essere usata anche dagli utenti finali per inviare i file di log all'help desk.
 

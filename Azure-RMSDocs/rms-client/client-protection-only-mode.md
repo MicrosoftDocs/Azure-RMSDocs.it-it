@@ -4,18 +4,18 @@ description: Informazioni per gli utenti che eseguono il client Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/06/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5a2b01af0e246e732d087a344ecf037c13a47546
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: c9f8408c4417b1b5131a51276a829a16687f1870
+ms.sourcegitcommit: ccc99efd2402a8b93912c8df4df330fa1311aacb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151580"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48812419"
 ---
 # <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>Guida dell'utente: Modalità di sola protezione per il client Azure Information Protection
 
@@ -34,9 +34,9 @@ La modalità di sola protezione viene eseguita negli scenari seguenti:
 
 - L'organizzazione dispone di una sottoscrizione per Azure Information Protection solo per un subset di utenti:
     
-    - Per questa combinazione di sottoscrizioni, è responsabilità dell'amministratore assicurarsi che solo il subset di utenti possa usare le funzionalità di classificazione ed etichettatura. Gli altri utenti devono eseguire il client Azure Information Protection in modalità di sola protezione. 
+    - Per questa combinazione di abbonamenti, è responsabilità dell'amministratore assicurarsi che solo il subset di utenti possa usare le funzionalità di classificazione ed etichettatura. Gli altri utenti devono eseguire il client Azure Information Protection in modalità di sola protezione. 
 
-- L'organizzazione dispone di una sottoscrizione per Azure Information Protection, ma non è configurata alcuna etichetta.
+- L'organizzazione dispone di un abbonamento per Azure Information Protection, ma non è configurata nessuna etichetta.
     
     - Ciò può verificarsi quando tutte le etichette nei criteri globali sono disabilitate e l'account non è stato aggiunto a criteri con ambito. È possibile che il reparto IT abbia appena iniziato a distribuire Azure Information Protection, ma non abbia ancora fornito le etichette per classificare i documenti e i messaggi di posta elettronica. Nel frattempo, è possibile usare il client Azure Information Protection per proteggere i file e visualizzare i file protetti.
 

@@ -4,18 +4,18 @@ description: Dettagli tecnici sui tipi di file supportati, le estensioni di file
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 09/24/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2f96a9c395b2a5df11a05acb4ce7dac0da516164
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: f9def0ae81a3887f9f6e1c99f7e1f02c54581fdb
+ms.sourcegitcommit: c1274d6d7ab486590dcd2a4e6aca3dcd3d284c1b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151827"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47168761"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guida dell'amministratore: Tipi di file supportati dal client Azure Information Protection
 
@@ -55,7 +55,7 @@ I tipi di file seguenti possono essere classificati anche se non sono protetti.
 
 - **Microsoft Office**: i tipi di file nella tabella seguente.
     
-    I formati di file supportati per questi tipi di file sono i formati 97-2003 e Office Open XML per i programmi di Office seguenti: Word, Excel e PowerPoint. Se non è presente la versione di anteprima del client Azure Information Protection, il formato Documento Strict Open XML non è supportato.
+    I formati di file supportati per questi tipi di file sono i formati 97-2003 e Office Open XML per i programmi di Office seguenti: Word, Excel e PowerPoint.
     
     |Tipo di file Office|Tipo di file Office|
     |----------------------------------|----------------------------------|
@@ -125,9 +125,9 @@ Questi tipi di file vengono identificati separatamente perché quando sono prote
 |.jt|.pjt|
 
 ###### <a name="footnote-1"></a>Nota 1
-Se si usa la versione di anteprima del client Azure Information Protection, [per impostazione predefinita](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) l'estensione del documento PDF protetto rimane pdf.
+Se si configura il client Azure Information Protection per la [protezione dei file PDF usando lo standard ISO per la crittografia PDF](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), l'estensione del nome file del documento PDF protetto rimane pdf.
 
-La tabella successiva elenca i rimanenti tipi di file che supportano la protezione nativa in base al client di Azure Information Protection e che possono anche essere classificati. Questi sono riconoscibili come tipi di file delle app di Microsoft Office. I formati di file supportati per questi tipi di file sono i formati 97-2003 e Office Open XML per i programmi di Office seguenti: Word, Excel e PowerPoint. Se non è presente la versione di anteprima del client Azure Information Protection, il formato Documento Strict Open XML non è supportato.
+La tabella successiva elenca i rimanenti tipi di file che supportano la protezione nativa in base al client di Azure Information Protection e che possono anche essere classificati. Questi sono riconoscibili come tipi di file delle app di Microsoft Office. I formati di file supportati per questi tipi di file sono i formati 97-2003 e Office Open XML per i programmi di Office seguenti: Word, Excel e PowerPoint.
 
 Per questi file, l'estensione del nome di file rimane invariata dopo che il file è stato protetto da un servizio Rights Management.
 
@@ -188,7 +188,9 @@ Per altre informazioni, vedere [Configurazione dell'API file](../develop/file-ap
 
 Per impedire agli utenti di modificare file critici per il funzionamento del computer, alcuni tipi di file e cartelle vengono automaticamente esclusi dalla classificazione e dalla protezione. Se gli utenti provano a classificare o proteggere questi file usando il client Azure Information Protection, viene visualizzato un messaggio per segnalare che sono esclusi.
 
-- **Tipi di file esclusi**: INK, EXE, COM, CMD, BAT, DLL, INI, PST, SCA, DRM, SYS, CPL, INF, DRV, DAT, TMP, MSP, MSI, PDB, JAR
+- **Tipi di file esclusi**: lnk, exe, com, cmd, bat, dll, ini, pst, sca, drm, sys, cpl, inf, drv, dat, tmp, msg, msp, msi, pdb, jar
+    
+    Ora vengono esclusi anche i tipi di file seguenti: zip, msg e rar. 
 
 - **Cartelle escluse**: 
     - Windows
@@ -198,7 +200,7 @@ Per impedire agli utenti di modificare file critici per il funzionamento del com
 
 ### <a name="file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner"></a>Tipi di file esclusi dalla classificazione e dalla protezione dallo scanner di Azure Information Protection
 
-Per impostazione predefinita anche lo scanner esclude gli stessi tipi di file del client Azure Information Protection con le eccezioni seguenti per la versione di anteprima dello scanner: rar, rtf, msg e zip. 
+Per impostazione predefinita lo scanner esclude anche gli stessi tipi di file del client Azure Information Protection, con l'aggiunta dei file con estensione rtf. 
 
 È possibile modificare i tipi di file inclusi o esclusi dallo scanner per l'ispezione file usando i cmdlet di PowerShell seguenti:
 
@@ -217,23 +219,19 @@ Per impostazione predefinita, lo scanner protegge solo i tipi di file di Office.
 
 Un file protetto da password non può essere protetto in modo nativo dal client Azure Information Protection a meno che il file non sia attualmente aperto nell'applicazione che applica la protezione. Spesso sono i file con estensione pdf ad essere protetti da password, ma anche altre applicazioni, come ad esempio le app di Office,offrono questa funzionalità.
 
-Con la versione con disponibilità generale (GA) client di Azure Information Protection per Windows è anche possibile visualizzare i file seguenti, ma non è possibile proteggere o rimuovere la protezione di file con estensione pdf nei casi seguenti:
-
-- File PDF basato su modulo. 
-
-- File PDF protetto con estensione pdf.
-    
-    Il client di Azure Information Protection può proteggere un file PDF non protetto e può rimuovere la protezione di un file PDF protetto, o riproteggerlo, se il nome file ha estensione ppdf.
-
-Come soluzione alternativa per proteggere questi file, è possibile abilitare la protezione generica seguendo le istruzioni della sezione [Modifica del livello di protezione predefinito dei file](#changing-the-default-protection-level-of-files). Tuttavia, questo metodo modifica il livello di protezione per tutti i file con estensione pdf, a livello di computer. Non è possibile definire la protezione generica solo per i file che soddisfano i criteri elencati.
-
-Se la protezione di tali file è importante, è possibile copiarli temporaneamente in un altro computer per la protezione generica e quindi copiarli nuovamente nel computer di origine. In alternativa usare la versione di anteprima corrente del client Azure Information Protection.
-
-Quando si usa la versione di anteprima corrente del client Azure Information Protection, [per impostazione predefinita](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) è possibile proteggere e rimuovere la protezione dei file PDF a livello nativo in entrambe le circostanze seguenti:
+Se il client Azure Information Protection non è configurato in modo da [proteggere i file PDF usando lo standard ISO per la crittografia PDF](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), il client può visualizzare i file seguenti ma non può proteggere o rimuovere la protezione dei file PDF a livello nativo in entrambe le circostanze seguenti:
 
 - File PDF basato su modulo.
 
-- File PDF protetto con estensione pdf. 
+- File PDF protetto con estensione pdf.
+
+Come soluzione alternativa per proteggere questi file, è possibile abilitare la protezione generica seguendo le istruzioni della sezione [Modifica del livello di protezione predefinito dei file](#changing-the-default-protection-level-of-files). Tuttavia, questo metodo modifica il livello di protezione per tutti i file con estensione pdf, a livello di computer. Non è possibile definire la protezione generica solo per i file che soddisfano i criteri elencati.
+
+Se la protezione di tali file è importante, è possibile copiarli temporaneamente in un altro computer per la protezione generica e quindi copiarli nuovamente nel computer di origine. In alternativa, configurare il client in modo da [proteggere i file PDF usando lo standard ISO per la crittografia PDF](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) per proteggere e rimuovere la protezione dei file PDF a livello nativo in entrambe le operazioni seguenti:
+
+- File PDF basato su modulo.
+
+- File PDF protetto con estensione pdf.
 
 ### <a name="limitations-for-container-files-such-as-zip-files"></a>Limitazioni per i file contenitore (ad esempio, file con estensione zip)
 

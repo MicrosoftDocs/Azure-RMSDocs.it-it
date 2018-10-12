@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 43f99a35104ecdc3bfb422ed9f6747043e895ac7
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 20fcfa3790dc9ad1612a508f4fe28f72997fc475
+ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149838"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47211276"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Guida di orientamento per la distribuzione di Azure Information Protection
 
@@ -118,9 +118,11 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
 ### <a name="step-6-use-and-monitor-your-data-protection-solutions"></a>Passaggio 6: Usare e monitorare le soluzioni di protezione dei dati
 È ora possibile proteggere i dati e registrare come vengono usate le etichette configurate e la protezione dei dati all'interno della società. Per altre informazioni a supporto di questa fase di distribuzione, vedere gli argomenti seguenti:
 
+- [Reporting per Azure Information Protection](reports-aip.md)
+
 - [Consentire agli utenti di proteggere i file mediante il servizio Azure Rights Management](./help-users.md)
 
--  [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](./log-analyze-usage.md)
+- [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](./log-analyze-usage.md)
 
 - [File del client e registrazione dell'utilizzo](./rms-client/client-admin-guide-files-and-logging.md)
 

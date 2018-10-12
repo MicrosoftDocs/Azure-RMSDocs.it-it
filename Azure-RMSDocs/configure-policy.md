@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 57c410432377d5a98c132239ac1805293d1a5133
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: e63b98118cda3a927577a90c7c0999d8781f8d93
+ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151487"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47211293"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -168,7 +168,11 @@ Usare le informazioni seguenti per configurare i criteri di Azure Information Pr
 
 - [Come configurare etichette per lingue diverse](configure-policy-languages.md)
 
+- [Come eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365](configure-policy-migrate-labels.md)
+
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per un esempio di come personalizzare i criteri predefiniti e osservare il comportamento risultante in un'applicazione di Office, seguire l'[Esercitazione introduttiva di Azure Information Protection](infoprotect-quick-start-tutorial.md).
+
+Per visualizzare le prestazioni dei criteri, vedere [Reporting per Azure Information Protection](reports-aip.md).
 

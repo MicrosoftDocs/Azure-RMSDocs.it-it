@@ -1,3 +1,18 @@
+---
+title: Classe mip Label
+description: Riferimento per la classe mip Label
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: 2a80748430df83a16a4d5ee716344d17ce7deee4
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446278"
+---
 # <a name="class-miplabel"></a>Classe mip::Label 
 Astrazione per una singola etichetta di Microsoft Information Protection.
   

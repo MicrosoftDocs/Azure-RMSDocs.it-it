@@ -4,16 +4,16 @@ description: È possibile eliminare o riordinare le etichette di Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 10/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: 9589985fa0ab5f80ce78483dedac8c7bc4b9879e
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 0b4631cd5664ba7951db04ce9ba221a19c0674ff
+ms.sourcegitcommit: 1cedaa9cefea49775f574f2ede61539bc6f0b813
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151708"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48794311"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Come eliminare o riordinare un'etichetta per Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "44151708"
 
 Quando si elimina un'etichetta applicata a documenti e messaggi di posta elettronica, alla successiva apertura di tali documenti e massaggi da parte del client di Azure Information Protection gli utenti vedranno lo stato dell'etichetta come **Non impostato**. Tuttavia, le informazioni dell'etichetta restano nei metadati e possono ancora essere lette dai servizi che cercano queste informazioni di etichetta.
 
-Inoltre, se l'etichetta eliminata applicava la protezione, la protezione non viene rimossa. Le impostazioni di protezione dall'etichetta vengono mantenute e visualizzate nella sezione **Modelli di protezione**. Il modello può essere ora convertito in una nuova etichetta o collegato a un'etichetta. Sebbene il modello venga mantenuto, non è possibile creare una nuova etichetta con lo stesso nome dell'etichetta eliminata. Se si vuole eseguire questa operazione, sono disponibili le opzioni seguenti:
+Inoltre, se l'etichetta eliminata applicava la protezione, la protezione non viene rimossa. Le impostazioni di protezione dall'etichetta vengono mantenute e visualizzate nella sezione **Modelli di protezione**. Ora il modello può essere convertito in una nuova etichetta. Sebbene il modello venga mantenuto, non è possibile creare una nuova etichetta con lo stesso nome dell'etichetta eliminata. Se si vuole eseguire questa operazione, sono disponibili le opzioni seguenti:
 
 - Convertire il modello in un'etichetta. 
     

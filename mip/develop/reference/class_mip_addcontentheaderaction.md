@@ -1,3 +1,18 @@
+---
+title: Classe mip AddContentHeaderAction
+description: Riferimento per la classe mip AddContentHeaderAction
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: bc60fe32005a0c6bc8088ab7687a3f711ae7a99a
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445649"
+---
 # <a name="class-mipaddcontentheaderaction"></a>Classe mip::AddContentHeaderAction 
 Classe di azione che specifica l'aggiunta di un'intestazione contenuto.
   
@@ -57,7 +72,7 @@ Ottiene l'allineamento dell'intestazione.
 Ottiene il margine dell'intestazione a partire dal basso.
 
   
-**Restituisce**: numero intero che rappresenta i margini dalla parte inferiore del documento (ad esempio 10 mm).
+**Restituisce**: margini dalla parte inferiore del documento (ad esempio 10 mm).
   
 ### <a name="actiontype"></a>ActionType
 Specifica il tipo di [Action](class_mip_action.md).

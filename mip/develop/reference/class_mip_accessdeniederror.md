@@ -1,10 +1,25 @@
+---
+title: Classe mip AccessDeniedError
+description: Riferimento per la classe mip AccessDeniedError
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: fd2e1990a315324a43fffe5f547c2f72c61e9539
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445819"
+---
 # <a name="class-mipaccessdeniederror"></a>Classe mip::AccessDeniedError 
-L'utente non è riuscito a ottenere l'accesso al contenuto, ad esempio per mancanza di autorizzazioni, contenuto revocato e così via.
+L'utente non è riuscito a ottenere l'accesso al contenuto, ad esempio per mancanza di autorizzazioni o contenuto revocato.
   
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
- public char const* what() const  |  Ottiene un messaggio di errore cstring.
+ public char const* what() const  |  Ottiene il messaggio di errore.
 public std::shared_ptr<Error> Clone() const  |  Clona l'errore.
  public virtual ErrorType GetErrorType() const  |  Ottiene il tipo di errore.
  public virtual const std::string& GetErrorName() const  |  Ottiene il nome dell'errore.
@@ -14,10 +29,10 @@ public std::shared_ptr<Error> Clone() const  |  Clona l'errore.
 ## <a name="members"></a>Membri
   
 ### <a name="what"></a>what
-Ottiene un messaggio di errore cstring.
+Ottiene il messaggio di errore.
 
   
-**Restituisce**: messaggio di errore cstring
+**Restituisce**: messaggio di errore.
   
 ### <a name="error"></a>Errore
 Clona l'errore.

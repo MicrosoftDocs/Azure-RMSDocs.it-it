@@ -1,20 +1,20 @@
 ---
-title: Classe mip FileIOError
-description: Riferimento per la classe mip FileIOError
+title: Classe mip PolicySyncError
+description: Riferimento per la classe mip PolicySyncError
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 754ecbc296b69b4071bcf50ae01109c2c8e7bd29
+ms.openlocfilehash: 29b107f94303d39a233b798996d1ee9fd28b3b40
 ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445445"
+ms.locfileid: "47446865"
 ---
-# <a name="class-mipfileioerror"></a>Classe mip::FileIOError 
-Errore di I/O file.
+# <a name="class-mippolicysyncerror"></a>Classe mip::PolicySyncError 
+Tentativo di sincronizzare i dati dei criteri non riuscito.
   
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                

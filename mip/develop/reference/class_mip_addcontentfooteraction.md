@@ -1,3 +1,18 @@
+---
+title: Classe mip AddContentFooterAction
+description: Riferimento per la classe mip AddContentFooterAction
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: 73f641d965c3cf0236919557128af2ed07705672
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445836"
+---
 # <a name="class-mipaddcontentfooteraction"></a>Classe mip::AddContentFooterAction 
 Classe di azione che specifica l'aggiunta di un piè di pagina contenuto al documento.
   
@@ -57,7 +72,7 @@ Ottiene l'allineamento del piè di pagina.
 Ottiene il margine del piè di pagina a partire dal basso.
 
   
-**Restituisce**: numero intero che rappresenta i margini dalla parte inferiore del documento (ad esempio 10 mm).
+**Restituisce**: margini dalla parte inferiore del documento (ad esempio 10 mm).
   
 ### <a name="actiontype"></a>ActionType
 Specifica il tipo di [Action](class_mip_action.md).

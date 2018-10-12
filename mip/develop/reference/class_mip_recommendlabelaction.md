@@ -1,3 +1,18 @@
+---
+title: Classe mip RecommendLabelAction
+description: Riferimento per la classe mip RecommendLabelAction
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: b8e56daed967523b7580087d7bb934c1b2164320
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446006"
+---
 # <a name="class-miprecommendlabelaction"></a>Classe mip::RecommendLabelAction 
 Consigliare le azioni dell'etichetta serve a suggerire un'etichetta agli utenti. L'eliminazione di questa chiamata dopo che un utente ignora l'etichetta consigliata deve essere eseguita tramite le azioni supportate sullo stato di esecuzione.
   

@@ -4,18 +4,18 @@ description: Di seguito sono riportate alcune possibili domande sulle funzionali
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/26/2018
+ms.date: 09/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 6048867049046384a7a226d3caeed10fd09bb264
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: a6df966c75a1d556aeb3341804fa18d912389e24
+ms.sourcegitcommit: 4bc807177cf6c284f673cea667b6086121d69231
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147577"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47233729"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Domande frequenti sulla classificazione e l'assegnazione di etichette in Azure Information Protection
 
@@ -29,11 +29,15 @@ L'esercitazione introduttiva consente in pochi minuti di vedere queste caratteri
 
 Per sapere quando saranno disponibili altre funzionalità e nuove caratteristiche per la classificazione, seguire gli annunci nel [blog di Enterprise Mobility + Security](https://cloudblogs.microsoft.com/enterprisemobility/?product=azure-information-protection) e nel [sito Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all). Nella versione corrente sono presenti alcune limitazioni, incluse le seguenti:
 
-- Manca la funzione di registrazione centralizzata per la classificazione e l'aggiunta di etichette.
-
-- Non sono disponibili funzionalità di assegnazione di etichette nelle app di Office per dispositivi mobili (iOS e Android) e computer Mac o per Office Web Apps (Office Online).
+- L'assegnazione di etichette non funziona nelle app Web di Office (Office Online).
 
 - Le funzionalità di classificazione e assegnazione di etichette non sono integrate con Exchange Online o SharePoint Online.
+
+> [!NOTE]
+> **Ora disponibile in anteprima**:
+> - Reporting centralizzato per la classificazione e l'aggiunta di etichette. Per altre informazioni, vedere [Reporting centralizzato per Azure Information Protection](reports-aip.md).
+> - Funzionalità di assegnazione di etichette nelle app di Office per dispositivi mobili (iOS e Android) e computer Mac che aderiscono al [programma Office Insider](https://support.office.com/article/what-is-office-insider-f4208185-b63a-4b68-9c7a-9a32d2411c16). Per altre informazioni, vedere [Applicare etichette di riservatezza a documenti e messaggi di posta elettronica all'interno di Office](https://aka.ms/officemipdocs).
+
 
 Per richiedere nuove funzionalità e votare per le richieste, visitare il [sito User Voice](https://msip.uservoice.com/) per Azure Information Protection.
 

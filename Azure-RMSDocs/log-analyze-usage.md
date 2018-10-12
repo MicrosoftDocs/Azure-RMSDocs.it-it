@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f147ad04ec61e7a5796cbb1f02c7fa33afdeae7d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 1deea1b4353e2d48c85ae24625ab29eca96a3968
+ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149685"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47211327"
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registrazione e analisi dell'utilizzo del servizio Azure Rights Management
 
@@ -48,6 +48,7 @@ Oltre alla registrazione dell'utilizzo, sono disponibili anche le opzioni di reg
 |Log eventi client|Attività di utilizzo per il client Azure Information Protection, registrata nel registro eventi locale di Windows **Applicazioni e servizi**, **Azure Information Protection**. <br /><br />Per altre informazioni, vedere [Registrazione dell'utilizzo per il client Azure Information Protection](./rms-client/client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client).|
 |File di log client|Log per la risoluzione dei problemi per il client Azure Information Protection, disponibili in **%localappdata%\Microsoft\MSIP**. <br /><br />Questi file sono progettati per il supporto tecnico Microsoft.|
 
+Vengono raccolte informazioni anche dai registri d'uso del client e dallo scanner Azure Information Protection, che vengono aggregate per creare report nel portale di Azure. Per altre informazioni, vedere [Reporting per Azure Information Protection](reports-aip.md).
 
 Per altre informazioni sulla registrazione dell'utilizzo per il servizio Azure Rights Management, vedere le sezioni seguenti. 
 
@@ -58,8 +59,6 @@ A partire da febbraio 2016, la funzionalità di registrazione dell'utilizzo di A
 > Non sono previsti costi aggiuntivi per l'archiviazione dei log o per il funzionamento della funzionalità di registrazione.
 > 
 > A differenza della situazione attuale, per usare la funzionalità di registrazione dell'utilizzo di Azure Rights Management prima del mese di febbraio 2016 era necessario disporre di una sottoscrizione di Azure e di risorse di archiviazione sufficienti in Azure.
-
-
 
 ## <a name="how-to-access-and-use-your-azure-rights-management-usage-logs"></a>Come accedere e usare i log dell'utilizzo di Azure Rights Management
 Il servizio Azure Rights Management scrive i log nell'account di archiviazione di Azure sotto forma di una serie di BLOB. Ciascun blob contiene uno o più record di log in formato W3C esteso. I nomi dei blob sono numeri e corrispondono all'ordine di creazione. La sezione [Come interpretare i log dell'utilizzo di Azure Rights Management](#how-to-interpret-your-azure-rights-management-usage-logs) più avanti in questo argomento contiene altre informazioni sui contenuti dei log e sulla relativa creazione.

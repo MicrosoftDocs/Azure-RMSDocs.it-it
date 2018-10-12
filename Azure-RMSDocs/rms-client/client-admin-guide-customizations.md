@@ -4,18 +4,18 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/04/2018
+ms.date: 09/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b4d0f104c0c0562f98c5418b9763adf62bdee97f
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 40415c25befd3eea8d33a2b8572b0d48f7ee918c
+ms.sourcegitcommit: 7d477c418f3e5d8950c73af154c1575c84791ccc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149776"
+ms.lasthandoff: 09/27/2018
+ms.locfileid: "47403098"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -90,11 +90,9 @@ Controllare inoltre che in questi computer non esista un file denominato **Polic
 
 ## <a name="modify-the-email-address-for-the-report-an-issue-link"></a>Modificare l'indirizzo di posta elettronica per il collegamento Segnala un problema
 
-Questa opzione di configurazione è attualmente in anteprima ed è soggetta a modifiche. Richiede anche la versione di anteprima del client Azure Information Protection.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Questa impostazione è applicabile solo alle versioni di anteprima del client Azure Information Protection, perché le versioni di disponibilità generale del client non visualizzano il collegamento **Segnala un problema**.
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
-
-Quando gli utenti selezionano il collegamento **Segnala un problema** nella finestra di dialogo **Guida e commenti** del client, per impostazione predefinita viene visualizzato un messaggio di posta elettronica con un indirizzo Microsoft. Per modificare questo indirizzo, usare l'impostazione del client avanzata seguente. Ad esempio, specificare `mailto:helpdesk@contoso.com` per l'indirizzo di posta elettronica dell'help desk. 
+Quando gli utenti selezionano il collegamento **Segnala un problema** nella finestra di dialogo **Guida e commenti** delle versioni precedenti del client, per impostazione predefinita viene visualizzato un messaggio di posta elettronica con un indirizzo Microsoft. Per modificare questo indirizzo, usare l'impostazione del client avanzata seguente. Ad esempio, specificare `mailto:helpdesk@contoso.com` per l'indirizzo di posta elettronica dell'help desk. 
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
@@ -219,9 +217,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="turn-on-classification-to-run-continuously-in-the-background"></a>Attivare l'esecuzione continua della classificazione in background
 
-Questa opzione di configurazione è attualmente in anteprima ed è soggetta a modifiche.
-
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Questa impostazione è in anteprima e potrebbe cambiare.
 
 Quando si configura questa impostazione, cambia il [comportamento predefinito](../configure-policy-classification.md#how-automatic-or-recommended-labels-are-applied) del client Azure Information Protection rispetto all'applicazione delle etichette automatiche e consigliate ai documenti: 
 
@@ -239,25 +235,61 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 - Valore: **True**
 
-## <a name="dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>Non proteggere i file PDF usando lo standard ISO per la crittografia dei file PDF
-
-Questa opzione di configurazione è attualmente in anteprima ed è soggetta a modifiche. Richiede anche la versione di anteprima del client Azure Information Protection.
+## <a name="protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption"></a>Protect PDF files by using the ISO standard for PDF encryption (Proteggere i file PDF usando lo standard ISO per la crittografia PDF)
 
 Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
 
-Quando la versione di disponibilità generale (GA) del client Azure Information Protection protegge un file PDF, il file risultante ha l'estensione ppdf. Tuttavia, quando la versione di anteprima corrente del client Azure Information Protection protegge un file PDF, l'estensione risultante rimane pdf ed è conforme allo standard ISO per la crittografia dei file PDF. Per altre informazioni su questo standard, vedere la sezione **7.6 Encryption** (Crittografia) del [documento derivato dalla specifica ISO 32000-1](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) e pubblicato da Adobe Systems Incorporated.
+Per impostazione predefinita, quando il client Azure Information Protection protegge un file PDF, il file risultante ha l'estensione ppdf. È possibile modificare questo comportamento in modo che l'estensione rimanga pdf e che l'operazione sia conforme allo standard ISO per la crittografia dei file PDF. Per altre informazioni su questo standard, vedere la sezione **7.6 Encryption** (Crittografia) del [documento derivato dalla specifica ISO 32000-1](https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf) e pubblicato da Adobe Systems Incorporated.
 
-Se è necessaria la versione di anteprima corrente del client per ripristinare il comportamento della versione di disponibilità generale (GA), usare l'impostazione avanzata seguente immettendo questa stringa:
+Per configurare questa impostazione avanzata, immettere la stringa seguente:
 
 - Chiave: **EnablePDFv2Protection**
 
-- Valore: **False**
+- Valore: **True**
+
+Come risultato di questa opzione di configurazione, quando il client Azure Information Protection protegge un file PDF, questa azione crea un documento PDF protetto che può essere aperto con la versione più recente del client Azure Information Protection per Windows e con altri lettori PDF che supportano lo standard ISO per la crittografia PDF. L'app Azure Information Protection per iOS e Android non supporta attualmente lo standard ISO per la crittografia dei file PDF. Per informazioni aggiornate su Adobe Acrobat Reader, vedere [Starting October, use Adobe Acrobat Reader for PDFs protected by Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Starting-October-use-Adobe-Acrobat-Reader-for-PDFs-protected-by/ba-p/262738) (A partire da ottobre è possibile usare Adobe Acrobat Reader per i PDF protetti da Microsoft Information Protection).
 
 Per fare in modo che lo scanner Azure Information Protection usi la nuova impostazione, è necessario riavviare il servizio scanner.
 
+Per altre informazioni sulla crittografia PDF, vedere il post del blog [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/2627570) (Nuovo supporto della crittografia PDF con Microsoft Azure Information Protection).
+
+### <a name="to-convert-existing-ppdf-files-to-protected-pdf-files"></a>Per convertire i file con estensione ppdf esistenti in file con estensione pdf protetti
+
+Dopo che il client Azure Information Protection ha scaricato i criteri client con la nuova impostazione, è possibile usare i comandi di PowerShell per convertire i file con estensione ppdf esistenti in file con estensione pdf protetti, che usano lo standard ISO per la crittografia PDF. 
+
+Per usare le istruzioni seguenti per i file ai quali la protezione non è stata applicata dall'utente, è necessario avere [diritti di utilizzo di Rights Management](../configure-usage-rights.md) per rimuovere la protezione dai file oppure essere un utente con privilegi avanzati. Per abilitare questa funzionalità e configurare l'account come utente con privilegi avanzati, vedere [Configurazione degli utenti con privilegi avanzati per Azure Rights Management e servizi di individuazione o ripristino dei dati](../configure-super-users.md).
+
+Inoltre quando l'utente usa queste istruzioni per file protetti da altri utenti, diventa l'[autorità di certificazione RMS](../configure-usage-rights.md#rights-management-issuer-and-rights-management-owner). In questo scenario, l'utente che ha protetto il documento in origine non può più tenerne traccia né revocarlo. Se gli utenti hanno l'esigenza di tenere traccia e revocare i loro documenti PDF protetti, chiedere loro di rimuovere manualmente e quindi riapplicare l'etichetta usando Esplora file e facendo clic con il pulsante destro del mouse.
+
+Per usare i comandi di PowerShell per convertire file con estensione ppdf esistenti in file con estensione pdf protetti che usano lo standard ISO per la crittografia PDF:
+
+1. Usare [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) con il file con estensione ppdf. Ad esempio:
+    
+        Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
+
+2. Nell'output, prendere nota dei valori dei parametri seguenti:
+    
+    - Il valore (GUID) di **SubLabelId**, se presente. Se questo valore è vuoto, non è stata usata un'etichetta secondaria. In questo caso prendere nota del valore di **MainLabelId**.
+    
+    Nota: se non è presente neanche un valore per **MainLabelId**, il file non è provvisto di etichetta. In questo caso è possibile usare i comandi [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) e [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) invece dei comandi nei passaggi 3 e 4.
+    
+    - Valore di **RMSTemplateId**. Se questo valore è **Accesso limitato**, un utente ha protetto il file usando autorizzazioni personalizzate anziché le impostazioni di protezione configurate per l'etichetta. Se si continua, tali autorizzazioni personalizzate verranno sovrascritte dalle impostazioni di protezione dell'etichetta. Decidere se continuare o chiedere all'utente (valore visualizzato per **RMSIssuer**) di rimuovere l'etichetta e riapplicarla, con le relative autorizzazioni personalizzate originali.
+
+3. Rimuovere l'etichetta usando [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) con il parametro *RemoveLabel*. Se si usa l'[impostazione criteri](../configure-policy-settings.md) **Gli utenti devono offrire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione**, è necessario specificare anche il parametro *Giustificazione* con il motivo. Ad esempio: 
+    
+        Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
+    
+    Se non è possibile rimuovere l'etichetta perché si usa come [impostazione dei criteri](../configure-policy-settings.md) l'etichettatura obbligatoria (**Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**), applicare come alternativa temporanea un'etichetta diversa.
+
+4. Riapplicare l'etichetta originale, specificando il valore dell'etichetta identificato nel passaggio 1. Ad esempio:
+    
+        Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
+
+Il file mantiene l'estensione pdf ma viene classificato come in precedenza ed è protetto tramite lo standard ISO per la crittografia PDF.
+
 ## <a name="support-for-files-protected-by-secure-islands"></a>Supporto di file protetti da Secure Islands
 
-Questa opzione di configurazione è attualmente in anteprima ed è soggetta a modifiche. Richiede le versioni di anteprima del client Azure Information Protection, dello scanner Azure Information Protection o del visualizzatore Azure Information Protection.
+Questa opzione di configurazione è attualmente in anteprima ed è soggetta a modifiche.
 
 Se è stato usato Secure Islands è possibile che siano stati protetti file di testo, file immagine e file generici. Sono esempi i file con estensione ptxt, pjpeg o pfile. Quando si modifica il registro di sistema come indicato di seguito, Azure Information Protection può decrittografare questi file:
 
@@ -282,9 +314,9 @@ In seguito a questa modifica del registro sono supportati gli scenari seguenti:
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette
 
-Questa opzione di configurazione è attualmente in anteprima ed è soggetta a modifiche.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Questa impostazione è in anteprima e potrebbe cambiare.
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
+Questa configurazione non è attualmente compatibile con l'impostazione [Protect PDF files by using the ISO standard for PDF encryption](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) (Proteggere i file PDF usando lo standard ISO per la crittografia PDF). Quando si usano entrambe le impostazioni insieme, non è possibile aprire i file con estensione ppdf tramite Esplora file, PowerShell o lo scanner.
 
 Per i documenti di Office e i documenti PDF con etichette assegnate da Secure Islands, è possibile riassegnare etichette di Azure Information Protection a questi documenti usando un mapping definito appositamente. È anche possibile usare questo metodo per riutilizzare le etichette da altre soluzioni quando sono applicate a documenti di Office. 
 
@@ -366,11 +398,9 @@ L'impostazione client avanzata è la seguente:
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette
 
-Questa opzione di configurazione è attualmente in anteprima ed è soggetta a modifiche. Richiede anche la versione di anteprima del client Azure Information Protection.
+Questa configurazione usa più [impostazioni client avanzate](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che devono essere configurate nel portale di Azure. Queste impostazioni sono di anteprima e potrebbero cambiare.
 
-Questa configurazione usa più [impostazioni client avanzate](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che devono essere configurate nel portale di Azure.
-
-Queste impostazioni consentono di rimuovere o sostituire le intestazioni o i piè di pagina dai documenti quando questi contrassegni visivi sono stati applicati da un'altra soluzione di assegnazione etichette. Ad esempio, il piè di pagina precedente contiene il nome di un'etichetta precedente di cui è stata eseguita la migrazione ad Azure Information Protection con un nuovo nome di etichetta e un proprio piè di pagina.
+Le impostazioni consentono di rimuovere o sostituire le intestazioni o i piè di pagina dai documenti quando questi contrassegni visivi sono stati applicati da un'altra soluzione di assegnazione etichette. Ad esempio, il piè di pagina precedente contiene il nome di un'etichetta precedente di cui è stata eseguita la migrazione ad Azure Information Protection con un nuovo nome di etichetta e un proprio piè di pagina.
 
 Quando il client ottiene questa configurazione nei relativi criteri, le intestazioni e i piè di pagina precedenti vengono rimossi o sostituiti quando il documento viene aperto nell'app di Office e al documento vengono applicate le etichette di Azure Information Protection.
 

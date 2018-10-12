@@ -1,10 +1,25 @@
+---
+title: Classe mip Error
+description: Riferimento per la classe mip Error
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: fea8b3724f88a981123032166c6f3b98c8eedd50
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47445870"
+---
 # <a name="class-miperror"></a>Classe mip::Error 
 Classe di base per tutti gli errori che verranno segnalati (generati o restituiti) da MIP SDK.
   
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
- public char const* what() const  |  Ottiene un messaggio di errore cstring.
+ public char const* what() const  |  Ottiene il messaggio di errore.
 public std::shared_ptr<Error> Clone() const  |  Clona l'errore.
  public virtual ErrorType GetErrorType() const  |  Ottiene il tipo di errore.
  public virtual const std::string& GetErrorName() const  |  Ottiene il nome dell'errore.
@@ -14,10 +29,10 @@ public std::shared_ptr<Error> Clone() const  |  Clona l'errore.
 ## <a name="members"></a>Membri
   
 ### <a name="what"></a>what
-Ottiene un messaggio di errore cstring.
+Ottiene il messaggio di errore.
 
   
-**Restituisce**: messaggio di errore cstring
+**Restituisce**: messaggio di errore.
   
 ### <a name="error"></a>Errore
 Clona l'errore.

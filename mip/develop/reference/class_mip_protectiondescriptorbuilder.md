@@ -1,5 +1,20 @@
+---
+title: Classe mip ProtectionDescriptorBuilder
+description: Riferimento per la classe mip ProtectionDescriptorBuilder
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: 42e44cfaf269a43d0210c0c040ea70ccc1fb192e
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446635"
+---
 # <a name="class-mipprotectiondescriptorbuilder"></a>Classe mip::ProtectionDescriptorBuilder 
-Rappresenta un criterio ad hoc associato al contenuto protetto.
+Costruisce un [ProtectionDescriptor](class_mip_protectiondescriptor.md) che descrive la protezione associata a una parte del contenuto.
   
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
@@ -50,7 +65,7 @@ Parametri:
 Imposta un valore che indica se i criteri di protezione consentono l'accesso al contenuto offline.
 
 Parametri:  
-* **value**: valore che indica se il criterio consente l'accesso al contenuto offline
+* **value**: valore che indica se i criteri consentono l'accesso al contenuto offline
 
 
   

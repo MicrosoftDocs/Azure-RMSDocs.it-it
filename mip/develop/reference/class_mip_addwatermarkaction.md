@@ -1,3 +1,18 @@
+---
+title: Classe mip AddWatermarkAction
+description: Riferimento per la classe mip AddWatermarkAction
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: f49bd7aa16ae12aef240d05fff6acf507ddc341d
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446091"
+---
 # <a name="class-mipaddwatermarkaction"></a>Classe mip::AddWatermarkAction 
 Classe di azione che specifica l'aggiunta di una filigrana.
   

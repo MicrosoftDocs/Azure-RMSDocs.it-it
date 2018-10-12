@@ -1,10 +1,25 @@
+---
+title: Classe mip NetworkError
+description: Riferimento per la classe mip NetworkError
+author: BryanLa
+ms.service: information-protection
+ms.topic: reference
+ms.date: 09/27/2018
+ms.author: bryanla
+ms.openlocfilehash: 9033a1a2c2eac34e49a4e4c9d745c34a686da230
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446222"
+---
 # <a name="class-mipnetworkerror"></a>Classe mip::NetworkError 
 Errore di rete. Causato da un comportamento imprevisto quando si effettuano chiamate di rete agli endpoint di servizio.
   
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
- public char const* what() const  |  Ottiene un messaggio di errore cstring.
+ public char const* what() const  |  Ottiene il messaggio di errore.
 public std::shared_ptr<Error> Clone() const  |  Clona l'errore.
  public virtual ErrorType GetErrorType() const  |  Ottiene il tipo di errore.
  public virtual const std::string& GetErrorName() const  |  Ottiene il nome dell'errore.
@@ -14,10 +29,10 @@ public std::shared_ptr<Error> Clone() const  |  Clona l'errore.
 ## <a name="members"></a>Membri
   
 ### <a name="what"></a>what
-Ottiene un messaggio di errore cstring.
+Ottiene il messaggio di errore.
 
   
-**Restituisce**: messaggio di errore cstring
+**Restituisce**: messaggio di errore.
   
 ### <a name="error"></a>Errore
 Clona l'errore.

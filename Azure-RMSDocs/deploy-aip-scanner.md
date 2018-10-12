@@ -4,18 +4,18 @@ description: Istruzioni per installare, configurare ed eseguire lo scanner di Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 09/17/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: c1ad35bde57822460f0f3e7346d05d95647eedd6
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 5a61018b9e93a7a622c288f56110e9d99b30404f
+ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151861"
+ms.lasthandoff: 09/26/2018
+ms.locfileid: "47211310"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -29,7 +29,7 @@ Questo scanner viene eseguito come servizio in Windows Server e consente di indi
 
 - Percorsi UNC delle condivisioni di rete che usano il protocollo SMB (Server Message Block).
 
-- Siti e librerie per SharePoint Server 2016 e SharePoint Server 2013. SharePoint 2010 è supportato anche per i clienti che hanno [esteso il supporto per questa versione di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) e che usano la versione di anteprima dello scanner.
+- Siti e librerie per SharePoint Server 2016 e SharePoint Server 2013. SharePoint 2010 è supportato anche per i clienti che dispongono del [supporto "Extended" per la versione corrente di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 
 Per analizzare ed etichettare i file nei repository cloud, usare [Cloud App Security](https://docs.microsoft.com/cloud-app-security/).
 
@@ -168,7 +168,7 @@ A questo punto si è pronti a specificare gli archivi dati da analizzare.
 
 Usare il cmdlet [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository) per specificare gli archivi dati che devono essere analizzati dallo scanner di Azure Information Protection. È possibile specificare cartelle locali, percorsi UNC e URL di SharePoint Server per siti e librerie di SharePoint. 
 
-Versioni di SharePoint supportate: SharePoint Server 2016 e SharePoint Server 2013. SharePoint Server 2010 è supportato anche per i clienti che hanno [esteso il supporto per questa versione di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) e che usano la versione di anteprima dello scanner.
+Versioni di SharePoint supportate: SharePoint Server 2016 e SharePoint Server 2013. Anche SharePoint Server 2010 è supportato per i clienti che dispongono del [supporto "Extended" per la versione corrente di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 
 1. Dallo stesso computer Windows Server, nella sessione di PowerShell, aggiungere il primo archivio dati eseguendo il comando seguente:
     
@@ -188,43 +188,34 @@ Con la configurazione predefinita dello scanner ora è possibile eseguire la pri
 
 ## <a name="run-a-discovery-cycle-and-view-reports-for-the-scanner"></a>Eseguire un ciclo di individuazione e visualizzare i report per lo scanner
 
-1. Usando **Strumenti di amministrazione** > **Servizi**, avviare il servizio **Azure Information Protection Scanner**.
+1. Nella sessione di PowerShell, riavviare il servizio **Azure Information Protection Scanner** eseguendo il comando seguente:
     
-    Se si possiede la versione di anteprima corrente dello scanner, è possibile eseguire in alternativa [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) nella sessione di PowerShell.
+        Start-AIPScan
 
 2. Attendere che lo scanner completi il proprio ciclo. Quando lo scanner ha eseguito la ricerca per indicizzazione di tutti i file negli archivi dati specificati, il servizio si arresta. Per verificare che il servizio si sia arrestato, usare il registro eventi locale di **applicazioni e servizi** di Windows, **Azure Information Protection**. Cercare l'ID evento informativo **911**.
 
 3. Esaminare i report archiviati in %*localappdata*%\Microsoft\MSIP\Scanner\Reports con formato di file CSV. Con la configurazione predefinita dello scanner, solo i file che soddisfano le condizioni per la classificazione automatica vengono inclusi nei report.
     
+    > [!TIP]
+    > Le informazioni di questi report, attualmente in anteprima, vengono ora inviate ad Azure Information Protection e sono visualizzabili nel portale di Azure. Per altre informazioni, vedere [Reporting per Azure Information Protection](reports-aip.md). 
+        
     Se i risultati non sono quelli previsti, potrebbe essere necessario ottimizzare le condizioni specificate nei criteri di Azure Information Protection. In questo caso, ripetere i passaggi da 1 a 3 finché non si è pronti a modificare la configurazione per applicare la classificazione e, facoltativamente, la protezione. 
-    
-    Per la versione disponibile a livello generale corrente dello scanner: Ogni volta che si ripetono questi passaggi, eseguire per prima cosa il comando seguente di PowerShell nel computer Windows Server:
-  
-        Set-AIPScannerConfiguration -Schedule OneTime
-    
-    Se si possiede la versione di anteprima corrente dello scanner, non eseguire il comando Set-AIPScannerConfiguration.
-  
+
 Quando si è pronti ad etichettare automaticamente i file individuati dallo scanner, passare alla procedura successiva. 
 
 ## <a name="configure-the-scanner-to-apply-classification-and-protection"></a>Configurare lo scanner per applicare la classificazione e la protezione
 
 Per impostazione predefinita, lo scanner viene eseguito una volta e solo ai fini della creazione di report. Per modificare queste impostazioni, eseguire il cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
 
-1. Eseguire uno dei comandi seguenti nel computer Windows Server, nella sessione di PowerShell:
+1. Eseguire il comando seguente nel computer Windows Server, nella sessione di PowerShell:
     
-    Per la versione disponibile a livello generale dello scanner:
-       
-        Set-AIPScannerConfiguration -Enforce On -Schedule Continuous
-    
-    Per la versione di anteprima dello scanner:
-       
         Set-AIPScannerConfiguration -Enforce On -Schedule Always
     
     Esistono altre impostazioni di configurazione che è opportuno modificare. Indicare ad esempio se gli attributi dei file vengono modificati e quali informazioni vengono registrate nei report. Inoltre, se i criteri di Azure Information Protection includono l'impostazione che richiede un messaggio di giustificazione per abbassare il livello di classificazione o rimuovere la protezione, specificare il messaggio usando questo cmdlet. Consultare la [guida online](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters) per altre informazioni sulle singole impostazioni di configurazione. 
 
-2. Usando **Strumenti di amministrazione** > **Servizi**, riavviare il servizio **Azure Information Protection Scanner**.
+2. Riavviare il servizio **Azure Information Protection Scanner** eseguendo il comando seguente:
     
-    Se si possiede la versione di anteprima corrente dello scanner, è possibile eseguire in alternativa [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) nella sessione di PowerShell.
+        Start-AIPScan
 
 3. Come in precedenza, monitorare il log eventi e i report per vedere quali file sono stati etichettati, quale classificazione è stata applicata e se è stata applicata la protezione.
 
@@ -273,25 +264,16 @@ Infine, per i tipi di file rimanenti, lo scanner applica l'etichetta predefinita
 
 Quando lo scanner applica un'etichetta con la protezione, per impostazione predefinita, solo i tipi di file di Office vengono protetti. È possibile modificare questo comportamento in modo che vengano protetti altri tipi di file. Quando tuttavia un'etichetta applica la protezione generica ai documenti, l'estensione del nome file viene modificata in pfile. Inoltre, il file diventa di sola lettura fino a quando non è aperto da un utente autorizzato e salvato nel formato nativo. Anche file di testo e immagini possono modificare la propria estensione del nome file e diventare di sola lettura. 
 
-Per modificare il comportamento predefinito dello scanner, ad esempio per la protezione generica di altri tipi di file, è necessario modificare manualmente il Registro di sistema e specificare i tipi di file aggiuntivi da proteggere. Per informazioni, vedere [Configurazione dell'API file](develop/file-api-configuration.md) nelle linee guida per sviluppatori. Per fare riferimento alla protezione generica, questa documentazione per sviluppatori usa il termine "PFile". Inoltre, specificatamente per lo scanner:
+Per modificare il comportamento predefinito dello scanner, ad esempio per la protezione generica di altri tipi di file, è necessario modificare manualmente il Registro di sistema e specificare i tipi di file aggiuntivi da proteggere. In alternativa, è possibile proteggere tutti i tipi di file specificando il carattere jolly `*`. Per informazioni, vedere [Configurazione dell'API file](develop/file-api-configuration.md) nelle linee guida per sviluppatori. Per fare riferimento alla protezione generica, questa documentazione per sviluppatori usa il termine "PFile". Inoltre, specificatamente per lo scanner:
 
 - Lo scanner ha il proprio comportamento predefinito: solo i formati di file di Office sono protetti per impostazione predefinita. Se il Registro di sistema non viene modificato, tutti gli altri tipi di file non verranno protetti dallo scanner.
 
-- A meno che non si usi la versione di anteprima corrente, è necessario specificare estensioni specifiche e non è possibile usare il carattere jolly `*`. La versione di anteprima dello scanner supporta questo carattere jolly.
 
 ## <a name="when-files-are-rescanned"></a>Ripetizione dell'analisi dei file
 
 Per il primo ciclo di analisi, lo scanner analizza tutti i file negli archivi dati configurati e quindi per le analisi successive, vengono controllati solo i file nuovi o modificati. 
 
-È possibile imporre allo scanner di esaminare nuovamente tutti i file anche eseguendo il comando seguente:
-
-- Per la versione disponibile a livello generale dello scanner:
-    
-    Eseguire [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) con il parametro `-Type` impostato su **Completo**.
-
-- Per la versione di anteprima dello scanner:
-    
-    Eseguire [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) con il parametro `-Reset`. Lo scanner deve essere configurato per una pianificazione manuale, che richiede l'impostazione del parametro `-Schedule` su **Manuale** con [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
+È possibile imporre allo scanner di ripetere l'analisi di tutti i file eseguendo [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) con il parametro `-Reset`. Lo scanner deve essere configurato per una pianificazione manuale, che richiede l'impostazione del parametro `-Schedule` su **Manuale** con [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
 
 È utile verificare nuovamente i file quando si vuole che i report includano tutti i file e questa configurazione viene in genere usata quando lo scanner viene eseguito in modalità di individuazione. Al termine di un'analisi completa, il tipo di analisi diventa automaticamente incrementale in modo che per le analisi successive vengono analizzati solo i file nuovi o modificati.
 
@@ -384,6 +366,8 @@ Altri cmdlet per lo scanner consentono di modificare l'account del servizio e il
 
 - [Get-AIPScannerRepository](/powershell/module/azureinformationprotection/Get-AIPScannerRepository)
 
+- [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
+
 - [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner)
 
 - [Remove-AIPScannerRepository](/powershell/module/azureinformationprotection/Remove-AIPScannerRepository)
@@ -398,14 +382,9 @@ Altri cmdlet per lo scanner consentono di modificare l'account del servizio e il
 
 - [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository)
 
+- [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan)
+
 - [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner)
-
-
-Cmdlet aggiuntivi della versione di anteprima:
-
-- [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus)
-
-- [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) 
 
 - [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner)
 
