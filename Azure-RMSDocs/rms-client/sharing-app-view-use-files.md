@@ -43,7 +43,7 @@ Se si visualizzano due versioni del file, ma con estensioni del nome di file div
 
 Come il file verrà aperto dipende da come è stato protetto; è possibile saperlo esaminando l'estensione del file. In ogni caso, l’apertura del file potrebbe essere controllata e rimane controllata finché è protetto. Inoltre, se il file è stato inviato come allegato di posta elettronica, il mittente potrebbe ricevere una notifica tramite posta elettronica ogni volta che si apre il file.
 
-- **Il file ha estensione del nome di file** *.pfile*
+- **Il file ha estensione del nome di file *.pfile***
 
     Il file è stato protetto in modo generico.
 
