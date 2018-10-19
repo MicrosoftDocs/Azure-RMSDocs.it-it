@@ -8,12 +8,12 @@ ms.date: 08/24/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 6329c9b3316c2d64cb07cfae259998204d04112d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: dae8f654fbb6a5603d0324d474bd1f25e7c36118
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151079"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169771"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
@@ -54,7 +54,7 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
     
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Dall'opzione di menu **CLASSIFICAZIONI** > **Etichette**: nel pannello **Azure Information Protection - Etichette** selezionare l'etichetta che si vuole modificare. 
+2. Dall'opzione di menu **Classificazioni** > **Etichette**: nel pannello **Azure Information Protection - Etichette** selezionare l'etichetta che si vuole modificare. 
 
 3. Nel pannello **Etichetta** individuare la sezione **Configurare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta** e selezionare una delle opzioni seguenti:
     

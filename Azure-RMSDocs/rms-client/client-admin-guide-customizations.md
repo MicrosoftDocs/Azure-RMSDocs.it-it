@@ -4,18 +4,18 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 10/15/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 40415c25befd3eea8d33a2b8572b0d48f7ee918c
-ms.sourcegitcommit: 7d477c418f3e5d8950c73af154c1575c84791ccc
+ms.openlocfilehash: 7657969916f69424a2823cb8b1dd79f9a50b6011
+ms.sourcegitcommit: 283782ee7e3ec566f479c8914eae7bf84d904392
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403098"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49382647"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -29,7 +29,7 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 
 1. Se non è già stato fatto, in una nuova finestra del browser accedere al [portale di Azure](../configure-policy.md#signing-in-to-the-azure-portal) e quindi passare al pannello **Azure Information Protection**.
 
-2. Dall'opzione di menu **CLASSIFICAZIONI** > **Etichette**: selezionare **Criteri**.
+2. Dall'opzione di menu **Classificazioni** > **Etichette**: selezionare **Criteri**.
 
 3. Nel pannello **Azure Information Protection - Criteri** selezionare il menu di scelta rapida (**...**) accanto ai criteri, contenente le impostazioni avanzate. Selezionare quindi **Impostazioni avanzate**.
     
@@ -251,7 +251,7 @@ Come risultato di questa opzione di configurazione, quando il client Azure Infor
 
 Per fare in modo che lo scanner Azure Information Protection usi la nuova impostazione, è necessario riavviare il servizio scanner.
 
-Per altre informazioni sulla crittografia PDF, vedere il post del blog [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/2627570) (Nuovo supporto della crittografia PDF con Microsoft Azure Information Protection).
+Per altre informazioni sulla crittografia PDF, vedere il post del blog [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) (Nuovo supporto della crittografia PDF con Microsoft Azure Information Protection).
 
 ### <a name="to-convert-existing-ppdf-files-to-protected-pdf-files"></a>Per convertire i file con estensione ppdf esistenti in file con estensione pdf protetti
 
@@ -278,8 +278,6 @@ Per usare i comandi di PowerShell per convertire file con estensione ppdf esiste
 3. Rimuovere l'etichetta usando [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) con il parametro *RemoveLabel*. Se si usa l'[impostazione criteri](../configure-policy-settings.md) **Gli utenti devono offrire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione**, è necessario specificare anche il parametro *Giustificazione* con il motivo. Ad esempio: 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
-    
-    Se non è possibile rimuovere l'etichetta perché si usa come [impostazione dei criteri](../configure-policy-settings.md) l'etichettatura obbligatoria (**Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**), applicare come alternativa temporanea un'etichetta diversa.
 
 4. Riapplicare l'etichetta originale, specificando il valore dell'etichetta identificato nel passaggio 1. Ad esempio:
     

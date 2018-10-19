@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e63b98118cda3a927577a90c7c0999d8781f8d93
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: 39c72d332c30ac8e9c1293dedb5ead50203aa941
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47211293"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169992"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -79,7 +79,7 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
 
 4. Quando ci si connette al servizio per la prima volta viene visualizzata automaticamente la pagina **Avvio rapido**. Consultare le risorse suggerite o usare le altre opzioni di menu. Usare la procedura seguente per configurare le etichette selezionabili dagli utenti.
 
-Quando si accede di nuovo al pannello **Azure Information Protection** viene selezionata automaticamente l'opzione **Etichette**, che consente di visualizzare e configurare etichette per tutti gli utenti. È possibile tornare alla pagina **Avvio rapido** selezionandola nel menu **GENERALE**.
+Quando si accede di nuovo al pannello **Azure Information Protection** viene selezionata automaticamente l'opzione **Etichette**, che consente di visualizzare e configurare etichette per tutti gli utenti. È possibile tornare alla pagina **Avvio rapido** selezionandola nel menu **Generale**.
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Come configurare i criteri di Azure Information Protection
 
