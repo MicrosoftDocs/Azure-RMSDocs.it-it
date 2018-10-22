@@ -72,7 +72,7 @@ Per un elenco completo delle estensioni di file supportate dai servizi Rights Ma
 ## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>Per utilizzare i file protetti (ad esempio, modificare e stampare il file)
 Se dopo avere aperto il file protetto si vuole eseguire altre operazioni oltre alla lettura (ad esempio, modifica, copia e stampa), seguire le istruzioni in base all'estensione del nome di file:
 
-- **Il file ha estensione del nome di file *.pfile***
+- **Il file ha estensione del nome di file *.pfile*** 
 
     Salvare il file aperto e assegnargli una nuova estensione del nome di file associata all'applicazione che si desidera utilizzare.
 
