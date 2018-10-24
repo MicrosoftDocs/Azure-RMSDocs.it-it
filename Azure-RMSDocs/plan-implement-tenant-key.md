@@ -4,18 +4,18 @@ description: Informazioni per pianificare e gestire la chiave del tenant di Azur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 10/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 72b2fe408f77742b8ca5f1ba8727e3a065818322
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 42451d8b50b0ad1edb75d767e622e697b12acf90
+ms.sourcegitcommit: 4767afef8fb7b81065a6bf207cd0a5518bf0e97a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151147"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "48907162"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Pianificazione e implementazione della chiave del tenant di Azure Information Protection
 
@@ -106,7 +106,7 @@ Nella tabella seguente sono elencati i prerequisiti per la modalità BYOK.
 
 |Requisito|Altre informazioni|
 |---------------|--------------------|
-|Il tenant di Azure Information Protection deve avere una sottoscrizione di Azure. Se non è disponibile una sottoscrizione, è possibile creare un [account gratuito](https://azure.microsoft.com/pricing/free-trial/). <br /><br /> Per usare una chiave protetta dal modulo di protezione hardware, è necessario avere un piano tariffario Premium di Azure Key Vault.|La sottoscrizione gratuita di Azure, che fornisce l'accesso per configurare Azure Active Directory e i modelli personalizzati di Azure Rights Management (**Accesso ad Azure Active Directory**), non è sufficiente per usare Insieme di credenziali delle chiavi di Azure. Per verificare se la propria sottoscrizione di Azure può essere utilizzata per la modalità BYOK, usare i cmdlet di PowerShell per [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx): <br /><br /> 1. Avviare una sessione di Azure PowerShell con l'opzione **Esegui come amministratore** e accedere come amministratore globale per il tenant di Azure Information Protection con il comando seguente: `Login-AzureRmAccount`<br /><br />2. Digitare il comando seguente e verificare che siano visualizzati valori per il nome e l'ID della sottoscrizione e per l'ID del tenant di Azure Information Protection e che lo stato sia abilitato: `Get-AzureRmSubscription`<br /><br />Se non viene visualizzato alcun valore e viene semplicemente restituito il prompt, non si dispone di una sottoscrizione di Azure che può essere usata per la modalità BYOK. <br /><br />**Nota**: oltre ai prerequisiti per la modalità BYOK, se si esegue la migrazione da AD RMS ad Azure Information Protection passando da una chiave software a una chiave hardware, sarà necessaria almeno la versione 11.62 del firmware Thales.|
+|Il tenant di Azure Information Protection deve avere una sottoscrizione di Azure. Se non è disponibile una sottoscrizione, è possibile creare un [account gratuito](https://azure.microsoft.com/pricing/free-trial/). <br /><br /> Per usare una chiave protetta dal modulo di protezione hardware, è necessario avere un piano tariffario Premium di Azure Key Vault.|La sottoscrizione gratuita di Azure, che fornisce l'accesso per configurare Azure Active Directory e i modelli personalizzati di Azure Rights Management (**Accesso ad Azure Active Directory**), non è sufficiente per usare Insieme di credenziali delle chiavi di Azure. Per verificare se la propria sottoscrizione di Azure può essere utilizzata per la modalità BYOK, usare i cmdlet di PowerShell per [Azure Resource Manager](https://msdn.microsoft.com/library/azure/mt786812\(v=azure.300\).aspx): <br /><br /> 1. Avviare una sessione di Azure PowerShell con l'opzione **Esegui come amministratore** e accedere come amministratore globale per il tenant di Azure Information Protection con il comando seguente: `Login-AzureRmAccount`<br /><br />2. Digitare il comando seguente e verificare che siano visualizzati valori per il nome e l'ID della sottoscrizione e per l'ID del tenant di Azure Information Protection e che lo stato sia abilitato: `Get-AzureRmSubscription`<br /><br />Se non viene visualizzato alcun valore e viene solo restituito il prompt, non si dispone di una sottoscrizione di Azure utilizzabile per la modalità BYOK. <br /><br />**Nota**: oltre ai prerequisiti per la modalità BYOK, se si esegue la migrazione da AD RMS ad Azure Information Protection passando da una chiave software a una chiave hardware, sarà necessaria almeno la versione 11.62 del firmware Thales.|
 |Per usare una chiave protetta dal modulo di protezione hardware creata in locale: <br /><br />- Tutti i prerequisiti elencati per la modalità BYOK in Key Vault. |Vedere [Prerequisiti per la modalità BYOK](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#prerequisites-for-byok) nella documentazione relativa ad Insieme di credenziali delle chiavi di Azure. <br /><br /> **Nota**: oltre ai prerequisiti per la modalità BYOK, se si esegue la migrazione da AD RMS ad Azure Information Protection passando da una chiave software a una chiave hardware, sarà necessaria almeno la versione 11.62 del firmware Thales.|
 |Se l'insieme di credenziali delle chiavi per contenere la chiave del tenant usa gli endpoint servizio di rete virtuale per Azure Key Vault: <br /><br />- Consentire ai servizi Microsoft considerati attendibili di ignorare il firewall.|Per altre informazioni, vedere [Endpoint servizio di rete virtuale per Azure Key Vault](/azure/key-vault/key-vault-overview-vnet-service-endpoints).|
 |Il modulo di amministrazione di Azure Rights Management per Windows PowerShell.|Per le istruzioni di installazione, vedere [Installazione del modulo PowerShell AADRM](./install-powershell.md). <br /><br />Se il modulo Windows PowerShell è stato installato in precedenza, eseguire il comando seguente per verificare che il numero della versione in uso sia almeno **2.9.0.0**: `(Get-Module aadrm -ListAvailable).Version`|
@@ -152,9 +152,24 @@ Per consentire ad Azure Information Protection di usare la chiave, è necessario
 
 Le chiavi archiviate in Key Vault hanno un ID chiave. L'ID chiave è un URL che contiene il nome dell'insieme di credenziali delle chiavi, il contenitore delle chiavi e il nome e la versione della chiave. Ad esempio: **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. È necessario configurare Azure Information Protection per l'uso della chiave specificando l'URL dell'insieme di credenziali delle chiavi.
 
-Affinché Azure Information Protection possa usare la chiave, il servizio Azure Rights Management deve essere autorizzato a usare la chiave nell'insieme di credenziali delle chiavi dell'organizzazione. A tale scopo, l'amministratore dell'insieme di credenziali delle chiavi di Azure usa il cmdlet di PowerShell appropriato [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) e concede le autorizzazioni all'entità servizio Azure Rights Management usando il GUID 00000012-0000-0000-c000-000000000000. Ad esempio:
+Affinché Azure Information Protection possa usare la chiave, il servizio Azure Rights Management deve essere autorizzato a usare la chiave nell'insieme di credenziali delle chiavi dell'organizzazione. A tale scopo, l'amministratore di Azure Key Vault può usare il portale di Azure o Azure PowerShell:
 
-    Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
+Configurazione mediante il portale di Azure:
+
+1. Passare a **Insiemi di credenziali delle chiavi** > **\<*nome dell'insieme di credenziali delle chiavi*>** > **Criteri di accesso** > **Aggiungi nuovo**.
+
+2. Nel pannello **Aggiungi criterio di accesso** selezionare **Azure Information Protection BYOK** dalla casella di riepilogo **Configure from template (optional)** (Configura da modello - Facoltativo) e fare clic su **OK**.
+    
+    Il modello selezionato ha la configurazione seguente:
+    
+    - **Microsoft Rights Management Services** viene assegnato automaticamente per **Selezionare un'entità**.
+    - **Get**, **Decrypt** e **Sign** vengono selezionati automaticamente per le autorizzazioni delle chiavi. 
+
+Configurazione mediante PowerShell:
+
+- Eseguire il cmdlet di PowerShell dell'insieme di credenziali delle chiavi [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) e concedere le autorizzazioni all'entità servizio di Azure Rights Management usando il GUID **00000012-0000-0000-c000-000000000000**. Ad esempio:
+    
+        Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 
 A questo punto è possibile configurare Azure Information Protection per l'uso di questa chiave come chiave del tenant di Azure Information Protection dell'organizzazione. Tramite i cmdlet di Azure RMS, connettersi al servizio Azure Rights Management e accedere:
 

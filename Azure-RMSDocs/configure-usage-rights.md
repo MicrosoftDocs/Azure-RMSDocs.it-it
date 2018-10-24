@@ -4,18 +4,18 @@ description: Informazioni sui diritti specifici usati quando si proteggono i fil
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/18/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 698d92cc38081a8b56f27ede4005cf8b514ed212
-ms.sourcegitcommit: a327dc124974c8b489340993d4b2b364ecf5fec5
+ms.openlocfilehash: ab94d732144613d810c959f7fad0f34a842da9c7
+ms.sourcegitcommit: 76e1b7c0255700813590be62d94b19338bf6c201
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46289278"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48866187"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configurazione dei diritti di utilizzo per Azure Rights Management
 
@@ -94,7 +94,7 @@ Questi modelli predefiniti vengono creati al momento dell'acquisto della sottosc
 
 ## <a name="do-not-forward-option-for-emails"></a>Opzione Non inoltrare per i messaggi di posta elettronica
 
-I client e i servizi di Exchange, ad esempio il client Outlook, l'app Outlook Web Access e le regole del flusso di posta di Exchange, offrono un'opzione aggiuntiva per la protezione dei diritti sulle informazioni relativa ai messaggi di posta elettronica: **Non inoltrare**. 
+I client e i servizi di Exchange, ad esempio il client Outlook, Outlook sul Web, le regole del flusso di posta di Exchange e le azioni DLP per Exchange, offrono un'opzione aggiuntiva per la protezione dei diritti sulle informazioni relativa ai messaggi di posta elettronica: **Non inoltrare**. 
 
 Anche se questa opzione viene visualizzata dagli utenti e dagli amministratori di Exchange come se fosse un modello predefinito di Rights Management selezionabile, l'opzione **Non inoltrare** non è un modello. È per questo motivo che non viene visualizzata nel portale di Azure quando si visualizzano e si gestiscono i modelli di protezione. L'opzione **Non inoltrare** è invece un set di diritti di utilizzo che viene applicato in modo dinamico dagli utenti ai destinatari di posta elettronica.
 
@@ -119,7 +119,7 @@ Un utente vuole inviare per posta elettronica alcune informazioni a utenti speci
 
 Quando Exchange Online usa le nuove funzionalità per Office 365 Message Encryption, diventa disponibile una nuova opzione di posta elettronica: **Encrypt-Only (Solo crittografia)**.
 
-Questa opzione è disponibile per i tenant che usano Exchange Online e può essere selezionata in Outlook sul Web, come opzione di protezione dei diritti aggiuntiva per una regola del flusso di posta elettronica e in Outlook, quando si dispone di Office 365 ProPlus con versione minima [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4). Per altre informazioni, vedere l'annuncio nel post di blog seguente dal team di Office: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018) (Distribuzione di Solo crittografia per Office 365 Message Encryption).
+Questa opzione è disponibile per i tenant che usano Exchange Online e può essere selezionata in Outlook sul Web, come opzione di protezione dei diritti aggiuntiva per una regola del flusso di posta elettronica, come azione DLP di Office 365 e in Outlook, quando si dispone di Office 365 ProPlus con versione minima [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4). Per altre informazioni, vedere l'annuncio nel post di blog seguente dal team di Office: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018) (Distribuzione di Solo crittografia per Office 365 Message Encryption).
 
 Quando questa opzione è selezionata, il messaggio di posta elettronica viene crittografato e i destinatari devono essere autenticati. Quindi, i destinatari hanno tutti i diritti di utilizzo, a eccezione di **Salva con nome, Esporta** e **Controllo completo**. Questa combinazione di diritti di utilizzo implica che i destinatari non hanno restrizioni, ad eccezione del fatto che non possono rimuovere la protezione. Un destinatario può ad esempio, copiare dal messaggio di posta elettronica, stamparlo e inoltrarlo. 
 

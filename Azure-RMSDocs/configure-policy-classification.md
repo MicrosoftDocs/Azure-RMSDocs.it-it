@@ -4,16 +4,16 @@ description: Quando si configurano le condizioni per un'etichetta, è possibile 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/29/2018
+ms.date: 10/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 252b92a7a6ea6b64858acb0e7ace1cf9c56c1f63
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 3e911d8190e524efe56677d6afaec8f679c773b9
+ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148159"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862108"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection
 
@@ -97,7 +97,7 @@ Quando fa clic su **Salva**, le modifiche diventano automaticamente disponibili 
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>Tipi di informazioni riservate che richiedono una versione minima del client
 
-I tipi di informazioni riservate seguenti attualmente richiedono la versione di anteprima del client di Azure Information Protection:
+I tipi di informazioni riservate seguenti richiedono almeno la versione 1.37.19.0 per il client Azure Information Protection:
 
 - **Numero di telefono EU**
 - **Numero di telefono cellulare EU**

@@ -4,24 +4,24 @@ description: Informazioni sulla funzionalità per utenti con privilegi avanzati 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/31/2018
+ms.date: 10/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 762b46ac33b57bd81b5c1ab36d07f4d33305b4c0
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 07b780721bc0f22de6c36d88d98a2c8360af67b8
+ms.sourcegitcommit: f5395541fa3f74839402805dab68d0c2de395249
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150996"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49101835"
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Configurazione degli utenti con privilegi avanzati per Azure Rights Management e servizi di individuazione o ripristino dei dati
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-La funzionalità per utenti con privilegi avanzati del servizio Azure Rights Management di Azure Information Protection garantisce che gli utenti e i servizi autorizzati possano sempre leggere e controllare i dati che Azure Rights Management protegge per l'organizzazione. Se necessario, rimuovere la protezione o modificare la protezione applicata in precedenza. 
+La funzionalità per utenti con privilegi avanzati del servizio Azure Rights Management di Azure Information Protection garantisce che gli utenti e i servizi autorizzati possano sempre leggere e controllare i dati che Azure Rights Management protegge per l'organizzazione. Se necessario, la protezione può essere quindi rimossa o modificata.
 
 Per i documenti e i messaggi di posta elettronica protetti dal tenant Azure Information Protection dell'organizzazione, un utente con privilegi avanzati dispone sempre dei [diritti di utilizzo](configure-usage-rights.md) di Rights Management corrispondenti al controllo completo. Questa possibilità viene definita anche "ragionamento sui dati" e riveste un ruolo di importanza cruciale nel mantenimento del controllo sui dati dell'organizzazione. Ad esempio, utilizzare questa funzionalità per uno qualsiasi dei seguenti scenari:
 
@@ -78,6 +78,23 @@ Se si usano la classificazione e la protezione, è anche possibile usare [Set-AI
 Per altre informazioni su questi cmdlet, vedere [Uso di PowerShell con il client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) nella Guida dell'amministratore del client Azure Information Protection.
 
 > [!NOTE]
-> Il modulo AzureInformationProtection (AIP) sostituisce il modulo di protezione RMS di PowerShell installato con lo strumento di protezione RMS. Entrambi questi moduli si differenziano dal [modulo di PowerShell per Azure Rights Management](administer-powershell.md) e lo integrano. Il modulo AIP supporta Azure Information Protection, il servizio Azure Rights Management (Azure RMS) per Azure Information Protection e Active Directory Rights Management Services (AD RMS).
+> Il modulo AzureInformationProtection è diverso dal [modulo AADRM di PowerShell](administer-powershell.md) per la gestione del servizio Azure Rights Management per Azure Information Protection e lo integra.
 
+### <a name="guidance-for-using-unprotect-rmsfile-for-ediscovery"></a>Linee guida per l'uso di Unprotect-RMSFile per eDiscovery
+
+Benché sia possibile usare il cmdlet Unprotect-RMSFile per decrittografare il contenuto protetto nei file PST, è consigliabile usare questo cmdlet in modo strategico nell'ambito del processo di eDiscovery. L'esecuzione di Unprotect-RMSFile con file di grandi dimensioni in un computer è un'attività che richiede molte risorse (memoria e spazio su disco) e le dimensioni massime del file supportate per questo cmdlet sono 5 GB.
+
+Idealmente, usare [Office 365 eDiscovery](/office365/securitycompliance/ediscovery) per cercare ed estrarre i messaggi di posta elettronica protetti e gli allegati protetti in essi contenuti. La capacità degli utenti con privilegi avanzati viene integrata automaticamente con Exchange Online in modo che eDiscovery nel Centro sicurezza e conformità di Office 365 possa cercare gli elementi crittografati prima di esportare o di decrittografare i messaggi di posta elettronica crittografati in fase di esportazione.
+
+Se non è possibile usare Office 365 eDiscovery, potrebbe essere disponibile un'altra soluzione di eDiscovery in grado di integrarsi con il servizio Azure Rights Management per un'analisi analoga dei dati. In alternativa, se la soluzione di eDiscovery non è in grado di leggere e decrittografare automaticamente il contenuto protetto, è comunque possibile usare questa soluzione in un processo in più passaggi che consente di eseguire Unprotect-RMSFile in modo più efficiente:
+
+1. Esportare il messaggio di posta elettronica in questione in un file PST da Exchange Online o Exchange Server oppure dalla workstation in cui l'utente ha archiviato la posta elettronica.
+
+2. Importare il file PST nello strumento di eDiscovery. Poiché lo strumento non è in grado di leggere il contenuto protetto, è probabile che questi elementi generino errori.
+
+3. Da tutti gli elementi che lo strumento non è riuscito ad aprire, generare un nuovo file PST contenente solo gli elementi protetti. Questo secondo file PST avrà probabilmente dimensioni molto inferiori rispetto al file PST originale.
+
+4. Eseguire Unprotect-RMSFile nel secondo file PST per decrittografare il contenuto di questo file molto più piccolo. Dall'output, importare il file PST decrittografato nello strumento di individuazione.
+
+Per informazioni più dettagliate e altre indicazioni per l'esecuzione di eDiscovery tra le cassette postali e i file PST, vedere il post di blog seguente: [Azure Information Protection and eDiscovery Processes](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216) (Azure Information Protection e processi di eDiscovery).
 

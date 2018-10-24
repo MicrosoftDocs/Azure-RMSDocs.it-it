@@ -4,17 +4,17 @@ description: Eseguire la migrazione di etichette di Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/28/2018
+ms.date: 10/11/2018
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 64063af186f01a5829b7aa668260928e3b13656d
-ms.sourcegitcommit: 304702a3f2f2ab2b32493c4aedeb5ee8424b925c
+ms.openlocfilehash: 075330138910da90049cad3c1ccc74a1a360a218
+ms.sourcegitcommit: 39403f0e9fe5912d467b119ed45da94bccd1cc80
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47415010"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49100643"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Come eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365
 
@@ -93,7 +93,7 @@ Dopo aver verificato che il tenant supporta le etichette di riservatezza nel Cen
 
 2. Nel pannello **Azure Information Protection - Etichettatura unificata** selezionare **Attiva** e seguire le istruzioni online.
 
-Le etichette che eseguono correttamente la migrazione possono ora essere usate dai [client che supportano l'etichettatura unificata](#clients-that-support-unified-labeling) quando vengono pubblicate nel Centro sicurezza e conformità.
+Le etichette di cui è stata eseguita correttamente la migrazione possono ora essere usate dai [client che supportano l'etichettatura unificata](#clients-that-support-unified-labeling). Tuttavia, è prima di tutto necessario pubblicare queste etichette nel Centro sicurezza e conformità.
 
 
 ### <a name="clients-that-support-unified-labeling"></a>Client che supportano l'etichettatura unificata
@@ -107,4 +107,4 @@ I client che attualmente supportano l'etichettatura unificata includono:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sulla configurazione delle etichette sottoposte a migrazione nel Centro sicurezza e conformità di Office 365, vedere il post di blog [Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492) (Annuncio di disponibilità della gestione dell'etichettatura unificata nel Centro sicurezza e conformità).
+Per altre informazioni sulla configurazione e la pubblicazione delle etichette sottoposte a migrazione nel Centro sicurezza e conformità di Office 365, vedere il post di blog [Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492) (Annuncio della disponibilità della gestione dell'etichettatura unificata nel Centro sicurezza e conformità).

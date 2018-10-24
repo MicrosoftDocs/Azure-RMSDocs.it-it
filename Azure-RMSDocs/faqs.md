@@ -4,18 +4,18 @@ description: Alcune domande frequenti su Azure Information Protection e sul rela
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/31/2018
+ms.date: 10/03/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4d991a96dd82bdc27aed036fd05119ba3f7ca1f2
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: e49912fd777a97c51f9ef7b4e7cff5a2aeb2c3ad
+ms.sourcegitcommit: 1cedaa9cefea49775f574f2ede61539bc6f0b813
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151674"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48794328"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
@@ -99,13 +99,17 @@ Informazioni aggiuntive:
 
 - È consigliabile non aggiungere gli account amministratore ai criteri di accesso condizionale poiché questi account non saranno in grado di accedere al pannello di Azure Information Protection nel portale di Azure.
 
+- Se si usa l'autenticazione a più fattori nei criteri di accesso condizionale per la collaborazione con altre organizzazioni (B2B), è necessario usare la [collaborazione B2B di Azure AD](/active-directory/b2b/what-is-b2b) e creare account guest per gli utenti con cui si vuole procedere alla condivisione nell'altra organizzazione.
+
 - Se si usano numerose app cloud per l'accesso condizionale, si potrebbe riscontrare che l'app **Microsoft Azure Information Protection** non viene visualizzata nell'elenco per la selezione. In questo caso, usare la casella di ricerca nella parte superiore dell'elenco. Iniziare a digitare "Microsoft Azure Information Protection" per filtrare le app disponibili. Se si ha una sottoscrizione supportata, l'app **Microsoft Azure Information Protection** verrà quindi visualizzata per la selezione. 
 
 ## <a name="whats-the-difference-between-labels-in-azure-information-protection-and-labels-in-office-365"></a>Qual è la differenza tra le etichette in Azure Information Protection e in Office 365?
 
-Le etichette in Azure Information Protection consentono di applicare criteri di classificazione e protezione coerenti per documenti e messaggi di posta elettronica, sia locali che nel cloud. La classificazione e la protezione sono indipendenti dal percorso in cui è archiviato il contenuto o dalla modalità di spostamento. [Le etichette di sicurezza e conformità di Office 365](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) consentono di classificare documenti e messaggi di posta elettronica per il controllo e la conservazione quando il contenuto è nei servizi di Office 365. 
+Le etichette in Azure Information Protection consentono di applicare criteri di classificazione e protezione coerenti per documenti e messaggi di posta elettronica, sia locali che nel cloud. La classificazione e la protezione sono indipendenti dal percorso in cui è archiviato il contenuto o dalla modalità di spostamento. Fino a poco tempo fa, Office 365 aveva solo [etichette di conservazione](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) che consentivano di classificare documenti e messaggi di posta elettronica per il controllo e la conservazione quando il contenuto si trovava nei servizi di Office 365. 
 
-Attualmente, le etichette vengono applicate e gestite separatamente ma Microsoft sta lavorando verso una strategia completa e unificata per le etichette per più servizi, tra cui Azure Information Protection, Office 365, Microsoft Cloud App Security e Windows Information Protection. È possibile che si sia sentito parlare di questa strategia come "Microsoft Information Protection" (MIP). Lo stesso schema e archivio per le etichette sarà disponibile anche per i fornitori di software. Per altre informazioni, vedere il post di blog, [Consistent labeling and protection policies coming to Office 365 and Azure Information Protection](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Consistent-labeling-and-protection-policies-coming-to-Office-365/ba-p/161553) (Criteri coerenti per etichette e protezione previsti per Office 365 e Azure Information Protection).
+Microsoft si è impegnata per definire una strategia completa e unificata per le etichette per più servizi, tra cui Azure Information Protection, Office 365, Microsoft Cloud App Security e Windows Information Protection.  È possibile che si sia sentito parlare di questa strategia come "Microsoft Information Protection". Lo stesso schema e archivio per le etichette è disponibile anche per i fornitori di software tramite MIP SDK.
+
+Annunciata con Microsoft Ignite 2018, inizierà ora a essere disponibile un'opzione per configurare le **etichette di riservatezza** oltre a quelle di conservazione nel Centro sicurezza e conformità di Office 365. Per altre informazioni sulla disponibilità sempre maggiore di etichette unificate tra diversi servizi, vedere il post di blog [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967) (Annuncio della disponibilità di funzionalità di protezione delle informazioni per la sicurezza dei dati sensibili).
 
 ## <a name="whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner"></a>Qual è la differenza tra Infrastruttura di classificazione file di Windows Server e lo scanner di Azure Information Protection?
 
@@ -117,7 +121,7 @@ Le differenze principali tra queste due soluzioni sono le seguenti:
 
 |Infrastruttura di classificazione file di Windows Server|Scanner di Azure Information Protection|
 |--------------------------------|-------------------------------------|
-|Archivi dati supportati: <br /><br />- Cartelle locali in Windows Server|Archivi dati supportati: <br /><br />- Cartelle locali in Windows Server<br /><br />- Condivisione file di Windows e NAS (Network-Attached Storage)<br /><br />- SharePoint Server 2016 e SharePoint Server 2013. SharePoint Server 2010 è supportato anche per i clienti che hanno [esteso il supporto per questa versione di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010) e che usano la versione di anteprima dello scanner.|
+|Archivi dati supportati: <br /><br />- Cartelle locali in Windows Server|Archivi dati supportati: <br /><br />- Cartelle locali in Windows Server<br /><br />- Condivisione file di Windows e NAS (Network-Attached Storage)<br /><br />- SharePoint Server 2016 e SharePoint Server 2013. Anche SharePoint Server 2010 è supportato per i clienti che dispongono del [supporto "Extended" per questa versione di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).|
 |Modalità operativa: <br /><br />- Tempo reale|Modalità operativa: <br /><br />- Ricerca per indicizzazione sistematica degli archivi dati, con esecuzione una tantum o ripetuta del ciclo|
 |Supporto per i tipi di file: <br /><br />- Per impostazione predefinita, sono protetti tutti i tipi di file <br /><br />- Specifici tipi di file possono essere esclusi dalla protezione modificando il Registro di sistema|Supporto per i tipi di file: <br /><br />- Per impostazione predefinita, sono protetti i tipi di file di Office <br /><br />- Specifici tipi di file possono essere inclusi nella protezione modificando il Registro di sistema|
 

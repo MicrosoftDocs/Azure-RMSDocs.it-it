@@ -4,18 +4,18 @@ description: Dettagli tecnici sui tipi di file supportati, le estensioni di file
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/24/2018
+ms.date: 10/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f9def0ae81a3887f9f6e1c99f7e1f02c54581fdb
-ms.sourcegitcommit: c1274d6d7ab486590dcd2a4e6aca3dcd3d284c1b
+ms.openlocfilehash: 23baab9ba6ab9a7b1d43dd1f5f12947f383d9d28
+ms.sourcegitcommit: d049c23ddd0bb7f4c4d40153c753f178b3a04d43
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47168761"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072477"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guida dell'amministratore: Tipi di file supportati dal client Azure Information Protection
 
@@ -97,7 +97,9 @@ Esistono dimensioni massime dei file supportati dal client Azure Information Pro
     
     - Per proteggere altri tipi di file e aprire questi tipi di file nel visualizzatore Azure Information Protection: le dimensioni massime dei file sono limitate solo dalla memoria e dallo spazio su disco disponibili.
     
-    - Per rimuovere la protezione dai file tramite il cmdlet [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile): le dimensioni massime del file supportate per i file con estensione pst sono 5 GB. Tutti gli altri file sono limitati dalla memoria e dallo spazio su disco disponibili.
+    - Per rimuovere la protezione dai file tramite il cmdlet [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile): le dimensioni massime del file supportate per i file con estensione pst sono 5 GB. Gli altri tipi di file sono limitati solo dalla memoria e dallo spazio disponibile su disco.
+    
+    Suggerimento: se occorre cercare o recuperare elementi protetti in file PST di grandi dimensioni, vedere [Linee guida per l'uso di Unprotect-RMSFile per eDiscovery](../configure-super-users.md#guidance-for-using-unprotect-rmsfile-for-ediscovery).
 
 ### <a name="supported-file-types-for-classification-and-protection"></a>Tipi di file supportati per la classificazione e la protezione
 
@@ -214,6 +216,22 @@ Per impostazione predefinita lo scanner esclude anche gli stessi tipi di file de
 > Se si includono nell'analisi i file con estensione rtf, monitorare attentamente lo scanner. Alcuni file con estensione rtf non possono essere controllati dallo scanner: per questi file l'ispezione non viene completata ed è necessario riavviare il servizio. 
 
 Per impostazione predefinita, lo scanner protegge solo i tipi di file di Office. Per modificare questo comportamento per lo scanner, modificare il Registro di sistema e specificare i tipi di file aggiuntivi da proteggere. Per informazioni, vedere [Configurazione dell'API file](../develop/file-api-configuration.md) nelle linee guida per sviluppatori.
+
+#### <a name="to-scan-zip-files"></a>Per analizzare file ZIP
+
+Lo scanner può controllare i file ZIP quando si seguono queste istruzioni:
+
+1. Per il computer Windows Server che esegue lo scanner, installare [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2).
+
+2. Configurare lo scanner per includere i file ZIP da controllare, come descritto nella sezione precedente.
+
+3. Se i file ZIP devono essere classificati e protetti anziché semplicemente controllati per verificare la presenza di informazioni riservate, aggiungere una voce del Registro di sistema per i file con questa estensione per ottenere la protezione generica (pfile), come descritto nella sezione precedente.
+
+Scenario di esempio dopo avere eseguito questi passaggi: 
+
+Un file denominato **accounts.zip** contiene fogli di calcolo di Excel con i numeri di carta di credito. I criteri di Azure Information Protection includono un'etichetta denominata **Confidential \ Finance**, che è configurata per individuare i numeri di carta di credito e applicare automaticamente l'etichetta con una protezione che limita l'accesso al gruppo Finance. 
+
+Dopo aver controllato il file, lo scanner lo classifica come **Confidential \ Finance**, applica la protezione generica al file in modo che solo i membri dei gruppi Finance possano decomprimerlo e lo rinomina **accounts.zip.pfile**.
 
 ### <a name="files-that-cannot-be-protected-by-default"></a>File che non possono essere protetti per impostazione predefinita
 

@@ -1,0 +1,61 @@
+### YamlMime:YamlDocument
+ms.openlocfilehash: f8fd3bcfdcf627106f00625fad9b7843b0bc619d
+ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
+ms.translationtype: HT
+ms.contentlocale: it-IT
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47446618"
+documentType: LandingData
+title: Documentazione di Microsoft Information Protection SDK
+metadata:
+  title: Documentazione di Microsoft Information Protection SDK - Esercitazioni, informazioni di riferimento sulle API
+  description: Controllo e protezione di messaggi di posta elettronica, documenti e dati sensibili che vengono condivisi fuori dall'azienda. Dalla classificazione semplice alle etichette e alle autorizzazioni incorporate, la protezione dei dati viene ottimizzata in tutte le fasi con Microsoft Information Protection, indipendentemente da dove sono archiviati i dati e da come e con chi vengono condivisi.
+  services: information-protection
+  author: BryanLa
+  manager: mbaldwin
+  layout: LandingPage
+  ms.assetid: 
+  ms.service: information-protection
+  ms.tgt_pltfrm: na
+  ms.devlang: na
+  ms.topic: landing-page
+  ms.date: 09/26/2018
+  ms.author: bryanla
+abstract:
+  description: Controllo e protezione di messaggi di posta elettronica, documenti e dati sensibili che vengono condivisi fuori dall'azienda. Dalla classificazione semplice alle etichette e alle autorizzazioni incorporate, la protezione dei dati viene ottimizzata in tutte le fasi con Microsoft Information Protection, indipendentemente da dove sono archiviati i dati e da come e con chi vengono condivisi.
+  aside:
+    image:
+      alt: Video Panoramica di MIP SDK
+      height: 112
+      src: media/index/tom-mip-sdk.png
+      width: 250
+    title: Panoramica di MIP SDK (15:26)
+    href: https://www.youtube.com/embed/HFXI_pcGGRc
+    width: 250
+sections:
+- title: Guide introduttive di 5 minuti
+  description: Dopo aver completato <a href="setup-configure-mip">installazione e configurazione</a>, vedere le guide introduttive per MIP SDK.
+  items:
+  - type: table
+    style: dataMatrix
+    columns:
+    - image:
+        src: media/index/logo_Cplusplus.svg
+    rows:
+    - title: Inizializzazione delle applicazioni
+      values:
+      - href: quick-app-initialization-cpp
+    - title: Usare l'API File per elencare le etichette di riservatezza
+      values:
+      - href: quick-file-list-labels-cpp
+    - title: Usare l'API File per impostare/recuperare un'etichetta per un file
+      values:
+      - href: quick-file-set-get-label-cpp
+- title: Riferimento
+  items:
+  - type: list
+    style: cards
+    className: cardsD
+    items:
+    - title: Lingue
+      html: <p><a href="reference/mip-sdk-reference">C++</a></p>

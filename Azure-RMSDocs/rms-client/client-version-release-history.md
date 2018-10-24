@@ -4,18 +4,18 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 10/07/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 12d5674fdebd3c857e7458b84f430cf3ee6755c2
-ms.sourcegitcommit: 7d477c418f3e5d8950c73af154c1575c84791ccc
+ms.openlocfilehash: b7aed6f8cdf6cf95b6b7af0bfa06554bde79dc02
+ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47403081"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48862176"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto
 
@@ -44,7 +44,7 @@ Usare le informazioni seguenti per scoprire le novità o le modifiche per una ve
 
 ## <a name="versions-later-than-137190"></a>Versioni successive alla versione 1.37.19.0
 
-Se la versione del client usata è successiva alla 1.37.19.0, si tratta di una build di anteprima per scopi di test e valutazione.
+Se la versione 1 del client usata è successiva alla 1.37.19.0, si tratta di una build di anteprima per scopi di test e valutazione.
 
 **Data di rilascio**: 20/09/2018
 
@@ -52,6 +52,17 @@ Se la versione del client usata è successiva alla 1.37.19.0, si tratta di una b
 
 - Supporto del [reporting centralizzato](../reports-aip.md) per la funzionalità di analisi di Azure Information Protection annunciata in Microsoft Ignite.
 
+**Informazioni aggiuntive:**
+
+Solo per questa versione di anteprima, per usare lo scanner è necessario seguire questi passaggi:
+
+1. Installare la versione GA corrente (1.37.19.0) del client.
+2. Installare e configurare lo scanner.
+3. Avviare lo scanner.
+4. Aggiornare il client Azure Information Protection a questa versione di anteprima.
+5. Avviare lo scanner.
+
+Per istruzioni per l'installazione, la configurazione e l'avvio dello scanner, vedere [Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file](../deploy-aip-scanner.md).
 
 ## <a name="version-137190"></a>Versione 1.37.19.0
 
