@@ -4,17 +4,17 @@ description: Eseguire la migrazione di etichette di Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/11/2018
+ms.date: 10/17/2018
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 075330138910da90049cad3c1ccc74a1a360a218
-ms.sourcegitcommit: 39403f0e9fe5912d467b119ed45da94bccd1cc80
+ms.openlocfilehash: 2d0ed8103ce4e0b42d67ea87b6b464dfb8f04f36
+ms.sourcegitcommit: 283782ee7e3ec566f479c8914eae7bf84d904392
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49100643"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49382613"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Come eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365
 
@@ -26,6 +26,15 @@ ms.locfileid: "49100643"
 Eseguire la migrazione delle etichette se si vuole usarle nel Centro sicurezza e conformità di Office 365, in cui possono essere pubblicate e quindi scaricate dai [client che supportano l'etichettatura unificata](#clients-that-support-unified-labeling). Il client Azure Information Protection continuerà a scaricare le etichette con i rispettivi criteri di Azure Information Protection dal portale di Azure. 
 
 Dopo la migrazione delle etichette è possibile modificarle nel portale di Azure o nel Centro sicurezza e di conformità di Office 365, dove i rispettivi client scaricheranno la stessa modifica.
+
+### <a name="important-information-about-administrative-roles"></a>Informazioni importanti sui ruoli amministrativi
+
+I [ruoli di Azure AD](/active-directory/users-groups-roles/directory-assign-admin-roles) di **Amministratore della sicurezza** e **Amministratore di Information Protection** non sono supportati dalla piattaforma di etichettatura unificata. Se questi ruoli amministrativi vengono usati nell'organizzazione, prima di eseguire la migrazione delle etichette, aggiungere gli utenti con questi ruoli ai gruppi di ruoli **Amministratore di conformità** o **Gestione organizzazione** per il Centro sicurezza e conformità di Office 365. In alternativa, è possibile creare un nuovo gruppo di ruoli per questi utenti e aggiungere i ruoli **Gestione conservazione** o **Configurazione dell'organizzazione** a questo gruppo. Per istruzioni, vedere [Concedere agli utenti l'accesso al Centro sicurezza e conformità di Office 365](https://docs.microsoft.com/office365/securitycompliance/grant-access-to-the-security-and-compliance-center).
+
+Se non si consente l'accesso al Centro sicurezza e conformità a questi utenti usando una di queste configurazioni, gli utenti perderanno l'accesso alle etichette e ai criteri nel portale di Azure dopo la migrazione delle etichette.
+
+Gli amministratori globali per il tenant possono continuare a gestire le etichette e i criteri sia nel portale di Azure che nel Centro sicurezza e conformità dopo la migrazione delle etichette.
+
 
 ## <a name="considerations-for-unified-labels"></a>Considerazioni per le etichette unificate
 
@@ -45,7 +54,7 @@ Prima di eseguire la migrazione delle etichette, prendere nota delle seguenti mo
     
     - Anche i modelli che usano una chiave basata sul cloud e fanno parte di una configurazione di etichetta vengono sottoposti a migrazione con l'etichetta. Gli altri modelli di protezione non vengono sottoposti a migrazione. 
     
-    - Dopo la migrazione di un'etichetta con le impostazioni di protezione basate sul cloud, l'ambito risultante del modello di protezione è l'ambito definito nel portale di Azure (o mediante il modulo PowerShell ADDRM) e quello definito nel Centro sicurezza e conformità. 
+    - Dopo la migrazione di un'etichetta con le impostazioni di protezione basate sul cloud, l'ambito risultante del modello di protezione è l'ambito definito nel portale di Azure (o mediante il modulo PowerShell AADRM) e quello definito nel Centro sicurezza e conformità. 
 
 - Quando si esegue la migrazione delle etichette, i risultati della migrazione visualizzano se un'etichetta è stata **creata**, **aggiornata** o **rinominata** per motivi di duplicazione:
 
@@ -89,6 +98,8 @@ I client Azure Information Protection possono usare queste impostazioni delle et
 
 Dopo aver verificato che il tenant supporta le etichette di riservatezza nel Centro sicurezza e conformità, usare le istruzioni seguenti per eseguire la migrazione del tenant e delle etichette di Azure Information Protection.
 
+È necessario essere un amministratore globale per eseguire la migrazione delle etichette.
+
 1. Aprire una nuova finestra del browser e accedere al portale di Azure usando il collegamento seguente: https://portal.azure.com/?ActivateMigration=true#blade/Microsoft_Azure_InformationProtection/DataClassGroupEditBlade/migrationActivationBlade 
 
 2. Nel pannello **Azure Information Protection - Etichettatura unificata** selezionare **Attiva** e seguire le istruzioni online.
@@ -100,6 +111,8 @@ Le etichette di cui è stata eseguita correttamente la migrazione possono ora es
 
 I client che attualmente supportano l'etichettatura unificata includono:
 
+- Il [client per l'etichettatura unificata di Azure Information Protection per Windows](./rms-client/unifiedlabelingclient-version-release-history.md) (in anteprima)
+
 - App del programma Office Insider. Per altre informazioni, vedere la sezione [Where the feature is available today?](https://support.office.com/article/2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US#bkmk_whereavailable) (Dove è disponibile attualmente la funzionalità?) nella documentazione di Office.
     
 - Client di fornitori di software e sviluppatori che usano il [SDK MIP](https://docs.microsoft.com/azure/information-protection/develop/mip/mip-sdk-reference).
@@ -107,4 +120,6 @@ I client che attualmente supportano l'etichettatura unificata includono:
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sulla configurazione e la pubblicazione delle etichette sottoposte a migrazione nel Centro sicurezza e conformità di Office 365, vedere il post di blog [Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492) (Annuncio della disponibilità della gestione dell'etichettatura unificata nel Centro sicurezza e conformità).
+Per altre informazioni sulle etichette migrate che possono ora essere configurate e pubblicate nel Centro sicurezza e conformità di Office 365, vedere [Panoramica delle etichette di riservatezza](/Office365/SecurityCompliance/sensitivity-labels).
+
+Per leggere il post di blog dell'annuncio: [Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492) (Annuncio della disponibilità della gestione dell'etichettatura unificata nel Centro sicurezza e conformità).

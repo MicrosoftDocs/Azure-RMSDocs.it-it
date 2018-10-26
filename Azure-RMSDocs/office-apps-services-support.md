@@ -4,18 +4,18 @@ description: Informazioni su come le applicazioni di Office, come Word e Outlook
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/08/2018
+ms.date: 10/13/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b17e0f850fbd319011e0a50cccc2b661f773adc8
-ms.sourcegitcommit: 76e1b7c0255700813590be62d94b19338bf6c201
+ms.openlocfilehash: 22df24a7af17dd87dd6f3947e39ea72d7b7b1372
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866170"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169941"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Informazioni su come le applicazioni e i servizi di Office supportano Azure Rights Management 
 
@@ -83,7 +83,7 @@ Se si usa SharePoint Server, è possibile usare questo tipo di protezione IRM di
 > 
 > - Non è possibile usare i modelli di protezione predefiniti o personalizzati gestiti nel portale di Azure. 
 > 
-> - I file con un'estensione di file .ppdf per i file PDF protetti non sono supportati. I file con estensione PDF sono supportati e, una volta scaricati, possono essere aperti tramite un'applicazione PDF che supporta in modo nativo Rights Management. Ad esempio, il client di Azure Information Protection per Windows include un visualizzatore per questi file PDF protetti. Visualizzatori PDF alternativi sono elencati nella [tabella delle applicazioni abilitate per RMS](./requirements-applications.md#rms-enlightened-applications).
+> - I file con un'estensione di file .ppdf per i file PDF protetti non sono supportati. Per altre informazioni sulla visualizzazione dei documenti PDF protetti, vedere [Lettori di file PDF protetti per Microsoft Information Protection](./rms-client/protected-pdf-readers.md).
 > 
 > - La creazione condivisa, ovvero la modifica di un documento da parte di più utenti contemporaneamente, non è supportata. Per modificare un documento in una libreria protetta tramite IRM, è innanzitutto necessario estrarre il documento, scaricarlo e quindi modificarlo nell'applicazione Office. Di conseguenza, solo un utente alla volta può modificare il documento.
 

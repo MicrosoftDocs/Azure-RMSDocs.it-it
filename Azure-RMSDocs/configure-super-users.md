@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 07b780721bc0f22de6c36d88d98a2c8360af67b8
-ms.sourcegitcommit: f5395541fa3f74839402805dab68d0c2de395249
+ms.openlocfilehash: c4b4df01be10ce033dd7369e71420e949750e667
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49101835"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169908"
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Configurazione degli utenti con privilegi avanzati per Azure Rights Management e servizi di individuazione o ripristino dei dati
 
@@ -96,5 +96,5 @@ Se non è possibile usare Office 365 eDiscovery, potrebbe essere disponibile un'
 
 4. Eseguire Unprotect-RMSFile nel secondo file PST per decrittografare il contenuto di questo file molto più piccolo. Dall'output, importare il file PST decrittografato nello strumento di individuazione.
 
-Per informazioni più dettagliate e altre indicazioni per l'esecuzione di eDiscovery tra le cassette postali e i file PST, vedere il post di blog seguente: [Azure Information Protection and eDiscovery Processes](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216) (Azure Information Protection e processi di eDiscovery).
+Per informazioni più dettagliate e altre indicazioni per l'esecuzione di eDiscovery su cassette postali e file PST, vedere il post di blog seguente: [Azure Information Protection and eDiscovery Processes](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-and-eDiscovery-Processes/ba-p/270216) (Azure Information Protection e processi di eDiscovery).
 
