@@ -4,16 +4,16 @@ description: Quando si assegna un'etichetta a un documento o a un messaggio di p
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/10/2018
+ms.date: 10/16/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 2b7b94c7e53cd59a72602a2b3076eaefbc49e2ef
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: dbc63a0ddca9e7583693219103268048b524121c
+ms.sourcegitcommit: 6a732226a3c97fc06fcf815fbbb24a2e2faae209
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148869"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49358976"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
@@ -32,6 +32,12 @@ Altre informazioni su questi contrassegni visivi:
     - PowerPoint: le filigrane vengono applicate alla diapositiva master, come immagine di sfondo. Nella scheda **Visualizza**, **Schema diapositiva**, assicurarsi che la casella di controllo **Nascondi grafica di sfondo** non sia selezionata.
     
     - Sono supportate più righe di testo.
+
+- Lunghezze massime delle stringhe:
+    
+    - La lunghezza massima della stringa che è possibile immettere per le intestazioni e i piè di pagina è 1024 caratteri. Excel ha tuttavia un limite totale di 255 caratteri per le intestazioni e i piè di pagina. Quando si immette una stringa lunga per le intestazioni e i piè di pagina, in Excel questo testo può essere troncato a 255 caratteri o meno.
+    
+    - La lunghezza massima della stringa delle filigrane che è possibile immettere è di 255 caratteri.
 
 - È possibile specificare una stringa di testo o usare [variabili](#using-variables-in-the-text-string) per creare dinamicamente la stringa di testo quando viene applicata l'intestazione, il piè di pagina o la filigrana.
 
@@ -59,7 +65,7 @@ Seguire le istruzioni seguenti per configurare i contrassegni visivi per un'etic
     
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Dall'opzione di menu **CLASSIFICAZIONI** > **Etichette**: nel pannello **Azure Information Protection - Etichette** selezionare l'etichetta che contiene i contrassegni visivi da aggiungere o modificare.
+2. Dall'opzione di menu **Classificazioni** > **Etichette**: nel pannello **Azure Information Protection - Etichette** selezionare l'etichetta che contiene i contrassegni visivi da aggiungere o modificare.
 
 3. Nel pannello **Etichetta**, nella sezione **Configurare il contrassegno visivo (ad esempio intestazione o piè di pagina)**, configurare le impostazioni per i contrassegni visivi desiderati e quindi fare clic su **Salva**:
     

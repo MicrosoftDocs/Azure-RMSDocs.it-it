@@ -5,15 +5,15 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 04/30/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
-ms.openlocfilehash: 8ec20dd43e2be245eba01d0f3f93aee062c9e0f6
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: a5e5e50f5271476c3690280cbe026be9ada7ceb2
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42806183"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49170247"
 ---
 # <a name="add-or-remove-a-label-to-or-from-an-azure-information-protection-policy"></a>Aggiungere o rimuovere un'etichetta a o da un criterio di Azure Information Protection
 
@@ -33,7 +33,7 @@ Se è necessario creare un criterio con ambito in modo che l'etichetta si applic
     
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Dall'opzione di menu **CLASSIFICAZIONI** > **Criteri**: nel pannello **Azure Information Protection** - **Criteri** selezionare **Globale** se l'etichetta da aggiungere o rimuovere si applica a tutti gli utenti.
+2. Dall'opzione di menu **Classificazioni** > **Criteri**: nel pannello **Azure Information Protection** - **Criteri** selezionare **Globale** se l'etichetta da aggiungere o rimuovere si applica a tutti gli utenti.
 
     Se l'etichetta da aggiungere o rimuovere si applica a un sottoinsieme di utenti, selezionare invece il criterio con ambito.
 

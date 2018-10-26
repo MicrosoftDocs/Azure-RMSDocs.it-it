@@ -4,18 +4,18 @@ description: Istruzioni e informazioni per gli amministratori per la distribuzio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/21/2018
+ms.date: 10/17/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d8818ff71acbd338ebb4959f9eb3ef617655b25d
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 2b6e3a40f7faab35053c1bd3146bfc08767e0066
+ms.sourcegitcommit: 6d4792755226a61d59e79fd8795a9b0f653770bb
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149277"
+ms.lasthandoff: 10/17/2018
+ms.locfileid: "49367006"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guida dell'amministratore: Installare il client Azure Information Protection per gli utenti
 
@@ -57,9 +57,9 @@ Verificare quindi gli altri prerequisiti che possono essere necessari per il cli
     
     L'installazione del client non verifica il rispetto di questo prerequisito, che è tuttavia necessario perché il client di Azure Information Protection possa classificare e proteggere i file PDF.
 
-- Non disabilitare il componente aggiuntivo **Microsoft Azure Information Protection** per le applicazioni di Office
+- Configurazione dei criteri di gruppo per **Elenco dei componenti aggiuntivi gestiti**
     
-    Se è stata configurata l'impostazione criteri di gruppo **Elenco dei componenti aggiuntivi gestiti**, includere il componente aggiuntivo Microsoft Azure Information Protection per le applicazioni Office specificando i seguenti identificatori ProgID per Azure Information Protection e impostare l'opzione su **1: The add-in is always enabled** (1: Sempre attivato).
+    Per Office 2013 e versioni successive, configurare l'impostazione dei criteri di gruppo **Elenco dei componenti aggiuntivi gestiti** e aggiungere il componente aggiuntivo **Microsoft Azure Information Protection** per le applicazioni di Office. Specificare gli identificatori seguenti a livello di codice (ProgID) per Azure Information Protection e impostare l'opzione su **1: The add-in is always enabled** (1: Sempre attivato).
     
     - Per Outlook: `MSIP.OutlookAddin`
     
@@ -69,9 +69,9 @@ Verificare quindi gli altri prerequisiti che possono essere necessari per il cli
     
     - Per PowerPoint: `MSIP.PowerPointAddin`
     
-    Se l'impostazione criteri di gruppo **Elenco dei componenti aggiuntivi gestiti** non è stata configurata, può risultare necessario configurarla quando si ricevono report indicanti che il componente aggiuntivo Microsoft Azure Information Protection sta per essere disattivato. Quando questo componente aggiuntivo viene disattivato, gli utenti non visualizzano la barra di Azure Information Protection nell'applicazione di Office.
+    Se non si configura questa impostazione, è possibile che il componente aggiuntivo Microsoft Azure Information Protection venga disabilitato e gli utenti non potranno assegnare etichette a documenti e messaggi di posta elettronica nella propria applicazione Office.
     
-    Per altre informazioni su questa impostazione criteri di gruppo, vedere [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) (Nessun componente aggiuntivo caricato a causa di impostazioni criteri di gruppo per Office 2013 e Office 2016).
+    Per altre informazioni sulla configurazione di questa impostazione dei criteri di gruppo, vedere [System Administrator control over add-ins](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) (Controllo dell'amministratore sui componenti aggiuntivi) nella documentazione di Office.
 
 > [!IMPORTANT]
 > L'installazione del client Azure Information Protection richiede autorizzazioni amministrative locali.

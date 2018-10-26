@@ -4,19 +4,19 @@ description: Come usare il reporting centralizzato per monitorare l'adozione del
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/27/2018
+ms.date: 10/15/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: cf951bba3cc74a82e31841986dde9e75ec34a630
-ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
+ms.openlocfilehash: 424be5910d6a4498bc9d2684888cd2bf9af010af
+ms.sourcegitcommit: 26e1ccdd0c4339a51ec7812082b399f13ef73b2b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862125"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49324889"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -90,7 +90,7 @@ Per visualizzare i report di Azure Information Protection e creare report person
     
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
     
-2. Trovare le opzioni del menu **Gestisci** e selezionare **Configura le analisi (anteprima)**.
+2. Individuare le opzioni del menu **Gestisci** e selezionare **Configura le analisi (anteprima)**.
 
 3. Nel pannello **Log Analytics di Azure Information Protection** viene visualizzato un elenco delle eventuali aree di lavoro di Log Analytics di proprietà del tenant. Eseguire una delle operazioni seguenti:
     
@@ -104,11 +104,11 @@ Quando viene completata la configurazione dell'area di lavoro si è pronti per v
 
 ## <a name="how-to-view-the-reports"></a>Come visualizzare i report
 
-Nel pannello Azure Information Protection trovare le opzioni di menu **Dashboard (anteprima)** e scegliere una delle opzioni seguenti:
+Nel pannello Azure Information Protection trovare le opzioni del menu **Dashboard** e scegliere una delle opzioni seguenti:
 
-- **Report di utilizzo**: usare questo report per vedere come vengono usate le etichette. 
+- **Report di utilizzo (anteprima)**: usare questo report per vedere come vengono usate le etichette. 
 
-- **Individuazione dati**: usare questo report per visualizzare informazioni sui file rilevati dagli scanner.
+- **Individuazione dati (anteprima)**: usare questo report per visualizzare informazioni sui file rilevati dagli scanner.
 
 ## <a name="how-to-modify-the-reports"></a>Come modificare i report
 
@@ -116,6 +116,8 @@ Selezionare l'icona della query nel dashboard per aprire un pannello **Ricerca l
 
 ![Icona di Log Analytics per personalizzare i report di Azure Information Protection](./media/log-analytics-icon.png)
 
+
+I dati registrati per Azure Information Protection vengono archiviati nella tabella seguente: **InformationProtectionLogs_CL**
 
 ## <a name="next-steps"></a>Passaggi successivi
 Dopo aver esaminato le informazioni nei report, si potrebbe decidere di apportare modifiche ai criteri di Azure Information Protection. Per istruzioni, vedere [Configurazione dei criteri di Azure Information Protection](configure-policy.md).

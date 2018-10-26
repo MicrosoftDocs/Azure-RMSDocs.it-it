@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 867fd325b5c41ce500689d92868ca96c88ceb9da
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 71444804ab21dfbe09e0cf13ab1b75425f7a84d0
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149294"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49169856"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurazione e gestione dei modelli per Azure Information Protection
 
@@ -25,11 +25,11 @@ I modelli di protezione, noti anche come modelli di Rights Management, sono un r
 
 **Se si ha una sottoscrizione che include la classificazione, l'etichettatura e la protezione (Azure Information Protection P1 o P2):**
 
-- I modelli che non sono integrati con le etichette per il tenant vengono visualizzati nella sezione **Modelli di protezione** dopo le etichette nel pannello **Azure Information Protection - Etichette**. Per spostarsi in questo pannello, selezionare l'opzione di menu **CLASSIFICAZIONI** > **Etichette**. È possibile convertire i modelli in etichette o collegarsi a essi quando si configura la protezione per le etichette. 
+- I modelli che non sono integrati con le etichette per il tenant vengono visualizzati nella sezione **Modelli di protezione** dopo le etichette nel pannello **Azure Information Protection - Etichette**. Per spostarsi in questo pannello, selezionare l'opzione di menu **Classificazioni** > **Etichette**. È possibile convertire i modelli in etichette o collegarsi a essi quando si configura la protezione per le etichette. 
 
 **Se si ha una sottoscrizione che include solo la protezione (una sottoscrizione Office 365 con il servizio Azure Rights Management):**
 
-- I modelli per il tenant vengono visualizzati nella sezione **Modelli di protezione** del pannello **Azure Information Protection - Etichette**. Per spostarsi in questo pannello, selezionare l'opzione di menu **CLASSIFICAZIONI** > **Etichette**. Non viene visualizzata alcuna etichetta. Sono visualizzate anche le impostazioni di configurazione specifiche per la classificazione e assegnazione di etichette, ma tali impostazioni non hanno alcun effetto sui modelli o non possono essere configurate. 
+- I modelli per il tenant vengono visualizzati nella sezione **Modelli di protezione** del pannello **Azure Information Protection - Etichette**. Per spostarsi in questo pannello, selezionare l'opzione di menu **Classificazioni** > **Etichette**. Non viene visualizzata alcuna etichetta. Sono visualizzate anche le impostazioni di configurazione specifiche per la classificazione e assegnazione di etichette, ma tali impostazioni non hanno alcun effetto sui modelli o non possono essere configurate. 
 
 >[!NOTE]
 >In alcuni servizi e applicazioni, possono essere visualizzati i modelli [Non inoltrare](configure-usage-rights.md#do-not-forward-option-for-emails) ed [Encrypt-Only](configure-usage-rights.md#encrypt-only-option-for-emails) (Solo crittografia) o **Crittografa**. Questi non sono modelli che è possibile modificare o eliminare, ma opzioni disponibili per impostazione predefinita con il servizio Exchange.
@@ -99,7 +99,7 @@ Prima di modificare i modelli o convertirli in etichette, assicurarsi di essere 
     
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Dall'opzione di menu **CLASSIFICAZIONI** > **Etichette**: nel pannello **Azure Information Protection - Etichette** espandere **Modelli di protezione** e quindi individuare il modello che si vuole configurare.
+2. Dall'opzione di menu **Classificazioni** > **Etichette**: nel pannello **Azure Information Protection - Etichette** espandere **Modelli di protezione** e quindi individuare il modello che si vuole configurare.
     
 3. Selezionare il modello e, se necessario, modificare il nome del modello e la descrizione nel pannello **Etichetta** modificando **Nome visualizzato dell'etichetta** e **Descrizione**. Selezionare quindi **Protezione** con il valore **Azure (cloud key)** (Azure - Chiave cloud) per aprire il pannello **Protezione**.
 
@@ -136,7 +136,7 @@ Quando si converte un modello in etichetta:
 
 Quando si crea una nuova etichetta con l'impostazione di protezione **Azure (chiave cloud)** viene creato un nuovo modello personalizzato, al quale possono accedere i servizi e le applicazioni che si integrano con i modelli di Rights Management.
 
-1. Dall'opzione di menu **CLASSIFICAZIONI** > **Etichette**: nel pannello **Azure Information Protection - Etichette** selezionare **Aggiungi una nuova etichetta**.
+1. Dall'opzione di menu **Classificazioni** > **Etichette**: nel pannello **Azure Information Protection - Etichette** selezionare **Aggiungi una nuova etichetta**.
 
 2. Nel pannello **Etichetta** mantenere l'impostazione predefinita**Abilitata**: **Sì** e quindi immettere quindi un nome di etichetta e una descrizione per il nome del modello e la descrizione.
 

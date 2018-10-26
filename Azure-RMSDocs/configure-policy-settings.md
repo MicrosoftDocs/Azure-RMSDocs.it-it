@@ -4,16 +4,16 @@ description: Configurare le impostazioni nei criteri di Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/01/2018
+ms.date: 10/16/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: eb2f539486464d93e99f8485fc8d0812f9a7953d
-ms.sourcegitcommit: 4e2493d7856dc35bb3f5869fff1276c98bf88192
+ms.openlocfilehash: 03736896f73fc83f699191677846e757eaf17be7
+ms.sourcegitcommit: d6c29e0d23c079045f9a9a2a270cf3cf22d628d5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864116"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336460"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Come configurare le impostazioni dei criteri per Azure Information Protection
 
@@ -31,7 +31,7 @@ Per configurare queste impostazioni:
     
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Dall'opzione di menu **CLASSIFICAZIONI** > **Criteri**: nel pannello **Azure Information Protection - Criteri** selezionare **Globale** se le impostazioni da configurare si applicheranno a tutti gli utenti.
+2. Dall'opzione di menu **Classificazioni** > **Criteri**: nel pannello **Azure Information Protection - Criteri** selezionare **Globale** se le impostazioni da configurare si applicheranno a tutti gli utenti.
     
     Se le impostazioni da configurare si trovano in un [criterio con ambito](configure-policy-scope.md) per essere applicate solo a utenti selezionati, selezionare invece il criterio con ambito.
 
@@ -44,6 +44,8 @@ Per configurare queste impostazioni:
         Se al momento del salvataggio di un documento o dell'invio di un messaggio di posta elettronica non è assegnata un'etichetta, viene chiesto all'utente di selezionarne una. Ad esempio:
         
         ![Prompt di Azure Information Protection se è impostata l'assegnazione di etichette](./media/info-protect-enforce-labelv2.png)
+        
+        Questa opzione non viene applicata quando si rimuove un'etichetta con il cmdlet [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) di PowerShell con il parametro *RemoveLabel*.
         
     - **Users must provide justification to set a lower classification label, remove a label, or remove protection** (Gli utenti devono specificare una giustificazione per impostare un'etichetta di classificazione inferiore, rimuovere un'etichetta o rimuovere la protezione): quando questa opzione viene impostata su **On** (Attiva) e l'utente esegue una qualsiasi di queste azioni, ad esempio modifica l'etichetta **Public** in **Personal**, viene chiesto di specificare una spiegazione per questa azione. L'utente può ad esempio spiegare che il documento non contiene informazioni riservate. L'azione e la relativa giustificazione vengono registrate nel registro eventi di Windows locale: **Applicazioni e servizi** > **Azure Information Protection**.  
         

@@ -5,15 +5,15 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 04/30/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: 01ea3e3e1838bf5a6eb16db579e3a7a60a94b430
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: c118abdf0f0b659b9ae330f44617901f8d11c300
+ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42803177"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49170262"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Come configurare etichette e modelli per varie lingue in Azure Information Protection
 
@@ -43,7 +43,7 @@ Selezionare le lingue che corrispondono alle impostazioni lingua degli utenti pe
     
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Dall'opzione di menu **GESTISCI** > **Lingue**: nel pannello **Azure Information Protection - Lingue** selezionare **Aggiungi una nuova lingua per la conversione**. Selezionare le lingue da aggiungere, quindi scegliere **OK**. È possibile digitare il nome della lingua nella casella di ricerca o scorrere l'elenco delle lingue disponibili.
+2. Dall'opzione di menu **Gestisci** > **Lingue**: nel pannello **Azure Information Protection - Lingue** selezionare **Aggiungi una nuova lingua per la conversione**. Selezionare le lingue da aggiungere, quindi scegliere **OK**. È possibile digitare il nome della lingua nella casella di ricerca o scorrere l'elenco delle lingue disponibili.
 
 3. Le lingue selezionate vengono visualizzate nel pannello **Azure Information Protection - Lingue**:
     
