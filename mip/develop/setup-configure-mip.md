@@ -6,38 +6,32 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: c889c736b6e67ef3c581ee1acaa3c04138773d20
-ms.sourcegitcommit: e70bb1a02e96d701fd5ae2a25536fa485bbf2e87
+ms.openlocfilehash: 430e130a5ba2026c0a3c69a59dddd6f9d6b4e8f0
+ms.sourcegitcommit: cc65c3851d4b8169a1a62c83afaf0f75402f7631
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48862142"
+ms.lasthandoff: 10/20/2018
+ms.locfileid: "49476205"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installazione e configurazione di Microsoft Information Protection (MIP) SDK 
 
 Gli articoli dedicati a guide introduttive ed esercitazioni sono incentrati sulla creazione di applicazioni che usano le librerie e le API di MIP SDK. Questo articolo illustra come installare e configurare l'abbonamento a Office 365 e una workstation client, in preparazione per l'uso dell'SDK.
 
+MIP SDK è supportato nelle piattaforme seguenti:  
+
+[!INCLUDE [MIP SDK platform support](../include/mip-sdk-platform-support.md)]
+
 Assicurarsi di consultare gli argomenti seguenti prima di iniziare:
 
-- [Che cos'è il centro Conformità e sicurezza di Office 365?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
+- [Che cos'è il Centro conformità e sicurezza di Office 365?](https://docs.microsoft.com/office365/securitycompliance/security-and-compliance)
 - [Che cos'è Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection)
 - [Come funziona la protezione in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
-
-MIP SDK è supportato nelle piattaforme seguenti:
-
-| Sistema operativo | Versioni |  
-|------------------|----------|
-| Ubuntu  |  16.04 |
-| RedHat Enterprise Linux | 7 con devtoolset-7 |
-| Debian  | 9 |
-| macOS   | High Sierra e versioni successive |
-| Windows | Tutte le versioni supportate, a 32 bit e a 64 bit |
 
 ## <a name="sign-up-for-an-office-365-subscription"></a>Iscriversi per un abbonamento a Office 365
 
 Molti degli esempi dell'SDK richiedono l'accesso a un abbonamento a Office 365. Se non è già stato fatto, assicurarsi di iscriversi per uno dei tipi di abbonamento seguenti:
 
-| Name | Iscrizione |
+| Nome | Iscrizione |
 |------|---------|
 | Office 365 Enterprise E3 - Versione di valutazione (versione di valutazione gratuita di 30 giorni) | https://go.microsoft.com/fwlink/p/?LinkID=403802 |
 | Office 365 Enterprise E3 o E5 | https://products.office.com/business/office-365-enterprise-e3-business-software |
