@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: conceptual
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: d7077678ba336b031f7a8f812a3c4e90d8c5b05a
-ms.sourcegitcommit: d677088db8588fb2cc4a5d7dd296e76d0d9a2e9c
+ms.openlocfilehash: 35c0fb8eb358c5872ab378755d303425cc8e80a4
+ms.sourcegitcommit: 2c4e72120213407516a49286368f9b2860505f56
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251710"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50236816"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-observers"></a>Microsoft Information Protection SDK - Osservatori dell'API Protezione
 
@@ -25,7 +25,7 @@ Al termine di un'operazione asincrona, viene chiamata la funzione membro `OnXxx(
 
 Gli esempi seguenti illustrano il modello promise/future, usato anche dagli esempi dell'SDK, e possono essere estesi per implementare il comportamento di callback desiderato. 
 
-## <a name="protection-protection-observer-implementation"></a>Implementazione degli osservatori di protezione
+## <a name="protectionprofile-observer-implementation"></a>Implementazione dell'osservatore ProtectionProfile
 
 Nell'esempio seguente è stata creata una classe `ProtectionProfileObserverImpl` derivata da `mip::ProtectionProfile::Observer`. Le funzioni membro sono state sottoposte a override per sfruttare il modello promise/future usato in tutti gli esempi.
 

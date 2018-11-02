@@ -4,18 +4,18 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/18/2018
+ms.date: 10/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ccf6468ff1cfb2ee786e1f1bef95c9c07f39afe
-ms.sourcegitcommit: 00e508f97c9191035763384959a8b8fa9f742d4c
+ms.openlocfilehash: b05b41b802b54d874d13dcf13f541374d4150564
+ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49399910"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50751254"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto
 
@@ -103,6 +103,8 @@ Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
     
     - SharePoint Server 2010 è supportato per i clienti che dispongono del [supporto "Extended" per la versione corrente di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
     
+- Supporto del nuovo pannello **Azure Information Protection - Nodi (anteprima)** nel portale di Azure, che consente di gestire gli scanner da una posizione centrale. Le informazioni dagli scanner distribuiti con connettività ad Azure vengono aggiornate ogni cinque minuti. Da questo pannello è possibile avviare lo scanner per una singola analisi, rianalizzare tutti i file, controllare lo stato di uno scanner e visualizzare la velocità di scansione.
+
 **Correzioni**
 
 - Per lo scanner di Azure Information Protection:
@@ -111,7 +113,7 @@ Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
     
     - I report dello scanner includono "Autore ultima modifica" per i documenti di Office.
     
-    - Ora è possibile proteggere tutti i tipi di file usando il carattere jolly `*` quando si modifica il Registro di sistema come descritto nelle istruzioni di [Configurazione dell'API file](../develop/file-api-configuration.md).
+    - Ora è possibile proteggere tutti i tipi di file usando il carattere jolly `*` quando si modifica il Registro di sistema come descritto nella sezione [Modifica del Registro di sistema per lo scanner](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner).
 
 - Quando si applica la classificazione e la protezione mediante PowerShell o lo scanner, i metadati del documento di Office non vengono rimossi o crittografati.
 

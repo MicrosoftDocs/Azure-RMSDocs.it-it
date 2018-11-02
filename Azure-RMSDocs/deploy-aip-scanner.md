@@ -4,18 +4,18 @@ description: Istruzioni per installare, configurare ed eseguire lo scanner di Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/24/2018
+ms.date: 10/31/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 315c1e04d6d941643ee6625053b1cae8bd08b292
-ms.sourcegitcommit: 51c99ea4c98b867cde964f51c35450eaa22fac27
+ms.openlocfilehash: 47a8633852139bf0a84e6c55321c69b1af2c2892
+ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49991378"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50751288"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -51,7 +51,7 @@ Si noti che lo scanner non individua e non applica etichette in tempo reale. Eff
 ## <a name="prerequisites-for-the-azure-information-protection-scanner"></a>Prerequisiti per lo scanner di Azure Information Protection
 Prima di installare lo scanner di Azure Information Protection, verificare che i requisiti seguenti siano soddisfatti.
 
-|Requisito|Ulteriori informazioni|
+|Requisito|Altre informazioni|
 |---------------|--------------------|
 |Computer Windows Server per eseguire il servizio scanner:<br /><br />- 4 processori core<br /><br />- 4 GB di RAM<br /><br />- 10 GB di spazio libero (media) per i file temporanei|Windows Server 2016 o Windows Server 2012 R2. <br /><br />Nota: per scopi di test o valutazione in un ambiente non di produzione, è possibile usare un sistema operativo client Windows [supportato dal client di Azure Information Protection](requirements.md#client-devices).<br /><br />Il computer può essere un computer fisico o virtuale con una connessione di rete veloce e affidabile agli archivi dati da analizzare.<br /><br /> Lo scanner richiede spazio su disco sufficiente a creare i file temporanei per ogni file analizzato, quattro file per core. Lo spazio su disco consigliato di 10 GB consente a 4 processori core di analizzare 16 file, ognuno con una dimensione di 625 MB. <br /><br />Verificare che il computer abbia la [connettività Internet](requirements.md#firewalls-and-network-infrastructure) necessaria per Azure Information Protection. Se la connettività Internet non è possibile a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).|
 |SQL Server per archiviare la configurazione dello scanner:<br /><br />- Istanza locale o remota<br /><br />- Ruolo Sysadmin per installare lo scanner|SQL Server 2012 è la versione minima per le edizioni seguenti:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Se si installano più istanze dello scanner, ognuna di esse richiede la propria istanza di SQL Server.<br /><br />Quando si installa lo scanner e l'account ha il ruolo Sysadmin, il processo di installazione crea automaticamente il database AzInfoProtectionScanner e concede il ruolo db_owner necessario all'account del servizio che esegue lo scanner.  Se non è possibile ricevere il ruolo Sysadmin o se l'organizzazione richiede che i database vengano creati e configurati manualmente, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).|
@@ -124,7 +124,7 @@ Se i criteri dell'organizzazione non consentono il diritto **Log on locally** (A
     Install-AIPScanner -SqlServerInstance <database name>
     ```
     
-    Di seguito sono riportati alcuni esempi.
+    Esempi:
     
     Per un'istanza predefinita: `Install-AIPScanner -SqlServerInstance SQLSERVER1`
     
@@ -174,7 +174,7 @@ Versioni di SharePoint supportate: SharePoint Server 2016 e SharePoint Server 20
     
         Add-AIPScannerRepository -Path <path>
     
-    Ad esempio: `Add-AIPScannerRepository -Path \\NAS\Documents`
+    ad esempio `Add-AIPScannerRepository -Path \\NAS\Documents`
     
     Per altri esempi, vedere la [guida online](/powershell/module/azureinformationprotection/Add-AIPScannerRepository#examples) per questo cmdlet.
 
@@ -191,13 +191,23 @@ Con la configurazione predefinita dello scanner ora è possibile eseguire la pri
 1. Nella sessione di PowerShell, riavviare il servizio **Azure Information Protection Scanner** eseguendo il comando seguente:
     
         Start-AIPScan
+    
+    In alternativa, è possibile avviare lo scanner dal pannello **Azure Information Protection** nel portale di Azure, quando si usa l'opzione **Scanner** > **Nodi (anteprima)** > \**<* nodo dello scanner*>**> **Avvia analisi**.
 
-2. Attendere che lo scanner completi il proprio ciclo. Quando lo scanner ha completato l'analisi per tutti i file negli archivi dati specificati, lo scanner viene arrestato anche se il servizio scanner rimane in esecuzione. Per verificare l'arresto dello scanner, usare il registro eventi locale **Applicazioni e servizi** di Windows, **Azure Information Protection**. Cercare l'ID evento informativo **911**.
+2. Attendere che lo scanner completi il ciclo eseguendo il comando seguente:
+    
+    Get-AIPScannerStatus
+    
+    Cercare lo stato **Idle** (Inattivo) invece di **Scanning** (Analisi in corso). Quando lo scanner ha completato l'analisi per tutti i file negli archivi dati specificati, lo scanner viene arrestato anche se il servizio scanner rimane in esecuzione. 
+    
+    In alternativa, è possibile visualizzare lo stato dal pannello **Azure Information Protection** nel portale di Azure, controllando la colonna **Scanner** > **Nodi (anteprima)** > \**<* nodo dello scanner*>**> **STATO**.
+    
+    Controllare il registro eventi locale **Applicazioni e servizi** di Windows, **Azure Information Protection**. Questo registro indica anche quando lo scanner ha completato l'analisi, con un riepilogo dei risultati. Cercare l'ID evento informativo **911**.
 
 3. Esaminare i report archiviati in %*localappdata*%\Microsoft\MSIP\Scanner\Reports con formato di file CSV. Con la configurazione predefinita dello scanner, solo i file che soddisfano le condizioni per la classificazione automatica vengono inclusi nei report.
     
     > [!TIP]
-    > Le informazioni di questi report, attualmente in anteprima, vengono ora inviate ad Azure Information Protection e sono visualizzabili nel portale di Azure. Per altre informazioni, vedere [Reporting per Azure Information Protection](reports-aip.md). 
+    > Attualmente in anteprima, gli scanner inviano queste informazioni ad Azure Information Protection ogni cinque minuti quando si usa la versione di anteprima dello scanner, in modo che sia possibile visualizzare i risultati quasi in tempo reale dal portale di Azure. Per altre informazioni, vedere [Reporting per Azure Information Protection](reports-aip.md). 
         
     Se i risultati non sono quelli previsti, potrebbe essere necessario ottimizzare le condizioni specificate nei criteri di Azure Information Protection. In questo caso, ripetere i passaggi da 1 a 3 finché non si è pronti a modificare la configurazione per applicare la classificazione e, facoltativamente, la protezione. 
 
@@ -213,13 +223,17 @@ Per impostazione predefinita, lo scanner viene eseguito una volta e solo ai fini
     
     Esistono altre impostazioni di configurazione che è opportuno modificare. Indicare ad esempio se gli attributi dei file vengono modificati e quali informazioni vengono registrate nei report. Inoltre, se i criteri di Azure Information Protection includono l'impostazione che richiede un messaggio di giustificazione per abbassare il livello di classificazione o rimuovere la protezione, specificare il messaggio usando questo cmdlet. Consultare la [guida online](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters) per altre informazioni sulle singole impostazioni di configurazione. 
 
-2. Riavviare il servizio **Azure Information Protection Scanner** eseguendo il comando seguente:
+2. Prendere nota dell'ora corrente e avviare di nuovo lo scanner eseguendo il comando seguente:
     
         Start-AIPScan
+    
+    In alternativa, è possibile avviare lo scanner dal pannello **Azure Information Protection** nel portale di Azure, quando si usa l'opzione **Scanner** > **Nodi (anteprima)** > \**<* nodo dello scanner*>**> **Avvia analisi**.
 
-3. Come in precedenza, monitorare il log eventi e i report per vedere quali file sono stati etichettati, quale classificazione è stata applicata e se è stata applicata la protezione.
+3. Monitorare di nuovo il tipo di evento informativo **911** nel registro eventi, con un timestamp successivo all'avvio dell'analisi nel passaggio precedente. 
+    
+    Controllare quindi i report per visualizzare i dettagli dei file etichettati, la classificazione applicata a ogni file e se la protezione è stata applicata. In alternativa, usare il portale di Azure per visualizzare più facilmente queste informazioni.
 
-Poiché la pianificazione è stata configurata in modo da essere eseguita continuamente, quando lo scanner ha completato l'analisi di tutti i file, avvia un nuovo ciclo per individuare i file nuovi e modificati.
+Poiché la pianificazione è stata configurata in modo da essere eseguita continuamente, quando lo scanner ha completato l'analisi di tutti i file, avvia un nuovo ciclo per individuare eventuali file nuovi e modificati.
 
 
 ## <a name="how-files-are-scanned"></a>Modalità di analisi dei file
@@ -249,7 +263,7 @@ Infine, per i tipi di file rimanenti, lo scanner applica l'etichetta predefinita
 |Tipo di applicazione|Tipo file|
 |--------------------------------|-------------------------------------|
 |Progetto|.mpp; .mpt|
-|Autore|.pub|
+|Pubblicazione|.pub|
 |Visio|.vsd; .vdw; .vst; .vss; .vsdx; .vsdm; .vssx; .vssm; .vstx; .vstm|
 |XPS|.xps; .oxps; .dwfx|
 |SolidWorks|.sldprt; .slddrw; .sldasm|
@@ -283,6 +297,8 @@ Ad esempio, per fare in modo che lo scanner protegga i file PDF oltre ai file di
 Per il primo ciclo di analisi, lo scanner analizza tutti i file negli archivi dati configurati e quindi per le analisi successive, vengono controllati solo i file nuovi o modificati. 
 
 È possibile imporre allo scanner di ripetere l'analisi di tutti i file eseguendo [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan) con il parametro `-Reset`. Lo scanner deve essere configurato per una pianificazione manuale, che richiede l'impostazione del parametro `-Schedule` su **Manuale** con [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration).
+
+In alternativa, è possibile imporre allo scanner di esaminare di nuovo tutti i file dal pannello **Azure Information Protection** nel portale di Azure, quando si usa l'opzione **Scanner** > **Nodi (anteprima)** > \**<* nodo dello scanner*>**> **Ripeti l'analisi di tutti i file**.
 
 È utile verificare nuovamente i file quando si vuole che i report includano tutti i file e questa configurazione viene in genere usata quando lo scanner viene eseguito in modalità di individuazione. Al termine di un'analisi completa, il tipo di analisi diventa automaticamente incrementale in modo che per le analisi successive vengono analizzati solo i file nuovi o modificati.
 
@@ -425,6 +441,8 @@ Se lo scanner è stato configurato per essere eseguito una sola volta invece che
 ----
 
 ## <a name="next-steps"></a>Passaggi successivi
+
+Se si è interessati a scoprire come è stato implementato questo scanner dai team Microsoft Core Services Engineering e Operations,  leggere il case study tecnico: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner) (Automatizzazione della protezione dei dati con lo scanner di Azure Information Protection).
 
 Scoprire [Qual è la differenza tra Infrastruttura di classificazione file di Windows Server e lo scanner di Azure Information Protection](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner).
 
