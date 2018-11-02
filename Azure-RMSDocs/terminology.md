@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 08/04/2018
-ms.topic: get-started-article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ef9a140c351ae2500da320733662025ab735fef
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 01c2e8d4dd476e0910a75fd5949362225743f322
+ms.sourcegitcommit: 4cd90fcf94ac6e2543d8be10e6e29e8218d5fd9d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808989"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49651960"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologia di Azure Information Protection
 
@@ -52,7 +52,7 @@ Client Azure Information Protection|Lato client di Azure Information Protection 
 |HYOK|Vedere *hold your own key*.|
 |hold your own key|Spesso abbreviato in *HYOK*.<br /><br />Opzione di topologia e configurazione per un'organizzazione che vuole generare e archiviare la propria chiave locale, in genere per motivi legati alla conformità o alle normative.|
 |oggetto chiave|Nel contesto della chiave del tenant, entità che contiene i metadati richiesti dal servizio Azure Rights Management per le operazioni di crittografia.|
-|label|Vedere *Etichetta di Azure Information Protection*.|
+|etichetta|Vedere *Etichetta di Azure Information Protection*.|
 |protezione di informazioni|Spesso abbreviato in *IP*.<br /><br />Termine generico e conforme agli standard del settore che fa riferimento alla protezione di dati e file da accessi non autorizzati, anche quando questi ultimi vengono diffusi oltre i confini dell'organizzazione tramite e-mail o condivisione di documenti. Microsoft Azure Information Protection è un esempio di soluzione per la protezione di informazioni.|
 |Information Rights Management|Spesso abbreviato in *IRM*.<br /><br />Termine usato in combinazione con i servizi Office, quali Exchange Server, Word e SharePoint Online, per indicare la capacità di supporto dei servizi Microsoft Rights Management.|
 |IRM|Vedere *Information Rights Management*.|
@@ -64,7 +64,7 @@ Client Azure Information Protection|Lato client di Azure Information Protection 
 |livello di autorizzazioni|Un raggruppamento logico di diritti di utilizzo che rendono più facile per gli utenti finali e gli amministratori scegliere le opzioni di configurazione basate sul ruolo. Ad esempio, Revisore e Coautore.|
 |proteggere|Applicare i controlli di Rights Management a file o messaggi di posta elettronica tramite criteri di crittografia, identità e controllo di accesso per proteggere i dati.|
 |modello di protezione|Noto anche come *modello di criteri di diritti*, *modello di Rights Management* e *modello RMS*.<br /><br />Gruppo di impostazioni di protezione gestite da un amministratore e che includono i diritti di utilizzo definiti per gli utenti autorizzati e i controlli di accesso per l'accesso con scadenza e offline. |
-|pubblicare|Proteggere un file per impedirne l'uso e l'accesso da parte di utenti non autorizzati. Termine usato anche in combinazione con i modelli di protezione e i criteri di Azure Information Protection, per indicare il rendere disponibili questi elementi per l'uso da parte di client e servizi.|
+|publish|Proteggere un file per impedirne l'uso e l'accesso da parte di utenti non autorizzati. Termine usato anche in combinazione con i modelli di protezione e i criteri di Azure Information Protection, per indicare il rendere disponibili questi elementi per l'uso da parte di client e servizi.|
 |connettore Rights Management|Servizio di inoltro proxy in uscita che può essere distribuito per servizi locali, ad esempio Exchange Server e SharePoint, per proteggere i dati mediante il servizio Azure Rights Management.|
 |Autorità di certificazione di Rights Management|Account che ha protetto un documento o un messaggio di posta elettronica.|
 |Proprietario di Rights Management|Account che mantiene il controllo completo di un documento o di un messaggio di posta elettronica protetto. A questo account è automaticamente concesso il diritto di utilizzo Controllo completo di Rights Management, senza alcuna data di scadenza o impostazione modalità offline.|

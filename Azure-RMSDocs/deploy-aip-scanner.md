@@ -4,18 +4,18 @@ description: Istruzioni per installare, configurare ed eseguire lo scanner di Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/09/2018
+ms.date: 10/24/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: b4306a45f8bfa1f6c865f634e270ba8eafa6e8d8
-ms.sourcegitcommit: aaa3eabffc9cdc2389955de770b43ffa9fa984fd
+ms.openlocfilehash: 315c1e04d6d941643ee6625053b1cae8bd08b292
+ms.sourcegitcommit: 51c99ea4c98b867cde964f51c35450eaa22fac27
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48889462"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49991378"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -51,10 +51,10 @@ Si noti che lo scanner non individua e non applica etichette in tempo reale. Eff
 ## <a name="prerequisites-for-the-azure-information-protection-scanner"></a>Prerequisiti per lo scanner di Azure Information Protection
 Prima di installare lo scanner di Azure Information Protection, verificare che i requisiti seguenti siano soddisfatti.
 
-|Requisito|Altre informazioni|
+|Requisito|Ulteriori informazioni|
 |---------------|--------------------|
 |Computer Windows Server per eseguire il servizio scanner:<br /><br />- 4 processori core<br /><br />- 4 GB di RAM<br /><br />- 10 GB di spazio libero (media) per i file temporanei|Windows Server 2016 o Windows Server 2012 R2. <br /><br />Nota: per scopi di test o valutazione in un ambiente non di produzione, è possibile usare un sistema operativo client Windows [supportato dal client di Azure Information Protection](requirements.md#client-devices).<br /><br />Il computer può essere un computer fisico o virtuale con una connessione di rete veloce e affidabile agli archivi dati da analizzare.<br /><br /> Lo scanner richiede spazio su disco sufficiente a creare i file temporanei per ogni file analizzato, quattro file per core. Lo spazio su disco consigliato di 10 GB consente a 4 processori core di analizzare 16 file, ognuno con una dimensione di 625 MB. <br /><br />Verificare che il computer abbia la [connettività Internet](requirements.md#firewalls-and-network-infrastructure) necessaria per Azure Information Protection. Se la connettività Internet non è possibile a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).|
-|SQL Server per archiviare la configurazione dello scanner:<br /><br />- Istanza locale o remota<br /><br />- Ruolo Sysadmin per installare lo scanner|SQL Server 2012 è la versione minima per le edizioni seguenti:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Se si installano più istanze dello scanner, ognuna di esse richiede il proprio database di SQL Server.<br /><br />Quando si installa lo scanner e l'account ha il ruolo Sysadmin, il processo di installazione crea automaticamente il database AzInfoProtectionScanner e concede il ruolo db_owner necessario all'account del servizio che esegue lo scanner.  Se non è possibile ricevere il ruolo Sysadmin o se l'organizzazione richiede che i database vengano creati e configurati manualmente, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).|
+|SQL Server per archiviare la configurazione dello scanner:<br /><br />- Istanza locale o remota<br /><br />- Ruolo Sysadmin per installare lo scanner|SQL Server 2012 è la versione minima per le edizioni seguenti:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Se si installano più istanze dello scanner, ognuna di esse richiede la propria istanza di SQL Server.<br /><br />Quando si installa lo scanner e l'account ha il ruolo Sysadmin, il processo di installazione crea automaticamente il database AzInfoProtectionScanner e concede il ruolo db_owner necessario all'account del servizio che esegue lo scanner.  Se non è possibile ricevere il ruolo Sysadmin o se l'organizzazione richiede che i database vengano creati e configurati manualmente, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).|
 |Account del servizio per eseguire il servizio scanner|Oltre a eseguire il servizio scanner, questo account esegue l'autenticazione in Azure AD e scarica i criteri di Azure Information Protection. Questo account deve essere un account Active Directory ed essere sincronizzato con Azure AD. Se non è possibile sincronizzare questo account a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).<br /><br />I requisiti di questo account del servizio sono i seguenti:<br /><br />- Diritto di **accesso locale**. Questo diritto è richiesto per l'installazione e la configurazione dello scanner, ma non per il funzionamento. È necessario concedere questo diritto all'account del servizio, ma è possibile rimuoverlo dopo avere verificato che lo scanner è in grado di individuare, classificare e proteggere i file. Se non è possibile concedere questo diritto neppure per un breve periodo a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).<br /><br />- Diritto di **accesso come servizio**. Questo diritto viene concesso automaticamente all'account del servizio durante l'installazione dello scanner ed è richiesto per l'installazione, la configurazione e il funzionamento dello scanner. <br /><br />- Autorizzazioni per i repository di dati: è necessario concedere le autorizzazioni per la **lettura** e la **scrittura** per analizzare i file e quindi applicare la classificazione e la protezione ai file che soddisfano le condizioni indicate nei criteri di Azure Information Protection. Per eseguire lo scanner solo in modalità di individuazione, è sufficiente l'autorizzazione per la **lettura**.<br /><br />- Per le etichette che riproteggono o rimuovono la protezione: per garantire che lo scanner abbia sempre accesso ai file protetti, trasformare l'account in un [utente con privilegi avanzati](configure-super-users.md) per il servizio Azure Rights Management e verificare che sia abilitata la funzionalità per utenti con privilegi avanzati. Per altre informazioni sui requisiti dell'account per l'applicazione della protezione, vedere [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md). Se inoltre sono stati implementati i [controlli di onboarding](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) per una distribuzione a fasi, verificare che questo account sia incluso nei controlli di onboarding configurati.|
 |Il client di Azure Information Protection è installato nel computer Windows Server|È necessario installare il client completo per lo scanner. Non installare solo il modulo PowerShell del client.<br /><br />Per istruzioni sull'installazione del client, vedere la [guida per l'amministratore](./rms-client/client-admin-guide.md). Se lo scanner è stato installato in precedenza e ora è necessario aggiornarlo a una versione più recente, vedere [Aggiornamento dello scanner di Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
 |Etichette configurate che applicano la classificazione automatica e, facoltativamente, la protezione|Per altre informazioni sulle modalità di configurazione delle condizioni nei criteri di Azure Information Protection, vedere [Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection](configure-policy-classification.md).<br /><br />Per altre informazioni sulla configurazione delle etichette che applicano la protezione ai file, vedere [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md).<br /><br />Queste etichette possono essere nei criteri globali oppure in uno o più [criteri con ambito](configure-policy-scope.md).<br /><br />Nota: nonostante sia possibile eseguire lo scanner anche se non sono state configurate etichette che applicano la classificazione automatica, questo scenario non è illustrato in queste istruzioni. [Altre informazioni](#using-the-scanner-with-alternative-configurations)|
@@ -124,7 +124,7 @@ Se i criteri dell'organizzazione non consentono il diritto **Log on locally** (A
     Install-AIPScanner -SqlServerInstance <database name>
     ```
     
-    Esempi:
+    Di seguito sono riportati alcuni esempi.
     
     Per un'istanza predefinita: `Install-AIPScanner -SqlServerInstance SQLSERVER1`
     
@@ -168,13 +168,13 @@ A questo punto si è pronti a specificare gli archivi dati da analizzare.
 
 Usare il cmdlet [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository) per specificare gli archivi dati che devono essere analizzati dallo scanner di Azure Information Protection. È possibile specificare cartelle locali, percorsi UNC e URL di SharePoint Server per siti e librerie di SharePoint. 
 
-Versioni di SharePoint supportate: SharePoint Server 2016 e SharePoint Server 2013. Anche SharePoint Server 2010 è supportato per i clienti che dispongono del [supporto "Extended" per la versione corrente di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
+Versioni di SharePoint supportate: SharePoint Server 2016 e SharePoint Server 2013. Anche SharePoint Server 2010 è supportato per i clienti che dispongono del [supporto "Extended" per questa versione di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 
 1. Dallo stesso computer Windows Server, nella sessione di PowerShell, aggiungere il primo archivio dati eseguendo il comando seguente:
     
         Add-AIPScannerRepository -Path <path>
     
-    ad esempio `Add-AIPScannerRepository -Path \\NAS\Documents`
+    Ad esempio: `Add-AIPScannerRepository -Path \\NAS\Documents`
     
     Per altri esempi, vedere la [guida online](/powershell/module/azureinformationprotection/Add-AIPScannerRepository#examples) per questo cmdlet.
 
@@ -192,7 +192,7 @@ Con la configurazione predefinita dello scanner ora è possibile eseguire la pri
     
         Start-AIPScan
 
-2. Attendere che lo scanner completi il proprio ciclo. Quando lo scanner ha eseguito la ricerca per indicizzazione di tutti i file negli archivi dati specificati, il servizio si arresta. Per verificare che il servizio si sia arrestato, usare il registro eventi locale di **applicazioni e servizi** di Windows, **Azure Information Protection**. Cercare l'ID evento informativo **911**.
+2. Attendere che lo scanner completi il proprio ciclo. Quando lo scanner ha completato l'analisi per tutti i file negli archivi dati specificati, lo scanner viene arrestato anche se il servizio scanner rimane in esecuzione. Per verificare l'arresto dello scanner, usare il registro eventi locale **Applicazioni e servizi** di Windows, **Azure Information Protection**. Cercare l'ID evento informativo **911**.
 
 3. Esaminare i report archiviati in %*localappdata*%\Microsoft\MSIP\Scanner\Reports con formato di file CSV. Con la configurazione predefinita dello scanner, solo i file che soddisfano le condizioni per la classificazione automatica vengono inclusi nei report.
     
@@ -238,7 +238,7 @@ Quindi lo scanner usa iFilter di Windows per analizzare i tipi di file seguenti.
 |PDF |.pdf|
 |Testo|.txt; .xml; .csv|
 
-Per impostazione predefinita, solo i tipi di file di Office sono protetti dallo scanner, quindi i file PDF e i file di testo non sono protetti a meno che non si [modifichi il Registro di sistema](develop/file-api-configuration.md) per specificare i tipi di file:
+Per impostazione predefinita, solo i tipi di file di Office sono protetti dallo scanner, quindi i file PDF e i file di testo non sono protetti a meno che non si [modifichi il Registro di sistema](#editing-the-registry-for-the-scanner) per specificare i tipi di file:
 
 - Se non si aggiunge il tipo di file PDF al Registro di sistema: i file con questa estensione saranno etichettati, ma se l'etichetta è configurata per la protezione, non viene applicata la protezione.
 
@@ -249,7 +249,7 @@ Infine, per i tipi di file rimanenti, lo scanner applica l'etichetta predefinita
 |Tipo di applicazione|Tipo file|
 |--------------------------------|-------------------------------------|
 |Progetto|.mpp; .mpt|
-|Pubblicazione|.pub|
+|Autore|.pub|
 |Visio|.vsd; .vdw; .vst; .vss; .vsdx; .vsdm; .vssx; .vssm; .vstx; .vstm|
 |XPS|.xps; .oxps; .dwfx|
 |SolidWorks|.sldprt; .slddrw; .sldasm|
@@ -262,12 +262,21 @@ Infine, per i tipi di file rimanenti, lo scanner applica l'etichetta predefinita
 |DigitalNegative|.dng|
 |Pfile|pfile|
 
-Quando lo scanner applica un'etichetta con la protezione, per impostazione predefinita, solo i tipi di file di Office vengono protetti. È possibile modificare questo comportamento in modo che vengano protetti altri tipi di file. Quando tuttavia un'etichetta applica la protezione generica ai documenti, l'estensione del nome file viene modificata in pfile. Inoltre, il file diventa di sola lettura fino a quando non è aperto da un utente autorizzato e salvato nel formato nativo. Anche file di testo e immagini possono modificare la propria estensione del nome file e diventare di sola lettura. 
+Quando lo scanner applica un'etichetta con la protezione, per impostazione predefinita, solo i tipi di file di Office vengono protetti. È possibile modificare questo comportamento in modo che vengano protetti altri tipi di file. Quando tuttavia un'etichetta applica la protezione generica ai documenti, l'estensione del nome file viene modificata in pfile. Anche altri tipi di file possono modificare l'estensione. Inoltre, questi file diventano di sola lettura fino a quando non vengono aperti da un utente autorizzato e salvati nel formato nativo.
 
-Per modificare il comportamento predefinito dello scanner, ad esempio per la protezione generica di altri tipi di file, è necessario modificare manualmente il Registro di sistema e specificare i tipi di file aggiuntivi da proteggere. In alternativa, è possibile proteggere tutti i tipi di file specificando il carattere jolly `*`. Per informazioni, vedere [Configurazione dell'API file](develop/file-api-configuration.md) nelle linee guida per sviluppatori. Per fare riferimento alla protezione generica, questa documentazione per sviluppatori usa il termine "PFile". Inoltre, specificatamente per lo scanner:
+### <a name="editing-the-registry-for-the-scanner"></a>Modifica del Registro di sistema per lo scanner
+
+Per modificare il comportamento predefinito dello scanner per la protezione di tipi di file diversi dai file di Office, è necessario modificare manualmente il Registro di sistema e specificare i tipi di file aggiuntivi da proteggere. Per informazioni, vedere [Configurazione dell'API file](develop/file-api-configuration.md) nelle linee guida per sviluppatori. Per fare riferimento alla protezione generica, questa documentazione per sviluppatori usa il termine "PFile". Inoltre, specificatamente per lo scanner:
 
 - Lo scanner ha il proprio comportamento predefinito: solo i formati di file di Office sono protetti per impostazione predefinita. Se il Registro di sistema non viene modificato, tutti gli altri tipi di file non verranno protetti dallo scanner.
 
+- Se si vuole lo stesso comportamento di protezione predefinito del client Azure Information Protection, in cui tutti i file vengono automaticamente protetti con la protezione nativa o generica, specificare il carattere jolly `*` come chiave del Registro di sistema e `Default` come valore di dati.
+
+Quando si modifica il Registro di sistema, creare manualmente la chiave **MSIPC** e la chiave **FileProtection** se non esistono, nonché una chiave per ogni estensione del nome file.
+
+Ad esempio, per fare in modo che lo scanner protegga i file PDF oltre ai file di Office, il Registro di sistema dopo la modifica avrà un aspetto simile all'immagine seguente:
+
+![Modifica del Registro di sistema per l'applicazione della protezione con lo scanner](./media/editregistry-scanner.png)
 
 ## <a name="when-files-are-rescanned"></a>Ripetizione dell'analisi dei file
 
@@ -321,7 +330,7 @@ Per ottimizzare le prestazioni dello scanner:
     
     Se sono presenti cartelle da analizzare in un server di Windows, installare lo scanner in un computer diverso e configurare le cartelle come condivisioni di rete da analizzare. La separazione delle due funzioni di hosting dei file e di analisi dei file fa in modo che le risorse di elaborazione di questi servizi non siano in competizione tra loro.
 
-Se necessario, installare più istanze dello scanner. Ogni istanza dello scanner richiede il proprio database di configurazione.
+Se necessario, installare più istanze dello scanner. Ogni istanza dello scanner richiede un proprio database di configurazione in un'istanza diversa di SQL Server.
 
 Altri fattori che influenzano le prestazioni dello scanner:
 

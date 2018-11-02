@@ -4,18 +4,18 @@ description: Quando si usa Azure Rights Management, i modelli vengono scaricati 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/16/2018
+ms.date: 10/25/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b801266dfb757286599b5bd2fd3b36c9590717f2
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 90c046f0cf2f954e70a17d127bc99b0479115928
+ms.sourcegitcommit: a5fd0afd84b62f84c3b9f0d076fab1b674267bf3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148512"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083881"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aggiornamento di modelli per utenti e servizi
 
@@ -26,12 +26,14 @@ Quando si usa il servizio Azure Rights Management di Azure Information Protectio
 |Applicazione o servizio|Modalità di aggiornamento dei modelli dopo le modifiche|
 |--------------------------|---------------------------------------------|
 |Exchange Online<br /><br />Applicabile per regole di trasporto e Outlook Web App |Vengono aggiornati automaticamente in un'ora e non sono necessari altri passaggi.<br /><br />Nel caso in cui si usi [Office 365 Message Encryption con le nuove funzionalità](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Se Exchange Online è stato precedentemente configurato per l'uso del servizio Azure Rights Management importando il dominio di pubblicazione trusted (TPD), usare le stesse istruzioni per abilitare le nuove funzionalità in Exchange Online.|
-|Client Azure Information Protection|I modelli vengono aggiornati automaticamente ogni volta che si aggiornano i criteri di Azure Information Protection nel client:<br /><br /> - Quando viene aperta un'applicazione di Office che supporta la barra di Azure Information Protection. <br /><br /> - Quando si fa clic con il pulsante destro del mouse per classificare e proteggere un file o una cartella. <br /><br /> - Quando si eseguono i cmdlet di PowerShell per l'assegnazione di etichette e la protezione (Get-AIPFileStatus e Set-AIPFileLabel).<br /><br /> - Quando il servizio scanner di Azure Information Protection viene avviato e i criteri locali risalgono a più di un'ora prima. Il servizio scanner verifica le modifiche ogni ora e usa tali modifiche per il ciclo di analisi successivo.<br /><br /> - Ogni 24 ore.<br /><br /> Inoltre, poiché il client Azure Information Protection è strettamente integrato con Office, i modelli aggiornati per Office 2016 o Office 2013 verranno aggiornati anche per il client Azure Information Protection.|
+|Client Azure Information Protection|I modelli vengono aggiornati automaticamente ogni volta che si aggiornano i criteri di Azure Information Protection nel client:<br /><br /> - Quando viene aperta un'applicazione di Office che supporta la barra di Azure Information Protection. <br /><br /> - Quando si fa clic con il pulsante destro del mouse per classificare e proteggere un file o una cartella. <br /><br /> - Quando si eseguono i cmdlet di PowerShell per l'assegnazione di etichette e la protezione (Get-AIPFileStatus e Set-AIPFileLabel).<br /><br /> - Quando il servizio scanner di Azure Information Protection viene avviato e i criteri locali risalgono a più di un'ora prima. Il servizio scanner verifica le modifiche ogni ora e usa tali modifiche per il ciclo di analisi successivo.<br /><br /> - Ogni 24 ore.<br /><br /> Inoltre, poiché il client è strettamente integrato con Office, i modelli aggiornati per Office 2016 o Office 2013 verranno aggiornati anche per il client Azure Information Protection.|
+|Client per l'etichettatura unificata di Azure Information Protection (anteprima)|Aggiornamento automatico ogni 4 ore, per ogni app di Office.<br /><br /> Inoltre, poiché il client è strettamente integrato con Office, i modelli aggiornati per Office 2016 o Office 2013 verranno aggiornati anche per il client di etichettatura unificata di Azure Information Protection.|
 |Office 2016 e Office 2013<br /><br />Applicazione RMS sharing per Windows|I modelli vengono aggiornati automaticamente in base a una pianificazione:<br /><br />- Per le versioni più recenti di Office: l'intervallo di aggiornamento predefinito è di 7 giorni.<br /><br />- Per l'applicazione RMS sharing per Windows: a partire dalla versione 1.0.1784.0 l'intervallo di aggiornamento predefinito è di 1 giorno. Le versioni precedenti prevedono un intervallo di aggiornamento predefinito di 7 giorni.<br /><br />Per anticipare l'esecuzione di un aggiornamento rispetto a questa pianificazione, vedere la sezione [Office 2016, Office 2013 e applicazione RMS sharing per Windows: come forzare un aggiornamento per un modello personalizzato modificato](#office-2016--office-2013-and-rms-sharing-application-for-windows-how-to-force-a-refresh-for-a-changed-custom-template).|
 |Office 2010|I modelli vengono aggiornati automaticamente quando gli utenti si disconnettono da Windows, eseguono nuovamente l'accesso e attendono al massimo un'ora.|
 |Exchange locale con il connettore di Rights Management<br /><br />Applicabile per regole di trasporto e Outlook Web App|I modelli vengono aggiornati automaticamente e non sono necessari altri passaggi. Tuttavia, Outlook Web App memorizza nella cache l'interfaccia utente per un giorno.|
 |Office 2016 per Mac|I modelli vengono aggiornati automaticamente e non sono necessari altri passaggi.|
 |App RMS sharing per computer Mac|I modelli vengono aggiornati automaticamente e non sono necessari altri passaggi.|
+|Le app di Office che [supportano la funzionalità Riservatezza](https://support.office.com/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US&ui=en-US&rs=en-US#bkmk_whereavailable)|Questi client non scaricano i modelli ma vi accedono online - non sono necessari passaggi aggiuntivi.|
 
 Se per le applicazioni client è necessario scaricare un modello (iniziale o aggiornato con le modifiche), prevedere un'attesa fino a 15 minuti prima che il download sia completato e che i modelli nuovi o aggiornati siano completamente funzionali. Il tempo effettivo varia a seconda di fattori quali le dimensioni e la complessità della configurazione dei modelli e la connettività di rete. 
 

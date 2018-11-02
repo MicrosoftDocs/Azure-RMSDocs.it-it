@@ -4,17 +4,17 @@ description: Vedere le informazioni sulla versione del client per l'etichettatur
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 10/23/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: f05c1e96222eb70a7257123301d14ef7d885564d
-ms.sourcegitcommit: 283782ee7e3ec566f479c8914eae7bf84d904392
+ms.openlocfilehash: a1544e0fa3c6d09328d1801a75ffbccd496e3482
+ms.sourcegitcommit: b275c1f82bf9176fe3fb36016c6f8692b8418295
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49382596"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49951840"
 ---
 # <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>Client per l'etichettatura unificata di Azure Information Protection: informazioni di rilascio versione
 
@@ -50,6 +50,8 @@ Questa versione di anteprima del client per l'etichettatura unificata di Azure I
 - Richieste di giustificazione se gli utenti abbassano il livello di riservatezza
 
 - Finestra di dialogo Guida e commenti che include impostazioni per il ripristino e l'esportazione di log
+
+- Aggiornamento di criteri dal Centro sicurezza e conformità ogni 4 ore, per ogni app di Office.
 
 Questa versione di anteprima non supporta le funzionalità seguenti:
 
