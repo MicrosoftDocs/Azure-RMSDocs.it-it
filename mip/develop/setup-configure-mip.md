@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 430e130a5ba2026c0a3c69a59dddd6f9d6b4e8f0
-ms.sourcegitcommit: cc65c3851d4b8169a1a62c83afaf0f75402f7631
-ms.translationtype: HT
+ms.openlocfilehash: 6c0b9a878f98081312a0b81b965e75bcc0ade7e8
+ms.sourcegitcommit: 13b5b8e7457b09e1b828dad3cdfae086fd019819
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "49476205"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51508443"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installazione e configurazione di Microsoft Information Protection (MIP) SDK 
 
@@ -31,7 +31,7 @@ Assicurarsi di consultare gli argomenti seguenti prima di iniziare:
 
 Molti degli esempi dell'SDK richiedono l'accesso a un abbonamento a Office 365. Se non è già stato fatto, assicurarsi di iscriversi per uno dei tipi di abbonamento seguenti:
 
-| Nome | Iscrizione |
+| Name | Iscrizione |
 |------|---------|
 | Office 365 Enterprise E3 - Versione di valutazione (versione di valutazione gratuita di 30 giorni) | https://go.microsoft.com/fwlink/p/?LinkID=403802 |
 | Office 365 Enterprise E3 o E5 | https://products.office.com/business/office-365-enterprise-e3-business-software |
@@ -169,7 +169,49 @@ Al termine, la registrazione dell'applicazione e le autorizzazioni per le API do
 
 Per altre informazioni sull'aggiunta di API e autorizzazioni a una registrazione, vedere [Aggiornare un'applicazione in Azure Active Directory, sezione Configurare un'applicazione client per accedere alle API Web](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application). In questo articolo sono disponibili informazioni su come aggiungere le API e le autorizzazioni necessarie per un'applicazione client.  
 
+## <a name="request-an-information-protection-integration-agreement-ipia"></a>Richiedere un contratto per l'integrazione di Information Protection (IPIA, Information Protection Integration Agreement)
+
+Prima di poter rilasciare un'applicazione sviluppata con MIP, è necessario richiedere e concludere un contratto formale con Microsoft.
+
+1. Per ottenere il contratto, inviare un messaggio di posta elettronica all'indirizzo [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Requesting%20IPIA%20for%20<company-name>) con le informazioni seguenti:
+
+   **Oggetto:** Requesting IPIA for *nome azienda*
+
+   Nel corpo del messaggio di posta elettronica includere:
+   - Nome dell'applicazione e del prodotto
+   - Nome e cognome del richiedente
+   - Indirizzo di posta elettronica del richiedente
+
+2. In seguito alla ricezione della richiesta del contratto, Microsoft invierà un modulo in forma di documento di Word. Leggere i termini e le condizioni del contratto di integrazione di Information Protection e restituire il modulo all'indirizzo [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=IPIA%20Response%20for%20<company-name>) con le informazioni seguenti:
+
+   - Ragione sociale dell'azienda
+   - Stato/provincia (Stati Uniti o Canada) o paese di costituzione
+   - URL dell'azienda
+   - Indirizzo di posta elettronica del contatto
+   - Ulteriori indirizzi dell'azienda (facoltativo)
+   - Nome dell'applicazione dell'azienda
+   - Breve descrizione dell'applicazione
+   - *ID tenant di Azure*
+   - *ID app* per l'applicazione
+   - Contatti, indirizzo di posta elettronica e numero di telefono dell'azienda per la corrispondenza relativa a situazioni critiche
+
+3. Al ricevimento del modulo, Microsoft invierà il collegamento al contratto di integrazione di Information Protection finale per la firma digitale. Dopo la firma da parte dell'azienda il contratto verrà sottoscritto anche dal rappresentante Microsoft appropriato e sarà così concluso.
+
+### <a name="already-have-a-signed-ipia"></a>È già stato sottoscritto un contratto di integrazione di Information Protection?
+
+Se è già stato sottoscritto un contratto di integrazione di Information Protection e si vuole aggiungere un nuovo *ID app* per un'applicazione da rilasciare, inviare un messaggio di posta elettronica all'indirizzo [IPIA@microsoft.com](mailto:IPIA@microsoft.com?subject=Updating%20IPIA%20for%20<company-name>) e fornire le informazioni seguenti:
+
+- Nome dell'applicazione dell'azienda
+- Breve descrizione dell'applicazione
+- ID tenant di Azure (anche se è uguale)
+- ID app per l'applicazione
+- Contatti, indirizzo di posta elettronica e numero di telefono dell'azienda per la corrispondenza relativa a situazioni critiche
+
+Dopo aver inviato il messaggio di posta elettronica, si riceverà conferma della ricezione entro 72 ore.
+
 ## <a name="next-steps"></a>Passaggi successivi
 
 - Prima di iniziare la sezione delle guide introduttive, assicurarsi di leggere le informazioni sugli [osservatori in MIP SDK](concept-async-observers.md), perché MIP SDK è progettato per essere quasi interamente asincrono.
 - Se si è pronti per qualche esperienza pratica con l'SDK, iniziare con [Guida introduttiva: Inizializzazione delle applicazioni client (C++)](quick-app-initialization-cpp.md).
+
+
