@@ -1,23 +1,22 @@
 ---
 title: Guida per gli sviluppatori di RMS | Azure RMS
 description: Sono ora disponibili tre generazioni di Rights Management SDK.
-keywords: 
-author: bruceperlerms
+keywords: ''
+author: bryanla
 manager: mbaldwin
-ms.date: 02/23/2017
-ms.topic: article
-ms.prod: azure
+ms.date: 09/07/2018
+ms.topic: conceptual
 ms.service: information-protection
-ms.technology: techgroup-identity
 ms.assetid: 0510ead4-2fe7-4269-885b-fe16bcc69888
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 899c05d233ec31db27cee058982c98d8dd809c3a
-ms.sourcegitcommit: 04eb4990e2bf0004684221592cb93df35e6acebe
+ms.openlocfilehash: 6f964c6a6cf36cbd6f78cf58096f8c912fb0ff68
+ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 09/07/2018
+ms.locfileid: "51527929"
 ---
 # <a name="rms-developers-guide"></a>Guida per gli sviluppatori RMS
 
@@ -44,9 +43,7 @@ Questa raccolta di esempi di codice RMS e strumenti di supporto per gli sviluppa
 | [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms) | Desktop Windows|[RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) e versioni successive dell'SDK 2.x|**IpcAzureApp** è un esempio che illustra come usare RMS SDK nell'applicazione Azure per proteggere i dati nell'archiviazione Blob di Azure.|
 | [RmsDocumentInspector](https://github.com/Azure-Samples/active-directory-dotnet-rms) | Desktop Windows|[RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) e versioni successive dell'SDK 2.x|**RmsDocumentInspector** è uno strumento in grado di fornire informazioni su qualsiasi file RMS protetto, ad esempio i diritti utente o l'id contenuto.|
 | [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) | Desktop Windows|[RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) e versioni successive dell'SDK 2.x|**RmsFileWatcher** è un esempio che illustra come creare un'applicazione Windows che controlla le directory nel file system e applica i criteri di protezione RMS a ogni modifica, ad esempio per i file modificati o i file aggiunti.|
-| [Scenari di utilizzo di iOS/OS X](https://msdn.microsoft.com/library/dn758307(v=vs.85).aspx) |iOS/OS X|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) e versioni successive dell'SDK 4.x|Esempi di codice **Objective C** che rappresentano importanti scenari di sviluppo per familiarizzare con RMS SDK. Gli esempi includono l'uso del formato Microsoft Protected File, i formati di file protetti personalizzati e i controlli dell'interfaccia utente personalizzati.|
+| [Scenari di utilizzo di iOS/OS X](https://msdn.microsoft.com/library/dn758307(v=vs.85).aspx) |iOS/OS X|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) e versioni successive dell'SDK 4.x|Esempi di codice **Objective C** che rappresentano importanti scenari di sviluppo per familiarizzare con RMS SDK. Gli esempi includono l'uso del formato Microsoft Protected File, di formati di file protetti personalizzati e di controlli dell'interfaccia utente personalizzati.|
 | [Libreria dell'interfaccia utente e app di esempio](https://github.com/AzureAD/rms-sdk-ui-for-ios) |iOS|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) e versioni successive dell'SDK 4.x|**Librerie dell'interfaccia utente e app di esempio per iOS** in GitHub, per essere operativi in tempi brevi e riutilizzare l'interfaccia utente standard nelle app.|
 | [Libreria dell'interfaccia utente e app di esempio](https://github.com/AzureAD/rms-sdk-ui-for-android) |Android|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) e versioni successive dell'SDK 4.x|**Librerie dell'interfaccia utente e app di esempio per Android** in GitHub, per essere operativi in tempi brevi e riutilizzare l'interfaccia utente standard nelle app.|
 | [Scenari di utilizzo di Android](https://msdn.microsoft.com/en-us/library/dn758246(v=vs.85).aspx) |Android|[RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) e versioni successive dell'SDK 4.x|**Esempi di codice Java** che rappresentano importanti scenari di sviluppo per familiarizzare con RMS SDK. Gli esempi includono l'uso del formato Microsoft Protected File, di formati di file protetti personalizzati e di controlli dell'interfaccia utente personalizzati.|
-
-[!INCLUDE[Commenting house rules](../includes/houserules.md)]
