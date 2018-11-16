@@ -10,14 +10,14 @@ ms.service: information-protection
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e7c6c078d992bc4d3be9480227715be2157178f2
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 0269888af84f4f1b17ce5523bb5bbc8648d0d1a7
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150787"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026707"
 ---
-# <a name="compliance-and-supporting-information-for-azure-information-protection"></a>Informazioni su conformità e supporto per Azure Information Protection
+# <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Informazioni su conformità e supporto per Azure Information Protection
 
 Azure Information Protection supporta altri servizi e si basa anche su altri servizi. Per informazioni correlate ad Azure Information Protection, ma non riferite alla modalità d'uso del servizio Azure Information Protection, esaminare le risorse seguenti:
 
@@ -45,7 +45,7 @@ Tuttavia, alcune informazioni rilevanti possono essere utili al consulente legal
 
 ## <a name="security-compliance-and-auditing"></a>Sicurezza, conformità e controllo
 
-Vedere la sezione [Requisiti di sicurezza, conformità e normativi](./azure-rms-problems-it-solves.md#security-compliance-and-regulatory-requirements) dell'articolo [Problemi risolti da Azure RMS](./azure-rms-problems-it-solves.md) per informazioni sulle certificazioni specifiche per il servizio di Azure Rights Management. Inoltre:
+Vedere la sezione [Requisiti di sicurezza, conformità e normativi](./what-is-azure-rms.md#security-compliance-and-regulatory-requirements) dell'articolo [Problemi risolti da Azure RMS](./azure-rms-problems-it-solves.md) per informazioni sulle certificazioni specifiche per il servizio di Azure Rights Management. Inoltre:
 
 - Per le certificazioni esterne per Azure Information Protection: [Centro protezione di Microsoft Azure](http://azure.microsoft.com/support/trust-center/)
 

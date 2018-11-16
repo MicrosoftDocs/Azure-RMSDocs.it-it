@@ -1,21 +1,23 @@
 ---
 title: Domande frequenti e problemi noti - Microsoft Information Projection SDK.
-description: Domande frequenti e linee guida per la risoluzione dei problemi noti di Microsoft Information Protection (MIP) SDK.
+description: Domande frequenti e linee guida per la risoluzione dei problemi e degli errori di Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: troubleshooting
 ms.date: 10/19/2018
 ms.author: bryanla
-ms.openlocfilehash: cb3bdd6f2d9328a57156580f3d345d25983fccad
-ms.sourcegitcommit: cc65c3851d4b8169a1a62c83afaf0f75402f7631
-ms.translationtype: HT
+ms.openlocfilehash: f213b31d9b0e41ea9c1e076055a90e9f62b31b3a
+ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/20/2018
-ms.locfileid: "49476429"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223926"
 ---
-# <a name="microsoft-information-protection-mip-sdk-faqs-and-known-issues"></a>Problemi noti e domande frequenti di Microsoft Information Protection (MIP) SDK
+# <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Problemi noti e domande frequenti di Microsoft Information Protection (MIP) SDK
 
-## <a name="frequently-asked-questions-faqs"></a>Domande frequenti
+In questo articolo vengono fornite le risposte alle domande comuni e informazioni sulla risoluzione dei problemi noti e degli errori comuni.
+
+## <a name="frequently-asked-questions"></a>Domande frequenti 
 
 ### <a name="question-which-platforms-are-supported-by-the-mip-sdk"></a>Domanda: quali piattaforme sono supportate da MIP SDK?
 
@@ -33,7 +35,13 @@ L'SDK è progettato per essere multipiattaforma e usa [UTF-8 (Unicode Transforma
 | .NET | Per i client .NET dell'SDK, tutte le stringhe usano la codifica predefinita UTF-16 e non è necessaria alcuna conversione speciale. La conversione da e verso UTF-16 viene gestita internamente da MIP SDK. |
 | Altre piattaforme | Tutte le altre piattaforme supportate da MIP SDK includono il supporto nativo per UTF-8. |
 
-## <a name="known-issues"></a>Problemi noti
+## <a name="issues-and-errors-reference"></a>Informazioni di riferimento per problemi ed errori
+
+### <a name="error-file-format-not-supported"></a>Errore: "Formato di file non supportato"  
+
+| Errore | Soluzione |
+|-|-|
+|*Formato di file non supportato*| Questa eccezione si verifica quando si tenta di proteggere o assegnare un'etichetta a un file PDF firmato digitalmente o protetto da password. Per altre informazioni sulla protezione e l'assegnazione di etichette a file PDF, vedere [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) (Nuovo supporto della crittografia PDF con Microsoft Azure Information Protection).|
 
 ### <a name="error-failed-to-parse-the-acquired-compliance-policy"></a>Errore: "Impossibile analizzare i criteri di conformità acquisiti"  
 

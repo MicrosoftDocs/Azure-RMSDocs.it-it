@@ -4,16 +4,15 @@ description: Informazioni sulla configurazione dei criteri predefiniti per Azure
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 03/09/2018
-ms.topic: article
+ms.date: 11/06/2018
+ms.topic: conceptual
 ms.service: information-protection
-ms.assetid: 671281c8-f0d1-42b6-aae3-681d1821e2cf
-ms.openlocfilehash: ada4e4b2b7f8ef4bcf95307184d9c262a930c9f0
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: d74dfcd35dca2f3ab5e88a66eaaba37b13636e4d
+ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42807323"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51223977"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Criteri predefiniti di Azure Information Protection
 
@@ -21,19 +20,19 @@ ms.locfileid: "42807323"
 
 Le informazioni seguenti sono utili per comprendere come viene configurato il criterio predefinito per Azure Information Protection.
 
-Quando un amministratore si connette per la prima volta al servizio Azure Information Protection tramite il portale di Azure, vengono creati i criteri predefiniti del tenant. Microsoft potrebbe occasionalmente modificare i criteri predefiniti, pertanto se è già stato usato il servizio prima della modifica dei criteri predefiniti, la versione precedente dei criteri non è aggiornata perché potrebbero essere già stati configurati e distribuiti nell'ambiente di produzione.
+Quando un amministratore si connette per la prima volta al servizio Azure Information Protection tramite il portale di Azure, vengono creati i criteri predefiniti di Azure Information Protection per il tenant. Microsoft potrebbe occasionalmente modificare i criteri predefiniti, pertanto se è già stato usato il servizio prima della modifica dei criteri predefiniti, la versione precedente dei criteri di Azure Information Protection non è aggiornata perché potrebbero essere già stati configurati e distribuiti nell'ambiente di produzione.
 
-È possibile fare riferimento ai valori seguenti per riportare i criteri alle impostazioni predefinite o aggiornare i criteri ai valori più recenti.
+È possibile fare riferimento ai valori seguenti per riportare i criteri di Azure Information Protection alle impostazioni predefinite o aggiornare i criteri di Azure Information Protection ai valori più recenti.
 
 ## <a name="current-default-policy"></a>Criteri predefiniti correnti
 
-Questa versione dei criteri predefiniti è del 31 luglio 2017.
+Questa versione dei criteri predefiniti di Azure Information Protection è del 31 luglio 2017.
 
-I criteri predefiniti vengono creati al momento dell'attivazione del servizio Azure Rights Management, come nel caso dei nuovi tenant a partire da febbraio 2018. Per altre informazioni, vedere l'annuncio del post di blog [Improvements to the protection stack in Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection) (Miglioramenti dello stack di protezione in Azure Information Protection).
+I criteri predefiniti di Azure Information Protection vengono creati al momento dell'attivazione del servizio Azure Rights Management, come nel caso dei nuovi tenant a partire da febbraio 2018. Per altre informazioni, vedere l'annuncio del post di blog [Improvements to the protection stack in Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2018/03/08/improvements-to-the-protection-stack-in-azure-information-protection) (Miglioramenti dello stack di protezione in Azure Information Protection).
 
-I criteri predefiniti vengono creati anche se è stato [attivato il servizio](activate-service.md) manualmente prima di creare i criteri. 
+I criteri predefiniti di Azure Information Protection vengono creati anche se è stato [attivato il servizio](activate-service.md) manualmente prima di creare i criteri di Azure Information Protection. 
 
-Se il servizio non è stato attivato, i criteri predefiniti non configurano la protezione per le seguenti etichette secondarie:
+Se il servizio non è stato attivato, i criteri predefiniti di Azure Information Protection non configurano la protezione per le etichette secondarie seguenti:
 
 - **Riservato\Tutti i dipendenti**
 
@@ -43,11 +42,11 @@ Se il servizio non è stato attivato, i criteri predefiniti non configurano la p
 
 - **Riservatezza elevata\Solo i destinatari** 
 
-Quando queste etichette secondarie non vengono configurate automaticamente per la protezione, il criterio predefinito rimane identico al [criterio predefinito precedente](#default-policy-before-july-31-2017).
+Quando queste etichette secondarie non vengono configurate automaticamente per la protezione, i criteri predefiniti di Azure Information Protection rimangono identici ai [criteri predefiniti precedenti](#default-policy-before-july-31-2017).
 
 Quando viene applicata alle etichette secondarie per **Tutti i dipendenti**, la protezione è configurata usando i modelli predefiniti che vengono convertiti automaticamente in etichette nel portale di Azure. Per altre informazioni sui modelli, vedere [Configurazione e gestione dei modelli per Azure Information Protection](configure-policy-templates.md).
 
-A partire dal 30 agosto 2017 questa versione dei criteri predefiniti include versioni in più lingue dei nomi delle etichette e delle descrizioni. 
+A partire dal 30 agosto 2017, questa versione dei criteri predefiniti di Azure Information Protection include versioni in più lingue dei nomi delle etichette e delle descrizioni. 
 
 #### <a name="more-information-about-the-recipients-only-sublabel"></a>Ulteriori informazioni sull'etichetta secondaria Solo i destinatari
 

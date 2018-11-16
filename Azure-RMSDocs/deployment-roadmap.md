@@ -4,18 +4,18 @@ description: Per preparare l'ambiente e per implementare e gestire Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/05/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4d1a63ac3ea5fae9782588b1779d7c7950738e23
-ms.sourcegitcommit: 3b41a6e730fa40660a2bdf5b1a73d155c87aacc2
+ms.openlocfilehash: 4e2fa20d542a9509476c78ebe21143e49863b788
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48834607"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026826"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Guida di orientamento per la distribuzione di Azure Information Protection
 
@@ -23,7 +23,7 @@ ms.locfileid: "48834607"
 
 Usare le indicazioni della procedura che segue per preparare l'ambiente e per implementare e gestire Azure Information Protection per l'organizzazione.
 
-Tuttavia, se si vuole provare rapidamente Azure Information Protection per conto proprio, anziché implementarlo in un ambiente di produzione, vedere [Esercitazione introduttiva di Azure Rights Management](./infoprotect-quick-start-tutorial.md).
+Se invece si preferiscono informazioni basate sugli scenari, vedere l'articolo [Guide procedurali per gli scenari comuni che usano Azure Information Protection](how-to-guides.md).
 
 > [!NOTE]
 > Se si sta cercando una guida di orientamento per il rilascio di prodotti, vedere la sezione [Informazioni sulle nuove versioni e sugli aggiornamenti](information-support.md#information-about-new-releases-and-updates).
@@ -59,7 +59,7 @@ Per altre informazioni, vedere [Preparazione di utenti e gruppi per Azure Inform
 ### <a name="step-3-configure-and-deploy-classification-and-labeling"></a>Passaggio 3: Configurare e distribuire le funzionalità di classificazione e assegnazione di etichette
 
 > [!TIP]
-> **Facoltativo ma consigliato**: è consigliabile distribuire lo [scanner di Azure Information Protection](deploy-aip-scanner.md) per individuare le informazioni riservate presenti negli archivi dati locali. Le informazioni trovate dallo scanner possono semplificare la tassonomia di classificazione, oltre a fornire informazioni utili sulle etichette richieste e sui file che necessitano di protezione.
+> **Facoltativo ma consigliato**: è consigliabile distribuire lo scanner di Azure Information Protection per individuare le informazioni riservate presenti negli archivi dati locali. È disponibile una [guida introduttiva](quickstart-findsensitiveinfo.md) che illustra questo scenario. Le informazioni trovate dallo scanner possono semplificare la tassonomia di classificazione, oltre a fornire informazioni utili sulle etichette richieste e sui file che necessitano di protezione.
 > 
 > Lo scanner può essere configurato per cercare tipi noti di informazioni riservate in file locali in Windows Server, file in condivisioni di rete e file nelle versioni locali di SharePoint. Poiché questa configurazione non richiede la configurazione di etichette né la definizione della tassonomia di classificazione, per questa primissima fase della distribuzione è indicato eseguire lo scanner in questo modo. È anche possibile usare questa configurazione dello scanner in parallelo con i passaggi per la distribuzione seguenti, fino a quando non si configurano le condizioni per le etichette.
 
@@ -113,7 +113,7 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
 
 3. Configurare la funzionalità relativa agli utenti con privilegi avanzati per il ripristino dei dati
     
-    Se sono presenti servizi IT che prevedono l'analisi dei file che verranno protetti da Azure Information Protection, ad esempio soluzioni di prevenzione della perdita di dati, gateway con crittografia del contenuto e prodotti antimalware, configurare gli account di tali servizi come utenti con privilegi avanzati per Azure Rights Management. Per ulteriori informazioni, vedere [Configurazione degli utenti con privilegi avanzati per Rights Management di Azure e servizi di individuazione o ripristino dei dati](./configure-super-users.md).
+    Se sono presenti servizi IT che prevedono l'analisi dei file che verranno protetti da Azure Information Protection, ad esempio soluzioni di prevenzione della perdita di dati, gateway con crittografia del contenuto e prodotti anti-malware, configurare gli account di questi servizi come utenti con privilegi avanzati per Azure Rights Management. Per ulteriori informazioni, vedere [Configurazione degli utenti con privilegi avanzati per Rights Management di Azure e servizi di individuazione o ripristino dei dati](./configure-super-users.md).
 
 4. Classificare e proteggere i file esistenti in blocco
     
@@ -179,7 +179,7 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
 
 3. Configurare la funzionalità relativa agli utenti con privilegi avanzati per il ripristino dei dati
     
-    Se sono presenti servizi IT che prevedono l'analisi dei file che verranno protetti da Azure Information Protection, ad esempio soluzioni di prevenzione della perdita di dati, gateway con crittografia del contenuto e prodotti antimalware, configurare gli account di tali servizi come utenti con privilegi avanzati per Azure Rights Management. Per ulteriori informazioni, vedere [Configurazione degli utenti con privilegi avanzati per Rights Management di Azure e servizi di individuazione o ripristino dei dati](./configure-super-users.md).
+    Se sono presenti servizi IT che prevedono l'analisi dei file che verranno protetti da Azure Information Protection, ad esempio soluzioni di prevenzione della perdita di dati, gateway con crittografia del contenuto e prodotti anti-malware, configurare gli account di questi servizi come utenti con privilegi avanzati per Azure Rights Management. Per ulteriori informazioni, vedere [Configurazione degli utenti con privilegi avanzati per Rights Management di Azure e servizi di individuazione o ripristino dei dati](./configure-super-users.md).
 
 4. Proteggere i file esistenti in blocco 
     

@@ -4,18 +4,18 @@ description: Descrizione del funzionamento di Azure RMS, dei controlli crittogra
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 821038f555a73e89748541d5b512d5a631094fa8
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 19b45c3e24de5eba9f0bd243baf73797b66431f7
+ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149362"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51026775"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funzionamento di Azure RMS: dietro le quinte
 
@@ -150,7 +150,7 @@ Le procedure dettagliate precedenti riguardano scenari standard, ma esistono alc
 
 - **Dispositivi mobili**: quando i dispositivi mobili proteggono o utilizzano file con il servizio Azure Rights Management, i flussi del processo sono molto più semplici. I dispositivi mobili non vengono prima sottoposti al processo di inizializzazione utente, perché ogni transazione (di protezione o utilizzo del contenuto) è invece indipendente. Come con i computer Windows, i dispositivi mobili si connettono al servizio Azure Rights Management ed eseguono l'autenticazione. Per proteggere il contenuto, i dispositivi mobili inviano i criteri e il servizio Azure Rights Management invia una licenza di pubblicazione e la chiave simmetrica per proteggere il documento. Per utilizzare il contenuto, quando i dispositivi mobili si connettono al servizio Azure Rights Management ed eseguono l'autenticazione, inviano i criteri del documento al servizio Azure Rights Management e richiedono una licenza d'uso per utilizzare il documento. In risposta, il servizio Azure Rights Management invia le chiavi e le restrizioni necessarie ai dispositivi mobili. Entrambi i processi usano TLS per proteggere lo scambio di chiavi e altre comunicazioni.
 
-- **Connettore RMS**: quando il servizio Azure Rights Management viene usato con il connettore RMS, i flussi del processo rimangono invariati. L'unica differenza è che il connettore opera come un relè tra i servizi locali, ad esempio Exchange Server e SharePoint Server, e il servizio Azure Rights Management. Il connettore stesso non esegue alcuna operazione, ad esempio l'inizializzazione dell'ambiente utente, né crittografia o decrittografia. Inoltra semplicemente la comunicazione indirizzata solitamente a un server AD RMS, gestendo la conversione tra i protocolli usati su ogni lato. Questo scenario consente di usare il servizio Azure Rights Management con i servizi locali.
+- **Connettore RMS**: quando il servizio Azure Rights Management viene usato con il connettore RMS, i flussi del processo rimangono invariati. L'unica differenza è che il connettore opera come un relè tra i servizi locali, ad esempio Exchange Server e SharePoint Server, e il servizio Azure Rights Management. Il connettore stesso non esegue alcuna operazione, ad esempio l'inizializzazione dell'ambiente utente, né crittografia o decrittografia. Inoltra semplicemente la comunicazione indirizzata solitamente a un server AD RMS, gestendo la conversione tra i protocolli usati su ogni lato. Questo scenario consente di usare il servizio Azure Rights Management con i servizi locali.
 
 - **Protezione generica (pfile)**: quando il servizio Azure Rights Management protegge un file in modo generico, il flusso è fondamentalmente quello della protezione del contenuto, con la differenza che il client RMS crea i criteri che concedono tutti i diritti. Quando si usa il file, questo viene decrittografato prima di essere passato all'applicazione di destinazione. Questo scenario consente di proteggere tutti i file, anche se non supportano RMS in modo nativo.
 
@@ -162,7 +162,7 @@ Le procedure dettagliate precedenti riguardano scenari standard, ma esistono alc
 
 Per altre informazioni sul servizio Azure Rights Management, vedere gli altri articoli della sezione **Comprendere ed esplorare**, ad esempio [Supporto del servizio Azure Rights Management da parte delle applicazioni](applications-support.md), in cui viene spiegato come integrare le applicazioni esistenti in Azure Rights Management per fornire una soluzione di protezione delle informazioni. 
 
-Rivedere l'argomento [Terminologia di Azure Information Protection](./terminology.md) per acquisire familiarità con i termini relativi alla configurazione e all'uso del servizio Azure Rights Management. Prima di iniziare la distribuzione, esaminare anche le informazioni riportate in [Requisiti per Azure Information Protection](requirements.md). Per approfondire e affrontare un'esercitazione pratica, usare l'[Esercitazione introduttiva di Azure Information Protection](infoprotect-quick-start-tutorial.md).
+Rivedere l'argomento [Terminologia di Azure Information Protection](./terminology.md) per acquisire familiarità con i termini relativi alla configurazione e all'uso del servizio Azure Rights Management. Prima di iniziare la distribuzione, esaminare anche le informazioni riportate in [Requisiti per Azure Information Protection](requirements.md). Per approfondire e affrontare un'esercitazione pratica, seguire l'esercitazione [Modificare i criteri e creare una nuova etichetta](infoprotect-quick-start-tutorial.md).
 
 Se si è pronti a iniziare la distribuzione della protezione dati per l'organizzazione, usare la [Guida di orientamento per la distribuzione di Azure Information Protection](deployment-roadmap.md) per i passaggi di distribuzione e i collegamenti alle istruzioni d'uso.
 
