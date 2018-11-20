@@ -4,15 +4,15 @@ description: Configurare un'etichetta che protegge un messaggio di posta elettro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 11/14/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: 6beb55b6dbcd82582cc24c7beb787bf4b232f518
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: 793c3ff3b68de66dce5876c25cb4ba5455d19c33
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026979"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644693"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Guida introduttiva: Configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate
 
@@ -64,9 +64,11 @@ Per un elenco completo dei prerequisiti per l'uso di Azure Information Protectio
 
 ## <a name="configure-an-existing-label-to-apply-the-do-not-forward-protection"></a>Configurare un'etichetta esistente per l'applicazione della protezione Non inoltrare
 
-1. Aprire una nuova finestra del browser e [accedere al portale di Azure](https://portal.azure.com). Passare quindi ad **Azure Information Protection**. 
+1. Aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale. Passare quindi ad **Azure Information Protection**. 
     
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    
+    Se non si è l'amministratore globale, usare il collegamento seguente per i ruoli alternativi: [Accesso al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
 2. Dall'opzione di menu **Classificazioni** > **Etichette**: nel pannello **Azure Information Protection - Etichette** selezionare l'etichetta che si vuole configurare per l'applicazione della protezione. 
 

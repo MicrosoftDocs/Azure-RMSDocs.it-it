@@ -4,15 +4,15 @@ description: Creare e configurare una nuova etichetta che consenta di classifica
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 11/14/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: 921b1343e533b4643d97098350c34f5a69bfcf3e
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: dca90c7635702226e7414947aad6f3d89cf91efd
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026985"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644650"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Guida introduttiva: Creare una nuova etichetta di Azure Information Protection per utenti specifici
 
@@ -48,9 +48,11 @@ Per un elenco completo dei prerequisiti per l'uso di Azure Information Protectio
 
 Per prima cosa, creare la nuova etichetta.
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**.
+1. Se non è già stato fatto, aprire una nuova finestra del browser e accedere al [portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**.
     
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    
+    Se non si è l'amministratore globale, usare il collegamento seguente per i ruoli alternativi: [Accesso al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
 2. Dall'opzione di menu **Classificazioni** > **Etichette**: nel pannello **Azure Information Protection - Etichette** fare clic su **Aggiungi una nuova etichetta**.
 
@@ -58,7 +60,7 @@ Per prima cosa, creare la nuova etichetta.
     
     - **Nome visualizzato dell'etichetta**: il nome della nuova etichetta che sarà visibile agli utenti e che identifica la classificazione del contenuto. Ad esempio: `Sales - Restricted`.
     
-    - **Descrizione**: una descrizione comando che consenta agli utenti di capire quando è opportuno selezionare questa nuova etichetta. Ad esempio `Business data that is restricted to the Sales Team.`
+    - **Descrizione**: una descrizione comando che consenta agli utenti di capire quando è opportuno selezionare questa nuova etichetta. ad esempio `Business data that is restricted to the Sales Team.`
 
 4. Assicurarsi che l'opzione **Abilitato** sia impostata su **Sì** (impostazione predefinita) e selezionare **Salva**.
 

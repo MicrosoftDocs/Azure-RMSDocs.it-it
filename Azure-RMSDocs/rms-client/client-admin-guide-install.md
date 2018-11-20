@@ -4,18 +4,18 @@ description: Istruzioni e informazioni per gli amministratori per la distribuzio
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 11/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2b6e3a40f7faab35053c1bd3146bfc08767e0066
-ms.sourcegitcommit: 6d4792755226a61d59e79fd8795a9b0f653770bb
+ms.openlocfilehash: f4067698a97ded8aa4c7fd6144fa7738822f1910
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49367006"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644676"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guida dell'amministratore: Installare il client Azure Information Protection per gli utenti
 
@@ -41,6 +41,11 @@ Verificare quindi gli altri prerequisiti che possono essere necessari per il cli
     
     Il modulo PowerShell per il client richiede Windows PowerShell versione 4.0, che potrebbe essere necessario installare in sistemi operativi precedenti. Per altre informazioni, vedere [How to Install Windows PowerShell 4.0](http://social.technet.microsoft.com/wiki/contents/articles/21016.how-to-install-windows-powershell-4-0.aspx) (Come installare Windows PowerShell 4.0). Il programma di installazione non controlla né installa questo prerequisito per l'utente. Per verificare quale versione di Windows PowerShell è in esecuzione, digitare `$PSVersionTable` in una sessione di PowerShell.
 
+- Risoluzione dello schermo superiore a 800x600
+    
+    Alle risoluzioni 800x600 e inferiori non è possibile visualizzare completamente la finestra di dialogo **Classifica e proteggi - Azure Information Protection** facendo clic con il pulsante destro del mouse su un file o una cartella in Esplora file.
+
+
 - Assistente per l'accesso ai Microsoft Online Services 7.250.4303.0
     
     I computer che eseguono Office 2010 richiedono l'Assistente per l'accesso ai Microsoft Online Services versione 7.250.4303.0. Questa versione è inclusa nell'installazione del client. Se si usa una versione successiva dell'Assistente per l'accesso, disinstallarla prima di installare il client Azure Information Protection. Ad esempio, per verificare la versione e disinstallare l'Assistente per l'accesso, usare **Pannello di controllo** > **Programmi e funzionalità** > **Disinstalla o modifica programma**.
@@ -57,21 +62,21 @@ Verificare quindi gli altri prerequisiti che possono essere necessari per il cli
     
     L'installazione del client non verifica il rispetto di questo prerequisito, che è tuttavia necessario perché il client di Azure Information Protection possa classificare e proteggere i file PDF.
 
-- Configurazione dei criteri di gruppo per **Elenco dei componenti aggiuntivi gestiti**
+- Configurare i criteri di gruppo per impedire la disabilitazione del componente aggiuntivo Azure Information Protection
     
-    Per Office 2013 e versioni successive, configurare l'impostazione dei criteri di gruppo **Elenco dei componenti aggiuntivi gestiti** e aggiungere il componente aggiuntivo **Microsoft Azure Information Protection** per le applicazioni di Office. Specificare gli identificatori seguenti a livello di codice (ProgID) per Azure Information Protection e impostare l'opzione su **1: The add-in is always enabled** (1: Sempre attivato).
+    Per Office 2013 e versioni successive, configurare i criteri di gruppo per garantire che il componente aggiuntivo **Microsoft Azure Information Protection** per le applicazioni di Office sia sempre abilitato. Senza questa configurazione, è possibile che il componente aggiuntivo Microsoft Azure Information Protection venga disabilitato e gli utenti non potranno assegnare etichette a documenti e messaggi di posta elettronica nella propria applicazione Office.
     
-    - Per Outlook: `MSIP.OutlookAddin`
+    - Per Outlook: usare l'impostazione dei criteri di gruppo documentata in [System Administrator control over add-ins](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) (Controllo dell'amministratore sui componenti aggiuntivi) nella documentazione di Office.
     
-    - Per Word: `MSIP.WordAddin`
-    
-    - Per Excel: `MSIP.ExcelAddin`
-    
-    - Per PowerPoint: `MSIP.PowerPointAddin`
-    
-    Se non si configura questa impostazione, è possibile che il componente aggiuntivo Microsoft Azure Information Protection venga disabilitato e gli utenti non potranno assegnare etichette a documenti e messaggi di posta elettronica nella propria applicazione Office.
-    
-    Per altre informazioni sulla configurazione di questa impostazione dei criteri di gruppo, vedere [System Administrator control over add-ins](https://docs.microsoft.com/office/vba/outlook/concepts/getting-started/support-for-keeping-add-ins-enabled#system-administrator-control-over-add-ins) (Controllo dell'amministratore sui componenti aggiuntivi) nella documentazione di Office.
+    - Per Word, Excel e PowerPoint: usare l'impostazione dei criteri di gruppo **Elenco dei componenti aggiuntivi gestiti** documentata nell'articolo del supporto tecnico [No Add-ins loaded due to group policy settings for Office 2013 and Office 2016 programs](https://support.microsoft.com/help/2733070/no-add-ins-loaded-due-to-group-policy-settings-for-office-2013-and-off) (Nessun componente aggiuntivo caricato a causa di impostazioni criteri di gruppo per Office 2013 e Office 2016). 
+        
+        Specificare gli identificatori seguenti a livello di codice (ProgID) per Azure Information Protection e impostare l'opzione su **1: The add-in is always enabled** (1: Sempre attivato).
+        
+        Per Word: `MSIP.WordAddin`
+        
+        Per Excel: `MSIP.ExcelAddin`
+        
+        Per PowerPoint: `MSIP.PowerPointAddin`
 
 > [!IMPORTANT]
 > L'installazione del client Azure Information Protection richiede autorizzazioni amministrative locali.

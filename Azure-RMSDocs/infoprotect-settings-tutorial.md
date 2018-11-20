@@ -4,15 +4,15 @@ description: Esercitazione introduttiva che illustra la configurazione delle imp
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 11/14/2018
 ms.topic: tutorial
 ms.service: information-protection
-ms.openlocfilehash: ead65d9fef1b6c4f0087757e044caccee14805df
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: b9f60d0e8cc61a1d38b2992c0d430507bf494d18
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026998"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644651"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Esercitazione: Configurare impostazioni dei criteri di Azure Information Protection che interagiscono tra loro
 
@@ -69,9 +69,11 @@ Invece di affidare agli utenti il compito di etichettare manualmente documenti e
 
 Tramite il portale di Azure verranno modificati i criteri globali per la modifica delle impostazioni dei criteri per tutti gli utenti.
 
-1. Aprire una nuova finestra del browser e [accedere al portale di Azure](https://portal.azure.com). Passare quindi ad **Azure Information Protection**. 
+1. Aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale. Passare quindi ad **Azure Information Protection**. 
     
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    
+    Se non si è l'amministratore globale, usare il collegamento seguente per i ruoli alternativi: [Accesso al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
 2. Selezionare **Classificazioni** > **Criteri** > **Globale** per aprire il pannello **Criteri: Globale**. 
 
@@ -83,7 +85,7 @@ Tramite il portale di Azure verranno modificati i criteri globali per la modific
 
     |Impostazione|Valore|Informazioni|
     |-------|-----|-----|
-    |**Selezionare l'etichetta predefinita**|**Generale**|Se non si dispone di un'etichetta denominata **Generale**, selezionarne un'altra dall'elenco a discesa. Ai documenti e ai messaggi di posta elettronica senza etichetta verrà applicata automaticamente questa etichetta come classificazione di base. Gli utenti potranno tuttavia modificare l'etichetta selezionata impostandone un'altra.|
+    |**Selezionare l'etichetta predefinita**|**Generalee**|Se non si dispone di un'etichetta denominata **Generale**, selezionarne un'altra dall'elenco a discesa. Ai documenti e ai messaggi di posta elettronica senza etichetta verrà applicata automaticamente questa etichetta come classificazione di base. Gli utenti potranno tuttavia modificare l'etichetta selezionata impostandone un'altra.|
     |**Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**|**Sì**|Questa impostazione è nota anche come etichettatura obbligatoria, perché impedisce agli utenti il salvataggio di documenti o l'invio di messaggi di posta elettronica senza etichetta. Insieme all'etichetta predefinita, i documenti e i messaggi di posta elettronica avranno l'etichetta predefinita impostata o un'etichetta scelta dagli utenti.
     |**Per i messaggi di posta elettronica con allegati, applica un'etichetta corrispondente alla classificazione più elevata di questi allegati**|**Consigliato**|Questa impostazione richiede agli utenti di selezionare un'etichetta di classificazione superiore per i messaggi di posta elettronica quando si allegano documenti contenenti una classificazione più elevata rispetto all'etichetta predefinita selezionata.
     |**Visualizza la barra di Information Protection nelle app Office**|**Sì**|La visualizzazione della barra di Information Protection rende più semplice per gli utenti visualizzare e modificare l'etichetta predefinita.

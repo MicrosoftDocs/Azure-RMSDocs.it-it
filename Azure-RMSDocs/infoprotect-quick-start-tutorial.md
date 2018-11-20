@@ -4,15 +4,15 @@ description: Esercitazione introduttiva per la modifica dei criteri di Azure Inf
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/07/2018
+ms.date: 11/14/2018
 ms.topic: tutorial
 ms.service: information-protection
-ms.openlocfilehash: 9e5fb752e75a6b6616fa0ef347c6a6102cd859fa
-ms.sourcegitcommit: 8e43a41998045fe574710e9da0b7747eaeccdba1
+ms.openlocfilehash: 7f8fc76b0ad3d90d422cc18229d10b1f1a8d6e8d
+ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51273600"
+ms.lasthandoff: 11/14/2018
+ms.locfileid: "51644744"
 ---
 # <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Esercitazione: Modificare i criteri di Azure Information Protection e creare una nuova etichetta
 
@@ -67,9 +67,11 @@ Tramite il portale di Azure, si procederà per prima cosa alla modifica di alcun
 
 ### <a name="edit-the-policy-settings"></a>Modificare le impostazioni dei criteri
 
-1. Aprire una nuova finestra del browser e [accedere al portale di Azure](https://portal.azure.com). Passare quindi ad **Azure Information Protection**. 
+1. Aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale. Passare quindi ad **Azure Information Protection**. 
     
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    
+    Se non si è l'amministratore globale, usare il collegamento seguente per i ruoli alternativi: [Accesso al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
 2. Selezionare **Classificazioni** > **Criteri** > **Globale** per aprire il pannello **Criteri: Globale**. 
 
