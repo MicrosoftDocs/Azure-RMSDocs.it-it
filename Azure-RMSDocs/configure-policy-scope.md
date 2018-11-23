@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f1623c14377feb545f945a447363e7f3d12e8dd3
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: a55a073a0b567e9e92b11fdcb1a5c8032c4e94c7
+ms.sourcegitcommit: 03a9fc3f1b96a4edc0e2a9d538ce04a0579023be
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026571"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52268054"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Come configurare i criteri di Azure Information Protection per utenti specifici con i criteri con ambito
 
@@ -28,6 +28,8 @@ Per le applicazioni che supportano il client di Azure Information Protection, tu
 Si noti che oltre alle applicazioni desktop di Office che supportano il client di Azure Information Protection, le etichette sono supportate anche con PowerShell e lo scanner di Azure Information Protection. Ciò significa che è possibile creare e configurare criteri con ambito per gli account che eseguono i comandi di PowerShell o lo scanner. 
 
 I criteri con ambiti, analogamente alle etichette, vengono ordinati nel portale di Azure. Se un utente è configurato per più ambiti, viene calcolato un criterio effettivo per tale utente prima del download. In base all'ordine dei criteri, viene applicata l'ultima impostazione dei criteri. Le etichette visualizzate dall'utente fanno parte dei criteri globali, mentre tutte le etichette aggiuntive fanno parte dei criteri con ambiti a cui l'utente appartiene.
+
+L'eccezione è quando un utente dal tenant apre un documento o un messaggio di posta elettronica etichettato e tale utente non è incluso nell'ambito dell'etichetta. In questo scenario, l'utente vede il nome dell'etichetta impostata, ma l'etichetta non viene visualizzata come disponibile per la selezione.  
 
 Poiché un criterio con ambito eredita sempre le etichette e le impostazioni dai criteri globali, tali etichette vengono visualizzate quando si crea o si modifica un criterio con ambito. Tuttavia, non è possibile modificare le etichette dei criteri globali quando si modifica un criterio con ambito. È comunque possibile aggiungere etichette secondarie a queste etichette ereditate.
 
@@ -58,4 +60,3 @@ Il client di Azure Information Protection ricerca eventuali modifiche ogni volta
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per un esempio su come personalizzare i criteri predefiniti e osservare il comportamento risultante in un'applicazione di Office, seguire l'esercitazione [Modificare i criteri e creare una nuova etichetta](infoprotect-quick-start-tutorial.md).
-

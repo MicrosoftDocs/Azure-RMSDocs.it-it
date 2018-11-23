@@ -8,30 +8,30 @@ ms.date: 11/14/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 0e40e0044c38e58690b3e4130a4980042296edf4
-ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
+ms.openlocfilehash: 1a2702d1cff5cdf62b8969829f0389c15b5c7fae
+ms.sourcegitcommit: 520c8758c46ab46427fe205234bb221688ec9ec4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644727"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52292610"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Quando si assegna un'etichetta a un documento o a un messaggio di posta elettronica, è possibile selezionare diverse opzioni per rendere facilmente visibile la classificazione scelta. Questi contrassegni visivi sono un'intestazione, un piè di pagina e una filigrana.
+Quando si assegna un'etichetta a un documento o a un messaggio di posta elettronica, è possibile selezionare diverse opzioni per rendere facilmente visibile la classificazione scelta. Questi contrassegni visivi sono un'intestazione, un piè di pagina e una filigrana. 
 
 Altre informazioni su questi contrassegni visivi:
 
-- Intestazioni e piè di pagina supportano singole righe di testo che si applicano a Word, Excel, PowerPoint e Outlook.
+- Per tutti i contrassegni visivi sono supportate più righe di testo.
+
+- Intestazioni e piè di pagina si applicano a Word, Excel, PowerPoint e Outlook.
 
 - Le filigrane si applicano a Word, Excel e PowerPoint:
 
     - Excel: le filigrane sono visibili solo nelle modalità Layout di pagina e Anteprima di stampa, oltre che sulla stampa.
     
     - PowerPoint: le filigrane vengono applicate alla diapositiva master, come immagine di sfondo. Nella scheda **Visualizza**, **Schema diapositiva**, assicurarsi che la casella di controllo **Nascondi grafica di sfondo** non sia selezionata.
-    
-    - Sono supportate più righe di testo.
 
 - Lunghezze massime delle stringhe:
     

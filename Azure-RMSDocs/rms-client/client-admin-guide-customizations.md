@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 62d53acd482b9efdd0425d5a944d2241f8a33b30
-ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
+ms.openlocfilehash: 4d3a44426de151ad9d1f1262cae967fdddf0da6f
+ms.sourcegitcommit: 520c8758c46ab46427fe205234bb221688ec9ec4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223994"
+ms.lasthandoff: 11/22/2018
+ms.locfileid: "52292593"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -86,9 +86,11 @@ Per accedere come utente diverso:
 
 Inoltre:
 
-- Questa soluzione è supportata per l'accesso come utente diverso dallo stesso tenant. Non è supportata per l'accesso come utente diverso da un diverso tenant. Per testare Azure Information Protection con più tenant, usare computer diversi.
+- Se l'accesso al client Azure Information Protection risulta ancora con l'account precedente dopo aver completato questi passaggi, eliminare tutti i cookie di Internet Explorer e quindi ripetere i passaggi 1 e 2.
 
-- Se si usa la funzione Single Sign-On, è necessario uscire da Windows, modificare il Registro di sistema e quindi accedere con un account utente diverso. Il client di Azure Information Protection esegue quindi automaticamente l'autenticazione tramite l'account utente usato per l'accesso.
+- Se si usa la funzione Single Sign-On, è necessario uscire da Windows e accedere con un account utente diverso dopo aver eliminato il file del token. Il client di Azure Information Protection esegue quindi automaticamente l'autenticazione tramite l'account utente usato per l'accesso.
+
+- Questa soluzione è supportata per l'accesso come utente diverso dallo stesso tenant. Non è supportata per l'accesso come utente diverso da un diverso tenant. Per testare Azure Information Protection con più tenant, usare computer diversi.
 
 - È possibile usare l'opzione **Ripristina le impostazioni** in **Guida e commenti** per disconnettersi ed eliminare i criteri di Azure Information Protection scaricati.
 

@@ -4,18 +4,18 @@ description: Le informazioni contenute in questo articolo sono state rimosse per
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/23/2017
-ms.topic: article
+ms.date: 11/19/2018
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8c9d61e5-75da-4785-9942-1c6313879fd5
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c8621c690db38733e57429594d08703c57caadac
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: ac508190d48bc24b4c8ccc366d4136337269d48f
+ms.sourcegitcommit: 03a9fc3f1b96a4edc0e2a9d538ce04a0579023be
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42806397"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52268122"
 ---
 # <a name="more-information-about-thales-hsms-and-microsoft-additions-retired-content"></a>Altre informazioni sui moduli di protezione hardware Thales e sulle funzionalità aggiunte da Microsoft: CONTENUTO RIMOSSO
 
@@ -23,3 +23,4 @@ ms.locfileid: "42806397"
 
 Le informazioni contenute in questo articolo sono state rimosse perché non più pertinenti in quanto Azure Rights Management usa l'insieme di credenziali della chiave di Azure per le chiavi del tenant gestite dal cliente (note anche come bring your own key o BYOK). 
 
+Per altre informazioni, vedere [Implementazione di BYOK per la chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
