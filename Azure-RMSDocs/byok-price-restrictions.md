@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 57914b0268102e8f7f5049ee1c63b58bf54c9a14
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 93e538b882da557715b04e8675b5a3b86de018b0
+ms.sourcegitcommit: bcc9e0f9ae8512bf48d819533cf8ef3b667eb298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149143"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52330277"
 ---
 # <a name="byok-pricing-and-restrictions"></a>Prezzi e restrizioni della modalità BYOK
 
@@ -34,7 +34,7 @@ Tuttavia, se si vuole condividere una sottoscrizione di Azure con altri servizi 
 
 ## <a name="benefits-of-using-azure-key-vault"></a>Vantaggi dell'uso di Insieme di credenziali delle chiavi di Azure
 
-Oltre alla funzionalità di registrazione dell'utilizzo di Azure Information Protection, per una maggiore sicurezza è possibile creare riferimenti incrociati con la [registrazione di Insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-logging/) per controllare in modo indipendente se la chiave viene usata solo dal servizio Azure Rights Management. Se necessario, è possibile revocare immediatamente l'accesso alla chiave rimuovendo le autorizzazioni per l'insieme di credenziali delle chiavi.
+Oltre alla funzionalità di registrazione dell'utilizzo di Azure Information Protection, per una maggiore sicurezza è possibile creare riferimenti incrociati con la [registrazione di Insieme di credenziali delle chiavi di Azure](/azure/key-vault/key-vault-logging) per controllare in modo indipendente se la chiave viene usata solo dal servizio Azure Rights Management. Se necessario, è possibile revocare immediatamente l'accesso alla chiave rimuovendo le autorizzazioni per l'insieme di credenziali delle chiavi.
 
 Altri vantaggi dell'uso di Insieme di credenziali delle chiavi di Azure per la chiave del tenant Azure Information Protection:
 

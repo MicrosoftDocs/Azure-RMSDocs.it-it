@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 07/11/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bacfe4f0bdc7c400e58bc3f054d3539b6883a9fd
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 1d749c77ada71a7f086b5d7836f44b530cab2dc9
+ms.sourcegitcommit: bcc9e0f9ae8512bf48d819533cf8ef3b667eb298
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42808052"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52330348"
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave protetta tramite software a una chiave protetta tramite HSM
 
@@ -111,11 +111,11 @@ Ora che la chiave del certificato concessore di licenze server (SLC) è stata es
 
 ## <a name="part-2-package-and-transfer-your-hsm-key-to-azure-key-vault"></a>Parte 2: Creare il pacchetto e trasferire la chiave del modulo di protezione hardware in Insieme di credenziali delle chiavi di Azure
 
-Amministratore di Azure Key Vault: per ogni chiave del certificato concessore di licenze server esportata che si vuole archiviare in Azure Key Vault usare i passaggi seguenti nella sezione [Implementazione di BYOK (Bring Your Own Key) per Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#implementing-bring-your-own-key-byok-for-azurekey-vault) della documentazione di Azure Key Vault:
+Amministratore di Azure Key Vault: per ogni chiave del certificato concessore di licenze server esportata che si vuole archiviare in Azure Key Vault usare i passaggi seguenti nella sezione [Implementazione di BYOK (Bring Your Own Key) per Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault) della documentazione di Azure Key Vault:
 
-- [Passaggio 4: Preparare la chiave per il trasferimento](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-4-prepare-your-key-for-transfer)
+- [Passaggio 4: Preparare la chiave per il trasferimento](/azure/key-vault/key-vault-hsm-protected-keys#step-4-prepare-your-key-for-transfer)
 
-- [Passaggio 5: Trasferire la chiave a Insieme di credenziali delle chiavi di Azure](https://azure.microsoft.com/documentation/articles/key-vault-hsm-protected-keys/#step-5-transfer-your-key-to-azurekey-vault)
+- [Passaggio 5: Trasferire la chiave a Insieme di credenziali delle chiavi di Azure](/azure/key-vault/key-vault-hsm-protected-keys#step-5-transfer-your-key-to-azure-key-vault)
 
 Non seguire i passaggi per generare la coppia di chiavi, perché si dispone già della chiave. Al contrario, eseguire un comando per trasferire tale chiave (in questo esempio, il parametro KeyIdentifier usa "contosobyok") dal modulo di protezione hardware locale.
 

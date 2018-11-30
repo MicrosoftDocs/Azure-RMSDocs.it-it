@@ -4,18 +4,18 @@ description: È possibile configurare e gestire i modelli di Rights Management d
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/20/2018
+ms.date: 11/29/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 71444804ab21dfbe09e0cf13ab1b75425f7a84d0
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: 6e6200849a5d62001317708e000fbb7da4a7ac6d
+ms.sourcegitcommit: e72c89e35cae6a19dca060f688838d78dc8f0448
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169856"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52585976"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurazione e gestione dei modelli per Azure Information Protection
 
@@ -75,7 +75,7 @@ Nel pannello **Azure Information Protection - Etichette**, i modelli archiviati 
 
 Prima di modificare i modelli o convertirli in etichette, assicurarsi di essere a conoscenza delle seguenti modifiche e considerazioni. A causa delle modifiche di implementazione, l'elenco seguente è particolarmente importante se si è già gestito dei modelli nel portale di Azure classico.
 
-- Dopo aver modificato o convertito un modello e salvato i criteri di Azure Information Protection, vengono apportate le modifiche seguenti ai [diritti di utilizzo](configure-usage-rights.md) originali. Se necessario, è possibile aggiungere o rimuovere singoli diritti di utilizzo tramite il portale di Azure. In alternativa, usare PowerShell con i cmdlet [New-AadrmRightsDefinition](/powershell/module/aadrm/set-aadrmtemplateproperty) e [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty).
+- Dopo aver modificato o convertito un modello e salvato i criteri di Azure Information Protection, vengono apportate le modifiche seguenti ai [diritti di utilizzo](configure-usage-rights.md) originali. Se necessario, è possibile aggiungere o rimuovere singoli diritti di utilizzo tramite il portale di Azure. In alternativa, usare PowerShell con i cmdlet [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) e [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty).
     
     - **Consenti macro** (nome comune) viene aggiunto automaticamente. Questo diritto di utilizzo è obbligatorio per la barra di Azure Information Protection nelle app Office.
 
