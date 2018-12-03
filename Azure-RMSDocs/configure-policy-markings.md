@@ -4,16 +4,16 @@ description: Quando si assegna un'etichetta a un documento o a un messaggio di p
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 11/28/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 1a2702d1cff5cdf62b8969829f0389c15b5c7fae
-ms.sourcegitcommit: 520c8758c46ab46427fe205234bb221688ec9ec4
+ms.openlocfilehash: 23185d2d6b5b1bb14633647c345d0e58eeda3bdc
+ms.sourcegitcommit: e72c89e35cae6a19dca060f688838d78dc8f0448
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/22/2018
-ms.locfileid: "52292610"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52585993"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
@@ -23,8 +23,6 @@ Quando si assegna un'etichetta a un documento o a un messaggio di posta elettron
 
 Altre informazioni su questi contrassegni visivi:
 
-- Per tutti i contrassegni visivi sono supportate più righe di testo.
-
 - Intestazioni e piè di pagina si applicano a Word, Excel, PowerPoint e Outlook.
 
 - Le filigrane si applicano a Word, Excel e PowerPoint:
@@ -32,6 +30,8 @@ Altre informazioni su questi contrassegni visivi:
     - Excel: le filigrane sono visibili solo nelle modalità Layout di pagina e Anteprima di stampa, oltre che sulla stampa.
     
     - PowerPoint: le filigrane vengono applicate alla diapositiva master, come immagine di sfondo. Nella scheda **Visualizza**, **Schema diapositiva**, assicurarsi che la casella di controllo **Nascondi grafica di sfondo** non sia selezionata.
+
+- Sono supportate più righe per le filigrane e per le intestazioni e i piè di pagina in Word, Excel e PowerPoint. Se si specificano più righe per l'intestazione o il piè di pagina di un'etichetta applicata in Outlook, le righe vengono concatenate. In questo scenario, è consigliabile usare la configurazione per [impostare contrassegni visivi diversi per Word, Excel, PowerPoint e Outlook](##setting-different-visual-markings-for-word-excel-powerpoint-and-outlook).
 
 - Lunghezze massime delle stringhe:
     
@@ -41,7 +41,7 @@ Altre informazioni su questi contrassegni visivi:
 
 - È possibile specificare una stringa di testo o usare [variabili](#using-variables-in-the-text-string) per creare dinamicamente la stringa di testo quando viene applicata l'intestazione, il piè di pagina o la filigrana.
 
-- Word, PowerPoint e Outlook, supportano i contrassegni visivi in colori diversi. I contrassegni visivi configurati a colori vengono sempre visualizzati in nero in Excel.
+- Word, PowerPoint, Outlook e ora Excel supportano contrassegni visivi in colori diversi.
 
 - I contrassegni visivi supportano una sola lingua.
 
@@ -82,7 +82,7 @@ Quando fa clic su **Salva**, le modifiche diventano automaticamente disponibili 
 
 Nella stringa di testo è possibile usare le variabili seguenti per l'intestazione, il piè di pagina o la filigrana:
 
-- `${Item.Label}` per l'etichetta selezionata. Ad esempio: interno
+- `${Item.Label}` per l'etichetta selezionata. Ad esempio: Generale
 
 - `${Item.Name}` per l'oggetto del messaggio di posta elettronica o il nome di file. Ad esempio: JulySales.docx
 
@@ -95,6 +95,9 @@ Nella stringa di testo è possibile usare le variabili seguenti per l'intestazio
 - `${Event.DateTime}` per la data e l'ora in cui è stata impostata l'etichetta selezionata. Ad esempio: 16/8/2016 13:30
 
 Esempio: se si specifica la stringa `Document: ${item.name}  Classification: ${item.label}` per il piè di pagina dell'etichetta **General**, il testo del piè di pagina applicato a un documento denominato project.docx sarà **Document: project.docx  Classification: General** (Documento: project.docx Classificazione: Generale).
+
+>[!TIP]
+> È anche possibile usare un [codice di campo per inserire il nome dell'etichetta](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) in un documento o modello.
 
 ## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Impostazione di contrassegni visivi diversi per Word, Excel, PowerPoint e Outlook
 

@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 0ee7333baebd0a34f518ff9500df95ed57ed2b01
-ms.sourcegitcommit: b70d49870960a7a3feaf9a97a6e04ad350c4d2c8
+ms.openlocfilehash: e16c50422268a05596ebc28e09d464959fd1e0b2
+ms.sourcegitcommit: ef70dab87478084fca853f389dab2408b95d1df1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50751169"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52303924"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
@@ -107,9 +107,10 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
         ###### <a name="more-information-about-add-any-authenticated-users"></a>Altre informazioni su **Add any authenticated users** (Aggiungi qualsiasi utente autenticato) 
         Questa impostazione non limita chi può accedere al contenuto protetto dall'etichetta, pur crittografando il contenuto e fornendo le opzioni per limitare come usare il contenuto (autorizzazioni) e come accedervi (scadenza e accesso offline). L'applicazione che apre il contenuto protetto deve tuttavia poter supportare l'autenticazione in uso. Per questo motivo, i provider di servizi di social networking federati, ad esempio Google, e l'autenticazione di passcode monouso devono essere usati solo per la posta elettronica e solo quando si usano Exchange Online e le nuove funzionalità di Office 365 Message Encryption. Gli account Microsoft possono essere usati con il visualizzatore Azure Information Protection e Office 2016 A portata di clic. 
           
-        Alcuni scenari tipici per l'impostazione relativa agli utenti autenticati: - Non è importante chi visualizza il contenuto, ma si vuole limitare il modo in cui viene usato. Ad esempio, non si vuole che il contenuto venga modificato, copiato o stampato.  
-            - Non è necessario limitare chi accede al contenuto, ma si vuole tenere traccia di chi lo apre e, potenzialmente, lo revoca.  
-            - Esiste un requisito in base al quale il contenuto deve essere crittografato quando è inattivo e quando è in transito, ma non sono necessari controlli di accesso.
+        Alcuni scenari tipici per l'impostazione Aggiungi eventuali utenti autenticati:
+        - Non è importante chi visualizza il contenuto, ma si vuole limitare il modo in cui viene usato. Ad esempio, non si vuole che il contenuto venga modificato, copiato o stampato.
+        - Non è necessario limitare chi accede al contenuto, ma si vuole tenere traccia di chi lo apre e, potenzialmente, revocare l'accesso.
+        - Esiste un requisito in base al quale il contenuto deve essere crittografato quando è inattivo e quando è in transito, ma non sono necessari controlli di accesso.
         
     - Scegliere **Immettere i dettagli** per specificare manualmente gli indirizzi di posta elettronica dei singoli utenti o gruppi (interni o esterni) o per specificare tutti gli utenti in un'altra organizzazione immettendo un nome di dominio di tale organizzazione. È anche possibile usare questa opzione per i provider di social networking, immettendo i nomi di dominio, ad esempio **gmail.com**, **hotmail.com** oppure **outlook.com**.
         

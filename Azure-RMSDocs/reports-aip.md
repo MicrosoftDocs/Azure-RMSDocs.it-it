@@ -4,19 +4,19 @@ description: Come usare il reporting centralizzato per monitorare l'adozione del
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/13/2018
+ms.date: 11/27/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 85ca097a1808c2940ce534c7ce3d0542aaf3f27a
-ms.sourcegitcommit: 0f9e2ba05b61f8db08387576a697b8deff45fd36
+ms.openlocfilehash: 98403232311731b137719c613b2ce061a236b706
+ms.sourcegitcommit: ff77e4da1f7c7cf2262c208f8e58b85cfdb54903
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51611421"
+ms.lasthandoff: 11/27/2018
+ms.locfileid: "52421012"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -44,6 +44,18 @@ Ad esempio è possibile visualizzare quanto segue:
     
     - Quali applicazioni vengono usate per l'assegnazione di etichette
 
+- Dai **log attività**, in cui è possibile selezionare un periodo di tempo:
+    
+    - Quali azioni di etichettatura sono state eseguite da un utente specifico
+    
+    - Quali azioni di etichettatura sono state eseguite da un dispositivo specifico
+    
+    - Quali utenti hanno avuto accesso a un documento etichettato specifico
+    
+    - Quali azioni di etichettatura sono state eseguite da un percorso di file specifico
+    
+    - Quali azioni di etichettatura sono state eseguite da un'applicazione specifica, ad esempio Esplora file e clic con il pulsante destro del mouse o il modulo di PowerShell AzureInformationProtection
+
 - Nel report **Individuazione dati**:
 
     - Quali file si trovano nei repository dei dati analizzati
@@ -52,7 +64,7 @@ Ad esempio è possibile visualizzare quanto segue:
     
     - Quali file contengono informazioni riservate per categorie note, ad esempio dati finanziari e informazioni personali e il percorso dei file in base a queste categorie
     
-I report usano [Azure Log Analytics](/azure/log-analytics/log-analytics-overview) per archiviare i dati in un'area di lavoro di proprietà dell'utente. Se si ha familiarità con il linguaggio di query, è possibile modificare le query e creare nuovi report e dashboard di Power BI. L'esercitazione seguente può risultare utile per la comprensione del linguaggio di query: [Getting Started with the Analytics Portal](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal) (Introduzione al portale Analytics). 
+I report usano [Azure Log Analytics](/azure/log-analytics/log-analytics-overview) per archiviare i dati in un'area di lavoro di proprietà dell'organizzazione. Se si ha familiarità con il linguaggio di query, è possibile modificare le query e creare nuovi report e dashboard di Power BI. L'esercitazione seguente può risultare utile per la comprensione del linguaggio di query: [Getting Started with the Analytics Portal](https://docs.loganalytics.io/docs/Learn/Getting-Started/Getting-started-with-the-Analytics-portal) (Introduzione al portale Analytics). 
 
 Per altre informazioni, vedere il post di blog [Data discovery, reporting and analytics for all your data with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854) (Rilevamento, report e analitica per tutti i dati utente con Microsoft Information Protection).
 
@@ -80,7 +92,7 @@ Per generare questi report gli endpoint inviano i seguenti tipi di informazioni 
 
 - Versione del sistema operativo del client.
 
-Queste informazioni vengono archiviate in un'area di lavoro di Azure Log Analytics di cui si è proprietari e possono essere visualizzate solo dagli utenti che dispongono dei diritti di accesso all'area di lavoro. Per informazioni sulla configurazione dell'accesso all'area di lavoro, vedere la sezione [Gestire utenti e account](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users) nella documentazione di Azure.
+Queste informazioni vengono archiviate in un'area di lavoro di Azure Log Analytics di proprietà dell'organizzazione e possono essere visualizzate dagli utenti con i diritti di accesso all'area di lavoro. Per informazioni sulla configurazione dell'accesso all'area di lavoro, vedere la sezione [Gestire utenti e account](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users) nella documentazione di Azure.
 
 ## <a name="prerequisites-for-azure-information-protection-analytics"></a>Prerequisiti per l'analitica di Azure Information Protection
 Per visualizzare i report di Azure Information Protection e creare report personalizzati, verificare che siano soddisfatti i requisiti seguenti.
@@ -88,7 +100,7 @@ Per visualizzare i report di Azure Information Protection e creare report person
 |Requisito|Altre informazioni|
 |---------------|--------------------|
 |Un abbonamento di Azure che include Log Analytics|Vedere la pagina [Prezzi di Log Analytics](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Se non si dispone di un abbonamento di Azure o attualmente non si usa Azure Log Analytics, la pagina dei prezzi include un collegamento per una versione di valutazione gratuita.|
-|La versione di anteprima corrente del client di Azure Information Protection.|Se non è ancora stata installata la versione di anteprima corrente del client, è possibile scaricarla e installarla dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
+|La versione disponibile a livello generale corrente del client di Azure Information Protection.|Se non è ancora stata installata questa versione del client, è possibile scaricarla e installarla dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
 |Per il report **Individuazione e rischio**: <br /><br />- Deve essere stata distribuita almeno un'istanza dello scanner Azure Information Protection (versione di anteprima corrente)|Per le istruzioni di installazione, vedere [Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner.md). <br /><br />Se si esegue l'aggiornamento da una versione precedente dello scanner, vedere [Aggiornamento dello scanner di Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
 
 
@@ -115,6 +127,12 @@ Quando viene completata la configurazione dell'area di lavoro si è pronti per v
 Nel pannello Azure Information Protection trovare le opzioni del menu **Dashboard** e scegliere una delle opzioni seguenti:
 
 - **Report di utilizzo (anteprima)**: usare questo report per vedere come vengono usate le etichette. 
+
+- **Log attività (anteprima)**: usare questo report per visualizzare le azioni di etichettatura dagli utenti e per i dispositivi e i percorsi di file.
+    
+    La distribuzione di questo report ai tenant è in corso, pertanto, se non è visibile, riprovare tra qualche giorno. 
+    
+    Questo report contiene un'opzione **Colonne** che consente di visualizzare ulteriori informazioni sulle attività rispetto alla visualizzazione predefinita. Una delle colonne è **Rischio dei dispositivi**, che consentirà di visualizzare i dati da Windows Defender quando l'applicazione in oggetto è integrata in Azure Information Protection.
 
 - **Individuazione dati (anteprima)**: usare questo report per visualizzare informazioni sui file rilevati dagli scanner.
 

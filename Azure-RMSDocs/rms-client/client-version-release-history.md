@@ -4,18 +4,17 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 11/29/2018
 ms.topic: conceptual
 ms.service: information-protection
-ms.assetid: 6ebd0ca3-1864-4b3d-bb3e-a168eee5eb1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d4b9419ee12dfef0db29604dc7a396eedd7225fc
-ms.sourcegitcommit: a547dee247e4961e8f7c1f08e39b03dff710a74c
+ms.openlocfilehash: b0dc98bb1c626737fb087c78691bb3a9e35a445e
+ms.sourcegitcommit: e72c89e35cae6a19dca060f688838d78dc8f0448
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51628072"
+ms.lasthandoff: 11/29/2018
+ms.locfileid: "52586010"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto
 
@@ -42,36 +41,42 @@ Usare le informazioni seguenti per scoprire le novità o le modifiche per una ve
 >  
 > Per il supporto tecnico, vedere le informazioni riportate in [Opzioni di supporto e risorse per la community](../information-support.md#support-options-and-community-resources). È anche possibile rivolgersi al team di Azure Information Protection nel [sito di Yammer](https://www.yammer.com/askipteam/).
 
-## <a name="versions-later-than-137190"></a>Versioni successive alla versione 1.37.19.0
-
-Se la versione 1 del client usata è successiva alla 1.37.19.0, si tratta di una build di anteprima per scopi di test e valutazione. 
+## <a name="version-141510"></a>Versione 1.41.51.0
 
 > [!TIP]
 > Se si è interessati alla valutazione del client di etichettatura unificato Azure Information Protection perché si pubblicano le etichette dal Centro sicurezza e conformità di Office 365, vedere [Client che supporta l'etichettatura unificata di Azure Information Protection: informazioni di rilascio versione](unifiedlabelingclient-version-release-history.md).
 
-**Data di rilascio**: 20/09/2018
+**Data di rilascio**: 27/11/2018
+
+Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
 
 **Nuove funzionalità:**
 
 - Supporto del [reporting centralizzato](../reports-aip.md) per la funzionalità di analisi di Azure Information Protection annunciata in Microsoft Ignite.
 
-**Informazioni aggiuntive:**
+- Excel supporta ora i [contrassegni visivi](../configure-policy-markings.md) in colori diversi.
 
-Solo per questa versione di anteprima, specifiche per lo scanner:
+- Per le distribuzioni esistenti di S/MIME, una nuova impostazione client avanzata (in anteprima) per configurare un'etichetta per applicare automaticamente la protezione S/MIME in Outlook. [Altre informazioni](client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
 
-- Installare lo scanner seguendo questa procedura:
+- Una nuova impostazione client avanzata, come alternativa alla modifica del Registro di sistema per evitare richieste di accesso per il servizio Azure Information Protection per i [computer disconnessi](client-admin-guide-customizations.md#support-for-disconnected-computers).
+
+**Correzioni**:
+
+- Il client Azure Information Protection non esclude più le estensioni di nomi di file msg, rar e zip per Esplora file (clic con il pulsante destro del mouse) e i comandi di PowerShell. Tuttavia, queste estensioni rimangono escluse per impostazione predefinita per lo scanner. 
+
+- Il client Azure Information Protection può annullare la protezione di più file (selezione multipla e una cartella che contiene i file protetti) quando si usa Esplora file, clic con il pulsante destro del mouse.
+
+- Per Excel:
     
-    1. Installare la versione GA corrente (1.37.19.0) del client.
-    2. Installare e configurare lo scanner.
-    3. Avviare lo scanner.
-    4. Aggiornare il client Azure Information Protection a questa versione di anteprima.
-    5. Avviare lo scanner.
-
-- Problema noto con l'analisi di set di dati grandi:
+    - I contrassegni visivi vengono ora applicati se si salva il foglio di calcolo durante la modifica di una cella.
     
-    Con questa versione di anteprima, aumentare gradualmente il numero di file da analizzare e monitorare lo stato di avanzamento. Se lo stato dello scanner segnala che è in esecuzione ma i nuovi file non vengano analizzati, ridurre il numero di file da analizzare e riavviare lo scanner. 
+    - Excel 2010: quando un foglio di calcolo è protetto tramite il [livello di autorizzazione](../configure-usage-rights.md#rights-included-in-permissions-levels) Coautore, il pulsante **Elimina etichetta** è ora disponibile quando si fa clic con il pulsante destro del mouse sul file e si sceglie **Classifica e proteggi**.
 
-Per istruzioni per l'installazione, la configurazione e l'avvio dello scanner, vedere [Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file](../deploy-aip-scanner.md).
+- Le impostazioni client avanzate che consentono la [rimozione di intestazioni e piè di pagina da altre soluzioni di etichettatura](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions) ora supportano i layout personalizzati.
+
+**Modifiche aggiuntive:**
+
+- Quando la pianificazione dello scanner è impostata su **Sempre**, viene ora applicato un ritardo di 30 secondi tra le analisi.
 
 ## <a name="version-137190"></a>Versione 1.37.19.0
 
@@ -116,6 +121,8 @@ Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
     - Ora è possibile proteggere tutti i tipi di file usando il carattere jolly `*` quando si modifica il Registro di sistema come descritto nella sezione [Modifica del Registro di sistema per lo scanner](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner).
 
 - La visualizzazione di messaggi di posta elettronica mediante le icone freccia elemento successivo ed elemento precedente nella barra di accesso rapido visualizza l'etichetta appropriata per ogni messaggio.
+
+- Quando si applica la classificazione e la protezione mediante Esplora file, PowerShell o lo scanner, i metadati del documento di Office non vengono rimossi o crittografati.
 
 - Le autorizzazioni personalizzate supportano gli indirizzi di posta elettronica di destinatari contenenti un apostrofo.
 
@@ -198,9 +205,12 @@ Questa versione include MSIPC versione 1.0.3403.1224 del client RMS.
 **Nuove funzionalità**:
 
 - Scanner di Azure Information Protection: il modulo di PowerShell incluso nel client offre nuovi cmdlet per installare e configurare lo scanner per l'individuazione, la classificazione e la protezione dei file negli archivi dati locali. Per istruzioni, vedere [Distribuzione dello scanner Azure Information Protection per classificare e proteggere automaticamente i file](../deploy-aip-scanner.md). 
-- È ora possibile impostare contrassegni visivi diversi per Word, Excel, PowerPoint e Outlook tramite un'istruzione di variabile "If.App" nella stringa di testo e identificare il tipo di applicazione. [Altre informazioni]configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
+
+- È ora possibile impostare contrassegni visivi diversi per Word, Excel, PowerPoint e Outlook tramite un'istruzione di variabile "If.App" nella stringa di testo e identificare il tipo di applicazione. [Altre informazioni](../configure-policy-markings.md#setting-different-visual-markings-for-word-excel-powerpoint-and-outlook)
 
 - Supporto per l'[impostazione dei criteri](../configure-policy-settings.md): **Visualizza la barra di Information Protection nelle app Office**. Quando questa impostazione è disabilitata, gli utenti selezionano le etichette dal pulsante **Proteggi** sulla barra multifunzione.
+
+- Le intestazioni e i piè di pagina in Word, Excel e PowerPoint supportano ora più righe di testo.
 
 - Un nuova impostazione client avanzata (ancora in anteprima) per attivare l'esecuzione continua della classificazione in background. Quando questa impostazione è abilitata, per le app di Office la classificazione automatica e consigliata viene eseguita in modo continuo in background anziché al salvataggio dei documenti. Questa modifica del comportamento consente di applicare la classificazione automatica e consigliata ai documenti archiviati in SharePoint Online. [Altre informazioni](client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background)
 
@@ -233,7 +243,7 @@ Correzioni per la stabilità e per scenari specifici che includono:
 
 - Per PowerPoint: supporto per la creazione condivisa, che in precedenza poteva provocare la perdita di dati.
 
-- I file con estensione .xml possono ora essere esaminati per la classificazione automatica o consigliata.
+- I file con estensione xml possono ora essere esaminati per la classificazione automatica o consigliata.
 
 - Il visualizzatore può ora aprire file protetti basati su testo (con estensione .ptxt e .pxml) con dimensioni maggiori di 20 MB. 
 - Outlook non si blocca più quando vengono usati i promemoria di Outlook.
