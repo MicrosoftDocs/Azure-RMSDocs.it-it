@@ -7,12 +7,12 @@ manager: mbaldwin
 ms.date: 11/14/2018
 ms.topic: tutorial
 ms.service: information-protection
-ms.openlocfilehash: b9f60d0e8cc61a1d38b2992c0d430507bf494d18
-ms.sourcegitcommit: ad37950f6a747c86f6496c6de859e18446f9b03f
+ms.openlocfilehash: 75a13413cbbbb1a7ab653522fcec9606c002f7d8
+ms.sourcegitcommit: dce7b4f95c216afc9ec6524a686a02287e6bdcf7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51644651"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "53007499"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Esercitazione: Configurare impostazioni dei criteri di Azure Information Protection che interagiscono tra loro
 
@@ -35,7 +35,7 @@ Invece di affidare agli utenti il compito di etichettare manualmente documenti e
 
 Per completare questa esercitazione, è necessario:
 
-1. Disporre di una sottoscrizione che includa un piano 2 di Azure Information Protection.
+1. Disporre di una sottoscrizione che includa un piano 1 o 2 di Azure Information Protection.
     
     In assenza di una sottoscrizione con questo piano, è possibile creare un account [gratuito](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.
 
