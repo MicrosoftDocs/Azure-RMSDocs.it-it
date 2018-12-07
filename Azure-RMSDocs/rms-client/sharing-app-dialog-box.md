@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 7b91ab30-6363-4929-bcbd-4dfbd05f644a
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 435432c1c759c040482096393c3a36cdee02691b
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: f6e84919653d68fb4f09671b233ccdc31bf1a82f
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148495"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024281"
 ---
 # <a name="dialog-box-options-for-the-rights-management-sharing-application"></a>Opzioni della finestra di dialogo per l'applicazione Rights Management sharing
 
@@ -24,7 +24,7 @@ ms.locfileid: "44148495"
 Utilizzare queste informazioni per specificare le opzioni nella finestra di dialogo **Aggiungi protezione** o nella finestra di dialogo **Condividi file protetto** dell'applicazione di RMS sharing. Questa finestra di dialogo verrà visualizzata quando si [protegge un file da condividere](sharing-app-protect-by-email.md) oppure si [protegge un file nella posizione](sharing-app-protect-in-place.md) e si scelgono autorizzazioni personalizzate.
 
 > [!IMPORTANT]
-> Se le opzioni visualizzate sono diverse da quelle documentate qui, probabilmente non è installata l'ultima versione dell’applicazione di condivisione. È possibile scaricare l'ultima versione dalla pagina di [Microsoft Rights Management](http://go.microsoft.com/fwlink/?LinkId=303970) .
+> Se le opzioni visualizzate sono diverse da quelle documentate qui, probabilmente non è installata l'ultima versione dell’applicazione di condivisione. È possibile scaricare l'ultima versione dalla pagina di [Microsoft Rights Management](https://go.microsoft.com/fwlink/?LinkId=303970) .
 > 
 > Come è possibile sapere se si dispone della versione più recente? Cercare l'applicazione **Microsoft Rights Management sharing** elencata in Programmi e funzionalità e verificare il numero di versione corrispondente. Per visualizzare e utilizzare le opzioni nella tabella, la versione deve essere almeno **1.0.1770.0**. È possibile verificare il numero di versione più recente dalla pagina di download.
 
