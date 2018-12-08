@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 61f349ce-bdd2-45c1-acc5-bc83937fb187
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c20ead2b01b2a37d63bbf3b2b0295f37c9421fdd
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: d0efb37ee0d424593b9cdb4c2690088e11afc29d
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151691"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024060"
 ---
 # <a name="track-and-revoke-your-documents-when-you-use-the-rms-sharing-application"></a>Tenere traccia dei documenti e revocarli quando si usa l'applicazione RMS sharing
 
@@ -37,7 +37,7 @@ Azioni che è possibile eseguire nel sito di rilevamento dei documenti:
     
     Nota: se pur essendo un amministratore globale l'utente non visualizza questa icona, significa che non sono stati ancora condivisi documenti. In questo caso, usare l'URL seguente per accedere al sito di rilevamento dei documenti: https://portal.azurerms.com/#/admin
 
-- Se si hanno domande o si vogliono lasciare commenti e suggerimenti sul sito di rilevamento del documento: fare clic sull'icona della Guida per accedere a [Domande frequenti sul rilevamento dei documenti](http://go.microsoft.com/fwlink/?LinkId=523977).
+- Se si hanno domande o si vogliono lasciare commenti e suggerimenti sul sito di rilevamento del documento: fare clic sull'icona della Guida per accedere a [Domande frequenti sul rilevamento dei documenti](https://go.microsoft.com/fwlink/?LinkId=523977).
 
 ## <a name="using-office-to-access-the-document-tracking-site"></a>Utilizzare Office per accedere al sito di rilevamento del documento
 
@@ -67,19 +67,19 @@ Oltre a tenere traccia dei documenti nei computer Windows utilizzando applicazio
 
 #### <a name="using-a-web-browser-to-access-the-doc-tracking-site"></a>Tramite l’utilizzo di un browser per accedere al sito di rilevamento dei documenti
 
-- Tramite l’utilizzo di un browser supportato, passare al [sito di rilevamento del documento](http://go.microsoft.com/fwlink/?LinkId=529562).
+- Tramite l’utilizzo di un browser supportato, passare al [sito di rilevamento del documento](https://go.microsoft.com/fwlink/?LinkId=529562).
 
-    Browser supportati: È consigliabile utilizzare almeno la versione  10 di Internet Explorer, ma è possibile utilizzare uno qualsiasi dei browser seguenti per utilizzare il sito di rilevamento del documento:
+    Browser supportati: anche se è consigliabile usare almeno la versione 10 di Internet Explorer, è possibile usare anche uno qualsiasi dei browser seguenti per visitare il sito di rilevamento dei documenti:
 
     -   Internet Explorer: almeno la versione 10
 
     -   Internet Explorer 9 con almeno MS12-037: aggiornamento cumulativo della sicurezza per Internet Explorer: 12 giugno 2012
 
-    -   Mozilla Firefox: Almeno la versione  12
+    -   Mozilla Firefox: almeno la versione 12
 
-    -   Apple Safari 5: Almeno la versione  5
+    -   Apple Safari 5: almeno la versione 5
 
-    -   Google Chrome: Almeno la versione  18
+    -   Google Chrome: almeno la versione 18
 
 #### <a name="using-file-explorer-to-access-the-doc-tracking-site"></a>Utilizzando Esplora File per accedere al sito di rilevamento del documento
 

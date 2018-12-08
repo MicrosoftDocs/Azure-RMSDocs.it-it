@@ -1,5 +1,5 @@
 ---
-title: Aggiungere o rimuovere un'etichetta a o da un criterio di Azure Information Protection
+title: Aggiungere o rimuovere un'etichetta in o da criteri di Azure Information Protection - AIP
 description: Aggiungere o rimuovere un'etichetta di Azure Information Protection a o dai criteri globali per tutti gli utenti oppure a o da un criterio con ambito per un sottoinsieme di utenti.
 author: cabailey
 ms.author: cabailey
@@ -8,12 +8,12 @@ ms.date: 04/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
-ms.openlocfilehash: a5e5e50f5271476c3690280cbe026be9ada7ceb2
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: f097ec2f0e3db75d679e6c0a6251fb128f583d4b
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49170247"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023302"
 ---
 # <a name="add-or-remove-a-label-to-or-from-an-azure-information-protection-policy"></a>Aggiungere o rimuovere un'etichetta a o da un criterio di Azure Information Protection
 

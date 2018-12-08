@@ -4,18 +4,18 @@ description: Informazioni per fornire istruzioni a utenti, amministratori e adde
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0359329513bdd2825f7121a95d4e940a76c401a5
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 43bc10ce43a4ba7a26958e562c4acc6e245ad76a
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148801"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024077"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Consentire agli utenti di proteggere i file mediante il servizio Azure Rights Management
 
@@ -30,7 +30,7 @@ Dopo aver distribuito e configurato Azure Information Protection per l'organizza
     > [!TIP]
     > Video di esempio per gli utenti finali:
     > -   [Microsoft Azure Information Protection](https://youtu.be/ToShAUdlrPo?list=PL8nfc9haGeb6qSm1kLU8n3Zqg398764h5)
-    > -   [Revoca e rilevamento dei documenti di Azure RMS](http://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
+    > -   [Revoca e rilevamento dei documenti di Azure RMS](https://channel9.msdn.com/Series/Information-Protection/Azure-RMS-Document-Tracking-and-Revocation)
 
 -   **Informazioni per gli amministratori**
     
@@ -48,7 +48,7 @@ Dopo aver distribuito e configurato Azure Information Protection per l'organizza
     
     - **Guida per l'accesso**
         
-        Quando il servizio Azure Rights Management deve autenticare un utente e non può usare le credenziali memorizzate nella cache, è possibile che all'utente venga chiesto di immettere le credenziali. Le credenziali richieste sono in genere quelle per l'account aziendale o dell'istituto di istruzione dell'utente e per la password associati al tenant di Office 365 o di Azure Active Directory. Anche se il servizio Azure Rights Management può autenticare account Azure AD, alcune applicazioni possono aprire contenuti protetti anche quando viene usato un account Microsoft per l'autenticazione. [Altre informazioni](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
+        Quando il servizio Azure Rights Management deve autenticare un utente e non può usare le credenziali memorizzate nella cache, è possibile che all'utente venga chiesto di immettere le credenziali. Le credenziali richieste sono in genere quelle per l'account aziendale o dell'istituto di istruzione dell'utente e per la password associati al tenant di Office 365 o di Azure Active Directory. Anche se il servizio Azure Rights Management può autenticare account Azure AD, alcune applicazioni possono aprire contenuti protetti anche quando viene usato un account Microsoft per l'autenticazione. [Altre informazioni](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents) 
         
         Fornire agli utenti e agli addetti del servizio help desk istruzioni sugli account da usare nel caso in cui gli utenti debbano immettere le proprie credenziali quando dispongono di applicazioni che usano il servizio Azure Rights Management.
         
@@ -66,20 +66,20 @@ Nelle sezioni seguenti sono disponibili informazioni specifiche delle applicazio
 
 ## <a name="using-information-protection-with-the-azure-information-protection-client"></a>Protezione delle informazioni con il client Azure Information Protection
 
-Se gli utenti usano Office 2010, il client Azure Information Protection, o l'applicazione RMS sharing in uso in precedenza, deve proteggere e usare documenti e messaggi di posta elettronica protetti. Tuttavia, il client Azure Information Protection è consigliabile anche per tutti i computer e dispositivi mobili che supportano questo servizio.
+Se gli utenti usano Office 2010, il client Azure Information Protection, o l'applicazione RMS sharing in uso in precedenza, deve proteggere e utilizzare documenti e messaggi di posta elettronica protetti. Tuttavia, il client Azure Information Protection è consigliabile anche per tutti i computer e dispositivi mobili che supportano questo servizio.
 
 Oltre a rendere più semplice per gli utenti la protezione di documenti e messaggi di posta elettronica, il client Azure Information Protection consente di tenere traccia dei documenti protetti. I documenti rilevati possono anche essere revocati se gli utenti autorizzati in precedenza non devono più avere accesso agli stessi.
 
 Per istruzioni sull'uso di questo client per computer Windows, vedere la [Guida per l'utente del client Azure Information Protection](./rms-client/client-user-guide.md).
 
 
-## <a name="using-information-protection-with-office-365-office-2016-or-office-2013"></a>Uso della protezione delle informazioni con Office 365 oppure Office 2016 o Office 2013
+## <a name="using-information-protection-with-office365-office-2016-or-office2013"></a>Uso della protezione delle informazioni con Office 365 oppure Office 2016 o Office 2013
 Se si sta usando il servizio Azure Rights Management e il client Azure Information Protection non è stato installato, gli utenti non vedono la barra di Azure Information Protection nelle app desktop di Office, il pulsante **Proteggi** sulla barra multifunzione o il comando **Classifica e proteggi** in Esplora file. Queste aggiunte semplificano l'applicazione della protezione a documenti e messaggi di posta elettronica. Tali utenti devono seguire istruzioni simili alle seguenti.
 
 > [!TIP]
 > Per trovare indicazioni e istruzioni specifiche dell'applicazione per l'uso della protezione delle informazioni in tali applicazioni, cercare **IRM** e il nome e la versione dell'applicazione.
 
-#### <a name="to-protect-a-document-in-word-2013"></a>Per proteggere un documento in Word 2013
+#### <a name="to-protect-a-document-in-word2013"></a>Per proteggere un documento in Word 2013
 
 1.  Creare un documento in Microsoft Word.
 
@@ -98,7 +98,7 @@ Un diritto d'uso di sola visualizzazione, ad esempio, non consente all'utente di
 
 I diritti d'uso vengono visualizzati nella parte superiore del documento in un banner di limitazioni, in cui possono essere visualizzate le autorizzazioni applicate al documento o può essere presente un collegamento per visualizzarle.
 
-#### <a name="to-protect-an-email-message-using-outlook-2013-and-exchange-online"></a>Per proteggere un messaggio di posta elettronica in Outlook 2013 e in Exchange Online
+#### <a name="to-protect-an-email-message-using-outlook2013-and-exchange-online"></a>Per proteggere un messaggio di posta elettronica in Outlook 2013 e in Exchange Online
 
 1.  In Outlook creare un messaggio di posta elettronica indirizzato a un destinatario presente nell'organizzazione.
 

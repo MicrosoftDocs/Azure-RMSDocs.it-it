@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f9b02f62ff31665e60455cdcd77e0de9da4db9af
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: ec0c231e2036dc66b941be7f764bb5e5fd5c518a
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148435"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023801"
 ---
 # <a name="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application"></a>Panoramica tecnica e dettagli sulla protezione per l'applicazione Microsoft Rights Management sharing
 
@@ -36,7 +36,7 @@ L'applicazione Microsoft Rights Management sharing è un'applicazione facoltativ
 
 L'applicazione Microsoft Rights Management sharing usa il nuovo [runtime di AD RMS Client 2.1](http://www.microsoft.com/download/details.aspx?id=38396). Grazie alla funzionalità di AD RMS 2.1, l'applicazione Microsoft Rights Management sharing consente agli utenti finali un'esperienza semplice di protezione e di utilizzo.
 
-Con la versione di RMS del mese di ottobre 2013, è possibile proteggere i documenti in modo nativo usando Office 2010 e inviarli a persone in un'altra società, che possono quindi utilizzarli tramite il servizio Azure Rights Management di Azure Information Protection. Inoltre, con questa versione, se si usa AD RMS in modalità crittografia 2, è possibile eseguire RMS per utenti singoli e utilizzare contenuto proveniente da persone di un'altra società che usa il servizio Azure Rights Management. Per ulteriori informazioni sulla modalità di crittografia 2, vedere [Modalità di crittografia di AD RMS](http://technet.microsoft.com/library/hh867439%28v=ws.10%29.aspx).
+Con la versione di RMS di ottobre 2013, è possibile proteggere i documenti in modo nativo usando Office 2010 e inviarli a persone in un'altra società, che possono quindi utilizzarli tramite il servizio Azure Rights Management di Azure Information Protection. Inoltre, con questa versione, se si usa AD RMS in modalità crittografia 2, è possibile eseguire RMS per utenti singoli e utilizzare contenuto proveniente da persone di un'altra società che usa il servizio Azure Rights Management. Per altre informazioni sulla modalità di crittografia 2, vedere [Modalità di crittografia di AD RMS](https://technet.microsoft.com/library/hh867439%28v=ws.10%29.aspx).
 
 Per informazioni sulla distribuzione, vedere [Distribuzione automatica dell'applicazione Microsoft Rights Management sharing](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)
 
@@ -75,9 +75,9 @@ Per i file protetti in modo generico, l'estensione del nome file originale viene
 |.jpe|.pjpe|
 |.jfif|.pjfif|
 |.jt|.pjt|
-Rendering PDF con tecnologia Foxit ¹. Copyright © 2003-2014, Foxit Corporation.
+Rendering PDF con tecnologia Foxit ¹. Copyright © 2003-2014, Foxit Corporation.
 
-La tabella seguente elenca i tipi di file che l'applicazione Microsoft Rights Management sharing supporta in modo nativo in Microsoft Office 2016, Office 2013 e Office 2010. Per questi file, l'estensione del nome di file rimane invariata dopo che il file è stato protetto da un servizio Rights Management.
+La tabella seguente elenca i tipi di file che l'applicazione di condivisione Microsoft Rights Management supporta in modo nativo in Microsoft Office 2016, Office 2013 e Office 2010. Per questi file, l'estensione del nome di file rimane invariata dopo che il file è stato protetto da un servizio Rights Management.
 
 |Tipi di file supportati da Office|Tipi di file supportati da Office|
 |----------------------------------|----------------------------------|

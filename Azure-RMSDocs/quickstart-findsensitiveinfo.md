@@ -1,5 +1,5 @@
 ---
-title: Guida introduttiva - Trovare le informazioni riservate presenti nei file archiviati in locale usando lo scanner di Azure Information Protection
+title: Avvio rapido - Trovare le informazioni riservate nei file tramite lo scanner di Azure Information Protection - AIP
 description: Usare lo scanner di Azure Information Protection per trovare le informazioni riservate presenti nei file archiviati in locale.
 author: cabailey
 ms.author: cabailey
@@ -7,12 +7,12 @@ manager: mbaldwin
 ms.date: 11/05/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: a69972ec4371c808b7a295bfc993a257e440d1e1
-ms.sourcegitcommit: 227f54a8e90aa57d778ab60c646179c10e5edb44
+ms.openlocfilehash: 050c56887b83f0badf692bf2ee3b4616ad5b8bf4
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51272398"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024230"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Guida introduttiva: Trovare le informazioni riservate presenti nei file archiviati in locale
 

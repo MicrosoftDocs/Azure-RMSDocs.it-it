@@ -1,7 +1,6 @@
 ---
 title: Introduzione - App AIP per iOS e Android
-description: ''
-keywords: Come visualizzare file o messaggi di posta elettronica con l'app Azure Information Protection per iOS e Android
+description: Visualizzare file o messaggi di posta elettronica con l'app Azure Information Protection per iOS e Android
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -11,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c1a8722c91e456dcc1686d6edb51b906e288f5ba
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: aea2c8734aa36cb5ca735e351abe27e4e6dcc4e2
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147611"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023793"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Introduzione all'app Microsoft Azure Information Protection per iOS e Android
 

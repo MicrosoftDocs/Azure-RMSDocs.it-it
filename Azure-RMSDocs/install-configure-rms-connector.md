@@ -5,17 +5,17 @@ author: cabailey
 ms.author: cabailey
 manager: mbaldwin
 ms.date: 05/16/2018
-ms.topic: article
+ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d39986951808cce23cbdc1ca817e14dcb6629f43
-ms.sourcegitcommit: 7ba9850e5bb07b14741bb90ebbe98f1ebe057b10
+ms.openlocfilehash: 2e3babe4a402b8f77700e9b9890dc5f826a5850a
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42805995"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53026929"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installazione e configurazione del connettore di Azure Rights Management
 
@@ -28,12 +28,13 @@ Prima di iniziare, assicurarsi di aver esaminato e controllato i [prerequisiti](
 
 ## <a name="installing-the-rms-connector"></a>Installazione del connettore RMS
 
-1.  Identificare i computer (almeno due) su cui verrà eseguito il connettore RMS. È necessario che tali computer siano conformi alle specifiche minime elencate nei prerequisiti.
+1.  Identificare i computer (almeno due) che eseguiranno
+2.  il connettore RMS. È necessario che tali computer siano conformi alle specifiche minime elencate nei prerequisiti.
 
     > [!NOTE]
     > Installare un singolo connettore RMS (costituito da più server per la disponibilità elevata) per ogni tenant (tenant di Office 365 o di Azure AD). A differenza di Active Directory RMS, non è necessario installare un connettore RMS in ogni foresta.
 
-2.  Scaricare i file di origine per il connettore RMS dall' [Area download Microsoft](http://go.microsoft.com/fwlink/?LinkId=314106).
+2.  Scaricare i file di origine per il connettore RMS dall' [Area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=314106).
 
     Per installare il connettore RMS, scaricare il file RMSConnectorSetup.exe.
 
@@ -173,7 +174,7 @@ Il nome server dell'URL del connettore può essere qualsiasi nome incluso in uno
 > [!IMPORTANT]
 > Si consiglia di non modificare il nome dopo aver configurato i server di Exchange o SharePoint per l'uso del connettore. Se si modificasse il nome, sarebbe infatti necessario eliminare tali server da tutte le configurazioni IRM e configurarli nuovamente.
 
-Dopo aver creato un nome nel DNS e averlo configurato per un indirizzo IP, impostare il bilanciamento del carico per tale indirizzo, operazione che indirizza il traffico ai server del connettore. A tale scopo è possibile usare qualsiasi servizio di bilanciamento del carico, inclusa la funzionalità Bilanciamento carico di rete di Windows Server. Per altre informazioni, vedere la [guida di distribuzione relativa al bilanciamento del carico](http://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
+Dopo aver creato un nome nel DNS e averlo configurato per un indirizzo IP, impostare il bilanciamento del carico per tale indirizzo, operazione che indirizza il traffico ai server del connettore. A tale scopo è possibile usare qualsiasi servizio di bilanciamento del carico, inclusa la funzionalità Bilanciamento carico di rete di Windows Server. Per altre informazioni, vedere la [guida di distribuzione relativa al bilanciamento del carico](https://technet.microsoft.com/library/cc754833%28v=WS.10%29.aspx).
 
 Usare le impostazioni seguenti per configurare il cluster di Bilanciamento carico di rete:
 
@@ -200,9 +201,9 @@ Se si usa l'opzione HTTPS, assicurarsi che tutti i server che eseguono il connet
 > [!TIP]
 > Per richiedere e installare un certificato di autenticazione server e per associare quest'ultimo al sito Web predefinito in IIS, usare le informazioni e le risorse indicate di seguito:
 >
-> -   Se per distribuire i certificati di autenticazione server si usano Servizi certificati Active Directory e un'autorità di certificazione (CA) globale (enterprise), è possibile duplicare e quindi usare il modello di certificato del server Web. Questo modello di certificato usa **Fornito nella richiesta** per il nome soggetto del certificato. Questo significa che, quando si richiede il certificato, è possibile fornire il nome di dominio completo del nome del connettore RMS come nome soggetto del certificato o come nome alternativo del soggetto.
-> -   Se si usa una CA autonoma o si acquista il certificato da un'altra società, vedere la sezione relativa alla [configurazione dei certificati del server Internet (IIS 7)](http://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx) nella raccolta di documentazione relativa al [Server Web (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) su TechNet.
-> -   Per configurare IIS per l'uso del certificato, vedere la sezione relativa all'[Add a Binding to a Site (IIS 7)](http://technet.microsoft.com/library/cc731692.aspx) (Aggiungere un'associazione a un sito - IIS 7) nella raccolta di documentazione [Web Server (IIS)](http://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) (Server Web - IIS) su TechNet.
+> - Se per distribuire i certificati di autenticazione server si usano Servizi certificati Active Directory e un'autorità di certificazione (CA) globale (enterprise), è possibile duplicare e quindi usare il modello di certificato del server Web. Questo modello di certificato usa **Fornito nella richiesta** per il nome soggetto del certificato. Questo significa che, quando si richiede il certificato, è possibile fornire il nome di dominio completo del nome del connettore RMS come nome soggetto del certificato o come nome alternativo del soggetto.
+> -   Se si usa una CA autonoma o si acquista il certificato da un'altra società, vedere la sezione relativa alla [configurazione dei certificati del server Internet (IIS 7)](https://technet.microsoft.com/library/cc731977%28v=ws.10%29.aspx) nella raccolta di documentazione relativa al [Server Web (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) su TechNet.
+> - Per configurare IIS per l'uso del certificato, vedere la sezione relativa all'[Add a Binding to a Site (IIS 7)](https://technet.microsoft.com/library/cc731692.aspx) (Aggiungere un'associazione a un sito - IIS 7) nella raccolta di documentazione [Web Server (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) (Server Web - IIS) su TechNet.
 
 ## <a name="configuring-the-rms-connector-for-a-web-proxy-server"></a>Configurazione del connettore RMS per un server proxy Web
 Se i server del connettore sono installati in una rete che non dispone di connettività Internet diretta e richiede la configurazione manuale di un server proxy Web per l'accesso a Internet in uscita, è necessario configurare il Registro di sistema dei server per il connettore RMS.
@@ -238,7 +239,7 @@ Per installare lo strumento di amministrazione di connettore RMS, eseguire i fil
 
 -   Per un computer a 64 bit: RMSConnectorSetup.exe
 
-Se non sono stati già scaricati questi file, è possibile farlo dall' [Area download Microsoft](http://go.microsoft.com/fwlink/?LinkId=314106).
+Se non sono stati già scaricati questi file, è possibile farlo dall' [Area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=314106).
 
 
 ## <a name="next-steps"></a>Passaggi successivi

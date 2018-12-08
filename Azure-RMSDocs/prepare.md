@@ -4,18 +4,18 @@ description: Controllare di avere gli account utente e di gruppo necessari per i
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/21/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0277b638f9d069d2cfb1084136068d7ef58b1e2b
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: abbb7e5af52952dc3ed69f2825a8e32d25ab9982
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151623"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024101"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparazione di utenti e gruppi per Azure Information Protection
 
@@ -73,9 +73,9 @@ Per assegnare diritti di utilizzo e controlli di accesso e configurare il serviz
     
     Azure Information Protection può usare qualsiasi valore dell'attributo proxyAddresses di Azure AD se il dominio è stato aggiunto al tenant dell'utente ("dominio verificato"). Per altre informazioni sulla verifica di domini:
     
-    - Per Azure AD: [Aggiungere un nome di dominio personalizzato ad Azure Active Directory](/active-directory/active-directory-add-domain)
+    - Per Azure AD: [Aggiungere un nome di dominio personalizzato ad Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain)
 
-    - Per Office 365: [Add a domain and users to Office 365](https://go.microsoft.com/fwlinkid/?linkid=847121) (Aggiungere un dominio e utenti a Office 365)
+    - Per Office 365: [Aggiungere un dominio a Office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
 
 - L'attributo **userPrincipalName di Azure AD** viene usato solo se per un account nel tenant non sono presenti valori nell'attributo proxyAddresses di Azure AD, ad esempio se nel portale di Azure o per Office 365 si crea un utente senza una cassetta postale.
 

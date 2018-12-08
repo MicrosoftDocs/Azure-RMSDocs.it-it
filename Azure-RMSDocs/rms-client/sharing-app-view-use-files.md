@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 27de9df7062f6072e7e15b66759f540d5ce81dba
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 926a6d34b34b486577f6a8481010d058e465b3e8
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148053"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023992"
 ---
 # <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Visualizzare e usare i file che sono stati protetti da Rights Management
 
@@ -28,7 +28,7 @@ Quando l'[applicazione Rights Management (RMA) sharing viene installata nel comp
 >
 > Se l'organizzazione non usa Azure Information Protection o AD RMS, è possibile richiedere un account gratuito che accetterà le credenziali in modo che sia possibile aprire i file protetti tramite RMS:
 >
-> -   Per richiedere questo account, fare clic sul collegamento per richiedere [RMS per utenti singoli](http://go.microsoft.com/fwlink/?LinkId=309469).
+> -   Per richiedere questo account, fare clic sul collegamento per richiedere [RMS per utenti singoli](https://go.microsoft.com/fwlink/?LinkId=309469).
 >
 >     Quando si effettua l'iscrizione, utilizzare l'indirizzo di posta elettronica della società anziché un indirizzo di posta elettronica personale. Se si esegue l'iscrizione perché è stato inviato un allegato protetto tramite posta elettronica, utilizzare lo stesso indirizzo di posta elettronica utilizzato per inviare il messaggio di posta elettronica.
 > -   Per ulteriori informazioni, vedere [RMS per utenti singoli e Azure Rights Management](../rms-for-individuals.md).
@@ -72,7 +72,7 @@ Per un elenco completo delle estensioni di file supportate dai servizi Rights Ma
 ## <a name="to-use-files-that-have-been-protected-for-example-edit-and-print-the-file"></a>Per utilizzare i file protetti (ad esempio, modificare e stampare il file)
 Se dopo avere aperto il file protetto si vuole eseguire altre operazioni oltre alla lettura (ad esempio, modifica, copia e stampa), seguire le istruzioni in base all'estensione del nome di file:
 
-- **Il file ha un *pfile*  estensione del nome file**
+- **Il file ha estensione del nome di file *.pfile*** 
 
     Salvare il file aperto e assegnargli una nuova estensione del nome di file associata all'applicazione che si desidera utilizzare.
 
@@ -80,13 +80,13 @@ Se dopo avere aperto il file protetto si vuole eseguire altre operazioni oltre a
 
     Il nuovo file non è più protetto. Se si desidera proteggerlo, è necessario eseguire questa operazione manualmente. Per istruzioni, vedere [Proteggere un file in un dispositivo (protezione sul posto) tramite l'applicazione Rights Management sharing](sharing-app-protect-in-place.md).
 
-- **Il file ha estensione *.ppdf* o è un file di testo o immagine protetto, (ad esempio *.ptxt* o *.pjpg*)**
+- **Il file ha estensione *PPDF* o è un file di testo o immagine protetto, ad esempio *PTXT* o *PJPG***
 
     È possibile solo visualizzare il file e se lo si rinomina o lo si sposta, la protezione rimane con il file.
 
 - **Altre estensioni del nome di file**
 
-    Il dispositivo deve disporre di un'applicazione che riconosca la protezione Rights Management per usare questi file. Queste applicazioni vengono chiamate applicazioni abilitate per RMS. Le applicazioni di Office 2016, Office 2013 e Office 2010 (come Word, Excel, PowerPoint e Outlook) sono esempi di applicazioni abilitate per Rights Management. Tuttavia, anche applicazioni che non provengono da Microsoft, come altre aziende software e applicazioni line-of-business, potrebbero essere abilitate per Rights Management.
+    Il dispositivo deve disporre di un'applicazione che riconosca la protezione Rights Management per usare questi file. Queste applicazioni vengono chiamate applicazioni abilitate per RMS. Le applicazioni di Office 2016, Office 2013 e Office 2010 (come Word, Excel, PowerPoint e Outlook) sono esempi di applicazioni abilitate per Rights Management. Tuttavia, anche applicazioni che non provengono da Microsoft, come altre aziende software e applicazioni line-of-business, potrebbero essere abilitate per Rights Management.
 
     Le applicazioni abilitate per Rights Management sono in grado di aprire i file che sono stati protetti con altre applicazioni abilitate per Rights Management. Anche queste mantengono la protezione applicata ad essi, anche se si modifica il file o lo si salva con un altro nome di file o in un altro percorso. Queste applicazioni consentono di utilizzare il file in base alle autorizzazioni applicate ad esso, in modo che se si dispone delle autorizzazioni per utilizzare il file, è possibile farlo. Ad esempio, si potrebbe essere in grado di modificare il file, ma non di stamparlo.
 

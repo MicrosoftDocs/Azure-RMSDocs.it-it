@@ -1,6 +1,6 @@
 ---
-title: Configurare le condizioni per un'etichetta di Azure Information Protection
-description: Quando si configurano le condizioni per un'etichetta, è possibile assegnare automaticamente un'etichetta a un documento o messaggio di posta elettronica. In alternativa, è possibile richiedere agli utenti di selezionare l'etichetta consigliata.
+title: Configurare le condizioni per un'etichetta di Azure Information Protection - AIP
+description: Le condizioni per un'etichetta consentono di assegnare automaticamente un'etichetta a un documento o messaggio di posta elettronica. In alternativa, è possibile richiedere agli utenti di selezionare un'etichetta consigliata.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
@@ -8,12 +8,12 @@ ms.date: 11/05/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 49d3879dd4dd5d9a5459638b1b539f4fa233ee2f
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: adf877a3f5f08d0adefd1cbe8864a0c0c2bb17b1
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026554"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023856"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection
 

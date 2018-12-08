@@ -1,5 +1,5 @@
 ---
-title: Configurare i criteri di Azure Information Protection
+title: Configurare i criteri di Azure Information Protection - AIP
 description: Per configurare le funzioni di classificazione, aggiunta di etichette e protezione, è necessario configurare i criteri di Azure Information Protection.
 author: cabailey
 ms.author: cabailey
@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d6870982e86c1740b2492dac720578d6c771666c
-ms.sourcegitcommit: aae91cee32c59277a6dfffab35177cd4247169e4
+ms.openlocfilehash: 6c6c2be34250cca486004a0ed1b1fcd8fddfce35
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52450105"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023737"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
