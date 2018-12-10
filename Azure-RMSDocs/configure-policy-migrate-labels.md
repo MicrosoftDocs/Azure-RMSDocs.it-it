@@ -4,17 +4,17 @@ description: Eseguire la migrazione di etichette di Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 2d0ed8103ce4e0b42d67ea87b6b464dfb8f04f36
-ms.sourcegitcommit: 283782ee7e3ec566f479c8914eae7bf84d904392
+ms.openlocfilehash: 771cbb26a842cbf19184ace94ae47ba9d549a33f
+ms.sourcegitcommit: b4118cd75db6478f86b9994e8d84d0ada15c7f95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49382613"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52953330"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Come eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365
 
@@ -48,7 +48,7 @@ Prima di eseguire la migrazione delle etichette, prendere nota delle seguenti mo
     
     Per un'esperienza utente più uniforme è consigliabile pubblicare le stesse etichette negli stessi ambiti nel Centro di sicurezza e conformità.
 
-- Non tutte le impostazioni di un'etichetta sottoposta a migrazione sono supportate dal Centro sicurezza e conformità. Usare la tabella nella sezione [Impostazioni delle etichette non supportate nel Centro di sicurezza e conformità](#label-settings-that-are-not-supported-in-the-security--compliance-center) per facilitare l'identificazione di queste impostazioni e decidere se escludere le etichette sottoposte a migrazione dalla pubblicazione nel Centro sicurezza e conformità.
+- Non tutte le impostazioni di un'etichetta sottoposta a migrazione sono supportate dal Centro sicurezza e conformità. Usare la tabella nella sezione [Impostazioni delle etichette non supportate nel Centro di sicurezza e conformità](#label-settings-that-are-not-supported-in-the-security--compliance-center) per individuare le impostazioni non supportate dal Centro sicurezza e conformità.
 
 - Modelli di protezione:
     
@@ -66,17 +66,15 @@ Prima di eseguire la migrazione delle etichette, prendere nota delle seguenti mo
 
 - Le eventuali stringhe localizzate per le etichette non vengono incluse nella migrazione. Per le etichette sottoposte a migrazione sarà necessario definire nuove stringhe localizzate nel Centro sicurezza e conformità.
 
-- Dopo la migrazione, quando si modifica un'etichetta sottoposta a migrazione nel portale di Azure, la stessa modifica si riflette automaticamente nel Centro sicurezza e conformità. Tuttavia, quando si modifica un'etichetta sottoposta a migrazione nel Centro sicurezza e conformità, è necessario modificarla anche nel portale di Azure per garantire la coerenza. Ad esempio, modificare la casella **Aggiungi note per l'uso da parte dell'amministratore** nel pannello **Etichetta**. 
-
-- L'etichettatura unificata continua a essere distribuita ai tenant. Se non è ancora supportata per il tenant in uso, la migrazione non riesce e le modifiche vengono annullate normalmente. Fino a quando la funzionalità non è supportata per tutti i tenant, è necessario usare un collegamento speciale per accedere all'opzione di migrazione del tenant e delle etichette. Il collegamento viene specificato nelle istruzioni che seguono.
+- Dopo la migrazione, quando si modifica un'etichetta sottoposta a migrazione nel portale di Azure, la stessa modifica si riflette automaticamente nel Centro sicurezza e conformità. Tuttavia, quando si modifica un'etichetta migrata nel Centro sicurezza e conformità, è necessario tornare al portale di Azure, nel pannello **Azure Information Protection - Etichettatura unificata**, e selezionare **Pubblica**. Questa azione aggiuntiva è necessaria per il client Azure Information Protection per recuperare le modifiche dell'etichetta.
 
 ### <a name="label-settings-that-are-not-supported-in-the-security--compliance-center"></a>Impostazioni delle etichette non supportate nel Centro di sicurezza e conformità
 
-Usare la tabella seguente per identificare le impostazioni di configurazione di un'etichetta sottoposta a migrazione che non sono supportate per i client che usano tali etichette e per determinare se modificare e pubblicare l'etichetta sottoposta a migrazione nel Centro sicurezza e conformità. Se si pubblicano etichette identificate per l'esclusione dalla pubblicazione, non viene visualizzata nessuna etichetta per i client che supportano l'etichettatura unificata.
+Usare la tabella seguente per identificare le impostazioni di configurazione di un'etichetta migrata che non sono supportate dai client di etichettatura unificata o lo sono con limitazioni. Per evitare confusione, è consigliabile non configurare le impostazioni che non hanno alcun effetto sui client di etichettatura unificata.
 
 I client Azure Information Protection possono usare queste impostazioni delle etichette senza problemi, perché continuano a scaricare le etichette dal portale di Azure.
 
-|Configurazione dell'etichetta|Supportata nel Centro sicurezza e conformità|Esclusione da modifica e pubblicazione nel Centro sicurezza e conformità|
+|Configurazione dell'etichetta|Supportata dai client di etichettatura unificata|Esclusione dalla modifica nel Centro sicurezza e conformità|
 |-------------------|---------------------------------------------|-------------------------|
 |Stato abilitato o disabilitato<br /><br />Note: nessuna sincronizzazione con il Centro sicurezza e conformità |Non applicabile|Non applicabile|
 |Colore dell'etichetta: selezionarlo dall'elenco o specificarlo con il codice RGB<br /><br />Nota: i colori delle etichette non sono supportati dal Centro sicurezza e conformità |Non applicabile|Non applicabile|
@@ -91,12 +89,7 @@ I client Azure Information Protection possono usare queste impostazioni delle et
 
 ## <a name="to-migrate-azure-information-protection-labels"></a>Per eseguire la migrazione delle etichette di Azure Information Protection
 
-> [!IMPORTANT]
-> Prima di eseguire la migrazione delle etichette verificare che è possibile modificare e pubblicare etichette di riservatezza nel Centro sicurezza e conformità di Office 365. La distribuzione delle etichette di riservatezza ai tenant di Office 365 è iniziata, ma le etichette non sono ancora disponibili per tutti i tenant.
-> 
-> Per la verifica: nel Centro sicurezza e conformità di Office 365 passare a **Classificazioni** > **Etichette** e verificare se è presente una scheda **Riservatezza**. Se questa scheda non viene visualizzata, il tenant non è ancora pronto per le etichette di riservatezza e la migrazione delle etichette di Azure Information Protection non va eseguita in questo momento.
-
-Dopo aver verificato che il tenant supporta le etichette di riservatezza nel Centro sicurezza e conformità, usare le istruzioni seguenti per eseguire la migrazione del tenant e delle etichette di Azure Information Protection.
+Usare le istruzioni seguenti per eseguire la migrazione del tenant e delle etichette di Azure Information Protection per usare il nuovo archivio di etichettatura unificata.
 
 È necessario essere un amministratore globale per eseguire la migrazione delle etichette.
 
@@ -106,6 +99,8 @@ Dopo aver verificato che il tenant supporta le etichette di riservatezza nel Cen
 
 Le etichette di cui è stata eseguita correttamente la migrazione possono ora essere usate dai [client che supportano l'etichettatura unificata](#clients-that-support-unified-labeling). Tuttavia, è prima di tutto necessario pubblicare queste etichette nel Centro sicurezza e conformità.
 
+> [!IMPORTANT]
+> Se si modificano le etichette all'esterno del portale di Azure, per i client di Azure Information Protection, tornare a questo pannello **Azure Information Protection - Etichettatura unificata** e selezionare **Pubblica**.
 
 ### <a name="clients-that-support-unified-labeling"></a>Client che supportano l'etichettatura unificata
 

@@ -4,18 +4,18 @@ description: Istruzioni per installare, configurare ed eseguire lo scanner di Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 11/30/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 3e331c859c3808ceba2305224a6dd524b1a5ea6c
-ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
+ms.openlocfilehash: d29203359bcfdda09d7792f1f65a7c85723ee18f
+ms.sourcegitcommit: c1c34529f10dd7c1545ca37be9629b52be87e33e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52386798"
+ms.lasthandoff: 12/01/2018
+ms.locfileid: "52731150"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -252,7 +252,7 @@ Lo scanner usa quindi IFilter di Windows per analizzare i tipi di file seguenti.
 |PDF |.pdf|
 |Testo|.txt; .xml; .csv|
 
-Inoltre, lo scanner può anche usare una soluzione OCR (Optical Character Recognition) per esaminare immagini TIFF con un'estensione di file TIFF quando si configurano le [impostazioni IFilter TIFF di Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) nel computer che esegue lo scanner.
+Inoltre, lo scanner può anche usare una soluzione OCR (Optical Character Recognition) per esaminare immagini TIFF con un'estensione di file TIFF quando si installa la funzionalità IFilter TIFF di Windows e quindi si configurano le [impostazioni IFilter TIFF di Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) nel computer che esegue lo scanner.
 
 Per impostazione predefinita, solo i tipi di file di Office sono protetti dallo scanner, quindi i documenti PDF, i file di testo e le immagini TIF non sono protetti a meno che non si [modifichi il Registro di sistema](#editing-the-registry-for-the-scanner) per specificare i tipi di file:
 

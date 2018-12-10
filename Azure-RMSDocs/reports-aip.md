@@ -4,19 +4,19 @@ description: Come usare il reporting centralizzato per monitorare l'adozione del
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/27/2018
+ms.date: 12/06/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 98403232311731b137719c613b2ce061a236b706
-ms.sourcegitcommit: ff77e4da1f7c7cf2262c208f8e58b85cfdb54903
+ms.openlocfilehash: 8dc53c6bad6c8f68ac5786afb0600cafb6398765
+ms.sourcegitcommit: b4118cd75db6478f86b9994e8d84d0ada15c7f95
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52421012"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52953313"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -25,10 +25,13 @@ ms.locfileid: "52421012"
 > [!NOTE]
 > Al momento questa funzionalità è disponibile in anteprima ed è soggetta a modifiche. I dati raccolti durante questo periodo di anteprima potrebbero non essere supportati quando la funzionalità passa alla disponibilità di carattere generale.
 
+Usare le funzionalità di analisi di Azure Information Protection per generare report centralizzati per tenere traccia dell'adozione delle etichette di Azure Information Protection. Inoltre:
 
-Usare le analitiche di reporting centralizzato di Azure Information Protection per tenere traccia dell'adozione delle etichette di Azure Information Protection e per monitorare l'accesso utente a documenti e messaggi di posta elettronica provvisti di etichetta e le eventuali modifiche alla classificazione di tali elementi. È anche possibile identificare documenti che contengono informazioni riservate e devono essere protetti.
+- Monitorare l'accesso utente a documenti e messaggi di posta elettronica etichettati ed eventuali modifiche alla relativa classificazione. 
 
-Attualmente, i dati visualizzati sono aggregati dai client Azure Information Protection e dagli scanner Azure Information Protection.
+- Identificare i documenti che contengono informazioni riservate e devono essere protetti.
+
+Attualmente, i dati visualizzati vengono aggregati dai client Azure Information Protection, dagli scanner Azure Information Protection e dai computer Windows che eseguono [Windows Defender Advanced Threat Protection (Windows Defender ATP)](/windows/security/threat-protection/windows-defender-atp/overview).
 
 Ad esempio è possibile visualizzare quanto segue:
 
@@ -58,7 +61,7 @@ Ad esempio è possibile visualizzare quanto segue:
 
 - Nel report **Individuazione dati**:
 
-    - Quali file si trovano nei repository dei dati analizzati
+    - Quali sono i file nei repository dei dati analizzati o i computer Windows 10
     
     - Quali file sono provvisti di etichetta e protetti e il percorso dei file in base alle etichette
     
@@ -101,8 +104,7 @@ Per visualizzare i report di Azure Information Protection e creare report person
 |---------------|--------------------|
 |Un abbonamento di Azure che include Log Analytics|Vedere la pagina [Prezzi di Log Analytics](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Se non si dispone di un abbonamento di Azure o attualmente non si usa Azure Log Analytics, la pagina dei prezzi include un collegamento per una versione di valutazione gratuita.|
 |La versione disponibile a livello generale corrente del client di Azure Information Protection.|Se non è ancora stata installata questa versione del client, è possibile scaricarla e installarla dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
-|Per il report **Individuazione e rischio**: <br /><br />- Deve essere stata distribuita almeno un'istanza dello scanner Azure Information Protection (versione di anteprima corrente)|Per le istruzioni di installazione, vedere [Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner.md). <br /><br />Se si esegue l'aggiornamento da una versione precedente dello scanner, vedere [Aggiornamento dello scanner di Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
-
+|Per il report **Individuazione e rischio**: <br /><br />- Per visualizzare i dati da archivi dati locali, è stata distribuita almeno un'istanza dello scanner Azure Information Protection (attualmente in versione disponibile a livello generale) <br /><br />- Per visualizzare i dati dai computer Windows 10, tali computer devono disporre come minimo della build 1809 ed è necessario usare Windows Defender Advanced Threat Protection (Windows Defender ATP) e aver abilitato la funzionalità di integrazione di Azure Information Protection da Windows Defender Security Center|Per le istruzioni di installazione per lo scanner, vedere [Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner.md). Se si esegue l'aggiornamento da una versione precedente dello scanner, vedere [Aggiornamento dello scanner di Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).<br /><br />Per informazioni sulla configurazione e l'uso della funzionalità di integrazione di Azure Information Protection da Windows Defender Security Center, vedere [Panoramica della protezione delle informazioni in Windows](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview).|
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>Configurare un'area di lavoro di Log Analytics per i report
 
@@ -130,11 +132,11 @@ Nel pannello Azure Information Protection trovare le opzioni del menu **Dashboar
 
 - **Log attività (anteprima)**: usare questo report per visualizzare le azioni di etichettatura dagli utenti e per i dispositivi e i percorsi di file.
     
-    La distribuzione di questo report ai tenant è in corso, pertanto, se non è visibile, riprovare tra qualche giorno. 
+    La distribuzione di questo report ai tenant è in corso, pertanto, se non è visibile, riprovare tra qualche giorno.
     
-    Questo report contiene un'opzione **Colonne** che consente di visualizzare ulteriori informazioni sulle attività rispetto alla visualizzazione predefinita. Una delle colonne è **Rischio dei dispositivi**, che consentirà di visualizzare i dati da Windows Defender quando l'applicazione in oggetto è integrata in Azure Information Protection.
+    Questo report contiene un'opzione **Colonne** che consente di visualizzare ulteriori informazioni sulle attività rispetto alla visualizzazione predefinita.
 
-- **Individuazione dati (anteprima)**: usare questo report per visualizzare informazioni sui file rilevati dagli scanner.
+- **Individuazione dei dati (anteprima)**: usare questo report per visualizzare informazioni sui file trovati dagli scanner o da Windows Defender ATP.
 
 ## <a name="how-to-modify-the-reports"></a>Come modificare i report
 
