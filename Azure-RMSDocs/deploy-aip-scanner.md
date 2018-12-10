@@ -4,18 +4,18 @@ description: Istruzioni per installare, configurare ed eseguire lo scanner di Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/30/2018
+ms.date: 12/06/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: d29203359bcfdda09d7792f1f65a7c85723ee18f
-ms.sourcegitcommit: c1c34529f10dd7c1545ca37be9629b52be87e33e
+ms.openlocfilehash: 153009e9c9760649bd42d85bece421e3b8ee5afd
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52731150"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024247"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -62,7 +62,7 @@ Prima di installare lo scanner di Azure Information Protection, verificare che i
 
 Se non è possibile soddisfare tutti i requisiti indicati nella tabella perché non sono consentiti dai criteri dell'organizzazione, vedere la sezione successiva per conoscere le alternative.
 
-Se tutti i requisiti sono soddisfatti, passare alla [sezione sull'installazione](#install-the-azure-information-protection-scanner).
+Se tutti i requisiti sono soddisfatti, passare alla [sezione sull'installazione](#install-the-scanner).
 
 ### <a name="deploying-the-scanner-with-alternative-configurations"></a>Distribuzione dello scanner con configurazioni alternative
 
@@ -221,7 +221,7 @@ Per impostazione predefinita, lo scanner viene eseguito una volta e solo ai fini
     
         Set-AIPScannerConfiguration -Enforce On -Schedule Always
     
-    Esistono altre impostazioni di configurazione che è opportuno modificare. Indicare ad esempio se gli attributi dei file vengono modificati e quali informazioni vengono registrate nei report. Inoltre, se i criteri di Azure Information Protection includono l'impostazione che richiede un messaggio di giustificazione per abbassare il livello di classificazione o rimuovere la protezione, specificare il messaggio usando questo cmdlet. Consultare la [guida online](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters) per altre informazioni sulle singole impostazioni di configurazione. 
+    Esistono altre impostazioni di configurazione che è opportuno modificare. Indicare ad esempio se gli attributi dei file vengono modificati e quali informazioni vengono registrate nei report. Inoltre, se i criteri di Azure Information Protection includono l'impostazione che richiede un messaggio di giustificazione per abbassare il livello di classificazione o rimuovere la protezione, specificare il messaggio usando questo cmdlet. Consultare la [guida online](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#optional-parameters) per altre informazioni sulle singole impostazioni di configurazione. 
 
 2. Prendere nota dell'ora corrente e avviare di nuovo lo scanner eseguendo il comando seguente:
     
@@ -364,7 +364,7 @@ Altri fattori che influenzano le prestazioni dello scanner:
 
 - Modifica delle condizioni in Azure Information Protection
     
-    Il primo ciclo di analisi nel quale lo scanner deve controllare ogni file richiede più tempo rispetto ai cicli di analisi successivi in cui, per impostazione predefinita, vengono analizzati solo i file nuovi e modificati. Tuttavia, se si modificano le condizioni nei criteri di Azure Information Protection, tutti i file vengono analizzati nuovamente come descritto nella [sezione precedente](#when-files-are-rescanned-by-the-azure-information-protection-scanner).
+    Il primo ciclo di analisi nel quale lo scanner deve controllare ogni file richiede più tempo rispetto ai cicli di analisi successivi in cui, per impostazione predefinita, vengono analizzati solo i file nuovi e modificati. Tuttavia, se si modificano le condizioni nei criteri di Azure Information Protection, tutti i file vengono analizzati nuovamente come descritto nella [sezione precedente](#when-files-are-rescanned).
 
 - Livello di registrazione selezionato
     
