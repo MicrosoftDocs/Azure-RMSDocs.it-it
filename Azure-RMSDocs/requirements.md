@@ -1,5 +1,5 @@
 ---
-title: Requisiti per Azure Information Protection
+title: Requisiti per Azure Information Protection - AIP
 description: Identificare i prerequisiti per distribuire Azure Information Protection per l'organizzazione.
 author: cabailey
 ms.author: cabailey
@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 62a291667cf0ae60debbd62047d3a6b09962ac1d
-ms.sourcegitcommit: 4f22874c3c2fb9632d57932148664c40b3907a78
+ms.openlocfilehash: 43ff5d8fabf8197ba8ea235b01258dff12a5acd4
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52831239"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53024146"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisiti per Azure Information Protection
 
@@ -140,7 +140,7 @@ Lo scenario di distribuzione seguente non è supportato, a meno che non si usi A
 
 - Esecuzione side-by-side di AD RMS e di Azure RMS nella stessa organizzazione tranne che durante la migrazione, come descritto in [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-È disponibile un percorso di migrazione supportato [da AD RMS ad Azure Information Protection](http://technet.microsoft.com/library/Dn858447.aspx) e da [Azure Information Protection ad AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). Se si distribuisce Azure Information Protection e poi si decide di interrompere l'uso del servizio cloud, vedere [Rimozione delle autorizzazioni e disattivazione di Azure Information Protection](decommission-deactivate.md).
+È disponibile un percorso di migrazione supportato [da AD RMS ad Azure Information Protection](https://technet.microsoft.com/library/Dn858447.aspx) e da [Azure Information Protection ad AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). Se si distribuisce Azure Information Protection e poi si decide di interrompere l'uso del servizio cloud, vedere [Rimozione delle autorizzazioni e disattivazione di Azure Information Protection](decommission-deactivate.md).
 
 
 

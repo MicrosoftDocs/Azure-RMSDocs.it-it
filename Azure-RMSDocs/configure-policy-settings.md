@@ -1,5 +1,5 @@
 ---
-title: Configurare le impostazioni dei criteri per Azure Information Protection
+title: Configurare le impostazioni dei criteri per Azure Information Protection - AIP
 description: Configurare le impostazioni nei criteri di Azure Information Protection da applicare a tutti gli utenti e tutti i dispositivi.
 author: cabailey
 ms.author: cabailey
@@ -8,12 +8,12 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 3533a8a83d5fa24eb98ae36092eaf08d4ff75ccc
-ms.sourcegitcommit: 4f22874c3c2fb9632d57932148664c40b3907a78
+ms.openlocfilehash: aa39e1150dbb4310fb0e075d01385f40a18a3e1d
+ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52831222"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53023703"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Come configurare le impostazioni dei criteri per Azure Information Protection
 
