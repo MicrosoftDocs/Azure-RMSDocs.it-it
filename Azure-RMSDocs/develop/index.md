@@ -4,19 +4,20 @@ description: Sono ora disponibili tre generazioni di Rights Management SDK.
 keywords: ''
 author: bryanla
 manager: mbaldwin
-ms.date: 09/07/2018
+ms.author: bryanla
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0510ead4-2fe7-4269-885b-fe16bcc69888
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 6f964c6a6cf36cbd6f78cf58096f8c912fb0ff68
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: c94965a6007ea93e657e719c6c9cd963cf54e66c
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "51527929"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266444"
 ---
 # <a name="rms-developers-guide"></a>Guida per gli sviluppatori RMS
 
@@ -28,15 +29,14 @@ Sono ora disponibili tre generazioni di Rights Management SDK: **Microsoft Right
 |------|---------|
 | [RMS SDK 4.2](active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md) | Semplice set di strumenti all'avanguardia che offre un'esperienza di sviluppo leggera per abilitare la protezione delle informazioni nelle app per dispositivi Android, iOS, Mac OS X, Windows Phone/RT e Linux/C++ tramite i servizi di Microsoft Rights Management |
 | [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) | SDK potente che consente agli sviluppatori di applicazioni Windows Desktop e ai provider di soluzioni basate su server di abilitare la tecnologia Rights Management nei loro prodotti|
-|[AD RMS SDK]()|** NOTA **: la funzionalità per l'uso di AD RMS SDK esposta dal client in Msdrm.dll è disponibile in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 e Windows Vista. È possibile che in versioni successive sia stata modificata o non sia più disponibile. Al suo posto, usare Microsoft Rights Management Services SDK 2.1, che sfrutta le funzionalità esposte dal client in Msipc.dll.|
-|[API di script AD RMS]()| Usata per creare script per l'amministrazione di un'installazione di AD RMS|
+|[AD RMS SDK](/azure/information-protection/develop/) |** NOTA **: la funzionalità per l'uso di AD RMS SDK esposta dal client in Msdrm.dll è disponibile in Windows Server 2012, Windows 8, Windows Server 2008 R2, Windows 7, Windows Server 2008 e Windows Vista. È possibile che in versioni successive sia stata modificata o non sia più disponibile. Al suo posto, usare Microsoft Rights Management Services SDK 2.1, che sfrutta le funzionalità esposte dal client in Msipc.dll.|
+|[API di script AD RMS](/azure/information-protection/develop/) | Usata per creare script per l'amministrazione di un'installazione di AD RMS|
 
 ## <a name="code-samples-and-tools"></a>Esempi di codice e strumenti ##
 Questa raccolta di esempi di codice RMS e strumenti di supporto per gli sviluppatori fornita da Microsoft è compatibile con tutti i sistemi operativi supportati, Android, iOS/OS X, Windows Phone e Windows Desktop, e viene aggiornata periodicamente per mantenere la compatibilità con l'SDK supportato.
 
 | Elemento | Sistema operativo | Supporto versione SDK | Descrizione |
 |------|------------------|------------------------|-------------|
-| [Lettura di un PDF protetto da PFILE](https://blogs.msdn.microsoft.com/rms/2015/11/09/reading-a-pfile-protected-pdf/) | Desktop Windows| [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) e versioni successive dell'SDK 2.x | **PDF protetto PFILE di lettura** è un esempio di codice semplice nel Blog per sviluppatori RMS che usa l'API del file MSIPC per decrittografare e aprire un documento PDF protetto PFILE.|
 | [IpcManagedAPI](https://github.com/Azure-Samples/active-directory-dotnet-rms) | Desktop Windows | [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) e versioni successive dell'SDK 2.x | **IpcManagedAPI** è una rappresentazione .NET (c#) di RMS SDK 2.1 per facilitare l'abilitazione a RMS dell'applicazione gestita.|
 | [IPCNotepad](https://code.msdn.microsoft.com/ipcnotepad-sample-f67dae80) | Desktop Windows | [RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) e versioni successive dell'SDK 2.x| **IPCNotepad** è un'applicazione esemplificativa abilitata per RMS che illustra l'esecuzione dei passaggi di base che deve eseguire un'applicazione abilitata per RMS per la protezione e l'utilizzo di contenuto con restrizioni.|
 | [IpcDlp](https://github.com/Azure-Samples/active-directory-dotnet-rms)|Desktop Windows|[RMS SDK 2.1](microsoft-information-protection-and-control-client-portal.md) e versioni successive dell'SDK 2.x|**IpcDIp** è un'applicazione esemplificativa di protezione dalla perdita di dati abilitata per RMS che illustra l'esecuzione dei passaggi di base che deve eseguire un'applicazione abilitata per RMS usando l'API del file per la protezione e l'utilizzo di contenuto con restrizioni.|
