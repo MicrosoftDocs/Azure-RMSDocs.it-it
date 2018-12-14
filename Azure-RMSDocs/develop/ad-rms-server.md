@@ -12,12 +12,12 @@ ms.assetid: 17B05780-B0EF-4805-8304-52DCDEB3AADB
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d190dd1559378473e52c2c741fcf4693f9e43a59
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 0f937825a55eee3b58dc60830748a35982c5a8c8
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151334"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266478"
 ---
 # <a name="server"></a>Server
 
@@ -28,7 +28,7 @@ Questo argomento descrive lo scopo e le funzioni del server RMS, per Azure e Win
 > [!IMPORTANT] 
 > È consigliabile sviluppare e testare l'applicazione tramite Azure RMS.
 
-**Windows Server**: per i server locali RMS, a partire da Windows Server 2008 è possibile installare e configurare il servizio RMS aggiungendolo come ruolo. Per installare il servizio nei sistemi operativi precedenti, scaricarlo dall'Area download Microsoft nella pagina relativa a[Microsoft Windows Rights Management Services con Service Pack 2](http://www.microsoft.com/download/en/details.aspx?id=4909).
+**Windows Server**: per i server locali RMS, a partire da Windows Server 2008 è possibile installare e configurare il servizio RMS aggiungendolo come ruolo. Per installare il servizio nei sistemi operativi precedenti, scaricarlo dall'Area download Microsoft nella pagina relativa a[Microsoft Windows Rights Management Services con Service Pack 2](https://www.microsoft.com/download/details.aspx?id=4909).
 
 Tra i numerosi servizi Web installati, quelli indicati di seguito sono importanti per lo sviluppo di applicazioni per il server RMS in esecuzione su Windows Server.
 
@@ -43,9 +43,9 @@ Tra i numerosi servizi Web installati, quelli indicati di seguito sono important
 
 ## <a name="related-topics"></a>Argomenti correlati ##
 * [Panoramica](ad-rms-overview.md)
-* [Microsoft Internet Information Services](http://www.iis.net/overview)
+* [Microsoft Internet Information Services](https://www.iis.net/overview)
 * [Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md)
-* [Microsoft Windows Rights Management Services con Service Pack 2](http://www.microsoft.com/download/en/details.aspx?id=4909)
+* [Microsoft Windows Rights Management Services con Service Pack 2](https://www.microsoft.com/download/details.aspx?id=4909)
 * [API di script di Active Directory Rights Management Services](https://msdn.microsoft.com/library/Bb968797)
 * [Attivazione di un computer](https://msdn.microsoft.com/library/Cc530377)
 * [Attivazione di un utente](https://msdn.microsoft.com/library/Cc530378)
