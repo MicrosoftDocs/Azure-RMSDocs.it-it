@@ -4,19 +4,19 @@ description: Descrive importanti modifiche e funzionalità in questa versione e 
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
-ms.date: 09/25/2017
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: e3b4812f06c7ee86c48c0984e440d34f858bb4e7
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6433352f05401fcaafc84704a0441941ff87bdf3
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148784"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266699"
 ---
 # <a name="whats-new-and-release-notes"></a>Novità e note sulla versione
 
@@ -26,13 +26,13 @@ Questo argomento descrive importanti modifiche e funzionalità in questa nuova v
 
 -   [Novità di luglio 2017](#new-for-july-2017)
 -   [Aggiornamento di ottobre 2016](#October-2016-update)
--   [Aggiornamento di giugno 2016](#new-for-June-2016)
+-   [Aggiornamento di giugno 2016](#june-2016-update)
 -   [Aggiornamento di dicembre 2015](#december-2015-update)
--   [Aggiornamento di luglio 2015: aggiunta del supporto per Linux/sviluppo C++](#july-2015-update-adds-support-for-linux-c-developm)
--   [Aggiornamento di maggio 2015: aggiunta del controllo registrazione](#may-2015-update-adds-logging-control)
--   [Aggiornamento di febbraio 2015: aggiunta del supporto per applicazioni di Windows Store](#february-2015-update-adds-windows-store-application-support)
--   [Aggiornamento di gennaio 2015: aggiunta del supporto per la piattaforma WinPhone](#january-2015-update-adds-winphone-platform-support)
--   [Aggiornamento di ottobre 2014: aggiornamento a Microsoft RMS SDK 4.1](#october-2014-update-upgrade-to-microsoft-rms-sdk-4-1)
+-   [Aggiornamento di luglio 2015: aggiunta del supporto per Linux/sviluppo C++](#july-2015-update---adds-support-for-linux--c-development)
+-   [Aggiornamento di maggio 2015: aggiunta del controllo registrazione](#may-2015-update---adds-logging-control)
+-   [Aggiornamento di febbraio 2015: aggiunta del supporto per applicazioni di Windows Store](#february-2015-update---adds-windows-store-application-support)
+-   [Aggiornamento di gennaio 2015: aggiunta del supporto per la piattaforma WinPhone](#january-2015-update---adds-winphone-platform-support)
+-   [Aggiornamento di ottobre 2014: aggiornamento a Microsoft RMS SDK 4.1](#october-2014-update---upgrade-to-microsoft-rms-sdk-4-1)
 -   [Note sulla versione](#release-notes)
 -   [Domande frequenti](#frequently-asked-questions)
 
@@ -40,7 +40,7 @@ Questo argomento descrive importanti modifiche e funzionalità in questa nuova v
 
 L'aggiornamento della versione di luglio comprende l'incremento del numero di revisione di SDK alla versione 4.2.5.
 
-- Android SDK: l'app può ora **impostare immediatamente il livello di registrazione** con Android SDK. Per altre informazioni, vedere [Procedura: Abilitare la registrazione delle prestazioni e dell'errore](https://docs.microsoft.com/information-protection/develop/enabling-logging)
+- Android SDK: l'app può ora **impostare immediatamente il livello di registrazione** con Android SDK. Per altre informazioni, vedere [Procedura: Come abilitare la registrazione delle prestazioni e dell'errore](https://docs.microsoft.com/information-protection/develop/enabling-logging)
 - Il livello di registrazione non è supportato da iOS SDK. 
 - In caso di token di accesso NULL, SDK ora restituisce un errore.
 
@@ -108,7 +108,7 @@ Questa versione aggiunge il supporto per gli aggiornamenti seguenti:
 
     Impostazioni di controllo a livello log abilitate.
 
-    Per altre informazioni, vedere [Procedura: Abilitare la registrazione delle prestazioni e dell'errore](enabling-logging.md)
+    Per altre informazioni, vedere [Procedura: Come abilitare la registrazione delle prestazioni e dell'errore](enabling-logging.md)
 
     Aggiunta del supporto di cancellazione della cache.
 
@@ -193,15 +193,15 @@ Questa sezione descrive le informazioni sulle versioni correnti e precedenti di 
 
 
 
-**Nota**: le applicazioni MDI non sono supportate dall'API di iOS.
+**Nota**  le applicazioni MDI non sono supportate dall'API di iOS.
 
 ## <a name="frequently-asked-questions"></a>Domande frequenti
 
 **Tutte le piattaforme**
 
-**D**: nel flusso di lavoro di protezione non è presente un'interfaccia utente per la selezione delle **autorizzazioni personalizzate**. Perché?
+**D**: Nel flusso di lavoro di protezione non è presente un'interfaccia utente per la selezione delle **autorizzazioni personalizzate**. Perché?
 
-**R**: si tratta di un problema noto e sarà risolto in un secondo momento.
+**R**: Si tratta di un problema noto e sarà risolto in un secondo momento.
 
 **D**: Come si ottengono nuovi tenant dell'organizzazione per provare SDK e applicazioni di esempio?
 
@@ -209,7 +209,7 @@ Questa sezione descrive le informazioni sulle versioni correnti e precedenti di 
 
 **D**: Non sono visualizzate le informazioni dettagliate della gerarchia di test nella documentazione. Perché?
 
-**R**: non esiste alcun concetto di gerarchia test con i nuovi SDK AD RMS. Si userà sempre la gerarchia di produzione.
+**R**: Non esiste alcun concetto di gerarchia di test con i nuovi SDK AD RMS. Si userà sempre la gerarchia di produzione.
 
 **D**: Nella versione 2.1 di RMS SDK è necessario un manifesto generato per ogni applicazione che implementa la protezione delle informazioni. È un requisito ancora valido per la versione 4.0 e le versioni di SDK successive?
 
@@ -221,18 +221,18 @@ Questa sezione descrive le informazioni sulle versioni correnti e precedenti di 
 
 **R**: Eclipse Juno che usa Google API 15 e versioni successive.
 
-**D**: è possibile chiamare Cancel () un metodo di annullamento dal thread dell'interfaccia utente?
-**R**: È necessario chiamare Cancel () da un thread non dell'interfaccia utente, poiché questo potrebbe interrompere una connessione di rete.
+**D**: È possibile chiamare il metodo di annullamento cancel() dal thread dell'interfaccia utente?
+**R**: È necessario chiamare cancel() da un thread non dell'interfaccia utente, poiché si potrebbe interrompere una connessione di rete.
 
 **iOS**
 
-**D**: Quali piattaforme sono verificate per lo sviluppo SDK?
+**D**: Quali piattaforme sono state verificate per lo sviluppo SDK?
 
 **R**: Xcode 5.0 con iOS 7 e versioni successive.
 
-**D**: È stata eseguita la chiamata di un metodo Cancel () su un'operazione, tuttavia è stata comunque ricevuta la notifica di completamento dell'operazione. Perché?
+**D**: È stata eseguita la chiamata di un metodo cancel() per un'operazione ma si riceve comunque la notifica di completamento dell'operazione. Perché?
 
-**R**: Non è possibile annullare tutte le operazioni, pertanto un'operazione di annullamento viene eseguita nel modo migliore possibile.
+**R**: Non tutte le operazioni possono essere annullate, quindi l'operazione di annullamento viene eseguita nel modo migliore possibile.
 
 **OS X**
 

@@ -4,20 +4,20 @@ description: Dopo aver protetto i documenti, è possibile tenere traccia del mod
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/28/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 485b999ce8b5adcbe284d0ea8286cdf1183ac8da
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 251de2d7e959dc46bcf95c003fd8924cc4c34d13
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151032"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305226"
 ---
-# <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guida dell'utente: Rilevare i documenti e revocarne l'accesso quando si usa Azure Information Protection
+# <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Manuale dell'utente: Tenere traccia dei documenti e revocarli quando si usa Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 
@@ -95,17 +95,17 @@ Dopo aver registrato i documenti protetti tramite le app di Office o Esplora fil
 
 - Tramite il PC Windows, il computer Mac o il dispositivo mobile, visitare il [sito di rilevamento dei documenti](https://go.microsoft.com/fwlink/?LinkId=529562).
 
-    **Browser supportati**: anche se è consigliabile usare almeno la versione 10 di Internet Explorer, è possibile usare anche uno qualsiasi dei browser seguenti per visitare il sito di rilevamento dei documenti:
+    **Browser supportati**: È consigliabile utilizzare almeno la versione  10 di Internet Explorer, ma è possibile utilizzare uno qualsiasi dei browser seguenti per utilizzare il sito di rilevamento del documento:
 
-    - Internet Explorer: almeno la versione 10
+    - Internet Explorer: Almeno la versione  10
 
-    - Internet Explorer 9 con almeno MS12-037: aggiornamento cumulativo della sicurezza per Internet Explorer: 12 giugno 2012
+    - Internet Explorer 9 con almeno MS12-037: Aggiornamento cumulativo della sicurezza per Internet Explorer: 12 Giugno 2012
 
-    - Mozilla Firefox: Almeno la versione  12
+    - Mozilla Firefox: Almeno la versione  12
 
-    - Apple Safari 5: Almeno la versione  5
+    - Apple Safari 5: Almeno la versione  5
 
-    - Google Chrome: Almeno la versione  18
+    - Google Chrome: Almeno la versione  18
 
 
 ## <a name="other-instructions"></a>Altre istruzioni

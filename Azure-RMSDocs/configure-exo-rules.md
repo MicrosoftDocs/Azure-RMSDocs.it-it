@@ -4,22 +4,22 @@ description: Istruzioni ed esempi per configurare le regole del flusso di posta 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/17/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: 9d30e7c3e15e9aa6b67c2e1b653d56c1af36ffe0
-ms.sourcegitcommit: 6d4792755226a61d59e79fd8795a9b0f653770bb
+ms.openlocfilehash: c6f220e995aa785c44d4227884da2c7379918a8d
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49366989"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305472"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configurazione delle regole del flusso di posta di Exchange Online per le etichette di Azure Information Protection
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Usare le informazioni seguenti per configurare le regole del flusso di posta in Exchange Online per usare le etichette di Azure Information Protection e per applicare una protezione aggiuntiva per scenari specifici. Ad esempio:
 
@@ -39,7 +39,7 @@ Poiché un'etichetta di Azure Information Protection viene archiviata nei metada
 
 - Nei messaggi di posta elettronica queste informazioni sono archiviate nell'intestazione X-: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
 
-- Per i documenti di Word (doc e docx), i fogli di calcolo di Excel (xls e xlsx), le presentazioni di PowerPoint (ppt e pptx) e i documenti PDF (pdf), questi metadati vengono archiviati nella proprietà personalizzata seguente: **MSIP_Label_\<GUID>_Enabled=True**  
+- Per i documenti di Word (DOC e DOCX), i fogli di calcolo di Excel (XLS e XLSX), le presentazioni di PowerPoint (PPT e PPTX) e i documenti PDF, questi metadati vengono archiviati nella proprietà personalizzata seguente: **MSIP_Label_\<GUID>_Enabled=True**  
 
 Per identificare il GUID per un'etichetta, individuare il valore dell'ID etichetta nel pannello **Etichetta**, quando si visualizzano o si configurano i criteri di Azure Information Protection nel portale di Azure. Per i file a cui sono state applicate etichette, è anche possibile eseguire il cmdlet di PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) per identificare il GUID (MainLabelId o SubLabelId). Quando un'etichetta ha etichette secondarie, specificare sempre il GUID della sola etichetta secondaria e non dell'etichetta padre.
 
@@ -71,11 +71,11 @@ Nel criterio Azure Information Protection questa etichetta è stata configurata 
 
 1. In **Nome** digitare un nome per la regola, ad esempio `Apply Do Not Forward for General emails sent externally`.
  
-2. Per **Apply this rule if** (Applica questa regola se): selezionare **The recipient is located** (Il destinatario si trova), selezionare **Outside the organization** (Fuori dall'organizzazione) e quindi selezionare **OK**.
+2. Per **Apply this rule if** (Applica questa regola se): selezionare **The recipient is located** (Il destinatario si trova), **Outside the organization** (All'esterno dell'organizzazione) e quindi **OK**.
 
 3. Selezionare **Altre opzioni** e quindi selezionare **aggiungi condizione**.
  
-4. Per **e**: selezionare **A message header** (Un'intestazione del messaggio) e quindi selezionare **includes any of these words** (include una di queste parole):
+4. Per **e**: selezionare **A message header** (Un'intestazione del messaggio) e quindi **includes any of these words** (include una di queste parole):
      
     a. Selezionare **Immetti il testo** e immettere `msip_labels`.
      
@@ -83,9 +83,9 @@ Nel criterio Azure Information Protection questa etichetta è stata configurata 
     
     c. Selezionare **+** e quindi **OK**.
 
-5. Per **Do the following** (Esegui l'operazione seguente): selezionare **Modify the message security** (Modifica la sicurezza del messaggio) > **Apply Office 365 Message Encryption and rights protection** (Applica Office 365 Message Encryption e la protezione dei diritti) > **Non inoltrare** e quindi selezionare **OK**.
+5. Per **Do the following** (Eseguire le operazioni seguenti): selezionare **Modify the message security (Modifica la sicurezza del messaggio)** > **Apply Office 365 Message Encryption and rights protection (Applica Office 365 Message Encryption e la protezione dei diritti)** > **Non inoltrare** e quindi selezionare **OK**.
     
-    La configurazione della regola deve ora essere simile alla seguente: ![Regola del flusso di posta di Exchange Online configurata per un'etichetta di Azure Information Protection - esempio 1](./media/aip-exo-rule-ex1.png)
+    La configurazione della regola ora dovrebbe essere simile alla seguente:  ![Regola del flusso di posta di Exchange Online configurata per un'etichetta di Azure Information Protection - esempio 1](./media/aip-exo-rule-ex1.png)
 
 7. Selezionare **Salva** 
 
@@ -99,7 +99,7 @@ Questa etichetta viene usata per classificare e proteggere i documenti usati per
 
 1. In **Nome** digitare un nome per la regola, ad esempio `Apply Encrypt to emails sent externally if protected attachments`.
  
-2. Per **Apply this rule if** (Applica questa regola se): selezionare **The recipient is located** (Il destinatario si trova), selezionare **Outside the organization** (Fuori dall'organizzazione) e quindi selezionare **OK**.
+2. Per **Apply this rule if** (Applica questa regola se): selezionare **The recipient is located** (Il destinatario si trova), **Outside the organization** (All'esterno dell'organizzazione) e quindi **OK**.
 
 3. Selezionare **Altre opzioni** e quindi selezionare **aggiungi condizione**.
  
@@ -113,9 +113,9 @@ Questa etichetta viene usata per classificare e proteggere i documenti usati per
     
     d. Selezionare **Salva** e quindi **OK**.
 
-5. Per **Do the following** (Esegui l'operazione seguente): selezionare **Modify the message security** (Modifica la sicurezza del messaggio) > **Apply Office 365 Message Encryption and rights protection** (Applica Office 365 Message Encryption e la protezione dei diritti) > **Crittografa** e quindi selezionare **OK**.
+5. Per **Do the following** (Eseguire le operazioni seguenti): selezionare **Modify the message security (Modifica la sicurezza del messaggio)** > **Apply Office 365 Message Encryption and rights protection (Applica Office 365 Message Encryption e la protezione dei diritti)** > **Crittografa** e quindi selezionare **OK**.
     
-    La configurazione della regola deve ora essere simile alla seguente: ![Regola del flusso di posta di Exchange Online configurata per un'etichetta di Azure Information Protection - esempio 1](./media/aip-exo-rule-ex2.png)
+    La configurazione della regola ora dovrebbe essere simile alla seguente:  ![Regola del flusso di posta di Exchange Online configurata per un'etichetta di Azure Information Protection - esempio 1](./media/aip-exo-rule-ex2.png)
 
 6. Selezionare **Salva** 
 
@@ -126,6 +126,6 @@ Per altre informazioni sull'opzione Crittografa, vedere [Opzione Encrypt-Only (S
 
 Per informazioni sulla creazione e la configurazione delle etichette da usare con le regole del flusso di posta di Exchange Online, vedere [Configurazione dei criteri di Azure Information Protection](configure-policy.md).
 
-Per classificare i messaggi di posta elettronica contenenti allegati, considerare la possibilità di usare l'[impostazione dei criteri](configure-policy-settings.md) di Azure Information Protection seguente: **Per i messaggi di posta elettronica con allegati, applicare un'etichetta corrispondente alla classificazione più elevata di questi allegati**.
+Inoltre, per consentire la classificazione dei messaggi di posta elettronica che contengono allegati, considerare l'uso della seguente [impostazione di criteri](configure-policy-settings.md) di Azure Information Protection: **For email messages with attachments, apply a label that matches the highest classification of those attachments** (Per i messaggi di posta elettronica con allegati, applica un'etichetta che corrisponda alla classificazione più elevata di tali allegati).
 
 

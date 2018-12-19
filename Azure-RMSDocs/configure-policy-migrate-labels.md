@@ -9,16 +9,16 @@ ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: be48797931dc0e8c76f29094715df37d6488f800
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 84f3aa3cc5dc7955056c98a957fa5d307340da1d
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024009"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53174132"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Come eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
 > Questa funzionalità disponibile in anteprima esegue la migrazione del tenant a una nuova piattaforma, anch'essa disponibile in anteprima. La migrazione non è reversibile. La nuova piattaforma supporta l'etichettatura unificata. Le etichette create e gestite possono essere usate da più client e servizi.
@@ -77,12 +77,12 @@ I client Azure Information Protection possono usare queste impostazioni delle et
 |Configurazione dell'etichetta|Supportata dai client di etichettatura unificata|Esclusione dalla modifica nel Centro sicurezza e conformità|
 |-------------------|---------------------------------------------|-------------------------|
 |Stato abilitato o disabilitato<br /><br />Note: nessuna sincronizzazione con il Centro sicurezza e conformità |Non applicabile|Non applicabile|
-|Colore dell'etichetta: selezionarlo dall'elenco o specificarlo con il codice RGB<br /><br />Nota: i colori delle etichette non sono supportati dal Centro sicurezza e conformità |Non applicabile|Non applicabile|
+|Colore dell'etichetta: selezionarlo dall'elenco o specificarlo con il codice RGB<br /><br />Note: i colori delle etichette non sono supportati dal Centro sicurezza e conformità |Non applicabile|Non applicabile|
 |Protezione basata sul cloud o protezione basata su HYOK usando un modello predefinito |No|Sì|
 |Protezione basata sul cloud che usa autorizzazioni definite dall'utente in Word, Excel e PowerPoint |No|Sì|
 |Protezione basata su HYOK che usa autorizzazioni definite dall'utente in Outlook per Non inoltrare |No|Sì|
 |Rimuovere la protezione |No|Sì|
-|Contrassegni visivi (intestazione, piè di pagina, filigrana): tipo di carattere personalizzato e colore tipo di carattere personalizzato tramite RGB|No|Consigliata se si usano le variabili<br /><br />- Nei client le variabili vengono visualizzate come testo anziché visualizzare i valori dinamici|
+|Contrassegni visivi (intestazione, piè di pagina, filigrana): Tipo di carattere personalizzato e colore carattere personalizzato in base al codice RGB|No|Consigliata se si usano le variabili<br /><br />- Nei client le variabili vengono visualizzate come testo anziché visualizzare i valori dinamici|
 |Contrassegni visivi per app|No|Consigliata se si usano le variabili<br /><br />- Nei client le variabili vengono visualizzate come testo anziché visualizzare i valori dinamici|
 |Condizioni e impostazioni associate <br /><br />Note: include l'assegnazione di etichette automatica e consigliata e le descrizioni comando corrispondenti|Non applicabile|No|
 

@@ -10,19 +10,19 @@ ms.service: information-protection
 ms.assetid: d9992e30-f3d1-48d5-aedc-4e721f7d7c25
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7be58d201ddd24497ff79935554c2a68efd04a3f
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 84f013014f0256a01c30d9518089f2604ed9a668
+ms.sourcegitcommit: b2414cc00d50ccefe10f8c3719eb3f6c1e78fc65
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024434"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246191"
 ---
 # <a name="rights-management-sharing-application-administrator-guide"></a>Guida dell'amministratore dell'applicazione Rights Management sharing
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
 > [!IMPORTANT]
-> **Notifica di fine del supporto**: l'applicazione di condivisione Rights Management per Windows verrà sostituita dal [client Azure Information Protection](aip-client.md). Il supporto per questa applicazione precedente terminerà il 31 gennaio 2019. 
+> **Notifica di file del supporto**: l'applicazione di condivisione Rights Management per Windows verrà sostituita dal [client Azure Information Protection](aip-client.md). Il supporto per questa applicazione precedente terminerà il 31 gennaio 2019. 
 
 Usare le informazioni seguenti se l'utente è responsabile dell'applicazione Microsoft Rights Management sharing in una rete aziendale o se si vogliono informazioni più tecniche rispetto a quelle presenti in [Guida dell'utente dell'applicazione Rights Management sharing](sharing-app-user-guide.md) o [Domande frequenti sull'applicazione Microsoft Rights Management sharing per Windows](https://go.microsoft.com/fwlink/?LinkId=303971).
 
@@ -33,11 +33,11 @@ Per una panoramica tecnica dell'applicazione Rights Management sharing e per inf
 ## <a name="automatic-deployment-for-the-microsoft-rights-management-sharing-application"></a>Distribuzione automatica dell'applicazione Microsoft Rights Management sharing
 La versione di Windows dell'applicazione di condivisione RMS supporta un'installazione tramite script, che la rende ideale per le distribuzioni aziendali.
 
-Gli unici prerequisiti per l'installazione sono che i computer eseguano almeno Windows 7 Service Pack 1 e che sia installata almeno la versione 4.0 di Microsoft Framework. Se è necessario installare Microsoft .NET Framework 4.0, è possibile [scaricarlo per l'installazione dall'Area Download Microsoft](http://www.microsoft.com/download/details.aspx?id=17718).
+Gli unici prerequisiti per l'installazione sono che i computer eseguano almeno Windows 7 Service Pack 1 e che sia installata almeno la versione 4.0 di Microsoft Framework. Se è necessario installare Microsoft .NET Framework 4.0, è possibile [scaricarlo per l'installazione dall'Area Download Microsoft](https://www.microsoft.com/download/details.aspx?id=17718).
 
 ### <a name="to-download-the-rms-sharing-application-for-automatic-deployment"></a>Per scaricare l'applicazione RMS sharing per la distribuzione automatica.
 
-1.  Visitare la pagina [Applicazione Microsoft Rights Management sharing per Windows](http://www.microsoft.com/download/details.aspx?id=40857) nel Microsoft Download Center e fare clic su **Download**.
+1.  Visitare la pagina [Applicazione Microsoft Rights Management sharing per Windows](https://www.microsoft.com/download/details.aspx?id=40857) nel Microsoft Download Center e fare clic su **Download**.
 
 2.  Selezionare e scaricare i file necessari. Sono disponibili due pacchetti di installazione client: uno per Windows a 64 bit (Microsoft Rights Management sharing application x64.zip) e l'altro per Windows a 32 bit (Microsoft Rights Management sharing application x86.zip).
 
@@ -92,7 +92,7 @@ Per verificare l'esito positivo, vedere la sezione [Verificare l'esito positivo 
 
     1.  Accedere a un computer utilizzando un account amministratore locale.
 
-    2.  In tale computer [scaricare e installare l’Assistente per l’accesso a Microsoft Online](http://www.microsoft.com/download/details.aspx?id=28177).
+    2.  In tale computer [scaricare e installare l’Assistente per l’accesso a Microsoft Online](https://www.microsoft.com/download/details.aspx?id=28177).
 
     3.  Eseguire il comando seguente per vedere visualizzato sullo schermo l'URL del servizio di certificazione, che è possibile poi copiare e salvare per il passaggio successivo:
 
@@ -217,7 +217,7 @@ Per verificare l'esito positivo, vedere la sezione [Verificare l'esito positivo 
 
     Una corretta installazione dispone di un codice di uscita pari a 0 e qualsiasi altro numero indica un'installazione non riuscita.
 
-    Esempio del nome del file di log: **C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0\RMInstaller.log**
+    Nome del file di log di esempio: **C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0\RMInstaller.log**
 
 ### <a name="to-verify-installation-success-for-the-rms-sharing-application-for-office2010-and-azure-information-protection"></a>Per verificare l'esito positivo dell'installazione per l'applicazione RMS sharing per Office 2010 e Azure Information Protection
 
@@ -225,7 +225,7 @@ Per verificare l'esito positivo, vedere la sezione [Verificare l'esito positivo 
 
     Una corretta installazione dispone di un codice di uscita pari a 0 e qualsiasi altro numero indica un'installazione non riuscita.
 
-    Esempio del nome del file di log: **C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0**
+    Nome del file di log di esempio: **C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0**
 
 2.  Per verificare l'esito positivo per il comando RMSSetup.exe, è necessario che siano stati creati i file seguenti nella cartella *%localappdata%\microsoft\drm*:
 
@@ -247,7 +247,7 @@ Per verificare l'esito positivo, vedere la sezione [Verificare l'esito positivo 
 
     Una corretta installazione dispone di un codice di uscita pari a 0 e qualsiasi altro numero indica un'installazione non riuscita.
 
-    Esempio del nome del file di log: **C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0**
+    Nome del file di log di esempio: **C:\temp\RMS_Installer_9352fc91-1982-43bf-958a-2ef1fe9c2ed0**
 
 2.  Per verificare l'esito positivo del comando aadrmprep.exe, in ogni computer, cercare il testo seguente nel file di log di installazione: **aadrmprep.exe si è concluso con lo status ESITO POSITIVO**
 
@@ -274,21 +274,21 @@ Per verificare l'esito positivo, vedere la sezione [Verificare l'esito positivo 
 
 ### <a name="to-verify-installation-success-for-the-rms-sharing-application-and-office-add-in-only"></a>Per verificare l'esito positivo dell'installazione solo per l'applicazione RMS sharing e il componente aggiuntivo di Office
 
-1.  Per verificare l'esito positivo del comando Setup_ipviewer.exe, cercare il testo seguente nel file di log di installazione: **Installazione riuscita o stato di errore: 0**
+1.  Per verificare se il comando Setup_ipviewer.exe è riuscito, cercare il testo seguente nel file di log dell'installazione: **Installation success or error status: 0**
 
     Righe di esempio da un'installazione corretta:
 
-    **MSI (s) (F0:B8) [14:19:57:854]: Prodotto: Active Directory Rights Management Services Client 2.1 - Installazione completata.**
+    **MSI (s) (F0:B8) [14:19:57:854]: Product: Active Directory Rights Management Services Client 2.1 -- Installation completed successfully.**
 
-    **MSI (s) (F0:B8) [14:19:57:854]: Windows Installer: installazione del prodotto completata. Nome prodotto: Active Directory Rights Management Services Client 2.1. Versione del prodotto: 1.0.1179.1. Lingua del prodotto: 1033. Produttore: Microsoft Corporation Stato di esito positivo o di errore nell'installazione: 0.**
+    **MSI (s) (F0:B8) [14:19:57:854]: Windows Installer installed the product. Product Name: Client 2.1. di Active Directory Rights Management Services Product Version: 1.0.1179.1. Lingua del prodotto: 1033. Manufacturer: Microsoft Corporation Installation success or error status: 0.**
 
-2.  Per verificare l'esito positivo del componente aggiuntivo Office, su ogni computer, cercare il testo seguente nel file di log di installazione: **Installazione riuscita o stato di errore: 0**
+2.  Per verificare se il componente aggiuntivo di Office è stato installato, in ogni computer cercare il testo seguente nel file di log dell'installazione: **Installation success or error status: 0**
 
     Righe di esempio da un'installazione corretta:
 
-    **MSI (s) (9C:88) [18:49:04:007]: Prodotto: Componenti aggiuntivi di Office per Microsoft RMS - Installazione completata.**
+    **MSI (s) (9C:88) [18:49:04:007]: Product: Microsoft RMS Office Addins -- Installation completed successfully.**
 
-    **MSI (s) (9C:88) [18:49:04:007]: Windows Installer: installazione del prodotto completata. Nome prodotto: Componenti aggiuntivi di Office per Microsoft RMS. Versione del prodotto: 1.0.7. Lingua del prodotto: 1033. Produttore: Microsoft Stato di esito positivo o di errore nell'installazione: 0.**
+    **MSI (s) (9C:88) [18:49:04:007]: Windows Installer installed the product. Nome del prodotto: Componenti aggiuntivi di Office di Microsoft RMS. Versione del prodotto: 1.0.7. Product Language: 1033. Produttore: Microsoft Installation success or error status: 0.**
 
 ## <a name="uninstall-commands"></a>Disinstallare i comandi
 Non tutti i comandi di installazione necessari per tali distribuzioni supportano un comando di disinstallazione. È possibile disinstallare il client AD RMS, l'applicazione RMS sharing e il componente aggiuntivo di Office. Utilizzare i comandi seguenti per disinstallare questi elementi.
@@ -395,7 +395,7 @@ Se si usa AD RMS e gli utenti dell'organizzazione hanno più domini di posta el
 
 2.  Selezionare **RmsSharingApp**, creare un nuovo valore multistringa denominato **FederatedDomains** e poi aggiungere i domini e i sotto-domini utilizzati dall'organizzazione. I caratteri jolly non sono supportati.
 
-    Ad esempio: la società Coho Vineyard &amp; Winery ha il dominio di posta elettronica standard **cohovineyardandwinery.com**, ma in seguito alle fusioni vengono usati anche i domini di posta elettronica **cohowinery.com**, **eastcoast.cohowinery.com** e **cohovineyard**. Per i dati di valore **FederatedDomains**, l'amministratore immette: **cohowinery.com; eastcoast.cohowinery.com; cohovineyard**
+    Ad esempio: La società Coho Vineyard &amp; Winery ha un dominio di posta elettronica standard, **cohovineyardandwinery.com**, ma in seguito a delle fusioni, usa anche i domini di posta elettronica **cohowinery.com**, **eastcoast.cohowinery.com** e **cohovineyard**. Per i dati di valore **FederatedDomains**, l'amministratore immette: **cohowinery.com; eastcoast.cohowinery.com; cohovineyard**
 
 Se non si apporta questa modifica al Registro di sistema, gli utenti potrebbero non essere in grado di utilizzare contenuti protetti da altri utenti nella propria organizzazione. Questa modifica del Registro di sistema non è necessaria se si usa Azure Information Protection.
 

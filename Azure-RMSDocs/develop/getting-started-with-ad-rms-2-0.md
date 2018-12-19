@@ -12,18 +12,18 @@ ms.assetid: 728113C9-FCF9-4280-BE1D-6AF5C15E449E
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 2113d408356fc80efa90838bf667712d47ce7e0f
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 43e63165fcf8c19760a9f82619a02923ba55e97e
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147339"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266342"
 ---
 # <a name="getting-started"></a>Guida introduttiva
 
 La piattaforma Rights Management Services SDK 2.1 consente agli sviluppatori di creare applicazioni che sfruttano la protezione delle informazioni RMS tramite un server RMS o Azure RMS. La piattaforma gestisce procedure di sicurezza complesse, ad esempio la gestione delle chiavi e l’elaborazione delle operazioni di crittografia e decrittografia, e offre un'API semplificata per agevolare lo sviluppo delle applicazioni.
 
-## <a name="get-started-with-rms-sdk-21"></a>Introduzione a RMS SDK 2.1
+## <a name="get-started-with-rmssdk21"></a>Introduzione a RMS SDK 2.1
 
 Questo argomento illustra il processo di configurazione ed esecuzione dell'applicazione abilitata all'uso di diritti in un ambiente di testing. Gli argomenti seguenti illustrano come configurare l'ambiente di sviluppo e sono elencati in modo da suggerire un possibile ordine di esecuzione delle attività.
 
@@ -39,7 +39,7 @@ Questo argomento illustra il processo di configurazione ed esecuzione dell'appli
 | [Distribuire in ambiente di produzione](deploying-your-application.md) |Questo argomento descrive le opzioni di distribuzione per l'applicazione abilitata all'uso di diritti.|
 
 
-Provare a utilizzare RMS SDK 2.1 seguendo le indicazioni fornite in questi argomenti:
+Provare a usare RMS SDK 2.1 seguendo le indicazioni contenute in questi argomenti:
 
 - [Installare l'SDK](install-the-rms-sdk.md)
 - [Configurare Visual Studio](how-to-configure-a-visual-studio-project-to-use-the-ad-rms-sdk-2-0.md)
@@ -47,9 +47,9 @@ Provare a utilizzare RMS SDK 2.1 seguendo le indicazioni fornite in questi argom
 - [Controllo dell'applicazione](how-to-set-up-your-test-environment.md)
 - [Distribuire in ambiente di produzione](deploying-your-application.md)
 
-### <a name="why-use-rms-sdk-21-for-protecting-your-content"></a>Perché utilizzare RMS SDK 2.1 per proteggere il contenuto
+### <a name="why-use-rmssdk21-for-protecting-your-content"></a>Perché usare RMS SDK 2.1 per proteggere il contenuto
 
-Per gli sviluppatori che desiderano aggiungere il supporto RMS alle proprie applicazioni nuove ed esistenti, RMS SDK 2.1 consente più facilmente di:
+Per gli sviluppatori che vogliono aggiungere il supporto RMS alle proprie applicazioni nuove ed esistenti, con RMS SDK 2.1 è più facile:
 
 -   Creare applicazioni compatibili con RMS, gestibili, conformi e affidabili.
 -   Crittografare i dati utente in modo permanente. I dati rimangono crittografati indipendentemente dall'ambiente, dal dispositivo o dal sistema operativo.
@@ -68,4 +68,3 @@ RMS SDK 2.1 supporta una serie di importanti piattaforme client e server. Per al
 ## <a name="related-topics"></a>Argomenti correlati
 
 * [Guida per gli sviluppatori RMS](developers-guide.md)
-* [Blog per sviluppatori AD RMS](http://blogs.msdn.com/b/rms/)

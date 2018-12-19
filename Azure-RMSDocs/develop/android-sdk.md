@@ -12,12 +12,12 @@ ms.assetid: 986f6932-159b-4791-bd1a-7640a83ee792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d6a851cc5568b14b1f18ad71169b2c0e6efc136b
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 242700c089e34bc69eef10a45ea761f9668f4a42
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147526"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266648"
 ---
 # <a name="android-setup"></a>Installazione per Android
 
@@ -34,26 +34,26 @@ Questo argomento illustra come impostare l'ambiente per la creazione di nuove ap
 
 Nel sistema di sviluppo si consiglia di disporre del software seguente:
 
--   Sistema operativo Windows o OS X per l'esecuzione dell'ambiente di sviluppo [Eclipse](http://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html).
+-   Sistema operativo Windows o OS X per l'esecuzione dell'ambiente di sviluppo [Eclipse](https://www.oracle.com/technetwork/java/javase/downloads/jre7-downloads-1880261.html).
 -   Questa guida presuppone l'uso di SDK di Eclipse a partire da Eclipse Juno 4.2 e di un'installazione predefinita.
 -   Java a partire da Java 1.6.
--   [Plug-in Android Developer Tools (ADT)](http://developer.android.com/sdk/installing/index.html). NOTA: per completare l'installazione potrebbe essere richiesto di riavviare Eclipse.
+-   [Plug-in Android Developer Tools (ADT)](https://developer.android.com/studio/install). NOTA: per completare l'installazione potrebbe essere richiesto di riavviare Eclipse.
 
-     
+     
 
--   Pacchetto SDK MS RMS 4.2 per Android. Per altre informazioni, vedere [Introduzione](get-started.md).
+-   Pacchetto MS RMS SDK 4.2 per Android. Per altre informazioni, vedere [Introduzione](get-started.md).
 
     Questo SDK consente di sviluppare per Android 4.0.3 (API livello 15) e versioni successive.
 
--   Libreria di autenticazione: è consigliabile usare [Active Directory Authentication Library .NET](https://msdn.microsoft.com/library/jj573266.aspx). Tuttavia, è possibile usare anche altre librerie di autenticazione che supportano OAuth 2.0.
+-   Libreria di autenticazione: è consigliabile usare [Azure Active Directory Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx). Tuttavia, è possibile usare anche altre librerie di autenticazione che supportano OAuth 2.0.
 
     Per altre informazioni, vedere [ADAL per Android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android)
 
-    **Nota**: se l'applicazione non usa ADAL come libreria di autenticazione OAuth 2.0, è consigliabile leggere questa guida Android [Alcune idee su SecureRandom](http://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
+    **Nota**  se l'applicazione non usa ADAL come libreria di autenticazione OAuth 2.0, è consigliabile consultare la guida di Android [Alcune idee su SecureRandom](https://android-developers.blogspot.com/2013/08/some-securerandom-thoughts.html).
 
-     
+     
 
-Leggere l'argomento [Novità](release-notes.md) per informazioni sugli aggiornamenti dell'API, note sulla versione e domande frequenti (FAQ).
+Leggere l'argomento [Novità](release-notes.md) per informazioni sugli aggiornamenti delle API, note sulla versione e domande frequenti (FAQ).
 
 ## <a name="optional"></a>Facoltativo
 
@@ -61,9 +61,9 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
 ## <a name="configuring-your-development-environment"></a>Configurazione dell'ambiente di sviluppo
 
-**Nota**: versione di anteprima SDK MS RMS 4.2: in questa versione di anteprima, le schermate non sono state aggiornate per riflettere la modifica nel nome di pathes da com/microsoft/protection a com/microsoft/rightsmanagment. Il testo, tuttavia, è stato aggiornato.
+**Nota**  versione di anteprima di MS RMS SDK 4.2: in questa versione di anteprima, le schermate non sono state aggiornate per riflettere la modifica del nome del percorso da com/microsoft/protection a com/microsoft/rightsmanagment. Il testo, tuttavia, è stato aggiornato.
 
- 
+ 
 -   Aprire l'ambiente di sviluppo Eclipse.
 -   Per creare un nuovo progetto di applicazione Android, nel menu **File**, fare clic su **Nuovo**, fare clic su **Progetto** e quindi selezionare **Progetto di applicazione Android**.
 
@@ -134,7 +134,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
     <uses-permission/>
    ```
 
-**Nota** SDK usa *android.support.v4*
+**Nota**  L'SDK usa *android.support.v4*
 
 -   A questo punto si è pronti a creare le proprie nuove app Android.
 

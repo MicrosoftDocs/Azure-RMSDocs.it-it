@@ -4,22 +4,22 @@ description: Fase 1 della migrazione da AD RMS ad Azure Information Protection c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/11/2018
+ms.date: 12/11/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3a695268605a16564573d64c1f48447ea9b8cf45
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 5eec7b06f3e0b649f436f61dc141e53173503774
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151113"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305178"
 ---
 # <a name="migration-phase-1---preparation"></a>Fase 1 della migrazione: preparazione
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Usare le informazioni seguenti per la fase 1 della migrazione da AD RMS ad Azure Information Protection. Queste procedure illustrano i passaggi da 1 a 3 della [migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e preparano l'ambiente per la migrazione senza influenzare il lavoro degli utenti.
 
@@ -35,7 +35,7 @@ Per le istruzioni, vedere [Installazione del modulo PowerShell AADRM](./install-
 
 Per completare alcune delle istruzioni di migrazione, è necessario conoscere l'URL del servizio Azure Rights Management del tenant in modo che sia possibile sostituirlo quando vengono visualizzati i riferimenti all'*\<URL del tenant\>*. L'URL del servizio Azure Rights Management ha il formato seguente: **{GUID}.rms.[Region].aadrm.com**.
 
-Ad esempio, : **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+Ad esempio: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
 ### <a name="to-identify-your-azure-rights-management-service-url"></a>Per identificare l'URL del servizio Azure Rights Management
 
@@ -77,7 +77,7 @@ Nella maggior parte delle migrazioni, non è pratico eseguire la migrazione di t
     
 4. Estrarre i file e seguire le istruzioni in **PrepareClient.cmd** in modo che contenga il nome del server per l'URL di gestione licenze Extranet del cluster di AD RMS. 
     
-    Per individuare il nome del server: dalla console di Active Directory Rights Management Services, fare clic sul nome del cluster. Nelle informazioni **Dettagli cluster**, copiare il nome del server dal valore **Gestione licenze** della sezione degli URL del cluster Extranet. Ad esempio: **rmscluster.contoso.com**.
+    Per individuare questo nome: nella console di Active Directory Rights Management Services fare clic sul nome del cluster. Nelle informazioni **Dettagli cluster**, copiare il nome del server dal valore **Gestione licenze** della sezione degli URL del cluster Extranet. Ad esempio: **rmscluster.contoso.com**.
 
     > [!IMPORTANT]
     > Le istruzioni includono la sostituzione degli indirizzi di esempio di **adrms.contoso.com** con gli indirizzi del server di AD RMS. Quando si esegue questa operazione, assicurarsi che non siano presenti spazi aggiuntivi prima o dopo gli indirizzi, che interrompono lo script di migrazione e sono molto difficili da identificare come la causa principale del problema. Alcuni strumenti di modifica aggiungono automaticamente uno spazio dopo aver incollato il testo.
@@ -93,7 +93,7 @@ Se si usa Exchange locale o Exchange online, è possibile che Exchange sia stato
 
 Assicurarsi di avere gli [URL del servizio Azure Rights Management del tenant](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url) in modo che sia possibile sostituire questo valore in *&lt;URL tenant&gt;* nei comandi seguenti. 
 
-**Se Exchange Online è stato integrato con AD RMS**: aprire una sessione di PowerShell per Exchange Online ed eseguire i comandi seguenti di PowerShell uno alla volta o in uno script:
+**Se Exchange Online è integrato con AD RMS**: aprire una sessione di PowerShell per Exchange Online ed eseguire i comandi seguenti di PowerShell uno alla volta o in uno script:
 
     $irmConfig = Get-IRMConfiguration
     $list = $irmConfig.LicensingLocation
@@ -102,7 +102,7 @@ Assicurarsi di avere gli [URL del servizio Azure Rights Management del tenant](m
     Set-IRMConfiguration -internallicensingenabled $false
     Set-IRMConfiguration -internallicensingenabled $true 
 
-**Se Exchange locale è integrato con AD RMS**: per ogni organizzazione di Exchange, prima aggiungere i valori indicati di seguito nel Registro di sistema di ogni server Exchange e quindi eseguire i comandi PowerShell specificati. 
+**Se Exchange locale è integrato con AD RMS**: per ogni organizzazione di Exchange, prima aggiungere i valori indicati di seguito nel Registro di sistema di ogni server Exchange e quindi eseguire i comandi PowerShell specificati: 
 
 Valori del registro di sistema per Exchange 2013 ed Exchange 2016:
 

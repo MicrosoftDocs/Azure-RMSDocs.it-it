@@ -4,24 +4,24 @@ description: Informazioni e istruzioni sull'uso della registrazione dell'utilizz
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1deea1b4353e2d48c85ae24625ab29eca96a3968
-ms.sourcegitcommit: bf58c5d94eb44a043f53711fbdcf19ce503f8aab
+ms.openlocfilehash: 3d287df4fbea3f4b040444182aed89da7c470ea1
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47211327"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305642"
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registrazione e analisi dell'utilizzo del servizio Azure Rights Management
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Seguire queste istruzioni per comprendere il modo in cui è possibile usare la registrazione dell'utilizzo per il servizio Azure Rights Management di Azure Information Protection. Questo servizio garantisce la protezione dati per i documenti e i messaggi di posta elettronica dell'organizzazione e può registrare qualsiasi richiesta. Sono esempi di richieste le azioni eseguite dagli utenti per proteggere documenti e messaggi di posta elettronica e per usare questi contenuti, le azioni eseguite dagli amministratori del servizio e le azioni eseguite da operatori Microsoft per il supporto delle distribuzioni di Azure Information Protection. 
+Usare queste informazioni per capire come si può usare la registrazione dell'utilizzo per il servizio Azure Rights Management da Azure Information Protection. Questo servizio garantisce la protezione dati per i documenti e i messaggi di posta elettronica dell'organizzazione e può registrare qualsiasi richiesta. Sono esempi di richieste le azioni eseguite dagli utenti per proteggere documenti e messaggi di posta elettronica e per usare questi contenuti, le azioni eseguite dagli amministratori del servizio e le azioni eseguite da operatori Microsoft per il supporto delle distribuzioni di Azure Information Protection. 
 
 È quindi possibile usare i log del servizio Azure Rights Management per supportare gli scenari aziendali seguenti:
 
@@ -31,13 +31,13 @@ Seguire queste istruzioni per comprendere il modo in cui è possibile usare la r
 
 -   **Monitoraggio per evitare eventuali abusi**
 
-    Le informazioni fornite dalla funzionalità di registrazione di Azure Rights Management sono disponibili quasi in tempo reale e consentono un monitoraggio continuo dell'uso del servizio Rights Management da parte della società. Il 99,9% dei log sono disponibili per il servizio entro 15 minuti dall'avvio di un'azione.
+    Le informazioni specificate dalla funzionalità di registrazione di Azure Rights Management sono disponibili quasi in tempo reale e consentono un monitoraggio continuo dell'uso del servizio Rights Management da parte dell'azienda. Il 99,9% dei log sono disponibili per il servizio entro 15 minuti dall'avvio di un'azione.
 
     È possibile, ad esempio, scegliere di ricevere un avviso nel caso in cui si verifichi un improvviso picco di accessi a dati protetti al di fuori del normale orario di lavoro. Un picco di questo tipo potrebbe indicare che un utente malintenzionato sta raccogliendo informazioni da vendere alla concorrenza. È possibile anche scegliere di ricevere un avviso se uno stesso utente sembra accedere ai dati da due indirizzi IP differenti nell'arco di un breve periodo di tempo. Questo evento può indicare infatti che un account utente è stato compromesso.
 
 -   **Esecuzione di analisi forensi**
 
-    Se si verifica una perdita di informazioni, è probabile che all'amministratore vengano richiesti i nominativi degli utenti che hanno avuto accesso a specifici documenti e l'indicazione delle informazioni visualizzate di recente da una persona sospetta. Se si usa la funzione di registrazione, è possibile rispondere a questo tipo di domande. Gli utenti che accedono a contenuto protetto, infatti, devono sempre ottenere una licenza di Rights Management per aprire immagini e documenti protetti con tale servizio, anche se i file vengono spostati tramite posta elettronica o copiati in unità USB o altri dispositivi di archiviazione. Questo significa che, quando si proteggono i dati con il servizio Azure Rights Management, è possibile usare i log come fonte certa di informazioni per l'esecuzione di analisi a scopo legale.
+    Se si verifica una perdita di informazioni, è probabile che all'amministratore vengano richiesti i nominativi degli utenti che hanno avuto accesso a specifici documenti e l'indicazione delle informazioni visualizzate di recente da una persona sospetta. Se si usa la funzione di registrazione, è possibile rispondere a questo tipo di domande. Gli utenti che accedono a contenuto protetto, infatti, devono sempre ottenere una licenza di Rights Management per aprire immagini e documenti protetti con tale servizio, anche se i file vengono spostati usando la posta elettronica o copiati in unità USB o altri dispositivi di archiviazione. Questo significa che, quando si proteggono i dati con il servizio Azure Rights Management, è possibile usare i log come fonte certa di informazioni per l'esecuzione di analisi a scopo legale.
 
 Oltre alla registrazione dell'utilizzo, sono disponibili anche le opzioni di registrazione seguenti:
 
@@ -52,8 +52,8 @@ Vengono raccolte informazioni anche dai registri d'uso del client e dallo scanne
 
 Per altre informazioni sulla registrazione dell'utilizzo per il servizio Azure Rights Management, vedere le sezioni seguenti. 
 
-## <a name="how-to-enable-azure-rights-management-usage-logging"></a>Come abilitare la funzionalità di registrazione dell'utilizzo di Azure Rights Management
-A partire da febbraio 2016, la funzionalità di registrazione dell'utilizzo di Azure Rights Management è abilitata per impostazione predefinita per tutti i clienti. Questa impostazione è applicabile ai clienti che hanno attivato il servizio Azure Rights Management prima del mese di febbraio 2016 e a quelli che attivano il servizio dopo febbraio 2016. 
+## <a name="how-to-enable-azure-rightsmanagement-usage-logging"></a>Come abilitare la funzionalità di registrazione dell'utilizzo di Azure Rights Management
+A partire da febbraio 2016, la funzionalità di registrazione dell'utilizzo di Azure Rights Management è abilitata per impostazione predefinita per tutti i clienti. Questa impostazione è applicabile ai clienti che hanno attivato il servizio Azure Rights Management prima del mese di febbraio 2016 e a quelli che attivano il servizio dopo febbraio 2016. 
 
 > [!NOTE]
 > Non sono previsti costi aggiuntivi per l'archiviazione dei log o per il funzionamento della funzionalità di registrazione.
@@ -133,7 +133,7 @@ La prima riga indica che si tratta di log di Azure Rights Management, mentre la 
 
 La terza riga è costituita da un elenco di nomi separati da caratteri di tabulazione:
 
-**#Fields: date            time            row-id        request-type           user-id       result          correlation-id          content-id                owner-email           issuer                     template-id             file-name                  date-published      c-info         c-ip            admin-action            acting-as-user**
+**#Fields: date            time            row-id        request-type           user-id       result          correlation-id          content-id                owner-email           issuer                     template-id             file-name                  date-published      c-info         c-ip            admin-action            acting-as-user**
 
 Ciascuna delle righe seguenti è un record di log. I valori dei campi seguono lo stesso ordine della riga precedente e sono separati da caratteri di tabulazione. La tabella riportata di seguito consente di interpretare i campi.
 
@@ -163,7 +163,7 @@ Anche se nel campo user-id è in genere riportato il nome dell'utente che ha eff
 
 -   Il valore **'microsoftrmsonline@&lt;YourTenantID&gt;.rms.&lt;region&gt;.aadrm.com'**.
 
-    Questo valore indica che la richiesta viene eseguita da un servizio di Office 365, ad esempio Exchange Online o SharePoint Online. Nella stringa, *&lt;YourTenantID&gt;* è il GUID del tenant, mentre *&lt;region&gt;* è l'area in cui è registrato il tenant. Ad esempio, **na** indica l'America del Nord, **eu** l'Europa e **ap** l'Asia.
+    Questo valore indica che la richiesta viene effettuata da un servizio di Office 365, ad esempio Exchange Online o SharePoint Online. Nella stringa, *&lt;YourTenantID&gt;* è il GUID del tenant, mentre *&lt;region&gt;* è l'area in cui è registrato il tenant. Ad esempio, **na** indica l'America del Nord, **eu** l'Europa e **ap** l'Asia.
 
 -   Si sta usando il connettore RMS.
 
@@ -190,7 +190,7 @@ Il servizio Azure Rights Management supporta diversi tipi di richiesta. La tabel
 |FECreatePublishingLicenseV1|Questa richiesta corrisponde a una combinazione di Certify e GetClientLicensorCert ed è inviata da client mobili.|
 |FEGetAllTemplates|Viene eseguita una chiamata da un dispositivo mobile (front-end) per ottenere i modelli.|
 |FindServiceLocationsForUser|Viene eseguita una chiamata per effettuare una query di URL, che consente di chiamare la richiesta Certify o AcquireLicense.|
-|GetAllDocs|Viene eseguita una chiamata dal sito di rilevamento dei documenti per caricare la pagina **Tutti i documenti** relativa a un utente o cercare tutti i documenti del tenant. Usare questo valore con i campi admin-action e acting-as-admin:<br /><br />- admin-action è vuoto: un utente visualizza la pagina **Tutti i documenti** relativa ai propri documenti.<br /><br />- admin-action è true e acting-as-user è vuoto: un amministratore visualizza tutti i documenti relativi al proprio tenant.<br /><br />- admin-action è true e acting-as-user non è vuoto: un amministratore visualizza la pagina **Tutti i documenti** relativa a un utente.|
+|GetAllDocs|Viene eseguita una chiamata dal sito di rilevamento dei documenti per caricare la pagina **Tutti i documenti** relativa a un utente o cercare tutti i documenti del tenant. Usare questo valore con i campi admin-action e acting-as-admin:<br /><br />- admin-action è vuoto: un utente visualizza la pagina **Tutti i documenti** relativa ai propri documenti.<br /><br />- admin-action è true e acting-as-user è vuoto: un amministratore visualizza tutti i documenti per il proprio tenant.<br /><br />- admin-action è true e acting-as-user non è vuoto: un amministratore visualizza la pagina **Tutti i documenti** per un utente.|
 |GetAllTemplates|Viene eseguita una chiamata dal portale di Azure per aggiungere tutti i modelli.|
 |GetClientLicensorCert|Il client richiede un certificato di distribuzione, da usare in un secondo tempo per proteggere i contenuti, da un computer basato su Windows.|
 |GetConfiguration|Un cmdlet di PowerShell Azure viene chiamato per ottenere la configurazione del tenant di Azure RMS.|

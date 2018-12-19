@@ -1,5 +1,5 @@
 ---
-title: Aprire file protetti da RMS con l'app RMS sharing - AIP
+title: Aprire file protetti da RMS con l'app RMS sharing
 description: Istruzioni per visualizzare e usare un file protetto che rende necessario avere l'applicazione Rights Management (RMS) sharing installata.
 author: cabailey
 ms.author: cabailey
@@ -10,28 +10,31 @@ ms.service: information-protection
 ms.assetid: e5fa4666-6906-405a-9e0c-2c52d4cd27c8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 926a6d34b34b486577f6a8481010d058e465b3e8
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: f3e3158e8cd5fb054daab65a3b86a0e99074bee3
+ms.sourcegitcommit: db60fe8f74ffaa4f6ffbf5defb22efc476c28312
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023992"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53319466"
 ---
-# <a name="view-and-use-files-that-have-been-protected-by-rights-management"></a>Visualizzare e usare i file che sono stati protetti da Rights Management
+# <a name="use-the-rights-management-sharing-application-to-view-and-use-protected-files"></a>Usare l'applicazione Rights Management sharing per visualizzare e usare file protetti
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 7 con SP1, Windows 8, Windows 8.1*
 
-Quando l'[applicazione Rights Management (RMA) sharing viene installata nel computer in uso](install-sharing-app.md), viene visualizzato un file protetto semplicemente facendo doppio clic su di esso. Il file potrebbe essere un allegato in un messaggio di posta elettronica oppure è possibile vederlo quando si utilizza Esplora file.
+> [!IMPORTANT]
+> **Notifica di file del supporto**: l'applicazione di condivisione Rights Management per Windows verrà sostituita dal [client Azure Information Protection](aip-client.md). Il supporto per questa applicazione precedente terminerà il 31 gennaio 2019.
 
-> [!NOTE]
-> Per consentire a un utente di visualizzare il file protetto, il servizio Rights Management deve prima verificare che sia autorizzato e a questo scopo controlla il nome utente e la password. In alcuni casi, questo potrebbe essere memorizzato nella cache e non verrà visualizzato un messaggio che richiede l'immissione delle credenziali. In altri casi, verrà richiesto di fornire le credenziali.
->
-> Se l'organizzazione non usa Azure Information Protection o AD RMS, è possibile richiedere un account gratuito che accetterà le credenziali in modo che sia possibile aprire i file protetti tramite RMS:
->
-> -   Per richiedere questo account, fare clic sul collegamento per richiedere [RMS per utenti singoli](https://go.microsoft.com/fwlink/?LinkId=309469).
->
->     Quando si effettua l'iscrizione, utilizzare l'indirizzo di posta elettronica della società anziché un indirizzo di posta elettronica personale. Se si esegue l'iscrizione perché è stato inviato un allegato protetto tramite posta elettronica, utilizzare lo stesso indirizzo di posta elettronica utilizzato per inviare il messaggio di posta elettronica.
-> -   Per ulteriori informazioni, vedere [RMS per utenti singoli e Azure Rights Management](../rms-for-individuals.md).
+Quando l'[applicazione Rights Management (RMA) sharing viene installata nel computer in uso](install-sharing-app.md), è possibile visualizzare un file protetto semplicemente facendo doppio clic su di esso. Il file potrebbe essere un allegato in un messaggio di posta elettronica oppure è possibile vederlo quando si utilizza Esplora file.
+
+Per consentire a un utente di visualizzare il file protetto, il servizio Rights Management deve prima verificare che sia autorizzato e a questo scopo controlla il nome utente e la password. In alcuni casi, questo potrebbe essere memorizzato nella cache e non verrà visualizzato un messaggio che richiede l'immissione delle credenziali. In altri casi, verrà richiesto di fornire le credenziali.
+
+Se l'organizzazione non usa Azure Information Protection o AD RMS, è possibile richiedere un account gratuito che accetterà le credenziali in modo che sia possibile aprire i file protetti tramite RMS:
+
+- Per richiedere questo account, fare clic sul collegamento per richiedere [RMS per utenti singoli](https://go.microsoft.com/fwlink/?LinkId=309469). 
+    
+    Quando si effettua l'iscrizione, utilizzare l'indirizzo di posta elettronica della società anziché un indirizzo di posta elettronica personale. Se si esegue l'iscrizione perché è stato inviato un allegato protetto tramite posta elettronica, utilizzare lo stesso indirizzo di posta elettronica utilizzato per inviare il messaggio di posta elettronica.
+
+- Per ulteriori informazioni, vedere [RMS per utenti singoli e Azure Rights Management](../rms-for-individuals.md).
 
 ## <a name="to-view-a-protected-file"></a>Per visualizzare un file protetto
 Utilizzando Esplora file o il messaggio di posta elettronica contenente l'allegato, fare doppio clic sul file protetto e immettere le credenziali se viene richiesto.

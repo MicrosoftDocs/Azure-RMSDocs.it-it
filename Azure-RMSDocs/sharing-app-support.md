@@ -10,19 +10,19 @@ ms.service: information-protection
 ms.assetid: 1da6e372-2b3f-4af7-80f7-6b9073dff7f5
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e78a870afea9828bf2020aca7007db9a766a1076
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 16110efd8d0874ba1235cc02576848d122203ea8
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023314"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173442"
 ---
 # <a name="rms-sharing-application-for-windows-and-mobile-platforms"></a>Applicazione RMS sharing per piattaforme Windows e mobili
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 > [!IMPORTANT]
-> **Notifica di fine del supporto**: l'applicazione di condivisione Rights Management per Windows verrà sostituita dal [client Azure Information Protection](./rms-client/aip-client.md). Il supporto per questa applicazione precedente terminerà il 31 gennaio 2019. 
+> **Notifica di file del supporto**: l'applicazione di condivisione Rights Management per Windows verrà sostituita dal [client Azure Information Protection](./rms-client/aip-client.md). Il supporto per questa applicazione precedente terminerà il 31 gennaio 2019. 
  
 L'applicazione RMS sharing è un'applicazione scaricabile che supporta Office 2010 per i computer Windows, ma in passato consigliata anche per tutti i computer Windows e i dispositivi mobili. È ancora consigliata per i computer Mac e i dispositivi Windows Phone. L'applicazione RMS sharing è particolarmente vantaggiosa perché consente di applicare la protezione generica ad applicazioni e file senza supporto nativo per il servizio Azure Rights Management, il che significa che tutti i file possono essere protetti. Per altre informazioni sui diversi livelli di protezione, vedere la sezione [Livelli di protezione – nativo e generico](./rms-client/sharing-app-admin-guide-technical.md#levels-of-protection--native-and-generic) della [Guida dell'amministratore dell'applicazione Rights Management sharing](./rms-client/sharing-app-admin-guide.md).
 
@@ -46,7 +46,7 @@ Sebbene sia possibile scaricare l'applicazione RMS sharing per Windows e install
 
 L'applicazione RMS sharing per dispositivi mobili supporta i dispositivi di questo tipo usati più di frequente, ad esempio iPad e iPhone nonché dispositivi Android, Windows Phone e Windows RT. Gli utenti possono scaricare questa app dallo Store pertinente cui è possibile accedere dai collegamenti presenti nella [pagina di Microsoft Rights Management](https://go.microsoft.com/fwlink/?LinkId=303970).
 
-**Se si ha Microsoft Intune**: poiché l'app RMS sharing include il kit di sviluppo del software per l'app Microsoft Intune, sono disponibili le opzioni seguenti:
+**Se è installato Microsoft Intune**: poiché l'app RMS sharing include il kit di sviluppo del software per l'app Microsoft Intune, sono disponibili le opzioni seguenti:
 
 -   Distribuire e gestire l'app per i dispositivi iOS e Android registrati da Intune.
 

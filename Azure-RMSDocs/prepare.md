@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: abbb7e5af52952dc3ed69f2825a8e32d25ab9982
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: e5717d83ece5f188476c0f7bca677088aa4373ae
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024101"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173877"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparazione di utenti e gruppi per Azure Information Protection
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Prima di distribuire Azure Information Protection per l'organizzazione, assicurarsi che siano disponibili gli account necessari per gli utenti e i gruppi in Azure AD per il tenant dell'organizzazione.
 
@@ -113,7 +113,7 @@ Oltre che per autorizzare i gruppi del tenant, Azure Information Protection usa 
 
 ## <a name="using-accounts-from-active-directory-on-premises-for-azure-information-protection"></a>Uso di account di Active Directory locale per Azure Information Protection
 
-Se con Azure Information Protection si vogliono usare account gestiti in locale, è necessario sincronizzare questi ultimi in Azure AD. Per semplificare la distribuzione, è consigliabile usare [Azure AD Connect](/azure/active-directory/connect/active-directory-aadconnect). È tuttavia possibile usare qualsiasi metodo di sincronizzazione di directory che consenta di ottenere lo stesso risultato.
+Se con Azure Information Protection si vogliono usare account gestiti in locale, è necessario sincronizzare questi ultimi in Azure AD. Per semplificare la distribuzione, è consigliabile usare [Azure AD Connect](/azure/active-directory/hybrid/whatis-azure-ad-connect). È tuttavia possibile usare qualsiasi metodo di sincronizzazione di directory che consenta di ottenere lo stesso risultato.
 
 Quando si sincronizzano gli account, non è necessario sincronizzare tutti gli attributi. Per l'elenco degli attributi che devono essere sincronizzati, vedere la [sezione relativa ad Azure RMS](/azure/active-directory/connect/active-directory-aadconnectsync-attributes-synchronized#azure-rms) nella documentazione di Azure Active Directory.
 
@@ -207,9 +207,9 @@ Considerare questo ritardo nelle modifiche o nell'esecuzione di test, ad esempio
 
 Dopo aver confermato che gli utenti e i gruppi sono utilizzabili con Azure Information Protection e che tutto è pronto per iniziare ad applicare la protezione a documenti e messaggi di posta elettronica, controllare se è necessario attivare il servizio Rights Management. Per proteggere i documenti e i messaggi di posta elettronica dell'organizzazione, prima attivare questo servizio: 
 
-- A partire dal mese di febbraio 2018: se la sottoscrizione che include Azure Rights Management o Azure Information Protection risale al mese di febbraio 2018 o a un mese successivo, il servizio viene attivato automaticamente. 
+- A partire da febbraio 2018: se la sottoscrizione che include Azure Rights Management o Azure Information Protection risale al mese di febbraio 2018 o a un mese successivo, il servizio viene attivato automaticamente. 
 
-- Se la sottoscrizione è stata acquistata prima del mese di febbraio 2018, il servizio deve essere attivato. 
+- Se la sottoscrizione risale a prima di febbraio 2018: è necessario attivare il servizio manualmente. 
 
 Per altre informazioni sul controllo dello stato di attivazione, vedere [Attivazione di Azure Rights Management](./activate-service.md).
 

@@ -4,22 +4,22 @@ description: Informazioni sulle restrizioni quando si usano chiavi gestite dal c
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/28/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 93e538b882da557715b04e8675b5a3b86de018b0
-ms.sourcegitcommit: bcc9e0f9ae8512bf48d819533cf8ef3b667eb298
+ms.openlocfilehash: 68e479eb7f19f60d6d68b913eae46dd287b5a04f
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52330277"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305149"
 ---
 # <a name="byok-pricing-and-restrictions"></a>Prezzi e restrizioni della modalità BYOK
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
 Le organizzazioni che hanno una sottoscrizione che include Azure Information Protection possono configurare il tenant di Azure Information Protection per usare una chiave gestita dal cliente (BYOK) e [registrarne l'utilizzo](./log-analyze-usage.md). 
@@ -44,11 +44,11 @@ Altri vantaggi dell'uso di Insieme di credenziali delle chiavi di Azure per la c
 
 - Insieme di credenziali delle chiavi di Azure fornisce la separazione dei ruoli, una procedura di sicurezza consigliata di comprovata efficacia. Gli amministratori di Azure Information Protection possono concentrarsi sulla gestione della protezione e della classificazione dei dati, mentre gli amministratori di Insieme di credenziali delle chiavi di Azure possono concentrarsi sulla gestione delle chiavi di crittografia e dei criteri speciali che potrebbero essere necessari per la sicurezza o la conformità.
 
-- Alcune organizzazioni hanno restrizioni relative alla posizione della chiave master. Insieme di credenziali delle chiavi di Azure fornisce un alto livello di controllo sull'archiviazione della chiave master perché il servizio è disponibile in molte aree di Azure. Attualmente, è possibile scegliere tra 28 aree di Azure e si prevede di aumentare questo numero. Per altre informazioni, vedere la pagina [Prodotti disponibili in base all'area] (https://azure.microsoft.com/regions/services/) nel sito di Azure.
+- Alcune organizzazioni hanno restrizioni relative alla posizione della chiave master. Insieme di credenziali delle chiavi di Azure fornisce un alto livello di controllo sull'archiviazione della chiave master perché il servizio è disponibile in molte aree di Azure. Attualmente, è possibile scegliere tra 28 aree di Azure e si prevede di aumentare questo numero. Per altre informazioni, vedere la pagina [Prodotti disponibili in base all'area](https://azure.microsoft.com/regions/services/) nel sito di Azure.
 
 Oltre alla gestione delle chiavi, Insieme di credenziali delle chiavi di Azure offre agli amministratori della protezione la stessa esperienza di gestione per archiviare, accedere e gestire i certificati e i segreti, ad esempio le password, per altri servizi e applicazioni che usano la crittografia. 
 
-Per altre informazioni su Insieme di credenziali delle chiavi di Azure, vedere [Cos'è l'insieme di credenziali chiave di Azure?](/azure/key-vault/key-vault-whatis) e visitare il [blog del team di Insieme di credenziali delle chiavi di Azure](https://cloudblogs.microsoft.com/kv/) per le informazioni più recenti e per scoprire come viene usata questa tecnologia dagli altri servizi.
+Per altre informazioni su Insieme di credenziali delle chiavi di Azure, vedere [Cos'è l'insieme di credenziali chiave di Azure?](/azure/key-vault/key-vault-whatis) e visitare il [blog del team di Insieme di credenziali delle chiavi di Azure](https://blogs.technet.microsoft.com/kv/) per le informazioni più recenti e per scoprire come viene usata questa tecnologia dagli altri servizi.
 
 ## <a name="restrictions-when-using-byok"></a>Restrizioni per l'uso di BYOK
 

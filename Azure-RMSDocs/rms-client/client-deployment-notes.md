@@ -4,32 +4,32 @@ description: Informazioni su installazione, sistemi operativi supportati, impost
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/12/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e1c8e79fefd94d4c0fb5ca2997726d1864f0019e
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 07ed10507faa9f559fe877ed86bbe85ccb7812c2
+ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151844"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53218545"
 ---
 # <a name="rms-client-deployment-notes"></a>Note sulla distribuzione del client RMS
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 7 con SP1, Windows 8, Windows 8.1, Windows 10, Windows Server 2008 R2, Windows Server 2012, Windows Server 2012 R2, Windows Server 2016*
 
-Il client RMS (client Rights Management Service) versione 2 è anche noto come client MSIPC. Si tratta di un software per computer Windows che comunica con Microsoft Rights Management Services in locale o nel cloud per proteggere l'accesso alle informazioni nonché il loro utilizzo mentre passano attraverso applicazioni e dispositivi all'interno dei confini della propria organizzazione oppure al di fuori di questi confini gestiti. 
+Il client RMS (Rights Management Service) versione 2 è anche noto come client MSIPC. Si tratta di un software per computer Windows che comunica con Microsoft Rights Management Services in locale o nel cloud per proteggere l'accesso alle informazioni nonché il loro utilizzo mentre passano attraverso applicazioni e dispositivi all'interno dei confini della propria organizzazione oppure al di fuori di questi confini gestiti. 
 
-Oltre a essere incluso con il [client Azure Information Protection per Windows](aip-client.md), il client RMS è disponibile [come download facoltativo](http://www.microsoft.com/download/details.aspx?id=38396) che è possibile, dopo aver letto e accettato il contratto di licenza, distribuire gratuitamente con software di terze parti, in modo da permettere ai clienti di proteggere e usare contenuto protetto tramite Rights Management Services.
+Oltre a essere incluso con il [client Azure Information Protection per Windows](aip-client.md), il client RMS è disponibile [come download facoltativo](https://www.microsoft.com/download/details.aspx?id=38396) che è possibile, dopo aver letto e accettato il contratto di licenza, distribuire gratuitamente con software di terze parti, in modo da permettere ai clienti di proteggere e usare contenuto protetto tramite Rights Management Services.
 
 
 ## <a name="redistributing-the-rms-client"></a>Ridistribuzione del client RMS
 Il client RMS può essere ridistribuito gratuitamente e in bundle con altre applicazioni e soluzioni IT. Se si vuole ridistribuire il client RMS in qualità di sviluppatori di applicazioni o provider di soluzioni, sono disponibili due opzioni:
 
-- Consigliato: incorporare il programma di installazione del client RMS nell'installazione dell'applicazione ed eseguirlo in modalità invisibile all'utente (l'opzione **/quiet**, descritta in dettaglio nella sezione successiva).
+- Consigliato: Incorporare il programma di installazione del client RMS nell'installazione dell'applicazione ed eseguirlo in modalità invisibile all'utente (l'opzione **/quiet**, descritta in dettaglio nella sezione successiva).
 
 - Rendere il client RMS un prerequisito dell'applicazione. Con questa opzione potrebbe essere necessario fornire agli utenti istruzioni aggiuntive per ottenere, installare e aggiornare i computer con il client prima di poter usare l'applicazione.
 
@@ -37,7 +37,7 @@ Il client RMS può essere ridistribuito gratuitamente e in bundle con altre appl
 Il client RMS è incluso in un file eseguibile del programma di installazione denominato **setup_msipc_*\<arch\>*.exe**, dove *\<arch>* è **x86** per i computer client a 32 bit o **x64** per i computer client a 64 bit. Il pacchetto di installazione a 64 bit (x64) installa un file eseguibile di runtime a 32 bit per la compatibilità con applicazioni a 32 bit eseguite sull'installazione di un sistema operativo a 64 bit, nonché un file eseguibile di runtime a 64 bit per il supporto di applicazioni native a 64 bit. Il programma di installazione a 32 bit (x86) non viene eseguito su un'installazione di Windows a 64 bit.
 
 > [!NOTE]
-> Per installare il client RMS sono necessari privilegi elevati, ad esempio di membro del gruppo Administrators nel computer locale.
+> Per installare il client RMS sono necessari privilegi elevati, ad esempio membro del gruppo Administrators nel computer locale.
 
 È possibile installare il client RMS usando i metodi di installazione seguenti:
 
@@ -63,7 +63,7 @@ Il client RMS è supportato con i sistemi operativi seguenti:
 |Windows Server 2008 R2|Windows 7 con almeno SP1|
 
 
-### <a name="which-processors-or-platforms-support-the--rms-client"></a>Quali processori o piattaforme supportano il client RMS?
+### <a name="which-processors-or-platforms-support-the-rms-client"></a>Quali processori o piattaforme supportano il client RMS?
 Il client RMS è supportato nelle piattaforme di elaborazione x86 e x64.
 
 ### <a name="where-is-the--rms-client-installed"></a>Qual è il percorso in cui viene installato il client RMS?
@@ -111,15 +111,15 @@ Per impostare o modificare alcune configurazioni del client RMS, è possibile us
 
 |Attività|Impostazioni|
 |--------|------------|
-|Se la versione del client è 1.03102.0221 o successiva:<br /><br />**Per controllare la raccolta dei dati delle applicazioni**|**Importante**: per rispettare la privacy degli utenti, l'amministratore deve chiedere il loro consenso prima di abilitare la raccolta dei dati.<br /><br />Se si abilita la raccolta dei dati, si accetta di inviare dati a Microsoft attraverso Internet. Microsoft usa questi dati per offrire e migliorare la qualità, la sicurezza e l'integrità dei prodotti e dei servizi Microsoft. Microsoft analizza, ad esempio, prestazioni e affidabilità quali le funzionalità usate dagli utenti, la velocità di risposta delle funzionalità, le prestazioni del dispositivo, le interazioni con l'interfaccia utente e tutti i problemi che possono verificarsi durante l'uso del prodotto. I dati includono anche informazioni sulla configurazione del software, ad esempio la versione attualmente in esecuzione e l'indirizzo IP.<br /><br />Per la versione 1.0.3356 o successiva: <br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD: DiagnosticAvailability<br /><br />Per le versioni precedenti alla 1.0.3356: <br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD: DiagnosticState<br /><br />**Valore:** 0 per l'applicazione definita (impostazione predefinita) mediante la proprietà di ambiente [IPC_EI_DATA_COLLECTION_ENABLED](https://msdn.microsoft.com/library/hh535247(v=vs.85).aspx), 1 per disabilitato, 2 per abilitato<br /><br />**Nota**: se l'applicazione basata su MSIPC a 32 bit viene eseguita in una versione di Windows a 64 bit, il percorso è HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC.|
+|Se la versione del client è 1.03102.0221 o successiva:<br /><br />**Per controllare la raccolta dei dati delle applicazioni**|**Importante**: per rispettare la privacy degli utenti, l'amministratore deve chiedere il loro consenso prima di abilitare la raccolta dei dati.<br /><br />Se si abilita la raccolta dei dati, si accetta di inviare dati a Microsoft attraverso Internet. Microsoft usa questi dati per offrire e migliorare la qualità, la sicurezza e l'integrità dei prodotti e dei servizi Microsoft. Microsoft analizza, ad esempio, prestazioni e affidabilità quali le funzionalità usate dagli utenti, la velocità di risposta delle funzionalità, le prestazioni del dispositivo, le interazioni con l'interfaccia utente e tutti i problemi che possono verificarsi durante l'uso del prodotto. I dati includono anche informazioni sulla configurazione del software, ad esempio la versione attualmente in esecuzione e l'indirizzo IP.<br /><br />Per la versione 1.0.3356 o successiva: <br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD: DiagnosticAvailability<br /><br />Per le versioni precedenti alla 1.0.3356: <br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft\MSIPC<br />REG_DWORD: DiagnosticState<br /><br />**Valore:** 0 per l'applicazione definita (impostazione predefinita) usando la proprietà di ambiente [IPC_EI_DATA_COLLECTION_ENABLED](https://msdn.microsoft.com/library/hh535247(v=vs.85).aspx), 1 per disabilitato, 2 per abilitato<br /><br />**Nota**: se l'applicazione basata su MSIPC a 32 bit viene eseguita in una versione di Windows a 64 bit, il percorso è HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC.|
 |Solo AD RMS:<br /><br />**Per aggiornare il percorso di un servizio aziendale per un computer client**|Aggiornare le chiavi seguenti del Registro di sistema:<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterpriseCertification<br />REG_SZ: default<br /><br />**Valore:**\<http o https>://*Nome_cluster_RMS*/_wmcs/Certification<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\ServiceLocation\EnterprisePublishing<br />REG_SZ: default<br /><br />**Valore:** \<http o https>://*Nome_cluster_RMS*/_wmcs/Licensing|
-|**Per abilitare e disabilitare la traccia**|Aggiornare la chiave seguente del Registro di sistema:<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC<br />REG_DWORD: traccia<br /><br />**Valore:** 1 per abilitare la traccia, 0 per disabilitare la traccia (impostazione predefinita)|
+|**Per abilitare e disabilitare la traccia**|Aggiornare la chiave seguente del Registro di sistema:<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC<br />REG_DWORD: Trace<br /><br />**Valore:** 1 per abilitare la traccia, 0 per disabilitare la traccia (impostazione predefinita)|
 |**Per modificare la frequenza in giorni con cui si verifica l'aggiornamento dei modelli**|I valori del Registro di sistema seguenti specificano la frequenza di aggiornamento dei modelli nel computer dell'utente se il valore TemplateUpdateFrequencyInSeconds non è impostato.  Se non è impostato alcuno di questi valori, l'intervallo di aggiornamento predefinito per le applicazioni che usano il client RMS (versione 1.0.1784.0) per scaricare i modelli è 1 giorno. Le versioni precedenti hanno un valore predefinito di 7 giorni.<br /><br />**Modalità client:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Valore:** valore intero che specifica il numero di giorni (almeno 1) tra i download.<br /><br />**Modalità server:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\\<SID\><br />REG_DWORD: TemplateUpdateFrequency<br /><br />**Valore:** valore intero che specifica il numero di giorni (almeno 1) tra i download.|
 |**Per modificare la frequenza in secondi di aggiornamento dei modelli**<br /><br />Importante: se l'impostazione è specificata, il valore in giorni per l'aggiornamento dei modelli viene ignorato. Specificare uno o l'altro, non entrambi.|I valori del Registro di sistema seguenti specificano la frequenza di aggiornamento dei modelli nel computer dell'utente. Se questo valore o il valore di modifica della frequenza in giorni (TemplateUpdateFrequency) non è impostato, l'intervallo di aggiornamento predefinito per le applicazioni che usano il client RMS (versione 1.0.1784.0) per scaricare i modelli è 1 giorno. Le versioni precedenti hanno un valore predefinito di 7 giorni.<br /><br />**Modalità client:**<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: TemplateUpdateFrequencyInSeconds<br /><br />**Valore:** valore intero che specifica il numero di secondi (almeno 1) tra i download.<br /><br />**Modalità server:**<br /><br />HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server\\<*SID*><br />REG_DWORD: TemplateUpdateFrequencyInSeconds<br /><br />**Valore:** valore intero che specifica il numero di secondi (almeno 1) tra i download.|
 |Solo AD RMS:<br /><br />**Per scaricare i modelli immediatamente alla successiva richiesta di pubblicazione**|In fase di test e di valutazione, è preferibile che il client RMS scarichi i modelli appena possibile. Per questa configurazione, rimuovere la chiave del Registro di sistema seguente e il client RMS scaricherà immediatamente i modelli alla richiesta di pubblicazione successiva, invece di attendere il tempo specificato dall'impostazione del Registro di sistema TemplateUpdateFrequency:<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*Nome server*>\Template <br /><br />**Nota**: \<*Nome server*> può includere URL sia esterni (corprights.contoso.com) che interni (corprights) e quindi due voci diverse.|
-|Solo AD RMS:<br /><br />**Per abilitare il supporto dell'autenticazione federata**|Se il computer client RMS si connette a un cluster AD RMS usando una relazione di trust federativa, è necessario configurare l'area di autenticazione principale della federazione.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_SZ: FederationHomeRealm<br /><br />**Valore:** il valore di questa voce del Registro di sistema è l'URI (Uniform Resource Identifier) del servizio federativo, (ad esempio, "http://TreyADFS.trey.net/adfs/services/trust").<br /><br /> **Nota**: è importante specificare http e non https per questo valore. Se l'applicazione basata su MSIPC a 32 bit viene eseguita in una versione di Windows a 64 bit, il percorso è HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC\Federation. Per una configurazione di esempio, vedere [Distribuzione di Active Directory Rights Management Services con Active Directory Federation Services](https://technet.microsoft.com/library/dn758110.aspx).|
-|Solo AD RMS:<br /><br />**Per supportare i server federativi partner che richiedono l'autenticazione basata su moduli per l'input utente**|Per impostazione predefinita, il client RMS viene eseguito in modalità invisibile all'utente e l'input dell'utente non è richiesto. I server federativi partner, tuttavia, potrebbero essere configurati per richiedere l'input dell'utente, ad esempio con l'autenticazione basata su moduli. In questo caso, il client RMS deve essere configurato per ignorare la modalità invisibile all'utente affinché il modulo di autenticazione federata venga visualizzato in una finestra del browser e l'utente venga innalzato di livello per l'autenticazione.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_DWORD: EnableBrowser<br /><br />**Nota**: se il server federativo è configurato per l'uso dell'autenticazione basata su moduli, questa chiave è obbligatoria. Se il server federativo è configurato per l'uso dell'autenticazione integrata di Windows, la chiave non è obbligatoria.|
-|Solo AD RMS:<br /><br />**Per impedire l'utilizzo del servizio ILS**|Per impostazione predefinita, il client RMS consente l'utilizzo del contenuto protetto dal servizio ILS, ma può essere configurato per impedirlo impostando la chiave del Registro di sistema seguente. Se la chiave del Registro di sistema è impostata in modo da impedire il servizio ILS, qualsiasi tentativo di aprire e usare il contenuto protetto dal servizio ILS restituisce l'errore seguente:<br />HRESULT_FROM_WIN32(ERROR_ACCESS_DISABLED_BY_POLICY)<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: **DisablePassportCertification**<br /><br />**Valore:** 1 per impedire l'utilizzo di contenuto protetto da ILS, 0 per consentirlo (impostazione predefinita)|
+|Solo AD RMS:<br /><br />**Per abilitare il supporto dell'autenticazione federata**|Se il computer client RMS si connette a un cluster AD RMS usando una relazione di trust federativa, è necessario configurare l'area di autenticazione principale della federazione.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_SZ: FederationHomeRealm<br /><br />**Valore:** il valore di questa voce del Registro di sistema è l'URI (Uniform Resource Identifier) del servizio federativo, (ad esempio, "http://TreyADFS.trey.net/adfs/services/trust").<br /><br /> **Nota**: è importante specificare HTTP e non HTTPS per questo valore. Se l'applicazione basata su MSIPC a 32 bit viene eseguita in una versione di Windows a 64 bit, il percorso è HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\MSIPC\Federation. Per una configurazione di esempio, vedere [Distribuzione di Active Directory Rights Management Services con Active Directory Federation Services](https://technet.microsoft.com/library/dn758110.aspx).|
+|Solo AD RMS:<br /><br />**Per supportare i server federativi partner che richiedono l'autenticazione basata su moduli per l'input utente**|Per impostazione predefinita, il client RMS viene eseguito in modalità invisibile all'utente e l'input dell'utente non è richiesto. I server federativi partner, tuttavia, potrebbero essere configurati per richiedere l'input dell'utente, ad esempio con l'autenticazione basata su moduli. In questo caso, il client RMS deve essere configurato per ignorare la modalità invisibile all'utente affinché il modulo di autenticazione federata venga visualizzato in una finestra del browser e l'utente venga innalzato di livello per l'autenticazione.<br /><br />HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\Federation<br />REG_DWORD: EnableBrowser<br /><br />**Nota**: Se il server federativo è configurato per l'uso dell'autenticazione basata su moduli, questa chiave è obbligatoria. Se il server federativo è configurato per l'uso dell'autenticazione integrata di Windows, la chiave non è obbligatoria.|
+|Solo AD RMS:<br /><br />**Per impedire l'utilizzo del servizio ILS**|Per impostazione predefinita, il client RMS consente l'utilizzo del contenuto protetto dal servizio ILS, ma può essere configurato per impedirlo impostando la chiave del Registro di sistema seguente. Se la chiave del Registro di sistema è impostata in modo da impedire il servizio ILS, qualsiasi tentativo di aprire e usare il contenuto protetto dal servizio ILS restituisce l'errore seguente:<br />HRESULT_FROM_WIN32(ERROR_ACCESS_DISABLED_BY_POLICY)<br /><br />HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC<br />REG_DWORD: **DisablePassportCertification**<br /><br />**Valore:** 1 per bloccare l'uso di ILS, 0 per consentire l'uso di ILS (impostazione predefinita)|
 
 ### <a name="managing-template-distribution-for-the-rms-client"></a>Gestione della distribuzione dei modelli per il client RMS
 I modelli consentono a utenti e amministratori di applicare rapidamente la protezione di Rights Management e fanno sì che il client RMS scarichi automaticamente i modelli dai server o dal servizio RMS. Se si inseriscono i modelli nel percorso della cartella seguente, il client RMS non scarica alcun modello dal percorso predefinito, scarica invece i modelli inseriti nella cartella. Il client RMS potrebbe continuare a scaricare i modelli dal altri server RMS disponibili.
@@ -130,8 +130,8 @@ I modelli consentono a utenti e amministratori di applicare rapidamente la prote
 
 Quando si usa questa cartella, non sono previste particolari convenzioni di denominazione da seguire purché i modelli siano rilasciati dal server o dal servizio RMS e devono avere l'estensione di file xml. Ad esempio, Contoso-Confidential.xml oppure Contoso-ReadOnly.xml sono nomi validi.
 
-## <a name="ad-rms-only-limiting-the-rms-client-to-use-trusted-ad-rms-servers"></a>Solo AD RMS: limitazione del client RMS in modo da usare server AD RMS attendibili
-È possibile limitare il client RMS in modo da usare solo specifici server AD RMS attendibili apportando le modifiche seguenti al Registro di sistema di Windows nei computer locali.
+## <a name="ad-rms-only-limiting-the-rms-client-to-use-trusted-adrms-servers"></a>Solo AD RMS: Limitazione del client RMS in modo da usare server AD RMS attendibili
+È possibile limitare il client RMS in modo da usare solo specifici server AD RMS attendibili apportando le modifiche seguenti al Registro di sistema di Windows nei computer locali.
 
 **Per limitare il client RMS al solo uso di server AD RMS attendibili**
 
@@ -147,28 +147,28 @@ Quando si usa questa cartella, non sono previste particolari convenzioni di deno
     
     REG_SZ:*\<URL_o_nomehost>*
     
-    **Valore:** i valori stringa aggiunti in questo percorso della chiave del Registro di sistema possono essere in formato nome di dominio DNS, (ad esempio **adrms.contoso.com**) oppure URL completi di server AD RMS attendibili (ad esempio **https://adrms.contoso.com**). Se un URL specificato inizia con **https://**, il client RMS usa SSL o TLS per contattare il server AD RMS specificato.
+    **Valore:** i valori stringa aggiunti in questo percorso della chiave del Registro di sistema possono essere in formato nome di dominio DNS, ad esempio **adrms.contoso.com**, oppure URL completi di server AD RMS attendibili, ad esempio **https://adrms.contoso.com**. Se un URL specificato inizia con **https://**, il client RMS usa SSL o TLS per contattare il server AD RMS specificato.
 
 ## <a name="rms-service-discovery"></a>Individuazione servizio RMS
 L'individuazione del servizio RMS consente al client RMS di controllare con quale server o servizio RMS comunicare prima di proteggere il contenuto. L'individuazione del servizio potrebbe verificarsi anche quando il client RMS usa contenuto protetto, ma è meno probabile che ciò avvenga perché i criteri collegati al contenuto contengono il server o il servizio RMS preferito. L'individuazione del servizio viene eseguita solo se tali origini non sono corrette.
 
 Per eseguire l'individuazione del servizio, il client RMS esegue una serie di controlli sugli elementi seguenti:
 
-1. **Registro di sistema di Windows nel computer locale**: se le impostazioni dell'individuazione del servizio sono configurate nel Registro di sistema, verranno provate prima queste impostazioni. 
+1. **Il Registro di sistema di Windows nel computer locale**: Se le impostazioni dell'individuazione servizio sono configurate nel Registro di sistema, verranno provate prima queste impostazioni. 
 
     Per impostazione predefinita, queste impostazioni non sono configurate nel Registro di sistema, ma un amministratore può configurarle per AD RMS come illustrato nella [sezione seguente](#enabling-client-side-service-discovery-by-using-the-windows-registry). In genere l'amministratore configura queste impostazioni per il servizio Azure Rights Management durante il [processo di migrazione](../migrate-from-ad-rms-phase2.md) da AD RMS ad Azure Information Protection.
 
-2. **Servizi di dominio Active Directory**: un computer aggiunto al dominio esegue una query in Active Directory relativamente a un punto di connessione del servizio (SCP). 
+2. **Servizi di dominio di Active Directory**: Un computer aggiunto al dominio esegue una query ad Active Directory relativamente a un punto di connessione del servizio (SCP). 
 
     Se è stato registrato un punto di connessione del servizio come illustrato nella [sezione seguente](#ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory), verrà restituito l'URL del server AD RMS per l'uso da parte del client RMS.
 
-3. **Servizio di individuazione di Azure Rights Management**: il client RMS si connette al sito **https://discover.aadrm.com**, che richiede all'utente di eseguire l'autenticazione.
+3. **Servizio individuazione di Azure Rights Management**: Il client RMS si connette a **https://discover.aadrm.com**, che richiede all'utente di eseguire l'autenticazione.
 
     Quando l'autenticazione riesce, vengono utilizzati il relativo nome utente e il relativo dominio per identificare il tenant di Azure Information Protection da usare. Viene quindi restituito al client RMS l'URL di Azure Information Protection da usare per l'account utente. Il formato dell'URL è il seguente: **https://**\<URL del tenant\>**/_wmcs/licensing** 
 
-    Ad esempio: 5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
+    Ad esempio:  5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
-    *\<URL del tenant\>* ha il formato seguente: **{GUID}.rms.[Region].aadrm.com**. È possibile individuare questo valore identificando il valore **RightsManagementServiceId** quando si esegue il cmdlet [Get-AadrmConfiguration](http://msdn.microsoft.com/library/windowsazure/dn629410.aspx) per Azure RMS.
+    *\<URL del tenant\>* ha il formato seguente: **{GUID}.rms.[Region].aadrm.com**. È possibile individuare questo valore identificando il valore **RightsManagementServiceId** quando si esegue il cmdlet [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) per Azure RMS.
 
 > [!NOTE]
 > Per questo flusso di individuazione del servizio esistono quattro eccezioni importanti:
@@ -181,7 +181,7 @@ Per eseguire l'individuazione del servizio, il client RMS esegue una serie di co
 > 
 > - Dopo aver configurato il [reindirizzamento DNS](../migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) per le app desktop A portata di clic di Office 2016, il client RMS individua il servizio Azure Rights Management quando gli viene negato l'accesso al cluster AD RMS trovato in precedenza. Questa azione di negazione attiva nel client la ricerca del record SRV, che reindirizza il client stesso al servizio Azure Rights Management per il tenant. Il record SRV, poi, consente a Exchange Online di decrittografare i messaggi di posta elettronica protetti dal cluster AD RMS. 
 
-### <a name="ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory"></a>Solo AD RMS: abilitazione dell'individuazione del servizio sul lato server usando Active Directory
+### <a name="ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory"></a>Solo AD RMS: Abilitazione dell'individuazione del servizio sul lato server usando Active Directory
 Se l'account ha privilegi sufficienti (Enterprise Admins e amministratore locale per il server AD RMS), è possibile registrare automaticamente un punto di connessione del servizio durante l'installazione del server del cluster radice di AD RMS. Se nella foresta esiste già un punto di connessione del servizio, è necessario prima eliminare il punto di connessione del servizio esistente prima di poterne registrare uno nuovo.
 
 È possibile registrare ed eliminare un punto di connessione del servizio dopo aver installato AD RMS usando la procedura seguente. Prima di iniziare, verificare di avere i privilegi richiesti (Enterprise Admins e amministratore locale per il server AD RMS).
@@ -239,9 +239,9 @@ In alcuni casi, potrebbe essere necessario reindirizzare il traffico durante l'i
 
 2.  Nell'editor del Registro di sistema passare a una delle posizioni seguenti:
 
-    -   Versione a 64 bit di Office su piattaforma x64: HKLM\SOFTWARE\Microsoft\MSIPC\Servicelocation
+    -   Per la versione di Office a 64 bit su una piattaforma x64: HKLM\SOFTWARE\Microsoft\MSIPC\Servicelocation
 
-    -   Versione a 32 bit di Office su piattaforma x64: HKLM\SOFTWARE\Wow6432Node\Microsoft\MSIPC\Servicelocation
+    -   Per la versione di Office a 32 bit su una piattaforma x64: HKLM\SOFTWARE\Wow6432Node\Microsoft\MSIPC\Servicelocation
 
 3.  Creare una sottochiave LicensingRedirection facendo clic con il pulsante destro del mouse su **Servicelocation**, scegliere **Nuovo**, fare clic su **Chiave** e quindi digitare **LicensingRedirection**.
 

@@ -12,26 +12,24 @@ ms.assetid: 44D3EB62-7A60-45D9-BA7E-45A06E7D598F
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 7412a760aab21eb93fc67080f53c0ec83bdfc757
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: a3641f3de547e457445727beb6723d2c7ef8750c
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44146235"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266512"
 ---
 # <a name="rights-management-services-sdk-21"></a>Rights Management Services SDK 2.1
 
 ## <a name="purpose"></a>Scopo
 
-La piattaforma Rights Management Services SDK 2.1 consente agli sviluppatori di creare applicazioni che sfruttano Rights Management Services (RMS) o Azure Rights Management per la protezione delle informazioni. RMS SDK 2.1 gestisce procedure di sicurezza complesse, ad esempio la gestione delle chiavi e l’elaborazione delle operazioni di crittografia e decrittografia, e offre un'API semplificata per agevolare lo sviluppo delle applicazioni.
+La piattaforma Rights Management Services SDK 2.1 consente agli sviluppatori di creare applicazioni che sfruttano Rights Management Services (RMS) o Azure Rights Management per la protezione delle informazioni. RMS SDK 2.1 gestisce procedure di sicurezza complesse, ad esempio la gestione delle chiavi e l'elaborazione delle operazioni di crittografia e decrittografia, e offre un'API semplificata per agevolare lo sviluppo delle applicazioni.
 
 ### <a name="developer-audience"></a>Sviluppatori
 
-RMS SDK 2.1, disponibile tramite la [pagina di download di RMS SDK 2.1](http://www.microsoft.com/en-us/download/details.aspx?id=38397) nell'Area download Microsoft, viene usato per creare applicazioni personalizzate che abilitano la gestione dei diritti sulle risorse digitali e applicano le condizioni di utilizzo per tali risorse. È necessaria la conoscenza del linguaggio di programmazione C++.
+RMS SDK 2.1, disponibile dalla [pagina di download di RMS SDK 2.1](https://www.microsoft.com/download/details.aspx?id=38397) nell'Area download Microsoft, viene usato per creare applicazioni personalizzate che abilitano Rights Management per le risorse digitali e applicano le condizioni di utilizzo per tali risorse. È necessaria la conoscenza del linguaggio di programmazione C++.
 
-Per altre informazioni su questa tecnologia, vedere il [Blog per sviluppatori RMS](http://blogs.msdn.com/b/rms/archive/2012/05/31/official-release-of-ad-rms-sdk-2-0-and-ad-rms-client-2-0.aspx), ovvero il blog ufficiale del team del prodotto Rights Management di Microsoft per gli sviluppatori che utilizzano la protezione delle informazioni con AD RMS.
-
-Per le risposte alle domande più frequenti, vedere la sezione dedicata agli sviluppatori delle [domande frequenti su RMS](http://aka.ms/adrmsfaq ).
+Per le risposte alle domande più frequenti, vedere la sezione dedicata agli sviluppatori delle [domande frequenti su RMS](https://aka.ms/adrmsfaq).
 
 ### <a name="run-time-requirements"></a>Requisiti di runtime
 
@@ -40,15 +38,14 @@ Per informazioni sui requisiti di runtime per un particolare elemento di program
 |Argomento|Descrizione|
 |-----|--------|
 |[Panoramica](ad-rms-overview.md)|Rights Management Services (RMS) è una tecnologia di protezione che consente di proteggere le informazioni digitali da usi non autorizzati.|
-|[Introduzione](getting-started-with-ad-rms-2-0.md)|La piattaforma RMS SDK 2.1 consente agli sviluppatori di creare applicazioni che sfruttano la protezione delle informazioni RMS.|
-|[Note sulla versione](release-notes-rtm.md)|Questo argomento contiene informazioni importanti su questa versione e le precedenti dell'SDK 2.1 RMS.|
+|[Guida introduttiva](getting-started-with-ad-rms-2-0.md)|La piattaforma RMS SDK 2.1 consente agli sviluppatori di creare applicazioni che sfruttano la protezione delle informazioni RMS.|
+|[Note sulla versione](release-notes-rtm.md)|Questo argomento contiene informazioni importanti su questa versione e le precedenti di RMS SDK 2.1.|
 |[Note per gli sviluppatori](developer-notes.md)|Questa sezione fornisce indicazioni specifiche per vari e importanti scenari di sviluppo.|
 |[Informazioni di riferimento sulle API](api-reference-2-1.md)|Questa sezione contiene argomenti che illustrano il materiale di riferimento per tutti gli elementi API.|
 
- 
+ 
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-* [Pagina di download di RMS SDK 2.1](http://www.microsoft.com/en-us/download/details.aspx?id=38397)
-* [Blog per sviluppatori RMS](http://blogs.msdn.com/b/rms/archive/2012/05/31/official-release-of-ad-rms-sdk-2-0-and-ad-rms-client-2-0.aspx)
-* [Domande frequenti su RMS](http://aka.ms/adrmsfaq )
+* [Pagina di download di RMS SDK 2.1](https://www.microsoft.com/download/details.aspx?id=38397)
+* [Domande frequenti su RMS](https://aka.ms/adrmsfaq )

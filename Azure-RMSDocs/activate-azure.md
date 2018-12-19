@@ -4,19 +4,19 @@ description: Istruzioni per l'attivazione della protezione nel portale di Azure,
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 02/20/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 82d1ee4267210b4fef989ab6a20385e24e2a8b35
-ms.sourcegitcommit: 1e6394044d646278ae582c7713cac8ffb9bf4c1e
+ms.openlocfilehash: cb90744828595b6cbf68962368fd001f3ca0eebd
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169890"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53304826"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-portal"></a>Attivare Azure Rights Management dal portale di Azure
 
@@ -30,7 +30,7 @@ Usare queste istruzioni se si desidera attivare il servizio di Azure Rights Mana
     
     Se non si è ancora eseguito l'accesso al pannello Azure Information Protection, vedere i [passaggi aggiuntivi](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time) che è necessario eseguire una sola volta per aggiungere questo pannello al portale.
     
-    Per aprire il pannello Azure Information Protection è necessario un [piano Azure Information Protection Premium](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) o un [piano di Office 365 che includa Rights Management](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Se si ha una di queste sottoscrizioni ma viene visualizzato un messaggio che informa che non è possibile trovare una sottoscrizione valida, [contattare il supporto tecnico Microsoft](information-support.md#to-contact-microsoft-support) o usare i canali di supporto standard.
+    Per aprire il pannello Azure Information Protection è necessario un [piano Azure Information Protection Premium](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) o un [piano di Office 365 che includa Rights Management](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Se si ha una di queste sottoscrizioni ma viene visualizzato un messaggio che informa che non è possibile trovare una sottoscrizione valida, [contattare il supporto tecnico Microsoft](information-support.md#to-contact-microsoft-support) o usare i canali di supporto standard.
 
 2. Trovare le opzioni del menu **Gestisci** e selezionare **Protection activation** (Attivazione protezione). 
     

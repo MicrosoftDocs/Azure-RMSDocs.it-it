@@ -4,18 +4,18 @@ description: Istruzioni per usare il client Rights Management (RMS) con il clien
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 09/14/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 099b4985a0e595c22ec29fd2d682d092a5b445b5
-ms.sourcegitcommit: 395918e9e3513e1d791bbfc16c0fc90e4dd605eb
+ms.openlocfilehash: 19a295076ce86da0c93685250cd62b0ca1ca41e6
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45750629"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305702"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protezione RMS con Infrastruttura di classificazione file per Windows Server
 
@@ -113,7 +113,7 @@ Tenere presente che se si apportano modifiche al modello Rights Management usato
 
         `[string]$BposTenantId = "23976bc6-dcd4-4173-9d96-dad1f48efd42",`
 
-3.  Firmare lo script. Se non si firma lo script (più sicuro), è necessario configurare Windows PowerShell sui server che lo eseguono. Eseguire, ad esempio, una sessione di Windows PowerShell con l'opzione **Esegui come amministratore** e digitare: **Set-ExecutionPolicy RemoteSigned**. Questa configurazione, tuttavia, consente l'esecuzione di tutti gli script non firmati quando vengono archiviati nel server (meno sicuri).
+3.  Firmare lo script. Se non si firma lo script (più sicuro), è necessario configurare Windows PowerShell sui server che lo eseguono. Eseguire, ad esempio, la sessione di Windows PowerShell con l'opzione **Esegui come amministratore** e digitare: **Set-ExecutionPolicy RemoteSigned**. Questa configurazione, tuttavia, consente l'esecuzione di tutti gli script non firmati quando vengono archiviati nel server (meno sicuri).
 
     Per altre informazioni sulla firma degli script di Windows PowerShell, vedere [about_Signing](https://technet.microsoft.com/library/hh847874.aspx) nella raccolta di documentazione di PowerShell.
 
@@ -125,11 +125,11 @@ A questo punto si è pronti per iniziare la configurazione di Gestione risorse f
 
 -   In Gestione classificazioni di Gestione risorse file server creare una nuova proprietà locale:
 
-    -   **Name**: Digitare **RMS**
+    -   **Nome**: Digitare **RMS**
 
-    -   **Descrizione**:   Digitare **Protezione di Rights Management**
+    -   **Description**:   Digitare **Protezione di Rights Management**
 
-    -   **Tipo di proprietà**: selezionare **Sì/No**
+    -   **Tipo di proprietà**: Selezionare **Sì/No**
 
     -   **Valore**: Selezionare **Sì**
 
@@ -141,11 +141,11 @@ A questo punto si è pronti per iniziare la configurazione di Gestione risorse f
 
     -   Fare clic sulla scheda **Generale** :
 
-        -   **Name**: Digitare **Classifica per RMS**
+        -   **Nome**: Digitare **Classifica per RMS**
 
-        -   **Enabled**: Mantenere il valore predefinito,cioè quello selezionato in questa casella di controllo.
+        -   **Attivata**: Mantenere il valore predefinito,cioè quello selezionato in questa casella di controllo.
 
-        -   **Descrizione**: digitare **Classifica tutti i file nella cartella &lt;nome cartella&gt; per Rights Management**.
+        -   **Description**: Digitare **Classifica tutti i file nella cartella &lt;nome cartella&gt; per Rights Management**.
 
             Sostituire *&lt;nome cartella&gt;* con il nome della cartella scelta. Ad esempio, **Classifica tutti i file nella cartella C:\FileShare per Rights Management**
 
@@ -157,9 +157,9 @@ A questo punto si è pronti per iniziare la configurazione di Gestione risorse f
 
     -   **Metodo di classificazione**: Selezionare **Utilità di classificazione cartelle**
 
-    -   **Proprietà** : Selezionare **RMS**
+    -   Nome **proprietà**: Selezionare **RMS**
 
-    -   **Valore**proprietà: Selezionare **Sì**
+    -   **Valore** della proprietà: Selezionare **Sì**
 
 Nonostante sia possibile eseguire manualmente le regole di classificazione per le operazioni in corso, si vuole che questa regola venga eseguita in una pianificazione in modo tale che i nuovi file vengano classificati con la proprietà RMS.
 
@@ -171,9 +171,9 @@ Nonostante sia possibile eseguire manualmente le regole di classificazione per l
 
     -   Configurare la pianificazione per tutte le regole di classificazione da eseguire, che includono la nuova regola per classificare file con la proprietà RMS.
 
-    -   **Consenti classificazione continua per i nuovi file**: selezionare questa casella di controllo per fare in modo che i nuovi file vengano classificati.
+    -   **Consenti classificazione continua per i nuovi file**: Selezionare questa casella di controllo in modo che i nuovi file vengano classificati.
 
-    -   Facoltativa: Apportare eventuali altre modifiche, come la configurazione di opzioni per report e notifiche.
+    -   Facoltativo: Apportare eventuali altre modifiche, come la configurazione di opzioni per report e notifiche.
 
 Quando si è completata la configurazione per la classificazione, si è pronti per la configurazione di un'attività di gestione per applicare la protezione RMS ai file.
 
@@ -187,7 +187,7 @@ Quando si è completata la configurazione per la classificazione, si è pronti p
 
         -   Mantenere selezionata la casella di controllo **Abilita** .
 
-        -   **Descrizione**: Digitare **Proteggi i file in &lt;nome cartella&gt; con Rights Management e un modello usando uno script di Windows PowerShell.**
+        -   **Description**: Digitare **Proteggi i file in &lt;nome cartella&gt; con Rights Management e un modello usando uno script di Windows PowerShell.**
 
             Sostituire *&lt;nome cartella&gt;* con il nome della cartella scelta. Digitare, ad esempio, **Proteggi i file in C:\FileShare con Rights Management e un modello usando uno script di Windows PowerShell**
 
@@ -197,16 +197,16 @@ Quando si è completata la configurazione per la classificazione, si è pronti p
 
     -   Nella scheda **Azione** :
 
-        -   **Type**: Selezionare **Personalizzata**
+        -   **Tipo**: Selezionare **Personalizzata**
 
-        -   **Eseguibile**: Specificare quanto segue:
+        -   **Eseguibile**: Specificare le impostazioni seguenti:
 
             ```
             C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
             ```
             Se Windows non è disponibile sull'unità C:, modificare questo percorso o selezionare questo file.
 
-        -   **Argomento**: Specificare quanto segue immettendo i propri valori per &lt;percorso&gt; e &lt;ID modello&gt;:
+        -   **Argomento**: Specificare quanto segue, indicando i propri valori per &lt;percorso&gt; e &lt;ID modello&gt;:
 
             ```
             -Noprofile -Command "<path>\RMS-Protect-FCI.ps1 -File '[Source File Path]' -TemplateID <template GUID> -OwnerMail '[Source File Owner Email]'"
@@ -268,7 +268,7 @@ Quando si è completata la configurazione per la classificazione, si è pronti p
     > 
     > -   Se viene visualizzato **0** nel report, invece del numero di file della cartella, questo valore indicherà che lo script non è stato eseguito. Prima di tutto verificare lo script caricandolo in Windows PowerShell ISE per convalidarne il contenuto, quindi provare a eseguirlo una volta nella stessa sessione di PowerShell, per rilevare se vengono visualizzati errori. Se non è specificato alcun argomento, lo script tenta di connettersi e di eseguire l'autenticazione per il servizio Azure Rights Management.
     > 
-    >     -   Se lo script non riesce a connettersi al servizio Azure Rights Management (Azure RMS), verificare i valori visualizzati per l'account dell'entità servizio specificato nello script. Per altre informazioni su come creare l'account dell'entità servizio, vedere [Prerequisito 3: per proteggere i file o rimuoverne la protezione senza interazione da parte dell'utente](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction) nella Guida dell'amministrazione del client Azure Information Protection.
+    >     -   Se lo script non riesce a connettersi al servizio Azure Rights Management (Azure RMS), verificare i valori visualizzati per l'account dell'entità servizio specificato nello script. Per altre informazioni su come creare questo account dell'entità servizio, vedere [Prerequisito 3: per proteggere i file o rimuoverne la protezione senza interazione da parte dell'utente](client-admin-guide-powershell.md#prerequisite-3-to-protect-or-unprotect-files-without-user-interaction) nella Guida dell'amministratore del client Azure Information Protection.
     >     -   Se lo script segnala che è riuscito a connettersi ad Azure RMS, verificare che possa trovare il modello specificato eseguendo [Get-RMSTemplate](/powershell/azureinformationprotection/vlatest/get-rmstemplate) direttamente da Windows PowerShell nel server. Verrà visualizzato il modello specificato nei risultati restituiti.
     > -   Se lo script da solo viene eseguito in Windows PowerShell ISE senza errori, cercare di eseguirlo come indicato da una sessione PowerShell, specificando il nome file da proteggere e senza il parametro -OwnerEmail:
     > 
@@ -299,5 +299,5 @@ A questo punto è sufficiente creare una nuova attività di gestione file che us
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Scoprire [Qual è la differenza tra Infrastruttura di classificazione file di Windows Server e lo scanner di Azure Information Protection](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner). 
+Può sorgere questa domanda: [Qual è la differenza tra Infrastruttura di classificazione file di Windows Server e lo scanner di Azure Information Protection?](../faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner) 
 

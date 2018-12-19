@@ -4,22 +4,22 @@ description: Flusso di lavoro end-to-end per collaborare a documenti protetti da
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 06/21/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1b11f50bcf2090129211f3dd09cff867cfbdcb7b
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: eb2e2538246ea5c8ca42f6270e535c73dda71774
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026656"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53305506"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configurazione della collaborazione per i documenti protetti con Azure Information Protection
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Quando si usa Azure Information Protection, è possibile proteggere i documenti senza sacrificare la collaborazione per gli utenti autorizzati. La maggior parte dei documenti creati da un utente e quindi condivisi con altri per la visualizzazione e la modifica è costituita da documenti di Office Word, Excel e PowerPoint. Questi documenti supportano la protezione nativa, ovvero oltre alle funzionalità di protezione di autorizzazione e crittografia, supportano anche l'autorizzazione limitata per un controllo più granulare. 
 
@@ -27,9 +27,9 @@ Queste autorizzazioni sono denominate anche diritti di utilizzo e includono auto
 
 Quando si configurano queste autorizzazioni, è possibile specificare gli utenti cui sono destinate:
 
-- **Per gli utenti nella stessa organizzazione o in una organizzazione diversa che usa Azure Active Directory**: è possibile specificare account utente Azure AD, gruppi Azure AD o tutti gli utenti nell'organizzazione. 
+- **Per gli utenti della propria organizzazione o di un'altra organizzazione che usa Azure Active Directory**: è possibile specificare account utente di Azure AD, gruppi di Azure AD o tutti gli utenti dell'organizzazione. 
 
-- **Per gli utenti che non hanno un account Azure Active Directory**: specificare un indirizzo di posta elettronica che verrà usato con un account Microsoft. Questo account può esistere già oppure gli utenti possono crearlo quando aprono il documento protetto. 
+- **Per gli utenti che non hanno un account Azure Active Directory**: specificare un indirizzo e-mail che verrà usato con un account Microsoft. Questo account può esistere già oppure gli utenti possono crearlo quando aprono il documento protetto. 
     
     Per aprire documenti con un account Microsoft, gli utenti devono usare Office 2016 a portata di clic. Le altre edizioni e versioni di Office non supportano ancora l'apertura di documenti protetti di Office con un account Microsoft.
 
@@ -54,11 +54,11 @@ Poiché lo scenario limita l'accesso a specifici utenti, non include l'impostazi
     
     - Per tutti gli utenti nella prima organizzazione esterna: selezionare **Immettere i dettagli** e digitare il nome di un dominio nel tenant dell'organizzazione. Ad esempio, fabrikam.com.
     
-    - Per il gruppo nella seconda organizzazione esterna: sempre nella scheda **Immettere i dettagli**, digitare l'indirizzo di posta elettronica del gruppo nel tenant dell'organizzazione. Ad esempio, sales@contoso.com
+    - Per il gruppo nella seconda organizzazione esterna: sempre nella scheda **Immettere i dettagli** digitare l'indirizzo e-mail del gruppo nel tenant dell'organizzazione. Ad esempio, sales@contoso.com
     
-    - Per l'utente che non ha un account Azure AD: sempre nella scheda **Immettere i dettagli**, digitare l'indirizzo di posta elettronica dell'utente. Ad esempio, bengi.turan@gmail.com 
+    - Per l'utente che non ha un account Azure AD: sempre nella scheda **Immettere i dettagli** digitare l'indirizzo e-mail dell'utente. Ad esempio, bengi.turan@gmail.com 
 
-4. Per concedere le stesse autorizzazioni a tutti questi utenti: per **Scegliere le autorizzazioni dai valori preimpostati** selezionare **Comproprietario**, **Coautore**, **Revisore** o **Personalizzate** per selezionare le autorizzazioni che si vuole concedere.
+4. Per concedere le stesse autorizzazioni a tutti gli utenti: In **Scegliere le autorizzazioni dai valori preimpostati** selezionare le autorizzazioni da concedere: **Comproprietario**, **Coautore**, **Revisore** o **Personalizzate**.
     
     Ad esempio, le autorizzazioni configurate possono essere simili alle seguenti:
         

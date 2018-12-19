@@ -4,16 +4,16 @@ description: Azure Information Protection offre etichette predefinite personaliz
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 04/30/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-ms.openlocfilehash: 963a86e37112fb2c4a2f9ca10162995a131c49ac
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 7302e0e0e76f6ca94eba678390e7d938172e40c4
+ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023431"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53304996"
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Come creare una nuova etichetta per Azure Information Protection
 
@@ -31,11 +31,11 @@ Seguire queste istruzioni per aggiungere una nuova etichetta che sarà poi possi
     
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Dall'opzione di menu **Classificazioni** > **Etichette**: nel pannello **Azure Information Protection - Etichette** eseguire una delle operazioni seguenti:
+2. Dall'opzione di menu **Classificazioni** > **Etichette**: Nel pannello **Azure Information Protection - Etichette** effettuare una delle operazioni seguenti:
     
-    - Per creare una nuova etichetta, fare clic su **Aggiungi una nuova etichetta**.
+    - Per creare una nuova etichetta: Fare clic su **Aggiungi una nuova etichetta**.
     
-    - Per creare una nuova etichetta secondaria, fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida (**...**) per l'etichetta per cui si vuole creare un'etichetta secondaria, quindi scegliere **Aggiungi un'etichetta secondaria**.
+    - Per creare una nuova etichetta secondaria: Fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida (**...**) per l'etichetta per cui si vuole creare un'etichetta secondaria, quindi scegliere **Aggiungi un'etichetta secondaria**.
 
 4. Nel pannello **Etichetta** o **Etichetta secondaria** selezionare le opzioni desiderate per la nuova etichetta, quindi fare clic su **Salva**.
     
@@ -43,7 +43,7 @@ Seguire queste istruzioni per aggiungere una nuova etichetta che sarà poi possi
     
     Si noti che alle nuove etichette viene assegnato automaticamente il colore nero. Scegliere un colore distintivo dall'elenco dei colori o immettere un codice tripletta esadecimale per i componenti rosso, verde e blu (RGB) del colore. Ad esempio, **#DAA520**. Se è necessario un riferimento per questi codici, un utile punto di partenza è costituito dall'articolo [Colors by Name](https://msdn.microsoft.com/library/aa358802\(v=vs.85).aspx) (Colori per nome) disponibile nella documentazione MSDN; inoltre, questi codici sono presenti in molti programmi di modifica delle immagini, come Microsoft Paint, in cui scegliendo un colore personalizzato da una tavolozza vengono visualizzati automaticamente i valori RGB.
 
-5. Per rendere disponibile la nuova etichetta agli utenti: nell'opzione di menu **Classificazioni** > **Criteri** selezionare i criteri in cui includere la nuova etichetta. Selezionare **Add or remove labels** (Aggiungi o rimuovi etichette). Selezionare l'etichetta nel pannello**Policy: Add or remove labels** (Criteri: Aggiungi o rimuovi etichette), selezionare **OK** e quindi selezionare **Salva**.
+5. Per rendere disponibile la nuova etichetta per gli utenti: Dall'opzione di menu **Classificazioni** > **Criteri** selezionare i criteri in cui includere la nuova etichetta. Selezionare **Add or remove labels** (Aggiungi o rimuovi etichette). Selezionare l'etichetta nel pannello **Policy: Add or remove labels** (Criteri: Aggiungi o rimuovi etichette), selezionare **OK** e quindi selezionare **Salva**.
     
     >[!TIP]
     >Per quanto riguarda le nuove etichette, valutare la possibilità di aggiungerle in un primo momento a un criterio con ambito usato a scopi di test. Quando si è soddisfatti dei risultati, rimuovere l'etichetta da questo ambito di test e quindi aggiungerla a un criterio in uso nell'ambiente di produzione.     
@@ -52,7 +52,7 @@ Seguire queste istruzioni per aggiungere una nuova etichetta che sarà poi possi
     
     Le modifiche diventano automaticamente disponibili per utenti e servizi. Non è più presente un'opzione di pubblicazione separata.
 
-6. Per visualizzare il nuovo nome di etichetta e la descrizione in lingue diverse per gli utenti, seguire le procedure descritte in [Come configurare etichette per lingue diverse](configure-policy-languages.md). 
+6. Se si vuole che il nome e la descrizione della nuova etichetta vengano visualizzati in lingue diverse per gli utenti: Seguire le procedure descritte in [Come configurare etichette per lingue diverse](configure-policy-languages.md). 
 
 ## <a name="next-steps"></a>Passaggi successivi
 

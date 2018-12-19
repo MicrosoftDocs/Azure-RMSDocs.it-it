@@ -4,18 +4,18 @@ description: Risorse informative per il client Azure Information Protection per 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 08/31/2018
+ms.date: 12/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8d537ec34756b131805dcd83edd1d4b833bc5749
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6f2348de61c395bc1792dc0a205bf18848ca7c18
+ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148818"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53218409"
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Client Azure Information Protection per Windows
 
@@ -23,7 +23,7 @@ ms.locfileid: "44148818"
 
 Il client Azure Information Protection per Windows è un client scaricabile gratuito per le organizzazioni che usano [Azure Information Protection](../what-is-information-protection.md) per classificare e proteggere documenti e messaggi di posta elettronica o il servizio Rights Management per proteggere i propri dati. Il client include anche un visualizzatore per le organizzazioni prive di un'infrastruttura di protezione propria, ma che vogliono usare contenuto protetto da altre organizzazioni che usano un servizio Rights Management di Microsoft.
 
-- [Client di Azure Information Protection: cronologia delle versioni](client-version-release-history.md)
+- [Client Azure Information Protection: cronologia delle versioni](client-version-release-history.md)
 
 - [Guida per l'amministratore del client di Azure Information Protection](client-admin-guide.md)
 
@@ -32,7 +32,7 @@ Il client Azure Information Protection per Windows è un client scaricabile grat
 > [!TIP]
 > È disponibile anche un'app Azure Information Protection per iOS e Android. Per altre informazioni, vedere [Domande frequenti sull'app Azure Information Protection per iOS e Android](mobile-app-faq.md ).
 > 
-> Per computer Mac e dispositivi Windows Phone: usare l'app RMS sharing per dispositivi mobili e leggere le [domande frequenti sull'applicazione di condivisione Rights Management per piattaforme mobili e Mac](http://technet.microsoft.com/dn451248).
+> Per computer Mac e dispositivi Windows Phone: usare l'app RMS sharing per dispositivi mobili e leggere le [domande frequenti sull'applicazione di condivisione Rights Management per piattaforme mobili e Mac](https://technet.microsoft.com/dn451248).
 
 ## <a name="install-instructions"></a>Istruzioni di installazione
 

@@ -5,19 +5,19 @@ keywords: ''
 author: lleonard-msft
 ms.author: alleonar
 manager: mbaldwin
-ms.date: 02/23/2017
+ms.date: 12/10/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: f7fde149e080607633b0e916123d4da1e06d7715
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6d16237ff8d4fbfe1b26a73577c16b78b31849e1
+ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147511"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53266359"
 ---
 # <a name="windows-store-setup"></a>Installazione per Windows Store
 
@@ -35,9 +35,9 @@ Questo argomento illustra come impostare l'ambiente per la creazione di nuove ap
 
 Nel sistema di sviluppo è necessario disporre del software seguente:
 
--   Sistema operativo [Windows 8.1](http://windows.microsoft.com/en-US/windows-8/meet)
+-   Sistema operativo [Windows 8.1](https://windows.microsoft.com/windows-8/meet)
 -   [Windows SDK per Windows 8.1](https://msdn.microsoft.com/windows/desktop/bg162891.aspx)
--   Microsoft [Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview) o versione successiva o Visual Studio Express 2012, incluso in Windows SDK per Windows 8.0/8.1.
+-   Microsoft [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/) o versione successiva o Visual Studio Express 2012, incluso in Windows SDK per Windows 8.0/8.1.
 -   Il pacchetto di MS RMS SDK 4.2 per le applicazioni Windows Store. Per altre informazioni, vedere [Introduzione](get-started.md).
 -   Libreria di autenticazione: è consigliabile usare [Azure AD Authentication Library](https://msdn.microsoft.com/library/jj573266.aspx) e altre librerie di autenticazione.
 
@@ -77,8 +77,8 @@ A questo punto si è pronti per creare le nuove app Windows Store personalizzate
 
 [Concetti e termini per sviluppatori](core-concepts.md)
 
-[Windows 8](http://windows.microsoft.com/en-US/windows-8/meet)
+[Windows 8](https://windows.microsoft.com/windows-8/meet)
 
-[Visual Studio 2012](http://www.microsoft.com/visualstudio/eng/products/visual-studio-overview)
+[Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/)
 
 [Informazioni di riferimento sulle API di Windows](https://msdn.microsoft.com/library/dn891914.aspx)

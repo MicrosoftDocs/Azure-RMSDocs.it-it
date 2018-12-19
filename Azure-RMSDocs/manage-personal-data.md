@@ -4,18 +4,18 @@ description: Informazioni sui dati personali usati da Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 05/16/2018
+ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: 6904c8c1e879a4d076486fae17a1dbdbd71cb4b4
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 4e44796d3bd2fdf1fd2f0c39cc759f16d87267a1
+ms.sourcegitcommit: db60fe8f74ffaa4f6ffbf5defb22efc476c28312
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150433"
+ms.lasthandoff: 12/12/2018
+ms.locfileid: "53319415"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gestire i dati personali per Azure Information Protection
 
@@ -262,7 +262,7 @@ L'eliminazione di questi dati è un'operazione permanente. Al termine dell'elabo
 
 **Passaggio 2: Attendere la verifica** Microsoft verificherà la legittimità della richiesta di eliminazione di uno o più log. Questo processo può richiedere fino a cinque giorni lavorativi.
 
-**Fase 3: Ottenere la conferma dell'eliminazione** Il servizio di supporto tecnico Microsoft invierà un messaggio di posta elettronica di conferma dell'avvenuta eliminazione dei dati. 
+**Passaggio 3: Ottenere la conferma dell'eliminazione** Il servizio di supporto tecnico Microsoft invierà un messaggio di posta elettronica di conferma dell'avvenuta eliminazione dei dati. 
 
 ## <a name="exporting-personal-data"></a>Esportazione dei dati personali
 Quando si usano i cmdlet del modulo AADRM di PowerShell, i dati personali vengono resi disponibili per la ricerca e l'esportazione come oggetto di PowerShell. L'oggetto di PowerShell può essere convertito in JSON e salvato tramite il cmdlet `ConvertTo-Json`.

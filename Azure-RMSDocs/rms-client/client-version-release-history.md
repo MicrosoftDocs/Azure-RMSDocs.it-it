@@ -4,19 +4,19 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/05/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bfca9c6aab0625a9d35d7648a53f7cce6b74bce6
-ms.sourcegitcommit: 8e7b135bf48ced7e53d91f45d62b7bbd0f37634e
+ms.openlocfilehash: c6312d3f10a70ffcb3cc48447fcbc751b7072a0d
+ms.sourcegitcommit: db24caa96033fd0c7a0fad4e36518a816a570c94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52861218"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53335524"
 ---
-# <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto
+# <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection: Cronologia delle versioni e criteri per il supporto
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 
@@ -44,7 +44,7 @@ Usare le informazioni seguenti per scoprire le novità o le modifiche per una ve
 ## <a name="version-141510"></a>Versione 1.41.51.0
 
 > [!TIP]
-> Se si è interessati alla valutazione del client di etichettatura unificato Azure Information Protection perché si pubblicano le etichette dal Centro sicurezza e conformità di Office 365, vedere [Client che supporta l'etichettatura unificata di Azure Information Protection: informazioni di rilascio versione](unifiedlabelingclient-version-release-history.md).
+> Se si è interessati alla valutazione del client di etichettatura unificato Azure Information Protection perché si pubblicano le etichette dal Centro sicurezza e conformità di Office 365, Vedere [Client per l'etichettatura unificata di Azure Information Protection: informazioni di rilascio versione](unifiedlabelingclient-version-release-history.md).
 
 **Data di rilascio**: 27/11/2018
 
@@ -74,7 +74,7 @@ Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
     
     - I contrassegni visivi vengono ora applicati se si salva il foglio di calcolo durante la modifica di una cella.
     
-    - Excel 2010: quando un foglio di calcolo è protetto tramite il [livello di autorizzazione](../configure-usage-rights.md#rights-included-in-permissions-levels) Coautore, il pulsante **Elimina etichetta** è ora disponibile quando si fa clic con il pulsante destro del mouse sul file e si sceglie **Classifica e proteggi**.
+    - Excel 2010: quando si protegge un foglio di calcolo usando il [livello di autorizzazione](../configure-usage-rights.md#rights-included-in-permissions-levels) Coautore, il pulsante **Elimina etichetta** è ora disponibile quando si fa clic con il pulsante destro del mouse sul file e si sceglie **Classifica e proteggi**.
 
 - Le impostazioni client avanzate che consentono la [rimozione di intestazioni e piè di pagina da altre soluzioni di etichettatura](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions) ora supportano i layout personalizzati.
 
@@ -106,11 +106,13 @@ Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
 
 - Per lo scanner di Azure Information Protection:
 
-    - Nuovo cmdlet [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): deve essere eseguito una sola volta dopo l'aggiornamento dalla versione di disponibilità a livello generale precedente (1.29.5.0) o versioni precedenti.
+    - Nuovo cmdlet, [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner): deve essere eseguito una sola volta dopo l'aggiornamento dalla versione di disponibilità a livello generale precedente (1.29.5.0) o versioni precedenti.
     
-    - Nuovo cmdlet [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): ottiene lo stato corrente del servizio per lo scanner.  
+    - Nuovo cmdlet, [Get-AIPScannerStatus](/powershell/module/azureinformationprotection/Get-AIPScannerStatus): ottiene lo stato corrente del servizio per lo scanner.  
     
     - Nuovo cmdlet [Start-AIPScan](/powershell/module/azureinformationprotection/Start-AIPScan): richiede allo scanner di avviare un ciclo di analisi unico quando la pianificazione è impostata su manuale.
+    
+    - Quando si usa lo standard ISO per la crittografia dei file PDF, i documenti PDF sono ora protetti per impostazione predefinita.
     
     - SharePoint Server 2010 è supportato per i clienti che dispongono del [supporto "Extended" per la versione corrente di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
     
@@ -150,7 +152,7 @@ Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
 
 - La versione dei criteri è ora la 1.4. L'identificazione del numero di versione è necessaria per la [configurazione dei computer disconnessi](client-admin-guide-customizations.md#support-for-disconnected-computers).
 
-- Il collegamento **Invia commenti e suggerimenti** nella finestra di dialogo **Guida e commenti** è stato rimosso. È stata temporaneamente sostituito dal collegamento **Segnala un problema**, ma ora questo collegamento è disponibile solo nelle versioni di anteprima. Per impostazione predefinita questa opzione invia un messaggio di posta elettronica a Microsoft, ma è possibile modificare l'indirizzo di posta elettronica impostando una stringa HTTP personalizzata. Ad esempio, una pagina Web personalizzata in cui gli utenti possono segnalare i problemi o un indirizzo di posta elettronica che rimanda all'help desk. Per modificare questo indirizzo, usare un'[impostazione del client avanzata](client-admin-guide-customizations.md#modify-the-email-address-for-the-report-an-issue-link).
+- Il collegamento **Invia commenti e suggerimenti** nella finestra di dialogo **Guida e commenti** è stato rimosso. È stato temporaneamente sostituito da **Segnala un problema** che per impostazione predefinita inviava un messaggio di posta elettronica a Microsoft. A partire da dicembre 2018 l'opzione **Segnala un problema** non viene visualizzata per impostazione predefinita ma può essere aggiunta con un'[impostazione client avanzata](client-admin-guide-customizations.md#add-report-an-issue-for-users) in cui si specifica una stringa HTTP per il collegamento. Ad esempio, una pagina Web personalizzata in cui gli utenti possono segnalare i problemi o un indirizzo di posta elettronica che rimanda all'help desk. 
 
 ## <a name="version-12950"></a>Versione 1.29.5.0 
 
@@ -206,7 +208,7 @@ Questa versione include MSIPC versione 1.0.3403.1224 del client RMS.
 
 Per altre informazioni sull'installazione e l'uso del client: 
 
-- Per utenti: [Scaricare e installare il client](install-client-app.md)
+- Per gli utenti: [Scaricare e installare il client](install-client-app.md)
 
-- Per amministratori: [Guida per l'amministratore del client di Azure Information Protection](client-admin-guide.md)
+- Per gli amministratori: [Guida per l'amministratore del client di Azure Information Protection](client-admin-guide.md)
 

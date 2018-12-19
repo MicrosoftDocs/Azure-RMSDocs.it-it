@@ -4,18 +4,18 @@ description: Istruzioni per installare, configurare ed eseguire lo scanner di Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 153009e9c9760649bd42d85bece421e3b8ee5afd
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: fba2a1a804c085c44efc79d0f0ac69988f681aaa
+ms.sourcegitcommit: c9a0d81c18ea79a2520baa4b3777b06a72f87f60
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024247"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53382521"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -85,7 +85,7 @@ Seguire le istruzioni per un [computer disconnesso](./rms-client/client-admin-gu
 
 Si noti che in questa configurazione lo scanner non può applicare la protezione (o rimuovere la protezione) usando la chiave basata sul cloud dell'organizzazione. Lo scanner può invece usare esclusivamente le etichette che applicano solo la classificazione o la protezione che usa [HYOK](configure-adrms-restrictions.md). 
 
-#### <a name="restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually"></a>Restrizione: non è possibile concedere all'utente il ruolo Sysadmin o i database devono essere creati e configurati manualmente
+#### <a name="restriction-you-cannot-be-granted-sysadmin-or-databases-must-be-created-and-configured-manually"></a>Restrizione: Non è possibile concedere all'utente il ruolo Sysadmin o i database devono essere creati e configurati manualmente
 
 Se è possibile concedere temporaneamente all'utente il ruolo Sysadmin per installare lo scanner, è possibile rimuovere questo ruolo al termine dell'installazione dello scanner. Quando si usa questa configurazione, il database viene creato automaticamente e all'account del servizio per lo scanner vengono concesse automaticamente le autorizzazioni necessarie. L'account utente che configura lo scanner richiede tuttavia il ruolo db_owner per il database AzInfoProtectionScanner ed è necessario concedere manualmente questo ruolo all'account utente.
 
@@ -99,11 +99,11 @@ Se non è possibile concedere il ruolo Sysadmin all'utente anche solo temporanea
 
 In genere, si usa lo stesso account utente per installare e configurare lo scanner, ma, se si usano account diversi, entrambi richiedono il ruolo db_owner per il database AzInfoProtectionScanner.
 
-#### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>Restrizione: all'account del servizio per lo scanner non può essere concesso il diritto **Log on locally** (Accesso locale)
+#### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>Restrizione: all'account del servizio scanner non può essere concesso il diritto di **accesso locale**
 
 Se i criteri dell'organizzazione non consentono il diritto **Log on locally** (Accesso locale) per gli account del servizio, ma consentono il diritto **Accesso come processo batch**, seguire le istruzioni per [specificare e usare il parametro Token per Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) della Guida dell'amministratore.
 
-#### <a name="restriction-the-scanner-service-account-cannot-be-synchronized-to-azure-active-directory-but-the-server-has-internet-connectivity"></a>Restrizione: l'account del servizio dello scanner non possono essere sincronizzati con Azure Active Directory, ma il server ha la connettività Internet
+#### <a name="restriction-the-scanner-service-account-cannot-be-synchronized-to-azure-active-directory-but-the-server-has-internet-connectivity"></a>Restrizione: l'account del servizio scanner non può essere sincronizzato con Azure Active Directory, ma il server ha la connettività Internet
 
 È possibile usare un account per eseguire il servizio dello scanner e un altro per l'autenticazione in Azure Active Directory:
 
@@ -158,7 +158,7 @@ Il token di Azure AD consente all'account del servizio scanner di eseguire l'aut
     
     Quando richiesto, specificare la password per le credenziali dell'account del servizio per Azure AD e quindi fare clic su **Accetto**.
     
-    Se all'account del servizio scanner non è possibile concedere il diritto di **accesso locale** per l'installazione: seguire le istruzioni nella sezione [Specificare e usare il parametro Token per Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) della Guida dell'amministratore. 
+    Se all'account del servizio scanner non può essere concesso il diritto di **accesso locale**: seguire le istruzioni riportate nella sezione [Specificare e usare il parametro Token per Set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) della Guida dell'amministratore. 
 
 Lo scanner ora ha un token per l'autenticazione ad Azure AD, che può essere valido per un anno, due anni, o senza scadenza, in base alla configurazione dell'**app Web/API** in Azure AD. Quando il token scade, è necessario ripetere i passaggi 1 e 2.
 
@@ -168,7 +168,7 @@ A questo punto si è pronti a specificare gli archivi dati da analizzare.
 
 Usare il cmdlet [Add-AIPScannerRepository](/powershell/module/azureinformationprotection/Add-AIPScannerRepository) per specificare gli archivi dati che devono essere analizzati dallo scanner di Azure Information Protection. È possibile specificare cartelle locali, percorsi UNC e URL di SharePoint Server per siti e librerie di SharePoint. 
 
-Versioni di SharePoint supportate: SharePoint Server 2016 e SharePoint Server 2013. Anche SharePoint Server 2010 è supportato per i clienti che dispongono del [supporto "Extended" per questa versione di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
+Versioni supportate per SharePoint: SharePoint Server 2016 e SharePoint Server 2013. Anche SharePoint Server 2010 è supportato per i clienti che dispongono del [supporto "Extended" per questa versione di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 
 1. Dallo stesso computer Windows Server, nella sessione di PowerShell, aggiungere il primo archivio dati eseguendo il comando seguente:
     
@@ -254,13 +254,11 @@ Lo scanner usa quindi IFilter di Windows per analizzare i tipi di file seguenti.
 
 Inoltre, lo scanner può anche usare una soluzione OCR (Optical Character Recognition) per esaminare immagini TIFF con un'estensione di file TIFF quando si installa la funzionalità IFilter TIFF di Windows e quindi si configurano le [impostazioni IFilter TIFF di Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) nel computer che esegue lo scanner.
 
-Per impostazione predefinita, solo i tipi di file di Office sono protetti dallo scanner, quindi i documenti PDF, i file di testo e le immagini TIF non sono protetti a meno che non si [modifichi il Registro di sistema](#editing-the-registry-for-the-scanner) per specificare i tipi di file:
+Per impostazione predefinita, solo i tipi di file di Office e i file PDF sono protetti dallo scanner, quindi i file di testo e i file di immagine non sono protetti a meno che non si [modifichi il Registro di sistema](#editing-the-registry-for-the-scanner) per specificare i tipi di file:
 
-- Se non si aggiunge il tipo di file PDF al Registro di sistema: i file con questa estensione saranno etichettati, ma se l'etichetta è configurata per la protezione, non viene applicata la protezione.
+- Se non si aggiungono i tipi di file TXT, XML o CSV al Registro di sistema: i file con queste estensioni non saranno etichettati perché questi tipi di file non supportano solo la classificazione.
 
-- Se non si aggiungono i tipi di file con estensione txt, xml o csv al Registro di sistema: i file con queste estensioni non saranno etichettati perché questi tipi di file non supportano solo la classificazione.
-
-- Se non si aggiunge il tipo di file TIFF al Registro di sistema dopo aver configurato l'IFilter TIFF di Windows, i file con questa estensione verranno etichettati, ma se l'etichetta è configurata per la protezione, non viene applicata la protezione.
+- Se non si aggiunge il tipo di file TIFF al Registro di sistema dopo aver configurato IFilter TIFF di Windows: i file con questa estensione saranno etichettati, ma se l'etichetta è configurata per la protezione, non viene applicata la protezione.
 
 Infine, per i tipi di file rimanenti, lo scanner non esegue il controllo ma applica l'etichetta predefinita nei criteri di Azure Information Protection oppure l'etichetta predefinita configurata per lo scanner.
 
@@ -280,19 +278,19 @@ Infine, per i tipi di file rimanenti, lo scanner non esegue il controllo ma appl
 |DigitalNegative|.dng|
 |Pfile|pfile|
 
-Quando lo scanner applica un'etichetta con la protezione, per impostazione predefinita, solo i tipi di file di Office vengono protetti. È possibile modificare questo comportamento in modo che vengano protetti altri tipi di file. Quando tuttavia un'etichetta applica la protezione generica ai documenti, l'estensione del nome file viene modificata in pfile. Anche altri tipi di file possono modificare l'estensione. Inoltre, questi file diventano di sola lettura fino a quando non vengono aperti da un utente autorizzato e salvati nel formato nativo.
+Quando lo scanner applica un'etichetta con la protezione, per impostazione predefinita vengono protetti solo i tipi di file di Office e i file PDF. È possibile modificare questo comportamento in modo che vengano protetti altri tipi di file. Quando tuttavia un'etichetta applica la protezione generica ai documenti, l'estensione del nome file viene modificata in pfile. Anche altri tipi di file possono modificare l'estensione. Inoltre, questi file diventano di sola lettura fino a quando non vengono aperti da un utente autorizzato e salvati nel formato nativo.
 
 ### <a name="editing-the-registry-for-the-scanner"></a>Modifica del Registro di sistema per lo scanner
 
-Per modificare il comportamento predefinito dello scanner per la protezione di tipi di file diversi dai file di Office, è necessario modificare manualmente il Registro di sistema e specificare i tipi di file aggiuntivi da proteggere. Per informazioni, vedere [Configurazione dell'API file](develop/file-api-configuration.md) nelle linee guida per sviluppatori. Per fare riferimento alla protezione generica, questa documentazione per sviluppatori usa il termine "PFile". Inoltre, specificatamente per lo scanner:
+Per modificare il comportamento predefinito dello scanner per la protezione di tipi di file diversi dai file di Office e i file PDF, è necessario modificare manualmente il Registro di sistema e specificare i tipi di file aggiuntivi da proteggere. Per informazioni, vedere [Configurazione dell'API file](develop/file-api-configuration.md) nelle linee guida per sviluppatori. Per fare riferimento alla protezione generica, questa documentazione per sviluppatori usa il termine "PFile". Inoltre, specificatamente per lo scanner:
 
-- Lo scanner ha il proprio comportamento predefinito: solo i formati di file di Office sono protetti per impostazione predefinita. Se il Registro di sistema non viene modificato, tutti gli altri tipi di file non verranno protetti dallo scanner.
+- Lo scanner ha un proprio comportamento predefinito: solo i formati di file di Office e i documenti PDF sono protetti per impostazione predefinita. Se il Registro di sistema non viene modificato, tutti gli altri tipi di file non verranno protetti dallo scanner.
 
-- Se si vuole lo stesso comportamento di protezione predefinito del client Azure Information Protection, in cui tutti i file vengono automaticamente protetti con la protezione nativa o generica, specificare il carattere jolly `*` come chiave del Registro di sistema e `Default` come valore di dati.
+- Se si vuole lo stesso comportamento di protezione predefinito del client Azure Information Protection, in cui tutti i file vengono automaticamente protetti con la protezione nativa o generica: specificare il carattere jolly `*` come chiave del Registro di sistema e `Default` come dati valore.
 
 Quando si modifica il Registro di sistema, creare manualmente la chiave **MSIPC** e la chiave **FileProtection** se non esistono, nonché una chiave per ogni estensione del nome file.
 
-Ad esempio, per fare in modo che lo scanner protegga i file PDF oltre ai file di Office, il Registro di sistema dopo la modifica avrà un aspetto simile all'immagine seguente:
+Ad esempio, per fare in modo che lo scanner protegga le immagini TIFF oltre ai file di Office e ai file PDF, il Registro di sistema dopo la modifica avrà un aspetto simile all'immagine seguente:
 
 ![Modifica del Registro di sistema per l'applicazione della protezione con lo scanner](./media/editregistry-scanner.png)
 
@@ -309,7 +307,7 @@ In alternativa, è possibile imporre allo scanner di esaminare di nuovo tutti i 
 Inoltre, tutti i file vengono controllati quando lo scanner scarica un criterio di Azure Information Protection con condizioni nuove o modificate. Lo scanner aggiorna i criteri ogni ora, all'avvio del servizio e quando risalgono a più di un'ora prima.  
 
 > [!TIP]
-> Se è necessario aggiornare i criteri prima di questo intervallo di un'ora, ad esempio durante un periodo di test, eliminare manualmente il file dei criteri **Policy.msip** da **%LocalAppData%\Microsoft\MSIP\Policy.msip** e **%LocalAppData%\Microsoft\MSIP\Scanner**. Riavviare il servizio scanner di Azure Information Protection.
+> Se è necessario aggiornare i criteri prima di questo intervallo di un'ora, ad esempio, durante un periodo di test: Eliminare manualmente il file dei criteri **Policy.msip** sia da **%LocalAppData%\Microsoft\MSIP\Policy.msip** che da **%LocalAppData%\Microsoft\MSIP\Scanner**. Riavviare il servizio scanner di Azure Information Protection.
 > 
 > Se sono state modificate le impostazioni di protezione dei criteri, attendere 15 minuti dal salvataggio delle impostazioni di protezione prima di riavviare il servizio.
 
@@ -332,7 +330,7 @@ Lo scanner di Azure Information Protection supporta due scenari alternativi in c
     
     Lo scanner usa eventuali condizioni personalizzate specificate per le etichette nei criteri di Azure Information Protection e l'elenco di tipi di informazioni che è possibile specificare per le etichette nei criteri di Azure Information Protection.
     
-    La guida introduttiva seguente usa questa configurazione: [Trovare le informazioni riservate disponibili](quickstart-findsensitiveinfo.md).
+    L'avvio rapido che segue usa questa configurazione: [Avvio rapido: Trovare le informazioni riservate disponibili](quickstart-findsensitiveinfo.md).
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Ottimizzazione delle prestazioni dello scanner
 
@@ -448,9 +446,9 @@ Se lo scanner è stato configurato per essere eseguito una sola volta invece che
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Se si è interessati a scoprire come è stato implementato questo scanner dai team Microsoft Core Services Engineering e Operations,  leggere il case study tecnico: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner) (Automatizzazione della protezione dei dati con lo scanner di Azure Information Protection).
+Se si è interessati a scoprire come è stato implementato questo scanner dai team Microsoft Core Services Engineering e Operations,  Leggere il case study tecnico: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner) (Automazione della protezione dei dati con lo scanner di Azure Information Protection).
 
-Scoprire [Qual è la differenza tra Infrastruttura di classificazione file di Windows Server e lo scanner di Azure Information Protection](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner).
+Può sorgere questa domanda: [Qual è la differenza tra l'infrastruttura di classificazione file di Windows Server e lo scanner di Azure Information Protection?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 È anche possibile usare PowerShell per classificare e proteggere in modo interattivo i file dal computer desktop. Per altre informazioni su questo e altri scenari che usano PowerShell, vedere [Uso di PowerShell con il client Azure Information Protection](./rms-client/client-admin-guide-powershell.md).
 

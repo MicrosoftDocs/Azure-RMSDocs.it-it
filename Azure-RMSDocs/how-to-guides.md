@@ -4,17 +4,17 @@ description: Identificare i casi d'uso in cui è necessario proteggere e classif
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 12/08/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d537453395657309fe3f37d65b66b783890acdd8
-ms.sourcegitcommit: 80de8762953bdea2553c48b02259cd107d0c71dd
+ms.openlocfilehash: 7986648999a830985c4dbd1f31855bb222a443c2
+ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51026991"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53218375"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Guide procedurali per gli scenari comuni che usano Azure Information Protection
 
@@ -24,18 +24,30 @@ Esistono diversi modi in cui è possibile usare Azure Information Protection per
 
 Le distribuzioni più efficienti sono quelle in cui si identificano casi d'uso specifici che consentano all'organizzazione di ottenere il massimo beneficio. Usare l'elenco seguente di istruzioni e scenari comuni per eseguire avviare la procedura di distribuzione corretta.
 
+## <a name="common-scenarios"></a>Scenari comuni
 
-
-|Scenario: Per...|Istruzioni|
+|Scenario: Opzione richiesta:|Istruzioni|
 |----------------|---------------|
-|Trovare le informazioni riservate che la mia organizzazione archivia in locale|[Guida introduttiva: Trovare le informazioni riservate presenti nei file archiviati in locale](quickstart-findsensitiveinfo.md)|
-|Consentire agli utenti di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate|[Guida introduttiva: Configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate](quickstart-label-dnf-protectedemail.md)|
+|Trovare le informazioni riservate che la mia organizzazione archivia in locale|[Avvio rapido: trovare le informazioni riservate presenti nei file archiviati in locale](quickstart-findsensitiveinfo.md)|
+|Consentire agli utenti di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate|[Avvio rapido: configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate](quickstart-label-dnf-protectedemail.md)|
 |Consentire agli utenti di classificare i dati nel momento in cui vengono creati o modificati e proteggerli se contengono informazioni riservate| [Esercitazione: Modificare i criteri e creare una nuova etichetta](infoprotect-quick-start-tutorial.md)|
 |Consentire agli utenti di collaborare facilmente su un documento protetto|[Configurazione della collaborazione per i documenti protetti con Azure Information Protection](secure-collaboration-documents.md)|
 |Proteggere automaticamente i messaggi di posta elettronica degli utenti inviati all'esterno dell'organizzazione| [Configurazione delle regole del flusso di posta per le etichette di Azure Information Protection](configure-exo-rules.md)
 |Classificare e proteggere automaticamente i dati esistenti negli archivi dati locali|[Distribuzione dello scanner di Azure Information Protection](deploy-aip-scanner.md)|
 |Usare la chiave personale per proteggere i dati dell'organizzazione| [Pianificazione e implementazione della chiave del tenant](plan-implement-tenant-key.md)|
 |Eseguire la migrazione da AD RMS|[Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)|
+
+## <a name="additional-deployment-instructions"></a>Istruzioni aggiuntive per la distribuzione
+
+Il [blog tecnico di Azure Information Protection](https://aka.ms/AIPblog) contiene altre istruzioni dettagliate aggiunte dal team di Analisi utilizzo software. Ad esempio:
+
+- [Uso di Azure Information Protection per proteggere i file PDF e di Adobe Acrobat Reader per visualizzarli](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Using-Azure-Information-Protection-to-protect-PDF-s-and-Adobe/ba-p/282010)
+
+- [Catalogazione dei dati sensibili con Azure Information Protection, anche prima di configurare le etichette](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Cataloging-your-Sensitive-Data-with-AIP-Even-Before-Configuring/ba-p/267241)
+
+- [Installazione rapida dello scanner di Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Scanner-Express-Installation/ba-p/265424)
+
+- [Individuazione dei dati sensibili con lo scanner di Azure Information Protection (Azure Information Protection Premium P1)](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Discovery-of-Sensitive-Data-Using-the-AIP-Scanner-AIP-Premium-P1/ba-p/252040)
 
 ## <a name="next-steps"></a>Passaggi successivi
 

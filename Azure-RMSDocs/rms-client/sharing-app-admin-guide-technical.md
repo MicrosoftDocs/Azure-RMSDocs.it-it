@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ec0c231e2036dc66b941be7f764bb5e5fd5c518a
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 7104da9852458cbe9100600c3e14b43ee4aa7986
+ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023801"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53218477"
 ---
 # <a name="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application"></a>Panoramica tecnica e dettagli sulla protezione per l'applicazione Microsoft Rights Management sharing
 
@@ -34,7 +34,7 @@ L'applicazione Microsoft Rights Management sharing è un'applicazione facoltativ
 
 -   Completa interoperabilità con i file PDF protetti con Infrastruttura di classificazione file (FCI, File Classification Infrastructure) e gli strumenti di creazione di PDF supportati.
 
-L'applicazione Microsoft Rights Management sharing usa il nuovo [runtime di AD RMS Client 2.1](http://www.microsoft.com/download/details.aspx?id=38396). Grazie alla funzionalità di AD RMS 2.1, l'applicazione Microsoft Rights Management sharing consente agli utenti finali un'esperienza semplice di protezione e di utilizzo.
+L'applicazione Microsoft Rights Management sharing usa il nuovo [runtime di AD RMS Client 2.1](https://www.microsoft.com/download/details.aspx?id=38396). Grazie alla funzionalità di AD RMS 2.1, l'applicazione Microsoft Rights Management sharing consente agli utenti finali un'esperienza semplice di protezione e di utilizzo.
 
 Con la versione di RMS di ottobre 2013, è possibile proteggere i documenti in modo nativo usando Office 2010 e inviarli a persone in un'altra società, che possono quindi utilizzarli tramite il servizio Azure Rights Management di Azure Information Protection. Inoltre, con questa versione, se si usa AD RMS in modalità crittografia 2, è possibile eseguire RMS per utenti singoli e utilizzare contenuto proveniente da persone di un'altra società che usa il servizio Azure Rights Management. Per altre informazioni sulla modalità di crittografia 2, vedere [Modalità di crittografia di AD RMS](https://technet.microsoft.com/library/hh867439%28v=ws.10%29.aspx).
 
@@ -110,7 +110,7 @@ Per configurare l'applicazione RMS sharing in modo da applicare la protezione ge
 
 Queste due impostazioni hanno come risultato l'applicazione della protezione generica di RMS sharing a tutti i file con un nome che include un'estensione. Se questo è l'obiettivo, non è richiesta alcuna ulteriore configurazione. Tuttavia, è possibile definire eccezioni per specifici tipi di file, in modo che siano protetti comunque in modo nativo. A tale scopo, è necessario eseguire tre modifiche aggiuntive del Registro di sistema per ogni tipo di file:
 
-1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: aggiungere una nuova chiave con il nome dell'estensione di nome file (senza il punto iniziale).
+1.  **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection**: aggiungere una nuova chiave denominata come l'estensione del file, senza il punto.
 
     Ad esempio, i file con estensione del nome di file .docx, creano una chiave denominata **DOCX**.
 
@@ -124,11 +124,11 @@ Ripetere questi tre passaggi per altri tipi di file da definire come eccezioni, 
 
 È possibile apportare modifiche di registro di sistema simile per altri scenari modificando il valore della stringa **Crittografia** che supporta i seguenti valori:
 
--   **Pfile**: Protezione generica
+-   **Pfile**: protezione generica
 
--   **Nativo**: Protezione nativa
+-   **Native**: protezione nativa
 
--   **Off**: Protezione di blocco
+-   **Off**: protezione bloccata
 
 ## <a name="see-also"></a>Vedere anche
 [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)

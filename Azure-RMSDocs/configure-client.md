@@ -10,16 +10,16 @@ ms.service: information-protection
 ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e60ef4d683abe920072fdc9cf6a0b8e9537cf5ff
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 9dfe8c6921b50faddb6ee8f24c39fe6f33e1fd4d
+ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023414"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53173316"
 ---
-# <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Client Azure Information Protection: installazione e configurazione per i client
+# <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Client Azure Information Protection: installazione e configurazione dei client
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](http://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Nei computer con Office 2010 è necessario installare il client Azure Information Protection (o l'applicazione di condivisione Rights Management) per l'autenticazione al servizio Azure Rights Management e al servizio Azure Information Protection. Questo client è consigliato anche per tutti i computer Windows e i dispositivi iOS e Android che supportano il servizio Azure Rights Management e Azure Information Protection. 
 
@@ -31,7 +31,7 @@ Per un'installazione e una configurazione a livello aziendale del client per Win
 > [!TIP]
 > Se si vuole installare e testare rapidamente il client Azure Information Protection per un singolo computer, vedere [Scaricare e installare il client di Azure Information Protection](./rms-client/install-client-app.md) nella [Guida per l'utente del client Azure Information Protection](./rms-client/client-user-guide.md).
 
-## <a name="the-azure-information-protection-client-for-ios-and-android-installation-and-management"></a>Client Azure Information Protection per iOS e Android: installazione e gestione
+## <a name="the-azure-information-protection-client-for-ios-and-android-installation-and-management"></a>Client Azure Information Protection per iOS e Android: Installazione e gestione
 Per installare il client Azure Information Protection per queste piattaforme per dispositivi mobili comuni, è possibile scaricare l'app rilevante usando i collegamenti disponibili nella [pagina di Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970). Nessuna configurazione richiesta.
 
 > [!NOTE]

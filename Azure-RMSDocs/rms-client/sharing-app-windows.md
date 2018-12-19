@@ -10,24 +10,24 @@ ms.service: information-protection
 ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3884674c70df310fba9995c22598832b61367c66
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 60c07cd317fbdcacba7aa22d0ebf089a519ba87c
+ms.sourcegitcommit: b2414cc00d50ccefe10f8c3719eb3f6c1e78fc65
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148325"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246157"
 ---
 # <a name="rights-management-sharing-application-for-windows"></a>Applicazione Rights Management sharing per Windows
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
 > [!IMPORTANT]
-> **Notifica di fine del supporto**: l'applicazione di condivisione Rights Management per Windows verrà sostituita dal [client Azure Information Protection](aip-client.md). Il supporto per questa applicazione precedente terminerà il 31 gennaio 2019. 
+> **Notifica di file del supporto**: l'applicazione di condivisione Rights Management per Windows verrà sostituita dal [client Azure Information Protection](aip-client.md). Il supporto per questa applicazione precedente terminerà il 31 gennaio 2019. 
 
 
 L'applicazione di condivisione Rights Management per Windows (nota anche come RMS sharing) è un'applicazione gratuita scaricabile per le organizzazioni che usano [Active Directory Rights Management Services](https://technet.microsoft.com/library/cc772403.aspx) (AD RMS) o [Azure Information Protection](../what-is-information-protection.md). Questa applicazione è destinata anche alle organizzazioni prive di un'infrastruttura di protezione propria, ma che vogliono usare contenuto protetto da altre organizzazioni che usano il servizio Azure Rights Management di Azure Information Protection.
 
--   [Applicazione Rights Management sharing: cronologia delle versioni](sharing-app-version-release-history.md)
+-   [Applicazione di condivisione Rights Management: cronologia delle versioni](sharing-app-version-release-history.md)
 
 -   [Guida dell'amministratore dell'applicazione di condivisione Rights Management](sharing-app-admin-guide.md)
 
@@ -36,8 +36,8 @@ L'applicazione di condivisione Rights Management per Windows (nota anche come RM
 > [!TIP]
 > È disponibile anche un'app Azure Information Protection per iOS e Android. Per altre informazioni, vedere [Domande frequenti sull'app Azure Information Protection per iOS e Android](mobile-app-faq.md ).
 > 
-> Per computer Mac e dispositivi Windows Phone: [Domande frequenti sull'applicazione Rights Management sharing per piattaforme mobili e Mac](http://technet.microsoft.com/dn451248).
+> Per computer Mac e dispositivi Windows Phone: [Domande frequenti sull'applicazione Rights Management sharing per piattaforme mobili e Mac](https://technet.microsoft.com/dn451248).
 
 ## <a name="see-also"></a>Vedere anche
-[Domande frequenti sull'applicazione Rights Management sharing per Windows](http://technet.microsoft.com/dn467883)
+[Domande frequenti sull'applicazione Rights Management sharing per Windows](https://technet.microsoft.com/dn467883)
 
