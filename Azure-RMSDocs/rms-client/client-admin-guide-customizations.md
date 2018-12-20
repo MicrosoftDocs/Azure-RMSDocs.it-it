@@ -4,18 +4,18 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/04/2018
+ms.date: 12/13/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d4e2af4a9123b7276f2afad6f0d41232f3555d62
-ms.sourcegitcommit: 8e7b135bf48ced7e53d91f45d62b7bbd0f37634e
+ms.openlocfilehash: 2ecb0376ac7d4d4ddd476e76a60053ff408e2bbd
+ms.sourcegitcommit: db24caa96033fd0c7a0fad4e36518a816a570c94
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/04/2018
-ms.locfileid: "52861184"
+ms.lasthandoff: 12/13/2018
+ms.locfileid: "53335541"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -29,7 +29,7 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 
 1. Se non è già stato fatto, in una nuova finestra del browser accedere al [portale di Azure](../configure-policy.md#signing-in-to-the-azure-portal) e quindi passare al pannello **Azure Information Protection**.
 
-2. Dall'opzione di menu **Classificazioni** > **Etichette**: selezionare **Criteri**.
+2. Dall'opzione di menu **Classificazioni** > **Etichette**: Selezionare i **criteri**.
 
 3. Nel pannello **Azure Information Protection - Criteri** selezionare il menu di scelta rapida (**...**) accanto ai criteri, contenente le impostazioni avanzate. Selezionare quindi **Impostazioni avanzate**.
     
@@ -39,7 +39,7 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 
 5. Assicurarsi che gli utenti interessati da questi criteri riavviino le applicazioni di Office eventualmente aperte.
 
-6. Se l'impostazione non è più necessaria e si vuole ripristinare il comportamento predefinito, nel pannello **Impostazioni avanzate** selezionare il menu di scelta rapida (**...**) accanto all'impostazione non più necessaria e quindi selezionare **Elimina**. Fare clic su **Salva e chiudi**.
+6. Se l'impostazione non è più necessaria e si vuole ripristinare il comportamento predefinito: nel pannello **Impostazioni avanzate** selezionare il menu di scelta rapida (**...**) accanto all'impostazione non più necessaria e quindi selezionare **Elimina**. Fare clic su **Salva e chiudi**.
 
 #### <a name="available-advanced-client-settings"></a>Impostazioni client avanzate disponibili
 
@@ -57,7 +57,7 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 |ProcessUsingLowIntegrity|[Disabilitare il livello di integrità basso per lo scanner](#disable-the-low-integrity-level-for-the-scanner)|
 |PullPolicy|[Supporto per i computer disconnessi](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette](#remove-headers-and-footers-from-other-labeling-solutions)|
-|ReportAnIssueLink|[Modificare l'indirizzo di posta elettronica per il collegamento Segnala un problema](#modify-the-email-address-for-the-report-an-issue-link)|
+|ReportAnIssueLink|[Aggiungere "Segnala un problema" per gli utenti](#add-report-an-issue-for-users)|
 |RunPolicyInBackground|[Attivare l'esecuzione continua della classificazione in background](#turn-on-classification-to-run-continuously-in-the-background)|
 |SyncPropertyName|[Etichettare un documento di Office usando una proprietà personalizzata esistente](#label-an-office-document-by-using-an-existing-custom-property)|
 |SyncPropertyState|[Etichettare un documento di Office usando una proprietà personalizzata esistente](#label-an-office-document-by-using-an-existing-custom-property)|
@@ -76,7 +76,7 @@ Indipendentemente da questa impostazione, il client Azure Information Protection
 
 In un ambiente di produzione, in genere gli utenti non hanno bisogno di accedere con un nome utente diverso quando usano il client Azure Information Protection. Per un amministratore, tuttavia, può essere necessario accedere con le credenziali di un altro utente durante una fase di testing. 
 
-È possibile verificare con quale account è stato eseguito l'accesso usando la finestra di dialogo di **Microsoft Azure Information Protection**: nell'applicazione di Office, nel gruppo **Protezione** della scheda **Home** fare clic su **Proteggi** e quindi su **Guida e commenti**. Il nome dell'account verrà visualizzato nella sezione **Stato del client**.
+È possibile verificare a quale account è stato eseguito l'accesso usando la finestra di dialogo **Microsoft Azure Information Protection**: Aprire un'applicazione di Office, quindi nel gruppo **Protection** (Protezione) della scheda **Home** fare clic su **Protect** (Proteggi) e quindi fare clic su **Help and feedback** (Guida e commenti e suggerimenti). Il nome dell'account verrà visualizzato nella sezione **Stato del client**.
 
 Assicurarsi di controllare anche il nome di dominio dell'account di accesso che viene visualizzato. Può essere facile non notare che è stato effettuato l'accesso con il nome dell'account giusto, ma con il dominio errato. Un sintomo dell'uso di un account non corretto è l'impossibilità di scaricare i criteri di Azure Information Protection, di visualizzare le etichette corrette o di ottenere il comportamento previsto.
 
@@ -111,11 +111,11 @@ Individuare il nome di valore seguente e impostare i dati del valore su **0**:
 
 Controllare inoltre che in questi computer non esista un file denominato **Policy.msip** nella cartella **%LocalAppData%\Microsoft\MSIP**. Se il file esiste, eliminarlo. Questo file contiene i criteri di Azure Information Protection e potrebbe essere stato scaricato prima della modifica del Registro di sistema o se il client Azure Information Protection è stato installato con l'opzione demo.
 
-## <a name="modify-the-email-address-for-the-report-an-issue-link"></a>Modificare l'indirizzo di posta elettronica per il collegamento Segnala un problema
+## <a name="add-report-an-issue-for-users"></a>Aggiungere "Segnala un problema" per gli utenti
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Questa impostazione è applicabile solo alle versioni di anteprima del client Azure Information Protection, perché le versioni di disponibilità generale del client non visualizzano il collegamento **Segnala un problema**.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
 
-Quando gli utenti selezionano il collegamento **Segnala un problema** nella finestra di dialogo **Guida e commenti** delle versioni precedenti del client, per impostazione predefinita viene visualizzato un messaggio di posta elettronica con un indirizzo Microsoft. Per modificare questo indirizzo, usare l'impostazione del client avanzata seguente. Ad esempio, specificare `mailto:helpdesk@contoso.com` per l'indirizzo di posta elettronica dell'help desk. 
+Quando si specifica la seguente impostazione client avanzata, gli utenti visualizzano l'opzione **Segnala un problema**, che può essere selezionata dalla finestra di dialogo **Guida e commenti** del client. Specificare una stringa HTTP per il collegamento. Ad esempio, una pagina Web personalizzata in cui gli utenti possono segnalare i problemi o un indirizzo di posta elettronica che rimanda all'help desk. 
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
@@ -279,7 +279,7 @@ Come risultato di questa configurazione, quando viene applicata l'etichetta per 
 
 Se l'etichetta specificata è configurata per la protezione di Rights Management nel portale di Azure, la protezione S/MIME sostituisce la protezione di Rights Management solo in Outlook. Per tutti gli altri scenari che supportano l'etichettatura, verrà applicata la protezione di Rights Management.
 
-Se si vuole che l'etichetta sia visibile solo in Outlook, configurare l'etichetta per applicare la singola azione definita dall'utente **Non inoltrare**, come descritto in [Guida introduttiva: Configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate](../quickstart-label-dnf-protectedemail.md).
+Se si vuole che l'etichetta sia visibile solo in Outlook, configurare l'etichetta per applicare la singola azione definita dall'utente **Non inoltrare**, come descritto in [Avvio rapido: Configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate](../quickstart-label-dnf-protectedemail.md).
 
 ## <a name="remove-not-now-for-documents-when-you-use-mandatory-labeling"></a>Rimuovere "Non ora" per i documenti quando si usa l'etichettatura obbligatoria
 
@@ -327,7 +327,7 @@ Se è necessario che il client ripristini il comportamento delle versioni preced
 
 - Valore: **False**
 
-Per fare in modo che lo scanner Azure Information Protection usi la nuova impostazione, è necessario riavviare il servizio scanner.
+Per fare in modo che lo scanner Azure Information Protection usi la nuova impostazione, è necessario riavviare il servizio scanner. Inoltre, lo scanner non proteggerà più i documenti PDF per impostazione predefinita. Se si vuole che i documenti PDF siano protetti dallo scanner quando EnablePDFv2Protection è impostata su False, è necessario [modificare il Registro di sistema](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner).
 
 Per altre informazioni sulla nuova crittografia PDF, vedere il post del blog [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) (Nuovo supporto della crittografia PDF con Microsoft Azure Information Protection).
 
@@ -349,7 +349,7 @@ Per usare i comandi di PowerShell per convertire file con estensione ppdf esiste
     
     - Il valore (GUID) di **SubLabelId**, se presente. Se questo valore è vuoto, non è stata usata un'etichetta secondaria. In questo caso prendere nota del valore di **MainLabelId**.
     
-    Nota: se non è presente neanche un valore per **MainLabelId**, il file non è provvisto di etichetta. In questo caso è possibile usare i comandi [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) e [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) invece dei comandi nei passaggi 3 e 4.
+    Nota: se non è presente neanche un valore per **MainLabelId**, il file non ha etichetta. In questo caso è possibile usare i comandi [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) e [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) invece dei comandi nei passaggi 3 e 4.
     
     - Valore di **RMSTemplateId**. Se questo valore è **Accesso limitato**, un utente ha protetto il file usando autorizzazioni personalizzate anziché le impostazioni di protezione configurate per l'etichetta. Se si continua, tali autorizzazioni personalizzate verranno sovrascritte dalle impostazioni di protezione dell'etichetta. Decidere se continuare o chiedere all'utente (valore visualizzato per **RMSIssuer**) di rimuovere l'etichetta e riapplicarla, con le relative autorizzazioni personalizzate originali.
 
@@ -373,9 +373,9 @@ Se è stato usato Secure Islands è possibile che siano stati protetti file di t
 
 Aggiungere il seguente valore DWORD di **EnableIQPFormats** al percorso del registro seguente e impostare i dati del valore su **1**:
 
-- Per una versione di Windows a 64 bit: HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\MSIP
+- Per una versione a 64 bit di Windows: HKEY_LOCAL_MACHINE\\SOFTWARE\\WOW6432Node\\Microsoft\\MSIP
 
-- Per una versione di Windows a 32 bit: HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\MSIP
+- Per una versione a 32 bit di Windows: HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\MSIP
 
 In seguito a questa modifica del registro sono supportati gli scenari seguenti:
 
@@ -391,7 +391,7 @@ In seguito a questa modifica del registro sono supportati gli scenari seguenti:
 
 Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Questa impostazione è in anteprima e potrebbe cambiare.
 
-Questa configurazione non è attualmente compatibile con l'impostazione [Protect PDF files by using the ISO standard for PDF encryption](client-admin-guide-customizations.md#protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption) (Proteggere i file PDF usando lo standard ISO per la crittografia PDF). Quando si usano entrambe le impostazioni insieme, non è possibile aprire i file con estensione ppdf tramite Esplora file, PowerShell o lo scanner.
+Questa configurazione non è attualmente compatibile con il nuovo comportamento predefinito che protegge i file PDF usando lo standard ISO per la crittografia PDF. In questo scenario non è possibile aprire i file PPDF usando Esplora file, PowerShell o lo scanner. Per risolvere questo problema, usare l'impostazione client avanzata per [non usare lo standard ISO per la crittografia PDF](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption).
 
 Per i documenti di Office e i documenti PDF con etichette assegnate da Secure Islands, è possibile riassegnare etichette di Azure Information Protection a questi documenti usando un mapping definito appositamente. È anche possibile usare questo metodo per riutilizzare le etichette da altre soluzioni quando sono applicate a documenti di Office. 
 
@@ -642,11 +642,11 @@ Prima di eseguire il test della configurazione, tenere presente che spesso si ve
 
 - Se i destinatari interni visualizzano il messaggio di posta elettronica in Outlook e hanno installato il client di Azure Information Protection, vedono l'etichetta di Azure Information Protection assegnata. 
 
-Se le etichette di Azure Information Protection applicano la protezione, aggiungere quest'ultima alla configurazione della regola: selezionare l'opzione per modificare la sicurezza del messaggio, applicare la protezione dei diritti e quindi selezionare il modello RMS o l'opzione Non inoltrare.
+Se le etichette di Azure Information Protection applicano la protezione, aggiungerla alla configurazione della regola: Selezionando l'opzione per la modifica della protezione dei messaggi, applicare la protezione dei diritti e quindi selezionare il modello RMS o l'opzione Non inoltrare.
 
 È anche possibile configurare regole del flusso di posta per eseguire il mapping inverso. Quando viene rilevata un'etichetta di Azure Information Protection, impostare una classificazione dei messaggi di Exchange corrispondente:
 
-- Per ogni etichetta di Azure Information Protection, creare una regola del flusso di posta da applicare quando l'intestazione **msip_labels** include il nome dell'etichetta (ad esempio, **General**) e applicare una classificazione dei messaggi che esegua il mapping a questa etichetta.
+- Per ogni etichetta di Azure Information Protection: creare una regola del flusso di posta da applicare quando l'intestazione **msip_labels** include il nome dell'etichetta (ad esempio, **General**) e applicare una classificazione dei messaggi che esegua il mapping a questa etichetta.
 
 
 ## <a name="next-steps"></a>Passaggi successivi
