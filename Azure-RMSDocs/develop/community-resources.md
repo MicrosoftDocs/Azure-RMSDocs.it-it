@@ -2,8 +2,8 @@
 title: Risorse della community di sviluppatori | Documentazione Microsoft
 description: Azure Information Protection è ben supportato da una comunità crescente di sviluppatori su più piattaforme.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 01/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: e3bdaa6d-e8ca-421a-a429-553bfc54b78b
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: c6a1c0fa6d3783ce7eb618f56316fdbe1141bd77
-ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
+ms.openlocfilehash: 960a535377ae3eb556037871971b876c2e766ed9
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266461"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070265"
 ---
 # <a name="community-resources"></a>Risorse della community
 

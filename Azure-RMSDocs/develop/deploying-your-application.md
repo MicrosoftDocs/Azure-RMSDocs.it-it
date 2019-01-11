@@ -2,8 +2,8 @@
 title: Distribuzione dell'applicazione - AIP
 description: Questo argomento illustra il processo di distribuzione dell'applicazione
 keywords: distribuire, RMS, Azure Information Protection
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 03/13/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: b1525665fb488aed1ad98a77ac66f92f7ee4509b
-ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
+ms.openlocfilehash: daad2483fb850d06bbd62ff6b9a721160341d8b7
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266682"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070316"
 ---
 # <a name="deploy-into-production"></a>Distribuire in ambiente di produzione
 

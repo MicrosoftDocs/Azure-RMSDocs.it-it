@@ -2,8 +2,8 @@
 title: Installazione per Windows Phone | Azure RMS
 description: Nelle applicazioni Windows Phone è possibile usare Microsoft Rights Management SDK 4.2 per abilitare la protezione integrata delle informazioni nell'applicazione.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 12/10/2018
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 2c85449615fd0db5f88c452031cbc5b837cb0f82
-ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
+ms.openlocfilehash: 711b19631cc191f7a182602d3e05556f97072ee4
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266393"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071715"
 ---
 # <a name="windows-phone-setup"></a>Installazione per Windows Phone
 

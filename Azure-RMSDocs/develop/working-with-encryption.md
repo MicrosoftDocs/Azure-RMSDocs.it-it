@@ -2,8 +2,8 @@
 title: Come usare le impostazioni di crittografia | Azure RMS
 description: Linee guida sui pacchetti di crittografia di Azure RMS e sui relativi frammenti di codice.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: B1D2C227-F43D-4B18-9956-767B35145792
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d8d5c76c08c7518c8279267a6c1e15f559d6ea54
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 6c46df1ac7aca8d4668ff71bb91195d059f8a3a6
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147152"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071725"
 ---
 # <a name="how-to-work-with-encryption-settings"></a>Procedura: Usare le impostazioni di crittografia
 
@@ -30,7 +30,7 @@ Poiché è il nuovo valore predefinito, non è necessario alcun codice aggiuntiv
 > [!IMPORTANT]
 > Il supporto per l'uso dei file protetti con *AES 256* è stato introdotto con la [versione di ottobre 2014](release-notes-rtm.md). Se si eseguono applicazioni create con una versione di SDK precedente a ottobre 2014, questo aggiornamento interromperà l'applicazione. Assicurarsi che i clienti delle applicazioni che si stanno creando usino SDK aggiornato o desiderino eseguire immediatamente l'aggiornamento alla versione più recente dell'applicazione.
 
- 
+ 
 ## <a name="api-encryption-support"></a>Supporto della crittografia API
 
 A partire dall'[aggiornamento di marzo 2015](release-notes-rtm.md), nell'API e nei pacchetti di crittografia associati sono state aggiunte i seguenti tre flag:

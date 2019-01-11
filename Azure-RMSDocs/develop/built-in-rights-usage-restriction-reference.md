@@ -2,8 +2,8 @@
 title: Procedura&#58; Usare i diritti predefiniti | Azure RMS
 description: Descrive i diritti predefiniti specificati da RMS SDK 4.2 e le restrizioni di utilizzo che un'app deve applicare e rispettare.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 9142dd29-f1f4-4c2f-82ac-534f14b8bba1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 0d93f24f74a385613ebb5f3f44eee1951ea00be9
-ms.sourcegitcommit: 1cd4edd4ba1eb5e10cb61628029213eda316783a
+ms.openlocfilehash: 3fd505e8e692cfacafbfec7b65d6e6ac37d539f5
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266665"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071268"
 ---
 # <a name="how-to-use-built-in-rights"></a>Come fare per: Usare i diritti predefiniti
 

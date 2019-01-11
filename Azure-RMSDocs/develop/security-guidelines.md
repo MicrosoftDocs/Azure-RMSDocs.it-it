@@ -1,8 +1,8 @@
 ---
 title: Procedure di sicurezza consigliate per Information Protection
 description: È preferibile creare le applicazioni abilitate per RMS usando le procedure consigliate di Information Protection.
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 12/13/2018
 ms.topic: conceptual
@@ -10,12 +10,12 @@ ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
 ms.service: information-protection
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: c3a342dfa6be9640504bac4b44ef910534b1497d
-ms.sourcegitcommit: c9a0d81c18ea79a2520baa4b3777b06a72f87f60
+ms.openlocfilehash: 3b22a8723a232cd05349a19987686c25dc5f320f
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53382453"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070299"
 ---
 # <a name="security-best-practices-for-information-protection"></a>Procedure di sicurezza consigliate per Information Protection
 
