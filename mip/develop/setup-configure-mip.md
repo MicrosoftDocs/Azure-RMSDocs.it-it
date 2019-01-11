@@ -4,14 +4,14 @@ description: Informazioni sui prerequisiti di installazione e configurazione per
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/27/2018
+ms.date: 01/08/2019
 ms.author: bryanla
-ms.openlocfilehash: 2790c64095a6fca4a33f70aeada68fa0c6668020
-ms.sourcegitcommit: bdce88088f7a575938db3848dce33e7ae24fdc26
+ms.openlocfilehash: 2f84cfd8a0ae15a66cd624fe591f2891ff549768
+ms.sourcegitcommit: adc4621ec4738c0abb6c1fa81a6598a6dfc5ace6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52386730"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136233"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installazione e configurazione di Microsoft Information Protection (MIP) SDK 
 
@@ -113,9 +113,9 @@ Seguire poi questa procedura per assicurarsi che il computer client sia installa
 
    Ogni file ZIP o file tarball contiene tre sottodirectory:
 
-   - **Bins:** file binari compilati per ogni architettura della piattaforma, dove applicabile.
-   - **Include:** file di intestazione di Microsoft Information Protection SDK
-   - **Samples:** codice sorgente per le applicazioni di esempio
+   - **Contenitori:** I file binari compilati per ogni architettura della piattaforma, dove applicabile.
+   - **Includono:** I file di intestazione SDK di Microsoft Information Protection
+   - **Esempi:** Codice sorgente per applicazioni di esempio
 
    Per lo sviluppo in Visual Studio, l'SDK può essere installato anche tramite la Console di Gestione pacchetti NuGet:
 
@@ -139,7 +139,7 @@ Seguire poi questa procedura per assicurarsi che il computer client sia installa
 
 ## <a name="register-a-client-application-with-azure-active-directory"></a>Registrare un'applicazione client in Azure Active Directory
 
-Come parte del processo di provisioning dell'abbonamento a Office 365 viene creato un tenant di Azure AD associato. Il tenant di Azure AD consente la gestione delle identità e dell'accesso per gli *account utente* e gli *account di applicazione* di Office 365. Per le applicazioni che richiedono l'accesso ad API protette (ad esempio le API MIP) è necessario un account di applicazione.
+Come parte del processo di provisioning della sottoscrizione di Office 365, viene creato un tenant di Azure Active Directory (Azure AD) associato. Il tenant di Azure AD consente la gestione delle identità e dell'accesso per gli *account utente* e gli *account di applicazione* di Office 365. Per le applicazioni che richiedono l'accesso ad API protette (ad esempio le API MIP) è necessario un account di applicazione.
 
 Per il processo di autenticazione e autorizzazione in fase di esecuzione, gli account sono rappresentati da un'*entità di sicurezza*, derivata dalle informazioni di identità dell'account. Le entità di sicurezza che rappresentano un account di applicazione vengono definite [*entità servizio*](/azure/active-directory/develop/developer-glossary#service-principal-object). 
 
@@ -149,7 +149,7 @@ Per registrare un account di applicazione in Azure AD per l'uso con gli esempi e
   > Per accedere alla gestione del tenant Azure AD per la creazione dell'account, sarà necessario accedere al portale di Azure con un account utente membro del [ruolo "Proprietario" nella sottoscrizione](/azure/billing/billing-add-change-azure-subscription-administrator). A seconda della configurazione del tenant, potrebbe anche essere necessario essere membri del ruolo della directory "Amministratore globale" per [registrare un'applicazione](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
   > È consigliabile eseguire le operazioni di test con un account con restrizioni. Assicurarsi che l'account disponga solo dei diritti per accedere agli endpoint SCC necessari. Le password passate come testo non crittografato tramite riga di comando possono essere raccolte dai sistemi di registrazione.
 
-1. Seguire la procedura in [Guida introduttiva: registrare un'app con l'endpoint v1.0 di Azure Active Directory](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#adding-an-application). A scopo di test, usare i valori seguenti per le proprietà specificate quando si eseguono i passaggi della guida: 
+1. Seguire i passaggi descritti in [registrare un'app con Azure AD, registrare una nuova applicazione](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal) sezione. A scopo di test, usare i valori seguenti per le proprietà specificate quando si eseguono i passaggi della guida: 
     - **Tipo di applicazione** - selezionare "Nativa", in quanto le applicazioni usate nelle dimostrazioni dell'SDK sono applicazioni console installate in modo nativo. Le applicazioni native sono considerate client "pubblici" da OAuth2, perché non sono in grado di archiviare/usare le credenziali dell'applicazione in modo sicuro. Diversamente da un'applicazione basata su server "riservata", ad esempio un'applicazione Web, che è registrata con le proprie credenziali. 
     - **URI di reindirizzamento** - Dato che l'SDK usa applicazioni client console semplici, usare un URI nel formato `<app-name>://authorize`.
 
@@ -174,7 +174,7 @@ Al termine, la registrazione dell'applicazione e le autorizzazioni per le API do
    [![Registrazione di un'app in Azure AD](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
 
 
-Per altre informazioni sull'aggiunta di API e autorizzazioni a una registrazione, vedere [Aggiornare un'applicazione in Azure Active Directory, sezione Configurare un'applicazione client per accedere alle API Web](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#updating-an-application). In questo articolo sono disponibili informazioni su come aggiungere le API e le autorizzazioni necessarie per un'applicazione client.  
+Per altre informazioni sull'aggiunta di API e le autorizzazioni per una registrazione, vedere [aggiornamento di un'applicazione in Azure AD, configurare un'applicazione client per accedere alle API web](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). In questo articolo sono disponibili informazioni su come aggiungere le API e le autorizzazioni necessarie per un'applicazione client.  
 
 ## <a name="request-an-information-protection-integration-agreement-ipia"></a>Richiedere un contratto per l'integrazione di Information Protection (IPIA, Information Protection Integration Agreement)
 
@@ -219,6 +219,6 @@ Dopo aver inviato il messaggio di posta elettronica, si riceverà conferma della
 ## <a name="next-steps"></a>Passaggi successivi
 
 - Prima di iniziare la sezione delle guide introduttive, assicurarsi di leggere le informazioni sugli [osservatori in MIP SDK](concept-async-observers.md), perché MIP SDK è progettato per essere quasi interamente asincrono.
-- Se si è pronti per qualche esperienza pratica con l'SDK, iniziare con [Guida introduttiva: Inizializzazione delle applicazioni client (C++)](quick-app-initialization-cpp.md).
+- Se è pronti per l'esperienza pratica con il SDK, iniziare con [Guida introduttiva: Inizializzazione dell'applicazione client (C++)](quick-app-initialization-cpp.md).
 
 

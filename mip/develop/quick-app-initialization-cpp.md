@@ -4,16 +4,16 @@ description: Guida introduttiva che mostra come scrivere la logica di inizializz
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/27/2018
+ms.date: 01/08/2019
 ms.author: bryanla
-ms.openlocfilehash: 578c5aa69faa986663ea6c164d94e5940580167d
-ms.sourcegitcommit: 76e1b7c0255700813590be62d94b19338bf6c201
-ms.translationtype: HT
+ms.openlocfilehash: 686321c4f376679103b92419b5b86abaa74dc394
+ms.sourcegitcommit: adc4621ec4738c0abb6c1fa81a6598a6dfc5ace6
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866137"
+ms.lasthandoff: 01/09/2019
+ms.locfileid: "54136234"
 ---
-# <a name="quickstart-client-application-initialization-c"></a>Guida introduttiva: Inizializzazione delle applicazioni client (C++)
+# <a name="quickstart-client-application-initialization-c"></a>Guida introduttiva: Inizializzazione dell'applicazione client (C++)
 
 Questa guida introduttiva spiega come implementare il modello di inizializzazione client usato da MIP SDK per C++ in fase di esecuzione. 
 
@@ -25,7 +25,7 @@ Questa guida introduttiva spiega come implementare il modello di inizializzazion
 Se non è già stato fatto, assicurarsi di:
 
 - Completare i passaggi descritti in [Installazione e configurazione di Microsoft Information Protection (MIP) SDK](setup-configure-mip.md). La guida introduttiva "Inizializzazione delle applicazioni client" si basa sull'installazione e la configurazione corrette dell'SDK.
-- Facoltativamente:
+- Se lo si desidera:
   - Vedere [Oggetti profilo e motore](concept-profile-engine-cpp.md). Gli oggetti profilo e motore sono concetti universali, necessari per i client che usano le API File, Criteri e Protezione di MIP. 
   - Vedere [Concetti relativi all'autenticazione](concept-authentication-cpp.md) per informazioni su come vengono implementati l'autenticazione e il consenso dall'SDK e dalle applicazioni client.
   - Vedere [Concetti relativi agli osservatori](concept-async-observers.md) per altre informazioni sugli osservatori e su come vengono implementati. MIP SDK usa il modello basato su osservatori per implementare le notifiche di eventi asincroni.
@@ -259,8 +259,8 @@ Come accennato, gli oggetti profilo e motore sono necessari per i client dell'SD
    int main()
    {
      // Construct/initialize objects required by the application's profile object
-     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, friendly name)
-                 "<friendly-name>" };
+     ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, app name)
+                 "<application-name>" };
      auto profileObserver = make_shared<ProfileObserver>();         // Observer object                  
      auto authDelegateImpl = make_shared<AuthDelegateImpl>(         // Authentication delegate object (App ID)
                  "<application-id>");
@@ -310,10 +310,10 @@ Come accennato, gli oggetti profilo e motore sono necessari per i client dell'SD
 
 3. Sostituire i valori segnaposto nel codice sorgente appena incollato, usando i valori seguenti:
 
-   | Segnaposto | Valore | Esempio |
+   | Segnaposto | Value | Esempio |
    |:----------- |:----- |:--------|
-   | \<application-id\> | ID di applicazione Azure AD assegnato all'applicazione registrata in "Installazione e configurazione di MIP SDK" (2 istanze).  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
-   | \<friendly-name\> | Nome descrittivo definito dall'utente per l'applicazione. | AppInitialization |
+   | \<application-id\> | L'Azure AD Application ID (GUID) assegnati all'applicazione registrata nel [passaggio #2 della "il programma di installazione di Microsoft Information Protection SDK e della configurazione"](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory) articolo. Sostituire 2 istanze.  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
+   | \<nome dell'applicazione\> | Nome descrittivo definito dall'utente per l'applicazione. Deve contenere caratteri ASCII validi (escluso ';') e idealmente corrisponde al nome dell'applicazione è usato nella registrazione di Azure AD. | AppInitialization |
    | \<engine-account\> | Account usato per l'identità del motore. Quando si esegue l'autenticazione con un account utente durante l'acquisizione dei token, deve corrispondere a questo valore. | user1@tenant.onmicrosoft.com |
    | \<engine-state\> | Stato definito dall'utente da associare al motore. | MyAppState |
 
