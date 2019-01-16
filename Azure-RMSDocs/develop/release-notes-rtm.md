@@ -2,8 +2,8 @@
 title: Note sulla versione
 description: Aggiornamenti all'SDK per revisione e altre informazioni per sviluppatori.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 10/18/2017
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 05ac80a9032467fafe09e39941117c6b4c52d439
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 8132fd2afba45402f8f9c835f2d6db69dd8e81f2
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151351"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071200"
 ---
 # <a name="release-notes"></a>Note sulla versione
 
-Questo articolo contiene informazioni importanti su questa versione e le versioni precedenti di RMS SDK 2.1.
+Questo articolo contiene informazioni importanti su questa versione e quelle precedenti di RMS SDK 2.1.
 
 ## <a name="october-2017---update"></a>Aggiornamento di ottobre 2017
 
@@ -63,7 +63,7 @@ Questo articolo contiene informazioni importanti su questa versione e le version
 -   **Il controllo dei documenti** è attualmente possibile grazie a una serie di nuove API. Per altre informazioni, vedere [Controllo del contenuto](tracking-content.md).
 -   **Tipo di crittografia** -È ora supportato il controllo a livello di API per la selezione del pacchetto di crittografia. Per altre informazioni, vedere [Uso della crittografia](working-with-encryption.md).
 
-    **Nota**: nell'API non è più esposto il flag **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS**. Ciò significa che le app future non saranno più compilate se fanno riferimento a questo flag, tuttavia le app già create continueranno a funzionare poiché si rispetta il flag privatamente nel codice API. È possibile comunque ottenere il vantaggio del flag di algoritmi di crittografia precedenti deprecati, semplicemente modificando un flag. Per altre informazioni, vedere [Uso della crittografia](working-with-encryption.md).
+    **Nota**:  nell'API non è più esposto il flag **IPC\_LI\_DEPRECATED\_ENCRYPTION\_ALGORITHMS**. Ciò significa che le app future non saranno più compilate se fanno riferimento a questo flag, tuttavia le app già create continueranno a funzionare poiché si rispetta il flag privatamente nel codice API. È possibile comunque ottenere il vantaggio del flag di algoritmi di crittografia precedenti deprecati, semplicemente modificando un flag. Per altre informazioni, vedere [Uso della crittografia](working-with-encryption.md).
 
 -   **Le applicazioni in modalità server**, che usano [valori modalità API](https://msdn.microsoft.com/library/hh535236.aspx) di **IPC\_API\_MODE\_SERVER**, non richiedono un manifesto dell'applicazione. È possibile testare l'applicazione rispetto a un server RMS di produzione e non sono necessarie per ottenere una licenza di produzione quando si passa all'ambiente di produzione. Per altre informazioni sulle applicazioni in modalità server, vedere [Tipi di applicazioni](application-types.md).
 -   **La Registrazione** ora viene implementata tramite i metodi per file e di Event Tracing for Windows.
@@ -93,7 +93,7 @@ Il componente API File dell'SDK è stato integrato e ora offre le funzionalità 
 
     Funzioni aggiunte in questa versione:
 
-    **Nota**: sono stati aggiunti altri tipi di dati di supporto e strutture, non elencati in questo articolo, per le estensioni dell'API file. Tutti gli articoli aggiornati per questa versione sono contrassegnati come **preliminari e soggetti a modifiche**.
+    **Nota**: sono stati aggiunti altri tipi di dati di supporto e strutture, non elencati in questo articolo, per le estensioni dell'API file. Tutti gli articoli aggiornati per questa versione sono contrassegnati come **preliminari e soggetti a modifiche**.
 
     -   [IpcfOpenFileOnHandle](https://msdn.microsoft.com/library/dn771751.aspx)
     -   [IpcfOpenFileOnILockBytes](https://msdn.microsoft.com/library/dn771752.aspx)
@@ -116,19 +116,19 @@ Il componente API File dell'SDK è stato integrato e ora offre le funzionalità 
 
 -   **Supporto nativo per tutti i tipi di file**
 
-    È possibile aggiungere il supporto nativo per qualsiasi tipo di file (estensione) con questa versione di SDK 2.1 Rights Management Services. Ad esempio, per tutte le estensioni &lt;ext&gt; (non Office e pdf), verrà usata l'estensione \*p&lt;ext&gt; se la configurazione dell'amministratore per l'estensione è "NATIVA".
+    Con questa versione di Rights Management Services SDK 2.1. è possibile aggiungere il supporto nativo per qualsiasi tipo di file (estensione). Ad esempio, per tutte le estensioni &lt;ext&gt; (non Office e pdf), verrà usata l'estensione \*p&lt;ext&gt; se la configurazione dell'amministratore per l'estensione è "NATIVA".
 
     Per altre informazioni sui tipi di file supportati, vedere [Configurazione API file](file-api-configuration.md).
 
--   **Macchine con Windows 7 SP1 e Windows Server 2008 R2 SP1** senza l'aggiornamento, [KB2533623](https://support.microsoft.com/kb/2533623), potrebbero manifestare il seguente errore di protezione di qualsiasi file di Office "Parametro non corretto. Codice di errore 0x80070057". In tal caso, installare l'aggiornamento e riprovare. Se il problema persiste, contattare l'alias RMS SDK Beta Feedback <rmcstbeta@microsoft.com>.
+-   I **computer con Windows 7 SP1 e Windows Server 2008 R2 SP1** senza l'aggiornamento [KB2533623](https://support.microsoft.com/kb/2533623) potrebbero visualizzare l'errore seguente durante la protezione dei file di Office "Parametro non corretto. Codice di errore 0x80070057". In tal caso, installare l'aggiornamento e riprovare. Se il problema persiste, contattare l'alias RMS SDK Beta Feedback <rmcstbeta@microsoft.com>.
 
-    **Nota**: a partire dalla versione di aprile 2015, è stato aggiunto un controllo al processo di installazione per questo KB.
+    **Nota**:  a partire dalla versione di aprile 2015, al processo di installazione è stato aggiunto un controllo relativo a questo KB.
 
-     
+     
 
 -   **Integrazione di API file**
 
-    L'API file Active Directory Rights Management Services, con l'aggiunta dell'API File, offre i seguenti vantaggi e funzionalità.
+    L'API file Active Directory Rights Management Services, con l'aggiunta dell'API File, offre le funzionalità e i vantaggi riportati di seguito.
 
       - È possibile proteggere i dati riservati in modo automatico senza dover conoscere i dettagli dell'implementazione Information Rights Management (IRM) usata da diversi formati di file.
 
@@ -144,19 +144,19 @@ Il componente API File dell'SDK è stato integrato e ora offre le funzionalità 
 
     **Soluzione**: l'applicazione deve aggiungere in modo esplicito i diritti di **proprietario** al proprietario della licenza durante la creazione di una licenza da zero tramite [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx). Per altre informazioni, vedere [Aggiungere diritti espliciti di proprietario](add-explicit-owner-rights.md).
 
--   **Problema**: se un'applicazione chiama [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) o [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) due volte per la stessa finestra usando il relativo handle, SDK 2.1 RMS restituirà un errore in **HRESULT**.
+-   **Problema**: se un'applicazione chiama due volte [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) o [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) per la stessa finestra usando il relativo handle, RMS SDK 2.1 restituisce un errore in **HRESULT**.
 
-    **Soluzione**: per linee guida specifiche su questo problema, vedere la sezione Osservazioni di [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) e [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx).
+    **Soluzione**: per linee guida specifiche su questo problema, vedere la sezione Remarks (Osservazioni) in [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) e [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx).
 
--   **Problema**: quando si compila per diverse architetture, è necessario usare queste linee guida.
+-   **Problema**: quando si procede alla compilazione per più architetture, è necessario usare queste linee guida.
 
-    **Soluzione**: se si vuole usare Ipcsecproc\*isv.dll per un'architettura diversa, ad esempio è stato installato l'SDK a 64 bit su un computer a 64 bit ma si vuole distribuire in un computer a 32 bit che richiede Ipcsecproc\*isv.dll, è necessario installare l'SDK a 32 bit su un altro computer e copiare i file Ipcsecproc\*isv.dll dalla cartella "%PROGRAMFILES%\\Microsoft Information Protection And Control" (percorso predefinito o punto in cui si è scelto di installare l'SDK).
+    **Soluzione**: se si vuole usare Ipcsecproc\*isv.dll per un'architettura diversa, ad esempio è stato installato l'SDK a 64 bit in un computer a 64 bit ma ora si vuole procedere alla distribuzione in un computer a 32 bit che richiede Ipcsecproc\*isv.dll, è necessario installare l'SDK a 32 bit in un altro computer e copiare i file Ipcsecproc\*isv.dll dalla cartella "%PROGRAMFILES%\\Microsoft Information Protection And Control" (il percorso predefinito o quello in cui si è scelto di installare l'SDK).
 
 ## <a name="frequently-asked-questions"></a>Domande frequenti
 
 **D**: Come funziona il comportamento della lingua predefinita con le funzioni che accettano un parametro LCID?
 
-**R**: usare 0 per le impostazioni locali predefinite. In questo caso, il client 2.1 SDK cerca i nomi e le descrizioni nella sequenza riportata di seguito, recuperando il primo disponibile:
+**R**: Usare 0 per le impostazioni locali predefinite. In questo caso, AD RMS Client 2.1 cerca i nomi e le descrizioni nella sequenza riportata di seguito, recuperando il primo disponibile:
 
     1 - User preferred LCID.
     2 - System locale LCID.

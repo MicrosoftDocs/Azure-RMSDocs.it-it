@@ -1,9 +1,9 @@
 ---
 title: Configurare Visual Studio | Azure RMS
-description: Istruzioni su come configurare un progetto di Visual Studio per l’uso di RMS SDK 2.1.
+description: Istruzioni su come configurare un progetto di Visual Studio per l'uso di RMS SDK 2.1.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 0713bbc51b90e95d93917f7c43c3401a7cbe8ef2
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: f26400ba1230ef1b274fa04120c22995d2f6620c
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44151130"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071489"
 ---
 # <a name="configure-visual-studio"></a>Configurare Visual Studio
 
-Questo argomento contiene le istruzioni su come configurare un progetto di Visual Studio per usare Rights Management Services SDK 2.1.
+Questo argomento contiene le istruzioni di configurazione di un progetto di Visual Studio per l'uso di Rights Management Services SDK 2.1.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -29,7 +29,7 @@ Questo argomento contiene le istruzioni su come configurare un progetto di Visua
 
 **Istruzioni**
 
-### <a name="step-1-configure-a-visual-studio-project-to-use-rms-sdk-21"></a>Passaggio 1: Configurare un progetto di Visual Studio per usare RMS SDK 2.1
+### <a name="step-1-configure-a-visual-studio-project-to-use-rmssdk21"></a>Passaggio 1: Configurare un progetto di Visual Studio per usare RMS SDK 2.1
 
 Queste istruzioni sono specifiche per Microsoft Visual Studio 2010. Se si utilizza una versione diversa di Microsoft Visual Studio, le finestre di dialogo delle impostazioni possono apparire leggermente diverse.
 

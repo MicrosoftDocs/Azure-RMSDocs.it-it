@@ -2,8 +2,8 @@
 title: Come eseguire il debug dell'applicazione abilitata all'uso di diritti | Azure RMS
 description: L'argomento seguente illustra come eseguire il debug dell'applicazione e usare il registro eventi di Windows.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 6F6C7651-6A6E-45DD-A0C5-F036F803249B
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: ed627c98238028fc14f977f2ce7475f356ceb889
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: cb77177ecb0c92f3e991e0f6d06a55fa2c332873
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147373"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071555"
 ---
 # <a name="how-to-debug-a-rights-enabled-application"></a>Procedura: Eseguire il debug dell'applicazione abilitata all'uso di diritti
 
@@ -32,21 +32,21 @@ In Rights Management Services SDK 2.1, nella versione per gli sviluppatori del r
 
 ```
 HKEY_LOCAL_MACHINE
-   SOFTWARE
-      Microsoft
-         MSIPC
-            "Trace" = 00000001
-            Data type
-            dword
+   SOFTWARE
+      Microsoft
+         MSIPC
+            "Trace" = 00000001
+            Data type
+            dword
 ```
 
 ### <a name="application-logging-by-using-the-windows-event-log"></a>Registrazione dell'applicazione tramite il registro eventi di Windows
 
 Il nome del registro eventi è "Microsoft-RMS-MSIPC/Debug". Ciò significa che in Visualizzatore eventi di Windows il registro viene visualizzato come "Registri applicazioni e servizi\\Microsoft\\RMS\\MSIPC\\Debug".
 
-**Nota**: il registro è abilitato per impostazione predefinita ed è impostato sul livello di dettaglio 3.
+**Nota**:  il registro è abilitato per impostazione predefinita ed è impostato sul livello di dettaglio 3.
 
- 
+ 
 
 Per modificare le impostazioni della funzionalità di registrazione, è possibile usare l'interfaccia utente per il Visualizzatore eventi di Windows o Wevtutil, uno strumento da riga di comando di Windows.
 
@@ -62,4 +62,4 @@ Ad esempio, il comando seguente abiliterà il registro eventi MSIPC e imposterà
 
 **wevtutil sl Microsoft-RMS-MSIPC/Debug /e:true /l:4**
 
-**Nota**: nel menu **Visualizza** del Visualizzatore eventi di Windows selezionare **Visualizza registri analitici e di debug** per rendere visibile il registro di debug MSIPC.
+**Nota**:  nel menu **Visualizza** del Visualizzatore eventi di Windows selezionare **Visualizza registri analitici e di debug**  per rendere visibile il registro di debug MSIPC.

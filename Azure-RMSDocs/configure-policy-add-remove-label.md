@@ -4,22 +4,24 @@ description: Aggiungere o rimuovere un'etichetta di Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 12/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
-ms.openlocfilehash: 367426324af487cbdf0ddaac53eb86aa89c168b7
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 154b8d5b61169208cdc01a2445be918ea6e2f77b
+ms.sourcegitcommit: b10df82d9f00b3f826bce38beb7b666ce3f56e84
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53304856"
+ms.lasthandoff: 12/28/2018
+ms.locfileid: "53814204"
 ---
 # <a name="add-or-remove-a-label-to-or-from-an-azure-information-protection-policy"></a>Aggiungere o rimuovere un'etichetta a o da un criterio di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-Dopo aver creato un'etichetta di Azure Information Protection, è possibile aggiungerla a un criterio in modo da renderla disponibile per gli utenti. Se l'etichetta è per tutti gli utenti, aggiungerla ai criteri globali. Se l'etichetta è per un subset di utenti, aggiungerla a un criterio con ambito. Attualmente, è possibile aggiungere un'etichetta a un solo criterio. Per aggiungere un'etichetta secondaria, l'etichetta padre deve essere nello stesso criterio o nei criteri globali.
+Dopo aver creato un'etichetta di Azure Information Protection, è possibile aggiungerla a un criterio in modo da renderla disponibile per gli utenti. Se l'etichetta è per tutti gli utenti, aggiungerla ai criteri globali. Se l'etichetta è per un subset di utenti, aggiungerla a un criterio con ambito. Un'etichetta può essere aggiunta a un solo criterio. 
+
+Per aggiungere un'etichetta secondaria, l'etichetta padre deve essere nello stesso criterio o nei criteri globali. Quando si aggiunge un'etichetta secondaria, le impostazioni dell'etichetta principale non vengono ereditate. Per gli utenti a cui è assegnata l'etichetta secondaria nei criteri, l'etichetta principale è supportata solo come contenitore visualizzato per il nome e il colore. In questo scenario altre impostazioni di configurazione nell'etichetta principale non sono supportate per contrassegni visivi, protezione e condizioni. Sebbene sia comunque possibile configurarle, tali impostazioni dell'etichetta principale sono supportate solo per gli utenti che nei criteri hanno l'etichetta principale senza etichetta secondaria.
 
 Se un'etichetta è già in un criterio, è possibile rimuoverla dal criterio. Questa azione non elimina l'etichetta, che resta disponibile per essere usata in un altro criterio.
 
@@ -56,5 +58,4 @@ Se è necessario creare un criterio con ambito in modo che l'etichetta si applic
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).  
-
+Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).

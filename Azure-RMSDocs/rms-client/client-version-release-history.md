@@ -4,17 +4,17 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/13/2018
+ms.date: 12/27/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c6312d3f10a70ffcb3cc48447fcbc751b7072a0d
-ms.sourcegitcommit: db24caa96033fd0c7a0fad4e36518a816a570c94
+ms.openlocfilehash: 94120417c5e2e61f1d28fc16d714ec1c91a4ed0f
+ms.sourcegitcommit: 630f03a91f84d79219e04b4085bdfb5bc6478e88
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53335524"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54011974"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection: Cronologia delle versioni e criteri per il supporto
 
@@ -22,13 +22,13 @@ ms.locfileid: "53335524"
 
 Il team di Azure Information Protection aggiorna regolarmente il client di Azure Information Protection con correzioni e nuove funzionalità. 
 
-È possibile scaricare la versione disponibile a livello generale più recente e la versione di anteprima corrente (se disponibile) dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Dopo un breve intervallo solitamente di un paio di settimane, la versione disponibile a livello generale viene inclusa anche in Microsoft Update Catalog (categoria: **Azure Information Protection**). L'inserimento nel catalogo significa che è possibile aggiornare il client tramite WSUS o Configuration Manager o altri meccanismi di distribuzione del software che usano Microsoft Update.
+È possibile scaricare la versione disponibile a livello generale più recente e la versione di anteprima corrente (se disponibile) dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Dopo un breve periodo solitamente di un paio di settimane, la versione disponibile a livello generale più recente viene inclusa anche in Microsoft Update Catalog (categoria: **Azure Information Protection**). L'inserimento nel catalogo significa che è possibile aggiornare il client tramite WSUS o Configuration Manager o altri meccanismi di distribuzione del software che usano Microsoft Update.
 
 Per altre informazioni, vedere [Aggiornamento e gestione del client Azure Information Protection](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
 ### <a name="servicing-information-and-timelines"></a>Informazioni e tempistiche di manutenzione
 
-Ogni versione con disponibilità generale del client di Azure Information Protection è supportata per un massimo di sei mesi dopo il rilascio della versione con disponibilità generale successiva. Le versioni del client non supportate non sono incluse in questa pagina. Le correzioni e le nuove funzionalità sono sempre valide per l'ultima versione disponibile a livello generale e non verranno applicate alle versioni precedenti.
+Ogni versione con disponibilità generale del client di Azure Information Protection è supportata per un massimo di sei mesi dopo il rilascio della versione con disponibilità generale successiva. La documentazione non include informazioni sulle versioni non supportate del client. Le correzioni e le nuove funzionalità sono sempre valide per l'ultima versione disponibile a livello generale e non verranno applicate alle versioni precedenti.
 
 Le versioni di anteprima non devono essere distribuite agli utenti finali nelle reti di produzione, ma è possibile usare la versione di anteprima più recente per visualizzare e provare le nuove funzionalità e correzioni che saranno disponibili nella prossima versione disponibile a livello generale. Non sono supportate le versioni di anteprima non aggiornate.
 
@@ -170,40 +170,6 @@ Questa versione include MSIPC versione 1.0.3403.1224 del client RMS.
 
 - Quando si usa l'impostazione client avanzata per [etichettare un documento di Office usando una proprietà personalizzata esistente](client-admin-guide-customizations.md#label-an-office-document-by-using-an-existing-custom-property), l'assegnazione automatica dell'etichetta non esegue l'override di quella manuale.
 
-## <a name="version-127480"></a>Versione 1.27.48.0
-
-**Data di rilascio**: 30/05/2018
-
-Questa versione include MSIPC versione 1.0.3403.1224 del client RMS.
-
-**Nuove funzionalità**: 
-
-- Per lo scanner di Azure Information Protection:
-    
-    - È possibile specificare un elenco di tipi di file da includere o escludere dall'analisi. Per specificare questo elenco, usare [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes). Dopo aver specificato l'elenco di tipi di file, è possibile aggiungere un nuovo tipo di file all'elenco usando [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes) e rimuovere un tipo di file dall'elenco usando [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes).
-    
-    - È possibile applicare un'etichetta ai file senza esaminarne il contenuto applicando un'etichetta predefinita. Usare il cmdlet [Set-AIPScannerRepository](/powershell/module/azureinformationprotection/Set-AIPScannerRepository) e impostare il parametro *MatchPolicy* su **Off**. 
-    
-    - È possibile individuare i file con i tipi di informazioni riservate senza configurare le etichette per la classificazione automatica. Usare il cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) e impostare il parametro *DiscoverInformationTypes* su **All**
-    
-    - Per impostazione predefinita, sono protetti solo i tipi di documenti di Office. Altri tipi di file possono essere protetti quando li si definisce nel Registro di sistema. Per informazioni, vedere [Configurazione dell'API file](../develop/file-api-configuration.md) nelle linee guida per sviluppatori.
-    
-    - Per impostazione predefinita, lo scanner viene ora eseguito con un livello di integrità basso per una maggiore sicurezza in caso di esecuzione con un account con privilegi. Quando l'account del servizio che esegue lo scanner ha solo i diritti indicati nei [prerequisiti dello scanner](../deploy-aip-scanner.md#prerequisites-for-the-azure-information-protection-scanner), il livello di integrità basso non è necessario e non è consigliato perché influisce negativamente sulle prestazioni. È possibile usare un'impostazione avanzata del client per disabilitare il livello di integrità basso. [Altre informazioni](client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) 
-    
-- Per [Get-AIPFileStatus](/powershell/module/azureinformationprotection/Get-AIPFileStatus), l'output include ora il proprietario e l'emittente di Rights Management, oltre che la data in cui il contenuto è stato protetto.
- 
-**Modifiche aggiuntive**:
-
-- Per lo scanner di Azure Information Protection: 
-    
-    - Se è stata installata una versione precedente dello scanner, eseguire di nuovo il comando di installazione dello scanner con [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner) dopo aver aggiornato il client Azure Information Protection. Verranno mantenute le impostazioni di configurazione per i repository e lo scanner. Reinstallando lo scanner, vengono concesse allo scanner le autorizzazioni di eliminazione account del servizio per il database dello scanner, che saranno necessarie per i report.    
-    
-    - Il parametro *ScanMode* di [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration) è stato rinominato in **Enforce** e i valori sono Off e On.
-    
-    - Per usare un'etichetta predefinita, non è più necessario configurare un'etichetta predefinita come impostazione di criteri. È sufficiente specificare l'etichetta predefinita con la configurazione del repository. 
-
-- La pagina iniziale "Congratulazioni" è stata rimossa ed è stata sostituita da una pagina relativa alle novità di Azure Information Protection, visualizzata al primo utilizzo nelle applicazioni di Office.
-
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni sull'installazione e l'uso del client: 
@@ -211,4 +177,3 @@ Per altre informazioni sull'installazione e l'uso del client:
 - Per gli utenti: [Scaricare e installare il client](install-client-app.md)
 
 - Per gli amministratori: [Guida per l'amministratore del client di Azure Information Protection](client-admin-guide.md)
-

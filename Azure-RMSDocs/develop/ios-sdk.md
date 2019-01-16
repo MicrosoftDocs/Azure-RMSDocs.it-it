@@ -2,8 +2,8 @@
 title: Installazione per iOS e OS X | Azure RMS
 description: Le applicazioni iOS e OS X possono usare RMS SDK 4.2 per abilitare la protezione integrata delle informazioni nella propria applicazione con AAD RM.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 39856dc34396e1aa32a73f436da9744583519c86
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 620412b55ca583d8a84cf8d167ba890cea742b7f
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150365"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070229"
 ---
 # <a name="ios-and-os-x-setup"></a>Installazione per iOS e OS X
 
@@ -25,7 +25,7 @@ Le applicazioni iOS e OS X possono usare Microsoft Rights Management SDK 4.2 per
 
 Questo argomento illustra come impostare l'ambiente per la creazione di nuove applicazioni personalizzate.
 
-**Nota** Questo SDK non supporta l'iPod Touch.
+**Nota**  Questo SDK non supporta l'iPod Touch.
 
 
 -   [Prerequisiti](#prerequisites)
@@ -46,7 +46,7 @@ Nel sistema di sviluppo è consigliabile disporre del software seguente:
 
     Questo SDK consente di sviluppare per iOS 7.0 e OS X 10.8 e versioni successive.
 
--   Libreria di autenticazione: è consigliabile usare [Active Directory Authentication Library .NET](https://msdn.microsoft.com/library/jj573266.aspx). Tuttavia, è possibile usare anche altre librerie di autenticazione che supportano OAuth 2.0.
+-   Libreria di autenticazione: è consigliabile usare [Azure Active Directory Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx). Tuttavia, è possibile usare anche altre librerie di autenticazione che supportano OAuth 2.0.
 
     Per altre informazioni, vedere [ADAL per iOS](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios) o [ADAL per OS X](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/tree/OSXUniversal)
 
@@ -83,7 +83,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabil
     ![Aggiungere un'aggregazione di risorse](../media/iOS-add-resource-bundle-02a.png)
 
 -   Come in precedenza per la copia del framework, selezionare il pulsante di opzione **Create groups for any added folders** e deselezionare la casella di controllo **Copy items into destination group’s folder (if needed)**.
--   L’SDK si basa anche su altri framework, tra cui **CoreData**, **MessageUI**, **SystemConfiguration**, **Libresolv** e **Security**. Per aggiungere questi framework, passare alla sezione **Linked Frameworks and Libraries** del riquadro **Summary** di destinazione ed espandere tale sezione per aggiungerli.
+-   L'SDK si basa su altri framework, tra cui: **CoreData**, **MessageUI**, **SystemConfiguration**, **Libresolv** e **Security**. Per aggiungere questi framework, passare alla sezione **Linked Frameworks and Libraries** del riquadro **Summary** di destinazione ed espandere tale sezione per aggiungerli.
 
     Sono necessari i framework **UIKit** e **Foundation**, in genere presenti per impostazione predefinita.
 

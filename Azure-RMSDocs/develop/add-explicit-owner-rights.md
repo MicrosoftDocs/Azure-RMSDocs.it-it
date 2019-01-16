@@ -2,8 +2,8 @@
 title: Come aggiungere diritti proprietario espliciti | Azure RMS
 description: L'applicazione deve aggiungere in modo esplicito i diritti "proprietario" durante la creazione di una licenza da zero.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: EF43FAC4-ABB4-459D-B173-972B5716F816
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 6322831ee15266a4709284da0f9eb113f6d3eaf0
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: ee003510feaebfb0615eaf8e8408e0276cc082d6
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147120"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071166"
 ---
 # <a name="how-to-add-explicit-owner-rights"></a>Procedura: Aggiungere diritti espliciti di proprietario
 
@@ -27,14 +27,13 @@ L'applicazione deve aggiungere in modo esplicito i diritti "proprietario" durant
 
 Quando l'applicazione crea un handle di licenza tramite [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx), deve anche concedere diritti completi (autorizzazioni) al proprietario in modo esplicito.
 
->[!NOTE] 
-> L'impostazione di un utente come "proprietario" tramite [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx) con la proprietà **IPC\_LI\_OWNER** non concede al proprietario autorizzazioni complete.
+>[!NOTE]  L'impostazione di un utente come "proprietario" tramite [IpcSetLicenseProperty](https://msdn.microsoft.com/library/hh535271.aspx) con la proprietà **IPC\_LI\_OWNER** non concede al proprietario autorizzazioni complete.
 
 L'esempio di codice seguente illustra solo i passaggi da eseguire per la creazione e l'aggiunta di diritti specifici a una determinata licenza.
 
 ## <a name="instructions"></a>Istruzioni
- 
-## <a name="step-1-example-scenario"></a>Passaggio 1: scenario di esempio
+ 
+## <a name="step-1-example-scenario"></a>Passaggio 1: Scenario di esempio
 
 In questo esempio i diritti necessari vengono aggiunti a una licenza creata con [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx). L'esempio illustra la creazione e l'assegnazione dei diritti alla licenza tramite un elenco di diritti.
 

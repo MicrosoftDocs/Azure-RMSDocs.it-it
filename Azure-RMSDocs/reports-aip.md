@@ -4,19 +4,19 @@ description: Come usare il reporting centralizzato per monitorare l'adozione del
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/08/2018
+ms.date: 12/30/2018
 ms.topic: article
 ms.prod: ''
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 58ea955deef9341ec80b516b89feec609389b9ad
-ms.sourcegitcommit: 4caf3aa13506554928c5fda38994301ddcbdfb41
+ms.openlocfilehash: 0c2309fb635a05f6b0c836b7d4caf04d1c17a23a
+ms.sourcegitcommit: 6651546fa69538e2099b5c2b92ab0902d568a96a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53068810"
+ms.lasthandoff: 12/31/2018
+ms.locfileid: "53815123"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -101,6 +101,11 @@ Per generare questi report gli endpoint inviano i seguenti tipi di informazioni 
 
 Queste informazioni vengono archiviate in un'area di lavoro di Azure Log Analytics di proprietà dell'organizzazione e possono essere visualizzate dagli utenti con i diritti di accesso all'area di lavoro. Per informazioni sulla configurazione dell'accesso all'area di lavoro, vedere la sezione [Gestire utenti e account](/azure/log-analytics/log-analytics-manage-access?toc=/azure/azure-monitor#manage-accounts-and-users) nella documentazione di Azure.
 
+> [!NOTE]
+> L'area di lavoro di Azure Log Analytics per Azure Information Protection include una casella di controllo per le corrispondenze di contenuto del documento. Quando si seleziona questa casella di controllo vengono raccolti anche i dati effettivi identificati da tipi di informazioni riservate o dalle condizioni personalizzate. Possono essere inclusi ad esempio numeri di carta di credito, numeri di previdenza sociale, numeri di passaporto e numeri di conto bancario. Se non si vuole raccogliere questi dati, non selezionare la casella di controllo.
+>
+> Attualmente queste informazioni non vengono visualizzate nei report, ma possono essere visualizzate e recuperate tramite query.
+
 ## <a name="prerequisites-for-azure-information-protection-analytics"></a>Prerequisiti per l'analitica di Azure Information Protection
 Per visualizzare i report di Azure Information Protection e creare report personalizzati, verificare che siano soddisfatti i requisiti seguenti.
 
@@ -141,6 +146,9 @@ Nel pannello Azure Information Protection trovare le opzioni del menu **Dashboar
     Questo report contiene un'opzione **Colonne** che consente di visualizzare ulteriori informazioni sulle attività rispetto alla visualizzazione predefinita.
 
 - **Individuazione dei dati (anteprima)**: usare questo report per visualizzare informazioni sui file trovati dagli scanner o da Windows Defender ATP.
+
+> [!NOTE]
+> È presente un problema noto per cui nei percorsi e nomi di file la visualizzazione di caratteri non ASCII viene sostituita da punti interrogativi (**?**) quando le impostazioni locali del sistema operativo di invio corrispondono all'inglese.
 
 ## <a name="how-to-modify-the-reports"></a>Come modificare i report
 

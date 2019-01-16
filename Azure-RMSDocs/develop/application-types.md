@@ -2,8 +2,8 @@
 title: Tipi di applicazioni | Azure RMS
 description: Questo argomento illustra i tipi di applicazioni che è possibile scegliere di creare come abilitate all’uso di diritti.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,19 +12,19 @@ ms.assetid: 97169FC3-1395-4433-A632-7B0F020FABFE
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: fbd49df82faec0f9ea198e0ba7ad334bc5b2a831
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 744a5648bc436bb903cf1b8feb47ca91b19bb7fc
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44149940"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071659"
 ---
 # <a name="application-types"></a>Tipi di applicazioni
 
 
 Questo argomento illustra i tipi di applicazioni che è possibile scegliere di creare come abilitate all’uso di diritti.
 
-Rights Management Services SDK 2.1 supporta attualmente i tipi di applicazioni seguenti.
+Rights Management Services SDK 2.1 attualmente supporta i tipi di applicazioni seguenti.
 
 ## <a name="simple-applications"></a>Applicazioni semplici
 
@@ -34,7 +34,7 @@ Un’applicazione semplice può essere rappresentata da uno strumento da riga di
 
 La *modalità server* è destinata ad applicazioni non interattive che utilizzano, proteggono o elaborano contenuto protetto tramite RMS. Un esempio può essere un’applicazione per la *prevenzione della perdita di dati* che viene eseguita come servizio in un file server e che protegge automaticamente i documenti riservati. Per un esempio di questo tipo di applicazione, vedere l’[esempio IpcDlp](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/IpcDlpApp).
 
-Se l'applicazione usa la *modalità server*, l’autenticazione al server RMS deve avvenire automaticamente. A differenza della *modalità client*, RMS SDK 2.1 non visualizzerà una finestra di richiesta di credenziali se l’autenticazione automatica non riesce. Inoltre, nell’esecuzione in *modalità server* non è necessario alcun manifesto dell'applicazione.
+Se l'applicazione usa la *modalità server*, l’autenticazione al server RMS deve avvenire automaticamente. A differenza della *modalità client*, RMS SDK 2.1 non apre una richiesta di credenziali se l'autenticazione automatica non riesce. Inoltre, nell’esecuzione in *modalità server* non è necessario alcun manifesto dell'applicazione.
 
 Per altre informazioni sull'impostazione della modalità di sicurezza dell’API, vedere [Impostazione della modalità di sicurezza API](setting-the-api-security-mode-api-mode.md).
 
@@ -42,7 +42,7 @@ Per altre informazioni sull'impostazione della modalità di sicurezza dell’API
 
 Un'applicazione rich client consente agli utenti di visualizzare e modificare i dati tramite un'interfaccia utente grafica (GUI). I dati presentati in questa interfaccia GUI sono spesso di alto valore e sensibili al furto o all’esposizione accidentale. Il supporto della protezione delle informazioni consente in genere di migliorare gli scenari esistenti, ma non è il motivo principali per cui si sviluppa l'applicazione.
 
-L’uso di RMS SDK 2.1 con le applicazioni rich client consente di:
+L’uso di RMS SDK 2.1 con le applicazioni rich client consente di:
 
 -   Garantire che questi dati siano sempre crittografati.
 

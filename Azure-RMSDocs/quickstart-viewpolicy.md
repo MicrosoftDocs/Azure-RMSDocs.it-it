@@ -4,17 +4,17 @@ description: Se l'organizzazione non ha familiarità con Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 12/15/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: f5cf70b0827e36ffae6644634ef198385ef6d11a
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: c890d6acf2557093441a175bc8ed8657e8d1d9da
+ms.sourcegitcommit: bc082cffaa698b89b28aef7034290553c26f667b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023516"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411814"
 ---
-# <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Avvio rapido: Introduzione ad Azure Information Protection nel portale di Azure
+# <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Guida introduttiva: Introduzione ad Azure Information Protection nel portale di Azure
 
 In questa guida introduttiva si aggiungerà Azure Information Protection al portale di Azure, si verificherà che il servizio di protezione sia attivato e si visualizzeranno i criteri predefiniti dell'organizzazione. 
 
@@ -75,7 +75,7 @@ La prima volta che ci si connette al servizio Azure Information Protection trami
     
 2. Dedicare alcuni minuti ad acquisire familiarità con le etichette visualizzate:
     
-    - Etichette per la classificazione: **Personal**, **Public**, **General**, **Confidential** (Riservato) e **Highly Confidential** (Riservatezza elevata). Le ultime due etichette si espandono per visualizzare le etichette secondarie, offrendo esempi di come una classificazione può avere sottocategorie:
+    - Etichette per la classificazione: **Personale**, **Pubblico**, **Generale**, **Riservato** e **Riservatezza elevata**. Le ultime due etichette si espandono per visualizzare le etichette secondarie, offrendo esempi di come una classificazione può avere sottocategorie:
     
     - Con la configurazione predefinita, alcune etichette non hanno contrassegni visivi configurati. I contrassegni visivi sono il piè di pagina, l'intestazione e la filigrana. In base ai criteri predefiniti, per alcune etichette può essere impostata una protezione. Ad esempio: 
     
@@ -83,7 +83,7 @@ La prima volta che ci si connette al servizio Azure Information Protection trami
     
 3. Dopo le etichette, nella sezione **Configure settings to display and apply on Information Protection end users** (Configurare le impostazioni da visualizzare e applicare per gli utenti finali di Information Protection) vengono visualizzate anche alcune impostazioni dei criteri. Ad esempio non è presente un'etichetta predefinita (non tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta) e gli utenti non devono dare una giustificazione quando modificano le etichette:
     
-    ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Criterio predefinito](./media/info-protect-policy-default-settings.png) 
+    ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Criterio predefinito](./media/info-protect-policy-default-settings-quickstart.png) 
 
 4. Poiché si stanno visualizzando solo le etichette e le impostazioni, è possibile chiudere tutti i pannelli aperti.
 

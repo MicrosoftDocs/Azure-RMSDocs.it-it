@@ -2,8 +2,8 @@
 title: Configurazione dell'API file | Azure RMS
 description: Il comportamento dell'API file può essere configurato tramite le impostazioni del Registro di sistema.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 10/11/2017
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.assetid: 930878C2-D2B4-45F1-885F-64927CEBAC1D
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 1323984258b64e9d28142a0209a89d3791ab03dd
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 0b05498730d064dfa2b7fb2183b1a8694c1fbf63
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44148648"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54070622"
 ---
 # <a name="file-api-configuration"></a>Configurazione dell'API file
 
@@ -37,15 +37,15 @@ Le sezioni seguenti descrivono le chiavi e valori chiave che controllano la crit
 
 ### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection`
 
-**Tipo**: chiave
+**Tipo**: Chiave
 
-**Descrizione**: contiene la configurazione generale dell'API file.
+**Description**: contiene la configurazione generale dell'API file.
 
 ### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>`
 
-**Tipo**: chiave
+**Tipo**: Chiave
 
-**Descrizione**: specifica le informazioni di configurazione di un'estensione file specifica, ad esempio, TXT, JPG e così via.
+**Description**: specifica le informazioni di configurazione di un'estensione file specifica, ad esempio, TXT, JPG e così via.
 
 - Il carattere jolly "*" è consentito, ma l'impostazione con un'estensione specifica ha la precedenza sull'impostazione con il carattere jolly. Il carattere jolly non influisce sulle impostazioni dei file di Microsoft Office; questi devono essere disabilitati in modo esplicito per tipo di file.
 - Per specificare i file che non hanno un'estensione, usare “.”
@@ -58,16 +58,16 @@ Per specificare il comportamento di protezione, impostare il valore della **crit
 
 **Tipo**: REG_SZ
 
-**Descrizione**: contiene uno dei tre valori:
+**Description**: contiene uno dei tre valori:
 
 - **Off**: la crittografia è disabilitata.
 
 > [!Note]
 > Questa impostazione non è rilevante per la decrittografia. È possibile decrittografare qualsiasi file crittografato, se crittografato tramite la protezione nativa o Pfile, purché l'utente disponga del diritto di **ESTRAZIONE**.
 
-- **Nativa**: si usa la crittografia nativa. Per i file di Office, il file crittografato avrà la stessa estensione del file originale. Ad esempio, un file con estensione .docx sarà crittografato in un file con estensione .docx. Per altri file a cui può essere applicata la protezione nativa, il file sarà crittografato in un file con un'estensione del formato p*zzz*, dove *zzz* è l'estensione del file originale. Ad esempio i file con estensione txt vengono crittografati in un file con estensione ptxt. Di seguito viene fornito un elenco di estensioni di file a cui può essere applicata la protezione nativa.
+- **Native**:  viene usata la crittografia nativa. Per i file di Office, il file crittografato avrà la stessa estensione del file originale. Ad esempio, un file con estensione .docx sarà crittografato in un file con estensione .docx. Per altri file a cui può essere applicata la protezione nativa, il file sarà crittografato in un file con un'estensione del formato p*zzz*, dove *zzz* è l'estensione del file originale. Ad esempio i file con estensione txt vengono crittografati in un file con estensione ptxt. Di seguito viene fornito un elenco di estensioni di file a cui può essere applicata la protezione nativa.
 
-- **Pfile**: si usa la crittografia PFile. All'estensione originale del file crittografato sarà aggiunto pfile. Dopo la crittografia, ad esempio, l'estensione di un file sarà .txt.pfile.
+- **Pfile**: viene usata la crittografia PFile. All'estensione originale del file crittografato sarà aggiunto pfile. Dopo la crittografia, ad esempio, l'estensione di un file sarà .txt.pfile.
 
 
 > [!Note]
@@ -92,18 +92,18 @@ Se si tenta di crittografare un tipo di file bloccato, si verifica un errore [IP
 -   Estensioni di file: doc, dot, xla, xls, xlt, pps, ppt, docm, docx, dotm, dotx, xlam, xlsb, xlsm, xlsx, ppam, xltx, xps, potm, potx, ppsx, ppsm, pptm, pptx, thmx, vsdx, vsdm, vssx, vssm, vstx e vstm. 
 -   Tipo di protezione = Nativa (impostazione predefinita): sample.docx viene crittografato in sample.docx
 -   Tipo di protezione = Pfile: per i file Office ha lo stesso effetto della crittografia Nativa.
--   Off: Disabilita la crittografia.
+-   Off: disabilita la crittografia.
 
 **File PDF**
 
 -   Tipo di protezione = Nativa: sample.pdf è crittografato e denominato sample.ppdf
 -   Tipo di protezione = Pfile: sample.pdf è crittografato e denominato sample.pdf.pfile.
--   Off: Disabilita la crittografia.
+-   Off: disabilita la crittografia.
 
 **Tutti gli altri formati di file**
 
 -   Tipo di protezione = Pfile: sample.*zzz* è crittografato e denominato sample.*zzz*.pfile, dove *zzz* è l'estensione del file originale.
--   Off: Disabilita la crittografia.
+-   Off: disabilita la crittografia.
 
 ### <a name="examples"></a>Esempi
 
@@ -111,38 +111,38 @@ Le seguenti impostazioni abilitano la crittografia PFile per file con estensione
 
 ```
 HKEY_LOCAL_MACHINE
-   Software
-      Microsoft
-         MSIPC
-            FileProtection
-               txt
-                  Encryption = Pfile
+   Software
+      Microsoft
+         MSIPC
+            FileProtection
+               txt
+                  Encryption = Pfile
 ```
 
 Le seguenti impostazioni abilitano la crittografia PFile per tutti i file non di Office, ad eccezione di file con estensione txt. Ai file di Office sarà applicata la protezione nativa (per impostazione predefinita), ai file con estensione .txt la protezione sarà bloccata e a tutti gli altri file sarà applicata la protezione PFile.
 
 ```
 HKEY_LOCAL_MACHINE
-   Software
-      Microsoft
-         MSIPC
-            FileProtection
-               *
-                  Encryption = Pfile
-               txt
-                  Encryption = Off
+   Software
+      Microsoft
+         MSIPC
+            FileProtection
+               *
+                  Encryption = Pfile
+               txt
+                  Encryption = Off
 ```
 
 Le seguenti impostazioni disabilitano la crittografia nativa per i file docx. Ai file di Office sarà applicata la protezione nativa (per impostazione predefinita) e a tutti gli altri file la protezione sarà bloccata (per impostazione predefinita).
 
 ```
 HKEY_LOCAL_MACHINE
-   Software
-      Microsoft
-         MSIPC
-            FileProtection
-               docx
-                  Encryption = Off
+   Software
+      Microsoft
+         MSIPC
+            FileProtection
+               docx
+                  Encryption = Off
 ```
 
 ## <a name="related-articles"></a>Articoli correlati

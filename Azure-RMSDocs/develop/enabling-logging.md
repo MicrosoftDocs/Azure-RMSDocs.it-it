@@ -2,8 +2,8 @@
 title: Procedura&#58; Abilitare la registrazione delle prestazioni e dell'errore | Azure RMS
 description: Microsoft Rights Management SDK 4.2 gestisce i log delle diagnosi e delle prestazioni caricati tramite una proprietà a dispositivo singolo.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,14 +12,14 @@ ms.assetid: F5AD3826-2292-4A25-AF5C-D17D083F5742
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 4dece185bdbfd83d8ee98d815ead5545ca007754
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: 5b454ea2917fc5807326493fdf303e508bda7f0f
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44147356"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071812"
 ---
-# <a name="how-to-enable-error-and-performance-logging"></a>Procedura: Abilitare la registrazione delle prestazioni e dell'errore
+# <a name="how-to-enable-error-and-performance-logging"></a>Come fare per: Abilitare la registrazione delle prestazioni e degli errori
 Microsoft Rights Management SDK 4.2 gestisce i log delle diagnosi e delle prestazioni caricati tramite una proprietà a dispositivo singolo.
 
 ## <a name="overview"></a>Panoramica ##
@@ -79,7 +79,7 @@ Impostare il controllo a livello di log
 Ottenere l'impostazione del controllo a livello di log
 
     [[NSUserDefaults standardUserDefaults] boolForKey:@&quot;IpcLogLevel&quot;];
- 
+ 
 
 ## <a name="windows"></a>Windows ##
 Abilitare la registrazione automatica

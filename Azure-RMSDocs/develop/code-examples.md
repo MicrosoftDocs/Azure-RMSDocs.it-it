@@ -1,9 +1,9 @@
 ---
 title: Esempi di codice | Azure RMS
-description: RMS SDK 4.2 include il codice di esempio e progetti di lavoro per alcuni sistemi operativi supportati.
+description: RMS SDK 4.2 include codice di esempio e progetti di lavoro per alcuni sistemi operativi supportati.
 keywords: ''
-author: lleonard-msft
-ms.author: alleonar
+author: bryanla
+ms.author: bryanla
 manager: mbaldwin
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -12,16 +12,16 @@ ms.assetid: 634df601-79d2-4bc2-b845-4df886d7c589
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: ac82b683a545543e508ea990eda94516fc9ba7c6
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: aea10bd13159d75335a252022a8672a6845dbbf1
+ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44150620"
+ms.lasthandoff: 01/08/2019
+ms.locfileid: "54071455"
 ---
 # <a name="code-examples"></a>Esempi di codice
 
-Microsoft Rights Management SDK 4.2 include il codice di esempio e progetti di lavoro per alcuni sistemi operativi supportati.
+Microsoft Rights Management SDK 4.2 include codice di esempio e progetti di lavoro per alcuni sistemi operativi supportati.
 
 ## <a name="available-via-github"></a>Disponibile tramite GitHub ##
 La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabile per le operazioni di consumo e protezione per gli sviluppatori che non vogliono creare la propria interfaccia utente personalizzata:
