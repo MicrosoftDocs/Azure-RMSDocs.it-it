@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 35b2211b9ca6eb3f8c0f160a80850c3cb899562c
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 5fb3e3ab5d32bf5e590bec5b0a1380bf13a7d066
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53174183"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394191"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 della migrazione: configurazione lato server per AD RMS
 
@@ -143,7 +143,7 @@ Se i modelli personalizzati sono stati creati prima della migrazione, prima o do
 
 ### <a name="procedure-if-your-templates-in-ad-rms-used-the-anyone-group"></a>Procedura da seguire se i modelli in AD RMS hanno usato il gruppo **ANYONE**
 
-Se i modelli in AD RMS usavano il gruppo **ANYONE**, il gruppo equivalente più simile in Azure Information Protection è denominato **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<nome_tenant>.onmicrosoft.com**. Ad esempio, questo gruppo può essere simile al seguente per Contoso: **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com**. Questo gruppo contiene tutti gli utenti del tenant di Azure AD.
+Se i modelli in AD RMS usavano il gruppo **ANYONE**, il gruppo equivalente più simile in Azure Information Protection è denominato **AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@\<nome_tenant>.onmicrosoft.com**. Ad esempio, questo gruppo può essere simile al seguente per Contoso: <strong>AllStaff-7184AB3F-CCD1-46F3-8233-3E09E9CF0E66@contoso.onmicrosoft.com</strong>. Questo gruppo contiene tutti gli utenti del tenant di Azure AD.
 
 Quando si gestiscono i modelli e le etichette nel portale di Azure, questo gruppo viene visualizzato come nome di dominio del tenant di Azure AD. Ad esempio, questo gruppo potrebbe essere simile al seguente per Contoso: **contoso.onmicrosoft.com**. Per aggiungere questo gruppo, l'opzione visualizza **Aggiungi \<nome organizzazione>-Tutti i membri**.
 
