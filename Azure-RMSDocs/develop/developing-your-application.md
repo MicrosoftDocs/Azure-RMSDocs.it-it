@@ -12,12 +12,12 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 6f0fdcaf6d21047f28c470dc896a1cd64fee752d
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 580dc90bae499a5cc64238a6157612bea5eb3282
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071302"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394180"
 ---
 # <a name="developing-your-application"></a>Sviluppo dell'applicazione
 
@@ -62,7 +62,7 @@ Per creare un'entità servizio, seguire questi passaggi:
 - Connettersi al servizio online con le credenziali utente assegnate: `Connect-MsolService`
 - Creare una nuova entità servizio eseguendo: `New-MsolServicePrincipal`
 - Specificare un nome per l'entità servizio
-> Registrare la chiave simmetrica e l'ID entità applicazione per un uso futuro.
+  > Registrare la chiave simmetrica e l'ID entità applicazione per un uso futuro.
 
 *Output di esempio*
 ![output del cmdlet](../media/develop/output-of-NewMsolServicePrincipal.png)
@@ -80,8 +80,8 @@ Il diagramma seguente illustra il flusso di architettura e processo per l'app cr
 ![riepilogo della progettazione](../media/develop/design-summary.png)
 
 1. L'utente inserisce l'input:
-  - Il percorso del file da proteggere
-  - Seleziona un modello o crea criteri ad hoc
+   - Il percorso del file da proteggere
+   - Seleziona un modello o crea criteri ad hoc
 2. L'applicazione richiede l'autenticazione con AIP.
 3. AIP conferma l'autenticazione
 4. L'applicazione richiede i modelli ad AIP.
@@ -216,16 +216,16 @@ Dopo avere eseguito tutti i passaggi di creazione ed esecuzione, gli output dell
 ![output dell'app - passaggio 1](../media/develop/app-output-1.png)
 
 2. Viene chiesto di specificare il percorso del file da proteggere.
-![output dell'app - passaggio 2](../media/develop/app-output-2.png)
+   ![output dell'app - passaggio 2](../media/develop/app-output-2.png)
 
 3. Viene chiesto di immettere un indirizzo di posta elettronica del proprietario della licenza (il proprietario deve avere i privilegi di amministratore globale del tenant di Azure AD).
-![output dell'app - passaggio 3](../media/develop/app-output-3.png)
+   ![output dell'app - passaggio 3](../media/develop/app-output-3.png)
 
 4. Immettere gli indirizzi di posta elettronica degli utenti con i diritti di accesso al file (separare gli indirizzi di posta elettronica con spazi).
-![output dell'app - passaggio 4](../media/develop/app-output-4.png)
+   ![output dell'app - passaggio 4](../media/develop/app-output-4.png)
 
 5. Selezionare da un elenco i diritti da assegnare agli utenti autorizzati.
-![output dell'app - passaggio 5](../media/develop/app-output-5.png)
+   ![output dell'app - passaggio 5](../media/develop/app-output-5.png)
 
 6. Immettere infine alcuni metadati dei criteri: nome dei criteri, descrizione e nome visualizzato dell'autorità di certificazione (tenant di Azure AD) ![output dell'app - passaggio 6](../media/develop/app-output-6.png)
 

@@ -12,12 +12,12 @@ ms.assetid: CE379738-4E1D-42AD-83F4-F89B70456EBB
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 8132fd2afba45402f8f9c835f2d6db69dd8e81f2
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 695251277b62d44166e7a4569881b804db34279e
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071200"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394243"
 ---
 # <a name="release-notes"></a>Note sulla versione
 
@@ -37,9 +37,9 @@ Questo articolo contiene informazioni importanti su questa versione e quelle pre
 
 - **Aggiornamento ad ADAL**: eseguendo l'aggiornamento dell'applicazione per l'uso dell'autenticazione ADAL anziché l'Assistente per l'accesso a Microsoft Online, l'utente e i clienti potranno:
 
- - Usare Multi-Factor Authentication
- - Installare il client RMS 2.1 senza necessità di privilegi amministrativi sul computer
- - Certificare l'applicazione per Windows 10
+  - Usare Multi-Factor Authentication
+  - Installare il client RMS 2.1 senza necessità di privilegi amministrativi sul computer
+  - Certificare l'applicazione per Windows 10
 
 - **Il supporto dell'Assistente per l'accesso a Microsoft Online con RMS SDK verrà rimosso.** L'Assistente per l'accesso continuerà a essere supportato per sei mesi, dopodiché il supporto verrà sospeso.
 
@@ -124,7 +124,7 @@ Il componente API File dell'SDK è stato integrato e ora offre le funzionalità 
 
     **Nota**:  a partire dalla versione di aprile 2015, al processo di installazione è stato aggiunto un controllo relativo a questo KB.
 
-     
+     
 
 -   **Integrazione di API file**
 

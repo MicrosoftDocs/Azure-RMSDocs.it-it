@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e5717d83ece5f188476c0f7bca677088aa4373ae
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: e707e84ccfafc7b3ed161d05cadac9f2314ad3ae
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173877"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394290"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparazione di utenti e gruppi per Azure Information Protection
 
@@ -70,9 +70,9 @@ Per assegnare diritti di utilizzo e controlli di accesso e configurare il serviz
 - Per autorizzare utenti, si usano due attributi di Azure AD: **proxyAddresses** e **userPrincipalName**.
 
 - Nell'attributo **proxyAddresses di Azure AD**, in cui vengono archiviati tutti gli indirizzi di posta elettronica di un account, è possibile inserire valori in modi diversi. Ad esempio a un utente di Office 365 che dispone di una cassetta postale di Exchange Online viene assegnato automaticamente un indirizzo di posta elettronica memorizzato in questo attributo. Se a un utente di Office 365 si assegna un indirizzo di posta elettronica alternativo, anche quest'ultimo viene salvato nell'attributo proxyAddresses. Nell'attributo è possibile archiviare anche indirizzi di posta elettronica provenienti dalla sincronizzazione con account locali. 
-    
+
     Azure Information Protection può usare qualsiasi valore dell'attributo proxyAddresses di Azure AD se il dominio è stato aggiunto al tenant dell'utente ("dominio verificato"). Per altre informazioni sulla verifica di domini:
-    
+
     - Per Azure AD: [Aggiungere un nome di dominio personalizzato ad Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain)
 
     - Per Office 365: [Aggiungere un dominio a Office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
@@ -94,7 +94,7 @@ Altri metodi di autorizzazione:
 Per l'assegnazione di etichette:
 
 - Per configurare criteri con ambito che assegnano etichette aggiuntive a membri del gruppo è possibile usare qualsiasi tipo di gruppo di Azure AD che ha un indirizzo di posta elettronica con un dominio verificato per il tenant dell'utente. Un gruppo dotato di un indirizzo di posta elettronica è spesso detto "gruppo abilitato alla posta elettronica".
-    
+
     È ad esempio possibile usare un gruppo di sicurezza abilitato alla posta elettronica, un gruppo di distribuzione (che può essere statico o dinamico) e un gruppo di Office 365. Non è possibile usare un gruppo di sicurezza (statico o dinamico), perché questo tipo di gruppo non ha un indirizzo di posta elettronica.
 
 Per l'assegnazione di diritti di utilizzo e di controlli di accesso:
@@ -148,16 +148,17 @@ Se la colonna **ProxyAddresses** non è popolata, l'autorizzazione dell'utente p
 
 Ad esempio:
 
-|Nome visualizzato|UserPrincipalName|ProxyAddresses
-|-------------------|-----------------|--------------------|
-|Jagannath Reddy |jagannathreddy@contoso.com|{}|
-|Ankur Roy|ankurroy@contoso.com|{SMTP:ankur.roy@contoso.com, smtp: ankur.roy@onmicrosoft.contoso.com}|
+
+|  Nome visualizzato   |     UserPrincipalName      |                            ProxyAddresses                             |
+|-----------------|----------------------------|-----------------------------------------------------------------------|
+| Jagannath Reddy | jagannathreddy@contoso.com |                                  {}                                   |
+|    Ankur Roy    |    ankurroy@contoso.com    | {SMTP:ankur.roy@contoso.com, smtp: ankur.roy@onmicrosoft.contoso.com} |
 
 In questo esempio:
 
-- Per l'autorizzazione dell'account utente di Jagannath Reddy verrà usato l'indirizzo **jagannathreddy@contoso.com**.
+- Per l'autorizzazione dell'account utente di Jagannath Reddy verrà usato l'indirizzo <strong>jagannathreddy@contoso.com</strong>.
 
--  L'autorizzazione dell'account utente di Ankur Roy può essere effettuata tramite **ankur.roy@contoso.com** e **ankur.roy@onmicrosoft.contoso.com**, ma non tramite **ankurroy@contoso.com**.
+- L'autorizzazione dell'account utente di Ankur Roy può essere effettuata tramite <strong>ankur.roy@contoso.com</strong> e <strong>ankur.roy@onmicrosoft.contoso.com</strong>, ma non tramite <strong>ankurroy@contoso.com</strong>.
 
 Nella maggior parte dei casi il valore di UserPrincipalName corrisponde a uno dei valori presenti nel campo ProxyAddresses. Questa è la configurazione consigliata, ma se non è possibile modificare il nome UPN in modo che corrisponda all'indirizzo di posta elettronica, è necessario eseguire la procedura seguente:
 
@@ -165,7 +166,7 @@ Nella maggior parte dei casi il valore di UserPrincipalName corrisponde a uno de
 
     Se il nome di dominio nel valore UPN non è un dominio verificato per il tenant, non può essere usato con Azure Information Protection. È tuttavia ancora possibile autorizzare l'utente come membro di un gruppo se l'indirizzo di posta elettronica del gruppo usa un nome di dominio verificato.
 
-2. Se il nome UPN non è indirizzabile (come, ad esempio, **ankurroy@contoso.local**), configurare un ID di accesso alternativo per gli utenti, fornendo a questi ultimi le istruzioni necessarie per l'accesso a Office tramite questo ID. È anche necessario impostare una chiave del Registro di sistema per Office.
+2. Se il nome UPN non è indirizzabile (come, ad esempio, <strong>ankurroy@contoso.local</strong>), configurare un ID di accesso alternativo per gli utenti, fornendo a questi ultimi le istruzioni necessarie per l'accesso a Office tramite questo ID. È anche necessario impostare una chiave del Registro di sistema per Office.
 
     Per altre informazioni, vedere [Configurazione di ID di accesso alternativo](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) e [Le applicazioni di Office richiedono periodicamente le credenziali per SharePoint Online, OneDrive e Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
 

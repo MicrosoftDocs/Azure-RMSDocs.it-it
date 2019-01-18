@@ -12,12 +12,12 @@ ms.assetid: 7E12EBF2-5A19-4A8D-AA99-531B09DA256A
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: c71fe41da2eb29645c3c25d0044f969ebdca1c9a
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: aee986c462dd5bba1966017eada2f97f4fbbb1a8
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54070231"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394159"
 ---
 # <a name="iosos-x-code-examples"></a>Esempi di codice iOS/OS X
 
@@ -37,7 +37,7 @@ Di seguito sono riportati esempi di codice **Objective C** tratti da un'applicaz
 
 - **Passaggio 1**: Creare un oggetto [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx)
 
- **Description**: Creare un'istanza dell'oggetto [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) tramite il relativo metodo di creazione che implementa l'autenticazione del servizio usando [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) per ottenere un token e passando all'API MSIPC un'istanza di **MSAuthenticationCallback** come parametro *authenticationCallback*. Vedere la chiamata a [MSProtectedData protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx) nella sezione di codice di esempio seguente.
+  **Description**: Creare un'istanza dell'oggetto [MSProtectedData](https://msdn.microsoft.com/library/dn758348.aspx) tramite il relativo metodo di creazione che implementa l'autenticazione del servizio usando [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) per ottenere un token e passando all'API MSIPC un'istanza di **MSAuthenticationCallback** come parametro *authenticationCallback*. Vedere la chiamata a [MSProtectedData protectedDataWithProtectedFile](https://msdn.microsoft.com/library/dn758351.aspx) nella sezione di codice di esempio seguente.
 
         + (void)consumePtxtFile:(NSString *)path authenticationCallback:(id<MSAuthenticationCallback>)authenticationCallback
         {
@@ -94,19 +94,19 @@ Di seguito sono riportati esempi di codice **Objective C** tratti da un'applicaz
                           }];
        }
 
--   **Passaggio 3**: Verificare se è disponibile il diritto di modifica per questo utente su questo contenuto tramite il metodo [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx) di un oggetto [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx).
+- **Passaggio 3**: Verificare se è disponibile il diritto di modifica per questo utente su questo contenuto tramite il metodo [MSUserPolicy accessCheck](https://msdn.microsoft.com/library/dn790789.aspx) di un oggetto [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx).
 
-        - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
-        {
-            //check if user has edit rights and apply enforcements
-            if (!protectedData.userPolicy.accessCheck(EditableDocumentRights.Edit))
-            {
-                // enforce on the UI
-                textEditor.focusableInTouchMode = NO;
-                textEditor.focusable = NO;
-                textEditor.enabled = NO;
-            }
-        }
+      - (void)accessCheckWithProtectedData:(MSProtectedData *)protectedData
+      {
+          //check if user has edit rights and apply enforcements
+          if (!protectedData.userPolicy.accessCheck(EditableDocumentRights.Edit))
+          {
+              // enforce on the UI
+              textEditor.focusableInTouchMode = NO;
+              textEditor.focusable = NO;
+              textEditor.enabled = NO;
+          }
+      }
 
 ### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scenario: Creare un nuovo file protetto usando un modello
 

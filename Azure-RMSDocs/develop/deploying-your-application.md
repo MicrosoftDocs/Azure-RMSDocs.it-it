@@ -12,12 +12,12 @@ ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: daad2483fb850d06bbd62ff6b9a721160341d8b7
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: bc1e1e3dc66b3dee00dbfac7db11a1aaaeeab4e3
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54070316"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394294"
 ---
 # <a name="deploy-into-production"></a>Distribuire in ambiente di produzione
 
@@ -27,7 +27,7 @@ Questo argomento illustra il processo di distribuzione dell'applicazione abilita
 Prima di poter rilasciare un'applicazione sviluppata con Azure Information Protection/RMS, è necessario richiedere e concludere un contratto formale con Microsoft.
 
 ### <a name="begin-the-process"></a>Avviare il processo
-Per ottenere il contratto, inviare un messaggio di posta elettronica all'indirizzo **IPIA@microsoft.com** con le informazioni seguenti:
+Per ottenere il contratto, inviare un messaggio di posta elettronica all'indirizzo <strong>IPIA@microsoft.com</strong> con le informazioni seguenti:
 
 **Oggetto:** Requesting IPIA for *nome azienda*
 
@@ -38,7 +38,7 @@ Nel corpo del messaggio di posta elettronica includere:
 
 ### <a name="next-steps"></a>Passaggi successivi
 In seguito alla ricezione della richiesta del contratto, Microsoft invierà un modulo in forma di documento di Word.
-Leggere i termini e le condizioni del contratto di integrazione di Information Protection e restituire il modulo all'indirizzo **IPIA@microsoft.com** con le informazioni seguenti:
+Leggere i termini e le condizioni del contratto di integrazione di Information Protection e restituire il modulo all'indirizzo <strong>IPIA@microsoft.com</strong> con le informazioni seguenti:
 - Ragione sociale dell'azienda
 - Stato/provincia (Stati Uniti o Canada) o paese di costituzione
 - URL dell'azienda
@@ -54,7 +54,7 @@ Leggere i termini e le condizioni del contratto di integrazione di Information P
 Al ricevimento del modulo, Microsoft invierà il collegamento al contratto di integrazione di Information Protection finale per la firma digitale. Dopo la firma da parte dell'azienda il contratto verrà sottoscritto anche dal rappresentante Microsoft appropriato e sarà così concluso.
 
 ### <a name="already-have-a-signed-ipia"></a>È già stato sottoscritto un contratto di integrazione di Information Protection?
-Se è già stato sottoscritto un contratto di integrazione di Information Protection e si vuole aggiungere un nuovo *ID app* per un'applicazione da rilasciare, inviare un messaggio di posta elettronica all'indirizzo **IPIA@microsoft.com** e fornire le informazioni seguenti:
+Se è già stato sottoscritto un contratto di integrazione di Information Protection e si vuole aggiungere un nuovo *ID app* per un'applicazione da rilasciare, inviare un messaggio di posta elettronica all'indirizzo <strong>IPIA@microsoft.com</strong> e fornire le informazioni seguenti:
 - Nome dell'applicazione dell'azienda
 - Breve descrizione dell'applicazione
 - ID tenant di Azure (anche se è uguale)

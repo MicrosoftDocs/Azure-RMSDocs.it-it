@@ -12,12 +12,12 @@ ms.assetid: E480D8D6-F070-43D1-B2B0-6921459C3437
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 323816b04f59d8a18015157052f097531b34cf03
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: ce8c5866d721c64f5bf36bd0ee905b74deb01474
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071778"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393687"
 ---
 # <a name="testing-your-application"></a>Controllo dell'applicazione
 
@@ -32,10 +32,10 @@ Viene illustrato come preparare il test dell'applicazione.
 - Per installare il runtime per sviluppatori:
 
    Sul computer in cui si effettuerà il test dell'applicazione deve essere installato Rights Management Service Client 2.1.
-   - Per testare l'applicazione in un computer diverso da quello di sviluppo, installare RMS Client 2.1 nel computer dalla [pagina di download di AD RMS Client](https://www.microsoft.com/download/details.aspx?id=38396).
-   - Il computer di sviluppo dovrebbe avere Rights Management Services SDK 2.1, installato in precedenza.
+  - Per testare l'applicazione in un computer diverso da quello di sviluppo, installare RMS Client 2.1 nel computer dalla [pagina di download di AD RMS Client](https://www.microsoft.com/download/details.aspx?id=38396).
+  - Il computer di sviluppo dovrebbe avere Rights Management Services SDK 2.1, installato in precedenza.
 
-   Per informazioni sull'installazione di RMS SDK 2.1, vedere [Installare l'SDK](install-the-rms-sdk.md).
+    Per informazioni sull'installazione di RMS SDK 2.1, vedere [Installare l'SDK](install-the-rms-sdk.md).
 
 ## <a name="remarks"></a>Osservazioni
 

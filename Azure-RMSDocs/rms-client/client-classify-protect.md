@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 29c79d3da5e82b0d5702a1d85a22608f9177d271
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: b1d46cb3c98c520ab6900f910f691af920337334
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305701"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393461"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Manuale dell'utente: Classificare e proteggere un file o un messaggio di posta elettronica tramite Azure Information Protection
 
@@ -138,13 +138,13 @@ La guida dell'amministratore contiene un elenco completo dei tipi di file suppor
 
 2. Nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** usare le etichette in modo analogo a un'applicazione di Office, che consente di impostare la classificazione e la protezione come definito dall'amministratore. 
 
-    - Se nessuna delle etichette può essere selezionata (sono visualizzate in grigio): il file selezionato non supporta la classificazione, ma è possibile proteggerlo con le autorizzazioni personalizzate (passaggio 3). Ad esempio:
+   - Se nessuna delle etichette può essere selezionata (sono visualizzate in grigio): il file selezionato non supporta la classificazione, ma è possibile proteggerlo con le autorizzazioni personalizzate (passaggio 3). Ad esempio:
 
-    ![Nessuna etichetta disponibile nella finestra di dialogo Classifica e proteggi - Azure Information Protection**](../media/info-protect-dialog-labels-dimmed.png)
+     ![Nessuna etichetta disponibile nella finestra di dialogo Classifica e proteggi - Azure Information Protection**](../media/info-protect-dialog-labels-dimmed.png)
     
-    - Se le etichette non sono visualizzate, ma nella finestra di dialogo è presente l'opzione **Protezione predefinita dell'azienda**: il client è in esecuzione in [modalità di sola protezione](client-protection-only-mode.md). Selezionare un modello per applicare la protezione configurata dall'amministratore oppure selezionare **Autorizzazioni personalizzate** per specificare le impostazioni di protezione e andare al passaggio 4.
+   - Se le etichette non sono visualizzate, ma nella finestra di dialogo è presente l'opzione **Protezione predefinita dell'azienda**: il client è in esecuzione in [modalità di sola protezione](client-protection-only-mode.md). Selezionare un modello per applicare la protezione configurata dall'amministratore oppure selezionare **Autorizzazioni personalizzate** per specificare le impostazioni di protezione e andare al passaggio 4.
     
-    ![Nessuna etichetta nella finestra di dialogo Classifica e proteggi - Azure Information Protection**](../media/info-protect-dialog-labels-protection-only.png)
+     ![Nessuna etichetta nella finestra di dialogo Classifica e proteggi - Azure Information Protection**](../media/info-protect-dialog-labels-protection-only.png)
     
 3. Se consentito dall'amministratore, è possibile specificare impostazioni di protezione personalizzate anziché usare quelle eventualmente incluse dall'amministratore con l'etichetta selezionata. A tale scopo, selezionare **Proteggi con autorizzazioni personalizzate**.
     
@@ -154,15 +154,15 @@ La guida dell'amministratore contiene un elenco completo dei tipi di file suppor
 
 4. Se si seleziona l'opzione per le autorizzazioni personalizzate, specificare le informazioni seguenti:
 
-    - **Selezionare le autorizzazioni**: selezionare il livello di accesso da assegnare agli utenti per la protezione del file o dei file selezionati.
+   - **Selezionare le autorizzazioni**: selezionare il livello di accesso da assegnare agli utenti per la protezione del file o dei file selezionati.
     
-    - **Selezionare gli utenti, i gruppi o le organizzazioni**: specificare gli utenti che devono avere le autorizzazioni selezionate per il file o i file. Digitare l'indirizzo di posta elettronica completo di uno o più utenti o di un gruppo oppure il nome di dominio di un'organizzazione per tutti gli utenti dell'organizzazione. 
+   - **Selezionare gli utenti, i gruppi o le organizzazioni**: specificare gli utenti che devono avere le autorizzazioni selezionate per il file o i file. Digitare l'indirizzo di posta elettronica completo di uno o più utenti o di un gruppo oppure il nome di dominio di un'organizzazione per tutti gli utenti dell'organizzazione. 
     
-    In alternativa, è possibile usare l'icona a forma di rubrica per selezionare utenti o gruppi dalla Rubrica di Outlook.
+     In alternativa, è possibile usare l'icona a forma di rubrica per selezionare utenti o gruppi dalla Rubrica di Outlook.
         
-    - **Scadenza dell'accesso**: selezionare questa opzione solo per i file per cui il fattore tempo è importante in modo tale che gli utenti specificati non siano in grado di aprire il file o i file selezionati dopo una data specificata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno impostato gli utenti specificati non saranno in grado di aprire il file.
+   - **Scadenza dell'accesso**: selezionare questa opzione solo per i file per cui il fattore tempo è importante in modo tale che gli utenti specificati non siano in grado di aprire il file o i file selezionati dopo una data specificata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno impostato gli utenti specificati non saranno in grado di aprire il file.
     
-    Si noti che se questa impostazione in precedenza è stata configurata usando le autorizzazioni personalizzate di un'app di Office 2010, la data di scadenza specificata non viene visualizzata in questa finestra di dialogo, ma la data viene comunque impostata. Questo è un problema di visualizzazione che riguarda solo la data di scadenza configurata in Office 2010.
+     Si noti che se questa impostazione in precedenza è stata configurata usando le autorizzazioni personalizzate di un'app di Office 2010, la data di scadenza specificata non viene visualizzata in questa finestra di dialogo, ma la data viene comunque impostata. Questo è un problema di visualizzazione che riguarda solo la data di scadenza configurata in Office 2010.
 
 5. Fare clic su **Applica** e attendere la visualizzazione del messaggio **Operazione completata** per vedere i risultati. e quindi fare clic su **Chiudi**.
 

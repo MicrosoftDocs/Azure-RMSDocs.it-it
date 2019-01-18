@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d9b79faa2444560ec209faa199072f2a745152cd
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 3f7c06a6415160b5c2245dc60e94bf7d9633ef7f
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305574"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393759"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrazione da AD RMS ad Azure Information Protection
 
@@ -49,23 +49,23 @@ Prima di iniziare il processo di migrazione ad Azure Information Protection, ver
 
 - **Distribuzione di RMS supportata:**
     
-    - Le versioni seguenti di AD RMS supportano una migrazione ad Azure Information Protection:
+  - Le versioni seguenti di AD RMS supportano una migrazione ad Azure Information Protection:
     
-        - Windows Server 2008 R2 (x64)
+      - Windows Server 2008 R2 (x64)
         
-        - Windows Server 2012 (x64)
+      - Windows Server 2012 (x64)
         
-        - Windows Server 2012 R2 (x64)
+      - Windows Server 2012 R2 (x64)
         
-        - Windows Server 2016 (x64)
+      - Windows Server 2016 (x64)
         
-    - Sono supportate tutte le topologie di AD RMS valide:
+  - Sono supportate tutte le topologie di AD RMS valide:
     
-        - Singola foresta, singolo cluster RMS
+      - Singola foresta, singolo cluster RMS
         
-        - Singola foresta, più cluster RMS di sola gestione delle licenze
+      - Singola foresta, più cluster RMS di sola gestione delle licenze
         
-        - Più foreste, più cluster RMS
+      - Più foreste, più cluster RMS
         
     Nota: per impostazione predefinita, viene eseguita la migrazione di più cluster AD RMS a un singolo tenant di Azure Information Protection. Se si vuole separare i tenant per Azure Information Protection, è necessario eseguire migrazioni diverse. Non è possibile importare una chiave da un cluster RMS in più tenant di Azure RMS.
 
@@ -80,15 +80,15 @@ Prima di iniziare il processo di migrazione ad Azure Information Protection, ver
 
 - **Preparazione per Azure Information Protection:**
 
-    - Sincronizzazione della directory tra la directory locale e Azure Active Directory
+  - Sincronizzazione della directory tra la directory locale e Azure Active Directory
 
-    - Gruppi abilitati alla posta elettronica in Azure Active Directory
+  - Gruppi abilitati alla posta elettronica in Azure Active Directory
 
     Vedere [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md).
 
 - **Se è stata usata la funzionalità Information Rights Management (IRM) di Exchange Server** (ad esempio le regole di trasporto e Outlook Web Access) o SharePoint Server con AD RMS:
 
-    - Pianificare un breve intervallo di tempo durante il quale IRM non sarà disponibile in questi server
+  - Pianificare un breve intervallo di tempo durante il quale IRM non sarà disponibile in questi server
  
     È possibile continuare a usare IRM in questi server dopo la migrazione. Uno dei passaggi della migrazione consiste tuttavia nel disattivare temporaneamente il servizio IRM, installare e configurare un connettore, riconfigurare i server e quindi riabilitare IRM.
 

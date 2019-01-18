@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 19a295076ce86da0c93685250cd62b0ca1ca41e6
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 35f8ddcefb5cbc7ab07fd311edfa783fb5a83aa0
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305702"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394135"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protezione RMS con Infrastruttura di classificazione file per Windows Server
 
@@ -35,21 +35,21 @@ Le istruzioni qui di seguito sono per Windows Server 2012 R2 o Windows Server 20
 ## <a name="prerequisites-for-azure-rights-management-protection-with-windows-server-fci"></a>Prerequisiti per la protezione Azure Rights Management con FCI per Windows Server
 Prerequisiti per queste istruzioni:
 
--  Su ogni file server su cui si esegue Gestione risorse file con l'infrastruttura di classificazione file:
+- Su ogni file server su cui si esegue Gestione risorse file con l'infrastruttura di classificazione file:
     
-    - Gestione risorse file è stato installato come uno dei servizi ruolo per il ruolo Servizi file.
+  - Gestione risorse file è stato installato come uno dei servizi ruolo per il ruolo Servizi file.
     
-    - È stata identificata una cartella locale che contiene file da proteggere con Rights Management. Ad esempio, C:\FileShare.
+  - È stata identificata una cartella locale che contiene file da proteggere con Rights Management. Ad esempio, C:\FileShare.
     
-    - È stato installato il modulo di PowerShell AzureInformationProtection e sono stati configurati i prerequisiti per connettere il modulo al servizio Azure Rights Management.
+  - È stato installato il modulo di PowerShell AzureInformationProtection e sono stati configurati i prerequisiti per connettere il modulo al servizio Azure Rights Management.
     
     Il modulo di PowerShell AzureInformationProtection è incluso nel client Azure Information Protection. Per le istruzioni di installazione, vedere [Come installare il client Azure Information Protection per gli utenti](client-admin-guide-install.md) nella guida dell'amministratore di Azure Information Protection. Se necessario, è possibile installare il modulo di PowerShell usando il parametro `PowerShellOnly=true`.
     
     I [prerequisiti per l'uso di questo modulo di PowerShell](client-admin-guide-powershell.md#azure-information-protection-and-azure-rights-management-service) includono l'attivazione del servizio Azure Rights Management, la creazione di un'entità servizio e la modifica del Registro di sistema se il tenant si trova al di fuori del Nord America. Prima di iniziare a seguire le istruzioni riportate in questo articolo, assicurarsi di avere i valori di **BposTenantId**, **AppPrincipalId** e **della chiave simmetrica** come descritto nei prerequisiti. 
     
-    - Se si vuole modificare il livello predefinito di protezione (nativa o generica) per estensioni di file specifiche, si deve modificare il Registro di sistema come descritto nella sezione relativa alla [modifica del livello di protezione predefinito dei file](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) della guida dell'amministratore.
+  - Se si vuole modificare il livello predefinito di protezione (nativa o generica) per estensioni di file specifiche, si deve modificare il Registro di sistema come descritto nella sezione relativa alla [modifica del livello di protezione predefinito dei file](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) della guida dell'amministratore.
     
-    - È disponibile una connessione Internet con le impostazioni del computer configurate, se necessario per un server proxy. ad esempio `netsh winhttp import proxy source=ie`
+  - È disponibile una connessione Internet con le impostazioni del computer configurate, se necessario per un server proxy. ad esempio `netsh winhttp import proxy source=ie`
     
 - L'utente ha sincronizzato gli account utente di Active Directory locali e i relativi indirizzi di posta elettronica con Azure Active Directory oppure con Office 365. Ciò è necessario per tutti gli utenti che potrebbero avere la necessità di accedere ai file una volta protetti da FCI e dal servizio Azure Rights Management. Se non si completa questo passaggio (ad esempio, in un ambiente di test), è possibile che l'accesso degli utenti a questi file sia bloccato. Per altre informazioni su questi requisiti, vedere [Preparazione di utenti e gruppi per Azure Information Protection](../prepare.md).
     

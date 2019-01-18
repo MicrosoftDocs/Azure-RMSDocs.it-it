@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3cddb4660ddae7bb19ff2ef1994fb4fa3c0bf9a6
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 8f98750c24fe535a580952fa7ebe76a6833f7dd2
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305387"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394066"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gestione di Microsoft: operazioni del ciclo di vita della chiave del tenant
 
@@ -81,9 +81,9 @@ Per esportare la configurazione di Azure Information Protection e la chiave del 
     ```
     L'output del comando deve essere costituito da due file, uno contiene la password di testo normale per il file TPD protetto da password e l'altro è il file TPD protetto da password. I file hanno un nuovo GUID, ad esempio:
      
-    - Password-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
+  - Password-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
 
-    - ExportedTPD-5E4C2018-8C8C-4548-8705-E3218AA1544E.xml
+  - ExportedTPD-5E4C2018-8C8C-4548-8705-E3218AA1544E.xml
 
     Eseguire il backup di questi file e archiviarli in modo sicuro per garantire che sia possibile decrittografare contenuto protetto tramite la chiave del tenant specifica. Se inoltre si esegue la migrazione ad AD RMS, è possibile importare il file con estensione tpd (il file che inizia con **ExportedTDP**) nel proprio server AD RMS.
 

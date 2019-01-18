@@ -12,12 +12,12 @@ ms.assetid: 70E10936-7953-49B0-B0DC-A5E7C4772E60
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 7415e1408c5e3c3c782506a9ce25b4b8d90403f2
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: f1d8030fd4453ff5ec0720f30d22278297e580c8
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071846"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394145"
 ---
 # <a name="how-to-use-document-tracking"></a>Come fare per: Usare il rilevamento dei documenti
 
@@ -31,9 +31,9 @@ Dal punto di vista operativo, solo le proprietà relative al **nome contenuto** 
 
 La sequenza di passaggi da usare per configurare il rilevamento dei documenti per un dato contenuto è la seguente:
 
--   Creare un oggetto **metadati di licenza** e impostare il **nome contenuto** e il **tipo di notifica**. Queste sono le uniche proprietà necessarie.
-   - [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) per Android
-   -  [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx) per iOS
+- Creare un oggetto **metadati di licenza** e impostare il **nome contenuto** e il **tipo di notifica**. Queste sono le uniche proprietà necessarie.
+  - [LicenseMetadata](https://msdn.microsoft.com/library/mt573675.aspx) per Android
+  -  [MSLicenseMetadata](https://msdn.microsoft.com/library/mt573683.aspx) per iOS
 
 Scegliere il tipo di criterio: modello o ad hoc:
 - Per il rilevamento dei documenti basato su modello, creare un oggetto **criteri utente** passando i metadati di licenza come parametro.
@@ -46,8 +46,8 @@ Scegliere il tipo di criterio: modello o ad hoc:
 
     **Nota**  È possibile accedere direttamente all’oggetto metadati di licenza solo durante il processo di configurazione del rilevamento dei documenti per i criteri utente specificati. Dopo la creazione dell'oggetto criteri utente, i metadati di licenza associati non sono accessibili, ad esempio la modifica dei valori dei metadati di licenza non produce alcun effetto.
 
-     
+     
 
--   Chiamare alla fine il metodo di registrazione alla piattaforma per il rilevamento dei documenti.
+- Chiamare alla fine il metodo di registrazione alla piattaforma per il rilevamento dei documenti.
   - [UserPolicy.registerForDocTracking asynchronous](https://msdn.microsoft.com/library/mt573699.aspx) o [UserPolicy.registerForDocTracking synchronous](https://msdn.microsoft.com/library/mt631387.aspx) per Android
   - [MSUserPolicy.registerForDocTracking](https://msdn.microsoft.com/library/mt573694.aspx) per iOS

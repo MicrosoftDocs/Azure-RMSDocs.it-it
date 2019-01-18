@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: f7b13fa4-4f8e-489a-ba46-713d7a79f901
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7104da9852458cbe9100600c3e14b43ee4aa7986
-ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
+ms.openlocfilehash: 8556bb8e2ba5df713b925cbb05628c73284b3df1
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53218477"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393882"
 ---
 # <a name="technical-overview-and-protection-details-for-the-microsoft-rights-management-sharing-application"></a>Panoramica tecnica e dettagli sulla protezione per l'applicazione Microsoft Rights Management sharing
 
@@ -36,18 +36,20 @@ L'applicazione Microsoft Rights Management sharing è un'applicazione facoltativ
 
 L'applicazione Microsoft Rights Management sharing usa il nuovo [runtime di AD RMS Client 2.1](https://www.microsoft.com/download/details.aspx?id=38396). Grazie alla funzionalità di AD RMS 2.1, l'applicazione Microsoft Rights Management sharing consente agli utenti finali un'esperienza semplice di protezione e di utilizzo.
 
-Con la versione di RMS di ottobre 2013, è possibile proteggere i documenti in modo nativo usando Office 2010 e inviarli a persone in un'altra società, che possono quindi utilizzarli tramite il servizio Azure Rights Management di Azure Information Protection. Inoltre, con questa versione, se si usa AD RMS in modalità crittografia 2, è possibile eseguire RMS per utenti singoli e utilizzare contenuto proveniente da persone di un'altra società che usa il servizio Azure Rights Management. Per altre informazioni sulla modalità di crittografia 2, vedere [Modalità di crittografia di AD RMS](https://technet.microsoft.com/library/hh867439%28v=ws.10%29.aspx).
+Con la versione di RMS del mese di ottobre 2013, è possibile proteggere i documenti in modo nativo usando Office 2010 e inviarli a persone in un'altra società, che possono quindi utilizzarli tramite il servizio Azure Rights Management di Azure Information Protection. Inoltre, con questa versione, se si usa AD RMS in modalità crittografia 2, è possibile eseguire RMS per utenti singoli e utilizzare contenuto proveniente da persone di un'altra società che usa il servizio Azure Rights Management. Per ulteriori informazioni sulla modalità di crittografia 2, vedere [Modalità di crittografia di AD RMS](https://technet.microsoft.com/library/hh867439%28v=ws.10%29.aspx).
 
 Per informazioni sulla distribuzione, vedere [Distribuzione automatica dell'applicazione Microsoft Rights Management sharing](sharing-app-admin-guide.md#automatic-deployment-for-the-microsoft-rights-management-sharing-application)
 
 ## <a name="levels-of-protection--native-and-generic"></a>Livelli di protezione – nativo e generico
 L'applicazione Microsoft Rights Management sharing supporta la protezione a due livelli diversi, come descritto nella tabella seguente.
 
-|Tipo di protezione|Nativo|Generico|
-|----------------------|----------|-----------|
-|Descrizione|Per file di testo e immagine, file di Microsoft Office (Word, Excel e PowerPoint), file con estensione pdf e altri tipi di file di applicazione che supportano un servizio Rights Management, la protezione nativa offre un forte livello di protezione che include crittografia e applicazione di diritti (autorizzazioni).|Per tutte le altre applicazioni e tipi di file, la protezione generica fornisce un livello di protezione che include sia l’incapsulamento di file mediante l'autenticazione e il tipo di file .pfile per verificare se un utente è autorizzato per aprire il file.|
-|Protezione|I file sono completamente crittografati e la protezione viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che ricevono il file tramite posta elettronica o a cui viene concesso l'accesso al file tramite autorizzazioni di file o condivisione.<br /><br />- Inoltre, vengono applicati tutti i diritti di utilizzo e i criteri impostati dal proprietario del contenuto per i file protetti quando viene eseguito il rendering del contenuto nel Visualizzatore IP (per i file protetti di testo e immagine) o nell'applicazione associata (per tutti gli altri tipi di file supportati).|La protezione dei file viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che sono autorizzati ad aprire il file e a cui viene concesso l'accesso al file. Se l'autorizzazione ha esito negativo, il file non si apre.<br /><br />- Vengono visualizzati i diritti di utilizzo e i criteri impostati dal proprietario del contenuto per comunicare agli utenti autorizzati i criteri di utilizzo previsti.<br /><br />- Si verifica la registrazione di controllo degli utenti autorizzati all'apertura e all'accesso dei file, ma non vengono applicati diritti di utilizzo da applicazioni non compatibili.|
-|Impostazione predefinita per i tipi di file|Questo è il livello predefinito di protezione per i tipi di file seguenti:<br /><br />- File di testo e immagine<br /><br />- File di Microsoft Office (Word, Excel, PowerPoint)<br /><br />- Formato di documento portatile (.pdf)<br /><br />Per altre informazioni, vedere la sezione di seguito, [Tipi ed estensioni di file supportati](#supported-file-types-and-file-name-extensions).|Questa è la protezione predefinita per tutti gli altri tipi di file (ad esempio con estensione vsdx, rtf e così via) non è supportata tramite la protezione completa.|
+
+|   Tipo di protezione   |                                                                                                                                                                                                                                                                             Nativo                                                                                                                                                                                                                                                                              |                                                                                                                                                                                                                                                                            Generico                                                                                                                                                                                                                                                                             |
+|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|      Descrizione       |                                                                                                                                    Per file di testo e immagine, file di Microsoft Office (Word, Excel e PowerPoint), file con estensione pdf e altri tipi di file di applicazione che supportano un servizio Rights Management, la protezione nativa offre un forte livello di protezione che include crittografia e applicazione di diritti (autorizzazioni).                                                                                                                                     |                                                                                                                                                              Per tutte le altre applicazioni e tipi di file, la protezione generica fornisce un livello di protezione che include sia l’incapsulamento di file mediante l'autenticazione e il tipo di file .pfile per verificare se un utente è autorizzato per aprire il file.                                                                                                                                                              |
+|       Protezione       | I file sono completamente crittografati e la protezione viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che ricevono il file tramite posta elettronica o a cui viene concesso l'accesso al file tramite autorizzazioni di file o condivisione.<br /><br />- Inoltre, vengono applicati tutti i diritti di utilizzo e i criteri impostati dal proprietario del contenuto per i file protetti quando viene eseguito il rendering del contenuto nel Visualizzatore IP (per i file protetti di testo e immagine) o nell'applicazione associata (per tutti gli altri tipi di file supportati). | La protezione dei file viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che sono autorizzati ad aprire il file e a cui viene concesso l'accesso al file. Se l'autorizzazione ha esito negativo, il file non si apre.<br /><br />- Vengono visualizzati i diritti di utilizzo e i criteri impostati dal proprietario del contenuto per comunicare agli utenti autorizzati i criteri di utilizzo previsti.<br /><br />- Si verifica la registrazione di controllo degli utenti autorizzati all'apertura e all'accesso dei file, ma non vengono applicati diritti di utilizzo da applicazioni non compatibili. |
+| Impostazione predefinita per i tipi di file |                                                                                         Questo è il livello predefinito di protezione per i tipi di file seguenti:<br /><br />- File di testo e immagine<br /><br />- File di Microsoft Office (Word, Excel, PowerPoint)<br /><br />- Formato di documento portatile (.pdf)<br /><br />Per altre informazioni, vedere la sezione di seguito, [Tipi ed estensioni di file supportati](#supported-file-types-and-file-name-extensions).                                                                                         |                                                                                                                                                                                                              Questa è la protezione predefinita per tutti gli altri tipi di file (ad esempio con estensione vsdx, rtf e così via) non è supportata tramite la protezione completa.                                                                                                                                                                                                               |
+
 È possibile modificare il livello di protezione predefinito che applica l'applicazione RMS sharing. È possibile modificare il livello predefinito da nativo a generico, da generico a nativo, e anche impedire all'applicazione RMS sharing di applicare la protezione. Per altre informazioni, vedere la sezione [Modifica del livello di protezione predefinito dei file](#changing-the-default-protection-level-of-files) in questo articolo.
 
 ## <a name="supported-file-types-and-file-name-extensions"></a>Tipi ed estensioni di file supportati
@@ -60,24 +62,25 @@ Per i file protetti in modo generico, l'estensione del nome file originale viene
 > [!WARNING]
 > Se si dispone di firewall, proxy web o software di protezione che esaminano e agiscono in base alle estensioni di file, potrebbe essere necessario riconfigurare tali impostazioni per supportare queste nuove estensioni di file.
 
-|Estensione del nome di file originale|Estensione del nome di file protetti tramite RMS|
-|--------------------------------|-------------------------------------|
-|.txt|.ptxt|
-|.xml|.pxml|
-|.jpg|.pjpg|
-|.jpeg|.pjeg|
-|.pdf|.ppdf|
-|.png|.ppng|
-|.tif|.ptif|
-|.tiff|.ptiff|
-|.bmp|.pbmp|
-|.gif|.pgif|
-|.jpe|.pjpe|
-|.jfif|.pjfif|
-|.jt|.pjt|
-Rendering PDF con tecnologia Foxit ¹. Copyright © 2003-2014, Foxit Corporation.
+| Estensione del nome di file originale | Estensione del nome di file protetti tramite RMS |
+|------------------------------|-----------------------------------|
+|             .txt             |               .ptxt               |
+|             .xml             |               .pxml               |
+|             .jpg             |               .pjpg               |
+|            .jpeg             |               .pjeg               |
+|             .pdf             |               .ppdf               |
+|             .png             |               .ppng               |
+|             .tif             |               .ptif               |
+|            .tiff             |              .ptiff               |
+|             .bmp             |               .pbmp               |
+|             .gif             |               .pgif               |
+|             .jpe             |               .pjpe               |
+|            .jfif             |              .pjfif               |
+|             .jt              |               .pjt                |
 
-La tabella seguente elenca i tipi di file che l'applicazione di condivisione Microsoft Rights Management supporta in modo nativo in Microsoft Office 2016, Office 2013 e Office 2010. Per questi file, l'estensione del nome di file rimane invariata dopo che il file è stato protetto da un servizio Rights Management.
+Rendering PDF con tecnologia Foxit ¹. Copyright © 2003-2014, Foxit Corporation.
+
+La tabella seguente elenca i tipi di file che l'applicazione Microsoft Rights Management sharing supporta in modo nativo in Microsoft Office 2016, Office 2013 e Office 2010. Per questi file, l'estensione del nome di file rimane invariata dopo che il file è stato protetto da un servizio Rights Management.
 
 |Tipi di file supportati da Office|Tipi di file supportati da Office|
 |----------------------------------|----------------------------------|

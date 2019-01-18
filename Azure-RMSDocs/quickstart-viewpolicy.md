@@ -7,12 +7,12 @@ manager: mbaldwin
 ms.date: 12/15/2018
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: c890d6acf2557093441a175bc8ed8657e8d1d9da
-ms.sourcegitcommit: bc082cffaa698b89b28aef7034290553c26f667b
+ms.openlocfilehash: 91a9a124c53d7c8f1aab31213595a8fc2f3627dd
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411814"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393976"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Guida introduttiva: Introduzione ad Azure Information Protection nel portale di Azure
 
@@ -75,11 +75,11 @@ La prima volta che ci si connette al servizio Azure Information Protection trami
     
 2. Dedicare alcuni minuti ad acquisire familiarità con le etichette visualizzate:
     
-    - Etichette per la classificazione: **Personale**, **Pubblico**, **Generale**, **Riservato** e **Riservatezza elevata**. Le ultime due etichette si espandono per visualizzare le etichette secondarie, offrendo esempi di come una classificazione può avere sottocategorie:
+   - Etichette per la classificazione: **Personale**, **Pubblico**, **Generale**, **Riservato** e **Riservatezza elevata**. Le ultime due etichette si espandono per visualizzare le etichette secondarie, offrendo esempi di come una classificazione può avere sottocategorie:
     
-    - Con la configurazione predefinita, alcune etichette non hanno contrassegni visivi configurati. I contrassegni visivi sono il piè di pagina, l'intestazione e la filigrana. In base ai criteri predefiniti, per alcune etichette può essere impostata una protezione. Ad esempio: 
+   - Con la configurazione predefinita, alcune etichette non hanno contrassegni visivi configurati. I contrassegni visivi sono il piè di pagina, l'intestazione e la filigrana. In base ai criteri predefiniti, per alcune etichette può essere impostata una protezione. Ad esempio: 
     
-    ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Criterio predefinito](./media/info-protect-policy-default-labelsv2.png)
+     ![Esercitazione introduttiva di Azure Information Protection, passaggio 3: Criterio predefinito](./media/info-protect-policy-default-labelsv2.png)
     
 3. Dopo le etichette, nella sezione **Configure settings to display and apply on Information Protection end users** (Configurare le impostazioni da visualizzare e applicare per gli utenti finali di Information Protection) vengono visualizzate anche alcune impostazioni dei criteri. Ad esempio non è presente un'etichetta predefinita (non tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta) e gli utenti non devono dare una giustificazione quando modificano le etichette:
     
