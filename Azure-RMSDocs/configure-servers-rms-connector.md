@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 606ca10f04ad9fa21d90fdf4bfcbc368db6febb1
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 9feca10b2e3fb259dbee70d9a84dd709f8d8deff
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305625"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393548"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configurazione dei server per il connettore di Azure Rights Management
 
@@ -155,19 +155,19 @@ Se i server Exchange in uso eseguono invece una versione precedente del sistema 
 
 1. Assicurarsi che i server Exchange siano autorizzati a usare il connettore RMS tramite lo strumento di amministrazione del connettore RMS e le informazioni della sezione [Autorizzazione dei server all'uso del connettore RMS](install-configure-rms-connector.md#authorizing-servers-to-use-the-rms-connector). Questa configurazione è necessaria in modo tale che Exchange possa usare il connettore RMS.
 
-2.  Nei ruoli del server di Exchange che comunicano con il connettore RMS, effettuare una delle seguenti operazioni:
+2. Nei ruoli del server di Exchange che comunicano con il connettore RMS, effettuare una delle seguenti operazioni:
 
-    -   Eseguire lo strumento di configurazione server per il connettore Microsoft RMS. Per ulteriori informazioni, vedere [Come usare lo strumento di configurazione server per il connettore Microsoft RMS](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in questo articolo.
+   -   Eseguire lo strumento di configurazione server per il connettore Microsoft RMS. Per ulteriori informazioni, vedere [Come usare lo strumento di configurazione server per il connettore Microsoft RMS](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in questo articolo.
 
-        Ad esempio, per eseguire lo strumento localmente per configurare un server che esegue Exchange 2016 o Exchange 2013:
+       Ad esempio, per eseguire lo strumento localmente per configurare un server che esegue Exchange 2016 o Exchange 2013:
 
-        ```
-        .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetExchange2013
-        ```
+       ```
+       .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetExchange2013
+       ```
 
-    -   Modificare il registro utilizzando le informazioni contenute in [Impostazioni del Registro di sistema per il connettore RMS](rms-connector-registry-settings.md) per aggiungere manualmente le impostazioni del Registro di sistema sui server. 
+   -   Modificare il registro utilizzando le informazioni contenute in [Impostazioni del Registro di sistema per il connettore RMS](rms-connector-registry-settings.md) per aggiungere manualmente le impostazioni del Registro di sistema sui server. 
 
-3. Abilitare la funzionalità IRM per Exchange [abilitando IRM per i messaggi interni](https://technet.microsoft.com/library/bb124077(v=exchg.150\).aspx#Anchor_1).
+3. Abilitare la funzionalità IRM per Exchange [abilitando IRM per i messaggi interni](https://technet.microsoft.com/library/bb124077(v=exchg.150).aspx#Anchor_1).
 
     > [!NOTE]
     > Per impostazione predefinita, dopo aver eseguito **Set-IRMConfiguration -InternalLicensingEnabled $true**, IRM viene abilitato automaticamente per Outlook Web App e i dispositivi mobili, in aggiunta all'abilitazione di IRM per le cassette postali. Gli amministratori possono tuttavia disabilitare IRM a livelli diversi, ad esempio per un server Accesso client, per la directory virtuale di Outlook Web App o i criteri della cassetta postale di Outlook Web App e per i criteri della cassetta postale di un dispositivo mobile. Se, trascorso un giorno, gli utenti non visualizzano alcun modello di Azure RMS in Outlook Web App o nei dispositivi mobili mentre riescono a visualizzare i modelli nel client di Outlook, verificare le impostazioni per assicurarsi che IRM non sia disabilitato. Per altre informazioni, vedere [Attivare o disattivare Information Rights Management sui server Accesso Client](https://technet.microsoft.com/library/dd876938(v=exchg.150).aspx) nella documentazione di Exchange. 

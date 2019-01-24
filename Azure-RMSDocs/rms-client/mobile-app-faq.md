@@ -11,12 +11,12 @@ ms.custom: askipteam
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cd07ed5d1c4bf2f4192f400c699e6e6dc3447713
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 29c7d333131c0b85b9cdb83e9a2212420f60077f
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023754"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393658"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Domande frequenti sull'app Microsoft Azure Information Protection per iOS e Android
 
@@ -26,7 +26,9 @@ Questa pagina riporta le risposte a domande frequenti sull'app Microsoft Azure I
 
 ## <a name="what-can-i-do-with-the-azure-information-protection-app"></a>Quali operazioni è possibile eseguire con l'app Azure Information Protection?
 
-L'app consente di visualizzare i messaggi di posta elettronica protetti da diritti (file con estensione rpmsg) se l'app di posta elettronica in uso non supporta la protezione dei dati di gestione dei diritti in modo nativo. Questa app consente anche di visualizzare file PDF, file di testo e di immagini protetti da diritti. Attualmente, l'app non può essere usata per creare nuovi messaggi di posta elettronica protetti, rispondere ai messaggi oppure creare o modificare i file protetti.
+L'app consente di visualizzare i messaggi di posta elettronica protetti da diritti (file con estensione rpmsg) se l'app di posta elettronica in uso non supporta la protezione dei dati di gestione dei diritti in modo nativo. Questa app consente anche di visualizzare documenti PDF, file di testo e di immagini protetti con RMS. 
+
+Dato che questa app è un visualizzatore, non può essere usata per creare nuovi messaggi di posta elettronica protetti, rispondere ai messaggi oppure creare o modificare i file protetti. Inoltre, l'app non consente di aprire allegati per i file visualizzati. Ad esempio, gli allegati in documenti PDF protetti o nei messaggi di posta elettronica protetti con RMS.
 
 ## <a name="can-i-open-pdf-files-that-are-in-sharepoint-protected-libraries-and-onedrive-for-business"></a>È possibile aprire file PDF che si trovano in librerie protette di SharePoint e OneDrive for Business?
 
@@ -48,7 +50,7 @@ Se sono disponibili queste versioni o versioni successive, è possibile installa
 
 Dopo aver installato l'app, non è necessario eseguire altre operazioni. Attendere finché non viene visualizzato un file o un messaggio di posta elettronica protetto e quindi scegliere il **visualizzatore dell'API** per aprirlo. Verrà quindi chiesto di accedere con l'account aziendale o dell'istituto di istruzione oppure di selezionare un certificato. Dopo l'autenticazione delle credenziali, sarà quindi possibile leggere il contenuto.
 
-Tuttavia, se non si vuole attendere, è possibile usare le istruzioni seguenti per inviare un file o un messaggio di posta elettronica protetto per visualizzare: [Introduzione all'app Microsoft Azure Information Protection per iOS e Android](mobile-app-get-started.md) 
+Tuttavia, se non si vuole attendere, è possibile usare le istruzioni seguenti per inviare a se stessi un messaggio di posta elettronica protetto o un file da visualizzare: [Introduzione all'app Microsoft Azure Information Protection per iOS e Android](mobile-app-get-started.md) 
 
 ## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>Quali credenziali usare per accedere all'app?
 

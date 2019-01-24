@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: eb2e2538246ea5c8ca42f6270e535c73dda71774
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: a5a1c0069a35073d9362e28ef18ad4c09d95df3d
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305506"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393947"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configurazione della collaborazione per i documenti protetti con Azure Information Protection
 
@@ -50,13 +50,13 @@ Poiché lo scenario limita l'accesso a specifici utenti, non include l'impostazi
 
 3. Nel pannello **Aggiungi autorizzazioni**: 
     
-    - Per il gruppo interno: selezionare **Cerca nella directory** per selezionare il gruppo, che deve essere abilitato per la posta elettronica.
+   - Per il gruppo interno: selezionare **Cerca nella directory** per selezionare il gruppo, che deve essere abilitato per la posta elettronica.
     
-    - Per tutti gli utenti nella prima organizzazione esterna: selezionare **Immettere i dettagli** e digitare il nome di un dominio nel tenant dell'organizzazione. Ad esempio, fabrikam.com.
+   - Per tutti gli utenti nella prima organizzazione esterna: selezionare **Immettere i dettagli** e digitare il nome di un dominio nel tenant dell'organizzazione. Ad esempio, fabrikam.com.
     
-    - Per il gruppo nella seconda organizzazione esterna: sempre nella scheda **Immettere i dettagli** digitare l'indirizzo e-mail del gruppo nel tenant dell'organizzazione. Ad esempio, sales@contoso.com
+   - Per il gruppo nella seconda organizzazione esterna: sempre nella scheda **Immettere i dettagli** digitare l'indirizzo e-mail del gruppo nel tenant dell'organizzazione. Ad esempio, sales@contoso.com
     
-    - Per l'utente che non ha un account Azure AD: sempre nella scheda **Immettere i dettagli** digitare l'indirizzo e-mail dell'utente. Ad esempio, bengi.turan@gmail.com 
+   - Per l'utente che non ha un account Azure AD: sempre nella scheda **Immettere i dettagli** digitare l'indirizzo e-mail dell'utente. Ad esempio, bengi.turan@gmail.com 
 
 4. Per concedere le stesse autorizzazioni a tutti gli utenti: In **Scegliere le autorizzazioni dai valori preimpostati** selezionare le autorizzazioni da concedere: **Comproprietario**, **Coautore**, **Revisore** o **Personalizzate**.
     

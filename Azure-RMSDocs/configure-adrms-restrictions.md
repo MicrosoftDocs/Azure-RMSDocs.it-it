@@ -8,12 +8,12 @@ ms.date: 12/12/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: de278dbb9fd9f051c3a4e47ef719988df4706434
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: d1613d30dbb59395254ca5bd56222c15fcb75058
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305557"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393562"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Protezione HYOK (hold your own key) per Azure Information Protection
 
@@ -114,35 +114,35 @@ Una distribuzione di AD RMS deve soddisfare i requisiti seguenti per garantire l
 
 - Configurazione di AD RMS:
     
-    - Versione minima di Windows Server 2012 R2: obbligatoria per gli ambienti di produzione, ma per scopi di testing o valutazione è possibile usare una versione minima di Windows Server 2008 R2 con Service Pack 1.
+  - Versione minima di Windows Server 2012 R2: obbligatoria per gli ambienti di produzione, ma per scopi di testing o valutazione è possibile usare una versione minima di Windows Server 2008 R2 con Service Pack 1.
     
-    - Una delle topologie seguenti:
+  - Una delle topologie seguenti:
         
-        - Foresta singola con singolo cluster radice AD RMS. 
+    - Foresta singola con singolo cluster radice AD RMS. 
         
-        - Più foreste con cluster radice AD RMS indipendenti e utenti che non dispongono di accesso ai contenuti protetti dagli utenti delle altre foreste.
+    - Più foreste con cluster radice AD RMS indipendenti e utenti che non dispongono di accesso ai contenuti protetti dagli utenti delle altre foreste.
         
-        - Più foreste con cluster AD RMS in ognuna di esse. Ogni cluster AD RMS condivide un URL di gestione licenze che fa riferimento allo stesso cluster AD RMS. In questo cluster AD RMS è necessario importare tutti i certificati di dominio utente trusted (TUD) da tutti gli altri cluster AD RMS. Per altre informazioni su questa topologia, vedere [Dominio utente trusted](https://technet.microsoft.com/library/dd983944(v=ws.10\).aspx)).
+    - Più foreste con cluster AD RMS in ognuna di esse. Ogni cluster AD RMS condivide un URL di gestione licenze che fa riferimento allo stesso cluster AD RMS. In questo cluster AD RMS è necessario importare tutti i certificati di dominio utente trusted (TUD) da tutti gli altri cluster AD RMS. Per altre informazioni su questa topologia, vedere [Dominio utente trusted](https://technet.microsoft.com/library/dd983944(v=ws.10).aspx).
         
     Quando si hanno più cluster AD RMS in foreste diverse, eliminare le etichette presenti nei criteri globali che applicano la protezione HYOK (AD RMS) e configurare [criteri con ambito](configure-policy-scope.md) per ogni cluster. Quindi assegnare gli utenti di ogni cluster ai criteri con ambito corrispondenti, evitando di usare gruppi per i quali un utente viene assegnato a più criteri con ambito. In seguito a questa assegnazione ogni utente deve avere etichette per un solo cluster AD RMS. 
     
-    - [Modalità di crittografia 2](https://technet.microsoft.com/library/hh867439.aspx): è possibile verificare la modalità controllando le proprietà del cluster AD RMS nella scheda **Generale**.
+  - [Modalità di crittografia 2](https://technet.microsoft.com/library/hh867439.aspx): è possibile verificare la modalità controllando le proprietà del cluster AD RMS nella scheda **Generale**.
     
-    - Ogni server AD RMS è configurato per l'URL di certificazione. [Istruzioni](#configuring-ad-rms-servers-to-locate-the-certification-url) 
+  - Ogni server AD RMS è configurato per l'URL di certificazione. [Istruzioni](#configuring-ad-rms-servers-to-locate-the-certification-url) 
     
-    - Un punto di connessione del servizio non è registrato in Active Directory: non viene usato un punto di connessione del servizio quando si usa la protezione di AD RMS con Azure Information Protection. 
+  - Un punto di connessione del servizio non è registrato in Active Directory: non viene usato un punto di connessione del servizio quando si usa la protezione di AD RMS con Azure Information Protection. 
     
-        - Se è stato registrato un punto di connessione del servizio per la distribuzione di AD RMS è necessario rimuoverlo, per garantire il corretto funzionamento dell'[individuazione dei servizi](./rms-client/client-deployment-notes.md#rms-service-discovery) della protezione di Azure Rights Management. 
+      - Se è stato registrato un punto di connessione del servizio per la distribuzione di AD RMS è necessario rimuoverlo, per garantire il corretto funzionamento dell'[individuazione dei servizi](./rms-client/client-deployment-notes.md#rms-service-discovery) della protezione di Azure Rights Management. 
         
-        - Se si sta installando un nuovo cluster AD RMS per HYOK, ignorare il passaggio per la registrazione del punto SCP durante la configurazione del primo nodo. Per ogni nodo aggiuntivo, assicurarsi che il server sia configurato per l'URL di certificazione prima di aggiungere il ruolo AD RMS e aggiungere il cluster esistente.
+      - Se si sta installando un nuovo cluster AD RMS per HYOK, ignorare il passaggio per la registrazione del punto SCP durante la configurazione del primo nodo. Per ogni nodo aggiuntivo, assicurarsi che il server sia configurato per l'URL di certificazione prima di aggiungere il ruolo AD RMS e aggiungere il cluster esistente.
     
-    - I server AD RMS sono configurati per l'uso di SSL/TLS con un certificato x.509 valido considerato attendibile dai client di connessione: obbligatorio per gli ambienti di produzione, ma non per effettuare test o valutazioni.
+  - I server AD RMS sono configurati per l'uso di SSL/TLS con un certificato x.509 valido considerato attendibile dai client di connessione: obbligatorio per gli ambienti di produzione, ma non per effettuare test o valutazioni.
     
-    - Modelli di diritti configurati.
+  - Modelli di diritti configurati.
     
-    - Non configurato per IRM di Exchange.
+  - Non configurato per IRM di Exchange.
     
-    - Per i dispositivi mobili e i computer Mac: viene installata e configurata l'[estensione per dispositivi mobili di Active Directory Rights Management Services](https://technet.microsoft.com/library/dn673574.aspx).
+  - Per i dispositivi mobili e i computer Mac: viene installata e configurata l'[estensione per dispositivi mobili di Active Directory Rights Management Services](https://technet.microsoft.com/library/dn673574.aspx).
 
 - La sincronizzazione delle directory è configurata tra l'istanza locale di Active Directory e Azure Active Directory e gli utenti che usano la protezione HYOK sono configurati per l'accesso Single Sign-On.
 

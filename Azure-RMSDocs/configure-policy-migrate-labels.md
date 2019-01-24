@@ -4,17 +4,17 @@ description: Eseguire la migrazione di etichette di Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 01/17/20198
 ms.topic: article
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 84f3aa3cc5dc7955056c98a957fa5d307340da1d
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 221b503fa3621e51c4822a6ad5a6d08fae4f1bad
+ms.sourcegitcommit: 8dec864bf25c7da62b9e0f628f1bf673c81c15ae
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53174132"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54356012"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Come eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365
 
@@ -93,9 +93,13 @@ Usare le istruzioni seguenti per eseguire la migrazione del tenant e delle etich
 
 È necessario essere un amministratore globale per eseguire la migrazione delle etichette.
 
-1. Aprire una nuova finestra del browser e accedere al portale di Azure usando il collegamento seguente: https://portal.azure.com/?ActivateMigration=true#blade/Microsoft_Azure_InformationProtection/DataClassGroupEditBlade/migrationActivationBlade 
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**.
+    
+    Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Nel pannello **Azure Information Protection - Etichettatura unificata** selezionare **Attiva** e seguire le istruzioni online.
+2. Dall'opzione di menu **Gestisci** selezionare **Etichettatura unificata (anteprima)**.
+
+3. Nel pannello **Azure Information Protection - Etichettatura unificata** selezionare **Attiva** e seguire le istruzioni online.
 
 Le etichette di cui è stata eseguita correttamente la migrazione possono ora essere usate dai [client che supportano l'etichettatura unificata](#clients-that-support-unified-labeling). Tuttavia, è prima di tutto necessario pubblicare queste etichette nel Centro sicurezza e conformità.
 

@@ -4,18 +4,18 @@ description: Dopo aver protetto i documenti, è possibile tenere traccia del mod
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 251de2d7e959dc46bcf95c003fd8924cc4c34d13
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: ba53a7f4d3aa96e4e813c602d1d79f014550ea17
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305226"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314765"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Manuale dell'utente: Tenere traccia dei documenti e revocarli quando si usa Azure Information Protection
 
@@ -59,6 +59,8 @@ A meno che non sia un amministratore, l'utente può rilevare e revocare solo i d
 > Se l'amministratore ha configurato controlli sulla privacy per il sito di rilevamento dei documenti, può non essere possibile vedere quando gli utenti dell'organizzazione accedono a un documento rilevato. Un amministratore può escludere tutti gli utenti o solo alcuni utenti. Tuttavia, è sempre possibile revocare l'accesso ai documenti rilevati.
 
 Per rilevare un documento protetto, è necessario usare il computer Windows per registrarlo con il sito di rilevamento dei documenti. A questo scopo, usare Esplora file o le app di Office.
+
+Se è disponibile la versione di anteprima corrente del client Azure Information Protection, è anche possibile registrare il documento protetto in PowerShell quando si usa il parametro *EnableTracking* con il cmdlet [Set-AIPFileLabel ](/powershell/azureinformationprotection/vlatest/set-aipfilelabel).
 
 ## <a name="using-office-to-track-or-revoke-the-document"></a>Uso di Office per tenere traccia del documento e revocarlo
 

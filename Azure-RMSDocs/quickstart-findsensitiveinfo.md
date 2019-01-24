@@ -4,19 +4,21 @@ description: Usare lo scanner di Azure Information Protection per trovare le inf
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 01/16/2019
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: 050c56887b83f0badf692bf2ee3b4616ad5b8bf4
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 12bde16a9b1659d00137720ad7c804db32cb1556
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024230"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314833"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Guida introduttiva: Trovare le informazioni riservate presenti nei file archiviati in locale
 
-In questa guida introduttiva verrà installato e configurato lo scanner di Azure Information Protection per trovare le informazioni riservate presenti nei file archiviati in un archivio dati locale, ad esempio una cartella locale, una condivisione di rete o SharePoint Server. 
+In questa guida introduttiva verrà installato e configurato lo scanner di Azure Information Protection per trovare le informazioni riservate presenti nei file archiviati in un archivio dati locale, ad esempio una cartella locale, una condivisione di rete o SharePoint Server.
+
+Nota: in questo articolo di avvio rapido viene usata la versione disponibile a livello generale corrente dello scanner e non la versione di anteprima, che usa il portale di Azure per la configurazione.
 
 È possibile completare questa configurazione in meno di 10 minuti.
 

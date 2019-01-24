@@ -4,18 +4,18 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/04/2019
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b16dee0a922ce6f3195d192021edbf4966223e30
-ms.sourcegitcommit: 17d2528e801ebf37f3d6f54db920588ef212d34d
+ms.openlocfilehash: 9386889c41706e0603c5e758be09b0d2baafc7e8
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53996945"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54394376"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -175,6 +175,7 @@ Quando si esportano i criteri dal portale di Azure, viene scaricato un file ZIP 
     
 2. Rinominare il file identificato come **Policy.msip**, quindi copiarlo nella cartella **%LocalAppData%\Microsoft\MSIP** nei computer in cui è installato il client Azure Information Protection. 
 
+Se il computer disconnesso esegue la versione di anteprima dello scanner di Azure Information Protection, è necessario eseguire ulteriori passaggi. Per altre informazioni, vedere [Restrizione: il server dello scanner non può avere la connettività Internet](../deploy-aip-scanner-preview.md#restriction-the-scanner-server-cannot-have-internet-connectivity) nelle istruzioni per la distribuzione dello scanner.
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Nascondere o visualizzare il pulsante Non inoltrare in Outlook
 
@@ -351,11 +352,11 @@ Per usare i comandi di PowerShell per convertire file con estensione ppdf esiste
 
 2. Nell'output, prendere nota dei valori dei parametri seguenti:
     
-    - Il valore (GUID) di **SubLabelId**, se presente. Se questo valore è vuoto, non è stata usata un'etichetta secondaria. In questo caso prendere nota del valore di **MainLabelId**.
+   - Il valore (GUID) di **SubLabelId**, se presente. Se questo valore è vuoto, non è stata usata un'etichetta secondaria. In questo caso prendere nota del valore di **MainLabelId**.
     
-    Nota: se non è presente neanche un valore per **MainLabelId**, il file non ha etichetta. In questo caso è possibile usare i comandi [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) e [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) invece dei comandi nei passaggi 3 e 4.
+     Nota: se non è presente neanche un valore per **MainLabelId**, il file non ha etichetta. In questo caso è possibile usare i comandi [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) e [Protect-RMSFile](/powershell/module/azureinformationprotection/protect-rmsfile) invece dei comandi nei passaggi 3 e 4.
     
-    - Valore di **RMSTemplateId**. Se questo valore è **Accesso limitato**, un utente ha protetto il file usando autorizzazioni personalizzate anziché le impostazioni di protezione configurate per l'etichetta. Se si continua, tali autorizzazioni personalizzate verranno sovrascritte dalle impostazioni di protezione dell'etichetta. Decidere se continuare o chiedere all'utente (valore visualizzato per **RMSIssuer**) di rimuovere l'etichetta e riapplicarla, con le relative autorizzazioni personalizzate originali.
+   - Valore di **RMSTemplateId**. Se questo valore è **Accesso limitato**, un utente ha protetto il file usando autorizzazioni personalizzate anziché le impostazioni di protezione configurate per l'etichetta. Se si continua, tali autorizzazioni personalizzate verranno sovrascritte dalle impostazioni di protezione dell'etichetta. Decidere se continuare o chiedere all'utente (valore visualizzato per **RMSIssuer**) di rimuovere l'etichetta e riapplicarla, con le relative autorizzazioni personalizzate originali.
 
 3. Rimuovere l'etichetta usando [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) con il parametro *RemoveLabel*. Se si usa l'[impostazione criteri](../configure-policy-settings.md) **Gli utenti devono offrire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione**, è necessario specificare anche il parametro *Giustificazione* con il motivo. Ad esempio: 
     

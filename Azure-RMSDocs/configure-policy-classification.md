@@ -4,16 +4,16 @@ description: Le condizioni per un'etichetta consentono di assegnare automaticame
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/05/2018
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: adf877a3f5f08d0adefd1cbe8864a0c0c2bb17b1
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: da76767b7538706f596653b77f3f29f8717e1442
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023856"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314799"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection
 
@@ -50,7 +50,7 @@ In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per 
 
 ### <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>Come vengono valutate più condizioni quando si applicano a più di un'etichetta
 
-1. Le etichette sono ordinate per la valutazione, in base alla relativa posizione specificata nel criterio: l'etichetta posizionata per prima occupa la posizione più bassa (minore riservatezza) e l'etichetta posizionata per ultima occupa la posizione più alta (massima riservatezza).
+1. Le etichette vengono ordinate per la valutazione, in base alla rispettiva posizione specificata nei criteri: l'etichetta posizionata per prima ha la posizione più bassa (minima riservatezza) e l'etichetta posizionata per ultima occupa la posizione più alta (massima riservatezza).
 
 2. Viene applicata l'etichetta per la massima riservatezza.
  
@@ -68,7 +68,7 @@ In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per 
 3. Nel pannello **Etichetta**, nella sezione **Configurare le condizioni per l'applicazione automatica di questa etichetta**, fare clic su **Aggiungi una nuova condizione**.
 
 4. Nel pannello **Condizione** selezionare **Tipi di informazioni** se si vuole usare una condizione predefinita oppure **Personalizzata** se si vuole specificare una condizione personalizzata:
-    - Per **Tipi di informazioni** selezionare una delle condizioni disponibili nell'elenco, quindi selezionare il numero minimo di occorrenze e specificare se l'occorrenza deve avere un valore univoco per essere inclusa nel conteggio delle occorrenze.
+    - Per **Tipi di informazioni**: selezionare una delle condizioni disponibili nell'elenco, quindi selezionare il numero minimo di occorrenze e specificare se l'occorrenza deve avere un valore univoco per essere inclusa nel conteggio delle occorrenze.
         
         I tipi di informazioni usano il rilevamento di modelli e i tipi di informazioni riservate della prevenzione perdita dei dati (DLP) di Office 365. È possibile scegliere tra vari tipi di informazioni riservate comuni. Alcuni tipi sono specifici per determinate aree. Per altre informazioni, vedere [Elementi cercati dai tipi di informazioni riservate](/office365/securitycompliance/what-the-sensitive-information-types-look-for) nella documentazione di Office 365.
         
@@ -79,19 +79,19 @@ In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per 
         
         Quando Azure Information Protection valuta i tipi di informazioni selezionati non usa l'impostazione del livello di attendibilità DLP di Office, ma ricerca corrispondenze in base al livello di attendibilità più basso.
     
-    - Per **Custom** (Personalizzata), specificare un nome e una frase di cui cercare la corrispondenza, esclusi i punti interrogativi e i caratteri speciali. Quindi specificare se usare un'espressione regolare per la corrispondenza, se la distinzione tra maiuscole e minuscole è rilevante, il numero minimo di occorrenze e se l'occorrenza deve avere un valore univoco per essere inclusa nel conteggio delle occorrenze.
+    - Per **Personalizzata**: specificare un nome e una frase di cui cercare la corrispondenza, esclusi i punti interrogativi e i caratteri speciali. Quindi specificare se usare un'espressione regolare per la corrispondenza, se la distinzione tra maiuscole e minuscole è rilevante, il numero minimo di occorrenze e se l'occorrenza deve avere un valore univoco per essere inclusa nel conteggio delle occorrenze.
         
         Le espressioni regolari usano i criteri di espressione regolare di Office 365. Per informazioni su come specificare espressioni regolari per le condizioni personalizzate, vedere la seguente versione specifica della [sintassi delle espressioni regolari Perl](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) da Boost.
         
 5. Decidere se modificare i valori **Numero minimo di occorrenze** e **Conta solo le occorrenze con valori univoci**, quindi selezionare **Salva**. 
     
-    Esempio per le opzioni relative alle occorrenze: si seleziona il tipo di informazioni per il codice fiscale, si imposta il numero minimo di occorrenze su 2 e in un documento compare due volte lo stesso codice fiscale. Se si imposta **Conta solo le occorrenze con valori univoci** su **Sì**, la condizione non è soddisfatta. Se invece si imposta questa opzione su **No**, la condizione è soddisfatta.
+    Esempio di opzioni per le occorrenze: si seleziona il tipo di informazioni per il numero di previdenza sociale, si imposta il numero minimo di occorrenze su 2 e in un documento lo stesso numero di previdenza sociale è citato due volte. Se si imposta **Conta solo le occorrenze con valori univoci** su **Sì**, la condizione non viene soddisfatta. Se invece si imposta questa opzione su **No**, la condizione è soddisfatta.
 
 6. Tornare al pannello **Etichetta**, configurare le opzioni seguenti e quindi fare clic su **Salva**:
     
-    - Scegliere la classificazione automatica o consigliata: per **Select how this label is applied: automatically or recommended to user** (Selezionare come applicare l'etichetta: automaticamente o consigliata all'utente) selezionare **Automatic** (Automatica) o **Recommended** (Consigliata).
+    - Scegliere la classificazione automatica o consigliata: per **Specificare se l'etichetta viene applicata automaticamente o se viene consigliata all'utente** selezionare **Automatico** o **Consigliato**.
     
-    - Specificare il testo per la richiesta utente o il suggerimento di criteri: mantenere il testo predefinito o specificare una stringa personalizzata.
+    - Specificare il testo per il prompt utente o la descrizione del criterio: mantenere il testo predefinito o specificare una stringa personalizzata.
 
 Quando fa clic su **Salva**, le modifiche diventano automaticamente disponibili per utenti e servizi. Non è più presente un'opzione di pubblicazione separata.
 
@@ -99,11 +99,9 @@ Quando fa clic su **Salva**, le modifiche diventano automaticamente disponibili 
 
 I tipi di informazioni riservate seguenti richiedono almeno la versione 1.37.19.0 per il client Azure Information Protection:
 
-- **Numero di telefono EU**
 - **Numero di telefono cellulare EU**
 - **Numero di passaporto EU**
 - **Numero di patente di guida EU**
-- **Coordinate GPS EU**
 - **Numero documento di identità EU**
 - **Codice fiscale (CF) EU o ID equivalente**
 - **Numero identificativo contribuente EU**
@@ -111,6 +109,24 @@ I tipi di informazioni riservate seguenti richiedono almeno la versione 1.37.19.
 - **Numero documento di identità turco**
 - **Numero di tessera residenza giapponese**
 
+
+I tipi di informazioni sensibili seguenti richiedono la versione di anteprima corrente del client Azure Information Protection:
+
+- **Stringa di connessione del bus di servizio di Azure**
+- **Stringa di connessione di Azure IoT**
+- **Account di archiviazione di Azure**
+- **Stringa di connessione del database IaaS di Azure e stringa di connessione di SQL di Azure**
+- **Stringa di connessione di Cache Redis di Azure**
+- **Azure SAS**
+- **Stringa di connessione di SQL Server**
+- **Chiave di autenticazione di Azure DocumentDB**
+- **Password delle impostazioni di pubblicazione di Azure**
+- **Chiave dell'account di archiviazione di Azure (generico)**
+
+Inoltre, i tipi di informazioni sensibili seguenti non sono supportati per la versione di anteprima corrente del client Azure Information Protection e non sono più visualizzati nel portale di Azure:
+
+- **Numero di telefono EU**
+- **Coordinate GPS EU**
 
 ## <a name="next-steps"></a>Passaggi successivi
 

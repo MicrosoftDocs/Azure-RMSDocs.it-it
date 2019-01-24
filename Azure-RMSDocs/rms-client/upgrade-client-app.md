@@ -4,18 +4,18 @@ description: Istruzioni per utenti che hanno eseguito l'aggiornamento dall'appli
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c882c917a3a612b3fa362661cdcd94e77ec145f1
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 7c39527945eb5f92c19e6cf8f89db6e8d7ae9a5a
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305523"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314714"
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Manuale dell'utente: Attività eseguite in precedenza con l'applicazione RMS sharing
 
@@ -30,7 +30,7 @@ Usare le informazioni seguenti per muovere i primi passi rapidamente.
 |Proteggere un file in un dispositivo <br /><br />Operazione chiamata anche "protezione sul posto"|Per le app di Office: selezionare un'etichetta che applica la protezione necessaria oppure impostare autorizzazioni personalizzate.<br /><br />Per altri file: Usare l'opzione di menu **Classifica e proteggi** di Esplora file per aprire la finestra di dialogo **Classifica e proteggi - Azure Information Protection**. Selezionare quindi un'etichetta che applica la protezione necessaria oppure specificare autorizzazioni personalizzate. <br /><br />Per altre informazioni, vedere [Classificare e proteggere un file o un messaggio di posta elettronica](client-classify-protect.md).
 |Proteggere un file che si condivide tramite posta elettronica <br /><br />Operazione chiamata anche "condivisione di file protetti"|Se si usa Outlook applicare un'etichetta con la protezione necessaria per il messaggio di posta elettronica oppure selezionare l'opzione di Outlook **Non inoltrare**. Gli allegati non protetti che hanno un [tipo di file supportato](https://support.office.com/article/bb643d33-4a3f-4ac7-9770-fd50d95f58dc#FileTypesforIRM) vengono automaticamente protetti.<br /><br />Nota: per tenere traccia di un documento protetto inviato via posta elettronica, prima proteggerlo e poi allegarlo al messaggio di posta elettronica.<br /><br />Per altre informazioni, vedere [Classificare e proteggere un file o un messaggio di posta elettronica](client-classify-protect.md).
 |Modificare le autorizzazioni per i file protetti <br /><br />Operazione chiamata anche "riprotezione"|Per le app di Office in cui viene visualizzata la barra di Azure Information Protection: selezionare un'etichetta che applica la protezione necessaria.<br /><br />Per gli altri file e se il client Azure Information Protection è in [modalità di sola protezione](client-protection-only-mode.md): Usare l'opzione di menu **Classifica e proteggi** di Esplora file per aprire la finestra di dialogo **Classifica e proteggi - Azure Information Protection**. Selezionare quindi un'etichetta che applica la protezione necessaria oppure specificare autorizzazioni personalizzate.<br /><br />Per altre informazioni, vedere [Classificare e proteggere un file o un messaggio di posta elettronica](client-classify-protect.md).
-|Tenere traccia dei documenti e revocarli|Da Word, Excel e PowerPoint: aprire il documento e quindi scheda **Home** > gruppo **Protezione** > **Proteggi** > **Rileva e revoca**<br /><br />Da Esplora file: Fare clic con il pulsante destro del mouse su un file o una cartella > **Classifica e proteggi**. Nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** fare clic su **Rileva e revoca**. <br /><br />Per altre informazioni, vedere [Tenere traccia dei documenti e revocarli](client-track-revoke.md).
+|Tenere traccia dei documenti e revocarli|Da Word, Excel e PowerPoint: aprire il documento e quindi scheda **Home** > gruppo **Protezione** > **Proteggi** > **Rileva e revoca**<br /><br />Da Esplora file: Fare clic con il pulsante destro del mouse su un file o una cartella > **Classifica e proteggi**. Nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** fare clic su **Rileva e revoca**. <br /><br />Quando si usa PowerShell dalla versione di anteprima corrente del client Azure Information Protection: Usare il parametro *EnableTracking* con il cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel) per registrare il documento etichettato per il rilevamento.<br /><br />Per altre informazioni, vedere [Tenere traccia dei documenti e revocarli](client-track-revoke.md).
 |Visualizzare e utilizzare i file che sono stati protetti|È necessario che Office sia installato per usare i documenti di Office protetti. Il visualizzatore Azure Information Protection è in grado di aprire molti altri file protetti per consentirne la lettura, nonché la stampa e il salvataggio se si è autorizzati a eseguire queste operazioni. Questo visualizzatore viene automaticamente installato con il client oppure può essere installato separatamente.<br /><br />Per altre informazioni, vedere [Aprire file protetti](client-view-use-files.md).
 |Rimuovere la protezione da uno o più file|Usare l'opzione di menu **Classifica e proteggi** di Esplora file per aprire la finestra di dialogo **Classifica e proteggi - Azure Information Protection**. <br /><br />Quindi, per un singolo file, deselezionare l'opzione **Proteggi con autorizzazioni personalizzate**. Per più file o una cartella, fare clic su **Rimuovi le autorizzazioni personalizzate**.<br /><br />Per altre informazioni, vedere [Rimuovere etichette di classificazione e protezione da file e messaggi di posta elettronica](client-remove-label-protection.md).|
 

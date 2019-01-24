@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: c6f220e995aa785c44d4227884da2c7379918a8d
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 39abf4586f00cb40cb096841261993225b8c8387
+ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305472"
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54393348"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configurazione delle regole del flusso di posta di Exchange Online per le etichette di Azure Information Protection
 
@@ -29,7 +29,7 @@ Usare le informazioni seguenti per configurare le regole del flusso di posta in 
 
 Le regole del flusso di posta che applicano la protezione come azione vengono ignorate se il messaggio di posta elettronica è già protetto. Ad esempio, un messaggio di posta elettronica protetto da Non inoltrare non può essere modificato da una regola del flusso di posta di Exchange per usare l'opzione Encrypt-Only (Solo crittografia).  
 
-È possibile estendere questi esempi e anche modificarli, ad esempio aggiungendo altre condizioni. Per altre informazioni sulla configurazione delle regole del flusso di posta, vedere [Regole del flusso (regole di trasporto) di posta in Exchange Online](https://technet.microsoft.com/library/jj919238(v=exchg.150\).aspx) nella documentazione di Exchange Online.
+È possibile estendere questi esempi e anche modificarli, ad esempio aggiungendo altre condizioni. Per altre informazioni sulla configurazione delle regole del flusso di posta, vedere [Regole del flusso (regole di trasporto) di posta in Exchange Online](https://technet.microsoft.com/library/jj919238(v=exchg.150).aspx) nella documentazione di Exchange Online.
 
 Per altre informazioni sulla configurazione di regole del flusso di posta per crittografare i messaggi di posta elettronica, vedere [Definire le regole del flusso di posta elettronica per crittografare i messaggi di posta elettronica in Office 365](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8) nella documentazione di Office. 
 
@@ -60,7 +60,7 @@ Per gli esempi seguenti, creare una nuova regola del flusso di posta seguendo qu
 > [!TIP]
 > Se si verificano problemi con l'interfaccia utente quando si configurano le regole, provare a usare un browser diverso, ad esempio Internet Explorer.
 
-Gli esempi hanno una sola condizione che applica la protezione quando un messaggio di posta elettronica viene inviato all'esterno dell'organizzazione. Per altre informazioni sulle altre condizioni che è possibile selezionare, vedere [Condizioni ed eccezioni della regola del flusso di posta (predicati) in Exchange Online](https://technet.microsoft.com/library/jj919235(v=exchg.150\).aspx).
+Gli esempi hanno una sola condizione che applica la protezione quando un messaggio di posta elettronica viene inviato all'esterno dell'organizzazione. Per altre informazioni sulle altre condizioni che è possibile selezionare, vedere [Condizioni ed eccezioni della regola del flusso di posta (predicati) in Exchange Online](https://technet.microsoft.com/library/jj919235(v=exchg.150).aspx).
 
 
 ### <a name="example-1-rule-that-applies-the-do-not-forward-option-to-emails-that-are-labeled-general-when-they-are-sent-outside-the-organization"></a>Esempio 1: Regola che applica l'opzione Non inoltrare ai messaggi di posta elettronica con l'etichetta **Generale** quando vengono inviati all'esterno dell'organizzazione

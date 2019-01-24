@@ -4,18 +4,18 @@ description: Alcune domande frequenti su Azure Information Protection e sul rela
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/05/2019
+ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 393cac6703016235359e0eb2812b31c585d4b524
-ms.sourcegitcommit: b2619c522298eaee3bd0067f2827e80fa9d4bfc2
+ms.openlocfilehash: ef9836a6e3b651986642d2c93128ea0f6b1e6112
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54060315"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314850"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
@@ -154,7 +154,7 @@ Esiste attualmente una differenza nell'impostazione del [proprietario di Rights 
 
 - Per Infrastruttura di classificazione file di Windows Server: è possibile impostare il proprietario di Rights Management su un singolo account per tutti i file o impostare in modo dinamico il proprietario di Rights Management per ogni file. Per impostare in modo dinamico il proprietario di Rights Management, usare il parametro **-OwnerMail [posta elettronica proprietario file di origine]** e relativo valore. Questa configurazione recupera l'indirizzo di posta elettronica dell'utente da Active Directory usando il nome dell'account utente specificato nella proprietà del proprietario del file.
 
-- Per lo scanner di Azure Information Protection: per i nuovi file protetti è possibile impostare il proprietario di Rights Management su un singolo account per tutti i file di uno specifico archivio dati, ma non è possibile impostare in modo dinamico il proprietario di Rights Management per ogni file. Il proprietario di Rights Management non viene modificato per i file già protetti. Per impostare l'account, specificare il parametro **-DefaultOwner** per il [profilo del repository dei dati](/powershell/module/azureinformationprotection/Set-AIPScannerRepository?view=azureipps#optional-parameters).
+- Per lo scanner di Azure Information Protection: per i nuovi file protetti è possibile impostare il proprietario di Rights Management su un singolo account per tutti i file di uno specifico archivio dati, ma non è possibile impostare in modo dinamico il proprietario di Rights Management per ogni file. Il proprietario di Rights Management non viene modificato per i file già protetti. Per impostare l'account per i file appena protetti, specificare l'impostazione **Proprietario predefinito** nel profilo dello scanner. 
 
 Quando lo scanner protegge i file inclusi in siti e librerie di SharePoint, il proprietario di Rights Management viene impostato in modo dinamico per ogni file usando il valore Editor di SharePoint.
 

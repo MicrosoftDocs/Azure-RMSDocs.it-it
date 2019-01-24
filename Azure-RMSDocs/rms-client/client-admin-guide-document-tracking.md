@@ -4,18 +4,18 @@ description: Istruzioni e informazioni per amministratori per configurare e usar
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/16/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5add56fb5c033243acccb5308b7b9569b0c72624
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 108a77f6c78b49bfcd852ff94ef529d3a667a193
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305200"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314735"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guida dell'amministratore: Configurazione e uso del rilevamento dei documenti per Azure Information Protection
 
@@ -95,6 +95,16 @@ Per uscire dalla modalità amministratore, fare clic su **X** accanto a **Esci d
 
 Per istruzioni su come usare il sito di rilevamento dei documenti, vedere [Tenere traccia dei documenti e revocarli](client-track-revoke.md) nella Guida dell'utente.
 
+### <a name="using-powershell-to-register-labeled-documents-with-the-document-tracking-site"></a>Uso di PowerShell per registrare i documenti etichettati nel sito di rilevamento dei documenti
+
+Questa opzione è disponibile solo per la versione di anteprima corrente del client Azure Information Protection.
+
+Per poter rilevare e revocare un documento, è prima necessario registrarlo nel sito di rilevamento dei documenti. Questa azione si verifica quando gli utenti selezionano l'opzione **Rileva e revoca** da Esplora file o dalle app di Office quando usano il client Azure Information Protection. Per l'applicazione RMS sharing, questa azione viene eseguita automaticamente quando gli utenti selezionano l'opzione **Condividi file protetto**.
+
+Se si etichettano e proteggono i file per gli utenti usando il cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel), è possibile usare il parametro *EnableTracking* per registrare il file nel sito di rilevamento dei documenti. Ad esempio:
+
+    Set-AIPFileLabel -Path C:\Projects\ -LabelId ade72bf1-4714-4714-4714-a325f824c55a -EnableTracking
+
 ## <a name="usage-logging-for-the-document-tracking-site"></a>Registrazione dei dati di utilizzo per il sito di rilevamento dei documenti
 
 Nei file di log dei dati di utilizzo sono presenti due campi applicabili al rilevamento dei documenti: **AdminAction** e **ActingAsUser**.
@@ -105,9 +115,7 @@ Nei file di log dei dati di utilizzo sono presenti due campi applicabili al rile
 
 Sono inoltre disponibili tipi di richieste che registrano la modalità in cui utenti e amministratori stanno usando il sito di rilevamento dei documenti. **RevokeAccess**, ad esempio, è il tipo di richiesta usato quando un utente, o un amministratore che agisce per conto dell'utente, revoca un documento nel sito di rilevamento dei documenti. Usare questo tipo di richiesta in combinazione con il campo AdminAction per determinare se il documento è stato revocato dal relativo utente (il campo AdminAction è vuoto) o se un amministratore ha revocato un documento per conto di un utente (il campo AdminAction è true).
 
-
 Per altre informazioni sulla registrazione dell'utilizzo, vedere [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](../log-analyze-usage.md)
-
 
 
 ## <a name="next-steps"></a>Passaggi successivi

@@ -4,18 +4,18 @@ description: Informazioni sui documenti PDF etichettati per la classificazione e
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/16/2018
 ms.topic: article
 ms.service: information-protection
 ms.assetid: aab59e02-930b-4a17-8442-2d5d081fe1a6
 ms.reviewer: kartikka
 ms.suite: ems
-ms.openlocfilehash: fc1a6c136d0b44671cbae0e6eb15202364e356d4
-ms.sourcegitcommit: b2414cc00d50ccefe10f8c3719eb3f6c1e78fc65
+ms.openlocfilehash: c6d02b5b7f82acc8b540fca57c2a7e8ab56f76fb
+ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246123"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54314816"
 ---
 # <a name="supported-pdf-readers-for-microsoft-information-protection"></a>Lettori di file PDF supportati per Microsoft Information Protection
 
@@ -54,6 +54,6 @@ Attualmente, SharePoint Online e SharePoint locale usano un formato più datato 
 
 |Sistema operativo|Lettori supportati|
 |----------------|-----------------------------------|
-|Windows 10 e versioni precedenti<br />fino a Windows 7 Service Pack 1|Visualizzatore di Azure Information Protection<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br />App di condivisione RMS|
+|Windows 10 e versioni precedenti<br />fino a Windows 7 Service Pack 1|Visualizzatore di Azure Information Protection<br /><br />Gaaiho Doc<br /><br />GigaTrust Desktop PDF Client for Adobe<br /><br />Foxit Reader<br /><br />Nitro PDF Reader<br /><br /> Nuance Power PDF<br /><br />App di condivisione RMS|
 |Android|App Azure Information Protection<br /><br />Foxit MobilePDF with RMS<br /><br />GigaTrust App for Android|
 |iOS|App Azure Information Protection<br /><br />Foxit MobilePDF with RMS<br /><br />TITUS Docs|
