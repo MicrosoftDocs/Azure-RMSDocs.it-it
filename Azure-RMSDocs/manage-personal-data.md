@@ -4,18 +4,18 @@ description: Informazioni sui dati personali usati da Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/23/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: 4e44796d3bd2fdf1fd2f0c39cc759f16d87267a1
-ms.sourcegitcommit: db60fe8f74ffaa4f6ffbf5defb22efc476c28312
+ms.openlocfilehash: 08ae5875437a1e443247a5a57b1bb621b6627ce3
+ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53319415"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898784"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gestire i dati personali per Azure Information Protection
 
@@ -196,6 +196,12 @@ Quando vengono applicate etichette e protezione a documenti e messaggi di posta 
 Inoltre, il client Azure Information Protection registra questi dati personali nel registro eventi di Windows locale: **Registri applicazioni e servizi** > **Azure Information Protection**.
 
 Quando il client Azure Information Protection esegue lo scanner, i dati personali vengono salvati in %localappdata%\Microsoft\MSIP\Scanner\Reports nel computer Windows Server che esegue lo scanner.
+
+È possibile disattivare la registrazione di informazioni per il client Azure Information Protection e lo scanner usando le configurazioni seguenti:
+
+- Per il client Azure Information Protection: Creare un'[impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#change-the-local-logging-level) che consente di configurare **LogLevel** su **Off**.
+
+- Per lo scanner di Azure Information Protection: Usare il cmdlet [Set-AIPScannerConfiguration](/azureinformationprotection/set-aipscannerconfiguration) per impostare il parametro *ReportLevel* su **Off**.
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-hybrid-note.md)]
 

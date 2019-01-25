@@ -4,18 +4,18 @@ description: Informazioni per fornire istruzioni a utenti, amministratori e adde
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/06/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 25471f9e047b4b3c1dac94cdf0856d7413de268a
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 0f62134663cd7c784a694d25369698b4b7c9538c
+ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173894"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898801"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Consentire agli utenti di proteggere i file mediante il servizio Azure Rights Management
 
@@ -79,11 +79,11 @@ Se si sta usando il servizio Azure Rights Management e il client Azure Informati
 > [!TIP]
 > Per trovare indicazioni e istruzioni specifiche dell'applicazione per l'uso della protezione delle informazioni in tali applicazioni, cercare **IRM** e il nome e la versione dell'applicazione.
 
-#### <a name="to-protect-a-document-in-word2013"></a>Per proteggere un documento in Word 2013
+#### <a name="to-protect-a-document-in-wordfrom-office-365-proplus"></a>Per proteggere un documento in Word da Office 365 ProPlus
 
 1.  Creare un documento in Microsoft Word.
 
-2.  Dal menu **File** fare clic su **Info**, su **Proteggi documento** e quindi su **Limitazione accesso**.
+2.  Dal menu **File**: **Info** > **Proteggi documento** >  **Limita accesso**.
 
 3. Scegliere un modello per applicare rapidamente i diritti di utilizzo appropriati oppure selezionare **Limitazione accesso** e selezionare i diritti manualmente.
 
@@ -98,11 +98,11 @@ Un diritto d'uso di sola visualizzazione, ad esempio, non consente all'utente di
 
 I diritti d'uso vengono visualizzati nella parte superiore del documento in un banner di limitazioni, in cui possono essere visualizzate le autorizzazioni applicate al documento o può essere presente un collegamento per visualizzarle.
 
-#### <a name="to-protect-an-email-message-using-outlook2013-and-exchange-online"></a>Per proteggere un messaggio di posta elettronica in Outlook 2013 e in Exchange Online
+#### <a name="to-protect-an-email-message-using-outlookfrom-office-365-proplus-connecting-to-exchange-online"></a>Per proteggere un messaggio di posta elettronica in Outlook da Office 365 ProPlus, con connessione a Exchange Online
 
 1.  In Outlook creare un messaggio di posta elettronica indirizzato a un destinatario presente nell'organizzazione.
 
-2.  Nella scheda **OPZIONI** fare clic su **Autorizzazione**, quindi selezionare un'opzione. Ad esempio: **Non inoltrare**, **\<Nome società> - Riservato** o **\<Nome società> - Solo visualizzazione riservata**.
+2.  Dalla scheda **Opzioni**: **Autorizzazione** > selezionare un'opzione. Ad esempio: **Non inoltrare**, **\<Nome società> - Riservato** o **\<Nome società> - Solo visualizzazione riservata**.
 
 3.  Inviare il messaggio.
 
@@ -114,12 +114,10 @@ Ad esempio, se il messaggio di posta elettronica è stato protetto usando l'opzi
 
 1.  In Outlook sul Web creare un messaggio di posta elettronica indirizzato a un destinatario presente nell'organizzazione.
 
-2.  Fare clic su  **…**, fare clic su **Imposta autorizzazione**, quindi selezionare un'opzione. Ad esempio: **Non inoltrare** o **Non rispondere a tutti**. O **\<Nome società> - Riservato** o **\<Nome società> - Solo visualizzazione riservata**.
+2.  Selezionare **Proteggi**. A meno che l'impostazione predefinita non sia stata modificata da un amministratore, l'opzione **Non inoltrare** viene selezionata automaticamente. Se si vuole modificare l'impostazione predefinita, selezionare **Modifica autorizzazioni** e quindi selezionare un'opzione nell'elenco a discesa. Ad esempio: **Crittografare** oppure  **\<nome società > - Informazioni riservate**.
 
 3.  Inviare il messaggio.
 
 In modo analogo alla visualizzazione di un documento protetto, quando i destinatari aprono il messaggio di posta elettronica vengono prima autenticati. Se sono autorizzati a visualizzare il messaggio di posta elettronica, quest'ultimo viene aperto con i [diritti di utilizzo](configure-usage-rights.md) limitati indicati per l'utente specifico. 
 
-Se ad esempio è stata selezionata l'opzione **Non rispondere a tutti**, l'opzione **RISPONDI A TUTTI** nella finestra del messaggio non è disponibile.
-
-
+Ad esempio, con l'opzione predefinita **Non inoltrare**, l'opzione **Inoltra** nella finestra di messaggio non è disponibile.

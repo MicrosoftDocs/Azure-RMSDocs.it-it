@@ -4,18 +4,18 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2019
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 9386889c41706e0603c5e758be09b0d2baafc7e8
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 71ef2607355cbe84003aaf9fc77dfa5d9a72beff
+ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394376"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54898852"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -51,6 +51,7 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 |EnablePDFv2Protection|[Non proteggere i file PDF usando lo standard ISO per la crittografia dei file PDF](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
 |LabelbyCustomProperty|[Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Configurare un'etichetta per applicare la protezione S/MIME in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
+|LogLevel|[Modificare il livello di registrazione locale](#change-the-local-logging-level)
 |OutlookDefaultLabel|[Impostare un'etichetta predefinita diversa per Outlook](#set-a-different-default-label-for-outlook)|
 |OutlookRecommendationEnabled|[Abilitare la classificazione consigliata in Outlook](#enable-recommended-classification-in-outlook)|
 |PostponeMandatoryBeforeSave|[Rimuovere "Non ora" per i documenti quando si usa l'etichettatura obbligatoria](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
@@ -603,7 +604,7 @@ A questo punto, quando un utente apre e salva uno di questi documenti di Office,
 
 ## <a name="disable-the-low-integrity-level-for-the-scanner"></a>Disabilitare il livello di integrità basso per lo scanner
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
 
 Per impostazione predefinita, lo scanner di Azure Information Protection viene eseguito con un livello di integrità basso. Questa impostazione offre un maggiore isolamento di sicurezza, ma influisce negativamente sulle prestazioni. Il livello di integrità basso è appropriato se si esegue lo scanner con un account con privilegi (ad esempio un account amministratore locale) in quanto questa impostazione aiuta a proteggere il computer che esegue lo scanner.
 
@@ -617,6 +618,32 @@ Per configurare questa impostazione avanzata in modo che lo scanner venga esegui
 
 - Valore: **False**
 
+
+## <a name="change-the-local-logging-level"></a>Modificare il livello di registrazione locale
+
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
+
+Per impostazione predefinita, il client Azure Information Protection scrive i file di log del client nella cartella **%localappdata%\Microsoft\MSIP**. Questi file sono destinati al supporto tecnico Microsoft per la risoluzione dei problemi.
+ 
+Per modificare il livello di registrazione per questi file, configurare l'impostazione client avanzata seguente:
+
+- Chiave: **LogLevel**
+
+- Valore: **\<livello di registrazione>**
+
+Impostare il livello di registrazione su uno dei valori seguenti:
+
+- **Off**: nessuna registrazione locale.
+
+- **Errore**: solo errori.
+
+- **Info**: registrazione minima che non include ID evento.
+
+- **Debug**: informazioni complete (impostazione predefinita).
+
+- **Traccia**: registrazione molto dettagliata, che ha un impatto sulle prestazioni e deve essere abilitata solo se richiesto dal supporto tecnico Microsoft. Se viene richiesto di impostare questo livello di registrazione, ricordarsi di impostare un valore diverso dopo aver raccolto i log rilevanti.
+
+Questa impostazione client avanzata non modifica le informazioni inviate ad Azure Information Protection per [reporting centralizzato](../reports-aip.md) o le informazioni scritte nel [registro eventi](client-admin-guide-files-and-logging.md#usage-logging-for-the-azure-information-protection-client) locale.
 
 ## <a name="integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution"></a>Integrazione con la classificazione dei messaggi di Exchange per una soluzione di etichettatura dei dispositivi mobili
 

@@ -8,12 +8,12 @@ ms.date: 01/16/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: da76767b7538706f596653b77f3f29f8717e1442
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: b9cc4267ec4dd3ebaa24b23d996fde61f9b09799
+ms.sourcegitcommit: 719e3c758e414c5c95dea03cd78d7427af4ee8e7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314799"
+ms.lasthandoff: 01/22/2019
+ms.locfileid: "54443842"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection
 
@@ -29,7 +29,9 @@ Ecco un esempio di richiesta quando si configura una condizione per l'applicazio
 
 ![Rilevamento e indicazione di Azure Information Protection](./media/info-protect-recommend-calloutsv2.png)
 
-In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per applicare l'etichetta consigliata oppure ignorare il suggerimento selezionando **Dismiss** (Ignora). Se l'utente sceglie di ignorare il suggerimento e alla successiva apertura del documento la condizione è ancora applicabile, l'indicazione per l'etichetta viene visualizzata nuovamente. 
+In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per applicare l'etichetta consigliata oppure ignorare il suggerimento selezionando **Dismiss** (Ignora). Se l'utente sceglie di ignorare il suggerimento e alla successiva apertura del documento la condizione è ancora applicabile, l'indicazione per l'etichetta viene visualizzata nuovamente.
+
+Se si configura la classificazione automatica anziché consigliata, l'etichetta viene applicata automaticamente e l'utente visualizza comunque una notifica nell'app di Office. Tuttavia, i pulsanti **Change Now** (Cambia adesso) e **Dismiss** (Ignora) vengono sostituiti con **OK**.
 
 > [!IMPORTANT]
 >Non configurare un'etichetta per la classificazione automatica e un'autorizzazione definita dall'utente. L'opzione per le autorizzazioni definite dall'utente è un'[impostazione di protezione](configure-policy-protection.md) che consente agli utenti di specificare a chi vengono concesse le autorizzazioni.
