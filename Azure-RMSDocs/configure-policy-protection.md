@@ -8,12 +8,12 @@ ms.date: 10/31/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: ffb919e0d48687a3a1c46a12651734c85c578aa6
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 075441ef848f3ebe5e106f5989a99981037711bd
+ms.sourcegitcommit: 8bda26b8b84cb8b66ae8f927906710d60c4b6a80
 ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393366"
+ms.locfileid: "54397845"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
@@ -44,7 +44,7 @@ Quando l'etichetta applica la protezione, un documento protetto non è adatto pe
 
 Non è necessario configurare Exchange per Azure Information Protection per permettere agli utenti di applicare etichette in Outlook e proteggere i loro messaggi di posta elettronica. Tuttavia, fino a quando Exchange non viene configurato per Azure Information Protection, non si può usufruire delle funzionalità di protezione complete di Azure Rights Management con Exchange. Ad esempio, gli utenti non possono visualizzare messaggi di posta elettronica protetti nei telefoni cellulari o con Outlook dal Web, i messaggi di posta elettronica protetti non possono essere indicizzati per la ricerca e non è possibile configurare la prevenzione della perdita dei dati di Exchange Online con la protezione di Rights Management. Per assicurarsi che Exchange possa supportare questi scenari aggiuntivi, vedere le risorse seguenti:
 
-- Per Exchange Online: vedere le istruzioni per [Exchange Online: configurazione di IRM](configure-office365.md#exchange-online-irm-configuration).
+- Per Exchange Online: vedere le istruzioni per [Exchange Online: configurazione di IRM](configure-office365.md#exchangeonline-irm-configuration).
 
 - Per Exchange locale, è necessario distribuire il [connettore RMS e configurare i server Exchange](deploy-rms-connector.md). 
 
