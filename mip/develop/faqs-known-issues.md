@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: troubleshooting
 ms.date: 10/19/2018
 ms.author: bryanla
-ms.openlocfilehash: f213b31d9b0e41ea9c1e076055a90e9f62b31b3a
-ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
+ms.openlocfilehash: 9bffda812448bea4ba6a6c1557042e14b78de1b5
+ms.sourcegitcommit: 0fad4196f397fa32c60e6d24791fcad43689c4ba
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223926"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55088055"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Problemi noti e domande frequenti di Microsoft Information Protection (MIP) SDK
 
@@ -23,7 +23,7 @@ In questo articolo vengono fornite le risposte alle domande comuni e informazion
 
 MIP SDK è supportato nelle piattaforme seguenti:
 
-[!INCLUDE [MIP SDK platform support](../include/mip-sdk-platform-support.md)]
+[!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
 ### <a name="question-how-does-the-sdk-handle-strings-and-what-string-type-should-i-be-using-in-my-code"></a>Domanda: come vengono gestite le stringhe nell'SDK e quale tipo di stringa si deve usare nel codice?
 
@@ -43,10 +43,10 @@ L'SDK è progettato per essere multipiattaforma e usa [UTF-8 (Unicode Transforma
 |-|-|
 |*Formato di file non supportato*| Questa eccezione si verifica quando si tenta di proteggere o assegnare un'etichetta a un file PDF firmato digitalmente o protetto da password. Per altre informazioni sulla protezione e l'assegnazione di etichette a file PDF, vedere [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) (Nuovo supporto della crittografia PDF con Microsoft Azure Information Protection).|
 
-### <a name="error-failed-to-parse-the-acquired-compliance-policy"></a>Errore: "Impossibile analizzare i criteri di conformità acquisiti"  
+### <a name="error-failed-to-parse-the-acquired-compliance-policy"></a>Errore: "Non è stato possibile analizzare il criterio di conformità acquisito"  
 
 È stato scaricato MIP SDK e sono state eseguite le applicazioni di esempio. Si usa il file di esempio per provare a elencare tutte le etichette, ma viene visualizzato l'errore seguente:
 
 | Errore | Soluzione |
 |-|-|
-|*Something bad happened: Failed to parse the acquired Compliance Policy (Si è verificato un errore. Impossibile analizzare i criteri di conformità acquisiti). Failed with: [class mip::CompliancePolicyParserException] Tag not found: policy, NodeType: 15, Name: No Name Found, Value: , Ancestors: <SyncFile><Content>, correlationId:[34668a40-blll-4ef8-b2af-00005aa674z9]*| Questo errore indica che non è stata eseguita la migrazione delle etichette da Azure Information Protection all'esperienza di etichettatura unificata. Vedere [Come eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365](/azure/information-protection/configure-policy-migrate-labels) per eseguire la migrazione delle etichette e quindi creare criteri per le etichette nel Centro sicurezza e conformità di Office 365. Al termine, l'esempio verrà eseguito correttamente.|
+|*È accaduto qualcosa non valida: Impossibile analizzare il criterio di conformità acquisito. Non è riuscita con: Tag [classe mip::CompliancePolicyParserException] non trovato: criteri, il tipo di nodo: 15, nome: No Name Found, Value: , Ancestors: <SyncFile><Content>, correlationId:[34668a40-blll-4ef8-b2af-00005aa674z9]*| Questo errore indica che non è stata eseguita la migrazione delle etichette da Azure Information Protection all'esperienza di etichettatura unificata. Vedere [Come eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365](/azure/information-protection/configure-policy-migrate-labels) per eseguire la migrazione delle etichette e quindi creare criteri per le etichette nel Centro sicurezza e conformità di Office 365. Al termine, l'esempio verrà eseguito correttamente.|
