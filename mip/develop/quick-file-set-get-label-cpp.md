@@ -5,37 +5,37 @@ services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
-ms.date: 09/27/2018
+ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 651fc73c00f18d06ad1a824337a096331bc7e897
-ms.sourcegitcommit: d677088db8588fb2cc4a5d7dd296e76d0d9a2e9c
-ms.translationtype: HT
+ms.openlocfilehash: 4898aefc996c26df5f4831c95be63c9fa1a45dc4
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48251744"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651208"
 ---
-# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Avvio rapido: Impostare e ottenere un'etichetta di riservatezza (C++)
+# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Guida introduttiva: Impostare e ottenere un'etichetta di riservatezza (C++)
 
 Questo Avvio rapido illustra come usare altre API dei file di MIP. Con una delle etichette di riservatezza elencate nell'Avvio rapido precedente, si usa un gestore di file per impostare/ottenere l'etichetta su un file. La classe del gestore di file dispone di varie operazioni per l'impostazione e l'ottenimento di etichette o della protezione per i tipi di file supportati.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Se non è stato fatto, completare i prerequisiti seguenti prima di continuare:
+Se non è già stato fatto, completare i prerequisiti seguenti prima di continuare:
 
-- In primo luogo completare [Avvio rapido: Elencare le etichette di riservatezza (C++)](quick-file-list-labels-cpp.md), che crea una soluzione Visual Studio iniziale, per creare un elenco delle etichette di riservatezza di un'organizzazione. Il presente Avvio rapido "Impostare e ottenere un'etichetta di riservatezza" è basato su quello precedente.
-- Facoltativo: rivedere i concetti esposti in [File handlers in the MIP SDK](concept-handler-file-cpp.md) (Gestori file nel SDK MIP).
+- Completa [Guida introduttiva: Elenca le etichette di riservatezza (C++)](quick-file-list-labels-cpp.md) first, che compila una soluzione di Visual Studio starter per elencare le etichette di riservatezza dell'organizzazione. Il presente Avvio rapido "Impostare e ottenere un'etichetta di riservatezza" è basato su quello precedente.
+- Se lo si desidera: Revisione [gestori di File nel SDK di MIP](concept-handler-file-cpp.md) concetti.
 
 ## <a name="implement-an-observer-class-to-monitor-the-file-handler-object"></a>Implementare una classe observer per monitorare l'oggetto gestore file
 
 Come nel caso dell'observer implementato per il profilo e il motore file nell'Avvio rapido Application initialization (Inizializzazione dell'applicazione), ora si implementa una classe observer per un oggetto gestore di file.
 
-Creare un'implementazione di base per una classe observer mediante l'estensione della classe `mip::FileHandler::Observer` del SDK. Viene creata un'istanza di observer che viene usata in seguito per il monitoraggio delle operazioni gestore di file.
+Creare un'implementazione di base per un osservatore di gestore di File, mediante l'estensione del SDK `mip::FileHandler::Observer` classe. Viene creata un'istanza di observer che viene usata in seguito per il monitoraggio delle operazioni gestore di file.
 
-1. Aprire la soluzione Visual Studio sulla quale si è lavorato nell'articolo precedente "Quickstart: List sensitivity labels (C++)" (Avvio rapido: Elencare le etichette di riservatezza (C++)).
+1. Aprire la soluzione di Visual Studio si è lavorato nella precedente "Guida introduttiva: Elenca le etichette di riservatezza (C++) "articolo.
 
-2. Aggiungere una nuova classe al progetto, che genera automaticamente i file header/.h e implementation/.cpp:
+2. Aggiungere una nuova classe al progetto, che genera automaticamente i file di intestazione (.h) e di implementazione (.cpp):
 
-   - In **Esplora soluzioni** fare di nuovo clic con il pulsante destro del mouse sul nodo del progetto e scegliere **Aggiungi**, quindi scegliere **Classe**.
+   - Nel **Esplora soluzioni**, fare doppio clic sul nodo del progetto, anche in questo caso, selezionare **Add**, quindi selezionare **classe**.
    - Nella finestra di dialogo **Aggiungi classe**:
      - Nel campo **Nome classe** immettere "filehandler_observer". Si noti che i campi del **file con estensione h** e del **file con estensione cpp** vengono popolati automaticamente in base al nome immesso.
      - Al termine fare clic su **OK**.
@@ -60,7 +60,7 @@ Creare un'implementazione di base per una classe observer mediante l'estensione 
      };
      ```
 
-   - Aggiornare "filehandler_observer.cpp", selezionando ed eliminando l'implementazione della classe `filehandler_observer` generata. **Non** rimuovere le direttive del preprocessore generate nel passaggio precedente (#pragma, #include). Quindi copiare e incollare la seguente origine nel file, dopo le eventuali direttive del preprocessore esistenti:
+   - Aggiornare "filehandler_observer.cpp", selezionando ed eliminando l'implementazione della classe `filehandler_observer` generata. **Non** rimuovere le direttive del preprocessore generate nel passaggio precedente (#pragma, #include). Quindi copiare e incollare il codice seguente nel file, dopo le eventuali direttive del preprocessore esistenti:
 
      ```cpp
      void FileHandlerObserver::OnCreateFileHandlerSuccess(const std::shared_ptr<mip::FileHandler>& fileHandler, const std::shared_ptr<void>& context) {
@@ -105,12 +105,19 @@ Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un fi
    ```cpp
    // Set up async FileHandler for input file operations
    string filePathIn = "<input-file-path>";
+   string contentIdentifier = "<content-identifier>";
    std::shared_ptr<FileHandler> handler;
    try
    {
         auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
         auto handlerFuture = handlerPromise->get_future();
-        engine->CreateFileHandlerAsync(filePathIn, mip::ContentState::REST, std::make_shared<FileHandlerObserver>(), handlerPromise);
+        engine->CreateFileHandlerAsync(
+             filePathIn, 
+             contentIdentifier,
+             mip::ContentState::REST, 
+             true, 
+             std::make_shared<FileHandlerObserver>(), 
+             handlerPromise);
         handler = handlerFuture.get();
    }
    catch (const std::exception& e)
@@ -160,11 +167,19 @@ Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un fi
    system("pause");
 
    // Set up async FileHandler for output file operations
+   contentIdentifier = "<content-identifier>";
    try
    {
         auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
         auto handlerFuture = handlerPromise->get_future();
-        engine->CreateFileHandlerAsync(filePathOut, mip::ContentState::REST, std::make_shared<FileHandlerObserver>(), handlerPromise);
+        engine->CreateFileHandlerAsync(
+             filePathOut, 
+             contentIdentifier,
+             mip::ContentState::REST,
+             true,
+             std::make_shared<FileHandlerObserver>(),
+             handlerPromise);
+
         handler = handlerFuture.get();
    }
    catch (const std::exception& e)
@@ -191,13 +206,14 @@ Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un fi
    system("pause");
    ```
 
-4. Sostituire i valori segnaposto nel codice sorgente appena incollato, usando i valori seguenti:
+4. Sostituire i valori segnaposto nel codice appena incollato come indicato di seguito, usando le costanti stringa di origine:
 
-   | Segnaposto | Valore |
+   | Segnaposto | Value |
    |:----------- |:----- |
-   | \<input-file-path\> | Percorso completo di un file di input di test, ad esempio: `c:\\Test\\Test.docx`. |
-   | \<label-id\> | ID etichetta di riservatezza, copiato dalla console di output nell'Avvio rapido precedente, ad esempio: `f42a3342-8706-4288-bd31-ebb85995028z`. |
-   | \<output-file-path\> | Percorso completo del file di output, che è una copia con etichetta del file di input, ad esempio: `c:\\Test\\Test_labeled.docx`. |
+   | \<input-file-path\> | Percorso completo di un file di input di test, ad esempio: `"c:\\Test\\Test.docx"`. |
+   | \<content-identifier\> | Un identificatore leggibile dall'utente per il contenuto. Ad esempio: <ul><li>per un file, prendere in considerazione percorso\nomefile: `"c:\Test\Test.docx"`</li><li>per un messaggio di posta elettronica, prendere in considerazione soggetto: mittente: `"RE: Audit design:user1@contoso.com"`</li></ul> |
+   | \<label-id\> | ID etichetta di riservatezza, copiato dalla console di output nell'Avvio rapido precedente, ad esempio: `"f42a3342-8706-4288-bd31-ebb85995028z"`. |
+   | \<output-file-path\> | Percorso completo del file di output, che è una copia con etichetta del file di input, ad esempio: `"c:\\Test\\Test_labeled.docx"`. |
 
 ## <a name="build-and-test-the-application"></a>Compilare e testare l'applicazione
 
@@ -205,7 +221,7 @@ Compilare e testare l'applicazione client.
 
 1. Usare F6 (**Compila soluzione**) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 (**Avvia debug**) per eseguire l'applicazione.
 
-2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione richiede un token di accesso ogni volta che il SDK chiama il metodo `AcquireOAuth2Token()`. Come già fatto in precedenza nell'Avvio rapido "List sensitivity labels" (Elencare le etichette di riservatezza), eseguire lo script di PowerShell per acquisire ogni volta il token usando i valori specificati. `AcquireOAuth2Token()` prova a usare un token generato in precedenza, se l'autorità e la risorsa richieste sono le stesse:
+2. Se il progetto viene compilato e viene eseguito correttamente, l'applicazione richiede un token di accesso ogni volta che il SDK chiama la `AcquireOAuth2Token()` (metodo). Come in precedenza in "Elenca le etichette di riservatezza" Guida introduttiva, eseguire lo script di PowerShell per acquisire il token ogni volta, usando i valori forniti per $authority e $resourceUrl. 
 
    ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:

@@ -1,17 +1,17 @@
 ---
-title: Classe mip AddContentHeaderAction
-description: Riferimento per la classe mip AddContentHeaderAction
+title: Classe mip::AddContentHeaderAction
+description: 'Classe MIP:: addcontentheaderaction di Microsoft Information Protection (MIP) SDK vengono documentate.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: bc60fe32005a0c6bc8088ab7687a3f711ae7a99a
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 8cd04bc610944bbbdf00873267161b06a9c09038
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445649"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650936"
 ---
 # <a name="class-mipaddcontentheaderaction"></a>Classe mip::AddContentHeaderAction 
 Classe di azione che specifica l'aggiunta di un'intestazione contenuto.
@@ -19,62 +19,62 @@ Classe di azione che specifica l'aggiunta di un'intestazione contenuto.
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
- public const std::string& GetUIElementName()  |  API usata per contrassegnare l'elemento di intestazione contenuto.
- public const std::string& GetText() const  |  Ottiene il testo destinato a essere inserito nell'intestazione contenuto.
- public const std::string& GetFontName() const  |  Ottiene il nome del tipo di carattere usato per visualizzare l'intestazione contenuto.
- public int GetFontSize() const  |  Ottiene le dimensioni del carattere usato per visualizzare l'intestazione contenuto.
- public const std::string& GetFontColor() const  |  Ottiene il colore del carattere usato per visualizzare l'intestazione contenuto.
- public ContentMarkAlignment GetAlignment() const  |  Ottiene l'allineamento dell'intestazione.
- public int GetMargin() const  |  Ottiene il margine dell'intestazione a partire dal basso.
- public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
+public const std::string& GetUIElementName()  |  API usata per contrassegnare l'elemento di intestazione contenuto.
+public const std::string& GetText() const  |  Ottiene il testo destinato a essere inserito nell'intestazione contenuto.
+public const std::string& GetFontName() const  |  Ottiene il nome del tipo di carattere usato per visualizzare l'intestazione contenuto.
+public int GetFontSize() const  |  Ottiene le dimensioni del carattere usato per visualizzare l'intestazione contenuto.
+public const std::string& GetFontColor() const  |  Ottiene il colore del carattere usato per visualizzare l'intestazione contenuto.
+public ContentMarkAlignment GetAlignment() const  |  Ottiene l'allineamento dell'intestazione.
+public int GetMargin() const  |  Ottiene il margine dell'intestazione a partire dal basso.
+public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
   
 ## <a name="members"></a>Membri
   
-### <a name="getuielementname"></a>GetUIElementName
+### <a name="getuielementname-function"></a>GetUIElementName (funzione)
 API usata per contrassegnare l'elemento di intestazione contenuto.
 
   
-**Restituisce**: nome da usare per l'elemento dell'interfaccia utente che contiene l'intestazione contenuto. Lo stesso nome verrà restituito in [RemoveContentHeaderAction](class_mip_removecontentheaderaction.md) nel caso in cui l'intestazione contenuto debba essere rimossa.
+**Restituisce**: Il nome deve essere utilizzato per l'elemento dell'interfaccia utente che contiene l'intestazione contenuto. Lo stesso nome verrà restituito in [RemoveContentHeaderAction](class_mip_removecontentheaderaction.md) nel caso in cui l'intestazione contenuto debba essere rimossa.
   
-### <a name="gettext"></a>GetText
+### <a name="gettext-function"></a>GetText (funzione)
 Ottiene il testo destinato a essere inserito nell'intestazione contenuto.
 
   
-**Restituisce**: testo dell'intestazione contenuto.
+**Restituisce**: Testo dell'intestazione contenuto.
   
-### <a name="getfontname"></a>GetFontName
+### <a name="getfontname-function"></a>GetFontName (funzione)
 Ottiene il nome del tipo di carattere usato per visualizzare l'intestazione contenuto.
 
   
-**Restituisce**: nome del carattere. Il valore predefinito è Calibri se non ne viene impostato nessuno dai criteri.
+**Restituisce**: Nome del tipo di carattere. Il valore predefinito è Calibri se non ne viene impostato nessuno dai criteri.
   
-### <a name="getfontsize"></a>GetFontSize
+### <a name="getfontsize-function"></a>GetFontSize (funzione)
 Ottiene le dimensioni del carattere usato per visualizzare l'intestazione contenuto.
 
   
-**Restituisce**: dimensioni del carattere come numero intero.
+**Restituisce**: Dimensioni del carattere come numero intero.
   
-### <a name="getfontcolor"></a>GetFontColor
+### <a name="getfontcolor-function"></a>GetFontColor (funzione)
 Ottiene il colore del carattere usato per visualizzare l'intestazione contenuto.
 
   
-**Restituisce**: colore del carattere in formato stringa (ad esempio "#000000").
+**Restituisce**: Colore del carattere sotto forma di stringa (ad esempio, #000000 ").
   
-### <a name="getalignment"></a>GetAlignment
+### <a name="getalignment-function"></a>GetAlignment (funzione)
 Ottiene l'allineamento dell'intestazione.
 
   
-**Restituisce**: enumeratore ContentMarkAlignment: LEFT|RIGHT|CENTER. 
+**Restituisce**: Enumeratore ContentMarkAlignment: LEFT | RIGHT | CENTRO. 
   
-**Vedere anche**: ContentMarkAlignment
+**Vedere anche**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
   
-### <a name="getmargin"></a>GetMargin
+### <a name="getmargin-function"></a>GetMargin (funzione)
 Ottiene il margine dell'intestazione a partire dal basso.
 
   
-**Restituisce**: margini dalla parte inferiore del documento (ad esempio 10 mm).
+**Restituisce**: I margini dalla parte inferiore del documento (ad esempio 10 mm).
   
-### <a name="actiontype"></a>ActionType
+### <a name="gettype-function"></a>Funzione GetType
 Specifica il tipo di [Action](class_mip_action.md).
 
   

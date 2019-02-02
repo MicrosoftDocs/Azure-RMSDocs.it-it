@@ -1,17 +1,17 @@
 ---
-title: Classe mip LoggerDelegate
-description: Riferimento per la classe mip LoggerDelegate
+title: Classe mip::LoggerDelegate
+description: Documenta la classe mip::loggerdelegate di Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: b25cdb177735feccfa5c4d344613e4747d18b77f
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: d93bfb863bf97629a8b2361425a0d78187c88cdc
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445853"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650001"
 ---
 # <a name="class-miploggerdelegate"></a>Classe mip::LoggerDelegate 
 Classe che definisce l'interfaccia per il logger MIP SDK.
@@ -19,14 +19,14 @@ Classe che definisce l'interfaccia per il logger MIP SDK.
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
- public void Init(const std::string& storagePath, LogLevel logLevel)  |  Inizializza il logger.
- public LogLevel GetLogLevel() const  |  Ottiene il livello di log minimo che attiverà un evento di registrazione.
- public void Flush()  |  Scarica il logger.
- public void WriteToLog(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const int32_t line)  |  Scrive un'istruzione log in file di log.
+public void Init(const std::string& storagePath, LogLevel logLevel)  |  Inizializza il logger.
+public LogLevel GetLogLevel() const  |  Ottiene il livello di log minimo che attiverà un evento di registrazione.
+public void Flush()  |  Scarica il logger.
+public void WriteToLog(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const int32_t line)  |  Scrive un'istruzione log in file di log.
   
 ## <a name="members"></a>Membri
   
-### <a name="init"></a>Init
+### <a name="init-function"></a>Init (funzione)
 Inizializza il logger.
 
 Parametri:  
@@ -37,16 +37,16 @@ Parametri:
 
 
   
-### <a name="loglevel"></a>LogLevel
+### <a name="getloglevel-function"></a>GetLogLevel (funzione)
 Ottiene il livello di log minimo che attiverà un evento di registrazione.
 
   
-**Restituisce**: livello di log minimo che attiverà un evento di registrazione.
+**Restituisce**: Il livello di registrazione più basso che attiva un evento di registrazione.
   
-### <a name="flush"></a>Svuotamento
+### <a name="flush-function"></a>Flush (funzione)
 Scarica il logger.
   
-### <a name="writetolog"></a>WriteToLog
+### <a name="writetolog-function"></a>WriteToLog (funzione)
 Scrive un'istruzione log in file di log.
 
 Parametri:  

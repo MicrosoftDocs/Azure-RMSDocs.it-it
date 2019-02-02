@@ -1,17 +1,17 @@
 ---
-title: Classe mip ProtectionDescriptorBuilder
-description: Riferimento per la classe mip ProtectionDescriptorBuilder
+title: Classe mip::ProtectionDescriptorBuilder
+description: Documenta la classe mip::protectiondescriptorbuilder di Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 42e44cfaf269a43d0210c0c040ea70ccc1fb192e
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: b6ac49c7cb4d6f7592abac041365191d90951b7a
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446635"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651289"
 ---
 # <a name="class-mipprotectiondescriptorbuilder"></a>Classe mip::ProtectionDescriptorBuilder 
 Costruisce un [ProtectionDescriptor](class_mip_protectiondescriptor.md) che descrive la protezione associata a una parte del contenuto.
@@ -19,82 +19,82 @@ Costruisce un [ProtectionDescriptor](class_mip_protectiondescriptor.md) che desc
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public MIP_API std::shared_ptr<ProtectionDescriptor> Build()  |  Crea una classe [ProtectionDescriptor](class_mip_protectiondescriptor.md) le cui autorizzazioni di accesso vengono definite da questa istanza di [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md).
- public void SetName(const std::string& value)  |  Imposta il nome dei criteri di protezione.
- public void SetDescription(const std::string& value)  |  Imposta la descrizione dei criteri di protezione.
-public void SetContentValidUntil(const std::chrono::time_point<std::chrono::system_clock>& value)  |  Imposta la descrizione dell'ora di scadenza dei criteri di protezione.
- public void SetAllowOfflineAccess(bool value)  |  Imposta un valore che indica se i criteri di protezione consentono l'accesso al contenuto offline.
- public void SetReferrer(const std::string& uri)  |  Imposta l'indirizzo del referrer dei criteri di protezione.
-public void SetEncryptedAppData(const std::map<std::string, std::string>& value)  |  Imposta i dati specifici dell'app da crittografare.
-public void SetSignedAppData(const std::map<std::string, std::string>& value)  |  Imposta i dati specifici dell'app da firmare.
- public virtual ~ProtectionDescriptorBuilder()  | _Non ancora documentato._
+Public std:: shared_ptr MIP_API\<ProtectionDescriptor\> Build()  |  Crea una classe [ProtectionDescriptor](class_mip_protectiondescriptor.md) le cui autorizzazioni di accesso vengono definite da questa istanza di [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md).
+public void SetName(const std::string& value)  |  Imposta il nome dei criteri di protezione.
+public void SetDescription(const std::string& value)  |  Imposta la descrizione dei criteri di protezione.
+public void SetContentValidUntil (const std::chrono::time_point\<std\>& valore)  |  Imposta la descrizione dell'ora di scadenza dei criteri di protezione.
+public void SetAllowOfflineAccess(bool value)  |  Imposta un valore che indica se i criteri di protezione consentono l'accesso al contenuto offline.
+public void SetReferrer(const std::string& uri)  |  Imposta l'indirizzo del referrer dei criteri di protezione.
+public void SetEncryptedAppData (const std:: map\<std:: String, std:: String\>& valore)  |  Imposta i dati specifici dell'app da crittografare.
+public void SetSignedAppData (const std:: map\<std:: String, std:: String\>& valore)  |  Imposta i dati specifici dell'app da firmare.
+public virtual ~ProtectionDescriptorBuilder()  | _Non ancora documentato._
   
 ## <a name="members"></a>Membri
   
-### <a name="protectiondescriptor"></a>ProtectionDescriptor
+### <a name="build-function"></a>Compilare (funzione)
 Crea una classe [ProtectionDescriptor](class_mip_protectiondescriptor.md) le cui autorizzazioni di accesso vengono definite da questa istanza di [ProtectionDescriptorBuilder](class_mip_protectiondescriptorbuilder.md).
 
   
-**Restituisce**: nuova istanza di [ProtectionDescriptor](class_mip_protectiondescriptor.md)
+**Restituisce**: Nuove [ProtectionDescriptor](class_mip_protectiondescriptor.md) istanza
   
-### <a name="setname"></a>SetName
+### <a name="setname-function"></a>SetName (funzione)
 Imposta il nome dei criteri di protezione.
 
 Parametri:  
-* **value**: nome dei criteri di protezione
+* **value**: Nome dei criteri di protezione
 
 
   
-### <a name="setdescription"></a>SetDescription
+### <a name="setdescription-function"></a>SetDescription (funzione)
 Imposta la descrizione dei criteri di protezione.
 
 Parametri:  
-* **value**: descrizione del criterio
+* **value**: Descrizione del criterio
 
 
   
-### <a name="setcontentvaliduntil"></a>SetContentValidUntil
+### <a name="setcontentvaliduntil-function"></a>SetContentValidUntil (funzione)
 Imposta la descrizione dell'ora di scadenza dei criteri di protezione.
 
 Parametri:  
-* **value**: scadenza del criterio
+* **value**: Scadenza del criterio
 
 
   
-### <a name="setallowofflineaccess"></a>SetAllowOfflineAccess
+### <a name="setallowofflineaccess-function"></a>SetAllowOfflineAccess (funzione)
 Imposta un valore che indica se i criteri di protezione consentono l'accesso al contenuto offline.
 
 Parametri:  
-* **value**: valore che indica se i criteri consentono l'accesso al contenuto offline
+* **value**: Se i criteri consentono l'accesso al contenuto offline o non
 
 
   
-### <a name="setreferrer"></a>SetReferrer
+### <a name="setreferrer-function"></a>SetReferrer (funzione)
 Imposta l'indirizzo del referrer dei criteri di protezione.
 
 Parametri:  
-* **uri**: indirizzo del referrer del criterio
+* **uri**: Indirizzo del referrer del criterio
 
 
 Il referrer è un URI che può essere visualizzato se l'acquisizione dei criteri di protezione non riesce e contiene informazioni sul modo in cui l'utente può ottenere l'autorizzazione ad accedere al contenuto.
   
-### <a name="setencryptedappdata"></a>SetEncryptedAppData
+### <a name="setencryptedappdata-function"></a>SetEncryptedAppData (funzione)
 Imposta i dati specifici dell'app da crittografare.
 
 Parametri:  
-* **value**: dati specifici dell'app
+* **value**: Dati specifici dell'App
 
 
 Un'applicazione può specificare un dizionario di dati specifici dell'app che saranno crittografati dal servizio di protezione. Questi dati crittografati sono indipendenti dai dati firmati impostati da SetSignedAppData.
   
-### <a name="setsignedappdata"></a>SetSignedAppData
+### <a name="setsignedappdata-function"></a>SetSignedAppData (funzione)
 Imposta i dati specifici dell'app da firmare.
 
 Parametri:  
-* **value**: dati specifici dell'app
+* **value**: Dati specifici dell'App
 
 
 Un'applicazione può specificare un dizionario di dati specifici dell'app che saranno firmati dal servizio di protezione. Questi dati firmati sono indipendenti dai dati crittografati impostati da SetEncryptedAppData.
   
-### <a name="protectiondescriptorbuilder"></a>~ProtectionDescriptorBuilder
+### <a name="protectiondescriptorbuilder-function"></a>~ ProtectionDescriptorBuilder (funzione)
 _Non ancora documentato._

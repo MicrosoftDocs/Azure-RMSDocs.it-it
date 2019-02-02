@@ -1,17 +1,17 @@
 ---
-title: Classe mip ProtectByTemplateAction
-description: Riferimento per la classe mip ProtectByTemplateAction
+title: Classe mip::ProtectByTemplateAction
+description: 'Classe MIP:: protectbytemplateaction di Microsoft Information Protection (MIP) SDK vengono documentate.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: cb5f42b25e6f499bc09f3f460ec4a253627b45a5
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 1c05a04df39e6454eb934b5db48e96339afdac0c
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445462"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650817"
 ---
 # <a name="class-mipprotectbytemplateaction"></a>Classe mip::ProtectByTemplateAction 
 Classe di azione che specifica l'aggiunta della protezione basata su modello al documento.
@@ -19,18 +19,18 @@ Classe di azione che specifica l'aggiunta della protezione basata su modello al 
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
- public const std::string& GetTemplateId() const  |  Ottiene l'ID modello di protezione associato all'azione.
- public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
+public const std::string& GetTemplateId() const  |  Ottiene l'ID modello di protezione associato all'azione.
+public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
   
 ## <a name="members"></a>Membri
   
-### <a name="gettemplateid"></a>GetTemplateId
+### <a name="gettemplateid-function"></a>GetTemplateId (funzione)
 Ottiene l'ID modello di protezione associato all'azione.
 
   
-**Restituisce**: l'ID del modello di protezione.
+**Restituisce**: ID del modello di protezione.
   
-### <a name="actiontype"></a>ActionType
+### <a name="gettype-function"></a>Funzione GetType
 Specifica il tipo di [Action](class_mip_action.md).
 
   

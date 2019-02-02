@@ -1,17 +1,17 @@
 ---
-title: Classe mip ProtectionEngine Observer
-description: Riferimento per la classe mip ProtectionEngine Observer
+title: Classe mip::ProtectionEngine::Observer
+description: Documenta la classe mip::protectionengine di Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 9999b450d614b4465f151f0b2df80892a83bc143
-ms.sourcegitcommit: 4cd90fcf94ac6e2543d8be10e6e29e8218d5fd9d
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 48dc726b8f541d8163cceb16e330f160b6d6bafb
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49651346"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651633"
 ---
 # <a name="class-mipprotectionengineobserver"></a>Classe mip::ProtectionEngine::Observer 
 Interfaccia che riceve le notifiche correlate a [ProtectionEngine](class_mip_protectionengine.md).
@@ -20,83 +20,57 @@ Questa interfaccia deve essere implementata dalle applicazioni che usano l'SDK d
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public virtual void OnGetTemplatesSuccess(const std::shared_ptr<std::vector<std::string>>& templateIds, const std::shared_ptr<void>& context)  |  Viene chiamato quando i modelli vengono recuperati correttamente.
-public virtual void OnGetTemplatesFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Viene chiamato quando il recupero dei modelli genera un errore.
-public virtual void OnGetRightsForLabelIdSuccess(const std::shared_ptr<std::vector<std::string>>& rights, const std::shared_ptr<void>& context)  |  Viene chiamato quando i diritti vengono recuperati correttamente.
-public virtual void OnGetRightsForLabelIdFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Viene chiamato quando si recuperano i diritti per un ID etichetta per l'utente.
-public virtual void OnGetGrantingLabelIdsSuccess(const std::shared_ptr<std::vector<std::string>>& labelIds, const std::shared_ptr<void>& context)  |  Viene chiamato quando gli ID etichetta vengono recuperati correttamente.
-public virtual void OnGetGrantingLabelIdsFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Viene chiamato quando si recuperano gli ID etichetta per l'utente.
+OnGetTemplatesSuccess void virtuale pubblico (const std:: shared_ptr\<std:: Vector\<std:: String\>\>& templateIds, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando i modelli vengono recuperati correttamente.
+OnGetTemplatesFailure void virtuale pubblico (std::exception_ptr const & errore, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando il recupero dei modelli genera un errore.
+OnGetRightsForLabelIdSuccess void virtuale pubblico (const std:: shared_ptr\<std:: Vector\<std:: String\>\>& diritti, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando i diritti vengono recuperati correttamente.
+OnGetRightsForLabelIdFailure void virtuale pubblico (std::exception_ptr const & errore, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando si recuperano i diritti per un ID etichetta per l'utente.
   
 ## <a name="members"></a>Membri
   
-### <a name="ongettemplatessuccess"></a>OnGetTemplatesSuccess
+### <a name="ongettemplatessuccess-function"></a>OnGetTemplatesSuccess (funzione)
 Viene chiamato quando i modelli vengono recuperati correttamente.
 
 Parametri:  
-* **templateIds**: riferimento all'elenco di modelli recuperati 
+* **templateIds**: Recuperare un riferimento all'elenco dei modelli 
 
 
-* **context**: lo stesso contesto passato a [ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md#gettemplatesasync)
+* **context**: Lo stesso contesto passato a [ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md#gettemplatesasync-function)
 
 
-Un'applicazione può passare qualsiasi tipo di contesto (ad esempio std::promise, std::function) a [ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md#gettemplatesasync) e lo stesso contesto verrà inoltrato così com'è a [ProtectionEngine::Observer::OnGetTemplatesSuccess](class_mip_protectionengine_observer.md#ongettemplatessuccess) o [ProtectionEngine::Observer::OnGetTemplatesFailure](class_mip_protectionengine_observer.md#ongettemplatesfailure)
+Un'applicazione può passare qualsiasi tipo di contesto (ad esempio std::promise, std::function) a [ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md#gettemplatesasync-function) e lo stesso contesto verrà inoltrato così com'è a [ProtectionEngine::Observer::OnGetTemplatesSuccess](class_mip_protectionengine_observer.md#ongettemplatessuccess-function) o [ProtectionEngine::Observer::OnGetTemplatesFailure](class_mip_protectionengine_observer.md#ongettemplatesfailure-function)
   
-### <a name="ongettemplatesfailure"></a>OnGetTemplatesFailure
+### <a name="ongettemplatesfailure-function"></a>OnGetTemplatesFailure (funzione)
 Viene chiamato quando il recupero dei modelli genera un errore.
 
 Parametri:  
-* **error**: evento [Error](class_mip_error.md) che si è verificato durante il recupero dei modelli 
+* **error**: [Errore](class_mip_error.md) che si è verificato durante il recupero dei modelli 
 
 
-* **context**: lo stesso contesto passato a [ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md#gettemplatesasync)
+* **context**: Lo stesso contesto passato a [ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md#gettemplatesasync-function)
 
 
-Un'applicazione può passare qualsiasi tipo di contesto (ad esempio std::promise, std::function) a [ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md#gettemplatesasync) e lo stesso contesto verrà inoltrato così com'è a [ProtectionEngine::Observer::OnGetTemplatesSuccess](class_mip_protectionengine_observer.md#ongettemplatessuccess) o [ProtectionEngine::Observer::OnGetTemplatesFailure](class_mip_protectionengine_observer.md#ongettemplatesfailure)
+Un'applicazione può passare qualsiasi tipo di contesto (ad esempio std::promise, std::function) a [ProtectionEngine::GetTemplatesAsync](class_mip_protectionengine.md#gettemplatesasync-function) e lo stesso contesto verrà inoltrato così com'è a [ProtectionEngine::Observer::OnGetTemplatesSuccess](class_mip_protectionengine_observer.md#ongettemplatessuccess-function) o [ProtectionEngine::Observer::OnGetTemplatesFailure](class_mip_protectionengine_observer.md#ongettemplatesfailure-function)
   
-### <a name="ongetrightsforlabelidsuccess"></a>OnGetRightsForLabelIdSuccess
+### <a name="ongetrightsforlabelidsuccess-function"></a>OnGetRightsForLabelIdSuccess (funzione)
 Viene chiamato quando i diritti vengono recuperati correttamente.
 
 Parametri:  
-* **rights**: riferimento all'elenco dei diritti recuperati 
+* **diritti**: Recupera un riferimento all'elenco di diritti 
 
 
-* **context**: lo stesso contesto passato a [ProtectionEngine::GetRightsForLabelIdAsync](class_mip_protectionengine.md#getrightsforlabelidasync)
+* **context**: Lo stesso contesto passato a [ProtectionEngine::GetRightsForLabelIdAsync](class_mip_protectionengine.md#getrightsforlabelidasync-function)
 
 
-Un'applicazione può passare qualsiasi tipo di contesto (ad esempio std::promise, std::function) a [ProtectionEngine::GetRightsForLabelIdAsync](class_mip_protectionengine.md#getrightsforlabelidasync) e lo stesso contesto verrà inoltrato così com'è a [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](class_mip_protectionengine_observer.md#ongetrightsforlabelidsuccess) o [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure](class_mip_protectionengine_observer.md#ongetrightsforlabelidfailure)
+Un'applicazione può passare qualsiasi tipo di contesto (ad esempio std::promise, std::function) a [ProtectionEngine::GetRightsForLabelIdAsync](class_mip_protectionengine.md#getrightsforlabelidasync-function) e lo stesso contesto verrà inoltrato così com'è a [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](class_mip_protectionengine_observer.md#ongetrightsforlabelidsuccess-function) o [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure](class_mip_protectionengine_observer.md#ongetrightsforlabelidfailure-function)
   
-### <a name="ongetrightsforlabelidfailure"></a>OnGetRightsForLabelIdFailure
+### <a name="ongetrightsforlabelidfailure-function"></a>OnGetRightsForLabelIdFailure (funzione)
 Viene chiamato quando si recuperano i diritti per un ID etichetta per l'utente.
 
 Parametri:  
-* **error**: evento [Error](class_mip_error.md) che si è verificato durante il recupero dei diritti 
+* **error**: [Errore](class_mip_error.md) che si è verificato durante il recupero dei diritti 
 
 
-* **context**: lo stesso contesto passato a [ProtectionEngine::GetRightsForLabelIdAsync](class_mip_protectionengine.md#getrightsforlabelidasync)
+* **context**: Lo stesso contesto passato a [ProtectionEngine::GetRightsForLabelIdAsync](class_mip_protectionengine.md#getrightsforlabelidasync-function)
 
 
-Un'applicazione può passare qualsiasi tipo di contesto (ad esempio std::promise, std::function) a [ProtectionEngine::GetRightsForLabelIdAsync](class_mip_protectionengine.md#getrightsforlabelidasync) e lo stesso contesto verrà inoltrato così com'è a [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](class_mip_protectionengine_observer.md#ongetrightsforlabelidsuccess) o [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure](class_mip_protectionengine_observer.md#ongetrightsforlabelidfailure)
-  
-### <a name="ongetgrantinglabelidssuccess"></a>OnGetGrantingLabelIdsSuccess
-Viene chiamato quando gli ID etichetta vengono recuperati correttamente.
-
-Parametri:  
-* **labelIds**: riferimento all'elenco di ID etichetta recuperati 
-
-
-* **context**: lo stesso contesto passato a [ProtectionEngine::GetGrantingLabelIdsAsync](class_mip_protectionengine.md#getgrantinglabelidsasync)
-
-
-Un'applicazione può passare qualsiasi tipo di contesto (ad esempio std::promise, std::function) a [ProtectionEngine::GetGrantingLabelIdsAsync](class_mip_protectionengine.md#getgrantinglabelidsasync) e lo stesso contesto verrà inoltrato così com'è a [ProtectionEngine::Observer::OnGetGrantingLabelIdsSuccess](class_mip_protectionengine_observer.md#ongetgrantinglabelidssuccess) o [ProtectionEngine::Observer::OnGetGrantingLabelIdsFailure](class_mip_protectionengine_observer.md#ongetgrantinglabelidsfailure)
-  
-### <a name="ongetgrantinglabelidsfailure"></a>OnGetGrantingLabelIdsFailure
-Viene chiamato quando si recuperano gli ID etichetta per l'utente.
-
-Parametri:  
-* **error**: evento [Error](class_mip_error.md) che si è verificato durante il recupero degli ID etichetta 
-
-
-* **context**: lo stesso contesto passato a [ProtectionEngine::GetGrantingLabelIdsAsync](class_mip_protectionengine.md#getgrantinglabelidsasync)
-
-
-Un'applicazione può passare qualsiasi tipo di contesto (ad esempio std::promise, std::function) a [ProtectionEngine::GetGrantingLabelIdsAsync](class_mip_protectionengine.md#getgrantinglabelidsasync) e lo stesso contesto verrà inoltrato così com'è a [ProtectionEngine::Observer::OnGetGrantingLabelIdsSuccess](class_mip_protectionengine_observer.md#ongetgrantinglabelidssuccess) o [ProtectionEngine::Observer::OnGetGrantingLabelIdsFailure](class_mip_protectionengine_observer.md#ongetgrantinglabelidsfailure)
+Un'applicazione può passare qualsiasi tipo di contesto (ad esempio std::promise, std::function) a [ProtectionEngine::GetRightsForLabelIdAsync](class_mip_protectionengine.md#getrightsforlabelidasync-function) e lo stesso contesto verrà inoltrato così com'è a [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](class_mip_protectionengine_observer.md#ongetrightsforlabelidsuccess-function) o [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure](class_mip_protectionengine_observer.md#ongetrightsforlabelidfailure-function)

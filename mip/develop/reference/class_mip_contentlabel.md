@@ -1,17 +1,17 @@
 ---
-title: Classe mip ContentLabel
-description: Riferimento per la classe mip ContentLabel
+title: Classe mip::ContentLabel
+description: 'Classe MIP:: contentlabel di Microsoft Information Protection (MIP) SDK vengono documentate.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: c105f620ed2cd3d6f1427f2543784ea66ce2c4d7
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: d608ca9229a9b8c4ef0bec3c0d2fe37b51b71f61
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446023"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651735"
 ---
 # <a name="class-mipcontentlabel"></a>Classe mip::ContentLabel 
 Astrazione per un'etichetta di Microsoft Information Protection applicata a un contenuto, in genere un documento.
@@ -20,44 +20,44 @@ Contiene inoltre le proprietà per un'istanza specifica dell'etichetta applicata
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
- public const std::string& GetCreationTime() const  |  Ottiene l'ora di creazione dell'etichetta.
- public AssignmentMethod GetAssignmentMethod() const  |  Ottiene il metodo di assegnazione dell'etichetta.
-public const std::vector<std::pair<std::string, std::string>>& GetExtendedProperties() const  |  Ottiene le proprietà estese.
- public bool IsProtectionAppliedFromLabel() const  |  Ottiene un valore che indica se è stata applicata o meno la protezione da parte dell'etichetta.
-public std::shared_ptr<Label> GetLabel() const  |  Ottiene l'effettivo oggetto etichetta applicato al contenuto.
+public const std::string& GetCreationTime() const  |  Ottiene l'ora di creazione dell'etichetta.
+public AssignmentMethod GetAssignmentMethod() const  |  Ottiene il metodo di assegnazione dell'etichetta.
+Public std:: Vector const\<std:: Pair\<std:: String, std:: String\>\>& GetExtendedProperties() const  |  Ottiene le proprietà estese.
+public bool IsProtectionAppliedFromLabel() const  |  Ottiene un valore che indica se è stata applicata o meno la protezione da parte dell'etichetta.
+Public std:: shared_ptr\<etichetta\> GetLabel() const  |  Ottiene l'effettivo oggetto etichetta applicato al contenuto.
   
 ## <a name="members"></a>Membri
   
-### <a name="getcreationtime"></a>GetCreationTime
+### <a name="getcreationtime-function"></a>GetCreationTime (funzione)
 Ottiene l'ora di creazione dell'etichetta.
 
   
-**Restituisce**: ora di creazione sotto forma di stringa GMT.
+**Restituisce**: Ora di creazione sotto forma di stringa GMT.
   
-### <a name="getassignmentmethod"></a>GetAssignmentMethod
+### <a name="getassignmentmethod-function"></a>GetAssignmentMethod (funzione)
 Ottiene il metodo di assegnazione dell'etichetta.
 
   
-**Restituisce**: AssignmentMethod STANDARD | PRIVILEGED | AUTO. 
+**Restituisce**: AssignmentMethod STANDARD, PRIVILEGED, AUTO. 
   
-**Vedere anche**: mip::AssignmentMethod
+**Vedere anche**: [assignmentmethod](mip-enums-and-structs.md#assignmentmethod-enum)
   
-### <a name="getextendedproperties"></a>GetExtendedProperties
+### <a name="getextendedproperties-function"></a>GetExtendedProperties (funzione)
 Ottiene le proprietà estese.
 
   
-**Restituisce**: proprietà estese.
+**Restituisce**: Proprietà estese.
   
-### <a name="isprotectionappliedfromlabel"></a>IsProtectionAppliedFromLabel
+### <a name="isprotectionappliedfromlabel-function"></a>IsProtectionAppliedFromLabel (funzione)
 Ottiene un valore che indica se è stata applicata o meno la protezione da parte dell'etichetta.
 
   
-**Restituisce**: true se è disponibile la protezione dei modelli tramite questa etichetta, in caso contrario false.
+**Restituisce**: True se è presente della protezione dei modelli ed era da questa etichetta, altrimenti false.
   
-### <a name="label"></a>Label
+### <a name="getlabel-function"></a>GetLabel (funzione)
 Ottiene l'effettivo oggetto etichetta applicato al contenuto.
 
   
-**Restituisce**: oggetto etichetta applicato al contenuto. 
+**Restituisce**: Oggetto etichetta applicato al contenuto. 
   
 **Vedere anche**: [mip::Label](class_mip_label.md)

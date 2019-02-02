@@ -1,17 +1,17 @@
 ---
-title: Classe mip AddWatermarkAction
-description: Riferimento per la classe mip AddWatermarkAction
+title: Classe mip::AddWatermarkAction
+description: 'Classe MIP:: addwatermarkaction di Microsoft Information Protection (MIP) SDK vengono documentate.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: f49bd7aa16ae12aef240d05fff6acf507ddc341d
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: d9a2049238e2b45f1c19265ed2f940b3fea079e6
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446091"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650834"
 ---
 # <a name="class-mipaddwatermarkaction"></a>Classe mip::AddWatermarkAction 
 Classe di azione che specifica l'aggiunta di una filigrana.
@@ -19,53 +19,53 @@ Classe di azione che specifica l'aggiunta di una filigrana.
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
- public const std::string& GetUIElementName()  |  API usata per contrassegnare l'elemento filigrana.
- public WatermarkLayout GetLayout() const  |  API usata per ottenere il layout della filigrana.
- public const std::string& GetText() const  |  Ottiene il testo destinato a essere inserito nella filigrana.
- public const std::string& GetFontName() const  |  Ottiene il nome del tipo di carattere usato per visualizzare la filigrana.
- public int GetFontSize() const  |  Ottiene le dimensioni del carattere usate per visualizzare la filigrana.
- public const std::string& GetFontColor() const  |  Ottiene il colore del carattere usato per visualizzare la filigrana.
- public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
+public const std::string& GetUIElementName()  |  API usata per contrassegnare l'elemento filigrana.
+public WatermarkLayout GetLayout() const  |  API usata per ottenere il layout della filigrana.
+public const std::string& GetText() const  |  Ottiene il testo destinato a essere inserito nella filigrana.
+public const std::string& GetFontName() const  |  Ottiene il nome del tipo di carattere usato per visualizzare la filigrana.
+public int GetFontSize() const  |  Ottiene le dimensioni del carattere usate per visualizzare la filigrana.
+public const std::string& GetFontColor() const  |  Ottiene il colore del carattere usato per visualizzare la filigrana.
+public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
   
 ## <a name="members"></a>Membri
   
-### <a name="getuielementname"></a>GetUIElementName
+### <a name="getuielementname-function"></a>GetUIElementName (funzione)
 API usata per contrassegnare l'elemento filigrana.
 
   
-**Restituisce**: nome da usare per l'elemento dell'interfaccia utente che contiene la filigrana. Lo stesso nome verrà restituito in RemoveWatermarkingAction nel caso in cui la filigrana debba essere rimossa.
+**Restituisce**: Il nome deve essere utilizzato per l'elemento dell'interfaccia utente che contiene la filigrana. Lo stesso nome verrà restituito in RemoveWatermarkingAction nel caso in cui la filigrana debba essere rimossa.
   
-### <a name="getlayout"></a>GetLayout
+### <a name="getlayout-function"></a>GetLayout (funzione)
 API usata per ottenere il layout della filigrana.
 
   
 **Restituisce**: WatermarkLayout Layout della filigrana nel formato di un'enumerazione HORIZONTAL|DIAGONAL. ,
   
-### <a name="gettext"></a>GetText
+### <a name="gettext-function"></a>GetText (funzione)
 Ottiene il testo destinato a essere inserito nella filigrana.
 
   
-**Restituisce**: testo dell'intestazione contenuto.
+**Restituisce**: Testo dell'intestazione contenuto.
   
-### <a name="getfontname"></a>GetFontName
+### <a name="getfontname-function"></a>GetFontName (funzione)
 Ottiene il nome del tipo di carattere usato per visualizzare la filigrana.
 
   
-**Restituisce**: nome del carattere. Il valore predefinito è Calibri se non ne viene impostato nessuno dai criteri.
+**Restituisce**: Nome del tipo di carattere. Il valore predefinito è Calibri se non ne viene impostato nessuno dai criteri.
   
-### <a name="getfontsize"></a>GetFontSize
+### <a name="getfontsize-function"></a>GetFontSize (funzione)
 Ottiene le dimensioni del carattere usate per visualizzare la filigrana.
 
   
-**Restituisce**: dimensioni del carattere come numero intero.
+**Restituisce**: Dimensioni del carattere come numero intero.
   
-### <a name="getfontcolor"></a>GetFontColor
+### <a name="getfontcolor-function"></a>GetFontColor (funzione)
 Ottiene il colore del carattere usato per visualizzare la filigrana.
 
   
-**Restituisce**: colore del carattere in formato stringa (ad esempio "#000000").
+**Restituisce**: Colore del carattere come stringa (ad esempio, "#000000").
   
-### <a name="actiontype"></a>ActionType
+### <a name="gettype-function"></a>Funzione GetType
 Specifica il tipo di [Action](class_mip_action.md).
 
   

@@ -1,17 +1,17 @@
 ---
-title: Classe mip RemoveContentHeaderAction
-description: Riferimento per la classe mip RemoveContentHeaderAction
+title: Classe mip::RemoveContentHeaderAction
+description: 'Classe MIP:: removecontentheaderaction di Microsoft Information Protection (MIP) SDK vengono documentate.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: dc79ebf5d5c7cd35a8fc5ed854315179ed9190f0
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: cf50f3ea6eeced3c8ab3699dd946174e508adeb1
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446448"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651378"
 ---
 # <a name="class-mipremovecontentheaderaction"></a>Classe mip::RemoveContentHeaderAction 
 Classe di azione che specifica la rimozione dell'intestazione contenuto dal documento.
@@ -19,18 +19,18 @@ Classe di azione che specifica la rimozione dell'intestazione contenuto dal docu
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std::vector<std::string>& GetUIElementNames()  |  Ottiene un elenco di nomi da usare per individuare gli elementi dell'interfaccia utente che devono essere rimossi.
- public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
+Public std:: Vector const\<std:: String\>& GetUIElementNames()  |  Ottiene un elenco di nomi da usare per individuare gli elementi dell'interfaccia utente che devono essere rimossi.
+public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
   
 ## <a name="members"></a>Membri
   
-### <a name="getuielementnames"></a>GetUIElementNames
+### <a name="getuielementnames-function"></a>GetUIElementNames (funzione)
 Ottiene un elenco di nomi da usare per individuare gli elementi dell'interfaccia utente che devono essere rimossi.
 
   
-**Restituisce**: un elenco di nomi di elementi dell'interfaccia utente.
+**Restituisce**: Elenco di nomi di elementi dell'interfaccia utente.
   
-### <a name="actiontype"></a>ActionType
+### <a name="gettype-function"></a>Funzione GetType
 Specifica il tipo di [Action](class_mip_action.md).
 
   

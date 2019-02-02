@@ -1,17 +1,17 @@
 ---
-title: Classe mip ProtectDoNotForwardAction
-description: Riferimento per la classe mip ProtectDoNotForwardAction
+title: Classe mip::ProtectDoNotForwardAction
+description: 'Classe MIP:: protectdonotforwardaction di Microsoft Information Protection (MIP) SDK vengono documentate.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 2878630d9011108f45aa51faebea7a6fbe4df81e
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: a7a68157a767b1c6b222ef7a3d43055564c3ef5e
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446216"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651055"
 ---
 # <a name="class-mipprotectdonotforwardaction"></a>Classe mip::ProtectDoNotForwardAction 
 Classe di azione che specifica l'aggiunta della protezione Non inoltrare al documento.
@@ -19,11 +19,11 @@ Classe di azione che specifica l'aggiunta della protezione Non inoltrare al docu
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
- public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
+public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
   
 ## <a name="members"></a>Membri
   
-### <a name="actiontype"></a>ActionType
+### <a name="gettype-function"></a>Funzione GetType
 Specifica il tipo di [Action](class_mip_action.md).
 
   

@@ -1,63 +1,63 @@
 ---
-title: Classe mip JustificationRequiredError
-description: Riferimento per la classe mip JustificationRequiredError
+title: Classe mip::JustificationRequiredError
+description: 'Classe MIP:: justificationrequirederror di Microsoft Information Protection (MIP) SDK vengono documentate.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 059d139fc5222fd5f1865c66834519347e23a5a9
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 721037296ecc7d92fae6747a408ce84bfda4b34a
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445989"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650919"
 ---
 # <a name="class-mipjustificationrequirederror"></a>Classe mip::JustificationRequiredError 
   
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public virtual std::shared_ptr<Error> Clone() const  |  Clona l'errore.
- public char const* what() const  |  Ottiene il messaggio di errore.
- public virtual ErrorType GetErrorType() const  |  Ottiene il tipo di errore.
- public virtual const std::string& GetErrorName() const  |  Ottiene il nome dell'errore.
- public virtual const std::string& GetMessage() const  |  Ottiene il messaggio di errore.
- public virtual void SetMessage(const std::string& msg)  |  Imposta il messaggio di errore.
+Public std:: shared_ptr virtual\<errore\> clone () const  |  Clona l'errore.
+public char const* what() const  |  Ottiene il messaggio di errore.
+public virtual ErrorType GetErrorType() const  |  Ottiene il tipo di errore.
+public virtual const std::string& GetErrorName() const  |  Ottiene il nome dell'errore.
+public virtual const std::string& GetMessage() const  |  Ottiene il messaggio di errore.
+public virtual void SetMessage(const std::string& msg)  |  Imposta il messaggio di errore.
   
 ## <a name="members"></a>Membri
   
-### <a name="error"></a>Errore
+### <a name="clone-function"></a>Funzioni di clone
 Clona l'errore.
 
   
-**Restituisce**: clone dell'errore.
+**Restituisce**: Un clone dell'errore.
   
-### <a name="what"></a>what
+### <a name="what-function"></a>tipo di funzione
 Ottiene il messaggio di errore.
 
   
-**Restituisce**: messaggio di errore.
+**Restituisce**: Il messaggio di errore
   
-### <a name="errortype"></a>ErrorType
+### <a name="geterrortype-function"></a>GetErrorType (funzione)
 Ottiene il tipo di errore.
 
   
-**Restituisce**: tipo di errore.
+**Restituisce**: Il tipo di errore.
   
-### <a name="geterrorname"></a>GetErrorName
+### <a name="geterrorname-function"></a>GetErrorName (funzione)
 Ottiene il nome dell'errore.
 
   
-**Restituisce**: nome dell'errore.
+**Restituisce**: Il nome di errore.
   
-### <a name="getmessage"></a>GetMessage
+### <a name="getmessage-function"></a>GetMessage (funzione)
 Ottiene il messaggio di errore.
 
   
-**Restituisce**: messaggio di errore.
+**Restituisce**: Il messaggio di errore.
   
-### <a name="setmessage"></a>SetMessage
+### <a name="setmessage-function"></a>SetMessage (funzione)
 Imposta il messaggio di errore.
 
 Parametri:  

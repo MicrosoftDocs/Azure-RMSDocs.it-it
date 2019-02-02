@@ -1,17 +1,17 @@
 ---
-title: Classe mip RemoveWatermarkAction
-description: Riferimento per la classe mip RemoveWatermarkAction
+title: Classe mip::RemoveWatermarkAction
+description: 'Classe MIP:: removewatermarkaction di Microsoft Information Protection (MIP) SDK vengono documentate.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 8f0b0a06088ed8a48e358c4ff9f005abf50db38f
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 8bd17001426c826b9ce2f0d627177ef783d09046
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445326"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651072"
 ---
 # <a name="class-mipremovewatermarkaction"></a>Classe mip::RemoveWatermarkAction 
 Classe di azione che specifica la rimozione della filigrana dal documento.
@@ -19,18 +19,18 @@ Classe di azione che specifica la rimozione della filigrana dal documento.
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std::vector<std::string>& GetUIElementNames()  |  Ottiene un elenco di nomi da usare per individuare gli elementi dell'interfaccia utente che devono essere rimossi.
- public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
+Public std:: Vector const\<std:: String\>& GetUIElementNames()  |  Ottiene un elenco di nomi da usare per individuare gli elementi dell'interfaccia utente che devono essere rimossi.
+public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
   
 ## <a name="members"></a>Membri
   
-### <a name="getuielementnames"></a>GetUIElementNames
+### <a name="getuielementnames-function"></a>GetUIElementNames (funzione)
 Ottiene un elenco di nomi da usare per individuare gli elementi dell'interfaccia utente che devono essere rimossi.
 
   
-**Restituisce**: un elenco di nomi di elementi dell'interfaccia utente.
+**Restituisce**: Elenco di nomi di elementi dell'interfaccia utente.
   
-### <a name="actiontype"></a>ActionType
+### <a name="gettype-function"></a>Funzione GetType
 Specifica il tipo di [Action](class_mip_action.md).
 
   

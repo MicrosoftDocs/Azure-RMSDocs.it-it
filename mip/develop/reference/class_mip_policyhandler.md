@@ -1,17 +1,17 @@
 ---
-title: Classe mip PolicyHandler
-description: Riferimento per la classe mip PolicyHandler
+title: Classe mip::PolicyHandler
+description: Documenta la classe mip::policyhandler di Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 23de5616558a298189cb885727d69a20373a3609
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: ca644716d730a43d4455919b7555852e770e0cda
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445938"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651497"
 ---
 # <a name="class-mippolicyhandler"></a>Classe mip::PolicyHandler 
 Questa classe fornisce un'interfaccia per tutte le funzioni del gestore dei criteri in un file.
@@ -19,24 +19,24 @@ Questa classe fornisce un'interfaccia per tutte le funzioni del gestore dei crit
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public std::shared_ptr<ContentLabel> GetSensitivityLabel(const ExecutionState& state)  |  Ottiene l'etichetta di riservatezza dal contenuto esistente.
-public std::vector<std::shared_ptr<Action>> ComputeActions(const ExecutionState& state)  |  Esegue le regole nel gestore in base allo stato specificato e restituisce l'elenco di azioni da eseguire.
- public void NotifyCommittedActions(const ExecutionState& state)  |  Viene chiamato dopo che sono state applicate le operazioni calcolate ed è stato eseguito il commit dei dati su disco.
+Public std:: shared_ptr\<ContentLabel\> GetSensitivityLabel (ExecutionState const & state)  |  Ottiene l'etichetta di riservatezza dal contenuto esistente.
+Public std:: Vector\<std:: shared_ptr\<azione\> \> ComputeActions (ExecutionState const & state)  |  Esegue le regole nel gestore in base allo stato specificato e restituisce l'elenco di azioni da eseguire.
+public void NotifyCommittedActions(const ExecutionState& state)  |  Viene chiamato dopo che sono state applicate le operazioni calcolate ed è stato eseguito il commit dei dati su disco.
   
 ## <a name="members"></a>Membri
   
-### <a name="contentlabel"></a>ContentLabel
+### <a name="getsensitivitylabel-function"></a>GetSensitivityLabel (funzione)
 Ottiene l'etichetta di riservatezza dal contenuto esistente.
 
 Parametri:  
-* **state**: stato corrente del contenuto 
+* **state**: Stato corrente del contenuto 
 
 
 
   
-**Restituisce**: etichetta attualmente applicata al contenuto. Se non è presente alcuna etichetta, restituisce un valore vuoto.
+**Restituisce**: Etichetta attualmente applicato al contenuto. Se non è presente alcuna etichetta, restituisce un valore vuoto.
   
-### <a name="action"></a>Azione
+### <a name="computeactions-function"></a>ComputeActions (funzione)
 Esegue le regole nel gestore in base allo stato specificato e restituisce l'elenco di azioni da eseguire.
 
 Parametri:  
@@ -45,13 +45,13 @@ Parametri:
 
 
   
-**Restituisce**: elenco di azioni da applicare al contenuto.
+**Restituisce**: Elenco di azioni da applicare al contenuto.
   
-### <a name="notifycommittedactions"></a>NotifyCommittedActions
+### <a name="notifycommittedactions-function"></a>NotifyCommittedActions (funzione)
 Viene chiamato dopo che sono state applicate le operazioni calcolate ed è stato eseguito il commit dei dati su disco.
 
 Parametri:  
 * **state**: stato di esecuzione corrente del contenuto dopo che è stato eseguito il commit delle azioni 
 
 
-: questa chiamata invia un evento di controllo
+: Questa chiamata invia un evento di controllo

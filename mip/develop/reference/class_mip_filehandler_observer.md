@@ -1,17 +1,17 @@
 ---
-title: Classe mip FileHandler Observer
-description: Riferimento per la classe mip FileHandler Observer
+title: Classe mip::FileHandler::Observer
+description: 'Classe MIP:: FileHandler di Microsoft Information Protection (MIP) SDK vengono documentate.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: a587107afc2b8963d64c31ad47af81761bf2b9f8
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 33f8a9c0d90d7f64295d469004c36a4c4cc80338
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446175"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650630"
 ---
 # <a name="class-mipfilehandlerobserver"></a>Classe mip::FileHandler::Observer 
 Interfaccia [Observer](class_mip_filehandler_observer.md) per il recupero di eventi di notifica correlati al gestore di file da parte dei client.
@@ -20,37 +20,37 @@ Tutti gli errori ereditano da [mip::Error](class_mip_error.md). I client non dev
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public virtual void OnCreateFileHandlerSuccess(const std::shared_ptr<FileHandler>& fileHandler, const std::shared_ptr<void>& context)  |  Viene chiamato quando il gestore è creato correttamente.
-public virtual void OnCreateFileHandlerFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Viene chiamato quando la creazione del gestore non è riuscita.
-public virtual void OnGetLabelSuccess(const std::shared_ptr<ContentLabel>& label, const std::shared_ptr<void>& context)  |  Viene chiamato quando l'etichetta viene recuperata correttamente.
-public virtual void OnGetLabelFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Viene chiamato quando il recupero dell'etichetta non è riuscito.
-public virtual void OnGetProtectionSuccess(const std::shared_ptr<ProtectionHandler>& protectionHandler, const std::shared_ptr<void>& context)  |  Viene chiamato quando i criteri di protezione vengono recuperati correttamente.
-public virtual void OnGetProtectionFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Viene chiamato quando il recupero dei criteri di protezione non è riuscito.
-public virtual void OnCommitSuccess(bool committed, const std::shared_ptr<void>& context)  |  Viene chiamato quando il commit delle modifiche al file è riuscito correttamente.
-public virtual void OnCommitFailure(const std::exception_ptr& error, const std::shared_ptr<void>& context)  |  Viene chiamato quando il commit delle modifiche al file non è riuscito.
+OnCreateFileHandlerSuccess void virtuale pubblico (const std:: shared_ptr\<FileHandler\>& fileHandler, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando il gestore è creato correttamente.
+OnCreateFileHandlerFailure void virtuale pubblico (std::exception_ptr const & errore, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando la creazione del gestore non è riuscita.
+OnClassifySuccess void virtuale pubblico (const std:: Vector\<std:: shared_ptr\<azione\>\>& azioni, const std:: shared_ptr\<void\>& contesto)  |  Chiamato quando la classificazione di esito positivo.
+public virtual void OnClassifyFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Chiamato quando la classificazione non è riuscita.
+OnGetDecryptedTemporaryFileSuccess void virtuale pubblico (const std:: String & decryptedFilePath, const std:: shared_ptr\<void\>& contesto)  |  Chiamato quando si recupera il successo di file temporanei decrittografato.
+public virtual void OnGetDecryptedTemporaryFileFailure(const std::exception_ptr& error, const std::shared_ptr\<void\>& context)  |  Chiamato quando si recupera il file temporaneo decrittografato non è riuscito.
+OnCommitSuccess void virtuale pubblico (bool esegue il commit, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando il commit delle modifiche al file è riuscito correttamente.
+OnCommitFailure void virtuale pubblico (std::exception_ptr const & errore, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando il commit delle modifiche al file non è riuscito.
   
 ## <a name="members"></a>Membri
   
-### <a name="oncreatefilehandlersuccess"></a>OnCreateFileHandlerSuccess
+### <a name="oncreatefilehandlersuccess-function"></a>OnCreateFileHandlerSuccess (funzione)
 Viene chiamato quando il gestore è creato correttamente.
   
-### <a name="oncreatefilehandlerfailure"></a>OnCreateFileHandlerFailure
+### <a name="oncreatefilehandlerfailure-function"></a>OnCreateFileHandlerFailure (funzione)
 Viene chiamato quando la creazione del gestore non è riuscita.
   
-### <a name="ongetlabelsuccess"></a>OnGetLabelSuccess
-Viene chiamato quando l'etichetta viene recuperata correttamente.
+### <a name="onclassifysuccess-function"></a>OnClassifySuccess (funzione)
+Chiamato quando la classificazione di esito positivo.
   
-### <a name="ongetlabelfailure"></a>OnGetLabelFailure
-Viene chiamato quando il recupero dell'etichetta non è riuscito.
+### <a name="onclassifyfailure-function"></a>OnClassifyFailure (funzione)
+Chiamato quando la classificazione non è riuscita.
   
-### <a name="ongetprotectionsuccess"></a>OnGetProtectionSuccess
-Viene chiamato quando i criteri di protezione vengono recuperati correttamente.
+### <a name="ongetdecryptedtemporaryfilesuccess-function"></a>OnGetDecryptedTemporaryFileSuccess (funzione)
+Chiamato quando si recupera il successo di file temporanei decrittografato.
   
-### <a name="ongetprotectionfailure"></a>OnGetProtectionFailure
-Viene chiamato quando il recupero dei criteri di protezione non è riuscito.
+### <a name="ongetdecryptedtemporaryfilefailure-function"></a>OnGetDecryptedTemporaryFileFailure (funzione)
+Chiamato quando si recupera il file temporaneo decrittografato non è riuscito.
   
-### <a name="oncommitsuccess"></a>OnCommitSuccess
+### <a name="oncommitsuccess-function"></a>OnCommitSuccess (funzione)
 Viene chiamato quando il commit delle modifiche al file è riuscito correttamente.
   
-### <a name="oncommitfailure"></a>OnCommitFailure
+### <a name="oncommitfailure-function"></a>OnCommitFailure (funzione)
 Viene chiamato quando il commit delle modifiche al file non è riuscito.

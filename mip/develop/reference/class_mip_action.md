@@ -1,17 +1,17 @@
 ---
-title: Classe mip Action
-description: Riferimento per la classe mip Action
+title: Classe mip::Action
+description: 'Classe MIP:: Action di Microsoft Information Protection (MIP) SDK vengono documentate.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 97b082a0a3da1e8b6726d181f42e741f002a7e29
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 2a3ef2340aacefc9679ddad011be17991929face
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445972"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650528"
 ---
 # <a name="class-mipaction"></a>Classe mip::Action 
 Interfaccia per un'azione. Ogni azione viene convertita in un passaggio che deve essere eseguito dall'applicazione per applicare l'etichetta (definita nei criteri)
@@ -19,11 +19,11 @@ Interfaccia per un'azione. Ogni azione viene convertita in un passaggio che deve
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
- public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
+public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
   
 ## <a name="members"></a>Membri
   
-### <a name="actiontype"></a>ActionType
+### <a name="gettype-function"></a>Funzione GetType
 Specifica il tipo di [Action](class_mip_action.md).
 
   

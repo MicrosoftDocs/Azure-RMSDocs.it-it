@@ -1,17 +1,17 @@
 ---
-title: Classe mip Label
-description: Riferimento per la classe mip Label
+title: Classe mip::Label
+description: 'Classe MIP:: Label di Microsoft Information Protection (MIP) SDK vengono documentate.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 2a80748430df83a16a4d5ee716344d17ce7deee4
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: aa2d5106f8da03b4cf6a9dbd99c440989dc7ff6d
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446278"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650664"
 ---
 # <a name="class-miplabel"></a>Classe mip::Label 
 Astrazione per una singola etichetta di Microsoft Information Protection.
@@ -19,69 +19,76 @@ Astrazione per una singola etichetta di Microsoft Information Protection.
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
- public const std::string& GetId() const  |  Ottiene l'ID dell'etichetta.
- public const std::string& GetName() const  |  Ottiene il nome dell'etichetta.
- public const std::string& GetDescription() const  |  Ottiene la descrizione dell'etichetta.
- public const std::string& GetColor() const  |  Ottiene il colore in cui deve essere visualizzata l'etichetta.
- public int GetSensitivity() const  |  Ottiene la riservatezza dell'etichetta.
- public const std::string& GetTooltip() const  |  Ottiene la descrizione comando dell'etichetta.
- public bool IsActive() const  |  Ottiene un valore booleano che indica se l'etichetta è attiva.
-public std::weak_ptr<Label> GetParent() const  |  Ottiene l'etichetta padre.
-public const std::vector<std::shared_ptr<Label>>& GetChildren() const  |  Ottiene le etichette figlio dell'etichetta corrente.
+public const std::string& GetId() const  |  Ottiene l'ID dell'etichetta.
+public const std::string& GetName() const  |  Ottiene il nome dell'etichetta.
+public const std::string& GetDescription() const  |  Ottiene la descrizione dell'etichetta.
+public const std::string& GetColor() const  |  Ottiene il colore in cui deve essere visualizzata l'etichetta.
+public int GetSensitivity() const  |  Ottiene la riservatezza dell'etichetta.
+public const std::string& GetTooltip() const  |  Ottiene la descrizione comando dell'etichetta.
+public bool IsActive() const  |  Ottiene un valore booleano che indica se l'etichetta è attiva.
+pubblica std::weak_ptr\<etichetta\> GetParent const  |  Ottiene l'etichetta padre.
+public const std::vector\<std::shared_ptr\<Label\>\>& GetChildren() const  |  Ottiene le etichette figlio dell'etichetta corrente.
+Public std:: Vector const\<std:: Pair\<std:: String, std:: String\>\>& GetCustomSettings() const  |  Ottiene le impostazioni di un'etichetta personalizzate.
   
 ## <a name="members"></a>Membri
   
-### <a name="getid"></a>GetId
+### <a name="getid-function"></a>GetId (funzione)
 Ottiene l'ID dell'etichetta.
 
   
-**Restituisce**: ID dell'etichetta.
+**Restituisce**: L'ID etichetta.
   
-### <a name="getname"></a>GetName
+### <a name="getname-function"></a>GetName (funzione)
 Ottiene il nome dell'etichetta.
 
   
-**Restituisce**: nome dell'etichetta.
+**Restituisce**: Il nome dell'etichetta.
   
-### <a name="getdescription"></a>GetDescription
+### <a name="getdescription-function"></a>GetDescription (funzione)
 Ottiene la descrizione dell'etichetta.
 
   
-**Restituisce**: descrizione dell'etichetta.
+**Restituisce**: La descrizione dell'etichetta.
   
-### <a name="getcolor"></a>GetColor
+### <a name="getcolor-function"></a>GetColor (funzione)
 Ottiene il colore in cui deve essere visualizzata l'etichetta.
 
   
-**Restituisce**: valore del colore in formato stringa. "#RRGGBB", dove RR, GG, BB sono valori esadecimali di due cifre compresi nell'intervallo 0-F.
+**Restituisce**: Valore di colore, il formato della stringa. "#RRGGBB", dove RR, GG, BB sono valori esadecimali di due cifre compresi nell'intervallo 0-F.
   
-### <a name="getsensitivity"></a>GetSensitivity
+### <a name="getsensitivity-function"></a>GetSensitivity (funzione)
 Ottiene la riservatezza dell'etichetta.
 
   
-**Restituisce**: valore numerico. A un valore più alto corrisponde una riservatezza più elevata.
+**Restituisce**: Un valore numerico. A un valore più alto corrisponde una riservatezza più elevata.
   
-### <a name="gettooltip"></a>GetTooltip
+### <a name="gettooltip-function"></a>GetTooltip (funzione)
 Ottiene la descrizione comando dell'etichetta.
 
   
-**Restituisce**: stringa di descrizione comando.
+**Restituisce**: Una stringa di descrizione comando.
   
-### <a name="isactive"></a>IsActive
+### <a name="isactive-function"></a>IsActive (funzione)
 Ottiene un valore booleano che indica se l'etichetta è attiva.
 Possono essere applicate solo le etichette attive. Le etichette inattive non possono essere applicate e sono usate solo a scopo di visualizzazione. 
 
   
-**Restituisce**: true se l'etichetta è attiva, in caso contrario false.
+**Restituisce**: True se l'etichetta è attiva, in caso contrario, false.
   
-### <a name="label"></a>Label
+### <a name="getparent-function"></a>GetParent (funzione)
 Ottiene l'etichetta padre.
 
   
-**Restituisce**: puntatore debole all'etichetta padre se esistente, in caso contrario un puntatore vuoto.
+**Restituisce**: Puntatore debole all'elemento padre di assegnare un'etichetta se esistente in caso contrario un puntatore vuoto.
   
-### <a name="label"></a>Label
+### <a name="getchildren-function"></a>GetChildren (funzione)
 Ottiene le etichette figlio dell'etichetta corrente.
 
   
-**Restituisce**: vettore di puntatori condivisi a etichette.
+**Restituisce**: Vettore di puntatori condivisi a etichette.
+  
+### <a name="getcustomsettings-function"></a>GetCustomSettings (funzione)
+Ottiene le impostazioni di un'etichetta personalizzate.
+
+  
+**Restituisce**: Vettore di coppie chiave-valore che rappresenta le impostazioni personalizzate.

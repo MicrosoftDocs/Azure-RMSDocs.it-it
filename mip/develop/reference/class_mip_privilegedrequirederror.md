@@ -1,17 +1,17 @@
 ---
-title: Classe mip PrivilegedRequiredError
-description: Riferimento per la classe mip PrivilegedRequiredError
+title: Classe mip::PrivilegedRequiredError
+description: 'Classe MIP:: privilegedrequirederror di Microsoft Information Protection (MIP) SDK vengono documentate.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: e55228cb48ff779e271695d4f6461be115d05b2f
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 72b13ae82720ba646b0cd27a97ea1086382dd740
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445751"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651038"
 ---
 # <a name="class-mipprivilegedrequirederror"></a>Classe mip::PrivilegedRequiredError 
 L'etichetta corrente è stata assegnata come operazione con privilegi (equivalente a un'operazione dell'amministratore), quindi non è possibile eseguirne l'override.
@@ -19,46 +19,46 @@ L'etichetta corrente è stata assegnata come operazione con privilegi (equivalen
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
- public char const* what() const  |  Ottiene il messaggio di errore.
-public std::shared_ptr<Error> Clone() const  |  Clona l'errore.
- public virtual ErrorType GetErrorType() const  |  Ottiene il tipo di errore.
- public virtual const std::string& GetErrorName() const  |  Ottiene il nome dell'errore.
- public virtual const std::string& GetMessage() const  |  Ottiene il messaggio di errore.
- public virtual void SetMessage(const std::string& msg)  |  Imposta il messaggio di errore.
+public char const* what() const  |  Ottiene il messaggio di errore.
+Public std:: shared_ptr\<errore\> clone () const  |  Clona l'errore.
+public virtual ErrorType GetErrorType() const  |  Ottiene il tipo di errore.
+public virtual const std::string& GetErrorName() const  |  Ottiene il nome dell'errore.
+public virtual const std::string& GetMessage() const  |  Ottiene il messaggio di errore.
+public virtual void SetMessage(const std::string& msg)  |  Imposta il messaggio di errore.
   
 ## <a name="members"></a>Membri
   
-### <a name="what"></a>what
+### <a name="what-function"></a>tipo di funzione
 Ottiene il messaggio di errore.
 
   
-**Restituisce**: messaggio di errore.
+**Restituisce**: Il messaggio di errore
   
-### <a name="error"></a>Errore
+### <a name="clone-function"></a>Funzioni di clone
 Clona l'errore.
 
   
-**Restituisce**: clone dell'errore.
+**Restituisce**: Un clone dell'errore.
   
-### <a name="errortype"></a>ErrorType
+### <a name="geterrortype-function"></a>GetErrorType (funzione)
 Ottiene il tipo di errore.
 
   
-**Restituisce**: tipo di errore.
+**Restituisce**: Il tipo di errore.
   
-### <a name="geterrorname"></a>GetErrorName
+### <a name="geterrorname-function"></a>GetErrorName (funzione)
 Ottiene il nome dell'errore.
 
   
-**Restituisce**: nome dell'errore.
+**Restituisce**: Il nome di errore.
   
-### <a name="getmessage"></a>GetMessage
+### <a name="getmessage-function"></a>GetMessage (funzione)
 Ottiene il messaggio di errore.
 
   
-**Restituisce**: messaggio di errore.
+**Restituisce**: Il messaggio di errore.
   
-### <a name="setmessage"></a>SetMessage
+### <a name="setmessage-function"></a>SetMessage (funzione)
 Imposta il messaggio di errore.
 
 Parametri:  

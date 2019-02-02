@@ -1,17 +1,17 @@
 ---
-title: Classe mip PolicyProfile Settings
-description: Riferimento per la classe mip PolicyProfile Settings
+title: Classe mip::PolicyProfile::Settings
+description: Documenta la classe mip::policyprofile di Microsoft Information Protection (MIP) SDK.
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 07cbcbc022c02a43f751e1cf55b5b0efdfb816d1
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: d6a0c773226fff789889bd82a6075a65cff184bd
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446877"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651123"
 ---
 # <a name="class-mippolicyprofilesettings"></a>Classe mip::PolicyProfile::Settings 
 Oggetto [Settings](class_mip_policyprofile_settings.md) usato da [PolicyProfile](class_mip_policyprofile.md) durante la creazione e per tutta la sua durata.
@@ -19,112 +19,112 @@ Oggetto [Settings](class_mip_policyprofile_settings.md) usato da [PolicyProfile]
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public Settings(const std::string& path, bool useInMemoryStorage, const std::shared_ptr<AuthDelegate>& authDelegate, const std::shared_ptr<PolicyProfile::Observer>& observer, const ApplicationInfo& applicationInfo)  |  Interfaccia per la configurazione del profilo.
- public const std::string& GetPath() const  |  Ottiene il percorso dello stato archiviato.
- public bool GetUseInMemoryStorage() const  |  Ottiene il flag UseInMemoryStorage.
-public const std::shared_ptr<AuthDelegate>& GetAuthDelegate() const  |  Ottiene il delegato dell'autenticazione.
-public const std::shared_ptr<PolicyProfile::Observer>& GetObserver() const  |  Ottiene l'observer di eventi.
- public const ApplicationInfo GetApplicationInfo() const  |  Ottiene le informazioni sull'applicazione.
-public std::shared_ptr<LoggerDelegate> GetLoggerDelegate() const  |  Ottiene il delegato del logger (se disponibile) fornito dall'applicazione.
-public void SetLoggerDelegate(const std::shared_ptr<LoggerDelegate>& loggerDelegate)  |  Esegue l'override del logger predefinito.
-public std::shared_ptr<HttpDelegate> GetHttpDelegate() const  |  Ottiene il delegato HTTP (se disponibile) specificato dall'applicazione.
-public void SetHttpDelegate(const std::shared_ptr<HttpDelegate>& httpDelegate)  |  Esegue l'override dello stack HTTP predefinito con quello del client.
- public void OptOutTelemetry()  |  Rifiuta esplicitamente la raccolta di tutti i dati di telemetria.
- public bool IsTelemetryOptedOut() const  |  Ottiene un valore indicante se la raccolta dei dati di telemetria deve essere disabilitata o meno.
- public void SetMinimumLogLevel(LogLevel logLevel)  |  Imposta il livello di log minimo che attiverà un evento di registrazione.
- public LogLevel GetMinimumLogLevel() const  |  Ottiene l'oggetto Livello di log minimo.
+Impostazioni pubbliche (const std:: String & percorso, bool useInMemoryStorage, const std:: shared_ptr\<AuthDelegate\>& authDelegate, const std:: shared_ptr\<PolicyProfile::Observer\>& Observer, const ApplicationInfo & applicationInfo)  |  Interfaccia per la configurazione del profilo.
+public const std::string& GetPath() const  |  Ottiene il percorso dello stato archiviato.
+public bool GetUseInMemoryStorage() const  |  Ottiene il flag UseInMemoryStorage.
+Public std:: shared_ptr const\<AuthDelegate\>& GetAuthDelegate() const  |  Ottiene il delegato dell'autenticazione.
+Public std:: shared_ptr const\<PolicyProfile::Observer\>& GetObserver() const  |  Ottiene l'observer di eventi.
+public const ApplicationInfo GetApplicationInfo() const  |  Ottiene le informazioni sull'applicazione.
+Public std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Ottiene il delegato del logger (se disponibile) fornito dall'applicazione.
+public void SetLoggerDelegate (const std:: shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  Esegue l'override del logger predefinito.
+Public std:: shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Ottiene il delegato HTTP (se disponibile) specificato dall'applicazione.
+public void SetHttpDelegate (const std:: shared_ptr\<HttpDelegate\>& httpDelegate)  |  Esegue l'override dello stack HTTP predefinito con quello del client.
+public void OptOutTelemetry()  |  Rifiuta esplicitamente la raccolta di tutti i dati di telemetria.
+public bool IsTelemetryOptedOut() const  |  Ottiene un valore che indica se la raccolta dei dati di telemetria deve essere disabilitata o meno.
+public void SetMinimumLogLevel(LogLevel logLevel)  |  Imposta il livello di log minimo che attiverà un evento di registrazione.
+public LogLevel GetMinimumLogLevel() const  |  Ottiene l'oggetto Livello di log minimo.
   
 ## <a name="members"></a>Membri
   
-### <a name="settings"></a>Impostazioni
+### <a name="settings-function"></a>Funzione impostazioni
 Interfaccia per la configurazione del profilo.
 
 Parametri:  
-* **path**: percorso di una directory in cui l'SDK archivierà lo stato del profilo. 
+* **path**: Il percorso di una directory in cui il SDK archivierà lo stato del profilo. 
 
 
-* **useInMemoryStorage**: archivia nella memoria invece che su disco gli stati memorizzati nella cache. 
+* **useInMemoryStorage**: Store qualsiasi stato memorizzato nella cache in memoria anziché su disco. 
 
 
-* **authDelegate**: delegato dell'autenticazione usato dall'SDK per acquisire i token di autenticazione. 
+* **authDelegate**: Il delegato di autenticazione usato dal SDK per acquisire i token di autenticazione. 
 
 
-* **observer**: classe che implementa l'interfaccia [PolicyProfile::Observer](class_mip_policyprofile_observer.md). Può essere nullptr. 
+* **observer**: Una classe che implementa il [PolicyProfile::Observer](class_mip_policyprofile_observer.md) interfaccia. Può essere nullptr. 
 
 
-* **applicationInfo**: identificatori dell'applicazione usati per l'accesso al servizio.
+* **applicationInfo**: Gli identificatori dell'applicazione usati per l'accesso del servizio.
 
 
   
-### <a name="getpath"></a>GetPath
+### <a name="getpath-function"></a>GetPath (funzione)
 Ottiene il percorso dello stato archiviato.
 
   
-**Restituisce**: percorso dello stato archiviato.
+**Restituisce**: Percorso dello stato archiviato.
   
-### <a name="getuseinmemorystorage"></a>GetUseInMemoryStorage
+### <a name="getuseinmemorystorage-function"></a>GetUseInMemoryStorage (funzione)
 Ottiene il flag UseInMemoryStorage.
 
   
-**Restituisce**: true se è impostato l'uso dell'archiviazione in memoria, false in caso contrario.
+**Restituisce**: True se l'utilizzo in memoria viene altrimenti impostato false.
   
-### <a name="getauthdelegate"></a>GetAuthDelegate
+### <a name="getauthdelegate-function"></a>GetAuthDelegate (funzione)
 Ottiene il delegato dell'autenticazione.
 
   
-**Restituisce**: delegato dell'autenticazione.
+**Restituisce**: Delegato dell'autenticazione.
   
-### <a name="policyprofileobserver"></a>PolicyProfile::Observer
+### <a name="getobserver-function"></a>GetObserver (funzione)
 Ottiene l'observer di eventi.
 
   
-**Restituisce**: observer di eventi.
+**Restituisce**: Observer di eventi.
   
-### <a name="applicationinfo"></a>ApplicationInfo
+### <a name="getapplicationinfo-function"></a>GetApplicationInfo function
 Ottiene le informazioni sull'applicazione.
 
   
-**Restituisce**: informazioni sull'applicazione.
+**Restituisce**: Le informazioni sull'applicazione.
   
-### <a name="loggerdelegate"></a>LoggerDelegate
+### <a name="getloggerdelegate-function"></a>GetLoggerDelegate (funzione)
 Ottiene il delegato del logger (se disponibile) fornito dall'applicazione.
 
   
-**Restituisce**: logger
+**Restituisce**: Logger
   
-### <a name="setloggerdelegate"></a>SetLoggerDelegate
+### <a name="setloggerdelegate-function"></a>SetLoggerDelegate (funzione)
 Esegue l'override del logger predefinito.
 
 Parametri:  
-* **loggerDelegate**: interfaccia di callback di registrazione implementata dalle applicazioni client
+* **loggerDelegate**: La registrazione di interfaccia di callback implementata dalle applicazioni client
 
 
 Questo metodo deve essere chiamato dalle applicazioni client che usano la propria implementazione del logger
   
-### <a name="httpdelegate"></a>HttpDelegate
+### <a name="gethttpdelegate-function"></a>GetHttpDelegate (funzione)
 Ottiene il delegato HTTP (se disponibile) specificato dall'applicazione.
 
   
-**Restituisce**: il delegato HTTP da usare per le operazioni HTTP
+**Restituisce**: Delegato di HTTP da utilizzare per le operazioni HTTP
   
-### <a name="sethttpdelegate"></a>SetHttpDelegate
+### <a name="sethttpdelegate-function"></a>SetHttpDelegate (funzione)
 Esegue l'override dello stack HTTP predefinito con quello del client.
 
 Parametri:  
-* **httpDelegate**: interfaccia di callback HTTP implementata dall'applicazione client
+* **httpDelegate**: Interfaccia di callback HTTP implementato dall'applicazione client
 
 
   
-### <a name="optouttelemetry"></a>OptOutTelemetry
+### <a name="optouttelemetry-function"></a>OptOutTelemetry (funzione)
 Rifiuta esplicitamente la raccolta di tutti i dati di telemetria.
   
-### <a name="istelemetryoptedout"></a>IsTelemetryOptedOut
-Ottiene un valore indicante se la raccolta dei dati di telemetria deve essere disabilitata o meno.
+### <a name="istelemetryoptedout-function"></a>IsTelemetryOptedOut (funzione)
+Ottiene un valore che indica se la raccolta dei dati di telemetria deve essere disabilitata o meno.
 
   
-**Restituisce**: un valore indicante se la raccolta dei dati di telemetria deve essere disabilitata o meno.
+**Restituisce**: True se la raccolta di dati di telemetria deve essere disabilitato in caso contrario false
   
-### <a name="setminimumloglevel"></a>SetMinimumLogLevel
+### <a name="setminimumloglevel-function"></a>SetMinimumLogLevel (funzione)
 Imposta il livello di log minimo che attiverà un evento di registrazione.
 
 Parametri:  
@@ -135,8 +135,8 @@ Parametri:
   
 **Restituisce**: True
   
-### <a name="loglevel"></a>LogLevel
+### <a name="getminimumloglevel-function"></a>GetMinimumLogLevel (funzione)
 Ottiene l'oggetto Livello di log minimo.
 
   
-**Restituisce**: il livello di log minimo che attiverà un evento di registrazione.
+**Restituisce**: Livello log minimo che attiverà un evento di registrazione.

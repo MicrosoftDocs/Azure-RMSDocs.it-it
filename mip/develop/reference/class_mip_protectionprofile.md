@@ -1,17 +1,17 @@
 ---
-title: Classe mip ProtectionProfile
-description: Riferimento per la classe mip ProtectionProfile
+title: Classe mip::ProtectionProfile
+description: 'Classe MIP:: protectionprofile di Microsoft Information Protection (MIP) SDK vengono documentate.'
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: a7dffb4a6b1490ef185eb9a5062f394f4509f00a
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.date: 01/28/2019
+ms.openlocfilehash: 4b7e5ecc3006ab44b1c5f55cd658a0e0b33748d3
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446686"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55650953"
 ---
 # <a name="class-mipprotectionprofile"></a>Classe mip::ProtectionProfile 
 [ProtectionProfile](class_mip_protectionprofile.md) è la classe radice per l'esecuzione di operazioni di protezione.
@@ -20,50 +20,50 @@ Un'applicazione deve creare un oggetto [ProtectionProfile](class_mip_protectionp
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
- public const Settings& GetSettings() const  |  Ottiene le impostazioni usate da [ProtectionProfile](class_mip_protectionprofile.md) durante l'inizializzazione e per tutta la sua durata.
-public void ListEnginesAsync(const std::shared_ptr<void>& context)  |  Avvia l'operazione di elenco motori.
-public std::vector<std::string> ListEngines()  |  Elenco motori.
-public void AddEngineAsync(const ProtectionEngine::Settings& settings, const std::shared_ptr<void>& context)  |  Avvia l'aggiunta di un nuovo motore di protezione al profilo.
-public std::shared_ptr<ProtectionEngine> AddEngine(const ProtectionEngine::Settings& settings)  |  Aggiunge un nuovo motore di protezione al profilo.
-public void DeleteEngineAsync(const std::string& engineId, const std::shared_ptr<void>& context)  |  Avvia l'eliminazione del motore di protezione con l'ID specificato. Tutti i dati per il motore specificato verranno eliminati.
- public void DeleteEngine(const std::string& engineId)  |  Elimina il motore di protezione con l'ID specificato. Tutti i dati per il motore specificato verranno eliminati.
+public const Settings& GetSettings() const  |  Ottiene le impostazioni usate da [ProtectionProfile](class_mip_protectionprofile.md) durante l'inizializzazione e per tutta la sua durata.
+public void ListEnginesAsync (const std:: shared_ptr\<void\>& contesto)  |  Avvia l'operazione di elenco motori.
+Public std:: Vector\<std:: String\> ListEngines()  |  Elenco motori.
+pubblica AddEngineAsync void (ProtectionEngine::Settings const & impostazioni, const std:: shared_ptr\<void\>& contesto)  |  Avvia l'aggiunta di un nuovo motore di protezione al profilo.
+Public std:: shared_ptr\<ProtectionEngine\> AddEngine (ProtectionEngine::Settings const & impostazioni)  |  Aggiunge un nuovo motore di protezione al profilo.
+public void DeleteEngineAsync (const std:: String & engineId, const std:: shared_ptr\<void\>& contesto)  |  Avvia l'eliminazione del motore di protezione con l'ID specificato. Tutti i dati per il motore specificato verranno eliminati.
+public void DeleteEngine(const std::string& engineId)  |  Elimina il motore di protezione con l'ID specificato. Tutti i dati per il motore specificato verranno eliminati.
   
 ## <a name="members"></a>Membri
   
-### <a name="settings"></a>Impostazioni
+### <a name="getsettings-function"></a>GetSettings (funzione)
 Ottiene le impostazioni usate da [ProtectionProfile](class_mip_protectionprofile.md) durante l'inizializzazione e per tutta la sua durata.
 
   
-**Restituisce**: [impostazioni](class_mip_protectionprofile_settings.md) usate da [ProtectionProfile](class_mip_protectionprofile.md) durante l'inizializzazione e per tutta la sua durata
+**Restituisce**: Oggetto [Settings](class_mip_protectionprofile_settings.md) usato da [ProtectionProfile](class_mip_protectionprofile.md) durante l'inizializzazione e per tutta la sua durata
   
-### <a name="listenginesasync"></a>ListEnginesAsync
+### <a name="listenginesasync-function"></a>ListEnginesAsync (funzione)
 Avvia l'operazione di elenco motori.
 
 Parametri:  
-* **context**: contesto client che verrà nuovamente passato in maniera opaca agli observer
+* **context**: Contesto di client che verrà passato in maniera opaca all'Observer
 
 
 In base all'esito positivo o negativo dell'operazione verrà chiamato [ProtectionProfile::Observer](class_mip_protectionprofile_observer.md).
   
-### <a name="listengines"></a>ListEngines
+### <a name="listengines-function"></a>ListEngines (funzione)
 Elenco motori.
 
   
-**Restituisce**: ID dei motori memorizzati nella cache
+**Restituisce**: Gli ID di motore memorizzato nella cache
   
-### <a name="addengineasync"></a>AddEngineAsync
+### <a name="addengineasync-function"></a>AddEngineAsync (funzione)
 Avvia l'aggiunta di un nuovo motore di protezione al profilo.
 
 Parametri:  
 * **settings**: oggetto [mip::ProtectionEngine::Settings](class_mip_protectionengine_settings.md) che specifica le impostazioni del motore. 
 
 
-* **context**: contesto client che verrà nuovamente passato in maniera opaca agli observer
+* **context**: Contesto di client che verrà passato in maniera opaca all'Observer
 
 
 In base all'esito positivo o negativo dell'operazione verrà chiamato [ProtectionProfile::Observer](class_mip_protectionprofile_observer.md).
   
-### <a name="protectionengine"></a>ProtectionEngine
+### <a name="addengine-function"></a>AddEngine (funzione)
 Aggiunge un nuovo motore di protezione al profilo.
 
 Parametri:  
@@ -72,21 +72,21 @@ Parametri:
 
 
   
-**Restituisce**: [ProtectionEngine](class_mip_protectionengine.md) appena creato
+**Restituisce**: Appena creati [ProtectionEngine](class_mip_protectionengine.md)
   
-### <a name="deleteengineasync"></a>DeleteEngineAsync
+### <a name="deleteengineasync-function"></a>DeleteEngineAsync (funzione)
 Avvia l'eliminazione del motore di protezione con l'ID specificato. Tutti i dati per il motore specificato verranno eliminati.
 
 Parametri:  
 * **id**: ID univoco del motore. 
 
 
-* **context**: contesto client che verrà nuovamente passato in maniera opaca agli observer
+* **context**: Contesto di client che verrà passato in maniera opaca all'Observer
 
 
 In base all'esito positivo o negativo dell'operazione verrà chiamato [ProtectionProfile::Observer](class_mip_protectionprofile_observer.md).
   
-### <a name="deleteengine"></a>DeleteEngine
+### <a name="deleteengine-function"></a>DeleteEngine (funzione)
 Elimina il motore di protezione con l'ID specificato. Tutti i dati per il motore specificato verranno eliminati.
 
 Parametri:  
