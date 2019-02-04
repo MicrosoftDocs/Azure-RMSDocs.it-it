@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ba44c23b56c2832268f0ed6df122a347c9a8fdf3
-ms.sourcegitcommit: 2a1c0882d2b0400f4da6370dbc1830df09867e3d
+ms.openlocfilehash: 0d1cae062602897fce6d36078cfac3b164c7d614
+ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53218460"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146724"
 ---
 # <a name="what-is-azure-rights-management"></a>Informazioni su Microsoft Azure Rights Management
 
@@ -30,7 +30,7 @@ Si supponga, ad esempio, che un utente invii un documento a una società partner
 
 Aspetto molto importante, le persone e i servizi autorizzati, ad esempio quelli di ricerca e indicizzazione, possono continuare a leggere e analizzare i dati protetti, risultato non raggiunto facilmente da altre soluzioni di protezione delle informazioni che usano la crittografia peer-to-peer. Questa possibilità viene definita anche "ragionamento sui dati" e riveste un ruolo di importanza critica nel mantenimento del controllo sui dati dell'organizzazione.
 
-La figura seguente illustra come questo servizio offra una soluzione di protezione per Office 365, oltre che per server e servizi locali. Indica inoltre che la protezione è supportata dai dispositivi degli utenti finali di uso comune che eseguono Windows, Mac OS, iOS, Android e Windows Phone.
+La figura seguente illustra come questo servizio offra una soluzione di protezione per Office 365, oltre che per server e servizi locali. Indica inoltre che la protezione è supportata dai dispositivi degli utenti finali di uso comune che eseguono Windows, macOS, iOS e Android.
 
 
 ![Funzionamento di Azure RMS](./media/AzRMS_elements.png)

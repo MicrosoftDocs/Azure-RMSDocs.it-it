@@ -4,15 +4,15 @@ description: Esercitazione introduttiva che illustra la configurazione delle imp
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 01/24/2019
 ms.topic: tutorial
 ms.service: information-protection
-ms.openlocfilehash: 0341ba1b232551f89e1ee43f77a3425b8c6e8ffb
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 324f13a61d287fd883e9336c6e17250e9ab9ff9f
+ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024366"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231022"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Esercitazione: Configurare impostazioni dei criteri di Azure Information Protection che interagiscono tra loro
 
@@ -41,7 +41,7 @@ Per completare questa esercitazione, è necessario:
 
 2. Aver aggiunto il pannello di Azure Information Protection nel portale di Azure e aver verificato che il servizio di protezione è attivato.
 
-    Se serve assistenza per queste operazioni, vedere [Guida introduttiva: Aggiungere Azure Information Protection al portale di Azure e visualizzare i criteri](quickstart-viewpolicy.md).
+    Se occorre assistenza per queste azioni, vedere [Avvio rapido: Introduzione ad Azure Information Protection nel portale di Azure](quickstart-viewpolicy.md)
 
 3. Aver installato il client Azure Information Protection nel computer in uso. 
     
@@ -49,9 +49,11 @@ Per completare questa esercitazione, è necessario:
 
 4. Disporre di un computer con Windows (versione minima Windows 7 con Service Pack 1), in cui è stato eseguito l'accesso alle app di Office da una delle categorie seguenti:
     
-    - Office 365 con le app di Office 2016 (versione minima 1805, build 9330.2078). Per l'uso di questa opzione, all'account deve essere assegnata una licenza per Azure Rights Management. Questa licenza è inclusa nell'abbonamento ad Azure Information Protection.
+    - App di Office con versione minima 1805, build 9330.2078 da Office 365 Business o Microsoft 365 Business quando all'utente viene assegnata una licenza per Azure Rights Management (nota anche come Azure Information Protection per Office 365).
     
-    - Office 365 ProPlus con le app di Office 2016 o 2013 (installazione basata su A portata di clic o Windows Installer).
+    - Office 365 ProPlus.
+    
+    - Office Professional Plus 2019.
     
     - Office Professional Plus 2016.
     

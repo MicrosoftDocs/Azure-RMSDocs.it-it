@@ -4,15 +4,15 @@ description: Esercitazione introduttiva per la modifica dei criteri di Azure Inf
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 01/29/2019
 ms.topic: tutorial
 ms.service: information-protection
-ms.openlocfilehash: a619a05607f5061f51bae93d97cfd44086cefd55
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 2e08b21deb8d1b7ef99d77f56e1bf149a82df081
+ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024179"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231056"
 ---
 # <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Esercitazione: Modificare i criteri di Azure Information Protection e creare una nuova etichetta
 
@@ -39,7 +39,7 @@ Per completare questa esercitazione, è necessario:
 
 2. Aver aggiunto il pannello di Azure Information Protection nel portale di Azure e aver verificato che il servizio di protezione è attivato.
 
-    Se serve assistenza per queste operazioni, vedere [Guida introduttiva: Aggiungere Azure Information Protection al portale di Azure e visualizzare i criteri](quickstart-viewpolicy.md).
+    Se occorre assistenza per queste azioni, vedere [Avvio rapido: Introduzione ad Azure Information Protection nel portale di Azure](quickstart-viewpolicy.md)
 
 3. Aver installato il client Azure Information Protection nel computer in uso. 
     
@@ -47,9 +47,11 @@ Per completare questa esercitazione, è necessario:
 
 4. Disporre di un computer con Windows (versione minima Windows 7 con Service Pack 1), in cui è stato eseguito l'accesso alle app di Office da una delle categorie seguenti:
     
-    - Office 365 con le app di Office 2016 (versione minima 1805, build 9330.2078). Per l'uso di questa opzione, all'account deve essere assegnata una licenza per Azure Rights Management. Questa licenza è inclusa nell'abbonamento ad Azure Information Protection.
+    - App di Office con versione minima 1805, build 9330.2078 da Office 365 Business o Microsoft 365 Business quando all'utente viene assegnata una licenza per Azure Rights Management (nota anche come Azure Information Protection per Office 365).
     
-    - Office 365 ProPlus con le app di Office 2016 o 2013 (installazione basata su A portata di clic o Windows Installer).
+    - Office 365 ProPlus.
+    
+    - Office Professional Plus 2019.
     
     - Office Professional Plus 2016.
     
@@ -97,7 +99,7 @@ Tramite il portale di Azure, si procederà per prima cosa alla modifica di alcun
 
 Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato).
 
-1. Dall'opzione di menu **Classificazioni** > **Etichette**: fare clic con il pulsante destro del mouse sull'etichetta **Riservato** e quindi selezionare **Aggiungi un'etichetta secondaria**.
+1. Dall'opzione di menu **Classificazioni** > **Etichette**: Fare clic con il pulsante destro del mouse sull'etichetta **Confidential** e selezionare **Aggiungi un'etichetta secondaria**.
     
     Se non esiste un'etichetta denominata **Riservato**, è possibile selezionare un'altra etichetta o crearne una nuova e procedere con l'esercitazione con piccole differenze.
 
@@ -143,15 +145,15 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
     
     Fare clic su **Aggiungi una nuova condizione** e quindi nel pannello **Condizione** selezionare quanto segue:
     
-    a. **Scegliere il tipo di condizione**: mantenere il valore predefinito di **Tipi di informazioni**.
+    a. **Scegliere il tipo di condizione**: mantenere l'impostazione predefinita **Tipi di informazioni**.
     
-    b. **Choose an industry** (Scegliere un settore): mantenere il valore predefinito di **Tutti**.
+    b. Per **Scegliere un settore**: mantenere l'impostazione predefinita **Tutti**.
     
     c. Nella casella di ricerca **Selezionare i tipi di informazioni** digitare **numero di carta di credito**. Selezionare quindi **Numero carta di credito** nei risultati della ricerca.
     
-    d. **Numero minimo di occorrenze**: mantenere il valore predefinito **1**.
+    d. **Numero minimo di occorrenze**: mantenere l'impostazione predefinita **1**.
     
-    e. **Conta solo le occorrenze con valori univoci**: mantenere il valore predefinito **Off**.
+    e. **Conta solo le occorrenze con valori univoci**: mantenere l'impostazione predefinita **No**.
     
     ![Esercitazione di Azure Information Protection - Configurare la condizione della carta di credito](./media/step2-configure-condition.png)
     
@@ -161,7 +163,7 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
     
     ![Esercitazione di Azure Information Protection - Configurare la condizione della carta di credito](./media/step2-see-condition.png)
 
-11. Per **Specificare se l'etichetta viene applicata automaticamente o se viene consigliata all'utente** mantenere l'impostazione predefinita **Consigliata** e non modificare il suggerimento per i criteri predefiniti. 
+11. Per **Specificare se l'etichetta viene applicata automaticamente o se viene consigliata all'utente**: mantenere il valore predefinito **Consigliata** e non modificare il suggerimento di criterio predefinito. 
 
 12. Nella casella **Aggiungi note per l'uso da parte dell'amministratore** specificare che è **solo a scopo di test**.
 
@@ -169,7 +171,7 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
 
 14. Dall'opzione di menu **Classificazioni** > **Criteri**: selezionare di nuovo **Globale** e quindi selezionare il collegamento **Aggiungi o rimuovi etichette** dopo le etichette.
 
-15. Nel pannello **Criteri: Aggiungi o rimuovi etichette** selezionare l'etichetta appena creata e l'etichetta secondaria denominata **Finance** (Contabilità), quindi fare clic su **OK**.
+15. Nel pannello **Policy: Aggiungi o rimuovi etichette** selezionare l'etichetta appena creata e l'etichetta secondaria denominata **Finance** (Contabilità), quindi fare clic su **OK**.
 
 16. Nel pannello **Criteri: Globale** è ora possibile vedere la nuova etichetta secondaria nei criteri globali, configurata per i contrassegni visivi e la protezione. Ad esempio:
 

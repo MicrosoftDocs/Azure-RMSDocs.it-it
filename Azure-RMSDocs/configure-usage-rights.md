@@ -4,18 +4,18 @@ description: Informazioni sui diritti specifici usati quando si proteggono i fil
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/14/2018
+ms.date: 01/29/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a7bf1e202fdff99375054647e04d44d44eecdb85
-ms.sourcegitcommit: 5b48131ace3bbaf82f22fcb7eedf735c2f73d962
+ms.openlocfilehash: 195700be6b1a2f7aecbdd4de333570669cf6d329
+ms.sourcegitcommit: 4b1f204fd31bb9de05510b85b91304d9964a14c1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53429900"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420793"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configurazione dei diritti di utilizzo per Azure Rights Management
 
@@ -119,7 +119,7 @@ Un utente vuole inviare per posta elettronica alcune informazioni a utenti speci
 
 Quando Exchange Online usa le nuove funzionalità per Office 365 Message Encryption, diventa disponibile una nuova opzione di posta elettronica: **Solo crittografia**.
 
-Questa opzione è disponibile per i tenant che usano Exchange Online e può essere selezionata in Outlook sul Web, come opzione di protezione dei diritti aggiuntiva per una regola del flusso di posta elettronica, come azione DLP di Office 365 e in Outlook, quando si dispone di Office 365 ProPlus con versione minima [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4). Per altre informazioni, vedere l'annuncio del team di Office nel post di blog: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018) (Distribuzione di Solo crittografia in Crittografia messaggi di Office 365).
+Questa opzione è disponibile per i tenant che usano Exchange Online e può essere selezionata in Outlook sul Web, come opzione di protezione dei diritti aggiuntiva per una regola del flusso di posta elettronica, come azione DLP di Office 365 e in Outlook (versione minima [1804](/officeupdates/monthly-channel-2018#outlook-feature-updates-4) per Office 365 ProPlus e versione minima 1805 quando sono disponibili [app di Office 365 che supportano Azure RMS](requirements-applications.md#windows-computers-for-information-rights-management-irm)). Per altre informazioni sull'opzione Solo crittografia, vedere l'annuncio seguente nel post di blog del team di Office: [Encrypt only rolling out in Office 365 Message Encryption](https://aka.ms/omefeb2018) (Distribuzione di Solo crittografia in Crittografia messaggi di Office 365).
 
 Quando questa opzione è selezionata, il messaggio di posta elettronica viene crittografato e i destinatari devono essere autenticati. Quindi, i destinatari hanno tutti i diritti di utilizzo, a eccezione di **Salva con nome, Esporta** e **Controllo completo**. Questa combinazione di diritti di utilizzo implica che i destinatari non hanno restrizioni, ad eccezione del fatto che non possono rimuovere la protezione. Un destinatario può ad esempio, copiare dal messaggio di posta elettronica, stamparlo e inoltrarlo. 
 

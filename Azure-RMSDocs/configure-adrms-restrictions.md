@@ -4,16 +4,16 @@ description: Panoramica della protezione HYOK (AD RMS) con Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
-ms.openlocfilehash: d1613d30dbb59395254ca5bd56222c15fcb75058
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 12f199f6bae08a2b57cbdae14b83175679446c1c
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393562"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067721"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Protezione HYOK (hold your own key) per Azure Information Protection
 
@@ -65,8 +65,8 @@ Nella tabella seguente sono riportati gli scenari supportati per la protezione d
 
 |Piattaforma|Applicazioni|Supportato|
 |----------------------|----------|-----------|
-|Windows|Client di Azure Information Protection con Office 2016 e Office 2013 <br /><br />- Word, Excel, PowerPoint|Protezione: Sì<br /><br />Consumo: Sì|
-|Windows|Client di Azure Information Protection con Office 2016 e Office 2013 <br /><br />- Outlook|Protezione: Sì<br /><br />Consumo: Sì|
+|Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Word, Excel, PowerPoint|Protezione: Sì<br /><br />Consumo: Sì|
+|Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Outlook|Protezione: Sì<br /><br />Consumo: Sì|
 |Windows|Client di Azure Information Protection|Protezione: Sì <br /><br />Consumo: Sì|
 |Windows|Visualizzatore di Azure Information Protection|Protezione: Non applicabile<br /><br />Consumo: Sì|
 |Windows|Client di Azure Information Protection con cmdlet per le etichette di PowerShell|Protezione: Sì<br /><br />Consumo: Sì|
@@ -148,7 +148,7 @@ Una distribuzione di AD RMS deve soddisfare i requisiti seguenti per garantire l
 
 - Se si condividono documenti o messaggi di posta elettronica protetti da HYOK con altri utenti all'esterno dell'organizzazione: AD RMS è configurato per i trust definiti in modo esplicito in una relazione punto a punto diretta con le altre organizzazioni usando domini utente affidabili o trust federativi creati con Active Directory Federation Services (AD FS).
 
-- Gli utenti hanno Office 2016 Professional Plus o Office 2013 Professional Plus con Service Pack 1, in esecuzione in Windows 7 Service Pack 1 o versioni successive. Si noti che Office 2010 e Office 2007 non sono supportati per questo scenario.
+- Gli utenti hanno una versione di Office che supporta Information Rights Management (IRM) e almeno Office 2013 Professional Plus con Service Pack 1, in esecuzione in Windows 7 Service Pack 1 o versioni successive. Si noti che Office 2010 e Office 2007 non sono supportati per questo scenario.
     
     - Per Office 2016, edizione basata su Microsoft Installer (MSI): è stato installato l'[aggiornamento 4018295 per Microsoft Office 2016 rilasciato il 6 marzo 2018](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295).
 

@@ -10,12 +10,12 @@ ms.service: information-protection
 ms.assetid: f5930ed3-a6cf-4eac-b2ec-fcf63aa4e809
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 68e479eb7f19f60d6d68b913eae46dd287b5a04f
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: ea82ec3aacb8abbd4b9f15d0150bf7ff535e57db
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305149"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067986"
 ---
 # <a name="byok-pricing-and-restrictions"></a>Prezzi e restrizioni della modalità BYOK
 
@@ -52,7 +52,7 @@ Per altre informazioni su Insieme di credenziali delle chiavi di Azure, vedere [
 
 ## <a name="restrictions-when-using-byok"></a>Restrizioni per l'uso di BYOK
 
-Il servizio BYOK e la registrazione dell'utilizzo possono essere usati facilmente con ogni applicazione che si integra con il servizio Azure Rights Management usato da Azure Information Protection, ad esempio servizi cloud come SharePoint Online, server locali che eseguono Exchange e SharePoint che usano il servizio Azure Rights Management tramite il connettore RMS e applicazioni client come Office 2016 e Office 2013. È possibile ottenere i log di utilizzo delle chiavi indipendentemente dall'applicazione che invia richieste al servizio Azure Rights Management.
+Il servizio BYOK e la registrazione dell'utilizzo possono essere usati facilmente con ogni applicazione che si integra con il servizio Azure Rights Management usato da Azure Information Protection, ad esempio servizi cloud come SharePoint Online, server locali che eseguono Exchange e SharePoint che usano il servizio Azure Rights Management tramite il connettore RMS e applicazioni client come Office 2019, Office 2016 e Office 2013. È possibile ottenere i log di utilizzo delle chiavi indipendentemente dall'applicazione che invia richieste al servizio Azure Rights Management.
 
 Se IRM di Exchange Online è stato precedentemente abilitato importando il dominio di pubblicazione trusted (TPD) da Azure RMS, seguire le istruzioni in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) (Impostare le nuove funzionalità di Office 365 Message Encryption basate su Azure Information Protection) per abilitare le nuove funzionalità di Exchange Online che supportano l'uso di BYOK per Azure Information Protection.
 

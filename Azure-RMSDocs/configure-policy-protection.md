@@ -4,16 +4,16 @@ description: È possibile proteggere i documenti e i messaggi di posta elettroni
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 10/31/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 075441ef848f3ebe5e106f5989a99981037711bd
-ms.sourcegitcommit: 8bda26b8b84cb8b66ae8f927906710d60c4b6a80
+ms.openlocfilehash: eafcbf02ea6585b8a1434e210c274648982c0894
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397845"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067296"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
@@ -105,7 +105,7 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
        Quando si scelgono tutti i membri o si passa alla directory, gli utenti o i gruppi devono avere un indirizzo di posta elettronica. In un ambiente di produzione, utenti e gruppi quasi mai hanno un indirizzo di posta elettronica, ma in un ambiente di test semplice può essere necessario aggiungere gli indirizzi di posta elettronica agli account utente o ai gruppi.
         
        ###### <a name="more-information-about-add-any-authenticated-users"></a>Altre informazioni su **Add any authenticated users** (Aggiungi qualsiasi utente autenticato) 
-       Questa impostazione non limita chi può accedere al contenuto protetto dall'etichetta, pur crittografando il contenuto e fornendo le opzioni per limitare come usare il contenuto (autorizzazioni) e come accedervi (scadenza e accesso offline). L'applicazione che apre il contenuto protetto deve tuttavia poter supportare l'autenticazione in uso. Per questo motivo, i provider di servizi di social networking federati, ad esempio Google, e l'autenticazione di passcode monouso devono essere usati solo per la posta elettronica e solo quando si usano Exchange Online e le nuove funzionalità di Office 365 Message Encryption. Gli account Microsoft possono essere usati con il visualizzatore Azure Information Protection e Office 2016 A portata di clic. 
+       Questa impostazione non limita chi può accedere al contenuto protetto dall'etichetta, pur crittografando il contenuto e fornendo le opzioni per limitare come usare il contenuto (autorizzazioni) e come accedervi (scadenza e accesso offline). L'applicazione che apre il contenuto protetto deve tuttavia poter supportare l'autenticazione in uso. Per questo motivo, i provider di servizi di social networking federati, ad esempio Google, e l'autenticazione di passcode monouso devono essere usati solo per la posta elettronica e solo quando si usano Exchange Online e le nuove funzionalità di Office 365 Message Encryption. Gli account Microsoft possono essere usati con il visualizzatore Azure Information Protection e le app di Office 365 (A portata di clic). 
           
        Alcuni scenari tipici per l'impostazione Aggiungi eventuali utenti autenticati:
        - Non è importante chi visualizza il contenuto, ma si vuole limitare il modo in cui viene usato. Ad esempio, non si vuole che il contenuto venga modificato, copiato o stampato.
@@ -242,7 +242,7 @@ Se si specificano gli utenti esterni che non hanno un account in Azure AD:
 
 - L'etichetta è appropriata per i messaggi di posta elettronica quando Exchange Online usa le [nuove funzionalità di Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). 
  
-- Per gli allegati di Office protetti automaticamente, questi documenti possono essere visualizzati in un browser. Per modificare questi documenti, scaricarli e modificarli con Office 2016 A portata di clic e un account Microsoft che usa lo stesso indirizzo di posta elettronica. [Altre informazioni](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
+- Per gli allegati di Office protetti automaticamente, questi documenti possono essere visualizzati in un browser. Per modificare questi documenti, scaricarli e modificarli con app di Office 365 (A portata di clic) e un account Microsoft che usa lo stesso indirizzo di posta elettronica. [Altre informazioni](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents)
 
 
 > [!NOTE]

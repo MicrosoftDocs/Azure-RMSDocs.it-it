@@ -4,18 +4,18 @@ description: Identificare i dispositivi che supportano il servizio Azure Rights 
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/25/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 93f8021d-43c5-47fe-ad63-8a1bacff9971
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 673e57a9a63dfb88ab9ef5f92a0f692ed31d7cdb
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 54a93e3a70e6add6ebd69d529074e337ef0a7a35
+ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53304945"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55146673"
 ---
 # <a name="client-devices-that-support-azure-rights-management-data-protection"></a>Dispositivi client che supportano la protezione dati di Azure Rights Management
 
@@ -39,13 +39,11 @@ I seguenti sistemi operativi per computer supportano il servizio Azure Rights Ma
 ## <a name="mobile-devices"></a>Dispositivi mobili
 I seguenti sistemi operativi per dispositivi mobili supportano il servizio Azure Rights Management:
 
--   **Windows Phone**: Windows Phone 8.1
-
 -   **Telefoni e tablet Android**: la versione minima di Android è 4.4
 
 -   **iPhone e iPad**: la versione minima di iOS è 8.0
 
--   **Tablet Windows**: Windows 10 Mobile e Windows 8.1 RT
+-   **Telefoni e tablet Windows**: Windows 10 Mobile
 
 
 ## <a name="next-steps"></a>Passaggi successivi

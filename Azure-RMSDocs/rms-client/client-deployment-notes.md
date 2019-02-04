@@ -4,18 +4,18 @@ description: Informazioni su installazione, sistemi operativi supportati, impost
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 36f8452525f614b4cca1bed15d4d63b5e4ae33f0
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: ff0b5dd04673b7b8f4e1d458d1f02e66eee908d9
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394229"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067772"
 ---
 # <a name="rms-client-deployment-notes"></a>Note sulla distribuzione del client RMS
 
@@ -180,7 +180,7 @@ Per eseguire l'individuazione del servizio, il client RMS esegue una serie di co
 >  
 > - Quando un utente esegue l'accesso da un'applicazione di Office, vengono utilizzati il nome utente e il dominio dell'autenticazione per identificare il tenant di Azure Information Protection da usare. In questo caso, le impostazioni del Registro di sistema non sono necessarie e il punto di connessione del servizio non viene controllato.
 > 
-> - Dopo aver configurato il [reindirizzamento DNS](../migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) per le app desktop A portata di clic di Office 2016, il client RMS individua il servizio Azure Rights Management quando gli viene negato l'accesso al cluster AD RMS trovato in precedenza. Questa azione di negazione attiva nel client la ricerca del record SRV, che reindirizza il client stesso al servizio Azure Rights Management per il tenant. Il record SRV, poi, consente a Exchange Online di decrittografare i messaggi di posta elettronica protetti dal cluster AD RMS. 
+> - Dopo aver configurato il [reindirizzamento DNS](../migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection) per le app desktop A portata di clic di Office, il client RMS individua il servizio Azure Rights Management quando gli viene negato l'accesso al cluster AD RMS trovato in precedenza. Questa azione di negazione attiva nel client la ricerca del record SRV, che reindirizza il client stesso al servizio Azure Rights Management per il tenant. Il record SRV, poi, consente a Exchange Online di decrittografare i messaggi di posta elettronica protetti dal cluster AD RMS. 
 
 ### <a name="ad-rms-only-enabling-server-side-service-discovery-by-using-active-directory"></a>Solo AD RMS: Abilitazione dell'individuazione del servizio sul lato server usando Active Directory
 Se l'account ha privilegi sufficienti (Enterprise Admins e amministratore locale per il server AD RMS), è possibile registrare automaticamente un punto di connessione del servizio durante l'installazione del server del cluster radice di AD RMS. Se nella foresta esiste già un punto di connessione del servizio, è necessario prima eliminare il punto di connessione del servizio esistente prima di poterne registrare uno nuovo.

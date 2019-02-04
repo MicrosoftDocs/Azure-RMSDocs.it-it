@@ -4,18 +4,18 @@ description: Flusso di lavoro end-to-end per collaborare a documenti protetti da
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/12/2018
+ms.date: 01/24/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a5a1c0069a35073d9362e28ef18ad4c09d95df3d
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: cc62934195916f5db26e7a328957c7fb09f10a57
+ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54393947"
+ms.lasthandoff: 01/25/2019
+ms.locfileid: "55067592"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configurazione della collaborazione per i documenti protetti con Azure Information Protection
 
@@ -31,7 +31,7 @@ Quando si configurano queste autorizzazioni, è possibile specificare gli utenti
 
 - **Per gli utenti che non hanno un account Azure Active Directory**: specificare un indirizzo e-mail che verrà usato con un account Microsoft. Questo account può esistere già oppure gli utenti possono crearlo quando aprono il documento protetto. 
     
-    Per aprire documenti con un account Microsoft, gli utenti devono usare Office 2016 a portata di clic. Le altre edizioni e versioni di Office non supportano ancora l'apertura di documenti protetti di Office con un account Microsoft.
+    Per aprire documenti con un account Microsoft, gli utenti devono usare app di Office 365 (A portata di clic). Le altre edizioni e versioni di Office non supportano ancora l'apertura di documenti protetti di Office con un account Microsoft.
 
 - **Per gli utenti autenticati**: questa opzione è adatta quando non è necessario controllare chi accede al documento protetto, purché l'utente possa essere autenticato. L'autenticazione può essere eseguita da Azure AD, usando un account Microsoft, o anche da un provider di servizi di social networking federato o una passcode monouso quando il contenuto viene protetto dalle nuove funzionalità di Office 365 Message Encryption. 
 
@@ -140,7 +140,7 @@ Anche gli scenari seguenti supportano la visualizzazione di documenti:
 Supporta account utente, gruppi abilitati per la posta elettronica e tutti i membri. Gli account utente e i gruppi abilitati per la posta elettronica possono includere account guest. Da tutti i membri sono esclusi gli account guest.
 
 ###### <a name="footnote-2"></a>Nota 2
-Attualmente supportato solo da Office 2016 a portata di clic.
+Attualmente supportato solo da app di Office 365 (A portata di clic).
 
 
 

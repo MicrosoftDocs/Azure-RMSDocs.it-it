@@ -4,17 +4,17 @@ description: Configurare un'etichetta che protegge un messaggio di posta elettro
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 11/14/2018
+ms.date: 01/29/2019
 ms.topic: quickstart
 ms.service: information-protection
-ms.openlocfilehash: 217fbdc45967b5677f554410bca2ac1da58552d2
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 6b892b1c845ea7d2e8670f054e0166eb160f3294
+ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53023499"
+ms.lasthandoff: 01/29/2019
+ms.locfileid: "55231005"
 ---
-# <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Guida introduttiva: Configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate
+# <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Guida introduttiva: configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate
 
 In questa guida introduttiva si configurerà un'etichetta esistente per l'applicazione automatica dell'impostazione di protezione Non inoltrare.
 
@@ -38,21 +38,23 @@ Per completare questa guida introduttiva, è necessario:
 
 2. Aver aggiunto il pannello di Azure Information Protection nel portale di Azure e aver verificato che il servizio di protezione è attivato.
 
-    Se serve assistenza per queste operazioni, vedere [Guida introduttiva: Attività iniziali nel portale di Azure](quickstart-viewpolicy.md).
+    Se occorre assistenza per queste azioni, vedere [Avvio rapido: Attività iniziali nel portale di Azure](quickstart-viewpolicy.md).
 
 3. Un'etichetta esistente di Azure Information Protection da configurare. 
     
-    È possibile usare una delle etichette predefinite o un'etichetta creata. Se serve assistenza per la creazione di una nuova etichetta, vedere [Guida introduttiva: Creare una nuova etichetta di Azure Information Protection per utenti specifici](quickstart-label-specificusers.md).
+    È possibile usare una delle etichette predefinite o un'etichetta creata. Se occorre assistenza per la creazione di una nuova etichetta, vedere [Avvio rapido: Creare una nuova etichetta di Azure Information Protection per utenti specifici](quickstart-label-specificusers.md).
 
 4. Per testare la nuova etichetta: il client Azure Information Protection deve essere installato nei computer degli utenti. 
     
     Per provare l'etichetta, è possibile installare il client accedendo all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricare **AzInfoProtection.exe** dalla pagina di Azure Information Protection.
 
-5. Per testare la nuova etichetta: disporre di un computer con Windows (versione minima Windows 7 con Service Pack 1), in cui è stato eseguito l'accesso alle app di Office da una delle categorie seguenti:
+5. Per testare la nuova etichetta: Disporre di un computer con Windows (versione minima Windows 7 con Service Pack 1), in cui è stato eseguito l'accesso alle app di Office da una delle categorie seguenti:
     
-    - Office 365 con le app di Office 2016 (versione minima 1805, build 9330.2078). Per l'uso di questa opzione, all'account deve essere assegnata una licenza per Azure Rights Management. Questa licenza è inclusa nell'abbonamento ad Azure Information Protection.
+    - App di Office con versione minima 1805, build 9330.2078 da Office 365 Business o Microsoft 365 Business quando all'utente viene assegnata una licenza per Azure Rights Management (nota anche come Azure Information Protection per Office 365).
     
-    - Office 365 ProPlus con le app di Office 2016 o 2013 (installazione basata su A portata di clic o Windows Installer).
+    - Office 365 ProPlus.
+    
+    - Office Professional Plus 2019.
     
     - Office Professional Plus 2016.
     
@@ -80,9 +82,9 @@ Per un elenco completo dei prerequisiti per l'uso di Azure Information Protectio
     
 5. Selezionare **Configura le autorizzazioni definite dall'utente (anteprima)**.
 
-6. Verificare che sia selezionata l'opzione **In Outlook applica Non inoltrare**.
+6. Assicurarsi che sia selezionata l'opzione seguente: **In Outlook applica Non inoltrare**.
 
-7. Se è selezionata, deselezionare l'opzione **In Word, Excel, PowerPoint e File Explorer richiedi all'utente le autorizzazioni personalizzate**.
+7. Se selezionata, deselezionare l'opzione seguente: **In Word, Excel, PowerPoint e File Explorer richiedi all'utente le autorizzazioni personalizzate**.
 
 8. Fare clic su **OK** nel pannello **Protezione** e quindi fare clic su **Salva** nel pannello **Etichetta**.
 
@@ -106,7 +108,7 @@ Il risultato è che i destinatari non possono inoltrare il messaggio di posta el
 
 Se non si vuole mantenere questa configurazione e si preferisce ripristinare l'etichetta alla configurazione precedente, in modo che non venga applicata la protezione, seguire la procedura seguente:
 
-1. Dall'opzione di menu **Classificazioni** > **Etichette**: nel pannello **Azure Information Protection - Etichette** selezionare l'etichetta da configurare. 
+1. Dall'opzione di menu **Classificazioni** > **Etichette**: nel pannello **Azure Information Protection - Etichette** selezionare l'etichetta configurata. 
 
 3. Nel pannello **Etichetta** individuare la sezione **Configurare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta**, selezionare **Non configurato** e quindi **Salva**.
 
