@@ -4,32 +4,33 @@ description: Questo articolo aiuterà a comprendere come usare Python per acquis
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
-ms.date: 09/27/2018
+ms.date: 02/04/2019
 ms.author: bryanla
-ms.openlocfilehash: 4d6db3d2bd2e2b980770027e07104f7528264e66
-ms.sourcegitcommit: fa0be701b85b1fba5e75428714bb4525dd739a93
+ms.openlocfilehash: 423ae80df11dcf8031f845fdabf881606daf89c7
+ms.sourcegitcommit: fa7551060aaecc62d0c1f9179dd07f035d86651f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51223884"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55742168"
 ---
 # <a name="acquire-an-access-token-python"></a>Acquisire un token di accesso (Python)
 
-Questo esempio dimostra come chiamare uno script Python esterno per ottenere un token OAuth2. Questa operazione è necessaria per l'implementazione del delegato di autenticazione.
-
-Questo codice non è destinato all'uso in produzione, ma può essere usato per lo sviluppo e per comprendere i concetti relativi all'autenticazione. Questo esempio è multipiattaforma.
+Questo esempio dimostra come chiamare uno script Python esterno per ottenere un token OAuth2. È necessario un token di accesso OAuth2 valido dall'implementazione del delegato dell'autenticazione.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Per eseguire l'esempio seguente, è necessario completare queste operazioni:
+Per eseguire l'esempio seguente:
 
 - Installare Python 2.7.
 - Implementare utils.h/cpp nel progetto. 
-- auth.py deve essere aggiunto al progetto ed essere disponibile nella stessa directory dei file binari in fase di compilazione.
+- Auth.py devono essere aggiunti al progetto e presenti nella stessa directory i file binari in fase di compilazione.
+- Completa [programma di installazione (MIP) SDK e la configurazione](setup-configure-mip.md). Tra le altre attività, è possibile registrare l'applicazione client nel tenant di Azure Active Directory (Azure AD). Azure AD fornirà un ID applicazione, noto anche come ID client che viene usato nella logica dell'acquisizione dei token.
+
+Questo codice non è destinato all'uso di produzione. Può essere usata solo per lo sviluppo e informazioni sui concetti di autenticazione. Questo esempio è multipiattaforma.
 
 ## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
 
-Nel semplice esempio di autenticazione è stata illustrata una semplice funzione `AcquireToken()` che non accetta parametri e restituisce un valore di token hardcoded. In questo esempio, si eseguirà l'overload di AcquireToken() per accettare i parametri di autenticazione e chiamare uno script Python esterno per restituire il token.
+Nell'esempio l'autenticazione semplice, è stato illustrato un semplice `AcquireToken()` funzione che ha avuto alcun parametro e ha restituito un valore di token a livello di codice. In questo esempio, si eseguirà l'overload di AcquireToken() per accettare i parametri di autenticazione e chiamare uno script Python esterno per restituire il token.
 
 ### <a name="authh"></a>auth.h
 
@@ -46,7 +47,7 @@ namespace sample {
     std::string AcquireToken(
         const std::string& userName, //A string value containing the user's UPN.
         const std::string& password, //The user's password in plaintext
-        const std::string& clientId, //The AAD client ID of your application.
+        const std::string& clientId, //The Azure AD client ID (also known as Application ID) of your application.
         const std::string& resource, //The resource URL for which an OAuth2 token is required. Provided by challenge object.
         const std::string& authority); //The authentication authority endpoint. Provided by challenge object.
     }
@@ -104,7 +105,8 @@ namespace sample {
     cmd += " -r ";
     cmd += resource;
     cmd += " -c ";
-    cmd += (!clientId.empty() ? clientId : "0edbblll-8773-44de-b87c-b8c6276d41eb");
+    // Replace <application-id> with the Application ID provided during your Azure AD application registration.
+    cmd += (!clientId.empty() ? clientId : "<application-id>");
 
     string result = sample::Execute(cmd.c_str());
     if (result.empty())
