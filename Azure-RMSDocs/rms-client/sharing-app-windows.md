@@ -1,43 +1,23 @@
 ---
 title: Applicazione Rights Management sharing per Windows - AIP
-description: Risorse informative per l'applicazione Rights Management sharing per Windows. Questa è un'applicazione gratuita e scaricabile per organizzazioni che usano Active Directory Rights Management Services (AD RMS) o Azure Information Protection e per organizzazioni che non possiedono la propria infrastruttura di protezione delle informazioni ma vogliono utilizzare il contenuto protetto da altre organizzazioni che usano Azure Information Protection.
+description: L'applicazione di condivisione Rights Management (app RMS sharing) per Windows non è più supportata.
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 07/27/2017
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7d8a8abe-6de1-4088-90ee-e0c4bd6deec8
-ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 60c07cd317fbdcacba7aa22d0ebf089a519ba87c
-ms.sourcegitcommit: b2414cc00d50ccefe10f8c3719eb3f6c1e78fc65
+ms.openlocfilehash: d2e68faf4c733b9e85b9471f5400ddb2c907a55d
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53246157"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559428"
 ---
 # <a name="rights-management-sharing-application-for-windows"></a>Applicazione Rights Management sharing per Windows
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-> [!IMPORTANT]
-> **Notifica di file del supporto**: l'applicazione di condivisione Rights Management per Windows verrà sostituita dal [client Azure Information Protection](aip-client.md). Il supporto per questa applicazione precedente terminerà il 31 gennaio 2019. 
-
-
-L'applicazione di condivisione Rights Management per Windows (nota anche come RMS sharing) è un'applicazione gratuita scaricabile per le organizzazioni che usano [Active Directory Rights Management Services](https://technet.microsoft.com/library/cc772403.aspx) (AD RMS) o [Azure Information Protection](../what-is-information-protection.md). Questa applicazione è destinata anche alle organizzazioni prive di un'infrastruttura di protezione propria, ma che vogliono usare contenuto protetto da altre organizzazioni che usano il servizio Azure Rights Management di Azure Information Protection.
-
--   [Applicazione di condivisione Rights Management: cronologia delle versioni](sharing-app-version-release-history.md)
-
--   [Guida dell'amministratore dell'applicazione di condivisione Rights Management](sharing-app-admin-guide.md)
-
--   [Guida dell'utente dell'applicazione di condivisione Rights Management](sharing-app-user-guide.md)
-
-> [!TIP]
-> È disponibile anche un'app Azure Information Protection per iOS e Android. Per altre informazioni, vedere [Domande frequenti sull'app Azure Information Protection per iOS e Android](mobile-app-faq.md ).
-> 
-> Per computer Mac e dispositivi Windows Phone: [Domande frequenti sull'applicazione Rights Management sharing per piattaforme mobili e Mac](https://technet.microsoft.com/dn451248).
-
-## <a name="see-also"></a>Vedere anche
-[Domande frequenti sull'applicazione Rights Management sharing per Windows](https://technet.microsoft.com/dn467883)
-
+**Notifica di file del supporto**: l'applicazione di condivisione Rights Management per Windows è ora sostituita dal [client Azure Information Protection](aip-client.md). Il supporto per questa applicazione precedente è terminato il 31 gennaio 2019.

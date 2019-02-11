@@ -4,18 +4,18 @@ description: Informazioni per fornire istruzioni a utenti, amministratori e adde
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b023eaa514fc22dcb3d595495c724d7d19e58c08
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: f71a539185f60695950c4b2989eb68650f58755b
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067670"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559938"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Consentire agli utenti di proteggere i file mediante il servizio Azure Rights Management
 
@@ -66,7 +66,7 @@ Nelle sezioni seguenti sono disponibili informazioni specifiche delle applicazio
 
 ## <a name="using-information-protection-with-the-azure-information-protection-client"></a>Protezione delle informazioni con il client Azure Information Protection
 
-Se gli utenti usano Office 2010, il client Azure Information Protection, o l'applicazione RMS sharing in uso in precedenza, deve proteggere e utilizzare documenti e messaggi di posta elettronica protetti. Tuttavia, il client Azure Information Protection è consigliabile anche per tutti i computer e dispositivi mobili che supportano questo servizio.
+Se gli utenti usano Office 2010, il client Azure Information Protection è necessario per proteggere e utilizzare documenti e messaggi di posta elettronica protetti. Tuttavia, il client Azure Information Protection è consigliabile anche per tutti i computer e dispositivi mobili che supportano questo servizio.
 
 Oltre a rendere più semplice per gli utenti la protezione di documenti e messaggi di posta elettronica, il client Azure Information Protection consente di tenere traccia dei documenti protetti. I documenti rilevati possono anche essere revocati se gli utenti autorizzati in precedenza non devono più avere accesso agli stessi.
 

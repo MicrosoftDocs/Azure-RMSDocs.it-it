@@ -4,18 +4,18 @@ description: Identificare i prerequisiti per distribuire Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2019
+ms.date: 02/07/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 68b1cb057af1cc5de271c6e896e5cff4bb922cd2
-ms.sourcegitcommit: b1e08bc29d50187532f00dc215ab331e0a7dbebe
+ms.openlocfilehash: b410b85b1fa877aef542d52cc14b44cf65370c3f
+ms.sourcegitcommit: 308e6da8de1a3456a0ba807c5388b8891b861d5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55146707"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55854171"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisiti per Azure Information Protection
 
@@ -31,16 +31,18 @@ Prima di distribuire Azure Information Protection per l'organizzazione, verifica
 
 Per assicurarsi che la sottoscrizione dell'organizzazione includa le funzionalità di Azure Information Protection da usare, esaminare l'elenco delle funzionalità nella pagina [Prezzi di Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection).
 
+Per domande sulle licenze, leggere le [domande frequenti](https://azure.microsoft.com/pricing/details/information-protection#faq) sulle licenze.
+
 > [!TIP]
 > Per verificare se il piano disponibile di Office 365 o la versione autonoma di Exchange Online supporta le [nuove funzionalità di Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801) per inviare messaggi di posta elettronica protetti a indirizzi di posta elettronica personali, ad esempio, Gmail, Yahoo e Microsoft, vedere le risorse seguenti:
 >
-> [Descrizione del servizio Exchange Online](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
+> - [Descrizione del servizio Exchange Online](https://technet.microsoft.com/library/exchange-online-service-description.aspx)
 >
-> [Office 365 Education](https://technet.microsoft.com/library/mt844095.aspx)
+> - [Office 365 Education](https://technet.microsoft.com/library/mt844095.aspx)
 >
-> [Office 365 US Government](https://technet.microsoft.com/library/mt774581.aspx)
+> - [Office 365 US Government](https://technet.microsoft.com/library/mt774581.aspx)
 
-Se si hanno domande sulle sottoscrizioni o sulle licenze evitare di pubblicarle su questa pagina e contattare l'Account Manager designato da Microsoft o il [supporto tecnico Microsoft](information-support.md#to-contact-microsoft-support).
+Non pubblicare eventuali domande sulle sottoscrizioni o sulle licenze in questa pagina. Cercare invece le risposte nelle [domande frequenti](https://azure.microsoft.com/pricing/details/information-protection#faq) per le licenze. Per domande senza risposta, contattare l'Account Manager designato da Microsoft o il [supporto tecnico Microsoft](information-support.md#to-contact-microsoft-support).
 
 ## <a name="azure-active-directory"></a>Azure Active Directory
 

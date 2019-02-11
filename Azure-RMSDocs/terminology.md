@@ -4,18 +4,18 @@ description: In caso di dubbio su una parola, un'espressione o un acronimo corre
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9d9aad27d0c76552dbf7234bf5849eeb72058cae
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: 388abeb75a5b80a575990923f37f2bb19a9e5e7f
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067952"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559700"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologia di Azure Information Protection
 
@@ -58,7 +58,7 @@ Client Azure Information Protection|Lato client di Azure Information Protection 
 |IRM|Vedere *Information Rights Management*.|
 |Crittografia messaggi di Office|Spesso abbreviato in *OME*.<br /><br />Le nuove funzionalità di crittografia messaggi di Office 365 sono integrate a livello nativo con il servizio Azure Rights Management e offrono gli stessi livelli di protezione della posta elettronica per utenti interni ed esterni, aggiornamento automatico dei modelli e supporto dello scenario BYOK (Bring Your Own Key). L'implementazione della crittografia messaggi di Office precedente supportava solo i destinatari esterni, richiedeva una regola per il flusso della posta elettronica e non supportava BYOK.|
 |MSDRM|Termine usato talvolta in riferimento al client RMS 1.0, sostituito dal client più recente, MSIPC. Questo client meno recente supporta applicazioni sviluppate con RMS SDK 1.0 e supporta Office 2010 e 2007, Exchange 2010 e 2013 nonché SharePoint 2007 e 2010.|
-|MSIPC|A volte usato in riferimento al client RMS 2.0, che ha sostituito il meno recente client RMS, MSDRM. Questo client più recente supporta le applicazioni sviluppate con RMS SDK 2.0 e supporta Office 365 ProPlus, Office 2019, Office 2016, Office 2013, SharePoint 2013, l'applicazione RMS sharing e il client Azure Information Protection.|
+|MSIPC|A volte usato in riferimento al client RMS 2.0, che ha sostituito il meno recente client RMS, MSDRM. Questo client più recente supporta le applicazioni sviluppate con RMS SDK 2.0 e supporta Office 365 ProPlus, Office 2019, Office 2016, Office 2013, SharePoint 2013 e il client Azure Information Protection.|
 |protezione nativa|Livello di protezione disponibile in tutte le applicazioni abilitate per RMS che impedisce l'apertura di file da parte di utenti non autorizzati e permette anche di implementare criteri più severi, ad esempio consentire la sola lettura di file e vietarne la stampa. Questo tipo di protezione è inoltre associato al file anche quando quest'ultimo viene inoltrato ad altri utenti o salvato in posizioni pubbliche accessibili da altri utenti.|
 |pfile|Estensione di file aggiunta a tutti i file protetti genericamente dal servizio Rights Management.|
 |livello di autorizzazioni|Un raggruppamento logico di diritti di utilizzo che rendono più facile per gli utenti finali e gli amministratori scegliere le opzioni di configurazione basate sul ruolo. Ad esempio, Revisore e Coautore.|
@@ -69,7 +69,7 @@ Client Azure Information Protection|Lato client di Azure Information Protection 
 |Autorità di certificazione di Rights Management|Account che ha protetto un documento o un messaggio di posta elettronica.|
 |Proprietario di Rights Management|Account che mantiene il controllo completo di un documento o di un messaggio di posta elettronica protetto. A questo account è automaticamente concesso il diritto di utilizzo Controllo completo di Rights Management, senza alcuna data di scadenza o impostazione modalità offline.|
 |servizi Rights Management|Termine generico che si applica sia alla versione cloud (Azure Rights Management) che alla versione locale (AD RMS) di Rights Management.|
-|Applicazione Rights Management sharing|Applicazione facoltativa per Windows e per i dispositivi mobili, che supporta la condivisione sicura di file sul posto e tramite posta elettronica, ora sostituita dal client Azure Information Protection.|
+|Applicazione Rights Management sharing|Ora sostituita dal client Azure Information Protection.|
 |RMS|Vedere *Servizi Rights Management*.|
 |connettore RMS|Vedere *Connettore Rights Management*.|
 |RMS per utenti singoli|Sottoscrizione gratuita per l'uso di Rights Management se l'organizzazione non ha una sottoscrizione di Office 365 o Azure Active Directory.|

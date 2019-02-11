@@ -4,18 +4,18 @@ description: Istruzioni per installare, configurare ed eseguire lo scanner di Az
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2019
+ms.date: 02/05/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: dbf265b63b306aa4ca76e963f0c55b9f97f6cebb
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: 970cdfe90d94ec225926a3ac6693b684653a05c4
+ms.sourcegitcommit: 1cd3a3bc19cd973f81a62419c946bfaf2796dfb2
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314986"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760838"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -63,6 +63,7 @@ Prima di installare lo scanner di Azure Information Protection, verificare che i
 |Account del servizio per eseguire il servizio scanner|Oltre a eseguire il servizio scanner, questo account esegue l'autenticazione in Azure AD e scarica i criteri di Azure Information Protection. Questo account deve essere un account Active Directory ed essere sincronizzato con Azure AD. Se non è possibile sincronizzare questo account a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).<br /><br />I requisiti di questo account del servizio sono i seguenti:<br /><br />- Diritto di **accesso locale**. Questo diritto è richiesto per l'installazione e la configurazione dello scanner, ma non per il funzionamento. È necessario concedere questo diritto all'account del servizio, ma è possibile rimuoverlo dopo avere verificato che lo scanner è in grado di individuare, classificare e proteggere i file. Se non è possibile concedere questo diritto neppure per un breve periodo a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).<br /><br />- Diritto di **accesso come servizio**. Questo diritto viene concesso automaticamente all'account del servizio durante l'installazione dello scanner ed è richiesto per l'installazione, la configurazione e il funzionamento dello scanner. <br /><br />- Autorizzazioni per i repository di dati: è necessario concedere le autorizzazioni per la **lettura** e la **scrittura** per analizzare i file e quindi applicare la classificazione e la protezione ai file che soddisfano le condizioni indicate nei criteri di Azure Information Protection. Per eseguire lo scanner solo in modalità di individuazione, è sufficiente l'autorizzazione per la **lettura**.<br /><br />- Per le etichette che riproteggono o rimuovono la protezione: per garantire che lo scanner abbia sempre accesso ai file protetti, trasformare l'account in un [utente con privilegi avanzati](configure-super-users.md) per il servizio Azure Rights Management e verificare che sia abilitata la funzionalità per utenti con privilegi avanzati. Per altre informazioni sui requisiti dell'account per l'applicazione della protezione, vedere [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md). Se inoltre sono stati implementati i [controlli di onboarding](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) per una distribuzione a fasi, verificare che questo account sia incluso nei controlli di onboarding configurati.|
 |Il client di Azure Information Protection è installato nel computer Windows Server|È necessario installare il client completo per lo scanner. Non installare solo il modulo PowerShell del client.<br /><br />Per istruzioni sull'installazione del client, vedere la [guida per l'amministratore](./rms-client/client-admin-guide.md). Se lo scanner è stato installato in precedenza e ora è necessario aggiornarlo a una versione più recente, vedere [Aggiornamento dello scanner di Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
 |Etichette configurate che applicano la classificazione automatica e, facoltativamente, la protezione|Per altre informazioni su come configurare un'etichetta per le condizioni e applicare la protezione:<br /> - [Come configurare le condizioni per la classificazione automatica e consigliata](configure-policy-classification.md)<br /> - [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md) <br /><br />Suggerimento: è possibile usare le istruzioni in questa [esercitazione](infoprotect-quick-start-tutorial.md) per testare lo scanner con un'etichetta che esegue la ricerca di numeri di carta di credito in un documento di Word preparato. Tuttavia, sarà necessario modificare la configurazione dell'etichetta in modo che l'opzione **Specificare se l'etichetta viene applicata automaticamente o se viene consigliata all'utente** sia impostata su **Automatico** anziché su **Consigliato**. Rimuovere quindi l'etichetta dal documento (se applicata) e copiare il file in un repository di dati per lo scanner. Per eseguire test velocemente, è possibile copiare il file in una cartella locale nel computer dello scanner.<br /><br /> nonostante sia possibile eseguire lo scanner anche se non sono state configurate etichette che applicano la classificazione automatica, questo scenario non è illustrato in queste istruzioni. [Altre informazioni](#using-the-scanner-with-alternative-configurations)|
+|Per i siti e le raccolte di SharePoint da analizzare:<br /><br />- SharePoint 2016<br /><br />- SharePoint 2012<br /><br />- SharePoint 2010|Altre versioni di SharePoint non sono supportate per lo scanner.<br /><br />Per le farm SharePoint di grandi dimensioni, controllare se è necessario aumentare la soglia della visualizzazione elenco (per impostazione predefinita, 5.000) per lo scanner al fine di accedere a tutti i file. Per altre informazioni, vedere la documentazione di SharePoint seguente: [Gestire elenchi e raccolte di grandi dimensioni in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server)|
 |Per i documenti di Office da analizzare:<br /><br />- Formati di file 97-2003 e formati Office Open XML per Word, Excel e PowerPoint|Per altre informazioni sui tipi di file supportati dallo scanner per questi formati di file, vedere [Tipi di file supportati dal client Azure Information Protection](./rms-client/client-admin-guide-file-types.md)|
 |Per i percorsi lunghi:<br /><br />- Massimo 260 caratteri, salvo se lo scanner è installato in Windows 2016 e il computer è configurato per il supporto dei percorsi lunghi|Windows 10 e Windows Server 2016 supportano i percorsi di lunghezza superiore a 260 caratteri mediante l'[impostazione di Criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) seguente: **Criteri Computer locale** > **Configurazione computer** > **Modelli amministrativi** > **Tutte le impostazioni** > **NTFS** > **Abilita percorsi lunghi Win32**<br /><br /> Per altre informazioni sul supporto dei percorsi di file lunghi, vedere la sezione [Maximum Path Length Limitation](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) (Limite massimo lunghezza del percorso) nella documentazione per sviluppatori di Windows 10.
 
@@ -194,7 +195,7 @@ Con la configurazione predefinita dello scanner ora è possibile eseguire la pri
 
 ## <a name="run-a-discovery-cycle-and-view-reports-for-the-scanner"></a>Eseguire un ciclo di individuazione e visualizzare i report per lo scanner
 
-1. Nella sessione di PowerShell, riavviare il servizio **Azure Information Protection Scanner** eseguendo il comando seguente:
+1. Nella sessione di PowerShell avviare lo scanner eseguendo il comando seguente:
     
         Start-AIPScan
     
@@ -285,11 +286,15 @@ Tuttavia lo scanner non è in grado di contrassegnare i file nelle circostanze s
 Ad esempio, dopo il controllo di file con estensione txt, lo scanner non può applicare un'etichetta configurata per la classificazione ma non per la protezione, perché il tipo di file con estensione txt non supporta la sola classificazione. Se l'etichetta è configurata per la classificazione e la protezione dati e il Registro di sistema viene modificato per il tipo di file con estensione txt, lo scanner può applicare un'etichetta al file. 
 
 > [!TIP]
-> Se durante questo processo lo scanner si blocca e non completa l'analisi di un numero elevato di file in un repository, potrebbe essere necessario aumentare il numero di porte dinamiche per il sistema operativo che ospita i file. Uno dei motivi per cui lo scanner supera il numero di connessioni di rete consentite e pertanto si arresta può essere la protezione avanzata dei server per SharePoint.
+> Durante questo processo, se lo scanner si arresta e non completa l'analisi di un numero elevato di file in un repository:
 > 
-> Per verificare se questa è la causa dell'arresto dello scanner, verificare se il messaggio di errore seguente viene registrato per lo scanner in %*localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog (compresso come file zip se sono presenti più log): **Non è possibile connettersi al server remoto ---> System.Net.Sockets.SocketException: Di norma è consentito un solo uso di ogni indirizzo di socket (protocollo/indirizzo di rete/porta) IP:porta**
->
-> Per altre informazioni su come visualizzare l'intervallo di porte corrente e aumentarlo, vedere [Impostazioni che possono essere modificate per migliorare le prestazioni di rete](https://docs.microsoft.com/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
+> - Potrebbe essere necessario aumentare il numero di porte dinamiche per il sistema operativo che ospita i file. Uno dei motivi per cui lo scanner supera il numero di connessioni di rete consentite e pertanto si arresta può essere la protezione avanzata dei server per SharePoint.
+>     
+>     Per verificare se questa è la causa dell'arresto dello scanner, verificare se il messaggio di errore seguente viene registrato per lo scanner in %*localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog (compresso come file zip se sono presenti più log): **Non è possibile connettersi al server remoto ---> System.Net.Sockets.SocketException: Di norma è consentito un solo uso di ogni indirizzo di socket (protocollo/indirizzo di rete/porta) IP:porta**
+>    
+>     Per altre informazioni su come visualizzare l'intervallo di porte corrente e aumentarlo, vedere [Impostazioni che possono essere modificate per migliorare le prestazioni di rete](https://docs.microsoft.com/biztalk/technical-guides/settings-that-can-be-modified-to-improve-network-performance).
+> 
+> - Per le farm SharePoint di grandi dimensioni, potrebbe essere necessario aumentare la soglia della visualizzazione elenco (per impostazione predefinita, 5.000). Per altre informazioni, vedere la documentazione di SharePoint seguente: [Gestire elenchi e raccolte di grandi dimensioni in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server).
 
 ### <a name="3-label-files-that-cant-be-inspected"></a>3. Assegnare etichette ai file che non possono essere controllati
 Per i tipi di file che non possono essere controllati, lo scanner applica l'etichetta predefinita nei criteri di Azure Information Protection oppure l'etichetta predefinita configurata per lo scanner.

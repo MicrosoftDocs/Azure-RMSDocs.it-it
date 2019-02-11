@@ -4,18 +4,18 @@ description: Istruzioni e informazioni per amministratori per configurare e usar
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2018
+ms.date: 02/01/2018
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 108a77f6c78b49bfcd852ff94ef529d3a667a193
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: 32e61bafe3157c33b3ed9db6d540085df07a9f15
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314735"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55560006"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guida dell'amministratore: Configurazione e uso del rilevamento dei documenti per Azure Information Protection
 
@@ -74,20 +74,20 @@ Questi URL sono standard per il servizio Azure Rights Management, ad eccezione d
 
 ## <a name="tracking-and-revoking-documents-for-users"></a>Rilevamento e revoca dei documenti per gli utenti
 
-Quando gli utenti accedono al sito di rilevamento dei documenti, possono rilevare e revocare i documenti protetti tramite il client Azure Information Protection o condivisi tramite l'applicazione di condivisione Rights Management. Quando si accede come amministratore di globale di Azure AD per il tenant, è possibile fare clic sull'icona di amministrazione per passare alla modalità amministratore. Gli altri ruoli di amministratore non supportano questa modalità per il sito di rilevamento dei documenti. 
+Quando gli utenti accedono al sito di rilevamento dei documenti, possono rilevare e revocare i documenti protetti tramite il client Azure Information Protection. Quando si accede come amministratore di globale di Azure AD per il tenant, è possibile fare clic sull'icona di amministrazione per passare alla modalità amministratore. Gli altri ruoli di amministratore non supportano questa modalità per il sito di rilevamento dei documenti. 
 
 ![Icona di amministrazione nel sito di rilevamento dei documenti](../media/tracking-site-admin-icon.png)
 
-La modalità amministratore consente di visualizzare i documenti che gli utenti dell'organizzazione hanno selezionato per tenerne traccia con il client Azure Information Protection o per condividerli con l'applicazione di condivisione Rights Management.
+La modalità amministratore consente di visualizzare i documenti che gli utenti dell'organizzazione hanno selezionato per tenerne traccia con il client Azure Information Protection.
 
 > [!NOTE] 
 > Se si è un amministratore globale e l'icona non è visibile, significa che non sono stati ancora condivisi documenti. In questo caso, usare l'URL seguente per accedere al sito di rilevamento dei documenti: https://portal.azurerms.com/#/admin
 
 Le azioni intraprese in modalità amministratore vengono controllate e registrate nei file di log dei dati di utilizzo e, per continuare, è necessario confermare. Per altre informazioni su questa registrazione, vedere la sezione seguente.
 
-Quando si è in modalità amministratore, è quindi possibile eseguire la ricerca in base all'utente o al documento. Se si esegue la ricerca per utente, è possibile visualizzare tutti i documenti che l'utente specificato ha selezionato per tenerne traccia con il client Azure Information Protection o per condividerli con l'applicazione di condivisione Rights Management. 
+Quando si è in modalità amministratore, è quindi possibile eseguire la ricerca in base all'utente o al documento. Se si esegue la ricerca per utente, vengono visualizzati tutti i documenti che l'utente specificato ha selezionato per tenerne traccia con il client Azure Information Protection. 
 
-Se si esegue la ricerca per documento è possibile visualizzare tutti gli utenti dell'organizzazione che hanno tenuto traccia del documento con il client Azure Information Protection o che l'hanno condiviso con l'applicazione di condivisione Rights Management. È quindi possibile analizzare i risultati della ricerca per rilevare i documenti che gli utenti hanno protetto e revocarli se necessario. 
+Se si esegue la ricerca per documento, vengono visualizzati tutti gli utenti dell'organizzazione che hanno tenuto traccia del documento con il client Azure Information Protection. È quindi possibile analizzare i risultati della ricerca per rilevare i documenti che gli utenti hanno protetto e revocarli se necessario. 
 
 Per uscire dalla modalità amministratore, fare clic su **X** accanto a **Esci dalla modalità amministratore**:
 
@@ -99,7 +99,7 @@ Per istruzioni su come usare il sito di rilevamento dei documenti, vedere [Tener
 
 Questa opzione è disponibile solo per la versione di anteprima corrente del client Azure Information Protection.
 
-Per poter rilevare e revocare un documento, è prima necessario registrarlo nel sito di rilevamento dei documenti. Questa azione si verifica quando gli utenti selezionano l'opzione **Rileva e revoca** da Esplora file o dalle app di Office quando usano il client Azure Information Protection. Per l'applicazione RMS sharing, questa azione viene eseguita automaticamente quando gli utenti selezionano l'opzione **Condividi file protetto**.
+Per poter rilevare e revocare un documento, è prima necessario registrarlo nel sito di rilevamento dei documenti. Questa azione si verifica quando gli utenti selezionano l'opzione **Rileva e revoca** da Esplora file o dalle app di Office quando usano il client Azure Information Protection.
 
 Se si etichettano e proteggono i file per gli utenti usando il cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel), è possibile usare il parametro *EnableTracking* per registrare il file nel sito di rilevamento dei documenti. Ad esempio:
 

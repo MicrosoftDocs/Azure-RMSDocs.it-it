@@ -4,18 +4,18 @@ description: Risorse per gli amministratori, incluse informazioni sulle nuove ve
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 12/07/2018
+ms.date: 02/07/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 7cc73d92-27d6-49ff-a8ab-2fae73519b4b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2844271ff0318cc6c9e90615000fce1689e8a939
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: 013532db350b41e8cfaeac5559065e46f76379a7
+ms.sourcegitcommit: 308e6da8de1a3456a0ba807c5388b8891b861d5b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53173758"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55854222"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informazioni e supporto per Azure Information Protection
 
@@ -28,6 +28,7 @@ Usare le risorse seguenti per comprendere, distribuire e supportare Azure Inform
 |Ottenere informazioni sulle versioni nuove e future|Vedere la sezione [Informazioni sulle nuove versioni e sugli aggiornamenti](#information-about-new-releases-and-updates) in questa pagina.|
 |Ottenere assistenza per il prodotto|Vedere la sezione [Opzioni di supporto e risorse della community](#support-options-and-community-resources) in questa pagina.|
 |Controllare le informazioni sulla sottoscrizione e le funzionalità supportate|Usare le informazioni sulla sottoscrizione e l'elenco delle funzionalità nella pagina [Prezzi di Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection).|
+|Vedere le risposte alle domande frequenti sulle licenze|Leggere le [domande frequenti](https://azure.microsoft.com/pricing/details/information-protection#faq) sulle licenze.|
 |Richiedere una nuova funzionalità o modifica di funzionalità|Vedere il sito [UserVoice](https://msip.uservoice.com) per Azure Information Protection e usare l'indirizzo di posta elettronica aziendale per accedere.|
 |Interagire con il team di prodotto e i propri colleghi|Visitare il [sito di Yammer](https://www.yammer.com/AskIPTeam) per Azure Information Protection.|
 |Comprendere un termine specifico di Azure Information Protection|Cercare il termine o l'abbreviazione nella pagina della [terminologia](terminology.md).|

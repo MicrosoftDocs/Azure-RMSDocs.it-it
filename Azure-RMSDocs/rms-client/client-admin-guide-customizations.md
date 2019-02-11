@@ -4,18 +4,18 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/24/2019
+ms.date: 02/02/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 71ef2607355cbe84003aaf9fc77dfa5d9a72beff
-ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
+ms.openlocfilehash: 3612c0848cf77a57636186f5f9683a2ac7f1c5ec
+ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898852"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55651565"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -207,7 +207,9 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Usarla solo quando l'[impostazione dei criteri](../configure-policy-settings.md) **Display the Information Protection bar in Office apps** (Visualizza la barra di Information Protection nelle app di Office) è impostata su **On** (Attiva).
 
-Quando si configura questa impostazione, si pubblicano i criteri per gli utenti e un utente sceglie di non visualizzare la barra di Azure Information Protection nelle applicazioni di Office, la barra rimane nascosta. Ciò si verifica se l'utente deseleziona l'opzione **Mostra barra**: nella scheda **Home**, nel gruppo **Protezione**, fare clic sul pulsante **Proteggi**. Questa impostazione non ha alcun effetto se l'utente chiude la barra tramite l'icona **Chiudi questa barra**.
+Per impostazione predefinita, se un utente cancella l'opzione **Mostra barra** dalla scheda **Pagina iniziale**, il gruppo **Protezione**, il pulsante **Proteggi**, la barra di Information Protection non viene più visualizzata in quell'app Office. La barra viene tuttavia automaticamente visualizzata di nuovo alla successiva apertura di un'app Office.
+
+Per impedire che la barra sia nuovamente visualizzata in automatico se è stato scelto di nasconderla, usare l'impostazione client. Questa impostazione non ha alcun effetto se l'utente chiude la barra tramite l'icona **Chiudi questa barra**.
 
 Anche se la barra di Azure Information Protection rimane nascosta, gli utenti possono visualizzarla temporaneamente per selezionare un'etichetta, se è stata configurata la classificazione consigliata o se un documento o un messaggio di posta elettronica deve avere un'etichetta. 
 
@@ -419,19 +421,17 @@ Per questa configurazione è necessario specificare un'impostazione client avanz
 
 Il valore dell'ID etichetta è visualizzato nel pannello **Etichetta**, quando si visualizzano o si configurano i criteri di Azure Information Protection nel portale di Azure. Per specificare un'etichetta secondaria, l'etichetta padre deve essere nello stesso ambito o nei criteri globali.
 
-Specificare un nome di regola di migrazione a propria scelta. Usare un nome descrittivo che consente di identificare come deve essere eseguito il mapping di una o più etichette dalla soluzione precedente imprevisto a un'etichetta di Azure Information Protection. Il nome viene visualizzato nei report dello scanner e nel Visualizzatore eventi. 
-
-Tenere presente che questa impostazione non rimuove tutti i contrassegni visivi che potrebbero essere stati applicati dall'etichetta precedente. Per rimuovere le intestazioni e i piè di pagina, vedere la sezione successiva [Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette](#remove-headers-and-footers-from-other-labeling-solutions).
+Specificare un nome di regola di migrazione a propria scelta. Usare un nome descrittivo che consente di identificare come deve essere eseguito il mapping di una o più etichette dalla soluzione precedente imprevisto a un'etichetta di Azure Information Protection. Il nome viene visualizzato nei report dello scanner e nel Visualizzatore eventi. Si noti che questa impostazione non comporta la rimozione dell'etichetta originale dal documento o di tutti i contrassegni visivi nel documento che l'etichetta originale potrebbe aver applicato. Per rimuovere le intestazioni e i piè di pagina, vedere la sezione successiva [Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette](#remove-headers-and-footers-from-other-labeling-solutions).
 
 ### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Esempio 1: Mapping uno-a-uno con lo stesso nome di etichetta
 
-I documenti con l'etichetta di Secure Islands "Riservato" devono essere rietichettati come "Riservato" da Azure Information Protection.
+Requisito: I documenti con l'etichetta di Secure Islands "Riservato" devono essere rietichettati come "Riservato" da Azure Information Protection.
 
 In questo esempio:
 
-- L'etichetta di Azure Information Protection **Riservato** ha l'ID etichetta 1ace2cc3-14bc-4142-9125-bf946a70542c. 
+- L'etichetta di Azure Information Protection da usare è **Riservato** e ha l'ID etichetta **1ace2cc3-14bc-4142-9125-bf946a70542c**. 
 
-- L'etichetta di Secure Islands è archiviata nella proprietà personalizzata denominata **Classificazione**.
+- L'etichetta di Secure Islands è **Riservato** ed è archiviata nella proprietà personalizzata denominata **Classificazione**.
 
 L'impostazione client avanzata è la seguente:
 
@@ -442,13 +442,13 @@ L'impostazione client avanzata è la seguente:
 
 ### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>Esempio 2: Mapping uno-a-uno per un altro nome di etichetta
 
-I documenti con l'etichetta di Secure Islands "Sensibile" devono essere rietichettati come "Riservatezza elevata" da Azure Information Protection.
+Requisito: I documenti con l'etichetta di Secure Islands "Sensibile" devono essere rietichettati come "Riservatezza elevata" da Azure Information Protection.
 
 In questo esempio:
 
-- L'etichetta di Azure Information Protection **Riservatezza elevata** ha l'ID etichetta 3e9df74d-3168-48af-8b11-037e3021813f.
+- L'etichetta di Azure Information Protection da usare è **Riservatezza elevata** e ha l'ID etichetta **3e9df74d-3168-48af-8b11-037e3021813f**.
 
-- L'etichetta di Secure Islands è archiviata nella proprietà personalizzata denominata **Classificazione**.
+- L'etichetta di Secure Islands è **Sensibile** ed è archiviata nella proprietà personalizzata denominata **Classificazione**.
 
 L'impostazione client avanzata è la seguente:
 
@@ -460,13 +460,13 @@ L'impostazione client avanzata è la seguente:
 
 ### <a name="example-3-many-to-one-mapping-of-label-names"></a>Esempio 3: Mapping molti-a-uno di nomi di etichetta
 
-Sono disponibili due etichette di Secure Islands che includono la parola "Interno" e si vuole che i documenti con queste etichette di Secure Islands vengano rietichettati come "Generale" da Azure Information Protection.
+Requisito: Sono disponibili due etichette di Secure Islands che includono la parola "Interno" e si vuole che i documenti con queste etichette di Secure Islands vengano rietichettati come "Generale" da Azure Information Protection.
 
 In questo esempio:
 
-- L'etichetta di Azure Information Protection **Generale** ha l'ID etichetta 2beb8fe7-8293-444c-9768-7fdc6f75014d.
+- L'etichetta di Azure Information Protection da usare è **Generale** e ha l'ID etichetta **2beb8fe7-8293-444c-9768-7fdc6f75014d**.
 
-- L'etichetta di Secure Islands è archiviata nella proprietà personalizzata denominata **Classificazione**.
+- Le etichette di Secure Islands includono la parola **Interno** e sono archiviate nella proprietà personalizzata denominata **Classificazione**.
 
 L'impostazione client avanzata è la seguente:
 

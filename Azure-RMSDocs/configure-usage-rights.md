@@ -4,18 +4,18 @@ description: Informazioni sui diritti specifici usati quando si proteggono i fil
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/29/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: 97ddde38-b91b-42a5-8eb4-3ce6ce15393d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 195700be6b1a2f7aecbdd4de333570669cf6d329
-ms.sourcegitcommit: 4b1f204fd31bb9de05510b85b91304d9964a14c1
+ms.openlocfilehash: 02bdd294e30f0d773fcc29b4c7a13f9e418af9db
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55420793"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559989"
 ---
 # <a name="configuring-usage-rights-for-azure-rights-management"></a>Configurazione dei diritti di utilizzo per Azure Rights Management
 
@@ -61,10 +61,10 @@ Usare la tabella seguente per un elenco di questi livelli di autorizzazioni e un
 
 |Livello di autorizzazioni|Applicazioni|Diritti di utilizzo inclusi|
 |---------------------|----------------|---------------------------------|
-|Visualizzatore|Portale di Azure classico <br /><br />Portale di Azure<br /><br /> Applicazione Rights Management sharing per Windows<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Visualizza diritti; Rispondi [[1]](#footnote-1); Rispondi a tutti [[1]](#footnote-1); Consenti macro [[2]](#footnote-2)<br /><br />Nota: per i messaggi di posta elettronica, usare Revisore anziché questo livello di autorizzazione per garantire che una risposta a un messaggio venga ricevuta come messaggio di posta elettronica e non come allegato. Revisore è richiesto anche quando si invia un messaggio di posta elettronica a un'altra organizzazione che usa il client Outlook o Outlook Web App. Oppure per gli utenti dell'organizzazione che non devono usare il servizio Azure Rights Management perché sono stati implementati i [controlli di onboarding](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|
-|Revisore|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Applicazione Rights Management sharing per Windows<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Visualizza diritti; Rispondi: Rispondi a tutti [[3]](#footnote-3); Inoltra [[3]](#footnote-3); Consenti macro [[2]](#footnote-2)|
-|Coautore|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Applicazione Rights Management sharing per Windows<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Copia; Visualizza diritti; Consenti macro; Salva con nome, Esporta [[4]](#footnote-4); Stampa; Rispondi [[3]](#footnote-3); Rispondi a tutti [[3]](#footnote-3); Inoltra [[3]](#footnote-3)|
-|Comproprietario|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Applicazione Rights Management sharing per Windows<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Copia; Visualizza diritti; Modifica diritti; Consenti macro; Salva con nome, Esporta; Stampa; Rispondi [[3]](#footnote-3); Rispondi a tutti [[3]](#footnote-3); Inoltra [[3]](#footnote-3); Controllo completo|
+|Visualizzatore|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Visualizza diritti; Rispondi [[1]](#footnote-1); Rispondi a tutti [[1]](#footnote-1); Consenti macro [[2]](#footnote-2)<br /><br />Nota: per i messaggi di posta elettronica, usare Revisore anziché questo livello di autorizzazione per garantire che una risposta a un messaggio venga ricevuta come messaggio di posta elettronica e non come allegato. Revisore è richiesto anche quando si invia un messaggio di posta elettronica a un'altra organizzazione che usa il client Outlook o Outlook Web App. Oppure per gli utenti dell'organizzazione che non devono usare il servizio Azure Rights Management perché sono stati implementati i [controlli di onboarding](/powershell/module/aadrm/set-aadrmonboardingcontrolpolicy).|
+|Revisore|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Visualizza diritti; Rispondi: Rispondi a tutti [[3]](#footnote-3); Inoltra [[3]](#footnote-3); Consenti macro [[2]](#footnote-2)|
+|Coautore|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Copia; Visualizza diritti; Consenti macro; Salva con nome, Esporta [[4]](#footnote-4); Stampa; Rispondi [[3]](#footnote-3); Rispondi a tutti [[3]](#footnote-3); Inoltra [[3]](#footnote-3)|
+|Comproprietario|Portale di Azure classico <br /><br />Portale di Azure<br /><br />Client Azure Information Protection per Windows|Visualizza, Apri, Leggi; Salva; Modifica contenuto, Modifica; Copia; Visualizza diritti; Modifica diritti; Consenti macro; Salva con nome, Esporta; Stampa; Rispondi [[3]](#footnote-3); Rispondi a tutti [[3]](#footnote-3); Inoltra [[3]](#footnote-3); Controllo completo|
 
 ----
 
@@ -77,7 +77,7 @@ Non incluso nel portale di Azure.
 Per il client di Azure Information Protection per Windows, questo diritto è attualmente necessario per la barra di Information Protection delle app di Office.
 
 ###### <a name="footnote-3"></a>Nota 3
-Non applicabile al client Azure Information Protection per Windows o all'applicazione di condivisione Rights Management per Windows.
+Non applicabile al client Azure Information Protection per Windows.
 
 ###### <a name="footnote-4"></a>Nota 4
 Non incluso nel portale di Azure o nel client Azure Information Protection per Windows.
