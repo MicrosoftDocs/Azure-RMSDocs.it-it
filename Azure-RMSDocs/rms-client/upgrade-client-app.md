@@ -4,18 +4,18 @@ description: Istruzioni per utenti che hanno eseguito l'aggiornamento dall'appli
 author: cabailey
 ms.author: cabailey
 manager: mbaldwin
-ms.date: 01/16/2019
+ms.date: 02/01/2019
 ms.topic: conceptual
 ms.service: information-protection
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 7c39527945eb5f92c19e6cf8f89db6e8d7ae9a5a
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: f592047b8de26d3b0d536938cd5c6b7da8fe76cb
+ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314714"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55559836"
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Manuale dell'utente: Attività eseguite in precedenza con l'applicazione RMS sharing
 
