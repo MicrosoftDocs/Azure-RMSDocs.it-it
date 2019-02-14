@@ -4,14 +4,15 @@ description: Questo articolo aiuterà a comprendere come MIP SDK implementa l'au
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 288342c467574cf84c60e1211238b65a9e716b6c
-ms.sourcegitcommit: 860955fb2c292b3ca5910cd41095363f58caf553
-ms.translationtype: HT
+ms.openlocfilehash: dd2e8c5c3344da351715069910741c5651f4e617
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48230523"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257969"
 ---
 # <a name="microsoft-information-protection-sdk---authentication-concepts"></a>Microsoft Information Protection SDK - Concetti relativi all'autenticazione
 
@@ -23,13 +24,13 @@ L'autenticazione in MIP SDK viene eseguita estendendo la classe `mip::AuthDelega
 
 `mip::AuthDelegate::AcquireOAuth2Token` accetta i parametri seguenti e restituisce un valore booleano che indica se l'acquisizione del token ha avuto esito positivo:
 
-- `mip::Identity`: l'identità dell'utente o del servizio da autenticare, se nota.
-- `mip::AuthDelegate::OAuth2Challenge`: accetta due parametri, **authority** e **resource**. **Authority** è il servizio per cui verrà generato il token. **Resource** è il servizio a cui si tenta di accedere. L'SDK gestirà il passaggio di questi parametri al delegato quando viene chiamato.
-- `mip::AuthDelegate::OAuth2Token`: Il risultato del token viene scritto in questo oggetto. Verrà utilizzato dall'SDK quando viene caricato il motore. Al di fuori di questa implementazione dell'autenticazione non dovrebbe essere necessario ottenere o impostare questo valore in altre posizioni.
+- `mip::Identity`: L'identità dell'utente o del servizio per l'autenticazione, se noto.
+- `mip::AuthDelegate::OAuth2Challenge`: Accetta due parametri, **autorità** e **resource**. **Authority** è il servizio per cui verrà generato il token. **Resource** è il servizio a cui si tenta di accedere. L'SDK gestirà il passaggio di questi parametri al delegato quando viene chiamato.
+- `mip::AuthDelegate::OAuth2Token`: Il risultato di token è scritto in questo oggetto. Verrà utilizzato dall'SDK quando viene caricato il motore. Al di fuori di questa implementazione dell'autenticazione non dovrebbe essere necessario ottenere o impostare questo valore in altre posizioni.
 
-**Importante:** le applicazioni non chiamano `AcquireOAuth2Token` direttamente. L'SDK chiamerà questa funzione quando necessario.
+**Importante:** Le applicazioni non chiamare `AcquireOAuth2Token` direttamente. L'SDK chiamerà questa funzione quando necessario.
 
-## <a name="consent"></a>Consenso
+## <a name="consent"></a>Fornire il consenso
 
 Azure AD richiede di dare il consenso per un'applicazione, prima che le venga concessa l'autorizzazione per accedere alle risorse/API protette con l'identità di un account. Il consenso viene registrato come conferma permanente dell'autorizzazione nel tenant dell'account, per l'account specifico (consenso dell'utente) o tutti gli account (consenso dell'amministratore). Gli scenari per il consenso sono vari, a seconda dell'API a cui si accede e delle autorizzazioni che cerca l'applicazione, nonché dell'account usato per l'accesso: 
 
@@ -48,9 +49,9 @@ Quando un utente esegue un'operazione che richiede il consenso, l'SDK chiama il 
 
 ### <a name="consent-options"></a>Opzioni per il consenso
 
-- **AcceptAlways**: fornisce il consenso e memorizza la decisione.
-- **Accept**: fornisce il consenso una sola volta.
-- **Reject**: non fornisce il consenso.
+- **AcceptAlways**: Fornire il consenso e ricordare la decisione.
+- **Accettare**: Una volta il consenso.
+- **Rifiutare**: Non fornire il consenso.
 
 Quando l'SDK richiede il consenso dell'utente con questo metodo, l'applicazione client deve presentare all'utente l'URL. Le applicazioni client devono offrire un modo per ottenere il consenso dell'utente e restituire l'enumerazione di consenso appropriata che corrisponde alla decisione dell'utente.
 

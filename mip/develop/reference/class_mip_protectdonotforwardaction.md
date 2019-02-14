@@ -4,14 +4,15 @@ description: 'Classe MIP:: protectdonotforwardaction di Microsoft Information Pr
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: a7a68157a767b1c6b222ef7a3d43055564c3ef5e
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 2b254bc8ab7bb17ede2d253054004839f7a3a85d
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651055"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254680"
 ---
 # <a name="class-mipprotectdonotforwardaction"></a>Classe mip::ProtectDoNotForwardAction 
 Classe di azione che specifica l'aggiunta della protezione Non inoltrare al documento.

@@ -4,16 +4,17 @@ description: Questo articolo aiuterà a comprendere i metadati che viene generat
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 11/08/2018
 ms.author: tommos
-ms.openlocfilehash: 9f9e4768a01d3d82f7b9563cb907533e53c7a228
-ms.sourcegitcommit: 03c9d1131177041e320d1bdbbdd92852a0d1d5cd
+ms.openlocfilehash: 990f729edaa0a2e212812f84fc5a4c63f82e37fb
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52156855"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253970"
 ---
-# <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK - metadati
+# <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK - Metadata
 
 il SDK di Microsoft Information Protection genera il set di metadati che devono essere applicato a un file. Questi metadati sono una rappresentazione in forma dell'etichetta. Questo documento descrive i metadati che SDK genera per applicare a posta elettronica, documenti e altri record.
 
@@ -29,30 +30,30 @@ Quando applicato ai dati etichettati con Microsoft Information Protection, il ri
 
 Il GUID è un identificatore univoco per ogni etichetta in un'organizzazione.
 
-## <a name="microsoft-information-protection-sdk-metadata"></a>Metadati SDK di Microsoft Information Protection
+## <a name="microsoft-information-protection-sdk-metadata"></a>Microsoft Information Protection SDK Metadata
 
 il SDK di MIP si applica il seguente set di metadati.
 
-| Attributo | Tipo o valore                 | Description                                                                                                                                                                                                                                        | obbligatorio |
+| Attributo | Tipo o valore                 | Descrizione                                                                                                                                                                                                                                        | obbligatorio |
 |-----------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| **Abilitato**   | True o False                 | Questo attributo indica se la classificazione rappresentata da questo set di coppie chiave-valore è abilitata per l'elemento di dati. In genere, i prodotti DLP convalidare l'esistenza di questa chiave per identificare l'etichetta di classificazione. | Sì       |
-| **ID sito**    | GUID                          | ID Tenant di Azure Active Directory                                                                                                                                                                                                                   | Sì       |
-| **Elemento ActionId**  | GUID                          | Elemento ActionID viene modificato ogni volta che viene impostata un'etichetta. I log di controllo includeranno actionID vecchi e nuovi per consentire il concatenamento di attività all'elemento di dati l'assegnazione di etichette.                                                                                 | Sì       |
+| **Enabled**   | True o False                 | Questo attributo indica se la classificazione rappresentata da questo set di coppie chiave-valore è abilitata per l'elemento di dati. In genere, i prodotti DLP convalidare l'esistenza di questa chiave per identificare l'etichetta di classificazione. | Yes       |
+| **SiteId**    | GUID                          | ID Tenant di Azure Active Directory                                                                                                                                                                                                                   | Yes       |
+| **ActionId**  | GUID                          | Elemento ActionID viene modificato ogni volta che viene impostata un'etichetta. I log di controllo includeranno actionID vecchi e nuovi per consentire il concatenamento di attività all'elemento di dati l'assegnazione di etichette.                                                                                 | Yes       |
 | **Metodo**    | Standard, Privileged, o automaticamente        | Viene impostato tramite assignmentmethod                                                                                                                                                                                                                 | No        |
 | **SetDate**   | Formato di data estesa ISO 8601 | Timestamp quando è stata impostata l'etichetta.                                                                                                                                                                                                              | No        |
-| **Nome**      | string                        | Nome univoco dell'etichetta all'interno del tenant. Non corrisponde necessariamente per nome visualizzato.                                                                                                                                                              | No      |
-| **ContentBits** | integer | Maschera di bit che descrive i tipi di contenuto contrassegno che deve essere applicato a un file. CONTENT_HEADER = 0X1 CONTENT_FOOTER = 0X2 FILIGRANA = 0X4
+| **Name**      | string                        | Nome univoco dell'etichetta all'interno del tenant. Non corrisponde necessariamente per nome visualizzato.                                                                                                                                                              | No      |
+| **ContentBits** | integer | Maschera di bit che descrive i tipi di contenuto contrassegno che deve essere applicato a un file. CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, WATERMARK = 0X4
  | No |
 
 Quando applicato a un file, il risultato è simile alla tabella riportata di seguito.
 
-| Key                                                         | Valore                                |
+| Chiave                                                         | Valore                                |
 |-------------------------------------------------------------|--------------------------------------|
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Enabled     | true                                 |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SetDate     | 2018-11-08T21:13:16-0800             |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Method      | Con privilegi                           |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Name        | Confidential (Riservato)                         |
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SiteId      | cb46c030-1825-4E81-a295-151c039dbf02 |
+| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SiteId      | cb46c030-1825-4e81-a295-151c039dbf02 |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_ContentBits | 2                                    |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_ActionId    | 88124cf5-1340-457d-90e1-0000a9427c99 |
 

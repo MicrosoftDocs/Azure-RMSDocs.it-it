@@ -4,14 +4,15 @@ description: Documenta la classe mip::classificationresult di Microsoft Informat
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 28b174fe65de5980fb1922cfb4c3e5cee7cab1d8
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: ecdd8b357aa1e266e92d8a5b4d03408488f3f332
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55650749"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258488"
 ---
 # <a name="class-mipclassificationresult"></a>Classe mip::ClassificationResult 
 Classe contenente il risultato di una chiamata di classificazione sullo stato di esecuzione.

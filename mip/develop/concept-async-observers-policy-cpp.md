@@ -4,14 +4,15 @@ description: MIP SDK è progettato per essere quasi interamente asincrono. Quest
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 50bc3bfd9bcba8e90a386a6e0444f65389bcfa76
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: d822a8ea57def13d2f04ac1c18b22ff629e413ad
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445802"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56251177"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-observers"></a>Microsoft Information Protection SDK - Osservatori dell'API Criteri
 
@@ -27,7 +28,7 @@ Gli esempi seguenti illustrano il modello promise/future, usato anche dagli esem
 
 Nell'esempio seguente è stata creata una classe `ProfileObserver` derivata da `mip::Profile::Observer`. Le funzioni membro sono state sottoposte a override per sfruttare il modello promise/future usato in tutti gli esempi.
 
-**Nota**: gli esempi di seguito sono implementati solo parzialmente e non includono gli override per gli osservatori correlati `mip::ProfileEngine`.
+**Nota**: Di seguito esempi sono implementati solo parzialmente e non includono le sostituzioni per il `mip::ProfileEngine` relativi osservatori.
 
 ### <a name="profileobserverh"></a>profile_observer.h
 

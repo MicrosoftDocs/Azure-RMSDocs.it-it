@@ -4,14 +4,15 @@ description: 'Classe MIP:: removeprotectionaction di Microsoft Information Prote
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 6e45e4d91491616a56308d3004527f96a8b73c2a
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 84d196ff38b3b09d0bbb2f40beb2314d5996032a
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55650987"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257672"
 ---
 # <a name="class-mipremoveprotectionaction"></a>Classe mip::RemoveProtectionAction 
 Classe di azione che specifica la rimozione della protezione dal documento.

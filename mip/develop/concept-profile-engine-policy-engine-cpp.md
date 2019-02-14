@@ -4,14 +4,15 @@ description: Questo articolo aiuterà a comprendere i concetti relativi all'ogge
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 07e0fc59e0ed5ec1fc66fe3179fce07dfcb687d1
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: 9aac5fb0e010c8c73776c3e62ba9e98bdeff77d2
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445275"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252776"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-engine-concepts"></a>Microsoft Information Protection SDK - Concetti relativi al motore dell'API Criteri
 
@@ -19,7 +20,7 @@ ms.locfileid: "47445275"
 
 ## <a name="implementation-add-a-policy-engine"></a>Implementazione: Aggiungere un motore dei criteri
 
-### <a name="implementation-create-policy-engine-settings"></a>Implementazione: Creare le impostazioni del motore dei criteri
+### <a name="implementation-create-policy-engine-settings"></a>Implementazione: Creare impostazioni di criteri di gestione
 
 Analogamente a un profilo, anche per il motore è necessario un oggetto impostazioni, `mip::PolicyEngine::Settings`. Questo oggetto archivia l'identificatore univoco del motore, i dati client personalizzabili che possono essere usati per il debug o la telemetria e, facoltativamente, le impostazioni locali.
 

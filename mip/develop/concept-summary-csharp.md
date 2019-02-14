@@ -4,14 +4,15 @@ description: Una rapida panoramica su come iniziare a usare il wrapper MIP SDK .
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: tommos
-ms.openlocfilehash: ec1d2083449f1cb4ffccb086f71a7085a9251604
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 6b2f26a61cd491574fd9f4a1e74fbfab4752257a
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651980"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252317"
 ---
 # <a name="getting-started-with-the-microsoft-information-protection-net-wrapper"></a>Guida introduttiva con il Wrapper .NET di Microsoft Information Protection
 

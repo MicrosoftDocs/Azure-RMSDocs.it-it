@@ -4,24 +4,25 @@ description: Questo articolo aiuterà a comprendere i concetti relativi all'ogge
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 9ccea755c83b570aa17ff4d30d98783f4bef79e5
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: 09b4db10523539f093a54c54d1fc6b7de8f7ddb0
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47446601"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259287"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-engine-concepts"></a>Microsoft Information Protection SDK - Concetti relativi al motore dell'API File
 
 `mip::FileEngine` nell'API File di MIP SDK offre un'interfaccia per tutte le operazioni eseguite per conto di un'identità specificata. Verrà aggiunto un motore per ogni utente che accede all'applicazione e tutte le operazioni del motore verranno eseguite nel contesto di tale identità.
 
-`FileEngine` ha due responsabilità principali: elencare le etichette per un utente autenticato e creare i gestori di file per eseguire operazioni sui file per conto dell'utente. 
+Il `FileEngine` ha due responsabilità principali: Elenca le etichette per un utente autenticato e creazione di gestori di file per eseguire operazioni di file per conto dell'utente. 
 
 - [`mip::FileEngine`](reference/class_mip_fileengine.md)
-- `ListSensitivityLabels()`: ottiene l'elenco di etichette per il motore caricato.
-- `CreateFileHandler()`: crea un `mip::FileHandler` per un flusso o un file specifico.
+- `ListSensitivityLabels()`: Ottiene l'elenco di etichette per il motore caricato.
+- `CreateFileHandler()`: Crea un `mip::FileHandler` per un flusso o file specifici.
 
 ## <a name="add-a-file-engine"></a>Aggiungere un motore di file
 

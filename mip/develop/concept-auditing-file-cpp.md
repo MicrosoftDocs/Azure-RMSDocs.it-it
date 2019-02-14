@@ -5,14 +5,15 @@ services: information-protection
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 11/01/2018
 ms.author: tommos
-ms.openlocfilehash: bd04d9aa2edd6be01ae9e912d7ddbf936d6dd4df
-ms.sourcegitcommit: 05fdaf43f74013eecb5886b95b09dd5e00670753
+ms.openlocfilehash: f091cfd220ac8886a6bf26903deb7b97062cffd7
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51297806"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258590"
 ---
 # <a name="auditing-in-the-mip-sdk-file-api"></a>Controllo nell'API File di MIP SDK
 
@@ -28,9 +29,9 @@ Gli eventi di heartbeat vengono generati automaticamente per qualsiasi applicazi
 
 * TenantId
 * Ora di generazione
-* Nome dell'entità utente
+* Nome entità utente
 * Nome del computer in cui è stato generato il controllo
-* Process Name
+* Nome del processo
 * Piattaforma
 * ID applicazione: corrisponde all'ID dell'applicazione Azure AD.
 

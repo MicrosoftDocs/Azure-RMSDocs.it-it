@@ -4,14 +4,15 @@ description: 'Classe MIP:: networkerror di Microsoft Information Protection (MIP
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 3a53683e910a380fed1adc0498ccf170be7087b2
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: fe2e9410f3589c38a6630ff95fceb1f6b5415165
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651225"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259270"
 ---
 # <a name="class-mipnetworkerror"></a>Classe mip::NetworkError 
 Errore di rete. Causato da un comportamento imprevisto quando si effettuano chiamate di rete agli endpoint di servizio.

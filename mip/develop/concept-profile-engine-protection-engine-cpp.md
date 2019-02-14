@@ -4,24 +4,25 @@ description: Questo articolo aiuterà a comprendere i concetti relativi all'ogge
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: da0c50de6a818fcd8beda0483696ba433ce22149
-ms.sourcegitcommit: 823a14784f4b34288f221e3b3cb41bbd1d5ef3a6
-ms.translationtype: HT
+ms.openlocfilehash: 9595d3a3b12af802720363e141e40608c6f5ba93
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453317"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258409"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-engine-concepts"></a>Microsoft Information Protection SDK - Concetti relativi al motore dell'API Protezione
 
-## <a name="implementation-add-a-protection-engine"></a>Implementazione: Aggiungere un motore di protezione
+## <a name="implementation-add-a-protection-engine"></a>Implementazione: Aggiungere un modulo di protezione
 
 Nell'API Protezione, la classe `mip::ProtectionProfile` è la classe radice per tutte le operazioni dell'SDK. Avendo già creato il profilo, è ora possibile aggiungere un motore al profilo.
 
 L'esempio seguente illustra l'uso di un solo motore per un unico utente autenticato.
 
-### <a name="implementation-create-protection-engine-settings"></a>Implementazione: Creare le impostazioni del motore di protezione
+### <a name="implementation-create-protection-engine-settings"></a>Implementazione: Creare le impostazioni del modulo di protezione
 
 Analogamente a un profilo, anche per il motore è necessario un oggetto impostazioni, `mip::ProtectionEngine::Settings`. Questo oggetto archivia l'identificatore univoco del motore, i dati client personalizzabili che possono essere usati per il debug o la telemetria e, facoltativamente, le impostazioni locali.
 
@@ -31,7 +32,7 @@ Viene qui creato un oggetto `ProtectionEngine::Settings` chiamato *engineSetting
 ProtectionEngine::Settings engineSettings("UniqueID", "");
 ```
 
-**Nota**: se si usa questo metodo per creare l'oggetto delle impostazioni di protezione, è anche necessario impostare manualmente CloudEndpointBaseUrl su https://api.aadrm.com
+**Nota**: Se si usa questo metodo per creare l'oggetto delle impostazioni di protezione dati, è necessario impostare manualmente il CloudEndpointBaseUrl su https://api.aadrm.com
 
 Come procedura consigliata, il primo parametro, **id**, deve essere tale da consentire di collegare il motore con facilità all'utente associato **oppure** a un oggetto `mip::Identity`. Per inizializzare le impostazioni con `mip::Identity`:
 
@@ -68,7 +69,7 @@ Per aggiungere il motore, si tornerà al modello promise/future usato per carica
 
 Il risultato finale del codice precedente è l'aggiunta di un motore per l'utente autenticato al profilo.
 
-## <a name="implementation-list-templates"></a>Implementazione: Elencare i modelli
+## <a name="implementation-list-templates"></a>Implementazione: Elenco modelli
 
 Tramite il motore aggiunto è ora possibile elencare tutti i modelli di riservatezza disponibili per l'utente autenticato chiamando `engine->GetTemplatesAsync()`. 
 
@@ -83,7 +84,7 @@ mEngine->GetTemplatesAsync(engineObserver, loadPromise);
 auto templates = loadFuture.get();
 ```
 
-### <a name="implementation-print-the-template-ids"></a>Implementazione: Stampare gli ID dei modelli
+### <a name="implementation-print-the-template-ids"></a>Implementazione: Gli ID modello di stampa
 
 ```cpp
 //Iterate through all template IDs in the vector

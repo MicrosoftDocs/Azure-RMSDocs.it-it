@@ -5,14 +5,15 @@ services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.date: 01/09/2019
 ms.author: bryanla
-ms.openlocfilehash: 726f0cf5b3c087d21323b46c9b7748b545932428
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 3af8cd7e21124d6e6ac70407d8e366eb6d88da45
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651963"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253609"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Guida introduttiva: Impostare e ottenere un'etichetta di riservatezza (C#)
 

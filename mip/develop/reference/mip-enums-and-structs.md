@@ -4,14 +4,15 @@ description: Documentazione di riferimento per gli struct C++ MIP SDK e le enume
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: d3ca101d3141f2a1e36fcfec11e805907c125b8e
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 04abc581d94c0b05cf19d01362f7b416155a372c
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651769"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256108"
 ---
 # <a name="summary"></a>Riepilogo
 
@@ -38,7 +39,7 @@ struct PublishingLicenseContext | Contiene i dettagli di una licenza di pubblica
 
 ### <a name="actionsource-enum"></a>ActionSource enum
 
-Definisce che cosa ha attivato l'evento SetLabel
+definisce che cosa ha attivato l'evento SetLabel
 
  Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------

@@ -4,14 +4,15 @@ description: Informazioni sui prerequisiti di installazione e configurazione per
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.date: 01/30/2019
 ms.author: bryanla
-ms.openlocfilehash: b8c152db0ae52a20cc5323709c245911564e5f18
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 13d9d82a402d283c393c90dc52c265a1bf8502d7
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651446"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254272"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installazione e configurazione di Microsoft Information Protection (MIP) SDK 
 

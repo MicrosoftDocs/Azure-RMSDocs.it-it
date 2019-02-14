@@ -4,14 +4,15 @@ description: Questo articolo aiuterà a comprendere i concetti relativi all'ogge
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: ae6699212d45a6c8a2fa95f648e7f5a2be3de93e
-ms.sourcegitcommit: 1cf14852cd14ea91ac964fb03a901238455ffdff
-ms.translationtype: HT
+ms.openlocfilehash: 3fa8a7b9f787cef980722efa5036de5c3f583b35
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47445309"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56251705"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-profile-concepts"></a>Microsoft Information Protection SDK - Concetti relativi al profilo dell'API Protezione
 
@@ -23,10 +24,10 @@ Dopo aver definito `ProtectionProfileObserverImpl` e `AuthDelegateImpl`, verrann
 
 ### <a name="protectionprofilesettings-parameters"></a>Parametri ProtectionProfile::Settings
 
-- `std::string path`: percorso in cui sono archiviati i dati di registrazione e telemetria e altre informazioni sugli stati persistenti.
-- `bool useInMemoryStorage`: definisce se tutti gli stati devono essere archiviati o meno in memoria invece che su disco.
-- `std::shared_ptr<mip::AuthDelegate> authDelegate`: puntatore condiviso della classe `mip::AuthDelegate`.
-- `std::shared_ptr<mip::ProtectionProfile::Observer> observer`: puntatore condiviso all'implementazione `ProtectionProfile::Observer`.
+- `std::string path`: Percorso del file in cui la registrazione, la telemetria e altro stato persistente viene archiviato.
+- `bool useInMemoryStorage`: Definisce o meno tutti gli stati devono essere archiviati in memoria anziché su disco.
+- `std::shared_ptr<mip::AuthDelegate> authDelegate`: Un puntatore condiviso della classe `mip::AuthDelegate`.
+- `std::shared_ptr<mip::ProtectionProfile::Observer> observer`: Un puntatore condiviso al `ProtectionProfile::Observer` implementazione.
 - `mip::ApplicationInfo applicationInfo`: oggetto. Usato per definire informazioni relative all'applicazione che sta utilizzando l'SDK.
 
 I due esempi seguenti mostrano come creare l'oggetto profileSettings usando l'archiviazione locale o solo in memoria per l'archiviazione degli stati. Entrambi gli esempi partono dal presupposto che l'oggetto `authDelegateImpl` sia già stato creato.

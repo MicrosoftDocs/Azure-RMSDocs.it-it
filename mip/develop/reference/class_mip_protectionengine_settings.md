@@ -4,14 +4,15 @@ description: Documenta la classe mip::protectionengine di Microsoft Information 
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 131c41c2fe3788b1ef68b0d020606cf5f00d229c
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: d4f4902626dcedb4bcc64a46a1bef2a0c49ca8f6
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651242"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254884"
 ---
 # <a name="class-mipprotectionenginesettings"></a>Classe mip::ProtectionEngine::Settings 
 Oggetto [Settings](class_mip_protectionengine_settings.md) usato da [ProtectionEngine](class_mip_protectionengine.md) durante la creazione e per tutta la sua durata.

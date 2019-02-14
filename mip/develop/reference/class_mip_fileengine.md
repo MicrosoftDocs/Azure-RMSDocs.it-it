@@ -4,14 +4,15 @@ description: 'Classe MIP:: fileengine di Microsoft Information Protection (MIP) 
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 4bcdd08cb7ced9e2eea8fa09d9364064a8d198df
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: e397ad68fa39b318d6e4c08e36c450a474c3e5a9
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651463"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255173"
 ---
 # <a name="class-mipfileengine"></a>Classe mip::FileEngine 
 Questa classe fornisce un'interfaccia per tutte le funzioni del motore.

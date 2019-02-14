@@ -4,14 +4,15 @@ description: 'Classe MIP:: InternalError di Microsoft Information Protection (MI
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: b856c362706e749c63eebfa4dc3ad11350b53817
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 9fffd19cab46053e1038fc2e548ebf0802501453
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55650103"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256465"
 ---
 # <a name="class-mipinternalerror"></a>Classe mip::InternalError 
 Errore interno. Questo errore viene generato quando un evento imprevisto si verifica durante l'esecuzione.

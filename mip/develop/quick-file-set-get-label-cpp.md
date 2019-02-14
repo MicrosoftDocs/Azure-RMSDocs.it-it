@@ -5,14 +5,15 @@ services: information-protection
 author: BryanLa
 ms.service: information-protection
 ms.topic: quickstart
+ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 4898aefc996c26df5f4831c95be63c9fa1a45dc4
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 45263bc2a8f77f73f318b2c8df94f21e785e0f40
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651208"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256686"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Guida introduttiva: Impostare e ottenere un'etichetta di riservatezza (C++)
 
@@ -208,7 +209,7 @@ Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un fi
 
 4. Sostituire i valori segnaposto nel codice appena incollato come indicato di seguito, usando le costanti stringa di origine:
 
-   | Segnaposto | Value |
+   | Segnaposto | Valore |
    |:----------- |:----- |
    | \<input-file-path\> | Percorso completo di un file di input di test, ad esempio: `"c:\\Test\\Test.docx"`. |
    | \<content-identifier\> | Un identificatore leggibile dall'utente per il contenuto. Ad esempio: <ul><li>per un file, prendere in considerazione percorso\nomefile: `"c:\Test\Test.docx"`</li><li>per un messaggio di posta elettronica, prendere in considerazione soggetto: mittente: `"RE: Audit design:user1@contoso.com"`</li></ul> |

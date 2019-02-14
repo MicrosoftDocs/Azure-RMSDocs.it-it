@@ -4,14 +4,15 @@ description: Documenta la classe mip::protectionhandler di Microsoft Information
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 37358a2160c190978a21c491249dab42598d49b6
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 017268be0b3ea71b021b6a8d775dcb7bd69e8dc6
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651327"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253085"
 ---
 # <a name="class-mipprotectionhandler"></a>Classe mip::ProtectionHandler 
 Gestisce azioni correlate alla protezione per una configurazione di protezione specifica.

@@ -4,14 +4,15 @@ description: 'Classe MIP:: removecontentheaderaction di Microsoft Information Pr
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: cf50f3ea6eeced3c8ab3699dd946174e508adeb1
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 5025b35d9c8edd7e01a6799bd5b08a8703784086
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651378"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259247"
 ---
 # <a name="class-mipremovecontentheaderaction"></a>Classe mip::RemoveContentHeaderAction 
 Classe di azione che specifica la rimozione dell'intestazione contenuto dal documento.

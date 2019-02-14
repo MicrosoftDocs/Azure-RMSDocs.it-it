@@ -4,14 +4,15 @@ description: 'Classe MIP:: fileprofile di Microsoft Information Protection (MIP)
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 08ddea8287678bb0c5f423be39eb112a03bf2503
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: e1eb3a91b4acb1687563fb10d26e9f7c6b873e94
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55650585"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254731"
 ---
 # <a name="class-mipfileprofileobserver"></a>Classe mip::FileProfile::Observer 
 Interfaccia [Observer](class_mip_fileprofile_observer.md) per il recupero delle notifiche degli eventi correlati al profilo da parte dei client.

@@ -4,14 +4,15 @@ description: 'Classe MIP:: Error di Microsoft Information Protection (MIP) SDK v
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: e400c8fabbd4df1bbd5a3b64fa2049dc6fb7115d
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: ff33b91078581344d6d68ac4c8d97c184d1678c1
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55650477"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252946"
 ---
 # <a name="class-miperror"></a>Classe mip::Error 
 Classe di base per tutti gli errori che verranno segnalati (generati o restituiti) da MIP SDK.
