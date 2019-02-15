@@ -3,20 +3,21 @@ title: Attivare Azure RMS dall'interfaccia di amministrazione di Office 365 - AI
 description: Istruzioni per l'attivazione del servizio Azure Rights Management se si usa la nuova versione dell'interfaccia di amministrazione di Office 365.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/29/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 416cb479be67f575e4d59bfaecf1dd86eb98aab0
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: d072b2d9b87a366d6828aa831a2ce200d420c3b3
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53172891"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258922"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Come attivare Azure Rights Management dall'interfaccia di amministrazione di Office 365
 

@@ -4,14 +4,15 @@ description: 'Classe MIP:: policyengine di Microsoft Information Protection (MIP
 author: BryanLa
 ms.service: information-protection
 ms.topic: reference
+ms.collection: M365-security-compliance
 ms.author: bryanla
 ms.date: 01/28/2019
-ms.openlocfilehash: 298d9789fb46c2725401425af51a9de8b3436f53
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: 87eff7d2ca82a59f7a4c521d6803acc5208101d6
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55650970"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259066"
 ---
 # <a name="class-mippolicyengine"></a>Classe mip::PolicyEngine 
 Questa classe fornisce un'interfaccia per tutte le funzioni del motore.

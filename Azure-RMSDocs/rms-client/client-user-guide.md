@@ -3,19 +3,20 @@ title: Guida per l'utente di Azure Information Protection
 description: Il client di Azure Information Protection per Windows consente di proteggere i documenti e i messaggi di posta elettronica importanti dagli utenti che non sono autorizzati a visualizzarli, anche se il messaggio di posta elettronica viene inoltrato o se il documento viene salvato in un altro percorso.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 08/31/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2cf46bf9-7d23-4f49-b5c1-7ed7b71c858f
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 63360ae3c0dc8a051187df24b7b760f442ebedee
-ms.sourcegitcommit: 26a2c1becdf3e3145dc1168f5ea8492f2e1ff2f3
+ms.openlocfilehash: b531103a03991c87bb3f0cb99b4288ca607142ec
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44146337"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256346"
 ---
 # <a name="azure-information-protection-user-guide"></a>Guida per l'utente di Azure Information Protection
 
@@ -23,7 +24,7 @@ ms.locfileid: "44146337"
 
 Il client di Azure Information Protection per Windows consente di proteggere i documenti e i messaggi di posta elettronica importanti dagli utenti che non sono autorizzati a visualizzarli, anche se il messaggio di posta elettronica viene inoltrato o se il documento viene salvato in un altro percorso. È anche possibile usare questo client per aprire documenti protetti da altri utenti tramite la tecnologia di protezione Rights Management da Azure Information Protection.
 
-È sufficiente avere un computer che esegua almeno Windows 7 con Service Pack 1. Quindi scaricare e installare questo client gratuito da Microsoft.
+È sufficiente avere un computer che esegua almeno Windows 7 con Service Pack 1. Quindi scaricare e installare questo client gratuito da Microsoft.
 
 
 ## <a name="what-do-you-want-to-do"></a>Come procedere

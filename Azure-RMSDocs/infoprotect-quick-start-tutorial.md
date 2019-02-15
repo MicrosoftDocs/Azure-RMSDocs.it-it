@@ -3,16 +3,17 @@ title: Esercitazione - Modificare i criteri di Azure Information Protection e cr
 description: Esercitazione introduttiva per la modifica dei criteri di Azure Information Protection per l'organizzazione. Il completamento dell'esercitazione richiede circa 15 minuti.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/29/2019
 ms.topic: tutorial
+ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 2e08b21deb8d1b7ef99d77f56e1bf149a82df081
-ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
+ms.openlocfilehash: e081da93ecc486de22746e4b19e2bb5334b44c66
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55231056"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254357"
 ---
 # <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Esercitazione: Modificare i criteri di Azure Information Protection e creare una nuova etichetta
 

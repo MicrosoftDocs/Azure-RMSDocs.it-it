@@ -3,19 +3,20 @@ title: Operazioni del ciclo di vita della chiave del tenant AIP gestite dal clie
 description: Informazioni sulle operazioni del ciclo di vita necessarie per la gestione da parte dell'utente della chiave del tenant per Azure Information Protection (scenario "bring your own key" o BYOK).
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 92b5b2dad15c2ec33169e72e69f87bddec5e56df
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 7da63cf9aab9dbd3941e5fc8c3b1fb3f00ff26cf
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305319"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258301"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Gestione del cliente: operazioni del ciclo di vita della chiave del tenant
 

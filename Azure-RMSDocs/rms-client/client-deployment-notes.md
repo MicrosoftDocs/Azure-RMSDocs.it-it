@@ -3,19 +3,20 @@ title: Note sulla distribuzione del client RMS - Azure Information Protection
 description: Informazioni su installazione, sistemi operativi supportati, impostazioni del Registro di sistema e individuazione del servizio per il client RMS (Rights Management Service) versione 2, noto anche come client MSIPC.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/24/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ff0b5dd04673b7b8f4e1d458d1f02e66eee908d9
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: 0af65b69d28c97e547c0d0bce9e3024402b28dee
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067772"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56259644"
 ---
 # <a name="rms-client-deployment-notes"></a>Note sulla distribuzione del client RMS
 
