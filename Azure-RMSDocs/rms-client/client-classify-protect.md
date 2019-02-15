@@ -3,19 +3,20 @@ title: Classificare e proteggere file e messaggi di posta elettronica tramite Az
 description: Istruzioni su come classificare e proteggere documenti e messaggi di posta elettronica.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/24/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e0404f21ae3fbd5a4e9be86c9372645a4a425b38
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: f8ad7f4e9243e7f6b2be306681ba11d18cc9394b
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067789"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253953"
 ---
 # <a name="user-guide-classify-and-protect-a-file-or-email-by-using-azure-information-protection"></a>Manuale dell'utente: Classificare e proteggere un file o un messaggio di posta elettronica tramite Azure Information Protection
 

@@ -3,19 +3,20 @@ title: Informazioni su come servizi e applicazioni di Office supportano Azure RM
 description: Informazioni su come le applicazioni di Office, come Word e Outlook, e i servizi di Office, come Exchange e SharePoint, possono usare il servizio Azure Rights Management da AIP per proteggere i dati dell'organizzazione.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/13/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e05ade72a2dcd81eadd21fc4185b0845660a26eb
-ms.sourcegitcommit: 8bda26b8b84cb8b66ae8f927906710d60c4b6a80
+ms.openlocfilehash: 71f5afc3f65713f62607717d5459080aa11bedf2
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397896"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256754"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Informazioni su come le applicazioni e i servizi di Office supportano Azure Rights Management 
 

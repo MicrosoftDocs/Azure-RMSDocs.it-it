@@ -3,19 +3,20 @@ title: Informazioni su come i file server che usano FCI supportano Azure RMS da 
 description: Come usare l'infrastruttura di classificazione file di Windows Server con Azure RMS quando si distribuisce il connettore RMS per proteggere automaticamente i documenti di Office.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8fdad425-5daf-4ce1-822f-9d2fb0b87df1
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 45469e6e59139f10bd565730a5fb9fafbdaf13d0
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 81754d9f7ac0ff1351d4298f23da31afcf8ed900
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53304850"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254408"
 ---
 # <a name="how-file-servers-that-run-windows-server-and-use-file-classification-infrastructure-fci-support-azure-rights-management"></a>Informazioni su come i file server che eseguono Windows Server e usano l'infrastruttura di classificazione file supportano Azure Rights Management
 

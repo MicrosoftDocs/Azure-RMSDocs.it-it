@@ -3,19 +3,20 @@ title: Chiave del tenant di Azure Information Protection
 description: Informazioni per pianificare e gestire la chiave del tenant di Azure Information Protection. Anziché affidare a Microsoft la gestione della chiave del tenant (impostazione predefinita), per rispettare specifici criteri dell'organizzazione può essere necessario gestire autonomamente la propria chiave del tenant. in base alla modalità BYOK (Bring Your Own Key).
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/10/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 17de145dc063b7a79f07562b111a932aa5959065
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: a9fa0a6547ec508c50f25f5ec9fe926c7416fa5a
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394381"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258624"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Pianificazione e implementazione della chiave del tenant di Azure Information Protection
 

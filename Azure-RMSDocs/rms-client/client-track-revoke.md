@@ -3,19 +3,20 @@ title: Tenere traccia di documenti e revocarli - Azure Information Protection
 description: Dopo aver protetto i documenti, è possibile tenere traccia del modo in cui tali documenti vengono usati dagli utenti. Se necessario, è anche possibile revocare l'accesso a questi documenti se gli utenti non dovranno più essere in grado di leggerli.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/16/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 643c762e-23ca-4b02-bc39-4e3eeb657a1d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ba53a7f4d3aa96e4e813c602d1d79f014550ea17
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: 66c0f915c2a3575d5f9d45e59f5684d9bdfbf7e7
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314765"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252504"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Manuale dell'utente: Tenere traccia dei documenti e revocarli quando si usa Azure Information Protection
 

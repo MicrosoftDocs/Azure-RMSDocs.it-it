@@ -3,19 +3,20 @@ title: Classificare file e messaggi di posta elettronica tramite Azure Informati
 description: Istruzioni per la classificazione di documenti e messaggi di posta elettronica.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d65c7690-fab7-4823-845c-8c73903e9c79
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 823f252756e18d5a2ab2239afb85b58fc3aa048e
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 2065752cd9a5b253bc0f0eabdb1a428fa96f295a
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305302"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252181"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-azure-information-protection"></a>Manuale dell'utente: classificare un file o un messaggio di posta elettronica tramite Azure Information Protection
 

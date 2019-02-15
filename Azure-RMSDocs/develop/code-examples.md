@@ -4,20 +4,21 @@ description: RMS SDK 4.2 include codice di esempio e progetti di lavoro per alcu
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 634df601-79d2-4bc2-b845-4df886d7c589
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: aea10bd13159d75335a252022a8672a6845dbbf1
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 85c9fbc3ed0e006c771e6ec2f2e9926fd77d46e0
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071455"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257247"
 ---
 # <a name="code-examples"></a>Esempi di codice
 

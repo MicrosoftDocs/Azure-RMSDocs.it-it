@@ -3,19 +3,20 @@ title: Migrazione dal portale di Azure classico - Azure Information Protection
 description: Panoramica delle attività di amministrazione nel portale di Azure che venivano precedentemente eseguite nel portale di Azure classico
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/07/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 1988552916494ec6673f7439c0b132ccf87786c2
-ms.sourcegitcommit: 5b4eb0e17fb831d338d8c25844e9e6f4ca72246d
+ms.openlocfilehash: c445b676a6aea817e2aef410886c22d9009519e4
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53174081"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56256261"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Attività che precedentemente venivano eseguite con il portale di Azure classico
 

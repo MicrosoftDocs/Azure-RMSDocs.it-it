@@ -3,19 +3,20 @@ title: Eseguire la migrazione da una chiave protetta tramite software a un'altra
 description: Istruzioni che fanno parte del percorso di migrazione da AD RMS ad Azure Information Protection e si applicano solo se la chiave di AD RMS è protetta tramite software e si vuole eseguire la migrazione ad Azure Information Protection con una chiave del tenant protetta tramite software.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/11/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 959df427bc9424eea526ef09c00fbcecdef5a878
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: ee5ee97c6ff7a1bc3f817fa5ce6a086e7e691dd4
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53305064"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255462"
 ---
 # <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave protetta tramite software a un'altra
 

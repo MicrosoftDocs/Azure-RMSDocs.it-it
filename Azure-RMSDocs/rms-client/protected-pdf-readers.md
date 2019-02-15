@@ -3,19 +3,20 @@ title: Lettori di file PDF protetti per Microsoft Information Protection
 description: Informazioni sui documenti PDF etichettati per la classificazione e la protezione e sulle relative modalità di visualizzazione.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 01/16/2018
 ms.topic: article
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: aab59e02-930b-4a17-8442-2d5d081fe1a6
 ms.reviewer: kartikka
 ms.suite: ems
-ms.openlocfilehash: c6d02b5b7f82acc8b540fca57c2a7e8ab56f76fb
-ms.sourcegitcommit: 2c90f5bf11ec34ab94824a39ccab75bde71fc3aa
+ms.openlocfilehash: 9c4236d2e8a08e99c3208694b665beabb71f9b55
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54314816"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56251943"
 ---
 # <a name="supported-pdf-readers-for-microsoft-information-protection"></a>Lettori di file PDF supportati per Microsoft Information Protection
 

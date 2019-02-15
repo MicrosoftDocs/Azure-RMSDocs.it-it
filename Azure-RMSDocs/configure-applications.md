@@ -3,19 +3,20 @@ title: Configurazione di applicazioni per Azure Rights Management - AIP
 description: Istruzioni che consentono agli amministratori di configurare applicazioni e servizi per supportare il servizio di protezione Azure Rights Management per Azure Information Protection. Ad esempio, le applicazioni di Office quali Word 2013 e Word 2010 e i servizi come Exchange Online (le regole di trasporto, la prevenzione della perdita di dati, l'opzione Non inoltrare e la crittografia messaggi) e SharePoint Online (librerie protette).
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/01/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 63444cf83ef6b4135d72fccea27baa4f4e0afa8c
-ms.sourcegitcommit: 8558af7116f62414054feffa346aba197a1250d9
+ms.openlocfilehash: 0568eea52d7c426a8a96b365df5eb307acb9825c
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55559547"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56252345"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Configurazione di applicazioni per Azure Rights Management
 

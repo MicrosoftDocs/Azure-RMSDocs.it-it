@@ -3,20 +3,21 @@ title: Novità e note sulla versione
 description: Descrive importanti modifiche e funzionalità in questa versione e nelle versioni precedenti.
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/11/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 260e6103c90db3da70f4feddfe65b9a8008fc95c
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: e5f6ea66a3cb8b6a0447cc116552d94cd0f4f669
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071761"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257075"
 ---
 # <a name="whats-new-and-release-notes"></a>Novità e note sulla versione
 

@@ -3,20 +3,21 @@ title: Attivare Azure RMS con il portale di Azure - AIP
 description: Istruzioni per l'attivazione della protezione nel portale di Azure, che consentono all'organizzazione di iniziare a proteggere documenti e messaggi di posta elettronica.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 12/12/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: askipteam
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: cb90744828595b6cbf68962368fd001f3ca0eebd
-ms.sourcegitcommit: 1d2912b4f0f6e8d7596cbf31e2143a783158ab11
+ms.openlocfilehash: 3f03c055760e6d9e677db40250a6f32d6a112d72
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53304826"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258981"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-portal"></a>Attivare Azure Rights Management dal portale di Azure
 

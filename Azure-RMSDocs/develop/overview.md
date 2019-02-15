@@ -1,23 +1,24 @@
 ---
 title: Panoramica - RMS SDK 4.2 | Azure RMS
-description: AD RMS e AZURE RMS sono tecnologie di protezione che consentono di proteggere le informazioni digitali da usi non autorizzati.
+description: AD RMS e AZURE RMS sono tecnologie di protezione che consenteno di proteggere le informazioni digitali da usi non autorizzati.
 keywords: ''
 author: bryanla
 ms.author: bryanla
-manager: mbaldwin
+manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8A13494E-C1D7-407D-BCD1-A406915EA578
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: a1d251daac312e8a6b39da445cdffc0bca3343ea
-ms.sourcegitcommit: bd2b31dd97c8ae08c28b0f5688517110a726e3a1
+ms.openlocfilehash: 933ced2a2942867657098203c58246ca42caa43b
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54071378"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56253677"
 ---
 # <a name="overview"></a>Panoramica
 
