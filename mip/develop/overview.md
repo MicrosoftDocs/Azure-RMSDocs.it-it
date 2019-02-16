@@ -7,12 +7,12 @@ ms.topic: overview
 ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: bryanla
-ms.openlocfilehash: 656f4af77ce3e26515c5e54103e8d3b341439271
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: b78214fc2260fd984b6b853866f72b92dd5cc11e
+ms.sourcegitcommit: 4ed27f50545aae1a58cc922202959d427bcba7ac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56250743"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56323564"
 ---
 # <a name="overview"></a>Panoramica
 
@@ -40,6 +40,10 @@ I casi d'uso generali per MIP SDK includono:
 * Un CASB (Cloud Access Security Broker) o una soluzione di prevenzione della perdita dei dati che prende decisioni programmatiche per i dati crittografati con Azure Information Protection.
 
 Per un elenco più esaustivo, vedere i [concetti relativi alle API](concept-apis-use-cases.md).
+
+MIP SDK è supportato nelle piattaforme seguenti:
+
+[!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
 ## <a name="next-steps"></a>Passaggi successivi
 
