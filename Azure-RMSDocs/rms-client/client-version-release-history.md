@@ -3,18 +3,19 @@ title: 'Client di Azure Information Protection: cronologia delle versioni e crit
 description: Informazioni sugli elementi nuovi o modificati in una versione del client di Azure Information Protection per Windows e sui criteri del ciclo di vita per il supporto.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/24/2019
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ef6bd888c46d7882ada03554813a943861fb51d
-ms.sourcegitcommit: cf52083dde756ad3620c05fc74f012d8a7abacf3
+ms.openlocfilehash: a715dbe743ef9b4018865df22ccdea347f888192
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898818"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266098"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection: Cronologia delle versioni e criteri per il supporto
 
@@ -127,9 +128,12 @@ Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
 
 - Excel supporta ora i [contrassegni visivi](../configure-policy-markings.md) in colori diversi.
 
-- Per le distribuzioni esistenti di S/MIME, una nuova impostazione client avanzata (in anteprima) per configurare un'etichetta per applicare automaticamente la protezione S/MIME in Outlook. [Altre informazioni](client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
+- Per le distribuzioni esistenti di S/MIME, una nuova impostazione client avanzata per configurare un'etichetta per applicare automaticamente la protezione S/MIME in Outlook. [Altre informazioni](client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
 
 - Una nuova impostazione client avanzata, come alternativa alla modifica del Registro di sistema per evitare richieste di accesso per il servizio Azure Information Protection per i [computer disconnessi](client-admin-guide-customizations.md#support-for-disconnected-computers).
+
+- Una nuova impostazione client avanzata per [supportare l'ordine delle etichette secondarie](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) quando si usa l'impostazione dei criteri seguente:
+    - **Per i messaggi di posta elettronica con allegati, applica un'etichetta corrispondente alla classificazione più elevata di questi allegati**
 
 **Correzioni**:
 

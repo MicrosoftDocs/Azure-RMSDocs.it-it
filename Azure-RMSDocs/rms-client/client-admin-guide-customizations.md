@@ -3,19 +3,20 @@ title: Configurazioni personalizzate per il client Azure Information Protection
 description: Informazioni sulla personalizzazione del client Azure Information Protection per Windows.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 02/02/2019
+manager: barbkess
+ms.date: 02/14/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3612c0848cf77a57636186f5f9683a2ac7f1c5ec
-ms.sourcegitcommit: be05adc7750e22c110b261882de0389b9dfb2726
+ms.openlocfilehash: f41dde8fda216084ef9399c0a0e4d7b09c1e79fb
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55651565"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266132"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -46,6 +47,7 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 |Impostazione|Scenario e istruzioni|
 |----------------|---------------|
 |DisableDNF|[Nascondere o visualizzare il pulsante Non inoltrare in Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
+|CompareSubLabelsInAttachmentAction|[Abilitare il supporto dell'ordinamento delle etichette secondarie](#enable-order-support-for-sublabels-on-attachments) 
 |EnableBarHiding|[Nascondere in modo permanente la barra di Azure Information Protection](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[Rendere disponibili o non disponibili agli utenti le opzioni relative alle autorizzazioni personalizzate](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
 |EnablePDFv2Protection|[Non proteggere i file PDF usando lo standard ISO per la crittografia dei file PDF](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
@@ -219,6 +221,21 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 - Valore: **True**
 
+## <a name="enable-order-support-for-sublabels-on-attachments"></a>Abilitare il supporto dell'ordinamento delle etichette secondarie per gli allegati
+
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
+
+Usare questa impostazione quando sono disponibili etichette secondarie ed è stata configurata l'[impostazione di criteri](../configure-policy-settings.md) seguente:
+
+- **Per i messaggi di posta elettronica con allegati, applica un'etichetta corrispondente alla classificazione più elevata di questi allegati**
+
+Configurare le stringhe seguenti:
+
+- Chiave: **CompareSubLabelsInAttachmentAction**
+
+- Valore: **True**
+
+Senza questa impostazione, al messaggio di posta elettronica viene applicata la prima etichetta secondaria individuata dall'etichetta padre più in alto.
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Abilitare la classificazione consigliata in Outlook
 
@@ -251,7 +268,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="configure-a-label-to-apply-smime-protection-in-outlook"></a>Configurare un'etichetta per applicare la protezione S/MIME in Outlook
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Questa impostazione è in anteprima e potrebbe cambiare.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
 
 Usare questa impostazione solo se è disponibile una [distribuzione di S/MIME](https://docs.microsoft.com/office365/SecurityCompliance/s-mime-for-message-signing-and-encryption) funzionante e si vuole che un'etichetta applichi automaticamente questo metodo di protezione per i messaggi di posta elettronica anziché la protezione di Rights Management da Azure Information Protection. La protezione risultante è identica a quella applicata quando un utente seleziona manualmente le opzioni di S/MIME da Outlook.
 

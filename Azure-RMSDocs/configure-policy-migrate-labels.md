@@ -3,18 +3,19 @@ title: Eseguire la migrazione di etichette di Azure Information Protection al Ce
 description: Eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365 per i client che supportano l'etichettatura unificata.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 02/05/2019
+manager: barbkess
+ms.date: 02/12/2019
 ms.topic: article
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 8525d20d452004b6ba46dd438dd042f98f603d6d
-ms.sourcegitcommit: e8b4a09db9aad7f6540b4c2fd92b1e8008c999b1
+ms.openlocfilehash: 27fe7dce81856140caf5e30451caabc3df9a2894
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737274"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254782"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-the-office-365-security--compliance-center"></a>Come eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365
 
@@ -24,8 +25,6 @@ ms.locfileid: "55737274"
 > Questa funzionalità è disponibile in anteprima ed esegue la migrazione del tenant a una nuova piattaforma. La migrazione non è reversibile. La nuova piattaforma supporta l'etichettatura unificata. Le etichette create e gestite possono essere usate da più client e servizi.
 
 Eseguire la migrazione delle etichette se si vuole usarle nel Centro sicurezza e conformità di Office 365, in cui possono essere pubblicate e quindi scaricate dai [client che supportano l'etichettatura unificata](#clients-that-support-unified-labeling). Il client Azure Information Protection continuerà a scaricare le etichette con i rispettivi criteri di Azure Information Protection dal portale di Azure. 
-
-Dopo la migrazione delle etichette è possibile modificarle nel portale di Azure o nel Centro sicurezza e di conformità di Office 365, dove i rispettivi client scaricheranno la stessa modifica.
 
 Prima di passare alle istruzioni dettagliate per la migrazione delle etichette può essere utile leggere queste domande frequenti:
 
@@ -61,6 +60,8 @@ Prima di eseguire la migrazione delle etichette, prendere nota delle seguenti mo
 - Modelli di protezione:
     
     - Anche i modelli che usano una chiave basata sul cloud e fanno parte di una configurazione di etichetta vengono sottoposti a migrazione con l'etichetta. Gli altri modelli di protezione non vengono sottoposti a migrazione. 
+    
+    - Se sono presenti etichette configurate per un modello predefinito, [convertire questi modelli in etichette](configure-policy-templates.md#to-convert-templates-to-labels) prima della migrazione delle etichette. Questa configurazione non bloccherà la migrazione delle etichette, ma non è supportata nel Centro sicurezza e conformità.
     
     - Dopo la migrazione di un'etichetta con le impostazioni di protezione basate sul cloud, l'ambito risultante del modello di protezione è l'ambito definito nel portale di Azure (o mediante il modulo PowerShell AADRM) e quello definito nel Centro sicurezza e conformità. 
 

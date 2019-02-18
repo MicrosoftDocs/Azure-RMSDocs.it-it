@@ -3,19 +3,20 @@ title: Domande frequenti su Azure Information Protection
 description: Alcune domande frequenti su Azure Information Protection e sul relativo servizio di protezione dei dati, Azure Rights Management (Azure RMS).
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 02/07/2019
+manager: barbkess
+ms.date: 02/15/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 51ff1b6185661c4ab0c4204e035ffe981a5a9710
-ms.sourcegitcommit: 308e6da8de1a3456a0ba807c5388b8891b861d5b
+ms.openlocfilehash: fb200717efee9c34e8c3d6fc41ccab82478f5755
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55854188"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258063"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
@@ -102,6 +103,8 @@ Gli amministratori globali per un tenant di Office 365 o di Azure AD possono ovv
 - **Amministratore di Information Protection**: questo ruolo di amministratore di Azure Active Directory consente a un amministratore di configurare tutti gli aspetti di Azure Information Protection, ma non altri servizi. Un amministratore con questo ruolo può attivare e disattivare il servizio di protezione Azure Rights Management, configurare le etichette e le impostazioni di protezione e configurare i criteri di Azure Information Protection. Un amministratore con questo ruolo può anche eseguire tutti i cmdlet PowerShell per il [client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) e per il [modulo AADRM](administer-powershell.md). 
     
     Per assegnare un utente a questo ruolo amministrativo, vedere [Assegnare un utente ai ruoli di amministratore in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
+
+- **Ruolo con autorizzazioni di lettura per la sicurezza**: Solo per le [funzionalità di analisi di Azure Information Protection](reports-aip.md). Questo ruolo di amministratore di Azure Active Directory consente agli amministratori di visualizzare come vengono usate le etichette, monitorare l'accesso degli utenti ai documenti e ai messaggi di posta elettronica etichettati ed eventuali modifiche della classificazione, nonché di identificare documenti che contengono informazioni sensibili che devono essere protette. Dato che questa funzionalità usa Azure Log Analytics, è necessario disporre anche di un [ruolo Controllo degli accessi in base al ruolo](reports-aip.md#permissions-required-for-azure-information-protection-analytics) di supporto.
 
 - **Amministratore della sicurezza**: questo ruolo di amministratore di Azure Active Directory consente a un amministratore di configurare tutti gli aspetti di Azure Information Protection nel portale di Azure e di configurare alcuni aspetti di altri servizi di Azure. Un amministratore con questo ruolo non può eseguire alcuno dei [cmdlet PowerShell del modulo AADRM](administer-powershell.md).
     

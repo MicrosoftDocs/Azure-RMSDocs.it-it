@@ -3,19 +3,20 @@ title: Configurare i criteri con ambito per Azure Information Protection - AIP
 description: Per configurare impostazioni ed etichette diverse per utenti specifici, è necessario configurare un criterio con ambito per Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 11/05/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b134785-0353-4109-8fa7-096d1caa2242
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 8d10ddf21842d944773c7d088c4c452bc618c29c
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 505e02c48a0090551cfb57ffb57605af5b27470c
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024341"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56255144"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Come configurare i criteri di Azure Information Protection per utenti specifici con i criteri con ambito
 
@@ -41,7 +42,7 @@ Per configurare un criterio con ambito per Azure Information Protection:
 
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Dall'opzione di menu **Classificazioni** > **Criteri**: nel pannello **Azure Information Protection - Criteri** selezionare **Aggiungi un nuovo criterio**. Viene visualizzato il pannello **Criteri** con i criteri globali esistenti. Nel pannello ora è possibile configurare i nuovi criteri con ambito.
+2. Dall'opzione di menu **Classificazioni** > **Criteri**: Nel pannello **Azure Information Protection - Criteri** selezionare **Aggiungi un nuovo criterio**. Viene visualizzato il pannello **Criteri** con i criteri globali esistenti. Nel pannello ora è possibile configurare i nuovi criteri con ambito.
 
 3. Specificare un nome e una descrizione per il criterio visibile solo agli amministratori nel portale di Azure. Il nome deve essere univoco nel tenant. Quindi selezionare **Specify which users/groups get this policy** (Specificare gli utenti e i gruppi ai quali applicare i criteri) e nei pannelli successivi cercare e selezionare gli utenti e i gruppi per i criteri. Le etichette e le impostazioni configurate in questo criterio con ambito verranno applicate solo a tali utenti.
     

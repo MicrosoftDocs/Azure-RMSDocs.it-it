@@ -3,17 +3,18 @@ title: Configurare i contrassegni visivi per un'etichetta di Azure Information P
 description: Quando si assegna un'etichetta a un documento o a un messaggio di posta elettronica, è possibile selezionare diverse opzioni per rendere facilmente visibile la classificazione scelta. Questi contrassegni visivi sono un'intestazione, un piè di pagina e una filigrana.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/24/2019
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: 549bf29cc6c4c70dd91d6e36ad3fbe26baa69535
-ms.sourcegitcommit: 1c1d7067ae7aa8b822bb4ecd23cd7a644989e38c
+ms.openlocfilehash: b0ff274917a78fa031dfe3e6f0665cef104111a9
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55067738"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258964"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
@@ -35,7 +36,7 @@ Altre informazioni su questi contrassegni visivi:
 
 - Lunghezze massime delle stringhe:
     
-    - La lunghezza massima della stringa che è possibile immettere per le intestazioni e i piè di pagina è 1024 caratteri. Excel ha tuttavia un limite totale di 255 caratteri per le intestazioni e i piè di pagina. Quando si immette una stringa lunga per le intestazioni e i piè di pagina, in Excel questo testo può essere troncato a 255 caratteri o meno.
+    - La lunghezza massima della stringa che è possibile immettere per le intestazioni e i piè di pagina è 1024 caratteri. Excel ha tuttavia un limite totale di 255 caratteri per le intestazioni e i piè di pagina. Questo limite include I caratteri che non sono visibili in Excel, ad esempio I codici di formattazione. Quando si immette una stringa lunga per le intestazioni e i piè di pagina, in Excel questo testo può essere troncato a 255 caratteri o meno.
     
     - La lunghezza massima della stringa delle filigrane che è possibile immettere è di 255 caratteri.
 

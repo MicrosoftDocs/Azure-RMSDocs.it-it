@@ -3,16 +3,17 @@ title: Esercitazione - Configurare le impostazioni dei criteri di Azure Informat
 description: Esercitazione introduttiva che illustra la configurazione delle impostazioni dei criteri di Azure Information Protection per agevolare la classificazione dei documenti e dei messaggi di posta elettronica dell'organizzazione.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 01/24/2019
+manager: barbkess
+ms.date: 02/15/2019
 ms.topic: tutorial
+ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 324f13a61d287fd883e9336c6e17250e9ab9ff9f
-ms.sourcegitcommit: 9a9c55c96a7e99bcca742e759a3f08507e3b9801
+ms.openlocfilehash: f906a5b9fc9f678d1f452e347fb3739b4ff96586
+ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55231022"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56266081"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Esercitazione: Configurare impostazioni dei criteri di Azure Information Protection che interagiscono tra loro
 
@@ -157,7 +158,7 @@ La barra di Information Protection viene nuovamente visualizzata per consentire 
 
 Poiché l'etichetta viene selezionata prima di inviare il messaggio di posta elettronica, non è necessario inviare effettivamente il messaggio per verificare il funzionamento di questa impostazione dei criteri. È possibile chiudere il messaggio di posta elettronica senza inviarlo o salvarlo.
 
-Tuttavia, si potrebbe voler ripetere questo esercizio allegando anche un altro documento con una classificazione superiore (etichetta secondaria di **Riservatezza elevata**). Si noterà quindi in che modo il prompt viene modificato per applicare l'etichetta di classificazione superiore.
+Tuttavia, si potrebbe voler ripetere questo esercizio allegando anche un altro documento con una classificazione superiore (etichetta secondaria di **Riservatezza elevata**). Si noterà quindi in che modo il prompt viene modificato per applicare l'etichetta di classificazione superiore. Se si testano più allegati con etichette secondarie che hanno la stessa etichetta padre, è necessario configurare [un'impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) per supportare il relativo ordinamento nel portale di Azure.
 
 ## <a name="clean-up-resources"></a>Pulizia delle risorse
 

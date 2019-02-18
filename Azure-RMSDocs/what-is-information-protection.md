@@ -3,17 +3,18 @@ title: Che cos'è Azure Information Protection? - AIP
 description: Informazioni generali sul servizio Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 11/05/2018
+manager: barbkess
+ms.date: 02/13/2019
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: cd8a88e2-3555-4be2-9637-3cdee992f2c8
-ms.openlocfilehash: 9c7fd9070e6cc07a7b16043dd480addd2d0a4313
-ms.sourcegitcommit: d06594550e7ff94b4098a2aa379ef2b19bc6123d
+ms.openlocfilehash: 147982a700f2b2033b77d0b02568990a164cf555
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53024340"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56257859"
 ---
 # <a name="what-is-azure-information-protection"></a>Che cos'è Azure Information Protection?
 
@@ -80,7 +81,7 @@ Quando un documento viene protetto, utenti e amministratori possono usare un sit
 
 ### <a name="additional-integration-for-email"></a>Integrazione aggiuntiva per la posta elettronica
 
-Usando Azure Information Protection con Exchange Online si ottiene un ulteriore vantaggio, ovvero la possibilità di inviare messaggi di posta elettronica protetti a qualsiasi utente, con la certezza che possano essere letti su qualsiasi dispositivo.
+Quando si usa Azure Information Protection con Exchange Online, si ottiene un vantaggio aggiuntivo: la possibilità di inviare messaggi di posta elettronica protetti a qualsiasi utente, con la certezza che possano essere letti in qualsiasi dispositivo.
 
 Ad esempio, gli utenti hanno l'esigenza di inviare informazioni riservate a indirizzi di posta elettronica personali **Gmail**, **Hotmail** o **Microsoft** oppure a utenti che non hanno un account in Office 365 o Azure AD. Questi messaggi di posta elettronica deve essere crittografati sia nella posizione di archiviazione che in transito e devono essere letti solo dai destinatari originali.
 
@@ -113,17 +114,19 @@ Per gli archivi dati nel cloud, usare Microsoft Cloud App Security per applicare
 
 - Versione di valutazione gratuita: [Enterprise Mobility + Security E5](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7)
 
-- Opzioni di abbonamento e prezzi: [Prezzi di Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)
+- Opzioni e prezzi per la sottoscrizione: [Prezzi di Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)
 
-- Download del client: [Azure Information Protection client](https://www.microsoft.com/en-us/download/details.aspx?id=53018) (Client di Azure Information Protection)
+- Scaricare il client: [Client di Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018)
 
-- Download di un manuale dell'utente personalizzabile: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Manuale d'uso di Azure Information Protection per utenti finali)
+- Scaricare una guida alla distribuzione per i responsabili decisionali aziendali: [Azure Information Protection Deployment Acceleration Guide](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Deployment-Acceleration-Guide/ba-p/334423) (Guida per velocizzare l'adozione e la distribuzione di Azure Information Protection)
+
+- Scaricare un manuale dell'utente personalizzabile: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Manuale d'uso di Azure Information Protection per utenti finali)
 
 - Domande frequenti: [Domande frequenti su Azure Information Protection](faqs.md)
 
 - Yammer: [Azure Information Protection](https://www.yammer.com/AskIPTeam)
 
-Altre risorse: [Informazioni e supporto per Azure Information Protection](information-support.md)
+Risorse aggiuntive: [Informazioni e supporto per Azure Information Protection](information-support.md)
 
 ### <a name="microsoft-ignite"></a>Microsoft Ignite
 

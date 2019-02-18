@@ -3,19 +3,20 @@ title: Configurare i criteri di Azure Information Protection - AIP
 description: Per configurare le funzioni di classificazione, aggiunta di etichette e protezione, è necessario configurare i criteri di Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
-ms.date: 11/13/2018
+ms.date: 02/15/2019
+manager: barbkess
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3085799d9cb8da168c68a1a2eea04528daeb7737
-ms.sourcegitcommit: 9dc6da0fb7f96b37ed8eadd43bacd1c8a1a55af8
+ms.openlocfilehash: 03b0aa0ef3b5f2a8cb232059fe748b243e067f76
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54394041"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56258709"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -65,6 +66,8 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
     
     > [!NOTE] 
     > Se è stata eseguita la migrazione del tenant all'archivio di etichettatura unificata, per gestire le etichette dal portale di Azure, l'account deve essere anche autorizzato ad accedere al Centro sicurezza e conformità di Office 365. [Altre informazioni](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    
+    - Usare il **Ruolo con autorizzazioni di lettura per la sicurezza** per le [funzionalità di analisi di Azure Information Protection](reports-aip.md).
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Per accedere al pannello Azure Information Protection per la prima volta
 

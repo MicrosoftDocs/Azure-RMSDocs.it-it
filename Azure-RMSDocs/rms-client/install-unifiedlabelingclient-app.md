@@ -3,19 +3,20 @@ title: Scaricare e installare il client per l'etichettatura unificata di Azure I
 description: Istruzioni per gli utenti per installare la versione di anteprima del client che supporta l'etichettatura unificata di Azure Information Protection per Windows, in modo da potere classificare e proteggere documenti e messaggi di posta elettronica.
 author: cabailey
 ms.author: cabailey
-manager: mbaldwin
+manager: barbkess
 ms.date: 10/17/2018
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5d2f5c07ebc7f4844b0d35879ae00c7b9066cb6d
-ms.sourcegitcommit: 6a732226a3c97fc06fcf815fbbb24a2e2faae209
+ms.openlocfilehash: 6ee27b9aedd35ae135fc7150a3211be43ca2f092
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49359005"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56250892"
 ---
 # <a name="download-and-install-the-azure-information-protection-unified-labeling-client-preview"></a>Scaricare e installare il client per l'etichettatura unificata di Azure Information Protection (anteprima)
 
@@ -69,5 +70,5 @@ L'installazione è ora completa ed è possibile usare il client per l'etichettat
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sulle risorse di archiviazione usate dal Centro sicurezza e conformità di Office 365 per l'etichettatura unificata, vedere il post di blog [Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492) (Annuncio di disponibilità della gestione dell'etichettatura unificata nel Centro sicurezza e conformità).
+Per altre informazioni sull'archivio di etichettatura unificata ora usato dal Centro sicurezza e conformità di Office 365, leggere il post di blog seguente: [Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492) (Annuncio della disponibilità della gestione dell'etichettatura unificata nel Centro sicurezza e conformità).
 
