@@ -4,14 +4,15 @@ description: Questo articolo illustra le modalità di creazione e uso dei gestor
 author: BryanLa
 ms.service: information-protection
 ms.topic: conceptual
+ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: bryanla
-ms.openlocfilehash: 6b2916a3937892353f4389a59b5e48356deda603
-ms.sourcegitcommit: 823a14784f4b34288f221e3b3cb41bbd1d5ef3a6
-ms.translationtype: HT
+ms.openlocfilehash: b021f5a05ad484b32af3a189c10522564da6d86d
+ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47453368"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56254850"
 ---
 # <a name="microsoft-information-protection-sdk---file-handler-concepts"></a>Microsoft Information Protection SDK - Concetti relativi ai gestori di file
 
@@ -50,9 +51,9 @@ Il primo passaggio necessario per la gestione di qualsiasi file nell'API File co
 
 Per creare `FileHandler` è sufficiente chiamare la funzione `CreateFileHandlerAsync` di `FileEngine` usando il modello promise/future.
 
-`CreateFileHandlerAsync` accetta tre parametri: il percorso del file che deve essere letto o modificato, il `mip::FileHandler::Observer` per le notifiche degli eventi asincroni e la promessa per il `FileHandler`.
+`CreateFileHandlerAsync` accetta tre parametri: Il percorso del file che deve essere letto o modificato, il `mip::FileHandler::Observer` per le notifiche degli eventi asincroni e il suggerimento per il `FileHandler`.
 
-**Nota:** la classe `mip::FileHandler::Observer` deve essere implementata in una classe derivata perché `CreateFileHandler` richiede l'oggetto `Observer`. 
+**Nota:** La classe `mip::FileHandler::Observer` deve essere implementata in una classe derivata perché `CreateFileHandler` richiede l'oggetto `Observer`. 
 
 ```cpp
 auto createFileHandlerPromise = std::make_shared<std::promise<std::shared_ptr<mip::FileHandler>>>();
@@ -132,7 +133,7 @@ Il passaggio finale per confermare qualsiasi modifica apportata a un file in MIP
 
 Per implementare la funzione di commit, si ritorna al modello promise/future creando una promessa per un `bool`. La funzione `CommitAsync()` restituirà true se l'operazione ha esito positivo o false se ha esito negativo per qualsiasi motivo. 
 
-Dopo aver creato `promise` e `future`, viene chiamata la funzione `CommitAsync()` specificando due parametri: il percorso del file di output (`std::string`) e la promessa. Infine, il risultato viene ottenuto recuperando il valore dell'oggetto `future`.
+Dopo aver creato il `promise` e `future`, `CommitAsync()` viene chiamato e due i parametri specificati: Il percorso di file di output (`std::string`) e il suggerimento. Infine, il risultato viene ottenuto recuperando il valore dell'oggetto `future`.
 
 ```cpp
 auto commitPromise = std::make_shared<std::promise<bool>>();
@@ -141,7 +142,7 @@ handler->CommitAsync(outputFile, commitPromise);
 auto wasCommitted = commitFuture.get();
 ```
 
-**Importante:** il `FileHandler` non aggiornerà o sovrascriverà i file esistenti. Spetta allo sviluppatore implementare la **sostituzione** del file in corso di etichettatura. 
+**Importante:** Il `FileHandler` non verranno aggiornati o sovrascrivere i file esistenti. Spetta allo sviluppatore implementare la **sostituzione** del file in corso di etichettatura. 
 
 Se si scrive un'etichetta in **FileA.docx**, verrà creata una copia del file, **FileB.docx**, con l'etichetta applicata. È necessario scrivere codice per rimuovere/rinominare **FileA.docx** e rinominare **FileB.docx**.
 
