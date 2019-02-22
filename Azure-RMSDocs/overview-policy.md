@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5ecccb6a8d26d3ae074270e46250952d4cc9b4f3
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 29f573ae997431d621a616eccb9591c830ae8e9c
+ms.sourcegitcommit: 1fe9720526a2ff814cd5d353249b16497cfcaadc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253936"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425930"
 ---
 # <a name="overview-of-the-azure-information-protection-policy"></a>Panoramica dei criteri di Azure Information Protection
 
@@ -50,7 +50,6 @@ Quando un'etichetta è configurata con etichette secondarie, gli utenti non poss
 Le etichette di Azure Information Protection possono essere usate con l'intera gamma di dati che in genere vengono creati e archiviati da un'organizzazione, dalla classificazione minima per i dati personali alla classificazione più elevata per dati particolarmente riservati. 
 
 È possibile usare le etichette predefinite così come sono oppure personalizzarle, eliminarle e crearne di nuove. Per istruzioni complete, vedere [Configurazione dei criteri di Azure Information Protection](configure-policy.md).
-
 
 ## <a name="next-steps"></a>Passaggi successivi
 
