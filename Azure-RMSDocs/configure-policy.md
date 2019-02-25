@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 03b0aa0ef3b5f2a8cb232059fe748b243e067f76
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: b12c3451517f3e2832ed36b00d60c401973a0ebb
+ms.sourcegitcommit: 1fe9720526a2ff814cd5d353249b16497cfcaadc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258709"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425947"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -58,16 +58,17 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
 
 - Usare un account che dispone di uno dei seguenti [ruoli di amministratore](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-  - **Amministratore di Information Protection**
-
+    - **Amministratore di Information Protection**
+    
+    - **Ruolo con autorizzazioni di lettura per la sicurezza** solo per le [funzionalità di analisi di Azure Information Protection](reports-aip.md)
+    
   - **Amministratore della sicurezza**
-
+    
   - **Amministratore globale / Amministratore società**
     
     > [!NOTE] 
-    > Se è stata eseguita la migrazione del tenant all'archivio di etichettatura unificata, per gestire le etichette dal portale di Azure, l'account deve essere anche autorizzato ad accedere al Centro sicurezza e conformità di Office 365. [Altre informazioni](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
-    
-    - Usare il **Ruolo con autorizzazioni di lettura per la sicurezza** per le [funzionalità di analisi di Azure Information Protection](reports-aip.md).
+    > Se è stata eseguita la migrazione del tenant all'archivio di etichettatura unificata, per gestire Azure Information Protection dal portale di Azure, l'account deve essere un amministratore globale o uno dei ruoli elencati ed essere autorizzato ad accedere al Centro sicurezza e conformità di Office 365. [Altre informazioni](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Per accedere al pannello Azure Information Protection per la prima volta
 
@@ -146,6 +147,16 @@ Usare le informazioni seguenti per configurare i criteri di Azure Information Pr
 - [Come configurare etichette per lingue diverse](configure-policy-languages.md)
 
 - [Come eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365](configure-policy-migrate-labels.md)
+
+## <a name="label-information-stored-in-emails-and-documents"></a>Etichettare le informazioni archiviate in documenti e messaggi di posta elettronica
+
+Quando viene applicata un'etichetta a un documento o un messaggio di posta elettronica, l'etichetta viene archiviata nei metadati in modo che le applicazioni e i servizi possano leggerla:
+
+- Nei messaggi di posta elettronica queste informazioni sono archiviate nell'intestazione X-: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
+
+- Per i documenti di Word (DOC e DOCX), i fogli di calcolo di Excel (XLS e XLSX), le presentazioni di PowerPoint (PPT e PPTX) e i documenti PDF, questi metadati vengono archiviati nella proprietà personalizzata seguente: **MSIP_Label_\<GUID>_Enabled=True**  
+
+Per identificare il GUID per un'etichetta, individuare il valore dell'ID etichetta nel pannello **Etichetta** del portale di Azure, quando si visualizzano o si configurano i criteri di Azure Information Protection. Per i file a cui sono state applicate etichette, è anche possibile eseguire il cmdlet di PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) per identificare il GUID (MainLabelId o SubLabelId). Quando un'etichetta ha etichette secondarie, specificare sempre il GUID della sola etichetta secondaria e non dell'etichetta padre.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

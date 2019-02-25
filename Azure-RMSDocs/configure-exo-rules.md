@@ -4,19 +4,19 @@ description: Istruzioni ed esempi per configurare le regole del flusso di posta 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 02/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: f35ab27167514b9b94a4cb4be2e6196dccd5280d
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: f46e919665d110665ed85b5e2e5c6a979a1958e9
+ms.sourcegitcommit: 1fe9720526a2ff814cd5d353249b16497cfcaadc
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265996"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425964"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configurazione delle regole del flusso di posta di Exchange Online per le etichette di Azure Information Protection
 
@@ -34,17 +34,13 @@ Le regole del flusso di posta che applicano la protezione come azione vengono ig
 
 Per altre informazioni sulla configurazione di regole del flusso di posta per crittografare i messaggi di posta elettronica, vedere [Definire le regole del flusso di posta elettronica per crittografare i messaggi di posta elettronica in Office 365](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8) nella documentazione di Office. 
 
-## <a name="where-labels-are-stored-in-emails-and-documents"></a>Posizione di archiviazione delle etichette nei messaggi di posta elettronica e nei documenti
+## <a name="prerequisite-know-your-label-guid"></a>Prerequisito: Conoscere il GUID dell'etichetta
 
-Poiché un'etichetta di Azure Information Protection viene archiviata nei metadati, le regole del flusso di posta in Exchange Online possono leggere queste informazioni per i messaggi e i documenti allegati:
+Poiché un'etichetta di Azure Information Protection viene archiviata nei metadati, le regole del flusso di posta in Exchange Online possono leggere queste informazioni per i messaggi e i documenti di Office allegati. Le regole del flusso di posta non supportano l'analisi dei metadati per i documenti PDF.
 
-- Nei messaggi di posta elettronica queste informazioni sono archiviate nell'intestazione X-: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
+Prima di configurare le regole del flusso di posta per identificare i messaggi e i documenti etichettati, assicurarsi di conoscere il GUID dell'etichetta di Azure Information Protection che si vuole usare. 
 
-- Per i documenti di Word (DOC e DOCX), i fogli di calcolo di Excel (XLS e XLSX) e le presentazioni di PowerPoint (PPT e PPTX), questi metadati vengono archiviati nella proprietà personalizzata seguente: **MSIP_Label_\<GUID>_Enabled=True**  
-
-Per identificare il GUID per un'etichetta, individuare il valore dell'ID etichetta nel pannello **Etichetta**, quando si visualizzano o si configurano i criteri di Azure Information Protection nel portale di Azure. Per i file a cui sono state applicate etichette, è anche possibile eseguire il cmdlet di PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) per identificare il GUID (MainLabelId o SubLabelId). Quando un'etichetta ha etichette secondarie, specificare sempre il GUID della sola etichetta secondaria e non dell'etichetta padre.
-
-Prima di configurare le regole del flusso di posta, assicurarsi di conoscere il GUID dell'etichetta di Azure Information Protection che si vuole usare.
+Per altre informazioni sui metadati archiviati da un'etichetta e su come identificare i GUID di etichetta, vedere [Etichettare le informazioni archiviate in documenti e messaggi di posta elettronica](configure-policy.md#label-information-stored-in-emails-and-documents).
 
 ## <a name="example-configurations"></a>Configurazioni di esempio
 

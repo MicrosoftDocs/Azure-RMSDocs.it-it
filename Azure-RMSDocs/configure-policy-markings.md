@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: b0ff274917a78fa031dfe3e6f0665cef104111a9
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: a7894ba71ea136d5b7cf1fbe067ff434d942c1d0
+ms.sourcegitcommit: 176a1b0d5ffa1a44484325d25815b4cfaa371af5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258964"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56654700"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
@@ -128,7 +128,7 @@ Esempi:
     
     `${If.App.WP}This content is ${If.End}Confidential`
     
-    In Word e Power Point l'etichetta applica il testo della filigrana "Questo contenuto è riservato". In Excel, l'etichetta applica il testo della filigrana "Riservato". In Outlook, l'etichetta non ha alcun testo della filigrana perché le filigrane come contrassegni visivi non sono supportate per Outlook.
+    In Word e PowerPoint l'etichetta applica il testo della filigrana "Questo contenuto è riservato". In Excel, l'etichetta applica il testo della filigrana "Riservato". In Outlook, l'etichetta non applica alcun testo della filigrana perché le filigrane come contrassegni visivi non sono supportate per Outlook.
 
 ### <a name="setting-the-font-name"></a>Impostazione del nome del tipo di carattere
 

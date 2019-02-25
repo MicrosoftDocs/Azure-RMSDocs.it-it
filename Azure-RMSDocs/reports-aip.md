@@ -12,12 +12,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 2a6602303e51c4bc1cce803ec43841a52992c8b8
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 54a18f52a3b1cd5656d1d2c3cfbd675062b06c47
+ms.sourcegitcommit: 95b7df32ecccdab4b80bc3a9f6433dc1c33dbbc5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254493"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407726"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -120,19 +120,22 @@ Per visualizzare i report di Azure Information Protection e creare report person
 
 Specificatamente per la funzionalità di analisi di Azure Information Protection, è possibile usare il ruolo di amministratore di Azure AD Ruolo con autorizzazioni di lettura per la sicurezza come alternativa ad altri ruoli di Azure AD che supportano la gestione di Azure Information Protection.
 
-Poiché questa funzionalità usa Azure Log Analytics, il controllo degli accessi in base al ruolo per Azure controlla anche l'accesso all'area di lavoro. Se si ha familiarità con i ruoli di Azure, può risultare utile leggere [Differenze tra i ruoli di controllo dell'accesso in base al ruolo di Azure e i ruoli di amministratore di Azure AD](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles).
+Poiché questa funzionalità usa Azure Log Analytics, il controllo degli accessi in base al ruolo per Azure controlla anche l'accesso all'area di lavoro. Se non si ha familiarità con i ruoli di Azure, può risultare utile leggere [Differenze tra i ruoli di controllo dell'accesso in base al ruolo di Azure e i ruoli di amministratore di Azure AD](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#differences-between-azure-rbac-roles-and-azure-ad-administrator-roles).
 
 Dettagli:
 
 1. Per accedere al pannello della funzionalità di analisi di Azure Information Protection nel portale di Azure, è necessario disporre di uno dei [ruoli di amministratore di Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) seguenti:
     
-    - **Ruolo con autorizzazioni di lettura per la sicurezza**
-    
     - **Amministratore di Information Protection**
     
+    - **Ruolo con autorizzazioni di lettura per la sicurezza**
+  
    - **Amministratore della sicurezza**
     
     - **Amministratore globale**
+    
+    > [!NOTE] 
+    > Se è stata eseguita la migrazione del tenant all'archivio di etichettatura unificata, l'account deve essere un amministratore globale o uno dei ruoli elencati ed essere autorizzato ad accedere al Centro sicurezza e conformità di Office 365. [Altre informazioni](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 2. Per usare Azure Log Analytics, è necessario disporre di uno dei [ruoli di Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions) o dei [ruoli di Azure](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments) standard seguenti:
     
@@ -148,7 +151,7 @@ Dettagli:
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>Configurare un'area di lavoro di Log Analytics per i report
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**. 
+1. Se non già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](https://portal.azure.com) con un account che dispone delle [autorizzazioni necessarie per le analisi di Azure Information Protection](#permissions-required-for-azure-information-protection-analytics). Quindi passare al pannello **Azure Information Protection**. 
     
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
     
@@ -171,8 +174,6 @@ Nel pannello Azure Information Protection trovare le opzioni del menu **Dashboar
 - **Report di utilizzo (anteprima)**: usare questo report per vedere come vengono usate le etichette. 
 
 - **Log attività (anteprima)**: usare questo report per visualizzare le azioni di etichettatura dagli utenti e per i dispositivi e i percorsi di file.
-    
-    La distribuzione di questo report ai tenant è in corso, pertanto, se non è visibile, riprovare tra qualche giorno.
     
     Questo report contiene un'opzione **Colonne** che consente di visualizzare ulteriori informazioni sulle attività rispetto alla visualizzazione predefinita.
 
