@@ -4,17 +4,17 @@ description: È possibile proteggere i documenti e i messaggi di posta elettroni
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/24/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 74ec040b0999bfc9c2f3693cc8ceb3e0d438d67c
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 11063a208e21ef121ba0a3a5007c76635f63af17
+ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255207"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017150"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
@@ -73,7 +73,7 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
         
         Se gli utenti non hanno le autorizzazioni per rimuovere la protezione di Rights Management e selezionano un'etichetta configurata con l'opzione **Rimuovi protezione**, viene visualizzato il messaggio seguente: **Azure Information Protection non può applicare questa etichetta. Se il problema persiste, contattare l'amministratore.**
 
-4. Se si è selezionata l'opzione **Proteggi**, selezionare ora **Protezione** per aprire il pannello **Protezione**:
+4. Se si è selezionato **Proteggi**, il pannello **Protezione** si apre automaticamente se è stata selezionata una delle altre opzioni. Se questo nuovo pannello non si apre automaticamente, selezionare **Protezione**:
     
     ![Configurare la protezione per un'etichetta di Azure Information Protection](./media/info-protect-protection-bar-configured.png)
 
@@ -95,11 +95,13 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
     
      Per selezionare un modello predefinito, il modello deve essere pubblicato (non archiviato) e non deve essere già collegato a un'altra etichetta. Quando si seleziona questa opzione è possibile usare il pulsante **Modifica modello** per [convertire il modello in un'etichetta](configure-policy-templates.md#to-convert-templates-to-labels).
     
-     Suggerimento: se si creano e modificano regolarmente modelli personalizzati, può risultare utile consultare [Attività che precedentemente venivano eseguite con il portale di Azure classico](migrate-portal.md).
+     se si creano e modificano regolarmente modelli personalizzati, può risultare utile consultare [Attività che precedentemente venivano eseguite con il portale di Azure classico](migrate-portal.md).
 
-7. Se è stata selezionata l'opzione **Imposta autorizzazioni** per **Azure (cloud key)** (Azure - Chiave cloud), questa opzione consente di configurare le stesse impostazioni configurabili in un modello. 
+7. Se si è selezionato **Impostazione autorizzazioni** per **Azure (chiave cloud)**, questa opzione consente di selezionare utenti e diritti di utilizzo. 
     
-    Selezionare **Aggiungere autorizzazioni**, quindi, nel pannello **Aggiungere autorizzazioni**, selezionare il primo set di utenti e gruppi che avranno il diritto di usare il contenuto che verrà protetto per l'etichetta selezionata:
+    Se non si selezionano utenti e si seleziona **OK** in questo pannello, quindi **Salva** nel pannello **Etichetta**: l'etichetta viene configurata per applicare la protezione in modo che solo la persona che applica l'etichetta possa aprire il documento o il messaggio di posta elettronica senza restrizioni. Questa configurazione è anche nota come "Solo per me" e potrebbe essere questo il risultato richiesto, in modo che un utente possa salvare un file in qualsiasi posizione ed essere certo che nessun altro possa aprirlo. Se questo risultato corrisponde al requisito e non è necessario che altri utenti collaborino al contenuto protetto, non selezionare **Aggiungi autorizzazioni**. Dopo aver salvato l'etichetta, all'apertura successiva di questo pannello **Protezione**, viene visualizzato **IPC_USER_ID_OWNER** per **Utenti** e **Comproprietario** per **Autorizzazioni** in base a questa configurazione.
+    
+    Per specificare gli utenti che possono aprire i documenti e i messaggi di posta elettronica protetti, selezionare **Aggiungi autorizzazioni**. Nel pannello **Aggiungi autorizzazioni** selezionare quindi il primo set di utenti e gruppi che avranno il diritto di usare il contenuto che verrà protetto per l'etichetta selezionata:
     
    - Scegliere **Selezionare dall'elenco** in cui è possibile aggiungere tutti gli utenti dell'organizzazione selezionando **Aggiungi \<nome organizzazione> - Tutti i membri**. Questa impostazione consente di escludere gli account guest. In alternativa è possibile selezionare **Aggiungi eventuali utenti autenticati** o esplorare la directory.
         
@@ -177,7 +179,9 @@ Quando fa clic su **Salva**, le modifiche diventano automaticamente disponibili 
 
 Le etichette secondarie **Tutti i dipendenti** e **Solo destinatari** delle etichette **Riservato** e **Riservatezza elevata** dei [criteri predefiniti](configure-policy-default.md) sono esempi di configurazione delle etichette per l'applicazione della protezione. È anche possibile usare gli esempi seguenti per la configurazione di diversi scenari. 
 
-Per ognuno degli esempi seguenti, nel pannello \<*nome etichetta*> selezionare **Proteggi** e quindi **Protezione** per aprire il pannello **Protezione**.
+Per ogni esempio seguente, nel pannello \<*nome etichetta*> selezionare **Proteggi**. Se il pannello **Protezione** non si apre automaticamente, selezionare **Protezione** per aprire questo pannello che consente di selezionare le opzioni di configurazione di protezione:
+
+![Configurazione di un'etichetta di Azure Information Protection per la protezione](./media/info-protect-protection-bar-configured.png)
 
 ### <a name="example-1-label-that-applies-do-not-forward-to-send-a-protected-email-to-a-gmail-account"></a>Esempio 1: etichetta che applica Non inoltrare per l'invio di un messaggio di posta elettronica protetto a un account Gmail
 
