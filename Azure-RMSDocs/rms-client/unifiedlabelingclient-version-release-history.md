@@ -4,18 +4,18 @@ description: Vedere le informazioni sulla versione del client per l'etichettatur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/23/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 939ae3e367b14f722c38be023c70d9dcce21004f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 699e2807c700b90b98bbc855dd8792aa607696f3
+ms.sourcegitcommit: 8ba63c0f4cd7d2ad7614af4ea9cfe8aec7fac4c0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254833"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956254"
 ---
 # <a name="azure-information-protection-unified-labeling-client-version-release-information"></a>Client per l'etichettatura unificata di Azure Information Protection: informazioni sulla versione
 
@@ -28,53 +28,71 @@ ms.locfileid: "56254833"
 
 ### <a name="release-information"></a>Informazioni sulla versione
 
-Usare le informazioni seguenti per vedere il supporto offerto dalla versione di anteprima più recente del client per l'etichettatura unificata di Azure Information Protection. 
+Usare le informazioni seguenti per vedere il supporto offerto dalla versione di anteprima più recente del client per l'etichettatura unificata di Azure Information Protection.
 
-Questo client viene installato come un componente aggiuntivo di Office per i computer Windows e ha gli stessi [prerequisiti](../requirements.md) del client Azure Information Protection che scarica i criteri da Azure.
+Il client installa un componente aggiuntivo di Office per i computer Windows, un'estensione per Esplora File e un modulo di PowerShell. Questo client ha gli stessi [prerequisiti](../requirements.md) del client Azure Information Protection che scarica i criteri da Azure.
+
+Per confrontare funzioni e funzionalità con quelle del client Azure Information Protection, vedere [Confronto delle funzionalità dei client](use-client.md#feature-comparisons-for-the-clients).
 
 ## <a name="current-preview-version"></a>Versione di anteprima corrente
 
-**Data di rilascio**: 16/10/2018
+**Data di rilascio**: 25/02/2019
 
 Questa versione di anteprima del client per l'etichettatura unificata di Azure Information Protection per Windows supporta le funzionalità seguenti: 
 
-- Aggiornamento dal client di Azure Information Protection
+- Aggiornamento dal client Azure Information Protection.
 
-- Etichettatura manuale che applica la classificazione e protezione per Word, Excel, PowerPoint e Outlook.
+- Assegnazione di etichette manuale, automatica e consigliata: Usare l'**applicazione automatica di etichette** del Centro sicurezza e conformità di Office 365 per configurare l'applicazione di etichette automatica e consigliata. Per altre informazioni, vedere [Applicare automaticamente un'etichetta di riservatezza al contenuto](/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
 
-- Contrassegno visivo (intestazioni, piè di pagina, filigrane)
+- Esplora file, azioni con il pulsante destro del mouse per classificare e proteggere i file, rimuovere la protezione e applicare autorizzazioni personalizzate.
 
-- Etichettatura predefinita 
+- Un visualizzatore per file di testo e di immagine protetti, file PDF protetti e file protetti in modo generico.
 
-- Etichette che applicano Non inoltrare
+- Comandi di PowerShell seguenti per le seguenti operazioni:
+    - [Impostare o rimuovere un'etichetta in un documento](/powershell/module/azureinformationprotection/set-aipfilelabel)
+    - [Applicare un'etichetta a un documento dopo averne esaminato il contenuto](/powershell/module/azureinformationprotection/set-aipfileclassification)
+    - [Leggere le informazioni dell'etichetta applicate a un documento](/powershell/module/azureinformationprotection/get-aipfilestatus)
+    - [Eseguire l'autenticazione per supportare le sessioni automatiche di PowerShell](/powershell/module/azureinformationprotection/set-aipauthentication)
 
-- Richieste di giustificazione se gli utenti abbassano il livello di riservatezza
+- Supporto per la creazione di report centrale con l'[analisi di Azure Information Protection](../reports-aip.md).
 
-- Finestra di dialogo Guida e commenti che include impostazioni per il ripristino e l'esportazione di log
+- Le impostazioni seguenti per etichette e criteri:
+    - Contrassegno visivo (intestazioni, piè di pagina, filigrane)
+    - Etichettatura predefinita
+    - Etichette che applicano Non inoltrare e vengono visualizzate solo in Outlook
+    - Richieste di giustificazione se gli utenti abbassano il livello di classificazione o rimuovono un'etichetta
+    - Colori per le etichette
 
-- Aggiornamento di criteri dal Centro sicurezza e conformità ogni 4 ore, per ogni app di Office.
+- Aggiornamento di criteri dal Centro sicurezza e conformità:
+    - Ogni volta che viene avviata un'app Office e ogni 4 ore
+    - Quando si fa clic con il pulsante destro del mouse per classificare e proteggere un file o una cartella
+    - Quando si eseguono i cmdlet di PowerShell per l'assegnazione di etichette e la protezione
 
-Questa versione di anteprima non supporta le funzionalità seguenti:
+- Una finestra di dialogo Guida e commenti che include impostazioni per il ripristino e l'esportazione di log.
 
-- Classificazione automatica e consigliata
+### <a name="features-that-do-not-work-in-this-preview-version-or-are-not-available"></a>Funzionalità che non funzionano in questa versione di anteprima o non sono disponibili
 
-- Autorizzazioni personalizzate
+Include:
 
-- Un visualizzatore per file di testo e di immagine protetti, file PDF protetti e file protetti in modo generico
+- Lo scanner per individuare, etichettare e proteggere i file negli archivi dati locali non è disponibile.
 
-- Esplora file, azioni eseguite tramite il pulsante destro del mouse per classificare e proteggere file
+- Le etichette di cui viene eseguita la migrazione dal portale di Azure e che sono configurate per la protezione HYOK vengono visualizzate nel client quando vengono pubblicate, ma non applicano la protezione.
 
-- Comandi di PowerShell per classificare e proteggere i file dalla riga di comando
+- Non è disponibile il set completo di cmdlet del modulo AzureInformationProtection, che include i cmdlet che si connettono direttamente a un servizio di protezione. Ad esempio, Unprotect-RMSFile per rimuovere la protezione dai file in blocco.
 
-- Lo scanner per individuare, etichettare e proteggere i file negli archivi dati locali
-
-- Supporto per lingue diverse dall'inglese
+Per informazioni dettagliate, vedere le [tabelle di confronto](use-client.md#feature-comparisons-for-the-clients).
 
 ## <a name="instructions"></a>Istruzioni
 
 1. Installare il client usando le istruzioni seguenti: [Manuale dell'utente: Scaricare e installare il client di Azure Information Protection (anteprima)](install-unifiedlabelingclient-app.md) 
 
-2. Usare il client nelle app di Office come nel client Azure Information Protection, con l'eccezione del pulsante della barra multifunzione di Office che è denominato **Sensibilità** anziché **Proteggi**:
+2. Usare il client come si farebbe con il client Azure Information Protection, con le eccezioni seguenti per le app Office:
+    - Il pulsante sulla barra multifunzione di Office è denominato **Riservatezza** invece di **Proteggi**.
+    - Gli amministratori non possono visualizzare la barra di Information Protection per impostazione predefinita, ma gli utenti possono visualizzarla selezionando **Mostra barra** dal pulsante **Riservatezza**. 
+    - Non sono disponibili le autorizzazioni personalizzate
+    - L'opzione Rileva e revoca non è disponibile
+    
+    Per le istruzioni per l'utente:
     
     - [Classificare un file o un messaggio di posta elettronica](client-classify.md) 
     
@@ -83,6 +101,3 @@ Questa versione di anteprima non supporta le funzionalità seguenti:
 3. Condividere l'esperienza: 
     
     - Per inviare commenti e suggerimenti o porre domande su questa anteprima del client, usare il [sito di Yammer per Azure Information Protection](https://www.yammer.com/AskIPTeam).
-    
-    - Per segnalare problemi con questo client di anteprima, usare l'opzione **Guida e commenti** del pulsante **Sensibilità** della barra multifunzione. Nella finestra di dialogo esportare i log e quindi allegare tali file di log al messaggio di posta elettronica che viene creato con l'opzione **Segnala un problema**. 
-

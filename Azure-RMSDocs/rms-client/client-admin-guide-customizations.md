@@ -4,19 +4,19 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/22/2019
+ms.date: 02/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e336a025d680f6c3a016f1b9b2c36976f765824f
-ms.sourcegitcommit: ca2df73f8bba6bf0f58eea5bee15e356705276d6
+ms.openlocfilehash: 59395fe48eff2a3b1df0ae25dded1a66af9f453f
+ms.sourcegitcommit: f19ee03fd3f6f39df1a28ab389b43fbd8f9e9072
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590003"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56891095"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -62,6 +62,7 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 |RemoveExternalContentMarkingInApp|[Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Aggiungere "Segnala un problema" per gli utenti](#add-report-an-issue-for-users)|
 |RunPolicyInBackground|[Attivare l'esecuzione continua della classificazione in background](#turn-on-classification-to-run-continuously-in-the-background)|
+|ScannerConcurrencyLevel|[Limitare il numero di thread usati dallo scanner](#limit-the-number-of-threads-used-by-the-scanner)|
 |SyncPropertyName|[Etichettare un documento di Office usando una proprietà personalizzata esistente](#label-an-office-document-by-using-an-existing-custom-property)|
 |SyncPropertyState|[Etichettare un documento di Office usando una proprietà personalizzata esistente](#label-an-office-document-by-using-an-existing-custom-property)|
 
@@ -618,6 +619,20 @@ Si supponga, ad esempio, di avere una colonna di SharePoint denominata **Classif
 Per etichettare un documento di Office con uno di questi valori di classificazione, impostare **SyncPropertyName** su **Classificazione** e **SyncPropertyState** a **OneWay**. 
 
 A questo punto, quando un utente apre e salva uno di questi documenti di Office, il documento viene etichettato come **Pubblico**, **Generale** o **Riservatezza elevata\Tutti i dipendenti** se sono presenti etichette con questi nomi nei criteri di Azure Information Protection. In assenza di etichette con questi nomi, il documento rimane senza etichetta.
+
+## <a name="limit-the-number-of-threads-used-by-the-scanner"></a>Limitare il numero di thread usati dallo scanner
+
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
+
+Per impostazione predefinita, lo scanner usa tutte le risorse del processore disponibili nel computer che esegue il servizio scanner. Se è necessario limitare l'utilizzo della CPU mentre questo servizio esegue l'analisi, creare la seguente impostazione avanzata. 
+
+Come valore specificare il numero di thread simultanei che lo scanner può eseguire in parallelo. Lo scanner usa un thread separato per ogni file analizzato, quindi questa configurazione della limitazione definisce anche il numero di file che possono essere analizzati in parallelo. 
+
+Quando si configura il valore per il test per la prima volta, è consigliabile specificare 2 per ogni core e quindi monitorare i risultati. Se ad esempio si esegue lo scanner in un computer con 4 core, impostare prima il valore su 8. Se necessario, aumentare o diminuire questo numero, in base alle prestazioni risultanti richieste per il computer dello scanner e la velocità di analisi. 
+
+- Chiave: **ScannerConcurrencyLevel**
+
+- Valore: **\<numero massimo di utenti simultanei>**
 
 ## <a name="disable-the-low-integrity-level-for-the-scanner"></a>Disabilitare il livello di integrità basso per lo scanner
 

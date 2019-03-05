@@ -4,19 +4,19 @@ description: Alcune domande frequenti su Azure Information Protection e sul rela
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fb200717efee9c34e8c3d6fc41ccab82478f5755
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 4e7ffa1fa4121d7a0aecc4474d50497c7c300b1b
+ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258063"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56756148"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
@@ -61,6 +61,8 @@ Le etichette di riservatezza sono disponibili a livello generale nel Centro sicu
     È consigliabile completare la configurazione delle etichette nel portale di Azure prima di eseguire la migrazione delle etichette. Questa strategia evita la duplicazione delle etichette durante il processo di migrazione e la successiva modifica nel Centro sicurezza e conformità.
 
 Prima di eseguire la migrazione delle etichette, è importante conoscere le [considerazioni e le impostazioni delle etichette che non sono supportate nel Centro sicurezza e conformità](configure-policy-migrate-labels.md#considerations-for-unified-labels).
+
+Vedere anche [Quale client in anteprima installare per il test delle nuove funzionalità?](faqs-infoprotect.md#which-preview-client-do-i-install-for-testing-new-functionality)
 
 ## <a name="after-ive-migrated-my-labels-which-management-portal-do-i-use"></a>Dopo aver eseguito la migrazione delle etichette, qual è il portale di gestione da usare?
 

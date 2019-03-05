@@ -4,16 +4,16 @@ description: Esercitazione introduttiva per la modifica dei criteri di Azure Inf
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/29/2019
+ms.date: 02/29/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: e081da93ecc486de22746e4b19e2bb5334b44c66
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 75ba59498918ecb2d987e2fe794c624f8f340498
+ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254357"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017235"
 ---
 # <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Esercitazione: Modificare i criteri di Azure Information Protection e creare una nuova etichetta
 
@@ -108,7 +108,7 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
     
     Il testo descrive come si intende usare l'etichetta selezionata ed è visibile agli utenti come descrizione comando, per aiutarli a decidere quale etichetta selezionare.
 
-3. Per **Configurare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta** selezionare **Proteggi**, quindi selezionare **Protezione**:
+3. Per **Configurare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta**, selezionare **Proteggi**, che apre automaticamente il pannello **Protezione** selezionando l'opzione **Protezione**:
     
     ![Configurazione di un'etichetta di Azure Information Protection per la protezione](./media/info-protect-protection-bar-configured.png) 
     

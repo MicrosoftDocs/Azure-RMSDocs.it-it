@@ -4,19 +4,19 @@ description: Di seguito sono riportate alcune possibili domande sulle funzionali
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/25/2019
+ms.date: 02/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 37aea835e34c0db50d277922edbfd044e43afd71
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 5945b115d4b20f7ef8c42d51e76066cca5c994bd
+ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256811"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56756199"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Domande frequenti sulla classificazione e l'assegnazione di etichette in Azure Information Protection
 
@@ -42,6 +42,18 @@ Per sapere quando saranno disponibili altre funzionalità e nuove caratteristich
 > - funzionalità di etichettatura inclusa nelle app di Office per dispositivi mobili (iOS e Android) e per i computer Mac. Per altre informazioni, vedere [Applicare etichette di riservatezza a documenti e messaggi di posta elettronica all'interno di Office](https://aka.ms/officemipdocs).
 
 Per richiedere nuove funzionalità e votare per le richieste, visitare il [sito User Voice](https://msip.uservoice.com/) per Azure Information Protection.
+
+## <a name="which-preview-client-do-i-install-for-testing-new-functionality"></a>Quale client in anteprima installare per il test delle nuove funzionalità?
+
+Esistono attualmente due client in anteprima per Windows: 
+
+- Il **client Azure Information Protection** che scarica le etichette e le impostazioni dei criteri dal portale di Azure. Questo client si basa sulla versione con disponibilità generale del client.
+
+- Il **client per l'etichettatura unificata Azure Information Protection** che scarica le etichette e le impostazioni dei criteri dal Centro sicurezza e conformità di Office 365. Questo client è la seconda versione di anteprima.
+
+È consigliabile eseguire i test con il client per l'etichettatura unificata Azure Information Protection se le funzionalità e il set di funzioni correnti soddisfano i requisiti aziendali. In caso contrario o se nel portale di Azure sono state configurate etichette di cui non è ancora stata eseguita la [migrazione all'archivio etichette unificato](configure-policy-migrate-labels.md), usare il client Azure Information Protection.
+
+Per altre informazioni, inclusa una tabella per il confronto di funzioni e funzionalità, vedere [Scegliere il client Azure Information Protection da usare](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
 
 ## <a name="do-i-need-to-be-a-global-admin-to-configure-classification-and-labels"></a>È necessario essere un amministratore globale per configurare la classificazione e le etichette?
 

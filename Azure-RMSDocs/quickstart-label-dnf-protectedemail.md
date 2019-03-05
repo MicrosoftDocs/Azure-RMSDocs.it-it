@@ -4,16 +4,16 @@ description: Configurare un'etichetta che protegge un messaggio di posta elettro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/15/2019
+ms.date: 02/29/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 67fe46f94b83b219794251c9d7e1500f756669a3
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: c41f190cf2e91378b03922caf3211c19ec01e871
+ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56266030"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017201"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Guida introduttiva: configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate
 
@@ -77,7 +77,9 @@ Per un elenco completo dei prerequisiti per l'uso di Azure Information Protectio
 
 2. Dall'opzione di menu **Classificazioni** > **Etichette**: nel pannello **Azure Information Protection - Etichette** selezionare l'etichetta che si vuole configurare per l'applicazione della protezione. 
 
-3. Nel pannello **Etichetta** individuare **Configurare il modello RMS per la protezione di documenti e messaggi di posta elettronica contenenti questa etichetta**. Selezionare **Proteggi** e quindi **Protezione**:
+3. Nel pannello **Etichetta** individuare **Configurare il modello RMS per la protezione di documenti e messaggi di posta elettronica contenenti questa etichetta**. Selezionare **Proteggi** e il pannello **Protezione** si apre automaticamente se in precedenza è stata selezionata una delle altre opzioni. 
+    
+    Se il pannello **Protezione** non si apre automaticamente, selezionare **Protezione**:
     
     ![Configurare la protezione per un'etichetta di Azure Information Protection](./media/info-protect-protection-bar-configured.png).
 

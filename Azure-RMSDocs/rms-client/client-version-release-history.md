@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a715dbe743ef9b4018865df22ccdea347f888192
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: bdc92908e04cd0568a7417a269168b34058790e3
+ms.sourcegitcommit: abb08a85dfd7a0f100b381934a3a211da6727178
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56266098"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828669"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection: Cronologia delle versioni e criteri per il supporto
 
@@ -83,7 +83,7 @@ Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
 
 - Il client Azure Information Protection rimuove correttamente la protezione da un documento PDF protetto dall'applicazione RMS sharing.
 
-- Per i percorsi e i nomi di file non vengono visualizzano punti interrogativi (**?**) anziché caratteri non ASCII nell'analisi di Azure Information Protection con le impostazioni locali inglesi per il sistema operativo di invio.
+- Per i percorsi e i nomi di file non vengono visualizzano punti interrogativi (**?**) invece dei caratteri non ASCII nell'analisi di Azure Information Protection con le impostazioni locali inglesi per il sistema operativo di invio.
 
 - Le etichette secondarie vengono applicate correttamente da PowerShell e dallo scanner quando viene configurata l'etichetta padre per le autorizzazioni definite dall'utente.
 
