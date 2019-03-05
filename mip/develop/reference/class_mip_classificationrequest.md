@@ -1,18 +1,18 @@
 ---
 title: classe mip::ClassificationRequest
 description: Documenta la classe mip::classificationrequest di Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 81e9a7276b78817f3d2f409cc403992284d23ceb
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 61846ef3b8273169e9cf38eaa173eac3ba18dae6
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259151"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330520"
 ---
 # <a name="class-mipclassificationrequest"></a>classe mip::ClassificationRequest 
 Classe che contiene la richiesta di una chiamata di classificazione dello stato di esecuzione.

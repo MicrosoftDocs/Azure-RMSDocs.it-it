@@ -1,18 +1,18 @@
 ---
 title: Classe mip::FileEngine::Settings
 description: 'Classe MIP:: fileengine di Microsoft Information Protection (MIP) SDK vengono documentate.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 8430c9586b971729eb573619d3416993cd5dc1bc
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 2621d4ec6f8aa8bf20c6fa3bb2bc0350d88333f4
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252640"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332600"
 ---
 # <a name="class-mipfileenginesettings"></a>Classe mip::FileEngine::Settings 
   

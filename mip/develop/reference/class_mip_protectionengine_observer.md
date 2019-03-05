@@ -1,18 +1,18 @@
 ---
 title: Classe mip::ProtectionEngine::Observer
 description: Documenta la classe mip::protectionengine di Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 6d413ade2e3a83a155c22a2d27b8450c4fc629a6
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: a023d3e5a3ea557f5766db71906b540c6c5d87f9
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259763"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57331835"
 ---
 # <a name="class-mipprotectionengineobserver"></a>Classe mip::ProtectionEngine::Observer 
 Interfaccia che riceve le notifiche correlate a [ProtectionEngine](class_mip_protectionengine.md).

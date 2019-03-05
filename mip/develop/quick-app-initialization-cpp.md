@@ -1,18 +1,18 @@
 ---
 title: Guida introduttiva - inizializzazione per i client di Microsoft Information Protection (MIP) SDK C++
 description: Guida introduttiva che mostra come scrivere la logica di inizializzazione per applicazioni client di Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/18/2019
-ms.author: bryanla
-ms.openlocfilehash: 75ca6b078275a2547cebfee3c78f8741f367c788
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: d30111953bdc55b66b712f30de0c50d28ac07303
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255955"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57331920"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Guida introduttiva: Inizializzazione dell'applicazione client (C++)
 
@@ -322,7 +322,7 @@ Come accennato, sono richiesti per i client SDK tramite MIP APIs oggetti del pro
 
 3. Sostituire tutti i valori segnaposto nel codice appena incollato, usando le costanti stringa di origine:
 
-   | Segnaposto | Value | Esempio |
+   | Segnaposto | Valore | Esempio |
    |:----------- |:----- |:--------|
    | \<application-id\> | L'Azure AD Application ID (GUID) assegnati all'applicazione registrata nel [passaggio #2 della "il programma di installazione di Microsoft Information Protection SDK e della configurazione"](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory) articolo. Sostituire 2 istanze. | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
    | \<application-name\> | Nome descrittivo definito dall'utente per l'applicazione. Deve contenere caratteri ASCII validi (escluso ';') e idealmente corrisponde al nome dell'applicazione è usato nella registrazione di Azure AD. | `"AppInitialization"` |

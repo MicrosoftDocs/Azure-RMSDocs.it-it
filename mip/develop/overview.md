@@ -1,18 +1,18 @@
 ---
 title: Panoramica - Microsoft Information Protection SDK.
 description: Microsoft Information Protection (MIP) riunisce i servizi di classificazione, etichettatura e protezione di Microsoft in una singola esperienza di amministrazione e in un singolo Software Development Kit (SDK).
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.date: 01/18/2019
-ms.author: bryanla
-ms.openlocfilehash: b78214fc2260fd984b6b853866f72b92dd5cc11e
-ms.sourcegitcommit: 4ed27f50545aae1a58cc922202959d427bcba7ac
+ms.author: mbaldwin
+ms.openlocfilehash: d8efb7ceef890d0c2a0ea72f64d3047e0cfb25a5
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56323564"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57329608"
 ---
 # <a name="overview"></a>Panoramica
 

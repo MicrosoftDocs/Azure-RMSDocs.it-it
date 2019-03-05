@@ -1,18 +1,18 @@
 ---
 title: Classe mip::Action
 description: 'Classe MIP:: Action di Microsoft Information Protection (MIP) SDK vengono documentate.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 90a4182c10c55518634f0dd0cd84c7ba1c31640e
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: a8e160f31dbf696944f7c6d40c1826233883f00a
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256006"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332248"
 ---
 # <a name="class-mipaction"></a>Classe mip::Action 
 Interfaccia per un'azione. Ogni azione viene convertita in un passaggio che deve essere eseguito dall'applicazione per applicare l'etichetta (definita nei criteri)

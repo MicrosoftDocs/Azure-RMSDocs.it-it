@@ -1,18 +1,18 @@
 ---
 title: Classe mip::ProtectionProfile::Settings
 description: 'Classe MIP:: protectionprofile di Microsoft Information Protection (MIP) SDK vengono documentate.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 1998d693de33d2bc37043f750d85296f7282add4
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 5e609cfbc7cbb705dafbee239726c0cfd15cc38a
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254816"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57331869"
 ---
 # <a name="class-mipprotectionprofilesettings"></a>Classe mip::ProtectionProfile::Settings 
 Oggetto [Settings](class_mip_protectionprofile_settings.md) usato da [ProtectionProfile](class_mip_protectionprofile.md) durante la creazione e per tutta la sua durata.

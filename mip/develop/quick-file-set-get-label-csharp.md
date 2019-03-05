@@ -2,18 +2,18 @@
 title: Guida introduttiva - Set e get un'etichetta di riservatezza in un file usando il C# MIP SDK
 description: Una Guida introduttiva che illustra come usare il Wrapper di .NET SDK di Microsoft informazioni protezione per impostare e ottenere un'etichetta di riservatezza su un file.
 services: information-protection
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/09/2019
-ms.author: bryanla
-ms.openlocfilehash: 3af8cd7e21124d6e6ac70407d8e366eb6d88da45
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: 3ee178c493b99cfecd3f6cd04a680f47acf45412
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253609"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333248"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Guida introduttiva: Impostare e ottenere un'etichetta di riservatezza (C#)
 
@@ -70,7 +70,7 @@ Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un fi
 
 3. Sostituire i valori segnaposto nel codice sorgente appena incollato, usando i valori seguenti:
 
-   | Segnaposto | Value |
+   | Segnaposto | Valore |
    |:----------- |:----- |
    | \<input-file-path\> | Percorso completo di un file di input di test, ad esempio: `c:\\Test\\Test.docx`. |
    | \<label-id\> | ID etichetta di riservatezza, copiato dalla console di output nell'Avvio rapido precedente, ad esempio: `f42a3342-8706-4288-bd31-ebb85995028z`. |

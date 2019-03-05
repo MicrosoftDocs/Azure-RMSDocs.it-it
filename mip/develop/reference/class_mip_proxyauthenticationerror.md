@@ -1,18 +1,18 @@
 ---
 title: classe mip::ProxyAuthenticationError
 description: Documenta la classe mip::proxyauthenticationerror di Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: f80bfae7ceac3e21303e074334c879a5759a3561
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: dd18c9086c231b6f578df4b38553112c6b25b2cf
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252708"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330815"
 ---
 # <a name="class-mipproxyauthenticationerror"></a>classe mip::ProxyAuthenticationError 
 Errore di autenticazione proxy.

@@ -1,18 +1,18 @@
 ---
 title: Classe mip::ProtectByTemplateAction
 description: 'Classe MIP:: protectbytemplateaction di Microsoft Information Protection (MIP) SDK vengono documentate.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 9c7114bcceceef537675ca04499cdb1710456b82
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 7ce74109d555761dde5710c4628faed3b3a2523e
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252368"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333467"
 ---
 # <a name="class-mipprotectbytemplateaction"></a>Classe mip::ProtectByTemplateAction 
 Classe di azione che specifica l'aggiunta della protezione basata su modello al documento.

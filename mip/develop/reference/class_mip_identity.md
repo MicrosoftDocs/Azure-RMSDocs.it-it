@@ -1,18 +1,18 @@
 ---
 title: classe MIP
 description: Documenta la classe di MIP di Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: b315dd23ee6dddfc20b2c4d9febdbfabd0ecb3b3
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: d7d7baee4212ad90739a2c5343e7c09050a16b5e
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255105"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330441"
 ---
 # <a name="class-mipidentity"></a>classe MIP 
 Astrazione per l'identità.

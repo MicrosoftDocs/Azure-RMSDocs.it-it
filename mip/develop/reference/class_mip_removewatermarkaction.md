@@ -1,18 +1,18 @@
 ---
 title: Classe mip::RemoveWatermarkAction
 description: 'Classe MIP:: removewatermarkaction di Microsoft Information Protection (MIP) SDK vengono documentate.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 85b772c3d6de943e87cd87ab7a2124427a43b3bf
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 99993007fb80fdc0cb714f2769c36bd1cef63059
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258641"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332874"
 ---
 # <a name="class-mipremovewatermarkaction"></a>Classe mip::RemoveWatermarkAction 
 Classe di azione che specifica la rimozione della filigrana dal documento.

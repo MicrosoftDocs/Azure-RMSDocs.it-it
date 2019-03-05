@@ -1,18 +1,18 @@
 ---
 title: Concetti - Oggetto profilo dell'API File
 description: Questo articolo aiuterà a comprendere i concetti relativi all'oggetto profilo dell'API File, che viene creato durante l'inizializzazione dell'applicazione.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: 74937f5ef157c7807b6519a6490af80d46de6a8f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: 19b283017929858299bd1c9af0662b170b4206f0
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254512"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333011"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-profile-concepts"></a>Microsoft Information Protection SDK - Concetti relativi al profilo dell'API File
 

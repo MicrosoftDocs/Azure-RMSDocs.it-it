@@ -1,18 +1,18 @@
 ---
 title: Classe mip::AccessDeniedError
 description: Documenta la classe mip::accessdeniederror di Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: e309a923a31faa983eaf3f0b446a480bcc253edb
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 87d6c4421404ee9b15b85b1f1f00cb7e30314e98
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254629"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330968"
 ---
 # <a name="class-mipaccessdeniederror"></a>Classe mip::AccessDeniedError 
 L'utente non è riuscito a ottenere l'accesso al contenuto, ad esempio per mancanza di autorizzazioni o contenuto revocato.

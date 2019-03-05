@@ -1,18 +1,18 @@
 ---
 title: Concetti - Oggetto motore dell'API Criteri
 description: Questo articolo aiuterà a comprendere i concetti relativi all'oggetto motore dell'API Criteri, che viene creato durante l'inizializzazione dell'applicazione.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: 9aac5fb0e010c8c73776c3e62ba9e98bdeff77d2
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: 52d036bd58d4f24710e765ca42493696a3cd5330
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252776"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333382"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-engine-concepts"></a>Microsoft Information Protection SDK - Concetti relativi al motore dell'API Criteri
 

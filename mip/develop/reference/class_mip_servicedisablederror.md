@@ -1,18 +1,18 @@
 ---
 title: classe mip::ServiceDisabledError
 description: Documenta la classe mip::servicedisablederror di Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: adcdb252fc6988f7047c2d940ddaa19fe8381405
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 2d64d576ead748adff7804e9068aab71fd9672c0
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256448"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57333025"
 ---
 # <a name="class-mipservicedisablederror"></a>classe mip::ServiceDisabledError 
 L'utente non è stato possibile ottenere l'accesso al contenuto a causa di un servizio viene disabilitato.

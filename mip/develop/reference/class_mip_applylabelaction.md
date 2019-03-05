@@ -1,18 +1,18 @@
 ---
 title: Classe mip::ApplyLabelAction
 description: Documenta la classe mip::applylabelaction di Microsoft Information Protection (MIP) SDK.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 58dfc0716d4c6f590a9b560f737531740fee071d
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: ad1367480497ede6c8efd33d6ebc60c4c6ca34c5
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258114"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332228"
 ---
 # <a name="class-mipapplylabelaction"></a>Classe mip::ApplyLabelAction 
 Per applicare le azioni di etichetta, è necessario che l'applicazione chiamante applichi un'etichetta specifica.

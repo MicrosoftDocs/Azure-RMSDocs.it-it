@@ -1,18 +1,18 @@
 ---
 title: Concetti - Gestori protezione nel SDK MIP.
 description: Questo articolo illustra le modalità di creazione e uso dei gestori dell'API per la chiamata di operazioni.
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 09/27/2018
-ms.author: bryanla
-ms.openlocfilehash: e345a98e69c0173ccda7b80c21a5c2c7aa9af5a3
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.author: mbaldwin
+ms.openlocfilehash: dd38b8e6c9deb45b4ce7df9ec3363ac8036a7ef4
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253025"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57330186"
 ---
 # <a name="microsoft-information-protection-sdk---protection-handler-concepts"></a>Microsoft Information Protection SDK - Concetti del gestore di protezione
 
