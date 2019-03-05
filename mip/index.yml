@@ -1,22 +1,22 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: d24f5cf1cbe8d296b1a9d608a4253afa5539a233
-ms.sourcegitcommit: 8c2de5119105cf5d5bc91fcc2202b64e5a779e7c
+ms.openlocfilehash: 7643f9eb25665d7a1bc1b2897be521cd30c06757
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56082545"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332719"
 documentType: LandingData
 title: Microsoft Information Protection
 metadata:
   title: Documentazione di Microsoft Information Protection
   description: Controllo e protezione di messaggi di posta elettronica, documenti e dati sensibili che vengono condivisi fuori dall'azienda. Dalla classificazione semplice alle etichette e alle autorizzazioni incorporate, la protezione dei dati viene ottimizzata in tutte le fasi con Microsoft Information Protection, indipendentemente da dove sono archiviati i dati e da come e con chi vengono condivisi.
-  author: BryanLa
+  author: msmbaldwin
   manager: barbkess
   ms.service: information-protection
   services: information-protection
   ms.topic: landing-page
   ms.date: 09/26/2018
-  ms.author: bryanla
+  ms.author: mbaldwin
   layout: LandingPage
 abstract:
   description: Controllo e protezione di messaggi di posta elettronica, documenti e dati sensibili che vengono condivisi fuori dall'azienda. Dalla classificazione semplice alle etichette e alle autorizzazioni incorporate, la protezione dei dati viene ottimizzata in tutte le fasi con Microsoft Information Protection, indipendentemente da dove sono archiviati i dati e da come e con chi vengono condivisi.
