@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/30/2019
+ms.date: 03/01/2019
 ms.author: mbaldwin
-ms.openlocfilehash: c61b2c08cf0cb0fc59942bad3b5bb3fdbc47832c
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: db815d17303abb0fb98b6e5936fbcd1f975d74f0
+ms.sourcegitcommit: 50e6b94bdb387cfa35d0e565b1e89f9e69563a63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331971"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57581743"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installazione e configurazione di Microsoft Information Protection (MIP) SDK 
 
@@ -219,6 +219,17 @@ Se è già stato sottoscritto un contratto di integrazione di Information Protec
 - Contatti, indirizzo di posta elettronica e numero di telefono dell'azienda per la corrispondenza relativa a situazioni critiche
 
 Dopo l'invio del messaggio di posta elettronica, consentire fino a 72 ore per un acknowledgement della ricezione.
+
+## <a name="ensure-your-app-has-the-required-runtime"></a>Verificare che l'app ha il runtime richiesto
+
+> [!NOTE]
+> Questo passaggio è necessario solo se si distribuisce l'applicazione a un computer senza Visual Studio o se l'installazione di Visual Studio non ha i componenti di Runtime di Visual C++.
+
+Le applicazioni compilate con SDK MIP richiedono il runtime di Visual C++ 2015 o Visual C++ 2017 per essere installati, se non già presenti.
+- [Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/download/details.aspx?id=53587)
+- [Microsoft Visual C++ Redistributable per Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#microsoft-visual-c-redistributable-for-visual-studio-2017)
+
+Questi funzionerà solo se l'applicazione sia stata compilata come versione. Se l'applicazione viene compilata come Debug, quindi il debug del runtime di Visual C++ DLL deve essere inclusa con l'applicazione o installato nel computer. 
 
 ## <a name="next-steps"></a>Passaggi successivi
 

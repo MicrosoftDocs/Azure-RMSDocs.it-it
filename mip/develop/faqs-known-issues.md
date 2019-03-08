@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: troubleshooting
 ms.collection: M365-security-compliance
-ms.date: 10/19/2018
+ms.date: 03/05/2019
 ms.author: mbaldwin
-ms.openlocfilehash: e548b2b6e9b32899ceff693312cf510b9fff74aa
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 97b9fdb53c103eac94e62ddb6438c57e4c9f45cc
+ms.sourcegitcommit: 50e6b94bdb387cfa35d0e565b1e89f9e69563a63
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333551"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57581726"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Problemi noti e domande frequenti di Microsoft Information Protection (MIP) SDK
 
@@ -20,7 +20,9 @@ In questo articolo vengono fornite le risposte alle domande comuni e informazion
 
 ## <a name="frequently-asked-questions"></a>Domande frequenti 
 
-### <a name="question-how-does-the-sdk-handle-strings-and-what-string-type-should-i-be-using-in-my-code"></a>Domanda: come vengono gestite le stringhe nell'SDK e quale tipo di stringa si deve usare nel codice?
+### <a name="sdk-string-handling"></a>Gestione delle stringhe SDK
+
+**Domanda**: In che modo il SDK gestisce le stringhe e il tipo di stringa è consigliabile usare nel codice?
 
 L'SDK è progettato per essere multipiattaforma e usa [UTF-8 (Unicode Transformation Format - 8 bit)](https://wikipedia.org/wiki/UTF-8) per la gestione delle stringhe. Le linee guida specifiche dipendono dalla piattaforma in uso:
 
@@ -34,14 +36,24 @@ L'SDK è progettato per essere multipiattaforma e usa [UTF-8 (Unicode Transforma
 
 ### <a name="error-file-format-not-supported"></a>Errore: "Formato di file non supportato"  
 
-| Errore | Soluzione |
-|-|-|
-|*Formato di file non supportato*| Questa eccezione si verifica quando si tenta di proteggere o assegnare un'etichetta a un file PDF firmato digitalmente o protetto da password. Per altre informazioni sulla protezione e l'assegnazione di etichette a file PDF, vedere [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) (Nuovo supporto della crittografia PDF con Microsoft Azure Information Protection).|
+**Domanda**: Il motivo per cui ottenere il seguente errore durante il tentativo di protezione o assegnare un'etichetta di un file con estensione PDF?
+
+> Formato di file non supportato
+
+Questa eccezione risultante dal tentativo di proteggere o assegnare un'etichetta di un file PDF che è stato firmato digitalmente o protetto da password. Per altre informazioni sulla protezione e l'assegnazione di etichette a file PDF, vedere [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) (Nuovo supporto della crittografia PDF con Microsoft Azure Information Protection).
 
 ### <a name="error-failed-to-parse-the-acquired-compliance-policy"></a>Errore: "Non è stato possibile analizzare il criterio di conformità acquisito"  
 
-È stato scaricato MIP SDK e sono state eseguite le applicazioni di esempio. Si usa il file di esempio per provare a elencare tutte le etichette, ma viene visualizzato l'errore seguente:
+**Domanda**: Perché viene visualizzato l'errore seguente dopo aver scaricato Microsoft Information Protection SDK e provare a usare il file di esempio per elencare tutte le etichette?
 
-| Errore | Soluzione |
-|-|-|
-|*È accaduto qualcosa non valida: Impossibile analizzare il criterio di conformità acquisito. Non è riuscita con: Tag [classe mip::CompliancePolicyParserException] non trovato: criteri, il tipo di nodo: 15, nome: No Name Found, Value: , Ancestors: <SyncFile><Content>, correlationId:[34668a40-blll-4ef8-b2af-00005aa674z9]*| Questo errore indica che non è stata eseguita la migrazione delle etichette da Azure Information Protection all'esperienza di etichettatura unificata. Vedere [Come eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365](/azure/information-protection/configure-policy-migrate-labels) per eseguire la migrazione delle etichette e quindi creare criteri per le etichette nel Centro sicurezza e conformità di Office 365. Al termine, l'esempio verrà eseguito correttamente.|
+> È accaduto qualcosa non valida: Impossibile analizzare il criterio di conformità acquisito. Non è riuscita con: Tag [classe mip::CompliancePolicyParserException] non trovato: criteri, il tipo di nodo: 15, nome: No Name Found, Value: , Ancestors: <SyncFile><Content>, correlationId:[34668a40-blll-4ef8-b2af-00005aa674z9]
+
+Ciò indica che non eseguita la migrazione le etichette di Azure Information Protection per l'assegnazione di etichette esperienza unificata. Vedere [Come eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365](/azure/information-protection/configure-policy-migrate-labels) per eseguire la migrazione delle etichette e quindi creare criteri per le etichette nel Centro sicurezza e conformità di Office 365. 
+
+### <a name="error-systemcomponentmodelwin32exception-loadlibrary-failed"></a>Errore: "System.ComponentModel.Win32Exception: LoadLibrary non riuscito"
+
+**Domanda**: Il motivo per cui ottenere l'errore seguente quando si usa il Wrapper .NET di MIP SDK?
+
+> System.ComponentModel.Win32Exception: LoadLibrary non è riuscita per: [sdk_wrapper_dotnet.dll] quando si chiama MIP. Initialize ().
+
+L'applicazione non è installato il runtime richiesto o non è stato compilato come versione. Visualizzare [assicurarsi che l'app ha il runtime richiesto](setup-configure-mip.md#ensure-your-app-has-the-required-runtime) per altre informazioni. 
