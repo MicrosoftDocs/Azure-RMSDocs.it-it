@@ -4,19 +4,19 @@ description: Istruzioni e informazioni per gli amministratori in una rete aziend
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/18/2019
+ms.date: 03/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a0addbf7d4e613ab49ea29e750fd67a3b8ef1793
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: cec2614cacffa41ef3e4a345455c582ad92682f2
+ms.sourcegitcommit: 746963b045072ea74e147895a8acda6a2e5bc9ce
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254578"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57226292"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
@@ -170,20 +170,6 @@ Dopo aver installato il client Azure Information Protection, accertarsi di forni
 - Istruzioni per l'utente online: [Guida per l'utente di Azure Information Protection](client-user-guide.md)
 
 - Scaricare un manuale dell'utente personalizzabile: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Manuale d'uso di Azure Information Protection per utenti finali)
-
-### <a name="update-macros-in-excel-spreadsheets"></a>Aggiornare le macro in fogli di calcolo di Excel
-
-In presenza di fogli di calcolo di Excel che contengono macro, modificare le macro come indicato di seguito per assicurarsi che continuino a funzionare come previsto dopo l'installazione del client Azure Information Protection:
-
-1. All'inizio della macro, aggiungere:
-
-        Application.EnableEvents = False
-
-2. Alla fine della macro, aggiungere:
-
-        Application.EnableEvents = True
-
-Per altre informazioni, vedere [Proprietà Application.EnableEvents (Excel)](https://msdn.microsoft.com/vba/excel-vba/articles/application-enableevents-property-excel).
 
 ## <a name="upgrading-and-maintaining-the-azure-information-protection-client"></a>Aggiornamento e gestione del client Azure Information Protection
 

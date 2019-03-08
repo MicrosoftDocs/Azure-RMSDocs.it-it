@@ -2,8 +2,8 @@
 title: Sviluppo dell'applicazione - AIP
 description: Materiale sussidiario per un'app console di base che implementa la protezione dei documenti con Azure Information Protection
 keywords: ''
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 03/13/2017
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 7defe49f02db6a9b63d9cf12bbd9ad1538afcf69
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 62d217f7f48d0120ed630b184131b726c21d8363
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259389"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332022"
 ---
 # <a name="developing-your-application"></a>Sviluppo dell'applicazione
 

@@ -2,8 +2,8 @@
 title: Esempi di codice Linux | Azure RMS
 description: In questo argomento sono presentati scenari elementi di codice importanti per la versione Linux di RMS SDK.
 keywords: ''
-author: bryanla
-ms.author: bryanla
+author: msmbaldwin
+ms.author: mbaldwin
 manager: barbkess
 ms.date: 02/23/2017
 ms.topic: conceptual
@@ -13,12 +13,12 @@ ms.assetid: 0F7714CA-1D3E-4846-B187-739825B7DE26
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 5e955abc9d2d8fb488fa5c425cff44ac5e8c4222
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 6a4aa43e54510df5775b4c5d73500d60e2a68d56
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255820"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57331781"
 ---
 # <a name="linux-code-examples"></a>Esempi di codice Linux
 

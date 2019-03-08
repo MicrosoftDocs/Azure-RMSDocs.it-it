@@ -2,20 +2,20 @@
 title: Come rinnovare la chiave simmetrica in Azure Information Protection
 description: Questo articolo illustra il processo di rinnovo di una chiave simmetrica in Azure Information Protection.
 keywords: ''
-author: bryanla
+author: msmbaldwin
 manager: barbkess
-ms.author: bryanla
+ms.author: mbaldwin
 ms.date: 03/27/2017
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0b8c8f0-6ed5-48bb-8155-ac4f319ec178
-ms.openlocfilehash: 8ddb8d23ad2258aaee5e2d2d7c8c949599b9abf7
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 353365a1619ae9f87b0d92ab4b956c8cf7b1d6cc
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257910"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57331478"
 ---
 # <a name="how-to-renew-the-symmetric-key-in-azure-information-protection"></a>Procedura: Rinnovare la chiave simmetrica in Azure Information Protection
 
