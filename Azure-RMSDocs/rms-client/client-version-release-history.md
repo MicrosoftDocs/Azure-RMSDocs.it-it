@@ -4,18 +4,18 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bdc92908e04cd0568a7417a269168b34058790e3
-ms.sourcegitcommit: abb08a85dfd7a0f100b381934a3a211da6727178
+ms.openlocfilehash: 9240e0a8fc8f70fb38d9984ae74ee039d0f52e39
+ms.sourcegitcommit: 872fe78c482e8c2c57c3653919edeba745411cba
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828669"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57510055"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection: Cronologia delle versioni e criteri per il supporto
 
@@ -49,7 +49,7 @@ Se la versione 1 del client usata è successiva alla 1.41.51.0, si tratta di una
 > [!TIP]
 > Se si è interessati alla valutazione del client di etichettatura unificato Azure Information Protection perché si pubblicano le etichette dal Centro sicurezza e conformità di Office 365, Vedere [Client per l'etichettatura unificata di Azure Information Protection: informazioni di rilascio versione](unifiedlabelingclient-version-release-history.md).
 
-**Data di rilascio**: 15/01/2019
+**Data di rilascio**: 05/03/2019
 
 Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
 
@@ -77,6 +77,11 @@ Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
     - Password delle impostazioni di pubblicazione di Azure
     - Chiave dell'account di archiviazione di Azure (generico)
 
+- Nuove impostazioni client avanzate che implementano messaggi popup in Outlook che possono avvisare, giustificare o bloccare l'invio di messaggi di posta elettronica. [Altre informazioni](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+
+- Nuova impostazione client avanzata applicabile solo quando si impostano i criteri per non visualizzare le autorizzazioni personalizzate. Quando un file è protetto da autorizzazioni personalizzate, visualizzare l'opzione Autorizzazioni personalizzate in Esplora File in modo che gli utenti possano visualizzarle e modificarle. È necessario che gli utenti abbiano le autorizzazioni per modificare le impostazioni di protezione. [Altre informazioni](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
+
+
 **Correzioni**:
 
 - vengono applicati in modo coerente nuovi contrassegni visivi quando un utente aggiunge nuove sezioni a un documento di Word e quindi etichetta di nuovo il documento.
@@ -90,6 +95,12 @@ Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
 - Il client Azure Information Protection consente di visualizzare correttamente le etichette applicate dai [client che supportano l'etichettatura unificata](../configure-policy-migrate-labels.md#clients-that-support-unified-labeling).
 
 - I documenti vengono aperti in modo corretto in Office senza un messaggio di ripristino dopo la rimozione della protezione con Esplora file e clic sul pulsante destro del mouse, PowerShell e lo scanner.
+
+- Quando si usa l'impostazione client avanzata per impostare un'[etichetta predefinita per Outlook](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook), è possibile applicare un'etichetta padre con etichette secondarie quando tutte le etichette secondarie sono disabilitate per l'utente.
+
+- Quando si usa l'[impostazione di criteri](../configure-policy-settings.md) **Per i messaggi di posta elettronica con allegati, applicare un'etichetta corrispondente alla classificazione più elevata di questi allegati** e l'etichetta con la classificazione più elevata è configurata per le autorizzazioni definite dall'utente, accadeva che l'etichetta veniva applicata al messaggio di posta elettronica, senza che fosse applicata la protezione. Adesso:
+    - Quando le autorizzazioni definite dall'utente dell'etichetta includono Outlook (Non inoltrare): si applicano tale etichetta e la protezione Non inoltrare al messaggio di posta elettronica.
+    - Quando le autorizzazioni definite dall'utente dell'etichetta sono solo per Word, Excel, PowerPoint ed Esplora file: non si applica né l'etichetta né un qualsiasi tipo di protezione al messaggio di posta elettronica.
 
 **Modifiche aggiuntive:**
 

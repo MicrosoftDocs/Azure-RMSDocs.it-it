@@ -4,17 +4,17 @@ description: È possibile proteggere i documenti e i messaggi di posta elettroni
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 03/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 11063a208e21ef121ba0a3a5007c76635f63af17
-ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
+ms.openlocfilehash: 110cf52834ef7c2075539f15238c738aa61a16f7
+ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017150"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57332311"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
@@ -73,7 +73,7 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
         
         Se gli utenti non hanno le autorizzazioni per rimuovere la protezione di Rights Management e selezionano un'etichetta configurata con l'opzione **Rimuovi protezione**, viene visualizzato il messaggio seguente: **Azure Information Protection non può applicare questa etichetta. Se il problema persiste, contattare l'amministratore.**
 
-4. Se si è selezionato **Proteggi**, il pannello **Protezione** si apre automaticamente se è stata selezionata una delle altre opzioni. Se questo nuovo pannello non si apre automaticamente, selezionare **Protezione**:
+4. Se si è selezionato **Proteggi**, il pannello **Protezione** si aprirà automaticamente se è stata selezionata una delle altre opzioni precedentemente selezionate. Se questo nuovo pannello non si apre automaticamente, selezionare **Protezione**:
     
     ![Configurare la protezione per un'etichetta di Azure Information Protection](./media/info-protect-protection-bar-configured.png)
 
@@ -135,7 +135,7 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
     
      |Impostazione|Altre informazioni|Impostazione consigliata
      |-----------|--------------------|--------------------|
-     |**scadenza contenuto**|Definire una data o un numero di giorni in cui i documenti o i messaggi di posta elettronica protetti tramite queste impostazioni non devono essere aperti da alcuni utenti selezionati. È possibile specificare una data o un numero di giorni a partire dal momento in cui la protezione viene applicata ai contenuti.<br /><br />Quando si specifica una data, diventa effettiva alla mezzanotte del fuso orario corrente.|**Nessuna scadenza contenuto**, a meno che non esista un requisito temporale specifico per il contenuto.|
+     |**scadenza contenuto**|Definire una data o un numero di giorni in cui i documenti protetti tramite queste impostazioni non dovranno essere aperti dagli utenti selezionati. Per i messaggi di posta elettronica, la scadenza non è sempre applicata a causa dei meccanismi di memorizzazione nella cache che alcuni client di posta elettronica usano.<br /><br />È possibile specificare una data o un numero di giorni a partire dal momento in cui la protezione viene applicata ai contenuti.<br /><br />Quando si specifica una data, diventa effettiva alla mezzanotte del fuso orario corrente.|**Nessuna scadenza contenuto**, a meno che non esista un requisito temporale specifico per il contenuto.|
      |**Consenti l'accesso offline**|Usare questa impostazione per bilanciare i requisiti di sicurezza, compreso l'accesso dopo la revoca, con la possibilità per gli utenti selezionati di aprire il contenuto protetto quando non hanno una connessione Internet.<br /><br />Se si specifica che il contenuto non è disponibile senza una connessione Internet o che è disponibile solo per un determinato numero di giorni, al raggiungimento di tale soglia, gli utenti dovranno eseguire di nuovo l'autenticazione e l'accesso verrà registrato. In questo caso, se le credenziali non sono memorizzate nella cache, verrà chiesto agli utenti di eseguire l'accesso prima di poter aprire il documento o il messaggio di posta elettronica.<br /><br />Oltre alla riesecuzione dell'autenticazione, viene nuovamente valutata l'appartenenza degli utenti ai criteri e ai gruppi. Questo significa che gli utenti potrebbero avere risultati di accesso diversi per lo stesso documento o messaggio di posta elettronica se dall'ultimo accesso ai contenuti si sono verificati cambiamenti relativi all'appartenenza ai criteri o ai gruppi. Ciò potrebbe includere anche l'impossibilità di accedere al documento se questo è stato [revocato](./rms-client/client-track-revoke.md).|A seconda della sensibilità del contenuto:<br /><br />- **Numero di giorni per cui il contenuto è disponibile senza una connessione a Internet** = **7** per i dati aziendali sensibili che potrebbero causare danni all'azienda in caso di condivisione con persone non autorizzate. Questa raccomandazione offre un equo compromesso tra sicurezza e flessibilità. Sono esempi di questo tipo di contenuto i contratti, i report sulla sicurezza, i riepiloghi previsionali e i dati sulle vendite.<br /><br />- **Mai** per dati aziendali particolarmente riservati che potrebbero causare danni all'azienda se condivisi con utenti non autorizzati. Questa indicazione assegna maggiore priorità alla sicurezza che alla flessibilità e garantisce che, se il documento viene revocato, per tutti gli utenti autorizzati sarà immediatamente impossibile aprirlo. Sono esempi di questo tipo di contenuto le informazioni su dipendenti e clienti, le password, il codice sorgente e i rendiconti finanziari preannunciati.|
     
      Al termine della configurazione delle autorizzazioni e delle impostazioni, fare clic su **OK**. 
@@ -292,6 +292,20 @@ Questa configurazione offre il vantaggio che non è necessario specificare utent
 
 6. Nel pannello **Etichetta** selezionare **Salva**.
 
+
+### <a name="example-6-label-that-applies-just-for-me-protection"></a>Esempio 6: etichetta che applica la protezione "Solo per me"
+
+Questa configurazione offre l'opposto della collaborazione sicura per i documenti: Ad eccezione di un [utente con privilegi avanzati](configure-super-users.md), solo la persona che applica l'etichetta può aprire il contenuto protetto, senza restrizioni. Questa configurazione è spesso definita protezione "Solo per me". È adatta quando un utente vuole salvare un file in una posizione qualsiasi ed essere certo che nessun altro potrà aprirlo.
+
+La configurazione dell'etichetta è apparentemente semplice:
+
+1. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)**.
+    
+2. Selezionare **OK** senza selezionare gli utenti o configurare le impostazioni di questo pannello.
+    
+    Sebbene sia possibile configurare le impostazioni per **Scadenza contenuto**  e **Consenti l'accesso offline**, quando non si specificano utenti e le relative autorizzazioni, queste impostazioni di accesso non sono applicabili. Questo succede perché l'utente che applica la protezione è l'[autorità di certificazione di Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) per il contenuto e questo ruolo non è soggetto alle restrizioni di accesso.
+
+3. Nel pannello **Etichetta** selezionare **Salva**.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

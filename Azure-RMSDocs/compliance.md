@@ -4,19 +4,19 @@ description: Informazioni di supporto per Azure Information Protection che inclu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/06/2018
+ms.date: 03/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4f611f97309851364324618e436ca13d4bd9fee7
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 525637a52a71e4bdc48e8f0665ef73c70a5a18ff
+ms.sourcegitcommit: 78cc0a94b38bf8c03808109b495e0952f2cdfbd4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254714"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557630"
 ---
 # <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Informazioni su conformità e supporto per Azure Information Protection
 
@@ -30,7 +30,7 @@ Tuttavia, alcune informazioni rilevanti possono essere utili al consulente legal
 
 - Azure Information Protection usa AES 256 e AES 128 per crittografare i documenti. [Altre informazioni](./how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
 
-- Tutte le chiavi di crittografia usate da Azure Information Protection sono protette con una chiave radice specifica del cliente che usa RSA 2048 bit. È comunque supportato anche RSA 1024 per compatibilità con versioni precedenti. [Altre informazioni](./how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
+- Tutte le chiavi di crittografia usate da Azure Information Protection sono protette con una chiave radice specifica del cliente che usa RSA 2048 bit. È supportato anche RSA 1024 per compatibilità con versioni precedenti. [Altre informazioni](./how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
 
 - Le chiavi radice specifiche del cliente sono gestite da Microsoft o ne viene eseguito il provisioning dal cliente in un modulo di protezione hardware Thales in base al modello "[Bring Your Own Key](plan-implement-tenant-key.md)" (BYOK). Azure Information Protection supporta anche funzionalità limitate con una chiave locale usando il modello "[Hold Your Own Key](configure-adrms-restrictions.md)" (HYOK) per il contenuto a cui si applicano requisiti che indicano che non deve essere protetto con un chiave basata sul cloud.
 
