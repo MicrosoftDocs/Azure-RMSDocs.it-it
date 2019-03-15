@@ -12,12 +12,12 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3782d2cea93b2128530e66d82e366924e92abbbc
-ms.sourcegitcommit: 95b7df32ecccdab4b80bc3a9f6433dc1c33dbbc5
+ms.openlocfilehash: daa545f2fa0ed8241c5b8c729d7e018e170933f7
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407760"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828491"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Domande frequenti sulla protezione dei dati in Azure Information Protection
 
@@ -148,7 +148,7 @@ Per un elenco delle estensioni di file supportate in modo nativo da Azure Rights
 
 ## <a name="how-do-i-configure-a-mac-computer-to-protect-and-track-documents"></a>Come configurare un computer Mac per proteggere e tracciare i documenti?
 
-Prima di tutto, assicurarsi di avere installato Office per Mac usando il collegamento di installazione software da https://portal.office.com. Per le istruzioni complete, vedere [Scaricare e installare o reinstallare Office 365 o Office 2019 in un PC o Mac](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
+Prima di tutto, assicurarsi di avere installato Office per Mac usando il collegamento di installazione software da https://admin.microsoft.com. Per le istruzioni complete, vedere [Scaricare e installare o reinstallare Office 365 o Office 2019 in un PC o Mac](https://support.office.com/en-us/article/Download-and-install-or-reinstall-Office-365-or-Office-2016-on-a-PC-or-Mac-4414EAAF-0478-48BE-9C42-23ADC4716658).
 
 Aprire Outlook e creare un profilo mediante l'account aziendale o dell'istituto di istruzione di Office 365. Creare quindi un nuovo messaggio ed eseguire le operazioni seguenti per configurare Office in modo che possa proteggere documenti e messaggi di posta elettronica tramite il servizio Azure Rights Management:
 

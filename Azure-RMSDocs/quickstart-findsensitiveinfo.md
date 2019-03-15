@@ -8,12 +8,12 @@ ms.date: 02/15/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 07baee062d994b6efd97084bf0b293adb2d5fb84
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: 5a051967ad9f3b572eecd5214cf411dd4a4a01d6
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56266013"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828992"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Guida introduttiva: Trovare le informazioni riservate presenti nei file archiviati in locale
 
@@ -31,7 +31,7 @@ Per completare questa guida introduttiva, è necessario:
 
 1. Disporre di una sottoscrizione che includa un piano 1 o 2 di Azure Information Protection.
     
-    In assenza di una di queste sottoscrizioni, è possibile creare un account [gratuito](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.
+    In assenza di una di queste sottoscrizioni, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.
 
 2. Aver installato il client Azure Information Protection nel computer in uso. 
     

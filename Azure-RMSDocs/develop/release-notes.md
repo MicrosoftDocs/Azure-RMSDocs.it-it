@@ -12,12 +12,12 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 22dbe505020d7ed65318fcdc173a7e659791b606
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 2db27a558acd60fc1d3f6a05c1dda90d00baa3bb
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332073"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57829077"
 ---
 # <a name="whats-new-and-release-notes"></a>Novità e note sulla versione
 
@@ -33,7 +33,7 @@ Questo argomento descrive importanti modifiche e funzionalità in questa nuova v
 -   [Aggiornamento di maggio 2015: aggiunta del controllo registrazione](#may-2015-update---adds-logging-control)
 -   [Aggiornamento di febbraio 2015: aggiunta del supporto per applicazioni di Windows Store](#february-2015-update---adds-windows-store-application-support)
 -   [Aggiornamento di gennaio 2015: aggiunta del supporto per la piattaforma WinPhone](#january-2015-update---adds-winphone-platform-support)
--   [Aggiornamento di ottobre 2014: aggiornamento a Microsoft RMS SDK 4.1](#october-2014-update---upgrade-to-microsoft-rms-sdk-4-1)
+-   [Aggiornamento di ottobre 2014: aggiornamento a Microsoft RMS SDK 4.1](#october-2014-update---upgrade-to-microsoft-rms-sdk-41)
 -   [Note sulla versione](#release-notes)
 -   [Domande frequenti](#frequently-asked-questions)
 
@@ -240,4 +240,3 @@ Questa sezione descrive le informazioni sulle versioni correnti e precedenti di 
 **D**: Il framework dell'app di esempio è stato adattato a Xcode 5, è possibile lavorare con Xcode 4.6?
 
 **R**: L'SDK di OS X funziona con Xcode 4.6 e versioni successive soltanto, nonché con OS X è 10.8 e versioni successive.
-

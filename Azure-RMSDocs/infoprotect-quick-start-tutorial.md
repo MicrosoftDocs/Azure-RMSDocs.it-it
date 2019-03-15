@@ -8,12 +8,12 @@ ms.date: 02/29/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 75ba59498918ecb2d987e2fe794c624f8f340498
-ms.sourcegitcommit: d1aac7dc96f5986511f73ec035400954be24e723
+ms.openlocfilehash: 5a9c1ebae0678125c19fd35ce4c5275aa056ce45
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017235"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57829026"
 ---
 # <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Esercitazione: Modificare i criteri di Azure Information Protection e creare una nuova etichetta
 
@@ -36,7 +36,7 @@ Per completare questa esercitazione, è necessario:
 
 1. Disporre di una sottoscrizione che includa un piano 2 di Azure Information Protection.
     
-    In assenza di una sottoscrizione con un piano 2 di Azure Information Protection, è possibile creare un account [gratuito](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.
+    In assenza di una sottoscrizione con un piano 2 di Azure Information Protection, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.
 
 2. Aver aggiunto il pannello di Azure Information Protection nel portale di Azure e aver verificato che il servizio di protezione è attivato.
 

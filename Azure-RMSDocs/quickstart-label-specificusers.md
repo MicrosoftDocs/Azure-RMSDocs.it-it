@@ -8,12 +8,12 @@ ms.date: 02/15/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: a4057396bbe2d642d5f1d155a9e3975d40f02b1e
-ms.sourcegitcommit: 89d2c2595bc7abda9a8b5e505b7dcf963e18c822
+ms.openlocfilehash: ea1316d89358096ff585137df151d91a4d910300
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265979"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828380"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Guida introduttiva: Creare una nuova etichetta di Azure Information Protection per utenti specifici
 
@@ -31,7 +31,7 @@ Per completare questa guida introduttiva, è necessario:
 
 1. Disporre di una sottoscrizione che includa un piano 1 o 2 di Azure Information Protection.
     
-    In assenza di una di queste sottoscrizioni, è possibile creare un account [gratuito](https://portal.office.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.
+    In assenza di una di queste sottoscrizioni, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.
 
 2. Aver aggiunto il pannello di Azure Information Protection nel portale di Azure e aver verificato che il servizio di protezione è attivato.
 
@@ -63,7 +63,7 @@ Per prima cosa, creare la nuova etichetta.
     
     - **Nome visualizzato dell'etichetta**: il nome della nuova etichetta che sarà visibile agli utenti e che identifica la classificazione del contenuto. Ad esempio: `Sales - Restricted`.
     
-    - **Descrizione**: una descrizione comando che consenta agli utenti di capire quando è opportuno selezionare questa nuova etichetta. ad esempio `Business data that is restricted to the Sales Team.`
+    - **Description**: una descrizione comando che consenta agli utenti di capire quando è opportuno selezionare questa nuova etichetta. ad esempio `Business data that is restricted to the Sales Team.`
 
 4. Assicurarsi che l'opzione **Abilitato** sia impostata su **Sì** (impostazione predefinita) e selezionare **Salva**.
 
