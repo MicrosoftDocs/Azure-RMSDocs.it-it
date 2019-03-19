@@ -4,17 +4,17 @@ description: Le condizioni per un'etichetta consentono di assegnare automaticame
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/16/2019
+ms.date: 03/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: b7d0bf743d23083e2f9c6ca18044e26cb8c2ae6f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: f8545491a527b8e502150cd83802b2868dd3a1da
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256567"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57829043"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection
 
@@ -32,7 +32,7 @@ Ecco un esempio di richiesta quando si configura una condizione per l'applicazio
 
 In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per applicare l'etichetta consigliata oppure ignorare il suggerimento selezionando **Dismiss** (Ignora). Se l'utente sceglie di ignorare il suggerimento e alla successiva apertura del documento la condizione è ancora applicabile, l'indicazione per l'etichetta viene visualizzata nuovamente.
 
-Se si configura la classificazione automatica anziché consigliata, l'etichetta viene applicata automaticamente e l'utente visualizza comunque una notifica nell'app di Office. Tuttavia, i pulsanti **Change Now** (Cambia adesso) e **Dismiss** (Ignora) vengono sostituiti con **OK**.
+Se si configura la classificazione automatica anziché consigliata, l'etichetta viene applicata automaticamente e l'utente visualizza comunque una notifica in Word, Excel e PowerPoint. Tuttavia, i pulsanti **Change Now** (Cambia adesso) e **Dismiss** (Ignora) vengono sostituiti con **OK**. In Outlook non viene inviata alcuna notifica per la classificazione automatica e l'etichetta viene applicata al momento dell'invio del messaggio di posta elettronica.
 
 > [!IMPORTANT]
 >Non configurare un'etichetta per la classificazione automatica e un'autorizzazione definita dall'utente. L'opzione per le autorizzazioni definite dall'utente è un'[impostazione di protezione](configure-policy-protection.md) che consente agli utenti di specificare a chi vengono concesse le autorizzazioni.
