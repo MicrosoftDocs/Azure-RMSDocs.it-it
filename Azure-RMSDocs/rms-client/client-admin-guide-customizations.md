@@ -4,19 +4,19 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/06/2019
+ms.date: 03/10/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 48280e4654d9ab5ce999dcc934791ff408ca5691
-ms.sourcegitcommit: 503b8330efbecfc4dce204ffe036a7911a35691d
+ms.openlocfilehash: 20c0fbd26a8884524e747a0ebc912d7a6dfb2f48
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379951"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57898100"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -212,7 +212,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer"></a>Per i file protetti con autorizzazioni personalizzate, rendere sempre le autorizzazioni personalizzate visualizzabili dagli utenti in Esplora file
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Questa opzione è disponibile in anteprima e richiede la versione di anteprima del client.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Questa impostazione è disponibile in anteprima e richiede la versione di anteprima del client.
 
 Quando si configura l'[impostazione di criteri](../configure-policy-settings.md) **Rendi disponibile agli utenti l'opzione per le autorizzazioni personalizzate** o l'impostazione client avanzata equivalente nella sezione precedente, gli utenti non possono visualizzare o modificare le autorizzazioni personalizzate già impostate in un documento protetto. 
 
@@ -270,14 +270,14 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent"></a>Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica
 
-Questa configurazione usa più [impostazioni client avanzate](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che devono essere configurate nel portale di Azure. Questa impostazione è disponibile in anteprima e potrebbe cambiare.
+Questa configurazione usa più [impostazioni client avanzate](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che devono essere configurate nel portale di Azure. Questa impostazione è disponibile in anteprima e richiede la versione di anteprima del client.
 
 Quando si creano e configurano le impostazioni client avanzate seguenti, gli utenti visualizzano messaggi popup di Outlook che possono avvertirli prima dell'invio di un messaggio di posta elettronica, chiedere di giustificare il motivo dell'invio o impedire l'invio di un messaggio di posta elettronica per uno degli scenari seguenti:
 
 - **Il messaggio di posta elettronica o un suo allegato hanno un'etichetta specifica**:
     - L'allegato può essere qualsiasi tipo di file
 
-- **Il messaggio di posta elettronica o un suo allegato non hanno un'etichetta**:
+- **Il messaggio di posta elettronica o l'allegato non hanno un'etichetta**:
     - L'allegato può essere un documento di Office o un documento PDF
 
 Quando vengono soddisfatte queste condizioni e l'indirizzo di posta elettronica del destinatario non è incluso in un elenco di nomi di dominio consentiti specificato, l'utente visualizza messaggi popup con una delle azioni seguenti:
@@ -287,6 +287,28 @@ Quando vengono soddisfatte queste condizioni e l'indirizzo di posta elettronica 
 - **Giustifica**: all'utente viene richiesta una giustificazione (opzioni predefinite o formato libero).  L'utente può quindi inviare o annullare il messaggio di posta elettronica. Il testo della giustificazione è scritto nell'intestazione X- del messaggio di posta elettronica in modo da poter essere letto dagli altri sistemi. Ad esempio, servizi di prevenzione della perdita di dati.
 
 - **Blocca**: all'utente viene impedito di inviare il messaggio di posta elettronica finché la condizione persiste. Il messaggio include il motivo del blocco del messaggio di posta elettronica in modo che l'utente possa risolvere il problema, ad esempio rimuovendo destinatari specifici o assegnando un'etichetta al messaggio di posta elettronica. 
+
+L'azione viene registrata nel registro eventi locale di Windows **Registri applicazioni e servizi** > **Azure Information Protection**:
+
+- Messaggi di avviso: ID informazioni 301
+
+- Messaggi di giustificazione: ID informazioni 302
+
+- Messaggi di blocco: ID informazioni 303
+
+Voce dell'evento di esempio di un messaggio di giustificazione:
+
+```
+Client Version: 1.48.1.0
+Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
+Item Full Path: Price list.msg
+Item Name: Price list
+Process Name: OUTLOOK
+Action: Justify
+User Justification: My manager approved sharing of this content
+Action Source: 
+User Response: Confirmed
+```
 
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>Per implementare i messaggi popup di avviso, giustificazione o blocco per etichette specifiche:
@@ -503,7 +525,7 @@ Il file mantiene l'estensione pdf ma viene classificato come in precedenza ed è
 
 ## <a name="support-for-files-protected-by-secure-islands"></a>Supporto di file protetti da Secure Islands
 
-Questa opzione di configurazione è attualmente in anteprima ed è soggetta a modifiche.
+Questa opzione di configurazione è in anteprima ed è soggetta a modifiche.
 
 Se è stato usato Secure Islands è possibile che siano stati protetti file di testo, file immagine e file generici. Sono esempi i file con estensione ptxt, pjpeg o pfile. Quando si modifica il registro di sistema come indicato di seguito, Azure Information Protection può decrittografare questi file:
 

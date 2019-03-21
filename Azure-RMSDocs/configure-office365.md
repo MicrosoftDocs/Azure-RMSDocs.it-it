@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ed441ab24517b5d12a1e38ed61a46d4498237636
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 8a1057aeab9bf86bba8047f3425b11e7eeae1082
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259185"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828431"
 ---
 # <a name="office365-configuration-for-clients-and-online-services-to-use-the-azure-rights-management-service"></a>Office 365: configurazione per i client e i servizi online da usare con il servizio Azure Rights Management
 
@@ -104,7 +104,7 @@ Dopo aver abilitato il servizio IRM per SharePoint Online, è possibile configur
 #### <a name="configuration-for-users"></a>Configurazione per gli utenti
 Dare agli utenti le istruzioni seguenti perché possano configurare la propria copia di OneDrive for Business per proteggere i file di lavoro.
 
-1. Accedere a Office 365 con l'account aziendale o dell'istituto di istruzione e andare al [sito Web OneDrive](https://portal.office.com/onedrive).
+1. Accedere a Office 365 con l'account aziendale o dell'istituto di istruzione e andare al [sito Web OneDrive](https://admin.microsoft.com/onedrive).
 
 2. Nella parte inferiore del riquadro di spostamento selezionare **Return to classic OneDrive** (Torna a OneDrive classico).
 
@@ -502,7 +502,7 @@ Anche se non è possibile configurare IRM per OneDrive for Business per gli uten
 
    2. Cercare `$tenantAdmin` e sostituire il valore di esempio con il proprio account di amministratore globale completo per Office 365.
 
-      Questo valore corrisponde a quello usato per accedere come amministratore globale al portale di amministrazione di Office 365 e ha il seguente formato: nome_utente@*&lt;nome dominio tenant&gt;*.com
+      Questo valore corrisponde a quello usato per accedere come amministratore globale all'interfaccia di amministrazione di Microsoft 365 e ha il formato seguente: nome_utente@*&lt;nome dominio tenant&gt;*.com
 
       Ad esempio, se il nome utente dell'amministratore globale di Office 365 è "admin" per il dominio del tenant " contoso.com", si specificherà: <strong>admin@contoso.com</strong>
 

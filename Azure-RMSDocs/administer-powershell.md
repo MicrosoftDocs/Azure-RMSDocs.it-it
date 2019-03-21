@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 02de7c52f2b1bd14c99e94af4f49ce604ad5ee6f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 09308370778ae066bb2a19d81a111958b5a02f22
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252429"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828958"
 ---
 # <a name="administering-the-azure-rights-management-service-by-using-windows-powershell"></a>Amministrazione del servizio Azure Rights Management tramite Windows PowerShell
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-È necessario usare PowerShell per l'amministrazione del servizio Azure Rights Management per Azure Information Protection? Potrebbe non essere necessario, se tutte le configurazioni possono essere eseguite nel portale di Azure o nel portale di Office 365. È tuttavia necessario usare PowerShell per alcune configurazioni avanzate. Potrebbe inoltre essere preferibile usare PowerShell per disporre di una maggiore efficienza di controllo dalla riga di comando e dello scripting.
+È necessario usare PowerShell per l'amministrazione del servizio Azure Rights Management per Azure Information Protection? Potrebbe non essere necessario se tutte le configurazioni possono essere eseguite nel portale di Azure o nell'interfaccia di amministrazione di Microsoft 365. È tuttavia necessario usare PowerShell per alcune configurazioni avanzate. Potrebbe inoltre essere preferibile usare PowerShell per disporre di una maggiore efficienza di controllo dalla riga di comando e dello scripting.
 
 La tabella nella sezione seguente elenca alcuni degli scenari di configurazione avanzata che usano PowerShell. Nella tabella è indicato inoltre quando la configurazione può essere eseguita anche senza l'uso di PowerShell.
 

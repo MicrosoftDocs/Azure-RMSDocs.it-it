@@ -4,17 +4,17 @@ description: È possibile proteggere i documenti e i messaggi di posta elettroni
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/05/2019
+ms.date: 03/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 110cf52834ef7c2075539f15238c738aa61a16f7
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 0057677890de2a771e93cc2f843623bbd780c31a
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332311"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57978152"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
@@ -62,16 +62,24 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
     - **Non configurata**: selezionare questa opzione se l'etichetta è attualmente configurata in modo da applicare la protezione e non si vuole più che l'etichetta selezionata applichi la protezione. Procedere quindi con il passaggio 11.
         
         Le impostazioni di protezione configurate in precedenza vengono mantenute come un modello di protezione archiviato e verranno visualizzate di nuovo se si reimposta l'opzione su **Proteggi**. Questo modello non è visualizzato nel portale di Azure, ma è comunque possibile gestirlo con [PowerShell](configure-templates-with-powershell.md) se necessario. Questo comportamento indica che il contenuto rimane accessibile se ha questa etichetta con le impostazioni di protezione applicate in precedenza.
+        
+        Quando viene applicata un'etichetta con questa impostazione di protezione **Non configurata**:
+        
+         - Se il contenuto era stato protetto in precedenza senza l'uso di un'etichetta, tale protezione viene mantenuta. 
+         
+         - Se in precedenza il contenuto era stato protetto con un'etichetta, la protezione viene rimossa se l'utente che applica l'etichetta ha le autorizzazioni per rimuovere la protezione di Rights Management. Questo requisito significa che l'utente deve avere **Esporta** o **Controllo completo** come [diritto di utilizzo](configure-usage-rights.md) oppure essere il proprietario di Rights Management (che implica automaticamente il diritto di utilizzo Controllo completo) o un [utente con privilegi avanzati per Azure Rights Management](configure-super-users.md).
+             
+             Se l'utente non ha le autorizzazioni per rimuovere la protezione, l'etichetta non può essere applicata e viene visualizzato il messaggio seguente: **Azure Information Protection non può applicare questa etichetta. Se il problema persiste, contattare l'amministratore**. 
     
     - **Proteggi**: selezionare questa opzione per applicare la protezione e quindi procedere con il passaggio 4.
     
     - **Rimuovi la protezione**: selezionare questa opzione per rimuovere la protezione se un documento o un messaggio di posta elettronica è protetto. Procedere quindi con il passaggio 11.
         
-        Le impostazioni di protezione configurate in precedenza vengono mantenute come un modello di protezione archiviato e verranno visualizzate di nuovo se si reimposta l'opzione su **Proteggi**. Questo modello non è visualizzato nel portale di Azure, ma è comunque possibile gestirlo con [PowerShell](configure-templates-with-powershell.md) se necessario. Questo comportamento indica che il contenuto rimane accessibile se ha questa etichetta con le impostazioni di protezione applicate in precedenza.
+        Se la protezione è stata applicata con un'etichetta o un modello di protezione, le impostazioni di protezione configurate in precedenza vengono mantenute come un modello di protezione archiviato e verranno visualizzate di nuovo se si reimposta l'opzione su **Proteggi**. Questo modello non è visualizzato nel portale di Azure, ma è comunque possibile gestirlo con [PowerShell](configure-templates-with-powershell.md) se necessario. Questo comportamento indica che il contenuto rimane accessibile se ha questa etichetta con le impostazioni di protezione applicate in precedenza.
         
-        Si noti che, per applicare un'etichetta con questa opzione, gli utenti devono avere le autorizzazioni per rimuovere la protezione di Rights Management. Questo requisito significa che gli utenti devono disporre di **Esportazione** o **Controllo completo** come [diritto d'uso](configure-usage-rights.md). oppure essere proprietari di Rights Management (che implica automaticamente il diritto di utilizzo Controllo completo) o essere [utenti con privilegi avanzati per Azure Rights Management](configure-super-users.md). I modelli predefiniti di Azure Rights Management non includono i diritti di utilizzo che consentono agli utenti di rimuovere la protezione. 
+        Si noti che, per applicare correttamente un'etichetta con questa opzione, l'utente deve avere le autorizzazioni per rimuovere la protezione di Rights Management. Questo requisito significa che l'utente deve avere **Esporta** o **Controllo completo** come [diritto di utilizzo](configure-usage-rights.md) oppure essere il proprietario di Rights Management (che implica automaticamente il diritto di utilizzo Controllo completo) o un [utente con privilegi avanzati per Azure Rights Management](configure-super-users.md). 
         
-        Se gli utenti non hanno le autorizzazioni per rimuovere la protezione di Rights Management e selezionano un'etichetta configurata con l'opzione **Rimuovi protezione**, viene visualizzato il messaggio seguente: **Azure Information Protection non può applicare questa etichetta. Se il problema persiste, contattare l'amministratore.**
+        Se l'utente che applica l'etichetta con questa impostazione non ha le autorizzazioni per rimuovere la protezione di Rights Management, l'etichetta non può essere applicata e viene visualizzato il messaggio seguente: **Azure Information Protection non può applicare questa etichetta. Se il problema persiste, contattare l'amministratore.**
 
 4. Se si è selezionato **Proteggi**, il pannello **Protezione** si aprirà automaticamente se è stata selezionata una delle altre opzioni precedentemente selezionate. Se questo nuovo pannello non si apre automaticamente, selezionare **Protezione**:
     

@@ -4,19 +4,19 @@ description: Descrizione del funzionamento di Azure RMS, dei controlli crittogra
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/01/2019
+ms.date: 03/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 87cd350077f42718a6bcd86a98e9f8f1f79eb53e
-ms.sourcegitcommit: 78cc0a94b38bf8c03808109b495e0952f2cdfbd4
+ms.openlocfilehash: a60fbf43056673674f07f7dd8517213072f78aec
+ms.sourcegitcommit: 171a96af12a7e0364052d830dc14714b1bb1c95c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557647"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57734150"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funzionamento di Azure RMS: dietro le quinte
 
@@ -50,7 +50,13 @@ Anche se non è necessario conoscere nel dettaglio il funzionamento di questa te
 
 ###### <a name="footnote-1"></a>Nota 1 
 
-La lunghezza di 256 bit viene usata dal client Azure Information Protection per la protezione generica e la protezione nativa quando il file ha un'estensione ppdf oppure è un file di testo o di immagine protetto, ad esempio con estensione ptxt o pjpg.
+Il client Azure Information Protection usa 256 bit negli scenari seguenti:
+
+- Protezione generica (file con estensione pfile).
+
+- Protezione nativa per i documenti PDF quando il documento è stato protetto con lo standard ISO per la crittografia dei file PDF o il documento protetto risultante ha l'estensione di nome file ppdf.
+
+- Protezione nativa per i file di testo o immagine (ad esempio file con estensione ptxt o pjpg).
 
 ###### <a name="footnote-2"></a>Nota 2
 

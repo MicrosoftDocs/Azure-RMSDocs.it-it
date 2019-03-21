@@ -4,19 +4,19 @@ description: Informazioni sui file e sulla registrazione dell'utilizzo per il cl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/23/2019
+ms.date: 03/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: abf4b87198f2997aa7a452d0c34931c55220ee5f
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 72e29d19ddbfc3189d498724fc8353829820ab4e
+ms.sourcegitcommit: f4fe64474999954e0c013c3901edbb3048670935
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255071"
+ms.lasthandoff: 03/10/2019
+ms.locfileid: "57725750"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guida dell'amministratore: File e registrazione dell'utilizzo del client Azure Information Protection
 
@@ -48,19 +48,25 @@ Il client registra l'attività dell'utente nel registro eventi locale di Windows
 
 - Action:
 
-    - Impostare l'etichetta:  ID informazioni 101
+    - Impostare l'etichetta: ID informazioni 101
     
-    - Impostare l'etichetta (inferiore):  ID informazioni 101
+    - Impostare l'etichetta (inferiore): ID informazioni 101
     
     - Impostare l'etichetta (superiore): ID informazioni 101
     
     - Rimuovere l'etichetta: ID informazioni 104
-   
-    - Suggerimento consigliato: Informazioni 105
+    
+    - Descrizione comando dell'etichetta consigliata: Informazioni 105
     
     - Applicare la protezione personalizzata: ID informazioni 201
     
     - Rimuovere la protezione personalizzata: ID informazioni 202
+    
+    - Messaggio di avviso di Outlook: ID informazioni 301
+    
+    - Messaggio di giustificazione di Outlook: ID informazioni 302
+    
+    - Messaggio di blocco di Outlook: ID informazioni 303
     
     - Accesso (operativo): ID informazioni 902
     
@@ -86,7 +92,9 @@ Il client registra l'attività dell'utente nel registro eventi locale di Windows
 
 - Autorizzazioni personalizzate (se applicabile) che includono i [diritti di utilizzo in base al nome di codifica](../configure-usage-rights.md#usage-rights-and-descriptions) per gli utenti, i gruppi o le organizzazioni specificati
 
-Per informazioni sulla registrazione dell'utilizzo per il servizio di protezione, vedere [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](../log-analyze-usage.md)
+Gli eventi per i messaggi di avviso, di giustificazione e di blocco di Outlook richiedono le impostazioni client di anteprima e avanzate. Per altre informazioni, vedere [Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
+
+Per informazioni sulla registrazione dell'utilizzo per il servizio di protezione, vedere [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](../log-analyze-usage.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
 Dopo aver identificato tutti i file di log associati al client Azure Information Protection, vedere gli argomenti seguenti per altre informazioni che potrebbero essere necessarie per supportare il client:

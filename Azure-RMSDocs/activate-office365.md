@@ -1,6 +1,6 @@
 ---
-title: Attivare Azure RMS dall'interfaccia di amministrazione di Office 365 - AIP
-description: Istruzioni per l'attivazione del servizio Azure Rights Management se si usa la nuova versione dell'interfaccia di amministrazione di Office 365.
+title: Attivare Azure RMS dall'interfaccia di amministrazione di Microsoft 365 - AIP
+description: Istruzioni per l'attivazione del servizio Azure Rights Management se si usa la nuova versione dell'interfaccia di amministrazione di Microsoft 365.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -12,29 +12,29 @@ ms.custom: askipteam
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3eb45542a3ee6cb712abadae68b1d0572204ae35
-ms.sourcegitcommit: 78cc0a94b38bf8c03808109b495e0952f2cdfbd4
+ms.openlocfilehash: fdf5abd317164736cc66b1cbca8cfb9c2c5863d0
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557681"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828975"
 ---
-# <a name="how-to-activate-azure-rights-management-from-the-office-365-admin-center"></a>Come attivare Azure Rights Management dall'interfaccia di amministrazione di Office 365
+# <a name="how-to-activate-azure-rights-management-from-the-microsoft-365-admin-center"></a>Come attivare Azure Rights Management dall'interfaccia di amministrazione di Microsoft 365
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Seguire queste istruzioni se si accede al servizio Azure Rights Management dall'interfaccia di amministrazione di Office 365 come amministratore globale. 
+Seguire queste istruzioni se si accede al servizio Azure Rights Management dall'interfaccia di amministrazione di Microsoft 365 come amministratore globale. 
 
 Per attivare il servizio Azure Rights Management, è necessario un [piano Azure Information Protection Premium](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) o un [piano di Office 365 che include Rights Management](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Ad esempio, l'organizzazione ha un piano per Office 365 E3 o Office 365 E5. 
 
 In caso di domande sui requisiti per la sottoscrizione o se serve assistenza per l'attivazione del servizio, [contattare il supporto tecnico Microsoft](information-support.md#to-contact-microsoft-support) o usare i canali di supporto standard.
 
-1. Dopo aver verificato che l'organizzazione ha un piano che include Azure Rights Management, passare alla [pagina Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) nell'interfaccia di amministrazione di Office 365.
+1. Dopo aver verificato che l'organizzazione ha un piano che include Azure Rights Management, passare alla [pagina Rights Management](https://account.activedirectory.windowsazure.com/RmsOnline/Manage.aspx) nell'interfaccia di amministrazione di Microsoft 365.
     
     Se viene chiesto di effettuare l'accesso, usare un account di amministratore globale di Office 365.
     
     > [!TIP]
-    > Per la guida all'interfaccia di amministrazione, vedere [Informazioni sull'interfaccia di amministrazione di Office 365](/office365/admin/admin-overview/about-the-admin-center).
+    > Per la guida all'interfaccia di amministrazione, vedere [Informazioni sull'interfaccia di amministrazione di Microsoft 365](/office365/admin/admin-overview/about-the-admin-center).
     
     Se si preferisce passare alla pagina di **Rights Management** dall'interfaccia di amministrazione: **Impostazioni** > **Servizi e componenti aggiuntivi** > **Microsoft Azure Information Protection** > **Gestisci impostazioni di Microsoft Azure Information Protection**
 

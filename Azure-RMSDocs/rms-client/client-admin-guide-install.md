@@ -4,19 +4,19 @@ description: Istruzioni e informazioni per gli amministratori per la distribuzio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/24/2019
+ms.date: 03/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f1f111b0f5e6c534f005dae5725211f9035377ec
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 36900711d53e7bea33c1f0e8c1b03048694b212d
+ms.sourcegitcommit: e22c369e93f5069f9e197cab42cd751d3d97b136
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257071"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57682349"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guida dell'amministratore: Installare il client Azure Information Protection per gli utenti
 
@@ -46,10 +46,13 @@ Verificare quindi gli altri prerequisiti che possono essere necessari per il cli
     
     Alle risoluzioni 800x600 e inferiori non è possibile visualizzare completamente la finestra di dialogo **Classifica e proteggi - Azure Information Protection** facendo clic con il pulsante destro del mouse su un file o una cartella in Esplora file.
 
-
 - Assistente per l'accesso ai Microsoft Online Services 7.250.4303.0
     
     I computer che eseguono Office 2010 richiedono l'Assistente per l'accesso ai Microsoft Online Services versione 7.250.4303.0. Questa versione è inclusa nell'installazione del client. Se si usa una versione successiva dell'Assistente per l'accesso, disinstallarla prima di installare il client Azure Information Protection. Ad esempio, per verificare la versione e disinstallare l'Assistente per l'accesso, usare **Pannello di controllo** > **Programmi e funzionalità** > **Disinstalla o modifica programma**.
+
+- KB 4482887
+    
+    Solo per Windows 10 versione 1809, per le build del sistema operativo precedenti alla build 17763.348, installare [1 marzo 2019 - KB4482887 (build sistema operativo 17763.348)](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887) per garantire che la barra di Information Protection venga visualizzata correttamente nelle applicazioni Office. Questo aggiornamento non è necessario se si usa Office 365 1902 o versione successiva.
 
 - KB 2533623
     
@@ -190,6 +193,9 @@ Se si usa Intune per il metodo di distribuzione del software, usare queste istru
     
     |Versione di Office|Sistema operativo|Software|Azione|
     |--------------------|--------------|----------------|---------------------|
+    |Tutte le versioni, ad eccezione di Office 365 1902 o versione successiva|Solo Windows 10 versione 1809, build del sistema operativo precedenti alla build 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installare|
+    |Office 2013|Tutte le versioni supportate|64 bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> A 32 bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Versione: 1.0|Installare|
+    |Office 2010|Tutte le versioni supportate|[Assistente per l'accesso ai Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Versione: 2.1|Installare|
     |Office 2016|Tutte le versioni supportate|64 bit: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />A 32 bit: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> Versione: 1.0|Installare|
     |Office 2013|Tutte le versioni supportate|64 bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> A 32 bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Versione: 1.0|Installare|
     |Office 2010|Tutte le versioni supportate|[Assistente per l'accesso ai Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Versione: 2.1|Installare|

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 9b7cd88df290c3df46f0a336c649e282df10d4df
-ms.sourcegitcommit: bfb8e4fff4b6ebc38337f48f2b31ca43048dcca6
+ms.openlocfilehash: b8cf9cb6bd0fadadc12a6ef9c7b65d708ce51648
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007053"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828533"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -371,7 +371,7 @@ Lo scanner di Azure Information Protection supporta due scenari alternativi in c
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Ottimizzazione delle prestazioni dello scanner
 
-Usare le linee guida seguenti per ottimizzare le prestazioni dello scanner. Se tuttavia la priorità è la velocità di risposta del computer dello scanner più che le prestazioni dello scanner, è possibile usare un'impostazione client avanzata per [limitare il numero di thread usati dallo scanner](#limit-the-number-of-threads-used-by-the-scanner).
+Usare le linee guida seguenti per ottimizzare le prestazioni dello scanner. Se tuttavia la priorità è la velocità di risposta del computer dello scanner più che le prestazioni dello scanner, è possibile usare un'impostazione client avanzata per limitare il numero di thread usati dallo scanner.
 
 Per ottimizzare le prestazioni dello scanner:
 
@@ -490,5 +490,3 @@ Se si è interessati a scoprire come è stato implementato questo scanner dai te
 Può sorgere questa domanda: [Qual è la differenza tra l'infrastruttura di classificazione file di Windows Server e lo scanner di Azure Information Protection?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 È anche possibile usare PowerShell per classificare e proteggere in modo interattivo i file dal computer desktop. Per altre informazioni su questo e altri scenari che usano PowerShell, vedere [Uso di PowerShell con il client Azure Information Protection](./rms-client/client-admin-guide-powershell.md).
-
-

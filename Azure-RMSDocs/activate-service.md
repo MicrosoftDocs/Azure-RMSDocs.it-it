@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2f05b95477405a2262b7dc0e129f17f9f5ff46db
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: ff99a39c138cc3ddc0b49cf7ff65ab95d5e36ece
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256397"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828907"
 ---
 # <a name="activating-azure-rights-management"></a>Attivazione di Azure Rights Management
 
@@ -59,9 +59,9 @@ Dopo l'attivazione del servizio Azure Rights Management, tutti gli utenti dell'o
 
 ## <a name="choosing-your-activation-method"></a>Scelta del metodo di attivazione
 
-Per istruzioni sull'attivazione del servizio Rights Management dal portale di gestione, specificare se si userà l'interfaccia di amministrazione di Office 365 o il portale di Azure:
+Per istruzioni sull'attivazione del servizio Rights Management dal portale di gestione, specificare se si userà l'interfaccia di amministrazione di Microsoft 365 o il portale di Azure:
 
-- [Interfaccia di amministrazione di Office 365](activate-office365.md) - richiede l'account di amministratore globale
+- [Interfaccia di amministrazione di Microsoft 365](activate-office365.md) - richiede l'account di amministratore globale
 
 - [Portale di Azure](activate-azure.md) - non richiede l'account di amministratore globale
 

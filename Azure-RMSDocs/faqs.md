@@ -4,19 +4,19 @@ description: Alcune domande frequenti su Azure Information Protection e sul rela
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 03/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 71ce491f-41c1-4d15-9646-455a6eaa157d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4e7ffa1fa4121d7a0aecc4474d50497c7c300b1b
-ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
+ms.openlocfilehash: 6a68d7f550a773016b552b380bb42f596720f250
+ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56756148"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57828490"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
@@ -48,7 +48,7 @@ Per altre informazioni sulla migrazione delle etichette esistenti, vedere [Come 
 
 ## <a name="when-is-the-right-time-to-migrate-my-labels-to-office-365"></a>Qual è il momento giusto per la migrazione delle etichette in Office 365?
 
-Le etichette di riservatezza sono disponibili a livello generale nel Centro sicurezza e conformità di Office 365. L'opzione per eseguire la migrazione delle etichette di Azure Information Protection è ancora in anteprima. Dopo aver eseguito la migrazione all'archivio etichette unificato, le etichette possono essere pubblicate e scaricate dai [client che supportano l'etichettatura unificata](configure-policy-migrate-labels.md#clients-that-support-unified-labeling). Attualmente non tutti i client supportano le etichette unificate o sono disponibili a livello generale.
+Le etichette di riservatezza sono disponibili a livello generale nel Centro sicurezza e conformità di Office 365. L'opzione per eseguire la migrazione delle etichette di Azure Information Protection è ancora in anteprima. Dopo aver eseguito la migrazione all'archivio etichette unificato, le etichette possono essere pubblicate e usate dai [client e dai servizi che supportano l'etichettatura unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling). Attualmente non tutti i client supportano le etichette unificate o sono disponibili a livello generale.
 
 È consigliabile verificare prima la funzionalità di anteprima con un tenant di test, poi eseguire la migrazione del tenant di produzione. Inoltre:
 
@@ -68,11 +68,11 @@ Vedere anche [Quale client in anteprima installare per il test delle nuove funzi
 
 Dopo aver eseguito la migrazione delle etichette nel portale di Azure:
 
-- In caso di [client con etichettatura unificata](configure-policy-migrate-labels.md#clients-that-support-unified-labeling), passare al Centro sicurezza e conformità di Office 365 per pubblicare queste etichette, poi configurare le impostazioni dei criteri per i client che supportano l'etichettatura unificata. Per future modifiche delle etichette, usare il Centro sicurezza e conformità. I client con etichettatura unificata scaricano le etichette e le impostazioni dei criteri dal Centro sicurezza e conformità.
+- Se si usano [client e servizi di etichettatura unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), passare al Centro sicurezza e conformità di Office 365 per pubblicare le etichette e configurare le impostazioni dei criteri. Per future modifiche delle etichette, usare il Centro sicurezza e conformità. I client con etichettatura unificata scaricano le etichette e le impostazioni dei criteri dal Centro sicurezza e conformità.
 
 - In caso di [client Azure Information Protection](./rms-client/aip-client.md), continuare a usare il portale di Azure per modificare le etichette e le impostazioni dei criteri. I client Azure Information Protection continuano a scaricare le etichette e le impostazioni dei criteri da Azure.
 
-- In caso sia di [client con etichettatura unificata](configure-policy-migrate-labels.md#clients-that-support-unified-labeling) sia di [client Azure Information Protection](./rms-client/aip-client.md), è possibile usare l'uno o l'altro portale per modificare le etichette. Perché i client Azure Information Protection acquisiscano le modifiche delle etichette apportate nel Centro sicurezza e conformità, è tuttavia necessario tornare al portale di Azure: Usare l'opzione **Pubblica** nel pannello **Azure Information Protection - Etichettatura unificata** nel portale di Azure. 
+- In caso sia di [client con etichettatura unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) sia di [client Azure Information Protection](./rms-client/aip-client.md), è possibile usare l'uno o l'altro portale per modificare le etichette. Perché i client Azure Information Protection acquisiscano le modifiche delle etichette apportate nel Centro sicurezza e conformità, è tuttavia necessario tornare al portale di Azure: Usare l'opzione **Pubblica** nel pannello **Azure Information Protection - Etichettatura unificata** nel portale di Azure. 
 
 Continuare a usare il portale di Azure per il [reporting centralizzato](reports-aip.md) e lo [scanner](deploy-aip-scanner-preview.md).
 
@@ -194,7 +194,9 @@ Quando lo scanner protegge i file inclusi in siti e librerie di SharePoint, il p
 
 ## <a name="ive-heard-a-new-release-is-going-to-be-available-soon-for-azure-information-protectionwhen-will-it-be-released"></a>Secondo alcune voci, sarà presto disponibile una nuova versione di Azure Information Protection. Quando verrà rilasciata?
 
-La documentazione tecnica non contiene informazioni sulle versioni future. Per questo tipo di informazioni e per gli annunci di nuove versioni, visitare il [blog di Enterprise Mobility + Security](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity?product=azure-information-protection,azure-rights-management-services) e ottenere gli aggiornamenti più recenti da [Microsoft Mobility@MSFTMobility](https://twitter.com/MSFTMobility) su Twitter. Se si è interessati a una versione di Office, assicurarsi di controllare anche il [blog di Office 365](https://techcommunity.microsoft.com/t5/Office-365-Blog/bg-p/Office365Blog) e il [blog per le app di Office](https://techcommunity.microsoft.com/t5/Office-Apps-Blog/bg-p/OfficeAppsBlog).
+La documentazione tecnica non contiene informazioni sulle versioni future. Per questo tipo di informazioni e per gli annunci di nuove versioni, visitare il [blog Enterprise Mobility + Security](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity?product=azure-information-protection,azure-rights-management-services).
+
+Se si è interessati a una versione di Office, assicurarsi di controllare anche il [blog di Office 365](https://techcommunity.microsoft.com/t5/Office-365-Blog/bg-p/Office365Blog) e il [blog per le app di Office](https://techcommunity.microsoft.com/t5/Office-Apps-Blog/bg-p/OfficeAppsBlog).
 
 ## <a name="is-azure-information-protection-suitable-for-my-country"></a>Azure Information Protection è disponibile in tutti i paesi?
 
@@ -210,8 +212,6 @@ Vedere [Informazioni su conformità e supporto per Azure Information Protection]
 ## <a name="how-can-i-report-a-problem-or-send-feedback-for-azure-information-protection"></a>Come è possibile segnalare un problema o inviare commenti e suggerimenti per Azure Information Protection?
 
 Per il supporto tecnico, usare i canali di supporto standard oppure [contattare il supporto tecnico Microsoft](information-support.md#to-contact-microsoft-support).
-
-Per inviare commenti e suggerimenti per possibili miglioramenti o nuove funzionalità: nel gruppo **Protezione** della scheda **Home** dell'applicazione di Office fare clic su **Proteggi** e quindi su **Guida e commenti**. Nella finestra di dialogo **Microsoft Azure Information Protection** fare clic su **Invia commenti e suggerimenti**. Questa opzione determina l'apertura di un messaggio di posta elettronica da inviare al team di Information Protection.
 
 È anche possibile rivolgersi al team di ingegneri nel [sito di Yammer per Azure Information Protection](https://www.yammer.com/askipteam/). 
 
