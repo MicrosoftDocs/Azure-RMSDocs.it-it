@@ -4,19 +4,19 @@ description: Istruzioni per installare, configurare ed eseguire lo scanner di Az
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/29/2019
+ms.date: 03/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 20d29079-2fc2-4376-b5dc-380597f65e8a
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: b8cf9cb6bd0fadadc12a6ef9c7b65d708ce51648
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 6cd71239fc2b6bd20fe1444568abea7d541e067f
+ms.sourcegitcommit: ffc7b181f27b628d2a2740f83e0874a830c3735c
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828533"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306966"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -242,7 +242,7 @@ Per impostazione predefinita, lo scanner viene eseguito una volta e solo ai fini
     
         Set-AIPScannerConfiguration -Enforce On -Schedule Always
     
-    Esistono altre impostazioni di configurazione che è opportuno modificare. Indicare ad esempio se gli attributi dei file vengono modificati e quali informazioni vengono registrate nei report. Inoltre, se i criteri di Azure Information Protection includono l'impostazione che richiede un messaggio di giustificazione per abbassare il livello di classificazione o rimuovere la protezione, specificare il messaggio usando questo cmdlet. Consultare la [guida online](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#optional-parameters) per altre informazioni sulle singole impostazioni di configurazione. 
+    Esistono altre impostazioni di configurazione che è opportuno modificare. Indicare ad esempio se gli attributi dei file vengono modificati e quali informazioni vengono registrate nei report. Inoltre, se i criteri di Azure Information Protection includono l'impostazione che richiede un messaggio di giustificazione per abbassare il livello di classificazione o rimuovere la protezione, specificare il messaggio usando questo cmdlet. Consultare la [guida online](/powershell/module/azureinformationprotection/Set-AIPScannerConfiguration#parameters) per altre informazioni sulle singole impostazioni di configurazione. 
 
 2. Prendere nota dell'ora corrente e avviare di nuovo lo scanner eseguendo il comando seguente:
     
@@ -402,6 +402,14 @@ Altri fattori che influenzano le prestazioni dello scanner:
 - Modifica delle condizioni in Azure Information Protection
     
     Il primo ciclo di analisi nel quale lo scanner deve controllare ogni file richiede più tempo rispetto ai cicli di analisi successivi in cui, per impostazione predefinita, vengono analizzati solo i file nuovi e modificati. Tuttavia, se si modificano le condizioni nei criteri di Azure Information Protection, tutti i file vengono analizzati nuovamente come descritto nella [sezione precedente](#when-files-are-rescanned).
+
+- La costruzione di espressioni regex per condizioni personalizzate
+    
+    Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. Ad esempio:
+    
+    - Evitare [quantificatori greedy](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)
+    
+    - Usare gruppi di non acquisizione, ad esempio `(?:expression)` invece di `(expression)`
 
 - Livello di registrazione selezionato
     

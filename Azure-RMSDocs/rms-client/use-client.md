@@ -4,18 +4,18 @@ description: Microsoft Azure Information Protection offre una soluzione client-s
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/12/2019
+ms.date: 03/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a6fa85be-f92a-4e00-9efc-9dbfd4dfbfcb
 ms.suite: ems
-ms.openlocfilehash: 9cb472280160919be93745fe7ff50f05e036f301
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: f797ffc63e38c15649e5bf590ad11dd5a009e957
+ms.sourcegitcommit: 3a3f1051c5a58c2bd2f230f1c8ece919df3dc23e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57829094"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221015"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -71,7 +71,7 @@ Per poter confrontare le funzionalità supportate dalle due versioni di anteprim
 |Modalità di sola protezione (nessuna etichetta):| Sì | No |
 |Pulsante Non inoltrare in Outlook:| Sì | No |
 |Supporto multilingue:| Sì | No |
-|Supporto per AD RMS:| Sì | È supportata solo l'azione seguente:<br /><br /> - Il visualizzatore può aprire i documenti protetti|
+|Supporto per AD RMS:| Sì | È supportata solo l'azione seguente:<br /><br /> - Il visualizzatore può aprire i documenti protetti se si distribuisce l'[estensione per dispositivi mobili di Active Directory Rights Management Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))|
 
 #### <a name="functional-comparison-for-the-clients"></a>Confronto funzionale dei client
 
@@ -89,6 +89,8 @@ Quando entrambi i client supportano la stessa funzionalità, usare la tabella se
 |Richieste di giustificazione (se configurate) per ogni azione in Office: | Frequenza: per ogni file <br /><br /> Riduzione del livello di riservatezza <br /><br /> Rimozione di un'etichetta<br /><br /> Rimozione della protezione | Frequenza: per ogni sessione <br /><br /> Riduzione del livello di riservatezza<br /><br /> Rimozione di un'etichetta|
 |Azioni di rimozione di etichette applicate: | Viene chiesta conferma all'utente <br /><br />L'etichetta predefinita o l'etichetta automatica (se configurata) non viene applicata automaticamente alla successiva apertura del file nell'app Office  <br /><br />| Non viene chiesta conferma all'utente<br /><br /> L'etichetta predefinita o l'etichetta automatica (se configurata) viene applicata automaticamente alla successiva apertura del file nell'app Office|
 |Classificazione automatica e consigliata: | Configurata come [condizioni per le etichette](../configure-policy-classification.md) nel portale di Azure con i tipi di informazioni predefiniti e le condizioni personalizzate che usano frasi o espressioni regolari <br /><br />Le opzioni di configurazione possibili sono: <br /><br />- Conteggio univoco/non univoco <br /><br /> - Conteggio minimo| Configurata nel Centro sicurezza e conformità con i tipi di informazioni sensibili predefiniti e i [tipi di informazioni personalizzati](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Le opzioni di configurazione possibili sono:  <br /><br />- Solo conteggio univoco <br /><br />- Conteggio minimo e massimo <br /><br />- Supporto di AND e OR con i tipi di informazioni <br /><br />- Dizionario di parole chiave<br /><br />- Livello di attendibilità e prossimità dei caratteri personalizzabili|
+
+Per un confronto più dettagliato delle differenze di comportamento per impostazioni di protezione specifiche, vedere [Confronto del comportamento delle impostazioni di protezione per un'etichetta](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
 
 #### <a name="features-that-will-not-be-in-the-azure-information-protection-unified-labeling-client"></a>Funzionalità che non saranno disponibili nel client per l'etichettatura unificata di Azure Information Protection
 

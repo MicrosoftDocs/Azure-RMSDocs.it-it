@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: f46e919665d110665ed85b5e2e5c6a979a1958e9
-ms.sourcegitcommit: 1fe9720526a2ff814cd5d353249b16497cfcaadc
+ms.openlocfilehash: 0a09c4c89ffd461cb0c922cb09ee0acd3ed033be
+ms.sourcegitcommit: d8cadf325472e7fc8900905305d7f583a97506b0
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425964"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "57829003"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configurazione delle regole del flusso di posta di Exchange Online per le etichette di Azure Information Protection
 
@@ -50,7 +50,7 @@ Per gli esempi seguenti, creare una nuova regola del flusso di posta seguendo qu
 
 2. Scegliere il riquadro **Amministrazione**.
 
-3. Nell'interfaccia di amministrazione di Office 365 scegliere **Interfacce di amministrazione** > **Exchange**.
+3. Nell'interfaccia di amministrazione di Microsoft 365 scegliere **Interfacce di amministrazione** > **Exchange**.
 
 4. Nell'interfaccia di amministrazione di Exchange: **flusso di posta** > **regole** > **+** > **Create a new rule** (Crea una nuova regola). 
 
