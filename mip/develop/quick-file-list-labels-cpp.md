@@ -7,12 +7,12 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 27b6c9039277feca033298520cc0fc18d239f037
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: e20b66062788632f3fc519e498761500ee78d68c
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330985"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809914"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Guida introduttiva: Elencare le etichette di riservatezza (C++)
 
@@ -135,7 +135,7 @@ Infine, compilare e testare l'applicazione client.
 
 | Riepilogo | Messaggio di errore | Soluzione |
 |---------|---------------|----------|
-| Token di accesso non valido | *Si è verificata un'eccezione... è il token di accesso errato/scaduti? <br> <br>Chiamata API non è riuscita: non è riuscita profile_add_engine_async con: l'acquisizione dei criteri non riuscite [classe mip::PolicySyncException], richiesta non è riuscita con codice di stato http: 401, x-ms-diagnostics: [2000001; motivo = "token OAuth inviato con la richiesta non può essere analizzato."; error_category = "invalid_token"], ID correlazione: [35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (processo 29924) terminato con codice 0.<br> <br>Premere un tasto qualsiasi per chiudere questa finestra...* | Se il progetto viene compilato correttamente, ma viene visualizzato un output simile a quello riportato a sinistra, è probabile che il token nel metodo `AcquireOAuth2Token()` sia non valido o scaduto. Tornare a [Aggiornare la logica di acquisizione del token](#update-the-token-acquisition-logic-with-a-valid-access-token) e rigenerare il token di accesso, aggiornare di nuovo `AcquireOAuth2Token()`, quindi ripetere compilazione e test. È anche possibile esaminare e verificare il token e le relative attestazioni usando l'applicazione Web a pagina singola [jwt.ms](https://jwt.ms/). |
+| Token di accesso non valido | *Si è verificata un'eccezione... è il token di accesso errato/scaduti? <br> <br>Chiamata API non è riuscita: non è riuscita profile_add_engine_async con: l'acquisizione dei criteri non riuscite [classe mip::PolicySyncException], richiesta non è riuscita con codice di stato http: 401, x-ms-diagnostics: [2000001; motivo = "token OAuth inviato con la richiesta non può essere analizzato."; error_category = "invalid_token"], ID correlazione: [35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (processo 29924) terminato con codice 0.<br> <br>Premere un tasto qualsiasi per chiudere questa finestra...* | Se il progetto viene compilato correttamente, ma viene visualizzato un output simile a quello riportato a sinistra, è probabile che il token nel metodo `AcquireOAuth2Token()` sia non valido o scaduto. Tornare alla [creare uno script di PowerShell per generare i token di accesso](#create-a-powershell-script-to-generate-access-tokens) e rigenerare l'aggiornamento, token di accesso `AcquireOAuth2Token()` anche in questo caso e ricompilazione o eseguire nuovamente il test. È anche possibile esaminare e verificare il token e le relative attestazioni usando l'applicazione Web a pagina singola [jwt.ms](https://jwt.ms/). |
 | Le etichette di riservatezza non sono configurate | n/d | Se il progetto viene compilato correttamente, ma non è presente alcun output nella finestra della console, verificare che le etichette di riservatezza dell'organizzazione siano configurate correttamente. Vedere [Installazione e configurazione di MIP SDK](setup-configure-mip.md) per informazioni dettagliate sulle impostazioni per la protezione e la tassonomia delle etichette.  |
 
 ## <a name="next-steps"></a>Passaggi successivi

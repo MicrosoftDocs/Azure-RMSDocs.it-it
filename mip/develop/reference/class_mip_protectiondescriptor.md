@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: bf063cb8b56cfd0c487b62394c9226519e85b1f3
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 922ff8811e5cb71d6d4d5920dfec80eadbcbc744
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330747"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809795"
 ---
 # <a name="class-mipprotectiondescriptor"></a>Classe mip::ProtectionDescriptor 
 Descrizione della protezione associata a una parte del contenuto.
@@ -113,7 +113,7 @@ Ottiene l'indirizzo del referrer della protezione.
 Ottiene i dati specifici dell'app che sono stati crittografati.
 
   
-**Restituisce**: Dati specifici dell'App un [ProtectionHandler](class_mip_protectionhandler.md) può contenere un dizionario di dati specifici dell'app è stata crittografata con il servizio di protezione. Questi dati crittografati sono indipendenti dai dati firmati accessibili tramite [ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getappsigneddata-function)
+**Restituisce**: Dati specifici dell'App un [ProtectionHandler](class_mip_protectionhandler.md) può contenere un dizionario di dati specifici dell'app è stata crittografata con il servizio di protezione. Questi dati crittografati sono indipendenti dai dati firmati accessibili tramite [ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getsignedappdata-function)
   
 ### <a name="getsignedappdata-function"></a>Funzione GetSignedAppData
 Ottiene i dati specifici dell'app che sono stati firmati.
