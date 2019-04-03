@@ -4,17 +4,17 @@ description: Le condizioni per un'etichetta consentono di assegnare automaticame
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/14/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: f8545491a527b8e502150cd83802b2868dd3a1da
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 3cf57d5e958ab535a2e2cd21adc305fe09bb8aec
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57829043"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809761"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection
 
@@ -99,19 +99,6 @@ Se si configura la classificazione automatica anziché consigliata, l'etichetta 
 Quando fa clic su **Salva**, le modifiche diventano automaticamente disponibili per utenti e servizi. Non è più presente un'opzione di pubblicazione separata.
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>Tipi di informazioni riservate che richiedono una versione minima del client
-
-I tipi di informazioni riservate seguenti richiedono almeno la versione 1.37.19.0 per il client Azure Information Protection:
-
-- **Numero di telefono cellulare EU**
-- **Numero di passaporto EU**
-- **Numero di patente di guida EU**
-- **Numero documento di identità EU**
-- **Codice fiscale (CF) EU o ID equivalente**
-- **Numero identificativo contribuente EU**
-- **Codice di identificazione della popolazione tailandese**
-- **Numero documento di identità turco**
-- **Numero di tessera residenza giapponese**
-
 
 I tipi di informazioni sensibili seguenti richiedono la versione di anteprima corrente del client Azure Information Protection:
 
