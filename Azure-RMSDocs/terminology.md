@@ -4,19 +4,19 @@ description: In caso di dubbio su una parola, un'espressione o un acronimo corre
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/02/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5fd820cb189d21d6d4b848547ad4eaafd42d5b96
-ms.sourcegitcommit: 1dec4a5884ee070cd5351ec229575f04f6eef7b8
+ms.openlocfilehash: bd136d42420f42521e9fe058e73b4d643715d254
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57206502"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809931"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologia di Azure Information Protection
 
@@ -36,7 +36,7 @@ Client Azure Information Protection|Lato client di Azure Information Protection 
 |Etichetta per Azure Information Protection|Elemento che applica sempre un valore di classificazione a documenti e a messaggi di posta elettronica e può anche proteggerli. Quando viene applicata un'etichetta, le informazioni dell'etichetta vengono archiviate nei metadati per le applicazioni e i servizi in modo da consentire la lettura ed eventualmente l'uso.|
 |Criteri di Azure Information Protection|Configurazione definita dall'amministratore per i client e i servizi che usano le etichette e le impostazioni dei criteri di Azure Information Protection.|
 |Scanner di Azure Information Protection|Servizio eseguito in Windows Server che consente di individuare, classificare e proteggere i documenti in cartelle locali, condivisioni di rete e siti e raccolte di SharePoint Server.|
-|Client per l'etichettatura unificata di Azure Information Protection|Attualmente in anteprima: client per computer Windows che consente a utenti, amministratori e servizi di usare le etichette di riservatezza e le impostazioni di criteri del Centro sicurezza e conformità di Office 365.|
+|Client per l'etichettatura unificata di Azure Information Protection|Attualmente in anteprima: client per computer Windows che consente a utenti, amministratori e servizi di usare le etichette di riservatezza e le impostazioni di criteri dal Centro sicurezza e conformità di Office 365, dal Centro sicurezza Microsoft 365 e dal Centro conformità Microsoft 365.|
 |Azure RMS|Vedere *Azure Rights Management*.|
 |Visualizzatore di Azure Information Protection|App eseguita su computer Windows e dispositivi mobili, per visualizzare i file protetti.|
 |Azure Rights Management|Spesso abbreviato in *Azure RMS*.<br /><br />Servizio Azure usato da Azure Information Protection che consente di proteggere documenti, file e messaggi di posta elettronica tramite crittografia e criteri.  Noto anche come *servizio Azure Rights Management*. I nomi precedenti includono:<br /><br />- *Windows Azure Active Directory Rights Management*: Spesso abbreviato in servizio di Windows Azure AD Rights Management.<br /><br />- *RMS Online*: Il nome proposto in origine, che si potrebbe leggere nei messaggi di errore e nelle voci dei file di log.|

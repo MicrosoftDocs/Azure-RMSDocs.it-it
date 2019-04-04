@@ -4,17 +4,17 @@ description: È possibile aggiungere il supporto di varie lingue per le etichett
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 04/03/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
-ms.openlocfilehash: 279823d8c3512ec8f28a3ecfdf4970cb18bae690
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 82dc592263117d075cb3793b9034a8adc0f1ca15
+ms.sourcegitcommit: 7283b7c7619d65b5e8272d51bbf85a1bc846befd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253235"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58867518"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Come configurare etichette e modelli per varie lingue in Azure Information Protection
 
@@ -36,7 +36,7 @@ Anche se le etichette predefinite per Azure Information Protection supportano pi
 
 - Non si dispone di una sottoscrizione che supporta le etichette, pertanto è possibile creare e gestire i modelli solo nel portale di Azure.
 
-Selezionare le lingue che corrispondono alle impostazioni lingua degli utenti per Office e Windows. Tali nomi e descrizioni di etichette vengono poi visualizzati rispettivamente nella barra di Azure Information Protection nelle app di Office e nella casella di dialogo **Classifica e proteggi - Azure Information Protection**. Per altre informazioni su quale lingua venga scelta, vedere la sezione [Come il client di Azure Information Protection determina la lingua da visualizzare](#how-the-azure-information-protection-client-determines-the-language-to- display) in questa pagina. 
+Selezionare le lingue che corrispondono alle impostazioni lingua degli utenti per Office e Windows. Tali nomi e descrizioni di etichette vengono poi visualizzati rispettivamente nella barra di Azure Information Protection nelle app di Office e nella finestra di dialogo **Classifica e proteggi - Azure Information Protection**. Per altre informazioni su quale lingua venga scelta, vedere la sezione [Come il client di Azure Information Protection determina la lingua da visualizzare](#how-the-azure-information-protection-client-determines-the-language-to- display) in questa pagina. 
 
 ## <a name="to-configure-labels-and-templates-for-different-languages"></a>Per configurare etichette e modelli per lingue diverse
 
@@ -64,10 +64,14 @@ Selezionare le lingue che corrispondono alle impostazioni lingua degli utenti pe
 6. Modificare ogni file XML: per ogni stringa all'interno di tag `<LocalizedText>` immettere le traduzioni per ogni lingua scelta. 
 
 7. Quando è stato modificato ogni file con estensione xml, creare una nuova cartella compressa contenente i file. La cartella compressa può avere qualsiasi nome, ma deve avere estensione zip.
+    
+    Suggerimento: Non è necessario attendere di completare la modifica di ogni file di lingua scaricato. Al contrario, è possibile distribuire lingue diverse in più fasi, includendo nel file ZIP un subset dei file totali scaricati. Dopo aver completato le traduzioni per più lingue, ripetere i passaggi 7 e 8.
 
 8. Tornare al pannello **Azure Information Protection - Lingue** e selezionare **Importa**. Si noti che se questa opzione non è disponibile, è necessario deselezionare per prima cosa la casella di controllo **NOME LINGUA** o le caselle di controllo per le lingue selezionate singolarmente.
     
     Dopo il completamento dell'importazione i nomi e le descrizioni localizzati vengono scaricati per gli utenti.
+
+È necessario ripetere questa procedura se è necessario per supportare una nuova lingua, creare nuove etichette o si modifica il nome o la descrizione delle etichette nel portale di Azure.
 
 ## <a name="how-the-azure-information-protection-client-determines-the-language-to-display"></a>Come il client di Azure Information Protection determina la lingua da visualizzare
 

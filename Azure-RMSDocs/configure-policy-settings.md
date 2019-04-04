@@ -4,17 +4,17 @@ description: Configurare le impostazioni nei criteri di Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/06/2019
+ms.date: 03/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 5a797fc02894c64d3801492080decf113383cb33
-ms.sourcegitcommit: 503b8330efbecfc4dce204ffe036a7911a35691d
+ms.openlocfilehash: b85cf3fc1a1f78732c928b40cb09b4781dc42168
+ms.sourcegitcommit: 8fa7d2e6b3e900fec128af57105995d5fb0cc761
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379883"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58617823"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Come configurare le impostazioni dei criteri per Azure Information Protection
 
@@ -42,7 +42,11 @@ Per configurare queste impostazioni:
         
         Questa impostazione si applica alle app di Office e allo scanner. Non è applicabile a Esplora file o PowerShell.
     
-   - **Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**: quando si imposta questa opzione su **Sì**, a tutti i documenti e messaggi di posta elettronica inviati deve essere applicata un'etichetta. L'etichetta può essere assegnata manualmente da un utente, automaticamente o come risultato di una [condizione](configure-policy-classification.md) oppure per impostazione predefinita selezionando l'opzione **Selezionare l'etichetta predefinita**.
+    - **Invia i dati di controllo a Log Analytics di Azure Information Protection**: prima di creare un'area di lavoro di Azure Log Analytics per i [dati di analisi di Azure Information Protection](reports-aip.md), i valori per questa impostazione sono **No** e **Non configurato**. Quando si crea l'area di lavoro, i valori diventano **No** e **Sì**.
+        
+        Quando l'impostazione è **Sì**, gli endpoint che supportano la creazione di report centralizzata inviano i dati di controllo al servizio Azure Information Protection. Per altre informazioni sulle informazioni inviate e archiviate, vedere la sezione [Informazioni raccolte e inviate a Microsoft](reports-aip.md#information-collected-and-sent-to-microsoft). Impostare questa opzione su **No** per impedire l'invio di questi dati.
+    
+    - **Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**: quando si imposta questa opzione su **Sì**, a tutti i documenti e messaggi di posta elettronica inviati deve essere applicata un'etichetta. L'etichetta può essere assegnata manualmente da un utente, automaticamente o come risultato di una [condizione](configure-policy-classification.md) oppure per impostazione predefinita selezionando l'opzione **Selezionare l'etichetta predefinita**.
         
        Se al momento del salvataggio di un documento o dell'invio di un messaggio di posta elettronica non è assegnata un'etichetta, viene chiesto all'utente di selezionarne una. Ad esempio:
         

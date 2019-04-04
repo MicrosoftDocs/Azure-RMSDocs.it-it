@@ -4,26 +4,26 @@ description: Istruzioni per gli utenti per installare la versione di anteprima d
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/26/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: cbe97fc619de9b7bda73ebb419bfc254f237f372
-ms.sourcegitcommit: 55782e58508051f0ecf460e8b126f70ab9b9ceec
+ms.openlocfilehash: a48bb16bd2b4a0b15df0086c1eba3c14766ee9a2
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56756131"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809897"
 ---
 # <a name="download-and-install-the-azure-information-protection-unified-labeling-client-preview"></a>Scaricare e installare il client per l'etichettatura unificata di Azure Information Protection (anteprima)
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 
 > [!NOTE]
-> Questo client è in anteprima e soggetto a modifiche. Usa l'archivio di etichettatura unificata e scarica i criteri con etichette di riservatezza dal Centro sicurezza e conformità di Office 365. Per usare queste etichette, è necessario prima pubblicarle dal Centro sicurezza e conformità. [Altre informazioni](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)
+> Questo client è in anteprima e soggetto a modifiche. Usa l'archivio di etichettatura unificata e scarica i criteri con etichette di riservatezza dai centri di amministrazione: Centro sicurezza e conformità di Office 365, Centro sicurezza Microsoft 365 e Centro conformità Microsoft 365. Per usare queste etichette, devono prima essere pubblicate da uno di questi centri di amministrazione. [Altre informazioni](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)
 
 Per installare questa versione di anteprima del client è necessario essere un amministratore locale del PC in modo che sia possibile assegnare etichette a documenti e messaggi di posta elettronica e proteggerli.
 
@@ -35,9 +35,9 @@ Inoltre:
 
 ## <a name="to-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Per scaricare e installare il client per l'etichettatura unificata di Azure Information Protection
 
-Prima di installare il client per l'etichettatura unificata di Azure Information Protection, verificare che nel Centro sicurezza e conformità di Office 365 siano disponibili etichette di riservatezza pubblicate per gli utenti. 
+Prima di installare il client per l'etichettatura unificata di Azure Information Protection, verificare di aver pubblicato le etichette di riservatezza nel Centro sicurezza e conformità di Office 365 o nel Centro sicurezza Microsoft 365 e nel Centro conformità Microsoft 365. 
 
-Se sono disponibili etichette che attualmente vengono pubblicate dal portale di Azure per Azure Information Protection, è possibile [eseguire la migrazione di queste etichette](../configure-policy-migrate-labels.md) nel Centro sicurezza e conformità.
+Se sono disponibili etichette che attualmente vengono pubblicate dal portale di Azure per Azure Information Protection, è possibile [eseguire la migrazione di queste etichette](../configure-policy-migrate-labels.md) nei centri di amministrazione.
 
 1. Scaricare la versione di anteprima del client dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=57440).
 
@@ -67,4 +67,4 @@ L'installazione è ora completa ed è possibile usare il client per l'etichettat
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per altre informazioni sull'archivio di etichettatura unificata ora usato dal Centro sicurezza e conformità di Office 365, leggere il post di blog seguente: [Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492) (Annuncio della disponibilità della gestione dell'etichettatura unificata nel Centro sicurezza e conformità).
+Per altre informazioni sull'archivio di etichettatura unificata usato dai centri di amministrazione, leggere il post di blog seguente: [Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492) (Annuncio della disponibilità della gestione dell'etichettatura unificata nel Centro sicurezza e conformità).

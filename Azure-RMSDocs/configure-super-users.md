@@ -4,19 +4,19 @@ description: Informazioni sulla funzionalità per utenti con privilegi avanzati 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/12/2018
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1590fded6abab3ca2848d9eb216e9f49f35f0cfb
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 4a0583b4cc288385520d2990d6f297a58a81d1cc
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255326"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809728"
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Configurazione degli utenti con privilegi avanzati per Azure Rights Management e servizi di individuazione o ripristino dei dati
 
@@ -85,7 +85,7 @@ Per altre informazioni su questi cmdlet, vedere [Uso di PowerShell con il client
 
 Benché sia possibile usare il cmdlet Unprotect-RMSFile per decrittografare il contenuto protetto nei file PST, è consigliabile usare questo cmdlet in modo strategico nell'ambito del processo di eDiscovery. L'esecuzione di Unprotect-RMSFile con file di grandi dimensioni in un computer è un'attività che richiede molte risorse (memoria e spazio su disco) e le dimensioni massime del file supportate per questo cmdlet sono 5 GB.
 
-Idealmente, usare [Office 365 eDiscovery](/office365/securitycompliance/ediscovery) per cercare ed estrarre i messaggi di posta elettronica protetti e gli allegati protetti in essi contenuti. La capacità degli utenti con privilegi avanzati viene integrata automaticamente con Exchange Online in modo che eDiscovery nel Centro sicurezza e conformità di Office 365 possa cercare gli elementi crittografati prima di esportare o di decrittografare i messaggi di posta elettronica crittografati in fase di esportazione.
+Idealmente, usare [Office 365 eDiscovery](/office365/securitycompliance/ediscovery) per cercare ed estrarre i messaggi di posta elettronica protetti e gli allegati protetti in essi contenuti. La capacità degli utenti con privilegi avanzati viene integrata automaticamente con Exchange Online in modo che eDiscovery nel Centro sicurezza e conformità di Office 365 o nel Centro conformità Microsoft 365 possa cercare gli elementi crittografati prima di esportare o di decrittografare i messaggi di posta elettronica crittografati in fase di esportazione.
 
 Se non è possibile usare Office 365 eDiscovery, potrebbe essere disponibile un'altra soluzione di eDiscovery in grado di integrarsi con il servizio Azure Rights Management per un'analisi analoga dei dati. In alternativa, se la soluzione di eDiscovery non è in grado di leggere e decrittografare automaticamente il contenuto protetto, è comunque possibile usare questa soluzione in un processo in più passaggi che consente di eseguire Unprotect-RMSFile in modo più efficiente:
 

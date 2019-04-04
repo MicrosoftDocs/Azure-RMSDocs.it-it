@@ -4,18 +4,18 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/19/2019
+ms.date: 04/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 91afeedf07e34f08860f1d596052fdc559c53098
-ms.sourcegitcommit: d8cadf325472e7fc8900905305d7f583a97506b0
+ms.openlocfilehash: d6ffbce2dfba5a2d835808a21857eb396cfc1eb5
+ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57828448"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58809863"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection: Cronologia delle versioni e criteri per il supporto
 
@@ -47,7 +47,7 @@ Usare le informazioni seguenti per scoprire le novità o le modifiche per una ve
 Se la versione 1 del client usata è successiva alla 1.41.51.0, si tratta di una build di anteprima per scopi di test e valutazione.  
 
 > [!TIP]
-> Se si è interessati alla valutazione del client di etichettatura unificato Azure Information Protection perché si pubblicano le etichette dal Centro sicurezza e conformità di Office 365, Vedere [Client per l'etichettatura unificata di Azure Information Protection: informazioni di rilascio versione](unifiedlabelingclient-version-release-history.md).
+> Si è interessati alla valutazione del client per l'etichettatura unificata di Azure Information Protection perché si pubblicano le etichette dal Centro sicurezza e conformità di Office 365, dal Centro sicurezza Microsoft 365 o dal Centro conformità Microsoft 365? Vedere [Client per l'etichettatura unificata di Azure Information Protection: informazioni di rilascio versione](unifiedlabelingclient-version-release-history.md).
 
 **Data di rilascio**: 05/03/2019
 
@@ -81,6 +81,7 @@ Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
 
 - Nuova impostazione client avanzata applicabile solo quando si impostano i criteri per non visualizzare le autorizzazioni personalizzate. Quando un file è protetto da autorizzazioni personalizzate, visualizzare l'opzione Autorizzazioni personalizzate in Esplora File in modo che gli utenti possano visualizzarle e modificarle. È necessario che gli utenti abbiano le autorizzazioni per modificare le impostazioni di protezione. [Altre informazioni](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
+- Nuova impostazione client avanzata per l'analisi di Azure Information Protection per impedire l'invio delle corrispondenze per i tipi di informazioni a un subset di utenti quando è stata selezionata la casella di controllo nel portale di Azure per raccogliere le corrispondenze del contenuto. [Altre informazioni](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
 
 **Correzioni**:
 
