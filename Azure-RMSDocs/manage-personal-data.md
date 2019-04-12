@@ -4,19 +4,19 @@ description: Informazioni sui dati personali usati da Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/23/2019
+ms.date: 04/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: aa8b1da968a0821fd889bbed54e6b7698857bcf2
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 33455ec0d6433c52164f27127838917c2850d2f3
+ms.sourcegitcommit: 465709879998fcb78cd2a4efda559c43ed661dda
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233735"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gestire i dati personali per Azure Information Protection
 
@@ -211,11 +211,13 @@ I dati personali visualizzati e specificati nel portale di Azure sono accessibil
     
 - **Amministratore di Information Protection**
 
+- **Amministratore di conformità**
+
 - **Amministratore della sicurezza**
 
-- **Amministratore globale / Amministratore società**
+- **Amministratore globale**
 
-I dati personali visualizzati e specificati tramite il modulo AADRM sono accessibili solo agli utenti cui è stato assegnato il ruolo **Amministratore di Information Protection** o i ruoli **Amministratore globale/Amministratore società** di Azure Active Directory oppure il ruolo di amministratore globale per il servizio Azure Rights Management.  
+I dati personali visualizzati e specificati tramite il modulo AADRM sono accessibili solo agli utenti cui è stato assegnato il ruolo **Amministratore di Information Protection**, **Amministratore di conformità** o **Amministratore globale** di Azure Active Directory oppure il ruolo di amministratore globale per il servizio Azure Rights Management.  
 
 ## <a name="updating-personal-data"></a>Aggiornamento dei dati personali
 

@@ -4,19 +4,19 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/29/2019
+ms.date: 04/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 6f41e49b2a5183c7c264c5be60fc496f78a6e1dd
-ms.sourcegitcommit: b201730193b4e4e3a3254e7a0f673ddd7d6e3c84
+ms.openlocfilehash: 3cd27fc4a060b6c7328495ad46d53768c28ff223
+ms.sourcegitcommit: ce2078712d111f102a72b3a8697121f1390bdf07
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58640363"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59289469"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -67,6 +67,7 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 |PullPolicy|[Supporto per i computer disconnessi](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Aggiungere "Segnala un problema" per gli utenti](#add-report-an-issue-for-users)|
+|RunAuditInformationTypeDiscovery|[Abilitare gli strumenti di analisi di Azure Information Protection per individuare informazioni riservate nei documenti](#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)|
 |RunPolicyInBackground|[Attivare l'esecuzione continua della classificazione in background](#turn-on-classification-to-run-continuously-in-the-background)|
 |ScannerConcurrencyLevel|[Limitare il numero di thread usati dallo scanner](#limit-the-number-of-threads-used-by-the-scanner)|
 |SyncPropertyName|[Etichettare un documento di Office usando una proprietà personalizzata esistente](#label-an-office-document-by-using-an-existing-custom-property)|
@@ -255,7 +256,9 @@ Configurare le stringhe seguenti:
 
 - Valore: **True**
 
-Senza questa impostazione, al messaggio di posta elettronica viene applicata la prima etichetta secondaria individuata dall'etichetta padre più in alto.
+Senza questa impostazione, al messaggio di posta elettronica viene applicata la prima etichetta con la classificazione più alta individuata dall'etichetta padre. 
+
+Con questa impostazione, al messaggio di posta elettronica viene applicata l'etichetta secondaria con la classificazione più alta ordinata per ultima dall'etichetta padre. Se occorre riordinare le etichette per applicare quella desiderata per questo scenario, vedere [Come eliminare o riordinare un'etichetta per Azure Information Protection](../configure-policy-delete-reorder.md).
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Abilitare la classificazione consigliata in Outlook
 
@@ -756,6 +759,28 @@ Si supponga, ad esempio, di avere una colonna di SharePoint denominata **Classif
 Per etichettare un documento di Office con uno di questi valori di classificazione, impostare **SyncPropertyName** su **Classificazione** e **SyncPropertyState** a **OneWay**. 
 
 A questo punto, quando un utente apre e salva uno di questi documenti di Office, il documento viene etichettato come **Pubblico**, **Generale** o **Riservatezza elevata\Tutti i dipendenti** se sono presenti etichette con questi nomi nei criteri di Azure Information Protection. In assenza di etichette con questi nomi, il documento rimane senza etichetta.
+
+## <a name="enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents"></a>Abilitare gli strumenti di analisi di Azure Information Protection per individuare informazioni riservate nei documenti
+
+Questa configurazione usa un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che è necessario configurare nel portale di Azure e richiede la versione di anteprima corrente del client di Azure Information Protection.
+
+Gli [strumenti di analisi di Azure Information Protection](../reports-aip.md) possono individuare e segnalare i documenti contenenti informazioni riservate salvati dai client Azure Information Protection. Per impostazione predefinita, queste informazioni non vengono inviate agli strumenti di analisi di Azure Information Protection.
+
+Per cambiare questo comportamento in modo che le informazioni vengano inviate, immettere le stringhe seguenti:
+
+- Chiave: **RunAuditInformationTypeDiscovery**
+
+- Valore: **True**
+
+Se non si configura questa impostazione client avanzata, i risultati del controllo vengono comunque inviate dal client Azure Information Protection, ma le informazioni sono limitate alla segnalazione degli utenti che accedono a contenuto etichettato.
+
+Ad esempio:
+
+- Senza questa impostazione, è possibile vedere che un utente ha aperto il file Financial.docx etichettato come **Confidential \ Sales**.
+
+- Con questa impostazione, è possibile vedere che il file Financial.docx contiene 6 numeri di carta di credito.
+    
+    - Se si abilita anche [Corrispondenze di contenuto per un'analisi più approfondita](../reports-aip.md#content-matches-for-deeper-analysis), si potranno vedere anche i numeri di carta di credito stessi.
 
 ## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>Disabilitare l'invio delle corrispondenze per i tipi di informazioni per un subset di utenti
 

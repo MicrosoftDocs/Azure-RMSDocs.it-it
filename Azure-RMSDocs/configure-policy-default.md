@@ -4,16 +4,16 @@ description: Informazioni sulla configurazione dei criteri predefiniti per Azure
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/06/2018
+ms.date: 04/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: a6fd4b308413fb5bf852a5c063c54b972497289c
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 18654d3867fd456b8b4ed6eb0ebd01d9c86ff13a
+ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253592"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59364590"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Criteri predefiniti di Azure Information Protection
 
@@ -24,6 +24,12 @@ Le informazioni seguenti sono utili per comprendere come viene configurato il cr
 Quando un amministratore si connette per la prima volta al servizio Azure Information Protection tramite il portale di Azure, vengono creati i criteri predefiniti di Azure Information Protection per il tenant. Microsoft potrebbe occasionalmente modificare i criteri predefiniti, pertanto se è già stato usato il servizio prima della modifica dei criteri predefiniti, la versione precedente dei criteri di Azure Information Protection non è aggiornata perché potrebbero essere già stati configurati e distribuiti nell'ambiente di produzione.
 
 È possibile fare riferimento ai valori seguenti per riportare i criteri di Azure Information Protection alle impostazioni predefinite o aggiornare i criteri di Azure Information Protection ai valori più recenti.
+
+> [!IMPORTANT]
+> A partire da aprile 2019 verrà gradualmente distribuita ai nuovi clienti una modifica che riguarda le etichette predefinite che non vengono create automaticamente. Per questi tenant viene effettuato automaticamente il provisioning della piattaforma di etichettatura unificata, quindi non è necessario eseguire la migrazione delle etichette dopo averle configurate nel portale di Azure.
+> 
+> Se per questi tenant non sono già state create etichette di riservatezza nel Centro sicurezza e conformità di Office 365, nel Centro sicurezza Microsoft 365 o nel Centro conformità Microsoft 365, è possibile creare le etichette predefinite dai criteri predefiniti correnti per Azure Information Protection. A questo scopo, selezionare **Generate default labels** (Genera etichette predefinite) nel pannello **Etichette** e aggiungere le etichette ai criteri globali. Per istruzioni dettagliate, vedere [Guida introduttiva: Introduzione ad Azure Information Protection nel portale di Azure](quickstart-viewpolicy.md).
+
 
 ## <a name="current-default-policy"></a>Criteri predefiniti correnti
 
@@ -95,14 +101,19 @@ Le autorizzazioni di protezione corrispondono a quelle del [modello predefinito]
 
 ### <a name="settings"></a>Impostazioni
 
+Alcune impostazioni sono state aggiunte dopo il 31 luglio 2017.
+
 |Impostazione|Valore|
 |-------------------------------|---------------------------|
-|Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta applicata automaticamente o dagli utenti|Off|
 |Selezionare l'etichetta predefinita|Nessuno|
+|Invia i dati di controllo alle analisi di Azure Information Protection|Off|
+|Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta applicata automaticamente o dagli utenti|Off|
 |Gli utenti devono fornire una giustificazione per impostare un'etichetta di classificazione inferiore, rimuovere un'etichetta o rimuovere la protezione|Off|
 |For email messages with attachments, apply a label that matches the highest classification of those attachments (Per i messaggi di posta elettronica con allegati, applica un'etichetta che corrisponda alla classificazione più elevata di tali allegati)|Off|
+|Visualizza la barra di Information Protection nelle app Office|Off|
+|Aggiungi il pulsante Non inoltrare alla barra multifunzione di Outlook|Off|
+|Rendi disponibile agli utenti l'opzione per le autorizzazioni personalizzate|Off|
 |Provide a custom URL for the Azure Information Protection client "Tell me more" web page (Specifica un URL personalizzato per la pagina Web "Ulteriori informazioni" del client di Azure Information Protection)|Vuoto|
-
 
 ## <a name="default-policy-before-july-31-2017"></a>Criteri predefiniti prima del 31 luglio 2017
 

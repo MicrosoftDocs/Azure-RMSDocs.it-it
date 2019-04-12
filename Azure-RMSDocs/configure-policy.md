@@ -3,7 +3,7 @@ title: Configurare i criteri di Azure Information Protection - AIP
 description: Per configurare le funzioni di classificazione, aggiunta di etichette e protezione, è necessario configurare i criteri di Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-ms.date: 04/02/2019
+ms.date: 04/05/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: f848aed3bb8bf6d7982a757c182edd19c9fbff73
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
+ms.openlocfilehash: b16d34cfa97a695ea24a6cb5caa18e759517f08e
+ms.sourcegitcommit: 465709879998fcb78cd2a4efda559c43ed661dda
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809778"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233769"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -62,12 +62,14 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
     
     - **Ruolo con autorizzazioni di lettura per la sicurezza** solo per le [funzionalità di analisi di Azure Information Protection](reports-aip.md)
     
+  - **Amministratore di conformità**
+    
   - **Amministratore della sicurezza**
     
-  - **Amministratore globale / Amministratore società**
+  - **Amministratore globale**
     
     > [!NOTE] 
-    > Se è stata eseguita la migrazione del tenant all'archivio di etichettatura unificata, per gestire Azure Information Protection dal portale di Azure, l'account deve essere un amministratore globale o uno dei ruoli elencati ed essere autorizzato ad accedere al Centro sicurezza e conformità di Office 365, al Centro sicurezza Microsoft 365 o al Centro conformità Microsoft 365. [Altre informazioni](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > Se è stata eseguita la migrazione del tenant nell'archivio etichette unificato, il ruolo di amministratore di Information Protection non è più supportato. [Altre informazioni](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Per accedere al pannello Azure Information Protection per la prima volta

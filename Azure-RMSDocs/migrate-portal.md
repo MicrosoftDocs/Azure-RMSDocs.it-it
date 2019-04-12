@@ -4,19 +4,19 @@ description: Panoramica delle attività di amministrazione nel portale di Azure 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/07/2018
+ms.date: 04/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: c445b676a6aea817e2aef410886c22d9009519e4
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.openlocfilehash: 818d1f16d28a2d2b1b485aab9ddfdff5b9d814a9
+ms.sourcegitcommit: 465709879998fcb78cd2a4efda559c43ed661dda
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256261"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233752"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Attività che precedentemente venivano eseguite con il portale di Azure classico
 
@@ -56,7 +56,7 @@ Nuove funzionalità nel portale di Azure:
 
 - È possibile convertire i modelli in etichette, in modo da gestire un singolo oggetto anziché gestire un modello e un'etichetta separatamente. Per le istruzioni, vedere [Per convertire i modelli in etichette](configure-policy-templates.md#to-convert-templates-to-labels).
 
-- Supporto per altri ruoli amministrativi: mentre prima, per configurare Azure Rights Management, era necessario accedere al portale di Azure classico come amministratore globale, ora è possibile accedere al portale di Azure per configurare Azure Information Protection usando un account con uno dei seguenti ruoli amministrativi: **amministratore globale**, **amministratore della sicurezza** o **amministratore di Information Protection**. Per altre informazioni su ciascuno di questi ruoli, vedere la sezione [Ruoli disponibili](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) della documentazione di Azure Active Directory.
+- Supporto per altri ruoli amministrativi: mentre prima, per configurare Azure Rights Management, era necessario accedere al portale di Azure classico come amministratore globale, ora è possibile accedere al portale di Azure per configurare Azure Information Protection usando un account con uno dei ruoli amministrativi seguenti: **Amministratore globale**, **Amministratore della sicurezza**, **Amministratore di conformità** o **Amministratore di Information Protection**. Per altre informazioni su ciascuno di questi ruoli, vedere la sezione [Ruoli disponibili](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) della documentazione di Azure Active Directory.
 
 Il supporto dei cmdlet di PowerShell per creare e gestire i modelli e per attivare e disattivare il servizio rimane invariato.
 
