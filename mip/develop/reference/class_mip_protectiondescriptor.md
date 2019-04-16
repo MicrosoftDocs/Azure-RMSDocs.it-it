@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 922ff8811e5cb71d6d4d5920dfec80eadbcbc744
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
+ms.openlocfilehash: 6f4bb83950a4745739a1663950a52d05c51f7f4d
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809795"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573293"
 ---
 # <a name="class-mipprotectiondescriptor"></a>Classe mip::ProtectionDescriptor 
 Descrizione della protezione associata a una parte del contenuto.
@@ -26,6 +26,7 @@ public std::string GetName() const  |  Ottiene il nome della protezione.
 public std::string GetDescription() const  |  Ottiene la descrizione della protezione.
 public std::string GetTemplateId() const  |  Ottiene l'ID del modello di protezione, se presente.
 public std::string GetLabelId() const  |  Ottiene l'ID etichetta, se presente.
+Public std:: String GetContentId() const  |  Ottiene l'ID contenuto, se presente.
 Public std:: Vector\<UserRights\> GetUserRights() const  |  Ottiene una raccolta di mapping dei diritti agli utenti.
 Public std:: Vector\<UserRoles\> GetUserRoles() const  |  Ottiene una raccolta di mapping dei ruoli agli utenti.
 public bool DoesContentExpire() const  |  Controlla se il contenuto contiene un'ora di scadenza o meno.
@@ -73,6 +74,12 @@ Ottiene l'ID etichetta, se presente.
   
 **Restituisce**: [Etichetta](class_mip_label.md) contenuto protetto con ID di questa proprietà verrà popolata solo in ProtectionDescriptors per preesistente. È un campo popolato dal server nel momento in cui il contenuto protetto viene utilizzato.
   
+### <a name="getcontentid-function"></a>GetContentId (funzione)
+Ottiene l'ID contenuto, se presente.
+
+  
+**Restituisce**: ID contenuto
+  
 ### <a name="getuserrights-function"></a>GetUserRights (funzione)
 Ottiene una raccolta di mapping dei diritti agli utenti.
 
@@ -113,7 +120,7 @@ Ottiene l'indirizzo del referrer della protezione.
 Ottiene i dati specifici dell'app che sono stati crittografati.
 
   
-**Restituisce**: Dati specifici dell'App un [ProtectionHandler](class_mip_protectionhandler.md) può contenere un dizionario di dati specifici dell'app è stata crittografata con il servizio di protezione. Questi dati crittografati sono indipendenti dai dati firmati accessibili tramite [ProtectionDescriptor::GetSignedAppData](class_mip_protectiondescriptor.md#getsignedappdata-function)
+**Restituisce**: Dati specifici dell'App un [ProtectionHandler](class_mip_protectionhandler.md) può contenere un dizionario di dati specifici dell'app è stata crittografata con il servizio di protezione. Questi dati crittografati sono indipendenti dai dati firmati accessibili tramite ProtectionDescriptor::GetSignedAppData.
   
 ### <a name="getsignedappdata-function"></a>Funzione GetSignedAppData
 Ottiene i dati specifici dell'app che sono stati firmati.

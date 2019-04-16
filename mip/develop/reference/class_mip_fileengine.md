@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: f4b61c9866c22f2f29166e6caa4cbc81287c11ca
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 15ce90a80430f50854580f6c7a2993d92db0a744
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333705"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573990"
 ---
 # <a name="class-mipfileengine"></a>Classe mip::FileEngine 
 Questa classe fornisce un'interfaccia per tutte le funzioni del motore.
@@ -22,13 +22,17 @@ Questa classe fornisce un'interfaccia per tutte le funzioni del motore.
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Restituisce le impostazioni del motore.
 Public std:: Vector const\<std:: shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  Elenca i tipi di riservatezza associati al motore di criteri.
+Public std:: shared_ptr const\<etichetta\> GetDefaultSensitivityLabel() const  |  Ottiene l'etichetta di riservatezza predefinita.
 Public std:: Vector const\<std:: shared_ptr\<Label\>\>& ListSensitivityLabels()  |  Restituisce un elenco di etichette di riservatezza.
 public const std::string& GetMoreInfoUrl() const  |  Fornire un URL per la ricerca di altre informazioni su criteri/etichette.
+Public std:: String const & GetPolicyId() const  |  Ottiene l'ID criteri.
 public bool IsLabelingRequired() const  |  Controlla se il criterio determina che un documento deve essere etichettato.
-public void CreateFileHandlerAsync (const std:: String & inputFilePath, const isAuditDiscoveryEnabled di std:: String & contentIdentifier, const ContentState contentState, bool, const std:: shared_ptr\<FileHandler::Observer\>& fileHandlerObserver, const std:: shared_ptr\<void\>& context, const std:: shared_ptr\<FileExecutionState\>& fileExecutionState)  |  Avvia la creazione di un gestore di file per un determinato percorso file.
-public void CreateFileHandlerAsync (const std:: shared_ptr\<Stream\>& inputStream, const std:: String & inputFilePath, const std:: String & contentIdentifier, const mip::ContentState contentState, bool isAuditDiscoveryEnabled, const std:: shared_ptr\<FileHandler:: Observer\>& fileHandlerObserver, const std:: shared_ptr\<void\>& context, const std:: shared_ptr\< FileExecutionState\>& fileExecutionState)  |  Avvia la creazione di un gestore di file per un determinato flusso di file.
+pubblica std::chrono::time_point\<std\> GetLastPolicyFetchTime() const  |  Ottiene l'ora dell'ultimo recupero quando il criterio.
+public void CreateFileHandlerAsync (const std:: String & inputFilePath, const std:: String & actualFilePath, bool isAuditDiscoveryEnabled, const std:: shared_ptr\<FileHandler:: Observer\>& fileHandlerObserver const std:: shared_ptr\<void\>& context, const std:: shared_ptr\<FileExecutionState\>& fileExecutionState)  |  Avvia la creazione di un gestore di file per un determinato percorso file.
+public void CreateFileHandlerAsync (const std:: shared_ptr\<Stream\>& inputStream, const std:: String & actualFilePath, bool isAuditDiscoveryEnabled, const std:: shared_ptr\<FileHandler:: Observer \>& fileHandlerObserver, const std:: shared_ptr\<void\>& context, const std:: shared_ptr\<FileExecutionState\>& fileExecutionState)  |  Avvia la creazione di un gestore di file per un determinato flusso di file.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Registra un evento specifico dell'applicazione per la pipeline di controllo.
 Public std:: Vector const\<std:: Pair\<std:: String, std:: String\>\>& GetCustomSettings() const  |  Ottiene un elenco di impostazioni personalizzate.
+public bool HasClassificationRules() const  |  Ottiene se il criterio ha regole automatico o raccomandazione.
   
 ## <a name="members"></a>Membri
   
@@ -43,6 +47,12 @@ Elenca i tipi di riservatezza associati al motore di criteri.
   
 **Vedere anche**: [FileEngine::Settings](class_mip_fileengine_settings.md)).
   
+### <a name="getdefaultsensitivitylabel-function"></a>GetDefaultSensitivityLabel (funzione)
+Ottiene l'etichetta di riservatezza predefinita.
+
+  
+**Restituisce**: Etichetta di riservatezza predefinita se esistente, nullptr se è presente alcun set di etichetta predefinita.
+  
 ### <a name="listsensitivitylabels-function"></a>ListSensitivityLabels (funzione)
 Restituisce un elenco di etichette di riservatezza.
   
@@ -52,11 +62,23 @@ Fornire un URL per la ricerca di altre informazioni su criteri/etichette.
   
 **Restituisce**: Un url in formato stringa.
   
+### <a name="getpolicyid-function"></a>GetPolicyId (funzione)
+Ottiene l'ID criteri.
+
+  
+**Restituisce**: Stringa che rappresenta l'ID dei criteri
+  
 ### <a name="islabelingrequired-function"></a>IsLabelingRequired (funzione)
 Controlla se il criterio determina che un documento deve essere etichettato.
 
   
 **Restituisce**: True se l'assegnazione di etichette è obbligatorio, altrimenti false.
+  
+### <a name="getlastpolicyfetchtime-function"></a>GetLastPolicyFetchTime (funzione)
+Ottiene l'ora dell'ultimo recupero quando il criterio.
+
+  
+**Restituisce**: L'ora dell'ultimo recupero quando il criterio
   
 ### <a name="createfilehandlerasync-function"></a>CreateFileHandlerAsync (funzione)
 Avvia la creazione di un gestore di file per un determinato percorso file.
@@ -65,10 +87,7 @@ Parametri:
 * **inputFilePath**: File da aprire. Il percorso deve includere il nome del file e, se ne esiste uno, l'estensione del nome di file. 
 
 
-* **contentIdentifier**: un identificatore leggibile dall'utente per il contenuto. esempio di un file: Esempio di "C:\mip-sdk-for-cpp\files\audit.docx" [percorso\nomefile] per un messaggio di posta elettronica: "RE: Controllo design:user1@contoso.com"[soggetto: mittente] 
-
-
-* **contentState**: Lo stato del contenuto durante l'applicazione interagisce con esso. 
+* **actualFilePath**: Il percorso del file (non temporanee) effettivo, verrà usato per il controllo. 
 
 
 * **isAuditDiscoveryEnabled**: che indica se il rilevamento di controllo è abilitato o meno. 
@@ -88,13 +107,7 @@ Parametri:
 * **inputStream**: Flusso contenente i dati del file. 
 
 
-* **inputFilePath**: Percorso del file. Il percorso deve includere il nome del file e, se ne esiste uno, l'estensione del nome di file. 
-
-
-* **contentIdentifier**: un identificatore leggibile dall'utente per il contenuto. esempio di un file: Esempio di "C:\mip-sdk-for-cpp\files\audit.docx" [percorso\nomefile] per un messaggio di posta elettronica: "RE: Controllo design:user1@contoso.com"[soggetto: mittente] 
-
-
-* **contentState**: Lo stato del contenuto durante l'applicazione interagisce con esso. 
+* **actualFilePath**: Percorso del file. Il percorso deve includere il nome del file e, se ne esiste uno, l'estensione del nome di file. userà anche per identificare il file nel controllo. 
 
 
 * **isAuditDiscoveryEnabled**: che indica se il rilevamento di controllo è abilitato o meno. 
@@ -126,3 +139,9 @@ Ottiene un elenco di impostazioni personalizzate.
 
   
 **Restituisce**: Un vettore di impostazioni personalizzate
+  
+### <a name="hasclassificationrules-function"></a>HasClassificationRules (funzione)
+Ottiene se il criterio ha regole automatico o raccomandazione.
+
+  
+**Restituisce**: Un valore booleano che indica se esiste qualsiasi automatico o recommandation regole nel criterio

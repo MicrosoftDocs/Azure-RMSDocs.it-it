@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 8121763106c9f46022264a7eea3bc16e363e523c
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: f3a8d50d55dc615a7aa81e8686b356bfc2d41654
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330475"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573939"
 ---
 # <a name="class-mipaddwatermarkaction"></a>Classe mip::AddWatermarkAction 
 Classe di azione che specifica l'aggiunta di una filigrana.
@@ -27,7 +27,7 @@ public const std::string& GetFontName() const  |  Ottiene il nome del tipo di ca
 public int GetFontSize() const  |  Ottiene le dimensioni del carattere usate per visualizzare la filigrana.
 public const std::string& GetFontColor() const  |  Ottiene il colore del carattere usato per visualizzare la filigrana.
 public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
-  
+
 ## <a name="members"></a>Membri
   
 ### <a name="getuielementname-function"></a>GetUIElementName (funzione)
@@ -65,7 +65,7 @@ Ottiene il colore del carattere usato per visualizzare la filigrana.
 
   
 **Restituisce**: Colore del carattere come stringa (ad esempio, "#000000").
-  
+
 ### <a name="gettype-function"></a>Funzione GetType
 Specifica il tipo di [Action](class_mip_action.md).
 

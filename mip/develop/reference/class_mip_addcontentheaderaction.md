@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 9e3080e4fcfd8553d04acc1533fc16d8bb1640f3
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 367626955ba1652b20b372efd309d15304e5336f
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330679"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573446"
 ---
 # <a name="class-mipaddcontentheaderaction"></a>Classe mip::AddContentHeaderAction 
 Classe di azione che specifica l'aggiunta di un'intestazione contenuto.
@@ -28,7 +28,7 @@ public const std::string& GetFontColor() const  |  Ottiene il colore del caratte
 public ContentMarkAlignment GetAlignment() const  |  Ottiene l'allineamento dell'intestazione.
 public int GetMargin() const  |  Ottiene il margine dell'intestazione a partire dal basso.
 public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
-  
+
 ## <a name="members"></a>Membri
   
 ### <a name="getuielementname-function"></a>GetUIElementName (funzione)
@@ -67,14 +67,14 @@ Ottiene l'allineamento dell'intestazione.
   
 **Restituisce**: Enumeratore ContentMarkAlignment: LEFT | RIGHT | CENTRO. 
   
-**Vedere anche**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
+**Vedere anche**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment)
   
 ### <a name="getmargin-function"></a>GetMargin (funzione)
 Ottiene il margine dell'intestazione a partire dal basso.
 
   
 **Restituisce**: I margini dalla parte inferiore del documento (ad esempio 10 mm).
-  
+
 ### <a name="gettype-function"></a>Funzione GetType
 Specifica il tipo di [Action](class_mip_action.md).
 

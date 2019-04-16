@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 2621d4ec6f8aa8bf20c6fa3bb2bc0350d88333f4
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 2481ee7d42f00ce5b33529b15e17b22ba6556b0e
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332600"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574041"
 ---
 # <a name="class-mipfileenginesettings"></a>Classe mip::FileEngine::Settings 
   
@@ -32,7 +32,9 @@ Public std:: Vector const\<std:: Pair\<std:: String, std:: String\>\>& GetCustom
 public void SetSessionId(const std::string& sessionId)  |  Imposta l'ID sessione del motore.
 public const std::string& GetSessionId() const  |  Restituisce l'ID sessione del motore.
 public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  Imposta l'URL di base dell'endpoint cloud di protezione, usato per specificare il limite del cloud.
-public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Ottiene cloudEndpointBaseUrl.
+public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Ottiene l'url di base di protezione cloud endpoint.
+public void SetPolicyCloudEndpointBaseUrl (const std:: String & policyCloudEndpointBaseUrl)  |  Imposta i criteri cloud endpoint url di base, consente di specificare limiti di cloud.
+public const std::string& GetPolicyCloudEndpointBaseUrl() const  |  Ottiene l'url dell'endpoint cloud criteri base.
 public void SetProtectionOnlyEngine(const bool protectionOnly)  |  Imposta l'indicatore del motore di sola protezione, senza criteri/etichette.
 public const bool IsProtectionOnlyEngine() const  |  Restituisce l'indicatore del motore di sola protezione, senza criteri/etichette.
 public bool IsLoadSensitivityTypesEnabled() const  |  Ottenere il flag che indica se le etichette di riservatezza di carico è abilitata.
@@ -117,10 +119,24 @@ Parametri:
 
   
 ### <a name="getprotectioncloudendpointbaseurl-function"></a>GetProtectionCloudEndpointBaseUrl function
-Ottiene cloudEndpointBaseUrl.
+Ottiene l'url di base di protezione cloud endpoint.
 
   
 **Restituisce**: Url di base associato con endpoint protection
+  
+### <a name="setpolicycloudendpointbaseurl-function"></a>SetPolicyCloudEndpointBaseUrl (funzione)
+Imposta i criteri cloud endpoint url di base, consente di specificare limiti di cloud.
+
+Parametri:  
+* **policyCloudEndpointBaseUrl**: Url di base associato con endpoint dei criteri
+
+
+  
+### <a name="getpolicycloudendpointbaseurl-function"></a>GetPolicyCloudEndpointBaseUrl (funzione)
+Ottiene l'url dell'endpoint cloud criteri base.
+
+  
+**Restituisce**: Url di base associato con endpoint dei criteri
   
 ### <a name="setprotectiononlyengine-function"></a>SetProtectionOnlyEngine (funzione)
 Imposta l'indicatore del motore di sola protezione, senza criteri/etichette.

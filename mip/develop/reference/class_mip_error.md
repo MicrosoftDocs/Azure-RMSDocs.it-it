@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 17b253f59f4be66dda1e7af68aa161a931ed3778
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 6d19fc5cf852a92bc20f98e913c16a1c6dc180e5
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330725"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573225"
 ---
 # <a name="class-miperror"></a>Classe mip::Error 
 Classe di base per tutti gli errori che verranno segnalati (generati o restituiti) da MIP SDK.
@@ -64,4 +64,3 @@ Imposta il messaggio di errore.
 
 Parametri:  
 * **msg**: messaggio di errore.
-

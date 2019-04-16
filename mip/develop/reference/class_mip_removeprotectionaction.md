@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 3cdd3713eac9894a12d2951efdb3a5326529d96d
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 1c6a9a1e772de52a060b776a78fc7748218adec4
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331325"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573599"
 ---
 # <a name="class-mipremoveprotectionaction"></a>Classe mip::RemoveProtectionAction 
 Classe di azione che specifica la rimozione della protezione dal documento.
@@ -21,11 +21,10 @@ Classe di azione che specifica la rimozione della protezione dal documento.
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
-  
-## <a name="members"></a>Membri
-  
-### <a name="gettype-function"></a>Funzione GetType
-Specifica il tipo di [Action](class_mip_action.md).
 
-  
+## <a name="members"></a>Membri
+
+### <a name="gettype-function"></a>Funzione GetType    
+Specifica il tipo di [Action](class_mip_action.md).  
+
 **Restituisce**: ActionType Tipo di azione derivata in cui è possibile eseguire il cast di questa classe di base.

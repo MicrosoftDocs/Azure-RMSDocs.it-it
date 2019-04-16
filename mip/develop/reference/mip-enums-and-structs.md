@@ -7,25 +7,26 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 2c0c600cc6a77b656d5e5dd1e86401fb4a9a66e4
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: c9e634d436d02b147fc10a734c8c3d5b1fcdec71
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333195"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573956"
 ---
-# <a name="summary"></a>Riepilogo
+# <a name="enumerations-and-structures"></a>Enumerazioni e strutture
+
+## <a name="namespace-mip"></a>Namespace mip
 
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-**Namespace `mip` :** |
 Enumerazione ActionSource       |  definisce che cosa ha attivato l'evento SetLabel
 enum ActionType       |  Tipi di azioni diversi.
 Enumerazione AssignmentMethod       |  Il metodo di assegnazione dell'etichetta nel documento. Indica se l'assegnazione dell'etichetta è stata eseguita automaticamente, standard o come un'operazione con privilegi (l'equivalente a un'operazione di amministratore).
 enum Consent       |  Risposta dell'utente quando viene richiesto il consenso per connettersi a un endpoint di servizio.
 Enumerazione visualizzazione       |  Formato del contenuto.
 enum ContentMarkAlignment       |  Allineamento contenuto contrassegna (contenuto dell'intestazione o piè di pagina contenuto).
-enum ContentState       |  Definisce lo stato dei dati l'applicazione agisce.
+Enumerazione DataState       |  Definisce lo stato dei dati l'applicazione agisce.
 enum ErrorType       | _Non ancora documentato._
 enum HttpRequestType       |  Tipo di richiesta HTTP.
 enum LogLevel       |  Diversi livelli di log usati in MIP SDK.
@@ -33,24 +34,25 @@ enum ProtectionHandlerCreationOptions       |  Flag di bit che determinano il co
 enum ProtectionType       |  Indica se la protezione si basa un modello o è ad hoc (personalizzata)
 Enumerazione WatermarkLayout       |  Layout delle filigrane.
 struct ApplicationInfo  |  Struct che include informazioni specifiche dell'applicazione.
-struct PublishingLicenseContext | Contiene i dettagli di una licenza di pubblicazione usata per creare un gestore di protezione.
+struct PublishingLicenseContext  |  Contiene i dettagli di una licenza di pubblicazione usata per creare un gestore di protezione.
   
-## <a name="enumerations-mip"></a>Enumerazioni (`mip`)
+## <a name="enumerations-mip"></a>Enumerazioni (mip)
 
-### <a name="actionsource-enum"></a>ActionSource enum
+### <a name="actionsource"></a>ActionSource
 
-definisce che cosa ha attivato l'evento SetLabel
+Definisce che cosa ha attivato l'evento SetLabel.
 
  Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
 MANUAL            | Selezionato manualmente dall'utente
 AUTOMATICO            | Impostazione delle condizioni dei criteri
 CONSIGLIATO            | Impostato dall'utente dopo l'etichetta è stato consigliato per le condizioni dei criteri
-IMPOSTAZIONE PREDEFINITA            | L'impostazione predefinita nei criteri
+DEFAULT            | L'impostazione predefinita nei criteri
 OBBLIGATORIO            | Impostato dall'utente dopo il criterio applicato per impostare un'etichetta
 
 
-### <a name="actiontype-enum"></a>ActionType enum
+
+### <a name="actiontype"></a>ActionType
 
 Tipi di azioni diversi. CUSTOM è il tipo di azione generico. Ogni altro tipo di azione è un'azione specifica con un significato specifico.
 
@@ -59,7 +61,7 @@ Tipi di azioni diversi. CUSTOM è il tipo di azione generico. Ogni altro tipo di
 ADD_CONTENT_FOOTER            | Aggiunge un piè di pagina contenuto al tipo di azione del documento.
 ADD_CONTENT_HEADER            | Aggiunge un'intestazione contenuto al tipo di azione del documento.
 ADD_WATERMARK            | Aggiunge una filigrana al tipo di azione dell'intero documento.
-PERSONALIZZATI            | Tipo di azione definito personalizzato.
+PERSONALIZZATO            | Tipo di azione definito personalizzato.
 JUSTIFY            | Tipo di azione di allineamento.
 METADATA            | Tipo di azione di modifica dei metadati.
 PROTECT_ADHOC            | Tipo di azione di protezione con criteri ad hoc.
@@ -72,7 +74,8 @@ REMOVE_WATERMARK            | Tipo di azione di rimozione della filigrana.
 APPLY_LABEL            | Tipo di azione di applicazione dell'etichetta.
 RECOMMEND_LABEL            | Tipo di azione di etichetta consigliata.
 
-### <a name="assignmentmethod-enum"></a>AssignmentMethod enum
+
+### <a name="assignmentmethod"></a>AssignmentMethod
 
 Il metodo di assegnazione dell'etichetta nel documento. Indica se l'assegnazione dell'etichetta è stata eseguita automaticamente, standard o come un'operazione con privilegi (l'equivalente a un'operazione di amministratore).
 
@@ -83,48 +86,45 @@ CON PRIVILEGI            | [Etichetta](class_mip_label.md) dispone dei privilegi
 AUTO            | [Etichetta](class_mip_label.md) metodo di assegnazione è automatico
 
 
-### <a name="consent-enum"></a>Enumerazione di consenso
+### <a name="consent"></a>Fornire il consenso
 
 Risposta dell'utente quando viene richiesto il consenso per connettersi a un endpoint di servizio.
 
  Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
 AcceptAlways            | Fornisce il consenso e memorizza questa decisione
-Accettare            | Fornisce il consenso una sola volta
-Rifiutare            | Non fornisce il consenso
+Accetta            | Fornisce il consenso una sola volta
+Rifiuta            | Non fornisce il consenso
 
 
-### <a name="contentformat-enum"></a>Enumerazione di visualizzazione
+### <a name="contentformat"></a>ContentFormat
 
 Formato del contenuto.
 
  Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
-IMPOSTAZIONE PREDEFINITA            | Formato del contenuto è il formato di file standard
+DEFAULT            | Formato del contenuto è il formato di file standard
 POSTA ELETTRONICA            | È contenuto il formato di posta elettronica
 
-### <a name="contentmarkalignment-enum"></a>Enumerazione ContentMarkAlignment
+### <a name="contentmarkalignment"></a>ContentMarkAlignment
 
 Allineamento contenuto contrassegna (contenuto dell'intestazione o piè di pagina contenuto).
 
  Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
-A SINISTRA            | Contrassegno contenuto è allineato a sinistra
-OK            | Contrassegno contenuto è allineato a destra
+LEFT            | Contrassegno contenuto è allineato a sinistra
+RIGHT            | Contrassegno contenuto è allineato a destra
 CENTER            | Contrassegno contenuto viene centrato
 
-### <a name="contentstate-enum"></a>ContentState enum
-
-Definisce lo stato dei dati l'applicazione agisce.
-
+### <a name="datastate"></a>DataState
  Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
 REST            | Dati inattivi archiviati fisicamente nel database o file/data warehouse
 MOVIMENTO            | Dati che attraversa una rete o temporaneamente che risiedono nella memoria del computer da leggere o aggiornare
 USE            | Dati attivi in costante evoluzione archiviate fisicamente nel database o file/data warehouse e così via
 
-### <a name="errortype-enum"></a>Enumerazione ErrorType
 
+### <a name="errortype"></a>ErrorType
  Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
 BAD_INPUT_ERROR            | Il chiamante ha passato un input errato.
@@ -143,8 +143,10 @@ NO_AUTH_TOKEN            | L'utente non è stato possibile ottenere l'accesso al
 DISABLED_SERVICE            | L'utente non è stato possibile ottenere l'accesso al contenuto a causa la disattivazione del servizio
 PROXY_AUTH_ERROR            | Autenticazione proxy non riuscita.
 NO_POLICY_ERROR            | Nessun criterio è configurato per tenant/utente
+OPERATION_CANCELLED            | Operazione annullata
+ADHOC_PROTECTION_REQUIRED            | Protezione ad hoc deve essere impostata per completare l'azione sul file
   
-### <a name="httprequesttype-enum"></a>HttpRequestType enum
+### <a name="httprequesttype"></a>HttpRequestType
 
 Tipo di richiesta HTTP.
 
@@ -154,19 +156,17 @@ Ottenere            | GET
 Post            | INSERISCI
 
   
-### <a name="loglevel-enum"></a>LogLevel enum
+### <a name="loglevel"></a>LogLevel
 
 Diversi livelli di log usati in MIP SDK.
 
  Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
-traccia            | 
+Trace            | 
 Info            | 
 Avviso            | 
-Errore            | 
-
   
-### <a name="protectionhandlercreationoptions-enum"></a>ProtectionHandlerCreationOptions enum
+### <a name="protectionhandlercreationoptions"></a>ProtectionHandlerCreationOptions
 
 Flag di bit che determinano il comportamento di creazione di criteri aggiuntivi.
 
@@ -176,8 +176,9 @@ Nessuno            | Nessuno
 OfflineOnly            | Non consente operazioni dell'interfaccia utente e di rete.
 AllowAuditedExtraction            | Il contenuto può essere aperto in un'app che non supporta l'SDK di protezione
 PreferDeprecatedAlgorithms            | Usa algoritmi di crittografia deprecati per la compatibilità con le versioni precedenti
-  
-### <a name="protectiontype-enum"></a>Enumerazione ProtectionType
+
+
+### <a name="protectiontype"></a>ProtectionType
 
 Descrive se protezione si basa un modello o ad hoc (personalizzato).
 
@@ -185,8 +186,9 @@ Descrive se protezione si basa un modello o ad hoc (personalizzato).
 --------------------------------|---------------------------------------------
 TemplateBased            | L'handle è stato creato da un modello
 Personalizzato            | L'handle è stato creato ad hoc
+
   
-### <a name="watermarklayout-enum"></a>WatermarkLayout enum
+### <a name="watermarklayout"></a>WatermarkLayout
 
 Layout delle filigrane.
 
@@ -198,23 +200,46 @@ DIAGONALI            | Layout della filigrana è diagonale
 
 ## <a name="structures"></a>Strutture 
 
-### `mip::ApplicationInfo` 
-
+### <a name="mipapplicationinfo"></a>mip::ApplicationInfo 
 Struct che include informazioni specifiche dell'applicazione.
   
+#### <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
- public std::string applicationId  |  Identificatore dell'applicazione come impostato nel portale di AAD, (deve essere un GUID senza parentesi quadre).
- public std::string applicationName  |  Nome dell'applicazione (deve contenere solo caratteri ASCII valida esclusa ';')
- public std::string applicationVersion  |  La versione dell'applicazione in uso, (deve contenere solo caratteri ASCII valida esclusa ';')
+public std::string applicationId  |  Identificatore dell'applicazione come impostato nel portale di AAD, (deve essere un GUID senza parentesi quadre).
+public std::string applicationName  |  Nome dell'applicazione (deve contenere solo caratteri ASCII valida esclusa ';')
+public std::string applicationVersion  |  La versione dell'applicazione in uso, (deve contenere solo caratteri ASCII valida esclusa ';')
   
-### `mip::PublishingLicenseContext` 
+#### <a name="members"></a>Membri
+  
+##### <a name="applicationid-struct-member"></a>membro struct applicationId
+Identificatore dell'applicazione come impostato nel portale di AAD, (deve essere un GUID senza parentesi quadre).
+  
+##### <a name="applicationname-struct-member"></a>membro struct applicationName
+Nome dell'applicazione (deve contenere solo caratteri ASCII valida esclusa ';')
+  
+##### <a name="applicationversion-struct-member"></a>membro struct applicationVersion
+La versione dell'applicazione in uso, (deve contenere solo caratteri ASCII valida esclusa ';')  
 
+### <a name="mippublishinglicensecontext"></a>mip::PublishingLicenseContext 
 Contiene i dettagli di una licenza di pubblicazione usata per creare un gestore di protezione.
   
+#### <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 Public std:: Vector const\<uint8_t\> licenseInfo  | _Non ancora documentato._
 Public std:: Vector const\<uint8_t\> serializedPublishingLicense  | _Non ancora documentato._
 pubblica PublishingLicenseContext (const std:: Vector\<uint8_t\>& licenseInfo, const std:: Vector\<uint8_t\>& serializedPublishingLicense)  | _Non ancora documentato._
   
+#### <a name="members"></a>Membri
+  
+##### <a name="licenseinfo-struct-member"></a>membro struct licenseInfo
+_Non ancora documentato._
+
+  
+##### <a name="serializedpublishinglicense-struct-member"></a>membro struct serializedPublishingLicense
+_Non ancora documentato._
+
+  
+##### <a name="publishinglicensecontext-function"></a>PublishingLicenseContext (funzione)
+_Non ancora documentato._

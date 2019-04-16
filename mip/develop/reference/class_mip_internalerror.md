@@ -7,15 +7,15 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 022f6f3904bb788146400f6ef6f9fd3f223638f5
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 94f82e84b2907f4aa91100964cfb4d1b287b116e
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330645"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573973"
 ---
 # <a name="class-mipinternalerror"></a>Classe mip::InternalError 
-Errore interno. Questo errore viene generato quando un evento imprevisto si verifica durante l'esecuzione.
+Si è verificato un errore interno. Questo errore viene generato quando un evento imprevisto si verifica durante l'esecuzione.
   
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
@@ -64,4 +64,3 @@ Imposta il messaggio di errore.
 
 Parametri:  
 * **msg**: messaggio di errore.
-

@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: f7b16658135e802776cde37fdef19c82f7c198e6
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 06bc3f52bdecd85412dc0c35df46c7847167aa1b
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57329812"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573756"
 ---
 # <a name="class-miphttpresponse"></a>Classe mip::HttpResponse 
 Interfaccia che descrive una singola risposta HTTP, implementata dall'app client durante l'override di [HttpDelegate](class_mip_httpdelegate.md).
@@ -20,11 +20,18 @@ Interfaccia che descrive una singola risposta HTTP, implementata dall'app client
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
+public const std::string& GetId() const  |  Ottiene l'ID di risposta.
 public int32_t GetStatusCode() const  |  Ottiene il codice di stato della risposta.
-public const std::string& GetBody() const  |  Ottiene il corpo della richiesta.
+Public std:: Vector const\<uint8_t\>& GetBody() const  |  Ottiene il corpo della richiesta.
 Public std:: Map const\<std:: String, std:: String, CaseInsensitiveComparator\>& GetHeaders() const  |  Ottiene le intestazioni della richiesta.
   
 ## <a name="members"></a>Membri
+  
+### <a name="getid-function"></a>GetId (funzione)
+Ottiene l'ID di risposta.
+
+  
+**Restituisce**: ID risposta corrispondente [HttpRequest](class_mip_httprequest.md) verrà hanno avuto lo stesso ID
   
 ### <a name="getstatuscode-function"></a>GetStatusCode (funzione)
 Ottiene il codice di stato della risposta.
@@ -36,7 +43,7 @@ Ottiene il codice di stato della risposta.
 Ottiene il corpo della richiesta.
 
   
-**Restituisce**: Corpo della richiesta
+**Restituisce**: Testo della richiesta
   
 ### <a name="getheaders-function"></a>GetHeaders (funzione)
 Ottiene le intestazioni della richiesta.

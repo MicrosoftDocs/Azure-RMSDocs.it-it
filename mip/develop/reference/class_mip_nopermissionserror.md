@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: ea7edbc6e30d3ac529d55ddeaeecc63f140c512f
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: ac10820e1fa167888b857043219711a485632c00
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57329421"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573701"
 ---
 # <a name="class-mipnopermissionserror"></a>classe mip::NoPermissionsError 
 L'utente non è riuscito a ottenere l'accesso al contenuto, ad esempio per mancanza di autorizzazioni o contenuto revocato.
@@ -30,7 +30,7 @@ public virtual const std::string& GetMessage() const  |  Ottiene il messaggio di
 public virtual void SetMessage(const std::string& msg)  |  Imposta il messaggio di errore.
   
 ## <a name="members"></a>Membri
-  
+
 ### <a name="getreferrer-function"></a>GetReferrer (funzione)
 Ottiene il contatto in caso di mancanti diritti al documento.
 
@@ -40,7 +40,6 @@ Ottiene il contatto in caso di mancanti diritti al documento.
 ### <a name="getowner-function"></a>GetOwner (funzione)
 _Non ancora documentato._
 
-  
 ### <a name="what-function"></a>tipo di funzione
 Ottiene il messaggio di errore.
 
@@ -76,4 +75,3 @@ Imposta il messaggio di errore.
 
 Parametri:  
 * **msg**: messaggio di errore.
-

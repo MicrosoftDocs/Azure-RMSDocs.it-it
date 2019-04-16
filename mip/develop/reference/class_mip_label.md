@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: df0507c484350c6e7461aae2426e243ec013df84
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: e4f8246cbc0f6f1f897de4710e155e0099b71244
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333171"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574109"
 ---
 # <a name="class-miplabel"></a>Classe mip::Label 
 Astrazione per una singola etichetta di Microsoft Information Protection.

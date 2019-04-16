@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 8740244a8dbfcf436a3b6e324f06caf707b0e00d
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 0402fe3c3c0ac6f37103c8d09b1300176ef730d6
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331084"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574126"
 ---
 # <a name="class-mipnetworkerror"></a>Classe mip::NetworkError 
 Errore di rete. Causato da un comportamento imprevisto quando si effettuano chiamate di rete agli endpoint di servizio.
@@ -64,4 +64,3 @@ Imposta il messaggio di errore.
 
 Parametri:  
 * **msg**: messaggio di errore.
-

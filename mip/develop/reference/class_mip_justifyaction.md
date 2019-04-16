@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: cf0500aa9d7c6a0422e5846edda23515319c1efc
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: c0968fd019e8c251703a8f23f35ce03e421fffc3
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333212"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573718"
 ---
 # <a name="class-mipjustifyaction"></a>Classe mip::JustifyAction 
 Justify [Action](class_mip_action.md) richiede la giustificazione del downgrade di un'etichetta e l'impostazione della risposta nello stato di esecuzione.
@@ -23,7 +23,7 @@ Justify [Action](class_mip_action.md) richiede la giustificazione del downgrade 
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
-  
+
 ## <a name="members"></a>Membri
   
 ### <a name="gettype-function"></a>Funzione GetType

@@ -1,21 +1,21 @@
 ---
-title: Classe mip::ConsentDeniedError
-description: Documenta la classe mip::consentdeniederror di Microsoft Information Protection (MIP) SDK.
+title: classe mip::AdhocProtectionRequiredError
+description: Documenta la classe mip::adhocprotectionrequirederror di Microsoft Information Protection (MIP) SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 1cbd8ce0bd5b899bb31777ac5889a1475b9e47d5
+ms.openlocfilehash: a109c9f235e950e428aa000d34af95a337c6eb4d
 ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/15/2019
-ms.locfileid: "59573208"
+ms.locfileid: "59574449"
 ---
-# <a name="class-mipconsentdeniederror"></a>Classe mip::ConsentDeniedError 
-Non è stato concesso il consenso per un'operazione che ha richiesto il consenso dell'utente.
+# <a name="class-mipadhocprotectionrequirederror"></a>classe mip::AdhocProtectionRequiredError 
+Protezione ad hoc deve essere impostata per completare l'azione sul file.
   
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                

@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: d7d7baee4212ad90739a2c5343e7c09050a16b5e
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 75d11fae7d79cadc4dd8909be371cbde2e87f289
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330441"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573616"
 ---
 # <a name="class-mipidentity"></a>classe MIP 
 Astrazione per l'identità.
@@ -21,6 +21,7 @@ Astrazione per l'identità.
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public Identity()  |  Default [identità](class_mip_identity.md) costruttore utilizzato quando un indirizzo di posta elettronica utente non è noto.
+Identità pubblica (const Identity & altro)  |  [Identità](class_mip_identity.md) costruttore di copia.
 pubblica Identity espliciti (const std:: String & messaggio di posta elettronica)  |  [Identità](class_mip_identity.md) costruttore utilizzato quando un indirizzo di posta elettronica utente è noto.
 Public std:: String const & GetEmail() const  |  Ottenere l'indirizzo di posta elettronica.
 public void SetDelegatedEmail (const std:: String & delegatedEmail)  |  Set di messaggio di posta elettronica delegata, un indirizzo di posta elettronica delegato è un per conto dell'utente per il quale vengono eseguite le opertations.
@@ -30,6 +31,14 @@ public const std::string& GetDelegatedEmail() const  |  Ottenere l'indirizzo di 
   
 ### <a name="identity-function"></a>Funzione Identity
 Default [identità](class_mip_identity.md) costruttore utilizzato quando un indirizzo di posta elettronica utente non è noto.
+  
+### <a name="identity-function"></a>Funzione Identity
+[Identità](class_mip_identity.md) costruttore di copia.
+
+Parametri:  
+* **[Identity](class_mip_identity.md)**: usato per creare la copia.
+
+
   
 ### <a name="identity-function"></a>Funzione Identity
 [Identità](class_mip_identity.md) costruttore utilizzato quando un indirizzo di posta elettronica utente è noto.

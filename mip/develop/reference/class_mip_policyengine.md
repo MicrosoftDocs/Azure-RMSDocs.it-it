@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: ffc2adc3e48de3f7efc7426c1276ccba8f0a70f3
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: ce8ef7df12cdc9823a62234b5dadaaacdb7fed37
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332804"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573786"
 ---
 # <a name="class-mippolicyengine"></a>Classe mip::PolicyEngine 
 Questa classe fornisce un'interfaccia per tutte le funzioni del motore.
@@ -30,6 +30,9 @@ Public std:: shared_ptr\<PolicyHandler\> CreatePolicyHandler (bool isAuditDiscov
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Registra un evento specifico dell'applicazione per la pipeline di controllo.
 public const std::string& GetPolicyDataXml() const  |  Ottiene i dati dei criteri XML che descrive le impostazioni, le etichette e regole associate a questo criterio.
 Public std:: Vector const\<std:: Pair\<std:: String, std:: String\>\>& GetCustomSettings() const  |  Ottiene un elenco di impostazioni personalizzate.
+Public std:: String const & GetPolicyId() const  |  Ottiene l'ID criteri.
+public bool HasClassificationRules() const  |  Ottiene se il criterio ha regole automatico o raccomandazione.
+pubblica std::chrono::time_point\<std\> GetLastPolicyFetchTime() const  |  Ottiene l'ora dell'ultimo recupero quando il criterio.
   
 ## <a name="members"></a>Membri
   
@@ -77,25 +80,25 @@ Ottiene l'etichetta di riservatezza predefinita.
 Creare un gestore dei criteri per eseguire funzioni relative ai criteri nello stato di esecuzione di un file.
 
 Parametri:  
-* **Oggetto**: bool che indica se il rilevamento di controllo è abilitato o meno
+* **Oggetto**: bool che indica se il rilevamento di controllo è abilitato o meno.
 
 
 
   
 **Restituisce**: Gestore dei criteri.
-Applicazione deve mantenere l'oggetto di gestore dei criteri per la durata del documento
+Applicazione deve mantenere l'oggetto di gestore dei criteri per la durata del documento.
   
 ### <a name="sendapplicationauditevent-function"></a>SendApplicationAuditEvent (funzione)
 Registra un evento specifico dell'applicazione per la pipeline di controllo.
 
 Parametri:  
-* **livello**: del livello di log: Info/errore/avviso 
+* **livello**: del livello di log: Info/errore/avviso. 
 
 
-* **eventType**: descrizione del tipo di evento 
+* **eventType**: una descrizione del tipo di evento. 
 
 
-* **eventData**: dati associati all'evento
+* **eventData**: i dati associati all'evento.
 
 
   
@@ -103,10 +106,28 @@ Parametri:
 Ottiene i dati dei criteri XML che descrive le impostazioni, le etichette e regole associate a questo criterio.
 
   
-**Restituisce**: Dati dei criteri XML
+**Restituisce**: Dati dei criteri XML.
   
 ### <a name="getcustomsettings-function"></a>GetCustomSettings (funzione)
 Ottiene un elenco di impostazioni personalizzate.
 
   
-**Restituisce**: Un vettore di impostazioni personalizzate
+**Restituisce**: Vettore di impostazioni personalizzate.
+  
+### <a name="getpolicyid-function"></a>GetPolicyId (funzione)
+Ottiene l'ID criteri.
+
+  
+**Restituisce**: Stringa che rappresenta l'ID dei criteri
+  
+### <a name="hasclassificationrules-function"></a>HasClassificationRules (funzione)
+Ottiene se il criterio ha regole automatico o raccomandazione.
+
+  
+**Restituisce**: Un valore booleano che indica se esiste qualsiasi automatico o recommandation regole nel criterio
+  
+### <a name="getlastpolicyfetchtime-function"></a>GetLastPolicyFetchTime (funzione)
+Ottiene l'ora dell'ultimo recupero quando il criterio.
+
+  
+**Restituisce**: L'ora dell'ultimo recupero quando il criterio

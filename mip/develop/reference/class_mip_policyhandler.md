@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 6c5979706b9868bd7d0b6b1adad5d96bd5d3e0ce
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 7cc1eeeafa4a086631f5d3c376643b5758002679
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57329591"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59572835"
 ---
 # <a name="class-mippolicyhandler"></a>Classe mip::PolicyHandler 
 Questa classe fornisce un'interfaccia per tutte le funzioni del gestore dei criteri in un file.
@@ -30,7 +30,7 @@ public void NotifyCommittedActions(const ExecutionState& state)  |  Viene chiama
 Ottiene l'etichetta di riservatezza dal contenuto esistente.
 
 Parametri:  
-* **state**: Stato corrente del contenuto 
+* **state**: Stato corrente del contenuto. 
 
 
 
@@ -52,7 +52,7 @@ Parametri:
 Viene chiamato dopo che sono state applicate le operazioni calcolate ed è stato eseguito il commit dei dati su disco.
 
 Parametri:  
-* **state**: stato di esecuzione corrente del contenuto dopo che è stato eseguito il commit delle azioni 
+* **stato**: lo stato di esecuzione corrente del contenuto dopo le azioni sono state salvate. 
 
 
-: Questa chiamata invia un evento di controllo
+: Questa chiamata invia un evento di controllo.

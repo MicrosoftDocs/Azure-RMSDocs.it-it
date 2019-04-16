@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: a48f22af3f699412a2976683695467ee7ed71cdb
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: d3105bd9c13e91108c44e847c3eae74f166c5e04
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331189"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573650"
 ---
 # <a name="class-mippolicyprofilesettings"></a>Classe mip::PolicyProfile::Settings 
 Oggetto [Settings](class_mip_policyprofile_settings.md) usato da [PolicyProfile](class_mip_policyprofile.md) durante la creazione e per tutta la sua durata.
@@ -30,6 +30,8 @@ Public std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Ottiene 
 public void SetLoggerDelegate (const std:: shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  Esegue l'override del logger predefinito.
 Public std:: shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Ottiene il delegato HTTP (se disponibile) specificato dall'applicazione.
 public void SetHttpDelegate (const std:: shared_ptr\<HttpDelegate\>& httpDelegate)  |  Esegue l'override dello stack HTTP predefinito con quello del client.
+Public std:: shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Ottenere il delegato TaskDispatcher (se disponibile) fornito dall'applicazione.
+public void SetTaskDispatcherDelegate (const std:: shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Eseguire l'override di attività in modo asincrono rispetto predefinita dell'invio di gestione del client.
 public void OptOutTelemetry()  |  Rifiuta esplicitamente la raccolta di tutti i dati di telemetria.
 public bool IsTelemetryOptedOut() const  |  Ottiene un valore che indica se la raccolta dei dati di telemetria deve essere disabilitata o meno.
 public void SetMinimumLogLevel(LogLevel logLevel)  |  Imposta il livello di log minimo che attiverà un evento di registrazione.
@@ -113,6 +115,20 @@ Esegue l'override dello stack HTTP predefinito con quello del client.
 
 Parametri:  
 * **httpDelegate**: Interfaccia di callback HTTP implementato dall'applicazione client
+
+
+  
+### <a name="gettaskdispatcherdelegate-function"></a>GetTaskDispatcherDelegate (funzione)
+Ottenere il delegato TaskDispatcher (se disponibile) fornito dall'applicazione.
+
+  
+**Restituisce**: Delegato TaskDispatcher da utilizzare per l'esecuzione di attività asincrone
+  
+### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate (funzione)
+Eseguire l'override di attività in modo asincrono rispetto predefinita dell'invio di gestione del client.
+
+Parametri:  
+* **taskDispatcherDelegate**: Attività di invio di interfaccia di callback implementata dall'applicazione client
 
 
   

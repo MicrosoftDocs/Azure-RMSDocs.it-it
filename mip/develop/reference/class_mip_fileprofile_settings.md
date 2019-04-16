@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: a7f08c24f2e0c4838d538d34268ed9f9704d85bf
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: d85fe9f4b3de485ab966a38b2c41358a6ba091e0
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333586"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574281"
 ---
 # <a name="class-mipfileprofilesettings"></a>Classe mip::FileProfile::Settings 
 Oggetto [Settings](class_mip_fileprofile_settings.md) usato da [FileProfile](class_mip_fileprofile.md) durante la creazione e per tutta la sua durata.
@@ -27,14 +27,14 @@ Public std:: shared_ptr\<AuthDelegate\> GetAuthDelegate() const  |  Ottiene il d
 Public std:: shared_ptr\<ConsentDelegate\> GetConsentDelegate() const  |  Ottiene il delegato del consenso usato per richiedere il consenso dell'utente che si connette ai servizi.
 Public std:: shared_ptr\<osservatore\> GetObserver() const  |  Ottiene l'observer che riceve le notifiche degli eventi correlati a [FileProfile](class_mip_fileprofile.md).
 public const ApplicationInfo GetApplicationInfo() const  |  Ottiene informazioni sull'applicazione che sta utilizzando l'SDK.
-public bool GetSkipTelemetryInit() const  |  Ottiene un valore che indica se l'inizializzazione della telemetria deve essere ignorata o meno.
-public void SetSkipTelemetryInit()  |  Disabilita l'inizializzazione della telemetria.
 public void SetNewFeaturesDisabled()  |  Disabilita le nuove funzionalità.
 public bool AreNewFeaturesDisabled() const  |  Ottiene un valore che indica se le nuove funzionalità sono disabilitate o meno.
 Public std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate() const  |  Ottiene il delegato del logger (se disponibile) fornito dall'applicazione.
 public void SetLoggerDelegate (const std:: shared_ptr\<LoggerDelegate\>& loggerDelegate)  |  Esegue l'override del logger predefinito.
 Public std:: shared_ptr\<HttpDelegate\> GetHttpDelegate() const  |  Ottiene il delegato HTTP (se disponibile) specificato dall'applicazione.
 public void SetHttpDelegate (const std:: shared_ptr\<HttpDelegate\>& httpDelegate)  |  Esegue l'override dello stack HTTP predefinito con quello del client.
+Public std:: shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate() const  |  Ottenere il delegato TaskDispatcher (se disponibile) fornito dall'applicazione.
+public void SetTaskDispatcherDelegate (const std:: shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Eseguire l'override di attività in modo asincrono rispetto predefinita dell'invio di gestione del client.
 public void OptOutTelemetry()  |  Rifiuta esplicitamente la raccolta di tutti i dati di telemetria.
 public bool IsTelemetryOptedOut() const  |  Ottiene un valore che indica se la raccolta dei dati di telemetria deve essere disabilitata o meno.
 public void SetSessionId(const std::string& sessionId)  |  Imposta l'ID sessione.
@@ -100,16 +100,6 @@ Ottiene informazioni sull'applicazione che sta utilizzando l'SDK.
   
 **Restituisce**: Informazioni sull'applicazione che utilizza il SDK
   
-### <a name="getskiptelemetryinit-function"></a>GetSkipTelemetryInit (funzione)
-Ottiene un valore che indica se l'inizializzazione della telemetria deve essere ignorata o meno.
-
-  
-**Restituisce**: Se l'inizializzazione della telemetria deve essere ignorata o No
-  
-### <a name="setskiptelemetryinit-function"></a>SetSkipTelemetryInit (funzione)
-Disabilita l'inizializzazione della telemetria.
-Questo metodo non viene in genere chiamato dalle applicazioni client, ma viene usato dall'SDK per i file per impedire l'inizializzazione duplicata
-  
 ### <a name="setnewfeaturesdisabled-function"></a>SetNewFeaturesDisabled (funzione)
 Disabilita le nuove funzionalità.
 Per le applicazioni che non vogliono provare le nuove funzionalità
@@ -146,6 +136,20 @@ Esegue l'override dello stack HTTP predefinito con quello del client.
 
 Parametri:  
 * **httpDelegate**: Interfaccia di callback HTTP implementato dall'applicazione client
+
+
+  
+### <a name="gettaskdispatcherdelegate-function"></a>GetTaskDispatcherDelegate (funzione)
+Ottenere il delegato TaskDispatcher (se disponibile) fornito dall'applicazione.
+
+  
+**Restituisce**: Delegato TaskDispatcher da utilizzare per l'esecuzione di attività asincrone
+  
+### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate (funzione)
+Eseguire l'override di attività in modo asincrono rispetto predefinita dell'invio di gestione del client.
+
+Parametri:  
+* **taskDispatcherDelegate**: Attività di invio di interfaccia di callback implementata dall'applicazione client
 
 
   

@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 2d64d576ead748adff7804e9068aab71fd9672c0
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 1373d9ecc03f69267af631216a04d358e8be7af3
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57333025"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574334"
 ---
 # <a name="class-mipservicedisablederror"></a>classe mip::ServiceDisabledError 
 L'utente non è stato possibile ottenere l'accesso al contenuto a causa di un servizio viene disabilitato.
@@ -21,13 +21,13 @@ L'utente non è stato possibile ottenere l'accesso al contenuto a causa di un se
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public Extent GetExtent() const  |  Ottiene l'estensione per il quale il servizio è disabilitato.
+Enumerazione Extent  |  Descrive l'estensione per il quale il servizio è disabilitato.
 public char const* what() const  |  Ottiene il messaggio di errore.
 Public std:: shared_ptr\<errore\> clone () const  |  Clona l'errore.
 public virtual ErrorType GetErrorType() const  |  Ottiene il tipo di errore.
 public virtual const std::string& GetErrorName() const  |  Ottiene il nome dell'errore.
 public virtual const std::string& GetMessage() const  |  Ottiene il messaggio di errore.
 public virtual void SetMessage(const std::string& msg)  |  Imposta il messaggio di errore.
-Enumerazione Extent  |  Descrive l'estensione per il quale il servizio è disabilitato.
   
 ## <a name="members"></a>Membri
   
@@ -37,6 +37,19 @@ Ottiene l'estensione per il quale il servizio è disabilitato.
   
 **Restituisce**: Estensione per il quale il servizio è disabilitato
   
+### <a name="extent-enum"></a>Enumerazione extent
+
+Descrive l'estensione per il quale il servizio è disabilitato.
+
+ Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+Utente            | Servizio è disabilitato per l'utente.
+Dispositivo            | Servizio è disabilitato per il dispositivo.
+Piattaforma            | Servizio è disabilitato per la piattaforma.
+Tenant            | Servizio è disabilitato per il tenant.
+
+
+
 ### <a name="what-function"></a>tipo di funzione
 Ottiene il messaggio di errore.
 
@@ -72,14 +85,3 @@ Imposta il messaggio di errore.
 
 Parametri:  
 * **msg**: messaggio di errore.
-
-
-  
-### <a name="extent-enum"></a>Enumerazione extent
- Valori                         | Descrizioni                                
---------------------------------|---------------------------------------------
-Utente            | Servizio è disabilitato per l'utente.
-Dispositivo            | Servizio è disabilitato per il dispositivo.
-Piattaforma            | Servizio è disabilitato per la piattaforma.
-Tenant            | Servizio è disabilitato per il tenant.
-Descrive l'estensione per il quale il servizio è disabilitato.

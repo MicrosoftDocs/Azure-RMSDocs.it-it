@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 99993007fb80fdc0cb714f2769c36bd1cef63059
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 7b6ef32e69fefad0371f75ea22b99f4181732e90
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332874"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573919"
 ---
 # <a name="class-mipremovewatermarkaction"></a>Classe mip::RemoveWatermarkAction 
 Classe di azione che specifica la rimozione della filigrana dal documento.
@@ -34,5 +34,4 @@ Ottiene un elenco di nomi da usare per individuare gli elementi dell'interfaccia
 ### <a name="gettype-function"></a>Funzione GetType
 Specifica il tipo di [Action](class_mip_action.md).
 
-  
 **Restituisce**: ActionType Tipo di azione derivata in cui è possibile eseguire il cast di questa classe di base.

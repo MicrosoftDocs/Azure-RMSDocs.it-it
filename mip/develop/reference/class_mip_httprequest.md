@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: 6e663d4083d9daa2fc744289708f4c127ffb29c2
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 8b0349db2e985d6fb015e1a2698187089483fbe3
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330696"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573072"
 ---
 # <a name="class-miphttprequest"></a>Classe mip::HttpRequest 
 Interfaccia che descrive una singola richiesta HTTP.
@@ -20,12 +20,19 @@ Interfaccia che descrive una singola richiesta HTTP.
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
+public const std::string& GetId() const  |  Ottiene ID richiesta
 public HttpRequestType GetRequestType() const  |  Ottiene il tipo di richiesta.
 public const std::string& GetUrl() const  |  Ottiene l'URL della richiesta.
-public const std::string& GetBody() const  |  Ottiene il corpo della richiesta.
+Public std:: Vector const\<uint8_t\>& GetBody() const  |  Ottiene il corpo della richiesta.
 Public std:: Map const\<std:: String, std:: String, CaseInsensitiveComparator\>& GetHeaders() const  |  Ottiene le intestazioni della richiesta.
   
 ## <a name="members"></a>Membri
+  
+### <a name="getid-function"></a>GetId (funzione)
+Ottiene ID richiesta
+
+  
+**Restituisce**: Request ID corrispondente [HttpResponse](class_mip_httpresponse.md) avrà lo stesso ID
   
 ### <a name="getrequesttype-function"></a>GetRequestType (funzione)
 Ottiene il tipo di richiesta.
@@ -43,7 +50,7 @@ Ottiene l'URL della richiesta.
 Ottiene il corpo della richiesta.
 
   
-**Restituisce**: Corpo della richiesta
+**Restituisce**: Testo della richiesta
   
 ### <a name="getheaders-function"></a>GetHeaders (funzione)
 Ottiene le intestazioni della richiesta.

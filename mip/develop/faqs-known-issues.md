@@ -7,12 +7,12 @@ ms.topic: troubleshooting
 ms.collection: M365-security-compliance
 ms.date: 03/05/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 97b9fdb53c103eac94e62ddb6438c57e4c9f45cc
-ms.sourcegitcommit: 50e6b94bdb387cfa35d0e565b1e89f9e69563a63
+ms.openlocfilehash: 78dc655d8244378fcc37b22030d3060fd291ef16
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57581726"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574220"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Problemi noti e domande frequenti di Microsoft Information Protection (MIP) SDK
 
@@ -57,3 +57,11 @@ Ciò indica che non eseguita la migrazione le etichette di Azure Information Pro
 > System.ComponentModel.Win32Exception: LoadLibrary non è riuscita per: [sdk_wrapper_dotnet.dll] quando si chiama MIP. Initialize ().
 
 L'applicazione non è installato il runtime richiesto o non è stato compilato come versione. Visualizzare [assicurarsi che l'app ha il runtime richiesto](setup-configure-mip.md#ensure-your-app-has-the-required-runtime) per altre informazioni. 
+
+### <a name="error-proxyautherror-exception"></a>Errore: "Eccezione ProxyAuthError"
+
+**Domanda**: Il motivo per cui ottenere l'errore seguente quando si usa il SDK di MIP?
+
+> "ProxyAuthenticatonError: Autenticazione proxy non è supportato"
+
+Microsoft Information Protection SDK non supporta l'uso dei proxy autenticato. Per correggere questo messaggio, gli amministratori di proxy devono impostare gli endpoint del servizio Microsoft Information Protection per ignorare il proxy. Un elenco di tali endpoint sono disponibili all'indirizzo il [intervalli di indirizzi IP e Office 365 URL](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges) pagina. Microsoft Information Protection SDK richiede che `*.protection.outlook.com` (riga 9) e gli endpoint del servizio Azure Information Protection (riga 73) ignorare l'autenticazione proxy.

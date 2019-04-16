@@ -8,12 +8,12 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 50fe4bce04b28440609c558297d8a3e39087e557
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 2ac8c6bbfba6f460ac016a103f32f20856bff2aa
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332838"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59573837"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Guida introduttiva: Impostare e ottenere un'etichetta di riservatezza (C++)
 
@@ -24,7 +24,7 @@ Questo Avvio rapido illustra come usare altre API dei file di MIP. Con una delle
 Se non è già stato fatto, completare i prerequisiti seguenti prima di continuare:
 
 - Completa [Guida introduttiva: Elenca le etichette di riservatezza (C++)](quick-file-list-labels-cpp.md) first, che compila una soluzione di Visual Studio starter per elencare le etichette di riservatezza dell'organizzazione. Il presente Avvio rapido "Impostare e ottenere un'etichetta di riservatezza" è basato su quello precedente.
-- Se lo si desidera: Revisione [gestori di File nel SDK di MIP](concept-handler-file-cpp.md) concetti.
+- Facoltativamente: Revisione [gestori di File nel SDK di MIP](concept-handler-file-cpp.md) concetti.
 
 ## <a name="implement-an-observer-class-to-monitor-the-file-handler-object"></a>Implementare una classe observer per monitorare l'oggetto gestore file
 
@@ -105,17 +105,16 @@ Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un fi
 
    ```cpp
    // Set up async FileHandler for input file operations
-   string filePathIn = "<input-file-path>";
-   string contentIdentifier = "<content-identifier>";
+   string inputFilePath = "<input-file-path>";
+   string actualFilePath = "<content-identifier>";
    std::shared_ptr<FileHandler> handler;
    try
    {
         auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
         auto handlerFuture = handlerPromise->get_future();
         engine->CreateFileHandlerAsync(
-             filePathIn, 
-             contentIdentifier,
-             mip::ContentState::REST, 
+             inputFilePath,
+             actualFilePath,                       
              true, 
              std::make_shared<FileHandlerObserver>(), 
              handlerPromise);
@@ -168,15 +167,14 @@ Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un fi
    system("pause");
 
    // Set up async FileHandler for output file operations
-   contentIdentifier = "<content-identifier>";
+   actualFilePath = "<content-identifier>";
    try
    {
         auto handlerPromise = std::make_shared<std::promise<std::shared_ptr<FileHandler>>>();
         auto handlerFuture = handlerPromise->get_future();
         engine->CreateFileHandlerAsync(
-             filePathOut, 
-             contentIdentifier,
-             mip::ContentState::REST,
+             filePathOut,
+             actualFilePath,
              true,
              std::make_shared<FileHandlerObserver>(),
              handlerPromise);
@@ -209,10 +207,10 @@ Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un fi
 
 4. Sostituire i valori segnaposto nel codice appena incollato come indicato di seguito, usando le costanti stringa di origine:
 
-   | Segnaposto | Valore |
+   | Segnaposto | Value |
    |:----------- |:----- |
    | \<input-file-path\> | Percorso completo di un file di input di test, ad esempio: `"c:\\Test\\Test.docx"`. |
-   | \<content-identifier\> | Un identificatore leggibile dall'utente per il contenuto. Esempio: <ul><li>per un file, prendere in considerazione percorso\nomefile: `"c:\Test\Test.docx"`</li><li>per un messaggio di posta elettronica, prendere in considerazione soggetto: mittente: `"RE: Audit design:user1@contoso.com"`</li></ul> |
+   | \<content-identifier\> | Un identificatore leggibile dall'utente per il contenuto. Ad esempio:  <ul><li>per un file, prendere in considerazione percorso\nomefile: `"c:\Test\Test.docx"`</li><li>per un messaggio di posta elettronica, prendere in considerazione soggetto: mittente: `"RE: Audit design:user1@contoso.com"`</li></ul> |
    | \<label-id\> | ID etichetta di riservatezza, copiato dalla console di output nell'Avvio rapido precedente, ad esempio: `"f42a3342-8706-4288-bd31-ebb85995028z"`. |
    | \<output-file-path\> | Percorso completo del file di output, che è una copia con etichetta del file di input, ad esempio: `"c:\\Test\\Test_labeled.docx"`. |
 

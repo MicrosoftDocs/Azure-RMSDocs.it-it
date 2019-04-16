@@ -7,12 +7,12 @@ ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: bc130d2c6056d971635bcf204243f29b13789466
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.openlocfilehash: 3ffd4b3e86192786309739add907a724acdaffa5
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330834"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574214"
 ---
 # <a name="class-mippolicyenginesettings"></a>Classe mip::PolicyEngine::Settings 
 Definisce le impostazioni associate a un oggetto [PolicyEngine](class_mip_policyengine.md).
@@ -34,6 +34,8 @@ Public std:: Vector const\<std:: Pair\<std:: String, std:: String\>\>& GetCustom
 public void SetSessionId(const std::string& sessionId)  |  Imposta l'ID sessione, usato per la telemetria definita dal client.
 public const std::string& GetSessionId() const  |  Ottiene l'ID sessione, un identificatore univoco.
 public bool IsLoadSensitivityTypesEnabled() const  |  Ottenere il flag che indica se le etichette di riservatezza di carico è abilitata.
+public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Facoltativamente, imposta l'URL di base dell'endpoint cloud.
+public const std::string& GetCloudEndpointBaseUrl() const  |  Ottiene l'URL di base del cloud usato da tutte le richieste di servizio, se specificato.
   
 ## <a name="members"></a>Membri
   
@@ -156,3 +158,17 @@ Ottenere il flag che indica se le etichette di riservatezza di carico è abilita
 
   
 **Restituisce**: True se abilitato in caso contrario false.
+  
+### <a name="setcloudendpointbaseurl-function"></a>SetCloudEndpointBaseUrl (funzione)
+Facoltativamente, imposta l'URL di base dell'endpoint cloud.
+
+Parametri:  
+* **cloudEndpointBaseUrl**: URL di base usato da tutte le richieste di servizio (ad esempio, "https://dataservice.protection.outlook.com")
+
+
+  
+### <a name="getcloudendpointbaseurl-function"></a>GetCloudEndpointBaseUrl function
+Ottiene l'URL di base del cloud usato da tutte le richieste di servizio, se specificato.
+
+  
+**Restituisce**: URL di base
