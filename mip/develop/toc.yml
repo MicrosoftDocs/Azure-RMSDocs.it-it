@@ -35,8 +35,9 @@ items:
   - name: Le API
     href: concept-apis-use-cases.md
   - name: Profilo e motore (C++)
-    href: concept-profile-engine-cpp.md
     items:
+    - name: Concetti sugli oggetti profilo e motore
+      href: concept-profile-engine-cpp.md
     - name: Profilo dell'API File (C++)
       href: concept-profile-engine-file-profile-cpp.md
     - name: Motore dell'API File (C++)
@@ -50,8 +51,9 @@ items:
     - name: Motore dell'API Protezione (C++)
       href: concept-profile-engine-protection-engine-cpp.md
   - name: Autenticazione (C++)
-    href: concept-authentication-cpp.md
     items:
+    - name: Concetti sull'autenticazione
+      href: concept-authentication-cpp.md
     - name: Implementazione di un delegato di autenticazione (C++)
       href: concept-authentication-delegate-cpp.md
     - name: Acquisizione di un token di accesso (PowerShell)
@@ -61,13 +63,15 @@ items:
   - name: Gestori
     items:
     - name: Gestore dell'API File (C++)
-      href: concept-handler-file-cpp.md
       items:
+      - name: Concetti sul gestore di file
+        href: concept-handler-file-cpp.md
       - name: Controllo
         href: concept-auditing-file-cpp.md
     - name: Gestore dell'API Criteri (C++)
-      href: concept-handler-policy-cpp.md
       items:
+      - name: Concetti sul gestore di criteri
+        href: concept-handler-policy-cpp.md
       - name: Stato di esecuzione
         href: concept-handler-policy-executionstate-cpp.md
       - name: Azioni di calcolo
@@ -81,8 +85,9 @@ items:
   - name: Metadati
     href: concept-mip-metadata.md
   - name: Osservatori di async (C++)
-    href: concept-async-observers.md
     items:
+    - name: Concetti sugli osservatori
+      href: concept-async-observers.md
     - name: Osservatori dell'API File (C++)
       href: concept-async-observers-file-cpp.md
     - name: Osservatori dell'API Criteri (C++)
@@ -92,8 +97,9 @@ items:
 - name: Riferimento
   items:
   - name: Libreria C++
-    href: reference/mip-sdk-reference.md
     items:
+    - name: Panoramica della libreria C++
+      href: reference/mip-sdk-reference.md
     - name: Enumerazioni e struct
       href: reference/mip-enums-and-structs.md
     - name: Funzioni
@@ -110,6 +116,8 @@ items:
         href: reference/class_mip_addcontentheaderaction.md
       - name: AddWatermarkAction
         href: reference/class_mip_addwatermarkaction.md
+      - name: AdhocProtectionRequiredError
+        href: reference/class_mip_adhocprotectionrequirederror.md
       - name: ApplyLabelAction
         href: reference/class_mip_applylabelaction.md
       - name: AuthDelegate
@@ -156,6 +164,8 @@ items:
         href: reference/class_mip_fileprofile_settings.md
       - name: HttpDelegate
         href: reference/class_mip_httpdelegate.md
+      - name: HttpOperation
+        href: reference/class_mip_httpoperation.md
       - name: HttpRequest
         href: reference/class_mip_httprequest.md
       - name: HttpResponse
@@ -186,6 +196,8 @@ items:
         href: reference/class_mip_nopolicyerror.md
       - name: NotSupportedError
         href: reference/class_mip_notsupportederror.md
+      - name: OperationCancelledError
+        href: reference/class_mip_operationcancellederror.md
       - name: PolicyEngine
         href: reference/class_mip_policyengine.md
       - name: PolicyEngine::Settings
@@ -246,6 +258,8 @@ items:
         href: reference/class_mip_servicedisablederror.md
       - name: Flusso
         href: reference/class_mip_stream.md
+      - name: TaskDispatcherDelegate
+        href: reference/class_mip_taskdispatcherdelegate.md
       - name: TransientNetworkError
         href: reference/class_mip_transientnetworkerror.md
       - name: UserRights
@@ -268,9 +282,9 @@ items:
     href: /azure/information-protection/develop/security-guidelines?context=/information-protection/develop/rc/rc
   - name: Novità nella versione 1.1
     href: https://techcommunity.microsoft.com/t5/Microsoft-Information-Protection/MIP-SDK-1-1-Now-GA/ba-p/328325
-ms.openlocfilehash: 68fae7819664fadd7fa470cd8db9f45eb430dc5b
-ms.sourcegitcommit: dde803603371dc30d40ca7225f330163bcc7c103
+ms.openlocfilehash: f71e85308a3bf03dddfaed5c1f1fc8df7aeae3b7
+ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56825986"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574415"
