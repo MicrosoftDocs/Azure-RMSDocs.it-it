@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: mbaldwin
 ms.openlocfilehash: e20b66062788632f3fc519e498761500ee78d68c
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
+ms.sourcegitcommit: 1d444b17e3d096f3e867e0240182ae3143fc1b71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809914"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59892528"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Guida introduttiva: Elencare le etichette di riservatezza (C++)
 
@@ -23,7 +23,7 @@ Questa guida introduttiva illustra come usare l'API File MIP per elencare le eti
 Se non è già stato fatto, completare i prerequisiti seguenti prima di continuare:
 
 - Completa [Guida introduttiva: Inizializzazione dell'applicazione client (C++)](quick-app-initialization-cpp.md) first, che compila una soluzione di Visual Studio starter. Questa guida introduttiva "Elencare le etichette di riservatezza" si basa su quella precedente per la creazione corretta della soluzione iniziale.
-- Se lo si desidera: Revisione [le etichette di classificazione](concept-classification-labels.md) concetti.
+- Facoltativamente: Revisione [le etichette di classificazione](concept-classification-labels.md) concetti.
 
 ## <a name="add-logic-to-list-the-sensitivity-labels"></a>Aggiungere la logica per elencare le etichette di riservatezza
 
