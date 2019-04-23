@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 2473e4bc1e64e3e8de498d2976d07b5324346a53
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59573497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60173139"
 ---
 # <a name="class-mipprotectionengineobserver"></a>Classe mip::ProtectionEngine::Observer 
 Interfaccia che riceve le notifiche correlate a [ProtectionEngine](class_mip_protectionengine.md).

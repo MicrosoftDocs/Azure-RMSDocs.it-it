@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 5befc7dfd5b2cf5f8940bc244fae9f013b579b71
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59573144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184534"
 ---
 # <a name="class-mipprotectadhocaction"></a>Classe mip::ProtectAdhocAction 
 Classe di azione che specifica l'aggiunta della protezione ad hoc al documento.

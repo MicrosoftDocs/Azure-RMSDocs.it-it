@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: mbaldwin
 ms.openlocfilehash: d30111953bdc55b66b712f30de0c50d28ac07303
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60185076"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Guida introduttiva: Inizializzazione dell'applicazione client (C++)
 
@@ -26,7 +26,7 @@ Questa Guida introduttiva illustra come implementare il modello di inizializzazi
 Se non è già stato fatto, assicurarsi di:
 
 - Completare i passaggi descritti in [Installazione e configurazione di Microsoft Information Protection (MIP) SDK](setup-configure-mip.md). La guida introduttiva "Inizializzazione delle applicazioni client" si basa sull'installazione e la configurazione corrette dell'SDK.
-- Se lo si desidera:
+- Facoltativamente:
   - Vedere [Oggetti profilo e motore](concept-profile-engine-cpp.md). Gli oggetti profilo e motore sono concetti universali, necessari per i client che usano le API File, Criteri e Protezione di MIP. 
   - Revisione [concetti di autenticazione](concept-authentication-cpp.md) per informazioni su come l'autenticazione e autorizzazione vengono implementate dal SDK e l'applicazione client.
   - Vedere [Concetti relativi agli osservatori](concept-async-observers.md) per altre informazioni sugli osservatori e su come vengono implementati. Microsoft Information Protection SDK Usa il modello observer per implementare le notifiche degli eventi asincroni.
@@ -322,7 +322,7 @@ Come accennato, sono richiesti per i client SDK tramite MIP APIs oggetti del pro
 
 3. Sostituire tutti i valori segnaposto nel codice appena incollato, usando le costanti stringa di origine:
 
-   | Segnaposto | Valore | Esempio |
+   | Segnaposto | Value | Esempio |
    |:----------- |:----- |:--------|
    | \<application-id\> | L'Azure AD Application ID (GUID) assegnati all'applicazione registrata nel [passaggio #2 della "il programma di installazione di Microsoft Information Protection SDK e della configurazione"](/information-protection/develop/setup-configure-mip#register-a-client-application-with-azure-active-directory) articolo. Sostituire 2 istanze. | `"0edbblll-8773-44de-b87c-b8c6276d41eb"` |
    | \<application-name\> | Nome descrittivo definito dall'utente per l'applicazione. Deve contenere caratteri ASCII validi (escluso ';') e idealmente corrisponde al nome dell'applicazione è usato nella registrazione di Azure AD. | `"AppInitialization"` |

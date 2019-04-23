@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 7cc1eeeafa4a086631f5d3c376643b5758002679
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59572835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184570"
 ---
 # <a name="class-mippolicyhandler"></a>Classe mip::PolicyHandler 
 Questa classe fornisce un'interfaccia per tutte le funzioni del gestore dei criteri in un file.

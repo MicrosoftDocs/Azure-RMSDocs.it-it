@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 70f226cc112062582b5441f6c3ae7fc3dc7de118
-ms.sourcegitcommit: ea76aade54134afaf5023145fcb755e40c7b84b7
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59572936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60173321"
 ---
 # <a name="class-mipapplylabelaction"></a>Classe mip::ApplyLabelAction 
 Per applicare le azioni di etichetta, è necessario che l'applicazione chiamante applichi un'etichetta specifica.

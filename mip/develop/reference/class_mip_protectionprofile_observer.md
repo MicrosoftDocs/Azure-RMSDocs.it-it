@@ -8,11 +8,11 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 386005f6b3eb8a648a83c60315e12782e8cb7457
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
+ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57332787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60184349"
 ---
 # <a name="class-mipprotectionprofileobserver"></a>Classe mip::ProtectionProfile::Observer 
 Interfaccia che riceve le notifiche correlate a [ProtectionProfile](class_mip_protectionprofile.md).
