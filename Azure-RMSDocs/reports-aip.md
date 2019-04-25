@@ -3,20 +3,20 @@ title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
 author: cabailey
 ms.author: cabailey
+ms.date: 04/23/2019
 manager: barbkess
-ms.date: 04/08/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 735e7253701c3cbed8af7974d27cf241fb515c90
-ms.sourcegitcommit: ce2078712d111f102a72b3a8697121f1390bdf07
-ms.translationtype: HT
+ms.openlocfilehash: e85537f705fa388aa7c2c3a838ca658213899edb
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59289418"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181655"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -67,7 +67,7 @@ Ad esempio è possibile visualizzare quanto segue:
 
 - Nel report **Individuazione dati**:
 
-    - Quali file si trovano nei repository dei dati analizzati, nei computer Windows 10 o nei computer che eseguono la versione in anteprima del client Azure Information Protection o [client che supportano l'etichettatura unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)
+    - Quali file sono nel repository dei dati analizzati, Windows 10 computer o i computer che eseguono il client Azure Information Protection o [i client che supportano l'etichettatura unificato](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)
     
     - Quali file sono provvisti di etichetta e protetti e il percorso dei file in base alle etichette
     
@@ -135,11 +135,10 @@ Per visualizzare i report di Azure Information Protection e creare report person
 
 |Requisito|Altre informazioni|
 |---------------|--------------------|
-|Una sottoscrizione di Azure che include Log Analytics ed è per lo stesso tenant di Azure Information Protection|Vedere la pagina dei [prezzi di Monitoraggio di Azure](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Se non si ha una sottoscrizione di Azure per lo stesso tenant o attualmente non si usa Azure Log Analytics, la pagina dei prezzi include un collegamento per una versione di valutazione gratuita.|
-|Client Azure Information Protection (versione attualmente disponibile a livello generale o versione di anteprima) o versione di anteprima del client per l'etichettatura unificata Azure Information Protection|Se non è ancora stata installata una di queste versioni del client, è possibile scaricarle e installarle dall'Area download Microsoft:<br /> - [Client Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018) <br /> - [Client per l'etichettatura unificata Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=57440)|
-|Per il report **Individuazione e rischio**: <br /><br />- Per visualizzare i dati da archivi dati locali, è stata distribuita almeno un'istanza dello scanner di Azure Information Protection (versione attualmente disponibile a livello generale o versione di anteprima) <br /><br />- Per visualizzare i dati dai computer Windows 10, tali computer devono disporre come minimo della build 1809 ed è necessario usare Windows Defender Advanced Threat Protection (Windows Defender ATP) e aver abilitato la funzionalità di integrazione di Azure Information Protection da Windows Defender Security Center|Per le istruzioni di installazione per lo scanner, vedere [Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner.md). <br /><br />Per informazioni sulla configurazione e l'uso della funzionalità di integrazione di Azure Information Protection da Windows Defender Security Center, vedere [Panoramica della protezione delle informazioni in Windows](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview).|
-|Per il report **Raccomandazioni**: <br /><br />- Per aggiungere un nuovo repository dei dati dal portale di Azure come azione consigliata, è necessario usare la versione di anteprima corrente dello scanner di Azure Information Protection |Per distribuire la versione di anteprima dello scanner, vedere [Distribuzione della versione di anteprima dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner-preview.md).|
-
+|Una sottoscrizione di Azure che include Log Analytics ed è per lo stesso tenant di Azure Information Protection|Vedere la pagina dei [prezzi di Monitoraggio di Azure](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Se non si dispone di un abbonamento di Azure o attualmente non si usa Azure Log Analytics, la pagina dei prezzi include un collegamento per una versione di valutazione gratuita.|
+|Il client Azure Information Protection o il client di assegnazione di etichette unificato di Azure Information Protection|Se non si ha già uno di questi client, è possibile scaricare e installare dal [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). <br /><br /> Assicurarsi di avere la versione più recente per supportare [tutte le funzionalità](#features-that-require-a-minimum-version-of-the-client) per analitica di Azure Information Protection.|
+|Per il report **Individuazione e rischio**: <br /><br />-Per visualizzare i dati da archivi dati locali, è stato distribuito almeno un'istanza dello scanner Azure Information Protection <br /><br />- Per visualizzare i dati dai computer Windows 10, tali computer devono disporre come minimo della build 1809 ed è necessario usare Windows Defender Advanced Threat Protection (Windows Defender ATP) e aver abilitato la funzionalità di integrazione di Azure Information Protection da Windows Defender Security Center|Per le istruzioni di installazione per lo scanner, vedere [Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner.md). <br /><br />Per informazioni sulla configurazione e l'uso della funzionalità di integrazione di Azure Information Protection da Windows Defender Security Center, vedere [Panoramica della protezione delle informazioni in Windows](/windows/security/threat-protection/windows-defender-atp/information-protection-in-windows-overview).|
+|Per il report **Raccomandazioni**: <br /><br />-Per aggiungere un nuovo repository dei dati dal portale di Azure come un'azione consigliata, è necessario usare la versione più recente di disponibilità a livello generale dello scanner Azure Information Protection |Per distribuire lo scanner, vedere [distribuzione dello scanner di Azure Information Protection per classificare e proteggere i file automaticamente](deploy-aip-scanner.md).|
 
 ### <a name="permissions-required-for-azure-information-protection-analytics"></a>Autorizzazioni necessarie per la funzionalità di analisi di Azure Information Protection
 
@@ -165,7 +164,7 @@ Dettagli:
     > [!NOTE] 
     > Se è stata eseguita la migrazione del tenant nell'archivio etichette unificato, non è possibile usare il ruolo di amministratore di Information Protection. [Altre informazioni](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
-2. È anche necessario uno dei [ruoli di Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#managing-access-to-log-analytics-using-azure-permissions) o dei [ruoli di Azure](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments) standard seguenti per accedere all'area di lavoro di Azure Log Analytics:
+2. È anche necessario uno dei [ruoli di Azure Log Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) o dei [ruoli di Azure](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments) standard seguenti per accedere all'area di lavoro di Azure Log Analytics:
     
     - Per creare l'area di lavoro o per creare query personalizzate, uno dei ruoli seguenti:
     
@@ -187,6 +186,19 @@ Dopo aver configurato l'area di lavoro per l'analisi di Azure Information Protec
 
 Tuttavia, un'assegnazione di ruolo tipica per molte organizzazioni è il **ruolo con autorizzazioni di lettura per la sicurezza** di Azure AD e il ruolo **Lettore** di Azure.
 
+### <a name="features-that-require-a-minimum-version-of-the-client"></a>Funzionalità che richiedono una versione minima del client
+
+È possibile usare le informazioni sulla cronologia di versione per il [unificata di Azure Information Protection client l'assegnazione di etichette](./rms-client/unifiedlabelingclient-version-release-history.md) e il [client Azure Information Protection](./rms-client/client-version-release-history.md) per verificare se la versione del client supporta tutte le funzionalità di creazione di report centrale. Le versioni minime per i client:
+
+Per Azure Information Protection unified client l'assegnazione di etichette:
+
+- Supporto per il controllo e l'endpoint di individuazione: Versione 2.0.778
+
+Per il client Azure Information Protection:
+
+- Supporto per il controllo: 1.41.51.0
+- Supporto per l'individuazione di endpoint: Versione 1.48.204.0
+
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>Configurare un'area di lavoro di Log Analytics per i report
 
 1. Se non già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](https://portal.azure.com) con un account che dispone delle [autorizzazioni necessarie per le analisi di Azure Information Protection](#permissions-required-for-azure-information-protection-analytics). Quindi passare al pannello **Azure Information Protection**. 
@@ -205,6 +217,9 @@ Per assistenza nella creazione dell'area di lavoro di Log Analytics, vedere [Cre
 
 Quando viene completata la configurazione dell'area di lavoro si è pronti per visualizzare i report.
 
+> [!NOTE] 
+> Esiste attualmente un problema noto con la visualizzazione dei dati per la prima volta nei report. Se si verifica questo problema, nei criteri globali configurare l'[impostazione dei criteri](configure-policy-settings.md) **Invia i dati di controllo a Log Analytics di Azure Information Protection** su **No** e salvare il criterio. Modificare quindi la stessa impostazione specificando **Sì** e salvare il criterio. Dopo il [download della modifica](configure-policy.md#making-changes-to-the-policy) da parte dei client, possono essere richiesti fino a 30 minuti prima che gli eventi di controllo diventino visibili nell'area di lavoro Log Analytics.
+
 ## <a name="how-to-view-the-reports"></a>Come visualizzare i report
 
 Nel pannello Azure Information Protection trovare le opzioni del menu **Dashboard** e scegliere una delle opzioni seguenti:
@@ -219,7 +234,7 @@ Nel pannello Azure Information Protection trovare le opzioni del menu **Dashboar
     
     Nota: Microsoft sta gradualmente implementando la funzionalità di individuazione per endpoint nei tenant. Si inizierà a vedere i dati degli endpoint supportati in questo report quando la funzionalità sarà stata implementata nel proprio tenant.
     
-    È possibile configurare un'[impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents) per la versione in anteprima del client Azure Information Protection per segnalare file che contengono informazioni riservate.
+    È possibile configurare un [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents) per il client Azure Information Protection ai file di report contenenti informazioni riservate.
     
     Suggerimento: dalle informazioni raccolte si potrebbero individuare utenti che accedono a file contenenti informazioni riservate da posizioni di cui non si conosceva l'esistenza o che non vengono attualmente analizzate:
     
@@ -230,8 +245,6 @@ Nel pannello Azure Information Protection trovare le opzioni del menu **Dashboar
     
     Quando si seleziona un elemento, l'opzione **Visualizza i dati** consente di visualizzare le attività di controllo che hanno attivato la raccomandazione.
 
-> [!NOTE]
-> È presente un problema noto per cui nei percorsi e nomi di file la visualizzazione di caratteri non ASCII viene sostituita da punti interrogativi (**?**) quando le impostazioni locali del sistema operativo di invio corrispondono all'inglese.
 
 ## <a name="how-to-modify-the-reports-and-create-custom-queries"></a>Come modificare i report e creare query personalizzate
 
@@ -291,6 +304,6 @@ In questo esempio, un'etichetta di cui è stato effettuato il downgrade viene co
 
 
 ## <a name="next-steps"></a>Passaggi successivi
-Dopo aver esaminato le informazioni nei report, si potrebbe decidere di apportare modifiche ai criteri di Azure Information Protection. Per istruzioni, vedere [Configurazione dei criteri di Azure Information Protection](configure-policy.md).
+Dopo aver esaminato le informazioni nei report, se si usa il client Azure Information Protection, è possibile decidere di apportare modifiche ai criteri di Azure Information Protection. Per istruzioni, vedere [Configurazione dei criteri di Azure Information Protection](configure-policy.md).
 
 Se è disponibile un abbonamento a Microsoft 365, è anche possibile visualizzare l'utilizzo delle etichette nel Centro sicurezza Microsoft 365 e nel Centro conformità Microsoft 365. Per altre informazioni, vedere [Visualizzare l'utilizzo delle etichette con Analisi delle etichette](/Office365/SecurityCompliance/label-analytics).

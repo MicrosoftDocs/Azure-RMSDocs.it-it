@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.openlocfilehash: d1181dfe1c495a334aaebd567df5db7e14649e25
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331002"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60178234"
 ---
 # <a name="file-api-configuration"></a>Configurazione dell'API file
 
@@ -93,18 +93,18 @@ Se si tenta di crittografare un tipo di file bloccato, si verifica un errore [IP
 -   Estensioni di file: doc, dot, xla, xls, xlt, pps, ppt, docm, docx, dotm, dotx, xlam, xlsb, xlsm, xlsx, ppam, xltx, xps, potm, potx, ppsx, ppsm, pptm, pptx, thmx, vsdx, vsdm, vssx, vssm, vstx e vstm. 
 -   Tipo di protezione = Nativa (impostazione predefinita): sample.docx viene crittografato in sample.docx
 -   Tipo di protezione = Pfile: per i file Office ha lo stesso effetto della crittografia Nativa.
--   Off: disabilita la crittografia.
+-   OFF: disabilita la crittografia.
 
 **File PDF**
 
 -   Tipo di protezione = Nativa: sample.pdf è crittografato e denominato sample.ppdf
 -   Tipo di protezione = Pfile: sample.pdf è crittografato e denominato sample.pdf.pfile.
--   Off: disabilita la crittografia.
+-   OFF: disabilita la crittografia.
 
 **Tutti gli altri formati di file**
 
 -   Tipo di protezione = Pfile: sample.*zzz* è crittografato e denominato sample.*zzz*.pfile, dove *zzz* è l'estensione del file originale.
--   Off: disabilita la crittografia.
+-   OFF: disabilita la crittografia.
 
 ### <a name="examples"></a>Esempi
 

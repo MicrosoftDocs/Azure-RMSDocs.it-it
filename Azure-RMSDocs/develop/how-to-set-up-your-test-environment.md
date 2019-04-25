@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 58de314ef4c87518c8aa6c53036c477b541ef5e1
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331036"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60178285"
 ---
 # <a name="testing-your-application"></a>Controllo dell'applicazione
 
@@ -38,7 +38,7 @@ Viene illustrato come preparare il test dell'applicazione.
 
     Per informazioni sull'installazione di RMS SDK 2.1, vedere [Installare l'SDK](install-the-rms-sdk.md).
 
-## <a name="remarks"></a>Osservazioni
+## <a name="remarks"></a>Note
 
 Questa guida non è completa. Per informazioni su come configurare RMS Client 2.1, vedere [Note sulla distribuzione del client RMS 2.1](https://technet.microsoft.com/library/jj159267(WS.10).aspx).
 

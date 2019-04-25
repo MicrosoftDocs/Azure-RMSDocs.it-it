@@ -12,11 +12,11 @@ ms.assetid: e7d91f2d-d6a7-4c7e-821f-c94e4be9967d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: e298fc08c610e5587aa6b8e4007f64aae2b0da42
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56251381"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181481"
 ---
 # <a name="on-premises-servers-that-support-azure-rights-management-data-protection"></a>Server locali che supportano la protezione dati di Azure Rights Management
 

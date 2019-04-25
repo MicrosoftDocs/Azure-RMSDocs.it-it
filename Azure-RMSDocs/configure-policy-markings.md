@@ -4,21 +4,24 @@ description: Quando si assegna un'etichetta a un documento o a un messaggio di p
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/11/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
-ms.openlocfilehash: cc921ae66d8a36a3bad9f184b7b900c7508eb2d1
-ms.sourcegitcommit: 171a96af12a7e0364052d830dc14714b1bb1c95c
-ms.translationtype: HT
+ms.openlocfilehash: 4868e0972839bfd1fa13f230a4e3d1d0af8fe768
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57734116"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179866"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
 
 Quando si assegna un'etichetta a un documento o a un messaggio di posta elettronica, è possibile selezionare diverse opzioni per rendere facilmente visibile la classificazione scelta. Questi contrassegni visivi sono un'intestazione, un piè di pagina e una filigrana. 
 
@@ -85,7 +88,7 @@ Nella stringa di testo è possibile usare le variabili seguenti per l'intestazio
 
 - `${Item.Label}` per l'etichetta selezionata. Ad esempio: Generale
 
-- `${Item.Name}` per l'oggetto del messaggio di posta elettronica o il nome di file. Ad esempio: JulySales.docx
+- `${Item.Name}` per l'oggetto del messaggio di posta elettronica o il nome di file. Ad esempio:  JulySales.docx
 
 - `${Item.Location}` per il percorso e il nome di file dei documenti e l'oggetto per i messaggi di posta elettronica. Ad esempio: \\\Sales\2016\Q3\JulyReport.docx
 

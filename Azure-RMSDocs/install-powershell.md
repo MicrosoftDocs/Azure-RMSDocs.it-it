@@ -12,11 +12,11 @@ ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 789c3178827e52c27759268b1340b53c3add1c39
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259712"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181719"
 ---
 # <a name="installing-the-aadrm-powershell-module"></a>Installazione del modulo PowerShell AADRM
 
@@ -31,8 +31,8 @@ Questa tabella elenca i prerequisiti per installare e usare il modulo PowerShell
 
 |Requisito|Altre informazioni|
 |---------------|--------------------|
-|Versione minima di Windows PowerShell: 3.0|È possibile verificare quale versione di Windows PowerShell sia in esecuzione digitando `$PSVersionTable` in una sessione di PowerShell. <br /><br /> Se è necessario installare una versione successiva di Windows PowerShell, vedere [Aggiornamento di Windows PowerShell esistente](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell).|
-|Versione minima di Microsoft .NET Framework: 4.5<br /><br />Nota: Questa versione di Microsoft .NET Framework è inclusa nei sistemi operativi successivi. È pertanto necessario installarla manualmente se il sistema operativo client è inferiore a Windows 8.0 o se il sistema operativo server è inferiore a Windows Server 2012.|Se la versione minima di Microsoft .NET Framework non è ancora installata, è possibile scaricare [Microsoft .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653).<br /><br />La versione minima di Microsoft .NET Framework è necessaria per alcune classi usate dal modulo AADRM.|
+|Versione minima di Windows PowerShell: 3.0|È possibile verificare quale versione di Windows PowerShell sia in esecuzione digitando `$PSVersionTable` in una sessione di PowerShell. <br /><br /> Se è necessario installare una versione successiva di Windows PowerShell, vedere [Aggiornamento di Windows PowerShell esistente](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell).|
+|Versione minima di Microsoft .NET Framework: 4.5<br /><br />Nota: Questa versione di Microsoft .NET Framework è inclusa nei sistemi operativi successivi, è pertanto necessario installarla manualmente solo se il sistema operativo client è inferiore a Windows 8.0 o del sistema operativo server è inferiore a Windows Server 2012.|Se la versione minima di Microsoft .NET Framework non è ancora installata, è possibile scaricare [Microsoft .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653).<br /><br />La versione minima di Microsoft .NET Framework è necessaria per alcune classi usate dal modulo AADRM.|
 
 A partire dalla versione 2.5.0.0 del modulo AADRM, l'Assistente per l'accesso ai Microsoft Online Services non è più necessario.
 
@@ -77,7 +77,7 @@ Per visualizzare i cmdlet disponibili, digitare quanto segue:
 Get-Command -Module AADRM
 ```
 
-Usare il comando `Get-Help <cmdlet_name>` per visualizzare le informazioni della Guida per un cmdlet specifico e quindi impostare il parametro **-online** per visualizzare le informazioni della Guida più recenti dal sito della documentazione Microsoft. Ad esempio:
+Usare il comando `Get-Help <cmdlet_name>` per visualizzare le informazioni della Guida per un cmdlet specifico e quindi impostare il parametro **-online** per visualizzare le informazioni della Guida più recenti dal sito della documentazione Microsoft. Ad esempio: 
 
 ```
 Get-Help Connect-AadrmService -online

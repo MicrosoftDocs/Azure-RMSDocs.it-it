@@ -12,11 +12,11 @@ ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 525637a52a71e4bdc48e8f0665ef73c70a5a18ff
-ms.sourcegitcommit: 78cc0a94b38bf8c03808109b495e0952f2cdfbd4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557630"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181073"
 ---
 # <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Informazioni su conformità e supporto per Azure Information Protection
 
@@ -40,9 +40,9 @@ Tuttavia, alcune informazioni rilevanti possono essere utili al consulente legal
 
 ## <a name="legal-and-privacy"></a>Note legali e privacy
 
-- Per informazioni sul contratto di Microsoft Azure: [Contratto di Microsoft Azure](https://azure.microsoft.com/support/legal/subscription-agreement/)
+- Per informazioni sul contratto di Microsoft Azure: [Contratto di Microsoft Azure](https://azure.microsoft.com/support/legal/subscription-agreement/)
 
-- Per informazioni sulla privacy di Microsoft Azure: [Informativa sulla privacy di Microsoft Azure](https://azure.microsoft.com/support/legal/privacy-statement/)
+- Per informazioni sulla privacy di Microsoft Azure: [Informativa sulla privacy di Microsoft Azure](https://azure.microsoft.com/support/legal/privacy-statement/)
 
 ## <a name="security-compliance-and-auditing"></a>Sicurezza, conformità e controllo
 

@@ -4,19 +4,19 @@ description: Quando si usa Azure Rights Management, i modelli vengono scaricati 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/01/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: ea9709d93d149cd8322392cbd62d4af74915b1c5
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 44925ad0a2c384978d3f91c1d40a5b6b11d5a2a6
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254561"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181498"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aggiornamento di modelli per utenti e servizi
 
@@ -28,7 +28,7 @@ Quando si usa il servizio Azure Rights Management di Azure Information Protectio
 |--------------------------|---------------------------------------------|
 |Exchange Online<br /><br />Applicabile per regole di trasporto e Outlook Web App |Vengono aggiornati automaticamente in un'ora e non sono necessari altri passaggi.<br /><br />Nel caso in cui si usi [Office 365 Message Encryption con le nuove funzionalità](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Se Exchange Online è stato precedentemente configurato per l'uso del servizio Azure Rights Management importando il dominio di pubblicazione trusted (TPD), usare le stesse istruzioni per abilitare le nuove funzionalità in Exchange Online.|
 |Client Azure Information Protection|I modelli vengono aggiornati automaticamente ogni volta che si aggiornano i criteri di Azure Information Protection nel client:<br /><br /> - Quando viene aperta un'applicazione di Office che supporta la barra di Azure Information Protection. <br /><br /> - Quando si fa clic con il pulsante destro del mouse per classificare e proteggere un file o una cartella. <br /><br /> - Quando si eseguono i cmdlet di PowerShell per l'assegnazione di etichette e la protezione (Get-AIPFileStatus e Set-AIPFileLabel).<br /><br /> - Quando il servizio scanner di Azure Information Protection viene avviato e i criteri locali risalgono a più di un'ora prima. Il servizio scanner verifica le modifiche ogni ora e usa tali modifiche per il ciclo di analisi successivo.<br /><br /> - Ogni 24 ore.<br /><br /> Inoltre, poiché il client è strettamente integrato con Office, i modelli aggiornati per app di Office 365, Office 2019, Office 2016 o Office 2013 verranno aggiornati anche per il client Azure Information Protection.|
-|Client per l'etichettatura unificata di Azure Information Protection (anteprima)|Aggiornamento automatico ogni 4 ore, per ogni app di Office.<br /><br /> Inoltre, poiché il client è strettamente integrato con Office, i modelli aggiornati per app di Office 365, Office 2019, Office 2016 o Office 2013 verranno aggiornati anche per il client di etichettatura unificata Azure Information Protection.|
+|Client per l'etichettatura unificata di Azure Information Protection|Aggiornamento automatico ogni 4 ore, per ogni app di Office.<br /><br /> Inoltre, poiché il client è strettamente integrato con Office, i modelli aggiornati per app di Office 365, Office 2019, Office 2016 o Office 2013 verranno aggiornati anche per il client di etichettatura unificata Azure Information Protection.|
 |App di Office 365, Office 2019, Office 2016 e Office 2013|I modelli vengono aggiornati automaticamente in base a una pianificazione:<br /><br />- Per le versioni più recenti di Office: L'intervallo di aggiornamento predefinito è ogni 7 giorni.<br /><br />Per anticipare l'esecuzione di un aggiornamento rispetto a questa pianificazione, vedere la sezione [App di Office 365, Office 2019, Office 2016 e Office 2013: come forzare un aggiornamento per un modello personalizzato modificato](#office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-a-changed-custom-template).|
 |Office 2010|I modelli vengono aggiornati automaticamente quando gli utenti si disconnettono da Windows, eseguono nuovamente l'accesso e attendono al massimo un'ora.|
 |Exchange locale con il connettore di Rights Management<br /><br />Applicabile per regole di trasporto e Outlook Web App|I modelli vengono aggiornati automaticamente e non sono necessari altri passaggi. Tuttavia, Outlook Web App memorizza nella cache l'interfaccia utente per un giorno.|
@@ -38,7 +38,7 @@ Quando si usa il servizio Azure Rights Management di Azure Information Protectio
 
 Se per le applicazioni client è necessario scaricare un modello (iniziale o aggiornato con le modifiche), prevedere un'attesa fino a 15 minuti prima che il download sia completato e che i modelli nuovi o aggiornati siano completamente funzionali. Il tempo effettivo varia a seconda di fattori quali le dimensioni e la complessità della configurazione dei modelli e la connettività di rete. 
 
-## <a name="office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-a-changed-custom-template"></a>App di Office 365, Office 2019, Office 2016 e Office 2013: come forzare un aggiornamento per un modello personalizzato modificato
+## <a name="office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-a-changed-custom-template"></a>App di Office 365, Office 2019, Office 2016 e Office 2013: Come forzare un aggiornamento per un modello personalizzato modificato
 Modificando il Registro di sistema nei computer che eseguono app di Office 365, Office 2019, Office 2016 oppure Office 2013 è possibile modificare la pianificazione automatica in modo che i modelli modificati vengano aggiornati nei computer più frequentemente rispetto al relativo valore predefinito. È inoltre possibile forzare un aggiornamento immediato eliminando i dati esistenti in un valore del Registro di sistema.
 
 > [!WARNING]
@@ -56,7 +56,7 @@ Modificando il Registro di sistema nei computer che eseguono app di Office 365, 
 
         **Valore:** TemplateUpdateFrequency
 
-    - Per impostare una frequenza di aggiornamento in secondi (minimo di 1 secondo):  Creare un nuovo valore del Registro di sistema denominato **TemplateUpdateFrequencyInSeconds** e definire un valore intero per i dati, che specifica la frequenza in secondi per il download di tutte le modifiche a un modello scaricato. Usare le informazioni seguenti per individuare il percorso del Registro di sistema per creare questo nuovo valore del registro.
+    - Per impostare una frequenza di aggiornamento in secondi (almeno 1 secondo):  Creare un nuovo valore del Registro di sistema denominato **TemplateUpdateFrequencyInSeconds** e definire un valore intero per i dati, che specifica la frequenza in secondi per il download di tutte le modifiche a un modello scaricato. Usare le informazioni seguenti per individuare il percorso del Registro di sistema per creare questo nuovo valore del registro.
 
         **Percorso del Registro di sistema:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
@@ -85,7 +85,7 @@ Modificando il Registro di sistema nei computer che eseguono app di Office 365, 
    > 
    > Nell'output identificare il valore **LicensingIntranetDistributionPointUrl** .
    > 
-   > Ad esempio: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+   > Ad esempio:  **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
    > 
    > In questo valore rimuovere **https://** e **/_wmcs/licensing** da questa stringa. Il valore rimanente è l’FQDN del servizio Microsoft RMS. Nell'esempio, il valore dell'FQDN di Microsoft RMS è il seguente:
    > 

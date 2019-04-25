@@ -12,11 +12,11 @@ ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 07391252e55f1b75df4d0fb57d167748d6d69853
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56255003"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60180942"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Introduzione all'app Microsoft Azure Information Protection per iOS e Android
 
@@ -31,7 +31,7 @@ La maggior parte degli utenti usa l'app Azure Information Protection per aprire 
 >
 > In modo analogo, accedere all'app solo dopo aver ricevuto la richiesta corrispondente.
 
-Per usare le istruzioni seguenti è necessario accedere dal dispositivo mobile a uno dei file supportati dall'app. Ad esempio:
+Per usare le istruzioni seguenti è necessario accedere dal dispositivo mobile a uno dei file supportati dall'app. Ad esempio: 
 
 - **Un file con estensione rpmsg**: si tratta di un messaggio di posta elettronica protetto con RMS visualizzato come allegato in un messaggio di posta elettronica quando l'app di posta elettronica del dispositivo mobile non supporta la protezione dei dati con Rights Management in modo nativo. 
     

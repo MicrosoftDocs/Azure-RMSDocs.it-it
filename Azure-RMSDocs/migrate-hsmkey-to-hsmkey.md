@@ -1,22 +1,22 @@
 ---
 title: Eseguire la migrazione da una chiave protetta tramite HSM a un'altra - AIP
-description: Istruzioni che fanno parte del percorso di migrazione da AD RMS ad Azure Information Protection e si applicano solo se la chiave di AD RMS è protetta tramite HSM e si vuole eseguire la migrazione ad Azure Information Protection con una chiave del tenant protetta tramite HSM in Insieme di credenziali delle chiavi di Azure.
+description: Le istruzioni che fanno parte del percorso di migrazione da AD RMS ad Azure Information Protection e applicabile solo se la chiave di AD RMS è protetta tramite HSM e si vuole eseguire la migrazione ad Azure Information Protection con una chiave del tenant protetta tramite HSM in insieme di credenziali chiave di Azure.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 04/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 1beba22d230bff1997ea4e2437a09ce43cb01193
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: d4292d3f3df4f1cfadd72e23ebf9a175051bc027
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252810"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60184094"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave HSM protetta a un'altra
 
@@ -51,11 +51,11 @@ Queste procedure vengono eseguite dall'amministratore di Insieme di credenziali 
 
      Quando la chiave viene caricata in Insieme di credenziali delle chiavi di Azure, vengono visualizzate le proprietà della chiave visualizzata, incluso l'ID della chiave. Sarà simile a https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Prendere nota dell'URL perché è necessario all'amministratore di Azure Information Protection per indicare al servizio Azure Rights Management di usare questa chiave per la chiave del tenant.
 
-2. Nella workstation connessa a Internet, in una sessione di PowerShell, usare il cmdlet [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) per autorizzare l'entità di servizio di Azure Rights Management ad accedere all'insieme di credenziali delle chiavi in cui verrà archiviata la chiave del tenant di Azure Information Protection. Le autorizzazioni necessarie sono decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
+2. Nella workstation connessa a Internet, in una sessione di PowerShell, usare il [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) cmdlet per autorizzare l'entità servizio Azure Rights Management per accedere a key vault che archivia le informazioni di Azure Chiave del tenant di protezione. Le autorizzazioni necessarie sono decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
     
     Se ad esempio l'insieme di credenziali delle chiavi creato per Azure Information Protection è denominato contoso-byok-ky e il gruppo di risorse è denominato contoso-byok-rg, eseguire il comando seguente:
     
-        Set-AzureRmKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
+        Set-AzKeyVaultAccessPolicy -VaultName "contoso-byok-kv" -ResourceGroupName "contoso-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 
 
 Ora che la chiave HSM è stata preparata in Insieme di credenziali delle chiavi di Azure per il servizio Azure Rights Management di Azure Information Protection, si è pronti per importare i dati di configurazione di AD RMS.

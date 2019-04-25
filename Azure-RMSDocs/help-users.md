@@ -12,11 +12,11 @@ ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 9ac96fe93c3bb903b25b5f9695f3e38451862f11
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258998"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60182331"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Consentire agli utenti di proteggere i file mediante il servizio Azure Rights Management
 
@@ -103,7 +103,7 @@ I diritti d'uso vengono visualizzati nella parte superiore del documento in un b
 
 1.  In Outlook creare un messaggio di posta elettronica indirizzato a un destinatario presente nell'organizzazione.
 
-2.  Dalla scheda **Opzioni**: **Autorizzazione** > selezionare un'opzione. Ad esempio: **Non inoltrare**, **\<Nome società> - Riservato** o **\<Nome società> - Solo visualizzazione riservata**.
+2.  Dalla scheda **Opzioni**: **Autorizzazione** > selezionare un'opzione. Ad esempio:  **Non inoltrare**, **\<Nome società> - Riservato** o **\<Nome società> - Solo visualizzazione riservata**.
 
 3.  Inviare il messaggio.
 
@@ -115,7 +115,7 @@ Ad esempio, se il messaggio di posta elettronica è stato protetto usando l'opzi
 
 1. In Outlook sul Web creare un messaggio di posta elettronica indirizzato a un destinatario presente nell'organizzazione.
 
-2. Selezionare **Proteggi**. A meno che l'impostazione predefinita non sia stata modificata da un amministratore, l'opzione **Non inoltrare** viene selezionata automaticamente. Se si vuole modificare l'impostazione predefinita, selezionare **Modifica autorizzazioni** e quindi selezionare un'opzione nell'elenco a discesa. Ad esempio: **Crittografare** oppure  **\<nome società > - Informazioni riservate**.
+2. Selezionare **Proteggi**. A meno che l'impostazione predefinita non sia stata modificata da un amministratore, l'opzione **Non inoltrare** viene selezionata automaticamente. Se si vuole modificare l'impostazione predefinita, selezionare **Modifica autorizzazioni** e quindi selezionare un'opzione nell'elenco a discesa. Ad esempio:  **Crittografare** oppure  **\<nome società > - Informazioni riservate**.
 
 3. Inviare il messaggio.
 

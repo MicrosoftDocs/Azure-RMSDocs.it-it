@@ -12,11 +12,11 @@ ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: ff30f006ece558efe42a38c1ec3596cfbbce3fab
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257553"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60182522"
 ---
 # <a name="what-is-azure-rights-management"></a>Informazioni su Microsoft Azure Rights Management
 

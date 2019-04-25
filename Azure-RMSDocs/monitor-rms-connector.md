@@ -12,11 +12,11 @@ ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 2d4c03a168f3add9778372a890ea9dd2c7be68bf
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253864"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181583"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Monitorare il connettore di Azure Rights Management
 

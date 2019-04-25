@@ -12,11 +12,11 @@ ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 297608ce7fd64170e9aaa31ab39f0b0e151d7538
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256839"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60184264"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 della migrazione: configurazione lato server per AD RMS
 
@@ -157,7 +157,7 @@ Per altre informazioni su questa configurazione, vedere [Come configurare un'eti
 #### <a name="sample-windows-powershell-script-to-identify-ad-rms-templates-that-include-the-anyone-group"></a>Esempio di script di Windows PowerShell per identificare modelli AD RMS che includono il gruppo ANYONE
 Questa sezione include lo script di esempio per facilitare l'identificazione dei modelli AD RMS per i quali è definito un gruppo ANYONE, come descritto nella sezione precedente.
 
-**Dichiarazione di non responsabilità:** Questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene fornito "nello stato in stato in cui si trova" senza garanzia di alcun tipo.
+**Dichiarazione di non responsabilità:** Questo script di esempio non è supportato in alcun programma di supporto tecnico standard di Microsoft o un servizio. Questo script di esempio viene fornito "nello stato in stato in cui si trova" senza garanzia di alcun tipo.
 
 ```
 import-module adrmsadmin 

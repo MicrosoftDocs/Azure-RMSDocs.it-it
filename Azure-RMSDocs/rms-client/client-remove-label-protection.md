@@ -4,23 +4,25 @@ description: Istruzioni per rimuovere etichette di classificazione e protezione 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 55f6dd9696dab3cf686443c656a29356907a721c
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 031bfb196e7f896b49e96d4b94574b43e11a8fe8
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56258675"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60183243"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Manuale dell'utente: Rimuovere etichette di classificazione e protezione da file e messaggi di posta elettronica etichettati tramite Azure Information Protection o protetti tramite Rights Management
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
+>
+> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Quando il [client Azure Information Protection viene installato nel computer](install-client-app.md), è possibile rimuovere etichette di classificazione e protezione da file e messaggi di posta elettronica.
 
@@ -45,7 +47,7 @@ Se l'icona **Elimina l'etichetta** non è immediatamente disponibile, fare clic 
 
 ![Barra di Azure Information Protection - Modifica l'etichetta](../media/edit-label.png)
 
-Se l'opzione **Elimina l'etichetta** ancora non è visualizzata, l'amministratore non consente l'uso di questa opzione.
+Se ancora non viene visualizzato il **Elimina l'etichetta** icona, l'amministratore non consente di usare questa opzione perché tutti i documenti e indirizzo di posta elettronica devono avere un'etichetta.
 
 > [!NOTE]
 > Se la barra di Information Protection non viene visualizzata nelle app di Office:

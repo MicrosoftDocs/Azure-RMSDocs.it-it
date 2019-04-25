@@ -12,11 +12,11 @@ ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: bdd5d17bc947b25f312baa498da057b409dcd07e
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256975"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60184128"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Fase 3 della migrazione: configurazione lato client
 
@@ -58,14 +58,14 @@ Questo metodo è adatto solo per i client Windows che eseguono app di Office 365
     
     Se si usa il ruolo Server DNS in Windows Server, è possibile usare la tabella seguente come esempio per specificare le proprietà del record SRV nella console Gestore DNS.
     
-    |Campo|Valore|  
+    |Campo|Value|  
     |-----------|-----------|  
     |**Dominio**|_tcp.rmscluster.contoso.com|  
     |**Servizio**|_rmsredir|  
-    |**Protocollo**|_http|  
+    |**Protocol**|_http|  
     |**Priorità**|0|  
     |**Peso**|0|  
-    |**Numero porta**|80|  
+    |**Numero di porta**|80|  
     |**Host che offre questo servizio**|5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com|  
 
 2. Impostare un'autorizzazione di negazione per l'endpoint di pubblicazione di AD RMS per gli utenti che eseguono app di Office 365 o Office 2016 (o versioni successive):

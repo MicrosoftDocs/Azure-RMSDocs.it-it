@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 93975ad0f2113fc10bff3f54f0b6729dfa33bad3
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331852"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60178353"
 ---
 # <a name="how-to-enable-error-and-performance-logging"></a>Come fare per: Abilitare la registrazione delle prestazioni e degli errori
 Microsoft Rights Management SDK 4.2 gestisce i log delle diagnosi e delle prestazioni caricati tramite una proprietà a dispositivo singolo.

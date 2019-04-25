@@ -12,13 +12,13 @@ ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: d9fc409faedf8083dae6730f866c12bdd84255ce
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56252572"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60184043"
 ---
-# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gestione di Microsoft: operazioni del ciclo di vita della chiave del tenant
+# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gestita da Microsoft: operazioni del ciclo di vita della chiave del tenant
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -66,7 +66,7 @@ Per esportare la configurazione di Azure Information Protection e la chiave del 
 
 - Microsoft verifica che la richiesta di rilasciare la chiave del tenant di Azure Information Protection sia legittima. L'operazione può richiedere fino a tre settimane.
 
-### <a name="step-3-receive-key-instructions-from-css"></a>Passaggio 3: Ricevere istruzioni sulla chiave dal Servizio Supporto Tecnico Clienti Microsoft
+### <a name="step-3-receive-key-instructions-from-css"></a>Passaggio 3: Ricevere istruzioni sulla chiave da CSS
 
 - Il Servizio Supporto Tecnico Clienti Microsoft invia la configurazione di Azure Information Protection e la chiave del tenant crittografata in un file protetto da password. L'estensione del file è **tpd**. A tale scopo, il Servizio Supporto Tecnico Clienti Microsoft invia all'utente che ha avviato l'esportazione un messaggio di posta elettronica in cui è disponibile uno strumento da eseguire da un prompt dei comandi nel modo seguente:
 
@@ -80,7 +80,7 @@ Per esportare la configurazione di Azure Information Protection e la chiave del 
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
     ```
-    L'output del comando deve essere costituito da due file, uno contiene la password di testo normale per il file TPD protetto da password e l'altro è il file TPD protetto da password. I file hanno un nuovo GUID, ad esempio:
+    L'output di questo comando deve essere di due file: uno contiene la password di testo normale per il file TPD protetto da password e l'altro è il file TPD protetto da password. I file hanno un nuovo GUID, ad esempio:
      
   - Password-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
 

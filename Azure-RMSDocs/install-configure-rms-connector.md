@@ -12,11 +12,11 @@ ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: b89bab8cd4ae7aecb8484f729001038b922360c8
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259432"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60182042"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installazione e configurazione del connettore di Azure Rights Management
 
@@ -58,7 +58,7 @@ Per poter configurare il connettore RMS, è necessario immettere le credenziali 
 
 Questo account non deve richiedere l'autenticazione a più fattori (MFA, Multi-Factor Authentication) perché lo strumento di amministrazione Microsoft Rights Management non supporta l'autenticazione MFA per questo account. 
 
-Sono previste anche alcune limitazioni per i caratteri della password del connettore. Non è possibile usare una password che include uno dei caratteri seguenti: E commerciale ( **&** ), parentesi quadra aperta ( **[** ), parentesi quadra chiusa ( **]** ); virgolette semplici ( **"** ) e apostrofo ( **'** ). Se la password include uno di questi caratteri non è possibile effettuare l'autenticazione per il connettore RMS e viene visualizzato il messaggio di errore **La combinazione nome utente e password specificata non è corretta**, anche se l'accesso con questo account e questa password funziona in altri scenari. Se si verifica questa situazione per la password in uso, scegliere un account diverso con una password che non include questi caratteri speciali oppure reimpostare la password in modo che non includa i caratteri speciali.
+Sono previste anche alcune limitazioni per i caratteri della password del connettore. È possibile usare una password che include uno dei seguenti caratteri: E commerciale ( **&** ), parentesi quadra aperta ( **[** ), parentesi quadra chiusa ( **]** ); virgolette semplici ( **"** ) e apostrofo ( **'** ). Se la password include uno di questi caratteri non è possibile effettuare l'autenticazione per il connettore RMS e viene visualizzato il messaggio di errore **La combinazione nome utente e password specificata non è corretta**, anche se l'accesso con questo account e questa password funziona in altri scenari. Se si verifica questa situazione per la password in uso, scegliere un account diverso con una password che non include questi caratteri speciali oppure reimpostare la password in modo che non includa i caratteri speciali.
 
 Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), assicurarsi che l'account specificato sia in grado di proteggere il contenuto. Ad esempio, se è stata limitata la possibilità di proteggere il contenuto per il gruppo "Reparto IT", l'account specificato deve essere un membro del gruppo. In caso contrario, viene visualizzato il messaggio di errore: **Tentativo di individuare la posizione del servizio di amministrazione e dell'organizzazione non riuscito. Assicurarsi che il servizio Microsoft Rights Management sia abilitato per l’organizzazione.**
 
@@ -68,7 +68,7 @@ Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-s
 
 - **Amministratore globale di Azure Rights Management**: account in Azure Active Directory a cui è stato assegnato il ruolo di amministratore globale di Azure RMS.
 
-- **Amministratore del connettore di Azure Rights Management**: un account di Azure Active Directory a cui sono stati concessi i diritti di installazione e amministrazione del connettore RMS per la propria organizzazione.
+- **Amministratore del connettore di Azure Rights Management**: Un account di Azure Active Directory che sono stati concessi diritti di installazione e amministrazione del connettore RMS per l'organizzazione.
 
   > [!NOTE]
   > Il ruolo di amministratore globale di Azure Rights Management e il ruolo di amministratore di connettore di Azure Rights Management vengono assegnati agli account con il cmdlet di Azure RMS [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator).
@@ -95,7 +95,7 @@ Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-s
   >    ```
   >    Add-AadrmRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
   >    ```
-  >    Ad esempio, digitare il comando seguente: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
+  >    Ad esempio, digitare: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
   > 
   >    Anche se questi comandi assegnano il ruolo di amministratore di connettore, è possibile usare anche il ruolo GlobalAdministrator.
 
@@ -183,9 +183,9 @@ Usare le impostazioni seguenti per configurare il cluster di Bilanciamento caric
 
     Per altre informazioni sull'uso di HTTP o HTTPS, vedere la sezione successiva.
 
--   Gruppo di affinità: Nessuno
+-   Affinità: Nessuno
 
--   Metodo di distribuzione: Uguale
+-   Metodo di distribuzione: Uguale a
 
 Questo nome definito per il sistema con carico bilanciato (per i server che eseguono il servizio del connettore RMS) è il nome del connettore RMS dell'organizzazione che viene usato in seguito quando si configurano i server locali per l'uso di Azure RMS.
 

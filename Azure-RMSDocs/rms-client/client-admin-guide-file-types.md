@@ -1,26 +1,28 @@
 ---
-title: Tipi di file supportati da Azure Information Protection
+title: Tipi di file supportati dal client Azure Information Protection
 description: Dettagli tecnici sui tipi di file supportati, le estensioni di file e i livelli di protezione per gli amministratori che sono responsabili del client Azure Information Protection per Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/29/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: efa968ab048d0c648d1b0351fa847d2a80a3d11a
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 21a795a6386b5d030718bc39a094d9251db570e5
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259539"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60183425"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guida dell'amministratore: Tipi di file supportati dal client Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>
+> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Il client Azure Information Protection permette di applicare quanto segue a documenti e messaggi di posta elettronica:
 
@@ -93,9 +95,9 @@ Esistono dimensioni massime dei file supportati dal client Azure Information Pro
 
   |                                                     Applicazione di Office                                                      |                                                Dimensione massima del file supportata                                                 |
   |-----------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
-  |             Word 2007 (supportato solo da AD RMS)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016             |                                          A 32 bit: 512 MB<br /><br />64 bit: 512 MB                                          |
-  |           Excel 2007 (supportato solo da AD RMS)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016           |                      A 32 bit: 2 GB<br /><br />64 bit: limitato solo dalla memoria e dallo spazio disponibile su disco                       |
-  | PowerPoint 2007 (supportato solo da AD RMS)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | A 32 bit: limitato solo dalla memoria e dallo spazio disponibile su disco<br /><br />64 bit: limitato solo dalla memoria e dallo spazio disponibile su disco |
+  |             Word 2007 (supportato solo da AD RMS)<br /><br />Word 2010<br /><br />Word 2013<br /><br />Word 2016             |                                          32 bit: 512 MB<br /><br />64 bit: 512 MB                                          |
+  |           Excel 2007 (supportato solo da AD RMS)<br /><br />Excel 2010<br /><br />Excel 2013<br /><br />Excel 2016           |                      32 bit: 2 GB<br /><br />64 bit: limitato solo dalla memoria e dallo spazio disponibile su disco                       |
+  | PowerPoint 2007 (supportato solo da AD RMS)<br /><br />PowerPoint 2010<br /><br />PowerPoint 2013<br /><br />PowerPoint 2016 | 32 bit: limitato solo dalla memoria e dallo spazio disponibile su disco<br /><br />64 bit: limitato solo dalla memoria e dallo spazio disponibile su disco |
 
 
 - **Per tutti gli altri file**: 
@@ -169,7 +171,7 @@ Per configurare il client Azure Information Protection per l'applicazione della 
 
 Queste due impostazioni hanno come risultato l'applicazione della protezione generica da parte del client Azure Information Protection a tutti i file dotati di estensione. Se questo è l'obiettivo, non è richiesta alcuna ulteriore configurazione. Tuttavia, è possibile definire eccezioni per specifici tipi di file, in modo che siano protetti comunque in modo nativo. A tale scopo, è necessario apportare 3 (per Windows a 32 bit) o 6 (per Windows a 64 bit) modifiche aggiuntive del Registro di sistema per ogni tipo di file:
 
-1. Per **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** e **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (se applicabile): aggiungere una nuova chiave denominata come l'estensione del file, senza il punto.
+1. Per **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** e **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (se applicabile): Aggiungere una nuova chiave con il nome dell'estensione di file (senza il punto iniziale).
 
     Ad esempio, i file con estensione del nome di file .docx, creano una chiave denominata **DOCX**.
 
@@ -187,7 +189,7 @@ Ripetere questi tre passaggi per altri tipi di file da definire come eccezioni, 
 
 - **Native**: protezione nativa
 
-- **Off**: protezione bloccata
+- **Off**: Protezione di blocco
 
 Dopo aver apportato queste modifiche del Registro di sistema, non è necessario riavviare il computer. Tuttavia, se si usano i comandi di PowerShell per proteggere i file, è necessario avviare una nuova sessione di PowerShell per rendere effettive le modifiche.
 
@@ -210,27 +212,11 @@ Per impedire agli utenti di modificare file critici per il funzionamento del com
 
 Per impostazione predefinita lo scanner esclude anche gli stessi tipi di file del client Azure Information Protection, con le eccezioni seguenti:
 
-Per la versione disponibile a livello generale:
-
-- Sono esclusi anche i file con estensione RTF, RAR e ZIP
-
-Per la versione di anteprima corrente: 
-
 - Sono esclusi anche i file con estensione RTF e RAR
 
 È possibile modificare i tipi di file inclusi o esclusi per l'analisi dei file eseguita dallo scanner:
 
-Per la versione disponibile a livello generale, usare i cmdlet di PowerShell seguenti:
-
-- [Set-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Set-AIPScannerScannedFileTypes)
-
-- [Add-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Add-AIPScannerScannedFileTypes)
-
-- [Remove-AIPScannerScannedFileTypes](/powershell/module/azureinformationprotection/Remove-AIPScannerScannedFileTypes)
-
-Per la versione di anteprima corrente:
-
-- Configurare **Tipi di file da analizzare** nel profilo dello scanner [usando il portale di Azure](../deploy-aip-scanner-preview.md#configure-the-scanner-in-the-azure-portal).
+- Configurare **Tipi di file da analizzare** nel profilo dello scanner [usando il portale di Azure](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal).
 
 > [!NOTE]
 > Se si includono nell'analisi i file con estensione rtf, monitorare attentamente lo scanner. Alcuni file con estensione rtf non possono essere controllati dallo scanner: per questi file l'ispezione non viene completata ed è necessario riavviare il servizio. 
@@ -283,9 +269,7 @@ Lo scanner di Azure Information Protection e il comando di PowerShell [Set-AIPFi
 
 1. Per il computer che esegue lo scanner o la sessione di PowerShell, installare [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2).
 
-2. Per lo scanner: A meno che non si esegua la versione di anteprima corrente dello scanner, includere i file ZIP da analizzare, come descritto nella sezione [Scanner di Azure Information Protection](#file-types-that-are-excluded-from-classification-and-protection-by-the-azure-information-protection-scanner).
-
-3. Per lo scanner: dopo il rilevamento delle informazioni riservate, se il file con estensione zip va classificato e protetto con un'etichetta, aggiungere una voce del Registro di sistema per assegnare a questa estensione di nome file la protezione generica (pfile), come descritto in [Modifica del Registro di sistema per lo scanner](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner) nelle istruzioni per la distribuzione dello scanner.
+2. Per lo scanner: dopo il rilevamento delle informazioni riservate, se il file con estensione zip va classificato e protetto con un'etichetta, aggiungere una voce del Registro di sistema per assegnare a questa estensione di nome file la protezione generica (pfile), come descritto in [Modifica del Registro di sistema per lo scanner](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner) nelle istruzioni per la distribuzione dello scanner.
 
 Scenario di esempio dopo avere eseguito questi passaggi: 
 

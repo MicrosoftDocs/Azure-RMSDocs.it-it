@@ -13,11 +13,11 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: daa545f2fa0ed8241c5b8c729d7e018e170933f7
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828491"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60182382"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Domande frequenti sulla protezione dei dati in Azure Information Protection
 
@@ -177,7 +177,7 @@ Proprio come gli amministratori del sito di SharePoint abilitano e configurano I
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>Sono disponibili suggerimenti per una corretta distribuzione?
 
-Dopo aver supervisionato un elevato numero di distribuzioni e ascoltato il parere di clienti, partner, consulenti e tecnici del servizio di supporto, uno dei principali suggerimenti che possiamo fornire è **Progettare e distribuire criteri semplici**.
+Dopo aver supervisionato un elevato numero di distribuzioni e clienti, partner, consulenti e tecnici del supporto: uno dei principali suggerimenti che possiamo fornire dall'esperienza: **Progettare e distribuire criteri semplici**.
 
 Poiché Azure Information Protection supporta la condivisione sicura con qualsiasi utente, si possono raggiungere livelli di protezione dei dati molto elevati, Prestare tuttavia attenzione quando si configurano restrizioni dei diritti di utilizzo. Per la maggior parte delle organizzazioni, l'impatto operativo principale deriva dall'esigenza di impedire la fuga di dati limitando l'accesso agli utenti dell'organizzazione. Si possono anche applicare criteri più specifici, ad esempio impedire agli utenti di stampare o modificare documenti, ma è preferibile impostarli solo per documenti che richiedono un alto livello di sicurezza. Evitare di applicare tutti questi diritti di utilizzo più restrittivi in un'unica soluzione, pianificando invece un approccio per fasi.
 

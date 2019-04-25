@@ -12,11 +12,11 @@ ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: a60fbf43056673674f07f7dd8517213072f78aec
-ms.sourcegitcommit: 171a96af12a7e0364052d830dc14714b1bb1c95c
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57734150"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60183071"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funzionamento di Azure RMS: dietro le quinte
 
@@ -38,7 +38,7 @@ Per una descrizione dettagliata delle operazioni eseguite, vedere la sezione [Pr
 
 Per informazioni tecniche sugli algoritmi e sulle lunghezze delle chiavi usate in Azure RMS, vedere la sezione successiva.
 
-## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Controlli crittografici usati in Azure RMS: Algoritmi e lunghezze delle chiavi
+## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Controlli crittografici usati in Azure RMS: Gli algoritmi e lunghezze delle chiavi
 Anche se non è necessario conoscere nel dettaglio il funzionamento di questa tecnologia, è possibile che vengano richieste informazioni sui controlli crittografici usati, ad esempio per verificare che la sicurezza sia conforme agli standard di settore.
 
 
@@ -81,7 +81,7 @@ La chiave del tenant è protetta nei servizi online di Microsoft, in un ambiente
 Le licenze e i certificati inviati a un dispositivo Windows sono protetti tramite la chiave privata del dispositivo del client, che viene creata al primo utilizzo di Azure RMS sul dispositivo da parte di un utente. Questa chiave privata è a sua volta protetta con DPAPI nel client che protegge questi segreti usando una chiave derivata dalla password dell'utente. Nei dispositivi mobili le chiavi vengono usate solo una volta. Non essendo archiviate nei client, queste chiavi non devono essere quindi protette nel dispositivo. 
 
 
-## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Procedura dettagliata del funzionamento di Azure RMS: primo utilizzo, protezione del contenuto, uso del contenuto
+## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Procedura dettagliata del funzionamento di Azure RMS: Primo utilizzo, protezione del contenuto, uso del contenuto
 Per comprendere in modo più dettagliato il funzionamento di Azure RMS, viene illustrato un flusso tipico dopo l'[attivazione del servizio Azure Rights Management](activate-service.md) e quando un utente usa per la prima volta il servizio Rights Management nel proprio computer Windows (un processo definito a volte **inizializzazione dell'ambiente utente** o bootstrap), **protegge il contenuto** (un documento o un messaggio di posta elettronica) e quindi **utilizza** (apre e modifica) il contenuto protetto da altri.
 
 Dopo aver inizializzato l'ambiente utente, l'utente può quindi proteggere i documenti o utilizzare documenti protetti su quel computer.

@@ -12,11 +12,11 @@ ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 0c9e426fe6025b31f03ed84e65741c4a461e3938
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257315"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181833"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configurazione della collaborazione per i documenti protetti con Azure Information Protection
 
@@ -55,9 +55,9 @@ Poiché lo scenario limita l'accesso a specifici utenti, non include l'impostazi
     
    - Per tutti gli utenti nella prima organizzazione esterna: selezionare **Immettere i dettagli** e digitare il nome di un dominio nel tenant dell'organizzazione. Ad esempio, fabrikam.com.
     
-   - Per il gruppo nella seconda organizzazione esterna: sempre nella scheda **Immettere i dettagli** digitare l'indirizzo e-mail del gruppo nel tenant dell'organizzazione. Ad esempio, sales@contoso.com
+   - Per il gruppo nella seconda organizzazione esterna: sempre nella scheda **Immettere i dettagli** digitare l'indirizzo e-mail del gruppo nel tenant dell'organizzazione. Ad esempio sales@contoso.com.
     
-   - Per l'utente che non ha un account Azure AD: sempre nella scheda **Immettere i dettagli** digitare l'indirizzo e-mail dell'utente. Ad esempio, bengi.turan@gmail.com 
+   - Per l'utente che non ha un account Azure AD: sempre nella scheda **Immettere i dettagli** digitare l'indirizzo e-mail dell'utente. Ad esempio bengi.turan@gmail.com. 
 
 4. Per concedere le stesse autorizzazioni a tutti gli utenti: In **Scegliere le autorizzazioni dai valori preimpostati** selezionare le autorizzazioni da concedere: **Comproprietario**, **Coautore**, **Revisore** o **Personalizzate**.
     

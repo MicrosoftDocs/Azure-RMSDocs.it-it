@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: 029aa3075424d2ae91c4521cff7a71bf6e8cc939
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57331308"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60178412"
 ---
 # <a name="how-to-enable-email-notification"></a>Procedura: Abilitare la notifica tramite posta elettronica
 
@@ -52,7 +52,7 @@ La tabella seguente contiene i campi dei dati dell'applicazione e le coppie di n
 |MS.Notify.Enabled|string|“true” &#124; “false”|Se questo valore è impostato su "true", verrà inviato un messaggio di notifica al proprietario della licenza di pubblicazione quando qualcuno ne tenta l’utilizzo per ottenere una licenza con l’utente finale.|
 |MS.Notify.Culture|string|“it-IT”| **Origine:** System.Globalization.CultureInfo.CurrentUICulture.Name <br><br>Questo valore viene utilizzato per determinare la lingua localizzata del messaggio di notifica e la formattazione di data/ora e numeri da usare nel messaggio di posta elettronica.<br><br>Deve essere impostato in base alle impostazioni utente del computer in cui viene creata la licenza di pubblicazione o in base alla lingua preferita del proprietario della licenza di pubblicazione.|
 |MS.Notify.TZID|string|“Ora solare Pacifico”|**Origine:** TimeZoneInfo.Local.Id - ID fuso orario di Windows.<br><br>Questo valore corrisponde all'identificatore del fuso orario del sistema operativo Microsoft Windows che descrive un particolare fuso orario e le relative caratteristiche.|
-|MS.Notify.TZO|string|“-480”|Questa è la differenza del fuso orario del proprietario della licenza di pubblicazione in termini di minuti rispetto all'ora UTC.<br><br>Se si specifica un valore TZID valido, verrà utilizzata la differenza del fuso orario specificato e questo valore verrà ignorato.<br><br>Questo valore verrà molto probabilmente usato da piattaforme di pubblicazione non basate su Windows che non hanno accesso all'elenco dei valori di ID del fuso orario del sistema operativo Windows.<br><br>Se non si specifica un valore TZID, verrà usato questo valore per calcolare la differenza di orario nei messaggi di notifica e il valore TZSN (indipendentemente dal valore del fuso orario) per indicare il nome del fuso orario. Il fuso orario sarà quindi fisso e non verrà aggiornato in caso di applicazione dell’ora legale.<br><br>Ad esempio:<br><br>Se TXID è vuoto, TZ0 è impostato su "-420" e il valore TZSN è impostato su "Ora legale Pacifico", tutti i valori indicati nel messaggio di notifica verranno regolati in base all’ora legale del Pacifico e verranno visualizzati di conseguenza anche se l'ora legale non è più attualmente in vigore.<br><br>Se invece si specifica un TZID insieme a entrambi i valori TZSN e TZDN, gli orari specificati nel messaggio di notifica verranno regolati e visualizzati in base all’ora legale o solare in vigore.|
+|MS.Notify.TZO|string|“-480”|Questa è la differenza del fuso orario del proprietario della licenza di pubblicazione in termini di minuti rispetto all'ora UTC.<br><br>Se si specifica un valore TZID valido, verrà utilizzata la differenza del fuso orario specificato e questo valore verrà ignorato.<br><br>Questo valore verrà molto probabilmente usato da piattaforme di pubblicazione non basate su Windows che non hanno accesso all'elenco dei valori di ID del fuso orario del sistema operativo Windows.<br><br>Se non si specifica un valore TZID, verrà usato questo valore per calcolare la differenza di orario nei messaggi di notifica e il valore TZSN (indipendentemente dal valore del fuso orario) per indicare il nome del fuso orario. Il fuso orario sarà quindi fisso e non verrà aggiornato in caso di applicazione dell’ora legale.<br><br>Ad esempio: <br><br>Se TXID è vuoto, TZ0 è impostato su "-420" e il valore TZSN è impostato su "Ora legale Pacifico", tutti i valori indicati nel messaggio di notifica verranno regolati in base all’ora legale del Pacifico e verranno visualizzati di conseguenza anche se l'ora legale non è più attualmente in vigore.<br><br>Se invece si specifica un TZID insieme a entrambi i valori TZSN e TZDN, gli orari specificati nel messaggio di notifica verranno regolati e visualizzati in base all’ora legale o solare in vigore.|
 |MS.Notify.TZSN|string|“Ora solare Pacifico”|**Origine:** TimeZoneInfo.Local.StandardName - Nome del fuso orario ora solare.<br><br>Questo valore deve corrispondere al nome localizzato del fuso orario ora solare.|
 |MS.Notify.TZDN|string|"Ora legale Pacifico"|**Origine:** TimeZoneInfo.Local.DaylightName - Nome del fuso orario ora legale.<br><br>Questo valore deve corrispondere al nome localizzato del fuso orario ora legale. Può essere uguale al nome del fuso orario ora solare se il fuso orario non supporta l'ora legale.|
 

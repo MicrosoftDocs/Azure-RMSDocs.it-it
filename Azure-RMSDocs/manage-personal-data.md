@@ -4,19 +4,19 @@ description: Informazioni sui dati personali usati da Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/04/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: 33455ec0d6433c52164f27127838917c2850d2f3
-ms.sourcegitcommit: 465709879998fcb78cd2a4efda559c43ed661dda
-ms.translationtype: HT
+ms.openlocfilehash: f2ae2ba9ab7a50bc7e5f87fed7f457132e4b82f7
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59233735"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181900"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gestire i dati personali per Azure Information Protection
 
@@ -34,7 +34,7 @@ Quando si configura e usa Azure Information Protection, gli indirizzi di posta e
 
 - Log di rilevamento dei documenti
 
-- Log sull'utilizzo per il client Azure Information Protection e il client RMS 
+- Log di utilizzo per il client Azure Information Protection e il client RMS 
 
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-intro-sentence.md)]
@@ -90,7 +90,7 @@ Eseguire i cmdlet [Get-AadrmSuperUser](/powershell/module/aadrm/get-aadrmsuperus
 
 Eseguire il cmdlet [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) per ottenere un log delle azioni di amministrazione per il servizio Azure Rights Management, che protegge i dati per Azure Information Protection. Questo log include dati personali sotto forma di indirizzi di posta elettronica e indirizzi IP. Il log è in testo normale e, una volta scaricato, è possibile cercare offline le informazioni su un amministratore specifico.
 
-Ad esempio:
+Ad esempio: 
 ```
 PS C:\Users> Get-AadrmAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -ToTime 4/30/2018 -Verbose
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
@@ -131,7 +131,7 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 Eseguire il cmdlet [Get-AadrmDocumentLog](/powershell/module/aadrm/get-aadrmdocumentlog) per recuperare informazioni dal sito di rilevamento dei documenti su un utente specifico. Per ottenere informazioni sul rilevamento associate ai log dei documenti, usare il cmdlet [Get-AadrmTrackingLog](/powershell/module/aadrm/get-aadrmtrackinglog?view=azureipps).
 
-Ad esempio:
+Ad esempio: 
 ```
 PS C:\Users> Get-AadrmDocumentLog -UserEmail "admin@aip500.onmicrosoft.com"
 
@@ -186,11 +186,11 @@ IsHiddenInfo         : False
 
 Non è possibile cercare per ObjectID. Tuttavia, il parametro `-UserEmail` non impone una restrizione e l'indirizzo di posta elettronica specificato non deve necessariamente fare parte del tenant. Se l'indirizzo di posta elettronica è archiviato in un punto qualsiasi nei log di rilevamento dei documenti, la voce di rilevamento dei documenti viene restituita nell'output del cmdlet.
 
-### <a name="usage-logs-for-the-azure-information-protection-client-and-rms-client"></a>Log sull'utilizzo per il client Azure Information Protection e il client RMS
+### <a name="usage-logs-for-the-azure-information-protection-clients-and-rms-client"></a>Log di utilizzo per il client Azure Information Protection e il client RMS
 
 Quando vengono applicate etichette e protezione a documenti e messaggi di posta elettronica, gli indirizzi di posta elettronica e gli indirizzi IP possono essere archiviati nel computer di un utente nei percorsi seguenti:
 
-- Per il client Azure Information Protection: %localappdata%\Microsoft\MSIP\Logs
+- Per il client di assegnazione di etichette unificato di Azure Information Protection e il client Azure Information Protection: %localappdata%\Microsoft\MSIP\Logs
 
 - Per il client RMS: %localappdata%\Microsoft\MSIPC\msip\Logs
 

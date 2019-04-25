@@ -12,11 +12,11 @@ ms.assetid: a735f3f7-6eb2-4901-9084-8c3cd3a9087e
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 9e17e13eeb86b161444e222cde658905177dd285
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259916"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60181617"
 ---
 # <a name="logging-and-analyzing-usage-of-the-azure-rights-management-service"></a>Registrazione e analisi dell'utilizzo del servizio Azure Rights Management
 
@@ -96,14 +96,14 @@ Per impostazione predefinita, questo cmdlet usa tre thread per scaricare i log. 
 
 
 > [!TIP]
-> È possibile aggregare tutti i file di log scaricati in un formato CSV mediante [Log Parser di Microsoft](https://www.microsoft.com/download/details.aspx?id=24659), uno strumento che consente di eseguire conversioni tra formati di log noti. È possibile usare questo strumento anche per convertire i dati in formato SYSLOG o per importarli in un database. Dopo aver installato lo strumento, eseguire `LogParser.exe /?` per informazioni e supporto sul relativo uso. 
+> È possibile aggregare tutti i file di log scaricati in un formato CSV mediante [Log Parser di Microsoft](https://www.microsoft.com/download/details.aspx?id=24659), uno strumento che consente di eseguire conversioni tra formati di log noti. È possibile usare questo strumento anche per convertire i dati in formato SYSLOG o per importarli in un database. Dopo avere installato Log Parser, eseguire `LogParser.exe /?` per informazioni e supporto sull'uso dello strumento. 
 >
 > Ad esempio, se si esegue il comando seguente tutte le informazioni vengono importate in un file in formato .log: `logparser –i:w3c –o:csv "SELECT * INTO AllLogs.csv FROM *.log"`
 
 #### <a name="if-you-manually-enabled-azure-rights-management-usage-logging-before-the-logging-change-february-22-2016"></a>Se la funzionalità di registrazione dell'utilizzo di Azure Rights Management è stata abilitata manualmente prima della modifica relativa alla registrazione del 22 febbraio 2016
 
 
-Se la funzionalità di registrazione dell'utilizzo è stata usata prima delle modifica relativa alla registrazione, nell'account di archiviazione di Azure configurato saranno presenti log dell'utilizzo. Microsoft non copierà questi log dall'account di archiviazione nel nuovo account di archiviazione gestito di Azure Rights Management come parte della modifica relativa alla registrazione. L'utente è responsabile della gestione del ciclo di vita dei log generati in precedenza e può usare il cmdlet [Get-AadrmUsageLog](/powershell/aadrm/vlatest/get-aadrmusagelog) per scaricare i log precedenti. Ad esempio:
+Se la funzionalità di registrazione dell'utilizzo è stata usata prima delle modifica relativa alla registrazione, nell'account di archiviazione di Azure configurato saranno presenti log dell'utilizzo. Microsoft non copierà questi log dall'account di archiviazione nel nuovo account di archiviazione gestito di Azure Rights Management come parte della modifica relativa alla registrazione. L'utente è responsabile della gestione del ciclo di vita dei log generati in precedenza e può usare il cmdlet [Get-AadrmUsageLog](/powershell/aadrm/vlatest/get-aadrmusagelog) per scaricare i log precedenti. Ad esempio: 
 
 - Per scaricare tutti i log disponibili nella cartella E:\logs: `Get-AadrmUsageLog -Path "E:\Logs"`
     
@@ -144,7 +144,7 @@ Ciascuna delle righe seguenti è un record di log. I valori dei campi seguono lo
 |      date      |     Date      |                                                                                                                     La data UTC in cui è stata gestita la richiesta.<br /><br />L'origine è l'orologio locale del server che ha gestito la richiesta.                                                                                                                     |                                                             25-06-2013                                                              |
 |      time      |     Ora      |                                                                                                            L'ora in cui è stata gestita la richiesta, in formato UTC 24 ore.<br /><br />L'origine è l'orologio locale del server che ha gestito la richiesta.                                                                                                            |                                                              21.59.28                                                               |
 |     row-id     |     Testo      |                                                                           Il GUID univoco del record di log. Se non è presente alcun valore, identificare la voce tramite il valore correlation-id.<br /><br />Questo valore è utile quando i log vengono aggregati o copiati in un altro formato.                                                                           |                                                1c3fe7a9-d9e0-4654-97b7-14fafa72ea63                                                 |
-|  request-type  |     Name      |                                                                                                                                                            Il nome dell'API RMS richiesta.                                                                                                                                                            |                                                           AcquireLicense                                                            |
+|  request-type  |     Nome      |                                                                                                                                                            Il nome dell'API RMS richiesta.                                                                                                                                                            |                                                           AcquireLicense                                                            |
 |    user-id     |    Stringa     |                                                               L'utente che ha effettuato la richiesta.<br /><br />Questo valore è riportato tra virgolette singole. Le chiamate da una chiave del tenant gestita dall'utente (BYOK) hanno un valore **"**, che si applica anche quando i tipi di richiesta sono anonimi.                                                                |                                                          ‘joe@contoso.com’                                                          |
 |     result     |    Stringa     |                                                                                                                  La stringa 'Success' indica che la richiesta è stata eseguita con esito positivo.<br /><br />Se la richiesta ha avuto esito negativo, il tipo di errore viene riportato tra virgolette singole.                                                                                                                   |                                                              'Success'                                                              |
 | correlation-id |     Testo      |                                                                                                 GUID comune tra il log del client e il log del server RMS per una determinata richiesta.<br /><br />Questo valore può essere utile per la risoluzione dei problemi del client.                                                                                                 |                                                cab52088-8925-4371-be34-4b71a3112356                                                 |

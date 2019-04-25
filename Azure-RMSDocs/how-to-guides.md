@@ -1,25 +1,27 @@
 ---
-title: Istruzioni per gli scenari comuni che usano Azure Information Protection.
-description: Identificare i casi d'uso in cui è necessario proteggere e classificare i dati dell'organizzazione usando Azure Information Protection.
+title: Istruzioni d'uso per scenari comuni di Azure Information Protection
+description: Identificare i casi d'uso che classificare e proteggere i dati dell'organizzazione tramite Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/13/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 69ae0a504ffcdaa201b1d4ce9762b22470e05eb7
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 002dcd33e7219d8c25a4d1b24ab559b4f0922799
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259032"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60182127"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Guide procedurali per gli scenari comuni che usano Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Esistono diversi modi in cui è possibile usare Azure Information Protection per classificare ed eventualmente proteggere documenti e messaggi di posta elettronica dell'organizzazione. 
 
@@ -40,13 +42,21 @@ Le distribuzioni più efficienti sono quelle in cui si identificano casi d'uso s
 
 ## <a name="additional-deployment-instructions"></a>Istruzioni aggiuntive per la distribuzione
 
-Nel [blog tecnico di Azure Information Protection](https://aka.ms/AIPblog) sono disponibili altre linee guida dal team di Analisi utilizzo software.
+Nostri [blog tecnico di Azure Information Protection](https://aka.ms/AIPblog) include informazioni aggiuntive dalle trincee.
 
 Ad esempio, una metodologia con le procedure consigliate per i decisori aziendali e i responsabili dell'implementazione IT:
 
 - [Azure Information Protection Deployment Acceleration Guide](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Deployment-Acceleration-Guide/ba-p/334423) (Guida per velocizzare l'adozione e la distribuzione di Azure Information Protection)
 
 Istruzioni dettagliate:
+
+- [Creare report più dettagliati con dati di accesso di Microsoft Information Protection e Azure AD](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Create-richer-reports-with-Microsoft-Information-Protection-and/ba-p/392713)
+
+- [Sfrutta Microsoft Cloud App Security di applicare etichette di Azure Information Protection nel cloud](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Leverage-Microsoft-Cloud-App-Security-to-apply-Azure-Information/ba-p/388638)
+
+- [Pianificare la "Esci Cloud" per preparare un Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631)
+
+- [Visualizzazione delle etichette tra Tenant](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Cross-Tenant-Label-Visualization/ba-p/356588)
 
 - [Uso di Azure Information Protection per proteggere i file PDF e di Adobe Acrobat Reader per visualizzarli](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Using-Azure-Information-Protection-to-protect-PDF-s-and-Adobe/ba-p/282010)
 

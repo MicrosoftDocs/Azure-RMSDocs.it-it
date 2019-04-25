@@ -12,11 +12,11 @@ ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 4a0583b4cc288385520d2990d6f297a58a81d1cc
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809728"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179662"
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Configurazione degli utenti con privilegi avanzati per Azure Rights Management e servizi di individuazione o ripristino dei dati
 
@@ -34,11 +34,11 @@ Per i documenti e i messaggi di posta elettronica protetti dal tenant Azure Info
 
 - Si dispone di servizi IT esistenti per le soluzioni di prevenzione della perdita dei dati, per il gateway di crittografia del contenuto (CEG) e per i prodotti anti-malware che richiedono l'analisi dei file che sono già protetti.
 
-- È necessario decrittografare i file per questioni di controllo, legali o per altri motivi di conformità.
+- È necessario decrittografare i file in gruppo per questioni di controllo, legali o altri motivi di conformità.
 
 ## <a name="configuration-for-the-super-user-feature"></a>Configurazione per la funzionalità per utenti con privilegi avanzati
 
-Per impostazione predefinita, questo ruolo non è abilitato e a esso non sono assegnati utenti. Viene abilitata automaticamente per l'utente se si configura il connettore Rights Management per Exchange, e non è necessaria per i servizi standard che eseguono Exchange Online, SharePoint Online o SharePoint Server.
+Per impostazione predefinita, la funzionalità di utente con privilegi avanzati non è abilitata e non sono presenti utenti assegnati a questo ruolo. Viene abilitata automaticamente per l'utente se si configura il connettore Rights Management per Exchange, e non è necessaria per i servizi standard che eseguono Exchange Online, SharePoint Online o SharePoint Server.
 
 Se è necessario abilitare manualmente la funzionalità per utenti con privilegi avanzati, usare il cmdlet [Enable-AadrmSuperUserFeature](/powershell/aadrm/vlatest/enable-aadrmsuperuserfeature) di PowerShell e quindi assegnare utenti (o account del servizio) mediante il cmdlet [Add-AadrmSuperUser](/powershell/aadrm/vlatest/add-aadrmsuperuser) o [Set-AadrmSuperUserGroup](/powershell/aadrm/vlatest/set-aadrmsuperusergroup) e aggiungere utenti (o altri gruppi) a questo gruppo in base alla necessità. 
 

@@ -4,21 +4,23 @@ description: Configurare le impostazioni nei criteri di Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/09/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: c0a3acebb9f95d0044e1ad4b5cbea637e7742201
-ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
-ms.translationtype: HT
+ms.openlocfilehash: 0c77eb5df06ca3a7ba78b4671cc9e52cdb89a34d
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59364539"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60180100"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Come configurare le impostazioni dei criteri per Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Oltre al titolo della barra e alla descrizione comando di Information Protection, nei criteri di Azure Information Protection sono disponibili alcune impostazioni che è possibile configurare indipendentemente dalle etichette:
 
@@ -64,8 +66,7 @@ Per configurare queste impostazioni:
         
         Per prendere in considerazione l'ordine delle etichette secondarie quando si usa questa impostazione dei criteri, è necessario [configurare un'impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments).
         
-        Quando l'allegato con l'etichetta di classificazione più elevata è configurato per la protezione con l'impostazione di anteprima delle autorizzazioni definite dall'utente: per la versione di disponibilità generale del client: il messaggio di posta elettronica viene etichettato con la stessa classificazione, ma la protezione non viene applicata.
-            Per la versione di anteprima del client: quando le autorizzazioni definite dall'utente dell'etichetta includono Outlook (Non inoltrare), viene applicata tale etichetta e la protezione Non inoltrare viene applicata al messaggio di posta elettronica. Quando le autorizzazioni definite dall'utente dell'etichetta sono solo per Word, Excel, PowerPoint ed Esplora file, non si applica né tale etichetta né un tipo di protezione al messaggio di posta elettronica.
+        Quando l'allegato con l'etichetta di classificazione più alta è configurato per la protezione con l'impostazione di anteprima delle autorizzazioni definite dall'utente:: quando le autorizzazioni definite dall'utente dell'etichetta includono Outlook (Do Not Forward), l'etichetta viene applicata e non inoltrare protezione viene applicata al messaggio di posta elettronica. Quando le autorizzazioni definite dall'utente dell'etichetta sono solo per Word, Excel, PowerPoint ed Esplora file, non si applica né tale etichetta né un tipo di protezione al messaggio di posta elettronica.
     
    - **Visualizza la barra di Information Protection nelle app Office**: quando questa impostazione è disattivata, gli utenti non possono selezionare etichette da una barra in Word, Excel, PowerPoint e Outlook. Gli utenti devono invece selezionare le etichette dal pulsante **Proteggi** sulla barra multifunzione. Quando questa impostazione è attivata, gli utenti possono selezionare le etichette dalla barra o dal pulsante.
         

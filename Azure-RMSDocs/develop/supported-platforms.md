@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.openlocfilehash: eb7d73c1ebca49f4d49f8b57de94319cabc1300d
-ms.sourcegitcommit: 471b3683367d93f0673c1cf276a15f83572aa80e
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57330254"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60176857"
 ---
 # <a name="supported-platforms"></a>Piattaforme supportate
 
@@ -26,7 +26,7 @@ Questo argomento identifica le piattaforme client e server di Rights Management 
 
 ## <a name="supported-platforms"></a>Piattaforme supportate
 
--   Windows 10
+-   Windows 10
 -   Windows Server 2012 R2
 -   Windows Server 2012
 -   Windows 8

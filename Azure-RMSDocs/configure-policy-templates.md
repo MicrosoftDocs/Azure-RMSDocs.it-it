@@ -4,23 +4,25 @@ description: È possibile configurare e gestire i modelli di Rights Management d
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/28/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: ff3b809d5e459961321fb04655336f134ff99cc8
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 622f0751e303a97e6e1a7d75573b65021f2249d3
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56253558"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179904"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurazione e gestione dei modelli per Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 I modelli di protezione, noti anche come modelli di Rights Management, sono un raggruppamento di impostazioni di protezione definite dall'amministratore per Azure Information Protection. Queste impostazioni includono i [diritti di utilizzo](configure-usage-rights.md) scelti per gli utenti autorizzati e i controlli di accesso per l'accesso con scadenza e offline. Questi modelli sono ora integrati con i criteri di Azure Information Protection: 
 

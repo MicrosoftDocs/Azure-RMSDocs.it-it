@@ -4,19 +4,19 @@ description: Istruzioni che fanno parte del percorso di migrazione da AD RMS ad 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/11/2018
+ms.date: 04/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 47e0b75de5911339d1c584734cf1eba7cda4ee03
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: a9651e1c44f9f6fb59fb8a48fb4435212c827968
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56257400"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60184077"
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave tramite software a una chiave HSM protetta
 
@@ -124,11 +124,11 @@ Prima di trasferire la chiave ad Azure Key Vault, verificare che l'utilità KeyT
 
 Quando la chiave viene caricata in Insieme di credenziali delle chiavi di Azure, vengono visualizzate le proprietà della chiave visualizzata, incluso l'ID della chiave. Sarà simile a **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333**. Prendere nota dell'URL perché sarà necessario all'amministratore di Azure Information Protection per indicare al servizio Azure Rights Management di Azure Information Protection di usare questa chiave per la chiave del tenant.
 
-Usare quindi il cmdlet [Set-AzureRmKeyVaultAccessPolicy](/powershell/module/azurerm.keyvault/set-azurermkeyvaultaccesspolicy) per autorizzare l'entità di servizio di Azure Rights Management ad accedere all'insieme di credenziali delle chiavi. Le autorizzazioni necessarie sono decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
+Quindi usare il [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) cmdlet per autorizzare l'entità servizio Azure Rights Management per l'insieme di credenziali delle chiavi di accesso. Le autorizzazioni necessarie sono decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
 
 Se ad esempio l'insieme di credenziali delle chiavi creato per Azure Information Protection è denominato contosorms-byok-kv e il gruppo di risorse è denominato contosorms-byok-rg, eseguire il comando seguente:
     
-    Set-AzureRmKeyVaultAccessPolicy -VaultName "contosorms-byok-kv" -ResourceGroupName "contosorms-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
+    Set-AzKeyVaultAccessPolicy -VaultName "contosorms-byok-kv" -ResourceGroupName "contosorms-byok-rg" -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,encrypt,unwrapkey,wrapkey,verify,sign,get
 
 Ora che la chiave HSM è stata trasferita in Insieme di credenziali delle chiavi di Azure, si è pronti per importare i dati di configurazione di AD RMS.
 

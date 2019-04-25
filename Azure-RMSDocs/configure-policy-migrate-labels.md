@@ -4,27 +4,29 @@ description: Eseguire la migrazione di etichette di Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/09/2019
+ms.date: 04/18/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 0cc09e58d49fe9515de0109c726af08e12937dd1
-ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
-ms.translationtype: HT
+ms.openlocfilehash: 260e6cd429e428fd59782ef33bd557750e3c8eb5
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59364573"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179628"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Come eseguire la migrazione di etichette di Azure Information Protection a etichette di riservatezza di Office 365
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+>
+> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!IMPORTANT]
 > Questa funzionalità è disponibile in anteprima ed esegue la migrazione del tenant a una nuova piattaforma. La migrazione non è reversibile. La nuova piattaforma supporta l'etichettatura unificata. Le etichette create e gestite possono essere usate da più client e servizi che supportano le [soluzioni basate su Microsoft Information Protection](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection).
 
-Eseguire la migrazione delle etichette se si vuole avere la possibilità di usarle come etichette di riservatezza di Office 365 con i [client e i servizi che supportano l'etichettatura unificata](#clients-and-services-that-support-unified-labeling). È possibile gestire e pubblicare queste etichette dal Centro sicurezza e conformità di Office 365 oppure dal Centro sicurezza Microsoft 365 e dal Centro conformità Microsoft 365. Dopo la migrazione, il client Azure Information Protection continuerà a scaricare le etichette con i rispettivi criteri di Azure Information Protection dal portale di Azure. 
+Eseguire la migrazione delle etichette se si vuole avere la possibilità di usarle come etichette di riservatezza di Office 365 con i [client e i servizi che supportano l'etichettatura unificata](#clients-and-services-that-support-unified-labeling). È possibile gestire e pubblicare queste etichette dal Centro sicurezza e conformità di Office 365 oppure dal Centro sicurezza Microsoft 365 e dal Centro conformità Microsoft 365. Dopo la migrazione, il client Azure Information Protection continuerà a scaricare le etichette con i rispettivi criteri di Azure Information Protection dal portale di Azure.
 
 Prima di passare alle istruzioni dettagliate per la migrazione delle etichette può essere utile leggere queste domande frequenti:
 
@@ -92,19 +94,19 @@ I client Azure Information Protection possono usare tutte le impostazioni delle 
 |Configurazione dell'etichetta|Supportata dai client di etichettatura unificata| Linee guida per i centri di amministrazione|
 |-------------------|---------------------------------------------|-------------------------|
 |Stato abilitato o disabilitato<br /><br />Note: non sincronizzata nei centri di amministrazione |Non applicabile|Equivale a se l'etichetta è pubblicata o no. |
-|Colore dell'etichetta selezionato dall'elenco o specificato con il codice RGB |Sì|Nessuna opzione di configurazione per i colori dell'etichetta. In alternativa è possibile configurare i colori dell'etichetta nel portale di Azure.|
+|Colore dell'etichetta selezionato dall'elenco o specificato con il codice RGB |Yes|Nessuna opzione di configurazione per i colori dell'etichetta. In alternativa è possibile configurare i colori dell'etichetta nel portale di Azure.|
 |Protezione basata sul cloud o protezione basata su HYOK usando un modello predefinito |No|Nessuna opzione di configurazione per i modelli predefiniti. Non è consigliabile pubblicare un'etichetta con questa configurazione.|
 |Protezione basata sul cloud che usa autorizzazioni definite dall'utente in Word, Excel e PowerPoint |No|Nessuna opzione di configurazione per le autorizzazioni definite dall'utente per queste app di Office. Non è consigliabile pubblicare un'etichetta con questa configurazione. In caso contrario i risultati ottenuti applicando l'etichetta sono elencati nella [tabella seguente](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Protezione basata su HYOK che usa autorizzazioni definite dall'utente per Outlook (Non inoltrare) |No|Nessuna opzione di configurazione per HYOK. Non è consigliabile pubblicare un'etichetta con questa configurazione. In caso contrario i risultati ottenuti applicando l'etichetta sono elencati nella [tabella seguente](#comparing-the-behavior-of-protection-settings-for-a-label).|
-|Rimuovere la protezione |No|Nessuna opzione di configurazione per rimuovere la protezione. Non è consigliabile pubblicare un'etichetta con questa configurazione.<br /><br /> Se si pubblica questa etichetta, una volta applicata la protezione verrà rimossa se in precedenza era stata applicata da un'etichetta. La protezione verrà mantenuta se in precedenza era stata applicata in modo indipendente da un'etichetta.|
-|Tipi di carattere personalizzato e colore del tipo di carattere personalizzato tramite RGB per i contrassegni visivi (intestazione, piè di pagina, filigrana)|Sì|La configurazione per i contrassegni visivi è limitata a un elenco di colori e dimensioni dei caratteri. È possibile pubblicare questa etichetta senza modifiche benché non sia possibile visualizzare i valori configurati nei centri di amministrazione. <br /><br />Per modificare queste opzioni è possibile usare il portale di Azure. Per semplificare l'amministrazione, tuttavia, provare a cambiare il colore impostando una delle opzioni elencate nei centri di amministrazione.|
+|Rimuovere la protezione |No|Nessuna opzione di configurazione per rimuovere la protezione. Non è consigliabile pubblicare un'etichetta con questa configurazione.<br /><br /> Se si pubblica questa etichetta, quando viene applicato, sarà possibile rimuovere la protezione se applicata in precedenza da un'etichetta. La protezione verrà mantenuta se in precedenza era stata applicata in modo indipendente da un'etichetta.|
+|Tipi di carattere personalizzato e colore del tipo di carattere personalizzato tramite RGB per i contrassegni visivi (intestazione, piè di pagina, filigrana)|Yes|La configurazione per i contrassegni visivi è limitata a un elenco di colori e dimensioni dei caratteri. È possibile pubblicare questa etichetta senza modifiche benché non sia possibile visualizzare i valori configurati nei centri di amministrazione. <br /><br />Per modificare queste opzioni è possibile usare il portale di Azure. Per semplificare l'amministrazione, tuttavia, provare a cambiare il colore impostando una delle opzioni elencate nei centri di amministrazione.|
 |Variabili nei contrassegni visivi (intestazione, piè di pagina, filigrana)|No|Se si pubblica questa etichetta senza modifiche, le variabili vengono visualizzate come testo nei client anziché visualizzare i valori dinamici. Prima di pubblicare l'etichetta, modificare le stringhe per rimuovere le variabili.|
 |Contrassegni visivi per app|No|Se si pubblica questa etichetta senza modifiche, le variabili delle app vengono visualizzate come testo nei client in tutte le app anziché visualizzare le stringhe di testo in app selezionate. Pubblicare questa etichetta solo se è adatta per tutte le app e modificare le stringhe per rimuovere le variabili delle app.|
 |Condizioni e impostazioni associate <br /><br />Note: include l'assegnazione di etichette automatica e consigliata e le descrizioni comando corrispondenti|Non applicabile|Riconfigurare le condizioni tramite l'applicazione automatica di etichette come configurazione separata dalle impostazioni dell'etichetta.|
 
 ### <a name="comparing-the-behavior-of-protection-settings-for-a-label"></a>Confronto del comportamento delle impostazioni di protezione per un'etichetta
 
-Usare la tabella seguente per osservare come la stessa impostazione di protezione di un'etichetta possa offrire un comportamento diverso se usata dal client di Azure Information Protection (versioni con disponibilità generale e versione di anteprima corrente), dalla versione di anteprima corrente del client per l'etichettatura unificata di Azure Information Protection o dalle app di Office con l'etichettatura incorporata, nota anche come "etichettatura di Office nativa".
+Usare la tabella seguente per identificare come la stessa impostazione di protezione per un'etichetta si comporta in modo diverso, a seconda del fatto che venga usato dal client Azure Information Protection, il client di assegnazione di etichette Azure Information Protection unified, o per le app di Office con l'assegnazione di etichette predefiniti (noto anche come "nativi di Office 
 
 In caso di dubbi sulla configurazione delle impostazioni di protezione, visualizzare le relative impostazioni nel pannello **Protezione** nel portale di Azure. Se serve assistenza con questa procedura, vedere [Per configurare un'etichetta per le impostazioni di protezione](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 
@@ -137,7 +139,7 @@ Se l'utente non ha uno di questi diritti di utilizzo o ruoli, l'etichetta non vi
 
 Usare le istruzioni seguenti per eseguire la migrazione del tenant e delle etichette di Azure Information Protection per usare il nuovo archivio di etichettatura unificata.
 
-È necessario essere un amministratore globale per eseguire la migrazione delle etichette.
+È necessario essere un amministratore di conformità, l'amministratore della sicurezza o amministratore globale per eseguire la migrazione delle etichette.
 
 1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**.
     
@@ -160,7 +162,7 @@ Per verificare se i client e i servizi usati dall'utente supportano l'etichettat
 
 ##### <a name="clients-that-currently-support-unified-labeling-include"></a>I client che attualmente supportano l'etichettatura unificata includono:
 
-- Il [client per l'etichettatura unificata di Azure Information Protection per Windows](./rms-client/unifiedlabelingclient-version-release-history.md) (in anteprima)
+- Il [unificata di Azure Information Protection client per l'assegnazione di etichette per Windows](./rms-client/unifiedlabelingclient-version-release-history.md)
 
 - App di Office che sono in fasi di disponibilità diverse. Per altre informazioni, vedere la sezione **Oggi dov'è disponibile questa funzionalità?** in [Applicare le etichette di riservatezza per i documenti e la posta elettronica in Office](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) nella documentazione di Office.
     

@@ -4,29 +4,31 @@ description: Script di esempio per copiare e modificare, come descritto nelle is
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ae6d8d0f-4ebc-43fe-a1f6-26b690fd83d0
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6b040359ecd1f1277711366cd8d612cd9664dba1
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.openlocfilehash: 52a27004d303ff2912da9ad2cd243312bc4c411f
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56259134"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60180971"
 ---
 # <a name="windows-powershell-script-for-azure-rms-protection-by-using-file-server-resource-manager-fci"></a>Script di Windows PowerShell per la protezione Azure RMS usando l'infrastruttura di classificazione file di Gestione risorse file server
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
+>
+> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Questa pagina contiene lo script di esempio per copiare e modificare, come descritto nell'articolo [Protezione RMS con l'infrastruttura di classificazione file per Windows Server](configure-fci.md).
 
 Per questo script è necessaria almeno la versione **1.3.155.2** del modulo AzureInformationProtection. Eseguire il comando seguente per controllare la versione: `(Get-Module AzureInformationProtection -ListAvailable).Version` 
 
-*&#42;&#42;Dichiarazione di non responsabilità&#42;&#42;: Questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene reso disponibile "nello stato in cui si trova", senza alcun tipo di garanzia.*
+*&#42;&#42;Dichiarazione di non responsabilità&#42;&#42;: Questo script di esempio non è supportato in alcun programma di supporto tecnico standard di Microsoft o un servizio. Questo script di esempio viene reso disponibile "nello stato in cui si trova", senza alcun tipo di garanzia.*
 
 ```
 <#

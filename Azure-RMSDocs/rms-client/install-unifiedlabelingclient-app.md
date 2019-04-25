@@ -1,31 +1,28 @@
 ---
-title: Scaricare e installare il client per l'etichettatura unificata di Azure Information Protection (anteprima)
-description: Istruzioni per gli utenti per installare la versione di anteprima del client che supporta l'etichettatura unificata di Azure Information Protection per Windows, in modo da potere classificare e proteggere documenti e messaggi di posta elettronica.
+title: Scaricare e installare il client di assegnazione di etichette unificato di Azure Information Protection
+description: Istruzioni per gli utenti possano installare il client di assegnazione di etichette unificato di Azure Information Protection per Windows, in modo che è possibile classificare e proteggere documenti e messaggi di posta elettronica.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.assetid: 2bf09690-9dba-43b7-9e0a-0110915d4081
-ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a48bb16bd2b4a0b15df0086c1eba3c14766ee9a2
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
-ms.translationtype: HT
+ms.openlocfilehash: 563ddb6d91ef59ee96cf00dba973b7e612bbc780
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809897"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60180954"
 ---
-# <a name="download-and-install-the-azure-information-protection-unified-labeling-client-preview"></a>Scaricare e installare il client per l'etichettatura unificata di Azure Information Protection (anteprima)
+# <a name="user-guide-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Manuale dell'utente: Scaricare e installare il client di assegnazione di etichette unificato di Azure Information Protection
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
+>
+> *Istruzioni per: [Azure Information Protection unified client per l'assegnazione di etichette per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-> [!NOTE]
-> Questo client è in anteprima e soggetto a modifiche. Usa l'archivio di etichettatura unificata e scarica i criteri con etichette di riservatezza dai centri di amministrazione: Centro sicurezza e conformità di Office 365, Centro sicurezza Microsoft 365 e Centro conformità Microsoft 365. Per usare queste etichette, devono prima essere pubblicate da uno di questi centri di amministrazione. [Altre informazioni](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492)
-
-Per installare questa versione di anteprima del client è necessario essere un amministratore locale del PC in modo che sia possibile assegnare etichette a documenti e messaggi di posta elettronica e proteggerli.
+Se l'amministratore non viene installato il client per l'assegnazione di etichette unificato Azure Information Protection, è possibile eseguire manualmente. Per installare questo client è necessario essere un amministratore locale del PC in modo che sia possibile assegnare etichette a documenti e messaggi di posta elettronica e proteggerli.
 
 Inoltre:
 
@@ -35,13 +32,11 @@ Inoltre:
 
 ## <a name="to-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Per scaricare e installare il client per l'etichettatura unificata di Azure Information Protection
 
-Prima di installare il client per l'etichettatura unificata di Azure Information Protection, verificare di aver pubblicato le etichette di riservatezza nel Centro sicurezza e conformità di Office 365 o nel Centro sicurezza Microsoft 365 e nel Centro conformità Microsoft 365. 
+Prima di installare il client di assegnazione di etichette unificato di Azure Information Protection, verificare con l'amministratore o l'help desk che si siano utilizzando le etichette di riservatezza di Office 365.
 
-Se sono disponibili etichette che attualmente vengono pubblicate dal portale di Azure per Azure Information Protection, è possibile [eseguire la migrazione di queste etichette](../configure-policy-migrate-labels.md) nei centri di amministrazione.
+1. Scaricare **AzInfoProtection_UL.exe** dalle [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-1. Scaricare la versione di anteprima del client dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=57440).
-
-2. Eseguire il file eseguibile scaricato in precedenza, **AzInfoProtection_For_Unified_Labeling.exe**. Se viene chiesto di continuare, fare clic su **Sì**.    
+2. Eseguire il file eseguibile che è stato scaricato, se viene chiesto di continuare, fare clic su **Sì**.
 
 3. Nella pagina **Installa il client Azure Information Protection** fare clic su **Accetto** dopo aver letto i termini e le condizioni di licenza.
 
@@ -65,6 +60,10 @@ Dopo aver installato il client per l'etichettatura unificata di Azure Informatio
 
 L'installazione è ora completa ed è possibile usare il client per l'etichettatura unificata di Azure Information Protection per etichettare e proteggere documenti e messaggi di posta elettronica.
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="other-instructions"></a>Altre istruzioni    
+Altre istruzioni sulle procedure di Azure Information Protection unified imprevisto delle etichette manuale dell'utente client:
 
-Per altre informazioni sull'archivio di etichettatura unificata usato dai centri di amministrazione, leggere il post di blog seguente: [Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492) (Annuncio della disponibilità della gestione dell'etichettatura unificata nel Centro sicurezza e conformità).
+- [Per saperne di più](clientv2-user-guide.md#what-do-you-want-to-do)
+
+## <a name="additional-information-for-administrators"></a>Informazioni aggiuntive per gli amministratori    
+Visualizzare [installare il client di assegnazione di etichette unificato di Azure Information Protection per gli utenti](clientv2-admin-guide-install.md) dalle [Guida dell'amministratore](clientv2-admin-guide.md).
