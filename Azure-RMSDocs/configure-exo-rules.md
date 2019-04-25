@@ -4,25 +4,25 @@ description: Istruzioni ed esempi per configurare le regole del flusso di posta 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/16/2019
+ms.date: 04/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: 0a09c4c89ffd461cb0c922cb09ee0acd3ed033be
-ms.sourcegitcommit: d8cadf325472e7fc8900905305d7f583a97506b0
-ms.translationtype: HT
+ms.openlocfilehash: f96daf289d5fdde320b98482eaf921646023e480
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "57829003"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "62773719"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configurazione delle regole del flusso di posta di Exchange Online per le etichette di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Usare le informazioni seguenti per configurare le regole del flusso di posta in Exchange Online per usare le etichette di Azure Information Protection e per applicare una protezione aggiuntiva per scenari specifici. Ad esempio:
+Usare le informazioni seguenti per configurare le regole del flusso di posta in Exchange Online per usare le etichette di Azure Information Protection e per applicare una protezione aggiuntiva per scenari specifici. Ad esempio: 
 
 - L'etichetta predefinita è **Generale**, che non applica la protezione. Per i messaggi di posta elettronica con questa etichetta inviati all'esterno, applicare l'azione di protezione aggiuntiva Non inoltrare.
 
@@ -82,7 +82,7 @@ Nel criterio Azure Information Protection questa etichetta è stata configurata 
 
 5. Per **Do the following** (Eseguire le operazioni seguenti): selezionare **Modify the message security (Modifica la sicurezza del messaggio)** > **Apply Office 365 Message Encryption and rights protection (Applica Office 365 Message Encryption e la protezione dei diritti)** > **Non inoltrare** e quindi selezionare **OK**.
     
-    La configurazione della regola ora dovrebbe essere simile alla seguente:  ![Regola del flusso di posta di Exchange Online configurata per un'etichetta di Azure Information Protection - esempio 1](./media/aip-exo-rule-ex1.png)
+    La configurazione della regola ora dovrebbe essere simile alla seguente:  ![Regola del flusso di posta elettronica Exchange Online configurato per un'etichetta di Azure Information Protection - esempio 1](./media/aip-exo-rule-ex1.png)
 
 7. Selezionare **Salva** 
 
@@ -112,7 +112,7 @@ Questa etichetta viene usata per classificare e proteggere i documenti usati per
 
 5. Per **Do the following** (Eseguire le operazioni seguenti): selezionare **Modify the message security (Modifica la sicurezza del messaggio)** > **Apply Office 365 Message Encryption and rights protection (Applica Office 365 Message Encryption e la protezione dei diritti)** > **Crittografa** e quindi selezionare **OK**.
     
-    La configurazione della regola ora dovrebbe essere simile alla seguente:  ![Regola del flusso di posta di Exchange Online configurata per un'etichetta di Azure Information Protection - esempio 1](./media/aip-exo-rule-ex2.png)
+    La configurazione della regola ora dovrebbe essere simile alla seguente:  ![Regola del flusso di posta elettronica Exchange Online configurato per un'etichetta di Azure Information Protection - esempio 2](./media/aip-exo-rule-ex2.png)
 
 6. Selezionare **Salva** 
 

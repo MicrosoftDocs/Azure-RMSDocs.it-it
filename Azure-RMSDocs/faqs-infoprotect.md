@@ -4,19 +4,19 @@ description: Di seguito sono riportate alcune possibili domande sulle funzionali
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/04/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: 681d40f86598aaa328c41df9ec76b27c1c24d0c1
-ms.sourcegitcommit: 465709879998fcb78cd2a4efda559c43ed661dda
-ms.translationtype: HT
+ms.openlocfilehash: d39b73a93f6abd434034acc9dca1858c7f57dde4
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59233786"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60182654"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Domande frequenti sulla classificazione e l'assegnazione di etichette in Azure Information Protection
 
@@ -43,13 +43,13 @@ Per sapere quando saranno disponibili altre funzionalità e nuove caratteristich
 
 Per richiedere nuove funzionalità e votare per le richieste, visitare il [sito User Voice](https://msip.uservoice.com/) per Azure Information Protection.
 
-## <a name="which-preview-client-do-i-install-for-testing-new-functionality"></a>Quale client in anteprima installare per il test delle nuove funzionalità?
+## <a name="which-client-do-i-install-for-testing-new-functionality"></a>Il client che si installano per la nuova funzionalità testing?
 
-Esistono attualmente due client in anteprima per Windows: 
+Attualmente, esistono due client per Windows: 
 
-- Il **client Azure Information Protection** che scarica le etichette e le impostazioni dei criteri dal portale di Azure. Questo client si basa sulla versione con disponibilità generale del client.
+- Il **client per l'etichettatura unificata Azure Information Protection** che scarica le etichette e le impostazioni dei criteri dal Centro sicurezza e conformità di Office 365. Questo client ora è in genere la disponibilità.
 
-- Il **client per l'etichettatura unificata Azure Information Protection** che scarica le etichette e le impostazioni dei criteri da uno dei centri di amministrazione: Centro sicurezza e conformità di Office 365, Centro sicurezza Microsoft 365 o Centro conformità Microsoft 365. Questo client è la seconda versione di anteprima.
+- Il **client Azure Information Protection** che scarica le etichette e le impostazioni dei criteri dal portale di Azure. Questo client si basa sulle versioni precedenti di disponibilità generale del client.
 
 È consigliabile eseguire i test con il client per l'etichettatura unificata Azure Information Protection se le funzionalità e il set di funzioni correnti soddisfano i requisiti aziendali. In caso contrario o se nel portale di Azure sono state configurate etichette di cui non è ancora stata eseguita la [migrazione all'archivio etichette unificato](configure-policy-migrate-labels.md), usare il client Azure Information Protection.
 
@@ -105,7 +105,4 @@ La classificazione dei messaggi di Exchange è una funzionalità precedente che 
 
 È possibile applicare la stessa tecnica per usare le etichette con Outlook sul web e le applicazioni di posta elettronica per dispositivi mobili.
 
-Per i passaggi di configurazione, vedere [Integrate Exchange message classification with Azure Information Protection for a mobile device labeling solution](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution) (Integrare la classificazione messaggi di Exchange ad Azure Information Protection per una soluzione di etichettatura per dispositivi mobili). 
-
-
-
+Per i passaggi di configurazione, vedere [Integrate Exchange message classification with Azure Information Protection for a mobile device labeling solution](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution) (Integrare la classificazione messaggi di Exchange ad Azure Information Protection per una soluzione di etichettatura per dispositivi mobili).

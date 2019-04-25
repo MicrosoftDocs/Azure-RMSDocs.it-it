@@ -12,11 +12,11 @@ ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 023d35152f1afbd8bba60366bfb2beec37905b91
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56254204"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60180024"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configurazione dei server per il connettore di Azure Rights Management
 
@@ -31,13 +31,13 @@ Prima di iniziare, assicurarsi di aver installato e configurato il connettore RM
 ## <a name="configuring-servers-to-use-the-rms-connector"></a>Configurazione dei server per l'uso del connettore RMS
 Dopo aver installato e configurato il connettore RMS, si è pronti per configurare i server locali che si connettono al servizio Azure Rights Management e usano la tecnologia di protezione mediante il connettore. È necessario configurare i server seguenti:
 
--   **Per Exchange 2016 ed Exchange 2013**: server Accesso client e server Cassette postali
+-   **Per Exchange 2016 ed Exchange 2013**: Server accesso client e server cassette postali
 
--   **Per Exchange 2010**: server Accesso client e server Trasporto hub
+-   **Per Exchange 2010**: Server accesso client e server Trasporto hub
 
 -   **Per SharePoint**: server Web front-end di SharePoint, inclusi quelli che ospitano il server Amministrazione centrale
 
--   **Per Infrastruttura di classificazione file**: computer Windows Server in cui è installato File Resource Manager
+-   **Per Infrastruttura di classificazione file**: Computer Windows Server in cui è installato File Resource Manager
 
 Per questa configurazione sono necessarie alcune impostazioni del Registro di sistema. A questo scopo, sono disponibili due opzioni: automatica, usando lo strumento di configurazione server per il connettore Microsoft RMS o manuale modificando il Registro di sistema.
 
@@ -95,7 +95,7 @@ Dopo aver apportato modifiche alla configurazione di questi server, è necessari
 
     -   **Distribuzione software**: è possibile eseguire lo strumento per generare i file del Registro di sistema da distribuire a uno o più server pertinenti usando un'applicazione di gestione dei sistemi che supporta la distribuzione software, ad esempio System Center Configuration Manager.
 
-    -   **Criteri di gruppo**: è possibile eseguire lo strumento per generare uno script che consenta a un amministratore di creare oggetti Criteri di gruppo per il server da configurare. Questo script crea un oggetto Criteri di gruppo per ciascun tipo di server da configurare. L'amministratore può quindi assegnare l'oggetto corretto ai server pertinenti.
+    -   **Criteri di gruppo**: È possibile eseguire lo strumento per generare uno script che consenta a un amministratore di creare oggetti Criteri di gruppo per i server da configurare. Questo script crea un oggetto Criteri di gruppo per ciascun tipo di server da configurare. L'amministratore può quindi assegnare l'oggetto corretto ai server pertinenti.
 
     > [!NOTE]
     > Questo strumento consente di configurare i server che comunicheranno con il connettore RMS e che sono elencati all'inizio di questa sezione. Non eseguire questo strumento sui server che eseguono il connettore RMS.
@@ -106,7 +106,7 @@ Dopo aver apportato modifiche alla configurazione di questi server, è necessari
     Get-help .\GenConnectorConfig.ps1 -detailed
     ```
 
-Per eseguire lo script è necessario immettere l'URL del connettore RMS dell'organizzazione. Immettere il prefisso del protocollo (HTTP:// o HTTPS://) e il nome del connettore definito nel DNS per l'indirizzo di bilanciamento del carico del connettore stesso, Ad esempio, https://connector.contoso.com Lo strumento usa quindi tale URL per contattare i server che eseguono il connettore RMS e ottenere altri parametri usati per creare le configurazioni richieste.
+Per eseguire lo script è necessario immettere l'URL del connettore RMS dell'organizzazione. Immettere il prefisso del protocollo (HTTP:// o HTTPS://) e il nome del connettore definito nel DNS per l'indirizzo di bilanciamento del carico del connettore stesso, Ad esempio https://connector.contoso.com. Lo strumento usa quindi tale URL per contattare i server che eseguono il connettore RMS e ottenere altri parametri usati per creare le configurazioni richieste.
 
 > [!IMPORTANT]
 > Quando si esegue questo strumento, assicurarsi di specificare il nome del connettore RMS con carico bilanciato per l'organizzazione e non il nome di un singolo server che esegue il servizio del connettore RMS.
@@ -129,9 +129,9 @@ Nelle sezioni seguenti sono disponibili informazioni specifiche per ciascun tipo
 ## <a name="configuring-an-exchange-server-to-use-the-connector"></a>Configurazione di un server di Exchange per l'uso del connettore
 I seguenti ruoli di Exchange comunicano con il connettore RMS:
 
--   Per Exchange 2016 ed Exchange 2013: server Accesso client e server Cassette postali
+-   Per Exchange 2016 ed Exchange 2013: Server accesso client e server cassette postali
 
--   Per Exchange 2010: server Accesso client e server Trasporto hub
+-   Per Exchange 2010: Server accesso client e server Trasporto hub
 
 Per usare un connettore RMS, è necessario che i server di Exchange eseguano una delle versioni seguenti del software:
 

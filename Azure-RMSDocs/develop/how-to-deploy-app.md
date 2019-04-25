@@ -14,11 +14,11 @@ audience: developer
 ms.reviewer: kartikka
 ms.suite: ems
 ms.openlocfilehash: 5be6785c86cfeb104acc7f12d4cb7b830e9c9d36
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56251876"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60178500"
 ---
 # <a name="deploying-a-service-application-into-a-different-tenant"></a>Distribuzione di un'applicazione di servizio a un tenant diverso
 

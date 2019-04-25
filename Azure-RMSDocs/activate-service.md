@@ -12,11 +12,11 @@ ms.assetid: f8707e01-b239-4d1a-a1ea-0d1cf9a8d214
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: ff99a39c138cc3ddc0b49cf7ff65ab95d5e36ece
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828907"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60175815"
 ---
 # <a name="activating-azure-rights-management"></a>Attivazione di Azure Rights Management
 
@@ -81,7 +81,7 @@ Se non si vuole permettere a tutti gli utenti di proteggere immediatamente i doc
 > [!IMPORTANT]
 > Per usare questo comando, è necessaria almeno la versione **2.1.0.0** del [modulo di PowerShell per Azure Rights Management](https://www.powershellgallery.com/packages/AADRM).
 >
-> Per controllare quale versione è installata, eseguire: **(Get-Module aadrm –ListAvailable).Version**
+> Per controllare quale versione che è installata, eseguire: **(Get-Module aadrm –ListAvailable).Version**
 
 Se, ad esempio, inizialmente si vuole permettere solo agli amministratori del gruppo "IT department" (con ID oggetto fbb99ded-32a0-45f1-b038-38b519009503) di proteggere i contenuti per finalità di test, usare il comando seguente:
 

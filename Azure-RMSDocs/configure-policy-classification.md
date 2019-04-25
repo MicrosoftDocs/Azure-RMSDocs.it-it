@@ -4,21 +4,23 @@ description: Le condizioni per un'etichetta consentono di assegnare automaticame
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: 3cf57d5e958ab535a2e2cd21adc305fe09bb8aec
-ms.sourcegitcommit: 8da0aa8f9bb9f91375580a703682d23a81a441bf
-ms.translationtype: HT
+ms.openlocfilehash: fe80fdc803d15ba450cb333da15e82b19a76441e
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58809761"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60179938"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Quando si configurano le condizioni per un'etichetta, è possibile assegnare automaticamente un'etichetta a un documento o messaggio di posta elettronica. In alternativa, è possibile richiedere agli utenti di selezionare l'etichetta consigliata. 
 
@@ -100,7 +102,7 @@ Quando fa clic su **Salva**, le modifiche diventano automaticamente disponibili 
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>Tipi di informazioni riservate che richiedono una versione minima del client
 
-I tipi di informazioni sensibili seguenti richiedono la versione di anteprima corrente del client Azure Information Protection:
+I seguenti tipi di informazioni riservate richiedono la [versione con disponibilità generale corrente](./rms-client/client-version-release-history.md#version-1482040) del client Azure Information Protection:
 
 - **Stringa di connessione del bus di servizio di Azure**
 - **Stringa di connessione di Azure IoT**
@@ -113,7 +115,9 @@ I tipi di informazioni sensibili seguenti richiedono la versione di anteprima co
 - **Password delle impostazioni di pubblicazione di Azure**
 - **Chiave dell'account di archiviazione di Azure (generico)**
 
-Inoltre, i tipi di informazioni sensibili seguenti non sono supportati per la versione di anteprima corrente del client Azure Information Protection e non sono più visualizzati nel portale di Azure:
+Per altre informazioni su questi tipi di informazioni riservate, vedere il blog seguente post: [Azure Information Protection consente di essere più sicuro per l'individuazione automatica delle credenziali](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-helps-you-to-be-more-secure-by/ba-p/360181)
+
+Inoltre, i seguenti tipi di informazioni riservate non sono supportati per la versione di disponibilità generale corrente del client Azure Information Protection e non sarà più visualizzato nel portale di Azure:
 
 - **Numero di telefono EU**
 - **Coordinate GPS EU**
@@ -123,5 +127,3 @@ Inoltre, i tipi di informazioni sensibili seguenti non sono supportati per la ve
 È consigliabile distribuire lo [scanner di Azure Information Protection](deploy-aip-scanner.md), che può usare le regole di classificazione automatica per trovare, classificare e proteggere i file in condivisioni di rete e archivi di file locali.  
 
 Per altre informazioni sulla configurazione dei criteri di Azure Information Protection, usare i collegamenti nella sezione [Configurazione dei criteri dell'organizzazione](configure-policy.md#configuring-your-organizations-policy).
-
-

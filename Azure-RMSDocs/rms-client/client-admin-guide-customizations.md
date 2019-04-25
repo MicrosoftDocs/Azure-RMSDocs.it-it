@@ -4,23 +4,25 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/08/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3cd27fc4a060b6c7328495ad46d53768c28ff223
-ms.sourcegitcommit: ce2078712d111f102a72b3a8697121f1390bdf07
-ms.translationtype: HT
+ms.openlocfilehash: dae3461c4e5ec8ea4cc61fe26c20f774c97d76c5
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59289469"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60182063"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>
+> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Usare le informazioni seguenti per le configurazioni avanzate che possono essere necessarie per scenari specifici o per un subset di utenti quando si gestisce il client di Azure Information Protection.
 
@@ -56,11 +58,14 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 |LabelToSMIME|[Configurare un'etichetta per applicare la protezione S/MIME in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |LogLevel|[Modificare il livello di registrazione locale](#change-the-local-logging-level)
 |LogMatchedContent|[Disabilitare l'invio delle corrispondenze per i tipi di informazioni per un subset di utenti](#disable-sending-information-type-matches-for-a-subset-of-users)|
+|OutlookBlockTrustedDomains|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookBlockUntrustedCollaborationLabel|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
-|OutlookCollaborationTrustedDomains|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookDefaultLabel|[Impostare un'etichetta predefinita diversa per Outlook](#set-a-different-default-label-for-outlook)|
+|OutlookJustifyTrustedDomains|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookJustifyUntrustedCollaborationLabel|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Abilitare la classificazione consigliata in Outlook](#enable-recommended-classification-in-outlook)|
+|OutlookOverrideUnlabeledCollaborationExtensions|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|OutlookWarnTrustedDomains|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnUntrustedCollaborationLabel|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |PostponeMandatoryBeforeSave|[Rimuovere "Non ora" per i documenti quando si usa l'etichettatura obbligatoria](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |ProcessUsingLowIntegrity|[Disabilitare il livello di integrità basso per lo scanner](#disable-the-low-integrity-level-for-the-scanner)|
@@ -186,7 +191,7 @@ Quando si esportano i criteri dal portale di Azure, viene scaricato un file ZIP 
     
 2. Rinominare il file identificato come **Policy.msip**, quindi copiarlo nella cartella **%LocalAppData%\Microsoft\MSIP** nei computer in cui è installato il client Azure Information Protection. 
 
-Se il computer disconnesso esegue la versione di anteprima dello scanner di Azure Information Protection, è necessario eseguire ulteriori passaggi. Per altre informazioni, vedere [Restrizione: il server dello scanner non può avere la connettività Internet](../deploy-aip-scanner-preview.md#restriction-the-scanner-server-cannot-have-internet-connectivity) nelle istruzioni per la distribuzione dello scanner.
+Se il computer disconnesso è in esecuzione la versione di disponibilità generale corrente dello scanner Azure Information Protection, sono disponibili i passaggi di configurazione aggiuntivi che necessari. Per altre informazioni, vedere [Restrizione: il server dello scanner non può avere la connettività Internet](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity) nelle istruzioni per la distribuzione dello scanner.
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Nascondere o visualizzare il pulsante Non inoltrare in Outlook
 
@@ -214,7 +219,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer"></a>Per i file protetti con autorizzazioni personalizzate, rendere sempre le autorizzazioni personalizzate visualizzabili dagli utenti in Esplora file
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Questa impostazione è disponibile in anteprima e richiede la versione di anteprima del client.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Questa impostazione è in anteprima e potrebbe cambiare.
 
 Quando si configura l'[impostazione di criteri](../configure-policy-settings.md) **Rendi disponibile agli utenti l'opzione per le autorizzazioni personalizzate** o l'impostazione client avanzata equivalente nella sezione precedente, gli utenti non possono visualizzare o modificare le autorizzazioni personalizzate già impostate in un documento protetto. 
 
@@ -274,7 +279,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent"></a>Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica
 
-Questa configurazione usa più [impostazioni client avanzate](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che devono essere configurate nel portale di Azure. Questa impostazione è disponibile in anteprima e richiede la versione di anteprima del client.
+Questa configurazione usa più [impostazioni client avanzate](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che devono essere configurate nel portale di Azure.
 
 Quando si creano e configurano le impostazioni client avanzate seguenti, gli utenti visualizzano messaggi popup di Outlook che possono avvertirli prima dell'invio di un messaggio di posta elettronica, chiedere di giustificare il motivo dell'invio o impedire l'invio di un messaggio di posta elettronica per uno degli scenari seguenti:
 
@@ -303,7 +308,7 @@ L'azione viene registrata nel registro eventi locale di Windows **Registri appli
 Voce dell'evento di esempio di un messaggio di giustificazione:
 
 ```
-Client Version: 1.48.1.0
+Client Version: 1.48.204.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Price list.msg
 Item Name: Price list
@@ -313,7 +318,7 @@ User Justification: My manager approved sharing of this content
 Action Source: 
 User Response: Confirmed
 ```
-
+Le sezioni seguenti contengono istruzioni di configurazione per ogni impostazione client avanzata ed è possibile vederli in azione autonomamente con [esercitazione: Configurare Azure Information Protection per controllare oversharing di informazioni tramite Outlook](../infoprotect-oversharing-tutorial.md).
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>Per implementare i messaggi popup di avviso, giustificazione o blocco per etichette specifiche:
 
@@ -371,21 +376,49 @@ Creare l'impostazione client avanzata seguente con uno dei valori seguenti:
     
     - Valore: **Disattivato**
 
+#### <a name="to-define-specific-file-name-extensions-for-the-warn-justify-or-block-pop-up-messages-for-email-attachments-that-dont-have-a-label"></a>Per definire estensioni di file specifico per l'avviso, giustificare o bloccare i messaggi popup per gli allegati di posta elettronica che non hanno un'etichetta
+
+Per impostazione predefinita, l'avviso, giustificare o bloccare i messaggi popup si applicano a tutti i documenti di Office e i documenti PDF. È possibile perfezionare questo elenco specificando quali estensioni di nome file devono visualizzare l'avviso, giustificare o bloccare i messaggi con una proprietà aggiuntiva del client avanzato e un elenco delimitato da virgole di estensioni di file.
+
+Valore di esempio per più estensioni file definire come una stringa delimitata da virgole: `.XLSX,.XLSM,.XLS,.XLTX,.XLTM, .DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
+
+In questo esempio, un documento PDF senza etichetta non genererà un avviso, giustificare o bloccare i messaggi popup.
+
+
+- Chiave: **OutlookOverrideUnlabeledCollaborationExtensions**
+
+- Valore: **\<** estensioni per visualizzare i messaggi, separati da virgole di file**>**
+
+
 ### <a name="to-specify-the-allowed-domain-names-for-recipients-exempt-from-the-pop-up-messages"></a>Per specificare i nomi di dominio consentiti per i destinatari esenti dai messaggi popup
 
-Quando si specifica un nome di dominio in un'impostazione client avanzata, gli utenti non visualizzano i messaggi popup per i destinatari che hanno quel nome di dominio incluso nell'indirizzo di posta elettronica. In questo caso, i messaggi di posta elettronica vengono inviati senza interruzioni. Per specificare più domini, aggiungerli come stringa singola, delimitata da virgole.
+Quando si specificano nomi di dominio in un'impostazione client avanzata aggiuntiva, gli utenti non in grado di visualizzare i messaggi popup per i destinatari che hanno tale nome di dominio incluso nell'indirizzo di posta elettronica. In questo caso, i messaggi di posta elettronica vengono inviati senza interruzioni. Per specificare più domini, aggiungerli come stringa singola, delimitata da virgole.
 
 Una configurazione tipica consiste nel rendere visualizzabili i messaggi popup solo dai destinatari che sono esterni all'organizzazione o che non sono partner autorizzati dell'organizzazione. In questo caso, specificare tutti i domini di posta elettronica usati dall'organizzazione e dai partner.
 
-Creare la chiave dell'impostazione client avanzata seguente. Per il valore, specificare uno o più domini separandoli con una virgola.
+Creare le seguenti impostazioni client avanzate e per il valore, specificare uno o più domini, ognuno dei quali separati da una virgola.
 
 Valore di esempio per più domini sotto forma di stringa delimitata da virgole: `contoso.com,fabrikam.com,litware.com`
 
-- Chiave: **OutlookCollaborationTrustedDomains**
+- Messaggi di avviso:
+    
+    - Chiave: **OutlookWarnTrustedDomains**
+    
+    - Valore: **\<** nomi di dominio, delimitati da virgole**>**
 
-- Valore: **\<** nomi di dominio, delimitati da virgole**>**
+- Messaggi di giustificazione:
+    
+    - Chiave: **OutlookJustifyTrustedDomains**
+    
+    - Valore: **\<** nomi di dominio, delimitati da virgole**>**
 
-Se ad esempio si specifica il nome di dominio contoso.com, gli utenti non vedono i messaggi popup in Outlook quando inviano un messaggio di posta elettronica a john@sales.contoso.com.
+- Messaggi di blocco:
+    
+    - Chiave: **OutlookBlockTrustedDomains**
+    
+    - Valore: **\<** nomi di dominio, delimitati da virgole**>**
+
+Ad esempio, specificare il client avanzato per non bloccare mai i messaggi di posta elettronica inviati agli utenti che dispongono di un indirizzo di posta elettronica di contoso.com, l'impostazione della **OutlookBlockTrustedDomains** e **contoso.com**. Di conseguenza, evitare la visualizzazione di messaggi di avviso popup in Outlook quando inviano un messaggio di posta elettronica john@sales.contoso.com.
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Impostare un'etichetta predefinita diversa per Outlook
 
@@ -519,7 +552,7 @@ Per usare i comandi di PowerShell per convertire file con estensione ppdf esiste
     
    - Valore di **RMSTemplateId**. Se questo valore è **Accesso limitato**, un utente ha protetto il file usando autorizzazioni personalizzate anziché le impostazioni di protezione configurate per l'etichetta. Se si continua, tali autorizzazioni personalizzate verranno sovrascritte dalle impostazioni di protezione dell'etichetta. Decidere se continuare o chiedere all'utente (valore visualizzato per **RMSIssuer**) di rimuovere l'etichetta e riapplicarla, con le relative autorizzazioni personalizzate originali.
 
-3. Rimuovere l'etichetta usando [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) con il parametro *RemoveLabel*. Se si usa l'[impostazione criteri](../configure-policy-settings.md) **Gli utenti devono offrire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione**, è necessario specificare anche il parametro *Giustificazione* con il motivo. Ad esempio: 
+3. Rimuovere l'etichetta usando [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) con il parametro *RemoveLabel*. Se si usa l'[impostazione criteri](../configure-policy-settings.md) **Gli utenti devono offrire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione**, è necessario specificare anche il parametro *Giustificazione* con il motivo. Ad esempio:  
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 
@@ -531,7 +564,7 @@ Il file mantiene l'estensione pdf ma viene classificato come in precedenza ed è
 
 ## <a name="support-for-files-protected-by-secure-islands"></a>Supporto di file protetti da Secure Islands
 
-Questa opzione di configurazione è in anteprima ed è soggetta a modifiche.
+Questa opzione di configurazione è disponibile in anteprima e potrebbe cambiare.
 
 Se è stato usato Secure Islands è possibile che siano stati protetti file di testo, file immagine e file generici. Sono esempi i file con estensione ptxt, pjpeg o pfile. Quando si modifica il registro di sistema come indicato di seguito, Azure Information Protection può decrittografare questi file:
 
@@ -762,7 +795,7 @@ A questo punto, quando un utente apre e salva uno di questi documenti di Office,
 
 ## <a name="enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents"></a>Abilitare gli strumenti di analisi di Azure Information Protection per individuare informazioni riservate nei documenti
 
-Questa configurazione usa un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che è necessario configurare nel portale di Azure e richiede la versione di anteprima corrente del client di Azure Information Protection.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
 
 Gli [strumenti di analisi di Azure Information Protection](../reports-aip.md) possono individuare e segnalare i documenti contenenti informazioni riservate salvati dai client Azure Information Protection. Per impostazione predefinita, queste informazioni non vengono inviate agli strumenti di analisi di Azure Information Protection.
 
@@ -774,7 +807,7 @@ Per cambiare questo comportamento in modo che le informazioni vengano inviate, i
 
 Se non si configura questa impostazione client avanzata, i risultati del controllo vengono comunque inviate dal client Azure Information Protection, ma le informazioni sono limitate alla segnalazione degli utenti che accedono a contenuto etichettato.
 
-Ad esempio:
+Ad esempio: 
 
 - Senza questa impostazione, è possibile vedere che un utente ha aperto il file Financial.docx etichettato come **Confidential \ Sales**.
 
@@ -784,13 +817,13 @@ Ad esempio:
 
 ## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>Disabilitare l'invio delle corrispondenze per i tipi di informazioni per un subset di utenti
 
-Questa configurazione usa un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che è necessario configurare nel portale di Azure e richiede la versione di anteprima corrente del client di Azure Information Protection.
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
 
 Quando si seleziona la casella di controllo [Analisi di Azure Information Protection](../reports-aip.md) che raccoglie le corrispondenze di contenuto per i tipi di informazioni riservate o le condizioni personalizzate, per impostazione predefinita, queste informazioni vengono inviate da tutti gli utenti. In presenza di utenti che non devono inviare questi dati, creare l'impostazione client avanzata seguente in un [criterio con ambito](../configure-policy-scope.md) per questi utenti: 
 
 - Chiave: **LogMatchedContent**
 
-- Valore: **Disabilitato**
+- Valore: **Disable**
 
 
 ## <a name="limit-the-number-of-threads-used-by-the-scanner"></a>Limitare il numero di thread usati dallo scanner
@@ -860,7 +893,7 @@ Per ottenere questa soluzione:
 
 2. Creare una regola del flusso di posta di Exchange per ogni etichetta: applicare la regola quando le proprietà del messaggio includono la classificazione configurata e modificare le proprietà del messaggio per impostare un'intestazione del messaggio. 
 
-     Per l'intestazione del messaggio, è possibile trovare le informazioni da specificare nelle intestazioni Internet di un messaggio di posta elettronica inviato e classificato tramite l'etichetta di Azure Information Protection. Cercare l'intestazione **msip_labels** e la stringa immediatamente successiva fino al punto e virgola incluso. Ad esempio:
+     Per l'intestazione del messaggio, è possibile trovare le informazioni da specificare nelle intestazioni Internet di un messaggio di posta elettronica inviato e classificato tramite l'etichetta di Azure Information Protection. Cercare l'intestazione **msip_labels** e la stringa immediatamente successiva fino al punto e virgola incluso. Ad esempio: 
     
     **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
     

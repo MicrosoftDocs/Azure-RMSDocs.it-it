@@ -4,23 +4,25 @@ description: Istruzioni e informazioni per gli amministratori in una rete aziend
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/02/2019
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: cec2614cacffa41ef3e4a345455c582ad92682f2
-ms.sourcegitcommit: 746963b045072ea74e147895a8acda6a2e5bc9ce
-ms.translationtype: HT
+ms.openlocfilehash: 530b7e112f4ee66f9117bf3816ff19ab179b3811
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57226292"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "62773645"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>
+> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Usare le informazioni di questa guida se si è responsabili del client Azure Information Protection in una rete aziendale o se sono necessarie maggiori informazioni rispetto a quelle disponibili nella [Guida per l'utente del client Azure Information Protection](client-user-guide.md). 
 
@@ -65,7 +67,7 @@ Se si usa AD RMS e si vuole passare ad Azure Information Protection, vedere [Mig
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>È consigliabile distribuire il client Azure Information Protection?
 
-Distribuire il client Azure Information Protection in uno o più dei casi seguenti:
+Distribuire il client Azure Information Protection se non si usa [etichette di riservatezza nel centro di conformità e sicurezza di Office 365](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) ma usando invece, le etichette di Azure Information Protection scaricati da Azure e gli eventuali di quanto segue si applica a:
 
 - Si vuole classificare (e, facoltativamente, proteggere) documenti e messaggi di posta elettronica selezionando etichette dalle applicazioni di Office (Word, Excel, PowerPoint, Outlook).
 
@@ -165,7 +167,7 @@ Tuttavia, i nomi e le descrizioni delle etichette specificati non vengono automa
 
 ## <a name="post-installation-tasks"></a>Attività post-installazione
 
-Dopo aver installato il client Azure Information Protection, accertarsi di fornire agli utenti istruzioni per etichettare i documenti e i messaggi di posta elettronica, oltre a linee guida per le etichette da scegliere per scenari specifici. Ad esempio:
+Dopo aver installato il client Azure Information Protection, accertarsi di fornire agli utenti istruzioni per etichettare i documenti e i messaggi di posta elettronica, oltre a linee guida per le etichette da scegliere per scenari specifici. Ad esempio: 
 
 - Istruzioni per l'utente online: [Guida per l'utente di Azure Information Protection](client-user-guide.md)
 
@@ -185,22 +187,14 @@ Fare riferimento a [cronologia delle versioni e criteri per il supporto](client-
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Aggiornamento dello scanner di Azure Information Protection
 
-La modalità di aggiornamento dello scanner dipende dalla versione, ovvero la versione disponibile a livello generale corrente o la versione di anteprima corrente.
+Usare le istruzioni seguenti per aggiornare lo scanner da una versione con disponibilità generale meno recente 1.48.204.0 alla versione corrente dello scanner.
 
-#### <a name="to-upgrade-the-scanner-to-the-current-ga-version"></a>Per eseguire l'aggiornamento dello scanner alla versione disponibile a livello generale corrente
-
-Per aggiornare lo scanner di Azure Information Protection, installare la versione più recente del client di Azure Information Protection. Eseguire quindi l'azione una tantum seguente. Al termine dell'operazione, non è necessario ripetere l'analisi dei file già analizzati.
-
-- Eseguire [Update-AIPScanner](/powershell/module/azureinformationprotection/Update-AIPScanner) dopo aver aggiornato il client Azure Information Protection. Verranno mantenute le impostazioni di configurazione per i repository e lo scanner. L'esecuzione di questo cmdlet è necessaria per aggiornare lo schema del database per lo scanner. Se necessario, l'account del servizio dello scanner riceve anche autorizzazioni di eliminazione per il database dello scanner. 
-    
-    Finché non si esegue questo cmdlet di aggiornamento, lo scanner non viene eseguito e viene visualizzato in genere l'ID evento **1000** nel registro eventi di Windows, con il messaggio di errore seguente: **Nome di oggetto non valido 'ScannerStatus'**.
-
-#### <a name="to-upgrade-the-scanner-to-the-current-preview-version"></a>Per aggiornare lo scanner alla versione di anteprima corrente
+#### <a name="to-upgrade-the-scanner-to-the-current-version"></a>Per eseguire l'aggiornamento alla versione corrente dello scanner
 
 > [!IMPORTANT]
-> Per un percorso di aggiornamento senza problemi, non installare la versione di anteprima del client Azure Information Protection in computer che eseguono lo scanner come primo passaggio per aggiornare lo scanner. Usare invece le istruzioni di aggiornamento seguenti.
+> Per un percorso di aggiornamento smooth, non installare il client Azure Information Protection in computer che esegue lo scanner come primo passaggio per aggiornare lo scanner. Usare invece le istruzioni di aggiornamento seguenti.
 
-Per la versione di anteprima corrente dello scanner, il processo di aggiornamento è diverso rispetto alle versioni precedenti. L'aggiornamento automatico dello scanner lo modifica in modo da ottenere le impostazioni di configurazione dal portale di Azure. Viene inoltre aggiornato lo schema per il database di configurazione dello scanner e questo database viene anche rinominato da AzInfoProtection:
+Partire dalla versione 1.48.204.0, il processo di aggiornamento da versioni precedenti automaticamente le modifiche apportate allo scanner Ottiene le impostazioni di configurazione dal portale di Azure. Viene inoltre aggiornato lo schema per il database di configurazione dello scanner e questo database viene anche rinominato da AzInfoProtection:
 
 - Se non si specifica il proprio nome di profilo, il database di configurazione viene rinominato **AIPScanner_\<nome_computer>**. 
 
@@ -208,19 +202,21 @@ Per la versione di anteprima corrente dello scanner, il processo di aggiornament
 
 Sebbene sia possibile aggiornare lo scanner in un ordine diverso, è consigliabile usare la procedura seguente:
 
-1. Usare il portale di Azure per creare un nuovo profilo di scanner che include le impostazioni per lo scanner e i repository di dati con le eventuali impostazioni necessarie. Per altre informazioni su questo passaggio, vedere la sezione [Configurare lo scanner nel portale di Azure](../deploy-aip-scanner-preview.md#configure-the-scanner-in-the-azure-portal) nelle istruzioni di distribuzione dello scanner di anteprima.
+1. Usare il portale di Azure per creare un nuovo profilo di scanner che include le impostazioni per lo scanner e i repository di dati con le eventuali impostazioni necessarie. Per altre informazioni su questo passaggio, vedere la [configurare lo scanner nel portale di Azure](../deploy-aip-scanner.md#configure-the-scanner-in-the-azure-portal) sezione from le istruzioni per la distribuzione dello scanner.
     
     Se il computer che esegue lo scanner è disconnesso da Internet, è comunque necessario eseguire questo passaggio. Quindi, dal portale di Azure, usare l'opzione **Esporta** per esportare il profilo dello scanner in un file.
 
 2. Nel computer dello scanner arrestare il servizio dello scanner **Azure Information Protection Scanner**.
 
-3. Aggiornare il client Azure Information Protection installando la versione di anteprima corrente dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+3. Aggiornare il client Azure Information Protection installando la versione di disponibilità generale (GA) corrente dal [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-4. In una sessione di PowerShell eseguire il comando Update-AIPScanner con lo stesso nome di profilo specificato nel passaggio 1. ad esempio `Update-AIPScanner –Profile USWest`
+4. In una sessione di PowerShell eseguire il comando Update-AIPScanner con lo stesso nome di profilo specificato nel passaggio 1. ad esempio `Update-AIPScanner –Profile Europe`
 
 5. Solo se lo scanner è in esecuzione in un computer disconnesso: A questo punto eseguire [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) e specificare il file che contiene le impostazioni esportate.
 
 6. Riavviare il servizio dello scanner di Azure Information Protection **Scanner Azure Information Protection**.
+
+È ora possibile usare il resto delle istruzioni in [distribuzione dello scanner di Azure Information Protection per classificare e proteggere i file automaticamente](../deploy-aip-scanner.md), omettere il passaggio per installare lo scanner. Poiché lo scanner è già installato, non è necessario eseguire nuovamente l'installazione.
 
 ##### <a name="upgrading-in-a-different-order-to-the-recommended-steps"></a>Aggiornamento in un ordine diverso rispetto alla procedura consigliata
 
@@ -231,19 +227,19 @@ In questo scenario, quando si configura lo scanner nel portale di Azure, è nece
 > [!TIP]
 > Per identificare gli scanner con questo errore di configurazione, usare il pannello **Azure Information Protection - Nodi** nel portale di Azure.
 >  
-> Per gli scanner con connettività Internet viene visualizzato il nome del computer con il numero di versione di anteprima del client Azure Information Protection, ma nessun nome di profilo. Solo per gli scanner con numero di versione 1.41.51.0 non dovrebbe essere visualizzato il nome di profilo in questo pannello. 
+> Per gli scanner che hanno la connettività Internet, verranno inoltre visualizzati il nome del computer con il numero di versione disponibile a livello generale del client Azure Information Protection, ma nessun nome di profilo. Solo per gli scanner con numero di versione 1.41.51.0 non dovrebbe essere visualizzato il nome di profilo in questo pannello. 
 
 Se non è stato specificato un nome di profilo quando è stato eseguito il comando Update-AIPScanner, il nome del computer viene usato per creare automaticamente il nome del profilo per lo scanner.
 
 #### <a name="moving-the-scanner-configuration-database-to-a-different-sql-server-instance"></a>Spostamento del database di configurazione dello scanner in un'istanza diversa di SQL Server
 
-Nella versione di anteprima corrente è presente un problema noto se si prova a spostare il database di configurazione dello scanner in una nuova istanza di SQL Server dopo aver eseguito il comando di aggiornamento.
+Nella versione corrente disponibile a livello generale, è un problema noto, se si prova a spostare il database di configurazione dello scanner in una nuova istanza di SQL Server dopo aver eseguito il comando Aggiorna.
 
-Se si vuole spostare il database di configurazione dello scanner per la versione di anteprima, seguire questa procedura:
+Se si sa che si desidera spostare il database di configurazione dello scanner per la versione disponibile a livello generale, eseguire le operazioni seguenti:
 
 1. Disinstallare lo scanner tramite [Uninstall-AIPScanner](/powershell/module/azureinformationprotection/Uninstall-AIPScanner).
 
-2. Se non è ancora stato eseguito l'aggiornamento alla versione di anteprima del client Azure Information Protection, aggiornare il client a questo punto.
+2. Se non sono ancora aggiornati alla versione disponibile a livello generale corrente del client Azure Information Protection, aggiornare il client a questo punto.
 
 3. Installare lo scanner usando [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), specificando la nuova istanza di SQL Server e il nome del profilo.
 
@@ -273,5 +269,3 @@ Se il client è già stato installato, vedere gli argomenti seguenti per altre i
 - [Tipi di file supportati](client-admin-guide-file-types.md)
 
 - [Comandi di PowerShell](client-admin-guide-powershell.md)
-
-
