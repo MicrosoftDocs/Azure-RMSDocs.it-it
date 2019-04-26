@@ -12,11 +12,11 @@ ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 14b10c074d80ed5479953ab44b4bec1249749020
-ms.sourcegitcommit: a78d4236cbeff743703c44b150e69c1625a2e9f4
-ms.translationtype: HT
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56256040"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "60180869"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Impostazioni del Registro di sistema per il connettore Rights Management
 
@@ -33,7 +33,7 @@ Istruzioni per l'uso delle impostazioni:
 
     2.  Nell'output identificare il valore **LicensingIntranetDistributionPointUrl** .
 
-        Ad esempio: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+        Ad esempio:  **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
     3.  In questo valore rimuovere **/_wmcs/licensing** dalla stringa. La stringa rimanente corrisponde all'URL del servizio Azure Rights Management. Nell'esempio, l'URL del servizio Azure Rights Management è il valore seguente:
 
@@ -54,7 +54,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Predefinito
+**Valore:** Impostazione predefinita
 
 **Dati:** https://*\<YourTenantURL>*/_wmcs/certification
 
@@ -64,7 +64,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Predefinito
+**Valore:** Impostazione predefinita
 
 **Data:** https://*\<YourTenantURL>*/_wmcs/Licensing
 
@@ -105,7 +105,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Predefinito
+**Valore:** Impostazione predefinita
 
 **Dati:** https://*<\YourTenantURL>*/_wmcs/certification
 
@@ -115,7 +115,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Predefinito
+**Valore:** Impostazione predefinita
 
 **Dati:** https://*<\YourTenantURL>*/_wmcs/Licensing
 
@@ -169,7 +169,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Predefinito
+**Valore:** Impostazione predefinita
 
 **Dati:** Uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di SharePoint al connettore RMS:
 
@@ -183,7 +183,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Predefinito
+**Valore:** Impostazione predefinita
 
 
 **Dati:** Uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di SharePoint al connettore RMS:
@@ -201,7 +201,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Predefinito
+**Valore:** Impostazione predefinita
 
 **Dati:** http://*<\ConnectorFQDN>*/_wmcs/licensing
 
@@ -211,7 +211,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Predefinito
+**Valore:** Impostazione predefinita
 
 **Dati:** http://*<\ConnectorFQDN>*/_wmcs/certification
 
