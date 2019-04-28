@@ -31,7 +31,7 @@ La maggior parte degli utenti usa l'app Azure Information Protection per aprire 
 >
 > In modo analogo, accedere all'app solo dopo aver ricevuto la richiesta corrispondente.
 
-Per usare le istruzioni seguenti è necessario accedere dal dispositivo mobile a uno dei file supportati dall'app. Ad esempio: 
+Per usare le istruzioni seguenti è necessario accedere dal dispositivo mobile a uno dei file supportati dall'app. Ad esempio:
 
 - **Un file con estensione rpmsg**: si tratta di un messaggio di posta elettronica protetto con RMS visualizzato come allegato in un messaggio di posta elettronica quando l'app di posta elettronica del dispositivo mobile non supporta la protezione dei dati con Rights Management in modo nativo. 
     
