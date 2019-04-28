@@ -67,7 +67,7 @@ Exchange Online potrebbe già essere abilitato per l'uso del servizio Azure Righ
     ```
     Test-IRMConfiguration -Sender <user email address>
     ```
-    Ad esempio:  <strong>Test-IRMConfiguration -Sender  adams@contoso.com</strong>
+    Ad esempio: <strong>Test-IRMConfiguration -Sender  adams@contoso.com</strong>
     
     Questo comando esegue una serie di controlli, inclusi la verifica della connettività al servizio, il recupero della configurazione, il recupero di URI, licenze ed eventuali modelli. Nella sessione di Windows PowerShell, verrà visualizzato i risultati di ogni controllo e alla fine, se tutto ciò che passa questi controlli: **OVERALL RESULT: PASS**
 

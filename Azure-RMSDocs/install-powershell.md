@@ -77,7 +77,7 @@ Per visualizzare i cmdlet disponibili, digitare quanto segue:
 Get-Command -Module AADRM
 ```
 
-Usare il comando `Get-Help <cmdlet_name>` per visualizzare le informazioni della Guida per un cmdlet specifico e quindi impostare il parametro **-online** per visualizzare le informazioni della Guida più recenti dal sito della documentazione Microsoft. Ad esempio: 
+Usare il comando `Get-Help <cmdlet_name>` per visualizzare le informazioni della Guida per un cmdlet specifico e quindi impostare il parametro **-online** per visualizzare le informazioni della Guida più recenti dal sito della documentazione Microsoft. Ad esempio:
 
 ```
 Get-Help Connect-AadrmService -online

@@ -86,7 +86,7 @@ Quando fa clic su **Salva**, le modifiche diventano automaticamente disponibili 
 
 Nella stringa di testo è possibile usare le variabili seguenti per l'intestazione, il piè di pagina o la filigrana:
 
-- `${Item.Label}` per l'etichetta selezionata. Ad esempio: Generale
+- `${Item.Label}` per l'etichetta selezionata. Ad esempio:  Generale
 
 - `${Item.Name}` per l'oggetto del messaggio di posta elettronica o il nome di file. Ad esempio:  JulySales.docx
 
@@ -96,7 +96,7 @@ Nella stringa di testo è possibile usare le variabili seguenti per l'intestazio
 
 - `${User.PrincipalName}` per il proprietario del documento o del messaggio di posta elettronica, in base all'indirizzo di posta elettronica connesso al client di Azure Information Protection (UPN). ad esempio rsimone@vanarsdelltd.com
 
-- `${Event.DateTime}` per la data e l'ora in cui è stata impostata l'etichetta selezionata. Ad esempio: 16/08/2016 13:30
+- `${Event.DateTime}` per la data e l'ora in cui è stata impostata l'etichetta selezionata. Ad esempio:  16/08/2016 13:30
 
 Esempio: se si specifica la stringa `Document: ${item.name}  Classification: ${item.label}` per il piè di pagina dell'etichetta **General**, il testo del piè di pagina applicato a un documento denominato project.docx sarà **Document: project.docx  Classification: General**.
 

@@ -105,7 +105,7 @@ Lo script di configurazione client (Migrate-Client.cmd) configura le impostazion
 
 - Se l'utente dispone di privilegi di amministratore locale, usare uno script di accesso.
 
-Lo script di configurazione utente (Migrate-User.cmd) configura le impostazioni a livello utente e pulisce l'archivio licenze client. È quindi necessario eseguire questo script nel contesto dell'utente effettivo. Ad esempio:
+Lo script di configurazione utente (Migrate-User.cmd) configura le impostazioni a livello utente e pulisce l'archivio licenze client. È quindi necessario eseguire questo script nel contesto dell'utente effettivo. Ad esempio: 
 
 - Usare uno script di accesso.
 

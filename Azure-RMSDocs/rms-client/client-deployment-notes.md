@@ -13,7 +13,7 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.openlocfilehash: 0af65b69d28c97e547c0d0bce9e3024402b28dee
 ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 04/24/2019
 ms.locfileid: "60183198"
@@ -168,7 +168,7 @@ Per eseguire l'individuazione del servizio, il client RMS esegue una serie di co
 
     Quando l'autenticazione riesce, vengono utilizzati il relativo nome utente e il relativo dominio per identificare il tenant di Azure Information Protection da usare. Viene quindi restituito al client RMS l'URL di Azure Information Protection da usare per l'account utente. Il formato dell'URL è il seguente: **https://**\<URL del tenant\>**/_wmcs/licensing** 
 
-    Ad esempio:   5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
+    Ad esempio:  5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
     *\<URL del tenant\>* ha il formato seguente: **{GUID}.rms.[Region].aadrm.com**. È possibile individuare questo valore identificando il valore **RightsManagementServiceId** quando si esegue il cmdlet [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) per Azure RMS.
 
