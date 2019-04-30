@@ -4,20 +4,22 @@ description: Se l'organizzazione non ha familiarità con Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/09/2019
+ms.date: 04/17/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 1d857fc3282b0851e80765fe3f53a2315ed59b5f
-ms.sourcegitcommit: 729b12e1219c6dbf1bb2a6cfa7239f24d1d13cc5
+ms.openlocfilehash: e41af7f6bcf8734377404b0dabcdb059d2d91bc1
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59364641"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "62773587"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Guida introduttiva: Introduzione ad Azure Information Protection nel portale di Azure
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 In questa guida di avvio rapido si aggiungerà Azure Information Protection al portale di Azure, si verificherà che il servizio di protezione sia attivato, si creeranno le etichette predefinite, se non sono già disponibili, e si visualizzeranno le impostazioni dei criteri per Azure Information Protection.
 
@@ -60,11 +62,11 @@ Il servizio di protezione viene attivato automaticamente per i nuovi clienti, ma
     
     - Se la protezione è attivata, viene visualizzato il messaggio di conferma seguente:
         
-        ![Stato di Azure Information Protection per Azure RMS](./media/info-protect-azurerms-activated.png)
+        ![Stato di Azure Information Protection per Azure RMS - attivato](./media/info-protect-azurerms-activated.png)
         
     - Se la protezione non è attivata, le informazioni sullo stato indicano questa condizione e viene visualizzata l'opzione per l'attivazione:
         
-        ![Stato di Azure Information Protection per Azure RMS](./media/info-protect-azurerms-deactivated.png)
+        ![Stato di Azure Information Protection per Azure RMS - non attivato](./media/info-protect-azurerms-deactivated.png)
 
 3. Se la protezione non è attivata, selezionare **Attiva**. 
 

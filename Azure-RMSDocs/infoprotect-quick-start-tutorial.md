@@ -1,23 +1,25 @@
 ---
-title: Esercitazione - Modificare i criteri di Azure Information Protection e creare una nuova etichetta - AIP
+title: 'Esercitazione: modificare i criteri di Azure Information Protection - AIP'
 description: Esercitazione introduttiva per la modifica dei criteri di Azure Information Protection per l'organizzazione. Il completamento dell'esercitazione richiede circa 15 minuti.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/29/2019
+ms.date: 04/23/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 7d9792ef45a75bdf3f234eea1ab92eaa475a8ce1
-ms.sourcegitcommit: 8fa7d2e6b3e900fec128af57105995d5fb0cc761
+ms.openlocfilehash: 0c7baa65c7f0400d94f1aa800e26a41290bb7b36
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58617857"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "62773570"
 ---
-# <a name="tutorial-edit-the-azure-information-protection-policy-and-create-a-new-label"></a>Esercitazione: Modificare i criteri di Azure Information Protection e creare una nuova etichetta
+# <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Esercitazione: configurare le impostazioni dei criteri di Azure Information Protection e creare una nuova etichetta
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 In questa esercitazione si apprenderà come:
 > [!div class="checklist"]
@@ -162,7 +164,7 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
 
 10. Nel pannello **Etichetta secondaria** si può osservare che **Numero carta di credito** è visualizzato come **nome della condizione** con **1** **occorrenza**:
     
-    ![Esercitazione di Azure Information Protection - Configurare la condizione della carta di credito](./media/step2-see-condition.png)
+    ![Esercitazione di Azure Information Protection - Riepilogo della condizione della carta di credito](./media/step2-see-condition.png)
 
 11. Per **Specificare se l'etichetta viene applicata automaticamente o se viene consigliata all'utente**: mantenere il valore predefinito **Consigliata** e non modificare il suggerimento di criterio predefinito. 
 

@@ -4,20 +4,22 @@ description: Esercitazione introduttiva che illustra la configurazione delle imp
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/29/2019
+ms.date: 04/23/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: d627bd71ec3a669f59161c8c3c7137f8a635ceb6
-ms.sourcegitcommit: 8fa7d2e6b3e900fec128af57105995d5fb0cc761
+ms.openlocfilehash: d5d6988c5180a58ed9de5c8111036ee380044584
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58617798"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "62773605"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Esercitazione: Configurare impostazioni dei criteri di Azure Information Protection che interagiscono tra loro
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 In questa esercitazione si apprenderà come:
 > [!div class="checklist"]
@@ -113,7 +115,7 @@ Con la barra di Information Protection visualizzata che mostra le etichette disp
 
 Anziché modificare l'etichetta, chiudere la barra di Information Protection per confrontare l'esperienza se non viene visualizzata la barra:
 
-![Esercitazione di Azure Information Protection - Nuovo documento con etichetta predefinita](./media/infoprotect-bar-close.png)
+![Esercitazione di Azure Information Protection - Chiudere la barra](./media/infoprotect-bar-close.png)
 
 L'etichetta **Generale** è ancora selezionata, ma è molto meno evidente. È anche meno evidente come selezionare un'altra etichetta. A tale scopo, gli utenti devono selezionare il pulsante **Proteggi**:
 
@@ -132,7 +134,7 @@ Per visualizzare nuovamente la barra di Information Protection, selezionare **Mo
 
 Se questa impostazione non è stata modificata, questa icona viene visualizzata nella barra di Information Protection:
 
-![Esercitazione di Azure Information Protection - Pulsante Proteggi selezionato](./media/infoprotect-deletelabel-icon.png)
+![Esercitazione di Azure Information Protection - Chiudere la barra](./media/infoprotect-deletelabel-icon.png)
 
 Insieme a un'etichetta predefinita, l'etichettatura obbligatoria garantisce che i documenti e i messaggi di posta elettronica nuovi e modificati abbiano una classificazione di base di propria scelta. 
 
@@ -150,9 +152,9 @@ Aggiungere il documento di Word appena etichettato come allegato al messaggio di
 
 Se si sceglie **Ignora**, la nuova etichetta non viene applicata e il messaggio di posta elettronica mantiene l'etichetta predefinita configurata **Generale**. Le etichette disponibili sono ancora visibili per selezionare un'alternativa.
 
-Se si seleziona **Modifica ora**, il messaggio di posta elettronica viene rietichettato con l'etichetta secondaria **Riservato**. Gli utenti possono comunque modificare l'etichetta prima di inviare il messaggio di posta elettronica, selezionando Modifica l'etichetta:
+Se si seleziona **Modifica ora**, il messaggio di posta elettronica viene rietichettato con l'etichetta secondaria **Riservato**. Gli utenti possono comunque modificare l'etichetta prima di inviare il messaggio di posta elettronica, selezionando l'icona di modifica etichetta:
 
-![Esercitazione di Azure Information Protection - Prompt per riassegnare l'etichetta al messaggio di posta elettronica in modo che corrisponda all'allegato etichettato](./media/infoprotect-editlabel-icon.png)
+![Esercitazione di Azure Information Protection - Icona Modifica l'etichetta](./media/infoprotect-editlabel-icon.png)
 
 La barra di Information Protection viene nuovamente visualizzata per consentire agli utenti di selezionare un'etichetta alternativa.
 

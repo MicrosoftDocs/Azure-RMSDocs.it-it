@@ -4,21 +4,23 @@ description: È possibile proteggere i documenti e i messaggi di posta elettroni
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/14/2019
+ms.date: 04/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 0057677890de2a771e93cc2f843623bbd780c31a
-ms.sourcegitcommit: d716d3345a6a5adc63814dee28f7c01b55b96770
+ms.openlocfilehash: 1e37b45cb6894ddee9630f53c52018f8a0956357
+ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57978152"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "62772580"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
+>
+> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Non è possibile proteggere i documenti e i messaggi di posta elettronica più sensibili usando un servizio Rights Management. Questo servizio usa la crittografia, l'identità e i criteri di autorizzazione per prevenire la perdita di dati. Questa protezione viene applicata con un'etichetta configurata per l'uso della protezione Rights Management per documenti e messaggi di posta elettronica. Gli utenti possono anche selezionare il pulsante **Non inoltrare** in Outlook.
 
@@ -143,7 +145,7 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
     
      |Impostazione|Altre informazioni|Impostazione consigliata
      |-----------|--------------------|--------------------|
-     |**scadenza contenuto**|Definire una data o un numero di giorni in cui i documenti protetti tramite queste impostazioni non dovranno essere aperti dagli utenti selezionati. Per i messaggi di posta elettronica, la scadenza non è sempre applicata a causa dei meccanismi di memorizzazione nella cache che alcuni client di posta elettronica usano.<br /><br />È possibile specificare una data o un numero di giorni a partire dal momento in cui la protezione viene applicata ai contenuti.<br /><br />Quando si specifica una data, diventa effettiva alla mezzanotte del fuso orario corrente.|**Nessuna scadenza contenuto**, a meno che non esista un requisito temporale specifico per il contenuto.|
+     |**Scadenza del contenuto dei file**|Definire una data o un numero di giorni in cui i documenti protetti tramite queste impostazioni non dovranno essere aperti dagli utenti selezionati. Per i messaggi di posta elettronica, la scadenza non è sempre applicata a causa dei meccanismi di memorizzazione nella cache che alcuni client di posta elettronica usano.<br /><br />È possibile specificare una data o un numero di giorni a partire dal momento in cui la protezione viene applicata ai contenuti.<br /><br />Quando si specifica una data, diventa effettiva alla mezzanotte del fuso orario corrente.|**Nessuna scadenza contenuto**, a meno che non esista un requisito temporale specifico per il contenuto.|
      |**Consenti l'accesso offline**|Usare questa impostazione per bilanciare i requisiti di sicurezza, compreso l'accesso dopo la revoca, con la possibilità per gli utenti selezionati di aprire il contenuto protetto quando non hanno una connessione Internet.<br /><br />Se si specifica che il contenuto non è disponibile senza una connessione Internet o che è disponibile solo per un determinato numero di giorni, al raggiungimento di tale soglia, gli utenti dovranno eseguire di nuovo l'autenticazione e l'accesso verrà registrato. In questo caso, se le credenziali non sono memorizzate nella cache, verrà chiesto agli utenti di eseguire l'accesso prima di poter aprire il documento o il messaggio di posta elettronica.<br /><br />Oltre alla riesecuzione dell'autenticazione, viene nuovamente valutata l'appartenenza degli utenti ai criteri e ai gruppi. Questo significa che gli utenti potrebbero avere risultati di accesso diversi per lo stesso documento o messaggio di posta elettronica se dall'ultimo accesso ai contenuti si sono verificati cambiamenti relativi all'appartenenza ai criteri o ai gruppi. Ciò potrebbe includere anche l'impossibilità di accedere al documento se questo è stato [revocato](./rms-client/client-track-revoke.md).|A seconda della sensibilità del contenuto:<br /><br />- **Numero di giorni per cui il contenuto è disponibile senza una connessione a Internet** = **7** per i dati aziendali sensibili che potrebbero causare danni all'azienda in caso di condivisione con persone non autorizzate. Questa raccomandazione offre un equo compromesso tra sicurezza e flessibilità. Sono esempi di questo tipo di contenuto i contratti, i report sulla sicurezza, i riepiloghi previsionali e i dati sulle vendite.<br /><br />- **Mai** per dati aziendali particolarmente riservati che potrebbero causare danni all'azienda se condivisi con utenti non autorizzati. Questa indicazione assegna maggiore priorità alla sicurezza che alla flessibilità e garantisce che, se il documento viene revocato, per tutti gli utenti autorizzati sarà immediatamente impossibile aprirlo. Sono esempi di questo tipo di contenuto le informazioni su dipendenti e clienti, le password, il codice sorgente e i rendiconti finanziari preannunciati.|
     
      Al termine della configurazione delle autorizzazioni e delle impostazioni, fare clic su **OK**. 
@@ -296,7 +298,7 @@ Questa configurazione offre il vantaggio che non è necessario specificare utent
 
 4. Selezionare le autorizzazioni desiderate e fare clic su **OK**.
 
-5. Nel pannello **Protezione** configurare le impostazioni per **Scadenza del contenuto** e **Consenti l'accesso offline**, se necessario, e quindi fare clic su **OK**.
+5. Nel pannello **Protezione** configurare le impostazioni per **Scadenza del contenuto del file** e **Consenti l'accesso offline**, se necessario, quindi fare clic su **OK**.
 
 6. Nel pannello **Etichetta** selezionare **Salva**.
 
@@ -311,7 +313,7 @@ La configurazione dell'etichetta è apparentemente semplice:
     
 2. Selezionare **OK** senza selezionare gli utenti o configurare le impostazioni di questo pannello.
     
-    Sebbene sia possibile configurare le impostazioni per **Scadenza contenuto**  e **Consenti l'accesso offline**, quando non si specificano utenti e le relative autorizzazioni, queste impostazioni di accesso non sono applicabili. Questo succede perché l'utente che applica la protezione è l'[autorità di certificazione di Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) per il contenuto e questo ruolo non è soggetto alle restrizioni di accesso.
+    Anche se è possibile configurare le impostazioni per **Scadenza del contenuto del file** e **Consenti l'accesso offline**, queste impostazioni di accesso non sono applicabili quando non si specificano utenti e le relative autorizzazioni. Questo succede perché l'utente che applica la protezione è l'[autorità di certificazione di Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) per il contenuto e questo ruolo non è soggetto alle restrizioni di accesso.
 
 3. Nel pannello **Etichetta** selezionare **Salva**.
 
