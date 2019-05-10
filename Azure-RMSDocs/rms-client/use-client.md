@@ -4,17 +4,17 @@ description: Microsoft Azure Information Protection offre una soluzione client-s
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: ed762332e023843326fc4ec4d89e8fc44ede39be
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: f93432e245e1eafc74857a7571a4e0a4fe5d9318
+ms.sourcegitcommit: 1c2d588beccfcb13824f3d518683304018bce452
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180818"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65493277"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -48,7 +48,7 @@ Attualmente, il client Azure Information Protection e il client di assegnazione 
 
 ##### <a name="example-deployment-strategy"></a>Strategia di distribuzione di esempio:
 
-- Per la maggior parte degli utenti, si distribuisce il client di assegnazione di etichette unificato di Azure Information Protection perché la maggior parte degli utenti non richiedono funzionalità che sono disponibili solo con il client di assegnazione di etichette unificato di Azure Information Protection. 
+- Per la maggior parte degli utenti, si distribuisce il client di assegnazione di etichette unificato di Azure Information Protection perché la maggior parte degli utenti non richiedono funzionalità o funzionalità che sono disponibili solo con il client Azure Information Protection. 
     
     Per questi utenti, l'esperienza di assegnazione di etichette è molto simile se dispongono anche i dispositivi che eseguono MacOS, iOS e Android, e questi dispositivi hanno una versione di Office che supporta le etichette di riservatezza.
 
@@ -102,7 +102,8 @@ Quando entrambi i client supportano la funzionalità stessa, usare la tabella se
 |Cmdlet supportati:| Tutti i cmdlet documentati per [AzureInformatioProtection](/powershell/module/azureinformationprotection) | Set-AIPAuthentication non supporta le sessioni non interattive <br /><br /> Set-AIPFileClassification e Set-AIPFileLabel non supportano il parametro *Owner* o le librerie di SharePoint Server <br /><br /> È inoltre presente un singolo commento "No label to apply" per tutti gli scenari in cui non viene applicata un'etichetta <br /><br /> Set-AIPFileLabel non supporta il parametro *EnableTracking* <br /><br /> Get-AIPFileStatus non restituisce informazioni sulle etichette da altri tenant e non visualizza il parametro *RMSIssuedTime*<br /><br />Inoltre, il parametro *LabelingMethod* per Get-AIPFileStatus visualizza **Privileged**, **Standard** o **Auto** invece di **Manual** o **Automatic**. Per altre informazioni, vedere la [documentazione online](/powershell/module/azureinformationprotection/get-aipfilestatus).|
 |Richieste di giustificazione (se configurate) per ogni azione in Office: | Frequenza: per ogni file <br /><br /> Riduzione del livello di riservatezza <br /><br /> Rimozione di un'etichetta<br /><br /> Rimozione della protezione | Frequenza: per ogni sessione <br /><br /> Riduzione del livello di riservatezza<br /><br /> Rimozione di un'etichetta|
 |Azioni di rimozione di etichette applicate: | Viene chiesta conferma all'utente <br /><br />L'etichetta predefinita o l'etichetta automatica (se configurata) non viene applicata automaticamente alla successiva apertura del file nell'app Office  <br /><br />| Non viene chiesta conferma all'utente<br /><br /> L'etichetta predefinita o l'etichetta automatica (se configurata) viene applicata automaticamente alla successiva apertura del file nell'app Office|
-|Classificazione automatica e consigliata: | Configurata come [condizioni per le etichette](../configure-policy-classification.md) nel portale di Azure con i tipi di informazioni predefiniti e le condizioni personalizzate che usano frasi o espressioni regolari <br /><br />Le opzioni di configurazione possibili sono: <br /><br />- Conteggio univoco/non univoco <br /><br /> - Conteggio minimo| Configurata nei centri di amministrazione con i tipi di informazioni riservate predefiniti e i [tipi di informazioni personalizzati](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Le opzioni di configurazione possibili sono:  <br /><br />- Solo conteggio univoco <br /><br />- Conteggio minimo e massimo <br /><br />- Supporto di AND e OR con i tipi di informazioni <br /><br />- Dizionario di parole chiave<br /><br />- Livello di attendibilità e prossimità dei caratteri personalizzabili|
+|Etichette automatiche e consigliate: | Configurata come [condizioni per le etichette](../configure-policy-classification.md) nel portale di Azure con i tipi di informazioni predefiniti e le condizioni personalizzate che usano frasi o espressioni regolari <br /><br />Le opzioni di configurazione possibili sono: <br /><br />- Conteggio univoco/non univoco <br /><br /> - Conteggio minimo| Configurata nei centri di amministrazione con i tipi di informazioni riservate predefiniti e i [tipi di informazioni personalizzati](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Le opzioni di configurazione possibili sono:  <br /><br />- Solo conteggio univoco <br /><br />- Conteggio minimo e massimo <br /><br />- Supporto di AND e OR con i tipi di informazioni <br /><br />- Dizionario di parole chiave<br /><br />- Livello di attendibilità e prossimità dei caratteri personalizzabili|
+|Suggerimento per i criteri personalizzabili per le etichette automatiche e consigliate: | Yes <br /><br />Usare il portale di Azure per sostituire il messaggio predefinito per gli utenti | No <br /><br /> Anche se le interfacce di amministrazione hanno un'opzione per fornire un suggerimento per i criteri personalizzati, questa opzione non è attualmente supportata dal client di assegnazione di etichette unificato|
 
 Per un confronto dettagliato delle differenze di comportamento per le impostazioni di protezione dati specifico, vedere [confronto tra il comportamento delle impostazioni di protezione per un'etichetta](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
 
@@ -126,9 +127,7 @@ Anche se il client di assegnazione di etichette unificato di Azure Information P
 
 - Giustificazione per la rimozione della protezione
 
-- Richiesta di conferma prima dell'eliminazione di un'etichetta applicata
-
-- Segnalazione del collegamento di un problema nella finestra di dialogo Guida e commenti
+- Richiesta di conferma **si desidera eliminare questa etichetta?** per gli utenti quando non si usa l'impostazione di criteri per la giustificazione
 
 - Assegnazione di un'etichetta a un documento di Office tramite una proprietà personalizzata esistente (impostazioni client avanzate SyncPropertyName e SyncPropertyState)
 

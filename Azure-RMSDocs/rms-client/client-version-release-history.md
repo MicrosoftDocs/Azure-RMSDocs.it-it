@@ -1,5 +1,5 @@
 ---
-title: 'Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto'
+title: Client Azure Information Protection - criteri di supporto & Cronologia versione
 description: Informazioni sugli elementi nuovi o modificati in una versione del client di Azure Information Protection per Windows e sui criteri del ciclo di vita per il supporto.
 author: cabailey
 ms.author: cabailey
@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3e1f515dc12280cdd2f8d9b8bca49ca483ee1809
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: 43f7f685cfa1567084ebdc0877215229b0ae592b
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181396"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64768326"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection: Cronologia delle versioni e criteri per il supporto
 

@@ -4,17 +4,17 @@ description: Alcune domande frequenti su Azure Information Protection e sul rela
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 75ad66eba42869e1eeebed6d3ec29253158eeb8d
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: f3d8610ff5d1bb1138d69825e37d8c6eb46f1a0a
+ms.sourcegitcommit: 7f769dfa8d4758f13b2c7f83d89fabbb84716290
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182348"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65191926"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
@@ -64,23 +64,13 @@ Usare la **versione** numero visualizzato per identificare il client:
 
 - Una versione **1**, ad esempio **1.48.204.0**, identifica il client Azure Information Protection.
 
-- Una versione **2**, ad esempio **2.0 684.0**, identifica il client di assegnazione di etichette unificato di Azure Information Protection.
+- Una versione **2**, ad esempio **2.0.778.0**, identifica il client di assegnazione di etichette unificato di Azure Information Protection.
 
 ## <a name="when-is-the-right-time-to-migrate-my-labels-to-office-365"></a>Qual è il momento giusto per la migrazione delle etichette in Office 365?
 
-Le etichette di riservatezza nei centri di amministrazione (Centro sicurezza e conformità di Office 365, Centro sicurezza Microsoft 365 e Centro conformità Microsoft 365) sono disponibili a livello generale, ma l'opzione per eseguire la migrazione delle etichette di Azure Information Protection è ancora in anteprima. Quando le etichette vengono migrate allo store unificato l'assegnazione di etichette, possono essere pubblicate e quindi usati da [client e servizi che supportano l'assegnazione di etichette unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)...
+Ora che l'opzione per eseguire la migrazione di etichette nel portale di Azure è a livello generale, si consiglia di attivare la migrazione in modo che è possibile usare le etichette come etichette di riservatezza con [client e servizi che supportano l'assegnazione di etichette unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) .
 
-- **Se si è un nuovo utente di Azure Information Protection:**
-    
-    Le etichette predefinite di Azure Information Protection consente di accelerare la distribuzione, pertanto si consiglia di eseguire la migrazione di tali etichette predefinite e quindi gestirli da una delle aree di amministrazione (Office 365 Centro sicurezza e conformità, Centro sicurezza di Microsoft 365 o centro conformità di Microsoft 365).
-
-- **Se non si è un nuovo utente di Azure Information Protection, ma si stanno definendo e configurando le etichette da usare:**
-    
-    È consigliabile completare la configurazione delle etichette nel portale di Azure prima di eseguire la migrazione delle etichette. Questa strategia evita la duplicazione delle etichette durante il processo di migrazione e la successiva modifica in uno dei centri di amministrazione.
-
-Prima di eseguire la migrazione delle etichette, è importante conoscere le [considerazioni e le impostazioni delle etichette che non sono supportate dai centri di amministrazione](configure-policy-migrate-labels.md#considerations-for-unified-labels).
-
-Vedere anche [quali client si installano per la nuova funzionalità testing?](faqs-infoprotect.md#which-client-do-i-install-for-testing-new-functionality)
+Per altre informazioni e istruzioni, vedere [come eseguire la migrazione di etichette di Azure Information Protection per etichette di riservatezza di Office 365](configure-policy-migrate-labels.md).
 
 ## <a name="after-ive-migrated-my-labels-which-management-portal-do-i-use"></a>Dopo aver eseguito la migrazione delle etichette, qual è il portale di gestione da usare?
 

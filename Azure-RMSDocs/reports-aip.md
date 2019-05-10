@@ -3,7 +3,7 @@ title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
 author: cabailey
 ms.author: cabailey
-ms.date: 04/23/2019
+ms.date: 05/07/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: e85537f705fa388aa7c2c3a838ca658213899edb
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: d7cc81a41b7515edd0df0e38d5813e0e90b2aa73
+ms.sourcegitcommit: 7f769dfa8d4758f13b2c7f83d89fabbb84716290
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181655"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65191934"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -192,11 +192,11 @@ Tuttavia, un'assegnazione di ruolo tipica per molte organizzazioni è il **ruolo
 
 Per Azure Information Protection unified client l'assegnazione di etichette:
 
-- Supporto per il controllo e l'endpoint di individuazione: Versione 2.0.778
+- Supporto per il controllo e l'endpoint di individuazione: Versione 2.0.778.0
 
 Per il client Azure Information Protection:
 
-- Supporto per il controllo: 1.41.51.0
+- Supporto per il controllo: Versione 1.41.51.0
 - Supporto per l'individuazione di endpoint: Versione 1.48.204.0
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>Configurare un'area di lavoro di Log Analytics per i report
@@ -232,7 +232,7 @@ Nel pannello Azure Information Protection trovare le opzioni del menu **Dashboar
 
 - **Individuazione dei dati (anteprima)**: usare questo report per visualizzare informazioni sui file etichettati trovati dagli strumenti di analisi e dagli endpoint supportati.
     
-    Nota: Microsoft sta gradualmente implementando la funzionalità di individuazione per endpoint nei tenant. Si inizierà a vedere i dati degli endpoint supportati in questo report quando la funzionalità sarà stata implementata nel proprio tenant.
+    Nota: Per gli endpoint di individuazione è un'implementazione graduale per i tenant. Si inizierà a vedere i dati degli endpoint supportati in questo report quando la funzionalità sarà stata implementata nel proprio tenant.
     
     È possibile configurare un [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents) per il client Azure Information Protection ai file di report contenenti informazioni riservate.
     

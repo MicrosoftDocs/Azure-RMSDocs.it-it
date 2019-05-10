@@ -1,21 +1,21 @@
 ---
-title: Rimuovere etichette di riservatezza usando il client di assegnazione di etichette unificato di Azure Information Protection per Windows
-description: Istruzioni per rimuovere etichette di riservatezza e protezione da file che sono stati etichettati tramite Azure Information Protection.
+title: Rimuovere etichette usando il client di assegnazione di etichette unificato di Azure Information Protection
+description: Le istruzioni per rimuovere etichette di riservatezza e protezione da file e messaggi di posta elettronica tramite Azure Information Protection unified client imprevisto delle etichette.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 04/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ''
 ms.suite: ems
-ms.openlocfilehash: 187c36acddb8a6b2e5b1451500640dfd832a8f3f
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: a2443a632fadf51aab5bb59b9e96b7b16547807d
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181135"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767700"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection"></a>Manuale dell'utente: Rimuovere etichette e protezione da file e messaggi di posta elettronica che sono stati etichettati tramite Azure Information Protection
 

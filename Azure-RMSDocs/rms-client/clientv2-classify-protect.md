@@ -1,5 +1,5 @@
 ---
-title: Classificare e proteggere tramite il client di assegnazione di etichette unificato di Azure Information Protection per Windows
+title: Classifica e Proteggi - Azure Information Protection unified client l'assegnazione di etichette
 description: Istruzioni classificare e proteggere documenti e messaggi di posta elettronica quando si usa Azure Information Protection client per l'assegnazione di etichette per Windows unificata.
 author: cabailey
 ms.author: cabailey
@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 0404acb6f79100a78d955a94f67ea0a0a7aaf604
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 1b05cf8f5194c8491a2aa7bb687622e821e770cb
+ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181387"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64880133"
 ---
-# <a name="user-guide-classify-and-protect-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Manuale dell'utente: Classificare e proteggere un file o un messaggio di posta elettronica usando il client di assegnazione di etichette unificato di Azure Information Protection per Windows
+# <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Manuale dell'utente: Classificare e proteggere con il client di assegnazione di etichette unificato di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 >
@@ -44,11 +44,11 @@ In alternativa, se gli utenti esterni [gli account di business-to-business (B2B)
 
 ## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Uso delle app di Office per classificare e proteggere documenti e messaggi di posta elettronica
 
-Dal **Home** scheda, seleziona la **sensibilità** nella barra multifunzione e quindi selezionare una delle etichette che è stato configurato per l'utente. Ad esempio:
+Dal **Home** scheda, seleziona la **sensibilità** nella barra multifunzione e quindi selezionare una delle etichette che è stato configurato per l'utente. Ad esempio: 
 
 ![Esempio di pulsante di sensibilità](../media/sensitivity-not-set-callout.png)
 
-Oppure, se si è scelto **Mostra barra** dal **sensibilità** pulsante, è possibile selezionare un'etichetta dalla barra di Azure Information Protection. Ad esempio: 
+Oppure, se si è scelto **Mostra barra** dal **sensibilità** pulsante, è possibile selezionare un'etichetta dalla barra di Azure Information Protection. Ad esempio:
 
 ![Esempio della barra di Azure Information Protection](../media/info-protect-barv2-not-set-callout.png)
 
@@ -112,7 +112,7 @@ La guida dell'amministratore contiene un elenco completo dei tipi di file suppor
 
 2. Nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** usare le etichette in modo analogo a un'applicazione di Office, che consente di impostare la classificazione e la protezione come definito dall'amministratore. 
 
-   - Se nessuna delle etichette può essere selezionata (sono visualizzate in grigio): il file selezionato non supporta la classificazione, ma è possibile proteggerlo con le autorizzazioni personalizzate (passaggio 3). Ad esempio:
+   - Se nessuna delle etichette può essere selezionata (sono visualizzate in grigio): il file selezionato non supporta la classificazione, ma è possibile proteggerlo con le autorizzazioni personalizzate (passaggio 3). Ad esempio: 
 
      ![Nessuna etichetta disponibile nella finestra di dialogo Classifica e proteggi - Azure Information Protection**](../media/v2info-protect-dialog-labels-dimmed.png)
 
@@ -134,7 +134,7 @@ La guida dell'amministratore contiene un elenco completo dei tipi di file suppor
 
 5. Fare clic su **Applica** e attendere la visualizzazione del messaggio **Operazione completata** per vedere i risultati. e quindi fare clic su **Chiudi**.
 
-Il file o i file selezionati verranno classificati e protetti in base alle selezioni specificate. In alcuni casi (quando l'aggiunta della protezione modifica l'estensione del nome di file) il file originale in Esplora file viene sostituito con un nuovo file con l'icona di blocco di Azure Information Protection. Ad esempio: 
+Il file o i file selezionati verranno classificati e protetti in base alle selezioni specificate. In alcuni casi (quando l'aggiunta della protezione modifica l'estensione del nome di file) il file originale in Esplora file viene sostituito con un nuovo file con l'icona di blocco di Azure Information Protection. Ad esempio:
 
 ![File protetto con l'icona di blocco di Azure Information Protection](../media/Pfile.png)
 

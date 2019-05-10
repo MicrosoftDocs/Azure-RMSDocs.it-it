@@ -1,6 +1,6 @@
 ---
-title: Visualizzare e usare i documenti protetti con il client AIP
-description: Istruzioni per visualizzare e usare un documento protetto che richiede l'installazione del client Azure Information Protection.
+title: Visualizzare i file protetti con il Visualizzatore Azure Information Protection
+description: Istruzioni per visualizzare e usare un file protetto che è necessario avere il Visualizzatore Azure Information Protection installato.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -11,20 +11,20 @@ ms.service: information-protection
 ms.assetid: ce1c7d4c-b5ff-4672-8b9a-a72129bac992
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d477d8112afd48a61a3f0977f2550fb12dff67a2
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: 8dea94af41cb445f895ee4cbc2c424fc169ae117
+ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182960"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64880210"
 ---
-# <a name="user-guide-view-and-use-files-that-have-been-protected-by-rights-management"></a>Manuale dell'utente: Visualizzare e usare i file che sono stati protetti da Rights Management
+# <a name="user-guide-view-protected-files-with-the-azure-information-protection-viewer"></a>Manuale dell'utente: Visualizzare i file protetti con il Visualizzatore Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 >
 > *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Per visualizzare un documento protetto, spesso è sufficiente aprirlo. Ad esempio, è possibile fare doppio clic su un allegato in un messaggio di posta elettronica o fare doppio clic su un file in Esplora file oppure è possibile fare clic su un collegamento a un file.
+Per visualizzare un file protetto, spesso è sufficiente aprirlo. Ad esempio, è possibile fare doppio clic su un allegato in un messaggio di posta elettronica o fare doppio clic su un file in Esplora file oppure è possibile fare clic su un collegamento a un file.
 
 Se i file non si aprono immediatamente, il **visualizzatore Azure Information Protection** potrebbe essere in grado di aprirli. Il visualizzatore è in grado di aprire file di testo protetti, file di immagine protetti, file PDF protetti e tutti i file con estensione **PFILE**.
 

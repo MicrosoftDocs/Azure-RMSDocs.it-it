@@ -1,6 +1,6 @@
 ---
 title: Configurare utenti con privilegi avanzati per Azure Rights Management - AIP
-description: Informazioni sulla funzionalità per utenti con privilegi avanzati del servizio Azure Rights Management di Azure Information Protection e relativa implementazione in modo che gli utenti e i servizi autorizzati possano sempre leggere e controllare i dati che Azure Rights Management protegge per l'organizzazione. Questa possibilità viene definita anche "ragionamento sui dati" e riveste un ruolo di importanza critica nel mantenimento del controllo sui dati dell'organizzazione.
+description: Comprendere e implementare la funzionalità per utenti con privilegi avanzati del servizio Azure Rights Management di Azure Information Protection, in modo che gli utenti autorizzati e i servizi possono sempre leggere e analizzare ("" ragionare "sui") dell'organizzazione di dati protetti.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4a0583b4cc288385520d2990d6f297a58a81d1cc
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: 9aa95d164f0211248a45f2376345608f50bac5f6
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179662"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767879"
 ---
 # <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Configurazione degli utenti con privilegi avanzati per Azure Rights Management e servizi di individuazione o ripristino dei dati
 

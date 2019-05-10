@@ -1,24 +1,24 @@
 ---
 title: Preparare l'ambiente per Azure RMS e AD RMS
-description: Informazioni aggiuntive per un'implementazione di Azure Rights Management con AD RMS.
+description: Linee guida per gli amministratori se si dispone di Azure Rights Management con AD RMS distribuito.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/29/2018
+ms.date: 04/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c8219221fe9b932e0d09901dccf496df5f83ef76
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: 572806eefd9207a2d3d6bbcab12ad274c116f49f
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183926"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767646"
 ---
-# <a name="preparing-the-environment-for-azure-rights-management-when-you-also-have-active-directory-rights-management-services-ad-rms"></a>Preparazione dell'ambiente per Azure Rights Management quando è presente anche Active Directory Rights Management Services (AD RMS)
+# <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>Preparare l'ambiente per Azure Rights Management quando si usa AD RMS
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 

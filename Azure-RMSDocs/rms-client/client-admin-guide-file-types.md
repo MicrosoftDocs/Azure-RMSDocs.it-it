@@ -1,5 +1,5 @@
 ---
-title: Tipi di file supportati dal client Azure Information Protection
+title: Tipi di file supportati - client Azure Information Protection
 description: Dettagli tecnici sui tipi di file supportati, le estensioni di file e i livelli di protezione per gli amministratori che sono responsabili del client Azure Information Protection per Windows.
 author: cabailey
 ms.author: cabailey
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 21a795a6386b5d030718bc39a094d9251db570e5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: 158a5703fa776aed01151fdf09474e54cc3baaa1
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183425"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64768317"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guida dell'amministratore: Tipi di file supportati dal client Azure Information Protection
 

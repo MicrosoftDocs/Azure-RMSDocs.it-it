@@ -4,20 +4,20 @@ description: Istruzioni per la distribuzione per le versioni dello scanner Azure
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/23/2019
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: edc855c5a92e6f1bac8f3f175b84cdeed1afaa88
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 3d394c455d6012e4b617a6109db47363661d8814
+ms.sourcegitcommit: 7f769dfa8d4758f13b2c7f83d89fabbb84716290
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180214"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65191880"
 ---
-# <a name="deploying-previous-versions-of-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione di versioni precedenti dello scanner Azure Information Protection per classificare e proteggere i file automaticamente
+# <a name="deploying-previous-versions-of-the-azure-information-protection-scanner"></a>Distribuzione di versioni precedenti dello scanner Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2*
 >
@@ -316,7 +316,7 @@ Per modificare il comportamento predefinito dello scanner per la protezione di t
 
 - Lo scanner ha un proprio comportamento predefinito: solo i formati di file di Office e i documenti PDF sono protetti per impostazione predefinita. Se il Registro di sistema non viene modificato, tutti gli altri tipi di file non verranno etichettati né protetti dallo scanner.
 
-- Se si vuole lo stesso comportamento di protezione predefinito del client Azure Information Protection, in cui tutti i file vengono automaticamente protetti con la protezione nativa o generica: specificare il carattere jolly `*` come chiave del Registro di sistema e `Default` come dati valore.
+- Se si desidera lo stesso comportamento di protezione predefinito del client Azure Information Protection, in cui tutti i file vengono automaticamente protetti con la protezione nativa o generica: Specificare il `*` con caratteri jolly come chiave del Registro di sistema `Encryption` come valore (REG_SZ), e `Default` come valore di dati.
 
 Quando si modifica il Registro di sistema, creare manualmente la chiave **MSIPC** e la chiave **FileProtection** se non esistono, nonché una chiave per ogni estensione del nome file.
 

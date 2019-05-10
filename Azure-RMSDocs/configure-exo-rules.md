@@ -1,22 +1,22 @@
 ---
-title: Configurare le regole del flusso di posta di Exchange Online per le etichette di Azure Information Protection
+title: Regole del flusso di posta elettronica Exchange Online per le etichette di Azure Information Protection
 description: Istruzioni ed esempi per configurare le regole del flusso di posta di Exchange Online per le etichette di Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/23/2019
+ms.date: 04/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: f96daf289d5fdde320b98482eaf921646023e480
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 839f5e9a63f9e180cddcb9ac5cd4afd2b8474d1e
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "62773719"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64768002"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configurazione delle regole del flusso di posta di Exchange Online per le etichette di Azure Information Protection
 

@@ -4,18 +4,18 @@ description: Eseguire la migrazione di etichette di Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/18/2019
+ms.date: 05/08/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 260e6cd429e428fd59782ef33bd557750e3c8eb5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 89a8c1045fcf203ec95c5e79ed80588dfe167459
+ms.sourcegitcommit: 9c6f36a291dd50c0f3806a4c9660895613c6ad72
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179628"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65213080"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Come eseguire la migrazione di etichette di Azure Information Protection a etichette di riservatezza di Office 365
 
@@ -24,9 +24,12 @@ ms.locfileid: "60179628"
 > *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!IMPORTANT]
-> Questa funzionalità è disponibile in anteprima ed esegue la migrazione del tenant a una nuova piattaforma. La migrazione non è reversibile. La nuova piattaforma supporta l'etichettatura unificata. Le etichette create e gestite possono essere usate da più client e servizi che supportano le [soluzioni basate su Microsoft Information Protection](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection).
+>
+> Questa funzionalità è ora livello generale per tutti i tenant, anche se si potrà riscontrare la parola **Preview** nel portale di Azure per un paio di settimane.
 
-Eseguire la migrazione delle etichette se si vuole avere la possibilità di usarle come etichette di riservatezza di Office 365 con i [client e i servizi che supportano l'etichettatura unificata](#clients-and-services-that-support-unified-labeling). È possibile gestire e pubblicare queste etichette dal Centro sicurezza e conformità di Office 365 oppure dal Centro sicurezza Microsoft 365 e dal Centro conformità Microsoft 365. Dopo la migrazione, il client Azure Information Protection continuerà a scaricare le etichette con i rispettivi criteri di Azure Information Protection dal portale di Azure.
+Eseguire la migrazione delle etichette in Azure Information Protection in modo che sia possibile usarle come etichette di riservatezza dal [client e servizi che supportano l'assegnazione di etichette unificata](#clients-and-services-that-support-unified-labeling).
+
+Dopo la migrazione, gestire e pubblicare queste etichette da Office 365 Security & centro conformità, o il Centro sicurezza di Microsoft 365 e centro di conformità di Microsoft 365. Queste etichette sono utilizzabile dal client Azure Information Protection unified imprevisto delle etichette. Se si continua a usare il client Azure Information Protection, il client continua a scaricare le etichette con i criteri di Azure Information Protection dal portale di Azure.
 
 Prima di passare alle istruzioni dettagliate per la migrazione delle etichette può essere utile leggere queste domande frequenti:
 
@@ -53,8 +56,6 @@ Prima di eseguire la migrazione delle etichette, prendere nota delle seguenti mo
 
 - Non tutti i client supportano attualmente le etichette unificate. Assicurarsi di avere [client supportati](#clients-and-services-that-support-unified-labeling) e predisporre l'amministrazione sia nel portale di Azure (per i client che non supportano le etichette unificate) sia nei centri di amministrazione (per i client che supportano le etichette unificate).
 
-- Se è ancora in corso la definizione e la configurazione delle etichette da usare, è consigliabile completare questo processo usando il portale di Azure e quindi eseguire la migrazione delle etichette. Questa strategia evita la duplicazione delle etichette durante il processo di migrazione e la successiva modifica nei centri di amministrazione.
-
 - I criteri, incluse le impostazioni dei criteri e gli utenti autorizzati all'accesso (criteri con ambito) e tutte le impostazioni client avanzate non vengono sottoposti a migrazione. Per le modifiche di cui non viene eseguita la migrazione sarà necessario configurare le opzioni pertinenti nei centri di amministrazione dopo la migrazione delle etichette.
     
     Per un'esperienza utente più uniforme è consigliabile pubblicare le stesse etichette negli stessi ambiti nei centri di amministrazione.
@@ -75,7 +76,7 @@ Prima di eseguire la migrazione delle etichette, prendere nota delle seguenti mo
 
     - Dopo la creazione dell'etichetta, è necessario pubblicarla in uno dei centri di amministrazione per renderla disponibile ad applicazioni e servizi.
     
-    - Quando un'etichetta viene rinominata, è necessario modificarla. L'operazione può essere eseguita in uno dei centri di amministrazione o nel portale di Azure. 
+    - Quando un'etichetta viene rinominata, è necessario modificarla. L'operazione può essere eseguita in uno dei centri di amministrazione o nel portale di Azure.
 
 - Per ogni etichetta il portale di Azure consente di visualizzare solo il nome visualizzato dell'etichetta, che è modificabile. Nei centri di amministrazione vengono mostrati sia il nome visualizzato per un'etichetta che il nome dell'etichetta. Il nome dell'etichetta è il nome iniziale specificato al momento della creazione dell'etichetta. Il servizio back-end usa questa proprietà per l'identificazione.
 
@@ -141,11 +142,16 @@ Usare le istruzioni seguenti per eseguire la migrazione del tenant e delle etich
 
 È necessario essere un amministratore di conformità, l'amministratore della sicurezza o amministratore globale per eseguire la migrazione delle etichette.
 
+> [!NOTE]
+> Se si dispone di etichette di conservazione o criteri di prevenzione della perdita dei dati per Office 365, si consiglia di avere il ruolo di amministratore di conformità o ruolo di amministratore globale per eseguire la migrazione delle etichette.
+> 
+> Gli amministratori della sicurezza non ha accesso alla conservazione dei dati o le etichette criteri prevenzione della perdita, pertanto, se si dispone di uno di questi elementi e hanno lo stesso nome delle etichette di Azure Information Protection, il processo di migrazione non è possibile completare manualmente finché non si rinomina uno dei duplicati. Tuttavia, se si dispone di uno degli altri ruoli, il processo di migrazione possibile rinominare l'etichetta di Azure Information Protection, in modo da poter completare la migrazione.
+
 1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**.
     
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
 
-2. Dall'opzione di menu **Gestisci** selezionare **Etichettatura unificata (anteprima)**.
+2. Dal **Manage** opzione di menu, selezionare **unificato l'assegnazione di etichette**.
 
 3. Nel pannello **Azure Information Protection - Etichettatura unificata** selezionare **Attiva** e seguire le istruzioni online.
     
@@ -186,4 +192,4 @@ Per verificare se i client e i servizi usati dall'utente supportano l'etichettat
 
 Per altre informazioni sulle etichette migrate che possono ora essere configurate e pubblicate in uno dei centri di amministrazione, vedere [Panoramica delle etichette di riservatezza](/Office365/SecurityCompliance/sensitivity-labels).
 
-Per leggere il post di blog dell'annuncio: [Announcing the availability of unified labeling management in the Security & Compliance Center](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Announcing-the-availability-of-unified-labeling-management-in/ba-p/262492) (Annuncio della disponibilità della gestione dell'etichettatura unificata nel Centro sicurezza e conformità).
+Se non già stato fatto, installare il client di assegnazione di etichette unificato di Azure Information Protection. Per informazioni sulla versione di una Guida dell'amministratore e Guida dell'utente, vedere [unificata di Azure Information Protection client per l'assegnazione di etichette per Windows](./rms-client/aip-clientv2.md).

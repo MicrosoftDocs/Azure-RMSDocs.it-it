@@ -1,5 +1,5 @@
 ---
-title: Classificare con il client di assegnazione di etichette unificato di Azure Information Protection per Windows
+title: Classificazione tramite il client di assegnazione di etichette unificato di Azure Information Protection
 description: Istruzioni classificare i documenti e messaggi di posta elettronica quando si usa Azure Information Protection client per l'assegnazione di etichette per Windows unificata.
 author: cabailey
 ms.author: cabailey
@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 630959840574c0441719d317dda254242cad3b3d
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: c7ec1c5f6a929d9b6b810b647e6cb6dbe3c42316
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182977"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767967"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Manuale dell'utente: Classificare un file o un messaggio di posta elettronica usando il client di assegnazione di etichette unificato di Azure Information Protection per Windows
 

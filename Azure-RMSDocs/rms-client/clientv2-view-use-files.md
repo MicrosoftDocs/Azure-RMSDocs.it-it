@@ -1,6 +1,6 @@
 ---
-title: Visualizzare i file protetti usando il client di assegnazione di etichette unificato di Azure Information Protection per Windows
-description: Istruzioni per visualizzare un file protetto che è necessario avere Azure Information Protection unified imprevisto delle etichette installato il client.
+title: Visualizzare i file protetti con il client di assegnazione di etichette unificato di Azure Information Protection
+description: Istruzioni per visualizzare un file protetto che è necessario disporre di Azure Information Protection unified imprevisto delle etichette viewer installata.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -9,20 +9,20 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 6c6e5ddd7ddc39810e05cdc8b2bf0f5b24bf8176
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 2df0bd25bf30eb94aab17a8dae89332b4e96389b
+ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180988"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64880207"
 ---
-# <a name="user-guide-view-files-that-have-been-protected-by-rights-management"></a>Manuale dell'utente: Visualizzare i file che sono stati protetti da Rights Management
+# <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>Manuale dell'utente: Visualizzare i file protetti con il client di assegnazione di etichette unificato di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 >
 > *Istruzioni per: [Azure Information Protection unified client per l'assegnazione di etichette per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Per visualizzare un documento protetto, spesso è sufficiente aprirlo. Ad esempio, è possibile fare doppio clic su un allegato in un messaggio di posta elettronica o fare doppio clic su un file in Esplora file oppure è possibile fare clic su un collegamento a un file.
+Per visualizzare un file protetto, spesso è sufficiente aprirlo. Ad esempio, è possibile fare doppio clic su un allegato in un messaggio di posta elettronica o fare doppio clic su un file in Esplora file oppure è possibile fare clic su un collegamento a un file.
 
 Se i file non si aprono immediatamente, il **visualizzatore Azure Information Protection** potrebbe essere in grado di aprirli. Il visualizzatore è in grado di aprire file di testo protetti, file di immagine protetti, file PDF protetti e tutti i file con estensione **PFILE**.
 

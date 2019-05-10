@@ -12,11 +12,11 @@ ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
 ms.openlocfilehash: 530b7e112f4ee66f9117bf3816ff19ab179b3811
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "62773645"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64768255"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
@@ -167,7 +167,7 @@ Tuttavia, i nomi e le descrizioni delle etichette specificati non vengono automa
 
 ## <a name="post-installation-tasks"></a>Attività post-installazione
 
-Dopo aver installato il client Azure Information Protection, accertarsi di fornire agli utenti istruzioni per etichettare i documenti e i messaggi di posta elettronica, oltre a linee guida per le etichette da scegliere per scenari specifici. Ad esempio: 
+Dopo aver installato il client Azure Information Protection, accertarsi di fornire agli utenti istruzioni per etichettare i documenti e i messaggi di posta elettronica, oltre a linee guida per le etichette da scegliere per scenari specifici. Ad esempio:
 
 - Istruzioni per l'utente online: [Guida per l'utente di Azure Information Protection](client-user-guide.md)
 

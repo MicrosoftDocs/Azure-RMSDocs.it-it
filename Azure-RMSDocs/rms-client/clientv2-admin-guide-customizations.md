@@ -1,5 +1,5 @@
 ---
-title: Configurazioni personalizzate per il client di assegnazione di etichette unificata di Azure Information Protection
+title: Configurazioni personalizzate - Azure Information Protection unified client l'assegnazione di etichette
 description: Informazioni sulla personalizzazione del client di assegnazione di etichette unificato di Azure Information Protection per Windows.
 author: cabailey
 ms.author: cabailey
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c565c025b6ae3001984141a691ed37a057203f38
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: a889e29079865d41405727010e3d2060ff870e95
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181090"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767738"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di assegnazione di etichette unificata di Azure Information Protection
 

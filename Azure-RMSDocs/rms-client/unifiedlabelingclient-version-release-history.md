@@ -1,21 +1,21 @@
 ---
-title: Azure Information Protection unified client - versione l'assegnazione di etichette cronologia delle versioni e criteri di supporto
+title: Azure Information Protection unified client l'assegnazione di etichette - criterio di cronologia e supporto della versione
 description: Vedere le informazioni sulla versione del client per l'etichettatura unificata di Azure Information Protection per Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 1262a2f1a70002686aed0bad47354cdc5ac23bac
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
-ms.translationtype: HT
+ms.openlocfilehash: 91d16668c82a542984b177f539b276d6e752194f
+ms.sourcegitcommit: 8e207e8e1459625c77e712f45798a88abe079571
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180886"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64982161"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection unified client - versione l'assegnazione di etichette cronologia delle versioni e criteri di supporto
 
@@ -41,9 +41,15 @@ Usare le informazioni seguenti per vedere cosa è supportato per la versione con
 
 Il client installa un componente aggiuntivo di Office per i computer Windows, un'estensione per Esplora File e un modulo di PowerShell. Questo client ha gli stessi [prerequisiti](../requirements.md) del client Azure Information Protection che scarica i criteri da Azure.
 
-Per confrontare funzioni e funzionalità con quelle del client Azure Information Protection, vedere [Confronto delle funzionalità dei client](use-client.md#compare-the-clients).
+Per confrontare caratteristiche e funzionalità con il client Azure Information Protection, vedere [confrontare i client](use-client.md#compare-the-clients).
 
-## <a name="version-20778"></a>Versione 2.0.778
+## <a name="version-207790"></a>Versione 2.0.779.0
+
+**Data di rilascio**: 05/01/2019
+
+Questa versione include una singola correzione per risolvere un problema di race condition in cui in alcuni casi, non le etichette visualizzate nell'app di Office o Esplora File.
+
+## <a name="version-207780"></a>Versione 2.0.778.0
 
 **Data di rilascio**: 04/16/2019
 

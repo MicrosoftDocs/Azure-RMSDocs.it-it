@@ -1,21 +1,21 @@
 ---
 title: Distribuire lo scanner Azure Information Protection - AIP
-description: Istruzioni per installare, configurare ed eseguire la versione di disponibilità generale corrente dello scanner Azure Information Protection per individuare, classificare e proteggere i file negli archivi dati.
+description: Istruzioni per installare, configurare ed eseguire la versione corrente dello scanner Azure Information Protection per individuare, classificare e proteggere i file negli archivi dati.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/24/2019
+ms.date: 05/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 75ea97484b226617c33f985a40035e3b641434c5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 17a5406e4e7fff0d7acfa431b7a9731db19b2078
+ms.sourcegitcommit: 7f769dfa8d4758f13b2c7f83d89fabbb84716290
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "62773702"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65191911"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -142,9 +142,9 @@ Prima di installare lo scanner o di eseguire l'aggiornamento dalla versione disp
     
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
     
-2. Individuare il **Scanner** le opzioni di menu e selezionare **profili**.
+2. Individuare le opzioni del menu **Scanner** e selezionare **Profili**.
 
-3. Nel **Azure Information Protection - profili** blade, selezionare **Add**:
+3. Nel pannello **Azure Information Protection - Profili** selezionare **Aggiungi**:
     
     ![Aggiungere il profilo per lo scanner di Azure Information Protection](./media/scanner-add-profile.png)
 
@@ -204,7 +204,7 @@ Prima di installare lo scanner o di eseguire l'aggiornamento dalla versione disp
 
 9. Se si vuole aggiungere un altro repository, ripetere i passaggi 7 e 8.
 
-10. È ora possibile chiudere il **aggiungere un nuovo profilo** pannello e verrà visualizzato il nome del profilo visualizzato nei **Azure Information Protection - profili** pannello, insieme al **pianificazione** che Mostra colonne **manuali** e il **IMPONI** colonna è vuota.
+10. È ora possibile chiudere il pannello **Aggiungi un nuovo profilo**. Verrà visualizzato il nome del profilo nel pannello **Azure Information Protection - Profili** insieme alla colonna **PIANIFICAZIONE** con l'impostazione **Manuale** e la colonna **IMPONI** vuota.
 
 A questo punto si è pronti per installare lo scanner con il profilo di scanner appena creato.
 
@@ -380,7 +380,7 @@ Per modificare il comportamento predefinito dello scanner per la protezione di t
 
 - Lo scanner ha un proprio comportamento predefinito: solo i formati di file di Office e i documenti PDF sono protetti per impostazione predefinita. Se il Registro di sistema non viene modificato, tutti gli altri tipi di file non verranno etichettati né protetti dallo scanner.
 
-- Se si vuole lo stesso comportamento di protezione predefinito del client Azure Information Protection, in cui tutti i file vengono automaticamente protetti con la protezione nativa o generica: specificare il carattere jolly `*` come chiave del Registro di sistema e `Default` come dati valore.
+- Se si desidera lo stesso comportamento di protezione predefinito del client Azure Information Protection, in cui tutti i file vengono automaticamente protetti con la protezione nativa o generica: Specificare il `*` con caratteri jolly come chiave del Registro di sistema `Encryption` come valore (REG_SZ), e `Default` come valore di dati.
 
 Quando si modifica il Registro di sistema, creare manualmente la chiave **MSIPC** e la chiave **FileProtection** se non esistono, nonché una chiave per ogni estensione del nome file.
 
