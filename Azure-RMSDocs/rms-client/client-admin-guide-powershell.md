@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2d703eff5d31563c1c34b9937f9a1d2f45e93064
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 9d681f986028f83eb3fe59d9e295db6873828052
+ms.sourcegitcommit: 96a05d1abe20b7c588dccaecea18a73b648179b5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183777"
+ms.lasthandoff: 05/11/2019
+ms.locfileid: "65535318"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
 
@@ -26,7 +26,7 @@ ms.locfileid: "60183777"
 
 Quando si installa il client di Azure Information Protection, vengono installati automaticamente i comandi di PowerShell. Ciò consente di gestire il client eseguendo i comandi che è possibile inserire negli script per l'automazione.
 
-I cmdlet vengono installati con il modulo **AzureInformationProtection** di PowerShell. Questo modulo include tutti i cmdlet per Rights Management dello strumento di protezione RMS (non più supportato). Sono inoltre disponibili cmdlet che usano Azure Information Protection per l'assegnazione di etichette. Ad esempio: 
+I cmdlet vengono installati con il modulo **AzureInformationProtection** di PowerShell. Questo modulo include tutti i cmdlet per Rights Management dello strumento di protezione RMS (non più supportato). Sono inoltre disponibili cmdlet che usano Azure Information Protection per l'assegnazione di etichette. Ad esempio:
 
 |Cmdlet per le etichette|Esempio di utilizzo|
 |----------------|---------------|
@@ -312,7 +312,7 @@ L'output potrebbe essere simile al seguente:
     ---------             -------------
     C:\Test.docx          C:\Test.docx
 
-Per proteggere tutti i file in una cartella, usare il parametro **-Folder** con una lettera di unità e un percorso oppure un percorso UNC. Ad esempio: 
+Per proteggere tutti i file in una cartella, usare il parametro **-Folder** con una lettera di unità e un percorso oppure un percorso UNC. Ad esempio:
 
     Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -335,7 +335,7 @@ L'output potrebbe essere simile al seguente:
     --------                              ------
     \Server1\Documents\Test1.docx         Protected
 
-Per rimuovere la protezione di un file, è necessario avere gli stessi diritti di proprietario o di estrazione usati per la protezione del file oppure essere un utente con privilegi avanzati per i cmdlet. Usare quindi il cmdlet Unprotect. Ad esempio: 
+Per rimuovere la protezione di un file, è necessario avere gli stessi diritti di proprietario o di estrazione usati per la protezione del file oppure essere un utente con privilegi avanzati per i cmdlet. Usare quindi il cmdlet Unprotect. Ad esempio:
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -441,7 +441,7 @@ L'output potrebbe essere simile al seguente:
     \\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx   
     \\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
 
-Quando l'estensione del file non cambia dopo aver applicato la protezione, è sempre possibile usare il cmdlet Get-RMSFileStatus successivamente per controllare se il file è protetto. Ad esempio: 
+Quando l'estensione del file non cambia dopo aver applicato la protezione, è sempre possibile usare il cmdlet Get-RMSFileStatus successivamente per controllare se il file è protetto. Ad esempio:  
 
     Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
 
@@ -486,7 +486,7 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
 
 1. In una nuova finestra del browser accedere al [Portale di Azure](https://portal.azure.com/).
 
-2. Per il tenant di Azure AD usato con Azure Information Protection, passare ad **Azure Active Directory** > **Registrazioni per l'app**. 
+2. Per il tenant di Azure AD che usa con Azure Information Protection, passare a **Azure Active Directory** > **registrazioni per l'App (Legacy)**. 
 
 3. Selezionare **Registrazione nuova applicazione** per creare l'app Web o l'applicazione API. Nell'etichetta **Crea** specificare i valori seguenti e quindi fare clic su **Crea**:
 
@@ -610,7 +610,7 @@ Procedura generale:
     Facoltativamente, eliminare l'attività. Se il token scade, è necessario ripetere questa procedura; in questo caso, potrebbe essere più opportuno uscire dall'attività configurata in modo che sia pronta per una nuova esecuzione quando si copia il nuovo script di PowerShell con il nuovo valore del token.
 
 ## <a name="next-steps"></a>Passaggi successivi
-Per le informazioni della Guida sui cmdlet, all'interno di una sessione di PowerShell digitare `Get-Help <cmdlet name> cmdlet`. Per ottenere le informazioni più aggiornate, usare il parametro -online. Ad esempio: 
+Per le informazioni della Guida sui cmdlet, all'interno di una sessione di PowerShell digitare `Get-Help <cmdlet name> cmdlet`. Per ottenere le informazioni più aggiornate, usare il parametro -online. Ad esempio:  
 
     Get-Help Get-RMSTemplate -online
 
