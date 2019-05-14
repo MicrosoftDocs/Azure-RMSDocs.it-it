@@ -1,5 +1,5 @@
 ---
-title: Esercitazione - Configurare le impostazioni dei criteri di Azure Information Protection per classificare documenti e messaggi di posta elettronica - AIP
+title: Esercitazione - Usare le impostazioni dei criteri di Azure Information Protection per classificare i dati
 description: Esercitazione introduttiva che illustra la configurazione delle impostazioni dei criteri di Azure Information Protection per agevolare la classificazione dei documenti e dei messaggi di posta elettronica dell'organizzazione.
 author: cabailey
 ms.author: cabailey
@@ -8,12 +8,12 @@ ms.date: 04/23/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: d5d6988c5180a58ed9de5c8111036ee380044584
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: a09e7bf3b5f4da30dc0e92d150f3a485ccf85693
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "62773605"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64768091"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Esercitazione: Configurare impostazioni dei criteri di Azure Information Protection che interagiscono tra loro
 

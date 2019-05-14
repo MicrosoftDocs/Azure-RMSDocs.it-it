@@ -1,24 +1,24 @@
 ---
-title: "Esercitazione: configurare Azure Information Protection per il controllo dell'oversharing delle informazioni - AIP"
-description: Esercitazione introduttiva per la configurazione e la visualizzazione di impostazioni avanzate con le quali il client di Azure Information Protection mostra un avviso, chiede una giustificazione o blocca l'invio di messaggi da Outlook.
+title: Esercitazione - Usare Azure Information Protection per il controllo dell'oversharing - AIP
+description: Esercitazione introduttiva per configurare e vedere in azione le impostazioni avanzate con le quali il client di Azure Information Protection mostra un avviso, chiede una giustificazione o blocca l'invio di messaggi da Outlook.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 04/24/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 977c26e24ebb9538216704898493f218f86a7556
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 38def86f9bbc32edc083f856cf43101890b5a22e
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "62773628"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64562788"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Esercitazione: configurare Azure Information Protection per il controllo dell'oversharing delle informazioni con Outlook
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
-
+>
 > *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 In questa esercitazione si apprenderà come:
@@ -75,7 +75,7 @@ Per specificare un'etichetta è necessario conoscerne l'ID, individuabile nel po
 
 4. Copiare e incollare il valore dell'ID etichetta in un file temporaneo, in modo che questo valore possa essere facilmente copiato per un passaggio successivo. In questo esempio, il valore dell'ID etichetta è **0e421e6d-ea17-4fdb-8f01-93a3e71333b8**.
 
-5. Chiudere il pannello **Etichetta: General**, ma non chiudere il portale di Azure.
+5. Chiudere il pannello **Etichetta: Generale**, ma non chiudere il portale di Azure.
 
 ## <a name="create-a-scoped-policy-to-test-the-new-advanced-client-settings"></a>Creare un criterio con ambito per testare le nuove impostazioni avanzate del client
 

@@ -1,19 +1,19 @@
 ---
-title: "Avvio rapido: Configurare un'etichetta che consente agli utenti di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate - AIP"
+title: Avvio rapido - Configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica - AIP
 description: Configurare un'etichetta che protegge un messaggio di posta elettronica di un utente applicando automaticamente la protezione Non inoltrare.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 04/25/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 052dc5d4bbbd0a74bb92f87351ece62eb37e565b
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 629f3558d3e8b605136ea6857826763287755a79
+ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181685"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64767905"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Guida introduttiva: configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate
 
