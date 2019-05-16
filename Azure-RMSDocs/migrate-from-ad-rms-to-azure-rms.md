@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 264de1992659b2bd8c7464248704b514ae764274
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: c1fb307d06c277dd6f515adbff35a844f65f77cc
+ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768194"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708906"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrazione da AD RMS ad Azure Information Protection
 
@@ -164,11 +164,11 @@ I passaggi della migrazione possono essere suddivisi in cinque fasi eseguibili i
 
     - **Migrazione da una chiave protetta tramite HSM a un'altra**:
 
-        Da chiavi archiviate da un modulo di protezione hardware per AD RMS a chiave del tenant di Azure Information Protection gestita dal cliente (scenario "bring your own key" o BYOK). È necessario eseguire altri passaggi per trasferire la chiave dal modulo di protezione hardware di Thales locale ad Azure Key Vault e autorizzare il servizio Azure Rights Management all'uso di tale chiave. La chiave protetta tramite HSM esistente deve essere protetta dal modulo. Le chiavi protette da OCS non sono supportate dai servizi di Rights Management.
+        Da chiavi archiviate da un modulo di protezione hardware per AD RMS a chiave del tenant di Azure Information Protection gestita dal cliente (scenario "bring your own key" o BYOK). È necessario eseguire passaggi aggiuntivi per trasferire la chiave dal nCipher locale HSM ad Azure Key Vault e autorizzare il servizio Azure Rights Management di usare questa chiave. La chiave protetta tramite HSM esistente deve essere protetta dal modulo. Le chiavi protette da OCS non sono supportate dai servizi di Rights Management.
 
     - **Migrazione da una chiave protetta tramite software a una chiave protetta tramite HSM**:
 
-        Da chiavi basate su password gestite a livello centrale in AD RMS a chiave del tenant di Azure Information Protection gestita dal cliente (scenario "bring your own key" o BYOK). È necessaria la configurazione più estesa, perché è innanzitutto necessario estrarre la chiave software e importarla in un modulo di protezione hardware locale e quindi eseguire i passaggi aggiuntivi per trasferire la chiave dal modulo di protezione hardware di Thales locale a un modulo di protezione hardware di Azure Key Vault e autorizzare il servizio Azure Rights Management all'uso dell'insieme di credenziali che archivia la chiave.
+        Da chiavi basate su password gestite a livello centrale in AD RMS a chiave del tenant di Azure Information Protection gestita dal cliente (scenario "bring your own key" o BYOK). Ciò richiede la configurazione più perché è necessario innanzitutto estrarre la chiave software e importarla in un modulo HSM locale e quindi eseguire i passaggi aggiuntivi per trasferire la chiave dal nCipher locale modulo di protezione hardware per un hardware di insieme di credenziali delle chiavi di Azure e autorizzare i diritti di Azure Servizio di gestione da usare l'insieme di credenziali delle chiavi che archivia la chiave.
 
 - **Passaggio 5. Attivare il servizio Azure Rights Management**
 

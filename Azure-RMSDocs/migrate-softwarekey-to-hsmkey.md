@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a9651e1c44f9f6fb59fb8a48fb4435212c827968
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 87edfae6959f5ce6c037379e7564449d53405aae
+ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184077"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708926"
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave tramite software a una chiave HSM protetta
 
@@ -29,7 +29,7 @@ Se non si tratta dello scenario di configurazione scelto, tornare al [Passaggio 
 
 Si tratta di una procedura in quattro parti per importare la configurazione di AD RMS in Azure Information Protection. La chiave del tenant di Azure Information Protection verrà gestita dall'utente (BYOK) in Insieme di credenziali delle chiavi di Azure.
 
-È innanzitutto necessario estrarre la chiave del certificato concessore di licenze server (SLC) dai dati di configurazione di AD RMS e trasferire la chiave in un modulo HSM di Thales locale, quindi creare il pacchetto e trasferire la chiave HSM in Insieme di credenziali delle chiavi di Azure, autorizzare il servizio Azure Rights Management di Azure Information Protection per l'accesso all'insieme di credenziali delle chiavi e infine importare i dati di configurazione.
+È necessario innanzitutto estrarre la chiave del certificato SLC concessore di licenze server da dati di configurazione di AD RMS e trasferire la chiave in un locale nCipher HSM, quindi creare il pacchetto e trasferire la chiave HSM ad Azure Key Vault, quindi autorizzare il servizio Azure Rights Management da Azure Information Protection per l'insieme di credenziali delle chiavi di accesso e quindi importare i dati di configurazione.
 
 Poiché la chiave del tenant di Azure Information Protection verrà archiviata e gestita da Insieme di credenziali delle chiavi di Azure, questa parte della migrazione richiede l'amministrazione in Insieme di credenziali delle chiavi di Azure oltre ad Azure Information Protection. Se Azure Key Vault viene gestito da un amministratore diverso da quello dell'organizzazione, è necessario coordinare e collaborare con tale amministratore per completare queste procedure.
 
@@ -74,7 +74,7 @@ Prima di iniziare, assicurarsi che l'organizzazione disponga di un insieme di cr
 
     - Se non si specifica la password quando si esegue questo comando (tramite il nome completo del parametro **TpdPassword** o il nome breve del parametro **pwd**), viene richiesto di specificarla.
 
-3. Nella stessa workstation disconnessa, collegare e configurare il modulo di protezione hardware Thales, in base alla documentazione di Thales. È ora possibile importare la chiave nel modulo di protezione hardware Thales collegato usando il comando seguente in cui è necessario sostituire il proprio nome di file per ContosoTPD.pem:
+3. Sulla medesima workstation disconnessa, collegare e configurare il modulo di protezione hardware, nCipher in base alla documentazione relativa a nCipher. È ora possibile importare la chiave nel nCipher collegati modulo di protezione hardware tramite il comando seguente in cui è necessario sostituire il nome del file per contosotpd. PEM:
 
         generatekey --import simple pemreadfile=e:\ContosoTPD.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
 
@@ -103,7 +103,7 @@ Prima di iniziare, assicurarsi che l'organizzazione disponga di un insieme di cr
 
     **Path to key: C:\ProgramData\nCipher\Key Management Data\local\key_simple_contosobyok**
 
-Questo output conferma che la chiave privata è stata migrata al dispositivo di protezione hardware di Thales locale con una copia crittografata salvata in una chiave (nell'esempio, "key_simple_contosobyok"). 
+Questo output conferma che la chiave privata è stata migrata al dispositivo HSM nCipher in locale con una copia crittografata salvata in una chiave (in questo esempio, "key_simple_contosobyok"). 
 
 Ora che la chiave del certificato concessore di licenze server (SLC) è stata estratta e importata nel modulo di protezione hardware locale, si è pronti per creare un pacchetto della chiave protetta tramite HSM e trasferirlo in Insieme di credenziali delle chiavi di Azure.
 

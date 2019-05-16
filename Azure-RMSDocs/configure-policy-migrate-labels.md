@@ -4,28 +4,24 @@ description: Eseguire la migrazione di etichette di Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/08/2019
+ms.date: 05/16/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 89a8c1045fcf203ec95c5e79ed80588dfe167459
-ms.sourcegitcommit: 9c6f36a291dd50c0f3806a4c9660895613c6ad72
+ms.openlocfilehash: 237efa8cfb6b8a4ce8c33b7e332b0e164211942a
+ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65213080"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708951"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Come eseguire la migrazione di etichette di Azure Information Protection a etichette di riservatezza di Office 365
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
 > *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
-
-> [!IMPORTANT]
->
-> Questa funzionalità è ora livello generale per tutti i tenant, anche se si potrà riscontrare la parola **Preview** nel portale di Azure per un paio di settimane.
 
 Eseguire la migrazione delle etichette in Azure Information Protection in modo che sia possibile usarle come etichette di riservatezza dal [client e servizi che supportano l'assegnazione di etichette unificata](#clients-and-services-that-support-unified-labeling).
 

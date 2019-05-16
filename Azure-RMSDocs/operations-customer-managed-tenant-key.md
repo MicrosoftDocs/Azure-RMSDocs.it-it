@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5fd82546ccf0334ea244226c143426ab3e0da93b
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: c1ae08971442fcc943f8473bbcbf74681c027702
+ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181549"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708875"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Gestite dal cliente: operazioni del ciclo di vita della chiave del tenant
 
@@ -61,7 +61,7 @@ Per altre informazioni su ognuna di queste fasi:
 ## <a name="backup-and-recover-your-tenant-key"></a>Eseguire il backup e il ripristino della chiave del tenant
 L'utente che gestisce la chiave del tenant è anche responsabile del backup della chiave usata da Azure Information Protection. 
 
-Se la chiave del tenant è stata generata in locale, in un modulo di protezione hardware Thales: per eseguire il backup della chiave è sufficiente eseguire il backup del file della chiave in formato token, del file relativo all'ambiente e delle schede amministrative. Quando la chiave viene trasferita in Azure Key Vault, il servizio salva il file della chiave in formato token come protezione da eventuali errori dei nodi del servizio. Questo file è associato all'ambiente di sicurezza relativo all'area o all'istanza specifica di Azure. È tuttavia opportuno tenere presente che questo file di chiave in formato token non rappresenta un backup completo. Se ad esempio è necessaria una copia in testo normale della chiave da usare al di fuori di un modulo di protezione hardware Thales, Azure Key Vault non sarà in grado di recuperarla perché dispone solo di una copia non recuperabile.
+Se la chiave del tenant in locale, è stato generato in un modulo di protezione hardware nCipher: per eseguire il backup della chiave è sufficiente eseguire il backup del file della chiave in formato token, del file relativo all'ambiente e delle schede amministrative. Quando la chiave viene trasferita in Azure Key Vault, il servizio salva il file della chiave in formato token come protezione da eventuali errori dei nodi del servizio. Questo file è associato all'ambiente di sicurezza relativo all'area o all'istanza specifica di Azure. È tuttavia opportuno tenere presente che questo file di chiave in formato token non rappresenta un backup completo. Ad esempio, se necessaria una copia di testo normale della chiave da usare all'esterno di un modulo di protezione hardware nCipher, Azure Key Vault non è possibile recuperarlo, perché contiene solo una copia non recuperabile.
 
 Azure Key Vault contiene un [cmdlet di backup](/powershell/module/az.keyvault/backup-azkeyvaultkey). Scaricarlo e archiviarlo in un file per eseguire il backup di una chiave. Il contenuto scaricato è crittografato e può quindi essere usato solo in Azure Key Vault. 
 

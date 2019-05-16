@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 297608ce7fd64170e9aaa31ab39f0b0e151d7538
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 4f1177df3165a811668ae03e45da02879ff7c872
+ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184264"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708904"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 della migrazione: configurazione lato server per AD RMS
 
@@ -66,9 +66,9 @@ La distribuzione corrente di AD RMS usa una delle seguenti configurazioni per la
 
 - Password di protezione nel database AD RMS. Questa è la configurazione predefinita.
 
-- Protezione tramite un modulo di protezione hardware Thales.
+- MODULO di protezione hardware tramite un modulo di protezione hardware (HSM) nCipher.
 
-- Modulo di protezione hardware tramite un modulo di protezione hardware di un fornitore diverso da Thales.
+- MODULO di protezione hardware tramite un modulo di protezione hardware (HSM) da un fornitore diverso nCipher.
 
 - Protezione con password tramite un provider del servizio di crittografia esterno.
 
@@ -82,10 +82,10 @@ Usare la tabella seguente per identificare la procedura da eseguire per la migra
 |Distribuzione di AD RMS corrente|Topologia di chiave del tenant di Azure Information Protection scelta|Istruzioni relative alla migrazione|
 |-----------------------------|----------------------------------------|--------------------------|
 |Password di protezione nel database AD RMS|Gestione di Microsoft|Vedere la procedura **Migrazione da una chiave protetta tramite software a un'altra** dopo questa tabella.<br /><br />Questo è il percorso di migrazione più semplice e richiede solo il trasferimento dei dati di configurazione ad Azure Information Protection.|
-|Modulo di protezione hardware tramite un modulo di protezione hardware nShield di Thales |Gestione del cliente (scenario BYOK)|Vedere la procedura **Migrazione da una chiave protetta tramite HSM a un'altra** dopo questa tabella.<br /><br />Sono necessari il set di strumenti BYOK di Azure Key Vault e tre procedure: il trasferimento della chiave dal modulo di protezione hardware locale ai moduli di protezione hardware di Azure Key Vault, l'autorizzazione del servizio Azure Rights Management di Azure Information Protection all'uso della chiave del tenant e infine il trasferimento dei dati di configurazione in Azure Information Protection.|
+|MODULO di protezione hardware tramite un modulo di protezione hardware nShield nCipher (HSM) |Gestione del cliente (scenario BYOK)|Vedere la procedura **Migrazione da una chiave protetta tramite HSM a un'altra** dopo questa tabella.<br /><br />Sono necessari il set di strumenti BYOK di Azure Key Vault e tre procedure: il trasferimento della chiave dal modulo di protezione hardware locale ai moduli di protezione hardware di Azure Key Vault, l'autorizzazione del servizio Azure Rights Management di Azure Information Protection all'uso della chiave del tenant e infine il trasferimento dei dati di configurazione in Azure Information Protection.|
 |Password di protezione nel database AD RMS|Gestione del cliente (scenario BYOK)|Vedere la procedura di migrazione **Da una chiave protetta tramite software a una chiave protetta tramite HSM** dopo questa tabella.<br /><br />Sono necessari il set di strumenti BYOK di Insieme di credenziali delle chiavi di Azure e quattro procedure: innanzitutto estrarre la chiave software e importarla nel modulo di protezione hardware locale, quindi trasferire la chiave dal modulo di protezione hardware locale ai moduli di protezione hardware di Azure Information Protection, successivamente trasferire i dati dell'insieme di credenziali in Azure Information Protection e infine trasferire i dati di configurazione in Azure Information Protection.|
-|Modulo di protezione hardware tramite un modulo di protezione hardware di un fornitore diverso da Thales. |Gestione del cliente (scenario BYOK)|Per istruzioni sul trasferimento della chiave da questo modulo a un modulo di protezione hardware nShield di Thales, contattare il fornitore del modulo di protezione hardware. Seguire quindi le istruzioni per la procedura di migrazione **Da una chiave protetta tramite HSM a un’altra** dopo questa tabella.|
-|Protezione con password tramite un provider del servizio di crittografia esterno|Gestione del cliente (scenario BYOK)|Per istruzioni sul trasferimento della chiave a un modulo di protezione hardware nShield di Thales, contattare il fornitore del servizio di crittografia. Seguire quindi le istruzioni per la procedura di migrazione **Da una chiave protetta tramite HSM a un’altra** dopo questa tabella.|
+|MODULO di protezione hardware tramite un modulo di protezione hardware (HSM) da un fornitore diverso nCipher |Gestione del cliente (scenario BYOK)|Contattare il fornitore per il modulo di protezione hardware per istruzioni sul trasferimento della chiave da questo modulo a un modulo di protezione hardware nShield nCipher (HSM). Seguire quindi le istruzioni per la procedura di migrazione **Da una chiave protetta tramite HSM a un’altra** dopo questa tabella.|
+|Protezione con password tramite un provider del servizio di crittografia esterno|Gestione del cliente (scenario BYOK)|Contattare il fornitore per il provider di crittografia per istruzioni sul trasferimento della chiave per un modulo di protezione hardware nShield nCipher (HSM). Seguire quindi le istruzioni per la procedura di migrazione **Da una chiave protetta tramite HSM a un’altra** dopo questa tabella.|
 
 Se la chiave protetta tramite modulo di protezione hardware non è esportabile, è comunque possibile eseguire la migrazione ad Azure Information Protection configurando il cluster AD RMS con la modalità di sola lettura. In questa modalità è comunque possibile aprire il contenuto protetto in precedenza, ma il contenuto appena protetto usa una nuova chiave del tenant gestita dall'utente (BYOK) o gestita da Microsoft. Per altre informazioni, vedere [An update is available for Office to support migrations from AD RMS to Azure RMS](https://support.microsoft.com/help/4023955/an-update-is-available-for-office-to-support-migrations-from-ad-rms-to) (È disponibile un aggiornamento con cui Office supporta le migrazioni da AD RMS ad Azure RMS).
 
