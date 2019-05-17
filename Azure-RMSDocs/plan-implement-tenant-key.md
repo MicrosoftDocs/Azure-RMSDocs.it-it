@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 26999c8fdd079c7a34d39415d8beba6763a06f68
-ms.sourcegitcommit: e0ce23467744ec6a4da49081461a459bc37c7d78
+ms.openlocfilehash: 865334193d39a048ac48b6233005673f2be43f03
+ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65443262"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65780896"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Pianificazione e implementazione della chiave del tenant di Azure Information Protection
 
@@ -34,8 +34,8 @@ Che cos'è la chiave del tenant di Azure Information Protection?
 
 |Requisito aziendale|Topologia di chiave del tenant consigliata|
 |------------------------|-----------------------------------|
-|Distribuire Azure Information Protection in modo rapido e senza hardware speciali, software aggiuntivo o una sottoscrizione di Azure.<br /><br />Ad esempio: Esecuzione del test degli ambienti e quando l'organizzazione non ha i requisiti normativi per la gestione delle chiavi.|Gestita da Microsoft|
-|Normative di conformità, sicurezza aggiuntiva e controllo su tutte le operazioni del ciclo di vita. <br /><br />Ad esempio:  La chiave deve essere protetta da un modulo di protezione hardware (HSM).|BYOK|
+|Distribuire Azure Information Protection in modo rapido e senza hardware speciali, software aggiuntivo o una sottoscrizione di Azure.<br /><br />Ad esempio:  Esecuzione del test degli ambienti e quando l'organizzazione non ha i requisiti normativi per la gestione delle chiavi.|Gestita da Microsoft|
+|Normative di conformità e controllo su tutte le operazioni del ciclo di vita. <br /><br />Ad esempio: La chiave deve essere protetta da un modulo di protezione hardware (HSM).|BYOK|
 
 
 Se necessario, è possibile modificare la topologia di chiave del tenant dopo la distribuzione, usando il cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties).
@@ -168,7 +168,7 @@ Configurazione mediante il portale di Azure:
 
 Configurazione mediante PowerShell:
 
-- Eseguire il cmdlet di PowerShell di insieme di credenziali delle chiavi [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)e concedere le autorizzazioni all'entità servizio Azure Rights Management, usando il GUID **00000012-0000-0000-C000-000000000000**. Ad esempio:
+- Eseguire il cmdlet di PowerShell di insieme di credenziali delle chiavi [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy)e concedere le autorizzazioni all'entità servizio Azure Rights Management, usando il GUID **00000012-0000-0000-C000-000000000000**. Ad esempio: 
     
         Set-AzKeyVaultAccessPolicy -VaultName 'ContosoRMS-kv' -ResourceGroupName 'ContosoRMS-byok-rg' -ServicePrincipalName 00000012-0000-0000-c000-000000000000 -PermissionsToKeys decrypt,sign,get
 

@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 237efa8cfb6b8a4ce8c33b7e332b0e164211942a
-ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
+ms.openlocfilehash: b4c702ba84567ba51a29a2bf98c1650dd8f835b6
+ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708951"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65780841"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Come eseguire la migrazione di etichette di Azure Information Protection a etichette di riservatezza di Office 365
 
@@ -172,7 +172,7 @@ Per verificare se i client e i servizi usati dall'utente supportano l'etichettat
 
 ##### <a name="services-that-currently-support-unified-labeling-include"></a>I servizi che attualmente supportano l'etichettatura unificata includono:
 
-- Windows Defender Advanced Threat Protection
+- Microsoft Defender Advanced Threat Protection
 
 - Microsoft Cloud App Security
     

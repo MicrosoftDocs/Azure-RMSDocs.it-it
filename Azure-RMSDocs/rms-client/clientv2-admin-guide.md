@@ -4,17 +4,17 @@ description: Istruzioni e informazioni per gli amministratori in una rete aziend
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 7caa35896e0dcfd3cd6dc1cf407da87e41e71ef5
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 6564980da8ad4067d83c408c2baf0afd8ab5c181
+ms.sourcegitcommit: 2d08bee51c26af3159bd52456e12e0166c8369c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183168"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65822227"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection unified Guida dell'amministratore client l'assegnazione di etichette
 
@@ -156,9 +156,11 @@ Dopo aver installato il client di assegnazione di etichette unificato di Azure I
 
 Il team di Azure Information Protection aggiorna regolarmente il client di assegnazione di etichette unificato di Azure Information Protection per nuove funzionalità e correzioni. Gli annunci vengono pubblicati nel [sito Yammer](https://www.yammer.com/AskIPTeam) del team.
 
-Se si usa Windows Update, il client di assegnazione di etichette unificato di Azure informazioni protezione Azure Information Protection Aggiorna automaticamente la versione con disponibilità generale del client, indipendentemente dal modo in cui è stato installato il client. Le nuove versioni del client vengono pubblicate nel catalogo alcune settimane dopo il rilascio.
+Se si usa Windows Update, il client di assegnazione di etichette unificato di Azure Information Protection Aggiorna automaticamente la versione con disponibilità generale del client, indipendentemente dal modo in cui è stato installato il client. Le nuove versioni del client vengono pubblicate nel catalogo alcune settimane dopo il rilascio.
 
 In alternativa, è possibile aggiornare manualmente il client scaricando la nuova versione dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Installare quindi la nuova versione per aggiornare il client. È necessario utilizzare questo metodo per aggiornare le versioni di anteprima e se si esegue l'aggiornamento del client Azure Information Protection.
+
+Se esegue l'aggiornamento dal client Azure Information Protection in Windows 7, le applicazioni di Office verranno riavviata automaticamente durante l'aggiornamento del client. Il riavvio automatico non si applica a sistemi operativi successivi, o se si esegue l'aggiornamento da una versione precedente del client unificato imprevisto delle etichette.
 
 Quando si esegue l'aggiornamento manuale, disinstallare prima la versione precedente solo se si sta modificando il metodo di installazione, ad esempio se si passa dalla versione eseguibile (EXE) del client alla versione di Windows Installer (MSI) del client, oppure se è necessario installare una versione precedente del client, ad esempio se è stata installata la versione di anteprima corrente per i test e ora è necessario tornare alla versione disponibile a livello generale corrente.
 

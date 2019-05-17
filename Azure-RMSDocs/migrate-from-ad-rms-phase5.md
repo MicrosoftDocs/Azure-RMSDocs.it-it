@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b5b7e9c79ec533ef72da1b094347556770c50e71
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 15b8f2df4fe79b62073955b7c9626fe21e8ec201
+ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184111"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65780864"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Fase 5 della migrazione: attività post-migrazione
 
@@ -47,6 +47,20 @@ Dopo aver effettuato il deprovisioning dei server AD RMS, è anche possibile esa
 
 >[!IMPORTANT]
 > Alla fine della migrazione, il cluster AD RMS non può essere usato con Azure Information Protection e con l'opzione HYOK (Hold Your Own Key). Se si decide di usare l'opzione HYOK per un'etichetta di Azure Information Protection, a causa dei reindirizzamenti ora disponibili, il cluster AD RMS in uso deve avere vari URL di gestione licenze per quelli nei cluster migrati.
+
+### <a name="addition-configuration-for-computers-that-run-office-2010"></a>Configurazione di aggiunta per i computer che eseguono Office 2010
+
+Se la migrazione i client Esegui Office 2010, gli utenti potrebbero verificarsi ritardi nell'apertura di contenuti protetti dopo vengono effettuato il deprovisioning dei server AD RMS. In alternativa, gli utenti potrebbero essere visualizzati messaggi che non ha le credenziali per aprire il contenuto protetto. Per risolvere questi problemi, creare un reindirizzamento di rete per questi computer, che reindirizza il FQDN di URL di AD RMS all'indirizzo IP locale del computer (127.0.0.1). È possibile farlo configurando il file hosts locale in ogni computer o tramite DNS.
+
+Reindirizzamento usando il file hosts locale:
+
+- Aggiungere la riga seguente nel file hosts locale, sostituendo `<AD RMS URL FQDN>` con il valore per il cluster AD RMS, senza prefissi o pagine web:
+    
+        127.0.0.1 <AD RMS URL FQDN>
+
+Reindirizzamento tramite DNS:
+    
+- Creare un nuovo host (record) per il nome FQDN URL di AD RMS, che dispone dell'indirizzo IP 127.0.0.1.
 
 ## <a name="step-11-complete-client-migration-tasks"></a>Passaggio 11. Completare le attività di migrazione dei client
 

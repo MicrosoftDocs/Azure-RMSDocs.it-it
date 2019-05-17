@@ -3,7 +3,7 @@ title: Configurare i criteri di Azure Information Protection - AIP
 description: Per configurare le funzioni di classificazione, aggiunta di etichette e protezione, è necessario configurare i criteri di Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-ms.date: 04/17/2019
+ms.date: 05/17/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 3849a676473d05d5440a77288b8e9478270828ef
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: ce3464a1035c79655709d47ea8f64a885602d994
+ms.sourcegitcommit: 2d08bee51c26af3159bd52456e12e0166c8369c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180223"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65822195"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -159,6 +159,8 @@ Quando viene applicata un'etichetta a un documento o un messaggio di posta elett
 - Nei messaggi di posta elettronica queste informazioni sono archiviate nell'intestazione X-: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
 
 - Per i documenti di Word (DOC e DOCX), i fogli di calcolo di Excel (XLS e XLSX), le presentazioni di PowerPoint (PPT e PPTX) e i documenti PDF, questi metadati vengono archiviati nella proprietà personalizzata seguente: **MSIP_Label_\<GUID>_Enabled=True**  
+
+Messaggi di posta elettronica, le informazioni dell'etichetta viene archiviate quando viene inviato il messaggio di posta elettronica. Per i documenti, vengono archiviate le informazioni dell'etichetta quando viene salvato il file. 
 
 Per identificare il GUID per un'etichetta, individuare il valore dell'ID etichetta nel pannello **Etichetta** del portale di Azure, quando si visualizzano o si configurano i criteri di Azure Information Protection. Per i file a cui sono state applicate etichette, è anche possibile eseguire il cmdlet di PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) per identificare il GUID (MainLabelId o SubLabelId). Quando un'etichetta ha etichette secondarie, specificare sempre il GUID della sola etichetta secondaria e non dell'etichetta padre.
 

@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 11/08/2018
 ms.author: tommos
-ms.openlocfilehash: 990f729edaa0a2e212812f84fc5a4c63f82e37fb
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 21148e9293c3be1162028a6cf7e26c30fb52a15f
+ms.sourcegitcommit: 2d08bee51c26af3159bd52456e12e0166c8369c1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175360"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65822169"
 ---
 # <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK - Metadata
 
@@ -39,10 +39,10 @@ il SDK di MIP si applica il seguente set di metadati.
 | **Enabled**   | True o False                 | Questo attributo indica se la classificazione rappresentata da questo set di coppie chiave-valore è abilitata per l'elemento di dati. In genere, i prodotti DLP convalidare l'esistenza di questa chiave per identificare l'etichetta di classificazione. | Yes       |
 | **SiteId**    | GUID                          | ID Tenant di Azure Active Directory                                                                                                                                                                                                                   | Yes       |
 | **ActionId**  | GUID                          | Elemento ActionID viene modificato ogni volta che viene impostata un'etichetta. I log di controllo includeranno actionID vecchi e nuovi per consentire il concatenamento di attività all'elemento di dati l'assegnazione di etichette.                                                                                 | Yes       |
-| **Metodo**    | Standard, Privileged, o automaticamente        | Viene impostato tramite assignmentmethod                                                                                                                                                                                                                 | No        |
+| **Metodo**    | Standard o con privilegi        | Viene impostato tramite [assignmentmethod](reference/mip-enums-and-structs.md#assignmentmethod). Standard implica che l'etichetta viene applicata per impostazione predefinita o automaticamente. Privilegi implica che l'etichetta è stata selezionata manualmente.                                                                                                                                                                                                                 | No        |
 | **SetDate**   | Formato di data estesa ISO 8601 | Timestamp quando è stata impostata l'etichetta.                                                                                                                                                                                                              | No        |
 | **Name**      | string                        | Nome univoco dell'etichetta all'interno del tenant. Non corrisponde necessariamente per nome visualizzato.                                                                                                                                                              | No      |
-| **ContentBits** | integer | Maschera di bit che descrive i tipi di contenuto contrassegno che deve essere applicato a un file. CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, WATERMARK = 0X4
+| **ContentBits** | integer | Maschera di bit che descrive i tipi di contenuto contrassegno che deve essere applicato a un file. CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, WATERMARK = 0X4, ENCRYPT = 0x8
  | No |
 
 Quando applicato a un file, il risultato è simile alla tabella riportata di seguito.
