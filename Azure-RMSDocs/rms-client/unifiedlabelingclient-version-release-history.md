@@ -4,18 +4,18 @@ description: Vedere le informazioni sulla versione del client per l'etichettatur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/02/2019
+ms.date: 05/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 91d16668c82a542984b177f539b276d6e752194f
-ms.sourcegitcommit: 8e207e8e1459625c77e712f45798a88abe079571
+ms.openlocfilehash: 37ecdd3862ee6ae83526979f132ff213b66dcece
+ms.sourcegitcommit: c0d8b7239fc16e66b51f736636da7f7212f72dd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64982161"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837782"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection unified client - versione l'assegnazione di etichette cronologia delle versioni e criteri di supporto
 
@@ -25,6 +25,10 @@ ms.locfileid: "64982161"
 
 
 È possibile scaricare il client di assegnazione di etichette unificato di Azure Information Protection dal [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+
+Dopo un breve intervallo di in genere un paio di settimane, la versione di disponibilità generale più recente è anche inclusa in Microsoft Update Catalog con il nome del prodotto **Microsoft Azure Information Protection**  >  **Microsoft Client Azure Information Protection Unified l'assegnazione di etichette**e la classificazione dei **aggiornamenti**. L'inserimento nel catalogo significa che è possibile aggiornare il client tramite WSUS o Configuration Manager o altri meccanismi di distribuzione del software che usano Microsoft Update.
+
+Per altre informazioni, vedere [l'aggiornamento e la gestione di Azure Information Protection unified client l'assegnazione di etichette](clientv2-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client).
 
 ### <a name="servicing-information-and-timelines"></a>Informazioni e tempistiche di manutenzione
 
@@ -73,7 +77,7 @@ Questa prima versione di disponibilità generale del client di assegnazione di e
 
 - Le impostazioni seguenti per etichette e criteri:
     - Contrassegno visivo (intestazioni, piè di pagina, filigrane)
-    - Etichettatura predefinita
+    - Impostazione predefinita l'assegnazione di etichette - è attualmente limitato alle etichette senza le etichette secondarie
     - Etichette che applicano Non inoltrare e vengono visualizzate solo in Outlook
     - Richieste di giustificazione se gli utenti abbassano il livello di classificazione o rimuovono un'etichetta
     - Colori per le etichette

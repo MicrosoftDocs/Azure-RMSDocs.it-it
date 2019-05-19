@@ -4,19 +4,19 @@ description: Istruzioni e informazioni per amministratori per gestire il client 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 9d681f986028f83eb3fe59d9e295db6873828052
-ms.sourcegitcommit: 96a05d1abe20b7c588dccaecea18a73b648179b5
+ms.openlocfilehash: d67b51357806e5162a8544f78f2210459aac84c4
+ms.sourcegitcommit: c0d8b7239fc16e66b51f736636da7f7212f72dd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/11/2019
-ms.locfileid: "65535318"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837863"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
 
@@ -26,7 +26,7 @@ ms.locfileid: "65535318"
 
 Quando si installa il client di Azure Information Protection, vengono installati automaticamente i comandi di PowerShell. Ciò consente di gestire il client eseguendo i comandi che è possibile inserire negli script per l'automazione.
 
-I cmdlet vengono installati con il modulo **AzureInformationProtection** di PowerShell. Questo modulo include tutti i cmdlet per Rights Management dello strumento di protezione RMS (non più supportato). Sono inoltre disponibili cmdlet che usano Azure Information Protection per l'assegnazione di etichette. Ad esempio:
+I cmdlet vengono installati con il modulo **AzureInformationProtection** di PowerShell. Questo modulo include tutti i cmdlet per Rights Management dello strumento di protezione RMS (non più supportato). Sono inoltre disponibili cmdlet che usano Azure Information Protection per l'assegnazione di etichette. Ad esempio: 
 
 |Cmdlet per le etichette|Esempio di utilizzo|
 |----------------|---------------|
@@ -36,7 +36,7 @@ I cmdlet vengono installati con il modulo **AzureInformationProtection** di Powe
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Assegna etichette ai file in modo non interattivo, ad esempio tramite uno script che viene eseguito in base a una pianificazione.|
 
 > [!TIP]
-> Per usare cmdlet con percorsi di lunghezza superiore a 260 caratteri, usare l'[impostazione di Criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) seguente disponibile a partire da Windows 10 versione 1607:<br /> **Criteri Computer locale** > **Configurazione computer** > **Modelli amministrativi** > **Tutte le impostazioni** > **NTFS** > **Abilita percorsi lunghi Win32** 
+> Per usare cmdlet con percorsi di lunghezza superiore a 260 caratteri, usare l'[impostazione di Criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) seguente disponibile a partire da Windows 10 versione 1607:<br /> **Criteri del Computer locale** > **configurazione del Computer** > **modelli amministrativi** > **tutte le impostazioni**  >  **i percorsi lunghi abilitare Win32** 
 > 
 > Per Windows Server 2016 è possibile usare la stessa impostazione di Criteri di gruppo quando si installano i modelli amministrativi più recenti (con estensione admx) per Windows 10.
 >
@@ -312,7 +312,7 @@ L'output potrebbe essere simile al seguente:
     ---------             -------------
     C:\Test.docx          C:\Test.docx
 
-Per proteggere tutti i file in una cartella, usare il parametro **-Folder** con una lettera di unità e un percorso oppure un percorso UNC. Ad esempio:
+Per proteggere tutti i file in una cartella, usare il parametro **-Folder** con una lettera di unità e un percorso oppure un percorso UNC. Ad esempio: 
 
     Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -610,7 +610,7 @@ Procedura generale:
     Facoltativamente, eliminare l'attività. Se il token scade, è necessario ripetere questa procedura; in questo caso, potrebbe essere più opportuno uscire dall'attività configurata in modo che sia pronta per una nuova esecuzione quando si copia il nuovo script di PowerShell con il nuovo valore del token.
 
 ## <a name="next-steps"></a>Passaggi successivi
-Per le informazioni della Guida sui cmdlet, all'interno di una sessione di PowerShell digitare `Get-Help <cmdlet name> cmdlet`. Per ottenere le informazioni più aggiornate, usare il parametro -online. Ad esempio:  
+Per le informazioni della Guida sui cmdlet, all'interno di una sessione di PowerShell digitare `Get-Help <cmdlet name> cmdlet`. Per ottenere le informazioni più aggiornate, usare il parametro -online. Ad esempio: 
 
     Get-Help Get-RMSTemplate -online
 

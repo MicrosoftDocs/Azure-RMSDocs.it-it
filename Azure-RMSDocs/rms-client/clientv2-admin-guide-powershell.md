@@ -4,17 +4,17 @@ description: Istruzioni e informazioni per gli amministratori per gestire il cli
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: f3a0d3b3974714135289a8f3b262666b63739330
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: a7e7ad68a5b7ce6c465b990b15bbef6824fadf75
+ms.sourcegitcommit: c0d8b7239fc16e66b51f736636da7f7212f72dd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181855"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837793"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guida dell'amministratore: Uso di PowerShell con il client unificato di Azure Information Protection
 
@@ -24,7 +24,7 @@ ms.locfileid: "60181855"
 
 Quando si installa il client di assegnazione di etichette unificato di Azure Information Protection, vengono installati automaticamente i comandi di PowerShell. Ciò consente di gestire il client eseguendo i comandi che è possibile inserire negli script per l'automazione.
 
-I cmdlet installati con il modulo di PowerShell **AzureInformationProtection**, che include cmdlet per l'assegnazione di etichette. Ad esempio: 
+I cmdlet installati con il modulo di PowerShell **AzureInformationProtection**, che include cmdlet per l'assegnazione di etichette. Ad esempio:
 
 |Cmdlet per le etichette|Esempio di utilizzo|
 |----------------|---------------|
@@ -34,7 +34,7 @@ I cmdlet installati con il modulo di PowerShell **AzureInformationProtection**, 
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Assegnare etichette ai file in modo interattivo, usando un account utente diverso con i propri.|
 
 > [!TIP]
-> Per usare cmdlet con percorsi di lunghezza superiore a 260 caratteri, usare l'[impostazione di Criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) seguente disponibile a partire da Windows 10 versione 1607:<br /> **Criteri Computer locale** > **Configurazione computer** > **Modelli amministrativi** > **Tutte le impostazioni** > **NTFS** > **Abilita percorsi lunghi Win32** 
+> Per usare cmdlet con percorsi di lunghezza superiore a 260 caratteri, usare l'[impostazione di Criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) seguente disponibile a partire da Windows 10 versione 1607:<br /> **Criteri del Computer locale** > **configurazione del Computer** > **modelli amministrativi** > **tutte le impostazioni**  >  **i percorsi lunghi abilitare Win32** 
 > 
 > Per Windows Server 2016 è possibile usare la stessa impostazione di Criteri di gruppo quando si installano i modelli amministrativi più recenti (con estensione admx) per Windows 10.
 >

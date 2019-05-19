@@ -4,18 +4,18 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 43f7f685cfa1567084ebdc0877215229b0ae592b
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 88aa75bbf61728c43f9104d59a00f0c06842ef0e
+ms.sourcegitcommit: c0d8b7239fc16e66b51f736636da7f7212f72dd6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768326"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837837"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection: Cronologia delle versioni e criteri per il supporto
 
@@ -25,7 +25,9 @@ ms.locfileid: "64768326"
 
 Il team di Azure Information Protection aggiorna regolarmente il client di Azure Information Protection con correzioni e nuove funzionalità. 
 
-È possibile scaricare la versione disponibile a livello generale più recente e la versione di anteprima corrente (se disponibile) dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Dopo un breve periodo solitamente di un paio di settimane, la versione disponibile a livello generale più recente viene inclusa anche in Microsoft Update Catalog (categoria: **Azure Information Protection**). L'inserimento nel catalogo significa che è possibile aggiornare il client tramite WSUS o Configuration Manager o altri meccanismi di distribuzione del software che usano Microsoft Update.
+È possibile scaricare la versione disponibile a livello generale più recente e la versione di anteprima corrente (se disponibile) dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
+
+Dopo un breve intervallo di in genere un paio di settimane, la versione di disponibilità generale più recente è anche inclusa in Microsoft Update Catalog con il nome del prodotto **Microsoft Azure Information Protection**  >  **Client di Microsoft Azure Information Protection**e la classificazione dei **aggiornamenti**. L'inserimento nel catalogo significa che è possibile aggiornare il client tramite WSUS o Configuration Manager o altri meccanismi di distribuzione del software che usano Microsoft Update.
 
 Per altre informazioni, vedere [Aggiornamento e gestione del client Azure Information Protection](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
