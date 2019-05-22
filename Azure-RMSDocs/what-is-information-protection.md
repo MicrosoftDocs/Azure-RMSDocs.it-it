@@ -4,17 +4,17 @@ description: Panoramica tecnica del servizio Azure Information Protection, che c
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/02/2019
+ms.date: 05/20/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 Customer intent: As an administrator, I want to label documents and emails to classify and protect my organization's data, wherever it resides.
-ms.openlocfilehash: 768cac711deff33bf796973ede2541250df5f357
-ms.sourcegitcommit: 8e207e8e1459625c77e712f45798a88abe079571
+ms.openlocfilehash: 0bb1096a903be953eb9702bc89b6a8c98d340946
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64982170"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935053"
 ---
 # <a name="what-is-azure-information-protection"></a>Che cos'è Azure Information Protection?
 
@@ -26,6 +26,8 @@ L'immagine seguente mostra un esempio di Azure Information Protection in azione 
 
 ![Esempio di classificazione consigliata per Azure Information Protection](./media/info-protect-recommend-calloutsv2.png)
 
+###### <a name="screenshot-from-the-azure-information-protection-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Screenshot dal [client Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+
 Dopo che il contenuto è stato classificato (e facoltativamente protetto), è possibile rilevare e controllare come viene usato. È possibile analizzare i flussi di dati per ottenere informazioni sulle attività aziendali, rilevare comportamenti a rischio e adottare misure correttive, tenere traccia dell'accesso ai documenti, impedire la perdita o l'uso improprio di dati e così via.
 
 ## <a name="how-labels-apply-classification"></a>Modalità di classificazione in base alle etichette
@@ -36,6 +38,7 @@ Ad esempio il messaggio di posta elettronica seguente è stato classificato come
 
 ![Piè di pagina e intestazioni del messaggio di posta elettronica di esempio che mostrano la classificazione di Azure Information Protection](./media/example-email-footerv2.png)
 
+###### <a name="screenshot-from-the-azure-information-protection-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Screenshot dal [client Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 ## <a name="how-data-is-protected"></a>Modalità di protezione dei dati
 
@@ -63,7 +66,9 @@ Per altre informazioni sulla tecnologia di protezione Azure Rights Management, v
 
 Azure Information Protection si integra con i flussi di lavoro esistenti degli utenti finali quando viene installato il client di Azure Information Protection. Il client installa la barra di Information Protection nelle applicazioni di Office, come illustrato nella prima immagine che visualizza la barra in Word. La stessa barra di Information Protection viene aggiunta a Excel, PowerPoint e Outlook. Ad esempio:
 
-![Esempio di barra di Azure Information Protection in Excel](./media/excel2016-infoprotect-barv2.png)
+![Esempio di barra di Azure Information Protection in Excel](./media/excelproplus-infoprotect-bar.png)
+
+###### <a name="screenshot-from-the-azure-information-protection-unified-labeling-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Screenshot dal [client per l'etichettatura unificata Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) 
 
 La barra di Information Protection rende più semplice per gli utenti finali la selezione delle etichette per la classificazione corretta. Se necessario è anche possibile applicare automaticamente le etichette, per eliminare le possibilità di errori o per garantire la conformità con i criteri dell'organizzazione.
 
@@ -91,9 +96,11 @@ Un utente di Gmail, ad esempio, visualizza quanto segue in un messaggio di posta
 
 ![Esperienza per i destinatari Gmail per Crittografia messaggi di Office 365 e Azure Information Protection](./media/ome-message.png)
 
-Per gli utenti che inviano il messaggio di posta elettronica, il flusso di lavoro è uguale a quello previsto per l'invio di un messaggio di posta elettronica protetto a un utente nella propria organizzazione. Ad esempio, possono selezionare il pulsante **Non inoltrare** che il client di Azure Information Protection consente di aggiungere alla barra multifunzione di Outlook. Questa funzionalità Non inoltre può anche essere integrata in una etichetta selezionabile dagli utenti, in modo che il messaggio di posta elettronica venga classificato oltre che protetto:
+Per gli utenti che inviano il messaggio di posta elettronica, il flusso di lavoro è uguale a quello previsto per l'invio di un messaggio di posta elettronica protetto a un utente nella propria organizzazione. Ad esempio, possono selezionare il pulsante **Non inoltrare** che il client di Azure Information Protection consente di aggiungere alla barra multifunzione di Outlook. Questa funzionalità Non inoltrare può anche essere integrata in un'etichetta selezionabile dagli utenti, in modo che il messaggio di posta elettronica venga classificato oltre che protetto. Ad esempio:
 
-![Selezione di un'etichetta configurata per Non inoltrare](./media/recipients-only-label.png)
+![Selezione di un'etichetta configurata per Non inoltrare](./media/recipients-only-label2.png)
+
+###### <a name="screenshot-from-the-azure-information-protection-unified-labeling-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Screenshot dal [client per l'etichettatura unificata Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 In alternativa, è possibile fornire automaticamente protezione agli utenti, usando regole del flusso di posta elettronica che applicano la protezione dei diritti. 
 
