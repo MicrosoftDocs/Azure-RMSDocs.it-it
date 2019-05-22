@@ -4,16 +4,16 @@ description: Se l'organizzazione non ha familiarità con Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/25/2019
+ms.date: 05/20/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 099d35d7d4862aff3006b1d6cc57423b898234c4
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: d2d3793cad1e1d53301f50a7966545bf19a6c851
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767884"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935008"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Guida introduttiva: Introduzione ad Azure Information Protection nel portale di Azure
 
@@ -130,7 +130,7 @@ Per visualizzare le impostazioni dei criteri predefinite di Azure Information Pr
     
 2. Le impostazioni dei criteri sono visualizzate dopo le etichette nella sezione **Configura le impostazioni da visualizzare e applicare agli utenti finali di Information Protection**. Ad esempio non è presente un'etichetta predefinita (non tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta) e gli utenti non devono dare una giustificazione quando modificano le etichette:
     
-    ![Impostazioni globali dei criteri di Azure Information Protection](./media/info-protect-policy-default-settingsv3.png)
+    ![Impostazioni globali dei criteri di Azure Information Protection](./media/defaultsettings-aip.png)
 
 3. Poiché si stanno visualizzando solo le impostazioni, è possibile chiudere tutti i pannelli aperti nel portale.
 
