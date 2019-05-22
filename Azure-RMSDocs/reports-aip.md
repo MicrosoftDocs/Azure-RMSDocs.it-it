@@ -3,7 +3,7 @@ title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
 author: cabailey
 ms.author: cabailey
-ms.date: 05/17/2019
+ms.date: 05/21/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 625fcf1474ebd1de1c087fe62a213590014dce13
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: afded60f7a9b1a67725fe08887895673c2b2ccab
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65780891"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934969"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -198,6 +198,18 @@ Per il client Azure Information Protection:
 
 - Supporto per il controllo: Versione 1.41.51.0
 - Supporto per l'individuazione di endpoint: Versione 1.48.204.0
+
+### <a name="storage-requirements-and-data-retention"></a>Conservazione dei dati e i requisiti di archiviazione
+
+La quantità di dati raccolti e archiviati nell'area di lavoro di Azure Information Protection varia in modo significativo per ogni tenant, a seconda di fattori, ad esempio come molti client Azure Information Protection e altri endpoint supportati sono, che tu sia la raccolta dati di individuazione di endpoint, distribuiti gli scanner e così via.
+
+Tuttavia, come punto di partenza, è possibile trovare le stime seguenti utili:
+
+- Per i dati di controllo generati da solo i client di Azure Information Protection: 2 GB per ogni 10.000 utenti attivi.
+
+- Per i dati di controllo generati dal client Azure Information Protection scanner e Microsoft Defender ATP: 20 GB per ogni 10.000 utenti attivi.
+
+Log di monitoraggio di Azure è un **informazioni sull'utilizzo e costi stimati** funzionalità che consentono di stimare e verificare la quantità di dati archiviati in ed è anche possibile controllare il periodo di conservazione dati per l'area di lavoro di Log Analitica. Per altre informazioni, vedere [gestire i costi con i log di monitoraggio di Azure e sull'utilizzo](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>Configurare un'area di lavoro di Log Analytics per i report
 

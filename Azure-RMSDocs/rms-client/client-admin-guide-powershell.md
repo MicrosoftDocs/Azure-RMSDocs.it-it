@@ -4,19 +4,18 @@ description: Istruzioni e informazioni per amministratori per gestire il client 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/18/2019
+ms.date: 05/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
-ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: d67b51357806e5162a8544f78f2210459aac84c4
-ms.sourcegitcommit: c0d8b7239fc16e66b51f736636da7f7212f72dd6
+ms.openlocfilehash: 5d32210a7ccc56d388b24a55f6e19331e768f7f3
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837863"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934940"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
 
@@ -325,7 +324,7 @@ L'output potrebbe essere simile al seguente:
     \Server1\Documents\Test3.docx     \Server1\Documents\Test3.docx
     \Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
 
-Quando l'estensione del file non cambia dopo aver applicato la protezione, è sempre possibile usare il cmdlet `Get-RMSFileStatus` successivamente per controllare se il file è protetto. Ad esempio:
+Quando l'estensione del file non cambia dopo aver applicato la protezione, è sempre possibile usare il cmdlet `Get-RMSFileStatus` successivamente per controllare se il file è protetto. Ad esempio: 
 
     Get-RMSFileStatus -File \Server1\Documents\Test1.docx
 
@@ -451,7 +450,7 @@ L'output potrebbe essere simile al seguente:
     --------                              ------
     \\Server1\Documents\Test1.docx        Protected
 
-Per rimuovere la protezione di un file, è necessario avere gli stessi diritti di utilizzo di proprietario o di estrazione usati per la protezione del file oppure essere un utente con privilegi avanzati per AD RMS. Usare quindi il cmdlet Unprotect. Ad esempio: 
+Per rimuovere la protezione di un file, è necessario avere gli stessi diritti di utilizzo di proprietario o di estrazione usati per la protezione del file oppure essere un utente con privilegi avanzati per AD RMS. Usare quindi il cmdlet Unprotect. Ad esempio:
 
     Unprotect-RMSFile C:\test.docx -InPlace
 
@@ -486,54 +485,84 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
 
 1. In una nuova finestra del browser accedere al [Portale di Azure](https://portal.azure.com/).
 
-2. Per il tenant di Azure AD che usa con Azure Information Protection, passare a **Azure Active Directory** > **registrazioni per l'App (Legacy)**. 
+2. Per il tenant di Azure AD che usa con Azure Information Protection, passare a **Azure Active Directory** > **Gestisci** > **registrazioniperl'App**. 
 
-3. Selezionare **Registrazione nuova applicazione** per creare l'app Web o l'applicazione API. Nell'etichetta **Crea** specificare i valori seguenti e quindi fare clic su **Crea**:
+3. Selezionare **+ registrazione nuova**, per creare l'applicazione di app/API Web. Nel **registrare un'applicazione** blade, specificare i valori seguenti e quindi fare clic su **registrare**:
 
-   - Nome: **AIPOnBehalfOf**
+   - **Nome**: `AIPOnBehalfOf`
+        
+        Se preferibile, specificare un nome diverso. Deve essere univoco per ogni tenant.
+    
+    - **Tipi di account supportati**: **Account in questa directory dell'organizzazione solo**
+    
+    - **(Facoltativo) URI di reindirizzamento**: **Web** e `http://localhost`
 
-     Se preferibile, specificare un nome diverso. Deve essere univoco per ogni tenant.
+4. Nel **AIPOnBehalfOf** pannello, copiare il valore per il **ID applicazione (client)**. Il valore è simile all'esempio seguente: `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. Questo valore viene usato per il *WebAppId* parametro quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento futuro.
 
-   - Tipo di applicazione: **App Web/API**
+5. Sempre nella **AIPOnBehalfOf** pannello dal **Gestisci** dal menu **Authentication**.
 
-   - URL di accesso: **http://localhost**
+6. Nel **AIPOnBehalfOf - autenticazione** pannello, nelle **impostazioni avanzate** selezionare il **i token ID** casella di controllo e quindi selezionare **salvare**.
 
-4. Selezionare l'applicazione appena creata, ad esempio **AIPOnBehalfOf**, quindi selezionare **Proprietà** nel pannello **Impostazioni**. Nel pannello **Proprietà** copiare il valore di **ID applicazione** e quindi chiudere il pannello. 
+7. Sempre nella **AIPOnBehalfOf - autenticazione** pannello dalle **Gestisci** dal menu **certificati e i segreti**.
 
-    Questo valore viene usato per il parametro `WebAppId` quando si esegue il cmdlet Set-AIPAuthentication. Incollarlo e salvarlo per riferimento futuro.
+8. Nel **AIPOnBehalfOf - i certificati e i segreti** pannello, nelle **i segreti Client** sezione, selezionare **+ nuovo segreto client**. 
 
-5. Nel pannello **Impostazioni** selezionare **Autorizzazioni necessarie**. Nel pannello **Autorizzazioni necessarie** selezionare **Concedi autorizzazioni**, fare clic su **Sì** per confermare e quindi chiudere il pannello.
+9. Per la **aggiungere un segreto client**, specificare le informazioni seguenti e quindi selezionare **Add**:
+    
+    - **Descrizione**: `Azure Information Protection client`
+    - **Scadenza**: Specificare la scelta della durata (1 anno, 2 anni o Nessuna scadenza)
 
-6. Ancora nel pannello **Impostazioni** selezionare **Chiavi**. Aggiungere una nuova chiave specificando una descrizione e la scelta relativa alla durata (1 anno, 2 anni o nessuna scadenza). Selezionare quindi **Salva**e copiare la stringa del **Valore** visualizzata. È importante salvare la stringa, perché non verrà più visualizzata e non potrà essere recuperata. Come per qualsiasi chiave usata, archiviare il valore salvato in modo sicuro e limitare l'accesso.
+9. Riaccenderle il **AIPOnBehalfOf - i certificati e i segreti** pannello nella **i segreti Client** sezione, copiare la stringa per il **valore**. Questa stringa è simile all'esempio seguente: `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn`. Per assicurarsi di copiare tutti i caratteri, selezionare l'icona per **copia negli Appunti**. 
+    
+    È importante salvare la stringa, perché non verrà più visualizzata e non potrà essere recuperata. Come con qualsiasi informazione riservata in uso, archiviare il valore salvato in modo sicuro e limitare l'accesso a esso.
 
-    Questo valore viene usato per il parametro `WebAppKey` quando si esegue il cmdlet Set-AIPAuthentication.
+10. Sempre nella **AIPOnBehalfOf - i certificati e i segreti** pannello dalle **Gestisci** dal menu **esporre un'API**.
 
-7. Tornando al pannello **Registrazioni per l'app**, selezionare **Registrazione nuova applicazione** per creare l'applicazione nativa. Nell'etichetta **Crea** specificare i valori seguenti e quindi fare clic su **Crea**:
+11. Nel **AIPOnBehalfOf - espongono un'API** pannello seleziona **impostare** per il **URI ID applicazione** opzione e nel **URI ID applicazione** valore, cambiare **api** al **http**. Questa stringa è simile all'esempio seguente: `http://d244e75e-870b-4491-b70d-65534953099e`. 
+    
+    Selezionare **Salva**.
 
-   - Nome: **AIPClient**
+12. Nella **AIPOnBehalfOf - espongono un'API** blade, selezionare **+ Aggiungi un ambito**.
 
-     Se preferibile, specificare un nome diverso. Deve essere univoco per ogni tenant.
+13. Nel **aggiungere un ambito** blade, specificare le informazioni seguenti e quindi selezionare **Aggiungi ambito**:
+    - **Nome dell'ambito**: `user-impersonation`
+    - **Che può fornire il consenso?** : **Gli amministratori e utenti**
+    - **Nome visualizzato di consenso dell'amministratore**: `Access Azure Information Protection scanner`
+    - **Descrizione del consenso dell'amministratore**: `Allow the application to access the scanner for the signed-in user`
+    - **Nome visualizzato dell'utente il consenso**: `Access Azure Information Protection scanner`
+    - **Descrizione del consenso dell'utente**: `Allow the application to access the scanner for the signed-in user`
+    - **stato**: **Abilitato** (predefinito)
 
-   - Tipo di applicazione: **Nativa**
+14. Nella **AIPOnBehalfOf - espongono un'API** pannello, chiudere questo pannello.
 
-   - URL di accesso: **http://localhost**
+15. Nel **registrazioni per l'App** blade, selezionare **+ registrazione nuova applicazione** per creare l'applicazione nativa.
 
-8. Selezionare l'applicazione appena creata, ad esempio **AIPClient**, quindi selezionare **Proprietà** nel pannello **Impostazioni**. Nel pannello **Proprietà** copiare il valore di **ID applicazione** e quindi chiudere il pannello.
+16. Nel **registrare un'applicazione** blade, specificare le impostazioni seguenti e quindi selezionare **registrare**:
+    - **Nome**: `AIPClient`
+    - **Tipi di account supportati**: **Account in questa directory dell'organizzazione solo**
+    - **(Facoltativo) URI di reindirizzamento**: **Un client pubblico (per dispositivi mobili e desktop)** e `http://localhost`
 
-    Questo valore viene usato per il parametro `NativeAppId` quando si esegue il cmdlet Set-AIPAuthentication. Incollarlo e salvarlo per riferimento futuro.
+17. Nel **AIPClient** pannello, copiare il valore della **ID applicazione (client)**. Il valore è simile all'esempio seguente: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
+    
+    Questo valore viene utilizzato per il parametro NativeAppId quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento futuro.
 
-9. Nel pannello **Impostazioni** selezionare **Autorizzazioni necessarie**. 
+18. Sempre nella **AIPClient** pannello dal **Gestisci** dal menu **Authentication**.
 
-10. Nel pannello **Autorizzazioni necessarie** fare clic su **Aggiungi**e quindi fare clic su **Selezionare un'API**. Nella casella di ricerca digitare **AIPOnBehalfOf**. Selezionare questo valore nella casella di riepilogo e quindi fare clic su **Seleziona**.
+19. Nel **AIPClient - autenticazione** blade, specificare le informazioni seguenti e quindi selezionare **salvare**:
+    - Nel **impostazioni avanzate** sezione, selezionare **i token ID**.
+    - Nel **tipo di client predefinito** sezione, selezionare **Yes**.
 
-11. Nel pannello **Abilita accesso** selezionare **AIPOnBehalfOf**, fare clic su **Seleziona**e quindi fare clic su **Chiudi**.
+20. Sempre nella **AIPClient - autenticazione** pannello dalle **Gestisci** dal menu **autorizzazioni delle API**.
 
-12. Nel pannello **Autorizzazioni necessarie** selezionare **Concedi autorizzazioni**, fare clic su **Sì** per confermare e quindi chiudere il pannello.
+21. Nel **AIPClient - le autorizzazioni** blade, selezionare **+ Aggiungi un'autorizzazione**.
 
+22. Nel **le autorizzazioni API Request** pannello seleziona **API My**.
 
-La configurazione delle due app è stata completata e i valori necessari per eseguire [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con i parametri *WebAppId*, *WebAppKey* e *NativeAppId* sono disponibili. Ad esempio:
+23. Nel **selezionare un'API** , selezionare **APIOnBehalfOf**, quindi selezionare la casella di controllo **-rappresentazione dell'utente**, come l'autorizzazione. Selezionare **aggiungere autorizzazioni**. 
 
-`Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "sc9qxh4lmv31GbIBCy36TxEEuM1VmKex5sAdBzABH+M=" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
+La configurazione delle due app è stata completata e i valori necessari per eseguire [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con i parametri *WebAppId*, *WebAppKey* e *NativeAppId* sono disponibili. Da questi esempi:
+
+`Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
 
 Eseguire questo comando nel contesto dell'account per l'assegnazione di etichette e la protezione di documenti in modalità non interattiva. Un esempio è un account utente per gli script di PowerShell o l'account del servizio per eseguire lo scanner di Azure Information Protection.  
 
@@ -610,7 +639,7 @@ Procedura generale:
     Facoltativamente, eliminare l'attività. Se il token scade, è necessario ripetere questa procedura; in questo caso, potrebbe essere più opportuno uscire dall'attività configurata in modo che sia pronta per una nuova esecuzione quando si copia il nuovo script di PowerShell con il nuovo valore del token.
 
 ## <a name="next-steps"></a>Passaggi successivi
-Per le informazioni della Guida sui cmdlet, all'interno di una sessione di PowerShell digitare `Get-Help <cmdlet name> cmdlet`. Per ottenere le informazioni più aggiornate, usare il parametro -online. Ad esempio: 
+Per le informazioni della Guida sui cmdlet, all'interno di una sessione di PowerShell digitare `Get-Help <cmdlet name> cmdlet`. Per ottenere le informazioni più aggiornate, usare il parametro -online. Ad esempio:  
 
     Get-Help Get-RMSTemplate -online
 

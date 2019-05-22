@@ -4,19 +4,19 @@ description: Anziché affidare a Microsoft la gestione della chiave radice per A
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/08/2019
+ms.date: 05/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: f0d33c5f-a6a6-44a1-bdec-5be1bc8e1e14
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 865334193d39a048ac48b6233005673f2be43f03
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: 9e43e534b95ecef5fa412ffb75fd3659ad9f8bb3
+ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65780896"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934983"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Pianificazione e implementazione della chiave del tenant di Azure Information Protection
 
@@ -34,8 +34,8 @@ Che cos'è la chiave del tenant di Azure Information Protection?
 
 |Requisito aziendale|Topologia di chiave del tenant consigliata|
 |------------------------|-----------------------------------|
-|Distribuire Azure Information Protection in modo rapido e senza hardware speciali, software aggiuntivo o una sottoscrizione di Azure.<br /><br />Ad esempio:  Esecuzione del test degli ambienti e quando l'organizzazione non ha i requisiti normativi per la gestione delle chiavi.|Gestita da Microsoft|
-|Normative di conformità e controllo su tutte le operazioni del ciclo di vita. <br /><br />Ad esempio: La chiave deve essere protetta da un modulo di protezione hardware (HSM).|BYOK|
+|Distribuire Azure Information Protection in modo rapido e senza hardware speciali, software aggiuntivo o una sottoscrizione di Azure.<br /><br />Ad esempio: Esecuzione del test degli ambienti e quando l'organizzazione non ha i requisiti normativi per la gestione delle chiavi.|Gestita da Microsoft|
+|Normative di conformità e controllo su tutte le operazioni del ciclo di vita. <br /><br />Ad esempio:  La chiave deve essere protetta da un modulo di protezione hardware (HSM).|BYOK|
 
 
 Se necessario, è possibile modificare la topologia di chiave del tenant dopo la distribuzione, usando il cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties).
@@ -107,12 +107,12 @@ Nella tabella seguente sono elencati i prerequisiti per la modalità BYOK.
 
 |Requisito|Altre informazioni|
 |---------------|--------------------|
-|Il tenant di Azure Information Protection deve avere una sottoscrizione di Azure. Se non è disponibile una sottoscrizione, è possibile creare un [account gratuito](https://azure.microsoft.com/pricing/free-trial/). <br /><br /> Per usare una chiave protetta dal modulo di protezione hardware, è necessario avere un piano tariffario Premium di Azure Key Vault.|La sottoscrizione gratuita di Azure, che fornisce l'accesso per configurare Azure Active Directory e i modelli personalizzati di Azure Rights Management (**Accesso ad Azure Active Directory**), non è sufficiente per usare Insieme di credenziali delle chiavi di Azure. Per verificare di avere una sottoscrizione di Azure che è possibile usare per la modalità BYOK, usare [Azure PowerShell](/powershell/azure/overview) cmdlet: <br /><br /> 1. Avviare una sessione di PowerShell di Azure con il **Esegui come amministratore** opzione e accedere come amministratore globale per il tenant di Azure Information Protection tramite `Connect-AzAccount` e quindi copiare e incollare la stringa del token risulta `https://microsoft.com/devicelogin`usando un browser. <br /><br /> Per altre informazioni, vedere [Accedi con Azure PowerShell](/powershell/azure/authenticate-azureps). <br /><br />2. Digitare il comando seguente e verificare che siano visualizzati valori per il nome e l'ID della sottoscrizione e per l'ID del tenant di Azure Information Protection e che lo stato sia abilitato: `Get-AzSubscription`<br /><br />Se non viene visualizzato alcun valore e viene solo restituito il prompt, non si dispone di una sottoscrizione di Azure utilizzabile per la modalità BYOK. <br /><br />**Nota**: oltre ai prerequisiti per la modalità BYOK, se si esegue la migrazione da AD RMS ad Azure Information Protection passando da una chiave software a una chiave hardware, è necessaria almeno la versione 11.62 del firmware Thales.|
-|Per usare una chiave protetta dal modulo di protezione hardware creata in locale: <br /><br />- Tutti i prerequisiti elencati per la modalità BYOK in Key Vault. |Vedere [Prerequisiti per la modalità BYOK](/azure/key-vault/key-vault-hsm-protected-keys#prerequisites-for-byok) nella documentazione relativa ad Insieme di credenziali delle chiavi di Azure. <br /><br /> **Nota**: oltre ai prerequisiti per la modalità BYOK, se si esegue la migrazione da AD RMS ad Azure Information Protection passando da una chiave software a una chiave hardware, è necessaria almeno la versione 11.62 del firmware Thales.|
+|Il tenant di Azure Information Protection deve avere una sottoscrizione di Azure. Se non è disponibile una sottoscrizione, è possibile creare un [account gratuito](https://azure.microsoft.com/pricing/free-trial/). <br /><br /> Per usare una chiave protetta dal modulo di protezione hardware, è necessario avere un piano tariffario Premium di Azure Key Vault.|La sottoscrizione gratuita di Azure, che fornisce l'accesso per configurare Azure Active Directory e i modelli personalizzati di Azure Rights Management (**Accesso ad Azure Active Directory**), non è sufficiente per usare Insieme di credenziali delle chiavi di Azure. Per verificare di avere una sottoscrizione di Azure che è possibile usare per la modalità BYOK, usare [Azure PowerShell](/powershell/azure/overview) cmdlet: <br /><br /> 1. Avviare una sessione di PowerShell di Azure con il **Esegui come amministratore** opzione e accedere come amministratore globale per il tenant di Azure Information Protection tramite `Connect-AzAccount` e quindi copiare e incollare la stringa del token risulta `https://microsoft.com/devicelogin`usando un browser. <br /><br /> Per altre informazioni, vedere [Accedi con Azure PowerShell](/powershell/azure/authenticate-azureps). <br /><br />2. Digitare il comando seguente e verificare che siano visualizzati valori per il nome e l'ID della sottoscrizione e per l'ID del tenant di Azure Information Protection e che lo stato sia abilitato: `Get-AzSubscription`<br /><br />Se non viene visualizzato alcun valore e viene solo restituito il prompt, non si dispone di una sottoscrizione di Azure utilizzabile per la modalità BYOK. <br /><br />**Nota**: Oltre ai prerequisiti BYOK, se si esegue la migrazione da AD RMS ad Azure Information Protection con chiave software a chiave hardware, è necessario disporre almeno la versione 11.62 o successive se si utilizza il firmware Thales per modulo di protezione hardware.|
+|Per usare una chiave protetta dal modulo di protezione hardware creata in locale: <br /><br />- Tutti i prerequisiti elencati per la modalità BYOK in Key Vault. |Vedere [Prerequisiti per la modalità BYOK](/azure/key-vault/key-vault-hsm-protected-keys#prerequisites-for-byok) nella documentazione relativa ad Insieme di credenziali delle chiavi di Azure. <br /><br /> **Nota**: Oltre ai prerequisiti BYOK, se si esegue la migrazione da AD RMS ad Azure Information Protection con chiave software a chiave hardware, è necessario disporre almeno la versione 11.62 o successive se si utilizza il firmware Thales per modulo di protezione hardware.|
 |Se l'insieme di credenziali delle chiavi per contenere la chiave del tenant usa gli endpoint servizio di rete virtuale per Azure Key Vault: <br /><br />- Consentire ai servizi Microsoft considerati attendibili di ignorare il firewall.|Per altre informazioni, vedere [Endpoint servizio di rete virtuale per Azure Key Vault](/azure/key-vault/key-vault-overview-vnet-service-endpoints).|
 |Il modulo di amministrazione di Azure Rights Management per Windows PowerShell.|Per le istruzioni di installazione, vedere [Installazione del modulo PowerShell AADRM](./install-powershell.md). <br /><br />Se il modulo Windows PowerShell è stato installato in precedenza, eseguire il comando seguente per verificare che il numero della versione in uso sia almeno **2.9.0.0**: `(Get-Module aadrm -ListAvailable).Version`|
 
-Per altre informazioni sui moduli di protezione hardware Thales e su come vengono usati con Insieme di credenziali delle chiavi di Azure, vedere il [sito Web Thales](https://www.thales-esecurity.com/msrms/cloud).
+Per altre informazioni sul modulo di protezione hardware nShield nCipher (HSM) e su come vengono usati con Azure Key Vault, vedere la [sito Web nCipher](https://www.ncipher.com/products/key-management/cloud-microsoft-azure/how-to-buy).
 
 ### <a name="choosing-your-key-vault-location"></a>Scelta del percorso dell'insieme di credenziali delle chiavi
 
