@@ -9,10 +9,10 @@ ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: 10fa599831a57291d6e89574b2d57a1db025b2ac
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "65934871"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Esercitazione: configurare le impostazioni dei criteri di Azure Information Protection e creare una nuova etichetta
@@ -263,7 +263,7 @@ Se non si vogliono mantenere le modifiche apportate in questa esercitazione, seg
 
 2. Ripristinare i valori originali precedentemente annotati per le impostazioni dei criteri e quindi selezionare **Salva**. 
 
-3. Dall'opzione di menu **Classificazioni** > **Etichetta**: nel pannello **Azure Information Protection - Etichetta** selezionare il menu di scelta rapida (**...**) per l'etichetta **Finance** (Contabilità) creata.
+3. Dall'opzione di menu **Classificazioni** > **Etichetta**: nel pannello **Azure Information Protection - Etichetta** selezionare il menu di scelta rapida ( **...** ) per l'etichetta **Finance** (Contabilità) creata.
 
 4. Selezionare **Elimina questa etichetta** e, se viene richiesto di confermare l'operazione, scegliere **OK**.
 

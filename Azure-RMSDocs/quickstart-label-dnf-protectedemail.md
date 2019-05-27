@@ -9,10 +9,10 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: 1485020b6edd47aae75486bf3a8215cf5cb14a1b
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "65934990"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Guida introduttiva: configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate
@@ -87,7 +87,7 @@ Per un elenco completo dei prerequisiti per l'uso di Azure Information Protectio
 
 4. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (cloud key)** (Azure - Chiave cloud).
     
-5. Selezionare **Configura le autorizzazioni definite dall'utente (anteprima)**.
+5. Selezionare **Configura le autorizzazioni definite dall'utente (anteprima)** .
 
 6. Assicurarsi che sia selezionata l'opzione seguente: **In Outlook applica Non inoltrare**.
 

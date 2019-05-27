@@ -9,10 +9,10 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: 15359fac56b4bef68ae9668a31c82a8b742b208f
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "64767838"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Guida introduttiva: Creare una nuova etichetta di Azure Information Protection per utenti specifici
@@ -101,11 +101,11 @@ Per testare questa etichetta sono necessari almeno due computer, poiché il clie
 
 Se non si vuole mantenere questa etichetta e i criteri con ambito, seguire questa procedura:
 
-1. Dall'opzione di menu **Classificazioni** > **Criteri**: nel pannello **Azure Information Protection - Criteri** selezionare il menu di scelta rapida (**...**) relativo ai criteri con ambito appena creati. Ad esempio: **Vendite**.
+1. Dall'opzione di menu **Classificazioni** > **Criteri**: nel pannello **Azure Information Protection - Criteri** selezionare il menu di scelta rapida ( **...** ) relativo ai criteri con ambito appena creati. Ad esempio: **Vendite**.
 
 2. Selezionare **Elimina criteri** e, se viene richiesto di confermare l'operazione, scegliere **OK**.
 
-3. Dall'opzione di menu **Classificazioni** > **Etichetta**: nel pannello **Azure Information Protection - Etichetta** selezionare il menu di scelta rapida (**...**) per l'etichetta appena creata.  Ad esempio: **Vendite - Con restrizioni**.
+3. Dall'opzione di menu **Classificazioni** > **Etichetta**: nel pannello **Azure Information Protection - Etichetta** selezionare il menu di scelta rapida ( **...** ) per l'etichetta appena creata.  Ad esempio: **Vendite - Con restrizioni**.
 
 4.  Selezionare **Elimina questa etichetta** e, se viene richiesto di confermare l'operazione, scegliere **OK**.
 

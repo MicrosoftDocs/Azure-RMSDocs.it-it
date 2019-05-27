@@ -10,10 +10,10 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 Customer intent: As an administrator, I want to label documents and emails to classify and protect my organization's data, wherever it resides.
 ms.openlocfilehash: 0bb1096a903be953eb9702bc89b6a8c98d340946
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "65935053"
 ---
 # <a name="what-is-azure-information-protection"></a>Che cos'è Azure Information Protection?

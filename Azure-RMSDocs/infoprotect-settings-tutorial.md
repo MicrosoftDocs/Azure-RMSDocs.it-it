@@ -9,10 +9,10 @@ ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: 2341bfbdc443a15096d178b143e6bd1464b1a53e
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "65935096"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Esercitazione: Configurare impostazioni dei criteri di Azure Information Protection che interagiscono tra loro
@@ -142,7 +142,7 @@ Se con l'impostazione di etichettatura obbligatoria non è stata impostata un'et
 
 ### <a name="recommendations-for-emails-with-attachments"></a>Suggerimenti per i messaggi di posta elettronica con allegati
 
-Per il documento di Word aperto, scegliere un'etichetta con una classificazione superiore rispetto a **Generale**, ad esempio una delle etichette secondarie in **Riservato**, come **Riservato - Chiunque (senza protezione)**. Salvare il documento in locale e assegnare un nome qualsiasi. 
+Per il documento di Word aperto, scegliere un'etichetta con una classificazione superiore rispetto a **Generale**, ad esempio una delle etichette secondarie in **Riservato**, come **Riservato - Chiunque (senza protezione)** . Salvare il documento in locale e assegnare un nome qualsiasi. 
 
 Avviare Outlook e creare un nuovo messaggio di posta elettronica. Come con Word, il nuovo messaggio di posta elettronica viene etichettato automaticamente come **Generale** ed è visualizzata la barra di Information Protection.
 

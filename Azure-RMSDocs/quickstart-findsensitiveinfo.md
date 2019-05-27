@@ -9,10 +9,10 @@ ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: 657d85e90ffe4192514101595815f5110564d761
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "64767783"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Guida introduttiva: Trovare le informazioni riservate presenti nei file archiviati in locale

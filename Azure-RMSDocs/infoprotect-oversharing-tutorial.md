@@ -9,10 +9,10 @@ ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.openlocfilehash: 889e10192cc36f7fba913683f21c18ee5e577280
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "65934682"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Esercitazione: configurare Azure Information Protection per il controllo dell'oversharing delle informazioni con Outlook
@@ -103,7 +103,7 @@ Per questo passaggio dell'esercitazione, verranno specificate le seguenti impost
 
 Usando il criterio con ambito appena creato, verrà aggiunta una nuova impostazione avanzata del client denominata **OutlookWarnUntrustedCollaborationLabel** con l'ID dell'etichetta**General**: 
 
-1. Di nuovo nel pannello **Azure Information Protection - Criteri**, selezionare il menu a comparsa (**...**) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Di nuovo nel pannello **Azure Information Protection - Criteri**, selezionare il menu a comparsa ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
 2. Nel pannello **Impostazioni avanzate** digitare il nome dell'impostazione avanzata, ovvero **OutlookWarnUntrustedCollaborationLabel**, e incollare il proprio ID etichetta per il valore. Usando l'ID etichetta di esempio:
     
@@ -138,7 +138,7 @@ Nel computer client si vedranno ora i risultati della configurazione di questa i
 
 L'impostazione avanzata esistente del client verrà modificata conservando l'ID etichetta **General**, ma cambiando il nome in **OutlookJustifyUntrustedCollaborationLabel**: 
 
-1. Nel pannello **Azure Information Protection - Criteri**, selezionare il menu a comparsa (**...**) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Nel pannello **Azure Information Protection - Criteri**, selezionare il menu a comparsa ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
 2. Nel pannello **Impostazioni avanzate** sostituire il nome dell'impostazione avanzata creata in precedenza, ovvero **OutlookWarnUntrustedCollaborationLabel**, con il nuovo nome **OutlookJustifyUntrustedCollaborationLabel**:
     
@@ -170,7 +170,7 @@ Nel computer client si vedranno ora i risultati di questa nuova impostazione ava
 
 L'impostazione avanzata esistente del client verrà modificata ancora una volta, conservando l'ID etichetta **General**, ma cambiando il nome in **OutlookBlockUntrustedCollaborationLabel**: 
 
-1. Nel pannello **Azure Information Protection - Criteri** del portale di Azure selezionare il menu a comparsa (**...**) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Nel pannello **Azure Information Protection - Criteri** del portale di Azure selezionare il menu a comparsa ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
 2. Nel pannello **Impostazioni avanzate** sostituire il nome dell'impostazione avanzata creata in precedenza, ovvero **OutlookJustifyUntrustedCollaborationLabel**, con il nuovo nome **OutlookBlockUntrustedCollaborationLabel**:
     
@@ -279,7 +279,7 @@ Per questo passaggio dell'esercitazione verrà specificata una nuova impostazion
 
 Questa nuova impostazione avanzata del client denominata **OutlookUnlabeledCollaborationAction** non richiede un ID etichetta, ma specifica l'azione da intraprendere per i contenuti senza etichetta: 
 
-1. Nel pannello **Azure Information Protection - Criteri** del portale di Azure selezionare il menu a comparsa (**...**) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Nel pannello **Azure Information Protection - Criteri** del portale di Azure selezionare il menu a comparsa ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
 2. Nel pannello**Impostazioni avanzate** digitare il nome dell'impostazione avanzata, ovvero **OutlookUnlabeledCollaborationAction** e specificare**Warn** come valore:
     
@@ -309,7 +309,7 @@ Nel computer client si vedranno ora i risultati della configurazione di questa i
 
 L'impostazione avanzata esistente del client verrà modificata conservando il nome **OutlookUnlabeledCollaborationAction**, ma cambiando il valore in **Justify**: 
 
-1. Nel pannello **Azure Information Protection - Criteri**, selezionare il menu a comparsa (**...**) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Nel pannello **Azure Information Protection - Criteri**, selezionare il menu a comparsa ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
 2. Nel pannello**Impostazioni avanzate** individuare l'impostazione **OutlookUnlabeledCollaborationAction** e sostituire il valore **Warn** precedente con il nuovo valore **Justify**:
     
@@ -339,7 +339,7 @@ Nel computer client si vedranno ora i risultati della modifica del valore per qu
 
 Come in precedenza, l'impostazione avanzata esistente del client verrà modificata conservando il nome **OutlookUnlabeledCollaborationAction**, ma cambiando il valore in **Block**: 
 
-1. Nel pannello **Azure Information Protection - Criteri**, selezionare il menu a comparsa (**...**) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Nel pannello **Azure Information Protection - Criteri**, selezionare il menu a comparsa ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
 2. Nel pannello**Impostazioni avanzate** individuare l'impostazione **OutlookUnlabeledCollaborationAction** e sostituire il valore **Justify** precedente con il nuovo valore **Block**:
     
@@ -397,7 +397,7 @@ Questi messaggi sono stati testati usando il proprio indirizzo e-mail come desti
 
 Per illustrare il funzionamento, verrà creata una nuova impostazione avanzata del client denominata **OutlookBlockTrustedDomains** e verrà specificato il nome di dominio del proprio indirizzo e-mail. Ciò impedirà la visualizzazione del messaggio di blocco per i destinatari che hanno questo nome di dominio nel proprio indirizzo e-mail. Allo stesso modo è possibile creare impostazioni avanzate del client per **OutlookWarnTrustedDomains** e **OutlookJustifyTrustedDomains**.
 
-1. Nel pannello **Azure Information Protection - Criteri** del portale di Azure selezionare il menu a comparsa (**...**) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Nel pannello **Azure Information Protection - Criteri** del portale di Azure selezionare il menu a comparsa ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
 2. Nel pannello **Impostazioni avanzate** digitare il nome dell'impostazione avanzata, ovvero **OutlookBlockTrustedDomains**, e incollare il nome di dominio del proprio indirizzo e-mail come valore. Ad esempio:
     
@@ -411,7 +411,7 @@ Per illustrare il funzionamento, verrà creata una nuova impostazione avanzata d
 
 Se non si vogliono mantenere le modifiche apportate in questa esercitazione, seguire questa procedura:
 
-1. Nel pannello **Azure Information Protection - Criteri** del portale di Azure selezionare il menu a comparsa (**...**) accanto a **Oversharing tutorial**. Selezionare quindi **Elimina criteri**.
+1. Nel pannello **Azure Information Protection - Criteri** del portale di Azure selezionare il menu a comparsa ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Elimina criteri**.
 
 2. Se viene chiesto di confermare, selezionare **OK**.
 
