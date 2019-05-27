@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5f9ac2414e83ab84690c0fdaea187dad8d7f3b36
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: bd17dbf51042818250cbea95ee2738d516c76077
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768375"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186690"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -380,7 +380,7 @@ Creare l'impostazione client avanzata seguente con uno dei valori seguenti:
 
 Per impostazione predefinita, l'avviso, giustificare o bloccare i messaggi popup si applicano a tutti i documenti di Office e i documenti PDF. È possibile perfezionare questo elenco specificando quali estensioni di nome file devono visualizzare l'avviso, giustificare o bloccare i messaggi con una proprietà aggiuntiva del client avanzato e un elenco delimitato da virgole di estensioni di file.
 
-Valore di esempio per più estensioni file definire come una stringa delimitata da virgole: `.XLSX,.XLSM,.XLS,.XLTX,.XLTM, .DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
+Valore di esempio per più estensioni file definire come una stringa delimitata da virgole: `.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
 
 In questo esempio, un documento PDF senza etichetta non genererà un avviso, giustificare o bloccare i messaggi popup.
 
