@@ -1,6 +1,6 @@
 ---
-title: Guida introduttiva - Set e get un'etichetta di riservatezza in un file usando il C# MIP SDK
-description: Una Guida introduttiva che illustra come usare il Wrapper di .NET SDK di Microsoft informazioni protezione per impostare e ottenere un'etichetta di riservatezza su un file.
+title: "Avvio rapido: Impostare e ottenere un'etichetta di riservatezza su un file mediante il SDK C# di MIP"
+description: Questo Avvio rapido illustra come usare il wrapper .NET del SDK Microsoft Information Protection per impostare e ottenere un'etichetta di riservatezza su un file.
 services: information-protection
 author: msmbaldwin
 ms.service: information-protection
@@ -9,10 +9,10 @@ ms.collection: M365-security-compliance
 ms.date: 01/09/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 395c46ce1979b2ef670aa27e9329c5219ca63e13
-ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
-ms.translationtype: MT
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "60173243"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Guida introduttiva: Impostare e ottenere un'etichetta di riservatezza (C#)
@@ -23,14 +23,14 @@ Questo Avvio rapido illustra come usare altre API dei file di MIP. Con una delle
 
 Se non è già stato fatto, completare i prerequisiti seguenti prima di continuare:
 
-- Completa [Guida introduttiva: Elenca le etichette di riservatezza (C#)](quick-file-list-labels-csharp.md) first, che compila una soluzione di Visual Studio starter per elencare le etichette di riservatezza dell'organizzazione. Il presente Avvio rapido "Impostare e ottenere un'etichetta di riservatezza" è basato su quello precedente.
-- Facoltativamente: Revisione [gestori di File nel SDK di MIP](concept-handler-file-cpp.md) concetti.
+- In primo luogo completare [Avvio rapido: Elencare le etichette di riservatezza (C#)](quick-file-list-labels-csharp.md), che crea una soluzione Visual Studio iniziale, per creare un elenco delle etichette di riservatezza di un'organizzazione. Il presente Avvio rapido "Impostare e ottenere un'etichetta di riservatezza" è basato su quello precedente.
+- Facoltativamente: rivedere i concetti esposti in [Gestori di file in MIP SDK](concept-handler-file-cpp.md).
 
 ## <a name="add-logic-to-set-and-get-a-sensitivity-label"></a>Aggiungere codice per impostare e ottenere un'etichetta di riservatezza
 
 Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un file mediante l'oggetto file engine. 
 
-1. Usando **Esplora soluzioni**, aprire il file con estensione cs del progetto che contiene l'implementazione di Main () ' (metodo). Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto. 
+1. Usare **Esplora soluzioni** per aprire il file con estensione cs nel progetto che contiene l'implementazione del metodo Main()`. Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto. 
 
 2. Verso la fine del corpo `Main()`, dopo `Console.ReadKey()` e prima di `}` (il punto in cui è stato interrotto l'Avvio rapido precedente), inserire il codice seguente:
 
@@ -72,7 +72,7 @@ Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un fi
 
 3. Sostituire i valori segnaposto nel codice sorgente appena incollato, usando i valori seguenti:
 
-   | Segnaposto | Value |
+   | Segnaposto | Valore |
    |:----------- |:----- |
    | \<input-file-path\> | Percorso completo di un file di input di test, ad esempio: `c:\\Test\\Test.docx`. |
    | \<label-id\> | ID etichetta di riservatezza, copiato dalla console di output nell'Avvio rapido precedente, ad esempio: `f42a3342-8706-4288-bd31-ebb85995028z`. |
@@ -82,9 +82,9 @@ Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un fi
 
 Compilare e testare l'applicazione client. 
 
-1. Usare CTRL + MAIUSC + B (**Compila soluzione**) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 (**Avvia debug**) per eseguire l'applicazione.
+1. Usare CTRL+MAIUSC+B (**Compila soluzione**) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 (**Avvia debug**) per eseguire l'applicazione.
 
-2. Se il progetto compilato ed eseguito correttamente, l'applicazione *potrebbe* prompt dei comandi per l'autenticazione tramite la libreria ADAL ogni volta che il SDK chiama la `AcquireToken()` (metodo). Se esistono già credenziali memorizzate nella cache, non verrà richiesto di accedere e visualizzare l'elenco delle etichette, aggiungendo le informazioni sull'etichetta applicata e file modificato.
+2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione *potrebbe* richiedere l'autenticazione tramite ADAL ogni volta che il SDK chiama il metodo `AcquireToken()`. Se esistono già credenziali memorizzate nella cache non verrà richiesto di accedere e visualizzare l'elenco delle etichette e quindi le informazioni sull'etichetta applicata e sul file modificato.
 
   ```console   
   Personal : 73c47c6a-eb00-4a6a-8e19-efaada66dee6

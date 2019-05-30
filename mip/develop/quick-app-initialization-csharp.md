@@ -1,6 +1,6 @@
 ---
-title: Guida introduttiva - inizializzazione per Microsoft Information Protection (MIP) SDK C# i client
-description: Una Guida introduttiva che illustra come scrivere la logica di inizializzazione per un SDK di Microsoft Information Protection (MIP) C# applicazioni client.
+title: 'Avvio rapido: Inizializzazione per i client del SDK C# di Microsoft Information Protection (MIP)'
+description: Avvio rapido che illustra come scrivere la logica di inizializzazione per applicazioni client del SDK C# di Microsoft Information Protection (MIP).
 author: tommoser
 ms.service: information-protection
 ms.topic: quickstart
@@ -8,18 +8,18 @@ ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: tommos
 ms.openlocfilehash: b7f2b25027502fbdd9dd7bd877b8893c1940628a
-ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
-ms.translationtype: MT
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "60184965"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Guida introduttiva: Inizializzazione dell'applicazione client (C#)
 
-Questa Guida introduttiva spiega come implementare il modello di inizializzazione client, utilizzato dal wrapper MIP SDK .NET in fase di esecuzione.
+Questo Avvio rapido spiega come implementare il modello di inizializzazione client usato dal wrapper .NET del SDK MIP in fase di runtime.
 
 > [!NOTE]
-> I passaggi descritti in questa Guida introduttiva sono necessari per qualsiasi applicazione client che utilizza il File o le API dei criteri del wrapper .NET MIP. L'API di protezione non è ancora disponibile. Sebbene questa guida introduttiva illustri l'utilizzo delle API File, lo stesso modello è applicabile ai client che usano le API Criteri e Protezione. Le guide introduttive successive devono essere eseguite in sequenza, perché ognuna è basata sulla precedente e questa è la prima.
+> I passaggi descritti in questo avvio rapido sono necessari per qualsiasi applicazione client che usa le API dei file o dei criteri del wrapper .NET di MIP. L'API di protezione non è ancora disponibile. Sebbene questa guida introduttiva illustri l'utilizzo delle API File, lo stesso modello è applicabile ai client che usano le API Criteri e Protezione. Le guide introduttive successive devono essere eseguite in sequenza, perché ognuna è basata sulla precedente e questa è la prima.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -35,8 +35,8 @@ Se non è già stato fatto, assicurarsi di:
 Verranno prima di tutto creati e configurati la soluzione e il progetto iniziali di Visual Studio su cui si baseranno le altre guide introduttive.
 
 1. Aprire Visual Studio 2017 e scegliere **File**, **Nuovo**, **Progetto** dal menu. Nella finestra di dialogo **Nuovo progetto**:
-   - Nel riquadro sinistro, sotto **Installed**, **Visual C#** , selezionare **Desktop di Windows**.
-   - Nel riquadro centrale selezionare **App Console (.NET Framework)**
+   - Nel riquadro a sinistra in **Installati**, **Visual C#** selezionare **Windows Desktop**.
+   - Nel riquadro centrale selezionare **App console (.NET Framework)**.
    - Nel riquadro inferiore, aggiornare **Nome** e **Posizione** del progetto, nonché il **Nome della soluzione** in cui è contenuto corrispondentemente.
    - Al termine fare clic sul pulsante **OK** in basso a destra. 
 
@@ -50,24 +50,24 @@ Verranno prima di tutto creati e configurati la soluzione e il progetto iniziali
      - Selezionare il pacchetto "Microsoft.InformationProtection.File".
      - Fare clic su "Installa" e quindi su "OK" quando viene visualizzata la finestra di dialogo di conferma **Anteprima modifiche**.
 
-3. Ripetere i passaggi precedenti per aggiungere il pacchetto dell'API File di MIP SDK, ma invece di aggiungere "ActiveDirectory" all'applicazione.
+3. Ripetere i passaggi precedenti per aggiungere il pacchetto dell'API File del SDK MIP, ma aggiungere invece "Microsoft.IdentityModel.Clients.ActiveDirectory" all'applicazione.
 
 ## <a name="implement-an-authentication-delegate"></a>Implementare un delegato di autenticazione
 
 MIP SDK implementa l'autenticazione usando l'estensibilità delle classi, che rende disponibile un meccanismo per condividere le operazioni di autenticazione con l'applicazione client. Il client deve acquisire un token di accesso OAuth2 adatto e fornirlo a MIP SDK in fase di esecuzione.
 
-Creare ora un'implementazione di un delegato, l'autenticazione mediante l'estensione del SDK `Microsoft.InformationProtection.IAuthDelegate` interfaccia e si esegue l'override o implementa il `IAuthDelegate.AcquireToken()` funzione virtuale. Delegato dell'autenticazione viene creata un'istanza e utilizzato in un secondo momento dal `FileProfile` e `FileEngine` oggetti.
+Ora si creerà un'implementazione per un delegato di autenticazione mediante l'estensione dell'interfaccia `Microsoft.InformationProtection.IAuthDelegate` del SDK e l'override/implementazione della funzione virtuale `IAuthDelegate.AcquireToken()`. In seguito si creerà un'istanza del delegato di autenticazione che verrà usata dagli oggetti `FileProfile` e `FileEngine`.
 
-1. Fare clic sul nome del progetto in Visual Studio, selezionare **Add** quindi **classe**.
-2. Immettere "AuthDelegateImplementation" i **nome** campo. Fare clic su **Aggiungi**.
-3. Aggiungere istruzioni using per Active Directory Authentication Library (ADAL) e la libreria di MIP:
+1. Fare clic con il pulsante destro del mouse sul nome del progetto in Visual Studio, selezionare **Aggiungi** e quindi **Classe**.
+2. Immettere "AuthDelegateImplementation" nel campo **Nome**. Fare clic su **Aggiungi**.
+3. Aggiungere istruzioni using per Active Directory Authentication Library (ADAL) e la libreria MIP:
 
      ```csharp
      using Microsoft.InformationProtection;
      using Microsoft.IdentityModel.Clients.ActiveDirectory;
      ```
 
-4. Impostare `AuthDelegateImplementation` ereditare `Microsoft.InformationProtection.IAuthDelegate` e l'implementazione di una variabile privata di `Microsoft.InformationProtection.ApplicationInfo` e un costruttore che accetta lo stesso tipo.
+4. Impostare `AuthDelegateImplementation` in modo che erediti `Microsoft.InformationProtection.IAuthDelegate` e implementi una variabile privata `Microsoft.InformationProtection.ApplicationInfo` e un costruttore che accetta lo stesso tipo.
 
      ```csharp
      public class AuthDelegateImplementation : IAuthDelegate
@@ -81,9 +81,9 @@ Creare ora un'implementazione di un delegato, l'autenticazione mediante l'estens
      }
      ```
 
-Il `ApplicationInfo` oggetto contiene due proprietà. Il `_appInfo.ApplicationId` verrà usato nel `AuthDelegateImplementation` classe per fornire l'ID client per la libreria di autenticazione.
+L'oggetto `ApplicationInfo` contiene due proprietà. `_appInfo.ApplicationId` verrà usata nella classe `AuthDelegateImplementation` per specificare l'ID client per la libreria di autenticazione.
 
-5. Aggiungere il `public string AcquireToken()` (metodo). Questo metodo deve accettare `Microsoft.InformationProtection.Identity` e due stringhe: autorità e risorse. Queste variabili di stringa verranno passate per la libreria di autenticazione dall'API e non devono essere modificate. La modifica può comportare errori di autenticazione.
+5. Aggiungere il metodo `public string AcquireToken()`. Questo metodo deve accettare `Microsoft.InformationProtection.Identity` e due stringhe: authority e resource. Queste variabili stringa verranno passate alla libreria di autenticazione dall'API e non devono essere modificate. La modifica può provocare errori di autenticazione.
 
      ```csharp
      public string AcquireToken(Identity identity, string authority, string resource)
@@ -96,11 +96,11 @@ Il `ApplicationInfo` oggetto contiene due proprietà. Il `_appInfo.ApplicationId
 
 ## <a name="implement-a-consent-delegate"></a>Implementare un delegato di consenso
 
-Creare ora un'implementazione per un delegato di consenso dell'utente, mediante l'estensione del SDK `Microsoft.InformationProtection.IConsentDelegate` interfaccia e l'implementazione di override/`GetUserConsent()`. In seguito si creerà un'istanza del delegato di consenso che verrà usata dagli oggetti profilo e motore dell'API File. Il delegato di consenso viene fornito con l'indirizzo del servizio l'utente deve fornire il consenso all'uso in di `url` parametro. Il delegato deve in genere forniscono un flusso che consente all'utente di accettare o rifiutare per fornire il consenso per l'accesso al servizio. Per questo livello di codice di avvio rapido `Consent.Accept`.
+Si creerà ora un'implementazione per un delegato di consenso mediante l'estensione dell'interfaccia `Microsoft.InformationProtection.IConsentDelegate` del SDK e l'override/implementazione di `GetUserConsent()`. In seguito si creerà un'istanza del delegato di consenso che verrà usata dagli oggetti profilo e motore dell'API File. Il delegato di consenso viene fornito con l'indirizzo del servizio per il quale l'utente deve fornire il consenso tramite il parametro `url`. Il delegato fornisce in genere un flusso che consente all'utente di accettare o rifiutare il consenso per l'accesso al servizio. Per questo avvio rapido codificare `Consent.Accept`.
 
-1. Usando la stessa funzionalità "Aggiungi classe" di Visual Studio usata in precedenza, aggiungere un'altra classe al progetto. Questa volta, immettere "ConsentDelegateImplementation" nel **nome della classe** campo. 
+1. Usando la stessa funzionalità "Aggiungi classe" di Visual Studio usata in precedenza, aggiungere un'altra classe al progetto. Questa volta immettere "ConsentDelegateImplementation" nel campo **Nome classe**. 
 
-2. A questo punto aggiornare **ConsentDelegateImpl.cs** per implementare la nuova classe di consenso dell'utente delegato. Aggiungere l'usando informativa `Microsoft.InformationProtection` e impostare la classe per ereditare `IConsentDelegate`.
+2. A questo punto aggiornare **ConsentDelegateImpl.cs** per implementare la nuova classe del delegato di consenso. Aggiungere l'istruzione using per `Microsoft.InformationProtection` e impostare la classe in modo che erediti `IConsentDelegate`.
 
      ```csharp
      class ConsentDelegateImplementation : IConsentDelegate
@@ -112,17 +112,17 @@ Creare ora un'implementazione per un delegato di consenso dell'utente, mediante 
      }
      ```
 
-3. Facoltativamente, provare a compilare la soluzione per verificare se viene compilato senza errori.
+3. Facoltativamente provare a compilare la soluzione per verificare se viene compilata senza errori.
 
-## <a name="initialize-the-mip-sdk-managed-wrapper"></a>Inizializzare il Wrapper gestito MIP SDK
+## <a name="initialize-the-mip-sdk-managed-wrapper"></a>Inizializzare il wrapper gestito del SDK MIP
 
-1. Dal **Esplora soluzioni**, aprire il file con estensione cs del progetto che contiene l'implementazione del `Main()` (metodo). Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto.
+1. Da **Esplora soluzioni** aprire il file con estensione cs del progetto che contiene l'implementazione del metodo `Main()`. Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto.
 
 2. Rimuovere l'implementazione generata di `main()`. 
 
-3. Il wrapper gestito include una classe statica, `Microsoft.InformationProtection.MIP` utilizzato per l'inizializzazione, il caricamento di profili e il rilascio delle risorse. Per inizializzare il wrapper per le operazioni API file, chiamare MIP. Initialize, passando `MipComponent.File` per caricare le librerie necessarie per operazioni su file. 
+3. Il wrapper gestito include una classe statica `Microsoft.InformationProtection.MIP` usata per l'inizializzazione, il caricamento di profili e il rilascio delle risorse. Per inizializzare il wrapper per le operazioni dell'API file chiamare MIP.Initialize, passando `MipComponent.File` per caricare le librerie necessarie per le operazioni sui file. 
 
-4. Nelle `Main()` nelle *Program.cs* aggiungere quanto segue, sostituendo **\<application-id\>** con l'ID di registrazione dell'applicazione AD Azure creata in precedenza.
+4. In `Main()` in *Program.cs* aggiungere quanto segue, sostituendo **\<application-id\>** con l'ID di registrazione dell'applicazione Azure AD creata in precedenza.
 
 ```csharp
 using System;
@@ -146,9 +146,9 @@ namespace mip_sdk_dotnet_quickstart
 }
 ```
 
-## <a name="construct-a-file-profile-and-engine"></a>Creare un profilo di File e il motore
+## <a name="construct-a-file-profile-and-engine"></a>Costruire un profilo e un motore per il file
 
-Come accennato, sono richiesti per i client SDK tramite MIP APIs oggetti del profilo e il motore. Completare la scrittura di codice parte di questa Guida introduttiva, aggiungendo il codice per caricare le DLL native, quindi creare gli oggetti del profilo e il motore.
+Come detto, gli oggetti profilo e motore sono necessari per i client del SDK che usano API MIP. Completare la parte di scrittura del codice di questo Avvio rapido aggiungendo il codice necessario per caricare le DLL native, quindi creare un'istanza degli oggetti profilo e motore.
 
    ```csharp
 using System;
@@ -195,15 +195,15 @@ namespace mip_sdk_dotnet_quickstart
 }
 ``` 
 
-3. Sostituire i valori segnaposto nel codice sorgente incollata, usando i valori seguenti:
+3. Sostituire i valori segnaposto nel codice sorgente incollato, usando i valori seguenti:
 
-   | Segnaposto | Value | Esempio |
+   | Segnaposto | Valore | Esempio |
    |:----------- |:----- |:--------|
    | \<application-id\> | ID di applicazione Azure AD assegnato all'applicazione registrata in "Installazione e configurazione di MIP SDK" (2 istanze).  | 0edbblll-8773-44de-b87c-b8c6276d41eb |
    | \<friendly-name\> | Nome descrittivo definito dall'utente per l'applicazione. | AppInitialization |
 
 
-4. Eseguire ora la compilazione finale dell'applicazione e risolvere gli eventuali errori. Il codice dovrebbe essere compilato correttamente.
+4. Eseguire ora la compilazione finale dell'applicazione e risolvere gli eventuali errori. Il codice verrà compilato correttamente.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

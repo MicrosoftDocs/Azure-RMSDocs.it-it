@@ -4,17 +4,17 @@ description: Alcune domande frequenti su Azure Information Protection e sul rela
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/07/2019
+ms.date: 05/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: f3d8610ff5d1bb1138d69825e37d8c6eb46f1a0a
-ms.sourcegitcommit: 7f769dfa8d4758f13b2c7f83d89fabbb84716290
+ms.openlocfilehash: d23df32bf3af4625cbb98579fa93a4bef8443be3
+ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65191926"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66269809"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
@@ -110,7 +110,7 @@ Quando viene installato il client Azure Information Protection per Windows e non
 
 Gli amministratori globali per un tenant di Office 365 o di Azure AD possono ovviamente eseguire tutte le attività amministrative per Azure Information Protection. Se tuttavia si vogliono assegnare autorizzazioni amministrative ad altri utenti, sono disponibili le opzioni seguenti:
 
-- **Amministratore di Information Protection**: Questo ruolo di amministratore di Azure Active Directory consente a un amministratore di configurare Azure Information Protection, ma non altri servizi. Un amministratore con questo ruolo può attivare e disattivare il servizio di protezione Azure Rights Management, configurare le etichette e le impostazioni di protezione e configurare i criteri di Azure Information Protection. Un amministratore con questo ruolo può anche eseguire tutti i cmdlet PowerShell per il [client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) e per il [modulo AADRM](administer-powershell.md). Tuttavia, questo ruolo non supporta rilevamento e revoca dei documenti per gli utenti.
+- **Gli amministratori di Azure Information Protection**: Questo ruolo di amministratore di Azure Active Directory consente a un amministratore di configurare Azure Information Protection, ma non altri servizi. Un amministratore con questo ruolo può attivare e disattivare il servizio di protezione Azure Rights Management, configurare le etichette e le impostazioni di protezione e configurare i criteri di Azure Information Protection. Un amministratore con questo ruolo può anche eseguire tutti i cmdlet PowerShell per il [client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) e per il [modulo AADRM](administer-powershell.md). Tuttavia, questo ruolo non supporta rilevamento e revoca dei documenti per gli utenti.
     
     > [!NOTE]
     > Dopo aver eseguito la [migrazione del tenant nell'archivio etichette unificato](configure-policy-migrate-labels.md), questo ruolo non è più supportato per il portale di Azure.
@@ -151,7 +151,7 @@ Il servizio Azure Rights Management genera e gestisce automaticamente i certific
 
 Azure Information Protection consente di classificare e proteggere messaggi di posta elettronica e documenti, sia in locale che nel cloud. Questi documenti includono documenti di Word, fogli di calcolo di Excel, presentazioni di PowerPoint, documenti PDF, file di testo e file di immagine. Per un elenco dei tipi di documenti supportati, vedere l'elenco dei [tipi di file supportati](./rms-client/client-admin-guide-file-types.md) nella Guida dell'amministratore.
 
-Azure Information Protection non consente di classificare e proteggere dati strutturati come file di database, elementi del calendario, report di Power BI, post di Yammer, contenuti di Sway e blocchi appunti di OneNote.
+Azure Information Protection non è possibile classificare e proteggere i dati strutturati, ad esempio i file di database, gli elementi del calendario, report di Power BI, post di Yammer, contenuti di Sway e blocchi appunti di OneNote.
 
 ## <a name="i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work"></a>Azure Information Protection è elencata come un'app cloud disponibile per l'accesso condizionale, come funziona?
 

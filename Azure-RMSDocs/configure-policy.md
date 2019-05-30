@@ -3,7 +3,7 @@ title: Configurare i criteri di Azure Information Protection - AIP
 description: Per configurare le funzioni di classificazione, aggiunta di etichette e protezione, è necessario configurare i criteri di Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-ms.date: 05/17/2019
+ms.date: 05/29/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: ce3464a1035c79655709d47ea8f64a885602d994
-ms.sourcegitcommit: 2d08bee51c26af3159bd52456e12e0166c8369c1
+ms.openlocfilehash: 53847787fa79782c2bf8e6ce2b6b032e439d1547
+ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65822195"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66269738"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -60,7 +60,7 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
 
 - Usare un account che dispone di uno dei seguenti [ruoli di amministratore](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-    - **Amministratore di Information Protection**
+    - **Amministratori di Azure Information Protection**
     
     - **Ruolo con autorizzazioni di lettura per la sicurezza** solo per le [funzionalità di analisi di Azure Information Protection](reports-aip.md)
     
@@ -71,7 +71,7 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
   - **Amministratore globale**
     
     > [!NOTE] 
-    > Se è stata eseguita la migrazione del tenant nell'archivio etichette unificato, il ruolo di amministratore di Information Protection non è più supportato. [Altre informazioni](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > Se il tenant è stato migrato allo store unificato l'assegnazione di etichette, l'amministratore di Azure Information Protection (noto in precedenza come "amministratore di Information Protection") non è più supportata. [Altre informazioni](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
 
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Per accedere al pannello Azure Information Protection per la prima volta
@@ -93,7 +93,7 @@ Quando si accede di nuovo al pannello **Azure Information Protection** viene sel
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Come configurare i criteri di Azure Information Protection
 
-1. Assicurarsi di avere eseguito l'accesso al portale di Azure usando uno di questi ruoli amministrativi: Amministratore di Information Protection, Amministratore della protezione o Amministratore globale. Vedere la [sezione precedente](#signing-in-to-the-azure-portal) per altre informazioni su questi ruoli amministrativi.
+1. Assicurarsi di avere eseguito l'accesso al portale di Azure usando uno di questi ruoli amministrativi: Gli amministratori di Azure Information Protection, amministratore della sicurezza o amministratore globale. Vedere la [sezione precedente](#signing-in-to-the-azure-portal) per altre informazioni su questi ruoli amministrativi.
 
 2. Se necessario, passare al pannello **Azure Information Protection**: Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
     
@@ -106,7 +106,7 @@ Quando si accede di nuovo al pannello **Azure Information Protection** viene sel
 
 È possibile creare qualsiasi numero di etichette. Tuttavia, se le etichette diventano troppo numerose e non consentono agli utenti di individuare e selezionare l'etichetta appropriata con facilità, creare criteri con ambito in modo che gli utenti visualizzino solo le etichette rilevanti. Il limite massimo di etichette per l'applicazione della protezione è 500.
 
-Quando si apportano modifiche in un pannello di Azure Information Protection, fare clic su **Save** (Salva) per salvare le modifiche oppure su **Discard** (Ignora) per ripristinare le ultime impostazioni salvate. Quando si salvano le modifiche a un criterio o si apportano modifiche alle etichette aggiunte ai criteri, le modifiche vengono pubblicate automaticamente. Non è presente un'opzione di pubblicazione separata.
+Quando si apportano modifiche in un pannello di Azure Information Protection, fare clic su **Save** (Salva) per salvare le modifiche oppure su **Discard** (Ignora) per ripristinare le ultime impostazioni salvate. Quando si salva le modifiche in un criterio o apportare modifiche alle etichette aggiunte ai criteri, tali modifiche vengono pubblicate automaticamente. Non è presente un'opzione di pubblicazione separata.
 
 Il client Azure Information Protection verifica la disponibilità di eventuali modifiche ogni volta che viene avviata un'applicazione di Office supportata e scarica le modifiche come criteri di Azure Information Protection più recenti. I criteri del client vengono aggiornati anche nei modi seguenti:
 

@@ -1,6 +1,6 @@
 ---
-title: Guida introduttiva - Elenca le etichette di riservatezza in un tenant di Microsoft Information Protection (MIP) tramite Microsoft Information Protection SDK C# Wrapper
-description: Una Guida introduttiva che illustra come usare il SDK di Microsoft Information Protection C# wrapper per elencare le etichette di riservatezza nel tenant.
+title: 'Avvio rapido: Elencare le etichette di riservatezza in un tenant di Microsoft Information Protection (MIP) con il wrapper C# del SDK di MIP'
+description: Questa procedura di avvio rapido illustra come usare il wrapper C# del SDK di Microsoft Information Protection per elencare le etichette di riservatezza nel tenant.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
@@ -8,32 +8,32 @@ ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 0b1b110fe3b2e96c258c7b94a3d356b9404d6e7e
-ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
-ms.translationtype: MT
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "60175610"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Guida introduttiva: Elencare le etichette di riservatezza (C#)
 
-Questa Guida introduttiva illustra come usare l'API di File MIP SDK per elencare le etichette di riservatezza configurate per l'organizzazione.
+Questo Avvio rapido illustra come usare l'API File del SDK di MIP per elencare le etichette di riservatezza configurate per l'organizzazione.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
 Se non è già stato fatto, completare i prerequisiti seguenti prima di continuare:
 
-- Completa [Guida introduttiva: Inizializzazione dell'applicazione client (C#)](quick-app-initialization-csharp.md) first, che compila una soluzione di Visual Studio starter. Questa guida introduttiva "Elencare le etichette di riservatezza" si basa su quella precedente per la creazione corretta della soluzione iniziale.
-- Facoltativamente: Revisione [le etichette di classificazione](concept-classification-labels.md) concetti.
+- In primo luogo completare [Avvio rapido: Inizializzazione delle applicazioni client (C#)](quick-app-initialization-csharp.md) per creare una soluzione Visual Studio iniziale. Questa guida introduttiva "Elencare le etichette di riservatezza" si basa su quella precedente per la creazione corretta della soluzione iniziale.
+- Facoltativamente: vedere i concetti relativi alle [etichette di classificazione](concept-classification-labels.md).
 
 ## <a name="add-logic-to-list-the-sensitivity-labels"></a>Aggiungere la logica per elencare le etichette di riservatezza
 
 Aggiungere la logica per elencare le etichette di riservatezza dell'organizzazione, usando l'oggetto motore dell'API File. 
 
-1. Aprire la soluzione di Visual Studio è stato creato nella precedente "Guida introduttiva: Inizializzazione dell'applicazione client (C#) "articolo.
+1. Aprire la soluzione Visual Studio creata nell'articolo precedente "Avvio rapido: Inizializzazione dell'applicazione client (C#)".
 
-2. Usando **Esplora soluzioni**, aprire il file con estensione cs del progetto che contiene l'implementazione del `Main()` (metodo). Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto. 
+2. Usare **Esplora soluzioni** per aprire il file con estensione cs nel progetto che contiene l'implementazione del metodo `Main()`. Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto. 
 
-3. Verso la fine del `Main()` corpo, sotto la parentesi graffa di chiusura `}` del `Main()` funzione (in cui è stata interrotta nella Guida introduttiva precedente), inserire il codice seguente:
+3. Verso la fine del corpo `Main()`, dopo la parentesi graffa di chiusura `}` della funzione `Main()` (nel punto in cui è stata interrotta la procedura di Avvio rapido precedente), inserire il codice seguente:
 
   ```csharp
   // List sensitivity labels from fileEngine and display name and id  
@@ -55,9 +55,9 @@ Aggiungere la logica per elencare le etichette di riservatezza dell'organizzazio
 
 Infine, compilare e testare l'applicazione client. 
 
-1. Usare CTRL + MAIUSC + B (**Compila soluzione**) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 (**Avvia debug**) per eseguire l'applicazione.
+1. Usare CTRL+MAIUSC+B (**Compila soluzione**) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 (**Avvia debug**) per eseguire l'applicazione.
 
-2. Se il progetto compilato ed eseguito correttamente, l'applicazione *potrebbe* prompt dei comandi per l'autenticazione tramite la libreria ADAL ogni volta che il SDK chiama la `AcquireToken()` (metodo). Se esistono già credenziali memorizzate nella cache, non verrà richiesto di accedere e visualizzare l'elenco delle etichette. 
+2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione *potrebbe* richiedere l'autenticazione tramite ADAL ogni volta che il SDK chiama il metodo `AcquireToken()`. Se esistono già credenziali memorizzate nella cache non verrà richiesto di eseguire l'accesso e visualizzare l'elenco delle etichette. 
 
      [![Accesso per l'acquisizione del token in Visual Studio](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 
@@ -65,7 +65,7 @@ Infine, compilare e testare l'applicazione client.
 
      [![Consenso in Visual Studio](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in-consent.png#lightbox)
 
-3. Dopo l'autenticazione, l'output della console dovrebbe mostrare le etichette di riservatezza, simile all'esempio seguente:
+3. Dopo l'autenticazione l'output della console visualizza le etichette di riservatezza, in modo simile all'esempio seguente:
 
   ```console
   Personal : 73c47c6a-eb00-4a6a-8e19-efaada66dee6
@@ -87,11 +87,11 @@ Infine, compilare e testare l'applicazione client.
 
 ## <a name="troubleshooting"></a>Risoluzione dei problemi
 
-### <a name="problems-during-execution-of-c-application"></a>Problemi durante l'esecuzione di C# dell'applicazione
+### <a name="problems-during-execution-of-c-application"></a>Problemi durante l'esecuzione dell'applicazione C#
 
 | Riepilogo | Messaggio di errore | Soluzione |
 |---------|---------------|----------|
-| Token di accesso non valido | *Si è verificata un'eccezione... è il token di accesso errato/scaduti? <br> <br>Chiamata API non è riuscita: non è riuscita profile_add_engine_async con: l'acquisizione dei criteri non riuscite [classe mip::PolicySyncException], richiesta non è riuscita con codice di stato http: 401, x-ms-diagnostics: [2000001; motivo = "token OAuth inviato con la richiesta non può essere analizzato."; error_category = "invalid_token"], ID correlazione: [35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (processo 29924) terminato con codice 0.<br> <br>Premere un tasto qualsiasi per chiudere questa finestra...* | Se il progetto viene compilato correttamente, ma viene visualizzato un output simile a quello riportato a sinistra, è probabile che il token nel metodo `AcquireOAuth2Token()` sia non valido o scaduto. Tornare alla [compilare e testare l'applicazione](#build-and-test-the-application) e rigenerare l'aggiornamento, token di accesso `AcquireOAuth2Token()` anche in questo caso e ricompilazione o eseguire nuovamente il test. È anche possibile esaminare e verificare il token e le relative attestazioni usando l'applicazione Web a pagina singola [jwt.ms](https://jwt.ms/). |
+| Token di accesso non valido | *An exception occurred... is the access token incorrect/expired?<br><br>Failed API call: profile_add_engine_async Failed with: [class mip::PolicySyncException] Failed acquiring policy, Request failed with http status code: 401, x-ms-diagnostics: [2000001;reason="OAuth token submitted with the request cannot be parsed.";error_category="invalid_token"], correlationId:[35bc0023-3727-4eff-8062-000006d5d672]'<br><br>C:\VSProjects\MipDev\Quickstarts\AppInitialization\x64\Debug\AppInitialization.exe (process 29924) exited with code 0.<br><br>Press any key to close this window . . .* | Se il progetto viene compilato correttamente, ma viene visualizzato un output simile a quello riportato a sinistra, è probabile che il token nel metodo `AcquireOAuth2Token()` sia non valido o scaduto. Tornare a [Compilare e testare l'applicazione](#build-and-test-the-application) e rigenerare il token di accesso, aggiornare di nuovo `AcquireOAuth2Token()`, quindi ripetere compilazione e test. È anche possibile esaminare e verificare il token e le relative attestazioni usando l'applicazione Web a pagina singola [jwt.ms](https://jwt.ms/). |
 | Le etichette di riservatezza non sono configurate | n/d | Se il progetto viene compilato correttamente, ma non è presente alcun output nella finestra della console, verificare che le etichette di riservatezza dell'organizzazione siano configurate correttamente. Vedere [Installazione e configurazione di MIP SDK](setup-configure-mip.md) per informazioni dettagliate sulle impostazioni per la protezione e la tassonomia delle etichette.  |
 
 ## <a name="next-steps"></a>Passaggi successivi

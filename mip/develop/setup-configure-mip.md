@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 03/01/2019
 ms.author: mbaldwin
 ms.openlocfilehash: db815d17303abb0fb98b6e5936fbcd1f975d74f0
-ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
-ms.translationtype: MT
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "60184413"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installazione e configurazione di Microsoft Information Protection (MIP) SDK 
@@ -27,7 +27,7 @@ Assicurarsi di consultare gli argomenti seguenti prima di iniziare:
 - [Come funziona la protezione in Azure Information Protection?](/azure/information-protection/understand-explore/what-is-information-protection#how-data-is-protected)
 
 > [!IMPORTANT]
-> **Per rispettare la riservatezza degli utenti, è necessario chiedere all'utente di fornire il consenso prima di abilitare la registrazione automatica.** L'esempio seguente è un messaggio standard che vengono utilizzate da Microsoft per la notifica di registrazione:
+> **Per rispettare la privacy degli utenti, è necessario chiedere il consenso all'utente prima di abilitare la registrazione automatica.** L'esempio seguente è un messaggio standard usato da Microsoft per la notifica di registrazione:
 >
 > *Attivando la registrazione degli errori e delle prestazioni, l’utente accetta l'invio di tali dati a Microsoft. Microsoft raccoglie i dati sugli errori e sulle prestazioni tramite Internet ("Dati"). Microsoft usa questi dati per offrire e migliorare la qualità, la sicurezza e l'integrità dei prodotti e dei servizi Microsoft. Vengono analizzate, ad esempio, prestazioni e affidabilità quali le funzionalità usate dagli utenti, la velocità di risposta delle funzionalità, le prestazioni del dispositivo, le interazioni con l'interfaccia utente e tutti i problemi che possono verificarsi durante l'uso del prodotto. I Dati includono anche informazioni sulla configurazione del software, ad esempio la versione in esecuzione e l'indirizzo IP.*
 
@@ -45,7 +45,7 @@ Molti degli esempi dell'SDK richiedono l'accesso a un abbonamento a Office 365. 
 
 ## <a name="configure-sensitivity-labels"></a>Configurare le etichette di riservatezza
 
-Se attualmente si usa Azure Information Protection, è necessario eseguire la migrazione delle etichette di Office 365 Centro sicurezza e conformità. Per altre informazioni sul processo, vedere [Come eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365](/azure/information-protection/configure-policy-migrate-labels). 
+Se si usa già Azure Information Protection, è necessario eseguire la migrazione delle etichette nel Centro sicurezza e conformità di Office 365. Per altre informazioni sul processo, vedere [Come eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365](/azure/information-protection/configure-policy-migrate-labels). 
 
 ## <a name="configure-your-client-workstation"></a>Configurare la workstation client
 
@@ -73,7 +73,7 @@ Seguire poi questa procedura per assicurarsi che il computer client sia installa
 
      [![Installazione di Visual Studio](media/setup-mip-client/visual-studio-install.png)](media/setup-mip-client/visual-studio-install.png#lightbox)
 
-3. Installare il [modulo di PowerShell ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2): 
+3. Installare il [modulo PowerShell ADAL.PS](https://www.powershellgallery.com/packages/ADAL.PS/3.19.4.2): 
 
    - Poiché sono necessari diritti di amministratore per installare i moduli, è prima di tutto necessario:
 
@@ -96,17 +96,17 @@ Seguire poi questa procedura per assicurarsi che il computer client sia installa
 
 4. Scaricare i file SDK:
 
-   il SDK di MIP è supportato sulle piattaforme seguenti, con download separati per ogni piattaforma e il linguaggio supportato:  
+   MIP SDK è supportato nelle piattaforme seguenti con download separati per ogni piattaforma/linguaggio supportato:  
 
    [!INCLUDE [MIP SDK platform support](../includes/mip-sdk-platform-support.md)]
 
-   **Tar.gz/. Download di ZIP**
+   **Download Tar.gz/.Zip**
 
-   GZ e. Download di ZIP contengono file compressi aggiuntivi, uno per ogni API. I file compressi sono denominati come segue, dove \<API\> = `file`, `protection`, oppure `upe`, e \<OS\> = la piattaforma: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`. Ad esempio, sarebbe il file per file binari di API per la protezione e le intestazioni su Debian: `mip_sdk_protection_debian9_1.0.0.0.tar.gz`. Ogni.tar.gz/.zip indipendente viene suddivisa in tre directory:
+   I download Tar.gz e .Zip contengono file compressi aggiuntivi, uno per ogni API. I file compressi sono denominati nel modo seguente, dove \<API\> = `file`, `protection` o `upe` e \<OS\> = la piattaforma: `mip_sdk_<API>_<OS>_1.0.0.0.zip (or .tar.gz)`. Ad esempio, il file per i file binari e le intestazioni dell'API di protezione per la piattaforma Debian è denominato `mip_sdk_protection_debian9_1.0.0.0.tar.gz`. Ogni file con estensione tar.gz o zip completo è suddiviso in tre directory:
 
-   - **Contenitori:** File binari compilati per ogni architettura della piattaforma, dove applicabile.
-   - **Includono:** File di intestazione (C++).
-   - **Esempi:** Codice sorgente per applicazioni di esempio.
+   - **Bins:** file binari compilati per ogni architettura di piattaforma, dove applicabile.
+   - **Include:** file di intestazione (C++).
+   - **Samples:** codice sorgente per applicazioni di esempio.
     
    **Pacchetti NuGet**
 
@@ -118,7 +118,7 @@ Seguire poi questa procedura per assicurarsi che il computer client sia installa
     Install-Package Microsoft.InformationProtection.Protection
     ```  
 
-5. Se non si usa il pacchetto NuGet, aggiungere i percorsi dei file binari del SDK alla variabile di ambiente PATH. La variabile di percorso consente ai dipendenti file binari (DLL) da trovare in fase di esecuzione dalle applicazioni client (facoltativo):
+5. Se non si usa il pacchetto NuGet, aggiungere i percorsi dei file binari dell'SDK alla variabile di ambiente PATH. La variabile PATH consente alle applicazioni client di trovare i file binari dipendenti (DLL) in fase di esecuzione (FACOLTATIVO):
 
    Se si usa una workstation Windows 10:
 
@@ -129,11 +129,11 @@ Seguire poi questa procedura per assicurarsi che il computer client sia installa
    - Nella finestra di dialogo **Modifica variabile di ambiente** fare clic su **Nuovo**, che consente di creare una nuova riga modificabile. Usando il percorso completo per ognuna delle sottodirectory `file\bins\debug\amd64`, `protection\bins\debug\amd64` e `upe\bins\debug\amd64`, aggiungere una nuova riga per ognuna. Le directory dell'SDK sono archiviate nel formato `<API>\bins\<target>\<platform>`, dove:
      - \<API\> = `file`, `protection`, `upe`
      - \<target\> = `debug`, `release`
-     - \<platform\> = `amd64` (x64), `x86`, etc.
+     - \<platform\> = `amd64` (x64), `x86` e così via.
    
    - Dopo aver completato la modifica della variabile **Path** fare clic su **OK**. Fare quindi clic su **OK** quando si torna alla finestra di dialogo **Variabili di ambiente**.
 
-6. Scaricare esempi di SDK da GitHub (facoltativo):
+6. Scaricare gli esempi SDK da GitHub (FACOLTATIVO):
 
    - Se non è già disponibile, creare prima di tutto un [profilo GitHub](https://github.com/join).
    - Installare quindi la versione più recente degli [strumenti client Git di Software Freedom Conservancy (Git Bash)](https://git-scm.com/download/)
@@ -143,7 +143,7 @@ Seguire poi questa procedura per assicurarsi che il computer client sia installa
 
 ## <a name="register-a-client-application-with-azure-active-directory"></a>Registrare un'applicazione client in Azure Active Directory
 
-Come parte del processo di provisioning della sottoscrizione di Office 365, viene creato un tenant di Azure Active Directory (Azure AD) associato. Il tenant di Azure AD consente la gestione delle identità e dell'accesso per gli *account utente* e gli *account di applicazione* di Office 365. Per le applicazioni che richiedono l'accesso ad API protette (ad esempio le API MIP) è necessario un account di applicazione.
+Come parte del processo di provisioning dell'abbonamento a Office 365 viene creato un tenant di Azure Active Directory (Azure AD) associato. Il tenant di Azure AD consente la gestione delle identità e dell'accesso per gli *account utente* e gli *account di applicazione* di Office 365. Per le applicazioni che richiedono l'accesso ad API protette (ad esempio le API MIP) è necessario un account di applicazione.
 
 Per il processo di autenticazione e autorizzazione in fase di esecuzione, gli account sono rappresentati da un'*entità di sicurezza*, derivata dalle informazioni di identità dell'account. Le entità di sicurezza che rappresentano un account di applicazione vengono definite [*entità servizio*](/azure/active-directory/develop/developer-glossary#service-principal-object). 
 
@@ -153,7 +153,7 @@ Per registrare un account di applicazione in Azure AD per l'uso con gli esempi e
   > Per accedere alla gestione del tenant Azure AD per la creazione dell'account, sarà necessario accedere al portale di Azure con un account utente membro del [ruolo "Proprietario" nella sottoscrizione](/azure/billing/billing-add-change-azure-subscription-administrator). A seconda della configurazione del tenant, potrebbe anche essere necessario essere membri del ruolo della directory "Amministratore globale" per [registrare un'applicazione](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
   > È consigliabile eseguire le operazioni di test con un account con restrizioni. Assicurarsi che l'account disponga solo dei diritti per accedere agli endpoint SCC necessari. Le password passate come testo non crittografato tramite riga di comando possono essere raccolte dai sistemi di registrazione.
 
-1. Seguire i passaggi descritti in [registrare un'app con Azure AD, registrare una nuova applicazione](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal) sezione. A scopo di test, usare i valori seguenti per le proprietà specificate quando si eseguono i passaggi della guida: 
+1. Seguire la procedura indicata in [Registrare un'app con Azure AD, sezione Registrare una nuova applicazione](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal). A scopo di test, usare i valori seguenti per le proprietà specificate quando si eseguono i passaggi della guida: 
     - **Tipo di applicazione** - selezionare "Nativa", in quanto le applicazioni usate nelle dimostrazioni dell'SDK sono applicazioni console installate in modo nativo. Le applicazioni native sono considerate client "pubblici" da OAuth2, perché non sono in grado di archiviare/usare le credenziali dell'applicazione in modo sicuro. Diversamente da un'applicazione basata su server "riservata", ad esempio un'applicazione Web, che è registrata con le proprie credenziali. 
     - **URI di reindirizzamento** - Dato che l'SDK usa applicazioni client console semplici, usare un URI nel formato `<app-name>://authorize`.
 
@@ -165,7 +165,7 @@ Per registrare un account di applicazione in Azure AD per l'uso con gli esempi e
    - Nella pagina **Autorizzazioni necessarie** fare clic su **Aggiungi**. 
    - Nella pagina **Aggiungi accesso all'API** fare clic su **Selezionare un'API**.
    - Nella pagina **Selezionare un'API** fare clic sull'API "**Microsoft Rights Management Services**" e quindi su **Seleziona**.
-   - Nel **Abilita accesso** pagina per le autorizzazioni disponibili dell'API, fare clic su "**creare e accedere al contenuto protetto per gli utenti**", quindi **selezionare**, quindi **eseguita** .
+   - Nella pagina **Abilita accesso** per le autorizzazioni disponibili dell'API fare clic su "**Create and access protected content for users**" (Creazione e accesso a contenuto protetto per gli utenti), quindi su **Seleziona** e su **Fine**.
 
 5. Ripetere il passaggio 4, ma questa volta quando si raggiunge la pagina **Selezionare un'API** sarà necessario cercare l'API.
    - Nella pagina **Selezionare un'API**, nella casella di ricerca digitare "**Microsoft Information Protection Sync Service**", quindi fare clic sull'API e fare clic su **Seleziona**.
@@ -178,7 +178,7 @@ Al termine, la registrazione dell'applicazione e le autorizzazioni per le API do
    [![Registrazione di un'app in Azure AD](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
 
 
-Per altre informazioni sull'aggiunta di API e le autorizzazioni per una registrazione, vedere [configurare un'applicazione client per accedere alle API web](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). In questo articolo sono disponibili informazioni su come aggiungere le API e le autorizzazioni necessarie per un'applicazione client.  
+Per altre informazioni sull'aggiunta di API e autorizzazioni a una registrazione, vedere [Configurare un'applicazione client per accedere alle API Web](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). In questo articolo sono disponibili informazioni su come aggiungere le API e le autorizzazioni necessarie per un'applicazione client.  
 
 ## <a name="request-an-information-protection-integration-agreement-ipia"></a>Richiedere un contratto per l'integrazione di Information Protection (IPIA, Information Protection Integration Agreement)
 
@@ -214,28 +214,28 @@ Se è già stato sottoscritto un contratto di integrazione di Information Protec
 
 - Nome dell'applicazione dell'azienda
 - Breve descrizione dell'applicazione
-- ID Tenant di Azure (anche se l'uguale al procedente)
+- ID tenant di Azure (anche se è uguale)
 - ID app per l'applicazione
 - Contatti, indirizzo di posta elettronica e numero di telefono dell'azienda per la corrispondenza relativa a situazioni critiche
 
-Dopo l'invio del messaggio di posta elettronica, consentire fino a 72 ore per un acknowledgement della ricezione.
+Dopo aver inviato il messaggio di posta elettronica, si riceverà conferma della ricezione entro 72 ore.
 
-## <a name="ensure-your-app-has-the-required-runtime"></a>Verificare che l'app ha il runtime richiesto
+## <a name="ensure-your-app-has-the-required-runtime"></a>Verificare la presenza del runtime necessario per l'app
 
 > [!NOTE]
-> Questo passaggio è necessario solo se si distribuisce l'applicazione a un computer senza Visual Studio o se l'installazione di Visual Studio non ha i componenti di Runtime di Visual C++.
+> Questo passaggio è necessario solo se l'applicazione viene distribuita in un computer senza Visual Studio o se l'installazione di Visual Studio non include i componenti di runtime di Visual C++.
 
-Le applicazioni compilate con SDK MIP richiedono il runtime di Visual C++ 2015 o Visual C++ 2017 per essere installati, se non già presenti.
+Le applicazioni compilate con MIP SDK richiedono l'installazione del runtime di Visual C++ 2015 o Visual C++ 2017, se non è già presente.
 - [Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/download/details.aspx?id=53587)
 - [Microsoft Visual C++ Redistributable per Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#microsoft-visual-c-redistributable-for-visual-studio-2017)
 
-Questi funzionerà solo se l'applicazione sia stata compilata come versione. Se l'applicazione viene compilata come Debug, quindi il debug del runtime di Visual C++ DLL deve essere inclusa con l'applicazione o installato nel computer. 
+Questi funzioneranno solo se l'applicazione è stata compilata come Release. Se l'applicazione è compilata come Debug, le DLL di debug del runtime di Visual C++ devono essere incluse con l'applicazione o installate nel computer. 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Se sei uno sviluppatore di C++
-  - Assicurarsi di leggere [concetti relativi agli osservatori](concept-async-observers.md) prima di iniziare la sezione Guida introduttiva, per conoscere la natura asincrona delle APIs C++.
-  - Quando è pronti per acquisire familiarità con il SDK, iniziare con [Guida introduttiva: Inizializzazione dell'applicazione client (C++)](quick-app-initialization-cpp.md).
-- Se non ha un C# developer, quando si è pronti per acquisire familiarità con il SDK, a partire [Guida introduttiva: Inizializzazione dell'applicazione client (C#)](quick-app-initialization-csharp.md).
+- Per sviluppatori C++
+  - Assicurarsi di leggere [Concetti relativi agli osservatori](concept-async-observers.md) prima di iniziare la sezione Avvio rapido, per ottenere informazioni sulla natura asincrona delle API C++.
+  - Quando si è pronti ad acquisire familiarità con l'SDK, iniziare con [Avvio rapido: Inizializzazione dell'applicazione client (C++)](quick-app-initialization-cpp.md).
+- Gli sviluppatori C#, quando sono pronti ad acquisire familiarità con l'SDK, possono iniziare con [Avvio rapido: Inizializzazione dell'applicazione client (C#)](quick-app-initialization-csharp.md).
 
 

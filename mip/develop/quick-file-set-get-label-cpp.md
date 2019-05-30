@@ -9,10 +9,10 @@ ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 2ac8c6bbfba6f460ac016a103f32f20856bff2aa
-ms.sourcegitcommit: 682dc48cbbcbee93b26ab3872231b3fa54d3f6eb
-ms.translationtype: MT
+ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 05/27/2019
 ms.locfileid: "60184899"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Guida introduttiva: Impostare e ottenere un'etichetta di riservatezza (C++)
@@ -23,20 +23,20 @@ Questo Avvio rapido illustra come usare altre API dei file di MIP. Con una delle
 
 Se non è già stato fatto, completare i prerequisiti seguenti prima di continuare:
 
-- Completa [Guida introduttiva: Elenca le etichette di riservatezza (C++)](quick-file-list-labels-cpp.md) first, che compila una soluzione di Visual Studio starter per elencare le etichette di riservatezza dell'organizzazione. Il presente Avvio rapido "Impostare e ottenere un'etichetta di riservatezza" è basato su quello precedente.
-- Facoltativamente: Revisione [gestori di File nel SDK di MIP](concept-handler-file-cpp.md) concetti.
+- In primo luogo completare [Avvio rapido: Elencare le etichette di riservatezza (C++)](quick-file-list-labels-cpp.md), che crea una soluzione Visual Studio iniziale, per creare un elenco delle etichette di riservatezza di un'organizzazione. Il presente Avvio rapido "Impostare e ottenere un'etichetta di riservatezza" è basato su quello precedente.
+- Facoltativamente: rivedere i concetti esposti in [Gestori di file in MIP SDK](concept-handler-file-cpp.md).
 
 ## <a name="implement-an-observer-class-to-monitor-the-file-handler-object"></a>Implementare una classe observer per monitorare l'oggetto gestore file
 
 Come nel caso dell'observer implementato per il profilo e il motore file nell'Avvio rapido Application initialization (Inizializzazione dell'applicazione), ora si implementa una classe observer per un oggetto gestore di file.
 
-Creare un'implementazione di base per un osservatore di gestore di File, mediante l'estensione del SDK `mip::FileHandler::Observer` classe. Viene creata un'istanza di observer che viene usata in seguito per il monitoraggio delle operazioni gestore di file.
+Creare un'implementazione di base per un observer Handle di file mediante l'estensione della classe `mip::FileHandler::Observer` del SDK. Viene creata un'istanza di observer che viene usata in seguito per il monitoraggio delle operazioni gestore di file.
 
-1. Aprire la soluzione di Visual Studio si è lavorato nella precedente "Guida introduttiva: Elenca le etichette di riservatezza (C++) "articolo.
+1. Aprire la soluzione Visual Studio sulla quale si è lavorato nell'articolo precedente "Avvio rapido: Elencare le etichette di riservatezza (C++).
 
 2. Aggiungere una nuova classe al progetto, che genera automaticamente i file di intestazione (.h) e di implementazione (.cpp):
 
-   - Nel **Esplora soluzioni**, fare doppio clic sul nodo del progetto, anche in questo caso, selezionare **Add**, quindi selezionare **classe**.
+   - In **Esplora soluzioni** fare di nuovo clic con il pulsante destro del mouse sul nodo del progetto e scegliere **Aggiungi**, quindi scegliere **Classe**.
    - Nella finestra di dialogo **Aggiungi classe**:
      - Nel campo **Nome classe** immettere "filehandler_observer". Si noti che i campi del **file con estensione h** e del **file con estensione cpp** vengono popolati automaticamente in base al nome immesso.
      - Al termine fare clic su **OK**.
@@ -205,12 +205,12 @@ Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un fi
    system("pause");
    ```
 
-4. Sostituire i valori segnaposto nel codice appena incollato come indicato di seguito, usando le costanti stringa di origine:
+4. Sostituire come segue i valori segnaposto nel codice sorgente appena incollato, usando costanti stringa:
 
-   | Segnaposto | Value |
+   | Segnaposto | Valore |
    |:----------- |:----- |
    | \<input-file-path\> | Percorso completo di un file di input di test, ad esempio: `"c:\\Test\\Test.docx"`. |
-   | \<content-identifier\> | Un identificatore leggibile dall'utente per il contenuto. Ad esempio:  <ul><li>per un file, prendere in considerazione percorso\nomefile: `"c:\Test\Test.docx"`</li><li>per un messaggio di posta elettronica, prendere in considerazione soggetto: mittente: `"RE: Audit design:user1@contoso.com"`</li></ul> |
+   | \<content-identifier\> | Identificatore leggibile per il contenuto. Ad esempio: <ul><li>per un file, prendere in considerazione path\filename: `"c:\Test\Test.docx"`</li><li>per un messaggio di posta elettronica, prendere in considerazione subject:sender: `"RE: Audit design:user1@contoso.com"`</li></ul> |
    | \<label-id\> | ID etichetta di riservatezza, copiato dalla console di output nell'Avvio rapido precedente, ad esempio: `"f42a3342-8706-4288-bd31-ebb85995028z"`. |
    | \<output-file-path\> | Percorso completo del file di output, che è una copia con etichetta del file di input, ad esempio: `"c:\\Test\\Test_labeled.docx"`. |
 
@@ -220,7 +220,7 @@ Compilare e testare l'applicazione client.
 
 1. Usare F6 (**Compila soluzione**) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 (**Avvia debug**) per eseguire l'applicazione.
 
-2. Se il progetto viene compilato e viene eseguito correttamente, l'applicazione richiede un token di accesso ogni volta che il SDK chiama la `AcquireOAuth2Token()` (metodo). Come in precedenza in "Elenca le etichette di riservatezza" Guida introduttiva, eseguire lo script di PowerShell per acquisire il token ogni volta, usando i valori forniti per $authority e $resourceUrl. 
+2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione richiede un token di accesso ogni volta che il SDK chiama il metodo `AcquireOAuth2Token()`. Come già fatto in precedenza nell'Avvio rapido "Elencare le etichette di riservatezza", eseguire lo script di PowerShell per acquisire ogni volta il token usando i valori specificati per $authority e $resourceUrl. 
 
    ```console
    Run the PowerShell script to generate an access token using the following values, then copy/paste it below:
