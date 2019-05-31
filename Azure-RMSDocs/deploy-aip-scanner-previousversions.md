@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 7860e1222b594c704c0673ea31655df4fcc5aecc
-ms.sourcegitcommit: 1218fad71850f3ea81cd12062544cfbc5a094764
+ms.openlocfilehash: fab3faaa4d2fd46215021f2c3bfda9e020b06434
+ms.sourcegitcommit: 6d928a7154c445ed9a82a07b350c6437d2949117
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263970"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66411759"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-scanner"></a>Distribuzione di versioni precedenti dello scanner Azure Information Protection
 
@@ -370,7 +370,7 @@ Lo scanner di Azure Information Protection supporta due scenari alternativi in c
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Ottimizzazione delle prestazioni dello scanner
 
-Usare le linee guida seguenti per ottimizzare le prestazioni dello scanner. Se tuttavia la priorità è la velocità di risposta del computer dello scanner più che le prestazioni dello scanner, è possibile usare un'impostazione client avanzata per limitare il numero di thread usati dallo scanner.
+Usare le linee guida seguenti per ottimizzare le prestazioni dello scanner. Tuttavia, se la priorità è la velocità di risposta del computer dello scanner invece le prestazioni dello scanner, è possibile usare un [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#limit-the-number-of-threads-used-by-the-scanner) per limitare il numero di thread usati per lo scanner.
 
 Per ottimizzare le prestazioni dello scanner:
 
@@ -404,7 +404,7 @@ Altri fattori che influenzano le prestazioni dello scanner:
 
 - La costruzione di espressioni regex per condizioni personalizzate
     
-    Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. Ad esempio: 
+    Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. Ad esempio:
     
     - Evitare [quantificatori greedy](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)
     

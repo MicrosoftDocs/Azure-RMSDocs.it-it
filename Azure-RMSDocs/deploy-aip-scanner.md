@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 9fcc7f157ef5fa562993b70a4b30db1556921272
-ms.sourcegitcommit: 1218fad71850f3ea81cd12062544cfbc5a094764
+ms.openlocfilehash: 22c53cbfc4fb1c8ddab3eed8a26cc86b94ee6eac
+ms.sourcegitcommit: 6d928a7154c445ed9a82a07b350c6437d2949117
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263996"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66411787"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -117,9 +117,9 @@ Se non è possibile concedere il ruolo Sysadmin all'utente anche solo temporanea
 
 In genere, si usa lo stesso account utente per installare e configurare lo scanner, ma, se si usano account diversi, entrambi richiedono il ruolo db_owner per il database di configurazione dello scanner:
 
-- Se non si specifica il proprio nome di profilo per lo scanner, il database di configurazione viene denominato **AIPScanner_\<nome_computer>**. 
+- Se non si specifica il proprio nome di profilo per lo scanner, il database di configurazione viene denominato **AIPScanner_\<nome_computer>** . 
 
-- Se si specifica il proprio nome di profilo, il database di configurazione viene denominato **AIPScanner_\<nome_profilo>**.
+- Se si specifica il proprio nome di profilo, il database di configurazione viene denominato **AIPScanner_\<nome_profilo>** .
 
 #### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>Restrizione: all'account del servizio scanner non può essere concesso il diritto di **accesso locale**
 
@@ -161,7 +161,7 @@ Prima di installare lo scanner o di eseguire l'aggiornamento dalla versione disp
     - **Etichetta i file in base al contenuto**: mantenere l'impostazione predefinita **Sì**
     - **Etichetta predefinita**: mantenere l'impostazione predefinita **Impostazione predefinita dei criteri**
     - **Applica una nuova etichetta ai file**: mantenere l'impostazione predefinita **No**
-    - **Mantieni "Data ultima modifica", "Ultima modifica" e "Modificato da"**: mantenere l'impostazione predefinita **Sì**
+    - **Mantieni "Data ultima modifica", "Ultima modifica" e "Modificato da"** : mantenere l'impostazione predefinita **Sì**
     - **Tipi di file da analizzare**: mantenere i tipi di file predefiniti per **Escludi**
     - **Proprietario predefinito**: mantenere l'impostazione predefinita **Account scanner**
 
@@ -443,7 +443,7 @@ Lo scanner di Azure Information Protection supporta due scenari alternativi in c
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Ottimizzazione delle prestazioni dello scanner
 
-Usare le linee guida seguenti per ottimizzare le prestazioni dello scanner. Se tuttavia la priorità è la velocità di risposta del computer dello scanner più che le prestazioni dello scanner, è possibile usare un'impostazione client avanzata per limitare il numero di thread usati dallo scanner.
+Usare le linee guida seguenti per ottimizzare le prestazioni dello scanner. Tuttavia, se la priorità è la velocità di risposta del computer dello scanner invece le prestazioni dello scanner, è possibile usare un [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#limit-the-number-of-threads-used-by-the-scanner) per limitare il numero di thread usati per lo scanner.
 
 Per ottimizzare le prestazioni dello scanner:
 
@@ -477,7 +477,7 @@ Altri fattori che influenzano le prestazioni dello scanner:
 
 - La costruzione di espressioni regex per condizioni personalizzate
     
-    Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. Ad esempio: 
+    Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. Ad esempio:
     
     - Evitare [quantificatori greedy](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)
     
