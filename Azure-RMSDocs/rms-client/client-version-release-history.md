@@ -4,18 +4,18 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/18/2019
+ms.date: 05/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 88aa75bbf61728c43f9104d59a00f0c06842ef0e
-ms.sourcegitcommit: c0d8b7239fc16e66b51f736636da7f7212f72dd6
+ms.openlocfilehash: 201716f5d33b79223100d1751c555899aa5958ca
+ms.sourcegitcommit: 9c0bc68fa036749e20aa67660d96278efbeb6a49
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837837"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66448042"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection: Cronologia delle versioni e criteri per il supporto
 
@@ -92,7 +92,7 @@ Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
 
 **Correzioni**:
 
-- Per i percorsi e i nomi di file non vengono visualizzano punti interrogativi (**?**) invece dei caratteri non ASCII nell'analisi di Azure Information Protection con le impostazioni locali inglesi per il sistema operativo di invio.
+- Per i percorsi e i nomi di file non vengono visualizzano punti interrogativi ( **?** ) invece dei caratteri non ASCII nell'analisi di Azure Information Protection con le impostazioni locali inglesi per il sistema operativo di invio.
 
 - vengono applicati in modo coerente nuovi contrassegni visivi quando un utente aggiunge nuove sezioni a un documento di Word e quindi etichetta di nuovo il documento.
 
@@ -112,7 +112,7 @@ Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
 
 **Modifiche aggiuntive:**
 
-- non sono più supportati i tipi di informazioni sensibili seguenti per le etichette configurate per la classificazione consigliata o automatica:
+- Sono i seguenti tipi di informazioni riservate [non è più supportato](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) per la classificazione automatica o per le etichette configurate per consigliabile:
     - Numero di telefono EU
     - Coordinate GPS EU
 

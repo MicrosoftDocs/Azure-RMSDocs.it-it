@@ -4,17 +4,17 @@ description: Le condizioni per un'etichetta consentono di assegnare automaticame
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 05/31/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
-ms.openlocfilehash: fe80fdc803d15ba450cb333da15e82b19a76441e
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 7557757584ce5d255ac8081039d1b0b7ace39594
+ms.sourcegitcommit: 9c0bc68fa036749e20aa67660d96278efbeb6a49
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179938"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66448038"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection
 
@@ -34,7 +34,7 @@ Ecco un esempio di richiesta quando si configura una condizione per l'applicazio
 
 In questo esempio l'utente può fare clic su **Change now** (Cambia adesso) per applicare l'etichetta consigliata oppure ignorare il suggerimento selezionando **Dismiss** (Ignora). Se l'utente sceglie di ignorare il suggerimento e alla successiva apertura del documento la condizione è ancora applicabile, l'indicazione per l'etichetta viene visualizzata nuovamente.
 
-Se si configura la classificazione automatica anziché consigliata, l'etichetta viene applicata automaticamente e l'utente visualizza comunque una notifica in Word, Excel e PowerPoint. Tuttavia, i pulsanti **Change Now** (Cambia adesso) e **Dismiss** (Ignora) vengono sostituiti con **OK**. In Outlook non viene inviata alcuna notifica per la classificazione automatica e l'etichetta viene applicata al momento dell'invio del messaggio di posta elettronica.
+Se si configura la classificazione automatica anziché consigliata, l'etichetta viene applicata automaticamente e l'utente visualizza comunque una notifica in Word, Excel e PowerPoint. Tuttavia, il **modifica ora** e **Dismiss** pulsanti vengono sostituiti con **OK**. In Outlook non viene inviata alcuna notifica per la classificazione automatica e l'etichetta viene applicata al momento dell'invio del messaggio di posta elettronica.
 
 > [!IMPORTANT]
 >Non configurare un'etichetta per la classificazione automatica e un'autorizzazione definita dall'utente. L'opzione per le autorizzazioni definite dall'utente è un'[impostazione di protezione](configure-policy-protection.md) che consente agli utenti di specificare a chi vengono concesse le autorizzazioni.
@@ -102,7 +102,7 @@ Quando fa clic su **Salva**, le modifiche diventano automaticamente disponibili 
 
 ### <a name="sensitive-information-types-that-require-a-minimum-version-of-the-client"></a>Tipi di informazioni riservate che richiedono una versione minima del client
 
-I seguenti tipi di informazioni riservate richiedono la [versione con disponibilità generale corrente](./rms-client/client-version-release-history.md#version-1482040) del client Azure Information Protection:
+I seguenti tipi di informazioni riservate richiedono almeno la versione [1.48.204.0](./rms-client/client-version-release-history.md#version-1482040) del client Azure Information Protection:
 
 - **Stringa di connessione del bus di servizio di Azure**
 - **Stringa di connessione di Azure IoT**
@@ -117,7 +117,7 @@ I seguenti tipi di informazioni riservate richiedono la [versione con disponibil
 
 Per altre informazioni su questi tipi di informazioni riservate, vedere il blog seguente post: [Azure Information Protection consente di essere più sicuro per l'individuazione automatica delle credenziali](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-helps-you-to-be-more-secure-by/ba-p/360181)
 
-Inoltre, i seguenti tipi di informazioni riservate non sono supportati per la versione di disponibilità generale corrente del client Azure Information Protection e non sarà più visualizzato nel portale di Azure:
+Inoltre partendo 1.48.204.0 del client Azure Information Protection, le seguenti informazioni riservate non sono supportati i tipi e non è più visualizzato nel portale di Azure. Se si dispone di etichette che usano questi tipi di informazioni riservate, è consigliabile rimuoverli perché è non può garantire il rilevamento corretto per essi e devono essere ignorati tutti i riferimenti a essi nei report dello scanner:
 
 - **Numero di telefono EU**
 - **Coordinate GPS EU**
