@@ -4,18 +4,18 @@ description: Eseguire la migrazione di etichette di Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/29/2019
+ms.date: 06/03/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: a9cc458bb22c4b2c76b7aa80b58434a213ec5af1
-ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
+ms.openlocfilehash: 1f1952a871940fcd24e7e81bf6d4312fdef8d014
+ms.sourcegitcommit: 1b8e87bda58bb40f3e32b2edf264385e7235b7c5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66269760"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462237"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Come eseguire la migrazione di etichette di Azure Information Protection a etichette di riservatezza di Office 365
 
@@ -164,7 +164,7 @@ Per verificare se i client e i servizi usati dall'utente supportano l'etichettat
 
 ##### <a name="clients-that-currently-support-unified-labeling-include"></a>I client che attualmente supportano l'etichettatura unificata includono:
 
-- Il [unificata di Azure Information Protection client per l'assegnazione di etichette per Windows](./rms-client/unifiedlabelingclient-version-release-history.md)
+- Il [unificata di Azure Information Protection client per l'assegnazione di etichette per Windows](./rms-client/unifiedlabelingclient-version-release-history.md). Per un confronto tra il client con il client Azure Information Protection, vedere [confrontare i client](./rms-client/use-client.md#compare-the-clients).
 
 - App di Office che sono in fasi di disponibilità diverse. Per altre informazioni, vedere la sezione **Oggi dov'è disponibile questa funzionalità?** in [Applicare le etichette di riservatezza per i documenti e la posta elettronica in Office](https://support.office.com/en-us/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9) nella documentazione di Office.
     
