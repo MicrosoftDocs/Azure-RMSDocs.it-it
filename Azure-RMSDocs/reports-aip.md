@@ -3,7 +3,7 @@ title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
 author: cabailey
 ms.author: cabailey
-ms.date: 05/29/2019
+ms.date: 06/05/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: f35847247db96fdb9396f7bfd1e8ad860e94a88e
-ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
+ms.openlocfilehash: 500786b518f5d95c464d4538a3d8bdefd030a3eb
+ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66269853"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66507167"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -205,9 +205,11 @@ La quantità di dati raccolti e archiviati nell'area di lavoro di Azure Informat
 
 Tuttavia, come punto di partenza, è possibile trovare le stime seguenti utili:
 
-- Per i dati di controllo generati da solo i client di Azure Information Protection: 2 GB per ogni 10.000 utenti attivi.
+- Per i dati di controllo generati da solo i client di Azure Information Protection: 2 GB per ogni 10.000 utenti attivi al mese.
 
-- Per i dati di controllo generati dal client Azure Information Protection scanner e Microsoft Defender ATP: 20 GB per ogni 10.000 utenti attivi.
+- Per i dati di controllo generati dal client Azure Information Protection scanner e Microsoft Defender ATP: 20 GB per ogni 10.000 utenti attivi al mese.
+
+Se si usa l'etichettatura obbligatoria o è stata configurata un'etichetta predefinita nei criteri globali, le tariffe possono risultare significativamente più elevata.
 
 Log di monitoraggio di Azure è un **informazioni sull'utilizzo e costi stimati** funzionalità che consentono di stimare e verificare la quantità di dati archiviati in ed è anche possibile controllare il periodo di conservazione dati per l'area di lavoro di Log Analitica. Per altre informazioni, vedere [gestire i costi con i log di monitoraggio di Azure e sull'utilizzo](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
 
@@ -217,7 +219,7 @@ Log di monitoraggio di Azure è un **informazioni sull'utilizzo e costi stimati*
     
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
     
-2. Individuare le opzioni del menu **Gestisci** e selezionare **Configura le analisi (anteprima)**.
+2. Individuare le opzioni del menu **Gestisci** e selezionare **Configura le analisi (anteprima)** .
 
 3. Nel pannello **Log Analytics di Azure Information Protection** viene visualizzato un elenco delle eventuali aree di lavoro di Log Analytics di proprietà del tenant. Eseguire una delle operazioni seguenti:
     
@@ -236,13 +238,13 @@ Quando viene completata la configurazione dell'area di lavoro si è pronti per v
 
 Nel pannello Azure Information Protection trovare le opzioni del menu **Dashboard** e scegliere una delle opzioni seguenti:
 
-- **Report di utilizzo (anteprima)**: usare questo report per vedere come vengono usate le etichette.
+- **Report di utilizzo (anteprima)** : usare questo report per vedere come vengono usate le etichette.
 
-- **Log attività (anteprima)**: usare questo report per visualizzare le azioni di etichettatura dagli utenti e per i dispositivi e i percorsi di file.
+- **Log attività (anteprima)** : usare questo report per visualizzare le azioni di etichettatura dagli utenti e per i dispositivi e i percorsi di file.
     
     Questo report contiene un'opzione **Colonne** che consente di visualizzare più informazioni sulle attività rispetto alla visualizzazione predefinita. È anche possibile accedere ad altri dettagli su un file selezionandolo per visualizzare **Dettagli attività**.
 
-- **Individuazione dei dati (anteprima)**: usare questo report per visualizzare informazioni sui file etichettati trovati dagli strumenti di analisi e dagli endpoint supportati.
+- **Individuazione dei dati (anteprima)** : usare questo report per visualizzare informazioni sui file etichettati trovati dagli strumenti di analisi e dagli endpoint supportati.
     
     È possibile configurare un [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents) per il client Azure Information Protection ai file di report contenenti informazioni riservate.
     
@@ -251,7 +253,7 @@ Nel pannello Azure Information Protection trovare le opzioni del menu **Dashboar
     - Se le posizioni sono in locale, è consigliabile aggiungerle come ulteriori repository di dati per lo strumento di analisi di Azure Information Protection.
     - Se le posizioni sono nel cloud, è consigliabile usare Microsoft Cloud App Security per gestirle. 
     
-- **Raccomandazioni (anteprima)**: usare questo report per identificare i file che contengono informazioni sensibili e attenuare il rischio seguendo le raccomandazioni.
+- **Raccomandazioni (anteprima)** : usare questo report per identificare i file che contengono informazioni sensibili e attenuare il rischio seguendo le raccomandazioni.
     
     Quando si seleziona un elemento, l'opzione **Visualizza i dati** consente di visualizzare le attività di controllo che hanno attivato la raccomandazione.
 

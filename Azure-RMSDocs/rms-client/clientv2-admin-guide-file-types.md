@@ -4,17 +4,17 @@ description: Dettagli tecnici sui tipi di file supportati, estensioni di file e 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 61d7dfa6fa1fe86c930e9c6a6d2c21a807433583
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 3e161c382357c0f1710ba5ac587bddb8a7ba1e22
+ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768123"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66507160"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Tipi di file supportati dal client Azure Information Protection unified l'assegnazione di etichette
 
@@ -82,7 +82,7 @@ Il client di assegnazione di etichette unificato di Azure Information Protection
 |Protezione|La protezione dei file viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che ricevono il file tramite posta elettronica o a cui viene concesso l'accesso al file tramite autorizzazioni di file o condivisione.<br /><br />- Vengono anche applicati tutti i diritti di utilizzo e i criteri impostati dal proprietario del contenuto al momento dell'applicazione della protezione ai file quando viene eseguito il rendering del contenuto nel visualizzatore Azure Information Protection (per i file di testo e immagine protetti) o nell'applicazione associata (per tutti gli altri tipi di file supportati).|La protezione dei file viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che sono autorizzati ad aprire il file e a cui viene concesso l'accesso al file. Se l'autorizzazione ha esito negativo, il file non si apre.<br /><br />- Vengono visualizzati i diritti di utilizzo e i criteri impostati dal proprietario del contenuto per comunicare agli utenti autorizzati i criteri di utilizzo previsti.<br /><br />- Viene effettuata la registrazione di controllo dell'apertura di file e dell'accesso a questi da parte di utenti autorizzati. I diritti di utilizzo, tuttavia, non vengono applicati.|
 |Impostazione predefinita per i tipi di file|Questo è il livello predefinito di protezione per i tipi di file seguenti:<br /><br />- File di testo e immagine<br /><br />- File di Microsoft Office (Word, Excel, PowerPoint)<br /><br />- Formato di documento portatile (.pdf)<br /><br />Per altre informazioni, vedere la sezione che segue, [Tipi di file supportati per la classificazione e la protezione](#supported-file-types-for-classification-and-protection).|Questa è la protezione predefinita per tutti gli altri tipi di file (ad esempio i file con estensione vsdx, rtf e così via) che non sono supportati dalla protezione nativa.|
 
-È possibile modificare il livello di protezione predefinito che il client di assegnazione di etichette unificato di Azure Information Protection applica. È possibile modificare il livello predefinito nativo a generico, da generico a nativo e anche evitare che il client di assegnazione di etichette unificato di Azure Information Protection da applicare la protezione. Per altre informazioni, vedere la sezione [Modifica del livello di protezione predefinito dei file](#changing-the-default-protection-level-of-files) in questo articolo.
+Attualmente, è possibile modificare il livello di protezione predefinito che il client di assegnazione di etichette unificato di Azure Information Protection applica.
 
 La protezione può essere applicata automaticamente quando un utente seleziona un'etichetta di riservatezza che un amministratore ha configurato o gli utenti possono specificare le proprie impostazioni di protezione personalizzate utilizzando [livelli di autorizzazione](../configure-usage-rights.md#rights-included-in-permissions-levels). 
 
@@ -140,56 +140,6 @@ Per questi file, l'estensione del nome di file rimane invariata dopo che il file
 |----------------------------------|----------------------------------|
 |.doc<br /><br />.docm<br /><br />.docx<br /><br />.dot<br /><br />.dotm<br /><br />.dotx<br /><br />.potm<br /><br />.potx<br /><br />.pps<br /><br />.ppsm<br /><br />.ppsx<br /><br />.ppt<br /><br />.pptm<br /><br />.pptx<br /><br />.vsdm|.vsdx<br /><br />.vssm<br /><br />.vssx<br /><br />.vstm<br /><br />.vstx<br /><br />.xla<br /><br />.xlam<br /><br />.xls<br /><br />.xlsb<br /><br />.xlt<br /><br />.xlsm<br /><br />.xlsx<br /><br />.xltm<br /><br />.xltx<br /><br />.xps|
 
-### <a name="changing-the-default-protection-level-of-files"></a>Modifica del livello di protezione predefinito dei file
-È possibile modificare come il client di assegnazione di etichette unificato di Azure Information Protection protegge i file modificando il Registro di sistema. Ad esempio, è possibile forzare i file che supportano la protezione nativa che vengano protetti genericamente dal client Azure Information Protection unified imprevisto delle etichette.
-
-Motivi per cui è possibile eseguire questa operazione:
-
-- Per verificare che tutti gli utenti possano aprire il file se non dispongono di un'applicazione che supporta la protezione nativa.
-
-- Per ospitare i sistemi di sicurezza che intervengono sui file tramite l'estensione del nome di file e possono essere riconfigurati per adattare l'estensione .pfile ma non possono essere riconfigurati per gestire più estensioni di nome di file per la protezione nativa.
-
-Analogamente, è possibile forzare il client di assegnazione di etichette unificato di Azure Information Protection per applicare la protezione nativa ai file di cui per impostazione predefinita, verrebbe applicata la protezione generica. Questa azione potrebbe essere appropriata se si ha un'applicazione che supporta le API RMS, ad esempio, un'applicazione line-of-business scritta da sviluppatori interni oppure acquistata da un fornitore di software indipendente (ISV).
-
-È anche possibile forzare il client di imprevisto delle etichette unificato di Azure Information Protection a bloccare la protezione dei file (si applica protezione nativa o generica). Ad esempio, questa azione potrebbe essere necessaria se si ha un'applicazione automatica o un servizio che deve essere in grado di aprire un file specifico per elaborare il relativo contenuto. Quando si blocca la protezione per un tipo di file, gli utenti non è possibile usare il client di assegnazione di etichette unificato di Azure Information Protection per proteggere un file con quel tipo di file. Quando tentano, viene visualizzato un messaggio in base al quale l'amministratore ha impedito la protezione ed è necessario annullare la loro azione per proteggere il file.
-
-Per configurare il client di assegnazione di etichette unificato di Azure Information Protection per applicare la protezione generica a tutti i file cui per impostazione predefinita, verrebbe applicata la protezione nativa, apportare le modifiche seguenti al Registro di sistema. Se la chiave FileProtection non esiste, è necessario crearla manualmente.
-
-1. Creare una nuova chiave denominata * per il percorso del Registro di sistema seguente, che indica i file con qualsiasi estensione del nome file:
-
-    - Per una versione di Windows a 32 bit: **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
-
-    - Per una versione di Windows a 64 bit: **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** e **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
-
-2. Nella nuova chiave aggiunta (ad esempio HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*), creare un nuovo valore stringa (REG_SZ) denominato **Encryption** con valore dati **Pfile**.
-
-    Questa impostazione ha come risultato l'applicazione della protezione generica da parte del client Azure Information Protection.
-
-Queste due impostazioni conseguenza il client l'assegnazione di etichette unificato Azure Information Protection Applica protezione generica a tutti i file che hanno un'estensione di file. Se questo è l'obiettivo, non è richiesta alcuna ulteriore configurazione. Tuttavia, è possibile definire eccezioni per specifici tipi di file, in modo che siano protetti comunque in modo nativo. A tale scopo, è necessario apportare 3 (per Windows a 32 bit) o 6 (per Windows a 64 bit) modifiche aggiuntive del Registro di sistema per ogni tipo di file:
-
-1. Per **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** e **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (se applicabile): Aggiungere una nuova chiave con il nome dell'estensione di file (senza il punto iniziale).
-
-    Ad esempio, i file con estensione del nome di file .docx, creano una chiave denominata **DOCX**.
-
-2. nella nuova chiave aggiunta per il tipo di file, ad esempio **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\DOCX**, creare un nuovo valore DWORD denominato **AllowPFILEEncryption** con valore **0**.
-
-3. Nella nuova chiave aggiunta per il tipo di file, ad esempio **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\RmsSharingApp\FileProtection\DOCX**, creare un nuovo valore stringa denominato **Encryption** con valore **Native**.
-
-In seguito a queste impostazioni, tutti i file sono protetti in modo generico ad eccezione dei file con estensione docx, Questi file sono protetti in modo nativo dal client Azure Information Protection unified imprevisto delle etichette.
-
-Ripetere questi tre passaggi per altri tipi di file che si desidera definire come eccezioni, in quanto supportano la protezione nativa e non dovranno essere protetti in modo generico dal client Azure Information Protection unified imprevisto delle etichette.
-
-È possibile apportare modifiche di registro di sistema simile per altri scenari modificando il valore della stringa **Crittografia** che supporta i seguenti valori:
-
-- **Pfile**: protezione generica
-
-- **Native**: protezione nativa
-
-- **Off**: Protezione di blocco
-
-Dopo aver apportato queste modifiche del Registro di sistema, non è necessario riavviare il computer. Tuttavia, se si usano i comandi di PowerShell per proteggere i file, è necessario avviare una nuova sessione di PowerShell per rendere effettive le modifiche.
-
-Per altre informazioni sulla modifica del Registro di sistema per modificare il livello di protezione predefinito dei file, vedere [Configurazione dell'API file](../develop/file-api-configuration.md) nelle linee guida per sviluppatori. Per fare riferimento alla protezione generica, questa documentazione per sviluppatori usa il termine "PFile".
 
 ## <a name="file-types-that-are-excluded-from-classification-and-protection"></a>Tipi di file esclusi dalla classificazione e dalla protezione
 

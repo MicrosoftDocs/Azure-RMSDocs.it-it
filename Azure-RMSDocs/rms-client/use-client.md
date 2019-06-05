@@ -4,17 +4,17 @@ description: Microsoft Azure Information Protection offre una soluzione client-s
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/15/2019
+ms.date: 06/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 311c03815cc245f3d48a588fe4ec5fc6fb6ab4cd
-ms.sourcegitcommit: 01e3669cc499d860dc7cda0d1430196621b7a0d1
+ms.openlocfilehash: 0c757c8b599215e78bc30f50a05fbedf83d67481
+ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65626325"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66507149"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -104,6 +104,7 @@ Quando entrambi i client supportano la funzionalità stessa, usare la tabella se
 |Azioni di rimozione di etichette applicate: | Viene chiesta conferma all'utente <br /><br />L'etichetta predefinita o l'etichetta automatica (se configurata) non viene applicata automaticamente alla successiva apertura del file nell'app Office  <br /><br />| Non viene chiesta conferma all'utente<br /><br /> L'etichetta predefinita o l'etichetta automatica (se configurata) viene applicata automaticamente alla successiva apertura del file nell'app Office|
 |Etichette automatiche e consigliate: | Configurata come [condizioni per le etichette](../configure-policy-classification.md) nel portale di Azure con i tipi di informazioni predefiniti e le condizioni personalizzate che usano frasi o espressioni regolari <br /><br />Le opzioni di configurazione possibili sono: <br /><br />- Conteggio univoco/non univoco <br /><br /> - Conteggio minimo| Configurata nei centri di amministrazione con i tipi di informazioni riservate predefiniti e i [tipi di informazioni personalizzati](https://docs.microsoft.com/office365/securitycompliance/create-a-custom-sensitive-information-type)<br /><br />Le opzioni di configurazione possibili sono:  <br /><br />- Solo conteggio univoco <br /><br />- Conteggio minimo e massimo <br /><br />- Supporto di AND e OR con i tipi di informazioni <br /><br />- Dizionario di parole chiave<br /><br />- Livello di attendibilità e prossimità dei caratteri personalizzabili|
 |Suggerimento per i criteri personalizzabili per le etichette automatiche e consigliate: | Yes <br /><br />Usare il portale di Azure per sostituire il messaggio predefinito per gli utenti | No <br /><br /> Anche se le interfacce di amministrazione hanno un'opzione per fornire un suggerimento per i criteri personalizzati, questa opzione non è attualmente supportata dal client di assegnazione di etichette unificato|
+|Modificare il livello di protezione predefinito dei file: | Yes <br /><br />È possibile usare [il Registro di sistema](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) sostituire i valori predefiniti di protezione nativa e generica | No |
 
 Per un confronto dettagliato delle differenze di comportamento per le impostazioni di protezione dati specifico, vedere [confronto tra il comportamento delle impostazioni di protezione per un'etichetta](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
 
