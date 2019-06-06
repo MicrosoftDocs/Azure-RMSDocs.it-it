@@ -4,19 +4,19 @@ description: Informazioni per configurare i server locali che sfrutteranno il co
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 06/06/2018
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 023d35152f1afbd8bba60366bfb2beec37905b91
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: e35aad25d0e065cda255d880b3605056d83c30f7
+ms.sourcegitcommit: d4540d8c535cd858550d6f62149fb8096b0ccd40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180024"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719808"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configurazione dei server per il connettore di Azure Rights Management
 
@@ -168,10 +168,7 @@ Se i server Exchange in uso eseguono invece una versione precedente del sistema 
 
    -   Modificare il registro utilizzando le informazioni contenute in [Impostazioni del Registro di sistema per il connettore RMS](rms-connector-registry-settings.md) per aggiungere manualmente le impostazioni del Registro di sistema sui server. 
 
-3. Abilitare la funzionalità IRM per Exchange [abilitando IRM per i messaggi interni](https://technet.microsoft.com/library/bb124077(v=exchg.150).aspx#Anchor_1).
-
-    > [!NOTE]
-    > Per impostazione predefinita, dopo aver eseguito **Set-IRMConfiguration -InternalLicensingEnabled $true**, IRM viene abilitato automaticamente per Outlook Web App e i dispositivi mobili, in aggiunta all'abilitazione di IRM per le cassette postali. Gli amministratori possono tuttavia disabilitare IRM a livelli diversi, ad esempio per un server Accesso client, per la directory virtuale di Outlook Web App o i criteri della cassetta postale di Outlook Web App e per i criteri della cassetta postale di un dispositivo mobile. Se, trascorso un giorno, gli utenti non visualizzano alcun modello di Azure RMS in Outlook Web App o nei dispositivi mobili mentre riescono a visualizzare i modelli nel client di Outlook, verificare le impostazioni per assicurarsi che IRM non sia disabilitato. Per altre informazioni, vedere [Attivare o disattivare Information Rights Management sui server Accesso Client](https://technet.microsoft.com/library/dd876938(v=exchg.150).aspx) nella documentazione di Exchange. 
+3. Abilitare la funzionalità IRM per Exchange usando il cmdlet di PowerShell per Exchange [Set-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps) e impostare `InternalLicensingEnabled $true` e `ClientAccessServerEnabled $true`.
 
 
 ## <a name="configuring-a-sharepoint-server-to-use-the-connector"></a>Configurazione di un server di SharePoint per l'uso del connettore
@@ -226,7 +223,7 @@ Per usare il connettore RMS e la funzionalità Infrastruttura di classificazione
 
 - Windows Server 2016
 
-- R2 per Windows Server 2012
+- Windows Server 2012 R2
 
 - Windows Server 2012
 

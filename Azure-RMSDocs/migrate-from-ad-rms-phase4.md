@@ -4,19 +4,19 @@ description: Fase 4 della migrazione da AD RMS ad Azure Information Protection c
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 06/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f1d41228022d7152dd5b7224665955323464a8fe
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: c1f05e8e08ea8e2fb6d94cbe6d4a89cf55ddeed2
+ms.sourcegitcommit: d4540d8c535cd858550d6f62149fb8096b0ccd40
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65781921"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719802"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Fase 4 della migrazione: configurazione dei servizi di supporto
 
@@ -24,8 +24,6 @@ ms.locfileid: "65781921"
 
 
 Usare le informazioni seguenti per la fase 4 della migrazione da AD RMS ad Azure Information Protection. Di seguito vengono illustrati i passaggi 8 e 9 dell'operazione descritta in [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
-
-
 
 ## <a name="step-8-configure-irm-integration-for-exchange-online"></a>Passaggio 8. Configurare l'iterazione IRM per Exchange Online
 
@@ -57,11 +55,16 @@ Questa procedura esegue l'installazione e la configurazione del connettore, disa
 
 ### <a name="install-and-configure-the-rms-connector"></a>Installare e configurare il connettore RMS
 
-Usare le istruzioni incluse nell'articolo [Distribuzione del connettore di Azure Rights Management](./deploy-rms-connector.md) ed eseguire i passaggi da 1 a 4. Non eseguire ancora il passaggio 5 delle istruzioni del connettore. 
+Usare le istruzioni incluse nell'articolo [Distribuzione del connettore di Azure Rights Management](./deploy-rms-connector.md) ed eseguire i passaggi da 1 a 4. Non eseguire ancora il passaggio 5 delle istruzioni del connettore.
 
 ### <a name="disable-irm-on-exchange-servers-and-remove-ad-rms-configuration"></a>Disabilitare IRM nei computer che eseguono Exchange Server e rimuovere la configurazione di AD RMS
 
-1.  In ogni Exchange Server trovare la cartella seguente ed eliminare tutte le voci incluse: **\ProgramData\Microsoft\DRM\Server\S-1-5-18**
+> [!IMPORTANT]
+> Se è ancora stato configurato IRM in uno qualsiasi dei server Exchange, eseguire semplicemente i passaggi 2 e 6.
+> 
+> Eseguire tutti questi passaggi se tutti gli URL di tutti i cluster AD RMS non vengono visualizzati nei *LicensingLocation* parametro quando si esegue [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps).
+
+1. In ogni Exchange Server trovare la cartella seguente ed eliminare tutte le voci incluse: **\ProgramData\Microsoft\DRM\Server\S-1-5-18**
 
 2. Da uno dei server Exchange, eseguire i comandi di PowerShell seguenti per assicurarsi che gli utenti saranno in grado di leggere i messaggi di posta elettronica protetti con Azure Rights Management.
 
@@ -71,6 +74,8 @@ Usare le istruzioni incluse nell'articolo [Distribuzione del connettore di Azure
         $list = $irmConfig.LicensingLocation 
         $list += "<Your Tenant URL>/_wmcs/licensing"
         Set-IRMConfiguration -LicensingLocation $list
+    
+    Quando si esegue [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps), si dovrebbero vedere tutti gli URL del cluster AD RMS e l'URL del servizio Azure Rights Management visualizzata per il *LicensingLocation* parametro.
 
 3.  Disattivare ora le funzionalità IRM per i messaggi inviati a destinatari interni:
 
@@ -102,7 +107,7 @@ Usare le istruzioni incluse nell'articolo [Distribuzione del connettore di Azure
 
 4.  Nella pagina **Information Rights Management** , nella sezione **Information Rights Management** selezionare **Non utilizzare IRM in questo server**, quindi fare clic su **OK**.
 
-5.  In ogni computer che esegue SharePoint Server eliminare il contenuto della cartella \ProgramData\Microsoft\MSIPC\Server\\<*SID dell'account che esegue SharePoint Server>*.
+5.  In ogni computer che esegue SharePoint Server eliminare il contenuto della cartella \ProgramData\Microsoft\MSIPC\Server\\<*SID dell'account che esegue SharePoint Server>* .
 
 ### <a name="configure-exchange-and-sharepoint-to-use-the-connector"></a>Configurare Exchange e SharePoint per l'uso del connettore
 
