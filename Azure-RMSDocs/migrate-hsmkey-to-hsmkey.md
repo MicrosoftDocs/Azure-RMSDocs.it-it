@@ -47,7 +47,7 @@ Queste procedure vengono eseguite dall'amministratore di Insieme di credenziali 
 
 1. Per ogni chiave del certificato concessore di licenze server da archiviare in Azure Key Vault, seguire le istruzioni della documentazione di Azure Key Vault, usando [Implementazione di BYOK (Bring Your Own Key) per Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault) con l'eccezione seguente:
 
-   - Non eseguire la procedura per **generare la chiave del tenant**, perché ne esiste già una equivalente nella distribuzione di AD RMS. In alternativa, identificare la chiave usata dal server AD RMS dall'installazione nCipher e usare questa chiave durante la migrazione. sono in genere denominati i file di chiave crittografati nCipher **key <*Nomeappchiave*><*keyIdentifier* >**  localmente nel server.
+   - Non eseguire la procedura per **generare la chiave del tenant**, perché ne esiste già una equivalente nella distribuzione di AD RMS. In alternativa, identificare la chiave usata dal server AD RMS dall'installazione nCipher e usare questa chiave durante la migrazione. sono in genere denominati i file di chiave crittografati nCipher **key<*Nomeappchiave*><*keyIdentifier*>** localmente nel server.
 
      Quando la chiave viene caricata in Insieme di credenziali delle chiavi di Azure, vengono visualizzate le proprietà della chiave visualizzata, incluso l'ID della chiave. Sarà simile a https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Prendere nota dell'URL perché è necessario all'amministratore di Azure Information Protection per indicare al servizio Azure Rights Management di usare questa chiave per la chiave del tenant.
 
