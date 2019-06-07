@@ -4,19 +4,19 @@ description: Fase 4 della migrazione da AD RMS ad Azure Information Protection c
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/06/2019
+ms.date: 06/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8b039ad5-95a6-4c73-9c22-78c7b0e12cb7
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c1f05e8e08ea8e2fb6d94cbe6d4a89cf55ddeed2
-ms.sourcegitcommit: d4540d8c535cd858550d6f62149fb8096b0ccd40
+ms.openlocfilehash: 064cf6db8551caa12bb06540fd598f70f02e6c0d
+ms.sourcegitcommit: bdaf9809fcf78602ec7675c04f97ad5d3cc47b44
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66719802"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66748341"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Fase 4 della migrazione: configurazione dei servizi di supporto
 
@@ -62,7 +62,7 @@ Usare le istruzioni incluse nell'articolo [Distribuzione del connettore di Azure
 > [!IMPORTANT]
 > Se è ancora stato configurato IRM in uno qualsiasi dei server Exchange, eseguire semplicemente i passaggi 2 e 6.
 > 
-> Eseguire tutti questi passaggi se tutti gli URL di tutti i cluster AD RMS non vengono visualizzati nei *LicensingLocation* parametro quando si esegue [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps).
+> Eseguire tutti questi passaggi se tutti gli URL gestione licenze di tutti i cluster AD RMS non vengono visualizzati nei *LicensingLocation* parametro quando si esegue [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps).
 
 1. In ogni Exchange Server trovare la cartella seguente ed eliminare tutte le voci incluse: **\ProgramData\Microsoft\DRM\Server\S-1-5-18**
 
@@ -75,7 +75,7 @@ Usare le istruzioni incluse nell'articolo [Distribuzione del connettore di Azure
         $list += "<Your Tenant URL>/_wmcs/licensing"
         Set-IRMConfiguration -LicensingLocation $list
     
-    Quando si esegue [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps), si dovrebbero vedere tutti gli URL del cluster AD RMS e l'URL del servizio Azure Rights Management visualizzata per il *LicensingLocation* parametro.
+    Quando si esegue [Get-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps), si dovrebbe vedere tutti i cluster AD RMS concedere in licenza gli URL e l'URL del servizio Azure Rights Management visualizzata per il *LicensingLocation* parametro.
 
 3.  Disattivare ora le funzionalità IRM per i messaggi inviati a destinatari interni:
 
