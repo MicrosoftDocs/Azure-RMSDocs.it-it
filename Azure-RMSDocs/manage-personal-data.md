@@ -4,19 +4,19 @@ description: Informazioni sui dati personali usati da Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/29/2019
+ms.date: 06/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: e6563b3ac385ff19999d458a461fd2a4c8fa7061
-ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
+ms.openlocfilehash: 91ce158ded8b9e7812f15737b8d07e5efdf5e3c0
+ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66269777"
+ms.lasthandoff: 06/08/2019
+ms.locfileid: "66815590"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gestire i dati personali per Azure Information Protection
 
@@ -90,7 +90,7 @@ Eseguire i cmdlet [Get-AadrmSuperUser](/powershell/module/aadrm/get-aadrmsuperus
 
 Eseguire il cmdlet [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) per ottenere un log delle azioni di amministrazione per il servizio Azure Rights Management, che protegge i dati per Azure Information Protection. Questo log include dati personali sotto forma di indirizzi di posta elettronica e indirizzi IP. Il log è in testo normale e, una volta scaricato, è possibile cercare offline le informazioni su un amministratore specifico.
 
-Ad esempio: 
+Ad esempio:
 ```
 PS C:\Users> Get-AadrmAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -ToTime 4/30/2018 -Verbose
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
@@ -131,7 +131,7 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 Eseguire il cmdlet [Get-AadrmDocumentLog](/powershell/module/aadrm/get-aadrmdocumentlog) per recuperare informazioni dal sito di rilevamento dei documenti su un utente specifico. Per ottenere informazioni sul rilevamento associate ai log dei documenti, usare il cmdlet [Get-AadrmTrackingLog](/powershell/module/aadrm/get-aadrmtrackinglog?view=azureipps).
 
-Ad esempio: 
+Ad esempio:
 ```
 PS C:\Users> Get-AadrmDocumentLog -UserEmail "admin@aip500.onmicrosoft.com"
 
@@ -213,11 +213,13 @@ I dati personali visualizzati e specificati nel portale di Azure sono accessibil
 
 - **Amministratore di conformità**
 
+- **Amministratore dei dati di conformità**
+
 - **Amministratore della sicurezza**
 
 - **Amministratore globale**
 
-I dati personali che vengono visualizzati ed specifica usando il modulo AADRM sono accessibili solo agli utenti che sono stati assegnati i **amministratore di Azure Information Protection**, **amministratore conformità**, o  **Amministratore globale** ruoli da Azure Active Directory o il ruolo di amministratore globale per il servizio Azure Rights Management.  
+I dati personali che vengono visualizzati ed specifica usando il modulo AADRM sono accessibili solo agli utenti che sono stati assegnati i **amministratore di Azure Information Protection**, **amministratore conformità**,  **Amministratore dei dati di conformità**, oppure **amministratore globale** ruoli da Azure Active Directory o il ruolo di amministratore globale per il servizio Azure Rights Management.  
 
 ## <a name="updating-personal-data"></a>Aggiornamento dei dati personali
 
