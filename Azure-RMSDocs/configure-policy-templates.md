@@ -4,19 +4,19 @@ description: Configurare e gestire i modelli di protezione, noto anche come mode
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 28b2c670c3204d5e69a963b8d2f5cabc3eeaa872
-ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
+ms.openlocfilehash: 7088f50534b30b188580f395e02a65e56df16cf1
+ms.sourcegitcommit: b5b825ec7f08dbdcd70c0016ed3a69e7dd887fef
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64880097"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "66840154"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurazione e gestione dei modelli per Azure Information Protection
 
@@ -55,15 +55,15 @@ Questi modelli predefiniti semplificano l'attivazione immediata della protezione
 
 Se è stata attivata recentemente una sottoscrizione, i modelli predefiniti vengono creati con i nomi seguenti:
 
-- **Riservato\Tutti i dipendenti** che concede le autorizzazioni di lettura e modifica per il contenuto protetto.
+- **Riservato\Tutti i dipendenti**
 
-- **Riservatezza elevata\Tutti i dipendenti** che concede le autorizzazioni di sola lettura per il contenuto protetto.
+- **Riservatezza elevata\Tutti i dipendenti**
 
-Se la sottoscrizione è stata attivata in passato, i modelli predefiniti vengono creati con i nomi seguenti:
+Se è stato acquistato la sottoscrizione qualche tempo fa, i modelli predefiniti potrebbero essere creati con i nomi seguenti:
 
-- **\<nome dell'organizzazione> - Riservato** che concede le autorizzazioni di lettura e modifica per il contenuto protetto.
+- **\<Nome organizzazione > - riservato**
 
-- **\<nome dell'organizzazione> - Solo visione riservata** che concede le autorizzazioni di sola lettura per il contenuto protetto. 
+- **\<nome organizzazione> - Solo visualizzazione riservata** 
 
 È possibile rinominare e riconfigurare questi modelli predefiniti quando si usa il portale di Azure.
 
