@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: a894513d26a78daefc7d8032f1afa754ece74028
-ms.sourcegitcommit: d4540d8c535cd858550d6f62149fb8096b0ccd40
+ms.openlocfilehash: 129449585ee6128d0b8d88b2372343a2c10ec4e9
+ms.sourcegitcommit: 95cbd8245b049a28556df79cc058668a1668599c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66719835"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67028680"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-scanner"></a>Distribuzione di versioni precedenti dello scanner Azure Information Protection
 
@@ -424,12 +424,13 @@ Altri fattori che influenzano le prestazioni dello scanner:
 
 - Inoltre:
     
-    - Verificare che l'account del servizio che esegue lo scanner abbia solo i diritti indicati nella sezione relativa ai [prerequisiti dello scanner](#prerequisites-for-the-azure-information-protection-scanner) e quindi configurare la [proprietà avanzata del client](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) per disabilitare il livello di integrità basso per lo scanner.
+    - Verificare che l'account del servizio che esegue lo scanner abbia solo i diritti documentati nel [prerequisiti dello scanner](#prerequisites-for-the-azure-information-protection-scanner) sezione e quindi configurare il [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) per disabilitare l'integrità bassa livello per lo scanner.
     
     - L'esecuzione dello scanner è più rapida quando si usa la [configurazione alternativa](#using-the-scanner-with-alternative-configurations) per applicare un'etichetta predefinita a tutti i file in quanto lo scanner non esamina i contenuti del file.
     
     - L'esecuzione dello scanner è più lenta quando si usa la [configurazione alternativa](#using-the-scanner-with-alternative-configurations) per identificare tutte le condizioni personalizzate e i tipi di informazioni riservate noti.
     
+    - È possibile ridurre il timeout dello scanner con [impostazioni client avanzate](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner) per frequenze meglio l'analisi e il consumo di memoria inferiore, ma l'acknowledgement del recapito che alcuni file potrebbero essere ignorati.
 
 ## <a name="list-of-cmdlets-for-the-scanner"></a>Elenco dei cmdlet per lo scanner 
 

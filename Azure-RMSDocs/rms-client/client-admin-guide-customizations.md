@@ -4,19 +4,19 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
-ms.reviewer: eymanor
+ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: bd17dbf51042818250cbea95ee2738d516c76077
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 4ef4a0d07154da9cb4b4b34d3b55264fa44f5fdf
+ms.sourcegitcommit: 95cbd8245b049a28556df79cc058668a1668599c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66186690"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67028722"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -34,7 +34,7 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 
 2. Dall'opzione di menu **Classificazioni** > **Etichette**: Selezionare i **criteri**.
 
-3. Nel pannello **Azure Information Protection - Criteri** selezionare il menu di scelta rapida (**...**) accanto ai criteri, contenente le impostazioni avanzate. Selezionare quindi **Impostazioni avanzate**.
+3. Nel pannello **Azure Information Protection - Criteri** selezionare il menu di scelta rapida ( **...** ) accanto ai criteri, contenente le impostazioni avanzate. Selezionare quindi **Impostazioni avanzate**.
     
     È possibile configurare le impostazioni avanzate per i criteri globali e per i criteri con ambito.
 
@@ -42,18 +42,20 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 
 5. Assicurarsi che gli utenti interessati da questi criteri riavviino le applicazioni di Office eventualmente aperte.
 
-6. Se l'impostazione non è più necessaria e si vuole ripristinare il comportamento predefinito: nel pannello **Impostazioni avanzate** selezionare il menu di scelta rapida (**...**) accanto all'impostazione non più necessaria e quindi selezionare **Elimina**. Fare clic su **Salva e chiudi**.
+6. Se l'impostazione non è più necessaria e si vuole ripristinare il comportamento predefinito: nel pannello **Impostazioni avanzate** selezionare il menu di scelta rapida ( **...** ) accanto all'impostazione non più necessaria e quindi selezionare **Elimina**. Fare clic su **Salva e chiudi**.
 
 #### <a name="available-advanced-client-settings"></a>Impostazioni client avanzate disponibili
 
 |Impostazione|Scenario e istruzioni|
 |----------------|---------------|
 |DisableDNF|[Nascondere o visualizzare il pulsante Non inoltrare in Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
-|CompareSubLabelsInAttachmentAction|[Abilitare il supporto dell'ordinamento delle etichette secondarie](#enable-order-support-for-sublabels-on-attachments) 
+|CompareSubLabelsInAttachmentAction|[Abilitare il supporto dell'ordinamento delle etichette secondarie](#enable-order-support-for-sublabels-on-attachments)
+|ContentExtractionTimeout|[Modificare le impostazioni di timeout per lo scanner](#change-the-timeout-settings-for-the-scanner)
 |EnableBarHiding|[Nascondere in modo permanente la barra di Azure Information Protection](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[Rendere disponibili o non disponibili agli utenti le opzioni relative alle autorizzazioni personalizzate](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
 |EnableCustomPermissionsForCustomProtectedFiles|[Per i file protetti con autorizzazioni personalizzate, rendere sempre le autorizzazioni personalizzate visualizzabili dagli utenti in Esplora file](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnablePDFv2Protection|[Non proteggere i file PDF usando lo standard ISO per la crittografia dei file PDF](#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)|
+|FileProcessingTimeout|[Modificare le impostazioni di timeout per lo scanner](#change-the-timeout-settings-for-the-scanner)
 |LabelbyCustomProperty|[Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LabelToSMIME|[Configurare un'etichetta per applicare la protezione S/MIME in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |LogLevel|[Modificare il livello di registrazione locale](#change-the-local-logging-level)
@@ -387,7 +389,7 @@ In questo esempio, un documento PDF senza etichetta non genererà un avviso, giu
 
 - Chiave: **OutlookOverrideUnlabeledCollaborationExtensions**
 
-- Valore: **\<** estensioni per visualizzare i messaggi, separati da virgole di file**>**
+- Valore: **\<** estensioni per visualizzare i messaggi, separati da virgole di file **>**
 
 
 ### <a name="to-specify-the-allowed-domain-names-for-recipients-exempt-from-the-pop-up-messages"></a>Per specificare i nomi di dominio consentiti per i destinatari esenti dai messaggi popup
@@ -404,19 +406,19 @@ Valore di esempio per più domini sotto forma di stringa delimitata da virgole: 
     
     - Chiave: **OutlookWarnTrustedDomains**
     
-    - Valore: **\<** nomi di dominio, delimitati da virgole**>**
+    - Valore: **\<** nomi di dominio, delimitati da virgole **>**
 
 - Messaggi di giustificazione:
     
     - Chiave: **OutlookJustifyTrustedDomains**
     
-    - Valore: **\<** nomi di dominio, delimitati da virgole**>**
+    - Valore: **\<** nomi di dominio, delimitati da virgole **>**
 
 - Messaggi di blocco:
     
     - Chiave: **OutlookBlockTrustedDomains**
     
-    - Valore: **\<** nomi di dominio, delimitati da virgole**>**
+    - Valore: **\<** nomi di dominio, delimitati da virgole **>**
 
 Ad esempio, specificare il client avanzato per non bloccare mai i messaggi di posta elettronica inviati agli utenti che dispongono di un indirizzo di posta elettronica di contoso.com, l'impostazione della **OutlookBlockTrustedDomains** e **contoso.com**. Di conseguenza, evitare la visualizzazione di messaggi di avviso popup in Outlook quando inviano un messaggio di posta elettronica john@sales.contoso.com.
 
@@ -552,7 +554,7 @@ Per usare i comandi di PowerShell per convertire file con estensione ppdf esiste
     
    - Valore di **RMSTemplateId**. Se questo valore è **Accesso limitato**, un utente ha protetto il file usando autorizzazioni personalizzate anziché le impostazioni di protezione configurate per l'etichetta. Se si continua, tali autorizzazioni personalizzate verranno sovrascritte dalle impostazioni di protezione dell'etichetta. Decidere se continuare o chiedere all'utente (valore visualizzato per **RMSIssuer**) di rimuovere l'etichetta e riapplicarla, con le relative autorizzazioni personalizzate originali.
 
-3. Rimuovere l'etichetta usando [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) con il parametro *RemoveLabel*. Se si usa l'[impostazione criteri](../configure-policy-settings.md) **Gli utenti devono offrire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione**, è necessario specificare anche il parametro *Giustificazione* con il motivo. Ad esempio:  
+3. Rimuovere l'etichetta usando [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) con il parametro *RemoveLabel*. Se si usa l'[impostazione criteri](../configure-policy-settings.md) **Gli utenti devono offrire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione**, è necessario specificare anche il parametro *Giustificazione* con il motivo. Ad esempio: 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 
@@ -807,7 +809,7 @@ Per cambiare questo comportamento in modo che le informazioni vengano inviate, i
 
 Se non si configura questa impostazione client avanzata, i risultati del controllo vengono comunque inviate dal client Azure Information Protection, ma le informazioni sono limitate alla segnalazione degli utenti che accedono a contenuto etichettato.
 
-Ad esempio: 
+Ad esempio:
 
 - Senza questa impostazione, è possibile vedere che un utente ha aperto il file Financial.docx etichettato come **Confidential \ Sales**.
 
@@ -856,6 +858,41 @@ Per configurare questa impostazione avanzata in modo che lo scanner venga esegui
 
 - Valore: **False**
 
+## <a name="change-the-timeout-settings-for-the-scanner"></a>Modificare le impostazioni di timeout per lo scanner
+
+Questa configurazione viene utilizzato [impostazioni client avanzate](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che devono essere configurati nel portale di Azure.
+
+Per impostazione predefinita, lo scanner Azure Information Protection con un periodo di timeout di 15: 00.00 (15 minuti) per esaminare tutti i file per i tipi di informazioni riservate o le espressioni di espressione regolare che è stato configurato per condizioni personalizzate. Quando viene raggiunto il periodo di timeout per il processo di estrazione del contenuto, i risultati prima del timeout sono restituita e ulteriore ispezione per le interruzioni di file. In questo scenario, viene registrato il seguente messaggio di errore in %*localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog (compresso se sono presenti più log): **Non è stato possibile GetContentParts** con **è stata annullata l'operazione** nei dettagli del.
+
+Se si verifica questo problema di timeout a causa di file di grandi dimensioni, è possibile aumentare il periodo di timeout per l'estrazione completi del contenuto:
+
+- Chiave: **ContentExtractionTimeout**
+
+- Valore:  **\<hh:min:sec >**
+
+Il tipo di file può influire sul tempo necessario per analizzare un file. Tempi di analisi di esempio:
+
+- Un tipico file di Word 100 MB: 0,5-5 minuti
+
+- Un tipico file PDF di 100 MB: entro 5-20 minuti
+
+- Un tipico file di Excel di 100 MB: 12-30 minuti
+
+Per alcuni tipi di file molto grandi, ad esempio i file video, prendere in considerazione esclusi dall'analisi aggiungendo l'estensione per il **tipi di File da analizzare** opzione nel profilo dello scanner.
+
+Inoltre, lo scanner Azure Information Protection ha un periodo di timeout di 30: 00:00 (30 minuti) per ogni file che elabora. Questo valore prende in considerazione il tempo che prima che per recuperare un file da un repository e temporaneamente salvarlo in locale per le azioni che possono includere la decrittografia, l'estrazione del contenuto per l'ispezione, l'assegnazione di etichette e la crittografia.
+
+Anche se lo scanner Azure Information Protection possa analizzare centinaia di file per ogni minuto, se si dispone di un repository di dati con un numero elevato di file molto grandi, lo scanner può superare questo periodo di timeout predefinito e nel portale di Azure, si bloccano dopo 30 minuti. In questo scenario, viene registrato il seguente messaggio di errore in %*localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog (se sono presenti più log compressi) e il file di log con estensione csv dello scanner: **L'operazione è stata annullata**.
+
+Uno scanner con 4 processori core per impostazione predefinita è 16 thread per l'analisi e la probabilità che si verifichi 16 file di grandi dimensioni in un periodo di tempo di 30 minuti dipende il rapporto tra i file di grandi dimensioni. Ad esempio, se la velocità di analisi è 200 file al minuto e l'1% del file supera il timeout di 30 minuti, vi è una probabilità pari a più di 85% che lo scanner si verificherà la situazione di timeout di 30 minuti. Questi timeout possono comportare tempi di analisi di più e consumo di memoria maggiore.
+
+In questo caso, se per il computer dello scanner non è possibile aggiungere ulteriori processori core, è consigliabile ridurre il periodo di timeout per frequenze meglio l'analisi e il consumo di memoria inferiore, ma l'acknowledgement del recapito che verranno esclusi alcuni file. In alternativa, provare ad aumentare il periodo di timeout per i risultati dell'analisi più accurati, ma con il riconoscimento che questa configurazione potrebbe comportare l'analisi più bassi di classificazione e il consumo di memoria maggiore.
+
+Per modificare il periodo di timeout per l'elaborazione di file, configurare le seguenti impostazioni client avanzate:
+
+- Chiave: **FileProcessingTimeout**
+
+- Valore:  **\<hh:min:sec >**
 
 ## <a name="change-the-local-logging-level"></a>Modificare il livello di registrazione locale
 
@@ -893,7 +930,7 @@ Per ottenere questa soluzione:
 
 2. Creare una regola del flusso di posta di Exchange per ogni etichetta: applicare la regola quando le proprietà del messaggio includono la classificazione configurata e modificare le proprietà del messaggio per impostare un'intestazione del messaggio. 
 
-     Per l'intestazione del messaggio, è possibile trovare le informazioni da specificare nelle intestazioni Internet di un messaggio di posta elettronica inviato e classificato tramite l'etichetta di Azure Information Protection. Cercare l'intestazione **msip_labels** e la stringa immediatamente successiva fino al punto e virgola incluso. Ad esempio: 
+     Per l'intestazione del messaggio, è possibile trovare le informazioni da specificare nelle intestazioni Internet di un messaggio di posta elettronica inviato e classificato tramite l'etichetta di Azure Information Protection. Cercare l'intestazione **msip_labels** e la stringa immediatamente successiva fino al punto e virgola incluso. Ad esempio:
     
     **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
     
