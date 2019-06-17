@@ -4,19 +4,19 @@ description: Fase 5 della migrazione da AD RMS ad Azure Information Protection c
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 06/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 15b8f2df4fe79b62073955b7c9626fe21e8ec201
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: fd0edb3f9ce5b820a7e19c84e8d04b433c007569
+ms.sourcegitcommit: b24de99cf8006a70a14e7a21d103644c1e20502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65780864"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67149267"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Fase 5 della migrazione: attività post-migrazione
 
@@ -114,7 +114,9 @@ Infine, se si usa Office 2010 ed è stata abilitata l'attività **AD RMS Rights 
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Passaggio 12. Reimpostare la chiave del tenant di Azure Information Protection
 
-Questo passaggio è consigliato al termine della migrazione, se per la distribuzione di AD RMS è stata usata la Modalità crittografia 1 di RMS. La reimpostazione delle chiavi dà come risultato una protezione che usa la Modalità di crittografia 2 di RMS. 
+Questo passaggio è obbligatorio al termine se la distribuzione di AD RMS è stata usata la modalità crittografia 1 RMS perché questa modalità Usa una chiave a 1024 bit e SHA-1 della migrazione. Questa configurazione viene considerata per offrire un livello di protezione inadeguato. Microsoft non approva né fornisce dichiarazioni l'uso di lunghezze di chiave inferiore, ad esempio le chiavi RSA di 1024 bit e l'uso dei protocolli che offrono livelli non adeguati di protezione, ad esempio SHA-1 associata.
+
+La reimpostazione della chiave risultati protezione che usa RMS modalità crittografia 2, che comporta una chiave di 2048 bit e SHA-256. 
 
 Anche se per la distribuzione di AD RMS è stata usata la Modalità crittografia 2, è comunque consigliabile eseguire questo passaggio poiché una nuova chiave consente di proteggere il tenant da possibili violazioni della protezione della chiave di AD RMS.
 
@@ -128,7 +130,7 @@ Per reimpostare la chiave del tenant di Azure Information Protection:
     
         (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- **Se la chiave del tenant è gestita dall'utente (BYOK)**: in Azure Key Vault ripetere il processo di creazione della chiave che si sta usando per il tenant di Azure Information Protection, quindi eseguire nuovamente il cmdlet [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) per specificare l'URI della nuova chiave. 
+- **Se la chiave del tenant è gestita dall'utente (BYOK)** : in Azure Key Vault ripetere il processo di creazione della chiave che si sta usando per il tenant di Azure Information Protection, quindi eseguire nuovamente il cmdlet [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) per specificare l'URI della nuova chiave. 
 
 Per altre informazioni sulla gestione della chiave del tenant di Azure Information Protection, vedere [Operazioni relative alla chiave del tenant di Azure Information Protection](./operations-tenant-key.md).
 

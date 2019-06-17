@@ -4,19 +4,19 @@ description: Descrizione del funzionamento di Azure RMS, dei controlli crittogra
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/08/2019
+ms.date: 06/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a60fbf43056673674f07f7dd8517213072f78aec
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 30c97d8e97bec8669fa4c8b6d2b4a2b5d31cca0a
+ms.sourcegitcommit: b24de99cf8006a70a14e7a21d103644c1e20502d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183071"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67149295"
 ---
 # <a name="how-does-azure-rms-work-under-the-hood"></a>Funzionamento di Azure RMS: dietro le quinte
 
@@ -64,11 +64,7 @@ Il client Azure Information Protection usa 256 bit negli scenari seguenti:
 
 - Durante la migrazione da locale, se il cluster AD RMS è in esecuzione in Modalità crittografia 1.
 
-- Dopo la migrazione da locale, se il cluster AD RMS ha usato Exchange Online.
-
 - Per le chiavi archiviate create in locale prima della migrazione in modo che il contenuto protetto da AD RMS possa continuare a essere aperto dopo la migrazione ad Azure Rights Management.
-
-- Se i clienti scelgono di usare la chiave di tipo BYOK (Bring Your Own Key) con Azure Key Vault. Azure Information Protection supporta lunghezze della chiave di 1024 bit e 2048 bit. Per una maggiore sicurezza, si consiglia una lunghezza della chiave di 2048 bit.
 
 ### <a name="how-the-azure-rms-cryptographic-keys-are-stored-and-secured"></a>Modalità di archiviazione e protezione delle chiavi crittografiche di Azure RMS
 
@@ -159,7 +155,7 @@ Le procedure dettagliate precedenti riguardano scenari standard, ma esistono alc
 
 - **Connettore RMS**: quando il servizio Azure Rights Management viene usato con il connettore RMS, i flussi del processo rimangono invariati. L'unica differenza è che il connettore opera come un relè tra i servizi locali, ad esempio Exchange Server e SharePoint Server, e il servizio Azure Rights Management. Il connettore stesso non esegue alcuna operazione, ad esempio l'inizializzazione dell'ambiente utente, né crittografia o decrittografia. Inoltra semplicemente la comunicazione indirizzata solitamente a un server AD RMS, gestendo la conversione tra i protocolli usati su ogni lato. Questo scenario consente di usare il servizio Azure Rights Management con i servizi locali.
 
-- **Protezione generica (PFILE)**: quando il servizio Azure Rights Management protegge un file in modo generico, il flusso è fondamentalmente quello della protezione del contenuto, con la differenza che il client RMS crea i criteri che concedono tutti i diritti. Quando si usa il file, questo viene decrittografato prima di essere passato all'applicazione di destinazione. Questo scenario consente di proteggere tutti i file, anche se non supportano RMS in modo nativo.
+- **Protezione generica (PFILE)** : quando il servizio Azure Rights Management protegge un file in modo generico, il flusso è fondamentalmente quello della protezione del contenuto, con la differenza che il client RMS crea i criteri che concedono tutti i diritti. Quando si usa il file, questo viene decrittografato prima di essere passato all'applicazione di destinazione. Questo scenario consente di proteggere tutti i file, anche se non supportano RMS in modo nativo.
 
 - **Account Microsoft**: Azure Information Protection può autorizzare gli indirizzi di posta elettronica per l'utilizzo quando vengono autenticati con un account Microsoft. Non tutte le applicazioni, tuttavia, possono aprire contenuti protetti quando viene usato un account Microsoft per l'autenticazione. [Altre informazioni](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).
 
