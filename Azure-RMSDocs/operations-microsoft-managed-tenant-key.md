@@ -4,19 +4,19 @@ description: Informazioni sulle operazioni del ciclo di vita rilevanti nel caso 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d9fc409faedf8083dae6730f866c12bdd84255ce
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 91672443e149a54dea4805bae10d8656129d04f9
+ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184043"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67156771"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gestita da Microsoft: operazioni del ciclo di vita della chiave del tenant
 
@@ -75,7 +75,7 @@ Per esportare la configurazione di Azure Information Protection e la chiave del 
     ```
     In questo modo viene generata una coppia di chiavi RSA e le parti pubblica e privata vengono salvate come file nella cartella corrente. Ad esempio:  **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** e **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**.
 
-    Rispondere al messaggio di posta elettronica ricevuto da CSS allegando il file con il nome che inizia con **PublicKey**. A questo punto CSS invierà all'utente un file TDP con estensione .xml crittografato tramite la chiave RSA. Copiare questo file nella stessa cartella in cui è stato eseguito lo strumento AadrmTpd in origine ed eseguire nuovamente lo strumento, usando il file che inizia con **PrivateKey** e il file ricevuto da CSS. Ad esempio: 
+    Rispondere al messaggio di posta elettronica ricevuto da CSS allegando il file con il nome che inizia con **PublicKey**. A questo punto CSS invierà all'utente un file TDP con estensione .xml crittografato tramite la chiave RSA. Copiare questo file nella stessa cartella in cui è stato eseguito lo strumento AadrmTpd in origine ed eseguire nuovamente lo strumento, usando il file che inizia con **PrivateKey** e il file ricevuto da CSS. Ad esempio:
 
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml

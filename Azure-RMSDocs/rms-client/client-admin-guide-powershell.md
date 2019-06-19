@@ -4,18 +4,18 @@ description: Istruzioni e informazioni per amministratori per gestire il client 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/21/2019
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.suite: ems
-ms.openlocfilehash: 5d32210a7ccc56d388b24a55f6e19331e768f7f3
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.openlocfilehash: 7cffbff5a5d6942c7ed722e64ead4a68e5ae959f
+ms.sourcegitcommit: 9b7b2e3a0f7b5717b349af2c883ebdeebfbd53e2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934940"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67161268"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "65934940"
 
 Quando si installa il client di Azure Information Protection, vengono installati automaticamente i comandi di PowerShell. Ciò consente di gestire il client eseguendo i comandi che è possibile inserire negli script per l'automazione.
 
-I cmdlet vengono installati con il modulo **AzureInformationProtection** di PowerShell. Questo modulo include tutti i cmdlet per Rights Management dello strumento di protezione RMS (non più supportato). Sono inoltre disponibili cmdlet che usano Azure Information Protection per l'assegnazione di etichette. Ad esempio: 
+I cmdlet vengono installati con il modulo **AzureInformationProtection** di PowerShell. Questo modulo include tutti i cmdlet per Rights Management dello strumento di protezione RMS (non più supportato). Sono inoltre disponibili cmdlet che usano Azure Information Protection per l'assegnazione di etichette. Ad esempio:
 
 |Cmdlet per le etichette|Esempio di utilizzo|
 |----------------|---------------|
@@ -311,7 +311,7 @@ L'output potrebbe essere simile al seguente:
     ---------             -------------
     C:\Test.docx          C:\Test.docx
 
-Per proteggere tutti i file in una cartella, usare il parametro **-Folder** con una lettera di unità e un percorso oppure un percorso UNC. Ad esempio: 
+Per proteggere tutti i file in una cartella, usare il parametro **-Folder** con una lettera di unità e un percorso oppure un percorso UNC. Ad esempio:
 
     Protect-RMSFile -Folder \Server1\Documents -InPlace -TemplateId e6ee2481-26b9-45e5-b34a-f744eacd53b0
 
@@ -324,7 +324,7 @@ L'output potrebbe essere simile al seguente:
     \Server1\Documents\Test3.docx     \Server1\Documents\Test3.docx
     \Server1\Documents\Test4.docx     \Server1\Documents\Test4.docx
 
-Quando l'estensione del file non cambia dopo aver applicato la protezione, è sempre possibile usare il cmdlet `Get-RMSFileStatus` successivamente per controllare se il file è protetto. Ad esempio: 
+Quando l'estensione del file non cambia dopo aver applicato la protezione, è sempre possibile usare il cmdlet `Get-RMSFileStatus` successivamente per controllare se il file è protetto. Ad esempio:
 
     Get-RMSFileStatus -File \Server1\Documents\Test1.docx
 
@@ -440,7 +440,7 @@ L'output potrebbe essere simile al seguente:
     \\Server1\Documents\Test3.docx     \\Server1\Documents\Test3.docx   
     \\Server1\Documents\Test4.docx     \\Server1\Documents\Test4.docx   
 
-Quando l'estensione del file non cambia dopo aver applicato la protezione, è sempre possibile usare il cmdlet Get-RMSFileStatus successivamente per controllare se il file è protetto. Ad esempio:  
+Quando l'estensione del file non cambia dopo aver applicato la protezione, è sempre possibile usare il cmdlet Get-RMSFileStatus successivamente per controllare se il file è protetto. Ad esempio: 
 
     Get-RMSFileStatus -File \\Server1\Documents\Test1.docx
 
@@ -497,7 +497,7 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
     
     - **(Facoltativo) URI di reindirizzamento**: **Web** e `http://localhost`
 
-4. Nel **AIPOnBehalfOf** pannello, copiare il valore per il **ID applicazione (client)**. Il valore è simile all'esempio seguente: `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. Questo valore viene usato per il *WebAppId* parametro quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento futuro.
+4. Nel **AIPOnBehalfOf** pannello, copiare il valore per il **ID applicazione (client)** . Il valore è simile all'esempio seguente: `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. Questo valore viene usato per il *WebAppId* parametro quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento futuro.
 
 5. Sempre nella **AIPOnBehalfOf** pannello dal **Gestisci** dal menu **Authentication**.
 
@@ -542,7 +542,7 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
     - **Tipi di account supportati**: **Account in questa directory dell'organizzazione solo**
     - **(Facoltativo) URI di reindirizzamento**: **Un client pubblico (per dispositivi mobili e desktop)** e `http://localhost`
 
-17. Nel **AIPClient** pannello, copiare il valore della **ID applicazione (client)**. Il valore è simile all'esempio seguente: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
+17. Nel **AIPClient** pannello, copiare il valore della **ID applicazione (client)** . Il valore è simile all'esempio seguente: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
     
     Questo valore viene utilizzato per il parametro NativeAppId quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento futuro.
 
@@ -559,6 +559,8 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
 22. Nel **le autorizzazioni API Request** pannello seleziona **API My**.
 
 23. Nel **selezionare un'API** , selezionare **APIOnBehalfOf**, quindi selezionare la casella di controllo **-rappresentazione dell'utente**, come l'autorizzazione. Selezionare **aggiungere autorizzazioni**. 
+
+24. Riaccenderle il **autorizzazioni delle API** pannello nella **concedere il consenso** sezione, selezionare **concedere il consenso dell'amministratore per \<il nome del tenant >** e selezionare **Sì** per la richiesta di conferma.
 
 La configurazione delle due app è stata completata e i valori necessari per eseguire [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con i parametri *WebAppId*, *WebAppKey* e *NativeAppId* sono disponibili. Da questi esempi:
 
@@ -624,7 +626,7 @@ Procedura generale:
 
    - **Azione**: `Start a program`
    - **Programma/script**: `Powershell.exe`
-   - **Aggiungere argomenti (facoltativo)**: `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
+   - **Aggiungere argomenti (facoltativo)** : `-NoProfile -WindowStyle Hidden -command "&{C:\Scripts\Aipauthentication.ps1}"` 
 
      Per la riga dell'argomento specificare il percorso e il nome file, se sono diversi da quelli indicati nell'esempio.
 
@@ -639,7 +641,7 @@ Procedura generale:
     Facoltativamente, eliminare l'attività. Se il token scade, è necessario ripetere questa procedura; in questo caso, potrebbe essere più opportuno uscire dall'attività configurata in modo che sia pronta per una nuova esecuzione quando si copia il nuovo script di PowerShell con il nuovo valore del token.
 
 ## <a name="next-steps"></a>Passaggi successivi
-Per le informazioni della Guida sui cmdlet, all'interno di una sessione di PowerShell digitare `Get-Help <cmdlet name> cmdlet`. Per ottenere le informazioni più aggiornate, usare il parametro -online. Ad esempio:  
+Per le informazioni della Guida sui cmdlet, all'interno di una sessione di PowerShell digitare `Get-Help <cmdlet name> cmdlet`. Per ottenere le informazioni più aggiornate, usare il parametro -online. Ad esempio: 
 
     Get-Help Get-RMSTemplate -online
 

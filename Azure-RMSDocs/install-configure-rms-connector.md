@@ -4,19 +4,19 @@ description: Informazioni sull'installazione e la configurazione del connettore 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b89bab8cd4ae7aecb8484f729001038b922360c8
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: b92dfe6128a8ba361ebf4d0a047bdee2a124df46
+ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182042"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67156498"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installazione e configurazione del connettore di Azure Rights Management
 
@@ -29,8 +29,7 @@ Prima di iniziare, assicurarsi di aver esaminato e controllato i [prerequisiti](
 
 ## <a name="installing-the-rms-connector"></a>Installazione del connettore RMS
 
-1.  Identificare i computer (almeno due) che eseguiranno
-2.  il connettore RMS. È necessario che tali computer siano conformi alle specifiche minime elencate nei prerequisiti.
+1.  Identificare i computer (almeno due) per l'esecuzione del connettore RMS. Questi computer devono soddisfare le specifiche minime elencate nei prerequisiti.
 
     > [!NOTE]
     > Installare un singolo connettore RMS (costituito da più server per la disponibilità elevata) per ogni tenant (tenant di Office 365 o di Azure AD). A differenza di Active Directory RMS, non è necessario installare un connettore RMS in ogni foresta.
@@ -95,7 +94,7 @@ Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-s
   >    ```
   >    Add-AadrmRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
   >    ```
-  >    Ad esempio, digitare: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
+  >    Ad esempio, digitare il comando seguente: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
   > 
   >    Anche se questi comandi assegnano il ruolo di amministratore di connettore, è possibile usare anche il ruolo GlobalAdministrator.
 
@@ -168,9 +167,9 @@ Una volta completata l'aggiunta dei server all'elenco, fare clic su **Chiudi**.
 Se non si è ancora provveduto, è ora necessario configurare il bilanciamento del carico per i server in cui è installato il connettore RMS. È inoltre opportuno valutare la possibilità di usare HTTPS per le connessioni tra questi server e i server appena autorizzati.
 
 ## <a name="configuring-load-balancing-and-high-availability"></a>Configurazione del bilanciamento del carico per elevati livelli di disponibilità
-Dopo aver installato la seconda o l'ultima istanza del connettore RMS, definire il nome server dell'URL del connettore e configurare un sistema di bilanciamento del carico.
+Dopo aver installato il secondo o l'ultima istanza del connettore RMS, definire un nome server URL del connettore e configurare un sistema di bilanciamento del carico.
 
-Il nome server dell'URL del connettore può essere qualsiasi nome incluso in uno spazio dei nomi controllato. È possibile, ad esempio, creare una voce nel sistema DNS per **rmsconnector.contoso.com** e configurarla per l'uso di un indirizzo IP nel sistema di bilanciamento del carico. Il nome non presenta requisiti speciali e non deve essere configurato sui server del connettore. Non è necessario che il nome sia risolvibile in Internet, a meno che i server di Exchange e SharePoint non comunichino con il connettore attraverso Internet.
+Il nome server dell'URL del connettore può essere qualsiasi nome incluso in uno spazio dei nomi controllato. Ad esempio, è possibile creare una voce nel sistema DNS per **rmsconnector.contoso.com** e configurarla per usare un indirizzo IP nel sistema di bilanciamento del carico. Il nome non presenta requisiti speciali e non deve essere configurato sui server del connettore. Non è necessario che il nome sia risolvibile in Internet, a meno che i server di Exchange e SharePoint non comunichino con il connettore attraverso Internet.
 
 > [!IMPORTANT]
 > Si consiglia di non modificare il nome dopo aver configurato i server di Exchange o SharePoint per l'uso del connettore. Se si modificasse il nome, sarebbe infatti necessario eliminare tali server da tutte le configurazioni IRM e configurarli nuovamente.

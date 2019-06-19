@@ -4,19 +4,19 @@ description: Identificare i prodotti server locali che possono usare il servizio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e7d91f2d-d6a7-4c7e-821f-c94e4be9967d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e298fc08c610e5587aa6b8e4007f64aae2b0da42
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 8e160908ac568b0657cc92b838959eb95da624b3
+ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181481"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67156658"
 ---
 # <a name="on-premises-servers-that-support-azure-rights-management-data-protection"></a>Server locali che supportano la protezione dati di Azure Rights Management
 
@@ -42,11 +42,11 @@ Per usare questo connettore, è necessario configurare la sincronizzazione delle
 
     -   Office SharePoint Server 2010
 
--   **File server che eseguono Windows Server e usano la funzionalità Infrastruttura di classificazione file (FCI, File Classification Infrastructure)**:
+-   **File server che eseguono Windows Server e usano la funzionalità Infrastruttura di classificazione file (FCI, File Classification Infrastructure)** :
 
     -   Windows Server 2016
 
-    -   R2 per Windows Server 2012
+    -   Windows Server 2012 R2
 
     -   Windows Server 2012
 

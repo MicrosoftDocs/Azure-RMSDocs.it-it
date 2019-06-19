@@ -4,25 +4,25 @@ description: Informazioni su come le applicazioni di Office, come Word e Outlook
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/13/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 388e67cd-c16f-4fa0-a7bb-ffe0def2be81
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 71f5afc3f65713f62607717d5459080aa11bedf2
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 655116fa6749221ee6f454c2b8673635937f34db
+ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184162"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67156733"
 ---
 # <a name="how-office-applications-and-services-support-azure-rights-management"></a>Informazioni su come le applicazioni e i servizi di Office supportano Azure Rights Management 
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Le applicazioni di Office e i servizi Office possono usare il servizio Azure Rights Management di Azure Information Protection per proteggere i dati dell'organizzazione. Le applicazioni di Office sono Word, Excel, PowerPoint e Outlook. I servizi di Office sono Exchange e SharePoint. Le configurazioni di Office che supportano il servizio Azure Rights Management spesso usano il termine **Information Rights Management (IRM)**.
+Le applicazioni di Office e i servizi Office possono usare il servizio Azure Rights Management di Azure Information Protection per proteggere i dati dell'organizzazione. Le applicazioni di Office sono Word, Excel, PowerPoint e Outlook. I servizi di Office sono Exchange e SharePoint. Le configurazioni di Office che supportano il servizio Azure Rights Management spesso usano il termine **Information Rights Management (IRM)** .
 
 ## <a name="office-applications-word-excel-powerpoint-outlook"></a>Applicazioni di Office: Word, Excel, PowerPoint, Outlook
 Queste applicazioni supportano Azure Rights Management a livello nativo e consentono agli utenti di applicare la protezione a un documento salvato oppure a un messaggio e-mail da inviare. Gli utenti possono applicare alcuni [modelli](configure-policy-templates.md) di protezione. In alternativa, per Word, Excel e PowerPoint, possono scegliere impostazioni personalizzate per limitare l'accesso, i diritti e l'utilizzo.

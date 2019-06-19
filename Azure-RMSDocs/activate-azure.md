@@ -4,7 +4,7 @@ description: Istruzioni per l'attivazione della protezione nel portale di Azure,
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/12/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.custom: askipteam
 ms.assetid: 4e886f5a-f535-4207-b8c4-8e0376c0758e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 3f03c055760e6d9e677db40250a6f32d6a112d72
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: ce90491200e51be7d270f5f0ef1d81b33dae63e7
+ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175195"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67156369"
 ---
 # <a name="how-to-activate-azure-rights-management-from-the-azure-portal"></a>Attivare Azure Rights Management dal portale di Azure
 

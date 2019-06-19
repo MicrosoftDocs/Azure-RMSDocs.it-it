@@ -4,19 +4,19 @@ description: Informazioni su RMS per utenti singoli, una sottoscrizione self-ser
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/02/2018
+ms.date: 06/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 947461f31c6c9d8ef8a97d07c78370153169af03
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 5f95406f7f6851b6a0082c19c186fda5bc4532fd
+ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182409"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67156683"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS per utenti singoli e Azure Information Protection
 
@@ -50,7 +50,7 @@ Dopo aver creato l'account, viene visualizzata la pagina finale con collegamenti
 
 5. Quando si riceve il messaggio di posta elettronica, fare clic su **Sì, sono io** per confermare l'indirizzo di posta elettronica e completare il processo di iscrizione.
 
-6. A questo punto viene aperta la pagina **One last thing ...(Un'ultima operazione)** dove specificare i dettagli per l'account. Digitare il nome, il cognome, specificare e confermare una password a scelta e quindi fare clic su **Start (Avvia)**.
+6. A questo punto viene aperta la pagina **One last thing ...(Un'ultima operazione)** dove specificare i dettagli per l'account. Digitare il nome, il cognome, specificare e confermare una password a scelta e quindi fare clic su **Start (Avvia)** .
 
 7. Dopo aver creato l'account, verrà visualizzata una nuova pagina di Microsoft Azure Information Protection in cui è possibile scaricare e installare il client di Azure Information Protection oppure fare clic sul collegamento alla [Guida per l'utente](./rms-client/client-user-guide.md) per le procedure per i computer Windows.
 
@@ -61,5 +61,5 @@ A questo punto l'account viene creato. Se viene richiesto di accedere per legger
 
 
 ## <a name="next-steps"></a>Passaggi successivi
-RMS per utenti singoli è un esempio di uso di iscrizione self-service supportato da Azure Active Directory. Per altre informazioni, vedere [Informazioni sull'iscrizione self-service per Azure Active Directory](/azure/active-directory/users-groups-roles/directory-self-service-signup) nella documentazione di Azure Active Directory.
+RMS per utenti singoli è un esempio di utilizzo della funzionalità di iscrizione self-service supportato da Azure Active Directory. Per altre informazioni sul funzionamento di questa funzionalità, vedere [cos'è Self-Service Signup per Azure Active Directory?](/azure/active-directory/users-groups-roles/directory-self-service-signup) nella documentazione di Azure Active Directory.
 
