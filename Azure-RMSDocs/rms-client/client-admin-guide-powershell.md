@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.suite: ems
-ms.openlocfilehash: 7cffbff5a5d6942c7ed722e64ead4a68e5ae959f
-ms.sourcegitcommit: 9b7b2e3a0f7b5717b349af2c883ebdeebfbd53e2
+ms.openlocfilehash: 1280a909ec74bf831af5e856274bc6f53a03a5e9
+ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67161268"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67236959"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
 
@@ -524,7 +524,7 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
 
 12. Nella **AIPOnBehalfOf - espongono un'API** blade, selezionare **+ Aggiungi un ambito**.
 
-13. Nel **aggiungere un ambito** blade, specificare le informazioni seguenti e quindi selezionare **Aggiungi ambito**:
+13. Nel **aggiungere un ambito** blade, specificare quanto segue, usando le stringhe suggerite come esempi e quindi selezionare **Aggiungi ambito**:
     - **Nome dell'ambito**: `user-impersonation`
     - **Che può fornire il consenso?** : **Gli amministratori e utenti**
     - **Nome visualizzato di consenso dell'amministratore**: `Access Azure Information Protection scanner`
@@ -560,7 +560,7 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
 
 23. Nel **selezionare un'API** , selezionare **APIOnBehalfOf**, quindi selezionare la casella di controllo **-rappresentazione dell'utente**, come l'autorizzazione. Selezionare **aggiungere autorizzazioni**. 
 
-24. Riaccenderle il **autorizzazioni delle API** pannello nella **concedere il consenso** sezione, selezionare **concedere il consenso dell'amministratore per \<il nome del tenant >** e selezionare **Sì** per la richiesta di conferma.
+24. Riaccenderle il **autorizzazioni delle API** pannello nella **concedere il consenso** sezione, selezionare **concedere il consenso dell'amministratore per \< *il nome del tenant* >**  e selezionare **Sì** per la richiesta di conferma.
 
 La configurazione delle due app è stata completata e i valori necessari per eseguire [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con i parametri *WebAppId*, *WebAppKey* e *NativeAppId* sono disponibili. Da questi esempi:
 

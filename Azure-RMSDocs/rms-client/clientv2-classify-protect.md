@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 1b05cf8f5194c8491a2aa7bb687622e821e770cb
-ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
+ms.openlocfilehash: 0ea7ce8fc589b6546210e3cc6ee31b12c83d56de
+ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64880133"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67236943"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Manuale dell'utente: Classificare e proteggere con il client di assegnazione di etichette unificato di Azure Information Protection
 
@@ -44,7 +44,7 @@ In alternativa, se gli utenti esterni [gli account di business-to-business (B2B)
 
 ## <a name="using-office-apps-to-classify-and-protect-your-documents-and-emails"></a>Uso delle app di Office per classificare e proteggere documenti e messaggi di posta elettronica
 
-Dal **Home** scheda, seleziona la **sensibilità** nella barra multifunzione e quindi selezionare una delle etichette che è stato configurato per l'utente. Ad esempio: 
+Dal **Home** scheda, seleziona la **sensibilità** nella barra multifunzione e quindi selezionare una delle etichette che è stato configurato per l'utente. Ad esempio:
 
 ![Esempio di pulsante di sensibilità](../media/sensitivity-not-set-callout.png)
 
@@ -52,7 +52,9 @@ Oppure, se si è scelto **Mostra barra** dal **sensibilità** pulsante, è possi
 
 ![Esempio della barra di Azure Information Protection](../media/info-protect-barv2-not-set-callout.png)
 
-Per impostare un'etichetta, ad esempio "**Confidential** \ **tutti i dipendenti**", selezionare **Confidential** e quindi **tutti i dipendenti**. Se non si è certi dell'etichetta da applicare al documento o al messaggio di posta elettronica corrente, usare le descrizioni comando delle etichette per altre informazioni su ogni etichetta e su quando applicarla. Se al documento è già applicata un'etichetta e si desidera modificarla, è possibile selezionare un'etichetta diversa. Se è stato visualizzato la barra Azure Information Protection e le etichette non vengono visualizzate sulla barra per poter selezionare, fare clic il **modifica l'etichetta** sull'icona accanto al valore di etichetta corrente.
+Per impostare un'etichetta, ad esempio "**Confidential** \ **tutti i dipendenti**", selezionare **Confidential** e quindi **tutti i dipendenti**. Se non si è certi dell'etichetta da applicare al documento o al messaggio di posta elettronica corrente, usare le descrizioni comando delle etichette per altre informazioni su ogni etichetta e su quando applicarla.
+
+Se al documento è già applicata un'etichetta e si desidera modificarla, è possibile selezionare un'etichetta diversa. Se è stato visualizzato la barra Azure Information Protection e le etichette non vengono visualizzate sulla barra per poter selezionare, fare clic il **modifica l'etichetta** sull'icona accanto al valore di etichetta corrente.
 
 Oltre a selezionare manualmente le etichette, è anche possibile applicarle nei modi seguenti:
 
@@ -106,13 +108,13 @@ La guida dell'amministratore contiene un elenco completo dei tipi di file suppor
 
 ### <a name="to-classify-and-protect-a-file-by-using-file-explorer"></a>Per classificare e proteggere un file mediante Esplora file
 
-1. In Esplora File selezionare un file, più file o una cartella. Fare clic con il pulsante destro del mouse e scegliere **Classifica e proteggi**. Ad esempio: 
+1. In Esplora File selezionare un file, più file o una cartella. Fare clic con il pulsante destro del mouse e scegliere **Classifica e proteggi**. Ad esempio:
     
     ![Comando Classifica e proteggi nel menu di scelta rapida in Esplora file con Azure Information Protection](../media/right-click-classify-protect-folder.png)
 
 2. Nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** usare le etichette in modo analogo a un'applicazione di Office, che consente di impostare la classificazione e la protezione come definito dall'amministratore. 
 
-   - Se nessuna delle etichette può essere selezionata (sono visualizzate in grigio): il file selezionato non supporta la classificazione, ma è possibile proteggerlo con le autorizzazioni personalizzate (passaggio 3). Ad esempio: 
+   - Se nessuna delle etichette può essere selezionata (sono visualizzate in grigio): il file selezionato non supporta la classificazione, ma è possibile proteggerlo con le autorizzazioni personalizzate (passaggio 3). Ad esempio:
 
      ![Nessuna etichetta disponibile nella finestra di dialogo Classifica e proteggi - Azure Information Protection**](../media/v2info-protect-dialog-labels-dimmed.png)
 

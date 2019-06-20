@@ -4,19 +4,19 @@ description: Di seguito sono riportate alcune possibili domande sulle funzionali
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: d39b73a93f6abd434034acc9dca1858c7f57dde4
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: c06417aa89bdc81c34232c24921d1c64d1be8904
+ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182654"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67236839"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Domande frequenti sulla classificazione e l'assegnazione di etichette in Azure Information Protection
 
@@ -47,7 +47,7 @@ Per richiedere nuove funzionalità e votare per le richieste, visitare il [sito 
 
 Attualmente, esistono due client per Windows: 
 
-- Il **client per l'etichettatura unificata Azure Information Protection** che scarica le etichette e le impostazioni dei criteri dal Centro sicurezza e conformità di Office 365. Questo client ora è in genere la disponibilità.
+- Il **unificata di Azure Information Protection client l'assegnazione di etichette** che scarica le etichette e le impostazioni dei criteri da una delle aree di amministrazione seguenti: Office 365 Centro sicurezza e conformità, il Centro sicurezza di Microsoft 365, centro conformità di Microsoft 365. Questo client è ora in generale la disponibilità e ha una versione di anteprima per poter testare le funzionalità aggiuntive per una versione futura.
 
 - Il **client Azure Information Protection** che scarica le etichette e le impostazioni dei criteri dal portale di Azure. Questo client si basa sulle versioni precedenti di disponibilità generale del client.
 

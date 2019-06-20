@@ -4,18 +4,18 @@ description: Eseguire la migrazione di etichette di Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/08/2019
+ms.date: 06/20/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 56d23160e685325cc18a2c14b52cf23f950df7a0
-ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
+ms.openlocfilehash: 01ae91cb5700b35faecd1dc64d8ea83229574fac
+ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2019
-ms.locfileid: "66815530"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67236931"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Come eseguire la migrazione di etichette di Azure Information Protection a etichette di riservatezza di Office 365
 
@@ -91,9 +91,9 @@ I client Azure Information Protection possono usare tutte le impostazioni delle 
 |Configurazione dell'etichetta|Supportata dai client di etichettatura unificata| Linee guida per i centri di amministrazione|
 |-------------------|---------------------------------------------|-------------------------|
 |Stato abilitato o disabilitato<br /><br />Note: non sincronizzata nei centri di amministrazione |Non applicabile|Equivale a se l'etichetta è pubblicata o no. |
-|Colore dell'etichetta selezionato dall'elenco o specificato con il codice RGB |Yes|Nessuna opzione di configurazione per i colori dell'etichetta. In alternativa è possibile configurare i colori dell'etichetta nel portale di Azure.|
+|Colore dell'etichetta selezionato dall'elenco o specificato con il codice RGB |Yes|Nessuna opzione di configurazione per i colori dell'etichetta. In alternativa, è possibile configurare i colori di etichetta nel portale di Azure oppure usare [PowerShell](./rms-client/clientv2-admin-guide-customizations.md#specify-a-color-for-the-label).|
 |Protezione basata sul cloud o protezione basata su HYOK usando un modello predefinito |No|Nessuna opzione di configurazione per i modelli predefiniti. Non è consigliabile pubblicare un'etichetta con questa configurazione.|
-|Protezione basata sul cloud che usa autorizzazioni definite dall'utente in Word, Excel e PowerPoint |No|Nessuna opzione di configurazione per le autorizzazioni definite dall'utente per queste app di Office. Non è consigliabile pubblicare un'etichetta con questa configurazione. In caso contrario i risultati ottenuti applicando l'etichetta sono elencati nella [tabella seguente](#comparing-the-behavior-of-protection-settings-for-a-label).|
+|Protezione basata sul cloud che usa autorizzazioni definite dall'utente in Word, Excel e PowerPoint |No|Le interfacce di amministrazione non sono un'opzione di configurazione per le autorizzazioni definite dall'utente per queste app di Office. A meno che non si usa la versione di anteprima del client di assegnazione di etichette unificata, è consigliabile non che si pubblica un'etichetta con questa configurazione. In caso contrario i risultati ottenuti applicando l'etichetta sono elencati nella [tabella seguente](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Protezione basata su HYOK che usa autorizzazioni definite dall'utente per Outlook (Non inoltrare) |No|Nessuna opzione di configurazione per HYOK. Non è consigliabile pubblicare un'etichetta con questa configurazione. In caso contrario i risultati ottenuti applicando l'etichetta sono elencati nella [tabella seguente](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Rimuovere la protezione |No|Nessuna opzione di configurazione per rimuovere la protezione. Non è consigliabile pubblicare un'etichetta con questa configurazione.<br /><br /> Se si pubblica questa etichetta, quando viene applicato, sarà possibile rimuovere la protezione se applicata in precedenza da un'etichetta. La protezione verrà mantenuta se in precedenza era stata applicata in modo indipendente da un'etichetta.|
 |Tipi di carattere personalizzato e colore del tipo di carattere personalizzato tramite RGB per i contrassegni visivi (intestazione, piè di pagina, filigrana)|Yes|La configurazione per i contrassegni visivi è limitata a un elenco di colori e dimensioni dei caratteri. È possibile pubblicare questa etichetta senza modifiche benché non sia possibile visualizzare i valori configurati nei centri di amministrazione. <br /><br />Per modificare queste opzioni è possibile usare il portale di Azure. Per semplificare l'amministrazione, tuttavia, provare a cambiare il colore impostando una delle opzioni elencate nei centri di amministrazione.|
@@ -113,7 +113,7 @@ Le impostazioni di protezione con lo stesso comportamento non sono elencate nell
 
 |Impostazione di protezione per un'etichetta |Client Azure Information Protection|Client per l'etichettatura unificata di Azure Information Protection| App di Office con etichettatura incorporata
 |-------------------|-----------------------------------|-----------------------------------------------------------|---------------
-|Azure (chiave cloud) con autorizzazioni definite dall'utente per Word, Excel, PowerPoint ed Esplora file:| Visibile in Word, Excel, PowerPoint ed Esplora file <br /><br /> Quando viene applicata l'etichetta:<br /><br /> - Agli utenti vengono richieste le autorizzazioni personalizzate che vengono quindi applicate come protezione tramite una chiave basata su cloud| Non visibile |Visibile in Word, Excel, PowerPoint e Outlook: <br /><br /> Quando viene applicata l'etichetta:<br /><br /> - Agli utenti non vengono richieste le autorizzazioni personalizzate e non viene applicata alcuna protezione <br /><br /> - La protezione viene mantenuta se in precedenza era stata applicata in modo indipendente da un'etichetta [[1]](#footnote-1)|
+|Azure (chiave cloud) con autorizzazioni definite dall'utente per Word, Excel, PowerPoint ed Esplora file:| Visibile in Word, Excel, PowerPoint ed Esplora file <br /><br /> Quando viene applicata l'etichetta:<br /><br /> - Agli utenti vengono richieste le autorizzazioni personalizzate che vengono quindi applicate come protezione tramite una chiave basata su cloud| Per la versione con disponibilità generale: Non visibile <br /><br />  Per la versione di anteprima: Visibile in Word, Excel, PowerPoint ed Esplora file <br /><br /> Quando viene applicata l'etichetta:<br /><br /> - Agli utenti vengono richieste le autorizzazioni personalizzate che vengono quindi applicate come protezione tramite una chiave basata su cloud|Visibile in Word, Excel, PowerPoint e Outlook: <br /><br /> Quando viene applicata l'etichetta:<br /><br /> - Agli utenti non vengono richieste le autorizzazioni personalizzate e non viene applicata alcuna protezione <br /><br /> - La protezione viene mantenuta se in precedenza era stata applicata in modo indipendente da un'etichetta [[1]](#footnote-1)|
 |HYOK (AD RMS) con un modello:| Visibile in Word, Excel, PowerPoint, Outlook ed Esplora file<br /><br /> Quando viene applicata questa etichetta: <br /><br />- La protezione HYOK viene applicata a documenti e messaggi di posta elettronica | Visibile in Word, Excel, PowerPoint, Outlook ed Esplora file  <br /><br /> Quando viene applicata questa etichetta: <br /><br />- Non viene applicata alcuna protezione e la protezione viene rimossa [[2]](#footnote-2) se in precedenza era stata applicata da un'etichetta <br /><br />- La protezione viene mantenuta se in precedenza era stata applicata in modo indipendente da un'etichetta |Visibile in Word, Excel, PowerPoint e Outlook <br /><br /> Quando viene applicata questa etichetta: <br /><br />- Non viene applicata alcuna protezione e la protezione viene rimossa [[2]](#footnote-2) se in precedenza era stata applicata da un'etichetta <br /><br />- La protezione viene mantenuta se in precedenza era stata applicata in modo indipendente da un'etichetta [[1]](#footnote-1) |
 |HYOK (AD RMS) con autorizzazioni definite dall'utente per Word, Excel, PowerPoint ed Esplora file:| Visibile in Word, Excel, PowerPoint ed Esplora file<br /><br /> Quando viene applicata questa etichetta:<br /><br /> - La protezione HYOK viene applicata a documenti e messaggi di posta elettronica| Visibile in Word, Excel e PowerPoint <br /><br /> Quando viene applicata questa etichetta: <br /><br />- La protezione non viene applicata e viene rimossa [[2]](#footnote-2) se in precedenza era stata applicata da un'etichetta <br /><br />- La protezione viene mantenuta se in precedenza era stata applicata in modo indipendente da un'etichetta|Visibile in Word, Excel e PowerPoint <br /><br /> Quando viene applicata questa etichetta: <br /><br />- La protezione non viene applicata e viene rimossa [[2]](#footnote-2) se in precedenza era stata applicata da un'etichetta <br /><br />- La protezione viene mantenuta se in precedenza era stata applicata in modo indipendente da un'etichetta |
 |HYOK (AD RMS) con autorizzazioni definite dall'utente per Outlook:|Visibile in Outlook<br /><br />Quando viene applicata questa etichetta:<br /><br />- Ai messaggi di posta elettronica viene applicato Non inoltrare con la protezione HYOK|Visibile in Outlook<br /><br />Quando viene applicata questa etichetta:<br /><br /> - La protezione non viene applicata e viene rimossa [[2]](#footnote-2) se in precedenza era stata applicata da un'etichetta <br /><br />- La protezione viene mantenuta se in precedenza era stata applicata in modo indipendente da un'etichetta|Visibile in Outlook<br /><br />Quando viene applicata questa etichetta:<br /><br />- La protezione non viene applicata e viene rimossa [[2]](#footnote-2) se in precedenza era stata applicata da un'etichetta <br /><br />- La protezione viene mantenuta se in precedenza era stata applicata in modo indipendente da un'etichetta [[1]](#footnote-1)|
@@ -157,6 +157,28 @@ Le etichette di cui è stata eseguita correttamente la migrazione possono ora es
 
 > [!IMPORTANT]
 > Se si modificano le etichette all'esterno del portale di Azure, per i client di Azure Information Protection, tornare a questo pannello **Azure Information Protection - Etichettatura unificata** e selezionare **Pubblica**.
+
+
+#### <a name="copy-your-policies-and-policy-settings"></a>Copiare i criteri e impostazioni dei criteri
+
+> [!NOTE]
+> Questa opzione è un'implementazione graduale per i tenant in fase di anteprima e soggetta a modifiche. Se non viene visualizzato il **copiare criteri (anteprima)** opzione, riprovare tra qualche settimana.
+
+Dopo la migrazione delle etichette, è possibile selezionare un'opzione per copiare i criteri. Se si seleziona questa opzione, una copia occasionale dei criteri con loro [le impostazioni dei criteri](configure-policy-settings.md) e qualsiasi [impostazioni client avanzate](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) viene inviato all'interfaccia di amministrazione in cui è gestire le etichette: Office 365 Centro sicurezza e conformità, il Centro sicurezza di Microsoft 365, centro conformità di Microsoft 365.
+
+Prima di selezionare il **copiare criteri (anteprima)** opzione, tenere presente quanto segue:
+
+- È possibile scegliere in modo selettivo criteri e impostazioni da copiare. Tutti i criteri (la **Global** criteri ed eventuali criteri con ambito) vengono copiati e tutte le impostazioni che sono supportate in quanto vengono copiate le impostazioni dei criteri dell'etichetta. Se si dispone già di un criterio di etichetta con lo stesso nome, verrà sovrascritto con le impostazioni dei criteri nel portale di Azure.
+
+- Alcune impostazioni del client avanzato non vengono copiate perché per Azure Information Protection unified client l'assegnazione di etichette, sono supportati come *etichetta impostazioni avanzata* anziché le impostazioni dei criteri. È possibile configurare queste impostazioni di etichetta avanzata con [Office 365 Security & Compliance Center PowerShell](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell). Le impostazioni del client avanzato che non vengono copiate includono:
+    - [LabelbyCustomProperty](./rms-client/client-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
+    - [LabelToSMIME](./rms-client/client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
+
+- Per supportare le proprietà del client avanzato che vengono copiate, è necessario usare la versione di anteprima del client Azure Information Protection.
+
+- A differenza di migrazione di etichetta in cui vengono sincronizzate le successive modifiche alle etichette, l'azione di criteri di copia non sincronizza eventuali modifiche successive per i criteri o impostazioni dei criteri. È possibile ripetere l'azione di copia dei criteri dopo aver apportato le modifiche nel portale di Azure e tutti i criteri esistenti e le relative impostazioni verranno sovrascritto nuovamente. In alternativa, usare il cmdlet Set-LabelPolicy o Set-etichetta con il *AdvancedSettings* parametro da Office 365 Security & Compliance Center PowerShell.
+
+Per altre informazioni sulla configurazione delle impostazioni dei criteri, avanzate, le impostazioni client e le impostazioni dell'etichetta per Azure Information Protection unified imprevisto delle etichette client, vedere [configurazioni personalizzate per Azure Information Protection unified l'assegnazione di etichette client](./rms-client/clientv2-admin-guide-customizations.md) nella Guida dell'amministratore.
 
 ### <a name="clients-and-services-that-support-unified-labeling"></a>Client e servizi che supportano l'etichettatura unificata
 

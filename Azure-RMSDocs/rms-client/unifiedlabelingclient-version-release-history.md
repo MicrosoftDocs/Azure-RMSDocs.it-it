@@ -4,18 +4,18 @@ description: Vedere le informazioni sulla versione del client per l'etichettatur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/05/2019
+ms.date: 06/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 1eabf0f8ac9a1374536c10e651617f676996cdb4
-ms.sourcegitcommit: 746bb029d185ac13f36482bb9a39200ab5445dbe
+ms.openlocfilehash: ea360e880e4b6bf0dc4c2f362a82ffa6d21a6c3b
+ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66507120"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67236811"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection unified client - versione l'assegnazione di etichette cronologia delle versioni e criteri di supporto
 
@@ -46,6 +46,53 @@ Usare le informazioni seguenti per vedere cosa è supportato per la versione con
 Il client installa un componente aggiuntivo di Office per i computer Windows, un'estensione per Esplora File e un modulo di PowerShell. Questo client ha gli stessi [prerequisiti](../requirements.md) del client Azure Information Protection che scarica i criteri da Azure.
 
 Per confrontare caratteristiche e funzionalità con il client Azure Information Protection, vedere [confrontare i client](use-client.md#compare-the-clients).
+
+## <a name="versions-later-than-207790"></a>Versioni successive alla 2.0.779.0
+
+**Data di rilascio**: 06/20/2019
+
+Se si dispone di una versione 2 del client successiva a quella 2.0.779.0, è una build di anteprima per scopi di test e valutazione. 
+
+**Nuove funzionalità:**
+
+- Supporto per [impostazioni avanzate](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) configurato con PowerShell per il Centro sicurezza e conformità.
+    
+    Queste impostazioni avanzate supportano le seguenti personalizzazioni:
+     - [Visualizza la barra di Information Protection nelle app Office](clientv2-admin-guide-customizations.md#display-the-information-protection-bar-in-office-apps)
+    - [Abilitare la classificazione consigliata in Outlook](clientv2-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
+    - [Impostare un'etichetta predefinita diversa per Outlook](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook)
+    - [Rimuovere "Non ora" per i documenti quando si usa l'etichettatura obbligatoria](clientv2-admin-guide-customizations.md#remove-not-now-for-documents-when-you-use-mandatory-labeling)
+    - [Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette](clientv2-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions)
+    - [Impostare un'etichetta predefinita diversa per Outlook](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook)
+    - [Disabilitare le autorizzazioni personalizzate in Esplora File](clientv2-admin-guide-customizations.md#disable-custom-permissions-in-file-explorer)
+    - [Per i file protetti con autorizzazioni personalizzate, rendere sempre le autorizzazioni personalizzate visualizzabili dagli utenti in Esplora file](clientv2-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
+    - [Per i messaggi di posta elettronica con allegati, applica un'etichetta corrispondente alla classificazione più elevata di questi allegati](clientv2-admin-guide-customizations.md#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
+    - [Aggiungere "Segnala un problema" per gli utenti](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users)
+    - [Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+    - [Abilitare gli strumenti di analisi di Azure Information Protection per individuare informazioni riservate nei documenti](clientv2-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)
+    - [Disabilitare l'invio delle corrispondenze per i tipi di informazioni per un subset di utenti](clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
+    - [Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](clientv2-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
+    - [Applicare una proprietà personalizzata quando viene applicata un'etichetta](clientv2-admin-guide-customizations.md#apply-a-custom-property-when-a-label-is-applied)
+    - [Configurare un'etichetta per applicare la protezione S/MIME in Outlook](clientv2-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
+    - [Specificare un'etichetta secondaria predefinito per un'etichetta padre](clientv2-admin-guide-customizations.md#specify-a-default-sublabel-for-a-parent-label)
+    - [Specificare un colore per l'etichetta](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
+
+- Supporto per le etichette configurate per le autorizzazioni definite dall'utente per Word, Excel, PowerPoint e File Explorer:
+    - Se sono presenti etichette con questa configurazione dal portale di Azure, sono ora supportati dal client di assegnazione di etichette unificato anche se non è attualmente disponibile nessuna configurazione equivalente nelle interfacce di amministrazione.
+    - Quando un utente seleziona un'etichetta con questa configurazione, viene chiesto selezionare utenti e le impostazioni di protezione per il documento.
+
+- Modifiche di PowerShell del modulo AzureInformationProtection:
+    - Nuovo cmdlet: [New-AIPCustomPermissions](/powershell/module/azureinformationprotection/New-AIPCustomPermissions) -sostituisce New-RMSProtectionLicense per creare un criterio ad hoc per le autorizzazioni personalizzate
+    - Nuovi parametri:
+        -  *CustomPermissions* e *RemoveProtection* - aggiunta a [Set-AIPFileLabel](/powershell/module/azureinformationprotection/Set-AIPFileLabel)
+        -  *OnBeHalfOf* - aggiunto alla [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), per essere usato al posto del *Token* parametro per le sessioni non interattive
+        -  *WhatIf* e *DiscoveryInfoTypes* - aggiunto alla [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), in modo che questo cmdlet è possibile eseguire in modalità di individuazione senza applicare le etichette
+    - Cmdlet deprecati: Clear-RMSAuthentication, Get-RMSFileStatus, Get-RMSServer, Get-RMSServerAuthentication, Get-RMSTemplate, Protect-RMSFile, Set-RMSServerAuthentication, Unprotect-RMSFile
+
+
+**Correzioni:**
+
+- Quando viene configurato l'assegnazione automatica di etichette, l'etichetta applica la prima volta un documento viene salvato.
 
 ## <a name="version-207790"></a>Versione 2.0.779.0
 
