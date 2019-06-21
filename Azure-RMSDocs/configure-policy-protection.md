@@ -4,17 +4,17 @@ description: È possibile proteggere i documenti e i messaggi di posta elettroni
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 06/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: fb689468efe091caecd3bfac076bdf85ca6aef58
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.openlocfilehash: e7fcdacf0e3b75ee3f7626248652a124faf60bbf
+ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934723"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67305596"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
@@ -87,7 +87,7 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
     
     ![Configurare la protezione per un'etichetta di Azure Information Protection](./media/info-protect-protection-bar-configured.png)
 
-5. Nel pannello **Protezione** selezionare **Azure (cloud key)** (Azure - Chiave cloud) oppure **HYOK (AD RMS)**.
+5. Nel pannello **Protezione** selezionare **Azure (cloud key)** (Azure - Chiave cloud) oppure **HYOK (AD RMS)** .
     
     Nella maggior parte dei casi è necessario selezionare **Azure (cloud key)** (Azure - Chiave cloud) per le impostazioni delle autorizzazioni. Non selezionare **HYOK (AD RMS)** a meno che non siano stati letti e compresi i prerequisiti e le restrizioni relativi a questa configurazione *HYOK* (Hold Your Own Key). Per altre informazioni, vedere [Requisiti e restrizioni HYOK per la protezione di AD RMS](configure-adrms-restrictions.md). Per continuare la configurazione per HYOK (AD RMS), procedere con il passaggio 9.
     
@@ -95,7 +95,7 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
     
    - **Configura le autorizzazioni**: consente di definire nuove impostazioni di protezione nel portale.
     
-   - **Configura le autorizzazioni definite dall'utente (anteprima)**: per consentire agli utenti di specificare a chi vengono concesse autorizzazioni e quali sono queste autorizzazioni. È quindi possibile completare l'impostazione dell'opzione e scegliere solo Outlook oppure Word, Excel, PowerPoint e File Explorer. Questa opzione non è supportata e non funziona quando viene configurata un'etichetta per la [classificazione automatica](configure-policy-classification.md).
+   - **Configura le autorizzazioni definite dall'utente (anteprima)** : per consentire agli utenti di specificare a chi vengono concesse autorizzazioni e quali sono queste autorizzazioni. È quindi possibile completare l'impostazione dell'opzione e scegliere solo Outlook oppure Word, Excel, PowerPoint e File Explorer. Questa opzione non è supportata e non funziona quando viene configurata un'etichetta per la [classificazione automatica](configure-policy-classification.md).
         
        Se si sceglie l'opzione per Outlook l'etichetta viene visualizzata in Outlook e il comportamento quando gli utenti applicano l'etichetta è uguale a quello generato dall'opzione [Non inoltrare](configure-usage-rights.md#do-not-forward-option-for-emails).
         
@@ -107,7 +107,7 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
     
      se si creano e modificano regolarmente modelli personalizzati, può risultare utile consultare [Attività che precedentemente venivano eseguite con il portale di Azure classico](migrate-portal.md).
 
-7. Se si è selezionato **Impostazione autorizzazioni** per **Azure (chiave cloud)**, questa opzione consente di selezionare utenti e diritti di utilizzo. 
+7. Se si è selezionato **Impostazione autorizzazioni** per **Azure (chiave cloud)** , questa opzione consente di selezionare utenti e diritti di utilizzo. 
     
     Se non si selezionano utenti e si seleziona **OK** in questo pannello, quindi **Salva** nel pannello **Etichetta**: l'etichetta viene configurata per applicare la protezione in modo che solo la persona che applica l'etichetta possa aprire il documento o il messaggio di posta elettronica senza restrizioni. Questa configurazione è anche nota come "Solo per me" e potrebbe essere questo il risultato richiesto, in modo che un utente possa salvare un file in qualsiasi posizione ed essere certo che nessun altro possa aprirlo. Se questo risultato corrisponde al requisito e non è necessario che altri utenti collaborino al contenuto protetto, non selezionare **Aggiungi autorizzazioni**. Dopo aver salvato l'etichetta, all'apertura successiva di questo pannello **Protezione**, viene visualizzato **IPC_USER_ID_OWNER** per **Utenti** e **Comproprietario** per **Autorizzazioni** in base a questa configurazione.
     
@@ -160,7 +160,7 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
         
         Si noti che vengono visualizzati sempre tutti i modelli pubblicati, anche se si sta configurando un criterio con ambito. Si supponga ad esempio di configurare un criterio con ambito per il gruppo Marketing. I modelli che è possibile selezionare non sono solo quelli appartenenti all'ambito del gruppo Marketing ed è possibile selezionare un modello di reparto che non può essere usato dagli utenti selezionati. Per semplificare la configurazione e per ridurre al minimo la risoluzione dei problemi, provare a ridenominare il modello di reparto in modo da corrispondere all'etichetta nel criterio con ambito. 
 
-9. Se è stato selezionato **HYOK (AD RMS)**, selezionare **Imposta i dettagli del modello di AD RMS** o **Configura le autorizzazioni definite dall'utente (anteprima)**. Specificare quindi l'URL della licenza per il cluster AD RMS.
+9. Se è stato selezionato **HYOK (AD RMS)** , selezionare **Imposta i dettagli del modello di AD RMS** o **Configura le autorizzazioni definite dall'utente (anteprima)** . Specificare quindi l'URL della licenza per il cluster AD RMS.
     
     Per istruzioni su come specificare un GUID di modello e l'URL della licenza, vedere [Individuazione delle informazioni per specificare la protezione di AD RMS con un'etichetta di Azure Information Protection](configure-adrms-restrictions.md#locating-the-information-to-specify-ad-rms-protection-with-an-azure-information-protection-label).
     
@@ -201,7 +201,7 @@ Gli utenti digitano l'indirizzo di posta elettronica Gmail nella casella **A**. 
 
 1. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (cloud key)** (Azure - Chiave cloud).
     
-2. Selezionare **Configura le autorizzazioni definite dall'utente (anteprima)**.
+2. Selezionare **Configura le autorizzazioni definite dall'utente (anteprima)** .
 
 3. Assicurarsi che sia selezionata l'opzione seguente: **In Outlook applica Non inoltrare**.
 
@@ -235,7 +235,7 @@ Questa etichetta non è adatta per i messaggi di posta elettronica.
 
 I nuovi utenti aggiunti potranno aprire i documenti e i messaggi di posta elettronica già protetti con questa etichetta. Le autorizzazioni concesse a questi utenti possono essere diverse da quelle di cui dispongono gli utenti esistenti.
 
-1. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)**.
+1. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)** .
     
 2. Verificare che sia selezionata l'opzione **Configura le autorizzazioni**, quindi fare clic su **Aggiungi autorizzazioni**.
 
@@ -277,7 +277,7 @@ Quando gli utenti specificano gli indirizzi di posta elettronica nella casella *
     
     Nota: non selezionare **Visualizzatore** per i messaggi di posta elettronica. Se si seleziona **Personalizzate** verificare di includere l'opzione **Modifica e salva**.
     
-    Per selezionare le stesse autorizzazioni corrispondenti alla nuova opzione **Encrypt-Only** (Solo crittografia) di Exchange Online, selezionare **Personalizzate**. Selezionare quindi tutte le autorizzazioni tranne **Salva con nome, Esporta (EXPORT)** e **Controllo completo (OWNER)**.
+    Per selezionare le stesse autorizzazioni corrispondenti alla nuova opzione **Encrypt-Only** (Solo crittografia) di Exchange Online, selezionare **Personalizzate**. Selezionare quindi tutte le autorizzazioni tranne **Salva con nome, Esporta (EXPORT)** e **Controllo completo (OWNER)** .
 
 5. Ripetere i passaggi 3 e 4 per specificare altri utenti con autorizzazioni diverse.
 
@@ -290,7 +290,7 @@ Quando gli utenti specificano gli indirizzi di posta elettronica nella casella *
 
 Questa configurazione offre il vantaggio che non è necessario specificare utenti, gruppi o domini per proteggere un documento o un messaggio di posta elettronica. Il contenuto verrà ugualmente crittografato ed è tuttavia possibile specificare i diritti di utilizzo, una data di scadenza e l'accesso offline. Usare questa configurazione solo quando non è necessario limitare chi può aprire il documento o il messaggio di posta elettronica protetto. [Altre informazioni su questa impostazione](#more-information-about-add-any-authenticated-users)
 
-1. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)**.
+1. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)** .
     
 2. Verificare che sia selezionata l'opzione **Configura le autorizzazioni**, quindi fare clic su **Aggiungi autorizzazioni**.
 
@@ -309,7 +309,7 @@ Questa configurazione offre l'opposto della collaborazione sicura per i document
 
 La configurazione dell'etichetta è apparentemente semplice:
 
-1. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)**.
+1. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)** .
     
 2. Selezionare **OK** senza selezionare gli utenti o configurare le impostazioni di questo pannello.
     

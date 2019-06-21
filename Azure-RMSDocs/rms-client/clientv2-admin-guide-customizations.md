@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 1dbd1589a9e3aaec39b13f553f6ce3af6107ce02
-ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
+ms.openlocfilehash: 41b4d44babb9941820c95a7f842f119c444a4b06
+ms.sourcegitcommit: 478081129d9ea8382ce08fae0bae1a08cab23893
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67236924"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298287"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di assegnazione di etichette unificata di Azure Information Protection
 
@@ -142,7 +142,7 @@ Esempio di comando di PowerShell per controllare le impostazioni dei criteri eti
 
 |Impostazione|Scenario e istruzioni|
 |----------------|---------------|
-|Colore|[Specificare un colore per l'etichetta](##specify-a-color-for-the-label)|
+|Colore|[Specificare un colore per l'etichetta](#specify-a-color-for-the-label)|
 |customPropertyByLabel|[Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |DefaultSubLabelId|[Specificare un'etichetta secondaria predefinito per un'etichetta padre](#specify-a-default-sublabel-for-a-parent-label) 
 |labelByCustomProperties|[Applicare una proprietà personalizzata quando viene applicata un'etichetta](#apply-a-custom-property-when-a-label-is-applied)|

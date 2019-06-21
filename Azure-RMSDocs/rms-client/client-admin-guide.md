@@ -4,19 +4,19 @@ description: Istruzioni e informazioni per gli amministratori in una rete aziend
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 06/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 33a5982f-7125-4031-92c2-05daf760ced1
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 530b7e112f4ee66f9117bf3816ff19ab179b3811
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: d353eac9dd13b90f02a296a40f8aa1b6e3269d52
+ms.sourcegitcommit: 478081129d9ea8382ce08fae0bae1a08cab23893
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768255"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298292"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
@@ -133,15 +133,15 @@ L'opzione **Ripristina le impostazioni** consente di disconnettere l'utente, eli
     
     Per le reti aziendali, queste impostazioni vengono in genere configurate tramite Criteri di gruppo e in questo caso vengono automaticamente riapplicate al momento dell'aggiornamento dei Criteri di gruppo nel computer. Potrebbero essere tuttavia presenti impostazioni configurate una sola volta tramite script o manualmente. In questi casi, è necessario intervenire per riconfigurare queste impostazioni. Ad esempio, è possibile che i computer eseguano un script una sola volta per configurare le impostazioni per il reindirizzamento ad Azure Information Protection, poiché si sta eseguendo la migrazione da AD RMS e nella rete è ancora presente un punto di connessione del servizio. Dopo aver reimpostato il client, il computer deve eseguire nuovamente lo script.
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
-    - HKEY_CURRENT-USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
+    - HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
 
 - L'utente connesso viene disconnesso.
 
@@ -196,9 +196,9 @@ Usare le istruzioni seguenti per aggiornare lo scanner da una versione con dispo
 
 Partire dalla versione 1.48.204.0, il processo di aggiornamento da versioni precedenti automaticamente le modifiche apportate allo scanner Ottiene le impostazioni di configurazione dal portale di Azure. Viene inoltre aggiornato lo schema per il database di configurazione dello scanner e questo database viene anche rinominato da AzInfoProtection:
 
-- Se non si specifica il proprio nome di profilo, il database di configurazione viene rinominato **AIPScanner_\<nome_computer>**. 
+- Se non si specifica il proprio nome di profilo, il database di configurazione viene rinominato **AIPScanner_\<nome_computer>** . 
 
-- Se si specifica il proprio nome di profilo, il database di configurazione viene rinominato **AIPScanner_\<nome_profilo>**.
+- Se si specifica il proprio nome di profilo, il database di configurazione viene rinominato **AIPScanner_\<nome_profilo>** .
 
 Sebbene sia possibile aggiornare lo scanner in un ordine diverso, è consigliabile usare la procedura seguente:
 
