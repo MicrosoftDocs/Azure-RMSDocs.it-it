@@ -4,17 +4,17 @@ description: Alcune domande frequenti su Azure Information Protection e sul rela
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/08/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: fc85cfcdcef82c4b30df7bc88ac054ee0bc172c5
-ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
+ms.openlocfilehash: 1e0933a88afc355dbcbab0dc667e28f49f10c0b9
+ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2019
-ms.locfileid: "66815613"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67305783"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
@@ -46,7 +46,7 @@ Per altre informazioni sulla migrazione delle etichette esistenti, vedere [Come 
 
 ## <a name="whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Qual è la differenza tra il client Azure Information Protection e Azure Information Protection unified client l'assegnazione di etichette?
 
-Il **client Azure Information Protection** è stato reso disponibile poiché Azure Information Protection è stato annunciato come nuovo servizio per la classificazione e protezione dei file e messaggi di posta elettronica. Questo client scarica le etichette e le impostazioni dei criteri di Azure e aver configurato i criteri di Azure Information Protection dal portale di Azure. Per altre informazioni, vedere [Panoramica di criteri di Azure Information Protection](overview-policy.md). 
+Il **client Azure Information Protection (versione classica)** è stato reso disponibile poiché Azure Information Protection è stato annunciato come nuovo servizio per la classificazione e protezione dei file e messaggi di posta elettronica. Questo client scarica le etichette e le impostazioni dei criteri di Azure e aver configurato i criteri di Azure Information Protection dal portale di Azure. Per altre informazioni, vedere [Panoramica di criteri di Azure Information Protection](overview-policy.md). 
 
 Il **unificata di Azure Information Protection client l'assegnazione di etichette** è un'aggiunta più recente, per supportare l'assegnazione di etichette unificata store che supportano più di applicazioni e servizi. Il client Scarica impostazioni dei criteri e le etichette di riservatezza dalle interfacce di amministrazione seguenti: Centro sicurezza e conformità di Office 365, Centro sicurezza Microsoft 365 e Centro conformità Microsoft 365. Per altre informazioni, vedere [Panoramica di etichette di riservatezza](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels).
 
@@ -58,11 +58,11 @@ Entrambi i client, quando vengono installati, visualizzare **Azure Information P
 
 - Da Esplora file: fare clic con il pulsante destro del mouse su uno o più file o su una cartella, scegliere **Classifica e proteggi** e quindi **Guida e commenti**.
 
-- Da un'applicazione di Office: Dal **Protect** pulsante (client Azure Information Protection) o **sensibilità** pulsante (client Azure Information Protection unified imprevisto delle etichette), seleziona **Guida e commenti**.
+- Da un'applicazione di Office: Dal **Protect** pulsante (il client classico) o **sensibilità** pulsante (client di assegnazione di etichette unificata), seleziona **Guida e commenti**.
 
 Usare la **versione** numero visualizzato per identificare il client:
 
-- Una versione **1**, ad esempio **1.48.204.0**, identifica il client Azure Information Protection.
+- Una versione **1**, ad esempio **1.48.204.0**, identifica il client Azure Information Protection (versione classica).
 
 - Una versione **2**, ad esempio **2.0.778.0**, identifica il client di assegnazione di etichette unificato di Azure Information Protection.
 

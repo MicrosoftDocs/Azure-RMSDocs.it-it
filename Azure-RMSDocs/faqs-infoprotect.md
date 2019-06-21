@@ -4,19 +4,19 @@ description: Di seguito sono riportate alcune possibili domande sulle funzionali
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/20/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: c06417aa89bdc81c34232c24921d1c64d1be8904
-ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
+ms.openlocfilehash: db5b1b06f198db0795876e71749b1d220c7c2694
+ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67236839"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67305703"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Domande frequenti sulla classificazione e l'assegnazione di etichette in Azure Information Protection
 
@@ -49,9 +49,9 @@ Attualmente, esistono due client per Windows:
 
 - Il **unificata di Azure Information Protection client l'assegnazione di etichette** che scarica le etichette e le impostazioni dei criteri da una delle aree di amministrazione seguenti: Office 365 Centro sicurezza e conformità, il Centro sicurezza di Microsoft 365, centro conformità di Microsoft 365. Questo client è ora in generale la disponibilità e ha una versione di anteprima per poter testare le funzionalità aggiuntive per una versione futura.
 
-- Il **client Azure Information Protection** che scarica le etichette e le impostazioni dei criteri dal portale di Azure. Questo client si basa sulle versioni precedenti di disponibilità generale del client.
+- Il **client Azure Information Protection (versione classica)** che scarica le etichette e le impostazioni dei criteri dal portale di Azure. Questo client si basa sulle versioni precedenti di disponibilità generale del client.
 
-È consigliabile eseguire i test con il client per l'etichettatura unificata Azure Information Protection se le funzionalità e il set di funzioni correnti soddisfano i requisiti aziendali. In caso contrario o se nel portale di Azure sono state configurate etichette di cui non è ancora stata eseguita la [migrazione all'archivio etichette unificato](configure-policy-migrate-labels.md), usare il client Azure Information Protection.
+È consigliabile che provare con il client di assegnazione di etichette unificato se set di funzionalità correnti e le funzionalità di soddisfare i requisiti aziendali. In caso contrario, o se è stato configurato le etichette nel portale di Azure che non si è ancora [migrate nell'archivio di assegnazione di etichette unificata](configure-policy-migrate-labels.md), usare il client di classico.
 
 Per altre informazioni, inclusa una tabella per il confronto di funzioni e funzionalità, vedere [Scegliere il client Azure Information Protection da usare](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
 
