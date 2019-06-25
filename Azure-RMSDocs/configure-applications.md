@@ -4,19 +4,19 @@ description: Istruzioni che consentono agli amministratori di configurare applic
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 06/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8827350cc630f6e2af77878c726c023c5ba6674e
-ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
+ms.openlocfilehash: 753ef710b4a4058e9792203e549b27cae83f8a12
+ms.sourcegitcommit: 2af2297319265c1f91aa76eb227c6f4d316df42a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343697"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348793"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Configurazione di applicazioni per Azure Rights Management
 
@@ -32,7 +32,7 @@ Dopo avere distribuito Azure Information Protection per l'organizzazione, usare 
 > [!IMPORTANT]
 > Per informazioni sulle versioni supportate e altri requisiti, vedere [Requisiti per Azure Rights Management](requirements.md).
 
--   [Office 365: configurazione di client e servizi online](configure-office365.md)
+-   [Office 365: Configurazione per i servizi online](configure-office365.md)
 
     -   [Exchange Online: configurazione di IRM](configure-office365.md#exchangeonline-irm-configuration)
 
@@ -40,7 +40,7 @@ Dopo avere distribuito Azure Information Protection per l'organizzazione, usare 
 
 - [Applicazioni Office: configurazione dei client](configure-office-apps.md)
 
-    -   [Office 2013, Office 2016 e Office 2019](configure-office-apps.md#office2019-office-2016-and-office-2013)
+    -   [App di Office 365, Office 2019, Office 2016 e Office 2013](configure-office-apps.md#office365-apps-office-2019-office-2016-and-office-2013)
 
     -   [Office 2010](configure-office-apps.md#office2010)
 
