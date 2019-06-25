@@ -4,19 +4,19 @@ description: Informazioni sulla personalizzazione del client di assegnazione di 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/20/2019
+ms.date: 06/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 41b4d44babb9941820c95a7f842f119c444a4b06
-ms.sourcegitcommit: 478081129d9ea8382ce08fae0bae1a08cab23893
+ms.openlocfilehash: b269b4b16507a79c0f08d6c9cc290c22dd69f769
+ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67298287"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343739"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di assegnazione di etichette unificata di Azure Information Protection
 
@@ -132,7 +132,7 @@ Impostazioni avanzati dei criteri di etichetta vengono applicati in ordine inver
 |PostponeMandatoryBeforeSave|[Rimuovere "Non ora" per i documenti quando si usa l'etichettatura obbligatoria](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Aggiungere "Segnala un problema" per gli utenti](#add-report-an-issue-for-users)|
-|RunAuditInformationTypeDiscovery|[Abilitare gli strumenti di analisi di Azure Information Protection per individuare informazioni riservate nei documenti](#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents)|
+|RunAuditInformationTypeDiscovery|[Disabilitare l'invio di informazioni sensibili rilevate nei documenti a analitica di Azure Information Protection](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 
 Esempio di comando di PowerShell per controllare le impostazioni dei criteri etichetta attiva per un criterio di etichetta denominata "Global":
 
@@ -212,13 +212,13 @@ Quando si configura questa impostazione l'opzione **Non ora** viene rimossa. In 
 
 Per i criteri etichetta selezionata, specificare le stringhe seguenti:
 
-- Chiave: **PostponeMandatoryBeforeSaveProperty**
+- Chiave: **PostponeMandatoryBeforeSave**
 
 - Valore: **False**
 
 Comando PowerShell di esempio, in cui il criterio di etichetta denominato "Global":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSaveProperty="False"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave="False"}
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette
 
@@ -444,28 +444,6 @@ Quando vengono soddisfatte queste condizioni e indirizzo di posta elettronica de
 
 - **Blocca**: all'utente viene impedito di inviare il messaggio di posta elettronica finché la condizione persiste. Il messaggio include il motivo del blocco del messaggio di posta elettronica in modo che l'utente possa risolvere il problema, ad esempio rimuovendo destinatari specifici o assegnando un'etichetta al messaggio di posta elettronica. 
 
-L'azione viene registrata nel registro eventi locale di Windows **Registri applicazioni e servizi** > **Azure Information Protection**:
-
-- Messaggi di avviso: ID informazioni 301
-
-- Messaggi di giustificazione: ID informazioni 302
-
-- Messaggi di blocco: ID informazioni 303
-
-Voce dell'evento di esempio di un messaggio di giustificazione:
-
-```
-Client Version: 2.0.779.0
-Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
-Item Full Path: Price list.msg
-Item Name: Price list
-Process Name: OUTLOOK
-Action: Justify
-User Justification: My manager approved sharing of this content
-Action Source: 
-User Response: Confirmed
-```
-Le sezioni seguenti contengono istruzioni di configurazione per ogni impostazione client avanzata.
 
 > [!TIP]
 > Sebbene nell'esercitazione per il client Azure Information Protection anziché il client di assegnazione di etichette unificato, è possibile visualizzare queste impostazioni in azione autonomamente con avanzate [esercitazione: Configurare Azure Information Protection per controllare oversharing di informazioni tramite Outlook](../infoprotect-oversharing-tutorial.md).
@@ -595,19 +573,19 @@ Comandi PowerShell di esempio, in cui il criterio di etichetta denominato "Globa
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 
-## <a name="enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents"></a>Abilitare gli strumenti di analisi di Azure Information Protection per individuare informazioni riservate nei documenti
+## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Disabilitare l'invio di informazioni sensibili rilevate nei documenti a analitica di Azure Information Protection
 
 Questa configurazione usa un criterio [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) che è necessario configurare tramite Office 365 Security & Compliance Center PowerShell. È supportata dalla versione di anteprima di solo i client unificato imprevisto delle etichette.
 
-[Analitica di Azure Information Protection](../reports-aip.md) può individuare e segnalare i documenti salvati da Azure Information Protection unified l'assegnazione di etichette ai client quando tale contenuto contiene informazioni riservate. Per impostazione predefinita, queste informazioni non vengono inviate agli strumenti di analisi di Azure Information Protection.
+[Analitica di Azure Information Protection](../reports-aip.md) può individuare e segnalare i documenti salvati dal client Azure Information Protection quando tale contenuto contiene informazioni riservate. Per impostazione predefinita, queste informazioni vengono inviate da Azure Information Protection unified l'assegnazione di etichette di analitica di Azure Information Protection.
 
-Per modificare questo comportamento in modo che queste informazioni vengono inviate dal client di assegnazione di etichette unificato, immettere le stringhe seguenti per il criterio di etichetta selezionata:
+Per modificare questo comportamento in modo che queste informazioni non vengono inviate dal client di assegnazione di etichette unificato, immettere le stringhe seguenti per il criterio di etichetta selezionata:
 
 - Chiave: **RunAuditInformationTypeDiscovery**
 
-- Valore: **True**
+- Valore: **False**
 
-Se non si imposta questo client avanzata impostazione, i risultati dei controlli sono ancora inviate dal client l'assegnazione di etichette unificato ma le informazioni sono limitate alla creazione di report quando un utente ha eseguito l'etichetta di contenuto.
+Se si imposta questa impostazione client avanzata, i risultati dei controlli sono ancora inviate dal client l'assegnazione di etichette unificato ma le informazioni sono limitate alla creazione di report quando un utente ha eseguito con l'etichetta di contenuto.
 
 Ad esempio:
 
@@ -619,7 +597,7 @@ Ad esempio:
 
 Comando PowerShell di esempio, in cui il criterio di etichetta denominato "Global":
 
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypeDiscovery="True"}
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypeDiscovery="False"}
 
 ## <a name="disable-sending-information-type-matches-for-a-subset-of-users"></a>Disabilitare l'invio delle corrispondenze per i tipi di informazioni per un subset di utenti
 
@@ -629,7 +607,7 @@ Quando si seleziona la casella di controllo [Analisi di Azure Information Protec
 
 - Chiave: **LogMatchedContent**
 
-- Valore: **Disable**
+- Valore: **False**
 
 Comando PowerShell di esempio, in cui il criterio di etichetta denominato "Global":
 
@@ -647,7 +625,7 @@ In seguito a questa opzione di configurazione, la nuova etichetta di riservatezz
 
 - Per i documenti di Office: Quando il documento viene aperto nell'app desktop, la nuova etichetta di riservatezza viene visualizzata come impostata e viene applicata quando il documento viene salvato.
 
-- Per PowerShell: [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) e [Set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) possibile applicare la nuova etichetta di riservatezza. [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) non viene visualizzata la nuova etichetta di riservatezza fino a quando non è impostata da un altro metodo.
+- Per PowerShell: [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) e [Set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) possibile applicare la nuova etichetta di riservatezza.
 
 - Per Esplora file: Nella finestra di dialogo Azure Information Protection, la nuova etichetta di riservatezza è visualizzata ma non è impostata.
 

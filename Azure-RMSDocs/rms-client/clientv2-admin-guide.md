@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 6564980da8ad4067d83c408c2baf0afd8ab5c181
-ms.sourcegitcommit: 2d08bee51c26af3159bd52456e12e0166c8369c1
+ms.openlocfilehash: 9f50eef590b684be95d410ed470bd0d0ee62a76a
+ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65822227"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343702"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Azure Information Protection unified Guida dell'amministratore client l'assegnazione di etichette
 
@@ -24,7 +24,7 @@ ms.locfileid: "65822227"
 
 Usare le informazioni in questa Guida se si è responsabili per Azure Information Protection unified client l'assegnazione di etichette in una rete aziendale, o se si desiderano informazioni più tecniche rispetto di [Azure Information Protection unified l'assegnazione di etichette Guida dell'utente client](clientv2-user-guide.md). 
 
-Ad esempio: 
+Ad esempio:
 
 - Comprendere i diversi componenti di questo client e se è necessario installarlo
 
@@ -113,15 +113,15 @@ Il **Ripristina le impostazioni** disconnette l'utente, consente di eliminare le
     
     Per le reti aziendali, queste impostazioni vengono in genere configurate tramite Criteri di gruppo e in questo caso vengono automaticamente riapplicate al momento dell'aggiornamento dei Criteri di gruppo nel computer. Potrebbero essere tuttavia presenti impostazioni configurate una sola volta tramite script o manualmente. In questi casi, è necessario intervenire per riconfigurare queste impostazioni. Ad esempio, è possibile che i computer eseguano un script una sola volta per configurare le impostazioni per il reindirizzamento ad Azure Information Protection, poiché si sta eseguendo la migrazione da AD RMS e nella rete è ancora presente un punto di connessione del servizio. Dopo aver reimpostato il client, il computer deve eseguire nuovamente lo script.
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\Identity
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\14.0\Common\DRM
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\15.0\Common\DRM
     
-    - HKEY_CURRENT-USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
+    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
-    - HKEY_CURRENT-USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
+    - HKEY_CURRENT_USER\SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC
 
 - L'utente connesso viene disconnesso.
 
@@ -143,9 +143,9 @@ Tuttavia, il client di assegnazione di etichette unificato di Azure Information 
 
 ## <a name="post-installation-tasks"></a>Attività post-installazione
 
-Dopo aver installato il client di assegnazione di etichette unificato di Azure Information Protection, accertarsi di assegnare agli utenti istruzioni per informazioni su come etichettare i documenti e messaggi di posta elettronica e linee guida per le etichette da scegliere per scenari specifici. Ad esempio: 
+Dopo aver installato il client di assegnazione di etichette unificato di Azure Information Protection, accertarsi di assegnare agli utenti istruzioni per informazioni su come etichettare i documenti e messaggi di posta elettronica e linee guida per le etichette da scegliere per scenari specifici. Ad esempio:
 
-- Istruzioni per l'utente online: [Guida per l'utente di Azure Information Protection](client-user-guide.md)
+- Istruzioni per l'utente online: [Azure Information Protection unified imprevisto delle etichette manuale dell'utente](clientv2-user-guide.md)
 
 - Scaricare un manuale dell'utente personalizzabile: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Manuale d'uso di Azure Information Protection per utenti finali)
 

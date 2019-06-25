@@ -4,19 +4,19 @@ description: Istruzioni che consentono agli amministratori di configurare applic
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/01/2019
+ms.date: 06/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea09cbc5-b98b-444e-8b60-5bc3cb199c36
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 445f68f102764444551b13b49ea327a0b58046e4
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 8827350cc630f6e2af77878c726c023c5ba6674e
+ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767769"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343697"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Configurazione di applicazioni per Azure Rights Management
 
@@ -27,7 +27,7 @@ ms.locfileid: "64767769"
 >
 > Ad esempio, per le applicazioni Office fare clic sull'icona della Guida e immettere i termini di ricerca, ad esempio **Rights Management** o **IRM**. Per il client Azure Information Protection per Windows, vedere la [Guida per l'utente del client Azure Information Protection](./rms-client/client-user-guide.md).
 
-Dopo avere distribuito Azure Information Protection per l'organizzazione, usare le informazioni seguenti per configurare le applicazioni, il client Azure Information Protection e i servizi. Ad esempio, le applicazioni di Office come Word 2016, Word 2013 e Word 2010 e i servizi come Exchange Online (regole di trasporto, prevenzione della perdita dei dati, opzione Non inoltrare e Message Encryption) e SharePoint Online (librerie protette). Per informazioni su come questi servizi e applicazioni supportano il servizio di protezione dei dati di Azure Information Protection, vedere [Supporto del servizio Azure Rights Management da parte delle applicazioni](applications-support.md).
+Dopo avere distribuito Azure Information Protection per l'organizzazione, usare le informazioni seguenti per configurare le applicazioni, il client Azure Information Protection e i servizi. Ad esempio, applicazioni di Office quali Word 2019, Word 2016 e Word 2013. e i servizi come Exchange Online (regole di trasporto, prevenzione della perdita dei dati, opzione Non inoltrare e Message Encryption) e SharePoint Online (librerie protette). Per informazioni su come questi servizi e applicazioni supportano il servizio di protezione dei dati di Azure Information Protection, vedere [Supporto del servizio Azure Rights Management da parte delle applicazioni](applications-support.md).
 
 > [!IMPORTANT]
 > Per informazioni sulle versioni supportate e altri requisiti, vedere [Requisiti per Azure Rights Management](requirements.md).
@@ -40,7 +40,7 @@ Dopo avere distribuito Azure Information Protection per l'organizzazione, usare 
 
 - [Applicazioni Office: configurazione dei client](configure-office-apps.md)
 
-    -   [Office 2016 e Office 2013](configure-office-apps.md#office2016-and-office-2013)
+    -   [Office 2013, Office 2016 e Office 2019](configure-office-apps.md#office2019-office-2016-and-office-2013)
 
     -   [Office 2010](configure-office-apps.md#office2010)
 
