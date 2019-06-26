@@ -4,19 +4,19 @@ description: Informazioni sulla personalizzazione del client di assegnazione di 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: b269b4b16507a79c0f08d6c9cc290c22dd69f769
-ms.sourcegitcommit: b92f60a87f824fc2da1e599f526898e3a0c919c3
+ms.openlocfilehash: 15dc66f33918e52645e81964eca260f167986f3e
+ms.sourcegitcommit: 027c550fc7634ca28935ed3521e8eae186b03483
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343739"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67389018"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di assegnazione di etichette unificata di Azure Information Protection
 
@@ -26,16 +26,16 @@ ms.locfileid: "67343739"
 
 Usare le informazioni seguenti per le configurazioni avanzate che potrebbe essere necessario per scenari specifici o un sottoinsieme di utenti per gestire il client di assegnazione di etichette unificato di Azure Information Protection.
 
-Queste impostazioni richiedono la modifica del Registro di sistema o la specifica di impostazioni avanzate usando Office 365 Security & Compliance Center PowerShell.
+Queste impostazioni richiedono la modifica del Registro di sistema o la specifica di impostazioni avanzate. L'utilizzo di impostazioni avanzate [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps).
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Come configurare le impostazioni avanzate per il client usando Office 365 Security & Compliance Center PowerShell
 
-Quando si usa [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps), è possibile configurare le impostazioni avanzate che supportano le personalizzazioni per i criteri etichetta ed etichette. Ad esempio:
+Quando si usa Office 365 Security & Compliance Center PowerShell, è possibile configurare le impostazioni avanzate che supportano le personalizzazioni per i criteri etichetta ed etichette. Ad esempio:
 
 - L'impostazione per visualizzare la barra di Information Protection nelle app di Office è un ***etichettare i criteri di impostazione avanzato***.
 - L'impostazione per specificare un colore dell'etichetta è un ***etichetta impostazione avanzata***.
 
-In entrambi i casi, si specifica la *AdvancedSettings* parametro con l'identità (nome o GUID) del criterio o etichetta, e specificare le coppie chiave/valore in un [tabella hash](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables), usando la sintassi seguente:
+In entrambi i casi, dopo aver [connettersi a Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps), specificare il *AdvancedSettings* parametro con l'identità (nome o GUID) del criterio o etichetta e specificare in coppie chiave/valore una [tabella hash](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). Usare la sintassi seguente:
 
 Per un'impostazione di criteri di etichetta, singolo valore di stringa:
 
@@ -139,6 +139,9 @@ Esempio di comando di PowerShell per controllare le impostazioni dei criteri eti
     (Get-LabelPolicy -Identity Global).settings
 
 #### <a name="available-advanced-settings-for-labels"></a>Impostazioni avanzate disponibili per le etichette
+
+> [!NOTE]
+> Il cmdlet Set-etichetta per configurare le impostazioni avanzate per le etichette è un'implementazione graduale per i tenant. Se non si dispone di questo cmdlet quando ci si connette a Office 365 Security & Compliance Center PowerShell, riprovare tra qualche settimana.
 
 |Impostazione|Scenario e istruzioni|
 |----------------|---------------|
