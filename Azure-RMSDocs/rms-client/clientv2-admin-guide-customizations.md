@@ -4,19 +4,19 @@ description: Informazioni sulla personalizzazione del client di assegnazione di 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/26/2019
+ms.date: 06/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 451a7df93629be3bdfb46004dfa3b4dfd94cced7
-ms.sourcegitcommit: 9628dcd88abde32f612896195f8d3d9a2c1d87bf
+ms.openlocfilehash: 1f338f29216224d5984921f7882d45e4c0c4947c
+ms.sourcegitcommit: a884d627c520721b93d0bb81a2a781399879da0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398750"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67464889"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di assegnazione di etichette unificata di Azure Information Protection
 
@@ -139,9 +139,6 @@ Esempio di comando di PowerShell per controllare le impostazioni dei criteri eti
     (Get-LabelPolicy -Identity Global).settings
 
 #### <a name="available-advanced-settings-for-labels"></a>Impostazioni avanzate disponibili per le etichette
-
-> [!NOTE]
-> Il cmdlet Set-etichetta per configurare le impostazioni avanzate per le etichette comunque rollout ai tenant e non è ancora disponibile in tutte le aree. Se non si dispone di questo cmdlet quando ci si connette a Office 365 Security & Compliance Center PowerShell, riprovare tra qualche settimana.
 
 |Impostazione|Scenario e istruzioni|
 |----------------|---------------|
