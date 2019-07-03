@@ -4,17 +4,17 @@ description: Panoramica tecnica del servizio Azure Information Protection, che c
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 06/21/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
 Customer intent: As an administrator, I want to label documents and emails to classify and protect my organization's data, wherever it resides.
-ms.openlocfilehash: 0bb1096a903be953eb9702bc89b6a8c98d340946
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 6e980f8ee376348be3ac87ebddb9315d61ed4289
+ms.sourcegitcommit: bccaf342b0f7e2f915ea29afe7bc6e46f09ae589
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "65935053"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314157"
 ---
 # <a name="what-is-azure-information-protection"></a>Che cos'è Azure Information Protection?
 
@@ -26,7 +26,7 @@ L'immagine seguente mostra un esempio di Azure Information Protection in azione 
 
 ![Esempio di classificazione consigliata per Azure Information Protection](./media/info-protect-recommend-calloutsv2.png)
 
-###### <a name="screenshot-from-the-azure-information-protection-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Screenshot dal [client Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+###### <a name="screenshot-from-the-azure-information-protection-client-classicfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Screenshot dal [client di Azure Information Protection (classico)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 Dopo che il contenuto è stato classificato (e facoltativamente protetto), è possibile rilevare e controllare come viene usato. È possibile analizzare i flussi di dati per ottenere informazioni sulle attività aziendali, rilevare comportamenti a rischio e adottare misure correttive, tenere traccia dell'accesso ai documenti, impedire la perdita o l'uso improprio di dati e così via.
 
@@ -38,7 +38,7 @@ Ad esempio il messaggio di posta elettronica seguente è stato classificato come
 
 ![Piè di pagina e intestazioni del messaggio di posta elettronica di esempio che mostrano la classificazione di Azure Information Protection](./media/example-email-footerv2.png)
 
-###### <a name="screenshot-from-the-azure-information-protection-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Screenshot dal [client Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+###### <a name="screenshot-from-the-azure-information-protection-client-classicfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Screenshot dal [client di Azure Information Protection (classico)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 ## <a name="how-data-is-protected"></a>Modalità di protezione dei dati
 
