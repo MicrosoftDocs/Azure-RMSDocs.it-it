@@ -4,17 +4,17 @@ description: È possibile proteggere i documenti e i messaggi di posta elettroni
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/22/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: e7fcdacf0e3b75ee3f7626248652a124faf60bbf
-ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
+ms.openlocfilehash: 116ab2106be79119f538b3a2e559bc2faaeb2f2b
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67305596"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520433"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
@@ -41,7 +41,7 @@ Quando un documento o un messaggio di posta elettronica è protetto da un serviz
 Per altre informazioni sulla tecnologia di protezione Azure Rights Management e sul suo funzionamento, vedere [Informazioni su Microsoft Azure Rights Management](what-is-azure-rms.md).
 
 > [!IMPORTANT]
-> Per configurare un'etichetta in modo da applicare questa protezione, è necessario che il servizio Azure Rights Management sia attivo per l'organizzazione. Per ulteriori informazioni, vedere l'articolo relativo all'[attivazione di Azure Rights Management](activate-service.md).
+> Per configurare un'etichetta in modo da applicare questa protezione, è necessario che il servizio Azure Rights Management sia attivo per l'organizzazione. Per altre informazioni, vedere [Attivazione del servizio di protezione da Azure Information Protection](activate-service.md).
 
 Quando l'etichetta applica la protezione, un documento protetto non è adatto per essere salvato in OneDrive o SharePoint. Questi percorsi non supportano le funzionalità seguenti per i file protetti: creazione condivisa, Office Online, ricerca, anteprima di documenti e video, eDiscovery e prevenzione della perdita di dati (DLP). 
 
@@ -132,7 +132,7 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
     
      Come procedura consigliata, usare gruppi anziché utenti. Questo strategia mantiene la configurazione più semplice e rende meno probabile la necessità di aggiornare la configurazione dell'etichetta in un secondo momento e quindi di proteggere nuovamente il contenuto. Tuttavia, se si apportano modifiche al gruppo, tenere presente che, per motivi di prestazioni, Azure Rights Management [memorizza nella cache l'appartenenza ai gruppi](prepare.md#group-membership-caching-by-azure-information-protection). 
     
-     Dopo avere specificato il primo set di utenti e gruppi, selezionare le autorizzazioni da concedere a tali utenti e gruppi. Per altre informazioni sulle autorizzazioni selezionabili, vedere [Configurazione dei diritti di utilizzo per Azure Rights Management](configure-usage-rights.md). Tuttavia, le applicazioni che supportano Rights Management possono implementare queste autorizzazioni in modo diverso. Consultare la relativa documentazione ed eseguire test personalizzati con le applicazioni usate dagli utenti per controllare il comportamento prima di distribuire il modello per gli utenti.
+    Dopo avere specificato il primo set di utenti e gruppi, selezionare le autorizzazioni da concedere a tali utenti e gruppi. Per altre informazioni sulle autorizzazioni selezionabili, vedere [Configurazione dei diritti di utilizzo per Azure Information Protection](configure-usage-rights.md). Tuttavia, le applicazioni che supportano Rights Management possono implementare queste autorizzazioni in modo diverso. Consultare la relativa documentazione ed eseguire test personalizzati con le applicazioni usate dagli utenti per controllare il comportamento prima di distribuire il modello per gli utenti.
     
      Se necessario, è ora possibile aggiungere un secondo set di utenti e gruppi con diritti di utilizzo. Ripetere fino a quando non sono stati specificati tutti gli utenti e i gruppi con le rispettive autorizzazioni.
 
