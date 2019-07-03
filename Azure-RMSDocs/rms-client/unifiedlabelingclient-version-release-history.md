@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 6f359c304080918713cee52667a1bedeb7b4ae07
-ms.sourcegitcommit: 9628dcd88abde32f612896195f8d3d9a2c1d87bf
+ms.openlocfilehash: 1e59e864c86ded6433e5edd89748cd794a3d6410
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398743"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535177"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection unified client - versione l'assegnazione di etichette cronologia delle versioni e criteri di supporto
 
@@ -111,7 +111,7 @@ Questa prima versione di disponibilità generale del client di assegnazione di e
 
 - Aggiornamento dal client Azure Information Protection.
 
-- Assegnazione di etichette manuale, automatica e consigliata: Per altre informazioni sulla configurazione dell'assegnazione di etichette automatica e consigliata per questo client, vedere [Applicare automaticamente un'etichetta di riservatezza al contenuto](/Office365/SecurityCompliance/apply_sensitivity_label_automatically).
+- Assegnazione di etichette manuale, automatica e consigliata: Per altre informazioni sulla configurazione dell'assegnazione di etichette automatica e consigliata per questo client, vedere [Applicare automaticamente un'etichetta di riservatezza al contenuto](/Office365/SecurityCompliance/apply-sensitivity-label-automatically).
 
 - Esplora file, azioni con il pulsante destro del mouse per classificare e proteggere i file, rimuovere la protezione e applicare autorizzazioni personalizzate.
 

@@ -4,19 +4,19 @@ description: Informazioni su come monitorare il connettore e l'uso da parte dell
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 507f8ea8a613715b14fbedd820000765afa48e15
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: aedcee5bef5050e01ab37d6c1ee4f2555d732bf4
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156804"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521980"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Monitorare il connettore di Azure Rights Management
 
@@ -165,7 +165,7 @@ Quando si installa il connettore RMS, vengono creati automaticamente i contatori
 
 Ad esempio, si verificano regolarmente dei ritardi quando i documenti o i messaggi di posta elettronica sono protetti. Oppure, si verificano ritardi quando i documenti o i messaggi di posta elettronica vengono aperti. In questi casi, i contatori delle prestazioni possono essere utili per determinare se i ritardi sono dovuti al tempo di elaborazione nel connettore, al tempo di elaborazione dal servizio Azure Rights Management o a ritardi della rete. 
 
-Per identificare più facilmente il punto in cui si verifica il ritardo, cercare i contatori che includono i valori medi per **Connector Processing Time** (Tempo di elaborazione del connettore), **Service Response Time** (Tempo di risposta del servizio) e **Connector Response Time** (Tempo di risposta del connettore). Ad esempio: **Licensing Successful Batched Request Average Connector Response Time** (Tempo medio di risposta del connettore alle richieste di licenze in batch con esito positivo).
+Per identificare più facilmente il punto in cui si verifica il ritardo, cercare i contatori che includono i valori medi per **Connector Processing Time** (Tempo di elaborazione del connettore), **Service Response Time** (Tempo di risposta del servizio) e **Connector Response Time** (Tempo di risposta del connettore). Ad esempio:  **Licensing Successful Batched Request Average Connector Response Time** (Tempo medio di risposta del connettore alle richieste di licenze in batch con esito positivo).
 
 Se di recente sono stati aggiunti nuovi account di server per l'uso del connettore, è utile controllare il contatore **Time since last authorization policy update** (Tempo trascorso dall'ultimo aggiornamento di criteri di autorizzazione) per accertarsi che il connettore abbia scaricato l'elenco da quando è stato aggiornato o se è necessario attendere un po' più di tempo (fino a 15 minuti).
 
@@ -173,7 +173,7 @@ Se di recente sono stati aggiunti nuovi account di server per l'uso del connetto
 
 La registrazione dei dati relativi all'utilizzo consente di identificare i casi in cui i messaggi di posta elettronica e i documenti vengono protetti e utilizzati. Quando il connettore RMS viene usato per proteggere e consumare il contenuto, il campo ID utente nei registri contiene il nome dell'entità servizio **Aadrm_S-1-7-0**. Questo nome viene creato automaticamente per il connettore RMS.
 
-Per altre informazioni sulla registrazione dell'utilizzo, vedere [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](log-analyze-usage.md).
+Per altre informazioni sulla registrazione dell'utilizzo, vedere [la registrazione e analisi dell'utilizzo di protezione di Azure Information Protection](log-analyze-usage.md).
 
 Se occorre una registrazione più dettagliata per scopi di diagnosi, è possibile usare [DebugView](https://go.microsoft.com/fwlink/?LinkID=309277) da Windows Sysinternals. Abilitare la traccia per il connettore RMS modificando il file web.config per il sito predefinito in IIS:
 

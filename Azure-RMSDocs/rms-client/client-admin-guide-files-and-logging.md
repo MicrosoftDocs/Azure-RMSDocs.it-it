@@ -4,19 +4,19 @@ description: Informazioni sui file e sulla registrazione dell'utilizzo per il cl
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 2265dba770f4b67bbcc84368a007b7c921f37b3f
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: b6391df8ae2e31303f5b369963389abe3005a1bd
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183402"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521659"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guida dell'amministratore: File e registrazione dell'utilizzo del client Azure Information Protection
 
@@ -96,7 +96,7 @@ Il client registra l'attività dell'utente nel registro eventi locale di Windows
 
 Gli eventi per Outlook warn, giustificare e bloccare i messaggi richiedono il client di disponibilità generale corrente e le impostazioni client avanzate. Per altre informazioni, vedere [Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
 
-Per informazioni sulla registrazione dell'utilizzo per il servizio di protezione, vedere [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](../log-analyze-usage.md).
+Per informazioni sulla registrazione dell'utilizzo per il servizio di protezione, vedere [la registrazione e analisi dell'utilizzo di protezione di Azure Information Protection](../log-analyze-usage.md)
 
 ## <a name="next-steps"></a>Passaggi successivi
 Dopo aver identificato tutti i file di log associati al client Azure Information Protection, vedere gli argomenti seguenti per altre informazioni che potrebbero essere necessarie per supportare il client:

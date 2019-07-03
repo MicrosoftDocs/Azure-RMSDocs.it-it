@@ -4,19 +4,19 @@ description: Identificare i prerequisiti per distribuire Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b1370046de0b2b455128af44078476e0b15f9995
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 17b41c32b760e0bff2dcb430689fb8bbebacc22d
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183896"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535162"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisiti per Azure Information Protection
 
@@ -150,4 +150,5 @@ Lo scenario di distribuzione seguente non è supportato, a meno che non si usi A
 
 - Esecuzione side-by-side di AD RMS e di Azure RMS nella stessa organizzazione tranne che durante la migrazione, come descritto in [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-È disponibile un percorso di migrazione supportato [da AD RMS ad Azure Information Protection](https://technet.microsoft.com/library/Dn858447.aspx) e da [Azure Information Protection ad AD RMS](/powershell/module/aadrm/Set-AadrmMigrationUrl). Se si distribuisce Azure Information Protection e poi si decide di interrompere l'uso del servizio cloud, vedere [Rimozione delle autorizzazioni e disattivazione di Azure Information Protection](decommission-deactivate.md).
+È disponibile un percorso di migrazione supportato [da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e da [Azure Information Protection ad AD RMS](/powershell/module/aipservice/Set-AipServiceMigrationUrl). Se si distribuisce Azure Information Protection e poi si decide di interrompere l'uso del servizio cloud, vedere [Rimozione delle autorizzazioni e disattivazione di Azure Information Protection](decommission-deactivate.md).
+

@@ -1,10 +1,10 @@
 ---
 title: Attivare Azure RMS dall'interfaccia di amministrazione di Microsoft 365 - AIP
-description: Istruzioni per l'attivazione del servizio Azure Rights Management se si usa la nuova versione dell'interfaccia di amministrazione di Microsoft 365.
+description: Istruzioni di attivazione per il servizio Azure Rights Management quando si usa l'interfaccia di amministrazione di Microsoft 365.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,14 +12,14 @@ ms.custom: askipteam
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d962aa889c9509204e056472e2651eccfb04a938
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: 01188c40ee1a31d79b213e930696f3e65c3e4eeb
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156462"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535004"
 ---
-# <a name="how-to-activate-azure-rights-management-from-the-microsoft-365-admin-center"></a>Come attivare Azure Rights Management dall'interfaccia di amministrazione di Microsoft 365
+# <a name="how-to-activate-rights-management-protection-from-the-microsoft-365-admin-center"></a>Come attivare la protezione di Rights Management dall'interfaccia di amministrazione di Microsoft 365
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -45,5 +45,5 @@ In caso di domande sui requisiti per la sottoscrizione o se serve assistenza per
 Verranno quindi visualizzati il messaggio **Rights Management è attivato** e l'opzione di disattivazione.
 
 ## <a name="next-steps"></a>Passaggi successivi
-Riprendere la lettura di [Attivazione di Azure Rights Management](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
+Riprendere la lettura [attivazione del servizio di protezione di Azure Information Protection](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
 

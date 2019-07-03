@@ -4,19 +4,19 @@ description: In caso di dubbio su una parola, un'espressione o un acronimo corre
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 742877bf-26f5-40e3-b1f7-8475e7c3ce11
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 4ccc320d04d0aee9baac2bfcf337d11b63b7df9e
-ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
+ms.openlocfilehash: f23b64f7d8d0eddcdf853238400653a32d5f145b
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67305717"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521513"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologia di Azure Information Protection
 
@@ -26,10 +26,11 @@ In caso di dubbio su una parola, un'espressione o un acronimo correlato a Micros
 
 |Nome|Definizione|
 |--------|--------------|
-|AADRM|Nome del modulo di PowerShell per il servizio Azure Rights Management, derivato dall'abbreviazione non ufficiale di Azure Rights Management quando in precedenza era denominato (Windows) Azure Active Directory Rights Management.|
-|attivare|Consente di abilitare il servizio Azure Rights Management in modo che un'organizzazione possa proteggere i propri documenti e i propri messaggi di posta elettronica. Questa azione abilita anche le funzionalità IRM in Exchange Online e SharePoint Online.|
+|AADRM|Il nome del primo modulo di PowerShell per il servizio di protezione (Azure Rights Management), derivato dall'abbreviazione non ufficiale per Azure Rights Management quando era denominato precedentemente (Windows) Azure Active Directory Rights Management. Questo modulo di PowerShell è stato sostituito con il modulo AIPService.|
+|attivare|Per abilitare il servizio di protezione (Azure Rights Management) in modo che un'organizzazione possa proteggere i documenti e messaggi e-mail. Questa azione abilita anche le funzionalità IRM in Exchange Online e SharePoint Online.|
 |Active Directory Rights Management Services|Spesso abbreviato in *AD RMS*.<br /><br />Ruolo di Windows Server che rende disponibile la protezione basata sulla gestione dei diritti usando la crittografia e i criteri per proteggere documenti, file e messaggi di posta elettronica.|
 |AD RMS|Vedere *Active Directory Rights Management Services*.|
+|AIPService|Il nome corrente del modulo PowerShell per il servizio di protezione, che sostituisce con il modulo AADRM meno recente.|
 AzureInformationProtection|Il nome del modulo PowerShell per il client Azure Information Protection (versione classico) e Azure Information Protection unified client imprevisto delle etichette.
 |Azure Information Protection|Servizio basato sul cloud che usa le etichette per classificare e proteggere documenti e messaggi di posta elettronica. Azure Rights Management garantisce la protezione tramite criteri di crittografia, identità e autorizzazione.|
 Client Azure Information Protection (versione classica)|Spesso abbreviato in *classico client*.<br /><br />Il lato client originale di Azure Information Protection che consente agli utenti, amministratori e i servizi usano le etichette e le impostazioni di criteri di Azure Information Protection. A questo punto viene sostituito con Azure Information Protection unified client imprevisto delle etichette.|

@@ -4,19 +4,19 @@ description: Istruzioni per utenti che hanno eseguito l'aggiornamento dall'appli
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d7bc2478-c22f-4e19-9992-012658362b25
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 640d1b1d99a36a9d81fc9f077bebfec1a6a076cc
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 96cb3f32c7fcb61cc9854c63642c80d098f03c46
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182569"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521638"
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Manuale dell'utente: Attività eseguite in precedenza con l'applicazione RMS sharing
 
@@ -45,7 +45,7 @@ Per trovare un'opzione specifica dell'applicazione RMS sharing, controllare la t
 |-----------|--------------------|
 |**Condividi file protetto**|Questa opzione non è più disponibile sulla barra multifunzione di Office. Invece di condividere il file direttamente dall'applicazione di Office, usare l'opzione di menu di scelta rapida **Classifica e proteggi** di Esplora file per proteggere una copia del documento con autorizzazioni personalizzate e quindi condividere il file usando il client di posta elettronica o il percorso di condivisione preferito. <br /><br /> È anche possibile allegare un documento di Office non protetto a un messaggio di posta elettronica protetto e il documento viene automaticamente protetto con le stesse restrizioni. Tuttavia, non è possibile monitorare e revocare il documento.
 |**Invia messaggio se qualcuno prova ad aprire i documenti**|Usare il sito di rilevamento dei documenti per configurare l'impostazione preferita per le notifiche di posta elettronica: individuare il documento protetto condiviso > **Impostazioni** > **Notifiche tramite posta elettronica**
-|**Consenti di revocare immediatamente l'accesso ai documenti**|Questa opzione non è più disponibile. Usare le impostazioni di protezione definite dall'amministratore che non consentono l'accesso offline. Un amministratore può anche ridurre il periodo di validità della licenza con l'utente finale per il tenant, eseguendo [Set-AadrmMaxUseLicenseValidityTime](/powershell/aadrm/vlatest/set-aadrmmaxuselicensevaliditytime).
+|**Consenti di revocare immediatamente l'accesso ai documenti**|Questa opzione non è più disponibile. Usare le impostazioni di protezione definite dall'amministratore che non consentono l'accesso offline. Inoltre, un amministratore può ridurre il periodo di validità licenza d' per il tenant, eseguendo [Set-AipServiceMaxUseLicenseValidityTime](/powershell/module/aipservice/set-aipservicemaxuselicensevaliditytime).
 |**Rileva utilizzo** in Outlook|Non è più possibile accedere al sito di rilevamento dei documenti da Outlook. Usare invece l'opzione **Rileva e revoca** da Word, PowerPoint, Excel o Esplora file oppure andare direttamente al [sito di rilevamento dei documenti](https://go.microsoft.com/fwlink/?LinkId=529562) usando un browser.
 
 ## <a name="next-steps"></a>Passaggi successivi

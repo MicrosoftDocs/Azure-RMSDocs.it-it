@@ -4,17 +4,17 @@ description: Istruzioni e informazioni per gli amministratori di distribuire il 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 46102a1b2b60b58d47d0e436f25b2480f2737a51
-ms.sourcegitcommit: 5ecf68d050152e0b425fa8cf6f3890951185b14a
+ms.openlocfilehash: 27399c5955ed66d7c9e5e9d8870b01d52dba6e1d
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050725"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521032"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-unified-labeling-client-for-users"></a>Guida dell'amministratore: Installare il client di assegnazione di etichette unificato di Azure Information Protection per gli utenti
 
@@ -151,9 +151,9 @@ Usare la procedura seguente per identificare il valore da specificare per il par
 
 ##### <a name="to-identify-the-value-to-specify-for-the-servicelocation-parameter"></a>Per identificare il valore da specificare per il parametro ServiceLocation
 
-1. Da una sessione di PowerShell eseguire prima di tutto [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) e specificare le credenziali di amministratore per connettersi al servizio Azure Rights Management. Eseguire quindi [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration). 
+1. Da una sessione di PowerShell, eseguire innanzitutto [Connect-AipService](https://docs.microsoft.com/powershell/module/aipservice/connect-aipservice) e specificare le credenziali di amministratore per connettersi al servizio Azure Rights Management. Quindi eseguire [Get-AipServiceConfiguration](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceconfiguration). 
  
-    Se non è stato ancora installato il modulo di PowerShell per il servizio Azure Rights Management, vedere [Installazione del modulo PowerShell AADRM](../install-powershell.md).
+    Se già stato installato il modulo di PowerShell per il servizio Azure Rights Management, vedere [installazione del modulo AIPService PowerShell](../install-powershell.md).
 
 2. Nell'output identificare il valore **LicensingIntranetDistributionPointUrl** .
 
@@ -202,7 +202,7 @@ Se si usa Intune per il metodo di distribuzione del software, usare queste istru
     |Non applicabile|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Installare|
     |Non applicabile|Windows 7|KB2627273 <br /><br /> Numero di versione incluso nel nome file: v4|Uninstall|
 
-3. Per un'installazione predefinita, eseguire il file MSI con **/quiet/**, ad esempio, `AzInfoProtection_UL.msi /quiet`. Tuttavia, può essere necessario specificare parametri di installazione aggiuntivi, che sono documentati nelle [istruzioni del programma di installazione del file eseguibile](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer).  
+3. Per un'installazione predefinita, eseguire il file MSI con **/quiet/** , ad esempio, `AzInfoProtection_UL.msi /quiet`. Tuttavia, può essere necessario specificare parametri di installazione aggiuntivi, che sono documentati nelle [istruzioni del programma di installazione del file eseguibile](#to-install-the-azure-information-protection-unified-labeling-client-by-using-the-executable-installer).  
 
 
 ## <a name="next-steps"></a>Passaggi successivi

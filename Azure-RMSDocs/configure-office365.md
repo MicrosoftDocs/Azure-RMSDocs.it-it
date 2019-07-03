@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 0a6ce612-1b6b-4e21-b7fd-bcf79e492c3b
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0c86bf4100f3c2c49cc5261215a0edcd59f24408
-ms.sourcegitcommit: 2af2297319265c1f91aa76eb227c6f4d316df42a
+ms.openlocfilehash: 1dcf34bf2990426a9ff22660d871b4f60e72bc3f
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348827"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520614"
 ---
 # <a name="office365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Configurazione per i servizi online, usare il servizio Azure Rights Management
 
@@ -65,7 +65,7 @@ Exchange Online potrebbe già essere abilitato per l'uso del servizio Azure Righ
     ```
     Test-IRMConfiguration -Sender <user email address>
     ```
-    Ad esempio: <strong>Test-IRMConfiguration -Sender  adams@contoso.com</strong>
+    Ad esempio:  <strong>Test-IRMConfiguration -Sender  adams@contoso.com</strong>
     
     Questo comando esegue una serie di controlli, inclusi la verifica della connettività al servizio, il recupero della configurazione, il recupero di URI, licenze ed eventuali modelli. Nella sessione di Windows PowerShell, verrà visualizzato i risultati di ogni controllo e alla fine, se tutto ciò che passa questi controlli: **OVERALL RESULT: PASS**
 
@@ -525,7 +525,7 @@ Anche se non è possibile configurare IRM per OneDrive for Business per gli uten
 > [!TIP]
 > È inoltre possibile usare questo script per configurare IRM per una libreria di SharePoint Online. Per questa configurazione, probabilmente si desidererà attivare l'opzione aggiuntiva **Non consentire il caricamento di documenti che non supportano IRM**, per assicurare che la libreria contenga solo documenti protetti.    A tale scopo, aggiungere il parametro `-IrmReject` per il comando Set-IrmConfiguration nello script.
 >
-> Potrebbe anche essere necessario modificare la variabile `$webUrls` (ad esempio, **https://contoso.sharepoint.com** ) e la variabile `$listTitle` (ad esempio, **$Reports**).
+> È inoltre necessario modificare il `$webUrls` variabile (ad esempio, **https:\//contoso.sharepoint.com**) e `$listTitle` variabile (ad esempio **$Reports**).
 
 Se è necessario disabilitare IRM per le librerie OneDrive for Business dell'utente, vedere la sezione [Script per disattivare IRM per OneDrive for Business](#script-to-disable-irm-for-onedrive-for-business).
 

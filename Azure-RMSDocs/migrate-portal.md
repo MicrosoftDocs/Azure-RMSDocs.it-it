@@ -4,19 +4,19 @@ description: Panoramica delle attività di amministrazione nel portale di Azure 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/08/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 9b49ac6ccca68c9907bb86a936a1dc6a7e145e1d
-ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
+ms.openlocfilehash: e6558bd8cf750c200ae6ec4dd177f34d6a1c84ea
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2019
-ms.locfileid: "66815560"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535197"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Attività che precedentemente venivano eseguite con il portale di Azure classico
 
@@ -40,10 +40,10 @@ Usare le informazioni seguenti per una transizione rapida al portale aggiornato.
 |Archiviare un modello|Impostare lo stato dell'etichetta su **Disabilitato**.
 |Creare un modello con ambito|Creare criteri con ambito e creare un'etichetta in tale ambito che applichi la protezione. <br /><br />Per altre informazioni, vedere [Come configurare i criteri di Azure Information Protection per utenti specifici con i criteri con ambito](configure-policy-scope.md).
 |Copiare un modello|Non è possibile copiare un modello nel portale di Azure. Se si vuole che due etichette abbiano le stesse impostazioni di protezione, è necessario impostare le autorizzazioni in ogni etichetta. <br /><br />Per altre informazioni, vedere [Per configurare un'etichetta per le impostazioni di protezione](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
-|Eliminare un modello|L'eliminazione di modelli può comportare che alcuni dati risultino inaccessibili, pertanto il portale di Azure non supporta questa azione. Tuttavia, è possibile eliminare l'etichetta e quindi usare il cmdlet di PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate) per rimuovere il modello. <br /><br />Per altre informazioni, vedere [Come eliminare o riordinare un'etichetta per Azure Information Protection](configure-policy-delete-reorder.md).
+|Eliminare un modello|L'eliminazione di modelli può comportare che alcuni dati risultino inaccessibili, pertanto il portale di Azure non supporta questa azione. Tuttavia, è possibile eliminare l'etichetta e quindi usare il comando di PowerShell [Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate) cmdlet per rimuovere il modello. <br /><br />Per altre informazioni, vedere [Come eliminare o riordinare un'etichetta per Azure Information Protection](configure-policy-delete-reorder.md).
 |Supporto per più lingue|Dalla selezione di menu **Gestisci** selezionare **Lingue** per esportare i campi personalizzabili che includono il nome e la descrizione del modello. Tradurre le stringhe e importarle nel portale. <br /><br />Per altre informazioni, vedere [Come configurare etichette e modelli per varie lingue in Azure Information Protection](configure-policy-languages.md).
-|Report Web di Rights Management|[Reporting centralizzato per Azure Information Protection](reports-aip.md) è ora disponibile in anteprima.<br /><br />È possibile anche usare il cmdlet di PowerShell [Get-AadrmUsageLog](/powershell/module/aadrm/Get-AadrmUsageLog) per scaricare i log di utilizzo per il servizio Azure Rights Management. È quindi possibile usare i dati per creare report personalizzati. Per altre informazioni, vedere [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](log-analyze-usage.md).
-|Attivare e disattivare il servizio Rights Management|Scegliere **Attivazione della protezione** dal menu **Gestisci**.<br /><br />Per altre informazioni, vedere [Come attivare Azure Rights Management dal portale di Azure](activate-azure.md).
+|Report Web di Rights Management|[Reporting centralizzato per Azure Information Protection](reports-aip.md) è ora disponibile in anteprima.<br /><br />È anche possibile usare il comando di PowerShell [Get-AipServiceUsageLog](/powershell/module/aipservice/get-aipserviceuserlog) cmdlet per scaricare i log di utilizzo per il servizio Azure Rights Management. È quindi possibile usare i dati per creare report personalizzati. Per altre informazioni, vedere [la registrazione e analisi dell'utilizzo di protezione di Azure Information Protection](log-analyze-usage.md).
+|Attivare e disattivare il servizio Rights Management|Scegliere **Attivazione della protezione** dal menu **Gestisci**.<br /><br />Per altre informazioni, vedere [come attivare il servizio di protezione di Rights Management dal portale di Azure](activate-azure.md).
 
 Prima di modificare i modelli o convertirli in etichette nel portale di Azure, vedere [Considerazioni sui modelli nel portale di Azure](configure-policy-templates.md#considerations-for-templates-in-the-azure-portal).
 

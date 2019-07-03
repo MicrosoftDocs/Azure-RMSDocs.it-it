@@ -4,19 +4,19 @@ description: Istruzioni per la migrazione della distribuzione di Active Director
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c1fb307d06c277dd6f515adbff35a844f65f77cc
-ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
+ms.openlocfilehash: 60a7eecb5e0d8175e968051d160bee5441a35de0
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708906"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67522050"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrazione da AD RMS ad Azure Information Protection
 
@@ -128,7 +128,7 @@ Includere i partner di AD RMS in fase di pianificazione della migrazione perché
 
 - Il loro servizio Azure Rights Management non è ancora attivato ma conoscono il relativo URL del servizio Azure Rights Management.
 
-    Possono ottenere queste informazioni installando Azure Rights Management Tool, connettendosi al servizio ([Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice)) e quindi visualizzando le relative informazioni sul tenant per il servizio Azure Rights Management ([Get-AadrmConfiguration](/powershell/aadrm/vlatest/get-aadrmconfiguration)).
+    È possibile ottenere queste informazioni installando Azure Rights Management Tool, connettendosi al servizio ([Connect-AipService](/powershell/module/aipservice/connect-aipservice)) e quindi visualizzando le informazioni sul tenant per il servizio Azure Rights Management ([ Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration)).
 
 - Specificano gli URL per i loro cluster AD RMS e per il loro servizio Azure Rights Management, in modo che sia possibile configurare i client migrati per reindirizzare le richieste di contenuto protetto da AD RMS al servizio Azure Rights Management dei loro tenant. Le istruzioni per configurare il reindirizzamento del client sono incluse nel passaggio 7.
 
@@ -140,9 +140,9 @@ I passaggi della migrazione possono essere suddivisi in cinque fasi eseguibili i
 
 [**FASE 1: PREPARAZIONE DELLA MIGRAZIONE**](migrate-from-ad-rms-phase1.md)
 
-- **Passaggio 1: Installare il modulo PowerShell AADRM e identificare l'URL del tenant**
+- **Passaggio 1: Installare il modulo AIPService PowerShell e identificare l'URL del tenant**
 
-    Il processo di migrazione prevede l'esecuzione di uno o più dei cmdlet PowerShell dal modulo AADRM. È necessario conoscere l'URL del servizio Azure Rights Management del tenant per completare molti passaggi necessari per la migrazione ed è possibile identificare questo valore tramite PowerShell.
+    Il processo di migrazione è necessario eseguire uno o più dei cmdlet di PowerShell dal modulo AIPService. È necessario conoscere l'URL del servizio Azure Rights Management del tenant per completare molti passaggi necessari per la migrazione ed è possibile identificare questo valore tramite PowerShell.
 
 - **Passaggio 2: Preparare la migrazione client**
 
@@ -156,7 +156,7 @@ I passaggi della migrazione possono essere suddivisi in cinque fasi eseguibili i
 
 - **Passaggio 4: Esportare i dati di configurazione da AD RMS e importarli in Azure Information Protection**
 
-    Si esportano i dati di configurazione (chiavi, modelli, URL) da AD RMS in un file XML e quindi si carica il file nel servizio Azure Rights Management da Azure Information Protection usando il cmdlet Import-AadrmTpd di PowerShell. Identificare quindi la chiave del certificato concessore di licenze server da usare come chiave del tenant per il servizio Azure Rights Management. Potrebbero essere necessari altri passaggi, a seconda della configurazione della chiave di AD RMS:
+    Esportare i dati di configurazione (chiavi, modelli, URL) da AD RMS in un file XML e quindi caricare file per il servizio Azure Rights Management di Azure Information Protection, usando il cmdlet di PowerShell Import-AipServiceTpd. Identificare quindi la chiave del certificato concessore di licenze server da usare come chiave del tenant per il servizio Azure Rights Management. Potrebbero essere necessari altri passaggi, a seconda della configurazione della chiave di AD RMS:
 
     - **Migrazione da una chiave protetta tramite software a un'altra**:
 

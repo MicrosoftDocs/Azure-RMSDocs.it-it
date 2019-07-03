@@ -4,19 +4,19 @@ description: Fase 3 della migrazione da AD RMS ad Azure Information Protection, 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 540d09e79470daf775fa581109ed47b2aaa19038
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: 521a14606a72bba4871f18a2191f246af1de14f7
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65781783"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67522088"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Fase 3 della migrazione: configurazione lato client
 
@@ -48,13 +48,13 @@ Questo metodo è adatto solo per i client Windows che eseguono app di Office 365
     
     `_rmsredir._http._tcp.<AD RMS cluster>. <TTL> IN SRV <priority> <weight> <port> <your tenant URL>.`
     
-    Per *\<AD RMS cluster>*, specificare il nome di dominio completo del cluster AD RMS. Ad esempio, **rmscluster.contoso.com**.
+    Per *\<AD RMS cluster>* , specificare il nome di dominio completo del cluster AD RMS. Ad esempio, **rmscluster.contoso.com**.
     
     In alternativa, se si dispone di un solo cluster AD RMS in tale dominio, è possibile specificare solo il nome di dominio del cluster AD RMS. In questo esempio, sarebbe **contoso.com**. Quando si specifica il nome di dominio in questo record, il reindirizzamento si applica a tutti i cluster AD RMS in tale dominio.
     
     Il numero *\<port>* viene ignorato.
     
-    Per *\<your tenant URL\>*, specificare l'[URL del servizio Azure Rights Management per il tenant](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
+    Per *\<your tenant URL\>* , specificare l'[URL del servizio Azure Rights Management per il tenant](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
     
     Se si usa il ruolo Server DNS in Windows Server, è possibile usare la tabella seguente come esempio per specificare le proprietà del record SRV nella console Gestore DNS.
     
@@ -72,7 +72,7 @@ Questo metodo è adatto solo per i client Windows che eseguono app di Office 365
 
     a. In uno dei server AD RMS nel cluster avviare la console Gestione Internet Information Services (IIS).
 
-    b. Passare a **Sito Web predefinito** > **_wmcs** > **licensing** > **licensing.asmx**
+    b. Passare a **Sito Web predefinito** >  **_wmcs** > **licensing** > **licensing.asmx**
 
     c. Fare clic con il pulsante destro del mouse su **licensing.asmx** > **Proprietà** > **Modifica**
 
@@ -105,7 +105,7 @@ Lo script di configurazione client (Migrate-Client.cmd) configura le impostazion
 
 - Se l'utente dispone di privilegi di amministratore locale, usare uno script di accesso.
 
-Lo script di configurazione utente (Migrate-User.cmd) configura le impostazioni a livello utente e pulisce l'archivio licenze client. È quindi necessario eseguire questo script nel contesto dell'utente effettivo. Ad esempio: 
+Lo script di configurazione utente (Migrate-User.cmd) configura le impostazioni a livello utente e pulisce l'archivio licenze client. È quindi necessario eseguire questo script nel contesto dell'utente effettivo. Ad esempio:
 
 - Usare uno script di accesso.
 
@@ -134,7 +134,7 @@ Se non è possibile migrare tutti i client di Windows in una sola volta, eseguir
    > 
    > Inoltre, se i server AD RMS usano certificati del server SSL/TLS, controllare se i valori URL di gestione licenze includono il numero di porta **443** nella stringa. Ad esempio: https://rms.treyresearch.net:443/_wmcs/licensing. È possibile accedere a queste informazioni nella console di Active Directory Rights Management Services facendo clic sul nome del cluster e visualizzando le informazioni **Dettagli cluster**. Se il numero di porta 443 è presente nell'URL, includere questo valore quando si modifica lo script. Ad esempio, https://rms.treyresearch.net:<strong>443</strong>. 
     
-   Se è necessario recuperare l'URL del servizio Azure Rights Management per *&lt;URL tenant&gt;*, vedere nelle sezioni precedenti l'argomento [Per identificare l'URL del servizio Azure Rights Management](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
+   Se è necessario recuperare l'URL del servizio Azure Rights Management per *&lt;URL tenant&gt;* , vedere nelle sezioni precedenti l'argomento [Per identificare l'URL del servizio Azure Rights Management](migrate-from-ad-rms-phase1.md#to-identify-your-azure-rights-management-service-url).
 
 3. Seguendo le istruzioni all'inizio di questo passaggio, configurare i metodi di distribuzione script per eseguire **Migrate-Client.cmd** e **Migrate-User.cmd** nei computer client Windows che vengono usati dai membri del gruppo AIPMigrated. 
 

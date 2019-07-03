@@ -4,19 +4,19 @@ description: Controllare di avere gli account utente e di gruppo necessari per i
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/03/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 75aea1cf43c6e6ca66dbca611946c4366fe8280d
-ms.sourcegitcommit: 1b8e87bda58bb40f3e32b2edf264385e7235b7c5
+ms.openlocfilehash: 2ffe76069e4f36fb4c21fdd8edaeb611635b0abf
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/03/2019
-ms.locfileid: "66462231"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521909"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparazione di utenti e gruppi per Azure Information Protection
 
@@ -215,5 +215,5 @@ Dopo aver confermato che gli utenti e i gruppi sono utilizzabili con Azure Infor
 
 - Se la sottoscrizione risale a prima di febbraio 2018: è necessario attivare il servizio manualmente. 
 
-Per altre informazioni sul controllo dello stato di attivazione, vedere [Attivazione di Azure Rights Management](./activate-service.md).
+Per altre informazioni, che include il controllo dello stato di attivazione, vedere [attivazione del servizio di protezione di Azure Information Protection](./activate-service.md).
 

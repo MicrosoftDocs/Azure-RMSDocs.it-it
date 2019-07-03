@@ -4,19 +4,19 @@ description: Istruzioni per usare il client Rights Management (RMS) con il clien
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 9aa693db-9727-4284-9f64-867681e114c9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 41ced1c43502b1c266ad2423b637266dbb0f1690
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 3266448b019b1cd9d9aadf4a4297877bd31d6aaa
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183385"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521516"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protezione RMS con Infrastruttura di classificazione file per Windows Server
 
@@ -56,7 +56,7 @@ Prerequisiti per queste istruzioni:
     
 - L'utente ha sincronizzato gli account utente di Active Directory locali e i relativi indirizzi di posta elettronica con Azure Active Directory oppure con Office 365. Ciò è necessario per tutti gli utenti che potrebbero avere la necessità di accedere ai file una volta protetti da FCI e dal servizio Azure Rights Management. Se non si completa questo passaggio (ad esempio, in un ambiente di test), è possibile che l'accesso degli utenti a questi file sia bloccato. Per altre informazioni su questi requisiti, vedere [Preparazione di utenti e gruppi per Azure Information Protection](../prepare.md).
     
-- Questo scenario non supporta i modelli di reparto, pertanto è necessario usare un modello non configurato per un'area di validità oppure usare il cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) e il parametro *EnableInLegacyApps*.
+- Questo scenario non supporta i modelli di reparto in modo che è necessario usare un modello che non è configurato per un ambito, oppure usare il [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) cmdlet e *EnableInLegacyApps*parametro.
 
 ## <a name="instructions-to-configure-file-server-resource-manager-fci-for-azure-rights-management-protection"></a>Istruzioni per configurare Infrastruttura di classificazione file di Gestione risorse file server per la protezione di Azure Rights Management
 Seguire queste istruzioni per proteggere automaticamente tutti i file di una cartella usando uno script di Windows PowerShell come attività personalizzata. Eseguire questa procedura secondo l'ordine seguente:
@@ -278,9 +278,9 @@ Quando si è completata la configurazione per la classificazione, si è pronti p
     >     ```
     >     powershell.exe -Noprofile -Command "<path>\RMS-Protect-FCI.ps1 -File '<full path and name of a file>' -TemplateID <template GUID>"
     >     ```
-    >     -   Se lo script viene eseguito correttamente in questa sessione di Windows PowerShell, verificare le voci relative a **Executive** e **Argomento** nell'azione per le attività di gestione file.  Se si è specificato **-OwnerEmail [Indirizzo posta elettronica proprietario file di origine]**, provare a rimuovere questo parametro.
+    >     -   Se lo script viene eseguito correttamente in questa sessione di Windows PowerShell, verificare le voci relative a **Executive** e **Argomento** nell'azione per le attività di gestione file.  Se si è specificato **-OwnerEmail [Indirizzo posta elettronica proprietario file di origine]** , provare a rimuovere questo parametro.
     > 
-    >         Se l'attività di gestione dei file funziona correttamente senza **-OwnerEmail [Indirizzo posta elettronica proprietario file di origine]**, verificare che i file non protetti abbiano un utente di dominio elencato come proprietario del file, piuttosto che **SYSTEM**.  Per effettuare questa verifica, usare la scheda **Sicurezza** per le proprietà del file, quindi fare clic su **Avanzate**. Il valore **proprietario** visualizzato immediatamente dopo il **nome** del file. Inoltre, verificare che il file server si trova nello stesso dominio o in un dominio trusted per ricercare l'indirizzo di posta elettronica dell'utente da Active Directory Domain Service.
+    >         Se l'attività di gestione dei file funziona correttamente senza **-OwnerEmail [Indirizzo posta elettronica proprietario file di origine]** , verificare che i file non protetti abbiano un utente di dominio elencato come proprietario del file, piuttosto che **SYSTEM**.  Per effettuare questa verifica, usare la scheda **Sicurezza** per le proprietà del file, quindi fare clic su **Avanzate**. Il valore **proprietario** visualizzato immediatamente dopo il **nome** del file. Inoltre, verificare che il file server si trova nello stesso dominio o in un dominio trusted per ricercare l'indirizzo di posta elettronica dell'utente da Active Directory Domain Service.
     > -   Se si visualizza il numero corretto di file nel report, ma i file non sono protetti, provare a proteggerli manualmente usando il cmdlet [Protect-RMSFile](/powershell/azureinformationprotection/vlatest/protect-rmsfile) per vedere se sono visualizzati eventuali errori.
 
 Dopo aver verificato che queste operazioni vengono eseguite correttamente, è possibile chiudere Gestione risorse file. I file nuovi vengono classificati e protetti automaticamente quando vengono eseguite le attività pianificate. 

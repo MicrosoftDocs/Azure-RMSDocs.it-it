@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 75846ee1-2370-4360-81ad-e2b6afe3ebc9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a6a7afc607694bc8b81682aa021e9dbbe1dc3262
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: 00d794b0ce354ecb9d350a93ef7778d5a5f44663
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156588"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521162"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configurazione dei server per il connettore di Azure Rights Management
 
@@ -106,7 +106,7 @@ Dopo aver apportato modifiche alla configurazione di questi server, è necessari
     Get-help .\GenConnectorConfig.ps1 -detailed
     ```
 
-Per eseguire lo script è necessario immettere l'URL del connettore RMS dell'organizzazione. Immettere il prefisso del protocollo (HTTP:// o HTTPS://) e il nome del connettore definito nel DNS per l'indirizzo di bilanciamento del carico del connettore stesso, Ad esempio https://connector.contoso.com. Lo strumento usa quindi tale URL per contattare i server che eseguono il connettore RMS e ottenere altri parametri usati per creare le configurazioni richieste.
+Per eseguire lo script è necessario immettere l'URL del connettore RMS dell'organizzazione. Immettere il prefisso del protocollo (HTTP:// o HTTPS://) e il nome del connettore definito nel DNS per l'indirizzo di bilanciamento del carico del connettore stesso, Ad esempio, https:\//connector.contoso.com. Lo strumento usa quindi tale URL per contattare i server che eseguono il connettore RMS e ottenere altri parametri usati per creare le configurazioni richieste.
 
 > [!IMPORTANT]
 > Quando si esegue questo strumento, assicurarsi di specificare il nome del connettore RMS con carico bilanciato per l'organizzazione e non il nome di un singolo server che esegue il servizio del connettore RMS.
@@ -211,7 +211,7 @@ Per usare un connettore RMS, è necessario che i server di SharePoint eseguano u
 
 3.  Abilitare IRM in SharePoint. Per ulteriori informazioni, vedere [Configurare Information Rights Management (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) nella libreria di SharePoint.
 
-    Quando si seguono queste istruzioni, è necessario configurare SharePoint per l'uso del connettore. A questo scopo, specificare l'opzione **Usa il server RMS seguente** e immettere l'URL del connettore di bilanciamento del carico configurato. Immettere il prefisso del protocollo (HTTP:// o HTTPS://) e il nome del connettore definito nel DNS per l'indirizzo di bilanciamento del carico del connettore stesso, Ad esempio, se il nome del connettore è https://connector.contoso.com, la configurazione sarà simile all'immagine seguente:
+    Quando si seguono queste istruzioni, è necessario configurare SharePoint per l'uso del connettore. A questo scopo, specificare l'opzione **Usa il server RMS seguente** e immettere l'URL del connettore di bilanciamento del carico configurato. Immettere il prefisso del protocollo (HTTP:// o HTTPS://) e il nome del connettore definito nel DNS per l'indirizzo di bilanciamento del carico del connettore stesso, Ad esempio, se il nome del connettore è https: \/ /connector.contoso.com, la configurazione avrà un aspetto simile all'immagine seguente:
 
     ![Configurazione di SharePoint Server per il connettore RMS](./media/AzRMS_SharePointConnector.png)
 

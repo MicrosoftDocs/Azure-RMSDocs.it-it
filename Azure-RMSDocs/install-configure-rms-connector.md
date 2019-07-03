@@ -4,19 +4,19 @@ description: Informazioni sull'installazione e la configurazione del connettore 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: b92dfe6128a8ba361ebf4d0a047bdee2a124df46
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: 2d29d2ba60e8fd57fdb50f7bc9f4e6bee27230a4
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156498"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521170"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installazione e configurazione del connettore di Azure Rights Management
 
@@ -63,40 +63,40 @@ Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-s
 
 È possibile usare un account con uno dei privilegi seguenti:
 
-- **Amministratore globale del tenant**: un account che sia un amministratore globale per il tenant di Office 365 o il tenant di Azure AD.
+-   **Amministratore globale del tenant**: un account che sia un amministratore globale per il tenant di Office 365 o il tenant di Azure AD.
 
-- **Amministratore globale di Azure Rights Management**: account in Azure Active Directory a cui è stato assegnato il ruolo di amministratore globale di Azure RMS.
+-   **Amministratore globale di Azure Rights Management**: account in Azure Active Directory a cui è stato assegnato il ruolo di amministratore globale di Azure RMS.
 
-- **Amministratore del connettore di Azure Rights Management**: Un account di Azure Active Directory che sono stati concessi diritti di installazione e amministrazione del connettore RMS per l'organizzazione.
+-   **Amministratore del connettore di Azure Rights Management**: Un account di Azure Active Directory che sono stati concessi diritti di installazione e amministrazione del connettore RMS per l'organizzazione.
 
-  > [!NOTE]
-  > Il ruolo di amministratore globale di Azure Rights Management e il ruolo di amministratore di connettore di Azure Rights Management vengono assegnati agli account con il cmdlet di Azure RMS [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator).
-  > 
-  > Per eseguire il connettore RMS con privilegi minimi, creare un account dedicato a questo scopo e assegnare a questo il ruolo di amministratore di connettore di Azure RMS tramite le operazioni seguenti:
-  > 
-  > 1. Se non è ancora stato fatto, scaricare e installare Windows PowerShell per Rights Management. Per altre informazioni, vedere [Installazione del modulo PowerShell AADRM](install-powershell.md).
-  > 
-  >    Avviare Windows PowerShell con l'opzione **Esegui come amministratore** e usare il comando [Connect-AadrmService](/powershell/module/aadrm/connect-aadrmservice) per connettersi al servizio Azure RMS:
-  > 
-  >    ```
-  >    Connect-AadrmService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
-  >    ```
-  > 2. Eseguire quindi il comando [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator) usando solo uno dei parametri seguenti:
-  > 
-  >    ```
-  >    Add-AadrmRoleBasedAdministrator -EmailAddress <email address> -Role "ConnectorAdministrator"
-  >    ```
-  > 
-  >    ```
-  >    Add-AadrmRoleBasedAdministrator -ObjectId <object id> -Role "ConnectorAdministrator"
-  >    ```
-  > 
-  >    ```
-  >    Add-AadrmRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
-  >    ```
-  >    Ad esempio, digitare il comando seguente: **Add-AadrmRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
-  > 
-  >    Anche se questi comandi assegnano il ruolo di amministratore di connettore, è possibile usare anche il ruolo GlobalAdministrator.
+    > [!NOTE]
+    > Il ruolo di amministratore globale di Azure Rights Management e un ruolo di amministratore di connettore di Azure Rights Management vengono assegnati agli account con il [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) cmdlet.
+    > 
+    > Per eseguire il connettore RMS con privilegi minimi, creare un account dedicato a questo scopo e assegnare a questo il ruolo di amministratore di connettore di Azure RMS tramite le operazioni seguenti:
+    >
+    > 1.  Se non già stato fatto, scaricare e installare il modulo AIPService PowerShell. Per altre informazioni, vedere [installazione del modulo AIPService PowerShell](install-powershell.md).
+    >
+    >     Avviare Windows PowerShell con il **Esegui come amministratore** comando e connettersi al servizio di protezione utilizzando il [Connect AipService](/powershell/module/aipservice/connect-aipservice) comando:
+    >
+    >     ```
+    >     Connect-AipService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
+    >     ```
+    > 2.  Quindi eseguire la [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) comando, usando solo uno dei parametri seguenti:
+    >
+    >     ```
+    >     Add-AipServiceRoleBasedAdministrator -EmailAddress <email address> -Role "ConnectorAdministrator"
+    >     ```
+    >
+    >     ```
+    >     Add-AipServiceRoleBasedAdministrator -ObjectId <object id> -Role "ConnectorAdministrator"
+    >     ```
+    >
+    >     ```
+    >     Add-AipServiceRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
+    >     ```
+    >     Ad esempio, digitare il comando seguente: **Add-AipServiceRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
+    >
+    >     Anche se questi comandi assegnano il ruolo di amministratore di connettore, è possibile usare anche il ruolo GlobalAdministrator.
 
 Durante il processo di installazione del connettore RMS, vengono eseguite la convalida e l'installazione di tutti i prerequisiti software, l'installazione di Internet Information Services (se non già presente nel sistema) e l'installazione e configurazione del software del connettore. Viene anche preparata la configurazione di Azure RMS con la creazione degli elementi seguenti:
 

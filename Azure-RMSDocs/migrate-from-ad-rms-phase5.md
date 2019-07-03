@@ -4,19 +4,19 @@ description: Fase 5 della migrazione da AD RMS ad Azure Information Protection c
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/15/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fd0edb3f9ce5b820a7e19c84e8d04b433c007569
-ms.sourcegitcommit: b24de99cf8006a70a14e7a21d103644c1e20502d
+ms.openlocfilehash: bf2675aa43e2c15761fdd46b94e3bb19253cadc3
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67149267"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67522078"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Fase 5 della migrazione: attività post-migrazione
 
@@ -96,17 +96,17 @@ Per rimuovere i controlli di onboarding:
 
 1. In una sessione di PowerShell, connettersi al servizio Azure Rights Management e, quando richiesto, specificare le credenziali di amministratore globale:
 
-        Connect-Aadrmservice
+        Connect-AipService
 
 2. Eseguire il comando seguente e immettere **Y** per confermare:
 
-        Set-AadrmOnboardingControlPolicy -UseRmsUserLicense $False
+        Set-AipServiceOnboardingControlPolicy -UseRmsUserLicense $False
     
     Si noti che questo comando rimuove qualsiasi applicazione della licenza per il servizio di protezione Azure Rights Management, in modo che tutti i computer possano proteggere documenti e messaggi di posta elettronica.
 
 3. Verificare che i controlli di selezione non siano più impostati:
 
-        Get-AadrmOnboardingControlPolicy
+        Get-AipServiceOnboardingControlPolicy
 
     Nell'output, **License** deve includere **False** e non c'è nessun GUID visualizzato in **SecurityGroupOjbectId**
 
@@ -126,11 +126,11 @@ Il passaggio da una chiave all'altra non avviene immediatamente, ma richiede alc
 
 Per reimpostare la chiave del tenant di Azure Information Protection:
 
-- **Se la chiave del tenant è gestita da Microsoft**: eseguire il cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) di PowerShell e specificare l'identificatore per la chiave creata automaticamente per il tenant. È possibile identificare il valore da specificare eseguendo il cmdlet [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys). La chiave creata automaticamente per il tenant porta la data di creazione meno recente, in modo da poterla identificare usando il comando seguente:
+- **Se la chiave del tenant è gestita da Microsoft**: Eseguire il cmdlet di PowerShell [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) e specificare l'identificatore di chiave per la chiave creata automaticamente per il tenant. È possibile identificare il valore da specificare eseguendo il [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) cmdlet. La chiave creata automaticamente per il tenant porta la data di creazione meno recente, in modo da poterla identificare usando il comando seguente:
     
-        (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
+        (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- **Se la chiave del tenant è gestita dall'utente (BYOK)** : in Azure Key Vault ripetere il processo di creazione della chiave che si sta usando per il tenant di Azure Information Protection, quindi eseguire nuovamente il cmdlet [Use-AadrmKeyVaultKey](/powershell/aadrm/vlatest/use-aadrmkeyvaultkey) per specificare l'URI della nuova chiave. 
+- **Se la chiave del tenant è gestita dall'utente (BYOK)** : In Azure Key Vault, ripetere il processo di creazione della chiave per il tenant di Azure Information Protection e quindi eseguire la [utilizzare AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) cmdlet per specificare l'URI della nuova chiave. 
 
 Per altre informazioni sulla gestione della chiave del tenant di Azure Information Protection, vedere [Operazioni relative alla chiave del tenant di Azure Information Protection](./operations-tenant-key.md).
 

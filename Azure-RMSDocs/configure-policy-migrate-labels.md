@@ -4,18 +4,18 @@ description: Eseguire la migrazione di etichette di Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 07/03/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: b0beddbd21d17cfe35d8efb2b1280f5fd7c17912
-ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
+ms.openlocfilehash: a1fbc9dcb517eb272d1c32c0e81cc06039612c2b
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67305740"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520894"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Come eseguire la migrazione di etichette di Azure Information Protection a etichette di riservatezza di Office 365
 
@@ -66,7 +66,7 @@ Prima di eseguire la migrazione delle etichette, prendere nota delle seguenti mo
         
         Suggerimento: Per facilitare la riconfigurazione di queste etichette, può essere utile avere due finestre del browser: una finestra in cui selezionare il pulsante **Modifica modello** per l'etichetta in modo da visualizzare le impostazioni di protezione e l'altra per configurare le stesse impostazioni quando si seleziona **Imposta autorizzazioni**.
     
-    - Dopo la migrazione di un'etichetta con le impostazioni di protezione basate sul cloud, l'ambito risultante del modello di protezione è l'ambito definito nel portale di Azure (o mediante il modulo PowerShell AADRM) e quello definito nei centri di amministrazione. 
+    - Dopo la migrazione di un'etichetta con le impostazioni di protezione basati sul cloud è stata eseguita, l'ambito risulta del modello di protezione è l'ambito definito nel portale di Azure (o usando il modulo AIPService PowerShell) e l'ambito definito nelle interfacce di amministrazione. 
 
 - Quando si esegue la migrazione delle etichette, i risultati della migrazione visualizzano se un'etichetta è stata **creata**, **aggiornata** o **rinominata** per motivi di duplicazione:
 

@@ -5,7 +5,7 @@ keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
-ms.date: 02/23/2017
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.assetid: EA1457D1-282F-4CF3-A23C-46793D2C2F32
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: dbd7969d5e6d87ec2d8e935f44867d58dfee9751
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: b2e625ad8c238d592656129cbc1542e4f6f24f97
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178387"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521220"
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>Procedura: Consentire all'applicazione di servizio di usare RMS basato su cloud
 
@@ -83,11 +83,11 @@ Per usare l'applicazione di servizio Rights Management Services SDK 2.1 con Azur
 -   Installare il [modulo Powershell per Azure RMS](https://technet.microsoft.com/library/jj585012.aspx).
 -   Avviare Powershell ed eseguire i comandi seguenti per ottenere la configurazione RMS del tenant.
 
-    `Import-Module aadrm`
+    `Import-Module AIPService`
 
-    `Connect-AadrmService` (digitare le credenziali di amministratore)
+    `Connect-AipService` (digitare le credenziali di amministratore)
 
-    `Get-AadrmConfiguration`
+    `Get-AipServiceConfiguration`
 
 
 - Creare un'istanza di [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx) e impostare alcuni membri.
@@ -105,7 +105,7 @@ Per altre informazioni, vedere [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.mi
 
 -   Creare un'istanza di struttura [IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx) che contenga l'istanza [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx).
 
-**Nota**: i membri di *conectionInfo* sono impostati con gli URL ottenuti dalla chiamata precedente a `Get-AadrmConfiguration` e indicati con tali nomi di campo.
+**Nota** : i membri di *connectionInfo* sono impostati con gli URL ottenuti dalla chiamata precedente a `Get-AipServiceConfiguration` e indicati con tali nomi di campo.
 
     // Create a credential structure.
     IPC_CREDENTIAL cred = {0};

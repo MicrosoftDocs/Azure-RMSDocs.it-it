@@ -4,18 +4,18 @@ description: Istruzioni e informazioni per amministratori per gestire il client 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.suite: ems
-ms.openlocfilehash: 1280a909ec74bf831af5e856274bc6f53a03a5e9
-ms.sourcegitcommit: a26e4e50165107efd51280b5c621dfe74be51a7a
+ms.openlocfilehash: 6afeef61671eaaf6fffdb7a0a5bb6ef93b1cf8ce
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67236959"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535139"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
 
@@ -94,7 +94,7 @@ Oltre ai prerequisiti per l'installazione del modulo AzureInformationProtection,
 
 Questo prerequisito è valido se la protezione dei dati viene applicata tramite etichette o connessione diretta al servizio Azure Rights Management.
 
-Se il tenant Azure Information Protection non è attivato, vedere le istruzioni in [Attivazione di Azure Rights Management](../activate-service.md).
+Se il tenant di Azure Information Protection non è attivato, vedere le istruzioni [attivazione del servizio di protezione di Azure Information Protection](../activate-service.md).
 
 #### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>Prerequisito 2: per rimuovere la protezione dai file per altri utenti usando il proprio account
 
@@ -119,12 +119,12 @@ Per poter rimuovere la protezione dai file, è necessario avere diritti di utili
 Per ottenere i valori ed eseguire Set-RMSServerAuthentication automaticamente:
 
 ````
-# Make sure that you have the AADRM and MSOnline modules installed
+# Make sure that you have the AIPService and MSOnline modules installed
 
 $ServicePrincipalName="<new service principal name>"
-Connect-AadrmService
-$bposTenantID=(Get-AadrmConfiguration).BPOSId
-Disconnect-AadrmService
+Connect-AipService
+$bposTenantID=(Get-AipServiceConfiguration).BPOSId
+Disconnect-AipServiceService
 Connect-MsolService
 New-MsolServicePrincipal -DisplayName $ServicePrincipalName
 
@@ -139,37 +139,37 @@ Nelle sezioni successive viene illustrato come ottenere e specificare manualment
 
 ##### <a name="to-get-the-bpostenantid"></a>Per ottenere BposTenantId
 
-Eseguire il cmdlet Get-AadrmConfiguration dal modulo di Windows PowerShell Azure per RMS:
+Eseguire il cmdlet Get-AipServiceConfiguration dal modulo di Windows PowerShell per Azure RMS:
 
-1. Se questo modulo non è ancora installato nel computer, vedere [Installazione del modulo PowerShell AADRM](../install-powershell.md).
+1. Se questo modulo non è già installato nel computer in uso, vedere [installazione del modulo AIPService PowerShell](../install-powershell.md).
 
 2. Avviare Windows PowerShell usando l'opzione **Esegui come amministratore**.
 
-3. Usare il cmdlet `Connect-AadrmService` per connettersi al servizio Azure Rights Management:
-
-        Connect-AadrmService
-
+3. Usare il cmdlet `Connect-AipService` per connettersi al servizio Azure Rights Management:
+    
+        Connect-AipService
+    
     Quando richiesto, immettere le credenziali di amministratore del tenant di Azure Information Protection. In genere si usa un account che sia un amministratore globale per Azure Active Directory o Office 365.
-
-4. Eseguire `Get-AadrmConfiguration` ed eseguire una copia del valore di BPOSId.
-
-    Un esempio dell'output di Get-AadrmConfiguration:
-
+    
+4. Eseguire `Get-AipServiceConfiguration` ed eseguire una copia del valore di BPOSId.
+    
+    Un esempio di output da Get-AipServiceConfiguration:
+    
             BPOSId                                   : 23976bc6-dcd4-4173-9d96-dad1f48efd42
-
+        
             RightsManagement ServiceId               : 1a302373-f233-440600909-4cdf305e2e76
-
+        
             LicensingIntranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-
+        
             LicensingExtranetDistributionPointUrl    : https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/licensing
-
+        
             CertificationIntranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
-
+        
             CertificationExtranetDistributionPointUrl: https://1s302373-f233-4406-9090-4cdf305e2e76.rms.na.aadrm.com/_wmcs/certification
 
 5. Disconnettersi dal servizio:
-
-        Disconnect-AadrmService
+    
+        Disconnect-AipServiceService
 
 ##### <a name="to-get-the-appprincipalid-and-symmetric-key"></a>Per ottenere l'identificatore AppPrincipalId e la chiave simmetrica
 
@@ -233,9 +233,9 @@ Il comando di esempio sarà simile al seguente:
 
 Come illustrato nel comando precedente, è possibile specificare i valori con un singolo comando, usando uno script da eseguire in modo non interattivo. A scopo di test è tuttavia possibile digitare solo Set-RMSServerAuthentication e indicare i valori uno alla volta quando vengono richiesti. Al termine dell'esecuzione del comando il client funziona in "modalità server", adatta per l'uso non interattivo, ad esempio per gli script e l'infrastruttura di classificazione file per Windows Server.
 
-Considerare la possibilità di trasformare questo account dell'entità servizio in utente con privilegi avanzati: per garantire che l'account dell'entità servizio possa sempre rimuovere la protezione dei file per altri utenti, è possibile configurarlo come utente con privilegi avanzati. Usare lo stesso cmdlet per Azure RMS, [Add-AadrmSuperUser](/powershell/module/aadrm/add-aadrmsuperuser), usato per configurare un account utente standard come utente con privilegi avanzati, ma specificare il parametro **-ServicePrincipalId** con il valore di AppPrincipalId.
+Considerare la possibilità di trasformare questo account dell'entità servizio in utente con privilegi avanzati: per garantire che l'account dell'entità servizio possa sempre rimuovere la protezione dei file per altri utenti, è possibile configurarlo come utente con privilegi avanzati. Allo stesso modo quando si configura un account utente standard per un utente con privilegi avanzati, è utilizzare lo stesso cmdlet di Azure RMS, [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser), ma specificare il **ServicePrincipalId** parametro con il Valore di AppPrincipalId.
 
-Per altre informazioni, vedere [Configurazione degli utenti con privilegi avanzati per Rights Management di Azure e servizi di individuazione o ripristino dei dati](../configure-super-users.md).
+Per altre informazioni sugli utenti con privilegi avanzati, vedere [configurando gli utenti con privilegi avanzati per il ripristino di dati o servizi di Azure Information Protection e l'individuazione](../configure-super-users.md).
 
 > [!NOTE]
 > Per usare il proprio account per l'autenticazione al servizio Azure Rights Management, non è necessario eseguire Set-RMSServerAuthentication prima di proteggere i file o rimuoverne la protezione o di ottenere modelli.
@@ -244,7 +244,7 @@ Per altre informazioni, vedere [Configurazione degli utenti con privilegi avanza
 
 Quando si usa un account dell'entità di sicurezza del servizio per proteggere i file e scaricare i modelli al di fuori dell'area America del Nord di Azure, è necessario modificare il Registro di sistema: 
 
-1. Eseguire di nuovo il cmdlet Get-AadrmConfiguration e annotare i valori di **CertificationExtranetDistributionPointUrl** e **LicensingExtranetDistributionPointUrl**.
+1. Eseguire nuovamente il cmdlet Get-AipServiceConfiguration e prendere nota dei valori per **CertificationExtranetDistributionPointUrl** e **LicensingExtranetDistributionPointUrl**.
 
 2. In ogni computer in cui si eseguiranno i cmdlet di AzureInformationProtection aprire l'editor del Registro di sistema.
 

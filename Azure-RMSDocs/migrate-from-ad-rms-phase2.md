@@ -4,19 +4,19 @@ description: Fase 2 della migrazione da AD RMS ad Azure Information Protection, 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: dbbea622800561cb0a466f6dda90e9910f1c7db4
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: 5d822b36fd7dd38713b8bd3d42aee72838b24195
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65781873"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67522101"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 della migrazione: configurazione lato server per AD RMS
 
@@ -106,11 +106,11 @@ Aprire una sessione di PowerShell ed eseguire i comandi seguenti:
 
 1. Connettersi al servizio Azure Rights Management e, quando richiesto, specificare le credenziali di amministratore globale:
     
-        Connect-Aadrmservice
+        Connect-AipService
 
 2. Attivare il servizio Azure Rights Management:
     
-        Enable-Aadrm
+        Enable-AipService
 
 **Che cosa accade se il tenant di Azure Information Protection è già attivato?** Se il servizio Azure Rights Management è già attivato per l'organizzazione e sono stati creati modelli personalizzati che si vogliono usare dopo la migrazione, è necessario esportare e importare questi modelli. Questa procedura viene descritta nel passaggio successivo. 
 
@@ -134,11 +134,11 @@ Le modifiche del modello che potrebbe essere necessario apportare per questo pas
 
 Se i modelli personalizzati sono stati creati prima della migrazione, prima o dopo l'attivazione del servizio Azure Rights Management, i modelli non saranno disponibili per gli utenti dopo la migrazione, anche se sono stati impostati su **Pubblicato**. Per renderli disponibili agli utenti, è necessario eseguire prima le operazioni seguenti: 
 
-1. Identificare i modelli e prendere nota del relativo ID modello, eseguendo [Get-AadrmTemplate](/powershell/aadrm/vlatest/get-aadrmtemplate). 
+1. Identificare questi modelli e prendere nota del relativo ID modello, eseguendo il [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate). 
 
-2. Esportare i modelli tramite il cmdlet PowerShell di Azure RMS, [Export-AadrmTemplate](/powershell/aadrm/vlatest/export-aadrmtemplate).
+2. Esportare i modelli usando il cmdlet di PowerShell di Azure RMS [Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate).
 
-3. Importare i modelli tramite il cmdlet PowerShell di Azure RMS, [Import-AadrmTemplate](/powershell/module/aadrm/import-aadrmtemplate).
+3. Importare i modelli usando il cmdlet di PowerShell per Azure RMS, [Import-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetpd).
 
 È quindi possibile pubblicare o archiviare questi modelli come qualsiasi altro modello creato dopo la migrazione.
 

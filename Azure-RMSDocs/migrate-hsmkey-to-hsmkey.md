@@ -4,19 +4,19 @@ description: Le istruzioni che fanno parte del percorso di migrazione da AD RMS 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5bbf37e-f1bf-4010-a60f-37177c9e9b39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 11391088aa0e2a084198cdb0aa73eeb6be0795d0
-ms.sourcegitcommit: 3e948723644f19c935bc7111dec1cc54a1ff0231
+ms.openlocfilehash: b4861b7955237df9b9d282330a8bd3752b00d6e6
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65780848"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535213"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave HSM protetta a un'altra
 
@@ -64,9 +64,9 @@ Ora che la chiave HSM è stata preparata in Insieme di credenziali delle chiavi 
 
 Queste procedure vengono eseguite dall'amministratore di Azure Information Protection.
 
-1. Nella workstation connessa a Internet e nella sessione di PowerShell connettersi al servizio Azure Rights Management usando il cmdlet [Connect-AadrmService](/powershell/aadrm/vlatest/connect-aadrmservice).
+1. Nella workstation connessa a Internet e nella sessione di PowerShell connettersi al servizio Azure Rights Management usando il cmdlet [Connect-AadrmService](/powershell/module/aipservice/connect-aipservice).
     
-    Caricare quindi ogni file del dominio di pubblicazione trusted (con estensione xml) tramite il cmdlet [Import-AadrmTpd](/powershell/aadrm/vlatest/import-aadrmtpd). Ad esempio, è necessario avere almeno un file aggiuntivo da importare in caso di aggiornamento del cluster AD RMS per la modalità di crittografia 2.
+    Caricare quindi ogni file di dominio (con estensione XML) pubblicazione attendibile, usando il [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) cmdlet. Ad esempio, è necessario avere almeno un file aggiuntivo da importare in caso di aggiornamento del cluster AD RMS per la modalità di crittografia 2.
     
     Per eseguire questo cmdlet, sono necessari la password specificata in precedenza per ogni file di dati di configurazione e l'URL della chiave identificato nel passaggio precedente.
     
@@ -79,20 +79,20 @@ Queste procedure vengono eseguite dall'amministratore di Azure Information Prote
     Immettere la password specificata per esportare il file di dati di configurazione. Eseguire quindi il comando seguente e confermare che si vuole eseguire questa azione:
     
     ```
-    Import-AadrmTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword $TPD_Password –KeyVaultKeyUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
+    Import-AipServiceTpd -TpdFile "C:\contoso-tpd1.xml" -ProtectionPassword $TPD_Password –KeyVaultKeyUrl https://contoso-byok-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333 -Verbose
     ```
     
     Durante l'importazione, la chiave del certificato concessore di licenze server viene importata e impostata automaticamente come archiviata.
 
-2.  Dopo aver caricato ogni file, eseguire [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) per specificare quale chiave importata corrisponde alla chiave del certificato concessore di licenze server attualmente attiva nel cluster AD RMS. Questa chiave diventa la chiave del tenant attiva per il servizio Azure Rights Management.
+2.  Dopo aver caricato ogni file, eseguire [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) per specificare quale chiave importata corrisponde alla chiave del certificato concessore di licenze attualmente attiva nel cluster AD RMS. Questa chiave diventa la chiave del tenant attiva per il servizio Azure Rights Management.
 
-3.  Usare il cmdlet [Disconnect-AadrmService](/powershell/aadrm/vlatest/disconnect-aadrmservice) per disconnettersi dal servizio Azure Rights Management:
+3.  Usare la [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) cmdlet per disconnettersi dal servizio Azure Rights Management:
 
     ```
-    Disconnect-AadrmService
+    Disconnect-AipServiceService
     ```
 
-Se successivamente si deve confermare quale chiave viene usata dal tenant di Azure Information Protection in Insieme di credenziali delle chiavi di Azure, usare il cmdlet [Get-AadrmKeys](/powershell/aadrm/vlatest/get-aadrmkeys) di Azure RMS.
+Se successivamente si deve confermare quale chiave di Azure Information Protection tramite chiave del tenant di Azure Key Vault, usare il [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) cmdlet per Azure RMS.
 
 È ora possibile andare al [Passaggio 5. Attivare il servizio Azure Rights Management](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).
 

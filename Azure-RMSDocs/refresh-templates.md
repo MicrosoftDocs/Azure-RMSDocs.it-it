@@ -4,19 +4,19 @@ description: Quando si usa Azure Rights Management, i modelli vengono scaricati 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 44925ad0a2c384978d3f91c1d40a5b6b11d5a2a6
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 5939869dd421899a4b929b262e8a18790debaf5c
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181498"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535076"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aggiornamento di modelli per utenti e servizi
 
@@ -47,7 +47,7 @@ Modificando il Registro di sistema nei computer che eseguono app di Office 365, 
 ### <a name="to-change-the-automatic-schedule"></a>Per modificare la pianificazione automatica
 
 1.  Utilizzando un editor del Registro di sistema, creare e impostare uno dei seguenti valori del Registro di sistema:
-
+    
     - Per impostare una frequenza di aggiornamento in giorni (minimo di 1 giorno):  Creare un nuovo valore del Registro di sistema denominato **TemplateUpdateFrequency** e definire un valore intero per i dati, che specifica la frequenza in giorni per il download di tutte le modifiche a un modello scaricato. Usare le informazioni seguenti per individuare il percorso del Registro di sistema per creare questo nuovo valore del registro.
 
         **Percorso del Registro di sistema:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
@@ -81,7 +81,7 @@ Modificando il Registro di sistema nei computer che eseguono app di Office 365, 
    > [!TIP]
    > Nel percorso del Registro di sistema, <*MicrosoftRMS_FQDN*> fa riferimento all’FQDN del servizio Microsoft RMS. Se si desidera verificare questo valore:
    > 
-   > Eseguire il cmdlet [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) per Azure RMS. Se non è stato ancora installato il modulo Windows PowerShell per Azure RMS, vedere [Installazione di Windows PowerShell per Microsoft Azure Rights Management](install-powershell.md).
+   > Eseguire la [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) cmdlet per Azure Information Protection. Se già stato installato il modulo AIPService PowerShell, vedere [installazione del modulo AIPService PowerShell](install-powershell.md).
    > 
    > Nell'output identificare il valore **LicensingIntranetDistributionPointUrl** .
    > 
@@ -94,7 +94,6 @@ Modificando il Registro di sistema nei computer che eseguono app di Office 365, 
 2. Eliminare la cartella seguente e tutti i file in essa contenuti: **%localappdata%\Microsoft\MSIPC\Templates**
 
 3. Riavviare le applicazioni di Office e le istanze di Esplora file.
-
 
 ## <a name="see-also"></a>Vedere anche
 [Configurazione e gestione dei modelli nei criteri di Azure Information Protection](configure-policy-templates.md)

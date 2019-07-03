@@ -4,19 +4,19 @@ description: Per preparare l'ambiente e per implementare e gestire Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 311e8991d4527c48f2d76deba8a93264f4a08dad
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: 6b0918c4f5bd77bec2b0e155eae55882a55d1b54
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156556"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520561"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Guida di orientamento per la distribuzione di Azure Information Protection
 
@@ -93,15 +93,15 @@ Quando gli utenti sono in grado di assegnare etichette ai documenti e ai messagg
 
 1. Decidere se si desidera che Microsoft gestisca la chiave del tenant (impostazione predefinita) oppure generare e gestire personalmente la chiave del tenant. Questo servizio è noto come BYOK (Bring Your Own Key). Per altre informazioni, vedere [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md).
 
-2. Installare il modulo di PowerShell per AADRM in almeno un computer dotato di accesso a Internet. È possibile eseguire questo passaggio subito o più avanti. Per altre informazioni, vedere [Installazione del modulo PowerShell AADRM](./install-powershell.md).
+2. Installare il modulo PowerShell per AIPService in almeno un computer che abbia accesso a Internet. È possibile eseguire questo passaggio subito o più avanti. Per altre informazioni, vedere [installazione del modulo AIPService PowerShell](./install-powershell.md).
 
 3. Se attualmente si usa Active Directory Rights Management Services: Eseguire una migrazione per spostare le chiavi, modelli e gli URL nel cloud. Per altre informazioni, vedere [Migrazione da AD RMS a Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-4. Verificare che il servizio di protezione sia attivato in modo che sia possibile iniziare a proteggere documenti e messaggi di posta elettronica. Se è richiesta una distribuzione in più fasi, configurare i controlli di selezione utenti per limitare la capacità degli utenti di applicare la protezione. Per ulteriori informazioni, vedere l'articolo relativo all'[attivazione di Azure Rights Management](./activate-service.md).
+4. Verificare che il servizio di protezione sia attivato in modo che sia possibile iniziare a proteggere documenti e messaggi di posta elettronica. Se è richiesta una distribuzione in più fasi, configurare i controlli di selezione utenti per limitare la capacità degli utenti di applicare la protezione. Per altre informazioni, vedere [attivazione del servizio di protezione di Azure Information Protection](./activate-service.md).
 
 Facoltativamente, considerare la possibilità di configurare quanto segue:
 
-- Registrazione dei dati di utilizzo per monitorare le modalità con cui l'organizzazione usa il servizio di protezione. È possibile eseguire questo passaggio subito o più avanti. Per altre informazioni, vedere [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](./log-analyze-usage.md).
+- Registrazione dei dati di utilizzo per monitorare le modalità con cui l'organizzazione usa il servizio di protezione. È possibile eseguire questo passaggio subito o più avanti. Per altre informazioni, vedere [la registrazione e analisi dell'utilizzo di protezione di Azure Information Protection](./log-analyze-usage.md).
 
 ### <a name="step-5-configure-your-azure-information-protection-policy-applications-and-services-for-data-protection"></a>Passaggio 5: Configurare i criteri di Azure Information Protection, le applicazioni e i servizi per la protezione dei dati
 
@@ -119,7 +119,7 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
 
 3. Configurare la funzionalità relativa agli utenti con privilegi avanzati per il ripristino dei dati
     
-    Se sono presenti servizi IT che prevedono l'analisi dei file che verranno protetti da Azure Information Protection, ad esempio soluzioni di prevenzione della perdita di dati, gateway con crittografia del contenuto e prodotti anti-malware, configurare gli account di questi servizi come utenti con privilegi avanzati per Azure Rights Management. Per ulteriori informazioni, vedere [Configurazione degli utenti con privilegi avanzati per Rights Management di Azure e servizi di individuazione o ripristino dei dati](./configure-super-users.md).
+    Se sono presenti servizi IT che prevedono l'analisi dei file che verranno protetti da Azure Information Protection, ad esempio soluzioni di prevenzione della perdita di dati, gateway con crittografia del contenuto e prodotti anti-malware, configurare gli account di questi servizi come utenti con privilegi avanzati per Azure Rights Management. Per altre informazioni, vedere [configurando gli utenti con privilegi avanzati per il ripristino di dati o servizi di Azure Information Protection e l'individuazione](./configure-super-users.md).
 
 4. Classificare e proteggere i file esistenti in blocco
     
@@ -138,13 +138,13 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
 
 - File del client e registrazione dell'utilizzo del [client Azure Information Protection](./rms-client/client-admin-guide-files-and-logging.md)
 
-- [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](./log-analyze-usage.md)
+- [La registrazione e analisi dell'utilizzo di protezione di Azure Information Protection](./log-analyze-usage.md)
 
 ### <a name="step-7-administer-the-protection-service-for-your-tenant-account-as-needed"></a>Passaggio 7: Amministrare il servizio di protezione per l'account tenant in base alle esigenze
 
 Quando si inizia a usare il servizio di protezione, PowerShell può essere utile per facilitare l'esecuzione di script o l'automazione di modifiche di carattere amministrativo. Per alcune delle configurazioni avanzate potrebbe essere richiesto anche PowerShell. 
 
-Per altre informazioni, vedere [Amministrazione del servizio Azure Rights Management mediante Windows PowerShell](./administer-powershell.md).
+Per altre informazioni, vedere [amministrazione protezione di Azure Information Protection tramite PowerShell](./administer-powershell.md).
 
 
 ## <a name="deployment-roadmap-for-data-protection-only"></a>Guida di orientamento per la distribuzione della sola funzionalità di protezione
@@ -164,17 +164,17 @@ Prima di iniziare a usare il servizio di protezione di Azure Information Protect
 
 2. Decidere se si desidera che Microsoft gestisca la chiave del tenant (impostazione predefinita) oppure generare e gestire personalmente la chiave del tenant. Questo servizio è noto come BYOK (Bring Your Own Key). Per altre informazioni, vedere [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md).
 
-3. Installare il modulo di PowerShell per AADRM in almeno un computer dotato di accesso a Internet. È possibile eseguire questo passaggio subito o più avanti. Per altre informazioni, vedere [Installazione del modulo PowerShell AADRM](./install-powershell.md).
+3. Installare il modulo PowerShell per AIPService in almeno un computer che abbia accesso a Internet. È possibile eseguire questo passaggio subito o più avanti. Per altre informazioni, vedere [installazione del modulo AIPService PowerShell](./install-powershell.md).
 
 4. Se attualmente si usa Active Directory Rights Management Services: Eseguire una migrazione per spostare le chiavi, modelli e gli URL nel cloud. Per altre informazioni, vedere [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
-5. Verificare che il servizio di protezione sia attivato in modo che sia possibile iniziare a proteggere documenti e messaggi di posta elettronica. Se è richiesta una distribuzione in più fasi, configurare i controlli di selezione utenti per limitare la capacità degli utenti di applicare la protezione. Per ulteriori informazioni, vedere l'articolo relativo all'[attivazione di Azure Rights Management](./activate-service.md).
+5. Verificare che il servizio di protezione sia attivato in modo che sia possibile iniziare a proteggere documenti e messaggi di posta elettronica. Se è richiesta una distribuzione in più fasi, configurare i controlli di selezione utenti per limitare la capacità degli utenti di applicare la protezione. Per altre informazioni, vedere [attivazione del servizio di protezione di Azure Information Protection](./activate-service.md).
 
 Facoltativamente, considerare la possibilità di configurare quanto segue:
 
 - Modelli personalizzati per impostazioni di protezione se i modelli predefiniti non sono sufficienti per l'organizzazione. È possibile eseguire questo passaggio subito o più avanti. Per altre informazioni, vedere [Configurazione e gestione dei modelli per Azure Information Protection](./configure-policy-templates.md).
 
-- Registrazione dei dati di utilizzo per monitorare le modalità con cui l'organizzazione usa il servizio di protezione. È possibile eseguire questo passaggio subito o più avanti. Per altre informazioni, vedere [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](./log-analyze-usage.md).
+- Registrazione dei dati di utilizzo per monitorare le modalità con cui l'organizzazione usa il servizio di protezione. È possibile eseguire questo passaggio subito o più avanti. Per altre informazioni, vedere [la registrazione e analisi dell'utilizzo di protezione di Azure Information Protection](./log-analyze-usage.md).
 
 ### <a name="step-3-install-the-azure-information-protection-client-and-configure-applications-and-services-for-rights-management"></a>Passaggio 3: Installare il client Azure Information Protection e configurare applicazioni e servizi per Rights Management
 
@@ -188,7 +188,7 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
 
 3. Configurare la funzionalità relativa agli utenti con privilegi avanzati per il ripristino dei dati
     
-    Se sono presenti servizi IT che prevedono l'analisi dei file che verranno protetti da Azure Information Protection, ad esempio soluzioni di prevenzione della perdita di dati, gateway con crittografia del contenuto e prodotti anti-malware, configurare gli account di questi servizi come utenti con privilegi avanzati per Azure Rights Management. Per ulteriori informazioni, vedere [Configurazione degli utenti con privilegi avanzati per Rights Management di Azure e servizi di individuazione o ripristino dei dati](./configure-super-users.md).
+    Se sono presenti servizi IT che prevedono l'analisi dei file che verranno protetti da Azure Information Protection, ad esempio soluzioni di prevenzione della perdita di dati, gateway con crittografia del contenuto e prodotti anti-malware, configurare gli account di questi servizi come utenti con privilegi avanzati per Azure Rights Management. Per altre informazioni, vedere [configurando gli utenti con privilegi avanzati per il ripristino di dati o servizi di Azure Information Protection e l'individuazione](./configure-super-users.md).
 
 4. Proteggere i file esistenti in blocco 
     
@@ -202,10 +202,10 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
 
 ### <a name="step-4-use-and-monitor-your-data-protection-solutions"></a>Passaggio 4: Usare e monitorare le soluzioni di protezione dei dati
 
-È ora possibile proteggere i dati e registrare come viene usato il servizio di protezione all'interno della società. Per altre informazioni utili per questa fase di distribuzione, vedere [Consentire agli utenti di proteggere i file mediante il servizio Azure Rights Management](./help-users.md) e [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](./log-analyze-usage.md).
+È ora possibile proteggere i dati e registrare come viene usato il servizio di protezione all'interno della società. Per altre informazioni per supportare questa fase di distribuzione, vedere [consentire agli utenti di proteggere i file mediante il servizio Azure Rights Management](./help-users.md) e [la registrazione e analisi dell'utilizzo di protezione dalle informazioni di Azure Protezione](./log-analyze-usage.md).
 
 ### <a name="step-5-administer-the-protection-service-for-your-tenant-account-as-needed"></a>Passaggio 5: Amministrare il servizio di protezione per l'account tenant in base alle esigenze
 
 Quando si inizia a usare il servizio di protezione, PowerShell può essere utile per facilitare l'esecuzione di script o l'automazione di modifiche di carattere amministrativo. Per alcune delle configurazioni avanzate potrebbe essere richiesto anche PowerShell. 
 
-Per altre informazioni, vedere [Amministrazione del servizio Azure Rights Management mediante Windows PowerShell](./administer-powershell.md).
+Per altre informazioni, vedere [amministrazione protezione di Azure Information Protection tramite PowerShell](./administer-powershell.md).

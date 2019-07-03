@@ -4,19 +4,19 @@ description: Configurare e gestire i modelli di protezione, noto anche come mode
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/12/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8301aabb-047d-4892-935c-7574f6af8813
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 7088f50534b30b188580f395e02a65e56df16cf1
-ms.sourcegitcommit: b5b825ec7f08dbdcd70c0016ed3a69e7dd887fef
+ms.openlocfilehash: 90a4ffb31648ca938b0ee266318eea26fe645b5a
+ms.sourcegitcommit: 356d781a32642acdc573fbc9d2f284a34aa414fd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "66840154"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67527231"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurazione e gestione dei modelli per Azure Information Protection
 
@@ -39,7 +39,7 @@ I modelli di protezione, noti anche come modelli di Rights Management, sono un r
 
 ## <a name="default-templates"></a>Modelli predefiniti
 
-Quando si ottiene la sottoscrizione ad Azure Information Protection o una sottoscrizione Office 365 che include il servizio Azure Rights Management, vengono creati automaticamente due modelli predefiniti per il tenant. Questi modelli consentono di limitare l'accesso agli utenti autorizzati dell'organizzazione. Quando vengono creati, questi modelli dispongono delle autorizzazioni elencate nella documentazione [Configurazione dei diritti di utilizzo per Azure Rights Management](configure-usage-rights.md#rights-included-in-the-default-templates).
+Quando si ottiene la sottoscrizione ad Azure Information Protection o una sottoscrizione Office 365 che include il servizio Azure Rights Management, vengono creati automaticamente due modelli predefiniti per il tenant. Questi modelli consentono di limitare l'accesso agli utenti autorizzati dell'organizzazione. Quando vengono creati, questi modelli hanno le autorizzazioni elencate nella [configurazione dei diritti di utilizzo per Azure Information Protection](configure-usage-rights.md#rights-included-in-the-default-templates) documentazione.
 
 I modelli sono configurati in modo da consentire l'accesso offline per sette giorni e non hanno una data di scadenza.
 
@@ -68,7 +68,7 @@ Se è stato acquistato la sottoscrizione qualche tempo fa, i modelli predefiniti
 È possibile rinominare e riconfigurare questi modelli predefiniti quando si usa il portale di Azure.
 
 >[!NOTE]
->Se non vengono visualizzati nel pannello **Azure Information Protection - Etichette**, i modelli predefiniti vengono convertiti in etichette o collegati a un'etichetta. Continuano a esistere come modelli, ma nel portale di Azure essi vengono visualizzati come parte di una configurazione di etichetta che include le impostazioni di protezione per una chiave del cloud. È sempre possibile verificare quali sono i modelli del tenant eseguendo [Get-AadrmTemplate](/powershell/module/aadrm/get-aadrmtemplate) dal [modulo PowerShell di AADRM](administer-powershell.md).
+>Se non vengono visualizzati nel pannello **Azure Information Protection - Etichette**, i modelli predefiniti vengono convertiti in etichette o collegati a un'etichetta. Continuano a esistere come modelli, ma nel portale di Azure essi vengono visualizzati come parte di una configurazione di etichetta che include le impostazioni di protezione per una chiave del cloud. È sempre possibile verificare quali i modelli del tenant, eseguendo il [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate) dal [modulo di AIPService PowerShell](administer-powershell.md).
 >
 >È possibile convertire manualmente i modelli, come illustrato nella sezione successiva, [Per convertire i modelli in etichette](#to-convert-templates-to-labels), quindi rinominarli se si desidera. In alternativa, vengono convertiti automaticamente per l'utente se il criterio di Azure Information Protection è stato creato di recente e il servizio di Azure Rights Management per il tenant è stato attivato in quel momento.
 
@@ -78,7 +78,7 @@ Nel pannello **Azure Information Protection - Etichette**, i modelli archiviati 
 
 Prima di modificare i modelli o convertirli in etichette, assicurarsi di essere a conoscenza delle seguenti modifiche e considerazioni. A causa delle modifiche di implementazione, l'elenco seguente è particolarmente importante se si è già gestito dei modelli nel portale di Azure classico.
 
-- Dopo aver modificato o convertito un modello e salvato i criteri di Azure Information Protection, vengono apportate le modifiche seguenti ai [diritti di utilizzo](configure-usage-rights.md) originali. Se necessario, è possibile aggiungere o rimuovere singoli diritti di utilizzo tramite il portale di Azure. In alternativa, usare PowerShell con i cmdlet [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) e [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty).
+- Dopo aver modificato o convertito un modello e salvato i criteri di Azure Information Protection, vengono apportate le modifiche seguenti ai [diritti di utilizzo](configure-usage-rights.md) originali. Se necessario, è possibile aggiungere o rimuovere singoli diritti di utilizzo tramite il portale di Azure. In alternativa, usare PowerShell con il [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) e [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) cmdlet.
     
     - **Consenti macro** (nome comune) viene aggiunto automaticamente. Questo diritto di utilizzo è obbligatorio per la barra di Azure Information Protection nelle app Office.
 
@@ -86,11 +86,11 @@ Prima di modificare i modelli o convertirli in etichette, assicurarsi di essere 
 
 - Non è possibile copiare o eliminare un modello nel portale di Azure. Quando il modello viene convertito in un'etichetta, è possibile configurare l'etichetta per interrompere l'uso del modello selezionando **Non configurato** per l'opzione **Configurare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta** opzione. In alternativa, è possibile eliminare l'etichetta. In entrambi gli scenari, tuttavia, il modello non viene eliminato e rimane in uno stato archiviato.
     
-    È ora possibile eliminare il modello usando il cmdlet PowerShell [Remove-AadrmTemplate](/powershell/module/aadrm/remove-aadrmtemplate). È anche possibile usare questo cmdlet di PowerShell per i modelli che non vengono convertiti in etichette. Tuttavia, per garantire che il contenuto protetto in precedenza possa essere aperto e usato come previsto, in genere è consigliabile evitare di eliminare i modelli. Come procedura consigliata, eliminare i modelli solo se si è certi che non sono stati usati per proteggere documenti o messaggi di posta elettronica nell'ambiente di produzione. Come precauzione è necessario considerare prima l'esportazione del modello come back up tramite il cmdlet [Export-AadrmTemplate](/powershell/module/aadrm/export-aadrmtemplate). 
+    È ora possibile eliminare il modello usando PowerShell [Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate) cmdlet. È anche possibile usare questo cmdlet di PowerShell per i modelli che non vengono convertiti in etichette. Tuttavia, per garantire che il contenuto protetto in precedenza possa essere aperto e usato come previsto, in genere è consigliabile evitare di eliminare i modelli. Come procedura consigliata, eliminare i modelli solo se si è certi che non sono stati usati per proteggere documenti o messaggi di posta elettronica nell'ambiente di produzione. Come precauzione, si potrebbe voler considerare innanzitutto l'esportazione del modello come backup, utilizzando il [Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate) cmdlet. 
 
 - Attualmente, se si modifica e si salva un modello di reparto, la configurazione dell'ambito viene rimossa. L'equivalente di un modello con ambito nei criteri di Azure Information Protection sono i [criteri con ambito](configure-policy-scope.md). Se si converte il modello in etichetta, è possibile selezionare un ambito esistente.
     
-    Inoltre, non è possibile specificare l'impostazione di compatibilità dell'applicazione per un modello di reparto tramite il portale di Azure. Se necessario, è possibile specificare questa impostazione di compatibilità dell'applicazione usando il cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty) e il parametro *EnableInLegacyApps*.
+    Inoltre, non è possibile specificare l'impostazione di compatibilità dell'applicazione per un modello di reparto tramite il portale di Azure. Se necessario, è possibile specificare questa impostazione di compatibilità dell'applicazione tramite il [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) cmdlet e il *EnableInLegacyApps* parametro.
 
 - Durante la conversione o il collegamento di un modello a un'etichetta, questo non può più essere usato da altre etichette. Inoltre, questo modello non viene più visualizzato nella sezione **Protection templates** (Modelli di protezione). 
 

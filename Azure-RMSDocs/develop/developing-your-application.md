@@ -5,7 +5,7 @@ keywords: ''
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
-ms.date: 03/13/2017
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 62d217f7f48d0120ed630b184131b726c21d8363
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: feb0636c025d13dd3a290eb34ecb49eec4ebe284
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179357"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520746"
 ---
 # <a name="developing-your-application"></a>Sviluppo dell'applicazione
 
@@ -35,24 +35,24 @@ La configurazione di Azure per questa app richiede la creazione di un ID tenant,
 
 ### <a name="azure-ad-tenant-configuration"></a>Configurazione del tenant di Azure AD
 
-Per configurare l'ambiente di Azure AD per Azure Information Protection, seguire le indicazioni fornite in [Attivazione di Azure Rights Management](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
+Per configurare l'ambiente di Azure AD per Azure Information Protection, seguire le indicazioni fornite in [attivazione del servizio di protezione di Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
 
-Una volta attivato il servizio saranno necessari i componenti di PowerShell per i passaggi successivi. A tale scopo, vedere [Amministrazione del servizio Azure Rights Management mediante Windows PowerShell](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell).
+Una volta attivato il servizio saranno necessari i componenti di PowerShell per i passaggi successivi. Seguire [amministrazione protezione di Azure Information Protection tramite PowerShell](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell) per eseguire questa operazione.
 
 ### <a name="getting-your-tenant-id"></a>Ottenere un ID tenant
 
 - Eseguire PowerShell come amministratore.
-- Importare il modulo RMS: `Import-Module AADRM`
-- Connettersi al servizio con le credenziali utente assegnate: `Connect-AadrmService –Verbose`
-- Assicurarsi che RMS sia abilitato: `Enable-AADRM`
-- Ottenere l'ID tenant eseguendo: `Get-AadrmConfiguration`
+- Importare il modulo RMS: `Import-Module AIPService`
+- Connettersi al servizio con le credenziali utente assegnate: `Connect-AipService –Verbose`
+- Assicurarsi che RMS sia abilitato: `enable-aipservice`
+- Ottenere l'ID tenant eseguendo: `Get-AipServiceConfiguration`
 
 >Registrare il valore BPOSId (ID tenant). Sarà necessario nei passaggi successivi.
 
 *Output di esempio*
 ![output del cmdlet](../media/develop/output-of-Get-AadrmConfiguration.png)
 
-- Disconnettersi dal servizio: `Disconnect-AadrmService`
+- Disconnettersi dal servizio: `Disconnect-AipServiceService`
 
 ### <a name="create-a-service-principal"></a>Creare un'entità servizio
 Per creare un'entità servizio, seguire questi passaggi:

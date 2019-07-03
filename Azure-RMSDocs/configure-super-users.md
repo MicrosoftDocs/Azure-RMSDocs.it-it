@@ -4,21 +4,21 @@ description: Comprendere e implementare la funzionalità per utenti con privileg
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/02/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: acb4c00b-d3a9-4d74-94fe-91eeb481f7e3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9aa95d164f0211248a45f2376345608f50bac5f6
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: f65e3cbda824dcd2ddcfad0c239cb7831da2fac5
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767879"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520628"
 ---
-# <a name="configuring-super-users-for-azure-rights-management-and-discovery-services-or-data-recovery"></a>Configurazione degli utenti con privilegi avanzati per Azure Rights Management e servizi di individuazione o ripristino dei dati
+# <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Configurazione degli utenti con privilegi avanzati per Azure Information Protection e individuazione dei servizi o ripristino dei dati
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -40,26 +40,26 @@ Per i documenti e i messaggi di posta elettronica protetti dal tenant Azure Info
 
 Per impostazione predefinita, la funzionalità di utente con privilegi avanzati non è abilitata e non sono presenti utenti assegnati a questo ruolo. Viene abilitata automaticamente per l'utente se si configura il connettore Rights Management per Exchange, e non è necessaria per i servizi standard che eseguono Exchange Online, SharePoint Online o SharePoint Server.
 
-Se è necessario abilitare manualmente la funzionalità per utenti con privilegi avanzati, usare il cmdlet [Enable-AadrmSuperUserFeature](/powershell/aadrm/vlatest/enable-aadrmsuperuserfeature) di PowerShell e quindi assegnare utenti (o account del servizio) mediante il cmdlet [Add-AadrmSuperUser](/powershell/aadrm/vlatest/add-aadrmsuperuser) o [Set-AadrmSuperUserGroup](/powershell/aadrm/vlatest/set-aadrmsuperusergroup) e aggiungere utenti (o altri gruppi) a questo gruppo in base alla necessità. 
+Se è necessario abilitare manualmente la funzionalità per utenti con privilegi avanzati, usare il cmdlet di PowerShell [Enable-AipServiceSuperUserFeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature)e quindi assegnare gli utenti (o gli account del servizio) in base alle esigenze usando il [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser) cmdlet o il [Set-AipServiceSuperUserGroup](/powershell/module/aipservice/set-aipservicesuperusergroup) cmdlet e aggiungere utenti (o altri gruppi) necessarie per questo gruppo. 
 
-Anche se un gruppo per utenti con privilegi avanzati è più facile da gestire, tenere presente che, per motivi di prestazioni, Azure Rights Management [memorizza nella cache l'appartenenza ai gruppi](prepare.md#group-membership-caching-by-azure-information-protection). Pertanto, se è necessario assegnare privilegi avanzati a un nuovo utente per decrittografare immediatamente il contenuto, aggiungere l'utente usando Add-AadrmSuperUser, anziché aggiungerlo a un gruppo esistente configurato tramite Set-AadrmSuperUserGroup.
+Anche se un gruppo per utenti con privilegi avanzati è più facile da gestire, tenere presente che, per motivi di prestazioni, Azure Rights Management [memorizza nella cache l'appartenenza ai gruppi](prepare.md#group-membership-caching-by-azure-information-protection). Pertanto, se è necessario assegnare un nuovo utente è un utente con privilegi avanzato decrittografare immediatamente il contenuto, aggiungere l'utente usando Add-AipServiceSuperUser, anziché aggiungere l'utente a un gruppo esistente configurato tramite Set-AipServiceSuperUserGroup.
 
 > [!NOTE]
-> Se non è stato ancora installato il modulo di Windows PowerShell per Azure Rights Management, vedere [Installing the AADRM PowerShell module](install-powershell.md) (Installazione del modulo di PowerShell AADRM).
+> Se non si have ancora installato il modulo Windows PowerShell per Azure Rights Management, vedere [installazione del modulo AIPService PowerShell](install-powershell.md).
 
 Non è importante quando si abilita la funzionalità per utenti con privilegi avanzati o quando si aggiungono utenti come utenti con privilegi avanzati. Ad esempio, se si abilita la funzionalità di giovedì e quindi si aggiunge un utente venerdì, tale utente può immediatamente aprire il contenuto protetto all'inizio della settimana.
 
 ## <a name="security-best-practices-for-the-super-user-feature"></a>Procedure di sicurezza consigliate per la funzionalità per utenti con privilegi avanzati
 
-- Limitare e monitorare gli amministratori a cui viene assegnato un ruolo di amministratore globale per il tenant di Office 365 o Azure Information Protection o a cui viene assegnato il ruolo GlobalAdministrator mediante il cmdlet [Add-AadrmRoleBasedAdministrator](/powershell/module/aadrm/add-aadrmrolebasedadministrator). Questi utenti possono abilitare la funzionalità per utenti con privilegi avanzati e assegnare agli utenti (e a se stessi) la condizione di utenti con privilegi avanzati, e potenzialmente decrittografare tutti i file che l'organizzazione protegge.
+- Limitare e monitorare gli amministratori che vengono assegnati un amministratore globale per il tenant di Office 365 o Azure Information Protection, o a chi viene assegnati il ruolo di GlobalAdministrator utilizzando il [Add-AipServiceRoleBasedAdministrator ](/powershell/module/aipservice/add-aipservicerolebasedadministrator) cmdlet. Questi utenti possono abilitare la funzionalità per utenti con privilegi avanzati e assegnare agli utenti (e a se stessi) la condizione di utenti con privilegi avanzati, e potenzialmente decrittografare tutti i file che l'organizzazione protegge.
 
-- Per verificare gli utenti e gli account del servizio che vengono assegnati individualmente come utenti con privilegi avanzati, usare il cmdlet [Get-AadrmSuperUser](/powershell/module/aadrm/get-aadrmsuperuser). Per verificare se è stato configurato un gruppo di utenti con privilegi avanzati, usare il cmdlet [Get-AadrmSuperUserGroup](/powershell/module/aadrm/get-aadrmsuperusergroup) e gli strumenti standard per la gestione degli utenti per verificare i membri che appartengono a questo gruppo. Come tutte le azioni di amministrazione, quelle di abilitare o disabilitare la caratteristica con privilegi avanzati, e aggiungere o rimuovere gli utenti con privilegi avanzati che vengono registrati, possono essere controllate tramite il comando [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog) . Vedere la sezione successiva per un esempio. Quando gli utenti con privilegi avanzati eseguono la decrittografia dei file, questa azione viene registrata e può essere controllata con la [registrazione dell'utilizzo](log-analyze-usage.md).
+- Per visualizzare quali utenti e gli account del servizio vengono assegnati individualmente come utenti con privilegi avanzati, usare il [Get-AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) cmdlet. Per verificare se è configurato un gruppo di utenti con privilegi avanzati, usare il [Get-AipServiceSuperUserGroup](/powershell/module/aipservice/get-aipservicesuperusergroup) cmdlet e gli strumenti di gestione utente standard per controllare quali utenti sono membri di questo gruppo. Come tutte le azioni di amministrazione, abilitare o disabilitare la caratteristica con privilegi avanzata e aggiungendo o rimuovendo gli utenti con privilegi avanzati vengono registrate e possono essere controllate tramite il [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) comando. Vedere la sezione successiva per un esempio. Quando gli utenti con privilegi avanzati eseguono la decrittografia dei file, questa azione viene registrata e può essere controllata con la [registrazione dell'utilizzo](log-analyze-usage.md).
 
-- Se non è necessaria la funzionalità per utenti con privilegi avanzati per i servizi quotidiani, abilitare la funzionalità solo quando è necessario e disabilitarla nuovamente utilizzando il cmdlet [Disable AadrmSuperUserFeature](/powershell/module/aadrm/disable-aadrmsuperuserfeature) .
+- Se non è necessaria la funzionalità per utenti con privilegi avanzati per i servizi quotidiani, abilitare la funzionalità solo quando è necessario e disabilitarla nuovamente utilizzando la [Disable-AipServiceSuperUserFeature](/powershell/module/aipservice/disable-aipservicesuperuserfeature) cmdlet.
 
 ### <a name="example-auditing-for-the-super-user-feature"></a>Controllo di esempio per la funzionalità per utenti con privilegi avanzati
 
-L'estratto dal log seguente mostra alcune voci di esempio relative all'uso del cmdlet [Get-AadrmAdminLog](/powershell/module/aadrm/get-aadrmadminlog). 
+L'estratto seguente di log mostra alcune voci di esempio da tramite il [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) cmdlet. 
 
 In questo esempio, l'amministratore di Contoso Ltd verifica che la funzionalità per utenti con privilegi avanzati sia disabilitata, aggiunge Richard Simone come utente con privilegi avanzati, controlla che Richard sia l'unico utente con privilegi avanzati configurato per il servizio Azure Rights Management e quindi abilita la funzionalità per utenti con privilegi avanzati in modo che Richard sia in grado di decrittografare alcuni file che sono stati protetti da un dipendente che ora ha lasciato l'azienda.
 
@@ -79,7 +79,7 @@ Se si usano la classificazione e la protezione, è anche possibile usare [Set-AI
 Per altre informazioni su questi cmdlet, vedere [Uso di PowerShell con il client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) nella Guida dell'amministratore del client Azure Information Protection.
 
 > [!NOTE]
-> Il modulo AzureInformationProtection è diverso dal [modulo AADRM di PowerShell](administer-powershell.md) per la gestione del servizio Azure Rights Management per Azure Information Protection e lo integra.
+> Il modulo AzureInformationProtection è diverso da e integra i [modulo di AIPService PowerShell](administer-powershell.md) che gestisce il servizio Azure Rights Management per Azure Information Protection.
 
 ### <a name="guidance-for-using-unprotect-rmsfile-for-ediscovery"></a>Linee guida per l'uso di Unprotect-RMSFile per eDiscovery
 

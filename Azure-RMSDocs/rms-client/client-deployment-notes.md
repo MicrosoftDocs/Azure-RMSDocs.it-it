@@ -4,19 +4,19 @@ description: Informazioni su installazione, sistemi operativi supportati, impost
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/24/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 03cc8c6f-3b63-4794-8d92-a5df4cdf598f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 887b4fa06ddac3395892aab8b085fae8a44bebd9
-ms.sourcegitcommit: a8d78554f20fca35a0384569a323e5f73afdc06a
+ms.openlocfilehash: adb30f7f4e9ecb548f8003c7ab7888ee90d0fc43
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66835339"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535091"
 ---
 # <a name="rights-management-service-client-deployment-notes"></a>Note sulla distribuzione del servizio di gestione client di Rights
 
@@ -168,14 +168,14 @@ Per eseguire l'individuazione del servizio, il client RMS esegue una serie di co
 
     Quando l'autenticazione riesce, vengono utilizzati il relativo nome utente e il relativo dominio per identificare il tenant di Azure Information Protection da usare. Viene quindi restituito al client RMS l'URL di Azure Information Protection da usare per l'account utente. Il formato dell'URL è il seguente: **https://** \<URL del tenant\> **/_wmcs/licensing** 
 
-    Ad esempio:   5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
+    Ad esempio:  5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
-    *\<URL del tenant\>* ha il formato seguente: **{GUID}.rms.[Region].aadrm.com**. È possibile individuare questo valore identificando il valore **RightsManagementServiceId** quando si esegue il cmdlet [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) per Azure RMS.
+    *\<YourTenantURL\>*  ha il formato seguente: **{GUID}. RMS. [Region].aadrm.com**. È possibile trovare questo valore identificando il **RightsManagementServiceId** valore quando si esegue la [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) cmdlet.
 
 > [!NOTE]
 > Per questo flusso di individuazione del servizio esistono quattro eccezioni importanti:
 > 
-> - Poiché i dispositivi mobili sono i più adatti per l'uso di un servizio cloud, per impostazione predefinita usano l'individuazione del servizio per il servizio Azure Rights Management (https://discover.aadrm.com)). Per forzare l'impostazione predefinita in modo che i dispositivi mobili usino AD RMS anziché il servizio Azure Rights Management, è necessario specificare i record SRV nel DNS e installare l'estensione per dispositivi mobili, come illustrato in [Estensione di Active Directory Rights Management Services per dispositivi mobili](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx). 
+> - Poiché i dispositivi mobili sono i più adatti per l'uso di un servizio cloud, per impostazione predefinita usano l'individuazione del servizio per il servizio Azure Rights Management (https://discover.aadrm.com) ). Per forzare l'impostazione predefinita in modo che i dispositivi mobili usino AD RMS anziché il servizio Azure Rights Management, è necessario specificare i record SRV nel DNS e installare l'estensione per dispositivi mobili, come illustrato in [Estensione di Active Directory Rights Management Services per dispositivi mobili](https://technet.microsoft.com/library/dn673574\(v=ws.11\).aspx). 
 >
 > - Quando il servizio Rights Management viene richiamato da un'etichetta di Azure Information Protection, l'individuazione del servizio non viene eseguita. L'URL viene invece specificato direttamente nell'impostazione dell'etichetta configurata nei criteri di Azure Information Protection. 
 >  

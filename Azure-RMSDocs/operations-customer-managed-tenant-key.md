@@ -4,19 +4,19 @@ description: Informazioni sulle operazioni del ciclo di vita necessarie per la g
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5b19c59-812d-420c-9c54-d9776309636c
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 82061c4a146a049d7cecf6da6ab16a2e85c0ddd3
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: c1b163a1e149b77e8974635dff39d9a754a962f2
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156765"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521932"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Gestite dal cliente: operazioni del ciclo di vita della chiave del tenant
 
@@ -46,9 +46,9 @@ Per reimpostare la chiave su un'altra chiave gestita, è possibile creare una nu
 
 1. Solo se la nuova chiave si trova in un insieme di credenziali delle chiavi diverso da quello già in uso per Azure Information Protection: Autorizzare Azure Information Protection per usare l'insieme di credenziali delle chiavi, usando il [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) cmdlet.
 
-2. Se non è ancora stata indicata ad Azure Information Protection la chiave da usare, eseguire il cmdlet [Use-AadrmKeyVaultKey](/powershell/module/aadrm/use-aadrmkeyvaultkey).
+2. Se Azure Information Protection non è conoscenza già la chiave si desidera utilizzare, eseguire [utilizzare AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) cmdlet.
 
-3. Configurare l'oggetto della chiave del tenant, tramite l'esecuzione del cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties).
+3. Configurare l'oggetto chiave del tenant, tramite l'esecuzione [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) cmdlet.
 
 Per altre informazioni su ognuna di queste fasi:
 

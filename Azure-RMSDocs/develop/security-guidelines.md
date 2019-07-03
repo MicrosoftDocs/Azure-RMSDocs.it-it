@@ -4,19 +4,19 @@ description: È preferibile creare le applicazioni abilitate per RMS usando le p
 author: msmbaldwin
 ms.author: mbaldwin
 manager: barbkess
-ms.date: 12/13/2018
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.assetid: 4e9f72d5-9e7c-43e1-bb8a-5972dd22dcee
 ms.service: information-protection
 ms.suite: ems
 ms.reviewer: kartikk
-ms.openlocfilehash: ca4aa7b340a3024139e6a61c0ba4fd938009d522
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: eb550284cd10a3b0946bd188ca2f194edead86f0
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175996"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521198"
 ---
 # <a name="security-best-practices-for-information-protection"></a>Procedure di sicurezza consigliate per Information Protection
 
@@ -81,13 +81,13 @@ Se l'applicazione non interpreta né applica correttamente i diritti espressi ne
 
 ### <a name="azure-information-protection-aip"></a>Azure Information Protection (AIP)
 
-Il sistema di protezione delle informazioni consente di organizzare i diritti in pochi raggruppamenti. Per altre informazioni, vedere [Configurazione dei diritti di utilizzo per Azure Rights Management](../configure-usage-rights.md).
+Il sistema di protezione delle informazioni organizza i diritti pochi raggruppamenti. Per altre informazioni, vedere [configurazione dei diritti di utilizzo per Azure Information Protection](../configure-usage-rights.md).
 
 AIP consente a un utente di decrittografare o meno le informazioni. Le informazioni non hanno una protezione intrinseca. Se un utente ha il diritto di decrittografare le informazioni, l'API lo consente. L'applicazione è responsabile della gestione o della protezione delle informazioni dopo che sono state messe al sicuro. Un'applicazione è responsabile della gestione del proprio ambiente e dell'interfaccia per impedire l'uso non autorizzato delle informazioni. Ad esempio, nel caso in cui vengano disattivati i pulsanti **Stampa** e **Copia** e una licenza conceda solo il diritto di visualizzazione. Il gruppo di test dovrebbe verificare che l'applicazione agisca correttamente su tutti i diritti di licenza che riconosce.
 
 ### <a name="minimum-standard"></a>Standard minimo
 
-- L'implementazione del cliente dei diritti di XrML v.1.2 dovrebbe essere coerente con le definizioni di questi diritti, come descritto nelle specifiche XrML, che sono disponibili nel sito Web di XrML (http://www.xrml.org)). Per tutte le entità che hanno un interesse per l'applicazione è necessario definire tutti i diritti che sono specifici di quest'ultima.
+- L'implementazione del cliente dei diritti di XrML v.1.2 dovrebbe essere coerente con le definizioni di questi diritti, come descritto nelle specifiche XrML, che sono disponibili nel sito Web di XrML (http://www.xrml.org) ). Per tutte le entità che hanno un interesse per l'applicazione è necessario definire tutti i diritti che sono specifici di quest'ultima.
 - Il gruppo e il processo di test devono verificare che l'applicazione venga eseguita correttamente rispetto ai diritti che supporta e che **non** agisca in base a diritti non supportati.
 - Se si sta creando un'applicazione di pubblicazione, è necessario rendere disponibili informazioni che spiegano i diritti intrinseci in uso, tra cui quelli che sono e non sono supportati dall'applicazione di pubblicazione, e come devono essere interpretati questi diritti. In aggiunta, l'interfaccia utente dovrebbe chiarire all'utente finale quali sono le implicazioni di ogni diritto concesso o negato a una singola informazione.
 - Eventuali diritti che vengono ricavati per inclusione nei nuovi diritti implementati da un'applicazione devono essere mappati alla nuova terminologia. Ad esempio, un nuovo diritto denominato GESTIONE potrebbe includere come diritti separati STAMPA, COPIA e MODIFICA.

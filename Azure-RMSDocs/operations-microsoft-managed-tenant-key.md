@@ -4,19 +4,19 @@ description: Informazioni sulle operazioni del ciclo di vita rilevanti nel caso 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 91672443e149a54dea4805bae10d8656129d04f9
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: bd7701e9b90f2ebd681dad4516c17d74c000f611
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156771"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521924"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gestita da Microsoft: operazioni del ciclo di vita della chiave del tenant
 
@@ -46,9 +46,9 @@ Per reimpostare una chiave, è possibile selezionare una chiave diversa gestita 
 
 Se si esegue la migrazione da Active Directory Rights Management Services (AD RMS) e si sceglie la topologia di chiave gestita da Microsoft per Azure Information Protection, si dispone di più di una chiave gestita da Microsoft. In questo scenario, l'utente ha almeno due chiavi del tenant gestite da Microsoft. Una o più chiavi sono quelle importate da AD RMS. Sarà disponibile anche la chiave predefinita creata automaticamente per il tenant di Azure Information Protection dell'utente.
 
-Per selezionare una chiave diversa come chiave attiva del tenant per Azure Information Protection, usare il cmdlet [Set-AadrmKeyProperties](/powershell/module/aadrm/set-aadrmkeyproperties) del modulo AADRM. Per identificare la chiave corretta da usare, usare il cmdlet [Get-AadrmKeys](/powershell/module/aadrm/get-aadrmkeys). È possibile identificare la chiave predefinita creata automaticamente per il tenant di Azure Information Protection eseguendo il comando seguente:
+Per selezionare una chiave diversa come chiave attiva del tenant per Azure Information Protection, usare il [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) cmdlet dal modulo AIPService. Per identificare la chiave da usare, usare il [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) cmdlet. È possibile identificare la chiave predefinita creata automaticamente per il tenant di Azure Information Protection eseguendo il comando seguente:
 
-    (Get-AadrmKeys) | Sort-Object CreationTime | Select-Object -First 1
+    (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
 Per modificare la topologia di chiave in modo che venga gestita dal cliente (BYOK), vedere [Implementazione dello scenario BYOK per la chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md#implementing-byok-for-your-azure-information-protection-tenant-key).
 
@@ -73,7 +73,7 @@ Per esportare la configurazione di Azure Information Protection e la chiave del 
     ```
     AadrmTpd.exe -createkey
     ```
-    In questo modo viene generata una coppia di chiavi RSA e le parti pubblica e privata vengono salvate come file nella cartella corrente. Ad esempio:  **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** e **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**.
+    In questo modo viene generata una coppia di chiavi RSA e le parti pubblica e privata vengono salvate come file nella cartella corrente. Ad esempio: **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** e **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**.
 
     Rispondere al messaggio di posta elettronica ricevuto da CSS allegando il file con il nome che inizia con **PublicKey**. A questo punto CSS invierà all'utente un file TDP con estensione .xml crittografato tramite la chiave RSA. Copiare questo file nella stessa cartella in cui è stato eseguito lo strumento AadrmTpd in origine ed eseguire nuovamente lo strumento, usando il file che inizia con **PrivateKey** e il file ricevuto da CSS. Ad esempio:
 

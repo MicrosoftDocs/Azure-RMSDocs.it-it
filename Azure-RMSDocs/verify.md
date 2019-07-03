@@ -1,28 +1,28 @@
 ---
 title: Verifica di Azure Rights Management - AIP
-description: Istruzioni per verificare che il servizio funzioni come previsto proteggendo un file o un messaggio di posta elettronica mediante un account utente e tentando di aprire e usare tale contenuto protetto con un altro account utente.
+description: Istruzioni per verificare che il servizio di protezione di Azure Information Protection funziona come previsto.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 08664a01-81a5-4fa5-884c-7306ee55dba0
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fbc2cff29997ea3b824d900e2d96b27c65a575f2
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: 618d6ff233c69e1b44ef39f8eebc3b578bd5199d
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156610"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521349"
 ---
 # <a name="verifying-the-azure-rights-management-service"></a>Verifica del servizio Azure Rights Management
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Dopo aver attivato il servizio Azure Rights Management di Azure Information Protection e aver eseguito gli eventuali passaggi di configurazione aggiuntivi necessari per l'organizzazione, è possibile verificare se il servizio di protezione funziona come previsto. 
+Quando il servizio di protezione (Azure Rights Management) di Azure Information Protection è attivato e avere eseguito gli eventuali passaggi di configurazione aggiuntivi necessari per l'organizzazione, si è pronti per verificare che il servizio di protezione funzioni come previsto. 
 
 Un test di verifica semplice consiste nel proteggere un documento o un messaggio di posta elettronica usando un account utente e quindi tentare di aprire e usare tale contenuto protetto da un altro account utente in un computer diverso.
 
@@ -35,7 +35,7 @@ Se il test ha esito negativo, rivedere i passaggi di configurazione nella [Guida
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-È possibile monitorare il modo in cui l'organizzazione usa il servizio Azure Rights Management mediante la registrazione dei dati di utilizzo. Per altre informazioni, vedere [Registrazione e analisi dell'utilizzo del servizio Azure Rights Management](log-analyze-usage.md).
+È possibile monitorare come l'organizzazione Usa questo servizio di protezione tramite la registrazione dell'utilizzo. Per altre informazioni, vedere [la registrazione e analisi dell'utilizzo di protezione di Azure Information Protection](log-analyze-usage.md).
 
 
 

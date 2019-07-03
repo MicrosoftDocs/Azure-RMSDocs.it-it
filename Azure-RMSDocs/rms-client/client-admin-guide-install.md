@@ -4,19 +4,19 @@ description: Istruzioni e informazioni per gli amministratori per la distribuzio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/23/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ea3ec965-3720-4614-8564-3ecfe60bc175
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 735d6952083b00e4900c6ad4b444c1b30178998e
-ms.sourcegitcommit: 5ecf68d050152e0b425fa8cf6f3890951185b14a
+ms.openlocfilehash: 637ed02bab2adedd4a224f67e3cf50bfbdf95dbe
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050753"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67520938"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guida dell'amministratore: Installare il client Azure Information Protection per gli utenti
 
@@ -134,7 +134,7 @@ Usare le istruzioni riportate di seguito per installare il client quando non si 
  
     Questo file ha il formato di denominazione seguente: `Microsoft_Azure_Information_Protection_<number>_<number>_MSIP.Setup.Main.msi.log`
     
-    Ad esempio:  **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
+    Ad esempio: **Microsoft_Azure_Information_Protection_20161201093652_000_MSIP.Setup.Main.msi.log**
     
     In questo file di log cercare la stringa seguente: **Product: Microsoft Azure Information Protection -- Installation completed successfully.** Se l'installazione non è riuscita, questo file di log contiene informazioni dettagliate per identificare e risolvere i problemi.
 
@@ -154,13 +154,13 @@ Usare la procedura seguente per identificare il valore da specificare per il par
 
 ##### <a name="to-identify-the-value-to-specify-for-the-servicelocation-parameter"></a>Per identificare il valore da specificare per il parametro ServiceLocation
 
-1. Da una sessione di PowerShell eseguire prima di tutto [Connect-AadrmService](https://docs.microsoft.com/powershell/aadrm/vlatest/connect-aadrmservice) e specificare le credenziali di amministratore per connettersi al servizio Azure Rights Management. Eseguire quindi [Get-AadrmConfiguration](https://docs.microsoft.com/powershell/aadrm/vlatest/get-aadrmconfiguration). 
+1. Da una sessione di PowerShell, eseguire innanzitutto [Connect-AipService](https://docs.microsoft.com/powershell/module/aipservice/connect-aipservice) e specificare le credenziali di amministratore per connettersi al servizio Azure Rights Management. Quindi eseguire [Get-AipServiceConfiguration](https://docs.microsoft.com/powershell/module/aipservice/get-aipserviceconfiguration). 
  
-    Se non è stato ancora installato il modulo di PowerShell per il servizio Azure Rights Management, vedere [Installazione del modulo PowerShell AADRM](../install-powershell.md).
+    Se già stato installato il modulo di PowerShell per il servizio Azure Rights Management, vedere [installazione del modulo AIPService PowerShell](../install-powershell.md).
 
 2. Nell'output identificare il valore **LicensingIntranetDistributionPointUrl** .
 
-    Ad esempio: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+    Ad esempio:  **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
 3. In questo valore rimuovere **/_wmcs/licensing** dalla stringa. Ad esempio: **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
@@ -206,7 +206,7 @@ Se si usa Intune per il metodo di distribuzione del software, usare queste istru
     |Non applicabile|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Installare|
     |Non applicabile|Windows 7|KB2627273 <br /><br /> Numero di versione incluso nel nome file: v4|Uninstall|
 
-3. Per un'installazione predefinita, eseguire il file MSI con **/quiet/**, ad esempio, `AzInfoProtection.msi /quiet`. Tuttavia, può essere necessario specificare parametri di installazione aggiuntivi, che sono documentati nelle [istruzioni del programma di installazione del file eseguibile](#to-install-the-azure-information-protection-client-by-using-the-executable-installer).  
+3. Per un'installazione predefinita, eseguire il file MSI con **/quiet/** , ad esempio, `AzInfoProtection.msi /quiet`. Tuttavia, può essere necessario specificare parametri di installazione aggiuntivi, che sono documentati nelle [istruzioni del programma di installazione del file eseguibile](#to-install-the-azure-information-protection-client-by-using-the-executable-installer).  
 
 
 ## <a name="how-to-install-the-azure-information-protection-scanner"></a>Come installare lo scanner Azure Information Protection

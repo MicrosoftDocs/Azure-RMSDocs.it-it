@@ -4,7 +4,7 @@ description: Domande frequenti sul servizio di protezione dei dati, Azure Rights
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/19/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.custom: askipteam
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c9ed9992f96a923a97f2ec04d8598867321d4505
-ms.sourcegitcommit: e366a19300be4165da05ec7ee592f883c467bb51
+ms.openlocfilehash: 6507d040fec9bf7f93037ae07fa8ecce6d627e0e
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66269793"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521120"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Domande frequenti sulla protezione dei dati in Azure Information Protection
 
@@ -89,7 +89,7 @@ Assolutamente e l'aspetto interessante è che gli utenti sono in grado di proteg
 No, si ha sempre il controllo dei dati e si può continuare ad accedervi, anche se si decide di non usare più il servizio Azure Rights Management. Per altre informazioni, vedere [Rimozione delle autorizzazioni e disattivazione di Azure Rights Management](decommission-deactivate.md).
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>È possibile determinare quali utenti possono usare Azure RMS per proteggere i contenuti?
-Sì, il servizio Azure Rights Management include controlli di selezione utenti per questo scenario. Per altre informazioni, vedere la sezione [Configurazione dei controlli di selezione utenti per una distribuzione graduale](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) dell'articolo [Attivazione di Azure Rights Management](activate-service.md).
+Sì, il servizio Azure Rights Management include controlli di selezione utenti per questo scenario. Per altre informazioni, vedere la [configurazione dei controlli di onboarding per una distribuzione graduale](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) sezione il [attivazione del servizio di protezione di Azure Information Protection](activate-service.md) articolo.
 
 ## <a name="can-i-prevent-users-from-sharing-protected-documents-with-specific-organizations"></a>È possibile impedire agli utenti di condividere documenti protetti con aziende specifiche?
 Uno dei vantaggi principali offerti dal servizio Azure Rights Management per la protezione dei dati è il supporto della collaborazione business-to-business senza che sia necessario configurare trust espliciti per ogni organizzazione partner, in quanto l'autenticazione viene eseguita automaticamente da Azure AD.
@@ -116,11 +116,11 @@ Si noti che, in presenza di eventuali etichette di Azure Information Protection,
 
 In alternativa, è possibile aggiungere utenti esterni a modelli (ed etichette) personalizzati tramite PowerShell. Questa configurazione richiede l'uso di un oggetto di definizione dei diritti per l'aggiornamento del modello:
 
-1. Specificare gli indirizzi di posta elettronica esterni e i relativi diritti in un oggetto di definizione dei diritti usando il cmdlet [New-AadrmRightsDefinition](/powershell/module/aadrm/new-aadrmrightsdefinition) per creare una variabile.
+1. Specificare gli indirizzi di posta elettronica esterni e i relativi diritti in un oggetto di definizione dei diritti, usando il [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) cmdlet per creare una variabile.
 
-2. Specificare questa variabile nel parametro RightsDefinition con il cmdlet [Set-AadrmTemplateProperty](/powershell/module/aadrm/set-aadrmtemplateproperty).
+2. Fornire questa variabile al parametro-RightsDefinition con il [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) cmdlet.
 
-    Quando si aggiungono utenti a un modello esistente, oltre ai nuovi utenti è necessario definire gli oggetti di definizione dei diritti per gli utenti esistenti nei modelli. Per questo scenario può essere utile l'**esempio 3, relativo all'aggiunta di nuovi utenti e diritti a un modello personalizzato** della sezione [Examples](/powershell/module/aadrm/set-aadrmtemplateproperty#examples) (Esempi) per il cmdlet.
+    Quando si aggiungono utenti a un modello esistente, oltre ai nuovi utenti è necessario definire gli oggetti di definizione dei diritti per gli utenti esistenti nei modelli. Per questo scenario può essere utile l'**esempio 3, relativo all'aggiunta di nuovi utenti e diritti a un modello personalizzato** della sezione [Examples](/powershell/module/aipservice/set-aipservicetemplateproperty#examples) (Esempi) per il cmdlet.
 
 ## <a name="what-type-of-groups-can-i-use-with-azure-rms"></a>Quali tipi di gruppi è possibile usare con Azure RMS?
 Per la maggior parte degli scenari è possibile usare qualsiasi tipo di gruppo di Azure AD che dispone di un indirizzo di posta elettronica. Questa regola empirica è sempre valida quando si assegnano i diritti di utilizzo, ma esistono alcune eccezioni per l'amministrazione del servizio Azure Rights Management. Per altre informazioni, vedere [Requisiti di Azure Information Protection per gli account di gruppo](prepare.md#azure-information-protection-requirements-for-group-accounts).
@@ -156,7 +156,7 @@ Aprire Outlook e creare un profilo mediante l'account aziendale o dell'istituto 
 
 Per proteggere un messaggio di posta elettronica o un documento: nella scheda **Opzioni** fare clic su **Autorizzazioni** e scegliere un'opzione o un modello che protegge il messaggio di posta elettronica o il documento.
 
-Per tenere traccia di un documento dopo averlo protetto: da un computer Windows in cui è installato il client Azure Information Protection, registrare il documento con il sito di rilevamento dei documenti usando un'applicazione di Office o Esplora file. Per le relative istruzioni, vedere [Tenere traccia dei documenti e revocarli](./rms-client/client-track-revoke.md). Dal computer Mac ora è possibile usare il Web browser e accedere al sito di rilevamento dei documenti (https://track.azurerms.com)) per rilevare e revocare il documento.
+Per tenere traccia di un documento dopo averlo protetto: da un computer Windows in cui è installato il client Azure Information Protection, registrare il documento con il sito di rilevamento dei documenti usando un'applicazione di Office o Esplora file. Per le relative istruzioni, vedere [Tenere traccia dei documenti e revocarli](./rms-client/client-track-revoke.md). Dal computer Mac ora è possibile usare il Web browser e accedere al sito di rilevamento dei documenti (https://track.azurerms.com) ) per rilevare e revocare il documento.
 
 ## <a name="when-i-open-an-rms-protected-office-document-does-the-associated-temporary-file-become-rms-protected-as-well"></a>Quando si apre un documento di Office protetto da RMS, anche il file temporaneo associato è protetto da RMS?
 No. In questo scenario, il file temporaneo associato non contiene i dati del documento originale, ma solo i dati immessi dall'utente mentre il file è aperto. A differenza del file originale, il file temporaneo non è destinato alla condivisione e rimarrà disponibile nel dispositivo, protetto dai controlli di protezione locali, ad esempio BitLocker ed EFS.
@@ -199,5 +199,5 @@ Come illustrato da questi esempi, anche se tutte le piattaforme e tutto il softw
 
 ## <a name="whats-the-difference-between-a-user-protecting-an-email-with-do-not-forward-and-a-template-that-doesnt-include-the-forward-right"></a>Qual è la differenza tra un utente che protegge un messaggio di posta elettronica con l'opzione Non inoltrare e un modello che non include il diritto di inoltro?
 
-Nonostante il nome e l'aspetto, l'opzione **Non inoltrare** non è il contrario del diritto Inoltra e neanche un modello. Si tratta in realtà di un insieme di diritti che limitano la copia, la stampa, il salvataggio di allegati e l'inoltro dei messaggi di posta elettronica. I diritti vengono applicati dinamicamente agli utenti tramite i destinatari scelti anziché in modo statico in base alle assegnazioni dall'amministratore. Per altre informazioni, vedere la sezione [Do Not Forward option for emails](configure-usage-rights.md#do-not-forward-option-for-emails) (Opzione Non inoltrare per i messaggi di posta elettronica) dell'articolo [Configuring usage rights for Azure Rights Management](configure-usage-rights.md) (Configurazione dei diritti di utilizzo per Azure Rights Management).
+Nonostante il nome e l'aspetto, l'opzione **Non inoltrare** non è il contrario del diritto Inoltra e neanche un modello. Si tratta in realtà di un insieme di diritti che limitano la copia, la stampa, il salvataggio di allegati e l'inoltro dei messaggi di posta elettronica. I diritti vengono applicati dinamicamente agli utenti tramite i destinatari scelti anziché in modo statico in base alle assegnazioni dall'amministratore. Per altre informazioni, vedere la [opzione non inoltrare messaggi di posta elettronica](configure-usage-rights.md#do-not-forward-option-for-emails) sezione [configurazione dei diritti di utilizzo per Azure Information Protection](configure-usage-rights.md).
 

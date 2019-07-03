@@ -4,19 +4,19 @@ description: Informazioni sulle impostazioni del Registro di sistema sui server 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: d3cba05e27740ff11a2c8504ace1d1a5037cf3b2
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: e9bb701dcf48aaa514cdf71a6dc6c10c671f618c
+ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156568"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67535062"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Impostazioni del Registro di sistema per il connettore Rights Management
 
@@ -29,7 +29,7 @@ Istruzioni per l'uso delle impostazioni:
 
 -   *\<YourTenantURL>* corrisponde all'URL del servizio Azure Rights Management per il tenant di Azure Information Protection. Per individuare questo valore:
 
-    1.  Eseguire il cmdlet [Get-AadrmConfiguration](/powershell/module/aadrm/get-aadrmconfiguration) per il servizio di Azure Rights Management. Se non è stato ancora installato il modulo Windows PowerShell per Azure RMS, vedere [Installazione di Windows PowerShell per Microsoft Azure Rights Management](install-powershell.md).
+    1.  Eseguire la [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) cmdlet per il servizio Azure Rights Management. Se già stato installato il modulo AIPService, vedere [installazione del modulo AIPService PowerShell](install-powershell.md).
 
     2.  Nell'output identificare il valore **LicensingIntranetDistributionPointUrl** .
 
@@ -41,7 +41,7 @@ Istruzioni per l'uso delle impostazioni:
         
         È possibile verificare di avere il valore corretto eseguendo il comando PowerShell seguente:
         
-            (Get-AadrmConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
+            (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
 
 -   *\<ConnectorFQDN* è il nome di bilanciamento del carico definito in DNS per il connettore. ad esempio **rmsconnector.contoso.com**.
 

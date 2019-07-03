@@ -4,19 +4,19 @@ description: Flusso di lavoro end-to-end per collaborare a documenti protetti da
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 01/24/2019
+ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4895c429-959f-47c7-9007-b8f032f6df6f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 0c9e426fe6025b31f03ed84e65741c4a461e3938
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: cf6ff8129c7737b782b9ccd004089b99475a9311
+ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181833"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67521621"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configurazione della collaborazione per i documenti protetti con Azure Information Protection
 
@@ -24,7 +24,7 @@ ms.locfileid: "60181833"
 
 Quando si usa Azure Information Protection, è possibile proteggere i documenti senza sacrificare la collaborazione per gli utenti autorizzati. La maggior parte dei documenti creati da un utente e quindi condivisi con altri per la visualizzazione e la modifica è costituita da documenti di Office Word, Excel e PowerPoint. Questi documenti supportano la protezione nativa, ovvero oltre alle funzionalità di protezione di autorizzazione e crittografia, supportano anche l'autorizzazione limitata per un controllo più granulare. 
 
-Queste autorizzazioni sono denominate anche diritti di utilizzo e includono autorizzazioni come visualizzazione, modifica e stampa. È possibile definire singoli diritti di utilizzo quando un documento è protetto oppure è possibile definire un gruppo di diritti di utilizzo, denominato livello di autorizzazione. I livelli di autorizzazione semplificano la selezione dei diritti di utilizzo usati in genere insieme, ad esempio i diritti Revisore e Coautore. Per altre informazioni sui diritti di utilizzo e i livelli di autorizzazione, vedere [Configurazione dei diritti di utilizzo per Azure Rights Management](configure-usage-rights.md).
+Queste autorizzazioni sono denominate anche diritti di utilizzo e includono autorizzazioni come visualizzazione, modifica e stampa. È possibile definire singoli diritti di utilizzo quando un documento è protetto oppure è possibile definire un gruppo di diritti di utilizzo, denominato livello di autorizzazione. I livelli di autorizzazione semplificano la selezione dei diritti di utilizzo usati in genere insieme, ad esempio i diritti Revisore e Coautore. Per altre informazioni sui livelli di autorizzazione e i diritti di utilizzo, vedere [configurazione dei diritti di utilizzo per Azure Information Protection](configure-usage-rights.md).
 
 Quando si configurano queste autorizzazioni, è possibile specificare gli utenti cui sono destinate:
 
@@ -45,7 +45,7 @@ Questo esempio descrive in modo dettagliato la configurazione di un'etichetta es
 
 Poiché lo scenario limita l'accesso a specifici utenti, non include l'impostazione per tutti gli utenti autenticati. Per un esempio di configurazione di un'etichetta con questa impostazione, vedere [Esempio 5: Etichetta che crittografa il contenuto, ma non limita chi può accedervi](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
 
-1. Selezionare l'etichetta già inclusa nei criteri globali o in criteri con ambito. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)**.
+1. Selezionare l'etichetta già inclusa nei criteri globali o in criteri con ambito. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)** .
     
 2. Verificare che sia selezionata l'opzione **Configura le autorizzazioni** e fare clic su **Aggiungi autorizzazioni**.
 
@@ -93,7 +93,7 @@ Condividere il documento protetto allegandolo a un messaggio di posta elettronic
 
 ## <a name="opening-and-editing-the-protected-document"></a>Apertura e modifica del documento protetto
 
-Quando gli utenti autorizzati aprono il documento per la modifica, il documento viene aperto con un banner informativo che indica che le autorizzazioni sono limitate. Ad esempio: 
+Quando gli utenti autorizzati aprono il documento per la modifica, il documento viene aperto con un banner informativo che indica che le autorizzazioni sono limitate. Ad esempio:
 
 ![Banner informativo di esempio sulle autorizzazioni di Azure Information Protection](./media/example-restricted-access-banner.png)
 
