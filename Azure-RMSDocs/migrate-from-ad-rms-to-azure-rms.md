@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 828cf1f7-d0e7-4edf-8525-91896dbe3172
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 60a7eecb5e0d8175e968051d160bee5441a35de0
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.openlocfilehash: 61cd0d2ea761cf3f0ca1a8cbd9e1ab1d248b63ef
+ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67522050"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545020"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrazione da AD RMS ad Azure Information Protection
 
@@ -112,7 +112,7 @@ Per verificare la modalità di crittografia AD RMS:
 
 ### <a name="migration-limitations"></a>Limitazioni della migrazione
 
-- Se sono presenti software e client non supportati dal servizio Rights Management usato da Azure Information Protection, questi non saranno in grado di proteggere o utilizzare il contenuto protetto da Azure Rights Management. Verificare le sezioni relative alle applicazioni e ai client supportati nell’articolo [Requisiti di Azure Rights Management](./requirements.md).
+- Se sono presenti software e client non supportati dal servizio Rights Management usato da Azure Information Protection, questi non saranno in grado di proteggere o utilizzare il contenuto protetto da Azure Rights Management. Assicurarsi di controllare le sezioni di applicazioni e client supportate da [i requisiti per Azure Information Protection](./requirements.md).
 
 - Se la distribuzione di AD RMS è configurata per collaborare con partner esterni, ad esempio tramite domini utente trusted o federazione, anche questi dovranno eseguire la migrazione ad Azure Information Protection allo stesso tempo della migrazione o il prima possibile dopo la migrazione. Per continuare ad accedere ai contenuti precedentemente protetti dall'organizzazione usando Azure Information Protection, i partner dovranno apportare modifiche di configurazione al client simili a quelle apportate dall'utente e descritte in questo documento.
     

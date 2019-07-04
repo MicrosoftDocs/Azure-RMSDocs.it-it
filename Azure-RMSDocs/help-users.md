@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 9ac96fe93c3bb903b25b5f9695f3e38451862f11
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 8ab1872aaf42aa2e62d46873f892e93c2bc90927
+ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182331"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67545028"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Consentire agli utenti di proteggere i file mediante il servizio Azure Rights Management
 
@@ -55,7 +55,7 @@ Dopo aver distribuito e configurato Azure Information Protection per l'organizza
         
     - **Problemi di protezione o fruizione dei contenuti**
         
-        Verificare che gli utenti abbiano le istruzioni appropriate per le applicazioni usate e che stiano usando applicazioni e dispositivi supportati dal servizio Azure Rights Management. Per altre informazioni sui dispositivi e le applicazioni supportate, vedere [Requisiti per Azure Rights Management](requirements.md).
+        Verificare che gli utenti abbiano le istruzioni appropriate per le applicazioni usate e che stiano usando applicazioni e dispositivi supportati dal servizio Azure Rights Management. Per altre informazioni sui dispositivi e applicazioni supportate, vedere [i requisiti per Azure Information Protection](requirements.md).
         
         Per verificare se un utente o un gruppo specifico può essere autorizzato da Azure Active Directory a proteggere o utilizzare contenuti protetti, usare i controlli di verifica presentati in [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md).
         
@@ -103,7 +103,7 @@ I diritti d'uso vengono visualizzati nella parte superiore del documento in un b
 
 1.  In Outlook creare un messaggio di posta elettronica indirizzato a un destinatario presente nell'organizzazione.
 
-2.  Dalla scheda **Opzioni**: **Autorizzazione** > selezionare un'opzione. Ad esempio:  **Non inoltrare**, **\<Nome società> - Riservato** o **\<Nome società> - Solo visualizzazione riservata**.
+2.  Dalla scheda **Opzioni**: **Autorizzazione** > selezionare un'opzione. Ad esempio: **Non inoltrare**, **\<Nome società> - Riservato** o **\<Nome società> - Solo visualizzazione riservata**.
 
 3.  Inviare il messaggio.
 
@@ -115,7 +115,7 @@ Ad esempio, se il messaggio di posta elettronica è stato protetto usando l'opzi
 
 1. In Outlook sul Web creare un messaggio di posta elettronica indirizzato a un destinatario presente nell'organizzazione.
 
-2. Selezionare **Proteggi**. A meno che l'impostazione predefinita non sia stata modificata da un amministratore, l'opzione **Non inoltrare** viene selezionata automaticamente. Se si vuole modificare l'impostazione predefinita, selezionare **Modifica autorizzazioni** e quindi selezionare un'opzione nell'elenco a discesa. Ad esempio:  **Crittografare** oppure  **\<nome società > - Informazioni riservate**.
+2. Selezionare **Proteggi**. A meno che l'impostazione predefinita non sia stata modificata da un amministratore, l'opzione **Non inoltrare** viene selezionata automaticamente. Se si vuole modificare l'impostazione predefinita, selezionare **Modifica autorizzazioni** e quindi selezionare un'opzione nell'elenco a discesa. Ad esempio: **Crittografare** oppure  **\<nome società > - Informazioni riservate**.
 
 3. Inviare il messaggio.
 

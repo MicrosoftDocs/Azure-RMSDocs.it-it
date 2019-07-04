@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 018f889c11339b97013cadd0725330b95597dd41
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.openlocfilehash: a6aa0b8ecd01df9d012588f8e2b02d13f03cfff6
+ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535048"
+ms.locfileid: "67544972"
 ---
 # <a name="administering-protection-from-azure-information-protection-by-using-powershell"></a>Amministrazione di protezione di Azure Information Protection tramite PowerShell
 
@@ -37,10 +37,10 @@ Oltre a questo modulo di PowerShell sul lato servizio, il client Azure Informati
 
 |Se è necessario…|…usare i seguenti cmdlet|
 |-------------------|------------------------------|
-|Eseguire la migrazione da un'istanza locale di Rights Management (AD RMS o Windows RMS) ad Azure Information Protection.|[Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd)<br /><br />[Set-AipServiceKeyProperties](/powershell/module/aipservice/setaipservicekeyproperties)|
+|Eseguire la migrazione da un'istanza locale di Rights Management (AD RMS o Windows RMS) ad Azure Information Protection.|[Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd)<br /><br />[Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)|
 |Connettersi o disconnettersi dal servizio Rights Management per l'organizzazione.|[Connect-AipService](/powershell/module/aipservice/connect-aipservice)<br /><br />[Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice)|
 |Generare e gestire la propria chiave tenant (scenario BYOK, Bring Your Own Key)|[Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties)<br /><br />[Use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey)<br /><br />[Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys)|
-|Attivare o disattivare il servizio Rights Management per l'organizzazione.<br /><br />È anche possibile eseguire queste azioni dai portali di gestione. Per altre informazioni, vedere [attivazione del servizio di protezione di Azure Information Protection](activate-service.md).|[Enable-AipService](/powershell/module/aipservice/enable-aipservice)<br /><br />[Disable-AipService](/powershell/module/aipservice/disable-aipservice)|
+|Attivare o disattivare il servizio Rights Management per l'organizzazione.<br /><br />È anche possibile eseguire queste azioni dai portali di gestione. Per altre informazioni, vedere [Attivazione del servizio di protezione da Azure Information Protection](activate-service.md).|[Enable-AipService](/powershell/module/aipservice/enable-aipservice)<br /><br />[Disable-AipService](/powershell/module/aipservice/disable-aipservice)|
 |Gestire il sito di rilevamento dei documenti per Azure Information Protection.|[Disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature)<br /><br />[Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature)<br /><br />[Get-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/get-aipservicedocumenttrackingfeature)<br /><br />[Set-AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/set-aipservicedonottrackusergroup)<br /><br />[Clear-AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/Clear-AipServiceDoNotTrackUserGroup)<br /><br />[Get-AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/get-AipServiceDoNotTrackUserGroup)<br /><br />[Get-AipServiceTrackingLog](/powershell/module/aipservice/Get-AipServiceTrackingLog)<br /><br />[Get-AipServiceDocumentLog](/powershell/module/aipservice/Get-AipServiceDocumentLog)|
 |Configurare i controlli di selezione utenti per una distribuzione graduale del servizio Azure Rights Management.|[Get-AipServiceOnboardingControlPolicy](/powershell/module/aipservice/get-aipserviceonboardingcontrolpolicy)<br /><br />[Set-AipServiceOnboardingControlPolicy](/powershell/module/aipservice/set-aipserviceonboardingcontrolpolicy)|
 |Creare e generare modelli di Rights Management per l'organizzazione.<br /><br />È anche possibile eseguire la maggior parte di queste azioni dal portale di Azure, anche se PowerShell offre un controllo più granulare. Per altre informazioni, vedere [Configurazione e gestione dei modelli per Azure Information Protection](configure-policy-templates.md).|[Add-AipServiceTemplate](/powershell/module/aipservice/add-aipservicetemplate)<br /><br />[Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate)<br /><br />[Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate)<br /><br />[Get-AipServiceTemplateProperty](/powershell/module/aipservice/get-aipservicetemplateproperty)<br /><br />[Import-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetemplate)<br /><br />[New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition)<br /><br />[Remove-AipServiceTemplate](/powershell/module/aipservice/remove-aipservicetemplate)<br /><br />[Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty)|

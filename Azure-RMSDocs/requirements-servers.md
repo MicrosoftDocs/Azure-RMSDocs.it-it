@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: e7d91f2d-d6a7-4c7e-821f-c94e4be9967d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8e160908ac568b0657cc92b838959eb95da624b3
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: e94d624c1fa59d44399b9c83959534d75c912d6b
+ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156658"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67544983"
 ---
 # <a name="on-premises-servers-that-support-azure-rights-management-data-protection"></a>Server locali che supportano la protezione dati di Azure Rights Management
 
@@ -60,4 +60,4 @@ Il connettore Rights Management è supportato in Windows Server 2016, Windows Se
 Per altre informazioni sulla modalità di configurazione del connettore di Rights Management per questi server locali, vedere [Distribuzione del connettore di Azure Rights Management](deploy-rms-connector.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
-Per verificare gli altri requisiti, vedere [Requisiti per Azure Rights Management](requirements.md).
+Per verificare gli altri requisiti, vedere [Requisiti per Azure Information Protection](requirements.md).
