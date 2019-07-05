@@ -3,7 +3,7 @@ title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
 author: cabailey
 ms.author: cabailey
-ms.date: 06/08/2019
+ms.date: 07/04/2019
 manager: barbkess
 ms.topic: article
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 84e3e4231c07f2234baa717d1be2c29386ed44ca
-ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
+ms.openlocfilehash: c39e2be3fef7568179f3859f834f92cc761b6259
+ms.sourcegitcommit: 849c493cef6b2578945c528f4e17373a2ef26287
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2019
-ms.locfileid: "66815600"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563407"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -246,8 +246,6 @@ Nel pannello Azure Information Protection trovare le opzioni del menu **Dashboar
     Questo report contiene un'opzione **Colonne** che consente di visualizzare più informazioni sulle attività rispetto alla visualizzazione predefinita. È anche possibile accedere ad altri dettagli su un file selezionandolo per visualizzare **Dettagli attività**.
 
 - **Individuazione dei dati (anteprima)** : usare questo report per visualizzare informazioni sui file etichettati trovati dagli strumenti di analisi e dagli endpoint supportati.
-    
-    È possibile configurare un [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#enable-azure-information-protection-analytics-to-discover-sensitive-information-in-documents) per il client Azure Information Protection ai file di report contenenti informazioni riservate.
     
     Suggerimento: dalle informazioni raccolte si potrebbero individuare utenti che accedono a file contenenti informazioni riservate da posizioni di cui non si conosceva l'esistenza o che non vengono attualmente analizzate:
     

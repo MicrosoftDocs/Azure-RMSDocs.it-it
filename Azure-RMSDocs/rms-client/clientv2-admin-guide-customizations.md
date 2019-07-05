@@ -4,19 +4,19 @@ description: Informazioni sulla personalizzazione del client di assegnazione di 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/29/2019
+ms.date: 07/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 1f338f29216224d5984921f7882d45e4c0c4947c
-ms.sourcegitcommit: a884d627c520721b93d0bb81a2a781399879da0e
+ms.openlocfilehash: aac8b94bbe1eaa46111dee15ac5f69d05ac730ab
+ms.sourcegitcommit: 849c493cef6b2578945c528f4e17373a2ef26287
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67464889"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563447"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di assegnazione di etichette unificata di Azure Information Protection
 
@@ -577,7 +577,7 @@ Comandi PowerShell di esempio, in cui il criterio di etichetta denominato "Globa
 
 Questa configurazione usa un criterio [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) che è necessario configurare tramite Office 365 Security & Compliance Center PowerShell. È supportata dalla versione di anteprima di solo i client unificato imprevisto delle etichette.
 
-[Analitica di Azure Information Protection](../reports-aip.md) può individuare e segnalare i documenti salvati dal client Azure Information Protection quando tale contenuto contiene informazioni riservate. Per impostazione predefinita, queste informazioni vengono inviate da Azure Information Protection unified l'assegnazione di etichette di analitica di Azure Information Protection.
+[Analitica di Azure Information Protection](../reports-aip.md) può individuare e segnalare i documenti salvati dal client Azure Information Protection quando tale contenuto contiene informazioni riservate. Per impostazione predefinita, queste informazioni vengono inviate dal client Azure Information Protection unified imprevisto delle etichette di analitica di Azure Information Protection.
 
 Per modificare questo comportamento in modo che queste informazioni non vengono inviate dal client di assegnazione di etichette unificato, immettere le stringhe seguenti per il criterio di etichetta selezionata:
 
@@ -589,9 +589,9 @@ Se si imposta questa impostazione client avanzata, i risultati dei controlli son
 
 Ad esempio:
 
-- Senza questa impostazione, è possibile vedere che un utente ha aperto il file Financial.docx etichettato come **Confidential \ Sales**.
+- Con questa impostazione, è possibile vedere che un utente accede Financial.docx etichettato **Confidential \ Sales**.
 
-- Con questa impostazione, è possibile vedere che il file Financial.docx contiene 6 numeri di carta di credito.
+- Senza questa impostazione, è possibile notare che Financial.docx contiene 6 numeri di carta di credito.
     
     - Se si abilita anche [Corrispondenze di contenuto per un'analisi più approfondita](../reports-aip.md#content-matches-for-deeper-analysis), si potranno vedere anche i numeri di carta di credito stessi.
 
