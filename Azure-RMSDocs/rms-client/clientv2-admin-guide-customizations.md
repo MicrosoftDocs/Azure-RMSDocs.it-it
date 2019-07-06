@@ -4,19 +4,19 @@ description: Informazioni sulla personalizzazione del client di assegnazione di 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/04/2019
+ms.date: 07/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: aac8b94bbe1eaa46111dee15ac5f69d05ac730ab
-ms.sourcegitcommit: 849c493cef6b2578945c528f4e17373a2ef26287
+ms.openlocfilehash: 560d954119c40ad3fd9dd99b4d9f1ef18fb88515
+ms.sourcegitcommit: 9c9ee62632bbb5d7151131da8b720b7c9bf2a8f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67563447"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67571854"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di assegnazione di etichette unificata di Azure Information Protection
 
@@ -118,6 +118,7 @@ Impostazioni avanzati dei criteri di etichetta vengono applicati in ordine inver
 |EnableCustomPermissions|[Disabilitare le autorizzazioni personalizzate in Esplora File](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[Per i file protetti con autorizzazioni personalizzate, rendere sempre le autorizzazioni personalizzate visualizzabili dagli utenti in Esplora file](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
+|HideBarByDefault|[Visualizza la barra di Information Protection nelle app Office](##display-the-information-protection-bar-in-office-apps)|
 |labelByCustomProperties|[Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |LogMatchedContent|[Disabilitare l'invio delle corrispondenze per i tipi di informazioni per un subset di utenti](#disable-sending-information-type-matches-for-a-subset-of-users)|
 |OutlookBlockTrustedDomains|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
