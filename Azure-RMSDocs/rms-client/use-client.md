@@ -4,17 +4,17 @@ description: Microsoft Azure Information Protection offre una soluzione client-s
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 07/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: fd66c67d4368e393f5c5b7a59cafbf882548ddce
-ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
+ms.openlocfilehash: a32ff0979cfedb250ee44153829013c2595dedb6
+ms.sourcegitcommit: d2a2748e9286d15d0cb53d2d8bb2eb7db0ee5a6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545056"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67648179"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -71,7 +71,7 @@ Usare la tabella seguente per poter confrontare le funzionalità supportate dai 
 |Creazione di report centrale (analisi):| Yes | Sì, con limitazioni:<br /><br /> -Nessun supporto per [corrispondenze nel contenuto](../reports-aip.md#content-matches-for-deeper-analysis) |
 |Reimpostazione delle impostazioni ed esportazione dei log:| Yes | Yes |
 |Autorizzazioni definite dall'utente:| Yes | Sì, con limitazioni: <br /><br />-Per Outlook solo (Do Not Forward): Supportato<br /><br />-Per Word, Excel, PowerPoint e File Explorer: Con il client di anteprima è supportata quando si configura l'etichetta nel portale di Azure |
-|Autorizzazioni personalizzate:| Yes | Esplora file e PowerShell (versione di anteprima) <br /><br /> In alternativa, nelle app Office gli utenti possono selezionare **Info sul file** > **Proteggi documento** > **Limita accesso** |
+|Autorizzazioni personalizzate:| Yes | Esplora file e PowerShell (versione di anteprima) <br /><br /> Nelle app di Office, in alternativa, gli utenti possono selezionare **le informazioni sul File** > **Proteggi documento** > **limita accesso** o gli amministratori possono configurare un etichetta per le autorizzazioni definite dall'utente|
 |Barra di Information Protection nelle app Office:| Yes | Sì, con limitazioni:<br /><br /> - Nessun titolo o descrizione comando personalizzabile<br /><br /> - Colore dell'etichetta non visualizzato per l'etichetta applicata|
 |Le etichette permettono di applicare contrassegni visivi (intestazione, piè di pagina, filigrana):| Yes | Sì, con limitazioni:<br /><br /> - Le intestazioni e i piè di pagina non supportano le variabili per i valori dinamici <br /><br /> - Nessun supporto per l’impostazione di contrassegni visivi diversi per Word, Excel, PowerPoint e Outlook|
 |Esplora file, azioni con il pulsante destro del mouse:| Yes | Sì, con limitazioni:<br /><br /> - Non è possibile proteggere i documenti PDF in formato ppdf <br /><br />  - Nessun supporto per la modalità di sola protezione|
@@ -117,7 +117,7 @@ Anche se il client di assegnazione di etichette unificato di Azure Information P
 
 - Supporta le app Office per i computer disconnessi con gestione dei file manuale dei criteri
 
-- Autorizzazioni personalizzate nelle app di Office: Word, Excel e PowerPoint
+- Autorizzazioni personalizzate come un'opzione selezionabile dagli utenti nelle app di Office: Word, Excel e PowerPoint
 
 - Rilevamento e revoca da app di Office ed Esplora file
 
