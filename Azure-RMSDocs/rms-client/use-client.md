@@ -4,17 +4,17 @@ description: Microsoft Azure Information Protection offre una soluzione client-s
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/08/2019
+ms.date: 07/10/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: a32ff0979cfedb250ee44153829013c2595dedb6
-ms.sourcegitcommit: d2a2748e9286d15d0cb53d2d8bb2eb7db0ee5a6d
+ms.openlocfilehash: 38ba4c2f028fcf38fd48be093ee73f2d770bac41
+ms.sourcegitcommit: 7442118f77a175e85444831eb88540034bceeab3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67648179"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67715238"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -68,6 +68,7 @@ Usare la tabella seguente per poter confrontare le funzionalità supportate dai 
 |Funzionalità|Client classico|client unificato di assegnazione di etichette|
 |-------|-----------------------------------|----------------------------------------------------|
 |Azioni di assegnazione di etichette: manuali, consigliate, automatiche| Yes | Yes |
+|Supporto multilingue per le etichette:| Yes | Yes |
 |Creazione di report centrale (analisi):| Yes | Sì, con limitazioni:<br /><br /> -Nessun supporto per [corrispondenze nel contenuto](../reports-aip.md#content-matches-for-deeper-analysis) |
 |Reimpostazione delle impostazioni ed esportazione dei log:| Yes | Yes |
 |Autorizzazioni definite dall'utente:| Yes | Sì, con limitazioni: <br /><br />-Per Outlook solo (Do Not Forward): Supportato<br /><br />-Per Word, Excel, PowerPoint e File Explorer: Con il client di anteprima è supportata quando si configura l'etichetta nel portale di Azure |
@@ -87,7 +88,6 @@ Usare la tabella seguente per poter confrontare le funzionalità supportate dai 
 |Scanner per gli archivi dati locali:| Yes | No |
 |Tenere traccia e revocare:| Yes | No |
 |Modalità di sola protezione modalità (senza etichette) usando i modelli:| Yes | No |
-|Supporto multilingue:| Yes | No |
 |Supporto per AD RMS:| Yes | È supportata solo l'azione seguente:<br /><br /> - Il visualizzatore può aprire i documenti protetti se si distribuisce l'[estensione per dispositivi mobili di Active Directory Rights Management Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))|
 
 #### <a name="detailed-comparisons-for-the-clients"></a>Confronti dettagliati per i client
@@ -100,6 +100,7 @@ Quando entrambi i client supportano la funzionalità stessa, usare la tabella se
 |Selezione e visualizzazione di etichette se applicate nelle app Office:|Dal pulsante **Proteggi** nella barra multifunzione <br /><br /> Dalla barra di Information Protection (barra orizzontale sotto la barra multifunzione)|Dal pulsante **Riservatezza** sulla barra multifunzione<br /><br /> Dalla barra di Information Protection (barra orizzontale sotto la barra multifunzione)|
 |Gestione della barra di Information Protection nelle app Office:|Per gli utenti: <br /><br />- Opzione per visualizzare o nascondere la barra dal pulsante **Proteggi** sulla barra multifunzione<br /><br />- Quando un utente seleziona l'opzione per nascondere la barra, per impostazione predefinita, la barra viene nascosta in tale app, ma continua a essere automaticamente visualizzata nelle app appena aperte <br /><br /> Per gli amministratori: <br /><br />- Impostazioni dei criteri per visualizzare o nascondere automaticamente la barra quando un'app viene aperta per la prima volta e per controllare se la barra rimane automaticamente nascosta per le app appena aperte dopo che un utente ha selezionato l'opzione per nascondere la barra|Per gli utenti: <br /><br />- Opzione per visualizzare o nascondere la barra dal pulsante **Riservatezza** sulla barra multifunzione<br /><br />- Quando un utente seleziona l'opzione per nascondere la barra, la barra viene nascosta in tale app e anche nelle app appena aperte <br /><br />Per gli amministratori: <br /><br />-Impostazione PowerShell per gestire la barra (solo client di anteprima)|
 |Colore dell'etichetta: | Configurazione nel portale di Azure | Mantenuti dopo la migrazione di etichette di Office 365 e possono essere configurate con PowerShell <br /><br /> Nuove etichette create le interfacce di amministrazione non è un colore, ma i colori possono essere configurati tramite [PowerShell](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)|
+|Le etichette supportano diverse lingue:| Configurazione nel portale di Azure | Configurare tramite Office 365 Security & Compliance PowerShell e il *LocaleSettings* parametro per [New-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps) e [Set con etichetta](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps)|
 |Aggiornamento criteri: | Quando si apre un'app Office <br /><br /> Quando si fa clic con il pulsante destro del mouse per classificare e proteggere un file o una cartella <br /><br />Quando si eseguono i cmdlet di PowerShell per l'assegnazione di etichette e la protezione<br /><br />Ogni 24 ore | Quando si apre un'app Office <br /><br /> Quando si fa clic con il pulsante destro del mouse per classificare e proteggere un file o una cartella <br /><br />Quando si eseguono i cmdlet di PowerShell per l'assegnazione di etichette e la protezione<br /><br />Ogni 4 ore|
 |Formati supportati per PDF:| Protezione: <br /><br /> - Standard ISO per la crittografia dei file PDF (impostazione predefinita) <br /><br /> - Estensione ppdf <br /><br /> Consumo: <br /><br /> - Standard ISO per la crittografia dei file PDF <br /><br />- Estensione ppdf<br /><br />- Protezione IRM SharePoint| Protezione: <br /><br /> - Standard ISO per la crittografia dei file PDF <br /><br /> <br /><br /> Consumo: <br /><br /> - Standard ISO per la crittografia dei file PDF <br /><br />- Estensione ppdf<br /><br />- Protezione IRM SharePoint|
 |Cmdlet supportati:| Tutti i cmdlet documentati per [AzureInformatioProtection](/powershell/module/azureinformationprotection) | Set-AIPAuthentication supporta le sessioni non interattive usando solo il client di anteprima <br /><br /> Get-AIPFileStatus, set-AIPFileClassification e Set-AIPFileLabel non supportano percorsi di SharePoint <br /><br /> Set-AIPFileClassification e Set-AIPFileLabel non supportano il *proprietario* parametro <br /><br /> È inoltre presente un singolo commento "No label to apply" per tutti gli scenari in cui non viene applicata un'etichetta <br /><br /> Set-AIPFileClassification nel client di anteprima supporta il *WhatIf* parametro, pertanto può essere eseguito in modalità di individuazione <br /><br /> Set-AIPFileLabel non supporta il parametro *EnableTracking* <br /><br /> Get-AIPFileStatus non restituisce informazioni sulle etichette da altri tenant e non visualizza il parametro *RMSIssuedTime*<br /><br />Inoltre, il *LabelingMethod* parametro per Get-AIPFileStatus Visualizza **con privilegi** o **Standard** anziché **manuale** o **Automatica**. Per altre informazioni, vedere la [documentazione online](/powershell/module/azureinformationprotection/get-aipfilestatus).|

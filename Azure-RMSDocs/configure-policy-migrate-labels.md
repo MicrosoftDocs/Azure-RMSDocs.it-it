@@ -4,18 +4,18 @@ description: Eseguire la migrazione di etichette di Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 07/10/2019
 ms.topic: article
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: a1fbc9dcb517eb272d1c32c0e81cc06039612c2b
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.openlocfilehash: 87d66363531aa29705dedc12ffdace9725fae580
+ms.sourcegitcommit: 531feafbabd8874fbeac4bd460e9bef60afabcdc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520894"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67691028"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Come eseguire la migrazione di etichette di Azure Information Protection a etichette di riservatezza di Office 365
 
@@ -25,7 +25,7 @@ ms.locfileid: "67520894"
 
 Eseguire la migrazione delle etichette in Azure Information Protection in modo che sia possibile usarle come etichette di riservatezza dal [client e servizi che supportano l'assegnazione di etichette unificata](#clients-and-services-that-support-unified-labeling).
 
-Dopo la migrazione, gestire e pubblicare queste etichette da Office 365 Security & centro conformità, o il Centro sicurezza di Microsoft 365 e centro di conformità di Microsoft 365. Queste etichette sono utilizzabile dal client Azure Information Protection unified imprevisto delle etichette. Se si continua a usare il client Azure Information Protection (versione classica), il client continua a scaricare le etichette con i criteri di Azure Information Protection dal portale di Azure.
+Dopo la migrazione, gestire e pubblicare queste etichette da una delle aree di amministrazione seguenti: Centro sicurezza e conformità di Office 365, Centro sicurezza Microsoft 365 o Centro conformità Microsoft 365. Queste etichette sono utilizzabile dal client Azure Information Protection unified imprevisto delle etichette. Se si continua a usare il client Azure Information Protection (versione classica), il client continua a scaricare le etichette con i criteri di Azure Information Protection dal portale di Azure.
 
 Prima di passare alle istruzioni dettagliate per la migrazione delle etichette può essere utile leggere queste domande frequenti:
 
@@ -45,14 +45,16 @@ Se non si consente l'accesso ai centri di amministrazione a questi utenti usando
 
 Gli amministratori globali per il tenant possono continuare a gestire le etichette e i criteri sia nel portale di Azure che nei centri di amministrazione dopo la migrazione delle etichette.
 
-
 ## <a name="considerations-for-unified-labels"></a>Considerazioni per le etichette unificate
 
 Prima di eseguire la migrazione delle etichette, prendere nota delle seguenti modifiche e considerazioni:
 
-- Non tutti i client supportano attualmente le etichette unificate. Assicurarsi di avere [client supportati](#clients-and-services-that-support-unified-labeling) e predisporre l'amministrazione sia nel portale di Azure (per i client che non supportano le etichette unificate) sia nei centri di amministrazione (per i client che supportano le etichette unificate).
+- Assicurarsi di aver [i client che supportano le etichette unificate](#clients-and-services-that-support-unified-labeling) e se necessario, essere preparata per l'amministrazione del portale di Azure (per i client che non supportano le etichette unificate) sia le interfacce di amministrazione (per i client che supportano etichette unificate).
 
-- I criteri, incluse le impostazioni dei criteri e gli utenti autorizzati all'accesso (criteri con ambito) e tutte le impostazioni client avanzate non vengono sottoposti a migrazione. Per le modifiche di cui non viene eseguita la migrazione sarà necessario configurare le opzioni pertinenti nei centri di amministrazione dopo la migrazione delle etichette.
+- I criteri, incluse le impostazioni dei criteri e gli utenti autorizzati all'accesso (criteri con ambito) e tutte le impostazioni client avanzate non vengono sottoposti a migrazione. Opzioni di configurazione di queste impostazioni dopo la migrazione di etichetta includono quanto segue:
+    - Il [copiare criteri](#copy-your-policies-and-policy-settings) opzione.
+    - L'interfaccia di amministrazione per le etichette di riservatezza.
+    - [Sicurezza e Office 365 PowerShell Compliance](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps), che è necessario usare per configurare [impostazioni client avanzate](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
     
     Per un'esperienza utente più uniforme è consigliabile pubblicare le stesse etichette negli stessi ambiti nei centri di amministrazione.
 
@@ -76,13 +78,13 @@ Prima di eseguire la migrazione delle etichette, prendere nota delle seguenti mo
 
 - Per ogni etichetta il portale di Azure consente di visualizzare solo il nome visualizzato dell'etichetta, che è modificabile. Nei centri di amministrazione vengono mostrati sia il nome visualizzato per un'etichetta che il nome dell'etichetta. Il nome dell'etichetta è il nome iniziale specificato al momento della creazione dell'etichetta. Il servizio back-end usa questa proprietà per l'identificazione.
 
-- Le eventuali stringhe localizzate per le etichette non vengono incluse nella migrazione. Sarà necessario definire nuove stringhe localizzate per le etichette migrate nei centri di amministrazione.
+- Le eventuali stringhe localizzate per le etichette non vengono incluse nella migrazione. Definire nuove stringhe localizzate per le etichette migrate usando Office 365 Security & Compliance PowerShell e il *LocaleSettings* parametro per [Set con etichetta](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
 
 - Dopo la migrazione, quando si modifica un'etichetta migrata nel portale di Azure, la stessa modifica si riflette automaticamente nei centri di amministrazione. Tuttavia, quando si modifica un'etichetta migrata in uno dei centri di amministrazione, è necessario tornare al portale di Azure, nel pannello **Azure Information Protection - Etichettatura unificata**, e selezionare **Pubblica**. Questa azione aggiuntiva è necessaria per il client Azure Information Protection (versione classica) per rendere effettive le modifiche dell'etichetta.
 
 ### <a name="label-settings-that-are-not-supported-in-the-admin-centers"></a>Impostazioni delle etichette non supportate nei centri di amministrazione
 
-Usare la tabella seguente per identificare le impostazioni di configurazione di un'etichetta migrata non supportate dal Centro sicurezza e conformità di Office 365, dal Centro sicurezza Microsoft 365 o dal Centro conformità Microsoft 365. Se sono presenti etichette con queste impostazioni, dopo aver completato la migrazione usare le linee guida per l'amministrazione nella colonna finale prima di pubblicare le etichette in uno dei centri di amministrazione.
+Usare la tabella seguente per identificare le impostazioni di configurazione di un'etichetta migrata non supportate dal Centro sicurezza e conformità di Office 365, dal Centro sicurezza Microsoft 365 o dal Centro conformità Microsoft 365. Se sono presenti etichette con queste impostazioni, una volta completata la migrazione, usare le indicazioni di amministrazione della colonna finale prima di pubblicare le etichette in una delle aree di amministrazione di cui viene fatto riferimento.
 
 In caso di dubbi sulla configurazione delle etichette, visualizzare le relative impostazioni nel portale di Azure. Se serve assistenza con questa procedura, vedere [Configurazione dei criteri di Azure Information Protection](configure-policy.md).
 
@@ -90,16 +92,16 @@ Client Azure Information Protection (versione classico) possono usare tutte le i
 
 |Configurazione dell'etichetta|Supportata dai client di etichettatura unificata| Linee guida per i centri di amministrazione|
 |-------------------|---------------------------------------------|-------------------------|
-|Stato abilitato o disabilitato<br /><br />Note: non sincronizzata nei centri di amministrazione |Non applicabile|Equivale a se l'etichetta è pubblicata o no. |
+|Stato abilitato o disabilitato<br /><br />Questo stato non viene sincronizzato con le interfacce di amministrazione |Non applicabile|Equivale a se l'etichetta è pubblicata o no. |
 |Colore dell'etichetta selezionato dall'elenco o specificato con il codice RGB |Yes|Nessuna opzione di configurazione per i colori dell'etichetta. In alternativa, è possibile configurare i colori di etichetta nel portale di Azure oppure usare [PowerShell](./rms-client/clientv2-admin-guide-customizations.md#specify-a-color-for-the-label).|
 |Protezione basata sul cloud o protezione basata su HYOK usando un modello predefinito |No|Nessuna opzione di configurazione per i modelli predefiniti. Non è consigliabile pubblicare un'etichetta con questa configurazione.|
-|Protezione basata sul cloud che usa autorizzazioni definite dall'utente in Word, Excel e PowerPoint |No|Le interfacce di amministrazione non sono un'opzione di configurazione per le autorizzazioni definite dall'utente per queste app di Office. A meno che non si usa la versione di anteprima del client di assegnazione di etichette unificata, è consigliabile non che si pubblica un'etichetta con questa configurazione. In caso contrario i risultati ottenuti applicando l'etichetta sono elencati nella [tabella seguente](#comparing-the-behavior-of-protection-settings-for-a-label).|
+|Protezione basata sul cloud che usa autorizzazioni definite dall'utente in Word, Excel e PowerPoint |No|Le interfacce di amministrazione non sono un'opzione di configurazione per le autorizzazioni definite dall'utente per queste app di Office. A meno che non si usa la versione di anteprima del client di assegnazione di etichette unificata, è consigliabile non che si pubblica un'etichetta con questa configurazione. Se si pubblica un'etichetta con questa configurazione, verificare il risultato ottenuto applicando l'etichetta dal [nella tabella seguente](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Protezione basata su HYOK che usa autorizzazioni definite dall'utente per Outlook (Non inoltrare) |No|Nessuna opzione di configurazione per HYOK. Non è consigliabile pubblicare un'etichetta con questa configurazione. In caso contrario i risultati ottenuti applicando l'etichetta sono elencati nella [tabella seguente](#comparing-the-behavior-of-protection-settings-for-a-label).|
-|Rimuovere la protezione |No|Nessuna opzione di configurazione per rimuovere la protezione. Non è consigliabile pubblicare un'etichetta con questa configurazione.<br /><br /> Se si pubblica questa etichetta, quando viene applicato, sarà possibile rimuovere la protezione se applicata in precedenza da un'etichetta. La protezione verrà mantenuta se in precedenza era stata applicata in modo indipendente da un'etichetta.|
+|Rimuovere la protezione |No|Nessuna opzione di configurazione per rimuovere la protezione. Non è consigliabile pubblicare un'etichetta con questa configurazione.<br /><br /> Se si pubblica un'etichetta con questa configurazione, quando viene applicato, sarà possibile rimuovere la protezione se applicata in precedenza da un'etichetta. La protezione verrà mantenuta se in precedenza era stata applicata in modo indipendente da un'etichetta.|
 |Tipi di carattere personalizzato e colore del tipo di carattere personalizzato tramite RGB per i contrassegni visivi (intestazione, piè di pagina, filigrana)|Yes|La configurazione per i contrassegni visivi è limitata a un elenco di colori e dimensioni dei caratteri. È possibile pubblicare questa etichetta senza modifiche benché non sia possibile visualizzare i valori configurati nei centri di amministrazione. <br /><br />Per modificare queste opzioni è possibile usare il portale di Azure. Per semplificare l'amministrazione, tuttavia, provare a cambiare il colore impostando una delle opzioni elencate nei centri di amministrazione.|
 |Variabili nei contrassegni visivi (intestazione, piè di pagina, filigrana)|No|Se si pubblica questa etichetta senza modifiche, le variabili vengono visualizzate come testo nei client anziché visualizzare i valori dinamici. Prima di pubblicare l'etichetta, modificare le stringhe per rimuovere le variabili.|
 |Contrassegni visivi per app|No|Se si pubblica questa etichetta senza modifiche, le variabili delle app vengono visualizzate come testo nei client in tutte le app anziché visualizzare le stringhe di testo in app selezionate. Pubblicare questa etichetta solo se è adatta per tutte le app e modificare le stringhe per rimuovere le variabili delle app.|
-|Condizioni e impostazioni associate <br /><br />Note: include l'assegnazione di etichette automatica e consigliata e le descrizioni comando corrispondenti|Non applicabile|Riconfigurare le condizioni tramite l'applicazione automatica di etichette come configurazione separata dalle impostazioni dell'etichetta.|
+|Condizioni e impostazioni associate <br /><br /> include l'assegnazione di etichette automatica e consigliata e le descrizioni comando corrispondenti|Non applicabile|Riconfigurare le condizioni tramite l'applicazione automatica di etichette come configurazione separata dalle impostazioni dell'etichetta.|
 
 ### <a name="comparing-the-behavior-of-protection-settings-for-a-label"></a>Confronto del comportamento delle impostazioni di protezione per un'etichetta
 
@@ -164,7 +166,7 @@ Le etichette di cui è stata eseguita correttamente la migrazione possono ora es
 > [!NOTE]
 > Questa opzione è un'implementazione graduale per i tenant in fase di anteprima e soggetta a modifiche. Se non viene visualizzato il **copiare criteri (anteprima)** opzione, riprovare tra qualche settimana.
 
-Dopo la migrazione delle etichette, è possibile selezionare un'opzione per copiare i criteri. Se si seleziona questa opzione, una copia occasionale dei criteri con loro [le impostazioni dei criteri](configure-policy-settings.md) e qualsiasi [impostazioni client avanzate](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) viene inviato all'interfaccia di amministrazione in cui è gestire le etichette: Office 365 Centro sicurezza e conformità, il Centro sicurezza di Microsoft 365, centro conformità di Microsoft 365.
+Dopo la migrazione delle etichette, è possibile selezionare un'opzione per copiare i criteri. Se si seleziona questa opzione, una copia occasionale dei criteri con loro [le impostazioni dei criteri](configure-policy-settings.md) e qualsiasi [impostazioni client avanzate](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) viene inviato all'interfaccia di amministrazione in cui è gestire le etichette: Centro sicurezza e conformità di Office 365, Centro sicurezza di Microsoft 365 o Centro conformità di Microsoft 365.
 
 Prima di selezionare il **copiare criteri (anteprima)** opzione, tenere presente quanto segue:
 
@@ -176,7 +178,7 @@ Prima di selezionare il **copiare criteri (anteprima)** opzione, tenere presente
 
 - Per supportare le proprietà del client avanzato che vengono copiate, è necessario usare la versione di anteprima del client Azure Information Protection unified imprevisto delle etichette.
 
-- A differenza di migrazione di etichetta in cui vengono sincronizzate le successive modifiche alle etichette, l'azione di criteri di copia non sincronizza eventuali modifiche successive per i criteri o impostazioni dei criteri. È possibile ripetere l'azione di copia dei criteri dopo aver apportato le modifiche nel portale di Azure e tutti i criteri esistenti e le relative impostazioni verranno sovrascritto nuovamente. In alternativa, usare il cmdlet Set-LabelPolicy o Set-etichetta con il *AdvancedSettings* parametro da Office 365 Security & Compliance Center PowerShell.
+- A differenza di migrazione di etichetta in cui vengono sincronizzate le successive modifiche alle etichette, l'azione di criteri di copia non sincronizza eventuali modifiche successive per i criteri o impostazioni dei criteri. È possibile ripetere l'azione di copia dei criteri dopo aver apportato le modifiche nel portale di Azure e tutti i criteri esistenti e le relative impostazioni verranno sovrascritto nuovamente. In alternativa, usare il [Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps) o [Set con etichetta](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps) cmdlet con il *AdvancedSettings* parametro da Office 365 Security & Compliance Center PowerShell.
 
 Per altre informazioni sulla configurazione delle impostazioni dei criteri, avanzate, le impostazioni client e le impostazioni dell'etichetta per Azure Information Protection unified imprevisto delle etichette client, vedere [configurazioni personalizzate per Azure Information Protection unified l'assegnazione di etichette client](./rms-client/clientv2-admin-guide-customizations.md) nella Guida dell'amministratore.
 
