@@ -11,12 +11,14 @@ ms.service: information-protection
 ms.assetid: aab59e02-930b-4a17-8442-2d5d081fe1a6
 ms.reviewer: kartikka
 ms.suite: ems
-ms.openlocfilehash: f971c261156c12dfec34fac7cd3ab1e7f7acded7
-ms.sourcegitcommit: 5ecf68d050152e0b425fa8cf6f3890951185b14a
+search.appverid:
+- MET150
+ms.openlocfilehash: fe186d53b4e4b95b8cb6dcf7b5751532e0021d2a
+ms.sourcegitcommit: e730f897452fcb0ca1003c6b86f6e65678d0ec57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66050707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885551"
 ---
 # <a name="supported-pdf-readers-for-microsoft-information-protection"></a>Lettori di file PDF supportati per Microsoft Information Protection
 
@@ -43,7 +45,7 @@ I seguenti lettori di file PDF sono in grado di aprire i file PDF che rispettano
 |Sistema operativo|Lettori supportati e collegamento di download|
 |----------------|-----------------------------------|
 |Windows 10 e versioni precedenti<br />fino a Windows 7 Service Pack 1|Adobe Acrobat Reader (scelta consigliata):<br />-  1. Leggere le [condizioni generali per l'utilizzo di Adobe](https://www.adobe.com/legal/terms.html) <br />- 2. Installare Adobe Reader per Windows dal [sito Adobe](https://www.adobe.com/)<br />- 3. Installare il [plug-in Adobe](https://go.microsoft.com/fwlink/?linkid=2050049) per Windows <br />- 4. Se richiesto, chiedere all'amministratore di [autorizzare il plug-in](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396) <br /><br /> Visualizzatore di Azure Information Protection: [Download](https://go.microsoft.com/fwlink/?linkid=838993)<br /><br />Foxit Reader: [Download](https://www.foxitsoftware.com/pdf-reader/)|
-|macOS 10.12 10.14 versioni |Adobe Acrobat Reader:<br />-  1. Leggere le [condizioni generali per l'utilizzo di Adobe](https://www.adobe.com/legal/terms.html) <br />- 2. Installare Adobe Reader per Mac dal [sito Adobe](https://www.adobe.com/)<br />- 3. Installare il [plug-in Adobe](https://go.microsoft.com/fwlink/?linkid=2050049) per Mac <br />- 4. Se richiesto, chiedere all'amministratore di [autorizzare il plug-in](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396)|
+|versioni macOS 10,12-10,14 |Adobe Acrobat Reader:<br />-  1. Leggere le [condizioni generali per l'utilizzo di Adobe](https://www.adobe.com/legal/terms.html) <br />- 2. Installare Adobe Reader per Mac dal sito di [Adobe](https://www.adobe.com/)<br />- 3. Installare il [plug-in Adobe](https://go.microsoft.com/fwlink/?linkid=2050049) per Mac <br />- 4. Se richiesto, chiedere all'amministratore di [autorizzare il plug-in](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/General-Availability-of-Adobe-Acrobat-Reader-integration-with/ba-p/298396)|
 |Android|App Azure Information Protection: [Download](https://go.microsoft.com/fwlink/?LinkId=325340)|
 |iOS|App Azure Information Protection: [Download](https://go.microsoft.com/fwlink/?LinkId=325338)|
 

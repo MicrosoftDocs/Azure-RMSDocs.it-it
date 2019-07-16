@@ -1,5 +1,5 @@
 ---
-title: Panoramica di protezione Azure Rights Management - AIP
+title: Panoramica di Azure Rights Management Protection-AIP
 description: Informazioni su Azure Rights Management (Azure RMS), la tecnologia di protezione usata da Azure Information Protection.
 author: cabailey
 ms.author: cabailey
@@ -11,12 +11,14 @@ ms.service: information-protection
 ms.assetid: aeeebcd7-6646-4405-addf-ee1cc74df5df
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 42e4f575b310b8cb802d982e25ad021cf2445e13
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+search.appverid:
+- MET150
+ms.openlocfilehash: 3e5f8b2cadc615e9c2e601ee083f0e9b99566631
+ms.sourcegitcommit: e730f897452fcb0ca1003c6b86f6e65678d0ec57
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67885616"
 ---
 # <a name="what-is-azure-rights-management"></a>Informazioni su Microsoft Azure Rights Management
 
@@ -65,7 +67,7 @@ Azure Rights Management supporta i requisiti di sicurezza, conformità e normati
 
 √ Uso di crittografia standard del settore e supporto per FIPS 140-2. Per altre informazioni, vedere [Controlli crittografici usati in Azure RMS: Algoritmi e lunghezze delle chiavi](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
 
-√ Supporto per modulo di protezione hardware nShield nCipher (HSM) per archiviare la chiave del tenant in Microsoft Azure data center. Azure Rights Management usa ambienti di sicurezza separati per i propri data center in America del Nord, nei paesi EMEA (Europa, Medio Oriente e Africa) e in Asia, così da limitare l'uso delle chiavi all'area pertinente.
+√ Supporto per il modulo di protezione hardware nCipher nShield (HSM) per archiviare la chiave del tenant in Microsoft Azure Data Center. Azure Rights Management usa ambienti di sicurezza separati per i propri data center in America del Nord, nei paesi EMEA (Europa, Medio Oriente e Africa) e in Asia, così da limitare l'uso delle chiavi all'area pertinente.
 
 √ Certificazione per:
 
