@@ -4,19 +4,19 @@ description: Identificare i prerequisiti per distribuire Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 07/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 17b41c32b760e0bff2dcb430689fb8bbebacc22d
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.openlocfilehash: e93b16976bfc6f6be88c015b582dbdb26531549c
+ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141702"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisiti per Azure Information Protection
 
@@ -63,7 +63,7 @@ Per altre informazioni sui requisiti relativi agli account utente e di gruppo pe
 
 Gli utenti devono avere dispositivi client, quali computer o dispositivi mobili, che eseguono un sistema operativo che supporta Azure Information Protection.
 
-I dispositivi seguenti supportano il client di assegnazione di etichette unificato di Azure Information Protection e il client Azure Information Protection. [Entrambi i client](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) consentire agli utenti di classificare ed etichettare i documenti e messaggi di posta elettronica:
+I dispositivi seguenti supportano il client di Azure Information Protection Unified Labeling e il client di Azure Information Protection. [Entrambi i client](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) consentono agli utenti di classificare ed etichettare documenti e messaggi di posta elettronica:
 
 - Windows 10 (x86, x64)
     
@@ -81,13 +81,13 @@ I dispositivi seguenti supportano il client di assegnazione di etichette unifica
 
 - Windows Server 2008 R2 
 
-Oltre a installare il client in computer fisici, è anche possibile installarlo nelle macchine virtuali. Controllare se il fornitore del software per la soluzione di desktop virtuale dispone di configurazione aggiuntivi che potrebbe essere necessari per eseguire il client Azure Information Protection unificato l'assegnazione di etichette o il client Azure Information Protection. Ad esempio, per le soluzioni Citrix, potrebbe essere necessario [disabilitare gli hook Citrix interfaccia API (Application Programming)](https://support.citrix.com/article/CTX107825) per Office (winword.exe, excel.exe, outlook.exe, powerpoint.exe) e il file eseguibile per il Azure Client di assegnazione di etichette unificato di Information Protection o il client Azure Information Protection (msip.app.exe, msip.viewer.exe).
+Oltre a installare il client di in computer fisici, è anche possibile installarlo nelle macchine virtuali. Verificare che il fornitore del software per la soluzione desktop virtuale disponga di una configurazione aggiuntiva che potrebbe essere necessaria per eseguire il Azure Information Protection client Unified Labeling o il client Azure Information Protection. Per le soluzioni Citrix, ad esempio, potrebbe essere necessario [disabilitare i hook dell'API (Application Programming Interface) Citrix](https://support.citrix.com/article/CTX107825) per Office (Winword. exe, Excel. exe, Outlook. exe, PowerPoint. exe) e il file eseguibile per il Azure Information Protection unificato assegnazione di etichette a client o client Azure Information Protection (MSIP. app. exe, MSIP. Viewer. exe).
 
-Per le versioni server elencate, il client Azure Information Protection sono supportate per Servizi Desktop remoto. Se si eliminano profili utente quando si usa il client Azure Information Protection con Servizi Desktop remoto, non eliminare le **%Appdata%\Microsoft\Protect** cartella.
+Per le versioni server elencate, i client Azure Information Protection sono supportati per Servizi Desktop remoto. Se si eliminano i profili utente quando si usa il Azure Information Protection client con Servizi Desktop remoto, non eliminare la cartella **%AppData%\Microsoft\Protect** .
 
-Quando il client Azure Information Protection protegge i dati usando il servizio Azure Rights Management, i dati possono essere utilizzati per il [stessi dispositivi](requirements-client-devices.md) che supportano il servizio Azure Rights Management.
+Quando il Azure Information Protection client protegge i dati tramite il servizio Azure Rights Management, i dati possono essere usati dagli [stessi dispositivi](requirements-client-devices.md) che supportano il servizio Azure Rights Management.
 
-Il client Azure Information Protection sono altri prerequisiti elencati nelle rispettive admin Guide:
+I client di Azure Information Protection hanno prerequisiti aggiuntivi elencati nelle rispettive guide di amministrazione:
 
 - Client per l'etichettatura unificata di Azure Information Protection: [Prerequisiti](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
 
@@ -96,7 +96,7 @@ Il client Azure Information Protection sono altri prerequisiti elencati nelle ri
 
 ## <a name="applications"></a>Applicazioni
 
-Il client Azure Information Protection consente di etichettare e proteggere documenti e messaggi di posta elettronica usando le applicazioni di Office **Word**, **Excel**, **PowerPoint**e **Outlook** da una qualsiasi delle seguenti edizioni di Office:
+I client Azure Information Protection possono etichettare e proteggere documenti e messaggi di posta elettronica usando le applicazioni di Office **Word**, **Excel**, **PowerPoint**e **Outlook** delle edizioni di Office seguenti:
 
 - App di Office con versione minima 1805, build 9330.2078 da Office 365 Business o Microsoft 365 Business quando all'utente viene assegnata una licenza per Azure Rights Management (nota anche come Azure Information Protection per Office 365)
 
@@ -112,7 +112,7 @@ Il client Azure Information Protection consente di etichettare e proteggere docu
 
 Con le altre edizioni di Office non è possibile proteggere i documenti e i messaggi di posta elettronica usando un servizio Rights Management. Per queste edizioni Azure Information Protection è supportato solo per la classificazione. Di conseguenza, le etichette che applicano la protezione non vengono visualizzate dagli utenti sulla barra di Azure Information Protection o dal pulsante **Proteggi** sulla barra multifunzione di Office. 
 
-Il client Azure Information Protection non supportano più versioni di Office nello stesso computer. Questi client inoltre non supportano gli account utente di passaggio a un'altra in ufficio.
+I client Azure Information Protection non supportano più versioni di Office nello stesso computer. Questi client non supportano anche il cambio di account utente in Office.
 
 Per informazioni sulle edizioni di Office che supportano il servizio di protezione, vedere [Applicazioni che supportano la protezione dati di Azure Rights Management](requirements-applications.md).
 
@@ -121,6 +121,8 @@ Per informazioni sulle edizioni di Office che supportano il servizio di protezio
 Se si ha un firewall o simili dispositivi di rete intermedi che devono essere configurati per consentire connessioni specifiche, i requisiti di connettività di rete sono inclusi nell'articolo di Office [Office 365 URLs and IP address ranges](https://support.office.com/en-US/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2) (URL e intervalli di indirizzi IP per Office 365). Vedere la sezione **Microsoft 365 Common and Office Online** (Comuni per Microsoft 365 e Office Online).
 
 Oltre alle informazioni nell'articolo di Office, le istruzioni seguenti sono specifiche per Azure Information Protection:
+
+- Per il client Unified Labeling per scaricare etichette ed etichettare i criteri: Consentire l'URL * **. Protection.Outlook.com** su HTTPS.
 
 - Se si usa un proxy Web che richiede l'autenticazione, configurarlo per l'uso dell'autenticazione integrata di Windows con le credenziali di accesso di Active Directory dell'utente.
 

@@ -4,19 +4,19 @@ description: Informazioni per fornire istruzioni a utenti, amministratori e adde
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 02/01/2019
+ms.date: 05/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8ab1872aaf42aa2e62d46873f892e93c2bc90927
-ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
+ms.openlocfilehash: 9d579d6ad639445dbf6f52b8cd3245b01973adef
+ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67545028"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68229837"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Consentire agli utenti di proteggere i file mediante il servizio Azure Rights Management
 
@@ -43,7 +43,7 @@ Dopo aver distribuito e configurato Azure Information Protection per l'organizza
     
     Se gli utenti dispongono del client Azure Information Protection, gli operatori del supporto tecnico possono chiedere loro di usare l'opzione **Guida e commenti** per informazioni, ad esempio per sapere se l'edizione di Office in uso non è in grado di supportare la protezione e l'account utente attualmente connesso. Questa opzione può essere usata anche per raccogliere i file di log e reimpostare il client. Per altre informazioni, vedere la guida dell'amministratore: [Controlli aggiuntivi e risoluzione dei problemi](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting).
     
-    Se sono presenti richieste legittime per ottenere diritti completi di accesso a documenti protetti, verificare che l'help desk abbia definito le procedure per richiederlo usando la [funzionalità per utenti con privilegi avanzati](configure-super-users.md) di Azure Rights Management. Ad esempio, le richieste potrebbero provenire dall'ufficio legale o da un responsabile dopo che un dipendente ha lasciato l'organizzazione.
+    Se sono presenti richieste legittime per ottenere diritti completi di accesso ai documenti protetti, verificare che il help desk disponga di processi per richiedere l'accesso tramite la [funzionalità Azure Information Protection utente con privilegi avanzati](configure-super-users.md). Ad esempio, le richieste potrebbero provenire dall'ufficio legale o da un responsabile dopo che un dipendente ha lasciato l'organizzazione.
     
     Inoltre, alcuni dei problemi tipici che gli utenti potrebbero segnalare includono le categorie seguenti:
     
@@ -55,7 +55,7 @@ Dopo aver distribuito e configurato Azure Information Protection per l'organizza
         
     - **Problemi di protezione o fruizione dei contenuti**
         
-        Verificare che gli utenti abbiano le istruzioni appropriate per le applicazioni usate e che stiano usando applicazioni e dispositivi supportati dal servizio Azure Rights Management. Per altre informazioni sui dispositivi e applicazioni supportate, vedere [i requisiti per Azure Information Protection](requirements.md).
+        Verificare che gli utenti abbiano le istruzioni appropriate per le applicazioni usate e che stiano usando applicazioni e dispositivi supportati dal servizio Azure Rights Management. Per ulteriori informazioni sulle applicazioni e sui dispositivi supportati, vedere [requisiti per Azure Information Protection](requirements.md).
         
         Per verificare se un utente o un gruppo specifico può essere autorizzato da Azure Active Directory a proteggere o utilizzare contenuti protetti, usare i controlli di verifica presentati in [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md).
         
@@ -103,7 +103,7 @@ I diritti d'uso vengono visualizzati nella parte superiore del documento in un b
 
 1.  In Outlook creare un messaggio di posta elettronica indirizzato a un destinatario presente nell'organizzazione.
 
-2.  Dalla scheda **Opzioni**: **Autorizzazione** > selezionare un'opzione. Ad esempio: **Non inoltrare**, **\<Nome società> - Riservato** o **\<Nome società> - Solo visualizzazione riservata**.
+2.  Dalla scheda **Opzioni**: **Autorizzazione** > selezionare un'opzione. Ad esempio:  **Non inoltrare**, **\<Nome società> - Riservato** o **\<Nome società> - Solo visualizzazione riservata**.
 
 3.  Inviare il messaggio.
 
@@ -115,7 +115,7 @@ Ad esempio, se il messaggio di posta elettronica è stato protetto usando l'opzi
 
 1. In Outlook sul Web creare un messaggio di posta elettronica indirizzato a un destinatario presente nell'organizzazione.
 
-2. Selezionare **Proteggi**. A meno che l'impostazione predefinita non sia stata modificata da un amministratore, l'opzione **Non inoltrare** viene selezionata automaticamente. Se si vuole modificare l'impostazione predefinita, selezionare **Modifica autorizzazioni** e quindi selezionare un'opzione nell'elenco a discesa. Ad esempio: **Crittografare** oppure  **\<nome società > - Informazioni riservate**.
+2. Selezionare **Proteggi**. A meno che l'impostazione predefinita non sia stata modificata da un amministratore, l'opzione **Non inoltrare** viene selezionata automaticamente. Se si vuole modificare l'impostazione predefinita, selezionare **Modifica autorizzazioni** e quindi selezionare un'opzione nell'elenco a discesa. Ad esempio:  **Crittografare** oppure  **\<nome società > - Informazioni riservate**.
 
 3. Inviare il messaggio.
 

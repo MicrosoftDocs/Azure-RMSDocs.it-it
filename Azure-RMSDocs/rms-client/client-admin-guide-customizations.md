@@ -1,22 +1,22 @@
 ---
-title: Configurazioni personalizzate - client Azure Information Protection
+title: Configurazioni personalizzate-client Azure Information Protection
 description: Informazioni sulla personalizzazione del client Azure Information Protection per Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/04/2019
+ms.date: 07/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 13bc0ab4df8c07905149cfa6ef8417543415f4d2
-ms.sourcegitcommit: 849c493cef6b2578945c528f4e17373a2ef26287
+ms.openlocfilehash: 3dfc29a45425bbe811093874f22972a6a53b6283
+ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67563424"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141721"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -49,7 +49,8 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 |Impostazione|Scenario e istruzioni|
 |----------------|---------------|
 |DisableDNF|[Nascondere o visualizzare il pulsante Non inoltrare in Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
-|CompareSubLabelsInAttachmentAction|[Abilitare il supporto dell'ordinamento delle etichette secondarie](#enable-order-support-for-sublabels-on-attachments)
+|DisableMandatoryInOutlook|[Esentare i messaggi di Outlook da un'etichetta obbligatoria](#exempt-outlook-messages-from-mandatory-labeling)|
+|CompareSubLabelsInAttachmentAction|[Abilitare il supporto dell'ordinamento delle etichette secondarie](#enable-order-support-for-sublabels-on-attachments) 
 |ContentExtractionTimeout|[Modificare le impostazioni di timeout per lo scanner](#change-the-timeout-settings-for-the-scanner)
 |EnableBarHiding|[Nascondere in modo permanente la barra di Azure Information Protection](#permanently-hide-the-azure-information-protection-bar)|
 |EnableCustomPermissions|[Rendere disponibili o non disponibili agli utenti le opzioni relative alle autorizzazioni personalizzate](#make-the-custom-permissions-options-available-or-unavailable-to-users)|
@@ -67,6 +68,7 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 |OutlookJustifyUntrustedCollaborationLabel|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Abilitare la classificazione consigliata in Outlook](#enable-recommended-classification-in-outlook)|
 |OutlookOverrideUnlabeledCollaborationExtensions|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnTrustedDomains|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnUntrustedCollaborationLabel|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |PostponeMandatoryBeforeSave|[Rimuovere "Non ora" per i documenti quando si usa l'etichettatura obbligatoria](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
@@ -74,7 +76,7 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 |PullPolicy|[Supporto per i computer disconnessi](#support-for-disconnected-computers)
 |RemoveExternalContentMarkingInApp|[Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Aggiungere "Segnala un problema" per gli utenti](#add-report-an-issue-for-users)|
-|RunAuditInformationTypeDiscovery|[Disabilitare l'invio di informazioni sensibili rilevate nei documenti a analitica di Azure Information Protection](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
+|RunAuditInformationTypeDiscovery|[Disabilitare l'invio di informazioni riservate individuate nei documenti a Azure Information Protection Analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |RunPolicyInBackground|[Attivare l'esecuzione continua della classificazione in background](#turn-on-classification-to-run-continuously-in-the-background)|
 |ScannerConcurrencyLevel|[Limitare il numero di thread usati dallo scanner](#limit-the-number-of-threads-used-by-the-scanner)|
 |SyncPropertyName|[Etichettare un documento di Office usando una proprietà personalizzata esistente](#label-an-office-document-by-using-an-existing-custom-property)|
@@ -137,7 +139,7 @@ Quando si specifica la seguente impostazione client avanzata, gli utenti visuali
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
-- Chiave: **ReportAnIssueLink**
+- Key: **ReportAnIssueLink**
 
 - Valore: **\<stringa HTTP>**
 
@@ -163,7 +165,7 @@ Si noti che senza una connessione a Internet, il client non può applicare la pr
     
     1. Immettere le stringhe seguenti:
     
-        - Chiave: **PullPolicy**
+        - Key: **PullPolicy**
         
         - Valore: **False**
     
@@ -193,7 +195,7 @@ Quando si esportano i criteri dal portale di Azure, viene scaricato un file ZIP 
     
 2. Rinominare il file identificato come **Policy.msip**, quindi copiarlo nella cartella **%LocalAppData%\Microsoft\MSIP** nei computer in cui è installato il client Azure Information Protection. 
 
-Se il computer disconnesso è in esecuzione la versione di disponibilità generale corrente dello scanner Azure Information Protection, sono disponibili i passaggi di configurazione aggiuntivi che necessari. Per altre informazioni, vedere [Restrizione: il server dello scanner non può avere la connettività Internet](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity) nelle istruzioni per la distribuzione dello scanner.
+Se il computer disconnesso esegue la versione corrente di GA dello scanner di Azure Information Protection, è necessario eseguire ulteriori operazioni di configurazione. Per altre informazioni, vedere [Restrizione: il server dello scanner non può avere la connettività Internet](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity) nelle istruzioni per la distribuzione dello scanner.
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Nascondere o visualizzare il pulsante Non inoltrare in Outlook
 
@@ -203,7 +205,7 @@ Quando è configurata, questa impostazione nasconde o visualizza il pulsante **N
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
-- Chiave: **DisableDNF**
+- Key: **DisableDNF**
 
 - Valore: **True** per nascondere il pulsante o **False** per visualizzarlo
 
@@ -215,7 +217,7 @@ Quando si configura questa impostazione e si pubblicano i criteri per gli utenti
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
-- Chiave: **EnableCustomPermissions**
+- Key: **EnableCustomPermissions**
 
 - Valore: **True** per rendere visibile l'opzione per le autorizzazioni personalizzate o **False** per nasconderla
 
@@ -229,7 +231,7 @@ Quando si crea e configura questa impostazione client avanzata, gli utenti posso
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
-- Chiave: **EnableCustomPermissionsForCustomProtectedFiles**
+- Key: **EnableCustomPermissionsForCustomProtectedFiles**
 
 - Valore: **True**
 
@@ -245,7 +247,7 @@ Anche se la barra di Azure Information Protection rimane nascosta, gli utenti po
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
-- Chiave: **EnableBarHiding**
+- Key: **EnableBarHiding**
 
 - Valore: **True**
 
@@ -259,13 +261,25 @@ Usare questa impostazione quando sono disponibili etichette secondarie ed è sta
 
 Configurare le stringhe seguenti:
 
-- Chiave: **CompareSubLabelsInAttachmentAction**
+- Key: **CompareSubLabelsInAttachmentAction**
 
 - Valore: **True**
 
 Senza questa impostazione, al messaggio di posta elettronica viene applicata la prima etichetta con la classificazione più alta individuata dall'etichetta padre. 
 
 Con questa impostazione, al messaggio di posta elettronica viene applicata l'etichetta secondaria con la classificazione più alta ordinata per ultima dall'etichetta padre. Se occorre riordinare le etichette per applicare quella desiderata per questo scenario, vedere [Come eliminare o riordinare un'etichetta per Azure Information Protection](../configure-policy-delete-reorder.md).
+
+## <a name="exempt-outlook-messages-from-mandatory-labeling"></a>Esentare i messaggi di Outlook da un'etichetta obbligatoria
+
+Questa configurazione usa un' [impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che è necessario configurare nel portale di Azure.
+
+Per impostazione predefinita, quando si Abilita l' [impostazione dei criteri](../configure-policy-settings.md) **tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**, a tutti i documenti salvati e ai messaggi di posta elettronica inviati deve essere applicata un'etichetta. Quando si configura l'impostazione avanzata seguente, l'impostazione dei criteri si applica solo ai documenti di Office e non ai messaggi di Outlook.
+
+Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
+
+- Key: **DisableMandatoryInOutlook**
+
+- Valore: **True**
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Abilitare la classificazione consigliata in Outlook
 
@@ -275,9 +289,10 @@ Quando si configura un'etichetta per la classificazione consigliata, agli utenti
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
-- Chiave: **OutlookRecommendationEnabled**
+- Key: **OutlookRecommendationEnabled**
 
 - Valore: **True**
+
 
 ## <a name="implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent"></a>Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica
 
@@ -320,7 +335,7 @@ User Justification: My manager approved sharing of this content
 Action Source: 
 User Response: Confirmed
 ```
-Le sezioni seguenti contengono istruzioni di configurazione per ogni impostazione client avanzata ed è possibile vederli in azione autonomamente con [esercitazione: Configurare Azure Information Protection per controllare oversharing di informazioni tramite Outlook](../infoprotect-oversharing-tutorial.md).
+Le sezioni seguenti contengono istruzioni di configurazione per ogni impostazione client avanzata, che possono essere visualizzate in azione per se stessi [con l'esercitazione: Configurare Azure Information Protection per controllare la sovracondivisione delle informazioni mediante](../infoprotect-oversharing-tutorial.md)Outlook.
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>Per implementare i messaggi popup di avviso, giustificazione o blocco per etichette specifiche:
 
@@ -333,19 +348,19 @@ Valore di esempio per più ID etichetta sotto forma di stringa delimitata da vir
 
 - Messaggi di avviso:
     
-    - Chiave: **OutlookWarnUntrustedCollaborationLabel**
+    - Key: **OutlookWarnUntrustedCollaborationLabel**
     
     - Valore: \<**ID etichetta, delimitato da virgole**>
 
 - Messaggi di giustificazione:
     
-    - Chiave: **OutlookJustifyUntrustedCollaborationLabel**
+    - Key: **OutlookJustifyUntrustedCollaborationLabel**
     
     - Valore: \<**ID etichetta, delimitato da virgole**>
 
 - Messaggi di blocco:
     
-    - Chiave: **OutlookBlockUntrustedCollaborationLabel**
+    - Key: **OutlookBlockUntrustedCollaborationLabel**
     
     - Valore: \<**ID etichetta, delimitato da virgole**>
 
@@ -356,71 +371,104 @@ Creare l'impostazione client avanzata seguente con uno dei valori seguenti:
 
 - Messaggi di avviso:
     
-    - Chiave: **OutlookUnlabeledCollaborationAction**
+    - Key: **OutlookUnlabeledCollaborationAction**
     
     - Valore: **Avvisa**
 
 - Messaggi di giustificazione:
     
-    - Chiave: **OutlookUnlabeledCollaborationAction**
+    - Key: **OutlookUnlabeledCollaborationAction**
     
     - Valore: **Giustifica**
 
 - Messaggi di blocco:
     
-    - Chiave: **OutlookUnlabeledCollaborationAction**
+    - Key: **OutlookUnlabeledCollaborationAction**
     
     - Valore: **Bloccato**
 
 - Disattivare questi messaggi:
     
-    - Chiave: **OutlookUnlabeledCollaborationAction**
+    - Key: **OutlookUnlabeledCollaborationAction**
     
     - Valore: **Off**
 
-#### <a name="to-define-specific-file-name-extensions-for-the-warn-justify-or-block-pop-up-messages-for-email-attachments-that-dont-have-a-label"></a>Per definire estensioni di file specifico per l'avviso, giustificare o bloccare i messaggi popup per gli allegati di posta elettronica che non hanno un'etichetta
+#### <a name="to-define-specific-file-name-extensions-for-the-warn-justify-or-block-pop-up-messages-for-email-attachments-that-dont-have-a-label"></a>Per definire estensioni di file specifiche per i messaggi popup di avviso, giustificazione o blocco per gli allegati di posta elettronica che non hanno un'etichetta
 
-Per impostazione predefinita, l'avviso, giustificare o bloccare i messaggi popup si applicano a tutti i documenti di Office e i documenti PDF. È possibile perfezionare questo elenco specificando quali estensioni di nome file devono visualizzare l'avviso, giustificare o bloccare i messaggi con una proprietà aggiuntiva del client avanzato e un elenco delimitato da virgole di estensioni di file.
+Per impostazione predefinita, i messaggi popup avvisa, giustifica o blocca si applicano a tutti i documenti di Office e PDF. È possibile affinare questo elenco specificando quali estensioni di file devono visualizzare i messaggi di avviso, di giustificazione o di blocco con una proprietà client avanzata aggiuntiva e un elenco delimitato da virgole di estensioni di file.
 
-Valore di esempio per più estensioni file definire come una stringa delimitata da virgole: `.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
+Valore di esempio per più estensioni di file da definire come stringa delimitata da virgole:`.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
 
-In questo esempio, un documento PDF senza etichetta non genererà un avviso, giustificare o bloccare i messaggi popup.
+In questo esempio un documento PDF senza etichetta non comporterà l'avviso, la giustificazione o il blocco dei messaggi popup.
 
 
-- Chiave: **OutlookOverrideUnlabeledCollaborationExtensions**
+- Key: **OutlookOverrideUnlabeledCollaborationExtensions**
 
-- Valore: **\<** estensioni per visualizzare i messaggi, separati da virgole di file **>**
+- Valore: **\<** estensioni di file per la visualizzazione dei messaggi, delimitati da virgole **>**
 
+#### <a name="to-specify-a-different-action-for-email-messages-without-attachments"></a>Per specificare un'azione diversa per i messaggi di posta elettronica senza allegati
+
+Per impostazione predefinita, il valore specificato per OutlookUnlabeledCollaborationAction per avvisare, giustificare o bloccare i messaggi popup si applica ai messaggi di posta elettronica o agli allegati che non hanno un'etichetta. È possibile perfezionare questa configurazione specificando un'altra impostazione client avanzata per i messaggi di posta elettronica che non dispongono di allegati.
+
+Creare l'impostazione client avanzata seguente con uno dei valori seguenti:
+
+- Messaggi di avviso:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Valore: **Avvisa**
+
+- Messaggi di giustificazione:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Valore: **Giustifica**
+
+- Messaggi di blocco:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Valore: **Bloccato**
+
+- Disattivare questi messaggi:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Valore: **Off**
+
+Se non si specifica questa impostazione client, il valore specificato per OutlookUnlabeledCollaborationAction viene usato per i messaggi di posta elettronica senza etichetta senza allegati, nonché per i messaggi di posta elettronica senza etichetta con allegati.
 
 ### <a name="to-specify-the-allowed-domain-names-for-recipients-exempt-from-the-pop-up-messages"></a>Per specificare i nomi di dominio consentiti per i destinatari esenti dai messaggi popup
 
-Quando si specificano nomi di dominio in un'impostazione client avanzata aggiuntiva, gli utenti non in grado di visualizzare i messaggi popup per i destinatari che hanno tale nome di dominio incluso nell'indirizzo di posta elettronica. In questo caso, i messaggi di posta elettronica vengono inviati senza interruzioni. Per specificare più domini, aggiungerli come stringa singola, delimitata da virgole.
+Quando si specificano nomi di dominio in un'impostazione client avanzata aggiuntiva, gli utenti non visualizzano i messaggi popup per i destinatari il cui nome di dominio è incluso nell'indirizzo di posta elettronica. In questo caso, i messaggi di posta elettronica vengono inviati senza interruzioni. Per specificare più domini, aggiungerli come stringa singola, delimitata da virgole.
 
 Una configurazione tipica consiste nel rendere visualizzabili i messaggi popup solo dai destinatari che sono esterni all'organizzazione o che non sono partner autorizzati dell'organizzazione. In questo caso, specificare tutti i domini di posta elettronica usati dall'organizzazione e dai partner.
 
-Creare le seguenti impostazioni client avanzate e per il valore, specificare uno o più domini, ognuno dei quali separati da una virgola.
+Creare le seguenti impostazioni client avanzate e, per il valore, specificare uno o più domini, ciascuno separato da una virgola.
 
 Valore di esempio per più domini sotto forma di stringa delimitata da virgole: `contoso.com,fabrikam.com,litware.com`
 
 - Messaggi di avviso:
     
-    - Chiave: **OutlookWarnTrustedDomains**
+    - Key: **OutlookWarnTrustedDomains**
     
     - Valore: **\<** nomi di dominio, delimitati da virgole **>**
 
 - Messaggi di giustificazione:
     
-    - Chiave: **OutlookJustifyTrustedDomains**
+    - Key: **OutlookJustifyTrustedDomains**
     
     - Valore: **\<** nomi di dominio, delimitati da virgole **>**
 
 - Messaggi di blocco:
     
-    - Chiave: **OutlookBlockTrustedDomains**
+    - Key: **OutlookBlockTrustedDomains**
     
     - Valore: **\<** nomi di dominio, delimitati da virgole **>**
 
-Ad esempio, specificare il client avanzato per non bloccare mai i messaggi di posta elettronica inviati agli utenti che dispongono di un indirizzo di posta elettronica di contoso.com, l'impostazione della **OutlookBlockTrustedDomains** e **contoso.com**. Di conseguenza, evitare la visualizzazione di messaggi di avviso popup in Outlook quando inviano un messaggio di posta elettronica john@sales.contoso.com.
+Ad esempio, per non bloccare mai i messaggi di posta elettronica inviati agli utenti che dispongono di un indirizzo di posta elettronica contoso.com, specificare l'impostazione client avanzata di **OutlookBlockTrustedDomains** e **contoso.com**. Di conseguenza, gli utenti non visualizzeranno i messaggi popup di avviso in Outlook quando inviano un messaggio di posta john@sales.contoso.comelettronica a.
+
+
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Impostare un'etichetta predefinita diversa per Outlook
 
@@ -434,7 +482,7 @@ Per fare in modo che Outlook non applichi l'etichetta predefinita, specificare *
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
-- Chiave: **OutlookDefaultLabel**
+- Key: **OutlookDefaultLabel**
 
 - Valore: \<**ID etichetta**> o **Nessuna**
 
@@ -488,7 +536,7 @@ Quando si configura questa impostazione l'opzione **Non ora** viene rimossa. In 
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
-- Chiave: **PostponeMandatoryBeforeSave**
+- Key: **PostponeMandatoryBeforeSave**
 
 - Valore: **False**
 
@@ -508,7 +556,7 @@ Le regole di condizione non vengono eseguite in tempo reale durante la digitazio
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
-- Chiave: **RunPolicyInBackground**
+- Key: **RunPolicyInBackground**
 
 - Valore: **True**
 
@@ -520,7 +568,7 @@ Quando un file PDF è protetto con l'ultima versione del client Azure Informatio
 
 Se è necessario che il client ripristini il comportamento delle versioni precedenti, ovvero protezione dei file PDF con un'estensione di file ppdf, usare l'impostazione avanzata seguente immettendo questa stringa:
 
-- Chiave: **EnablePDFv2Protection**
+- Key: **EnablePDFv2Protection**
 
 - Valore: **False**
 
@@ -566,7 +614,7 @@ Il file mantiene l'estensione pdf ma viene classificato come in precedenza ed è
 
 ## <a name="support-for-files-protected-by-secure-islands"></a>Supporto di file protetti da Secure Islands
 
-Questa opzione di configurazione è disponibile in anteprima e potrebbe cambiare.
+Questa opzione di configurazione è in anteprima e potrebbe cambiare.
 
 Se è stato usato Secure Islands è possibile che siano stati protetti file di testo, file immagine e file generici. Sono esempi i file con estensione ptxt, pjpeg o pfile. Quando si modifica il registro di sistema come indicato di seguito, Azure Information Protection può decrittografare questi file:
 
@@ -681,7 +729,7 @@ Questa configurazione non è supportata per Outlook e tenere presente che quando
 
 Poiché i criteri di ricerca influiscono sulle prestazioni per gli utenti, è consigliabile limitare i tipi di applicazioni di Office (**W**ord, **E**xcel, **P**owerPoint) solo a quelli in cui deve essere eseguita la ricerca:
 
-- Chiave: **RemoveExternalContentMarkingInApp**
+- Key: **RemoveExternalContentMarkingInApp**
 
 - Valore: \<**tipi di applicazioni di Office WXP**> 
 
@@ -714,7 +762,7 @@ I criteri di ricerca per la stringa specificata non fanno distinzione tra maiusc
 
 Poiché alcuni documenti potrebbero includere caratteri invisibili o tipi diversi di spazi o tabulazioni, la stringa specificata per una frase potrebbe non essere rilevata. Quando possibile, specificare una singola parola distintiva per il valore e assicurarsi di testare i risultati prima della distribuzione nell'ambiente di produzione.
 
-- Chiave: **ExternalContentMarkingToRemove**
+- Key: **ExternalContentMarkingToRemove**
 
 - Valore: \<**stringa da confrontare, definita come espressione regolare**> 
 
@@ -752,7 +800,7 @@ Usare il nome della forma per specificare un valore stringa per la chiave **Powe
 
 Esempio: il nome della forma è **fc**. Per rimuovere la forma con questo nome, specificare il valore: `fc`.
 
-- Chiave: **PowerPointShapeNameToRemove**
+- Key: **PowerPointShapeNameToRemove**
 
 - Valore: \<**nome delle forma di PowerPoint**> 
 
@@ -760,7 +808,7 @@ Quando si hanno più forme di PowerPoint da rimuovere, creare tante chiavi **Pow
 
 Per impostazione predefinita, il testo delle intestazioni e dei piè di pagina viene cercato solo negli schemi diapositiva. Per estendere la ricerca a tutte le diapositive, che è un processo con un utilizzo maggiore di risorse, usare un'impostazione client avanzata aggiuntiva denominata **RemoveExternalContentMarkingInAllSlides**:
 
-- Chiave: **RemoveExternalContentMarkingInAllSlides**
+- Key: **RemoveExternalContentMarkingInAllSlides**
 
 - Valore: **True**
 
@@ -795,25 +843,25 @@ Per etichettare un documento di Office con uno di questi valori di classificazio
 
 A questo punto, quando un utente apre e salva uno di questi documenti di Office, il documento viene etichettato come **Pubblico**, **Generale** o **Riservatezza elevata\Tutti i dipendenti** se sono presenti etichette con questi nomi nei criteri di Azure Information Protection. In assenza di etichette con questi nomi, il documento rimane senza etichetta.
 
-## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Disabilitare l'invio di informazioni sensibili rilevate nei documenti a analitica di Azure Information Protection
+## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Disabilitare l'invio di informazioni riservate individuate nei documenti a Azure Information Protection Analytics
 
 Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
 
-[Analitica di Azure Information Protection](../reports-aip.md) può individuare e segnalare i documenti salvati dal client Azure Information Protection quando tale contenuto contiene informazioni riservate. Per impostazione predefinita, queste informazioni vengono inviate dal client Azure Information Protection (versione classiche) di analitica di Azure Information Protection.
+[Azure Information Protection Analytics](../reports-aip.md) è in grado di individuare e segnalare i documenti salvati dai client Azure Information Protection quando il contenuto contiene informazioni riservate. Per impostazione predefinita, queste informazioni vengono inviate dal client di Azure Information Protection (classico) a Azure Information Protection Analytics.
 
-Per modificare questo comportamento in modo che queste informazioni non vengono inviate dal client classico, immettere le stringhe seguenti:
+Per modificare questo comportamento in modo che queste informazioni non vengano inviate dal client classico, immettere le stringhe seguenti:
 
-- Chiave: **RunAuditInformationTypeDiscovery**
+- Key: **RunAuditInformationTypeDiscovery**
 
 - Valore: **False**
 
-Se si imposta questa impostazione client avanzata, i risultati dei controlli sono ancora inviate dal client classico ma le informazioni sono limitate alla creazione di report quando un utente ha eseguito con l'etichetta di contenuto.
+Se si imposta questa impostazione client avanzata, i risultati di controllo vengono comunque inviati dal client classico, ma le informazioni sono limitate alla creazione di report quando un utente ha eseguito l'accesso al contenuto con etichetta.
 
 Ad esempio:
 
-- Con questa impostazione, è possibile vedere che un utente accede Financial.docx etichettato **Confidential \ Sales**.
+- Con questa impostazione è possibile vedere che un utente ha eseguito l'accesso a Financial. docx con etichetta **Confidential \ Sales**.
 
-- Senza questa impostazione, è possibile notare che Financial.docx contiene 6 numeri di carta di credito.
+- Senza questa impostazione, è possibile notare che Financial. docx contiene 6 numeri di carta di credito.
     
     - Se si abilita anche [Corrispondenze di contenuto per un'analisi più approfondita](../reports-aip.md#content-matches-for-deeper-analysis), si potranno vedere anche i numeri di carta di credito stessi.
 
@@ -823,9 +871,9 @@ Questa configurazione usa un'[impostazione avanzata del client](#how-to-configur
 
 Quando si seleziona la casella di controllo [Analisi di Azure Information Protection](../reports-aip.md) che raccoglie le corrispondenze di contenuto per i tipi di informazioni riservate o le condizioni personalizzate, per impostazione predefinita, queste informazioni vengono inviate da tutti gli utenti. In presenza di utenti che non devono inviare questi dati, creare l'impostazione client avanzata seguente in un [criterio con ambito](../configure-policy-scope.md) per questi utenti: 
 
-- Chiave: **LogMatchedContent**
+- Key: **LogMatchedContent**
 
-- Valore: **Disable**
+- Valore: **Disabilitare**
 
 
 ## <a name="limit-the-number-of-threads-used-by-the-scanner"></a>Limitare il numero di thread usati dallo scanner
@@ -838,7 +886,7 @@ Come valore specificare il numero di thread simultanei che lo scanner può esegu
 
 Quando si configura il valore per il test per la prima volta, è consigliabile specificare 2 per ogni core e quindi monitorare i risultati. Se ad esempio si esegue lo scanner in un computer con 4 core, impostare prima il valore su 8. Se necessario, aumentare o diminuire questo numero, in base alle prestazioni risultanti richieste per il computer dello scanner e la velocità di analisi. 
 
-- Chiave: **ScannerConcurrencyLevel**
+- Key: **ScannerConcurrencyLevel**
 
 - Valore: **\<numero massimo di utenti simultanei>**
 
@@ -854,45 +902,45 @@ Per altre informazioni sui livelli di integrità di Windows, vedere [What is the
 
 Per configurare questa impostazione avanzata in modo che lo scanner venga eseguito con un livello di integrità assegnato automaticamente da Windows (un account utente standard viene eseguito con un livello di integrità medio), immettere le stringhe seguenti:
 
-- Chiave: **ProcessUsingLowIntegrity**
+- Key: **ProcessUsingLowIntegrity**
 
 - Valore: **False**
 
 ## <a name="change-the-timeout-settings-for-the-scanner"></a>Modificare le impostazioni di timeout per lo scanner
 
-Questa configurazione viene utilizzato [impostazioni client avanzate](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che devono essere configurati nel portale di Azure.
+Questa configurazione USA [Impostazioni client avanzate](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che è necessario configurare nel portale di Azure.
 
-Per impostazione predefinita, lo scanner Azure Information Protection con un periodo di timeout di 15: 00.00 (15 minuti) per esaminare tutti i file per i tipi di informazioni riservate o le espressioni di espressione regolare che è stato configurato per condizioni personalizzate. Quando viene raggiunto il periodo di timeout per il processo di estrazione del contenuto, i risultati prima del timeout sono restituita e ulteriore ispezione per le interruzioni di file. In questo scenario, viene registrato il seguente messaggio di errore in %*localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog (compresso se sono presenti più log): **Non è stato possibile GetContentParts** con **è stata annullata l'operazione** nei dettagli del.
+Per impostazione predefinita, lo scanner Azure Information Protection ha un periodo di timeout di 00:15:00 (15 minuti) per esaminare ogni file per i tipi di informazioni riservate o per le espressioni Regex configurate per le condizioni personalizzate. Quando viene raggiunto il periodo di timeout per questo processo di estrazione del contenuto, vengono restituiti tutti i risultati prima del timeout e l'ulteriore ispezione del file viene arrestata. In questo scenario, il messaggio di errore seguente viene registrato in%*LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog (compresso se sono presenti più log): **GetContentParts non riuscito** con **l'operazione** annullata nei dettagli.
 
-Se si verifica questo problema di timeout a causa di file di grandi dimensioni, è possibile aumentare il periodo di timeout per l'estrazione completi del contenuto:
+Se si verifica questo problema di timeout a causa di file di grandi dimensioni, è possibile aumentare questo periodo di timeout per l'estrazione del contenuto completo:
 
-- Chiave: **ContentExtractionTimeout**
+- Key: **ContentExtractionTimeout**
 
-- Valore:  **\<hh:min:sec >**
+- Valore:  **\<HH: min: sec >**
 
-Il tipo di file può influire sul tempo necessario per analizzare un file. Tempi di analisi di esempio:
+Il tipo di file può influire sul tempo necessario per eseguire la scansione di un file. Tempi di analisi di esempio:
 
-- Un tipico file di Word 100 MB: 0,5-5 minuti
+- Un file di Word 100 MB tipico: 0,5-5 minuti
 
-- Un tipico file PDF di 100 MB: entro 5-20 minuti
+- Un file PDF tipico di 100 MB: 5-20 minuti
 
-- Un tipico file di Excel di 100 MB: 12-30 minuti
+- Un file di Excel di 100 MB tipico: 12-30 minuti
 
-Per alcuni tipi di file molto grandi, ad esempio i file video, prendere in considerazione esclusi dall'analisi aggiungendo l'estensione per il **tipi di File da analizzare** opzione nel profilo dello scanner.
+Per alcuni tipi di file di dimensioni molto elevate, ad esempio file video, è consigliabile escluderli dall'analisi aggiungendo l'estensione del nome di file all'opzione **tipi di file da analizzare** nel profilo dello scanner.
 
-Inoltre, lo scanner Azure Information Protection ha un periodo di timeout di 30: 00:00 (30 minuti) per ogni file che elabora. Questo valore prende in considerazione il tempo che prima che per recuperare un file da un repository e temporaneamente salvarlo in locale per le azioni che possono includere la decrittografia, l'estrazione del contenuto per l'ispezione, l'assegnazione di etichette e la crittografia.
+Inoltre, lo scanner Azure Information Protection ha un periodo di timeout di 00:30:00 (30 minuti) per ogni file elaborato. Questo valore prende in considerazione il tempo richiesto per recuperare un file da un repository e salvarlo temporaneamente localmente per le azioni che possono includere la decrittografia, l'estrazione del contenuto per l'ispezione, l'assegnazione di etichette e la crittografia.
 
-Anche se lo scanner Azure Information Protection possa analizzare centinaia di file per ogni minuto, se si dispone di un repository di dati con un numero elevato di file molto grandi, lo scanner può superare questo periodo di timeout predefinito e nel portale di Azure, si bloccano dopo 30 minuti. In questo scenario, viene registrato il seguente messaggio di errore in %*localappdata*%\Microsoft\MSIP\Logs\MSIPScanner.iplog (se sono presenti più log compressi) e il file di log con estensione csv dello scanner: **L'operazione è stata annullata**.
+Sebbene lo scanner di Azure Information Protection possa analizzare dozzine di centinaia di file al minuto, se si dispone di un repository di dati con un numero elevato di file di grandi dimensioni, lo scanner può superare questo periodo di timeout predefinito e, nel portale di Azure, sembra arrestarsi dopo 30 minuti. In questo scenario, il seguente messaggio di errore viene registrato in%*LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog (compresso se sono presenti più log) e il file di log scanner. csv: **L'operazione è stata**annullata.
 
-Uno scanner con 4 processori core per impostazione predefinita è 16 thread per l'analisi e la probabilità che si verifichi 16 file di grandi dimensioni in un periodo di tempo di 30 minuti dipende il rapporto tra i file di grandi dimensioni. Ad esempio, se la velocità di analisi è 200 file al minuto e l'1% del file supera il timeout di 30 minuti, vi è una probabilità pari a più di 85% che lo scanner si verificherà la situazione di timeout di 30 minuti. Questi timeout possono comportare tempi di analisi di più e consumo di memoria maggiore.
+Uno scanner con 4 processori core per impostazione predefinita dispone di 16 thread per l'analisi e la probabilità che si verifichino 16 file di grandi dimensioni in un periodo di tempo di 30 minuti dipende dal rapporto dei file di grandi dimensioni. Se, ad esempio, la frequenza di analisi è di 200 file al minuto e l'1% dei file supera il timeout di 30 minuti, esiste una probabilità superiore al 85% che lo scanner rileverà la situazione di timeout di 30 minuti. Questi timeout possono causare tempi di analisi più lunghi e un maggiore consumo di memoria.
 
-In questo caso, se per il computer dello scanner non è possibile aggiungere ulteriori processori core, è consigliabile ridurre il periodo di timeout per frequenze meglio l'analisi e il consumo di memoria inferiore, ma l'acknowledgement del recapito che verranno esclusi alcuni file. In alternativa, provare ad aumentare il periodo di timeout per i risultati dell'analisi più accurati, ma con il riconoscimento che questa configurazione potrebbe comportare l'analisi più bassi di classificazione e il consumo di memoria maggiore.
+In questa situazione, se non è possibile aggiungere più processori di base al computer dello scanner, provare a ridurre il periodo di timeout per ottenere una migliore frequenza di analisi e ridurre il consumo di memoria, ma con il riconoscimento che alcuni file verranno esclusi. In alternativa, provare ad aumentare il periodo di timeout per ottenere risultati di analisi più accurati, ma con il riconoscimento che questa configurazione comporterà probabilmente una riduzione delle frequenze di analisi e un maggiore consumo di memoria.
 
-Per modificare il periodo di timeout per l'elaborazione di file, configurare le seguenti impostazioni client avanzate:
+Per modificare il periodo di timeout per l'elaborazione dei file, configurare l'impostazione client avanzata seguente:
 
-- Chiave: **FileProcessingTimeout**
+- Key: **FileProcessingTimeout**
 
-- Valore:  **\<hh:min:sec >**
+- Valore:  **\<HH: min: sec >**
 
 ## <a name="change-the-local-logging-level"></a>Modificare il livello di registrazione locale
 
@@ -902,7 +950,7 @@ Per impostazione predefinita, il client Azure Information Protection scrive i fi
  
 Per modificare il livello di registrazione per questi file, configurare l'impostazione client avanzata seguente:
 
-- Chiave: **LogLevel**
+- Key: **LogLevel**
 
 - Valore: **\<livello di registrazione>**
 

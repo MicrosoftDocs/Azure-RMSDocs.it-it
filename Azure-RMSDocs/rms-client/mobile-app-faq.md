@@ -4,7 +4,7 @@ description: Alcune domande frequenti riguardanti l'uso dell'app Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 07/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.custom: askipteam
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 7694cf898651eee45e64d2319e1527f07e5fa5de
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.openlocfilehash: 5419488303aa3f1c031c09660dd346cc4dc28b65
+ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156625"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68229819"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Domande frequenti sull'app Microsoft Azure Information Protection per iOS e Android
 
@@ -55,7 +55,7 @@ Tuttavia, se non si vuole attendere, è possibile usare le istruzioni seguenti p
 
 ## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>Quali credenziali usare per accedere all'app?
 
-Se l'organizzazione ha già AD RMS in locale (con l'estensione per dispositivi mobili) o usa il servizio Azure Rights Management, usare le credenziali dell'account aziendale per accedere. 
+Se l'organizzazione ha già AD RMS locale (con l'estensione per dispositivi mobili) o USA Azure Information Protection, usare le credenziali di lavoro per accedere. 
 
 Se per proteggere il file è stato usato l'indirizzo di posta elettronica personale, usare le credenziali di un [account Microsoft](https://signup.live.com) gratuito per accedere.
 
@@ -69,7 +69,7 @@ Tuttavia, anche se il visualizzatore può aprire file protetti con questo accoun
 
 È possibile aprire i file con estensione rpmsg, pdf, ppdf, pjpg, pjpeg, ptiff, ppng, ptxt, pxml e altri formati di file di testo e immagine.
 
-Per l'elenco completo delle estensioni dei nomi di file di testo e immagine, vedere la prima tabella in [Tipi di file supportati per la classificazione e la protezione](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) nella Guida dell'amministratore.
+Per l'elenco completo delle estensioni dei nomi di file di testo e immagine, vedere la prima tabella in [Tipi di file supportati per la classificazione e la protezione](clientv2-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) nella Guida dell'amministratore.
 
 ##  <a name="how-do-i-provide-feedback-about-this-app"></a>In che modo è possibile fornire feedback sull'app?
 
