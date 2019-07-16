@@ -4,19 +4,19 @@ description: Informazioni di supporto per Azure Information Protection che inclu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 03/07/2019
+ms.date: 07/15/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 92f282a2cf785c82c87d3ffbe8b47317a1ca1956
-ms.sourcegitcommit: 383b1fa5e65255420d7ec6fbe2f9b17f4439e33e
+ms.openlocfilehash: 05c2c97bf5a46cb29c64bcd432de2043a5d33ad3
+ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708850"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68229907"
 ---
 # <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Informazioni su conformità e supporto per Azure Information Protection
 
@@ -32,7 +32,7 @@ Tuttavia, alcune informazioni rilevanti possono essere utili al consulente legal
 
 - Tutte le chiavi di crittografia usate da Azure Information Protection sono protette con una chiave radice specifica del cliente che usa RSA 2048 bit. È supportato anche RSA 1024 per compatibilità con versioni precedenti. [Altre informazioni](./how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths)
 
-- Le chiavi radice specifiche del cliente sono gestite da Microsoft o il provisioning dal cliente in un modulo di protezione hardware nCipher usando "[trasferire la propria chiave](plan-implement-tenant-key.md)" (BYOK). Azure Information Protection supporta anche funzionalità limitate con una chiave locale usando il modello "[Hold Your Own Key](configure-adrms-restrictions.md)" (HYOK) per il contenuto a cui si applicano requisiti che indicano che non deve essere protetto con un chiave basata sul cloud.
+- Le chiavi radice specifiche del cliente sono gestite da Microsoft o sottoposte a provisioning da parte del cliente in un modulo di protezione hardware nCipher usando "[Bring your own key](plan-implement-tenant-key.md)" (BYOK). Azure Information Protection supporta anche funzionalità limitate con una chiave locale usando il modello "[Hold Your Own Key](configure-adrms-restrictions.md)" (HYOK) per il contenuto a cui si applicano requisiti che indicano che non deve essere protetto con un chiave basata sul cloud.
 
 - Il servizio Azure Information Protection è ospitato in data center regionali in tutto il mondo. Le chiavi e i criteri di Azure Information Protection rimangono sempre nell'area di distribuzione originale.
  
@@ -40,9 +40,9 @@ Tuttavia, alcune informazioni rilevanti possono essere utili al consulente legal
 
 ## <a name="legal-and-privacy"></a>Note legali e privacy
 
-- Per informazioni sul contratto di Microsoft Azure: [Contratto di Microsoft Azure](https://azure.microsoft.com/support/legal/subscription-agreement/)
+- Per Microsoft Azure informazioni sul contratto: [Contratto di Microsoft Azure](https://azure.microsoft.com/support/legal/subscription-agreement/)
 
-- Per informazioni sulla privacy di Microsoft Azure: [Informativa sulla privacy di Microsoft Azure](https://azure.microsoft.com/support/legal/privacy-statement/)
+- Per Microsoft Azure informazioni sulla privacy: [Informativa sulla privacy di Microsoft Azure](https://azure.microsoft.com/support/legal/privacy-statement/)
 
 ## <a name="security-compliance-and-auditing"></a>Sicurezza, conformità e controllo
 
