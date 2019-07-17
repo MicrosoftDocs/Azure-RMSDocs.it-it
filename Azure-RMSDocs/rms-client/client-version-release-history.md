@@ -4,18 +4,18 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/10/2019
+ms.date: 07/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fd0e18fe93045dec211f2bb400e32fc067ea9ac7
-ms.sourcegitcommit: 01209692397e73aec5c8f04f0ea8b54292b397d7
+ms.openlocfilehash: d07b862fc95815cad2b100b80c6f024c582263dc
+ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67816320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141640"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection: Cronologia delle versioni e criteri per il supporto
 
@@ -68,9 +68,33 @@ Usare le informazioni seguenti per scoprire le novità o le modifiche per una ve
 >  
 > Per il supporto tecnico, vedere le informazioni riportate in [Opzioni di supporto e risorse per la community](../information-support.md#support-options-and-community-resources). È anche possibile rivolgersi al team di Azure Information Protection nel [sito di Yammer](https://www.yammer.com/askipteam/).
 
+## <a name="version-153100"></a>Versione 1.53.10.0
+
+**Data di rilascio**: 07/15/2019
+
+Questa versione include MSIPC versione 1.0.3889.0419 del client RMS.
+
+**Nuove funzionalità:**
+
+- Nuova impostazione client avanzata per esentare i messaggi di Outlook dall'impostazione dei criteri **tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**. [Altre informazioni](client-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
+
+- Nuova impostazione client avanzata per personalizzare ulteriormente le impostazioni che implementano messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica. Con questa nuova impostazione avanzata, è possibile impostare un'azione diversa per i messaggi di posta elettronica senza allegati. [Altre informazioni](client-admin-guide-customizations.md#to-specify-a-different-action-for-email-messages-without-attachments)
+
+**Correzioni**:
+
+- Quando si usa Esplora file, fare clic con il pulsante destro del mouse per etichettare un file con protezione applicata indipendentemente da un'etichetta. tale protezione viene mantenuta. Un utente, ad esempio, ha applicato autorizzazioni personalizzate a un file.
+
+- Quando si sostituisce l'opzione non eseguire l'invio in un thread di posta elettronica con un'etichetta configurata per le autorizzazioni definite dall'utente e non in avanti, i destinatari originali possono comunque aprire il messaggio di posta elettronica.
+
+- Nello scenario seguente un utente non rileva più nella descrizione comando dell'etichetta che l'etichetta è stata impostata automaticamente: Un utente riceve un messaggio di posta elettronica protetto con un documento collegato che non è etichettato, ma protetto automaticamente. Quando l'utente della stessa organizzazione del mittente apre il documento, al documento viene applicata l'etichetta corrispondente per le impostazioni di protezione.
+
+- Il [diritto di utilizzo](../configure-usage-rights.md#usage-rights-and-descriptions) minimo per eseguire il cmdlet [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) è ora **Salva con nome, Esporta** (esportazione) anziché **copia** (estrazione).
+
 ## <a name="version-1482040"></a>Versione 1.48.204.0
 
 **Data di rilascio**: 04/16/2019
+
+Supportato tramite 02/15/2020
 
 Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
 
