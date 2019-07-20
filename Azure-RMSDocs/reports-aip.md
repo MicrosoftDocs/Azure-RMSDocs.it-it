@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: c39e2be3fef7568179f3859f834f92cc761b6259
-ms.sourcegitcommit: 849c493cef6b2578945c528f4e17373a2ef26287
+ms.openlocfilehash: 120cc1298d48c3dd9952362b8abacbca22ef6acc
+ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67563407"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340747"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -35,7 +35,7 @@ Usare le funzionalità di analisi di Azure Information Protection per generare r
 
 - Identificare i documenti contenenti informazioni sensibili che possono mettere a rischio l'organizzazione se non protette e attenuare il rischio seguendo le raccomandazioni.
 
-I dati visualizzati vengono aggregati dal client Azure Information Protection e gli scanner Azure Information Protection, i computer Windows che eseguono [Microsoft Defender Advanced Threat Protection (ATP Defender Microsoft)](/windows/security/threat-protection/microsoft-defender-atp/overview)e dal [i client che supportano l'etichettatura unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
+I dati visualizzati sono aggregati dai client di Azure Information Protection e dagli scanner Azure Information Protection, da computer Windows che eseguono [Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)](/windows/security/threat-protection/microsoft-defender-atp/overview)e da [ client che supportano l'assegnazione di etichette unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
 
 Ad esempio è possibile visualizzare quanto segue:
 
@@ -67,7 +67,7 @@ Ad esempio è possibile visualizzare quanto segue:
 
 - Nel report **Individuazione dati**:
 
-    - Quali file sono nel repository dei dati analizzati, Windows 10 computer o i computer che eseguono il client Azure Information Protection o [i client che supportano l'etichettatura unificato](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)
+    - Quali file si trovano nei repository di dati scansionati, nei computer Windows 10 o nei computer che eseguono il client Azure Information Protection o i [client che supportano l'assegnazione di etichette unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)
     
     - Quali file sono provvisti di etichetta e protetti e il percorso dei file in base alle etichette
     
@@ -136,9 +136,9 @@ Per visualizzare i report di Azure Information Protection e creare report person
 |Requisito|Altre informazioni|
 |---------------|--------------------|
 |Una sottoscrizione di Azure che include Log Analytics ed è per lo stesso tenant di Azure Information Protection|Vedere la pagina dei [prezzi di Monitoraggio di Azure](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Se non si dispone di un abbonamento di Azure o attualmente non si usa Azure Log Analytics, la pagina dei prezzi include un collegamento per una versione di valutazione gratuita.|
-|Il client Azure Information Protection o il client di assegnazione di etichette unificato di Azure Information Protection|Se non si ha già uno di questi client, è possibile scaricare e installare dal [Microsoft Download Center](https://www.microsoft.com/en-us/download/details.aspx?id=53018). <br /><br /> Assicurarsi di avere la versione più recente per supportare [tutte le funzionalità](#features-that-require-a-minimum-version-of-the-client) per analitica di Azure Information Protection.|
-|Per il report **Individuazione e rischio**: <br /><br />-Per visualizzare i dati da archivi dati locali, è stato distribuito almeno un'istanza dello scanner Azure Information Protection <br /><br />-Per visualizzare i dati dai computer Windows 10, devono essere una build minima di 1809 e si usa Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) è stata abilitata la funzionalità di integrazione di Azure Information Protection da Microsoft Defender Security Center|Per le istruzioni di installazione per lo scanner, vedere [Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner.md). <br /><br />Per informazioni sulla configurazione e Usa la funzionalità di integrazione di Azure Information Protection da Microsoft Defender Security Center, vedere [protezione delle informazioni nella panoramica di Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
-|Per il report **Raccomandazioni**: <br /><br />-Per aggiungere un nuovo repository dei dati dal portale di Azure come un'azione consigliata, è necessario usare la versione più recente di disponibilità a livello generale dello scanner Azure Information Protection |Per distribuire lo scanner, vedere [distribuzione dello scanner di Azure Information Protection per classificare e proteggere i file automaticamente](deploy-aip-scanner.md).|
+|Il client di Azure Information Protection o il client con etichetta unificata Azure Information Protection|Se non si dispone già di uno di questi client, è possibile scaricarli e installarli dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). <br /><br /> Assicurarsi di disporre della versione più recente per supportare [tutte le funzionalità](#features-that-require-a-minimum-version-of-the-client) per Azure Information Protection Analytics.|
+|Per il report **Individuazione e rischio**: <br /><br />-Per visualizzare i dati dagli archivi dati locali, è stata distribuita almeno un'istanza dello scanner Azure Information Protection <br /><br />-Per visualizzare i dati dai computer Windows 10, è necessario che siano una build minima di 1809. si sta usando Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) ed è stata abilitata la funzionalità di integrazione Azure Information Protection di Microsoft Centro sicurezza Defender|Per le istruzioni di installazione per lo scanner, vedere [Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner.md). <br /><br />Per informazioni sulla configurazione e sull'uso della funzionalità di integrazione Azure Information Protection da Microsoft Defender Security Center, vedere [Panoramica di Information Protection in Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
+|Per il report **Raccomandazioni**: <br /><br />-Per aggiungere un nuovo repository di dati dal portale di Azure come azione consigliata, è necessario usare la versione di disponibilità generale più recente dello scanner Azure Information Protection |Per distribuire lo scanner, vedere [Deploying the Azure Information Protection scanner to classificare e proteggere automaticamente i file](deploy-aip-scanner.md).|
 
 ### <a name="permissions-required-for-azure-information-protection-analytics"></a>Autorizzazioni necessarie per la funzionalità di analisi di Azure Information Protection
 
@@ -152,10 +152,10 @@ Dettagli:
     
     - Per creare l'area di lavoro di Log Analytics o per creare query personalizzate:
     
-        - **Amministratori di Azure Information Protection**
+        - **Amministratore Azure Information Protection**
         - **Amministratore della sicurezza**
         - **Amministratore di conformità**
-        - **Amministratore dei dati di conformità**
+        - **Amministratore dati di conformità**
         - **Amministratore globale**
     
     - Dopo aver creato l'area di lavoro, è possibile usare il ruolo seguente con meno autorizzazioni per visualizzare i dati raccolti:
@@ -163,7 +163,7 @@ Dettagli:
         - **Ruolo con autorizzazioni di lettura per la sicurezza**
     
     > [!NOTE] 
-    > Se il tenant è stato migrato allo store unificato l'assegnazione di etichette, è possibile usare il ruolo di amministratore di Azure Information Protection. [Altre informazioni](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > Se è stata eseguita la migrazione del tenant all'archivio di etichette unificato, non è possibile usare il ruolo di amministratore Azure Information Protection. [Altre informazioni](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
 
 2. È anche necessario uno dei [ruoli di Azure Log Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) o dei [ruoli di Azure](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments) standard seguenti per accedere all'area di lavoro di Azure Log Analytics:
     
@@ -189,30 +189,30 @@ Tuttavia, un'assegnazione di ruolo tipica per molte organizzazioni è il **ruolo
 
 ### <a name="features-that-require-a-minimum-version-of-the-client"></a>Funzionalità che richiedono una versione minima del client
 
-È possibile usare le informazioni sulla cronologia di versione per il [unificata di Azure Information Protection client l'assegnazione di etichette](./rms-client/unifiedlabelingclient-version-release-history.md) e il [client Azure Information Protection](./rms-client/client-version-release-history.md) per verificare se la versione del client supporta tutte le funzionalità di creazione di report centrale. Le versioni minime per i client:
+È possibile utilizzare le informazioni sulla cronologia delle versioni per il [client Azure Information Protection Unified Labeling](./rms-client/unifiedlabelingclient-version-release-history.md) e il [client di Azure Information Protection](./rms-client/client-version-release-history.md) per verificare se la versione del client supporta tutte le funzionalità di creazione di report centrali. Versioni minime per i client:
 
-Per Azure Information Protection unified client l'assegnazione di etichette:
+Per il client di Azure Information Protection Unified Labeling:
 
-- Supporto per il controllo e l'endpoint di individuazione: Versione 2.0.778.0
+- Supporto per il controllo e l'individuazione degli endpoint: Versione 2.0.778.0
 
 Per il client Azure Information Protection:
 
 - Supporto per il controllo: Versione 1.41.51.0
 - Supporto per l'individuazione di endpoint: Versione 1.48.204.0
 
-### <a name="storage-requirements-and-data-retention"></a>Conservazione dei dati e i requisiti di archiviazione
+### <a name="storage-requirements-and-data-retention"></a>Requisiti di archiviazione e conservazione dei dati
 
-La quantità di dati raccolti e archiviati nell'area di lavoro di Azure Information Protection varia in modo significativo per ogni tenant, a seconda di fattori, ad esempio come molti client Azure Information Protection e altri endpoint supportati sono, che tu sia la raccolta dati di individuazione di endpoint, distribuiti gli scanner e così via.
+La quantità di dati raccolti e archiviati nell'area di lavoro di Azure Information Protection varierà in modo significativo per ogni tenant, a seconda di fattori quali il numero di Azure Information Protection client e altri endpoint supportati, indipendentemente dal fatto che si tratti di raccolta dei dati di individuazione degli endpoint, sono stati distribuiti scanner e così via.
 
-Tuttavia, come punto di partenza, è possibile trovare le stime seguenti utili:
+Tuttavia, come punto di partenza, le stime seguenti potrebbero risultare utili:
 
-- Per i dati di controllo generati da solo i client di Azure Information Protection: 2 GB per ogni 10.000 utenti attivi al mese.
+- Per i dati di controllo generati solo da client Azure Information Protection: 2 GB per 10.000 utenti attivi al mese.
 
-- Per i dati di controllo generati dal client Azure Information Protection scanner e Microsoft Defender ATP: 20 GB per ogni 10.000 utenti attivi al mese.
+- Per i dati di controllo generati da client Azure Information Protection, scanner e Microsoft Defender ATP: 20 GB per 10.000 utenti attivi al mese.
 
-Se si usa l'etichettatura obbligatoria o è stata configurata un'etichetta predefinita nei criteri globali, le tariffe possono risultare significativamente più elevata.
+Se si usa l'etichettatura obbligatoria o si è configurata un'etichetta predefinita nei criteri globali, è probabile che le tariffe siano significativamente più elevate.
 
-Log di monitoraggio di Azure è un **informazioni sull'utilizzo e costi stimati** funzionalità che consentono di stimare e verificare la quantità di dati archiviati in ed è anche possibile controllare il periodo di conservazione dati per l'area di lavoro di Log Analitica. Per altre informazioni, vedere [gestire i costi con i log di monitoraggio di Azure e sull'utilizzo](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
+I log di monitoraggio di Azure hanno una funzionalità di **utilizzo e costi stimati** che consentono di stimare e controllare la quantità di dati archiviati ed è inoltre possibile controllare il periodo di conservazione dei dati per l'area di lavoro log Analytics. Per altre informazioni, vedere [gestire l'utilizzo e i costi con i log di monitoraggio di Azure](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>Configurare un'area di lavoro di Log Analytics per i report
 
@@ -272,42 +272,42 @@ Per creare query personalizzate, usare i nomi di schema descrittivi implementati
 
 Usare la tabella seguente per identificare il nome descrittivo delle funzioni di eventi che è possibile usare per le query personalizzate con le funzionalità di analisi di Azure Information Protection.
 
-|Nome della colonna|Descrizione|
+|Nome colonna|Descrizione|
 |-----------|-----------|
-|Time|Ora dell'evento: Ora UTC nel formato AAAA-MM-ggTHH|
-|Utente|Utente: Formato UPN o dominio\utente.|
-|ItemPath|Oggetto del percorso o indirizzo di posta elettronica completo dell'elemento|
-|ItemName|Oggetto del messaggio di posta elettronica o nome di file |
-|Metodo|Etichetta assegnato metodo: Manuale, automatico, consigliato, predefinito o obbligatoria|
-|Attività|Attività di controllo: DowngradeLabel, UpgradeLabel, RemoveLabel, NewLabel, individuare, accesso, RemoveCustomProtection, ChangeCustomProtection o NewCustomProtection |
-|LabelName|Nome con etichetta (non localizzato)|
-|LabelNameBefore |Nome dell'etichetta prima della modifica (non localizzato) |
-|ProtectionType|Tipo di protezione dati [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  "TemplateID": "GUID" <br /> } <br />|
-|ProtectionBefore|Tipo di protezione dati prima della modifica di [JSON] |
-|InformationTypesMatches|Matrice JSON dei [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) non trovati nei dati in una matrice vuota non indica nessun tipo di informazioni trovato e null significa che sono disponibili informazioni|
-|MachineName |Nome di dominio completo quando è disponibile. in caso contrario, nome host|
-|DeviceRisk|Punteggio di rischio di dispositivo da WDATP quando è disponibile|
-|Piattaforma|Piattaforma del dispositivo (Windows, OSX, Android, iOS) |
+|Time|Ora evento: UTC nel formato AAAA-MM-GGThh: MM: SS|
+|Utente|Utente: Formato UPN o dominio\utente|
+|ItemPath|Percorso dell'elemento completo o oggetto di posta elettronica|
+|ItemName|Nome file o oggetto posta elettronica |
+|Metodo|Metodo di assegnazione etichetta: Manuale, automatica, consigliata, predefinita o obbligatoria|
+|Attività|Attività di controllo: DowngradeLabel, UpgradeLabel, RemoveLabel, NewLabel, Discover, Access, RemoveCustomProtection, ChangeCustomProtection o NewCustomProtection |
+|Nomeetichetta|Nome etichetta (non localizzato)|
+|LabelNameBefore |Nome etichetta prima della modifica (non localizzato) |
+|ProtectionType|Tipo di protezione [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  "TemplateID": "GUID" <br /> } <br />|
+|ProtectionBefore|Tipo di protezione prima della modifica [JSON] |
+|InformationTypesMatches|Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovata nei dati in cui una matrice vuota indica che non sono stati trovati tipi di informazioni e null indica che non sono disponibili informazioni|
+|MachineName |FQDN quando disponibile; nome host in caso contrario|
+|DeviceRisk|Punteggio di rischio del dispositivo da WDATP quando disponibile|
+|Piattaforma|Piattaforma del dispositivo (Win, OSX, Android, iOS) |
 |ApplicationName|Nome descrittivo dell'applicazione|
-|AIPVersion|Versione del client Azure Information Protection che ha eseguito l'azione di controllo |
+|AIPVersion|Versione del client di Azure Information Protection che ha eseguito l'azione di controllo |
 |TenantId|ID tenant di Azure AD |
-|AzureApplicationId|ID (GUID) dell'applicazione registrati in Azure AD|
-|ProcessName|Processo che ospita Microsoft Information Protection SDK|
-|LabelId|Etichetta GUID o null|
-|IsProtected|Se la protezione: Sì/No |
-|ProtectionOwner |Proprietario di Rights Management in formato UPN|
-|LabelIdBefore|Etichetta GUID o null prima della modifica|
-|InformationTypesAbove55|Matrice JSON dei [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovati nei dati con livello di confidenza 55 o versione successiva |
-|InformationTypesAbove65|Matrice JSON dei [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovati nei dati con livello di confidenza 65 o versioni successive |
-|InformationTypesAbove75|Matrice JSON dei [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovati nei dati con livello di confidenza 75 o versioni successive |
-|InformationTypesAbove85|Matrice JSON dei [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovati nei dati con livello di confidenza 85 o versione successiva |
-|InformationTypesAbove95|Matrice JSON dei [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovati nei dati con il livello di confidenza 95 o successiva|
-|DiscoveredInformationTypes |Matrice JSON dei [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovato nei dati e il loro contenuto corrispondente (se abilitati) in una matrice vuota non indica i tipi di informazioni trovati e null significa che non sono disponibili informazioni |
-|ProtectedBefore|Indica se il contenuto protetto prima di modifica: Sì/No |
-|ProtectionOwnerBefore|Proprietario di Rights Management prima della modifica |
-|UserJustification|Giustificazione quando si effettua il downgrade o la rimozione di etichetta|
-|LastModifiedBy|Utente in formato UPN che ha modificato il file. Disponibili per Office e SharePoint Online solo|
-|LastModifiedDate|Ora UTC nel formato AAAA-MM-ggTHH: Disponibili per Office e SharePoint Online solo |
+|AzureApplicationId|ID applicazione registrato Azure AD (GUID)|
+|ProcessName|Processo che ospita MIP SDK|
+|LabelId|GUID etichetta o null|
+|IsProtected|Se protetto: Sì/No |
+|ProtectionOwner |Proprietario Rights Management in formato UPN|
+|LabelIdBefore|GUID etichetta o null prima della modifica|
+|InformationTypesAbove55|Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 55 o superiore |
+|InformationTypesAbove65|Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 65 o superiore |
+|InformationTypesAbove75|Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 75 o superiore |
+|InformationTypesAbove85|Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 85 o superiore |
+|InformationTypesAbove95|Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 95 o superiore|
+|DiscoveredInformationTypes |Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovata nei dati e il relativo contenuto corrispondente (se abilitato) in cui una matrice vuota indica che non sono stati trovati tipi di informazioni e null indica che non sono disponibili informazioni |
+|ProtectedBefore|Se il contenuto è stato protetto prima della modifica: Sì/No |
+|ProtectionOwnerBefore|Proprietario Rights Management prima della modifica |
+|UserJustification|Giustificazione durante il downgrade o la rimozione dell'etichetta|
+|LastModifiedBy|Utente in formato UPN che ha eseguito l'ultima modifica al file. Disponibile solo per Office e SharePoint Online|
+|LastModifiedDate|UTC nel formato AAAA-MM-GGThh: MM: SS: Disponibile solo per Office & SharePoint Online |
 
 
 #### <a name="examples-using-informationprotectionevents"></a>Esempi di utilizzo di InformationProtectionEvents
@@ -350,6 +350,6 @@ In questo esempio, un'etichetta di cui è stato effettuato il downgrade viene co
 
 
 ## <a name="next-steps"></a>Passaggi successivi
-Dopo aver esaminato le informazioni nei report, se si usa il client Azure Information Protection, è possibile decidere di apportare modifiche ai criteri di Azure Information Protection. Per istruzioni, vedere [Configurazione dei criteri di Azure Information Protection](configure-policy.md).
+Una volta esaminate le informazioni nei report, se si utilizza il client di Azure Information Protection, è possibile decidere di apportare modifiche ai criteri di Azure Information Protection. Per istruzioni, vedere [Configurazione dei criteri di Azure Information Protection](configure-policy.md).
 
 Se è disponibile un abbonamento a Microsoft 365, è anche possibile visualizzare l'utilizzo delle etichette nel Centro sicurezza Microsoft 365 e nel Centro conformità Microsoft 365. Per altre informazioni, vedere [Visualizzare l'utilizzo delle etichette con Analisi delle etichette](/Office365/SecurityCompliance/label-analytics).

@@ -4,19 +4,19 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 07/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 3dfc29a45425bbe811093874f22972a6a53b6283
-ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
+ms.openlocfilehash: 7a20eba01a57a0c09dd24c88834d0d5b6cb53198
+ms.sourcegitcommit: a354b71d82dc5d456bff7e4472181cbdd962948a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141721"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68352873"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -306,7 +306,7 @@ Quando si creano e configurano le impostazioni client avanzate seguenti, gli ute
 - **Il messaggio di posta elettronica o l'allegato non hanno un'etichetta**:
     - L'allegato può essere un documento di Office o un documento PDF
 
-Quando vengono soddisfatte queste condizioni e l'indirizzo di posta elettronica del destinatario non è incluso in un elenco di nomi di dominio consentiti specificato, l'utente visualizza messaggi popup con una delle azioni seguenti:
+Quando vengono soddisfatte queste condizioni, l'utente visualizza un messaggio popup con una delle azioni seguenti:
 
 - **Avvisa**: l'utente può confermare e inviare oppure annullare.
 
@@ -314,7 +314,9 @@ Quando vengono soddisfatte queste condizioni e l'indirizzo di posta elettronica 
 
 - **Blocca**: all'utente viene impedito di inviare il messaggio di posta elettronica finché la condizione persiste. Il messaggio include il motivo del blocco del messaggio di posta elettronica in modo che l'utente possa risolvere il problema, ad esempio rimuovendo destinatari specifici o assegnando un'etichetta al messaggio di posta elettronica. 
 
-L'azione viene registrata nel registro eventi locale di Windows **Registri applicazioni e servizi** > **Azure Information Protection**:
+Quando i messaggi popup sono per un'etichetta specifica, è possibile configurare le eccezioni per i destinatari in base al nome di dominio.
+
+Le azioni risultanti dai messaggi popup vengono registrate nel registro eventi di Windows locale >  **registri applicazioni e servizi** **Azure Information Protection**:
 
 - Messaggi di avviso: ID informazioni 301
 
@@ -325,7 +327,7 @@ L'azione viene registrata nel registro eventi locale di Windows **Registri appli
 Voce dell'evento di esempio di un messaggio di giustificazione:
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Price list.msg
 Item Name: Price list
@@ -364,6 +366,35 @@ Valore di esempio per più ID etichetta sotto forma di stringa delimitata da vir
     
     - Valore: \<**ID etichetta, delimitato da virgole**>
 
+#### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>Per esentare i nomi di dominio per i messaggi popup configurati per etichette specifiche
+
+Per le etichette specificate con questi messaggi popup, è possibile esentare i nomi di dominio specifici in modo che gli utenti non visualizzino i messaggi per i destinatari che hanno il nome di dominio incluso nell'indirizzo di posta elettronica. In questo caso, i messaggi di posta elettronica vengono inviati senza interruzioni. Per specificare più domini, aggiungerli come stringa singola, delimitata da virgole.
+
+Una configurazione tipica consiste nel rendere visualizzabili i messaggi popup solo dai destinatari che sono esterni all'organizzazione o che non sono partner autorizzati dell'organizzazione. In questo caso, specificare tutti i domini di posta elettronica usati dall'organizzazione e dai partner.
+
+Creare le seguenti impostazioni client avanzate e, per il valore, specificare uno o più domini, ciascuno separato da una virgola.
+
+Valore di esempio per più domini sotto forma di stringa delimitata da virgole: `contoso.com,fabrikam.com,litware.com`
+
+- Messaggi di avviso:
+    
+    - Key: **OutlookWarnTrustedDomains**
+    
+    - Valore: **\<** nomi di dominio, delimitati da virgole **>**
+
+- Messaggi di giustificazione:
+    
+    - Key: **OutlookJustifyTrustedDomains**
+    
+    - Valore: **\<** nomi di dominio, delimitati da virgole **>**
+
+- Messaggi di blocco:
+    
+    - Key: **OutlookBlockTrustedDomains**
+    
+    - Valore: **\<** nomi di dominio, delimitati da virgole **>**
+
+Ad esempio, è stata specificata l'impostazione **OutlookBlockUntrustedCollaborationLabel** Advanced client per l'etichetta **Confidential \ All Employees** . È ora possibile specificare l'impostazione client avanzata aggiuntiva di **OutlookBlockTrustedDomains** e **contoso.com**. Di conseguenza, un utente può inviare un messaggio di posta john@sales.contoso.com elettronica a quando viene etichettato come **riservato \ tutti i dipendenti** , ma l'invio di un messaggio di posta elettronica con la stessa etichetta a un account Gmail verrà bloccato.
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>Per implementare i messaggi popup di avviso, giustificazione o blocco per i messaggi di posta elettronica o gli allegati senza etichetta:
 
@@ -437,37 +468,6 @@ Creare l'impostazione client avanzata seguente con uno dei valori seguenti:
     - Valore: **Off**
 
 Se non si specifica questa impostazione client, il valore specificato per OutlookUnlabeledCollaborationAction viene usato per i messaggi di posta elettronica senza etichetta senza allegati, nonché per i messaggi di posta elettronica senza etichetta con allegati.
-
-### <a name="to-specify-the-allowed-domain-names-for-recipients-exempt-from-the-pop-up-messages"></a>Per specificare i nomi di dominio consentiti per i destinatari esenti dai messaggi popup
-
-Quando si specificano nomi di dominio in un'impostazione client avanzata aggiuntiva, gli utenti non visualizzano i messaggi popup per i destinatari il cui nome di dominio è incluso nell'indirizzo di posta elettronica. In questo caso, i messaggi di posta elettronica vengono inviati senza interruzioni. Per specificare più domini, aggiungerli come stringa singola, delimitata da virgole.
-
-Una configurazione tipica consiste nel rendere visualizzabili i messaggi popup solo dai destinatari che sono esterni all'organizzazione o che non sono partner autorizzati dell'organizzazione. In questo caso, specificare tutti i domini di posta elettronica usati dall'organizzazione e dai partner.
-
-Creare le seguenti impostazioni client avanzate e, per il valore, specificare uno o più domini, ciascuno separato da una virgola.
-
-Valore di esempio per più domini sotto forma di stringa delimitata da virgole: `contoso.com,fabrikam.com,litware.com`
-
-- Messaggi di avviso:
-    
-    - Key: **OutlookWarnTrustedDomains**
-    
-    - Valore: **\<** nomi di dominio, delimitati da virgole **>**
-
-- Messaggi di giustificazione:
-    
-    - Key: **OutlookJustifyTrustedDomains**
-    
-    - Valore: **\<** nomi di dominio, delimitati da virgole **>**
-
-- Messaggi di blocco:
-    
-    - Key: **OutlookBlockTrustedDomains**
-    
-    - Valore: **\<** nomi di dominio, delimitati da virgole **>**
-
-Ad esempio, per non bloccare mai i messaggi di posta elettronica inviati agli utenti che dispongono di un indirizzo di posta elettronica contoso.com, specificare l'impostazione client avanzata di **OutlookBlockTrustedDomains** e **contoso.com**. Di conseguenza, gli utenti non visualizzeranno i messaggi popup di avviso in Outlook quando inviano un messaggio di posta john@sales.contoso.comelettronica a.
-
 
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Impostare un'etichetta predefinita diversa per Outlook
@@ -910,7 +910,7 @@ Per configurare questa impostazione avanzata in modo che lo scanner venga esegui
 
 Questa configurazione USA [Impostazioni client avanzate](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che è necessario configurare nel portale di Azure.
 
-Per impostazione predefinita, lo scanner Azure Information Protection ha un periodo di timeout di 00:15:00 (15 minuti) per esaminare ogni file per i tipi di informazioni riservate o per le espressioni Regex configurate per le condizioni personalizzate. Quando viene raggiunto il periodo di timeout per questo processo di estrazione del contenuto, vengono restituiti tutti i risultati prima del timeout e l'ulteriore ispezione del file viene arrestata. In questo scenario, il messaggio di errore seguente viene registrato in%*LocalAppData*% \ Microsoft\MSIP\Logs\MSIPScanner.Iplog (compresso se sono presenti più log): **GetContentParts non riuscito** con **l'operazione** annullata nei dettagli.
+Per impostazione predefinita, lo scanner Azure Information Protection ha un periodo di timeout di 00:15:00 (15 minuti) per esaminare ogni file per i tipi di informazioni riservate o per le espressioni Regex configurate per le condizioni personalizzate. Quando viene raggiunto il periodo di timeout per questo processo di estrazione del contenuto, vengono restituiti tutti i risultati prima del timeout e l'ulteriore ispezione del file viene arrestata. In questo scenario, il messaggio di errore seguente viene registrato in%*LocalAppData*% \ Microsoft \ MSIP \ Logs \ MSIPScanner. Iplog (compresso se sono presenti più log): **GetContentParts non riuscito** con **l'operazione** annullata nei dettagli.
 
 Se si verifica questo problema di timeout a causa di file di grandi dimensioni, è possibile aumentare questo periodo di timeout per l'estrazione del contenuto completo:
 

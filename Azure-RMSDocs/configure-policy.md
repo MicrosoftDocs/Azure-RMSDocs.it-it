@@ -3,7 +3,7 @@ title: Configurare i criteri di Azure Information Protection - AIP
 description: Per configurare le funzioni di classificazione, aggiunta di etichette e protezione, è necessario configurare i criteri di Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-ms.date: 06/08/2019
+ms.date: 07/19/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 5ea4991281905b174b0ae70537d5953d60268dbf
-ms.sourcegitcommit: 886aebde3b2df0f54b7bd41105823db44aea72d8
+ms.openlocfilehash: a6e53aba545176b9224793cf33da1770dadf5437
+ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/08/2019
-ms.locfileid: "66815562"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340545"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -60,20 +60,20 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
 
 - Usare un account che dispone di uno dei seguenti [ruoli di amministratore](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-    - **Amministratori di Azure Information Protection**
+    - **Amministratore Azure Information Protection**
     
     - **Ruolo con autorizzazioni di lettura per la sicurezza** solo per le [funzionalità di analisi di Azure Information Protection](reports-aip.md)
     
   - **Amministratore di conformità**
     
-  - **Amministratore dei dati di conformità**
+  - **Amministratore dati di conformità**
     
   - **Amministratore della sicurezza**
     
   - **Amministratore globale**
     
     > [!NOTE] 
-    > Se il tenant è stato migrato allo store unificato l'assegnazione di etichette, l'amministratore di Azure Information Protection (noto in precedenza come "amministratore di Information Protection") non è più supportata. [Altre informazioni](configure-policy-migrate-labels.md#important-information-about-administrative-roles)
+    > Se è stata eseguita la migrazione del tenant all'archivio di etichette unificato, l'amministratore Azure Information Protection (denominato in precedenza "Information Protection amministratore") non è più supportato. [Altre informazioni](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
 
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Per accedere al pannello Azure Information Protection per la prima volta
@@ -95,7 +95,7 @@ Quando si accede di nuovo al pannello **Azure Information Protection** viene sel
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Come configurare i criteri di Azure Information Protection
 
-1. Assicurarsi di avere eseguito l'accesso al portale di Azure usando uno di questi ruoli amministrativi: Gli amministratori di Azure Information Protection, amministratore della sicurezza o amministratore globale. Vedere la [sezione precedente](#signing-in-to-the-azure-portal) per altre informazioni su questi ruoli amministrativi.
+1. Assicurarsi di avere eseguito l'accesso al portale di Azure usando uno di questi ruoli amministrativi: Azure Information Protection amministratore, amministratore della sicurezza o amministrazione globale. Vedere la [sezione precedente](#signing-in-to-the-azure-portal) per altre informazioni su questi ruoli amministrativi.
 
 2. Se necessario, passare al pannello **Azure Information Protection**: Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
     
@@ -108,7 +108,7 @@ Quando si accede di nuovo al pannello **Azure Information Protection** viene sel
 
 È possibile creare qualsiasi numero di etichette. Tuttavia, se le etichette diventano troppo numerose e non consentono agli utenti di individuare e selezionare l'etichetta appropriata con facilità, creare criteri con ambito in modo che gli utenti visualizzino solo le etichette rilevanti. Il limite massimo di etichette per l'applicazione della protezione è 500.
 
-Quando si apportano modifiche in un pannello di Azure Information Protection, fare clic su **Save** (Salva) per salvare le modifiche oppure su **Discard** (Ignora) per ripristinare le ultime impostazioni salvate. Quando si salva le modifiche in un criterio o apportare modifiche alle etichette aggiunte ai criteri, tali modifiche vengono pubblicate automaticamente. Non è presente un'opzione di pubblicazione separata.
+Quando si apportano modifiche in un pannello di Azure Information Protection, fare clic su **Save** (Salva) per salvare le modifiche oppure su **Discard** (Ignora) per ripristinare le ultime impostazioni salvate. Quando si salvano le modifiche in un criterio o si apportano modifiche alle etichette aggiunte ai criteri, tali modifiche vengono pubblicate automaticamente. Non è presente un'opzione di pubblicazione separata.
 
 Il client Azure Information Protection verifica la disponibilità di eventuali modifiche ogni volta che viene avviata un'applicazione di Office supportata e scarica le modifiche come criteri di Azure Information Protection più recenti. I criteri del client vengono aggiornati anche nei modi seguenti:
 
@@ -162,7 +162,7 @@ Quando viene applicata un'etichetta a un documento o un messaggio di posta elett
 
 - Per i documenti di Word (DOC e DOCX), i fogli di calcolo di Excel (XLS e XLSX), le presentazioni di PowerPoint (PPT e PPTX) e i documenti PDF, questi metadati vengono archiviati nella proprietà personalizzata seguente: **MSIP_Label_\<GUID>_Enabled=True**  
 
-Messaggi di posta elettronica, le informazioni dell'etichetta viene archiviate quando viene inviato il messaggio di posta elettronica. Per i documenti, vengono archiviate le informazioni dell'etichetta quando viene salvato il file. 
+Per i messaggi di posta elettronica, le informazioni sull'etichetta vengono archiviate al momento dell'invio del messaggio. Per i documenti, le informazioni sull'etichetta vengono archiviate quando il file viene salvato. 
 
 Per identificare il GUID per un'etichetta, individuare il valore dell'ID etichetta nel pannello **Etichetta** del portale di Azure, quando si visualizzano o si configurano i criteri di Azure Information Protection. Per i file a cui sono state applicate etichette, è anche possibile eseguire il cmdlet di PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) per identificare il GUID (MainLabelId o SubLabelId). Quando un'etichetta ha etichette secondarie, specificare sempre il GUID della sola etichetta secondaria e non dell'etichetta padre.
 

@@ -4,19 +4,19 @@ description: Informazioni sulla personalizzazione del client di Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/17/2019
+ms.date: 07/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: bd05adf77fecec7172aa04ae849b6a4e5ce963ef
-ms.sourcegitcommit: 051ef396b1efa9dd6cf77662bbe6aed7154d20a5
+ms.openlocfilehash: b40c62853aa35053c98eaee4561af79fd4d56e03
+ms.sourcegitcommit: a354b71d82dc5d456bff7e4472181cbdd962948a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68306626"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68352845"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -440,7 +440,7 @@ Quando si creano e configurano le impostazioni client avanzate seguenti, gli ute
 - **Il messaggio di posta elettronica o l'allegato non hanno un'etichetta**:
     - L'allegato può essere un documento di Office o un documento PDF
 
-Quando queste condizioni vengono soddisfatte e l'indirizzo di posta elettronica del destinatario non è incluso in un elenco di nomi di dominio consentiti specificato, l'utente visualizza un messaggio popup con una delle azioni seguenti:
+Quando vengono soddisfatte queste condizioni, l'utente visualizza un messaggio popup con una delle azioni seguenti:
 
 - **Avvisa**: l'utente può confermare e inviare oppure annullare.
 
@@ -448,6 +448,7 @@ Quando queste condizioni vengono soddisfatte e l'indirizzo di posta elettronica 
 
 - **Blocca**: all'utente viene impedito di inviare il messaggio di posta elettronica finché la condizione persiste. Il messaggio include il motivo del blocco del messaggio di posta elettronica in modo che l'utente possa risolvere il problema, ad esempio rimuovendo destinatari specifici o assegnando un'etichetta al messaggio di posta elettronica. 
 
+Quando i messaggi popup sono per un'etichetta specifica, è possibile configurare le eccezioni per i destinatari in base al nome di dominio.
 
 > [!TIP]
 > Sebbene l'esercitazione sia destinata al client di Azure Information Protection piuttosto che al client Unified Labeling, è possibile visualizzare queste impostazioni avanzate in azione per se [stessi con l'esercitazione: Configurare Azure Information Protection per controllare la sovracondivisione delle informazioni mediante](../infoprotect-oversharing-tutorial.md)Outlook.
@@ -486,6 +487,45 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollaborationLabel="0eb351a6-0c2d-4c1d-a5f6-caa80c9bdeec,40e82af6-5dad-45ea-9c6a-6fe6d4f1626b"}
 
+#### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>Per esentare i nomi di dominio per i messaggi popup configurati per etichette specifiche
+
+Per le etichette specificate con questi messaggi popup, è possibile esentare i nomi di dominio specifici in modo che gli utenti non visualizzino i messaggi per i destinatari che hanno il nome di dominio incluso nell'indirizzo di posta elettronica. In questo caso, i messaggi di posta elettronica vengono inviati senza interruzioni. Per specificare più domini, aggiungerli come stringa singola, delimitata da virgole.
+
+Una configurazione tipica consiste nel rendere visualizzabili i messaggi popup solo dai destinatari che sono esterni all'organizzazione o che non sono partner autorizzati dell'organizzazione. In questo caso, specificare tutti i domini di posta elettronica usati dall'organizzazione e dai partner.
+
+Per gli stessi criteri di etichetta, creare le seguenti impostazioni client avanzate e, per il valore, specificare uno o più domini, ciascuno separato da una virgola.
+
+Valore di esempio per più domini sotto forma di stringa delimitata da virgole: `contoso.com,fabrikam.com,litware.com`
+
+Per gli stessi criteri di etichetta, creare le seguenti impostazioni client avanzate e, per il valore, specificare uno o più domini, ciascuno separato da una virgola.
+
+Valore di esempio per più domini sotto forma di stringa delimitata da virgole: `contoso.com,fabrikam.com,litware.com`
+
+- Messaggi di avviso:
+    
+    - Key: **OutlookWarnTrustedDomains**
+    
+    - Valore: **\<** nomi di dominio, delimitati da virgole **>**
+
+- Messaggi di giustificazione:
+    
+    - Key: **OutlookJustifyTrustedDomains**
+    
+    - Valore: **\<** nomi di dominio, delimitati da virgole **>**
+
+- Messaggi di blocco:
+    
+    - Key: **OutlookBlockTrustedDomains**
+    
+    - Valore: **\<** nomi di dominio, delimitati da virgole **>**
+
+Ad esempio, è stata specificata l'impostazione **OutlookBlockUntrustedCollaborationLabel** Advanced client per l'etichetta **Confidential \ All Employees** . È ora possibile specificare l'impostazione client avanzata aggiuntiva di **OutlookJustifyTrustedDomains** e **contoso.com**. Di conseguenza, un utente può inviare un messaggio di posta john@sales.contoso.com elettronica a quando viene etichettato come **riservato \ tutti i dipendenti** , ma l'invio di un messaggio di posta elettronica con la stessa etichetta a un account Gmail verrà bloccato.
+
+Comandi di PowerShell di esempio, in cui il criterio etichetta è denominato "globale":
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>Per implementare i messaggi popup di avviso, giustificazione o blocco per i messaggi di posta elettronica o gli allegati senza etichetta:
 
@@ -541,41 +581,6 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.PPT,.PPTX,.PPTM"}
 
-### <a name="to-specify-the-allowed-domain-names-for-recipients-exempt-from-the-pop-up-messages"></a>Per specificare i nomi di dominio consentiti per i destinatari esenti dai messaggi popup
-
-Quando si specificano nomi di dominio in un'impostazione client avanzata aggiuntiva, gli utenti non visualizzano i messaggi popup per i destinatari il cui nome di dominio è incluso nell'indirizzo di posta elettronica. In questo caso, i messaggi di posta elettronica vengono inviati senza interruzioni. Per specificare più domini, aggiungerli come stringa singola, delimitata da virgole.
-
-Una configurazione tipica consiste nel rendere visualizzabili i messaggi popup solo dai destinatari che sono esterni all'organizzazione o che non sono partner autorizzati dell'organizzazione. In questo caso, specificare tutti i domini di posta elettronica usati dall'organizzazione e dai partner.
-
-Per gli stessi criteri di etichetta, creare le seguenti impostazioni client avanzate e, per il valore, specificare uno o più domini, ciascuno separato da una virgola.
-
-Valore di esempio per più domini sotto forma di stringa delimitata da virgole: `contoso.com,fabrikam.com,litware.com`
-
-- Messaggi di avviso:
-    
-    - Key: **OutlookWarnTrustedDomains**
-    
-    - Valore: **\<** nomi di dominio, delimitati da virgole **>**
-
-- Messaggi di giustificazione:
-    
-    - Key: **OutlookJustifyTrustedDomains**
-    
-    - Valore: **\<** nomi di dominio, delimitati da virgole **>**
-
-- Messaggi di blocco:
-    
-    - Key: **OutlookBlockTrustedDomains**
-    
-    - Valore: **\<** nomi di dominio, delimitati da virgole **>**
-
-Ad esempio, per non bloccare mai i messaggi di posta elettronica inviati agli utenti che dispongono di un indirizzo di posta elettronica contoso.com, specificare l'impostazione client avanzata di **OutlookBlockTrustedDomains** e **contoso.com**. Di conseguenza, gli utenti non visualizzeranno i messaggi popup di avviso in Outlook quando inviano un messaggio di posta john@sales.contoso.comelettronica a.
-
-Comandi di PowerShell di esempio, in cui il criterio etichetta è denominato "globale":
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookJustifyTrustedDomains="contoso.com,fabrikam.com,litware.com"}
 
 ## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Disabilitare l'invio di informazioni riservate individuate nei documenti a Azure Information Protection Analytics
 

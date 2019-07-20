@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: c7e5ea29378b051d2b2c0b04366c433dd1675304
-ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
+ms.openlocfilehash: db7dc34da3f8cd2ee92fa0c3a500880ed561dc40
+ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141541"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340694"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -87,7 +87,7 @@ Il client sta sostituendo il client di Azure Information Protection (classico). 
         -  *CustomPermissions* e *RemoveProtection* -aggiunta a [set-AIPFileLabel](/powershell/module/azureinformationprotection/Set-AIPFileLabel)
         -  *OnBeHalfOf* -aggiunto a [set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication), da usare al posto del parametro *token* per le sessioni non interattive
         -  *Whatif* e *DiscoveryInfoTypes* -aggiunto a [set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification), in modo che questo cmdlet possa essere eseguito in modalità di individuazione senza applicare le etichette
-    - Cmdlet deprecati: Clear-RMSAuthentication, Get-Rmsfilestatus successivamente, Get-RMSServer, Get-RMSServerAuthentication, Get-RMSTemplate, Protect-RMSFile, set-RMSServerAuthentication, Unprotect-RMSFile
+    - Cmdlet deprecati che si connettono direttamente a un servizio di protezione: Clear-RMSAuthentication, Get-Rmsfilestatus successivamente, Get-RMSServer, Get-RMSServerAuthentication, Get-RMSTemplate, Protect-RMSFile, set-RMSServerAuthentication, Unprotect-RMSFile
 
 
 **Correzioni**
