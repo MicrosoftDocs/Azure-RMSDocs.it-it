@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: c9ff328584f76d89e1bbbc350a1ce0161633907b
-ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
+ms.openlocfilehash: 8625dfa874e05bb69ba5e0458a7283bd8e8651ba
+ms.sourcegitcommit: ae48f7cea01b4d615052659072305abb8698a7f7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68229881"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375455"
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Confronto tra Azure Information Protection e AD RMS
 
@@ -65,6 +65,9 @@ Per altre informazioni sui controlli crittografici, vedere [Controlli crittograf
 ## <a name="next-steps"></a>Passaggi successivi
 Per informazioni più dettagliate sui requisiti per l'uso di Azure Information Protection, ad esempio il supporto dei dispositivi e le versioni minime, vedere [requisiti per l'Azure Information Protection](requirements.md).
 
-Se si vuole passare da AD RMS ad Azure Information Protection, vedere [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
+Se si sta cercando di eseguire la migrazione da AD RMS a Azure Information Protection, vedere [migrazione da ad RMS a Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
+Potrebbero essere interessati le domande frequenti seguenti:
+- [Qual è la differenza tra Azure Information Protection e Microsoft Information Protection?](faqs.md#whats-the-difference-between-azure-information-protection-and-microsoft-information-protection)
+- [Qual è la differenza tra Azure Information Protection e Rights Management di Azure?](faqs.md#whats-the-difference-between-azure-information-protection-and-azure-rights-management)
 

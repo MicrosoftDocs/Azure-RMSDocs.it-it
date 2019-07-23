@@ -4,19 +4,19 @@ description: Informazioni sulla personalizzazione del client di Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/19/2019
+ms.date: 07/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: b40c62853aa35053c98eaee4561af79fd4d56e03
-ms.sourcegitcommit: a354b71d82dc5d456bff7e4472181cbdd962948a
+ms.openlocfilehash: 662898959c48cb5cb1a7455bdd377c8ac9e966ec
+ms.sourcegitcommit: ce47b16c16d93e710c0ff95588e1631ccc0e2829
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68352845"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387411"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -390,7 +390,7 @@ L'allegato deve essere un file fisico e non un collegamento a un file, ad esempi
 
 Nota: Quando l'allegato con l'etichetta di classificazione più alta è configurato per la protezione con l'impostazione delle autorizzazioni definite dall'utente:
 
-- Quando le autorizzazioni definite dall'utente dell'etichetta includono Outlook (non inviare), tale etichetta è selezionata e non viene applicata la protezione in diretta al messaggio di posta elettronica. 
+- Quando le autorizzazioni definite dall'utente dell'etichetta includono Outlook (non inviare), tale etichetta è selezionata e non viene applicata la protezione in diretta al messaggio di posta elettronica.
 - Quando le autorizzazioni definite dall'utente dell'etichetta sono destinate solo a Word, Excel, PowerPoint ed Esplora file, tale etichetta non viene applicata al messaggio di posta elettronica e nessuna delle due è la protezione.
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti per i criteri di etichetta selezionati:
@@ -403,6 +403,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti per
 
 - Valore chiave 2: "\<descrizione comando personalizzata" >
 
+La descrizione comando personalizzata supporta solo un solo linguaggio.
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
@@ -492,10 +493,6 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 Per le etichette specificate con questi messaggi popup, è possibile esentare i nomi di dominio specifici in modo che gli utenti non visualizzino i messaggi per i destinatari che hanno il nome di dominio incluso nell'indirizzo di posta elettronica. In questo caso, i messaggi di posta elettronica vengono inviati senza interruzioni. Per specificare più domini, aggiungerli come stringa singola, delimitata da virgole.
 
 Una configurazione tipica consiste nel rendere visualizzabili i messaggi popup solo dai destinatari che sono esterni all'organizzazione o che non sono partner autorizzati dell'organizzazione. In questo caso, specificare tutti i domini di posta elettronica usati dall'organizzazione e dai partner.
-
-Per gli stessi criteri di etichetta, creare le seguenti impostazioni client avanzate e, per il valore, specificare uno o più domini, ciascuno separato da una virgola.
-
-Valore di esempio per più domini sotto forma di stringa delimitata da virgole: `contoso.com,fabrikam.com,litware.com`
 
 Per gli stessi criteri di etichetta, creare le seguenti impostazioni client avanzate e, per il valore, specificare uno o più domini, ciascuno separato da una virgola.
 
@@ -718,7 +715,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti per
 
 - Key: **EnableLabelByMailHeader**
 
-- Valore: **Tue**
+- Valore: **True**
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
@@ -784,7 +781,7 @@ Questa configurazione USA [le impostazioni avanzate](#how-to-configure-advanced-
 
 Usare queste impostazioni solo quando si dispone di una [distribuzione S/MIME](https://docs.microsoft.com/office365/SecurityCompliance/s-mime-for-message-signing-and-encryption) funzionante e si vuole che un'etichetta applichi automaticamente questo metodo di protezione per i messaggi di posta elettronica anziché Rights Management la protezione da Azure Information Protection. La protezione risultante è identica a quella applicata quando un utente seleziona manualmente le opzioni di S/MIME da Outlook.
 
-Per configurare un'impostazione avanzata per le firme digitali S/MIME, immettere le stringhe seguenti per l'etichetta selezionata:
+Per configurare un'impostazione avanzata per una firma digitale S/MIME, immettere le stringhe seguenti per l'etichetta selezionata:
 
 - Key: **SMimeSign**
 

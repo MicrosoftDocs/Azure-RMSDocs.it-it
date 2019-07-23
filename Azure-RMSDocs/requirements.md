@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: dc78321d-d759-4653-8818-80da74b6cdeb
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fc76b7da1f687ab9876a6831539bf515df59aea1
-ms.sourcegitcommit: 9221a0a9f3862739446b9027931a05023e0d5fc3
+ms.openlocfilehash: 4b70be66db156dc92f57aaf0cc9ba3ce2413dd65
+ms.sourcegitcommit: ce47b16c16d93e710c0ff95588e1631ccc0e2829
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68286993"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68387398"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisiti per Azure Information Protection
 
@@ -81,7 +81,7 @@ I dispositivi seguenti supportano il client di Azure Information Protection Unif
 
 - Windows Server 2008 R2 
 
-Oltre a installare il client di in computer fisici, è anche possibile installarlo nelle macchine virtuali. Verificare che il fornitore del software per la soluzione desktop virtuale disponga di configurazioni aggiuntive che potrebbero essere necessarie per eseguire la Azure Information Protection client di etichetta unificata o il client di Azure Information Protection. Per le soluzioni Citrix, ad esempio, potrebbe essere necessario [disabilitare i hook dell'API (Application Programming Interface) Citrix](https://support.citrix.com/article/CTX107825) per Office (Winword. exe, Excel. exe, Outlook. exe, PowerPoint. exe) e il file eseguibile per il Azure Information Protection unificato assegnazione di etichette a client o client Azure Information Protection (MSIP. app. exe, MSIP. Viewer. exe).
+Oltre a installare il client di in computer fisici, è anche possibile installarlo nelle macchine virtuali. Verificare che il fornitore del software per la soluzione desktop virtuale disponga di configurazioni aggiuntive che potrebbero essere necessarie per eseguire la Azure Information Protection client di etichetta unificata o il client di Azure Information Protection. Per le soluzioni Citrix, ad esempio, potrebbe essere necessario [disabilitare i hook dell'API (Application Programming Interface) Citrix](https://support.citrix.com/article/CTX107825) per Office (Winword. exe, Excel. exe, Outlook. exe, Powerpnt. exe) e il file eseguibile per il Azure Information Protection unificato assegnazione di etichette a client o client Azure Information Protection (MSIP. app. exe, MSIP. Viewer. exe).
 
 Per le versioni server elencate, i client Azure Information Protection sono supportati per Servizi Desktop remoto. Se si eliminano i profili utente quando si usa il Azure Information Protection client con Servizi Desktop remoto, non eliminare la cartella **%AppData%\Microsoft\Protect** .
 
