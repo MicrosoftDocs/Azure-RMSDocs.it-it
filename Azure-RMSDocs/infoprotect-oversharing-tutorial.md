@@ -4,16 +4,16 @@ description: Esercitazione introduttiva per configurare e vedere in azione le im
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 07/19/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 889e10192cc36f7fba913683f21c18ee5e577280
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 565a46f599922aeef3636756c47c561264bf010f
+ms.sourcegitcommit: a354b71d82dc5d456bff7e4472181cbdd962948a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "65934682"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68352830"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Esercitazione: configurare Azure Information Protection per il controllo dell'oversharing delle informazioni con Outlook
 
@@ -211,7 +211,7 @@ Per ognuno dei test effettuati, vengono creati eventi informativi per registrare
 Ad esempio, il primo test consisteva nel visualizzare un avviso per l'utente ed è stato selezionato **Annulla**, quindi **User Response** (Risposta utente) visualizza **Dismissed** (Ignorato) nel primo evento 301. Ad esempio:
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Warn message.msg
 Item Name: Testing the General label for the Warn message
@@ -226,7 +226,7 @@ User Response: Dismissed
 Successivamente è stato tuttavia selezionato **Conferma e invia** e questa azione si riflette nel successivo evento 301, in cui **User Response** (Risposta utente) visualizza **Confirmed** (Confermato):
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Warn message.msg
 Item Name: Testing the General label for the Warn message
@@ -241,7 +241,7 @@ User Response: Confirmed
 Lo stesso schema si ripete per il messaggio di giustificazione, che ha un evento 302. Il primo evento ha per **User Response** (Risposta utente) il valore **Dismissed** (Ignorato) e il secondo mostra la giustificazione selezionata. Ad esempio:
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Justify message.msg
 Item Name: Testing the General label for the Justify message
@@ -258,7 +258,7 @@ User Response: Confirmed
 Nella parte superiore del log eventi viene visualizzata la registrazione del messaggio di blocco, con evento 303. Ad esempio:
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing the General label for the Block message.msg
 Item Name: Testing the General label for the Block message
@@ -268,6 +268,24 @@ Label After Action: General
 Label ID After Action: 0e421e6d-ea17-4fdb-8f01-93a3e71333b8
 Action Source: 
 ```
+
+### <a name="optional-create-an-additional-advanced-client-setting-to-exempt-these-messages-for-internal-recipients"></a>Facoltativo: Creare un'impostazione client avanzata aggiuntiva per creare una deroga per questi messaggi se diretti a destinatari interni
+
+I messaggi di avviso, giustificazione e blocco sono stati testati usando il proprio indirizzo di posta elettronica come destinatario. In un ambiente di produzione è possibile scegliere di visualizzare questi messaggi per le etichette specificate solo se i destinatari sono esterni alla propria organizzazione. La deroga può anche essere estesa ai partner con cui l'organizzazione collabora regolarmente.
+
+Per illustrare il funzionamento, verrà creata un'impostazione client avanzata aggiuntiva denominata **OutlookBlockTrustedDomains** e verrà specificato il nome di dominio del proprio indirizzo di posta elettronica. In questo modo si eviterà che il messaggio di blocco visualizzato in precedenza venga visualizzato per i destinatari che condividono il nome di dominio nell'indirizzo di posta elettronica, ma verrà comunque visualizzato per altri destinatari. Allo stesso modo è possibile creare impostazioni client avanzate aggiuntive per **OutlookWarnTrustedDomains** e **OutlookJustifyTrustedDomains**.
+
+1. Nel pannello **Azure Information Protection - Criteri** del portale di Azure selezionare il menu a comparsa ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+
+2. Nel pannello **Impostazioni avanzate** digitare il nome dell'impostazione avanzata, ovvero **OutlookBlockTrustedDomains**, e incollare il nome di dominio del proprio indirizzo e-mail come valore. Ad esempio:
+    
+    ![Esercitazione di Azure Information Protection: creare l'impostazione avanzata OutlookBlockTrustedDomains del client](./media/configure-exemptblockdomain.png)
+
+4. Selezionare **Salva e chiudi**. Non chiudere il pannello **Criteri** o il portale di Azure.
+
+5. A questo punto, ripetere il [test precedente per impedire agli utenti di inviare un messaggio di posta elettronica con l'etichetta General](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-has-the-general-label) e non verrà più visualizzato il messaggio di blocco quando si usa il proprio indirizzo di posta elettronica. Il messaggio di posta elettronica viene inviato senza interruzioni.
+    
+    Per confermare che il messaggio di blocco viene visualizzato ancora per i destinatari esterni, ripetere il test un'altra volta specificando un destinatario all'esterno dell'organizzazione. Questa volta il messaggio di blocco viene visualizzato nuovamente ed indica il nuovo indirizzo del destinatario come non attendibile.
 
 ## <a name="configure-and-test-an-advanced-client-setting-to-warn-prompt-for-justification-or-block-emails-that-dont-have-a-label"></a>Configurare e testare un'impostazione avanzata del client per visualizzare avvisi, richiedere una giustificazione o bloccare l'invio in caso di messaggi di posta elettronica senza etichetta
 
@@ -380,7 +398,7 @@ Come in precedenza, i messaggi e le risposte dell'utente vengono registrati in V
 Ad esempio, i risultati della richiesta di giustificazione quando il messaggio di posta elettronica non ha un'etichetta:
 
 ```
-Client Version: 1.48.204.0
+Client Version: 1.53.10.0
 Client Policy ID: e5287fe6-f82c-447e-bf44-6fa8ff146ef4
 Item Full Path: Testing send an email without a label for the Justify message.msg
 Item Name: Testing send an email without a label for the Justify message
@@ -390,22 +408,6 @@ User Justification: My manager approved sharing of this content
 Action Source: 
 User Response: Confirmed
 ```
-
-## <a name="create-an-advanced-client-setting-to-exempt-these-messages-for-internal-recipients"></a>Creare un'impostazione avanzata del client per creare una deroga per questi messaggi se diretti a destinatari interni
-
-Questi messaggi sono stati testati usando il proprio indirizzo e-mail come destinatario. In un ambiente di produzione è tuttavia possibile scegliere di mostrare questi messaggi solo se i destinatari sono esterni alla propria organizzazione. La deroga può anche essere estesa ai partner con cui l'organizzazione collabora regolarmente.
-
-Per illustrare il funzionamento, verrà creata una nuova impostazione avanzata del client denominata **OutlookBlockTrustedDomains** e verrà specificato il nome di dominio del proprio indirizzo e-mail. Ciò impedirà la visualizzazione del messaggio di blocco per i destinatari che hanno questo nome di dominio nel proprio indirizzo e-mail. Allo stesso modo è possibile creare impostazioni avanzate del client per **OutlookWarnTrustedDomains** e **OutlookJustifyTrustedDomains**.
-
-1. Nel pannello **Azure Information Protection - Criteri** del portale di Azure selezionare il menu a comparsa ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
-
-2. Nel pannello **Impostazioni avanzate** digitare il nome dell'impostazione avanzata, ovvero **OutlookBlockTrustedDomains**, e incollare il nome di dominio del proprio indirizzo e-mail come valore. Ad esempio:
-    
-    ![Esercitazione di Azure Information Protection: creare l'impostazione avanzata OutlookBlockTrustedDomains del client](./media/configure-exemptblockdomain.png)
-
-4. Selezionare **Salva e chiudi**. Non chiudere il pannello **Criteri** o il portale di Azure.
-
-5. Ripetere ora il [test precedente per inviare un messaggio di posta elettronica senza etichetta al proprio indirizzo](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-isnt-labeled) e non visualizzare più il messaggio di blocco. Se tuttavia si aggiunge un nuovo destinatario esterno all'organizzazione, il messaggio di blocco verrà visualizzato di nuovo.
 
 ## <a name="clean-up-resources"></a>Pulizia delle risorse
 
@@ -419,6 +421,6 @@ Riavviare Outlook in modo che non sia più configurato per le impostazioni che s
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per test più rapidi, questa esercitazione ha usato un messaggio di posta elettronica per un singolo destinatario e senza allegati. È tuttavia possibile applicare lo stesso metodo a più destinatari e più etichette e applicare la stessa logica anche agli allegati di posta elettronica il cui stato di etichettatura è spesso meno evidente per gli utenti. Ad esempio, il messaggio di posta elettronica in sé è etichettato come Public, ma la presentazione di PowerPoint allegata ha l'etichetta General. Per altre informazioni, vedere la sezione seguente della Guida dell'amministratore: [Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](./rms-client/client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+Per test più rapidi, questa esercitazione ha usato un messaggio di posta elettronica per un singolo destinatario e senza allegati. È tuttavia possibile applicare lo stesso metodo a più destinatari e più etichette e applicare la stessa logica anche agli allegati di posta elettronica il cui stato di etichettatura è spesso meno evidente per gli utenti. Ad esempio, il messaggio di posta elettronica in sé è etichettato come Public, ma la presentazione di PowerPoint allegata ha l'etichetta General. Per altre informazioni sulle opzioni di configurazione, vedere la sezione seguente dalla guida dell'amministratore: [Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](./rms-client/client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
 
 La Guida dell'amministratore contiene anche informazioni su altre impostazioni avanzate del client che è possibile usare per personalizzare il comportamento del client. Per un elenco completo, vedere [Impostazioni client avanzate disponibili](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings).
