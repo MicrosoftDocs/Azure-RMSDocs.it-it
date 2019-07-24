@@ -4,19 +4,19 @@ description: Istruzioni che fanno parte del percorso di migrazione da AD RMS ad 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/18/2019
+ms.date: 07/18/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: c5f4c6ea-fd2a-423a-9fcb-07671b3c2f4f
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5729c52283f5f7537898efc730b1992be531130d
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.openlocfilehash: f88bb6adff86d1689aa7d702d33f79a665192792
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535120"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428411"
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave tramite software a una chiave HSM protetta
 
@@ -29,7 +29,7 @@ Se non si tratta dello scenario di configurazione scelto, tornare al [Passaggio 
 
 Si tratta di una procedura in quattro parti per importare la configurazione di AD RMS in Azure Information Protection. La chiave del tenant di Azure Information Protection verrà gestita dall'utente (BYOK) in Insieme di credenziali delle chiavi di Azure.
 
-È necessario innanzitutto estrarre la chiave del certificato SLC concessore di licenze server da dati di configurazione di AD RMS e trasferire la chiave in un locale nCipher HSM, quindi creare il pacchetto e trasferire la chiave HSM ad Azure Key Vault, quindi autorizzare il servizio Azure Rights Management da Azure Information Protection per l'insieme di credenziali delle chiavi di accesso e quindi importare i dati di configurazione.
+È innanzitutto necessario estrarre la chiave del certificato concessore di licenze server (SLC) dai dati di configurazione AD RMS e trasferire la chiave in un modulo di protezione hardware nCipher locale, il pacchetto successivo e trasferire la chiave HSM in Azure Key Vault, quindi autorizzare il servizio Azure Rights Management da Azure Information Protection per accedere all'insieme di credenziali delle chiavi e quindi importare i dati di configurazione.
 
 Poiché la chiave del tenant di Azure Information Protection verrà archiviata e gestita da Insieme di credenziali delle chiavi di Azure, questa parte della migrazione richiede l'amministrazione in Insieme di credenziali delle chiavi di Azure oltre ad Azure Information Protection. Se Azure Key Vault viene gestito da un amministratore diverso da quello dell'organizzazione, è necessario coordinare e collaborare con tale amministratore per completare queste procedure.
 
@@ -74,7 +74,7 @@ Prima di iniziare, assicurarsi che l'organizzazione disponga di un insieme di cr
 
     - Se non si specifica la password quando si esegue questo comando (tramite il nome completo del parametro **TpdPassword** o il nome breve del parametro **pwd**), viene richiesto di specificarla.
 
-3. Sulla medesima workstation disconnessa, collegare e configurare il modulo di protezione hardware, nCipher in base alla documentazione relativa a nCipher. È ora possibile importare la chiave nel nCipher collegati modulo di protezione hardware tramite il comando seguente in cui è necessario sostituire il nome del file per contosotpd. PEM:
+3. Nella stessa workstation disconnessa, connettere e configurare il modulo di protezione hardware nCipher, in base alla documentazione di nCipher. È ora possibile importare la chiave nel modulo di protezione hardware nCipher collegato usando il comando seguente, in cui è necessario sostituire il nome file per ContosoTPD. pem:
 
         generatekey --import simple pemreadfile=e:\ContosoTPD.pem plainname=ContosoBYOK protect=module ident=contosobyok type=RSA
 
@@ -103,7 +103,7 @@ Prima di iniziare, assicurarsi che l'organizzazione disponga di un insieme di cr
 
     **Path to key: C:\ProgramData\nCipher\Key Management Data\local\key_simple_contosobyok**
 
-Questo output conferma che la chiave privata è stata migrata al dispositivo HSM nCipher in locale con una copia crittografata salvata in una chiave (in questo esempio, "key_simple_contosobyok"). 
+Questo output conferma che la chiave privata viene ora migrata nel dispositivo nCipher HSM locale con una copia crittografata salvata in una chiave (in questo esempio, "key_simple_contosobyok"). 
 
 Ora che la chiave del certificato concessore di licenze server (SLC) è stata estratta e importata nel modulo di protezione hardware locale, si è pronti per creare un pacchetto della chiave protetta tramite HSM e trasferirlo in Insieme di credenziali delle chiavi di Azure.
 
@@ -124,7 +124,7 @@ Prima di trasferire la chiave ad Azure Key Vault, verificare che l'utilità KeyT
 
 Quando la chiave viene caricata in Insieme di credenziali delle chiavi di Azure, vengono visualizzate le proprietà della chiave visualizzata, incluso l'ID della chiave. Sarà simile a **https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333** . Prendere nota dell'URL perché sarà necessario all'amministratore di Azure Information Protection per indicare al servizio Azure Rights Management di Azure Information Protection di usare questa chiave per la chiave del tenant.
 
-Quindi usare il [Set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) cmdlet per autorizzare l'entità servizio Azure Rights Management per l'insieme di credenziali delle chiavi di accesso. Le autorizzazioni necessarie sono decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
+Usare quindi il cmdlet [set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) per autorizzare l'entità servizio Rights Management di Azure ad accedere all'insieme di credenziali delle chiavi. Le autorizzazioni necessarie sono decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
 
 Se ad esempio l'insieme di credenziali delle chiavi creato per Azure Information Protection è denominato contosorms-byok-kv e il gruppo di risorse è denominato contosorms-byok-rg, eseguire il comando seguente:
     
@@ -136,7 +136,7 @@ Ora che la chiave HSM è stata trasferita in Insieme di credenziali delle chiavi
 
 1. Amministratore di Azure Information Protection: nella workstation connessa a Internet e nella sessione di PowerShell copiare i nuovi file di dati di configurazione (XML) la cui chiave del certificato SLC viene rimossa dopo l'esecuzione dello strumento TpdUtil.
 
-2. Caricare ogni file con estensione XML, utilizzando il [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) cmdlet. Ad esempio, è necessario avere almeno un file aggiuntivo da importare in caso di aggiornamento del cluster AD RMS per la modalità di crittografia 2.
+2. Caricare ogni file con estensione XML, usando il cmdlet [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) . Ad esempio, è necessario avere almeno un file aggiuntivo da importare in caso di aggiornamento del cluster AD RMS per la modalità di crittografia 2.
 
     Per eseguire questo cmdlet, sono necessari la password specificata in precedenza per il file di dati di configurazione e l'URL della chiave identificato nel passaggio precedente.
 
@@ -154,15 +154,15 @@ Ora che la chiave HSM è stata trasferita in Insieme di credenziali delle chiavi
 
     Durante l'importazione, la chiave del certificato concessore di licenze server viene importata e impostata automaticamente come archiviata.
 
-3. Dopo aver caricato ogni file, eseguire [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) per specificare quale chiave importata corrisponde alla chiave del certificato concessore di licenze attualmente attiva nel cluster AD RMS.
+3. Dopo aver caricato ogni file, eseguire [set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) per specificare quale chiave importata corrisponde alla chiave SLC attualmente attiva nel cluster ad RMS.
 
-4. Usare la [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) cmdlet per disconnettersi dal servizio Azure Rights Management:
+4. Usare il cmdlet [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) per disconnettersi dal servizio Rights Management di Azure:
 
     ```
     Disconnect-AipServiceService
     ```
 
-Se successivamente si deve confermare quale chiave di Azure Information Protection tramite chiave del tenant di Azure Key Vault, usare il [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) cmdlet per Azure RMS.
+Se in un secondo momento è necessario confermare la chiave usata dalla chiave del tenant Azure Information Protection in Azure Key Vault, usare il cmdlet [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) Azure RMS.
 
 
 È ora possibile andare al [Passaggio 5. Attivare il servizio Azure Rights Management](migrate-from-ad-rms-phase2.md#step-5-activate-the-azure-rights-management-service).

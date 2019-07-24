@@ -4,19 +4,19 @@ description: Istruzioni per rimuovere etichette di classificazione e protezione 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ''
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 031bfb196e7f896b49e96d4b94574b43e11a8fe8
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: a22e174366204fbf067e9e1c10286ef248b71a67
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183243"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428196"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Manuale dell'utente: Rimuovere etichette di classificazione e protezione da file e messaggi di posta elettronica etichettati tramite Azure Information Protection o protetti tramite Rights Management
 
@@ -47,7 +47,7 @@ Se l'icona **Elimina l'etichetta** non è immediatamente disponibile, fare clic 
 
 ![Barra di Azure Information Protection - Modifica l'etichetta](../media/edit-label.png)
 
-Se ancora non viene visualizzato il **Elimina l'etichetta** icona, l'amministratore non consente di usare questa opzione perché tutti i documenti e indirizzo di posta elettronica devono avere un'etichetta.
+Se l'icona **Elimina etichetta** non è ancora visualizzata, l'amministratore non consente di usare questa opzione perché tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta.
 
 > [!NOTE]
 > Se la barra di Information Protection non viene visualizzata nelle app di Office:

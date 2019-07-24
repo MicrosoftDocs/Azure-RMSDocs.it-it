@@ -4,19 +4,19 @@ description: Informazioni per gli utenti che eseguono il client Azure Informatio
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 16042717-0d7a-41f5-87e3-12826fda35df
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: 557d9f719c4b366bea946ea97c7369c0feeb945e
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: ca0796c47ef72d26d595f0442b1bb5806faf2c8f
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60183270"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428154"
 ---
 # <a name="user-guide-protection-only-mode-for-the-azure-information-protection-client"></a>Manuale dell'utente: Modalità di sola protezione per il client Azure Information Protection
 

@@ -4,18 +4,18 @@ description: Identificare i requisiti di Azure AD per l'uso di Azure Information
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/23/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.suite: ems
-ms.openlocfilehash: 171f7c3a410578421d7dffdf4ba12808940abf58
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 7ae6b5396bd3c2bcd0c92d7f2a21de6681c80546
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768050"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428275"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Requisiti di Azure Active Directory per Azure Information Protection
 
@@ -33,7 +33,7 @@ Per integrare la directory di Azure AD con le foreste di AD locali, vedere [Inte
 
 Computer che eseguono Office 2010: 
 
-- Questi computer richiedono il [unificata di Azure Information Protection client l'assegnazione di etichette](./rms-client/aip-clientv2.md) oppure [client Azure Information Protection](./rms-client/aip-client.md) per eseguire l'autenticazione per Azure Information Protection e la protezione dei dati servizio Azure Rights Management.
+- Questi computer richiedono che il [client Azure Information Protection Unified Labeling](./rms-client/aip-clientv2.md) o [Azure Information Protection client](./rms-client/aip-client.md) esegua l'autenticazione per Azure Information Protection e il relativo servizio di protezione dei dati, Azure Rights Management.
 
 - Gli account utente federati, ad esempio AD FS, devono usare l'Autenticazione integrata di Windows. In questo scenario l'autenticazione basata su moduli non riesce ad autenticare gli utenti per Azure Information Protection.
 
@@ -60,7 +60,7 @@ Per usare Multi-Factor Authentication (MFA) con Azure Information Protection, è
 
 - Client Azure Information Protection:
 
-    - Il client Azure Information Protection per Windows e l'app visualizzatore per iOS e Android ha sempre supportato MFA; versione minima non è obbligatoria. 
+    - I client Azure Information Protection per Windows e l'app visualizzatore per iOS e Android hanno sempre supportato l'autenticazione a più fattori. non è richiesta alcuna versione minima. 
 
 -   App di condivisione Microsoft Rights Management per computer Mac:
 
@@ -76,7 +76,7 @@ Quindi, configurare la soluzione MFA:
 
 - Per i tenant federativi (si gestiscono i server in locale):
 
-    - Configurare i server federativi per Azure Active Directory o Office 365. Ad esempio, se si usa AD FS, vedere [configurazione di altri metodi di autenticazione per AD FS](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs).
+    - Configurare i server federativi per Azure Active Directory o Office 365. Se ad esempio si usa AD FS, vedere [configurare metodi di autenticazione aggiuntivi per ad FS](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs).
 
         Per altre informazioni su questo scenario, vedere il post relativo al [programma di gestione delle identità per Office 365](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) sul blog di Office.
 

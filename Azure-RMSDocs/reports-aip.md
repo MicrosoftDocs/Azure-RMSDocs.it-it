@@ -5,18 +5,18 @@ author: cabailey
 ms.author: cabailey
 ms.date: 07/04/2019
 manager: barbkess
-ms.topic: article
+ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: b2da2cdc-74fd-4bfb-b3c2-2a3a59a6bf2e
 ms.reviewer: lilukov
 ms.suite: ems
-ms.openlocfilehash: 120cc1298d48c3dd9952362b8abacbca22ef6acc
-ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
+ms.openlocfilehash: 3d3dec9c5f2da8089b277cf9c372800c971af9ea
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340747"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428344"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -272,7 +272,7 @@ Per creare query personalizzate, usare i nomi di schema descrittivi implementati
 
 Usare la tabella seguente per identificare il nome descrittivo delle funzioni di eventi che è possibile usare per le query personalizzate con le funzionalità di analisi di Azure Information Protection.
 
-|Nome colonna|Descrizione|
+|Nome colonna|DESCRIZIONE|
 |-----------|-----------|
 |Time|Ora evento: UTC nel formato AAAA-MM-GGThh: MM: SS|
 |Utente|Utente: Formato UPN o dominio\utente|

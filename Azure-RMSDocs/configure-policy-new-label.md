@@ -4,17 +4,17 @@ description: Azure Information Protection offre etichette predefinite personaliz
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
-ms.openlocfilehash: 5651ae986dde5fe94578373643468f76f1b5f371
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: d0b0fff9b8e3cf7a27fd838dd8d84a6c35c97dd3
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179764"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428433"
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Come creare una nuova etichetta per Azure Information Protection
 
@@ -38,13 +38,13 @@ Seguire queste istruzioni per aggiungere una nuova etichetta che sarà poi possi
     
     - Per creare una nuova etichetta: Fare clic su **Aggiungi una nuova etichetta**.
     
-    - Per creare una nuova etichetta secondaria: Fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida (**...**) per l'etichetta per cui si vuole creare un'etichetta secondaria, quindi scegliere **Aggiungi un'etichetta secondaria**.
+    - Per creare una nuova etichetta secondaria: Fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida ( **...** ) per l'etichetta per cui si vuole creare un'etichetta secondaria, quindi scegliere **Aggiungi un'etichetta secondaria**.
 
 3. Nel pannello **Etichetta** o **Etichetta secondaria** selezionare le opzioni desiderate per la nuova etichetta, quindi fare clic su **Salva**.
     
-    Quando si specifica un nome visualizzato, non è consentito specificare alcuni caratteri (ad esempio barra rovesciata ed e commerciale) perché non tutti i servizi e le applicazioni che usano Azure Information Protection supportano questi caratteri. Oltre ai caratteri bloccati, non specificare il carattere **#**.    
+    Quando si specifica un nome visualizzato, non è consentito specificare alcuni caratteri (ad esempio barra rovesciata ed e commerciale) perché non tutti i servizi e le applicazioni che usano Azure Information Protection supportano questi caratteri. Oltre ai caratteri bloccati, non specificare il carattere **#** .    
     
-    Si noti che alle nuove etichette viene assegnato automaticamente il colore nero. Scegliere un colore distintivo dall'elenco dei colori o immettere un codice tripletta esadecimale per i componenti rosso, verde e blu (RGB) del colore. Ad esempio, **#DAA520**. Se è necessario un riferimento per questi codici, un utile punto di partenza è l'articolo [Colors by Name](https://msdn.microsoft.com/library/aa358802(v=vs.85).aspx) (Colori per nome), disponibile nella documentazione MSDN; questi codici sono anche presenti in molti programmi di modifica immagini, come Microsoft Paint, in cui scegliendo un colore personalizzato da una tavolozza vengono visualizzati automaticamente i valori RGB.
+    Si noti che alle nuove etichette viene assegnato automaticamente il colore nero. Scegliere un colore distintivo dall'elenco dei colori o immettere un codice tripletta esadecimale per i componenti rosso, verde e blu (RGB) del colore. Ad esempio, **#DAA520**. Se è necessario un riferimento per questi codici, è possibile trovare una tabella utile dalla [ \<pagina colore >](https://developer.mozilla.org/docs/Web/CSS/color_value) di documentazione Web di MSDN. È anche possibile trovare i codici in molte applicazioni per la modifica di immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
 
 4. Per rendere disponibile la nuova etichetta per gli utenti: Dall'opzione di menu **Classificazioni** > **Criteri** selezionare i criteri in cui includere la nuova etichetta. Selezionare **Add or remove labels** (Aggiungi o rimuovi etichette). Selezionare l'etichetta nel pannello **Policy: Add or remove labels** (Criteri: Aggiungi o rimuovi etichette), selezionare **OK** e quindi selezionare **Salva**.
     

@@ -1,24 +1,24 @@
 ---
-title: Classificare - client Azure Information Protection
-description: Le istruzioni come classificare i documenti e messaggi di posta elettronica quando si usa il client Azure Information Protection per Windows.
+title: Classificazione-Client Azure Information Protection
+description: Istruzioni su come classificare i documenti e i messaggi di posta elettronica quando si usa il client di Azure Information Protection per Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d65c7690-fab7-4823-845c-8c73903e9c79
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: ecc7a1e0655c322151ba0c44c51592656303d857
-ms.sourcegitcommit: 79218b6b064d757459d0ffb51002959ba6d6bcb9
+ms.openlocfilehash: e810245f94b688c1fc6018905f7a0265ebb0ec98
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/30/2019
-ms.locfileid: "64914713"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428250"
 ---
-# <a name="user-guide-classify-a-file-or-email-with-the-azure-information-protection-client"></a>Manuale dell'utente: Classificare un file o un messaggio di posta elettronica con il client Azure Information Protection
+# <a name="user-guide-classify-a-file-or-email-with-the-azure-information-protection-client"></a>Manuale dell'utente: Classificare un file o un messaggio di posta elettronica con il client di Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 >
@@ -77,7 +77,7 @@ La guida dell'amministratore include l'elenco completo dei tipi di file che supp
 
 ### <a name="to-classify-a-file-by-using-file-explorer"></a>Per classificare un file mediante Esplora file
 
-1. In Esplora File selezionare un file, più file o una cartella. Fare clic con il pulsante destro del mouse e scegliere **Classifica e proteggi**. Ad esempio: 
+1. In Esplora File selezionare un file, più file o una cartella. Fare clic con il pulsante destro del mouse e scegliere **Classifica e proteggi**. Ad esempio:
     
     ![Comando Classifica e proteggi nel menu di scelta rapida in Esplora file con Azure Information Protection](../media/right-click-classify-protect-folder.png)
 

@@ -1,26 +1,26 @@
 ---
-title: Classificazione tramite il client di assegnazione di etichette unificato di Azure Information Protection
-description: Istruzioni classificare i documenti e messaggi di posta elettronica quando si usa Azure Information Protection client per l'assegnazione di etichette per Windows unificata.
+title: Classificazione tramite il client di etichettatura unificato di Azure Information Protection
+description: Istruzioni su come classificare i documenti e i messaggi di posta elettronica quando si usa il client di etichetta unificato di Azure Information Protection per Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: c7ec1c5f6a929d9b6b810b647e6cb6dbe3c42316
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: 5faf6151a74eec0f213cf425d45f51cbd9e677d5
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64767967"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428101"
 ---
-# <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Manuale dell'utente: Classificare un file o un messaggio di posta elettronica usando il client di assegnazione di etichette unificato di Azure Information Protection per Windows
+# <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Manuale dell'utente: Classificare un file o un messaggio di posta elettronica usando il client di Azure Information Protection Unified Labeling per Windows
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 >
-> *Istruzioni per: [Azure Information Protection unified client per l'assegnazione di etichette per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > Usare queste istruzioni per classificare senza proteggere i documenti e i messaggi di posta elettronica. Se è necessario proteggere i documenti e i messaggi di posta elettronica, vedere le [istruzioni per classificare e proteggere](clientv2-classify-protect.md). Se non si sa quali istruzioni usare, rivolgersi al proprio amministratore o al supporto tecnico.
@@ -31,33 +31,33 @@ Tuttavia, è anche possibile classificare i file usando **Esplora file**. Questo
 
 ## <a name="using-office-apps-to-classify-your-documents-and-emails"></a>Uso delle app di Office per classificare documenti e messaggi di posta elettronica
 
-Dal **Home** scheda, seleziona la **sensibilità** nella barra multifunzione e quindi selezionare una delle etichette che è stato configurato per l'utente. Ad esempio: 
+Nella scheda **Home** selezionare il pulsante **sensibilità** sulla barra multifunzione e quindi selezionare una delle etichette configurate. Ad esempio:
 
-![Esempio di pulsante di sensibilità](../media/sensitivity-not-set-callout.png)
+![Esempio di pulsante Sensitivity](../media/sensitivity-not-set-callout.png)
 
-Oppure, se si è scelto **Mostra barra** dal **sensibilità** pulsante, è possibile selezionare un'etichetta dalla barra di Azure Information Protection. Ad esempio: 
+In alternativa, se è stata selezionata l'opzione **Mostra barra** dal pulsante **sensibilità** , è possibile selezionare un'etichetta dalla barra Azure Information Protection. Ad esempio:
 
 ![Esempio della barra di Azure Information Protection](../media/info-protect-barv2-not-set-callout.png)
 
-Per impostare un'etichetta, ad esempio "Generale", selezionare **generali**. Se non si è certi dell'etichetta da applicare al documento o al messaggio di posta elettronica corrente, usare le descrizioni comando delle etichette per altre informazioni su ogni etichetta e su quando applicarla. 
+Per impostare un'etichetta, ad esempio "generale", selezionare **generale**. Se non si è certi dell'etichetta da applicare al documento o al messaggio di posta elettronica corrente, usare le descrizioni comando delle etichette per altre informazioni su ogni etichetta e su quando applicarla. 
 
-Se al documento è già applicata un'etichetta e si desidera modificarla, è possibile selezionare un'etichetta diversa. Se è stato visualizzato la barra Azure Information Protection e le etichette non vengono visualizzate sulla barra per poter selezionare, fare clic il **modifica l'etichetta** sull'icona accanto al valore di etichetta corrente.
+Se al documento è già applicata un'etichetta e si desidera modificarla, è possibile selezionare un'etichetta diversa. Se è stata visualizzata la barra di Azure Information Protection e le etichette non sono visualizzate sulla barra da selezionare, fare prima clic sull'icona **Modifica etichetta** accanto al valore etichetta corrente.
 
 Oltre a selezionare manualmente le etichette, è anche possibile applicarle nei modi seguenti:
 
 - L'amministratore ha configurato un'etichetta predefinita che è possibile mantenere o modificare.
 
-- L'amministratore configurato etichette impostato automaticamente quando viene rilevate le informazioni riservate.
+- L'amministratore ha configurato le etichette da impostare automaticamente quando vengono rilevate informazioni riservate.
 
-- L'amministratore ha configurato consigliato etichette quando viene rilevate le informazioni riservate e viene richiesto di accettare il suggerimento (e viene applicata l'etichetta), o rifiutarlo (l'etichetta consigliata non viene applicata).
+- L'amministratore ha configurato le etichette consigliate quando vengono rilevate informazioni riservate e viene richiesto di accettare la raccomandazione (e l'etichetta viene applicata) o di rifiutarla (l'etichetta consigliata non viene applicata).
 
-### <a name="exceptions-for-the-sensitivity-button"></a>Eccezioni per il pulsante di sensibilità
+### <a name="exceptions-for-the-sensitivity-button"></a>Eccezioni per il pulsante Sensitivity
 
-##### <a name="dont-see-the-sensitivity-button-in-your-office-apps"></a>Il pulsante tra maiuscole e minuscole nelle app di Office non è visualizzato?
+##### <a name="dont-see-the-sensitivity-button-in-your-office-apps"></a>Non viene visualizzato il pulsante Sensitivity nelle app di Office?
 
-- Il client di assegnazione di etichette unificato di Azure Information Protection non si dispone [installato](install-unifiedlabelingclient-app.md).
+- Potrebbe non essere [installato](install-unifiedlabelingclient-app.md)il client di Azure Information Protection Unified labeling.
 
-- Se non viene visualizzata una **sensibilità** nella barra multifunzione, ma viene visualizzato un **Proteggi** pulsante invece con le etichette, aver installato il client Azure Information Protection e non di Azure Information Protection client unificato di assegnazione di etichette. [Altre informazioni](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+- Se non viene visualizzato un  pulsante di riservatezza sulla barra multifunzione, ma viene visualizzato un pulsante **Proteggi** con etichette, è necessario che sia installato il client di Azure Information Protection e non il Azure Information Protection client di etichettatura unificata. [Altre informazioni](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 ##### <a name="is-the-label-that-you-expect-to-see-not-displayed"></a>Un'etichetta che ci si aspetta di vedere non è visualizzata? 
 
@@ -78,7 +78,7 @@ La guida dell'amministratore include l'elenco completo dei tipi di file che supp
 
 ### <a name="to-classify-a-file-by-using-file-explorer"></a>Per classificare un file mediante Esplora file
 
-1. In Esplora File selezionare un file, più file o una cartella. Fare clic con il pulsante destro del mouse e scegliere **Classifica e proteggi**. Ad esempio: 
+1. In Esplora File selezionare un file, più file o una cartella. Fare clic con il pulsante destro del mouse e scegliere **Classifica e proteggi**. Ad esempio:
     
     ![Comando Classifica e proteggi nel menu di scelta rapida in Esplora file con Azure Information Protection](../media/right-click-classify-protect-folder.png)
 
@@ -98,11 +98,11 @@ La classificazione specificata rimane associata al file, anche se si invia il fi
 
 ## <a name="other-instructions"></a>Altre istruzioni
 
-Guidano per altre istruzioni sulle procedure da parte dell'utente per il client di assegnazione di etichette unificato di Azure Information Protection per Windows:
+Ulteriori istruzioni sulle procedure sono disponibili nel manuale dell'utente per il client di Azure Information Protection Unified Labeling per Windows:
 
 - [Per saperne di più](clientv2-user-guide.md#what-do-you-want-to-do)
 
 ## <a name="additional-information-for-administrators"></a>Informazioni aggiuntive per gli amministratori
 
-Visualizzare [Panoramica di etichette di riservatezza](/Office365/SecurityCompliance/sensitivity-labels).
+Vedere [Panoramica delle etichette di riservatezza](/Office365/SecurityCompliance/sensitivity-labels).
 

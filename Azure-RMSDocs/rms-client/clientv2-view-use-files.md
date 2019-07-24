@@ -1,32 +1,32 @@
 ---
-title: Visualizzare i file protetti con il client di assegnazione di etichette unificato di Azure Information Protection
-description: Istruzioni per visualizzare un file protetto che è necessario disporre di Azure Information Protection unified imprevisto delle etichette viewer installata.
+title: Visualizzare i file protetti con il client di Azure Information Protection Unified Labeling
+description: Istruzioni per visualizzare un file protetto per il quale è necessario che sia installato il Azure Information Protection visualizzatore unificato delle etichette.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
-ms.openlocfilehash: 2df0bd25bf30eb94aab17a8dae89332b4e96389b
-ms.sourcegitcommit: 2fe9333c3e6c98e7dd9003c5f4cd7c1e7a48b297
+ms.openlocfilehash: 6c499d384ec4d116edb18dccf532fbb1290bf284
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64880207"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68427949"
 ---
-# <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>Manuale dell'utente: Visualizzare i file protetti con il client di assegnazione di etichette unificato di Azure Information Protection
+# <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>Manuale dell'utente: Visualizzare i file protetti con il client di Azure Information Protection Unified Labeling
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 >
-> *Istruzioni per: [Azure Information Protection unified client per l'assegnazione di etichette per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Per visualizzare un file protetto, spesso è sufficiente aprirlo. Ad esempio, è possibile fare doppio clic su un allegato in un messaggio di posta elettronica o fare doppio clic su un file in Esplora file oppure è possibile fare clic su un collegamento a un file.
 
 Se i file non si aprono immediatamente, il **visualizzatore Azure Information Protection** potrebbe essere in grado di aprirli. Il visualizzatore è in grado di aprire file di testo protetti, file di immagine protetti, file PDF protetti e tutti i file con estensione **PFILE**.
 
-Il visualizzatore viene automaticamente installato come parte del client Azure Information Protection unified l'assegnazione di etichette, oppure è possibile installarlo separatamente. È possibile installare questo client e il visualizzatore dal [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) pagina sul sito Web Microsoft. Per altre informazioni sull'installazione di questo client, vedere [scaricare e installare il client di assegnazione di etichette unificato di Azure Information Protection](install-unifiedlabelingclient-app.md).
+Il visualizzatore viene installato automaticamente come parte del client di Azure Information Protection Unified Labeling oppure è possibile installarlo separatamente. È possibile installare sia il client che il visualizzatore dalla pagina [Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970) nel sito Web Microsoft. Per altre informazioni sull'installazione di questo client, vedere [scaricare e installare il client di etichettatura unificata Azure Information Protection](install-unifiedlabelingclient-app.md).
 
 > [!NOTE]
 > Benché l'installazione del client fornisca più funzionalità, richiede autorizzazioni di amministratore locale e la funzionalità completa richiede un servizio corrispondente per l'organizzazione. Ad esempio, Azure Information Protection.
@@ -59,12 +59,12 @@ Se l'organizzazione non può mettere a disposizione dell'utente un account basat
     
     Se l'account specificato non viene accettato, vedere la sezione [Richieste di autorizzazione](#prompts-for-authentication) in questa pagina.
 
-3. Una versione di sola lettura del file viene aperto nel **Visualizzatore Azure Information Protection** o nell'applicazione associata con l'estensione del nome file.
+3. Viene aperta una versione di sola lettura del file nel **visualizzatore Azure Information Protection** o nell'applicazione associata all'estensione del nome file.
 
 4. Per aprire altri file protetti, è possibile visualizzarli direttamente nel visualizzatore usando l'opzione **Apri**. Il file selezionato sostituisce il file originale nel visualizzatore. 
 
 > [!TIP]
-> Se il file protetto non si apre e nel sistema è installato il client di Azure Information Protection completo, provare con l'opzione **Ripristina le impostazioni**. Per accedere a questa opzione, da un'app di Office, selezionare la **sensibilità** pulsante > **Guida e commenti** > **Ripristina le impostazioni**. 
+> Se il file protetto non si apre e nel sistema è installato il client di Azure Information Protection completo, provare con l'opzione **Ripristina le impostazioni**. Per accedere a questa opzione, da un'app di Office selezionare il pulsante Sensitivity ( **sensibilità** ) >**le impostazioni**della **Guida e** > della reimpostazione del feedback. 
 > 
 > [Altre informazioni sull'opzione Ripristina le impostazioni](clientv2-admin-guide.md#more-information-about-the-reset-settings-option)
 

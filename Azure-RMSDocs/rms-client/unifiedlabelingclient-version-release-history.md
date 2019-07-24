@@ -4,18 +4,18 @@ description: Vedere le informazioni sulla versione del client per l'etichettatur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 07/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: db7dc34da3f8cd2ee92fa0c3a500880ed561dc40
-ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
+ms.openlocfilehash: f60d75655e24e7888ae45111d2b3538a8a12c288
+ms.sourcegitcommit: 6c3681cec0f807c6af031db67242ff01a99cd57b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340694"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68411688"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -60,6 +60,7 @@ Il client sta sostituendo il client di Azure Information Protection (classico). 
     
     Queste impostazioni avanzate supportano le seguenti personalizzazioni:
      - [Visualizza la barra di Information Protection nelle app Office](clientv2-admin-guide-customizations.md#display-the-information-protection-bar-in-office-apps)
+    - [Esentare i messaggi di Outlook da un'etichetta obbligatoria](clientv2-admin-guide-customizations.md#exempt-outlook-messages-from-mandatory-labeling)
     - [Abilitare la classificazione consigliata in Outlook](clientv2-admin-guide-customizations.md#enable-recommended-classification-in-outlook)
     - [Impostare un'etichetta predefinita diversa per Outlook](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook)
     - [Rimuovere "Non ora" per i documenti quando si usa l'etichettatura obbligatoria](clientv2-admin-guide-customizations.md#remove-not-now-for-documents-when-you-use-mandatory-labeling)

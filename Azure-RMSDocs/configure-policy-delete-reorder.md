@@ -4,17 +4,17 @@ description: È possibile eliminare o riordinare le etichette di Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
-ms.openlocfilehash: 504121e8411132d47ea48635ca9c462ecbccf28c
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: cde7e01f70936904f7d3d905c040d806c9f00d45
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60180007"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428509"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Come eliminare o riordinare un'etichetta per Azure Information Protection
 
@@ -60,11 +60,11 @@ Per apportare le modifiche, seguire queste istruzioni.
 
 2. Dall'opzione di menu **Classificazioni** > **Etichette**: Nel pannello **Azure Information Protection - Etichette** effettuare una o più operazioni tra quelle indicate seguenti: 
 
-    - Per eliminare un'etichetta: Fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida (**...**) per l'etichetta che si vuole eliminare, scegliere **Elimina questa etichetta** e fare clic su **OK** per confermare. 
+    - Per eliminare un'etichetta: Fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida ( **...** ) per l'etichetta che si vuole eliminare, scegliere **Elimina questa etichetta** e fare clic su **OK** per confermare. 
 
     - Per disabilitare un'etichetta: Selezionare l'etichetta da disabilitare. Nel pannello **Etichetta** per **Abilitato** selezionare **No** e quindi fare clic su **Salva**.
 
-    - Per riordinare un'etichetta: Fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida (**...**) per l'etichetta che si vuole riordinare, scegliere **Sposta su** o **Sposta giù** fino a quando l'etichetta non è nell'ordine desiderato.  
+    - Per riordinare un'etichetta: Fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida ( **...** ) per l'etichetta che si vuole riordinare, scegliere **Sposta su** o **Sposta giù** fino a quando l'etichetta non è nell'ordine desiderato.  
 
 ## <a name="next-steps"></a>Passaggi successivi
 

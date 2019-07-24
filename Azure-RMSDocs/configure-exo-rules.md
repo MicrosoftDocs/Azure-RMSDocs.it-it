@@ -1,28 +1,28 @@
 ---
-title: Regole del flusso di posta elettronica Exchange Online per le etichette di Azure Information Protection
+title: Regole del flusso di posta di Exchange Online per le etichette di Azure Information Protection
 description: Istruzioni ed esempi per configurare le regole del flusso di posta di Exchange Online per le etichette di Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/24/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
-ms.openlocfilehash: 839f5e9a63f9e180cddcb9ac5cd4afd2b8474d1e
-ms.sourcegitcommit: f9077101a974459a4252e763b5fafe51ff15a16f
+ms.openlocfilehash: f738f990e6a4c2f79e4eede12431c1afe15803cd
+ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64768002"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68428550"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configurazione delle regole del flusso di posta di Exchange Online per le etichette di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Usare le informazioni seguenti per configurare le regole del flusso di posta in Exchange Online per usare le etichette di Azure Information Protection e per applicare una protezione aggiuntiva per scenari specifici. Ad esempio: 
+Usare le informazioni seguenti per configurare le regole del flusso di posta in Exchange Online per usare le etichette di Azure Information Protection e per applicare una protezione aggiuntiva per scenari specifici. Ad esempio:
 
 - L'etichetta predefinita è **Generale**, che non applica la protezione. Per i messaggi di posta elettronica con questa etichetta inviati all'esterno, applicare l'azione di protezione aggiuntiva Non inoltrare.
 
@@ -52,7 +52,7 @@ Per gli esempi seguenti, creare una nuova regola del flusso di posta seguendo qu
 
 3. Nell'interfaccia di amministrazione di Microsoft 365 scegliere **Interfacce di amministrazione** > **Exchange**.
 
-4. Nell'interfaccia di amministrazione di Exchange: **flusso di posta** > **regole** > **+** > **Create a new rule** (Crea una nuova regola). 
+4. Nell'interfaccia di amministrazione di Exchange: **flusso di posta** > **regole** >  **+**  > **Create a new rule** (Crea una nuova regola). 
 
 > [!TIP]
 > Se si verificano problemi con l'interfaccia utente quando si configurano le regole, provare a usare un browser diverso, ad esempio Internet Explorer.
@@ -80,9 +80,9 @@ Nel criterio Azure Information Protection questa etichetta è stata configurata 
     
     c. Selezionare **+** e quindi **OK**.
 
-5. Per **Do the following** (Eseguire le operazioni seguenti): selezionare **Modify the message security (Modifica la sicurezza del messaggio)** > **Apply Office 365 Message Encryption and rights protection (Applica Office 365 Message Encryption e la protezione dei diritti)** > **Non inoltrare** e quindi selezionare **OK**.
+5. Per **Do the following** (Eseguire le operazioni seguenti): selezionare **Modify the message security (Modifica la sicurezza del messaggio)**  > **Apply Office 365 Message Encryption and rights protection (Applica Office 365 Message Encryption e la protezione dei diritti)**  > **Non inoltrare** e quindi selezionare **OK**.
     
-    La configurazione della regola ora dovrebbe essere simile alla seguente:  ![Regola del flusso di posta elettronica Exchange Online configurato per un'etichetta di Azure Information Protection - esempio 1](./media/aip-exo-rule-ex1.png)
+    La configurazione della regola ora dovrebbe essere simile alla seguente:  ![Regola del flusso di posta di Exchange Online configurata per un'etichetta di Azure Information Protection-esempio 1](./media/aip-exo-rule-ex1.png)
 
 7. Selezionare **Salva** 
 
@@ -102,7 +102,7 @@ Questa etichetta viene usata per classificare e proteggere i documenti usati per
  
 4. Per **e**: selezionare **Any attachment** (Qualsiasi allegato) e quindi selezionare **has these properties, including any of these words** (con queste proprietà, inclusa una di queste parole):
      
-    a. Selezionare **+** > **Specify a custom attachment property** (Specifica una proprietà allegato personalizzata).
+    a. Selezionare **+**  > **Specify a custom attachment property** (Specifica una proprietà allegato personalizzata).
   
     b. Per **Proprietà** immettere `MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled`.
     
@@ -110,9 +110,9 @@ Questa etichetta viene usata per classificare e proteggere i documenti usati per
     
     d. Selezionare **Salva** e quindi **OK**.
 
-5. Per **Do the following** (Eseguire le operazioni seguenti): selezionare **Modify the message security (Modifica la sicurezza del messaggio)** > **Apply Office 365 Message Encryption and rights protection (Applica Office 365 Message Encryption e la protezione dei diritti)** > **Crittografa** e quindi selezionare **OK**.
+5. Per **Do the following** (Eseguire le operazioni seguenti): selezionare **Modify the message security (Modifica la sicurezza del messaggio)**  > **Apply Office 365 Message Encryption and rights protection (Applica Office 365 Message Encryption e la protezione dei diritti)**  > **Crittografa** e quindi selezionare **OK**.
     
-    La configurazione della regola ora dovrebbe essere simile alla seguente:  ![Regola del flusso di posta elettronica Exchange Online configurato per un'etichetta di Azure Information Protection - esempio 2](./media/aip-exo-rule-ex2.png)
+    La configurazione della regola ora dovrebbe essere simile alla seguente:  ![Regola del flusso di posta di Exchange Online configurata per un'etichetta di Azure Information Protection-esempio 2](./media/aip-exo-rule-ex2.png)
 
 6. Selezionare **Salva** 
 

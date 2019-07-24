@@ -1,6 +1,5 @@
 ---
 title: Configurazioni personalizzate-Azure Information Protection client per l'assegnazione di etichette unificata
-description: Informazioni sulla personalizzazione del client di Azure Information Protection Unified Labeling per Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -11,12 +10,12 @@ ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 662898959c48cb5cb1a7455bdd377c8ac9e966ec
-ms.sourcegitcommit: ce47b16c16d93e710c0ff95588e1631ccc0e2829
+ms.openlocfilehash: c583dfd8fe17a926bc2014a626d289a3d29d627c
+ms.sourcegitcommit: 6c3681cec0f807c6af031db67242ff01a99cd57b
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/23/2019
-ms.locfileid: "68387411"
+ms.locfileid: "68411735"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -117,6 +116,7 @@ Usare il parametro *AdvancedSettings* con [New-LabelPolicy](https://docs.microso
 |----------------|---------------|
 |AttachmentAction|[Per i messaggi di posta elettronica con allegati, applica un'etichetta corrispondente alla classificazione più elevata di questi allegati](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |AttachmentActionTip|[Per i messaggi di posta elettronica con allegati, applica un'etichetta corrispondente alla classificazione più elevata di questi allegati](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
+|DisableMandatoryInOutlook|[Esentare i messaggi di Outlook da un'etichetta obbligatoria](#exempt-outlook-messages-from-mandatory-labeling)
 |EnableCustomPermissions|[Disabilitare le autorizzazioni personalizzate in Esplora file](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[Per i file protetti con autorizzazioni personalizzate, rendere sempre le autorizzazioni personalizzate visualizzabili dagli utenti in Esplora file](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
@@ -129,6 +129,7 @@ Usare il parametro *AdvancedSettings* con [New-LabelPolicy](https://docs.microso
 |OutlookJustifyUntrustedCollaborationLabel|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookRecommendationEnabled|[Abilitare la classificazione consigliata in Outlook](#enable-recommended-classification-in-outlook)|
 |OutlookOverrideUnlabeledCollaborationExtensions|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnTrustedDomains|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnUntrustedCollaborationLabel|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |PostponeMandatoryBeforeSave|[Rimuovere "Non ora" per i documenti quando si usa l'etichettatura obbligatoria](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
@@ -172,6 +173,22 @@ Per i criteri etichetta selezionati specificare le stringhe seguenti:
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="False"}
+
+## <a name="exempt-outlook-messages-from-mandatory-labeling"></a>Esentare i messaggi di Outlook da un'etichetta obbligatoria
+
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
+
+Per impostazione predefinita, quando si Abilita l'impostazione dei criteri di etichetta di **tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**, tutti i documenti salvati e i messaggi di posta elettronica inviati devono avere un'etichetta applicata. Quando si configura l'impostazione avanzata seguente, l'impostazione dei criteri si applica solo ai documenti di Office e non ai messaggi di Outlook.
+
+Per i criteri etichetta selezionati specificare le stringhe seguenti:
+
+- Key: **DisableMandatoryInOutlook**
+
+- Valore: **True**
+
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Abilitare la classificazione consigliata in Outlook
 
@@ -577,6 +594,42 @@ Per gli stessi criteri di etichetta, immettere le stringhe seguenti:
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.PPT,.PPTX,.PPTM"}
+
+#### <a name="to-specify-a-different-action-for-email-messages-without-attachments"></a>Per specificare un'azione diversa per i messaggi di posta elettronica senza allegati
+
+Per impostazione predefinita, il valore specificato per OutlookUnlabeledCollaborationAction per avvisare, giustificare o bloccare i messaggi popup si applica ai messaggi di posta elettronica o agli allegati che non hanno un'etichetta. È possibile perfezionare questa configurazione specificando un'altra impostazione avanzata per i messaggi di posta elettronica che non dispongono di allegati.
+
+Creare l'impostazione client avanzata seguente con uno dei valori seguenti:
+
+- Messaggi di avviso:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Valore: **Avvisa**
+
+- Messaggi di giustificazione:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Valore: **Giustifica**
+
+- Messaggi di blocco:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Valore: **Bloccato**
+
+- Disattivare questi messaggi:
+    
+    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    
+    - Valore: **Off**
+
+Se non si specifica questa impostazione client, il valore specificato per OutlookUnlabeledCollaborationAction viene usato per i messaggi di posta elettronica senza etichetta senza allegati, nonché per i messaggi di posta elettronica senza etichetta con allegati.
+
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
 
 
 ## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Disabilitare l'invio di informazioni riservate individuate nei documenti a Azure Information Protection Analytics
