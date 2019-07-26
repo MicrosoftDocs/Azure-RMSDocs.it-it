@@ -1,10 +1,10 @@
 ---
 title: Supporto & informazioni per Azure Information Protection-AIP
-description: Risorse per gli amministratori, incluse informazioni sulle nuove versioni, opzioni di supporto e istruzioni su come contattare Microsoft per segnalare un problema.
+description: Risorse per gli amministratori, che includono informazioni sulle nuove versioni, opzioni di supporto e su come contattare Microsoft per segnalare un problema.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/02/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: 28057fb2697855afc7028292f19b2a344635a52c
-ms.sourcegitcommit: e730f897452fcb0ca1003c6b86f6e65678d0ec57
+ms.openlocfilehash: c5ce1d092297e713d46dc3df507bcc048fd173e3
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67885502"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446781"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informazioni e supporto per Azure Information Protection
 

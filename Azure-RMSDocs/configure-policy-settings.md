@@ -4,17 +4,17 @@ description: Configurare le impostazioni nei criteri di Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
-ms.openlocfilehash: 5eac6cd86ea5d413429c02ad37e0a5e186ab6f22
-ms.sourcegitcommit: 8532536b778a26b971dba89436772158869ab84d
+ms.openlocfilehash: 5b26c3e963fccede6b4a66814c0ab089abfdfd45
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934658"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446818"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Come configurare le impostazioni dei criteri per Azure Information Protection
 
@@ -66,13 +66,13 @@ Per configurare queste impostazioni:
         
         Per prendere in considerazione l'ordine delle etichette secondarie quando si usa questa impostazione dei criteri, è necessario [configurare un'impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments).
         
-        Quando l'allegato con l'etichetta di classificazione più alta è configurato per la protezione con l'impostazione di anteprima delle autorizzazioni definite dall'utente:: quando le autorizzazioni definite dall'utente dell'etichetta includono Outlook (Do Not Forward), l'etichetta viene applicata e non inoltrare protezione viene applicata al messaggio di posta elettronica. Quando le autorizzazioni definite dall'utente dell'etichetta sono solo per Word, Excel, PowerPoint ed Esplora file, non si applica né tale etichetta né un tipo di protezione al messaggio di posta elettronica.
+        Quando l'allegato con l'etichetta di classificazione più alta è configurato per la protezione con l'impostazione di anteprima delle autorizzazioni definite dall'utente:-quando le autorizzazioni definite dall'utente dell'etichetta includono Outlook (non inviare), tale etichetta viene applicata e non è in esecuzione la protezione viene applicata al messaggio di posta elettronica. Quando le autorizzazioni definite dall'utente dell'etichetta sono solo per Word, Excel, PowerPoint ed Esplora file, non si applica né tale etichetta né un tipo di protezione al messaggio di posta elettronica.
     
    - **Visualizza la barra di Information Protection nelle app Office**: quando questa impostazione è disattivata, gli utenti non possono selezionare etichette da una barra in Word, Excel, PowerPoint e Outlook. Gli utenti devono invece selezionare le etichette dal pulsante **Proteggi** sulla barra multifunzione. Quando questa impostazione è attivata, gli utenti possono selezionare le etichette dalla barra o dal pulsante.
         
        Quando questa impostazione è attivata, può essere usata in combinazione con un'impostazione client avanzata, in modo che gli utenti possano [nascondere in modo permanente la barra di Azure Information Protection](./rms-client/client-admin-guide-customizations.md#permanently-hide-the-azure-information-protection-bar) se scelgono di non visualizzare la barra. A tale scopo, è necessario deselezionare l'opzione **Mostra barra** dal pulsante **Proteggi**.
     
-   - **Aggiungi il pulsante Non inoltrare alla barra multifunzione di Outlook**: quando questa impostazione è attivata, gli utenti possono selezionare questo pulsante dal gruppo **Protezione** sulla barra multifunzione di Outlook oltre a selezionare l'opzione **Non inoltrare** dai menu di Outlook. Per garantire che gli utenti possano classificare i messaggi di posta elettronica, oltre a proteggerli, è preferibile non aggiungere questo pulsante e invece [configurare un'etichetta per la protezione](configure-policy-protection.md) e un'autorizzazione definita dall'utente per Outlook. Dal punto di vista funzionale, questa impostazione equivale a selezionare il pulsante **Non inoltrare**, ma quando questa funzionalità viene inclusa con un'etichetta, i messaggi di posta elettronica vengono classificati e protetti.
+   - **Aggiungi il pulsante Non inoltrare alla barra multifunzione di Outlook**: quando questa impostazione è attivata, gli utenti possono selezionare questo pulsante dal gruppo **Protezione** sulla barra multifunzione di Outlook oltre a selezionare l'opzione **Non inoltrare** dai menu di Outlook. Per garantire che gli utenti classifichino i messaggi di posta elettronica e li proteggano, potrebbe essere preferibile non aggiungere questo pulsante, ma [configurare un'etichetta per la protezione](configure-policy-protection.md) e un'autorizzazione user = defined per Outlook. Dal punto di vista funzionale, questa impostazione equivale a selezionare il pulsante **Non inoltrare**, ma quando questa funzionalità viene inclusa con un'etichetta, i messaggi di posta elettronica vengono classificati e protetti.
     
        Questa impostazione dei criteri può essere configurata anche con un'impostazione client avanzata come [personalizzazione client](./rms-client/client-admin-guide-customizations.md#hide-or-show-the-do-not-forward-button-in-outlook).
     
@@ -88,7 +88,7 @@ Per configurare queste impostazioni:
     
    - **Specificare un URL personalizzato per la pagina Web "Altre informazioni" del client Azure Information Protection**: questo collegamento viene visualizzato nella finestra di dialogo **Microsoft Azure Information Protection** della sezione **Guida e commenti** dopo aver selezionato **Proteggi** > **Guida e commenti** dalla scheda **Home** di un'applicazione di Office. Per impostazione predefinita, questo collegamento indirizza l'utente al sito Web di [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection). Se si preferisce che questo collegamento indirizzi l'utente a un'altra pagina Web, è possibile immettere un URL HTTP o HTTPS (consigliato). Non viene effettuato alcun controllo per verificare che l'URL personalizzato sia accessibile o venga correttamente visualizzato su tutti i dispositivi.
         
-       Per l'help desk, è ad esempio possibile immettere la pagina della documentazione Microsoft che include informazioni sull'installazione e sull'uso del client (**https://docs.microsoft.com/information-protection/rms-client/info-protect-client**) o informazioni sulla versione di rilascio (**https://docs.microsoft.com/information-protection/rms-client/client-version-release-history**). In alternativa, è possibile pubblicare una pagina Web personalizzata con informazioni sulle modalità di contatto dell'help desk o con un video che illustra agli utenti come usare le etichette configurate in precedenza.
+       Per l'help desk, è ad esempio possibile immettere la pagina della documentazione Microsoft che include informazioni sull'installazione e sull'uso del client ( **https://docs.microsoft.com/information-protection/rms-client/info-protect-client** ) o informazioni sulla versione di rilascio ( **https://docs.microsoft.com/information-protection/rms-client/client-version-release-history** ). In alternativa, è possibile pubblicare una pagina Web personalizzata con informazioni sulle modalità di contatto dell'help desk o con un video che illustra agli utenti come usare le etichette configurate in precedenza.
 
 4. Per salvare le modifiche e renderle disponibili agli utenti, fare clic su **Salva**.
 

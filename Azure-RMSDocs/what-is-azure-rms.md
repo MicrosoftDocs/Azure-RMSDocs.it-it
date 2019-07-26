@@ -4,7 +4,7 @@ description: Informazioni su Azure Rights Management (Azure RMS), la tecnologia 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/16/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: 3e5f8b2cadc615e9c2e601ee083f0e9b99566631
-ms.sourcegitcommit: e730f897452fcb0ca1003c6b86f6e65678d0ec57
+ms.openlocfilehash: 467f7d9c9ddcf250f27b8980bd989e638959be66
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67885616"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446850"
 ---
 # <a name="what-is-azure-rights-management"></a>Informazioni su Microsoft Azure Rights Management
 
@@ -31,7 +31,7 @@ Questo servizio di protezione basato sul cloud usa criteri di crittografia, iden
 
 Si supponga, ad esempio, che un utente invii un documento a una società partner tramite posta elettronica o che salvi il documento sull'unità cloud della società. La protezione permanente fornita da Azure RMS non solo garantisce la sicurezza dei dati aziendali, ma può anche avere valore legale per quanto riguarda la conformità normativa e la conservazione delle informazioni per fini giuridici oppure, più semplicemente, può rappresentare un esempio di procedure consigliate per la gestione delle informazioni.
 
-Aspetto molto importante, le persone e i servizi autorizzati, ad esempio quelli di ricerca e indicizzazione, possono continuare a leggere e analizzare i dati protetti, risultato non raggiunto facilmente da altre soluzioni di protezione delle informazioni che usano la crittografia peer-to-peer. Questa possibilità viene definita anche "ragionamento sui dati" e riveste un ruolo di importanza critica nel mantenimento del controllo sui dati dell'organizzazione.
+In particolare, le persone e i servizi autorizzati, ad esempio la ricerca e l'indicizzazione, possono continuare a leggere ed esaminare i dati protetti. risultato non raggiunto facilmente da altre soluzioni di protezione delle informazioni che usano la crittografia peer-to-peer. Questa possibilità viene definita anche "ragionamento sui dati" e riveste un ruolo di importanza critica nel mantenimento del controllo sui dati dell'organizzazione.
 
 La figura seguente illustra come questo servizio offra una soluzione di protezione per Office 365, oltre che per server e servizi locali. Indica inoltre che la protezione è supportata dai dispositivi degli utenti finali di uso comune che eseguono Windows, macOS, iOS e Android.
 

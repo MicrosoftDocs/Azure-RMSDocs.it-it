@@ -4,7 +4,7 @@ description: Informazioni sui documenti PDF etichettati per la classificazione e
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/23/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.reviewer: kartikka
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: 7254e43e40ba393c1c4280847a0a9d6e4219c2a3
-ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
+ms.openlocfilehash: 9a1deef0cc63861560e528aa06cd44857ab86515
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: it-IT
 ms.lasthandoff: 07/24/2019
-ms.locfileid: "68427796"
+ms.locfileid: "68446867"
 ---
 # <a name="supported-pdf-readers-for-microsoft-information-protection"></a>Lettori di file PDF supportati per Microsoft Information Protection
 

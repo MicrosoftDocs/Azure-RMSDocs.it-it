@@ -1,22 +1,22 @@
 ---
 title: Supporto di Azure Rights Management da parte delle app da AIP
-description: Comprendere l'utilizzo più comune delle applicazioni (ad esempio, le app di Office) e servizi, come Exchange e SharePoint, è possono usare il servizio Azure Rights Management di Azure Information Protection per proteggere documenti e messaggi di posta elettronica dell'organizzazione.
+description: Informazioni sul modo in cui le applicazioni usate più di frequente, ad esempio le app di Office, e i servizi (ad esempio Exchange e SharePoint) possono usare il servizio Rights Management di Azure Azure Information Protection per proteggere i documenti e i messaggi di posta elettronica dell'organizzazione.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/02/2019
+ms.date: 07/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 2cdc7bde-4044-4021-b887-11476f99afd9
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: deb9cb2bf0751c78d419db579b5df050e4862245
-ms.sourcegitcommit: 4721f96650fde6e0e8e704cc6a3458ddeff635a6
+ms.openlocfilehash: 4513667ad3a09d4f986282780f4858b0bce670f7
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65087872"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446760"
 ---
 # <a name="how-applications-support-the-azure-rights-management-service"></a>Supporto del servizio Azure Rights Management da parte delle applicazioni
 
@@ -35,7 +35,7 @@ Nei casi in cui gli utenti debbano applicare in modo autonomo la protezione, ass
 
 Per altre informazioni sulle modalità di configurazione di queste applicazioni per il servizio Azure Rights Management di Azure Information Protection, vedere [Configurazione di applicazioni per Azure Rights Management](configure-applications.md).
 
-I servizi di ricerca si integrano con Rights Management in modi diversi. Ad esempio:  
+I servizi di ricerca si integrano con Rights Management in modi diversi. Ad esempio: 
 
 - Exchange Online ed Exchange Server usano l'indicizzazione del lato del servizio per visualizzare automaticamente i messaggi di posta elettronica protetti dell'utente nei risultati delle ricerche. 
 
