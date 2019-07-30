@@ -4,18 +4,18 @@ description: Eseguire la migrazione di etichette di Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/19/2019
+ms.date: 07/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 14d9aa830fba9eced4fb03fbc1e0c9274e9b4106
-ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
+ms.openlocfilehash: 0119dedbd569732abd6e9749eb0796879823c153
+ms.sourcegitcommit: ba28a9dff6a4c75046185749c2ef9e3c08b9e77e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68428454"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68602726"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Come eseguire la migrazione di etichette di Azure Information Protection a etichette di riservatezza di Office 365
 
@@ -54,7 +54,6 @@ Poiché la migrazione delle etichette è irreversibile, assicurarsi di essere a 
 - Assicurarsi di disporre di [client che supportano le etichette unificate](#clients-and-services-that-support-unified-labeling) e, se necessario, di essere preparati per l'amministrazione in entrambi i portale di Azure (per i client che non supportano le etichette unificate) e i centri di amministrazione (per il client che supportano le etichette unificate).
 
 - I criteri, incluse le impostazioni dei criteri e gli utenti autorizzati all'accesso (criteri con ambito) e tutte le impostazioni client avanzate non vengono sottoposti a migrazione. Le opzioni per la configurazione di queste impostazioni in seguito alla migrazione dell'etichetta includono:
-    - Opzione [Copy Policies](#copy-your-policies-and-policy-settings) .
     - Centro di amministrazione per le etichette di riservatezza.
     - [Office 365 sicurezza e conformità PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps), che è necessario usare per configurare [Impostazioni client avanzate](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell).
     
@@ -160,25 +159,6 @@ Le etichette di cui è stata eseguita correttamente la migrazione possono ora es
 
 > [!IMPORTANT]
 > Se si modificano le etichette al di fuori dell'portale di Azure, per Azure Information Protection client (versione classica) tornare a questo pannello **Azure Information Protection-Unified Labeling** e selezionare **pubblica**.
-
-
-#### <a name="copy-your-policies-and-policy-settings"></a>Copiare i criteri e le impostazioni dei criteri
-
-Questa opzione viene gradualmente implementata in tenant in anteprima ed è soggetta a modifiche. Se non viene visualizzata l'opzione **copia criteri (anteprima)** , riprovare tra qualche settimana.
-
-Dopo aver eseguito la migrazione delle etichette, è possibile selezionare un'opzione per la copia dei criteri. Se si seleziona questa opzione, viene inviata una copia monouso dei criteri con le [impostazioni dei criteri](configure-policy-settings.md) e tutte [le impostazioni client avanzate](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) all'interfaccia di amministrazione in cui si gestiscono le etichette: Centro sicurezza e conformità di Office 365, Centro sicurezza di Microsoft 365 o Centro conformità di Microsoft 365.
-
-Prima di selezionare l'opzione **copia criteri (anteprima)** , tenere presente quanto segue:
-
-- Non è possibile scegliere in modo selettivo i criteri e le impostazioni da copiare. Vengono copiati tutti i criteri (i criteri **globali** e tutti i criteri con ambito) e vengono copiate tutte le impostazioni supportate come impostazioni dei criteri di etichetta. Se si dispone già di un criterio etichetta con lo stesso nome, verrà sovrascritto con le impostazioni dei criteri nel portale di Azure.
-
-- Alcune impostazioni client avanzate non vengono copiate perché per il client Azure Information Protection Unified Labeling sono supportate come *Impostazioni avanzate dell'etichetta* anziché come impostazioni dei criteri. È possibile configurare queste impostazioni avanzate di etichetta con [Office 365 Centro sicurezza e conformità PowerShell](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell). Le impostazioni client avanzate che non vengono copiate includono:
-    - [LabelbyCustomProperty](./rms-client/client-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
-    - [LabelToSMIME](./rms-client/client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
-
-- A differenza della migrazione delle etichette in cui vengono sincronizzate le successive modifiche alle etichette, l'azione copia criteri non sincronizza le modifiche successive ai criteri o alle impostazioni dei criteri. È possibile ripetere l'azione di copia dei criteri dopo aver apportato modifiche all'portale di Azure e tutti i criteri esistenti e le relative impostazioni verranno sovrascritti. In alternativa, usare i cmdlet [set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps) o [set-label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps) con il parametro *AdvancedSettings* di Office 365 Centro sicurezza e conformità PowerShell.
-
-Per ulteriori informazioni sulla configurazione delle impostazioni dei criteri, delle impostazioni client avanzate e delle impostazioni delle etichette per il client Azure Information Protection Unified Labeling, vedere [configurazioni personalizzate per il client di Azure Information Protection Unified Labeling ](./rms-client/clientv2-admin-guide-customizations.md)dalla guida dell'amministratore.
 
 ### <a name="clients-and-services-that-support-unified-labeling"></a>Client e servizi che supportano l'etichettatura unificata
 
