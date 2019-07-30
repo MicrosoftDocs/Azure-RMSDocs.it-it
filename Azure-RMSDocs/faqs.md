@@ -4,19 +4,19 @@ description: Alcune domande frequenti su Azure Information Protection e il relat
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 07/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
 search.appverid:
 - MET150
-ms.openlocfilehash: 4dcf7fd16ec6d360c69b6fb6b83e4f885732f020
-ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
+ms.openlocfilehash: 16f459d789715c44f724eacb4c8fc01397d90b3f
+ms.sourcegitcommit: 29dc76ef3215a68a4a7a0c0eeae83d22caadec4c
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340568"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68501678"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
@@ -64,9 +64,9 @@ Entrambi i client, quando sono installati, visualizzano **Azure Information Prot
 
 Usare il numero di **versione** visualizzato per identificare il client:
 
-- Una versione **1**, ad esempio **1.48.204.0**, identifica il client di Azure Information Protection (classico).
+- Una versione **1**, ad esempio **1.53.10.0**, identifica il client di Azure Information Protection (classico).
 
-- Una versione **2**, ad esempio, **2.0.778.0**, identifica il Azure Information Protection client unificato di assegnazione di etichette.
+- Una versione **2**, ad esempio, **2.2.14.0**, identifica il Azure Information Protection client unificato di assegnazione di etichette.
 
 ## <a name="when-is-the-right-time-to-migrate-my-labels-to-office-365"></a>Qual è il momento giusto per la migrazione delle etichette in Office 365?
 
@@ -80,9 +80,9 @@ Dopo aver eseguito la migrazione delle etichette nel portale di Azure:
 
 - Se [i client e i servizi](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)sono stati unificati, passare a uno dei centri di amministrazione (Office 365 Centro sicurezza e conformità, Microsoft 365 Centro sicurezza o Microsoft 365 Compliance Center) per pubblicare queste etichette e per configurarne i criteri. Impostazioni. Per le modifiche delle etichette, da ora in poi usare uno di questi centri di amministrazione. I client di etichettatura unificata scaricano le etichette e le impostazioni dei criteri da uno di questi centri di amministrazione.
 
-- In caso di [client Azure Information Protection](./rms-client/aip-client.md), continuare a usare il portale di Azure per modificare le etichette e le impostazioni dei criteri. I client Azure Information Protection continuano a scaricare le etichette e le impostazioni dei criteri da Azure.
+- Se si dispone del [client di Azure Information Protection (classico)](./rms-client/aip-client.md), continuare a usare il portale di Azure per modificare le etichette e le impostazioni dei criteri. Il client classico continua a scaricare le etichette e le impostazioni dei criteri da Azure.
 
-- Se si usano sia [client di etichettatura unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) sia [client di Azure Information Protection](./rms-client/aip-client.md), è possibile usare i centri di amministrazione o il portale di Azure per apportare modifiche alle etichette. Perché i client di Azure Information Protection acquisiscano le modifiche delle etichette apportate nei centri di amministrazione, è tuttavia necessario tornare al portale di Azure: Usare l'opzione **Pubblica** nel pannello **Azure Information Protection - Etichettatura unificata** nel portale di Azure. 
+- Se sono presenti sia [client con etichetta unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) che client [classici](./rms-client/aip-client.md), è possibile usare il centro di amministrazione o il portale di Azure per apportare modifiche alle etichette. Tuttavia, affinché i client classici scelgano le modifiche apportate alle etichette nei centri di amministrazione, è necessario tornare al portale di Azure: Usare l'opzione **Pubblica** nel pannello **Azure Information Protection - Etichettatura unificata** nel portale di Azure. 
 
 Continuare a usare il portale di Azure per il [reporting centralizzato](reports-aip.md) e lo [scanner](deploy-aip-scanner.md).
 
@@ -104,9 +104,9 @@ Per altre domande sulle licenze, cercare le risposte nella sezione [Domande freq
 
 ## <a name="is-the-azure-information-protection-client-only-for-subscriptions-that-include-classification-and-labeling"></a>Il client Azure Information Protection è disponibile solo per le sottoscrizioni che includono la classificazione e l'assegnazione di etichette?
 
-No. Anche se quasi tutte le presentazioni e demo del client Azure Information Protection illustrano le funzionalità di classificazione e assegnazione di etichette, questo client può essere usato anche con le sottoscrizioni che includono solo il servizio Azure Rights Management per la protezione dei dati.
+No. Il client Azure Information Protection (classico) può essere usato anche con le sottoscrizioni che includono solo il servizio Azure Rights Management per proteggere i dati.
 
-Quando viene installato il client Azure Information Protection per Windows e non sono configurati criteri per Azure Information Protection, il client funziona automaticamente in [modalità di sola protezione](./rms-client/client-protection-only-mode.md). In questa modalità gli utenti possono applicare facilmente modelli di Rights Management e autorizzazioni personalizzate. Se successivamente si acquista una sottoscrizione che include la classificazione e l'assegnazione di etichette, il client passa automaticamente alla modalità standard durante il download dei criteri di Azure Information Protection.
+Quando il client classico è installato e non dispone di un criterio di Azure Information Protection, questo client funziona automaticamente in [modalità di sola protezione](./rms-client/client-protection-only-mode.md). In questa modalità gli utenti possono applicare facilmente modelli di Rights Management e autorizzazioni personalizzate. Se successivamente si acquista una sottoscrizione che include la classificazione e l'assegnazione di etichette, il client passa automaticamente alla modalità standard durante il download dei criteri di Azure Information Protection.
 
 ## <a name="do-you-need-to-be-a-global-admin-to-configure-azure-information-protection-or-can-i-delegate-to-other-administrators"></a>È necessario essere un amministratore globale per configurare Azure Information Protection oppure tale configurazione può essere delegata ad altri amministratori?
 
@@ -201,7 +201,7 @@ Le differenze principali tra queste due soluzioni sono le seguenti:
 |Modalità operativa: <br /><br />- Tempo reale|Modalità operativa: <br /><br />- Ricerca per indicizzazione sistematica degli archivi dati, con esecuzione una tantum o ripetuta del ciclo|
 |Supporto per i tipi di file: <br /><br />- Per impostazione predefinita, sono protetti tutti i tipi di file <br /><br />- Specifici tipi di file possono essere esclusi dalla protezione modificando il Registro di sistema|Supporto per i tipi di file: <br /><br />- I tipi di file Office e i documenti PDF sono protetti per impostazione predefinita <br /><br />- Altri tipi di file possono essere inclusi nella protezione modificando il Registro di sistema|
 
-Esiste attualmente una differenza nell'impostazione del [proprietario di Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) per i file protetti in una cartella locale o in una condivisione di rete. Per impostazione predefinita, per entrambe le soluzioni, il proprietario di Rights Management viene impostato sull'account che protegge il file, ma è possibile sostituire questa impostazione:
+Esiste una differenza nell'impostazione del [proprietario Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) per i file protetti in una cartella locale o in una condivisione di rete. Per impostazione predefinita, per entrambe le soluzioni, il proprietario di Rights Management viene impostato sull'account che protegge il file, ma è possibile sostituire questa impostazione:
 
 - Per Infrastruttura di classificazione file di Windows Server: è possibile impostare il proprietario di Rights Management su un singolo account per tutti i file o impostare in modo dinamico il proprietario di Rights Management per ogni file. Per impostare in modo dinamico il proprietario di Rights Management, usare il parametro **-OwnerMail [posta elettronica proprietario file di origine]** e relativo valore. Questa configurazione recupera l'indirizzo di posta elettronica dell'utente da Active Directory usando il nome dell'account utente specificato nella proprietà del proprietario del file.
 
@@ -211,9 +211,7 @@ Quando lo scanner protegge i file inclusi in siti e librerie di SharePoint, il p
 
 ## <a name="ive-heard-a-new-release-is-going-to-be-available-soon-for-azure-information-protectionwhen-will-it-be-released"></a>Secondo alcune voci, sarà presto disponibile una nuova versione di Azure Information Protection. Quando verrà rilasciata?
 
-La documentazione tecnica non contiene informazioni sulle versioni future. Per questo tipo di informazioni e per gli annunci di nuove versioni, visitare il [blog Enterprise Mobility + Security](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity?product=azure-information-protection,azure-rights-management-services).
-
-Se si è interessati a una versione di Office, assicurarsi di controllare anche il [blog di Office 365](https://techcommunity.microsoft.com/t5/Office-365-Blog/bg-p/Office365Blog) e il [blog per le app di Office](https://techcommunity.microsoft.com/t5/Office-Apps-Blog/bg-p/OfficeAppsBlog).
+La documentazione tecnica non contiene informazioni sulle versioni future. Per questo tipo di informazioni, usare la [Roadmap di Microsoft 365](https://www.microsoft.com/microsoft-365/roadmap?&filters=Azure%20Information%20Protection%2CO365%20Information%20Protection#owRoadmapMainContent), vedere il [Blog Enterprise Mobility + Security](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity?product=azure-information-protection,azure-rights-management-services).
 
 ## <a name="is-azure-information-protection-suitable-for-my-country"></a>Azure Information Protection è disponibile in tutti i paesi?
 
