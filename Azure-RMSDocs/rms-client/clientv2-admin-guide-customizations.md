@@ -3,19 +3,19 @@ title: Configurazioni personalizzate-Azure Information Protection client per l'a
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/24/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5eb3a8a4-3392-4a50-a2d2-e112c9e72a78
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: 77fac8df4194e70e05ec202359a18dcfd5b959b7
-ms.sourcegitcommit: 2ad5cda4816c76c5fd3655ee45b64475e42cab32
+ms.openlocfilehash: 60debc8e04691dcb977da7d9a8c29bba7ae659ce
+ms.sourcegitcommit: 3933f968a952fb1d7c73c0f6a4f42a2a429b863f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68483097"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68684650"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -77,7 +77,7 @@ Esempio 4: Rimuovere un'impostazione avanzata dei criteri di etichetta specifica
 
 Specificare il nome dei criteri di etichetta per il parametro *Identity* di PowerShell è semplice perché nel centro di amministrazione è presente un solo nome di criteri in cui si gestiscono i criteri di etichetta. Per le etichette, tuttavia, nel centro di amministrazione vengono visualizzati sia un **nome** che un **nome visualizzato** . In alcuni casi, il valore di entrambi gli elementi sarà lo stesso, ma possono essere diversi:
 
-- **Nome** è il nome originale dell'etichetta ed è univoco in tutte le etichette. Se si modifica il nome dell'etichetta dopo che è stata creata, questo valore rimane invariato.
+- **Nome** è il nome originale dell'etichetta ed è univoco in tutte le etichette. Se si modifica il nome dell'etichetta dopo che è stata creata, questo valore rimane invariato. Per le etichette di cui è stata eseguita la migrazione da Azure Information Protection, è possibile che venga visualizzato l'ID etichetta dell'etichetta dall'portale di Azure.
 
 - **Nome visualizzato** è il nome dell'etichetta visualizzata dagli utenti e non è necessario che sia univoco in tutte le etichette. Ad esempio, gli utenti visualizzano una sottoetichetta **tutti i dipendenti** per l'etichetta **riservata** e un'altra sottoetichetta **tutti i dipendenti** per l'etichetta riservatezza **elevata** . Queste etichette secondarie visualizzano entrambi lo stesso nome, ma non hanno la stessa etichetta e hanno impostazioni diverse.
 
