@@ -4,16 +4,16 @@ description: Configurare un'etichetta che protegge un messaggio di posta elettro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 05/20/2019
+ms.date: 07/23/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: 1485020b6edd47aae75486bf3a8215cf5cb14a1b
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: a4521aa502fd178843502a5341a2ee27b07438d3
+ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "65934990"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68446894"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Guida introduttiva: configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate
 
@@ -79,7 +79,7 @@ Per un elenco completo dei prerequisiti per l'uso di Azure Information Protectio
 
 2. Dall'opzione di menu **Classificazioni** > **Etichette**: nel pannello **Azure Information Protection - Etichette** selezionare l'etichetta che si vuole configurare per l'applicazione della protezione. 
 
-3. Nel pannello **Etichetta** individuare **Configurare il modello RMS per la protezione di documenti e messaggi di posta elettronica contenenti questa etichetta**. Selezionare **Proteggi** e il pannello **Protezione** si apre automaticamente se in precedenza è stata selezionata una delle altre opzioni. 
+3. Nel pannello **Etichetta** individuare **Configurare il modello RMS per la protezione di documenti e messaggi di posta elettronica contenenti questa etichetta**. Selezionare **Proteggi** e il pannello **Protezione** si apre automaticamente se in precedenza è stato selezionato **Non configurato** o **Rimuovi protezione**.
     
     Se il pannello **Protezione** non si apre automaticamente, selezionare **Protezione**:
     
