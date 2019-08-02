@@ -3,7 +3,7 @@ title: Configurare i criteri di Azure Information Protection - AIP
 description: Per configurare le funzioni di classificazione, aggiunta di etichette e protezione, è necessario configurare i criteri di Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-ms.date: 07/19/2019
+ms.date: 08/01/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: ba0e8119-886c-4830-bd26-f98fb14b2933
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: a6e53aba545176b9224793cf33da1770dadf5437
-ms.sourcegitcommit: eff3bfbf95588e8876d9d6cbb95f80d304142668
+ms.openlocfilehash: 45b1d7dcefcdf36921b2dcbb34f1da6ead57c231
+ms.sourcegitcommit: 66e0193e053f19edaf80b212aa2308993b3bb9e5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68340545"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68730365"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -58,7 +58,7 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
 
 - Usare il collegamento seguente: https://portal.azure.com
 
-- Usare un account che dispone di uno dei seguenti [ruoli di amministratore](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
+- Usare un account Azure AD con uno dei seguenti ruoli di [amministratore](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
     - **Amministratore Azure Information Protection**
     
@@ -74,7 +74,8 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
     
     > [!NOTE] 
     > Se è stata eseguita la migrazione del tenant all'archivio di etichette unificato, l'amministratore Azure Information Protection (denominato in precedenza "Information Protection amministratore") non è più supportato. [Altre informazioni](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
-
+    
+    Gli account Microsoft non possono gestire Azure Information Protection.
 
 ## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Per accedere al pannello Azure Information Protection per la prima volta
 
