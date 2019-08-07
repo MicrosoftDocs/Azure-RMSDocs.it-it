@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed3e9a3d-0f7c-4abc-9d0b-aa3b18403d39
+ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: e9bb701dcf48aaa514cdf71a6dc6c10c671f618c
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.custom: admin
+ms.openlocfilehash: f24931cbc3a3f91928a6d7190b5e028e6b474202
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535062"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68789582"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Impostazioni del Registro di sistema per il connettore Rights Management
 
@@ -29,7 +31,7 @@ Istruzioni per l'uso delle impostazioni:
 
 -   *\<YourTenantURL>* corrisponde all'URL del servizio Azure Rights Management per il tenant di Azure Information Protection. Per individuare questo valore:
 
-    1.  Eseguire la [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) cmdlet per il servizio Azure Rights Management. Se già stato installato il modulo AIPService, vedere [installazione del modulo AIPService PowerShell](install-powershell.md).
+    1.  Eseguire il cmdlet [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) per il servizio Rights Management di Azure. Se il modulo AIPService non è ancora stato installato, vedere [installazione del modulo PowerShell di AIPService](install-powershell.md).
 
     2.  Nell'output identificare il valore **LicensingIntranetDistributionPointUrl** .
 
@@ -54,7 +56,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Impostazione predefinita
+**Value:** Predefinito
 
 **Dati:** https:// *\<YourTenantURL>* /_wmcs/certification
 
@@ -64,7 +66,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Impostazione predefinita
+**Value:** Predefinito
 
 **Data:** https:// *\<YourTenantURL>* /_wmcs/Licensing
 
@@ -105,7 +107,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Impostazione predefinita
+**Value:** Predefinito
 
 **Dati:** https:// *<\YourTenantURL>* /_wmcs/certification
 
@@ -115,7 +117,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Impostazione predefinita
+**Value:** Predefinito
 
 **Dati:** https:// *<\YourTenantURL>* /_wmcs/Licensing
 
@@ -169,7 +171,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Impostazione predefinita
+**Value:** Predefinito
 
 **Dati:** Uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di SharePoint al connettore RMS:
 
@@ -183,7 +185,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Impostazione predefinita
+**Value:** Predefinito
 
 
 **Dati:** Uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di SharePoint al connettore RMS:
@@ -201,7 +203,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Impostazione predefinita
+**Value:** Predefinito
 
 **Dati:** http:// *<\ConnectorFQDN>* /_wmcs/licensing
 
@@ -211,7 +213,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Impostazione predefinita
+**Value:** Predefinito
 
 **Dati:** http:// *<\ConnectorFQDN>* /_wmcs/certification
 

@@ -8,12 +8,14 @@ ms.date: 07/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.openlocfilehash: d5cdc73e79891cc1756808d67e16f45796550de5
-ms.sourcegitcommit: ae48f7cea01b4d615052659072305abb8698a7f7
+ms.subservice: aiplabels
+ms.custom: admin
+ms.openlocfilehash: 00d9ad80ec87f62743eab116edac64f55ebaf4e9
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375397"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68789123"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Criteri predefiniti di Azure Information Protection
 
@@ -105,7 +107,7 @@ Le autorizzazioni di protezione corrispondono a quelle del [modello predefinito]
 
 Alcune impostazioni sono state aggiunte dopo il 31 luglio 2017.
 
-|Impostazione|Valore|
+|Impostazione|Value|
 |-------------------------------|---------------------------|
 |Selezionare l'etichetta predefinita|Nessuna|
 |Invia i dati di controllo alle analisi di Azure Information Protection|Off|

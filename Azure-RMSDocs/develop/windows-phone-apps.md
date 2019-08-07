@@ -13,12 +13,13 @@ ms.assetid: e25a446e-b977-4736-9c65-7711171fb0e1
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 42ef57b73dfbbd49620e406a296df400ea3d99cf
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 08981ab13862eed815609eaad4c6733ec205e0a1
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60181035"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792083"
 ---
 # <a name="windows-phone-setup"></a>Installazione per Windows Phone
 
@@ -51,7 +52,7 @@ Esaminare le informazioni contenute nella guida relativa allo [sviluppo per Wind
 
 -   Aprire *Visual Studio*.
 -   Fare clic su **File**. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.
--   Nella finestra di dialogo **Nuovo progetto** selezionare **Visual C\#**, quindi **App vuota (Windows Phone)** e fare clic su **OK**.
+-   Nella finestra di dialogo **Nuovo progetto** selezionare **Visual C\#** , quindi **App vuota (Windows Phone)** e fare clic su **OK**.
 
     ![Creare un nuovo progetto](../media/wpsetup-newproj.png)
 

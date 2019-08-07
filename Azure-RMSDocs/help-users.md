@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 58f9a6ff-4121-4c8c-9865-1bb290604ad2
+ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 16f9a0713be5c6dc1110ca5841b48e3ef6d8450e
-ms.sourcegitcommit: 47182b6a65bfae3561cb34be3d6a6852a1edccb9
+ms.custom: admin
+ms.openlocfilehash: 484f311927033d5279404fb706ac380fe9202b09
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68446736"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68788376"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Consentire agli utenti di proteggere i file mediante il servizio Azure Rights Management
 

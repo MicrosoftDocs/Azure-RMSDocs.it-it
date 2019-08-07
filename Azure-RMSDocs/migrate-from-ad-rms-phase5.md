@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d51e7bdd-2e5c-4304-98cc-cf2e7858557d
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bf2675aa43e2c15761fdd46b94e3bb19253cadc3
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: da6ee07bf47e4b392346e719a2c62f00133f498c
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67522078"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793925"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Fase 5 della migrazione: attività post-migrazione
 
@@ -48,19 +50,19 @@ Dopo aver effettuato il deprovisioning dei server AD RMS, è anche possibile esa
 >[!IMPORTANT]
 > Alla fine della migrazione, il cluster AD RMS non può essere usato con Azure Information Protection e con l'opzione HYOK (Hold Your Own Key). Se si decide di usare l'opzione HYOK per un'etichetta di Azure Information Protection, a causa dei reindirizzamenti ora disponibili, il cluster AD RMS in uso deve avere vari URL di gestione licenze per quelli nei cluster migrati.
 
-### <a name="addition-configuration-for-computers-that-run-office-2010"></a>Configurazione di aggiunta per i computer che eseguono Office 2010
+### <a name="addition-configuration-for-computers-that-run-office-2010"></a>Configurazione aggiuntiva per computer che eseguono Office 2010
 
-Se la migrazione i client Esegui Office 2010, gli utenti potrebbero verificarsi ritardi nell'apertura di contenuti protetti dopo vengono effettuato il deprovisioning dei server AD RMS. In alternativa, gli utenti potrebbero essere visualizzati messaggi che non ha le credenziali per aprire il contenuto protetto. Per risolvere questi problemi, creare un reindirizzamento di rete per questi computer, che reindirizza il FQDN di URL di AD RMS all'indirizzo IP locale del computer (127.0.0.1). È possibile farlo configurando il file hosts locale in ogni computer o tramite DNS.
+Se i client migrati eseguono Office 2010, gli utenti potrebbero riscontrare ritardi nell'apertura di contenuti protetti dopo il deprovisioning dei server AD RMS. In alternativa, gli utenti potrebbero visualizzare messaggi che non dispongono di credenziali per aprire il contenuto protetto. Per risolvere questi problemi, creare un reindirizzamento di rete per questi computer, che reindirizza il nome FQDN dell'URL AD RMS all'indirizzo IP locale del computer (127.0.0.1). È possibile eseguire questa operazione configurando il file hosts locale in ogni computer o usando DNS.
 
-Reindirizzamento usando il file hosts locale:
+Reindirizzamento tramite il file hosts locale:
 
-- Aggiungere la riga seguente nel file hosts locale, sostituendo `<AD RMS URL FQDN>` con il valore per il cluster AD RMS, senza prefissi o pagine web:
+- Aggiungere la riga seguente nel file hosts locale, sostituendo `<AD RMS URL FQDN>` con il valore per il cluster di ad RMS, senza prefissi o pagine Web:
     
         127.0.0.1 <AD RMS URL FQDN>
 
 Reindirizzamento tramite DNS:
     
-- Creare un nuovo host (record) per il nome FQDN URL di AD RMS, che dispone dell'indirizzo IP 127.0.0.1.
+- Creare un nuovo record host (A) per il nome FQDN dell'URL AD RMS, che ha l'indirizzo IP 127.0.0.1.
 
 ## <a name="step-11-complete-client-migration-tasks"></a>Passaggio 11. Completare le attività di migrazione dei client
 
@@ -114,9 +116,9 @@ Infine, se si usa Office 2010 ed è stata abilitata l'attività **AD RMS Rights 
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Passaggio 12. Reimpostare la chiave del tenant di Azure Information Protection
 
-Questo passaggio è obbligatorio al termine se la distribuzione di AD RMS è stata usata la modalità crittografia 1 RMS perché questa modalità Usa una chiave a 1024 bit e SHA-1 della migrazione. Questa configurazione viene considerata per offrire un livello di protezione inadeguato. Microsoft non approva né fornisce dichiarazioni l'uso di lunghezze di chiave inferiore, ad esempio le chiavi RSA di 1024 bit e l'uso dei protocolli che offrono livelli non adeguati di protezione, ad esempio SHA-1 associata.
+Questo passaggio è obbligatorio al termine della migrazione se la distribuzione di AD RMS usa la modalità di crittografia 1 di RMS perché questa modalità usa una chiave a 1024 bit e SHA-1. Questa configurazione viene considerata per offrire un livello di protezione inadeguato. Microsoft non approva l'uso di lunghezze di chiave inferiori, ad esempio chiavi RSA a 1024 bit e l'utilizzo associato di protocolli che offrono livelli di protezione inadeguati, ad esempio SHA-1.
 
-La reimpostazione della chiave risultati protezione che usa RMS modalità crittografia 2, che comporta una chiave di 2048 bit e SHA-256. 
+La reimpostazione della reimpostazione dei risultati comporta la protezione che usa la modalità crittografia 2 di RMS, che restituisce una chiave a 2048 bit e SHA-256. 
 
 Anche se per la distribuzione di AD RMS è stata usata la Modalità crittografia 2, è comunque consigliabile eseguire questo passaggio poiché una nuova chiave consente di proteggere il tenant da possibili violazioni della protezione della chiave di AD RMS.
 
@@ -126,11 +128,11 @@ Il passaggio da una chiave all'altra non avviene immediatamente, ma richiede alc
 
 Per reimpostare la chiave del tenant di Azure Information Protection:
 
-- **Se la chiave del tenant è gestita da Microsoft**: Eseguire il cmdlet di PowerShell [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) e specificare l'identificatore di chiave per la chiave creata automaticamente per il tenant. È possibile identificare il valore da specificare eseguendo il [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) cmdlet. La chiave creata automaticamente per il tenant porta la data di creazione meno recente, in modo da poterla identificare usando il comando seguente:
+- **Se la chiave del tenant è gestita da Microsoft**: Eseguire il cmdlet di PowerShell [set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) e specificare l'identificatore di chiave per la chiave creata automaticamente per il tenant. È possibile identificare il valore da specificare eseguendo il cmdlet [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) . La chiave creata automaticamente per il tenant porta la data di creazione meno recente, in modo da poterla identificare usando il comando seguente:
     
         (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- **Se la chiave del tenant è gestita dall'utente (BYOK)** : In Azure Key Vault, ripetere il processo di creazione della chiave per il tenant di Azure Information Protection e quindi eseguire la [utilizzare AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) cmdlet per specificare l'URI della nuova chiave. 
+- **Se la chiave del tenant è gestita dall'utente (BYOK)** : In Azure Key Vault ripetere il processo di creazione della chiave per il tenant di Azure Information Protection, quindi eseguire di nuovo il cmdlet [use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) per specificare l'URI per la nuova chiave. 
 
 Per altre informazioni sulla gestione della chiave del tenant di Azure Information Protection, vedere [Operazioni relative alla chiave del tenant di Azure Information Protection](./operations-tenant-key.md).
 

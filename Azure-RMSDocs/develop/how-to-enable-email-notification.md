@@ -13,12 +13,13 @@ ms.assetid: 5FB975EE-E4E5-4089-B8E1-CAFD5B9B34EC
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 029aa3075424d2ae91c4521cff7a71bf6e8cc939
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 4427eefb4dec3c2d5d4f8f07b3ef2c68ed1fd9d7
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178412"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68788503"
 ---
 # <a name="how-to-enable-email-notification"></a>Procedura: Abilitare la notifica tramite posta elettronica
 

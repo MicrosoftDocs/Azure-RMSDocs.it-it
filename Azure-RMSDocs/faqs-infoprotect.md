@@ -4,19 +4,20 @@ description: Di seguito sono riportate alcune possibili domande sulle funzionali
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
-ms.openlocfilehash: db5b1b06f198db0795876e71749b1d220c7c2694
-ms.sourcegitcommit: 599306e271392afa4bc05c87982549785ce1860e
+ms.custom: admin
+ms.openlocfilehash: 4a8df46df14a4c06196d204865f7a99ce5fa5821
+ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67305703"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68808052"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Domande frequenti sulla classificazione e l'assegnazione di etichette in Azure Information Protection
 
@@ -30,7 +31,7 @@ L'esercitazione [Modificare i criteri e creare una nuova etichetta](infoprotect-
 
 Per sapere quando saranno disponibili altre funzionalità e nuove caratteristiche per la classificazione, seguire gli annunci nel [blog di Enterprise Mobility + Security](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection) e nel [sito Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all). Nella versione corrente sono presenti alcune limitazioni, incluse le seguenti:
 
-- L'assegnazione di etichette non funziona nelle app Web di Office (Office Online).
+- Nessuna funzionalità di assegnazione di etichette nelle app Web di Office (Office per il Web).
 
 - Le funzionalità di classificazione e assegnazione di etichette non sono integrate con Exchange Online o SharePoint Online.
 
@@ -43,15 +44,15 @@ Per sapere quando saranno disponibili altre funzionalità e nuove caratteristich
 
 Per richiedere nuove funzionalità e votare per le richieste, visitare il [sito User Voice](https://msip.uservoice.com/) per Azure Information Protection.
 
-## <a name="which-client-do-i-install-for-testing-new-functionality"></a>Il client che si installano per la nuova funzionalità testing?
+## <a name="which-client-do-i-install-for-testing-new-functionality"></a>Quale client si installa per testare nuove funzionalità?
 
-Attualmente, esistono due client per Windows: 
+Attualmente sono disponibili due client per Windows: 
 
-- Il **unificata di Azure Information Protection client l'assegnazione di etichette** che scarica le etichette e le impostazioni dei criteri da una delle aree di amministrazione seguenti: Office 365 Centro sicurezza e conformità, il Centro sicurezza di Microsoft 365, centro conformità di Microsoft 365. Questo client è ora in generale la disponibilità e ha una versione di anteprima per poter testare le funzionalità aggiuntive per una versione futura.
+- Il **Azure Information Protection client di etichetta unificata** che Scarica le etichette e le impostazioni dei criteri da uno dei seguenti centri di amministrazione: Office 365 Centro sicurezza e conformità, Centro sicurezza Microsoft 365, Microsoft 365 conformità al centro. Questo client è ora disponibile a livello generale e offre una versione di anteprima per testare la funzionalità aggiuntiva per una versione futura.
 
-- Il **client Azure Information Protection (versione classica)** che scarica le etichette e le impostazioni dei criteri dal portale di Azure. Questo client si basa sulle versioni precedenti di disponibilità generale del client.
+- Il **client Azure Information Protection (classico)** che Scarica le etichette e le impostazioni dei criteri dall'portale di Azure. Questo client si basa sulle versioni di disponibilità generale precedenti del client.
 
-È consigliabile che provare con il client di assegnazione di etichette unificato se set di funzionalità correnti e le funzionalità di soddisfare i requisiti aziendali. In caso contrario, o se è stato configurato le etichette nel portale di Azure che non si è ancora [migrate nell'archivio di assegnazione di etichette unificata](configure-policy-migrate-labels.md), usare il client di classico.
+Si consiglia di eseguire il test con il client di etichettatura unificata se il set di funzionalità e le funzionalità correnti soddisfano i requisiti aziendali. In caso contrario, o se sono state configurate etichette nel portale di Azure di cui non è ancora stata [eseguita la migrazione nell'archivio Unified Labeling](configure-policy-migrate-labels.md), usare il client classico.
 
 Per altre informazioni, inclusa una tabella per il confronto di funzioni e funzionalità, vedere [Scegliere il client Azure Information Protection da usare](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
 

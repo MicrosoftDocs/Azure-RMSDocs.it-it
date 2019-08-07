@@ -13,12 +13,13 @@ ms.assetid: E388B16C-ECDA-4696-A040-D457D3C96766
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 2001f779a788e41acbb9319a0c329dfb4705176a
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 0f94ac02b0e9d5faa42c403274d44819dad46fbd
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60176874"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790749"
 ---
 # <a name="understanding-usage-restrictions"></a>Informazioni sulle restrizioni di utilizzo
 
@@ -54,7 +55,7 @@ Ogni diritto utente, elencato nella colonna Diritto di AD RMS, presenta una desc
 
 | Diritto di AD RMS/descrizione | Come imporre |
 |--------------------------|----------------|
-|**IPC_GENERIC_ALL** <br><br> Concede tutti i diritti all'utente. <br><br> **Punti di imposizione comuni**: Nessuno |Questo diritto viene usato dal sistema e, in genere, non deve essere selezionato direttamente. <br><br> [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx) usa questo diritto per determinare se concedere all'utente altri diritti come in questo esempio.<br><br> `/* fAccessGranted is set to TRUE if either the IPC_GENERIC_WRITE or the IPC_GENERIC_ALL right is granted */` <br><br> `IpcAccessCheck(hKey, IPC_GENERIC_WRITE, &fAccessGranted);`|
+|**IPC_GENERIC_ALL** <br><br> Concede tutti i diritti all'utente. <br><br> **Punti di imposizione comuni**: Nessuna |Questo diritto viene usato dal sistema e, in genere, non deve essere selezionato direttamente. <br><br> [IpcAccessCheck](https://msdn.microsoft.com/library/hh535253.aspx) usa questo diritto per determinare se concedere all'utente altri diritti come in questo esempio.<br><br> `/* fAccessGranted is set to TRUE if either the IPC_GENERIC_WRITE or the IPC_GENERIC_ALL right is granted */` <br><br> `IpcAccessCheck(hKey, IPC_GENERIC_WRITE, &fAccessGranted);`|
 |**IPC_GENERIC_READ** <br><br> Il diritto di leggere il contenuto del documento. <br><br> **Punti di imposizione comuni**: Caricamento del documento|Non caricare o presentare il contenuto del documento|
 |**IPC_GENERIC_WRITE** <br><br> Il diritto di modificare il contenuto del documento. <br><br> **Punti di imposizione comuni**: Modifica dei documenti|Verificare che tutti i controlli dell'interfaccia utente che possono essere usati per modificare il contenuto del documento non siano modificabili. <br><br> Disabilitare le voci del menu che attivano le modifiche al documento. Ad esempio, **Modifica** > **Taglia**, **Modifica** > **Incolla** e **Inserisci**. <br><br>Disabilitare qualsiasi voce del menu di scelta rapida che attiva le modifiche sul documento.|
 |Nessun diritto di AD RMS <br><br> Nessuna descrizione <br><br> **Punti di imposizione comuni**: Salva | Disabilitare il menu **File** > **Salva**. <br><br> **Nota** Questo diritto non controlla **File** > **Salva con nome** poiché tale diritto non rappresenta una modifica al documento originale.<br><br> Disabilitare qualsiasi tasto di scelta rapida che può essere usato per avviare un salvataggio (ad esempio Ctrl+S).<br><br> **Suggerimento** Una procedura consigliata consiste nell'aggiornare il codice **File** > **Salva** principale in modo che non venga eseguito se l'utente non dispone del diritto specifico. Questa funzione agisce come rete di protezione se non è disponibile alcun meccanismo di esperienza utente che può essere usato per avviare un salvataggio. |

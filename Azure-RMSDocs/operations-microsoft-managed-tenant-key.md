@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 3c48cda6-e004-4bbd-adcf-589815c56c55
+ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bd7701e9b90f2ebd681dad4516c17d74c000f611
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 5d35fc59ebfa051f3f7644c05527ed75bfe54be7
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521924"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790497"
 ---
-# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gestita da Microsoft: operazioni del ciclo di vita della chiave del tenant
+# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gestito da Microsoft: operazioni del ciclo di vita della chiave del tenant
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -46,7 +48,7 @@ Per reimpostare una chiave, è possibile selezionare una chiave diversa gestita 
 
 Se si esegue la migrazione da Active Directory Rights Management Services (AD RMS) e si sceglie la topologia di chiave gestita da Microsoft per Azure Information Protection, si dispone di più di una chiave gestita da Microsoft. In questo scenario, l'utente ha almeno due chiavi del tenant gestite da Microsoft. Una o più chiavi sono quelle importate da AD RMS. Sarà disponibile anche la chiave predefinita creata automaticamente per il tenant di Azure Information Protection dell'utente.
 
-Per selezionare una chiave diversa come chiave attiva del tenant per Azure Information Protection, usare il [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) cmdlet dal modulo AIPService. Per identificare la chiave da usare, usare il [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) cmdlet. È possibile identificare la chiave predefinita creata automaticamente per il tenant di Azure Information Protection eseguendo il comando seguente:
+Per selezionare una chiave diversa come chiave del tenant attiva per Azure Information Protection, usare il cmdlet [set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) del modulo AIPService. Per facilitare l'identificazione della chiave da usare, usare il cmdlet [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) . È possibile identificare la chiave predefinita creata automaticamente per il tenant di Azure Information Protection eseguendo il comando seguente:
 
     (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
@@ -62,25 +64,25 @@ Per esportare la configurazione di Azure Information Protection e la chiave del 
 
 - [Contattare il supporto tecnico Microsoft](information-support.md#to-contact-microsoft-support) per aprire un **caso di supporto di Azure Information Protection con una richiesta di esportazione della chiave di Azure Information Protection**. È necessario dimostrare di essere un amministratore del tenant di Azure Information Protection. Si tenga presente che la conferma di questo processo richiede diversi giorni. Il servizio è soggetto ai costi di supporto standard. L'esportazione della chiave del tenant non è un servizio di assistenza gratuito.
 
-### <a name="step-2-wait-for-verification"></a>Passaggio 2: Attendere la verifica
+### <a name="step-2-wait-for-verification"></a>Passaggio 2: Attendi verifica
 
 - Microsoft verifica che la richiesta di rilasciare la chiave del tenant di Azure Information Protection sia legittima. L'operazione può richiedere fino a tre settimane.
 
-### <a name="step-3-receive-key-instructions-from-css"></a>Passaggio 3: Ricevere istruzioni sulla chiave da CSS
+### <a name="step-3-receive-key-instructions-from-css"></a>Passaggio 3: Ricevi istruzioni chiave da CSS
 
 - Il Servizio Supporto Tecnico Clienti Microsoft invia la configurazione di Azure Information Protection e la chiave del tenant crittografata in un file protetto da password. L'estensione del file è **tpd**. A tale scopo, il Servizio Supporto Tecnico Clienti Microsoft invia all'utente che ha avviato l'esportazione un messaggio di posta elettronica in cui è disponibile uno strumento da eseguire da un prompt dei comandi nel modo seguente:
 
     ```
     AadrmTpd.exe -createkey
     ```
-    In questo modo viene generata una coppia di chiavi RSA e le parti pubblica e privata vengono salvate come file nella cartella corrente. Ad esempio: **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** e **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**.
+    In questo modo viene generata una coppia di chiavi RSA e le parti pubblica e privata vengono salvate come file nella cartella corrente. Ad esempio:  **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** e **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**.
 
     Rispondere al messaggio di posta elettronica ricevuto da CSS allegando il file con il nome che inizia con **PublicKey**. A questo punto CSS invierà all'utente un file TDP con estensione .xml crittografato tramite la chiave RSA. Copiare questo file nella stessa cartella in cui è stato eseguito lo strumento AadrmTpd in origine ed eseguire nuovamente lo strumento, usando il file che inizia con **PrivateKey** e il file ricevuto da CSS. Ad esempio:
 
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
     ```
-    L'output di questo comando deve essere di due file: uno contiene la password di testo normale per il file TPD protetto da password e l'altro è il file TPD protetto da password. I file hanno un nuovo GUID, ad esempio:
+    L'output di questo comando deve essere costituito da due file: uno contiene la password di testo normale per il file TPD protetto da password e l'altro è il file TPD protetto da password. I file hanno un nuovo GUID, ad esempio:
      
   - Password-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
 
@@ -88,7 +90,7 @@ Per esportare la configurazione di Azure Information Protection e la chiave del 
 
     Eseguire il backup di questi file e archiviarli in modo sicuro per garantire che sia possibile decrittografare contenuto protetto tramite la chiave del tenant specifica. Se inoltre si esegue la migrazione ad AD RMS, è possibile importare il file con estensione tpd (il file che inizia con **ExportedTDP**) nel proprio server AD RMS.
 
-### <a name="step-4-ongoing-protect-your-tenant-key"></a>Passaggio 4: In corso: Proteggere la chiave del tenant
+### <a name="step-4-ongoing-protect-your-tenant-key"></a>Passaggio 4: In corso Proteggere la chiave del tenant
 
 Dopo aver ricevuto la chiave del tenant, tenerla in posizione sicura per evitare che utenti malintenzionati possano accedere e decrittografare tutti i documenti protetti dalla chiave.
 

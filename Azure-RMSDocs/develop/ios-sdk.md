@@ -13,12 +13,13 @@ ms.assetid: b31e5b72-e65e-450a-b1b8-d46e81e9fb34
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 392bfa5e76bd0e07212fd47042b514a243a652dd
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: c69e34cce0241a289d75593e4a8a9500f88be433
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178721"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791445"
 ---
 # <a name="ios-and-os-x-setup"></a>Installazione per iOS e OS X
 
@@ -73,7 +74,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabil
 
     ![Impostare il percorso](../media/ios-add-dependencies-01a.png)
 
--   Selezionare il pulsante di opzione **Create groups for any added folders** e deselezionare la casella di controllo **Copy items into destination group's folder (if needed)**.
+-   Selezionare il pulsante di opzione **Create groups for any added folders** e deselezionare la casella di controllo **Copy items into destination group's folder (if needed)** .
 
     In questo modo si mantiene il riferimento alla cartella di installazione dell’SDK, senza doverne creare una copia.
 
@@ -83,7 +84,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabil
 
     ![Aggiungere un'aggregazione di risorse](../media/iOS-add-resource-bundle-02a.png)
 
--   Come in precedenza per la copia del framework, selezionare il pulsante di opzione **Create groups for any added folders** e deselezionare la casella di controllo **Copy items into destination group’s folder (if needed)**.
+-   Come in precedenza per la copia del framework, selezionare il pulsante di opzione **Create groups for any added folders** e deselezionare la casella di controllo **Copy items into destination group’s folder (if needed)** .
 -   L'SDK si basa su altri framework, tra cui: **CoreData**, **MessageUI**, **SystemConfiguration**, **Libresolv** e **Security**. Per aggiungere questi framework, passare alla sezione **Linked Frameworks and Libraries** del riquadro **Summary** di destinazione ed espandere tale sezione per aggiungerli.
 
     Sono necessari i framework **UIKit** e **Foundation**, in genere presenti per impostazione predefinita.

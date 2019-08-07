@@ -8,18 +8,19 @@ ms.date: 07/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.custom: askipteam
+ms.custom: admin
 ms.assetid: a2b3e1a2-59a0-4191-bf4c-4485ae7a70a9
+ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 01188c40ee1a31d79b213e930696f3e65c3e4eeb
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.openlocfilehash: 8f2a685894f7745951d8944e096895061493ed4f
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535004"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68788179"
 ---
-# <a name="how-to-activate-rights-management-protection-from-the-microsoft-365-admin-center"></a>Come attivare la protezione di Rights Management dall'interfaccia di amministrazione di Microsoft 365
+# <a name="how-to-activate-rights-management-protection-from-the-microsoft-365-admin-center"></a>Come attivare la protezione Rights Management dall'interfaccia di amministrazione di Microsoft 365
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -45,5 +46,5 @@ In caso di domande sui requisiti per la sottoscrizione o se serve assistenza per
 Verranno quindi visualizzati il messaggio **Rights Management è attivato** e l'opzione di disattivazione.
 
 ## <a name="next-steps"></a>Passaggi successivi
-Riprendere la lettura [attivazione del servizio di protezione di Azure Information Protection](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
+Riprendere [la lettura attivando il servizio di protezione da Azure Information Protection](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment).
 

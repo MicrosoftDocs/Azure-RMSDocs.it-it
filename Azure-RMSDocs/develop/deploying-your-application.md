@@ -13,12 +13,13 @@ ms.assetid: 4B785564-6839-49ED-A243-E2A6DFF88B2E
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: 8f13fb5fd24717e431705e0516d710b2275bea45
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 2c8b3407f31819614605fb77fb86a86159a898fd
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179058"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68788533"
 ---
 # <a name="deploy-into-production"></a>Distribuire in ambiente di produzione
 

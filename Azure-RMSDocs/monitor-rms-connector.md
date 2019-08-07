@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8a1b3e54-f788-4f84-b9d7-5d5079e50b4e
+ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: aedcee5bef5050e01ab37d6c1ee4f2555d732bf4
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 54e0a7470681608bcd38b3a0211718de6059d6e4
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521980"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793910"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Monitorare il connettore di Azure Rights Management
 
@@ -173,7 +175,7 @@ Se di recente sono stati aggiunti nuovi account di server per l'uso del connetto
 
 La registrazione dei dati relativi all'utilizzo consente di identificare i casi in cui i messaggi di posta elettronica e i documenti vengono protetti e utilizzati. Quando il connettore RMS viene usato per proteggere e consumare il contenuto, il campo ID utente nei registri contiene il nome dell'entità servizio **Aadrm_S-1-7-0**. Questo nome viene creato automaticamente per il connettore RMS.
 
-Per altre informazioni sulla registrazione dell'utilizzo, vedere [la registrazione e analisi dell'utilizzo di protezione di Azure Information Protection](log-analyze-usage.md).
+Per ulteriori informazioni sulla registrazione dell'utilizzo, vedere [registrazione e analisi dell'utilizzo della protezione da Azure Information Protection](log-analyze-usage.md).
 
 Se occorre una registrazione più dettagliata per scopi di diagnosi, è possibile usare [DebugView](https://go.microsoft.com/fwlink/?LinkID=309277) da Windows Sysinternals. Abilitare la traccia per il connettore RMS modificando il file web.config per il sito predefinito in IIS:
 

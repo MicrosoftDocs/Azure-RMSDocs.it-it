@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 8c2064f0-dd71-4ca5-9040-1740ab8876fb
+ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5939869dd421899a4b929b262e8a18790debaf5c
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.custom: admin
+ms.openlocfilehash: fde0bd0b2a51a8cdef1848d2ffb6b69ff412fa78
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535076"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790245"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aggiornamento di modelli per utenti e servizi
 
@@ -48,21 +50,21 @@ Modificando il Registro di sistema nei computer che eseguono app di Office 365, 
 
 1.  Utilizzando un editor del Registro di sistema, creare e impostare uno dei seguenti valori del Registro di sistema:
     
-    - Per impostare una frequenza di aggiornamento in giorni (minimo di 1 giorno):  Creare un nuovo valore del Registro di sistema denominato **TemplateUpdateFrequency** e definire un valore intero per i dati, che specifica la frequenza in giorni per il download di tutte le modifiche a un modello scaricato. Usare le informazioni seguenti per individuare il percorso del Registro di sistema per creare questo nuovo valore del registro.
+    - Per impostare una frequenza di aggiornamento in giorni (minimo 1 giorno):  Creare un nuovo valore del Registro di sistema denominato **TemplateUpdateFrequency** e definire un valore intero per i dati, che specifica la frequenza in giorni per il download di tutte le modifiche a un modello scaricato. Usare le informazioni seguenti per individuare il percorso del Registro di sistema per creare questo nuovo valore del registro.
 
         **Percorso del Registro di sistema:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
         **Tipo:** REG_DWORD
 
-        **Valore:** TemplateUpdateFrequency
+        **Value:** TemplateUpdateFrequency
 
-    - Per impostare una frequenza di aggiornamento in secondi (almeno 1 secondo):  Creare un nuovo valore del Registro di sistema denominato **TemplateUpdateFrequencyInSeconds** e definire un valore intero per i dati, che specifica la frequenza in secondi per il download di tutte le modifiche a un modello scaricato. Usare le informazioni seguenti per individuare il percorso del Registro di sistema per creare questo nuovo valore del registro.
+    - Per impostare una frequenza di aggiornamento in secondi (minimo 1 secondo):  Creare un nuovo valore del Registro di sistema denominato **TemplateUpdateFrequencyInSeconds** e definire un valore intero per i dati, che specifica la frequenza in secondi per il download di tutte le modifiche a un modello scaricato. Usare le informazioni seguenti per individuare il percorso del Registro di sistema per creare questo nuovo valore del registro.
 
         **Percorso del Registro di sistema:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC
 
         **Tipo:** REG_DWORD
 
-        **Valore:** TemplateUpdateFrequencyInSeconds
+        **Value:** TemplateUpdateFrequencyInSeconds
 
     Assicurarsi di creare e impostare uno di questi valori del Registro di sistema, non entrambi. Se sono presenti entrambi, **TemplateUpdateFrequency** viene ignorato.
 
@@ -76,12 +78,12 @@ Modificando il Registro di sistema nei computer che eseguono app di Office 365, 
 
    **Tipo:** REG_SZ
 
-   **Valore:** LastUpdatedTime
+   **Value:** LastUpdatedTime
 
    > [!TIP]
    > Nel percorso del Registro di sistema, <*MicrosoftRMS_FQDN*> fa riferimento all’FQDN del servizio Microsoft RMS. Se si desidera verificare questo valore:
    > 
-   > Eseguire la [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) cmdlet per Azure Information Protection. Se già stato installato il modulo AIPService PowerShell, vedere [installazione del modulo AIPService PowerShell](install-powershell.md).
+   > Eseguire il cmdlet [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) per Azure Information Protection. Se non è stato ancora installato il modulo AIPService di PowerShell, vedere [installazione del modulo PowerShell di AIPService](install-powershell.md).
    > 
    > Nell'output identificare il valore **LicensingIntranetDistributionPointUrl** .
    > 

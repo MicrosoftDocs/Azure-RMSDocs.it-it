@@ -4,18 +4,20 @@ description: Vedere le informazioni sulla versione del client per l'etichettatur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/22/2019
+ms.date: 08/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
-ms.openlocfilehash: f60d75655e24e7888ae45111d2b3538a8a12c288
-ms.sourcegitcommit: 6c3681cec0f807c6af031db67242ff01a99cd57b
+ms.custom: admin
+ms.openlocfilehash: 565b9d061bf148d0b1e6e2ef2ea45eb93c6cb6ec
+ms.sourcegitcommit: 96082d61b77f44943509311e2ac0943f970ae4e6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68411688"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68820698"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -50,9 +52,21 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche apport
 
 Il client sta sostituendo il client di Azure Information Protection (classico). Per confrontare caratteristiche e funzionalità con il client classico, vedere [confrontare i client](use-client.md#compare-the-clients).
 
+## <a name="version-22190"></a>Versione 2.2.19.0
+
+**Data di rilascio**: 08/06/2019
+
+**Correzioni**
+
+- Il client può scaricare il proprio criterio e visualizzare le etichette di riservatezza correnti. Questa correzione è necessaria dopo l'aggiornamento da una versione precedente e non sono stati configurati tipi di informazioni personalizzate nell'etichettatura Center.
+
+- Miglioramenti di prestazioni e stabilità generali.
+
 ## <a name="version-22140"></a>Versione 2.2.14.0
 
 **Data di rilascio**: 07/15/2019
+
+Supportato tramite 04/06/2020
 
 **Nuove funzionalità:**
 

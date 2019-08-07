@@ -4,17 +4,19 @@ description: È possibile proteggere i documenti e i messaggi di posta elettroni
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
-ms.openlocfilehash: 116ab2106be79119f538b3a2e559bc2faaeb2f2b
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.subservice: aiplabels
+ms.custom: admin
+ms.openlocfilehash: b29b56664bad205a6c23d092aca7b233ebe9d3d0
+ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520433"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68807916"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
@@ -43,7 +45,7 @@ Per altre informazioni sulla tecnologia di protezione Azure Rights Management e 
 > [!IMPORTANT]
 > Per configurare un'etichetta in modo da applicare questa protezione, è necessario che il servizio Azure Rights Management sia attivo per l'organizzazione. Per altre informazioni, vedere [Attivazione del servizio di protezione da Azure Information Protection](activate-service.md).
 
-Quando l'etichetta applica la protezione, un documento protetto non è adatto per essere salvato in OneDrive o SharePoint. Questi percorsi non supportano le funzionalità seguenti per i file protetti: creazione condivisa, Office Online, ricerca, anteprima di documenti e video, eDiscovery e prevenzione della perdita di dati (DLP). 
+Quando l'etichetta applica la protezione, un documento protetto non è adatto per essere salvato in OneDrive o SharePoint. Questi percorsi non supportano le funzionalità seguenti per i file protetti: creazione condivisa, Office per il Web, ricerca, anteprima di documenti, anteprima, eDiscovery e prevenzione della perdita dei dati. 
 
 Non è necessario configurare Exchange per Azure Information Protection per permettere agli utenti di applicare etichette in Outlook e proteggere i loro messaggi di posta elettronica. Tuttavia, fino a quando Exchange non viene configurato per Azure Information Protection, non si può usufruire delle funzionalità di protezione complete di Azure Rights Management con Exchange. Ad esempio, gli utenti non possono visualizzare messaggi di posta elettronica protetti nei telefoni cellulari o con Outlook dal Web, i messaggi di posta elettronica protetti non possono essere indicizzati per la ricerca e non è possibile configurare la prevenzione della perdita dei dati di Exchange Online con la protezione di Rights Management. Per assicurarsi che Exchange possa supportare questi scenari aggiuntivi, vedere le risorse seguenti:
 

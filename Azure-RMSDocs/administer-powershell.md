@@ -1,6 +1,6 @@
 ---
-title: Amministrazione di protezione di Azure Information Protection tramite PowerShell
-description: Informazioni su come utilizzare per il servizio di protezione di Azure Information Protection, il modulo PowerShell per amministrare questo servizio per il tenant.
+title: Amministrazione della protezione da Azure Information Protection tramite PowerShell
+description: Informazioni su come usare il modulo di PowerShell per il servizio di protezione da Azure Information Protection per amministrare questo servizio per il tenant.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -11,25 +11,26 @@ ms.service: information-protection
 ms.assetid: a890e04a-4b70-41b5-8d5f-3c210a669faa
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: a6aa0b8ecd01df9d012588f8e2b02d13f03cfff6
-ms.sourcegitcommit: 6c6fda77e131e071c94c2a2fd7b27e4031266fa5
+ms.custom: admin
+ms.openlocfilehash: 1cfd0f1337556ae682022ea951194017f94d9bb4
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67544972"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68788203"
 ---
-# <a name="administering-protection-from-azure-information-protection-by-using-powershell"></a>Amministrazione di protezione di Azure Information Protection tramite PowerShell
+# <a name="administering-protection-from-azure-information-protection-by-using-powershell"></a>Amministrazione della protezione da Azure Information Protection tramite PowerShell
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-È necessario usare PowerShell per amministrare il servizio di protezione di Azure Information Protection? Potrebbe non essere necessario se tutte le configurazioni possono essere eseguite nel portale di Azure o nell'interfaccia di amministrazione di Microsoft 365. È tuttavia necessario usare PowerShell per alcune configurazioni avanzate. Potrebbe inoltre essere preferibile usare PowerShell per disporre di una maggiore efficienza di controllo dalla riga di comando e dello scripting.
+È necessario usare PowerShell per amministrare il servizio di protezione da Azure Information Protection? Potrebbe non essere necessario se tutte le configurazioni possono essere eseguite nel portale di Azure o nell'interfaccia di amministrazione di Microsoft 365. È tuttavia necessario usare PowerShell per alcune configurazioni avanzate. Potrebbe inoltre essere preferibile usare PowerShell per disporre di una maggiore efficienza di controllo dalla riga di comando e dello scripting.
 
 La tabella nella sezione seguente elenca alcuni degli scenari di configurazione avanzata che usano PowerShell. Nella tabella è indicato inoltre quando la configurazione può essere eseguita anche senza l'uso di PowerShell.
 
-Per un elenco completo dei cmdlet disponibili per questo modulo, con ulteriori informazioni su ognuno di essi, vedere [AIPService](/powershell/module/aipservice/?view=azureipps#aipservice).
+Per un elenco completo dei cmdlet disponibili per questo modulo, con ulteriori informazioni su ciascuno di essi, vedere [AIPService](/powershell/module/aipservice/?view=azureipps#aipservice).
 
 > [!NOTE]
-> Per installare questo modulo di PowerShell, vedere [installazione del modulo AIPService PowerShell](install-powershell.md).
+> Per installare questo modulo di PowerShell, vedere [installazione del modulo PowerShell AIPService](install-powershell.md).
 
 Oltre a questo modulo di PowerShell sul lato servizio, il client Azure Information Protection installa un modulo supplementare di PowerShell, **AzureInformationProtection**. Questo modulo client supporta la classificazione e la protezione di più file in modo che, ad esempio, sia possibile proteggere in blocco tutti i file in una cartella. Per altre informazioni, vedere [Uso di PowerShell con il client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) nella guida dell'amministratore.
 
