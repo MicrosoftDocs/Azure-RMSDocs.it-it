@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 81a5cf4f-c1f3-44a9-ad42-66e95f33ed27
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: f8aef51156bb92d7d37da300ae2fccd51d739de1
-ms.sourcegitcommit: a2542aec8cd2bf96e94923740bf396badff36b6a
+ms.custom: admin
+ms.openlocfilehash: 5bbf064cb019b663b62a779bf58322e0b23302e8
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67535116"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790543"
 ---
 # <a name="step-2-software-protected-key-to-software-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave protetta tramite software a un'altra
 
@@ -31,14 +33,14 @@ Usare la procedura seguente per importare la configurazione di AD RMS in Azure I
 
 ## <a name="to-import-the-configuration-data-to-azure-information-protection"></a>Per importare i dati di configurazione in Azure Information Protection
 
-1. In una workstation connessa a Internet, usare il [Connect-AipService](/powershell/module/aipservice/connect-aipservice) per connettersi al servizio Azure Rights Management:
+1. In una workstation connessa a Internet usare il cmdlet [Connect-AipService](/powershell/module/aipservice/connect-aipservice) per connettersi al servizio Rights Management di Azure:
 
     ```
     Connect-AipService
     ```
     Quando viene richiesto, immettere le credenziali di amministratore del tenant Azure Rights Management. In genere, viene usato un account amministratore globale per Azure Active Directory o Office 365.
 
-2. Usare la [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) esportato di cmdlet per caricare ogni file (con estensione XML) di dominio di pubblicazione trusted. Ad esempio, è necessario avere almeno un file aggiuntivo da importare in caso di aggiornamento del cluster AD RMS per la modalità di crittografia 2. 
+2. Usare il cmdlet [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) per caricare ogni file di dominio di pubblicazione trusted esportato (con estensione XML). Ad esempio, è necessario avere almeno un file aggiuntivo da importare in caso di aggiornamento del cluster AD RMS per la modalità di crittografia 2. 
     
     Per eseguire questo cmdlet, sarà necessaria la password specificata in precedenza per ogni file di dati di configurazione. 
     
@@ -51,9 +53,9 @@ Usare la procedura seguente per importare la configurazione di AD RMS in Azure I
     Import-AipServiceTpd -TpdFile E:\contosokey1.xml -ProtectionPassword $TPD_Password -Verbose
     ```
     
-3. Dopo aver caricato ogni file, eseguire [Set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) per identificare la chiave importata corrisponde alla chiave del certificato concessore di licenze attualmente attiva in AD RMS. Questa chiave diventerà la chiave del tenant attiva per il servizio Azure Rights Management.
+3. Dopo aver caricato ogni file, eseguire [set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) per identificare la chiave importata corrispondente alla chiave SLC attualmente attiva in ad RMS. Questa chiave diventerà la chiave del tenant attiva per il servizio Azure Rights Management.
 
-4.  Usare la [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) cmdlet per disconnettersi dal servizio Azure Rights Management:
+4.  Usare il cmdlet [Disconnect-AipServiceService](/powershell/module/aipservice/disconnect-aipservice) per disconnettersi dal servizio Rights Management di Azure:
 
     ```
     Disconnect-AipServiceService

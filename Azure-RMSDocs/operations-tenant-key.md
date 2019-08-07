@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 1284d0ee-0a72-45ba-a64c-3dcb25846c3d
+ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 571e16ace6c661da6db766d3338312fe45e8f886
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.custom: admin
+ms.openlocfilehash: e9bc761097697144d06264a78acfca3d63f1a319
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156753"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793848"
 ---
 # <a name="operations-for-your-azure-information-protection-tenant-key"></a>Operazioni relative alla chiave del tenant di Azure Information Protection
 
@@ -30,11 +32,11 @@ Nella tabella seguente vengono indicate le operazioni che è possibile eseguire 
 
 |Operazione del ciclo di vita|Gestione di Microsoft (impostazione predefinita)|Gestione del cliente (scenario BYOK)|
 |-----------------------|-------------------------------|---------------------------|
-|Revocare la chiave del tenant|No (automatica)|Yes|
-|Reimpostare la chiave del tenant|Yes|Yes|
-|Eseguire il backup e il ripristino della chiave del tenant|No|Yes|
-|Esportare la chiave del tenant|Yes|No|
-|Rispondere a una violazione di sicurezza|Yes|Yes|
+|Revocare la chiave del tenant|No (automatica)|Sì|
+|Reimpostare la chiave del tenant|Sì|Yes|
+|Eseguire il backup e il ripristino della chiave del tenant|No|Sì|
+|Esportare la chiave del tenant|Sì|No|
+|Rispondere a una violazione di sicurezza|Sì|Sì|
 
 Dopo aver identificato la topologia implementata, selezionare uno dei collegamenti seguenti per ottenere altre informazioni su queste operazioni per la chiave del tenant di Azure Information Protection:
 

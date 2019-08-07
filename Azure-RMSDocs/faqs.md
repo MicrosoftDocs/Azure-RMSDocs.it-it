@@ -9,14 +9,15 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.suite: ems
+ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: d283821fc61747c2debab1e8e449c7083d7fa439
-ms.sourcegitcommit: 66e0193e053f19edaf80b212aa2308993b3bb9e5
+ms.openlocfilehash: f93b8e8deeb6a1329262cd08f0bb905d53507812
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68730383"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794158"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
@@ -165,7 +166,7 @@ Quando un utente apre un documento protetto da Azure Information Protection, gli
 
 Per altre informazioni e alcuni esempi di procedura dettagliata, vedere il seguente post di blog: [Conditional Access policies for Azure Information Protection](https://cloudblogs.microsoft.com/enterprisemobility/2017/10/17/conditional-access-policies-for-azure-information-protection/) (Criteri di accesso condizionale per Azure Information Protection).
 
-Altre informazioni:
+Informazioni aggiuntive:
 
 - Per i computer Windows: per la versione di anteprima corrente vengono valutati i criteri di accesso condizionale per Azure Information Protection quando [viene inizializzato l'ambiente utente](./how-does-it-work.md#initializing-the-user-environment) (questo processo è noto anche come bootstrap) e in seguito ogni 30 giorni.
 

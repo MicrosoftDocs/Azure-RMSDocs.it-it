@@ -13,12 +13,13 @@ ms.assetid: B546B6C1-ADC1-4EBD-95E2-B4A74E4E980B
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 5f6628c9a09b1b881c3e2c211d1c54e044b6d3b4
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 6f36ef984a6d6d10ce06ae690c98153524a7d301
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60179883"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791477"
 ---
 # <a name="overview"></a>Panoramica
 
@@ -44,7 +45,7 @@ Gli altri argomenti di questa sezione riguardano l'architettura di RMS e le rela
 
 ## <a name="in-this-section"></a>In questa sezione
 
-| Argomento | Descrizione |
+| Argomento | DESCRIZIONE |
 |-------|-------------|
 |[Client](ad-rms-client.md) |Questo argomento descrive lo scopo e la funzione di Rights Management Service Client 2.1 |
 |[Server](ad-rms-server.md) | Questo argomento descrive lo scopo e le funzioni del server RMS, per Azure e Windows Server.|

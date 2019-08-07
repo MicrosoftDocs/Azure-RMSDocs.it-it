@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 983ecdc9-5631-48b8-8777-f4cbbb4934e8
+ms.subservice: doctrack
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: bb76aece7012d521542973c94181f43f7b0d15f3
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 6ba83809a8f077ed23afaa337c62d63c78c0cfbc
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521766"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790114"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guida dell'amministratore: Configurazione e uso del rilevamento dei documenti per Azure Information Protection
 
@@ -28,30 +30,30 @@ Se si dispone di una [sottoscrizione che supporta il rilevamento dei documenti](
 
 ## <a name="using-powershell-to-manage-the-document-tracking-site"></a>Uso di PowerShell per gestire il sito di rilevamento dei documenti
 
-Le sezioni seguenti contengono informazioni su come gestire il sito di rilevamento dei documenti tramite PowerShell. Per istruzioni sull'installazione per il modulo di PowerShell, vedere [installazione del modulo AIPService PowerShell](../install-powershell.md).
+Le sezioni seguenti contengono informazioni su come gestire il sito di rilevamento dei documenti tramite PowerShell. Per le istruzioni di installazione per il modulo PowerShell, vedere [installazione del modulo PowerShell AIPService](../install-powershell.md).
 
 Per altre informazioni su ognuno dei cmdlet, usare i relativi collegamenti.
 
 ### <a name="privacy-controls-for-your-document-tracking-site"></a>Controlli sulla privacy per il sito di rilevamento dei documenti
 
-Se la visualizzazione di tutte le informazioni di rilevamento di documento non è consentita all'interno dell'organizzazione a causa dei requisiti sulla privacy, è possibile disabilitare rilevamento dei documenti usando la [Disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) cmdlet. 
+Se la visualizzazione di tutte le informazioni di rilevamento dei documenti non è consentita nell'organizzazione a causa dei requisiti sulla privacy, è possibile disabilitare il rilevamento dei documenti tramite il cmdlet [Disable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/disable-aipservicedocumenttrackingfeature) . 
 
-Il cmdlet disabilita l'accesso al sito di rilevamento dei documenti in modo che tutti gli utenti dell'organizzazione non possano rilevare o revocare l'accesso ai documenti che hanno protetto. È possibile riabilitare rilevamento documenti qualsiasi momento, tramite il [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature), ed è possibile verificare se il rilevamento dei documenti sono attualmente abilitato o disabilitato utilizzando [ Get-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/get-aipservicedocumenttrackingfeature). 
+Il cmdlet disabilita l'accesso al sito di rilevamento dei documenti in modo che tutti gli utenti dell'organizzazione non possano rilevare o revocare l'accesso ai documenti che hanno protetto. È possibile riabilitare il rilevamento dei documenti in qualsiasi momento usando [Enable-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/enable-aipservicedocumenttrackingfeature)ed è possibile verificare se il rilevamento dei documenti è attualmente abilitato o disabilitato usando [Get-AipServiceDocumentTrackingFeature](/powershell/module/aipservice/get-aipservicedocumenttrackingfeature). 
 
 Quando è abilitato, il sito di rilevamento dei documenti visualizza, per impostazione predefinita, informazioni quali gli indirizzi di posta elettronica delle persone che hanno tentato di accedere ai documenti protetti, quando queste persone hanno tentato di accedere e la relativa posizione. Questo livello di informazioni può essere molto utile per determinare come vengono usati i documenti condivisi e se tali documenti devono essere revocati quando si rileva un'attività sospetta. Tuttavia, per motivi di privacy, può essere necessario disabilitare queste informazioni per alcuni o tutti gli utenti. 
 
-Se sono presenti utenti che non devono avere questa attività rilevata da altri utenti, aggiungerli a un gruppo che viene archiviato in Azure AD e specificare il gruppo con il [Set-AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/Set-AipServiceDoNotTrackUserGroup) cmdlet. Quando si esegue questo cmdlet è necessario specificare un singolo gruppo. Tuttavia, il gruppo può contenere gruppi nidificati. 
+Se sono presenti utenti che non devono avere questa attività rilevata da altri utenti, aggiungerli a un gruppo archiviato in Azure AD e specificare il gruppo con il cmdlet [set-AipServiceDoNotTrackUserGroup](/powershell/module/aipservice/Set-AipServiceDoNotTrackUserGroup) . Quando si esegue questo cmdlet è necessario specificare un singolo gruppo. Tuttavia, il gruppo può contenere gruppi nidificati. 
 
 Per questi membri del gruppo, gli utenti non possono visualizzare attività nel sito di rilevamento dei documenti se queste ultime sono legate a documenti condivisi con loro. Inoltre, non vengono inviate notifiche di posta elettronica all'utente che ha condiviso il documento.
 
-Quando si usa questa configurazione, tutti gli utenti possono comunque usare il sito di rilevamento dei documenti e revocare l'accesso ai documenti protetti. Tuttavia, essi non vedranno le attività per gli utenti che sono stati specificati usando il cmdlet Set-AipServiceDoNotTrackUserGroup.
+Quando si usa questa configurazione, tutti gli utenti possono comunque usare il sito di rilevamento dei documenti e revocare l'accesso ai documenti protetti. Tuttavia, non visualizzano l'attività per gli utenti specificati usando il cmdlet Set-AipServiceDoNotTrackUserGroup.
 
-Questa impostazione si applica solo agli utenti finali. Gli amministratori di Azure Information Protection possono sempre rilevare le attività di tutti gli utenti, anche quando gli utenti vengono specificati usando Set-AipServiceDoNotTrackUserGroup. Per altre informazioni su come gli amministratori possono tenere traccia dei per gli utenti, vedere la sezione [Rilevamento e revoca dei documenti per gli utenti](#tracking-and-revoking-documents-for-users).
+Questa impostazione si applica solo agli utenti finali. Gli amministratori di Azure Information Protection possono sempre tenere traccia delle attività di tutti gli utenti, anche quando tali utenti vengono specificati tramite set-AipServiceDoNotTrackUserGroup. Per altre informazioni su come gli amministratori possono tenere traccia dei per gli utenti, vedere la sezione [Rilevamento e revoca dei documenti per gli utenti](#tracking-and-revoking-documents-for-users).
 
 
 ### <a name="logging-information-from-the-document-tracking-site"></a>Informazioni di registrazione dal sito di rilevamento dei documenti
 
-È possibile usare i cmdlet seguenti per scaricare le informazioni di registrazione dal sito di rilevamento dei documenti:
+È possibile utilizzare i cmdlet seguenti per scaricare le informazioni di registrazione dal sito di rilevamento dei documenti:
 
 - [Get-AipServiceTrackingLog](/powershell/module/aipservice/Get-AipServiceTrackingLog)
     
@@ -116,7 +118,7 @@ Nei file di log dei dati di utilizzo sono presenti due campi applicabili al rile
 
 Sono inoltre disponibili tipi di richieste che registrano la modalità in cui utenti e amministratori stanno usando il sito di rilevamento dei documenti. **RevokeAccess**, ad esempio, è il tipo di richiesta usato quando un utente, o un amministratore che agisce per conto dell'utente, revoca un documento nel sito di rilevamento dei documenti. Usare questo tipo di richiesta in combinazione con il campo AdminAction per determinare se il documento è stato revocato dal relativo utente (il campo AdminAction è vuoto) o se un amministratore ha revocato un documento per conto di un utente (il campo AdminAction è true).
 
-Per altre informazioni sulla registrazione dell'utilizzo, vedere [la registrazione e analisi dell'utilizzo di protezione di Azure Information Protection](../log-analyze-usage.md)
+Per ulteriori informazioni sulla registrazione dell'utilizzo, vedere [registrazione e analisi dell'utilizzo della protezione da Azure Information Protection](../log-analyze-usage.md)
 
 ## <a name="next-steps"></a>Passaggi successivi
 Dopo aver configurato il sito di rilevamento dei documenti per il client Azure Information Protection, vedere gli argomenti seguenti per altre informazioni che potrebbero essere necessarie per supportare il client:

@@ -8,13 +8,15 @@ ms.date: 07/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ms.subservice: v2client
 ms.suite: ems
-ms.openlocfilehash: 495a88ee3296fc8d3e075abbd992298b7bae55ea
-ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
+ms.custom: admin
+ms.openlocfilehash: ee514720cf13e819f3d64e77635ae96a26e4d0ed
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141609"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793201"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guida dell'amministratore: Uso di PowerShell con il client unificato Azure Information Protection
 
@@ -102,7 +104,7 @@ Dopo aver eseguito questo cmdlet, è possibile eseguire i cmdlet di assegnazione
     
     - **URI di reindirizzamento (facoltativo)** : **Web** e`http://localhost`
 
-4. Nel pannello **AIPOnBehalfOf** copiare il valore per l' **ID applicazione (client)** . Il valore è simile all'esempio seguente: `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. Questo valore viene usato per il  parametro webappid quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
+4. Nel pannello **AIPOnBehalfOf** copiare il valore per l' **ID applicazione (client)** . Il valore è simile all'esempio seguente: `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. Questo valore viene usato per il parametro webappid quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
 
 5. Sempre nel pannello **AIPOnBehalfOf** selezionare **autenticazione**dal menu **Gestisci** .
 
@@ -157,7 +159,7 @@ Dopo aver eseguito questo cmdlet, è possibile eseguire i cmdlet di assegnazione
     - Nella sezione **Impostazioni avanzate** selezionare **token ID**.
     - Nella sezione **tipo di client predefinito** selezionare **Sì**.
 
-20. Sempre nel pannello **AIPClient-Authentication** scegliere **autorizzazioni API**dal  menu Gestisci.
+20. Sempre nel pannello **AIPClient-Authentication** scegliere **autorizzazioni API**dal menu Gestisci.
 
 21. Nel pannello **AIPClient-Permissions (autorizzazioni** ) selezionare **+ Aggiungi un'autorizzazione**.
 

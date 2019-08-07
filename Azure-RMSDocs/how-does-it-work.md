@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ed6c964e-4701-4663-a816-7c48cbcaf619
+ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 30c97d8e97bec8669fa4c8b6d2b4a2b5d31cca0a
-ms.sourcegitcommit: b24de99cf8006a70a14e7a21d103644c1e20502d
+ms.custom: admin
+ms.openlocfilehash: 0f23bfeca00b8eeb7da3643c192b37641c0ea234
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67149295"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794173"
 ---
-# <a name="how-does-azure-rms-work-under-the-hood"></a>Funzionamento di Azure RMS: dietro le quinte
+# <a name="how-does-azure-rms-work-under-the-hood"></a>Funzionamento di Azure RMS: Dietro le quinte
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -38,14 +40,14 @@ Per una descrizione dettagliata delle operazioni eseguite, vedere la sezione [Pr
 
 Per informazioni tecniche sugli algoritmi e sulle lunghezze delle chiavi usate in Azure RMS, vedere la sezione successiva.
 
-## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Controlli crittografici usati in Azure RMS: Gli algoritmi e lunghezze delle chiavi
+## <a name="cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths"></a>Controlli crittografici usati da Azure RMS: Algoritmi e lunghezze delle chiavi
 Anche se non è necessario conoscere nel dettaglio il funzionamento di questa tecnologia, è possibile che vengano richieste informazioni sui controlli crittografici usati, ad esempio per verificare che la sicurezza sia conforme agli standard di settore.
 
 
 |Controlli crittografici|Uso in Azure RMS|
 |-|-|
-|Algoritmo: AES<br /><br />Lunghezza della chiave: 128 bit e 256 bit [[1]](#footnote-1)|Protezione del contenuto|
-|Algoritmo: RSA<br /><br />Lunghezza della chiave: 2048 bit [[2]](#footnote-2)|Protezione della chiave|
+|Algoritmo AES<br /><br />Lunghezza della chiave: 128 bit e 256 bit [[1]](#footnote-1)|Protezione del contenuto|
+|Algoritmo RSA<br /><br />Lunghezza della chiave: 2048 bit [[2]](#footnote-2)|Protezione della chiave|
 |SHA-256|Firma del certificato|
 
 ###### <a name="footnote-1"></a>Nota 1 
@@ -77,7 +79,7 @@ La chiave del tenant è protetta nei servizi online di Microsoft, in un ambiente
 Le licenze e i certificati inviati a un dispositivo Windows sono protetti tramite la chiave privata del dispositivo del client, che viene creata al primo utilizzo di Azure RMS sul dispositivo da parte di un utente. Questa chiave privata è a sua volta protetta con DPAPI nel client che protegge questi segreti usando una chiave derivata dalla password dell'utente. Nei dispositivi mobili le chiavi vengono usate solo una volta. Non essendo archiviate nei client, queste chiavi non devono essere quindi protette nel dispositivo. 
 
 
-## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Procedura dettagliata del funzionamento di Azure RMS: Primo utilizzo, protezione del contenuto, uso del contenuto
+## <a name="walkthrough-of-how-azure-rms-works-first-use-content-protection-content-consumption"></a>Procedura dettagliata sul funzionamento di Azure RMS: Primo uso, protezione del contenuto, utilizzo del contenuto
 Per comprendere in modo più dettagliato il funzionamento di Azure RMS, viene illustrato un flusso tipico dopo l'[attivazione del servizio Azure Rights Management](activate-service.md) e quando un utente usa per la prima volta il servizio Rights Management nel proprio computer Windows (un processo definito a volte **inizializzazione dell'ambiente utente** o bootstrap), **protegge il contenuto** (un documento o un messaggio di posta elettronica) e quindi **utilizza** (apre e modifica) il contenuto protetto da altri.
 
 Dopo aver inizializzato l'ambiente utente, l'utente può quindi proteggere i documenti o utilizzare documenti protetti su quel computer.

@@ -4,19 +4,21 @@ description: Istruzioni su come classificare e proteggere i documenti e i messag
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/17/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 75268245-6f14-4218-b904-202f63fb3ce6
+ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: c42ef652f2fe2ccd8c668c84ee134aae47b1056f
-ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
+ms.custom: user
+ms.openlocfilehash: 780e89703c9af6607cf6639c162b552535797cc9
+ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68428372"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68808152"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-client"></a>Manuale dell'utente: Classifica e proteggi con il client di Azure Information Protection
 
@@ -31,7 +33,7 @@ Il momento migliore per classificare e proteggere i documenti e i messaggi di po
 
 Tuttavia, è anche possibile classificare e proteggere i file tramite **Esplora file**. Questo metodo supporta altri tipi di file ed è un modo pratico per classificare e proteggere più file contemporaneamente. Questo metodo supporta la protezione di documenti di Office, file PDF, file di testo e immagine e un'ampia gamma di altri file. 
 
-Se l'etichetta applica la protezione, un documento protetto non è adatto per essere salvato in OneDrive o SharePoint. Questi percorsi non supportano quanto segue per i file protetti: creazione condivisa, Office Online, ricerca, anteprima di documenti e video ed eDiscovery. 
+Se l'etichetta applica la protezione, un documento protetto non è adatto per essere salvato in OneDrive o SharePoint. Questi percorsi non supportano quanto segue per i file protetti: Creazione condivisa, Office per il Web, ricerca, anteprima dei documenti, anteprima e eDiscovery. 
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Condividere in modo sicuro un file con utenti esterni all'organizzazione
 

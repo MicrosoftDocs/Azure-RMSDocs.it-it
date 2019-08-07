@@ -1,6 +1,6 @@
 ---
 title: Preparare l'ambiente per Azure RMS e AD RMS
-description: Linee guida per gli amministratori se si dispone di Azure Rights Management con AD RMS distribuito.
+description: Linee guida per gli amministratori se Azure Rights Management con AD RMS distribuito.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -9,16 +9,18 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 11ffa730-c5dc-4b6b-9c1e-c58eff8aafc2
+ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 98b8dc8e09ba7ec3bddb83817663819e0af89697
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 3b5ee3f68f0f1fb6d82e0e3abaf2d2c0d5585bf8
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520912"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790363"
 ---
-# <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>Preparare l'ambiente per Azure Rights Management quando si usa AD RMS
+# <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>Preparare l'ambiente per Azure Rights Management quando si dispone di AD RMS
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -58,7 +60,7 @@ Verso la fine di febbraio 2018, le nuove sottoscrizioni che includono Azure Info
 Per disattivare Azure Rights Management, usare una delle procedure descritte di seguito.
 
 > [!TIP]
-> È anche possibile usare il cmdlet di Windows PowerShell [Disable-AipService](/powershell/module/aipservice/disable-aipservice)per disattivare il servizio Azure Rights Management.
+> Per disattivare il servizio Rights Management di Azure, è anche possibile usare il cmdlet di Windows PowerShell [Disable-AipService](/powershell/module/aipservice/disable-aipservice).
 
 #### <a name="to-deactivate-rights-management-from-the-microsoft-365-admin-center"></a>Per disattivare Rights Management dall'interfaccia di amministrazione di Microsoft 365
 

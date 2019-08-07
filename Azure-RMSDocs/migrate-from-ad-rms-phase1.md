@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d954d3ee-3c48-4241-aecf-01f4c75fa62c
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: bd2ad07e428dabe694701ffbd807fa12ee8e01cb
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 608419325f3a38f607577ee0fd1cdcdeee40d212
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520918"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790604"
 ---
 # <a name="migration-phase-1---preparation"></a>Fase 1 della migrazione: preparazione
 
@@ -25,15 +27,15 @@ ms.locfileid: "67520918"
 Usare le informazioni seguenti per la fase 1 della migrazione da AD RMS ad Azure Information Protection. Queste procedure illustrano i passaggi da 1 a 3 della [migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md) e preparano l'ambiente per la migrazione senza influenzare il lavoro degli utenti.
 
 
-## <a name="step-1-install-the-aipservice-powershell-module-and-identify-your-tenant-url"></a>Passaggio 1: Installare il modulo AIPService PowerShell e identificare l'URL del tenant
+## <a name="step-1-install-the-aipservice-powershell-module-and-identify-your-tenant-url"></a>Passaggio 1: Installare il modulo PowerShell AIPService e identificare l'URL del tenant
 
-Installare il modulo AIPService in modo che è possibile configurare e gestire il servizio che fornisce la protezione dei dati per Azure Information Protection.
+Installare il modulo AIPService in modo da poter configurare e gestire il servizio che fornisce la protezione dei dati per Azure Information Protection.
 
-Per istruzioni, vedere [installazione del modulo AIPService PowerShell](./install-powershell.md).
+Per istruzioni, vedere [installazione del modulo PowerShell AIPService](./install-powershell.md).
 
 Per completare alcune delle istruzioni di migrazione, è necessario conoscere l'URL del servizio Azure Rights Management del tenant in modo che sia possibile sostituirlo quando vengono visualizzati i riferimenti all' *\<URL del tenant\>* . L'URL del servizio Azure Rights Management ha il formato seguente: **{GUID}.rms.[Region].aadrm.com**.
 
-Ad esempio: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
+Ad esempio:  **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
 ### <a name="to-identify-your-azure-rights-management-service-url"></a>Per identificare l'URL del servizio Azure Rights Management
 
@@ -53,7 +55,7 @@ Ad esempio: **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
     
             (Get-AipServiceConfiguration).LicensingIntranetDistributionPointUrl -match "https:\/\/[0-9A-Za-z\.-]*" | Out-Null; $matches[0]
 
-## <a name="step-2-prepare-for-client-migration"></a>Passaggio 2: Preparare la migrazione client
+## <a name="step-2-prepare-for-client-migration"></a>Passaggio 2. Preparare la migrazione client
 
 Nella maggior parte delle migrazioni, non è pratico eseguire la migrazione di tutti i client in una sola volta, è preferibile piuttosto eseguire la migrazione dei client in batch. Ciò significa che per un periodo di tempo, alcuni client useranno Azure Information Protection e altri continueranno a usare AD RMS. Per supportare gli utenti non ancora migrati e gli utenti migrati, usare i controlli di onboarding e distribuire uno script di pre-migrazione. Questo passaggio è obbligatorio durante il processo di migrazione in modo che gli utenti non ancora migrati possano usare contenuto che è stato protetto da utenti migrati che già usano Azure Rights Management.
 

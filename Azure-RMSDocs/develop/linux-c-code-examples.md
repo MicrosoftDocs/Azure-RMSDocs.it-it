@@ -13,12 +13,13 @@ ms.assetid: 0F7714CA-1D3E-4846-B187-739825B7DE26
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 6a4aa43e54510df5775b4c5d73500d60e2a68d56
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: 0b65fad4922790eb7a269edb46b48e4502e28d44
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60176908"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790972"
 ---
 # <a name="linux-code-examples"></a>Esempi di codice Linux
 
@@ -26,14 +27,14 @@ In questo argomento sono presentati scenari elementi di codice importanti per la
 
 I frammenti di codice riportati di seguito provengono da applicazioni di esempio, *rms\_sample* e *rmsauth\_sample*. Per ulteriori informazioni, vedere gli [esempi](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples) sul repository GitHub.
 
-## <a name="scenario-access-protection-policy-information-from-a-protected-file"></a>Scenario: Accesso alle informazioni sui criteri di protezione da un file protetto
+## <a name="scenario-access-protection-policy-information-from-a-protected-file"></a>Scenario Accesso alle informazioni sui criteri di protezione da un file protetto
 
 **Apre e legge un file protetto con RMS**
 **Sorgente**: [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
 **Description**: Dopo aver ottenuto un nome file dall'utente, leggere i certificati (vedere *MainWindow::addCertificates*), impostare il callback di autorizzazione con l'ID client e l'URL di reindirizzamento, chiamare *ConvertFromPFile* (vedere l'esempio di codice seguente), quindi leggere il nome del criterio di protezione, la relativa descrizione e il periodo di validità del contenuto.
 
-**C++**:
+**C++** :
 
     void MainWindow::ConvertFromPFILE(const string& fileIn,
         const string& clientId,
@@ -99,9 +100,9 @@ I frammenti di codice riportati di seguito provengono da applicazioni di esempio
 **Creare un flusso di file protetti**
 **Sorgente**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
-**Description**: Questo metodo crea un flusso di file protetto dal flusso sottostante passato tramite il metodo SDK, *ProtectedFileStream::Aquire*, che viene quindi restituito al chiamante.
+**Descrizione**: Questo metodo crea un flusso di file protetto dal flusso sottostante passato tramite il metodo SDK, *ProtectedFileStream::Aquire*, che viene quindi restituito al chiamante.
 
-**C++**:
+**C++** :
 
     shared_ptr<GetProtectedFileStreamResult>PFileConverter::ConvertFromPFile(
     const string           & userId,
@@ -146,14 +147,14 @@ I frammenti di codice riportati di seguito provengono da applicazioni di esempio
       return fsResult;
     }
 
-## <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scenario: Creare un nuovo file protetto usando un modello
+## <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scenario Creare un nuovo file protetto usando un modello
 
 **Protegge un file con un modello selezionato dall'utente**
 **Sorgente**: [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
-**Description**: Dopo aver ottenuto un nome file dall'utente, aver letto i certificati (vedere *MainWindow::addCertificates*) e aver impostato il callback di autorizzazione con l'ID client e l'URL di reindirizzamento, il file selezionato è protetto tramite la chiamata a *ConvertToPFileTemplates* (vedere l'esempio di codice seguente).
+**Descrizione**: Dopo aver ottenuto un nome file dall'utente, aver letto i certificati (vedere *MainWindow::addCertificates*) e aver impostato il callback di autorizzazione con l'ID client e l'URL di reindirizzamento, il file selezionato è protetto tramite la chiamata a *ConvertToPFileTemplates* (vedere l'esempio di codice seguente).
 
-**C++**:
+**C++** :
 
     void MainWindow::ConvertToPFILEUsingTemplates(const string& fileIn,
                                               const string& clientId,
@@ -214,9 +215,9 @@ I frammenti di codice riportati di seguito provengono da applicazioni di esempio
 **Protegge un file tramite un criterio creato da un modello**
 **Sorgente**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
-**Description**: Viene recuperato un elenco dei modelli associati all'utente, quindi il modello selezionato viene usato per creare un criterio che a sua volta verrà usato per proteggere il file.
+**Descrizione**: Viene recuperato un elenco dei modelli associati all'utente, quindi il modello selezionato viene usato per creare un criterio che a sua volta verrà usato per proteggere il file.
 
-**C++**:
+**C++** :
 
     void PFileConverter::ConvertToPFileTemplates(const string           & userId,
                                              shared_ptr<istream>      inStream,
@@ -247,9 +248,9 @@ I frammenti di codice riportati di seguito provengono da applicazioni di esempio
 **Protegge un file con un criterio specificato**
 **Sorgente**: [rms\_sample/pfileconverter.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
-**Description**: Creare un flusso di file protetto tramite il criterio specificato, quindi proteggere tale file.
+**Descrizione**: Creare un flusso di file protetto tramite il criterio specificato, quindi proteggere tale file.
 
-**C++**:
+**C++** :
 
     void PFileConverter::ConvertToPFileUsingPolicy(shared_ptr<UserPolicy>   policy,
                                                shared_ptr<istream>      inStream,
@@ -286,14 +287,14 @@ I frammenti di codice riportati di seguito provengono da applicazioni di esempio
     
 
 
-## <a name="scenario-protect-a-file-using-custom-protection"></a>Scenario: Protezione di un file tramite una protezione personalizzata
+## <a name="scenario-protect-a-file-using-custom-protection"></a>Scenario Protezione di un file tramite una protezione personalizzata
 
 **Protegge un file tramite una protezione personalizzata**
 **Sorgente**: [rms\_sample/mainwindow.cpp](https://github.com/AzureAD/rms-sdk-for-cpp/tree/master/samples/rms_sample)
 
-**Description**: Dopo aver ottenuto un nome file dall'utente, aver letto i certificati (vedere *MainWindow::addCertificates*), aver raccolto le informazioni sui diritti dall'utente e aver impostato il callback di autorizzazione con l'ID client e l'URL di reindirizzamento, il file selezionato è protetto tramite la chiamata a *ConvertToPFilePredefinedRights* (vedere l'esempio di codice seguente).
+**Descrizione**: Dopo aver ottenuto un nome file dall'utente, aver letto i certificati (vedere *MainWindow::addCertificates*), aver raccolto le informazioni sui diritti dall'utente e aver impostato il callback di autorizzazione con l'ID client e l'URL di reindirizzamento, il file selezionato è protetto tramite la chiamata a *ConvertToPFilePredefinedRights* (vedere l'esempio di codice seguente).
 
-**C++**:
+**C++** :
 
     void MainWindow::ConvertToPFILEUsingRights(const string            & fileIn,
                                            const vector<UserRights>& userRights,
@@ -376,7 +377,7 @@ I frammenti di codice riportati di seguito provengono da applicazioni di esempio
 
 **Description**: Creare un descrittore di criteri e inserirvi le informazioni sui diritti dell'utente, quindi usarlo per creare un criterio utente. Questo criterio viene utilizzato per proteggere il file selezionato tramite una chiamata a *ConvertToPFileUsingPolicy* (vedere questo procedimento nella sezione precedente di questo argomento).
 
-**C++**:
+**C++** :
 
     void PFileConverter::ConvertToPFilePredefinedRights(
     const string            & userId,
@@ -408,7 +409,7 @@ I frammenti di codice riportati di seguito provengono da applicazioni di esempio
 
 Il *WorkerThread()* viene chiamato da due degli scenari di esempio precedenti, **Creazione di un flusso di file protetto** e **Protezione di un file con un criterio specifico**, nel modo seguente:
 
-**C++**:
+**C++** :
 
     threadPool.push_back(thread(WorkerThread,
                                   static_pointer_cast<iostream>(outStream), pfs,
@@ -417,7 +418,7 @@ Il *WorkerThread()* viene chiamato da due degli scenari di esempio precedenti, *
 
 **metodo di supporto, WorkerThread()**
 
-**C++**:
+**C++** :
 
     static mutex   threadLocker;
     static int64_t totalSize     = 0;
@@ -498,7 +499,7 @@ Il *WorkerThread()* viene chiamato da due degli scenari di esempio precedenti, *
     }
 
 
-## <a name="scenario-rms-authentication"></a>Scenario: Autenticazione RMS
+## <a name="scenario-rms-authentication"></a>Scenario Autenticazione RMS
 
 Gli esempi seguenti illustrano due diversi approcci di autenticazione, relativi a come ottenere i token oAuth2 per l'autenticazione di Azure con l'interfaccia utente e senza l'interfaccia utente.
 **Acquisizione del token di autenticazione oAuth2 con l'interfaccia utente**
@@ -507,14 +508,14 @@ Gli esempi seguenti illustrano due diversi approcci di autenticazione, relativi 
 **Passaggio 1**: Creare un punto condiviso dell'oggetto **rmsauth::FileCache**.
 Descrizione: È possibile impostare il percorso alla cache o usare l'impostazione predefinita.
 
-**C++**:
+**C++** :
 
     auto FileCachePtr = std::make_shared< rmsauth::FileCache>();
 
 
 **Passaggio 2**: Creare l'oggetto **rmsauth::AuthenticationContext** Descrizione: Specificare l'*URI* dell'autorità di Azure e l'oggetto *FileCache*.
 
-**C++**:
+**C++** :
 
     AuthenticationContext authContext(
                               std::string(“https://sts.aadrm.com/_sts/oauth/authorize”),
@@ -530,7 +531,7 @@ Descrizione: È possibile impostare il percorso alla cache o usare l'impostazion
 -   *Comportamento della richiesta di autenticazione*: se si imposta **PromptBehavior::Auto**, la libreria tenta di usare cache e token di aggiornamento, se necessario
 -   *ID utente* -nome utente visualizzato nella finestra del prompt
 
-**C++**:
+**C++** :
 
     auto result = authContext.acquireToken(
                 std::string(“api.aadrm.com”),
@@ -550,14 +551,14 @@ Descrizione: È possibile impostare il percorso alla cache o usare l'impostazion
 
 **Passaggio 1**: Creare un punto condiviso dell'oggetto **rmsauth::FileCache** Descrizione: È possibile impostare il percorso alla cache o usare l'impostazione predefinita
 
-**C++**:
+**C++** :
 
     auto FileCachePtr = std::make_shared< rmsauth::FileCache>();
 
 
 **Passaggio 2**: creare l'oggetto **UserCredential** Descrizione: Specificare l'*accesso utente* e la *password*
 
-**C++**:
+**C++** :
 
     auto userCred = std::make_shared<UserCredential>("john.smith@msopentechtest01.onmicrosoft.com",
                                                  "SomePass");
@@ -565,7 +566,7 @@ Descrizione: È possibile impostare il percorso alla cache o usare l'impostazion
 
 **Passaggio 3**: creare l'oggetto **rmsauth::AuthenticationContext** Descrizione: Specificare l'*URI* dell'autorità di Azure e l'oggetto *FileCache*
 
-**C++**:
+**C++** :
 
     AuthenticationContext authContext(
                         std::string(“https://sts.aadrm.com/_sts/oauth/authorize”),
@@ -578,7 +579,7 @@ Descrizione: È possibile impostare il percorso alla cache o usare l'impostazion
 -   *ID univoco del client*: in genere un GUID
 -   *Credenziali utente*: passare l'oggetto creato
 
-**C++**:
+**C++** :
 
     auto result = authContext.acquireToken(
                 std::string(“api.aadrm.com”),

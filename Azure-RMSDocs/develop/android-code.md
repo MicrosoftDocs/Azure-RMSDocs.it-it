@@ -13,12 +13,13 @@ ms.assetid: 58CC2E50-1E4D-4621-A947-25312C3FF519
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 745a340586157b6bb429345c96ee9556f60a93da
-ms.sourcegitcommit: 1218fad71850f3ea81cd12062544cfbc5a094764
+ms.custom: dev
+ms.openlocfilehash: b86572fe0f981b4c5a93c67553ccd42358f47c16
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66263897"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791332"
 ---
 # <a name="android-code-examples"></a>Esempi di codice Android
 
@@ -37,13 +38,13 @@ Questi esempi di codice sono tratti da un'applicazione di esempio di dimensioni 
 
 È disponibile l’applicazione di esempio *MSIPCSampleApp* da usare con questo SDK per il sistema operativo Android. Per altre informazioni, vedere [rms-sdk-ui-for-android](https://github.com/AzureAD/rms-sdk-ui-for-android).
 
-### <a name="scenario-consume-an-rms-protected-file"></a>Scenario: utilizzo di un file RMS protetto
+### <a name="scenario-consume-an-rms-protected-file"></a>Scenario utilizzo di un file RMS protetto
 
 - **Passaggio 1**: Creare un oggetto [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx).
 
     **Origine**: *MsipcAuthenticationCallback.java*
 
-    **Description**: Creare un'istanza di un oggetto [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) e implementare l'autenticazione del servizio.  Usare [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758250.aspx) per ottenere un token passando un'istanza di **AuthenticationRequestCallback**, come parametro *mRmsAuthCallback*, all'API MSIPC. Vedere la chiamata a [ProtectedFileInputStream.create](https://msdn.microsoft.com/library/dn790851.aspx) verso la fine della sezione del codice di esempio seguente.
+    **Descrizione**: Creare un'istanza di un oggetto [ProtectedFileInputStream](https://msdn.microsoft.com/library/dn790851.aspx) e implementare l'autenticazione del servizio.  Usare [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758250.aspx) per ottenere un token passando un'istanza di **AuthenticationRequestCallback**, come parametro *mRmsAuthCallback*, all'API MSIPC. Vedere la chiamata a [ProtectedFileInputStream.create](https://msdn.microsoft.com/library/dn790851.aspx) verso la fine della sezione del codice di esempio seguente.
 
     ``` java
         public void startContentConsumptionFromPtxtFileFormat(InputStream inputStream)
@@ -109,7 +110,7 @@ Questi esempi di codice sono tratti da un'applicazione di esempio di dimensioni 
 
     **Origine**: *MsipcAuthenticationCallback.java*.
 
-    **Description**: Questo passaggio usa ADAL per implementare [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) con parametri di autenticazione di esempio. Per altre informazioni, vedere [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx).
+    **Descrizione**: Questo passaggio usa ADAL per implementare [AuthenticationRequestCallback](https://msdn.microsoft.com/library/dn758255.aspx) con parametri di autenticazione di esempio. Per altre informazioni, vedere [Azure AD Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx).
 
 
    ``` java
@@ -202,7 +203,7 @@ Questi esempi di codice sono tratti da un'applicazione di esempio di dimensioni 
     ```
 
 
-### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scenario: Creare un nuovo file protetto usando un modello
+### <a name="scenario-create-a-new-protected-file-using-a-template"></a>Scenario Creare un nuovo file protetto usando un modello
 
 Questo scenario inizia con il recupero di un elenco di modelli e la selezione del primo di essi per creare un criterio e procede quindi con la creazione e la scrittura di contenuto nel nuovo file protetto.
 
@@ -358,7 +359,7 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
     ```
 
 
-### <a name="scenario-open-a-custom-protected-file"></a>Scenario: Aprire un file protetto personalizzato
+### <a name="scenario-open-a-custom-protected-file"></a>Scenario Aprire un file protetto personalizzato
 
 - **Passaggio 1**: Creare un oggetto[UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) da *serializedContentPolicy*.
 
@@ -526,13 +527,13 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
     ```
     
 
-### <a name="scenario-create-a-custom-protected-file-using-a-custom-policy"></a>Scenario: Creare un file protetto personalizzato usando un criterio personalizzato
+### <a name="scenario-create-a-custom-protected-file-using-a-custom-policy"></a>Scenario Creare un file protetto personalizzato usando un criterio personalizzato
 
 - **Passaggio 1**: Creare un descrittore di criteri con un indirizzo di posta elettronica specificato dall'utente.
 
     **Origine**: *MsipcTaskFragment.java*
 
-    **Description**: In pratica vengono creati gli oggetti [UserRights](https://msdn.microsoft.com/library/dn790911.aspx) e [PolicyDescriptor](https://msdn.microsoft.com/library/dn790843.aspx) usando gli input dell'utente dall'interfaccia del dispositivo.
+    **Descrizione**: In pratica vengono creati gli oggetti [UserRights](https://msdn.microsoft.com/library/dn790911.aspx) e [PolicyDescriptor](https://msdn.microsoft.com/library/dn790843.aspx) usando gli input dell'utente dall'interfaccia del dispositivo.
 
     ``` java
       // create userRights list

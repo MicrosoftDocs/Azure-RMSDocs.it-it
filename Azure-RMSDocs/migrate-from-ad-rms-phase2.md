@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a189695-40a6-4b36-afe6-0823c94993ef
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5d822b36fd7dd38713b8bd3d42aee72838b24195
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: ff2f088358d6f15b4e5b67c3cc6929b1f29f19f4
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67522101"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793998"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 della migrazione: configurazione lato server per AD RMS
 
@@ -66,9 +68,9 @@ La distribuzione corrente di AD RMS usa una delle seguenti configurazioni per la
 
 - Password di protezione nel database AD RMS. Questa è la configurazione predefinita.
 
-- MODULO di protezione hardware tramite un modulo di protezione hardware (HSM) nCipher.
+- Protezione con HSM usando un modulo di protezione hardware nCipher.
 
-- MODULO di protezione hardware tramite un modulo di protezione hardware (HSM) da un fornitore diverso nCipher.
+- Protezione HSM tramite un modulo di protezione hardware (HSM) di un fornitore diverso da nCipher.
 
 - Protezione con password tramite un provider del servizio di crittografia esterno.
 
@@ -82,10 +84,10 @@ Usare la tabella seguente per identificare la procedura da eseguire per la migra
 |Distribuzione di AD RMS corrente|Topologia di chiave del tenant di Azure Information Protection scelta|Istruzioni relative alla migrazione|
 |-----------------------------|----------------------------------------|--------------------------|
 |Password di protezione nel database AD RMS|Gestione di Microsoft|Vedere la procedura **Migrazione da una chiave protetta tramite software a un'altra** dopo questa tabella.<br /><br />Questo è il percorso di migrazione più semplice e richiede solo il trasferimento dei dati di configurazione ad Azure Information Protection.|
-|MODULO di protezione hardware tramite un modulo di protezione hardware nShield nCipher (HSM) |Gestione del cliente (scenario BYOK)|Vedere la procedura **Migrazione da una chiave protetta tramite HSM a un'altra** dopo questa tabella.<br /><br />Sono necessari il set di strumenti BYOK di Azure Key Vault e tre procedure: il trasferimento della chiave dal modulo di protezione hardware locale ai moduli di protezione hardware di Azure Key Vault, l'autorizzazione del servizio Azure Rights Management di Azure Information Protection all'uso della chiave del tenant e infine il trasferimento dei dati di configurazione in Azure Information Protection.|
+|Protezione HSM con un modulo di protezione hardware nCipher nShield (HSM) |Gestione del cliente (scenario BYOK)|Vedere la procedura **Migrazione da una chiave protetta tramite HSM a un'altra** dopo questa tabella.<br /><br />Sono necessari il set di strumenti BYOK di Azure Key Vault e tre procedure: il trasferimento della chiave dal modulo di protezione hardware locale ai moduli di protezione hardware di Azure Key Vault, l'autorizzazione del servizio Azure Rights Management di Azure Information Protection all'uso della chiave del tenant e infine il trasferimento dei dati di configurazione in Azure Information Protection.|
 |Password di protezione nel database AD RMS|Gestione del cliente (scenario BYOK)|Vedere la procedura di migrazione **Da una chiave protetta tramite software a una chiave protetta tramite HSM** dopo questa tabella.<br /><br />Sono necessari il set di strumenti BYOK di Insieme di credenziali delle chiavi di Azure e quattro procedure: innanzitutto estrarre la chiave software e importarla nel modulo di protezione hardware locale, quindi trasferire la chiave dal modulo di protezione hardware locale ai moduli di protezione hardware di Azure Information Protection, successivamente trasferire i dati dell'insieme di credenziali in Azure Information Protection e infine trasferire i dati di configurazione in Azure Information Protection.|
-|MODULO di protezione hardware tramite un modulo di protezione hardware (HSM) da un fornitore diverso nCipher |Gestione del cliente (scenario BYOK)|Contattare il fornitore per il modulo di protezione hardware per istruzioni sul trasferimento della chiave da questo modulo a un modulo di protezione hardware nShield nCipher (HSM). Seguire quindi le istruzioni per la procedura di migrazione **Da una chiave protetta tramite HSM a un’altra** dopo questa tabella.|
-|Protezione con password tramite un provider del servizio di crittografia esterno|Gestione del cliente (scenario BYOK)|Contattare il fornitore per il provider di crittografia per istruzioni sul trasferimento della chiave per un modulo di protezione hardware nShield nCipher (HSM). Seguire quindi le istruzioni per la procedura di migrazione **Da una chiave protetta tramite HSM a un’altra** dopo questa tabella.|
+|Protezione con HSM tramite un modulo di protezione hardware di un fornitore diverso da nCipher |Gestione del cliente (scenario BYOK)|Contattare il fornitore del modulo di protezione hardware per istruzioni su come trasferire la chiave da questo modulo di protezione hardware a un modulo di protezione hardware nCipher nShield (HSM). Seguire quindi le istruzioni per la procedura di migrazione **Da una chiave protetta tramite HSM a un’altra** dopo questa tabella.|
+|Protezione con password tramite un provider del servizio di crittografia esterno|Gestione del cliente (scenario BYOK)|Contattare il fornitore del provider del servizio di crittografia per istruzioni su come trasferire la chiave a un modulo di protezione hardware nCipher nShield (HSM). Seguire quindi le istruzioni per la procedura di migrazione **Da una chiave protetta tramite HSM a un’altra** dopo questa tabella.|
 
 Se la chiave protetta tramite modulo di protezione hardware non è esportabile, è comunque possibile eseguire la migrazione ad Azure Information Protection configurando il cluster AD RMS con la modalità di sola lettura. In questa modalità è comunque possibile aprire il contenuto protetto in precedenza, ma il contenuto appena protetto usa una nuova chiave del tenant gestita dall'utente (BYOK) o gestita da Microsoft. Per altre informazioni, vedere [An update is available for Office to support migrations from AD RMS to Azure RMS](https://support.microsoft.com/help/4023955/an-update-is-available-for-office-to-support-migrations-from-ad-rms-to) (È disponibile un aggiornamento con cui Office supporta le migrazioni da AD RMS ad Azure RMS).
 
@@ -134,11 +136,11 @@ Le modifiche del modello che potrebbe essere necessario apportare per questo pas
 
 Se i modelli personalizzati sono stati creati prima della migrazione, prima o dopo l'attivazione del servizio Azure Rights Management, i modelli non saranno disponibili per gli utenti dopo la migrazione, anche se sono stati impostati su **Pubblicato**. Per renderli disponibili agli utenti, è necessario eseguire prima le operazioni seguenti: 
 
-1. Identificare questi modelli e prendere nota del relativo ID modello, eseguendo il [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate). 
+1. Identificare questi modelli e prendere nota dell'ID modello, eseguendo [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate). 
 
-2. Esportare i modelli usando il cmdlet di PowerShell di Azure RMS [Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate).
+2. Esportare i modelli tramite il cmdlet Azure RMS PowerShell, [Export-AipServiceTemplate](/powershell/module/aipservice/export-aipservicetemplate).
 
-3. Importare i modelli usando il cmdlet di PowerShell per Azure RMS, [Import-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetpd).
+3. Importare i modelli tramite il cmdlet Azure RMS PowerShell, [Import-AipServiceTemplate](/powershell/module/aipservice/import-aipservicetpd).
 
 È quindi possibile pubblicare o archiviare questi modelli come qualsiasi altro modello creato dopo la migrazione.
 
@@ -157,7 +159,7 @@ Per altre informazioni su questa configurazione, vedere [Come configurare un'eti
 #### <a name="sample-windows-powershell-script-to-identify-ad-rms-templates-that-include-the-anyone-group"></a>Esempio di script di Windows PowerShell per identificare modelli AD RMS che includono il gruppo ANYONE
 Questa sezione include lo script di esempio per facilitare l'identificazione dei modelli AD RMS per i quali è definito un gruppo ANYONE, come descritto nella sezione precedente.
 
-**Dichiarazione di non responsabilità:** Questo script di esempio non è supportato in alcun programma di supporto tecnico standard di Microsoft o un servizio. Questo script di esempio viene fornito "nello stato in stato in cui si trova" senza garanzia di alcun tipo.
+**Dichiarazione di non responsabilità:** Questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene fornito "nello stato in stato in cui si trova" senza garanzia di alcun tipo.
 
 ```
 import-module adrmsadmin 

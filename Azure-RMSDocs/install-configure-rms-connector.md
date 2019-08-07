@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 4fed9d4f-e420-4a7f-9667-569690e0d733
+ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 2d29d2ba60e8fd57fdb50f7bc9f4e6bee27230a4
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 83193a4f84df3d56129030676d79c20ea3dfe666
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521170"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794048"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installazione e configurazione del connettore di Azure Rights Management
 
@@ -29,7 +31,7 @@ Prima di iniziare, assicurarsi di aver esaminato e controllato i [prerequisiti](
 
 ## <a name="installing-the-rms-connector"></a>Installazione del connettore RMS
 
-1.  Identificare i computer (almeno due) per l'esecuzione del connettore RMS. Questi computer devono soddisfare le specifiche minime elencate nei prerequisiti.
+1.  Identificare i computer (almeno due) per eseguire il connettore RMS. Questi computer devono soddisfare le specifiche minime elencate nei prerequisiti.
 
     > [!NOTE]
     > Installare un singolo connettore RMS (costituito da più server per la disponibilità elevata) per ogni tenant (tenant di Office 365 o di Azure AD). A differenza di Active Directory RMS, non è necessario installare un connettore RMS in ogni foresta.
@@ -57,7 +59,7 @@ Per poter configurare il connettore RMS, è necessario immettere le credenziali 
 
 Questo account non deve richiedere l'autenticazione a più fattori (MFA, Multi-Factor Authentication) perché lo strumento di amministrazione Microsoft Rights Management non supporta l'autenticazione MFA per questo account. 
 
-Sono previste anche alcune limitazioni per i caratteri della password del connettore. È possibile usare una password che include uno dei seguenti caratteri: E commerciale ( **&** ), parentesi quadra aperta ( **[** ), parentesi quadra chiusa ( **]** ); virgolette semplici ( **"** ) e apostrofo ( **'** ). Se la password include uno di questi caratteri non è possibile effettuare l'autenticazione per il connettore RMS e viene visualizzato il messaggio di errore **La combinazione nome utente e password specificata non è corretta**, anche se l'accesso con questo account e questa password funziona in altri scenari. Se si verifica questa situazione per la password in uso, scegliere un account diverso con una password che non include questi caratteri speciali oppure reimpostare la password in modo che non includa i caratteri speciali.
+Sono previste anche alcune limitazioni per i caratteri della password del connettore. Non è possibile usare una password con uno dei seguenti caratteri: E commerciale ( **&** ), parentesi quadra aperta ( **[** ), parentesi quadra chiusa ( **]** ); virgolette semplici ( **"** ) e apostrofo ( **'** ). Se la password include uno di questi caratteri non è possibile effettuare l'autenticazione per il connettore RMS e viene visualizzato il messaggio di errore **La combinazione nome utente e password specificata non è corretta**, anche se l'accesso con questo account e questa password funziona in altri scenari. Se si verifica questa situazione per la password in uso, scegliere un account diverso con una password che non include questi caratteri speciali oppure reimpostare la password in modo che non includa i caratteri speciali.
 
 Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), assicurarsi che l'account specificato sia in grado di proteggere il contenuto. Ad esempio, se è stata limitata la possibilità di proteggere il contenuto per il gruppo "Reparto IT", l'account specificato deve essere un membro del gruppo. In caso contrario, viene visualizzato il messaggio di errore: **Tentativo di individuare la posizione del servizio di amministrazione e dell'organizzazione non riuscito. Assicurarsi che il servizio Microsoft Rights Management sia abilitato per l’organizzazione.**
 
@@ -67,21 +69,21 @@ Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-s
 
 -   **Amministratore globale di Azure Rights Management**: account in Azure Active Directory a cui è stato assegnato il ruolo di amministratore globale di Azure RMS.
 
--   **Amministratore del connettore di Azure Rights Management**: Un account di Azure Active Directory che sono stati concessi diritti di installazione e amministrazione del connettore RMS per l'organizzazione.
+-   **Amministratore del connettore di Azure Rights Management**: Un account in Azure Active Directory a cui sono stati concessi i diritti di installazione e amministrazione del connettore RMS per l'organizzazione.
 
     > [!NOTE]
-    > Il ruolo di amministratore globale di Azure Rights Management e un ruolo di amministratore di connettore di Azure Rights Management vengono assegnati agli account con il [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) cmdlet.
+    > Il ruolo di amministratore globale di Azure Rights Management e il ruolo di amministratore del connettore Azure Rights Management sono assegnati agli account tramite il cmdlet [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) .
     > 
     > Per eseguire il connettore RMS con privilegi minimi, creare un account dedicato a questo scopo e assegnare a questo il ruolo di amministratore di connettore di Azure RMS tramite le operazioni seguenti:
     >
-    > 1.  Se non già stato fatto, scaricare e installare il modulo AIPService PowerShell. Per altre informazioni, vedere [installazione del modulo AIPService PowerShell](install-powershell.md).
+    > 1.  Se non è già stato fatto, scaricare e installare il modulo AIPService di PowerShell. Per altre informazioni, vedere [installazione del modulo PowerShell AIPService](install-powershell.md).
     >
-    >     Avviare Windows PowerShell con il **Esegui come amministratore** comando e connettersi al servizio di protezione utilizzando il [Connect AipService](/powershell/module/aipservice/connect-aipservice) comando:
+    >     Avviare Windows PowerShell con il comando **Esegui come amministratore** e connettersi al servizio di protezione usando il comando [Connect-AipService](/powershell/module/aipservice/connect-aipservice) :
     >
     >     ```
     >     Connect-AipService                   //provide Office 365 tenant administrator or Azure RMS global administrator credentials
     >     ```
-    > 2.  Quindi eseguire la [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) comando, usando solo uno dei parametri seguenti:
+    > 2.  Eseguire quindi il comando [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) usando solo uno dei parametri seguenti:
     >
     >     ```
     >     Add-AipServiceRoleBasedAdministrator -EmailAddress <email address> -Role "ConnectorAdministrator"
@@ -94,7 +96,7 @@ Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-s
     >     ```
     >     Add-AipServiceRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
     >     ```
-    >     Ad esempio, digitare il comando seguente: **Add-AipServiceRoleBasedAdministrator -EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
+    >     Ad esempio, digitare il comando seguente: **Add-AipServiceRoleBasedAdministrator-EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
     >
     >     Anche se questi comandi assegnano il ruolo di amministratore di connettore, è possibile usare anche il ruolo GlobalAdministrator.
 
@@ -167,9 +169,9 @@ Una volta completata l'aggiunta dei server all'elenco, fare clic su **Chiudi**.
 Se non si è ancora provveduto, è ora necessario configurare il bilanciamento del carico per i server in cui è installato il connettore RMS. È inoltre opportuno valutare la possibilità di usare HTTPS per le connessioni tra questi server e i server appena autorizzati.
 
 ## <a name="configuring-load-balancing-and-high-availability"></a>Configurazione del bilanciamento del carico per elevati livelli di disponibilità
-Dopo aver installato il secondo o l'ultima istanza del connettore RMS, definire un nome server URL del connettore e configurare un sistema di bilanciamento del carico.
+Dopo aver installato la seconda o l'ultima istanza del connettore RMS, definire un nome server URL connettore e configurare un sistema di bilanciamento del carico.
 
-Il nome server dell'URL del connettore può essere qualsiasi nome incluso in uno spazio dei nomi controllato. Ad esempio, è possibile creare una voce nel sistema DNS per **rmsconnector.contoso.com** e configurarla per usare un indirizzo IP nel sistema di bilanciamento del carico. Il nome non presenta requisiti speciali e non deve essere configurato sui server del connettore. Non è necessario che il nome sia risolvibile in Internet, a meno che i server di Exchange e SharePoint non comunichino con il connettore attraverso Internet.
+Il nome server dell'URL del connettore può essere qualsiasi nome incluso in uno spazio dei nomi controllato. Ad esempio, è possibile creare una voce nel sistema DNS per **rmsconnector.contoso.com** e configurarla per l'uso di un indirizzo IP nel sistema di bilanciamento del carico. Il nome non presenta requisiti speciali e non deve essere configurato sui server del connettore. Non è necessario che il nome sia risolvibile in Internet, a meno che i server di Exchange e SharePoint non comunichino con il connettore attraverso Internet.
 
 > [!IMPORTANT]
 > Si consiglia di non modificare il nome dopo aver configurato i server di Exchange o SharePoint per l'uso del connettore. Se si modificasse il nome, sarebbe infatti necessario eliminare tali server da tutte le configurazioni IRM e configurarli nuovamente.
@@ -178,13 +180,13 @@ Dopo aver creato un nome nel DNS e averlo configurato per un indirizzo IP, impos
 
 Usare le impostazioni seguenti per configurare il cluster di Bilanciamento carico di rete:
 
--   Porte: 80 (per HTTP) o 443 (per HTTPS)
+-   Porte 80 (per HTTP) o 443 (per HTTPS)
 
     Per altre informazioni sull'uso di HTTP o HTTPS, vedere la sezione successiva.
 
--   Affinità: Nessuno
+-   Affinità Nessuna
 
--   Metodo di distribuzione: Uguale a
+-   Metodo di distribuzione: Uguale
 
 Questo nome definito per il sistema con carico bilanciato (per i server che eseguono il servizio del connettore RMS) è il nome del connettore RMS dell'organizzazione che viene usato in seguito quando si configurano i server locali per l'uso di Azure RMS.
 
@@ -237,7 +239,7 @@ Per installare lo strumento di amministrazione di connettore RMS, eseguire i fil
 
 -   Per un computer a 32 bit: RMSConnectorAdminToolSetup_x86.exe
 
--   Per un computer a 64 bit: RMSConnectorSetup.exe
+-   Per un computer a 64 bit: RMSConnectorSetup. exe
 
 Se non sono stati già scaricati questi file, è possibile farlo dall' [Area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=314106).
 

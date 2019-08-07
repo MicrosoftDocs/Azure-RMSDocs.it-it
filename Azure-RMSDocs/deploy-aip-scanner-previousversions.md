@@ -1,6 +1,6 @@
 ---
-title: Distribuire lo scanner Azure Information Protection - versioni precedenti
-description: Istruzioni per la distribuzione per le versioni dello scanner Azure Information Protection antecedente alla versione di disponibilità generale corrente.
+title: Distribuire il Azure Information Protection scanner-versioni precedenti
+description: Istruzioni per la distribuzione per le versioni dello scanner Azure Information Protection precedenti alla versione di disponibilità generale corrente.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -8,14 +8,16 @@ ms.date: 07/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 56b2c28b15ce86237a0c8bb14f2a17739cc44678
-ms.sourcegitcommit: 2400948db375d489e8f47a041695ca94124c7506
+ms.custom: admin
+ms.openlocfilehash: 2cdb6d178534c83527b54d16e6a8c9c34cd8c8eb
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67488330"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791646"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-scanner"></a>Distribuzione di versioni precedenti dello scanner Azure Information Protection
 
@@ -24,9 +26,9 @@ ms.locfileid: "67488330"
 > *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
-> Questo articolo è destinato a versioni precedenti alla versione dello scanner Azure Information Protection **1.48.204.0** ma ancora in modalità di supporto. Per aggiornare le versioni precedenti alla versione corrente, vedere [l'aggiornamento lo scanner Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
+> Questo articolo è per le versioni di Azure Information Protection scanner precedenti alla versione **1.48.204.0** ma ancora in supporto. Per aggiornare le versioni precedenti alla versione corrente, vedere [aggiornamento dello scanner Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
 > 
-> Se si intende per istruzioni sulla distribuzione per la versione corrente dello scanner, inclusa la configurazione dal portale di Azure, vedere [distribuzione dello scanner di Azure Information Protection per classificare e proteggere i fileautomaticamente](deploy-aip-scanner.md).
+> Se si stanno cercando istruzioni di distribuzione per la versione corrente dello scanner, che include la configurazione dalla portale di Azure, vedere [distribuzione dello scanner Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner.md).
 
 Di seguito vengono illustrate le caratteristiche dello scanner di Azure Information Protection e le relative procedure per installarlo, configurarlo ed eseguirlo.
 
@@ -36,7 +38,7 @@ Questo scanner viene eseguito come servizio in Windows Server e consente di indi
 
 - Percorsi UNC delle condivisioni di rete che usano il protocollo SMB (Server Message Block).
 
-- I siti e librerie per SharePoint 2019 Server tramite SharePoint Server 2013. SharePoint 2010 è supportato anche per i clienti che dispongono del [supporto "Extended" per la versione corrente di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
+- Siti e librerie per SharePoint Server 2019 tramite SharePoint Server 2013. SharePoint 2010 è supportato anche per i clienti che dispongono del [supporto "Extended" per la versione corrente di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 
 Per analizzare ed etichettare i file nei repository cloud, usare [Cloud App Security](https://docs.microsoft.com/cloud-app-security/) invece dello scanner.
 
@@ -61,13 +63,13 @@ Prima di installare lo scanner di Azure Information Protection, verificare che i
 |Requisito|Altre informazioni|
 |---------------|--------------------|
 |Computer Windows Server per eseguire il servizio scanner:<br /><br />- 4 processori core<br /><br />- 8 GB di RAM<br /><br />- 10 GB di spazio libero (media) per i file temporanei|Windows Server 2019, Windows Server 2016 o Windows Server 2012 R2. <br /><br />Nota: per scopi di test o valutazione in un ambiente non di produzione, è possibile usare un sistema operativo client Windows [supportato dal client di Azure Information Protection](requirements.md#client-devices).<br /><br />Il computer può essere un computer fisico o virtuale con una connessione di rete veloce e affidabile agli archivi dati da analizzare.<br /><br /> Lo scanner richiede spazio su disco sufficiente a creare i file temporanei per ogni file analizzato, quattro file per core. Lo spazio su disco consigliato di 10 GB consente a 4 processori core di analizzare 16 file, ognuno con una dimensione di 625 MB. <br /><br />Se la connettività Internet non è possibile a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations). In caso contrario, assicurarsi che il computer abbia la connettività Internet che consente gli URL seguenti tramite HTTPS (porta 443):<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com|
-|Account del servizio per eseguire il servizio scanner |Oltre a eseguire il servizio scanner nel computer Windows Server, questo account di Windows esegue l'autenticazione in Azure AD e scarica i criteri di Azure Information Protection. Questo account deve essere un account Active Directory ed essere sincronizzato con Azure AD. Se non è possibile sincronizzare questo account a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).<br /><br />I requisiti di questo account del servizio sono i seguenti:<br /><br />Assegnazione dei diritti utente per l'- **accesso locale**. Questo diritto è richiesto per l'installazione e la configurazione dello scanner, ma non per il funzionamento. È necessario concedere questo diritto all'account del servizio, ma è possibile rimuoverlo dopo avere verificato che lo scanner è in grado di individuare, classificare e proteggere i file. Se non è possibile concedere questo diritto neppure per un breve periodo a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).<br /><br />Assegnazione dei diritti utente per l'- **accesso come servizio**. Questo diritto viene concesso automaticamente all'account del servizio durante l'installazione dello scanner ed è richiesto per l'installazione, la configurazione e il funzionamento dello scanner. <br /><br />- Autorizzazioni per i repository di dati: Per i repository dei dati in SharePoint in locale, concedere sempre il **modifica** autorizzazione se **aggiunta e personalizzazione pagine** sia selezionata per il sito o concedere il **progettazione** autorizzazione. Per altri archivi di dati, concedere **Read** e **scrivere** le autorizzazioni per la scansione dei file e quindi applicare la classificazione e protezione per i file che soddisfano le condizioni nelle informazioni di Azure Criteri di protezione. Per eseguire lo scanner in modalità di individuazione solo per questi altri repository di dati, **lettura** è sufficiente l'autorizzazione.<br /><br />- Per le etichette che riproteggono o rimuovono la protezione: per garantire che lo scanner abbia sempre accesso ai file protetti, trasformare l'account in un [utente con privilegi avanzati](configure-super-users.md) per il servizio Azure Rights Management e verificare che sia abilitata la funzionalità per utenti con privilegi avanzati. Per altre informazioni sui requisiti dell'account per l'applicazione della protezione, vedere [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md). Se inoltre sono stati implementati i [controlli di onboarding](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) per una distribuzione a fasi, verificare che questo account sia incluso nei controlli di onboarding configurati.|
+|Account del servizio per eseguire il servizio scanner |Oltre a eseguire il servizio scanner nel computer Windows Server, questo account di Windows esegue l'autenticazione in Azure AD e scarica i criteri di Azure Information Protection. Questo account deve essere un account Active Directory ed essere sincronizzato con Azure AD. Se non è possibile sincronizzare questo account a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).<br /><br />I requisiti di questo account del servizio sono i seguenti:<br /><br />Assegnazione dei diritti utente per l'- **accesso locale**. Questo diritto è richiesto per l'installazione e la configurazione dello scanner, ma non per il funzionamento. È necessario concedere questo diritto all'account del servizio, ma è possibile rimuoverlo dopo avere verificato che lo scanner è in grado di individuare, classificare e proteggere i file. Se non è possibile concedere questo diritto neppure per un breve periodo a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).<br /><br />Assegnazione dei diritti utente per l'- **accesso come servizio**. Questo diritto viene concesso automaticamente all'account del servizio durante l'installazione dello scanner ed è richiesto per l'installazione, la configurazione e il funzionamento dello scanner. <br /><br />- Autorizzazioni per i repository di dati: Per i repository di dati in SharePoint in locale, concedere sempre l'autorizzazione di **modifica** se si seleziona **Aggiungi e Personalizza pagine** per il sito oppure si concede l'autorizzazione di **progettazione** . Per gli altri repository di dati, concedere le autorizzazioni di **lettura** e **scrittura** per l'analisi dei file e quindi applicare la classificazione e la protezione ai file che soddisfano le condizioni nei criteri di Azure Information Protection. Per eseguire lo scanner solo in modalità di individuazione per questi altri repository di dati, è sufficiente l'autorizzazione di **lettura** .<br /><br />- Per le etichette che riproteggono o rimuovono la protezione: per garantire che lo scanner abbia sempre accesso ai file protetti, trasformare l'account in un [utente con privilegi avanzati](configure-super-users.md) per il servizio Azure Rights Management e verificare che sia abilitata la funzionalità per utenti con privilegi avanzati. Per altre informazioni sui requisiti dell'account per l'applicazione della protezione, vedere [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md). Se inoltre sono stati implementati i [controlli di onboarding](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) per una distribuzione a fasi, verificare che questo account sia incluso nei controlli di onboarding configurati.|
 |SQL Server per archiviare la configurazione dello scanner:<br /><br />- Istanza locale o remota<br /><br />- Ruolo Sysadmin per installare lo scanner|SQL Server 2012 è la versione minima per le edizioni seguenti:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Se si installano più istanze dello scanner, ognuna di esse richiede la propria istanza di SQL Server.<br /><br />Quando si installa lo scanner e l'account ha il ruolo Sysadmin, il processo di installazione crea automaticamente il database AzInfoProtectionScanner e concede il ruolo db_owner necessario all'account del servizio che esegue lo scanner. Se non è possibile ricevere il ruolo Sysadmin o se l'organizzazione richiede che i database vengano creati e configurati manualmente, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).<br /><br />Le dimensioni del database di configurazione varieranno per ogni distribuzione, ma è consigliabile allocare 500 MB ogni 1.000.000 file da analizzare. |
-|Il client Azure Information Protection (versione classico) è installato nel computer Windows Server|È necessario installare il client completo per lo scanner. Non installare solo il modulo PowerShell del client.<br /><br />Per istruzioni sull'installazione del client, vedere la [guida per l'amministratore](./rms-client/client-admin-guide.md). Se lo scanner è stato installato in precedenza e ora è necessario aggiornarlo a una versione più recente, vedere [Aggiornamento dello scanner di Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
+|Il client di Azure Information Protection (versione classica) viene installato nel computer Windows Server|È necessario installare il client completo per lo scanner. Non installare solo il modulo PowerShell del client.<br /><br />Per istruzioni sull'installazione del client, vedere la [guida per l'amministratore](./rms-client/client-admin-guide.md). Se lo scanner è stato installato in precedenza e ora è necessario aggiornarlo a una versione più recente, vedere [Aggiornamento dello scanner di Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).|
 |Etichette configurate che applicano la classificazione automatica e, facoltativamente, la protezione|Per altre informazioni su come configurare un'etichetta per le condizioni e applicare la protezione:<br /> - [Come configurare le condizioni per la classificazione automatica e consigliata](configure-policy-classification.md)<br /> - [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md) <br /><br />Suggerimento: è possibile usare le istruzioni in questa [esercitazione](infoprotect-quick-start-tutorial.md) per testare lo scanner con un'etichetta che esegue la ricerca di numeri di carta di credito in un documento di Word preparato. Tuttavia, sarà necessario modificare la configurazione dell'etichetta in modo che l'opzione **Specificare se l'etichetta viene applicata automaticamente o se viene consigliata all'utente** sia impostata su **Automatico** anziché su **Consigliato**. Rimuovere quindi l'etichetta dal documento (se applicata) e copiare il file in un repository di dati per lo scanner. Per eseguire test velocemente, è possibile copiare il file in una cartella locale nel computer dello scanner.<br /><br /> nonostante sia possibile eseguire lo scanner anche se non sono state configurate etichette che applicano la classificazione automatica, questo scenario non è illustrato in queste istruzioni. [Altre informazioni](#using-the-scanner-with-alternative-configurations)|
 |Per i siti e le raccolte di SharePoint da analizzare:<br /><br />- SharePoint 2019<br /><br />- SharePoint 2016<br /><br />- SharePoint 2013<br /><br />- SharePoint 2010|Altre versioni di SharePoint non sono supportate per lo scanner.<br /><br />Per le farm SharePoint di grandi dimensioni, controllare se è necessario aumentare la soglia della visualizzazione elenco (per impostazione predefinita, 5.000) per lo scanner al fine di accedere a tutti i file. Per altre informazioni, vedere la documentazione di SharePoint seguente: [Gestire elenchi e raccolte di grandi dimensioni in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server)|
 |Per i documenti di Office da analizzare:<br /><br />- Formati di file 97-2003 e formati Office Open XML per Word, Excel e PowerPoint|Per altre informazioni sui tipi di file supportati dallo scanner per questi formati di file, vedere [Tipi di file supportati dal client Azure Information Protection](./rms-client/client-admin-guide-file-types.md)|
-|Per i percorsi lunghi:<br /><br />- Massimo 260 caratteri, salvo se lo scanner è installato in Windows 2016 e il computer è configurato per il supporto dei percorsi lunghi|Windows 10 e Windows Server 2016 supportano i percorsi di lunghezza superiore a 260 caratteri mediante l'[impostazione di Criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) seguente: **Criteri del Computer locale** > **configurazione del Computer** > **modelli amministrativi** > **tutte le impostazioni**  >  **i percorsi lunghi abilitare Win32**<br /><br /> Per altre informazioni sul supporto dei percorsi di file lunghi, vedere la sezione [Maximum Path Length Limitation](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) (Limite massimo lunghezza del percorso) nella documentazione per sviluppatori di Windows 10.
+|Per i percorsi lunghi:<br /><br />- Massimo 260 caratteri, salvo se lo scanner è installato in Windows 2016 e il computer è configurato per il supporto dei percorsi lunghi|Windows 10 e Windows Server 2016 supportano i percorsi di lunghezza superiore a 260 caratteri mediante l'[impostazione di Criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) seguente: > **Configurazione computer criteri**computer locale modelli amministrativi**tutte le impostazioni Abilita percorsi** **lunghi Win32**  >  >  > <br /><br /> Per altre informazioni sul supporto dei percorsi di file lunghi, vedere la sezione [Maximum Path Length Limitation](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) (Limite massimo lunghezza del percorso) nella documentazione per sviluppatori di Windows 10.
 
 Se non è possibile soddisfare tutti i requisiti indicati nella tabella perché non sono consentiti dai criteri dell'organizzazione, vedere la sezione successiva per conoscere le alternative.
 
@@ -175,15 +177,15 @@ A questo punto si è pronti a specificare gli archivi dati da analizzare.
 
 Usare il cmdlet **Add-AIPScannerRepository** per specificare gli archivi dati che devono essere analizzati dallo scanner di Azure Information Protection. È possibile specificare cartelle locali, percorsi UNC e URL di SharePoint Server per siti e librerie di SharePoint. 
 
-Versioni supportate per SharePoint: 2019 Server SharePoint, SharePoint Server 2016 e SharePoint Server 2013. Anche SharePoint Server 2010 è supportato per i clienti che dispongono del [supporto "Extended" per questa versione di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
+Versioni supportate per SharePoint: SharePoint Server 2019, SharePoint Server 2016 e SharePoint Server 2013. Anche SharePoint Server 2010 è supportato per i clienti che dispongono del [supporto "Extended" per questa versione di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 
 1. Dallo stesso computer Windows Server, nella sessione di PowerShell, aggiungere il primo archivio dati eseguendo il comando seguente:
     
         Add-AIPScannerRepository -Path <path>
     
-    ad esempio `Add-AIPScannerRepository -Path \\NAS\Documents`
+    Ad esempio: `Add-AIPScannerRepository -Path \\NAS\Documents`
     
-    Per altri esempi, usare il comando della Guida di PowerShell `Get-Help Add-AIPScannerRepository -examples` per questo cmdlet.
+    Per altri esempi, utilizzare il comando `Get-Help Add-AIPScannerRepository -examples` della Guida di PowerShell per questo cmdlet.
 
 2. Ripetere questo comando per tutti gli archivi dati da analizzare. Per rimuovere un archivio dati aggiunto in precedenza, usare il cmdlet **Remove-AIPScannerRepository**.
 
@@ -235,13 +237,13 @@ Quando si è pronti ad etichettare automaticamente i file individuati dallo scan
 
 ## <a name="configure-the-scanner-to-apply-classification-and-protection"></a>Configurare lo scanner per applicare la classificazione e la protezione
 
-Per impostazione predefinita, lo scanner viene eseguito una volta e solo ai fini della creazione di report. Per modificare queste impostazioni, usare il **Set-AIPScannerConfiguration**:
+Per impostazione predefinita, lo scanner viene eseguito una volta e solo ai fini della creazione di report. Per modificare queste impostazioni, usare **set-AIPScannerConfiguration**:
 
 1. Eseguire il comando seguente nel computer Windows Server, nella sessione di PowerShell:
     
         Set-AIPScannerConfiguration -Enforce On -Schedule Always
     
-    Esistono altre impostazioni di configurazione che è opportuno modificare. Indicare ad esempio se gli attributi dei file vengono modificati e quali informazioni vengono registrate nei report. Inoltre, se i criteri di Azure Information Protection includono l'impostazione che richiede un messaggio di giustificazione per abbassare il livello di classificazione o rimuovere la protezione, specificare il messaggio usando questo cmdlet. Per altre informazioni sulle singole impostazioni di configurazione, usare il comando della Guida di PowerShell seguente: `Get-Help Set-AIPScannerConfiguration -detailed`
+    Esistono altre impostazioni di configurazione che è opportuno modificare. Indicare ad esempio se gli attributi dei file vengono modificati e quali informazioni vengono registrate nei report. Inoltre, se i criteri di Azure Information Protection includono l'impostazione che richiede un messaggio di giustificazione per abbassare il livello di classificazione o rimuovere la protezione, specificare il messaggio usando questo cmdlet. Usare il comando della Guida di PowerShell seguente per ulteriori informazioni su ogni impostazione di configurazione:`Get-Help Set-AIPScannerConfiguration -detailed`
 
 2. Prendere nota dell'ora corrente e avviare di nuovo lo scanner eseguendo il comando seguente:
     
@@ -316,7 +318,7 @@ Per modificare il comportamento predefinito dello scanner per la protezione di t
 
 - Lo scanner ha un proprio comportamento predefinito: solo i formati di file di Office e i documenti PDF sono protetti per impostazione predefinita. Se il Registro di sistema non viene modificato, tutti gli altri tipi di file non verranno etichettati né protetti dallo scanner.
 
-- Se si desidera lo stesso comportamento di protezione predefinito del client Azure Information Protection, in cui tutti i file vengono automaticamente protetti con la protezione nativa o generica: Specificare il `*` con caratteri jolly come chiave del Registro di sistema `Encryption` come valore (REG_SZ), e `Default` come valore di dati.
+- Se si desidera lo stesso comportamento di protezione predefinito del client di Azure Information Protection, in cui tutti i file vengono protetti automaticamente con la protezione nativa o generica: Specificare il `*` carattere jolly come chiave del registro `Encryption` di sistema, come valore (REG_SZ) `Default` e come dati del valore.
 
 Quando si modifica il Registro di sistema, creare manualmente la chiave **MSIPC** e la chiave **FileProtection** se non esistono, nonché una chiave per ogni estensione del nome file.
 
@@ -333,7 +335,7 @@ Per i file che non supportano la protezione nativa, specificare l'estensione del
 
 Per il primo ciclo di analisi, lo scanner analizza tutti i file negli archivi dati configurati e quindi per le analisi successive, vengono controllati solo i file nuovi o modificati. 
 
-È possibile imporre allo scanner per esaminare tutti i file anche in questo caso eseguendo **Start-AIPScan** con il *reimpostare* parametro. Lo scanner deve essere configurato per una pianificazione manuale, che richiede la *pianificazione* parametro verrà impostato su **manuale** con **Set-AIPScannerConfiguration**.
+È possibile forzare lo scanner a ispezionare nuovamente tutti i file eseguendo **Start-AIPScan** con il parametro *Reset* . Lo scanner deve essere configurato per una pianificazione manuale, che richiede che il parametro *Schedule* sia impostato su **Manual** con **set-AIPScannerConfiguration**.
 
 In alternativa, è possibile imporre allo scanner di esaminare di nuovo tutti i file dal pannello **Azure Information Protection - Nodi** nel portale di Azure. Selezionare lo scanner nell'elenco e quindi selezionare l'opzione **Ripeti l'analisi di tutti i file**:
 
@@ -370,7 +372,7 @@ Lo scanner di Azure Information Protection supporta due scenari alternativi in c
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Ottimizzazione delle prestazioni dello scanner
 
-Usare le linee guida seguenti per ottimizzare le prestazioni dello scanner. Tuttavia, se la priorità è la velocità di risposta del computer dello scanner invece le prestazioni dello scanner, è possibile usare un [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#limit-the-number-of-threads-used-by-the-scanner) per limitare il numero di thread usati per lo scanner.
+Usare le linee guida seguenti per ottimizzare le prestazioni dello scanner. Tuttavia, se la priorità è la velocità di risposta del computer dello scanner anziché le prestazioni dello scanner, è possibile usare un' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#limit-the-number-of-threads-used-by-the-scanner) per limitare il numero di thread usati dallo scanner.
 
 Per ottimizzare le prestazioni dello scanner:
 
@@ -412,7 +414,7 @@ Altri fattori che influenzano le prestazioni dello scanner:
 
 - Livello di registrazione selezionato
     
-    È possibile scegliere tra **Debug**, **Info** (Informazioni), **Error** (Errore) e **Off** (Disattivato) per i report dello scanner. **Off** (Disattivato) offre le prestazioni migliori; **Debug** rallenta considerevolmente lo scanner ed è consigliabile usarlo solo per la ricerca e la risoluzione dei problemi. Per altre informazioni, vedere la *ReportLevel* parametro per il cmdlet Set-AIPScannerConfiguration eseguendo `Get-Help Set-AIPScannerConfiguration -detailed`.
+    È possibile scegliere tra **Debug**, **Info** (Informazioni), **Error** (Errore) e **Off** (Disattivato) per i report dello scanner. **Off** (Disattivato) offre le prestazioni migliori; **Debug** rallenta considerevolmente lo scanner ed è consigliabile usarlo solo per la ricerca e la risoluzione dei problemi. Per ulteriori informazioni, vedere il parametro *reportLevel* per il cmdlet `Get-Help Set-AIPScannerConfiguration -detailed`Set-AIPScannerConfiguration eseguendo.
 
 - File:
     
@@ -424,13 +426,13 @@ Altri fattori che influenzano le prestazioni dello scanner:
 
 - Inoltre:
     
-    - Verificare che l'account del servizio che esegue lo scanner abbia solo i diritti documentati nel [prerequisiti dello scanner](#prerequisites-for-the-azure-information-protection-scanner) sezione e quindi configurare il [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) per disabilitare l'integrità bassa livello per lo scanner.
+    - Verificare che l'account di servizio che esegue lo scanner disponga solo dei diritti documentati nella sezione [Prerequisiti dello scanner](#prerequisites-for-the-azure-information-protection-scanner) e quindi configurare l' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#disable-the-low-integrity-level-for-the-scanner) per disabilitare il livello di integrità basso per lo scanner.
     
     - L'esecuzione dello scanner è più rapida quando si usa la [configurazione alternativa](#using-the-scanner-with-alternative-configurations) per applicare un'etichetta predefinita a tutti i file in quanto lo scanner non esamina i contenuti del file.
     
     - L'esecuzione dello scanner è più lenta quando si usa la [configurazione alternativa](#using-the-scanner-with-alternative-configurations) per identificare tutte le condizioni personalizzate e i tipi di informazioni riservate noti.
     
-    - È possibile ridurre il timeout dello scanner con [impostazioni client avanzate](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner) per frequenze meglio l'analisi e il consumo di memoria inferiore, ma l'acknowledgement del recapito che alcuni file potrebbero essere ignorati.
+    - È possibile ridurre i timeout dello scanner con [Impostazioni client avanzate](./rms-client/client-admin-guide-customizations.md#change-the-timeout-settings-for-the-scanner) per ottimizzare le frequenze di analisi e ridurre il consumo di memoria, ma con il riconoscimento che alcuni file potrebbero essere ignorati.
 
 ## <a name="list-of-cmdlets-for-the-scanner"></a>Elenco dei cmdlet per lo scanner 
 
@@ -462,12 +464,12 @@ Altri cmdlet per lo scanner consentono di modificare l'account del servizio e il
 
 - Start-AIPScan
 
-- Disinstallare-AIPScanner
+- Uninstall-AIPScanner
 
 - Update-AIPScanner
 
 > [!NOTE]
-> Molti di questi cmdlet sono ora deprecati nella versione corrente dello scanner e la Guida in linea per i cmdlet dello scanner riflette la modifica. Per Guida dei cmdlet precedenti alla versione 1.48.204.0 dello scanner, utilizza l'elemento predefinito `Get-Help <cmdlet name>` comando nella sessione di PowerShell.
+> Molti di questi cmdlet sono ora deprecati nella versione corrente dello scanner e la Guida in linea per i cmdlet dello scanner riflette questa modifica. Per la guida del cmdlet precedente alla versione 1.48.204.0 dello scanner, usare il `Get-Help <cmdlet name>` comando incorporato nella sessione di PowerShell.
 
 ## <a name="event-log-ids-and-descriptions-for-the-scanner"></a>ID registro eventi e descrizioni per lo scanner
 

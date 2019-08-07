@@ -4,20 +4,20 @@ description: Domande frequenti sul servizio di protezione dei dati, Azure Rights
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
-ms.custom: askipteam
+ms.custom: admin
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 6507d040fec9bf7f93037ae07fa8ecce6d627e0e
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.openlocfilehash: c141b70bf775787620761dd93c78a6c4dded7faf
+ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521120"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68808064"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Domande frequenti sulla protezione dei dati in Azure Information Protection
 
@@ -89,7 +89,7 @@ Assolutamente e l'aspetto interessante è che gli utenti sono in grado di proteg
 No, si ha sempre il controllo dei dati e si può continuare ad accedervi, anche se si decide di non usare più il servizio Azure Rights Management. Per altre informazioni, vedere [Rimozione delle autorizzazioni e disattivazione di Azure Rights Management](decommission-deactivate.md).
 
 ## <a name="can-i-control-which-of-my-users-can-use-azure-rms-to-protect-content"></a>È possibile determinare quali utenti possono usare Azure RMS per proteggere i contenuti?
-Sì, il servizio Azure Rights Management include controlli di selezione utenti per questo scenario. Per altre informazioni, vedere la [configurazione dei controlli di onboarding per una distribuzione graduale](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) sezione il [attivazione del servizio di protezione di Azure Information Protection](activate-service.md) articolo.
+Sì, il servizio Azure Rights Management include controlli di selezione utenti per questo scenario. Per ulteriori informazioni, vedere la sezione [configurazione dei controlli di onboarding per una distribuzione](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) in più fasi nell'articolo [attivazione del servizio di protezione da Azure Information Protection](activate-service.md) .
 
 ## <a name="can-i-prevent-users-from-sharing-protected-documents-with-specific-organizations"></a>È possibile impedire agli utenti di condividere documenti protetti con aziende specifiche?
 Uno dei vantaggi principali offerti dal servizio Azure Rights Management per la protezione dei dati è il supporto della collaborazione business-to-business senza che sia necessario configurare trust espliciti per ogni organizzazione partner, in quanto l'autenticazione viene eseguita automaticamente da Azure AD.
@@ -116,9 +116,9 @@ Si noti che, in presenza di eventuali etichette di Azure Information Protection,
 
 In alternativa, è possibile aggiungere utenti esterni a modelli (ed etichette) personalizzati tramite PowerShell. Questa configurazione richiede l'uso di un oggetto di definizione dei diritti per l'aggiornamento del modello:
 
-1. Specificare gli indirizzi di posta elettronica esterni e i relativi diritti in un oggetto di definizione dei diritti, usando il [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) cmdlet per creare una variabile.
+1. Specificare gli indirizzi di posta elettronica esterni e i relativi diritti in un oggetto di definizione dei diritti, usando il cmdlet [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) per creare una variabile.
 
-2. Fornire questa variabile al parametro-RightsDefinition con il [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) cmdlet.
+2. Fornire questa variabile al parametro RightsDefinition con il cmdlet [set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) .
 
     Quando si aggiungono utenti a un modello esistente, oltre ai nuovi utenti è necessario definire gli oggetti di definizione dei diritti per gli utenti esistenti nei modelli. Per questo scenario può essere utile l'**esempio 3, relativo all'aggiunta di nuovi utenti e diritti a un modello personalizzato** della sezione [Examples](/powershell/module/aipservice/set-aipservicetemplateproperty#examples) (Esempi) per il cmdlet.
 
@@ -173,7 +173,7 @@ Proprio come gli amministratori del sito di SharePoint abilitano e configurano I
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>Sono disponibili suggerimenti per una corretta distribuzione?
 
-Dopo aver supervisionato un elevato numero di distribuzioni e clienti, partner, consulenti e tecnici del supporto: uno dei principali suggerimenti che possiamo fornire dall'esperienza: **Progettare e distribuire criteri semplici**.
+Dopo aver supervisionato molte distribuzioni e aver ascoltato i nostri clienti, partner, consulenti e tecnici del supporto tecnico, uno dei principali suggerimenti che possiamo passare dall'esperienza: **Progettare e distribuire criteri semplici**.
 
 Poiché Azure Information Protection supporta la condivisione sicura con qualsiasi utente, si possono raggiungere livelli di protezione dei dati molto elevati, Prestare tuttavia attenzione quando si configurano restrizioni dei diritti di utilizzo. Per la maggior parte delle organizzazioni, l'impatto operativo principale deriva dall'esigenza di impedire la fuga di dati limitando l'accesso agli utenti dell'organizzazione. Si possono anche applicare criteri più specifici, ad esempio impedire agli utenti di stampare o modificare documenti, ma è preferibile impostarli solo per documenti che richiedono un alto livello di sicurezza. Evitare di applicare tutti questi diritti di utilizzo più restrittivi in un'unica soluzione, pianificando invece un approccio per fasi.
 
@@ -191,13 +191,13 @@ L'utente che ha protetto il documento, ovvero l'[emittente di Rights Management]
 Il valore predefinito per il periodo di validità del contratto di licenza con l'utente finale per un tenant è 30 giorni e questa impostazione può essere sottoposta a override tramite un'impostazione più restrittiva in un'etichetta o un modello. Per altre informazioni sul contratto di licenza con l'utente finale e su come configurarlo, vedere la documentazione [Configurazione dei diritti di utilizzo per Azure Rights Management](configure-usage-rights.md#rights-management-use-license).
 
 ## <a name="can-rights-management-prevent-screen-captures"></a>Rights Management può impedire l'acquisizione di schermate?
-Non concedendo **Copia** come [diritto di utilizzo](configure-usage-rights.md), Rights Management può impedire l'acquisizione di schermate dagli strumenti più usati per l'acquisizione di schermate nelle piattaforme Windows (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile) e Android. Tuttavia, i dispositivi iOS e Mac non consentono alle app di impedire l'acquisizione di schermate. Inoltre, i browser su qualsiasi dispositivo non possono impedire l'acquisizione di schermate. L'uso del browser include Outlook sul Web e Office Online.
+Non concedendo **Copia** come [diritto di utilizzo](configure-usage-rights.md), Rights Management può impedire l'acquisizione di schermate dagli strumenti più usati per l'acquisizione di schermate nelle piattaforme Windows (Windows 7, Windows 8.1, Windows 10, Windows 10 Mobile) e Android. Tuttavia, i dispositivi iOS e Mac non consentono alle app di impedire l'acquisizione di schermate. Inoltre, i browser su qualsiasi dispositivo non possono impedire l'acquisizione di schermate. L'uso del browser include Outlook sul Web e Office per il Web.
 
-Impedire l'acquisizione di schermate può consentire di evitare la diffusione accidentale o non appropriata di informazioni riservate o sensibili. Ma esistono molti modi in cui un utente può condividere i dati visualizzati sullo schermo e acquisire uno screenshot è solo un metodo. Ad esempio, un utente che desidera condividere informazioni visualizzate può scattare una foto dei dati con la fotocamera del telefono, ridigitarli o semplicemente comunicarli verbalmente a qualcuno.
+Impedire l'acquisizione di schermate può consentire di evitare la diffusione accidentale o non appropriata di informazioni riservate o sensibili. Tuttavia, esistono molti modi in cui un utente può condividere i dati visualizzati in una schermata e l'acquisizione di una schermata è solo un metodo. Ad esempio, un utente che desidera condividere informazioni visualizzate può scattare una foto dei dati con la fotocamera del telefono, ridigitarli o semplicemente comunicarli verbalmente a qualcuno.
 
 Come illustrato da questi esempi, anche se tutte le piattaforme e tutto il software supportassero le API di Rights Management per il blocco dell'acquisizione di schermate, la sola tecnologia non sarebbe in grado di impedire sempre agli utenti di condividere dati che dovrebbero essere riservati. Rights Management può contribuire a salvaguardare i dati importanti tramite i criteri di autorizzazione e per l'uso, ma questa soluzione aziendale per la gestione delle autorizzazioni deve essere usata insieme ad altri controlli. Ad esempio, implementare la sicurezza fisica, selezionare e monitorare attentamente le persone che hanno accesso in modo autorizzato ai dati dell'organizzazione e investire nella formazione degli utenti per aiutarli a capire quali dati non devono essere condivisi.
 
 ## <a name="whats-the-difference-between-a-user-protecting-an-email-with-do-not-forward-and-a-template-that-doesnt-include-the-forward-right"></a>Qual è la differenza tra un utente che protegge un messaggio di posta elettronica con l'opzione Non inoltrare e un modello che non include il diritto di inoltro?
 
-Nonostante il nome e l'aspetto, l'opzione **Non inoltrare** non è il contrario del diritto Inoltra e neanche un modello. Si tratta in realtà di un insieme di diritti che limitano la copia, la stampa, il salvataggio di allegati e l'inoltro dei messaggi di posta elettronica. I diritti vengono applicati dinamicamente agli utenti tramite i destinatari scelti anziché in modo statico in base alle assegnazioni dall'amministratore. Per altre informazioni, vedere la [opzione non inoltrare messaggi di posta elettronica](configure-usage-rights.md#do-not-forward-option-for-emails) sezione [configurazione dei diritti di utilizzo per Azure Information Protection](configure-usage-rights.md).
+Nonostante il nome e l'aspetto, l'opzione **Non inoltrare** non è il contrario del diritto Inoltra e neanche un modello. Si tratta in realtà di un insieme di diritti che limitano la copia, la stampa, il salvataggio di allegati e l'inoltro dei messaggi di posta elettronica. I diritti vengono applicati dinamicamente agli utenti tramite i destinatari scelti anziché in modo statico in base alle assegnazioni dall'amministratore. Per ulteriori informazioni, vedere la sezione non [inviare l'opzione per i messaggi di posta elettronica](configure-usage-rights.md#do-not-forward-option-for-emails) in [configurazione dei diritti di utilizzo per Azure Information Protection](configure-usage-rights.md).
 

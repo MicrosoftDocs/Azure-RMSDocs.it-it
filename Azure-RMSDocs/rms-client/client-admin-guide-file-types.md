@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ''
+ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 8ef451597e32915cdc14e859f275e0d8d20326f4
-ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
+ms.custom: admin
+ms.openlocfilehash: 03b589bf0f16ed8a70f15dea1130fbd8baf85036
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68428283"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793675"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guida dell'amministratore: Tipi di file supportati dal client Azure Information Protection
 
@@ -185,9 +187,9 @@ Ripetere questi tre passaggi per altri tipi di file da definire come eccezioni, 
 
 È possibile apportare modifiche di registro di sistema simile per altri scenari modificando il valore della stringa **Crittografia** che supporta i seguenti valori:
 
-- **Pfile**: protezione generica
+- **Pfile**: Protezione generica
 
-- **Native**: protezione nativa
+- **Native**: Protezione nativa
 
 - **Off**: Blocca la protezione
 

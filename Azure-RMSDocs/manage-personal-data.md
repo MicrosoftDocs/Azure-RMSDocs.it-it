@@ -11,12 +11,13 @@ ms.service: information-protection
 ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
-ms.openlocfilehash: 900b447f67bab09e0cfcb2ed243f2c6a3de71135
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: fa37a5b1263eae5fe7f9739b9c8621334aae6a35
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521177"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68788425"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gestire i dati personali per Azure Information Protection
 
@@ -26,7 +27,7 @@ Quando si configura e usa Azure Information Protection, gli indirizzi di posta e
 
 - Modelli per il servizio di protezione
 
-- Gli utenti con privilegi avanzati e gli amministratori delegati per il servizio di protezione 
+- Utenti con privilegi avanzati e amministratori delegati per il servizio di protezione 
 
 - Log di amministrazione per il servizio di protezione
 
@@ -34,7 +35,7 @@ Quando si configura e usa Azure Information Protection, gli indirizzi di posta e
 
 - Log di rilevamento dei documenti
 
-- Log di utilizzo per il client Azure Information Protection e il client RMS 
+- Log di utilizzo per i client di Azure Information Protection e RMS 
 
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-intro-sentence.md)]
@@ -44,14 +45,14 @@ Quando si configura e usa Azure Information Protection, gli indirizzi di posta e
 
 Usando il portale di Azure, un amministratore può specificare un indirizzo di posta elettronica per i criteri con ambito e per le impostazioni di protezione all'interno di una configurazione di etichette. Per altre informazioni, vedere [How to configure the Azure Information Protection policy for specific users by using scoped policies](configure-policy-scope.md) (Come configurare i criteri di Azure Information Protection per utenti specifici tramite criteri con ambito) e [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md). 
 
-Per le etichette configurate per applicare la protezione dal servizio Azure Rights Management, indirizzo di posta elettronica disponibili anche nei modelli di protezione dati, usando i cmdlet di PowerShell dal [AIPService modulo](/powershell/module/aipservice). Questo modulo di PowerShell permette anche a un amministratore di specificare gli utenti tramite l'indirizzo di posta elettronica come [utenti con privilegi avanzati](configure-super-users.md) o amministratori per il servizio Azure Rights Management. 
+Per le etichette configurate per applicare la protezione dal servizio Rights Management di Azure, è possibile trovare l'indirizzo di posta elettronica anche nei modelli di protezione usando i cmdlet di PowerShell del [modulo AIPService](/powershell/module/aipservice). Questo modulo di PowerShell permette anche a un amministratore di specificare gli utenti tramite l'indirizzo di posta elettronica come [utenti con privilegi avanzati](configure-super-users.md) o amministratori per il servizio Azure Rights Management. 
 
 Quando si usa Azure Information Protection per classificare e proteggere documenti e messaggi di posta elettronica, è possibile che gli indirizzi di posta elettronica e gli indirizzi IP degli utenti vengano salvati in file di log.
 
 
 ### <a name="protection-templates"></a>Modelli di protezione
 
-Eseguire la [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate) per ottenere un elenco di modelli di protezione. È possibile usare l'ID modello per ottenere i dettagli di un modello specifico. L'oggetto `RightsDefinitions` visualizza i dati personali, se presenti. 
+Eseguire il cmdlet [Get-AipServiceTemplate](/powershell/module/aipservice/get-aipservicetemplate) per ottenere un elenco di modelli di protezione. È possibile usare l'ID modello per ottenere i dettagli di un modello specifico. L'oggetto `RightsDefinitions` visualizza i dati personali, se presenti. 
 
 Esempio:
 ```
@@ -81,14 +82,14 @@ EnableInLegacyApps      : False
 LabelId                 :
 ```
 
-### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>Gli utenti con privilegi avanzati e gli amministratori delegati per il servizio di protezione
+### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>Utenti con privilegi avanzati e amministratori delegati per il servizio di protezione
 
-Eseguire la [Get-AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) cmdlet e [get-aipservicerolebasedadministrator](/powershell/module/aipservice/get-aipservicerolebasedadministrator) cmdlet per visualizzare gli utenti che hanno stati assegnati il ruolo utente con privilegi avanzati o ruolo di amministratore globale per la protezione servizio (Azure Rights Management) di Azure Information Protection. Per gli utenti cui sono stati assegnati questi ruoli, vengono visualizzati i rispettivi indirizzi e-mail.
+Eseguire il cmdlet [Get-AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) e il cmdlet [Get-aipservicerolebasedadministrator](/powershell/module/aipservice/get-aipservicerolebasedadministrator) per vedere a quali utenti è stato assegnato il ruolo utente con privilegi avanzati o il ruolo di amministratore globale per il servizio di protezione (Azure Rights Management) da Azure Information Protection. Per gli utenti cui sono stati assegnati questi ruoli, vengono visualizzati i rispettivi indirizzi e-mail.
 
 
 ### <a name="administration-logs-for-the-protection-service"></a>Log di amministrazione per il servizio di protezione
 
-Eseguire la [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) per ottenere un log delle azioni di amministrazione per il servizio di protezione (Azure Rights Management) di Azure Information Protection. Questo log include dati personali sotto forma di indirizzi di posta elettronica e indirizzi IP. Il log è in testo normale e, una volta scaricato, è possibile cercare offline le informazioni su un amministratore specifico.
+Eseguire il cmdlet [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) per ottenere un log delle azioni di amministrazione per il servizio di protezione (Rights Management di Azure) da Azure Information Protection. Questo log include dati personali sotto forma di indirizzi di posta elettronica e indirizzi IP. Il log è in testo normale e, una volta scaricato, è possibile cercare offline le informazioni su un amministratore specifico.
 
 Ad esempio:
 ```
@@ -97,7 +98,7 @@ The Rights Management administration log was successfully generated and can be f
 ```
 
 ### <a name="usage-logs-for-the-protection-service"></a>Log di utilizzo per il servizio di protezione
-Eseguire la [Get-AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog) cmdlet per recuperare un log delle azioni degli utenti finali che usano il servizio di protezione di Azure Information Protection. Il log può includere dati personali sotto forma di indirizzi di posta elettronica e indirizzi IP. Il log è in testo normale e, una volta scaricato, è possibile cercare offline le informazioni su un amministratore specifico.
+Eseguire il cmdlet [Get-AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog) per recuperare un log delle azioni dell'utente finale che usano il servizio di protezione da Azure Information Protection. Il log può includere dati personali sotto forma di indirizzi di posta elettronica e indirizzi IP. Il log è in testo normale e, una volta scaricato, è possibile cercare offline le informazioni su un amministratore specifico.
 
 Ad esempio:
 ```
@@ -129,7 +130,7 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 ### <a name="document-tracking-logs"></a>Log di rilevamento dei documenti
 
-Eseguire la [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) cmdlet per recuperare informazioni dal sito su un determinato utente di rilevamento dei documenti. Per ottenere informazioni di riferimento associato con i log di documento, usare il [Get-AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog?view=azureipps) cmdlet.
+Eseguire il cmdlet [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) per recuperare le informazioni dal sito di rilevamento dei documenti relativi a un utente specifico. Per ottenere le informazioni di rilevamento associate ai log del documento, usare il cmdlet [Get-AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog?view=azureipps) .
 
 Ad esempio:
 ```
@@ -186,11 +187,11 @@ IsHiddenInfo         : False
 
 Non è possibile cercare per ObjectID. Tuttavia, il parametro `-UserEmail` non impone una restrizione e l'indirizzo di posta elettronica specificato non deve necessariamente fare parte del tenant. Se l'indirizzo di posta elettronica è archiviato in un punto qualsiasi nei log di rilevamento dei documenti, la voce di rilevamento dei documenti viene restituita nell'output del cmdlet.
 
-### <a name="usage-logs-for-the-azure-information-protection-clients-and-rms-client"></a>Log di utilizzo per il client Azure Information Protection e il client RMS
+### <a name="usage-logs-for-the-azure-information-protection-clients-and-rms-client"></a>Log di utilizzo per i client di Azure Information Protection e RMS
 
 Quando vengono applicate etichette e protezione a documenti e messaggi di posta elettronica, gli indirizzi di posta elettronica e gli indirizzi IP possono essere archiviati nel computer di un utente nei percorsi seguenti:
 
-- Per il client di assegnazione di etichette unificato di Azure Information Protection e il client Azure Information Protection: %localappdata%\Microsoft\MSIP\Logs
+- Per il client di Azure Information Protection Unified Labeling e il client di Azure Information Protection:%localappdata%\Microsoft\MSIP\Logs
 
 - Per il client RMS: %localappdata%\Microsoft\MSIPC\msip\Logs
 
@@ -209,58 +210,58 @@ Quando il client Azure Information Protection esegue lo scanner, i dati personal
 ## <a name="securing-and-controlling-access-to-personal-information"></a>Protezione e controllo dell'accesso a informazioni personali
 I dati personali visualizzati e specificati nel portale di Azure sono accessibili solo agli utenti cui è stato assegnato uno dei [ruoli di amministratore di Azure Active Directory](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) seguenti:
     
-- **Amministratori di Azure Information Protection**
+- **Amministratore Azure Information Protection**
 
 - **Amministratore di conformità**
 
-- **Amministratore dei dati di conformità**
+- **Amministratore dati di conformità**
 
 - **Amministratore della sicurezza**
 
 - **Amministratore globale**
 
-I dati personali che vengono visualizzati ed specifica usando il modulo AIPService (o il precedente modulo, AADRM) sono accessibili solo agli utenti che sono stati assegnati i **amministratore di Azure Information Protection**, **conformità amministratore**, **amministratore dei dati di conformità**, o **amministratore globale** ruoli da Azure Active Directory o il ruolo di amministratore globale per il servizio di protezione.
+I dati personali che è possibile visualizzare e specificare usando il modulo AIPService (o il modulo precedente, AADRM) sono accessibili solo agli utenti a cui è stato assegnato il **Azure Information Protection amministratore**, l' **amministratore della conformità**e la **conformità amministratore dei dati**o ruoli di **amministratore globale** da Azure Active Directory o ruolo di amministratore globale per il servizio di protezione.
 
 ## <a name="updating-personal-data"></a>Aggiornamento dei dati personali
 
 È possibile aggiornare gli indirizzi di posta elettronica per i criteri con ambito e le impostazioni di protezione nei criteri di Azure Information Protection. Per altre informazioni, vedere [How to configure the Azure Information Protection policy for specific users by using scoped policies](configure-policy-scope.md) (Come configurare i criteri di Azure Information Protection per utenti specifici tramite criteri con ambito) e [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md). 
 
-Per le impostazioni di protezione, è possibile aggiornare le stesse informazioni usando i cmdlet di PowerShell dal [AIPService modulo](/powershell/module/aipservice).
+Per le impostazioni di protezione, è possibile aggiornare le stesse informazioni usando i cmdlet di PowerShell del [modulo AIPService](/powershell/module/aipservice).
 
 Non è possibile aggiornare gli indirizzi di posta elettronica per gli utenti con privilegi avanzati e gli amministratori con delega. Rimuovere invece l'account utente specificato e aggiungere l'account utente con l'indirizzo di posta elettronica aggiornato. 
 
 ### <a name="protection-templates"></a>Modelli di protezione
 
-Eseguire la [Set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) cmdlet per aggiornare il modello di protezione. In quanto i dati personali all'interno di `RightsDefinitions` proprietà, è necessario anche usare il [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) cmdlet per creare un oggetto di definizioni dei diritti con le informazioni più recenti e i diritti di utilizzo le definizioni di oggetto con il `Set-AipServiceTemplateProperty` cmdlet.
+Eseguire il cmdlet [set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) per aggiornare il modello di protezione. Poiché i dati personali si trovano all' `RightsDefinitions` interno della proprietà, è necessario usare anche il cmdlet [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) per creare un oggetto delle definizioni dei diritti con le informazioni aggiornate e usare l'oggetto delle definizioni dei diritti con il cmdlet`Set-AipServiceTemplateProperty` cmdlet.
 
-### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>Gli utenti con privilegi avanzati e gli amministratori delegati per il servizio di protezione
+### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>Utenti con privilegi avanzati e amministratori delegati per il servizio di protezione
 
 Quando è necessario aggiornare un indirizzo di posta elettronica per un utente con privilegi avanzati:
 
-1. Uso [Remove-AipServiceSuperUser](/powershell/module/aipservice/Remove-AipServiceSuperUser) per rimuovere l'utente e indirizzo di posta elettronica precedente.
+1. Usare [Remove-AipServiceSuperUser](/powershell/module/aipservice/Remove-AipServiceSuperUser) per rimuovere l'utente e l'indirizzo di posta elettronica precedente.
 
-2. Uso [Add-AipServiceSuperUser](/powershell/module/aipservice/Add-AipServiceSuperUser) per aggiungere l'utente e il nuovo indirizzo di posta elettronica.
+2. Usare [Add-AipServiceSuperUser](/powershell/module/aipservice/Add-AipServiceSuperUser) per aggiungere l'utente e il nuovo indirizzo di posta elettronica.
 
 Quando è necessario aggiornare un indirizzo di posta elettronica per un amministratore con delega:
 
-1. Uso [Remove-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/Remove-AipServiceRoleBasedAdministrator) per rimuovere l'utente e indirizzo di posta elettronica precedente.
+1. Usare [Remove-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/Remove-AipServiceRoleBasedAdministrator) per rimuovere l'utente e l'indirizzo di posta elettronica precedente.
 
-2. Uso [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/Add-AipServiceRoleBasedAdministrator) per aggiungere l'utente e il nuovo indirizzo di posta elettronica.
+2. Usare [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/Add-AipServiceRoleBasedAdministrator) per aggiungere l'utente e il nuovo indirizzo di posta elettronica.
 
 ## <a name="deleting-personal-data"></a>Eliminazione dei dati personali
 È possibile eliminare gli indirizzi di posta elettronica per i criteri con ambito e le impostazioni di protezione nei criteri di Azure Information Protection. Per altre informazioni, vedere [How to configure the Azure Information Protection policy for specific users by using scoped policies](configure-policy-scope.md) (Come configurare i criteri di Azure Information Protection per utenti specifici tramite criteri con ambito) e [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md). 
 
-Per le impostazioni di protezione, è possibile eliminare le stesse informazioni usando i cmdlet di PowerShell dal [AIPService modulo](/powershell/module/aipservice).
+Per le impostazioni di protezione, è possibile eliminare le stesse informazioni usando i cmdlet di PowerShell del [modulo AIPService](/powershell/module/aipservice).
 
-Per eliminare gli indirizzi di posta elettronica per gli utenti con privilegi avanzati e gli amministratori delegati, rimuovere tali utenti usando il [Remove-AipServiceSuperUser](/powershell/module/aipservice/Remove-AipServiceSuperUser) cmdlet e [Remove-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/Remove-AipServiceRoleBasedAdministrator). 
+Per eliminare gli indirizzi di posta elettronica per utenti con privilegi avanzati e amministratori delegati, rimuovere questi utenti usando il cmdlet [Remove-AipServiceSuperUser](/powershell/module/aipservice/Remove-AipServiceSuperUser) e [Remove-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/Remove-AipServiceRoleBasedAdministrator). 
 
-Per eliminare i dati personali nel log di rilevamento dei documenti, i log di amministrazione o i log di utilizzo per il servizio di protezione dati, usano la sezione seguente per generare una richiesta con il supporto tecnico Microsoft.
+Per eliminare i dati personali nei log di rilevamento dei documenti, nei log di amministrazione o nei log di utilizzo per il servizio di protezione, utilizzare la sezione seguente per generare una richiesta con supporto tecnico Microsoft.
 
 Per eliminare dati personali nei file di log dei client e nei log dello scanner archiviati nei computer, usare qualsiasi strumento di Windows standard per eliminare i file o i dati personali all'interno dei file. 
 
 ### <a name="to-delete-personal-data-with-microsoft-support"></a>Per eliminare dati personali con il supporto tecnico Microsoft
 
-Usare i tre passaggi seguenti per richiedere che Microsoft Elimina i dati personali nel log, i log di amministrazione o i log di utilizzo per il servizio di protezione dati di rilevamento dei documenti. 
+Utilizzare i tre passaggi seguenti per richiedere che Microsoft elimini i dati personali nei log di rilevamento dei documenti, nei log di amministrazione o nei log di utilizzo per il servizio di protezione. 
 
 **Passaggio 1: Generare la richiesta di eliminazione**
 [Contattare il supporto tecnico Microsoft](information-support.md#to-contact-microsoft-support) per aprire un caso di supporto per Azure Information Protection con una richiesta di eliminazione dei dati dal tenant. È necessario dimostrare di essere un amministratore del tenant di Azure Information Protection e tenere presente che la conferma di questo processo richiede diversi giorni. Nell'inviare la richiesta, è necessario fornire informazioni aggiuntive, a seconda dei dati che devono essere eliminati.
@@ -276,12 +277,12 @@ L'eliminazione di questi dati è un'operazione permanente. Al termine dell'elabo
 **Passaggio 3: Ottenere la conferma dell'eliminazione** Il servizio di supporto tecnico Microsoft invierà un messaggio di posta elettronica di conferma dell'avvenuta eliminazione dei dati. 
 
 ## <a name="exporting-personal-data"></a>Esportazione dei dati personali
-Quando si usa il cmdlet PowerShell di AADRM o AIPService, i dati personali vengono resi disponibili per ricerca e l'esportazione come un oggetto di PowerShell. L'oggetto di PowerShell può essere convertito in JSON e salvato tramite il cmdlet `ConvertTo-Json`.
+Quando si usano i cmdlet di PowerShell AIPService o AADRM, i dati personali vengono resi disponibili per la ricerca e l'esportazione come oggetto PowerShell. L'oggetto di PowerShell può essere convertito in JSON e salvato tramite il cmdlet `ConvertTo-Json`.
 
 ## <a name="restricting-the-use-of-personal-data-for-profiling-or-marketing-without-consent"></a>Limitazione dell'uso di dati personali per profilatura e marketing senza consenso
 Azure Information Protection segue l'[condizioni per la privacy](https://privacy.microsoft.com/privacystatement) Microsoft per la profilatura e il marketing basati su dati personali.
 
 ## <a name="auditing-and-reporting"></a>Controllo e segnalazione
-Solo gli utenti che sono stati assegnati [le autorizzazioni di amministratore](#securing-and-controlling-access-to-personal-information) può usare il modulo AIPService o ADDRM per ricerca e l'esportazione dei dati personali. Queste operazioni vengono registrate nel log di amministrazione, che può essere scaricato.
+Solo gli utenti a cui sono state assegnate [autorizzazioni di amministratore](#securing-and-controlling-access-to-personal-information) possono usare il modulo AIPSERVICE o addr per la ricerca e l'esportazione di dati personali. Queste operazioni vengono registrate nel log di amministrazione, che può essere scaricato.
 
-Per le azioni di eliminazione, la richiesta di supporto funge da audit trail e percorso di segnalazione per le azioni eseguite da Microsoft. Dopo l'eliminazione, i dati eliminati non saranno disponibili per la ricerca e l'esportazione e l'amministratore può verificare questo usando il cmdlet Get del modulo AIPService.
+Per le azioni di eliminazione, la richiesta di supporto funge da audit trail e percorso di segnalazione per le azioni eseguite da Microsoft. Dopo l'eliminazione, i dati eliminati non saranno disponibili per la ricerca e l'esportazione e l'amministratore potrà verificarla usando i cmdlet Get del modulo AIPService.

@@ -13,12 +13,13 @@ ms.assetid: 2720aa0e-0d37-469f-be99-678bf95a9c51
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 57020ff3af69e2711adcc717951b61e48281645a
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: cab28423de31e9d8fe3351f9c20d1c06275fa4c3
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60182616"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790735"
 ---
 # <a name="windows-store-setup"></a>Installazione per Windows Store
 
@@ -53,7 +54,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabil
 
 -   Aprire Visual Studio.
 -   Fare clic su **File**, **Nuovo** e quindi su **Progetto**.
--   Nella finestra di dialogo **Nuovo progetto** fare clic su **Visual C\#** e selezionare **Applicazione vuota (Windows)**, quindi fare clic su **OK**.
+-   Nella finestra di dialogo **Nuovo progetto** fare clic su **Visual C\#** e selezionare **Applicazione vuota (Windows)** , quindi fare clic su **OK**.
 
     ![Creare un nuovo progetto](../media/winrtsetup-newproj.png)
 

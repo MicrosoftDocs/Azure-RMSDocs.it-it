@@ -8,13 +8,15 @@ ms.date: 07/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ms.subservice: v2client
 ms.suite: ems
-ms.openlocfilehash: 6e51dda2317022544b25fca26625839772fdef5e
-ms.sourcegitcommit: fdc1f3d76b48f4e865a538087d66ee69f0f9888d
+ms.custom: admin
+ms.openlocfilehash: 95c855701b1fc8de2e3f9f458b2cd760a3abdd4b
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141678"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793220"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guida dell'amministratore client per l'assegnazione di etichette unificata Azure Information Protection
 
@@ -42,7 +44,7 @@ Ad esempio:
 
 Il Azure Information Protection client Unified Labeling include quanto segue:
 
-- Un componente aggiuntivo di Office, che installa un  pulsante di riservatezza sulla barra multifunzione per consentire agli utenti di selezionare le etichette di riservatezza e un'opzione per visualizzare la barra di Azure Information Protection per una migliore visibilità delle etichette.
+- Un componente aggiuntivo di Office, che installa un pulsante di riservatezza sulla barra multifunzione per consentire agli utenti di selezionare le etichette di riservatezza e un'opzione per visualizzare la barra di Azure Information Protection per una migliore visibilità delle etichette.
 
 - Esplora file, opzioni tramite clic con il pulsante destro del mouse per l'applicazione di etichette di classificazione e della protezione ai file.
 
@@ -71,7 +73,7 @@ Distribuire il client di etichettatura unificata Azure Information Protection se
 
 - Si vuole visualizzare documenti protetti quando non è installata un'applicazione nativa per visualizzare i file o questa applicazione non è in grado di aprire i documenti.
 
-Esempio che illustra il componente aggiuntivo di Office per il client di Azure Information Protection Unified Labeling, visualizzando il  nuovo pulsante Sensitivity sulla barra multifunzione e la barra di Azure Information Protection facoltativa:
+Esempio che illustra il componente aggiuntivo di Office per il client di Azure Information Protection Unified Labeling, visualizzando il nuovo pulsante Sensitivity sulla barra multifunzione e la barra di Azure Information Protection facoltativa:
 
 ![Barra Azure Information Protection con criterio predefinito](../media/v2word2016-calloutsv2.png)
 

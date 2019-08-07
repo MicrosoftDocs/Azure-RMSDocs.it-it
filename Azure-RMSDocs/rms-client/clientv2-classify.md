@@ -8,13 +8,15 @@ ms.date: 07/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ms.subservice: v2client
 ms.suite: ems
-ms.openlocfilehash: 5faf6151a74eec0f213cf425d45f51cbd9e677d5
-ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
+ms.custom: user
+ms.openlocfilehash: 2b14872399fc2b9409748a3a149cb8b74b5db016
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68428101"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68790010"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Manuale dell'utente: Classificare un file o un messaggio di posta elettronica usando il client di Azure Information Protection Unified Labeling per Windows
 
@@ -57,7 +59,7 @@ Oltre a selezionare manualmente le etichette, è anche possibile applicarle nei 
 
 - Potrebbe non essere [installato](install-unifiedlabelingclient-app.md)il client di Azure Information Protection Unified labeling.
 
-- Se non viene visualizzato un  pulsante di riservatezza sulla barra multifunzione, ma viene visualizzato un pulsante **Proteggi** con etichette, è necessario che sia installato il client di Azure Information Protection e non il Azure Information Protection client di etichettatura unificata. [Altre informazioni](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+- Se non viene visualizzato un pulsante di riservatezza sulla barra multifunzione, ma viene visualizzato un pulsante **Proteggi** con etichette, è necessario che sia installato il client di Azure Information Protection e non il Azure Information Protection client di etichettatura unificata. [Altre informazioni](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 ##### <a name="is-the-label-that-you-expect-to-see-not-displayed"></a>Un'etichetta che ci si aspetta di vedere non è visualizzata? 
 

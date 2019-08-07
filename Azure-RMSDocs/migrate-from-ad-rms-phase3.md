@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: e3fd9bd9-3638-444a-a773-e1d5101b1793
+ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 521a14606a72bba4871f18a2191f246af1de14f7
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: eb9cfbe808e20f3b65a2d964e4f776f02b4b5ce8
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67522088"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793964"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Fase 3 della migrazione: configurazione lato client
 
@@ -58,11 +60,11 @@ Questo metodo è adatto solo per i client Windows che eseguono app di Office 365
     
     Se si usa il ruolo Server DNS in Windows Server, è possibile usare la tabella seguente come esempio per specificare le proprietà del record SRV nella console Gestore DNS.
     
-    |Campo|Value|  
+    |Campo|Valore|  
     |-----------|-----------|  
     |**Dominio**|_tcp.rmscluster.contoso.com|  
     |**Servizio**|_rmsredir|  
-    |**Protocol**|_http|  
+    |**Protocollo**|_http|  
     |**Priorità**|0|  
     |**Peso**|0|  
     |**Numero di porta**|80|  

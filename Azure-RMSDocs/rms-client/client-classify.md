@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: d65c7690-fab7-4823-845c-8c73903e9c79
+ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: e810245f94b688c1fc6018905f7a0265ebb0ec98
-ms.sourcegitcommit: 7992e1dc791d6d919036f7aa98bcdd21a6c32ad0
+ms.custom: user
+ms.openlocfilehash: 6a2e34008481a0369156af751cdca074efb2bfe7
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68428250"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793615"
 ---
 # <a name="user-guide-classify-a-file-or-email-with-the-azure-information-protection-client"></a>Manuale dell'utente: Classificare un file o un messaggio di posta elettronica con il client di Azure Information Protection
 

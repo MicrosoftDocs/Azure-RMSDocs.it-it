@@ -13,12 +13,13 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: 9874b2d07930b80f8d4ef291f83ae16356a3c191
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: d36938daf4dbcbe86331ec6852dfe4ecb04a2959
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178603"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792417"
 ---
 # <a name="configure-visual-studio"></a>Configurare Visual Studio
 

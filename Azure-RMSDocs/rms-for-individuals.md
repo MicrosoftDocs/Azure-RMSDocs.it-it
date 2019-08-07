@@ -11,12 +11,13 @@ ms.service: information-protection
 ms.assetid: 2efcb440-fefd-45e9-872b-f471573aadf2
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5f95406f7f6851b6a0082c19c186fda5bc4532fd
-ms.sourcegitcommit: a26d033ccd557839b61736284456370393f3b52a
+ms.custom: admin
+ms.openlocfilehash: a6fb98b54c5305206123076b8c9c3b2fad0f9876
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67156683"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792859"
 ---
 # <a name="rms-for-individuals-and-azure-information-protection"></a>RMS per utenti singoli e Azure Information Protection
 
@@ -61,5 +62,5 @@ A questo punto l'account viene creato. Se viene richiesto di accedere per legger
 
 
 ## <a name="next-steps"></a>Passaggi successivi
-RMS per utenti singoli è un esempio di utilizzo della funzionalità di iscrizione self-service supportato da Azure Active Directory. Per altre informazioni sul funzionamento di questa funzionalità, vedere [cos'è Self-Service Signup per Azure Active Directory?](/azure/active-directory/users-groups-roles/directory-self-service-signup) nella documentazione di Azure Active Directory.
+RMS per utenti singoli è un esempio di utilizzo della funzionalità di iscrizione self-service supportata da Azure Active Directory. Per ulteriori informazioni sul funzionamento di questa funzionalità, vedere informazioni sull' [iscrizione self-service per Azure Active Directory](/azure/active-directory/users-groups-roles/directory-self-service-signup) nella documentazione di Azure Active Directory.
 

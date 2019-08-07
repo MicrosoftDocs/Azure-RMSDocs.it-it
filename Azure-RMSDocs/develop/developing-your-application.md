@@ -13,12 +13,13 @@ ms.assetid: 396A2C19-3A00-4E9A-9088-198A48B15289
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: feb0636c025d13dd3a290eb34ecb49eec4ebe284
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: dev
+ms.openlocfilehash: c508365855d8d2e914fca2c4853dc315d84331e2
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67520746"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791312"
 ---
 # <a name="developing-your-application"></a>Sviluppo dell'applicazione
 
@@ -35,9 +36,9 @@ La configurazione di Azure per questa app richiede la creazione di un ID tenant,
 
 ### <a name="azure-ad-tenant-configuration"></a>Configurazione del tenant di Azure AD
 
-Per configurare l'ambiente di Azure AD per Azure Information Protection, seguire le indicazioni fornite in [attivazione del servizio di protezione di Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
+Per configurare l'ambiente di Azure AD per Azure Information Protection, seguire le istruzioni riportate in [attivazione del servizio di protezione da Azure Information Protection](https://docs.microsoft.com/information-protection/deploy-use/activate-service).
 
-Una volta attivato il servizio saranno necessari i componenti di PowerShell per i passaggi successivi. Seguire [amministrazione protezione di Azure Information Protection tramite PowerShell](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell) per eseguire questa operazione.
+Una volta attivato il servizio saranno necessari i componenti di PowerShell per i passaggi successivi. Per eseguire questa operazione, seguire la procedura di [amministrazione della protezione da Azure Information Protection usando PowerShell](https://docs.microsoft.com/information-protection/deploy-use/administer-powershell) .
 
 ### <a name="getting-your-tenant-id"></a>Ottenere un ID tenant
 

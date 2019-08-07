@@ -4,18 +4,20 @@ description: Eseguire la migrazione di etichette di Azure Information Protection
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/30/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
-ms.openlocfilehash: 161f87363a6e398465a1ee67068e6f36b2f3919f
-ms.sourcegitcommit: 3933f968a952fb1d7c73c0f6a4f42a2a429b863f
+ms.custom: admin
+ms.openlocfilehash: 4a00d85ea5669a5a81a7380796888edff939e310
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68684614"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68791744"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-office-365-sensitivity-labels"></a>Come eseguire la migrazione di etichette di Azure Information Protection a etichette di riservatezza di Office 365
 
@@ -92,7 +94,7 @@ Azure Information Protection client (versione classica) possono usare tutte le i
 |Protezione basata sul cloud che usa autorizzazioni definite dall'utente in Word, Excel e PowerPoint |Sì|I centri di amministrazione non hanno un'opzione di configurazione per le autorizzazioni definite dall'utente per queste app di Office. Tuttavia, questa impostazione è supportata se si esegue la migrazione di un'etichetta con questa configurazione oppure si configura l'etichetta dopo la migrazione utilizzando il portale di Azure. <br /><br /> Se si pubblica un'etichetta con questa configurazione, verificare i risultati dell'applicazione dell'etichetta nella [tabella seguente](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Protezione basata su HYOK che usa autorizzazioni definite dall'utente per Outlook (Non inoltrare) |No|Nessuna opzione di configurazione per HYOK. Non è consigliabile pubblicare un'etichetta con questa configurazione. In caso contrario i risultati ottenuti applicando l'etichetta sono elencati nella [tabella seguente](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Rimuovere la protezione |No|Nessuna opzione di configurazione per rimuovere la protezione. Non è consigliabile pubblicare un'etichetta con questa configurazione.<br /><br /> Se si pubblica un'etichetta con questa configurazione, quando viene applicata, la protezione verrà rimossa se è stata precedentemente applicata da un'etichetta. La protezione verrà mantenuta se in precedenza era stata applicata in modo indipendente da un'etichetta.|
-|Tipi di carattere personalizzato e colore del tipo di carattere personalizzato tramite RGB per i contrassegni visivi (intestazione, piè di pagina, filigrana)|Sì|La configurazione per i contrassegni visivi è limitata a un elenco di colori e dimensioni dei caratteri. È possibile pubblicare questa etichetta senza modifiche benché non sia possibile visualizzare i valori configurati nei centri di amministrazione. <br /><br />Per modificare queste opzioni è possibile usare il portale di Azure. Per semplificare l'amministrazione, tuttavia, provare a cambiare il colore impostando una delle opzioni elencate nei centri di amministrazione.|
+|Tipi di carattere personalizzato e colore del tipo di carattere personalizzato tramite RGB per i contrassegni visivi (intestazione, piè di pagina, filigrana)|Yes|La configurazione per i contrassegni visivi è limitata a un elenco di colori e dimensioni dei caratteri. È possibile pubblicare questa etichetta senza modifiche benché non sia possibile visualizzare i valori configurati nei centri di amministrazione. <br /><br />Per modificare queste opzioni è possibile usare il portale di Azure. Per semplificare l'amministrazione, tuttavia, provare a cambiare il colore impostando una delle opzioni elencate nei centri di amministrazione.|
 |Variabili nei contrassegni visivi (intestazione, piè di pagina, filigrana)|No|Se si pubblica questa etichetta senza modifiche, le variabili vengono visualizzate come testo nei client anziché visualizzare i valori dinamici. Prima di pubblicare l'etichetta, modificare le stringhe per rimuovere le variabili.|
 |Contrassegni visivi per app|No|Se si pubblica questa etichetta senza modifiche, le variabili delle app vengono visualizzate come testo nei client in tutte le app anziché visualizzare le stringhe di testo in app selezionate. Pubblicare questa etichetta solo se è adatta per tutte le app e modificare le stringhe per rimuovere le variabili delle app.|
 |Condizioni e impostazioni associate <br /><br /> include l'assegnazione di etichette automatica e consigliata e le descrizioni comando corrispondenti|Non applicabile|Riconfigurare le condizioni tramite l'applicazione automatica di etichette come configurazione separata dalle impostazioni dell'etichetta.|
@@ -176,6 +178,8 @@ Per verificare se i client e i servizi usati dall'utente supportano l'etichettat
 - Servizi da fornitori e sviluppatori di software che usano [Microsoft Information Protection SDK](https://docs.microsoft.com/en-us/information-protection/develop/overview).
 
 ## <a name="next-steps"></a>Passaggi successivi
+
+Per ulteriori indicazioni e suggerimenti del team dell'esperienza clienti, vedere il post di Blog seguente: [Informazioni sulla migrazione unificata delle etichette](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Understanding-Unified-Labeling-migration/ba-p/783185).
 
 Per altre informazioni sulle etichette migrate che possono ora essere configurate e pubblicate in uno dei centri di amministrazione, vedere [Panoramica delle etichette di riservatezza](/Office365/SecurityCompliance/sensitivity-labels).
 

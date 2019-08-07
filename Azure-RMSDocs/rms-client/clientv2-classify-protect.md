@@ -4,17 +4,19 @@ description: Istruzioni su come classificare e proteggere i documenti e i messag
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/19/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
+ms.subservice: v2client
 ms.suite: ems
-ms.openlocfilehash: 5202d56476faeb820fab0c6adef31e6cc161a099
-ms.sourcegitcommit: ae48f7cea01b4d615052659072305abb8698a7f7
+ms.custom: user
+ms.openlocfilehash: 78907b2819636a5f2c8e66feae2e44a0bd6c5c90
+ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375494"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68808144"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Manuale dell'utente: Classifica e proteggi con il client di assegnazione unificata Azure Information Protection
 
@@ -29,7 +31,7 @@ Il momento migliore per classificare e proteggere i documenti e i messaggi di po
 
 Tuttavia, è anche possibile classificare e proteggere i file tramite **Esplora file**. Questo metodo supporta altri tipi di file ed è un modo pratico per classificare e proteggere più file contemporaneamente. Questo metodo supporta la protezione di documenti di Office, file PDF, file di testo e immagine e un'ampia gamma di altri file. 
 
-Se l'etichetta applica la protezione, un documento protetto non è adatto per essere salvato in OneDrive o SharePoint. Questi percorsi non supportano quanto segue per i file protetti: creazione condivisa, Office Online, ricerca, anteprima di documenti e video ed eDiscovery.
+Se l'etichetta applica la protezione, un documento protetto non è adatto per essere salvato in OneDrive o SharePoint. Questi percorsi non supportano quanto segue per i file protetti: Creazione condivisa, Office per il Web, ricerca, anteprima dei documenti, anteprima e eDiscovery.
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Condividere in modo sicuro un file con utenti esterni all'organizzazione
 
@@ -70,7 +72,7 @@ Oltre a selezionare manualmente le etichette, è anche possibile applicarle nei 
 
 - Potrebbe non essere [installato](install-unifiedlabelingclient-app.md)il client di Azure Information Protection Unified labeling.
 
-- Se non viene visualizzato un  pulsante di riservatezza sulla barra multifunzione, ma viene visualizzato un pulsante **Proteggi** con etichette, è necessario che sia installato il client di Azure Information Protection e non il Azure Information Protection client di etichettatura unificata. [Altre informazioni](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+- Se non viene visualizzato un pulsante di riservatezza sulla barra multifunzione, ma viene visualizzato un pulsante **Proteggi** con etichette, è necessario che sia installato il client di Azure Information Protection e non il Azure Information Protection client di etichettatura unificata. [Altre informazioni](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
  
 ##### <a name="is-the-label-that-you-expect-to-see-not-displayed"></a>Un'etichetta che ci si aspetta di vedere non è visualizzata? 
 

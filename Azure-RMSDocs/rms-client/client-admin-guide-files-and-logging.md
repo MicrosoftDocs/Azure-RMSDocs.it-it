@@ -9,14 +9,16 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 5a34ab85-773f-4782-ba09-c321cddf5bc0
+ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
-ms.openlocfilehash: b6391df8ae2e31303f5b369963389abe3005a1bd
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.custom: admin
+ms.openlocfilehash: 6ea0c6787680a86fde0c3a7d2919caac4fcdd811
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67521659"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68793775"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guida dell'amministratore: File e registrazione dell'utilizzo del client Azure Information Protection
 
@@ -48,7 +50,7 @@ Il client registra l'attività dell'utente nel registro eventi locale di Windows
 
 - Nome file e percorso
 
-- Action:
+- Azione:
 
     - Impostare l'etichetta: ID informazioni 101
     
@@ -84,7 +86,7 @@ Il client registra l'attività dell'utente nel registro eventi locale di Windows
     
     - Sistema (per l'accesso e il download dei criteri)
     
-    - Impostazione predefinita
+    - Predefinito
     
 - Etichetta prima e dopo l'azione 
     
@@ -94,9 +96,9 @@ Il client registra l'attività dell'utente nel registro eventi locale di Windows
 
 - Autorizzazioni personalizzate (se applicabile) che includono i [diritti di utilizzo in base al nome di codifica](../configure-usage-rights.md#usage-rights-and-descriptions) per gli utenti, i gruppi o le organizzazioni specificati
 
-Gli eventi per Outlook warn, giustificare e bloccare i messaggi richiedono il client di disponibilità generale corrente e le impostazioni client avanzate. Per altre informazioni, vedere [Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
+Per gli eventi per i messaggi di avviso, giustificazione e blocco di Outlook sono necessari il client di disponibilità generale corrente e le impostazioni client avanzate. Per altre informazioni, vedere [Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent).
 
-Per informazioni sulla registrazione dell'utilizzo per il servizio di protezione, vedere [la registrazione e analisi dell'utilizzo di protezione di Azure Information Protection](../log-analyze-usage.md)
+Per informazioni sulla registrazione dell'utilizzo per il servizio di protezione, vedere [registrazione e analisi dell'utilizzo della protezione da Azure Information Protection](../log-analyze-usage.md)
 
 ## <a name="next-steps"></a>Passaggi successivi
 Dopo aver identificato tutti i file di log associati al client Azure Information Protection, vedere gli argomenti seguenti per altre informazioni che potrebbero essere necessarie per supportare il client:

@@ -4,19 +4,21 @@ description: Identificare le applicazioni che usano le API di RMS per il support
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/12/2019
+ms.date: 08/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7b33bcb8-63da-46be-ad56-b06de97822fa
+ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 5f19efeffe982ce36eef84d1947936acb25fd83d
-ms.sourcegitcommit: 9d99385bab62478de6c00faae15d8b27f80239e5
+ms.custom: admin
+ms.openlocfilehash: dfc933dfa753ecee2bf23861d8151df02fe172b5
+ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68229902"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68808096"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applicazioni che supportano la protezione dati di Azure Rights Management
 
@@ -46,10 +48,10 @@ Informazioni sulle colonne della tabella:
 
 |**Sistema operativo dispositivo**|Word, Excel, PowerPoint|Posta elettronica|Altri tipi di file|
 |---------------------------|-----------------------|-----------------|---------|
-|**Windows**|App di Office 365 [[1]](#footnote-1)<br /><br />Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office Online (visualizzazione di documenti protetti) [[2]](#footnote-2)<br /><br />Web browser [[3]](#footnote-3)|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office 365 ProPlus<br /><br />Web browser [[4]](#footnote-4)<br /><br />Windows Mail [[5]](#footnote-5) |Client Azure Information Protection per Windows: Testo, immagini, Pfile<br /><br />Plug-in SealPath RMS per AutoCAD: dwg|
-|**iOS**|GigaTrust<br /><br /> Office Mobile <br /><br />Office Online [[2]](#footnote-2)<br /><br />TITUS Docs<br /><br />Web browser [[3]](#footnote-3)|App Azure Information Protection (visualizzazione di posta elettronica protetta)<br /><br />BlackBerry Work<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook per iPad e iPhone [[5]](#footnote-5)<br /><br />TITUS Mail <br /><br />Web browser [[4]](#footnote-4)|App Azure Information Protection (visualizzazione di testo e immagini di protezione)<br /><br />Tito docs: Pfile|
-|**Android**|GigaTrust App for Android<br /><br />Office Online [[2]](#footnote-2)<br /><br />Office Mobile (a meno che non si utilizzino le etichette di riservatezza, limitate alla visualizzazione e alla modifica di documenti protetti) <br /><br />Web browser [[3]](#footnote-3)|9Folders [[5]](#footnote-5)<br /><br />App Azure Information Protection (visualizzazione di messaggi di posta elettronica protetti)<br /><br />BlackBerry Work <br /><br />GigaTrust App for Android [[5]](#footnote-5)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook per Android [[5]](#footnote-5)<br /><br />Samsung Email (S3 e versioni successive) [[5]](#footnote-5)<br /><br />Classificazione TITUS per dispositivi mobili <br /><br />Web browser [[4]](#footnote-4)|App Azure Information Protection (visualizzazione di testo e immagini protetti)|
-|**macOS**|App di Office 365<br /><br />Office 2019 per Mac<br /><br />Office 2016 per Mac<br /><br />Office Online [[2]](#footnote-2)<br /><br />Web browser [[3]](#footnote-3)|Outlook 2019 per Mac<br /><br /> Outlook 2016 per Mac<br /><br />Web browser [[4]](#footnote-4)|App RMS sharing (visualizzazione di testo e immagini protetti e di file protetti in modo generico)|
+|**Windows**|App di Office 365 [[1]](#footnote-1)<br /><br />Office 2010<br /><br />Office 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office per il Web (visualizzazione di documenti protetti) [[2]](#footnote-2)<br /><br />Web browser [[3]](#footnote-3)|Outlook 2010<br /><br />Outlook 2013<br /><br />Office 2016 <br /><br />Office 2019 <br /><br />Office 365 ProPlus<br /><br />Web browser [[4]](#footnote-4)<br /><br />Windows Mail [[5]](#footnote-5) |Client Azure Information Protection per Windows: Testo, immagini, Pfile<br /><br />Plug-in SealPath RMS per AutoCAD: dwg|
+|**iOS**|GigaTrust<br /><br /> Office Mobile <br /><br />Office per il Web [[2]](#footnote-2)<br /><br />TITUS Docs<br /><br />Web browser [[3]](#footnote-3)|App Azure Information Protection (visualizzazione di posta elettronica protetta)<br /><br />BlackBerry Work<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook per iPad e iPhone [[5]](#footnote-5)<br /><br />TITUS Mail <br /><br />Web browser [[4]](#footnote-4)|App Azure Information Protection (visualizzazione di testo e immagini di protezione)<br /><br />Tito docs: Pfile|
+|**Android**|GigaTrust App for Android<br /><br />Office per il Web [[2]](#footnote-2)<br /><br />Office Mobile (a meno che non si utilizzino le etichette di riservatezza, limitate alla visualizzazione e alla modifica di documenti protetti) <br /><br />Web browser [[3]](#footnote-3)|9Folders [[5]](#footnote-5)<br /><br />App Azure Information Protection (visualizzazione di messaggi di posta elettronica protetti)<br /><br />BlackBerry Work <br /><br />GigaTrust App for Android [[5]](#footnote-5)<br /><br />Citrix WorxMail <br /><br />NitroDesk [[5]](#footnote-5)<br /><br />Outlook per Android [[5]](#footnote-5)<br /><br />Samsung Email (S3 e versioni successive) [[5]](#footnote-5)<br /><br />Classificazione TITUS per dispositivi mobili <br /><br />Web browser [[4]](#footnote-4)|App Azure Information Protection (visualizzazione di testo e immagini protetti)|
+|**macOS**|App di Office 365<br /><br />Office 2019 per Mac<br /><br />Office 2016 per Mac<br /><br />Office per il Web [[2]](#footnote-2)<br /><br />Web browser [[3]](#footnote-3)|Outlook 2019 per Mac<br /><br /> Outlook 2016 per Mac<br /><br />Web browser [[4]](#footnote-4)|App RMS sharing (visualizzazione di testo e immagini protetti e di file protetti in modo generico)|
 |**Windows 10 Mobile**|App Office Mobile (visualizzazione di documenti protetti con Azure RMS) <br /><br />Web browser [[3]](#footnote-3)|Citrix WorxMail <br /><br />Posta di Outlook (visualizzazione di messaggi di posta elettronica protetti) <br /><br />Web browser [[4]](#footnote-4)|Non supportate|
 |**Blackberry 10**|Web browser [[3]](#footnote-3)|Posta elettronica Blackberry [[5]](#footnote-5) <br /><br />Web browser [[4]](#footnote-4)|Non supportate|
 

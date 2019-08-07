@@ -13,14 +13,15 @@ ms.assetid: 9f4cbd16-58e5-421f-a472-8d279e952760
 audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
-ms.openlocfilehash: d23664686da33cbc10d02d45aeeb9fe0e99ed10b
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.custom: dev
+ms.openlocfilehash: ef9e600f05d4935a03e105cca370a8afa82fa5d9
+ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60178455"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68792361"
 ---
-# <a name="get-started"></a>Operazioni preliminari
+# <a name="get-started"></a>Attività iniziali
 
 Per questa versione di Microsoft Rights Management SDK 4.2, l'approccio introduttivo alla prima applicazione si basa sulle guide all'installazione dell'ambiente di sviluppo per ciascuno dei sistemi operativi o delle piattaforme. Per iniziare a creare l'applicazione abilitata all'uso di diritti, seguire questa procedura:
 
