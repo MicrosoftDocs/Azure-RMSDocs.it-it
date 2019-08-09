@@ -4,19 +4,19 @@ description: Panoramica della protezione HYOK (AD RMS) con Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 04/17/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 01bd7936f0269d46b6eb782bdd132e0f80bb3d98
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 14864dd4840fe967b37ab4bd6fbde1de9e2f580d
+ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789577"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862702"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Protezione HYOK (hold your own key) per Azure Information Protection
 
@@ -70,24 +70,24 @@ Nella tabella seguente sono riportati gli scenari supportati per la protezione d
 
 |Piattaforma|Applicazione|Supportato|
 |----------------------|----------|-----------|
-|Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Word, Excel, PowerPoint|Protezione: Sì<br /><br />Consumo: Yes|
-|Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Outlook|Protezione: Sì<br /><br />Consumo: Sì|
-|Windows|Client di Azure Information Protection|Protezione: Sì <br /><br />Consumo: Sì|
-|Windows|Visualizzatore di Azure Information Protection|Protezione: Non applicabile<br /><br />Consumo: Sì|
+|Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Word, Excel, PowerPoint|Protezione: Sì<br /><br />Consumo: Sì|
+|Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Outlook|Protezione: Yes<br /><br />Consumo: Yes|
+|Windows|Client di Azure Information Protection|Protezione: Sì <br /><br />Consumo: Yes|
+|Windows|Visualizzatore di Azure Information Protection|Protezione: Non applicabile<br /><br />Consumo: Yes|
 |Windows|Client di Azure Information Protection con cmdlet per le etichette di PowerShell|Protezione: Sì<br /><br />Consumo: Sì|
-|Windows|Scanner di Azure Information Protection|Protezione: Sì<br /><br />Consumo: Yes|
+|Windows|Scanner di Azure Information Protection|Protezione: Sì<br /><br />Consumo: Sì|
 |Windows|Applicazione di condivisione Rights Management|Protezione: No<br /><br />Consumo: Yes|
 |MacOS|Office per Mac <br /><br /> - Word, Excel, PowerPoint|Protezione: No<br /><br />Consumo: Sì|
 |MacOS|Office per Mac<br /><br />- Outlook|Protezione: No<br /><br />Consumo: Yes|
-|MacOS|Applicazione di condivisione Rights Management|Protezione: No<br /><br />Consumo: Yes|
+|MacOS|Applicazione di condivisione Rights Management|Protezione: No<br /><br />Consumo: Sì|
 |iOS|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protezione: No<br /><br />Consumo: Yes|
 |iOS|Office Mobile <br /><br />-Outlook|Protezione: No<br /><br />Consumo: No|
 |iOS|Visualizzatore di Azure Information Protection|Protezione: Non applicabile<br /><br />Consumo: Sì|
-|Android|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protezione: No<br /><br />Consumo: Yes|
+|Android|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protezione: No<br /><br />Consumo: Sì|
 |Android|Office Mobile <br /><br />- Outlook|Protezione: No<br /><br />Consumo: No|
-|Android|Visualizzatore di Azure Information Protection|Protezione: Non applicabile<br /><br />Consumo: Sì|
+|Android|Visualizzatore di Azure Information Protection|Protezione: Non applicabile<br /><br />Consumo: Yes|
 |Web|Outlook sul Web|Protezione: No<br /><br />Consumo: No|
-|Web|Office Online<br /><br />- Word, Excel, PowerPoint|Protezione: No<br /><br />Consumo: No|
+|Web|Office per il Web<br /><br />- Word, Excel, PowerPoint|Protezione: No<br /><br />Consumo: No|
 |Universale|App universali di Office<br /><br />- Word, Excel, PowerPoint|Protezione: No<br /><br />Consumo: No|
 
 

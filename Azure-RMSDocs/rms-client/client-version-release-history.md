@@ -4,7 +4,7 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 08/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ca547ec6ba957eba15df4f5835cb5d668053d11e
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: bb9dbea01c501ef7fa8e0639ae9416c4f0f4045e
+ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793540"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862728"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection: Cronologia delle versioni e criteri per il supporto
 
@@ -96,7 +96,7 @@ Questa versione include MSIPC versione 1.0.3889.0419 del client RMS.
 
 **Data di rilascio**: 04/16/2019
 
-Supportato tramite 02/15/2020
+Supportato tramite 01/15/2020
 
 Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
 

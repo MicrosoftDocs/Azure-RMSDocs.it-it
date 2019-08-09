@@ -3,7 +3,7 @@ title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
 author: cabailey
 ms.author: cabailey
-ms.date: 07/30/2019
+ms.date: 08/08/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8f783daea65e29ba33d2395208994e9f6b92d7b2
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 62572897d1333eb62509509ce4938099a53dabe2
+ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793779"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68862732"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -118,7 +118,7 @@ Per generare questi report, gli endpoint inviano i seguenti tipi di informazioni
 
 Queste informazioni vengono archiviate in un'area di lavoro di Azure Log Analytics di proprietà dell'organizzazione e possono essere visualizzate, indipendentemente da Azure Information Protection, dagli utenti con i diritti di accesso all'area di lavoro. Per informazioni dettagliate, vedere la sezione [Autorizzazioni necessarie per la funzionalità di analisi di Azure Information Protection](#permissions-required-for-azure-information-protection-analytics). Per informazioni sulla gestione dell'accesso all'area di lavoro, vedere la sezione [Gestire l'accesso all'area di lavoro Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) nella documentazione di Azure.
 
-Per impedire ai client di Azure Information Protection di inviare questi dati, configurare l'[impostazione dei criteri](configure-policy-settings.md) **Invia i dati di controllo a Log Analytics di Azure Information Protection** su **No**:
+Per impedire ai client di Azure Information Protection (versione classica) di inviare questi dati, impostare l' [impostazione dei criteri](configure-policy-settings.md) **Invia dati di controllo su Azure Information Protection log Analytics** su **disattivato**:
 
 - Per fare in modo che la maggior parte degli utenti possa inviare questi dati e un subset di utenti non possa inviare dati di controllo: 
     - Impostare **Invia i dati di controllo a Log Analytics di Azure Information Protection** su **No** in un criterio con ambito per il subset di utenti. Questa configurazione è tipica per gli scenari di produzione.
@@ -128,7 +128,11 @@ Per impedire ai client di Azure Information Protection di inviare questi dati, c
 
 #### <a name="content-matches-for-deeper-analysis"></a>Corrispondenze di contenuto per un'analisi più approfondita 
 
-L'area di lavoro Log Analytics di Azure per Azure Information Protection include una casella di controllo che consente di raccogliere e archiviare anche i dati identificati dai tipi di informazioni riservate o da condizioni personalizzate. Possono essere inclusi ad esempio numeri di carta di credito, numeri di previdenza sociale, numeri di passaporto e numeri di conto bancario. Se non si vogliono inviare questi dati aggiuntivi, non selezionare questa casella di controllo. Se si vuole che la maggior parte degli utenti possa inviare i dati aggiuntivi e un subset di utenti non possa inviarli, selezionare la casella di controllo e configurare un'[impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in un criterio con ambito per il subset di utenti.
+L'area di lavoro Log Analytics di Azure per Azure Information Protection include una casella di controllo che consente di raccogliere e archiviare anche i dati identificati dai tipi di informazioni riservate o da condizioni personalizzate. Possono essere inclusi ad esempio numeri di carta di credito, numeri di previdenza sociale, numeri di passaporto e numeri di conto bancario. Se non si desidera inviare questi dati aggiuntivi, non selezionare la casella di controllo **Abilita analisi più approfondita nei dati sensibili**. Se si vuole che la maggior parte degli utenti invii questi dati aggiuntivi e un subset di utenti non può inviarlo, selezionare la casella di controllo e quindi:
+
+- Per il client classico: Configurare un' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in un criterio con ambito per il subset di utenti.
+
+- Per il client Unified Labeling: Configurare un' [impostazione avanzata](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in un criterio di etichetta per il subset di utenti.
 
 Dopo la raccolta, le corrispondenze del contenuto vengono visualizzate nei report quando si esegue il drill-down nei file dai log attività, per visualizzare i **Dettagli attività**. Queste informazioni possono essere anche visualizzate e recuperate tramite query.
 
@@ -138,7 +142,7 @@ Per visualizzare i report di Azure Information Protection e creare report person
 |Requisito|Altre informazioni|
 |---------------|--------------------|
 |Una sottoscrizione di Azure che include Log Analytics ed è per lo stesso tenant di Azure Information Protection|Vedere la pagina dei [prezzi di Monitoraggio di Azure](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Se non si dispone di un abbonamento di Azure o attualmente non si usa Azure Log Analytics, la pagina dei prezzi include un collegamento per una versione di valutazione gratuita.|
-|Client di Azure Information Protection|Sia il client di etichettatura unificato che il client classico sono supportati. <br /><br />Se non si dispone già di uno di questi client, è possibile scaricarli e installarli dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). <br /><br /> Assicurarsi di disporre della versione più recente per supportare [tutte le funzionalità](#features-that-require-a-minimum-version-of-the-client) per Azure Information Protection Analytics.|
+|Client di Azure Information Protection|Sono supportati sia il client Unified labeling che il client classico. <br /><br />Se non si dispone già di uno di questi client, è possibile scaricarli e installarli dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). <br /><br /> Assicurarsi di disporre della versione più recente per supportare [tutte le funzionalità](#features-that-require-a-minimum-version-of-the-client) per Azure Information Protection Analytics.|
 |Microsoft Cloud App Security |Per visualizzare le informazioni da Microsoft Cloud App Security, configurare l' [integrazione di Azure Information Protection](https://docs.microsoft.com/cloud-app-security/azip-integration).|
 |Per il report **Individuazione e rischio**: <br /><br />-Per visualizzare i dati dagli archivi dati locali, è stata distribuita almeno un'istanza dello scanner Azure Information Protection <br /><br />-Per visualizzare i dati dai computer Windows 10, è necessario che siano una build minima di 1809. si sta usando Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) ed è stata abilitata la funzionalità di integrazione Azure Information Protection di Microsoft Centro sicurezza Defender|Per le istruzioni di installazione per lo scanner, vedere [Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner.md). <br /><br />Per informazioni sulla configurazione e sull'uso della funzionalità di integrazione Azure Information Protection da Microsoft Defender Security Center, vedere [Panoramica di Information Protection in Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
 |Per il report **Raccomandazioni**: <br /><br />-Per aggiungere un nuovo repository di dati dal portale di Azure come azione consigliata, è necessario usare una versione dello scanner Azure Information Protection configurata nel portale di Azure |Per distribuire lo scanner, vedere [Deploying the Azure Information Protection scanner to classificare e proteggere automaticamente i file](deploy-aip-scanner.md).|
@@ -192,16 +196,16 @@ Tuttavia, un'assegnazione di ruolo tipica per molte organizzazioni è il **ruolo
 
 ### <a name="features-that-require-a-minimum-version-of-the-client"></a>Funzionalità che richiedono una versione minima del client
 
-È possibile utilizzare le informazioni sulla cronologia delle versioni per il [client di Azure Information Protection Unified Labeling](./rms-client/unifiedlabelingclient-version-release-history.md) e il [client di Azure Information Protection (classico)](./rms-client/client-version-release-history.md) per verificare se la versione del client supporta tutti i report centrali funzionalità. Versioni minime per i client:
+I client di Azure Information Protection supportano il controllo di base (utilizzo delle etichette) e l'individuazione degli endpoint (identificazione dei tipi di informazioni riservate).
 
-Per il client di Azure Information Protection Unified Labeling:
+Client per l'etichettatura unificata di Azure Information Protection:
 
-- Supporto per il controllo e l'individuazione degli endpoint: Versione 2.0.778.0
+- Supporto per il controllo di base e l'individuazione degli endpoint: Versione minima di 2.0.778.0
 
-Per il client di Azure Information Protection (versione classica):
+Client di Azure Information Protection (versione classica):
 
-- Supporto per il controllo: Versione 1.41.51.0
-- Supporto per l'individuazione di endpoint: Versione 1.48.204.0
+- Supporto per il controllo di base: Versione minima di 1.41.51.0
+- Supporto per l'individuazione di endpoint: Versione minima di 1.48.204.0
 
 ### <a name="storage-requirements-and-data-retention"></a>Requisiti di archiviazione e conservazione dei dati
 
