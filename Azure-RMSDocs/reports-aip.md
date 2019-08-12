@@ -3,7 +3,7 @@ title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
 author: cabailey
 ms.author: cabailey
-ms.date: 08/08/2019
+ms.date: 08/11/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 62572897d1333eb62509509ce4938099a53dabe2
-ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
+ms.openlocfilehash: aa9742e4306002592c18b39fde028da7f965fab0
+ms.sourcegitcommit: 13515eaaf776b9e3fa58185992dd355404d2a3a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862732"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68948651"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -126,11 +126,13 @@ Per impedire ai client di Azure Information Protection (versione classica) di in
 - Per fare in modo che solo un subset di utenti possa inviare dati di controllo: 
     - Impostare **Invia i dati di controllo a Log Analytics di Azure Information Protection** su **No** nei criteri globali e su **Sì** in un criterio con ambito per il subset di utenti. Questa configurazione è tipica per gli scenari di test.
 
+Per evitare che Azure Information Protection client unificati invii questi dati, configurare un' [impostazione avanzata](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics)dei criteri di etichetta.
+
 #### <a name="content-matches-for-deeper-analysis"></a>Corrispondenze di contenuto per un'analisi più approfondita 
 
 L'area di lavoro Log Analytics di Azure per Azure Information Protection include una casella di controllo che consente di raccogliere e archiviare anche i dati identificati dai tipi di informazioni riservate o da condizioni personalizzate. Possono essere inclusi ad esempio numeri di carta di credito, numeri di previdenza sociale, numeri di passaporto e numeri di conto bancario. Se non si desidera inviare questi dati aggiuntivi, non selezionare la casella di controllo **Abilita analisi più approfondita nei dati sensibili**. Se si vuole che la maggior parte degli utenti invii questi dati aggiuntivi e un subset di utenti non può inviarlo, selezionare la casella di controllo e quindi:
 
-- Per il client classico: Configurare un' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in un criterio con ambito per il subset di utenti.
+- Per il client e lo scanner classici: Configurare un' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in un criterio con ambito per il subset di utenti.
 
 - Per il client Unified Labeling: Configurare un' [impostazione avanzata](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in un criterio di etichetta per il subset di utenti.
 

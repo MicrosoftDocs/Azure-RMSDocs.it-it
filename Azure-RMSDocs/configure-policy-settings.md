@@ -4,19 +4,19 @@ description: Configurare le impostazioni nei criteri di Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/23/2019
+ms.date: 08/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 24eb4e6fcea22bc4b367e8bb37ce2e99080dc528
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: e119c13a37732aad5aab04a0975e4a437aa78a0b
+ms.sourcegitcommit: 13515eaaf776b9e3fa58185992dd355404d2a3a0
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68792510"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68948631"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Come configurare le impostazioni dei criteri per Azure Information Protection
 
@@ -48,7 +48,7 @@ Per configurare queste impostazioni:
     
     - **Invia i dati di controllo a Log Analytics di Azure Information Protection**: prima di creare un'area di lavoro di Azure Log Analytics per i [dati di analisi di Azure Information Protection](reports-aip.md), i valori per questa impostazione sono **No** e **Non configurato**. Quando si crea l'area di lavoro, i valori diventano **No** e **Sì**.
         
-        Quando l'impostazione è **Sì**, gli endpoint che supportano la creazione di report centralizzata inviano i dati di controllo al servizio Azure Information Protection. Per altre informazioni sulle informazioni inviate e archiviate, vedere la sezione [Informazioni raccolte e inviate a Microsoft](reports-aip.md#information-collected-and-sent-to-microsoft). Impostare questa opzione su **No** per impedire l'invio di questi dati.
+        Quando l'impostazione è impostata **su on**, i client che supportano il reporting centrale inviano i dati al servizio Azure Information Protection. Queste informazioni includono le etichette applicate e quando un utente seleziona un'etichetta con una classificazione più bassa o rimuove un'etichetta. Per ulteriori informazioni sulle informazioni inviate e archiviate, vedere la sezione [informazioni raccolte e inviate a Microsoft](reports-aip.md#information-collected-and-sent-to-microsoft) nella documentazione relativa al reporting centrale. Impostare questa impostazione criterio su **disattivato** per impedire l'invio di questi dati.
     
     - **Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**: quando si imposta questa opzione su **Sì**, a tutti i documenti e messaggi di posta elettronica inviati deve essere applicata un'etichetta. L'etichetta può essere assegnata manualmente da un utente, automaticamente o come risultato di una [condizione](configure-policy-classification.md) oppure per impostazione predefinita selezionando l'opzione **Selezionare l'etichetta predefinita**.
         
