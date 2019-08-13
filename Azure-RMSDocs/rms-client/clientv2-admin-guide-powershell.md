@@ -45,7 +45,7 @@ I cmdlet vengono installati con il modulo di PowerShell **AzureInformationProtec
 Questo modulo viene installato in **\Programmi (x86)\Microsoft Azure Information Protection** e aggiunge questa cartella alla variabile di sistema **PSModulePath**. Il file DLL per questo modulo si chiama **AIP.dll**.
 
 > [!IMPORTANT]
-> Il modulo AzureInformationProtection non supporta la configurazione delle impostazioni avanzate per le etichette o i criteri di etichetta. Per queste impostazioni, è necessario Office 365 Centro sicurezza e conformità PowerShell. Per ulteriori informazioni, vedere [Custom Configurations for the Azure Information Protection Unified Labeling client](clientv2-admin-guide-customizations.md).
+> Il modulo AzureInformationProtection non supporta la configurazione delle impostazioni avanzate per le etichette o i criteri di etichetta. Per queste impostazioni, è necessario Office 365 Centro sicurezza e conformità PowerShell. Per ulteriori informazioni, vedere [Configurazioni personalizzate per il client di Unified Labelling di Azure Information Protection](clientv2-admin-guide-customizations.md).
 
 ### <a name="prerequisites-for-using-the-azureinformationprotection-module"></a>Prerequisiti per l'uso del modulo AzureInformationProtection
 
