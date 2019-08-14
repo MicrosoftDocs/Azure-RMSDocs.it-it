@@ -14,7 +14,7 @@ ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 4a00d85ea5669a5a81a7380796888edff939e310
 ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: it-IT
 ms.lasthandoff: 08/05/2019
 ms.locfileid: "68791744"
@@ -183,4 +183,4 @@ Per ulteriori indicazioni e suggerimenti del team dell'esperienza clienti, veder
 
 Per altre informazioni sulle etichette migrate che possono ora essere configurate e pubblicate in uno dei centri di amministrazione, vedere [Panoramica delle etichette di riservatezza](/Office365/SecurityCompliance/sensitivity-labels).
 
-Se non è già stato fatto, installare il client di Azure Information Protection Unified labeling. Per informazioni sulla versione, una guida dell'amministratore e un manuale dell'utente, vedere [Azure Information Protection Unified Labeling client for Windows](./rms-client/aip-clientv2.md).
+Se non è già stato fatto, installare il client di Azure Information Protection Unified labeling. Per informazioni sulla versione, una guida dell'amministratore e un manuale dell'utente, vedere [Azure Information Protection client di etichetta unificata per Windows](./rms-client/aip-clientv2.md).
