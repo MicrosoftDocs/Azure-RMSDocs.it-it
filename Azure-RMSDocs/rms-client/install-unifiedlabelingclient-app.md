@@ -4,19 +4,19 @@ description: Istruzioni per consentire agli utenti di installare il client di Az
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/17/2019
+ms.date: 08/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 548080426cadfb14bd8d03f0550aa06258f80e81
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 3c92a57864d81a20577ced49ad6346b03617d6a6
+ms.sourcegitcommit: b02dc1b575213ea85ca984a0da457dd99f27b762
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789898"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68994398"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Manuale dell'utente: Scaricare e installare il client Azure Information Protection Unified Labeling
 
@@ -34,7 +34,7 @@ Inoltre:
 
 ## <a name="to-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Per scaricare e installare il client per l'etichettatura unificata di Azure Information Protection
 
-Prima di installare il client Azure Information Protection Unified Labeling, verificare con l'amministratore o help desk che si stia usando le etichette di riservatezza di Office 365.
+Prima di installare il client Azure Information Protection Unified Labeling, verificare con l'amministratore o help desk di usare le etichette di [riservatezza](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) per classificare e proteggere documenti e messaggi di posta elettronica.
 
 1. Scaricare **AzInfoProtection_UL. exe** dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 

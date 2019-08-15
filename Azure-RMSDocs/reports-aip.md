@@ -3,7 +3,7 @@ title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
 author: cabailey
 ms.author: cabailey
-ms.date: 08/11/2019
+ms.date: 08/13/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: aa9742e4306002592c18b39fde028da7f965fab0
-ms.sourcegitcommit: 13515eaaf776b9e3fa58185992dd355404d2a3a0
+ms.openlocfilehash: ede0c4b11a2a8bf4f9e059828dda1b58ba4d5f9c
+ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68948651"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978655"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -130,7 +130,7 @@ Per evitare che Azure Information Protection client unificati invii questi dati,
 
 #### <a name="content-matches-for-deeper-analysis"></a>Corrispondenze di contenuto per un'analisi più approfondita 
 
-L'area di lavoro Log Analytics di Azure per Azure Information Protection include una casella di controllo che consente di raccogliere e archiviare anche i dati identificati dai tipi di informazioni riservate o da condizioni personalizzate. Possono essere inclusi ad esempio numeri di carta di credito, numeri di previdenza sociale, numeri di passaporto e numeri di conto bancario. Se non si desidera inviare questi dati aggiuntivi, non selezionare la casella di controllo **Abilita analisi più approfondita nei dati sensibili**. Se si vuole che la maggior parte degli utenti invii questi dati aggiuntivi e un subset di utenti non può inviarlo, selezionare la casella di controllo e quindi:
+L'area di lavoro di Azure Log Analytics per Azure Information Protection include una casella di controllo che consente anche di raccogliere e archiviare i dati identificati come un tipo di informazioni riservate (condizioni predefinite o personalizzate). Possono essere inclusi ad esempio numeri di carta di credito, numeri di previdenza sociale, numeri di passaporto e numeri di conto bancario. Se non si desidera inviare questi dati aggiuntivi, non selezionare la casella di controllo **Abilita analisi più approfondita nei dati sensibili**. Se si vuole che la maggior parte degli utenti invii questi dati aggiuntivi e un subset di utenti non può inviarlo, selezionare la casella di controllo e quindi:
 
 - Per il client e lo scanner classici: Configurare un' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in un criterio con ambito per il subset di utenti.
 
@@ -144,7 +144,7 @@ Per visualizzare i report di Azure Information Protection e creare report person
 |Requisito|Altre informazioni|
 |---------------|--------------------|
 |Una sottoscrizione di Azure che include Log Analytics ed è per lo stesso tenant di Azure Information Protection|Vedere la pagina dei [prezzi di Monitoraggio di Azure](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Se non si dispone di un abbonamento di Azure o attualmente non si usa Azure Log Analytics, la pagina dei prezzi include un collegamento per una versione di valutazione gratuita.|
-|Client di Azure Information Protection|Sono supportati sia il client Unified labeling che il client classico. <br /><br />Se non si dispone già di uno di questi client, è possibile scaricarli e installarli dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). <br /><br /> Assicurarsi di disporre della versione più recente per supportare [tutte le funzionalità](#features-that-require-a-minimum-version-of-the-client) per Azure Information Protection Analytics.|
+|Client di Azure Information Protection|Sono supportati sia il client Unified labeling che il client classico. <br /><br />Se non si dispone già di uno di questi client, è possibile scaricarli e installarli dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
 |Microsoft Cloud App Security |Per visualizzare le informazioni da Microsoft Cloud App Security, configurare l' [integrazione di Azure Information Protection](https://docs.microsoft.com/cloud-app-security/azip-integration).|
 |Per il report **Individuazione e rischio**: <br /><br />-Per visualizzare i dati dagli archivi dati locali, è stata distribuita almeno un'istanza dello scanner Azure Information Protection <br /><br />-Per visualizzare i dati dai computer Windows 10, è necessario che siano una build minima di 1809. si sta usando Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) ed è stata abilitata la funzionalità di integrazione Azure Information Protection di Microsoft Centro sicurezza Defender|Per le istruzioni di installazione per lo scanner, vedere [Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner.md). <br /><br />Per informazioni sulla configurazione e sull'uso della funzionalità di integrazione Azure Information Protection da Microsoft Defender Security Center, vedere [Panoramica di Information Protection in Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
 |Per il report **Raccomandazioni**: <br /><br />-Per aggiungere un nuovo repository di dati dal portale di Azure come azione consigliata, è necessario usare una versione dello scanner Azure Information Protection configurata nel portale di Azure |Per distribuire lo scanner, vedere [Deploying the Azure Information Protection scanner to classificare e proteggere automaticamente i file](deploy-aip-scanner.md).|
@@ -196,19 +196,6 @@ Dopo aver configurato l'area di lavoro per l'analisi di Azure Information Protec
 
 Tuttavia, un'assegnazione di ruolo tipica per molte organizzazioni è il **ruolo con autorizzazioni di lettura per la sicurezza** di Azure AD e il ruolo **Lettore** di Azure.
 
-### <a name="features-that-require-a-minimum-version-of-the-client"></a>Funzionalità che richiedono una versione minima del client
-
-I client di Azure Information Protection supportano il controllo di base (utilizzo delle etichette) e l'individuazione degli endpoint (identificazione dei tipi di informazioni riservate).
-
-Client per l'etichettatura unificata di Azure Information Protection:
-
-- Supporto per il controllo di base e l'individuazione degli endpoint: Versione minima di 2.0.778.0
-
-Client di Azure Information Protection (versione classica):
-
-- Supporto per il controllo di base: Versione minima di 1.41.51.0
-- Supporto per l'individuazione di endpoint: Versione minima di 1.48.204.0
-
 ### <a name="storage-requirements-and-data-retention"></a>Requisiti di archiviazione e conservazione dei dati
 
 La quantità di dati raccolti e archiviati nell'area di lavoro di Azure Information Protection varierà in modo significativo per ogni tenant, a seconda di fattori quali il numero di Azure Information Protection client e altri endpoint supportati, indipendentemente dal fatto che si tratti di raccolta dei dati di individuazione degli endpoint, sono stati distribuiti scanner e così via.
@@ -219,7 +206,7 @@ Tuttavia, come punto di partenza, le stime seguenti potrebbero risultare utili:
 
 - Per i dati di controllo generati da client Azure Information Protection, scanner e Microsoft Defender ATP: 20 GB per 10.000 utenti attivi al mese.
 
-Se si usa l'etichettatura obbligatoria o si è configurata un'etichetta predefinita nei criteri globali, è probabile che le tariffe siano significativamente più elevate.
+Se si usa l'etichettatura obbligatoria o si è configurata un'etichetta predefinita per la maggior parte degli utenti, è probabile che le tariffe siano significativamente più elevate.
 
 I log di monitoraggio di Azure hanno una funzionalità di **utilizzo e costi stimati** che consentono di stimare e controllare la quantità di dati archiviati ed è inoltre possibile controllare il periodo di conservazione dei dati per l'area di lavoro log Analytics. Per altre informazioni, vedere [gestire l'utilizzo e i costi con i log di monitoraggio di Azure](https://docs.microsoft.com/azure/azure-monitor/platform/manage-cost-storage).
 
@@ -278,7 +265,7 @@ Per creare query personalizzate, usare i nomi di schema descrittivi implementati
 
 Usare la tabella seguente per identificare il nome descrittivo delle funzioni di eventi che è possibile usare per le query personalizzate con le funzionalità di analisi di Azure Information Protection.
 
-|Nome colonna|Descrizione|
+|Nome colonna|DESCRIZIONE|
 |-----------|-----------|
 |Time|Ora evento: UTC nel formato AAAA-MM-GGThh: MM: SS|
 |Utente|Utente: Formato UPN o dominio\utente|

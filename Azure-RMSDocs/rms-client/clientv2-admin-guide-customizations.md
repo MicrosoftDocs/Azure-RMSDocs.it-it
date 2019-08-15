@@ -3,7 +3,7 @@ title: Configurazioni personalizzate-Azure Information Protection client per l'a
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/11/2019
+ms.date: 08/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8957bd019beb3af99ca1794118f42aaa2994d9f6
-ms.sourcegitcommit: 13515eaaf776b9e3fa58185992dd355404d2a3a0
+ms.openlocfilehash: ab409f5f293708db121df0c600cb9e7b5b970a18
+ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68948660"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68978753"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -655,15 +655,15 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 
 Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-[Azure Information Protection Analytics](../reports-aip.md) può segnalare i documenti salvati dai client Azure Information Protection quando il contenuto contiene informazioni riservate. Per impostazione predefinita, se si specifica l'impostazioneavanzata [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) , queste informazioni vengono inviate dal client Azure Information Protection unified Labeling per Azure Information Protection Analytics.
+Quando si usa il client di assegnazione di etichette unificato Azure Information Protection nelle app di Office, Cerca informazioni riservate nei documenti quando vengono salvate per la prima volta. Se si specifica l'impostazione avanzata [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) non è impostato su **false**, i tipi di informazioni sensibili trovati (predefiniti o personalizzati) verranno quindi inviati a Azure Information Protection Analytics.
 
-Per modificare questo comportamento in modo che queste informazioni non vengano inviate dal client Unified Labeling, immettere le stringhe seguenti per i criteri di etichetta selezionati:
+Per modificare questo comportamento in modo che i tipi di informazioni riservate individuate dal client di etichettatura unificata non vengano inviati a Azure Information Protection Analytics, immettere le stringhe seguenti per i criteri di etichetta selezionati:
 
 - Key: **RunAuditInformationTypesDiscovery**
 
 - Valore: **False**
 
-Se si imposta questa impostazione client avanzata, i risultati del controllo vengono comunque inviati dal client di etichettatura unificata, ma le informazioni sono limitate al reporting quando un utente ha eseguito l'accesso al contenuto con etichetta.
+Se si imposta questa impostazione client avanzata, le informazioni di controllo possono comunque essere inviate dal client, ma le informazioni sono limitate alla segnalazione quando un utente ha eseguito l'accesso al contenuto con etichetta.
 
 Ad esempio:
 
@@ -681,7 +681,7 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 
 Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-Quando si seleziona la casella di controllo [Analisi di Azure Information Protection](../reports-aip.md) che raccoglie le corrispondenze di contenuto per i tipi di informazioni riservate o le condizioni personalizzate, per impostazione predefinita, queste informazioni vengono inviate da tutti gli utenti. Se si dispone di alcuni utenti che non devono inviare questi dati, creare l'impostazione client avanzata seguente in un criterio etichetta per questi utenti: 
+Quando si seleziona la casella di controllo [Azure Information Protection Analytics](../reports-aip.md) che Abilita l'analisi più approfondita nei dati sensibili raccoglie le corrispondenze di contenuto per i tipi di informazioni riservate o le condizioni personalizzate, per impostazione predefinita, queste informazioni sono Inviato da tutti gli utenti, inclusi gli account del servizio che eseguono lo scanner Azure Information Protection. Se si dispone di alcuni utenti che non devono inviare questi dati, creare l'impostazione client avanzata seguente in un criterio etichetta per questi utenti: 
 
 - Key: **LogMatchedContent**
 

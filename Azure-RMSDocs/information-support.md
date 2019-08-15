@@ -4,7 +4,7 @@ description: Risorse per gli amministratori, che includono informazioni sulle nu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/23/2019
+ms.date: 08/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 9364856f9c84545d8094a4cb6057cd3422f2f1d7
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: d29a8918244f1e3dcdf615d3959df2b3969ffb5f
+ms.sourcegitcommit: b02dc1b575213ea85ca984a0da457dd99f27b762
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788398"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68994464"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informazioni e supporto per Azure Information Protection
 
@@ -57,7 +57,7 @@ Le sezioni seguenti consentono di accedere a informazioni sulle opzioni di suppo
 
 ### <a name="to-contact-microsoft-support"></a>Per contattare il supporto Microsoft
 
-Se si dispone del supporto tecnico Premier, visitare il [portale per i clienti Premier Support](https://premier.microsoft.com/) per segnalare eventi imprevisti, cercare soluzioni e ottenere assistenza.
+Se si dispone di supporto tecnico Premier, visitare l' [Hub dei servizi Microsoft](https://serviceshub.microsoft.com/support/contactsupport) per inviare eventi imprevisti, esplorare le soluzioni e ottenere assistenza.
 
 L'utente potrebbe essere idoneo per **FastTrack**: può usufruire del FastTrack Center Benefit se acquista almeno 150 licenze di Azure Information Protection in un piano idoneo. Il FastTrack Center Benefit consente di collaborare con gli specialisti Microsoft per valutare, correggere e attivare servizi idonei. Per altre informazioni, vedere [FastTrack Center Benefit per Enterprise Mobility + Security (EMS)](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems).
 

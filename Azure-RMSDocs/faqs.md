@@ -4,7 +4,7 @@ description: Alcune domande frequenti su Azure Information Protection e il relat
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/01/2019
+ms.date: 08/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: f93b8e8deeb6a1329262cd08f0bb905d53507812
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 67e9e53ddcd8e5604493955a0b3a9c2fe289cb3c
+ms.sourcegitcommit: b02dc1b575213ea85ca984a0da457dd99f27b762
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794158"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68994466"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
@@ -41,11 +41,11 @@ Per altre informazioni, vedere [Announcing availability of information protectio
 
 Originariamente, Office 365 aveva solo [etichette di conservazione](https://support.office.com/article/af398293-c69d-465e-a249-d74561552d30) che consentivano di classificare documenti e messaggi di posta elettronica per il controllo e la conservazione quando il contenuto si trovava in servizi di Office 365. Le etichette in Azure Information Protection consentono invece di applicare criteri di classificazione e protezione coerenti per documenti e messaggi di posta elettronica, sia locali che nel cloud.
 
-Annunciata in occasione di Microsoft Ignite 2018 a Orlando, è ora disponibile un'opzione che consente di creare e configurare [etichette di riservatezza](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) oltre a quelle di conservazione nei centri di amministrazione: Centro sicurezza e conformità di Office 365, Centro sicurezza Microsoft 365 o Centro conformità Microsoft 365. È possibile eseguire la migrazione delle etichette di Azure Information Protection esistenti al nuovo archivio di etichette unificato, da usare come etichette di riservatezza con Office 365. 
+Annunciata in occasione di Microsoft Ignite 2018 a Orlando, è ora disponibile un'opzione che consente di creare e configurare [etichette di riservatezza](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) oltre a quelle di conservazione nei centri di amministrazione: Centro sicurezza e conformità di Office 365, Centro sicurezza Microsoft 365 o Centro conformità Microsoft 365. È possibile eseguire la migrazione delle etichette di Azure Information Protection esistenti al nuovo archivio di etichette unificato, da usare come etichette di riservatezza con le app di Office. 
 
 Per altre informazioni sulla gestione dell'etichettatura unificata e su come verranno supportate queste etichette, vedere il post di blog, [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967) (Annuncio della disponibilità di funzionalità di protezione delle informazioni per proteggere i dati sensibili).
 
-Per altre informazioni sulla migrazione delle etichette esistenti, vedere [Come eseguire la migrazione di etichette di Azure Information Protection a Office 365](configure-policy-migrate-labels.md).
+Per ulteriori informazioni sulla migrazione delle etichette esistenti, vedere [How to migrate Azure Information Protection labels to Unified Sensitivity labels](configure-policy-migrate-labels.md).
 
 ## <a name="whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Qual è la differenza tra il client Azure Information Protection e il client di Azure Information Protection Unified Labeling?
 
@@ -69,11 +69,11 @@ Usare il numero di **versione** visualizzato per identificare il client:
 
 - Una versione **2**, ad esempio, **2.2.14.0**, identifica il Azure Information Protection client unificato di assegnazione di etichette.
 
-## <a name="when-is-the-right-time-to-migrate-my-labels-to-office-365"></a>Qual è il momento giusto per la migrazione delle etichette in Office 365?
+## <a name="when-is-the-right-time-to-migrate-my-labels"></a>Quando è il momento giusto per eseguire la migrazione delle etichette?
 
 Ora che l'opzione per eseguire la migrazione delle etichette nel portale di Azure è disponibile a livello generale, è consigliabile attivare la migrazione in modo che sia possibile usare le etichette come etichette di riservatezza con [client e servizi che supportano l'assegnazione](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)di etichette unificata.
 
-Per ulteriori informazioni e istruzioni, vedere [How to migrate Azure Information Protection labels to Office 365 Sensitivity labels](configure-policy-migrate-labels.md).
+Per ulteriori informazioni e istruzioni, vedere [How to migrate Azure Information Protection labels to Unified Sensitivity labels](configure-policy-migrate-labels.md).
 
 ## <a name="after-ive-migrated-my-labels-which-management-portal-do-i-use"></a>Dopo aver eseguito la migrazione delle etichette, qual è il portale di gestione da usare?
 

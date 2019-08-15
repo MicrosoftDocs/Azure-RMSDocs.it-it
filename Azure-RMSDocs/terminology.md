@@ -4,7 +4,7 @@ description: In caso di dubbio su una parola, un'espressione o un acronimo corre
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/14/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -14,12 +14,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: c851b2132810f4c15f4a67c4bf70b509b5d44cea
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: f05c5cae2b0bc38929fb2bba3e060f4e521aa053
+ms.sourcegitcommit: fc467e30b67ac218491fccea2d501350d3a656fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68792772"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69023979"
 ---
 # <a name="terminology-for-azure-information-protection"></a>Terminologia di Azure Information Protection
 
@@ -40,7 +40,7 @@ Client di Azure Information Protection (versione classica)|Talvolta abbreviato i
 |Etichetta per Azure Information Protection|Elemento che applica sempre un valore di classificazione a documenti e a messaggi di posta elettronica e può anche proteggerli. Quando viene applicata un'etichetta, le informazioni dell'etichetta vengono archiviate nei metadati per le applicazioni e i servizi in modo da consentire la lettura ed eventualmente l'uso.|
 |Criteri di Azure Information Protection|Configurazione definita dall'amministratore per i client e i servizi che usano le etichette e le impostazioni dei criteri di Azure Information Protection.|
 |Scanner di Azure Information Protection|Servizio eseguito in Windows Server che consente di individuare, classificare e proteggere i documenti in cartelle locali, condivisioni di rete e siti e raccolte di SharePoint Server.|
-|Client per l'etichettatura unificata di Azure Information Protection|Talvolta abbreviato in *client con etichetta unificata*.<br /><br />client per computer Windows che consente a utenti, amministratori e servizi di usare le etichette di riservatezza e le impostazioni di criteri dal Centro sicurezza e conformità di Office 365, dal Centro sicurezza Microsoft 365 e dal Centro conformità Microsoft 365. Sostituisce il client di Azure Information Protection (classico).|
+|Client per l'etichettatura unificata di Azure Information Protection|Talvolta abbreviato in *client con etichetta unificata*.<br /><br />Il client per i computer Windows che consente a utenti, amministratori e servizi di usare le etichette di riservatezza e le impostazioni dei criteri di etichetta dall'Centro sicurezza e conformità di Office 365, dal centro sicurezza Microsoft 365 e da Microsoft 365 Compliance Center. Sostituisce il client di Azure Information Protection (classico).|
 |Azure RMS|Vedere *Azure Rights Management*.|
 |Visualizzatore di Azure Information Protection|App eseguita su computer Windows e dispositivi mobili, per visualizzare i file protetti.|
 |Azure Rights Management|Spesso abbreviato in *Azure RMS*.<br /><br />Servizio Azure usato da Azure Information Protection che consente di proteggere documenti, file e messaggi di posta elettronica tramite crittografia e criteri.  Noto anche come *servizio Azure Rights Management*. I nomi precedenti includono:<br /><br />- *Windows Azure Active Directory Rights Management*: Spesso abbreviato in Windows Azure AD Rights Management servizio.<br /><br />- *RMS Online*: Nome proposto originale, che talvolta può essere visualizzato nei messaggi di errore e nelle voci del file di log.|
@@ -63,6 +63,8 @@ Client di Azure Information Protection (versione classica)|Talvolta abbreviato i
 |Information Rights Management|Spesso abbreviato in *IRM*.<br /><br />Termine usato in combinazione con i servizi Office, ad esempio Exchange Server, Word e SharePoint Online, per indicare la capacità di supporto dei servizi Microsoft Rights Management.|
 |IRM|Vedere *Information Rights Management*.|
 |Crittografia messaggi di Office|Spesso abbreviato in *OME*.<br /><br />Le nuove funzionalità di crittografia messaggi di Office 365 sono integrate a livello nativo con il servizio Azure Rights Management e offrono gli stessi livelli di protezione della posta elettronica per utenti interni ed esterni, aggiornamento automatico dei modelli e supporto dello scenario BYOK (Bring Your Own Key). L'implementazione della crittografia messaggi di Office precedente supportava solo i destinatari esterni, richiedeva una regola per il flusso della posta elettronica e non supportava BYOK.|
+|Microsoft Information Protection| Talvolta abbreviato in *MIP*.<br /><br /> Framework per prodotti e funzionalità integrate che usano lo stesso archivio di etichette ("etichette unificate") e consentono di proteggere le informazioni riservate dell'organizzazione.|
+|MIP| Vedere *Information Protection Microsoft*|
 |MSDRM|Termine usato talvolta in riferimento al client RMS 1.0, sostituito dal client più recente, MSIPC. Questo client meno recente supporta applicazioni sviluppate con RMS SDK 1.0 e supporta Office 2010 e 2007, Exchange 2010 e 2013 nonché SharePoint 2007 e 2010.|
 |MSIPC|A volte usato in riferimento al client RMS 2.0, che ha sostituito il meno recente client RMS, MSDRM. Questo client più recente supporta le applicazioni sviluppate con RMS SDK 2.0 e supporta Office 365 ProPlus, Office 2019, Office 2016, Office 2013, SharePoint 2013 e il client Azure Information Protection.|
 |protezione nativa|Livello di protezione disponibile in tutte le applicazioni abilitate per RMS che impedisce l'apertura di file da parte di utenti non autorizzati e permette anche di implementare criteri più severi, ad esempio consentire la sola lettura di file e vietarne la stampa. Questo tipo di protezione è inoltre associato al file anche quando quest'ultimo viene inoltrato ad altri utenti o salvato in posizioni pubbliche accessibili da altri utenti.|
@@ -84,7 +86,8 @@ Client di Azure Information Protection (versione classica)|Talvolta abbreviato i
 |Modalità di sola protezione|Modalità operativa per il client di Azure Information Protection quando non sono presenti criteri di Azure Information Protection per l'applicazione delle etichette. In questa modalità le etichette di classificazione non vengono visualizzate, ma gli utenti possono applicare la protezione di Rights Management.|
 |scanner|Vedere *Scanner di Azure Information Protection*.|
 |utente con privilegi avanzati|Gruppo di amministratori altamente affidabili che possono decrittografare e aprire i file protetti dall'organizzazione tramite un servizio Rights Management. In genere, questo livello di accesso è obbligatorio per documenti eDiscovery legali e team di controllo.|
-|chiave del tenant|Nota anche come chiave del certificato concessore di licenze server (SLC).<br /><br />Chiave univoca di un'organizzazione che protegge tutte le funzionalità di crittografia di Rights Management correlate alla chiave del tenant.|
+|chiave del tenant|Noto anche come *chiave del certificato concessore di licenze server (SLC)* .<br /><br />Chiave univoca di un'organizzazione che protegge tutte le funzionalità di crittografia di Rights Management correlate alla chiave del tenant.|
+|etichetta unificata| Nota anche come *etichetta*di riservatezza unificata.<br /><br /> Etichetta che può essere applicata da app, client e servizi che supportano Microsoft Information Protection Framework, per applicare la classificazione e, facoltativamente, la protezione. Nelle app e nei servizi di Office, le etichette unificate vengono implementate come etichette di riservatezza.|
 |rimuovere la protezione|Rimuovere i controlli di protezione da file o messaggi di posta elettronica, applicati tramite criteri di crittografia, identità, diritti di utilizzo e controllo di accesso per la protezione dei dati.|
 |licenza d'uso|Certificato associato a un documento che viene concesso a un utente che apre un file o un messaggio di posta elettronica protetto da un servizio Rights Management. Questo certificato contiene i diritti dell'utente per il file o il messaggio e-mail e la chiave di crittografia usata per crittografare il contenuto, nonché ulteriori restrizioni di accesso definite nei criteri del documento.|
 
