@@ -4,7 +4,7 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/12/2019
+ms.date: 08/16/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a43bdbf2e4ec14b60ac37164273529c764cffa98
-ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
+ms.openlocfilehash: e2cce9e76ae1b583aacc30df7d2abe5940106455
+ms.sourcegitcommit: bdfade60c1939f5c540bbf82859af060eb629f68
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978792"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69546076"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -670,7 +670,7 @@ Specificare un nome di regola di migrazione a propria scelta. Usare un nome desc
 
 Requisito: I documenti con l'etichetta di Secure Islands "Riservato" devono essere rietichettati come "Riservato" da Azure Information Protection.
 
-In questo esempio:
+Esempio:
 
 - L'etichetta di Azure Information Protection da usare è **Riservato** e ha l'ID etichetta **1ace2cc3-14bc-4142-9125-bf946a70542c**. 
 
@@ -683,11 +683,11 @@ L'impostazione client avanzata è la seguente:
 |---------------------|---------|
 |LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c, "L'etichetta Secure Islands è Riservato",Classificazione,Riservato|
 
-### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>Esempio 2: Mapping uno-a-uno per un altro nome di etichetta
+### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>Esempio 2 Mapping uno-a-uno per un altro nome di etichetta
 
 Requisito: I documenti con l'etichetta di Secure Islands "Sensibile" devono essere rietichettati come "Riservatezza elevata" da Azure Information Protection.
 
-In questo esempio:
+Esempio:
 
 - L'etichetta di Azure Information Protection da usare è **Riservatezza elevata** e ha l'ID etichetta **3e9df74d-3168-48af-8b11-037e3021813f**.
 
@@ -705,7 +705,7 @@ L'impostazione client avanzata è la seguente:
 
 Requisito: Sono disponibili due etichette di Secure Islands che includono la parola "Interno" e si vuole che i documenti con queste etichette di Secure Islands vengano rietichettati come "Generale" da Azure Information Protection.
 
-In questo esempio:
+Esempio:
 
 - L'etichetta di Azure Information Protection da usare è **Generale** e ha l'ID etichetta **2beb8fe7-8293-444c-9768-7fdc6f75014d**.
 
@@ -849,15 +849,15 @@ A questo punto, quando un utente apre e salva uno di questi documenti di Office,
 
 Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
 
-Quando il client Azure Information Protection viene usato nelle app di Office, Cerca informazioni riservate nei documenti quando vengono salvate per la prima volta. Se si specifica che il client non è configurato per l'invio di informazioni di controllo, i tipi di informazioni riservate trovate (predefinite o personalizzate) vengono quindi inviati a [Azure Information Protection Analytics](../reports-aip.md).
+Quando il client Azure Information Protection viene usato nelle app di Office, Cerca informazioni riservate nei documenti quando vengono salvate per la prima volta. Se si specifica che il client non è configurato per l'invio di informazioni di controllo, i tipi di informazioni riservate trovate (predefinite o personalizzate) vengono quindi inviati a [Azure Information Protection Analytics](../reports-aip.md). 
 
-Per modificare questo comportamento in modo che i tipi di informazioni riservate rilevati dal client classico non vengano inviati a Azure Information Protection Analytics, immettere le stringhe seguenti:
+La configurazione che controlla se il client invia le informazioni di controllo è l' [impostazione dei criteri](../configure-policy-settings.md) **Invia dati di controllo a Azure Information Protection log Analytics**. Quando questa impostazione dei criteri è **attiva** perché si desidera inviare informazioni di controllo che includono azioni di assegnazione di etichette ma non si desidera inviare tipi di informazioni riservate individuate dal client, immettere le stringhe seguenti:
 
 - Key: **RunAuditInformationTypesDiscovery**
 
 - Valore: **False**
 
-Se si imposta questa impostazione client avanzata, i risultati di controllo possono comunque essere inviati dal client, ma le informazioni sono limitate alla segnalazione quando un utente ha eseguito l'accesso al contenuto con etichetta.
+Se si imposta questa impostazione client avanzata, le informazioni di controllo possono comunque essere inviate dal client, ma le informazioni sono limitate all'attività di assegnazione di etichette.
 
 Ad esempio:
 
@@ -980,7 +980,7 @@ Per ottenere questa soluzione:
 
 2. Creare una regola del flusso di posta di Exchange per ogni etichetta: applicare la regola quando le proprietà del messaggio includono la classificazione configurata e modificare le proprietà del messaggio per impostare un'intestazione del messaggio. 
 
-     Per l'intestazione del messaggio, è possibile trovare le informazioni da specificare nelle intestazioni Internet di un messaggio di posta elettronica inviato e classificato tramite l'etichetta di Azure Information Protection. Cercare l'intestazione **msip_labels** e la stringa immediatamente successiva fino al punto e virgola incluso. Ad esempio:
+     Per l'intestazione del messaggio, è possibile trovare le informazioni da specificare nelle intestazioni Internet di un messaggio di posta elettronica inviato e classificato tramite l'etichetta di Azure Information Protection. Cercare l'intestazione **msip_labels** e la stringa immediatamente successiva fino al punto e virgola incluso. Esempio:
     
     **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
     
