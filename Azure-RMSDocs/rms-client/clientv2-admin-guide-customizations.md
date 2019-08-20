@@ -3,7 +3,7 @@ title: Configurazioni personalizzate-Azure Information Protection client per l'a
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/12/2019
+ms.date: 08/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ab409f5f293708db121df0c600cb9e7b5b970a18
-ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
+ms.openlocfilehash: fbe7ddfd8160856a7a8491d0faa672a16b340455
+ms.sourcegitcommit: 2a12c62501e775f73c0e3176744ba966a6edffeb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978753"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69584613"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -63,7 +63,7 @@ Esempio 1: Impostare un'impostazione avanzata dei criteri per le etichette per u
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 
-Esempio 2: Impostare un'impostazione avanzata etichetta per un valore stringa singolo:
+Esempio 2 Impostare un'impostazione avanzata etichetta per un valore stringa singolo:
 
     Set-Label -Identity Internal -AdvancedSettings @{smimesign="true"}
 
@@ -150,7 +150,7 @@ Usare il parametro *AdvancedSettings* con [New-Label](https://docs.microsoft.com
 
 |Impostazione|Scenario e istruzioni|
 |----------------|---------------|
-|Colore|[Specificare un colore per l'etichetta](#specify-a-color-for-the-label)|
+|colore|[Specificare un colore per l'etichetta](#specify-a-color-for-the-label)|
 |customPropertiesByLabel|[Applicare una proprietà personalizzata quando viene applicata un'etichetta](#apply-a-custom-property-when-a-label-is-applied)|
 |DefaultSubLabelId|[Specificare un'etichetta secondaria predefinita per un'etichetta padre](#specify-a-default-sublabel-for-a-parent-label) 
 |labelByCustomProperties|[Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
@@ -665,7 +665,7 @@ Per modificare questo comportamento in modo che i tipi di informazioni riservate
 
 Se si imposta questa impostazione client avanzata, le informazioni di controllo possono comunque essere inviate dal client, ma le informazioni sono limitate alla segnalazione quando un utente ha eseguito l'accesso al contenuto con etichetta.
 
-Ad esempio:
+Esempio:
 
 - Con questa impostazione è possibile vedere che un utente ha eseguito l'accesso a Financial. docx con etichetta **Confidential \ Sales**.
 
@@ -719,7 +719,7 @@ Si noti che questa impostazione non comporta la rimozione dell'etichetta origina
 
 Requisito: I documenti con l'etichetta di Secure Islands "Riservato" devono essere rietichettati come "Riservato" da Azure Information Protection.
 
-In questo esempio:
+Esempio:
 
 - L'etichetta di Secure Islands è **Riservato** ed è archiviata nella proprietà personalizzata denominata **Classificazione**.
 
@@ -733,11 +733,11 @@ Esempio di comando di PowerShell, in cui l'etichetta è denominata "Confidential
 
     Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Confidential,Classification,Confidential"}
 
-#### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>Esempio 2: Mapping uno-a-uno per un altro nome di etichetta
+#### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>Esempio 2 Mapping uno-a-uno per un altro nome di etichetta
 
 Requisito: I documenti con l'etichetta di Secure Islands "Sensibile" devono essere rietichettati come "Riservatezza elevata" da Azure Information Protection.
 
-In questo esempio:
+Esempio:
 
 - L'etichetta di Secure Islands è **Sensibile** ed è archiviata nella proprietà personalizzata denominata **Classificazione**.
 
@@ -755,7 +755,7 @@ Esempio di comando di PowerShell, in cui l'etichetta è denominata "highly Confi
 
 Requisito: Sono presenti due etichette di isole sicure che includono la parola "Internal" e si vuole che i documenti che hanno una di queste etichette di isole sicure vengano rietichettati come "General" dal client Azure Information Protection Unified labeling.
 
-In questo esempio:
+Esempio:
 
 - Le etichette di Secure Islands includono la parola **Interno** e sono archiviate nella proprietà personalizzata denominata **Classificazione**.
 
@@ -773,7 +773,7 @@ Esempio di comando di PowerShell, in cui l'etichetta è denominata "generale":
 
 Quando sono necessarie più regole per la stessa etichetta, definire più valori stringa per la stessa chiave. 
 
-In questo esempio:
+Esempio:
 
 - Le etichette delle isole sicure denominate "Confidential" e "Secret" vengono archiviate nella proprietà personalizzata denominata * * classificazione e si vuole che il client di Azure Information Protection Unified Labeling applichi l'etichetta di riservatezza denominata "Confidential":
 
@@ -825,7 +825,7 @@ Per questa configurazione è necessario specificare un'impostazione avanzata den
 
 Requisito: I documenti etichettati come "riservati" dal client Azure Information Protection Unified Labeling devono avere la proprietà personalizzata aggiuntiva denominata "classificazione" con il valore "Secret".
 
-In questo esempio:
+Esempio:
 
 - L'etichetta di riservatezza è denominata **Confidential** e crea una proprietà personalizzata denominata **classificazione** con il valore **Secret**.
 
@@ -839,7 +839,7 @@ Esempio di comando di PowerShell, in cui l'etichetta è denominata "Confidential
 
     Set-Label -Identity Confidential -AdvancedSettings @{customPropertiesByLabel="Classification,Secret"}
 
-#### <a name="example-2-add-multiple-custom-properties-for-a-label"></a>Esempio 2: Aggiungere più proprietà personalizzate per un'etichetta
+#### <a name="example-2-add-multiple-custom-properties-for-a-label"></a>Esempio 2 Aggiungere più proprietà personalizzate per un'etichetta
 
 Per aggiungere più di una proprietà personalizzata per la stessa etichetta, è necessario definire più valori stringa per la stessa chiave.
 
@@ -887,7 +887,7 @@ Quando si aggiunge un'etichetta secondaria a un'etichetta, gli utenti non posson
 
 Esempio di comando di PowerShell, in cui l'etichetta padre è denominata "Confidential" e l'etichetta secondaria "All Employees" ha un GUID di 8faca7b8-8d20-48A3-8ea2-0f96310a848e:
 
-    Set-Label -Identity "Confidential" -AdvancedSettings @{defaultsublabels="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
+    Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
 
 ## <a name="specify-a-color-for-the-label"></a>Specificare un colore per l'etichetta
 
