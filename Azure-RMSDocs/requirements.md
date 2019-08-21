@@ -4,7 +4,7 @@ description: Identificare i prerequisiti per distribuire Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9ac767525efeaf97d1d3b39f3b25191e7926412b
-ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
+ms.openlocfilehash: 1b5c3344acfa279bd9f778f60957f41e03d56793
+ms.sourcegitcommit: dd89001afcaf1ed4b7ab72a7066b07c0d984249d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68808123"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69650888"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisiti per Azure Information Protection
 
@@ -130,11 +130,13 @@ Oltre alle informazioni nell'articolo di Office, le istruzioni seguenti sono spe
 
 - Non terminare la connessione TLS dal client al servizio, ad esempio per il controllo a livello di pacchetti, all'URL **aadrm.com**. In questo modo viene interrotta l'associazione del certificato usata dai client RMS con le autorità di certificazione gestite da Microsoft per la protezione delle comunicazioni con il servizio Azure Rights Management.
     
-    - Suggerimento: grazie alla modalità di visualizzazione delle connessioni protette in Chrome, è possibile usare questo browser per verificare rapidamente se la connessione client viene terminata prima di raggiungere il servizio Azure Rights Management. Immettere l'URL seguente nella barra degli indirizzi del browser:`https://admin.na.aadrm.com/admin/admin.svc` 
+    È possibile usare i comandi di PowerShell seguenti per determinare se la connessione client viene terminata prima che raggiunga il servizio Rights Management di Azure:
+   
+        $request = [System.Net.HttpWebRequest]::Create("https://admin.na.aadrm.com/admin/admin.svc")
+        $request.GetResponse()
+        $request.ServicePoint.Certificate.Issuer
     
-        Non preoccuparsi di ciò che viene visualizzato nella finestra del browser. Fare invece clic sull'icona a forma di lucchetto nella barra degli indirizzi per visualizzare le informazioni sul sito. Le informazioni sul sito consentono di visualizzare l'autorità di certificazione (CA) emittente. Se il certificato non è emesso da una CA Microsoft, è molto probabile che la connessione protetta dal client al servizio venga terminata e richieda interventi di riconfigurazione nel firewall. L'immagine seguente mostra un esempio di CA emittente Microsoft. Se risulta che il certificato è emesso da una CA interna, questa configurazione non è compatibile con Azure Information Protection.
-        
-        ![Controllo del certificato emesso per le connessioni di Azure Information Protection](./media/certificate-checking.png)
+    Il risultato dovrebbe indicare che la CA emittente è da una CA Microsoft, ad esempio: `CN=Microsoft Secure Server CA 2011, O=Microsoft Corporation, L=Redmond, S=Washington, C=US`. Se viene visualizzato un nome della CA emittente che non è di Microsoft, è molto probabile che la connessione client-servizio protetta venga terminata e richieda la riconfigurazione nel firewall.
 
 ### <a name="on-premises-servers"></a>Server locali
 

@@ -3,8 +3,8 @@ title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
 author: cabailey
 ms.author: cabailey
-ms.date: 08/13/2019
-manager: barbkess
+ms.date: 08/19/2019
+manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ede0c4b11a2a8bf4f9e059828dda1b58ba4d5f9c
-ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
+ms.openlocfilehash: d3135126a837db9405a006bfd571a05a98ded7b7
+ms.sourcegitcommit: 30fc0e855b4fbcb61bcffa3e8c97a4beb777a787
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978655"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630065"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -37,7 +37,9 @@ Usare Azure Information Protection Analytics per la creazione di report centrali
 
 - Identificare i documenti contenenti informazioni sensibili che possono mettere a rischio l'organizzazione se non protette e attenuare il rischio seguendo le raccomandazioni.
 
-I dati visualizzati sono aggregati da client e scanner Azure Information Protection e da [client e servizi che supportano l'assegnazione di etichette unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
+- Individuare i casi in cui è possibile accedere ai documenti protetti da utenti interni o esterni e se l'accesso è stato concesso o negato.
+
+I dati visualizzati sono aggregati da client e scanner di Azure Information Protection, da [client e servizi che supportano l'assegnazione di etichette unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)e dai log di [utilizzo della protezione](log-analyze-usage.md).
 
 Ad esempio è possibile visualizzare quanto segue:
 
@@ -65,6 +67,8 @@ Ad esempio è possibile visualizzare quanto segue:
     
     - Quali azioni di assegnazione di etichette sono state eseguite da un'applicazione specifica, ad esempio Esplora file e con il pulsante destro del mouse, PowerShell, lo scanner o Microsoft Cloud App Security
     
+    - A quali documenti protetti è stato eseguito l'accesso da parte degli utenti o negato l'accesso agli utenti, anche se tali utenti non hanno il client di Azure Information Protection installato o non sono all'interno dell'organizzazione
+
     - Eseguire il drill-down dei file segnalati per visualizzare la sezione **Dettagli attività** in cui sono disponibili altre informazioni
 
 - Nel report **Individuazione dati**:
@@ -174,7 +178,7 @@ Dettagli:
     > [!NOTE] 
     > Se è stata eseguita la migrazione del tenant all'archivio di etichette unificato, non è possibile usare il ruolo di amministratore Azure Information Protection. [Altre informazioni](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
 
-2. È anche necessario uno dei [ruoli di Azure Log Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) o dei [ruoli di Azure](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments) standard seguenti per accedere all'area di lavoro di Azure Log Analytics:
+2. È anche necessario uno dei [ruoli di Azure Log Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-access#manage-accounts-and-users) o dei [ruoli di Azure](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments) standard seguenti per accedere all'area di lavoro di Azure Log Analytics:
     
     - Per creare l'area di lavoro o per creare query personalizzate, uno dei ruoli seguenti:
     
@@ -198,7 +202,7 @@ Tuttavia, un'assegnazione di ruolo tipica per molte organizzazioni è il **ruolo
 
 ### <a name="storage-requirements-and-data-retention"></a>Requisiti di archiviazione e conservazione dei dati
 
-La quantità di dati raccolti e archiviati nell'area di lavoro di Azure Information Protection varierà in modo significativo per ogni tenant, a seconda di fattori quali il numero di Azure Information Protection client e altri endpoint supportati, indipendentemente dal fatto che si tratti di raccolta dei dati di individuazione degli endpoint, sono stati distribuiti scanner e così via.
+La quantità di dati raccolti e archiviati nell'area di lavoro di Azure Information Protection varierà in modo significativo per ogni tenant, a seconda di fattori quali il numero di Azure Information Protection client e altri endpoint supportati, indipendentemente dal fatto che si tratti di raccolta dei dati di individuazione degli endpoint, sono stati distribuiti scanner, il numero di documenti protetti a cui si accede e così via.
 
 Tuttavia, come punto di partenza, le stime seguenti potrebbero risultare utili:
 
@@ -234,7 +238,7 @@ Nel pannello Azure Information Protection trovare le opzioni del menu **Dashboar
 
 - **Report di utilizzo (anteprima)** : usare questo report per vedere come vengono usate le etichette.
 
-- **Log attività (anteprima)** : usare questo report per visualizzare le azioni di etichettatura dagli utenti e per i dispositivi e i percorsi di file.
+- **Log attività (anteprima)** : usare questo report per visualizzare le azioni di etichettatura dagli utenti e per i dispositivi e i percorsi di file. Per i documenti protetti, inoltre, è possibile visualizzare i tentativi di accesso (esito positivo o negativo) per gli utenti all'interno e all'esterno dell'organizzazione, anche se non hanno installato il client di Azure Information Protection
     
     Questo report contiene un'opzione **Colonne** che consente di visualizzare più informazioni sulle attività rispetto alla visualizzazione predefinita. È anche possibile accedere ad altri dettagli su un file selezionandolo per visualizzare **Dettagli attività**.
 
@@ -267,6 +271,8 @@ Usare la tabella seguente per identificare il nome descrittivo delle funzioni di
 
 |Nome colonna|DESCRIZIONE|
 |-----------|-----------|
+|Accesso|Un documento protetto è stato aperto, identificato dal nome file se è stato rilevato, oppure con ID se non è stato rilevato.|
+|AccessDenied|A un documento protetto è stato negato l'accesso, identificato dal nome file, se viene rilevato, oppure con ID se non è stato rilevato.|
 |Time|Ora evento: UTC nel formato AAAA-MM-GGThh: MM: SS|
 |Utente|Utente: Formato UPN o dominio\utente|
 |ItemPath|Percorso dell'elemento completo o oggetto di posta elettronica|
@@ -316,7 +322,7 @@ InformationProtectionEvents
 ```
 
  
-##### <a name="example-2-return-the-number-of-labels-that-were-downgraded-per-day-in-the-last-31-days"></a>Esempio 2: Restituire il numero di etichette di cui è stato effettuato il downgrade ogni giorno negli ultimi 31 giorni 
+##### <a name="example-2-return-the-number-of-labels-that-were-downgraded-per-day-in-the-last-31-days"></a>Esempio 2 Restituire il numero di etichette di cui è stato effettuato il downgrade ogni giorno negli ultimi 31 giorni 
 
 
 ```
