@@ -1,29 +1,28 @@
 ---
-title: classe mip::ClassificationRequest
-description: Documenta la classe mip::classificationrequest di Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: 'Classe MIP:: ClassificationRequest'
+description: 'Documenta la classe MIP:: classificationrequest di Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 3fddd870b6aebb9f5209fc43160c32d87b1d7129
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 1966123c8a0975ea42aa119883cabd47db594bc4
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184757"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884482"
 ---
-# <a name="class-mipclassificationrequest"></a>classe mip::ClassificationRequest 
-Classe che contiene la richiesta di una chiamata di classificazione dello stato di esecuzione.
+# <a name="class-mipclassificationrequest"></a>Classe MIP:: ClassificationRequest 
+Classe che contiene la richiesta di una chiamata di classificazione sullo stato di esecuzione.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-Public std:: String GetClassificationId() const  |  Ottiene l'ID dei criteri di classificazione.
-Public std:: String GetRulePackageId() const  |  Ottenere l'ID del pacchetto di regola.
+public std:: String GetClassificationId () const  |  Ottiene l'ID dei criteri di classificazione.
+public std:: String GetRulePackageId () const  |  Ottenere l'ID del pacchetto di regole.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getclassificationid-function"></a>GetClassificationId (funzione)
 Ottiene l'ID dei criteri di classificazione.
@@ -32,7 +31,7 @@ Ottiene l'ID dei criteri di classificazione.
 **Restituisce**: ID dei criteri di classificazione.
   
 ### <a name="getrulepackageid-function"></a>GetRulePackageId (funzione)
-Ottenere l'ID del pacchetto di regola.
+Ottenere l'ID del pacchetto di regole.
 
   
-**Restituisce**: ID del pacchetto di regola. le classificazioni predefinite verranno impostate su un guid vuoto.
+**Restituisce**: ID del pacchetto di regole. le classificazioni predefinite verranno impostate su un GUID vuoto.

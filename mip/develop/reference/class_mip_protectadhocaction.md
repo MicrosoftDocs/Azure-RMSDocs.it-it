@@ -1,31 +1,24 @@
 ---
 title: Classe mip::ProtectAdhocAction
-description: 'Classe MIP:: protectadhocaction di Microsoft Information Protection (MIP) SDK vengono documentate.'
-author: msmbaldwin
+description: Documenta la classe MIP::p rotectadhocaction dell'SDK Microsoft Information Protection (MIP).
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 5befc7dfd5b2cf5f8940bc244fae9f013b579b71
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: f3a21f4101afbf5455806a2c82dfed60afcd1d1b
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184534"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883627"
 ---
 # <a name="class-mipprotectadhocaction"></a>Classe mip::ProtectAdhocAction 
 Classe di azione che specifica l'aggiunta della protezione ad hoc al documento.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
-
-## <a name="members"></a>Membri
   
-### <a name="gettype-function"></a>Funzione GetType
-Specifica il tipo di [Action](class_mip_action.md).
-
-  
-**Restituisce**: ActionType Tipo di azione derivata in cui è possibile eseguire il cast di questa classe di base.
+## <a name="members"></a>Members
+_Non ancora documentato._

@@ -1,51 +1,50 @@
 ---
 title: Classe mip::FileProfile::Observer
-description: 'Classe MIP:: fileprofile di Microsoft Information Protection (MIP) SDK vengono documentate.'
-author: msmbaldwin
+description: "Documenta la classe MIP:: fileprofile dell'SDK Microsoft Information Protection (MIP)."
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 7b9c3440d577e9ba2e08bdba6ed890d3a480c783
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: fd7c1d1fba060c8b3ff0ea5dbf605568a68ad1e0
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60174103"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885630"
 ---
 # <a name="class-mipfileprofileobserver"></a>Classe mip::FileProfile::Observer 
 Interfaccia [Observer](class_mip_fileprofile_observer.md) per il recupero delle notifiche degli eventi correlati al profilo da parte dei client.
 Tutti gli errori ereditano da [mip::Error](class_mip_error.md). I client non devono eseguire il callback del motore sul thread che chiama l'observer.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public virtual ~Observer()  | _Non ancora documentato._
-OnLoadSuccess void virtuale pubblico (const std:: shared_ptr\<MIP:: fileprofile\>& profilo, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando il profilo è stato caricato correttamente.
-OnLoadFailure void virtuale pubblico (std::exception_ptr const & errore, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando il caricamento di un profilo ha causato un errore.
-OnListEnginesSuccess void virtuale pubblico (const std:: Vector\<std:: String\>& engineIds, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando l'elenco dei motori è stato generato correttamente.
-OnListEnginesFailure void virtuale pubblico (std::exception_ptr const & errore, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando il recupero dell'elenco dei motori ha causato un errore.
-OnUnloadEngineSuccess void virtuale pubblico (const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando un motore è stato scaricato correttamente.
-OnUnloadEngineFailure void virtuale pubblico (std::exception_ptr const & errore, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando lo scaricamento di un motore ha causato un errore.
-OnAddEngineSuccess void virtuale pubblico (const std:: shared_ptr\<MIP:: fileengine\>& motore, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando un nuovo motore è stato aggiunto correttamente.
-OnAddEngineFailure void virtuale pubblico (std::exception_ptr const & errore, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando l'aggiunta di un nuovo motore ha causato un errore.
-OnDeleteEngineSuccess void virtuale pubblico (const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando un motore è stato eliminato correttamente.
-OnDeleteEngineFailure void virtuale pubblico (std::exception_ptr const & errore, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando l'eliminazione di un motore ha causato un errore.
+public virtual void OnLoadSuccess (const std::\<shared_ptr MIP:: fileprofile\>& profile, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando il profilo è stato caricato correttamente.
+public virtual void OnLoadFailure (const std:: exception_ptr & Error, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando il caricamento di un profilo ha causato un errore.
+public virtual void OnListEnginesSuccess (const std::\<vector std::\>String & engineIds, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando l'elenco dei motori è stato generato correttamente.
+public virtual void OnListEnginesFailure (const std:: exception_ptr & Error, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando il recupero dell'elenco dei motori ha causato un errore.
+public virtual void OnUnloadEngineSuccess (const std::\<shared_ptr\>void & context)  |  Viene chiamato quando un motore è stato scaricato correttamente.
+public virtual void OnUnloadEngineFailure (const std:: exception_ptr & Error, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando lo scaricamento di un motore ha causato un errore.
+public virtual void OnAddEngineSuccess (const std::\<shared_ptr MIP:: fileengine\>& Engine, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando un nuovo motore è stato aggiunto correttamente.
+public virtual void OnAddEngineFailure (const std:: exception_ptr & Error, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando l'aggiunta di un nuovo motore ha causato un errore.
+public virtual void OnDeleteEngineSuccess (const std::\<shared_ptr\>void & context)  |  Viene chiamato quando un motore è stato eliminato correttamente.
+public virtual void OnDeleteEngineFailure (const std:: exception_ptr & Error, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando l'eliminazione di un motore ha causato un errore.
 public virtual void OnPolicyChanged(const std::string& engineId)  |  Viene chiamato quando i criteri del motore con l'ID specificato sono cambiati.
-OnAddPolicyEngineStarting void virtuale pubblico (bool requiresPolicyFetch)  |  Chiamato prima della creazione motore per descrivere o meno i dati dei criteri del motore dei criteri devono essere recuperati dal server o se può essere creato dai dati memorizzati nella cache locale.
+public virtual void OnAddPolicyEngineStarting (bool requiresPolicyFetch)  |  Chiamato prima della creazione del motore per descrivere se i dati dei criteri del motore dei criteri devono essere recuperati dal server o se possono essere creati da dati memorizzati localmente nella cache.
 protected Observer()  | _Non ancora documentato._
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
-### <a name="observer-function"></a>~ Funzione observer
+### <a name="observer-function"></a>~ Observer (funzione)
 _Non ancora documentato._
 
   
 ### <a name="onloadsuccess-function"></a>OnLoadSuccess (funzione)
 Viene chiamato quando il profilo è stato caricato correttamente.
   
-### <a name="onloadfailure-function"></a>Funzione OnLoadFailure
+### <a name="onloadfailure-function"></a>OnLoadFailure (funzione)
 Viene chiamato quando il caricamento di un profilo ha causato un errore.
   
 ### <a name="onlistenginessuccess-function"></a>OnListEnginesSuccess (funzione)
@@ -76,13 +75,13 @@ Viene chiamato quando l'eliminazione di un motore ha causato un errore.
 Viene chiamato quando i criteri del motore con l'ID specificato sono cambiati.
   
 ### <a name="onaddpolicyenginestarting-function"></a>OnAddPolicyEngineStarting (funzione)
-Chiamato prima della creazione motore per descrivere o meno i dati dei criteri del motore dei criteri devono essere recuperati dal server o se può essere creato dai dati memorizzati nella cache locale.
+Chiamato prima della creazione del motore per descrivere se i dati dei criteri del motore dei criteri devono essere recuperati dal server o se possono essere creati da dati memorizzati localmente nella cache.
 
 Parametri:  
-* **requiresPolicyFetch**: Descrive se i dati del motore devono essere recuperati tramite HTTP o se venga caricato dalla cache
+* **requiresPolicyFetch**: Descrive se i dati del motore devono essere recuperati tramite HTTP o se verranno caricati dalla cache
 
 
-Questo callback facoltativo potrebbe utilizzabile da un'applicazione per essere informati o meno un'operazione AddEngineAsync richiederanno un'operazione HTTP (con il ritardo associato) per completare.
+Questo callback facoltativo può essere utilizzato da un'applicazione per essere informati se un'operazione AddEngineAsync richiede un'operazione HTTP (con il ritardo associato) per il completamento.
   
 ### <a name="observer-function"></a>Funzione Observer
 _Non ancora documentato._

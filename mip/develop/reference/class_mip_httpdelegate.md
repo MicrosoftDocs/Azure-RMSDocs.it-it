@@ -1,70 +1,69 @@
 ---
 title: Classe mip::HttpDelegate
-description: Documenta la classe mip::httpdelegate di Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: 'Documenta la classe MIP:: httpdelegate di Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 6dedd5e52b0599a58acabd85f7bd076169b3758e
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: d2b01c53b44d6884f47cf48c431ee7359f64b9c4
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60174052"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885593"
 ---
 # <a name="class-miphttpdelegate"></a>Classe mip::HttpDelegate 
 Interfaccia per l'override della gestione HTTP.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-Public std:: shared_ptr\<HttpOperation\> inviare (const std:: shared_ptr\<HttpRequest\>& richiesta, const std:: shared_ptr\<void\>& contesto)  |  Inviare una richiesta HTTP.
-Public std:: shared_ptr\<HttpOperation\> SendAsync (const std:: shared_ptr\<HttpRequest\>& richiesta, const std:: shared_ptr\<void\>& context, const std:: funzione\<void (std:: shared_ptr\<HttpOperation\>)\>& callbackFn)  |  Inviare la richiesta HTTP in modo asincrono.
-public void CancelOperation (const std:: String & requestId)  |  Annullare un'operazione HTTP specifica.
-public void CancelAllOperations()  |  Annullare le richieste HTTP in corso.
+public std:: shared_ptr\<HttpOperation\> Send (const std::\<shared_ptr\>HttpRequest & Request, const std:\<:\>shared_ptr void & context)  |  Inviare una richiesta HTTP.
+public std:: shared_ptr\<HttpOperation\> SendAsync (const std::\<shared_ptr\>HttpRequest & Request, const std:\<:\>shared_ptr void & context, const std:: funzione\<void (STD:: shared_ptr\<HttpOperation\>)\>& callbackFn)  |  Inviare una richiesta HTTP in modo asincrono.
+public void CancelOperation (const std:: String & RequestId)  |  Annulla un'operazione HTTP specifica.
+public void CancelAllOperations()  |  Annulla le richieste HTTP in corso.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="send-function"></a>Funzione Send
 Inviare una richiesta HTTP.
 
 Parametri:  
-* **request**: Richiesta HTTP 
+* **richiesta**: Richiesta HTTP 
 
 
-* **context**: Lo stesso contesto di client opaco passato all'API che ha generato questa richiesta HTTP
+* **context**: Lo stesso contesto client opaco passato all'API che ha generato questa richiesta HTTP
 
 
 
   
-**Restituisce**: Contenitore di operazione HTTP
+**Restituisce**: Contenitore operazione HTTP
   
-### <a name="sendasync-function"></a>SendAsync (funzione)
-Inviare la richiesta HTTP in modo asincrono.
+### <a name="sendasync-function"></a>Funzione SendAsync
+Inviare una richiesta HTTP in modo asincrono.
 
 Parametri:  
-* **request**: Richiesta HTTP 
+* **richiesta**: Richiesta HTTP 
 
 
-* **context**: Lo stesso contesto di client opaco passato all'API che ha generato questa richiesta HTTP 
+* **context**: Lo stesso contesto client opaco passato all'API che ha generato questa richiesta HTTP 
 
 
-* **callbackFn**: Funzione che verrà eseguito dopo il completamento
+* **callbackFn**: Funzione che verrà eseguita al completamento
 
 
 
   
-**Restituisce**: Contenitore di operazione HTTP
+**Restituisce**: Contenitore operazione HTTP
   
 ### <a name="canceloperation-function"></a>CancelOperation (funzione)
-Annullare un'operazione HTTP specifica.
+Annulla un'operazione HTTP specifica.
 
 Parametri:  
-* **requestId**: ID della richiesta di annullamento
+* **requestId**: ID della richiesta da annullare
 
 
   
 ### <a name="cancelalloperations-function"></a>CancelAllOperations (funzione)
-Annullare le richieste HTTP in corso.
+Annulla le richieste HTTP in corso.

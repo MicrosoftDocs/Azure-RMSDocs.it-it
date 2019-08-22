@@ -1,86 +1,88 @@
 ---
 title: Classe mip::ProtectionEngine
-description: Documenta la classe mip::protectionengine di Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: Documenta la classe MIP::p rotectionengine dell'SDK Microsoft Information Protection (MIP).
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 60a61f5e06b5e76cbf0c557e7d489a8d618a8261
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 88cb6565e8e392a83d01ded79186cf7dbb6fb43c
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173156"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883514"
 ---
 # <a name="class-mipprotectionengine"></a>Classe mip::ProtectionEngine 
 Gestisce azioni correlate alla protezione relative a un'identità specifica.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Ottiene le impostazioni del motore.
-public void GetTemplatesAsync (const std:: shared_ptr\<ProtectionEngine::Observer\>& observer, const std:: shared_ptr\<void\>& contesto)  |  Ottiene la raccolta di modelli disponibili per un utente.
-public std::vector\<std::string\> GetTemplates(const std::shared_ptr\<void\>& context)  |  Ottiene la raccolta di modelli disponibili per un utente.
-public void GetRightsForLabelIdAsync (const std:: String & documentId, const std:: String & ID etichetta, const std:: String & ownerEmail, const std:: shared_ptr\<ProtectionEngine::Observer\>& observer, const std: : shared_ptr\<void\>& contesto)  |  Ottiene la raccolta di diritti disponibili per un utente per un ID etichetta.
-Public std:: Vector\<std:: String\> GetRightsForLabelId (const std:: String & documentId, const std:: String & ID etichetta, const std:: String & ownerEmail, const std:: shared_ptr\<void\> & contesto)  |  Ottiene la raccolta di diritti disponibili per un utente per un labelId.
-public void CreateProtectionHandlerFromDescriptorAsync (const std:: shared_ptr\<ProtectionDescriptor\>& descrittore, ProtectionHandlerCreationOptions const & opzioni, const std:: shared_ptr\< ProtectionHandler::Observer\>& observer, const std:: shared_ptr\<void\>& contesto)  |  Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
-Public std:: shared_ptr\<ProtectionHandler\> CreateProtectionHandlerFromDescriptor (const std:: shared_ptr\<ProtectionDescriptor\>& descrittore, ProtectionHandlerCreationOptions const & opzioni, const std:: shared_ptr\<void\>& contesto)  |  Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
-public void CreateProtectionHandlerFromPublishingLicenseAsync (const std:: Vector\<uint8_t\>& serializedPublishingLicense, ProtectionHandlerCreationOptions const & opzioni, const std:: shared_ptr\<ProtectionHandler::Observer\>& observer, const std:: shared_ptr\<void\>& contesto)  |  Crea un gestore di protezione da una licenza di pubblicazione serializzata.
-Public std:: shared_ptr\<ProtectionHandler\> CreateProtectionHandlerFromPublishingLicense (const std:: Vector\<uint8_t\>& serializedPublishingLicense, const ProtectionHandlerCreationOptions & opzioni, const std:: shared_ptr\<void\>& contesto)  |  Crea un gestore di protezione da una licenza di pubblicazione serializzata.
-public void CreateProtectionHandlerFromProtectionInfoAsync (const std:: Vector\<uint8_t\>& serializedPublishingLicense, const std:: Vector\<uint8_t\>& serializedProtectionInfo, const std:: shared_ptr\<ProtectionHandler::Observer\>& observer, const std:: shared_ptr\<void\>& contesto)  |  Crea un gestore di protezione da una licenza di pubblicazione serializzata e informazioni di protezione serializzato.
-Public std:: shared_ptr\<ProtectionHandler\> CreateProtectionHandlerFromProtectionInfo (const std:: Vector\<uint8_t\>& serializedPublishingLicense, const std:: Vector\< uint8_t\>& serializedProtectionInfo, const std:: shared_ptr\<void\>& contesto)  |  Crea un gestore di protezione da una licenza di pubblicazione serializzata e informazioni di protezione serializzato.
-public void CreateProtectionHandlerFromPublishingLicenseContextAsync (const PublishingLicenseContext & publishingLicenseContext, ProtectionHandlerCreationOptions const & opzioni, const std:: shared_ptr\< ProtectionHandler::Observer\>& observer, const std:: shared_ptr\<void\>& contesto)  |  Crea un gestore di protezione da un contesto di licenza di pubblicazione.
-Public std:: shared_ptr\<ProtectionHandler\> CreateProtectionHandlerFromPublishingLicenseContext (PublishingLicenseContext const & publishingLicenseContext, ProtectionHandlerCreationOptions const & opzioni, const std:: shared_ptr\<void\>& contesto)  |  Crea un gestore di protezione da un contesto di licenza di pubblicazione.
+public void GetTemplatesAsync (const std::\<shared_ptr ProtectionEngine::\>Observer & Observer, const std:: shared_ptr\<void\>& context)  |  Ottiene la raccolta di modelli disponibili per un utente.
+public std:: Vector\<std:: String\> gettemplates (const std::\<shared_ptr\>void & context)  |  Ottiene la raccolta di modelli disponibili per un utente.
+public void GetRightsForLabelIdAsync (const std:: String & documentId, const std:: String & LabelId, const std:: String & owneremail, const std:: String & delegatedUserEmail, const std:: shared_ptr\<ProtectionEngine:: O bserver\>& Observer, const std:: shared_ptr\<void\>& context)  |  Ottiene la raccolta di diritti disponibili per un utente per un ID etichetta.
+public std:: Vector\<std:: String\> GetRightsForLabelId (const std:: String & documentId, const std:: String & LabelId, const std:: String & owneremail, const std:: String & delegatedUserEmail, const std:: Shared PTR\<void\>& context)  |  Ottiene la raccolta di diritti disponibili per un utente per un labelId.
+public void CreateProtectionHandlerFromDescriptorAsync (const std::\<shared_ptr\>ProtectionDescriptor & descriptor, const ProtectionHandlerCreationOptions & Options, const std\< :: shared_ptr ProtectionHandler:: Observer\>& Observer, const std:: shared_ptr\<void\>& context)  |  Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
+public std:: shared_ptr\<ProtectionHandler\> CreateProtectionHandlerFromDescriptor (const std::\<shared_ptr\>ProtectionDescriptor & descrittore, const ProtectionHandlerCreationOptions opzioni di &, const std:\<:\>shared_ptr void & context)  |  Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
+public void CreateProtectionHandlerFromPublishingLicenseAsync (const std::\<vector\>uint8_t & serializedPublishingLicense, const ProtectionHandlerCreationOptions & Options, const std:: shared_ptr\<ProtectionHandler:: Observer\>& Observer, const std:: shared_ptr\<void\>& context)  |  Crea un gestore di protezione da una licenza di pubblicazione serializzata.
+public std:: shared_ptr\<ProtectionHandler\> CreateProtectionHandlerFromPublishingLicense (const std::\<vector\>uint8_t & serializedPublishingLicense, const ProtectionHandlerCreationOptions & Options, const std::\<shared_ptr\>void & context)  |  Crea un gestore di protezione da una licenza di pubblicazione serializzata.
+public void CreateProtectionHandlerForPublishingAsync (const ProtectionHandler::P ublishingsettings & Settings, const std:\<: shared_ptr ProtectionHandler::\>Observer & Observer, const std:: shared_ptr\<void\>& context)  |  Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
+public std:: shared_ptr\<ProtectionHandler\> CreateProtectionHandlerForPublishing (const ProtectionHandler::P ublishingsettings & Settings, const std:\<:\>shared_ptr void & context)  |  Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
+public void CreateProtectionHandlerForConsumptionAsync (const ProtectionHandler:: ConsumptionSettings & Settings, const std:\<: shared_ptr ProtectionHandler::\>Observer & Observer, const std:: shared_ptr\<void\>& context)  |  Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
+public std:: shared_ptr\<ProtectionHandler\> CreateProtectionHandlerForConsumption (const ProtectionHandler:: ConsumptionSettings & Settings, const std:\<:\>shared_ptr void & Context )  |  Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getsettings-function"></a>GetSettings (funzione)
 Ottiene le impostazioni del motore.
 
   
-**Restituisce**: Impostazioni del motore
+**Restituisce**: Impostazioni motore
   
 ### <a name="gettemplatesasync-function"></a>GetTemplatesAsync (funzione)
 Ottiene la raccolta di modelli disponibili per un utente.
 
 Parametri:  
-* **observer**: Una classe che implementa il [ProtectionEngine::Observer](class_mip_protectionengine_observer.md) interfaccia 
+* **observer**: Classe che implementa l'interfaccia [ProtectionEngine:: Observer](class_mip_protectionengine_observer.md) 
 
 
-* **context**: Contesto di client che verrà passato all'Observer in modo non trasparente e facoltativi [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Contesto client che verrà passato in modo opaco agli osservatori e [HttpDelegate](class_mip_httpdelegate.md) facoltativi
 
 
   
-### <a name="gettemplates-function"></a>Funzione GetTemplates
+### <a name="gettemplates-function"></a>Funzione gettemplates
 Ottiene la raccolta di modelli disponibili per un utente.
 
 Parametri:  
-* **context**: Contesto di client che verrà in maniera opaca passato come facoltativa [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Contesto client che verrà passato in modo opaco a [HttpDelegate](class_mip_httpdelegate.md) facoltativo
 
 
 
   
-**Restituisce**: Elenco di ID di modello
+**Restituisce**: Elenco di ID modello
   
 ### <a name="getrightsforlabelidasync-function"></a>GetRightsForLabelIdAsync (funzione)
 Ottiene la raccolta di diritti disponibili per un utente per un ID etichetta.
 
 Parametri:  
-* **documentId**: ID del documento associati i metadati del documento 
+* **documentId**: ID documento associato ai metadati del documento 
 
 
-* **labelId**: [Etichetta](class_mip_label.md) ID associato con i metadati del documento con cui è stato creato il documento 
+* **labelId**: [Etichetta](class_mip_label.md) di ID associato ai metadati del documento con cui è stato creato il documento 
 
 
 * **ownerEmail**: proprietario del documento 
 
 
-* **observer**: Una classe che implementa il [ProtectionEngine::Observer](class_mip_protectionengine_observer.md) interfaccia 
+* **R**: l'utente delegato viene specificato quando l'utente o l'applicazione di autenticazione agisce per conto di un altro utente, vuoto se non è presente alcun valore 
 
 
-* **context**: Questo stesso contesto verrà inoltrato al [ProtectionEngine::Observer::OnGetRightsForLabelIdSuccess](class_mip_protectionengine_observer.md#ongetrightsforlabelidsuccess-function) o [ProtectionEngine::Observer::OnGetRightsForLabelIdFailure](class_mip_protectionengine_observer.md#ongetrightsforlabelidfailure-function)
+* **observer**: Classe che implementa l'interfaccia [ProtectionEngine:: Observer](class_mip_protectionengine_observer.md) 
+
+
+* **context**: Lo stesso contesto verrà inviato a [ProtectionEngine:: Observer:: OnGetRightsForLabelIdSuccess](class_mip_protectionengine_observer.md#ongetrightsforlabelidsuccess-function) o [ProtectionEngine:: Observer:: OnGetRightsForLabelIdFailure](class_mip_protectionengine_observer.md#ongetrightsforlabelidfailure-function)
 
 
   
@@ -88,55 +90,60 @@ Parametri:
 Ottiene la raccolta di diritti disponibili per un utente per un labelId.
 
 Parametri:  
-* **documentId**: ID del documento associati i metadati del documento 
+* **documentId**: ID documento associato ai metadati del documento 
 
 
-* **labelId**: [Etichetta](class_mip_label.md) ID associato con i metadati del documento con cui è stato creato il documento 
+* **labelId**: [Etichetta](class_mip_label.md) di ID associato ai metadati del documento con cui è stato creato il documento 
 
 
 * **ownerEmail**: Proprietario del documento 
 
 
-* **context**: Questo stesso contesto verrà inoltrato come facoltativa [HttpDelegate](class_mip_httpdelegate.md)
+* **R**: l'utente delegato viene specificato quando l'utente o l'applicazione di autenticazione agisce per conto di un altro utente, vuoto se non è presente alcun valore 
+
+
+* **context**: Lo stesso contesto verrà inviato a [HttpDelegate](class_mip_httpdelegate.md) facoltativo
 
 
 
   
-**Restituisce**: Elenco di diritti
+**Restituisce**: Elenco dei diritti
   
 ### <a name="createprotectionhandlerfromdescriptorasync-function"></a>CreateProtectionHandlerFromDescriptorAsync (funzione)
 Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
 
 Parametri:  
-* **descrittore**: Oggetto [ProtectionDescriptor](class_mip_protectiondescriptor.md) che descrive la configurazione di protezione 
+* descrittore: Un [ProtectionDescriptor](class_mip_protectiondescriptor.md) che descrive la configurazione di protezione 
 
 
-* **opzioni**: Opzioni di creazione 
+* **Opzioni**: Opzioni di creazione 
 
 
-* **observer**: Una classe che implementa il [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interfaccia 
+* **observer**: Classe che implementa l'interfaccia [ProtectionHandler:: Observer](class_mip_protectionhandler_observer.md) 
 
 
-* **context**: Contesto di client che verrà passato all'Observer in modo non trasparente e facoltativi [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Contesto client che verrà passato in modo opaco agli osservatori e [HttpDelegate](class_mip_httpdelegate.md) facoltativi
 
 
+> Deprecato Questo metodo sarà presto deprecato a favore di CreateProtectionHandlerForPublishingAsync
   
 ### <a name="createprotectionhandlerfromdescriptor-function"></a>CreateProtectionHandlerFromDescriptor (funzione)
 Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
 
 Parametri:  
-* **descrittore**: Oggetto [ProtectionDescriptor](class_mip_protectiondescriptor.md) che descrive la configurazione di protezione 
+* descrittore: Un [ProtectionDescriptor](class_mip_protectiondescriptor.md) che descrive la configurazione di protezione 
 
 
-* **opzioni**: Opzioni di creazione 
+* **Opzioni**: Opzioni di creazione 
 
 
-* **context**: Contesto di client che verrà passato in modo non trasparente a facoltativo [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Contesto client che verrà passato in modo opaco a [HttpDelegate](class_mip_httpdelegate.md) facoltativo
 
 
 
   
 **Restituisce**: [ProtectionHandler](class_mip_protectionhandler.md)
+> Deprecato Questo metodo sarà presto deprecato a favore di CreateProtectionHandlerForPublishingAsync
   
 ### <a name="createprotectionhandlerfrompublishinglicenseasync-function"></a>CreateProtectionHandlerFromPublishingLicenseAsync (funzione)
 Crea un gestore di protezione da una licenza di pubblicazione serializzata.
@@ -145,15 +152,16 @@ Parametri:
 * **serializedPublishingLicense**: Una licenza di pubblicazione serializzata 
 
 
-* **opzioni**: Opzioni di creazione 
+* **Opzioni**: Opzioni di creazione 
 
 
-* **observer**: Una classe che implementa il [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interfaccia 
+* **observer**: Classe che implementa l'interfaccia [ProtectionHandler:: Observer](class_mip_protectionhandler_observer.md) 
 
 
-* **context**: Contesto di client che verrà passato all'Observer in modo non trasparente e facoltativi [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Contesto client che verrà passato in modo opaco agli osservatori e [HttpDelegate](class_mip_httpdelegate.md) facoltativi
 
 
+> Deprecato Questo metodo sarà presto deprecato a favore di CreateProtectionHandlerForConsumptionAsync
   
 ### <a name="createprotectionhandlerfrompublishinglicense-function"></a>CreateProtectionHandlerFromPublishingLicense (funzione)
 Crea un gestore di protezione da una licenza di pubblicazione serializzata.
@@ -162,84 +170,70 @@ Parametri:
 * **serializedPublishingLicense**: Una licenza di pubblicazione serializzata 
 
 
-* **opzioni**: Opzioni di creazione 
+* **Opzioni**: Opzioni di creazione 
 
 
-* **observer**: Una classe che implementa il [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interfaccia 
+* **observer**: Classe che implementa l'interfaccia [ProtectionHandler:: Observer](class_mip_protectionhandler_observer.md) 
 
 
-* **context**: Contesto di client che verrà passato in modo non trasparente a facoltativo [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Contesto client che verrà passato in modo opaco a [HttpDelegate](class_mip_httpdelegate.md) facoltativo
+
+
+
+  
+**Restituisce**: [ProtectionHandler](class_mip_protectionhandler.md)
+> Deprecato Questo metodo sarà presto deprecato a favore di CreateProtectionHandlerForConsumption
+  
+### <a name="createprotectionhandlerforpublishingasync-function"></a>CreateProtectionHandlerForPublishingAsync (funzione)
+Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
+
+Parametri:  
+* **Impostazioni**: Impostazioni di protezione 
+
+
+* **observer**: Classe che implementa l'interfaccia [ProtectionHandler:: Observer](class_mip_protectionhandler_observer.md) 
+
+
+* **context**: Contesto client che verrà inviato in modo opaco agli osservatori e [HttpDelegate](class_mip_httpdelegate.md) facoltativi
+
+
+  
+### <a name="createprotectionhandlerforpublishing-function"></a>CreateProtectionHandlerForPublishing (funzione)
+Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
+
+Parametri:  
+* **Impostazioni**: Impostazioni di protezione 
+
+
+* **context**: Contesto client che verrà trasmesso in modo opaco a [HttpDelegate](class_mip_httpdelegate.md) facoltativo
 
 
 
   
 **Restituisce**: [ProtectionHandler](class_mip_protectionhandler.md)
   
-### <a name="createprotectionhandlerfromprotectioninfoasync-function"></a>CreateProtectionHandlerFromProtectionInfoAsync (funzione)
-Crea un gestore di protezione da una licenza di pubblicazione serializzata e informazioni di protezione serializzato.
+### <a name="createprotectionhandlerforconsumptionasync-function"></a>CreateProtectionHandlerForConsumptionAsync (funzione)
+Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
 
 Parametri:  
-* **serializedPublishingLicense**: Una licenza di pubblicazione serializzata 
+* **Impostazioni**: Impostazioni di protezione 
 
 
-* **serializedProtectionInfo**: Informazioni di protezione serializzato 
+* **observer**: Classe che implementa l'interfaccia [ProtectionHandler:: Observer](class_mip_protectionhandler_observer.md) 
 
 
-* **observer**: Una classe che implementa il [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interfaccia 
-
-
-* **context**: Contesto di client che verrà passato in maniera opaca all'Observer
+* **context**: Contesto client che verrà inviato in modo opaco agli osservatori e [HttpDelegate](class_mip_httpdelegate.md) facoltativi
 
 
   
-### <a name="createprotectionhandlerfromprotectioninfo-function"></a>CreateProtectionHandlerFromProtectionInfo (funzione)
-Crea un gestore di protezione da una licenza di pubblicazione serializzata e informazioni di protezione serializzato.
+### <a name="createprotectionhandlerforconsumption-function"></a>CreateProtectionHandlerForConsumption (funzione)
+Crea un gestore di protezione in cui diritti/ruoli vengono assegnati a utenti specifici.
 
 Parametri:  
-* **serializedPublishingLicense**: Una licenza di pubblicazione serializzata 
+* **Impostazioni**: Impostazioni di protezione 
 
 
-* **serializedProtectionInfo**: Informazioni di protezione serializzato 
-
-
-* **context**: Contesto di client che verrà passato in maniera opaca all'Observer
-
-
-
-  
-**Restituisce**: [ProtectionHandler](class_mip_protectionhandler.md)
-  
-### <a name="createprotectionhandlerfrompublishinglicensecontextasync-function"></a>CreateProtectionHandlerFromPublishingLicenseContextAsync (funzione)
-Crea un gestore di protezione da un contesto di licenza di pubblicazione.
-
-Parametri:  
-* **publishingLicenseContext**: Un modulo di pre-elaborato della licenza di pubblicazione serializzato 
-
-
-* **opzioni**: Opzioni di creazione 
-
-
-* **observer**: Una classe che implementa il [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interfaccia 
-
-
-* **context**: Contesto di client che verrà passato all'Observer in modo non trasparente e facoltativi [HttpDelegate](class_mip_httpdelegate.md)
-
-
-  
-### <a name="createprotectionhandlerfrompublishinglicensecontext-function"></a>CreateProtectionHandlerFromPublishingLicenseContext (funzione)
-Crea un gestore di protezione da un contesto di licenza di pubblicazione.
-
-Parametri:  
-* **publishingLicenseContext**: Un modulo di pre-elaborato della licenza di pubblicazione serializzato 
-
-
-* **opzioni**: Opzioni di creazione 
-
-
-* **observer**: Una classe che implementa il [ProtectionHandler::Observer](class_mip_protectionhandler_observer.md) interfaccia 
-
-
-* **context**: Contesto di client che verrà passato in modo non trasparente a facoltativo [HttpDelegate](class_mip_httpdelegate.md)
+* **context**: Contesto client che verrà trasmesso in modo opaco a [HttpDelegate](class_mip_httpdelegate.md) facoltativo
 
 
 

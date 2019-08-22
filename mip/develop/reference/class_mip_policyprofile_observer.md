@@ -1,40 +1,39 @@
 ---
 title: Classe mip::PolicyProfile::Observer
-description: Documenta la classe mip::policyprofile di Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: Documenta la classe MIP::p olicyprofile dell'SDK Microsoft Information Protection (MIP).
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: f9ff2448b3ae09e094189e85b15b2fabad12321e
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 09c7203ed023a07bc25dcca382ad04799ae17783
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184553"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885205"
 ---
 # <a name="class-mippolicyprofileobserver"></a>Classe mip::PolicyProfile::Observer 
 Interfaccia [Observer](class_mip_policyprofile_observer.md) per il recupero delle notifiche degli eventi correlati al profilo da parte dei client.
 Tutti gli errori ereditano da [mip::Error](class_mip_error.md). I client non devono eseguire il callback del motore sul thread che chiama l'observer.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-OnLoadSuccess void virtuale pubblico (const std:: shared_ptr\<PolicyProfile\>& profilo, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando il profilo è stato caricato correttamente.
-OnLoadFailure void virtuale pubblico (std::exception_ptr const & errore, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando il caricamento di un profilo ha causato un errore.
-OnListEnginesSuccess void virtuale pubblico (const std:: Vector\<std:: String\>& engineIds, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando l'elenco dei motori è stato generato correttamente.
-OnListEnginesFailure void virtuale pubblico (std::exception_ptr const & errore, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando il recupero dell'elenco dei motori ha causato un errore.
-OnUnloadEngineSuccess void virtuale pubblico (const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando un motore è stato scaricato correttamente.
-OnUnloadEngineFailure void virtuale pubblico (std::exception_ptr const & errore, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando lo scaricamento di un motore ha causato un errore.
-OnAddEngineSuccess void virtuale pubblico (const std:: shared_ptr\<PolicyEngine\>& motore, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando un nuovo motore è stato aggiunto correttamente.
-OnAddEngineStarting void virtuale pubblico (bool requiresPolicyFetch)  |  Chiamato prima della creazione motore per descrivere o meno i dati dei criteri del motore devono essere recuperati dal server o se può essere creato dai dati memorizzati nella cache locale.
-OnAddEngineFailure void virtuale pubblico (std::exception_ptr const & errore, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando l'aggiunta di un nuovo motore ha causato un errore.
-OnDeleteEngineSuccess void virtuale pubblico (const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando un motore è stato eliminato correttamente.
-OnDeleteEngineFailure void virtuale pubblico (std::exception_ptr const & errore, const std:: shared_ptr\<void\>& contesto)  |  Viene chiamato quando l'eliminazione di un motore ha causato un errore.
-public virtual void OnPolicyChanged(const std::string& engineId)  |  Chiamato quando i criteri vengono modificati per il motore con l'ID specificato o quando sono stati modificati i tipi di sensibilità personalizzato caricato.
+public virtual void OnLoadSuccess (const std::\<shared_ptr\>PolicyProfile & profile, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando il profilo è stato caricato correttamente.
+public virtual void OnLoadFailure (const std:: exception_ptr & Error, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando il caricamento di un profilo ha causato un errore.
+public virtual void OnListEnginesSuccess (const std::\<vector std::\>String & engineIds, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando l'elenco dei motori è stato generato correttamente.
+public virtual void OnListEnginesFailure (const std:: exception_ptr & Error, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando il recupero dell'elenco dei motori ha causato un errore.
+public virtual void OnUnloadEngineSuccess (const std::\<shared_ptr\>void & context)  |  Viene chiamato quando un motore è stato scaricato correttamente.
+public virtual void OnUnloadEngineFailure (const std:: exception_ptr & Error, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando lo scaricamento di un motore ha causato un errore.
+public virtual void OnAddEngineSuccess (const std::\<shared_ptr\>PolicyEngine & Engine, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando un nuovo motore è stato aggiunto correttamente.
+public virtual void OnAddEngineStarting (bool requiresPolicyFetch)  |  Chiamato prima della creazione del motore per descrivere se i dati dei criteri del motore devono essere recuperati dal server o se possono essere creati dai dati memorizzati nella cache locale.
+public virtual void OnAddEngineFailure (const std:: exception_ptr & Error, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando l'aggiunta di un nuovo motore ha causato un errore.
+public virtual void OnDeleteEngineSuccess (const std::\<shared_ptr\>void & context)  |  Viene chiamato quando un motore è stato eliminato correttamente.
+public virtual void OnDeleteEngineFailure (const std:: exception_ptr & Error, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando l'eliminazione di un motore ha causato un errore.
+public virtual void OnPolicyChanged(const std::string& engineId)  |  Viene chiamato quando i criteri vengono modificati per il motore con l'ID specificato o quando i tipi di riservatezza personalizzati caricati sono stati modificati.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="onloadsuccess-function"></a>OnLoadSuccess (funzione)
 Viene chiamato quando il profilo è stato caricato correttamente.
@@ -43,18 +42,18 @@ Parametri:
 * **profile**: profilo corrente usato per avviare l'operazione. 
 
 
-* **contesto**: il contesto passato all'operazione LoadAsync.
+* **context**: contesto passato all'operazione LoadAsync.
 
 
   
-### <a name="onloadfailure-function"></a>Funzione OnLoadFailure
+### <a name="onloadfailure-function"></a>OnLoadFailure (funzione)
 Viene chiamato quando il caricamento di un profilo ha causato un errore.
 
 Parametri:  
 * **error**: errore che ha causato il fallimento dell'operazione di caricamento. 
 
 
-* **contesto**: il contesto passato all'operazione LoadAsync.
+* **context**: contesto passato all'operazione LoadAsync.
 
 
   
@@ -65,7 +64,7 @@ Parametri:
 * **engineIds**: elenco degli ID motore disponibili. 
 
 
-* **contesto**: il contesto passato all'operazione ListEnginesAsync.
+* **context**: contesto passato all'operazione ListEnginesAsync.
 
 
   
@@ -76,7 +75,7 @@ Parametri:
 * **error**: errore che ha causato il fallimento dell'operazione di elenco motori. 
 
 
-* **contesto**: il contesto passato all'operazione ListEnginesAsync.
+* **context**: contesto passato all'operazione ListEnginesAsync.
 
 
   
@@ -84,7 +83,7 @@ Parametri:
 Viene chiamato quando un motore è stato scaricato correttamente.
 
 Parametri:  
-* **contesto**: il contesto passato all'operazione UnloadEngineAsync.
+* **context**: contesto passato all'operazione UnloadEngineAsync.
 
 
   
@@ -95,7 +94,7 @@ Parametri:
 * **error**: errore che ha causato il fallimento dell'operazione di scaricamento motore. 
 
 
-* **contesto**: il contesto passato all'operazione UnloadEngineAsync.
+* **context**: contesto passato all'operazione UnloadEngineAsync.
 
 
   
@@ -103,21 +102,21 @@ Parametri:
 Viene chiamato quando un nuovo motore è stato aggiunto correttamente.
 
 Parametri:  
-* **motore**: il modulo appena aggiunto 
+* **motore**: il motore appena aggiunto 
 
 
-* **contesto**: il contesto passato all'operazione AddEngineAsync
+* **context**: contesto passato all'operazione AddEngineAsync
 
 
   
 ### <a name="onaddenginestarting-function"></a>OnAddEngineStarting (funzione)
-Chiamato prima della creazione motore per descrivere o meno i dati dei criteri del motore devono essere recuperati dal server o se può essere creato dai dati memorizzati nella cache locale.
+Chiamato prima della creazione del motore per descrivere se i dati dei criteri del motore devono essere recuperati dal server o se possono essere creati dai dati memorizzati nella cache locale.
 
 Parametri:  
-* **requiresPolicyFetch**: Descrive se i dati del motore devono essere recuperati tramite HTTP o se venga caricato dalla cache
+* **requiresPolicyFetch**: Descrive se i dati del motore devono essere recuperati tramite HTTP o se verranno caricati dalla cache
 
 
-Questo callback facoltativo potrebbe utilizzabile da un'applicazione per essere informati o meno un'operazione AddEngineAsync richiederanno un'operazione HTTP (con il ritardo associato) per completare.
+Questo callback facoltativo può essere utilizzato da un'applicazione per essere informati se un'operazione AddEngineAsync richiede un'operazione HTTP (con il ritardo associato) per il completamento.
   
 ### <a name="onaddenginefailure-function"></a>OnAddEngineFailure (funzione)
 Viene chiamato quando l'aggiunta di un nuovo motore ha causato un errore.
@@ -126,7 +125,7 @@ Parametri:
 * **error**: errore che ha causato il fallimento dell'operazione di aggiunta motore. 
 
 
-* **contesto**: il contesto passato all'operazione AddEngineAsync.
+* **context**: contesto passato all'operazione AddEngineAsync.
 
 
   
@@ -134,7 +133,7 @@ Parametri:
 Viene chiamato quando un motore è stato eliminato correttamente.
 
 Parametri:  
-* **contesto**: il contesto passato all'operazione DeleteEngineAsync.
+* **context**: contesto passato all'operazione DeleteEngineAsync.
 
 
   
@@ -145,12 +144,12 @@ Parametri:
 * **error**: errore che ha causato il fallimento dell'operazione di eliminazione motore. 
 
 
-* **contesto**: il contesto passato all'operazione DeleteEngineAsync.
+* **context**: contesto passato all'operazione DeleteEngineAsync.
 
 
   
 ### <a name="onpolicychanged-function"></a>OnPolicyChanged (funzione)
-Chiamato quando i criteri vengono modificati per il motore con l'ID specificato o quando sono stati modificati i tipi di sensibilità personalizzato caricato.
+Viene chiamato quando i criteri vengono modificati per il motore con l'ID specificato o quando i tipi di riservatezza personalizzati caricati sono stati modificati.
 
 Parametri:  
 * **engineId**: motore 

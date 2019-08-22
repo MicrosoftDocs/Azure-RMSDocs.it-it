@@ -1,29 +1,28 @@
 ---
 title: Classe mip::RemoveWatermarkAction
-description: 'Classe MIP:: removewatermarkaction di Microsoft Information Protection (MIP) SDK vengono documentate.'
-author: msmbaldwin
+description: 'Documenta la classe MIP:: removewatermarkaction di Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 7b6ef32e69fefad0371f75ea22b99f4181732e90
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 9d67dc7839183e148cb2792482e1fc186858ce7e
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60174171"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883141"
 ---
 # <a name="class-mipremovewatermarkaction"></a>Classe mip::RemoveWatermarkAction 
 Classe di azione che specifica la rimozione della filigrana dal documento.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-Public std:: Vector const\<std:: String\>& GetUIElementNames()  |  Ottiene un elenco di nomi da usare per individuare gli elementi dell'interfaccia utente che devono essere rimossi.
+public const std::\<vector std::\>String & GetUIElementNames ()  |  Ottiene un elenco di nomi da usare per individuare gli elementi dell'interfaccia utente che devono essere rimossi.
 public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getuielementnames-function"></a>GetUIElementNames (funzione)
 Ottiene un elenco di nomi da usare per individuare gli elementi dell'interfaccia utente che devono essere rimossi.
@@ -34,4 +33,5 @@ Ottiene un elenco di nomi da usare per individuare gli elementi dell'interfaccia
 ### <a name="gettype-function"></a>Funzione GetType
 Specifica il tipo di [Action](class_mip_action.md).
 
+  
 **Restituisce**: ActionType Tipo di azione derivata in cui è possibile eseguire il cast di questa classe di base.

@@ -1,66 +1,29 @@
 ---
 title: Classe mip::JustificationRequiredError
-description: 'Classe MIP:: justificationrequirederror di Microsoft Information Protection (MIP) SDK vengono documentate.'
-author: msmbaldwin
+description: 'Documenta la classe MIP:: justificationrequirederror di Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: f24b380b892739faec0602f3dd6b60467e4f4993
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: d75b17d7bf03164c15c4487c288963ca12304eb1
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60174137"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885539"
 ---
 # <a name="class-mipjustificationrequirederror"></a>Classe mip::JustificationRequiredError 
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-Public std:: shared_ptr virtual\<errore\> clone () const  |  Clona l'errore.
-public char const* what() const  |  Ottiene il messaggio di errore.
-Public std:: shared_ptr\<errore\> clone () const  |  Clona l'errore.
-public virtual ErrorType GetErrorType() const  |  Ottiene il tipo di errore.
-public virtual const std::string& GetErrorName() const  |  Ottiene il nome dell'errore.
-public virtual const std::string& GetMessage() const  |  Ottiene il messaggio di errore.
-public virtual void SetMessage(const std::string& msg)  |  Imposta il messaggio di errore.
+public virtual std:: shared_ptr\<Error\> Clone () const  |  Clona l'errore.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
-### <a name="clone-function"></a>Funzioni di clone
+### <a name="clone-function"></a>Funzione clone
 Clona l'errore.
 
   
-**Restituisce**: Un clone dell'errore.
-
-### <a name="what-function"></a>tipo di funzione
-Ottiene il messaggio di errore.
-
-  
-**Restituisce**: Il messaggio di errore
-  
-### <a name="geterrortype-function"></a>GetErrorType (funzione)
-Ottiene il tipo di errore.
-
-  
-**Restituisce**: Il tipo di errore.
-  
-### <a name="geterrorname-function"></a>GetErrorName (funzione)
-Ottiene il nome dell'errore.
-
-  
-**Restituisce**: Il nome di errore.
-  
-### <a name="getmessage-function"></a>GetMessage (funzione)
-Ottiene il messaggio di errore.
-
-  
-**Restituisce**: Il messaggio di errore.
-  
-### <a name="setmessage-function"></a>SetMessage (funzione)
-Imposta il messaggio di errore.
-
-Parametri:  
-* **msg**: messaggio di errore.
+**Restituisce**: Clone dell'errore.

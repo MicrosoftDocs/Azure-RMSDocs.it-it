@@ -1,24 +1,23 @@
 ---
 title: Classe mip::Stream
-description: 'Classe MIP:: Stream di Microsoft Information Protection (MIP) SDK vengono documentate.'
-author: msmbaldwin
+description: 'Documenta la classe MIP:: Stream di Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 1987aea2e90a3ded3a55f509e3d49a689d361c62
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: a5473adfa45a4784eaf20553acfc517dcf39f7e1
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60185114"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883024"
 ---
 # <a name="class-mipstream"></a>Classe mip::Stream 
 Classe che definisce l'interfaccia tra Microsoft Information Protection SDK e il contenuto basato su flusso.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public int64_t Read(uint8_t* buffer, int64_t bufferLength)  |  Legge in un buffer dal flusso.
 public int64_t Write(const uint8_t* buffer, int64_t bufferLength)  |  Scrive nel flusso da un buffer.
@@ -30,7 +29,7 @@ public int64_t Position()  |  Ottiene la posizione corrente all'interno del flus
 public int64_t Size()  |  Ottiene le dimensioni del contenuto all'interno del flusso.
 public void Size(int64_t value)  |  Imposta le dimensioni del flusso.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="read-function"></a>Read (funzione)
 Legge in un buffer dal flusso.
@@ -46,7 +45,7 @@ Parametri:
   
 **Restituisce**: Numero di byte letti.
   
-### <a name="write-function"></a>Scrivere una funzione
+### <a name="write-function"></a>Write (funzione)
 Scrive nel flusso da un buffer.
 
 Parametri:  
@@ -64,9 +63,9 @@ Parametri:
 Scarica il flusso.
 
   
-**Restituisce**: True se ha esito positivo in caso contrario false.
+**Restituisce**: True se ha esito positivo altrimenti false.
   
-### <a name="seek-function"></a>Seek (funzione)
+### <a name="seek-function"></a>Funzione Seek
 Cerca una posizione all'interno del flusso.
 
 Parametri:  
@@ -74,31 +73,31 @@ Parametri:
 
 
   
-### <a name="canread-function"></a>Proprietà CanRead (funzione)
+### <a name="canread-function"></a>Funzione CanRead
 Verifica se il flusso può essere letto.
 
   
-**Restituisce**: True se leggibili in caso contrario false.
+**Restituisce**: True se leggibile else false.
   
 ### <a name="canwrite-function"></a>CanWrite (funzione)
 Verifica se il flusso può essere scritto.
 
   
-**Restituisce**: True se è scrivibile in caso contrario false.
+**Restituisce**: True se scrivibile else false.
   
-### <a name="position-function"></a>Position-funzione
+### <a name="position-function"></a>Position (funzione)
 Ottiene la posizione corrente all'interno del flusso.
 
   
 **Restituisce**: Posizione all'interno del flusso.
   
-### <a name="size-function"></a>Funzione Size
+### <a name="size-function"></a>Size (funzione)
 Ottiene le dimensioni del contenuto all'interno del flusso.
 
   
-**Restituisce**: Le dimensioni del flusso.
+**Restituisce**: Dimensioni del flusso.
   
-### <a name="size-function"></a>Funzione Size
+### <a name="size-function"></a>Size (funzione)
 Imposta le dimensioni del flusso.
 
 Parametri:  

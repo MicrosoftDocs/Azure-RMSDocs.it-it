@@ -1,45 +1,37 @@
 ---
 title: Classe mip::CustomAction
-description: 'Classe MIP:: CustomAction di Microsoft Information Protection (MIP) SDK vengono documentate.'
-author: msmbaldwin
+description: 'Documenta la classe MIP:: CustomAction di Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 9286cc883e6348aa53d811cf87d6b84d1e35d1af
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: e71adc9c791f71b73c9386955d6b9606f2554f83
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173457"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884379"
 ---
 # <a name="class-mipcustomaction"></a>Classe mip::CustomAction 
 [CustomAction](class_mip_customaction.md) è una classe di azione generica che acquisisce tutte le sottoproprietà dell'azione sotto forma di contenitore delle proprietà. Il chiamante ha la responsabilità di comprendere il significato dell'azione.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const std::string& GetName() const  |  Ottiene il nome dell'azione.
-Public std:: Vector const\<std:: Pair\<std:: String, std:: String\>\>& GetProperties() const  |  Ottiene l'elenco di coppie valore-chiave delle proprietà.
-public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
-
-## <a name="members"></a>Membri
+public const std::\<vector std::p\<aria std:: String, std::\>String\>& GetProperties () const  |  Ottiene l'elenco di coppie valore-chiave delle proprietà.
+  
+## <a name="members"></a>Members
   
 ### <a name="getname-function"></a>GetName (funzione)
 Ottiene il nome dell'azione.
 
   
-**Restituisce**: Se un nome di azione esistente in caso contrario una stringa vuota.
+**Restituisce**: Nome dell'azione se ne esiste una stringa vuota.
   
 ### <a name="getproperties-function"></a>GetProperties (funzione)
 Ottiene l'elenco di coppie valore-chiave delle proprietà.
 
   
-**Restituisce**: Un elenco di coppie chiave valore.
-
-### <a name="gettype-function"></a>Funzione GetType
-Specifica il tipo di [Action](class_mip_action.md).
-
-  
-**Restituisce**: ActionType Tipo di azione derivata in cui è possibile eseguire il cast di questa classe di base.
+**Restituisce**: Elenco di coppie chiave-valore.
