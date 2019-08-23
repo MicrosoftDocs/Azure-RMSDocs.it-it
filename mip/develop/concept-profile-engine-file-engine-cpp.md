@@ -5,24 +5,24 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: fcdcb5c11646fd7d32284b6df31cda33abbfde4a
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 5cd54fb4d7b153ccdec3fdd6d7919b7595cfed96
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175514"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886093"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-engine-concepts"></a>Microsoft Information Protection SDK - Concetti relativi al motore dell'API File
 
 `mip::FileEngine` nell'API File di MIP SDK offre un'interfaccia per tutte le operazioni eseguite per conto di un'identità specificata. Verrà aggiunto un motore per ogni utente che accede all'applicazione e tutte le operazioni del motore verranno eseguite nel contesto di tale identità.
 
-Il `FileEngine` ha due responsabilità principali: Elenca le etichette per un utente autenticato e creazione di gestori di file per eseguire operazioni di file per conto dell'utente. 
+`FileEngine` Ha due responsabilità principali: Elenco delle etichette per un utente autenticato e creazione di gestori di file per eseguire operazioni sui file per conto dell'utente. 
 
 - [`mip::FileEngine`](reference/class_mip_fileengine.md)
 - `ListSensitivityLabels()`: Ottiene l'elenco di etichette per il motore caricato.
-- `CreateFileHandler()`: Crea un `mip::FileHandler` per un flusso o file specifici.
+- `CreateFileHandler()`: Crea un `mip::FileHandler` oggetto per un file o un flusso specifico.
 
 ## <a name="add-a-file-engine"></a>Aggiungere un motore di file
 
@@ -32,10 +32,24 @@ Come descritto in [Oggetti profilo e motore](concept-profile-engine-cpp.md), un 
 
 Analogamente a un profilo, anche per il motore è necessario un oggetto impostazioni, `mip::FileEngine::Settings`. Questo oggetto archivia l'identificatore univoco del motore, i dati client personalizzabili che possono essere usati per il debug o la telemetria e, facoltativamente, le impostazioni locali.
 
-Viene qui creato un oggetto `FileEngine::Settings` chiamato *engineSettings*. 
+Qui viene creato un `FileEngine::Settings` oggetto denominato *engineSettings* usando l'identità dell'utente dell'applicazione.
 
 ```cpp
-FileEngine::Settings engineSettings("UniqueID", "");
+FileEngine::Settings engineSettings(
+  mip::Identity(mUsername), // mip::Identity.
+  "",                       // Client data. Customizable by developer, stored with engine.
+  "en-US",                  // Locale.
+  false);                   // Load sensitive information types for driving classification.
+```
+
+Valido anche per fornire un ID del motore personalizzato:
+
+```cpp
+FileEngine::Settings engineSettings(
+  "myEngineId", // string
+  "",           // Client data in string format. Customizable by developer, stored with engine.
+  "en-US",      // Locale. Default is en-US
+  false);       // Load sensitive information types for driving classification. Default is false.
 ```
 
 Come procedura consigliata, il primo parametro, `id`, deve essere tale da consentire di collegare il motore con facilità all'utente associato. Elementi come l'indirizzo di posta elettronica, il nome dell'entità utente o un GUID dell'oggetto AAD potrebbero garantire che l'ID sia univoco e possa essere caricato dallo stato locale senza chiamare il servizio.
@@ -72,7 +86,7 @@ Tramite il motore aggiunto è ora possibile elencare tutte le etichette di riser
 
 `ListSensitivityLabels()` recupererà l'elenco di etichette e degli attributi di tali etichette per un utente specifico dal servizio. Il risultato viene archiviato in un vettore di `std::shared_ptr<mip::Label>`.
 
-[Qui]() sono disponibili altre informazioni su `mip::Label`.
+[Qui](reference/class_mip_label.md) sono disponibili altre informazioni su `mip::Label`.
 
 ### <a name="listsensitivitylabels"></a>ListSensitivityLabels()
 
@@ -105,7 +119,6 @@ for (const auto& label : labels) {
 
 La raccolta di `mip::Label` restituita da `GetSensitivityLabels()` può essere usata per visualizzare tutte le etichette disponibili per l'utente e quindi, se selezionata, per usare l'ID per applicare le etichette a un file.
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Fasi successive
 
 Ora che il profilo è caricato, il motore è stato aggiunto e sono disponibili etichette, è possibile aggiungere un gestore per iniziare a leggere, scrivere o rimuovere le etichette dai file. Vedere [Gestori di file in MIP SDK](concept-handler-file-cpp.md).
-

@@ -1,37 +1,36 @@
 ---
-title: classe mip::SensitivityTypesRulePackage
-description: Documenta la classe mip::sensitivitytypesrulepackage di Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: 'Classe MIP:: SensitivityTypesRulePackage'
+description: 'Documenta la classe MIP:: sensitivitytypesrulepackage di Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 46d59f7ee3cd099c5526fdc565ff5e84a81f6f4e
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 4a18ebd134dc0c46fd7221aaf09bcc5429de1101
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60185029"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883101"
 ---
-# <a name="class-mipsensitivitytypesrulepackage"></a>classe mip::SensitivityTypesRulePackage 
+# <a name="class-mipsensitivitytypesrulepackage"></a>Classe MIP:: SensitivityTypesRulePackage 
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std::string& GetRulePackageId() const  |  Ottenere l'ID regola del pacchetto.
-Public std:: String const & GetRulePackage() const  |  Ottenere il pacchetto della regola.
+public const std:: String & GetRulePackageId () const  |  Ottenere l'ID del pacchetto di regole.
+public const std:: String & GetRulePackage () const  |  Ottenere il pacchetto di regole.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getrulepackageid-function"></a>GetRulePackageId (funzione)
-Ottenere l'ID regola del pacchetto.
+Ottenere l'ID del pacchetto di regole.
 
   
-**Restituisce**: La regola con Id pacchetto
+**Restituisce**: ID del pacchetto di regole
   
 ### <a name="getrulepackage-function"></a>GetRulePackage (funzione)
-Ottenere il pacchetto della regola.
+Ottenere il pacchetto di regole.
 
   
-**Restituisce**: Il pacchetto di regola
+**Restituisce**: Pacchetto di regole

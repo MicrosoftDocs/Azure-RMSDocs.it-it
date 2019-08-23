@@ -1,33 +1,32 @@
 ---
 title: Classe mip::LoggerDelegate
-description: Documenta la classe mip::loggerdelegate di Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: 'Documenta la classe MIP:: loggerdelegate di Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 511c8dabc8ff31c70c8343a80d423b76c43fa946
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: effba9bc41907c477cea7e3cf6a8688187538068
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184621"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883916"
 ---
 # <a name="class-miploggerdelegate"></a>Classe mip::LoggerDelegate 
 Classe che definisce l'interfaccia per il logger MIP SDK.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public void Init(const std::string& storagePath, LogLevel logLevel)  |  Inizializza il logger.
 public LogLevel GetLogLevel() const  |  Ottiene il livello di log minimo che attiverà un evento di registrazione.
 public void Flush()  |  Scarica il logger.
 public void WriteToLog(const LogLevel level, const std::string& message, const std::string& function, const std::string& file, const int32_t line)  |  Scrive un'istruzione log in file di log.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
-### <a name="init-function"></a>Init (funzione)
+### <a name="init-function"></a>Funzione init
 Inizializza il logger.
 
 Parametri:  
@@ -42,7 +41,7 @@ Parametri:
 Ottiene il livello di log minimo che attiverà un evento di registrazione.
 
   
-**Restituisce**: Il livello di registrazione più basso che attiva un evento di registrazione.
+**Restituisce**: Livello di log più basso che attiverà un evento di registrazione.
   
 ### <a name="flush-function"></a>Flush (funzione)
 Scarica il logger.

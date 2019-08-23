@@ -1,69 +1,242 @@
 ---
-title: Microsoft Information Protection SDK per le enumerazioni e gli struct di riferimento di C++
-description: Documentazione di riferimento per gli struct C++ MIP SDK e le enumerazioni.
+title: SDK MIP per C++ struct e enumerazioni di riferimento
+description: Documentazione di riferimento per C++ gli struct e le enumerazioni dell'SDK MIP.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: c9e634d436d02b147fc10a734c8c3d5b1fcdec71
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 6efe7910769dffe809e0661475f9adc8226b37b3
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173357"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884904"
 ---
 # <a name="enumerations-and-structures"></a>Enumerazioni e strutture
 
-## <a name="namespace-mip"></a>Namespace mip
+## <a name="namespace-mip"></a>Spazio dei nomi MIP
 
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-Enumerazione ActionSource       |  definisce che cosa ha attivato l'evento SetLabel
-enum ActionType       |  Tipi di azioni diversi.
-Enumerazione AssignmentMethod       |  Il metodo di assegnazione dell'etichetta nel documento. Indica se l'assegnazione dell'etichetta è stata eseguita automaticamente, standard o come un'operazione con privilegi (l'equivalente a un'operazione di amministratore).
+WatermarkLayout enum       |  Layout per le filigrane.
+ContentMarkAlignment enum       |  Allineamento per i contrassegni di contenuto (intestazione del contenuto o piè di pagina del contenuto).
+AssignmentMethod enum       |  Metodo di assegnazione dell'etichetta nel documento. Indica se l'assegnazione dell'etichetta è stata eseguita automaticamente, standard o come operazione con privilegi (equivalente a un'operazione di amministratore).
+ActionSource enum       |  definisce ciò che ha attivato l'evento di etichettatura
+DataState enum       |  Definisce lo stato dei dati su cui si sta eseguendo l'applicazione.
+ContentFormat enum       |  Formato del contenuto.
 enum Consent       |  Risposta dell'utente quando viene richiesto il consenso per connettersi a un endpoint di servizio.
-Enumerazione visualizzazione       |  Formato del contenuto.
-enum ContentMarkAlignment       |  Allineamento contenuto contrassegna (contenuto dell'intestazione o piè di pagina contenuto).
-Enumerazione DataState       |  Definisce lo stato dei dati l'applicazione agisce.
+CacheStorageType enum       |  Tipo di archiviazione per le cache.
 enum ErrorType       | _Non ancora documentato._
+InspectorType enum       |  Tipo di controllo correlato ai tipi di file supportati.
+BodyType enum       |  Enumeratore del tipo di corpo.
+FlightingFeature enum       |  Definisce nuove funzionalità in base al nome.
 enum HttpRequestType       |  Tipo di richiesta HTTP.
 enum LogLevel       |  Diversi livelli di log usati in MIP SDK.
 enum ProtectionHandlerCreationOptions       |  Flag di bit che determinano il comportamento di creazione di criteri aggiuntivi.
 enum ProtectionType       |  Indica se la protezione si basa un modello o è ad hoc (personalizzata)
-Enumerazione WatermarkLayout       |  Layout delle filigrane.
-struct ApplicationInfo  |  Struct che include informazioni specifiche dell'applicazione.
-struct PublishingLicenseContext  |  Contiene i dettagli di una licenza di pubblicazione usata per creare un gestore di protezione.
-  
+enum ActionType       |  Tipi di azioni diversi.
+LabelState enum       | _Non ancora documentato._
+ActionDataType enum       | _Non ancora documentato._
+ConditionDataType enum       | _Non ancora documentato._
+ContentMarkPlacement enum       | _Non ancora documentato._
+LabelActionDataType enum       | _Non ancora documentato._
+ProtectionActionType enum       | _Non ancora documentato._
+struct MIP:: ApplicationInfo  |  Struct che include informazioni specifiche dell'applicazione.
+struct MIP:: TelemetryConfiguration  |  Impostazioni di telemetria personalizzate (non usate comunemente)
+
+
 ## <a name="enumerations-mip"></a>Enumerazioni (mip)
 
-### <a name="actionsource"></a>ActionSource
+### <a name="watermarklayout-enum"></a>Enumerazione WatermarkLayout
 
-Definisce che cosa ha attivato l'evento SetLabel.
-
- Valori                         | Descrizioni                                
+Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
-MANUAL            | Selezionato manualmente dall'utente
-AUTOMATICO            | Impostazione delle condizioni dei criteri
-CONSIGLIATO            | Impostato dall'utente dopo l'etichetta è stato consigliato per le condizioni dei criteri
-DEFAULT            | L'impostazione predefinita nei criteri
-OBBLIGATORIO            | Impostato dall'utente dopo il criterio applicato per impostare un'etichetta
+ORIZZONTALE            | Il layout della filigrana è orizzontale
+DIAGONALE            | Il layout della filigrana è diagonale
 
+Layout per le filigrane.
+  
+### <a name="contentmarkalignment-enum"></a>Enumerazione ContentMarkAlignment
 
+Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+LEFT            | Il contrassegno del contenuto è allineato a sinistra
+RIGHT            | Il contrassegno del contenuto è allineato a destra
+CENTER            | Il contrassegno del contenuto è centrato
 
-### <a name="actiontype"></a>ActionType
+Allineamento per i contrassegni di contenuto (intestazione del contenuto o piè di pagina del contenuto).
+  
+### <a name="assignmentmethod-enum"></a>Enumerazione AssignmentMethod
 
-Tipi di azioni diversi. CUSTOM è il tipo di azione generico. Ogni altro tipo di azione è un'azione specifica con un significato specifico.
+Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+STANDARD            | Il metodo di assegnazione [etichette](class_mip_label.md) è standard
+CON PRIVILEGI            | Il metodo di assegnazione [etichetta](class_mip_label.md) è con privilegi
+AUTOMATICO            | Il metodo di assegnazione [etichette](class_mip_label.md) è automatico
 
- Valori                         | Descrizioni                                
+Metodo di assegnazione dell'etichetta nel documento. Indica se l'assegnazione dell'etichetta è stata eseguita automaticamente, standard o come operazione con privilegi (equivalente a un'operazione di amministratore).
+  
+### <a name="actionsource-enum"></a>Enumerazione ActionSource
+
+Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+MANUALE            | Selezionato manualmente dall'utente
+AUTOMATICO            | Imposta da condizioni dei criteri
+CONSIGLIABILE            | Impostato dall'utente dopo la raccomandazione dell'etichetta per le condizioni dei criteri
+DEFAULT            | Impostazione predefinita nei criteri
+
+Definisce ciò che ha attivato l'evento di etichettatura
+  
+### <a name="datastate-enum"></a>Enum di DataState
+
+Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+REST            | Dati inattivi archiviati fisicamente in database/file/warehouse
+MOVIMENTO            | Dati che attraversano una rete o che risiedono temporaneamente nella memoria del computer per la lettura o l'aggiornamento
+USARE            | Dati attivi con modifiche costanti archiviati fisicamente in database/file/warehouse e così via
+
+Definisce lo stato dei dati su cui si sta eseguendo l'applicazione.
+  
+### <a name="contentformat-enum"></a>Enumerazione ContentFormat
+
+Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+DEFAULT            | Il formato del contenuto è il formato di file standard
+POSTA ELETTRONICA            | Il formato del contenuto è formato posta elettronica
+
+Formato del contenuto.
+  
+### <a name="consent-enum"></a>Enum di consenso
+
+Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+AcceptAlways            | Fornisce il consenso e memorizza questa decisione
+Accetta            | Fornisce il consenso una sola volta
+Rifiuta            | Non fornisce il consenso
+
+Risposta dell'utente quando viene richiesto il consenso per connettersi a un endpoint di servizio.
+  
+### <a name="cachestoragetype-enum"></a>Enumerazione CacheStorageType
+
+Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+InMemory            | Archiviazione in memoria
+OnDisk            | Archiviazione su disco
+OnDiskEncrypted            | Sull'archiviazione su disco con crittografia (se supportata dalla piattaforma)
+
+Tipo di archiviazione per le cache.
+  
+### <a name="errortype-enum"></a>Enumerazione ErrorType
+
+Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+BAD_INPUT_ERROR            | Il chiamante ha passato un input errato.
+FILE_IO_ERROR            | Errore di I/O file generale.
+NETWORK_ERROR            | Problemi di rete generali; ad esempio, un servizio irraggiungibile.
+TRANSIENT_NETWORK_ERROR            | Problemi di rete temporanei; ad esempio, gateway non valido.
+INTERNAL_ERROR            | Errori imprevisti interni,
+JUSTIFICATION_REQUIRED            | Per completare l'azione sul file, è necessario specificare una giustificazione.
+NOT_SUPPORTED_OPERATION            | L'operazione richiesta non è ancora supportata.
+PRIVILEGED_REQUIRED            | Non è possibile eseguire l'override dell'etichetta con privilegi quando il nuovo metodo di etichetta è standard.
+ACCESS_DENIED            | L'utente non è riuscito a ottenere l'accesso ai servizi.
+CONSENT_DENIED            | Non è stato concesso il consenso per un'operazione che ha richiesto il consenso dell'utente.
+POLICY_SYNC_ERROR            | Tentativo di sincronizzare i dati dei criteri non riuscito.
+NO_PERMISSIONS            | L'utente non è riuscito a ottenere l'accesso al contenuto, Ad esempio, nessuna autorizzazione, contenuto revocato
+NO_AUTH_TOKEN            | L'utente non è riuscito a ottenere l'accesso al contenuto a causa di un token di autenticazione vuoto.
+DISABLED_SERVICE            | L'utente non è riuscito a ottenere l'accesso al contenuto a causa della disabilitazione del servizio
+PROXY_AUTH_ERROR            | Autenticazione proxy non riuscita.
+NO_POLICY            | Nessun criterio configurato per l'utente/tenant
+OPERATION_CANCELLED            | Operazione annullata
+ADHOC_PROTECTION_REQUIRED            | È necessario impostare la protezione ad hoc per completare l'azione sul file
+DEPRECATED_API            | Il chiamante ha richiamato un'API deprecata
+TEMPLATE_NOT_FOUND            | ID modello non riconosciuto
+LABEL_NOT_FOUND            | [Etichetta](class_mip_label.md) di ID non riconosciuto
+LABEL_DISABLED            | [Label](class_mip_label.md) disabilitato o inattivo
+  
+### <a name="inspectortype-enum"></a>Enumerazione InspectorType
+
+Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+Sconosciuto            | Controllo file sconosciuto.
+Msg            | Controllo file di tipo msg, basato su rpmsg/msg.
+
+Tipo di controllo correlato ai tipi di file supportati.
+  
+### <a name="bodytype-enum"></a>Enumerazione BodyType
+
+Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+UNKNOWN            | Tipo di corpo sconosciuto
+TXT            | Tipo di corpo dello stile del testo, la codifica viene restituita come UTF8
+HTML            | Tipo di corpo dello stile HTML, la codifica viene restituita come UTF8
+RTF            | Tipo di corpo dello stile RTF, formato binario
+
+Enumeratore del tipo di corpo.
+  
+### <a name="flightingfeature-enum"></a>Enumerazione FlightingFeature
+
+Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+ServiceDiscovery            | Utilizzare una chiamata HTTP separata per determinare gli endpoint di servizio RMS
+AuthInfoCache            | Memorizzare nella cache le richieste OAuth2 per dominio/tenant per ridurre le risposte 401 non necessarie. Disabilitare per app/servizi che gestiscono la propria autenticazione HTTP (ad esempio, SPO)
+LinuxEncryptedCache            | Abilitare la memorizzazione nella cache crittografata per le piattaforme Linux (leggere i prerequisiti per questa funzionalità)
+
+Definisce nuove funzionalità in base al nome.
+  
+### <a name="httprequesttype-enum"></a>Enumerazione HttpRequestType
+
+Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+Ottenere            | GET
+Post            | INSERISCI
+
+Tipo di richiesta HTTP.
+  
+### <a name="loglevel-enum"></a>Enumerazione LogLevel
+
+Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+Trace            | 
+Info            | 
+Avviso            | 
+Errore            | 
+
+Diversi livelli di log usati in MIP SDK.
+  
+### <a name="protectionhandlercreationoptions-enum"></a>Enumerazione ProtectionHandlerCreationOptions
+
+Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+Nessuna            | Nessuna
+OfflineOnly            | Non consentire operazioni di interfaccia utente e di rete
+AllowAuditedExtraction            | Il contenuto può essere aperto in un'app che non supporta l'SDK di protezione
+PreferDeprecatedAlgorithms            | Usa algoritmi di crittografia deprecati per la compatibilità con le versioni precedenti
+
+Flag di bit che determinano il comportamento di creazione di criteri aggiuntivi.
+
+> Deprecato Questa enumerazione verrà presto deprecata quando CreateProtectionHandlerFromDescriptor e CreateProtectionHandlerFromPublishingLicense vengono rimossi
+  
+### <a name="protectiontype-enum"></a>Enumerazione ProtectionType
+
+Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+TemplateBased            | L'handle è stato creato da un modello
+Personalizzato            | L'handle è stato creato ad hoc
+
+Indica se la protezione si basa un modello o è ad hoc (personalizzata)
+  
+### <a name="actiontype-enum"></a>Enumerazione ActionType
+
+Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
 ADD_CONTENT_FOOTER            | Aggiunge un piè di pagina contenuto al tipo di azione del documento.
 ADD_CONTENT_HEADER            | Aggiunge un'intestazione contenuto al tipo di azione del documento.
 ADD_WATERMARK            | Aggiunge una filigrana al tipo di azione dell'intero documento.
 PERSONALIZZATO            | Tipo di azione definito personalizzato.
 JUSTIFY            | Tipo di azione di allineamento.
-METADATA            | Tipo di azione di modifica dei metadati.
+METADATI            | Tipo di azione di modifica dei metadati.
 PROTECT_ADHOC            | Tipo di azione di protezione con criteri ad hoc.
 PROTECT_BY_TEMPLATE            | Tipo di azione di protezione con modello.
 PROTECT_DO_NOT_FORWARD            | Tipo di azione di protezione senza inoltro.
@@ -74,128 +247,60 @@ REMOVE_WATERMARK            | Tipo di azione di rimozione della filigrana.
 APPLY_LABEL            | Tipo di azione di applicazione dell'etichetta.
 RECOMMEND_LABEL            | Tipo di azione di etichetta consigliata.
 
-
-### <a name="assignmentmethod"></a>AssignmentMethod
-
-Il metodo di assegnazione dell'etichetta nel documento. Indica se l'assegnazione dell'etichetta è stata eseguita automaticamente, standard o come un'operazione con privilegi (l'equivalente a un'operazione di amministratore).
-
- Valori                         | Descrizioni                                
---------------------------------|---------------------------------------------
-STANDARD            | [Etichetta](class_mip_label.md) metodo di assegnazione è standard
-CON PRIVILEGI            | [Etichetta](class_mip_label.md) dispone dei privilegi necessari metodo di assegnazione
-AUTO            | [Etichetta](class_mip_label.md) metodo di assegnazione è automatico
-
-
-### <a name="consent"></a>Fornire il consenso
-
-Risposta dell'utente quando viene richiesto il consenso per connettersi a un endpoint di servizio.
-
- Valori                         | Descrizioni                                
---------------------------------|---------------------------------------------
-AcceptAlways            | Fornisce il consenso e memorizza questa decisione
-Accetta            | Fornisce il consenso una sola volta
-Rifiuta            | Non fornisce il consenso
-
-
-### <a name="contentformat"></a>ContentFormat
-
-Formato del contenuto.
-
- Valori                         | Descrizioni                                
---------------------------------|---------------------------------------------
-DEFAULT            | Formato del contenuto è il formato di file standard
-POSTA ELETTRONICA            | È contenuto il formato di posta elettronica
-
-### <a name="contentmarkalignment"></a>ContentMarkAlignment
-
-Allineamento contenuto contrassegna (contenuto dell'intestazione o piè di pagina contenuto).
-
- Valori                         | Descrizioni                                
---------------------------------|---------------------------------------------
-LEFT            | Contrassegno contenuto è allineato a sinistra
-RIGHT            | Contrassegno contenuto è allineato a destra
-CENTER            | Contrassegno contenuto viene centrato
-
-### <a name="datastate"></a>DataState
- Valori                         | Descrizioni                                
---------------------------------|---------------------------------------------
-REST            | Dati inattivi archiviati fisicamente nel database o file/data warehouse
-MOVIMENTO            | Dati che attraversa una rete o temporaneamente che risiedono nella memoria del computer da leggere o aggiornare
-USE            | Dati attivi in costante evoluzione archiviate fisicamente nel database o file/data warehouse e così via
-
-
-### <a name="errortype"></a>ErrorType
- Valori                         | Descrizioni                                
---------------------------------|---------------------------------------------
-BAD_INPUT_ERROR            | Il chiamante ha passato un input errato.
-FILE_IO_ERROR            | Errore di I/O file generale.
-NETWORK_ERROR            | Problemi generali di rete; ad esempio, il servizio non raggiungibile.
-TRANSIENT_NETWORK_ERROR            | Problemi di rete temporanei; ad esempio, i gateway non valido.
-INTERNAL_ERROR            | Errori imprevisti interni,
-JUSTIFICATION_REQUIRED            | Per completare l'azione sul file, è necessario specificare una giustificazione.
-NOT_SUPPORTED_OPERATION            | L'operazione richiesta non è ancora supportata.
-PRIVILEGED_REQUIRED            | Non è possibile eseguire l'override dell'etichetta con privilegi quando il nuovo metodo di etichetta è standard.
-ACCESS_DENIED            | L'utente non è stato possibile ottenere l'accesso ai servizi.
-CONSENT_DENIED            | Non è stato concesso il consenso per un'operazione che ha richiesto il consenso dell'utente.
-POLICY_SYNC_ERROR            | Tentativo di sincronizzare i dati dei criteri non riuscito.
-NO_PERMISSIONS            | L'utente non è riuscito a ottenere l'accesso al contenuto, Ad esempio, alcuna autorizzazione, contenuti non revocato
-NO_AUTH_TOKEN            | L'utente non è stato possibile ottenere l'accesso al contenuto a causa di un token di autenticazione vuoto.
-DISABLED_SERVICE            | L'utente non è stato possibile ottenere l'accesso al contenuto a causa la disattivazione del servizio
-PROXY_AUTH_ERROR            | Autenticazione proxy non riuscita.
-NO_POLICY_ERROR            | Nessun criterio è configurato per tenant/utente
-OPERATION_CANCELLED            | Operazione annullata
-ADHOC_PROTECTION_REQUIRED            | Protezione ad hoc deve essere impostata per completare l'azione sul file
+Tipi di azioni diversi. CUSTOM è il tipo di azione generico. Ogni altro tipo di azione è un'azione specifica con un significato specifico.
   
-### <a name="httprequesttype"></a>HttpRequestType
+### <a name="labelstate-enum"></a>Enumerazione LabelState
 
-Tipo di richiesta HTTP.
-
- Valori                         | Descrizioni                                
+Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
-Ottenere            | GET
-Post            | INSERISCI
-
+NoChange            | 
+Remove            | 
+Aggiorna            | 
   
-### <a name="loglevel"></a>LogLevel
+### <a name="actiondatatype-enum"></a>Enumerazione ActionDataType
 
-Diversi livelli di log usati in MIP SDK.
-
- Valori                         | Descrizioni                                
+Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
-Trace            | 
-Info            | 
-Avviso            | 
+Personalizzato            | 
+Protezione            | 
+ContentMarking            | 
+AddWatermark            | 
+Label            | 
   
-### <a name="protectionhandlercreationoptions"></a>ProtectionHandlerCreationOptions
+### <a name="conditiondatatype-enum"></a>Enumerazione ConditionDataType
 
-Flag di bit che determinano il comportamento di creazione di criteri aggiuntivi.
-
- Valori                         | Descrizioni                                
+Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
-Nessuno            | Nessuno
-OfflineOnly            | Non consente operazioni dell'interfaccia utente e di rete.
-AllowAuditedExtraction            | Il contenuto può essere aperto in un'app che non supporta l'SDK di protezione
-PreferDeprecatedAlgorithms            | Usa algoritmi di crittografia deprecati per la compatibilità con le versioni precedenti
-
-
-### <a name="protectiontype"></a>ProtectionType
-
-Descrive se protezione si basa un modello o ad hoc (personalizzato).
-
- Valori                         | Descrizioni                                
---------------------------------|---------------------------------------------
-TemplateBased            | L'handle è stato creato da un modello
-Personalizzato            | L'handle è stato creato ad hoc
-
+Predefinito            | 
+Sensibilità            | 
   
-### <a name="watermarklayout"></a>WatermarkLayout
+### <a name="contentmarkplacement-enum"></a>Enumerazione ContentMarkPlacement
 
-Layout delle filigrane.
-
- Valori                         | Descrizioni                                
+Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
-ORIZZONTALE            | Layout della filigrana è orizzontale
-DIAGONALI            | Layout della filigrana è diagonale
+Intestazione            | 
+Piè di pagina            | 
+  
+### <a name="labelactiondatatype-enum"></a>Enumerazione LabelActionDataType
+
+Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+Consigliato            | 
+Applica            | 
+  
+### <a name="protectionactiontype-enum"></a>Enumerazione ProtectionActionType
+
+Valori                         | Descrizioni                                
+--------------------------------|---------------------------------------------
+Personalizzato            | 
+Modello            | 
+DoNotForward            | 
+Ad hoc            | 
+DoNotForwardWithPrompt            | 
+Hyok            | 
+PredefinedTemplate            | 
+RemoveProtection            | 
+  
 
 
 ## <a name="structures"></a>Strutture 
@@ -204,42 +309,56 @@ DIAGONALI            | Layout della filigrana è diagonale
 Struct che include informazioni specifiche dell'applicazione.
   
 #### <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public std::string applicationId  |  Identificatore dell'applicazione come impostato nel portale di AAD, (deve essere un GUID senza parentesi quadre).
-public std::string applicationName  |  Nome dell'applicazione (deve contenere solo caratteri ASCII valida esclusa ';')
-public std::string applicationVersion  |  La versione dell'applicazione in uso, (deve contenere solo caratteri ASCII valida esclusa ';')
+public std::string applicationId  |  Identificatore dell'applicazione impostato nel portale di AAD, (deve essere un GUID senza parentesi quadre).
+public std::string applicationName  |  Nome dell'applicazione, (deve solo containValid carattere ASCII escluso ';')
+public std::string applicationVersion  |  Versione dell'applicazione in uso, (deve solo containValid carattere ASCII escluso ';')
   
-#### <a name="members"></a>Membri
+#### <a name="members"></a>Members
   
 ##### <a name="applicationid-struct-member"></a>membro struct applicationId
-Identificatore dell'applicazione come impostato nel portale di AAD, (deve essere un GUID senza parentesi quadre).
+Identificatore dell'applicazione impostato nel portale di AAD, (deve essere un GUID senza parentesi quadre).
   
-##### <a name="applicationname-struct-member"></a>membro struct applicationName
-Nome dell'applicazione (deve contenere solo caratteri ASCII valida esclusa ';')
+##### <a name="applicationname-struct-member"></a>membro struct di ApplicationName
+Nome dell'applicazione, (deve solo containValid carattere ASCII escluso ';')
   
 ##### <a name="applicationversion-struct-member"></a>membro struct applicationVersion
-La versione dell'applicazione in uso, (deve contenere solo caratteri ASCII valida esclusa ';')  
+Versione dell'applicazione in uso, (deve solo containValid carattere ASCII escluso ';')
 
-### <a name="mippublishinglicensecontext"></a>mip::PublishingLicenseContext 
-Contiene i dettagli di una licenza di pubblicazione usata per creare un gestore di protezione.
+### <a name="miptelemetryconfiguration"></a>MIP:: TelemetryConfiguration 
+Impostazioni di telemetria personalizzate (non usate comunemente)
   
 #### <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-Public std:: Vector const\<uint8_t\> licenseInfo  | _Non ancora documentato._
-Public std:: Vector const\<uint8_t\> serializedPublishingLicense  | _Non ancora documentato._
-pubblica PublishingLicenseContext (const std:: Vector\<uint8_t\>& licenseInfo, const std:: Vector\<uint8_t\>& serializedPublishingLicense)  | _Non ancora documentato._
+public std:: String hostNameOverride  |  Nome dell'istanza di telemetria host. Se non è impostato, MIP fungerà da host.
+public std:: String libraryNameOverride  |  Nome file della libreria di telemetria alternativa (DLL).
+public std:: shared_ptr\<HttpDelegate\> httpDelegateOverride  |  Se impostato, la gestione HTTP verrà gestita da questa istanza
+public std:: shared_ptr\<TaskDispatcherDelegate\> taskDispatcherDelegateOverride  |  Se impostata, la gestione asincrona delle attività verrà gestita da questa istanza
+public bool isNetworkDetectionEnabled  |  Se impostato, il componente di telemetria effettuerà il ping dello stato della rete sul thread in background
+public bool isLocalCachingEnabled  |  Se impostato, il componente di telemetria utilizzerà la memorizzazione nella cache su disco
+public bool isTelemetryOptedOut  |  Se impostato, verranno inviati solo i dati di telemetria del servizio necessari
   
-#### <a name="members"></a>Membri
+#### <a name="members"></a>Members
   
-##### <a name="licenseinfo-struct-member"></a>membro struct licenseInfo
-_Non ancora documentato._
-
+##### <a name="hostnameoverride-struct-member"></a>membro struct hostNameOverride
+Nome dell'istanza di telemetria host. Se non è impostato, MIP fungerà da host.
   
-##### <a name="serializedpublishinglicense-struct-member"></a>membro struct serializedPublishingLicense
-_Non ancora documentato._
-
+##### <a name="librarynameoverride-struct-member"></a>membro struct libraryNameOverride
+Nome file della libreria di telemetria alternativa (DLL).
   
-##### <a name="publishinglicensecontext-function"></a>PublishingLicenseContext (funzione)
-_Non ancora documentato._
+##### <a name="httpdelegate"></a>HttpDelegate
+Se impostato, la gestione HTTP verrà gestita da questa istanza
+  
+##### <a name="taskdispatcherdelegate"></a>TaskDispatcherDelegate
+Se impostata, la gestione asincrona delle attività verrà gestita da questa istanza
+  
+##### <a name="isnetworkdetectionenabled-struct-member"></a>membro struct isNetworkDetectionEnabled
+Se impostato, il componente di telemetria effettuerà il ping dello stato della rete sul thread in background
+  
+##### <a name="islocalcachingenabled-struct-member"></a>membro struct isLocalCachingEnabled
+Se impostato, il componente di telemetria utilizzerà la memorizzazione nella cache su disco
+  
+##### <a name="istelemetryoptedout-struct-member"></a>membro struct isTelemetryOptedOut
+Se impostato, verranno inviati solo i dati di telemetria del servizio necessari

@@ -1,24 +1,23 @@
 ---
 title: Classe mip::Label
-description: 'Classe MIP:: Label di Microsoft Information Protection (MIP) SDK vengono documentate.'
-author: msmbaldwin
+description: "Documenta la classe MIP:: label dell'SDK Microsoft Information Protection (MIP)."
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: e4f8246cbc0f6f1f897de4710e155e0099b71244
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 3d746c1f271d75c160ca721ebe6f0fef0f15bd5e
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184638"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884043"
 ---
 # <a name="class-miplabel"></a>Classe mip::Label 
 Astrazione per una singola etichetta di Microsoft Information Protection.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Ottiene l'ID dell'etichetta.
 public const std::string& GetName() const  |  Ottiene il nome dell'etichetta.
@@ -27,60 +26,61 @@ public const std::string& GetColor() const  |  Ottiene il colore in cui deve ess
 public int GetSensitivity() const  |  Ottiene la riservatezza dell'etichetta.
 public const std::string& GetTooltip() const  |  Ottiene la descrizione comando dell'etichetta.
 public bool IsActive() const  |  Ottiene un valore booleano che indica se l'etichetta è attiva.
-pubblica std::weak_ptr\<etichetta\> GetParent const  |  Ottiene l'etichetta padre.
-public const std::vector\<std::shared_ptr\<Label\>\>& GetChildren() const  |  Ottiene le etichette figlio dell'etichetta corrente.
-Public std:: Vector const\<std:: Pair\<std:: String, std:: String\>\>& GetCustomSettings() const  |  Ottiene le impostazioni di un'etichetta personalizzate.
+public std:: weak_ptr\<label\> GetParent () const  |  Ottiene l'etichetta padre.
+public const std::\<vector std::\<shared_ptr\>label\>& GetChildren () const  |  Ottiene le etichette figlio dell'etichetta corrente.
+public const std::\<vector std::p\<Air std:: String, std::\>String\>& GetCustomSettings () const  |  Ottiene le impostazioni personalizzate di un'etichetta.
+public ActionSource GetActionSource() const  |  Ottiene l'origine dell'azione dell'etichetta.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getid-function"></a>GetId (funzione)
 Ottiene l'ID dell'etichetta.
 
   
-**Restituisce**: L'ID etichetta.
+**Restituisce**: ID dell'etichetta.
   
 ### <a name="getname-function"></a>GetName (funzione)
 Ottiene il nome dell'etichetta.
 
   
-**Restituisce**: Il nome dell'etichetta.
+**Restituisce**: Nome dell'etichetta.
   
-### <a name="getdescription-function"></a>GetDescription (funzione)
+### <a name="getdescription-function"></a>Funzione GetDescription
 Ottiene la descrizione dell'etichetta.
 
   
-**Restituisce**: La descrizione dell'etichetta.
+**Restituisce**: Descrizione dell'etichetta.
   
-### <a name="getcolor-function"></a>GetColor (funzione)
+### <a name="getcolor-function"></a>Funzione GetColor
 Ottiene il colore in cui deve essere visualizzata l'etichetta.
 
   
-**Restituisce**: Valore di colore, il formato della stringa. "#RRGGBB", dove RR, GG, BB sono valori esadecimali di due cifre compresi nell'intervallo 0-F.
+**Restituisce**: Valore del colore il formato della stringa. "#RRGGBB", dove RR, GG, BB sono valori esadecimali di due cifre compresi nell'intervallo 0-F.
   
-### <a name="getsensitivity-function"></a>GetSensitivity (funzione)
+### <a name="getsensitivity-function"></a>Funzione getsensitivity
 Ottiene la riservatezza dell'etichetta.
 
   
-**Restituisce**: Un valore numerico. A un valore più alto corrisponde una riservatezza più elevata.
+**Restituisce**: Valore numerico. A un valore più alto corrisponde una riservatezza più elevata.
   
-### <a name="gettooltip-function"></a>GetTooltip (funzione)
+### <a name="gettooltip-function"></a>Funzione GetToolTip
 Ottiene la descrizione comando dell'etichetta.
 
   
-**Restituisce**: Una stringa di descrizione comando.
+**Restituisce**: Stringa della descrizione comando.
   
-### <a name="isactive-function"></a>IsActive (funzione)
+### <a name="isactive-function"></a>Funzione Active
 Ottiene un valore booleano che indica se l'etichetta è attiva.
 Possono essere applicate solo le etichette attive. Le etichette inattive non possono essere applicate e sono usate solo a scopo di visualizzazione. 
 
   
-**Restituisce**: True se l'etichetta è attiva, in caso contrario, false.
+**Restituisce**: True se l'etichetta è attiva; in caso contrario, false.
   
-### <a name="getparent-function"></a>GetParent (funzione)
+### <a name="getparent-function"></a>Funzione GetParent
 Ottiene l'etichetta padre.
 
   
-**Restituisce**: Puntatore debole all'elemento padre di assegnare un'etichetta se esistente in caso contrario un puntatore vuoto.
+**Restituisce**: Puntatore debole all'etichetta padre se esiste un puntatore vuoto.
   
 ### <a name="getchildren-function"></a>GetChildren (funzione)
 Ottiene le etichette figlio dell'etichetta corrente.
@@ -89,7 +89,13 @@ Ottiene le etichette figlio dell'etichetta corrente.
 **Restituisce**: Vettore di puntatori condivisi a etichette.
   
 ### <a name="getcustomsettings-function"></a>GetCustomSettings (funzione)
-Ottiene le impostazioni di un'etichetta personalizzate.
+Ottiene le impostazioni personalizzate di un'etichetta.
 
   
 **Restituisce**: Vettore di coppie chiave-valore che rappresenta le impostazioni personalizzate.
+  
+### <a name="getactionsource-function"></a>GetActionSource (funzione)
+Ottiene l'origine dell'azione dell'etichetta.
+
+  
+**Restituisce**: Origine [azione](class_mip_action.md)

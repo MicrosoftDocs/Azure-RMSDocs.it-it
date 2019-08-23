@@ -1,38 +1,37 @@
 ---
 title: Classe mip::HttpRequest
-description: Documenta la classe mip::httprequest di Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+description: 'Documenta la classe MIP:: HttpRequest di Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 8b0349db2e985d6fb015e1a2698187089483fbe3
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 28584ffa19c2ceb00f4ab3839f945adf737bdb3b
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173512"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885567"
 ---
 # <a name="class-miphttprequest"></a>Classe mip::HttpRequest 
 Interfaccia che descrive una singola richiesta HTTP.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std::string& GetId() const  |  Ottiene ID richiesta
+public const std::string& GetId() const  |  Ottiene l'ID della richiesta.
 public HttpRequestType GetRequestType() const  |  Ottiene il tipo di richiesta.
 public const std::string& GetUrl() const  |  Ottiene l'URL della richiesta.
-Public std:: Vector const\<uint8_t\>& GetBody() const  |  Ottiene il corpo della richiesta.
-Public std:: Map const\<std:: String, std:: String, CaseInsensitiveComparator\>& GetHeaders() const  |  Ottiene le intestazioni della richiesta.
+public const std::\<vector\>uint8_t & GetBody () const  |  Ottiene il corpo della richiesta.
+public const std::\<map std:: String, std:: String,\>CaseInsensitiveComparator & GetHeaders () const  |  Ottiene le intestazioni della richiesta.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getid-function"></a>GetId (funzione)
-Ottiene ID richiesta
+Ottiene l'ID della richiesta.
 
   
-**Restituisce**: Request ID corrispondente [HttpResponse](class_mip_httpresponse.md) avrà lo stesso ID
+**Restituisce**: ID richiesta il HttpResponse corrispondente avrà lo stesso ID
   
 ### <a name="getrequesttype-function"></a>GetRequestType (funzione)
 Ottiene il tipo di richiesta.
@@ -44,15 +43,15 @@ Ottiene il tipo di richiesta.
 Ottiene l'URL della richiesta.
 
   
-**Restituisce**: Url della richiesta
+**Restituisce**: URL della richiesta
   
-### <a name="getbody-function"></a>GetBody (funzione)
+### <a name="getbody-function"></a>Funzione GetBody
 Ottiene il corpo della richiesta.
 
   
-**Restituisce**: Testo della richiesta
+**Restituisce**: Corpo della richiesta
   
-### <a name="getheaders-function"></a>GetHeaders (funzione)
+### <a name="getheaders-function"></a>Funzione GetHeaders
 Ottiene le intestazioni della richiesta.
 
   

@@ -6,18 +6,18 @@ author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 11/01/2018
+ms.date: 07/30/2019
 ms.author: tommos
-ms.openlocfilehash: df0d51d976f7f900011688d2f328f3a2ddb1e378
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: df67886f53d697e47f6e812cdcbbac394acaa98d
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60176925"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884765"
 ---
 # <a name="auditing-in-the-mip-sdk-file-api"></a>Controllo nell'API File di MIP SDK
 
-Nel portale di amministrazione di Azure Information Protection è possibile accedere ai report di amministratore. Questi report offrono la visibilità sulle etichette che gli utenti stanno applicando, manualmente o automaticamente, in tutte le applicazioni e servizi in cui è integrato MIP SDK. I partner di sviluppo che usano l'SDK possono abilitare facilmente questa funzionalità per presentare nei report dei clienti le informazioni contenute nelle proprie applicazioni.
+Nel portale di amministrazione di Azure Information Protection è possibile accedere ai report di amministratore. Questi report consentono di visualizzare le etichette che gli utenti applicano, manualmente o automaticamente, in tutte le applicazioni o i servizi che hanno integrato il MIP SDK. I partner di sviluppo che usano l'SDK possono abilitare questa funzionalità per la superficie delle informazioni dalle applicazioni nei report dei clienti.
 
 ## <a name="event-types"></a>Tipi di evento
 
@@ -63,8 +63,8 @@ Gli eventi di modifica rendono disponibili informazioni sul file, sull'etichetta
 ```cpp
 // Create labeling options, set label
 string contentId = "C:\users\myuser\Documents\MyPlan.docx";
-mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED, mip::ActionSource::MANUAL);
-handler->SetLabel(labelId, labelingOptions);
+mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED);
+handler->SetLabel(labelId, labelingOptions, mip::ProtectionSettings());
 auto commitPromise = std::make_shared<std::promise<bool>>();
 auto commitFuture = commitPromise->get_future();
 
@@ -79,8 +79,8 @@ if(commitFuture.get()) {
 
 ## <a name="audit-dashboard"></a>Dashboard di controllo
 
-Gli eventi inviati alla pipeline di controllo di Azure Information Protection vengono visualizzati nei report in corrispondenza di https://portal.azure.com. L'analitica di Azure Information Protection è disponibile come anteprima pubblica e le funzionalità sono soggette a modifica.
+Gli eventi inviati alla pipeline di controllo di Azure Information Protection vengono visualizzati nei report in corrispondenza di https://portal.azure.com. 
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Fasi successive
 
-Per altri dettagli sull'esperienza di controllo in Azure Information Protection, vedere il [blog dell'annuncio anteprima nella community IT](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
+Per informazioni dettagliate sull'esperienza di controllo in Azure Information Protection, vedere il [Blog di annuncio dell'anteprima sulla Community Tech](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).

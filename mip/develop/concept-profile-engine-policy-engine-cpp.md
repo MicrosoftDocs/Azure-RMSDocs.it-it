@@ -5,34 +5,48 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 52d036bd58d4f24710e765ca42493696a3cd5330
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 5fac6b39cb3770748336fac7264134acf2627a02
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175418"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886075"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-engine-concepts"></a>Microsoft Information Protection SDK - Concetti relativi al motore dell'API Criteri
 
-`mip::PolicyEngine` implementa tutte le operazioni che può eseguire l'API Criteri, fatta eccezione per il caricamento del profilo. 
+`mip::PolicyEngine` implementa tutte le operazioni che può eseguire l'API Criteri, fatta eccezione per il caricamento del profilo.
 
-## <a name="implementation-add-a-policy-engine"></a>Implementazione: Aggiungere un motore dei criteri
+## <a name="implementation-add-a-policy-engine"></a>Implementazione Aggiungere un motore dei criteri
 
-### <a name="implementation-create-policy-engine-settings"></a>Implementazione: Creare impostazioni di criteri di gestione
+### <a name="implementation-create-policy-engine-settings"></a>Implementazione Creare le impostazioni del motore dei criteri
 
 Analogamente a un profilo, anche per il motore è necessario un oggetto impostazioni, `mip::PolicyEngine::Settings`. Questo oggetto archivia l'identificatore univoco del motore, i dati client personalizzabili che possono essere usati per il debug o la telemetria e, facoltativamente, le impostazioni locali.
 
-Viene qui creato un oggetto `PolicyEngine::Settings` chiamato *engineSettings*.
+Qui viene creato un `FileEngine::Settings` oggetto denominato *engineSettings* usando l'identità dell'utente dell'applicazione:
 
 ```cpp
-PolicyEngine::Settings engineSettings("UniqueID", "");
+PolicyEngine::Settings engineSettings(
+  mip::Identity(mUsername), // mip::Identity.
+  "",                       // Client data. Customizable by developer, stored with engine.
+  "en-US",                  // Locale.
+  false);                   // Load sensitive information types for driving classification.
+```
+
+Valido anche per fornire un ID del motore personalizzato:
+
+```cpp
+PolicyEngine::Settings engineSettings(
+  "myEngineId", // string
+  "",           // Client data in string format. Customizable by developer, stored with engine.
+  "en-US",      // Locale. Default is en-US
+  false);       // Load sensitive information types for driving classification. Default is false.
 ```
 
 Come procedura consigliata, il primo parametro, **id**, deve essere tale da consentire di collegare il motore con facilità all'utente associato, preferibilmente il nome dell'entità utente.
 
-### <a name="implementation-add-the-policy-engine"></a>Implementazione: Aggiungere il motore dei criteri
+### <a name="implementation-add-the-policy-engine"></a>Implementazione Aggiungere il motore dei criteri
 
 Per aggiungere il motore, si tornerà al modello promise/future usato per caricare il profilo. Invece di creare la promessa per `mip::Profile`, si userà `mip::PolicyEngine`.
 
@@ -59,19 +73,19 @@ Per aggiungere il motore, si tornerà al modello promise/future usato per carica
 
 Il risultato finale del codice precedente è l'aggiunta di un motore per l'utente autenticato al profilo.
 
-## <a name="implementation-list-sensitivity-labels"></a>Implementazione: Elencare le etichette di riservatezza
+## <a name="implementation-list-sensitivity-labels"></a>Implementazione Elencare le etichette di riservatezza
 
 Tramite il motore aggiunto è ora possibile elencare tutte le etichette di riservatezza disponibili per l'utente autenticato chiamando `engine->ListSensitivityLabels()`.
 
 `ListSensitivityLabels()` recupererà l'elenco di etichette e degli attributi di tali etichette per un utente specifico dal servizio. Il risultato viene archiviato in un vettore di `std::shared_ptr<mip::Label>`.
 
-### <a name="implementation-listsensitivitylabels"></a>Implementazione: ListSensitivityLabels()
+### <a name="implementation-listsensitivitylabels"></a>Implementazione ListSensitivityLabels()
 
 ```cpp
 std::vector<shared_ptr<mip::Label>> labels = engine->ListSensitivityLabels();
 ```
 
-### <a name="implementation-print-the-labels"></a>Implementazione: Stampare le etichette
+### <a name="implementation-print-the-labels"></a>Implementazione Stampare le etichette
 
 ```cpp
 //Iterate through all labels in the vector
@@ -94,11 +108,10 @@ for (const auto& label : labels) {
   cout << label->GetName() << " : " << label->GetId() << endl;
 
   //Print child label name and GUID
-  for (const auto& child : label->GetChildren()) {    
+  for (const auto& child : label->GetChildren()) {
     cout << "->  " << child->GetName() <<  " : " << child->GetId() << endl;
   }
 }
 ```
 
 La raccolta di `mip::Label` restituita da `GetSensitivityLabels()` può essere usata per visualizzare tutte le etichette disponibili per l'utente e quindi, se selezionata, per usare l'ID per applicare le etichette a un file.
-

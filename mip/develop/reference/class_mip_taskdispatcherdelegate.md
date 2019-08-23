@@ -1,41 +1,40 @@
 ---
-title: class mip::TaskDispatcherDelegate
-description: Documenta la classe mip::taskdispatcherdelegate di Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: 'Classe MIP:: TaskDispatcherDelegate'
+description: 'Documenta la classe MIP:: taskdispatcherdelegate di Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 568a6df614370769556cd3634070e199beb4da5b
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 0455f446cddd7db1c05f0f7e7b76b33496810cf1
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184281"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883015"
 ---
-# <a name="class-miptaskdispatcherdelegate"></a>class mip::TaskDispatcherDelegate 
-Una classe che definisce l'interfaccia per il dispatcher attività MIP SDK.
+# <a name="class-miptaskdispatcherdelegate"></a>Classe MIP:: TaskDispatcherDelegate 
+Classe che definisce l'interfaccia per il dispatcher di attività dell'SDK MIP.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public void DispatchTask(const std::string& taskId, std::function\<void()\> task)  |  Eseguire un'attività in un thread in background.
-public void DispatchTask(const std::string& taskId, std::function\<void()\> task, int64_t delay)  |  Eseguire un'attività in un thread in background con il ritardo specificato.
-public void ExecuteTaskOnIndependentThread (const std:: String & taskId, std:: Function\<void()\> attività)  |  Eseguire immediatamente un'attività su un thread indipendente.
-public bool CancelTask (const std:: String & taskId)  |  Annullare un'attività in background.
-public void CancelAllTasks()  |  Annullare tutte le attività in background.
+public void DispatchTask (const std:: String & taskId, std::\<Function void (\> ) Task)  |  Eseguire un'attività in un thread in background.
+public void DispatchTask (const std:: String & taskId, std::\<Function void (\> ) Task, int64_t delay)  |  Eseguire un'attività in un thread in background con il ritardo specificato.
+public void ExecuteTaskOnIndependentThread (const std:: String & taskId, std::\<Function void (\> ) Task)  |  Eseguire immediatamente un'attività su un thread indipendente.
+public bool CancelTask (const std:: String & taskId)  |  Annulla un'attività in background.
+public void CancelAllTasks()  |  Annulla tutte le attività in background.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="dispatchtask-function"></a>DispatchTask (funzione)
 Eseguire un'attività in un thread in background.
 
 Parametri:  
-* **taskId**: ID che identifica un'attività 
+* **taskId**: ID per identificare in modo univoco un'attività 
 
 
-* **task**: Funzione da eseguire
+* **attività**: Funzione da eseguire
 
 
   
@@ -43,13 +42,13 @@ Parametri:
 Eseguire un'attività in un thread in background con il ritardo specificato.
 
 Parametri:  
-* **taskId**: ID che identifica un'attività 
+* **taskId**: ID per identificare in modo univoco un'attività 
 
 
-* **task**: Funzione da eseguire 
+* **attività**: Funzione da eseguire 
 
 
-* **ritardo**: Il ritardo (in secondi) prima dell'esecuzione attività
+* **ritardo**: Ritardo (in secondi) prima dell'esecuzione dell'attività
 
 
   
@@ -57,15 +56,15 @@ Parametri:
 Eseguire immediatamente un'attività su un thread indipendente.
 
 Parametri:  
-* **taskId**: ID che identifica un'attività 
+* **taskId**: ID per identificare in modo univoco un'attività 
 
 
-* **task**: Funzione da eseguire
+* **attività**: Funzione da eseguire
 
 
   
 ### <a name="canceltask-function"></a>CancelTask (funzione)
-Annullare un'attività in background.
+Annulla un'attività in background.
 
 Parametri:  
 * **taskId**: ID dell'attività da annullare
@@ -73,7 +72,7 @@ Parametri:
 
 
   
-**Restituisce**: True se l'attività è stata annullata correttamente, altrimenti false
+**Restituisce**: True se l'attività è stata annullata correttamente; in caso contrario, false
   
 ### <a name="cancelalltasks-function"></a>CancelAllTasks (funzione)
-Annullare tutte le attività in background.
+Annulla tutte le attività in background.

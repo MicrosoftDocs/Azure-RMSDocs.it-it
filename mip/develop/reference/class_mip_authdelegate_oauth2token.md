@@ -1,52 +1,51 @@
 ---
-title: classe mip::AuthDelegate::OAuth2Token
-description: Documenta la classe mip::authdelegate di Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: 'Classe MIP:: AuthDelegate:: OAuth2Token'
+description: 'Documenta la classe MIP:: authdelegate di Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: a3a634c99f278d1e8eb27d4c37da0cec566c6aa2
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: b7b9b73d9f1f3952af1d6a9bdea94c75a8032fb7
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184808"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885895"
 ---
-# <a name="class-mipauthdelegateoauth2token"></a>classe mip::AuthDelegate::OAuth2Token 
-Una classe che definisce come Microsoft Information Protection SDK prevede che il token oauth2 da passare nuovamente nel SDK.
+# <a name="class-mipauthdelegateoauth2token"></a>Classe MIP:: AuthDelegate:: OAuth2Token 
+Classe che definisce il modo in cui l'SDK MIP prevede che il token OAuth2 venga passato nuovamente all'SDK.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public OAuth2Token()  |  Creare una nuova [OAuth2Token](class_mip_authdelegate_oauth2token.md) oggetto.
-pubblica OAuth2Token (const std:: String & accessToken)  |  Creare una nuova [OAuth2Token](class_mip_authdelegate_oauth2token.md) oggetto da un accessToken.
-public const std::string& GetAccessToken() const  |  Ottenere la stringa di token di accesso.
-public void SetAccessToken (const std:: String & accessToken)  |  Impostare la stringa di Token di accesso.
+public OAuth2Token ()  |  Costruisce un nuovo oggetto [OAuth2Token](class_mip_authdelegate_oauth2token.md) .
+public OAuth2Token (const std:: String & accessToken)  |  Costruisce un nuovo oggetto [OAuth2Token](class_mip_authdelegate_oauth2token.md) da un AccessToken.
+public const std:: String & GetAccessToken () const  |  Ottenere la stringa del token di accesso.
+public void SetAccessToken (const std:: String & accessToken)  |  Impostare la stringa del token di accesso.
   
-## <a name="members"></a>Membri
-  
-### <a name="oauth2token-function"></a>OAuth2Token (funzione)
-Creare una nuova [OAuth2Token](class_mip_authdelegate_oauth2token.md) oggetto.
+## <a name="members"></a>Members
   
 ### <a name="oauth2token-function"></a>OAuth2Token (funzione)
-Creare una nuova [OAuth2Token](class_mip_authdelegate_oauth2token.md) oggetto da un accessToken.
+Costruisce un nuovo oggetto [OAuth2Token](class_mip_authdelegate_oauth2token.md) .
+  
+### <a name="oauth2token-function"></a>OAuth2Token (funzione)
+Costruisce un nuovo oggetto [OAuth2Token](class_mip_authdelegate_oauth2token.md) da un AccessToken.
 
 Parametri:  
-* **accessToken**: Il token di accesso effettivo passato il SDK.
+* **accessToken**: Il token di accesso effettivo passato nell'SDK.
 
 
   
-### <a name="getaccesstoken-function"></a>Il parametro GetAccessToken (funzione)
-Ottenere la stringa di token di accesso.
+### <a name="getaccesstoken-function"></a>GetAccessToken (funzione)
+Ottenere la stringa del token di accesso.
 
   
-**Restituisce**: La stringa di token di accesso.
+**Restituisce**: Stringa del token di accesso.
   
 ### <a name="setaccesstoken-function"></a>SetAccessToken (funzione)
-Impostare la stringa di Token di accesso.
+Impostare la stringa del token di accesso.
 
 Parametri:  
-* **accessToken**: la stringa di token di accesso.
+* **AccessToken**: stringa del token di accesso.
 

@@ -1,60 +1,66 @@
 ---
-title: classe mip::AuthDelegate::OAuth2Challenge
-description: Documenta la classe mip::authdelegate di Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: 'Classe MIP:: AuthDelegate:: OAuth2Challenge'
+description: 'Documenta la classe MIP:: authdelegate di Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: d404d6f60e7b2472bc97181b45fae3b4dabc387b
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 836704d51d1afa55bc296681c863ee10a072ea79
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173474"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885907"
 ---
-# <a name="class-mipauthdelegateoauth2challenge"></a>classe mip::AuthDelegate::OAuth2Challenge 
-una classe che contiene tutte le informazioni richieste dall'applicazione chiamante per generare un token oauth2.
+# <a name="class-mipauthdelegateoauth2challenge"></a>Classe MIP:: AuthDelegate:: OAuth2Challenge 
+classe che contiene tutte le informazioni richieste dall'applicazione chiamante per generare un token OAuth2.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-pubblica OAuth2Challenge (const std:: String & autorità, const std:: String & risorsa, const std:: String & ambito)  |  Creare una nuova [OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md) oggetto.
-public const std::string& GetAuthority() const  |  Ottenere la stringa di autorità.
-Public std:: String const & GetResource() const  |  Ottenere la stringa di risorsa.
-Public std:: String const & GetScope() const  |  Ottenere la stringa di ambito.
+public OAuth2Challenge (const std:: String & Authority, const std:: String & Resource, const std:: String & scope, const std:: String & Claims)  |  Costruisce un nuovo oggetto [OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md) .
+public const std:: String & getauthority () const  |  Ottenere la stringa dell'autorità.
+public const std:: String & GetResource () const  |  Ottenere la stringa di risorsa.
+public const std:: String & GetScope () const  |  Ottenere la stringa dell'ambito.
+public const std:: String & getclaims () const  |  Ottenere la stringa delle attestazioni.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="oauth2challenge-function"></a>OAuth2Challenge (funzione)
-Creare una nuova [OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md) oggetto.
+Costruisce un nuovo oggetto [OAuth2Challenge](class_mip_authdelegate_oauth2challenge.md) .
 
 Parametri:  
-* **autorità**: l'autorità deve essere generato con il token. 
+* **autorità**: l'autorità con cui deve essere generato il token. 
 
 
-* **risorsa**: la risorsa a cui il token è impostato. 
+* **Resource**: la risorsa su cui è impostato il token. 
 
 
-* **ambito**: l'ambito in cui il token è impostato.
+* **scope**: ambito su cui è impostato il token.
 
 
   
-### <a name="getauthority-function"></a>GetAuthority (funzione)
-Ottenere la stringa di autorità.
+### <a name="getauthority-function"></a>Getauthority (funzione)
+Ottenere la stringa dell'autorità.
 
   
-**Restituisce**: La stringa di autorità.
+**Restituisce**: Stringa dell'autorità.
   
-### <a name="getresource-function"></a>GetResource (funzione)
+### <a name="getresource-function"></a>Funzione GetResource
 Ottenere la stringa di risorsa.
 
   
-**Restituisce**: La stringa di risorsa.
+**Restituisce**: Stringa di risorsa.
   
-### <a name="getscope-function"></a>GetScope (funzione)
-Ottenere la stringa di ambito.
+### <a name="getscope-function"></a>Funzione GetScope
+Ottenere la stringa dell'ambito.
 
   
-**Restituisce**: La stringa di ambito.
+**Restituisce**: Stringa dell'ambito.
+  
+### <a name="getclaims-function"></a>Getclaims (funzione)
+Ottenere la stringa delle attestazioni.
+
+  
+**Restituisce**: Stringa delle attestazioni.

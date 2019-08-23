@@ -1,87 +1,40 @@
 ---
-title: classe mip::ServiceDisabledError
-description: Documenta la classe mip::servicedisablederror di Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: 'Classe MIP:: ServiceDisabledError'
+description: 'Documenta la classe MIP:: servicedisablederror di Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 1373d9ecc03f69267af631216a04d358e8be7af3
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 6496b2b8967571454c205b84b01a6e4b74456c17
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173372"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69882927"
 ---
-# <a name="class-mipservicedisablederror"></a>classe mip::ServiceDisabledError 
-L'utente non è stato possibile ottenere l'accesso al contenuto a causa di un servizio viene disabilitato.
+# <a name="class-mipservicedisablederror"></a>Classe MIP:: ServiceDisabledError 
+L'utente non è riuscito a ottenere l'accesso al contenuto a causa della disabilitazione di un servizio.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public Extent GetExtent() const  |  Ottiene l'estensione per il quale il servizio è disabilitato.
-Enumerazione Extent  |  Descrive l'estensione per il quale il servizio è disabilitato.
-public char const* what() const  |  Ottiene il messaggio di errore.
-Public std:: shared_ptr\<errore\> clone () const  |  Clona l'errore.
-public virtual ErrorType GetErrorType() const  |  Ottiene il tipo di errore.
-public virtual const std::string& GetErrorName() const  |  Ottiene il nome dell'errore.
-public virtual const std::string& GetMessage() const  |  Ottiene il messaggio di errore.
-public virtual void SetMessage(const std::string& msg)  |  Imposta il messaggio di errore.
+Extent pubblico GetExtent () const  |  Ottiene l'extent per il quale il servizio è disabilitato.
+Extent enum  |  Descrive l'ambito per cui il servizio è disabilitato.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
-### <a name="getextent-function"></a>GetExtent (funzione)
-Ottiene l'estensione per il quale il servizio è disabilitato.
+### <a name="getextent-function"></a>Funzione GetExtent
+Ottiene l'extent per il quale il servizio è disabilitato.
 
   
-**Restituisce**: Estensione per il quale il servizio è disabilitato
+**Restituisce**: Extent per cui il servizio è disabilitato
   
 ### <a name="extent-enum"></a>Enumerazione extent
-
-Descrive l'estensione per il quale il servizio è disabilitato.
-
  Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
-Utente            | Servizio è disabilitato per l'utente.
-Dispositivo            | Servizio è disabilitato per il dispositivo.
-Piattaforma            | Servizio è disabilitato per la piattaforma.
-Tenant            | Servizio è disabilitato per il tenant.
-
-
-
-### <a name="what-function"></a>tipo di funzione
-Ottiene il messaggio di errore.
-
-  
-**Restituisce**: Il messaggio di errore
-  
-### <a name="clone-function"></a>Funzioni di clone
-Clona l'errore.
-
-  
-**Restituisce**: Un clone dell'errore.
-  
-### <a name="geterrortype-function"></a>GetErrorType (funzione)
-Ottiene il tipo di errore.
-
-  
-**Restituisce**: Il tipo di errore.
-  
-### <a name="geterrorname-function"></a>GetErrorName (funzione)
-Ottiene il nome dell'errore.
-
-  
-**Restituisce**: Il nome di errore.
-  
-### <a name="getmessage-function"></a>GetMessage (funzione)
-Ottiene il messaggio di errore.
-
-  
-**Restituisce**: Il messaggio di errore.
-  
-### <a name="setmessage-function"></a>SetMessage (funzione)
-Imposta il messaggio di errore.
-
-Parametri:  
-* **msg**: messaggio di errore.
+Utente            | Il servizio è disabilitato per l'utente.
+Dispositivo            | Il servizio è disabilitato per il dispositivo.
+Piattaforma            | Il servizio è disabilitato per la piattaforma.
+Tenant            | Il servizio è disabilitato per il tenant.
+Descrive l'ambito per cui il servizio è disabilitato.

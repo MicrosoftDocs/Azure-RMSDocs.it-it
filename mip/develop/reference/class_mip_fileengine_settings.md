@@ -1,51 +1,54 @@
 ---
 title: Classe mip::FileEngine::Settings
-description: 'Classe MIP:: fileengine di Microsoft Information Protection (MIP) SDK vengono documentate.'
-author: msmbaldwin
+description: "Documenta la classe MIP:: fileengine dell'SDK Microsoft Information Protection (MIP)."
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 2481ee7d42f00ce5b33529b15e17b22ba6556b0e
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 00ad6058b146f428a65a0697b722e6d3adb5c07d
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184706"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884308"
 ---
 # <a name="class-mipfileenginesettings"></a>Classe mip::FileEngine::Settings 
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-Impostazioni pubbliche (const std:: String & engineId, const std:: String & clientData, const std:: String & delle impostazioni locali, loadSensitivityTypes bool)  |  Costruttore [FileEngine::Settings](class_mip_fileengine_settings.md) per il caricamento di un motore esistente.
-Impostazioni pubbliche (const Identity & identity, const std:: String & clientData, const std:: String & delle impostazioni locali, loadSensitivityTypes bool)  |  Costruttore [FileProfile::Settings](class_mip_fileprofile_settings.md) per la creazione di un nuovo motore.
+Impostazioni pubbliche (const std:: String & engineId, const std:: String & clientData, const std:: String & locale, bool loadSensitivityTypes)  |  Costruttore [FileEngine::Settings](class_mip_fileengine_settings.md) per il caricamento di un motore esistente.
+Impostazioni pubbliche (const Identity & Identity, const std:: String & clientData, const std:: String & locale, bool loadSensitivityTypes)  |  Costruttore [FileProfile::Settings](class_mip_fileprofile_settings.md) per la creazione di un nuovo motore.
 public const std::string& GetEngineId() const  |  Restituisce l'ID motore.
 public void SetEngineId(const std::string& id)  |  Imposta l'ID del motore.
-public const Identity& GetIdentity() const  |  Restituisce il motore [identità](class_mip_identity.md).
+public const Identity& GetIdentity() const  |  Restituisce l' [identità](class_mip_identity.md)del motore.
 public void SetIdentity(const Identity& identity)  |  Imposta l'identità del motore.
 public const std::string& GetClientData() const  |  Restituisce i dati client del motore.
 public const std::string& GetLocale() const  |  Restituisce le impostazioni locali del motore.
-public void SetCustomSettings (const std:: Vector\<std:: Pair\<std:: String, std:: String\>\>& valore)  |  Imposta un elenco di coppie nome-valore usate a scopi di test e sperimentazione.
-Public std:: Vector const\<std:: Pair\<std:: String, std:: String\>\>& GetCustomSettings() const  |  Ottiene un elenco di coppie nome-valore usate a scopi di test e sperimentazione.
+public void SetCustomSettings (const std::\<vector std::p\<Air std:: String, std::\>String\>& value)  |  Imposta un elenco di coppie nome-valore usate a scopi di test e sperimentazione.
+public const std::\<vector std::p\<Air std:: String, std::\>String\>& GetCustomSettings () const  |  Ottiene un elenco di coppie nome-valore usate a scopi di test e sperimentazione.
 public void SetSessionId(const std::string& sessionId)  |  Imposta l'ID sessione del motore.
 public const std::string& GetSessionId() const  |  Restituisce l'ID sessione del motore.
 public void SetProtectionCloudEndpointBaseUrl(const std::string& protectionCloudEndpointBaseUrl)  |  Imposta l'URL di base dell'endpoint cloud di protezione, usato per specificare il limite del cloud.
-public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Ottiene l'url di base di protezione cloud endpoint.
-public void SetPolicyCloudEndpointBaseUrl (const std:: String & policyCloudEndpointBaseUrl)  |  Imposta i criteri cloud endpoint url di base, consente di specificare limiti di cloud.
-public const std::string& GetPolicyCloudEndpointBaseUrl() const  |  Ottiene l'url dell'endpoint cloud criteri base.
-public void SetProtectionOnlyEngine(const bool protectionOnly)  |  Imposta l'indicatore del motore di sola protezione, senza criteri/etichette.
+public const std::string& GetProtectionCloudEndpointBaseUrl() const  |  Ottiene l'URL di base dell'endpoint cloud di protezione.
+public void SetPolicyCloudEndpointBaseUrl (const std:: String & policyCloudEndpointBaseUrl)  |  Imposta l'URL di base dell'endpoint cloud dei criteri, usato per specificare il limite del cloud.
+public const std:: String & GetPolicyCloudEndpointBaseUrl () const  |  Ottiene l'URL di base dell'endpoint cloud dei criteri.
+public void SetProtectionOnlyEngine (bool protectionOnly)  |  Imposta l'indicatore del motore di sola protezione, senza criteri/etichette.
 public const bool IsProtectionOnlyEngine() const  |  Restituisce l'indicatore del motore di sola protezione, senza criteri/etichette.
-public bool IsLoadSensitivityTypesEnabled() const  |  Ottenere il flag che indica se le etichette di riservatezza di carico è abilitata.
+public bool IsLoadSensitivityTypesEnabled () const  |  Ottiene il flag che indica se sono abilitate le etichette di riservatezza di carico.
+public void EnablePFile (valore bool)  |  Imposta il flag che indica se produrre Pfile.
+Public Const bool IsPFileEnabled ()  |  Ottiene il flag che indica se produce Pfile.
+public void SetDelegatedUserEmail (const std:: String & delegatedUserEmail)  |  Imposta l'utente delegato.
+public const std:: String & GetDelegatedUserEmail () const  |  Ottiene l'utente delegato.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
-### <a name="settings-function"></a>Funzione impostazioni
+### <a name="settings-function"></a>Funzione Settings
 Costruttore [FileEngine::Settings](class_mip_fileengine_settings.md) per il caricamento di un motore esistente.
 
 Parametri:  
-* **engineId**: Impostare l'ID motore univoco generato da AddEngineAsync. 
+* **engineId**: Impostarlo sull'ID motore univoco generato da AddEngineAsync. 
 
 
 * **clientData**: dati client personalizzabili che è possibile archiviare con il motore quando lo si scarica e recuperare da un motore caricato. 
@@ -54,15 +57,15 @@ Parametri:
 * **locale**: l'output localizzabile del motore verrà fornito con queste impostazioni locali. 
 
 
-* **loadSensitivityTypes**: Flag facoltativo che indica quando viene caricato il motore deve caricare anche tipi sensibilità personalizzata, se osservatore OnPolicyChange true nel profilo verranno richiamati per gli aggiornamenti per i tipi di sensibilità personalizzata, nonché le modifiche dei criteri. Se false ListSensitivityTypes chiama il metodo restituirà sempre un elenco vuoto.
+* **loadSensitivityTypes**: Flag facoltativo che indica quando il motore è caricato deve caricare anche tipi di riservatezza personalizzati, se l'osservatore true OnPolicyChange nel profilo verrà richiamato sugli aggiornamenti ai tipi di riservatezza personalizzati e sulle modifiche dei criteri. Se la chiamata a false ListSensitivityTypes restituirà sempre un elenco vuoto.
 
 
   
-### <a name="settings-function"></a>Funzione impostazioni
+### <a name="settings-function"></a>Funzione Settings
 Costruttore [FileProfile::Settings](class_mip_fileprofile_settings.md) per la creazione di un nuovo motore.
 
 Parametri:  
-* **identity**: [Identità](class_mip_identity.md) informazioni dell'utente associata al nuovo motore. 
+* **identity**: Informazioni di [identità](class_mip_identity.md) dell'utente associato al nuovo motore. 
 
 
 * **clientData**: dati client personalizzabili che è possibile archiviare con il motore quando lo si scarica e recuperare da un motore caricato. 
@@ -71,7 +74,7 @@ Parametri:
 * **locale**: l'output localizzabile del motore verrà fornito con queste impostazioni locali. 
 
 
-* **loadSensitivityTypes**: Flag facoltativo che indica quando viene caricato il motore deve caricare anche tipi sensibilità personalizzata, se osservatore OnPolicyChange true nel profilo verranno richiamati per gli aggiornamenti per i tipi di sensibilità personalizzata, nonché le modifiche dei criteri. Se false ListSensitivityTypes chiama il metodo restituirà sempre un elenco vuoto.
+* **loadSensitivityTypes**: Flag facoltativo che indica quando il motore è caricato deve caricare anche tipi di riservatezza personalizzati, se l'osservatore true OnPolicyChange nel profilo verrà richiamato sugli aggiornamenti ai tipi di riservatezza personalizzati e sulle modifiche dei criteri. Se la chiamata a false ListSensitivityTypes restituirà sempre un elenco vuoto.
 
 
   
@@ -86,10 +89,10 @@ Parametri:
 
 
   
-### <a name="getidentity-function"></a>Operazione GetIdentity (funzione)
-Restituisce il motore [identità](class_mip_identity.md).
+### <a name="getidentity-function"></a>GetIdentity (funzione)
+Restituisce l' [identità](class_mip_identity.md)del motore.
   
-### <a name="setidentity-function"></a>SetIdentity (funzione)
+### <a name="setidentity-function"></a>Funzione seidentity
 Imposta l'identità del motore.
   
 ### <a name="getclientdata-function"></a>GetClientData (funzione)
@@ -104,39 +107,39 @@ Imposta un elenco di coppie nome-valore usate a scopi di test e sperimentazione.
 ### <a name="getcustomsettings-function"></a>GetCustomSettings (funzione)
 Ottiene un elenco di coppie nome-valore usate a scopi di test e sperimentazione.
   
-### <a name="setsessionid-function"></a>SetSessionId (funzione)
+### <a name="setsessionid-function"></a>Funzione SessionId
 Imposta l'ID sessione del motore.
   
-### <a name="getsessionid-function"></a>GetSessionId (funzione)
+### <a name="getsessionid-function"></a>Funzione GetSessionID
 Restituisce l'ID sessione del motore.
   
-### <a name="setprotectioncloudendpointbaseurl-function"></a>SetProtectionCloudEndpointBaseUrl function
+### <a name="setprotectioncloudendpointbaseurl-function"></a>SetProtectionCloudEndpointBaseUrl (funzione)
 Imposta l'URL di base dell'endpoint cloud di protezione, usato per specificare il limite del cloud.
 
 Parametri:  
-* **protectionCloudEndpointBaseUrl**: Url di base associato con endpoint protection
+* **protectionCloudEndpointBaseUrl**: URL di base associato agli endpoint di protezione
 
 
   
-### <a name="getprotectioncloudendpointbaseurl-function"></a>GetProtectionCloudEndpointBaseUrl function
-Ottiene l'url di base di protezione cloud endpoint.
+### <a name="getprotectioncloudendpointbaseurl-function"></a>GetProtectionCloudEndpointBaseUrl (funzione)
+Ottiene l'URL di base dell'endpoint cloud di protezione.
 
   
-**Restituisce**: Url di base associato con endpoint protection
+**Restituisce**: URL di base associato agli endpoint di protezione
   
 ### <a name="setpolicycloudendpointbaseurl-function"></a>SetPolicyCloudEndpointBaseUrl (funzione)
-Imposta i criteri cloud endpoint url di base, consente di specificare limiti di cloud.
+Imposta l'URL di base dell'endpoint cloud dei criteri, usato per specificare il limite del cloud.
 
 Parametri:  
-* **policyCloudEndpointBaseUrl**: Url di base associato con endpoint dei criteri
+* **policyCloudEndpointBaseUrl**: URL di base associato agli endpoint dei criteri
 
 
   
 ### <a name="getpolicycloudendpointbaseurl-function"></a>GetPolicyCloudEndpointBaseUrl (funzione)
-Ottiene l'url dell'endpoint cloud criteri base.
+Ottiene l'URL di base dell'endpoint cloud dei criteri.
 
   
-**Restituisce**: Url di base associato con endpoint dei criteri
+**Restituisce**: URL di base associato agli endpoint dei criteri
   
 ### <a name="setprotectiononlyengine-function"></a>SetProtectionOnlyEngine (funzione)
 Imposta l'indicatore del motore di sola protezione, senza criteri/etichette.
@@ -145,7 +148,31 @@ Imposta l'indicatore del motore di sola protezione, senza criteri/etichette.
 Restituisce l'indicatore del motore di sola protezione, senza criteri/etichette.
   
 ### <a name="isloadsensitivitytypesenabled-function"></a>IsLoadSensitivityTypesEnabled (funzione)
-Ottenere il flag che indica se le etichette di riservatezza di carico è abilitata.
+Ottiene il flag che indica se sono abilitate le etichette di riservatezza di carico.
 
   
-**Restituisce**: True se abilitato in caso contrario false.
+**Restituisce**: True se Enabled else false.
+  
+### <a name="enablepfile-function"></a>EnablePFile (funzione)
+Imposta il flag che indica se produrre Pfile.
+  
+### <a name="ispfileenabled-function"></a>IsPFileEnabled (funzione)
+Ottiene il flag che indica se produce Pfile.
+
+  
+**Restituisce**: True se Enabled else false.
+  
+### <a name="setdelegateduseremail-function"></a>SetDelegatedUserEmail (funzione)
+Imposta l'utente delegato.
+
+Parametri:  
+* **delegatedUserEmail**: il messaggio di posta elettronica di delega.
+
+
+Un utente delegato viene specificato quando l'utente o l'applicazione di autenticazione agisce per conto di un altro utente
+  
+### <a name="getdelegateduseremail-function"></a>GetDelegatedUserEmail (funzione)
+Ottiene l'utente delegato.
+
+  
+**Restituisce**: Utente delegato viene specificato un utente delegato quando l'utente o l'applicazione di autenticazione agisce per conto di un altro utente

@@ -5,24 +5,24 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 09/27/2018
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: e3338395a193f6c1cc8f60a6beb93a1d0db15511
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 1ccfc81e4b45c6ec4e4316b748d9ccc0f73561a4
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175480"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886041"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-engine-concepts"></a>Microsoft Information Protection SDK - Concetti relativi al motore dell'API Protezione
 
-## <a name="implementation-add-a-protection-engine"></a>Implementazione: Aggiungere un modulo di protezione
+## <a name="implementation-add-a-protection-engine"></a>Implementazione Aggiungere un motore di protezione
 
 Nell'API Protezione, la classe `mip::ProtectionProfile` è la classe radice per tutte le operazioni dell'SDK. Avendo già creato il profilo, è ora possibile aggiungere un motore al profilo.
 
 L'esempio seguente illustra l'uso di un solo motore per un unico utente autenticato.
 
-### <a name="implementation-create-protection-engine-settings"></a>Implementazione: Creare le impostazioni del modulo di protezione
+### <a name="implementation-create-protection-engine-settings"></a>Implementazione Crea impostazioni del motore di protezione
 
 Analogamente a un profilo, anche per il motore è necessario un oggetto impostazioni, `mip::ProtectionEngine::Settings`. Questo oggetto archivia l'identificatore univoco del motore, i dati client personalizzabili che possono essere usati per il debug o la telemetria e, facoltativamente, le impostazioni locali.
 
@@ -32,7 +32,8 @@ Viene qui creato un oggetto `ProtectionEngine::Settings` chiamato *engineSetting
 ProtectionEngine::Settings engineSettings("UniqueID", "");
 ```
 
-**Nota**: Se si usa questo metodo per creare l'oggetto delle impostazioni di protezione dati, è necessario impostare manualmente il CloudEndpointBaseUrl su https://api.aadrm.com
+> [!NOTE]
+> Se si usa questo metodo per creare l'oggetto impostazioni di protezione, è necessario impostare manualmente il CloudEndpointBaseUrl https://api.aadrm.com su o TP l'URL del cluster del servizio Active Directory Rights Management.
 
 Come procedura consigliata, il primo parametro, **id**, deve essere tale da consentire di collegare il motore con facilità all'utente associato **oppure** a un oggetto `mip::Identity`. Per inizializzare le impostazioni con `mip::Identity`:
 
@@ -40,9 +41,7 @@ Come procedura consigliata, il primo parametro, **id**, deve essere tale da cons
 ProtectionEngine::Settings engineSettings(mip::Identity("Bob@Contoso.com", "");
 ```
 
-Anche se in genere si passerebbe una variabile all'identità piuttosto che usare un valore hardcoded.
-
-### <a name="implementation-add-the-protection-engine"></a>Implementazione: Aggiungere il motore di protezione
+### <a name="implementation-add-the-protection-engine"></a>Implementazione Aggiungere il motore di protezione
 
 Per aggiungere il motore, si tornerà al modello promise/future usato per caricare il profilo. Invece di creare la promessa per `mip::ProtectionProfile`, si userà `mip::ProtectionEngine`.
 
@@ -69,13 +68,13 @@ Per aggiungere il motore, si tornerà al modello promise/future usato per carica
 
 Il risultato finale del codice precedente è l'aggiunta di un motore per l'utente autenticato al profilo.
 
-## <a name="implementation-list-templates"></a>Implementazione: Elenco modelli
+## <a name="implementation-list-templates"></a>Implementazione Elenca modelli
 
 Tramite il motore aggiunto è ora possibile elencare tutti i modelli di riservatezza disponibili per l'utente autenticato chiamando `engine->GetTemplatesAsync()`. 
 
 `GetTemplatesAsync()` recupererà l'elenco degli identificatori dei modelli. Il risultato viene archiviato in un vettore di `std::shared_ptr<std::string>`.
 
-### <a name="implementation-listsensitivitytemplates"></a>Implementazione: ListSensitivityTemplates()
+### <a name="implementation-listsensitivitytemplates"></a>Implementazione ListSensitivityTemplates()
 
 ```cpp
 auto loadPromise = std::make_shared<std::promise<shared_ptr<vector<string>>>>();
@@ -84,7 +83,7 @@ mEngine->GetTemplatesAsync(engineObserver, loadPromise);
 auto templates = loadFuture.get();
 ```
 
-### <a name="implementation-print-the-template-ids"></a>Implementazione: Gli ID modello di stampa
+### <a name="implementation-print-the-template-ids"></a>Implementazione Stampare gli ID modello
 
 ```cpp
 //Iterate through all template IDs in the vector
@@ -97,6 +96,6 @@ La stampa dei nomi è un modo semplice per mostrare che è stato eseguito corret
 
 Il mapping dei modelli alle etichette può essere eseguito solo tramite l'API Criteri, esaminando il risultato di `ComputeActions()`.
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Fasi successive
 
 Ora che il profilo è caricato, il motore è stato aggiunto e sono disponibili modelli, è possibile aggiungere un gestore per iniziare a leggere, scrivere o rimuovere i modelli dai file. Vedere i [concetti relativi al gestore della protezione](concept-handler-protection-cpp.md).

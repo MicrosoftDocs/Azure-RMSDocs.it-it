@@ -14,16 +14,23 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 6fdef7a9d92880fa6754ffc7b2f889acdecd0bfc
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: cb969e8add0c79495cc2cc90e7e92368e42577dc
+ms.sourcegitcommit: f0dee92d6668001681b507e82f8aea61f3bfa96e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68791182"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69894474"
 ---
 # <a name="release-notes"></a>Note sulla versione
 
 Questo articolo contiene informazioni importanti su questa versione e quelle precedenti di RMS SDK 2.1.
+
+## <a name="april-2019---update"></a>Aprile 2019-aggiornamento
+- Correzioni di bug nell'API file.
+- API file aggiornata per verificare il diritto di esportazione anziché il diritto di estrazione durante la decrittografia del contenuto.
+- Correzione del programma di installazione per assicurarsi che durante l'aggiornamento venga installata la nuova protezione PDF V2.
+- I dati di telemetria cambiano. Questa modifica richiede un aggiornamento del pacchetto di installazione che consente di installare le librerie di runtime C.
+- Modifiche all'autenticazione del back-end del servizio. eseguire l'aggiornamento a questa versione dell'SDK per minmize l'interferenza
 
 ## <a name="october-2017---update"></a>Aggiornamento di ottobre 2017
 

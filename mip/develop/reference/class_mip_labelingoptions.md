@@ -1,37 +1,35 @@
 ---
 title: Classe mip::LabelingOptions
-description: 'Classe MIP:: labelingoptions di Microsoft Information Protection (MIP) SDK vengono documentate.'
-author: msmbaldwin
+description: 'Documenta la classe MIP:: labelingoptions di Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 36251330bbca45d69630302c304f5190e25db320
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: f70c2b004f9649f17bccab92a65ea73ab31a3390
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60174035"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883968"
 ---
 # <a name="class-miplabelingoptions"></a>Classe mip::LabelingOptions 
 Interfaccia per la configurazione delle opzioni delle etichette per i metodi SetLabel/DeleteLabel.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public LabelingOptions(AssignmentMethod method, ActionSource actionSource)  | _Non ancora documentato._
+public LabelingOptions (metodo AssignmentMethod)  | _Non ancora documentato._
 public AssignmentMethod GetAssignmentMethod() const  | _Non ancora documentato._
-public ActionSource GetActionSource() const  | _Non ancora documentato._
 public bool IsDowngradeJustified() const  | _Non ancora documentato._
 public const std::string& GetJustificationMessage() const  | _Non ancora documentato._
-Public std:: Vector const\<std:: Pair\<std:: String, std:: String\>\>& GetExtendedProperties() const  | _Non ancora documentato._
+public const std::\<vector std::p\<aria std:: String, std::\>String\>& getextendedproperties () const  | _Non ancora documentato._
 public void SetDowngradeJustification(bool isDowngradeJustified, const std::string& justificationMessage)  | _Non ancora documentato._
-public void SetExtendedProperties (const std:: Vector\<std:: Pair\<std:: String, std:: String\>\>& proprietà estese)  | _Non ancora documentato._
+public void seextendedpropertys (const std::\<vector std::p\<Air std:: String, std::\>String\>& ExtendedProperties)  | _Non ancora documentato._
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
-### <a name="labelingoptions-function"></a>Funzione LabelingOptions
+### <a name="labelingoptions-function"></a>LabelingOptions (funzione)
 _Non ancora documentato._
 
   
@@ -39,11 +37,7 @@ _Non ancora documentato._
 _Non ancora documentato._
 
   
-### <a name="getactionsource-function"></a>GetActionSource (funzione)
-_Non ancora documentato._
-
-  
-### <a name="isdowngradejustified-function"></a>Funzione IsDowngradeJustified
+### <a name="isdowngradejustified-function"></a>IsDowngradeJustified (funzione)
 _Non ancora documentato._
 
   
@@ -51,7 +45,7 @@ _Non ancora documentato._
 _Non ancora documentato._
 
   
-### <a name="getextendedproperties-function"></a>GetExtendedProperties (funzione)
+### <a name="getextendedproperties-function"></a>Funzione getextendedproperties
 _Non ancora documentato._
 
   
@@ -59,5 +53,5 @@ _Non ancora documentato._
 _Non ancora documentato._
 
   
-### <a name="setextendedproperties-function"></a>SetExtendedProperties (funzione)
+### <a name="setextendedproperties-function"></a>Funzione seextendedpropertys
 _Non ancora documentato._

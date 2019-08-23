@@ -1,57 +1,60 @@
 ---
 title: Classe mip::FileEngine
-description: 'Classe MIP:: fileengine di Microsoft Information Protection (MIP) SDK vengono documentate.'
-author: msmbaldwin
+description: "Documenta la classe MIP:: fileengine dell'SDK Microsoft Information Protection (MIP)."
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 15ce90a80430f50854580f6c7a2993d92db0a744
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 86437533b2451b613231d668857b1402fc9f4272
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184791"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885820"
 ---
 # <a name="class-mipfileengine"></a>Classe mip::FileEngine 
 Questa classe fornisce un'interfaccia per tutte le funzioni del motore.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Restituisce le impostazioni del motore.
-Public std:: Vector const\<std:: shared_ptr\<SensitivityTypesRulePackage\>\>& ListSensitivityTypes() const  |  Elenca i tipi di riservatezza associati al motore di criteri.
-Public std:: shared_ptr const\<etichetta\> GetDefaultSensitivityLabel() const  |  Ottiene l'etichetta di riservatezza predefinita.
-Public std:: Vector const\<std:: shared_ptr\<Label\>\>& ListSensitivityLabels()  |  Restituisce un elenco di etichette di riservatezza.
+public const std::\<vector std::\<shared_ptr\>SensitivityTypesRulePackage\>& ListSensitivityTypes () const  |  elencare i tipi di riservatezza associati al motore dei criteri.
+public const std::\<shared_ptr\> label GetDefaultSensitivityLabel () const  |  Ottiene l'etichetta di riservatezza predefinita.
+public std:: shared_ptr\<label\> GetLabelById (const std:: String & ID) const  |  Ottiene l'etichetta in base all'ID fornito.
+public const std::\<vector std::\<shared_ptr\>label\>& ListSensitivityLabels ()  |  Restituisce un elenco di etichette di riservatezza.
 public const std::string& GetMoreInfoUrl() const  |  Fornire un URL per la ricerca di altre informazioni su criteri/etichette.
-Public std:: String const & GetPolicyId() const  |  Ottiene l'ID criteri.
+public const std:: String & GetPolicyFileId () const  |  Ottiene l'ID del file di criteri.
 public bool IsLabelingRequired() const  |  Controlla se il criterio determina che un documento deve essere etichettato.
-pubblica std::chrono::time_point\<std\> GetLastPolicyFetchTime() const  |  Ottiene l'ora dell'ultimo recupero quando il criterio.
-public void CreateFileHandlerAsync (const std:: String & inputFilePath, const std:: String & actualFilePath, bool isAuditDiscoveryEnabled, const std:: shared_ptr\<FileHandler:: Observer\>& fileHandlerObserver const std:: shared_ptr\<void\>& context, const std:: shared_ptr\<FileExecutionState\>& fileExecutionState)  |  Avvia la creazione di un gestore di file per un determinato percorso file.
-public void CreateFileHandlerAsync (const std:: shared_ptr\<Stream\>& inputStream, const std:: String & actualFilePath, bool isAuditDiscoveryEnabled, const std:: shared_ptr\<FileHandler:: Observer \>& fileHandlerObserver, const std:: shared_ptr\<void\>& context, const std:: shared_ptr\<FileExecutionState\>& fileExecutionState)  |  Avvia la creazione di un gestore di file per un determinato flusso di file.
+public std:: Chrono:: time_point\<std:: Chrono:: system_clock\> GetLastPolicyFetchTime () const  |  Ottiene l'ora dell'ultimo recupero dei criteri.
+public void CreateFileHandlerAsync (const std:: String & InputFilePath, const std:: String & actualFilePath, bool isAuditDiscoveryEnabled, const std\<:: shared_ptr FileHandler:\>: Observer & fileHandlerObserver , const std::\<shared_ptr\>void & context, const std:\<:\>shared_ptr FileExecutionState & FileExecutionState)  |  Avvia la creazione di un gestore di file per un determinato percorso file.
+public void CreateFileHandlerAsync (const std::\<shared_ptr\>Stream & InputStream, const std:: String & actualFilePath, bool isAuditDiscoveryEnabled, const std\<:: shared_ptr FileHandler:: Observer \>\<\>\<& fileHandlerObserver, const std:: shared_ptr void & context, const std:: shared_ptr FileExecutionState & FileExecutionState) \>  |  Avvia la creazione di un gestore di file per un determinato flusso di file.
 public void SendApplicationAuditEvent(const std::string& level, const std::string& eventType, const std::string& eventData)  |  Registra un evento specifico dell'applicazione per la pipeline di controllo.
-Public std:: Vector const\<std:: Pair\<std:: String, std:: String\>\>& GetCustomSettings() const  |  Ottiene un elenco di impostazioni personalizzate.
-public bool HasClassificationRules() const  |  Ottiene se il criterio ha regole automatico o raccomandazione.
+public const std::\<vector std::p\<Air std:: String, std::\>String\>& GetCustomSettings () const  |  Ottiene un elenco di impostazioni personalizzate.
+public bool HasClassificationRules () const  |  Ottiene se il criterio ha regole automatiche o di raccomandazione.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getsettings-function"></a>GetSettings (funzione)
 Restituisce le impostazioni del motore.
   
 ### <a name="listsensitivitytypes-function"></a>ListSensitivityTypes (funzione)
-Elenca i tipi di riservatezza associati al motore di criteri.
+elencare i tipi di riservatezza associati al motore dei criteri.
 
   
-**Restituisce**: Un elenco di etichette di riservatezza. vuoto se LoadSensitivityTypesEnabled era (false
+**Restituisce**: Elenco di etichette di riservatezza. Empty se LoadSensitivityTypesEnabled è false (
   
-**Vedere anche**: [FileEngine::Settings](class_mip_fileengine_settings.md)).
+**Vedere anche**: [Fileengine:: Settings](class_mip_fileengine_settings.md)).
   
 ### <a name="getdefaultsensitivitylabel-function"></a>GetDefaultSensitivityLabel (funzione)
 Ottiene l'etichetta di riservatezza predefinita.
 
   
-**Restituisce**: Etichetta di riservatezza predefinita se esistente, nullptr se è presente alcun set di etichetta predefinita.
+**Restituisce**: Etichetta di riservatezza predefinita se esistente, nullptr se non è impostata alcuna etichetta predefinita.
+  
+### <a name="getlabelbyid-function"></a>GetLabelById (funzione)
+Ottiene l'etichetta in base all'ID fornito.
   
 ### <a name="listsensitivitylabels-function"></a>ListSensitivityLabels (funzione)
 Restituisce un elenco di etichette di riservatezza.
@@ -60,25 +63,25 @@ Restituisce un elenco di etichette di riservatezza.
 Fornire un URL per la ricerca di altre informazioni su criteri/etichette.
 
   
-**Restituisce**: Un url in formato stringa.
+**Restituisce**: Un URL in formato stringa.
   
-### <a name="getpolicyid-function"></a>GetPolicyId (funzione)
-Ottiene l'ID criteri.
+### <a name="getpolicyfileid-function"></a>GetPolicyFileId (funzione)
+Ottiene l'ID del file di criteri.
 
   
-**Restituisce**: Stringa che rappresenta l'ID dei criteri
+**Restituisce**: Stringa che rappresenta l'ID del file di criteri
   
 ### <a name="islabelingrequired-function"></a>IsLabelingRequired (funzione)
 Controlla se il criterio determina che un documento deve essere etichettato.
 
   
-**Restituisce**: True se l'assegnazione di etichette è obbligatorio, altrimenti false.
+**Restituisce**: True se l'assegnazione di etichette è obbligatoria; in caso contrario, false.
   
 ### <a name="getlastpolicyfetchtime-function"></a>GetLastPolicyFetchTime (funzione)
-Ottiene l'ora dell'ultimo recupero quando il criterio.
+Ottiene l'ora dell'ultimo recupero dei criteri.
 
   
-**Restituisce**: L'ora dell'ultimo recupero quando il criterio
+**Restituisce**: Ora dell'ultimo recupero dei criteri
   
 ### <a name="createfilehandlerasync-function"></a>CreateFileHandlerAsync (funzione)
 Avvia la creazione di un gestore di file per un determinato percorso file.
@@ -87,16 +90,16 @@ Parametri:
 * **inputFilePath**: File da aprire. Il percorso deve includere il nome del file e, se ne esiste uno, l'estensione del nome di file. 
 
 
-* **actualFilePath**: Il percorso del file (non temporanee) effettivo, verrà usato per il controllo. 
+* **actualFilePath**: Il percorso del file effettivo (non temporaneo) verrà usato per il controllo. 
 
 
-* **isAuditDiscoveryEnabled**: che indica se il rilevamento di controllo è abilitato o meno. 
+* **isAuditDiscoveryEnabled**: che indica se l'individuazione del controllo è abilitata o meno. 
 
 
 * **fileHandlerObserver**: Classe che implementa l'interfaccia [FileHandler::Observer](class_mip_filehandler_observer.md). 
 
 
-* **context**: Contesto di client che verrà passato in maniera opaca all'observer.
+* **context**: Contesto client che verrà passato di nuovo in modo opaco all'osservatore.
 
 
   
@@ -107,16 +110,16 @@ Parametri:
 * **inputStream**: Flusso contenente i dati del file. 
 
 
-* **actualFilePath**: Percorso del file. Il percorso deve includere il nome del file e, se ne esiste uno, l'estensione del nome di file. userà anche per identificare il file nel controllo. 
+* **actualFilePath**: Percorso del file. Il percorso deve includere il nome del file e, se ne esiste uno, l'estensione del nome di file. utilizzerà anche per identificare il file in controllo. 
 
 
-* **isAuditDiscoveryEnabled**: che indica se il rilevamento di controllo è abilitato o meno. 
+* **isAuditDiscoveryEnabled**: che indica se l'individuazione del controllo è abilitata o meno. 
 
 
 * **fileHandlerObserver**: Classe che implementa l'interfaccia [FileHandler::Observer](class_mip_filehandler_observer.md). 
 
 
-* **context**: Contesto di client che verrà passato in maniera opaca all'observer.
+* **context**: Contesto client che verrà passato di nuovo in modo opaco all'osservatore.
 
 
   
@@ -124,7 +127,7 @@ Parametri:
 Registra un evento specifico dell'applicazione per la pipeline di controllo.
 
 Parametri:  
-* **livello**: una descrizione del livello di log: Info/errore/avviso 
+* **Level**: Descrizione del livello di registrazione: Informazioni/errore/avviso 
 
 
 * **eventType**: descrizione del tipo di evento 
@@ -138,10 +141,10 @@ Parametri:
 Ottiene un elenco di impostazioni personalizzate.
 
   
-**Restituisce**: Un vettore di impostazioni personalizzate
+**Restituisce**: Vettore di impostazioni personalizzate
   
 ### <a name="hasclassificationrules-function"></a>HasClassificationRules (funzione)
-Ottiene se il criterio ha regole automatico o raccomandazione.
+Ottiene se il criterio ha regole automatiche o di raccomandazione.
 
   
-**Restituisce**: Un valore booleano che indica se esiste qualsiasi automatico o recommandation regole nel criterio
+**Restituisce**: Bool che indica se sono presenti regole automatiche o di raccomandazione nei criteri

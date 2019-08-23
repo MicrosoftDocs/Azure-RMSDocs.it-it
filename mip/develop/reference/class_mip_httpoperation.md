@@ -1,45 +1,44 @@
 ---
-title: classe mip::HttpOperation
-description: Documenta la classe mip::httpoperation di Microsoft Information Protection (MIP) SDK.
-author: msmbaldwin
+title: 'Classe MIP:: HttpOperation'
+description: 'Documenta la classe MIP:: httpoperation di Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: e3eaedbf508f116b19521286b686bc955d108efe
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 8503a5466fe180fc6831e85e1b53954ba99f55c7
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173559"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884118"
 ---
-# <a name="class-miphttpoperation"></a>classe mip::HttpOperation 
-Interfaccia che descrive una singola operazione HTTP implementata dall'app client quando si esegue l'override [HttpDelegate](class_mip_httpdelegate.md).
+# <a name="class-miphttpoperation"></a>Classe MIP:: HttpOperation 
+Interfaccia che descrive una singola operazione HTTP, implementata dall'app client quando si esegue l'override di [HttpDelegate](class_mip_httpdelegate.md).
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std::string& GetId() const  |  Ottiene l'ID dell'operazione.
-Public std:: shared_ptr\<HttpResponse\> GetResponse)  |  Ottenere una risposta, se presente.
-public bool IsCancelled()  |  Ottiene lo stato di annullamento dell'operazione.
+public const std::string& GetId() const  |  Ottiene l'ID operazione.
+public std:: shared_ptr\<HttpResponse\> GetResponse ()  |  Ottenere la risposta, se disponibile.
+public bool annullato ()  |  Ottenere lo stato di annullamento dell'operazione.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getid-function"></a>GetId (funzione)
-Ottiene l'ID dell'operazione.
+Ottiene l'ID operazione.
 
   
-**Restituisce**: ID operazione corrispondente [HttpRequest](class_mip_httprequest.md) e [HttpResponse](class_mip_httpresponse.md) avrà lo stesso ID
+**Restituisce**: ID operazione i corrispondenti HttpRequest e HttpResponse avranno lo stesso ID
   
-### <a name="getresponse-function"></a>Metodo GetResponse (funzione)
-Ottenere una risposta, se presente.
+### <a name="getresponse-function"></a>GetResponse (funzione)
+Ottenere la risposta, se disponibile.
 
   
 **Restituisce**: Risposta
   
-### <a name="iscancelled-function"></a>IsCancelled (funzione)
-Ottiene lo stato di annullamento dell'operazione.
+### <a name="iscancelled-function"></a>Funzione annullata
+Ottenere lo stato di annullamento dell'operazione.
 
   
 **Restituisce**: Stato di annullamento

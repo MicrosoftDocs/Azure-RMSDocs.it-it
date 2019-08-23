@@ -1,30 +1,24 @@
 ---
 title: Classe mip::RemoveProtectionAction
-description: 'Classe MIP:: removeprotectionaction di Microsoft Information Protection (MIP) SDK vengono documentate.'
-author: msmbaldwin
+description: 'Documenta la classe MIP:: removeprotectionaction di Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 1c6a9a1e772de52a060b776a78fc7748218adec4
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: d8ff940b2a452d1bdeab8d50af51d94d68df44f1
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184298"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69883185"
 ---
 # <a name="class-mipremoveprotectionaction"></a>Classe mip::RemoveProtectionAction 
 Classe di azione che specifica la rimozione della protezione dal documento.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
-
-## <a name="members"></a>Membri
-
-### <a name="gettype-function"></a>Funzione GetType    
-Specifica il tipo di [Action](class_mip_action.md).  
-
-**Restituisce**: ActionType Tipo di azione derivata in cui è possibile eseguire il cast di questa classe di base.
+  
+## <a name="members"></a>Members
+_Non ancora documentato._

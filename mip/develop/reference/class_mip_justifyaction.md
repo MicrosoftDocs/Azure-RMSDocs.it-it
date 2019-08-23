@@ -1,18 +1,17 @@
 ---
 title: Classe mip::JustifyAction
-description: 'Classe MIP:: justifyaction di Microsoft Information Protection (MIP) SDK vengono documentate.'
-author: msmbaldwin
+description: 'Documenta la classe MIP:: justifyaction di Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: c0968fd019e8c251703a8f23f35ce03e421fffc3
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: a48ace1f6e1e51ca98112acc731300e7835ae9c5
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60174001"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884085"
 ---
 # <a name="class-mipjustifyaction"></a>Classe mip::JustifyAction 
 Justify [Action](class_mip_action.md) richiede la giustificazione del downgrade di un'etichetta e l'impostazione della risposta nello stato di esecuzione.
@@ -20,14 +19,8 @@ Justify [Action](class_mip_action.md) richiede la giustificazione del downgrade 
 **Vedere anche**: [mip::ExecutionState::IsDowngradeJustified](class_mip_executionstate.md#isdowngradejustified-function)
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
-
-## <a name="members"></a>Membri
   
-### <a name="gettype-function"></a>Funzione GetType
-Specifica il tipo di [Action](class_mip_action.md).
-
-  
-**Restituisce**: ActionType Tipo di azione derivata in cui è possibile eseguire il cast di questa classe di base.
+## <a name="members"></a>Members
+_Non ancora documentato._

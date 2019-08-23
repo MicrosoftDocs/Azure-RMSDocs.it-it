@@ -1,24 +1,23 @@
 ---
 title: Classe mip::AddContentFooterAction
-description: 'Classe MIP:: addcontentfooteraction di Microsoft Information Protection (MIP) SDK vengono documentate.'
-author: msmbaldwin
+description: 'Documenta la classe MIP:: addcontentfooteraction di Microsoft Information Protection (MIP) SDK.'
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
-ms.author: mbaldwin
-ms.date: 01/28/2019
-ms.openlocfilehash: 625406d1b2207e4b1f74c77c6813ee3d852f0d37
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.author: bryanla
+ms.date: 07/16/2019
+ms.openlocfilehash: 48b558c423c8cefa37333b1c5133dda31d70433d
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60173499"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884585"
 ---
 # <a name="class-mipaddcontentfooteraction"></a>Classe mip::AddContentFooterAction 
 Classe di azione che specifica l'aggiunta di un piè di pagina contenuto al documento.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const std::string& GetUIElementName()  |  API usata per contrassegnare l'elemento piè di pagina contenuto.
 public const std::string& GetText() const  |  Ottiene il testo destinato a essere inserito nel piè di pagina contenuto.
@@ -27,21 +26,20 @@ public int GetFontSize() const  |  Ottiene le dimensioni del carattere usato per
 public const std::string& GetFontColor() const  |  Ottiene il colore del carattere usato per visualizzare il piè di pagina contenuto.
 public ContentMarkAlignment GetAlignment() const  |  Ottiene l'allineamento del piè di pagina.
 public int GetMargin() const  |  Ottiene il margine del piè di pagina a partire dal basso.
-public ActionType GetType() const  |  Specifica il tipo di [Action](class_mip_action.md).
-
-## <a name="members"></a>Membri
   
-### <a name="getuielementname-function"></a>GetUIElementName (funzione)
+## <a name="members"></a>Members
+  
+### <a name="getuielementname-function"></a>Funzione getuielementname
 API usata per contrassegnare l'elemento piè di pagina contenuto.
 
   
-**Restituisce**: Il nome deve essere utilizzato per l'elemento dell'interfaccia utente che contiene il piè di pagina contenuto. Lo stesso nome verrà restituito in [RemoveContentFooterAction](class_mip_removecontentfooteraction.md) nel caso in cui il piè di pagina contenuto debba essere rimosso.
+**Restituisce**: Nome da utilizzare per l'elemento dell'interfaccia utente che include il piè di pagina contenuto. Lo stesso nome verrà restituito in [RemoveContentFooterAction](class_mip_removecontentfooteraction.md) nel caso in cui il piè di pagina contenuto debba essere rimosso.
   
-### <a name="gettext-function"></a>GetText (funzione)
+### <a name="gettext-function"></a>Funzione gettext
 Ottiene il testo destinato a essere inserito nel piè di pagina contenuto.
 
   
-**Restituisce**: Testo piè di pagina contenuto.
+**Restituisce**: Testo del piè di pagina contenuto.
   
 ### <a name="getfontname-function"></a>GetFontName (funzione)
 Ottiene il nome del tipo di carattere usato per visualizzare il piè di pagina contenuto.
@@ -49,7 +47,7 @@ Ottiene il nome del tipo di carattere usato per visualizzare il piè di pagina c
   
 **Restituisce**: Nome del tipo di carattere. Il valore predefinito è Calibri se non ne viene impostato nessuno dai criteri.
   
-### <a name="getfontsize-function"></a>GetFontSize (funzione)
+### <a name="getfontsize-function"></a>Funzione GetFontSize
 Ottiene le dimensioni del carattere usato per visualizzare il piè di pagina contenuto.
 
   
@@ -59,24 +57,18 @@ Ottiene le dimensioni del carattere usato per visualizzare il piè di pagina con
 Ottiene il colore del carattere usato per visualizzare il piè di pagina contenuto.
 
   
-**Restituisce**: Colore del carattere come stringa (ad esempio, "#000000").
+**Restituisce**: Colore del carattere sotto forma di stringa, ad esempio "#000000".
   
-### <a name="getalignment-function"></a>GetAlignment (funzione)
+### <a name="getalignment-function"></a>Funzione getAlignment
 Ottiene l'allineamento del piè di pagina.
 
   
-**Restituisce**: Enumeratore ContentMarkAlignment: LEFT | RIGHT | CENTRO. 
+**Restituisce**: Enumeratore ContentMarkAlignment: A SINISTRA | A DESTRA | CENTER. 
   
-**Vedere anche**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment)
+**Vedere anche**: [ContentMarkAlignment](mip-enums-and-structs.md#contentmarkalignment-enum)
   
-### <a name="getmargin-function"></a>GetMargin (funzione)
+### <a name="getmargin-function"></a>Funzione GetMargin
 Ottiene il margine del piè di pagina a partire dal basso.
 
   
-**Restituisce**: I margini dalla parte inferiore del documento (ad esempio 10 mm).
-
-### <a name="gettype-function"></a>Funzione GetType
-Specifica il tipo di [Action](class_mip_action.md).
-
-  
-**Restituisce**: ActionType Tipo di azione derivata in cui è possibile eseguire il cast di questa classe di base.
+**Restituisce**: I margini dalla parte inferiore del documento, ad esempio 10 mm.

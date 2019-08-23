@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.date: 11/01/2018
 ms.author: tommos
-ms.openlocfilehash: dbe6db5fe54f9d26d072d3f6fcad1f2595d61040
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 34576337726e8974e65076bc1358d316ad32d9d2
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175276"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886161"
 ---
 # <a name="implement-executionstate"></a>Implementare ExecutionState
 
@@ -28,20 +28,20 @@ Il passaggio di informazioni a Microsoft Information Protection SDK per calcolar
 
 `ExecutionState` espone i membri virtuali seguenti. Ognuno di essi specifica un contesto per il motore dei criteri per restituire le informazioni sulle azioni che devono essere eseguite dall'applicazione. Inoltre, queste informazioni possono essere usate per specificare informazioni di controllo per la funzionalità di reporting di Azure Information Protection.
 
-
-| Membro                                                                           | Returns                                                                                                              |
-|----------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| `std::string GetNewLabelId()`                                                      | Restituisce l'ID etichetta da applicare all'oggetto.                                                                    |
-| `mip::DataState GetDataState()`                                              | Restituisce il mip::DataState dell'oggetto.                                                                         |
+| Member                                                                             | Valori di codice restituiti                                                                                                              |
+| ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `std::shared_ptr<mip::Label> GetNewLabel()`                                        | Restituisce l'etichetta da applicare all'oggetto.                                                                       |
+| `mip::DataState GetDataState()`                                                    | Restituisce il MIP::D ataState dell'oggetto.                                                                            |
 | `std::pair<bool, std::string> IsDowngradeJustified()`                              | Restituisce un std::pair che esprime se il downgrade è giustificato e la giustificazione.                                 |
-| `std::string GetContentIdentifier()`                                               | Restituisce l'identificatore del contenuto. Deve essere un identificatore leggibile dall'utente, che indica la posizione dell'oggetto.   |
+| `std::string GetContentIdentifier()`                                               | Restituisce l'identificatore del contenuto. Deve essere un identificatore leggibile dall'utente, che indica la posizione dell'oggetto.        |
 | `mip::ActionSource GetNewLabelActionSource()`                                      | Restituisce il mip::ActionSource dell'etichetta.                                                                          |
-| `mip::AssignmentMethod GetNewLabelAssignmentMethod()`                              | Restituisce il mip::AssignmentMethod dell'etichetta                                                                        |
+| `mip::AssignmentMethod GetNewLabelAssignmentMethod()`                              | Restituisce il mip::AssignmentMethod dell'etichetta                                                                       |
 | `std::vector<std::pair<std::string, std::string>> GetNewLabelExtendedProperties()` | Restituisce un std::vector di std::pairs di stringa contenente i metadati personalizzati che verranno applicati al documento. |
 | `std::vector<std::pair<std::string, std::string>> GetContentMetadata()`            | Restituisce un std::vector di std::pairs di stringa contenente i metadati di contenuto correnti.                               |
-| `std::shared_ptr<mip::ProtectionDescriptor> GetProtectionDescriptor()`           | Restituisce un puntatore a un mip::ProtectionDescriptor                                                                     |
+| `std::shared_ptr<mip::ProtectionDescriptor> GetProtectionDescriptor()`             | Restituisce un puntatore a un mip::ProtectionDescriptor                                                                     |
 | `mip::ContentFormat GetContentFormat()`                                            | Restituisce mip::ContentFormat                                                                                           |
-| `mip::ActionType GetSupportedActions()`                                           | Restituisce mip::ActionTypes per l'etichetta.                                                                              |
+| `mip::ActionType GetSupportedActions()`                                            | Restituisce mip::ActionTypes per l'etichetta.                                                                              |
+| `std::shared_ptr<mip::ClassificationResults>`                                      | Restituisce un elenco di risultati di classificazione, se implementato.                                                            |
 
 Ogni elemento deve essere sottoposto a override in un'implementazione di una classe derivata da `mip::ExecutionState`. Nell'applicazione di esempio a cui fa riferimento il collegamento precedente questo processo viene eseguito implementando uno struct chiamato `ExecutionStateOptions` e passandolo al costruttore della classe derivata.
 
@@ -59,12 +59,14 @@ struct ExecutionStateOptions {
     std::string downgradeJustification;
     std::string templateId;
     mip::ContentFormat contentFormat = mip::ContentFormat::DEFAULT;
+    mip::ActionType supportedActions;
+    bool generateAuditEvent;
 };
 ```
 
 Ogni proprietà viene impostata dall'applicazione, quindi `ExecutionStateOptions` viene passato al costruttore della classe derivata da `mip::ExecutionState`. Queste informazioni vengono usate per determinare le azioni da eseguire. I dati disponibili in `mip::ExecutionState` vengono esposti anche nell'analitica di Azure Information Protection.
 
-### <a name="next-steps"></a>Passaggi successivi
+### <a name="next-steps"></a>Fasi successive
 
-- Informazioni su come determinare [calcolo azioni per un'etichetta nuova o esistente](concept-handler-policy-computeactions-cpp.md), basato sullo stato corrente e quella desiderato.
-- Scaricare il [esempi dell'API dei criteri da GitHub e provare l'API di criteri](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
+- Informazioni su come determinare le [azioni di calcolo per un'etichetta nuova o esistente](concept-handler-policy-computeactions-cpp.md), in base allo stato corrente e desiderato.
+- Scaricare gli [esempi di API dei criteri da GitHub e provare l'API dei criteri](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)

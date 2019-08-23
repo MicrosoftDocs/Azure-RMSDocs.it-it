@@ -5,18 +5,18 @@ author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 11/16/2018
+ms.date: 07/30/2019
 ms.author: tommos
-ms.openlocfilehash: cc35475086de76b869428c62cfc35e73fc3060db
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 37ab92e336d88d37d9e4e7631e108bbaaebdb977
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60184927"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886183"
 ---
 # <a name="microsoft-information-protection-sdk---policy-handler-concepts"></a>Microsoft Information Protection SDK - Concetti relativi ai gestori di criteri
 
-Nell'API di criteri, `mip::PolicyHandler` espone operazioni usate per le azioni dei criteri di calcolo e inviare gli eventi di controllo.
+Nell'API `mip::PolicyHandler` dei criteri espone le operazioni usate per calcolare le azioni dei criteri e inviare gli eventi di controllo.
 
 ## <a name="policy-handler-functions"></a>Funzioni di gestione criteri
 
@@ -31,17 +31,18 @@ In questo articolo verranno descritti i metodi seguenti:
 
 La creazione di un elemento `PolicyHandler` richiede:
 
-- Un elemento `PolicyProfile`
-- Un elemento `PolicyEngine` aggiunto a `PolicyProfile`
-- Una classe che eredita `mip::PolicyHandler::Observer`
+- Un elemento `mip::MipContext`
+- Un elemento `mip::PolicyProfile`
+- Un elemento `mip::PolicyEngine` aggiunto a `mip::PolicyProfile`
+- Classe che implementa`mip::PolicyHandler::Observer`
 
 ## <a name="create-a-policy-handler"></a>Creare un gestore di criteri
 
-Il primo passaggio necessario per ottenere le azioni dei criteri consiste nella creazione di un oggetto `PolicyHandler`. Questa classe implementa le funzionalità richieste per ottenere l'elenco delle azioni che deve intraprendere un'etichetta specifica. Implementa inoltre la funzione per attivare un evento di controllo.
+Il primo passaggio necessario per ottenere le azioni dei criteri consiste nella creazione di un oggetto `PolicyHandler`. Questa classe implementa la funzionalità necessaria per ottenere l'elenco delle azioni che devono essere eseguite da un'etichetta specifica. Implementa inoltre la funzione per attivare un evento di controllo.
 
 Per creare `PolicyHandler` è sufficiente chiamare la funzione `CreatePolicyHandlerAsync` di `PolicyEngine` usando il modello promise/future.
 
-`CreatePolicyHandlerAsync` accetta un singolo parametro: **isAuditDiscoveryEnabled**. Impostare questo valore su **true** se si vuole che l'applicazione segnali gli eventi heartbeat nella registrazione di controllo.
+`CreatePolicyHandlerAsync` accetta un singolo parametro: **isAuditDiscoveryEnabled**. Impostare questo valore su **true** se l'applicazione deve far emergere gli eventi heartbeat e di individuazione nella registrazione di controllo.
 
 > [!NOTE]
 > La classe `mip::PolicyHandler::Observer` deve essere implementata in una classe derivata perché `CreatePolicyHandler` richiede l'oggetto `Observer`. 
@@ -55,9 +56,9 @@ auto handler = createPolicyHandlerFuture.get();
 
 Dopo aver correttamente creato l'oggetto `PolicyHandler`, le azioni possono essere calcolate e gli eventi di controllo inviati.
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Fasi successive
 
-Ora che si sono appresi la creazione di un gestore dei criteri:
+Ora che si è appreso come creare un gestore dei criteri:
 
-- Informazioni su come [creare una classe di stato di esecuzione](concept-handler-policy-executionstate-cpp.md), che viene usato per determinare le azioni di calcolo.
-- Scaricare il [esempi dell'API dei criteri da GitHub e provare l'API di criteri](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
+- Informazioni su come [creare una classe di stato di esecuzione](concept-handler-policy-executionstate-cpp.md), che viene usata per determinare le azioni di calcolo.
+- Scaricare gli [esempi di API dei criteri da GitHub e provare l'API dei criteri](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
