@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire la versione corr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/14/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 798784eb744416edf977f58ae95d5203bc9ead6b
-ms.sourcegitcommit: fc467e30b67ac218491fccea2d501350d3a656fb
+ms.openlocfilehash: 4c69838cbde0fa7408780d0a07c0a2990f26da6c
+ms.sourcegitcommit: ad15beac7d95fe3904f3d4671c1e18e2136f74b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69024023"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69999224"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -99,7 +99,7 @@ Seguire le istruzioni per un [computer disconnesso](./rms-client/client-admin-gu
 
 1. Configurare lo scanner nel portale di Azure, creando un profilo dello scanner. Se occorre assistenza per questo passaggio, vedere [Configurare lo scanner nel portale di Azure](#configure-the-scanner-in-the-azure-portal).
 
-2. Esportare il profilo dello scanner dal pannello **Azure Information Protection - Profili (anteprima)** tramite l'opzione **Esporta**.
+2. Esportare il profilo dello scanner dal pannello **profili di Azure Information Protection** , usando l'opzione **Esporta** .
 
 3. Infine, in una sessione di PowerShell, eseguire [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) e specificare il file che contiene le impostazioni esportate.
 

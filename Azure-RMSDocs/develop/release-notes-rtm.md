@@ -14,12 +14,12 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: cb969e8add0c79495cc2cc90e7e92368e42577dc
-ms.sourcegitcommit: f0dee92d6668001681b507e82f8aea61f3bfa96e
+ms.openlocfilehash: c68970dffb263f30eb47ded0a29c2c5700b46bbe
+ms.sourcegitcommit: ad15beac7d95fe3904f3d4671c1e18e2136f74b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69894474"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "69999211"
 ---
 # <a name="release-notes"></a>Note sulla versione
 
@@ -30,7 +30,9 @@ Questo articolo contiene informazioni importanti su questa versione e quelle pre
 - API file aggiornata per verificare il diritto di esportazione anziché il diritto di estrazione durante la decrittografia del contenuto.
 - Correzione del programma di installazione per assicurarsi che durante l'aggiornamento venga installata la nuova protezione PDF V2.
 - I dati di telemetria cambiano. Questa modifica richiede un aggiornamento del pacchetto di installazione che consente di installare le librerie di runtime C.
-- Modifiche all'autenticazione del back-end del servizio. eseguire l'aggiornamento a questa versione dell'SDK per minmize l'interferenza
+- Modifiche all'autenticazione del back-end del servizio, # # # # # #please aggiornamento a questa versione dell'SDK per minmize l'interferenza se si usa l'autenticazione con chiave simmetrica per le applicazioni
+- Supporto per VC 15,9
+
 
 ## <a name="october-2017---update"></a>Aggiornamento di ottobre 2017
 
