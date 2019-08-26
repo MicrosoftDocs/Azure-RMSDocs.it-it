@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fbe7ddfd8160856a7a8491d0faa672a16b340455
-ms.sourcegitcommit: 2a12c62501e775f73c0e3176744ba966a6edffeb
+ms.openlocfilehash: f60c1bdc8dabd586e96c758afe1f93f46d6afb16
+ms.sourcegitcommit: 0d336e4b5386f4861db9492c7dce2ef0e8cf0d6d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69584613"
+ms.lasthandoff: 08/25/2019
+ms.locfileid: "70017651"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -31,7 +31,7 @@ Per queste impostazioni è necessario modificare il registro di sistema o specif
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Come configurare le impostazioni avanzate per il client usando Office 365 Centro sicurezza e conformità PowerShell
 
-Quando si usa Office 365 Centro sicurezza e conformità PowerShell, è possibile configurare le impostazioni avanzate che supportano le personalizzazioni per i criteri etichette e le etichette. Ad esempio:
+Quando si usa Office 365 Centro sicurezza e conformità PowerShell, è possibile configurare le impostazioni avanzate che supportano le personalizzazioni per i criteri etichette e le etichette. Esempio:
 
 - L'impostazione per visualizzare la barra di Information Protection nelle app di Office è un' ***impostazione avanzata dei criteri***per le etichette.
 - L'impostazione per specificare un colore dell'etichetta è un' ***impostazione avanzata etichetta***.
@@ -665,7 +665,7 @@ Per modificare questo comportamento in modo che i tipi di informazioni riservate
 
 Se si imposta questa impostazione client avanzata, le informazioni di controllo possono comunque essere inviate dal client, ma le informazioni sono limitate alla segnalazione quando un utente ha eseguito l'accesso al contenuto con etichetta.
 
-Esempio:
+Ad esempio:
 
 - Con questa impostazione è possibile vedere che un utente ha eseguito l'accesso a Financial. docx con etichetta **Confidential \ Sales**.
 
@@ -773,11 +773,9 @@ Esempio di comando di PowerShell, in cui l'etichetta è denominata "generale":
 
 Quando sono necessarie più regole per la stessa etichetta, definire più valori stringa per la stessa chiave. 
 
-Esempio:
+In questo esempio, le etichette delle isole sicure denominate "Confidential" e "Secret" vengono archiviatenella proprietà personalizzata denominata Classification e si vuole che il client Azure Information Protection Unified Labeling applichi l'etichetta di riservatezza denominata " Riservato ":
 
-- Le etichette delle isole sicure denominate "Confidential" e "Secret" vengono archiviate nella proprietà personalizzata denominata * * classificazione e si vuole che il client di Azure Information Protection Unified Labeling applichi l'etichetta di riservatezza denominata "Confidential":
-
-    Set-label-Identity Confidential-AdvancedSettings @ {labelByCustomProperties = ConvertTo-JSON ("migrate Confidential Label, Classification, Confidential", "migrate Secret Label, Classification, Secret")}
+    Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 
 ### <a name="extend-your-label-migration-rules-to-emails"></a>Estendi le regole di migrazione delle etichette ai messaggi di posta elettronica
 
