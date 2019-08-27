@@ -4,7 +4,7 @@ description: Informazioni sull'installazione e la configurazione del connettore 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 83193a4f84df3d56129030676d79c20ea3dfe666
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: fef260a3cadfc2ffdc7748e7be058c250db22a3a
+ms.sourcegitcommit: 923227861c00beabb7ed997ef7cba47f06facc94
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794048"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70027443"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installazione e configurazione del connettore di Azure Rights Management
 
@@ -57,7 +57,7 @@ Per continuare, immettere un account e una password per configurare il connettor
 ## <a name="entering-credentials"></a>Immissione delle credenziali
 Per poter configurare il connettore RMS, è necessario immettere le credenziali per un account dotato di privilegi sufficienti per la configurazione del connettore. È ad esempio possibile digitare <strong>admin@contoso.com</strong> e quindi specificare la password per questo account.
 
-Questo account non deve richiedere l'autenticazione a più fattori (MFA, Multi-Factor Authentication) perché lo strumento di amministrazione Microsoft Rights Management non supporta l'autenticazione MFA per questo account. 
+Questo account non deve richiedere l'autenticazione a più fattori (MFA, Multi-Factor Authentication) perché lo strumento di amministrazione Microsoft Rights Management non supporta l'autenticazione MFA per questo account. Inoltre, se si usa Azure AD accesso condizionale, non [bloccare l'autenticazione legacy](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication) per questo account.
 
 Sono previste anche alcune limitazioni per i caratteri della password del connettore. Non è possibile usare una password con uno dei seguenti caratteri: E commerciale ( **&** ), parentesi quadra aperta ( **[** ), parentesi quadra chiusa ( **]** ); virgolette semplici ( **"** ) e apostrofo ( **'** ). Se la password include uno di questi caratteri non è possibile effettuare l'autenticazione per il connettore RMS e viene visualizzato il messaggio di errore **La combinazione nome utente e password specificata non è corretta**, anche se l'accesso con questo account e questa password funziona in altri scenari. Se si verifica questa situazione per la password in uso, scegliere un account diverso con una password che non include questi caratteri speciali oppure reimpostare la password in modo che non includa i caratteri speciali.
 

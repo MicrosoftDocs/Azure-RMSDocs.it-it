@@ -4,7 +4,7 @@ description: Informazioni sulle operazioni del ciclo di vita rilevanti nel caso 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5d35fc59ebfa051f3f7644c05527ed75bfe54be7
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 00e99f55130f25fa9368a7fdcd1f8c2795250c89
+ms.sourcegitcommit: dc655736e531260c7718a8808f4f1016391d2d7d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790497"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70020479"
 ---
 # <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gestito da Microsoft: operazioni del ciclo di vita della chiave del tenant
 
@@ -62,7 +62,7 @@ Per esportare la configurazione di Azure Information Protection e la chiave del 
 
 ### <a name="step-1-initiate-export"></a>Passaggio 1: Avviare l'esportazione
 
-- [Contattare il supporto tecnico Microsoft](information-support.md#to-contact-microsoft-support) per aprire un **caso di supporto di Azure Information Protection con una richiesta di esportazione della chiave di Azure Information Protection**. È necessario dimostrare di essere un amministratore del tenant di Azure Information Protection. Si tenga presente che la conferma di questo processo richiede diversi giorni. Il servizio è soggetto ai costi di supporto standard. L'esportazione della chiave del tenant non è un servizio di assistenza gratuito.
+- [Contattare il supporto tecnico Microsoft](information-support.md#to-contact-microsoft-support) per aprire un **caso di supporto di Azure Information Protection con una richiesta di esportazione della chiave di Azure Information Protection**. È necessario dimostrare di essere un amministratore globale per il tenant e comprendere che questo processo richiede diversi giorni per la conferma. Il servizio è soggetto ai costi di supporto standard. L'esportazione della chiave del tenant non è un servizio di assistenza gratuito.
 
 ### <a name="step-2-wait-for-verification"></a>Passaggio 2: Attendi verifica
 
@@ -77,7 +77,7 @@ Per esportare la configurazione di Azure Information Protection e la chiave del 
     ```
     In questo modo viene generata una coppia di chiavi RSA e le parti pubblica e privata vengono salvate come file nella cartella corrente. Ad esempio:  **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** e **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**.
 
-    Rispondere al messaggio di posta elettronica ricevuto da CSS allegando il file con il nome che inizia con **PublicKey**. A questo punto CSS invierà all'utente un file TDP con estensione .xml crittografato tramite la chiave RSA. Copiare questo file nella stessa cartella in cui è stato eseguito lo strumento AadrmTpd in origine ed eseguire nuovamente lo strumento, usando il file che inizia con **PrivateKey** e il file ricevuto da CSS. Ad esempio:
+    Rispondere al messaggio di posta elettronica ricevuto da CSS allegando il file con il nome che inizia con **PublicKey**. A questo punto CSS invierà all'utente un file TDP con estensione .xml crittografato tramite la chiave RSA. Copiare questo file nella stessa cartella in cui è stato eseguito lo strumento AadrmTpd in origine ed eseguire nuovamente lo strumento, usando il file che inizia con **PrivateKey** e il file ricevuto da CSS. Esempio:
 
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
@@ -99,7 +99,7 @@ Se si esporta della chiave del tenant perché non si vuole più usare Azure Info
 ## <a name="respond-to-a-breach"></a>Rispondere a una violazione di sicurezza
 Indipendentemente dall'affidabilità, nessun sistema di sicurezza può considerarsi completo se non prevede un processo di risposta alle violazioni di sicurezza. La chiave del tenant può essere violata o rubata e anche se è protetta in modo efficiente, potrebbero essere presenti vulnerabilità nella tecnologia attuale della chiave o nella lunghezza e negli algoritmi correlati alle chiavi attuali.
 
-Microsoft ha predisposto un team apposito per rispondere agli eventi imprevisti correlati alla sicurezza che possono verificarsi nei suoi prodotti e servizi. Non appena riceve un report plausibile su un evento imprevisto, il team si attiva per esaminarne l'ambito, la causa radice e le soluzioni. Se l'evento imprevisto influisce sulle risorse dell'utente, Microsoft invierà una notifica via posta elettronica agli amministratori di tenant di Azure Information Protection usando l'indirizzo e-mail indicato al momento della sottoscrizione.
+Microsoft ha predisposto un team apposito per rispondere agli eventi imprevisti correlati alla sicurezza che possono verificarsi nei suoi prodotti e servizi. Non appena riceve un report plausibile su un evento imprevisto, il team si attiva per esaminarne l'ambito, la causa radice e le soluzioni. Se l'evento imprevisto influiscono sulle risorse, Microsoft invierà una notifica tramite posta elettronica agli amministratori globali del tenant.
 
 In caso di violazione di sicurezza, l'azione più efficace che l'utente o Microsoft possa intraprendere dipende dall'ambito della violazione stessa. Microsoft collaborerà con l'utente durante l'intero processo. Nella tabella seguente vengono descritte alcune situazioni tipiche e la risposta più probabile, sebbene la risposta esatta dipenda da tutte le informazioni raccolte durante l'analisi.
 
