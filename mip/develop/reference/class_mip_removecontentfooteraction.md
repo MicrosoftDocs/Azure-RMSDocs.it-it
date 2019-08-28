@@ -1,17 +1,17 @@
 ---
 title: Classe mip::RemoveContentFooterAction
 description: 'Documenta la classe MIP:: removecontentfooteraction di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: c9928d15e4575673b055bea94d8d94ff27fe5bf4
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: a48d90736e554a89df0bbc94e187dff5c96b3a09
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69885023"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70057309"
 ---
 # <a name="class-mipremovecontentfooteraction"></a>Classe mip::RemoveContentFooterAction 
 Classe di azione che specifica la rimozione del piè di pagina contenuto dal documento.

@@ -1,17 +1,17 @@
 ---
 title: Classe mip::LoggerDelegate
 description: 'Documenta la classe MIP:: loggerdelegate di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: effba9bc41907c477cea7e3cf6a8688187538068
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 6339accaa94d00a95faf9ab047e148d61671422c
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69883916"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70054583"
 ---
 # <a name="class-miploggerdelegate"></a>Classe mip::LoggerDelegate 
 Classe che definisce l'interfaccia per il logger MIP SDK.

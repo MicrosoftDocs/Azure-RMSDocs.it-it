@@ -1,17 +1,17 @@
 ---
 title: Classe mip::ProtectionHandler::Observer
 description: Documenta la classe MIP::p rotectionhandler dell'SDK Microsoft Information Protection (MIP).
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 0e1a1d039928e1244d6c279fe055330eac7f9577
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: a02e84a7be2071340a0ffef6310788823b768de3
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69883395"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70057544"
 ---
 # <a name="class-mipprotectionhandlerobserver"></a>Classe mip::ProtectionHandler::Observer 
 Interfaccia che riceve le notifiche correlate a [ProtectionHandler](class_mip_protectionhandler.md).

@@ -4,19 +4,19 @@ description: Istruzioni e informazioni per gli amministratori per la gestione de
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ee514720cf13e819f3d64e77635ae96a26e4d0ed
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: a3cca2ac2e3df8f773d6a818eb664bf5c72263aa
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793201"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70056445"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guida dell'amministratore: Uso di PowerShell con il client unificato Azure Information Protection
 
@@ -74,7 +74,7 @@ Per poter rimuovere la protezione dai file, è necessario avere diritti di utili
 Per impostazione predefinita, quando si eseguono i cmdlet per l'assegnazione di etichette, i comandi vengono eseguiti nel contesto utente personale in una sessione interattiva di PowerShell. Per eseguirli senza interventi da parte dell'utente, creare un nuovo account utente di Azure AD per questo scopo. Nel contesto di tale utente, quindi, eseguire il cmdlet Set-AIPAuthentication per impostare e archiviare le credenziali usando un token di accesso da Azure AD. Questo account utente viene quindi autenticato e avviato per il servizio di protezione da Azure Information Protection. L'account Scarica i criteri di Azure Information Protection e tutti i modelli di protezione usati dalle etichette.
 
 > [!NOTE]
-> Se si usano [criteri con ambito](../configure-policy-scope.md) tenere presente che potrebbe essere necessario aggiungere questo account ai criteri con ambito.
+> Se si usano criteri di etichetta per utenti diversi, tenere presente che potrebbe essere necessario aggiungere questo account a un criterio di etichetta specifico.
 
 La prima volta che si esegue questo cmdlet viene richiesto di accedere ad Azure Information Protection. Specificare il nome dell'account utente e la password creati per l'account automatico. Successivamente, questo account potrà quindi eseguire i cmdlet di assegnazione di etichette in modo non interattivo fino alla scadenza del token di autenticazione in Azure AD. 
 

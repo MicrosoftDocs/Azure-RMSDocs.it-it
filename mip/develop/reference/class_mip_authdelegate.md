@@ -1,17 +1,17 @@
 ---
 title: 'Classe MIP:: AuthDelegate'
 description: 'Documenta la classe MIP:: authdelegate di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: b865a26b9cfd96cf4beafa2eb712917405f1dd5c
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: f1f2a9f1f1f61d381cbf0da58cfdef9cad6044e2
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69884511"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70056299"
 ---
 # <a name="class-mipauthdelegate"></a>Classe MIP:: AuthDelegate 
 Delegato per le operazioni correlate all'autenticazione.

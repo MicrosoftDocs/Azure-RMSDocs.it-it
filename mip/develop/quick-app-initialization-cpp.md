@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/18/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: d30111953bdc55b66b712f30de0c50d28ac07303
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 30066f1bbb8b5a4cdd556b7aa34a40d696371a91
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60185076"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884801"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Guida introduttiva: Inizializzazione dell'applicazione client (C++)
 
@@ -36,7 +36,7 @@ Se non è già stato fatto, assicurarsi di:
 Verranno prima di tutto creati e configurati la soluzione e il progetto iniziali di Visual Studio su cui si baseranno le altre procedure di avvio rapido. 
 
 1. Aprire Visual Studio 2017 e scegliere **File**, **Nuovo**, **Progetto** dal menu. Nella finestra di dialogo **Nuovo progetto**:
-   - Nel riquadro sinistro, in **Installati**, **Altri linguaggi**, selezionare **Visual C++**.
+   - Nel riquadro sinistro, in **Installati**, **Altri linguaggi**, selezionare **Visual C++** .
    - Nel riquadro centrale selezionare **Applicazione console di Windows**.
    - Nel riquadro inferiore, aggiornare **Nome** e **Posizione** del progetto, nonché il **Nome della soluzione** in cui è contenuto corrispondentemente.
    - Al termine fare clic sul pulsante **OK** in basso a destra.
@@ -137,7 +137,7 @@ Si creerà ora un'implementazione per un delegato di autenticazione mediante l'e
      class AuthDelegateImpl final : public mip::AuthDelegate {
      public:
           AuthDelegateImpl() = delete;        // Prevents default constructor
-          
+
           AuthDelegateImpl(
             const std::string& appId)         // AppID for registered AAD app
             : mAppId(appId) {};
@@ -146,6 +146,7 @@ Si creerà ora un'implementazione per un delegato di autenticazione mediante l'e
             const mip::Identity& identity,    // Identity of the account to be authenticated, if known
             const OAuth2Challenge& challenge, // Authority (AAD tenant issuing token), and resource (API being accessed; "aud" claim).
             OAuth2Token& token) override;     // Token handed back to MIP SDK
+
      private:
           std::string mAppId;
           std::string mToken;
@@ -194,7 +195,8 @@ Si creerà ora un'implementazione per un delegato di autenticazione mediante l'e
           // True = successful token acquisition; False = failure
           return true;
      }
-     ``` 
+     ```
+
 3. Facoltativamente, usare F6 (**Compila soluzione**) per eseguire una compilazione/collegamento di prova della soluzione e assicurarsi che venga compilata correttamente prima di continuare.
 
 ## <a name="implement-a-consent-delegate"></a>Implementare un delegato di consenso
@@ -232,6 +234,7 @@ Si creerà ora un'implementazione per un delegato di consenso mediante l'estensi
           return Consent::AcceptAlways;
      }
      ``` 
+     
 3. Facoltativamente, usare F6 (**Compila soluzione**) per eseguire una compilazione/collegamento di prova della soluzione e assicurarsi che venga compilata correttamente prima di continuare.
 
 ## <a name="construct-a-file-profile-and-engine"></a>Costruire gli oggetti profilo e motore File
@@ -243,6 +246,8 @@ Come detto, gli oggetti profilo e motore sono necessari per i client del SDK che
 2. Rimuovere l'implementazione generata di `main()`. **Non** rimuovere le direttive del preprocessore generate da Visual Studio durante la creazione del progetto (#pragma, #include). Aggiungere il codice seguente dopo eventuali direttive del preprocessore:
 
    ```cpp
+   #include "mip/mip_init.h"
+   #include "mip/mip_context.h"  
    #include "auth_delegate.h"
    #include "consent_delegate.h"
    #include "profile_observer.h"
@@ -253,7 +258,7 @@ Come detto, gli oggetti profilo e motore sono necessari per i client del SDK che
    using std::shared_ptr;
    using std::string;
    using std::cout;
-   using mip::ApplicationInfo; 
+   using mip::ApplicationInfo;
    using mip::FileProfile;
    using mip::FileEngine;
 
@@ -263,18 +268,25 @@ Come detto, gli oggetti profilo e motore sono necessari per i client del SDK che
      ApplicationInfo appInfo{"<application-id>",                    // ApplicationInfo object (App ID, name, version)
                  "<application-name>",
                  "<application-version>"};
-     auto profileObserver = make_shared<ProfileObserver>();         // Observer object                  
+
+     auto mipContext = mip::MipContext::Create(appInfo,
+                         "file_sample",
+                         mip::LogLevel::Trace,
+                         nullptr /*loggerDelegateOverride*/,
+                         nullptr /*telemetryOverride*/);
+
+     auto profileObserver = make_shared<ProfileObserver>();         // Observer object
      auto authDelegateImpl = make_shared<AuthDelegateImpl>(         // Authentication delegate object (App ID)
                  "<application-id>");
      auto consentDelegateImpl = make_shared<ConsentDelegateImpl>(); // Consent delegate object
  
      // Construct/initialize profile object
-     FileProfile::Settings profileSettings("",    // Path for logging/telemetry/state
-       true,                                      // true = use in-memory state storage (vs disk)
-       authDelegateImpl,                            
-       consentDelegateImpl,                     
-       profileObserver,                         
-       appInfo);                                    
+     FileProfile::Settings profileSettings(
+       mipContext,
+       mip::CacheStorageType::OnDisk,
+       authDelegateImpl,
+       consentDelegateImpl,
+       profileObserver);
 
      // Set up promise/future connection for async profile operations; load profile asynchronously
      auto profilePromise = make_shared<promise<shared_ptr<FileProfile>>>();
@@ -296,7 +308,7 @@ Come detto, gli oggetti profilo e motore sono necessari per i client del SDK che
      // Construct/initialize engine object
      FileEngine::Settings engineSettings(
        mip::Identity("<engine-account>"),         // Engine identity (account used for authentication)
-       "<engine-state>",                          // User-defined engine state      
+       "<engine-state>",                          // User-defined engine state
        "en-US");                                  // Locale (default = en-US)
 
      // Set up promise/future connection for async engine operations; add engine to profile asynchronously
@@ -306,7 +318,7 @@ Come detto, gli oggetti profilo e motore sono necessari per i client del SDK che
      std::shared_ptr<FileEngine> engine; 
      try
      {
-       engine = engineFuture.get();             
+       engine = engineFuture.get();
      }
      catch (const std::exception& e)
      {
@@ -315,6 +327,13 @@ Come detto, gli oggetti profilo e motore sono necessari per i client del SDK che
        system("pause");
        return 1;
      }
+
+   // Application shutdown. Null out profile and engine, call ReleaseAllResources();
+   // Application may crash at shutdown if resources aren't properly released.
+   // handler = nullptr; // This will be used in later quick starts.
+   engine = nullptr;
+   profile = nullptr;   
+   mipContext = nullptr;
 
    return 0;
    }

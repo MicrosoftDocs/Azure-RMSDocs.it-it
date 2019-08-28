@@ -1,17 +1,17 @@
 ---
 title: 'Classe MIP:: HttpOperation'
 description: 'Documenta la classe MIP:: httpoperation di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 8503a5466fe180fc6831e85e1b53954ba99f55c7
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: d0f72a60233b05eab2c9e4b9e9cec2bf8bcda495
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69884118"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70056035"
 ---
 # <a name="class-miphttpoperation"></a>Classe MIP:: HttpOperation 
 Interfaccia che descrive una singola operazione HTTP, implementata dall'app client quando si esegue l'override di [HttpDelegate](class_mip_httpdelegate.md).

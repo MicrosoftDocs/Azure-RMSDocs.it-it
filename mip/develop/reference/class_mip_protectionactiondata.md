@@ -1,17 +1,17 @@
 ---
 title: Classe MIP::P rotectionActionData
 description: Documenta la classe MIP::p rotectionactiondata dell'SDK Microsoft Information Protection (MIP).
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 0725b124ce54706843897a5fc019906d23038f71
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 9706844d0558c6c4f31ac5b9490ac77cb1a57824
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69893158"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70057716"
 ---
 # <a name="class-mipprotectionactiondata"></a>Classe MIP::P rotectionActionData 
   

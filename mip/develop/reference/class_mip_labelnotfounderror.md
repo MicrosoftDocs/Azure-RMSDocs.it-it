@@ -1,17 +1,17 @@
 ---
 title: 'Classe MIP:: LabelNotFoundError'
 description: 'Documenta la classe MIP:: labelnotfounderror di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: deb278630e7ac33e3c75e330b0a79971862ffa87
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 4b6d9e43e23eb4fa629124dcd1cdf3bce3ee7165
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69893362"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70055944"
 ---
 # <a name="class-miplabelnotfounderror"></a>Classe MIP:: LabelNotFoundError 
 [Etichetta](class_mip_label.md) di ID non riconosciuto.

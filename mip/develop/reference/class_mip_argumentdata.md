@@ -1,17 +1,17 @@
 ---
 title: 'Classe MIP:: ArgumentData'
 description: 'Documenta la classe MIP:: argumentdata di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: a70e9e2a789a3fd80427632857f28d9fd116eb17
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: ddbd2fdab7f6096f7cfbc1ec671096767be5bb42
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69893600"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70055467"
 ---
 # <a name="class-mipargumentdata"></a>Classe MIP:: ArgumentData 
   

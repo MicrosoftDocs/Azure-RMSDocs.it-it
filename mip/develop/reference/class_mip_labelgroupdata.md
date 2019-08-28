@@ -1,17 +1,17 @@
 ---
 title: 'Classe MIP:: LabelGroupData'
 description: 'Documenta la classe MIP:: labelgroupdata di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 408aa2a1be4ddb593499d487521bff4d9cc54a39
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: f5d54ef2a274b0167d407c19cd5fbb0ca97349fb
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69893379"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70055935"
 ---
 # <a name="class-miplabelgroupdata"></a>Classe MIP:: LabelGroupData 
   

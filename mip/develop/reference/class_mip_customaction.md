@@ -1,17 +1,17 @@
 ---
 title: Classe mip::CustomAction
 description: 'Documenta la classe MIP:: CustomAction di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: e71adc9c791f71b73c9386955d6b9606f2554f83
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 7e78d11cc85af5550a4d6ab235b3754d72b2c012
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69884379"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70055168"
 ---
 # <a name="class-mipcustomaction"></a>Classe mip::CustomAction 
 [CustomAction](class_mip_customaction.md) è una classe di azione generica che acquisisce tutte le sottoproprietà dell'azione sotto forma di contenitore delle proprietà. Il chiamante ha la responsabilità di comprendere il significato dell'azione.

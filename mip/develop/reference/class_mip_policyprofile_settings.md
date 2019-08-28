@@ -1,17 +1,17 @@
 ---
 title: Classe mip::PolicyProfile::Settings
 description: Documenta la classe MIP::p olicyprofile dell'SDK Microsoft Information Protection (MIP).
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: b4992f5af27cb6e3a2ca1b906e7983ec037ab186
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 2edec96a34b6885aa6c38477d36e401ebc49242a
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69883701"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70055667"
 ---
 # <a name="class-mippolicyprofilesettings"></a>Classe mip::PolicyProfile::Settings 
 Oggetto [Settings](class_mip_policyprofile_settings.md) usato da [PolicyProfile](class_mip_policyprofile.md) durante la creazione e per tutta la sua durata.

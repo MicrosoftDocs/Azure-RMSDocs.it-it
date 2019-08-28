@@ -1,17 +1,17 @@
 ---
 title: Classe mip::Stream
 description: 'Documenta la classe MIP:: Stream di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: a5473adfa45a4784eaf20553acfc517dcf39f7e1
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: c799708931103c595ce1ad66a41accb9f0dcfc85
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69883024"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70056831"
 ---
 # <a name="class-mipstream"></a>Classe mip::Stream 
 Classe che definisce l'interfaccia tra Microsoft Information Protection SDK e il contenuto basato su flusso.

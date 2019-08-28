@@ -4,7 +4,7 @@ description: Istruzioni per l'installazione di PowerShell per il servizio di pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/05/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5b97a4b474647a52948e9c41535e0fabb871c3c3
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 89820a815e664589051a91f273cb63280e70713a
+ms.sourcegitcommit: 72ae1f635e51ef6c6deb1833a30ff11e5918a3e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788456"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70063738"
 ---
 # <a name="installing-the-aipservice-powershell-module"></a>Installazione del modulo PowerShell AIPService
 
@@ -25,7 +25,7 @@ ms.locfileid: "68788456"
 
 Usare le informazioni seguenti per installare il modulo di Windows PowerShell per il servizio di protezione da Azure Information Protection. Il nome di questo modulo è AIPService e sostituisce la versione precedente denominata AADRM.
 
-È possibile usare questo modulo di PowerShell per amministrare il servizio di protezione (Rights Management di Azure) dalla riga di comando usando qualsiasi computer dotato di connessione a Internet e che soddisfi i prerequisiti elencati nella sezione successiva. Windows PowerShell per Azure Information Protection supporta la creazione di script per l'automazione o potrebbe essere necessario per scenari di configurazione avanzati. Per altre informazioni sulle attività di amministrazione e sulle configurazioni supportate dal modulo, vedere [amministrazione della protezione da Azure Information Protection tramite PowerShell](administer-powershell.md).
+È possibile usare questo modulo di PowerShell per amministrare il servizio di protezione (Rights Management di Azure) dalla riga di comando usando qualsiasi computer Windows dotato di connessione a Internet e che soddisfi i prerequisiti elencati nella sezione successiva. Windows PowerShell per Azure Information Protection supporta la creazione di script per l'automazione o potrebbe essere necessario per scenari di configurazione avanzati. Per altre informazioni sulle attività di amministrazione e sulle configurazioni supportate dal modulo, vedere [amministrazione della protezione da Azure Information Protection tramite PowerShell](administer-powershell.md).
 
 ## <a name="prerequisites"></a>Prerequisiti
 Questa tabella elenca i prerequisiti per installare e usare il modulo di PowerShell AIPService per il servizio di protezione da Azure Information Protection.
@@ -83,7 +83,7 @@ Per visualizzare i cmdlet disponibili, digitare quanto segue:
 Get-Command -Module AIPService
 ```
 
-Usare il comando `Get-Help <cmdlet_name>` per visualizzare le informazioni della Guida per un cmdlet specifico e quindi impostare il parametro **-online** per visualizzare le informazioni della Guida più recenti dal sito della documentazione Microsoft. Ad esempio:
+Usare il comando `Get-Help <cmdlet_name>` per visualizzare le informazioni della Guida per un cmdlet specifico e quindi impostare il parametro **-online** per visualizzare le informazioni della Guida più recenti dal sito della documentazione Microsoft. Esempio:
 
 ```
 Get-Help Connect-AipService -online

@@ -1,17 +1,17 @@
 ---
 title: Classe mip::HttpRequest
 description: 'Documenta la classe MIP:: HttpRequest di Microsoft Information Protection (MIP) SDK.'
-author: BryanLa
+author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.author: bryanla
-ms.date: 07/16/2019
-ms.openlocfilehash: 28584ffa19c2ceb00f4ab3839f945adf737bdb3b
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.author: mbaldwin
+ms.date: 08/27/2019
+ms.openlocfilehash: 92cf2bc3840e3cb38210c42c1e1b2d43db1e8bd4
+ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69885567"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70054833"
 ---
 # <a name="class-miphttprequest"></a>Classe mip::HttpRequest 
 Interfaccia che descrive una singola richiesta HTTP.
