@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 03/01/2019
+ms.date: 06/13/2019
 ms.author: mbaldwin
-ms.openlocfilehash: db815d17303abb0fb98b6e5936fbcd1f975d74f0
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 906d8cb104c5c8639c4ffe52ecd1f4ff1ff0a8d0
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60184413"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69882977"
 ---
 # <a name="microsoft-information-protection-mip-sdk-setup-and-configuration"></a>Installazione e configurazione di Microsoft Information Protection (MIP) SDK 
 
@@ -35,13 +35,13 @@ Assicurarsi di consultare gli argomenti seguenti prima di iniziare:
 
 Molti degli esempi dell'SDK richiedono l'accesso a un abbonamento a Office 365. Se non è già stato fatto, assicurarsi di iscriversi per uno dei tipi di abbonamento seguenti:
 
-| Name | Iscrizione |
-|------|---------|
-| Office 365 Enterprise E3 - Versione di valutazione (versione di valutazione gratuita di 30 giorni) | https://go.microsoft.com/fwlink/p/?LinkID=403802 |
-| Office 365 Enterprise E3 o E5 | https://products.office.com/business/office-365-enterprise-e3-business-software |
-| Enterprise Mobility and Security E3 o E5 | https://www.microsoft.com/cloud-platform/enterprise-mobility-security |
-| Azure Information Protection Premium P1 o P2 | https://azure.microsoft.com/pricing/details/information-protection/ |
-| Microsoft 365 E3, E5 o F1 | https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans | 
+| Name                                               | Iscrizione                                                                         |
+| -------------------------------------------------- | ------------------------------------------------------------------------------- |
+| Office 365 Enterprise E3 - Versione di valutazione (versione di valutazione gratuita di 30 giorni) | https://go.microsoft.com/fwlink/p/?LinkID=403802                                |
+| Office 365 Enterprise E3 o E5                     | https://products.office.com/business/office-365-enterprise-e3-business-software |
+| Enterprise Mobility and Security E3 o E5          | https://www.microsoft.com/cloud-platform/enterprise-mobility-security           |
+| Azure Information Protection Premium P1 o P2      | https://azure.microsoft.com/pricing/details/information-protection/             |
+| Microsoft 365 E3, E5 o F1                        | https://www.microsoft.com/microsoft-365/compare-all-microsoft-365-plans         |
 
 ## <a name="configure-sensitivity-labels"></a>Configurare le etichette di riservatezza
 
@@ -154,29 +154,30 @@ Per registrare un account di applicazione in Azure AD per l'uso con gli esempi e
   > È consigliabile eseguire le operazioni di test con un account con restrizioni. Assicurarsi che l'account disponga solo dei diritti per accedere agli endpoint SCC necessari. Le password passate come testo non crittografato tramite riga di comando possono essere raccolte dai sistemi di registrazione.
 
 1. Seguire la procedura indicata in [Registrare un'app con Azure AD, sezione Registrare una nuova applicazione](/azure/active-directory/develop/quickstart-v1-integrate-apps-with-azure-ad#register-a-new-application-using-the-azure-portal). A scopo di test, usare i valori seguenti per le proprietà specificate quando si eseguono i passaggi della guida: 
-    - **Tipo di applicazione** - selezionare "Nativa", in quanto le applicazioni usate nelle dimostrazioni dell'SDK sono applicazioni console installate in modo nativo. Le applicazioni native sono considerate client "pubblici" da OAuth2, perché non sono in grado di archiviare/usare le credenziali dell'applicazione in modo sicuro. Diversamente da un'applicazione basata su server "riservata", ad esempio un'applicazione Web, che è registrata con le proprie credenziali. 
-    - **URI di reindirizzamento** - Dato che l'SDK usa applicazioni client console semplici, usare un URI nel formato `<app-name>://authorize`.
+    - **Tipi di account supportati**: selezionare "Account solo in questa directory organizzativa".
+    - **URI di reindirizzamento**: impostare il tipo di URI di reindirizzamento su "Client pubblico (per dispositivi mobili e desktop)". Dato che l'SDK usa applicazioni client console semplici, usare un URI nel formato `<app-name>://authorize`.
 
-2. Al termine, si tornerà alla pagina **App registrata** per la registrazione della nuova applicazione. Copiare e salvare il GUID nel campo **ID applicazione**, perché sarà necessario per le guide introduttive. 
+2. Al termine, si tornerà alla pagina **App registrata** per la registrazione della nuova applicazione. Copiare e salvare il GUID nel campo **ID applicazione (client)** , perché sarà necessario per le guide introduttive. 
 
-3. Fare quindi clic su **Impostazioni** per aggiungere le API e le autorizzazioni a cui il client dovrà accedere. Nella pagina **Impostazioni** fare clic su **Autorizzazioni necessarie**.
+3. Fare quindi clic su **Autorizzazioni API** per aggiungere le API e le autorizzazioni a cui il client dovrà accedere. Fare clic su **Aggiungi un'autorizzazione** per aprire il pannello "Richiedi le autorizzazioni dell'API".
 
 4. A questo punto si aggiungeranno le API e le autorizzazioni MIP che verranno richieste dall'applicazione in fase di esecuzione:
-   - Nella pagina **Autorizzazioni necessarie** fare clic su **Aggiungi**. 
-   - Nella pagina **Aggiungi accesso all'API** fare clic su **Selezionare un'API**.
-   - Nella pagina **Selezionare un'API** fare clic sull'API "**Microsoft Rights Management Services**" e quindi su **Seleziona**.
-   - Nella pagina **Abilita accesso** per le autorizzazioni disponibili dell'API fare clic su "**Create and access protected content for users**" (Creazione e accesso a contenuto protetto per gli utenti), quindi su **Seleziona** e su **Fine**.
+   - Nella pagina **Selezionare un'API** fare clic su **Azure Rights Management Services**.
+   - Nella pagina dell'API **Azure Rights Management Services** fare clic su **Autorizzazioni delegate**.   
+   - Nella sezione **Selezionare le autorizzazioni** selezionare l'autorizzazione **user_impersonation**. Ciò consente all'applicazione di creare e accedere al contenuto protetto per conto di un utente.
+   - Fare clic su **Aggiungi autorizzazioni** per salvare.
 
 5. Ripetere il passaggio 4, ma questa volta quando si raggiunge la pagina **Selezionare un'API** sarà necessario cercare l'API.
-   - Nella pagina **Selezionare un'API**, nella casella di ricerca digitare "**Microsoft Information Protection Sync Service**", quindi fare clic sull'API e fare clic su **Seleziona**.
-   - Nella pagina **Abilita accesso** per le autorizzazioni disponibili dell'API fare clic su "**Read all unified policies a user has access to**" (Lettura di tutti i criteri unificati a cui ha accesso un utente), fare clic su **Seleziona** e quindi fare clic su **Fine**
+   - Nella pagina **Selezionare un'API** fare clic su **API usate dall'organizzazione**, quindi nella casella di ricerca digitare "**Microsoft Information Protection Sync Service**" e selezionarlo.
+   - Nella pagina dell'API **Microsoft Information Protection Sync Service** fare clic su **Autorizzazioni delegate**.
+   - Espandere il nodo **UnifiedPolicy** e selezionare **UnifiedPolicy.User.Read** 
+   - Fare clic su **Aggiungi autorizzazioni** per salvare.
 
-6. Quando si torna alla pagina **Autorizzazioni necessarie** fare clic su **Concedi autorizzazioni** e quindi su **Sì**. Questo passaggio concede il pre-consenso all'applicazione che usa questa registrazione per accedere alle API con le autorizzazioni specificate. Se è stato effettuato l'accesso come amministratore globale, il consenso viene registrato per tutti gli utenti nel tenant che eseguono l'applicazione. In caso contrario, si applica solo al proprio account utente. 
+6. Quando si torna alla pagina **Autorizzazioni API** fare clic su **Concedi consenso amministratore per (nome del tenant)** , quindi su **Sì**. Questo passaggio concede il pre-consenso all'applicazione che usa questa registrazione per accedere alle API con le autorizzazioni specificate. Se è stato effettuato l'accesso come amministratore globale, il consenso viene registrato per tutti gli utenti nel tenant che eseguono l'applicazione. In caso contrario, si applica solo al proprio account utente. 
 
-Al termine, la registrazione dell'applicazione e le autorizzazioni per le API dovrebbero essere simili all'esempio seguente:
+Al termine, la registrazione dell'applicazione e le autorizzazioni per le API dovrebbero essere simili agli esempi seguenti:
 
-   [![Registrazione di un'app in Azure AD](media/setup-mip-client/aad-app-registration.png)](media/setup-mip-client/aad-app-registration.png#lightbox)
-
+   [![Registrazione dell'app Azure AD](media/setup-mip-client/aad-app-registration-overview.png)](media/setup-mip-client/aad-app-registration-overview.png#lightbox) [![Registrazione dell'app Azure AD](media/setup-mip-client/aad-app-api-permissions.png)](media/setup-mip-client/aad-app-api-permissions.png#lightbox)
 
 Per altre informazioni sull'aggiunta di API e autorizzazioni a una registrazione, vedere [Configurare un'applicazione client per accedere alle API Web](/azure/active-directory/develop/quickstart-v1-update-azure-ad-app#configure-a-client-application-to-access-web-apis). In questo articolo sono disponibili informazioni su come aggiungere le API e le autorizzazioni necessarie per un'applicazione client.  
 

@@ -6,14 +6,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/09/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 395c46ce1979b2ef670aa27e9329c5219ca63e13
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: fc2b07e2ffb8dfe9dec0e3766ac0da39719f7503
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60173243"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885948"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Guida introduttiva: Impostare e ottenere un'etichetta di riservatezza (C#)
 
@@ -49,12 +49,11 @@ Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un fi
      //Set Labeling Options
      LabelingOptions labelingOptions = new LabelingOptions()
      {
-          ActionSource = ActionSource.Manual,
           AssignmentMethod = AssignmentMethod.Standard
      };
 
      // Set a label on input file
-     handler.SetLabel(labelId, labelingOptions);
+     handler.SetLabel(engine.GetLabelById(labelId), labelingOptions, new ProtectionSettings());
 
      // Commit changes, save as outputFilePath
      var result = Task.Run(async () => await handler.CommitAsync(outputFilePath)).Result;
@@ -65,12 +64,22 @@ Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un fi
      // Get the label from output file
      var contentLabel = handlerModified.Label;
      Console.WriteLine(string.Format("Getting the label committed to file: {0}", outputFilePath));
-     Console.WriteLine(string.Format("File Label: {0} \r\nIsProtected: {1}", contentLabel.Label, contentLabel.IsProtectionAppliedFromLabel.ToString()));
+     Console.WriteLine(string.Format("File Label: {0} \r\nIsProtected: {1}", contentLabel.Label.Name, contentLabel.IsProtectionAppliedFromLabel.ToString()));
      Console.WriteLine("Press a key to continue.");
      Console.ReadKey();
    ```
 
-3. Sostituire i valori segnaposto nel codice sorgente appena incollato, usando i valori seguenti:
+3. Verso la fine di `Main()` trovare il blocco di arresto dell'applicazione creato nel primo avvio rapido e rimuovere il commento dalla riga del gestore:
+
+   ```csharp
+   // Application Shutdown
+   handler = null;
+   fileEngine = null;
+   fileProfile = null;
+   mipContext = null;
+   ```
+
+4. Sostituire i valori segnaposto nel codice sorgente, usando i valori seguenti:
 
    | Segnaposto | Valore |
    |:----------- |:----- |
@@ -84,7 +93,7 @@ Compilare e testare l'applicazione client.
 
 1. Usare CTRL+MAIUSC+B (**Compila soluzione**) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 (**Avvia debug**) per eseguire l'applicazione.
 
-2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione *potrebbe* richiedere l'autenticazione tramite ADAL ogni volta che il SDK chiama il metodo `AcquireToken()`. Se esistono già credenziali memorizzate nella cache non verrà richiesto di accedere e visualizzare l'elenco delle etichette e quindi le informazioni sull'etichetta applicata e sul file modificato.
+2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione *potrebbe* richiedere l'autenticazione tramite ADAL ogni volta che il SDK chiama il metodo `AcquireToken()`. Se esistono già credenziali memorizzate nella cache, non verrà richiesto di accedere e visualizzare l'elenco delle etichette e quindi le informazioni sull'etichetta applicata e sul file modificato.
 
   ```console   
   Personal : 73c47c6a-eb00-4a6a-8e19-efaada66dee6

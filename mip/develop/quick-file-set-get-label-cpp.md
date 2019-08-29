@@ -6,14 +6,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/18/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 2ac8c6bbfba6f460ac016a103f32f20856bff2aa
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: d671aeed3e05882ba8d41c6d7069cd4e548ecec2
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60184899"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69884732"
 ---
 # <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Guida introduttiva: Impostare e ottenere un'etichetta di riservatezza (C++)
 
@@ -132,8 +132,8 @@ Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un fi
    {
         string labelId = "<label-id>";
         cout << "\nApplying Label ID " << labelId << " to " << filePathIn << endl;
-        mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED, mip::ActionSource::MANUAL);
-        handler->SetLabel(labelId, labelingOptions);
+        mip::LabelingOptions labelingOptions(mip::AssignmentMethod::PRIVILEGED);
+        handler->SetLabel(engine->GetLabelById(labelId), labelingOptions, new ProtectionSettings());
    }
    catch (const std::exception& e)
    {
@@ -205,7 +205,18 @@ Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un fi
    system("pause");
    ```
 
-4. Sostituire come segue i valori segnaposto nel codice sorgente appena incollato, usando costanti stringa:
+4. Verso la fine di `main()` trovare il blocco di arresto dell'applicazione creato nel primo avvio rapido e rimuovere il commento dalla riga del gestore:
+
+   ```cpp
+   // Application shutdown. Null out profile and engine, call ReleaseAllResources();
+   // Application may crash at shutdown if resources aren't properly released.
+   profile = nullptr;
+   engine = nullptr;
+   handler = nullptr;
+   mipContext = nullptr;
+   ```
+
+5. Sostituire come segue i valori segnaposto nel codice sorgente, usando costanti stringa:
 
    | Segnaposto | Valore |
    |:----------- |:----- |
@@ -267,7 +278,7 @@ Compilare e testare l'applicazione client.
 È possibile verificare l'applicazione dell'etichetta aprendo il file di output ed esaminando visivamente le impostazioni di protezione delle informazioni del documento.
 
 > [!NOTE]
-> Se si sta applicando l'etichetta a un documento di Office ma non è stato effettuato l'accesso tramite un account del tenant Azure Active Directory (AD) in cui è stato ottenuto il token di accesso (e vengono configurate le etichette di riservatezza), è possibile che venga richiesto di effettuare l'accesso per poter aprire il documento con etichetta. 
+> Se si sta applicando l'etichetta a un documento di Office, ma non è stato effettuato l'accesso tramite un account del tenant Azure Active Directory (AD) in cui è stato ottenuto il token di accesso (e vengono configurate le etichette di riservatezza), è possibile che venga richiesto di effettuare l'accesso per poter aprire il documento con etichetta. 
 
 
 

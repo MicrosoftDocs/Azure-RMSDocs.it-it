@@ -5,14 +5,14 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
 ms.collection: M365-security-compliance
-ms.date: 01/04/2019
+ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 0b1b110fe3b2e96c258c7b94a3d356b9404d6e7e
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 3a26352f7b8e23e2de55eb21846e20feca7096ff
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60175610"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69885980"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Guida introduttiva: Elencare le etichette di riservatezza (C#)
 
@@ -33,7 +33,7 @@ Aggiungere la logica per elencare le etichette di riservatezza dell'organizzazio
 
 2. Usare **Esplora soluzioni** per aprire il file con estensione cs nel progetto che contiene l'implementazione del metodo `Main()`. Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto. 
 
-3. Verso la fine del corpo `Main()`, dopo la parentesi graffa di chiusura `}` della funzione `Main()` (nel punto in cui è stata interrotta la procedura di Avvio rapido precedente), inserire il codice seguente:
+3. Verso la fine del corpo `Main()`, sopra la sezione dell'arresto dell'applicazione della funzione `Main()` (nel punto in cui è stata interrotta la procedura di Avvio rapido precedente), inserire il codice seguente:
 
   ```csharp
   // List sensitivity labels from fileEngine and display name and id  
@@ -49,15 +49,15 @@ Aggiungere la logica per elencare le etichette di riservatezza dell'organizzazio
           }
       }
   }
-  ``` 
+  ```
 
 ## <a name="build-and-test-the-application"></a>Compilare e testare l'applicazione
 
-Infine, compilare e testare l'applicazione client. 
+Infine, compilare e testare l'applicazione client.
 
 1. Usare CTRL+MAIUSC+B (**Compila soluzione**) per compilare l'applicazione client. Se non si registrano errori di compilazione, premere F5 (**Avvia debug**) per eseguire l'applicazione.
 
-2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione *potrebbe* richiedere l'autenticazione tramite ADAL ogni volta che il SDK chiama il metodo `AcquireToken()`. Se esistono già credenziali memorizzate nella cache non verrà richiesto di eseguire l'accesso e visualizzare l'elenco delle etichette. 
+2. Se il progetto viene compilato ed eseguito correttamente, l'applicazione *potrebbe* richiedere l'autenticazione tramite ADAL ogni volta che il SDK chiama il metodo `AcquireToken()`. Se esistono già credenziali memorizzate, nella cache non verrà richiesto di eseguire l'accesso e visualizzare l'elenco delle etichette. 
 
      [![Accesso per l'acquisizione del token in Visual Studio](media/quick-file-list-labels-cpp/acquire-token-sign-in.png)](media/quick-file-list-labels-cpp/acquire-token-sign-in.png#lightbox)
 
