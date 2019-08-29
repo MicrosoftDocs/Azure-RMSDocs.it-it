@@ -4,7 +4,7 @@ description: Informazioni sulle operazioni del ciclo di vita necessarie per la g
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b1b3dc6b5a557339a33abfb5cf8b54d995b1da21
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: f8eb311e42f17398a0564d6caf4b02618609d9d5
+ms.sourcegitcommit: dc7603461ce9300635bcb389c18e2e708a8229df
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793880"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70121792"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Gestito dal cliente: operazioni del ciclo di vita della chiave del tenant
 
@@ -73,7 +73,7 @@ In uno scenario BYOK non è possibile esportare la chiave del tenant da Azure Ke
 ## <a name="respond-to-a-breach"></a>Rispondere a una violazione di sicurezza
 Indipendentemente dall'affidabilità, nessun sistema di sicurezza può considerarsi completo se non prevede un processo di risposta alle violazioni di sicurezza. La chiave del tenant può essere violata o rubata e anche se è protetta in modo efficiente, potrebbero essere presenti vulnerabilità nella tecnologia attuale della chiave o nella lunghezza e negli algoritmi correlati alle chiavi attuali.
 
-Microsoft ha predisposto un team apposito per rispondere agli eventi imprevisti correlati alla sicurezza che possono verificarsi nei suoi prodotti e servizi. Non appena riceve un report plausibile su un evento imprevisto, il team si attiva per esaminarne l'ambito, la causa radice e le soluzioni. Se l'evento imprevisto influisce sulle risorse dell'utente, Microsoft invierà un messaggio di posta elettronica di notifica agli amministratori del tenant di Azure Information Protection all'indirizzo indicato al momento della sottoscrizione.
+Microsoft ha predisposto un team apposito per rispondere agli eventi imprevisti correlati alla sicurezza che possono verificarsi nei suoi prodotti e servizi. Non appena riceve un report plausibile su un evento imprevisto, il team si attiva per esaminarne l'ambito, la causa radice e le soluzioni. Se l'evento imprevisto influiscono sulle risorse, Microsoft invia una notifica tramite posta elettronica agli amministratori globali del tenant.
 
 In caso di violazione di sicurezza, l'azione più efficace che l'utente o Microsoft possa intraprendere dipende dall'ambito della violazione stessa. Microsoft collaborerà con l'utente durante l'intero processo. Nella tabella seguente vengono descritte alcune situazioni tipiche e la risposta più probabile, sebbene la risposta esatta dipenda da tutte le informazioni raccolte durante l'analisi.
 
