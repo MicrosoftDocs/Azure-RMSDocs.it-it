@@ -4,19 +4,19 @@ description: Istruzioni e informazioni per gli amministratori in una rete aziend
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/16/2019
+ms.date: 08/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 95c855701b1fc8de2e3f9f458b2cd760a3abdd4b
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: cb9f7319227ea95afce1251c2ccae979dd5c8468
+ms.sourcegitcommit: bde9c43f2c9809fc5b8d5b43dccb3f89103c3ac6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793220"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70159208"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guida dell'amministratore client per l'assegnazione di etichette unificata Azure Information Protection
 
@@ -93,11 +93,16 @@ Dopo aver installato il client, usare l'opzione **Guida e commenti** per aprire 
 
 #### <a name="help-and-feedback-section"></a>Sezione **Guida e commenti**
 
-Per impostazione predefinita, il **collegamento altre informazioni** consente di passare al sito Web [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) . È possibile configurare il proprio collegamento URL che passa a una pagina della Guida personalizzata come una delle impostazioni dei criteri nel portale di gestione delle etichette: Centro sicurezza e conformità di Office 365, Centro sicurezza di Microsoft 365 o Centro conformità di Microsoft 365.
+Per impostazione predefinita, il **collegamento altre informazioni** consente di passare al sito Web [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) . È possibile configurare il proprio collegamento URL che passa a una pagina della Guida personalizzata come una delle impostazioni dei criteri nel centro di gestione delle etichette: Centro sicurezza e conformità di Office 365, Centro sicurezza di Microsoft 365 o Centro conformità di Microsoft 365.
+
+Il collegamento **segnala un problema** viene visualizzato solo se si specifica un' [impostazione avanzata](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users). Quando si configura questa impostazione, si specifica un collegamento HTTP, ad esempio l'indirizzo e-mail dell'help desk. 
 
 Il **log di esportazione** raccoglie e collega automaticamente i file di log per il client Azure Information Protection Unified Labeling se è stato richiesto di inviarli a supporto tecnico Microsoft. Questa opzione può essere usata anche dagli utenti finali per inviare i file di log all'help desk.
 
 Con le **Impostazioni** di reimpostazione l'utente viene disconnesso, Elimina le etichette di riservatezza attualmente scaricate e i criteri delle etichette e reimposta le impostazioni utente per il servizio Rights Management di Azure.
+
+> [!NOTE]
+> In caso di problemi tecnici con il client, vedere [Opzioni di supporto e risorse della community](../information-support.md#support-options-and-community-resources).
 
 ##### <a name="more-information-about-the-reset-settings-option"></a>Altre informazioni sull'opzione Ripristina le impostazioni
 
@@ -147,7 +152,7 @@ Tuttavia, la Azure Information Protection client di etichetta unificata attualme
 
 ## <a name="post-installation-tasks"></a>Attività post-installazione
 
-Dopo aver installato il Azure Information Protection client di assegnazione unificata delle etichette, assicurarsi di fornire agli utenti le istruzioni per etichettare i documenti e i messaggi di posta elettronica e le linee guida per le etichette da scegliere per scenari specifici. Ad esempio:
+Dopo aver installato il Azure Information Protection client di assegnazione unificata delle etichette, assicurarsi di fornire agli utenti le istruzioni per etichettare i documenti e i messaggi di posta elettronica e le linee guida per le etichette da scegliere per scenari specifici. Esempio:
 
 - Istruzioni per l'utente online: [Guida dell'utente per l'assegnazione di etichette unificata Azure Information Protection](clientv2-user-guide.md)
 

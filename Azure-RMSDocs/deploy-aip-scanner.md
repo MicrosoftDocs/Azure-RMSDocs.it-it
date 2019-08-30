@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire la versione corr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/27/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 15beb2bb7b9e041fea8b9a7a3d56837e03b72182
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.openlocfilehash: 9def81c3f0914ecf1f96e86e68a0b20b3bcbcf13
+ms.sourcegitcommit: 16b1ae6d29c4bea3fc032c21e522b5dd14b59df5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054407"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70150236"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -122,6 +122,26 @@ In genere, si usa lo stesso account utente per installare e configurare lo scann
 - Se non si specifica il proprio nome di profilo per lo scanner, il database di configurazione viene denominato **AIPScanner_\<nome_computer>** . 
 
 - Se si specifica il proprio nome di profilo, il database di configurazione viene denominato **AIPScanner_\<nome_profilo>** .
+
+Per creare un utente e concedere diritti db_owner per questo database, rivolgersi al sysadmin per eseguire il seguente script SQL due volte. La prima volta, per l'account del servizio che esegue lo scanner e per la seconda volta è necessario installare e gestire lo scanner. Prima di eseguire lo script:
+1. Sostituire *dominio\utente* con il nome di dominio e il nome dell'account utente dell'account del servizio o dell'account utente.
+2. Sostituire *dbname* con il nome del database di configurazione dello scanner.
+
+Script SQL:
+
+    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+    USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
+
+Inoltre:
+
+- È necessario essere un amministratore locale nel server che eseguirà lo scanner
+- All'account del servizio che eseguirà lo scanner devono essere concesse le autorizzazioni controllo completo per le chiavi del registro di sistema seguenti:
+    
+    - HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\Server
+    - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSIPC\Server
+
+Se, dopo aver configurato queste autorizzazioni, viene visualizzato un errore durante l'installazione dello scanner, l'errore può essere ignorato ed è possibile avviare manualmente il servizio scanner.
+
 
 #### <a name="restriction-the-service-account-for-the-scanner-cannot-be-granted-the-log-on-locally-right"></a>Restrizione: all'account del servizio scanner non può essere concesso il diritto di **accesso locale**
 

@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per gli amministratori in una rete aziend
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/20/2019
+ms.date: 08/29/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4162e3df46377a4de859d1bb2dce1363d7146d08
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 0ec64a51d26543d0777bdab8180579793251b8fd
+ms.sourcegitcommit: bde9c43f2c9809fc5b8d5b43dccb3f89103c3ac6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793606"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70159215"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
@@ -117,6 +117,9 @@ L'opzione **Esporta log** consente di raccogliere e allegare automaticamente i f
 
 L'opzione **Ripristina le impostazioni** consente di disconnettere l'utente, eliminare i criteri di Azure Information Protection scaricati e ripristinare le impostazioni utente per il servizio Azure Rights Management.
 
+> [!NOTE]
+> In caso di problemi tecnici con il client, vedere [Opzioni di supporto e risorse della community](../information-support.md#support-options-and-community-resources).
+
 ##### <a name="more-information-about-the-reset-settings-option"></a>Altre informazioni sull'opzione Ripristina le impostazioni
 
 - Non è necessario essere un amministratore locale per usare questa opzione e questa azione non viene registrata nel Visualizzatore eventi. 
@@ -169,7 +172,7 @@ Tuttavia, i nomi e le descrizioni delle etichette specificati non vengono automa
 
 ## <a name="post-installation-tasks"></a>Attività post-installazione
 
-Dopo aver installato il client Azure Information Protection, accertarsi di fornire agli utenti istruzioni per etichettare i documenti e i messaggi di posta elettronica, oltre a linee guida per le etichette da scegliere per scenari specifici. Ad esempio:
+Dopo aver installato il client Azure Information Protection, accertarsi di fornire agli utenti istruzioni per etichettare i documenti e i messaggi di posta elettronica, oltre a linee guida per le etichette da scegliere per scenari specifici. Esempio:
 
 - Istruzioni per l'utente online: [Guida per l'utente di Azure Information Protection](client-user-guide.md)
 
