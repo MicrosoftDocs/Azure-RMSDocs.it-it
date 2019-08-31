@@ -13,16 +13,16 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 195714bb44ea16686005c7f079c6d871c86c8528
-ms.sourcegitcommit: b02dc1b575213ea85ca984a0da457dd99f27b762
+ms.openlocfilehash: 903212b1bebf1c54155bb81e57287d341464700c
+ms.sourcegitcommit: d3ac12c51b41bd1ec4ce4009303d124efc95353b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68994430"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70180693"
 ---
 # <a name="azure-information-protection-unified-labeling-client-for-windows"></a>Azure Information Protection client di etichetta unificata per Windows
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
 >
 > *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -33,7 +33,7 @@ Azure Information Protection Unified Labeling client per Windows è un client sc
 
 Usare le risorse seguenti per il client Unified Labeling:
 
-- [Azure Information Protection client di etichetta unificata: cronologia delle versioni](unifiedlabelingclient-version-release-history.md)
+- [Azure Information Protection client di etichetta unificata: Cronologia delle versioni](unifiedlabelingclient-version-release-history.md)
 
 - [Guida dell'amministratore per il client di Azure Information Protection Unified Labeling](clientv2-admin-guide.md)
 
