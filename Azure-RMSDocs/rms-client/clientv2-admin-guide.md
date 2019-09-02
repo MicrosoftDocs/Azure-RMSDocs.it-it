@@ -4,19 +4,19 @@ description: Istruzioni e informazioni per gli amministratori in una rete aziend
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/29/2019
+ms.date: 09/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e8f2029122ba489aff6a0cf50e2d961ea28ed50e
-ms.sourcegitcommit: d3ac12c51b41bd1ec4ce4009303d124efc95353b
+ms.openlocfilehash: 142b3b527b0936baf0bbd8de0664c601151766d0
+ms.sourcegitcommit: 4c4bf02880c26f5c163e75499348dc10a84357c3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180665"
+ms.lasthandoff: 09/01/2019
+ms.locfileid: "70209269"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guida dell'amministratore client per l'assegnazione di etichette unificata Azure Information Protection
 
@@ -148,11 +148,11 @@ Il client di assegnazione unificata Azure Information Protection supporta le ste
 
 Per questi linguaggi, le opzioni di menu, le finestre di dialogo e i messaggi della Azure Information Protection client Unified Labeling vengono visualizzati nella lingua dell'utente. È disponibile un singolo programma di installazione che rileva la lingua, pertanto non è necessaria alcuna configurazione aggiuntiva per installare il client di etichetta unificato Azure Information Protection per le diverse lingue. 
 
-Tuttavia, la Azure Information Protection client di etichetta unificata attualmente non supporta lingue diverse per le etichette. Inoltre, i contrassegni visivi non vengono convertiti e non supportano più di una lingua.
+Tuttavia, i nomi di etichetta e le descrizioni specificati non vengono convertiti automaticamente quando si configurano le etichette nel centro di etichette. Per consentire agli utenti di visualizzare le etichette nella lingua preferita, fornire le proprie traduzioni e configurarle per le etichette usando usando Office 365 Sicurezza e conformità PowerShell e il parametro *LocaleSettings* per [set-label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps). I contrassegni visivi non vengono convertiti e non supportano più di una lingua.
 
 ## <a name="post-installation-tasks"></a>Attività post-installazione
 
-Dopo aver installato il Azure Information Protection client di assegnazione unificata delle etichette, assicurarsi di fornire agli utenti le istruzioni per etichettare i documenti e i messaggi di posta elettronica e le linee guida per le etichette da scegliere per scenari specifici. Ad esempio:
+Dopo aver installato il Azure Information Protection client di assegnazione unificata delle etichette, assicurarsi di fornire agli utenti le istruzioni per etichettare i documenti e i messaggi di posta elettronica e le linee guida per le etichette da scegliere per scenari specifici. Esempio:
 
 - Istruzioni per l'utente online: [Guida dell'utente per l'assegnazione di etichette unificata Azure Information Protection](clientv2-user-guide.md)
 
