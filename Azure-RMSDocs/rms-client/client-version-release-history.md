@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v1client
-ms.reviewer: esaggese
+ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1bf26b600c5ea1ad4d1065b503ea25685fad0a0e
-ms.sourcegitcommit: bef2862237ede61c497a54e6fe0179ae4fe5a63e
+ms.openlocfilehash: fd11916ceb130522bc031024aeeb24fdd20e1f0a
+ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68978720"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70214065"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection: Cronologia delle versioni e criteri per il supporto
 
@@ -45,7 +45,7 @@ Le versioni di anteprima non devono essere distribuite agli utenti finali nelle 
 ##### <a name="general-availability-versions-that-are-no-longer-supported"></a>Versioni di disponibilità generale non più supportate:
 
 |Versione client|Data di rilascio|
-|--------------|--------------------------|
+|--------------|-------------|
 |1.37.19.0|17/09/2018|
 |1.29.5.0|26/06/2018|
 |1.27.48.0|30/05/2018|
@@ -57,13 +57,15 @@ Le versioni di anteprima non devono essere distribuite agli utenti finali nelle 
 |1.2.4.0.0|10/27/2016|
 |1.1.23.0|10/01/2016|
 
+Il formato della data usato in questa pagina è *mese/giorno/anno*.
+
 A partire da 6/2/2019, il servizio di assegnazione di etichette per Azure Information Protection richiede connessioni che usano TLS 1,2.
 
 Tutte le versioni client di 1.4.21.0 rilasciate 03/15/2017 supportano TLS 1,2. Le versioni client **1.3.155.2**, **1.2.4.0**e **1.1.23.0** non usano TLS 1,2 e pertanto non possono più scaricare i criteri di Azure Information Protection.
 
 ### <a name="release-history"></a>Cronologia delle versioni
 
-Usare le informazioni seguenti per scoprire le novità o le modifiche per una versione supportata del client di Azure Information Protection per Windows. La versione più recente è elencata per prima. 
+Usare le informazioni seguenti per scoprire le novità o le modifiche per una versione supportata del client di Azure Information Protection per Windows. La versione più recente è elencata per prima.
 
 > [!NOTE]
 > Dato che le correzioni di minore rilevanza non sono elencate, se si verifica un problema con il client di Azure Information Protection, è consigliabile controllare se tale problema è stato risolto con la versione disponibile a livello generale più recente. Se il problema persiste, controllare la versione di anteprima corrente (se disponibile).

@@ -4,19 +4,19 @@ description: Istruzioni su come classificare e proteggere i documenti e i messag
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 09/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 78907b2819636a5f2c8e66feae2e44a0bd6c5c90
-ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
+ms.openlocfilehash: 99c4e92d61e2a0b652432de85b806568710f56fa
+ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68808144"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70214059"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Manuale dell'utente: Classifica e proteggi con il client di assegnazione unificata Azure Information Protection
 
@@ -72,7 +72,7 @@ Oltre a selezionare manualmente le etichette, è anche possibile applicarle nei 
 
 - Potrebbe non essere [installato](install-unifiedlabelingclient-app.md)il client di Azure Information Protection Unified labeling.
 
-- Se non viene visualizzato un pulsante di riservatezza sulla barra multifunzione, ma viene visualizzato un pulsante **Proteggi** con etichette, è necessario che sia installato il client di Azure Information Protection e non il Azure Information Protection client di etichettatura unificata. [Altre informazioni](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+- Se non viene visualizzato un pulsante di **riservatezza** sulla barra multifunzione, ma viene visualizzato un pulsante **Proteggi** con etichette, è necessario che sia installato il client di Azure Information Protection (versione classica) e non il Azure Information Protection client di etichetta unificata. [Altre informazioni](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
  
 ##### <a name="is-the-label-that-you-expect-to-see-not-displayed"></a>Un'etichetta che ci si aspetta di vedere non è visualizzata? 
 

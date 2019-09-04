@@ -4,7 +4,7 @@ description: Identificare i prerequisiti per distribuire Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/20/2019
+ms.date: 09/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1b5c3344acfa279bd9f778f60957f41e03d56793
-ms.sourcegitcommit: dd89001afcaf1ed4b7ab72a7066b07c0d984249d
+ms.openlocfilehash: 75c9eb425c0955b569b7e1578e3921dee4c81500
+ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69650888"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70214111"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisiti per Azure Information Protection
 
@@ -112,7 +112,7 @@ I client Azure Information Protection possono etichettare e proteggere documenti
 
 - Office Professional Plus 2010 con Service Pack 2
 
-Con le altre edizioni di Office non è possibile proteggere i documenti e i messaggi di posta elettronica usando un servizio Rights Management. Per queste edizioni Azure Information Protection è supportato solo per la classificazione. Di conseguenza, le etichette che applicano la protezione non vengono visualizzate dagli utenti sulla barra di Azure Information Protection o dal pulsante **Proteggi** sulla barra multifunzione di Office. 
+Con le altre edizioni di Office non è possibile proteggere i documenti e i messaggi di posta elettronica usando un servizio Rights Management. Per queste edizioni Azure Information Protection è supportato solo per la classificazione. Di conseguenza, le etichette che applicano la protezione non vengono visualizzate agli utenti sulla barra Azure Information Protection o dal pulsante **Proteggi** (client classico) o dal pulsante di **riservatezza** (client di etichetta unificata) sulla barra multifunzione di Office. 
 
 I client Azure Information Protection non supportano più versioni di Office nello stesso computer. Questi client non supportano anche il cambio di account utente in Office.
 

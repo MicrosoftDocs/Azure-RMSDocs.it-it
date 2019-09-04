@@ -4,20 +4,20 @@ description: Vedere le informazioni sulla versione del client per l'etichettatur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/06/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
-ms.reviewer: maayan
+ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b38a46f02812e93f936d5e62276d34c10bdbb19d
-ms.sourcegitcommit: d3ac12c51b41bd1ec4ce4009303d124efc95353b
+ms.openlocfilehash: 614435c39458462449f71955215e9e6adef06754
+ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70180613"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70214088"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -43,7 +43,7 @@ Le versioni di anteprima non devono essere distribuite agli utenti finali nelle 
 
 ### <a name="release-information"></a>Informazioni sulla versione
 
-Usare le informazioni seguenti per visualizzare le novità o le modifiche apportate a una versione supportata del client Azure Information Protection Unified Labeling per Windows. La versione più recente è elencata per prima. 
+Usare le informazioni seguenti per visualizzare le novità o le modifiche apportate a una versione supportata del client Azure Information Protection Unified Labeling per Windows. La versione più recente è elencata per prima. Il formato della data usato in questa pagina è *mese/giorno/anno*.
 
 > [!NOTE]
 > Le correzioni secondarie non sono elencate, quindi se si verifica un problema con il client di etichettatura unificata, è consigliabile verificare se è stato risolto con la versione GA più recente. Se il problema persiste, controllare la versione di anteprima corrente (se disponibile).
@@ -52,9 +52,21 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche apport
 
 Il client sta sostituendo il client di Azure Information Protection (classico). Per confrontare caratteristiche e funzionalità con il client classico, vedere [confrontare i client](use-client.md#compare-the-clients).
 
+## <a name="version-22210"></a>Versione 2.2.21.0
+
+**Data di rilascio**: 09/03/2019
+
+**Correzioni**
+
+- Quando si usa l'impostazione avanzata [OutlookDefaultLabel](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook) per impostare un'etichetta predefinita diversa per Outlook e l'etichetta specificata non include etichette secondarie per i criteri di etichetta, l'etichetta viene applicata correttamente.
+
+- Quando il client di Azure Information Protection viene usato in un'app di Office, un utente con un account Active Directory non configurato per Single Sign-On viene richiesto di eseguire l'autenticazione per Azure Information Protection. Una volta eseguita l'autenticazione, lo stato del client passa correttamente a online, che consente la funzionalità di etichettatura.
+
 ## <a name="version-22190"></a>Versione 2.2.19.0
 
 **Data di rilascio**: 08/06/2019
+
+Supportato tramite 03/03/2020
 
 **Correzioni**
 
@@ -66,7 +78,7 @@ Il client sta sostituendo il client di Azure Information Protection (classico). 
 
 **Data di rilascio**: 07/15/2019
 
-Supportato tramite 04/06/2020
+Supportato tramite 02/06/2020
 
 **Nuove funzionalità:**
 
@@ -107,7 +119,7 @@ Supportato tramite 04/06/2020
 
 **Correzioni**
 
-- Supporto per le corrispondenze di [contenuto](../reports-aip.md#content-matches-for-deeper-analysis) per Analytics e [set-AIPFileClassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) con il parametro *DiscoveryInfoTypes* .
+- Supporto per le [corrispondenze di contenuto](../reports-aip.md#content-matches-for-deeper-analysis) per Analytics e [set-AIPFileClassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) con il parametro *DiscoveryInfoTypes* .
 
 - Dopo aver modificato le impostazioni locali alternative in Windows, è comunque possibile applicare un'etichetta con protezione a un documento PDF.
 

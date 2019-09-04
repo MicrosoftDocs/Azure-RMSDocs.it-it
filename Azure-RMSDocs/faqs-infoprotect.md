@@ -4,7 +4,7 @@ description: Di seguito sono riportate alcune possibili domande sulle funzionali
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4a8df46df14a4c06196d204865f7a99ce5fa5821
-ms.sourcegitcommit: 332801617ce83ebb3f01edf34cbb69b810662be7
+ms.openlocfilehash: 0d17189d2c5cd896727de1de05233fbfcd9b9868
+ms.sourcegitcommit: dd60bdae3ed608306cd8f9dbe92aac6650d8fbb3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68808052"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215681"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Domande frequenti sulla classificazione e l'assegnazione di etichette in Azure Information Protection
 
@@ -29,7 +29,7 @@ Di seguito sono riportate alcune possibili domande sulle funzionalità di classi
 
 L'esercitazione [Modificare i criteri e creare una nuova etichetta](infoprotect-quick-start-tutorial.md) consente in pochi minuti di vedere queste funzionalità in pratica.
 
-Per sapere quando saranno disponibili altre funzionalità e nuove caratteristiche per la classificazione, seguire gli annunci nel [blog di Enterprise Mobility + Security](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection) e nel [sito Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all). Nella versione corrente sono presenti alcune limitazioni, incluse le seguenti:
+Per sapere quando saranno disponibili altre funzionalità e nuove caratteristiche per la classificazione, seguire gli annunci nel [blog di Enterprise Mobility + Security](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection) e nel [sito Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all). Esistono alcune limitazioni con le versioni correnti, incluse le seguenti:
 
 - Nessuna funzionalità di assegnazione di etichette nelle app Web di Office (Office per il Web).
 
@@ -39,8 +39,8 @@ Per sapere quando saranno disponibili altre funzionalità e nuove caratteristich
 > **Ora disponibile in anteprima**:
 > - Reporting centralizzato per la classificazione e l'aggiunta di etichette. Per altre informazioni, vedere [Reporting centralizzato per Azure Information Protection](reports-aip.md).
 >
->**Rilasciate di recente**:
-> - funzionalità di etichettatura inclusa nelle app di Office per dispositivi mobili (iOS e Android) e per i computer Mac. Per altre informazioni, vedere [Applicare etichette di riservatezza a documenti e messaggi di posta elettronica all'interno di Office](https://aka.ms/officemipdocs).
+>**Etichette di riservatezza per Office**:
+> - Per le informazioni più recenti sulle app di Office che supportano le etichette di riservatezza, vedere la sezione "dove è disponibile oggi la funzionalità?" dalla sezione [applicare le etichette di riservatezza ai documenti e alla posta elettronica in Office](https://aka.ms/officemipdocs).
 
 Per richiedere nuove funzionalità e votare per le richieste, visitare il [sito User Voice](https://msip.uservoice.com/) per Azure Information Protection.
 
@@ -48,7 +48,7 @@ Per richiedere nuove funzionalità e votare per le richieste, visitare il [sito 
 
 Attualmente sono disponibili due client per Windows: 
 
-- Il **Azure Information Protection client di etichetta unificata** che Scarica le etichette e le impostazioni dei criteri da uno dei seguenti centri di amministrazione: Office 365 Centro sicurezza e conformità, Centro sicurezza Microsoft 365, Microsoft 365 conformità al centro. Questo client è ora disponibile a livello generale e offre una versione di anteprima per testare la funzionalità aggiuntiva per una versione futura.
+- Il **Azure Information Protection client di etichetta unificata** che Scarica le etichette e le impostazioni dei criteri da uno dei seguenti centri di amministrazione: Office 365 Centro sicurezza e conformità, Centro sicurezza Microsoft 365, Microsoft 365 conformità al centro. Questo client è ora disponibile a livello generale e potrebbe avere una versione di anteprima per testare funzionalità aggiuntive per una versione futura.
 
 - Il **client Azure Information Protection (classico)** che Scarica le etichette e le impostazioni dei criteri dall'portale di Azure. Questo client si basa sulle versioni di disponibilità generale precedenti del client.
 
@@ -82,7 +82,7 @@ Per esempi dell'uso di questi metadati con le regole del flusso di posta di Exch
 
 ## <a name="can-i-create-a-document-template-that-automatically-includes-the-classification"></a>È possibile creare un modello di documento che include automaticamente la classificazione?
 
-Sì. È possibile configurare un'etichetta per [applicare un'intestazione o un piè di pagina che include il nome dell'etichetta](configure-policy-markings.md). Se ciò non soddisfa requisiti specifici, è possibile creare un modello di documento con la formattazione desiderata e aggiungere la classificazione come codice di campo. 
+Sì. È possibile configurare un'etichetta per [applicare un'intestazione o un piè di pagina che include il nome dell'etichetta](configure-policy-markings.md). Tuttavia, se questo non soddisfa i requisiti, solo per il client di Azure Information Protection (classico), è possibile creare un modello di documento con la formattazione desiderata e aggiungere la classificazione come codice campo. 
 
 Ad esempio, si potrebbe usare una tabella nell'intestazione del documento che visualizza la classificazione. Oppure usare una formulazione specifica per un'introduzione che fa riferimento alla classificazione del documento.
 
