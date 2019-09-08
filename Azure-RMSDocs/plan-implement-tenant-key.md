@@ -4,7 +4,7 @@ description: Anziché Microsoft gestire la chiave radice per Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/05/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 48bd5775c1c3858ec2dac0412e4a02e7d2a2bd48
-ms.sourcegitcommit: 96082d61b77f44943509311e2ac0943f970ae4e6
+ms.openlocfilehash: 5490122285549d3fd21ce63b8951cb09a1310f84
+ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68820725"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70800838"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Pianificazione e implementazione della chiave del tenant di Azure Information Protection
 
@@ -37,7 +37,7 @@ Che cos'è la chiave del tenant di Azure Information Protection?
 |Requisito aziendale|Topologia di chiave del tenant consigliata|
 |------------------------|-----------------------------------|
 |Distribuire Azure Information Protection in modo rapido e senza hardware speciali, software aggiuntivo o una sottoscrizione di Azure.<br /><br />Ad esempio:  Esecuzione del test degli ambienti e quando l'organizzazione non ha i requisiti normativi per la gestione delle chiavi.|Gestita da Microsoft|
-|Normative di conformità e controllo su tutte le operazioni del ciclo di vita. <br /><br />Ad esempio: La chiave deve essere protetta da un modulo di protezione hardware (HSM).|BYOK|
+|Normative di conformità e controllo su tutte le operazioni del ciclo di vita. <br /><br />Esempio: La chiave deve essere protetta da un modulo di protezione hardware (HSM).|BYOK|
 
 
 Se necessario, è possibile modificare la topologia della chiave del tenant dopo la distribuzione, usando il cmdlet [set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) .
@@ -86,6 +86,8 @@ e prevede lo schema seguente.
 > Come misura di protezione aggiuntiva, Azure Key Vault usa domini di sicurezza separati per i propri data center in aree quali America del Nord, EMEA (Europa, Medio Oriente e Africa) e Asia. Azure Key Vault usa anche istanze diverse di Azure, ad esempio Microsoft Azure Germania e Azure per enti pubblici. 
 
 Anche se facoltativo, può essere utile usare i log di utilizzo di Azure Information Protection disponibili in tempo quasi reale per sapere esattamente come e quando viene usata la chiave del tenant.
+
+Quando si usa BYOK per la chiave del tenant Azure Information Protection, non è possibile esportare il dominio di pubblicazione trusted. Il file di pubblicazione trusted è necessario se si decide di non usare più Azure Information Protection ma deve comunque essere in grado di decrittografare il contenuto protetto da Azure Information Protection. Per prepararsi a questo scenario creando in anticipo un valore di pubblicazione trusted appropriato, vedere le istruzioni seguenti [come preparare un Azure Information Protection piano di "cloud Exit"](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631).
 
 ### <a name="when-you-have-decided-your-tenant-key-topology"></a>Dopo aver scelto la topologia della chiave del tenant
 

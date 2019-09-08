@@ -4,19 +4,19 @@ description: Istruzioni e informazioni per gli amministratori in una rete aziend
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/01/2019
+ms.date: 09/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 142b3b527b0936baf0bbd8de0664c601151766d0
-ms.sourcegitcommit: 4c4bf02880c26f5c163e75499348dc10a84357c3
+ms.openlocfilehash: 5c24dbaee6be5ab6e016531caa94da74e6e4487c
+ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/01/2019
-ms.locfileid: "70209269"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70800810"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guida dell'amministratore client per l'assegnazione di etichette unificata Azure Information Protection
 
@@ -44,7 +44,7 @@ Ad esempio:
 
 Il Azure Information Protection client Unified Labeling include quanto segue:
 
-- Un componente aggiuntivo di Office, che installa un pulsante di riservatezza sulla barra multifunzione per consentire agli utenti di selezionare le etichette di riservatezza e un'opzione per visualizzare la barra di Azure Information Protection per una migliore visibilità delle etichette.
+- Un componente aggiuntivo di Office, che installa un pulsante di **riservatezza** sulla barra multifunzione per consentire agli utenti di selezionare le etichette di riservatezza e un'opzione per visualizzare la barra di Azure Information Protection per una migliore visibilità delle etichette.
 
 - Esplora file, opzioni tramite clic con il pulsante destro del mouse per l'applicazione di etichette di classificazione e della protezione ai file.
 
@@ -69,11 +69,9 @@ Distribuire il client di etichettatura unificata Azure Information Protection se
 
 - Si vuole eseguire script che classifichino (e, facoltativamente, proteggano) documenti tramite comandi di PowerShell.
 
-- Si vuole testare un servizio attualmente in anteprima che consente di individuare, classificare e, facoltativamente, proteggere i file archiviati in locale.
-
 - Si vuole visualizzare documenti protetti quando non è installata un'applicazione nativa per visualizzare i file o questa applicazione non è in grado di aprire i documenti.
 
-Esempio che illustra il componente aggiuntivo di Office per il client di Azure Information Protection Unified Labeling, visualizzando il nuovo pulsante Sensitivity sulla barra multifunzione e la barra di Azure Information Protection facoltativa:
+Esempio che illustra il componente aggiuntivo di Office per il client di Azure Information Protection Unified Labeling, visualizzando il nuovo pulsante **sensitivity** sulla barra multifunzione e la barra di Azure Information Protection facoltativa:
 
 ![Barra Azure Information Protection con criterio predefinito](../media/v2word2016-calloutsv2.png)
 
@@ -99,7 +97,7 @@ Il collegamento **segnala un problema** viene visualizzato solo se si specifica 
 
 Il **log di esportazione** raccoglie e collega automaticamente i file di log per il client Azure Information Protection Unified Labeling se è stato richiesto di inviarli a supporto tecnico Microsoft. Questa opzione può essere usata anche dagli utenti finali per inviare i file di log all'help desk.
 
-Con le **Impostazioni** di reimpostazione l'utente viene disconnesso, Elimina le etichette di riservatezza attualmente scaricate e i criteri delle etichette e reimposta le impostazioni utente per il servizio Rights Management di Azure.
+Con le **impostazioni di reimpostazione** l'utente viene disconnesso, Elimina le etichette di riservatezza attualmente scaricate e i criteri delle etichette e reimposta le impostazioni utente per il servizio Rights Management di Azure.
 
 > [!NOTE]
 > In caso di problemi tecnici con il client, vedere [Opzioni di supporto e risorse della community](../information-support.md#support-options-and-community-resources).
@@ -114,7 +112,7 @@ Con le **Impostazioni** di reimpostazione l'utente viene disconnesso, Elimina le
     
     - %LocalAppData%\Microsoft\MSIPC
     
-    - %LocalAppData%\Microsoft\MSIP\Policy.msip
+    - \\*App%LocalAppData%\Microsoft\MSIP\mip\>\mip\<*
     
     - %LocalAppData%\Microsoft\MSIP\TokenCache
 
@@ -152,7 +150,7 @@ Tuttavia, i nomi di etichetta e le descrizioni specificati non vengono convertit
 
 ## <a name="post-installation-tasks"></a>Attività post-installazione
 
-Dopo aver installato il Azure Information Protection client di assegnazione unificata delle etichette, assicurarsi di fornire agli utenti le istruzioni per etichettare i documenti e i messaggi di posta elettronica e le linee guida per le etichette da scegliere per scenari specifici. Esempio:
+Dopo aver installato il Azure Information Protection client di assegnazione unificata delle etichette, assicurarsi di fornire agli utenti le istruzioni per etichettare i documenti e i messaggi di posta elettronica e le linee guida per le etichette da scegliere per scenari specifici. Ad esempio:
 
 - Istruzioni per l'utente online: [Guida dell'utente per l'assegnazione di etichette unificata Azure Information Protection](clientv2-user-guide.md)
 

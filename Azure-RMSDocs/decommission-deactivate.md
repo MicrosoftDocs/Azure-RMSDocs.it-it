@@ -4,7 +4,7 @@ description: Informazioni e istruzioni se si decide di non voler più usare il s
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3c5e1234d1cba034f1e8ed21488a5b87dada4dcb
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 9add69440b76874e8d3d08125da1173d65049b54
+ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68792705"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70800816"
 ---
 # <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Rimozione delle autorizzazioni e disattivazione della protezione per Azure Information Protection
 
@@ -28,12 +28,14 @@ ms.locfileid: "68792705"
 
 Se non è necessario l'accesso continuo a contenuti protetti in precedenza, disattivare il servizio e lasciare scadere la sottoscrizione di Azure Information Protection. Ad esempio, è opportuno adottare questa soluzione dopo aver completato i test di Azure Information Protection prima della distribuzione in un ambiente di produzione.
 
-Tuttavia, se Azure Information Protection è stato implementato nell'ambiente di produzione e nei documenti e messaggi di posta elettronica protetti, assicurarsi di disporre di una copia della chiave del tenant di Azure Information Protection prima di disattivare il servizio Azure Rights Management. Assicurarsi di disporre di una copia della chiave prima della scadenza della sottoscrizione per assicurarsi che sia possibile mantenere l'accesso al contenuto protetto da Azure Rights Management dopo la disattivazione del servizio. Se si è usata la soluzione BYOK (Bring Your Own Key) con cui si genera e gestisce la propria chiave in un modulo HSM, si dispone già della chiave del tenant di Azure Information Protection. Ma se è stata gestita da Microsoft (impostazione predefinita), vedere le istruzioni per l'esportazione della chiave del tenant nell'articolo [Operazioni relative alla chiave del tenant di Azure Information Protection](operations-tenant-key.md).
+Tuttavia, se sono state distribuite Azure Information Protection in produzione e documenti e messaggi di posta elettronica protetti, assicurarsi di disporre di una copia della chiave del tenant Azure Information Protection e del dominio di pubblicazione trusted appropriato (Trusted) prima di disattivare Azure Servizio Rights Management. Assicurarsi di disporre di una copia della chiave e del valore di pubblicazione trusted prima della scadenza della sottoscrizione per assicurarsi che sia possibile mantenere l'accesso al contenuto protetto da Azure Rights Management dopo la disattivazione del servizio. 
+
+Se si è usata la soluzione BYOK (Bring Your Own Key) con cui si genera e gestisce la propria chiave in un modulo HSM, si dispone già della chiave del tenant di Azure Information Protection. Se sono state seguite le istruzioni [per prepararsi a una futura uscita dal cloud](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-prepare-an-Azure-Information-Protection-Cloud-Exit-plan/ba-p/382631), sarà disponibile anche un valore di pubblicazione trusted appropriato. Tuttavia, se la chiave del tenant è stata gestita da Microsoft (impostazione predefinita), vedere le istruzioni per l'esportazione della chiave del tenant nell'articolo [operazioni per la chiave del tenant Azure Information Protection](operations-tenant-key.md) .
 
 > [!TIP]
 > Anche dopo la scadenza della sottoscrizione, il tenant di Azure Information Protection rimane disponibile per l'utilizzo del contenuto per un periodo esteso. Tuttavia, non sarà più possibile esportare la chiave tenant.
 
-Quando l'utente ha la propria chiave del tenant di Azure Information Protection può distribuire Rights Management in locale (AD RMS) e importare la chiave del tenant come dominio di pubblicazione trusted (TDP). Sono quindi disponibili le opzioni seguenti per la rimozione delle autorizzazioni della distribuzione di Azure Information Protection:
+Quando si dispone della chiave del tenant Azure Information Protection e del dominio di pubblicazione trusted, è possibile distribuire Rights Management locale (AD RMS) e importare la chiave del tenant come dominio di pubblicazione trusted. Sono quindi disponibili le opzioni seguenti per la rimozione delle autorizzazioni della distribuzione di Azure Information Protection:
 
 |Se si verifica questo...|… effettuare la seguente operazione:|
 |----------------------------|--------------|
