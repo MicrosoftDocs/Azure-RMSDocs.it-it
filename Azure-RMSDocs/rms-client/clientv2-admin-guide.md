@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5c24dbaee6be5ab6e016531caa94da74e6e4487c
-ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
+ms.openlocfilehash: 29a034c436ca8157cb7d64707e5fda69f3422472
+ms.sourcegitcommit: 47826c7149985cd22bce243183748ab59c3dcb51
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70800810"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70808681"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guida dell'amministratore client per l'assegnazione di etichette unificata Azure Information Protection
 
@@ -26,7 +26,7 @@ ms.locfileid: "70800810"
 
 Utilizzare le informazioni contenute in questa guida se si è responsabili del client Azure Information Protection Unified Labeling in una rete aziendale o se si desiderano informazioni più tecniche rispetto a quelle presenti nell' [Azure Information Protection utente client con etichetta unificata Guida](clientv2-user-guide.md). 
 
-Ad esempio:
+Esempio:
 
 - Comprendere i diversi componenti di questo client e se è necessario installarlo
 
@@ -106,13 +106,15 @@ Con le **impostazioni di reimpostazione** l'utente viene disconnesso, Elimina le
 
 - Non è necessario essere un amministratore locale per usare questa opzione e questa azione non viene registrata nel Visualizzatore eventi. 
 
-- A meno che i file non siano bloccati, questa azione elimina tutti i file nelle posizioni seguenti. Questi file includono i certificati client, i modelli di protezione, le etichette di riservatezza e i criteri del portale di gestione delle etichette e le credenziali utente memorizzate nella cache. I file di log del client non vengono eliminati.
+- A meno che i file non siano bloccati, questa azione elimina tutti i file nelle posizioni seguenti. Questi file includono i certificati client, i modelli di protezione, le etichette di riservatezza e i criteri dal centro di gestione delle etichette e le credenziali utente memorizzate nella cache. I file di log del client non vengono eliminati.
     
     - %LocalAppData%\Microsoft\DRM
     
     - %LocalAppData%\Microsoft\MSIPC
     
-    - \\*App%LocalAppData%\Microsoft\MSIP\mip\>\mip\<*
+    - %LocalAppData%\Microsoft\MSIP\mip\\*ProcessName\>\mip\<*
+    
+    - %LocalAppData%\Microsoft\MSIP\AppDetails
     
     - %LocalAppData%\Microsoft\MSIP\TokenCache
 
