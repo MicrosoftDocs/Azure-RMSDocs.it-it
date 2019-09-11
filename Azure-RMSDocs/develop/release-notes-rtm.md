@@ -14,23 +14,32 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: c68970dffb263f30eb47ded0a29c2c5700b46bbe
-ms.sourcegitcommit: ad15beac7d95fe3904f3d4671c1e18e2136f74b4
+ms.openlocfilehash: 8782889ab2acd630831b3b8ed472f5740b904cb7
+ms.sourcegitcommit: 9ed9013fb79f34d49173acb1b200fbe05ce6b316
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69999211"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70892575"
 ---
 # <a name="release-notes"></a>Note sulla versione
 
 Questo articolo contiene informazioni importanti su questa versione e quelle precedenti di RMS SDK 2.1.
+
+## <a name="september-2019---update"></a>2019 settembre-aggiornamento 
+
+- Correzione di un deadlock che può verificarsi quando si tenta di chiamare i metodi di inizializzazione contemporaneamente ad altri metodi client RMS.
+- È stato risolto un problema per determinare se i file di Office protetti con password sono protetti da RMS.
+-   Aggiornare la convalida delle licenze per licenze per scopi specifici.
+- Aggiornamenti alla protezione PDF.
+- Altre correzioni di bug.
+- Aggiornare per collegare staticamente alle librerie di runtime C.
 
 ## <a name="april-2019---update"></a>Aprile 2019-aggiornamento
 - Correzioni di bug nell'API file.
 - API file aggiornata per verificare il diritto di esportazione anziché il diritto di estrazione durante la decrittografia del contenuto.
 - Correzione del programma di installazione per assicurarsi che durante l'aggiornamento venga installata la nuova protezione PDF V2.
 - I dati di telemetria cambiano. Questa modifica richiede un aggiornamento del pacchetto di installazione che consente di installare le librerie di runtime C.
-- Modifiche all'autenticazione del back-end del servizio, # # # # # #please aggiornamento a questa versione dell'SDK per minmize l'interferenza se si usa l'autenticazione con chiave simmetrica per le applicazioni
+- Modifiche all'autenticazione del back-end del servizio. eseguire l' **aggiornamento a questa versione dell'SDK per minmize l'interferenza se si usa l'autenticazione con chiave simmetrica per le applicazioni**
 - Supporto per VC 15,9
 
 
