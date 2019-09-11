@@ -4,7 +4,7 @@ description: Vedere le informazioni sulla versione del client per l'etichettatur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 614435c39458462449f71955215e9e6adef06754
-ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
+ms.openlocfilehash: 94679d642ec2b83d0b7bb979f1ba6e2b0f2fbfe4
+ms.sourcegitcommit: 32ec752f3bda160011c48c82e24f31ffffe5d6ac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70214088"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888123"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -105,7 +105,6 @@ Supportato tramite 02/06/2020
     - [Specificare un colore per l'etichetta](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label)
 
 - Supporto per le etichette configurate per le autorizzazioni definite dall'utente per Word, Excel, PowerPoint ed Esplora file:
-    - Se sono presenti etichette con questa configurazione dalla portale di Azure, sono ora supportate dal client Unified Labeling anche se non esiste attualmente una configurazione equivalente nei centri di amministrazione.
     - Quando un utente seleziona un'etichetta con questa configurazione, viene richiesto di selezionare gli utenti e le impostazioni di protezione per il documento.
 
 - Modifiche di PowerShell nel modulo AzureInformationProtection:
@@ -119,7 +118,7 @@ Supportato tramite 02/06/2020
 
 **Correzioni**
 
-- Supporto per le [corrispondenze di contenuto](../reports-aip.md#content-matches-for-deeper-analysis) per Analytics e [set-AIPFileClassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) con il parametro *DiscoveryInfoTypes* .
+- Supporto per le corrispondenze di [contenuto](../reports-aip.md#content-matches-for-deeper-analysis) per Analytics e [set-AIPFileClassification](https://docs.microsoft.com/powershell/module/azureinformationprotection/set-aipfileclassification?view=azureipps) con il parametro *DiscoveryInfoTypes* .
 
 - Dopo aver modificato le impostazioni locali alternative in Windows, è comunque possibile applicare un'etichetta con protezione a un documento PDF.
 

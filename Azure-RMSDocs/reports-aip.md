@@ -3,7 +3,7 @@ title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
 author: cabailey
 ms.author: cabailey
-ms.date: 08/19/2019
+ms.date: 09/05/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d3135126a837db9405a006bfd571a05a98ded7b7
-ms.sourcegitcommit: 30fc0e855b4fbcb61bcffa3e8c97a4beb777a787
+ms.openlocfilehash: 9108dbe9712b57dd5bef59c5258dccccaf137d86
+ms.sourcegitcommit: 91982b08ba8ce734b6d82382db227fcaa2b15e56
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630065"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70872360"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -40,6 +40,9 @@ Usare Azure Information Protection Analytics per la creazione di report centrali
 - Individuare i casi in cui è possibile accedere ai documenti protetti da utenti interni o esterni e se l'accesso è stato concesso o negato.
 
 I dati visualizzati sono aggregati da client e scanner di Azure Information Protection, da [client e servizi che supportano l'assegnazione di etichette unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)e dai log di [utilizzo della protezione](log-analyze-usage.md).
+
+> [!NOTE]
+> Attualmente, Azure Information Protection Analytics non include tipi di informazioni personalizzati per i client e i servizi che supportano l'assegnazione di etichette unificata.
 
 Ad esempio è possibile visualizzare quanto segue:
 
@@ -114,7 +117,9 @@ Per generare questi report, gli endpoint inviano i seguenti tipi di informazioni
 
 - Per i messaggi di posta elettronica: Oggetto e mittente del messaggio di posta elettronica per i messaggi con etichetta. 
 
-- Tipologie di informazioni riservate ([predefinite](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) e personalizzate) rilevate nel contenuto.
+- [Tipi di informazioni riservate predefinite](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) rilevati nel contenuto.
+    
+    Se si usano Azure Information Protection etichette con condizioni personalizzate, vengono inviati anche i nomi dei tipi di informazioni personalizzate. I tipi di informazioni riservate personalizzate create nel Centro sicurezza e conformità di Office 365, nel centro sicurezza Microsoft 365 o nel centro di conformità Microsoft 365 non vengono inviati.
 
 - Versione del client di Azure Information Protection.
 
@@ -122,13 +127,13 @@ Per generare questi report, gli endpoint inviano i seguenti tipi di informazioni
 
 Queste informazioni vengono archiviate in un'area di lavoro di Azure Log Analytics di proprietà dell'organizzazione e possono essere visualizzate, indipendentemente da Azure Information Protection, dagli utenti con i diritti di accesso all'area di lavoro. Per informazioni dettagliate, vedere la sezione [Autorizzazioni necessarie per la funzionalità di analisi di Azure Information Protection](#permissions-required-for-azure-information-protection-analytics). Per informazioni sulla gestione dell'accesso all'area di lavoro, vedere la sezione [Gestire l'accesso all'area di lavoro Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-to-log-analytics-workspace-using-azure-permissions) nella documentazione di Azure.
 
-Per impedire ai client di Azure Information Protection (versione classica) di inviare questi dati, impostare l' [impostazione dei criteri](configure-policy-settings.md) **Invia dati di controllo su Azure Information Protection log Analytics** su **disattivato**:
+Per impedire ai client di Azure Information Protection (versione classica) di inviare questi dati, impostare l' [impostazione dei criteri](configure-policy-settings.md) **Invia dati di controllo su Azure Information Protection Analytics** su **disattivato**:
 
 - Per fare in modo che la maggior parte degli utenti possa inviare questi dati e un subset di utenti non possa inviare dati di controllo: 
-    - Impostare **Invia i dati di controllo a Log Analytics di Azure Information Protection** su **No** in un criterio con ambito per il subset di utenti. Questa configurazione è tipica per gli scenari di produzione.
+    - Impostare **Invia dati di controllo a Azure Information Protection Analytics** su **disattivato** in un criterio con ambito per il subset di utenti. Questa configurazione è tipica per gli scenari di produzione.
 
 - Per fare in modo che solo un subset di utenti possa inviare dati di controllo: 
-    - Impostare **Invia i dati di controllo a Log Analytics di Azure Information Protection** su **No** nei criteri globali e su **Sì** in un criterio con ambito per il subset di utenti. Questa configurazione è tipica per gli scenari di test.
+    - Impostare **Invia dati di controllo a Azure Information Protection Analytics** su **disattivato** nei criteri **globali e in** in un criterio con ambito per il subset di utenti. Questa configurazione è tipica per gli scenari di test.
 
 Per evitare che Azure Information Protection client unificati invii questi dati, configurare un' [impostazione avanzata](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics)dei criteri di etichetta.
 
@@ -230,7 +235,13 @@ I log di monitoraggio di Azure hanno una funzionalità di **utilizzo e costi sti
 
 Per assistenza nella creazione dell'area di lavoro di Log Analytics, vedere [Creare un'area di lavoro di Log Analytics nel portale di Azure](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
 
-Quando viene completata la configurazione dell'area di lavoro si è pronti per visualizzare i report.
+Quando l'area di lavoro è configurata, effettuare le seguenti operazioni se si pubblicano le etichette di riservatezza in uno dei seguenti centri di gestione: Office 365 Centro sicurezza e conformità, Centro sicurezza Microsoft 365, Microsoft 365 conformità centro:
+
+- Nella portale di Azure passare a **Azure Information Protection** > **Gestisci** > **etichetta unificata**e selezionare **pubblica**.
+    
+    Selezionare questa opzione di **pubblicazione** ogni volta che si crea una modifica dell'etichetta (crea, modifica, Elimina) nel centro di etichette. 
+
+A questo punto si è pronti per visualizzare i report.
 
 ## <a name="how-to-view-the-reports"></a>Come visualizzare i report
 

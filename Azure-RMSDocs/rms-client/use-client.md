@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection offre una soluzione client-s
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/27/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: cfe7d97bf7140b8f48f3f32b1d1f7a88de5ca933
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: e3499c7a5d659217bd10055648bc0c00b5c3a5c8
+ms.sourcegitcommit: 32ec752f3bda160011c48c82e24f31ffffe5d6ac
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789501"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70888101"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -66,26 +66,26 @@ Usare la tabella seguente per confrontare le funzionalità supportate dai due cl
 
 |Funzionalità|Client classico|Client di etichetta unificato|
 |-------|-----------------------------------|----------------------------------------------------|
-|Azioni di assegnazione di etichette: manuali, consigliate, automatiche| Yes | Yes |
-|Creazione di report centrale (analisi):| Sì | Yes |
-|Un visualizzatore per i file protetti (testo, immagini, PDF, Pfile):| Sì | Sì |
-|Supporto multilingue per le etichette:| Yes | Sì |
-|Ereditarietà delle etichette dagli allegati di posta elettronica:| Yes | Sì  |
-|Personalizzazioni che includono:<br />- Etichetta predefinita per la posta elettronica<br />-Messaggi popup in Outlook <br />- Supporto S/MIME<br />- Opzione Segnala un problema| Yes <br /><br /> Supportato come [Impostazioni client avanzate che è possibile configurare nella portale di Azure](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal)| Sì <br /><br /> Supportato come [Impostazioni avanzate configurate con PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) |
-|Autorizzazioni definite dall'utente:| Yes | Sì <br /><br />Per Word, Excel, PowerPoint ed Esplora file: Configurare l'etichetta nella portale di Azure |
-|Autorizzazioni personalizzate:| Sì | Esplora file e PowerShell <br /><br /> Nelle app di Office, in alternativa, gli utenti possono selezionare **file info** > Proteggi il**documento** > **limitare l'accesso** o gli amministratori possono configurare un'etichetta per le autorizzazioni definite dall'utente|
+|Azioni di assegnazione di etichette: manuali, consigliate, automatiche| Sì | Sì |
+|Creazione di report centrale (analisi):| Sì | Sì, con limitazioni:<br /><br /> -I tipi di informazioni riservate personalizzate non vengono visualizzati |
+|Un visualizzatore per i file protetti (testo, immagini, PDF, Pfile):| Yes | Sì |
+|Supporto multilingue per le etichette:| Sì | Yes |
+|Ereditarietà delle etichette dagli allegati di posta elettronica:| Sì | Sì  |
+|Personalizzazioni che includono:<br />- Etichetta predefinita per la posta elettronica<br />-Messaggi popup in Outlook <br />- Supporto S/MIME<br />- Opzione Segnala un problema| Sì <br /><br /> Supportato come [Impostazioni client avanzate che è possibile configurare nella portale di Azure](client-admin-guide-customizations.md#how-to-configure-advanced-client-configuration-settings-in-the-portal)| Yes <br /><br /> Supportato come [Impostazioni avanzate configurate con PowerShell](clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) |
+|Autorizzazioni definite dall'utente:| Yes | Sì |
+|Autorizzazioni personalizzate:| Yes | Esplora file e PowerShell <br /><br /> Nelle app di Office, in alternativa, gli utenti possono selezionare **file info** > Proteggi il**documento** > **limitare l'accesso** o gli amministratori possono configurare un'etichetta per le autorizzazioni definite dall'utente|
 |Barra di Information Protection nelle app Office:| Sì | Sì, con limitazioni:<br /><br /> - Nessun titolo o descrizione comando personalizzabile<br /><br /> - Colore dell'etichetta non visualizzato per l'etichetta applicata|
-|Le etichette permettono di applicare contrassegni visivi (intestazione, piè di pagina, filigrana):| Sì | Sì, con limitazioni:<br /><br /> - Le intestazioni e i piè di pagina non supportano le variabili per i valori dinamici <br /><br /> - Nessun supporto per l’impostazione di contrassegni visivi diversi per Word, Excel, PowerPoint e Outlook|
+|Le etichette permettono di applicare contrassegni visivi (intestazione, piè di pagina, filigrana):| Yes | Sì, con limitazioni:<br /><br /> - Le intestazioni e i piè di pagina non supportano le variabili per i valori dinamici <br /><br /> - Nessun supporto per l’impostazione di contrassegni visivi diversi per Word, Excel, PowerPoint e Outlook|
 |Esplora file, azioni con il pulsante destro del mouse:| Sì | Sì, con limitazioni:<br /><br /> -Non è possibile proteggere i documenti PDF per il formato Ppdf precedente <br /><br />  - Nessun supporto per la modalità di sola protezione|
-|Comandi di PowerShell:| Yes | Sì, con limitazioni:<br /><br />-Non è possibile rimuovere la protezione dai file contenitore (zip,. rar,. 7z,. msg e. pst)|
+|Comandi di PowerShell:| Sì | Sì, con limitazioni:<br /><br />-Non è possibile rimuovere la protezione dai file contenitore (zip,. rar,. 7z,. msg e. pst)|
 |Supporto offline per le azioni di protezione:| Sì | Sì, con limitazioni: <br /><br />- Per i comandi di Esplora File e PowerShell, l'utente deve essere connesso a Internet per proteggere i file. |
 |Supporto per i computer disconnessi con gestione manuale dei file di criteri:| Sì |No |
 |Supporto HYOK:| Sì | No <br /><br /> Le etichette di cui si esegue la migrazione dal portale di Azure e che sono configurate per la protezione HYOK vengono visualizzate dal client per l'etichettatura unificata Azure Information Protection, ma non applicano la protezione. |
-|Registrazione dell'utilizzo nel Visualizzatore eventi:| Sì | No|
-|Visualizzare il pulsante Non inoltrare in Outlook| Sì | No |
+|Registrazione dell'utilizzo nel Visualizzatore eventi:| Yes | No|
+|Visualizzare il pulsante Non inoltrare in Outlook| Yes | No |
 |Scanner per gli archivi dati locali:| Sì | No |
 |Tenere traccia e revocare:| Sì | No |
-|Modalità di sola protezione (nessuna etichetta) tramite i modelli:| Sì | No |
+|Modalità di sola protezione (nessuna etichetta) tramite i modelli:| Yes | No |
 |Supporto per AD RMS:| Sì | È supportata solo l'azione seguente:<br /><br /> - Il visualizzatore può aprire i documenti protetti se si distribuisce l'[estensione per dispositivi mobili di Active Directory Rights Management Services](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\))|
 
 #### <a name="detailed-comparisons-for-the-clients"></a>Confronti dettagliati per i client
