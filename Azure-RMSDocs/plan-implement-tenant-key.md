@@ -4,7 +4,7 @@ description: Anziché Microsoft gestire la chiave radice per Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 09/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5490122285549d3fd21ce63b8951cb09a1310f84
-ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
+ms.openlocfilehash: a36b03f0c753a1e78a65ad4f74446baf3e5fe745
+ms.sourcegitcommit: 190574b5c445aa429867dc324148e52ffd073a67
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70800838"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907438"
 ---
 # <a name="planning-and-implementing-your-azure-information-protection-tenant-key"></a>Pianificazione e implementazione della chiave del tenant di Azure Information Protection
 
@@ -128,7 +128,7 @@ Scegliere un'opzione innanzitutto per ragioni di conformità e quindi per ridurr
 
 - Poiché tutte le chiamate alle funzioni di crittografia per la protezione vengono collegate alla chiave del tenant di Azure Information Protection, si vuole ridurre al minimo la latenza di rete causata dalla chiamate. A tale scopo, creare l'insieme di credenziali delle chiavi nella stessa area o istanza di Azure del tenant di Azure Information Protection.
 
-Per identificare il percorso del tenant di Azure Information Protection, usare il cmdlet di PowerShell [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) e identificare l'area dagli URL. Ad esempio:
+Per identificare il percorso del tenant di Azure Information Protection, usare il cmdlet di PowerShell [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) e identificare l'area dagli URL. Esempio:
 
     LicensingIntranetDistributionPointUrl : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing
 
@@ -184,7 +184,7 @@ A questo punto è possibile configurare Azure Information Protection per l'uso d
 
     Connect-AipService
 
-Eseguire quindi il [cmdlet Use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey), specificando l'URL della chiave. Ad esempio:
+Eseguire quindi il [cmdlet Use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey), specificando l'URL della chiave. Esempio:
 
     Use-AipServiceKeyVaultKey -KeyVaultKeyUrl "https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333"
 

@@ -4,7 +4,7 @@ description: Istruzioni che fanno parte del percorso di migrazione da AD RMS a A
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 445dcb34b2d3de3ed81761537332ad0be20b000d
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 8c1649fe32c88d0a97b002a5e6ca73047412737f
+ms.sourcegitcommit: 190574b5c445aa429867dc324148e52ffd073a67
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794002"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907253"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave HSM protetta a un'altra
 
@@ -49,9 +49,11 @@ Queste procedure vengono eseguite dall'amministratore di Insieme di credenziali 
 
 1. Per ogni chiave del certificato concessore di licenze server da archiviare in Azure Key Vault, seguire le istruzioni della documentazione di Azure Key Vault, usando [Implementazione di BYOK (Bring Your Own Key) per Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault) con l'eccezione seguente:
 
-   - Non eseguire la procedura per **generare la chiave del tenant**, perché ne esiste già una equivalente nella distribuzione di AD RMS. Al contrario, identificare la chiave usata dal server AD RMS dall'installazione di nCipher e usare questa chiave durante la migrazione. sono in genere denominati i file di chiave crittografati nCipher **key<*Nomeappchiave*><*keyIdentifier*>** localmente nel server.
-
-     Quando la chiave viene caricata in Insieme di credenziali delle chiavi di Azure, vengono visualizzate le proprietà della chiave visualizzata, incluso l'ID della chiave. Sarà simile a https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Prendere nota dell'URL perché è necessario all'amministratore di Azure Information Protection per indicare al servizio Azure Rights Management di usare questa chiave per la chiave del tenant.
+   - Non eseguire la procedura per **generare la chiave del tenant**, perché ne esiste già una equivalente nella distribuzione di AD RMS. Al contrario, identificare le chiavi usate dal server AD RMS dall'installazione di nCipher e prepararle per il trasferimento, quindi trasferirle a Azure Key Vault. 
+        
+        I file di chiave crittografati per nCipher sono denominati **key_ <*keyAppName*> _ <*identificatore* >**  di chiave in locale nel server. Ad esempio `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54`. Quando si esegue il comando KeyTransferRemote per creare una copia della chiave con autorizzazioni ridotte, sarà necessario il valore **MSCAPI** come keyAppName e il valore personalizzato per l'identificatore di chiave.
+        
+        Quando la chiave viene caricata in Insieme di credenziali delle chiavi di Azure, vengono visualizzate le proprietà della chiave visualizzata, incluso l'ID della chiave. Sarà simile a https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Prendere nota dell'URL perché è necessario all'amministratore di Azure Information Protection per indicare al servizio Azure Rights Management di usare questa chiave per la chiave del tenant.
 
 2. Nella workstation connessa a Internet, in una sessione di PowerShell, usare il cmdlet [set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) per autorizzare l'entità servizio Rights Management di Azure ad accedere all'insieme di credenziali delle chiavi in cui viene archiviata la chiave del tenant di Azure Information Protection. Le autorizzazioni necessarie sono decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
     

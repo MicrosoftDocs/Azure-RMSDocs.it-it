@@ -4,7 +4,7 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/16/2019
+ms.date: 09/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e2cce9e76ae1b583aacc30df7d2abe5940106455
-ms.sourcegitcommit: bdfade60c1939f5c540bbf82859af060eb629f68
+ms.openlocfilehash: 784b51f91a19069c33f5a6dd5a6a655c95e59c0c
+ms.sourcegitcommit: af478aae5b093aa604e69b210de4094aa664f658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69546076"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70923326"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -729,7 +729,7 @@ Quando il client ottiene questa configurazione nei relativi criteri, le intestaz
 
 Questa configurazione non è supportata per Outlook e tenere presente che quando viene usata con Word, Excel e PowerPoint, può influire negativamente sulle prestazioni di queste app per gli utenti. La configurazione consente di definire le impostazioni per ogni applicazione, ad esempio la ricerca di testo nelle intestazioni e nei piè di pagina di documenti di Word, ma non nei fogli di calcolo di Excel o nelle presentazioni di PowerPoint.
 
-Poiché i criteri di ricerca influiscono sulle prestazioni per gli utenti, è consigliabile limitare i tipi di applicazioni di Office (**W**ord, **E**xcel, **P**owerPoint) solo a quelli in cui deve essere eseguita la ricerca:
+Poiché la corrispondenza dei criteri influiscono sulle prestazioni degli utenti, è consigliabile limitare i tipi di applicazioni di Office (**W**Ord, E**X**cel, **P**owerPoint) solo a quelli che devono essere cercati:
 
 - Key: **RemoveExternalContentMarkingInApp**
 
@@ -980,7 +980,7 @@ Per ottenere questa soluzione:
 
 2. Creare una regola del flusso di posta di Exchange per ogni etichetta: applicare la regola quando le proprietà del messaggio includono la classificazione configurata e modificare le proprietà del messaggio per impostare un'intestazione del messaggio. 
 
-     Per l'intestazione del messaggio, è possibile trovare le informazioni da specificare nelle intestazioni Internet di un messaggio di posta elettronica inviato e classificato tramite l'etichetta di Azure Information Protection. Cercare l'intestazione **msip_labels** e la stringa immediatamente successiva fino al punto e virgola incluso. Esempio:
+     Per l'intestazione del messaggio, è possibile trovare le informazioni da specificare nelle intestazioni Internet di un messaggio di posta elettronica inviato e classificato tramite l'etichetta di Azure Information Protection. Cercare l'intestazione **msip_labels** e la stringa immediatamente successiva fino al punto e virgola incluso. Ad esempio:
     
     **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
     

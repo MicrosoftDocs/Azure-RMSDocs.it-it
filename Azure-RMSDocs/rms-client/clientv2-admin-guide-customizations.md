@@ -3,7 +3,7 @@ title: Configurazioni personalizzate-Azure Information Protection client per l'a
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/09/2019
+ms.date: 09/12/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 13401d61990298a039bc1d74284d45177564efd8
-ms.sourcegitcommit: 91982b08ba8ce734b6d82382db227fcaa2b15e56
+ms.openlocfilehash: 1c8391bd4c7ab4cf57e4f0ddeeb6310259e7cceb
+ms.sourcegitcommit: af478aae5b093aa604e69b210de4094aa664f658
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70872368"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70923298"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -31,7 +31,7 @@ Per queste impostazioni è necessario modificare il registro di sistema o specif
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Come configurare le impostazioni avanzate per il client usando Office 365 Centro sicurezza e conformità PowerShell
 
-Quando si usa Office 365 Centro sicurezza e conformità PowerShell, è possibile configurare le impostazioni avanzate che supportano le personalizzazioni per i criteri etichette e le etichette. Ad esempio:
+Quando si usa Office 365 Centro sicurezza e conformità PowerShell, è possibile configurare le impostazioni avanzate che supportano le personalizzazioni per i criteri etichette e le etichette. Esempio:
 
 - L'impostazione per visualizzare la barra di Information Protection nelle app di Office è un' ***impostazione avanzata dei criteri***per le etichette.
 - L'impostazione per specificare un colore dell'etichetta è un' ***impostazione avanzata etichetta***.
@@ -254,7 +254,7 @@ Quando il client di etichettatura unificata ottiene questa configurazione nel cr
 
 Questa configurazione non è supportata per Outlook e tenere presente che quando viene usata con Word, Excel e PowerPoint, può influire negativamente sulle prestazioni di queste app per gli utenti. La configurazione consente di definire le impostazioni per ogni applicazione, ad esempio la ricerca di testo nelle intestazioni e nei piè di pagina di documenti di Word, ma non nei fogli di calcolo di Excel o nelle presentazioni di PowerPoint.
 
-Poiché la corrispondenza dei criteri influiscono sulle prestazioni degli utenti, è consigliabile limitare i tipi di applicazioni di Office (**W**Ord, **E**XCEL, **P**owerPoint) solo a quelli che devono essere cercati.
+Poiché la corrispondenza dei criteri influiscono sulle prestazioni degli utenti, è consigliabile limitare i tipi di applicazioni di Office (**W**Ord, E**X**cel, **P**owerPoint) solo a quelli che devono essere cercati.
 
 Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
