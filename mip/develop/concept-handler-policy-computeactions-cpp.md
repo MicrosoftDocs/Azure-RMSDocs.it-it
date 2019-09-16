@@ -1,43 +1,44 @@
 ---
 title: 'Concetti: uso di Microsoft Information Protection per generare eventi di controllo'
-description: Questo articolo aiuterà a comprendere come usare il SDK di Microsoft Information Protection per il calcolo.
+description: Questo articolo consente di comprendere come usare Microsoft Information Protection SDK per il calcolo.
 services: information-protection
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
 ms.collection: M365-security-compliance
-ms.date: 11/16/2018
+ms.date: 07/30/2019
 ms.author: tommos
-ms.openlocfilehash: 944e86c3d950912ce48013e502c1864fda3498b1
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.openlocfilehash: 8ade287531ee9f1c18678d42ef5e51a4c70ee13f
+ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "60175394"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69886210"
 ---
 # <a name="compute-an-action"></a>Calcolare un'azione
 
 Come descritto in precedenza, le funzioni principali dell'API Criteri sono:
+
 - elencare le etichette disponibili
-- Restituisce un set di azioni da intraprendere, basato sullo stato corrente e quella desiderato
+- Restituisce un set di azioni da intraprendere in base allo stato corrente e desiderato
 
 L'ultimo passaggio del processo consiste nello specificare un identificatore di etichetta e, facoltativamente, i metadati relativi all'etichetta esistente per la funzione `ComputeActions()`.
 
 Il codice di esempio per questo articolo è reperibile in GitHub.
 
-* [mipsdk-policyapi-cpp-sample-basic](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic)
+- [mipsdk-policyapi-cpp-sample-basic](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic)
 
 ## <a name="compute-an-action-for-a-new-label"></a>Calcolare un'azione per una nuova etichetta
 
-Computing il `mip::Actions` per una nuova etichetta, è possibile ottenere usando il `ExecutionStateImpl` definito nella [ExecutionState](concept-handler-policy-executionstate-cpp.md).
+Il calcolo di `mip::Actions` per una nuova etichetta può essere eseguito usando il `ExecutionStateImpl` definito in  [ExecutionState](concept-handler-policy-executionstate-cpp.md).
 
 ```cpp
 // Replace with valid label ID.
 string newLabelId = "d7b93a40-4df3-47e4-b2fd-7862fc6b095c"; 
 sample::policy::ExecutionStateOptions options;
 
-// Set desired newLabelId in ExecutionStateOptions.
-options.newLabelId = newLabelId;
+// Resolve desired label id to mip::Label and set in ExecutionStateOptions.
+options.newLabel = mEngine->GetLabelById(newLabelId);
 
 // Initialize ExecutionStateImpl with options, create handler, call ComputeActions.
 std::unique_ptr<ExecutionStateImpl> state(new ExecutionStateImpl(options));
@@ -64,7 +65,7 @@ L'elemento `PolicyHandler` calcola le azioni e restituisce un elemento `std::vec
 
 ## <a name="compute-actions-with-an-existing-label"></a>Calcolare azioni con un'etichetta esistente
 
-Quando si usa l'API di criteri, spetta all'applicazione per leggere i metadati dal contenuto. Questi metadati vengono offerti all'API come parte dell'elemento `mip::ExecutionState`. `ComputeActions()` può gestire operazioni più complesse dell'applicazione di una nuova etichetta a un documento senza etichetta. L'esempio seguente viene illustrato il downgrade di un'etichetta da un'etichetta più sensibile, a un'etichetta meno sensibile. Questo processo viene simulato leggendo una stringa delimitata da virgole dei metadati e fornendo all'API tramite `mip::ExecutionState`.
+Quando si usa l'API dei criteri, l'applicazione deve leggere i metadati dal contenuto. Questi metadati vengono offerti all'API come parte dell'elemento `mip::ExecutionState`. `ComputeActions()` può gestire operazioni più complesse dell'applicazione di una nuova etichetta a un documento senza etichetta. Nell'esempio seguente viene illustrato il downgrade di un'etichetta da un'etichetta più sensibile, a un'etichetta meno sensibile. Questo processo viene simulato leggendo una stringa di metadati con valori delimitati da virgole e fornendo all'API `mip::ExecutionState`tramite.
 
 > [!NOTE]
 > L'esempio usa una funzione di utilità chiamata `SplitString()`. Per un esempio, vedere [qui](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic/blob/master/mipsdk-policyapi-cpp-sample-basic/utils.cpp)
@@ -76,9 +77,9 @@ string newLabelId = "d7b93a40-4df3-47e4-b2fd-7862fc6b095c";
 // Comma and Pipe Delimited Metadata.
 string metadata = "MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_Enabled|true,MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_SetDate|2018-10-23T21:53:31-0800,MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_Method|Standard,MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_Name|Contoso FTEs (C),MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_SiteId|94f6984e-8d31-4794-bdeb-3ac89ad2b660,MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ActionId|b56491d9-155f-40ff-866f-0000acd85c31,MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ContentBits|7";
 
-// Create ExecutionStateOptions and set newLabelId.
+// Create ExecutionStateOptions and resolve newLabelId to mip::Label
 sample::policy::ExecutionStateOptions options;
-options.newLabelId = newLabelId;
+options.newLabel = mEngine->GetLabelById(newLabelId);
 
 // Split metadata string by commas, store in vector.
 vector<string> metadataPairs = sample::utils::SplitString(metadata, ','); 
@@ -115,7 +116,7 @@ Remove: MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ContentBits
 Remove: MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ActionId
 ```
 
-## <a name="next-steps"></a>Passaggi successivi
+## <a name="next-steps"></a>Fasi successive
 
-- Informazioni su come [passare gli eventi di controllo di Azure informazioni protezione Analitica](concept-handler-policy-auditing-cpp.md)
-- Scaricare il [esempi dell'API dei criteri da GitHub e provare l'API di criteri](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
+- Informazioni su come [passare gli eventi di controllo a Azure Information Protection Analytics](concept-handler-policy-auditing-cpp.md)
+- Scaricare gli [esempi di API dei criteri da GitHub e provare l'API dei criteri](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
