@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 08/27/2019
-ms.openlocfilehash: 65a7f10a2fa0b90aa19ee5505e0918f74644687b
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.openlocfilehash: 24f22f28bf8082d0a0347526f5bc87453c9ba4e2
+ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055285"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71070511"
 ---
 # <a name="class-mipcomputeengine"></a>Classe MIP:: ComputeEngine 
   
@@ -23,17 +23,17 @@ public std:: shared_ptr\<ContentLabel\> GetSensitivityLabel (ComputeEngineContex
 public std:: Vector\<std:: shared_ptr\<Action\> \> ComputeActions (ComputeEngineContext & context, const DocumentState & DocumentState, const ApplicationActionState & actionState)  | _Non ancora documentato._
 public void NotifyCommittedActions (ComputeEngineContext & context, const DocumentState & documentState, const ApplicationActionState & actionState)  | _Non ancora documentato._
 public virtual ~ ComputeEngine ()  | _Non ancora documentato._
-  
+public static MIP_UPE_CORE_API std:: shared_ptr&lt;ComputeEngine&gt; MIP:: ComputeEngine:: create  | _Non ancora documentato._
+public static MIP_UPE_CORE_API std:: shared_ptr&lt;ComputeEngineContext&gt; MIP:: ComputeEngine:: CreateContext  | _Non ancora documentato._
+
 ## <a name="members"></a>Members
   
 ### <a name="listsensitivitylabels-function"></a>ListSensitivityLabels (funzione)
 _Non ancora documentato._
 
-  
 ### <a name="getsensitivitylabel-function"></a>GetSensitivityLabel (funzione)
 _Non ancora documentato._
 
-  
 ### <a name="computeactions-function"></a>ComputeActions (funzione)
 _Non ancora documentato._
 
@@ -43,4 +43,10 @@ _Non ancora documentato._
 
   
 ### <a name="computeengine-function"></a>~ ComputeEngine (funzione)
+_Non ancora documentato._
+
+### <a name="create-function"></a>Create (funzione)
+_Non ancora documentato._
+
+### <a name="createcontext-function"></a>CreateContext (funzione)
 _Non ancora documentato._

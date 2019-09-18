@@ -4,7 +4,7 @@ description: Vedere le informazioni sulla versione del client per l'etichettatur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/09/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a2093d33f53eb9991c0ef3f8c9d1ea798b3dd8ef
-ms.sourcegitcommit: dc8a55e7a5500ede22cef2fabdaddc4bcee9fa24
+ms.openlocfilehash: a71ed78a2fb528823adc4abaa5f2007256aca65c
+ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70936946"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71070644"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -51,6 +51,46 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche apport
 > Per il supporto tecnico, vedere le informazioni riportate in [Opzioni di supporto e risorse per la community](../information-support.md#support-options-and-community-resources). È anche possibile rivolgersi al team di Azure Information Protection nel [sito di Yammer](https://www.yammer.com/askipteam/).
 
 Il client sta sostituendo il client di Azure Information Protection (classico). Per confrontare caratteristiche e funzionalità con il client classico, vedere [confrontare i client](use-client.md#compare-the-clients).
+
+## <a name="versions-later-than-22210"></a>Versioni successive a 2.2.21.0
+
+Se si dispone di una versione 2 del client successiva a 2.2.21.0, si tratta di una build di anteprima a scopo di test e valutazione.
+
+**Data di rilascio**: 09/17/2019
+
+**Nuove funzionalità:**
+
+- Supporto per lo [scanner](../deploy-aip-scanner.md), per ispezionare ed etichettare i documenti archivi dati locali. Con questa versione dello scanner:
+    
+    - Più scanner possono condividere lo stesso database di SQL Server quando si configurano gli scanner per l'uso dello stesso profilo dello scanner. Questa configurazione facilita la gestione di più scanner e comporta tempi di analisi più rapidi. Quando si usa questa configurazione, è sempre necessario attendere il completamento dell'installazione di uno scanner prima di installare un altro scanner con lo stesso profilo.
+    
+    - È necessario specificare un profilo quando si installa lo scanner e il database dello scanner è **denominato\<AIPScannerUL_ profile_name >** . Il parametro *profile* è obbligatorio anche per set-AIPScanner.
+    
+    - È possibile impostare un'etichetta predefinita su tutti i documenti, anche se i documenti sono già etichettati. Nel profilo scanner o nelle impostazioni del repository, impostare l'opzione **rietichettare i file** **su on** con la nuova casella di controllo **Imponi etichetta predefinita** selezionata.
+    
+    - È possibile rimuovere le etichette esistenti da tutti i documenti e questo Act include la rimozione della protezione se è stata precedentemente applicata da un'etichetta. La protezione applicata indipendentemente da un'etichetta viene mantenuta. Questa configurazione dello scanner viene eseguita nel profilo dello scanner o nelle impostazioni del repository con le impostazioni seguenti:
+        - **Etichetta i file in base al contenuto**: **Disattivato**
+        - **Etichetta predefinita**: **Nessuno**
+        - **Applica una nuova etichetta ai file**: **In** con la casella di controllo **Applica etichetta predefinita** selezionata
+    
+    - Come per lo scanner del client classico, lo scanner protegge i file di Office e i file PDF. Attualmente, non è possibile configurare altri tipi di file da proteggere con questa versione dello scanner.
+    
+    È possibile aggiornare gli scanner dal client di Azure Information Protection (versione classica). Dopo l'aggiornamento, che crea un nuovo database, lo scanner ripete l'analisi di tutti i file la prima volta che viene eseguito. Per istruzioni, vedere [aggiornamento dello scanner Azure Information Protection](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner) dalla guida dell'amministratore.
+
+- Il cmdlet di PowerShell [set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) include nuovi parametri per le etichette dei [file in modo non interattivo](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)e una [nuova procedura per registrare un'app in Azure ad](clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client). Gli scenari di esempio includono lo scanner e gli script di PowerShell automatici per etichettare i documenti.
+
+- I tipi di informazioni riservate personalizzate corrispondenti vengono inviati a [Azure Information Protection Analytics](../reports-aip.md).
+
+- L'etichetta applicata Visualizza il colore configurato per l'etichetta, se [è stato configurato un colore](clientv2-admin-guide-customizations.md#specify-a-color-for-the-label).
+
+- Quando si aggiungono o si modificano le impostazioni di protezione in un'etichetta, il client riapplica l'etichetta con le impostazioni di protezione più recenti quando il documento viene salvato successivamente. Analogamente, lo scanner riapplica l'etichetta con le impostazioni di protezione più recenti quando il documento viene successivamente sottoposto a scansione in modalità di applicazione.
+
+- Nuovo cmdlet [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs)per raccogliere tutti i file di log da%LocalAppData%\Microsoft\MSIP\Logs e salvarli in un singolo file compresso con formato zip. Questo file può quindi essere inviato a supporto tecnico Microsoft se viene richiesto di inviare i file di log per consentire l'analisi di un problema segnalato.
+
+**Correzioni**
+
+- È possibile apportare modifiche a un file protetto tramite Esplora file e fare clic con il pulsante destro del mouse dopo la rimozione di una password per il file.
+
 
 ## <a name="version-22210"></a>Versione 2.2.21.0
 

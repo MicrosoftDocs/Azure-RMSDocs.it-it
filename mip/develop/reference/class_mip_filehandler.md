@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 08/27/2019
-ms.openlocfilehash: 93e4ed2210632a051bc9e1aaa06069d246860041
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.openlocfilehash: f7ffac2409b23c3f1a9c426f8151804b538d47c4
+ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055023"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71070630"
 ---
 # <a name="class-mipfilehandler"></a>Classe mip::FileHandler 
 Interfaccia per tutte le funzioni di gestione file.
@@ -25,7 +25,6 @@ public void ClassifyAsync (const std::\<shared_ptr\>void & context)  |  Esegue l
 public void InspectAsync (const std::\<shared_ptr\>void & context)  |  Creare un oggetto Inspector di file, utilizzato per recuperare il contenuto del file da formati di file compatibili.
 public void selabel (const std::\<shared_ptr\>Label & Label, const LabelingOptions & LabelingOptions, const ProtectionSettings & ProtectionSettings)  |  Imposta l'etichetta di riservatezza per il file.
 public void DeleteLabel(const LabelingOptions& labelingOptions)  |  Elimina l'etichetta di riservatezza dal file.
-static bool protected (const std:: String & filePath, const std:<MipContext>: shared_ptr & mipContext) | Verifica se un file è protetto o meno.
 public void seprotection (const std::\<shared_ptr\>ProtectionDescriptor & ProtectionDescriptor, const ProtectionSettings & ProtectionSettings)  |  Imposta autorizzazioni personalizzate o basate su modello (in base a protectionDescriptor->GetProtectionType) per il file.
 public void RemoveProtection()  |  Rimuove la protezione dal file. Se al file è applicata un'etichetta, questa andrà persa.
 public void CommitAsync (const std:: String & outputFilePath, const std:\<:\>shared_ptr void & context) | Scrive le modifiche nel file specificato dal parametro \|outputFilePath\ |  .
@@ -34,7 +33,8 @@ public void GetDecryptedTemporaryFileAsync (const std::\<shared_ptr\>void & cont
 public void GetDecryptedTemporaryStreamAsync (const std::\<shared_ptr\>void & context)  |  Restituisce un flusso che rappresenta il contenuto decrittografato.
 public void NotifyCommitSuccessful (const std:: String & actualFilePath)  |  Da chiamare quando è stato eseguito il commit delle modifiche su disco.
 public std::string GetOutputFileName()  |  Calcola il nome e l'estensione del file di output in base al nome file originale e alle modifiche accumulate.
-  
+public static bool protected (const std:: String & filePath, const std:<MipContext>: shared_ptr & mipContext) | Verifica se un file è protetto o meno.
+public static FILE_API std:: Vector&lt;uint8_t&gt; __CDECL MIP:: FileHandler:: GetSerializedPublishingLicense | Restituisce la licenza di pubblicazione se il file è presente.
 ## <a name="members"></a>Members
   
 ### <a name="getlabel-function"></a>Funzione GetLabel
@@ -63,10 +63,6 @@ Le modifiche non verranno scritte nel file finché non viene chiamato CommitAsyn
 Elimina l'etichetta di riservatezza dal file.
 Le modifiche non verranno scritte nel file finché non viene chiamato CommitAsync. I metodi Auto e Privileged consentono all'API di eseguire l'override di qualsiasi etichetta esistente. Genera [JustificationRequiredError](class_mip_justificationrequirederror.md) quando l'impostazione dell'etichetta richiede che l'operazione sia giustificata (tramite il parametro labelingOptions).
   
-
-### <a name="isprotected-function"></a>Funzione Protected
-Verifica se un file è protetto o meno.
-
 ### <a name="setprotection-function"></a>Funzione seprotection
 Imposta autorizzazioni personalizzate o basate su modello (in base a protectionDescriptor->GetProtectionType) per il file.
 Le modifiche non verranno scritte nel file finché non viene chiamato CommitAsync.
@@ -102,3 +98,10 @@ Genera un evento di controllo
   
 ### <a name="getoutputfilename-function"></a>GetOutputFileName (funzione)
 Calcola il nome e l'estensione del file di output in base al nome file originale e alle modifiche accumulate.
+
+### <a name="isprotected-function"></a>Funzione Protected
+Verifica se un file è protetto o meno.
+
+
+### <a name="getserializedpublishinglicense-function"></a>GetSerializedPublishingLicense (funzione)
+Restituisce la licenza di pubblicazione se il file è presente.

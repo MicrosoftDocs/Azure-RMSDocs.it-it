@@ -4,19 +4,19 @@ description: Istruzioni e informazioni per gli amministratori per la gestione de
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/27/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a3cca2ac2e3df8f773d6a818eb664bf5c72263aa
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.openlocfilehash: d14ab94a045a31ccf22b862d91c224246866d48d
+ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056445"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71060042"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guida dell'amministratore: Uso di PowerShell con il client unificato Azure Information Protection
 
@@ -33,7 +33,7 @@ I cmdlet vengono installati con il modulo di PowerShell **AzureInformationProtec
 |[Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus)|Per una cartella condivisa, identifica tutti i file con un'etichetta specifica.|
 |[Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification)|Per una cartella condivisa, esaminare il contenuto dei file e quindi etichettare automaticamente i file senza etichetta, in base alle condizioni specificate.|
 |[Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel)|Per una cartella condivisa, applica un'etichetta specificata a tutti i file privi di etichetta.|
-|[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Etichettare i file in modo interattivo, usando un account utente diverso.|
+|[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Assegna etichette ai file in modo non interattivo, ad esempio tramite uno script che viene eseguito in base a una pianificazione.|
 
 > [!TIP]
 > Per usare cmdlet con percorsi di lunghezza superiore a 260 caratteri, usare l'[impostazione di Criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) seguente disponibile a partire da Windows 10 versione 1607:<br />  > **Configurazione computer criteri**computer locale modelli amministrativi**tutte le impostazioni Abilita percorsi** **lunghi Win32**  >  >  >  
@@ -59,7 +59,7 @@ Oltre ai prerequisiti per l'installazione del modulo AzureInformationProtection,
 
 #### <a name="prerequisite-1-the-azure-rights-management-service-must-be-activated"></a>Prerequisito 1: il servizio Azure Rights Management deve essere attivato
 
-Se il tenant di Azure Information Protection non è attivato per applicare la protezione, vedere le istruzioni per l' [attivazione di Azure Rights Management](../activate-service.md).
+Se il tenant di Azure Information Protection non è attivato, vedere le istruzioni per [[attivazione del servizio di protezione da Azure Information Protection](../activate-service.md).
 
 #### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>Prerequisito 2: per rimuovere la protezione dai file per altri utenti usando il proprio account
 
@@ -84,11 +84,14 @@ Quando il token Azure AD scade, eseguire di nuovo il cmdlet per acquisire un nuo
 
 Se si esegue questo cmdlet senza parametri, l'account acquisisce un token di accesso valido per 90 giorni o fino alla scadenza della password.  
 
-Per determinare la scadenza del token di accesso, eseguire questo cmdlet con parametri. Questa configurazione consente di configurare il token di accesso in Azure AD per un anno, due anni o non scadere mai. Sono necessarie due applicazioni registrate in Azure Active Directory: un'applicazione **app Web/API** e un'**applicazione nativa**. I parametri per set-AIPAuthentication utilizzano i valori di queste applicazioni.
+Per determinare la scadenza del token di accesso, eseguire questo cmdlet con parametri. Questa configurazione consente di configurare il token di accesso in Azure AD per un anno, due anni o non scadere mai. I parametri per set-AIPAuthentication usano i valori di un processo di registrazione delle app in Azure AD.
 
 Dopo aver eseguito questo cmdlet, è possibile eseguire i cmdlet di assegnazione di etichette nel contesto dell'account del servizio creato.
 
 ### <a name="to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication"></a>Per creare e configurare le applicazioni di Azure AD per Set-AIPAuthentication
+
+> [!NOTE]
+> Se si usa la versione di anteprima corrente del client Unified Labeling non usare questa procedura, ma invece, vedere [per creare e configurare le applicazioni Azure ad per set-AIPAuthentication-Preview client](#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client).
 
 1. In una nuova finestra del browser accedere al [Portale di Azure](https://portal.azure.com/).
 
@@ -184,6 +187,80 @@ La prima volta che si esegue questo comando viene richiesto di eseguire l'access
 2. Eseguire il cmdlet Set-AIPAuthentication con il parametro *OnBeHalfOf* , specificando come valore la variabile appena creata. Ad esempio:
     
         Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f" -OnBehalfOf $pscreds
+
+
+#### <a name="to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client"></a>Per creare e configurare le applicazioni Azure AD per set-AIPAuthentication-Preview client
+
+Usare la procedura seguente come istruzioni alternative solo se è stata installata la versione di anteprima del client Unified labeling. 
+
+Per questa versione del client, è necessario creare una nuova registrazione dell'app per i parametri *AppID* e *AppSecret* per set-AIPAuthentication. Se è stato eseguito l'aggiornamento da una versione precedente del client e è stata creata una registrazione dell'app per i parametri *webappid* e *NativeAppId* precedenti, questi non funzioneranno con questa versione del client.
+
+1. In una nuova finestra del browser accedere al [Portale di Azure](https://portal.azure.com/).
+
+2. Per il tenant Azure ad usato con Azure Information Protection, passare a **Azure Active Directory** > **Gestisci** > **registrazioni app**. 
+
+3. Selezionare **+ nuova registrazione**. Nel pannello **registra un'applicazione** specificare i valori seguenti e quindi fare clic su **registra**:
+
+   - **Nome**:`AIPv2OnBehalfOf`
+        
+        Se preferibile, specificare un nome diverso. Deve essere univoco per ogni tenant.
+    
+    - **Tipi di account supportati**: **Solo account in questa directory organizzativa**
+    
+    - **URI di reindirizzamento (facoltativo)** : **Web** e`https://localhost`
+
+4. Nel pannello **AIPv2OnBehalfOf** copiare il valore per l' **ID applicazione (client)** . Il valore è simile all'esempio seguente: `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. Questo valore viene usato per il parametro *AppID* quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
+
+5. Sempre nel pannello **AIPv2OnBehalfOf** scegliere **certificati & segreti**dal menu **Gestisci** .
+
+6. Nel pannello **AIPv2OnBehalfOf-certificates & Secrets** , nella sezione **client Secrets** Selezionare **+ New client Secret**.
+
+7. Per **Aggiungi un segreto client**, specificare quanto segue e quindi selezionare **Aggiungi**:
+    
+    - **Descrizione**:`Azure Information Protection unified labeling client`
+    - **Scadenza**: Specificare la durata scelta (1 anno, 2 anni o nessuna scadenza)
+
+8. Tornare al pannello **AIPv2OnBehalfOf-certificates & Secrets** , nella sezione **client Secrets** , copiare la stringa per il **valore**. Questa stringa ha un aspetto simile all'esempio seguente `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4`:. Per assicurarsi di copiare tutti i caratteri, selezionare l'icona da **copiare negli Appunti**. 
+    
+    È importante salvare la stringa, perché non verrà più visualizzata e non potrà essere recuperata. Come per le informazioni riservate utilizzate, archiviare il valore salvato in modo sicuro e limitarne l'accesso.
+
+9. Scegliere **autorizzazioni API**dal menu **Gestisci** .
+
+10. Nel pannello **autorizzazioni AIPv2OnBehalfOf-API** selezionare **+ Aggiungi un'autorizzazione**.
+
+11. Nel pannello **autorizzazioni richiesta API** selezionare **Servizi Rights Management di Azure** e quando viene richiesto il tipo di autorizzazioni richieste dall'applicazione, selezionare **Autorizzazioni applicazione**.
+
+12. Per **autorizzazioni SELECT**, espandere **contenuto** e selezionare gli elementi seguenti:
+    
+    -  **Content. DelegatedWriter** (always required)
+    -  **Content. Writer** (always required)
+    -  **Content. superuser** (obbligatorio se è necessaria la [funzionalità per utenti con privilegi avanzati](../configure-super-users.md) ) 
+    
+    La funzionalità per utenti con privilegi avanzati consente all'account di decrittografare sempre il contenuto. Ad esempio, per riproteggere i file e controllare i file protetti da altri utenti.
+
+13. Selezionare **Aggiungi autorizzazioni**.
+
+14. Tornare al pannello **autorizzazioni AIPv2OnBehalfOf-API** , selezionare **concedi il consenso dell'amministratore \<per *il nome* > del tenant** e selezionare **Sì** per la richiesta di conferma.
+
+A questo punto è stata completata la registrazione di questa app con un segreto, si è pronti per eseguire [set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con i parametri *AppID*e *AppSecret*. Inoltre, sarà necessario l'ID tenant. 
+
+> [!TIP]
+>È possibile copiare rapidamente l'ID tenant usando portale di Azure: **Azure Active Directory** **Gestisci ID directory** **Proprietà**. >  >  > 
+
+Dall'esempio con un ID tenant di 9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a:
+
+`Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a"`
+
+La prima volta che si esegue questo comando viene richiesto di eseguire l'accesso, creando e archiviando in modo sicuro il token di accesso per l'account in %localappdata%\Microsoft\MSIP. Dopo questo accesso iniziale è possibile assegnare etichette e proteggere i file in modalità non interattiva nel computer. Tuttavia, se si usa un account del servizio per etichettare e proteggere i file e questo account del servizio non è in grado di eseguire l'accesso in modo interattivo, usare il parametro *OnBehalfOf* con set-AIPAuthentication:
+
+1. Creare una variabile per archiviare le credenziali di un account Active Directory a cui viene concessa l'assegnazione a destra dell'utente per l'accesso interattivo. Esempio:
+    
+        $pscreds = Get-Credential "scv_scanner@contoso.com"
+
+2. Eseguire il cmdlet Set-AIPAuthentication con il parametro *OnBeHalfOf* , specificando come valore la variabile appena creata. Ad esempio:
+    
+        Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
+
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per la guida del cmdlet quando ci si trova in una sessione `Get-Help <cmdlet name> -online`di PowerShell, digitare. Ad esempio: 

@@ -3,7 +3,7 @@ title: Configurazioni personalizzate-Azure Information Protection client per l'a
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/12/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1c8391bd4c7ab4cf57e4f0ddeeb6310259e7cceb
-ms.sourcegitcommit: af478aae5b093aa604e69b210de4094aa664f658
+ms.openlocfilehash: 004f37973d045bcf1a2809a226c150f5bc749681
+ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70923298"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71060086"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -31,7 +31,7 @@ Per queste impostazioni è necessario modificare il registro di sistema o specif
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Come configurare le impostazioni avanzate per il client usando Office 365 Centro sicurezza e conformità PowerShell
 
-Quando si usa Office 365 Centro sicurezza e conformità PowerShell, è possibile configurare le impostazioni avanzate che supportano le personalizzazioni per i criteri etichette e le etichette. Esempio:
+Quando si usa Office 365 Centro sicurezza e conformità PowerShell, è possibile configurare le impostazioni avanzate che supportano le personalizzazioni per i criteri etichette e le etichette. Ad esempio:
 
 - L'impostazione per visualizzare la barra di Information Protection nelle app di Office è un' ***impostazione avanzata dei criteri***per le etichette.
 - L'impostazione per specificare un colore dell'etichetta è un' ***impostazione avanzata etichetta***.
@@ -655,7 +655,7 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 
 Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-Quando si usa il client di assegnazione di etichette unificato Azure Information Protection nelle app di Office, Cerca informazioni riservate nei documenti quando vengono salvate per la prima volta. Se si specifica l'impostazione avanzata [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) **, i tipi di informazioni**sensibili predefiniti trovati verranno inviati a Azure Information Protection Analytics.
+Quando si usa il client di assegnazione di etichette unificato Azure Information Protection nelle app di Office, Cerca informazioni riservate nei documenti quando vengono salvate per la prima volta. Se si specifica l'impostazione avanzata [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) non è impostato su **false**, vengono inviati a Azure Information Protection Analytics tutti i tipi di informazioni riservate predefinite e personalizzati (solo client di anteprima) trovati.
 
 Per modificare questo comportamento in modo che i tipi di informazioni riservate individuate dal client di etichettatura unificata non vengano inviati a Azure Information Protection Analytics, immettere le stringhe seguenti per i criteri di etichetta selezionati:
 
@@ -797,7 +797,7 @@ Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced
 
 Potrebbero essere presenti alcuni scenari in cui si desidera applicare una o più proprietà personalizzate a un documento o a un messaggio di posta elettronica oltre ai metadati applicati da un'etichetta di riservatezza.
 
-Esempio:
+Ad esempio:
 
 - È in corso la [migrazione da un'altra soluzione di assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions), ad esempio le isole sicure. Per l'interoperabilità durante la migrazione, si desidera che le etichette di riservatezza applichino anche una proprietà personalizzata utilizzata dall'altra soluzione di assegnazione di etichette.
 
@@ -944,14 +944,15 @@ Impostare il livello di registrazione su uno dei valori seguenti:
 
 - **Errore**: solo errori.
 
-- **Info**: registrazione minima che non include ID evento.
+- **Avvisa**: Errori e avvisi.
+
+- **Info**: Registrazione minima, che non include gli ID evento (impostazione predefinita per lo scanner).
 
 - **Debug**: Informazioni complete.
 
 - **Traccia**: Registrazione dettagliata (impostazione predefinita per i client).
 
 Questa impostazione del registro di sistema non modifica le informazioni inviate a Azure Information Protection per la [creazione di report centrali](../reports-aip.md).
-
 
 ## <a name="next-steps"></a>Passaggi successivi
 Ora che è stato personalizzato il client di etichettatura Azure Information Protection Unified, vedere le risorse seguenti per altre informazioni che potrebbero essere necessarie per supportare questo client:

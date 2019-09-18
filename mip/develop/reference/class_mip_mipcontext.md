@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 08/27/2019
-ms.openlocfilehash: f6bc8d5a61ec259b85ae9e2479afeb9a2f00412f
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.openlocfilehash: 20ce55ec371582ee16c70f311e0fc38ffc79d2fc
+ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054571"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71070625"
 ---
 # <a name="class-mipmipcontext"></a>Classe MIP:: MipContext 
 MipContext rappresenta lo stato condiviso tra tutti i profili, i motori e i gestori.
@@ -25,7 +25,9 @@ public const ApplicationInfo& GetApplicationInfo() const  |  Ottenere la descriz
 public const std:: String & GetMipPath () const  |  Ottenere il percorso del file per log, cache e così via.
 public std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate ()  |  Ottiene l'implementazione del logger.
 public LoggerDelegate * GetRawLoggerDelegate ()  |  Ottiene l'implementazione del logger.
-  
+public static MIP_API std:: shared_ptr&lt;MipContext&gt; __CDECL MIP:: MipContext:: create | Creare una nuova istanza di MipContext da utilizzare durante l'inizializzazione dei profili.
+public static MIP_API std:: shared_ptr&lt;MipContext&gt; __CDECL MIP:: MipContext:: CreateWithCustomFeatureSettings | Creare una nuova istanza di MipContext con le impostazioni delle funzionalità personalizzate.
+
 ## <a name="members"></a>Members
   
 ### <a name="shutdown-function"></a>Funzione ShutDown
@@ -64,5 +66,15 @@ Ottiene l'implementazione del logger.
 ### <a name="getrawloggerdelegate-function"></a>GetRawLoggerDelegate (funzione)
 Ottiene l'implementazione del logger.
 
-  
 **Restituisce**: Logger
+
+### <a name="create-function"></a>Create (funzione)
+Creare una nuova istanza di MipContext da utilizzare durante l'inizializzazione dei profili.
+
+**Restituisce**: Istanza di MipContext.
+
+### <a name="createwithcustomfeaturesettings-function"></a>CreateWithCustomFeatureSettings (funzione)
+Creare una nuova istanza di MipContext con le impostazioni delle funzionalità personalizzate.
+
+**Restituisce**: Istanza di MipContext.
+

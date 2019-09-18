@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
 ms.date: 08/27/2019
-ms.openlocfilehash: 7f177685cfb3314f201c56de59f47ea00d154fba
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.openlocfilehash: cf3007c7d75b669de3f9952223f4f3920489251e
+ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057675"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71070586"
 ---
 # <a name="class-mipprotectiondescriptorbuilder"></a>Classe mip::ProtectionDescriptorBuilder 
 Costruisce un [ProtectionDescriptor](class_mip_protectiondescriptor.md) che descrive la protezione associata a una parte del contenuto.
@@ -28,7 +28,11 @@ public void SetReferrer(const std::string& uri)  |  Imposta l'indirizzo del refe
 public void SetEncryptedAppData (const std::\<map std:: String, std::\>String & valore)  |  Imposta i dati specifici dell'app da crittografare.
 public void SetSignedAppData (const std::\<map std:: String, std::\>String & valore)  |  Imposta i dati specifici dell'app da firmare.
 public virtual ~ProtectionDescriptorBuilder()  | _Non ancora documentato._
-  
+public static MIP_API std:: shared_ptr&lt;ProtectionDescriptorBuilder&gt; MIP::P rotectiondescriptorbuilder:: CreateFromUserRights | Crea un ProtectionDescriptorBuilder le cui autorizzazioni di accesso sono definite da utenti e diritti.
+public static MIP_API std:: shared_ptr&lt;ProtectionDescriptorBuilder&gt; MIP::P rotectiondescriptorbuilder:: CreateFromUserRoles | Crea un ProtectionDescriptorBuilder le cui autorizzazioni di accesso sono definite da utenti e ruoli.
+public static MIP_API std:: shared_ptr&lt;ProtectionDescriptorBuilder&gt; MIP::P rotectiondescriptorbuilder:: CreateFromTemplate | Crea un ProtectionDescriptorBuilder le cui autorizzazioni di accesso sono definite dal modello di protezione. 
+
+
 ## <a name="members"></a>Members
   
 ### <a name="build-function"></a>Funzione di compilazione
@@ -51,8 +55,6 @@ Imposta la descrizione dei criteri di protezione.
 Parametri:  
 * **valore**: Descrizione del criterio
 
-
-  
 ### <a name="setcontentvaliduntil-function"></a>SetContentValidUntil (funzione)
 Imposta la descrizione dell'ora di scadenza dei criteri di protezione.
 
@@ -67,8 +69,6 @@ Imposta un valore che indica se i criteri di protezione consentono l'accesso al 
 Parametri:  
 * **valore**: Se il criterio consente l'accesso al contenuto offline
 
-
-  
 ### <a name="setreferrer-function"></a>SetReferrer (funzione)
 Imposta l'indirizzo del referrer dei criteri di protezione.
 
@@ -98,3 +98,30 @@ Un'applicazione può specificare un dizionario di dati specifici dell'app che sa
   
 ### <a name="protectiondescriptorbuilder-function"></a>~ ProtectionDescriptorBuilder (funzione)
 _Non ancora documentato._
+
+### <a name="createfromuserrights-function"></a>CreateFromUserRights (funzione)
+Crea un ProtectionDescriptorBuilder le cui autorizzazioni di accesso sono definite da utenti e diritti.
+
+Parametri:
+* **usersAndRights**: Raccolta di mapping tra utenti e diritti.
+
+**Restituisce**: Nuova istanza di [ProtectionDescriptor](class_mip_protectiondescriptor.md) 
+
+### <a name="createfromuserroles-function"></a>CreateFromUserRoles (funzione)
+Crea un ProtectionDescriptorBuilder le cui autorizzazioni di accesso sono definite da utenti e ruoli.
+
+Parametri:
+* **usersAndRoles**: Raccolta di mapping tra utenti e ruoli.
+
+**Restituisce**: Crea un [ProtectionDescriptor](class_mip_protectiondescriptor.md) le cui autorizzazioni di accesso sono definite da utenti e ruoli.
+
+### <a name="createfromtemplate-function"></a>CreateFromTemplate (funzione)
+Crea un ProtectionDescriptorBuilder le cui autorizzazioni di accesso sono definite dal modello di protezione. 
+
+Parametri:
+* **TemplateID**: ID del modello di protezione.
+
+**Restituisce**: Nuova istanza di [ProtectionDescriptor](class_mip_protectiondescriptor.md) .
+
+
+

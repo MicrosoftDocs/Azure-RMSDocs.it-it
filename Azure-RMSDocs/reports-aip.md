@@ -3,7 +3,7 @@ title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
 author: cabailey
 ms.author: cabailey
-ms.date: 09/05/2019
+ms.date: 09/17/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9108dbe9712b57dd5bef59c5258dccccaf137d86
-ms.sourcegitcommit: 91982b08ba8ce734b6d82382db227fcaa2b15e56
+ms.openlocfilehash: e644dfbe89df354b1366164b6b23902ac48bb8f8
+ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70872360"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71060174"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -42,7 +42,7 @@ Usare Azure Information Protection Analytics per la creazione di report centrali
 I dati visualizzati sono aggregati da client e scanner di Azure Information Protection, da [client e servizi che supportano l'assegnazione di etichette unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)e dai log di [utilizzo della protezione](log-analyze-usage.md).
 
 > [!NOTE]
-> Attualmente, Azure Information Protection Analytics non include tipi di informazioni personalizzati per i client e i servizi che supportano l'assegnazione di etichette unificata.
+> Attualmente, fatta eccezione per la versione di anteprima del client Unified Labeling, Azure Information Protection Analytics non include i tipi di informazioni personalizzate per i client e i servizi che supportano l'assegnazione di etichette unificata.
 
 Ad esempio è possibile visualizzare quanto segue:
 
@@ -119,7 +119,7 @@ Per generare questi report, gli endpoint inviano i seguenti tipi di informazioni
 
 - [Tipi di informazioni riservate predefinite](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) rilevati nel contenuto.
     
-    Se si usano Azure Information Protection etichette con condizioni personalizzate, vengono inviati anche i nomi dei tipi di informazioni personalizzate. I tipi di informazioni riservate personalizzate create nel Centro sicurezza e conformità di Office 365, nel centro sicurezza Microsoft 365 o nel centro di conformità Microsoft 365 non vengono inviati.
+    Se si usano Azure Information Protection etichette con condizioni personalizzate, vengono inviati anche i nomi dei tipi di informazioni personalizzate. Fatta eccezione per la versione di anteprima del client Unified Labeling, i tipi di informazioni riservate personalizzate create nel centro di etichette non vengono inviati.
 
 - Versione del client di Azure Information Protection.
 
@@ -183,7 +183,7 @@ Dettagli:
     > [!NOTE] 
     > Se è stata eseguita la migrazione del tenant all'archivio di etichette unificato, non è possibile usare il ruolo di amministratore Azure Information Protection. [Altre informazioni](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
 
-2. È anche necessario uno dei [ruoli di Azure Log Analytics](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/manage-access#manage-accounts-and-users) o dei [ruoli di Azure](https://docs.microsoft.com/azure/role-based-access-control/overview#role-assignments) standard seguenti per accedere all'area di lavoro di Azure Log Analytics:
+2. È anche necessario uno dei [ruoli di Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) o dei [ruoli di Azure](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles) standard seguenti per accedere all'area di lavoro di Azure Log Analytics:
     
     - Per creare l'area di lavoro o per creare query personalizzate, uno dei ruoli seguenti:
     
