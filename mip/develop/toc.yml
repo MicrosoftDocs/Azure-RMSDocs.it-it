@@ -4,11 +4,13 @@
   items:
     - name: Informazioni su Microsoft Information Protection SDK
       href: overview.md
-- name: Guida introduttiva
+- name: Avvio rapido
   expanded: true
   items:
     - name: Installare e configurare MIP SDK
       href: setup-configure-mip.md
+    - name: Implementare il supporto di AD RMS con MIP SDK
+      href: quick-app-adrms.md
     - name: C++
       items:
         - name: Inizializzazione dell'applicazione (C++)
@@ -167,7 +169,7 @@
               href: reference/class_mip_deprecatedapierror.md
             - name: DocumentState
               href: reference/class_mip_documentstate.md
-            - name: Errore
+            - name: Errore di
               href: reference/class_mip_error.md
             - name: ExecutionState
               href: reference/class_mip_executionstate.md
@@ -207,7 +209,7 @@
               href: reference/class_mip_justificationrequirederror.md
             - name: JustifyAction
               href: reference/class_mip_justifyaction.md
-            - name: Label
+            - name: Etichetta
               href: reference/class_mip_label.md
             - name: LabelActionData
               href: reference/class_mip_labelactiondata.md
