@@ -4,7 +4,7 @@ description: Vedere le informazioni sulla versione del client per l'etichettatur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 09/19/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a71ed78a2fb528823adc4abaa5f2007256aca65c
-ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
+ms.openlocfilehash: 8934e23594ba51248e691ce2e52d69308cb320e5
+ms.sourcegitcommit: d5f046e34de0ad79b64d3f412999145b7d097e75
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71070644"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127547"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -75,7 +75,13 @@ Se si dispone di una versione 2 del client successiva a 2.2.21.0, si tratta di u
     
     - Come per lo scanner del client classico, lo scanner protegge i file di Office e i file PDF. Attualmente, non è possibile configurare altri tipi di file da proteggere con questa versione dello scanner.
     
+    - Problema noto: Le etichette nuove e rinominate non sono disponibili per la selezione come etichetta predefinita per il profilo dello scanner o le impostazioni del repository. Soluzioni alternative
+        - Per le nuove etichette: Nella portale di Azure [aggiungere l'etichetta](../configure-policy-add-remove-label.md) che si vuole usare per i criteri globali o un criterio con ambito.
+        - Per le etichette rinominate: Nella portale di Azure passare a **Azure Information Protection** > **Gestisci** > **etichetta unificata**e selezionare **pubblica**.
+    
     È possibile aggiornare gli scanner dal client di Azure Information Protection (versione classica). Dopo l'aggiornamento, che crea un nuovo database, lo scanner ripete l'analisi di tutti i file la prima volta che viene eseguito. Per istruzioni, vedere [aggiornamento dello scanner Azure Information Protection](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner) dalla guida dell'amministratore.
+    
+    Per ulteriori informazioni, vedere il post di Blog relativo all'annuncio: [Unified Labeling AIP scanner Preview introduce la scalabilità orizzontale e altro ancora.](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Unified-labeling-AIP-scanner-preview-brings-scaling-out-and-more/ba-p/862552)
 
 - Il cmdlet di PowerShell [set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) include nuovi parametri per le etichette dei [file in modo non interattivo](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)e una [nuova procedura per registrare un'app in Azure ad](clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client). Gli scenari di esempio includono lo scanner e gli script di PowerShell automatici per etichettare i documenti.
 
