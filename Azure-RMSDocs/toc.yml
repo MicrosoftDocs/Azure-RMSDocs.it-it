@@ -95,7 +95,7 @@
           items:
             - name: Panoramica
               href: plan-implement-tenant-key.md
-            - name: Prezzi e restrizioni della modalità BYOK
+            - name: Dettagli BYOK
               href: byok-price-restrictions.md
         - name: Preparazione di utenti e gruppi
           href: prepare.md
