@@ -1,10 +1,10 @@
 ---
-title: Prezzi e restrizioni della modalità BYOK - Azure Information Protection
-description: Informazioni sulle restrizioni quando si usano chiavi gestite dal cliente ("bring your own key" o BYOK) con Azure Information Protection.
+title: Dettagli BYOK-Azure Information Protection
+description: Comprendere i dettagli e le restrizioni quando si usano chiavi gestite dal cliente (note come "Bring your own key" o BYOK) con Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 06/18/2019
+manager: rkarlin
+ms.date: 09/22/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,33 +13,37 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c08223450ac3bfd866cddabc1ee78582cb56c1e1
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: cc78119434cc969a97d27e5aa964be7445963638
+ms.sourcegitcommit: 6641b39a788a5c1c62fb7d9286acc83b35c76f32
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68791964"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71198653"
 ---
-# <a name="byok-pricing-and-restrictions"></a>Prezzi e restrizioni della modalità BYOK
+# <a name="bring-your-own-key-byok-details-for-azure-information-protection"></a>Dettagli di Bring your own key (BYOK) per Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
-Le organizzazioni che hanno una sottoscrizione che include Azure Information Protection possono configurare il tenant di Azure Information Protection per usare una chiave gestita dal cliente (BYOK) e [registrarne l'utilizzo](./log-analyze-usage.md). 
+Le organizzazioni che dispongono di una sottoscrizione che include Azure Information Protection possono configurare il tenant Azure Information Protection per utilizzare una chiave gestita dal cliente e [registrarne l'utilizzo](log-analyze-usage.md). La configurazione della chiave gestita dal cliente è spesso definita "Bring your own key" o BYOK.
 
-La chiave deve essere archiviata in Azure Key Vault per il quale è necessaria una sottoscrizione di Azure. Per usare una chiave protetta dal modulo di protezione hardware, è necessario che il livello di servizio di Azure Key Vault sia Premium. L'uso di una chiave in Insieme di credenziali delle chiavi di Azure comporta l'addebito di una tariffa mensile. Per altre informazioni, vedere la [pagina dei prezzi di Azure Key Vault](https://azure.microsoft.com/pricing/details/key-vault/).
+Questa chiave gestita dal cliente deve essere archiviata in Azure Key Vault, che richiede una sottoscrizione di Azure. Per usare una chiave protetta dal modulo di protezione hardware, è necessario che il livello di servizio di Azure Key Vault sia Premium. L'uso di una chiave in Insieme di credenziali delle chiavi di Azure comporta l'addebito di una tariffa mensile. Per altre informazioni, vedere la [pagina dei prezzi di Azure Key Vault](https://azure.microsoft.com/pricing/details/key-vault/).
 
 Quando si usa l'Insieme di credenziali delle chiavi di Azure per la chiave del tenant Azure Information Protection, è consigliabile usare un insieme di credenziali delle chiavi dedicato per questa chiave per garantire che venga usata solo dal servizio Azure Rights Management. Questa configurazione assicura che le chiamate da altri servizi non comportino il superamento dei [limiti del servizio](/azure/key-vault/key-vault-service-limits) per l'insieme di credenziali delle chiavi che potrebbe limitare i tempi di risposta per il servizio di Azure Rights Management.  
 
 Inoltre, poiché ogni servizio che usa l'insieme di credenziali delle chiavi di Azure presenta in genere requisiti di gestione delle chiavi diversi, è consigliabile usare una sottoscrizione di Azure separata per questo insieme di credenziali delle chiavi per evitare errori di configurazione. 
 
-Tuttavia, se si vuole condividere una sottoscrizione di Azure con altri servizi che usano l'insieme di credenziali delle chiavi di Azure, assicurarsi che la sottoscrizione condivida un set di amministratori comune. In questo modo gli amministratori che usano la sottoscrizione avranno una buona conoscenza di tutte le chiavi cui hanno accesso limitando la possibilità di configurazioni errate. Usare ad esempio una sottoscrizione di Azure condivisa se gli amministratori per la chiave del tenant di Azure Information Protection sono le stesse persone che amministrano le chiavi per la chiave cliente di Office 365 e CRM Online. Se invece gli amministratori che gestiscono le chiavi per la chiave cliente o CRM Online non sono le stesse persone che amministrano la chiave del tenant di Azure Information Protection, è consigliabile non condividere la sottoscrizione di Azure per Azure Information Protection.
+Tuttavia, se si vuole condividere una sottoscrizione di Azure con altri servizi che usano l'insieme di credenziali delle chiavi di Azure, assicurarsi che la sottoscrizione condivida un set di amministratori comune. In questo modo gli amministratori che usano la sottoscrizione avranno una buona conoscenza di tutte le chiavi cui hanno accesso limitando la possibilità di configurazioni errate. 
+
+Usare ad esempio una sottoscrizione di Azure condivisa se gli amministratori per la chiave del tenant di Azure Information Protection sono le stesse persone che amministrano le chiavi per la chiave cliente di Office 365 e CRM Online. 
+
+In alternativa, se gli amministratori che gestiscono le chiavi per la chiave cliente o CRM online non sono le stesse persone che amministrano la chiave del tenant di Azure Information Protection, è consigliabile non condividere la sottoscrizione di Azure per Azure Information Protection.
 
 ## <a name="benefits-of-using-azure-key-vault"></a>Vantaggi dell'uso di Insieme di credenziali delle chiavi di Azure
 
-Oltre alla funzionalità di registrazione dell'utilizzo di Azure Information Protection, per una maggiore sicurezza è possibile creare riferimenti incrociati con la [registrazione di Insieme di credenziali delle chiavi di Azure](/azure/key-vault/key-vault-logging) per controllare in modo indipendente se la chiave viene usata solo dal servizio Azure Rights Management. Se necessario, è possibile revocare immediatamente l'accesso alla chiave rimuovendo le autorizzazioni per l'insieme di credenziali delle chiavi.
+Per una maggiore sicurezza, è possibile fare riferimento incrociato al Azure Information Protection la registrazione dell'utilizzo con [Azure Key Vault la registrazione](/azure/key-vault/key-vault-logging). I log Key Vault forniscono un metodo per monitorare in modo indipendente che solo il servizio Azure Rights Management usa la chiave. Se necessario, è possibile revocare immediatamente l'accesso alla chiave rimuovendo le autorizzazioni per l'insieme di credenziali delle chiavi.
 
-Altri vantaggi dell'uso di Insieme di credenziali delle chiavi di Azure per la chiave del tenant Azure Information Protection:
+Altri vantaggi dell'uso di Azure Key Vault per la chiave del tenant di Azure Information Protection includono:
 
 - Insieme di credenziali delle chiavi di Azure offre una soluzione di gestione centralizzata delle chiavi coerente per molti servizi basati su cloud o persino locali che usano la crittografia.
 
@@ -47,17 +51,17 @@ Altri vantaggi dell'uso di Insieme di credenziali delle chiavi di Azure per la c
 
 - Insieme di credenziali delle chiavi di Azure fornisce la separazione dei ruoli, una procedura di sicurezza consigliata di comprovata efficacia. Gli amministratori di Azure Information Protection possono concentrarsi sulla gestione della protezione e della classificazione dei dati, mentre gli amministratori di Insieme di credenziali delle chiavi di Azure possono concentrarsi sulla gestione delle chiavi di crittografia e dei criteri speciali che potrebbero essere necessari per la sicurezza o la conformità.
 
-- Alcune organizzazioni hanno restrizioni relative alla posizione della chiave master. Insieme di credenziali delle chiavi di Azure fornisce un alto livello di controllo sull'archiviazione della chiave master perché il servizio è disponibile in molte aree di Azure. Attualmente, è possibile scegliere tra 28 aree di Azure e si prevede di aumentare questo numero. Per altre informazioni, vedere la pagina [Prodotti disponibili in base all'area](https://azure.microsoft.com/regions/services/) nel sito di Azure.
+- Alcune organizzazioni hanno restrizioni relative alla posizione della chiave master. Insieme di credenziali delle chiavi di Azure fornisce un alto livello di controllo sull'archiviazione della chiave master perché il servizio è disponibile in molte aree di Azure. È possibile scegliere tra diverse aree di Azure ed è possibile che questo numero aumenti. Per altre informazioni, vedere la pagina [Prodotti disponibili in base all'area](https://azure.microsoft.com/regions/services/) nel sito di Azure.
 
 Oltre alla gestione delle chiavi, Insieme di credenziali delle chiavi di Azure offre agli amministratori della protezione la stessa esperienza di gestione per archiviare, accedere e gestire i certificati e i segreti, ad esempio le password, per altri servizi e applicazioni che usano la crittografia. 
 
 Per altre informazioni su Insieme di credenziali delle chiavi di Azure, vedere [Cos'è l'insieme di credenziali chiave di Azure?](/azure/key-vault/key-vault-whatis) e visitare il [blog del team di Insieme di credenziali delle chiavi di Azure](https://blogs.technet.microsoft.com/kv/) per le informazioni più recenti e per scoprire come viene usata questa tecnologia dagli altri servizi.
 
-## <a name="restrictions-when-using-byok"></a>Restrizioni per l'uso di BYOK
+## <a name="byok-support-for-services-and-clients"></a>Supporto di BYOK per servizi e client
 
-Il servizio BYOK e la registrazione dell'utilizzo possono essere usati facilmente con ogni applicazione che si integra con il servizio Azure Rights Management usato da Azure Information Protection, ad esempio servizi cloud come SharePoint Online, server locali che eseguono Exchange e SharePoint che usano il servizio Azure Rights Management tramite il connettore RMS e applicazioni client come Office 2019, Office 2016 e Office 2013. È possibile ottenere i log di utilizzo delle chiavi indipendentemente dall'applicazione che invia richieste al servizio Azure Rights Management.
+BYOK e la [registrazione dell'utilizzo](log-analyze-usage.md) interagiscono perfettamente con tutte le applicazioni che si integrano con il servizio Azure Rights Management usato da Azure Information Protection per proteggere i dati. ad esempio servizi cloud come SharePoint Online, server locali che eseguono Exchange e SharePoint che usano il servizio Azure Rights Management tramite il connettore RMS e applicazioni client come Office 2019, Office 2016 e Office 2013. 
 
-Se IRM di Exchange Online è stato precedentemente abilitato importando il dominio di pubblicazione trusted (TPD) da Azure RMS, seguire le istruzioni in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) (Impostare le nuove funzionalità di Office 365 Message Encryption basate su Azure Information Protection) per abilitare le nuove funzionalità di Exchange Online che supportano l'uso di BYOK per Azure Information Protection.
+È possibile ottenere i log di utilizzo delle chiavi, indipendentemente dall'applicazione che esegue richieste al servizio Rights Management di Azure.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
