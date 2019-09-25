@@ -4,28 +4,29 @@ description: Usare lo scanner di Azure Information Protection per trovare le inf
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 09/24/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 5b8ca224dff45fcb589a888ef1fa0728ccebe368
-ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
+ms.openlocfilehash: 4c8a22670a7e76a8e949b8cbdc0fcfb947282a7d
+ms.sourcegitcommit: 437143e1f7f33aba46ffcc3900c31a763a2105c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71060223"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227811"
 ---
-# <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Avvio rapido: Trovare le informazioni riservate presenti nei file archiviati in locale
+# <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Guida introduttiva: Trovare le informazioni riservate presenti nei file archiviati in locale
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
->
-> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 In questa guida introduttiva verrà installato e configurato lo scanner di Azure Information Protection per trovare le informazioni riservate presenti nei file archiviati in un archivio dati locale, ad esempio una cartella locale, una condivisione di rete o SharePoint Server.
 
-Nota: in questa guida di avvio rapido viene usata la versione disponibile a livello generale corrente dello scanner che usa il portale di Azure per la configurazione al posto dei cmdlet di PowerShell usati nelle versioni precedenti.
+> [!NOTE]
+> È possibile usare queste informazioni di avvio rapido con la versione disponibile a livello generale corrente del client di Azure Information Protection (classico) o la versione di anteprima corrente del client per l'etichettatura unificata di Azure Information Protection.
+>  
+> Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 
 È possibile completare questa configurazione in meno di 10 minuti.
 
@@ -37,9 +38,11 @@ Per completare questa guida introduttiva, è necessario:
     
     In assenza di una di queste sottoscrizioni, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.
 
-2. Aver installato il client Azure Information Protection (classico) nel computer in uso. 
+2. Nel computer è installato uno dei client di Azure Information Protection seguenti:
     
-    Per installare il client, andare all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricare **AzInfoProtection.exe** dalla pagina di Azure Information Protection.
+    - Client classico: Per installare questo client, passare all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricare **AzInfoProtection.exe** dalla pagina di Azure Information Protection.
+    
+    - Client per l'etichettatura unificata: Per installare il client, passare all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricare **AzInfoProtection_UL_Preview.exe** dalla pagina di Azure Information Protection.
     
 3. Aver installato anche SQL Server Express nel computer in uso.
     
@@ -55,7 +58,7 @@ Per un test iniziale per confermare il funzionamento dello scanner:
 
 1. Creare una cartella locale nel computer, ad esempio **TestScanner** nell'unità C locale.
 
-2. Creare e salvare un documento di Word nella cartella, con il testo **4242-4242-4242-4242** (un numero di carta di credito noto per il test).
+2. Creare e salvare un documento di Word in tale cartella, con il testo **Credit card: 4242-4242-4242-4242**.
 
 ## <a name="configure-a-profile-for-the-scanner"></a>Configurare un profilo per lo scanner
 
@@ -65,7 +68,7 @@ Prima di installare lo scanner, creare un profilo per lo scanner nel portale di 
     
     Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
     
-2. Individuare le opzioni del menu **Scanner** e selezionare **Profili**.
+2. Individuare le opzioni **Scanner** nel pannello a sinistra e selezionare **Profili**.
 
 3. Nel pannello **Azure Information Protection - Profili** selezionare **Aggiungi**:
     
@@ -89,7 +92,7 @@ Prima di installare lo scanner, creare un profilo per lo scanner nel portale di 
     
     ![Aggiungere il repository di dati per lo scanner di Azure Information Protection](./media/scanner-repository-add.png)
 
-8. Nel pannello **Repository** specificare la cartella locale creata nel primo passaggio, Ad esempio: `C:\TestScanner`
+8. Nel pannello **Repository** specificare la cartella locale creata nel primo passaggio, ad esempio `C:\TestScanner`
     
     Non modificare le altre impostazioni in questo pannello, ma mantenere **Impostazione predefinita del profilo**. Questo significa che il repository dei dati eredita le impostazioni dal profilo dello scanner. 
     
@@ -97,7 +100,7 @@ Prima di installare lo scanner, creare un profilo per lo scanner nel portale di 
 
 9. Tornare al pannello **Azure Information Protection - Profili**. Ora viene elencato il nome del profilo, con la colonna **PIANIFICA** che indica **Manuale** e la colonna **APPLICA** vuota. 
     
-    Nelle colonne **NODI** viene visualizzato **0** perché non è stato ancora installato lo scanner per questo profilo.
+    Nella colonna **NODI** viene visualizzato **0** perché non è stato ancora installato lo scanner per questo profilo.
 
 A questo punto si è pronti per installare lo scanner con il profilo di scanner appena creato.
 
@@ -125,7 +128,7 @@ A questo punto si è pronti per installare lo scanner con il profilo di scanner 
     
     Attendere fino a quando non sono visualizzati i valori per le colonne **RISULTATI DELL'ULTIMA ANALISI** e **ULTIMA ANALISI (ORA DI FINE)** .
     
-    - In alternativa controllare il log eventi locale **Applicazioni e servizi** di Windows, **Azure Information Protection**. Verificare l'ID evento informativo **911** per il processo **MSIP.Scanner**. La voce del log eventi include anche un riepilogo dei risultati dell'analisi.
+    In alternativa controllare il log eventi locale **Applicazioni e servizi** di Windows, **Azure Information Protection**. Verificare l'ID evento informativo **911** per il processo **MSIP.Scanner**. La voce del log eventi include anche un riepilogo dei risultati dell'analisi.
 
 ## <a name="see-detailed-results"></a>Visualizzare i risultati dettagliati
 
@@ -135,8 +138,7 @@ In Excel le prime due colonne visualizzano il repository dell'archivio dati e il
 
 ## <a name="scan-your-own-data"></a>Analizzare i dati personali
 
-1. Modificare il profilo dello scanner e aggiungere un nuovo repository di dati, questa volta specificando il proprio archivio dati locale da analizzare per trovare le informazioni riservate. 
-    
+1. Modificare il profilo dello scanner e aggiungere un nuovo repository di dati, questa volta specificando il proprio archivio dati locale da analizzare per trovare le informazioni riservate.     
     È possibile specificare una cartella locale, una condivisione di rete (percorso UNC) o un URL di SharePoint Server per un sito o una raccolta di SharePoint. 
     
     - Esempio per una cartella locale:
@@ -171,7 +173,9 @@ Riavviare quindi il computer.
 
 Questo comando non rimuove gli elementi seguenti, che è pertanto necessario rimuovere manualmente se non si vuole conservarli dopo questa guida introduttiva:
 
-- Il database SQL Server denominato **AIPScanner_\<profile>** che è stato creato eseguendo il cmdlet Install-AIPScanner durante l'installazione dello scanner Azure Information Protection. 
+- Il database di SQL Server creato eseguendo il cmdlet Install-AIPScanner durante l'installazione dello strumento di analisi di Azure Information Protection:
+    - Per il client classico: **AIPScanner_\<profilo>**
+    - Per il client per l'etichettatura unificata: **AIPScannerUL_\<nome_profilo>**
 
 - I report dello scanner presenti in %*localappdata*%\Microsoft\MSIP\Scanner\Reports.
 
@@ -182,8 +186,12 @@ Questo comando non rimuove gli elementi seguenti, che è pertanto necessario rim
 
 Questo avvio rapido include la configurazione minima, in modo da poter vedere rapidamente in che modo lo scanner può individuare le informazioni riservate in archivi dati locali. Se si è pronti per installare lo scanner in un ambiente di produzione, vedere [Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner.md).
 
-Se si vogliono classificare e proteggere i file contenenti informazioni riservate, è necessario configurare le etichette di Azure Information Protection per la classificazione automatica e la protezione:
+Se si vogliono classificare e proteggere i file contenenti informazioni sensibili, è necessario configurare le etichette per la classificazione automatica e la protezione:
 
-- [Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection](configure-policy-classification.md)
+- Per il client classico:
+    - [Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection](configure-policy-classification.md)
+    - [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md)
 
-- [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md)
+- Per il client per l'etichettatura unificata:
+    - [Applicare automaticamente un'etichetta di riservatezza al contenuto](https://docs.microsoft.com/Office365/SecurityCompliance/apply_sensitivity_label_automatically)
+    - [Limitare l'accesso al contenuto usando la crittografia nelle etichette di riservatezza](https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels)

@@ -4,7 +4,7 @@ description: Panoramica tecnica del servizio Azure Information Protection, che c
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/21/2019
+ms.date: 09/24/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: e89fcb967ea72bd61bf7c8ca73d72ccb08fdef47
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 0588efa277c75199afc2d357a8152257c120376c
+ms.sourcegitcommit: 437143e1f7f33aba46ffcc3900c31a763a2105c8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68792913"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227818"
 ---
 # <a name="what-is-azure-information-protection"></a>Che cos'è Azure Information Protection?
 
@@ -147,15 +147,15 @@ Risorse aggiuntive: [Informazioni e supporto per Azure Information Protection](i
 
 Microsoft Ignite 2018 a Orlando offre numerose sessioni contrassegnate per [Azure Information Protection](https://myignite.techcommunity.microsoft.com/sessions?q=Azure%2520Information%2520Protection). Tutte le sessioni sono state registrate, pertanto saranno accessibili anche a posteriori. Di seguito sono riportate le prime cinque sessioni che è consigliabile seguire:
 
-- [BRK2006 - Use Microsoft Information Protection (MIP) to help protect your sensitive data everywhere, throughout its lifecycle](https://myignite.techcommunity.microsoft.com/sessions/64297) (Usare Microsoft Information Protection (MIP) per la protezione dei dati sensibili ovunque si trovino, per l'intero ciclo di vita) - guardare il [video di YouTube](https://youtu.be/gmHVF-1cLXA)
+- [BRK2006 - Use Microsoft Information Protection (MIP) to help protect your sensitive data everywhere, throughout its lifecycle](https://myignite.techcommunity.microsoft.com/sessions/64297) (Usare Microsoft Information Protection (MIP) per la protezione dei dati sensibili ovunque si trovino, per l'intero ciclo di vita)
  
-- [BRK3002 - Understanding how Microsoft Information Protection capabilities work together to protect sensitive information across devices, apps, and services](https://myignite.techcommunity.microsoft.com/sessions/64299) (Informazioni sull'interazione tra le funzionalità di Microsoft Information Protection per la protezione di informazioni riservate tra dispositivi, app e servizi) - guardare il [video di YouTube](https://youtu.be/kL9Y7NGTyQQ)
+- [BRK3002 - Understanding how Microsoft Information Protection capabilities work together to protect sensitive information across devices, apps, and services](https://myignite.techcommunity.microsoft.com/sessions/64299) (Informazioni sull'interazione tra le funzionalità di Microsoft Information Protection per la protezione di informazioni sensibili tra dispositivi, app e servizi)
 
-- [BRK3009 - Accelerate deployment and adoption of Microsoft Information Protection solutions](https://myignite.techcommunity.microsoft.com/sessions/64283) (Accelerare la distribuzione e l'adozione di soluzioni basate su Microsoft Information Protection) - guardare il [video di YouTube](https://www.youtube.com/watch?v=JsCyIVyQJmE)
+- [BRK3009 - Accelerate deployment and adoption of Microsoft Information Protection solutions](https://myignite.techcommunity.microsoft.com/sessions/64283) (Accelerare la distribuzione e l'adozione di soluzioni basate su Microsoft Information Protection)
 
-- [BRK3397 - Protect and control your sensitive emails with Office 365 Message Encryption](https://myignite.techcommunity.microsoft.com/sessions/64327) (Proteggere e controllare i messaggi di posta elettronica riservati con Office 365 Message Encryption) - guardare il [video di YouTube](https://www.youtube.com/watch?v=Ld4b4pFua0g)
+- [BRK3397 - Protect and control your sensitive emails with Office 365 Message Encryption](https://myignite.techcommunity.microsoft.com/sessions/64327) (Proteggere e controllare i messaggi di posta elettronica sensibili con Office 365 Message Encryption)
 
-- [THR2003 - Data discovery, Usage reporting and analytics for all your data with Microsoft Information Protection](https://myignite.techcommunity.microsoft.com/sessions/64301) (Individuazione dati, report sull'uso e analisi per tutti i dati utente con Microsoft Information Protection) - guardare il [video di YouTube](https://www.youtube.com/watch?v=nzDIXd0XaeA)
+- [THR2003 - Data discovery, Usage reporting and analytics for all your data with Microsoft Information Protection](https://myignite.techcommunity.microsoft.com/sessions/64301) (Individuazione, report di utilizzo e analisi per tutti i dati utente con Microsoft Information Protection)
 
 Per tutti gli annunci rilasciati in occasione di Ignite, vedere il post di blog [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967) (Annuncio della disponibilità di funzionalità di protezione delle informazioni per la sicurezza dei dati sensibili).
 
