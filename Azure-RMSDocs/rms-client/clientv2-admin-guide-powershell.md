@@ -4,19 +4,19 @@ description: Istruzioni e informazioni per gli amministratori per la gestione de
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 09/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d14ab94a045a31ccf22b862d91c224246866d48d
-ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
+ms.openlocfilehash: b1db49d2a6033301b5922e66bc76be190b6162af
+ms.sourcegitcommit: 437143e1f7f33aba46ffcc3900c31a763a2105c8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71060042"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227784"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guida dell'amministratore: Uso di PowerShell con il client unificato Azure Information Protection
 
@@ -26,7 +26,7 @@ ms.locfileid: "71060042"
 
 Quando si installa il client Azure Information Protection Unified Labeling, i comandi di PowerShell vengono installati automaticamente. Ciò consente di gestire il client eseguendo i comandi che è possibile inserire negli script per l'automazione.
 
-I cmdlet vengono installati con il modulo di PowerShell **AzureInformationProtection**, che include i cmdlet per l'assegnazione di etichette. Ad esempio:
+I cmdlet vengono installati con il modulo di PowerShell **AzureInformationProtection**, che include i cmdlet per l'assegnazione di etichette. Esempio:
 
 |Cmdlet per le etichette|Esempio di utilizzo|
 |----------------|---------------|
@@ -109,11 +109,11 @@ Dopo aver eseguito questo cmdlet, è possibile eseguire i cmdlet di assegnazione
 
 4. Nel pannello **AIPOnBehalfOf** copiare il valore per l' **ID applicazione (client)** . Il valore è simile all'esempio seguente: `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. Questo valore viene usato per il parametro webappid quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
 
-5. Sempre nel pannello **AIPOnBehalfOf** selezionare **autenticazione**dal menu **Gestisci** .
+5. Sempre nel pannello **AIPOnBehalfOf** selezionare **Authentication**( **Gestisci** barra laterale).
 
 6. Nel pannello **AIPOnBehalfOf-Authentication** , nella sezione **Impostazioni avanzate** , selezionare la casella di controllo **token ID** , quindi selezionare **Salva**.
 
-7. Sempre nel pannello **AIPOnBehalfOf-Authentication** scegliere **certificati & segreti**dal menu **Gestisci** .
+7. Sempre nel pannello **AIPOnBehalfOf-Authentication** , dalla barra laterale **Gestisci** Selezionare **certificati & segreti**.
 
 8. Nel pannello **AIPOnBehalfOf-certificates & Secrets** , nella sezione **client Secrets** Selezionare **+ New client Secret**. 
 
@@ -126,7 +126,7 @@ Dopo aver eseguito questo cmdlet, è possibile eseguire i cmdlet di assegnazione
     
     È importante salvare la stringa, perché non verrà più visualizzata e non potrà essere recuperata. Come per le informazioni riservate utilizzate, archiviare il valore salvato in modo sicuro e limitarne l'accesso.
 
-10. Sempre nel pannello **AIPOnBehalfOf-certificates & Secrets** selezionare **expose an API**dal menu **Gestisci** .
+10. Sempre nel pannello **AIPOnBehalfOf-certificates & Secrets (** **Gestisci** barra laterale) selezionare **esporre un'API**.
 
 11. Nel pannello **AIPOnBehalfOf-esporre un'API** selezionare **imposta** per l'opzione **URI ID applicazione** e nel valore **URI ID applicazione** , modificare **API** in **http**. Questa stringa ha un aspetto simile all'esempio seguente `http://d244e75e-870b-4491-b70d-65534953099e`:. 
     
@@ -156,13 +156,13 @@ Dopo aver eseguito questo cmdlet, è possibile eseguire i cmdlet di assegnazione
     
     Questo valore viene usato per il parametro NativeAppId quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
 
-18. Sempre nel pannello **AIPClient** selezionare **autenticazione**dal menu **Gestisci** .
+18. Sempre nel pannello **AIPClient** selezionare **Authentication**( **Gestisci** barra laterale).
 
 19. Nel pannello **AIPClient-Authentication** specificare gli elementi seguenti e quindi selezionare Save ( **Salva**):
     - Nella sezione **Impostazioni avanzate** selezionare **token ID**.
     - Nella sezione **tipo di client predefinito** selezionare **Sì**.
 
-20. Sempre nel pannello **AIPClient-Authentication** scegliere **autorizzazioni API**dal menu Gestisci.
+20. Sempre nel pannello **AIPClient-Authentication** , dalla barra laterale **Gestisci** Selezionare **autorizzazioni API**.
 
 21. Nel pannello **AIPClient-Permissions (autorizzazioni** ) selezionare **+ Aggiungi un'autorizzazione**.
 
@@ -180,11 +180,11 @@ Eseguire questo comando nel contesto dell'account per l'assegnazione di etichett
 
 La prima volta che si esegue questo comando viene richiesto di eseguire l'accesso, creando e archiviando in modo sicuro il token di accesso per l'account in %localappdata%\Microsoft\MSIP. Dopo questo accesso iniziale è possibile assegnare etichette e proteggere i file in modalità non interattiva nel computer. Tuttavia, se si usa un account del servizio per etichettare e proteggere i file e questo account del servizio non è in grado di eseguire l'accesso in modo interattivo, usare il parametro *OnBehalfOf* con set-AIPAuthentication:
 
-1. Creare una variabile per archiviare le credenziali di un account Active Directory a cui viene concessa l'assegnazione a destra dell'utente per l'accesso interattivo. Ad esempio:
+1. Creare una variabile per archiviare le credenziali di un account Active Directory a cui viene concessa l'assegnazione a destra dell'utente per l'accesso interattivo. Esempio:
     
         $pscreds = Get-Credential "scv_scanner@contoso.com"
 
-2. Eseguire il cmdlet Set-AIPAuthentication con il parametro *OnBeHalfOf* , specificando come valore la variabile appena creata. Ad esempio:
+2. Eseguire il cmdlet Set-AIPAuthentication con il parametro *OnBeHalfOf* , specificando come valore la variabile appena creata. Esempio:
     
         Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f" -OnBehalfOf $pscreds
 
@@ -211,7 +211,7 @@ Per questa versione del client, è necessario creare una nuova registrazione del
 
 4. Nel pannello **AIPv2OnBehalfOf** copiare il valore per l' **ID applicazione (client)** . Il valore è simile all'esempio seguente: `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. Questo valore viene usato per il parametro *AppID* quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
 
-5. Sempre nel pannello **AIPv2OnBehalfOf** scegliere **certificati & segreti**dal menu **Gestisci** .
+5. Sempre nel pannello **AIPv2OnBehalfOf** , nella barra laterale **Gestisci** Selezionare **certificati & segreti**.
 
 6. Nel pannello **AIPv2OnBehalfOf-certificates & Secrets** , nella sezione **client Secrets** Selezionare **+ New client Secret**.
 
@@ -224,23 +224,35 @@ Per questa versione del client, è necessario creare una nuova registrazione del
     
     È importante salvare la stringa, perché non verrà più visualizzata e non potrà essere recuperata. Come per le informazioni riservate utilizzate, archiviare il valore salvato in modo sicuro e limitarne l'accesso.
 
-9. Scegliere **autorizzazioni API**dal menu **Gestisci** .
+9. Da **Gestisci** nella barra laterale selezionare **autorizzazioni**per le API.
 
 10. Nel pannello **autorizzazioni AIPv2OnBehalfOf-API** selezionare **+ Aggiungi un'autorizzazione**.
 
-11. Nel pannello **autorizzazioni richiesta API** selezionare **Servizi Rights Management di Azure** e quando viene richiesto il tipo di autorizzazioni richieste dall'applicazione, selezionare **Autorizzazioni applicazione**.
+11. Nel pannello **autorizzazioni API richiesta** verificare di essere nella scheda **Microsoft Apis** e selezionare **Azure Rights Management Services**. Quando viene richiesto il tipo di autorizzazioni richieste dall'applicazione, selezionare **Autorizzazioni applicazione**.
 
 12. Per **autorizzazioni SELECT**, espandere **contenuto** e selezionare gli elementi seguenti:
     
     -  **Content. DelegatedWriter** (always required)
+    -  **Content. superuser** (obbligatorio se è necessaria la [funzionalità per utenti con privilegi avanzati](../configure-super-users.md) )
     -  **Content. Writer** (always required)
-    -  **Content. superuser** (obbligatorio se è necessaria la [funzionalità per utenti con privilegi avanzati](../configure-super-users.md) ) 
     
     La funzionalità per utenti con privilegi avanzati consente all'account di decrittografare sempre il contenuto. Ad esempio, per riproteggere i file e controllare i file protetti da altri utenti.
 
 13. Selezionare **Aggiungi autorizzazioni**.
 
-14. Tornare al pannello **autorizzazioni AIPv2OnBehalfOf-API** , selezionare **concedi il consenso dell'amministratore \<per *il nome* > del tenant** e selezionare **Sì** per la richiesta di conferma.
+14. Tornare al pannello **autorizzazioni AIPv2OnBehalfOf-API** , selezionare **+ Aggiungi nuovamente un'autorizzazione** .
+
+15. Nel pannello **Request AIP Permissions (autorizzazioni AIP** ) selezionare le **API utilizzate dall'organizzazione**e cercare **Microsoft Information Protection Sync Service**.
+
+16. Nel pannello **autorizzazioni richiesta API** selezionare autorizzazioni per l' **applicazione**.
+
+17. Per **autorizzazioni SELECT**, espandere **UnifiedPolicy** e selezionare le opzioni seguenti:
+    
+    -  **UnifiedPolicy. tenant. Read**
+
+18. Selezionare **Aggiungi autorizzazioni**.
+
+19. Tornare al pannello autorizzazioni API, selezionare **concedi il consenso dell'amministratore \<per *il nome* > del tenant** e selezionare **Sì** per la richiesta di conferma.
 
 A questo punto è stata completata la registrazione di questa app con un segreto, si è pronti per eseguire [set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con i parametri *AppID*e *AppSecret*. Inoltre, sarà necessario l'ID tenant. 
 
@@ -257,13 +269,13 @@ La prima volta che si esegue questo comando viene richiesto di eseguire l'access
     
         $pscreds = Get-Credential "scv_scanner@contoso.com"
 
-2. Eseguire il cmdlet Set-AIPAuthentication con il parametro *OnBeHalfOf* , specificando come valore la variabile appena creata. Ad esempio:
+2. Eseguire il cmdlet Set-AIPAuthentication con il parametro *OnBeHalfOf* , specificando come valore la variabile appena creata. Esempio:
     
         Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
 
 
 ## <a name="next-steps"></a>Passaggi successivi
-Per la guida del cmdlet quando ci si trova in una sessione `Get-Help <cmdlet name> -online`di PowerShell, digitare. Ad esempio: 
+Per la guida del cmdlet quando ci si trova in una sessione `Get-Help <cmdlet name> -online`di PowerShell, digitare. Esempio: 
 
     Get-Help Set-AIPFileLabel -online
 
