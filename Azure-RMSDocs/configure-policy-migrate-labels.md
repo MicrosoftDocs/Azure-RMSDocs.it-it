@@ -4,7 +4,7 @@ description: Eseguire la migrazione di Azure Information Protection etichette a 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/09/2019
+ms.date: 09/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1cdeb5fec9ea57decf319b9d65104a5a334a0585
-ms.sourcegitcommit: 32ec752f3bda160011c48c82e24f31ffffe5d6ac
+ms.openlocfilehash: 6fa8adbc3e9c5cc31c7b752ec0e94eb1346bb7d0
+ms.sourcegitcommit: bd986d69729deb657bb3449461f5aacfa0851a56
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70888082"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71301125"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Come eseguire la migrazione di etichette di Azure Information Protection a etichette di riservatezza unificate
 
@@ -91,10 +91,10 @@ Azure Information Protection client (versione classica) possono usare tutte le i
 |Stato abilitato o disabilitato<br /><br />Questo stato non è sincronizzato con i centri di amministrazione |Non applicabile|Equivale a se l'etichetta è pubblicata o no. |
 |Colore dell'etichetta selezionato dall'elenco o specificato con il codice RGB |Yes|Nessuna opzione di configurazione per i colori dell'etichetta. È invece possibile configurare i colori delle etichette nell'portale di Azure o usare [PowerShell](./rms-client/clientv2-admin-guide-customizations.md#specify-a-color-for-the-label).|
 |Protezione basata sul cloud o protezione basata su HYOK usando un modello predefinito |No|Nessuna opzione di configurazione per i modelli predefiniti. Non è consigliabile pubblicare un'etichetta con questa configurazione.|
-|Protezione basata sul cloud che usa autorizzazioni definite dall'utente in Word, Excel e PowerPoint |Sì|I centri di amministrazione dispongono ora di un'opzione di configurazione per le autorizzazioni definite dall'utente. <br /><br /> Se si pubblica un'etichetta con questa configurazione, verificare i risultati dell'applicazione dell'etichetta nella [tabella seguente](#comparing-the-behavior-of-protection-settings-for-a-label).|
+|Protezione basata sul cloud che usa autorizzazioni definite dall'utente in Word, Excel e PowerPoint |Yes|I centri di amministrazione dispongono ora di un'opzione di configurazione per le autorizzazioni definite dall'utente. <br /><br /> Se si pubblica un'etichetta con questa configurazione, verificare i risultati dell'applicazione dell'etichetta nella [tabella seguente](#comparing-the-behavior-of-protection-settings-for-a-label).|
 |Protezione basata su HYOK che usa autorizzazioni definite dall'utente per Outlook (Non inoltrare) |No|Nessuna opzione di configurazione per HYOK. Non è consigliabile pubblicare un'etichetta con questa configurazione. In caso contrario i risultati ottenuti applicando l'etichetta sono elencati nella [tabella seguente](#comparing-the-behavior-of-protection-settings-for-a-label).|
-|Rimuovere la protezione |No|Nessuna opzione di configurazione per rimuovere la protezione. Non è consigliabile pubblicare un'etichetta con questa configurazione.<br /><br /> Se si pubblica un'etichetta con questa configurazione, quando viene applicata, la protezione verrà rimossa se è stata precedentemente applicata da un'etichetta. La protezione verrà mantenuta se in precedenza era stata applicata in modo indipendente da un'etichetta.|
-|Tipi di carattere personalizzato e colore del tipo di carattere personalizzato tramite RGB per i contrassegni visivi (intestazione, piè di pagina, filigrana)|Sì|La configurazione per i contrassegni visivi è limitata a un elenco di colori e dimensioni dei caratteri. È possibile pubblicare questa etichetta senza modifiche benché non sia possibile visualizzare i valori configurati nei centri di amministrazione. <br /><br />Per modificare queste opzioni è possibile usare il portale di Azure. Per semplificare l'amministrazione, tuttavia, provare a cambiare il colore impostando una delle opzioni elencate nei centri di amministrazione.|
+|Rimuovere la protezione |No|Nessuna opzione di configurazione per rimuovere la protezione. Non è consigliabile pubblicare un'etichetta con questa configurazione.<br /><br /> Se si pubblica un'etichetta con questa configurazione, quando viene applicata, la protezione viene sempre rimossa, indipendentemente dal fatto che la protezione sia stata precedentemente applicata da un'etichetta o da un'etichetta.|
+|Tipi di carattere personalizzato e colore del tipo di carattere personalizzato tramite RGB per i contrassegni visivi (intestazione, piè di pagina, filigrana)|Yes|La configurazione per i contrassegni visivi è limitata a un elenco di colori e dimensioni dei caratteri. È possibile pubblicare questa etichetta senza modifiche benché non sia possibile visualizzare i valori configurati nei centri di amministrazione. <br /><br />Per modificare queste opzioni è possibile usare il portale di Azure. Per semplificare l'amministrazione, tuttavia, provare a cambiare il colore impostando una delle opzioni elencate nei centri di amministrazione.|
 |Variabili nei contrassegni visivi (intestazione, piè di pagina, filigrana)|No|Se si pubblica questa etichetta senza modifiche, le variabili vengono visualizzate come testo nei client anziché visualizzare i valori dinamici. Prima di pubblicare l'etichetta, modificare le stringhe per rimuovere le variabili.|
 |Contrassegni visivi per app|No|Se si pubblica questa etichetta senza modifiche, le variabili delle app vengono visualizzate come testo nei client in tutte le app anziché visualizzare le stringhe di testo in app selezionate. Pubblicare questa etichetta solo se è adatta per tutte le app e modificare le stringhe per rimuovere le variabili delle app.|
 |Condizioni e impostazioni associate <br /><br /> include l'assegnazione di etichette automatica e consigliata e le descrizioni comando corrispondenti|Non applicabile|Riconfigurare le condizioni tramite l'applicazione automatica di etichette come configurazione separata dalle impostazioni dell'etichetta.|

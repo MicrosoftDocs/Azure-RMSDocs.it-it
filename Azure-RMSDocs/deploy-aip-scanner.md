@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire la versione corr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 09/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1047cd9ea06c74c5b1508fc1c7701cb01c634871
-ms.sourcegitcommit: 908ca5782fe86e88502dccbd0e82fa18db9b96ad
+ms.openlocfilehash: b6874bfc2e3431779891262e33e542058d4f2cf4
+ms.sourcegitcommit: bd986d69729deb657bb3449461f5aacfa0851a56
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71060272"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71301166"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -28,7 +28,7 @@ ms.locfileid: "71060272"
 > 
 > Se in precedenza è stato installato lo scanner e si vuole aggiornarlo, usare le istruzioni di aggiornamento seguenti e quindi usare le istruzioni in questa pagina, omettendo il passaggio per installare lo scanner:
 > - Per il client classico: [Aggiornamento dello scanner Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)
-> - Per il client Unified Labeling: [Aggiornamento dello scanner Azure Information Protection](./rms-client/clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner)
+> - Per il client per l'etichettatura unificata: [Aggiornamento dello scanner Azure Information Protection](./rms-client/clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner)
 > 
 > Se si dispone di una versione dello scanner precedente a 1.48.204.0 e non si è pronti per aggiornarla, vedere [distribuzione di versioni precedenti dello scanner Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner-previousversions.md).
 
@@ -53,7 +53,7 @@ Una volta configurate le etichette che applicano la classificazione automatica, 
 
 Lo scanner può controllare tutti i file indicizzabili da Windows, tramite IFilter installati nel computer. In seguito, per stabilire se i file devono essere etichettati, lo scanner usa il rilevamento di modelli e di tipi di dati sensibili della prevenzione della perdita di dati (DLP) predefiniti in Office 365 o i modelli regex di Office 365. Poiché lo scanner usa il client di Azure Information Protection (il client classico o Unified Labeling client), lo scanner è in grado di classificare e proteggere gli stessi tipi di file:
 
-- Il client classico: [Tipi di file supportati dal client Azure Information Protection](./rms-client/client-admin-guide-file-types.md)
+- Client classico: [Tipi di file supportati dal client Azure Information Protection](./rms-client/client-admin-guide-file-types.md)
 
 - Il client di etichettatura unificata: [Tipi di file supportati dal client di Azure Information Protection Unified Labeling](./rms-client/clientv2-admin-guide-file-types.md)
 
@@ -72,7 +72,7 @@ Prima di installare lo scanner di Azure Information Protection, verificare che i
 |Computer Windows Server per eseguire il servizio scanner:<br /><br />- 4 processori core<br /><br />- 8 GB di RAM<br /><br />- 10 GB di spazio libero (media) per i file temporanei|Windows Server 2019, Windows Server 2016 o Windows Server 2012 R2. <br /><br />Nota: per scopi di test o valutazione in un ambiente non di produzione, è possibile usare un sistema operativo client Windows [supportato dal client di Azure Information Protection](requirements.md#client-devices).<br /><br />Il computer può essere un computer fisico o virtuale con una connessione di rete veloce e affidabile agli archivi dati da analizzare.<br /><br /> Lo scanner richiede spazio su disco sufficiente a creare i file temporanei per ogni file analizzato, quattro file per core. Lo spazio su disco consigliato di 10 GB consente a 4 processori core di analizzare 16 file, ognuno con una dimensione di 625 MB. <br /><br /> Se la connettività Internet non è possibile a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations). In caso contrario, assicurarsi che il computer abbia la connettività Internet che consente gli URL seguenti tramite HTTPS (porta 443):<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com <br /> \*. protection.outlook.com (solo scanner dal client Unified Labeling)|
 |Account del servizio per eseguire il servizio scanner|Oltre a eseguire il servizio scanner nel computer Windows Server, questo account di Windows esegue l'autenticazione in Azure AD e scarica i criteri di Azure Information Protection. Questo account deve essere un account Active Directory ed essere sincronizzato con Azure AD. Se non è possibile sincronizzare questo account a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).<br /><br />I requisiti di questo account del servizio sono i seguenti:<br /><br />Assegnazione dei diritti utente per l'- **accesso locale**. Questo diritto è richiesto per l'installazione e la configurazione dello scanner, ma non per il funzionamento. È necessario concedere questo diritto all'account del servizio, ma è possibile rimuoverlo dopo avere verificato che lo scanner è in grado di individuare, classificare e proteggere i file. Se non è possibile concedere questo diritto neppure per un breve periodo a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).<br /><br />Assegnazione dei diritti utente per l'- **accesso come servizio**. Questo diritto viene concesso automaticamente all'account del servizio durante l'installazione dello scanner ed è richiesto per l'installazione, la configurazione e il funzionamento dello scanner. <br /><br />- Autorizzazioni per i repository di dati: è necessario concedere le autorizzazioni per la **lettura** e la **scrittura** per analizzare i file e quindi applicare la classificazione e la protezione ai file che soddisfano le condizioni indicate nei criteri di Azure Information Protection. Per eseguire lo scanner solo in modalità di individuazione, è sufficiente l'autorizzazione per la **lettura**.<br /><br />- Per le etichette che riproteggono o rimuovono la protezione: per garantire che lo scanner abbia sempre accesso ai file protetti, trasformare l'account in un [utente con privilegi avanzati](configure-super-users.md) per il servizio Azure Rights Management e verificare che sia abilitata la funzionalità per utenti con privilegi avanzati. Per altre informazioni sui requisiti dell'account per l'applicazione della protezione, vedere [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md). Se inoltre sono stati implementati i [controlli di onboarding](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) per una distribuzione a fasi, verificare che questo account sia incluso nei controlli di onboarding configurati.|
 |SQL Server per archiviare la configurazione dello scanner:<br /><br />- Istanza locale o remota<br /><br />- Ruolo Sysadmin per installare lo scanner|SQL Server 2012 è la versione minima per le edizioni seguenti:<br /><br />- SQL Server Enterprise<br /><br />- SQL Server Standard<br /><br />- SQL Server Express<br /><br />Lo scanner di Azure Information Protection supporta più database di configurazione nella stessa istanza di SQL Server quando si specifica un nome di profilo personalizzato per lo scanner. Quando si usa la versione di anteprima dello scanner dal client Unified Labeling, più scanner possono condividere lo stesso database di configurazione.<br /><br />Quando si installa lo scanner e l'account ha il ruolo Sysadmin, il processo di installazione crea automaticamente il database di configurazione dello scanner e concede il ruolo db_owner necessario all'account del servizio che esegue lo scanner. Se non è possibile ricevere il ruolo Sysadmin o se l'organizzazione richiede che i database vengano creati e configurati manualmente, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).<br /><br />Le dimensioni del database di configurazione varieranno per ogni distribuzione, ma è consigliabile allocare 500 MB ogni 1.000.000 file da analizzare. |
-|Uno dei seguenti Azure Information Protection client viene installato nel computer Windows Server <br /><br /> -Client classico <br /><br /> -Unified Labeling client-versione di anteprima |È necessario installare il client completo per lo scanner. Non installare solo il modulo PowerShell del client.<br /><br />Per istruzioni sull'installazione e l'aggiornamento: <br /> - [Client classico](./rms-client/client-admin-guide.md)<br /> - [Client di etichetta unificato](./rms-client/clientv2-admin-guide.md#installing-the-azure-information-protection-scanner) |
+|Uno dei seguenti Azure Information Protection client viene installato nel computer Windows Server <br /><br /> -Client classico <br /><br /> -Client con etichetta unificata ([solo versione di anteprima](./rms-client/unifiedlabelingclient-version-release-history.md#versions-later-than-22210)) |È necessario installare il client completo per lo scanner. Non installare solo il modulo PowerShell del client.<br /><br />Per istruzioni sull'installazione e l'aggiornamento: <br /> - [Client classico](./rms-client/client-admin-guide.md)<br /> - [Client di etichetta unificato](./rms-client/clientv2-admin-guide.md#installing-the-azure-information-protection-scanner) |
 |Etichette configurate che applicano la classificazione automatica e, facoltativamente, la protezione|Per istruzioni per il client classico per configurare un'etichetta per le condizioni e per applicare la protezione:<br /> - [Come configurare le condizioni per la classificazione automatica e consigliata](configure-policy-classification.md)<br /> - [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md) <br /><br />Suggerimento: è possibile usare le istruzioni in questa [esercitazione](infoprotect-quick-start-tutorial.md) per testare lo scanner con un'etichetta che esegue la ricerca di numeri di carta di credito in un documento di Word preparato. Tuttavia, sarà necessario modificare la configurazione dell'etichetta in modo che l'opzione **Specificare se l'etichetta viene applicata automaticamente o se viene consigliata all'utente** sia impostata su **Automatico** anziché su **Consigliato**. Rimuovere quindi l'etichetta dal documento (se applicata) e copiare il file in un repository di dati per lo scanner. Per eseguire test velocemente, è possibile copiare il file in una cartella locale nel computer dello scanner.<br /><br /> Per istruzioni sul client Unified Labeling per configurare un'etichetta per l'etichettatura automatica e per applicare la protezione:<br /> - [Applicare automaticamente un'etichetta di riservatezza al contenuto](https://docs.microsoft.com/Office365/SecurityCompliance/apply_sensitivity_label_automatically)<br /> - [Limitare l'accesso al contenuto usando la crittografia in etichette di riservatezza](https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels)<br /><br /> nonostante sia possibile eseguire lo scanner anche se non sono state configurate etichette che applicano la classificazione automatica, questo scenario non è illustrato in queste istruzioni. [Altre informazioni](#using-the-scanner-with-alternative-configurations)|
 |Per le cartelle e le raccolte documenti di SharePoint da analizzare:<br /><br />- SharePoint 2019<br /><br />- SharePoint 2016<br /><br />- SharePoint 2013<br /><br />- SharePoint 2010|Altre versioni di SharePoint non sono supportate per lo scanner.<br /><br />Quando si usa il [controllo delle versioni](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning), lo scanner controlla ed etichetta l'ultima versione pubblicata. Se le etichette dello scanner sono obbligatorie per un file e l' [approvazione del contenuto](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) , è necessario approvare il file con etichetta in modo che sia disponibile per gli utenti. <br /><br />Per le farm SharePoint di grandi dimensioni, controllare se è necessario aumentare la soglia della visualizzazione elenco (per impostazione predefinita, 5.000) per lo scanner al fine di accedere a tutti i file. Per altre informazioni, vedere la documentazione di SharePoint seguente: [Gestire elenchi e raccolte di grandi dimensioni in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server)|
 |Per i documenti di Office da analizzare:<br /><br />- Formati di file 97-2003 e formati Office Open XML per Word, Excel e PowerPoint|Per ulteriori informazioni sui tipi di file supportati dallo scanner per questi formati di file, vedere le seguenti informazioni: <br />-Client classico: [Tipi di file supportati dal client Azure Information Protection](./rms-client/client-admin-guide-file-types.md)<br />-Client con etichetta unificata: [Tipi di file supportati dal client di Azure Information Protection Unified Labeling](./rms-client/clientv2-admin-guide-file-types.md)|
@@ -153,7 +153,7 @@ Se i criteri dell'organizzazione proibiscono il diritto di **accesso locale** pe
 
 - Per il client classico: Vedere [specificare e usare il parametro token per set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) dalla guida dell'amministratore di tale client.
 
-- Per il client Unified Labeling: Usare il parametro *OnBehalfOf* con set-AIPAuthentication, come descritto alla fine di [etichettare i file in modo non interattivo per Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) nella Guida dell'amministratore del client.
+- Per il client per l'etichettatura unificata: Usare il parametro *OnBehalfOf* con set-AIPAuthentication, come descritto alla fine di [etichettare i file in modo non interattivo per Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) nella Guida dell'amministratore del client.
 
 #### <a name="restriction-the-scanner-service-account-cannot-be-synchronized-to-azure-active-directory-but-the-server-has-internet-connectivity"></a>Restrizione: l'account del servizio scanner non può essere sincronizzato con Azure Active Directory, ma il server ha la connettività Internet
 
@@ -163,7 +163,7 @@ Se i criteri dell'organizzazione proibiscono il diritto di **accesso locale** pe
 
 - Per l'account Azure Active Directory, usare le istruzioni seguenti:
     - Per il client classico: Vedere [specificare e usare il parametro token per set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) dalla guida dell'amministratore di tale client.
-    - Per il client Unified Labeling: Usare il parametro *OnBehalfOf* con set-AIPAuthentication, come descritto alla fine di [etichettare i file in modo non interattivo per Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) nella Guida dell'amministratore del client.
+    - Per il client per l'etichettatura unificata: Usare il parametro *OnBehalfOf* con set-AIPAuthentication, come descritto alla fine di [etichettare i file in modo non interattivo per Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) nella Guida dell'amministratore del client.
 
 ## <a name="configure-the-scanner-in-the-azure-portal"></a>Configurare lo scanner nel portale di Azure
 
@@ -282,7 +282,7 @@ Il token di Azure AD consente all'account del servizio scanner di eseguire l'aut
     
     - Per il client classico: [Come assegnare etichette ai file in modo non interattivo per Azure Information Protection](./rms-client/client-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
     
-    - Per il client Unified Labeling: [Come assegnare etichette ai file in modo non interattivo per Azure Information Protection](./rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
+    - Per il client per l'etichettatura unificata: [Come assegnare etichette ai file in modo non interattivo per Azure Information Protection](./rms-client/clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)
         > [!NOTE]
         > Assicurarsi di seguire il [secondo set di istruzioni](./rms-client/clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client) nuove per il client di anteprima.
 
@@ -306,7 +306,7 @@ Il token di Azure AD consente all'account del servizio scanner di eseguire l'aut
     
     -  Per il client classico: Vedere [specificare e usare il parametro token per set-AIPAuthentication](./rms-client/client-admin-guide-powershell.md#specify-and-use-the-token-parameter-for-set-aipauthentication) dalla guida dell'amministratore di tale client.
     
-    -  Per il client Unified Labeling: Usare il parametro *OnBehalfOf* con set-AIPAuthentication, come descritto alla fine di [etichettare i file in modo non interattivo per Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) dalla guida dell'amministratore di tale client.
+    -  Per il client per l'etichettatura unificata: Usare il parametro *OnBehalfOf* con set-AIPAuthentication, come descritto alla fine di [etichettare i file in modo non interattivo per Azure Information Protection](./rms-client//clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) dalla guida dell'amministratore di tale client.
 
 Lo scanner dispone ora di un token per l'autenticazione a Azure AD, valido per un anno, due anni o nessuna scadenza, in base alla configurazione dell' **app Web/API** (client classico) o al segreto client (Unified Labeling client) nel Azure ad. Quando il token scade, è necessario ripetere i passaggi 1 e 2.
 
@@ -384,7 +384,7 @@ Lo scanner ignora automaticamente i file esclusi dalla classificazione e dalla p
 
 - Per il client classico: [Tipi di file esclusi dalla classificazione e dalla protezione](./rms-client/client-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
 
-- Per il client Unified Labeling: [Tipi di file esclusi dalla classificazione e dalla protezione](./rms-client/clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
+- Per il client per l'etichettatura unificata: [Tipi di file esclusi dalla classificazione e dalla protezione](./rms-client/clientv2-admin-guide-file-types.md#file-types-that-are-excluded-from-classification-and-protection)
 
 È possibile modificare questo comportamento definendo un elenco di tipi di file da includere o escludere dall'analisi. È possibile specificare questo elenco da applicare a tutti i repository di dati per impostazione predefinita ed è possibile specificare un elenco per ogni repository dei dati. Per specificare questo elenco, usare l'impostazione **Tipi di file da analizzare** nel profilo dello scanner:
 
@@ -397,7 +397,7 @@ Lo scanner usa quindi i filtri per l'analisi dei tipi di file supportati. Gli st
 Per un elenco completo dei tipi di file supportati per impostazione predefinita e informazioni aggiuntive su come configurare i filtri esistenti che includono file con estensione zip e TIFF, vedere le guide di amministrazione seguenti:
 
 - Per il client classico: [Tipi di file supportati per l'ispezione](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-inspection)
-- Per il client Unified Labeling: [Tipi di file supportati per l'ispezione](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-inspection)
+- Per il client per l'etichettatura unificata: [Tipi di file supportati per l'ispezione](./rms-client/clientv2-admin-guide-file-types.md#file-types-supported-for-inspection)
 
 Dopo il controllo è possibile contrassegnare questi file mediante le condizioni specificate per le etichette. In alternativa, se si usa la modalità di individuazione, i file possono essere segnalati se contengono le condizioni specificate per le etichette o tutti i tipi di informazioni riservate noti. 
 
@@ -524,7 +524,7 @@ Esistono tre scenari alternativi che lo scanner di Azure Information Protection 
     
     Questa impostazione consente di trovare le informazioni sensibili di cui si potrebbe non essere a conoscenza, a scapito però della velocità di analisi per lo scanner.
     
-    La Guida introduttiva seguente per la versione client classica dello scanner usa questa configurazione: [Avvio rapido: Trovare le informazioni riservate disponibili](quickstart-findsensitiveinfo.md).
+    La seguente Guida introduttiva per lo scanner usa questa configurazione: [Avvio rapido: Trovare le informazioni riservate disponibili](quickstart-findsensitiveinfo.md).
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Ottimizzazione delle prestazioni dello scanner
 
@@ -562,7 +562,7 @@ Altri fattori che influenzano le prestazioni dello scanner:
 
 - La costruzione di espressioni regex per condizioni personalizzate
     
-    Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. Ad esempio:
+    Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. Esempio:
     
     - Evitare [quantificatori greedy](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)
     
@@ -653,4 +653,4 @@ Può sorgere questa domanda: [Qual è la differenza tra l'infrastruttura di clas
 
 - Per il client classico: [Uso di PowerShell con il client di Azure Information Protection](./rms-client/client-admin-guide-powershell.md)
 
-- Per il client Unified Labeling: [Uso di PowerShell con il client di etichettatura unificato Azure Information Protection](./rms-client/clientv2-admin-guide-powershell.md)
+- Per il client per l'etichettatura unificata: [Uso di PowerShell con il client di etichettatura unificato Azure Information Protection](./rms-client/clientv2-admin-guide-powershell.md)
