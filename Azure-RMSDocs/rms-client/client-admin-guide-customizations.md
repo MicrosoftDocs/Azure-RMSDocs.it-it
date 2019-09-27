@@ -4,7 +4,7 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/12/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 784b51f91a19069c33f5a6dd5a6a655c95e59c0c
-ms.sourcegitcommit: af478aae5b093aa604e69b210de4094aa664f658
+ms.openlocfilehash: df20bd6b72c6cba0e1410f35ebc397c8c6d2fad3
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70923326"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314361"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012, windows Server 2008 R2*
 >
 > *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -141,7 +141,7 @@ Quando si specifica la seguente impostazione client avanzata, gli utenti visuali
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
-- Key: **ReportAnIssueLink**
+- Chiave **ReportAnIssueLink**
 
 - Valore: **\<stringa HTTP>**
 
@@ -167,7 +167,7 @@ Si noti che senza una connessione a Internet, il client non può applicare la pr
     
     1. Immettere le stringhe seguenti:
     
-        - Key: **PullPolicy**
+        - Chiave **PullPolicy**
         
         - Valore: **False**
     
@@ -207,7 +207,7 @@ Quando è configurata, questa impostazione nasconde o visualizza il pulsante **N
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
-- Key: **DisableDNF**
+- Chiave **DisableDNF**
 
 - Valore: **True** per nascondere il pulsante o **False** per visualizzarlo
 
@@ -219,7 +219,7 @@ Quando si configura questa impostazione e si pubblicano i criteri per gli utenti
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
-- Key: **EnableCustomPermissions**
+- Chiave **EnableCustomPermissions**
 
 - Valore: **True** per rendere visibile l'opzione per le autorizzazioni personalizzate o **False** per nasconderla
 
@@ -233,7 +233,7 @@ Quando si crea e configura questa impostazione client avanzata, gli utenti posso
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
-- Key: **EnableCustomPermissionsForCustomProtectedFiles**
+- Chiave **EnableCustomPermissionsForCustomProtectedFiles**
 
 - Valore: **True**
 
@@ -249,7 +249,7 @@ Anche se la barra di Azure Information Protection rimane nascosta, gli utenti po
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
-- Key: **EnableBarHiding**
+- Chiave **EnableBarHiding**
 
 - Valore: **True**
 
@@ -263,7 +263,7 @@ Usare questa impostazione quando sono disponibili etichette secondarie ed è sta
 
 Configurare le stringhe seguenti:
 
-- Key: **CompareSubLabelsInAttachmentAction**
+- Chiave **CompareSubLabelsInAttachmentAction**
 
 - Valore: **True**
 
@@ -279,7 +279,7 @@ Per impostazione predefinita, quando si Abilita l' [impostazione dei criteri](..
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
-- Key: **DisableMandatoryInOutlook**
+- Chiave **DisableMandatoryInOutlook**
 
 - Valore: **True**
 
@@ -291,7 +291,7 @@ Quando si configura un'etichetta per la classificazione consigliata, agli utenti
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
-- Key: **OutlookRecommendationEnabled**
+- Chiave **OutlookRecommendationEnabled**
 
 - Valore: **True**
 
@@ -352,19 +352,19 @@ Valore di esempio per più ID etichetta sotto forma di stringa delimitata da vir
 
 - Messaggi di avviso:
     
-    - Key: **OutlookWarnUntrustedCollaborationLabel**
+    - Chiave **OutlookWarnUntrustedCollaborationLabel**
     
     - Valore: \<**ID etichetta, delimitato da virgole**>
 
 - Messaggi di giustificazione:
     
-    - Key: **OutlookJustifyUntrustedCollaborationLabel**
+    - Chiave **OutlookJustifyUntrustedCollaborationLabel**
     
     - Valore: \<**ID etichetta, delimitato da virgole**>
 
 - Messaggi di blocco:
     
-    - Key: **OutlookBlockUntrustedCollaborationLabel**
+    - Chiave **OutlookBlockUntrustedCollaborationLabel**
     
     - Valore: \<**ID etichetta, delimitato da virgole**>
 
@@ -380,19 +380,19 @@ Valore di esempio per più domini sotto forma di stringa delimitata da virgole: 
 
 - Messaggi di avviso:
     
-    - Key: **OutlookWarnTrustedDomains**
+    - Chiave **OutlookWarnTrustedDomains**
     
     - Valore: **\<** nomi di dominio, delimitati da virgole **>**
 
 - Messaggi di giustificazione:
     
-    - Key: **OutlookJustifyTrustedDomains**
+    - Chiave **OutlookJustifyTrustedDomains**
     
     - Valore: **\<** nomi di dominio, delimitati da virgole **>**
 
 - Messaggi di blocco:
     
-    - Key: **OutlookBlockTrustedDomains**
+    - Chiave **OutlookBlockTrustedDomains**
     
     - Valore: **\<** nomi di dominio, delimitati da virgole **>**
 
@@ -404,25 +404,25 @@ Creare l'impostazione client avanzata seguente con uno dei valori seguenti:
 
 - Messaggi di avviso:
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Chiave **OutlookUnlabeledCollaborationAction**
     
     - Valore: **Avvisa**
 
 - Messaggi di giustificazione:
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Chiave **OutlookUnlabeledCollaborationAction**
     
     - Valore: **Giustifica**
 
 - Messaggi di blocco:
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Chiave **OutlookUnlabeledCollaborationAction**
     
     - Valore: **Bloccato**
 
 - Disattivare questi messaggi:
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Chiave **OutlookUnlabeledCollaborationAction**
     
     - Valore: **Off**
 
@@ -435,7 +435,7 @@ Valore di esempio per più estensioni di file da definire come stringa delimitat
 In questo esempio un documento PDF senza etichetta non comporterà l'avviso, la giustificazione o il blocco dei messaggi popup.
 
 
-- Key: **OutlookOverrideUnlabeledCollaborationExtensions**
+- Chiave **OutlookOverrideUnlabeledCollaborationExtensions**
 
 - Valore: **\<** estensioni di file per la visualizzazione dei messaggi, delimitati da virgole **>**
 
@@ -447,25 +447,25 @@ Creare l'impostazione client avanzata seguente con uno dei valori seguenti:
 
 - Messaggi di avviso:
     
-    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Chiave **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
     - Valore: **Avvisa**
 
 - Messaggi di giustificazione:
     
-    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Chiave **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
     - Valore: **Giustifica**
 
 - Messaggi di blocco:
     
-    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Chiave **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
     - Valore: **Bloccato**
 
 - Disattivare questi messaggi:
     
-    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Chiave **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
     - Valore: **Off**
 
@@ -484,7 +484,7 @@ Per fare in modo che Outlook non applichi l'etichetta predefinita, specificare *
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
-- Key: **OutlookDefaultLabel**
+- Chiave **OutlookDefaultLabel**
 
 - Valore: \<**ID etichetta**> o **Nessuna**
 
@@ -538,7 +538,7 @@ Quando si configura questa impostazione l'opzione **Non ora** viene rimossa. In 
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
-- Key: **PostponeMandatoryBeforeSave**
+- Chiave **PostponeMandatoryBeforeSave**
 
 - Valore: **False**
 
@@ -558,7 +558,7 @@ Le regole di condizione non vengono eseguite in tempo reale durante la digitazio
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
-- Key: **RunPolicyInBackground**
+- Chiave **RunPolicyInBackground**
 
 - Valore: **True**
 
@@ -570,7 +570,7 @@ Quando un file PDF è protetto con l'ultima versione del client Azure Informatio
 
 Se è necessario che il client ripristini il comportamento delle versioni precedenti, ovvero protezione dei file PDF con un'estensione di file ppdf, usare l'impostazione avanzata seguente immettendo questa stringa:
 
-- Key: **EnablePDFv2Protection**
+- Chiave **EnablePDFv2Protection**
 
 - Valore: **False**
 
@@ -604,7 +604,7 @@ Per usare i comandi di PowerShell per convertire file con estensione ppdf esiste
     
    - Valore di **RMSTemplateId**. Se questo valore è **Accesso limitato**, un utente ha protetto il file usando autorizzazioni personalizzate anziché le impostazioni di protezione configurate per l'etichetta. Se si continua, tali autorizzazioni personalizzate verranno sovrascritte dalle impostazioni di protezione dell'etichetta. Decidere se continuare o chiedere all'utente (valore visualizzato per **RMSIssuer**) di rimuovere l'etichetta e riapplicarla, con le relative autorizzazioni personalizzate originali.
 
-3. Rimuovere l'etichetta usando [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) con il parametro *RemoveLabel*. Se si usa l'[impostazione criteri](../configure-policy-settings.md) **Gli utenti devono offrire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione**, è necessario specificare anche il parametro *Giustificazione* con il motivo. Ad esempio: 
+3. Rimuovere l'etichetta usando [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) con il parametro *RemoveLabel*. Se si usa l'[impostazione criteri](../configure-policy-settings.md) **Gli utenti devono offrire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione**, è necessario specificare anche il parametro *Giustificazione* con il motivo. Esempio: 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 
@@ -731,7 +731,7 @@ Questa configurazione non è supportata per Outlook e tenere presente che quando
 
 Poiché la corrispondenza dei criteri influiscono sulle prestazioni degli utenti, è consigliabile limitare i tipi di applicazioni di Office (**W**Ord, E**X**cel, **P**owerPoint) solo a quelli che devono essere cercati:
 
-- Key: **RemoveExternalContentMarkingInApp**
+- Chiave **RemoveExternalContentMarkingInApp**
 
 - Valore: \<**tipi di applicazioni di Office WXP**> 
 
@@ -764,7 +764,7 @@ I criteri di ricerca per la stringa specificata non fanno distinzione tra maiusc
 
 Poiché alcuni documenti potrebbero includere caratteri invisibili o tipi diversi di spazi o tabulazioni, la stringa specificata per una frase potrebbe non essere rilevata. Quando possibile, specificare una singola parola distintiva per il valore e assicurarsi di testare i risultati prima della distribuzione nell'ambiente di produzione.
 
-- Key: **ExternalContentMarkingToRemove**
+- Chiave **ExternalContentMarkingToRemove**
 
 - Valore: \<**stringa da confrontare, definita come espressione regolare**> 
 
@@ -802,7 +802,7 @@ Usare il nome della forma per specificare un valore stringa per la chiave **Powe
 
 Esempio: il nome della forma è **fc**. Per rimuovere la forma con questo nome, specificare il valore: `fc`.
 
-- Key: **PowerPointShapeNameToRemove**
+- Chiave **PowerPointShapeNameToRemove**
 
 - Valore: \<**nome delle forma di PowerPoint**> 
 
@@ -810,7 +810,7 @@ Quando si hanno più forme di PowerPoint da rimuovere, creare tante chiavi **Pow
 
 Per impostazione predefinita, il testo delle intestazioni e dei piè di pagina viene cercato solo negli schemi diapositiva. Per estendere la ricerca a tutte le diapositive, che è un processo con un utilizzo maggiore di risorse, usare un'impostazione client avanzata aggiuntiva denominata **RemoveExternalContentMarkingInAllSlides**:
 
-- Key: **RemoveExternalContentMarkingInAllSlides**
+- Chiave **RemoveExternalContentMarkingInAllSlides**
 
 - Valore: **True**
 
@@ -853,13 +853,13 @@ Quando il client Azure Information Protection viene usato nelle app di Office, C
 
 La configurazione che controlla se il client invia le informazioni di controllo è l' [impostazione dei criteri](../configure-policy-settings.md) **Invia dati di controllo a Azure Information Protection log Analytics**. Quando questa impostazione dei criteri è **attiva** perché si desidera inviare informazioni di controllo che includono azioni di assegnazione di etichette ma non si desidera inviare tipi di informazioni riservate individuate dal client, immettere le stringhe seguenti:
 
-- Key: **RunAuditInformationTypesDiscovery**
+- Chiave **RunAuditInformationTypesDiscovery**
 
 - Valore: **False**
 
 Se si imposta questa impostazione client avanzata, le informazioni di controllo possono comunque essere inviate dal client, ma le informazioni sono limitate all'attività di assegnazione di etichette.
 
-Ad esempio:
+Esempio:
 
 - Con questa impostazione è possibile vedere che un utente ha eseguito l'accesso a Financial. docx con etichetta **Confidential \ Sales**.
 
@@ -873,7 +873,7 @@ Questa configurazione usa un'[impostazione avanzata del client](#how-to-configur
 
 Quando si seleziona la casella di controllo [Azure Information Protection Analytics](../reports-aip.md) che Abilita l'analisi più approfondita nei dati sensibili raccoglie le corrispondenze di contenuto per i tipi di informazioni riservate o le condizioni personalizzate, per impostazione predefinita, queste informazioni sono Inviato da tutti gli utenti, inclusi gli account del servizio che eseguono lo scanner Azure Information Protection. In presenza di utenti che non devono inviare questi dati, creare l'impostazione client avanzata seguente in un [criterio con ambito](../configure-policy-scope.md) per questi utenti: 
 
-- Key: **LogMatchedContent**
+- Chiave **LogMatchedContent**
 
 - Valore: **Disabilitare**
 
@@ -888,7 +888,7 @@ Come valore specificare il numero di thread simultanei che lo scanner può esegu
 
 Quando si configura il valore per il test per la prima volta, è consigliabile specificare 2 per ogni core e quindi monitorare i risultati. Se ad esempio si esegue lo scanner in un computer con 4 core, impostare prima il valore su 8. Se necessario, aumentare o diminuire questo numero, in base alle prestazioni risultanti richieste per il computer dello scanner e la velocità di analisi. 
 
-- Key: **ScannerConcurrencyLevel**
+- Chiave **ScannerConcurrencyLevel**
 
 - Valore: **\<numero massimo di utenti simultanei>**
 
@@ -904,7 +904,7 @@ Per altre informazioni sui livelli di integrità di Windows, vedere [What is the
 
 Per configurare questa impostazione avanzata in modo che lo scanner venga eseguito con un livello di integrità assegnato automaticamente da Windows (un account utente standard viene eseguito con un livello di integrità medio), immettere le stringhe seguenti:
 
-- Key: **ProcessUsingLowIntegrity**
+- Chiave **ProcessUsingLowIntegrity**
 
 - Valore: **False**
 
@@ -916,7 +916,7 @@ Per impostazione predefinita, lo scanner Azure Information Protection ha un peri
 
 Se si verifica questo problema di timeout a causa di file di grandi dimensioni, è possibile aumentare questo periodo di timeout per l'estrazione del contenuto completo:
 
-- Key: **ContentExtractionTimeout**
+- Chiave **ContentExtractionTimeout**
 
 - Valore:  **\<HH: min: sec >**
 
@@ -940,7 +940,7 @@ In questa situazione, se non è possibile aggiungere più processori di base al 
 
 Per modificare il periodo di timeout per l'elaborazione dei file, configurare l'impostazione client avanzata seguente:
 
-- Key: **FileProcessingTimeout**
+- Chiave **FileProcessingTimeout**
 
 - Valore:  **\<HH: min: sec >**
 
@@ -952,7 +952,7 @@ Per impostazione predefinita, il client Azure Information Protection scrive i fi
  
 Per modificare il livello di registrazione per questi file, configurare l'impostazione client avanzata seguente:
 
-- Key: **LogLevel**
+- Chiave **LogLevel**
 
 - Valore: **\<livello di registrazione>**
 
@@ -980,7 +980,7 @@ Per ottenere questa soluzione:
 
 2. Creare una regola del flusso di posta di Exchange per ogni etichetta: applicare la regola quando le proprietà del messaggio includono la classificazione configurata e modificare le proprietà del messaggio per impostare un'intestazione del messaggio. 
 
-     Per l'intestazione del messaggio, è possibile trovare le informazioni da specificare nelle intestazioni Internet di un messaggio di posta elettronica inviato e classificato tramite l'etichetta di Azure Information Protection. Cercare l'intestazione **msip_labels** e la stringa immediatamente successiva fino al punto e virgola incluso. Ad esempio:
+     Per l'intestazione del messaggio, è possibile trovare le informazioni da specificare nelle intestazioni Internet di un messaggio di posta elettronica inviato e classificato tramite l'etichetta di Azure Information Protection. Cercare l'intestazione **msip_labels** e la stringa immediatamente successiva fino al punto e virgola incluso. Esempio:
     
     **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
     

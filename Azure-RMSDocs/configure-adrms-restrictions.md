@@ -4,19 +4,19 @@ description: Panoramica della protezione HYOK (AD RMS) con Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/07/2019
+ms.date: 08/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 14864dd4840fe967b37ab4bd6fbde1de9e2f580d
-ms.sourcegitcommit: afeef6f58cb0d05d130b551d5910d81bab28e41d
+ms.openlocfilehash: 149bf28e72f333eafa090e75e8703b6fe3a61165
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68862702"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71313949"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Protezione HYOK (hold your own key) per Azure Information Protection
 
@@ -70,20 +70,20 @@ Nella tabella seguente sono riportati gli scenari supportati per la protezione d
 
 |Piattaforma|Applicazione|Supportato|
 |----------------------|----------|-----------|
-|Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Word, Excel, PowerPoint|Protezione: Sì<br /><br />Consumo: Sì|
+|Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Word, Excel, PowerPoint|Protezione: Yes<br /><br />Consumo: Yes|
 |Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Outlook|Protezione: Yes<br /><br />Consumo: Yes|
-|Windows|Client di Azure Information Protection|Protezione: Sì <br /><br />Consumo: Yes|
+|Windows|Client di Azure Information Protection|Protezione: Yes <br /><br />Consumo: Yes|
 |Windows|Visualizzatore di Azure Information Protection|Protezione: Non applicabile<br /><br />Consumo: Yes|
-|Windows|Client di Azure Information Protection con cmdlet per le etichette di PowerShell|Protezione: Sì<br /><br />Consumo: Sì|
-|Windows|Scanner di Azure Information Protection|Protezione: Sì<br /><br />Consumo: Sì|
+|Windows|Client di Azure Information Protection con cmdlet per le etichette di PowerShell|Protezione: Yes<br /><br />Consumo: Yes|
+|Windows|Scanner di Azure Information Protection|Protezione: Yes<br /><br />Consumo: Yes|
 |Windows|Applicazione di condivisione Rights Management|Protezione: No<br /><br />Consumo: Yes|
-|MacOS|Office per Mac <br /><br /> - Word, Excel, PowerPoint|Protezione: No<br /><br />Consumo: Sì|
+|MacOS|Office per Mac <br /><br /> - Word, Excel, PowerPoint|Protezione: No<br /><br />Consumo: Yes|
 |MacOS|Office per Mac<br /><br />- Outlook|Protezione: No<br /><br />Consumo: Yes|
-|MacOS|Applicazione di condivisione Rights Management|Protezione: No<br /><br />Consumo: Sì|
+|MacOS|Applicazione di condivisione Rights Management|Protezione: No<br /><br />Consumo: Yes|
 |iOS|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protezione: No<br /><br />Consumo: Yes|
 |iOS|Office Mobile <br /><br />-Outlook|Protezione: No<br /><br />Consumo: No|
-|iOS|Visualizzatore di Azure Information Protection|Protezione: Non applicabile<br /><br />Consumo: Sì|
-|Android|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protezione: No<br /><br />Consumo: Sì|
+|iOS|Visualizzatore di Azure Information Protection|Protezione: Non applicabile<br /><br />Consumo: Yes|
+|Android|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protezione: No<br /><br />Consumo: Yes|
 |Android|Office Mobile <br /><br />- Outlook|Protezione: No<br /><br />Consumo: No|
 |Android|Visualizzatore di Azure Information Protection|Protezione: Non applicabile<br /><br />Consumo: Yes|
 |Web|Outlook sul Web|Protezione: No<br /><br />Consumo: No|
@@ -189,7 +189,7 @@ Quando si configura un'etichetta per la protezione **HYOK (AD RMS)** è necessar
 
 I valori del GUID del modello e dell'URL sono disponibili nella console di Active Directory Rights Management Services:
 
-- Per individuare il GUID di un modello: espandere il cluster e fare clic su **Modelli di criteri per i diritti di utilizzo**. In **Modelli di criteri per i diritti di utilizzo distribuiti** è quindi possibile copiare il GUID del modello che si vuole usare. Ad esempio:  82bf3474-6efe-4fa1-8827-d1bd93339119
+- Per individuare il GUID di un modello: espandere il cluster e fare clic su **Modelli di criteri per i diritti di utilizzo**. In **Modelli di criteri per i diritti di utilizzo distribuiti** è quindi possibile copiare il GUID del modello che si vuole usare. Esempio: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
 - Per individuare l'URL di gestione licenze: fare clic sul nome del cluster. In **Dettagli cluster** copiare il valore **Gestione licenze** ad eccezione della stringa **/_wmcs/licensing**. Ad esempio: https://rmscluster.contoso.com 
     

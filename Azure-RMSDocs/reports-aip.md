@@ -3,7 +3,7 @@ title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
 author: cabailey
 ms.author: cabailey
-ms.date: 09/18/2019
+ms.date: 09/27/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3257b194c539e59cc396e43c82499f94addfe625
-ms.sourcegitcommit: 326db0b8f1b46de502bcaaabbeda6efcd5a44441
+ms.openlocfilehash: c168cbfe672caecb0ebfbeea0e0c0e234599c223
+ms.sourcegitcommit: e53d52bd44271d27aa06c63bd4cc32884d3f2a4b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71101316"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71322386"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -137,15 +137,17 @@ Per impedire ai client di Azure Information Protection (versione classica) di in
 
 Per evitare che Azure Information Protection client unificati invii questi dati, configurare un' [impostazione avanzata](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-audit-data-to-azure-information-protection-analytics)dei criteri di etichetta.
 
-#### <a name="content-matches-for-deeper-analysis"></a>Corrispondenze di contenuto per un'analisi più approfondita 
+#### <a name="content-matches-for-deeper-analysis"></a>Corrispondenze di contenuto per un'analisi più approfondita
 
-L'area di lavoro di Azure Log Analytics per Azure Information Protection include una casella di controllo che consente anche di raccogliere e archiviare i dati identificati come un tipo di informazioni riservate (condizioni predefinite o personalizzate). Possono essere inclusi ad esempio numeri di carta di credito, numeri di previdenza sociale, numeri di passaporto e numeri di conto bancario. Se non si desidera inviare questi dati aggiuntivi, non selezionare la casella di controllo **Abilita analisi più approfondita nei dati sensibili**. Se si vuole che la maggior parte degli utenti invii questi dati aggiuntivi e un subset di utenti non può inviarlo, selezionare la casella di controllo e quindi:
+Azure Information Protection consente di raccogliere e archiviare i dati effettivi identificati come un tipo di informazioni riservate (predefinito o personalizzato). Possono essere inclusi ad esempio numeri di carta di credito, numeri di previdenza sociale, numeri di passaporto e numeri di conto bancario. Le corrispondenze contenuto vengono visualizzate quando si seleziona una voce dai **log attività**e si visualizzano i **Dettagli dell'attività**. 
 
-- Per il client e lo scanner classici: Configurare un' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in un criterio con ambito per il subset di utenti.
+Per impostazione predefinita, i client di Azure Information Protection non inviano corrispondenze di contenuto. Per modificare questo comportamento in modo che vengano inviate le corrispondenze del contenuto:
 
-- Per il client Unified Labeling: Configurare un' [impostazione avanzata](./rms-client/clientv2-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in un criterio di etichetta per il subset di utenti.
+- Per il client classico, selezionare una casella di controllo come parte della [configurazione](#configure-a-log-analytics-workspace-for-the-reports) per Azure Information Protection Analytics. La casella di controllo è denominata **Abilita analisi più approfondita nei dati sensibili**.
+    
+    Se si vuole che la maggior parte degli utenti che usano questo client per inviare corrispondenze di contenuto, ma un subset di utenti non può inviare corrispondenze di contenuto, selezionare la casella di controllo e quindi configurare un' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in un criterio con ambito per il subset di utenti.
 
-Dopo la raccolta, le corrispondenze del contenuto vengono visualizzate nei report quando si esegue il drill-down nei file dai log attività, per visualizzare i **Dettagli attività**. Queste informazioni possono essere anche visualizzate e recuperate tramite query.
+- Per il client Unified Labeling, configurare un' [impostazione avanzata](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches) in un criterio di etichetta.
 
 ## <a name="prerequisites"></a>Prerequisiti
 Per visualizzare i report di Azure Information Protection e creare report personalizzati, verificare che siano soddisfatti i requisiti seguenti.
@@ -232,10 +234,14 @@ I log di monitoraggio di Azure hanno una funzionalità di **utilizzo e costi sti
     - Per creare una nuova area di lavoro di Log Analytics: Selezionare **Crea nuova area di lavoro** e specificare le informazioni richieste nel pannello **Area di lavoro di Log Analytics**.
     
     - Per usare un'area di lavoro di Log Analytics già esistente: Selezionare l'area di lavoro dall'elenco.
+    
+    Per assistenza nella creazione dell'area di lavoro di Log Analytics, vedere [Creare un'area di lavoro di Log Analytics nel portale di Azure](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
 
-Per assistenza nella creazione dell'area di lavoro di Log Analytics, vedere [Creare un'area di lavoro di Log Analytics nel portale di Azure](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
+4. Se si dispone di Azure Information Protection client (versione classica), selezionare la casella di controllo **Abilita analisi più approfondita nei dati sensibili** se si desidera archiviare i dati effettivi identificati come tipo di informazioni riservate. Per ulteriori informazioni su questa impostazione, vedere la sezione [corrispondenze di contenuto per l'analisi più approfondita](#content-matches-for-deeper-analysis) in questa pagina.
 
-Quando l'area di lavoro è configurata, effettuare le seguenti operazioni se si pubblicano le etichette di riservatezza in uno dei seguenti centri di gestione: Office 365 Centro sicurezza e conformità, Centro sicurezza Microsoft 365, Microsoft 365 conformità centro:
+5. Scegliere **OK**.
+
+Dopo aver configurato l'area di lavoro, eseguire le operazioni seguenti se si pubblicano le etichette di riservatezza in uno dei seguenti centri di gestione: Office 365 Centro sicurezza e conformità, Centro sicurezza Microsoft 365, Microsoft 365 conformità centro:
 
 - Nella portale di Azure passare a **Azure Information Protection** > **Gestisci** > **etichetta unificata**e selezionare **pubblica**.
     
@@ -280,7 +286,7 @@ Per creare query personalizzate, usare i nomi di schema descrittivi implementati
 
 Usare la tabella seguente per identificare il nome descrittivo delle funzioni di eventi che è possibile usare per le query personalizzate con le funzionalità di analisi di Azure Information Protection.
 
-|Nome colonna|Descrizione|
+|Nome della colonna|Descrizione|
 |-----------|-----------|
 |Accesso|Un documento protetto è stato aperto, identificato dal nome file se è stato rilevato, oppure con ID se non è stato rilevato.|
 |AccessDenied|A un documento protetto è stato negato l'accesso, identificato dal nome file, se viene rilevato, oppure con ID se non è stato rilevato.|

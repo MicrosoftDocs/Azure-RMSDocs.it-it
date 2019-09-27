@@ -4,7 +4,7 @@ description: Identificare i prerequisiti per distribuire Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/02/2019
+ms.date: 09/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 75c9eb425c0955b569b7e1578e3921dee4c81500
-ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
+ms.openlocfilehash: dc0208e8053e09b2225b8e3bd9698ad1af7e9c43
+ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70214111"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314312"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisiti per Azure Information Protection
 
@@ -77,7 +77,9 @@ I dispositivi seguenti supportano il client di Azure Information Protection Unif
 
 - Windows 7 Service Pack 1 (x86, x64)
 
-- Windows Server 2016 
+- Windows Server 2019
+
+- Windows Server 2016
 
 - Windows Server 2012 R2 e Windows Server 2012
 
@@ -85,7 +87,11 @@ I dispositivi seguenti supportano il client di Azure Information Protection Unif
 
 Oltre a installare il client di in computer fisici, è anche possibile installarlo nelle macchine virtuali. Verificare che il fornitore del software per la soluzione desktop virtuale disponga di configurazioni aggiuntive che potrebbero essere necessarie per eseguire la Azure Information Protection client di etichetta unificata o il client di Azure Information Protection. Per le soluzioni Citrix, ad esempio, potrebbe essere necessario [disabilitare i hook dell'API (Application Programming Interface) Citrix](https://support.citrix.com/article/CTX107825) per Office (Winword. exe, Excel. exe, Outlook. exe, Powerpnt. exe) e il file eseguibile per il Azure Information Protection unificato assegnazione di etichette a client o client Azure Information Protection (MSIP. app. exe, MSIP. Viewer. exe).
 
-Per le versioni server elencate, i client Azure Information Protection sono supportati per Servizi Desktop remoto. Se si eliminano i profili utente quando si usa il Azure Information Protection client con Servizi Desktop remoto, non eliminare la cartella **%AppData%\Microsoft\Protect** .
+Per le versioni del server elencate:
+
+- I client Azure Information Protection sono supportati per Servizi Desktop remoto. Se si eliminano i profili utente quando si usa il Azure Information Protection client con Servizi Desktop remoto, non eliminare la cartella **%AppData%\Microsoft\Protect** .
+
+- Server Core e nano server non sono supportati.
 
 Quando il Azure Information Protection client protegge i dati tramite il servizio Azure Rights Management, i dati possono essere usati dagli [stessi dispositivi](requirements-client-devices.md) che supportano il servizio Azure Rights Management.
 
@@ -94,7 +100,6 @@ I client di Azure Information Protection hanno prerequisiti aggiuntivi elencati 
 - Client per l'etichettatura unificata di Azure Information Protection: [Prerequisiti](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
 
 - Client Azure Information Protection: [Prerequisiti](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
-
 
 ## <a name="applications"></a>Applicazioni
 
