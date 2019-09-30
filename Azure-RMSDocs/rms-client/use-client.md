@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 63220621a6c3bbf7ad84ba4c76c38353b56c256d
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 15050d18e1aab19ec80b2be47fdefd16e8f60ba6
+ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71313989"
+ms.lasthandoff: 09/29/2019
+ms.locfileid: "71674166"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -36,7 +36,7 @@ Il client di Rights Management (RMS) viene installato automaticamente con alcune
 
 Il **client di Azure Information Protection (versione classica)** Scarica le etichette e le impostazioni dei criteri dall'portale di Azure. Per ulteriori informazioni su questo client, vedere il [client Azure Information Protection: Cronologia delle versioni e criteri per il supporto](client-version-release-history.md).
 
-Il **client per l'etichettatura unificata Azure Information Protection** scarica le etichette e le impostazioni dei criteri dai centri di amministrazione: Centro sicurezza e conformità di Office 365, Centro sicurezza Microsoft 365 e Centro conformità Microsoft 365. Per ulteriori informazioni su questo client, vedere il [Azure Information Protection client Unified Labeling: informazioni di rilascio versione](unifiedlabelingclient-version-release-history.md).
+Il **client per l'etichettatura unificata Azure Information Protection** scarica le etichette e le impostazioni dei criteri dai centri di amministrazione: Centro sicurezza e conformità di Office 365, Centro sicurezza Microsoft 365 e Centro conformità Microsoft 365. Per ulteriori informazioni su questo client, vedere il [Azure Information Protection client Unified Labeling: informazioni di rilascio versione](unifiedlabelingclient-version-release-history.md). 
 
 Quale client è opportuno installare?
 
@@ -148,8 +148,9 @@ Il client Azure Information Protection (classico) non supporta le configurazioni
 
 Per motivi di parità, nemmeno il client per l'etichettatura unificata di Azure Information Protection supporta l'applicazione di etichette padre con etichette secondarie, anche se è possibile selezionare queste etichette nei centri di amministrazione. In questo scenario il client di etichettatura unificata Azure Information Protection non applicherà l'etichetta padre.
 
-## <a name="see-also"></a>Vedere anche
-Quando sono necessarie altre informazioni su come distribuire e usare questi client, usare la documentazione seguente:
+## <a name="next-steps"></a>Passaggi successivi
+
+Per installare e configurare i client, usare la documentazione seguente:
 
 - [Client di Azure Information Protection](AIP-client.md)
 
