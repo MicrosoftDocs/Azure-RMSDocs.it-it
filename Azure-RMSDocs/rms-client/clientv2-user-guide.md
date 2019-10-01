@@ -4,7 +4,7 @@ description: Il Azure Information Protection client Unified Labeling per Windows
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/17/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 2d00b66963e4d882af9dfdbb916c788986fa991a
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 0e837b38cef24c8d540e5c6bd7a406ecf074f284
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793149"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71690083"
 ---
 # <a name="azure-information-protection-unified-labeling-user-guide"></a>Guida dell'utente per l'assegnazione di etichette unificata Azure Information Protection 
 
@@ -30,7 +30,7 @@ Il Azure Information Protection client Unified Labeling per Windows consente di 
 È sufficiente avere un computer che esegua almeno Windows 7 con Service Pack 1. Quindi scaricare e installare questo client gratuito da Microsoft.
 
 
-## <a name="what-do-you-want-to-do"></a>Selezionare l'operazione da eseguire.
+## <a name="what-do-you-want-to-do"></a>Come procedere
 
 - [Scaricare e installare il client Azure Information Protection Unified Labeling](install-unifiedlabelingclient-app.md)
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5353fa25af08c8ef9c979d232945c7f203a0de07
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 4468ce10a79c31c4f3c3be625f84b5cbd69c74da
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71313967"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71690092"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guida dell'amministratore client per l'assegnazione di etichette unificata Azure Information Protection
 
@@ -116,7 +116,7 @@ Con le **Impostazioni** di reimpostazione l'utente viene disconnesso, Elimina le
     
     - %LocalAppData%\Microsoft\MSIPC
     
-    - %LocalAppData%\Microsoft\MSIP\mip\\*ProcessName\>\mip\<*
+    - %LocalAppData%\Microsoft\MSIP\mip @ no__t-0 *\<processname @ no__t-3*\mip
     
     - %LocalAppData%\Microsoft\MSIP\AppDetails
     
@@ -201,17 +201,17 @@ Le modalità di aggiornamento dello scanner dipendono dalla versione del client 
 
 Si noti che, a differenza dello scanner dal client di Azure Information Protection (classico), questa versione di anteprima dello scanner per il client unificato non supporta l'esecuzione in un computer disconnesso.
 
-Con l'aggiornamento viene creato un nuovo database denominato **\<AIPScannerUL_ profile_name >** e il database dello scanner precedente viene mantenuto nel caso in cui sia necessario per la versione precedente. Quando si è certi che non è necessario il database scanner precedente, è possibile eliminarlo. Poiché l'aggiornamento crea un nuovo database, lo scanner ripete l'analisi di tutti i file la prima volta che viene eseguito.
+Con l'aggiornamento viene creato un nuovo database denominato **AIPScannerUL_ @ no__t-1profile_name >** e il database dello scanner precedente viene mantenuto nel caso in cui sia necessario per la versione precedente. Quando si è certi che non è necessario il database scanner precedente, è possibile eliminarlo. Poiché l'aggiornamento crea un nuovo database, lo scanner ripete l'analisi di tutti i file la prima volta che viene eseguito.
 
 ##### <a name="upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client"></a>Aggiornamento dal client di Azure Information Protection (versione classica) 1.48.204.0 e versioni successive di questo client
 
 1. Nel computer dello scanner arrestare il servizio dello scanner **Azure Information Protection Scanner**.
 
-2. Eseguire l'aggiornamento al client di Azure Information Protection Unified Labeling scaricando e installando la versione di anteprima di Unifield Labeling client dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+2. Eseguire l'aggiornamento al client di Azure Information Protection Unified Labeling scaricando e installando la versione di anteprima del client Unified Labeling dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
 3. In una sessione di PowerShell eseguire il comando Update-AIPScanner con il profilo dello scanner. Ad esempio: `Update-AIPScanner –Profile Europe`.
     
-    Con questo passaggio viene creato un nuovo database denominato **AIPScannerUL_\<profile_name >**
+    Con questo passaggio viene creato un nuovo database denominato **AIPScannerUL_ @ no__t-1profile_name >**
 
 4. Riavviare il servizio dello scanner di Azure Information Protection **Scanner Azure Information Protection**.
 

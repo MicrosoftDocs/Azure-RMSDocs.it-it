@@ -4,7 +4,7 @@ description: Informazioni e istruzioni per gli amministratori per configurare i 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/23/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 279551bf15c17e901f4e690bb15d2ce22e3bbbc5
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 4ffaaf7ed4b7463ba3b24d13434771156e4fbfce
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789213"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684177"
 ---
 # <a name="office365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Office 365: Configurazione per Servizi online usare il servizio Rights Management di Azure
 
@@ -67,7 +67,7 @@ Exchange Online potrebbe già essere abilitato per l'uso del servizio Azure Righ
     ```
     Test-IRMConfiguration -Sender <user email address>
     ```
-    Ad esempio:  <strong>Test-IRMConfiguration -Sender  adams@contoso.com</strong>
+    Esempio: <strong>Test-IRMConfiguration -Sender  adams@contoso.com</strong>
     
     Questo comando esegue una serie di controlli, inclusi la verifica della connettività al servizio, il recupero della configurazione, il recupero di URI, licenze ed eventuali modelli. Nella sessione di Windows PowerShell, i risultati di ogni e alla fine vengono visualizzati se tutti i controlli vengono superati: **OVERALL RESULT: PASS**
 

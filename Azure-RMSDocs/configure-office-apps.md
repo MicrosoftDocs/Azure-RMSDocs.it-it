@@ -4,7 +4,7 @@ description: Informazioni e istruzioni per gli amministratori per configurare le
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/24/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: ec269afe-4e87-4cc1-9144-5fbb594b412e
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 32461a7d3edb53003ea12a7dc26e8b78966e1a4f
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 6bde980df23bdfa11bd137966ab48221bdbe6512
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68789250"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71684211"
 ---
 # <a name="office-apps-configuration-for-clients-to-use-the-azure-rights-management-service"></a>Applicazioni di Office: configurazione per i client per l'uso del servizio Azure Rights Management
 
@@ -31,7 +31,7 @@ Dal momento che queste ultime versioni di Office supportano in modo nativo il se
 
 ### <a name="user-instructions-for-office-for-mac"></a>Istruzioni per gli utenti di Office per Mac
 
-Gli utenti che hanno Office per Mac devono prima verificare le proprie credenziali prima di poter proteggere il contenuto. Ad esempio:
+Gli utenti che hanno Office per Mac devono prima verificare le proprie credenziali prima di poter proteggere il contenuto. Esempio:
 
 1. Aprire Outlook e creare un profilo mediante l'account aziendale o dell'istituto di istruzione di Office 365. 
 

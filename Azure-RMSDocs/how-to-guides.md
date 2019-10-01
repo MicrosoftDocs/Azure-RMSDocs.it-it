@@ -4,19 +4,19 @@ description: Identificare i casi di utilizzo che classificano e proteggono i dat
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1a7662b0262e2c46e3b88861a967287070a5a1ed
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 4f42951ff93e5de259ce9b952f340c5e597e3418
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794073"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689347"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Guide procedurali per gli scenari comuni che usano Azure Information Protection
 
@@ -30,7 +30,7 @@ Le distribuzioni più efficienti sono quelle in cui si identificano casi d'uso s
 
 ## <a name="common-scenarios"></a>Scenari comuni
 
-|Scenario Opzione richiesta:|Istruzioni|
+|Scenario: Opzione richiesta:|Istruzioni|
 |----------------|---------------|
 |Trovare le informazioni riservate che la mia organizzazione archivia in locale|[Avvio rapido: trovare le informazioni riservate presenti nei file archiviati in locale](quickstart-findsensitiveinfo.md)|
 |Consentire agli utenti di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate|[Avvio rapido: configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate](quickstart-label-dnf-protectedemail.md)|
@@ -50,6 +50,8 @@ Ad esempio, una metodologia con le procedure consigliate per i decisori aziendal
 - [Azure Information Protection Deployment Acceleration Guide](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Deployment-Acceleration-Guide/ba-p/334423) (Guida per velocizzare l'adozione e la distribuzione di Azure Information Protection)
 
 Istruzioni dettagliate:
+
+- [Come creare un portale di rilevamento di AIP personalizzato](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/How-to-Build-a-Custom-AIP-Tracking-Portal/ba-p/875849)
 
 - [Crea report più completi con Microsoft Information Protection e Azure AD i dati di accesso](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Create-richer-reports-with-Microsoft-Information-Protection-and/ba-p/392713)
 

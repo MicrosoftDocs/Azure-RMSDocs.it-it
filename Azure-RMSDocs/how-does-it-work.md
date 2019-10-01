@@ -4,7 +4,7 @@ description: Descrizione del funzionamento di Azure RMS, dei controlli crittogra
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/15/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,14 +13,14 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0f23bfeca00b8eeb7da3643c192b37641c0ea234
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 29bbb0b080e39cad118b49f695d8ec1d1d5b5493
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794173"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689591"
 ---
-# <a name="how-does-azure-rms-work-under-the-hood"></a>Funzionamento di Azure RMS: Dietro le quinte
+# <a name="how-does-azure-rms-work-under-the-hood"></a>Funzionamento di Azure RMS: dietro le quinte
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -100,7 +100,7 @@ Quando l'account dell'utente è federato con Azure Active Directory, l'autentica
 
 **Cosa avviene nel passaggio 2**: Dopo l'autenticazione dell'utente, la connessione viene reindirizzata automaticamente al tenant di Azure Information Protection dell'organizzazione, che emette i certificati per consentire all'utente di autenticarsi nel servizio Azure Rights Management in modo da usare il contenuto protetto e proteggere il contenuto offline.
 
-Uno di questi certificati è il certificato per account con diritti. Questo certificato autentica l'utente in Azure Active Directory ed è valido per 31 giorni. Il certificato viene rinnovato automaticamente dal client RMS, a condizione che l'account utente sia ancora presente in Azure Active Directory e che sia abilitato. Questo certificato non può essere configurato da un amministratore. 
+Uno di questi certificati è il certificato per account con diritti. Questo certificato autentica l'utente per Azure Active Directory e è valido per 31 giorni. Il certificato viene rinnovato automaticamente dal client RMS, a condizione che l'account utente sia ancora presente in Azure Active Directory e che sia abilitato. Questo certificato non può essere configurato da un amministratore. 
 
 Una copia del certificato viene archiviata in Azure, in modo che se l'utente passa a un altro dispositivo, i certificati vengono creati usando le stesse chiavi.
 
@@ -121,7 +121,7 @@ Il client RMS usa quindi la chiave dell'organizzazione, ottenuta al momento dell
 
 ![Protezione del documento RMS - passaggio 3, i criteri vengono incorporati nel documento](./media/AzRMS_documentprotection3.png)
 
-**Cosa avviene nel passaggio 3**: Infine, il client RMs incorpora i criteri in un file con il corpo del documento crittografato in precedenza, che insieme costituiscono un documento protetto.
+**Cosa avviene nel passaggio 3**: Infine, il client RMS incorpora i criteri in un file con il corpo del documento crittografato in precedenza, che insieme costituiscono un documento protetto.
 
 Questo documento può essere archiviato ovunque o condiviso usando qualsiasi metodo. I criteri rimangono sempre incorporati nel documento.
 

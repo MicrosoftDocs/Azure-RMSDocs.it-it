@@ -4,7 +4,7 @@ description: Istruzioni per distribuire il connettore RMS, che fornisce il servi
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/09/2019
+ms.date: 09/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 77ac2a6d6647f8935a0ce580e1bd7edb545fedea
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 64d441cf89ad4a68b02bebe79f2a70d8d351214d
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68791596"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71683730"
 ---
 # <a name="deploying-the-azure-rights-management-connector"></a>Distribuzione del connettore di Azure Rights Management
 

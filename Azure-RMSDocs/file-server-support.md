@@ -4,7 +4,7 @@ description: Come usare l'infrastruttura di classificazione file di Windows Serv
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4644970758cc193cb210b0e216940e6b71c36fc2
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: e8bc383fe4886647ff17a6eba01eb7a475bb51a9
+ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68791851"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71683611"
 ---
 # <a name="how-windows-file-servers-that-use-fci-support-azure-rights-management"></a>Come i file server Windows che usano l'istanza FCI supportano Azure Rights Management
 

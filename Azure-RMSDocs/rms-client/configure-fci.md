@@ -4,7 +4,7 @@ description: Istruzioni per usare il client Rights Management (RMS) con il clien
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e922ba01dfb358868a85be5631a962d3d7fd1ad1
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: b3781b2de94a8b619f2dadce977f1284c9b26e31
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793288"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71689974"
 ---
 # <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protezione RMS con Infrastruttura di classificazione file per Windows Server
 
@@ -132,7 +132,7 @@ A questo punto si è pronti per iniziare la configurazione di Gestione risorse f
 
     -   **Nome**: Digitare **RMS**
 
-    -   **Descrizione**:   Digitare **Protezione di Rights Management**
+    -   **Description**:   Digitare **Protezione di Rights Management**
 
     -   **Tipo di proprietà**: Selezionare **Sì/No**
 
@@ -150,7 +150,7 @@ A questo punto si è pronti per iniziare la configurazione di Gestione risorse f
 
         -   **Attivata**: Mantieni il valore predefinito, ovvero questa casella di controllo è selezionata.
 
-        -   **Descrizione**: Digitare **Classifica tutti i file nella cartella &lt;nome cartella&gt; per Rights Management**.
+        -   **Description**: Digitare **Classifica tutti i file nella cartella &lt;nome cartella&gt; per Rights Management**.
 
             Sostituire *&lt;nome cartella&gt;* con il nome della cartella scelta. Ad esempio, **Classifica tutti i file nella cartella C:\FileShare per Rights Management**
 
@@ -192,7 +192,7 @@ Quando si è completata la configurazione per la classificazione, si è pronti p
 
         -   Mantenere selezionata la casella di controllo **Abilita** .
 
-        -   **Descrizione**: Digitare **Proteggi i file in &lt;nome cartella&gt; con Rights Management e un modello usando uno script di Windows PowerShell.**
+        -   **Description**: Digitare **Proteggi i file in &lt;nome cartella&gt; con Rights Management e un modello usando uno script di Windows PowerShell.**
 
             Sostituire *&lt;nome cartella&gt;* con il nome della cartella scelta. Digitare, ad esempio, **Proteggi i file in C:\FileShare con Rights Management e un modello usando uno script di Windows PowerShell**
 

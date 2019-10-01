@@ -4,7 +4,7 @@ description: Quando si usa Azure Rights Management, i modelli vengono scaricati 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/03/2019
+ms.date: 09/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fde0bd0b2a51a8cdef1848d2ffb6b69ff412fa78
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 8f4589bae2a16ef50760af95bb06448a7d7a18c4
+ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790245"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71690227"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aggiornamento di modelli per utenti e servizi
 
@@ -56,7 +56,7 @@ Modificando il Registro di sistema nei computer che eseguono app di Office 365, 
 
         **Tipo:** REG_DWORD
 
-        **Value:** TemplateUpdateFrequency
+        **Valore:** TemplateUpdateFrequency
 
     - Per impostare una frequenza di aggiornamento in secondi (minimo 1 secondo):  Creare un nuovo valore del Registro di sistema denominato **TemplateUpdateFrequencyInSeconds** e definire un valore intero per i dati, che specifica la frequenza in secondi per il download di tutte le modifiche a un modello scaricato. Usare le informazioni seguenti per individuare il percorso del Registro di sistema per creare questo nuovo valore del registro.
 
@@ -64,7 +64,7 @@ Modificando il Registro di sistema nei computer che eseguono app di Office 365, 
 
         **Tipo:** REG_DWORD
 
-        **Value:** TemplateUpdateFrequencyInSeconds
+        **Valore:** TemplateUpdateFrequencyInSeconds
 
     Assicurarsi di creare e impostare uno di questi valori del Registro di sistema, non entrambi. Se sono presenti entrambi, **TemplateUpdateFrequency** viene ignorato.
 
@@ -78,7 +78,7 @@ Modificando il Registro di sistema nei computer che eseguono app di Office 365, 
 
    **Tipo:** REG_SZ
 
-   **Value:** LastUpdatedTime
+   **Valore:** LastUpdatedTime
 
    > [!TIP]
    > Nel percorso del Registro di sistema, <*MicrosoftRMS_FQDN*> fa riferimento all’FQDN del servizio Microsoft RMS. Se si desidera verificare questo valore:
@@ -87,7 +87,7 @@ Modificando il Registro di sistema nei computer che eseguono app di Office 365, 
    > 
    > Nell'output identificare il valore **LicensingIntranetDistributionPointUrl** .
    > 
-   > Ad esempio:  **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+   > Esempio: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
    > 
    > In questo valore rimuovere **https://** e **/_wmcs/licensing** da questa stringa. Il valore rimanente è l’FQDN del servizio Microsoft RMS. Nell'esempio, il valore dell'FQDN di Microsoft RMS è il seguente:
    > 
