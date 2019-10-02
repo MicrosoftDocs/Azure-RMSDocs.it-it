@@ -12,12 +12,12 @@ metadata:
   ms.author: cabailey
   manager: rkarlin
   ms.date: 09/17/2019
-  ms.openlocfilehash: 326f521f2f160b6425db15e22084e02fbecd4f55
-  ms.sourcegitcommit: 569446a78a217288198bd499c03bd634f3a92f7e
+  ms.openlocfilehash: 15c2a7d7fdc458ab522554dd3420ada811791723
+  ms.sourcegitcommit: 28c1de5f9d1426f160f0e0bafcf9f76769e662b6
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 09/27/2019
-  ms.locfileid: "71342562"
+  ms.lasthandoff: 09/30/2019
+  ms.locfileid: "71679159"
 landingContent:
 - title: Informazioni su Azure Information Protection
   linkLists:
@@ -25,37 +25,49 @@ landingContent:
     links:
     - text: Che cos'è Azure Information Protection?
       url: what-is-information-protection.md
-    - text: Panoramica delle etichette di riservatezza
-      url: https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels
+    - text: Domande frequenti
+      url: faqs.md
 - title: Operazioni preliminari
   linkLists:
-  - linkListType: deploy
+  - linkListType: overview
     links:
     - text: Requisiti
       url: requirements.md
-    - text: Applicare automaticamente un'etichetta di riservatezza
-      url: https://docs.microsoft.com/Office365/SecurityCompliance/apply-sensitivity-label-automatically
-    - text: Limitare l'accesso al contenuto
-      url: https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels
-    - text: Installare e configurare il client per l'etichettatura unificata
-      url: ./rms-client/clientv2-admin-guide.md
-- title: BYOK (Bring Your Own Key)
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Pianificare e implementare la chiave del tenant
-      url: plan-implement-tenant-key.md
-- title: Classificare e proteggere i dati negli archivi dati locali
-  linkLists:
   - linkListType: quickstart
     links:
-    - text: Trovare informazioni riservate (anteprima)
+    - text: Attività iniziali nel portale di Azure
+      url: quickstart-viewpolicy.md
+    - text: Trovare le informazioni riservate
       url: quickstart-findsensitiveinfo.md
+  - linkListType: deploy
+    links:
+    - text: Guida di orientamento per la distribuzione
+      url: deployment-roadmap.md
+- title: Personalizzare il client
+  linkLists:
   - linkListType: how-to-guide
     links:
-    - text: Implementare lo scanner (anteprima)
+    - text: 'Client classico: Impostazioni avanzate'
+      url: ./rms-client/client-admin-guide-customizations.md
+    - text: "Client per l'etichettatura unificata: Impostazioni avanzate"
+      url: ./rms-client/clientv2-admin-guide-customizations.md
+- title: Attivare le etichette unificate
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Confrontare i client
+      url: ./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use
+  - linkListType: how-to-guide
+    links:
+    - text: Eseguire la migrazione delle etichette di Azure Information Protection
+      url: configure-policy-migrate-labels.md
+- title: Classificare e proteggere i dati negli archivi dati locali
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Distribuire lo scanner
       url: deploy-aip-scanner.md
-- title: Monitorare l'uso delle etichette e individuare informazioni riservate
+- title: Monitorare l'uso delle etichette e individuare le informazioni riservate
   linkLists:
   - linkListType: how-to-guide
     links:
