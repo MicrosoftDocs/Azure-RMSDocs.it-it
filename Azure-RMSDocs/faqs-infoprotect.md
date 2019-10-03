@@ -4,7 +4,7 @@ description: Di seguito sono riportate alcune possibili domande sulle funzionali
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0d17189d2c5cd896727de1de05233fbfcd9b9868
-ms.sourcegitcommit: dd60bdae3ed608306cd8f9dbe92aac6650d8fbb3
+ms.openlocfilehash: 8266e7b6a7883be96571dfd2d493b3eac83bdb7c
+ms.sourcegitcommit: b6c1d2cb23c9d883901791bfadc9c39028ddd8aa
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70215681"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835400"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Domande frequenti sulla classificazione e l'assegnazione di etichette in Azure Information Protection
 
@@ -40,7 +40,7 @@ Per sapere quando saranno disponibili altre funzionalità e nuove caratteristich
 > - Reporting centralizzato per la classificazione e l'aggiunta di etichette. Per altre informazioni, vedere [Reporting centralizzato per Azure Information Protection](reports-aip.md).
 >
 >**Etichette di riservatezza per Office**:
-> - Per le informazioni più recenti sulle app di Office che supportano le etichette di riservatezza, vedere la sezione "dove è disponibile oggi la funzionalità?" dalla sezione [applicare le etichette di riservatezza ai documenti e alla posta elettronica in Office](https://aka.ms/officemipdocs).
+> - Per le informazioni più recenti sulle app di Office che supportano le etichette di riservatezza, vedere [quali funzionalità dell'etichetta di riservatezza sono supportate in Office oggi?](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today) dalla documentazione di Office.
 
 Per richiedere nuove funzionalità e votare per le richieste, visitare il [sito User Voice](https://msip.uservoice.com/) per Azure Information Protection.
 
