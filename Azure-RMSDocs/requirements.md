@@ -4,7 +4,7 @@ description: Identificare i prerequisiti per distribuire Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dc0208e8053e09b2225b8e3bd9698ad1af7e9c43
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 3ad40af5706e588f71342716c34315818ea07ed0
+ms.sourcegitcommit: 17e562b102c077d2af0fa63ce1db77bf5c41c5b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314312"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923659"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisiti per Azure Information Protection
 
@@ -119,9 +119,13 @@ I client Azure Information Protection possono etichettare e proteggere documenti
 
 Con le altre edizioni di Office non è possibile proteggere i documenti e i messaggi di posta elettronica usando un servizio Rights Management. Per queste edizioni Azure Information Protection è supportato solo per la classificazione. Di conseguenza, le etichette che applicano la protezione non vengono visualizzate agli utenti sulla barra Azure Information Protection o dal pulsante **Proteggi** (client classico) o dal pulsante di **riservatezza** (client di etichetta unificata) sulla barra multifunzione di Office. 
 
-I client Azure Information Protection non supportano più versioni di Office nello stesso computer. Questi client non supportano anche il cambio di account utente in Office.
-
 Per informazioni sulle edizioni di Office che supportano il servizio di protezione, vedere [Applicazioni che supportano la protezione dati di Azure Rights Management](requirements-applications.md).
+
+### <a name="office-features-and-capabilities-not-supported"></a>Funzionalità e funzionalità di Office non supportate
+
+- I client di Azure Information Protection (client classico e client di etichetta unificata) non supportano più versioni di Office nello stesso computer o il cambio di account utente in Office.
+
+- La funzionalità di Unione di Office [mail](https://support.office.com/article/use-mail-merge-for-bulk-email-letters-labels-and-envelopes-f488ed5b-b849-4c11-9cff-932c49474705) non è supportata con alcuna funzionalità Azure Information Protection.
 
 ## <a name="firewalls-and-network-infrastructure"></a>Firewall e infrastruttura di rete
 

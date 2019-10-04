@@ -3,7 +3,7 @@ title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
 author: cabailey
 ms.author: cabailey
-ms.date: 09/27/2019
+ms.date: 10/03/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c168cbfe672caecb0ebfbeea0e0c0e234599c223
-ms.sourcegitcommit: e53d52bd44271d27aa06c63bd4cc32884d3f2a4b
+ms.openlocfilehash: edc87fe3422bbfe6805a4c3f0d012d0a76e7c5ce
+ms.sourcegitcommit: 17e562b102c077d2af0fa63ce1db77bf5c41c5b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71322386"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923686"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -147,7 +147,7 @@ Per impostazione predefinita, i client di Azure Information Protection non invia
     
     Se si vuole che la maggior parte degli utenti che usano questo client per inviare corrispondenze di contenuto, ma un subset di utenti non può inviare corrispondenze di contenuto, selezionare la casella di controllo e quindi configurare un' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users) in un criterio con ambito per il subset di utenti.
 
-- Per il client Unified Labeling, configurare un' [impostazione avanzata](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches) in un criterio di etichetta.
+- Per il client Unified Labeling, configurare un' [impostazione avanzata](./rms-client/clientv2-admin-guide-customizations.md#send-information-type-matches-to-azure-information-protection-analytics) in un criterio di etichetta.
 
 ## <a name="prerequisites"></a>Prerequisiti
 Per visualizzare i report di Azure Information Protection e creare report personalizzati, verificare che siano soddisfatti i requisiti seguenti.
