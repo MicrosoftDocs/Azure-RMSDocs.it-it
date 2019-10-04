@@ -4,18 +4,18 @@ description: Configurare un'etichetta che protegge un messaggio di posta elettro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/23/2019
+ms.date: 09/28/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ffc5aa43b44eedad30dbfdb501152e55f87fb510
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 44e363456d8d4aeaf2a57c8c5b10213d256cb8aa
+ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68793832"
+ms.lasthandoff: 09/29/2019
+ms.locfileid: "71674178"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Guida introduttiva: configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate
 
@@ -23,7 +23,7 @@ ms.locfileid: "68793832"
 >
 > *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-In questa guida introduttiva si configurerà un'etichetta esistente per l'applicazione automatica dell'impostazione di protezione Non inoltrare.
+In questa guida di avvio rapido si configurerà un'etichetta di Azure Information Protection esistente per l'applicazione automatica dell'impostazione di protezione Non inoltrare.
 
 Gli attuali criteri di Azure Information Protection contengono già due etichette che hanno questa configurazione:
 
@@ -51,9 +51,11 @@ Per completare questa guida introduttiva, è necessario:
     
     È possibile usare una delle etichette predefinite o un'etichetta creata. Se occorre assistenza per la creazione di una nuova etichetta, vedere [Avvio rapido: Creare una nuova etichetta di Azure Information Protection per utenti specifici](quickstart-label-specificusers.md).
 
-4. Per testare la nuova etichetta: il client Azure Information Protection deve essere installato nei computer degli utenti. 
+4. Per testare la nuova etichetta: Deve essere installato il client Azure Information Protection (versione classica) su un computer con Windows. 
     
-    Per provare l'etichetta, è possibile installare il client accedendo all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricare **AzInfoProtection.exe** dalla pagina di Azure Information Protection.
+    È possibile installare la versione classica del client accedendo all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricando **AzInfoProtection.exe** dalla pagina di Azure Information Protection.
+    
+    Se si usa un client di assegnazione di etichette diverso per la versione classica del client, vedere la documentazione di Office per istruzioni equivalenti a questa esercitazione. Ad esempio, [Panoramica delle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
 
 5. Per testare la nuova etichetta: Disporre di un computer con Windows (versione minima Windows 7 con Service Pack 1), in cui è stato eseguito l'accesso alle app di Office da una delle categorie seguenti:
     

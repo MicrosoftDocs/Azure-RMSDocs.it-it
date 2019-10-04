@@ -4,18 +4,18 @@ description: Esercitazione introduttiva che illustra la configurazione delle imp
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/20/2019
+ms.date: 10/01/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f2aa0d6b7068488212697f6f2f2e9b1d19c9d131
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 73f242b50e53eb7f5408bf99902daf0214d37268
+ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794063"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712574"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Esercitazione: Configurare impostazioni dei criteri di Azure Information Protection che interagiscono tra loro
 
@@ -28,7 +28,7 @@ In questa esercitazione si apprenderà come:
 > * Configurare impostazioni dei criteri che interagiscono tra loro
 > * Vedere le impostazioni in azione
 
-Invece di affidare agli utenti il compito di etichettare manualmente documenti e messaggi di posta elettronica, è possibile usare le impostazioni dei criteri per:
+Invece di affidare agli utenti il compito di etichettare manualmente documenti e messaggi di posta elettronica, è possibile usare le impostazioni dei criteri di Azure Information Protection per:
 
 - Assicurare un livello base di classificazione per i contenuti nuovi e modificati
 
@@ -44,15 +44,17 @@ Per completare questa esercitazione, è necessario:
     
     In assenza di una sottoscrizione con questo piano, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.
 
-2. Aver aggiunto il pannello di Azure Information Protection nel portale di Azure e aver verificato che il servizio di protezione è attivato.
-
-    Se occorre assistenza per queste azioni, vedere [Avvio rapido: Introduzione ad Azure Information Protection nel portale di Azure](quickstart-viewpolicy.md)
-
-3. Aver installato il client Azure Information Protection nel computer in uso. 
+2. Il pannello Azure Information Protection viene aggiunto al portale di Azure e una o più etichette vengono pubblicate nei criteri globali di Azure Information Protection.
     
-    Per installare il client, andare all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricare **AzInfoProtection.exe** dalla pagina di Azure Information Protection.
+    Questi passaggi sono illustrati nell'[Avvio rapido: Aggiungere Azure Information Protection al portale di Azure e visualizzare i criteri](quickstart-viewpolicy.md).
 
-4. Disporre di un computer con Windows (versione minima Windows 7 con Service Pack 1), in cui è stato eseguito l'accesso alle app di Office da una delle categorie seguenti:
+3. Deve essere installato il client Azure Information Protection (versione classica) nel computer in uso con Windows (almeno Windows 7 con Service Pack 1). 
+    
+    È possibile installare la versione classica del client accedendo all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricando **AzInfoProtection.exe** dalla pagina di Azure Information Protection. 
+    
+    Se si usa un client di assegnazione di etichette diverso per la versione classica del client, vedere la documentazione di Office per informazioni sulle impostazioni dei criteri per le etichette di riservatezza. Ad esempio, [Panoramica delle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
+
+4. È stato eseguito l'accesso alle app di Office da una delle seguenti categorie:
     
     - App di Office con versione minima 1805, build 9330.2078 da Office 365 Business o Microsoft 365 Business quando all'utente viene assegnata una licenza per Azure Rights Management (nota anche come Azure Information Protection per Office 365).
     
@@ -92,7 +94,7 @@ Tramite il portale di Azure verranno modificati i criteri globali per la modific
 
     |Impostazione|Valore|Informazioni|
     |-------|-----|-----|
-    |**Selezionare l'etichetta predefinita**|**Generalee**|Se non si dispone di un'etichetta denominata **Generale**, selezionarne un'altra dall'elenco a discesa. Ai documenti e ai messaggi di posta elettronica senza etichetta verrà applicata automaticamente questa etichetta come classificazione di base. Gli utenti potranno tuttavia modificare l'etichetta selezionata impostandone un'altra.|
+    |**Selezionare l'etichetta predefinita**|**Generalee**|L'etichetta **Generale** è una delle etichette predefinite che Azure Information Protection può creare automaticamente. Questo passaggio è trattato nell'Avvio rapido [Creare e pubblicare etichette](quickstart-viewpolicy.md#create-and-publish-labels). Se non si dispone di un'etichetta denominata **Generale**, selezionarne un'altra dall'elenco a discesa. Ai documenti e ai messaggi di posta elettronica senza etichetta verrà applicata automaticamente questa etichetta come classificazione di base. Gli utenti potranno tuttavia modificare l'etichetta selezionata impostandone un'altra.|
     |**Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**|**Sì**|Questa impostazione è nota anche come etichettatura obbligatoria, perché impedisce agli utenti il salvataggio di documenti o l'invio di messaggi di posta elettronica senza etichetta. Insieme all'etichetta predefinita, i documenti e i messaggi di posta elettronica avranno l'etichetta predefinita impostata o un'etichetta scelta dagli utenti.
     |**Per i messaggi di posta elettronica con allegati, applica un'etichetta corrispondente alla classificazione più elevata di questi allegati**|**Consigliato**|Questa impostazione richiede agli utenti di selezionare un'etichetta di classificazione superiore per i messaggi di posta elettronica quando si allegano documenti contenenti una classificazione più elevata rispetto all'etichetta predefinita selezionata.
     |**Visualizza la barra di Information Protection nelle app Office**|**Sì**|La visualizzazione della barra di Information Protection rende più semplice per gli utenti visualizzare e modificare l'etichetta predefinita.

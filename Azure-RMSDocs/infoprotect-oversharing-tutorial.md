@@ -4,18 +4,18 @@ description: Esercitazione introduttiva per configurare e vedere in azione le im
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 07/19/2019
+ms.date: 10/01/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 2fdb9e719ffcafb6923528fef6c63bb8eefb3cdc
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: ffbc65add0d5daceddbf02f454efac4a2a288243
+ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794125"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712604"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Esercitazione: configurare Azure Information Protection per il controllo dell'oversharing delle informazioni con Outlook
 
@@ -43,15 +43,20 @@ Per completare questa esercitazione, è necessario:
     
     In assenza di una sottoscrizione con questo piano, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.
 
-2. Aver aggiunto il pannello di Azure Information Protection nel portale di Azure e avere almeno un'etichetta.
+2. Il pannello Azure Information Protection viene aggiunto al portale di Azure e almeno un'etichetta viene pubblicata nei criteri globali di Azure Information Protection.
     
-    Anche se questa esercitazione usa l'etichetta **General** predefinita, questa etichetta può essere eventualmente sostituita con un'altra. Per informazioni sull'aggiunta del pannello di Azure Information Protection oppure se non si hanno ancora etichette, vedere [Guida di avvio rapido: Aggiungere Azure Information Protection al portale di Azure e visualizzare i criteri](quickstart-viewpolicy.md).
+    Anche se questa esercitazione usa l'etichetta **General** predefinita, questa etichetta può essere eventualmente sostituita con un'altra. Per informazioni sull'aggiunta del pannello di Azure Information Protection oppure se non sono ancora state pubblicate etichette nei criteri globali, vedere [Avvio rapido: Aggiungere Azure Information Protection al portale di Azure e visualizzare i criteri](quickstart-viewpolicy.md).
 
 3. Un computer con Windows (almeno Windows 7 con Service Pack 1) in cui sia possibile accedere ad Outlook. Prepararsi a riavviare Outlook più volte durante questa esercitazione.
 
-4. Aver installato il client Azure Information Protection nel computer in uso.
+4. Il client Azure Information Protection (versione classica) deve essere installato nel computer in uso con Windows.
     
-    Per installare il client, andare all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricare **AzInfoProtection.exe** dalla pagina di Azure Information Protection.
+    È possibile installare la versione classica del client accedendo all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricando **AzInfoProtection.exe** dalla pagina di Azure Information Protection. 
+    
+    Se si usa il client di etichettatura unificato anziché la versione classica del client, vedere le istruzioni seguenti che illustrano come usare le impostazioni avanzate di PowerShell per le configurazioni equivalenti in questa esercitazione:
+    
+    - Istruzioni per la guida dell'amministratore: [Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](./rms-client/clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
+    - Video: [Configurazione popup di Outlook di Azure Information Protection](https://azure.microsoft.com/en-us/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/)
 
 Per un elenco completo dei prerequisiti per l'uso di Azure Information Protection, vedere [Requisiti per Azure Information Protection](requirements.md).
 

@@ -4,18 +4,18 @@ description: Creare e configurare una nuova etichetta che consenta di classifica
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 09/28/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: cce7edf1428c9090f0b51b13170de9afbb89ce6f
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: e3960a2e4e0204fb879e55704f68ed8071d31e3b
+ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68790309"
+ms.lasthandoff: 09/29/2019
+ms.locfileid: "71674116"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Guida introduttiva: Creare una nuova etichetta di Azure Information Protection per utenti specifici
 
@@ -23,7 +23,7 @@ ms.locfileid: "68790309"
 >
 > *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-In questa guida introduttiva si creerà una nuova etichetta che solo determinati utenti possono vedere e applicare per classificare e proteggere documenti e messaggi di posta elettronica.
+In questa guida introduttiva si creerà una nuova etichetta di Azure Information Protection che solo determinati utenti possono vedere e applicare per classificare e proteggere documenti e messaggi di posta elettronica.
 
 Questa configurazione usa criteri con ambito.
 
@@ -45,9 +45,11 @@ Per completare questa guida introduttiva, è necessario:
     
     Se non si ha un gruppo adatto, crearne uno denominato **Team vendite** e aggiungere almeno un utente.
 
-4. Per testare la nuova etichetta: il client Azure Information Protection deve essere installato nei computer degli utenti. 
+4. Per testare la nuova etichetta: Deve essere installato il client Azure Information Protection (versione classica) su un computer con Windows. 
     
-    Per provare l'etichetta, è possibile installare il client accedendo all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricare **AzInfoProtection.exe** dalla pagina di Azure Information Protection.
+    È possibile installare la versione classica del client accedendo all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricando **AzInfoProtection.exe** dalla pagina di Azure Information Protection.
+     
+    Se si usa un client di assegnazione di etichette diverso per la versione classica del client, vedere la documentazione di Office per istruzioni equivalenti a questa esercitazione. Ad esempio, [Panoramica delle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
 
 Per un elenco completo dei prerequisiti per l'uso di Azure Information Protection, vedere [Requisiti per Azure Information Protection](requirements.md).
     

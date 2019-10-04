@@ -4,18 +4,18 @@ description: Esercitazione introduttiva per la modifica dei criteri di Azure Inf
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 06/18/2019
+ms.date: 10/01/2019
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 44504efc4640bf3d07398b14da7539cbda20e45d
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.openlocfilehash: 0923ef10427533cae46b5de30f4c30371b9fe6d7
+ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68788581"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712620"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Esercitazione: configurare le impostazioni dei criteri di Azure Information Protection e creare una nuova etichetta
 
@@ -42,15 +42,15 @@ Per completare questa esercitazione, è necessario:
     
     In assenza di una sottoscrizione con un piano 2 di Azure Information Protection, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.
 
-2. Aver aggiunto il pannello di Azure Information Protection nel portale di Azure e aver verificato che il servizio di protezione è attivato.
-
-    Se occorre assistenza per queste azioni, vedere [Avvio rapido: Introduzione ad Azure Information Protection nel portale di Azure](quickstart-viewpolicy.md)
-
-3. Aver installato il client Azure Information Protection nel computer in uso. 
+2. Il pannello Azure Information Protection viene aggiunto al portale di Azure, il servizio di protezione viene attivato e una o più etichette vengono pubblicate nei criteri globali di Azure Information Protection.
     
-    Per installare il client, andare all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricare **AzInfoProtection.exe** dalla pagina di Azure Information Protection.
+    Questi passaggi sono illustrati nell'[Avvio rapido: Aggiungere Azure Information Protection al portale di Azure e visualizzare i criteri](quickstart-viewpolicy.md).
 
-4. Disporre di un computer con Windows (versione minima Windows 7 con Service Pack 1), in cui è stato eseguito l'accesso alle app di Office da una delle categorie seguenti:
+3. Deve essere installato il client Azure Information Protection (versione classica) nel computer in uso con Windows (almeno Windows 7 con Service Pack 1). 
+    
+    È possibile installare la versione classica del client accedendo all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricando **AzInfoProtection.exe** dalla pagina di Azure Information Protection. Se si usa un client di assegnazione di etichette diverso per la versione classica del client, vedere la [documentazione di Office](/microsoft-365/compliance/sensitivity-labels) per istruzioni equivalenti a questa esercitazione.
+
+4. È stato eseguito l'accesso alle app di Office da una delle seguenti categorie:
     
     - App di Office con versione minima 1805, build 9330.2078 da Office 365 Business o Microsoft 365 Business quando all'utente viene assegnata una licenza per Azure Rights Management (nota anche come Azure Information Protection per Office 365).
     
@@ -90,9 +90,9 @@ Tramite il portale di Azure, si procederà per prima cosa alla modifica di alcun
     
     Queste impostazioni dei criteri verranno usate più avanti nell'esercitazione quando si vedranno in azione.
 
-4. Selezionare **General** per **Selezionare l'etichetta predefinita**. 
-
-    Se non si ha questa etichetta perché si sta usando una versione precedente dei criteri, scegliere **Internal** come etichetta equivalente.
+4. Per l'opzione **Selezionare l'etichetta predefinita**, selezionare una delle etichette, ad esempio **Generale**. 
+    
+    L'etichetta **Generale** è una delle etichette predefinite che Azure Information Protection può creare automaticamente. Questo passaggio viene descritto nella sezione [Creare e pubblicare etichette](quickstart-viewpolicy.md#create-and-publish-labels) dell'Avvio rapido per aggiungere Azure Information Protection al portale di Azure.
 
 5. Impostare l'opzione **Gli utenti devono fornire una giustificazione per impostare un'etichetta di classificazione inferiore, rimuovere un'etichetta o rimuovere la protezione** su **Sì**, se non lo è già.
 
