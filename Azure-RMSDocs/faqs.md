@@ -4,7 +4,7 @@ description: Alcune domande frequenti su Azure Information Protection e il relat
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/20/2019
+ms.date: 10/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: d2f3616d64a0405d1a0caf452d3491ee7a1fcac1
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.openlocfilehash: e79954a33f78785ecdd32a2b7c9ba0fdbf2446bb
+ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69884770"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71966828"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
@@ -51,7 +51,7 @@ Per ulteriori informazioni sulla migrazione delle etichette esistenti, vedere [H
 
 Quando il tenant si trova nella piattaforma di etichettatura unificata, le etichette di riservatezza possono essere usate dai [client e dai servizi che supportano l'assegnazione di etichette unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling). Se è stata ottenuta la sottoscrizione per Azure Information Protection nel 2019 giugno o versione successiva, il tenant si trova automaticamente nella piattaforma di assegnazione di etichette unificata e non è necessaria alcuna azione aggiuntiva. Il tenant potrebbe anche trovarsi su questa piattaforma perché qualcuno ha eseguito la migrazione delle etichette Azure Information Protection.
 
-Per controllare lo stato, nella portale di Azure passare a **Azure Information Protection** > **Gestisci** > l'**etichettatura unificata**e visualizzare lo stato dell'etichettatura **unificata**:
+Per controllare lo stato, nella portale di Azure passare a **Azure Information Protection** > **Gestisci**l'**etichetta unificata** >  e visualizzare lo stato dell' **etichettatura unificata**:
 
 - Se viene visualizzato **attivato**, il tenant si trova nella piattaforma di etichettatura unificata.
 
@@ -71,7 +71,7 @@ Entrambi i client, quando sono installati, visualizzano **Azure Information Prot
 
 - Da Esplora file: fare clic con il pulsante destro del mouse su uno o più file o su una cartella, scegliere **Classifica e proteggi** e quindi **Guida e commenti**.
 
-- Da un'applicazione di Office: Dal pulsante **Proteggi** (client classico) o dal pulsante di riservatezza (client di etichetta unificata) selezionare **Guida e commenti**.
+- Da un'applicazione di Office: Dal pulsante **Proteggi** (client classico) o dal pulsante di **riservatezza** (client di etichetta unificata) selezionare **Guida e commenti**.
 
 Usare il numero di **versione** visualizzato per identificare il client:
 
@@ -81,7 +81,7 @@ Usare il numero di **versione** visualizzato per identificare il client:
 
 ## <a name="when-is-the-right-time-to-migrate-my-labels"></a>Quando è il momento giusto per eseguire la migrazione delle etichette?
 
-Ora che l'opzione per eseguire la migrazione delle etichette nel portale di Azure è disponibile a livello generale, è consigliabile attivare la migrazione in modo che sia possibile usare le etichette come etichette di riservatezza con [client e servizi che supportano l'assegnazione](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)di etichette unificata.
+Ora che l'opzione per eseguire la migrazione delle etichette nel portale di Azure è disponibile a livello generale, è consigliabile attivare la migrazione in modo che sia possibile usare le etichette come etichette di riservatezza con [client e servizi che supportano l'assegnazione di etichette unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
 
 Per ulteriori informazioni e istruzioni, vedere [How to migrate Azure Information Protection labels to Unified Sensitivity labels](configure-policy-migrate-labels.md).
 
@@ -89,7 +89,7 @@ Per ulteriori informazioni e istruzioni, vedere [How to migrate Azure Informatio
 
 Dopo aver eseguito la migrazione delle etichette nel portale di Azure:
 
-- Se [i client e i servizi](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)sono stati unificati, passare a uno dei centri di amministrazione (Office 365 Centro sicurezza e conformità, Microsoft 365 Centro sicurezza o Microsoft 365 Compliance Center) per pubblicare queste etichette e per configurarne i criteri. Impostazioni. Per le modifiche delle etichette, da ora in poi usare uno di questi centri di amministrazione. I client di etichettatura unificata scaricano le etichette e le impostazioni dei criteri da uno di questi centri di amministrazione.
+- Se [i client e i servizi sono stati unificati](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), passare a uno dei centri di amministrazione (Office 365 Centro sicurezza e conformità, Microsoft 365 Centro sicurezza o Microsoft 365 Compliance Center) per pubblicare queste etichette e per configurarne i criteri. Impostazioni. Per le modifiche delle etichette, da ora in poi usare uno di questi centri di amministrazione. I client di etichettatura unificata scaricano le etichette e le impostazioni dei criteri da uno di questi centri di amministrazione.
 
 - Se si dispone del [client di Azure Information Protection (classico)](./rms-client/aip-client.md), continuare a usare il portale di Azure per modificare le etichette e le impostazioni dei criteri. Il client classico continua a scaricare le etichette e le impostazioni dei criteri da Azure.
 
@@ -126,7 +126,7 @@ Gli amministratori globali per un tenant di Office 365 o di Azure AD possono ovv
 - **Amministratore Azure Information Protection**: Questo ruolo amministratore Azure Active Directory consente a un amministratore di configurare Azure Information Protection ma non altri servizi. Un amministratore con questo ruolo può attivare e disattivare il servizio di protezione Azure Rights Management, configurare le etichette e le impostazioni di protezione e configurare i criteri di Azure Information Protection. Inoltre, un amministratore con questo ruolo può eseguire tutti i cmdlet di PowerShell per il [client Azure Information Protection](./rms-client/client-admin-guide-powershell.md) e dal [modulo AIPService](administer-powershell.md). Tuttavia, questo ruolo non supporta il rilevamento e la revoca dei documenti per gli utenti.
     
     > [!NOTE]
-    > Dopo aver eseguito la [migrazione del tenant nell'archivio etichette unificato](configure-policy-migrate-labels.md), questo ruolo non è più supportato per il portale di Azure.
+    > Questo ruolo non è supportato nel portale di Azure se il tenant si trova nella [piattaforma di etichettatura unificata](#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
     
     Per assegnare un utente a questo ruolo amministrativo, vedere [Assegnare un utente ai ruoli di amministratore in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal).
 
@@ -134,7 +134,10 @@ Gli amministratori globali per un tenant di Office 365 o di Azure AD possono ovv
     
     Per assegnare un utente a uno di questi ruoli amministrativi, vedere [assegnare un utente ai ruoli di amministratore in Azure Active Directory](/azure/active-directory/active-directory-users-assign-role-azure-portal). Per visualizzare le altre autorizzazioni di un utente con questi ruoli, vedere la sezione [ruoli disponibili](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) della documentazione Azure Active Directory.
 
-- **Ruolo con autorizzazioni di lettura per la sicurezza**: Solo per le [funzionalità di analisi di Azure Information Protection](reports-aip.md). Questo ruolo di amministratore di Azure Active Directory consente agli amministratori di visualizzare come vengono usate le etichette, monitorare l'accesso degli utenti ai documenti e ai messaggi di posta elettronica etichettati ed eventuali modifiche della classificazione, nonché di identificare documenti che contengono informazioni sensibili che devono essere protette. Dato che questa funzionalità usa Azure Log Analytics, è necessario disporre anche di un [ruolo Controllo degli accessi in base al ruolo](reports-aip.md#permissions-required-for-azure-information-protection-analytics) di supporto.
+- **Lettore di sicurezza** o **Reader globale**: Solo per le [funzionalità di analisi di Azure Information Protection](reports-aip.md). Questo ruolo di amministratore di Azure Active Directory consente agli amministratori di visualizzare come vengono usate le etichette, monitorare l'accesso degli utenti ai documenti e ai messaggi di posta elettronica etichettati ed eventuali modifiche della classificazione, nonché di identificare documenti che contengono informazioni sensibili che devono essere protette. Poiché questa funzionalità USA monitoraggio di Azure, è necessario disporre anche di un ruolo di supporto [RBAC](reports-aip.md#permissions-required-for-azure-information-protection-analytics).
+    
+    > [!NOTE]
+    > Il ruolo di lettore globale non è supportato se il tenant si trova nella [piattaforma di etichettatura unificata](#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
 
 - **Amministratore della sicurezza**: Questo ruolo amministratore Azure Active Directory consente a un amministratore di configurare Azure Information Protection nel portale di Azure, oltre a configurare alcuni aspetti di altri servizi di Azure. Un amministratore con questo ruolo non può eseguire alcun [cmdlet di PowerShell dal modulo AIPService](administer-powershell.md)oppure rilevare e revocare i documenti per gli utenti.
     

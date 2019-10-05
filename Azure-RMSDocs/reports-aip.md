@@ -3,7 +3,7 @@ title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
 author: cabailey
 ms.author: cabailey
-ms.date: 10/03/2019
+ms.date: 10/04/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: edc87fe3422bbfe6805a4c3f0d012d0a76e7c5ce
-ms.sourcegitcommit: 17e562b102c077d2af0fa63ce1db77bf5c41c5b4
+ms.openlocfilehash: d33650b879939ce4a23efd77b1ac3de6c9f2ad06
+ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923686"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71966865"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -178,12 +178,13 @@ Dettagli:
         - **Amministratore dati di conformità**
         - **Amministratore globale**
     
-    - Dopo aver creato l'area di lavoro, è possibile usare il ruolo seguente con meno autorizzazioni per visualizzare i dati raccolti:
+    - Dopo aver creato l'area di lavoro, è possibile usare i ruoli seguenti con un minor numero di autorizzazioni per visualizzare i dati raccolti:
     
         - **Ruolo con autorizzazioni di lettura per la sicurezza**
+        - **Lettore globale**
     
     > [!NOTE] 
-    > Non è possibile usare il ruolo di amministratore Azure Information Protection se il tenant si trova nella [piattaforma di etichettatura unificata](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
+    > Non è possibile usare il ruolo di amministratore di Azure Information Protection o il ruolo di lettore globale se il tenant si trova nella [piattaforma di etichettatura unificata](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform).
 
 2. È anche necessario uno dei [ruoli di Azure Log Analytics](https://docs.microsoft.com/azure/azure-monitor/platform/manage-access#manage-access-using-azure-permissions) o dei [ruoli di Azure](https://docs.microsoft.com/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-rbac-roles) standard seguenti per accedere all'area di lavoro di Azure Log Analytics:
     
@@ -243,7 +244,7 @@ I log di monitoraggio di Azure hanno una funzionalità di **utilizzo e costi sti
 
 Dopo aver configurato l'area di lavoro, eseguire le operazioni seguenti se si pubblicano le etichette di riservatezza in uno dei seguenti centri di gestione: Office 365 Centro sicurezza e conformità, Centro sicurezza Microsoft 365, Microsoft 365 conformità centro:
 
-- Nella portale di Azure passare a **Azure Information Protection** > **Gestisci** > **etichetta unificata**e selezionare **pubblica**.
+- Nella portale di Azure passare a **Azure Information Protection** > **Gestisci**l'**etichetta unificata** >  e selezionare **pubblica**.
     
     Selezionare questa opzione di **pubblicazione** ogni volta che si crea una modifica dell'etichetta (crea, modifica, Elimina) nel centro di etichette. 
 

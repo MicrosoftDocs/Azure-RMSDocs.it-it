@@ -12,12 +12,12 @@ ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6b3d5355904494a8d9f64783b490ba6f7deb3bc1
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: 6340a78d430c387f7a7cf76b9a6474d399b7e98f
+ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684411"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71966843"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Attività che precedentemente venivano eseguite con il portale di Azure classico
 
@@ -57,7 +57,7 @@ Nuove funzionalità nel portale di Azure:
 
 - È possibile convertire i modelli in etichette, in modo da gestire un singolo oggetto anziché gestire un modello e un'etichetta separatamente. Per le istruzioni, vedere [Per convertire i modelli in etichette](configure-policy-templates.md#to-convert-templates-to-labels).
 
-- Supporto per altri ruoli amministrativi: mentre prima, per configurare Azure Rights Management, era necessario accedere al portale di Azure classico come amministratore globale, ora è possibile accedere al portale di Azure per configurare Azure Information Protection usando un account con uno dei ruoli amministrativi seguenti: **Amministratore globale**, **amministratore della sicurezza**, **amministratore di conformità**, **amministratore dati di conformità**o **amministratore Azure Information Protection**. Per altre informazioni su ciascuno di questi ruoli, vedere la sezione [Ruoli disponibili](/azure/active-directory/active-directory-assign-admin-roles-azure-portal#available-roles) della documentazione di Azure Active Directory.
+- Supporto per altri ruoli amministrativi: Mentre era necessario accedere al portale di Azure classico come amministratore globale per configurare Azure Rights Management, è possibile accedere al portale di Azure per gestire Azure Information Protection usando molti altri ruoli amministrativi che includono la **conformità**  **amministratore dei dati di conformità**e amministratore. L'elenco completo dei ruoli supportati è incluso nella sezione [accesso alla portale di Azure](configure-policy.md#signing-in-to-the-azure-portal) .
 
 Il supporto dei cmdlet di PowerShell per creare e gestire i modelli e per attivare e disattivare il servizio rimane invariato.
 

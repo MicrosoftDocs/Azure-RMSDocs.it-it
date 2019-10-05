@@ -3,7 +3,7 @@ title: Configurare i criteri di Azure Information Protection - AIP
 description: Per configurare la classificazione, l'assegnazione di etichette e la protezione per il client di Azure Information Protection (versione classica), è necessario configurare i criteri di Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-ms.date: 09/28/2019
+ms.date: 10/04/2019
 manager: barbkess
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 2a23660b43f0186c78953695eccbc4b531dbca9a
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: 858b745987edd73f12bfda903050e84ca97eaacb
+ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71673818"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71966779"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -69,18 +69,20 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
     
     - **Amministratore Azure Information Protection**
     
-    - **Ruolo con autorizzazioni di lettura per la sicurezza** solo per le [funzionalità di analisi di Azure Information Protection](reports-aip.md)
-    
   - **Amministratore di conformità**
     
   - **Amministratore dati di conformità**
     
   - **Amministratore della sicurezza**
     
+    **Reader**per la sicurezza  - [Azure Information Protection solo analisi](reports-aip.md)
+    
+    **Global reader** - [Azure Information Protection solo analisi](reports-aip.md)
+    
   - **Amministratore globale**
     
     > [!NOTE] 
-    > Se è stata eseguita la migrazione del tenant all'archivio di etichette unificato, l'amministratore Azure Information Protection (denominato in precedenza "Information Protection amministratore") non è più supportato. [Altre informazioni](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
+    > Se il tenant si trova nella piattaforma di assegnazione di etichette unificata, il ruolo di amministratore Azure Information Protection (denominato in precedenza "Information Protection Administrator") e il ruolo di lettore globale non sono supportati per il portale di Azure. [Altre informazioni](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
     
     Gli account Microsoft non possono gestire Azure Information Protection.
 

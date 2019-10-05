@@ -4,7 +4,7 @@ description: Informazioni sui dati personali usati da Azure Information Protecti
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 10/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 99a51862-83e9-4a1e-873a-a84ae1465f07
 ms.reviewer: aashishr
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3e83f11013f60d418f28c58cee10a84915f39ebc
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: d16e6e7f0667f9ac57bf772de272d23838b793e1
+ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689235"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71966885"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gestire i dati personali per Azure Information Protection
 
@@ -218,7 +218,11 @@ I dati personali visualizzati e specificati nel portale di Azure sono accessibil
 
 - **Amministratore della sicurezza**
 
+- **Ruolo con autorizzazioni di lettura per la sicurezza**
+
 - **Amministratore globale**
+
+- **Lettore globale**
 
 I dati personali che è possibile visualizzare e specificare usando il modulo AIPService (o il modulo precedente, AADRM) sono accessibili solo agli utenti a cui è stato assegnato il **Azure Information Protection amministratore**, l' **amministratore della conformità**e la **conformità amministratore dei dati**o ruoli di **amministratore globale** da Azure Active Directory o ruolo di amministratore globale per il servizio di protezione.
 
