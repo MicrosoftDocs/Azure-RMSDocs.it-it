@@ -3,7 +3,7 @@ title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
 author: cabailey
 ms.author: cabailey
-ms.date: 10/04/2019
+ms.date: 10/14/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d33650b879939ce4a23efd77b1ac3de6c9f2ad06
-ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
+ms.openlocfilehash: 22ec828b0ee0c6c4719e938383c1952dbf42e33e
+ms.sourcegitcommit: 44f43c8c1d9cb9ff71a6be15e8a799ae4f2b3544
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71966865"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72314298"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -155,10 +155,10 @@ Per visualizzare i report di Azure Information Protection e creare report person
 |Requisito|Altre informazioni|
 |---------------|--------------------|
 |Una sottoscrizione di Azure che include Log Analytics ed è per lo stesso tenant di Azure Information Protection|Vedere la pagina dei [prezzi di Monitoraggio di Azure](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Se non si dispone di un abbonamento di Azure o attualmente non si usa Azure Log Analytics, la pagina dei prezzi include un collegamento per una versione di valutazione gratuita.|
-|Client di Azure Information Protection|Sono supportati sia il client Unified labeling che il client classico. <br /><br />Se non si dispone già di uno di questi client, è possibile scaricarli e installarli dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
-|Microsoft Cloud App Security |Per visualizzare le informazioni da Microsoft Cloud App Security, configurare l' [integrazione di Azure Information Protection](https://docs.microsoft.com/cloud-app-security/azip-integration).|
-|Per il report **Individuazione e rischio**: <br /><br />-Per visualizzare i dati dagli archivi dati locali, è stata distribuita almeno un'istanza dello scanner Azure Information Protection <br /><br />-Per visualizzare i dati dai computer Windows 10, è necessario che siano una build minima di 1809. si sta usando Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP) ed è stata abilitata la funzionalità di integrazione Azure Information Protection di Microsoft Centro sicurezza Defender|Per le istruzioni di installazione per lo scanner, vedere [Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner.md). <br /><br />Per informazioni sulla configurazione e sull'uso della funzionalità di integrazione Azure Information Protection da Microsoft Defender Security Center, vedere [Panoramica di Information Protection in Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
-|Per il report **Raccomandazioni**: <br /><br />-Per aggiungere un nuovo repository di dati dal portale di Azure come azione consigliata, è necessario usare una versione dello scanner Azure Information Protection configurata nel portale di Azure |Per distribuire lo scanner, vedere [Deploying the Azure Information Protection scanner to classificare e proteggere automaticamente i file](deploy-aip-scanner.md).|
+|Per informazioni sulla creazione di report per l'assegnazione di etichette ai client: <br /><br />-Client Azure Information Protection|Sono supportati sia il client Unified labeling che il client classico. <br /><br />Se non è già installato, è possibile scaricare e installare questi client dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
+|Per informazioni sulla creazione di report da archivi dati basati sul cloud: <br /><br />-Microsoft Cloud App Security |Per visualizzare le informazioni da Microsoft Cloud App Security, configurare l' [integrazione di Azure Information Protection](https://docs.microsoft.com/cloud-app-security/azip-integration).|
+|Per informazioni sulla creazione di report da archivi dati locali: <br /><br />-Azure Information Protection scanner |Per le istruzioni di installazione per lo scanner, vedere [Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file](deploy-aip-scanner.md). |
+|Per informazioni sulla creazione di report da computer Windows 10:  <br /><br />-Compilazione minima di 1809 con Microsoft Defender Advanced Threat Protection (Microsoft Defender ATP)|È necessario abilitare la funzionalità di integrazione Azure Information Protection da Microsoft Defender Security Center. Per altre informazioni, vedere [Panoramica di Information Protection in Windows](/windows/security/threat-protection/microsoft-defender-atp/information-protection-in-windows-overview).|
 
 ### <a name="permissions-required-for-azure-information-protection-analytics"></a>Autorizzazioni necessarie per la funzionalità di analisi di Azure Information Protection
 
