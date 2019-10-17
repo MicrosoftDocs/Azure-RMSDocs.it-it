@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4468ce10a79c31c4f3c3be625f84b5cbd69c74da
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 4fb1c9ca3800e46ffcf3b8946823e4c43ca9d284
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71690092"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447616"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guida dell'amministratore client per l'assegnazione di etichette unificata Azure Information Protection
 
@@ -26,7 +26,7 @@ ms.locfileid: "71690092"
 
 Utilizzare le informazioni contenute in questa guida se si è responsabili del client Azure Information Protection Unified Labeling in una rete aziendale o se si desiderano informazioni più tecniche rispetto a quelle presenti nell' [Azure Information Protection utente client con etichetta unificata Guida](clientv2-user-guide.md). 
 
-Esempio:
+Ad esempio:
 
 - Comprendere i diversi componenti di questo client e se è necessario installarlo
 
@@ -44,7 +44,7 @@ Esempio:
 
 Il Azure Information Protection client Unified Labeling include quanto segue:
 
-- Un componente aggiuntivo di Office, che installa un pulsante di riservatezza sulla barra multifunzione per consentire agli utenti di selezionare le etichette di riservatezza e un'opzione per visualizzare la barra di Azure Information Protection per una migliore visibilità delle etichette.
+- Un componente aggiuntivo di Office, che installa un pulsante di **riservatezza** sulla barra multifunzione per consentire agli utenti di selezionare le etichette di riservatezza e un'opzione per visualizzare la barra di Azure Information Protection per una migliore visibilità delle etichette.
 
 - Esplora file, opzioni tramite clic con il pulsante destro del mouse per l'applicazione di etichette di classificazione e della protezione ai file.
 
@@ -63,7 +63,7 @@ Se si usa AD RMS e si vuole passare ad Azure Information Protection, vedere [Mig
 
 ## <a name="should-you-deploy-the-azure-information-protection-unified-labeling-client"></a>È consigliabile distribuire il client di Azure Information Protection Unified Labeling?
 
-Distribuire il client di etichettatura unificata Azure Information Protection se si usano [le etichette di riservatezza nell'Centro sicurezza e conformità di Office 365](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels)e si verifica una delle condizioni seguenti:
+Distribuire il client di etichettatura unificata Azure Information Protection se si usano [le etichette di riservatezza nell'Centro sicurezza e conformità di Office 365](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)e si verifica una delle condizioni seguenti:
 
 - Si vuole classificare e, facoltativamente, proteggere i documenti e i messaggi di posta elettronica selezionando etichette dalle app di Office (Word, Excel, PowerPoint, Outlook) nei computer Windows.
 
@@ -75,7 +75,7 @@ Distribuire il client di etichettatura unificata Azure Information Protection se
 
 - Si vuole visualizzare documenti protetti quando non è installata un'applicazione nativa per visualizzare i file o questa applicazione non è in grado di aprire i documenti.
 
-Esempio che illustra il componente aggiuntivo di Office per il client di Azure Information Protection Unified Labeling, visualizzando il nuovo pulsante Sensitivity sulla barra multifunzione e la barra di Azure Information Protection facoltativa:
+Esempio che illustra il componente aggiuntivo di Office per il client di Azure Information Protection Unified Labeling, visualizzando il nuovo pulsante **sensitivity** sulla barra multifunzione e la barra di Azure Information Protection facoltativa:
 
 ![Barra Azure Information Protection con criterio predefinito](../media/v2word2016-calloutsv2.png)
 
@@ -89,19 +89,19 @@ Usare le sezioni seguenti per informazioni sull'installazione del client.
 
 Dopo aver installato il client, usare l'opzione **Guida e commenti** per aprire la finestra di dialogo **Microsoft Azure Information Protection**:
 
-- Da un'applicazione di Office: Nella scheda **Home** , nel gruppo **Sensitivity** , selezionare **Sensitivity**, quindi scegliere **Guida e commenti**.
+- Da un'applicazione di Office: nella scheda **Home** , nel gruppo **Sensitivity** , selezionare **Sensitivity**, quindi scegliere **Guida e commenti**.
 
 - Da Esplora file: fare clic con il pulsante destro del mouse su uno o più file o su una cartella, scegliere **Classifica e proteggi** e quindi **Guida e commenti**. 
 
 #### <a name="help-and-feedback-section"></a>Sezione **Guida e commenti**
 
-Per impostazione predefinita, il **collegamento altre informazioni** consente di passare al sito Web [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) . È possibile configurare il proprio collegamento URL che passa a una pagina della Guida personalizzata come una delle impostazioni dei criteri nel centro di gestione delle etichette: Centro sicurezza e conformità di Office 365, Centro sicurezza di Microsoft 365 o Centro conformità di Microsoft 365.
+Per impostazione predefinita, il **collegamento altre informazioni** consente di passare al sito Web [Azure Information Protection](https://www.microsoft.com/cloud-platform/azure-information-protection) . È possibile configurare il proprio collegamento URL che passa a una pagina della Guida personalizzata come una delle impostazioni dei criteri nel centro di gestione delle etichette: Office 365 Centro sicurezza e conformità, Microsoft 365 Centro sicurezza o Microsoft 365 Compliance Center.
 
 Il collegamento **segnala un problema** viene visualizzato solo se si specifica un' [impostazione avanzata](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users). Quando si configura questa impostazione, si specifica un collegamento HTTP, ad esempio l'indirizzo e-mail dell'help desk. 
 
 Il **log di esportazione** raccoglie e collega automaticamente i file di log per il client Azure Information Protection Unified Labeling se è stato richiesto di inviarli a supporto tecnico Microsoft. Questa opzione può essere usata anche dagli utenti finali per inviare i file di log all'help desk. In alternativa, è possibile usare il cmdlet [Export-AIPLogs](/powershell/module/azureinformationprotection/export-aiplogs) di PowerShell (richiede il client di anteprima).
 
-Con le **Impostazioni** di reimpostazione l'utente viene disconnesso, Elimina le etichette di riservatezza attualmente scaricate e i criteri delle etichette e reimposta le impostazioni utente per il servizio Rights Management di Azure.
+Con le **impostazioni di reimpostazione** l'utente viene disconnesso, Elimina le etichette di riservatezza attualmente scaricate e i criteri delle etichette e reimposta le impostazioni utente per il servizio Rights Management di Azure.
 
 > [!NOTE]
 > In caso di problemi tecnici con il client, vedere [Opzioni di supporto e risorse della community](../information-support.md#support-options-and-community-resources).
@@ -156,11 +156,11 @@ Tuttavia, i nomi di etichetta e le descrizioni specificati non vengono convertit
 
 ## <a name="post-installation-tasks"></a>Attività post-installazione
 
-Dopo aver installato il Azure Information Protection client di assegnazione unificata delle etichette, assicurarsi di fornire agli utenti le istruzioni per etichettare i documenti e i messaggi di posta elettronica e le linee guida per le etichette da scegliere per scenari specifici. Esempio:
+Dopo aver installato il Azure Information Protection client di assegnazione unificata delle etichette, assicurarsi di fornire agli utenti le istruzioni per etichettare i documenti e i messaggi di posta elettronica e le linee guida per le etichette da scegliere per scenari specifici. Ad esempio:
 
-- Istruzioni per l'utente online: [Guida dell'utente per l'assegnazione di etichette unificata Azure Information Protection](clientv2-user-guide.md)
+- Istruzioni per l'utente online: [Azure Information Protection manuale dell'utente per l'assegnazione di etichette unificata](clientv2-user-guide.md)
 
-- Scaricare un manuale dell'utente personalizzabile: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Manuale d'uso di Azure Information Protection per utenti finali)
+- Download di un manuale dell'utente personalizzabile: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Manuale d'uso di Azure Information Protection per utenti finali)
 
 ## <a name="installing-the-azure-information-protection-scanner"></a>Installazione dello scanner Azure Information Protection
 
@@ -230,7 +230,7 @@ A partire dalla versione 1.48.204.0, lo scanner ottiene le impostazioni di confi
 
 3. Eseguire l'aggiornamento al client di Azure Information Protection Unified Labeling scaricando e installando la versione di anteprima del client Unified Labeling dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-4. In una sessione di PowerShell eseguire il comando Update-AIPScanner con lo stesso nome di profilo specificato nel passaggio 1. Ad esempio: `Update-AIPScanner –Profile Europe`
+4. In una sessione di PowerShell eseguire il comando Update-AIPScanner con lo stesso nome di profilo specificato nel passaggio 1. ad esempio `Update-AIPScanner –Profile Europe`
 
 5. Riavviare il servizio dello scanner di Azure Information Protection **Scanner Azure Information Protection**.
 
@@ -251,7 +251,7 @@ In questo scenario, quando si configura lo scanner nel portale di Azure, è nece
 
 Per disinstallare il client è possibile usare una delle opzioni seguenti:
 
-- Usare il Pannello di controllo per disinstallare un programma: Fare clic su **Microsoft Azure Information Protection** > **Disinstalla**
+- Per disinstallare un programma, usare il Pannello di controllo: fare clic su **Microsoft Azure Information Protection** > **Disinstalla**
 
 - Eseguire nuovamente il file eseguibile (ad esempio, **AzInfoProtection_UL. exe**) e dalla pagina **Modifica installazione** fare clic su **Disinstalla**. 
 

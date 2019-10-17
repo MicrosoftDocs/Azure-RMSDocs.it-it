@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 22ec828b0ee0c6c4719e938383c1952dbf42e33e
-ms.sourcegitcommit: 44f43c8c1d9cb9ff71a6be15e8a799ae4f2b3544
+ms.openlocfilehash: 8b7884de10999518d0c6cf9806b546181277a113
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314298"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447841"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -86,13 +86,13 @@ Ad esempio è possibile visualizzare quanto segue:
     
     - Identificare i file non protetti che contengono un tipo noto di informazioni sensibili. Una raccomandazione consente di configurare immediatamente la condizione corrispondente a una delle etichette, per applicare l'etichettatura automatica o consigliata.
         
-        Se si segue la raccomandazione: la volta successiva che i file vengono aperti da un utente o analizzati dallo scanner di Azure Information Protection, i file possono essere classificati e protetti automaticamente.
+        Se si segue la Raccomandazione: la volta successiva che i file vengono aperti da un utente o analizzati dal Azure Information Protection scanner, i file possono essere classificati e protetti automaticamente.
     
     - Identificare i repository dei dati che contengono file con informazioni sensibili identificate ma non analizzati da Azure Information Protection. Una raccomandazione consente di aggiungere immediatamente l'archivio dati identificato a uno dei profili dello scanner.
         
-        Se si segue la raccomandazione: al ciclo successivo dello scanner, i file possono essere classificati e protetti automaticamente.
+        Se si segue la Raccomandazione: al successivo ciclo dello scanner, i file possono essere classificati e protetti automaticamente.
 
-I report usano [Monitoraggio di Azure](/azure/log-analytics/log-analytics-overview) per archiviare i dati in un'area di lavoro di Log Analytics di proprietà dell'organizzazione. Se si ha familiarità con il linguaggio di query, è possibile modificare le query e creare nuovi report e dashboard di Power BI. L'esercitazione seguente può risultare utile per la comprensione del linguaggio di query: [Introduzione alle query in Monitoraggio di Azure](/azure/azure-monitor/log-query/get-started-queries).
+I report usano [Monitoraggio di Azure](/azure/log-analytics/log-analytics-overview) per archiviare i dati in un'area di lavoro di Log Analytics di proprietà dell'organizzazione. Se si ha familiarità con il linguaggio di query, è possibile modificare le query e creare nuovi report e dashboard di Power BI. L'esercitazione seguente può essere utile per comprendere il linguaggio di query: [Introduzione alle query di log di monitoraggio di Azure](/azure/azure-monitor/log-query/get-started-queries).
 
 Per altre informazioni, vedere i seguenti post di blog: 
 - [Data discovery, reporting and analytics for all your data with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854) (Individuazione, report e analisi per tutti i dati utente con Microsoft Information Protection).
@@ -113,11 +113,11 @@ Per generare questi report, gli endpoint inviano i seguenti tipi di informazioni
 
 - Nome del dispositivo dell'utente.
 
-- Per i documenti: Percorso e nome file dei documenti ai quali viene aggiunta l'etichetta.
+- Per i documenti: percorso e nome file dei documenti ai quali viene aggiunta l'etichetta.
 
-- Per i messaggi di posta elettronica: Oggetto e mittente del messaggio di posta elettronica per i messaggi con etichetta. 
+- Per i messaggi di posta elettronica: l'oggetto e il mittente di posta elettronica per i messaggi di posta elettronica contrassegnati. 
 
-- [Tipi di informazioni riservate predefinite](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) rilevati nel contenuto.
+- [Tipi di informazioni riservate predefinite](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) rilevati nel contenuto.
     
     Se si usano Azure Information Protection etichette con condizioni personalizzate, vengono inviati anche i nomi dei tipi di informazioni personalizzate. Fatta eccezione per la versione di anteprima del client Unified Labeling, i tipi di informazioni riservate personalizzate create nel centro di etichette non vengono inviati.
 
@@ -152,7 +152,7 @@ Per impostazione predefinita, i client di Azure Information Protection non invia
 ## <a name="prerequisites"></a>Prerequisiti
 Per visualizzare i report di Azure Information Protection e creare report personalizzati, verificare che siano soddisfatti i requisiti seguenti.
 
-|Requisito|Altre informazioni|
+|Requisito|Ulteriori informazioni|
 |---------------|--------------------|
 |Una sottoscrizione di Azure che include Log Analytics ed è per lo stesso tenant di Azure Information Protection|Vedere la pagina dei [prezzi di Monitoraggio di Azure](https://azure.microsoft.com/pricing/details/log-analytics).<br /><br />Se non si dispone di un abbonamento di Azure o attualmente non si usa Azure Log Analytics, la pagina dei prezzi include un collegamento per una versione di valutazione gratuita.|
 |Per informazioni sulla creazione di report per l'assegnazione di etichette ai client: <br /><br />-Client Azure Information Protection|Sono supportati sia il client Unified labeling che il client classico. <br /><br />Se non è già installato, è possibile scaricare e installare questi client dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).|
@@ -203,8 +203,8 @@ Dettagli:
 
 Dopo aver configurato l'area di lavoro per l'analisi di Azure Information Protection, i ruoli minimi necessari per visualizzare i report di analisi di Azure Information Protection sono i due seguenti:
 
-- Ruolo di amministratore di Azure AD: **Ruolo con autorizzazioni di lettura per la sicurezza**
-- Ruolo di Azure: **Lettore di Log Analytics**
+- Ruolo di amministratore di Azure AD: **Reader di sicurezza**
+- Ruolo di Azure: **Reader log Analytics**
 
 Tuttavia, un'assegnazione di ruolo tipica per molte organizzazioni è il **ruolo con autorizzazioni di lettura per la sicurezza** di Azure AD e il ruolo **Lettore** di Azure.
 
@@ -230,19 +230,19 @@ I log di monitoraggio di Azure hanno una funzionalità di **utilizzo e costi sti
     
 2. Individuare le opzioni del menu **Gestisci** e selezionare **Configura le analisi (anteprima)** .
 
-3. Nel pannello **Log Analytics di Azure Information Protection** viene visualizzato un elenco delle eventuali aree di lavoro di Log Analytics di proprietà del tenant. Eseguire una delle operazioni seguenti:
+3. Nel pannello **Log Analytics di Azure Information Protection** viene visualizzato un elenco delle eventuali aree di lavoro di Log Analytics di proprietà del tenant. Effettuare una delle operazioni seguenti:
     
-    - Per creare una nuova area di lavoro di Log Analytics: Selezionare **Crea nuova area di lavoro** e specificare le informazioni richieste nel pannello **Area di lavoro di Log Analytics**.
+    - Per creare una nuova area di lavoro di Log Analytics: selezionare **Crea nuova area di lavoro**, quindi nel pannello **Area di lavoro di Log Analytics** specificare le informazioni richieste.
     
-    - Per usare un'area di lavoro di Log Analytics già esistente: Selezionare l'area di lavoro dall'elenco.
+    - Per usare un'area di lavoro di Log Analytics esistente, selezionare l'area di lavoro dall'elenco.
     
     Per assistenza nella creazione dell'area di lavoro di Log Analytics, vedere [Creare un'area di lavoro di Log Analytics nel portale di Azure](https://docs.microsoft.com/azure/log-analytics/log-analytics-quick-create-workspace).
 
 4. Se si dispone di Azure Information Protection client (versione classica), selezionare la casella di controllo **Abilita analisi più approfondita nei dati sensibili** se si desidera archiviare i dati effettivi identificati come tipo di informazioni riservate. Per ulteriori informazioni su questa impostazione, vedere la sezione [corrispondenze di contenuto per l'analisi più approfondita](#content-matches-for-deeper-analysis) in questa pagina.
 
-5. Scegliere **OK**.
+5. Selezionare **OK**.
 
-Dopo aver configurato l'area di lavoro, eseguire le operazioni seguenti se si pubblicano le etichette di riservatezza in uno dei seguenti centri di gestione: Office 365 Centro sicurezza e conformità, Centro sicurezza Microsoft 365, Microsoft 365 conformità centro:
+Dopo aver configurato l'area di lavoro, eseguire le operazioni seguenti se si pubblicano le etichette di riservatezza in uno dei seguenti centri di gestione: Office 365 Centro sicurezza e conformità, Centro sicurezza Microsoft 365, Microsoft 365 conformità Center:
 
 - Nella portale di Azure passare a **Azure Information Protection** > **Gestisci**l'**etichetta unificata** >  e selezionare **pubblica**.
     
@@ -260,14 +260,14 @@ Nel pannello Azure Information Protection trovare le opzioni del menu **Dashboar
     
     Questo report contiene un'opzione **Colonne** che consente di visualizzare più informazioni sulle attività rispetto alla visualizzazione predefinita. È anche possibile accedere ad altri dettagli su un file selezionandolo per visualizzare **Dettagli attività**.
 
-- **Individuazione dei dati (anteprima)** : usare questo report per visualizzare informazioni sui file etichettati trovati dagli strumenti di analisi e dagli endpoint supportati.
+- **Individuazione dati (anteprima)** : usare questo report per visualizzare le informazioni sui file con etichetta trovati dagli scanner e dagli endpoint supportati.
     
-    Suggerimento: dalle informazioni raccolte si potrebbero individuare utenti che accedono a file contenenti informazioni riservate da posizioni di cui non si conosceva l'esistenza o che non vengono attualmente analizzate:
+    Suggerimento: dalle informazioni raccolte, è possibile che gli utenti accedano a file che contengono informazioni riservate dal percorso di cui non si è a conoscenza o che non sono in corso di analisi:
     
     - Se le posizioni sono in locale, è consigliabile aggiungerle come ulteriori repository di dati per lo strumento di analisi di Azure Information Protection.
     - Se le posizioni sono nel cloud, è consigliabile usare Microsoft Cloud App Security per gestirle. 
     
-- **Raccomandazioni (anteprima)** : usare questo report per identificare i file che contengono informazioni sensibili e attenuare il rischio seguendo le raccomandazioni.
+- **Raccomandazioni (anteprima)** : usare questo report per identificare i file che contengono informazioni riservate e mitigare il rischio seguendo le raccomandazioni.
     
     Quando si seleziona un elemento, l'opzione **Visualizza i dati** consente di visualizzare le attività di controllo che hanno attivato la raccomandazione.
 
@@ -287,21 +287,21 @@ Per creare query personalizzate, usare i nomi di schema descrittivi implementati
 
 Usare la tabella seguente per identificare il nome descrittivo delle funzioni di eventi che è possibile usare per le query personalizzate con le funzionalità di analisi di Azure Information Protection.
 
-|Nome della colonna|Descrizione|
+|Nome della colonna|Description|
 |-----------|-----------|
 |Accesso|Un documento protetto è stato aperto, identificato dal nome file se è stato rilevato, oppure con ID se non è stato rilevato.|
 |AccessDenied|A un documento protetto è stato negato l'accesso, identificato dal nome file, se viene rilevato, oppure con ID se non è stato rilevato.|
-|Time|Ora evento: UTC nel formato AAAA-MM-GGThh: MM: SS|
-|Utente|Utente: Formato UPN o dominio\utente|
+|Ora|Ora dell'evento: UTC nel formato AAAA-MM-GGThh: MM: SS|
+|Utente|Utente: Format UPN o dominio\utente|
 |ItemPath|Percorso dell'elemento completo o oggetto di posta elettronica|
 |ItemName|Nome file o oggetto posta elettronica |
-|Metodo|Metodo di assegnazione etichetta: Manuale, automatica, consigliata, predefinita o obbligatoria|
+|Metodo|Metodo assegnato etichetta: manuale, automatico, consigliato, predefinito o obbligatorio|
 |Attività|Attività di controllo: DowngradeLabel, UpgradeLabel, RemoveLabel, NewLabel, Discover, Access, RemoveCustomProtection, ChangeCustomProtection o NewCustomProtection |
 |Nomeetichetta|Nome etichetta (non localizzato)|
 |LabelNameBefore |Nome etichetta prima della modifica (non localizzato) |
 |ProtectionType|Tipo di protezione [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  "TemplateID": "GUID" <br /> } <br />|
 |ProtectionBefore|Tipo di protezione prima della modifica [JSON] |
-|InformationTypesMatches|Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovata nei dati in cui una matrice vuota indica che non sono stati trovati tipi di informazioni e null indica che non sono disponibili informazioni|
+|InformationTypesMatches|Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati in cui una matrice vuota indica che non sono stati trovati tipi di informazioni e null indica che non sono disponibili informazioni|
 |MachineName |FQDN quando disponibile; nome host in caso contrario|
 |DeviceRisk|Punteggio di rischio del dispositivo da WDATP quando disponibile|
 |Piattaforma|Piattaforma del dispositivo (Win, OSX, Android, iOS) |
@@ -314,24 +314,24 @@ Usare la tabella seguente per identificare il nome descrittivo delle funzioni di
 |IsProtected|Se protetto: Sì/No |
 |ProtectionOwner |Proprietario Rights Management in formato UPN|
 |LabelIdBefore|GUID etichetta o null prima della modifica|
-|InformationTypesAbove55|Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 55 o superiore |
-|InformationTypesAbove65|Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 65 o superiore |
-|InformationTypesAbove75|Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 75 o superiore |
-|InformationTypesAbove85|Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 85 o superiore |
-|InformationTypesAbove95|Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 95 o superiore|
-|DiscoveredInformationTypes |Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) trovata nei dati e il relativo contenuto corrispondente (se abilitato) in cui una matrice vuota indica che non sono stati trovati tipi di informazioni e null indica che non sono disponibili informazioni |
+|InformationTypesAbove55|Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 55 o superiore |
+|InformationTypesAbove65|Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 65 o superiore |
+|InformationTypesAbove75|Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 75 o superiore |
+|InformationTypesAbove85|Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 85 o superiore |
+|InformationTypesAbove95|Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati con livello di confidenza 95 o superiore|
+|DiscoveredInformationTypes |Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati e il relativo contenuto corrispondente (se abilitato) in cui una matrice vuota indica che non sono stati trovati tipi di informazioni e null indica che non sono disponibili informazioni |
 |ProtectedBefore|Se il contenuto è stato protetto prima della modifica: Sì/No |
 |ProtectionOwnerBefore|Proprietario Rights Management prima della modifica |
 |UserJustification|Giustificazione durante il downgrade o la rimozione dell'etichetta|
 |LastModifiedBy|Utente in formato UPN che ha eseguito l'ultima modifica al file. Disponibile solo per Office e SharePoint Online|
-|LastModifiedDate|UTC nel formato AAAA-MM-GGThh: MM: SS: Disponibile solo per Office & SharePoint Online |
+|LastModifiedDate|UTC nel formato AAAA-MM-GGThh: MM: SS: disponibile solo per Office & SharePoint Online |
 
 
 #### <a name="examples-using-informationprotectionevents"></a>Esempi di utilizzo di InformationProtectionEvents
 
 Gli esempi seguenti mostrano come è possibile usare lo schema descrittivo per creare query personalizzate.
 
-##### <a name="example-1-return-all-users-who-sent-audit-data-in-the-last-31-days"></a>Esempio 1: Restituire tutti gli utenti che hanno inviato dati di controllo negli ultimi 31 giorni 
+##### <a name="example-1-return-all-users-who-sent-audit-data-in-the-last-31-days"></a>Esempio 1: restituire tutti gli utenti che hanno inviato i dati di controllo negli ultimi 31 giorni 
 
 ```
 InformationProtectionEvents 
@@ -340,7 +340,7 @@ InformationProtectionEvents
 ```
 
  
-##### <a name="example-2-return-the-number-of-labels-that-were-downgraded-per-day-in-the-last-31-days"></a>Esempio 2 Restituire il numero di etichette di cui è stato effettuato il downgrade ogni giorno negli ultimi 31 giorni 
+##### <a name="example-2-return-the-number-of-labels-that-were-downgraded-per-day-in-the-last-31-days"></a>Esempio 2: restituire il numero di etichette di cui è stato effettuato il downgrade al giorno negli ultimi 31 giorni 
 
 
 ```
@@ -351,7 +351,7 @@ InformationProtectionEvents
  
 ```
  
-##### <a name="example-3-return-the-number-of-labels-that-were-downgraded-from-confidential-by-user-in-the-last-31-days"></a>Esempio 3: Restituire il numero di etichette di cui è stato effettuato il downgrade da Confidential da User negli ultimi 31 giorni 
+##### <a name="example-3-return-the-number-of-labels-that-were-downgraded-from-confidential-by-user-in-the-last-31-days"></a>Esempio 3: restituire il numero di etichette di cui è stato effettuato il downgrade da Confidential by User negli ultimi 31 giorni 
 
 ```
 
@@ -369,4 +369,4 @@ In questo esempio, un'etichetta di cui è stato effettuato il downgrade viene co
 ## <a name="next-steps"></a>Passaggi successivi
 Una volta esaminate le informazioni nei report, se si utilizza il client di Azure Information Protection, è possibile decidere di apportare modifiche ai criteri di Azure Information Protection. Per istruzioni, vedere [Configurazione dei criteri di Azure Information Protection](configure-policy.md).
 
-Se è disponibile un abbonamento a Microsoft 365, è anche possibile visualizzare l'utilizzo delle etichette nel Centro sicurezza Microsoft 365 e nel Centro conformità Microsoft 365. Per altre informazioni, vedere [Visualizzare l'utilizzo delle etichette con Analisi delle etichette](/Office365/SecurityCompliance/label-analytics).
+Se è disponibile un abbonamento a Microsoft 365, è anche possibile visualizzare l'utilizzo delle etichette nel Centro sicurezza Microsoft 365 e nel Centro conformità Microsoft 365. Per altre informazioni, vedere [Visualizzare l'utilizzo delle etichette con Analisi delle etichette](/microsoft-365/compliance/label-analytics).

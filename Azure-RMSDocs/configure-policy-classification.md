@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.assetid: e915f959-eafb-4375-8d2c-2f312edf2d29
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: e8379d001fdfeccbdeace6572d32b9dc88ef088c
-ms.sourcegitcommit: 44f43c8c1d9cb9ff71a6be15e8a799ae4f2b3544
+ms.openlocfilehash: 189c8732d7010363669141a99b4650ee466c1d6c
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72314293"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447140"
 ---
 # <a name="how-to-configure-conditions-for-automatic-and-recommended-classification-for-azure-information-protection"></a>Come configurare le condizioni per la classificazione automatica e consigliata per Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > Queste istruzioni si applicano al client Azure Information Protection (classico) e non al client per l'etichettatura unificata di Azure Information Protection. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
@@ -62,7 +62,7 @@ Se si configura la classificazione automatica anziché consigliata, l'etichetta 
 
 ### <a name="how-multiple-conditions-are-evaluated-when-they-apply-to-more-than-one-label"></a>Come vengono valutate più condizioni quando si applicano a più di un'etichetta
 
-1. Le etichette vengono ordinate per la valutazione, in base alla rispettiva posizione specificata nei criteri: l'etichetta posizionata per prima ha la posizione più bassa (minima riservatezza) e l'etichetta posizionata per ultima occupa la posizione più alta (massima riservatezza).
+1. Le etichette sono ordinate per la valutazione, in base alla relativa posizione specificata nel criterio: l'etichetta posizionata per prima occupa la posizione più bassa (minore riservatezza) e l'etichetta posizionata per ultima occupa la posizione più alta (massima riservatezza).
 
 2. Viene applicata l'etichetta per la massima riservatezza.
  
@@ -80,9 +80,9 @@ Se si configura la classificazione automatica anziché consigliata, l'etichetta 
 3. Nel pannello **Etichetta**, nella sezione **Configurare le condizioni per l'applicazione automatica di questa etichetta**, fare clic su **Aggiungi una nuova condizione**.
 
 4. Nel pannello **Condizione** selezionare **Tipi di informazioni** se si vuole usare una condizione predefinita oppure **Personalizzata** se si vuole specificare una condizione personalizzata:
-    - Per **Tipi di informazioni**: selezionare una delle condizioni disponibili nell'elenco, quindi selezionare il numero minimo di occorrenze e specificare se l'occorrenza deve avere un valore univoco per essere inclusa nel conteggio delle occorrenze.
+    - Per **Tipi di informazioni** selezionare una delle condizioni disponibili nell'elenco, quindi selezionare il numero minimo di occorrenze e specificare se l'occorrenza deve avere un valore univoco per essere inclusa nel conteggio delle occorrenze.
         
-        I tipi di informazioni usano il rilevamento di modelli e i tipi di informazioni riservate della prevenzione perdita dei dati (DLP) di Office 365. È possibile scegliere tra vari tipi di informazioni riservate comuni. Alcuni tipi sono specifici per determinate aree. Per altre informazioni, vedere [Elementi cercati dai tipi di informazioni riservate](/office365/securitycompliance/what-the-sensitive-information-types-look-for) nella documentazione di Office 365.
+        I tipi di informazioni usano il rilevamento di modelli e i tipi di informazioni riservate della prevenzione perdita dei dati (DLP) di Office 365. È possibile scegliere tra vari tipi di informazioni riservate comuni. Alcuni tipi sono specifici per determinate aree. Per altre informazioni, vedere [Elementi cercati dai tipi di informazioni riservate](/microsoft-365/compliance/what-the-sensitive-information-types-look-for) nella documentazione di Office 365.
         
         L'elenco dei tipi di informazioni selezionabili nel portale di Azure viene aggiornato periodicamente per includere i nuovi tipi aggiunti a DLP di Office. L'elenco esclude tuttavia i tipi di informazioni riservate specificati dall'utente e caricati come pacchetto di regole nel Centro sicurezza e conformità di Office 365.
         
@@ -91,19 +91,19 @@ Se si configura la classificazione automatica anziché consigliata, l'etichetta 
         
         Quando Azure Information Protection valuta i tipi di informazioni selezionati non usa l'impostazione del livello di attendibilità DLP di Office, ma ricerca corrispondenze in base al livello di attendibilità più basso.
     
-    - Per **Personalizzata**: specificare un nome e una frase di cui cercare la corrispondenza, esclusi i punti interrogativi e i caratteri speciali. Quindi specificare se usare un'espressione regolare per la corrispondenza, se la distinzione tra maiuscole e minuscole è rilevante, il numero minimo di occorrenze e se l'occorrenza deve avere un valore univoco per essere inclusa nel conteggio delle occorrenze.
+    - Per **Custom** (Personalizzata), specificare un nome e una frase di cui cercare la corrispondenza, esclusi i punti interrogativi e i caratteri speciali. Quindi specificare se usare un'espressione regolare per la corrispondenza, se la distinzione tra maiuscole e minuscole è rilevante, il numero minimo di occorrenze e se l'occorrenza deve avere un valore univoco per essere inclusa nel conteggio delle occorrenze.
         
         Le espressioni regolari usano i criteri di espressione regolare di Office 365. Per informazioni su come specificare espressioni regolari per le condizioni personalizzate, vedere la seguente versione specifica della [sintassi delle espressioni regolari Perl](https://www.boost.org/doc/libs/1_37_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html) da Boost.
         
 5. Decidere se modificare i valori **Numero minimo di occorrenze** e **Conta solo le occorrenze con valori univoci**, quindi selezionare **Salva**. 
     
-    Esempio di opzioni per le occorrenze: si seleziona il tipo di informazioni per il numero di previdenza sociale, si imposta il numero minimo di occorrenze su 2 e in un documento lo stesso numero di previdenza sociale è citato due volte. Se si imposta **Conta solo le occorrenze con valori univoci** su **Sì**, la condizione non viene soddisfatta. Se invece si imposta questa opzione su **No**, la condizione è soddisfatta.
+    Esempio per le opzioni relative alle occorrenze: si seleziona il tipo di informazioni per il codice fiscale, si imposta il numero minimo di occorrenze su 2 e in un documento compare due volte lo stesso codice fiscale. Se si imposta **Conta solo le occorrenze con valori univoci** su **Sì**, la condizione non è soddisfatta. Se invece si imposta questa opzione su **No**, la condizione è soddisfatta.
 
 6. Tornare al pannello **Etichetta**, configurare le opzioni seguenti e quindi fare clic su **Salva**:
     
-    - Scegliere la classificazione automatica o consigliata: per **Specificare se l'etichetta viene applicata automaticamente o se viene consigliata all'utente** selezionare **Automatico** o **Consigliato**.
+    - Scegliere la classificazione automatica o consigliata: per **Select how this label is applied: automatically or recommended to user** (Selezionare come applicare l'etichetta: automaticamente o consigliata all'utente) selezionare **Automatic** (Automatica) o **Recommended** (Consigliata).
     
-    - Specificare il testo per il prompt utente o la descrizione del criterio: mantenere il testo predefinito o specificare una stringa personalizzata.
+    - Specificare il testo per la richiesta utente o il suggerimento di criteri: mantenere il testo predefinito o specificare una stringa personalizzata.
 
 Quando fa clic su **Salva**, le modifiche diventano automaticamente disponibili per utenti e servizi. Non è più presente un'opzione di pubblicazione separata.
 
@@ -122,7 +122,7 @@ Per i seguenti tipi di informazioni riservate è richiesta una versione minima d
 - **Password delle impostazioni di pubblicazione di Azure**
 - **Chiave dell'account di archiviazione di Azure (generico)**
 
-Per ulteriori informazioni su questi tipi di informazioni riservate, vedere il post di Blog seguente: [Azure Information Protection ti aiuta a essere più sicuro individuando automaticamente le credenziali](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-helps-you-to-be-more-secure-by/ba-p/360181)
+Per ulteriori informazioni su questi tipi di informazioni riservate, vedere il post di Blog seguente: [Azure Information Protection aiuta a garantire una maggiore sicurezza tramite l'individuazione automatica delle credenziali](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-helps-you-to-be-more-secure-by/ba-p/360181)
 
 Inoltre, a partire da 1.48.204.0 del client Azure Information Protection, i tipi di informazioni sensibili seguenti non sono supportati e non vengono più visualizzati nel portale di Azure. Se sono presenti etichette che usano questi tipi di informazioni riservate, è consigliabile rimuoverle perché non è possibile garantire il rilevamento corretto e i relativi riferimenti nei report dello scanner devono essere ignorati:
 

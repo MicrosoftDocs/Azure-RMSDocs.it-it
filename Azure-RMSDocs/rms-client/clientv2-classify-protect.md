@@ -11,14 +11,14 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 99c4e92d61e2a0b652432de85b806568710f56fa
-ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
+ms.openlocfilehash: 716431c3f36876b1a3b1bcf19c93da9c606a7e83
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70214059"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72448034"
 ---
-# <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Manuale dell'utente: Classifica e proteggi con il client di assegnazione unificata Azure Information Protection
+# <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Guida dell'utente: classificare e proteggere con la Azure Information Protection Unified Labeling client
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 >
@@ -27,11 +27,11 @@ ms.locfileid: "70214059"
 > [!NOTE]
 > Usare queste istruzioni per classificare e proteggere i documenti e i messaggi di posta elettronica. Se è necessario solo classificare i documenti e i messaggi di posta elettronica senza proteggerli, vedere le [istruzioni per la sola classificazione](clientv2-classify.md). Se non si sa quali istruzioni usare, rivolgersi al proprio amministratore o al supporto tecnico.
 
-Il momento migliore per classificare e proteggere i documenti e i messaggi di posta elettronica è durante la creazione o la modifica all'interno delle app desktop di Office: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
+Il modo più semplice per classificare e proteggere i documenti e i messaggi di posta elettronica è durante la creazione o la modifica all'interno delle app desktop di Office: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
 
 Tuttavia, è anche possibile classificare e proteggere i file tramite **Esplora file**. Questo metodo supporta altri tipi di file ed è un modo pratico per classificare e proteggere più file contemporaneamente. Questo metodo supporta la protezione di documenti di Office, file PDF, file di testo e immagine e un'ampia gamma di altri file. 
 
-Se l'etichetta applica la protezione, un documento protetto non è adatto per essere salvato in OneDrive o SharePoint. Questi percorsi non supportano quanto segue per i file protetti: Creazione condivisa, Office per il Web, ricerca, anteprima dei documenti, anteprima e eDiscovery.
+Se l'etichetta applica la protezione, un documento protetto non è adatto per essere salvato in OneDrive o SharePoint. Questi percorsi non supportano i seguenti elementi per i file protetti: creazione condivisa, Office per il Web, ricerca, anteprima dei documenti, anteprima e eDiscovery.
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Condividere in modo sicuro un file con utenti esterni all'organizzazione
 
@@ -54,7 +54,7 @@ In alternativa, se è stata selezionata l'opzione **Mostra barra** dal pulsante 
 
 ![Esempio della barra di Azure Information Protection](../media/info-protect-barv2-not-set-callout.png)
 
-Per impostare un'etichetta, ad esempio "**Confidential** \ **All Employees**", selezionare **Confidential** e quindi **All Employees**. Se non si è certi dell'etichetta da applicare al documento o al messaggio di posta elettronica corrente, usare le descrizioni comando delle etichette per altre informazioni su ogni etichetta e su quando applicarla.
+Per impostare un'etichetta, ad esempio "**confidential** \ **All Employees**", selezionare **Confidential** e quindi **All Employees**. Se non si è certi dell'etichetta da applicare al documento o al messaggio di posta elettronica corrente, usare le descrizioni comando delle etichette per altre informazioni su ogni etichetta e su quando applicarla.
 
 Se al documento è già applicata un'etichetta e si desidera modificarla, è possibile selezionare un'etichetta diversa. Se è stata visualizzata la barra di Azure Information Protection e le etichette non sono visualizzate sulla barra da selezionare, fare prima clic sull'icona **Modifica etichetta** accanto al valore etichetta corrente.
 
@@ -105,7 +105,7 @@ Quando si usa Esplora file per classificare e proteggere i file, se una o più e
 
 Alcuni file vengono esclusi automaticamente dalla classificazione e dalla protezione, perché la loro modifica potrebbe causare un malfunzionamento del PC. Anche se è possibile selezionare questi file, essi vengono ignorati come una cartella o un file escluso. Ciò accade, ad esempio per i file eseguibili e la cartella Windows.
 
-La guida dell'amministratore contiene un elenco completo dei tipi di file supportati e dei file e delle cartelle che vengono automaticamente esclusi: [Tipi di file supportati dal client di Azure Information Protection Unified Labeling](clientv2-admin-guide-file-types.md).
+La guida dell'amministratore contiene un elenco completo dei tipi di file supportati e dei file e delle cartelle esclusi automaticamente: [tipi di file supportati dal client di Azure Information Protection Unified Labeling](clientv2-admin-guide-file-types.md).
 
 
 ### <a name="to-classify-and-protect-a-file-by-using-file-explorer"></a>Per classificare e proteggere un file mediante Esplora file
@@ -116,7 +116,7 @@ La guida dell'amministratore contiene un elenco completo dei tipi di file suppor
 
 2. Nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** usare le etichette in modo analogo a un'applicazione di Office, che consente di impostare la classificazione e la protezione come definito dall'amministratore. 
 
-   - Se nessuna delle etichette può essere selezionata (sono visualizzate in grigio): il file selezionato non supporta la classificazione, ma è possibile proteggerlo con le autorizzazioni personalizzate (passaggio 3). Ad esempio:
+   - Se non è possibile selezionare alcuna etichetta (sono tutte visualizzate in grigio): il file selezionato non supporta la classificazione, ma è possibile proteggerlo con le autorizzazioni personalizzate (passaggio 3). Ad esempio:
 
      ![Nessuna etichetta disponibile nella finestra di dialogo Classifica e proteggi - Azure Information Protection**](../media/v2info-protect-dialog-labels-dimmed.png)
 
@@ -128,11 +128,11 @@ La guida dell'amministratore contiene un elenco completo dei tipi di file suppor
 
    - **Selezionare le autorizzazioni**: selezionare il livello di accesso da assegnare agli utenti per la protezione del file o dei file selezionati.
     
-   - **Selezionare gli utenti, i gruppi o le organizzazioni**: specificare gli utenti che devono avere le autorizzazioni selezionate per il file o i file. Digitare l'indirizzo di posta elettronica completo di uno o più utenti o di un gruppo oppure il nome di dominio di un'organizzazione per tutti gli utenti dell'organizzazione. 
+   - **Selezionare gli utenti, i gruppi o le organizzazioni**: specificare gli utenti che devono avere le autorizzazioni selezionate per uno o più file. Digitare l'indirizzo di posta elettronica completo di uno o più utenti o di un gruppo oppure il nome di dominio di un'organizzazione per tutti gli utenti dell'organizzazione. 
     
      In alternativa, è possibile usare l'icona a forma di rubrica per selezionare utenti o gruppi dalla Rubrica di Outlook.
         
-    - **Scadenza dell'accesso**: Selezionare questa opzione solo per i file sensibili al tempo, in modo che gli utenti specificati non possano aprire il file o i file selezionati dopo una data impostata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno impostato, gli utenti specificati non potranno aprire il file.
+    - **Scadenza dell'accesso**: selezionare questa opzione solo per i file sensibili al tempo, in modo che gli utenti specificati non possano aprire il file o i file selezionati dopo una data impostata. Sarà comunque possibile aprire il file originale, ma dopo la mezzanotte (fuso orario corrente) del giorno impostato, gli utenti specificati non potranno aprire il file.
     
      Si noti che se questa impostazione in precedenza è stata configurata usando le autorizzazioni personalizzate di un'app di Office 2010, la data di scadenza specificata non viene visualizzata in questa finestra di dialogo, ma la data viene comunque impostata. Questo è un problema di visualizzazione che riguarda solo la data di scadenza configurata in Office 2010.
 
@@ -153,4 +153,4 @@ Ulteriori istruzioni sulle procedure sono disponibili nel manuale dell'utente pe
 
 ## <a name="additional-information-for-administrators"></a>Informazioni aggiuntive per gli amministratori    
 
-Vedere [Panoramica delle etichette di riservatezza](/Office365/SecurityCompliance/sensitivity-labels).
+Vedere [Panoramica delle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).

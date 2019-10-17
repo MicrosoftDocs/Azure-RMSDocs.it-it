@@ -12,12 +12,12 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7f688b53f56254be52668d25b63e03734dde71de
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: f7af3b59138eecbcac40ac09003ab365454e5630
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71673828"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447206"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Guida di orientamento per la distribuzione di Azure Information Protection
 
@@ -65,10 +65,10 @@ Per altre informazioni, vedere [Preparazione di utenti e gruppi per Azure Inform
 
 ### <a name="step-3-configure-and-deploy-classification-and-labeling"></a>Passaggio 3: Configurare e distribuire le funzionalità di classificazione e assegnazione di etichette
 
-Prima di configurare le etichette e le impostazioni dei criteri, decidere quale client Azure Information Protection si intende usare: Il client classico o il client di etichettatura unificata. In alternativa, potrebbero essere necessari entrambi i client. Questa decisione client è ora necessaria, quindi si conosce il portale di gestione da usare per configurare le etichette e le impostazioni dei criteri. Per altre informazioni e per semplificare questa decisione, vedere scegliere il [client Azure Information Protection da usare](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
+Prima di configurare le etichette e le impostazioni dei criteri, decidere quale client di Azure Information Protection si utilizzerà: il client classico o il client di etichetta unificata. In alternativa, potrebbero essere necessari entrambi i client. Questa decisione client è ora necessaria, quindi si conosce il portale di gestione da usare per configurare le etichette e le impostazioni dei criteri. Per altre informazioni e per semplificare questa decisione, vedere scegliere il [client Azure Information Protection da usare](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
 
 > [!TIP]
-> **Facoltativo ma consigliato**: Provare a usare la [Guida introduttiva dello scanner](quickstart-findsensitiveinfo.md) per individuare le informazioni riservate presenti negli archivi dati locali. Le informazioni trovate dallo scanner possono semplificare la tassonomia di classificazione, oltre a fornire informazioni utili sulle etichette richieste e sui file che necessitano di protezione.
+> **Facoltativo ma consigliato**: provare a usare la [Guida introduttiva dello scanner](quickstart-findsensitiveinfo.md) per individuare le informazioni riservate presenti negli archivi dati locali. Le informazioni trovate dallo scanner possono semplificare la tassonomia di classificazione, oltre a fornire informazioni utili sulle etichette richieste e sui file che necessitano di protezione.
 > 
 > Poiché la modalità di individuazione dello scanner non richiede la configurazione di etichette o se è stata definita la tassonomia della classificazione, l'esecuzione dello scanner in questo modo è adatta per questa fase iniziale della distribuzione. È anche possibile usare questa configurazione dello scanner in parallelo con i passaggi di distribuzione seguenti, fino a quando non si configurano le etichette consigliate o automatiche.
 
@@ -76,7 +76,7 @@ Se non si dispone già di una strategia di classificazione, esaminare i [criteri
 
 Riconfigurare le etichette per apportare le modifiche necessarie per supportare le decisioni di classificazione. Configurare i criteri per l'assegnazione manuale di etichette da parte degli utenti e scrivere istruzioni per gli utenti che consentono di decidere quale etichetta applicare e in quali casi. Se i criteri predefiniti sono stati creati con etichette che applicano la protezione automaticamente, rimuovere temporaneamente le impostazioni di protezione o disabilitare le etichette. Per ulteriori informazioni sulla configurazione delle etichette e delle impostazioni dei criteri, vedere la documentazione seguente:
 
-- Azure Information Protection etichette per il client classico: [Configurazione dei criteri di Azure Information Protection](./configure-policy.md)
+- Etichette di Azure Information Protection per il client classico: [configurazione dei criteri di Azure Information Protection](./configure-policy.md)
 
 - Etichette di riservatezza per il client Unified Labeling: [Panoramica delle etichette di riservatezza](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels)
 
@@ -108,7 +108,7 @@ Quando gli utenti sono in grado di assegnare etichette ai documenti e ai messagg
 
 2. Installare il modulo PowerShell per AIPService in almeno un computer dotato di accesso a Internet. È possibile eseguire questo passaggio subito o più avanti. Per altre informazioni, vedere [installazione del modulo PowerShell AIPService](./install-powershell.md).
 
-3. Se attualmente si usa Active Directory Rights Management Services: Eseguire una migrazione per spostare le chiavi, i modelli e gli URL nel cloud. Per altre informazioni, vedere [Migrazione da AD RMS a Information Protection](migrate-from-ad-rms-to-azure-rms.md).
+3. Se attualmente si usa AD RMS, eseguire una migrazione per spostare le chiavi, i modelli e gli URL nel cloud. Per altre informazioni, vedere [Migrazione da AD RMS a Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 4. Verificare che il servizio di protezione sia attivato in modo che sia possibile iniziare a proteggere documenti e messaggi di posta elettronica. Se è richiesta una distribuzione in più fasi, configurare i controlli di selezione utenti per limitare la capacità degli utenti di applicare la protezione. Per altre informazioni, vedere [Attivazione del servizio di protezione da Azure Information Protection](./activate-service.md).
 
@@ -116,13 +116,13 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
 
 - Registrazione dei dati di utilizzo per monitorare le modalità con cui l'organizzazione usa il servizio di protezione. È possibile eseguire questo passaggio subito o più avanti. Per ulteriori informazioni, vedere [registrazione e analisi dell'utilizzo della protezione da Azure Information Protection](./log-analyze-usage.md).
 
-### <a name="step-5-configure-labels-and-settings-applications-and-services-for-data-protection"></a>Passaggio 5: Configurare etichette e impostazioni, applicazioni e servizi per la protezione dei dati
+### <a name="step-5-configure-labels-and-settings-applications-and-services-for-data-protection"></a>Passaggio 5: configurare le etichette e le impostazioni, le applicazioni e i servizi per la protezione dei dati
 
 1. Aggiornare le etichette per applicare la protezione
     
     Per il client di Azure Information Protection (classico), vedere [How to Configure an Label for Rights Management Protection](./configure-policy-protection.md).
     
-    Per il client di etichettatura unificata di Azure Information Protection, vedere [limitare l'accesso al contenuto usando la crittografia in etichette di riservatezza](https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels).
+    Per il client di etichettatura unificata di Azure Information Protection, vedere [limitare l'accesso al contenuto usando la crittografia in etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels).
     
     Si noti che in Outlook gli utenti possono applicare etichette per attivare la protezione di Rights Management anche se Exchange non è configurato per i servizi Information Rights Management (IRM). Tuttavia, finché Exchange non sarà configurato per IRM o per [Office 365 Message Encryption con nuove funzionalità](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e), l'organizzazione non potrà usufruire in modo completo della protezione di Azure Rights Management con Exchange. Questa configurazione aggiuntiva è inclusa nell'elenco seguente, 2 per Exchange Online e 5 per Exchange locale. 
 
@@ -140,13 +140,13 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
     
     Per i file nei PC, è possibile usare i cmdlet di PowerShell per classificare e proteggere i file. Per ulteriori informazioni, vedere le guide di amministrazione seguenti:
     
-    - Client di Azure Information Protection (versione classica): [Uso di PowerShell con il client di Azure Information Protection](./rms-client/client-admin-guide-powershell.md)
+    - Client di Azure Information Protection (classico): [uso di PowerShell con il client di Azure Information Protection](./rms-client/client-admin-guide-powershell.md)
     
-    - Client per l'etichettatura unificata di Azure Information Protection: [Uso di PowerShell con il client di etichettatura unificato Azure Information Protection](./rms-client/clientv2-admin-guide-powershell.md)
+    - Azure Information Protection client per l'assegnazione di etichette unificata: [uso di PowerShell con il client di Azure Information Protection Unified Labeling](./rms-client/clientv2-admin-guide-powershell.md)
 
 6. Distribuire il connettore per le raccolte protette con IRM in SharePoint Server e i messaggi protetti con IRM per Exchange locale
     
-    Se si dispone di SharePoint ed Exchange locale e si vogliono usare le funzionalità di Information Rights Management (IRM), installare e configurare il connettore di Rights Management. Per ulteriori informazioni, vedere [Distribuzione del connettore di Azure Rights Management](./deploy-rms-connector.md).
+    Se si dispone di SharePoint ed Exchange locale e si vogliono usare le funzionalità di Information Rights Management (IRM), installare e configurare il connettore di Rights Management. Per altre informazioni, vedere [Distribuzione del connettore di Azure Rights Management](./deploy-rms-connector.md).
 
 ### <a name="step-6-use-and-monitor-your-data-protection-solutions"></a>Passaggio 6: Usare e monitorare le soluzioni di protezione dei dati
 È ora possibile monitorare il modo in cui l'organizzazione usa le etichette configurate e verificare che le informazioni riservate siano effettivamente protette. Per altre informazioni a supporto di questa fase di distribuzione, vedere gli argomenti seguenti:
@@ -183,7 +183,7 @@ Prima di iniziare a usare il servizio di protezione di Azure Information Protect
 
 3. Installare il modulo PowerShell per AIPService in almeno un computer dotato di accesso a Internet. È possibile eseguire questo passaggio subito o più avanti. Per altre informazioni, vedere [installazione del modulo PowerShell AIPService](./install-powershell.md).
 
-4. Se attualmente si usa Active Directory Rights Management Services: Eseguire una migrazione per spostare le chiavi, i modelli e gli URL nel cloud. Per altre informazioni, vedere [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
+4. Se attualmente si usa AD RMS, eseguire una migrazione per spostare le chiavi, i modelli e gli URL nel cloud. Per altre informazioni, vedere [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md).
 
 5. Verificare che il servizio di protezione sia attivato in modo che sia possibile iniziare a proteggere documenti e messaggi di posta elettronica. Se è richiesta una distribuzione in più fasi, configurare i controlli di selezione utenti per limitare la capacità degli utenti di applicare la protezione. Per altre informazioni, vedere [Attivazione del servizio di protezione da Azure Information Protection](./activate-service.md).
 
@@ -193,7 +193,7 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
 
 - Registrazione dei dati di utilizzo per monitorare le modalità con cui l'organizzazione usa il servizio di protezione. È possibile eseguire questo passaggio subito o più avanti. Per ulteriori informazioni, vedere [registrazione e analisi dell'utilizzo della protezione da Azure Information Protection](./log-analyze-usage.md).
 
-### <a name="step-3-install-the-azure-information-protection-client-classic-and-configure-applications-and-services-for-rights-management"></a>Passaggio 3: Installare il client di Azure Information Protection (versione classica) e configurare le applicazioni e i servizi per Rights Management
+### <a name="step-3-install-the-azure-information-protection-client-classic-and-configure-applications-and-services-for-rights-management"></a>Passaggio 3: installare il client di Azure Information Protection (versione classica) e configurare le applicazioni e i servizi per Rights Management
 
 1. Distribuire il client di Azure Information Protection (versione classica)
     
@@ -215,7 +215,7 @@ Facoltativamente, considerare la possibilità di configurare quanto segue:
 
 5. Distribuire il connettore per i server locali
     
-    Se si prevede di usare servizi locali con il servizio di protezione, installare e configurare il connettore di Rights Management. Per ulteriori informazioni, vedere [Distribuzione del connettore di Azure Rights Management](./deploy-rms-connector.md).
+    Se si prevede di usare servizi locali con il servizio di protezione, installare e configurare il connettore di Rights Management. Per altre informazioni, vedere [Distribuzione del connettore di Azure Rights Management](./deploy-rms-connector.md).
 
 ### <a name="step-4-use-and-monitor-your-data-protection-solutions"></a>Passaggio 4: Usare e monitorare le soluzioni di protezione dei dati
 

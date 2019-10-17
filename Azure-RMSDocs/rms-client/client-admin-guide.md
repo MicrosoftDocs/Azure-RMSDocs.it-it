@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cac8377f4eb4a3d4b5678c9d0a976866aadeead8
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: c5fec770f3841408ea2eb10f5836329a6b003312
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314116"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447649"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012, windows Server 2008 R2*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Usare le informazioni di questa guida se si è responsabili del client Azure Information Protection in una rete aziendale o se sono necessarie maggiori informazioni rispetto a quelle disponibili nella [Guida per l'utente del client Azure Information Protection](client-user-guide.md). 
 
@@ -69,7 +69,7 @@ Se si usa AD RMS e si vuole passare ad Azure Information Protection, vedere [Mig
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>È consigliabile distribuire il client Azure Information Protection?
 
-Distribuire il client di Azure Information Protection se non si usano le [etichette di riservatezza in Office 365 Centro sicurezza e conformità](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) ma usando le etichette Azure Information Protection scaricate da Azure e una qualsiasi delle seguenti applica
+Distribuire il client di Azure Information Protection se non si usano le [etichette di riservatezza in Office 365 Centro sicurezza e conformità](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) ma usando le etichette Azure Information Protection scaricate da Azure e una qualsiasi delle seguenti applica
 
 - Si vuole classificare (e, facoltativamente, proteggere) documenti e messaggi di posta elettronica selezionando etichette dalle applicazioni di Office (Word, Excel, PowerPoint, Outlook).
 
@@ -158,7 +158,7 @@ Se è necessario accedere con un nome utente diverso da quello visualizzato, ved
 
 Il valore **Ultima connessione** indica quando il client si è connesso per l'ultima volta al servizio Azure Information Protection dell'organizzazione. È possibile usare queste informazioni con l'impostazione **Il criterio di Information Protection è stato installato il giorno** per verificare la data e ora dell'installazione o dell'ultimo aggiornamento dei criteri di Azure Information Protection. Quando si connette al servizio, il client scarica automaticamente i criteri più recenti se rileva variazioni rispetto a quelli correnti e anche ogni 24 ore. Se si sono apportate modifiche ai criteri dopo l'ora visualizzata, chiudere e riaprire l'applicazione di Office.
 
-Se viene visualizzato il messaggio **Questo client non ha la licenza per Office Professional Plus**: il client Azure Information Protection ha rilevato che l'edizione installata di Office non supporta l'applicazione della protezione di Rights Management. Quando viene effettuato questo rilevamento, le etichette che applicano la protezione non vengono visualizzate sulla barra di Azure Information Protection.
+Se viene visualizzato il messaggio **Questo client non ha la licenza per Office Professional Plus**, il client Azure Information Protection ha rilevato che l'edizione installata di Office non supporta l'applicazione della protezione di Rights Management. Quando viene effettuato questo rilevamento, le etichette che applicano la protezione non vengono visualizzate sulla barra di Azure Information Protection.
 
 Usare le informazioni di **Versione** per verificare la versione del client installata. È possibile controllare se la versione installata è quella più recente e verificare le nuove funzionalità e le correzioni di tale versione facendo clic sul collegamento **Novità** che consente di accedere alla [cronologia delle versioni](client-version-release-history.md) del client.
 
@@ -172,11 +172,11 @@ Tuttavia, i nomi e le descrizioni delle etichette specificati non vengono automa
 
 ## <a name="post-installation-tasks"></a>Attività post-installazione
 
-Dopo aver installato il client Azure Information Protection, accertarsi di fornire agli utenti istruzioni per etichettare i documenti e i messaggi di posta elettronica, oltre a linee guida per le etichette da scegliere per scenari specifici. Esempio:
+Dopo aver installato il client Azure Information Protection, accertarsi di fornire agli utenti istruzioni per etichettare i documenti e i messaggi di posta elettronica, oltre a linee guida per le etichette da scegliere per scenari specifici. Ad esempio:
 
-- Istruzioni per l'utente online: [Guida per l'utente di Azure Information Protection](client-user-guide.md)
+- Istruzioni per gli utenti online: [Guida per l'utente di Azure Information Protection](client-user-guide.md)
 
-- Scaricare un manuale dell'utente personalizzabile: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Manuale d'uso di Azure Information Protection per utenti finali)
+- Download di un manuale dell'utente personalizzabile: [Azure Information Protection End User Adoption Guide](https://download.microsoft.com/download/7/1/2/712A280C-1C66-4EF9-8DC3-88EE43BEA3D4/Azure_Information_Protection_End_User_Adoption_Guide_EN_US.pdf) (Manuale d'uso di Azure Information Protection per utenti finali)
 
 ## <a name="upgrading-and-maintaining-the-azure-information-protection-client"></a>Aggiornamento e gestione del client Azure Information Protection
 
@@ -215,9 +215,9 @@ Sebbene sia possibile aggiornare lo scanner in un ordine diverso, è consigliabi
 
 3. Aggiornare il client di Azure Information Protection installando la versione di disponibilità generale corrente dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-4. In una sessione di PowerShell eseguire il comando Update-AIPScanner con lo stesso nome di profilo specificato nel passaggio 1. Ad esempio: `Update-AIPScanner –Profile Europe`
+4. In una sessione di PowerShell eseguire il comando Update-AIPScanner con lo stesso nome di profilo specificato nel passaggio 1. ad esempio `Update-AIPScanner –Profile Europe`
 
-5. Solo se lo scanner è in esecuzione in un computer disconnesso: A questo punto eseguire [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) e specificare il file che contiene le impostazioni esportate.
+5. Solo se lo scanner è in esecuzione in un computer disconnesso: ora eseguire [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) e specificare il file che contiene le impostazioni esportate.
 
 6. Riavviare il servizio dello scanner di Azure Information Protection **Scanner Azure Information Protection**.
 
@@ -248,13 +248,13 @@ Se si vuole spostare il database di configurazione dello scanner per la versione
 
 3. Installare lo scanner usando [Install-AIPScanner](/powershell/module/azureinformationprotection/Install-AIPScanner), specificando la nuova istanza di SQL Server e il nome del profilo.
 
-4. Facoltativo: se non si vuole che lo scanner ripeta l'analisi di tutti i file, esportare la tabella ScannerFiles e importarla nel nuovo database.
+4. Facoltativo: se non si vuole che lo scanner esegua la ripetizione dell'analisi di tutti i file, esportare la tabella ScannerFiles e importarla nel nuovo database.
 
 ## <a name="uninstalling-the-azure-information-protection-client"></a>Disinstallazione del client Azure Information Protection
 
 Per disinstallare il client è possibile usare una delle opzioni seguenti:
 
-- Usare il Pannello di controllo per disinstallare un programma: Fare clic su **Microsoft Azure Information Protection** > **Disinstalla**
+- Per disinstallare un programma, usare il Pannello di controllo: fare clic su **Microsoft Azure Information Protection** > **Disinstalla**
 
 - Rieseguire l'eseguibile, ad esempio **AzInfoProtection.exe**, e fare clic su **Disinstalla** nella pagina **Modifica installazione**. 
 

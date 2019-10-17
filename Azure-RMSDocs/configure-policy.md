@@ -13,23 +13,23 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 18e3062de5c4fcdf39b24847b6a23dfe073fe9ec
-ms.sourcegitcommit: be8ccf7248e0e504d73b3cd2f58fb2d0c4455ad3
+ms.openlocfilehash: 0de43192b44fb4e6d931d1e09ef8f01514c0a4ff
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72236812"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447047"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > Il criterio di Azure Information Protection si applica al client di Azure Information Protection (classico) e non al client di etichettatura unificato Azure Information Protection. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 > 
-> Per informazioni su come configurare le etichette di riservatezza e le impostazioni dei criteri per il client di etichettatura unificata, vedere [Panoramica delle etichette di riservatezza](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels) nella documentazione di Office.
+> Per informazioni su come configurare le etichette di riservatezza e le impostazioni dei criteri per il client di etichettatura unificata, vedere [Panoramica delle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) nella documentazione di Office.
 
 Per configurare la classificazione, l'assegnazione di etichette e la protezione per il client classico, è necessario configurare i criteri di Azure Information Protection. Questi criteri vengono quindi scaricati nei computer in cui è installato il [client di Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
@@ -43,19 +43,19 @@ I criteri contengono etichette e impostazioni:
 
 Azure Information Protection supporta livelli diversi di sottoscrizioni:
 
-- Azure Information Protection P2: supporta tutte le funzionalità di classificazione, assegnazione di etichette e protezione.
+- Azure Information Protection P2: supporta tutte le funzionalità di classificazione, etichettatura e protezione.
 
-- Azure Information Protection P1: supporta la maggior parte delle funzionalità di classificazione, assegnazione di etichette e protezione, ad eccezione della classificazione automatica o di HYOK.
+- Azure Information Protection P1: supporta la maggior parte delle funzionalità di classificazione, etichettatura e protezione, ad eccezione della classificazione automatica o di HYOK.
 
-- Office 365 che include il servizio Azure Rights Management: supporta la protezione, ma non la classificazione e l'assegnazione di etichette.
+- Office 365 con il servizio Azure Rights Management: supporta le funzionalità di protezione, ma non quelle di classificazione ed etichettatura.
 
 Le opzioni che richiedono una sottoscrizione di Azure Information Protection P2 sono identificate nel portale.
 
 Se l'organizzazione dispone di varie sottoscrizioni, è responsabilità dell'organizzazione assicurarsi che gli utenti non usino funzionalità non concesse in licenza per l'uso al loro account. Il client Azure Information Protection non gestisce il controllo e l'applicazione delle licenze. Quando si configurano opzioni per le quali non tutti gli utenti hanno una licenza, usare criteri con ambito o un'impostazione del Registro di sistema per garantire che l'organizzazione mantenga la conformità con le licenze:
 
-- **Quando l'organizzazione usa una combinazione di licenze Azure Information Protection P1 e Azure Information Protection P2**: per gli utenti con licenza P2, creare e usare uno o più [criteri con ambito](configure-policy-scope.md) quando si configurano le opzioni che richiedono una licenza di Azure Information Protection P2. Assicurarsi che i criteri globali non contengano opzioni che richiedono una licenza di Azure Information Protection P2.
+- **Se l'organizzazione dispone di una combinazione di licenze di Azure Information Protection P1 e Azure Information Protection P2**: per gli utenti con licenza P2, creare e usare uno o più [criteri con ambito](configure-policy-scope.md) quando si configurano le opzioni che richiedono una licenza di Azure Information Protection P2. Assicurarsi che i criteri globali non contengano opzioni che richiedono una licenza di Azure Information Protection P2.
 
-- **Quando l'organizzazione ha una sottoscrizione per Azure Information Protection ma alcuni utenti hanno solo una licenza per Office 365 che include il servizio Azure Rights Management**: per gli utenti che non hanno una licenza per Azure Information Protection, modificare il Registro di sistema nei loro computer in modo che non scarichino i criteri di Azure Information Protection. Per le istruzioni, vedere la guida dell'amministratore per la personalizzazione seguente: [Applicare la modalità di sola protezione quando l'organizzazione dispone di licenze miste](./rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
+- **Se l'organizzazione dispone di una sottoscrizione di Azure Information Protection, ma alcuni utenti hanno solo una licenza per Office 365 che include il servizio Azure Rights Management**: modificare il Registro di sistema nei computer degli utenti che non hanno una licenza di Azure Information Protection, in modo che non scarichino i criteri di Azure Information Protection. Per istruzioni, vedere la personalizzazione seguente nella guida per l'amministratore: [Applicare la modalità di sola protezione quando l'organizzazione dispone di licenze miste](./rms-client/client-admin-guide-customizations.md#enforce-protection-only-mode-when-your-organization-has-a-mix-of-licenses).
 
 Per altre informazioni sulle sottoscrizioni, vedere [Quale sottoscrizione è necessaria per Azure Information Protection e quali funzionalità sono incluse?](faqs.md#what-subscription-do-i-need-for-azure-information-protection-and-what-features-are-included)
 
@@ -105,9 +105,9 @@ Quando si accede di nuovo al pannello **Azure Information Protection** viene sel
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Come configurare i criteri di Azure Information Protection
 
-1. Assicurarsi di avere eseguito l'accesso al portale di Azure usando uno di questi ruoli amministrativi: Azure Information Protection amministratore, amministratore della sicurezza o amministrazione globale. Vedere la [sezione precedente](#signing-in-to-the-azure-portal) per altre informazioni su questi ruoli amministrativi.
+1. Assicurarsi di aver eseguito l'accesso al portale di Azure usando uno di questi ruoli amministrativi: Azure Information Protection amministratore, amministratore della sicurezza o amministrazione globale. Vedere la [sezione precedente](#signing-in-to-the-azure-portal) per altre informazioni su questi ruoli amministrativi.
 
-2. Se necessario, passare al pannello **Azure Information Protection**: Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
+2. Se necessario, passare al pannello **Azure Information Protection**: ad esempio, nel menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
     
     Il pannello **Azure Information Protection - Etichette** viene aperto automaticamente per consentire la visualizzazione e la modifica delle etichette esistenti. Le etichette possono essere rese disponibili per tutti gli utenti, per utenti selezionati o per nessun utente, aggiungendole o rimuovendole da un criterio.
 
@@ -128,7 +128,7 @@ Il client Azure Information Protection verifica la disponibilità di eventuali m
 
 - Ogni 24 ore.
 
-- Per lo [scanner di Azure Information Protection](deploy-aip-scanner.md): all'avvio del servizio (se il criterio è antecedente a un'ora) e ogni ora durante il funzionamento.
+- Per lo [scanner di Azure Information Protection](deploy-aip-scanner.md): all'avvio del servizio (se il criterio è antecedente a un'ora) e ogni ora durante le operazioni.
 
 
 >[!NOTE]
@@ -170,7 +170,7 @@ Quando viene applicata un'etichetta a un documento o un messaggio di posta elett
 
 - Nei messaggi di posta elettronica queste informazioni sono archiviate nell'intestazione X-: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
 
-- Per i documenti di Word (DOC e DOCX), i fogli di calcolo di Excel (XLS e XLSX), le presentazioni di PowerPoint (PPT e PPTX) e i documenti PDF, questi metadati vengono archiviati nella proprietà personalizzata seguente: **MSIP_Label_\<GUID>_Enabled=True**  
+- Per i documenti di Word (doc e docx), i fogli di calcolo di Excel (xls e XLSX), le presentazioni di PowerPoint (con estensione ppt e pptx) e i documenti PDF, questi metadati vengono archiviati nella seguente proprietà personalizzata: **MSIP_Label_ @ no__t-1GUID > _Enabled = true**  
 
 Per i messaggi di posta elettronica, le informazioni sull'etichetta vengono archiviate al momento dell'invio del messaggio. Per i documenti, le informazioni sull'etichetta vengono archiviate quando il file viene salvato. 
 
@@ -184,5 +184,5 @@ Per esempi su come personalizzare i criteri di Azure Information Protection e os
 
 - [Configurare impostazioni dei criteri di Azure Information Protection che interagiscono tra loro](infoprotect-settings-tutorial.md)
 
-Per visualizzare le prestazioni dei criteri, vedere [Reporting per Azure Information Protection](reports-aip.md).
+Per informazioni sull'esecuzione dei criteri, vedere [Central Reporting per Azure Information Protection](reports-aip.md).
 

@@ -11,14 +11,14 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 67c65fa592bd08fbcdc195793cd8576ef5ed5a25
-ms.sourcegitcommit: 8cd708f3f45d3f49d0c84fc56fec9c7bdcd08ba7
+ms.openlocfilehash: c7ae1a038ab3b499767cc892bd1b99ae27c8dbdc
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70214116"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447330"
 ---
-# <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Manuale dell'utente: Classificare un file o un messaggio di posta elettronica usando il client di Azure Information Protection Unified Labeling per Windows
+# <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Guida dell'utente: classificare un file o un messaggio di posta elettronica usando il client di etichettatura unificato di Azure Information Protection per Windows
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 >
@@ -86,7 +86,7 @@ La guida dell'amministratore include l'elenco completo dei tipi di file che supp
 
 2. Nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** usare le etichette in modo analogo a un'applicazione di Office che consente di impostare la classificazione definita dall'amministratore. 
     
-    Se nessuna delle etichette può essere selezionata (sono visualizzate in grigio): il file selezionato non supporta la classificazione. Ad esempio:
+    Se non è possibile selezionare alcuna etichetta (sono tutte visualizzate in grigio) significa che il file selezionato non supporta la classificazione. Ad esempio:
     
     ![Nessuna etichetta disponibile nella finestra di dialogo Classifica e proteggi - Azure Information Protection**](../media/v2info-protect-dialog-labels-dimmed.png)
 
@@ -106,5 +106,5 @@ Ulteriori istruzioni sulle procedure sono disponibili nel manuale dell'utente pe
 
 ## <a name="additional-information-for-administrators"></a>Informazioni aggiuntive per gli amministratori
 
-Vedere [Panoramica delle etichette di riservatezza](/Office365/SecurityCompliance/sensitivity-labels).
+Vedere [Panoramica delle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
 

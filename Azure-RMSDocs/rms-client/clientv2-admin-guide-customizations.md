@@ -12,14 +12,14 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 97e679fd6b234884f3b96fef5abef98f6c68e16a
-ms.sourcegitcommit: 17e562b102c077d2af0fa63ce1db77bf5c41c5b4
+ms.openlocfilehash: 95c873af126c9882bcb74790e8e68834149738e8
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923679"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447834"
 ---
-# <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
+# <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012, windows Server 2008 R2*
 >
@@ -31,7 +31,7 @@ Per queste impostazioni è necessario modificare il registro di sistema o specif
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Come configurare le impostazioni avanzate per il client usando Office 365 Centro sicurezza e conformità PowerShell
 
-Quando si usa Office 365 Centro sicurezza e conformità PowerShell, è possibile configurare le impostazioni avanzate che supportano le personalizzazioni per i criteri etichette e le etichette. Esempio:
+Quando si usa Office 365 Centro sicurezza e conformità PowerShell, è possibile configurare le impostazioni avanzate che supportano le personalizzazioni per i criteri etichette e le etichette. Ad esempio:
 
 - L'impostazione per visualizzare la barra di Information Protection nelle app di Office è un' ***impostazione avanzata dei criteri***per le etichette.
 - L'impostazione per specificare un colore dell'etichetta è un' ***impostazione avanzata etichetta***.
@@ -59,19 +59,19 @@ Per rimuovere un'impostazione avanzata, utilizzare la stessa sintassi ma specifi
 
 #### <a name="examples-for-setting-advanced-settings"></a>Esempi per l'impostazione di impostazioni avanzate
 
-Esempio 1: Impostare un'impostazione avanzata dei criteri per le etichette per un valore stringa singolo:
+Esempio 1: impostare un'impostazione avanzata dei criteri per le etichette per un singolo valore stringa:
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 
-Esempio 2 Impostare un'impostazione avanzata etichetta per un valore stringa singolo:
+Esempio 2: impostare un'impostazione avanzata etichetta per un valore stringa singolo:
 
     Set-Label -Identity Internal -AdvancedSettings @{smimesign="true"}
 
-Esempio 3: Impostare un'impostazione avanzata etichetta per più valori stringa:
+Esempio 3: impostare un'impostazione avanzata etichetta per più valori stringa:
 
     Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 
-Esempio 4: Rimuovere un'impostazione avanzata dei criteri di etichetta specificando un valore stringa null:
+Esempio 4: rimuovere un'impostazione avanzata dei criteri di etichetta specificando un valore stringa null:
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions=""}
 
@@ -81,7 +81,7 @@ Specificare il nome dei criteri di etichetta per il parametro *Identity* di Powe
 
 - **Nome** è il nome originale dell'etichetta ed è univoco in tutte le etichette. Se si modifica il nome dell'etichetta dopo che è stata creata, questo valore rimane invariato. Per le etichette di cui è stata eseguita la migrazione da Azure Information Protection, è possibile che venga visualizzato l'ID etichetta dell'etichetta dall'portale di Azure.
 
-- **Nome visualizzato** è il nome dell'etichetta visualizzata dagli utenti e non è necessario che sia univoco in tutte le etichette. Ad esempio, gli utenti visualizzano una sottoetichetta **tutti i dipendenti** per l'etichetta **riservata** e un'altra sottoetichetta **tutti i dipendenti** per l'etichetta riservatezza **elevata** . Queste etichette secondarie visualizzano entrambi lo stesso nome, ma non hanno la stessa etichetta e hanno impostazioni diverse.
+- **Nome visualizzato** è il nome dell'etichetta visualizzata dagli utenti e non è necessario che sia univoco in tutte le etichette. Ad esempio, gli utenti visualizzano una sottoetichetta **tutti i dipendenti** per l'etichetta **riservata** e un'altra sottoetichetta **tutti i dipendenti** per l'etichetta **riservatezza elevata** . Queste etichette secondarie visualizzano entrambi lo stesso nome, ma non hanno la stessa etichetta e hanno impostazioni diverse.
 
 Per configurare le impostazioni avanzate dell'etichetta, usare il valore **nome** . Ad esempio, per identificare l'etichetta nell'immagine seguente, è necessario specificare `-Identity "All Company"`:
 
@@ -104,17 +104,17 @@ Usando uno dei centri di amministrazione in cui si gestiscono le etichette di ri
 
 - **Fornire agli utenti un collegamento a una pagina della Guida personalizzata**
 
-Quando per un utente sono configurati più criteri di etichetta, ognuno con impostazioni di criteri potenzialmente diverse, l'ultima impostazione dei criteri viene applicata in base all'ordine dei criteri nell'interfaccia di amministrazione. Per ulteriori informazioni, vedere [priorità dei criteri delle etichette (ordine degli ordini)](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels#label-policy-priority-order-matters)
+Quando per un utente sono configurati più criteri di etichetta, ognuno con impostazioni di criteri potenzialmente diverse, l'ultima impostazione dei criteri viene applicata in base all'ordine dei criteri nell'interfaccia di amministrazione. Per ulteriori informazioni, vedere [priorità dei criteri delle etichette (ordine degli ordini)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters)
 
-Le impostazioni avanzate dell'etichetta seguono la stessa logica per la precedenza: Quando un'etichetta si trova in più criteri etichetta e l'etichetta ha impostazioni avanzate, l'ultima impostazione avanzata viene applicata in base all'ordine dei criteri nell'interfaccia di amministrazione.
+Le impostazioni avanzate dell'etichetta seguono la stessa logica per la precedenza: quando un'etichetta si trova in più criteri etichetta e l'etichetta ha impostazioni avanzate, l'ultima impostazione avanzata viene applicata in base all'ordine dei criteri nell'interfaccia di amministrazione.
 
-Le impostazioni avanzate dei criteri di etichetta vengono applicate nell'ordine inverso: Con un'eccezione, vengono applicate le impostazioni avanzate del primo criterio, in base all'ordine dei criteri nell'interfaccia di amministrazione. L'eccezione è l'impostazione avanzata *OutlookDefaultLabel*, che imposta un'etichetta predefinita diversa per Outlook. Solo per questa impostazione avanzata dei criteri di etichetta, l'ultima impostazione viene applicata in base all'ordine dei criteri nell'interfaccia di amministrazione.
+Le impostazioni avanzate dei criteri di etichetta vengono applicate in ordine inverso: con un'eccezione, vengono applicate le impostazioni avanzate del primo criterio, in base all'ordine dei criteri nell'interfaccia di amministrazione. L'eccezione è l'impostazione avanzata *OutlookDefaultLabel*, che imposta un'etichetta predefinita diversa per Outlook. Solo per questa impostazione avanzata dei criteri di etichetta, l'ultima impostazione viene applicata in base all'ordine dei criteri nell'interfaccia di amministrazione.
 
 #### <a name="available-advanced-settings-for-label-policies"></a>Impostazioni avanzate disponibili per i criteri delle etichette
 
 Usare il parametro *AdvancedSettings* con [New-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy?view=exchange-ps) e [set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps).
 
-|Impostazione|Scenario e istruzioni|
+|Impostazioni|Scenario e istruzioni|
 |----------------|---------------|
 |AttachmentAction|[Per i messaggi di posta elettronica con allegati, applica un'etichetta corrispondente alla classificazione più elevata di questi allegati](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |AttachmentActionTip|[Per i messaggi di posta elettronica con allegati, applica un'etichetta corrispondente alla classificazione più elevata di questi allegati](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
@@ -148,9 +148,9 @@ Esempio di comando di PowerShell per verificare le impostazioni dei criteri di e
 
 Usare il parametro *AdvancedSettings* con [New-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps) e [set-label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
 
-|Impostazione|Scenario e istruzioni|
+|Impostazioni|Scenario e istruzioni|
 |----------------|---------------|
-|colore|[Specificare un colore per l'etichetta](#specify-a-color-for-the-label)|
+|Colore|[Specificare un colore per l'etichetta](#specify-a-color-for-the-label)|
 |customPropertiesByLabel|[Applicare una proprietà personalizzata quando viene applicata un'etichetta](#apply-a-custom-property-when-a-label-is-applied)|
 |DefaultSubLabelId|[Specificare un'etichetta secondaria predefinita per un'etichetta padre](#specify-a-default-sublabel-for-a-parent-label) 
 |labelByCustomProperties|[Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
@@ -169,7 +169,7 @@ Per impostazione predefinita, gli utenti devono selezionare l'opzione **Mostra b
 
 Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
-- Chiave **HideBarByDefault**
+- Chiave: **HideBarByDefault**
 
 - Valore: **False**
 
@@ -185,7 +185,7 @@ Per impostazione predefinita, quando si Abilita l'impostazione dei criteri di et
 
 Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
-- Chiave **DisableMandatoryInOutlook**
+- Chiave: **DisableMandatoryInOutlook**
 
 - Valore: **True**
 
@@ -201,7 +201,7 @@ Quando si configura un'etichetta per la classificazione consigliata, agli utenti
 
 Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
-- Chiave **OutlookRecommendationEnabled**
+- Chiave: **OutlookRecommendationEnabled**
 
 - Valore: **True**
 
@@ -217,9 +217,9 @@ Quando si configura questa impostazione, Outlook non applica l'etichetta predefi
 
 Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
-- Chiave **OutlookDefaultLabel**
+- Chiave: **OutlookDefaultLabel**
 
-- Valore: \< **etichetta GUID**> o **None**
+- Valore: \<**GUID etichetta**> o **None**
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
@@ -236,7 +236,7 @@ Quando si configura questa impostazione l'opzione **Non ora** viene rimossa. In 
 
 Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
-- Chiave **PostponeMandatoryBeforeSave**
+- Chiave: **PostponeMandatoryBeforeSave**
 
 - Valore: **False**
 
@@ -258,11 +258,11 @@ Poiché la corrispondenza dei criteri influiscono sulle prestazioni degli utenti
 
 Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
-- Chiave **RemoveExternalContentMarkingInApp**
+- Chiave: **RemoveExternalContentMarkingInApp**
 
 - Valore: \<**tipi di applicazioni di Office WXP**> 
 
-Esempi:
+Di seguito sono riportati alcuni esempi.
 
 - Per eseguire la ricerca solo in documenti di Word, specificare **W**.
 
@@ -297,7 +297,7 @@ Poiché alcuni documenti potrebbero includere caratteri invisibili o tipi divers
 
 Per gli stessi criteri di etichetta specificare le stringhe seguenti:
 
-- Chiave **ExternalContentMarkingToRemove**
+- Chiave: **ExternalContentMarkingToRemove**
 
 - Valore: \<**stringa da confrontare, definita come espressione regolare**> 
 
@@ -315,7 +315,7 @@ Se il testo di un'intestazione o un piè di pagina è su più righe, creare una 
 
 Per rimuovere il piè di pagina su più righe, creare le due voci seguenti per gli stessi criteri di etichetta:
 
-- Chiave **ExternalContentMarkingToRemove**
+- Chiave: **ExternalContentMarkingToRemove**
 
 - Valore chiave 1: **\*Confidential***
 
@@ -342,7 +342,7 @@ Usare il nome della forma per specificare un valore stringa per la chiave **Powe
 
 Esempio: il nome della forma è **fc**. Per rimuovere la forma con questo nome, specificare il valore: `fc`.
 
-- Chiave **PowerPointShapeNameToRemove**
+- Chiave: **PowerPointShapeNameToRemove**
 
 - Valore: \<**nome delle forma di PowerPoint**> 
 
@@ -354,7 +354,7 @@ Quando si dispone di più di una forma di PowerPoint da rimuovere, specificare t
 
 Per impostazione predefinita, il testo delle intestazioni e dei piè di pagina viene cercato solo negli schemi diapositiva. Per estendere la ricerca a tutte le diapositive, che è un processo con un utilizzo maggiore di risorse, usare un'impostazione client avanzata aggiuntiva denominata **RemoveExternalContentMarkingInAllSlides**:
 
-- Chiave **RemoveExternalContentMarkingInAllSlides**
+- Chiave: **RemoveExternalContentMarkingInAllSlides**
 
 - Valore: **True**
 
@@ -371,7 +371,7 @@ Per impostazione predefinita, gli utenti visualizzano un'opzione denominata **Pr
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti per i criteri di etichetta selezionati:
 
-- Chiave **EnableCustomPermissions**
+- Chiave: **EnableCustomPermissions**
 
 - Valore: **False**
 
@@ -389,7 +389,7 @@ Tuttavia, esiste un'altra impostazione client avanzata che è possibile specific
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti per i criteri di etichetta selezionati:
 
-- Chiave **EnableCustomPermissionsForCustomProtectedFiles**
+- Chiave: **EnableCustomPermissionsForCustomProtectedFiles**
 
 - Valore: **True**
 
@@ -408,7 +408,7 @@ L'allegato deve essere un file fisico e non un collegamento a un file, ad esempi
 
 È possibile configurare questa impostazione su **consigliato**, in modo che agli utenti venga richiesto di applicare l'etichetta selezionata al messaggio di posta elettronica con una descrizione comando personalizzabile. Gli utenti possono accettare il suggerimento o ignorarlo. In alternativa, è possibile configurare questa impostazione su **automatica**, in cui l'etichetta selezionata viene applicata automaticamente, ma gli utenti possono rimuovere l'etichetta o selezionare un'etichetta diversa prima di inviare il messaggio di posta elettronica.
 
-Nota: Quando l'allegato con l'etichetta di classificazione più alta è configurato per la protezione con l'impostazione delle autorizzazioni definite dall'utente:
+Nota: quando l'allegato con l'etichetta di classificazione più alta è configurato per la protezione con l'impostazione delle autorizzazioni definite dall'utente:
 
 - Quando le autorizzazioni definite dall'utente dell'etichetta includono Outlook (non inviare), tale etichetta è selezionata e non viene applicata la protezione in diretta al messaggio di posta elettronica.
 - Quando le autorizzazioni definite dall'utente dell'etichetta sono destinate solo a Word, Excel, PowerPoint ed Esplora file, tale etichetta non viene applicata al messaggio di posta elettronica e nessuna delle due è la protezione.
@@ -417,11 +417,11 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti per
 
 - Chiave 1: **AttachmentAction**
 
-- Valore chiave 1: **Consigliato** o **automatico**
+- Valore chiave 1: **consigliato** o **automatico**
 
 - Chiave 2: **AttachmentActionTip**
 
-- Valore chiave 2: "\<descrizione comando personalizzata" >
+- Valore chiave 2: "\<customized ToolTip >"
 
 La descrizione comando personalizzata supporta solo un solo linguaggio.
 
@@ -437,7 +437,7 @@ Quando si specifica la seguente impostazione client avanzata, gli utenti visuali
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti per i criteri di etichetta selezionati:
 
-- Chiave **ReportAnIssueLink**
+- Chiave: **ReportAnIssueLink**
 
 - Valore: **\<stringa HTTP>**
 
@@ -463,11 +463,11 @@ Quando si creano e configurano le impostazioni client avanzate seguenti, gli ute
 
 Quando vengono soddisfatte queste condizioni, l'utente visualizza un messaggio popup con una delle azioni seguenti:
 
-- **Avvisa**: l'utente può confermare e inviare oppure annullare.
+- **Avviso**: l'utente può confermare e inviare o annullare.
 
-- **Giustifica**: all'utente viene richiesta una giustificazione (opzioni predefinite o formato libero).  L'utente può quindi inviare o annullare il messaggio di posta elettronica. Il testo della giustificazione è scritto nell'intestazione X- del messaggio di posta elettronica in modo da poter essere letto dagli altri sistemi. Ad esempio, servizi di prevenzione della perdita di dati.
+- **Giustifica**: all'utente viene richiesta la giustificazione (opzioni predefinite o formato libero).  L'utente può quindi inviare o annullare il messaggio di posta elettronica. Il testo della giustificazione è scritto nell'intestazione X- del messaggio di posta elettronica in modo da poter essere letto dagli altri sistemi. Ad esempio, servizi di prevenzione della perdita di dati.
 
-- **Blocca**: all'utente viene impedito di inviare il messaggio di posta elettronica finché la condizione persiste. Il messaggio include il motivo del blocco del messaggio di posta elettronica in modo che l'utente possa risolvere il problema, ad esempio rimuovendo destinatari specifici o assegnando un'etichetta al messaggio di posta elettronica. 
+- **Block**: l'utente non è in grado di inviare il messaggio di posta elettronica mentre la condizione rimane. Il messaggio include il motivo del blocco del messaggio di posta elettronica in modo che l'utente possa risolvere il problema, ad esempio rimuovendo destinatari specifici o assegnando un'etichetta al messaggio di posta elettronica. 
 
 Quando i messaggi popup sono per un'etichetta specifica, è possibile configurare le eccezioni per i destinatari in base al nome di dominio.
 
@@ -478,26 +478,26 @@ Quando i messaggi popup sono per un'etichetta specifica, è possibile configurar
 
 Per i criteri selezionati, creare una o più delle seguenti impostazioni avanzate con le chiavi seguenti. Per i valori, specificare una o più etichette in base ai relativi GUID, separate da una virgola.
 
-Valore di esempio per più GUID etichetta come stringa delimitata da virgole:`dcf781ba-727f-4860-b3c1-73479e31912b,1ace2cc3-14bc-4142-9125-bf946a70542c,3e9df74d-3168-48af-8b11-037e3021813f`
+Valore di esempio per più GUID etichetta come stringa con valori delimitati da virgole: `dcf781ba-727f-4860-b3c1-73479e31912b,1ace2cc3-14bc-4142-9125-bf946a70542c,3e9df74d-3168-48af-8b11-037e3021813f`
 
 
 - Messaggi di avviso:
     
-    - Chiave **OutlookWarnUntrustedCollaborationLabel**
+    - Chiave: **OutlookWarnUntrustedCollaborationLabel**
     
-    - Valore: \< **GUID etichetta, delimitati** da virgole>
+    - Valore: \<**GUID etichetta, delimitati da virgole**>
 
 - Messaggi di giustificazione:
     
-    - Chiave **OutlookJustifyUntrustedCollaborationLabel**
+    - Chiave: **OutlookJustifyUntrustedCollaborationLabel**
     
-    - Valore: \< **GUID etichetta, delimitati** da virgole>
+    - Valore: \<**GUID etichetta, delimitati da virgole**>
 
 - Messaggi di blocco:
     
-    - Chiave **OutlookBlockUntrustedCollaborationLabel**
+    - Chiave: **OutlookBlockUntrustedCollaborationLabel**
     
-    - Valore: \< **GUID etichetta, delimitati** da virgole>
+    - Valore: \<**GUID etichetta, delimitati da virgole**>
 
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
@@ -520,23 +520,23 @@ Valore di esempio per più domini sotto forma di stringa delimitata da virgole: 
 
 - Messaggi di avviso:
     
-    - Chiave **OutlookWarnTrustedDomains**
+    - Chiave: **OutlookWarnTrustedDomains**
     
     - Valore: **\<** nomi di dominio, delimitati da virgole **>**
 
 - Messaggi di giustificazione:
     
-    - Chiave **OutlookJustifyTrustedDomains**
+    - Chiave: **OutlookJustifyTrustedDomains**
     
     - Valore: **\<** nomi di dominio, delimitati da virgole **>**
 
 - Messaggi di blocco:
     
-    - Chiave **OutlookBlockTrustedDomains**
+    - Chiave: **OutlookBlockTrustedDomains**
     
     - Valore: **\<** nomi di dominio, delimitati da virgole **>**
 
-Ad esempio, è stata specificata l'impostazione **OutlookBlockUntrustedCollaborationLabel** Advanced client per l'etichetta **Confidential \ All Employees** . È ora possibile specificare l'impostazione client avanzata aggiuntiva di **OutlookJustifyTrustedDomains** e **contoso.com**. Di conseguenza, un utente può inviare un messaggio di posta john@sales.contoso.com elettronica a quando viene etichettato come **riservato \ tutti i dipendenti** , ma l'invio di un messaggio di posta elettronica con la stessa etichetta a un account Gmail verrà bloccato.
+Ad esempio, è stata specificata l'impostazione **OutlookBlockUntrustedCollaborationLabel** Advanced client per l'etichetta **Confidential \ All Employees** . È ora possibile specificare l'impostazione client avanzata aggiuntiva di **OutlookJustifyTrustedDomains** e **contoso.com**. Di conseguenza, un utente può inviare un messaggio di posta elettronica a john@sales.contoso.com quando viene etichettato come **riservato \ tutti i dipendenti** , ma l'invio di un messaggio di posta elettronica con la stessa etichetta a un account Gmail verrà bloccato.
 
 Comandi di PowerShell di esempio, in cui il criterio etichetta è denominato "globale":
 
@@ -550,27 +550,27 @@ Per gli stessi criteri di etichetta, creare l'impostazione client avanzata segue
 
 - Messaggi di avviso:
     
-    - Chiave **OutlookUnlabeledCollaborationAction**
+    - Chiave: **OutlookUnlabeledCollaborationAction**
     
-    - Valore: **Avvisa**
+    - Valore: **avviso**
 
 - Messaggi di giustificazione:
     
-    - Chiave **OutlookUnlabeledCollaborationAction**
+    - Chiave: **OutlookUnlabeledCollaborationAction**
     
-    - Valore: **Giustifica**
+    - Valore: **giustifica**
 
 - Messaggi di blocco:
     
-    - Chiave **OutlookUnlabeledCollaborationAction**
+    - Chiave: **OutlookUnlabeledCollaborationAction**
     
-    - Valore: **Bloccato**
+    - Valore: **blocco**
 
 - Disattivare questi messaggi:
     
-    - Chiave **OutlookUnlabeledCollaborationAction**
+    - Chiave: **OutlookUnlabeledCollaborationAction**
     
-    - Valore: **Off**
+    - Valore: **disattivato**
 
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
@@ -582,16 +582,16 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 
 Per impostazione predefinita, i messaggi popup avvisa, giustifica o blocca si applicano a tutti i documenti di Office e PDF. È possibile affinare questo elenco specificando quali estensioni di file devono visualizzare i messaggi di avviso, di giustificazione o di blocco con un'impostazione avanzata aggiuntiva e un elenco delimitato da virgole di estensioni di file.
 
-Valore di esempio per più estensioni di file da definire come stringa delimitata da virgole:`.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
+Valore di esempio per più estensioni di file da definire come stringa delimitata da virgole: `.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
 
 In questo esempio un documento PDF senza etichetta non comporterà l'avviso, la giustificazione o il blocco dei messaggi popup.
 
 Per gli stessi criteri di etichetta, immettere le stringhe seguenti: 
 
 
-- Chiave **OutlookOverrideUnlabeledCollaborationExtensions**
+- Chiave: **OutlookOverrideUnlabeledCollaborationExtensions**
 
-- Valore: **\<** estensioni di file per la visualizzazione dei messaggi, delimitati da virgole **>**
+- Valore: **\<** estensioni di file per visualizzare i messaggi, delimitati da virgole **>**
 
 
 Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
@@ -606,27 +606,27 @@ Creare l'impostazione client avanzata seguente con uno dei valori seguenti:
 
 - Messaggi di avviso:
     
-    - Chiave **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Chiave: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
-    - Valore: **Avvisa**
+    - Valore: **avviso**
 
 - Messaggi di giustificazione:
     
-    - Chiave **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Chiave: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
-    - Valore: **Giustifica**
+    - Valore: **giustifica**
 
 - Messaggi di blocco:
     
-    - Chiave **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Chiave: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
-    - Valore: **Bloccato**
+    - Valore: **blocco**
 
 - Disattivare questi messaggi:
     
-    - Chiave **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Chiave: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
-    - Valore: **Off**
+    - Valore: **disattivato**
 
 Se non si specifica questa impostazione client, il valore specificato per OutlookUnlabeledCollaborationAction viene usato per i messaggi di posta elettronica senza etichetta senza allegati, nonché per i messaggi di posta elettronica senza etichetta con allegati.
 
@@ -642,7 +642,7 @@ Il client per l'assegnazione di etichette unificata di Azure Information Protect
 
 Per modificare questo comportamento in modo che queste informazioni non vengano inviate dal client Unified Labeling, immettere le stringhe seguenti per i criteri di etichetta selezionati:
 
-- Chiave **EnableAudit**
+- Chiave: **EnableAudit**
 
 - Valore: **False**
 
@@ -659,13 +659,13 @@ Quando si usa il client di assegnazione di etichette unificato Azure Information
 
 Per modificare questo comportamento in modo che i tipi di informazioni riservate individuate dal client Unified Labeling non vengano inviati, immettere le stringhe seguenti per i criteri di etichetta selezionati:
 
-- Chiave **RunAuditInformationTypesDiscovery**
+- Chiave: **RunAuditInformationTypesDiscovery**
 
 - Valore: **False**
 
 Se si imposta questa impostazione client avanzata, le informazioni di controllo possono comunque essere inviate dal client, ma le informazioni sono limitate alla segnalazione quando un utente ha eseguito l'accesso al contenuto con etichetta.
 
-Esempio:
+Ad esempio:
 
 - Con questa impostazione è possibile vedere che un utente ha eseguito l'accesso a Financial. docx con etichetta **Confidential \ Sales**.
 
@@ -685,7 +685,7 @@ Per impostazione predefinita, il client di etichettatura unificata non invia cor
 
 Per inviare le corrispondenze di contenuto quando si inviano tipi di informazioni riservate, creare l'impostazione client avanzata seguente in un criterio etichetta: 
 
-- Chiave **LogMatchedContent**
+- Chiave: **LogMatchedContent**
 
 - Valore: **True**
 
@@ -703,11 +703,11 @@ Per i documenti di Office etichettati con le isole sicure, è possibile rietiche
 
 In seguito a questa opzione di configurazione, la nuova etichetta di riservatezza viene applicata dal client Azure Information Protection Unified Labeling come indicato di seguito:
 
-- Per i documenti di Office: Quando il documento viene aperto nell'app desktop, la nuova etichetta di riservatezza viene visualizzata come impostata e viene applicata quando il documento viene salvato.
+- Per i documenti di Office: quando il documento viene aperto nell'app desktop, la nuova etichetta di riservatezza viene visualizzata come impostata e viene applicata quando il documento viene salvato.
 
-- Per PowerShell: [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) e [set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) possono applicare la nuova etichetta di riservatezza.
+- Per PowerShell: [set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) e [set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) possono applicare la nuova etichetta di riservatezza.
 
-- Per Esplora file: Nella finestra di dialogo Azure Information Protection, la nuova etichetta di riservatezza viene visualizzata ma non è impostata.
+- Per Esplora file: nella finestra di dialogo Azure Information Protection, la nuova etichetta di riservatezza viene visualizzata ma non è impostata.
 
 Per questa configurazione è necessario specificare un'impostazione avanzata denominata **labelByCustomProperties** per ogni etichetta di riservatezza di cui si vuole eseguire il mapping all'etichetta precedente. Per ogni voce impostare quindi il valore usando la sintassi seguente:
 
@@ -719,9 +719,9 @@ Si noti che questa impostazione non comporta la rimozione dell'etichetta origina
 
 #### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Esempio 1: Mapping uno-a-uno con lo stesso nome di etichetta
 
-Requisito: I documenti con l'etichetta di Secure Islands "Riservato" devono essere rietichettati come "Riservato" da Azure Information Protection.
+Requisito: i documenti con un'etichetta di isole sicure "riservato" devono essere rietichettati come "riservati" da Azure Information Protection.
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di Secure Islands è **Riservato** ed è archiviata nella proprietà personalizzata denominata **Classificazione**.
 
@@ -729,17 +729,17 @@ Impostazione avanzata:
 
 - Chiave: **labelByCustomProperties**
 
-- Valore: **L'etichetta Secure Islands è riservata, classificazione, riservata**
+- Valore: l' **etichetta Secure Islands è riservata, classificazione, riservata**
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "Confidential":
 
     Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Confidential,Classification,Confidential"}
 
-#### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>Esempio 2 Mapping uno-a-uno per un altro nome di etichetta
+#### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>Esempio 2: Mapping uno-a-uno per un altro nome di etichetta
 
-Requisito: I documenti con l'etichetta di Secure Islands "Sensibile" devono essere rietichettati come "Riservatezza elevata" da Azure Information Protection.
+Requisito: i documenti contrassegnati come "sensibili" dalle isole sicure devono essere rietichettati come "riservatezza elevata" da Azure Information Protection.
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di Secure Islands è **Sensibile** ed è archiviata nella proprietà personalizzata denominata **Classificazione**.
 
@@ -747,7 +747,7 @@ Impostazione avanzata:
 
 - Chiave: **labelByCustomProperties**
 
-- Valore: **L'etichetta Secure Islands è sensibile, classificazione, sensibile**
+- Valore: l' **etichetta Secure Islands è sensibile, classificazione, sensibile**
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "highly Confidential":
 
@@ -755,9 +755,9 @@ Esempio di comando di PowerShell, in cui l'etichetta è denominata "highly Confi
 
 #### <a name="example-3-many-to-one-mapping-of-label-names"></a>Esempio 3: Mapping molti-a-uno di nomi di etichetta
 
-Requisito: Sono presenti due etichette di isole sicure che includono la parola "Internal" e si vuole che i documenti che hanno una di queste etichette di isole sicure vengano rietichettati come "General" dal client Azure Information Protection Unified labeling.
+Requisito: sono presenti due etichette di isole sicure che includono la parola "Internal" e si vuole che i documenti che contengono una di queste etichette di isole sicure vengano rietichettati come "General" dal client Azure Information Protection Unified labeling.
 
-Esempio:
+In questo esempio:
 
 - Le etichette di Secure Islands includono la parola **Interno** e sono archiviate nella proprietà personalizzata denominata **Classificazione**.
 
@@ -765,13 +765,13 @@ L'impostazione client avanzata è la seguente:
 
 - Chiave: **labelByCustomProperties**
 
-- Valore: **L'etichetta Secure Islands contiene la classificazione interna, ovvero. \*Interno.\***
+- Valore: l' **etichetta Secure Islands contiene Internal, Classification,. \*Internal. \***
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "generale":
 
     Set-Label -Identity General -AdvancedSettings @{labelByCustomProperties="Secure Islands label contains Internal,Classification,.*Internal.*"}
 
-#### <a name="example-4-multiple-rules-for-the-same-label"></a>Esempio 4: Più regole per la stessa etichetta
+#### <a name="example-4-multiple-rules-for-the-same-label"></a>Esempio 4: più regole per la stessa etichetta
 
 Quando sono necessarie più regole per la stessa etichetta, definire più valori stringa per la stessa chiave. 
 
@@ -785,7 +785,7 @@ In questo esempio, le etichette delle isole sicure denominate "Confidential" e "
 
 Per configurare questa impostazione avanzata, immettere le stringhe seguenti per i criteri di etichetta selezionati:
 
-- Chiave **EnableLabelByMailHeader**
+- Chiave: **EnableLabelByMailHeader**
 
 - Valore: **True**
 
@@ -799,7 +799,7 @@ Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced
 
 Potrebbero essere presenti alcuni scenari in cui si desidera applicare una o più proprietà personalizzate a un documento o a un messaggio di posta elettronica oltre ai metadati applicati da un'etichetta di riservatezza.
 
-Esempio:
+Ad esempio:
 
 - È in corso la [migrazione da un'altra soluzione di assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions), ad esempio le isole sicure. Per l'interoperabilità durante la migrazione, si desidera che le etichette di riservatezza applichino anche una proprietà personalizzata utilizzata dall'altra soluzione di assegnazione di etichette.
 
@@ -809,23 +809,23 @@ Per i documenti di Office e i messaggi di posta elettronica di Outlook che gli u
 
 In seguito a questa opzione di configurazione, tutte le proprietà personalizzate aggiuntive vengono applicate dal client Azure Information Protection Unified Labeling come indicato di seguito:
 
-- Per i documenti di Office: Quando il documento viene etichettato nell'app desktop, le proprietà personalizzate aggiuntive vengono applicate quando il documento viene salvato.
+- Per i documenti di Office: quando il documento viene etichettato nell'app desktop, le proprietà personalizzate aggiuntive vengono applicate quando il documento viene salvato.
 
-- Per i messaggi di posta elettronica di Outlook: Quando il messaggio di posta elettronica viene contrassegnato in Outlook, le proprietà aggiuntive vengono applicate all'intestazione x quando viene inviato il messaggio di posta elettronica.
+- Per i messaggi di posta elettronica di Outlook: quando il messaggio di posta elettronica è contrassegnato in Outlook, le proprietà aggiuntive vengono applicate all'intestazione x quando viene inviato il messaggio di posta elettronica.
 
-- Per PowerShell: [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) e [set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) applica le proprietà personalizzate aggiuntive quando il documento viene etichettato e salvato. [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) Visualizza le proprietà personalizzate come etichetta mappata se non viene applicata un'etichetta di riservatezza.
+- Per PowerShell: [set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) e [set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) applica le proprietà personalizzate aggiuntive quando il documento viene etichettato e salvato. [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) Visualizza le proprietà personalizzate come etichetta mappata se non viene applicata un'etichetta di riservatezza.
 
-- Per Esplora file: Quando l'utente fa clic con il pulsante destro del mouse sul file e applica l'etichetta, vengono applicate le proprietà personalizzate.
+- Per Esplora file: quando l'utente fa clic con il pulsante destro del mouse sul file e applica l'etichetta, vengono applicate le proprietà personalizzate.
 
 Per questa configurazione è necessario specificare un'impostazione avanzata denominata **customPropertiesByLabel** per ogni etichetta di riservatezza a cui si desidera applicare le proprietà personalizzate aggiuntive. Per ogni voce impostare quindi il valore usando la sintassi seguente:
 
 `[custom property name],[custom property value]`
 
-#### <a name="example-1-add-a-single-custom-property-for-a-label"></a>Esempio 1: Aggiungere una singola proprietà personalizzata per un'etichetta
+#### <a name="example-1-add-a-single-custom-property-for-a-label"></a>Esempio 1: aggiungere un'unica proprietà personalizzata per un'etichetta
 
-Requisito: I documenti etichettati come "riservati" dal client Azure Information Protection Unified Labeling devono avere la proprietà personalizzata aggiuntiva denominata "classificazione" con il valore "Secret".
+Requisito: i documenti etichettati come "riservati" dal client Azure Information Protection Unified Labeling devono avere la proprietà personalizzata aggiuntiva denominata "classificazione" con il valore "Secret".
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di riservatezza è denominata **Confidential** e crea una proprietà personalizzata denominata **classificazione** con il valore **Secret**.
 
@@ -833,13 +833,13 @@ Impostazione avanzata:
 
 - Chiave: **customPropertiesByLabel**
 
-- Valore: **Classificazione, segreto**
+- Valore: **classificazione, segreto**
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "Confidential":
 
     Set-Label -Identity Confidential -AdvancedSettings @{customPropertiesByLabel="Classification,Secret"}
 
-#### <a name="example-2-add-multiple-custom-properties-for-a-label"></a>Esempio 2 Aggiungere più proprietà personalizzate per un'etichetta
+#### <a name="example-2-add-multiple-custom-properties-for-a-label"></a>Esempio 2: aggiungere più proprietà personalizzate per un'etichetta
 
 Per aggiungere più di una proprietà personalizzata per la stessa etichetta, è necessario definire più valori stringa per la stessa chiave.
 
@@ -851,17 +851,17 @@ Esempio di comando di PowerShell, in cui l'etichetta è denominata "generale" e 
 
 Questa configurazione USA [le impostazioni avanzate](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dell'etichetta che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-Usare queste impostazioni solo quando si dispone di una [distribuzione S/MIME](https://docs.microsoft.com/office365/SecurityCompliance/s-mime-for-message-signing-and-encryption) funzionante e si vuole che un'etichetta applichi automaticamente questo metodo di protezione per i messaggi di posta elettronica anziché Rights Management la protezione da Azure Information Protection. La protezione risultante è identica a quella applicata quando un utente seleziona manualmente le opzioni di S/MIME da Outlook.
+Usare queste impostazioni solo quando si dispone di una [distribuzione S/MIME](https://docs.microsoft.com/microsoft-365/compliance/s-mime-for-message-signing-and-encryption) funzionante e si vuole che un'etichetta applichi automaticamente questo metodo di protezione per i messaggi di posta elettronica anziché Rights Management la protezione da Azure Information Protection. La protezione risultante è identica a quella applicata quando un utente seleziona manualmente le opzioni di S/MIME da Outlook.
 
 Per configurare un'impostazione avanzata per una firma digitale S/MIME, immettere le stringhe seguenti per l'etichetta selezionata:
 
-- Chiave **SMimeSign**
+- Chiave: **SMimeSign**
 
 - Valore: **True**
 
 Per configurare un'impostazione avanzata per la crittografia S/MIME, immettere le stringhe seguenti per l'etichetta selezionata:
 
-- Chiave **SMimeEncrypt**
+- Chiave: **SMimeEncrypt**
 
 - Valore: **True**
 
@@ -881,9 +881,9 @@ Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced
 
 Quando si aggiunge un'etichetta secondaria a un'etichetta, gli utenti non possono più applicare l'etichetta padre a un documento o a un messaggio di posta elettronica. Per impostazione predefinita, gli utenti selezionano l'etichetta padre per visualizzare le etichette secondarie che possono essere applicate, quindi selezionare una delle etichette secondarie. Se si configura questa impostazione avanzata, quando gli utenti selezionano l'etichetta padre, viene automaticamente selezionata e applicata un'etichetta secondaria: 
 
-- Chiave **DefaultSubLabelId**
+- Chiave: **DefaultSubLabelId**
 
-- Valore: \<GUID dell'etichetta secondaria >
+- Valore: GUID \<sublabel >
 
 Esempio di comando di PowerShell, in cui l'etichetta padre è denominata "Confidential" e l'etichetta secondaria "All Employees" ha un GUID di 8faca7b8-8d20-48A3-8ea2-0f96310a848e:
 
@@ -895,13 +895,13 @@ Questa configurazione USA [le impostazioni avanzate](#how-to-configure-advanced-
 
 Usare questa impostazione avanzata per impostare un colore per un'etichetta. Per specificare il colore, immettere un codice di tripletta esadecimale per i componenti rosso, verde e blu (RGB) del colore. Ad esempio, #40e0d0 è il valore esadecimale RGB per il turchese.
 
-Se è necessario un riferimento per questi codici, è possibile trovare una tabella utile dalla [ \<pagina colore >](https://developer.mozilla.org/docs/Web/CSS/color_value) di documentazione Web di MSDN. È anche possibile trovare i codici in molte applicazioni per la modifica di immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
+Se è necessario un riferimento per questi codici, è possibile trovare una tabella utile dalla pagina di [> \<color](https://developer.mozilla.org/docs/Web/CSS/color_value) da MSDN Web docs. Questi codici sono disponibili anche in molte applicazioni che consentono di modificare le immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
 
 Per configurare l'impostazione avanzata per il colore di un'etichetta, immettere le stringhe seguenti per l'etichetta selezionata:
 
 - Chiave: **colore**
 
-- Valore: \<Valore esadecimale RGB >
+- Valore: valore esadecimale \<RGB >
 
 Esempio di comando di PowerShell, in cui l'etichetta è denominata "public":
 
@@ -911,7 +911,7 @@ Esempio di comando di PowerShell, in cui l'etichetta è denominata "public":
 
 In un ambiente di produzione, gli utenti in genere non devono eseguire l'accesso come utente diverso quando usano il client di Azure Information Protection Unified labeling. Per un amministratore, tuttavia, può essere necessario accedere con le credenziali di un altro utente durante una fase di testing. 
 
-È possibile verificare a quale account è stato eseguito l'accesso usando la finestra di dialogo **Microsoft Azure Information Protection**: Aprire un'applicazione di Office e nella scheda **Home** , selezionare il pulsante **sensibilità** , quindi selezionare **Guida e commenti**. Il nome dell'account verrà visualizzato nella sezione **Stato del client**.
+È possibile verificare l'account a cui si è attualmente connessi usando la finestra di dialogo **Microsoft Azure Information Protection** : aprire un'applicazione di Office e nella scheda **Home** , selezionare il pulsante **sensibilità** , quindi selezionare **Guida e Commenti e suggerimenti**. Il nome dell'account verrà visualizzato nella sezione **Stato del client**.
 
 Assicurarsi di controllare anche il nome di dominio dell'account di accesso che viene visualizzato. Può essere facile non notare che è stato effettuato l'accesso con il nome dell'account giusto, ma con il dominio errato. Un sintomo dell'utilizzo dell'account errato include il mancato download delle etichette o la mancata visualizzazione delle etichette o del comportamento previsto.
 
@@ -942,17 +942,17 @@ Per modificare il livello di registrazione per questi file, individuare il nome 
 
 Impostare il livello di registrazione su uno dei valori seguenti:
 
-- **Off**: nessuna registrazione locale.
+- **Disattivato**: nessuna registrazione locale.
 
 - **Errore**: solo errori.
 
-- **Avvisa**: Errori e avvisi.
+- **Avviso**: errori e avvisi.
 
-- **Info**: Registrazione minima, che non include gli ID evento (impostazione predefinita per lo scanner).
+- **Info**: registrazione minima, che non include ID evento (impostazione predefinita per lo scanner).
 
-- **Debug**: Informazioni complete.
+- **Debug**: informazioni complete.
 
-- **Traccia**: Registrazione dettagliata (impostazione predefinita per i client).
+- **Trace**: registrazione dettagliata (impostazione predefinita per i client).
 
 Questa impostazione del registro di sistema non modifica le informazioni inviate a Azure Information Protection per la [creazione di report centrali](../reports-aip.md).
 

@@ -12,14 +12,14 @@ ms.assetid: ''
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: a6758982b52189215e94889c96a8a75e894df7b8
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: 2416ba8102c659696dae4e7b564e6f47adff459b
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684461"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447985"
 ---
-# <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection"></a>Manuale dell'utente: Rimuovere etichette e protezione da file e messaggi di posta elettronica che sono stati etichettati da Azure Information Protection
+# <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection"></a>Guida dell'utente: rimuovere etichette e protezione da file e messaggi di posta elettronica che sono stati etichettati da Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 >
@@ -34,7 +34,7 @@ Quando l'etichetta di riservatezza da rimuovere è configurata per applicare la 
 
 Se si vuole scegliere un'altra etichetta o un set diverso di impostazioni di protezione, non è necessario rimuovere l'etichetta o la protezione. Scegliere invece una nuova etichetta e, se necessario, è possibile definire autorizzazioni personalizzate usando Esplora file. 
 
-È possibile rimuovere etichette e protezione da documenti e messaggi di posta elettronica di Office quando questi vengono ricreati o modificati nelle app desktop di Office: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
+È possibile rimuovere etichette e protezione da documenti e messaggi di posta elettronica di Office quando questi vengono ricreati o modificati nelle app desktop di Office, come **Word**, **Excel**, **PowerPoint** e **Outlook**. 
 
 È anche possibile rimuovere etichette e protezione tramite **Esplora file**, che supporta altri tipi di file ed è un pratico strumento per rimuovere etichette e protezione da più file contemporaneamente.
 
@@ -60,11 +60,11 @@ Quando si usa Esplora file, è possibile rimuovere rapidamente etichette e prote
 
 2. Per rimuovere un'etichetta: nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** fare clic su **Elimina l'etichetta**. Se l'etichetta è stata configurata per l'applicazione della protezione, la protezione viene automaticamente rimossa.
 
-3. Per rimuovere la protezione personalizzata da un singolo file: nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** deselezionare l'opzione **Proteggi con autorizzazioni personalizzate**. 
+3. Per rimuovere protezione personalizzata da un singolo file: nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** deselezionare l'opzione **Proteggi con autorizzazioni personalizzate**. 
 
-4. Per rimuovere la protezione personalizzata da più file: nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** fare clic su **Rimuovi le autorizzazioni personalizzate**.
+4. Per rimuovere protezione personalizzata da più file: nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** fare clic su **Rimuovi le autorizzazioni personalizzate**.
 
-5. Fare clic su **Applica** e attendere la visualizzazione del messaggio **Operazione completata** per vedere i risultati. Fare clic su **Chiudi**.
+5. Fare clic su **Applica** e attendere la visualizzazione del messaggio **Operazione completata** per vedere i risultati. e quindi fare clic su **Chiudi**.
 
 
 ## <a name="other-instructions"></a>Altre istruzioni
@@ -74,5 +74,5 @@ Ulteriori procedure nella Guida per l'utente di Azure Information Protection:
 
 ## <a name="additional-information-for-administrators"></a>Informazioni aggiuntive per gli amministratori    
 
-Vedere [Panoramica delle etichette di riservatezza](/Office365/SecurityCompliance/sensitivity-labels).
+Vedere [Panoramica delle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
 

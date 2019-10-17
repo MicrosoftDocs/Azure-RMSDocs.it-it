@@ -12,23 +12,23 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 77e58423230ea0d5613db7979c81dca97b4ff61a
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: 8f7d05ec4696a8b3aa2e1daadc839187eabd9d1e
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71674102"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447712"
 ---
 # <a name="overview-of-the-azure-information-protection-policy"></a>Panoramica dei criteri di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
 > Il criterio di Azure Information Protection si applica al client di Azure Information Protection (classico) e non al client di etichettatura unificato Azure Information Protection. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 > 
-> Per informazioni sulle etichette di riservatezza, vedere la documentazione di Office. Ad esempio, [Panoramica delle etichette di riservatezza](https://docs.microsoft.com/Office365/SecurityCompliance/sensitivity-labels).
+> Per informazioni sulle etichette di riservatezza, vedere la documentazione di Office. Ad esempio, [Panoramica delle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
 
 Un criterio di Azure Information Protection contiene gli elementi seguenti che è possibile configurare:
     
