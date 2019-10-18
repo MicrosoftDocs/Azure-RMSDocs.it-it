@@ -129,7 +129,7 @@ Anche se non è possibile configurare IRM per OneDrive for Business per gli uten
 
 3. Copiare il contenuto del seguente script e denominare il file Set-IRMOnOneDriveForBusiness.ps1 nel computer in uso.
 
-   *&#42;&#42;Dichiarazione di non responsabilità&#42;&#42;*: questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene fornito "nello stato in stato in cui si trova" senza garanzia di alcun tipo.
+   *&#42;&#42;Dichiarazione di non responsabilità&#42;&#42;* : questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene fornito "nello stato in stato in cui si trova" senza garanzia di alcun tipo.
 
    ```
    # Requires Windows PowerShell version 3
@@ -502,7 +502,7 @@ Anche se non è possibile configurare IRM per OneDrive for Business per gli uten
 
    2. Cercare `$tenantAdmin` e sostituire il valore di esempio con il proprio account di amministratore globale completo per Office 365.
 
-      Questo valore corrisponde a quello usato per accedere come amministratore globale all'interfaccia di amministrazione di Microsoft 365 e ha il formato seguente: nome_utente@*&lt;nome dominio tenant&gt;*.com
+      Questo valore corrisponde a quello usato per accedere come amministratore globale all'interfaccia di amministrazione di Microsoft 365 e ha il formato seguente: nome_utente@ *&lt;nome dominio tenant&gt;* .com
 
       Ad esempio, se il nome utente dell'amministratore globale di Office 365 è "admin" per il dominio del tenant " contoso.com", si specificherà: <strong>admin@contoso.com</strong>
 
@@ -510,7 +510,7 @@ Anche se non è possibile configurare IRM per OneDrive for Business per gli uten
 
       In alternativa, vedere i commenti nello script su come sostituire questa matrice importando un file CSV contenente tutti gli URL che è necessario configurare.  È stato fornito un altro script di esempio per cercare automaticamente ed estrarre gli URL per popolare questo. file CSV. Quando si è pronti per eseguire questa operazione, usare la sezione [Script aggiuntivo per l'output di tutti gli URL di OneDrive for Business per un file CSV](#additional-script-to-output-all-onedrive-for-business-urls-to-a-csv-file) immediatamente dopo questi passaggi.
 
-      L'URL Web di OneDrive for Business dell'utente è nel formato seguente: https://<em>&lt;nome tenant&gt;</em>-my.sharepoint.com/personal/*&lt;nome_utente&gt;*_*&lt;nome tenant&gt;*_com
+      L'URL Web di OneDrive for Business dell'utente è nel formato seguente: https://<em>&lt;nome tenant&gt;</em>-my.sharepoint.com/personal/ *&lt;nome_utente&gt;* _ *&lt;nome tenant&gt;* _com
 
       Ad esempio, se il nome dell'utente del tenant contoso è "rsimone", si specificherà: **https://contoso-my.sharepoint.com/personal/rsimone_contoso_com**
 
@@ -536,7 +536,7 @@ Per il passaggio 4c riportato sopra, è possibile usare il seguente script di Wi
 
 Questo script richiede anche l’[SDK dei componenti client di SharePoint Online](https://www.microsoft.com/en-us/download/details.aspx?id=42038) e [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). Seguire le stesse istruzioni per copiare e incollare, quindi salvare il file in locale (ad esempio, “Report-OneDriveForBusinessSiteInfo.ps1”), modificare `$sharepointAdminCenterUrl` e i valori `$tenantAdmin` valori come prima e quindi eseguire lo script.
 
-*&#42;&#42;Dichiarazione di non responsabilità&#42;&#42;*: questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene fornito "nello stato in stato in cui si trova" senza garanzia di alcun tipo.
+*&#42;&#42;Dichiarazione di non responsabilità&#42;&#42;* : questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene fornito "nello stato in stato in cui si trova" senza garanzia di alcun tipo.
 
 ```
 # Requires Windows PowerShell version 3
@@ -761,7 +761,7 @@ Usare il seguente script di esempio, se è necessario disattivare IRM per OneDri
 
 Questo script richiede anche l’[SDK dei componenti client di SharePoint Online](https://www.microsoft.com/en-us/download/details.aspx?id=42038) e [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). Copiare e incollare il contenuto, salvare il file in locale (ad esempio, "Disable-IRMOnOneDriveForBusiness.ps1") e modificare i valori `$sharepointAdminCenterUrl` e `$tenantAdmin`. Specificare manualmente gli URL di OneDrive for Business o usare lo script nella sezione precedente, per importarli ed eseguire lo script manualmente.
 
-*&#42;&#42;Dichiarazione di non responsabilità&#42;&#42;*: questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene fornito "nello stato in stato in cui si trova" senza garanzia di alcun tipo.
+*&#42;&#42;Dichiarazione di non responsabilità&#42;&#42;* : questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene fornito "nello stato in stato in cui si trova" senza garanzia di alcun tipo.
 
 ```
 # Requires Windows PowerShell version 3
