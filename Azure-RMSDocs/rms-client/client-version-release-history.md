@@ -3,8 +3,8 @@ title: Azure Information Protection & i criteri di supporto per la cronologia de
 description: Informazioni sugli elementi nuovi o modificati in una versione del client di Azure Information Protection per Windows e sui criteri del ciclo di vita per il supporto.
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 09/26/2019
+manager: rkarlin
+ms.date: 10/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,24 +12,24 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b64e10f93abd89299405e8b4df8e20ca2393616d
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 98861fcabfb6e00edbc0206f3c80a45d6287f70f
+ms.sourcegitcommit: e007bffd33c959124baa5719236981c93947a3e4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314058"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72535346"
 ---
-# <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client Azure Information Protection: Cronologia delle versioni e criteri per il supporto
+# <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012, windows Server 2008 R2*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Il team di Azure Information Protection aggiorna regolarmente il client di Azure Information Protection con correzioni e nuove funzionalità. 
 
 È possibile scaricare la versione disponibile a livello generale più recente e la versione di anteprima corrente (se disponibile) dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
 
-Dopo un breve ritardo di in genere un paio di settimane, la versione di disponibilità generale più recente è inclusa anche nel catalogo di Microsoft Update con il nome del prodotto **Microsoft Azure Information Protection** > **informazioni Microsoft Azure Client di protezione**e classificazione degli **aggiornamenti**. L'inserimento nel catalogo significa che è possibile aggiornare il client tramite WSUS o Configuration Manager o altri meccanismi di distribuzione del software che usano Microsoft Update.
+Dopo un breve ritardo di genere in un paio di settimane, la versione di disponibilità generale più recente è inclusa anche nel catalogo di Microsoft Update con il nome del prodotto **Microsoft Azure Information Protection**  > **Microsoft Azure informazioni Client di protezione**e classificazione degli **aggiornamenti**. L'inserimento nel catalogo significa che è possibile aggiornare il client tramite WSUS o Configuration Manager o altri meccanismi di distribuzione del software che usano Microsoft Update.
 
 Per altre informazioni, vedere [Aggiornamento e gestione del client Azure Information Protection](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
@@ -46,6 +46,7 @@ Le versioni di anteprima non devono essere distribuite agli utenti finali nelle 
 
 |Versione client|Data di rilascio|
 |--------------|-------------|
+|1.41.51.0|27/11/2018|
 |1.37.19.0|17/09/2018|
 |1.29.5.0|26/06/2018|
 |1.27.48.0|30/05/2018|
@@ -74,7 +75,7 @@ Usare le informazioni seguenti per scoprire le novità o le modifiche per una ve
 
 ## <a name="version-153100"></a>Versione 1.53.10.0
 
-**Data di rilascio**: 07/15/2019
+**Rilasciata**: 07/15/2019
 
 Questa versione include MSIPC versione 1.0.3889.0419 del client RMS.
 
@@ -90,13 +91,13 @@ Questa versione include MSIPC versione 1.0.3889.0419 del client RMS.
 
 - Quando si sostituisce l'opzione non eseguire l'invio in un thread di posta elettronica con un'etichetta configurata per le autorizzazioni definite dall'utente e non in avanti, i destinatari originali possono comunque aprire il messaggio di posta elettronica.
 
-- Nello scenario seguente un utente non rileva più nella descrizione comando dell'etichetta che l'etichetta è stata impostata automaticamente: Un utente riceve un messaggio di posta elettronica protetto con un documento collegato che non è etichettato, ma protetto automaticamente. Quando l'utente della stessa organizzazione del mittente apre il documento, al documento viene applicata l'etichetta corrispondente per le impostazioni di protezione.
+- Nello scenario seguente un utente non vede più nella descrizione comando dell'etichetta che l'etichetta è stata impostata automaticamente: un utente riceve un messaggio di posta elettronica protetto con un documento collegato che non è etichettato, ma protetto automaticamente. Quando l'utente della stessa organizzazione del mittente apre il documento, al documento viene applicata l'etichetta corrispondente per le impostazioni di protezione.
 
 - Il [diritto di utilizzo](../configure-usage-rights.md#usage-rights-and-descriptions) minimo per eseguire il cmdlet [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) è ora **Salva con nome, Esporta** (esportazione) anziché **copia** (estrazione).
 
 ## <a name="version-1482040"></a>Versione 1.48.204.0
 
-**Data di rilascio**: 04/16/2019
+**Rilasciata**: 04/16/2019
 
 Supportato tramite 01/15/2020
 
@@ -135,7 +136,7 @@ Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
 
 - Una nuova impostazione client avanzata per [Azure Information Protection Analytics](../reports-aip.md), per impedire l'invio di corrispondenze dei tipi di informazioni per un subset di utenti dopo aver selezionato la casella di controllo nella portale di Azure che consente di ottenere analisi più approfondite nei dati sensibili. Questa impostazione è applicabile per il client e lo scanner. [Altre informazioni](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
 
-- Nuova impostazione client avanzata applicabile solo quando si impostano i criteri per non visualizzare le autorizzazioni personalizzate. Quando un file è protetto da autorizzazioni personalizzate, visualizzare l'opzione Autorizzazioni personalizzate in Esplora File in modo che gli utenti possano visualizzarle e modificarle. È necessario che gli utenti abbiano le autorizzazioni per modificare le impostazioni di protezione. [Altre informazioni](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
+- Nuova impostazione client avanzata applicabile solo quando si configura l'impostazione dei criteri in modo da non visualizzare autorizzazioni personalizzate: quando è presente un file protetto con autorizzazioni personalizzate, visualizzare l'opzione autorizzazioni personalizzate in Esplora file in modo che gli utenti possano vedere e modificarle (se dispongono delle autorizzazioni per modificare le impostazioni di protezione). [Altre informazioni](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
 
 
 **Correzioni**:
@@ -155,8 +156,8 @@ Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
 - Quando si usa l'impostazione client avanzata per impostare un'[etichetta predefinita per Outlook](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook), è possibile applicare un'etichetta padre con etichette secondarie quando tutte le etichette secondarie sono disabilitate per l'utente.
 
 - Quando si usa l'[impostazione di criteri](../configure-policy-settings.md) **Per i messaggi di posta elettronica con allegati, applicare un'etichetta corrispondente alla classificazione più elevata di questi allegati** e l'etichetta con la classificazione più elevata è configurata per le autorizzazioni definite dall'utente, accadeva che l'etichetta veniva applicata al messaggio di posta elettronica, senza che fosse applicata la protezione. Adesso:
-    - Quando le autorizzazioni definite dall'utente dell'etichetta includono Outlook (Non inoltrare): si applicano tale etichetta e la protezione Non inoltrare al messaggio di posta elettronica.
-    - Quando le autorizzazioni definite dall'utente dell'etichetta sono solo per Word, Excel, PowerPoint ed Esplora file: non si applica né l'etichetta né un qualsiasi tipo di protezione al messaggio di posta elettronica.
+    - Quando le autorizzazioni definite dall'utente dell'etichetta includono Outlook (non inoltrare): applicare tale etichetta e la relativa protezione non inoltrare al messaggio di posta elettronica.
+    - Quando le autorizzazioni definite dall'utente dell'etichetta sono destinate solo a Word, Excel, PowerPoint ed Esplora file: non applicare l'etichetta né applicare alcuna protezione al messaggio di posta elettronica.
 
 **Modifiche aggiuntive:**
 
@@ -179,55 +180,10 @@ Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
 
 - L'[impostazione dei criteri](../configure-policy-settings.md) **Gli utenti devono fornire una giustificazione per impostare un'etichetta di classificazione inferiore, rimuovere un'etichetta o rimuovere la protezione** non si applica più allo scanner. Lo scanner esegue queste azioni quando si configura l'impostazione modifica **etichette file** **su** in nel profilo scanner, quindi selezionare la casella di controllo **Consenti downgrade etichetta** .
 
-## <a name="version-141510"></a>Versione 1.41.51.0
-
-**Data di rilascio**: 27/11/2018
-
-Supportato tramite 10/16/2019
-
-Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
-
-**Nuove funzionalità:**
-
-- Il client Azure Information Protection protegge ora per impostazione predefinita i file PDF tramite lo standard ISO per la crittografia PDF. In precedenza, era necessario abilitare questo supporto con un'impostazione client avanzata.
-    
-    Se si vuole tornare alla protezione di file PDF tramite un'estensione di nome di file ppdf, usare la stessa [impostazione client avanzata](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption), ma specificare **False**.
-
-- Controllo del supporto dei dati per il [Reporting centrale](../reports-aip.md) usando Azure Information Protection Analytics. Queste informazioni includono l'utilizzo delle etichette per monitorare il modo in cui vengono usate le etichette e l'accesso utente ai documenti e ai messaggi di posta elettronica con etichetta.
-
-- Excel supporta ora i [contrassegni visivi](../configure-policy-markings.md) in colori diversi.
-
-- Per le distribuzioni esistenti di S/MIME, una nuova impostazione client avanzata per configurare un'etichetta per applicare automaticamente la protezione S/MIME in Outlook. [Altre informazioni](client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
-
-- Una nuova impostazione client avanzata, come alternativa alla modifica del Registro di sistema per evitare richieste di accesso per il servizio Azure Information Protection per i [computer disconnessi](client-admin-guide-customizations.md#support-for-disconnected-computers).
-
-- Una nuova impostazione client avanzata per [supportare l'ordine delle etichette secondarie](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) quando si usa l'impostazione dei criteri seguente:
-    - **Per i messaggi di posta elettronica con allegati, applica un'etichetta corrispondente alla classificazione più elevata di questi allegati**
-
-**Correzioni**:
-
-- Il client Azure Information Protection non esclude più le estensioni di nomi di file msg, rar e zip per Esplora file (clic con il pulsante destro del mouse) e i comandi di PowerShell. Tuttavia, queste estensioni rimangono escluse per impostazione predefinita per lo scanner. 
-
-- Il client Azure Information Protection può annullare la protezione di più file (selezione multipla e una cartella che contiene i file protetti) quando si usa Esplora file, clic con il pulsante destro del mouse.
-
-- Per Excel:
-    
-    - I contrassegni visivi vengono ora applicati se si salva il foglio di calcolo durante la modifica di una cella.
-    
-    - Excel 2010: quando si protegge un foglio di calcolo usando il [livello di autorizzazione](../configure-usage-rights.md#rights-included-in-permissions-levels) Coautore, il pulsante **Elimina etichetta** è ora disponibile quando si fa clic con il pulsante destro del mouse sul file e si sceglie **Classifica e proteggi**.
-
-- Le impostazioni client avanzate che consentono la [rimozione di intestazioni e piè di pagina da altre soluzioni di etichettatura](client-admin-guide-customizations.md#remove-headers-and-footers-from-other-labeling-solutions) ora supportano i layout personalizzati.
-
-**Modifiche aggiuntive:**
-
-- Quando la pianificazione dello scanner è impostata su **Sempre**, viene ora applicato un ritardo di 30 secondi tra le analisi.
-
-- Lo scanner non modifica più il proprietario di Rights Management per i file etichettati quando sono già protetti.
-
 ## <a name="next-steps"></a>Passaggi successivi
 
 Per altre informazioni sull'installazione e l'uso del client: 
 
-- Per gli utenti: [Scaricare e installare il client](install-client-app.md)
+- Per utenti: [Scaricare e installare il client](install-client-app.md)
 
-- Per gli amministratori: [Guida per l'amministratore del client di Azure Information Protection](client-admin-guide.md)
+- Per amministratori: [Guida per l'amministratore del client di Azure Information Protection](client-admin-guide.md)

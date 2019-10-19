@@ -11,14 +11,14 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 63991bd4528e5f28397aab837793ea3d167513a1
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 1f568c3bf2a2e6cd9b94b0a7a8bd9a49b35c4958
+ms.sourcegitcommit: ef57eb7896cf0aeb592f5e8ab37452f1e95aa20d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314167"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542368"
 ---
-# <a name="admin-guide-azure-information-protection-unified-labeling-client-files-and-client-usage-logging"></a>Guida dell'amministratore: Azure Information Protection l'assegnazione unificata di file client e registrazione dell'utilizzo del client
+# <a name="admin-guide-azure-information-protection-unified-labeling-client-files-and-client-usage-logging"></a>Guida dell'amministratore: Azure Information Protection Unified Labeling client files and client usage logging
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012, windows Server 2008 R2*
 >
@@ -26,7 +26,7 @@ ms.locfileid: "71314167"
 
 Dopo aver installato il client di etichettatura unificata di Azure Information Protection, potrebbe essere necessario individuare la posizione dei file e monitorare la modalità di utilizzo del client.
 
-## <a name="file-locations-for-the-azure-information-protection-client"></a>Percorsi dei file per il client Azure Information Protection
+## <a name="file-locations-for-the-azure-information-protection-unified-labeling-client"></a>Percorsi dei file per il client Azure Information Protection Unified Labeling
 
 File del client:   
 
