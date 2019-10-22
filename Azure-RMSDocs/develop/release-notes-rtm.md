@@ -14,16 +14,22 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 8782889ab2acd630831b3b8ed472f5740b904cb7
-ms.sourcegitcommit: 9ed9013fb79f34d49173acb1b200fbe05ce6b316
+ms.openlocfilehash: ab71c7156fa55e09ca22bdaf61c4bcfcd590fb16
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70892575"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690146"
 ---
 # <a name="release-notes"></a>Note sulla versione
 
 Questo articolo contiene informazioni importanti su questa versione e quelle precedenti di RMS SDK 2.1.
+
+## <a name="october-2019---update"></a>2019 ottobre-aggiornamento
+
+- In alcuni casi, l'uso dell'autenticazione con chiave simmetrica non riesce ad autenticare l'utente con Azure RMS che impedisce la protezione e la rimozione della protezione del contenuto.
+- Il client RMS potrebbe arrestarsi in modo anomalo durante il tentativo di verificare se alcuni documenti PDF precedentemente protetti e non protetti sono attualmente protetti.
+- L'uso del reindirizzamento DNS per i server AD RMS che sono stati configurati in porte speciali non funzionerà correttamente.
 
 ## <a name="september-2019---update"></a>2019 settembre-aggiornamento 
 
@@ -164,19 +170,19 @@ Il componente API File dell'SDK è stato integrato e ora offre le funzionalità 
 
     **Soluzione**: l'applicazione deve aggiungere in modo esplicito i diritti di **proprietario** al proprietario della licenza durante la creazione di una licenza da zero tramite [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx). Per altre informazioni, vedere [Aggiungere diritti espliciti di proprietario](add-explicit-owner-rights.md).
 
--   **Problema**: se un'applicazione chiama due volte [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) o [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) per la stessa finestra usando il relativo handle, RMS SDK 2.1 restituisce un errore in **HRESULT**.
+-   **Problema**: se un'applicazione chiama [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) o [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx) due volte per la stessa finestra usando il relativo handle, RMS SDK 2,1 restituirà un errore in **HRESULT**.
 
-    **Soluzione**: per linee guida specifiche su questo problema, vedere la sezione Remarks (Osservazioni) in [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) e [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx).
+    **Soluzione**: per linee guida specifiche su questo problema, vedere la sezione Osservazioni di [IpcProtectWindow](https://msdn.microsoft.com/library/hh535268.aspx) e [IpcUnprotectWindow](https://msdn.microsoft.com/library/hh535272.aspx).
 
--   **Problema**: quando si procede alla compilazione per più architetture, è necessario usare queste linee guida.
+-   **Problema**: quando si compila per diverse architetture, è necessario usare queste linee guida.
 
-    **Soluzione**: se si vuole usare Ipcsecproc\*isv.dll per un'architettura diversa, ad esempio è stato installato l'SDK a 64 bit in un computer a 64 bit ma ora si vuole procedere alla distribuzione in un computer a 32 bit che richiede Ipcsecproc\*isv.dll, è necessario installare l'SDK a 32 bit in un altro computer e copiare i file Ipcsecproc\*isv.dll dalla cartella "%PROGRAMFILES%\\Microsoft Information Protection And Control" (il percorso predefinito o quello in cui si è scelto di installare l'SDK).
+    **Soluzione**: se si vuole usare Ipcsecproc\*isv.dll per un'architettura diversa, ad esempio è stato installato l'SDK a 64 bit su un computer a 64 bit ma si vuole distribuire in un computer a 32 bit che richiede Ipcsecproc\*isv.dll, è necessario installare l'SDK a 32 bit su un altro computer e copiare i file Ipcsecproc\*isv.dll dalla cartella "%PROGRAMFILES%\\Microsoft Information Protection And Control" (percorso predefinito o punto in cui si è scelto di installare l'SDK).
 
 ## <a name="frequently-asked-questions"></a>Domande frequenti
 
 **D**: Come funziona il comportamento della lingua predefinita con le funzioni che accettano un parametro LCID?
 
-**R**: Usare 0 per le impostazioni locali predefinite. In questo caso, AD RMS Client 2.1 cerca i nomi e le descrizioni nella sequenza riportata di seguito, recuperando il primo disponibile:
+**R**: usare 0 per le impostazioni locali predefinite. In questo caso, AD RMS Client 2.1 cerca i nomi e le descrizioni nella sequenza riportata di seguito, recuperando il primo disponibile:
 
     1 - User preferred LCID.
     2 - System locale LCID.
