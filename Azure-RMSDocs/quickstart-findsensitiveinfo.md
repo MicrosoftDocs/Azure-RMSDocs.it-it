@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 4c8a22670a7e76a8e949b8cbdc0fcfb947282a7d
-ms.sourcegitcommit: 437143e1f7f33aba46ffcc3900c31a763a2105c8
+ms.openlocfilehash: 9e4899d918701d59f5fc14db9264d1f983c9df60
+ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227811"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72447697"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Guida introduttiva: Trovare le informazioni riservate presenti nei file archiviati in locale
 
@@ -193,5 +193,5 @@ Se si vogliono classificare e proteggere i file contenenti informazioni sensibil
     - [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md)
 
 - Per il client per l'etichettatura unificata:
-    - [Applicare automaticamente un'etichetta di riservatezza al contenuto](https://docs.microsoft.com/Office365/SecurityCompliance/apply_sensitivity_label_automatically)
-    - [Limitare l'accesso al contenuto usando la crittografia nelle etichette di riservatezza](https://docs.microsoft.com/Office365/SecurityCompliance/encryption-sensitivity-labels)
+    - [Applicare automaticamente un'etichetta di riservatezza al contenuto](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)
+    - [Limitare l'accesso al contenuto usando la crittografia nelle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)
