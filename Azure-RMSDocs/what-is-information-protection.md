@@ -4,7 +4,7 @@ description: Panoramica tecnica del servizio Azure Information Protection, che c
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 10/18/2019
 ms.topic: overview
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ Customer intent: As an administrator, I want to label documents and emails to cl
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: b71bc14817aadd1c67452fecc228a339dfebcb42
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 0659abcb6211bc05a6db435db759eed8f6c44cea
+ms.sourcegitcommit: 2f092b395e31ce64df8b9148433032be5702217e
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689912"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589614"
 ---
 # <a name="what-is-azure-information-protection"></a>Che cos'è Azure Information Protection?
 
@@ -145,20 +145,19 @@ Risorse aggiuntive: [Informazioni e supporto per Azure Information Protection](i
 
 ### <a name="microsoft-ignite"></a>Microsoft Ignite
 
-Microsoft Ignite 2018 a Orlando offre numerose sessioni per Azure Information Protection. Tutte le sessioni sono state registrate, pertanto se non è stato possibile seguirle, è comunque possibile guardare le sessioni. Di seguito sono riportate le prime cinque sessioni che è consigliabile seguire:
+Microsoft Ignite 2019 a Orlando è proprio dietro l'angolo! Verranno offerte molte informazioni utili su Azure Information Protection, inclusi gli ultimi aggiornamenti e miglioramenti. Speriamo di incontrarvi in questa occasione, ma se non vi sarà possibile partecipare le sessioni verranno registrate per essere visualizzate in un secondo momento.
 
-- [BRK2006 - Use Microsoft Information Protection (MIP) to help protect your sensitive data everywhere, throughout its lifecycle](https://youtu.be/gmHVF-1cLXA) (Usare Microsoft Information Protection (MIP) per la protezione dei dati sensibili ovunque si trovino, per l'intero ciclo di vita)
+Nell'elenco seguente sono indicate le cinque sessioni principali consigliate. I collegamenti verranno aggiunti quando le registrazioni saranno disponibili:
+
+- BRK2119: Proteggere i dati sensibili. Informazioni sulle funzionalità più recenti di Microsoft Information Protection
  
-- [BRK3002 - Understanding how Microsoft Information Protection capabilities work together to protect sensitive information across devices, apps, and services](https://youtu.be/kL9Y7NGTyQQ) (Informazioni sull'interazione tra le funzionalità di Microsoft Information Protection per la protezione di informazioni sensibili tra dispositivi, app e servizi)
+- BRK3100: Come si presenta il contesto dei dati sensibili? Procedure consigliate per l'individuazione, la classificazione, l'analisi e i report dati
 
-- [BRK3009 - Accelerate deployment and adoption of Microsoft Information Protection solutions](https://www.youtube.com/watch?v=JsCyIVyQJmE) (Accelerare la distribuzione e l'adozione di soluzioni basate su Microsoft Information Protection)
+- BRK3103: La protezione di file e dati sensibili può essere difficile. Scegliere le opzioni di protezione dati corrette per l'equilibrio tra sicurezza e produttività degli utenti
 
-- [BRK3397 - Protect and control your sensitive emails with Office 365 Message Encryption](https://www.youtube.com/watch?v=Ld4b4pFua0g) (Proteggere e controllare i messaggi di posta elettronica sensibili con Office 365 Message Encryption)
+- BRK2120: Azure Information Protection è già presente? Esplorazione di etichette unificate, configurazione dei criteri, client e analisi
 
-- [THR2003 - Data discovery, Usage reporting and analytics for all your data with Microsoft Information Protection](https://www.youtube.com/watch?v=nzDIXd0XaeA) (Individuazione, report di utilizzo e analisi per tutti i dati utente con Microsoft Information Protection)
-
-Per tutti gli annunci rilasciati in occasione di Ignite, vedere il post di blog [Announcing availability of information protection capabilities to help protect your sensitive data](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/Announcing-availability-of-information-protection-capabilities/ba-p/261967) (Annuncio della disponibilità di funzionalità di protezione delle informazioni per la sicurezza dei dati sensibili).
-
+- BRK2121: Estendere la potenza dell'etichettatura e della protezione della riservatezza alle app e soluzioni ISV con Microsoft Information Protection SDK
 
 ## <a name="next-steps"></a>Passaggi successivi
 
