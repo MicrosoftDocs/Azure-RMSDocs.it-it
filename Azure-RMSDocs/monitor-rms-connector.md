@@ -14,10 +14,10 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 52690476d54eb2c23aee4c77f66ca55d320831cb
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71689512"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Monitorare il connettore di Azure Rights Management
@@ -133,7 +133,7 @@ Per informazioni su come configurare il connettore RMS per le connessioni HTTPS,
 
 Avviso **2003**
 
-**L'elenco delle autorizzazioni è vuoto. Il servizio non sarà utilizzabile fino a quando non viene popolato l'elenco di utenti e gruppi autorizzati per il connettore.**
+**L'elenco delle autorizzazioni è vuoto. Il servizio non sarà utilizzabile finché non viene popolato l'elenco di utenti e gruppi autorizzati per il connettore.**
 
 Questo evento viene registrato quando il connettore RMS non ha un elenco di account autorizzati, quindi nessun server locale può connettersi ad esso. Il connettore RMS scarica l'elenco ogni 15 minuti da Azure RMS. 
 
@@ -161,13 +161,13 @@ Questo evento viene registrato se il connettore RMS non scarica l'elenco più re
 
 ----
 
-## <a name="performance-counters"></a>Contatori delle prestazioni
+## <a name="performance-counters"></a>Contatori di prestazioni
 
 Quando si installa il connettore RMS, vengono creati automaticamente i contatori delle prestazioni del **connettore Microsoft Rights Management**, che possono essere utili per monitorare e ottimizzare le prestazioni relative all'uso del servizio Azure Rights Management. 
 
 Ad esempio, si verificano regolarmente dei ritardi quando i documenti o i messaggi di posta elettronica sono protetti. Oppure, si verificano ritardi quando i documenti o i messaggi di posta elettronica vengono aperti. In questi casi, i contatori delle prestazioni possono essere utili per determinare se i ritardi sono dovuti al tempo di elaborazione nel connettore, al tempo di elaborazione dal servizio Azure Rights Management o a ritardi della rete. 
 
-Per identificare più facilmente il punto in cui si verifica il ritardo, cercare i contatori che includono i valori medi per **Connector Processing Time** (Tempo di elaborazione del connettore), **Service Response Time** (Tempo di risposta del servizio) e **Connector Response Time** (Tempo di risposta del connettore). Esempio: **Licensing Successful Batched Request Average Connector Response Time** (Tempo medio di risposta del connettore alle richieste di licenze in batch con esito positivo).
+Per identificare più facilmente il punto in cui si verifica il ritardo, cercare i contatori che includono i valori medi per **Connector Processing Time** (Tempo di elaborazione del connettore), **Service Response Time** (Tempo di risposta del servizio) e **Connector Response Time** (Tempo di risposta del connettore). Ad esempio: **Licensing Successful Batched Request Average Connector Response Time** (Tempo medio di risposta del connettore alle richieste di licenze in batch con esito positivo).
 
 Se di recente sono stati aggiunti nuovi account di server per l'uso del connettore, è utile controllare il contatore **Time since last authorization policy update** (Tempo trascorso dall'ultimo aggiornamento di criteri di autorizzazione) per accertarsi che il connettore abbia scaricato l'elenco da quando è stato aggiornato o se è necessario attendere un po' più di tempo (fino a 15 minuti).
 

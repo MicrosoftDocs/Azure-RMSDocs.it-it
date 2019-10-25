@@ -4,7 +4,7 @@ description: Vedere le informazioni sulla versione del client per l'etichettatur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/03/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a9413cce67eda1cfb36e46ca199205faceafef73
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 7a41debe26783b530ec92dd38aa308b5e9da7546
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447923"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805278"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -47,21 +47,19 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche apport
 >  
 > Per il supporto tecnico, vedere le informazioni riportate in [Opzioni di supporto e risorse per la community](../information-support.md#support-options-and-community-resources). È anche possibile rivolgersi al team di Azure Information Protection nel [sito di Yammer](https://www.yammer.com/askipteam/).
 
-Il client sta sostituendo il client di Azure Information Protection (classico). Per confrontare caratteristiche e funzionalità con il client classico, vedere [confrontare i client](use-client.md#compare-the-clients).
+Il client sta sostituendo il client di Azure Information Protection (classico). Per confrontare caratteristiche e funzionalità con il client classico, vedere [confrontare i client di assegnazione di etichette per i computer Windows](use-client.md##compare-the-labeling-clients-for-windows-computers).
 
-## <a name="versions-later-than-22210"></a>Versioni successive a 2.2.21.0
+## <a name="version-25330"></a>Versione 2.5.33.0
 
-Se si dispone di una versione 2 del client successiva a 2.2.21.0, si tratta di una build di anteprima a scopo di test e valutazione.
-
-**Rilasciata**: 09/17/2019
+**Rilasciata**: 10/23/2019
 
 **Nuove funzionalità:**
 
-- Supporto per lo [scanner](../deploy-aip-scanner.md), per ispezionare ed etichettare i documenti archivi dati locali. Con questa versione dello scanner:
+- Versione di anteprima dello [scanner](../deploy-aip-scanner.md)per ispezionare ed etichettare i documenti archivi dati locali. Con questa versione dello scanner:
     
     - Più scanner possono condividere lo stesso database di SQL Server quando si configurano gli scanner per l'uso dello stesso profilo dello scanner. Questa configurazione facilita la gestione di più scanner e comporta tempi di analisi più rapidi. Quando si usa questa configurazione, è sempre necessario attendere il completamento dell'installazione di uno scanner prima di installare un altro scanner con lo stesso profilo.
     
-    - È necessario specificare un profilo quando si installa lo scanner e il database dello scanner è denominato **AIPScannerUL_ @ no__t-1profile_name >** . Il parametro *profile* è obbligatorio anche per set-AIPScanner.
+    - È necessario specificare un profilo quando si installa lo scanner e il database dello scanner è denominato **AIPScannerUL_\<profile_name >** . Il parametro *profile* è obbligatorio anche per set-AIPScanner.
     
     - È possibile impostare un'etichetta predefinita su tutti i documenti, anche se i documenti sono già etichettati. Nel profilo scanner o nelle impostazioni del repository, impostare l'opzione **rietichettare i file** **su on** con la nuova casella di controllo **Imponi etichetta predefinita** selezionata.
     
@@ -80,7 +78,11 @@ Se si dispone di una versione 2 del client successiva a 2.2.21.0, si tratta di u
     
     Per altre informazioni, vedere il post di Blog sull'annuncio: [Unified Labeling AIP scanner Preview introduce la scalabilità orizzontale e altro ancora.](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Unified-labeling-AIP-scanner-preview-brings-scaling-out-and-more/ba-p/862552)
 
-- Il cmdlet di PowerShell [set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) include nuovi parametri per le etichette dei [file in modo non interattivo](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection)e una [nuova procedura per registrare un'app in Azure ad](clientv2-admin-guide-powershell.md#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client). Gli scenari di esempio includono lo scanner e gli script di PowerShell automatici per etichettare i documenti.
+- Il cmdlet di [PowerShell set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) include nuovi parametri (*AppID*, *AppSecret*, *TenantId*, *DelegatedUser*e *OnBehalfOf*) per quando si desidera assegnare etichette ai file in modo non interattivo e anche un nuovo procedura per registrare un'app in Azure AD. Gli scenari di esempio includono lo scanner e gli script di PowerShell automatici per etichettare i documenti. Per istruzioni, vedere [come etichettare i file in modo non interattivo](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) dalla guida dell'amministratore.
+    
+    Si noti che *DelegatedUser* è un nuovo parametro dall'ultima versione di anteprima del client Unified Labeling e che le autorizzazioni API per l'app registrata sono state modificate di conseguenza.
+
+- Nuova impostazione avanzata Criteri etichette di PowerShell per [estendere le regole di migrazione delle etichette alle proprietà di SharePoint](clientv2-admin-guide-customizations.md#extend-your-label-migration-rules-to-sharepoint-properties).
 
 - I tipi di informazioni riservate personalizzate corrispondenti vengono inviati a [Azure Information Protection Analytics](../reports-aip.md).
 
@@ -88,16 +90,29 @@ Se si dispone di una versione 2 del client successiva a 2.2.21.0, si tratta di u
 
 - Quando si aggiungono o si modificano le impostazioni di protezione in un'etichetta, il client riapplica l'etichetta con le impostazioni di protezione più recenti quando il documento viene salvato successivamente. Analogamente, lo scanner riapplica l'etichetta con le impostazioni di protezione più recenti quando il documento viene successivamente sottoposto a scansione in modalità di applicazione.
 
+- [Supporto per i computer disconnessi](clientv2-admin-guide-customizations.md#support-for-disconnected-computers) esportando i file da un client e copiarli manualmente nel computer disconnesso. Si noti che questa configurazione è supportata per l'assegnazione di etichette con Esplora file, PowerShell e lo scanner. Questa configurazione non è supportata per l'assegnazione di etichette alle app di Office.
+
 - Nuovo cmdlet [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs)per raccogliere tutti i file di log da%LocalAppData%\Microsoft\MSIP\Logs e salvarli in un singolo file compresso con formato zip. Questo file può quindi essere inviato a supporto tecnico Microsoft se viene richiesto di inviare i file di log per consentire l'analisi di un problema segnalato.
 
 **Correzioni**
 
 - È possibile apportare modifiche a un file protetto tramite Esplora file e fare clic con il pulsante destro del mouse dopo la rimozione di una password per il file.
 
+- È possibile aprire correttamente i file protetti in modo nativo nel Visualizzatore senza richiedere il [diritto di utilizzo](../configure-usage-rights.md#usage-rights-and-descriptions)Salva con nome, Esporta (Export).
+
+- Le etichette e le impostazioni dei criteri si aggiornano come previsto senza dover eseguire [Clear-AIPAuthentication](/powershell/module/azureinformationprotection/clear-aipauthentication?)o eliminare manualmente la cartella%LocalAppData%\Microsoft\MSIP\mip.
+
+**Modifiche aggiuntive**
+
+- [Reimposta impostazioni](clientv2-admin-guide.md#more-information-about-the-reset-settings-option) ora elimina le cartelle\>%LocalAppData%\Microsoft\MSIP\mip\\ *\<ProcessName. exe* anziché%LocalAppData%\Microsoft\MSIP\mip\\ *\<ProcessName\>* \mip cartella.
+
+- [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) include ora l'ID contenuto per un documento protetto.
 
 ## <a name="version-22210"></a>Versione 2.2.21.0
 
-**Rilasciata**: 09/03/2019
+**Rilasciata**: 09/03/2020
+
+Supportato tramite 04/23/2020
 
 **Correzioni**
 
@@ -219,7 +234,7 @@ Questa prima versione disponibile a livello generale del client di Azure Informa
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Per informazioni dettagliate, vedere le [tabelle di confronto](use-client.md#compare-the-clients).
+Per informazioni dettagliate, vedere le [tabelle di confronto](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
 Per ulteriori informazioni sull'installazione e sull'utilizzo del client: 
 

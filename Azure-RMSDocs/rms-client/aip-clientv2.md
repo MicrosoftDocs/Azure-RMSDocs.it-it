@@ -4,7 +4,7 @@ description: Risorse informative per il client Azure Information Protection Unif
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: d357f5ddbaa4387e16ac476588d1651fe583b374
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: ddfcabc7237c66d95bc9f6dab15dc5326a92d6be
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447866"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805245"
 ---
 # <a name="azure-information-protection-unified-labeling-client-for-windows"></a>Azure Information Protection client di etichetta unificata per Windows
 
@@ -29,7 +29,7 @@ ms.locfileid: "72447866"
 Azure Information Protection Unified Labeling client per Windows è un client scaricabile per le organizzazioni che usano [etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) per classificare e proteggere documenti e messaggi di posta elettronica. Il client include anche un visualizzatore per le organizzazioni prive di un'infrastruttura di protezione propria, ma che vogliono usare contenuto protetto da altre organizzazioni che usano un servizio Rights Management di Microsoft.
 
 > [!NOTE]
-> Questo client, noto anche come client per l'assegnazione di etichette unificata, sostituisce il client di Azure Information Protection (classico). Se non si è certi del client da usare, vedere [scegliere il client Azure Information Protection da usare](use-client.md#choose-which-azure-information-protection-client-to-use).
+> Questo client, noto anche come client per l'assegnazione di etichette unificata, sostituisce il client di Azure Information Protection (classico). Se non si è certi del client da usare, vedere [scegliere il client di assegnazione di etichette da usare per i computer Windows](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
 Usare le risorse seguenti per il client Unified Labeling:
 

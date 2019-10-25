@@ -14,10 +14,10 @@ ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 0de43192b44fb4e6d931d1e09ef8f01514c0a4ff
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "72447047"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
@@ -170,7 +170,7 @@ Quando viene applicata un'etichetta a un documento o un messaggio di posta elett
 
 - Nei messaggi di posta elettronica queste informazioni sono archiviate nell'intestazione X-: **msip_labels: MSIP_Label_\<GUID>_Enabled=True;** 
 
-- Per i documenti di Word (doc e docx), i fogli di calcolo di Excel (xls e XLSX), le presentazioni di PowerPoint (con estensione ppt e pptx) e i documenti PDF, questi metadati vengono archiviati nella seguente proprietà personalizzata: **MSIP_Label_ @ no__t-1GUID > _Enabled = true**  
+- Per i documenti di Word (doc e docx), i fogli di calcolo di Excel (xls e XLSX), le presentazioni di PowerPoint (con estensione ppt e pptx) e i documenti PDF, questi metadati vengono archiviati nella seguente proprietà personalizzata: **MSIP_Label_\<GUID > _Enabled = true**  
 
 Per i messaggi di posta elettronica, le informazioni sull'etichetta vengono archiviate al momento dell'invio del messaggio. Per i documenti, le informazioni sull'etichetta vengono archiviate quando il file viene salvato. 
 

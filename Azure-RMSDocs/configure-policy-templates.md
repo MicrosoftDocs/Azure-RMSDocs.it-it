@@ -14,17 +14,17 @@ ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: b92df89ca1c0bacc7ad47f4b03c97d868b8fa396
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71683876"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurazione e gestione dei modelli per Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 I modelli di protezione, noti anche come modelli di Rights Management, sono un raggruppamento di impostazioni di protezione definite dall'amministratore per Azure Information Protection. Queste impostazioni includono i [diritti di utilizzo](configure-usage-rights.md) scelti per gli utenti autorizzati e i controlli di accesso per l'accesso con scadenza e offline. Questi modelli sono ora integrati con i criteri di Azure Information Protection: 
 
@@ -63,7 +63,7 @@ Se è stata attivata recentemente una sottoscrizione, i modelli predefiniti veng
 
 Se la sottoscrizione è stata ottenuta qualche tempo fa, è possibile creare i modelli predefiniti con i nomi seguenti:
 
-- **nome \<organization >-Confidential**
+- **nome dell'organizzazione\<>-Confidential**
 
 - **\<nome organizzazione> - Solo visualizzazione riservata** 
 
@@ -84,7 +84,7 @@ Prima di modificare i modelli o convertirli in etichette, assicurarsi di essere 
     
     - **Consenti macro** (nome comune) viene aggiunto automaticamente. Questo diritto di utilizzo è obbligatorio per la barra di Azure Information Protection nelle app Office.
 
-- Le impostazioni **Pubblicato** e **Archiviato** sono visualizzate rispettivamente come **Abilitato**: **Attivata** e **Abilitato**: **Disattivata** nel pannello **Etichetta**. I modelli che si desidera mantenere ma che non devono essere visibili a utenti o servizi devono essere impostati su **Abilitato**: **Disattivata**.
+- Le impostazioni **Pubblicato** e **Archiviato** sono visualizzate rispettivamente come **Abilitato**: **Attivata** e **Abilitato**: **Disattivata** nel pannello **Etichetta**. I modelli che si desidera mantenere ma che non devono essere visibili a utenti o servizi devono essere impostati su **Abilitato**: **OFF**.
 
 - Non è possibile copiare o eliminare un modello nel portale di Azure. Quando il modello viene convertito in un'etichetta, è possibile configurare l'etichetta per interrompere l'uso del modello selezionando **Non configurato** per l'opzione **Configurare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta** opzione. In alternativa, è possibile eliminare l'etichetta. In entrambi gli scenari, tuttavia, il modello non viene eliminato e rimane in uno stato archiviato.
     
@@ -131,7 +131,7 @@ Quando si converte un modello in etichetta:
 
 - Il nome del modello viene convertito in un nuovo nome di etichetta e la descrizione del modello viene convertita nella descrizione dell'etichetta. 
 
-- Se lo stato del modello è stato pubblicato, questa impostazione viene mappata ad **Abilitato**: **Attivata** per l'etichetta che verrà visualizzata agli utenti alla successiva pubblicazione dei criteri di Azure Information Protection. Se lo stato del modello è stato archiviato, questa impostazione viene mappata ad **Abilitato**: **Disattivata** per l'etichetta e non viene visualizzata come etichetta disponibile agli utenti.
+- Se lo stato del modello è pubblicato, questa impostazione viene mappata su **Abilitato**: **Attivata** per l'etichetta che verrà visualizzata agli utenti alla successiva pubblicazione dei criteri di Azure Information Protection. Se lo stato del modello è archiviato, questa impostazione viene mappata su **Abilitato**: **Disattivata** per l'etichetta che non viene visualizzata come etichetta disponibile agli utenti.
 
 - Le impostazioni di protezione vengono mantenute e, se necessario, è possibile modificarle e aggiungere altre impostazioni di etichetta, ad esempio gli indicatori visivi e le condizioni.
 
@@ -141,9 +141,9 @@ Quando si converte un modello in etichetta:
 
 Quando si crea una nuova etichetta con l'impostazione di protezione **Azure (chiave cloud)** viene creato un nuovo modello personalizzato, al quale possono accedere i servizi e le applicazioni che si integrano con i modelli di Rights Management.
 
-1. Dall'opzione di menu **Classificazioni** > **Etichette**: Nel pannello **Azure Information Protection - Etichette** selezionare **Aggiungi una nuova etichetta**.
+1. Dall'opzione di menu **Classificazioni** > **Etichette**: nel pannello **Azure Information Protection - Etichette** selezionare **Aggiungi una nuova etichetta**.
 
-2. Nel pannello **Etichetta** mantenere il valore predefinito **Abilitato**: **Disattivata**, quindi immettere un nome e una descrizione dell'etichetta per il nome e la descrizione del modello.
+2. Nel pannello **Etichetta** mantenere l'impostazione predefinita**Abilitata**: **Sì** e quindi immettere quindi un nome di etichetta e una descrizione per il nome del modello e la descrizione.
 
 3. Per **Configurare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta** selezionare **Proteggi**, quindi selezionare **Protezione**:
     
@@ -157,7 +157,7 @@ Quando si crea una nuova etichetta con l'impostazione di protezione **Azure (chi
     
     Anche se l'etichetta è abilitata, per impostazione predefinita il modello viene archiviato. In modo che le applicazioni e i servizi possano usare il modello per proteggere documenti e messaggi di posta elettronica, completare il passaggio finale per pubblicare il modello.
 
-5. Nell'opzione di menu **Classificazioni** > **Criteri** selezionare i criteri in cui includere le nuove impostazioni di protezione. Selezionare quindi **Add or remove labels** (Aggiungi o rimuovi etichette). Nel pannello **Policy: Add or remove labels** (Criteri: Aggiungi o rimuovi etichette) selezionare l'etichetta appena creata che contiene le impostazioni di protezione, **OK** e quindi **Salva**.
+5. Nell'opzione di menu **Classificazioni** > **Criteri** selezionare i criteri in cui includere le nuove impostazioni di protezione. Selezionare quindi **Add or remove labels** (Aggiungi o rimuovi etichette). Nel pannello **Policy: Add or remove labels** (Criteri: Aggiungi o rimuovi etichette) selezionare l'etichetta appena creata che contiene le impostazioni di protezione, selezionare **OK** e quindi fare clic su **Salva**.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

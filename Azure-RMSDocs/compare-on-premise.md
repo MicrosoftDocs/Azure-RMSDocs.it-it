@@ -12,12 +12,12 @@ ms.assetid: 8123bd62-1814-4d79-b306-e20c1a00e264
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a404bfbc36c8952214ed3c6814bab44368366170
-ms.sourcegitcommit: 0d336e4b5386f4861db9492c7dce2ef0e8cf0d6d
+ms.openlocfilehash: 86f53fd6fa1be34399d104bd33a9b0e749f3f949
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/25/2019
-ms.locfileid: "70017615"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805615"
 ---
 # <a name="comparing-azure-information-protection-and-ad-rms"></a>Confronto tra Azure Information Protection e AD RMS
 
@@ -27,25 +27,25 @@ Se già si conosce o si è distribuito in precedenza Active Directory Rights 
 
 Di seguito sono descritte alcune delle differenze principali di Azure Information Protection:
 
-- **Non è richiesta un'infrastruttura server**: Azure Information Protection non richiede i server aggiuntivi e i certificati PKI richiesti da AD RMS, poiché vengono forniti da Microsoft Azure. Ciò rende questa soluzione cloud più veloce da distribuire e più semplice da gestire.
+- **Nessuna infrastruttura server necessaria**: Azure Information Protection non richiede i server aggiuntivi e i certificati PKI richiesti da AD RMS, poiché vengono forniti da Microsoft Azure. Ciò rende questa soluzione cloud più veloce da distribuire e più semplice da gestire.
 
 - **Autenticazione basata sul cloud**: Azure Information Protection usa Azure AD per l'autenticazione di utenti interni e di utenti di altre organizzazioni. Ciò significa che gli utenti possono essere autenticati anche quando non sono connessi alla rete interna ed è più facile condividere il contenuto protetto con gli utenti di altre organizzazioni. Molte organizzazioni che eseguono servizi Azure o usano Office 365 hanno già account utente in Azure AD. In caso contrario, RMS per utenti singoli consente agli utenti di creare un account gratuito oppure è possibile usare un account Microsoft per le [applicazioni che supportano questo tipo di autenticazione per Azure Information Protection](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents). In confronto, per condividere AD RMS contenuto protetto con un'altra organizzazione, è necessario configurare trust espliciti a ogni organizzazione.
 
-- **Supporto predefinito per dispositivi mobili**: Non sono necessarie modifiche alla distribuzione per Azure Information Protection supportare i dispositivi mobili e i computer Mac. Per supportare questi dispositivi con AD RMS, è necessario installare l'estensione per dispositivi mobili, configurare AD FS per la federazione e creare record aggiuntivi per il servizio DNS pubblico.
+- **Supporto incorporato per i dispositivi mobili**: non sono necessarie modifiche alla distribuzione per Azure Information Protection supportare i dispositivi mobili e i computer Mac. Per supportare questi dispositivi con AD RMS, è necessario installare l'estensione per dispositivi mobili, configurare AD FS per la federazione e creare record aggiuntivi per il servizio DNS pubblico.
 
 - **Modelli predefiniti**: Azure Information Protection crea automaticamente modelli predefiniti che limitano l'accesso al contenuto alla propria organizzazione. Questi modelli consentono di iniziare a proteggere immediatamente i dati sensibili. Non sono disponibili modelli predefiniti per AD RMS.
 
-- **Modelli di reparto**: anche noti come modelli con ambito. Azure Information Protection supporta i modelli di reparto per i modelli aggiuntivi che vengono creati. Questa configurazione consente di specificare un sottoinsieme di utenti che possono visualizzare modelli specifici nelle applicazioni client. Limitando il numero di modelli che gli utenti visualizzano, si semplifica la selezione dei criteri corretti definiti per i diversi gruppi di utenti. AD RMS non supporta i modelli di reparto.
+- **Modelli di reparto**: noti anche come modelli con ambito. Azure Information Protection supporta i modelli di reparto per i modelli aggiuntivi che vengono creati. Questa configurazione consente di specificare un sottoinsieme di utenti che possono visualizzare modelli specifici nelle applicazioni client. Limitando il numero di modelli che gli utenti visualizzano, si semplifica la selezione dei criteri corretti definiti per i diversi gruppi di utenti. AD RMS non supporta i modelli di reparto.
 
-- **Rilevamento e revoca dei documenti**: Azure Information Protection supporta queste funzionalità con il client di Azure Information Protection (classico), mentre AD RMS No.
+- **Rilevamento e revoca dei documenti**: Azure Information Protection supporta queste funzionalità con il client di Azure Information Protection (classico), mentre ad RMS No.
 
-- **Classificazione e assegnazione di etichette**: Azure Information Protection supporta le etichette che applicano la classificazione e, facoltativamente, la protezione. Queste funzionalità sono fornite con il [client di Azure Information Protection (classico) e il client di Azure Information Protection Unified Labeling](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use). Usando questi client, la classificazione e l'assegnazione di etichette possono essere integrate con le applicazioni di Office, Esplora file, PowerShell e uno scanner per gli archivi dati locali. AD RMS non supporta le funzionalità di classificazione e assegnazione di etichette.
+- **Classificazione e assegnazione di etichette**: Azure Information Protection supporta le etichette che applicano la classificazione e, facoltativamente, la protezione. Queste funzionalità sono fornite con il [client di Azure Information Protection (classico) e il client di Azure Information Protection Unified Labeling](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers). Usando questi client, la classificazione e l'assegnazione di etichette possono essere integrate con le applicazioni di Office, Esplora file, PowerShell e uno scanner per gli archivi dati locali. AD RMS non supporta le funzionalità di classificazione e assegnazione di etichette.
 
 Inoltre, poiché è un servizio cloud, Azure Information Protection può distribuire nuove funzionalità e correzioni in modo più rapido rispetto a una soluzione locale basata su server. Non sono previste nuove funzionalità per AD RMS in Windows Server.
 
 Per altre differenze, usare la tabella seguente per un confronto affiancato. Per domande di confronto specifiche sulla sicurezza, vedere la sezione [Controlli crittografici per la firma e la crittografia](#cryptographic-controls-for-signing-and-encryption) in questo articolo.
 
-|Azure Information Protection|AD RMS|
+|Azure Information Protection|RMS di AD|
 |-----------------------------------------------------------------------------------------|--------------------------------------------------------|
 |Supporta le funzionalità IRM (Information Rights Management) nei Microsoft Online Services e nei prodotti server Microsoft locali.|Supporta le funzionalità IRM (Information Rights Management) per i prodotti server Microsoft locali ed Exchange Online.|
 |Abilita automaticamente la collaborazione sicura su documenti con qualsiasi organizzazione che usa Azure AD per l'autenticazione.|La collaborazione sicura sui documenti all'esterno dell'organizzazione richiede la definizione di relazioni di trust di autenticazione in modo esplicito in una relazione point-to-point diretta tra le due organizzazioni. È necessario configurare domini utente trusted o relazioni di trust federative mediante Active Directory Federation Services (AD FS).|
@@ -62,7 +62,7 @@ Azure Information Protection e AD RMS usano entrambi AES 128 per la crittograf
 
 Azure Information Protection è conforme a FIPS 140-2 se le dimensioni della chiave del tenant sono 2048 bit, ovvero l'impostazione predefinita al momento dell'attivazione del servizio Azure Rights Management. 
 
-Per altre informazioni sui controlli crittografici, vedere [Controlli crittografici usati in Azure RMS: Algoritmi e lunghezze delle chiavi](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
+Per altre informazioni sui controlli crittografici, vedere [Controlli crittografici usati in Azure RMS: algoritmi e lunghezze delle chiavi](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
 
 
 ## <a name="next-steps"></a>Passaggi successivi

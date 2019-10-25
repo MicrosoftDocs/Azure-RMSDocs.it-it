@@ -12,12 +12,12 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f7af3b59138eecbcac40ac09003ab365454e5630
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: d304664bb3573bc1a90989f11927264450d01c0d
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447206"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805555"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Guida di orientamento per la distribuzione di Azure Information Protection
 
@@ -65,7 +65,7 @@ Per altre informazioni, vedere [Preparazione di utenti e gruppi per Azure Inform
 
 ### <a name="step-3-configure-and-deploy-classification-and-labeling"></a>Passaggio 3: Configurare e distribuire le funzionalità di classificazione e assegnazione di etichette
 
-Prima di configurare le etichette e le impostazioni dei criteri, decidere quale client di Azure Information Protection si utilizzerà: il client classico o il client di etichetta unificata. In alternativa, potrebbero essere necessari entrambi i client. Questa decisione client è ora necessaria, quindi si conosce il portale di gestione da usare per configurare le etichette e le impostazioni dei criteri. Per altre informazioni e per semplificare questa decisione, vedere scegliere il [client Azure Information Protection da usare](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
+Prima di configurare le etichette e le impostazioni dei criteri, decidere quale client di Azure Information Protection si utilizzerà: il client classico o il client di etichetta unificata. In alternativa, potrebbero essere necessari entrambi i client. Questa decisione client è ora necessaria, quindi si conosce il portale di gestione da usare per configurare le etichette e le impostazioni dei criteri. Per altre informazioni e per semplificare questa decisione, vedere scegliere il [client Azure Information Protection da usare](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
 > [!TIP]
 > **Facoltativo ma consigliato**: provare a usare la [Guida introduttiva dello scanner](quickstart-findsensitiveinfo.md) per individuare le informazioni riservate presenti negli archivi dati locali. Le informazioni trovate dallo scanner possono semplificare la tassonomia di classificazione, oltre a fornire informazioni utili sulle etichette richieste e sui file che necessitano di protezione.
@@ -78,7 +78,7 @@ Riconfigurare le etichette per apportare le modifiche necessarie per supportare 
 
 - Etichette di Azure Information Protection per il client classico: [configurazione dei criteri di Azure Information Protection](./configure-policy.md)
 
-- Etichette di riservatezza per il client Unified Labeling: [Panoramica delle etichette di riservatezza](https://docs.microsoft.com/en-us/microsoft-365/compliance/sensitivity-labels)
+- Etichette di riservatezza per il client Unified Labeling: [Panoramica delle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)
 
 Distribuire quindi il client di Azure Information Protection (versione classica) o il client per l'assegnazione di etichette unificata Azure Information Protection per gli utenti. Fornire formazione per gli utenti e istruzioni specifiche per la selezione delle etichette. Per ulteriori informazioni sull'installazione e sul supporto dei client, vedere le guide di amministrazione:
 

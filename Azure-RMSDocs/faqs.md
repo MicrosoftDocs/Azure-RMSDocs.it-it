@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 00ce2f31b5215a954c64135e9d41d39b1eeb1d72
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 4a94787ad611ca52206629362a7ac1bf9df9f174
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447763"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805548"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
@@ -63,7 +63,7 @@ Il **client Azure Information Protection (classico)** è stato reso disponibile 
 
 Il **Azure Information Protection client di etichetta unificata** è un'aggiunta più recente, per supportare l'archivio di etichette unificato supportato da più applicazioni e servizi. Questo client Scarica le etichette di riservatezza e le impostazioni dei criteri dai centri di amministrazione seguenti: il Centro sicurezza e conformità di Office 365, il Centro sicurezza Microsoft 365 e la Microsoft 365 Compliance Center. Per altre informazioni, vedere [Panoramica delle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
 
-Se non si è certi del client da usare, vedere [scegliere il client Azure Information Protection da usare](./rms-client/use-client.md#choose-which-azure-information-protection-client-to-use).
+Se non si è certi del client da usare, vedere [scegliere il client Azure Information Protection da usare](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
 ### <a name="identify-which-client-you-have-installed"></a>Identificare il client installato
 

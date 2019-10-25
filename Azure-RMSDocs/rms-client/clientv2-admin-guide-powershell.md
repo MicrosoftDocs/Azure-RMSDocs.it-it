@@ -4,21 +4,21 @@ description: Istruzioni e informazioni per gli amministratori per la gestione de
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 852222c94ff221e4faaa86466d535805402e5d0e
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 1388445ad9a5e7facded18dcd3f19be265bc4035
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314039"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805666"
 ---
-# <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guida dell'amministratore: Uso di PowerShell con il client unificato Azure Information Protection
+# <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guida dell'amministratore: uso di PowerShell con il client unificato di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012, windows Server 2008 R2*
 >
@@ -26,7 +26,7 @@ ms.locfileid: "71314039"
 
 Quando si installa il client Azure Information Protection Unified Labeling, i comandi di PowerShell vengono installati automaticamente. Ciò consente di gestire il client eseguendo i comandi che è possibile inserire negli script per l'automazione.
 
-I cmdlet vengono installati con il modulo di PowerShell **AzureInformationProtection**, che include i cmdlet per l'assegnazione di etichette. Esempio:
+I cmdlet vengono installati con il modulo di PowerShell **AzureInformationProtection**, che include i cmdlet per l'assegnazione di etichette. Ad esempio:
 
 |Cmdlet per le etichette|Esempio di utilizzo|
 |----------------|---------------|
@@ -36,7 +36,7 @@ I cmdlet vengono installati con il modulo di PowerShell **AzureInformationProtec
 |[Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication)|Assegna etichette ai file in modo non interattivo, ad esempio tramite uno script che viene eseguito in base a una pianificazione.|
 
 > [!TIP]
-> Per usare cmdlet con percorsi di lunghezza superiore a 260 caratteri, usare l'[impostazione di Criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) seguente disponibile a partire da Windows 10 versione 1607:<br />  > **Configurazione computer criteri**computer locale modelli amministrativi**tutte le impostazioni Abilita percorsi** **lunghi Win32**  >  >  >  
+> Per usare cmdlet con percorsi di lunghezza superiore a 260 caratteri, usare l'[impostazione di Criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/) seguente disponibile a partire da Windows 10 versione 1607:<br /> **Criterio computer locale** > **configurazione computer** > **Modelli amministrativi** > **tutte le impostazioni** > **Abilita percorsi lunghi Win32** 
 > 
 > Per Windows Server 2016 è possibile usare la stessa impostazione di Criteri di gruppo quando si installano i modelli amministrativi più recenti (con estensione admx) per Windows 10.
 >
@@ -45,7 +45,7 @@ I cmdlet vengono installati con il modulo di PowerShell **AzureInformationProtec
 Questo modulo viene installato in **\Programmi (x86)\Microsoft Azure Information Protection** e aggiunge questa cartella alla variabile di sistema **PSModulePath**. Il file DLL per questo modulo si chiama **AIP.dll**.
 
 > [!IMPORTANT]
-> Il modulo AzureInformationProtection non supporta la configurazione delle impostazioni avanzate per le etichette o i criteri di etichetta. Per queste impostazioni, è necessario Office 365 Centro sicurezza e conformità PowerShell. Per ulteriori informazioni, vedere [Configurazioni personalizzate per il client di Unified Labelling di Azure Information Protection](clientv2-admin-guide-customizations.md).
+> Il modulo AzureInformationProtection non supporta la configurazione delle impostazioni avanzate per le etichette o i criteri di etichetta. Per queste impostazioni, è necessario Office 365 Centro sicurezza e conformità PowerShell. Per ulteriori informazioni, vedere [Custom Configurations for the Azure Information Protection Unified Labeling client](clientv2-admin-guide-customizations.md).
 
 ### <a name="prerequisites-for-using-the-azureinformationprotection-module"></a>Prerequisiti per l'uso del modulo AzureInformationProtection
 
@@ -61,186 +61,85 @@ Oltre ai prerequisiti per l'installazione del modulo AzureInformationProtection,
 
 Se il tenant di Azure Information Protection non è attivato, vedere le istruzioni per [[attivazione del servizio di protezione da Azure Information Protection](../activate-service.md).
 
-#### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>Prerequisito 2: per rimuovere la protezione dai file per altri utenti usando il proprio account
+#### <a name="prerequisite-2-to-remove-protection-from-files-for-others-using-your-own-account"></a>Prerequisito 2: per rimuovere la protezione dai file per altri utenti tramite il proprio account
 
 Gli scenari tipici per la rimozione della protezione dai file per altri utenti includono l'individuazione dei dati o il ripristino dei dati. Se si usano etichette per applicare la protezione, è possibile rimuovere la protezione impostando una nuova etichetta che non applica protezione oppure rimuovendo l'etichetta.
 
-Per poter rimuovere la protezione dai file, è necessario avere diritti di utilizzo per Rights Management oppure un account utente con privilegi avanzati. Per l'individuazione dei dati o il ripristino dei dati, viene in genere usata la funzionalità per utenti con privilegi avanzati. Per abilitare questa funzionalità e configurare l'account come utente con privilegi avanzati, vedere [Configurazione degli utenti con privilegi avanzati per Azure Rights Management e servizi di individuazione o ripristino dei dati](../configure-super-users.md).
+Per poter rimuovere la protezione dai file, è necessario avere diritti di utilizzo per Rights Management oppure un account utente con privilegi avanzati. Per l'individuazione dei dati o il ripristino dei dati, viene in genere usata la funzionalità per utenti con privilegi avanzati. Per abilitare questa funzionalità e configurare l'account come utente con privilegi avanzati, vedere [configurazione degli utenti con privilegi avanzati per Azure Information Protection e servizi di individuazione o ripristino dei dati](../configure-super-users.md).
 
 ## <a name="how-to-label-files-non-interactively-for-azure-information-protection"></a>Come assegnare un'etichetta ai file in modo non interattivo per Azure Information Protection
 
-È possibile eseguire i cmdlet per l'assegnazione delle etichette in modo non interattivo tramite il cmdlet **Set-AIPAuthentication**.
+È possibile eseguire i cmdlet per l'assegnazione delle etichette in modo non interattivo tramite il cmdlet [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication).
 
-Per impostazione predefinita, quando si eseguono i cmdlet per l'assegnazione di etichette, i comandi vengono eseguiti nel contesto utente personale in una sessione interattiva di PowerShell. Per eseguirli senza interventi da parte dell'utente, creare un nuovo account utente di Azure AD per questo scopo. Nel contesto di tale utente, quindi, eseguire il cmdlet Set-AIPAuthentication per impostare e archiviare le credenziali usando un token di accesso da Azure AD. Questo account utente viene quindi autenticato e avviato per il servizio di protezione da Azure Information Protection. L'account Scarica i criteri di Azure Information Protection e tutti i modelli di protezione usati dalle etichette.
+Per impostazione predefinita, quando si eseguono i cmdlet per l'assegnazione di etichette, i comandi vengono eseguiti nel contesto utente personale in una sessione interattiva di PowerShell. Per eseguirli in modo automatico, utilizzare un account di Windows in grado di accedere in modo interattivo e utilizzare un account in Azure AD che verrà utilizzato per l'accesso delegato. Per semplificare l'amministrazione, usare un singolo account sincronizzato da Active Directory a Azure AD.
+
+È anche necessario richiedere un token di accesso da Azure AD, che imposta e archivia le credenziali per l'utente delegato per l'autenticazione a Azure Information Protection.
+
+Il computer che esegue il cmdlet AIPAuthentication Scarica i criteri di etichetta con le etichette assegnate all'account utente delegato tramite il centro di gestione delle etichette, ad esempio Office 365 Centro sicurezza e conformità.
 
 > [!NOTE]
-> Se si usano criteri di etichetta per utenti diversi, tenere presente che potrebbe essere necessario aggiungere questo account a un criterio di etichetta specifico.
+> Se si usano criteri di etichetta per utenti diversi, potrebbe essere necessario creare nuovi criteri di etichetta che pubblichino tutte le etichette e pubblicare i criteri solo in questo account utente delegato.
 
-La prima volta che si esegue questo cmdlet viene richiesto di accedere ad Azure Information Protection. Specificare il nome dell'account utente e la password creati per l'account automatico. Successivamente, questo account potrà quindi eseguire i cmdlet di assegnazione di etichette in modo non interattivo fino alla scadenza del token di autenticazione in Azure AD. 
+Quando il token in Azure AD scade, è necessario eseguire nuovamente il cmdlet per acquisire un nuovo token. È possibile configurare il token di accesso in Azure AD per un anno, due anni o per non scadere mai. I parametri per set-AIPAuthentication usano i valori di un processo di registrazione delle app in Azure AD, come descritto nella sezione successiva.
 
-Per consentire all'account utente di accedere in modo interattivo per la prima volta, l'account deve disporre dell'assegnazione diritto utente **accesso locale** . Questo diritto è standard per gli account utente, ma i criteri aziendali potrebbero non consentire questa configurazione per gli account del servizio. In tal caso, è possibile eseguire set-AIPAuthentication con il parametro *OnBehalfOf* in modo che l'autenticazione venga completata senza la richiesta di accesso.
+Per l'account utente delegato:
 
-Quando il token Azure AD scade, eseguire di nuovo il cmdlet per acquisire un nuovo token.
+- Assicurarsi di disporre di un criterio di etichetta assegnato a questo account e che il criterio includa le etichette pubblicate che si desidera utilizzare.
 
-Se si esegue questo cmdlet senza parametri, l'account acquisisce un token di accesso valido per 90 giorni o fino alla scadenza della password.  
+- Se questo account deve decrittografare il contenuto, ad esempio per riproteggere i file e controllare i file protetti da altri utenti, renderlo un [utente con privilegi](../configure-super-users.md) avanzati per Azure Information Protection e assicurarsi che la funzionalità per utenti con privilegi avanzati sia abilitata.
 
-Per determinare la scadenza del token di accesso, eseguire questo cmdlet con parametri. Questa configurazione consente di configurare il token di accesso in Azure AD per un anno, due anni o non scadere mai. I parametri per set-AIPAuthentication usano i valori di un processo di registrazione delle app in Azure AD.
-
-Dopo aver eseguito questo cmdlet, è possibile eseguire i cmdlet di assegnazione di etichette nel contesto dell'account del servizio creato.
+- Se sono stati implementati i [controlli di onboarding](../activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) per una distribuzione in più fasi, assicurarsi che questo account sia incluso nei controlli di onboarding configurati.
 
 ### <a name="to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication"></a>Per creare e configurare le applicazioni di Azure AD per Set-AIPAuthentication
 
-> [!NOTE]
-> Se si usa la versione di anteprima corrente del client Unified Labeling non usare questa procedura, ma invece, vedere [per creare e configurare le applicazioni Azure ad per set-AIPAuthentication-Preview client](#to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client).
+> [!IMPORTANT]
+> Queste istruzioni riguardano la versione di disponibilità generale corrente del client Unified Labeling e si applicano anche alla versione di anteprima dello scanner per questo client.
+
+Set-AIPAuthentication richiede una registrazione dell'app per i parametri *AppID* e *AppSecret* . Se è stato eseguito l'aggiornamento da una versione precedente del client e è stata creata una registrazione dell'app per i parametri *webappid* e *NativeAppId* precedenti, questi non funzioneranno con il client di etichettatura unificata. È necessario creare una nuova registrazione per l'app come segue:
 
 1. In una nuova finestra del browser accedere al [Portale di Azure](https://portal.azure.com/).
 
-2. Per il tenant Azure ad usato con Azure Information Protection, passare a **Azure Active Directory** > **Gestisci** > **registrazioni app**. 
-
-3. Selezionare **+ nuova registrazione**per creare l'applicazione/API dell'app Web. Nel pannello **registra un'applicazione** specificare i valori seguenti e quindi fare clic su **registra**:
-
-   - **Nome**:`AIPOnBehalfOf`
-        
-        Se preferibile, specificare un nome diverso. Deve essere univoco per ogni tenant.
-    
-    - **Tipi di account supportati**: **Solo account in questa directory organizzativa**
-    
-    - **URI di reindirizzamento (facoltativo)** : **Web** e`http://localhost`
-
-4. Nel pannello **AIPOnBehalfOf** copiare il valore per l' **ID applicazione (client)** . Il valore è simile all'esempio seguente: `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. Questo valore viene usato per il parametro webappid quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
-
-5. Sempre nel pannello **AIPOnBehalfOf** selezionare **Authentication**( **Gestisci** barra laterale).
-
-6. Nel pannello **AIPOnBehalfOf-Authentication** , nella sezione **Impostazioni avanzate** , selezionare la casella di controllo **token ID** , quindi selezionare **Salva**.
-
-7. Sempre nel pannello **AIPOnBehalfOf-Authentication** , dalla barra laterale **Gestisci** Selezionare **certificati & segreti**.
-
-8. Nel pannello **AIPOnBehalfOf-certificates & Secrets** , nella sezione **client Secrets** Selezionare **+ New client Secret**. 
-
-9. Per **Aggiungi un segreto client**, specificare quanto segue e quindi selezionare **Aggiungi**:
-    
-    - **Descrizione**:`Azure Information Protection client`
-    - **Scadenza**: Specificare la durata scelta (1 anno, 2 anni o nessuna scadenza)
-
-9. Tornare al pannello **AIPOnBehalfOf-certificates & Secrets** , nella sezione **client Secrets** , copiare la stringa per il **valore**. Questa stringa ha un aspetto simile all'esempio seguente `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn`:. Per assicurarsi di copiare tutti i caratteri, selezionare l'icona da **copiare negli Appunti**. 
-    
-    È importante salvare la stringa, perché non verrà più visualizzata e non potrà essere recuperata. Come per le informazioni riservate utilizzate, archiviare il valore salvato in modo sicuro e limitarne l'accesso.
-
-10. Sempre nel pannello **AIPOnBehalfOf-certificates & Secrets (** **Gestisci** barra laterale) selezionare **esporre un'API**.
-
-11. Nel pannello **AIPOnBehalfOf-esporre un'API** selezionare **imposta** per l'opzione **URI ID applicazione** e nel valore **URI ID applicazione** , modificare **API** in **http**. Questa stringa ha un aspetto simile all'esempio seguente `http://d244e75e-870b-4491-b70d-65534953099e`:. 
-    
-    Selezionare **Salva**.
-
-12. Tornare al pannello **AIPOnBehalfOf-esporre un'API** , selezionare **+ Aggiungi un ambito**.
-
-13. Nel pannello **Aggiungi ambito** , specificare quanto segue, usando le stringhe suggerite come esempi, quindi selezionare **Aggiungi ambito**:
-    - **Nome ambito**:`user-impersonation`
-    - **Chi può acconsentire?** : **Amministratori e utenti**
-    - **Nome visualizzato del consenso dell'amministratore**:`Access Azure Information Protection scanner`
-    - **Descrizione del consenso dell'amministratore**:`Allow the application to access the scanner for the signed-in user`
-    - **Nome visualizzato del consenso dell'utente**:`Access Azure Information Protection scanner`
-    - **Descrizione del consenso dell'utente**:`Allow the application to access the scanner for the signed-in user`
-    - **Stato**: **Abilitato** (impostazione predefinita)
-
-14. Tornare al pannello **AIPOnBehalfOf-esporre un'API** . chiudere il pannello.
-
-15. Nel pannello **registrazioni app** selezionare **+ registrazione nuova applicazione** per creare ora l'applicazione nativa.
-
-16. Nel pannello **registra un'applicazione** specificare le impostazioni seguenti e quindi selezionare **registra**:
-    - **Nome**:`AIPClient`
-    - **Tipi di account supportati**: **Solo account in questa directory organizzativa**
-    - **URI di reindirizzamento (facoltativo)** : **Client pubblico (mobile & desktop)** e`http://localhost`
-
-17. Nel pannello **AIPClient** copiare il valore dell' **ID applicazione (client)** . Il valore è simile all'esempio seguente: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
-    
-    Questo valore viene usato per il parametro NativeAppId quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
-
-18. Sempre nel pannello **AIPClient** selezionare **Authentication**( **Gestisci** barra laterale).
-
-19. Nel pannello **AIPClient-Authentication** specificare gli elementi seguenti e quindi selezionare Save ( **Salva**):
-    - Nella sezione **Impostazioni avanzate** selezionare **token ID**.
-    - Nella sezione **tipo di client predefinito** selezionare **Sì**.
-
-20. Sempre nel pannello **AIPClient-Authentication** , dalla barra laterale **Gestisci** Selezionare **autorizzazioni API**.
-
-21. Nel pannello **AIPClient-Permissions (autorizzazioni** ) selezionare **+ Aggiungi un'autorizzazione**.
-
-22. Nel pannello **autorizzazioni richiesta API** selezionare **API personali**.
-
-23. Nella sezione **selezionare un'API** selezionare **APIOnBehalfOf**, quindi selezionare la casella di controllo per la **rappresentazione utente**come autorizzazione. Selezionare **Aggiungi autorizzazioni**. 
-
-24. Tornare al pannello **autorizzazioni API** , nella sezione **consenso della concessione** Selezionare Concedi il **consenso dell'amministratore per \< *il nome* > del tenant** e selezionare **Sì** per la richiesta di conferma.
-
-La configurazione delle due app è stata completata e i valori necessari per eseguire [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con i parametri *WebAppId*, *WebAppKey* e *NativeAppId* sono disponibili. Dagli esempi seguenti:
-
-`Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
-
-Eseguire questo comando nel contesto dell'account per l'assegnazione di etichette e la protezione di documenti in modalità non interattiva. Un esempio è un account utente per gli script di PowerShell o l'account del servizio per eseguire lo scanner di Azure Information Protection.
-
-La prima volta che si esegue questo comando viene richiesto di eseguire l'accesso, creando e archiviando in modo sicuro il token di accesso per l'account in %localappdata%\Microsoft\MSIP. Dopo questo accesso iniziale è possibile assegnare etichette e proteggere i file in modalità non interattiva nel computer. Tuttavia, se si usa un account del servizio per etichettare e proteggere i file e questo account del servizio non è in grado di eseguire l'accesso in modo interattivo, usare il parametro *OnBehalfOf* con set-AIPAuthentication:
-
-1. Creare una variabile per archiviare le credenziali di un account Active Directory a cui viene concessa l'assegnazione a destra dell'utente per l'accesso interattivo. Esempio:
-    
-        $pscreds = Get-Credential "scv_scanner@contoso.com"
-
-2. Eseguire il cmdlet Set-AIPAuthentication con il parametro *OnBeHalfOf* , specificando come valore la variabile appena creata. Esempio:
-    
-        Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f" -OnBehalfOf $pscreds
-
-
-#### <a name="to-create-and-configure-the-azure-ad-applications-for-set-aipauthentication---preview-client"></a>Per creare e configurare le applicazioni Azure AD per set-AIPAuthentication-Preview client
-
-Usare la procedura seguente come istruzioni alternative solo se è stata installata la versione di anteprima del client Unified labeling. 
-
-Per questa versione del client, è necessario creare una nuova registrazione dell'app per i parametri *AppID* e *AppSecret* per set-AIPAuthentication. Se è stato eseguito l'aggiornamento da una versione precedente del client e è stata creata una registrazione dell'app per i parametri *webappid* e *NativeAppId* precedenti, questi non funzioneranno con questa versione del client.
-
-1. In una nuova finestra del browser accedere al [Portale di Azure](https://portal.azure.com/).
-
-2. Per il tenant Azure ad usato con Azure Information Protection, passare a **Azure Active Directory** > **Gestisci** > **registrazioni app**. 
+2. Per il tenant Azure AD usato con Azure Information Protection, passare a **Azure Active Directory** > **gestisci** > **registrazioni app**. 
 
 3. Selezionare **+ nuova registrazione**. Nel pannello **registra un'applicazione** specificare i valori seguenti e quindi fare clic su **registra**:
 
-   - **Nome**:`AIPv2OnBehalfOf`
+   - **Nome**: `AIP-DelegatedUser`
         
         Se preferibile, specificare un nome diverso. Deve essere univoco per ogni tenant.
     
-    - **Tipi di account supportati**: **Solo account in questa directory organizzativa**
+    - **Tipi di account supportati**: **solo account in questa directory organizzativa**
     
-    - **URI di reindirizzamento (facoltativo)** : **Web** e`https://localhost`
+    - **URI di reindirizzamento (facoltativo)** : **Web** e `https://localhost`
 
-4. Nel pannello **AIPv2OnBehalfOf** copiare il valore per l' **ID applicazione (client)** . Il valore è simile all'esempio seguente: `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. Questo valore viene usato per il parametro *AppID* quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
+4. Nel pannello **AIP-DelegatedUser** , copiare il valore per l' **ID applicazione (client)** . Il valore ha un aspetto simile all'esempio seguente: `77c3c1c3-abf9-404e-8b2b-4652836c8c66`. Questo valore viene usato per il parametro *AppID* quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
 
-5. Sempre nel pannello **AIPv2OnBehalfOf** , nella barra laterale **Gestisci** Selezionare **certificati & segreti**.
+5. Dalla barra laterale selezionare **gestisci** > **certificati & segreti**.
 
-6. Nel pannello **AIPv2OnBehalfOf-certificates & Secrets** , nella sezione **client Secrets** Selezionare **+ New client Secret**.
+6. Nella sezione **segreti client** del pannello **AIP-DelegatedUser-Certificates & Secrets** selezionare **+ nuovo segreto client**.
 
 7. Per **Aggiungi un segreto client**, specificare quanto segue e quindi selezionare **Aggiungi**:
     
-    - **Descrizione**:`Azure Information Protection unified labeling client`
-    - **Scadenza**: Specificare la durata scelta (1 anno, 2 anni o nessuna scadenza)
+    - **Descrizione**: `Azure Information Protection unified labeling client`
+    - **Scadenza**: specificare la scelta della durata (1 anno, 2 anni o nessuna scadenza)
 
-8. Tornare al pannello **AIPv2OnBehalfOf-certificates & Secrets** , nella sezione **client Secrets** , copiare la stringa per il **valore**. Questa stringa ha un aspetto simile all'esempio seguente `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4`:. Per assicurarsi di copiare tutti i caratteri, selezionare l'icona da **copiare negli Appunti**. 
+8. Tornare al pannello **AIP-DelegatedUser-certificates & Secrets** , nella sezione **client Secrets** , copiare la stringa per il **valore**. Questa stringa ha un aspetto simile all'esempio seguente: `OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4`. Per assicurarsi di copiare tutti i caratteri, selezionare l'icona da **copiare negli Appunti**. 
     
     È importante salvare la stringa, perché non verrà più visualizzata e non potrà essere recuperata. Come per le informazioni riservate utilizzate, archiviare il valore salvato in modo sicuro e limitarne l'accesso.
 
-9. Da **Gestisci** nella barra laterale selezionare **autorizzazioni**per le API.
+9. Dalla barra laterale selezionare **Gestisci** **autorizzazioni API** > .
 
-10. Nel pannello **autorizzazioni AIPv2OnBehalfOf-API** selezionare **+ Aggiungi un'autorizzazione**.
+10. Nel pannello **autorizzazioni AIP-DelegatedUser-API** selezionare **+ Aggiungi un'autorizzazione**.
 
 11. Nel pannello **autorizzazioni API richiesta** verificare di essere nella scheda **Microsoft Apis** e selezionare **Azure Rights Management Services**. Quando viene richiesto il tipo di autorizzazioni richieste dall'applicazione, selezionare **Autorizzazioni applicazione**.
 
 12. Per **autorizzazioni SELECT**, espandere **contenuto** e selezionare gli elementi seguenti:
     
-    -  **Content. DelegatedWriter** (always required)
-    -  **Content. superuser** (obbligatorio se è necessaria la [funzionalità per utenti con privilegi avanzati](../configure-super-users.md) )
-    -  **Content. Writer** (always required)
-    
-    La funzionalità per utenti con privilegi avanzati consente all'account di decrittografare sempre il contenuto. Ad esempio, per riproteggere i file e controllare i file protetti da altri utenti.
+    -  **Content. DelegatedReader** 
+    -  **Content. DelegatedWriter**
 
 13. Selezionare **Aggiungi autorizzazioni**.
 
-14. Tornare al pannello **autorizzazioni AIPv2OnBehalfOf-API** , selezionare **+ Aggiungi nuovamente un'autorizzazione** .
+14. Tornare al pannello **autorizzazioni AIP-DelegatedUser-API** , selezionare **+ Aggiungi nuovamente un'autorizzazione** .
 
 15. Nel pannello **Request AIP Permissions (autorizzazioni AIP** ) selezionare le **API utilizzate dall'organizzazione**e cercare **Microsoft Information Protection Sync Service**.
 
@@ -252,30 +151,34 @@ Per questa versione del client, è necessario creare una nuova registrazione del
 
 18. Selezionare **Aggiungi autorizzazioni**.
 
-19. Tornare al pannello autorizzazioni API, selezionare **concedi il consenso dell'amministratore \<per *il nome* > del tenant** e selezionare **Sì** per la richiesta di conferma.
+19. Tornare al pannello **autorizzazioni AIP-DelegatedUser-API** , selezionare **concedi il consenso dell'amministratore per \<*il nome del tenant*>** e selezionare **Sì** per la richiesta di conferma.
+    
+    Le autorizzazioni dell'API dovrebbero essere simili alle seguenti:
+    
+    ![Autorizzazioni API per l'app registrata in Azure AD](../media/api-permissions-app.png)
 
 A questo punto è stata completata la registrazione di questa app con un segreto, si è pronti per eseguire [set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con i parametri *AppID*e *AppSecret*. Inoltre, sarà necessario l'ID tenant. 
 
 > [!TIP]
->È possibile copiare rapidamente l'ID tenant usando portale di Azure: **Azure Active Directory** **Gestisci ID directory** **Proprietà**. >  >  > 
+>È possibile copiare rapidamente l'ID tenant usando portale di Azure: **Azure Active Directory** > **gestisci** **proprietà** >  > **ID directory**.
 
-Dall'esempio con un ID tenant di 9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a:
+1. Aprire Windows PowerShell con l' **opzione Esegui come amministratore**. 
 
-`Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a"`
-
-La prima volta che si esegue questo comando viene richiesto di eseguire l'accesso, creando e archiviando in modo sicuro il token di accesso per l'account in %localappdata%\Microsoft\MSIP. Dopo questo accesso iniziale è possibile assegnare etichette e proteggere i file in modalità non interattiva nel computer. Tuttavia, se si usa un account del servizio per etichettare e proteggere i file e questo account del servizio non è in grado di eseguire l'accesso in modo interattivo, usare il parametro *OnBehalfOf* con set-AIPAuthentication:
-
-1. Creare una variabile per archiviare le credenziali di un account Active Directory a cui viene concessa l'assegnazione a destra dell'utente per l'accesso interattivo. Esempio:
+2. Nella sessione di PowerShell creare una variabile per archiviare le credenziali dell'account utente di Windows che eseguirà in modo non interattivo. Ad esempio, se è stato creato un account del servizio per lo scanner:
     
-        $pscreds = Get-Credential "scv_scanner@contoso.com"
-
-2. Eseguire il cmdlet Set-AIPAuthentication con il parametro *OnBeHalfOf* , specificando come valore la variabile appena creata. Esempio:
+        $pscreds = Get-Credential "CONTOSO\srv-scanner"
     
-        Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -OnBehalfOf $pscreds
+    Viene richiesta la password di questo account.
 
+2. Eseguire il cmdlet Set-AIPAuthentication con il parametro *OnBeHalfOf* , specificando come valore la variabile appena creata. Specificare anche i valori di registrazione dell'app, l'ID tenant e il nome dell'account utente delegato in Azure AD. Ad esempio:
+    
+        Set-AIPAuthentication -AppId "77c3c1c3-abf9-404e-8b2b-4652836c8c66" -AppSecret "OAkk+rnuYc/u+]ah2kNxVbtrDGbS47L4" -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser scanner@contoso.com -OnBehalfOf $pscreds
+
+> [!NOTE]
+> Se il computer non può accedere a Internet, non è necessario creare l'app in Azure AD ed eseguire set-AIPAuthentication. Seguire invece le istruzioni per i [computer disconnessi](clientv2-admin-guide-customizations.md#support-for-disconnected-computers).  
 
 ## <a name="next-steps"></a>Passaggi successivi
-Per la guida del cmdlet quando ci si trova in una sessione `Get-Help <cmdlet name> -online`di PowerShell, digitare. Esempio: 
+Per la guida del cmdlet quando ci si trova in una sessione di PowerShell, digitare `Get-Help <cmdlet name> -online`. Ad esempio: 
 
     Get-Help Set-AIPFileLabel -online
 

@@ -14,10 +14,10 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: e723940e418b127a46405166368a96867784799c
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71684568"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Fase 3 della migrazione: configurazione lato client
@@ -86,7 +86,7 @@ Questo metodo è adatto solo per i client Windows che eseguono app di Office 365
 
     f. Per verificare che la configurazione funzioni come previsto, provare a connettersi al file licensing.asmx direttamente da un browser. Dovrebbe essere visualizzato il messaggio di errore seguente, che attiva il client che esegue app di Office 365 o Office 2019 o Office 2016 per la ricerca del record SRV:
     
-    **Error message 401.3: You do not have permissions to view this directory or page using the credentials you supplied (access denied due to Access Control Lists)** (Messaggio di errore 401.3: l'utente non è autorizzato a visualizzare questa directory o pagina con le credenziali specificate - accesso negato a causa di elenchi di controllo di accesso).
+    **Error message 401.3: You do not have permissions to view this directory or page using the credentials you supplied (access denied due to Access Control Lists).** (Messaggio di errore 401.3: non si dispone delle autorizzazioni per visualizzare la directory o la pagina con le credenziali specificate (accesso negato a causa di elenchi di controllo di accesso)).
 
 
 ## <a name="client-reconfiguration-by-using-registry-edits"></a>Riconfigurazione di client tramite modifiche del Registro di sistema
@@ -107,7 +107,7 @@ Lo script di configurazione client (Migrate-Client.cmd) configura le impostazion
 
 - Se l'utente dispone di privilegi di amministratore locale, usare uno script di accesso.
 
-Lo script di configurazione utente (Migrate-User.cmd) configura le impostazioni a livello utente e pulisce l'archivio licenze client. È quindi necessario eseguire questo script nel contesto dell'utente effettivo. Esempio:
+Lo script di configurazione utente (Migrate-User.cmd) configura le impostazioni a livello utente e pulisce l'archivio licenze client. È quindi necessario eseguire questo script nel contesto dell'utente effettivo. Ad esempio:
 
 - Usare uno script di accesso.
 
@@ -129,7 +129,7 @@ Se non è possibile migrare tutti i client di Windows in una sola volta, eseguir
 
 1. Tornare agli script di migrazione **Migrate-Client.cmd** e **Migrate-User.cmd** che sono stati precedentemente estratti durante il download di questi script nella [fase di preparazione](migrate-from-ad-rms-phase1.md#step-2-prepare-for-client-migration).
 
-2. Seguire le istruzioni in **Migrate-Client.cmd** per modificare lo script in modo che contenga l'URL del servizio Azure Rights Management del tenant e i nomi server dell'URL di gestione licenze Extranet del cluster AD RMS e dell'URL di gestione licenze Intranet. A questo punto incrementare la versione dello script, come spiegato in precedenza. Per tenere traccia delle versioni degli script, è consigliabile usare la data corrente nel formato seguente: AAAAMMGG
+2. Seguire le istruzioni in **Migrate-Client.cmd** per modificare lo script in modo che contenga l'URL del servizio Azure Rights Management del tenant e i nomi server dell'URL di gestione licenze Extranet del cluster AD RMS e dell'URL di gestione licenze Intranet. A questo punto incrementare la versione dello script, come spiegato in precedenza. Per tener traccia delle versioni degli script, è consigliabile usare la data corrente nel formato seguente: AAAAMMGG
     
    > [!IMPORTANT]
    > Come in precedenza, prestare attenzione a non introdurre spazi aggiuntivi prima o dopo gli indirizzi.

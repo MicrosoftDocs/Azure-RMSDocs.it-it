@@ -13,10 +13,10 @@ ms.reviewer: aashishr
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: d16e6e7f0667f9ac57bf772de272d23838b793e1
-ms.sourcegitcommit: a972099c8a374fbb029a66907bf0f85325359d88
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71966885"
 ---
 # <a name="manage-personal-data-for-azure-information-protection"></a>Gestire i dati personali per Azure Information Protection
@@ -91,7 +91,7 @@ Eseguire il cmdlet [Get-AipServiceSuperUser](/powershell/module/aipservice/get-a
 
 Eseguire il cmdlet [Get-AipServiceAdminLog](/powershell/module/aipservice/get-aipserviceadminlog) per ottenere un log delle azioni di amministrazione per il servizio di protezione (Rights Management di Azure) da Azure Information Protection. Questo log include dati personali sotto forma di indirizzi di posta elettronica e indirizzi IP. Il log è in testo normale e, una volta scaricato, è possibile cercare offline le informazioni su un amministratore specifico.
 
-Esempio:
+Ad esempio:
 ```
 PS C:\Users> Get-AipServiceAdminLog -Path '.\Desktop\admin.log' -FromTime 4/1/2018 -ToTime 4/30/2018 -Verbose
 The Rights Management administration log was successfully generated and can be found at .\Desktop\admin.log.
@@ -100,7 +100,7 @@ The Rights Management administration log was successfully generated and can be f
 ### <a name="usage-logs-for-the-protection-service"></a>Log di utilizzo per il servizio di protezione
 Eseguire il cmdlet [Get-AipServiceUserLog](/powershell/module/aipservice/get-aipserviceuserlog) per recuperare un log delle azioni dell'utente finale che usano il servizio di protezione da Azure Information Protection. Il log può includere dati personali sotto forma di indirizzi di posta elettronica e indirizzi IP. Il log è in testo normale e, una volta scaricato, è possibile cercare offline le informazioni su un amministratore specifico.
 
-Esempio:
+Ad esempio:
 ```
 PS C:\Users> Get-AipServiceUserLog -Path '.\Desktop\' -FromDate 4/1/2018 -ToDate 4/30/2018 -NumberOfThreads 10
 Acquiring access to your user log…
@@ -132,7 +132,7 @@ Downloaded the log for 2018-04-24. The log is available at .\Desktop\rmslog-2018
 
 Eseguire il cmdlet [Get-AipServiceDocumentLog](/powershell/module/aipservice/get-aipservicedocumentlog) per recuperare le informazioni dal sito di rilevamento dei documenti relativi a un utente specifico. Per ottenere le informazioni di rilevamento associate ai log del documento, usare il cmdlet [Get-AipServiceTrackingLog](/powershell/module/aipservice/get-aipservicetrackinglog?view=azureipps) .
 
-Esempio:
+Ad esempio:
 ```
 PS C:\Users> Get-AipServiceDocumentLog -UserEmail "admin@aip500.onmicrosoft.com"
 
@@ -201,9 +201,9 @@ Quando il client Azure Information Protection esegue lo scanner, i dati personal
 
 È possibile disattivare la registrazione di informazioni per il client Azure Information Protection e lo scanner usando le configurazioni seguenti:
 
-- Per il client Azure Information Protection: Creare un'[impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#change-the-local-logging-level) che consente di configurare **LogLevel** su **Off**.
+- Per il client Azure Information Protection: creare un' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#change-the-local-logging-level) che configuri il **LogLevel** su **off**.
 
-- Per lo scanner di Azure Information Protection: Usare il cmdlet [Set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) per impostare il parametro *ReportLevel* su **Off**.
+- Per lo scanner Azure Information Protection: usare il cmdlet [set-AIPScannerConfiguration](/powershell/module/azureinformationprotection/set-aipscannerconfiguration) per impostare il parametro *reportLevel* su **off**.
 
 [!INCLUDE [GDPR-related guidance](./includes/gdpr-hybrid-note.md)]
 
@@ -236,7 +236,7 @@ Non è possibile aggiornare gli indirizzi di posta elettronica per gli utenti co
 
 ### <a name="protection-templates"></a>Modelli di protezione
 
-Eseguire il cmdlet [set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) per aggiornare il modello di protezione. Poiché i dati personali si trovano all'interno della proprietà `RightsDefinitions`, sarà necessario usare anche il cmdlet [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) per creare un oggetto delle definizioni dei diritti con le informazioni aggiornate e usare l'oggetto delle definizioni dei diritti con l'`Set-AipServiceTemplateProperty` cmdlet.
+Eseguire il cmdlet [set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) per aggiornare il modello di protezione. Poiché i dati personali si trovano all'interno della proprietà `RightsDefinitions`, sarà necessario utilizzare anche il cmdlet [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) per creare un oggetto delle definizioni dei diritti con le informazioni aggiornate e utilizzare l'oggetto delle definizioni dei diritti con l'`Set-AipServiceTemplateProperty` cmdlet.
 
 ### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>Utenti con privilegi avanzati e amministratori delegati per il servizio di protezione
 
@@ -278,7 +278,7 @@ L'eliminazione di questi dati è un'operazione permanente. Al termine dell'elabo
 
 **Passaggio 2: Attendere la verifica** Microsoft verificherà la legittimità della richiesta di eliminazione di uno o più log. Questo processo può richiedere fino a cinque giorni lavorativi.
 
-**Passaggio 3: Ottenere la conferma dell'eliminazione** Il servizio di supporto tecnico Microsoft invierà un messaggio di posta elettronica di conferma dell'avvenuta eliminazione dei dati. 
+**Fase 3: Ottenere la conferma dell'eliminazione** Il servizio di supporto tecnico Microsoft invierà un messaggio di posta elettronica di conferma dell'avvenuta eliminazione dei dati. 
 
 ## <a name="exporting-personal-data"></a>Esportazione dei dati personali
 Quando si usano i cmdlet di PowerShell AIPService o AADRM, i dati personali vengono resi disponibili per la ricerca e l'esportazione come oggetto PowerShell. L'oggetto di PowerShell può essere convertito in JSON e salvato tramite il cmdlet `ConvertTo-Json`.

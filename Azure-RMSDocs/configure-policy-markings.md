@@ -12,17 +12,17 @@ ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
 ms.openlocfilehash: 044eafa1893c34745d49cc05b0ec029d88ecc318
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 10/23/2019
 ms.locfileid: "71684103"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 
 Quando si assegna un'etichetta a un documento o a un messaggio di posta elettronica, è possibile selezionare diverse opzioni per rendere facilmente visibile la classificazione scelta. Questi contrassegni visivi sono un'intestazione, un piè di pagina e una filigrana. 
@@ -35,7 +35,7 @@ Altre informazioni su questi contrassegni visivi:
 
     - Excel: le filigrane sono visibili solo nelle modalità Layout di pagina e Anteprima di stampa, oltre che sulla stampa.
     
-    - PowerPoint: le filigrane vengono applicate allo schema diapositiva, come immagine di sfondo. Nella scheda **Visualizza**, **Schema diapositiva**, assicurarsi che la casella di controllo **Nascondi grafica di sfondo** non sia selezionata.
+    - PowerPoint: le filigrane vengono applicate alla diapositiva master, come immagine di sfondo. Nella scheda **Visualizza**, **Schema diapositiva**, assicurarsi che la casella di controllo **Nascondi grafica di sfondo** non sia selezionata.
 
 - Sono supportate più righe per le filigrane e per le intestazioni e i piè di pagina in Word, Excel e PowerPoint. Se si specificano più righe per l'intestazione o il piè di pagina di un'etichetta applicata in Outlook, le righe vengono concatenate. In questo scenario, è consigliabile usare la configurazione per [impostare contrassegni visivi diversi per Word, Excel, PowerPoint e Outlook](##setting-different-visual-markings-for-word-excel-powerpoint-and-outlook).
 
@@ -59,9 +59,9 @@ Per i documenti, i contrassegni visivi vengono applicati come segue:
 
 - In un'app di Office, i contrassegni visivi da un'etichetta vengono applicati insieme a quest'ultima. Vengono inoltre applicati quando un documento con etichetta viene aperto e quindi salvato per la prima volta.  
 
-- Quando un documento viene etichettato con Esplora file, PowerShell o lo scanner di Azure Information Protection, i contrassegni visivi non vengono applicati immediatamente, ma vengono applicati dal client Azure Information Protection quando tale documento viene aperto in un'app di Office e il documento viene salvato la prima volta.
+- Quando a un documento viene applicata un'etichetta usando Esplora file, PowerShell o lo scanner di Azure Information Protection, i contrassegni visivi non vengono applicati subito, ma vengono applicati dal client di Azure Information Protection quando tale documento viene aperto in un'app di Office e salvato per la prima volta.
     
-    L'eccezione è quando si usa il [salvataggio automatico](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) con le app di Office per i file salvati in SharePoint Online, OneDrive o OneDrive for Business: quando il salvataggio automatico è attivato, i contrassegni visivi non vengono applicati a meno che non si configuri l'[impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) per attivare l'esecuzione continua in background della classificazione. 
+    L'eccezione si verifica quando si usa il [salvataggio automatico](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) con le app di Office per i file salvati in SharePoint Online, OneDrive o OneDrive for business: quando il salvataggio automatico è acceso, i contrassegni visivi non vengono applicati a meno che non si configuri l' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) su attivare la classificazione per l'esecuzione continua in background. 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>Per configurare i contrassegni visivi per un'etichetta
 
@@ -79,7 +79,7 @@ Seguire le istruzioni seguenti per configurare i contrassegni visivi per un'etic
     
     - Per configurare un piè di pagina: per **I documenti con questa etichetta includono un piè di pagina** selezionare **Sì** se si vuole usare un piè di pagina, altrimenti **No**. Se si seleziona **Sì** specificare il testo, le dimensioni, il [carattere](#setting-the-font-name), il [colore](#setting-the-font-color) e l'allineamento per il piè di pagina.
     
-    - Per configurare una filigrana: per **I documenti con questa etichetta includono una filigrana** selezionare **Sì** se si vuole usare una filigrana, altrimenti **No**. Se si seleziona **Sì** specificare il testo, le dimensioni, il [carattere](#setting-the-font-name), il [colore](#setting-the-font-color) e l'allineamento per la filigrana.
+    - Per configurare una filigrana: per **Documents with this label have a watermark** (I documenti con questa etichetta hanno una filigrana) selezionare **Sì** se si vuole usare una filigrana, altrimenti **No**. Se si seleziona **Sì** specificare il testo, le dimensioni, il [carattere](#setting-the-font-name), il [colore](#setting-the-font-color) e l'allineamento per la filigrana.
     
 Quando fa clic su **Salva**, le modifiche diventano automaticamente disponibili per utenti e servizi. Non è più presente un'opzione di pubblicazione separata.
 
@@ -88,9 +88,9 @@ Quando fa clic su **Salva**, le modifiche diventano automaticamente disponibili 
 
 Nella stringa di testo è possibile usare le variabili seguenti per l'intestazione, il piè di pagina o la filigrana:
 
-- `${Item.Label}` per l'etichetta selezionata. Esempio: Generale
+- `${Item.Label}` per l'etichetta selezionata. Ad esempio: Generale
 
-- `${Item.Name}` per l'oggetto del messaggio di posta elettronica o il nome di file. Esempio: JulySales.docx
+- `${Item.Name}` per l'oggetto del messaggio di posta elettronica o il nome di file. Ad esempio: JulySales.docx
 
 - `${Item.Location}` per il percorso e il nome di file dei documenti e l'oggetto per i messaggi di posta elettronica. Ad esempio: \\\Sales\2016\Q3\JulyReport.docx
 
@@ -98,9 +98,9 @@ Nella stringa di testo è possibile usare le variabili seguenti per l'intestazio
 
 - `${User.PrincipalName}` per il proprietario del documento o del messaggio di posta elettronica, in base all'indirizzo di posta elettronica connesso al client di Azure Information Protection (UPN). ad esempio rsimone@vanarsdelltd.com
 
-- `${Event.DateTime}` per la data e l'ora in cui è stata impostata l'etichetta selezionata. Esempio: 16/08/2016 13:30
+- `${Event.DateTime}` per la data e l'ora in cui è stata impostata l'etichetta selezionata. Ad esempio: 16/8/2016 13:30
 
-Esempio: se si specifica la stringa `Document: ${item.name}  Classification: ${item.label}` per il piè di pagina dell'etichetta **General**, il testo del piè di pagina applicato a un documento denominato project.docx sarà **Document: project.docx  Classification: General**.
+Esempio: se si specifica la stringa `Document: ${item.name}  Classification: ${item.label}` per il piè di pagina dell'etichetta **General**, il testo del piè di pagina applicato a un documento denominato project.docx sarà **Document: project.docx  Classification: General** (Documento: project.docx Classificazione: Generale).
 
 >[!TIP]
 > È anche possibile usare un [codice di campo per inserire il nome dell'etichetta](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) in un documento o modello.
@@ -115,7 +115,7 @@ Usare la sintassi seguente:
 
 La distinzione in questa istruzione supporta la distinzione tra maiuscole e minuscole.
 
-Esempi:
+Di seguito sono riportati alcuni esempi.
 
 - **Impostare il testo dell'intestazione solo per i documenti di Word:**
     
@@ -145,7 +145,7 @@ Se il tipo di carattere specificato non è disponibile, il client torna a usare 
 
 È possibile scegliere un colore nell'elenco dei colori disponibile o specificare un colore personalizzato immettendo un codice tripletta esadecimale per i componenti rosso, verde e blu (RGB) del colore. Ad esempio, **#40e0d0** è il valore esadecimale RGB per il turchese. 
 
-Se è necessario un riferimento per questi codici, è possibile trovare una tabella utile dalla [ \<pagina colore >](https://developer.mozilla.org/docs/Web/CSS/color_value) di documentazione Web di MSDN. È anche possibile trovare i codici in molte applicazioni per la modifica di immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
+Se è necessario un riferimento per questi codici, è possibile trovare una tabella utile dalla pagina di [> \<color](https://developer.mozilla.org/docs/Web/CSS/color_value) da MSDN Web docs. Questi codici sono disponibili anche in molte applicazioni che consentono di modificare le immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

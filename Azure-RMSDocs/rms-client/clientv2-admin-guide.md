@@ -4,19 +4,19 @@ description: Istruzioni e informazioni per gli amministratori in una rete aziend
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4fb1c9ca3800e46ffcf3b8946823e4c43ca9d284
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 1c7458e1e936b464e8f4666911c3f23fb96dd3fe
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447616"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805282"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guida dell'amministratore client per l'assegnazione di etichette unificata Azure Information Protection
 
@@ -52,7 +52,7 @@ Il Azure Information Protection client Unified Labeling include quanto segue:
 
 - Un modulo di PowerShell per individuare informazioni riservate nei file e applicare o rimuovere le etichette di classificazione e la protezione dai file. 
     
-    La versione di anteprima del client include i cmdlet per installare e configurare il [Azure Information Protection scanner](../deploy-aip-scanner.md) eseguito come servizio in Windows Server. Questo servizio consente di individuare, classificare e proteggere i file negli archivi dati, ad esempio le condivisioni di rete e le librerie di SharePoint Server
+    Il client include i cmdlet per installare e configurare una versione di anteprima dello [scanner Azure Information Protection](../deploy-aip-scanner.md) eseguito come servizio in Windows Server. Questo servizio consente di individuare, classificare e proteggere i file negli archivi dati, ad esempio le condivisioni di rete e le librerie di SharePoint Server
 
 - Il client Rights Management che comunica con il servizio di protezione (Azure Rights Management) per crittografare e proteggere i file.
 
@@ -99,7 +99,7 @@ Per impostazione predefinita, il **collegamento altre informazioni** consente di
 
 Il collegamento **segnala un problema** viene visualizzato solo se si specifica un' [impostazione avanzata](clientv2-admin-guide-customizations.md#add-report-an-issue-for-users). Quando si configura questa impostazione, si specifica un collegamento HTTP, ad esempio l'indirizzo e-mail dell'help desk. 
 
-Il **log di esportazione** raccoglie e collega automaticamente i file di log per il client Azure Information Protection Unified Labeling se è stato richiesto di inviarli a supporto tecnico Microsoft. Questa opzione può essere usata anche dagli utenti finali per inviare i file di log all'help desk. In alternativa, è possibile usare il cmdlet [Export-AIPLogs](/powershell/module/azureinformationprotection/export-aiplogs) di PowerShell (richiede il client di anteprima).
+Il **log di esportazione** raccoglie e collega automaticamente i file di log per il client Azure Information Protection Unified Labeling se è stato richiesto di inviarli a supporto tecnico Microsoft. Questa opzione può essere usata anche dagli utenti finali per inviare i file di log all'help desk. In alternativa, è possibile usare il cmdlet di PowerShell [Export-AIPLogs](/powershell/module/azureinformationprotection/export-aiplogs) .
 
 Con le **impostazioni di reimpostazione** l'utente viene disconnesso, Elimina le etichette di riservatezza attualmente scaricate e i criteri delle etichette e reimposta le impostazioni utente per il servizio Rights Management di Azure.
 
@@ -116,7 +116,7 @@ Con le **impostazioni di reimpostazione** l'utente viene disconnesso, Elimina le
     
     - %LocalAppData%\Microsoft\MSIPC
     
-    - %LocalAppData%\Microsoft\MSIP\mip @ no__t-0 *\<processname @ no__t-3*\mip
+    - %LocalAppData%\Microsoft\MSIP\mip\\ *\<ProcessName. exe\>*
     
     - %LocalAppData%\Microsoft\MSIP\AppDetails
     
@@ -164,11 +164,11 @@ Dopo aver installato il Azure Information Protection client di assegnazione unif
 
 ## <a name="installing-the-azure-information-protection-scanner"></a>Installazione dello scanner Azure Information Protection
 
-La versione corrente dello scanner per il client Unified Labeling è in anteprima per i test. Durante questa anteprima, installare la versione di anteprima corrente del client Unified Labeling dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+Lo scanner per il client Unified Labeling è in anteprima per i test. Durante questa anteprima, installare la versione di disponibilità generale corrente del client Unified Labeling, dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
 Se si installa lo scanner per la prima volta in un computer, scaricare e installare il client e seguire le istruzioni riportate in [distribuzione di Azure Information Protection scanner per classificare e proteggere automaticamente i file](../deploy-aip-scanner.md).
 
-Se si sta aggiornando lo scanner dal client di Azure Information Protection (classico), vedere la sezione [aggiornamento dello scanner Azure Information Protection](#upgrading-the-azure-information-protection-scanner) per istruzioni.
+Se si sta aggiornando lo scanner dal client di Azure Information Protection (classico) o da una versione precedente del client di etichettatura unificata, vedere la sezione [aggiornamento dello scanner Azure Information Protection](#upgrading-the-azure-information-protection-scanner) per istruzioni.
 
 ## <a name="upgrading-and-maintaining-the-azure-information-protection-unified-labeling-client"></a>Aggiornamento e gestione del client Azure Information Protection Unified Labeling
 
@@ -179,7 +179,7 @@ Il team di Azure Information Protection aggiorna regolarmente il client di Azure
 
 Se si utilizza Windows Update, il client di Azure Information Protection Unified Labeling aggiorna automaticamente la versione di disponibilità generale del client, indipendentemente dalla modalità di installazione del client. Le nuove versioni del client vengono pubblicate nel catalogo alcune settimane dopo il rilascio.
 
-In alternativa, è possibile aggiornare manualmente il client scaricando la nuova versione dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Installare quindi la nuova versione per aggiornare il client. È necessario utilizzare questo metodo per aggiornare le versioni di anteprima e se si esegue l'aggiornamento dal client di Azure Information Protection.
+In alternativa, è possibile aggiornare manualmente il client scaricando la nuova versione dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). Installare quindi la nuova versione per aggiornare il client. È necessario usare questo metodo per aggiornare le versioni di anteprima e se si esegue l'aggiornamento dal client di Azure Information Protection (classico).
 
 Se si esegue l'aggiornamento dal client di Azure Information Protection (versione classica) in Windows 7, tutte le applicazioni di Office verranno riavviate automaticamente durante l'aggiornamento del client. Questo riavvio automatico non si applica ai sistemi operativi successivi o se si esegue l'aggiornamento da una versione precedente del client di etichetta unificata.
 
@@ -189,29 +189,43 @@ Usare la [cronologia](unifiedlabelingclient-version-release-history.md) delle ve
 
 ### <a name="upgrading-the-azure-information-protection-scanner"></a>Aggiornamento dello scanner di Azure Information Protection
 
+Le istruzioni per l'aggiornamento dello scanner variano a seconda che si stia eseguendo l'aggiornamento da una versione precedente dello scanner dal client Azure Information Protection Unified Labeling o dal client di Azure Information Protection (versione classica).
+
+#### <a name="to-upgrade-the-scanner-from-an-earlier-version-of-the-unified-labeling-client"></a>Per aggiornare lo scanner da una versione precedente del client Unified Labeling
+
+1. Nel computer dello scanner arrestare il servizio dello scanner **Azure Information Protection Scanner**.
+
+2.  Aggiornare il client di Azure Information Protection Unified Labeling scaricando e installando la versione più recente del client Unified Labeling dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+
+3. In una sessione di PowerShell eseguire il comando Update-AIPScanner con il profilo dello scanner. ad esempio `Update-AIPScanner –Profile Europe`
+
+4. Riavviare il servizio dello scanner di Azure Information Protection **Scanner Azure Information Protection**.
+
+È ora possibile usare le altre istruzioni riportate in [distribuzione di Azure Information Protection scanner per classificare e proteggere automaticamente i file](../deploy-aip-scanner.md), omettendo il passaggio per installare lo scanner. Poiché lo scanner è già installato, non c'è alcun motivo per installarlo di nuovo.
+
+#### <a name="to-upgrade-the-scanner-from-the-classic-client"></a>Per aggiornare lo scanner dal client classico
+
 Se attualmente si usa lo scanner Azure Information Protection dal client di Azure Information Protection (versione classica), è possibile aggiornarlo per usare i tipi di informazioni riservate e le etichette di riservatezza pubblicate dalla sicurezza di Office 365 & Centro di conformità (oppure il Centro sicurezza Microsoft 365 o il centro di conformità Microsoft 365).
 
-#### <a name="to-upgrade-the-scanner-to-the-preview-version"></a>Per aggiornare lo scanner alla versione di anteprima
-
-Le modalità di aggiornamento dello scanner dipendono dalla versione del client di Azure Information Protection (classica) attualmente in esecuzione:
+Le modalità di aggiornamento dello scanner dipendono dalla versione del client classico attualmente in esecuzione:
 
 - [Aggiornamento dalla versione 1.48.204.0 e versioni successive](#upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client)
 
 - [Aggiornamento da versioni precedenti a 1.48.204.0](#upgrade-from-the-azure-information-protection-client-classic-versions-earlier-than-1482040)
 
-Si noti che, a differenza dello scanner dal client di Azure Information Protection (classico), questa versione di anteprima dello scanner per il client unificato non supporta l'esecuzione in un computer disconnesso.
-
-Con l'aggiornamento viene creato un nuovo database denominato **AIPScannerUL_ @ no__t-1profile_name >** e il database dello scanner precedente viene mantenuto nel caso in cui sia necessario per la versione precedente. Quando si è certi che non è necessario il database scanner precedente, è possibile eliminarlo. Poiché l'aggiornamento crea un nuovo database, lo scanner ripete l'analisi di tutti i file la prima volta che viene eseguito.
+Con l'aggiornamento viene creato un nuovo database denominato **AIPScannerUL_\<profile_name >** e il database dello scanner precedente viene mantenuto nel caso in cui sia necessario per la versione precedente. Quando si è certi che non è necessario il database scanner precedente, è possibile eliminarlo. Poiché l'aggiornamento crea un nuovo database, lo scanner ripete l'analisi di tutti i file la prima volta che viene eseguito.
 
 ##### <a name="upgrade-from-the-azure-information-protection-client-classic-version-1482040-and-later-versions-of-this-client"></a>Aggiornamento dal client di Azure Information Protection (versione classica) 1.48.204.0 e versioni successive di questo client
 
+Se è stato aggiornato lo scanner usando la versione di anteprima del client Unified Labeling, non è necessario eseguire di nuovo queste istruzioni.
+
 1. Nel computer dello scanner arrestare il servizio dello scanner **Azure Information Protection Scanner**.
 
-2. Eseguire l'aggiornamento al client di Azure Information Protection Unified Labeling scaricando e installando la versione di anteprima del client Unified Labeling dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+2. Eseguire l'aggiornamento al client di Azure Information Protection Unified Labeling scaricando e installando il client Unified Labeling dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
 3. In una sessione di PowerShell eseguire il comando Update-AIPScanner con il profilo dello scanner. Ad esempio: `Update-AIPScanner –Profile Europe`.
     
-    Con questo passaggio viene creato un nuovo database denominato **AIPScannerUL_ @ no__t-1profile_name >**
+    Con questo passaggio viene creato un nuovo database denominato **AIPScannerUL_\<profile_name >**
 
 4. Riavviare il servizio dello scanner di Azure Information Protection **Scanner Azure Information Protection**.
 
@@ -228,7 +242,7 @@ A partire dalla versione 1.48.204.0, lo scanner ottiene le impostazioni di confi
 
 2. Nel computer dello scanner arrestare il servizio dello scanner **Azure Information Protection Scanner**.
 
-3. Eseguire l'aggiornamento al client di Azure Information Protection Unified Labeling scaricando e installando la versione di anteprima del client Unified Labeling dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+3. Eseguire l'aggiornamento al client di Azure Information Protection Unified Labeling scaricando e installando il client Unified Labeling dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
 4. In una sessione di PowerShell eseguire il comando Update-AIPScanner con lo stesso nome di profilo specificato nel passaggio 1. ad esempio `Update-AIPScanner –Profile Europe`
 

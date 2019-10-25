@@ -3,7 +3,7 @@ title: Configurazioni personalizzate-Azure Information Protection client per l'a
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/03/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 95c873af126c9882bcb74790e8e68834149738e8
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: e396296e896dad79deaf8caf3474e7297ccd2080
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447834"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805699"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -123,6 +123,7 @@ Usare il parametro *AdvancedSettings* con [New-LabelPolicy](https://docs.microso
 |EnableCustomPermissions|[Disabilitare le autorizzazioni personalizzate in Esplora file](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[Per i file protetti con autorizzazioni personalizzate, rendere sempre le autorizzazioni personalizzate visualizzabili dagli utenti in Esplora file](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
+|EnableLabelBySharePointProperties|[Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
 |HideBarByDefault|[Visualizza la barra di Information Protection nelle app Office](##display-the-information-protection-bar-in-office-apps)|
 |LogMatchedContent|[Invia corrispondenze del tipo di informazioni a Azure Information Protection Analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
 |OutlookBlockTrustedDomains|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
@@ -472,7 +473,7 @@ Quando vengono soddisfatte queste condizioni, l'utente visualizza un messaggio p
 Quando i messaggi popup sono per un'etichetta specifica, è possibile configurare le eccezioni per i destinatari in base al nome di dominio.
 
 > [!TIP]
-> Per un esempio di procedura dettagliata su come configurare queste impostazioni, vedere il video [Azure Information Protection configurazione popup di Outlook](https://azure.microsoft.com/en-us/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) .
+> Per un esempio di procedura dettagliata su come configurare queste impostazioni, vedere il video [Azure Information Protection configurazione popup di Outlook](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) .
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>Per implementare i messaggi popup di avviso, giustificazione o blocco per etichette specifiche:
 
@@ -655,7 +656,7 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 
 Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-Quando si usa il client di assegnazione di etichette unificato Azure Information Protection nelle app di Office, Cerca informazioni riservate nei documenti quando vengono salvate per la prima volta. Se si specifica l'impostazione avanzata [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) non è impostato su **false**, vengono inviati a [Azure Information Protection Analytics](../reports-aip.md)tutti i tipi di informazioni riservate predefinite e personalizzati (solo client di anteprima) trovati.
+Quando si usa il client di assegnazione di etichette unificato Azure Information Protection nelle app di Office, Cerca informazioni riservate nei documenti quando vengono salvate per la prima volta. Se si specifica l'impostazione avanzata [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) non è impostato su **false**, vengono inviati a [Azure Information Protection Analytics](../reports-aip.md)tutti i tipi di informazioni sensibili predefiniti e personalizzati trovati.
 
 Per modificare questo comportamento in modo che i tipi di informazioni riservate individuate dal client Unified Labeling non vengano inviati, immettere le stringhe seguenti per i criteri di etichetta selezionati:
 
@@ -793,6 +794,22 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelByMailHeader="True"}
 
+### <a name="extend-your-label-migration-rules-to-sharepoint-properties"></a>Estendere le regole di migrazione delle etichette alle proprietà di SharePoint
+
+È possibile usare le impostazioni avanzate di labelByCustomProperties con proprietà di SharePoint che è possibile esporre come colonne agli utenti.
+
+Questa impostazione è supportata quando si usano Word, Excel e PowerPoint.
+
+Per configurare questa impostazione avanzata, immettere le stringhe seguenti per i criteri di etichetta selezionati:
+
+- Chiave: **EnableLabelBySharePointProperties**
+
+- Valore: **True**
+
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProperties="True"}
+
 ## <a name="apply-a-custom-property-when-a-label-is-applied"></a>Applicare una proprietà personalizzata quando viene applicata un'etichetta
 
 Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) delle etichette che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
@@ -889,6 +906,7 @@ Esempio di comando di PowerShell, in cui l'etichetta padre è denominata "Confid
 
     Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
 
+
 ## <a name="specify-a-color-for-the-label"></a>Specificare un colore per l'etichetta
 
 Questa configurazione USA [le impostazioni avanzate](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dell'etichetta che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
@@ -931,6 +949,43 @@ Inoltre:
 
 - È possibile usare l'opzione **Reimposta impostazioni** da **Guida e commenti e suggerimenti** per disconnettersi ed eliminare le etichette e le impostazioni dei criteri attualmente scaricate dall'Centro sicurezza e conformità di Office 365, dal centro sicurezza Microsoft 365 o dalla Microsoft 365 Centro di conformità.
 
+
+## <a name="support-for-disconnected-computers"></a>Supporto per i computer disconnessi
+
+> [!IMPORTANT]
+> I computer disconnessi sono supportati solo per gli scenari di etichettatura seguenti: Esplora file, PowerShell e lo scanner. Per etichettare i documenti nelle app di Office, è necessario disporre della connettività a Internet.
+
+Per impostazione predefinita, il client di Azure Information Protection Unified Labeling tenta automaticamente di connettersi a Internet per scaricare le etichette e le impostazioni dei criteri di etichetta dal centro di gestione delle etichette: il Centro sicurezza e conformità di Office 365, il Microsoft 365 Centro sicurezza o il centro di conformità Microsoft 365. Se si dispone di computer che non possono connettersi a Internet per un certo periodo di tempo, è possibile esportare e copiare i file che gestiscono manualmente i criteri per il client di etichettatura unificata.
+
+Istruzioni
+
+1. Scegliere o creare un account utente in Azure AD che si utilizzerà per scaricare le etichette e le impostazioni dei criteri che si desidera utilizzare nel computer disconnesso.
+
+2. Come impostazione dei criteri di etichetta aggiuntiva per questo account, [disabilitare l'invio dei dati di controllo a Azure Information Protection Analytics](#disable-sending-audit-data-to-azure-information-protection-analytics) usando l'impostazione avanzata **EnableAudit** .
+    
+    Si consiglia di eseguire questo passaggio perché se il computer disconnesso presenta una connettività Internet periodica, invierà le informazioni di registrazione a Azure Information Protection Analytics che include il nome utente del passaggio 1. Tale account utente potrebbe essere diverso dall'account locale in uso nel computer disconnesso.
+
+3. Da un computer con connettività Internet con il client Unified Labeling installato e connesso con l'account utente del passaggio 1, scaricare le etichette e le impostazioni dei criteri.
+
+4. Da questo computer esportare i file di log.
+    
+    Ad esempio, eseguire il cmdlet [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs) oppure usare l'opzione **Esporta log** dalla finestra di dialogo [Guida e commenti](clientv2-admin-guide.md#installing-and-supporting-the-azure-information-protection-unified-labeling-client) del client. 
+    
+    I file di log vengono esportati come un singolo file compresso.
+
+5.  Aprire il file compresso, quindi copiare i file con estensione XML dalla cartella MSIP.
+
+6. Incollare questi file nella cartella **%LocalAppData%\Microsoft\MSIP** del computer disconnesso.
+
+7. Se l'account utente scelto è uno che in genere si connette a Internet, abilitare di nuovo l'invio dei dati di controllo, impostando il valore di **EnableAudit** su **true**.
+
+8. Affinché il computer disconnesso protegga i file, riproteggi i file, Rimuovi la protezione dai file o controlla i file protetti: nel computer disconnesso, eseguire il cmdlet [set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con il parametro *DelegatedUser* e specificare account utente del passaggio 1 per impostare il contesto utente. Ad esempio:
+    
+        Set-AIPAuthentication -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser offlineuser@contoso.com
+
+Tenere presente che se un utente del computer seleziona l'opzione **Reimposta impostazioni** da [Guida e commenti e suggerimenti](clientv2-admin-guide.md#help-and-feedback-section), questa azione eliminerà i file di criteri e renderà il client inutilizzabile fino a quando non si sostituiranno manualmente i file o il client si connette a Internet e Scarica i file.
+
+Se il computer disconnesso esegue lo scanner Azure Information Protection, è necessario eseguire passaggi di configurazione aggiuntivi. Per altre informazioni, vedere [restrizione: il server dello scanner non può avere connettività Internet](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity) dalle istruzioni per la distribuzione dello scanner.
 
 ## <a name="change-the-local-logging-level"></a>Modificare il livello di registrazione locale
 

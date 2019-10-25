@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1f568c3bf2a2e6cd9b94b0a7a8bd9a49b35c4958
-ms.sourcegitcommit: ef57eb7896cf0aeb592f5e8ab37452f1e95aa20d
+ms.openlocfilehash: 8e2b6d0b3e0436800cd73959107bd544dae348b0
+ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542368"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72805593"
 ---
 # <a name="admin-guide-azure-information-protection-unified-labeling-client-files-and-client-usage-logging"></a>Guida dell'amministratore: Azure Information Protection Unified Labeling client files and client usage logging
 
@@ -34,9 +34,14 @@ File del client:
 
 - Per i sistemi operativi a 32 bit: **\Programmi\Microsoft Azure Information Protection**
 
-File di log del client:
+File di log del client e file di criteri attualmente installati:
 
-- Per i sistemi operativi a 64 bit e a 32 bit: **%LocalAppData%\Microsoft\MSIP\Logs**
+- Per i sistemi operativi a 64 e 32 bit: **%localappdata%\Microsoft\MSIP**
+
+
+## <a name="usage-logging-for-the-azure-information-protection-unified-labeling-client"></a>Registrazione dell'utilizzo per il client Azure Information Protection Unified Labeling
+
+Il client di etichettatura unificata non registra l'attività dell'utente nel registro eventi di Windows locale. Usare invece la funzionalità di [creazione di report centrale](../reports-aip.md) di Azure Information Protection. 
 
 
 ## <a name="next-steps"></a>Passaggi successivi

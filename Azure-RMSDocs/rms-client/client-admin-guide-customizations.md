@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 03793c18accb1d3728a25f95012255431b8b83c6
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: a4a507423ed0a06627fcf5e28bb053d622ca252f
+ms.sourcegitcommit: b1ca785ae8ea5a91393a1602aded899be1951b2d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447669"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811198"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -492,7 +492,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure.
 
-Usare questa impostazione solo se è disponibile una [distribuzione di S/MIME](https://docs.microsoft.com/microsoft-365/compliance/s-mime-for-message-signing-and-encryption) funzionante e si vuole che un'etichetta applichi automaticamente questo metodo di protezione per i messaggi di posta elettronica anziché la protezione di Rights Management da Azure Information Protection. La protezione risultante è identica a quella applicata quando un utente seleziona manualmente le opzioni di S/MIME da Outlook.
+Usare questa impostazione solo se è disponibile una [distribuzione di S/MIME](https://docs.microsoft.com/exchange/s-mime-for-message-signing-and-encryption) funzionante e si vuole che un'etichetta applichi automaticamente questo metodo di protezione per i messaggi di posta elettronica anziché la protezione di Rights Management da Azure Information Protection. La protezione risultante è identica a quella applicata quando un utente seleziona manualmente le opzioni di S/MIME da Outlook.
 
 Per questa configurazione è necessario specificare un'impostazione client avanzata denominata **LabelToSMIME** per ogni etichetta di Azure Information Protection a cui si vuole applicare la protezione S/MIME. Per ogni voce impostare quindi il valore usando la sintassi seguente:
 
