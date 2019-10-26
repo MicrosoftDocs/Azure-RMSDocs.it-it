@@ -4,7 +4,7 @@ description: Di seguito sono riportate alcune possibili domande sulle funzionali
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/04/2019
+ms.date: 10/25/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7de86d9f6f21ac9dd7839793d02b97b394930f1a
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 649aca255019ea5992e7901c2275ca0fe3c61cba
+ms.sourcegitcommit: 7089f06723f609ce40558ae1346db68b9a47667f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805505"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916284"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Domande frequenti sulla classificazione e l'assegnazione di etichette in Azure Information Protection
 
@@ -107,12 +107,14 @@ Per aggiungere questo codice di campo nel documento:
 
 La classificazione dell'etichetta corrente viene visualizzata nel documento e questo valore verrà aggiornato automaticamente ogni volta che si apre il documento o si usa il modello. Pertanto, se l'etichetta cambia, la classificazione visualizzata per questo codice di campo viene aggiornata automaticamente nel documento.
 
-## <a name="how-is-azure-information-protection-classification-for-emails-different-from-exchange-message-classification"></a>Qual è la differenza tra la classificazione dei messaggi di posta elettronica di Azure Information Protection e la classificazione dei messaggi di Exchange?
+## <a name="how-is-classification-for-emails-using-azure-information-protection-different-from-exchange-message-classification"></a>In che modo la classificazione per i messaggi di posta elettronica utilizza Azure Information Protection diversa dalla classificazione dei messaggi di Exchange?
 
-La classificazione dei messaggi di Exchange è una funzionalità precedente che consente di classificare i messaggi di posta elettronica e viene implementata indipendentemente dalla classificazione di Azure Information Protection. 
+La classificazione dei messaggi di Exchange è una funzionalità precedente in grado di classificare i messaggi di posta elettronica e viene implementata indipendentemente dalle etichette Azure Information Protection o dalle etichette di riservatezza che applicano
 
-È tuttavia possibile integrare le due soluzioni in modo che quando gli utenti classificano un messaggio di posta elettronica con Outlook sul web e con alcune applicazioni di posta elettronica per dispositivi mobili, vengono automaticamente aggiunti la classificazione di Azure Information Protection e i contrassegni di etichetta corrispondenti. 
+Tuttavia, è possibile integrare questa funzionalità precedente con le etichette, in modo che quando gli utenti classificano un messaggio di posta elettronica usando Outlook sul Web e usando alcune applicazioni di posta elettronica per dispositivi mobili, la classificazione delle etichette e i contrassegni di etichetta corrispondenti vengono aggiunti automaticamente.
 
 È possibile applicare la stessa tecnica per usare le etichette con Outlook sul web e le applicazioni di posta elettronica per dispositivi mobili.
 
-Per i passaggi di configurazione, vedere [Integrate Exchange message classification with Azure Information Protection for a mobile device labeling solution](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution) (Integrare la classificazione messaggi di Exchange ad Azure Information Protection per una soluzione di etichettatura per dispositivi mobili).
+Si noti che non è necessario eseguire questa operazione se si usa Outlook sul Web con Exchange Online, perché questa combinazione supporta l'etichettatura incorporata quando si pubblicano le etichette di riservatezza dal Centro sicurezza e conformità di Office 365 Microsoft 365 Centro sicurezza o Microsoft Compliance Center.
+
+Se non è possibile usare l'assegnazione di etichette incorporata con Outlook sul Web, vedere la procedura di configurazione per questa soluzione alternativa: [integrazione della classificazione dei messaggi di Exchange con Azure Information Protection per una soluzione per l'assegnazione di etichette ai dispositivi mobili](./rms-client/client-admin-guide-customizations.md#integration-with-exchange-message-classification-for-a-mobile-device-labeling-solution).
