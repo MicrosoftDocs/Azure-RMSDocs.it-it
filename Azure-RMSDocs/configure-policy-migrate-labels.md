@@ -4,7 +4,7 @@ description: Eseguire la migrazione di Azure Information Protection etichette a 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/04/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d117c68f9adb1d133cb16d7a44fad3cdaaafd973
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 75c0d64f298b98408a8e1fb55c78c1bded1ecc1a
+ms.sourcegitcommit: 801f9d138e491788a618a5b918305dc3666648b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447105"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890308"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Come eseguire la migrazione di etichette di Azure Information Protection a etichette di riservatezza unificate
 
@@ -30,7 +30,7 @@ Eseguire la migrazione di Azure Information Protection etichette alla piattaform
 > [!NOTE]
 > Se il Azure Information Protection sottoscrizione è piuttosto nuovo, potrebbe non essere necessario eseguire la migrazione delle etichette perché il tenant si trova già nella piattaforma di etichettatura unificata. Per ulteriori informazioni, vedere [come è possibile determinare se il tenant si trova nella piattaforma di etichettatura unificata?](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)
 
-Dopo aver eseguito la migrazione delle etichette, non verrà visualizzata alcuna differenza con il client di Azure Information Protection (classico) perché il client continua a scaricare le etichette con i criteri di Azure Information Protection dal portale di Azure. Tuttavia, è ora possibile usare le etichette con la Azure Information Protection client di etichetta unificata e altri client e servizi che usano le etichette di riservatezza
+Dopo aver eseguito la migrazione delle etichette, non verrà visualizzata alcuna differenza con il client di Azure Information Protection (classico) perché il client continua a scaricare le etichette con i criteri di Azure Information Protection dal portale di Azure. Tuttavia, è ora possibile usare le etichette con la Azure Information Protection client di etichetta unificata e altri client e servizi che usano le etichette di riservatezza.
 
 Prima di leggere le istruzioni per eseguire la migrazione delle etichette, è possibile trovare le seguenti domande frequenti utili:
 
@@ -121,7 +121,7 @@ Le impostazioni di protezione con lo stesso comportamento non sono elencate nell
 
 ###### <a name="footnote-1"></a>Nota 1
 
-In Outlook per Mac, la protezione viene mantenuta con un'unica eccezione: quando un messaggio di posta elettronica è stato protetto con l'opzione di sola crittografia, tale protezione viene rimossa.
+In Outlook, la protezione viene mantenuta con un'unica eccezione: quando un messaggio di posta elettronica è stato protetto con l'opzione di sola crittografia, tale protezione viene rimossa.
 
 
 ###### <a name="footnote-2"></a>Nota 2
@@ -154,17 +154,38 @@ Le etichette di cui è stata eseguita correttamente la migrazione possono ora es
 > [!IMPORTANT]
 > Se si modificano le etichette al di fuori dell'portale di Azure, per Azure Information Protection client (versione classica) tornare a questo pannello **Azure Information Protection-Unified Labeling** e selezionare **pubblica**.
 
+### <a name="copy-policies"></a>Copia criteri
+
+> [!NOTE]
+> Questa opzione consente di implementare gradualmente i tenant. È anche in anteprima e soggetta a modifiche.
+
+Dopo aver eseguito la migrazione delle etichette, è possibile selezionare un'opzione per la copia dei criteri. Se si seleziona questa opzione, viene inviata una copia monouso dei criteri con le [impostazioni dei criteri](configure-policy-settings.md) e qualsiasi [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) all'interfaccia di amministrazione in cui si gestiscono le etichette: Office 365 Centro sicurezza e conformità, Microsoft 365 sicurezza Center, Microsoft 365 centro conformità.
+
+Prima di selezionare l'opzione **Copy Policies (Preview)** nel pannello **Azure Information Protection-Unified Labeling** , tenere presente quanto segue:
+
+- Non è possibile scegliere in modo selettivo i criteri e le impostazioni da copiare. Vengono copiati tutti i criteri (i criteri **globali** e tutti i criteri con ambito) e vengono copiate tutte le impostazioni supportate come impostazioni dei criteri di etichetta. Se si dispone già di un criterio etichetta con lo stesso nome, verrà sovrascritto con le impostazioni dei criteri nel portale di Azure.
+
+- Alcune impostazioni client avanzate non vengono copiate perché per il client Azure Information Protection Unified Labeling sono supportate come *Impostazioni avanzate dell'etichetta* anziché come impostazioni dei criteri. È possibile configurare queste impostazioni avanzate di etichetta con [Office 365 Centro sicurezza e conformità PowerShell](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell). Impostazioni client avanzate che non vengono copiate:
+    - [LabelbyCustomProperty](./rms-client/client-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
+    - [LabelToSMIME](./rms-client/client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
+
+- A differenza della migrazione delle etichette in cui vengono sincronizzate le successive modifiche alle etichette, l'azione copia criteri non sincronizza le modifiche successive ai criteri o alle impostazioni dei criteri. È possibile ripetere l'azione di copia dei criteri dopo aver apportato modifiche all'portale di Azure e tutti i criteri esistenti e le relative impostazioni verranno sovrascritti. In alternativa, usare i cmdlet Set-LabelPolicy o set-Label con il parametro *AdvancedSettings* di Office 365 Centro sicurezza e conformità PowerShell.
+
+- L'opzione **copia criteri (anteprima)** non è disponibile fino a quando non viene attivata l'etichetta unificata per il tenant.
+
+Per ulteriori informazioni sulla configurazione delle impostazioni dei criteri, delle impostazioni client avanzate e delle impostazioni delle etichette per il client Azure Information Protection Unified Labeling, vedere [configurazioni personalizzate per il client di Azure Information Protection Unified Labeling ](./rms-client/clientv2-admin-guide-customizations.md)dalla guida dell'amministratore.
+
 ### <a name="clients-and-services-that-support-unified-labeling"></a>Client e servizi che supportano l'etichettatura unificata
 
 Per verificare se i client e i servizi usati supportano l'assegnazione di etichette unificata, fare riferimento alla relativa documentazione per verificare se possono usare le etichette di riservatezza pubblicate da uno dei centri di amministrazione: Office 365 Centro sicurezza e conformità, Microsoft 365 Centro sicurezza o Microsoft 365 centro conformità. 
 
 ##### <a name="clients-that-currently-support-unified-labeling-include"></a>I client che attualmente supportano l'etichettatura unificata includono:
 
-- Il [Azure Information Protection client di etichetta unificato per Windows](./rms-client/unifiedlabelingclient-version-release-history.md). Per un confronto tra il client e il client Azure Information Protection (classico), vedere [confrontare i](./rms-client/use-client.md#compare-the-clients)client.
+- Il [Azure Information Protection client di etichetta unificato per Windows](./rms-client/unifiedlabelingclient-version-release-history.md). Per un confronto di questo client con il client di Azure Information Protection (classico), vedere [confrontare i client di etichettatura per i computer Windows](./rms-client/use-client.md#compare-the-labeling-clients-for-windows-computers).
 
 - App di Office che sono in fasi di disponibilità diverse. Per altre informazioni, vedere [quali funzionalità dell'etichetta di riservatezza sono supportate in Office oggi?](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today) dalla documentazione di Office.
     
-- App da fornitori e sviluppatori di software che usano [Microsoft Information Protection SDK](https://docs.microsoft.com/en-us/information-protection/develop/overview).
+- App da fornitori e sviluppatori di software che usano [Microsoft Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview).
 
 ##### <a name="services-that-currently-support-unified-labeling-include"></a>I servizi che attualmente supportano l'etichettatura unificata includono:
 
@@ -178,7 +199,7 @@ Per verificare se i client e i servizi usati supportano l'assegnazione di etiche
     
     - Se i centri di amministrazione non hanno le stesse etichette di quelle presenti nel portale di Azure: le etichette unificate non vengono usate dai centri di amministrazione e, al contrario, le etichette vengono recuperate dall'portale di Azure.
 
-- Servizi da fornitori e sviluppatori di software che usano [Microsoft Information Protection SDK](https://docs.microsoft.com/en-us/information-protection/develop/overview).
+- Servizi da fornitori e sviluppatori di software che usano [Microsoft Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview).
 
 ## <a name="next-steps"></a>Passaggi successivi
 

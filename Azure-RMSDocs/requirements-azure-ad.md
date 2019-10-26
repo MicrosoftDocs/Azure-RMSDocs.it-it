@@ -4,7 +4,7 @@ description: Identificare i requisiti di Azure AD per l'uso di Azure Information
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/23/2019
+ms.date: 10/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: ed25aa83-e272-437b-b445-3f01e985860c
 ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8370b98ce8bc2d4c31d8659fd030e815defdaf10
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 6a3ed3272eecd25bd403d6a45a82f937fe26a03a
+ms.sourcegitcommit: 801f9d138e491788a618a5b918305dc3666648b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689441"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890278"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Requisiti di Azure Active Directory per Azure Information Protection
 
@@ -45,7 +45,7 @@ Supporto dell'autenticazione basata sui certificati:
 
 Il valore del nome UPN degli utenti non corrisponde al rispettivo indirizzo di posta elettronica:
 
-- Questa configurazione non è consigliata. Se non è possibile cambiare il valore UPN, configurare un ID di accesso alternativo per gli utenti fornendo loro le istruzioni necessarie per l'accesso a Office con questo ID. Per altre informazioni, vedere [Configurazione di ID di accesso alternativo](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) e [Le applicazioni di Office richiedono periodicamente le credenziali per SharePoint Online, OneDrive e Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
+- Questa configurazione non è consigliata e non supporta Single Sign-On per Azure Information Protection. Se non è possibile cambiare il valore UPN, configurare un ID di accesso alternativo per gli utenti fornendo loro le istruzioni necessarie per l'accesso a Office con questo ID. Per altre informazioni, vedere [Configurazione di ID di accesso alternativo](/windows-server/identity/ad-fs/operations/configuring-alternate-login-id) e [Le applicazioni di Office richiedono periodicamente le credenziali per SharePoint Online, OneDrive e Lync Online](https://support.microsoft.com/help/2913639/office-applications-periodically-prompt-for-credentials-to-sharepoint-online,-onedrive,-and-lync-online).
     
     Quando il nome di dominio presente nel nome UPN corrisponde a un dominio verificato per il tenant, aggiungere il nome UPN di ciascun utente all'attributo proxyAddresses di Azure AD come indirizzo di posta elettronica aggiuntivo. In questo modo, se il nome UPN è stato specificato nel periodo in cui usufruiva dei diritti di utilizzo, l'autorizzazione di ciascun utente per Azure Rights Management può avere esito positivo. Per altre informazioni su questo punto e sul modo in cui viene eseguita l'autorizzazione degli account utente, vedere [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md).
 

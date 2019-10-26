@@ -3,7 +3,7 @@ title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
 author: cabailey
 ms.author: cabailey
-ms.date: 10/14/2019
+ms.date: 10/24/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8b7884de10999518d0c6cf9806b546181277a113
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 8b9245eea83c3ff3fa58312c866310876d8e2814
+ms.sourcegitcommit: 801f9d138e491788a618a5b918305dc3666648b4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447841"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890305"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -39,10 +39,7 @@ Usare Azure Information Protection Analytics per la creazione di report centrali
 
 - Individuare i casi in cui l'accesso ai documenti protetti viene eseguito da utenti interni o esterni da computer Windows e se l'accesso è stato concesso o negato.
 
-I dati visualizzati sono aggregati da client e scanner di Azure Information Protection, da [client e servizi che supportano l'assegnazione di etichette unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)e dai log di [utilizzo della protezione](log-analyze-usage.md).
-
-> [!NOTE]
-> Attualmente, fatta eccezione per la versione di anteprima del client Unified Labeling, Azure Information Protection Analytics non include i tipi di informazioni personalizzate per i client e i servizi che supportano l'assegnazione di etichette unificata.
+I dati visualizzati sono aggregati da client e scanner di Azure Information Protection, da Microsoft Cloud App Security, da computer Windows 10 che usano Microsoft Defender Advanced Threat Protection e dai [log di utilizzo della protezione](log-analyze-usage.md).
 
 Ad esempio è possibile visualizzare quanto segue:
 
@@ -76,7 +73,7 @@ Ad esempio è possibile visualizzare quanto segue:
 
 - Nel report **Individuazione dati**:
 
-    - Quali file si trovano nei repository di dati scansionati, nei computer Windows 10 o nei computer che eseguono il client Azure Information Protection o i [client che supportano l'assegnazione di etichette unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling)
+    - Quali file si trovano nei repository di dati scansionati, nei computer Windows 10 o nei computer che eseguono i client di Azure Information Protection
     
     - Quali file sono provvisti di etichetta e protetti e il percorso dei file in base alle etichette
     
@@ -117,9 +114,7 @@ Per generare questi report, gli endpoint inviano i seguenti tipi di informazioni
 
 - Per i messaggi di posta elettronica: l'oggetto e il mittente di posta elettronica per i messaggi di posta elettronica contrassegnati. 
 
-- [Tipi di informazioni riservate predefinite](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) rilevati nel contenuto.
-    
-    Se si usano Azure Information Protection etichette con condizioni personalizzate, vengono inviati anche i nomi dei tipi di informazioni personalizzate. Fatta eccezione per la versione di anteprima del client Unified Labeling, i tipi di informazioni riservate personalizzate create nel centro di etichette non vengono inviati.
+- Tipologie di informazioni riservate ([predefinite](https://docs.microsoft.com/office365/securitycompliance/what-the-sensitive-information-types-look-for) e personalizzate) rilevate nel contenuto.
 
 - Versione del client di Azure Information Protection.
 
@@ -289,8 +284,6 @@ Usare la tabella seguente per identificare il nome descrittivo delle funzioni di
 
 |Nome della colonna|Description|
 |-----------|-----------|
-|Accesso|Un documento protetto è stato aperto, identificato dal nome file se è stato rilevato, oppure con ID se non è stato rilevato.|
-|AccessDenied|A un documento protetto è stato negato l'accesso, identificato dal nome file, se viene rilevato, oppure con ID se non è stato rilevato.|
 |Ora|Ora dell'evento: UTC nel formato AAAA-MM-GGThh: MM: SS|
 |Utente|Utente: Format UPN o dominio\utente|
 |ItemPath|Percorso dell'elemento completo o oggetto di posta elettronica|
