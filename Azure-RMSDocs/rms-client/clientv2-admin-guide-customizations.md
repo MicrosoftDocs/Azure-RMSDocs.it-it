@@ -3,7 +3,7 @@ title: Configurazioni personalizzate-Azure Information Protection client per l'a
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/23/2019
+ms.date: 10/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e396296e896dad79deaf8caf3474e7297ccd2080
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 6db8efdd32d945ad5e604041b87e7da2a2ee1b8b
+ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805699"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984903"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -136,6 +136,7 @@ Usare il parametro *AdvancedSettings* con [New-LabelPolicy](https://docs.microso
 |OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnTrustedDomains|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnUntrustedCollaborationLabel|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
+|PFileSupportedExtensions|[Modificare i tipi di file da proteggere](#change-which-file-types-to-protect)|
 |PostponeMandatoryBeforeSave|[Rimuovere "Non ora" per i documenti quando si usa l'etichettatura obbligatoria](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Aggiungere "Segnala un problema" per gli utenti](#add-report-an-issue-for-users)|
@@ -226,6 +227,39 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}
 
+## <a name="change-which-file-types-to-protect"></a>Modificare i tipi di file da proteggere
+
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
+
+Per impostazione predefinita, il client Azure Information Protection Unified Labeling protegge tutti i tipi di file e lo scanner dal client protegge solo i tipi di file di Office e i file PDF.
+
+È possibile modificare questo comportamento predefinito per i criteri di etichetta selezionati, specificando quanto segue:
+
+- Chiave: **PFileSupportedExtensions**
+
+- Valore: **<string value>** 
+
+Usare la tabella seguente per identificare il valore stringa da specificare:
+
+| Valore stringa| Client| Scanner|
+|-------------|-------|--------|
+|\*|Valore predefinito: applicare la protezione a tutti i tipi di file|Applicare la protezione a tutti i tipi di file|
+|\<valore null >| Applicare la protezione ai tipi di file di Office e ai file PDF| Valore predefinito: applicare la protezione ai tipi di file di Office e ai file PDF|
+|ConvertTo-JSON (". jpg", ". png")|Oltre ai tipi di file di Office e ai file PDF, applicare la protezione alle estensioni di file specificate | Oltre ai tipi di file di Office e ai file PDF, applicare la protezione alle estensioni di file specificate
+
+Esempio 1: comando di PowerShell per il client unificato per proteggere solo i tipi di file di Office e i file PDF, in cui il criterio dell'etichetta è denominato "client":
+
+    Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=""}
+
+Esempio 2: comando di PowerShell per lo scanner per proteggere tutti i tipi di file, in cui il criterio dell'etichetta è denominato "scanner":
+
+    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
+
+Esempio 3: comando di PowerShell per lo scanner per proteggere i file con estensione txt e CSV, oltre ai file di Office e PDF, in cui il criterio dell'etichetta è denominato "scanner":
+
+    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
+
+Con questa impostazione è possibile modificare i tipi di file protetti, ma non è possibile modificare il livello di protezione predefinito da nativo a generico. Ad esempio, per gli utenti che eseguono il client di etichettatura unificata, è possibile modificare l'impostazione predefinita in modo che siano protetti solo i file di Office e i file PDF anziché tutti i tipi di file. Tuttavia, non è possibile modificare questi tipi di file in modo da essere protetti in modo generico con un'estensione di file. Pfile.
 
 ## <a name="remove-not-now-for-documents-when-you-use-mandatory-labeling"></a>Rimuovere "Non ora" per i documenti quando si usa l'etichettatura obbligatoria
 

@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire la versione corr
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/23/2019
+ms.date: 10/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4b83fcc4a7f5d8a586e6e2f8c4b51ef93d0cb257
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 05ccffd1370a73bf5f5286f40be0510316e3f883
+ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805738"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984955"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -411,9 +411,9 @@ Tuttavia lo scanner non è in grado di contrassegnare i file nelle circostanze s
 
 - Se l'etichetta applica classificazione e protezione, ma lo scanner non protegge il tipo di file.
     
-    Per impostazione predefinita lo scanner protegge solo i tipi di file di Office e i file PDF se questi sono protetti usando lo standard ISO per la crittografia dei file PDF. Per lo scanner dal client classico, è possibile proteggere altri tipi di file quando si [modifica il registro di sistema](#editing-the-registry-for-the-scanner) , come descritto in una sezione successiva.
+    Per impostazione predefinita lo scanner protegge solo i tipi di file di Office e i file PDF se questi sono protetti usando lo standard ISO per la crittografia dei file PDF. Gli altri tipi di file possono essere protetti quando si [modificano i tipi di file protetti](#change-which-file-types-to-protect) come descritto in una sezione successiva.
 
-Ad esempio, dopo il controllo di file con estensione txt, lo scanner non può applicare un'etichetta configurata per la classificazione ma non per la protezione, perché il tipo di file con estensione txt non supporta la sola classificazione. Se l'etichetta è configurata per la classificazione e la protezione dati e il Registro di sistema viene modificato per il tipo di file con estensione txt, lo scanner può applicare un'etichetta al file. 
+Ad esempio, dopo il controllo di file con estensione txt, lo scanner non può applicare un'etichetta configurata per la classificazione ma non per la protezione, perché il tipo di file con estensione txt non supporta la sola classificazione. Se l'etichetta è configurata per la classificazione e la protezione e l'estensione del nome file. txt è inclusa per la protezione dello scanner, lo scanner può etichettare il file. 
 
 > [!TIP]
 > Durante questo processo, se lo scanner si arresta e non completa l'analisi di un numero elevato di file in un repository:
@@ -435,13 +435,19 @@ Come nel passaggio precedente, lo scanner non è in grado di contrassegnare i fi
 
 - Se l'etichetta applica classificazione e protezione, ma lo scanner non protegge il tipo di file.
     
-    Per impostazione predefinita lo scanner protegge solo i tipi di file di Office e i file PDF se questi sono protetti usando lo standard ISO per la crittografia dei file PDF. Per lo scanner dal client classico, è possibile proteggere altri tipi di file quando si [modifica il registro di sistema](#editing-the-registry-for-the-scanner) , come descritto di seguito.
+    Per impostazione predefinita lo scanner protegge solo i tipi di file di Office e i file PDF se questi sono protetti usando lo standard ISO per la crittografia dei file PDF. Gli altri tipi di file possono essere protetti quando si modificano i tipi di file da proteggere, come descritto di seguito.
 
-### <a name="editing-the-registry-for-the-scanner"></a>Modifica del Registro di sistema per lo scanner
+## <a name="change-which-file-types-to-protect"></a>Modificare i tipi di file da proteggere
+
+Per impostazione predefinita, lo scanner protegge solo i tipi di file di Office e i file PDF. È possibile modificare questo comportamento in modo che, ad esempio, lo Scanner protegga tutti i tipi di file, ovvero lo stesso comportamento di protezione del client. In alternativa, lo scanner protegge i tipi di file aggiuntivi specificati, oltre ai tipi di file di Office e ai file PDF. 
+
+Per istruzioni sulla configurazione, vedere le sezioni seguenti.
+
+### <a name="scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected"></a>Scanner dal client classico: usare il registro di sistema per modificare i tipi di file protetti
 
 Questa sezione si applica solo allo scanner dal client classico.
 
-Per modificare il comportamento predefinito dello scanner per la protezione di tipi di file diversi dai file di Office e i file PDF, è necessario modificare manualmente il Registro di sistema e specificare i tipi di file aggiuntivi da proteggere e il tipo di protezione (nativa o generica). Per informazioni, vedere [Configurazione dell'API file](develop/file-api-configuration.md) nelle linee guida per sviluppatori. Per fare riferimento alla protezione generica, questa documentazione per sviluppatori usa il termine "PFile". Inoltre, specificatamente per lo scanner:
+Per modificare il comportamento predefinito dello scanner per la protezione dei tipi di file diversi da file di Office e PDF, è necessario modificare il registro di sistema e specificare i tipi di file aggiuntivi che si desidera proteggere e il tipo di protezione (nativo o generico). Per informazioni, vedere [Configurazione dell'API file](develop/file-api-configuration.md) nelle linee guida per sviluppatori. Per fare riferimento alla protezione generica, questa documentazione per sviluppatori usa il termine "PFile". Inoltre, specificatamente per lo scanner:
 
 - Lo scanner presenta un comportamento predefinito: solo i formati di file di Office e i documenti PDF sono protetti per impostazione predefinita. Se il Registro di sistema non viene modificato, tutti gli altri tipi di file non verranno etichettati né protetti dallo scanner.
 
@@ -456,6 +462,25 @@ Ad esempio, per fare in modo che lo scanner protegga le immagini TIFF oltre ai f
 Per un elenco di tipi di file di testo e immagini che supportano la protezione nativa in modo analogo, ma che devono essere specificati nel registro di sistema, vedere [tipi di file supportati per la classificazione e la protezione](./rms-client/client-admin-guide-file-types.md#file-types-supported-for-protection).
 
 Per i file che non supportano la protezione nativa, specificare l'estensione del nome file come nuova chiave e **PFile** per la protezione generica. L'estensione del nome file risultante per il file protetto è pfile.
+
+### <a name="scanner-from-the-unified-labeling-client-use-powershell-to-change-which-file-types-are-protected"></a>Scanner dal client Unified Labeling: usare PowerShell per modificare i tipi di file protetti
+
+Questa sezione si applica solo allo scanner dal client Unified labeling.
+
+Per un criterio etichetta applicabile all'account utente che Scarica le etichette per lo scanner, specificare un'impostazione avanzata di PowerShell denominata **PFileSupportedExtensions**. 
+
+> [!NOTE]
+> Per uno scanner con accesso a Internet, questo account utente è l'account specificato per il parametro *DelegatedUser* con il comando set-AIPAuthentication.
+
+Esempio 1: comando di PowerShell per lo scanner per proteggere tutti i tipi di file, in cui il criterio dell'etichetta è denominato "scanner":
+
+    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
+
+Esempio 2: comando di PowerShell per lo scanner per proteggere i file con estensione XML e TIFF oltre ai file di Office e PDF, in cui i criteri dell'etichetta sono denominati "scanner":
+
+    Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".xml", ".tiff")}
+
+Per istruzioni dettagliate, vedere [modificare i tipi di file da proteggere](./rms-client/clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) nella Guida dell'amministratore.
 
 
 ## <a name="when-files-are-rescanned"></a>Ripetizione dell'analisi dei file

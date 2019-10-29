@@ -4,7 +4,7 @@ description: Informazioni sulla personalizzazione del client Azure Information P
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/25/2019
+ms.date: 10/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: db282701b5374652d8469e5eadf42cd0a3472c3b
-ms.sourcegitcommit: 7089f06723f609ce40558ae1346db68b9a47667f
+ms.openlocfilehash: a9226d20962d1d51608ef0d5d487e785006fd8dc
+ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916305"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984935"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -576,7 +576,7 @@ Se è necessario che il client ripristini il comportamento delle versioni preced
 
 Questa impostazione, ad esempio, può essere necessaria per tutti gli utenti se si usa un lettore di file PDF che non supporta lo standard ISO per la crittografia dei file PDF. Oppure può essere necessario configurare questa impostazione per alcuni utenti durante l'introduzione graduale di un lettore di file PDF che supporta il nuovo formato. Un altro possibile motivo per l'uso di questa impostazione è la necessità di aggiungere protezione a documenti PDF firmati. È possibile aggiungere ulteriore protezione ai documenti PDF con il formato con estensione ppdf, poiché questa protezione viene implementata come wrapper per i file. 
 
-Per fare in modo che lo scanner Azure Information Protection usi la nuova impostazione, è necessario riavviare il servizio scanner. Inoltre, lo scanner non proteggerà più i documenti PDF per impostazione predefinita. Se si vuole che i documenti PDF siano protetti dallo scanner quando EnablePDFv2Protection è impostata su False, è necessario [modificare il Registro di sistema](../deploy-aip-scanner.md#editing-the-registry-for-the-scanner).
+Per fare in modo che lo scanner Azure Information Protection usi la nuova impostazione, è necessario riavviare il servizio scanner. Inoltre, lo scanner non proteggerà più i documenti PDF per impostazione predefinita. Se si vuole che i documenti PDF siano protetti dallo scanner quando EnablePDFv2Protection è impostata su False, è necessario [modificare il Registro di sistema](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected).
 
 Per altre informazioni sulla nuova crittografia PDF, vedere il post del blog [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) (Nuovo supporto della crittografia PDF con Microsoft Azure Information Protection).
 
