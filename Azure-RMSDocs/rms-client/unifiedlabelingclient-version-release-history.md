@@ -4,7 +4,7 @@ description: Vedere le informazioni sulla versione del client per l'etichettatur
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/23/2019
+ms.date: 10/27/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7a41debe26783b530ec92dd38aa308b5e9da7546
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 1f0ed559646acb36931a55ed2cd321bae91395fc
+ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805278"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72984851"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -51,7 +51,7 @@ Il client sta sostituendo il client di Azure Information Protection (classico). 
 
 ## <a name="version-25330"></a>Versione 2.5.33.0
 
-**Rilasciata**: 10/23/2019
+**Data di rilascio**: 10/23/2019
 
 **Nuove funzionalità:**
 
@@ -64,23 +64,25 @@ Il client sta sostituendo il client di Azure Information Protection (classico). 
     - È possibile impostare un'etichetta predefinita su tutti i documenti, anche se i documenti sono già etichettati. Nel profilo scanner o nelle impostazioni del repository, impostare l'opzione **rietichettare i file** **su on** con la nuova casella di controllo **Imponi etichetta predefinita** selezionata.
     
     - È possibile rimuovere le etichette esistenti da tutti i documenti e questo Act include la rimozione della protezione se è stata precedentemente applicata da un'etichetta. La protezione applicata indipendentemente da un'etichetta viene mantenuta. Questa configurazione dello scanner viene eseguita nel profilo dello scanner o nelle impostazioni del repository con le impostazioni seguenti:
-        - **Etichettare i file in base al contenuto**: **disattivato**
-        - **Etichetta predefinita**: **None**
-        - **Rietichettare i file**: **on** con la casella di controllo **Imponi etichetta predefinita** selezionata
+        - **Etichetta i file in base al contenuto**: **Disattivato**
+        - **Etichetta predefinita**: **Nessuno**
+        - **Applica una nuova etichetta ai file**: **In** con la casella di controllo **Applica etichetta predefinita** selezionata
     
-    - Come per lo scanner del client classico, lo scanner protegge i file di Office e i file PDF. Attualmente, non è possibile configurare altri tipi di file da proteggere con questa versione dello scanner.
+    - Come per lo scanner del client classico, per impostazione predefinita lo scanner protegge i file di Office e i file PDF. È possibile proteggere altri tipi di file quando si usa un' [impostazione avanzata di PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
     
-    - Problema noto: le etichette nuove e rinominate non sono disponibili per la selezione come etichetta predefinita per le impostazioni del profilo dello scanner o del repository. Soluzioni alternative
-        - Per le nuove etichette: nella portale di Azure [aggiungere l'etichetta](../configure-policy-add-remove-label.md) che si vuole usare per i criteri globali o un criterio con ambito.
-        - Per le etichette rinominate: nel portale di Azure passare a **Azure Information Protection** > **Gestisci**l'**etichetta unificata** >  e selezionare **pubblica**.
+    - Problema noto: Le etichette nuove e rinominate non sono disponibili per la selezione come etichetta predefinita per il profilo dello scanner o le impostazioni del repository. Soluzioni alternative
+        - Per le nuove etichette: Nella portale di Azure [aggiungere l'etichetta](../configure-policy-add-remove-label.md) che si vuole usare per i criteri globali o un criterio con ambito.
+        - Per le etichette rinominate: Chiudere e riaprire la portale di Azure.
     
     È possibile aggiornare gli scanner dal client di Azure Information Protection (versione classica). Dopo l'aggiornamento, che crea un nuovo database, lo scanner ripete l'analisi di tutti i file la prima volta che viene eseguito. Per istruzioni, vedere [aggiornamento dello scanner Azure Information Protection](clientv2-admin-guide.md#upgrading-the-azure-information-protection-scanner) dalla guida dell'amministratore.
     
-    Per altre informazioni, vedere il post di Blog sull'annuncio: [Unified Labeling AIP scanner Preview introduce la scalabilità orizzontale e altro ancora.](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Unified-labeling-AIP-scanner-preview-brings-scaling-out-and-more/ba-p/862552)
+    Per ulteriori informazioni, vedere il post di Blog relativo all'annuncio: [Unified Labeling AIP scanner Preview introduce la scalabilità orizzontale e altro ancora.](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Unified-labeling-AIP-scanner-preview-brings-scaling-out-and-more/ba-p/862552)
 
 - Il cmdlet di [PowerShell set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) include nuovi parametri (*AppID*, *AppSecret*, *TenantId*, *DelegatedUser*e *OnBehalfOf*) per quando si desidera assegnare etichette ai file in modo non interattivo e anche un nuovo procedura per registrare un'app in Azure AD. Gli scenari di esempio includono lo scanner e gli script di PowerShell automatici per etichettare i documenti. Per istruzioni, vedere [come etichettare i file in modo non interattivo](clientv2-admin-guide-powershell.md#how-to-label-files-non-interactively-for-azure-information-protection) dalla guida dell'amministratore.
     
     Si noti che *DelegatedUser* è un nuovo parametro dall'ultima versione di anteprima del client Unified Labeling e che le autorizzazioni API per l'app registrata sono state modificate di conseguenza.
+
+- Nuova impostazione avanzata Criteri etichette di PowerShell per [modificare i tipi di file da proteggere](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect).
 
 - Nuova impostazione avanzata Criteri etichette di PowerShell per [estendere le regole di migrazione delle etichette alle proprietà di SharePoint](clientv2-admin-guide-customizations.md#extend-your-label-migration-rules-to-sharepoint-properties).
 
@@ -110,7 +112,7 @@ Il client sta sostituendo il client di Azure Information Protection (classico). 
 
 ## <a name="version-22210"></a>Versione 2.2.21.0
 
-**Rilasciata**: 09/03/2020
+**Data di rilascio**: 09/03/2020
 
 Supportato tramite 04/23/2020
 
@@ -122,7 +124,7 @@ Supportato tramite 04/23/2020
 
 ## <a name="version-22190"></a>Versione 2.2.19.0
 
-**Rilasciata**: 08/06/2019
+**Data di rilascio**: 08/06/2019
 
 Supportato tramite 03/03/2020
 
@@ -134,7 +136,7 @@ Supportato tramite 03/03/2020
 
 ## <a name="version-22140"></a>Versione 2.2.14.0
 
-**Rilasciata**: 07/15/2019
+**Data di rilascio**: 07/15/2019
 
 Supportato tramite 02/06/2020
 
@@ -187,7 +189,7 @@ Supportato tramite 02/06/2020
 
 ## <a name="version-207790"></a>Versione 2.0.779.0
 
-**Rilasciata**: 05/01/2019
+**Data di rilascio**: 05/01/2019
 
 Supportato tramite 02/15/2020
 
@@ -195,7 +197,7 @@ Questa versione include una singola correzione per risolvere un problema di race
 
 ## <a name="version-207780"></a>Versione 2.0.778.0
 
-**Rilasciata**: 04/16/2019
+**Data di rilascio**: 04/16/2019
 
 Supportato tramite 11/01/2019
 
@@ -203,7 +205,7 @@ Questa prima versione disponibile a livello generale del client di Azure Informa
 
 - Aggiornamento dal client Azure Information Protection.
 
-- Etichettatura manuale, automatica e consigliata: per ulteriori informazioni sulla configurazione delle etichette automatiche e consigliate per questo client, vedere [applicare automaticamente un'etichetta di riservatezza al contenuto](/microsoft-365/compliance/apply-sensitivity-label-automatically).
+- Assegnazione di etichette manuale, automatica e consigliata: Per altre informazioni sulla configurazione dell'assegnazione di etichette automatica e consigliata per questo client, vedere [Applicare automaticamente un'etichetta di riservatezza al contenuto](/microsoft-365/compliance/apply-sensitivity-label-automatically).
 
 - Esplora file, azioni con il pulsante destro del mouse per classificare e proteggere i file, rimuovere la protezione e applicare autorizzazioni personalizzate.
 
@@ -238,7 +240,7 @@ Per informazioni dettagliate, vedere le [tabelle di confronto](use-client.md#com
 
 Per ulteriori informazioni sull'installazione e sull'utilizzo del client: 
 
-- Per utenti: [Scaricare e installare il client](install-unifiedlabelingclient-app.md)
+- Per gli utenti: [Scaricare e installare il client](install-unifiedlabelingclient-app.md)
 
-- Per gli amministratori: [Azure Information Protection guida dell'amministratore client per l'assegnazione di etichette unificata](clientv2-admin-guide.md)
+- Per gli amministratori: [Guida dell'amministratore client per l'assegnazione di etichette unificata Azure Information Protection](clientv2-admin-guide.md)
 
