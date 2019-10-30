@@ -3,7 +3,7 @@ title: Reporting centralizzato per Azure Information Protection
 description: Come usare il reporting centralizzato per monitorare l'adozione delle etichette di Azure Information Protection e trovare i file che contengono informazioni riservate
 author: cabailey
 ms.author: cabailey
-ms.date: 10/24/2019
+ms.date: 10/29/2019
 manager: rkarlin
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8b9245eea83c3ff3fa58312c866310876d8e2814
-ms.sourcegitcommit: 801f9d138e491788a618a5b918305dc3666648b4
+ms.openlocfilehash: 8f8022ba40b04c7a579cdf4caf7f9a8d60c19014
+ms.sourcegitcommit: e90658d1a43e883f8abef9a8c242a920cd484cbc
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890305"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73057674"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -294,7 +294,6 @@ Usare la tabella seguente per identificare il nome descrittivo delle funzioni di
 |LabelNameBefore |Nome etichetta prima della modifica (non localizzato) |
 |ProtectionType|Tipo di protezione [JSON] <br />{ <br />"Type": ["Template", "Custom", "DoNotForward"], <br />  "TemplateID": "GUID" <br /> } <br />|
 |ProtectionBefore|Tipo di protezione prima della modifica [JSON] |
-|InformationTypesMatches|Matrice JSON di [SensitiveInformation](https://docs.microsoft.com/microsoft-365/compliance/what-the-sensitive-information-types-look-for) trovata nei dati in cui una matrice vuota indica che non sono stati trovati tipi di informazioni e null indica che non sono disponibili informazioni|
 |MachineName |FQDN quando disponibile; nome host in caso contrario|
 |DeviceRisk|Punteggio di rischio del dispositivo da WDATP quando disponibile|
 |Piattaforma|Piattaforma del dispositivo (Win, OSX, Android, iOS) |
