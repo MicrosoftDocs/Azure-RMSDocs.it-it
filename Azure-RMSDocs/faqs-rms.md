@@ -4,7 +4,7 @@ description: Domande frequenti sul servizio di protezione dei dati, Azure Rights
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/09/2019
+ms.date: 10/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.custom: admin
 ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: 01b0e866105eeb69e46db9deb497425b627f9ef5
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 170e171ba3eb57e568762bc4745d613934c6af53
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314380"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445099"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Domande frequenti sulla protezione dei dati in Azure Information Protection
 
@@ -28,7 +28,7 @@ Di seguito sono riportate alcune possibili domande sul servizio di protezione de
 ## <a name="do-files-have-to-be-in-the-cloud-to-be-protected-by-azure-rights-management"></a>Per essere protetti da Azure Rights Management, i file devono trovarsi sul cloud?
 No, questo è un malinteso comune. Il servizio Azure Rights Management e Microsoft non visualizzano né archiviano i dati dell'utente come parte del processo di protezione delle informazioni. Le informazioni protette non vengono mai inviate o archiviate in Azure, a meno di archiviarle in modo esplicito in Azure o di usare un altro servizio cloud che le archivia in Azure.
 
-Per altre informazioni, vedere [Funzionamento di Azure RMS: dietro le quinte](./how-does-it-work.md) per comprendere come la formula segreta per una bevanda gassata creata e archiviata in locale viene protetta dal servizio Azure Rights Management pur rimanendo in locale.
+Per ulteriori informazioni, vedere [come funziona Azure RMS? Dietro le quinte](./how-does-it-work.md) per comprendere in che modo una formula segreta di Cola creata e archiviata in locale è protetta dal servizio Rights Management di Azure, ma rimane in locale.
 
 ## <a name="whats-the-difference-between-azure-rights-management-encryption-and-encryption-in-other-microsoft-cloud-services"></a>Qual è la differenza tra la crittografia in Azure Rights Management e la crittografia in altri servizi cloud Microsoft?
 
@@ -52,7 +52,7 @@ Per altre informazioni su HYOK e per assicurarsi di conoscere le restrizioni e l
 
 Sì, ora è possibile usare BYOK con Exchange Online seguendo le istruzioni in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) (Impostare nuove funzionalità di Office 365 Message Encryption basate su Azure Information Protection). Queste istruzioni abilitano le nuove funzionalità di Exchange Online, che supportano l'uso di BYOK per Azure Information Protection e la nuova funzionalità Office 365 Message Encryption.
 
-Per altre informazioni su questa modifica, vedere l'annuncio: [Office 365 Message Encryption with the new capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801) (Crittografia messaggi di Office 365 con nuove funzionalità) nel blog
+Per altre informazioni su questa modifica, vedere l'annuncio del blog: [Office 365 Message Encryption with the new capabilities](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801) (Office 365 Message Encryption con le nuove funzionalità).
 
 ## <a name="where-can-i-find-information-about-third-party-solutions-that-integrate-with-azure-rms"></a>Dove sono disponibili informazioni sulle soluzioni di terze parti che si integrano con Azure RMS?
 
@@ -120,7 +120,7 @@ In alternativa, è possibile aggiungere utenti esterni a modelli (ed etichette) 
 
 2. Fornire questa variabile al parametro RightsDefinition con il cmdlet [set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) .
 
-    Quando si aggiungono utenti a un modello esistente, oltre ai nuovi utenti è necessario definire gli oggetti di definizione dei diritti per gli utenti esistenti nei modelli. Per questo scenario può essere utile l'**esempio 3, relativo all'aggiunta di nuovi utenti e diritti a un modello personalizzato** della sezione [Examples](/powershell/module/aipservice/set-aipservicetemplateproperty#examples) (Esempi) per il cmdlet.
+    Quando si aggiungono utenti a un modello esistente, oltre ai nuovi utenti è necessario definire gli oggetti di definizione dei diritti per gli utenti esistenti nei modelli. Per questo scenario, potrebbe risultare utile leggere il paragrafo **Example 3: Add new users and rights to a custom template** (Esempio 3: Aggiungere nuovi utenti e diritti a un modello personalizzato) della sezione [Examples](/powershell/module/aipservice/set-aipservicetemplateproperty#examples) (Esempi) per il cmdlet.
 
 ## <a name="what-type-of-groups-can-i-use-with-azure-rms"></a>Quali tipi di gruppi è possibile usare con Azure RMS?
 Per la maggior parte degli scenari è possibile usare qualsiasi tipo di gruppo di Azure AD che dispone di un indirizzo di posta elettronica. Questa regola empirica è sempre valida quando si assegnano i diritti di utilizzo, ma esistono alcune eccezioni per l'amministrazione del servizio Azure Rights Management. Per altre informazioni, vedere [Requisiti di Azure Information Protection per gli account di gruppo](prepare.md#azure-information-protection-requirements-for-group-accounts).
@@ -133,7 +133,7 @@ Il destinatario visualizza un'opzione per accedere al proprio account Gmail, Yah
 
 Per supportare questo scenario, Exchange Online deve essere abilitato per il servizio Azure Rights Management e per le nuove funzionalità di Office 365 Message Encryption. Per altre informazioni su questa configurazione, vedere [Exchange Online: configurazione di IRM](configure-office365.md#exchangeonline-irm-configuration).
 
-Per altre informazioni sulle nuove funzionalità che includono il supporto di tutti gli account di posta elettronica in tutti i dispositivi, vedere il post di blog seguente: [Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801) (Annuncio di nuove funzionalità disponibili in Crittografia messaggi di Office 365).
+Per altre informazioni sulle nuove funzionalità che includono il supporto di tutti gli account di posta elettronica in tutti i dispositivi, vedere il post di blog seguente: [Announcing new capabilities available in Office 365 Message Encryption](https://techcommunity.microsoft.com/t5/Security-Privacy-and-Compliance/Email-Encryption-and-Rights-Protection/ba-p/110801) (Nuove funzionalità disponibili in Office 365 Message Encryption).
 
 ## <a name="what-devices-and-which-file-types-are-supported-by-azure-rms"></a>Quali dispositivi e quali tipi di file sono supportati da Azure RMS?
 Per un elenco dei dispositivi che supportano il servizio Azure Rights Management, vedere [Dispositivi client che supportano la protezione dati di Azure Rights Management](./requirements-client-devices.md). Dal momento che non tutti i dispositivi supportati consentono l'uso di tutte le funzionalità di Rights Management, controllare anche la tabella relativa alle [applicazioni abilitate per RMS](./requirements-applications.md#rms-enlightened-applications).
@@ -156,7 +156,7 @@ Aprire Outlook e creare un profilo mediante l'account aziendale o dell'istituto 
 
 Per proteggere un messaggio di posta elettronica o un documento: nella scheda **Opzioni** fare clic su **Autorizzazioni** e scegliere un'opzione o un modello che protegge il messaggio di posta elettronica o il documento.
 
-Per tenere traccia di un documento dopo averlo protetto: da un computer Windows in cui è installato il client Azure Information Protection, registrare il documento con il sito di rilevamento dei documenti usando un'applicazione di Office o Esplora file. Per le relative istruzioni, vedere [Tenere traccia dei documenti e revocarli](./rms-client/client-track-revoke.md). Dal computer Mac ora è possibile usare il Web browser e accedere al sito di rilevamento dei documenti (https://track.azurerms.com) ) per rilevare e revocare il documento.
+Per tenere traccia di un documento dopo averlo protetto: da un computer Windows nel quale è installato il client Azure Information Protection, registrare il documento con il sito di rilevamento dei documenti tramite un'applicazione di Office o Esplora file. Per le relative istruzioni, vedere [Tenere traccia dei documenti e revocarli](./rms-client/client-track-revoke.md). Dal computer Mac ora è possibile usare il Web browser e accedere al sito di rilevamento dei documenti (https://track.azurerms.com) ) per rilevare e revocare il documento.
 
 ## <a name="when-i-open-an-rms-protected-office-document-does-the-associated-temporary-file-become-rms-protected-as-well"></a>Quando si apre un documento di Office protetto da RMS, anche il file temporaneo associato è protetto da RMS?
 No. In questo scenario, il file temporaneo associato non contiene i dati del documento originale, ma solo i dati immessi dall'utente mentre il file è aperto. A differenza del file originale, il file temporaneo non è destinato alla condivisione e rimarrà disponibile nel dispositivo, protetto dai controlli di protezione locali, ad esempio BitLocker ed EFS.
@@ -169,13 +169,13 @@ Se si è interessati a una funzionalità specifica non ancora supportata, assicu
 ## <a name="how-do-i-configure-one-drive-for-business-in-sharepoint-online-so-that-users-can-safely-share-their-files-with-people-inside-and-outside-the-company"></a>Come è possibile configurare One Drive for Business in SharePoint Online, in modo che gli utenti possano condividere i propri file in modo sicuro con le persone all'interno e all'esterno della società?
 Per impostazione predefinita, in qualità di amministratore di Office 365, non si configura questo oggetto. L'operazione viene eseguita dagli utenti.
 
-Proprio come gli amministratori del sito di SharePoint abilitano e configurano IRM per una raccolta di SharePoint che possiedono, OneDrive for Business è progettato per consentire agli utenti di attivare e configurare IRM per la propria raccolta OneDrive for Business. Tuttavia, usando PowerShell, è possibile eseguire questa operazione per gli utenti. Per le istruzioni, vedere la sezione [SharePoint Online e OneDrive for Business: configurazione IRM](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration) nell'articolo [Office 365: configurazione di client e servizi online](configure-office365.md).
+Proprio come gli amministratori del sito di SharePoint abilitano e configurano IRM per una raccolta di SharePoint che possiedono, OneDrive for Business è progettato per consentire agli utenti di attivare e configurare IRM per la propria raccolta OneDrive for Business. Tuttavia, usando PowerShell, è possibile eseguire questa operazione per gli utenti. Per istruzioni, vedere la sezione [SharePoint Online e OneDrive for Business: configurazione di IRM](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration) dell'articolo [Office 365: configurazione di client e servizi online](configure-office365.md).
 
 ## <a name="do-you-have-any-tips-or-tricks-for-a-successful-deployment"></a>Sono disponibili suggerimenti per una corretta distribuzione?
 
-Dopo aver supervisionato molte distribuzioni e aver ascoltato i nostri clienti, partner, consulenti e tecnici del supporto tecnico, uno dei principali suggerimenti che possiamo passare dall'esperienza: **Progettare e distribuire criteri semplici**.
+Dopo aver supervisionato un elevato numero di distribuzioni e ascoltato il parere di clienti, partner, consulenti e tecnici del servizio di supporto, uno dei principali suggerimenti che possiamo fornire è **Progettare e distribuire criteri semplici**.
 
-Poiché Azure Information Protection supporta la condivisione sicura con qualsiasi utente, si possono raggiungere livelli di protezione dei dati molto elevati, Prestare tuttavia attenzione quando si configurano restrizioni dei diritti di utilizzo. Per la maggior parte delle organizzazioni, l'impatto operativo principale deriva dall'esigenza di impedire la fuga di dati limitando l'accesso agli utenti dell'organizzazione. Si possono anche applicare criteri più specifici, ad esempio impedire agli utenti di stampare o modificare documenti, ma è preferibile impostarli solo per documenti che richiedono un alto livello di sicurezza. Evitare di applicare tutti questi diritti di utilizzo più restrittivi in un'unica soluzione, pianificando invece un approccio per fasi.
+Poiché Azure Information Protection supporta la condivisione sicura con qualsiasi utente, si possono raggiungere livelli di protezione dei dati molto elevati, Prestare tuttavia attenzione quando si configurano restrizioni dei diritti di utilizzo. Per la maggior parte delle organizzazioni, l'impatto operativo principale deriva dall'esigenza di impedire la fuga di dati limitando l'accesso agli utenti dell'organizzazione. Naturalmente, è possibile ottenere una maggiore granularità rispetto a quando è necessario: impedire agli utenti di stampare, modificare e così via. Tuttavia, è consigliabile tenere conto delle restrizioni più granulari come eccezione per i documenti che necessitano di un livello di sicurezza elevato e non implementare questi diritti di utilizzo più restrittivi nel primo giorno, ma pianificare un approccio più graduale.
 
 ## <a name="how-do-we-regain-access-to-files-that-were-protected-by-an-employee-who-has-now-left-the-organization"></a>Come possiamo riottenere l'accesso ai file che sono stati protetti da un dipendente che ora ha lasciato l'organizzazione?
 Usare la [funzionalità utente con privilegi avanzati](configure-super-users.md), che garantisce i diritti di utilizzo Controllo completo per tutti i documenti e i messaggi di posta elettronica protetti dal tenant. Gli utenti con privilegi avanzati possono leggere sempre questi contenuti protetti e, se necessario, rimuovere la protezione o riapplicarla ai contenuti per altri utenti. Questa stessa funzionalità consente ai servizi autorizzati di indicizzare e analizzare i file, in base alle esigenze.

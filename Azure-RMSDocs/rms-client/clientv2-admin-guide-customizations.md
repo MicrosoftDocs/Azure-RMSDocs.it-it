@@ -1,9 +1,10 @@
 ---
 title: Configurazioni personalizzate-Azure Information Protection client per l'assegnazione di etichette unificata
+description: Informazioni sulla personalizzazione del client di Azure Information Protection Unified Labeling per Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/27/2019
+ms.date: 11/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6db8efdd32d945ad5e604041b87e7da2a2ee1b8b
-ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
+ms.openlocfilehash: 9c0ccde192774f90c95afd70ce1acb766d6a66f1
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984903"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445168"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -902,7 +903,7 @@ Esempio di comando di PowerShell, in cui l'etichetta è denominata "generale" e 
 
 Questa configurazione USA [le impostazioni avanzate](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dell'etichetta che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-Usare queste impostazioni solo quando si dispone di una [distribuzione S/MIME](https://docs.microsoft.com/microsoft-365/compliance/s-mime-for-message-signing-and-encryption) funzionante e si vuole che un'etichetta applichi automaticamente questo metodo di protezione per i messaggi di posta elettronica anziché Rights Management la protezione da Azure Information Protection. La protezione risultante è identica a quella applicata quando un utente seleziona manualmente le opzioni di S/MIME da Outlook.
+Usare queste impostazioni solo quando si dispone di una [distribuzione S/MIME](https://docs.microsoft.com/microsoft-365/security/office-365-security/s-mime-for-message-signing-and-encryption) funzionante e si vuole che un'etichetta applichi automaticamente questo metodo di protezione per i messaggi di posta elettronica anziché Rights Management la protezione da Azure Information Protection. La protezione risultante è identica a quella applicata quando un utente seleziona manualmente le opzioni di S/MIME da Outlook.
 
 Per configurare un'impostazione avanzata per una firma digitale S/MIME, immettere le stringhe seguenti per l'etichetta selezionata:
 

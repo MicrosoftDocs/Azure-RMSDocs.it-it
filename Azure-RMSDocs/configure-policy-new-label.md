@@ -4,19 +4,19 @@ description: Azure Information Protection offre etichette predefinite personaliz
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 11/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 78d136db7e35b1fb263d5bcd6ff64376c43cf315
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: 6ffbe770864c2776abba2f2a726e07953baf5be4
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "71683808"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445084"
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Come creare una nuova etichetta per Azure Information Protection
 
@@ -31,6 +31,8 @@ Si può aggiungere una nuova etichetta oppure aggiungere una nuova etichetta sec
 Quando si crea la prima etichetta secondaria per un'etichetta, gli utenti non possono più selezionare l'etichetta padre originale. Se necessario, creare una nuova etichetta secondaria per ricreare le impostazioni dell'etichetta padre in modo che gli utenti possano applicare le stesse impostazioni.
 
 Seguire queste istruzioni per aggiungere una nuova etichetta che sarà poi possibile aggiungere ai criteri di Azure Information Protection.
+
+## <a name="to-create-a-new-label"></a>Per creare una nuova etichetta
 
 1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**.
     

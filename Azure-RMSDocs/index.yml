@@ -11,13 +11,13 @@ metadata:
   author: cabailey
   ms.author: cabailey
   manager: rkarlin
-  ms.date: 09/17/2019
-  ms.openlocfilehash: d742e972ab50a297641de26723f05b4129806ca0
-  ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+  ms.date: 11/01/2019
+  ms.openlocfilehash: 433565965e0f3cdf8dfd94ed11769b547c75a01c
+  ms.sourcegitcommit: 260bf72bbc04e825c825805824546d203821f6c6
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 10/23/2019
-  ms.locfileid: "72805499"
+  ms.lasthandoff: 11/01/2019
+  ms.locfileid: "73428735"
 landingContent:
 - title: Informazioni su Azure Information Protection
   linkLists:
@@ -45,6 +45,22 @@ landingContent:
       url: deployment-roadmap.md
     - text: Scenari comuni
       url: how-to-guides.md
+- title: Rimanere aggiornati
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: Aggiornamenti di ottobre della documentazione
+      url: https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog
+    - text: "Dettagli versione 2.5.33.0: client per l'etichettatura unificata"
+      url: ./rms-client/unifiedlabelingclient-version-release-history.md#version-25330
+    - text: Le 5 migliori sessioni su Ignite consigliate
+      url: what-is-information-protection.md#microsoft-ignite
+- title: Classificare e proteggere i dati negli archivi dati locali
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Distribuire lo scanner
+      url: deploy-aip-scanner.md
 - title: Personalizzare il client
   linkLists:
   - linkListType: how-to-guide
@@ -53,28 +69,6 @@ landingContent:
       url: ./rms-client/client-admin-guide-customizations.md
     - text: "Client per l'etichettatura unificata: Impostazioni avanzate"
       url: ./rms-client/clientv2-admin-guide-customizations.md
-- title: Attivare le etichette unificate
-  linkLists:
-  - linkListType: overview
-    links:
-    - text: Confrontare i client
-      url: ./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers
-  - linkListType: how-to-guide
-    links:
-    - text: Eseguire la migrazione delle etichette di Azure Information Protection
-      url: configure-policy-migrate-labels.md
-- title: Classificare e proteggere i dati negli archivi dati locali
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Distribuire lo scanner
-      url: deploy-aip-scanner.md
-- title: Monitorare l'uso delle etichette e individuare le informazioni riservate
-  linkLists:
-  - linkListType: how-to-guide
-    links:
-    - text: Creazione di report centrale (anteprima)
-      url: reports-aip.md
 - title: Microsoft Information Protection SDK
   linkLists:
   - linkListType: overview
@@ -91,3 +85,19 @@ landingContent:
     links:
     - text: Riferimento API per C++
       url: /information-protection/develop/mip-sdk-reference
+- title: Attivare le etichette unificate
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Scegliere il client di etichettatura
+      url: ./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers
+  - linkListType: how-to-guide
+    links:
+    - text: Eseguire la migrazione delle etichette di Azure Information Protection
+      url: configure-policy-migrate-labels.md
+- title: Monitorare l'uso delle etichette e individuare le informazioni riservate
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Creazione di report centrale (anteprima)
+      url: reports-aip.md

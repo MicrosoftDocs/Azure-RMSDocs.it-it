@@ -3,8 +3,8 @@ title: Installare il modulo PowerShell AIPService per Azure Information Protecti
 description: Istruzioni per l'installazione di PowerShell per il servizio di protezione da Azure Information Protection. Il nome di questo modulo è AIPService.
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 08/27/2019
+manager: rkarlin
+ms.date: 11/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 0d665ed6-b1de-4d63-854a-bc57c1c49844
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 89820a815e664589051a91f273cb63280e70713a
-ms.sourcegitcommit: 72ae1f635e51ef6c6deb1833a30ff11e5918a3e7
+ms.openlocfilehash: 1061b548e0996f27fdf3bcdea8bfc523e3a19af5
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70063738"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444963"
 ---
 # <a name="installing-the-aipservice-powershell-module"></a>Installazione del modulo PowerShell AIPService
 
@@ -30,10 +30,10 @@ Usare le informazioni seguenti per installare il modulo di Windows PowerShell pe
 ## <a name="prerequisites"></a>Prerequisiti
 Questa tabella elenca i prerequisiti per installare e usare il modulo di PowerShell AIPService per il servizio di protezione da Azure Information Protection.
 
-|Requisito|Altre informazioni|
+|Requisito|Ulteriori informazioni|
 |---------------|--------------------|
 |Versione minima di Windows PowerShell: 3,0|È possibile verificare quale versione di Windows PowerShell sia in esecuzione digitando `$PSVersionTable` in una sessione di PowerShell. <br /><br /> Se è necessario installare una versione successiva di Windows PowerShell, vedere [Aggiornamento di Windows PowerShell esistente](/powershell/scripting/setup/installing-windows-powershell#upgrading-existing-windows-powershell).|
-|Versione minima di Microsoft .NET Framework: 4,5<br /><br />Nota: Questa versione di Microsoft .NET Framework è inclusa nei sistemi operativi successivi, quindi è necessario installarla manualmente solo se il sistema operativo client è inferiore a Windows 8,0 o se il sistema operativo server è inferiore a Windows Server 2012.|Se la versione minima di Microsoft .NET Framework non è ancora installata, è possibile scaricare [Microsoft .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653).<br /><br />Questa versione minima di Microsoft .NET Framework è obbligatoria per alcune delle classi utilizzate dal modulo AIPService.|
+|Versione minima di Microsoft .NET Framework: 4.5<br /><br />Nota: questa versione di Microsoft .NET Framework è inclusa nei sistemi operativi successivi, quindi è necessario installarla manualmente solo se il sistema operativo client è inferiore a Windows 8,0 o se il sistema operativo server è inferiore a Windows Server 2012.|Se la versione minima di Microsoft .NET Framework non è ancora installata, è possibile scaricare [Microsoft .NET Framework 4.5](https://www.microsoft.com/download/details.aspx?id=30653).<br /><br />Questa versione minima di Microsoft .NET Framework è obbligatoria per alcune delle classi utilizzate dal modulo AIPService.|
 
 ## <a name="if-you-have-the-aadrm-module-installed"></a>Se è installato il modulo AADRM
 
@@ -49,11 +49,11 @@ Se il modulo AADRM è stato installato con lo strumento di amministrazione di Az
 
 ## <a name="how-to-install-the-aipservice-module"></a>Come installare il modulo AIPService
 
-Il modulo AIPService si trova nel [PowerShell Gallery](/powershell/gallery/readme) e non è disponibile nell'area download Microsoft. 
+Il modulo AIPService si trova nel [PowerShell Gallery](https://www.powershellgallery.com/) e non è disponibile nell'area download Microsoft. 
 
 ### <a name="to-install-the-aipservice-module-from-the-powershell-gallery"></a>Per installare il modulo AIPService dalla PowerShell Gallery
 
-Se non si ha familiarità con PowerShell Gallery, vedere [Introduzione a PowerShell Gallery](/powershell/gallery/psgallery/psgallery_gettingstarted). Seguire le istruzioni per i requisiti della raccolta, che includono l'installazione del modulo PowerShellGet e del provider NuGet.
+Se non si ha familiarità con PowerShell Gallery, vedere [Introduzione a PowerShell Gallery](https://docs.microsoft.com/powershell/scripting/gallery/getting-started?view=powershell-6). Seguire le istruzioni per i requisiti della raccolta, che includono l'installazione del modulo PowerShellGet e del provider NuGet.
 
 Per visualizzare i dettagli sul modulo AIPService nel PowerShell Gallery, visitare la [pagina AIPService](https://www.powershellgallery.com/packages/AIPService).
 
@@ -75,7 +75,7 @@ In una sessione di Windows PowerShell verificare la versione del modulo installa
 (Get-Module AIPService –ListAvailable).Version
 ```
 
-Nota: Se il comando ha esito negativo, eseguire prima **Import-Module AIPService**.
+Nota: se questo comando ha esito negativo, eseguire prima **Import-Module AIPService**.
 
 Per visualizzare i cmdlet disponibili, digitare quanto segue:
 
@@ -83,17 +83,17 @@ Per visualizzare i cmdlet disponibili, digitare quanto segue:
 Get-Command -Module AIPService
 ```
 
-Usare il comando `Get-Help <cmdlet_name>` per visualizzare le informazioni della Guida per un cmdlet specifico e quindi impostare il parametro **-online** per visualizzare le informazioni della Guida più recenti dal sito della documentazione Microsoft. Esempio:
+Usare il comando `Get-Help <cmdlet_name>` per visualizzare le informazioni della Guida per un cmdlet specifico e quindi impostare il parametro **-online** per visualizzare le informazioni della Guida più recenti dal sito della documentazione Microsoft. Ad esempio:
 
 ```
 Get-Help Connect-AipService -online
 ```
 
-Per altre informazioni:
+Per ulteriori informazioni:
 
--   Elenco completo dei cmdlet disponibili: [Modulo AIPService](/powershell/module/aipservice/?view=azureipps#aipservice)
+-   Elenco completo dei cmdlet disponibili: [modulo AIPService](/powershell/module/aipservice/?view=azureipps#aipservice)
 
--   Elenco dei principali scenari di configurazione che supportano PowerShell: [Amministrazione della protezione da Azure Information Protection tramite PowerShell](administer-powershell.md)
+-   Elenco dei principali scenari di configurazione che supportano PowerShell: [amministrazione della protezione da Azure Information Protection tramite PowerShell](administer-powershell.md)
 
 Prima di poter eseguire tutti i comandi che configurano il servizio di protezione, è necessario connettersi al servizio usando il cmdlet [Connect-AipService](/powershell/module/aipservice/connect-aipservice) .
 

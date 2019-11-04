@@ -4,7 +4,7 @@ description: Informazioni sulle operazioni del ciclo di vita necessarie per la g
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/28/2019
+ms.date: 10/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,14 +13,14 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f8eb311e42f17398a0564d6caf4b02618609d9d5
-ms.sourcegitcommit: dc7603461ce9300635bcb389c18e2e708a8229df
+ms.openlocfilehash: 682ed03cfafa9dad1d9696d51e0b64c71dea6fa3
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70121792"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445050"
 ---
-# <a name="customer-managed-tenant-key-life-cycle-operations"></a>Gestito dal cliente: operazioni del ciclo di vita della chiave del tenant
+# <a name="customer-managed-tenant-key-life-cycle-operations"></a>Operazioni del ciclo di vita della chiave del tenant gestite dal cliente
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -46,7 +46,7 @@ Ecco alcuni casi in cui potrebbe essere necessario reimpostare una chiave per Az
 
 Per reimpostare la chiave su un'altra chiave gestita, è possibile creare una nuova chiave in Azure Key Vault o usarne una già presente in Azure Key Vault. Seguire quindi le stesse procedure usate per implementare lo scenario BYOK per Azure Information Protection. 
 
-1. Solo se la nuova chiave si trova in un insieme di credenziali delle chiavi diverso da quello già in uso per Azure Information Protection: Autorizzare Azure Information Protection a usare l'insieme di credenziali delle chiavi usando il cmdlet [set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) .
+1. Solo se la nuova chiave si trova in un insieme di credenziali delle chiavi diverso da quello già usato per Azure Information Protection: autorizzare Azure Information Protection a usare l'insieme di credenziali delle chiavi usando il cmdlet [set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) .
 
 2. Se Azure Information Protection non è ancora noto alla chiave che si vuole usare, eseguire il cmdlet [use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) .
 
@@ -63,7 +63,7 @@ Per altre informazioni su ognuna di queste fasi:
 ## <a name="backup-and-recover-your-tenant-key"></a>Eseguire il backup e il ripristino della chiave del tenant
 L'utente che gestisce la chiave del tenant è anche responsabile del backup della chiave usata da Azure Information Protection. 
 
-Se la chiave del tenant è stata generata in locale, in un modulo di protezione hardware nCipher: per eseguire il backup della chiave è sufficiente eseguire il backup del file della chiave in formato token, del file relativo all'ambiente e delle schede amministrative. Quando la chiave viene trasferita in Azure Key Vault, il servizio salva il file della chiave in formato token come protezione da eventuali errori dei nodi del servizio. Questo file è associato all'ambiente di sicurezza relativo all'area o all'istanza specifica di Azure. È tuttavia opportuno tenere presente che questo file di chiave in formato token non rappresenta un backup completo. Se ad esempio è necessaria una copia in testo normale della chiave da usare all'esterno di un modulo di protezione hardware nCipher, Azure Key Vault non è in grado di recuperarla perché dispone solo di una copia non recuperabile.
+Se la chiave del tenant è stata generata in locale, in un modulo di protezione hardware nCipher: per eseguire il backup della chiave, eseguire il backup del file di chiave in formato token, del file globale e delle schede amministratore. Quando la chiave viene trasferita in Azure Key Vault, il servizio salva il file della chiave in formato token come protezione da eventuali errori dei nodi del servizio. Questo file è associato all'ambiente di sicurezza relativo all'area o all'istanza specifica di Azure. È tuttavia opportuno tenere presente che questo file di chiave in formato token non rappresenta un backup completo. Se ad esempio è necessaria una copia in testo normale della chiave da usare all'esterno di un modulo di protezione hardware nCipher, Azure Key Vault non è in grado di recuperarla perché dispone solo di una copia non recuperabile.
 
 Azure Key Vault contiene un [cmdlet di backup](/powershell/module/az.keyvault/backup-azkeyvaultkey). Scaricarlo e archiviarlo in un file per eseguire il backup di una chiave. Il contenuto scaricato è crittografato e può quindi essere usato solo in Azure Key Vault. 
 

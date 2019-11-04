@@ -4,29 +4,29 @@ description: Panoramica della protezione HYOK (AD RMS) con Azure Information Pro
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/09/2019
+ms.date: 10/09/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 149bf28e72f333eafa090e75e8703b6fe3a61165
-ms.sourcegitcommit: a091cabd5ad24b4534b5f69f029843037c7872d3
+ms.openlocfilehash: 6157f321b04a4c0b755b1d8e17a663f8f58d281f
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71313949"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444811"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Protezione HYOK (hold your own key) per Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Le informazioni che seguono consentono di capire che cos'è la protezione HYOK (hold your own key) per Azure Information Protection e in che cosa differisce rispetto alla protezione predefinita basata su cloud. Prima di usare la protezione HYOK, verificare di avere compreso quando deve essere usata e quali sono gli scenari supportati, i requisiti e le limitazioni. 
 
-## <a name="cloud-based-protection-vs-hyok"></a>Protezione basata su cloud e HYOK
+## <a name="cloud-based-protection-vs-hyok"></a>Protezione basata sul cloud rispetto a HYOK
 
 Per proteggere documenti e messaggi di posta elettronica contenenti informazioni riservate con Azure Information Protection, è in genere possibile applicare una chiave basata su cloud che usa la protezione di Azure Rights Management (Azure RMS) e sfruttare i vantaggi seguenti:
 
@@ -68,27 +68,27 @@ Per applicare la protezione HYOK, usare le etichette di Azure Information Protec
 
 Nella tabella seguente sono riportati gli scenari supportati per la protezione del contenuto con le etichette configurate per HYOK e per l'apertura e l'uso del contenuto protetto da HYOK.
 
-|Piattaforma|Applicazione|Supportato|
+|Piattaforma|Applicazioni|Funzionalità supportata|
 |----------------------|----------|-----------|
-|Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Word, Excel, PowerPoint|Protezione: Yes<br /><br />Consumo: Yes|
-|Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Outlook|Protezione: Yes<br /><br />Consumo: Yes|
-|Windows|Client di Azure Information Protection|Protezione: Yes <br /><br />Consumo: Yes|
-|Windows|Visualizzatore di Azure Information Protection|Protezione: Non applicabile<br /><br />Consumo: Yes|
-|Windows|Client di Azure Information Protection con cmdlet per le etichette di PowerShell|Protezione: Yes<br /><br />Consumo: Yes|
-|Windows|Scanner di Azure Information Protection|Protezione: Yes<br /><br />Consumo: Yes|
-|Windows|Applicazione di condivisione Rights Management|Protezione: No<br /><br />Consumo: Yes|
-|MacOS|Office per Mac <br /><br /> - Word, Excel, PowerPoint|Protezione: No<br /><br />Consumo: Yes|
-|MacOS|Office per Mac<br /><br />- Outlook|Protezione: No<br /><br />Consumo: Yes|
-|MacOS|Applicazione di condivisione Rights Management|Protezione: No<br /><br />Consumo: Yes|
-|iOS|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protezione: No<br /><br />Consumo: Yes|
-|iOS|Office Mobile <br /><br />-Outlook|Protezione: No<br /><br />Consumo: No|
-|iOS|Visualizzatore di Azure Information Protection|Protezione: Non applicabile<br /><br />Consumo: Yes|
-|Android|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protezione: No<br /><br />Consumo: Yes|
-|Android|Office Mobile <br /><br />- Outlook|Protezione: No<br /><br />Consumo: No|
-|Android|Visualizzatore di Azure Information Protection|Protezione: Non applicabile<br /><br />Consumo: Yes|
-|Web|Outlook sul Web|Protezione: No<br /><br />Consumo: No|
-|Web|Office per il Web<br /><br />- Word, Excel, PowerPoint|Protezione: No<br /><br />Consumo: No|
-|Universale|App universali di Office<br /><br />- Word, Excel, PowerPoint|Protezione: No<br /><br />Consumo: No|
+|Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Word, Excel, PowerPoint|Protezione: sì<br /><br />Consumo: sì|
+|Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Outlook|Protezione: sì<br /><br />Consumo: sì|
+|Windows|Client di Azure Information Protection|Protezione: sì <br /><br />Consumo: sì|
+|Windows|Visualizzatore di Azure Information Protection|Protezione: non applicabile<br /><br />Consumo: sì|
+|Windows|Client di Azure Information Protection con cmdlet per le etichette di PowerShell|Protezione: sì<br /><br />Consumo: sì|
+|Windows|Scanner di Azure Information Protection|Protezione: sì<br /><br />Consumo: sì|
+|Windows|Applicazione di condivisione Rights Management|Protezione: no<br /><br />Consumo: sì|
+|MacOS|Office per Mac <br /><br /> - Word, Excel, PowerPoint|Protezione: no<br /><br />Consumo: sì|
+|MacOS|Office per Mac<br /><br />- Outlook|Protezione: no<br /><br />Consumo: sì|
+|MacOS|Applicazione di condivisione Rights Management|Protezione: no<br /><br />Consumo: sì|
+|iOS|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protezione: no<br /><br />Consumo: sì|
+|iOS|Office Mobile <br /><br />-Outlook|Protezione: no<br /><br />Consumo: no|
+|iOS|Visualizzatore di Azure Information Protection|Protezione: non applicabile<br /><br />Consumo: sì|
+|Android|Office Mobile <br /><br />- Word, Excel, PowerPoint|Protezione: no<br /><br />Consumo: sì|
+|Android|Office Mobile <br /><br />- Outlook|Protezione: no<br /><br />Consumo: no|
+|Android|Visualizzatore di Azure Information Protection|Protezione: non applicabile<br /><br />Consumo: sì|
+|Web|Outlook sul Web|Protezione: no<br /><br />Consumo: no|
+|Web|Office per il Web<br /><br />- Word, Excel, PowerPoint|Protezione: no<br /><br />Consumo: no|
+|Universale|App universali di Office<br /><br />- Word, Excel, PowerPoint|Protezione: no<br /><br />Consumo: no|
 
 
 ## <a name="additional-limitations-when-using-hyok"></a>Limitazioni aggiuntive durante l'uso di HYOK
@@ -131,31 +131,31 @@ Una distribuzione di AD RMS deve soddisfare i requisiti seguenti per garantire l
         
     Quando si hanno più cluster AD RMS in foreste diverse, eliminare le etichette presenti nei criteri globali che applicano la protezione HYOK (AD RMS) e configurare [criteri con ambito](configure-policy-scope.md) per ogni cluster. Quindi assegnare gli utenti di ogni cluster ai criteri con ambito corrispondenti, evitando di usare gruppi per i quali un utente viene assegnato a più criteri con ambito. In seguito a questa assegnazione ogni utente deve avere etichette per un solo cluster AD RMS. 
     
-  - [Modalità di crittografia 2](https://technet.microsoft.com/library/hh867439.aspx): è possibile verificare la modalità controllando le proprietà del cluster AD RMS nella scheda **Generale**.
+  - [Modalità crittografia 2](https://technet.microsoft.com/library/hh867439.aspx): è possibile verificare la modalità controllando le proprietà del cluster AD RMS nella scheda **Generale**.
     
   - Ogni server AD RMS è configurato per l'URL di certificazione. [Istruzioni](#configuring-ad-rms-servers-to-locate-the-certification-url) 
     
-  - Un punto di connessione del servizio non è registrato in Active Directory: non viene usato un punto di connessione del servizio quando si usa la protezione di AD RMS con Azure Information Protection. 
+  - In Active Directory non è registrato un punto di connessione del servizio (SCP): il punto SCP non viene usato quando si usa la protezione di AD RMS con Azure Information Protection. 
     
       - Se è stato registrato un punto di connessione del servizio per la distribuzione di AD RMS è necessario rimuoverlo, per garantire il corretto funzionamento dell'[individuazione dei servizi](./rms-client/client-deployment-notes.md#rms-service-discovery) della protezione di Azure Rights Management. 
         
       - Se si sta installando un nuovo cluster AD RMS per HYOK, ignorare il passaggio per la registrazione del punto SCP durante la configurazione del primo nodo. Per ogni nodo aggiuntivo, assicurarsi che il server sia configurato per l'URL di certificazione prima di aggiungere il ruolo AD RMS e aggiungere il cluster esistente.
     
-  - I server AD RMS sono configurati per l'uso di SSL/TLS con un certificato x.509 valido considerato attendibile dai client di connessione: obbligatorio per gli ambienti di produzione, ma non per effettuare test o valutazioni.
+  - I server AD RMS sono configurati per l'uso di SSL/TLS con un certificato x.509 valido considerato attendibile dai client di connessione: necessario per gli ambienti di produzione, ma non per scopi di testing o valutazione.
     
   - Modelli di diritti configurati.
     
   - Non configurato per IRM di Exchange.
     
-  - Per i dispositivi mobili e i computer Mac: viene installata e configurata l'[estensione per dispositivi mobili di Active Directory Rights Management Services](https://technet.microsoft.com/library/dn673574.aspx).
+  - Per i dispositivi mobili e i computer Mac: [Active Directory Rights Management Services Mobile Device Extension](https://technet.microsoft.com/library/dn673574.aspx) viene installato e configurato.
 
 - La sincronizzazione delle directory è configurata tra l'istanza locale di Active Directory e Azure Active Directory e gli utenti che usano la protezione HYOK sono configurati per l'accesso Single Sign-On.
 
-- Se si condividono documenti o messaggi di posta elettronica protetti da HYOK con altri utenti all'esterno dell'organizzazione: AD RMS è configurato per i trust definiti in modo esplicito in una relazione punto a punto diretta con le altre organizzazioni usando domini utente affidabili o trust federativi creati con Active Directory Federation Services (AD FS).
+- Se si condividono documenti o messaggi di posta elettronica protetti da HYOK con altri utenti esterni all'organizzazione: AD RMS è configurato per i trust definiti in modo esplicito in una relazione punto a punto diretta con altre organizzazioni usando domini utente trusted (TUD) o relazioni di trust federative create usando Active Directory Federation Services (AD FS).
 
 - Gli utenti hanno una versione di Office che supporta Information Rights Management (IRM) e almeno Office 2013 Professional Plus con Service Pack 1, in esecuzione in Windows 7 Service Pack 1 o versioni successive. Si noti che Office 2010 e Office 2007 non sono supportati per questo scenario.
     
-    - Per Office 2016, edizione basata su Microsoft Installer (MSI): è stato installato l'[aggiornamento 4018295 per Microsoft Office 2016 rilasciato il 6 marzo 2018](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295).
+    - Per Office 2016, Microsoft Installer (MSI)-based Edition: è [stato installato l'aggiornamento 4018295 per Microsoft Office 2016 rilasciato il 6 marzo 2018](https://support.microsoft.com/en-us/help/4018295/march-6-2018-update-for-office-2016-kb4018295).
 
 > [!IMPORTANT]
 > Per soddisfare la garanzia elevata offerta dalla protezione HYOK, è consigliabile che i server di AD RMS non si trovino nella rete perimetrale e che vengano usati solo dai dispositivi gestiti. 
@@ -189,11 +189,11 @@ Quando si configura un'etichetta per la protezione **HYOK (AD RMS)** è necessar
 
 I valori del GUID del modello e dell'URL sono disponibili nella console di Active Directory Rights Management Services:
 
-- Per individuare il GUID di un modello: espandere il cluster e fare clic su **Modelli di criteri per i diritti di utilizzo**. In **Modelli di criteri per i diritti di utilizzo distribuiti** è quindi possibile copiare il GUID del modello che si vuole usare. Esempio: 82bf3474-6efe-4fa1-8827-d1bd93339119
+- Per individuare il GUID di un modello, espandere il cluster e fare clic su **Modelli di criteri per i diritti di utilizzo**. In **Modelli di criteri per i diritti di utilizzo distribuiti** è quindi possibile copiare il GUID del modello che si vuole usare. Ad esempio: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
-- Per individuare l'URL di gestione licenze: fare clic sul nome del cluster. In **Dettagli cluster** copiare il valore **Gestione licenze** ad eccezione della stringa **/_wmcs/licensing**. Ad esempio: https://rmscluster.contoso.com 
+- Per individuare l'URL di gestione licenze: fare clic sul nome del cluster. In **Dettagli cluster** copiare il valore **Gestione licenze** ad eccezione della stringa **/_wmcs/licensing**. ad esempio https://rmscluster.contoso.com 
     
-    Se esistono sia un valore di gestione licenze Extranet, sia un valore di gestione licenze Intranet e i valori sono diversi: Specificare il valore Extranet solo se si condividono documenti o messaggi di posta elettronica protetti con partner definiti con relazioni di trust esplicite da punto a punto. In caso contrario, usare il valore Intranet e assicurarsi che tutti i computer client che usano la protezione di AD RMS con Azure Information Protection si connettano tramite una connessione Intranet (ad esempio, i computer remoti devono usare una connessione VPN).
+    Se sono presenti un valore di gestione licenze Extranet e un valore di gestione licenze Intranet diversi tra loro: specificare il valore Extranet solo se si condividono documenti o messaggi di posta elettronica protetti con partner definiti mediante relazioni di trust esplicite da punto a punto. In caso contrario, usare il valore Intranet e assicurarsi che tutti i computer client che usano la protezione di AD RMS con Azure Information Protection si connettano tramite una connessione Intranet (ad esempio, i computer remoti devono usare una connessione VPN).
 
 
 ## <a name="next-steps"></a>Passaggi successivi

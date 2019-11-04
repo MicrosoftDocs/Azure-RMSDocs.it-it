@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 37f50c51588b908b558c60e9387e918f26393f07
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 4a31e28e560325d3165f5b5e53906fa879664c7b
+ms.sourcegitcommit: ee897f9dc3580269395b63fb9aeccbd8a547fff1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805674"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73446008"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto
 
@@ -191,6 +191,8 @@ Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
 - L'[impostazione dei criteri](../configure-policy-settings.md) **Gli utenti devono fornire una giustificazione per impostare un'etichetta di classificazione inferiore, rimuovere un'etichetta o rimuovere la protezione** non si applica più allo scanner. Lo scanner esegue queste azioni quando si configura l'impostazione modifica **etichette file** **su** in nel profilo scanner, quindi selezionare la casella di controllo **Consenti downgrade etichetta** .
 
 ## <a name="next-steps"></a>Passaggi successivi
+
+Non si è certi che questo sia il client giusto da installare?  Vedere [scegliere il client di assegnazione di etichette da usare per i computer Windows](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
 Per altre informazioni sull'installazione e l'uso del client: 
 

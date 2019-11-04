@@ -4,19 +4,19 @@ description: Configurare le impostazioni nei criteri di Azure Information Protec
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/29/2019
+ms.date: 11/01/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 9d4d3dfe2ccba6bf3f1f2aa46098e02e6a9a514d
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: 28c63107581e6560686845b7f9a77293f505da41
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72447168"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73445024"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Come configurare le impostazioni dei criteri per Azure Information Protection
 
@@ -35,7 +35,7 @@ Oltre al titolo della barra e alla descrizione comando di Information Protection
 
 Si noti che le impostazioni dei criteri potrebbero avere valori predefiniti diversi, a seconda di quando è stata acquistata la sottoscrizione di Azure Information Protection. Alcune impostazioni potrebbero derivare anche da un'[impostazione client personalizzata](./rms-client/client-admin-guide-customizations.md).
 
-Per configurare queste impostazioni:
+## <a name="to-configure-the-policy-settings"></a>Per configurare le impostazioni dei criteri
 
 1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**.
     

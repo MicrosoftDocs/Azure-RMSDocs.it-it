@@ -4,7 +4,7 @@ description: Informazioni sull'installazione e la configurazione del connettore 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/26/2019
+ms.date: 10/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fef260a3cadfc2ffdc7748e7be058c250db22a3a
-ms.sourcegitcommit: 923227861c00beabb7ed997ef7cba47f06facc94
+ms.openlocfilehash: d8d60a170e587b7aa6b9e21f4368b26cb33d84bb
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70027443"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444948"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installazione e configurazione del connettore di Azure Rights Management
 
@@ -59,17 +59,17 @@ Per poter configurare il connettore RMS, è necessario immettere le credenziali 
 
 Questo account non deve richiedere l'autenticazione a più fattori (MFA, Multi-Factor Authentication) perché lo strumento di amministrazione Microsoft Rights Management non supporta l'autenticazione MFA per questo account. Inoltre, se si usa Azure AD accesso condizionale, non [bloccare l'autenticazione legacy](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication) per questo account.
 
-Sono previste anche alcune limitazioni per i caratteri della password del connettore. Non è possibile usare una password con uno dei seguenti caratteri: E commerciale ( **&** ), parentesi quadra aperta ( **[** ), parentesi quadra chiusa ( **]** ); virgolette semplici ( **"** ) e apostrofo ( **'** ). Se la password include uno di questi caratteri non è possibile effettuare l'autenticazione per il connettore RMS e viene visualizzato il messaggio di errore **La combinazione nome utente e password specificata non è corretta**, anche se l'accesso con questo account e questa password funziona in altri scenari. Se si verifica questa situazione per la password in uso, scegliere un account diverso con una password che non include questi caratteri speciali oppure reimpostare la password in modo che non includa i caratteri speciali.
+Sono previste anche alcune limitazioni per i caratteri della password del connettore. Non è possibile usare una password che includa uno dei caratteri seguenti: e commerciale ( **&** ), parentesi quadra aperta ( **[** ), parentesi quadra chiusa ( **]** ), virgolette semplici ( **"** ) e apostrofo ( **'** ). Se la password include uno di questi caratteri non è possibile effettuare l'autenticazione per il connettore RMS e viene visualizzato il messaggio di errore **La combinazione nome utente e password specificata non è corretta**, anche se l'accesso con questo account e questa password funziona in altri scenari. Se si verifica questa situazione per la password in uso, scegliere un account diverso con una password che non include questi caratteri speciali oppure reimpostare la password in modo che non includa i caratteri speciali.
 
-Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), assicurarsi che l'account specificato sia in grado di proteggere il contenuto. Ad esempio, se è stata limitata la possibilità di proteggere il contenuto per il gruppo "Reparto IT", l'account specificato deve essere un membro del gruppo. In caso contrario, viene visualizzato il messaggio di errore: **Tentativo di individuare la posizione del servizio di amministrazione e dell'organizzazione non riuscito. Assicurarsi che il servizio Microsoft Rights Management sia abilitato per l’organizzazione.**
+Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), assicurarsi che l'account specificato sia in grado di proteggere il contenuto. Ad esempio, se è stata limitata la possibilità di proteggere il contenuto per il gruppo "Reparto IT", l'account specificato deve essere un membro del gruppo. In caso contrario, viene visualizzato il messaggio di errore: **tentativo di individuare la posizione del servizio di amministrazione e dell'organizzazione non riuscito. Verificare che il servizio Microsoft Rights Management sia abilitato per l'organizzazione.**
 
 È possibile usare un account con uno dei privilegi seguenti:
 
--   **Amministratore globale del tenant**: un account che sia un amministratore globale per il tenant di Office 365 o il tenant di Azure AD.
+-   **Amministratore globale per il tenant**: account amministratore globale per il tenant di Office 365 o per il tenant di Azure AD.
 
 -   **Amministratore globale di Azure Rights Management**: account in Azure Active Directory a cui è stato assegnato il ruolo di amministratore globale di Azure RMS.
 
--   **Amministratore del connettore di Azure Rights Management**: Un account in Azure Active Directory a cui sono stati concessi i diritti di installazione e amministrazione del connettore RMS per l'organizzazione.
+-   **Amministratore di connettore di Azure Rights Management**: account di Azure Active Directory a cui sono stati concessi i diritti di installazione e amministrazione del connettore RMS per l'organizzazione.
 
     > [!NOTE]
     > Il ruolo di amministratore globale di Azure Rights Management e il ruolo di amministratore del connettore Azure Rights Management sono assegnati agli account tramite il cmdlet [Add-AipServiceRoleBasedAdministrator](/powershell/module/aipservice/add-aipservicerolebasedadministrator) .
@@ -96,7 +96,7 @@ Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-s
     >     ```
     >     Add-AipServiceRoleBasedAdministrator -SecurityGroupDisplayName <group Name> -Role "ConnectorAdministrator"
     >     ```
-    >     Ad esempio, digitare il comando seguente: **Add-AipServiceRoleBasedAdministrator-EmailAddress melisa@contoso.com -Role "ConnectorAdministrator"**
+    >     Ad esempio, digitare: **Add-AipServiceRoleBasedAdministrator-EmailAddress melisa@contoso.com-Role "ConnectorAdministrator"**
     >
     >     Anche se questi comandi assegnano il ruolo di amministratore di connettore, è possibile usare anche il ruolo GlobalAdministrator.
 
@@ -180,11 +180,11 @@ Dopo aver creato un nome nel DNS e averlo configurato per un indirizzo IP, impos
 
 Usare le impostazioni seguenti per configurare il cluster di Bilanciamento carico di rete:
 
--   Porte 80 (per HTTP) o 443 (per HTTPS)
+-   Porte: 80 (per HTTP) o 443 (per HTTPS)
 
     Per altre informazioni sull'uso di HTTP o HTTPS, vedere la sezione successiva.
 
--   Affinità Nessuna
+-   Gruppo di affinità: Nessuno
 
 -   Metodo di distribuzione: Uguale
 
@@ -227,7 +227,7 @@ Se i server del connettore sono installati in una rete che non dispone di connet
 
 -   Un computer fisico o virtuale che esegue Windows Server 2012 o Windows Server 2012 R2 (tutte le edizioni), Windows Server 2008 R2 o Windows Server 2008 R2 Service Pack 1 (tutte le edizioni), Windows 8.1, Windows 8 o Windows 7.
 
--   Almeno 1 GB di RAM.
+-   Almeno 1 GB di RAM.
 
 -   Almeno 64 GB di spazio su disco.
 
@@ -239,7 +239,7 @@ Per installare lo strumento di amministrazione di connettore RMS, eseguire i fil
 
 -   Per un computer a 32 bit: RMSConnectorAdminToolSetup_x86.exe
 
--   Per un computer a 64 bit: RMSConnectorSetup. exe
+-   Per un computer a 64 bit: RMSConnectorSetup.exe
 
 Se non sono stati già scaricati questi file, è possibile farlo dall' [Area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=314106).
 

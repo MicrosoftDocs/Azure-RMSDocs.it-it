@@ -4,7 +4,7 @@ description: Informazioni sulle operazioni del ciclo di vita rilevanti nel caso 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 08/23/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,14 +13,14 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 00e99f55130f25fa9368a7fdcd1f8c2795250c89
-ms.sourcegitcommit: dc655736e531260c7718a8808f4f1016391d2d7d
+ms.openlocfilehash: ee94f0a4966ce16ae8b87f23bf4a9a734cc015a0
+ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70020479"
+ms.lasthandoff: 11/02/2019
+ms.locfileid: "73444982"
 ---
-# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gestito da Microsoft: operazioni del ciclo di vita della chiave del tenant
+# <a name="microsoft-managed-tenant-key-life-cycle-operations"></a>Gestione di Microsoft: operazioni del ciclo di vita della chiave del tenant
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -64,25 +64,25 @@ Per esportare la configurazione di Azure Information Protection e la chiave del 
 
 - [Contattare il supporto tecnico Microsoft](information-support.md#to-contact-microsoft-support) per aprire un **caso di supporto di Azure Information Protection con una richiesta di esportazione della chiave di Azure Information Protection**. È necessario dimostrare di essere un amministratore globale per il tenant e comprendere che questo processo richiede diversi giorni per la conferma. Il servizio è soggetto ai costi di supporto standard. L'esportazione della chiave del tenant non è un servizio di assistenza gratuito.
 
-### <a name="step-2-wait-for-verification"></a>Passaggio 2: Attendi verifica
+### <a name="step-2-wait-for-verification"></a>Passaggio 2: Attendere la verifica
 
 - Microsoft verifica che la richiesta di rilasciare la chiave del tenant di Azure Information Protection sia legittima. L'operazione può richiedere fino a tre settimane.
 
-### <a name="step-3-receive-key-instructions-from-css"></a>Passaggio 3: Ricevi istruzioni chiave da CSS
+### <a name="step-3-receive-key-instructions-from-css"></a>Passaggio 3: Ricevere istruzioni sulla chiave dal Servizio Supporto Tecnico Clienti Microsoft
 
 - Il Servizio Supporto Tecnico Clienti Microsoft invia la configurazione di Azure Information Protection e la chiave del tenant crittografata in un file protetto da password. L'estensione del file è **tpd**. A tale scopo, il Servizio Supporto Tecnico Clienti Microsoft invia all'utente che ha avviato l'esportazione un messaggio di posta elettronica in cui è disponibile uno strumento da eseguire da un prompt dei comandi nel modo seguente:
 
     ```
     AadrmTpd.exe -createkey
     ```
-    In questo modo viene generata una coppia di chiavi RSA e le parti pubblica e privata vengono salvate come file nella cartella corrente. Ad esempio:  **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** e **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**.
+    In questo modo viene generata una coppia di chiavi RSA e le parti pubblica e privata vengono salvate come file nella cartella corrente. Ad esempio: **PublicKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt** e **PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt**.
 
-    Rispondere al messaggio di posta elettronica ricevuto da CSS allegando il file con il nome che inizia con **PublicKey**. A questo punto CSS invierà all'utente un file TDP con estensione .xml crittografato tramite la chiave RSA. Copiare questo file nella stessa cartella in cui è stato eseguito lo strumento AadrmTpd in origine ed eseguire nuovamente lo strumento, usando il file che inizia con **PrivateKey** e il file ricevuto da CSS. Esempio:
+    Rispondere al messaggio di posta elettronica ricevuto da CSS allegando il file con il nome che inizia con **PublicKey**. A questo punto CSS invierà all'utente un file TDP con estensione .xml crittografato tramite la chiave RSA. Copiare questo file nella stessa cartella in cui è stato eseguito lo strumento AadrmTpd in origine ed eseguire nuovamente lo strumento, usando il file che inizia con **PrivateKey** e il file ricevuto da CSS. Ad esempio:
 
     ```
     AadrmTpd.exe -key PrivateKey-FA29D0FE-5049-4C8E-931B-96C6152B0441.txt -target TPD-77172C7B-8E21-48B7-9854-7A4CEAC474D0.xml
     ```
-    L'output di questo comando deve essere costituito da due file: uno contiene la password di testo normale per il file TPD protetto da password e l'altro è il file TPD protetto da password. I file hanno un nuovo GUID, ad esempio:
+    L'output del comando deve essere costituito da due file, ovvero il file con estensione tpd protetto da password e un file che ne contiene la password. I file hanno un nuovo GUID, ad esempio:
      
   - Password-5E4C2018-8C8C-4548-8705-E3218AA1544E.txt
 
@@ -90,7 +90,7 @@ Per esportare la configurazione di Azure Information Protection e la chiave del 
 
     Eseguire il backup di questi file e archiviarli in modo sicuro per garantire che sia possibile decrittografare contenuto protetto tramite la chiave del tenant specifica. Se inoltre si esegue la migrazione ad AD RMS, è possibile importare il file con estensione tpd (il file che inizia con **ExportedTDP**) nel proprio server AD RMS.
 
-### <a name="step-4-ongoing-protect-your-tenant-key"></a>Passaggio 4: In corso Proteggere la chiave del tenant
+### <a name="step-4-ongoing-protect-your-tenant-key"></a>Passaggio 4: In corso: Proteggere la chiave del tenant
 
 Dopo aver ricevuto la chiave del tenant, tenerla in posizione sicura per evitare che utenti malintenzionati possano accedere e decrittografare tutti i documenti protetti dalla chiave.
 
