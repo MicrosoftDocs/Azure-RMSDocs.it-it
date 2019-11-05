@@ -12,12 +12,12 @@ ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6340a78d430c387f7a7cf76b9a6474d399b7e98f
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: 5018e69cf1798592d07b053eaeaccef234f71561
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "71966843"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559874"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Attività che precedentemente venivano eseguite con il portale di Azure classico
 
@@ -35,7 +35,7 @@ Usare le informazioni seguenti per una transizione rapida al portale aggiornato.
 
 |Portale di Azure classico|Come eseguire questa operazione nel portale di Azure
 |-----------|--------------------|
-|Accedere alle impostazioni di configurazione per la prima volta|1. [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal).<br /><br />2. seguire le istruzioni per per [accedere al pannello Azure Information Protection per la prima volta](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time).
+|Accedere alle impostazioni di configurazione per la prima volta|1. [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal).<br /><br />2. seguire le istruzioni per [accedere al riquadro Azure Information Protection per la prima volta](configure-policy.md#to-access-the-azure-information-protection-pane-for-the-first-time).
 |Creare un nuovo modello|Creare un'etichetta che applica la protezione e usare **Impostare le autorizzazioni** per definire le autorizzazioni, la scadenza e l'accesso offline. <br /><br />Dietro le quinte, la configurazione crea un nuovo modello predefinito accessibile dai servizi e dalle applicazioni che si integrano con i modelli di Rights Management.<br /><br />Per altre informazioni, vedere [Per creare un nuovo modello](configure-policy-templates.md#to-create-a-new-template).
 |Modificare le proprietà del modello: <br /><br />- Nome e descrizione del modello<br /><br />- Diritti di utilizzo, scadenza del contenuto e impostazioni di accesso offline|Se non è già stato fatto, [convertire il modello in etichetta](configure-policy-templates.md#to-convert-templates-to-labels) e quindi eseguire le operazioni seguenti<br /><br />1. modificare il nome e la descrizione dell'etichetta<br /><br />2. modificare le impostazioni di protezione sull'etichetta per aggiornare le autorizzazioni, la scadenza e le impostazioni di accesso offline.<br /><br />Per altre informazioni, vedere [Per configurare un'etichetta per le impostazioni di protezione](configure-policy-protection.md#to-configure-a-label-for-protection-settings).
 |Archiviare un modello|Impostare lo stato dell'etichetta su **Disabilitato**.

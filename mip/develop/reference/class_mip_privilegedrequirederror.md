@@ -5,20 +5,20 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: a6de544de2facac3c9f446c5b46443b9ff2babe7
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 1b0b0e7f7f51ac356276fc2e1b80cceec5126d17
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055588"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558296"
 ---
 # <a name="class-mipprivilegedrequirederror"></a>Classe mip::PrivilegedRequiredError 
 L'etichetta corrente è stata assegnata come operazione con privilegi (equivalente a un'operazione dell'amministratore), quindi non è possibile eseguirne l'override.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 _Non ancora documentato._

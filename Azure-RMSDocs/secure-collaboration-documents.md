@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ae95c9d4ffc7bae7004ad6e79a958c0c8836a22f
-ms.sourcegitcommit: 28c1de5f9d1426f160f0e0bafcf9f76769e662b6
+ms.openlocfilehash: c988dd65f677d69d362fe59f6a5eb0d631b23faa
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71679029"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561120"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configurazione della collaborazione per i documenti protetti con Azure Information Protection
 
@@ -30,9 +30,9 @@ Queste autorizzazioni sono denominate anche diritti di utilizzo e includono auto
 
 Quando si configurano queste autorizzazioni, è possibile specificare gli utenti cui sono destinate:
 
-- **Per gli utenti della propria organizzazione o di un'altra organizzazione che usa Azure Active Directory**: è possibile specificare account utente di Azure AD, gruppi di Azure AD o tutti gli utenti dell'organizzazione. 
+- **Per gli utenti nella stessa organizzazione o in una organizzazione diversa che usa Azure Active Directory**: è possibile specificare account utente Azure AD, gruppi Azure AD o tutti gli utenti nell'organizzazione. 
 
-- **Per gli utenti che non hanno un account Azure Active Directory**: specificare un indirizzo e-mail che verrà usato con un account Microsoft. Questo account può esistere già oppure gli utenti possono crearlo quando aprono il documento protetto. 
+- **Per gli utenti che non hanno un account Azure Active Directory**: specificare un indirizzo di posta elettronica che verrà usato con un account Microsoft. Questo account può esistere già oppure gli utenti possono crearlo quando aprono il documento protetto. 
     
     Per aprire documenti con un account Microsoft, gli utenti devono usare app di Office 365 (A portata di clic). Le altre edizioni e versioni di Office non supportano ancora l'apertura di documenti protetti di Office con un account Microsoft.
 
@@ -47,37 +47,37 @@ Questo esempio descrive in modo dettagliato la configurazione di un'etichetta es
 
 Poiché lo scenario limita l'accesso a specifici utenti, non include l'impostazione per tutti gli utenti autenticati. Per un esempio di configurazione di un'etichetta con questa impostazione, vedere [Esempio 5: Etichetta che crittografa il contenuto, ma non limita chi può accedervi](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
 
-1. Selezionare l'etichetta già inclusa nei criteri globali o in criteri con ambito. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)** .
+1. Selezionare l'etichetta già inclusa nei criteri globali o in criteri con ambito. Nel riquadro **protezione** assicurarsi che sia selezionata l'opzione **Azure (chiave Cloud)** .
     
 2. Verificare che sia selezionata l'opzione **Configura le autorizzazioni** e fare clic su **Aggiungi autorizzazioni**.
 
-3. Nel pannello **Aggiungi autorizzazioni**: 
+3. Nel riquadro **Aggiungi autorizzazioni** : 
     
    - Per il gruppo interno: selezionare **Cerca nella directory** per selezionare il gruppo, che deve essere abilitato per la posta elettronica.
     
    - Per tutti gli utenti nella prima organizzazione esterna: selezionare **Immettere i dettagli** e digitare il nome di un dominio nel tenant dell'organizzazione. Ad esempio, fabrikam.com.
     
-   - Per il gruppo nella seconda organizzazione esterna: sempre nella scheda **Immettere i dettagli** digitare l'indirizzo e-mail del gruppo nel tenant dell'organizzazione. Ad esempio sales@contoso.com.
+   - Per il gruppo nella seconda organizzazione esterna: sempre nella scheda **Immettere i dettagli**, digitare l'indirizzo di posta elettronica del gruppo nel tenant dell'organizzazione. Ad esempio, sales@contoso.com
     
-   - Per l'utente che non ha un account Azure AD: sempre nella scheda **Immettere i dettagli** digitare l'indirizzo e-mail dell'utente. Ad esempio bengi.turan@gmail.com. 
+   - Per l'utente che non ha un account Azure AD: sempre nella scheda **Immettere i dettagli**, digitare l'indirizzo di posta elettronica dell'utente. Ad esempio, bengi.turan@gmail.com 
 
-4. Per concedere le stesse autorizzazioni a tutti gli utenti: In **Scegliere le autorizzazioni dai valori preimpostati** selezionare le autorizzazioni da concedere: **Comproprietario**, **Coautore**, **Revisore** o **Personalizzate**.
+4. Per concedere le stesse autorizzazioni a tutti questi utenti: per **Scegliere le autorizzazioni dai valori preimpostati** selezionare **Comproprietario**, **Coautore**, **Revisore** o **Personalizzate** per selezionare le autorizzazioni che si vuole concedere.
     
     Ad esempio, le autorizzazioni configurate possono essere simili alle seguenti:
         
     ![Configurazione delle autorizzazioni per la collaborazione sicura](./media/collaboration-permissions.png)
 
-5. Fare clic su **OK** nel pannello **Aggiungi autorizzazioni**.
+5. Fare clic su **OK** nel riquadro **Aggiungi autorizzazioni** .
 
-6. Nel pannello **Protezione** fare clic su **OK**.
+6. Nel riquadro **protezione** fare clic su **OK**.
 
-7. Nel pannello **Etichetta** selezionare **Salva**. 
+7. Nel riquadro **etichetta** selezionare **Salva**. 
 
 ## <a name="applying-the-label-that-supports-secure-collaboration"></a>Applicazione dell'etichetta che supporta la collaborazione sicura
 
 Dopo aver configurato l'etichetta, questa può essere applicata ai documenti in diversi modi, tra cui i seguenti:
 
-|Metodi diversi per l'applicazione dell'etichetta|Altre informazioni|
+|Metodi diversi per l'applicazione dell'etichetta|Ulteriori informazioni|
 |---------------|----------|
 |Un utente seleziona manualmente l'etichetta quando il documento viene creato nell'applicazione di Office.|Gli utenti selezionano l'etichetta tramite il pulsante **Proteggi** sulla barra multifunzione di Office oppure sulla barra di Azure Information Protection.|
 |Agli utenti viene richiesto di selezionare un'etichetta quando viene salvato un nuovo documento.|È stata configurata l'[impostazione di criteri](configure-policy-settings.md) di Azure Information Protection denominata **All documents and emails must have a label** (Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta).|
@@ -95,7 +95,7 @@ Condividere il documento protetto allegandolo a un messaggio di posta elettronic
 
 ## <a name="opening-and-editing-the-protected-document"></a>Apertura e modifica del documento protetto
 
-Quando gli utenti autorizzati aprono il documento per la modifica, il documento viene aperto con un banner informativo che indica che le autorizzazioni sono limitate. Esempio:
+Quando gli utenti autorizzati aprono il documento per la modifica, il documento viene aperto con un banner informativo che indica che le autorizzazioni sono limitate. Ad esempio:
 
 ![Banner informativo di esempio sulle autorizzazioni di Azure Information Protection](./media/example-restricted-access-banner.png)
 

@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8df8af6462a1e574186f096c919b070d4c7b6812
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: dcab49ef780916ac5ddbcb0acba2a555da92ebbe
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444930"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559727"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Configurazione dei diritti di utilizzo per Azure Information Protection
 
@@ -132,7 +132,13 @@ In alternativa, è possibile modificare l'ereditarietà della protezione dei doc
 
 Se è necessario che un documento allegato mantenga la protezione originale, vedere [Proteggere la collaborazione ai documenti tramite Azure Information Protection](secure-collaboration-documents.md).
 
-Nota: se vengono visualizzati riferimenti a **DecryptAttachmentFromPortal**, questo parametro è ora deprecato per [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps). A meno che non sia stato impostato in precedenza, questo parametro non è disponibile. 
+Nota: se vengono visualizzati riferimenti a **DecryptAttachmentFromPortal**, questo parametro è ora deprecato per [Set-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps). A meno che non sia stato impostato in precedenza, questo parametro non è disponibile.
+
+## <a name="automatically-encrypt-pdf-documents-with-exchange-online"></a>Crittografa automaticamente i documenti PDF con Exchange Online
+
+Quando Exchange Online USA le nuove funzionalità per la crittografia dei messaggi di Office 365, è possibile crittografare automaticamente i documenti PDF non protetti quando sono allegati a un messaggio di posta elettronica crittografato. Il documento eredita le stesse autorizzazioni di quelle per il messaggio di posta elettronica. Per abilitare questa configurazione, impostare **EnablePdfEncryption $true** con [Set-IRMConfiguration](https://docs.microsoft.com/powershell/module/exchange/encryption-and-certificates/set-irmconfiguration?view=exchange-ps).
+
+I destinatari che non dispongono già di un Reader installato che supporta lo standard ISO per la crittografia PDF possono installare uno dei lettori elencati nei [lettori PDF che supportano Microsoft Information Protection](./rms-client/protected-pdf-readers.md). In alternativa, i destinatari possono leggere il documento PDF protetto nel portale OME.
 
 ## <a name="rights-management-issuer-and-rights-management-owner"></a>Emittente di Rights Management e proprietario di Rights Management
 
@@ -168,7 +174,7 @@ Quando un utente apre un documento o messaggio di posta elettronica protetto da 
 
 Per aprire il contenuto un utente deve avere una licenza d'uso valida oltre che un suo certificato per account con diritti, un certificato che viene concesso quando [viene inizializzato l'ambiente utente](how-does-it-work.md#initializing-the-user-environment) e che viene rinnovato ogni 31 giorni.
 
-Per la durata della licenza d'uso, all'utente non viene richiesto di ripetere l'autenticazione o specificare una nuova autorizzazione per il contenuto. Ciò consente all'utente di continuare ad aprire il documento o messaggio di posta elettronica protetto senza una connessione Internet. Quando scade il periodo di validità della licenza d'uso, al successivo accesso al documento o messaggio di posta elettronica protetto l'utente deve ripetere l'autenticazione o specificare una nuova autorizzazione. 
+Per la durata della licenza d'uso, all'utente non viene richiesto di ripetere l'autenticazione o specificare una nuova autorizzazione per il contenuto. Ciò consente all'utente di continuare ad aprire il documento o il messaggio di posta elettronica protetto senza una connessione Internet. Quando scade il periodo di validità della licenza d'uso, al successivo accesso al documento o messaggio di posta elettronica protetto l'utente deve ripetere l'autenticazione o specificare una nuova autorizzazione. 
 
 Quando i documenti e messaggi di posta elettronica sono protetti tramite un'etichetta o modello che definisce le impostazioni di protezione, è possibile modificare queste impostazioni nell'etichetta o modello senza che sia necessario proteggere nuovamente il contenuto. Se l'utente ha già accesso al contenuto, le modifiche vengono applicate dopo la scadenza del contratto di licenza. Quando tuttavia gli utenti applicano autorizzazioni personalizzate (note anche come criteri per i diritti di utilizzo ad hoc) e queste autorizzazioni devono essere modificate dopo che il documento o messaggio di posta elettronica viene protetto, il contenuto deve essere protetto nuovamente con le nuove autorizzazioni. Le autorizzazioni personalizzate per un messaggio di posta elettronica vengono implementate con l'opzione Non inoltrare.
 

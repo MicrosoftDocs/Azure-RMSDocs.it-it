@@ -5,35 +5,37 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 24f22f28bf8082d0a0347526f5bc87453c9ba4e2
-ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
+ms.date: 10/29/2019
+ms.openlocfilehash: 18cf28b380e5636b8948f133bceabd61b504d8fb
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71070511"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558968"
 ---
 # <a name="class-mipcomputeengine"></a>Classe MIP:: ComputeEngine 
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std::\<vector std::\<shared_ptr\>label\>& ListSensitivityLabels ()  | _Non ancora documentato._
-public std:: shared_ptr\<ContentLabel\> GetSensitivityLabel (ComputeEngineContext & context, const DocumentState & state)  | _Non ancora documentato._
-public std:: Vector\<std:: shared_ptr\<Action\> \> ComputeActions (ComputeEngineContext & context, const DocumentState & DocumentState, const ApplicationActionState & actionState)  | _Non ancora documentato._
-public void NotifyCommittedActions (ComputeEngineContext & context, const DocumentState & documentState, const ApplicationActionState & actionState)  | _Non ancora documentato._
-public virtual ~ ComputeEngine ()  | _Non ancora documentato._
-public static MIP_UPE_CORE_API std:: shared_ptr&lt;ComputeEngine&gt; MIP:: ComputeEngine:: create  | _Non ancora documentato._
-public static MIP_UPE_CORE_API std:: shared_ptr&lt;ComputeEngineContext&gt; MIP:: ComputeEngine:: CreateContext  | _Non ancora documentato._
+public const std:: Vector\<std:: shared_ptr\<label\>\>& ListSensitivityLabels ()  | Non ancora documentato.
+public std:: shared_ptr\<ContentLabel\> GetSensitivityLabel (ComputeEngineContext & context, const DocumentState & state)  | Non ancora documentato.
+public std:: Vector\<std:: shared_ptr\<Action\>\> ComputeActions (ComputeEngineContext & context, const DocumentState & documentState, const ApplicationActionState & actionState)  | Non ancora documentato.
+public void NotifyCommittedActions (ComputeEngineContext & context, const DocumentState & documentState, const ApplicationActionState & actionState)  | Non ancora documentato.
+public virtual ~ ComputeEngine ()  | Non ancora documentato.
+public static MIP_UPE_CORE_API std:: shared_ptr&lt;ComputeEngine&gt; MIP:: ComputeEngine:: create  | Non ancora documentato.
+public static MIP_UPE_CORE_API std:: shared_ptr&lt;ComputeEngineContext&gt; MIP:: ComputeEngine:: CreateContext  | Non ancora documentato.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="listsensitivitylabels-function"></a>ListSensitivityLabels (funzione)
 _Non ancora documentato._
 
+  
 ### <a name="getsensitivitylabel-function"></a>GetSensitivityLabel (funzione)
 _Non ancora documentato._
 
+  
 ### <a name="computeactions-function"></a>ComputeActions (funzione)
 _Non ancora documentato._
 

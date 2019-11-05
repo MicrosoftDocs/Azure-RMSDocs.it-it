@@ -5,27 +5,27 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 96b494fb84fc7c71eda5ea09ba7c96388452f786
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: c4464c4705af082c8c5f1e63fde217b083a24d7e
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056791"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560513"
 ---
 # <a name="class-mipsyncfilepolicydata"></a>Classe MIP:: SyncFilePolicyData 
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-Public Const LabelGroupData * GetLabelGroupData () const  | _Non ancora documentato._
-public const std::\<vector std::\<unique_ptr\>PolicyPackageData\>& GetPoliciesPackageData () const  | _Non ancora documentato._
-public const std:: String & GetUpn () const  | _Non ancora documentato._
-public const std::\<unordered_map std:: String, std::\>String & getclassification () const  | _Non ancora documentato._
-public const std:: String & GetUserObjectId () const  | _Non ancora documentato._
-public virtual ~ SyncFilePolicyData ()  | _Non ancora documentato._
+Public Const LabelGroupData * GetLabelGroupData () const  | Non ancora documentato.
+public const std:: Vector\<std:: unique_ptr\<PolicyPackageData\>\>& GetPoliciesPackageData () const  | Non ancora documentato.
+public const std:: String & GetUpn () const  | Non ancora documentato.
+public const std:: unordered_map\<std:: String, std:: String\>& getclassification () const  | Non ancora documentato.
+public const std:: String & GetUserObjectId () const  | Non ancora documentato.
+public virtual ~ SyncFilePolicyData ()  | Non ancora documentato.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getlabelgroupdata-function"></a>GetLabelGroupData (funzione)
 _Non ancora documentato._

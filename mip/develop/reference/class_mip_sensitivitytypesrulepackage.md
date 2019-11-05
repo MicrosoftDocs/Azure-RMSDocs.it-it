@@ -5,23 +5,23 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: de16991643ced6e1731bb43bddd010704459b7f9
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: f52495b61aa4b74d8080bde33c5082107b22caf7
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057153"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560542"
 ---
 # <a name="class-mipsensitivitytypesrulepackage"></a>Classe MIP:: SensitivityTypesRulePackage 
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const std:: String & GetRulePackageId () const  |  Ottenere l'ID del pacchetto di regole.
 public const std:: String & GetRulePackage () const  |  Ottenere il pacchetto di regole.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getrulepackageid-function"></a>GetRulePackageId (funzione)
 Ottenere l'ID del pacchetto di regole.
@@ -33,4 +33,4 @@ Ottenere l'ID del pacchetto di regole.
 Ottenere il pacchetto di regole.
 
   
-**Restituisce**: Pacchetto di regole
+**Restituisce**: il pacchetto di regole

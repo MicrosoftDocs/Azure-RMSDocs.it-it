@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: de6d00cbd624ff21175b5020cd3b872269f9c926
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: 7d6d35d5a1c560468845d0b04ae27e32dc40b671
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684114"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559272"
 ---
 # <a name="add-or-remove-a-label-to-or-from-an-azure-information-protection-policy"></a>Aggiungere o rimuovere un'etichetta a o da un criterio di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Dopo aver creato un'etichetta di Azure Information Protection, è possibile aggiungerla a un criterio in modo da renderla disponibile per gli utenti. Se l'etichetta è per tutti gli utenti, aggiungerla ai criteri globali. Se l'etichetta è per un subset di utenti, aggiungerla a un criterio con ambito. Un'etichetta può essere aggiunta a un solo criterio. 
 
@@ -36,17 +36,17 @@ Se è necessario creare un criterio con ambito in modo che l'etichetta si applic
 
 ## <a name="to-add-or-remove-a-label-to-or-from-a-policy"></a>Per aggiungere o rimuovere un'etichetta a o da un criterio
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**.
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection** .
     
-    Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
 
-2. Dall'opzione di menu **Classificazioni** > **Criteri**: nel pannello **Azure Information Protection** - **Criteri** selezionare **Globale** se l'etichetta da aggiungere o rimuovere si applica a tutti gli utenti.
+2. Dall'opzione di menu **classificazioni** > **criteri** : nel riquadro **criteri** di - **Azure Information Protection** selezionare **globale** se l'etichetta da aggiungere o rimuovere si applica a tutti gli utenti.
 
     Se l'etichetta da aggiungere o rimuovere si applica a un sottoinsieme di utenti, selezionare invece il criterio con ambito.
 
-3. Nel pannello **Criteri** selezionare **Aggiungi o rimuovi etichette**.
+3. Nel riquadro **criteri** selezionare **Aggiungi o Rimuovi etichette**.
 
-4. Nel pannello **Criteri: Aggiungi o rimuovi etichette** sono visualizzate tutte le etichette, con una casella di controllo selezionata se sono già in un criterio e il nome del criterio corrispondente nella colonna **CRITERIO**.
+4. Nel riquadro **criteri: Aggiungi o Rimuovi etichette** è possibile visualizzare tutte le etichette con una casella di controllo selezionata se sono già presenti in un criterio e il nome dei criteri corrispondente nella colonna **criterio** .
      
     Le etichette secondarie vengono visualizzate come rientrate. In un criterio con ambito, le etichette ereditate dai criteri globali vengono visualizzate come non disponibili.
     

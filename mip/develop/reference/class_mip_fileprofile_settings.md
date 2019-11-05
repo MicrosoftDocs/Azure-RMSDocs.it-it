@@ -5,162 +5,98 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: e559228104450c83063634470c285ed1057aab60
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 21bbda3424f5c436324ce97137082200ee8d9837
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056074"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561093"
 ---
 # <a name="class-mipfileprofilesettings"></a>Classe mip::FileProfile::Settings 
-Oggetto [Settings](class_mip_fileprofile_settings.md) usato da [FileProfile](class_mip_fileprofile.md) durante la creazione e per tutta la sua durata.
+Impostazioni utilizzate da fileprofile durante la sua creazione e per tutta la sua durata.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-impostazioni pubbliche (const std:: String & path, CacheStorageType CacheStorageType, std::\<shared_ptr\> AuthDelegate AuthDelegate, std::\<shared_ptr\> ConsentDelegate ConsentDelegate, std:: Observer Observer shared_ptr\<, const ApplicationInfo & ApplicationInfo)\>  |  Costruttore [FileProfile::Settings](class_mip_fileprofile_settings.md).
-impostazioni pubbliche (const std::\<shared_ptr\>MipContext & MipContext, CacheStorageType CacheStorageType, std::\<shared_ptr\> AuthDelegate AuthDelegate, std::\< shared_ptr ConsentDelegate\> ConsentDelegate, std:: shared_ptr\<Observer\> Observer)  |  Costruttore [FileProfile::Settings](class_mip_fileprofile_settings.md).
-public const std::string& GetPath() const  |  Ottiene il percorso in cui sono archiviati i dati di registrazione e telemetria e altre informazioni sugli stati persistenti.
+Impostazioni pubbliche (const std:: shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, std:: shared_ptr\<AuthDelegate\> authDelegate, std:: shared_ptr\<ConsentDelegate\> consentDelegate, std:: shared_ptr\<Observer\> Observer)  |  Costruttore fileprofile:: Settings.
 public CacheStorageType GetCacheStorageType () const  |  Ottiene un valore che indica se le cache sono archiviate in memoria o su disco.
 public std:: shared_ptr\<AuthDelegate\> GetAuthDelegate () const  |  Ottiene il delegato dell'autenticazione usato per l'acquisizione dei token di autenticazione.
 public std:: shared_ptr\<ConsentDelegate\> GetConsentDelegate () const  |  Ottiene il delegato del consenso usato per richiedere il consenso dell'utente che si connette ai servizi.
-public std:: shared_ptr\<\> Observer getobserver () const  |  Ottiene l'observer che riceve le notifiche degli eventi correlati a [FileProfile](class_mip_fileprofile.md).
-public const ApplicationInfo& GetApplicationInfo() const  |  Ottiene informazioni sull'applicazione che sta utilizzando l'SDK.
+public std:: shared_ptr\<Observer\> getobserver () const  |  Ottiene l'osservatore che riceve le notifiche degli eventi correlati a fileprofile.
 public std:: shared_ptr\<MipContext\> GetMipContext () const  |  Ottiene il contesto MIP che rappresenta lo stato condiviso in tutti i profili.
-public std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate () const  |  Ottiene il delegato del logger (se disponibile) fornito dall'applicazione.
-public void SetLoggerDelegate (const std::\<shared_ptr\>LoggerDelegate & LoggerDelegate)  |  Esegue l'override del logger predefinito.
 public std:: shared_ptr\<HttpDelegate\> GetHttpDelegate () const  |  Ottiene il delegato HTTP (se disponibile) specificato dall'applicazione.
-public void SetHttpDelegate (const std::\<shared_ptr\>HttpDelegate & HttpDelegate)  |  Esegue l'override dello stack HTTP predefinito con quello del client.
+public void SetHttpDelegate (const std:: shared_ptr\<HttpDelegate\>& httpDelegate)  |  Esegue l'override dello stack HTTP predefinito con quello del client.
 public std:: shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  Ottenere il delegato TaskDispatcher (se presente) fornito dall'applicazione.
-public void SetTaskDispatcherDelegate (const std::\<shared_ptr\>TaskDispatcherDelegate & TaskDispatcherDelegate)  |  Eseguire l'override della gestione delle attività modo asincrono rispetto predefinite con il client.
-public void OptOutTelemetry()  |  Rifiuta esplicitamente la raccolta di tutti i dati di telemetria.
-public bool IsTelemetryOptedOut() const  |  Ottiene un valore che indica se la raccolta dei dati di telemetria deve essere disabilitata o meno.
+public void SetTaskDispatcherDelegate (const std:: shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Eseguire l'override della gestione delle attività modo asincrono rispetto predefinite con il client.
 public void SetSessionId(const std::string& sessionId)  |  Imposta l'ID sessione.
 public const std::string& GetSessionId() const  |  Ottiene l'ID sessione.
-public void SetMinimumLogLevel(LogLevel logLevel)  |  Imposta il livello di log minimo che attiverà un evento di registrazione.
-public LogLevel GetMinimumLogLevel() const  |  Ottiene il livello di log minimo che attiverà un evento di registrazione.
 public void SetCanCacheLicenses (bool canCacheLicenses)  |  Configura se le licenze dell'utente finale (contratti) verranno memorizzate nella cache locale.
 public bool CanCacheLicenses () const  |  Ottiene un valore che indica se le licenze dell'utente finale (contratti) sono memorizzate nella cache locale.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="settings-function"></a>Funzione Settings
-Costruttore [FileProfile::Settings](class_mip_fileprofile_settings.md).
+Costruttore fileprofile:: Settings.
 
 Parametri:  
-* **percorso**: Percorso del file in cui sono archiviati i dati di registrazione, telemetria e altro stato persistente 
+* **mipContext**: impostazioni di contesto globali 
 
 
-* **cacheStorageType**: Archiviare lo stato memorizzato nella cache in memoria o su disco 
+* **cacheStorageType**: archivia lo stato memorizzato nella cache in memoria o su disco 
 
 
-* **authDelegate**: Delegato di autenticazione usato per l'acquisizione dei token di autenticazione 
+* **authDelegate**: delegato dell'autenticazione usato per l'acquisizione dei token di autenticazione 
 
 
-* **consentDelegate**: Delegato usato per ottenere l'autorizzazione utente per accedere alle risorse esterne 
+* **consentDelegate**: delegato usato per ottenere l'autorizzazione utente per accedere alle risorse esterne 
 
 
-* **observer**: Istanza [Observer](class_mip_fileprofile_observer.md) che riceverà le notifiche degli eventi correlati a [fileprofile](class_mip_fileprofile.md)
+* **Observer**: istanza Observer che riceverà le notifiche degli eventi correlati a fileprofile
 
 
-* **applicationInfo**: Informazioni sull'applicazione che utilizza l'SDK
-
-
-> Deprecato Questo costruttore sarà presto deprecato a favore di uno che richiede un parametro MIP:: MipContext
-  
-### <a name="settings-function"></a>Funzione Settings
-Costruttore [FileProfile::Settings](class_mip_fileprofile_settings.md).
-
-Parametri:  
-* **mipContext**: Impostazioni di contesto globali 
-
-
-* **cacheStorageType**: Archiviare lo stato memorizzato nella cache in memoria o su disco 
-
-
-* **authDelegate**: Delegato di autenticazione usato per l'acquisizione dei token di autenticazione 
-
-
-* **consentDelegate**: Delegato usato per ottenere l'autorizzazione utente per accedere alle risorse esterne 
-
-
-* **observer**: Istanza [Observer](class_mip_fileprofile_observer.md) che riceverà le notifiche degli eventi correlati a [fileprofile](class_mip_fileprofile.md)
-
-
-  
-### <a name="getpath-function"></a>GetPath (funzione)
-Ottiene il percorso in cui sono archiviati i dati di registrazione e telemetria e altre informazioni sugli stati persistenti.
-
-  
-**Restituisce**: Percorso in cui sono archiviati i dati di registrazione, telemetria e altro stato persistente
-> Deprecato Questo metodo sarà presto deprecato a favore di ottenere/impostare i dati del contesto comuni tramite MIP:: MipContext
   
 ### <a name="getcachestoragetype-function"></a>GetCacheStorageType (funzione)
 Ottiene un valore che indica se le cache sono archiviate in memoria o su disco.
 
   
-**Restituisce**: Tipo di archiviazione usato
+**Restituisce**: tipo di archiviazione usato
   
 ### <a name="getauthdelegate-function"></a>GetAuthDelegate (funzione)
 Ottiene il delegato dell'autenticazione usato per l'acquisizione dei token di autenticazione.
 
   
-**Restituisce**: Delegato di autenticazione usato per l'acquisizione dei token di autenticazione
+**Restituisce**: delegato dell'autenticazione usato per l'acquisizione dei token di autenticazione
   
 ### <a name="getconsentdelegate-function"></a>GetConsentDelegate (funzione)
 Ottiene il delegato del consenso usato per richiedere il consenso dell'utente che si connette ai servizi.
 
   
-**Restituisce**: Delegato di consenso usato per richiedere il consenso dell'utente
+**Restituisce**: delegato del consenso usato per richiedere il consenso dell'utente
   
 ### <a name="getobserver-function"></a>Getobserver (funzione)
-Ottiene l'observer che riceve le notifiche degli eventi correlati a [FileProfile](class_mip_fileprofile.md).
+Ottiene l'osservatore che riceve le notifiche degli eventi correlati a fileprofile.
 
   
-**Restituisce**: [Observer](class_mip_fileprofile_observer.md) che riceve le notifiche degli eventi correlati a [fileprofile](class_mip_fileprofile.md)
-  
-### <a name="getapplicationinfo-function"></a>GetApplicationInfo (funzione)
-Ottiene informazioni sull'applicazione che sta utilizzando l'SDK.
-
-  
-**Restituisce**: Informazioni sull'applicazione che utilizza l'SDK
-> Deprecato Questo metodo sarà presto deprecato a favore di ottenere/impostare i dati del contesto comuni tramite MIP:: MipContext
+**Restituisce**: Observer che riceve le notifiche degli eventi correlati a fileprofile
   
 ### <a name="getmipcontext-function"></a>GetMipContext (funzione)
 Ottiene il contesto MIP che rappresenta lo stato condiviso in tutti i profili.
 
   
-**Restituisce**: Contesto MIP
-  
-### <a name="getloggerdelegate-function"></a>GetLoggerDelegate (funzione)
-Ottiene il delegato del logger (se disponibile) fornito dall'applicazione.
-
-  
-**Restituisce**: Logger
-> Deprecato Questo metodo sarà presto deprecato a favore di ottenere/impostare i dati del contesto comuni tramite MIP:: MipContext
-  
-### <a name="setloggerdelegate-function"></a>SetLoggerDelegate (funzione)
-Esegue l'override del logger predefinito.
-
-Parametri:  
-* **loggerDelegate**: Interfaccia di callback di registrazione implementata dalle applicazioni client
-
-
-Questo metodo deve essere chiamato dalle applicazioni client che usano la propria implementazione del logger 
-> Deprecato Questo metodo sarà presto deprecato a favore di ottenere/impostare i dati del contesto comuni tramite MIP:: MipContext
+**Restituisce**: contesto MIP
   
 ### <a name="gethttpdelegate-function"></a>GetHttpDelegate (funzione)
 Ottiene il delegato HTTP (se disponibile) specificato dall'applicazione.
 
   
-**Restituisce**: Delegato HTTP da usare per le operazioni HTTP
+**Restituisce**: delegato HTTP da usare per le operazioni HTTP
   
 ### <a name="sethttpdelegate-function"></a>SetHttpDelegate (funzione)
 Esegue l'override dello stack HTTP predefinito con quello del client.
 
 Parametri:  
-* **httpDelegate**: Interfaccia di callback HTTP implementata dall'applicazione client
+* **httpDelegate**: interfaccia di callback HTTP implementata dall'applicazione client
 
 
   
@@ -168,32 +104,22 @@ Parametri:
 Ottenere il delegato TaskDispatcher (se presente) fornito dall'applicazione.
 
   
-**Restituisce**: Delegato TaskDispatcher da usare per l'esecuzione di attività asincrone
+**Restituisce**: delegato TaskDispatcher da usare per l'esecuzione di attività asincrone
   
 ### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate (funzione)
 Eseguire l'override della gestione delle attività modo asincrono rispetto predefinite con il client.
 
 Parametri:  
-* **taskDispatcherDelegate**: Interfaccia di callback per l'invio di attività implementata dall'applicazione client
+* **taskDispatcherDelegate**: interfaccia di callback di invio dell'attività implementata dall'applicazione client
 
 
-  
-### <a name="optouttelemetry-function"></a>OptOutTelemetry (funzione)
-Rifiuta esplicitamente la raccolta di tutti i dati di telemetria.
-> Deprecato Questo metodo sarà presto deprecato a favore di ottenere/impostare i dati del contesto comuni tramite MIP:: MipContext
-  
-### <a name="istelemetryoptedout-function"></a>IsTelemetryOptedOut (funzione)
-Ottiene un valore che indica se la raccolta dei dati di telemetria deve essere disabilitata o meno.
-
-  
-**Restituisce**: Se la raccolta di dati di telemetria deve essere disabilitata o meno
-> Deprecato Questo metodo sarà presto deprecato a favore di ottenere/impostare i dati del contesto comuni tramite MIP:: MipContext
+le attività possono fare riferimento a oggetti del profilo che ne impediscono la distruzione come risultato taskdispatcher le code non devono essere condivise.
   
 ### <a name="setsessionid-function"></a>Funzione SessionId
 Imposta l'ID sessione.
 
 Parametri:  
-* **sessionId**: ID sessione che verrà usato per correlare log/telemetria
+* **sessionId**: ID sessione che verrà usato per la correlazione di log/telemetria
 
 
   
@@ -201,29 +127,13 @@ Parametri:
 Ottiene l'ID sessione.
 
   
-**Restituisce**: ID sessione che verrà usato per correlare log/telemetria
-  
-### <a name="setminimumloglevel-function"></a>SetMinimumLogLevel (funzione)
-Imposta il livello di log minimo che attiverà un evento di registrazione.
-
-Parametri:  
-* **logLevel**: livello di log minimo che attiverà un evento di registrazione.
-
-
-> Deprecato Questo metodo sarà presto deprecato a favore di ottenere/impostare i dati del contesto comuni tramite MIP:: MipContext
-  
-### <a name="getminimumloglevel-function"></a>GetMinimumLogLevel (funzione)
-Ottiene il livello di log minimo che attiverà un evento di registrazione.
-
-  
-**Restituisce**: Livello di registrazione più basso che attiverà un evento di registrazione.
-> Deprecato Questo metodo sarà presto deprecato a favore di ottenere/impostare i dati del contesto comuni tramite MIP:: MipContext
+**Restituisce**: ID sessione che verrà usato per la correlazione di log/telemetria
   
 ### <a name="setcancachelicenses-function"></a>SetCanCacheLicenses (funzione)
 Configura se le licenze dell'utente finale (contratti) verranno memorizzate nella cache locale.
 
 Parametri:  
-* **canCacheLicenses**: Indica se il motore deve memorizzare nella cache una licenza quando apre il contenuto protetto
+* **canCacheLicenses**: indica se il motore deve memorizzare nella cache una licenza quando apre il contenuto protetto
 
 
 Se true, l'apertura del contenuto protetto memorizza nella cache la licenza associata localmente. Se false, l'apertura del contenuto protetto eseguirà sempre l'operazione HTTP per acquisire la licenza dal servizio RMS.
@@ -232,4 +142,4 @@ Se true, l'apertura del contenuto protetto memorizza nella cache la licenza asso
 Ottiene un valore che indica se le licenze dell'utente finale (contratti) sono memorizzate nella cache locale.
 
   
-**Restituisce**: Configurazione della memorizzazione nella cache delle licenze
+**Restituisce**: configurazione della memorizzazione nella cache delle licenze

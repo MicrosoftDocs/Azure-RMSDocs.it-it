@@ -13,12 +13,12 @@ ms.subservice: analytics
 ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 616e273f3d3a9a615e752e4fb9587165aac15a23
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: de74d15b2db84cc13cbc54943675232e8d659df4
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445073"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561376"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection
 
@@ -163,7 +163,7 @@ Poiché questa funzionalità usa Monitoraggio di Azure, il controllo degli acces
 
 Dettagli:
 
-1. Uno dei [ruoli di amministratore di Azure AD](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) seguenti per accedere al pannello di analisi di Azure Information Protection:
+1. Uno dei seguenti [ruoli di amministratore Azure ad](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) per accedere al riquadro analisi Azure Information Protection:
     
     - Per creare l'area di lavoro di Log Analytics o per creare query personalizzate:
     
@@ -219,15 +219,15 @@ I log di monitoraggio di Azure hanno una funzionalità di **utilizzo e costi sti
 
 ## <a name="configure-a-log-analytics-workspace-for-the-reports"></a>Configurare un'area di lavoro di Log Analytics per i report
 
-1. Se non già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](https://portal.azure.com) con un account che dispone delle [autorizzazioni necessarie per le analisi di Azure Information Protection](#permissions-required-for-azure-information-protection-analytics). Quindi passare al pannello **Azure Information Protection**. 
+1. Se non già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](https://portal.azure.com) con un account che dispone delle [autorizzazioni necessarie per le analisi di Azure Information Protection](#permissions-required-for-azure-information-protection-analytics). Passare quindi al riquadro **Azure Information Protection** . 
     
-    Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
     
 2. Individuare le opzioni del menu **Gestisci** e selezionare **Configura le analisi (anteprima)** .
 
-3. Nel pannello **Log Analytics di Azure Information Protection** viene visualizzato un elenco delle eventuali aree di lavoro di Log Analytics di proprietà del tenant. Effettuare una delle operazioni seguenti:
+3. Nel riquadro **Azure Information Protection log Analytics** viene visualizzato un elenco di tutte le aree di lavoro log Analytics di proprietà del tenant. Effettuare una delle operazioni seguenti:
     
-    - Per creare una nuova area di lavoro di Log Analytics: selezionare **Crea nuova area di lavoro**, quindi nel pannello **Area di lavoro di Log Analytics** specificare le informazioni richieste.
+    - Per creare una nuova area di lavoro Log Analytics: selezionare **Crea nuova area di lavoro**e nel riquadro **area di lavoro di log Analytics** fornire le informazioni richieste.
     
     - Per usare un'area di lavoro di Log Analytics esistente, selezionare l'area di lavoro dall'elenco.
     
@@ -247,7 +247,7 @@ A questo punto si è pronti per visualizzare i report.
 
 ## <a name="how-to-view-the-reports"></a>Come visualizzare i report
 
-Nel pannello Azure Information Protection trovare le opzioni del menu **Dashboard** e scegliere una delle opzioni seguenti:
+Dal riquadro Azure Information Protection individuare le opzioni del menu **Dashboard** e selezionare una delle opzioni seguenti:
 
 - **Report di utilizzo (anteprima)** : usare questo report per vedere come vengono usate le etichette.
 
@@ -269,7 +269,7 @@ Nel pannello Azure Information Protection trovare le opzioni del menu **Dashboar
 
 ## <a name="how-to-modify-the-reports-and-create-custom-queries"></a>Come modificare i report e creare query personalizzate
 
-Selezionare l'icona della query nel dashboard per aprire un pannello **Ricerca log**: 
+Selezionare l'icona della query nel dashboard per aprire un riquadro **Ricerca log** : 
 
 ![Icona di Log Analytics per personalizzare i report di Azure Information Protection](./media/log-analytics-icon.png)
 

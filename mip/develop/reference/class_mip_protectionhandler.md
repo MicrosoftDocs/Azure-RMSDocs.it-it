@@ -5,26 +5,26 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 28250cc27adeb18c2ca723084267341798f5efa7
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 6b5468986d62c01d2d3f0b55a57946d5fa06bab3
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057576"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560107"
 ---
 # <a name="class-mipprotectionhandler"></a>Classe mip::ProtectionHandler 
 Gestisce azioni correlate alla protezione per una configurazione di protezione specifica.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public std:: shared_ptr\<Stream\> CreateProtectedStream (const std::\<shared_ptr\>Stream & backingStream, int64_t contentStartPosition, int64_t contentSize)  |  Crea un flusso protetto che consentirà la crittografia/decrittografia del contenuto.
+public std:: shared_ptr\<Stream\> CreateProtectedStream (const std:: shared_ptr\<Stream\>& backingStream, int64_t contentStartPosition, int64_t contentSize)  |  Crea un flusso protetto che consentirà la crittografia/decrittografia del contenuto.
 public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Crittografa un buffer.
 public int64_t DecryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Decrittografa un buffer.
-public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Calcola la dimensione (in byte) del contenuto se fosse da crittografare con questo [ProtectionHandler](class_mip_protectionhandler.md).
-public int64_t GetBlockSize()  |  Ottiene la dimensione del blocco (in byte) per la modalità crittografia usata da questo [ProtectionHandler](class_mip_protectionhandler.md).
-public std:: Vector\<std:: String\> getrights () const  |  Ottiene i diritti concessi all'utente/identità associata a questo [ProtectionHandler](class_mip_protectionhandler.md).
+public int64_t GetProtectedContentLength(int64_t unprotectedLength, bool includesFinalBlock)  |  Calcola le dimensioni (in byte) del contenuto se deve essere crittografato con questo ProtectionHandler.
+public int64_t GetBlockSize()  |  Ottiene la dimensione del blocco (in byte) per la modalità di crittografia utilizzata da questo ProtectionHandler.
+public std:: Vector\<std:: String\> getrights () const  |  Ottiene i diritti concessi all'utente/identità associata a questo ProtectionHandler.
 public bool AccessCheck(const std::string& right) const  |  Controlla se il gestore di protezione concede l'accesso utente al diritto specificato.
 public const std::string GetIssuedTo()  |  Ottiene l'utente associato al gestore di protezione.
 public const std::string GetOwner()  |  Ottiene indirizzo e-mail del proprietario del contenuto.
@@ -33,160 +33,160 @@ public std:: shared_ptr\<ProtectionDescriptor\> GetProtectionDescriptor ()  |  O
 public const std::string GetContentId()  |  Ottiene l'identificatore univoco del documento/contenuto.
 public bool DoesUseDeprecatedAlgorithms()  |  Ottiene un valore che indica se il gestore di protezione usa o meno algoritmi di crittografia deprecati per compatibilità con le versioni precedenti.
 public bool IsAuditedExtractAllowed()  |  Ottiene un valore che indica se il gestore di protezione concede o meno all'utente il diritto 'audited extract'.
-public const std::\<vector\> uint8_t GetSerializedPublishingLicense ()  |  Serializza [ProtectionHandler](class_mip_protectionhandler.md) in una licenza di pubblicazione
+public const std:: Vector\<uint8_t\> GetSerializedPublishingLicense ()  |  Serializzare ProtectionHandler in una licenza di pubblicazione (PL)
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="createprotectedstream-function"></a>CreateProtectedStream (funzione)
 Crea un flusso protetto che consentirà la crittografia/decrittografia del contenuto.
 
 Parametri:  
-* **backingStream**: Flusso di backup da cui leggere/scrivere 
+* **backingStream**: flusso sottostante da cui leggere/scrivere 
 
 
-* **contentStartPosition**: Posizione iniziale (in byte) all'interno del flusso di backup in cui inizia il contenuto protetto 
+* **contentStartPosition**: posizione di inizio (in byte) all'interno del flusso sottostante dove inizia il contenuto protetto 
 
 
-* **contentSize**: Dimensioni (in byte) del contenuto protetto nel flusso di backup
+* **contentSize**: dimensione (in byte) del contenuto protetto all'interno del flusso sottostante
 
 
 
   
-**Restituisce**: Flusso protetto
+**Restituisce**: flusso protetto
   
 ### <a name="encryptbuffer-function"></a>EncryptBuffer (funzione)
 Crittografa un buffer.
 
 Parametri:  
-* **offsetFromStart**: Posizione relativa di inputBuffer dall'inizio del contenuto non crittografato 
+* **offsetFromStart**: posizione relativa di inputBuffer dall'inizio del contenuto di testo non crittografato 
 
 
-* **inputBuffer**: Buffer di contenuto non crittografato che verrà crittografato 
+* **inputBuffer**: buffer di contenuto di testo non crittografato che verrà crittografato 
 
 
-* **inputBufferSize**: Dimensioni (in byte) del buffer di input 
+* **inputBufferSize**: dimensione (in byte) del buffer di input 
 
 
-* **outputBuffer**: Buffer in cui verrà copiato il contenuto crittografato 
+* **outputBuffer**: buffer in cui verrà copiato il contenuto crittografato 
 
 
-* **outputBufferSize**: Dimensioni (in byte) del buffer di output 
+* **outputBufferSize**: dimensione (in byte) del buffer di output 
 
 
-* **isFinal**: Se il buffer di input contiene i byte non crittografati finali
+* **isFinal**: ottiene un valore che indica se il buffer di input contiene o meno i byte di testo non crittografato finali
 
 
 
   
-**Restituisce**: Dimensioni effettive (in byte) del contenuto crittografato
+**Restituisce**: dimensione effettiva (in byte) del contenuto crittografato
   
 ### <a name="decryptbuffer-function"></a>DecryptBuffer (funzione)
 Decrittografa un buffer.
 
 Parametri:  
-* **offsetFromStart**: Posizione relativa di inputBuffer dall'inizio del contenuto crittografato 
+* **offsetFromStart**: posizione relativa di inputBuffer dall'inizio del contenuto crittografato 
 
 
-* **inputBuffer**: Buffer di contenuto crittografato che verrà decrittografato 
+* **inputBuffer**: buffer di contenuto crittografato che verrà decrittografato 
 
 
-* **inputBufferSize**: Dimensioni (in byte) del buffer di input 
+* **inputBufferSize**: dimensione (in byte) del buffer di input 
 
 
-* **outputBuffer**: Buffer in cui verrà copiato il contenuto decrittografato 
+* **outputBuffer**: buffer in cui verrà copiato il contenuto decrittografato 
 
 
-* **outputBufferSize**: Dimensioni (in byte) del buffer di output 
+* **outputBufferSize**: dimensione (in byte) del buffer di output 
 
 
-* **isFinal**: Se il buffer di input contiene i byte crittografati finali
+* **isFinal**: ottiene un valore che indica se il buffer di input contiene o meno i byte crittografati finali
 
 
 
   
-**Restituisce**: Dimensioni effettive (in byte) del contenuto decrittografato
+**Restituisce**: dimensione effettiva (in byte) del contenuto decrittografato
   
 ### <a name="getprotectedcontentlength-function"></a>GetProtectedContentLength (funzione)
-Calcola la dimensione (in byte) del contenuto se fosse da crittografare con questo [ProtectionHandler](class_mip_protectionhandler.md).
+Calcola le dimensioni (in byte) del contenuto se deve essere crittografato con questo ProtectionHandler.
 
 Parametri:  
-* **unprotectedLength**: Dimensioni (in byte) del contenuto non protetto 
+* **unprotectedLength**: dimensione (in byte) del contenuto non protetto 
 
 
-* **includesFinalBlock**: Descrive se il contenuto non protetto in questione include il blocco finale o meno. Ad esempio, in modalità di crittografia CBC4k, i blocchi protetti non finali hanno le stesse dimensioni di quelli non protetti, ma i blocchi protetti finali sono di dimensioni superiori rispetto ai corrispondenti non protetti.
+* **includesFinalBlock**: descrive se il contenuto non protetto in questione include o meno il blocco finale. Ad esempio, in modalità di crittografia CBC4k, i blocchi protetti non finali hanno le stesse dimensioni di quelli non protetti, ma i blocchi protetti finali sono di dimensioni superiori rispetto ai corrispondenti non protetti.
 
 
 
   
-**Restituisce**: Dimensioni (in byte) del contenuto protetto
+**Restituisce**: dimensione (in byte) del contenuto protetto
   
 ### <a name="getblocksize-function"></a>GetBlockSize (funzione)
-Ottiene la dimensione del blocco (in byte) per la modalità crittografia usata da questo [ProtectionHandler](class_mip_protectionhandler.md).
+Ottiene la dimensione del blocco (in byte) per la modalità di crittografia utilizzata da questo ProtectionHandler.
 
   
-**Restituisce**: Dimensioni blocco (in byte)
+**Restituisce**: dimensione del blocco (in byte)
   
 ### <a name="getrights-function"></a>Funzione getrights
-Ottiene i diritti concessi all'utente/identità associata a questo [ProtectionHandler](class_mip_protectionhandler.md).
+Ottiene i diritti concessi all'utente/identità associata a questo ProtectionHandler.
 
   
-**Restituisce**: Diritti concessi all'utente
+**Restituisce**: diritti concessi all'utente
   
 ### <a name="accesscheck-function"></a>AccessCheck (funzione)
 Controlla se il gestore di protezione concede l'accesso utente al diritto specificato.
 
 Parametri:  
-* a **destra**: Diritto di controllo
+* **right**: diritto da controllare
 
 
 
   
-**Restituisce**: Se il gestore protezione concede l'accesso utente al diritto specificato
+**Restituisce**: valore che indica se il gestore di protezione concede o meno l'accesso utente al diritto specificato
   
 ### <a name="getissuedto-function"></a>GetIssuedTo (funzione)
 Ottiene l'utente associato al gestore di protezione.
 
   
-**Restituisce**: Utente associato al gestore protezione
+**Restituisce**: utente associato al gestore di protezione
   
 ### <a name="getowner-function"></a>Funzione GetOwner
 Ottiene indirizzo e-mail del proprietario del contenuto.
 
   
-**Restituisce**: Indirizzo e-mail del proprietario del contenuto
+**Restituisce**: indirizzo di posta elettronica del proprietario del contenuto
   
 ### <a name="isissuedtoowner-function"></a>IsIssuedToOwner (funzione)
 Ottiene un valore che indica se l'utente corrente è o meno il proprietario del contenuto.
 
   
-**Restituisce**: Se l'utente corrente è il proprietario del contenuto
+**Restituisce**: valore che indica se l'utente corrente è o meno il proprietario del contenuto
   
 ### <a name="getprotectiondescriptor-function"></a>GetProtectionDescriptor (funzione)
 Ottiene i dettagli della protezione.
 
   
-**Restituisce**: Dettagli sulla protezione
+**Restituisce**: dettagli della protezione
   
 ### <a name="getcontentid-function"></a>GetContentId (funzione)
 Ottiene l'identificatore univoco del documento/contenuto.
 
   
-**Restituisce**: Identificatore univoco del contenuto
+**Restituisce**: identificatore univoco del contenuto
   
 ### <a name="doesusedeprecatedalgorithms-function"></a>DoesUseDeprecatedAlgorithms (funzione)
 Ottiene un valore che indica se il gestore di protezione usa o meno algoritmi di crittografia deprecati per compatibilità con le versioni precedenti.
 
   
-**Restituisce**: Se il gestore protezione usa algoritmi di crittografia deprecati o meno
+**Restituisce**: valore che indica se il gestore di protezione usa o meno algoritmi di crittografia deprecati
   
 ### <a name="isauditedextractallowed-function"></a>IsAuditedExtractAllowed (funzione)
 Ottiene un valore che indica se il gestore di protezione concede o meno all'utente il diritto 'audited extract'.
 
   
-**Restituisce**: Se il gestore protezione concede a right o no l'utente ' audited Extract '
+**Restituisce**: valore che indica se il gestore di protezione concede o meno all'utente il diritto 'audited extract'
   
 ### <a name="getserializedpublishinglicense-function"></a>GetSerializedPublishingLicense (funzione)
-Serializza [ProtectionHandler](class_mip_protectionhandler.md) in una licenza di pubblicazione
+Serializzare ProtectionHandler in una licenza di pubblicazione (PL)
 
   
-**Restituisce**: Licenza di pubblicazione serializzata
+**Restituisce**: licenza di pubblicazione serializzata

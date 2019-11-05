@@ -5,20 +5,26 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: dd67cb1be823e6e0cf6bb367250924f6d3b5d8b0
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: d3cc1aecfb5ca8bf2d78dd9d6c8c280b5541389d
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056355"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560422"
 ---
 # <a name="class-mipaction"></a>Classe mip::Action 
 Interfaccia per un'azione. Ogni azione viene convertita in un passaggio che deve essere eseguito dall'applicazione per applicare l'etichetta (definita nei criteri)
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
+public ActionType GetType() const  |  Ottiene il tipo di azione.
   
-## <a name="members"></a>Members
-_Non ancora documentato._
+## <a name="members"></a>Membri
+  
+### <a name="gettype-function"></a>Funzione GetType
+Ottiene il tipo di azione.
+
+  
+**Restituisce**: ActionType Tipo di azione derivata in cui è possibile eseguire il cast di questa classe di base.

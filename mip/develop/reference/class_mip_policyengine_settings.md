@@ -5,31 +5,31 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: db96d00d268158b072d2052a5e98f39bf0efa425
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: c215b7e25908cc3f7984f68b63e3ea1be4d4a718
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054317"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560971"
 ---
 # <a name="class-mippolicyenginesettings"></a>Classe mip::PolicyEngine::Settings 
-Definisce le impostazioni associate a un oggetto [PolicyEngine](class_mip_policyengine.md).
+Definisce le impostazioni associate a un PolicyEngine.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-Impostazioni pubbliche (const std:: String & engineId, const std:: String & clientData, const std:: String & locale, bool loadSensitivityTypes)  |  Costruttore [PolicyEngine::Settings](class_mip_policyengine_settings.md) per il caricamento di un motore esistente.
-Impostazioni pubbliche (const Identity & Identity, const std:: String & clientData, const std:: String & locale, bool loadSensitivityTypes)  |  Costruttore [PolicyEngine::Settings](class_mip_policyengine_settings.md) per la creazione di un nuovo motore.
+Impostazioni pubbliche (const std:: String & engineId, const std:: String & clientData, const std:: String & locale, bool loadSensitivityTypes)  |  Costruttore PolicyEngine:: Settings per il caricamento di un motore esistente.
+Impostazioni pubbliche (const Identity & Identity, const std:: String & clientData, const std:: String & locale, bool loadSensitivityTypes)  |  Costruttore PolicyEngine:: Settings per la creazione di un nuovo motore.
 public const std::string& GetEngineId() const  |  Ottiene l'ID del motore.
 public void SetEngineId(const std::string& id)  |  Imposta l'ID del motore.
-public const Identity& GetIdentity() const  |  Ottiene l'oggetto [Identity](class_mip_identity.md) .
-public void SetIdentity(const Identity& identity)  |  Impostare l'oggetto [Identity](class_mip_identity.md) .
+public const Identity& GetIdentity() const  |  Ottiene l'oggetto Identity.
+public void SetIdentity(const Identity& identity)  |  Imposta l'oggetto Identity.
 public const std::string& GetClientData() const  |  Ottiene il set di dati client configurato nelle impostazioni.
 public void SetClientData(const std::string& clientData)  |  Imposta la stringa di dati client.
 public const std::string& GetLocale() const  |  Ottiene le impostazioni locali configurate nelle impostazioni.
-public void SetCustomSettings (const std::\<vector std::p\<Air std:: String, std::\>String\>& customSettings)  |  Imposta le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
-public const std::\<vector std::p\<Air std:: String, std::\>String\>& GetCustomSettings () const  |  Ottiene le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
+public void SetCustomSettings (const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& customSettings)  |  Imposta le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
+public const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& GetCustomSettings () const  |  Ottiene le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
 public void SetSessionId(const std::string& sessionId)  |  Imposta l'ID sessione, usato per la telemetria definita dal client.
 public const std::string& GetSessionId() const  |  Ottiene l'ID sessione, un identificatore univoco.
 public bool IsLoadSensitivityTypesEnabled () const  |  Ottiene il flag che indica se sono abilitate le etichette di riservatezza di carico.
@@ -37,14 +37,16 @@ public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  | 
 public const std::string& GetCloudEndpointBaseUrl() const  |  Ottiene l'URL di base del cloud usato da tutte le richieste di servizio, se specificato.
 public void SetDelegatedUserEmail (const std:: String & delegatedUserEmail)  |  Imposta l'utente delegato.
 public const std:: String & GetDelegatedUserEmail () const  |  Ottiene l'utente delegato.
+public void SetLabelFilter (const std:: Vector\<LabelFilterType\>& labelFilter)  |  Imposta il filtro delle etichette.
+public const std:: Vector\<LabelFilterType\>& GetLabelFilter () const  |  Ottiene il filtro dell'etichetta.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="settings-function"></a>Funzione Settings
-Costruttore [PolicyEngine::Settings](class_mip_policyengine_settings.md) per il caricamento di un motore esistente.
+Costruttore PolicyEngine:: Settings per il caricamento di un motore esistente.
 
 Parametri:  
-* **engineId**: Impostarlo sull'ID del motore univoco generato da AddEngineAsync o da un oggetto generato automaticamente. Quando si carica un motore esistente, usare nuovamente l'ID. In caso contrario verrà creato un nuovo motore. 
+* **engineId**: impostare sull'ID motore univoco generato da AddEngineAsync o su un valore generato automaticamente. Quando si carica un motore esistente, usare nuovamente l'ID. In caso contrario verrà creato un nuovo motore. 
 
 
 * **clientData**: dati client personalizzabili che è possibile archiviare con il motore quando lo si scarica e recuperare da un motore caricato. 
@@ -58,10 +60,10 @@ Parametri:
 
   
 ### <a name="settings-function"></a>Funzione Settings
-Costruttore [PolicyEngine::Settings](class_mip_policyengine_settings.md) per la creazione di un nuovo motore.
+Costruttore PolicyEngine:: Settings per la creazione di un nuovo motore.
 
 Parametri:  
-* **identity**: Informazioni di [identità](class_mip_identity.md) dell'utente associato al nuovo motore. 
+* **identity**: informazioni di identità relative all'utente associato al nuovo motore. 
 
 
 * **clientData**: dati client personalizzabili che è possibile archiviare con il motore quando lo si scarica e recuperare da un motore caricato. 
@@ -78,7 +80,7 @@ Parametri:
 Ottiene l'ID del motore.
 
   
-**Restituisce**: Stringa univoca che identifica il motore.
+**Restituisce**: stringa univoca che identifica il motore.
   
 ### <a name="setengineid-function"></a>SetEngineId (funzione)
 Imposta l'ID del motore.
@@ -89,28 +91,28 @@ Parametri:
 
   
 ### <a name="getidentity-function"></a>GetIdentity (funzione)
-Ottiene l'oggetto [Identity](class_mip_identity.md) .
+Ottiene l'oggetto Identity.
 
   
-**Restituisce**: Riferimento all'identità nell'oggetto Settings. 
+**Restituisce**: riferimento all'identità nell'oggetto Settings. 
   
-**Vedere anche**: [MIP:: Identity](class_mip_identity.md)
+**Vedere anche**: mip::Identity
   
 ### <a name="setidentity-function"></a>Funzione seidentity
-Impostare l'oggetto [Identity](class_mip_identity.md) .
+Imposta l'oggetto Identity.
 
 Parametri:  
 * **identity**: identificatore univoco di un utente. 
 
 
   
-**Vedere anche**: [MIP:: Identity](class_mip_identity.md)
+**Vedere anche**: mip::Identity
   
 ### <a name="getclientdata-function"></a>GetClientData (funzione)
 Ottiene il set di dati client configurato nelle impostazioni.
 
   
-**Restituisce**: Stringa di dati specificata dal client.
+**Restituisce**: stringa di dati specificata dal client.
   
 ### <a name="setclientdata-function"></a>SetClientData (funzione)
 Imposta la stringa di dati client.
@@ -124,13 +126,13 @@ Parametri:
 Ottiene le impostazioni locali configurate nelle impostazioni.
 
   
-**Restituisce**: Impostazioni locali.
+**Restituisce**: impostazioni locali.
   
 ### <a name="setcustomsettings-function"></a>SetCustomSettings (funzione)
 Imposta le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
 
 Parametri:  
-* **customSettings**: Elenco di coppie nome/valore.
+* **customSettings**: elenco di coppie nome/valore.
 
 
   
@@ -138,7 +140,7 @@ Parametri:
 Ottiene le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
 
   
-**Restituisce**: Elenco di coppie nome/valore.
+**Restituisce:** : elenco di coppie nome/valore.
   
 ### <a name="setsessionid-function"></a>Funzione SessionId
 Imposta l'ID sessione, usato per la telemetria definita dal client.
@@ -152,13 +154,13 @@ Parametri:
 Ottiene l'ID sessione, un identificatore univoco.
 
   
-**Restituisce**: ID della sessione.
+**Restituisce**: ID sessione.
   
 ### <a name="isloadsensitivitytypesenabled-function"></a>IsLoadSensitivityTypesEnabled (funzione)
 Ottiene il flag che indica se sono abilitate le etichette di riservatezza di carico.
 
   
-**Restituisce**: True se Enabled else false.
+**Restituisce**: true se Enabled else false.
   
 ### <a name="setcloudendpointbaseurl-function"></a>SetCloudEndpointBaseUrl (funzione)
 Facoltativamente, imposta l'URL di base dell'endpoint cloud.
@@ -187,4 +189,20 @@ Un utente delegato viene specificato quando l'utente o l'applicazione di autenti
 Ottiene l'utente delegato.
 
   
-**Restituisce**: Utente delegato viene specificato un utente delegato quando l'utente o l'applicazione di autenticazione agisce per conto di un altro utente
+**Returns**: utente delegato specificato quando l'utente o l'applicazione di autenticazione agisce per conto di un altro utente
+  
+### <a name="setlabelfilter-function"></a>SetLabelFilter (funzione)
+Imposta il filtro delle etichette.
+
+Parametri:  
+* **labelFilter**: filtro etichette.
+
+
+Per impostazione predefinita, le etichette sono filtro per ambito. questa API consente di filtrare in base alle possibili azioni.
+  
+### <a name="getlabelfilter-function"></a>GetLabelFilter (funzione)
+Ottiene il filtro dell'etichetta.
+
+  
+**Restituisce**: filtro etichette.
+Per impostazione predefinita, le etichette sono filtro per ambito. questa API consente di filtrare in base alle possibili azioni.

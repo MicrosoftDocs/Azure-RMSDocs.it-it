@@ -5,37 +5,37 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: fef75e5990a89a5a52dd1810bc15b62d1d82171b
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: fbe8b2edd8e9ee8d013134e66c39db8fbbee4dd4
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054892"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560212"
 ---
 # <a name="class-mipfileprofileobserver"></a>Classe mip::FileProfile::Observer 
-Interfaccia [Observer](class_mip_fileprofile_observer.md) per il recupero delle notifiche degli eventi correlati al profilo da parte dei client.
-Tutti gli errori ereditano da [mip::Error](class_mip_error.md). I client non devono eseguire il callback del motore sul thread che chiama l'observer.
+Interfaccia Observer che consente ai client di ricevere notifiche per gli eventi correlati al profilo.
+Tutti gli errori ereditano da MIP:: Error. I client non devono eseguire il callback del motore sul thread che chiama l'observer.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public virtual ~Observer()  | _Non ancora documentato._
-public virtual void OnLoadSuccess (const std::\<shared_ptr MIP:: fileprofile\>& profile, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando il profilo è stato caricato correttamente.
-public virtual void OnLoadFailure (const std:: exception_ptr & Error, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando il caricamento di un profilo ha causato un errore.
-public virtual void OnListEnginesSuccess (const std::\<vector std::\>String & engineIds, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando l'elenco dei motori è stato generato correttamente.
-public virtual void OnListEnginesFailure (const std:: exception_ptr & Error, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando il recupero dell'elenco dei motori ha causato un errore.
-public virtual void OnUnloadEngineSuccess (const std::\<shared_ptr\>void & context)  |  Viene chiamato quando un motore è stato scaricato correttamente.
-public virtual void OnUnloadEngineFailure (const std:: exception_ptr & Error, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando lo scaricamento di un motore ha causato un errore.
-public virtual void OnAddEngineSuccess (const std::\<shared_ptr MIP:: fileengine\>& Engine, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando un nuovo motore è stato aggiunto correttamente.
-public virtual void OnAddEngineFailure (const std:: exception_ptr & Error, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando l'aggiunta di un nuovo motore ha causato un errore.
-public virtual void OnDeleteEngineSuccess (const std::\<shared_ptr\>void & context)  |  Viene chiamato quando un motore è stato eliminato correttamente.
-public virtual void OnDeleteEngineFailure (const std:: exception_ptr & Error, const std:\<:\>shared_ptr void & context)  |  Viene chiamato quando l'eliminazione di un motore ha causato un errore.
+public virtual ~Observer()  | Non ancora documentato.
+public virtual void OnLoadSuccess (const std:: shared_ptr\<MIP:: fileprofile\>& profile, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando il profilo è stato caricato correttamente.
+public virtual void OnLoadFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando il caricamento di un profilo ha causato un errore.
+public virtual void OnListEnginesSuccess (const std:: Vector\<std:: String\>& engineIds, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando l'elenco dei motori è stato generato correttamente.
+public virtual void OnListEnginesFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando il recupero dell'elenco dei motori ha causato un errore.
+public virtual void OnUnloadEngineSuccess (const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando un motore è stato scaricato correttamente.
+public virtual void OnUnloadEngineFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando lo scaricamento di un motore ha causato un errore.
+public virtual void OnAddEngineSuccess (const std:: shared_ptr\<MIP:: fileengine\>& Engine, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando un nuovo motore è stato aggiunto correttamente.
+public virtual void OnAddEngineFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando l'aggiunta di un nuovo motore ha causato un errore.
+public virtual void OnDeleteEngineSuccess (const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando un motore è stato eliminato correttamente.
+public virtual void OnDeleteEngineFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando l'eliminazione di un motore ha causato un errore.
 public virtual void OnPolicyChanged(const std::string& engineId)  |  Viene chiamato quando i criteri del motore con l'ID specificato sono cambiati.
 public virtual void OnAddPolicyEngineStarting (bool requiresPolicyFetch)  |  Chiamato prima della creazione del motore per descrivere se i dati dei criteri del motore dei criteri devono essere recuperati dal server o se possono essere creati da dati memorizzati localmente nella cache.
-protected Observer()  | _Non ancora documentato._
+protected Observer()  | Non ancora documentato.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="observer-function"></a>~ Observer (funzione)
 _Non ancora documentato._
@@ -78,7 +78,7 @@ Viene chiamato quando i criteri del motore con l'ID specificato sono cambiati.
 Chiamato prima della creazione del motore per descrivere se i dati dei criteri del motore dei criteri devono essere recuperati dal server o se possono essere creati da dati memorizzati localmente nella cache.
 
 Parametri:  
-* **requiresPolicyFetch**: Descrive se i dati del motore devono essere recuperati tramite HTTP o se verranno caricati dalla cache
+* **requiresPolicyFetch**: descrive se i dati del motore devono essere recuperati tramite http o se verranno caricati dalla cache
 
 
 Questo callback facoltativo può essere utilizzato da un'applicazione per essere informati se un'operazione AddEngineAsync richiede un'operazione HTTP (con il ritardo associato) per il completamento.

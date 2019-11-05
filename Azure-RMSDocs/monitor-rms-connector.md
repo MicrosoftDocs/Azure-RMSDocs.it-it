@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 52690476d54eb2c23aee4c77f66ca55d320831cb
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: 0ec70d2cc26e3314378742a9875b14f5420fbb4e
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "71689512"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559189"
 ---
 # <a name="monitor-the-azure-rights-management-connector"></a>Monitorare il connettore di Azure Rights Management
 
@@ -40,14 +40,14 @@ Ad esempio, eventi informativi di questo tipo:
 
 Se il connettore non è stato configurato per l'uso di HTTPS, è possibile che venga visualizzato un avviso con ID 2002 per segnalare che un client sta usando una connessione non sicura (HTTP).
 
-Se il connettore non è in grado di connettersi al servizio Azure Rights Management, molto probabilmente verrà restituito l'errore 3001. Ad esempio, questo errore di connessione potrebbe essere dovuto a un problema di DNS o alla mancanza di accesso a Internet per uno o più server che eseguono il connettore RMS. 
+Se il connettore non è in grado di connettersi al servizio Azure Rights Management, molto probabilmente verrà restituito l'errore 3001. Ad esempio, questo errore di connessione potrebbe essere dovuto a un problema DNS o alla mancanza di accesso a Internet per uno o più server che eseguono il connettore RMS. 
 
 > [!TIP]
 > I problemi di connessione dei server del connettore RMS al servizio Azure Rights Management sono spesso causati dalle configurazioni dei proxy Web.
 
 Come per tutte le voci del log eventi, analizzare il messaggio per ottenere informazioni più dettagliate.
 
-Oltre a controllare il registro eventi quando si distribuisce il connettore per la prima volta, verificare regolarmente se sono presenti avvisi ed errori. È possibile che il connettore funzioni inizialmente come previsto, ma che altri amministratori modifichino le configurazioni dipendenti. Ad esempio, un altro amministratore potrebbe modificare la configurazione del server proxy Web impedendo ai server del connettore RMS di accedere a Internet (errore 3001) o rimuovere un account di computer da un gruppo autorizzato per l'uso del connettore (avviso 2001).
+Oltre a controllare il registro eventi quando si distribuisce il connettore per la prima volta, verificare regolarmente se sono presenti avvisi ed errori. È possibile che il connettore funzioni inizialmente come previsto, ma che altri amministratori modifichino le configurazioni dipendenti. Un altro amministratore, ad esempio, modifica la configurazione del server proxy Web in modo che i server del connettore RMS non possano più accedere a Internet (errore 3001) o rimuove un account computer da un gruppo specificato come autorizzato a usare il connettore (avviso 2001) .
 
 ### <a name="event-log-ids-and-descriptions"></a>ID registro eventi e descrizioni
 

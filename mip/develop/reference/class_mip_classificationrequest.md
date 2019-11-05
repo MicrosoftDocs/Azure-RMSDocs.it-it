@@ -5,24 +5,24 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 39fde4fa5fb0fe6f91545c9cffa36ed976a4b8b1
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 62b600a377d195c693c94dff7a0472305b53b3f2
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055330"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558984"
 ---
 # <a name="class-mipclassificationrequest"></a>Classe MIP:: ClassificationRequest 
 Classe che contiene la richiesta di una chiamata di classificazione sullo stato di esecuzione.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std:: String GetClassificationId () const  |  Ottiene l'ID dei criteri di classificazione.
 public std:: String GetRulePackageId () const  |  Ottenere l'ID del pacchetto di regole.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getclassificationid-function"></a>GetClassificationId (funzione)
 Ottiene l'ID dei criteri di classificazione.

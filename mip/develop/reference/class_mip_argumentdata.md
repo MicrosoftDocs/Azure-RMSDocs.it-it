@@ -5,25 +5,25 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: ddbd2fdab7f6096f7cfbc1ec671096767be5bb42
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 67548522a3516871ceb06fdf604a55ad355ae18a
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055467"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559433"
 ---
 # <a name="class-mipargumentdata"></a>Classe MIP:: ArgumentData 
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std:: String & GetValue () const  | _Non ancora documentato._
-public const std:: String & GetKey () const  | _Non ancora documentato._
-public const std::\<vector std::\>String & GetValues () const  | _Non ancora documentato._
-public virtual ~ ArgumentData ()  | _Non ancora documentato._
+public const std:: String & GetValue () const  | Non ancora documentato.
+public const std:: String & GetKey () const  | Non ancora documentato.
+public const std:: Vector\<std:: String\>& GetValues () const  | Non ancora documentato.
+public virtual ~ ArgumentData ()  | Non ancora documentato.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getvalue-function"></a>Funzione GetValue
 _Non ancora documentato._

@@ -11,18 +11,18 @@ ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 6fce8c019fe618f6678c1137f22ef5e9ce66a3df
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: ddbe7273bb6bfc931ef9bcbe73a847156c5f4183
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684149"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559636"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Come eliminare o riordinare un'etichetta per Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 È possibile eliminare o riordinare le etichette di Azure Information Protection che gli utenti vedono nelle applicazioni di Office selezionando le azioni corrispondenti per le etichette.
 
@@ -56,17 +56,17 @@ Ordinare le etichette in modo che gli utenti le vedano in una progressione logic
 
 Per apportare le modifiche, seguire queste istruzioni.
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**. 
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection** . 
     
-    Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
 
-2. Dall'opzione di menu **Classificazioni** > **Etichette**: Nel pannello **Azure Information Protection - Etichette** effettuare una o più operazioni tra quelle indicate seguenti: 
+2. Dall'opzione di menu **classificazioni** > **etichette** : nel riquadro **etichette Azure Information Protection** eseguire una o più delle azioni seguenti: 
 
-    - Per eliminare un'etichetta: Fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida ( **...** ) per l'etichetta che si vuole eliminare, scegliere **Elimina questa etichetta** e fare clic su **OK** per confermare. 
+    - Per eliminare un'etichetta: fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida ( **...** ) per l'etichetta che si vuole eliminare, scegliere **Elimina questa etichetta** e fare clic su **OK** per confermare. 
 
-    - Per disabilitare un'etichetta: Selezionare l'etichetta da disabilitare. Nel pannello **Etichetta** per **Abilitato** selezionare **No** e quindi fare clic su **Salva**.
+    - Per disabilitare un'etichetta: selezionare l'etichetta che si vuole disabilitare. Nel riquadro **etichetta** per **abilitato**Selezionare **disattivato**, quindi fare clic su **Salva**.
 
-    - Per riordinare un'etichetta: Fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida ( **...** ) per l'etichetta che si vuole riordinare, scegliere **Sposta su** o **Sposta giù** fino a quando l'etichetta non è nell'ordine desiderato.  
+    - Per riordinare un'etichetta: fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida ( **...** ) per l'etichetta che si vuole riordinare, scegliere **Sposta su** o **Sposta giù** fino a quando l'etichetta non è nell'ordine desiderato.  
 
 ## <a name="next-steps"></a>Passaggi successivi
 

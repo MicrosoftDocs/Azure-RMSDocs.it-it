@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 6ffbe770864c2776abba2f2a726e07953baf5be4
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: 8037740899161a7bb77934c4a05a54cd9627a913
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445084"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559556"
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Come creare una nuova etichetta per Azure Information Protection
 
@@ -34,23 +34,23 @@ Seguire queste istruzioni per aggiungere una nuova etichetta che sarà poi possi
 
 ## <a name="to-create-a-new-label"></a>Per creare una nuova etichetta
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**.
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection** .
     
-    Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
 
-2. Dall'opzione di menu **Classificazioni** > **Etichette**: nel pannello **Azure Information Protection - Etichette** eseguire una delle operazioni seguenti:
+2. Dall'opzione di menu **classificazioni** > **etichette** : nel riquadro **etichette Azure Information Protection** eseguire una delle operazioni seguenti:
     
     - Per creare una nuova etichetta, fare clic su **Aggiungi una nuova etichetta**.
     
     - Per creare una nuova etichetta secondaria, fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida ( **...** ) per l'etichetta per cui si vuole creare un'etichetta secondaria, quindi scegliere **Aggiungi un'etichetta secondaria**.
 
-3. Nel pannello **Etichetta** o **Etichetta secondaria** selezionare le opzioni desiderate per la nuova etichetta, quindi fare clic su **Salva**.
+3. Nel riquadro **etichetta** o **etichetta secondaria** Selezionare le opzioni desiderate per la nuova etichetta, quindi fare clic su **Salva**.
     
     Quando si specifica un nome visualizzato, non è consentito specificare alcuni caratteri (ad esempio barra rovesciata ed e commerciale) perché non tutti i servizi e le applicazioni che usano Azure Information Protection supportano questi caratteri. Oltre ai caratteri bloccati, non specificare il carattere **#** .    
     
     Si noti che alle nuove etichette viene assegnato automaticamente il colore nero. Scegliere un colore distintivo dall'elenco dei colori o immettere un codice tripletta esadecimale per i componenti rosso, verde e blu (RGB) del colore. Ad esempio, **#DAA520**. Se è necessario un riferimento per questi codici, è possibile trovare una tabella utile dalla pagina di [> \<color](https://developer.mozilla.org/docs/Web/CSS/color_value) da MSDN Web docs. Questi codici sono disponibili anche in molte applicazioni che consentono di modificare le immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
 
-4. Per rendere disponibile la nuova etichetta agli utenti: nell'opzione di menu **Classificazioni** > **Criteri** selezionare i criteri in cui includere la nuova etichetta. Selezionare **Add or remove labels** (Aggiungi o rimuovi etichette). Selezionare l'etichetta nel pannello**Policy: Add or remove labels** (Criteri: Aggiungi o rimuovi etichette), selezionare **OK** e quindi selezionare **Salva**.
+4. Per rendere disponibile la nuova etichetta agli utenti: nell'opzione di menu **Classificazioni** > **Criteri** selezionare i criteri in cui includere la nuova etichetta. Selezionare **Add or remove labels** (Aggiungi o rimuovi etichette). Selezionare l'etichetta nel riquadro **criteri: Aggiungi o Rimuovi etichette** , selezionare **OK**e quindi fare clic su **Salva**.
     
     >[!TIP]
     >Per quanto riguarda le nuove etichette, valutare la possibilità di aggiungerle in un primo momento a un criterio con ambito usato a scopi di test. Quando si è soddisfatti dei risultati, rimuovere l'etichetta da questo ambito di test e quindi aggiungerla a un criterio in uso nell'ambiente di produzione.     

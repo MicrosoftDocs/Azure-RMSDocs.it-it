@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: acc19d8865c189e2852a2b870ea2028aab731f04
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: 381439513d86102bb0c08fde63015b417f192be3
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684449"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559929"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 della migrazione: configurazione lato server per AD RMS
 
@@ -77,7 +77,7 @@ La distribuzione corrente di AD RMS usa una delle seguenti configurazioni per la
 > [!NOTE]
 > Per altre informazioni sull'uso di moduli di protezione hardware con AD RMS, vedere [Uso di AD RMS con moduli di protezione hardware](https://technet.microsoft.com/library/jj651024.aspx).
 
-Le due opzioni di topologia di chiave del tenant di Azure Information Protection sono: la chiave del tenant viene gestita da Microsoft (**gestione di Microsoft**) oppure dall'utente (**gestione del cliente**) in Azure Key Vault. Quando la chiave del tenant di Azure Information Protection è gestita dall'utente, viene a volte definita BYOK (Bring Your Own Key). Per altre informazioni, vedere l'articolo [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md).
+Per la topologia della chiave del tenant di Azure Information Protection esistono due opzioni: la chiave viene gestita da Microsoft (**gestione di Microsoft**) oppure dall'utente (**gestione del cliente**) in Insieme di credenziali delle chiavi di Azure. Quando la chiave del tenant di Azure Information Protection è gestita dall'utente, viene a volte definita BYOK (Bring Your Own Key). Per altre informazioni, vedere l'articolo [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md).
 
 Usare la tabella seguente per identificare la procedura da eseguire per la migrazione. 
 
@@ -91,7 +91,7 @@ Usare la tabella seguente per identificare la procedura da eseguire per la migra
 
 Se la chiave protetta tramite modulo di protezione hardware non è esportabile, è comunque possibile eseguire la migrazione ad Azure Information Protection configurando il cluster AD RMS con la modalità di sola lettura. In questa modalità è comunque possibile aprire il contenuto protetto in precedenza, ma il contenuto appena protetto usa una nuova chiave del tenant gestita dall'utente (BYOK) o gestita da Microsoft. Per altre informazioni, vedere [An update is available for Office to support migrations from AD RMS to Azure RMS](https://support.microsoft.com/help/4023955/an-update-is-available-for-office-to-support-migrations-from-ad-rms-to) (È disponibile un aggiornamento con cui Office supporta le migrazioni da AD RMS ad Azure RMS).
 
-Prima di iniziare queste procedure per la migrazione di chiavi, verificare che sia possibile accedere ai file con estensione XML creati in precedenza durante l'esportazione dei domini di pubblicazione trusted. Ad esempio, è possibile salvarli su una chiavetta USB che può essere spostata dal server AD RMS alla workstation connessa a Internet.
+Prima di iniziare queste procedure per la migrazione di chiavi, verificare che sia possibile accedere ai file con estensione XML creati in precedenza durante l'esportazione dei domini di pubblicazione trusted. Ad esempio, questi possono essere salvati in una chiavetta USB spostata dal server AD RMS alla workstation connessa a Internet.
 
 > [!NOTE]
 > Indipendentemente dalla modalità di archiviazione di questi file, per proteggerli attenersi alle procedure consigliate per la sicurezza, poiché tali dati includono la chiave privata.
@@ -152,14 +152,14 @@ Quando si gestiscono i modelli e le etichette nel portale di Azure, questo grupp
 
 Se non si è certi che i modelli AD RMS includano il gruppo ANYONE, è possibile usare lo script di Windows PowerShell di esempio seguente per identificare tali modelli. Per altre informazioni sull'uso di Windows PowerShell con AD RMS, vedere l'articolo relativo a [Using Windows PowerShell to Administer AD RMS (Uso di Windows PowerShell per amministrare AD RMS)](https://technet.microsoft.com/library/ee221079%28v=ws.10%29.aspx).
 
-È possibile aggiungere con facilità utenti esterni ai modelli, quando si convertono questi modelli in etichette nel portale di Azure. Sul pannello **Aggiungi autorizzazioni**, scegliere **Immetti i dettagli** per specificare manualmente gli indirizzi di posta elettronica per questi utenti. 
+È possibile aggiungere con facilità utenti esterni ai modelli, quando si convertono questi modelli in etichette nel portale di Azure. Quindi, nel riquadro **Aggiungi autorizzazioni** , scegliere **immettere i dettagli** per specificare manualmente gli indirizzi di posta elettronica per questi utenti. 
 
 Per altre informazioni su questa configurazione, vedere [Come configurare un'etichetta per la protezione di Rights Management](./configure-policy-protection.md).
 
 #### <a name="sample-windows-powershell-script-to-identify-ad-rms-templates-that-include-the-anyone-group"></a>Esempio di script di Windows PowerShell per identificare modelli AD RMS che includono il gruppo ANYONE
 Questa sezione include lo script di esempio per facilitare l'identificazione dei modelli AD RMS per i quali è definito un gruppo ANYONE, come descritto nella sezione precedente.
 
-**Dichiarazione di non responsabilità:** Questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene fornito "nello stato in stato in cui si trova" senza garanzia di alcun tipo.
+**Dichiarazione di non responsabilità:** questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene fornito "nello stato in stato in cui si trova" senza garanzia di alcun tipo.
 
 ```
 import-module adrmsadmin 

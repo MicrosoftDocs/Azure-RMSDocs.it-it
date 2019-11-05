@@ -4,7 +4,7 @@ description: Di seguito sono riportate alcune possibili domande sulle funzionali
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/25/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,37 +12,18 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 649aca255019ea5992e7901c2275ca0fe3c61cba
-ms.sourcegitcommit: 7089f06723f609ce40558ae1346db68b9a47667f
+ms.openlocfilehash: 238da139e7ef3a2226464002b8b151195d18e2d5
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72916284"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561416"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Domande frequenti sulla classificazione e l'assegnazione di etichette in Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 Di seguito sono riportate alcune possibili domande sulle funzionalità di classificazione e assegnazione di etichette di Azure Information Protection  e le relative risposte. 
-
-## <a name="what-can-i-do-with-the-classification-capabilities-in-azure-information-protection"></a>Che cosa si può fare con le funzionalità di classificazione di Azure Information Protection?
-
-L'esercitazione [Modificare i criteri e creare una nuova etichetta](infoprotect-quick-start-tutorial.md) consente in pochi minuti di vedere queste funzionalità in pratica.
-
-Per sapere quando saranno disponibili altre funzionalità e nuove caratteristiche per la classificazione, seguire gli annunci nel [blog di Enterprise Mobility + Security](https://techcommunity.microsoft.com/t5/Enterprise-Mobility-Security/bg-p/enterprisemobilityandsecurity/label-name/Azure%20Information%20Protection) e nel [sito Yammer](https://www.yammer.com/askipteam/#/threads/inGroup?type=in_group&feedId=8652489&view=all). Esistono alcune limitazioni con le versioni correnti, incluse le seguenti:
-
-- Nessuna funzionalità di assegnazione di etichette nelle app Web di Office (Office per il Web).
-
-- Le funzionalità di classificazione e assegnazione di etichette non sono integrate con Exchange Online o SharePoint Online.
-
-> [!NOTE]
-> **In anteprima**:
-> - Reporting centralizzato per la classificazione e l'aggiunta di etichette. Per altre informazioni, vedere [Reporting centralizzato per Azure Information Protection](reports-aip.md).
->
->**Etichette di riservatezza per Office**:
-> - Per le informazioni più recenti sulle app di Office che supportano le etichette di riservatezza, vedere [quali funzionalità dell'etichetta di riservatezza sono supportate in Office oggi?](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today) dalla documentazione di Office.
-
-Per richiedere nuove funzionalità e votare per le richieste, visitare il [sito User Voice](https://msip.uservoice.com/) per Azure Information Protection.
 
 ## <a name="which-client-do-i-install-for-testing-new-functionality"></a>Quale client si installa per testare nuove funzionalità?
 

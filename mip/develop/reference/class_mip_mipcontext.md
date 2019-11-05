@@ -5,30 +5,31 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 20ce55ec371582ee16c70f311e0fc38ffc79d2fc
-ms.sourcegitcommit: 9cedac6569f3a33a22a721da27074a438b1a7882
+ms.date: 10/29/2019
+ms.openlocfilehash: 9efbe9330014458a26f62e4dfac9ea24ad5d4475
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71070625"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561025"
 ---
 # <a name="class-mipmipcontext"></a>Classe MIP:: MipContext 
 MipContext rappresenta lo stato condiviso tra tutti i profili, i motori e i gestori.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 blocco public void ShutDown ()  |  Terminare MIP.
 public bool IsFeatureEnabled (funzionalità FlightingFeature) const  |  Ottiene un valore che indica se una funzionalità è abilitata o meno.
 public const ApplicationInfo& GetApplicationInfo() const  |  Ottenere la descrizione dell'applicazione.
 public const std:: String & GetMipPath () const  |  Ottenere il percorso del file per log, cache e così via.
+public bool IsOfflineOnly ()  |  Ottiene l'impostazione solo offline.
 public std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate ()  |  Ottiene l'implementazione del logger.
 public LoggerDelegate * GetRawLoggerDelegate ()  |  Ottiene l'implementazione del logger.
 public static MIP_API std:: shared_ptr&lt;MipContext&gt; __CDECL MIP:: MipContext:: create | Creare una nuova istanza di MipContext da utilizzare durante l'inizializzazione dei profili.
 public static MIP_API std:: shared_ptr&lt;MipContext&gt; __CDECL MIP:: MipContext:: CreateWithCustomFeatureSettings | Creare una nuova istanza di MipContext con le impostazioni delle funzionalità personalizzate.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="shutdown-function"></a>Funzione ShutDown
 Terminare MIP.
@@ -38,12 +39,12 @@ Questo metodo deve essere chiamato prima dell'arresto del processo/DLL
 Ottiene un valore che indica se una funzionalità è abilitata o meno.
 
 Parametri:  
-* **funzionalità**: Funzionalità da abilitare/disabilitare
+* **funzionalità**: funzionalità da abilitare/disabilitare
 
 
 
   
-**Restituisce**: Se una funzionalità è abilitata o meno se un FeatureFlightingDelegate non è stato fornito da un'applicazione, verrà restituito sempre true.
+**Restituisce**un valore che indica se una funzionalità è abilitata se un FeatureFlightingDelegate non è stato fornito da un'applicazione. verrà restituito sempre true.
   
 ### <a name="getapplicationinfo-function"></a>GetApplicationInfo (funzione)
 Ottenere la descrizione dell'applicazione.
@@ -55,26 +56,32 @@ Ottenere la descrizione dell'applicazione.
 Ottenere il percorso del file per log, cache e così via.
 
   
-**Restituisce**: Percorso del file (con la directory foglia "MIP")
+**Restituisce**: percorso file (con la directory foglia "MIP")
+  
+### <a name="isofflineonly-function"></a>IsOfflineOnly (funzione)
+Ottiene l'impostazione solo offline.
+
+  
+**Restituisce**: indipendentemente dal fatto che l'applicazione sia in esecuzione in modalità solo offline
   
 ### <a name="getloggerdelegate-function"></a>GetLoggerDelegate (funzione)
 Ottiene l'implementazione del logger.
 
   
-**Restituisce**: Logger
+**Restituisce**: logger
   
 ### <a name="getrawloggerdelegate-function"></a>GetRawLoggerDelegate (funzione)
 Ottiene l'implementazione del logger.
 
-**Restituisce**: Logger
+  
+**Restituisce**: logger
 
 ### <a name="create-function"></a>Create (funzione)
 Creare una nuova istanza di MipContext da utilizzare durante l'inizializzazione dei profili.
 
-**Restituisce**: Istanza di MipContext.
+**Restituisce**: istanza di MipContext.
 
 ### <a name="createwithcustomfeaturesettings-function"></a>CreateWithCustomFeatureSettings (funzione)
 Creare una nuova istanza di MipContext con le impostazioni delle funzionalità personalizzate.
 
-**Restituisce**: Istanza di MipContext.
-
+**Restituisce**: istanza di MipContext.

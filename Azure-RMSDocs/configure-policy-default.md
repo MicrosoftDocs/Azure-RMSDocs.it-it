@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ea2c89c2ddbebc7a3efe6248a6073ceb82a8f21f
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 892d19f9318a01f527b4dc5df686300321497f29
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447076"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559609"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Criteri predefiniti di Azure Information Protection
 
@@ -37,7 +37,7 @@ Quando un amministratore si connette per la prima volta al servizio Azure Inform
 > [!IMPORTANT]
 > A partire dall'aprile 2019, le etichette predefinite non vengono create automaticamente per i nuovi clienti. Per questi tenant viene effettuato automaticamente il provisioning della piattaforma di etichettatura unificata, quindi non è necessario eseguire la migrazione delle etichette dopo averle configurate nel portale di Azure.
 > 
-> Se per questi tenant non sono già state create etichette di riservatezza nel Centro sicurezza e conformità di Office 365, nel Centro sicurezza Microsoft 365 o nel Centro conformità Microsoft 365, è possibile creare le etichette predefinite dai criteri predefiniti correnti per Azure Information Protection. A questo scopo, selezionare **Generate default labels** (Genera etichette predefinite) nel pannello **Etichette** e aggiungere le etichette ai criteri globali. Per istruzioni dettagliate, vedere [Guida introduttiva: Introduzione ad Azure Information Protection nel portale di Azure](quickstart-viewpolicy.md).
+> Se per questi tenant non sono già state create etichette di riservatezza nel Centro sicurezza e conformità di Office 365, nel Centro sicurezza Microsoft 365 o nel Centro conformità Microsoft 365, è possibile creare le etichette predefinite dai criteri predefiniti correnti per Azure Information Protection. A tale scopo, selezionare **genera etichette predefinite** dal riquadro **etichette** e aggiungere le etichette ai criteri globali. Per istruzioni dettagliate, vedere [Guida introduttiva: Introduzione ad Azure Information Protection nel portale di Azure](quickstart-viewpolicy.md).
 
 
 ## <a name="current-default-policy"></a>Criteri predefiniti correnti

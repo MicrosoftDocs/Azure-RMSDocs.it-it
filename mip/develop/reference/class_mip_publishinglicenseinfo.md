@@ -5,34 +5,29 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: e11374b639fdfea73326e036f81cded74eb3a4c0
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: d95edcf9fd08296392e44a77a49c900c3b1b4d4f
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057333"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560640"
 ---
 # <a name="class-mippublishinglicenseinfo"></a>Classe MIP::P ublishingLicenseInfo 
 Contiene i dettagli di una licenza di pubblicazione usata per creare un gestore di protezione.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public PublishingLicenseInfo (const std::\<vector\>uint8_t & serializedPublishingLicense)  | _Non ancora documentato._
-public PublishingLicenseInfo (const std::\<vector\>uint8_t & serializedPublishingLicense, const std:\<: vector std:\>: String & Domains, const std:: String & serverPublicCert, const STD:: String & tenantId)  | _Non ancora documentato._
-public void SetParsedData (const std::\<vector std::\>String & Domains, const std:: String & serverPublicCert, const std:: String & tenantId)  | _Non ancora documentato._
-public const std::\<vector\>uint8_t & GetSerializedPublishingLicense () const  | _Non ancora documentato._
-public const std::\<vector std::\>String & getdomains () const  | _Non ancora documentato._
-public const std:: String & GetServerPublicCertificate () const  | _Non ancora documentato._
-public const std:: String & GetTenantId () const  | _Non ancora documentato._
-public bool IsLicenseParsed () const  | _Non ancora documentato._
+public PublishingLicenseInfo (const std:: Vector\<uint8_t\>& serializedPublishingLicense)  | Non ancora documentato.
+public void SetParsedData (const std:: Vector\<std:: String\>& Domains, const std:: String & serverPublicCert, const std:: String & contentId, const std:: String & issuerId)  | Non ancora documentato.
+public const std:: Vector\<uint8_t\>& GetSerializedPublishingLicense () const  | Non ancora documentato.
+public const std:: Vector\<std:: String\>& getdomains () const  | Non ancora documentato.
+public const std:: String & GetServerPublicCertificate () const  | Non ancora documentato.
+public const std:: String & GetIssuerId () const  | Non ancora documentato.
+public bool IsLicenseParsed () const  | Non ancora documentato.
   
-## <a name="members"></a>Members
-  
-### <a name="publishinglicenseinfo-function"></a>PublishingLicenseInfo (funzione)
-_Non ancora documentato._
-
+## <a name="members"></a>Membri
   
 ### <a name="publishinglicenseinfo-function"></a>PublishingLicenseInfo (funzione)
 _Non ancora documentato._
@@ -54,7 +49,7 @@ _Non ancora documentato._
 _Non ancora documentato._
 
   
-### <a name="gettenantid-function"></a>GetTenantId (funzione)
+### <a name="getissuerid-function"></a>GetIssuerId (funzione)
 _Non ancora documentato._
 
   

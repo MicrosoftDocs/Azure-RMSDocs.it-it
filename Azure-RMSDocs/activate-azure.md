@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bbaf43066001469b7a5a3676c158a6a885dd72fc
-ms.sourcegitcommit: 28c1de5f9d1426f160f0e0bafcf9f76769e662b6
+ms.openlocfilehash: 2a84f151200012f3faf6176c1be771226868441d
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71679061"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73555324"
 ---
 # <a name="how-to-activate-the-rights-management-protection-service-from-the-azure-portal"></a>Come attivare il servizio di Rights Management Protection dalla portale di Azure
 
@@ -26,13 +26,13 @@ ms.locfileid: "71679061"
 
 Utilizzare queste istruzioni se si desidera attivare il servizio Rights Management Protection (Azure RMS) da Azure Information Protection utilizzando il portale di Azure.
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**.
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection** .
     
-    Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
     
-    Se non si è ancora eseguito l'accesso al pannello Azure Information Protection, vedere i [passaggi aggiuntivi](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time) che è necessario eseguire una sola volta per aggiungere questo pannello al portale.
+    Se non è stato eseguito l'accesso al riquadro Azure Information Protection prima, vedere i [passaggi aggiuntivi](configure-policy.md#to-access-the-azure-information-protection-pane-for-the-first-time) monouso per aggiungere questo riquadro al portale.
     
-    Per aprire il pannello Azure Information Protection è necessario un [piano Azure Information Protection Premium](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) o un [piano di Office 365 che includa Rights Management](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Se si ha una di queste sottoscrizioni ma viene visualizzato un messaggio che informa che non è possibile trovare una sottoscrizione valida, [contattare il supporto tecnico Microsoft](information-support.md#to-contact-microsoft-support) o usare i canali di supporto standard.
+    Per aprire il riquadro Azure Information Protection, è necessario disporre di un piano [Azure Information Protection Premium](https://www.microsoft.com/cloud-platform/azure-information-protection-pricing) o di un [piano di Office 365 che includa Rights Management](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf). Se si ha una di queste sottoscrizioni ma viene visualizzato un messaggio che informa che non è possibile trovare una sottoscrizione valida, [contattare il supporto tecnico Microsoft](information-support.md#to-contact-microsoft-support) o usare i canali di supporto standard.
 
 2. Trovare le opzioni del menu **Gestisci** e selezionare **Protection activation** (Attivazione protezione). 
     

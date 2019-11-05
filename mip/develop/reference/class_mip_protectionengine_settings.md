@@ -5,63 +5,63 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: a083d037fcfb48ae9eee5df67fb78d53fcb5490a
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 746309afc21637c85ec53dd9af7214151c5bb75a
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057601"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73557670"
 ---
 # <a name="class-mipprotectionenginesettings"></a>Classe mip::ProtectionEngine::Settings 
-Oggetto [Settings](class_mip_protectionengine_settings.md) usato da [ProtectionEngine](class_mip_protectionengine.md) durante la creazione e per tutta la sua durata.
+Impostazioni utilizzate da ProtectionEngine durante la sua creazione e per tutta la sua durata.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public Settings(const Identity& identity, const std::string& clientData, const std::string& locale)  |  Costruttore [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) per la creazione di un nuovo motore.
-public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale)  |  Costruttore [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) per il caricamento di un motore esistente.
+public Settings(const Identity& identity, const std::string& clientData, const std::string& locale)  |  Costruttore ProtectionEngine:: Settings per la creazione di un nuovo motore.
+public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale)  |  Costruttore ProtectionEngine:: Settings per il caricamento di un motore esistente.
 public const std::string& GetEngineId() const  |  Ottiene l'ID motore.
 public void SetEngineId(const std::string& engineId)  |  Imposta l'ID motore.
-public const Identity& GetIdentity() const  |  Ottiene l' [identità](class_mip_identity.md) utente associata al motore.
-public void SetIdentity(const Identity& identity)  |  Imposta l' [identità](class_mip_identity.md) utente associata al motore.
+public const Identity& GetIdentity() const  |  Ottiene l'identità utente associata al motore.
+public void SetIdentity(const Identity& identity)  |  Imposta l'identità utente associata al motore.
 public const std::string& GetClientData() const  |  Ottiene i dati personalizzati specificati dal client.
 public void SetClientData(const std::string& clientData)  |  Imposta i dati personalizzati specificati dal client.
 public const std::string& GetLocale() const  |  Ottiene le impostazioni locali in cui verranno scritti i dati del motore.
-public void SetCustomSettings (const std::\<vector std::p\<Air std:: String, std::\>String\>& value)  |  Imposta coppie nome-valore usate a scopi di test e sperimentazione.
-public const std::\<vector std::p\<Air std:: String, std::\>String\>& GetCustomSettings () const  |  Ottiene coppie nome-valore usate a scopi di test e sperimentazione.
+public void SetCustomSettings (const std:: Vector\<std::p Air\<std:: String, std:: String\>\>valore &)  |  Imposta coppie nome-valore usate a scopi di test e sperimentazione.
+public const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& GetCustomSettings () const  |  Ottiene coppie nome-valore usate a scopi di test e sperimentazione.
 public void SetSessionId(const std::string& sessionId)  |  Imposta l'ID sessione del motore, usato per la correlazione di registrazione/telemetria.
 public const std::string& GetSessionId() const  |  Ottiene l'ID sessione del motore.
 public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Facoltativamente, imposta l'URL di base dell'endpoint cloud.
 public const std::string& GetCloudEndpointBaseUrl() const  |  Ottiene l'URL di base del cloud usato da tutte le richieste di servizio, se specificato.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="settings-function"></a>Funzione Settings
-Costruttore [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) per la creazione di un nuovo motore.
+Costruttore ProtectionEngine:: Settings per la creazione di un nuovo motore.
 
 Parametri:  
-* **identity**: [Identità](class_mip_identity.md) che verrà associata a [ProtectionEngine](class_mip_protectionengine.md)
+* **Identity**: identità che verrà associata a ProtectionEngine
 
 
 * **clientData**: dati client personalizzabili che è possibile archiviare con il motore quando lo si scarica e recuperare da un motore caricato. 
 
 
-* **impostazioni locali**: L'output del motore verrà fornito nelle impostazioni locali.
+* **locale**: l'output del motore verrà fornito con queste impostazioni locali.
 
 
   
 ### <a name="settings-function"></a>Funzione Settings
-Costruttore [ProtectionEngine::Settings](class_mip_protectionengine_settings.md) per il caricamento di un motore esistente.
+Costruttore ProtectionEngine:: Settings per il caricamento di un motore esistente.
 
 Parametri:  
-* **engineId**: Identificatore univoco del motore che verrà caricato 
+* **engineId**: identificatore univoco del motore che verrà caricato 
 
 
 * **clientData**: dati client personalizzabili che è possibile archiviare con il motore quando lo si scarica e recuperare da un motore caricato. 
 
 
-* **impostazioni locali**: L'output del motore verrà fornito nelle impostazioni locali.
+* **locale**: l'output del motore verrà fornito con queste impostazioni locali.
 
 
   
@@ -80,16 +80,16 @@ Parametri:
 
   
 ### <a name="getidentity-function"></a>GetIdentity (funzione)
-Ottiene l' [identità](class_mip_identity.md) utente associata al motore.
+Ottiene l'identità utente associata al motore.
 
   
-**Restituisce**: [Identità](class_mip_identity.md) utente associata al motore
+**Restituisce**: identità utente associata al motore
   
 ### <a name="setidentity-function"></a>Funzione seidentity
-Imposta l' [identità](class_mip_identity.md) utente associata al motore.
+Imposta l'identità utente associata al motore.
 
 Parametri:  
-* **identity**: [Identità](class_mip_identity.md) utente associata al motore
+* **identity**: identità utente associata al motore
 
 
   
@@ -97,7 +97,7 @@ Parametri:
 Ottiene i dati personalizzati specificati dal client.
 
   
-**Restituisce**: Dati personalizzati specificati dal client
+**Restituisce**: dati personalizzati specificati dal client
   
 ### <a name="setclientdata-function"></a>SetClientData (funzione)
 Imposta i dati personalizzati specificati dal client.
@@ -111,13 +111,13 @@ Parametri:
 Ottiene le impostazioni locali in cui verranno scritti i dati del motore.
 
   
-**Restituisce**: Impostazioni locali in cui verranno scritti i dati del motore
+**Restituisce**: impostazioni locali in cui verranno scritti i dati del motore
   
 ### <a name="setcustomsettings-function"></a>SetCustomSettings (funzione)
 Imposta coppie nome-valore usate a scopi di test e sperimentazione.
 
 Parametri:  
-* **customSettings**: Coppie nome/valore usate per test e sperimentazione
+* **customSettings**: coppie nome-valore usate a scopi di test e sperimentazione
 
 
   
@@ -125,7 +125,7 @@ Parametri:
 Ottiene coppie nome-valore usate a scopi di test e sperimentazione.
 
   
-**Restituisce**: Coppie nome/valore usate per test e sperimentazione
+**Restituisce**: coppie nome-valore usate a scopi di test e sperimentazione
   
 ### <a name="setsessionid-function"></a>Funzione SessionId
 Imposta l'ID sessione del motore, usato per la correlazione di registrazione/telemetria.
@@ -139,7 +139,7 @@ Parametri:
 Ottiene l'ID sessione del motore.
 
   
-**Restituisce**: ID sessione motore
+**Restituisce**: ID sessione del motore
   
 ### <a name="setcloudendpointbaseurl-function"></a>SetCloudEndpointBaseUrl (funzione)
 Facoltativamente, imposta l'URL di base dell'endpoint cloud.

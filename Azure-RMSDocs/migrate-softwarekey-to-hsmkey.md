@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b7190ef37fc41cafb4b4c2dffc2204c98d7a00f5
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: bb23ceb2721e18f8028ec5b0bb19a2c7230d9c1f
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "71684513"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559166"
 ---
 # <a name="step-2-software-protected-key-to-hsm-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave protetta tramite software a una chiave protetta tramite HSM
 
@@ -46,9 +46,9 @@ Prima di iniziare, assicurarsi che l'organizzazione disponga di un insieme di cr
 
 1.  Amministratore di Azure Key Vault: per ogni chiave del certificato concessore di licenze server esportata che si vuole archiviare in Azure Key Vault usare i passaggi seguenti nella sezione [Implementazione di BYOK (Bring Your Own Key) per Azure Key Vault](/azure/key-vault/key-vault-hsm-protected-keys#implementing-bring-your-own-key-byok-for-azure-key-vault) della documentazione di Azure Key Vault:
 
-    -   **Generare e trasferire la propria chiave al modulo di protezione hardware di Insieme di credenziali delle chiavi di Azure**: [Passaggio 1: Preparare la workstation connessa a Internet](/azure/key-vault/key-vault-hsm-protected-keys#step-1-prepare-your-internet-connected-workstation)
+    -   **Generare e trasferire la chiave nel modulo di protezione hardware Azure Key Vault**: [passaggio 1: preparare la workstation connessa a Internet](/azure/key-vault/key-vault-hsm-protected-keys#step-1-prepare-your-internet-connected-workstation)
 
-    -   **Generare e trasferire la propria chiave del tenant tramite Internet**: [Passaggio 2: Preparare la workstation disconnessa](/azure/key-vault/key-vault-hsm-protected-keys#step-2-prepare-your-disconnected-workstation)
+    -   **Generare e trasferire la propria chiave del tenant tramite Internet**: [passaggio 2: preparare la workstation disconnessa](/azure/key-vault/key-vault-hsm-protected-keys#step-2-prepare-your-disconnected-workstation)
 
     Non attenersi a questa procedura per generare la chiave del tenant, perché è già disponibile una chiave equivalente nel file di dati di configurazione (con estensione XML) esportati. Si eseguirà invece uno strumento per estrarre la chiave dal file e importarla nel modulo di protezione hardware locale. Quando viene eseguito, lo strumento crea due file:
 
@@ -136,7 +136,7 @@ Ora che la chiave HSM è stata trasferita in Insieme di credenziali delle chiavi
 
 ## <a name="part-3-import-the-configuration-data-to-azure-information-protection"></a>Parte 3: Importare i dati di configurazione in Azure Information Protection
 
-1. Amministratore di Azure Information Protection: nella workstation connessa a Internet e nella sessione di PowerShell copiare i nuovi file di dati di configurazione (con estensione xml) la cui chiave del certificato concessore di licenze server è stata rimossa dopo l'esecuzione dello strumento TpdUtil.
+1. Amministratore Azure Information Protection: nella workstation connessa a Internet e nella sessione di PowerShell, copiare i nuovi file di dati di configurazione (con estensione XML) che hanno rimosso la chiave SLC dopo aver eseguito lo strumento TpdUtil.
 
 2. Caricare ogni file con estensione XML, usando il cmdlet [Import-AipServiceTpd](/powershell/module/aipservice/import-aipservicetpd) . Ad esempio, è necessario avere almeno un file aggiuntivo da importare in caso di aggiornamento del cluster AD RMS per la modalità di crittografia 2.
 

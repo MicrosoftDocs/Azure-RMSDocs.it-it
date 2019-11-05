@@ -12,12 +12,12 @@ ms.assetid: afbca2d6-32a7-4bda-8aaf-9f93f5da5abc
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4b4affd55c743e2dda7dc3077ae527b002b5b442
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 01e000bfa52a92f0e9d7b58327d84d24bd17410d
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689405"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559909"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparazione di utenti e gruppi per Azure Information Protection
 
@@ -53,7 +53,7 @@ Sono possibili tre scenari di uso di utenti e gruppi con Azure Information Prote
 
 - I diritti di utilizzo determinano se un utente può aprire un documento o un messaggio di posta elettronica e come può usarlo, ad esempio se può solo leggerlo, leggerlo e stamparlo o leggerlo e modificarlo. 
 
-- I controlli di accesso includono una data di scadenza e specificano se per l'accesso è necessaria una connessione a Internet. 
+- I controlli di accesso includono una data di scadenza e se è necessaria una connessione a Internet per l'accesso. 
 
 **Configurazione del servizio Azure Rights Management** per il supporto di scenari specifici. Pertanto solo gli amministratori possono selezionare questi gruppi. Ecco alcuni esempi di elementi configurabili:
 
@@ -79,7 +79,7 @@ Per assegnare diritti di utilizzo e controlli di accesso e configurare il serviz
 
     - Per Azure AD: [Aggiungere un nome di dominio personalizzato ad Azure Active Directory](/azure/active-directory/fundamentals/add-custom-domain)
 
-    - Per Office 365: [Aggiungere un dominio a Office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
+    - Per Office 365: [aggiungere un dominio a office 365](/office365/admin/setup/add-domain?view=o365-worldwide)
 
 - L'attributo **userPrincipalName di Azure AD** viene usato solo se per un account nel tenant non sono presenti valori nell'attributo proxyAddresses di Azure AD, ad esempio se nel portale di Azure o per Office 365 si crea un utente senza una cassetta postale.
 
@@ -212,9 +212,9 @@ Considerare questo ritardo nelle modifiche o nell'esecuzione di test, ad esempio
 
 Dopo aver confermato che gli utenti e i gruppi sono utilizzabili con Azure Information Protection e che tutto è pronto per iniziare ad applicare la protezione a documenti e messaggi di posta elettronica, controllare se è necessario attivare il servizio Rights Management. Per proteggere i documenti e i messaggi di posta elettronica dell'organizzazione, prima attivare questo servizio: 
 
-- A partire da febbraio 2018: se la sottoscrizione che include Azure Rights Management o Azure Information Protection risale al mese di febbraio 2018 o a un mese successivo, il servizio viene attivato automaticamente. 
+- A partire dal mese di febbraio 2018: se la sottoscrizione che include Azure Rights Management o Azure Information Protection risale al mese di febbraio 2018 o a un mese successivo, il servizio viene attivato automaticamente. 
 
-- Se la sottoscrizione risale a prima di febbraio 2018: è necessario attivare il servizio manualmente. 
+- Se la sottoscrizione è stata acquistata prima del mese di febbraio 2018, il servizio deve essere attivato. 
 
 Per ulteriori informazioni, incluso il controllo dello stato di attivazione, vedere [attivazione del servizio di protezione da Azure Information Protection](./activate-service.md).
 

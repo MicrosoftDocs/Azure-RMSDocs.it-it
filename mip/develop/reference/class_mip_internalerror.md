@@ -5,20 +5,20 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: c6a30a17321df19219b92d59b61f44b8b65562c2
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 55b241d38a04e0c42f7e6d68479843af87fbab18
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056008"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558762"
 ---
 # <a name="class-mipinternalerror"></a>Classe mip::InternalError 
 Si è verificato un errore interno. Questo errore viene generato quando un evento imprevisto si verifica durante l'esecuzione.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 _Non ancora documentato._

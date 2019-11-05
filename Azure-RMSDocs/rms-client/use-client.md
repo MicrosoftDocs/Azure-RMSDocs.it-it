@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection offre una soluzione client-s
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/27/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 551aaa12a4a567b955b7d5e005e205c4029aa382
-ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
+ms.openlocfilehash: abe085b36bd940dd69c2cc5f0f7a564fd6707548
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984890"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561139"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -52,7 +52,7 @@ Poiché il client di etichettatura unificata e il client classico richiedono un'
 
 Quale client utilizzare?
 
-- Usare il **client di assegnazione di etichette incorporato in Office** per i computer Windows quando si dispone di app di Office 365 con una versione minima 1910, si vogliono usare le stesse etichette e le stesse impostazioni dei criteri che possono essere usate anche da MacOS, iOS e Android e non sono necessarie funzionalità in  app di Office che richiedono il client Unified Labeling o il client classico. Queste funzionalità includono attualmente l'etichettatura automatica e consigliata e la barra Information Protection sotto la barra multifunzione per semplificare la selezione e la visibilità delle etichette. Questo client supporta il cambio di account e, poiché non usa un componente aggiuntivo di Office, offre prestazioni migliori nelle app di Office rispetto all'uso di uno dei client Azure Information Protection.
+- Usare il **client di assegnazione di etichette incorporato in Office** per i computer Windows quando si dispone di app di Office 365 con una versione minima 1910, si vogliono usare le stesse etichette e le stesse impostazioni dei criteri che possono essere usate anche da MacOS, iOS e Android e non sono necessarie funzionalità in  app di Office che richiedono il client Unified Labeling o il client classico. Queste funzionalità includono la barra Information Protection sotto la barra multifunzione per semplificare la selezione e la visibilità delle etichette. Questo client supporta il cambio di account e, poiché non usa un componente aggiuntivo di Office, offre prestazioni migliori nelle app di Office rispetto all'uso di uno dei client Azure Information Protection.
 
 - Usare il **client Azure Information Protection Unified Labeling** nei computer Windows per le etichette e le impostazioni dei criteri che possono essere usate anche da MacOS, iOS e Android, si vuole etichettare i file in modo indipendente dalle app di Office 365 e non sono necessarie funzionalità che sono supportati solo dal client classico. Queste funzionalità includono attualmente la protezione del contenuto con una chiave locale (HYOK) e una versione di disponibilità generale dello scanner per gli archivi dati locali.
 
@@ -77,9 +77,6 @@ Quando si dispone di un computer Windows che esegue le app di Office 365 che cor
     Per questi utenti hanno un'esperienza di etichettatura leggermente diversa quando usano questo client. Ad esempio, viene visualizzato un pulsante **Proteggi** anziché un pulsante di **riservatezza** nelle app di Office. In qualità di amministratore, è necessario gestire le etichette per le impostazioni di HYOK e le impostazioni dei criteri in un centro di gestione diverso per le etichette e le impostazioni per le altre piattaforme client.
 
 - Sono presenti archivi dati locali con documenti che devono essere analizzati per ottenere informazioni riservate oppure classificati e protetti. Per l'uso in produzione, si distribuisce il client classico nei server per eseguire lo scanner Azure Information Protection.
-
-
-
 
 ## <a name="compare-the-labeling-clients-for-windows-computers"></a>Confrontare i client di etichettatura per i computer Windows
 

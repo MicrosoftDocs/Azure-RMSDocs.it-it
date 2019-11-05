@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 82322cf62aee2d87c4d9938304c605a486bf61b7
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 4bca627cbe63a4c4729d6c1f4a4569a101bb6013
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689547"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559778"
 ---
 # <a name="prepare-the-environment-for-azure-rights-management-when-you-have-ad-rms"></a>Preparare l'ambiente per Azure Rights Management quando si dispone di AD RMS
 
@@ -76,21 +76,21 @@ Verrà visualizzato il messaggio che indica che **Rights Management non è attiv
 
 #### <a name="to-deactivate-rights-management-from-the-azure-portal"></a>Per disattivare Rights Management dal portale di Azure
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**.
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection** .
     
-    Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
     
-    Se non si è ancora eseguito l'accesso al pannello Azure Information Protection, vedere i [passaggi aggiuntivi](configure-policy.md#to-access-the-azure-information-protection-blade-for-the-first-time) che è necessario eseguire una sola volta per aggiungere questo pannello al portale.
+    Se non è stato eseguito l'accesso al riquadro Azure Information Protection prima, vedere i [passaggi aggiuntivi](configure-policy.md#to-access-the-azure-information-protection-pane-for-the-first-time) monouso per aggiungere questo riquadro al portale.
 
 2. Scegliere **Attivazione della protezione** dalle opzioni del menu. 
 
-3.  Nel pannello **Azure Information Protection - Protection activation** (Azure Information Protection - Attivazione protezione) selezionare **Disattiva**. Selezionare **Sì** per confermare la scelta.
+3.  Nel riquadro **attivazione protezione Azure Information Protection** selezionare **Disattiva**. Selezionare **Sì** per confermare la scelta.
 
 Sulla barra delle informazioni verrà visualizzato **Disattivazione completata** mentre **Disattiva** è stato sostituito da **Attiva**. 
 
 ### <a name="step-2-start-planning-for-migration"></a>Passaggio 2: Avviare la pianificazione della migrazione
 
-Per indicazioni sulla migrazione, vedere: [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
+Per informazioni, vedere la guida alla migrazione: [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
 
 
 ## <a name="your-subscription-was-purchased-before-or-during-february-2018-and-you-have-exchange-online"></a>La sottoscrizione è stata acquistata prima o durante il mese di febbraio 2018 ed è disponibile Exchange Online
@@ -107,22 +107,22 @@ Usare il comando di PowerShell per Exchange Online [Set-IRMConfiguration](/power
 
 ### <a name="step-2-start-planning-for-migration"></a>Passaggio 2: Avviare la pianificazione della migrazione
 
-Per indicazioni sulla migrazione, vedere: [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
+Per informazioni, vedere la guida alla migrazione: [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
 
 
 ## <a name="you-see-an-option-to-activate-protection-when-you-configure-azure-information-protection"></a>Quando si configura Azure Information Protection viene visualizzata un'opzione per attivare la protezione
 
-Il pannello **Azure Information Protection - Attivazione della protezione** include un'opzione per attivare il servizio Azure Rights Management.  
+Il riquadro **attivazione protezione Azure Information Protection** ha un'opzione per attivare il servizio Azure Rights Management.  
 
 Se si usa anche AD RMS, non selezionare l'opzione **Attiva**. Anche quando il servizio Azure Rights Management non è attivato, è possibile usare Azure Information Protection per le etichette che applicano solo la classificazione. Viene creato un criterio predefinito speciale che non include la protezione dei dati e le opzioni di configurazione corrispondenti restano disattivate fino all'attivazione del servizio Azure Rights Management.
 
 ### <a name="step-1-configure-your-azure-information-protection-policy-for-classification-and-labeling---without-protection"></a>Passaggio 1: Configurare i criteri di Azure Information Protection per la classificazione e l'assegnazione di etichette, senza protezione
 
-Nel pannello **Azure Information Protection - Etichette** visualizzare e configurare le etichette che non includono opzioni per la protezione dati. Per altre informazioni su come configurare le etichette e le impostazioni dei criteri, vedere [Configurazione dei criteri di Azure Information Protection](configure-policy.md).
+Dal riquadro **Azure Information Protection-labels** visualizzare e configurare le etichette che non includono opzioni per la protezione dei dati. Per altre informazioni su come configurare le etichette e le impostazioni dei criteri, vedere [Configurazione dei criteri di Azure Information Protection](configure-policy.md).
 
 ### <a name="step-2-start-planning-for-migration"></a>Passaggio 2: Avviare la pianificazione della migrazione
 
-Per indicazioni sulla migrazione, vedere: [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
+Per informazioni, vedere la guida alla migrazione: [Migrazione da AD RMS ad Azure Information Protection](migrate-from-ad-rms-to-azure-rms.md)
 
 ### <a name="step-3-configure-labels-for-protection"></a>Passaggio 3: Configurare le etichette per la protezione
 

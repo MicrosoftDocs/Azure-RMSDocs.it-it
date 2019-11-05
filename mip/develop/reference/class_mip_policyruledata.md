@@ -5,29 +5,29 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 8fc121385a294ae32da9d6707618990a1920b815
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 2094f6d2d0a243f73f9c19f08dcc68877ca5d16a
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055608"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560838"
 ---
 # <a name="class-mippolicyruledata"></a>Classe MIP::P olicyRuleData 
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std::string& GetName() const  | _Non ancora documentato._
-public const std::string& GetId() const  | _Non ancora documentato._
-public const std::\<vector std::\<unique_ptr\>ActionData\>& GetActionsData () const  | _Non ancora documentato._
-public bool IsCompatibleVersion () const  | _Non ancora documentato._
-public const std::\<map std:: String, std::\>String & GetAttributeData () const  | _Non ancora documentato._
-public const std::\<vector std::\<map std:: String, std::\>String\>& GetRuleTags () const  | _Non ancora documentato._
-Public Const ConditionData * GetConditionData () const  | _Non ancora documentato._
-public virtual ~ PolicyRuleData ()  | _Non ancora documentato._
+public const std::string& GetName() const  | Non ancora documentato.
+public const std::string& GetId() const  | Non ancora documentato.
+public const std:: Vector\<std:: unique_ptr\<ActionData\>\>& GetActionsData () const  | Non ancora documentato.
+public bool IsCompatibleVersion () const  | Non ancora documentato.
+public const std:: Map\<std:: String, std:: String\>& GetAttributeData () const  | Non ancora documentato.
+public const std:: Vector\<std:: Map\<std:: String, std:: String\>\>& GetRuleTags () const  | Non ancora documentato.
+Public Const ConditionData * GetConditionData () const  | Non ancora documentato.
+public virtual ~ PolicyRuleData ()  | Non ancora documentato.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getname-function"></a>GetName (funzione)
 _Non ancora documentato._

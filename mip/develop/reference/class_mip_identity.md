@@ -5,40 +5,40 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 8bb4e30398e6f12214605df6f5ad194334d3eeff
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 633a0ac8536f7bbd285eee67934f27d65b399bf4
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054782"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560153"
 ---
 # <a name="class-mipidentity"></a>Classe MIP:: Identity 
 Astrazione per Identity.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-Identità pubblica ()  |  Costruttore di [identità](class_mip_identity.md) predefinito usato quando un indirizzo di posta elettronica dell'utente non è noto.
-Identità pubblica (const Identity & other)  |  Costruttore di copia [Identity](class_mip_identity.md) .
-Identità esplicita pubblica (const std:: String & email)  |  Costruttore di [identità](class_mip_identity.md) usato quando un indirizzo di posta elettronica dell'utente è noto.
+Identità pubblica ()  |  Costruttore di identità predefinito usato quando un indirizzo di posta elettronica dell'utente non è noto.
+Identità pubblica (const Identity & other)  |  Costruttore di copia Identity.
+Identità esplicita pubblica (const std:: String & email)  |  Costruttore di identità usato quando un indirizzo di posta elettronica dell'utente è noto.
 public const std:: String & getEmail () const  |  Ricevere il messaggio di posta elettronica.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="identity-function"></a>Identity (funzione)
-Costruttore di [identità](class_mip_identity.md) predefinito usato quando un indirizzo di posta elettronica dell'utente non è noto.
+Costruttore di identità predefinito usato quando un indirizzo di posta elettronica dell'utente non è noto.
   
 ### <a name="identity-function"></a>Identity (funzione)
-Costruttore di copia [Identity](class_mip_identity.md) .
+Costruttore di copia Identity.
 
 Parametri:  
-* **[Identity](class_mip_identity.md)** : usata per creare la copia.
+* **Identity**: usata per creare la copia.
 
 
   
 ### <a name="identity-function"></a>Identity (funzione)
-Costruttore di [identità](class_mip_identity.md) usato quando un indirizzo di posta elettronica dell'utente è noto.
+Costruttore di identità usato quando un indirizzo di posta elettronica dell'utente è noto.
 
 Parametri:  
 * **email**: indirizzo di posta elettronica dell'utente.
@@ -49,4 +49,4 @@ Parametri:
 Ricevere il messaggio di posta elettronica.
 
   
-**Restituisce**: Messaggio di posta elettronica.
+**Restituisce**: il messaggio di posta elettronica.

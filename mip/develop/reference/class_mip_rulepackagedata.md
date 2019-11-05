@@ -5,25 +5,25 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: f66b03fc8950b9e6c7356b857b3a1a942a1cdd85
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 5cc04f5082ca0ac6e3cd9153834064794b9eaf12
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057149"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560565"
 ---
 # <a name="class-miprulepackagedata"></a>Classe MIP:: RulePackageData 
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-Public Const PolicyRuleData * GetRuleData () const  | _Non ancora documentato._
-public const std::p\<Air std:: String, std::\>String & GetLabelToTemplateId () const  | _Non ancora documentato._
-public const std::p\<Air std:: String,\>bool & GetLabelToDoNotForward () const  | _Non ancora documentato._
-public virtual ~ RulePackageData ()  | _Non ancora documentato._
+Public Const PolicyRuleData * GetRuleData () const  | Non ancora documentato.
+public const std::p Air\<std:: String, std:: String\>& GetLabelToTemplateId () const  | Non ancora documentato.
+public const std::p Air\<std:: String, ProtectionActionType\>& GetLabelToProtectionType () const  | Non ancora documentato.
+public virtual ~ RulePackageData ()  | Non ancora documentato.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getruledata-function"></a>GetRuleData (funzione)
 _Non ancora documentato._
@@ -33,7 +33,7 @@ _Non ancora documentato._
 _Non ancora documentato._
 
   
-### <a name="getlabeltodonotforward-function"></a>GetLabelToDoNotForward (funzione)
+### <a name="getlabeltoprotectiontype-function"></a>GetLabelToProtectionType (funzione)
 _Non ancora documentato._
 
   

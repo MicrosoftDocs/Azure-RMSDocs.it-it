@@ -5,29 +5,29 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: febebe2f8d578fb53120fac4ddb18acacd70a053
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 0a6ffd159115283b461c1f7455d4aafeb4c36623
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054613"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561058"
 ---
 # <a name="class-miplabelingoptions"></a>Classe mip::LabelingOptions 
 Interfaccia per la configurazione delle opzioni delle etichette per i metodi SetLabel/DeleteLabel.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public LabelingOptions (metodo AssignmentMethod)  | _Non ancora documentato._
-public AssignmentMethod GetAssignmentMethod() const  | _Non ancora documentato._
-public bool IsDowngradeJustified() const  | _Non ancora documentato._
-public const std::string& GetJustificationMessage() const  | _Non ancora documentato._
-public const std::\<vector std::p\<aria std:: String, std::\>String\>& getextendedproperties () const  | _Non ancora documentato._
-public void SetDowngradeJustification(bool isDowngradeJustified, const std::string& justificationMessage)  | _Non ancora documentato._
-public void seextendedpropertys (const std::\<vector std::p\<Air std:: String, std::\>String\>& ExtendedProperties)  | _Non ancora documentato._
+public LabelingOptions (metodo AssignmentMethod)  | Non ancora documentato.
+public AssignmentMethod GetAssignmentMethod() const  | Non ancora documentato.
+public bool IsDowngradeJustified() const  | Non ancora documentato.
+public const std::string& GetJustificationMessage() const  | Non ancora documentato.
+public const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& getextendedpropertys () const  | Non ancora documentato.
+public void SetDowngradeJustification(bool isDowngradeJustified, const std::string& justificationMessage)  | Non ancora documentato.
+public void seextendedpropertys (const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& ExtendedProperties)  | Non ancora documentato.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="labelingoptions-function"></a>LabelingOptions (funzione)
 _Non ancora documentato._

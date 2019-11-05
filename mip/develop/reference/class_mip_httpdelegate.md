@@ -5,63 +5,63 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: f5f5bc13f3c01e40b0034d4fae1bd698da8426c5
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: a29673c71aaa0357ebb52bc4cab3b3fef74a21d1
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054872"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560190"
 ---
 # <a name="class-miphttpdelegate"></a>Classe mip::HttpDelegate 
 Interfaccia per l'override della gestione HTTP.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public std:: shared_ptr\<HttpOperation\> Send (const std::\<shared_ptr\>HttpRequest & Request, const std:\<:\>shared_ptr void & context)  |  Inviare una richiesta HTTP.
-public std:: shared_ptr\<HttpOperation\> SendAsync (const std::\<shared_ptr\>HttpRequest & Request, const std:\<:\>shared_ptr void & context, const std:: funzione\<void (STD:: shared_ptr\<HttpOperation\>)\>& callbackFn)  |  Inviare una richiesta HTTP in modo asincrono.
+public std:: shared_ptr\<HttpOperation\> Send (const std:: shared_ptr\<HttpRequest\>& Request, const std:: shared_ptr\<void\>& context)  |  Inviare una richiesta HTTP.
+public std:: shared_ptr\<HttpOperation\> SendAsync (const std:: shared_ptr\<HttpRequest\>& Request, const std:: shared_ptr\<void\>& context, const std:: Function\<void (STD :: shared_ptr\<HttpOperation\>)  |  Inviare una richiesta HTTP in modo asincrono.
 public void CancelOperation (const std:: String & RequestId)  |  Annulla un'operazione HTTP specifica.
-public void CancelAllOperations()  |  Annulla le richieste HTTP in corso.
+public void CancelAllOperations ()  |  Annulla le richieste HTTP in corso.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="send-function"></a>Funzione Send
 Inviare una richiesta HTTP.
 
 Parametri:  
-* **richiesta**: Richiesta HTTP 
+* **request**: richiesta HTTP 
 
 
-* **context**: Lo stesso contesto client opaco passato all'API che ha generato questa richiesta HTTP
+* **context**: stesso contesto client opaco passato all'API che ha generato questa richiesta HTTP
 
 
 
   
-**Restituisce**: Contenitore operazione HTTP
+**Restituisce**: contenitore operazione http
   
 ### <a name="sendasync-function"></a>Funzione SendAsync
 Inviare una richiesta HTTP in modo asincrono.
 
 Parametri:  
-* **richiesta**: Richiesta HTTP 
+* **request**: richiesta HTTP 
 
 
-* **context**: Lo stesso contesto client opaco passato all'API che ha generato questa richiesta HTTP 
+* **context**: stesso contesto client opaco passato all'API che ha generato questa richiesta HTTP 
 
 
-* **callbackFn**: Funzione che verrà eseguita al completamento
+* **callbackFn**: funzione che verrà eseguita al completamento
 
 
 
   
-**Restituisce**: Contenitore operazione HTTP
+**Restituisce**: contenitore operazione http
   
 ### <a name="canceloperation-function"></a>CancelOperation (funzione)
 Annulla un'operazione HTTP specifica.
 
 Parametri:  
-* **requestId**: ID della richiesta da annullare
+* **RequestId**: ID della richiesta da annullare
 
 
   

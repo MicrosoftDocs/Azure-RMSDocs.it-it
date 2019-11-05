@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c5fec770f3841408ea2eb10f5836329a6b003312
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 6a3792d8b69ebe7bf1f924fe618725a7cf286353
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447649"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561289"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
@@ -230,9 +230,9 @@ Se non si configura lo scanner nel portale di Azure prima di eseguire il comando
 In questo scenario, quando si configura lo scanner nel portale di Azure, è necessario specificare esattamente lo stesso nome di profilo usato quando è stato eseguito il comando Update-AIPScanner. Se il nome non corrisponde, lo scanner non verrà configurato per le impostazioni. 
 
 > [!TIP]
-> Per identificare gli scanner con questo errore di configurazione, usare il pannello **Azure Information Protection - Nodi** nel portale di Azure.
+> Per identificare gli scanner con questa configurazione errata, usare il riquadro **Azure Information Protection-nodes** nel portale di Azure.
 >  
-> Per gli scanner con connettività Internet, visualizzano il nome del computer con il numero di versione GA del client Azure Information Protection, ma senza nome profilo. Solo per gli scanner con numero di versione 1.41.51.0 non dovrebbe essere visualizzato il nome di profilo in questo pannello. 
+> Per gli scanner con connettività Internet, visualizzano il nome del computer con il numero di versione GA del client Azure Information Protection, ma senza nome profilo. Solo gli scanner con numero di versione 1.41.51.0 non devono visualizzare alcun nome di profilo in questo riquadro. 
 
 Se non è stato specificato un nome di profilo quando è stato eseguito il comando Update-AIPScanner, il nome del computer viene usato per creare automaticamente il nome del profilo per lo scanner.
 

@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a9226d20962d1d51608ef0d5d487e785006fd8dc
-ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
+ms.openlocfilehash: 9314cee4b09db6098612ce0e9cd5c6bac51a8e66
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984935"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561328"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -32,19 +32,19 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 
 ### <a name="how-to-configure-advanced-client-configuration-settings-in-the-portal"></a>Come configurare le impostazioni avanzate di configurazione del client nel portale
 
-1. Se non è già stato fatto, in una nuova finestra del browser accedere al [portale di Azure](../configure-policy.md#signing-in-to-the-azure-portal) e quindi passare al pannello **Azure Information Protection**.
+1. Se non è ancora stato fatto, in una nuova finestra del browser [accedere alla portale di Azure](../configure-policy.md#signing-in-to-the-azure-portal), quindi passare al riquadro **Azure Information Protection** .
 
 2. Dall'opzione di menu **Classificazioni** > **Etichette**: selezionare **Criteri**.
 
-3. Nel pannello **Azure Information Protection - Criteri** selezionare il menu di scelta rapida ( **...** ) accanto ai criteri, contenente le impostazioni avanzate. Selezionare quindi **Impostazioni avanzate**.
+3. Nel riquadro **Azure Information Protection-criteri** selezionare il menu di scelta rapida ( **...** ) accanto al criterio per contenere le impostazioni avanzate. Selezionare quindi **Impostazioni avanzate**.
     
     È possibile configurare le impostazioni avanzate per i criteri globali e per i criteri con ambito.
 
-4. Nel pannello **Impostazioni avanzate** digitare il nome e il valore dell'impostazione avanzata e quindi selezionare **Salva e chiudi**.
+4. Nel riquadro **Impostazioni avanzate** Digitare il nome e il valore dell'impostazione avanzata e quindi selezionare **Salva e Chiudi**.
 
 5. Assicurarsi che gli utenti interessati da questi criteri riavviino le applicazioni di Office eventualmente aperte.
 
-6. Se l'impostazione non è più necessaria e si vuole ripristinare il comportamento predefinito, nel pannello **Impostazioni avanzate** selezionare il menu di scelta rapida ( **...** ) accanto all'impostazione non più necessaria e quindi selezionare **Elimina**. Fare clic su **Salva e chiudi**.
+6. Se l'impostazione non è più necessaria e si desidera ripristinare il comportamento predefinito: nel riquadro **Impostazioni avanzate** selezionare il menu di scelta rapida ( **...** ) accanto all'impostazione non più necessaria, quindi selezionare **Elimina**. Fare clic su **Salva e chiudi**.
 
 #### <a name="available-advanced-client-settings"></a>Impostazioni client avanzate disponibili
 
@@ -157,9 +157,9 @@ Creare il nome del valore DWORD seguente (con i dati associati):
 
 ## <a name="support-for-disconnected-computers"></a>Supporto per i computer disconnessi
 
-Per impostazione predefinita, il client Azure Information Protection prova automaticamente a connettersi al servizio Azure Information Protection per scaricare i criteri più recenti. Se si è conoscenza che i computer in uso non potranno connettersi a Internet per un determinato periodo di tempo, è possibile impedire al client di provare a connettersi al servizio modificando il Registro di sistema. 
+Per impostazione predefinita, il client Azure Information Protection prova automaticamente a connettersi al servizio Azure Information Protection per scaricare i criteri più recenti. Se si dispone di computer che non saranno in grado di connettersi a Internet per un certo periodo di tempo, è possibile impedire che il client tenti di connettersi al servizio modificando il registro di sistema. 
 
-Si noti che senza una connessione a Internet, il client non può applicare la protezione (o rimuovere la protezione) usando la chiave basata sul cloud dell'organizzazione. Il client può invece usare esclusivamente le etichette che applicano solo la classificazione o la protezione che usa [HYOK](../configure-adrms-restrictions.md).
+Si noti che senza una connessione Internet, il client non può applicare la protezione (o rimuovere la protezione) usando la chiave basata sul cloud dell'organizzazione. Il client può invece usare esclusivamente le etichette che applicano solo la classificazione o la protezione che usa [HYOK](../configure-adrms-restrictions.md).
 
 È possibile evitare una richiesta di accesso al servizio Azure Information Protection tramite un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che è necessario configurare nel portale di Azure, per poi scaricare i criteri per i computer. In alternativa, è possibile evitare questa richiesta di accesso modificando il Registro di sistema.
 
@@ -343,7 +343,7 @@ Le sezioni seguenti contengono istruzioni di configurazione per ogni impostazion
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>Per implementare i messaggi popup di avviso, giustificazione o blocco per etichette specifiche:
 
-Per implementare i messaggi popup per etichette specifiche, è necessario conoscere l'ID etichetta per tali etichette. Il valore dell'ID etichetta è visualizzato nel pannello **Etichetta**, quando si visualizzano o si configurano i criteri di Azure Information Protection nel portale di Azure. Per i file a cui sono state applicate etichette, è anche possibile eseguire il cmdlet di PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) per identificare l'ID etichetta (MainLabelId o SubLabelId). Quando un'etichetta ha etichette secondarie, specificare sempre l'ID della sola etichetta secondaria e non dell'etichetta padre.
+Per implementare i messaggi popup per etichette specifiche, è necessario conoscere l'ID etichetta per tali etichette. Il valore ID etichetta viene visualizzato nel riquadro **etichetta** , quando si visualizzano o si configurano i criteri di Azure Information Protection nel portale di Azure. Per i file a cui sono state applicate etichette, è anche possibile eseguire il cmdlet di PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) per identificare l'ID etichetta (MainLabelId o SubLabelId). Quando un'etichetta ha etichette secondarie, specificare sempre l'ID della sola etichetta secondaria e non dell'etichetta padre.
 
 Creare una o più delle impostazioni client avanzate seguenti con le chiavi seguenti. Per i valori, specificare una o più etichette in base ai rispettivi ID separandoli con una virgola.
 
@@ -478,7 +478,7 @@ Questa configurazione usa un'[impostazione avanzata del client](#how-to-configur
 
 Quando si configura questa impostazione, Outlook non applica l'etichetta predefinita configurata nei criteri di Azure Information Protection per l'impostazione **Selezionare l'etichetta predefinita**. In alternativa, Outlook può applicare un'etichetta predefinita diversa o non applicare alcuna etichetta.
 
-Per applicare un'etichetta diversa, è necessario specificare il relativo ID. Il valore dell'ID etichetta è visualizzato nel pannello **Etichetta**, quando si visualizzano o si configurano i criteri di Azure Information Protection nel portale di Azure. Per i file a cui sono state applicate etichette, è anche possibile eseguire il cmdlet di PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) per identificare l'ID etichetta (MainLabelId o SubLabelId). Quando un'etichetta ha etichette secondarie, specificare sempre l'ID della sola etichetta secondaria e non dell'etichetta padre.
+Per applicare un'etichetta diversa, è necessario specificare il relativo ID. Il valore ID etichetta viene visualizzato nel riquadro **etichetta** , quando si visualizzano o si configurano i criteri di Azure Information Protection nel portale di Azure. Per i file a cui sono state applicate etichette, è anche possibile eseguire il cmdlet di PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) per identificare l'ID etichetta (MainLabelId o SubLabelId). Quando un'etichetta ha etichette secondarie, specificare sempre l'ID della sola etichetta secondaria e non dell'etichetta padre.
 
 Per fare in modo che Outlook non applichi l'etichetta predefinita, specificare **Nessuna**.
 
@@ -498,7 +498,7 @@ Per questa configurazione è necessario specificare un'impostazione client avanz
 
 `[Azure Information Protection label ID];[S/MIME action]`
 
-Il valore dell'ID etichetta è visualizzato nel pannello **Etichetta**, quando si visualizzano o si configurano i criteri di Azure Information Protection nel portale di Azure. Per usare S/MIME con un'etichetta secondaria, è necessario specificare sempre l'ID solo dell'etichetta secondaria e non dell'etichetta padre. Quando si specifica un'etichetta secondaria, l'etichetta padre deve essere nello stesso ambito o nei criteri globali.
+Il valore ID etichetta viene visualizzato nel riquadro **etichetta** , quando si visualizzano o si configurano i criteri di Azure Information Protection nel portale di Azure. Per usare S/MIME con un'etichetta secondaria, è necessario specificare sempre l'ID solo dell'etichetta secondaria e non dell'etichetta padre. Quando si specifica un'etichetta secondaria, l'etichetta padre deve essere nello stesso ambito o nei criteri globali.
 
 L'azione S/MIME può essere:
 
@@ -662,7 +662,7 @@ Per questa configurazione è necessario specificare un'impostazione client avanz
 
 `[Azure Information Protection label ID],[migration rule name],[Secure Islands custom property name],[Secure Islands metadata Regex value]`
 
-Il valore dell'ID etichetta è visualizzato nel pannello **Etichetta**, quando si visualizzano o si configurano i criteri di Azure Information Protection nel portale di Azure. Per specificare un'etichetta secondaria, l'etichetta padre deve essere nello stesso ambito o nei criteri globali.
+Il valore ID etichetta viene visualizzato nel riquadro **etichetta** , quando si visualizzano o si configurano i criteri di Azure Information Protection nel portale di Azure. Per specificare un'etichetta secondaria, l'etichetta padre deve essere nello stesso ambito o nei criteri globali.
 
 Specificare un nome di regola di migrazione a propria scelta. Usare un nome descrittivo che consente di identificare come deve essere eseguito il mapping di una o più etichette dalla soluzione precedente imprevisto a un'etichetta di Azure Information Protection. Il nome viene visualizzato nei report dello scanner e nel Visualizzatore eventi. Si noti che questa impostazione non comporta la rimozione dell'etichetta originale dal documento o di tutti i contrassegni visivi nel documento che l'etichetta originale potrebbe aver applicato. Per rimuovere le intestazioni e i piè di pagina, vedere la sezione successiva [Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette](#remove-headers-and-footers-from-other-labeling-solutions).
 
@@ -982,7 +982,7 @@ Per ottenere questa soluzione:
 
 2. Creare una regola del flusso di posta di Exchange per ogni etichetta: applicare la regola quando le proprietà del messaggio includono la classificazione configurata e modificare le proprietà del messaggio per impostare un'intestazione del messaggio. 
 
-     Per l'intestazione del messaggio, è possibile trovare le informazioni da specificare nelle intestazioni Internet di un messaggio di posta elettronica inviato e classificato tramite l'etichetta di Azure Information Protection. Cercare l'intestazione **msip_labels** e la stringa immediatamente successiva fino al punto e virgola incluso. Ad esempio:
+     Per l'intestazione del messaggio, è possibile trovare le informazioni da specificare controllando le intestazioni Internet di un messaggio di posta elettronica inviato e classificato tramite l'etichetta Azure Information Protection. Cercare l'intestazione **msip_labels** e la stringa immediatamente successiva fino al punto e virgola incluso. Ad esempio:
     
     **msip_labels: MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;**
     

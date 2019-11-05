@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 28c63107581e6560686845b7f9a77293f505da41
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: c4a889c021d6a66a5cde7e071137d9f13dcc0ab1
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445024"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559521"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Come configurare le impostazioni dei criteri per Azure Information Protection
 
@@ -37,15 +37,15 @@ Si noti che le impostazioni dei criteri potrebbero avere valori predefiniti dive
 
 ## <a name="to-configure-the-policy-settings"></a>Per configurare le impostazioni dei criteri
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**.
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection** .
     
-    Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
 
-2. Dall'opzione di menu **Classificazioni** > **Criteri**: nel pannello **Azure Information Protection - Criteri** selezionare **Globale** se le impostazioni da configurare si applicheranno a tutti gli utenti.
+2. Dall'opzione di menu **classificazioni** > **criteri** : nel riquadro **criteri di Azure Information Protection** selezionare **globale** se le impostazioni che si desidera configurare verranno applicate a tutti gli utenti.
     
     Se le impostazioni da configurare si trovano in un [criterio con ambito](configure-policy-scope.md) per essere applicate solo a utenti selezionati, selezionare invece il criterio con ambito.
 
-3. Nel pannello **Criteri** configurare le impostazioni:
+3. Nel riquadro **criteri** configurare le impostazioni:
     
    - **Selezionare l'etichetta predefinita**: quando si seleziona questa opzione, selezionare l'etichetta da assegnare ai documenti e ai messaggi di posta elettronica che non hanno un'etichetta. Non è possibile impostare un'etichetta come predefinita se contiene etichette secondarie.
         

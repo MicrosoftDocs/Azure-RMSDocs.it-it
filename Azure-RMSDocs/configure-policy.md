@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0de43192b44fb4e6d931d1e09ef8f01514c0a4ff
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: e5d81b5437fef69438fac5d8729b4beb8c9641a9
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72447047"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559467"
 ---
 # <a name="configuring-the-azure-information-protection-policy"></a>Configurazione dei criteri di Azure Information Protection
 
@@ -86,13 +86,13 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
     
     Gli account Microsoft non possono gestire Azure Information Protection.
 
-## <a name="to-access-the-azure-information-protection-blade-for-the-first-time"></a>Per accedere al pannello Azure Information Protection per la prima volta
+## <a name="to-access-the-azure-information-protection-pane-for-the-first-time"></a>Per accedere al riquadro Azure Information Protection per la prima volta
 
 1. Accedere al portale di Azure.
 
-2. Nel menu dell'hub selezionare **Crea una risorsa** e quindi nella casella di ricerca per il Marketplace digitare **Azure Information Protection**. 
+2. Selezionare **+ Crea una risorsa**e quindi digitare **Azure Information Protection**nella casella di ricerca del Marketplace. 
     
-3. Selezionare **Azure Information Protection** nell'elenco dei risultati. Nel pannello **Azure Information Protection** fare clic su **Crea**.
+3. Selezionare **Azure Information Protection** nell'elenco dei risultati. Nel riquadro **Azure Information Protection** fare clic su **Crea**.
     
     > [!TIP] 
     > Facoltativamente, selezionare **Aggiungi al dashboard** per creare un riquadro **Azure Information Protection** nel dashboard, in modo da ignorare la ricerca del servizio al successivo accesso al portale.
@@ -101,15 +101,15 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
 
 4. Quando ci si connette al servizio per la prima volta viene visualizzata automaticamente la pagina **Avvio rapido**. Consultare le risorse suggerite o usare le altre opzioni di menu. Usare la procedura seguente per configurare le etichette selezionabili dagli utenti.
 
-Quando si accede di nuovo al pannello **Azure Information Protection** viene selezionata automaticamente l'opzione **Etichette**, che consente di visualizzare e configurare etichette per tutti gli utenti. È possibile tornare alla pagina **Avvio rapido** selezionandola nel menu **Generale**.
+La volta successiva che si accede al riquadro **Azure Information Protection** , viene selezionata automaticamente l'opzione **etichette** in modo che sia possibile visualizzare e configurare le etichette per tutti gli utenti. È possibile tornare alla pagina **Avvio rapido** selezionandola nel menu **Generale**.
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Come configurare i criteri di Azure Information Protection
 
 1. Assicurarsi di aver eseguito l'accesso al portale di Azure usando uno di questi ruoli amministrativi: Azure Information Protection amministratore, amministratore della sicurezza o amministrazione globale. Vedere la [sezione precedente](#signing-in-to-the-azure-portal) per altre informazioni su questi ruoli amministrativi.
 
-2. Se necessario, passare al pannello **Azure Information Protection**: ad esempio, nel menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Information Protection** nella casella Filtro. Selezionare **Azure Information Protection** nei risultati. 
+2. Se necessario, passare al riquadro **Azure Information Protection** : ad esempio, nel menu Hub fare clic su **tutti i servizi** e iniziare a digitare **Information Protection** nella casella filtro. Selezionare **Azure Information Protection** nei risultati. 
     
-    Il pannello **Azure Information Protection - Etichette** viene aperto automaticamente per consentire la visualizzazione e la modifica delle etichette esistenti. Le etichette possono essere rese disponibili per tutti gli utenti, per utenti selezionati o per nessun utente, aggiungendole o rimuovendole da un criterio.
+    Verrà aperto automaticamente il riquadro **etichette di Azure Information Protection** per visualizzare e modificare le etichette disponibili. Le etichette possono essere rese disponibili per tutti gli utenti, per utenti selezionati o per nessun utente, aggiungendole o rimuovendole da un criterio.
 
 3. Per visualizzare e modificare i criteri, selezionare **Criteri** nelle opzioni di menu. Per visualizzare e modificare il criterio ottenuto da tutti gli utenti, selezionare il criterio **Globale**. Per creare un criterio personalizzato per gli utenti selezionati, selezionare **Aggiungi un nuovo criterio**.
     
@@ -118,7 +118,7 @@ Quando si accede di nuovo al pannello **Azure Information Protection** viene sel
 
 È possibile creare qualsiasi numero di etichette. Tuttavia, se le etichette diventano troppo numerose e non consentono agli utenti di individuare e selezionare l'etichetta appropriata con facilità, creare criteri con ambito in modo che gli utenti visualizzino solo le etichette rilevanti. Il limite massimo di etichette per l'applicazione della protezione è 500.
 
-Quando si apportano modifiche in un pannello di Azure Information Protection, fare clic su **Save** (Salva) per salvare le modifiche oppure su **Discard** (Ignora) per ripristinare le ultime impostazioni salvate. Quando si salvano le modifiche in un criterio o si apportano modifiche alle etichette aggiunte ai criteri, tali modifiche vengono pubblicate automaticamente. Non è presente un'opzione di pubblicazione separata.
+Quando si apportano modifiche in un riquadro Azure Information Protection, fare clic su **Salva** per salvare le modifiche oppure su **Ignora** per ripristinare le ultime impostazioni salvate. Quando si salvano le modifiche in un criterio o si apportano modifiche alle etichette aggiunte ai criteri, tali modifiche vengono pubblicate automaticamente. Non è presente un'opzione di pubblicazione separata.
 
 Il client Azure Information Protection verifica la disponibilità di eventuali modifiche ogni volta che viene avviata un'applicazione di Office supportata e scarica le modifiche come criteri di Azure Information Protection più recenti. I criteri del client vengono aggiornati anche nei modi seguenti:
 
@@ -174,7 +174,7 @@ Quando viene applicata un'etichetta a un documento o un messaggio di posta elett
 
 Per i messaggi di posta elettronica, le informazioni sull'etichetta vengono archiviate al momento dell'invio del messaggio. Per i documenti, le informazioni sull'etichetta vengono archiviate quando il file viene salvato. 
 
-Per identificare il GUID per un'etichetta, individuare il valore dell'ID etichetta nel pannello **Etichetta** del portale di Azure, quando si visualizzano o si configurano i criteri di Azure Information Protection. Per i file a cui sono state applicate etichette, è anche possibile eseguire il cmdlet di PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) per identificare il GUID (MainLabelId o SubLabelId). Quando un'etichetta ha etichette secondarie, specificare sempre il GUID della sola etichetta secondaria e non dell'etichetta padre.
+Per identificare il GUID per un'etichetta, individuare il valore di ID etichetta nel riquadro **etichetta** nella portale di Azure quando si visualizzano o si configurano i criteri di Azure Information Protection. Per i file a cui sono state applicate etichette, è anche possibile eseguire il cmdlet di PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) per identificare il GUID (MainLabelId o SubLabelId). Quando un'etichetta ha etichette secondarie, specificare sempre il GUID della sola etichetta secondaria e non dell'etichetta padre.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

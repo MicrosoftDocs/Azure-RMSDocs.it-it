@@ -5,35 +5,35 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 93c73f632410bf6b1c6898746d1fcbd2c4f67e72
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: d8bce56e02778d48e6e3c0cfdb02f1c3f1f4054a
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056259"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560339"
 ---
 # <a name="class-mipauthdelegateoauth2token"></a>Classe MIP:: AuthDelegate:: OAuth2Token 
 Classe che definisce il modo in cui l'SDK MIP prevede che il token OAuth2 venga passato nuovamente all'SDK.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public OAuth2Token ()  |  Costruisce un nuovo oggetto [OAuth2Token](class_mip_authdelegate_oauth2token.md) .
-public OAuth2Token (const std:: String & accessToken)  |  Costruisce un nuovo oggetto [OAuth2Token](class_mip_authdelegate_oauth2token.md) da un AccessToken.
+public OAuth2Token ()  |  Costruisce un nuovo oggetto OAuth2Token.
+public OAuth2Token (const std:: String & accessToken)  |  Costruisce un nuovo oggetto OAuth2Token da un accessToken.
 public const std:: String & GetAccessToken () const  |  Ottenere la stringa del token di accesso.
 public void SetAccessToken (const std:: String & accessToken)  |  Impostare la stringa del token di accesso.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="oauth2token-function"></a>OAuth2Token (funzione)
-Costruisce un nuovo oggetto [OAuth2Token](class_mip_authdelegate_oauth2token.md) .
+Costruisce un nuovo oggetto OAuth2Token.
   
 ### <a name="oauth2token-function"></a>OAuth2Token (funzione)
-Costruisce un nuovo oggetto [OAuth2Token](class_mip_authdelegate_oauth2token.md) da un AccessToken.
+Costruisce un nuovo oggetto OAuth2Token da un accessToken.
 
 Parametri:  
-* **accessToken**: Il token di accesso effettivo passato nell'SDK.
+* **AccessToken**: il token di accesso effettivo passato nell'SDK.
 
 
   
@@ -41,7 +41,7 @@ Parametri:
 Ottenere la stringa del token di accesso.
 
   
-**Restituisce**: Stringa del token di accesso.
+**Returns**: stringa del token di accesso.
   
 ### <a name="setaccesstoken-function"></a>SetAccessToken (funzione)
 Impostare la stringa del token di accesso.

@@ -5,19 +5,32 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: f696b5b96a6b6b4ce43a28c160dd5e11ab9a6036
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 8ae396cc529cbeb17afa8ad0c4617e4bfcfbed3a
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056101"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558811"
 ---
 # <a name="class-mipfileinspector"></a>Classe MIP:: fileinspector 
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
+public InspectorType GetInspectorType () const  |  Ottenere i tipi di file.
+public std:: shared_ptr\<Stream\> GetFileStream () const  |  Ottenere il flusso di file.
   
-## <a name="members"></a>Members
-_Non ancora documentato._
+## <a name="members"></a>Membri
+  
+### <a name="getinspectortype-function"></a>GetInspectorType (funzione)
+Ottenere i tipi di file.
+
+  
+**Restituisce**: InspectorType.
+  
+### <a name="getfilestream-function"></a>Funzione GetFileStream
+Ottenere il flusso di file.
+
+  
+**Restituisce**: un PTR condiviso al flusso di file.

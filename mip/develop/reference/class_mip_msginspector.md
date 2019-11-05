@@ -5,53 +5,39 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 274ada562bae46add2429a2f87442bb77528ea05
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: d1234168e4ce3996077b705e904f5765b761ec4c
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054265"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558618"
 ---
 # <a name="class-mipmsginspector"></a>Classe MIP:: MsgInspector 
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std::\<vector\>uint8_t & GetBody ()  |  Ottenere il corpo del messaggio. se TXT/HTML è formattato come UTF8.
+public const std:: Vector\<uint8_t\>& GetBody ()  |  Ottenere il corpo del messaggio. se TXT/HTML è formattato come UTF8.
 public BodyType GetBodyType () const  |  Ottiene il tipo di corpo.
-public const std::\<vector std::\<unique_ptr\>MsgAttachmentData\>& GetAttributes () const  |  Ottenere un elenco di allegati come oggetti dati dell'allegato msg.
-public InspectorType GetInspectorType () const  |  Ottenere i tipi di file.
-public std:: shared_ptr\<Stream\> GetFileStream () const  |  Ottenere il flusso di file.
+public const std:: Vector\<std:: unique_ptr\<MsgAttachmentData\>\>& GetAttributes () const  |  Ottenere un elenco di allegati come oggetti dati dell'allegato msg.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getbody-function"></a>Funzione GetBody
 Ottenere il corpo del messaggio. se TXT/HTML è formattato come UTF8.
 
   
-**Restituisce**: Vettore di byte.
+**Restituisce**: un vettore di byte.
   
 ### <a name="getbodytype-function"></a>GetBodyType (funzione)
 Ottiene il tipo di corpo.
 
   
-**Restituisce**: Tipo di corpo del messaggio.
+**Returns**: tipo di corpo del messaggio.
   
 ### <a name="getattachments-function"></a>Funzione GetAttributes
 Ottenere un elenco di allegati come oggetti dati dell'allegato msg.
 
   
-**Restituisce**: Vettore di STD:: unique_ptr<MsgAttachmentData>
-  
-### <a name="getinspectortype-function"></a>GetInspectorType (funzione)
-Ottenere i tipi di file.
-
-  
-**Restituisce**: InspectorType.
-  
-### <a name="getfilestream-function"></a>Funzione GetFileStream
-Ottenere il flusso di file.
-
-  
-**Restituisce**: Un PTR condiviso al flusso di file.
+**Restituisce**: un vettore di STD:: unique_ptr<MsgAttachmentData>

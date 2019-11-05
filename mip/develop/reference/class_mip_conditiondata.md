@@ -5,22 +5,62 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 147fd6119d1cda47886c979b21f3262ca9a36214
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: c96fa92bc56a7d7968477901f82b6d7c5aac0558
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056203"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559329"
 ---
 # <a name="class-mipconditiondata"></a>Classe MIP:: ConditionData 
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public virtual ~ ConditionData ()  | _Non ancora documentato._
+public ConditionDataType GetType () const  | Non ancora documentato.
+public const std::string& GetName() const  | Non ancora documentato.
+public const std:: Map\<std:: String, std:: String\>& GetProperties () const  | Non ancora documentato.
+public const std:: Vector\<std:: unique_ptr\<ConditionData\>\>& GetSubConditionsData () const  | Non ancora documentato.
+public bool HasKeyValueEntries () const  | Non ancora documentato.
+public const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& GetKeyValueEntries () const  | Non ancora documentato.
+public bool HasClassificationData () const  | Non ancora documentato.
+Public Const ClassificationData & GetClassificationData () const  | Non ancora documentato.
+public virtual ~ ConditionData ()  | Non ancora documentato.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
+  
+### <a name="gettype-function"></a>Funzione GetType
+_Non ancora documentato._
+
+  
+### <a name="getname-function"></a>GetName (funzione)
+_Non ancora documentato._
+
+  
+### <a name="getproperties-function"></a>GetProperties (funzione)
+_Non ancora documentato._
+
+  
+### <a name="getsubconditionsdata-function"></a>GetSubConditionsData (funzione)
+_Non ancora documentato._
+
+  
+### <a name="haskeyvalueentries-function"></a>HasKeyValueEntries (funzione)
+_Non ancora documentato._
+
+  
+### <a name="getkeyvalueentries-function"></a>GetKeyValueEntries (funzione)
+_Non ancora documentato._
+
+  
+### <a name="hasclassificationdata-function"></a>HasClassificationData (funzione)
+_Non ancora documentato._
+
+  
+### <a name="getclassificationdata-function"></a>GetClassificationData (funzione)
+_Non ancora documentato._
+
   
 ### <a name="conditiondata-function"></a>~ ConditionData (funzione)
 _Non ancora documentato._

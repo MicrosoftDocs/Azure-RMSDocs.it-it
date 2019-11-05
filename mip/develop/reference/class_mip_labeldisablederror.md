@@ -5,20 +5,20 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 844b54acdfc5686d74f94edabbf2b1911f786eea
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 33167b96aaa607813639af313e9932a476aadae8
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70054650"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561087"
 ---
 # <a name="class-miplabeldisablederror"></a>Classe MIP:: LabelDisabledError 
-[Label](class_mip_label.md) è disabilitato o inattivo.
+Label è disabilitato o inattivo.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 _Non ancora documentato._

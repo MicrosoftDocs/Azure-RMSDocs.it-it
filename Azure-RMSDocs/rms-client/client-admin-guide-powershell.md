@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5efccfe851446a754cd5f823b8f71d504824a778
-ms.sourcegitcommit: 801f9d138e491788a618a5b918305dc3666648b4
+ms.openlocfilehash: 7898fd3ff15423c6a92eb2eabe6f5cb01007b076
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890337"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561294"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
 
@@ -489,7 +489,7 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
 
 2. Per il tenant Azure AD usato con Azure Information Protection, passare a **Azure Active Directory** > **gestisci** > **registrazioni app**. 
 
-3. Selezionare **+ nuova registrazione**per creare l'applicazione/API dell'app Web. Nel pannello **registra un'applicazione** specificare i valori seguenti e quindi fare clic su **registra**:
+3. Selezionare **+ nuova registrazione**per creare l'applicazione/API dell'app Web. Nel riquadro **registra un'applicazione** specificare i valori seguenti e quindi fare clic su **registra**:
 
    - **Nome**: `AIPOnBehalfOf`
         
@@ -499,34 +499,34 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
     
     - **URI di reindirizzamento (facoltativo)** : **Web** e `http://localhost`
 
-4. Nel pannello **AIPOnBehalfOf** copiare il valore per l' **ID applicazione (client)** . Il valore ha un aspetto simile all'esempio seguente: `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. Questo valore viene usato per il parametro *webappid* quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
+4. Nel riquadro **AIPOnBehalfOf** , copiare il valore per l' **ID applicazione (client)** . Il valore ha un aspetto simile all'esempio seguente: `57c3c1c3-abf9-404e-8b2b-4652836c8c66`. Questo valore viene usato per il parametro *webappid* quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
 
-5. Sempre nel pannello **AIPOnBehalfOf** selezionare **autenticazione**dal menu **Gestisci** .
+5. Sempre nel riquadro **AIPOnBehalfOf** scegliere **autenticazione**dal menu **Gestisci** .
 
-6. Nel pannello **AIPOnBehalfOf-Authentication** , nella sezione **Impostazioni avanzate** , selezionare la casella di controllo **token ID** , quindi selezionare **Salva**.
+6. Nel riquadro **AIPOnBehalfOf-Authentication** , nella sezione **Impostazioni avanzate** , selezionare la casella di controllo **token ID** , quindi selezionare **Salva**.
 
-7. Sempre nel pannello **AIPOnBehalfOf-Authentication** scegliere **certificati & segreti**dal menu **Gestisci** .
+7. Sempre nel riquadro **AIPOnBehalfOf-Authentication** scegliere **certificati & segreti**dal menu **Gestisci** .
 
-8. Nel pannello **AIPOnBehalfOf-certificates & Secrets** , nella sezione **client Secrets** Selezionare **+ New client Secret**. 
+8. Nella sezione **segreti client** del riquadro **AIPOnBehalfOf-Certificates & Secrets** selezionare **+ New client Secret**. 
 
 9. Per **Aggiungi un segreto client**, specificare quanto segue e quindi selezionare **Aggiungi**:
     
     - **Descrizione**: `Azure Information Protection client`
     - **Scadenza**: specificare la scelta della durata (1 anno, 2 anni o nessuna scadenza)
 
-9. Tornare al pannello **AIPOnBehalfOf-certificates & Secrets** , nella sezione **client Secrets** , copiare la stringa per il **valore**. Questa stringa ha un aspetto simile all'esempio seguente: `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn`. Per assicurarsi di copiare tutti i caratteri, selezionare l'icona da **copiare negli Appunti**. 
+9. Tornare al riquadro **AIPOnBehalfOf-certificates & Secrets** , nella sezione **client Secrets** , copiare la stringa per il **valore**. Questa stringa ha un aspetto simile all'esempio seguente: `+LBkMvddz?WrlNCK5v0e6_=meM59sSAn`. Per assicurarsi di copiare tutti i caratteri, selezionare l'icona da **copiare negli Appunti**. 
     
     È importante salvare la stringa, perché non verrà più visualizzata e non potrà essere recuperata. Come per le informazioni riservate utilizzate, archiviare il valore salvato in modo sicuro e limitarne l'accesso.
 
-10. Sempre nel pannello **AIPOnBehalfOf-certificates & Secrets** selezionare **expose an API**dal menu **Gestisci** .
+10. Sempre nel riquadro **AIPOnBehalfOf-certificates & Secrets** selezionare **expose an API**dal menu **Gestisci** .
 
-11. Nel pannello **AIPOnBehalfOf-esporre un'API** selezionare **imposta** per l'opzione **URI ID applicazione** e nel valore **URI ID applicazione** , modificare **API** in **http**. Questa stringa ha un aspetto simile all'esempio seguente: `http://d244e75e-870b-4491-b70d-65534953099e`. 
+11. Nel riquadro **AIPOnBehalfOf-esporre un'API** selezionare **imposta** per l'opzione **URI ID applicazione** e nel valore **URI ID applicazione** , modificare **API** in **http**. Questa stringa ha un aspetto simile all'esempio seguente: `http://d244e75e-870b-4491-b70d-65534953099e`. 
     
     Selezionare **Salva**.
 
-12. Tornare al pannello **AIPOnBehalfOf-esporre un'API** , selezionare **+ Aggiungi un ambito**.
+12. Tornare al riquadro **AIPOnBehalfOf-esporre un'API** , selezionare **+ Aggiungi un ambito**.
 
-13. Nel pannello **Aggiungi ambito** , specificare quanto segue, usando le stringhe suggerite come esempi, quindi selezionare **Aggiungi ambito**:
+13. Nel riquadro **Aggiungi ambito** , specificare quanto segue, usando le stringhe suggerite come esempi, quindi selezionare **Aggiungi ambito**:
     - **Nome ambito**: `user-impersonation`
     - **Chi può acconsentire?** : **amministratori e utenti**
     - **Nome visualizzato del consenso dell'amministratore**: `Access Azure Information Protection scanner`
@@ -535,34 +535,34 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
     - **Descrizione del consenso dell'utente**: `Allow the application to access the scanner for the signed-in user`
     - **Stato**: **abilitato** (impostazione predefinita)
 
-14. Tornare al pannello **AIPOnBehalfOf-esporre un'API** . chiudere il pannello.
+14. Tornare al riquadro **AIPOnBehalfOf-esporre un'API** , chiudere il riquadro.
 
-15. Nel pannello **registrazioni app** selezionare **+ registrazione nuova applicazione** per creare ora l'applicazione nativa.
+15. Nel riquadro **registrazioni app** selezionare **+ registrazione nuova applicazione** per creare ora l'applicazione nativa.
 
-16. Nel pannello **registra un'applicazione** specificare le impostazioni seguenti e quindi selezionare **registra**:
+16. Nel riquadro **registra un'applicazione** specificare le impostazioni seguenti e quindi selezionare **registra**:
     - **Nome**: `AIPClient`
     - **Tipi di account supportati**: **solo account in questa directory organizzativa**
     - **URI di reindirizzamento (facoltativo)** : **client pubblico (Mobile & desktop)** e `http://localhost`
 
-17. Nel pannello **AIPClient** copiare il valore dell' **ID applicazione (client)** . Il valore ha un aspetto simile all'esempio seguente: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
+17. Nel riquadro **AIPClient** , copiare il valore dell' **ID applicazione (client)** . Il valore ha un aspetto simile all'esempio seguente: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
     
     Questo valore viene usato per il parametro NativeAppId quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
 
-18. Sempre nel pannello **AIPClient** selezionare **autenticazione**dal menu **Gestisci** .
+18. Sempre nel riquadro **AIPClient** scegliere **autenticazione**dal menu **Gestisci** .
 
-19. Nel pannello **AIPClient-Authentication** specificare gli elementi seguenti e quindi selezionare Save ( **Salva**):
+19. Nel riquadro **AIPClient-Authentication** specificare gli elementi seguenti e quindi selezionare Save ( **Salva**):
     - Nella sezione **Impostazioni avanzate** selezionare **token ID**.
     - Nella sezione **tipo di client predefinito** selezionare **Sì**.
 
-20. Sempre nel pannello **AIPClient-Authentication** scegliere **autorizzazioni API**dal menu **Gestisci** .
+20. Sempre nel riquadro **AIPClient-Authentication** scegliere **autorizzazioni API**dal menu **Gestisci** .
 
-21. Nel pannello **AIPClient-Permissions (autorizzazioni** ) selezionare **+ Aggiungi un'autorizzazione**.
+21. Nel riquadro **AIPClient-autorizzazioni** selezionare **+ Aggiungi un'autorizzazione**.
 
-22. Nel pannello **autorizzazioni richiesta API** selezionare **API personali**.
+22. Nel riquadro **autorizzazioni API richiesta** selezionare **API personali**.
 
 23. Nella sezione **selezionare un'API** selezionare **APIOnBehalfOf**, quindi selezionare la casella di controllo per la **rappresentazione utente**come autorizzazione. Selezionare **Aggiungi autorizzazioni**. 
 
-24. Nel pannello autorizzazioni per le **API** , nella sezione **consenso della concessione** , selezionare **concedi il consenso dell'amministratore per \<*il nome del tenant*>** e selezionare **Sì** per la richiesta di conferma.
+24. Tornare al riquadro **autorizzazioni API** , nella sezione **consenso della concessione** , selezionare **concedi il consenso dell'amministratore per \<*il nome del tenant*>** e selezionare **Sì** per la richiesta di conferma.
 
 La configurazione delle due app è stata completata e i valori necessari per eseguire [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con i parametri *WebAppId*, *WebAppKey* e *NativeAppId* sono disponibili. Dagli esempi seguenti:
 

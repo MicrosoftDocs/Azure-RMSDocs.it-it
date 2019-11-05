@@ -4,19 +4,19 @@ description: Istruzioni su come classificare e proteggere i documenti e i messag
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/02/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 716431c3f36876b1a3b1bcf19c93da9c606a7e83
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 00ad46e033116b1a39421cbfbc04a316ee2d7da7
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72448034"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561185"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Guida dell'utente: classificare e proteggere con la Azure Information Protection Unified Labeling client
 
@@ -31,7 +31,7 @@ Il modo più semplice per classificare e proteggere i documenti e i messaggi di 
 
 Tuttavia, è anche possibile classificare e proteggere i file tramite **Esplora file**. Questo metodo supporta altri tipi di file ed è un modo pratico per classificare e proteggere più file contemporaneamente. Questo metodo supporta la protezione di documenti di Office, file PDF, file di testo e immagine e un'ampia gamma di altri file. 
 
-Se l'etichetta applica la protezione, un documento protetto non è adatto per essere salvato in OneDrive o SharePoint. Questi percorsi non supportano i seguenti elementi per i file protetti: creazione condivisa, Office per il Web, ricerca, anteprima dei documenti, anteprima e eDiscovery.
+Se l'etichetta applica la protezione a un documento, il documento protetto potrebbe non essere adatto per essere salvato in SharePoint o in OneDrive. Controllare se l'amministratore ha [abilitato le etichette di riservatezza per i file di Office in SharePoint e OneDrive (anteprima pubblica)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Condividere in modo sicuro un file con utenti esterni all'organizzazione
 
@@ -80,7 +80,7 @@ Motivi possibili:
 
 - Se l'amministratore ha configurato di recente una nuova etichetta, provare a chiudere tutte le istanze dell'app di Office e riaprirle. In questo modo, verrà eseguito un controllo della presenza di modifiche alle etichette.
 
-- Se l'etichetta mancante serve per applicare la protezione, l'edizione di Office in uso potrebbe non supportare l'applicazione della protezione di Rights Management. Per verificare, fare clic su **Proteggi** > **Commenti e suggerimenti**. Controllare se nella sezione **Stato del client** è presente il messaggio **Questo client non ha la licenza per Office Professional Plus.** 
+- Se l'etichetta mancante serve per applicare la protezione, l'edizione di Office in uso potrebbe non supportare l'applicazione della protezione di Rights Management. Per verificare, fare clic su **sensitivity** > **Help e feedback**. Controllare se nella sezione **Stato del client** è presente il messaggio **Questo client non ha la licenza per Office Professional Plus.** 
     
     Office Professional Plus non è necessario se sono disponibili app di Office 365 da Office 365 Business o Microsoft 365 Business quando all'utente viene assegnata una licenza per Azure Rights Management (nota anche come Azure Information Protection per Office 365).
 

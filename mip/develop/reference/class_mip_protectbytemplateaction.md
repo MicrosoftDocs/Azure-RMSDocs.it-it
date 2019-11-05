@@ -5,26 +5,26 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: d7fd12bbec2d9604bab9a1ee204e704bebe32c20
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: f03c06df069406f9a97bf7b321a14ab79cab16a4
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70057749"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560813"
 ---
 # <a name="class-mipprotectbytemplateaction"></a>Classe mip::ProtectByTemplateAction 
 Classe di azione che specifica l'aggiunta della protezione basata su modello al documento.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const std::string& GetTemplateId() const  |  Ottiene l'ID modello di protezione associato all'azione.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="gettemplateid-function"></a>GetTemplateId (funzione)
 Ottiene l'ID modello di protezione associato all'azione.
 
   
-**Restituisce**: ID del modello di protezione.
+**Restituisce**: l'ID del modello di protezione.

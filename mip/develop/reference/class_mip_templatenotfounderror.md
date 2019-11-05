@@ -5,20 +5,20 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 0d0233f636a7603e2d4da03402fa020e82d7e18f
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 79436b990a8bf58326e4cf158d34a39de25d0a62
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056947"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560479"
 ---
 # <a name="class-miptemplatenotfounderror"></a>Classe MIP:: TemplateNotFoundError 
 ID modello non riconosciuto dal servizio RMS.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 _Non ancora documentato._

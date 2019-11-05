@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: d15e7d022e0a872cb59fbca9344e4cdcdf0552c8
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: ee402ae5c713fda68e731d15a132a217576a4705
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689168"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559661"
 ---
 # <a name="information-and-support-for-azure-information-protection"></a>Informazioni e supporto per Azure Information Protection
 
@@ -50,7 +50,7 @@ Per altre informazioni più dettagliate vedere il [blog tecnico di Azure Informa
 
 Il Blog tecnico di Azure Information Protection contiene anche un riepilogo delle [modifiche alla documentazione di ogni mese](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog/label-name/Docs). Queste modifiche possono includere la documentazione nuova e aggiornata per nuove versioni, modifiche alle istruzioni di supporto e correzioni e chiarimenti per le versioni esistenti.
 
-Questi post di aggiornamenti della documentazione sono intitolati: "**Azure Information Protection Documentation Update for \<mese anno>** " (Aggiornamento della documentazione di Azure Information Protection per <mese anno>).
+Questi post di aggiornamento della documentazione si intitolano: "**Azure Information Protection Documentation Update for \<mese anno>** " (Aggiornamento della documentazione di Azure Information Protection per <mese anno>).
 
 ## <a name="support-options-and-community-resources"></a>Opzioni di supporto e risorse per la community
 Le sezioni seguenti consentono di accedere a informazioni sulle opzioni di supporto e di risoluzione dei problemi e alle risorse della community:
@@ -59,15 +59,15 @@ Le sezioni seguenti consentono di accedere a informazioni sulle opzioni di suppo
 
 Se si dispone di supporto tecnico Premier, visitare l' [Hub dei servizi Microsoft](https://serviceshub.microsoft.com/support/contactsupport) per inviare eventi imprevisti, esplorare le soluzioni e ottenere assistenza.
 
-L'utente potrebbe essere idoneo per **FastTrack**: può usufruire del FastTrack Center Benefit se acquista almeno 150 licenze di Azure Information Protection in un piano idoneo. Il FastTrack Center Benefit consente di collaborare con gli specialisti Microsoft per valutare, correggere e attivare servizi idonei. Per altre informazioni, vedere [FastTrack Center Benefit per Enterprise Mobility + Security (EMS)](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems).
+Se si è idonei a **FastTrack**: è possibile usufruire del FastTrack Center Benefit quando si acquistano almeno 150 licenze di Azure Information Protection in un piano idoneo. Il FastTrack Center Benefit consente di collaborare con gli specialisti Microsoft per valutare, correggere e attivare servizi idonei. Per altre informazioni, vedere [FastTrack Center Benefit per Enterprise Mobility + Security (EMS)](/enterprise-mobility-security/Solutions/fasttrack-center-benefit-process-for-enterprise-mobility-suite-ems).
 
 Per altri clienti, usare i canali di supporto indicati nella tabella seguente, a seconda della sottoscrizione disponibile per Azure Information Protection.
 
 |Sottoscrizione|Istruzioni|
 |----------------|---------------|
-|Azure Information Protection (autonomo)|1. Selezionare **Nuova richiesta di supporto** da [Guida e supporto](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) nel Portale di Azure.<br /><br />2. Quando richiesto, nel pannello **Informazioni di base** scegliere **Tecnico** come **Tipo di problema** e **Information Protection** per il servizio. <br /><br />3. Assicurarsi inoltre che sia selezionata una delle opzioni seguenti:<br /><br />- **Sottoscrizione con supporto tecnico incluso**: Questa opzione è visibile se è presente una sottoscrizione a pagamento o di valutazione per Azure.<br /><br /> - **Supporto tecnico incluso**: Questa opzione viene visualizzata se non è presente una sottoscrizione ad Azure.|
+|Azure Information Protection (autonomo)|1. Selezionare **nuova richiesta di supporto** da [Guida e supporto](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) nel portale di Azure.<br /><br />2. quando viene richiesto, nel riquadro **nozioni di base** scegliere **tecnico** per il **tipo di problema** e **Information Protection** per il servizio. <br /><br />3. Assicurarsi inoltre che sia selezionata una delle opzioni seguenti:<br /><br />- **Sottoscrizione con supporto tecnico incluso**: questa opzione è visibile se si dispone di una sottoscrizione a pagamento o di valutazione per Azure.<br /><br /> - **Technical support - Included** (Supporto tecnico - Incluso): questa opzione viene visualizzata se non si dispone di una sottoscrizione ad Azure.|
 |Azure Information Protection e un abbonamento a Office 365<br /><br />Azure Information Protection con un abbonamento a Office 365|Vedere [Contattare il supporto per i prodotti per le aziende - Guida per gli amministratori](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b) per informazioni su come contattare il supporto tramite il portale di amministrazione di Microsoft 365 e per i numeri di telefono di contatto.|
-|Azure Information Protection with Enterprise Mobility + Security (EMS)|1. Selezionare **Nuova richiesta di supporto** da [Guida e supporto](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) nel Portale di Azure.<br /><br />2. Quando richiesto, nel pannello **Informazioni di base** scegliere **Tecnico** come **Tipo di problema** e **Information Protection** per il servizio. <br /><br />3. Assicurarsi inoltre che sia selezionata una delle opzioni seguenti:<br /><br />- **Sottoscrizione con supporto tecnico incluso**: Questa opzione è visibile se è presente una sottoscrizione a pagamento o di valutazione per Azure.<br /><br /> - **Supporto tecnico incluso**: Questa opzione viene visualizzata se non è presente una sottoscrizione ad Azure.|
+|Azure Information Protection with Enterprise Mobility + Security (EMS)|1. Selezionare **nuova richiesta di supporto** da [Guida e supporto](https://portal.azure.com/#blade/Microsoft_Azure_Support/HelpAndSupportBlade) nel portale di Azure.<br /><br />2. quando viene richiesto, nel riquadro **nozioni di base** scegliere **tecnico** per il **tipo di problema** e **Information Protection** per il servizio. <br /><br />3. Assicurarsi inoltre che sia selezionata una delle opzioni seguenti:<br /><br />- **Sottoscrizione con supporto tecnico incluso**: questa opzione è visibile se si dispone di una sottoscrizione a pagamento o di valutazione per Azure.<br /><br /> - **Technical support - Included** (Supporto tecnico - Incluso): questa opzione viene visualizzata se non si dispone di una sottoscrizione ad Azure.|
 |Azure Information Protection con Microsoft 365 Enterprise|Usare i [canali di supporto di Office 365](https://support.office.com/en-us/article/32a17ca7-6fa0-4870-8a8d-e25ba4ccfd4b).|
 
 Per altre opzioni di supporto, rivolgersi al proprio contatto Microsoft. 
@@ -75,7 +75,7 @@ Per altre opzioni di supporto, rivolgersi al proprio contatto Microsoft.
 
 ### <a name="self-help"></a>Supporto "Self-help"
 
-Esercitazioni pratiche: vedere le [esercitazioni pratiche per Azure Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Hands-On-Lab/ba-p/265433)
+Laboratori pratici: vedere [Azure Information Protection Lab hands on](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Hands-On-Lab/ba-p/265433)
 
 Video on demand:
 
@@ -85,19 +85,19 @@ Video on demand:
 
 Risoluzione dei problemi:
 
-- In caso di domande sul funzionamento di un elemento: Controllare se alla domanda è già stata inviata una risposta come [domanda frequente](faqs.md).
+- In caso di domande sul funzionamento di un elemento, verificare se è già stata inviata una risposta alla domanda come [domanda frequente](faqs.md).
 
-- In caso di domande sui criteri di supporto per Azure Information Protection: vedere le informazioni relative ai [requisiti](requirements.md), che vengono aggiornate regolarmente.
+- In caso di domande su un'istruzione di supporto per Azure Information Protection, vedere le informazioni riportate in [Requisiti](requirements.md), aggiornate regolarmente.
 
-- Per informazioni per il supporto agli utenti finali, all'help desk e agli amministratori che devono configurare servizi e applicazioni che usano il servizio di protezione da Azure Information Protection: vedere [Consentire agli utenti di proteggere i file](help-users.md).
+- Per informazioni per il supporto agli utenti finali, all'help desk e agli amministratori che devono configurare servizi e applicazioni che usano il servizio di protezione da Azure Information Protection, vedere [Consentire agli utenti di proteggere i file](help-users.md).
 
-- Se è stato distribuito il connettore Rights Management per i server locali: vedere le informazioni sul [monitoraggio](monitor-rms-connector.md), che includono dettagli sulle voci del registro eventi, sui contatori delle prestazioni e sulla registrazione.
+- Se il connettore di Rights Management è stato distribuito nei server locali, vedere le informazioni sul [monitoraggio](monitor-rms-connector.md), che includono dettagli sulle voci del registro eventi, sui contatori delle prestazioni e sulla registrazione.
 
 - Per il client Azure Information Protection:
     
-    - Client di etichetta unificata: Vedere la sezione [controlli di installazione e risoluzione dei problemi](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) della Guida dell'amministratore del client e confermare che si sta usando una [versione supportata](./rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines). Se è disponibile una versione di anteprima, provare a verificare se il problema è stato risolto: non tutte le correzioni sono elencate nella cronologia delle versioni.
+    - Client per l'assegnazione di etichette unificata: vedere la sezione [controlli e risoluzione dei problemi di installazione](./rms-client/clientv2-admin-guide.md#installation-checks-and-troubleshooting) dalla guida dell'amministratore del client e confermare che si sta usando una [versione supportata](./rms-client/unifiedlabelingclient-version-release-history.md#servicing-information-and-timelines). Se è disponibile una versione di anteprima, provare a verificare se il problema è stato risolto: non tutte le correzioni sono elencate nella cronologia delle versioni.
     
-    - Client classico: Vedere la sezione [controlli di installazione e risoluzione dei problemi](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) della Guida dell'amministratore del client e confermare che si sta usando una [versione supportata](./rms-client/client-version-release-history.md#servicing-information-and-timelines). Se è disponibile una versione di anteprima, provare a verificare se il problema è stato risolto: non tutte le correzioni sono elencate nella cronologia delle versioni.
+    - Client classico: vedere la sezione [controlli di installazione e risoluzione dei problemi](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) della Guida dell'amministratore del client e verificare che si stia usando una [versione supportata](./rms-client/client-version-release-history.md#servicing-information-and-timelines). Se è disponibile una versione di anteprima, provare a verificare se il problema è stato risolto: non tutte le correzioni sono elencate nella cronologia delle versioni.
 
 ### <a name="community-resources"></a>Risorse della community
 

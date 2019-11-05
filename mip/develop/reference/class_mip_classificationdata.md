@@ -5,28 +5,28 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 8ad0f1a2623adc36fa2ffdcf531d0e9e810d954e
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 273b095ca0d6dc97ce440c4645bc2d07e6e760d4
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056272"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559404"
 ---
 # <a name="class-mipclassificationdata"></a>Classe MIP:: ClassificationData 
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std:: String & GetClassificationId () const  | _Non ancora documentato._
-public const std:: String & GetRulePackageId () const  | _Non ancora documentato._
-public int GetMaxCount () const  | _Non ancora documentato._
-public int GetMinCount () const  | _Non ancora documentato._
-public int GetMinConfidence () const  | _Non ancora documentato._
-public int GetMaxConfidence () const  | _Non ancora documentato._
-public virtual ~ ClassificationData ()  | _Non ancora documentato._
+public const std:: String & GetClassificationId () const  | Non ancora documentato.
+public const std:: String & GetRulePackageId () const  | Non ancora documentato.
+public int GetMaxCount () const  | Non ancora documentato.
+public int GetMinCount () const  | Non ancora documentato.
+public int GetMinConfidence () const  | Non ancora documentato.
+public int GetMaxConfidence () const  | Non ancora documentato.
+public virtual ~ ClassificationData ()  | Non ancora documentato.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getclassificationid-function"></a>GetClassificationId (funzione)
 _Non ancora documentato._

@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7bb76420eeca9afb8cc8897ffb73c42864283b5e
-ms.sourcegitcommit: 0412b9ff13cf17478d157c13a5d95b3c0caa84cb
+ms.openlocfilehash: d7594886d6dc3715d29e15a1a1133142f244ad1d
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72382085"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559880"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave protetta tramite HSM a un'altra
 
@@ -51,7 +51,7 @@ Queste procedure vengono eseguite dall'amministratore di Insieme di credenziali 
 
    - Non eseguire la procedura per **generare la chiave del tenant**, perché ne esiste già una equivalente nella distribuzione di AD RMS. Al contrario, identificare le chiavi usate dal server AD RMS dall'installazione di nCipher e prepararle per il trasferimento, quindi trasferirle a Azure Key Vault. 
         
-        I file di chiave crittografati per nCipher sono denominati **key_ <<em>keyAppName</em>> _ <<em>identificatore</em>chiave >** localmente nel server. Ad esempio, `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54` Quando si esegue il comando KeyTransferRemote per creare una copia della chiave con autorizzazioni ridotte, sarà necessario il valore **MSCAPI** come keyAppName e il valore personalizzato per l'identificatore di chiave.
+        I file di chiave crittografati per nCipher sono denominati **key_ <<em>keyAppName</em>> _ <<em>identificatore</em>**  di chiave>localmente nel server. Ad esempio, `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54` Quando si esegue il comando KeyTransferRemote per creare una copia della chiave con autorizzazioni ridotte, sarà necessario il valore **MSCAPI** come keyAppName e il valore personalizzato per l'identificatore di chiave.
         
         Quando la chiave viene caricata in Insieme di credenziali delle chiavi di Azure, vengono visualizzate le proprietà della chiave visualizzata, incluso l'ID della chiave. Sarà simile a https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Prendere nota dell'URL perché è necessario all'amministratore di Azure Information Protection per indicare al servizio Azure Rights Management di usare questa chiave per la chiave del tenant.
 

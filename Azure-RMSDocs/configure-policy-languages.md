@@ -11,21 +11,21 @@ ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: e1f5b3c05ae7e8c0717ef4d0227eacda8eeade3e
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: 8968dd5f8aa113ff87870b48e15892ec5b367f76
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71673910"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559589"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Come configurare etichette e modelli per varie lingue in Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
-> Queste istruzioni sono valide per il client Azure Information Protection (classico) e non per il client di Azure Information Protection Unified labeling. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
+> Queste istruzioni si applicano al client Azure Information Protection (classico) e non al client per l'etichettatura unificata di Azure Information Protection. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 > 
 > Se si cercano informazioni per configurare lingue diverse per le etichette di riservatezza, usare Office 365 Sicurezza e conformità PowerShell e il parametro *LocaleSettings* per [set-label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
 
@@ -49,13 +49,13 @@ Selezionare le lingue che corrispondono alle impostazioni lingua degli utenti pe
 
 ## <a name="to-configure-labels-and-templates-for-different-languages"></a>Per configurare etichette e modelli per lingue diverse
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**.
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection** .
     
-    Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
 
-2. Dall'opzione di menu **Gestisci** > **Lingue**: Nel pannello **Azure Information Protection - Lingue** selezionare **Aggiungi una nuova lingua per la conversione**. Selezionare le lingue da aggiungere, quindi scegliere **OK**. È possibile digitare il nome della lingua nella casella di ricerca o scorrere l'elenco delle lingue disponibili.
+2. Dall'opzione di menu **gestisci** > **lingue** : nel riquadro **Azure Information Protection-lingue** selezionare **Aggiungi una nuova lingua per la conversione**. Selezionare le lingue da aggiungere, quindi scegliere **OK**. È possibile digitare il nome della lingua nella casella di ricerca o scorrere l'elenco delle lingue disponibili.
 
-3. Le lingue selezionate vengono visualizzate nel pannello **Azure Information Protection - Lingue**:
+3. Le lingue selezionate ora vengono visualizzate nel riquadro **Azure Information Protection-lingue** :
     
     - Per aggiungere un'altra lingua selezionare **Aggiungi una nuova lingua per la conversione** e ripetere il passaggio precedente. 
         
@@ -70,13 +70,13 @@ Selezionare le lingue che corrispondono alle impostazioni lingua degli utenti pe
 
 5. Estrarre i file da **exported localization.zip** in modo da avere file con estensione xml per ogni lingua selezionata per il download. 
 
-6. Modificare ogni file XML: per ogni stringa all'interno di tag `<LocalizedText>` immettere le traduzioni per ogni lingua scelta. 
+6. Modificare ogni file con estensione xml: per ogni stringa all'interno di tag `<LocalizedText>`, immettere le traduzioni per ogni lingua scelta. 
 
 7. Quando è stato modificato ogni file con estensione xml, creare una nuova cartella compressa contenente i file. La cartella compressa può avere qualsiasi nome, ma deve avere estensione zip.
     
-    Suggerimento: Non è necessario attendere di completare la modifica di ogni file di lingua scaricato. Al contrario, è possibile distribuire lingue diverse in più fasi, includendo nel file ZIP un subset dei file totali scaricati. Dopo aver completato le traduzioni per più lingue, ripetere i passaggi 7 e 8.
+    Suggerimento: non è necessario attendere fino a quando non è stato modificato ogni file di lingua scaricato. Al contrario, è possibile distribuire lingue diverse in più fasi, includendo nel file ZIP un subset dei file totali scaricati. Dopo aver completato le traduzioni per più lingue, ripetere i passaggi 7 e 8.
 
-8. Tornare al pannello **Azure Information Protection - Lingue** e selezionare **Importa**. Si noti che se questa opzione non è disponibile, è necessario deselezionare per prima cosa la casella di controllo **NOME LINGUA** o le caselle di controllo per le lingue selezionate singolarmente.
+8. Tornare al riquadro **Azure Information Protection-linguaggi** e selezionare **Importa**. Si noti che se questa opzione non è disponibile, è necessario deselezionare per prima cosa la casella di controllo **NOME LINGUA** o le caselle di controllo per le lingue selezionate singolarmente.
     
     Dopo il completamento dell'importazione i nomi e le descrizioni localizzati vengono scaricati per gli utenti.
 

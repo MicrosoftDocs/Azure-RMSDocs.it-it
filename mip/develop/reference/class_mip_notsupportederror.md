@@ -5,20 +5,20 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: fa05198749f8b4c5cf7448bc2de62fda6170aa17
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 71c2734141908ad1c2a69cfc99b1ae39ff26cc2f
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055789"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73560958"
 ---
 # <a name="class-mipnotsupportederror"></a>Classe mip::NotSupportedError 
 L'operazione richiesta dall'applicazione non è supportata dall'SDK.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
 _Non ancora documentato._

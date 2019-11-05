@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d8d60a170e587b7aa6b9e21f4368b26cb33d84bb
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: 8fc9425608f0ff2556ad83292607bb84912a427b
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73444948"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559682"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installazione e configurazione del connettore di Azure Rights Management
 
@@ -171,7 +171,7 @@ Se non si è ancora provveduto, è ora necessario configurare il bilanciamento d
 ## <a name="configuring-load-balancing-and-high-availability"></a>Configurazione del bilanciamento del carico per elevati livelli di disponibilità
 Dopo aver installato la seconda o l'ultima istanza del connettore RMS, definire un nome server URL connettore e configurare un sistema di bilanciamento del carico.
 
-Il nome server dell'URL del connettore può essere qualsiasi nome incluso in uno spazio dei nomi controllato. Ad esempio, è possibile creare una voce nel sistema DNS per **rmsconnector.contoso.com** e configurarla per l'uso di un indirizzo IP nel sistema di bilanciamento del carico. Il nome non presenta requisiti speciali e non deve essere configurato sui server del connettore. Non è necessario che il nome sia risolvibile in Internet, a meno che i server di Exchange e SharePoint non comunichino con il connettore attraverso Internet.
+Il nome server dell'URL del connettore può essere qualsiasi nome incluso in uno spazio dei nomi controllato. Ad esempio, è possibile creare una voce nel sistema DNS per **rmsconnector.contoso.com** e configurarla per l'uso di un indirizzo IP nel sistema di bilanciamento del carico. Il nome non presenta requisiti speciali e non deve essere configurato sui server del connettore. A meno che i server Exchange e SharePoint non comunichino con il connettore tramite Internet, non è necessario che questo nome venga risolto in Internet.
 
 > [!IMPORTANT]
 > Si consiglia di non modificare il nome dopo aver configurato i server di Exchange o SharePoint per l'uso del connettore. Se si modificasse il nome, sarebbe infatti necessario eliminare tali server da tutte le configurazioni IRM e configurarli nuovamente.
@@ -208,7 +208,7 @@ Se si usa l'opzione HTTPS, assicurarsi che tutti i server che eseguono il connet
 > - Per configurare IIS per l'uso del certificato, vedere la sezione relativa all'[Add a Binding to a Site (IIS 7)](https://technet.microsoft.com/library/cc731692.aspx) (Aggiungere un'associazione a un sito - IIS 7) nella raccolta di documentazione [Web Server (IIS)](https://technet.microsoft.com/library/cc753433%28v=ws.10%29.aspx) (Server Web - IIS) su TechNet.
 
 ## <a name="configuring-the-rms-connector-for-a-web-proxy-server"></a>Configurazione del connettore RMS per un server proxy Web
-Se i server del connettore sono installati in una rete che non dispone di connettività Internet diretta e richiede la configurazione manuale di un server proxy Web per l'accesso a Internet in uscita, è necessario configurare il Registro di sistema dei server per il connettore RMS.
+Se i server del connettore sono installati in una rete che non dispone di connettività Internet diretta e richiede la configurazione manuale di un server proxy Web per l'accesso a Internet in uscita, è necessario configurare il registro di sistema in questi server per il connettore RMS.
 
 #### <a name="to-configure-the-rms-connector-to-use-a-web-proxy-server"></a>Per configurare il connettore RMS per l'uso di un server proxy Web
 

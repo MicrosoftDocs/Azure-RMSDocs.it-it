@@ -5,19 +5,19 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: c799708931103c595ce1ad66a41accb9f0dcfc85
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: f1bd4220369d036c2071453412844e0691efb2ec
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056831"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559967"
 ---
 # <a name="class-mipstream"></a>Classe mip::Stream 
 Classe che definisce l'interfaccia tra Microsoft Information Protection SDK e il contenuto basato su flusso.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public int64_t Read(uint8_t* buffer, int64_t bufferLength)  |  Legge in un buffer dal flusso.
 public int64_t Write(const uint8_t* buffer, int64_t bufferLength)  |  Scrive nel flusso da un buffer.
@@ -29,7 +29,7 @@ public int64_t Position()  |  Ottiene la posizione corrente all'interno del flus
 public int64_t Size()  |  Ottiene le dimensioni del contenuto all'interno del flusso.
 public void Size(int64_t value)  |  Imposta le dimensioni del flusso.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="read-function"></a>Read (funzione)
 Legge in un buffer dal flusso.
@@ -43,7 +43,7 @@ Parametri:
 
 
   
-**Restituisce**: Numero di byte letti.
+**Restituisce**: numero di byte letti.
   
 ### <a name="write-function"></a>Write (funzione)
 Scrive nel flusso da un buffer.
@@ -57,13 +57,13 @@ Parametri:
 
 
   
-**Restituisce**: Numero di byte scritti.
+**Restituisce**: numero di byte scritti.
   
 ### <a name="flush-function"></a>Flush (funzione)
 Scarica il flusso.
 
   
-**Restituisce**: True se ha esito positivo altrimenti false.
+**Restituisce**: true se l'operazione ha esito positivo, in caso contrario false.
   
 ### <a name="seek-function"></a>Funzione Seek
 Cerca una posizione all'interno del flusso.
@@ -77,25 +77,25 @@ Parametri:
 Verifica se il flusso può essere letto.
 
   
-**Restituisce**: True se leggibile else false.
+**Restituisce**: true se è leggibile, in caso contrario false.
   
 ### <a name="canwrite-function"></a>CanWrite (funzione)
 Verifica se il flusso può essere scritto.
 
   
-**Restituisce**: True se scrivibile else false.
+**Restituisce**: true se è scrivibile, in caso contrario false.
   
 ### <a name="position-function"></a>Position (funzione)
 Ottiene la posizione corrente all'interno del flusso.
 
   
-**Restituisce**: Posizione all'interno del flusso.
+**Restituisce**: posizione all'interno del flusso.
   
 ### <a name="size-function"></a>Size (funzione)
 Ottiene le dimensioni del contenuto all'interno del flusso.
 
   
-**Restituisce**: Dimensioni del flusso.
+**Restituisce**: dimensioni del flusso.
   
 ### <a name="size-function"></a>Size (funzione)
 Imposta le dimensioni del flusso.

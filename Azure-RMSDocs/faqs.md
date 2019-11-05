@@ -4,7 +4,7 @@ description: Alcune domande frequenti su Azure Information Protection e il relat
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/04/2019
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 4a94787ad611ca52206629362a7ac1bf9df9f174
-ms.sourcegitcommit: 47d5765e1b76309a81aaf5e660256f2fb30eb2b2
+ms.openlocfilehash: 0ba1046b18c8500130572e054e2bdd6e3a90fc5c
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72805548"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561397"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
@@ -93,7 +93,7 @@ Dopo aver eseguito la migrazione delle etichette nel portale di Azure:
 
 - Se si dispone del [client di Azure Information Protection (classico)](./rms-client/aip-client.md), continuare a usare il portale di Azure per modificare le etichette e le impostazioni dei criteri. Il client classico continua a scaricare le etichette e le impostazioni dei criteri da Azure.
 
-- Se sono presenti sia [client con etichetta unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) che client [classici](./rms-client/aip-client.md), è possibile usare il centro di amministrazione o il portale di Azure per apportare modifiche alle etichette. Tuttavia, affinché i client classici scelgano le modifiche apportate alle etichette nei centri di amministrazione, è necessario tornare al portale di Azure: usare l'opzione **pubblica** dal pannello **Azure Information Protection-Unified labeling** nel portale di Azure. 
+- Se sono presenti sia [client con etichetta unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling) che client [classici](./rms-client/aip-client.md), è possibile usare il centro di amministrazione o il portale di Azure per apportare modifiche alle etichette. Tuttavia, affinché i client classici scelgano le modifiche apportate alle etichette nei centri di amministrazione, è necessario tornare al portale di Azure: usare l'opzione **pubblica** dal riquadro **Azure Information Protection-Unified labeling** nel portale di Azure. 
 
 Continuare a usare il portale di Azure per il [reporting centralizzato](reports-aip.md) e lo [scanner](deploy-aip-scanner.md).
 
@@ -167,9 +167,11 @@ Il servizio Azure Rights Management genera e gestisce automaticamente i certific
 
 ## <a name="what-types-of-data-can-azure-information-protection-classify-and-protect"></a>Quali tipi di dati è possibile classificare e proteggere tramite Azure Information Protection?
 
-Azure Information Protection consente di classificare e proteggere messaggi di posta elettronica e documenti, sia in locale che nel cloud. Questi documenti includono documenti di Word, fogli di calcolo di Excel, presentazioni di PowerPoint, documenti PDF, file di testo e file di immagine. Per un elenco dei tipi di documenti supportati, vedere l'elenco dei [tipi di file supportati](./rms-client/client-admin-guide-file-types.md) nella Guida dell'amministratore.
+Azure Information Protection consente di classificare e proteggere messaggi di posta elettronica e documenti, sia in locale che nel cloud. Questi documenti includono documenti di Word, fogli di calcolo di Excel, presentazioni di PowerPoint, documenti PDF, file di testo e file di immagine. Per un elenco dei tipi di documenti supportati, vedere l'elenco dei [tipi di file supportati](./rms-client/clientv2-admin-guide-file-types.md) nella Guida dell'amministratore.
 
-Azure Information Protection non è in grado di classificare e proteggere i dati strutturati, ad esempio file di database, elementi del calendario, report Power BI, post Yammer, contenuto Sway e notebook di OneNote.
+Azure Information Protection non è in grado di classificare e proteggere i dati strutturati, ad esempio file di database, elementi del calendario, post Yammer, contenuto Sway e notebook di OneNote.
+
+**Appena annunciato in anteprima**: Power bi supporta ora la classificazione usando le etichette di riservatezza e può applicare la protezione da tali etichette ai dati esportati nei formati di file seguenti: PDF, xls e PPT. Per ulteriori informazioni, vedere [protezione dei dati in Power BI (anteprima)](https://docs.microsoft.com/power-bi/admin/service-security-data-protection-overview).
 
 ## <a name="i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work"></a>Azure Information Protection è elencata come un'app cloud disponibile per l'accesso condizionale, come funziona?
 
@@ -185,7 +187,7 @@ Altre informazioni:
 
 - È possibile ottimizzare la frequenza con cui vengono valutati i criteri di accesso condizionale. A questo scopo è possibile configurare la durata del token. Per altre informazioni, vedere [Durata dei token configurabili in Azure Active Directory](/azure/active-directory/active-directory-configurable-token-lifetimes).
 
-- È consigliabile non aggiungere gli account amministratore ai criteri di accesso condizionale poiché questi account non saranno in grado di accedere al pannello di Azure Information Protection nel portale di Azure.
+- Si consiglia di non aggiungere gli account amministratore ai criteri di accesso condizionale perché questi account non saranno in grado di accedere al riquadro Azure Information Protection nel portale di Azure.
 
 - Se si usa l'autenticazione a più fattori nei criteri di accesso condizionale per la collaborazione con altre organizzazioni (B2B), è necessario usare la [collaborazione B2B di Azure AD](/azure/active-directory/b2b/what-is-b2b) e creare account guest per gli utenti con cui si vuole procedere alla condivisione nell'altra organizzazione.
 

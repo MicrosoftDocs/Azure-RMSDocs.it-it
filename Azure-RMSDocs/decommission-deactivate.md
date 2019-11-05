@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9add69440b76874e8d3d08125da1173d65049b54
-ms.sourcegitcommit: 6ae7844205506786e09937f663457572bc8f71c4
+ms.openlocfilehash: 4af20afcbf89ce25bc758299e42e794b3ee6b908
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70800816"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559707"
 ---
 # <a name="decommissioning-and-deactivating-protection-for-azure-information-protection"></a>Rimozione delle autorizzazioni e disattivazione della protezione per Azure Information Protection
 
@@ -74,12 +74,12 @@ Verrà visualizzato il messaggio che indica che **Rights Management non è attiv
 
 #### <a name="to-deactivate-rights-management-from-the-azure-portal"></a>Per disattivare Rights Management dal portale di Azure
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**.
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection** .
 
-    Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
 
-2. Nel pannello iniziale di **Azure Information Protection** selezionare **Protection activation** (Attivazione protezione). 
+2. Nel riquadro **Azure Information Protection** iniziale selezionare **Protection Activation (attivazione protezione**). 
 
-3.  Nel pannello **Azure Information Protection - Protection activation** (Azure Information Protection - Attivazione protezione) selezionare **Disattiva**. Selezionare **Sì** per confermare la scelta.
+3.  Nel riquadro **attivazione protezione Azure Information Protection** selezionare **Disattiva**. Selezionare **Sì** per confermare la scelta.
 
 Sulla barra delle informazioni verrà visualizzato **Disattivazione completata** mentre **Disattiva** è stato sostituito da **Attiva**. 

@@ -5,29 +5,29 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 694cb45a91136279aa6e997735e0b041a50b3744
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: ee5dd72a9e001e2effce81aad28b7ae36907b098
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70056147"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559307"
 ---
 # <a name="class-mipcontentmarkingactiondata"></a>Classe MIP:: ContentMarkingActionData 
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std::string& GetText() const  | _Non ancora documentato._
-public const std::string& GetFontName() const  | _Non ancora documentato._
-public const std::string& GetFontColor() const  | _Non ancora documentato._
-public ContentMarkAlignment GetContentMarkAlignment () const  | _Non ancora documentato._
-public int GetFontSize() const  | _Non ancora documentato._
-public int GetMargin() const  | _Non ancora documentato._
-public ContentMarkPlacement GetContentMarkPlacement () const  | _Non ancora documentato._
-public virtual ~ ContentMarkingActionData ()  | _Non ancora documentato._
+public const std::string& GetText() const  | Non ancora documentato.
+public const std::string& GetFontName() const  | Non ancora documentato.
+public const std::string& GetFontColor() const  | Non ancora documentato.
+public ContentMarkAlignment GetContentMarkAlignment () const  | Non ancora documentato.
+public int GetFontSize() const  | Non ancora documentato.
+public int GetMargin() const  | Non ancora documentato.
+public ContentMarkPlacement GetContentMarkPlacement () const  | Non ancora documentato.
+public virtual ~ ContentMarkingActionData ()  | Non ancora documentato.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="gettext-function"></a>Funzione gettext
 _Non ancora documentato._

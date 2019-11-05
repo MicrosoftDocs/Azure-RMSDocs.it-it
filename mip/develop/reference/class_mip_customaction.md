@@ -5,33 +5,33 @@ author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
 ms.author: mbaldwin
-ms.date: 08/27/2019
-ms.openlocfilehash: 7e78d11cc85af5550a4d6ab235b3754d72b2c012
-ms.sourcegitcommit: 1499790746145d40d667d138baa6e18598421f0e
+ms.date: 10/29/2019
+ms.openlocfilehash: 450ae0e455f74c6cb9b1f6b0b6d8aded9b30b2bd
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70055168"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73558899"
 ---
 # <a name="class-mipcustomaction"></a>Classe mip::CustomAction 
-[CustomAction](class_mip_customaction.md) è una classe di azione generica che acquisisce tutte le sottoproprietà dell'azione sotto forma di contenitore delle proprietà. Il chiamante ha la responsabilità di comprendere il significato dell'azione.
+CustomAction è una classe di azione generica che acquisisce tutte le sottoproprietà dell'azione sotto forma di contenitore delle proprietà. Il chiamante ha la responsabilità di comprendere il significato dell'azione.
   
 ## <a name="summary"></a>Riepilogo
- Members                        | Descrizioni                                
+ Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const std::string& GetName() const  |  Ottiene il nome dell'azione.
-public const std::\<vector std::p\<aria std:: String, std::\>String\>& GetProperties () const  |  Ottiene l'elenco di coppie valore-chiave delle proprietà.
+public const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& GetProperties () const  |  Ottiene l'elenco di coppie valore-chiave delle proprietà.
   
-## <a name="members"></a>Members
+## <a name="members"></a>Membri
   
 ### <a name="getname-function"></a>GetName (funzione)
 Ottiene il nome dell'azione.
 
   
-**Restituisce**: Nome dell'azione se ne esiste una stringa vuota.
+**Restituisce**: il nome dell'azione, se esistente. In caso contrario restituisce una stringa vuota.
   
 ### <a name="getproperties-function"></a>GetProperties (funzione)
 Ottiene l'elenco di coppie valore-chiave delle proprietà.
 
   
-**Restituisce**: Elenco di coppie chiave-valore.
+**Restituisce**: elenco di coppie chiave-valore.
