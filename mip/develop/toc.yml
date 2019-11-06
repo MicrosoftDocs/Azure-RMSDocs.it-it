@@ -4,7 +4,7 @@
   items:
     - name: Informazioni su Microsoft Information Protection SDK
       href: overview.md
-- name: Avvio rapido
+- name: Guida introduttiva
   expanded: true
   items:
     - name: Installare e configurare MIP SDK
@@ -169,7 +169,7 @@
               href: reference/class_mip_deprecatedapierror.md
             - name: DocumentState
               href: reference/class_mip_documentstate.md
-            - name: Errore di
+            - name: Errore
               href: reference/class_mip_error.md
             - name: ExecutionState
               href: reference/class_mip_executionstate.md
@@ -209,7 +209,7 @@
               href: reference/class_mip_justificationrequirederror.md
             - name: JustifyAction
               href: reference/class_mip_justifyaction.md
-            - name: Etichetta
+            - name: Label
               href: reference/class_mip_label.md
             - name: LabelActionData
               href: reference/class_mip_labelactiondata.md
@@ -339,6 +339,16 @@
               href: reference/class_mip_userrights.md
             - name: UserRoles
               href: reference/class_mip_userroles.md
+    - name: Libreria C
+      items:
+        - name: Panoramica
+          href: reference/c/overview.md
+        - name: Enumerazioni
+          href: reference/c/enumerations.md
+        - name: Strutture
+          href: reference/c/structures.md
+        - name: Funzioni
+          href: reference/c/functions.md
     - name: Browser per le API .NET
       href: /dotnet/api/?term=microsoft.informationprotection
 - name: Risorse
