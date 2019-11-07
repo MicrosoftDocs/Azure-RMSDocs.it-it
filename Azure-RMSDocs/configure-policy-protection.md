@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 81ddb553a8ba075b52adf9ecddbb690d64352f96
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: 48e20547f0c3974e6d2ef2fd71aa391c4cecb828
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71673633"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73556505"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
@@ -50,7 +50,10 @@ Per altre informazioni sulla tecnologia di protezione Azure Rights Management e 
 > [!IMPORTANT]
 > Per configurare un'etichetta in modo da applicare questa protezione, è necessario che il servizio Azure Rights Management sia attivo per l'organizzazione. Per altre informazioni, vedere [Attivazione del servizio di protezione da Azure Information Protection](activate-service.md).
 
-Quando l'etichetta applica la protezione, un documento protetto non è adatto per essere salvato in OneDrive o SharePoint. Questi percorsi non supportano le funzionalità seguenti per i file protetti: creazione condivisa, Office per il Web, ricerca, anteprima di documenti, anteprima, eDiscovery e prevenzione della perdita dei dati. 
+Quando l'etichetta applica la protezione, un documento protetto non è adatto per essere salvato in OneDrive o SharePoint. Questi percorsi non supportano le funzionalità seguenti per i file protetti: creazione condivisa, Office per il Web, ricerca, anteprima di documenti, anteprima, eDiscovery e prevenzione della perdita dei dati.
+
+> [!TIP]
+> Quando si [esegue la migrazione delle etichette](configure-policy-migrate-labels.md) a etichette di riservatezza unificate e le si pubblica da uno dei centri di amministrazione dell'etichettatura, ad esempio il centro conformità di Microsoft 365, le etichette che applicano la protezione sono quindi supportate per queste posizioni. Per altre informazioni, vedere [Abilitare le etichette di riservatezza per i file di Office in SharePoint e OneDrive (anteprima pubblica)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 Non è necessario configurare Exchange per Azure Information Protection per permettere agli utenti di applicare etichette in Outlook e proteggere i loro messaggi di posta elettronica. Tuttavia, fino a quando Exchange non viene configurato per Azure Information Protection, non si può usufruire delle funzionalità di protezione complete di Azure Rights Management con Exchange. Ad esempio, gli utenti non possono visualizzare messaggi di posta elettronica protetti nei telefoni cellulari o con Outlook dal Web, i messaggi di posta elettronica protetti non possono essere indicizzati per la ricerca e non è possibile configurare la prevenzione della perdita dei dati di Exchange Online con la protezione di Rights Management. Per assicurarsi che Exchange possa supportare questi scenari aggiuntivi, vedere le risorse seguenti:
 
@@ -60,13 +63,13 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
 
 ## <a name="to-configure-a-label-for-protection-settings"></a>Per configurare un'etichetta per le impostazioni di protezione
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**. 
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection**. 
     
-    Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Information** e selezionare **Azure Information Protection**.
 
-2. Dall'opzione di menu **Classificazioni** > **Etichette**: nel pannello **Azure Information Protection - Etichette** selezionare l'etichetta che si vuole modificare. 
+2. Dall'opzione di menu **Classificazioni** > **Etichette**: nel riquadro **Azure Information Protection - Etichette** selezionare l'etichetta che si vuole modificare. 
 
-3. Nel pannello **Etichetta** individuare la sezione **Configurare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta** e selezionare una delle opzioni seguenti:
+3. Nel riquadro **Etichetta** individuare la sezione **Configurare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta** e selezionare una delle opzioni seguenti:
     
     - **Non configurata**: selezionare questa opzione se l'etichetta è attualmente configurata in modo da applicare la protezione e non si vuole più che l'etichetta selezionata applichi la protezione. Procedere quindi con il passaggio 11.
         
@@ -90,11 +93,11 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
         
         Se l'utente che applica l'etichetta con questa impostazione non ha le autorizzazioni per rimuovere la protezione di Rights Management, l'etichetta non può essere applicata e viene visualizzato il messaggio seguente: **Azure Information Protection non può applicare questa etichetta. Se il problema persiste, contattare l'amministratore.**
 
-4. Se si è selezionato **Proteggi**, il pannello **Protezione** si aprirà automaticamente se è stata selezionata una delle altre opzioni precedentemente selezionate. Se questo nuovo pannello non si apre automaticamente, selezionare **Protezione**:
+4. Se si è selezionato **Proteggi**, il riquadro **Protezione** si aprirà automaticamente se è stata selezionata una delle altre opzioni precedentemente selezionate. Se questo nuovo riquadro non si apre automaticamente, selezionare **Protezione**:
     
     ![Configurare la protezione per un'etichetta di Azure Information Protection](./media/info-protect-protection-bar-configured.png)
 
-5. Nel pannello **Protezione** selezionare **Azure (cloud key)** (Azure - Chiave cloud) oppure **HYOK (AD RMS)** .
+5. Nel riquadro **Protezione** selezionare **Azure (chiave cloud)** oppure **HYOK (AD RMS)** .
     
     Nella maggior parte dei casi è necessario selezionare **Azure (cloud key)** (Azure - Chiave cloud) per le impostazioni delle autorizzazioni. Non selezionare **HYOK (AD RMS)** a meno che non siano stati letti e compresi i prerequisiti e le restrizioni relativi a questa configurazione *HYOK* (Hold Your Own Key). Per altre informazioni, vedere [Requisiti e restrizioni HYOK per la protezione di AD RMS](configure-adrms-restrictions.md). Per continuare la configurazione per HYOK (AD RMS), procedere con il passaggio 9.
     
@@ -116,9 +119,9 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
 
 7. Se si è selezionato **Impostazione autorizzazioni** per **Azure (chiave cloud)** , questa opzione consente di selezionare utenti e diritti di utilizzo. 
     
-    Se non si selezionano utenti e si seleziona **OK** in questo pannello, quindi **Salva** nel pannello **Etichetta**: l'etichetta viene configurata per applicare la protezione in modo che solo la persona che applica l'etichetta possa aprire il documento o il messaggio di posta elettronica senza restrizioni. Questa configurazione è anche nota come "Solo per me" e potrebbe essere questo il risultato richiesto, in modo che un utente possa salvare un file in qualsiasi posizione ed essere certo che nessun altro possa aprirlo. Se questo risultato corrisponde al requisito e non è necessario che altri utenti collaborino al contenuto protetto, non selezionare **Aggiungi autorizzazioni**. Dopo aver salvato l'etichetta, all'apertura successiva di questo pannello **Protezione**, viene visualizzato **IPC_USER_ID_OWNER** per **Utenti** e **Comproprietario** per **Autorizzazioni** in base a questa configurazione.
+    Se non si selezionano utenti e si seleziona **OK** in questo riquadro, quindi **Salva** nel riquadro **Etichetta**: l'etichetta viene configurata per applicare la protezione in modo che solo la persona che applica l'etichetta possa aprire il documento o il messaggio di posta elettronica senza restrizioni. Questa configurazione è anche nota come "Solo per me" e potrebbe essere questo il risultato richiesto, in modo che un utente possa salvare un file in qualsiasi posizione ed essere certo che nessun altro possa aprirlo. Se questo risultato corrisponde al requisito e non è necessario che altri utenti collaborino al contenuto protetto, non selezionare **Aggiungi autorizzazioni**. Dopo aver salvato l'etichetta, all'apertura successiva di questo riquadro **Protezione** viene visualizzato **IPC_USER_ID_OWNER** per **Utenti** e **Comproprietario** per **Autorizzazioni** in base a questa configurazione.
     
-    Per specificare gli utenti che possono aprire i documenti e i messaggi di posta elettronica protetti, selezionare **Aggiungi autorizzazioni**. Nel pannello **Aggiungi autorizzazioni** selezionare quindi il primo set di utenti e gruppi che avranno il diritto di usare il contenuto che verrà protetto per l'etichetta selezionata:
+    Per specificare gli utenti che possono aprire i documenti e i messaggi di posta elettronica protetti, selezionare **Aggiungi autorizzazioni**. Nel riquadro **Aggiungi autorizzazioni** selezionare quindi il primo set di utenti e gruppi che avranno il diritto di usare il contenuto che verrà protetto dall'etichetta selezionata:
     
    - Scegliere **Selezionare dall'elenco** in cui è possibile aggiungere tutti gli utenti dell'organizzazione selezionando **Aggiungi \<nome organizzazione> - Tutti i membri**. Questa impostazione consente di escludere gli account guest. In alternativa è possibile selezionare **Aggiungi eventuali utenti autenticati** o esplorare la directory.
         
@@ -146,7 +149,7 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
      >[!TIP]
      >Valutare l'opportunità di aggiungere l'autorizzazione personalizzata **Salva con nome, Esporta (EXPORT)** e concederla al personale o agli amministratori selezionati in altri ruoli responsabili del recupero delle informazioni. Tali utenti possono rimuovere, se necessario, la protezione da file e messaggi di posta elettronica che verranno protetti mediante questo modello o etichetta. La possibilità di rimuovere la protezione a livello di autorizzazione per un documento o un messaggio di posta elettronica consente un controllo più accurato rispetto all'uso della [funzionalità dell'utente con privilegi avanzati](configure-super-users.md).
     
-     Per tutti gli utenti e i gruppi specificati, nel pannello **Protezione** controllare se si desidera apportare modifiche alle seguenti impostazioni. Si noti che queste impostazioni, come le autorizzazioni, non si applicano all'[emittente di Rights Management e proprietario di Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner), o a qualsiasi [utente con privilegi avanzati](configure-super-users.md) che è stato assegnato.
+     Per tutti gli utenti e i gruppi specificati, nel riquadro **Protezione** controllare se si vogliono apportare modifiche alle impostazioni seguenti. Si noti che queste impostazioni, come le autorizzazioni, non si applicano all'[emittente di Rights Management e proprietario di Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner), o a qualsiasi [utente con privilegi avanzati](configure-super-users.md) che è stato assegnato.
     
      ###### <a name="information-about-the-protection-settings"></a>Informazioni sulle impostazioni di protezione
     
@@ -177,11 +180,11 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
     
     Se si sceglie l'opzione per Word, Excel, PowerPoint ed Esplora file, l'etichetta viene visualizzata in queste applicazioni. Quando gli utenti applicano l'etichetta viene visualizzata la finestra di dialogo che consente loro di selezionare le autorizzazioni personalizzate. In questa finestra di dialogo gli utenti possono scegliere uno dei [livelli di autorizzazione predefiniti](configure-usage-rights.md#rights-included-in-permissions-levels), passare a o specificare utenti o gruppi e, facoltativamente, impostare una data di scadenza. Verificare che gli utenti dispongano di istruzioni e linee guida per specificare questi valori.
 
-10. Fare clic su **OK** per chiudere il pannello **Protezione** e visualizzare la scelta **Definito dall'utente** o il modello selezionato per l'opzione **Protezione** nel pannello **Etichetta**.
+10. Fare clic su **OK** per chiudere il riquadro **Protezione** e visualizzare la scelta **Definito dall'utente** o il modello selezionato per l'opzione **Protezione** nel riquadro **Etichetta**.
 
-11. Nel pannello **Etichetta** fare clic su **Salva**.
+11. Nel riquadro **Etichetta** fare clic su **Salva**.
 
-12. Nel pannello **Azure Information Protection** usare la colonna **Protezione** per confermare che l'etichetta ora visualizza l'impostazione di protezione desiderata:
+12. Nel riquadro **Azure Information Protection** usare la colonna **Protezione** per confermare che l'etichetta ora visualizza l'impostazione di protezione desiderata:
     
     - Un segno di spunta se è stata configurata la protezione. 
     
@@ -196,7 +199,7 @@ Quando fa clic su **Salva**, le modifiche diventano automaticamente disponibili 
 
 Le etichette secondarie **Tutti i dipendenti** e **Solo destinatari** delle etichette **Riservato** e **Riservatezza elevata** dei [criteri predefiniti](configure-policy-default.md) sono esempi di configurazione delle etichette per l'applicazione della protezione. È anche possibile usare gli esempi seguenti per la configurazione di diversi scenari. 
 
-Per ogni esempio seguente, nel pannello \<*nome etichetta*> selezionare **Proteggi**. Se il pannello **Protezione** non si apre automaticamente, selezionare **Protezione** per aprire questo pannello che consente di selezionare le opzioni di configurazione di protezione:
+Per ogni esempio seguente, nel riquadro \<*nome etichetta*> selezionare **Proteggi**. Se il riquadro **Protezione** non si apre automaticamente, selezionare **Protezione** per aprire questo riquadro che consente di selezionare le opzioni di configurazione di protezione:
 
 ![Configurazione di un'etichetta di Azure Information Protection per la protezione](./media/info-protect-protection-bar-configured.png)
 
@@ -206,7 +209,7 @@ Questa etichetta è disponibile solo in Outlook ed è appropriata quando Exchang
 
 Gli utenti digitano l'indirizzo di posta elettronica Gmail nella casella **A**.  Gli utenti selezionano quindi l'etichetta e l'opzione Non inoltrare viene aggiunta automaticamente al messaggio di posta elettronica. Il risultato è che i destinatari non possono inoltrare il messaggio di posta elettronica, stamparlo, copiarne il contenuto, salvare gli allegati o salvare il messaggio di posta elettronica con un nome diverso. 
 
-1. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (cloud key)** (Azure - Chiave cloud).
+1. Nel riquadro **Protezione** verificare che l'opzione **Azure (chiave cloud)** sia selezionata.
     
 2. Selezionare **Configura le autorizzazioni definite dall'utente (anteprima)** .
 
@@ -214,7 +217,7 @@ Gli utenti digitano l'indirizzo di posta elettronica Gmail nella casella **A**. 
 
 4. Se selezionata, deselezionare l'opzione seguente: **In Word, Excel, PowerPoint e File Explorer richiedi all'utente le autorizzazioni personalizzate**.
 
-5. Fare clic su **OK** nel pannello **Protezione** e quindi fare clic su **Salva** nel pannello **Etichetta**.
+5. Fare clic su **OK** nel riquadro **Protezione** e quindi fare clic su **Salva** nel riquadro **Etichetta**.
 
 
 ### <a name="example-2-label-that-restricts-read-only-permission-to-all-users-in-another-organization-and-that-supports-immediate-revocation"></a>Esempio 2: etichetta che limita l'autorizzazione di sola lettura a tutti gli utenti di un'altra organizzazione e supporta la revoca immediata
@@ -223,30 +226,30 @@ Questa etichetta è adatta per la condivisione (in sola lettura) di documenti mo
 
 Questa etichetta non è adatta per i messaggi di posta elettronica.
 
-1. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (cloud key)** (Azure - Chiave cloud).
+1. Nel riquadro **Protezione** verificare che l'opzione **Azure (chiave cloud)** sia selezionata.
     
 2. Verificare che sia selezionata l'opzione **Configura le autorizzazioni** e quindi fare clic su **Aggiungi autorizzazioni**.
 
-3. Nel pannello **Aggiungi autorizzazioni** selezionare **Immettere i dettagli**.
+3. Nel riquadro **Aggiungi autorizzazioni** selezionare **Immettere i dettagli**.
 
 4. Immettere il nome di un dominio dell'altra organizzazione, ad esempio **fabrikam.com**. Selezionare **Aggiungi**.
 
 5. In **Scegliere le autorizzazioni dai valori preimpostati** selezionare **Visualizzatore**, quindi scegliere **OK**.
 
-6. Nel pannello **Protezione** in **Consenti l'accesso offline** selezionare **Mai**.
+6. Nel riquadro **Protezione** in **Consenti l'accesso offline** selezionare **Mai**.
 
-7. Fare clic su **OK** nel pannello **Protezione** e quindi fare clic su **Salva** nel pannello **Etichetta**.
+7. Fare clic su **OK** nel riquadro **Protezione** e quindi fare clic su **Salva** nel riquadro **Etichetta**.
 
 
 ### <a name="example-3-add-external-users-to-an-existing-label-that-protects-content"></a>Esempio 3: Aggiungere utenti esterni a un'etichetta esistente che protegge il contenuto
 
 I nuovi utenti aggiunti potranno aprire i documenti e i messaggi di posta elettronica già protetti con questa etichetta. Le autorizzazioni concesse a questi utenti possono essere diverse da quelle di cui dispongono gli utenti esistenti.
 
-1. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)** .
+1. Nel riquadro **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)** .
     
 2. Verificare che sia selezionata l'opzione **Configura le autorizzazioni**, quindi fare clic su **Aggiungi autorizzazioni**.
 
-3. Nel pannello **Aggiungi autorizzazioni** selezionare **Immettere i dettagli**.
+3. Nel riquadro **Aggiungi autorizzazioni** selezionare **Immettere i dettagli**.
 
 4. Immettere l'indirizzo di posta elettronica del primo utente o gruppo da aggiungere e selezionare **Aggiungi**.
 
@@ -254,7 +257,7 @@ I nuovi utenti aggiunti potranno aprire i documenti e i messaggi di posta elettr
 
 6. Ripetere i passaggi 4 e 5 per ogni utente o gruppo che si vuole aggiungere a questa etichetta. Fare quindi clic su **OK**.
 
-7. Fare clic su **OK** nel pannello **Protezione** e quindi fare clic su **Salva** nel pannello **Etichetta**.
+7. Fare clic su **OK** nel riquadro **Protezione** e quindi fare clic su **Salva** nel riquadro **Etichetta**.
 
 ### <a name="example-4-label-for-protected-email-that-supports-less-restrictive-permissions-than-do-not-forward"></a>Esempio 4: Etichetta per la posta elettronica protetta che supporta autorizzazioni meno restrittive rispetto a Non inoltrare
 
@@ -272,11 +275,11 @@ Se si specificano gli utenti esterni che non hanno un account in Azure AD:
 
 Quando gli utenti specificano gli indirizzi di posta elettronica nella casella **A** gli indirizzi devono essere quelli degli utenti specificati per questa configurazione di etichetta. Dato che gli utenti possono appartenere a gruppi e avere più di un indirizzo di posta elettronica, l'indirizzo di posta elettronica che specificano non deve corrispondere esattamente a quello specificato per le autorizzazioni, anche se questo è il modo più semplice per garantire che il destinatario venga autorizzato. Per altre informazioni sull'applicazione delle autorizzazioni agli utenti, vedere [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md). 
 
-1. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (cloud key)** (Azure - Chiave cloud).
+1. Nel riquadro **Protezione** verificare che l'opzione **Azure (chiave cloud)** sia selezionata.
     
 2. Verificare che sia selezionata l'opzione **Configura le autorizzazioni** e fare clic su **Aggiungi autorizzazioni**.
 
-3. Nel pannello **Aggiungi autorizzazioni**: per concedere le autorizzazioni agli utenti dell'organizzazione selezionare **Aggiungi \<nome organizzazione> - Tutti i membri** per selezionare tutti gli utenti nel tenant. Questa impostazione consente di escludere gli account guest. In alternativa, selezionare **Cerca nella directory** per selezionare un gruppo specifico. Per concedere autorizzazioni a utenti esterni o se si preferisce digitare l'indirizzo di posta elettronica, selezionare **Immettere i dettagli** e digitare l'indirizzo di posta elettronica dell'utente o del gruppo di Azure AD o il nome di dominio.
+3. Nel riquadro **Aggiungi autorizzazioni**: per concedere le autorizzazioni agli utenti dell'organizzazione selezionare **Aggiungi \<nome organizzazione> - Tutti i membri** per selezionare tutti gli utenti nel tenant. Questa impostazione consente di escludere gli account guest. In alternativa, selezionare **Cerca nella directory** per selezionare un gruppo specifico. Per concedere autorizzazioni a utenti esterni o se si preferisce digitare l'indirizzo di posta elettronica, selezionare **Immettere i dettagli** e digitare l'indirizzo di posta elettronica dell'utente o del gruppo di Azure AD o il nome di dominio.
     
     Ripetere questo passaggio per specificare gli altri utenti che avranno le stesse autorizzazioni.
 
@@ -288,26 +291,26 @@ Quando gli utenti specificano gli indirizzi di posta elettronica nella casella *
 
 5. Ripetere i passaggi 3 e 4 per specificare altri utenti con autorizzazioni diverse.
 
-6. Fare clic su **OK** nel pannello **Aggiungi autorizzazioni**.
+6. Fare clic su **OK** nel riquadro **Aggiungi autorizzazioni**.
 
-7. Fare clic su **OK** nel pannello **Protezione** e quindi fare clic su **Salva** nel pannello **Etichetta**.
+7. Fare clic su **OK** nel riquadro **Protezione** e quindi fare clic su **Salva** nel riquadro **Etichetta**.
 
 
 ### <a name="example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it"></a>Esempio 5: Etichetta che crittografa il contenuto, ma non limita chi può accedervi
 
 Questa configurazione offre il vantaggio che non è necessario specificare utenti, gruppi o domini per proteggere un documento o un messaggio di posta elettronica. Il contenuto verrà ugualmente crittografato ed è tuttavia possibile specificare i diritti di utilizzo, una data di scadenza e l'accesso offline. Usare questa configurazione solo quando non è necessario limitare chi può aprire il documento o il messaggio di posta elettronica protetto. [Altre informazioni su questa impostazione](#more-information-about-add-any-authenticated-users)
 
-1. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)** .
+1. Nel riquadro **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)** .
     
 2. Verificare che sia selezionata l'opzione **Configura le autorizzazioni**, quindi fare clic su **Aggiungi autorizzazioni**.
 
-3. Nel pannello **Aggiungi autorizzazioni** nella scheda **Selezionare dall'elenco** selezionare **Aggiungi eventuali utenti autenticati**.
+3. Nel riquadro **Aggiungi autorizzazioni** nella scheda **Selezionare dall'elenco** selezionare **Aggiungi eventuali utenti autenticati**.
 
 4. Selezionare le autorizzazioni desiderate e fare clic su **OK**.
 
-5. Nel pannello **Protezione** configurare le impostazioni per **Scadenza del contenuto del file** e **Consenti l'accesso offline**, se necessario, quindi fare clic su **OK**.
+5. Nel riquadro **Protezione** configurare le impostazioni per **Scadenza del contenuto del file** e **Consenti l'accesso offline**, se necessario, quindi fare clic su **OK**.
 
-6. Nel pannello **Etichetta** selezionare **Salva**.
+6. Nel riquadro **Etichetta** selezionare **Salva**.
 
 
 ### <a name="example-6-label-that-applies-just-for-me-protection"></a>Esempio 6: etichetta che applica la protezione "Solo per me"
@@ -316,13 +319,13 @@ Questa configurazione offre l'opposto della collaborazione sicura per i document
 
 La configurazione dell'etichetta è apparentemente semplice:
 
-1. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)** .
+1. Nel riquadro **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)** .
     
-2. Selezionare **OK** senza selezionare gli utenti o configurare le impostazioni di questo pannello.
+2. Selezionare **OK** senza selezionare gli utenti o configurare le impostazioni di questo riquadro.
     
     Anche se è possibile configurare le impostazioni per **Scadenza del contenuto del file** e **Consenti l'accesso offline**, queste impostazioni di accesso non sono applicabili quando non si specificano utenti e le relative autorizzazioni. Questo succede perché l'utente che applica la protezione è l'[autorità di certificazione di Rights Management](configure-usage-rights.md#rights-management-issuer-and-rights-management-owner) per il contenuto e questo ruolo non è soggetto alle restrizioni di accesso.
 
-3. Nel pannello **Etichetta** selezionare **Salva**.
+3. Nel riquadro **Etichetta** selezionare **Salva**.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
