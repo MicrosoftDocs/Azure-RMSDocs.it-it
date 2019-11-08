@@ -4,7 +4,7 @@ description: Istruzioni ed esempi per configurare le regole del flusso di posta 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/07/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,18 +12,18 @@ ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 5eb5b435b520dca5cb4eed7095533be5a5984360
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: 0e07754dd7b8197883ab7a71fbe48e4cb142534c
+ms.sourcegitcommit: 8eb7f9766d37cfdb4ccec642142200c41bb0b9d6
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684228"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73750494"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configurazione delle regole del flusso di posta di Exchange Online per le etichette di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
-Usare le informazioni seguenti per configurare le regole del flusso di posta in Exchange Online per usare le etichette di Azure Information Protection e per applicare una protezione aggiuntiva per scenari specifici. Esempio:
+Usare le informazioni seguenti per configurare le regole del flusso di posta in Exchange Online per usare le etichette di Azure Information Protection e per applicare una protezione aggiuntiva per scenari specifici. Ad esempio:
 
 - L'etichetta predefinita è **Generale**, che non applica la protezione. Per i messaggi di posta elettronica con questa etichetta inviati all'esterno, applicare l'azione di protezione aggiuntiva Non inoltrare.
 
@@ -35,7 +35,7 @@ Le regole del flusso di posta che applicano la protezione come azione vengono ig
 
 Per altre informazioni sulla configurazione di regole del flusso di posta per crittografare i messaggi di posta elettronica, vedere [Definire le regole del flusso di posta elettronica per crittografare i messaggi di posta elettronica in Office 365](https://support.office.com/article/define-mail-flow-rules-to-encrypt-email-messages-in-office-365-9b7daf19-d5f2-415b-bc43-a0f5f4a585e8) nella documentazione di Office. 
 
-## <a name="prerequisite-know-your-label-guid"></a>Prerequisito: Conoscere il GUID dell'etichetta
+## <a name="prerequisite-know-your-label-guid"></a>Prerequisito: conosce il GUID dell'etichetta
 
 Poiché un'etichetta di Azure Information Protection viene archiviata nei metadati, le regole del flusso di posta in Exchange Online possono leggere queste informazioni per i messaggi e i documenti di Office allegati. Le regole del flusso di posta non supportano l'analisi dei metadati per i documenti PDF.
 
@@ -69,27 +69,27 @@ Nel criterio Azure Information Protection questa etichetta è stata configurata 
 
 1. In **Nome** digitare un nome per la regola, ad esempio `Apply Do Not Forward for General emails sent externally`.
  
-2. Per **Apply this rule if** (Applica questa regola se): selezionare **The recipient is located** (Il destinatario si trova), **Outside the organization** (All'esterno dell'organizzazione) e quindi **OK**.
+2. Per **Apply this rule if** (Applica questa regola se): selezionare **The recipient is located** (Il destinatario si trova), selezionare **Outside the organization** (Fuori dall'organizzazione) e quindi selezionare **OK**.
 
 3. Selezionare **Altre opzioni** e quindi selezionare **aggiungi condizione**.
  
-4. Per **e**: selezionare **A message header** (Un'intestazione del messaggio) e quindi **includes any of these words** (include una di queste parole):
+4. Per **e**: selezionare **A message header** (Un'intestazione del messaggio) e quindi selezionare **includes any of these words** (include una di queste parole):
      
     a. Selezionare **Immetti il testo** e immettere `msip_labels`.
      
-    b. Selezionare **Immetti le parole** e immettere `MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True;`
+    b. Selezionare **Immetti le parole** e immettere `MSIP_Label_0e421e6d-ea17-4fdb-8f01-93a3e71333b8_Enabled=True`
     
     c. Selezionare **+** e quindi **OK**.
 
-5. Per **Do the following** (Eseguire le operazioni seguenti): selezionare **Modify the message security (Modifica la sicurezza del messaggio)**  > **Apply Office 365 Message Encryption and rights protection (Applica Office 365 Message Encryption e la protezione dei diritti)**  > **Non inoltrare** e quindi selezionare **OK**.
+5. Per **Do the following** (Esegui l'operazione seguente): selezionare **Modify the message security** (Modifica la sicurezza del messaggio) > **Apply Office 365 Message Encryption and rights protection** (Applica Office 365 Message Encryption e la protezione dei diritti) > **Non inoltrare** e quindi selezionare **OK**.
     
-    La configurazione della regola ora dovrebbe essere simile alla seguente:  ![Regola del flusso di posta di Exchange Online configurata per un'etichetta di Azure Information Protection-esempio 1](./media/aip-exo-rule-ex1.png)
+    La configurazione della regola dovrebbe ora essere simile alla seguente: ![regola del flusso di posta di Exchange Online configurata per un'etichetta Azure Information Protection-esempio 1](./media/aip-exo-rule-ex1.png)
 
 7. Selezionare **Salva** 
 
 Per altre informazioni sull'opzione Non inoltrare, vedere [Opzione Non inoltrare per i messaggi di posta elettronica](configure-usage-rights.md#do-not-forward-option-for-emails).
 
-### <a name="example-2-rule-that-applies-the-encrypt-only-option-to-emails-when-they-have-attachments-that-are-labeled-confidential--partners-and-these-emails-are-sent-outside-the-organization"></a>Esempio 2 Regola che applica l'opzione Encrypt-Only (Solo crittografia) ai messaggi di posta elettronica quando contengono allegati con l'etichetta **Riservato\Partner** e vengono inviati all'esterno dell'organizzazione
+### <a name="example-2-rule-that-applies-the-encrypt-only-option-to-emails-when-they-have-attachments-that-are-labeled-confidential--partners-and-these-emails-are-sent-outside-the-organization"></a>Esempio 2: Regola che applica l'opzione Encrypt-Only (Solo crittografia) ai messaggi di posta elettronica quando contengono allegati con l'etichetta **Riservato\Partner** e vengono inviati all'esterno dell'organizzazione
 
 In questo esempio l'etichetta secondaria **Riservato\Partner** ha il GUID 0e421e6d-ea17-4fdb-8f01-93a3e71333b8. Sostituire il GUID della propria etichetta o etichetta secondaria da usare con questa regola. 
 
@@ -97,7 +97,7 @@ Questa etichetta viene usata per classificare e proteggere i documenti usati per
 
 1. In **Nome** digitare un nome per la regola, ad esempio `Apply Encrypt to emails sent externally if protected attachments`.
  
-2. Per **Apply this rule if** (Applica questa regola se): selezionare **The recipient is located** (Il destinatario si trova), **Outside the organization** (All'esterno dell'organizzazione) e quindi **OK**.
+2. Per **Apply this rule if** (Applica questa regola se): selezionare **The recipient is located** (Il destinatario si trova), selezionare **Outside the organization** (Fuori dall'organizzazione) e quindi selezionare **OK**.
 
 3. Selezionare **Altre opzioni** e quindi selezionare **aggiungi condizione**.
  
@@ -111,9 +111,9 @@ Questa etichetta viene usata per classificare e proteggere i documenti usati per
     
     d. Selezionare **Salva** e quindi **OK**.
 
-5. Per **Do the following** (Eseguire le operazioni seguenti): selezionare **Modify the message security (Modifica la sicurezza del messaggio)**  > **Apply Office 365 Message Encryption and rights protection (Applica Office 365 Message Encryption e la protezione dei diritti)**  > **Crittografa** e quindi selezionare **OK**.
+5. Per **Do the following** (Esegui l'operazione seguente): selezionare **Modify the message security** (Modifica la sicurezza del messaggio) > **Apply Office 365 Message Encryption and rights protection** (Applica Office 365 Message Encryption e la protezione dei diritti) > **Crittografa** e quindi selezionare **OK**.
     
-    La configurazione della regola ora dovrebbe essere simile alla seguente:  ![Regola del flusso di posta di Exchange Online configurata per un'etichetta di Azure Information Protection-esempio 2](./media/aip-exo-rule-ex2.png)
+    La configurazione della regola dovrebbe ora essere simile alla seguente: ![regola del flusso di posta di Exchange Online configurata per un'etichetta Azure Information Protection-esempio 2](./media/aip-exo-rule-ex2.png)
 
 6. Selezionare **Salva** 
 
@@ -124,6 +124,6 @@ Per altre informazioni sull'opzione Crittografa, vedere [Opzione Encrypt-Only (S
 
 Per informazioni sulla creazione e la configurazione delle etichette da usare con le regole del flusso di posta di Exchange Online, vedere [Configurazione dei criteri di Azure Information Protection](configure-policy.md).
 
-Inoltre, per consentire la classificazione dei messaggi di posta elettronica che contengono allegati, considerare l'uso della seguente [impostazione di criteri](configure-policy-settings.md) di Azure Information Protection: **For email messages with attachments, apply a label that matches the highest classification of those attachments** (Per i messaggi di posta elettronica con allegati, applica un'etichetta che corrisponda alla classificazione più elevata di tali allegati).
+Per classificare i messaggi di posta elettronica contenenti allegati, considerare la possibilità di usare l'[impostazione dei criteri](configure-policy-settings.md) di Azure Information Protection seguente: **Per i messaggi di posta elettronica con allegati, applicare un'etichetta corrispondente alla classificazione più elevata di questi allegati**.
 
 
