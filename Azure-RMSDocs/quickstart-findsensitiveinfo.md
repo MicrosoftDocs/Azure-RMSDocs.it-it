@@ -4,18 +4,18 @@ description: Usare lo scanner di Azure Information Protection per trovare le inf
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/24/2019
+ms.date: 11/01/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 9e4899d918701d59f5fc14db9264d1f983c9df60
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: c00aebd2af57dfbb7d9897d200ef3601ebf26ed3
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447697"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559942"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Guida introduttiva: Trovare le informazioni riservate presenti nei file archiviati in locale
 
@@ -24,7 +24,7 @@ ms.locfileid: "72447697"
 In questa guida introduttiva verrà installato e configurato lo scanner di Azure Information Protection per trovare le informazioni riservate presenti nei file archiviati in un archivio dati locale, ad esempio una cartella locale, una condivisione di rete o SharePoint Server.
 
 > [!NOTE]
-> È possibile usare queste informazioni di avvio rapido con la versione disponibile a livello generale corrente del client di Azure Information Protection (classico) o la versione di anteprima corrente del client per l'etichettatura unificata di Azure Information Protection.
+> È possibile usare questa guida di avvio rapido con la versione disponibile a livello generale corrente del client Azure Information Protection (classico) o la versione disponibile a livello generale corrente del client di etichettatura unificata di Azure Information Protection che include una versione di anteprima dello scanner.
 >  
 > Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 
@@ -64,41 +64,41 @@ Per un test iniziale per confermare il funzionamento dello scanner:
 
 Prima di installare lo scanner, creare un profilo per lo scanner nel portale di Azure. Questo profilo contiene le impostazioni dello scanner e le posizioni dei repository di dati da analizzare.
 
-1. Aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**. 
+1. Aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al riquadro **Azure Information Protection**. 
     
-    Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Informazioni** e selezionare **Azure Information Protection**.
     
-2. Individuare le opzioni **Scanner** nel pannello a sinistra e selezionare **Profili**.
+2. Individuare le opzioni **Scanner** nel riquadro a sinistra e selezionare **Profili**.
 
-3. Nel pannello **Azure Information Protection - Profili** selezionare **Aggiungi**:
+3. Nel riquadro **Azure Information Protection - Profili** selezionare **Aggiungi**:
     
     ![Aggiungere il profilo per lo scanner di Azure Information Protection](./media/scanner-add-profile.png)
 
-4. Nel pannello **Aggiungi un nuovo profilo** specificare un nome per lo scanner, usato per identificare le impostazioni di configurazione e i repository di dati da analizzare corrispondenti. Ad esempio, per questa guida di avvio rapido è possibile specificare **Avvio rapido**. Quando in un secondo momento si installa lo scanner, sarà necessario specificare lo stesso nome di profilo.
+4. Nel riquadro **Aggiungi un nuovo profilo** specificare un nome per lo scanner, usato per identificarne le impostazioni di configurazione e i repository di dati da analizzare. Ad esempio, per questa guida di avvio rapido è possibile specificare **Avvio rapido**. Quando in un secondo momento si installa lo scanner, sarà necessario specificare lo stesso nome di profilo.
     
     Facoltativamente, specificare una descrizione per scopi amministrativi, per facilitare l'identificazione del nome di profilo dello scanner.
 
-5. Individuare la sezione **Applicazione dei criteri** in cui, per questo avvio rapido, selezionare solo un'impostazione: In **Applica** selezionare **Disattivato**. Selezionare quindi **Salva**, ma non chiudere il pannello.
+5. Individuare la sezione **Applicazione dei criteri** in cui, per questo avvio rapido, selezionare solo un'impostazione: In **Applica** selezionare **Disattivato**. Selezionare quindi **Salva**, ma non chiudere il riquadro.
     
     Le impostazioni configurano lo scanner per eseguire un'individuazione una tantum di tutti i file nei repository di dati specificati. Questa analisi individua tutti i tipi noti di informazioni riservate e non richiede la configurazione preliminare delle etichette o delle impostazioni dei criteri di Azure Information Protection.
 
 6. Dopo aver creato e salvato il profilo, si è pronti per tornare all'opzione **Configura i repository** e specificare la cartella locale come archivio dati da analizzare.
     
-    Sempre nel pannello **Aggiungi un nuovo profilo** selezionare **Configura repository** per aprire il pannello **Repository**:
+    Sempre nel riquadro **Aggiungi un nuovo profilo** selezionare **Configura i repository** per aprire il riquadro **Repository**:
     
     ![Configurare i repository di dati per lo scanner di Azure Information Protection](./media/scanner-repositories-bar.png)
 
-7. Nel pannello **Repository** selezionare **Aggiungi**:
+7. Nel riquadro **Repository** selezionare **Aggiungi**:
     
     ![Aggiungere il repository di dati per lo scanner di Azure Information Protection](./media/scanner-repository-add.png)
 
-8. Nel pannello **Repository** specificare la cartella locale creata nel primo passaggio, ad esempio `C:\TestScanner`
+8. Nel riquadro **Repository** specificare la cartella locale creata nel primo passaggio, ad esempio `C:\TestScanner`
     
-    Non modificare le altre impostazioni in questo pannello, ma mantenere **Impostazione predefinita del profilo**. Questo significa che il repository dei dati eredita le impostazioni dal profilo dello scanner. 
+    Non modificare le altre impostazioni in questo riquadro, ma mantenere **Impostazione predefinita del profilo**. Questo significa che il repository dei dati eredita le impostazioni dal profilo dello scanner. 
     
     Selezionare **Salva**.
 
-9. Tornare al pannello **Azure Information Protection - Profili**. Ora viene elencato il nome del profilo, con la colonna **PIANIFICA** che indica **Manuale** e la colonna **APPLICA** vuota. 
+9. Tornare al riquadro **Azure Information Protection - Profili**. Ora viene elencato il nome del profilo, con la colonna **PIANIFICA** che indica **Manuale** e la colonna **APPLICA** vuota. 
     
     Nella colonna **NODI** viene visualizzato **0** perché non è stato ancora installato lo scanner per questo profilo.
 
@@ -116,7 +116,7 @@ A questo punto si è pronti per installare lo scanner con il profilo di scanner 
 
 ## <a name="start-the-scan-and-confirm-it-finished"></a>Avviare l'analisi e confermarne il completamento
 
-1. Tornare al portale di Azure, aggiornare il pannello**Azure Information Protection - Profili**. Ora la colonna **Nodi** visualizza **1**.
+1. Tornare al portale di Azure e aggiornare il riquadro **Azure Information Protection - Profili**. Ora la colonna **NODI** visualizza **1**.
 
 2. Selezionare il nome del profilo e quindi l'opzione **Avvia analisi**:
     
@@ -128,7 +128,7 @@ A questo punto si è pronti per installare lo scanner con il profilo di scanner 
     
     Attendere fino a quando non sono visualizzati i valori per le colonne **RISULTATI DELL'ULTIMA ANALISI** e **ULTIMA ANALISI (ORA DI FINE)** .
     
-    In alternativa controllare il log eventi locale **Applicazioni e servizi** di Windows, **Azure Information Protection**. Verificare l'ID evento informativo **911** per il processo **MSIP.Scanner**. La voce del log eventi include anche un riepilogo dei risultati dell'analisi.
+    In alternativa, solo per lo scanner del client classico: Controllare il registro eventi locale **Applicazioni e servizi** di Windows, **Azure Information Protection**. Verificare l'ID evento informativo **911** per il processo **MSIP.Scanner**. La voce del log eventi include anche un riepilogo dei risultati dell'analisi.
 
 ## <a name="see-detailed-results"></a>Visualizzare i risultati dettagliati
 
@@ -153,7 +153,7 @@ In Excel le prime due colonne visualizzano il repository dell'archivio dati e il
         
             http://sp2016/Shared Documents
 
-2. Riavviare lo scanner: Dal pannello **Azure Information Protection - Profili** verificare che il profilo sia selezionato e quindi selezionare l'opzione **Avvia analisi**:
+2. Riavviare lo scanner: nel riquadro **Azure Information Protection - Profili** verificare che il profilo sia selezionato e quindi selezionare l'opzione **Avvia analisi**:
     
     ![Avviare l'analisi per lo scanner di Azure Information Protection](./media/scanner-scan-now.png)
 

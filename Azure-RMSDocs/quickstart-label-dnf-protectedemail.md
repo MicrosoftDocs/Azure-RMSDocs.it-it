@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 44e363456d8d4aeaf2a57c8c5b10213d256cb8aa
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: 02a036a3ab72cc0dcd16d2d3d7e9edaa4c0338ad
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71674178"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559142"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Guida introduttiva: configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate
 
@@ -43,7 +43,7 @@ Per completare questa guida introduttiva, è necessario:
     
     In assenza di una di queste sottoscrizioni, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.
 
-2. Aver aggiunto il pannello di Azure Information Protection nel portale di Azure e aver verificato che il servizio di protezione è attivato.
+2. Aver aggiunto il riquadro Azure Information Protection al portale di Azure e aver verificato che il servizio di protezione sia attivato.
 
     Se occorre assistenza per queste azioni, vedere [Avvio rapido: Attività iniziali nel portale di Azure](quickstart-viewpolicy.md).
 
@@ -77,19 +77,19 @@ Per un elenco completo dei prerequisiti per l'uso di Azure Information Protectio
 
 1. Aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale. Passare quindi ad **Azure Information Protection**. 
     
-    Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Informazioni** e selezionare **Azure Information Protection**.
     
     Se non si è l'amministratore globale, usare il collegamento seguente per i ruoli alternativi: [Accesso al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. Dall'opzione di menu **Classificazioni** > **Etichette**: nel pannello **Azure Information Protection - Etichette** selezionare l'etichetta che si vuole configurare per l'applicazione della protezione. 
+2. Dall'opzione di menu **Classificazioni** > **Etichette**: nel riquadro **Azure Information Protection - Etichette** selezionare l'etichetta che si vuole configurare per applicare la protezione. 
 
-3. Nel pannello **Etichetta** individuare **Configurare il modello RMS per la protezione di documenti e messaggi di posta elettronica contenenti questa etichetta**. Selezionare **Proteggi** e il pannello **Protezione** si apre automaticamente se in precedenza è stato selezionato **Non configurato** o **Rimuovi protezione**.
+3. Nel riquadro **Etichetta** individuare **Configurare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta**. Selezionare **Proteggi** e il riquadro **Protezione** si apre automaticamente se in precedenza è stato selezionato **Non configurato** o **Rimuovi protezione**.
     
-    Se il pannello **Protezione** non si apre automaticamente, selezionare **Protezione**:
+    Se il riquadro **Protezione** non si apre automaticamente, selezionare **Protezione**:
     
     ![Configurare la protezione per un'etichetta di Azure Information Protection](./media/info-protect-protection-bar-configured.png).
 
-4. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (cloud key)** (Azure - Chiave cloud).
+4. Nel riquadro **Protezione** verificare che l'opzione **Azure (chiave cloud)** sia selezionata.
     
 5. Selezionare **Configura le autorizzazioni definite dall'utente (anteprima)** .
 
@@ -97,7 +97,7 @@ Per un elenco completo dei prerequisiti per l'uso di Azure Information Protectio
 
 7. Se selezionata, deselezionare l'opzione seguente: **In Word, Excel, PowerPoint e File Explorer richiedi all'utente le autorizzazioni personalizzate**.
 
-8. Fare clic su **OK** nel pannello **Protezione** e quindi fare clic su **Salva** nel pannello **Etichetta**.
+8. Fare clic su **OK** nel riquadro **Protezione** e quindi su **Salva** nel riquadro **Etichetta**.
 
 L'etichetta è ora configurata per essere visualizzata solo in Outlook e per applicare la protezione Non inoltrare ai messaggi di posta elettronica.
 
@@ -119,9 +119,9 @@ Il risultato è che i destinatari non possono inoltrare il messaggio di posta el
 
 Se non si vuole mantenere questa configurazione e si preferisce ripristinare l'etichetta alla configurazione precedente, in modo che non venga applicata la protezione, seguire la procedura seguente:
 
-1. Dall'opzione di menu **Classificazioni** > **Etichette**: nel pannello **Azure Information Protection - Etichette** selezionare l'etichetta configurata. 
+1. Dall'opzione di menu **Classificazioni** > **Etichette**: nel riquadro **Azure Information Protection - Etichette** selezionare l'etichetta configurata. 
 
-3. Nel pannello **Etichetta** individuare la sezione **Configurare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta**, selezionare **Non configurato** e quindi **Salva**.
+3. Nel riquadro **Etichetta** individuare **Configurare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta**, selezionare **Non configurato** e quindi **Salva**.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

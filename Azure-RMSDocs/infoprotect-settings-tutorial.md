@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 73f242b50e53eb7f5408bf99902daf0214d37268
-ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
+ms.openlocfilehash: 98aeeb0b858690327904e8fcd3932f9b38e7cf30
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712574"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559211"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Esercitazione: Configurare impostazioni dei criteri di Azure Information Protection che interagiscono tra loro
 
@@ -44,7 +44,7 @@ Per completare questa esercitazione, è necessario:
     
     In assenza di una sottoscrizione con questo piano, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.
 
-2. Il pannello Azure Information Protection viene aggiunto al portale di Azure e una o più etichette vengono pubblicate nei criteri globali di Azure Information Protection.
+2. Avere aggiunto il riquadro Azure Information Protection al portale di Azure e aver pubblicato una o più etichette nei criteri globali di Azure Information Protection.
     
     Questi passaggi sono illustrati nell'[Avvio rapido: Aggiungere Azure Information Protection al portale di Azure e visualizzare i criteri](quickstart-viewpolicy.md).
 
@@ -80,7 +80,7 @@ Tramite il portale di Azure verranno modificati i criteri globali per la modific
 
 1. Aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale. Passare quindi ad **Azure Information Protection**. 
     
-    Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Informazioni** e selezionare **Azure Information Protection**.
     
     Se non si è l'amministratore globale, usare il collegamento seguente per i ruoli alternativi: [Accesso al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal)
 

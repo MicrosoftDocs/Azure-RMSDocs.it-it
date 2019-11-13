@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 0923ef10427533cae46b5de30f4c30371b9fe6d7
-ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
+ms.openlocfilehash: c425fcc71f8400b945ec684f45f5c1622fedbbef
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712620"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559219"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Esercitazione: configurare le impostazioni dei criteri di Azure Information Protection e creare una nuova etichetta
 
@@ -42,7 +42,7 @@ Per completare questa esercitazione, è necessario:
     
     In assenza di una sottoscrizione con un piano 2 di Azure Information Protection, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.
 
-2. Il pannello Azure Information Protection viene aggiunto al portale di Azure, il servizio di protezione viene attivato e una o più etichette vengono pubblicate nei criteri globali di Azure Information Protection.
+2. Aver aggiunto il riquadro Azure Information Protection al portale di Azure, aver attivato il servizio di protezione e aver pubblicato una o più etichette nei criteri globali di Azure Information Protection.
     
     Questi passaggi sono illustrati nell'[Avvio rapido: Aggiungere Azure Information Protection al portale di Azure e visualizzare i criteri](quickstart-viewpolicy.md).
 
@@ -76,7 +76,7 @@ Tramite il portale di Azure, si procederà per prima cosa alla modifica di alcun
 
 1. Aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale. Passare quindi ad **Azure Information Protection**. 
     
-    Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Informazioni** e selezionare **Azure Information Protection**.
     
     Se non si è l'amministratore globale, usare il collegamento seguente per i ruoli alternativi: [Accesso al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
@@ -98,7 +98,7 @@ Tramite il portale di Azure, si procederà per prima cosa alla modifica di alcun
 
 6. Assicurarsi inoltre che **Visualizza la barra di Information Protection nelle app Office** sia impostata su **Sì**.
 
-7. Selezionare **Salva** nel pannello **Criteri: Globale** e, se viene richiesto di confermare l'operazione, scegliere **OK**. Chiudere il pannello.
+7. Selezionare **Salva** nel pannello **Criteri: Globale** e, se viene richiesto di confermare l'operazione, scegliere **OK**. Chiudere il riquadro.
 
 ### <a name="create-a-new-label-for-protection-visual-markers-and-a-condition-to-prompt-for-classification"></a>Creare una nuova etichetta per la protezione, contrassegni visivi e una condizione per la richiesta di classificazione
 
@@ -108,17 +108,17 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
     
     Se non esiste un'etichetta denominata **Riservato**, è possibile selezionare un'altra etichetta o crearne una nuova e procedere con l'esercitazione con piccole differenze.
 
-2. Nel pannello **Etichetta secondaria** specificare il nome dell'etichetta di **Finance** (Contabilità) e aggiungere la descrizione seguente: **Dati riservati che contengono informazioni di contabilità destinate solo ai dipendenti**.
+2. Nel riquadro **Etichetta secondaria** specificare il nome di etichetta **Finance** (Contabilità) e aggiungere la descrizione seguente: **Dati riservati che contengono informazioni di contabilità destinate solo ai dipendenti**.
     
     Il testo descrive come si intende usare l'etichetta selezionata ed è visibile agli utenti come descrizione comando, per aiutarli a decidere quale etichetta selezionare.
 
-3. Per **Configurare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta**, selezionare **Proteggi**, che apre automaticamente il pannello **Protezione** selezionando l'opzione **Protezione**:
+3. Per **Configurare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta**, selezionare **Proteggi**, che apre automaticamente il riquadro **Protezione** selezionando l'opzione **Protezione**:
     
     ![Configurazione di un'etichetta di Azure Information Protection per la protezione](./media/info-protect-protection-bar-configured.png) 
     
-4. Nel pannello **Protezione** verificare che sia selezionata l'opzione **Azure (cloud key)** (Azure - Chiave cloud). Questa opzione usa il servizio Azure Rights Management per proteggere documenti e messaggi di posta elettronica. Assicurarsi anche che l'opzione **Imposta autorizzazioni** sia selezionata. Selezionare quindi **Aggiungi autorizzazioni**.
+4. Nel riquadro **Protezione** verificare che l'opzione **Azure (chiave cloud)** sia selezionata. Questa opzione usa il servizio Azure Rights Management per proteggere documenti e messaggi di posta elettronica. Assicurarsi anche che l'opzione **Imposta autorizzazioni** sia selezionata. Selezionare quindi **Aggiungi autorizzazioni**.
 
-5. Nel pannello **Aggiungi autorizzazioni** selezionare **Aggiungi \<nome organizzazione >- Tutti i membri**. Se ad esempio il nome dell'organizzazione è VanArsdel Ltd, viene visualizzata la seguente opzione da selezionare:
+5. Nel riquadro **Aggiungi autorizzazioni** selezionare **Aggiungi \<nome organizzazione > - Tutti i membri**. Se ad esempio il nome dell'organizzazione è VanArsdel Ltd, viene visualizzata la seguente opzione da selezionare:
     
     ![Concessione delle autorizzazioni di protezione a tutti i membri per un'etichetta di Azure Information Protection](./media/info-protect-protection-all-members.png) 
     
@@ -130,15 +130,15 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
     
     È possibile selezionare diversi livelli di autorizzazione o specificare singoli diritti di utilizzo usando l'opzione **Personalizzato**. Ma per questa esercitazione mantenere l'opzione **Revisore**. È possibile provare altre autorizzazioni in un secondo momento e vedere come limitano le operazioni che gli utenti specificati possono eseguire con il documento o il messaggio di posta elettronica protetto.
 
-7. Fare clic su **OK** per chiudere il pannello **Aggiungi autorizzazioni** e vedere in che modo viene aggiornato il pannello **Protezione** per riflettere la configurazione. Ad esempio:
+7. Fare clic su **OK** per chiudere il riquadro **Aggiungi autorizzazioni**. Il riquadro **Protezione** viene aggiornato in modo da riflettere la configurazione. Ad esempio:
     
-     ![Pannello Protezione con configurazione delle autorizzazioni per un'etichetta di Azure Information Protection](./media/info-protect-protection-configured.png)
+     ![Riquadro Protezione con configurazione delle autorizzazioni per un'etichetta di Azure Information Protection](./media/info-protect-protection-configured.png)
     
-    Se si seleziona **Aggiungi autorizzazioni**, viene di nuovo visualizzato il pannello **Aggiungi autorizzazioni**, in modo tale che sia possibile aggiungere altri utenti e concedere loro autorizzazioni diverse. Ad esempio, concedere l'accesso a un gruppo specifico solo per la visualizzazione. Ma per questa esercitazione viene usato un solo set di autorizzazioni per tutti gli utenti.
+    Se si seleziona **Aggiungi autorizzazioni**, verrà di nuovo aperto il riquadro **Aggiungi autorizzazioni** per consentire di aggiungere altri utenti e concedere loro autorizzazioni diverse. Ad esempio, concedere l'accesso a un gruppo specifico solo per la visualizzazione. Ma per questa esercitazione viene usato un solo set di autorizzazioni per tutti gli utenti.
 
-8. Rivedere e mantenere i valori predefiniti per la scadenza del contenuto e l'accesso offline, quindi fare clic su **OK** per salvare e chiudere il pannello **Protezione**.
+8. Rivedere e mantenere i valori predefiniti per la scadenza del contenuto e l'accesso offline, quindi fare clic su **OK** per salvare e chiudere il riquadro **Protezione**.
 
-8. Tornare al pannello **Etichetta secondaria** e individuare la sezione **Configurare il contrassegno visivo**:
+8. Tornare al riquadro **Etichetta secondaria** e individuare la sezione **Configurare il contrassegno visivo**:
     
     Per l'impostazione **I documenti con questa etichetta includono un piè di pagina** fare clic su **On** e quindi digitare **Classificato come Riservato** nella casella **Testo**. 
     
@@ -148,7 +148,7 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
     
 9. Individuare la sezione **Configurare le condizioni per l'applicazione automatica di questa etichetta**:
     
-    Fare clic su **Aggiungi una nuova condizione** e quindi nel pannello **Condizione** selezionare quanto segue:
+    Fare clic su **Aggiungi una nuova condizione** e quindi nel riquadro **Condizione** selezionare quanto segue:
     
     a. **Scegliere il tipo di condizione**: mantenere l'impostazione predefinita **Tipi di informazioni**.
     
@@ -162,9 +162,9 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
     
     ![Esercitazione di Azure Information Protection - Configurare la condizione della carta di credito](./media/step2-configure-condition.png)
     
-    Fare clic su **Salva** per tornare al pannello **Etichetta secondaria**.
+    Fare clic su **Salva** per tornare al riquadro **Etichetta secondaria**.
 
-10. Nel pannello **Etichetta secondaria** si può osservare che **Numero carta di credito** è visualizzato come **nome della condizione** con **1** **occorrenza**:
+10. Nel riquadro **Etichetta secondaria** si può osservare che **Numero carta di credito** è visualizzato come **nome della condizione** con **1** **occorrenza**:
     
     ![Esercitazione di Azure Information Protection - Riepilogo della condizione della carta di credito](./media/step2-see-condition.png)
 
@@ -172,7 +172,7 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
 
 12. Nella casella **Aggiungi note per l'uso da parte dell'amministratore** specificare che è **solo a scopo di test**.
 
-13. Fare clic su **Salva** nel pannello **Etichetta secondaria**. Se viene richiesto di confermare l'operazione, fare clic su **OK**. La nuova etichetta viene creata e salvata, ma non viene ancora aggiunta a un criterio.
+13. Fare clic su **Salva** nel riquadro **Etichetta secondaria**. Se viene richiesto di confermare l'operazione, fare clic su **OK**. La nuova etichetta viene creata e salvata, ma non viene ancora aggiunta a un criterio.
 
 14. Dall'opzione di menu **Classificazioni** > **Criteri**: selezionare di nuovo **Globale** e quindi selezionare il collegamento **Aggiungi o rimuovi etichette** dopo le etichette.
 
@@ -265,7 +265,7 @@ Se non si vogliono mantenere le modifiche apportate in questa esercitazione, seg
 
 2. Ripristinare i valori originali precedentemente annotati per le impostazioni dei criteri e quindi selezionare **Salva**. 
 
-3. Dall'opzione di menu **Classificazioni** > **Etichetta**: nel pannello **Azure Information Protection - Etichetta** selezionare il menu di scelta rapida ( **...** ) per l'etichetta **Finance** (Contabilità) creata.
+3. Dall'opzione di menu **Classificazioni** > **Etichetta**: nel riquadro **Azure Information Protection - Etichetta** selezionare il menu di scelta rapida ( **...** ) per l'etichetta **Finance** (Contabilità) creata.
 
 4. Selezionare **Elimina questa etichetta** e, se viene richiesto di confermare l'operazione, scegliere **OK**.
 

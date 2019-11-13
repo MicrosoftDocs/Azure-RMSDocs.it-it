@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ffbc65add0d5daceddbf02f454efac4a2a288243
-ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
+ms.openlocfilehash: ef93a0ee7bdcfd2caf2216bed15bd2d1d9e5436e
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712604"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559361"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Esercitazione: configurare Azure Information Protection per il controllo dell'oversharing delle informazioni con Outlook
 
@@ -43,9 +43,9 @@ Per completare questa esercitazione, è necessario:
     
     In assenza di una sottoscrizione con questo piano, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.
 
-2. Il pannello Azure Information Protection viene aggiunto al portale di Azure e almeno un'etichetta viene pubblicata nei criteri globali di Azure Information Protection.
+2. Avere aggiunto il riquadro Azure Information Protection al portale di Azure e aver pubblicato almeno un'etichetta nei criteri globali di Azure Information Protection.
     
-    Anche se questa esercitazione usa l'etichetta **General** predefinita, questa etichetta può essere eventualmente sostituita con un'altra. Per informazioni sull'aggiunta del pannello di Azure Information Protection oppure se non sono ancora state pubblicate etichette nei criteri globali, vedere [Avvio rapido: Aggiungere Azure Information Protection al portale di Azure e visualizzare i criteri](quickstart-viewpolicy.md).
+    Anche se questa esercitazione usa l'etichetta **General** predefinita, questa etichetta può essere eventualmente sostituita con un'altra. Per informazioni sull'aggiunta del riquadro Azure Information Protection oppure se non sono ancora state pubblicate etichette nei criteri globali, vedere [Avvio rapido: Aggiungere Azure Information Protection al portale di Azure e visualizzare i criteri](quickstart-viewpolicy.md).
 
 3. Un computer con Windows (almeno Windows 7 con Service Pack 1) in cui sia possibile accedere ad Outlook. Prepararsi a riavviare Outlook più volte durante questa esercitazione.
 
@@ -56,7 +56,7 @@ Per completare questa esercitazione, è necessario:
     Se si usa il client di etichettatura unificato anziché la versione classica del client, vedere le istruzioni seguenti che illustrano come usare le impostazioni avanzate di PowerShell per le configurazioni equivalenti in questa esercitazione:
     
     - Istruzioni per la guida dell'amministratore: [Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](./rms-client/clientv2-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-    - Video: [Configurazione popup di Outlook di Azure Information Protection](https://azure.microsoft.com/en-us/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/)
+    - Video: [Configurazione popup di Outlook di Azure Information Protection](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/)
 
 Per un elenco completo dei prerequisiti per l'uso di Azure Information Protection, vedere [Requisiti per Azure Information Protection](requirements.md).
 
@@ -70,13 +70,13 @@ Per specificare un'etichetta è necessario conoscerne l'ID, individuabile nel po
 
 1. Aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale. Passare quindi ad **Azure Information Protection**. 
     
-    Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Informazioni** e selezionare **Azure Information Protection**.
     
     Se non si è l'amministratore globale, usare il collegamento seguente per i ruoli alternativi: [Accesso al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. Selezionare **Classificazioni** > **Etichette** e quindi selezionare l'etichetta **General** per aprire il pannello **Etichetta: General**. 
+2. Selezionare **Classificazioni** > **Etichette** e quindi selezionare l'etichetta **General** per aprire il pannello **Etichetta: Generale**. 
 
-3. Individuare l'ID etichetta nella parte inferiore del pannello:
+3. Individuare l'ID etichetta nella parte inferiore del riquadro:
     
     ![Esercitazione di Azure Information Protection - Individuare l'ID etichetta](./media/label-id.png)
 
@@ -88,13 +88,13 @@ Per specificare un'etichetta è necessario conoscerne l'ID, individuabile nel po
 
 Verrà creato un nuovo criterio con ambito in modo che le nuove impostazioni avanzate del client saranno applicabili solo all'utente, per obiettivi di test.
 
-1. Nel pannello **Azure Information Protection - Criteri** selezionare **Aggiungi un nuovo criterio**. Verrà quindi visualizzato il pannello **Criteri**, che mostra etichette e impostazioni dei criteri globali esistenti.
+1. Nel riquadro **Azure Information Protection - Criteri** selezionare **Aggiungi un nuovo criterio**. Verrà quindi visualizzato il riquadro **Criteri** con le etichette e le impostazioni dei criteri globali esistenti.
 
 2. Specificare il nome **Oversharing tutorial** (Esercitazione sull'oversharing) per il criterio ed eventualmente la descrizione **Advanced client settings to control oversharing using Outlook** (Impostazioni avanzate del client per il controllo dell'oversharing con Outlook).
 
-3. Scegliere **Selezionare gli utenti o i gruppi a cui viene applicato il criterio** e specificare il proprio account utente usando i pannelli successivi.
+3. Scegliere **Selezionare gli utenti o i gruppi a cui viene applicato il criterio** e specificare il proprio account utente usando i riquadri successivi.
 
-4. Con il nome account visualizzato ora nel pannello **Criteri**, selezionare **Salva** senza apportare altre modifiche alle etichette o alle impostazioni in questo pannello. Potrebbe essere necessario confermare la scelta. 
+4. Con il nome account ora visualizzato nel riquadro **Criteri**, selezionare **Salva** senza apportare altre modifiche alle etichette o alle impostazioni presenti in questo riquadro. Potrebbe essere necessario confermare la scelta. 
 
 Questo criterio con ambito è ora pronto per l'aggiunta di impostazioni client avanzate. Chiudere il pannello **Criteri: Oversharing tutorial**, ma non chiudere il portale di Azure.
 
@@ -110,16 +110,16 @@ Per questo passaggio dell'esercitazione, verranno specificate le seguenti impost
 
 Usando il criterio con ambito appena creato, verrà aggiunta una nuova impostazione avanzata del client denominata **OutlookWarnUntrustedCollaborationLabel** con l'ID dell'etichetta**General**: 
 
-1. Di nuovo nel pannello **Azure Information Protection - Criteri**, selezionare il menu a comparsa ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Tornare al riquadro **Azure Information Protection - Criteri** e selezionare il menu di scelta rapida ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
-2. Nel pannello **Impostazioni avanzate** digitare il nome dell'impostazione avanzata, ovvero **OutlookWarnUntrustedCollaborationLabel**, e incollare il proprio ID etichetta per il valore. Usando l'ID etichetta di esempio:
+2. Nel riquadro **Impostazioni avanzate** digitare il nome dell'impostazione avanzata, ovvero **OutlookWarnUntrustedCollaborationLabel**, e incollare il proprio ID etichetta per il valore. Usando l'ID etichetta di esempio:
     
     
     ![Esercitazione di Azure Information Protection: creare l'impostazione avanzata OutlookWarnUntrustedCollaborationLabel del client ](./media/configure-warnmessage.png)
 
 3. Selezionare **Salva e chiudi**.
 
-Non chiudere il pannello **Criteri** o il portale di Azure.
+Non chiudere il riquadro **Criteri** o il portale di Azure.
 
 ### <a name="test-the-advanced-client-setting-to-warn-users-if-an-email-or-attachment-has-the-general-label"></a>Testare le impostazioni avanzate del client per avvisare gli utenti se un messaggio di posta elettronica o un allegato ha l'etichetta General
 
@@ -145,15 +145,15 @@ Nel computer client si vedranno ora i risultati della configurazione di questa i
 
 L'impostazione avanzata esistente del client verrà modificata conservando l'ID etichetta **General**, ma cambiando il nome in **OutlookJustifyUntrustedCollaborationLabel**: 
 
-1. Nel pannello **Azure Information Protection - Criteri**, selezionare il menu a comparsa ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Nel riquadro **Azure Information Protection - Criteri** selezionare il menu di scelta rapida ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
-2. Nel pannello **Impostazioni avanzate** sostituire il nome dell'impostazione avanzata creata in precedenza, ovvero **OutlookWarnUntrustedCollaborationLabel**, con il nuovo nome **OutlookJustifyUntrustedCollaborationLabel**:
+2. Nel riquadro **Impostazioni avanzate** sostituire il nome dell'impostazione avanzata creata in precedenza, ovvero **OutlookWarnUntrustedCollaborationLabel**, con il nuovo nome **OutlookJustifyUntrustedCollaborationLabel**:
     
     ![Esercitazione di Azure Information Protection: creare l'impostazione avanzata OutlookJustifyUntrustedCollaborationLabel del client ](./media/configure-justifymessage.png)
 
 3. Selezionare **Salva e chiudi**.
 
-Non chiudere il pannello **Criteri** o il portale di Azure.
+Non chiudere il riquadro **Criteri** o il portale di Azure.
 
 ### <a name="test-the-advanced-client-setting-to-prompt-users-to-justify-if-an-email-has-the-general-label"></a>Testare l'impostazione avanzata del client che chiede agli utenti una giustificazione se un messaggio di posta elettronica ha l'etichetta General
 
@@ -177,15 +177,15 @@ Nel computer client si vedranno ora i risultati di questa nuova impostazione ava
 
 L'impostazione avanzata esistente del client verrà modificata ancora una volta, conservando l'ID etichetta **General**, ma cambiando il nome in **OutlookBlockUntrustedCollaborationLabel**: 
 
-1. Nel pannello **Azure Information Protection - Criteri** del portale di Azure selezionare il menu a comparsa ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Nel riquadro **Azure Information Protection - Criteri** del portale di Azure selezionare il menu di scelta rapida ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
-2. Nel pannello **Impostazioni avanzate** sostituire il nome dell'impostazione avanzata creata in precedenza, ovvero **OutlookJustifyUntrustedCollaborationLabel**, con il nuovo nome **OutlookBlockUntrustedCollaborationLabel**:
+2. Nel riquadro **Impostazioni avanzate** sostituire il nome dell'impostazione avanzata creata in precedenza, ovvero **OutlookJustifyUntrustedCollaborationLabel**, con il nuovo nome **OutlookBlockUntrustedCollaborationLabel**:
     
     ![Esercitazione di Azure Information Protection: creare l'impostazione avanzata OutlookBlockUntrustedCollaborationLabel del client ](./media/configure-blockmessage.png)
 
 3. Selezionare **Salva e chiudi**.
 
-Non chiudere il pannello **Criteri** o il portale di Azure.
+Non chiudere il riquadro **Criteri** o il portale di Azure.
 
 ### <a name="test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-has-the-general-label"></a>Testare l'impostazione avanzata del client che impedisce agli utenti di inviare un messaggio di posta elettronica avente l'etichetta General
 
@@ -282,13 +282,13 @@ I messaggi di avviso, giustificazione e blocco sono stati testati usando il prop
 
 Per illustrare il funzionamento, verrà creata un'impostazione client avanzata aggiuntiva denominata **OutlookBlockTrustedDomains** e verrà specificato il nome di dominio del proprio indirizzo di posta elettronica. In questo modo si eviterà che il messaggio di blocco visualizzato in precedenza venga visualizzato per i destinatari che condividono il nome di dominio nell'indirizzo di posta elettronica, ma verrà comunque visualizzato per altri destinatari. Allo stesso modo è possibile creare impostazioni client avanzate aggiuntive per **OutlookWarnTrustedDomains** e **OutlookJustifyTrustedDomains**.
 
-1. Nel pannello **Azure Information Protection - Criteri** del portale di Azure selezionare il menu a comparsa ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Nel riquadro **Azure Information Protection - Criteri** del portale di Azure selezionare il menu di scelta rapida ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
-2. Nel pannello **Impostazioni avanzate** digitare il nome dell'impostazione avanzata, ovvero **OutlookBlockTrustedDomains**, e incollare il nome di dominio del proprio indirizzo e-mail come valore. Ad esempio:
+2. Nel riquadro **Impostazioni avanzate** digitare il nome dell'impostazione avanzata, ovvero **OutlookBlockTrustedDomains**, e incollare il nome di dominio del proprio indirizzo e-mail come valore. Ad esempio:
     
     ![Esercitazione di Azure Information Protection: creare l'impostazione avanzata OutlookBlockTrustedDomains del client](./media/configure-exemptblockdomain.png)
 
-4. Selezionare **Salva e chiudi**. Non chiudere il pannello **Criteri** o il portale di Azure.
+4. Selezionare **Salva e chiudi**. Non chiudere il riquadro **Criteri** o il portale di Azure.
 
 5. A questo punto, ripetere il [test precedente per impedire agli utenti di inviare un messaggio di posta elettronica con l'etichetta General](#test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-has-the-general-label) e non verrà più visualizzato il messaggio di blocco quando si usa il proprio indirizzo di posta elettronica. Il messaggio di posta elettronica viene inviato senza interruzioni.
     
@@ -304,15 +304,15 @@ Per questo passaggio dell'esercitazione verrà specificata una nuova impostazion
 
 Questa nuova impostazione avanzata del client denominata **OutlookUnlabeledCollaborationAction** non richiede un ID etichetta, ma specifica l'azione da intraprendere per i contenuti senza etichetta: 
 
-1. Nel pannello **Azure Information Protection - Criteri** del portale di Azure selezionare il menu a comparsa ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Nel riquadro **Azure Information Protection - Criteri** del portale di Azure selezionare il menu di scelta rapida ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
-2. Nel pannello**Impostazioni avanzate** digitare il nome dell'impostazione avanzata, ovvero **OutlookUnlabeledCollaborationAction** e specificare**Warn** come valore:
+2. Nel riquadro **Impostazioni avanzate** digitare il nome dell'impostazione avanzata, ovvero **OutlookUnlabeledCollaborationAction** e specificare **Warn** come valore:
     
     ![Esercitazione di Azure Information Protection: creare l'impostazione avanzata OutlookUnlabeledCollaborationAction del client con il valore Warn ](./media/configure-nolablewarn.png)
 
 3. Selezionare **Salva e chiudi**.
 
-Non chiudere il pannello **Criteri** o il portale di Azure.
+Non chiudere il riquadro **Criteri** o il portale di Azure.
 
 ### <a name="test-the-advanced-client-setting-to-warn-users-if-an-email-doesnt-have-a-label"></a>Testare l'impostazione avanzata del client che avvisa gli utenti se un messaggio di posta elettronica non ha un'etichetta
 
@@ -334,15 +334,15 @@ Nel computer client si vedranno ora i risultati della configurazione di questa i
 
 L'impostazione avanzata esistente del client verrà modificata conservando il nome **OutlookUnlabeledCollaborationAction**, ma cambiando il valore in **Justify**: 
 
-1. Nel pannello **Azure Information Protection - Criteri**, selezionare il menu a comparsa ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Nel riquadro **Azure Information Protection - Criteri** selezionare il menu di scelta rapida ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
-2. Nel pannello**Impostazioni avanzate** individuare l'impostazione **OutlookUnlabeledCollaborationAction** e sostituire il valore **Warn** precedente con il nuovo valore **Justify**:
+2. Nel riquadro **Impostazioni avanzate** individuare l'impostazione **OutlookUnlabeledCollaborationAction** e sostituire il valore **Warn** precedente con il nuovo valore **Justify**:
     
     ![Esercitazione di Azure Information Protection: modificare l'impostazione avanzata OutlookUnlabeledCollaborationAction del client con il valore Justify](./media/configure-justifymessage2.png)
 
 3. Selezionare **Salva e chiudi**.
 
-Non chiudere il pannello **Criteri** o il portale di Azure.
+Non chiudere il riquadro **Criteri** o il portale di Azure.
 
 ### <a name="test-the-advanced-client-setting-to-prompt-users-to-justify-if-an-email-isnt-labeled"></a>Testare l'impostazione avanzata del client che chiede agli utenti una giustificazione se un messaggio di posta elettronica non ha etichetta
 
@@ -364,15 +364,15 @@ Nel computer client si vedranno ora i risultati della modifica del valore per qu
 
 Come in precedenza, l'impostazione avanzata esistente del client verrà modificata conservando il nome **OutlookUnlabeledCollaborationAction**, ma cambiando il valore in **Block**: 
 
-1. Nel pannello **Azure Information Protection - Criteri**, selezionare il menu a comparsa ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
+1. Nel riquadro **Azure Information Protection - Criteri** selezionare il menu di scelta rapida ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Impostazioni avanzate**.
 
-2. Nel pannello**Impostazioni avanzate** individuare l'impostazione **OutlookUnlabeledCollaborationAction** e sostituire il valore **Justify** precedente con il nuovo valore **Block**:
+2. Nel riquadro **Impostazioni avanzate** individuare l'impostazione **OutlookUnlabeledCollaborationAction** e sostituire il valore **Justify** precedente con il nuovo valore **Block**:
     
     ![Esercitazione di Azure Information Protection: modificare l'impostazione avanzata OutlookUnlabeledCollaborationAction del client con il valore Block](./media/configure-blockmessage2.png)
 
 3. Selezionare **Salva e chiudi**.
 
-Non chiudere il pannello **Criteri** o il portale di Azure.
+Non chiudere il riquadro **Criteri** o il portale di Azure.
 
 ### <a name="test-the-advanced-client-setting-to-block-users-from-sending-an-email-that-isnt-labeled"></a>Testare l'impostazione avanzata del client che impedisce agli utenti di inviare un messaggio di posta elettronica senza etichetta
 
@@ -420,7 +420,7 @@ User Response: Confirmed
 
 Se non si vogliono mantenere le modifiche apportate in questa esercitazione, seguire questa procedura:
 
-1. Nel pannello **Azure Information Protection - Criteri** del portale di Azure selezionare il menu a comparsa ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Elimina criteri**.
+1. Nel riquadro **Azure Information Protection - Criteri** del portale di Azure selezionare il menu di scelta rapida ( **...** ) accanto a **Oversharing tutorial**. Selezionare quindi **Elimina criteri**.
 
 2. Se viene chiesto di confermare, selezionare **OK**.
 

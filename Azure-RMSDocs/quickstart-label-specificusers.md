@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: e3960a2e4e0204fb879e55704f68ed8071d31e3b
-ms.sourcegitcommit: f14ec329cef1967d2d66b0d550501449ee55abf9
+ms.openlocfilehash: fa0278f0171faee18594ea40f7ac6fee2d238eb9
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/29/2019
-ms.locfileid: "71674116"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73559131"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Guida introduttiva: Creare una nuova etichetta di Azure Information Protection per utenti specifici
 
@@ -37,7 +37,7 @@ Per completare questa guida introduttiva, è necessario:
     
     In assenza di una di queste sottoscrizioni, è possibile creare un account [gratuito](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=87dd2714-d452-48a0-a809-d2f58c4f68b7) per l'organizzazione.
 
-2. Aver aggiunto il pannello di Azure Information Protection nel portale di Azure e aver verificato che il servizio di protezione è attivato.
+2. Aver aggiunto il riquadro Azure Information Protection al portale di Azure e aver verificato che il servizio di protezione sia attivato.
 
     Se occorre assistenza per queste azioni, vedere [Avvio rapido: Attività iniziali nel portale di Azure](quickstart-viewpolicy.md).
 
@@ -57,15 +57,15 @@ Per un elenco completo dei prerequisiti per l'uso di Azure Information Protectio
 
 Per prima cosa, creare la nuova etichetta.
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e accedere al [portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al pannello **Azure Information Protection**.
+1. Se non è già stato fatto, aprire una nuova finestra del browser e accedere al [portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al riquadro **Azure Information Protection**.
     
-    Ad esempio, dal menu hub fare clic su **Tutti i servizi** e iniziare a digitare **Informazioni** nella casella Filtro. Selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Informazioni** e selezionare **Azure Information Protection**.
     
     Se non si è l'amministratore globale, usare il collegamento seguente per i ruoli alternativi: [Accesso al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. Dall'opzione di menu **Classificazioni** > **Etichette**: Nel pannello **Azure Information Protection - Etichette** fare clic su **Aggiungi una nuova etichetta**.
+2. Dall'opzione di menu **Classificazioni** > **Etichette**: nel riquadro **Azure Information Protection - Etichette** fare clic su **Aggiungi una nuova etichetta**.
 
-3. Nel pannello **Etichetta** specificare almeno gli elementi seguenti:
+3. Nel riquadro **Etichetta** specificare almeno gli elementi seguenti:
     
     - **Nome visualizzato dell'etichetta**: il nome della nuova etichetta che sarà visibile agli utenti e che identifica la classificazione del contenuto. Ad esempio: `Sales - Restricted`.
     
@@ -77,19 +77,19 @@ Per prima cosa, creare la nuova etichetta.
 
 Aggiungere ora l'etichetta appena creata ai nuovi criteri con ambito.
 
-1. Dall'opzione di menu **Classificazioni** > **Criteri**: Nel pannello **Azure Information Protection - Criteri** selezionare **Aggiungi un nuovo criterio**. 
+1. Dall'opzione di menu **Classificazioni** > **Criteri**: nel riquadro **Azure Information Protection - Criteri** selezionare **Aggiungi un nuovo criterio**. 
 
-2. Nel pannello **Criteri**, nella casella **Nome criterio**, immettere un nome che identifichi il gruppo di utenti che potranno vedere la nuova etichetta creata. Ad esempio, `Sales`
+2. Nella casella **Nome criterio** del riquadro **Criteri** immettere un nome che identifichi il gruppo di utenti che potranno vedere la nuova etichetta creata. Ad esempio, `Sales`
 
 3. Selezionare l'opzione **Selezionare gli utenti o i gruppi a cui viene applicato il criterio**.
 
-4. Nel pannello **Utenti e gruppi di AAD** selezionare **Utenti/Gruppi**. Quindi, nel nuovo pannello **Utenti/Gruppi** cercare e selezionare il gruppo identificato nei prerequisiti. Ad esempio: **Team vendite**. In questo pannello fare clic su **Seleziona** e quindi su **OK**.
+4. Nel riquadro **Utenti e gruppi di AAD** selezionare **Utenti/Gruppi**. Quindi, nel nuovo riquadro **Utenti/Gruppi** cercare e selezionare il gruppo identificato nei prerequisiti. Ad esempio: **Team vendite**. In questo riquadro fare clic su **Seleziona** e quindi su **OK**.
 
-5. Tornare al pannello **Criteri** e selezionare **Aggiungi o rimuovi etichette**.
+5. Tornare al riquadro **Criteri** e selezionare **Aggiungi o rimuovi etichette**.
 
 6. Nel pannello **Criteri: Aggiungi o rimuovi etichette** selezionare l'etichetta creata, ad esempio **Vendite - Con restrizioni**, quindi selezionare **OK**.
 
-7. Nel pannello **Criteri** fare clic su **Salva**. 
+7. Nel riquadro **Criteri** fare clic su **Salva**. 
 
 La nuova etichetta è ora pubblicata solo per i membri del gruppo specificato. 
 
@@ -105,11 +105,11 @@ Per testare questa etichetta sono necessari almeno due computer, poiché il clie
 
 Se non si vuole mantenere questa etichetta e i criteri con ambito, seguire questa procedura:
 
-1. Dall'opzione di menu **Classificazioni** > **Criteri**: nel pannello **Azure Information Protection - Criteri** selezionare il menu di scelta rapida ( **...** ) relativo ai criteri con ambito appena creati. Ad esempio: **Vendite**.
+1. Dall'opzione di menu **Classificazioni** > **Criteri**: nel riquadro **Azure Information Protection - Criteri** selezionare il menu di scelta rapida ( **...** ) relativo ai criteri con ambito appena creati. Ad esempio: **Vendite**.
 
 2. Selezionare **Elimina criteri** e, se viene richiesto di confermare l'operazione, scegliere **OK**.
 
-3. Dall'opzione di menu **Classificazioni** > **Etichetta**: nel pannello **Azure Information Protection - Etichetta** selezionare il menu di scelta rapida ( **...** ) per l'etichetta appena creata.  Ad esempio: **Vendite - Con restrizioni**.
+3. Dall'opzione di menu **Classificazioni** > **Etichetta**: nel riquadro **Azure Information Protection - Etichetta** selezionare il menu di scelta rapida ( **...** ) per l'etichetta appena creata.  Ad esempio: **Vendite - Con restrizioni**.
 
 4.  Selezionare **Elimina questa etichetta** e, se viene richiesto di confermare l'operazione, scegliere **OK**.
 

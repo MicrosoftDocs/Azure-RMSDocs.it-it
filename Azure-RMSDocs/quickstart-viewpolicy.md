@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: d48061cda0d13ad04dc05dbd5d260a56dec60166
-ms.sourcegitcommit: d939dd4191965f68a5e59e13ed612e40bfa28556
+ms.openlocfilehash: 92bc55f99636d7a54cafc7c45c1588d2828974c7
+ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712563"
+ms.lasthandoff: 11/04/2019
+ms.locfileid: "73561383"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Guida introduttiva: Introduzione ad Azure Information Protection nel portale di Azure
 
@@ -43,9 +43,9 @@ Azure Information Protection non è automaticamente disponibile nel portale di A
     
     Se non si è l'amministratore globale, usare il collegamento seguente per i ruoli alternativi: [Accesso al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
-2. Nel menu dell'hub selezionare **Crea una risorsa** e quindi nella casella di ricerca per il Marketplace digitare **Azure Information Protection**. 
+2. Selezionare **+ Crea una risorsa** e quindi nella casella di ricerca per il Marketplace digitare **Azure Information Protection**. 
     
-3. Selezionare **Azure Information Protection** nell'elenco dei risultati. Fare quindi clic su **Crea** nel pannello **Azure Information Protection**.
+3. Selezionare **Azure Information Protection** nell'elenco dei risultati. Fare quindi clic su **Crea** nel riquadro **Azure Information Protection**.
     
     > [!TIP] 
     > Facoltativamente, selezionare **Aggiungi al dashboard** per creare un riquadro **Azure Information Protection** nel dashboard, in modo da ignorare la ricerca del servizio al successivo accesso al portale.
@@ -56,7 +56,7 @@ Azure Information Protection non è automaticamente disponibile nel portale di A
 
 Il servizio di protezione viene attivato automaticamente per i nuovi clienti, ma è consigliabile verificare che non sia necessario attivarlo manualmente. 
 
-1. Nel pannello **Azure Information Protection** selezionare **Gestisci** > **Attivazione della protezione**.
+1. Nel riquadro **Azure Information Protection** selezionare **Gestisci** > **Attivazione della protezione**.
 
 2. Verificare che la protezione sia attivata per il tenant: 
     
@@ -100,15 +100,15 @@ La pubblicazione delle etichette nel portale di Azure le rende disponibili per i
 
 ## <a name="view-your-labels"></a>Visualizzare le etichette
 
-Selezionare **Classificazioni** > **Etichette** e dedicare qualche minuto all'esplorazione delle etichette visualizzate nel pannello **Azure Information Protection - Etichette**.
+Selezionare **Classificazioni** > **Etichette** e dedicare qualche minuto all'esplorazione delle etichette visualizzate nel riquadro **Azure Information Protection - Etichette**.
 
 Se non sono simili alle etichette visualizzate nell'immagine riportata nella sezione precedente, significa che non si stanno usando le etichette predefinite di Azure Information Protection bensì etichette create probabilmente nel Centro sicurezza e conformità di Office 365, nel Centro sicurezza Microsoft 365 o nel Centro conformità Microsoft 365.
 
 > [!TIP]
 > Se non si vogliono usare le etichette personalizzate ma quelle predefinite di Azure Information Protection: 
-> - Eliminare le etichette personalizzate per visualizzare l'opzione per la generazione di etichette predefinite nel pannello **Etichette**, come descritto nella [sezione precedente](#create-and-publish-labels). 
+> - Eliminare le etichette personalizzate per visualizzare l'opzione per la generazione di etichette predefinite nel riquadro **Etichette**, come descritto nella [sezione precedente](#create-and-publish-labels). 
 
-Nel pannello **Azure Information Protection - Etichette**:
+Nel riquadro **Azure Information Protection - Etichette**:
 
 - Le etichette predefinite per la classificazione sono **Personale**, **Pubblico**, **Generale**, **Riservato** e **Riservatezza elevata**. Le ultime due etichette si espandono per visualizzare le etichette secondarie, offrendo esempi di come una classificazione può avere sottocategorie.
 
@@ -118,7 +118,7 @@ Ad esempio:
 
 ![Avvio rapido di Azure Information Protection - panoramica delle etichette predefinite](./media/info-protect-policy-default-labelsv2.png)
 
-Se si seleziona un'etichetta, vengono visualizzati i dettagli della configurazione di tale etichetta in un nuovo pannello.
+Se si seleziona un'etichetta, i dettagli della configurazione dell'etichetta vengono visualizzati in un nuovo riquadro.
 
 ## <a name="view-your-policy-settings"></a>Visualizzare le impostazioni dei criteri
 
@@ -134,7 +134,7 @@ Per visualizzare le impostazioni dei criteri predefinite di Azure Information Pr
     
     ![Impostazioni globali dei criteri di Azure Information Protection](./media/defaultsettings-aip.png)
 
-3. È ora possibile chiudere tutti i pannelli precedentemente aperti nel portale.
+3. È ora possibile chiudere tutti i riquadri precedentemente aperti nel portale.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
