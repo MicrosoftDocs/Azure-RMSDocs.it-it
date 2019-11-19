@@ -1,6 +1,6 @@
 ---
 title: PowerShell per i modelli di protezione - Azure Information Protection
-description: Tutte le operazioni che è possibile eseguire nel portale di Azure per creare e gestire i modelli di protezione possono essere eseguite anche nella riga di comando tramite PowerShell. Inoltre, è possibile copiare modelli tra tenant o eseguire modifiche in blocco di proprietà complesse nei modelli, ad esempio nomi e descrizioni in più lingue.
+description: Usare PowerShell per creare e gestire i modelli di protezione per Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -13,12 +13,12 @@ ms.reviewer: esaggese
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 0cd34533f1042668b79f540dd6066f600be445f2
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: b75242487f3a32d0e6ea0f912d9bc75f8109e0fe
+ms.sourcegitcommit: 9484744702a82b8adc45f78e0b127a3857794d29
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71683586"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74160876"
 ---
 # <a name="powershell-reference-for-protection-templates"></a>Informazioni di riferimento su PowerShell per i modelli di protezione
 

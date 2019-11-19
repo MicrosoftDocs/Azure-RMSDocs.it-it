@@ -4,7 +4,7 @@ description: Identificare i dispositivi che supportano il servizio Azure Rights 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/25/2019
+ms.date: 11/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 872a398df33491b815947ad86db70cdbdf922596
-ms.sourcegitcommit: bd986d69729deb657bb3449461f5aacfa0851a56
+ms.openlocfilehash: bd88649f5e66358a97bb446e4e3d7c9f43c78500
+ms.sourcegitcommit: 9484744702a82b8adc45f78e0b127a3857794d29
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71301132"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74160838"
 ---
 # <a name="client-devices-that-support-azure-rights-management-data-protection"></a>Dispositivi client che supportano la protezione dati di Azure Rights Management
 
@@ -37,16 +37,16 @@ I seguenti sistemi operativi per computer supportano il servizio Azure Rights Ma
 
 -   **Windows 10** (x86, x64)
 
--   **macOS**: la versione minima di macOS è 10.8 (Mountain Lion)
+-   **MacOS**: versione minima di MacOS 10,8 (Mountain Lion)
 
 ## <a name="mobile-devices"></a>Dispositivi mobili
 I seguenti sistemi operativi per dispositivi mobili supportano il servizio Azure Rights Management:
 
--   **Telefoni e tablet Android**: la versione minima di Android è 4.4
+-   **Telefoni e Tablet Android**: versione minima di Android 6,0
 
--   **iPhone e iPad**: Versione minima di iOS 11,0
+-   **iPhone e iPad**: versione minima di iOS 11,0
 
--   **Telefoni e tablet Windows**: Windows 10 Mobile
+-   **Windows Phone e Tablet**: Windows 10 Mobile
 
 
 ## <a name="next-steps"></a>Passaggi successivi
