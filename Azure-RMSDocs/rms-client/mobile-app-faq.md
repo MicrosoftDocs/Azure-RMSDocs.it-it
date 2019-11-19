@@ -4,7 +4,7 @@ description: Alcune domande frequenti riguardanti l'uso dell'app Azure Informati
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/25/2019
+ms.date: 11/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.custom: user
 ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
-ms.openlocfilehash: fcd764187379fdfcb8dd1cc13c60ae9dad2069dd
-ms.sourcegitcommit: bd986d69729deb657bb3449461f5aacfa0851a56
+ms.openlocfilehash: a8f6871f322765abf07087ce3c7bd629bfc9748f
+ms.sourcegitcommit: 9484744702a82b8adc45f78e0b127a3857794d29
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71301160"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74160830"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Domande frequenti sull'app Microsoft Azure Information Protection per iOS e Android
 
@@ -39,7 +39,7 @@ Questa app può anche aprire i file PDF protetti all'esterno di SharePoint e One
 
 ## <a name="can-my-mobile-device-run-the-azure-information-protection-app"></a>È possibile eseguire l'app Azure Information Protection in un dispositivo mobile?
 
-L'app Azure Information Protection richiede una versione minima di **iOS 11** o **Android 4,4**.
+L'app Azure Information Protection richiede una versione minima di **iOS 11** o **Android 6,0**.
 
 Se sono disponibili queste versioni o versioni successive, è possibile installare l'app per eseguirla nel dispositivo mobile:
 
@@ -51,7 +51,7 @@ Se sono disponibili queste versioni o versioni successive, è possibile installa
 
 Dopo aver installato l'app, non è necessario eseguire altre operazioni. Attendere finché non viene visualizzato un file o un messaggio di posta elettronica protetto e quindi scegliere il **visualizzatore dell'API** per aprirlo. Verrà quindi chiesto di accedere con l'account aziendale o dell'istituto di istruzione oppure di selezionare un certificato. Dopo l'autenticazione delle credenziali, sarà quindi possibile leggere il contenuto.
 
-Tuttavia, se non si vuole attendere, è possibile usare le istruzioni seguenti per inviare a se stessi un messaggio di posta elettronica protetto o un file da visualizzare: [Introduzione all'app Microsoft Azure Information Protection per iOS e Android](mobile-app-get-started.md) 
+Tuttavia, se non si vuole attendere, è possibile usare le istruzioni seguenti per inviare un file o un messaggio di posta elettronica protetto per visualizzare: [Introduzione all'app Microsoft Azure Information Protection per iOS e Android](mobile-app-get-started.md) 
 
 ## <a name="what-credentials-should-i-use-to-sign-in-to-this-app"></a>Quali credenziali usare per accedere all'app?
 
