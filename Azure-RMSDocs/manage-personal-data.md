@@ -84,7 +84,7 @@ LabelId                 :
 
 ### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>Utenti con privilegi avanzati e amministratori delegati per il servizio di protezione
 
-Eseguire il cmdlet [Get-AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) e il cmdlet [Get-aipservicerolebasedadministrator](/powershell/module/aipservice/get-aipservicerolebasedadministrator) per vedere a quali utenti è stato assegnato il ruolo utente con privilegi avanzati o il ruolo di amministratore globale per il servizio di protezione (Azure Rights Management) da Azure Information Protection. Per gli utenti cui sono stati assegnati questi ruoli, vengono visualizzati i rispettivi indirizzi e-mail.
+Eseguire il cmdlet [Get-AipServiceSuperUser](/powershell/module/aipservice/get-aipservicesuperuser) e il cmdlet [Get-aipservicerolebasedadministrator](/powershell/module/aipservice/get-aipservicerolebasedadministrator) per vedere quali utenti sono stati assegnati al ruolo utente con privilegi avanzati o al ruolo di amministratore globale per il servizio di protezione (Rights Management di Azure) da Azure Information Protection. Per gli utenti cui sono stati assegnati questi ruoli, vengono visualizzati i rispettivi indirizzi e-mail.
 
 
 ### <a name="administration-logs-for-the-protection-service"></a>Log di amministrazione per il servizio di protezione
@@ -224,7 +224,7 @@ I dati personali visualizzati e specificati nel portale di Azure sono accessibil
 
 - **Lettore globale**
 
-I dati personali che è possibile visualizzare e specificare usando il modulo AIPService (o il modulo precedente, AADRM) sono accessibili solo agli utenti a cui è stato assegnato il **Azure Information Protection amministratore**, l' **amministratore della conformità**e la **conformità amministratore dei dati**o ruoli di **amministratore globale** da Azure Active Directory o ruolo di amministratore globale per il servizio di protezione.
+I dati personali che è possibile visualizzare e specificare usando il modulo AIPService (o il modulo precedente, AADRM) sono accessibili solo agli utenti a cui sono stati assegnati i ruoli amministratore **Azure Information Protection**, **amministratore conformità**, **amministratore dati di conformità**o **amministratore globale** da Azure Active Directory o ruolo di amministratore globale per il servizio di protezione.
 
 ## <a name="updating-personal-data"></a>Aggiornamento dei dati personali
 
@@ -236,7 +236,7 @@ Non è possibile aggiornare gli indirizzi di posta elettronica per gli utenti co
 
 ### <a name="protection-templates"></a>Modelli di protezione
 
-Eseguire il cmdlet [set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) per aggiornare il modello di protezione. Poiché i dati personali si trovano all'interno della proprietà `RightsDefinitions`, sarà necessario utilizzare anche il cmdlet [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) per creare un oggetto delle definizioni dei diritti con le informazioni aggiornate e utilizzare l'oggetto delle definizioni dei diritti con l'`Set-AipServiceTemplateProperty` cmdlet.
+Eseguire il cmdlet [set-AipServiceTemplateProperty](/powershell/module/aipservice/set-aipservicetemplateproperty) per aggiornare il modello di protezione. Poiché i dati personali si trovano all'interno della proprietà `RightsDefinitions`, sarà necessario utilizzare anche il cmdlet [New-AipServiceRightsDefinition](/powershell/module/aipservice/new-aipservicerightsdefinition) per creare un oggetto delle definizioni dei diritti con le informazioni aggiornate e utilizzare l'oggetto delle definizioni dei diritti con il cmdlet `Set-AipServiceTemplateProperty`.
 
 ### <a name="super-users-and-delegated-administrators-for-the-protection-service"></a>Utenti con privilegi avanzati e amministratori delegati per il servizio di protezione
 
