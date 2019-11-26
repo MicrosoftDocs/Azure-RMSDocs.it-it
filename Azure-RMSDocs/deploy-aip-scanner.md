@@ -4,7 +4,7 @@ description: Instructions to install, configure, and run the current version of 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 11/21/2019
+ms.date: 11/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bc49fc0721ad3b3fff09856a84fdc91718d0a1d0
-ms.sourcegitcommit: d9442efe61b55bb158bd50ee69873c028234842d
+ms.openlocfilehash: 0b53c721725f83b8e197552d4c1fa502583fc2f9
+ms.sourcegitcommit: fed1df1858f8316f7dd45e751c6910b444651a87
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74297633"
+ms.lasthandoff: 11/25/2019
+ms.locfileid: "74474368"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -202,7 +202,7 @@ If your organization policies prohibit the **Log on locally** right for service 
 
 Before you install the scanner, or upgrade it from an older general availability version of the scanner, create a profile for the scanner in the Azure portal. Si configura il profilo per le impostazioni dello scanner e per i repository di dati da analizzare.
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al riquadro **Azure Information Protection**. 
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection**. 
     
     For example, in the search box for resources, services, and docs: Start typing **Information** and select **Azure Information Protection**.
     
@@ -524,7 +524,7 @@ The scanner refreshes the policy according to the following triggers:
 
 - Scanner from the classic client: Every hour and when the service starts and the policy is older than one hour. 
 
-- Scanner from the unified labeling client: Every four hours and when the service starts. 
+- Scanner from the unified labeling client: Every four hours. 
 
 > [!TIP]
 > If you need to refresh the policy sooner than the default interval, for example, during a testing period: 
@@ -582,7 +582,11 @@ There are three alternative scenarios that the Azure Information Protection scan
 
 ## <a name="optimizing-the-performance-of-the-scanner"></a>Ottimizzazione delle prestazioni dello scanner
 
-Usare le linee guida seguenti per ottimizzare le prestazioni dello scanner. However, if your priority is the responsiveness of the scanner computer rather than the scanner performance, you can use an [advanced client setting](./rms-client/client-admin-guide-customizations.md#limit-the-number-of-threads-used-by-the-scanner) to limit the number of threads used by the scanner (classic client only).
+Usare le linee guida seguenti per ottimizzare le prestazioni dello scanner. However, if your priority is the responsiveness of the scanner computer rather than the scanner performance, you can use an advanced client setting to limit the number of threads used by the scanner:
+
+- Scanner from the classic client: [Limit the number of threads used by the scanner](./rms-client/client-admin-guide-customizations.md#limit-the-number-of-threads-used-by-the-scanner)
+
+- Scanner from the unified labeling client: [Limit the number of threads used by the scanner](./rms-client/clientv2-admin-guide-customizations.md#limit-the-number-of-threads-used-by-the-scanner)
 
 Per ottimizzare le prestazioni dello scanner:
 
