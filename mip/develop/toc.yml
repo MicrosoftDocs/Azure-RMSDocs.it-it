@@ -99,6 +99,8 @@
           href: concept-async-observers-policy-cpp.md
         - name: Osservatori dell'API Protezione (C++)
           href: concept-async-observers-protection-cpp.md
+    - name: Telemetria di SDK
+      href: concept-mip-telemetry.md
 - name: Riferimento
   items:
     - name: Libreria C++
