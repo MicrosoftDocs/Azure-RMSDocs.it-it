@@ -1,6 +1,6 @@
 ---
-title: Custom configurations - Azure Information Protection unified labeling client
-description: Information about customizing the Azure Information Protection unified labeling client for Windows.
+title: Configurazioni personalizzate-Azure Information Protection client per l'assegnazione di etichette unificata
+description: Informazioni sulla personalizzazione del client di Azure Information Protection Unified Labeling per Windows.
 author: cabailey
 ms.author: cabailey
 manager: barbkess
@@ -20,113 +20,113 @@ ms.contentlocale: it-IT
 ms.lasthandoff: 11/25/2019
 ms.locfileid: "74474384"
 ---
-# <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Admin Guide: Custom configurations for the Azure Information Protection unified labeling client
+# <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
->*Applies to: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 with SP1, Windows Server 2019, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012, windows Server 2008 R2*
 >
-> *Instructions for: [Azure Information Protection unified labeling client for Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Use the following information for advanced configurations that you might need for specific scenarios or a subset of users when you manage the Azure Information Protection unified labeling client.
+Usare le informazioni seguenti per le configurazioni avanzate che possono essere necessarie per scenari specifici o per un subset di utenti quando si gestisce il client di Azure Information Protection Unified labeling.
 
-These settings require editing the registry or specifying advanced settings. The advanced settings use [Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps).
+Per queste impostazioni è necessario modificare il registro di sistema o specificare impostazioni avanzate. Le impostazioni avanzate usano [Office 365 Centro sicurezza e conformità PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/office-365-scc-powershell?view=exchange-ps).
 
-### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>How to configure advanced settings for the client by using Office 365 Security & Compliance Center PowerShell
+### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Come configurare le impostazioni avanzate per il client usando Office 365 Centro sicurezza e conformità PowerShell
 
-When you use Office 365 Security & Compliance Center PowerShell, you can configure advanced settings that support customizations for label policies and labels. Ad esempio:
+Quando si usa Office 365 Centro sicurezza e conformità PowerShell, è possibile configurare le impostazioni avanzate che supportano le personalizzazioni per i criteri etichette e le etichette. Ad esempio:
 
-- The setting to display the Information Protection bar in Office apps is a ***label policy advanced setting***.
-- The setting to specify a label color is a ***label advanced setting***.
+- L'impostazione per visualizzare la barra di Information Protection nelle app di Office è un' ***impostazione avanzata dei criteri***per le etichette.
+- L'impostazione per specificare un colore dell'etichetta è un' ***impostazione avanzata etichetta***.
 
-In both cases, after you [connect to Office 365 Security & Compliance Center PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps), specify the *AdvancedSettings* parameter with the identity (name or GUID) of the policy or label, and specify key/value pairs in a [hash table](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). Usare la sintassi seguente:
+In entrambi i casi, dopo la [connessione a Office 365 Centro sicurezza e conformità PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps), specificare il parametro *AdvancedSettings* con l'identità (nome o GUID) del criterio o dell'etichetta e specificare le coppie chiave/valore in una [tabella hash](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). Usare la sintassi seguente:
 
-For a label policy setting, single string value:
+Per un'impostazione dei criteri di etichetta, valore stringa singola:
 
     Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key="value1,value2"}
 
-For label policy settings, multiple string values for the same key:
+Per le impostazioni dei criteri di etichetta, più valori stringa per la stessa chiave:
 
     Set-LabelPolicy -Identity <PolicyName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 
-For a label setting, single string value:
+Per un'impostazione di etichetta, valore stringa singola:
 
     Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key="value1,value2"}
 
-For label settings, multiple string values for the same key:
+Per le impostazioni delle etichette, più valori stringa per la stessa chiave:
 
     Set-Label -Identity <LabelGUIDorName> -AdvancedSettings @{Key=ConvertTo-Json("value1", "value2")}
 
-To remove an advanced setting, use the same syntax but specify a null string value.
+Per rimuovere un'impostazione avanzata, utilizzare la stessa sintassi ma specificare un valore di stringa null.
 
 
-#### <a name="examples-for-setting-advanced-settings"></a>Examples for setting advanced settings
+#### <a name="examples-for-setting-advanced-settings"></a>Esempi per l'impostazione di impostazioni avanzate
 
-Example 1: Set a label policy advanced setting for a single string value:
+Esempio 1: impostare un'impostazione avanzata dei criteri per le etichette per un singolo valore stringa:
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 
-Example 2: Set a label advanced setting for a single string value:
+Esempio 2: impostare un'impostazione avanzata etichetta per un valore stringa singolo:
 
     Set-Label -Identity Internal -AdvancedSettings @{smimesign="true"}
 
-Example 3: Set a label advanced setting for multiple string values:
+Esempio 3: impostare un'impostazione avanzata etichetta per più valori stringa:
 
     Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 
-Example 4: Remove a label policy advanced setting by specifying a null string value:
+Esempio 4: rimuovere un'impostazione avanzata dei criteri di etichetta specificando un valore stringa null:
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions=""}
 
-#### <a name="specifying-the-identity-for-the-label-policy-or-label"></a>Specifying the identity for the label policy or label
+#### <a name="specifying-the-identity-for-the-label-policy-or-label"></a>Specifica dell'identità per il criterio etichetta o l'etichetta
 
-Specifying the label policy name for the PowerShell *Identity* parameter is straightforward because you see only one policy name in the admin center where you manage your label policies. However, for labels, you see both a **Name** and **Display name** in the admin centers. In some cases, the value for both will be the same but they can be different:
+Specificare il nome dei criteri di etichetta per il parametro *Identity* di PowerShell è semplice perché nel centro di amministrazione è presente un solo nome di criteri in cui si gestiscono i criteri di etichetta. Per le etichette, tuttavia, nel centro di amministrazione vengono visualizzati sia un **nome** che un **nome visualizzato** . In alcuni casi, il valore di entrambi gli elementi sarà lo stesso, ma possono essere diversi:
 
-- **Name** is the original name of the label and it is unique across all your labels. If you change the name of your label after it is created, this value remains the same. For labels that have been migrated from Azure Information Protection, you might see the label ID of the label from the Azure portal.
+- **Nome** è il nome originale dell'etichetta ed è univoco in tutte le etichette. Se si modifica il nome dell'etichetta dopo che è stata creata, questo valore rimane invariato. Per le etichette di cui è stata eseguita la migrazione da Azure Information Protection, è possibile che venga visualizzato l'ID etichetta dell'etichetta dall'portale di Azure.
 
-- **Display name** is the name of the label that users see and it doesn't have to be unique across all your labels. For example, users see one **All Employees** sublabel for the **Confidential** label, and another **All Employees** sublabel for the **Highly Confidential** label. These sublabels both display the same name, but are not the same label and have different settings.
+- **Nome visualizzato** è il nome dell'etichetta visualizzata dagli utenti e non è necessario che sia univoco in tutte le etichette. Ad esempio, gli utenti visualizzano una sottoetichetta **tutti i dipendenti** per l'etichetta **riservata** e un'altra sottoetichetta **tutti i dipendenti** per l'etichetta **riservatezza elevata** . Queste etichette secondarie visualizzano entrambi lo stesso nome, ma non hanno la stessa etichetta e hanno impostazioni diverse.
 
-For configuring your label advanced settings, use the **Name** value. For example, to identify the label in the following picture, you would specify `-Identity "All Company"`:
+Per configurare le impostazioni avanzate dell'etichetta, usare il valore **nome** . Ad esempio, per identificare l'etichetta nell'immagine seguente, è necessario specificare `-Identity "All Company"`:
 
-![Use 'Name' rather than 'Display name' to identify a sensitivity label](../media/labelname_scc.png)
+![Usare "Name" invece di "nome visualizzato" per identificare un'etichetta di riservatezza](../media/labelname_scc.png)
 
-If you prefer to specify the label GUID, this value is not displayed in the admin center where you manage your labels. However, you can use the following Office 365 Security & Compliance Center PowerShell command to find this value:
+Se si preferisce specificare il GUID dell'etichetta, questo valore non viene visualizzato nell'interfaccia di amministrazione in cui si gestiscono le etichette. Tuttavia, è possibile usare il comando seguente di Office 365 Centro sicurezza e conformità PowerShell per trovare questo valore:
 
     Get-Label | Format-Table -Property DisplayName, Name, Guid
 
 
-#### <a name="order-of-precedence---how-conflicting-settings-are-resolved"></a>Order of precedence - how conflicting settings are resolved
+#### <a name="order-of-precedence---how-conflicting-settings-are-resolved"></a>Ordine di precedenza-come vengono risolte le impostazioni in conflitto
 
-Using one of the admin centers where you manage your sensitivity labels, you can configure the following label policy settings:
+Usando uno dei centri di amministrazione in cui si gestiscono le etichette di riservatezza, è possibile configurare le impostazioni dei criteri di etichetta seguenti:
 
-- **Apply this label by default to documents and emails**
+- **Per impostazione predefinita, applicare questa etichetta ai documenti e ai messaggi di posta elettronica**
 
-- **Users must provide justification to remove a label or lower classification label**
+- **Gli utenti devono fornire la giustificazione per rimuovere un'etichetta o un'etichetta di classificazione inferiore**
 
-- **Require users to apply a label to their email or document**
+- **Richiedi agli utenti di applicare un'etichetta al messaggio di posta elettronica o al documento**
 
-- **Provide users with a link to a custom help page**
+- **Fornire agli utenti un collegamento a una pagina della Guida personalizzata**
 
-When more than one label policy is configured for a user, each with potentially different policy settings, the last policy setting is applied according to the order of the policies in the admin center. For more information, see [Label policy priority (order matters)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters)
+Quando per un utente sono configurati più criteri di etichetta, ognuno con impostazioni di criteri potenzialmente diverse, l'ultima impostazione dei criteri viene applicata in base all'ordine dei criteri nell'interfaccia di amministrazione. Per ulteriori informazioni, vedere [priorità dei criteri delle etichette (ordine degli ordini)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels#label-policy-priority-order-matters)
 
-Label advanced settings follow the same logic for precedence: When a label is in multiple label policies and that label has advanced settings, the last advanced setting is applied according to the order of the policies in the admin center.
+Le impostazioni avanzate dell'etichetta seguono la stessa logica per la precedenza: quando un'etichetta si trova in più criteri etichetta e l'etichetta ha impostazioni avanzate, l'ultima impostazione avanzata viene applicata in base all'ordine dei criteri nell'interfaccia di amministrazione.
 
-Label policy advanced settings are applied in the reverse order: With one exception, the advanced settings from the first policy are applied, according to the order of the policies in the admin center. The exception is the advanced setting *OutlookDefaultLabel*, which sets a different default label for Outlook. For this label policy advanced setting only, the last setting is applied according to the order of the policies in the admin center.
+Le impostazioni avanzate dei criteri di etichetta vengono applicate in ordine inverso: con un'eccezione, vengono applicate le impostazioni avanzate del primo criterio, in base all'ordine dei criteri nell'interfaccia di amministrazione. L'eccezione è l'impostazione avanzata *OutlookDefaultLabel*, che imposta un'etichetta predefinita diversa per Outlook. Solo per questa impostazione avanzata dei criteri di etichetta, l'ultima impostazione viene applicata in base all'ordine dei criteri nell'interfaccia di amministrazione.
 
-#### <a name="available-advanced-settings-for-label-policies"></a>Available advanced settings for label policies
+#### <a name="available-advanced-settings-for-label-policies"></a>Impostazioni avanzate disponibili per i criteri delle etichette
 
-Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy?view=exchange-ps) and [Set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps).
+Usare il parametro *AdvancedSettings* con [New-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy?view=exchange-ps) e [set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps).
 
-|Impostazioni|Scenario e istruzioni|
+|Impostazione|Scenario e istruzioni|
 |----------------|---------------|
 |AttachmentAction|[Per i messaggi di posta elettronica con allegati, applica un'etichetta corrispondente alla classificazione più elevata di questi allegati](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |AttachmentActionTip|[Per i messaggi di posta elettronica con allegati, applica un'etichetta corrispondente alla classificazione più elevata di questi allegati](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
-|DisableMandatoryInOutlook|[Exempt Outlook messages from mandatory labeling](#exempt-outlook-messages-from-mandatory-labeling)
-|EnableAudit|[Disable sending audit data to Azure Information Protection analytics](#disable-sending-audit-data-to-azure-information-protection-analytics)|
-|EnableCustomPermissions|[Disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer)|
+|DisableMandatoryInOutlook|[Esentare i messaggi di Outlook da un'etichetta obbligatoria](#exempt-outlook-messages-from-mandatory-labeling)
+|EnableAudit|[Disabilitare l'invio di dati di controllo a Azure Information Protection Analytics](#disable-sending-audit-data-to-azure-information-protection-analytics)|
+|EnableCustomPermissions|[Disabilitare le autorizzazioni personalizzate in Esplora file](#disable-custom-permissions-in-file-explorer)|
 |EnableCustomPermissionsForCustomProtectedFiles|[Per i file protetti con autorizzazioni personalizzate, rendere sempre le autorizzazioni personalizzate visualizzabili dagli utenti in Esplora file](#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer) |
 |EnableLabelByMailHeader|[Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |EnableLabelBySharePointProperties|[Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions)
 |HideBarByDefault|[Visualizza la barra di Information Protection nelle app Office](##display-the-information-protection-bar-in-office-apps)|
-|LogMatchedContent|[Send information type matches to Azure Information Protection analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
+|LogMatchedContent|[Invia corrispondenze del tipo di informazioni a Azure Information Protection Analytics](#send-information-type-matches-to-azure-information-protection-analytics)|
 |OutlookBlockTrustedDomains|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookBlockUntrustedCollaborationLabel|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookDefaultLabel|[Impostare un'etichetta predefinita diversa per Outlook](#set-a-different-default-label-for-outlook)|
@@ -137,175 +137,175 @@ Use the *AdvancedSettings* parameter with [New-LabelPolicy](https://docs.microso
 |OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnTrustedDomains|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
 |OutlookWarnUntrustedCollaborationLabel|[Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica](#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)|
-|PFileSupportedExtensions|[Change which file types to protect](#change-which-file-types-to-protect)|
+|PFileSupportedExtensions|[Modificare i tipi di file da proteggere](#change-which-file-types-to-protect)|
 |PostponeMandatoryBeforeSave|[Rimuovere "Non ora" per i documenti quando si usa l'etichettatura obbligatoria](#remove-not-now-for-documents-when-you-use-mandatory-labeling)|
 |RemoveExternalContentMarkingInApp|[Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Aggiungere "Segnala un problema" per gli utenti](#add-report-an-issue-for-users)|
-|RunAuditInformationTypesDiscovery|[Disable sending discovered sensitive information in documents to Azure Information Protection analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
+|RunAuditInformationTypesDiscovery|[Disabilitare l'invio di informazioni riservate individuate nei documenti a Azure Information Protection Analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
 |ScannerConcurrencyLevel|[Limitare il numero di thread usati dallo scanner](#limit-the-number-of-threads-used-by-the-scanner)|
 
-Example PowerShell command to check your label policy settings in effect for a label policy named "Global":
+Esempio di comando di PowerShell per verificare le impostazioni dei criteri di etichetta attive per un criterio etichetta denominato "globale":
 
     (Get-LabelPolicy -Identity Global).settings
 
-#### <a name="available-advanced-settings-for-labels"></a>Available advanced settings for labels
+#### <a name="available-advanced-settings-for-labels"></a>Impostazioni avanzate disponibili per le etichette
 
-Use the *AdvancedSettings* parameter with [New-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps) and [Set-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
+Usare il parametro *AdvancedSettings* con [New-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps) e [set-label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
 
-|Impostazioni|Scenario e istruzioni|
+|Impostazione|Scenario e istruzioni|
 |----------------|---------------|
-|color|[Specify a color for the label](#specify-a-color-for-the-label)|
-|customPropertiesByLabel|[Apply a custom property when a label is applied](#apply-a-custom-property-when-a-label-is-applied)|
-|DefaultSubLabelId|[Specify a default sublabel for a parent label](#specify-a-default-sublabel-for-a-parent-label) 
+|colore|[Specificare un colore per l'etichetta](#specify-a-color-for-the-label)|
+|customPropertiesByLabel|[Applicare una proprietà personalizzata quando viene applicata un'etichetta](#apply-a-custom-property-when-a-label-is-applied)|
+|DefaultSubLabelId|[Specificare un'etichetta secondaria predefinita per un'etichetta padre](#specify-a-default-sublabel-for-a-parent-label) 
 |labelByCustomProperties|[Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions)|
 |SMimeEncrypt|[Configurare un'etichetta per applicare la protezione S/MIME in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 |SMimeSign|[Configurare un'etichetta per applicare la protezione S/MIME in Outlook](#configure-a-label-to-apply-smime-protection-in-outlook)|
 
-Example PowerShell command to check your label settings in effect for a label named "Public":
+Esempio di comando di PowerShell per verificare le impostazioni dell'etichetta attive per un'etichetta denominata "public":
 
     (Get-Label -Identity Public).settings
 
 ## <a name="display-the-information-protection-bar-in-office-apps"></a>Visualizza la barra di Information Protection nelle app Office
 
-This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-By default, users must select the **Show Bar** option from the **Sensitivity** button to display the Information Protection bar in Office apps. Use the **HideBarByDefault** key and set the value to **False** to automatically display this bar for users so that they can select labels from either the bar or the button. 
+Per impostazione predefinita, gli utenti devono selezionare l'opzione **Mostra barra** dal pulsante **sensibilità** per visualizzare la barra di Information Protection nelle app di Office. Usare la chiave **HideBarByDefault** e impostare il valore su **false** per visualizzare automaticamente questa barra per gli utenti in modo che sia possibile selezionare le etichette dalla barra o dal pulsante. 
 
-For the selected label policy, specify the following strings:
+Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
-- Key: **HideBarByDefault**
+- Chiave: **HideBarByDefault**
 
 - Valore: **False**
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{HideBarByDefault="False"}
 
-## <a name="exempt-outlook-messages-from-mandatory-labeling"></a>Exempt Outlook messages from mandatory labeling
+## <a name="exempt-outlook-messages-from-mandatory-labeling"></a>Esentare i messaggi di Outlook da un'etichetta obbligatoria
 
-This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-By default, when you enable the label policy setting of **All documents and emails must have a label**, all saved documents and sent emails must have a label applied. When you configure the following advanced setting, the policy setting applies only to Office documents and not to Outlook messages.
+Per impostazione predefinita, quando si Abilita l'impostazione dei criteri di etichetta di **tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**, tutti i documenti salvati e i messaggi di posta elettronica inviati devono avere un'etichetta applicata. Quando si configura l'impostazione avanzata seguente, l'impostazione dei criteri si applica solo ai documenti di Office e non ai messaggi di Outlook.
 
-For the selected label policy, specify the following strings:
+Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
-- Key: **DisableMandatoryInOutlook**
+- Chiave: **DisableMandatoryInOutlook**
 
 - Valore: **True**
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{DisableMandatoryInOutlook="True"}
 
 ## <a name="enable-recommended-classification-in-outlook"></a>Abilitare la classificazione consigliata in Outlook
 
-This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
 Quando si configura un'etichetta per la classificazione consigliata, agli utenti viene richiesto di accettare o ignorare l'etichetta consigliata in Word, Excel e PowerPoint. Questa impostazione estende questa indicazione per l'etichetta anche per la visualizzazione in Outlook.
 
-For the selected label policy, specify the following strings:
+Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
 - Chiave: **OutlookRecommendationEnabled**
 
 - Valore: **True**
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookRecommendationEnabled="True"}
 
 ## <a name="set-a-different-default-label-for-outlook"></a>Impostare un'etichetta predefinita diversa per Outlook
 
-This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-When you configure this setting, Outlook doesn't apply the default label that is configured as a policy setting for the option **Apply this label by default to documents and emails**. In alternativa, Outlook può applicare un'etichetta predefinita diversa o non applicare alcuna etichetta.
+Quando si configura questa impostazione, Outlook non applica l'etichetta predefinita configurata come impostazione dei criteri per l'opzione **applica questa etichetta per impostazione predefinita a documenti e messaggi di posta elettronica**. In alternativa, Outlook può applicare un'etichetta predefinita diversa o non applicare alcuna etichetta.
 
-For the selected label policy, specify the following strings:
+Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
 - Chiave: **OutlookDefaultLabel**
 
-- Value: \<**label GUID**> or **None**
+- Valore: \<**GUID etichetta**> o **None**
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookDefaultLabel="None"}
 
-## <a name="change-which-file-types-to-protect"></a>Change which file types to protect
+## <a name="change-which-file-types-to-protect"></a>Modificare i tipi di file da proteggere
 
-This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-By default, the Azure Information Protection unified labeling client protects all file types, and the scanner from the client protects only Office file types and PDF files.
+Per impostazione predefinita, il client Azure Information Protection Unified Labeling protegge tutti i tipi di file e lo scanner dal client protegge solo i tipi di file di Office e i file PDF.
 
-You can change this default behavior for a selected label policy, by specifying the following:
+È possibile modificare questo comportamento predefinito per i criteri di etichetta selezionati, specificando quanto segue:
 
-- Key: **PFileSupportedExtensions**
+- Chiave: **PFileSupportedExtensions**
 
-- Value: **<string value>** 
+- Valore: **<string value>** 
 
-Use the following table to identify the string value to specify:
+Usare la tabella seguente per identificare il valore stringa da specificare:
 
 | Valore stringa| Client| Scanner|
 |-------------|-------|--------|
-|\*|Default value: Apply protection to all file types|Apply protection to all file types|
-|\<null value>| Apply protection to Office file types and PDF files| Default value: Apply protection to Office file types and PDF files|
-|ConvertTo-Json(".jpg", ".png")|In addition to Office file types and PDF files, apply protection to the specified file name extensions | In addition to Office file types and PDF files, apply protection to the specified file name extensions
+|\*|Valore predefinito: applicare la protezione a tutti i tipi di file|Applicare la protezione a tutti i tipi di file|
+|\<valore null >| Applicare la protezione ai tipi di file di Office e ai file PDF| Valore predefinito: applicare la protezione ai tipi di file di Office e ai file PDF|
+|ConvertTo-JSON (". jpg", ". png")|Oltre ai tipi di file di Office e ai file PDF, applicare la protezione alle estensioni di file specificate | Oltre ai tipi di file di Office e ai file PDF, applicare la protezione alle estensioni di file specificate
 
-Example 1: PowerShell command for the unified client to protect only Office file types and PDF files, where your label policy is named "Client":
+Esempio 1: comando di PowerShell per il client unificato per proteggere solo i tipi di file di Office e i file PDF, in cui il criterio dell'etichetta è denominato "client":
 
     Set-LabelPolicy -Identity Client -AdvancedSettings @{PFileSupportedExtensions=""}
 
-Example 2:  PowerShell command for the scanner to protect all file types, where your label policy is named "Scanner":
+Esempio 2: comando di PowerShell per lo scanner per proteggere tutti i tipi di file, in cui il criterio dell'etichetta è denominato "scanner":
 
     Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions="*"}
 
-Example 3: PowerShell command for the scanner to protect .txt files and .csv files in addition to Office files and PDF files, where your label policy is named "Scanner":
+Esempio 3: comando di PowerShell per lo scanner per proteggere i file con estensione txt e CSV, oltre ai file di Office e PDF, in cui il criterio dell'etichetta è denominato "scanner":
 
     Set-LabelPolicy -Identity Scanner -AdvancedSettings @{PFileSupportedExtensions=ConvertTo-Json(".txt", ".csv")}
 
-With this setting, you can change which file types are protected but you cannot change the default protection level from native to generic. For example, for users running the unified labeling client, you can change the default setting so that only Office files and PDF files are protected instead of all file types. But you cannot change these file types to be generically protected with a .pfile file name extension.
+Con questa impostazione è possibile modificare i tipi di file protetti, ma non è possibile modificare il livello di protezione predefinito da nativo a generico. Ad esempio, per gli utenti che eseguono il client di etichettatura unificata, è possibile modificare l'impostazione predefinita in modo che siano protetti solo i file di Office e i file PDF anziché tutti i tipi di file. Tuttavia, non è possibile modificare questi tipi di file in modo da essere protetti in modo generico con un'estensione di file. Pfile.
 
 ## <a name="remove-not-now-for-documents-when-you-use-mandatory-labeling"></a>Rimuovere "Non ora" per i documenti quando si usa l'etichettatura obbligatoria
 
-This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-When you use the label policy setting of **All documents and emails must have a label**, users are prompted to select a label when they first save an Office document and when they send an email. Per i documenti, gli utenti possono selezionare **Non ora** per chiudere temporaneamente la richiesta di selezionare un'etichetta e tornare al documento. Non possono però chiudere il documento salvato senza etichettarlo. 
+Quando si usa l'impostazione dei criteri di etichetta di **tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**, agli utenti viene richiesto di selezionare un'etichetta quando salvano per la prima volta un documento di Office e inviano un messaggio di posta elettronica. Per i documenti, gli utenti possono selezionare **Non ora** per chiudere temporaneamente la richiesta di selezionare un'etichetta e tornare al documento. Non possono però chiudere il documento salvato senza etichettarlo. 
 
 Quando si configura questa impostazione l'opzione **Non ora** viene rimossa. In questo modo, quando il documento viene salvato per la prima volta gli utenti sono obbligati a selezionare un'etichetta.
 
-For the selected label policy, specify the following strings:
+Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
 - Chiave: **PostponeMandatoryBeforeSave**
 
 - Valore: **False**
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{PostponeMandatoryBeforeSave="False"}
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette
 
-This configuration uses policy [advanced settings](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione USA [le impostazioni avanzate](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-Le impostazioni consentono di rimuovere o sostituire le intestazioni o i piè di pagina basati su testo nei documenti, quando questi contrassegni visivi sono stati applicati da un'altra soluzione di etichettatura. For example, the old footer contains the name of an old label that you have now migrated to sensitivity labels to use a new label name and its own footer.
+Le impostazioni consentono di rimuovere o sostituire le intestazioni o i piè di pagina basati su testo nei documenti, quando questi contrassegni visivi sono stati applicati da un'altra soluzione di etichettatura. Il piè di pagina precedente, ad esempio, contiene il nome di una vecchia etichetta a cui è stata eseguita la migrazione in etichette di riservatezza per usare un nuovo nome di etichetta e il relativo piè di pagina.
 
-When the unified labeling client gets this configuration in its policy, the old headers and footers are removed or replaced when the document is opened in the Office app and any sensitivity label is applied to the document.
+Quando il client di etichettatura unificata ottiene questa configurazione nel criterio, le intestazioni e i piè di pagina precedenti vengono rimossi o sostituiti quando il documento viene aperto nell'app di Office ed è applicata qualsiasi etichetta di riservatezza al documento.
 
 Questa configurazione non è supportata per Outlook e tenere presente che quando viene usata con Word, Excel e PowerPoint, può influire negativamente sulle prestazioni di queste app per gli utenti. La configurazione consente di definire le impostazioni per ogni applicazione, ad esempio la ricerca di testo nelle intestazioni e nei piè di pagina di documenti di Word, ma non nei fogli di calcolo di Excel o nelle presentazioni di PowerPoint.
 
-Because the pattern matching affects the performance for users, we recommend that you limit the Office application types (**W**ord, E**X**cel, **P**owerPoint) to just those that need to be searched.
+Poiché la corrispondenza dei criteri influiscono sulle prestazioni degli utenti, è consigliabile limitare i tipi di applicazioni di Office (**W**Ord, E**X**cel, **P**owerPoint) solo a quelli che devono essere cercati.
 
-For the selected label policy, specify the following strings:
+Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
 - Chiave: **RemoveExternalContentMarkingInApp**
 
 - Valore: \<**tipi di applicazioni di Office WXP**> 
 
-Di seguito sono riportati alcuni esempi.
+Esempi:
 
 - Per eseguire la ricerca solo in documenti di Word, specificare **W**.
 
 - Per eseguire la ricerca in documenti di Word e presentazioni di PowerPoint, specificare **WP**.
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
 
@@ -332,13 +332,13 @@ I criteri di ricerca per la stringa specificata non fanno distinzione tra maiusc
 
 Poiché alcuni documenti potrebbero includere caratteri invisibili o tipi diversi di spazi o tabulazioni, la stringa specificata per una frase potrebbe non essere rilevata. Quando possibile, specificare una singola parola distintiva per il valore e assicurarsi di testare i risultati prima della distribuzione nell'ambiente di produzione.
 
-For the same label policy, specify the following strings:
+Per gli stessi criteri di etichetta specificare le stringhe seguenti:
 
 - Chiave: **ExternalContentMarkingToRemove**
 
 - Valore: \<**stringa da confrontare, definita come espressione regolare**> 
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
 
@@ -350,7 +350,7 @@ Se il testo di un'intestazione o un piè di pagina è su più righe, creare una 
 
 **Label applied manually**
 
-To remove this multiline footer, you create the following two entries for the same label policy:
+Per rimuovere il piè di pagina su più righe, creare le due voci seguenti per gli stessi criteri di etichetta:
 
 - Chiave: **ExternalContentMarkingToRemove**
 
@@ -358,7 +358,7 @@ To remove this multiline footer, you create the following two entries for the sa
 
 - Valore chiave 2: **\*Label applied*** 
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
 
@@ -383,11 +383,11 @@ Esempio: il nome della forma è **fc**. Per rimuovere la forma con questo nome, 
 
 - Valore: \<**nome delle forma di PowerPoint**> 
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
 
-When you have more than one PowerPoint shape to remove, specify as many values as you have shapes to remove.
+Quando si dispone di più di una forma di PowerPoint da rimuovere, specificare tutti i valori disponibili per le forme da rimuovere.
 
 Per impostazione predefinita, il testo delle intestazioni e dei piè di pagina viene cercato solo negli schemi diapositiva. Per estendere la ricerca a tutte le diapositive, che è un processo con un utilizzo maggiore di risorse, usare un'impostazione client avanzata aggiuntiva denominata **RemoveExternalContentMarkingInAllSlides**:
 
@@ -395,84 +395,84 @@ Per impostazione predefinita, il testo delle intestazioni e dei piè di pagina v
 
 - Valore: **True**
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
 
 
-## <a name="disable-custom-permissions-in-file-explorer"></a>Disable custom permissions in File Explorer
+## <a name="disable-custom-permissions-in-file-explorer"></a>Disabilitare le autorizzazioni personalizzate in Esplora file
 
-This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-By default, users see an option named **Protect with custom permissions** when they right-click in File Explorer and choose **Classify and protect**. This option lets them set their own protection settings that can override any protection settings that you might have included with a label configuration. Gli utenti possono visualizzare anche un'opzione per rimuovere la protezione. When you configure this setting, users do not see these options.
+Per impostazione predefinita, gli utenti visualizzano un'opzione denominata **Proteggi con autorizzazioni personalizzate** quando fanno clic con il pulsante destro del mouse in Esplora file e scelgono **classifica e proteggi**. Questa opzione consente di impostare impostazioni di protezione personalizzate che possono sostituire le impostazioni di protezione che potrebbero essere state incluse con una configurazione di etichetta. Gli utenti possono visualizzare anche un'opzione per rimuovere la protezione. Quando si configura questa impostazione, gli utenti non visualizzano queste opzioni.
 
-To configure this advanced setting, enter the following strings for the selected label policy:
+Per configurare questa impostazione avanzata, immettere le stringhe seguenti per i criteri di etichetta selezionati:
 
 - Chiave: **EnableCustomPermissions**
 
 - Valore: **False**
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissions="False"}
 
 ## <a name="for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer"></a>Per i file protetti con autorizzazioni personalizzate, rendere sempre le autorizzazioni personalizzate visualizzabili dagli utenti in Esplora file
 
-This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-When you configure the advanced client setting to [disable custom permissions in File Explorer](#disable-custom-permissions-in-file-explorer), by default, users are not able to see or change custom permissions that are already set in a protected document.
+Quando si configura l'impostazione client avanzata per [disabilitare le autorizzazioni personalizzate in Esplora file](#disable-custom-permissions-in-file-explorer), per impostazione predefinita gli utenti non sono in grado di visualizzare o modificare le autorizzazioni personalizzate già impostate in un documento protetto.
 
-However, there's another advanced client setting that you can specify so that in this scenario, users can see and change custom permissions for a protected document when they use File Explorer and right-click the file.
+Tuttavia, esiste un'altra impostazione client avanzata che è possibile specificare in modo che in questo scenario gli utenti possano visualizzare e modificare le autorizzazioni personalizzate per un documento protetto quando usano Esplora file e fare clic con il pulsante destro del mouse sul file.
 
-To configure this advanced setting, enter the following strings for the selected label policy:
+Per configurare questa impostazione avanzata, immettere le stringhe seguenti per i criteri di etichetta selezionati:
 
-- Key: **EnableCustomPermissionsForCustomProtectedFiles**
+- Chiave: **EnableCustomPermissionsForCustomProtectedFiles**
 
 - Valore: **True**
 
-Example PowerShell command:
+Esempio di comando di PowerShell:
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableCustomPermissionsForCustomProtectedFiles="True"}
 
 
 ## <a name="for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments"></a>For email messages with attachments, apply a label that matches the highest classification of those attachments (Per i messaggi di posta elettronica con allegati, applica un'etichetta che corrisponda alla classificazione più elevata di tali allegati)
 
-This configuration uses policy [advanced settings](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione USA [le impostazioni avanzate](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-This setting is for when users attach labeled documents to an email, and do not label the email message itself. In this scenario, a label is automatically selected for them, based on the classification labels that are applied to the attachments. The highest classification label is selected.
+Questa impostazione è destinata al momento in cui gli utenti alleghino i documenti con etichetta a un messaggio di posta elettronica e non etichettano il messaggio. In questo scenario viene selezionata automaticamente un'etichetta, in base alle etichette di classificazione applicate agli allegati. Viene selezionata l'etichetta di classificazione più alta.
 
 L'allegato deve essere un file fisico e non un collegamento a un file, ad esempio in SharePoint o OneDrive for Business.
 
-You can configure this setting to **Recommended**, so that users are prompted to apply the selected label to their email message, with a customizable tooltip. Gli utenti possono accettare il suggerimento o ignorarlo. Or, you can configure this setting to **Automatic**, where the selected label is automatically applied but users can remove the label or select a different label before sending the email.
+È possibile configurare questa impostazione su **consigliato**, in modo che agli utenti venga richiesto di applicare l'etichetta selezionata al messaggio di posta elettronica con una descrizione comando personalizzabile. Gli utenti possono accettare il suggerimento o ignorarlo. In alternativa, è possibile configurare questa impostazione su **automatica**, in cui l'etichetta selezionata viene applicata automaticamente, ma gli utenti possono rimuovere l'etichetta o selezionare un'etichetta diversa prima di inviare il messaggio di posta elettronica.
 
-Note: When the attachment with the highest classification label is configured for protection with the setting of user-defined permissions:
+Nota: quando l'allegato con l'etichetta di classificazione più alta è configurato per la protezione con l'impostazione delle autorizzazioni definite dall'utente:
 
-- When the label's user-defined permissions include Outlook (Do Not Forward), that label is selected and Do Not Forward protection is applied to the email.
-- When the label's user-defined permissions are just for Word, Excel, PowerPoint, and File Explorer, that label is not applied to the email message, and neither is protection.
+- Quando le autorizzazioni definite dall'utente dell'etichetta includono Outlook (non inviare), tale etichetta è selezionata e non viene applicata la protezione in diretta al messaggio di posta elettronica.
+- Quando le autorizzazioni definite dall'utente dell'etichetta sono destinate solo a Word, Excel, PowerPoint ed Esplora file, tale etichetta non viene applicata al messaggio di posta elettronica e nessuna delle due è la protezione.
 
-To configure this advanced setting, enter the following strings for the selected label policy:
+Per configurare questa impostazione avanzata, immettere le stringhe seguenti per i criteri di etichetta selezionati:
 
-- Key 1: **AttachmentAction**
+- Chiave 1: **AttachmentAction**
 
-- Key Value 1: **Recommended** or **Automatic**
+- Valore chiave 1: **consigliato** o **automatico**
 
-- Key 2: **AttachmentActionTip**
+- Chiave 2: **AttachmentActionTip**
 
-- Key Value 2: "\<customized tooltip>"
+- Valore chiave 2: "\<descrizione comando personalizzata >"
 
-The customized tooltip supports a single language only.
+La descrizione comando personalizzata supporta solo un solo linguaggio.
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{AttachmentAction="Automatic"}
 
 ## <a name="add-report-an-issue-for-users"></a>Aggiungere "Segnala un problema" per gli utenti
 
-This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
 Quando si specifica la seguente impostazione client avanzata, gli utenti visualizzano l'opzione **Segnala un problema**, che può essere selezionata dalla finestra di dialogo **Guida e commenti** del client. Specificare una stringa HTTP per il collegamento. Ad esempio, una pagina Web personalizzata in cui gli utenti possono segnalare i problemi o un indirizzo di posta elettronica che rimanda all'help desk. 
 
-To configure this advanced setting, enter the following strings for the selected label policy:
+Per configurare questa impostazione avanzata, immettere le stringhe seguenti per i criteri di etichetta selezionati:
 
 - Chiave: **ReportAnIssueLink**
 
@@ -482,13 +482,13 @@ Valore di esempio per un sito Web: `https://support.contoso.com`
 
 Valore di esempio per un indirizzo di posta elettronica: `mailto:helpdesk@contoso.com`
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{ReportAnIssueLink="mailto:helpdesk@contoso.com"}
 
 ## <a name="implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent"></a>Implementare messaggi popup in Outlook che avvisano, giustificano o bloccano l'invio di messaggi di posta elettronica
 
-This configuration uses policy [advanced settings](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione USA [le impostazioni avanzate](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
 Quando si creano e configurano le impostazioni client avanzate seguenti, gli utenti visualizzano messaggi popup di Outlook che possono avvertirli prima dell'invio di un messaggio di posta elettronica, chiedere di giustificare il motivo dell'invio o impedire l'invio di un messaggio di posta elettronica per uno degli scenari seguenti:
 
@@ -498,46 +498,46 @@ Quando si creano e configurano le impostazioni client avanzate seguenti, gli ute
 - **Il messaggio di posta elettronica o l'allegato non hanno un'etichetta**:
     - L'allegato può essere un documento di Office o un documento PDF
 
-When these conditions are met, the user sees a pop-up message with one of the following actions:
+Quando vengono soddisfatte queste condizioni, l'utente visualizza un messaggio popup con una delle azioni seguenti:
 
-- **Warn**: The user can confirm and send, or cancel.
+- **Avviso**: l'utente può confermare e inviare o annullare.
 
-- **Justify**: The user is prompted for justification (predefined options or free-form).  L'utente può quindi inviare o annullare il messaggio di posta elettronica. Il testo della giustificazione è scritto nell'intestazione X- del messaggio di posta elettronica in modo da poter essere letto dagli altri sistemi. Ad esempio, servizi di prevenzione della perdita di dati.
+- **Giustifica**: all'utente viene richiesta la giustificazione (opzioni predefinite o formato libero).  L'utente può quindi inviare o annullare il messaggio di posta elettronica. Il testo della giustificazione è scritto nell'intestazione X- del messaggio di posta elettronica in modo da poter essere letto dagli altri sistemi. Ad esempio, servizi di prevenzione della perdita di dati.
 
-- **Block**: The user is prevented from sending the email while the condition remains. Il messaggio include il motivo del blocco del messaggio di posta elettronica in modo che l'utente possa risolvere il problema, ad esempio rimuovendo destinatari specifici o assegnando un'etichetta al messaggio di posta elettronica. 
+- **Block**: l'utente non è in grado di inviare il messaggio di posta elettronica mentre la condizione rimane. Il messaggio include il motivo del blocco del messaggio di posta elettronica in modo che l'utente possa risolvere il problema, ad esempio rimuovendo destinatari specifici o assegnando un'etichetta al messaggio di posta elettronica. 
 
-When the popup-messages are for a specific label, you can configure exceptions for recipients by domain name.
+Quando i messaggi popup sono per un'etichetta specifica, è possibile configurare le eccezioni per i destinatari in base al nome di dominio.
 
 > [!TIP]
-> See the video [Azure Information Protection Outlook Popup Configuration](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) for a walkthrough example of how to configure these settings.
+> Per un esempio di procedura dettagliata su come configurare queste impostazioni, vedere il video [Azure Information Protection configurazione popup di Outlook](https://azure.microsoft.com/resources/videos/how-to-configure-azure-information-protection-popup-for-outlook/) .
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-specific-labels"></a>Per implementare i messaggi popup di avviso, giustificazione o blocco per etichette specifiche:
 
-For the selected policy, create one or more of the following advanced settings with the following keys. For the values, specify one or more labels by their GUIDs, each one separated by a comma.
+Per i criteri selezionati, creare una o più delle seguenti impostazioni avanzate con le chiavi seguenti. Per i valori, specificare una o più etichette in base ai relativi GUID, separate da una virgola.
 
-Example value for multiple label GUIDs as a comma-separated string: `dcf781ba-727f-4860-b3c1-73479e31912b,1ace2cc3-14bc-4142-9125-bf946a70542c,3e9df74d-3168-48af-8b11-037e3021813f`
+Valore di esempio per più GUID etichetta come stringa con valori delimitati da virgole: `dcf781ba-727f-4860-b3c1-73479e31912b,1ace2cc3-14bc-4142-9125-bf946a70542c,3e9df74d-3168-48af-8b11-037e3021813f`
 
 
 - Messaggi di avviso:
     
-    - Key: **OutlookWarnUntrustedCollaborationLabel**
+    - Chiave: **OutlookWarnUntrustedCollaborationLabel**
     
-    - Value: \<**label GUIDs, comma-separated**>
+    - Valore: \<**GUID dell'etichetta,** delimitati da virgole>
 
 - Messaggi di giustificazione:
     
-    - Key: **OutlookJustifyUntrustedCollaborationLabel**
+    - Chiave: **OutlookJustifyUntrustedCollaborationLabel**
     
-    - Value: \<**label GUIDs, comma-separated**>
+    - Valore: \<**GUID dell'etichetta,** delimitati da virgole>
 
 - Messaggi di blocco:
     
-    - Key: **OutlookBlockUntrustedCollaborationLabel**
+    - Chiave: **OutlookBlockUntrustedCollaborationLabel**
     
-    - Value: \<**label GUIDs, comma-separated**>
+    - Valore: \<**GUID dell'etichetta,** delimitati da virgole>
 
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookWarnUntrustedCollaborationLabel="8faca7b8-8d20-48a3-8ea2-0f96310a848e,b6d21387-5d34-4dc8-90ae-049453cec5cf,bb48a6cb-44a8-49c3-9102-2d2b017dcead,74591a94-1e0e-4b5d-b947-62b70fc0f53a,6c375a97-2b9b-4ccd-9c5b-e24e4fd67f73"}
 
@@ -545,37 +545,37 @@ Example PowerShell command, where your label policy is named "Global":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockUntrustedCollaborationLabel="0eb351a6-0c2d-4c1d-a5f6-caa80c9bdeec,40e82af6-5dad-45ea-9c6a-6fe6d4f1626b"}
 
-#### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>To exempt domain names for pop-up messages configured for specific labels
+#### <a name="to-exempt-domain-names-for-pop-up-messages-configured-for-specific-labels"></a>Per esentare i nomi di dominio per i messaggi popup configurati per etichette specifiche
 
-For the labels that you've specified with these pop-up messages, you can exempt specific domain names so that users do not see the messages for recipients who have that domain name included in their email address. In questo caso, i messaggi di posta elettronica vengono inviati senza interruzioni. Per specificare più domini, aggiungerli come stringa singola, delimitata da virgole.
+Per le etichette specificate con questi messaggi popup, è possibile esentare i nomi di dominio specifici in modo che gli utenti non visualizzino i messaggi per i destinatari che hanno il nome di dominio incluso nell'indirizzo di posta elettronica. In questo caso, i messaggi di posta elettronica vengono inviati senza interruzioni. Per specificare più domini, aggiungerli come stringa singola, delimitata da virgole.
 
 Una configurazione tipica consiste nel rendere visualizzabili i messaggi popup solo dai destinatari che sono esterni all'organizzazione o che non sono partner autorizzati dell'organizzazione. In questo caso, specificare tutti i domini di posta elettronica usati dall'organizzazione e dai partner.
 
-For the same label policy, create the following advanced client settings and for the value, specify one or more domains, each one separated by a comma.
+Per gli stessi criteri di etichetta, creare le seguenti impostazioni client avanzate e, per il valore, specificare uno o più domini, ciascuno separato da una virgola.
 
 Valore di esempio per più domini sotto forma di stringa delimitata da virgole: `contoso.com,fabrikam.com,litware.com`
 
 - Messaggi di avviso:
     
-    - Key: **OutlookWarnTrustedDomains**
+    - Chiave: **OutlookWarnTrustedDomains**
     
     - Valore: **\<** nomi di dominio, delimitati da virgole **>**
 
 - Messaggi di giustificazione:
     
-    - Key: **OutlookJustifyTrustedDomains**
+    - Chiave: **OutlookJustifyTrustedDomains**
     
     - Valore: **\<** nomi di dominio, delimitati da virgole **>**
 
 - Messaggi di blocco:
     
-    - Key: **OutlookBlockTrustedDomains**
+    - Chiave: **OutlookBlockTrustedDomains**
     
     - Valore: **\<** nomi di dominio, delimitati da virgole **>**
 
-For example, you have specified the **OutlookBlockUntrustedCollaborationLabel** advanced client setting for the **Confidential \ All Employees** label. You now specify the additional advanced client setting of **OutlookJustifyTrustedDomains** and **contoso.com**. As a result, a user can send an email to john@sales.contoso.com when it is labeled **Confidential \ All Employees** but will be blocked from sending an email with the same label to a Gmail account.
+Ad esempio, è stata specificata l'impostazione **OutlookBlockUntrustedCollaborationLabel** Advanced client per l'etichetta **Confidential \ All Employees** . È ora possibile specificare l'impostazione client avanzata aggiuntiva di **OutlookJustifyTrustedDomains** e **contoso.com**. Di conseguenza, un utente può inviare un messaggio di posta elettronica a john@sales.contoso.com quando viene etichettato come **riservato \ tutti i dipendenti** , ma l'invio di un messaggio di posta elettronica con la stessa etichetta a un account Gmail verrà bloccato.
 
-Example PowerShell commands, where your label policy is named "Global":
+Comandi di PowerShell di esempio, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookBlockTrustedDomains="gmail.com"}
 
@@ -583,491 +583,491 @@ Example PowerShell commands, where your label policy is named "Global":
 
 ### <a name="to-implement-the-warn-justify-or-block-pop-up-messages-for-emails-or-attachments-that-dont-have-a-label"></a>Per implementare i messaggi popup di avviso, giustificazione o blocco per i messaggi di posta elettronica o gli allegati senza etichetta:
 
-For the same label policy, create the following advanced client setting with one of the following values:
+Per gli stessi criteri di etichetta, creare l'impostazione client avanzata seguente con uno dei valori seguenti:
 
 - Messaggi di avviso:
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Chiave: **OutlookUnlabeledCollaborationAction**
     
-    - Value: **Warn**
+    - Valore: **avviso**
 
 - Messaggi di giustificazione:
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Chiave: **OutlookUnlabeledCollaborationAction**
     
-    - Value: **Justify**
+    - Valore: **giustifica**
 
 - Messaggi di blocco:
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Chiave: **OutlookUnlabeledCollaborationAction**
     
-    - Value: **Block**
+    - Valore: **blocco**
 
 - Disattivare questi messaggi:
     
-    - Key: **OutlookUnlabeledCollaborationAction**
+    - Chiave: **OutlookUnlabeledCollaborationAction**
     
-    - Value: **Off**
+    - Valore: **disattivato**
 
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationAction="Warn"}
 
 
-#### <a name="to-define-specific-file-name-extensions-for-the-warn-justify-or-block-pop-up-messages-for-email-attachments-that-dont-have-a-label"></a>To define specific file name extensions for the warn, justify, or block pop-up messages for email attachments that don't have a label
+#### <a name="to-define-specific-file-name-extensions-for-the-warn-justify-or-block-pop-up-messages-for-email-attachments-that-dont-have-a-label"></a>Per definire estensioni di file specifiche per i messaggi popup di avviso, giustificazione o blocco per gli allegati di posta elettronica che non hanno un'etichetta
 
-By default, the warn, justify, or block pop-up messages apply to all Office documents and PDF documents. You can refine this list by specifying which file name extensions should display the warn, justify, or block messages with an additional advanced setting and a comma-separated list of file name extensions.
+Per impostazione predefinita, i messaggi popup avvisa, giustifica o blocca si applicano a tutti i documenti di Office e PDF. È possibile affinare questo elenco specificando quali estensioni di file devono visualizzare i messaggi di avviso, di giustificazione o di blocco con un'impostazione avanzata aggiuntiva e un elenco delimitato da virgole di estensioni di file.
 
-Example value for multiple file name extensions to define as a comma-separated string: `.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
+Valore di esempio per più estensioni di file da definire come stringa delimitata da virgole: `.XLSX,.XLSM,.XLS,.XLTX,.XLTM,.DOCX,.DOCM,.DOC,.DOCX,.DOCM,.PPTX,.PPTM,.PPT,.PPTX,.PPTM`
 
-In this example, an unlabeled PDF document will not result in warn, justify, or block pop-up messages.
+In questo esempio un documento PDF senza etichetta non comporterà l'avviso, la giustificazione o il blocco dei messaggi popup.
 
-For the same label policy, enter the following strings: 
-
-
-- Key: **OutlookOverrideUnlabeledCollaborationExtensions**
-
-- Value: **\<** file name extensions to display messages, comma separated **>**
+Per gli stessi criteri di etichetta, immettere le stringhe seguenti: 
 
 
-Example PowerShell command, where your label policy is named "Global":
+- Chiave: **OutlookOverrideUnlabeledCollaborationExtensions**
+
+- Valore: **\<** estensioni di file per visualizzare i messaggi, delimitati da virgole **>**
+
+
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookOverrideUnlabeledCollaborationExtensions=".PPTX,.PPTM,.PPT,.PPTX,.PPTM"}
 
-#### <a name="to-specify-a-different-action-for-email-messages-without-attachments"></a>To specify a different action for email messages without attachments
+#### <a name="to-specify-a-different-action-for-email-messages-without-attachments"></a>Per specificare un'azione diversa per i messaggi di posta elettronica senza allegati
 
-By default, the value that you specify for OutlookUnlabeledCollaborationAction to warn, justify, or block pop-up messages applies to emails or attachments that don't have a label. You can refine this configuration by specifying another advanced setting for email messages that don't have attachments.
+Per impostazione predefinita, il valore specificato per OutlookUnlabeledCollaborationAction per avvisare, giustificare o bloccare i messaggi popup si applica ai messaggi di posta elettronica o agli allegati che non hanno un'etichetta. È possibile perfezionare questa configurazione specificando un'altra impostazione avanzata per i messaggi di posta elettronica che non dispongono di allegati.
 
 Creare l'impostazione client avanzata seguente con uno dei valori seguenti:
 
 - Messaggi di avviso:
     
-    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Chiave: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
-    - Value: **Warn**
+    - Valore: **avviso**
 
 - Messaggi di giustificazione:
     
-    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Chiave: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
-    - Value: **Justify**
+    - Valore: **giustifica**
 
 - Messaggi di blocco:
     
-    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Chiave: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
-    - Value: **Block**
+    - Valore: **blocco**
 
 - Disattivare questi messaggi:
     
-    - Key: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
+    - Chiave: **OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior**
     
-    - Value: **Off**
+    - Valore: **disattivato**
 
-If you don't specify this client setting, the value that you specify for OutlookUnlabeledCollaborationAction is used for unlabeled email messages without attachments as well as unlabeled email messages with attachments.
+Se non si specifica questa impostazione client, il valore specificato per OutlookUnlabeledCollaborationAction viene usato per i messaggi di posta elettronica senza etichetta senza allegati, nonché per i messaggi di posta elettronica senza etichetta con allegati.
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{OutlookUnlabeledCollaborationActionOverrideMailBodyBehavior="Warn"}
 
-## <a name="disable-sending-audit-data-to-azure-information-protection-analytics"></a>Disable sending audit data to Azure Information Protection analytics
+## <a name="disable-sending-audit-data-to-azure-information-protection-analytics"></a>Disabilitare l'invio di dati di controllo a Azure Information Protection Analytics
 
-This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-The Azure Information Protection unified labeling client supports central reporting and by default, sends its audit data to [Azure Information Protection analytics](../reports-aip.md). For more information about what information is sent and stored, see the [Information collected and sent to Microsoft](../reports-aip.md#information-collected-and-sent-to-microsoft) section from the central reporting documentation.
+Il client per l'assegnazione di etichette unificata di Azure Information Protection supporta il reporting centrale e, per impostazione predefinita, invia i dati di controllo a [Azure Information Protection Analytics](../reports-aip.md). Per ulteriori informazioni sulle informazioni inviate e archiviate, vedere la sezione [informazioni raccolte e inviate a Microsoft](../reports-aip.md#information-collected-and-sent-to-microsoft) dalla documentazione centrale per la creazione di report.
 
-To change this behavior so that this information is not sent by the unified labeling client, enter the following strings for the selected label policy:
+Per modificare questo comportamento in modo che queste informazioni non vengano inviate dal client Unified Labeling, immettere le stringhe seguenti per i criteri di etichetta selezionati:
 
-- Key: **EnableAudit**
+- Chiave: **EnableAudit**
 
 - Valore: **False**
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableAudit="False"}
 
 
-## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Disable sending discovered sensitive information in documents to Azure Information Protection analytics
+## <a name="disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics"></a>Disabilitare l'invio di informazioni riservate individuate nei documenti a Azure Information Protection Analytics
 
-This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-When the Azure Information Protection unified labeling client is used in Office apps, it looks for sensitive information in documents when they are first saved. Providing the [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) advanced setting is not set to **False**, any predefined and custom sensitive information types found are then sent to [Azure Information Protection analytics](../reports-aip.md).
+Quando si usa il client di assegnazione di etichette unificato Azure Information Protection nelle app di Office, Cerca informazioni riservate nei documenti quando vengono salvate per la prima volta. Se si specifica l'impostazione avanzata [EnableAudit](#disable-sending-audit-data-to-azure-information-protection-analytics) non è impostato su **false**, vengono inviati a [Azure Information Protection Analytics](../reports-aip.md)tutti i tipi di informazioni sensibili predefiniti e personalizzati trovati.
 
-To change this behavior so that sensitive information types found by the unified labeling client are not sent, enter the following strings for the selected label policy:
+Per modificare questo comportamento in modo che i tipi di informazioni riservate individuate dal client Unified Labeling non vengano inviati, immettere le stringhe seguenti per i criteri di etichetta selezionati:
 
-- Key: **RunAuditInformationTypesDiscovery**
+- Chiave: **RunAuditInformationTypesDiscovery**
 
 - Valore: **False**
 
-If you set this advanced client setting, auditing information can still be sent from the client, but the information is limited to reporting when a user has accessed labeled content.
+Se si imposta questa impostazione client avanzata, le informazioni di controllo possono comunque essere inviate dal client, ma le informazioni sono limitate alla segnalazione quando un utente ha eseguito l'accesso al contenuto con etichetta.
 
 Ad esempio:
 
-- With this setting, you can see that a user accessed Financial.docx that is labeled **Confidential \ Sales**.
+- Con questa impostazione è possibile vedere che un utente ha eseguito l'accesso a Financial. docx con etichetta **Confidential \ Sales**.
 
-- Without this setting, you can see that Financial.docx contains 6 credit card numbers.
+- Senza questa impostazione, è possibile notare che Financial. docx contiene 6 numeri di carta di credito.
     
     - Se si abilita anche [Corrispondenze di contenuto per un'analisi più approfondita](../reports-aip.md#content-matches-for-deeper-analysis), si potranno vedere anche i numeri di carta di credito stessi.
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{RunAuditInformationTypesDiscovery="False"}
 
-## <a name="send-information-type-matches-to-azure-information-protection-analytics"></a>Send information type matches to Azure Information Protection analytics
+## <a name="send-information-type-matches-to-azure-information-protection-analytics"></a>Invia corrispondenze del tipo di informazioni a Azure Information Protection Analytics
  
-This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-By default, the unified labeling client does not send content matches for sensitive info types to [Azure Information Protection analytics](../reports-aip.md). For more information about this additional information that can be sent, see the [Content matches for deeper analysis](../reports-aip.md#content-matches-for-deeper-analysis) section from the central reporting documentation.
+Per impostazione predefinita, il client di etichettatura unificata non invia corrispondenze di contenuto per i tipi di informazioni riservate a [Azure Information Protection Analytics](../reports-aip.md). Per ulteriori informazioni su queste informazioni aggiuntive che possono essere inviate, vedere la sezione relativa alle [corrispondenze per un'analisi più approfondita](../reports-aip.md#content-matches-for-deeper-analysis) dalla documentazione centrale per la creazione di report.
 
-To send content matches when sensitive information types are sent, create the following advanced client setting in a label policy: 
+Per inviare le corrispondenze di contenuto quando si inviano tipi di informazioni riservate, creare l'impostazione client avanzata seguente in un criterio etichetta: 
 
-- Key: **LogMatchedContent**
+- Chiave: **LogMatchedContent**
 
 - Valore: **True**
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{LogMatchedContent="True"}
 
 ## <a name="limit-the-number-of-threads-used-by-the-scanner"></a>Limitare il numero di thread usati dallo scanner
 
-This configuration uses a policy [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-Per impostazione predefinita, lo scanner usa tutte le risorse del processore disponibili nel computer che esegue il servizio scanner. If you need to limit the CPU consumption while this service is scanning, create the following advanced setting in a label policy. 
+Per impostazione predefinita, lo scanner usa tutte le risorse del processore disponibili nel computer che esegue il servizio scanner. Se è necessario limitare l'utilizzo della CPU durante l'analisi di questo servizio, creare l'impostazione avanzata seguente in un criterio di etichetta. 
 
 Come valore specificare il numero di thread simultanei che lo scanner può eseguire in parallelo. Lo scanner usa un thread separato per ogni file analizzato, quindi questa configurazione della limitazione definisce anche il numero di file che possono essere analizzati in parallelo. 
 
 Quando si configura il valore per il test per la prima volta, è consigliabile specificare 2 per ogni core e quindi monitorare i risultati. Se ad esempio si esegue lo scanner in un computer con 4 core, impostare prima il valore su 8. Se necessario, aumentare o diminuire questo numero, in base alle prestazioni risultanti richieste per il computer dello scanner e la velocità di analisi. 
 
-- Key: **ScannerConcurrencyLevel**
+- Chiave: **ScannerConcurrencyLevel**
 
 - Valore: **\<numero massimo di utenti simultanei>**
 
-Example PowerShell command, where your label policy is named "Scanner":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "scanner":
 
     Set-LabelPolicy -Identity Scanner -AdvancedSettings @{ScannerConcurrencyLevel="8"}
 
 
 ## <a name="migrate-labels-from-secure-islands-and-other-labeling-solutions"></a>Eseguire la migrazione di etichette da Secure Islands e altre soluzioni per l'assegnazione di etichette
 
-This configuration uses a label [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) delle etichette che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-This configuration is not compatible with protected PDF files that have a .ppdf file name extension. These files cannot be opened by the client using File Explorer or PowerShell.
+Questa configurazione non è compatibile con i file PDF protetti con estensione Ppdf. Questi file non possono essere aperti dal client usando Esplora file o PowerShell.
 
-For Office documents that are labeled by Secure Islands, you can relabel these documents with a sensitivity label by using a mapping that you define. È anche possibile usare questo metodo per riutilizzare le etichette da altre soluzioni quando sono applicate a documenti di Office. 
+Per i documenti di Office etichettati con le isole sicure, è possibile rietichettare questi documenti con un'etichetta di riservatezza usando un mapping definito dall'utente. È anche possibile usare questo metodo per riutilizzare le etichette da altre soluzioni quando sono applicate a documenti di Office. 
 
-As a result of this configuration option, the new sensitivity label is applied by the Azure Information Protection unified labeling client as follows:
+In seguito a questa opzione di configurazione, la nuova etichetta di riservatezza viene applicata dal client Azure Information Protection Unified Labeling come indicato di seguito:
 
-- For Office documents: When the document is opened in the desktop app, the new sensitivity label is shown as set and is applied when the document is saved.
+- Per i documenti di Office: quando il documento viene aperto nell'app desktop, la nuova etichetta di riservatezza viene visualizzata come impostata e viene applicata quando il documento viene salvato.
 
-- For PowerShell: [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) and [Set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) can apply the new sensitivity label.
+- Per PowerShell: [set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) e [set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) possono applicare la nuova etichetta di riservatezza.
 
-- For File Explorer: In the Azure Information Protection dialog box, the new sensitivity label is shown but isn't set.
+- Per Esplora file: nella finestra di dialogo Azure Information Protection, la nuova etichetta di riservatezza viene visualizzata ma non è impostata.
 
-This configuration requires you to specify an advanced setting named **labelByCustomProperties** for each sensitivity label that you want to map to the old label. Per ogni voce impostare quindi il valore usando la sintassi seguente:
+Per questa configurazione è necessario specificare un'impostazione avanzata denominata **labelByCustomProperties** per ogni etichetta di riservatezza di cui si vuole eseguire il mapping all'etichetta precedente. Per ogni voce impostare quindi il valore usando la sintassi seguente:
 
 `[migration rule name],[Secure Islands custom property name],[Secure Islands metadata Regex value]`
 
-Specificare un nome di regola di migrazione a propria scelta. Use a descriptive name that helps you to identify how one or more labels from your previous labeling solution should be mapped to sensitivity label.
+Specificare un nome di regola di migrazione a propria scelta. Usare un nome descrittivo che consenta di identificare la modalità di mapping di una o più etichette della soluzione di assegnazione di etichette precedente all'etichetta di riservatezza.
 
-Si noti che questa impostazione non comporta la rimozione dell'etichetta originale dal documento o di tutti i contrassegni visivi nel documento che l'etichetta originale potrebbe aver applicato. To remove headers and footers, see the earlier section, [Remove headers and footers from other labeling solutions](#remove-headers-and-footers-from-other-labeling-solutions).
+Si noti che questa impostazione non comporta la rimozione dell'etichetta originale dal documento o di tutti i contrassegni visivi nel documento che l'etichetta originale potrebbe aver applicato. Per rimuovere intestazioni e piè di pagina, vedere la sezione precedente [rimuovere intestazioni e piè di pagina dalle altre soluzioni per l'assegnazione di etichette](#remove-headers-and-footers-from-other-labeling-solutions).
 
 #### <a name="example-1-one-to-one-mapping-of-the-same-label-name"></a>Esempio 1: Mapping uno-a-uno con lo stesso nome di etichetta
 
-Requirement: Documents that have a Secure Islands label of "Confidential" should be relabeled as "Confidential" by Azure Information Protection.
+Requisito: i documenti con un'etichetta di isole sicure "riservato" devono essere rietichettati come "riservati" da Azure Information Protection.
 
-In questo esempio:
+Esempio:
 
 - L'etichetta di Secure Islands è **Riservato** ed è archiviata nella proprietà personalizzata denominata **Classificazione**.
 
-The advanced setting:
+Impostazione avanzata:
 
-- Key: **labelByCustomProperties**
+- Chiave: **labelByCustomProperties**
 
-- Value: **Secure Islands label is Confidential,Classification,Confidential**
+- Valore: l' **etichetta Secure Islands è riservata, classificazione, riservata**
 
-Example PowerShell command, where your label is named "Confidential":
+Esempio di comando di PowerShell, in cui l'etichetta è denominata "Confidential":
 
     Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Confidential,Classification,Confidential"}
 
 #### <a name="example-2-one-to-one-mapping-for-a-different-label-name"></a>Esempio 2: Mapping uno-a-uno per un altro nome di etichetta
 
-Requirement: Documents labeled as "Sensitive" by Secure Islands should be relabeled as "Highly Confidential" by Azure Information Protection.
+Requisito: i documenti contrassegnati come "sensibili" dalle isole sicure devono essere rietichettati come "riservatezza elevata" da Azure Information Protection.
 
-In questo esempio:
+Esempio:
 
 - L'etichetta di Secure Islands è **Sensibile** ed è archiviata nella proprietà personalizzata denominata **Classificazione**.
 
-The advanced setting:
+Impostazione avanzata:
 
-- Key: **labelByCustomProperties**
+- Chiave: **labelByCustomProperties**
 
-- Value: **Secure Islands label is Sensitive,Classification,Sensitive**
+- Valore: l' **etichetta Secure Islands è sensibile, classificazione, sensibile**
 
-Example PowerShell command, where your label is named "Highly Confidential":
+Esempio di comando di PowerShell, in cui l'etichetta è denominata "highly Confidential":
 
     Set-Label -Identity "Highly Confidential" -AdvancedSettings @{labelByCustomProperties="Secure Islands label is Sensitive,Classification,Sensitive"}
 
 #### <a name="example-3-many-to-one-mapping-of-label-names"></a>Esempio 3: Mapping molti-a-uno di nomi di etichetta
 
-Requirement: You have two Secure Islands labels that include the word "Internal" and you want documents that have either of these Secure Islands labels to be relabeled as "General" by the Azure Information Protection unified labeling client.
+Requisito: sono presenti due etichette di isole sicure che includono la parola "Internal" e si vuole che i documenti che contengono una di queste etichette di isole sicure vengano rietichettati come "General" dal client Azure Information Protection Unified labeling.
 
-In questo esempio:
+Esempio:
 
 - Le etichette di Secure Islands includono la parola **Interno** e sono archiviate nella proprietà personalizzata denominata **Classificazione**.
 
 L'impostazione client avanzata è la seguente:
 
-- Key: **labelByCustomProperties**
+- Chiave: **labelByCustomProperties**
 
-- Value: **Secure Islands label contains Internal,Classification,.\*Internal.\***
+- Valore: l' **etichetta Secure Islands contiene Internal, Classification,.\*Internal.\***
 
-Example PowerShell command, where your label is named "General":
+Esempio di comando di PowerShell, in cui l'etichetta è denominata "generale":
 
     Set-Label -Identity General -AdvancedSettings @{labelByCustomProperties="Secure Islands label contains Internal,Classification,.*Internal.*"}
 
-#### <a name="example-4-multiple-rules-for-the-same-label"></a>Example 4: Multiple rules for the same label
+#### <a name="example-4-multiple-rules-for-the-same-label"></a>Esempio 4: più regole per la stessa etichetta
 
-When you need multiple rules for the same label, define multiple string values for the same key. 
+Quando sono necessarie più regole per la stessa etichetta, definire più valori stringa per la stessa chiave. 
 
-In this example, the Secure Islands labels named "Confidential" and "Secret" are stored in the custom property named **Classification**, and you want the Azure Information Protection unified labeling client to apply the sensitivity label named "Confidential":
+In questo esempio, le etichette delle isole sicure denominate "Confidential" e "Secret" vengono archiviate nella proprietà personalizzata denominata **Classification**e si vuole che il client Azure Information Protection Unified Labeling applichi l'etichetta di riservatezza denominata "Confidential":
 
     Set-Label -Identity Confidential -AdvancedSettings @{labelByCustomProperties=ConvertTo-Json("Migrate Confidential label,Classification,Confidential", "Migrate Secret label,Classification,Secret")}
 
-### <a name="extend-your-label-migration-rules-to-emails"></a>Extend your label migration rules to emails
+### <a name="extend-your-label-migration-rules-to-emails"></a>Estendi le regole di migrazione delle etichette ai messaggi di posta elettronica
 
-You can use your labelByCustomProperties advanced settings with Outlook emails in addition to Office documents by specifying an additional label policy advanced setting. However, this setting has a known negative impact on the performance of Outlook, so configure this additional setting only when you have a strong business requirement for it and remember to set it to a null string value when you have completed the migration from the other labeling solution.
+È possibile usare le impostazioni avanzate di labelByCustomProperties con i messaggi di posta elettronica di Outlook oltre ai documenti di Office specificando un'impostazione aggiuntiva avanzata dei criteri di etichetta. Tuttavia, questa impostazione ha un impatto negativo noto sulle prestazioni di Outlook. Configurare quindi questa impostazione aggiuntiva solo quando si dispone di un requisito aziendale sicuro e ricordarsi di impostarla su un valore di stringa null dopo aver completato la migrazione dalla altra soluzione per l'assegnazione di etichette.
 
-To configure this advanced setting, enter the following strings for the selected label policy:
+Per configurare questa impostazione avanzata, immettere le stringhe seguenti per i criteri di etichetta selezionati:
 
-- Key: **EnableLabelByMailHeader**
+- Chiave: **EnableLabelByMailHeader**
 
 - Valore: **True**
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelByMailHeader="True"}
 
-### <a name="extend-your-label-migration-rules-to-sharepoint-properties"></a>Extend your label migration rules to SharePoint properties
+### <a name="extend-your-label-migration-rules-to-sharepoint-properties"></a>Estendere le regole di migrazione delle etichette alle proprietà di SharePoint
 
-You can use your labelByCustomProperties advanced settings with SharePoint properties that you might expose as columns to users.
+È possibile usare le impostazioni avanzate di labelByCustomProperties con proprietà di SharePoint che è possibile esporre come colonne agli utenti.
 
-This setting is supported when you use Word, Excel, and PowerPoint.
+Questa impostazione è supportata quando si usano Word, Excel e PowerPoint.
 
-To configure this advanced setting, enter the following strings for the selected label policy:
+Per configurare questa impostazione avanzata, immettere le stringhe seguenti per i criteri di etichetta selezionati:
 
-- Key: **EnableLabelBySharePointProperties**
+- Chiave: **EnableLabelBySharePointProperties**
 
 - Valore: **True**
 
-Example PowerShell command, where your label policy is named "Global":
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
 
     Set-LabelPolicy -Identity Global -AdvancedSettings @{EnableLabelBySharePointProperties="True"}
 
-## <a name="apply-a-custom-property-when-a-label-is-applied"></a>Apply a custom property when a label is applied
+## <a name="apply-a-custom-property-when-a-label-is-applied"></a>Applicare una proprietà personalizzata quando viene applicata un'etichetta
 
-This configuration uses a label [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) delle etichette che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-There might be some scenarios when you want to apply one or more custom properties to a document or email message in addition to the metadata that's applied by a sensitivity label.
+Potrebbero essere presenti alcuni scenari in cui si desidera applicare una o più proprietà personalizzate a un documento o a un messaggio di posta elettronica oltre ai metadati applicati da un'etichetta di riservatezza.
 
 Ad esempio:
 
-- You are in the process of [migrating from another labeling solution](#migrate-labels-from-secure-islands-and-other-labeling-solutions), such as Secure Islands. For interoperability during the migration, you want sensitivity labels to also apply a custom property that is used by the other labeling solution.
+- È in corso la [migrazione da un'altra soluzione di assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions), ad esempio le isole sicure. Per l'interoperabilità durante la migrazione, si desidera che le etichette di riservatezza applichino anche una proprietà personalizzata utilizzata dall'altra soluzione di assegnazione di etichette.
 
-- For your content management system (such as SharePoint or a document management solution from another vendor) you want to use a consistent custom property name with different values for the labels, and with user-friendly names instead of the label GUID.
+- Per il sistema di gestione dei contenuti (ad esempio SharePoint o una soluzione di gestione dei documenti di un altro fornitore) si vuole usare un nome di proprietà personalizzato coerente con valori diversi per le etichette e con nomi descrittivi anziché il GUID dell'etichetta.
 
-For Office documents and Outlook emails that users label by using the Azure Information Protection unified labeling client, you can add one or more custom properties that you define. You can also use this method for the unified labeling client to display a custom property as a label from other solutions for content that isn't yet labeled by the unified labeling client.
+Per i documenti di Office e i messaggi di posta elettronica di Outlook che gli utenti etichettano usando il Azure Information Protection client Unified Labeling, è possibile aggiungere una o più proprietà personalizzate definite dall'utente. È anche possibile usare questo metodo per il client di etichettatura unificata per visualizzare una proprietà personalizzata come etichetta di altre soluzioni per il contenuto che non è ancora etichettato dal client di etichettatura unificata.
 
-As a result of this configuration option, any additional custom properties are applied by the Azure Information Protection unified labeling client as follows:
+In seguito a questa opzione di configurazione, tutte le proprietà personalizzate aggiuntive vengono applicate dal client Azure Information Protection Unified Labeling come indicato di seguito:
 
-- For Office documents: When the document is labeled in the desktop app, the additional custom properties are applied when the document is saved.
+- Per i documenti di Office: quando il documento viene etichettato nell'app desktop, le proprietà personalizzate aggiuntive vengono applicate quando il documento viene salvato.
 
-- For Outlook emails: When the email message is labeled in Outlook, the additional properties are applied to the x-header when the email is sent.
+- Per i messaggi di posta elettronica di Outlook: quando il messaggio di posta elettronica è contrassegnato in Outlook, le proprietà aggiuntive vengono applicate all'intestazione x quando viene inviato il messaggio di posta elettronica.
 
-- For PowerShell: [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) and [Set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) applies the additional custom properties when the document is labeled and saved. [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) displays custom properties as the mapped label if a sensitivity label isn't applied.
+- Per PowerShell: [set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) e [set-AIPFileClassificiation](/powershell/module/azureinformationprotection/set-aipfileclassification) applica le proprietà personalizzate aggiuntive quando il documento viene etichettato e salvato. [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) Visualizza le proprietà personalizzate come etichetta mappata se non viene applicata un'etichetta di riservatezza.
 
-- For File Explorer: When the user right-clicks the file and applies the label, the custom properties are applied.
+- Per Esplora file: quando l'utente fa clic con il pulsante destro del mouse sul file e applica l'etichetta, vengono applicate le proprietà personalizzate.
 
-This configuration requires you to specify an advanced setting named **customPropertiesByLabel** for each sensitivity label that you want to apply the additional custom properties. Per ogni voce impostare quindi il valore usando la sintassi seguente:
+Per questa configurazione è necessario specificare un'impostazione avanzata denominata **customPropertiesByLabel** per ogni etichetta di riservatezza a cui si desidera applicare le proprietà personalizzate aggiuntive. Per ogni voce impostare quindi il valore usando la sintassi seguente:
 
 `[custom property name],[custom property value]`
 
-#### <a name="example-1-add-a-single-custom-property-for-a-label"></a>Example 1: Add a single custom property for a label
+#### <a name="example-1-add-a-single-custom-property-for-a-label"></a>Esempio 1: aggiungere un'unica proprietà personalizzata per un'etichetta
 
-Requirement: Documents that are labeled as "Confidential" by the Azure Information Protection unified labeling client should have the additional custom property named "Classification" with the value of "Secret".
+Requisito: i documenti etichettati come "riservati" dal client Azure Information Protection Unified Labeling devono avere la proprietà personalizzata aggiuntiva denominata "classificazione" con il valore "Secret".
 
-In questo esempio:
+Esempio:
 
-- The sensitivity label is named **Confidential** and creates a custom property named **Classification** with the value of **Secret**.
+- L'etichetta di riservatezza è denominata **Confidential** e crea una proprietà personalizzata denominata **classificazione** con il valore **Secret**.
 
-The advanced setting:
+Impostazione avanzata:
 
-- Key: **customPropertiesByLabel**
+- Chiave: **customPropertiesByLabel**
 
-- Value: **Classification,Secret**
+- Valore: **classificazione, segreto**
 
-Example PowerShell command, where your label is named "Confidential":
+Esempio di comando di PowerShell, in cui l'etichetta è denominata "Confidential":
 
     Set-Label -Identity Confidential -AdvancedSettings @{customPropertiesByLabel="Classification,Secret"}
 
-#### <a name="example-2-add-multiple-custom-properties-for-a-label"></a>Example 2: Add multiple custom properties for a label
+#### <a name="example-2-add-multiple-custom-properties-for-a-label"></a>Esempio 2: aggiungere più proprietà personalizzate per un'etichetta
 
-To add more than one custom property for the same label, you need to define multiple string values for the same key.
+Per aggiungere più di una proprietà personalizzata per la stessa etichetta, è necessario definire più valori stringa per la stessa chiave.
 
-Example PowerShell command, where your label is named "General" and you want to add one custom property named **Classification** with the value of **General** and a second custom property named **Sensitivity** with the value of **Internal**:
+Esempio di comando di PowerShell, in cui l'etichetta è denominata "generale" e si vuole aggiungere una proprietà personalizzata denominata **classificazione** con il valore **generale** e una seconda proprietà personalizzata denominata **Sensitivity** con il valore **Internal**:
 
     Set-Label -Identity General -AdvancedSettings @{customPropertiesByLabel=ConvertTo-Json("Classification,General", "Sensitivity,Internal")}
 
 ## <a name="configure-a-label-to-apply-smime-protection-in-outlook"></a>Configurare un'etichetta per applicare la protezione S/MIME in Outlook
 
-This configuration uses label [advanced settings](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione USA [le impostazioni avanzate](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dell'etichetta che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-Use these settings only when you have a working [S/MIME deployment](https://docs.microsoft.com/microsoft-365/security/office-365-security/s-mime-for-message-signing-and-encryption) and want a label to automatically apply this protection method for emails rather than Rights Management protection from Azure Information Protection. La protezione risultante è identica a quella applicata quando un utente seleziona manualmente le opzioni di S/MIME da Outlook.
+Usare queste impostazioni solo quando si dispone di una [distribuzione S/MIME](https://docs.microsoft.com/microsoft-365/security/office-365-security/s-mime-for-message-signing-and-encryption) funzionante e si vuole che un'etichetta applichi automaticamente questo metodo di protezione per i messaggi di posta elettronica anziché Rights Management la protezione da Azure Information Protection. La protezione risultante è identica a quella applicata quando un utente seleziona manualmente le opzioni di S/MIME da Outlook.
 
-To configure an advanced setting for an S/MIME digital signature, enter the following strings for the selected label:
+Per configurare un'impostazione avanzata per una firma digitale S/MIME, immettere le stringhe seguenti per l'etichetta selezionata:
 
-- Key: **SMimeSign**
-
-- Valore: **True**
-
-To configure an advanced setting for  S/MIME encryption, enter the following strings for the selected label:
-
-- Key: **SMimeEncrypt**
+- Chiave: **SMimeSign**
 
 - Valore: **True**
 
-If the label you specify is configured for encryption, for the Azure Information Protection unified labeling client, S/MIME protection replaces the Rights Management protection only in Outlook. The general availability version of the unified labeling client continues to use the encryption settings specified for the label in the admin center. For Office apps with built-in labeling, these do not apply the S/MIME protection but instead, apply Do Not Forward protection.
+Per configurare un'impostazione avanzata per la crittografia S/MIME, immettere le stringhe seguenti per l'etichetta selezionata:
 
-If you want the label to be visible in Outlook only, configure the label to apply encryption to **Only email messages in Outlook**.
+- Chiave: **SMimeEncrypt**
 
-Example PowerShell commands, where your label is named "Recipients Only":
+- Valore: **True**
+
+Se l'etichetta specificata è configurata per la crittografia, per il client Azure Information Protection Unified Labeling, S/MIME Protection sostituisce la protezione Rights Management solo in Outlook. La versione di disponibilità generale del client Unified Labeling continua a usare le impostazioni di crittografia specificate per l'etichetta nell'interfaccia di amministrazione. Per le app di Office con etichette predefinite, non applicano la protezione S/MIME, bensì applicano la protezione non inoltrare.
+
+Se si vuole che l'etichetta sia visibile solo in Outlook, configurare l'etichetta in modo da applicare la crittografia **solo ai messaggi di posta elettronica in Outlook**.
+
+Comandi di PowerShell di esempio, in cui l'etichetta è denominata "solo destinatari":
 
     Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeSign="True"}
 
     Set-Label -Identity "Recipients Only" -AdvancedSettings @{SMimeEncrypt="True"}
 
-## <a name="specify-a-default-sublabel-for-a-parent-label"></a>Specify a default sublabel for a parent label
+## <a name="specify-a-default-sublabel-for-a-parent-label"></a>Specificare un'etichetta secondaria predefinita per un'etichetta padre
 
-This configuration uses a label [advanced setting](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) delle etichette che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-When you add a sublabel to a label, users can no longer apply the parent label to a document or email. By default, users select the parent label to see the sublabels that they can apply, and then select one of those sublabels. If you configure this advanced setting, when users select the parent label, a sublabel is automatically selected and applied for them: 
+Quando si aggiunge un'etichetta secondaria a un'etichetta, gli utenti non possono più applicare l'etichetta padre a un documento o a un messaggio di posta elettronica. Per impostazione predefinita, gli utenti selezionano l'etichetta padre per visualizzare le etichette secondarie che possono essere applicate, quindi selezionare una delle etichette secondarie. Se si configura questa impostazione avanzata, quando gli utenti selezionano l'etichetta padre, viene automaticamente selezionata e applicata un'etichetta secondaria: 
 
-- Key: **DefaultSubLabelId**
+- Chiave: **DefaultSubLabelId**
 
-- Value: \<sublabel GUID>
+- Valore: \<GUID dell'etichetta secondaria >
 
-Example PowerShell command, where your parent label is named "Confidential" and the "All Employees" sublabel has a GUID of 8faca7b8-8d20-48a3-8ea2-0f96310a848e:
+Esempio di comando di PowerShell, in cui l'etichetta padre è denominata "Confidential" e l'etichetta secondaria "All Employees" ha un GUID di 8faca7b8-8d20-48A3-8ea2-0f96310a848e:
 
     Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
 
 
-## <a name="specify-a-color-for-the-label"></a>Specify a color for the label
+## <a name="specify-a-color-for-the-label"></a>Specificare un colore per l'etichetta
 
-This configuration uses label [advanced settings](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) that you must configure by using Office 365 Security & Compliance Center PowerShell.
+Questa configurazione USA [le impostazioni avanzate](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dell'etichetta che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-Use this advanced setting to set a color for a label. To specify the color, enter a hex triplet code for the red, green, and blue (RGB) components of the color. For example, #40e0d0 is the RGB hex value for turquoise.
+Usare questa impostazione avanzata per impostare un colore per un'etichetta. Per specificare il colore, immettere un codice di tripletta esadecimale per i componenti rosso, verde e blu (RGB) del colore. Ad esempio, #40e0d0 è il valore esadecimale RGB per il turchese.
 
-If you need a reference for these codes, you'll find a helpful table from the [\<color>](https://developer.mozilla.org/docs/Web/CSS/color_value) page from the MSDN web docs. You also find these codes in many applications that let you edit pictures. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
+Se è necessario un riferimento per questi codici, è possibile trovare una tabella utile dalla pagina di [> dei colori\<](https://developer.mozilla.org/docs/Web/CSS/color_value) da MSDN Web docs. Questi codici sono disponibili anche in molte applicazioni che consentono di modificare le immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
 
-To configure the advanced setting for a label's color, enter the following strings for the selected label:
+Per configurare l'impostazione avanzata per il colore di un'etichetta, immettere le stringhe seguenti per l'etichetta selezionata:
 
-- Key: **color**
+- Chiave: **colore**
 
-- Value: \<RGB hex value>
+- Valore: \<valore esadecimale RGB >
 
-Example PowerShell command, where your label is named "Public":
+Esempio di comando di PowerShell, in cui l'etichetta è denominata "public":
 
     Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
 
 ## <a name="sign-in-as-a-different-user"></a>Accedere come utente diverso
 
-In a production environment, users wouldn't usually need to sign in as a different user when they are using the Azure Information Protection unified labeling client. Per un amministratore, tuttavia, può essere necessario accedere con le credenziali di un altro utente durante una fase di testing. 
+In un ambiente di produzione, gli utenti in genere non devono eseguire l'accesso come utente diverso quando usano il client di Azure Information Protection Unified labeling. Per un amministratore, tuttavia, può essere necessario accedere con le credenziali di un altro utente durante una fase di testing. 
 
-You can verify which account you're currently signed in as by using the **Microsoft Azure Information Protection** dialog box: Open an Office application and on the **Home** tab, select the **Sensitivity** button, and then select **Help and feedback**. Il nome dell'account verrà visualizzato nella sezione **Stato del client**.
+È possibile verificare l'account a cui si è attualmente connessi usando la finestra di dialogo **Microsoft Azure Information Protection** : aprire un'applicazione di Office e nella scheda **Home** , selezionare il pulsante **sensibilità** , quindi selezionare **Guida e commenti**. Il nome dell'account verrà visualizzato nella sezione **Stato del client**.
 
-Assicurarsi di controllare anche il nome di dominio dell'account di accesso che viene visualizzato. Può essere facile non notare che è stato effettuato l'accesso con il nome dell'account giusto, ma con il dominio errato. A symptom of using the wrong account includes failing to download the labels, or not seeing the labels or behavior that you expect.
+Assicurarsi di controllare anche il nome di dominio dell'account di accesso che viene visualizzato. Può essere facile non notare che è stato effettuato l'accesso con il nome dell'account giusto, ma con il dominio errato. Un sintomo dell'utilizzo dell'account errato include il mancato download delle etichette o la mancata visualizzazione delle etichette o del comportamento previsto.
 
 Per accedere come utente diverso:
 
 1. Passare a **%localappdata%\Microsoft\MSIP** ed eliminare il file **TokenCache**.
 
-2. Riavviare tutte le applicazioni Office aperte e accedere con l'account utente diverso. If you do not see a prompt in your Office application to sign in to the Azure Information Protection service, return to the **Microsoft Azure Information Protection** dialog box and select **Sign in** from the updated **Client status** section.
+2. Riavviare tutte le applicazioni Office aperte e accedere con l'account utente diverso. Se non viene visualizzata una richiesta nell'applicazione di Office per accedere al servizio Azure Information Protection, tornare alla finestra di dialogo **Microsoft Azure Information Protection** e selezionare **Accedi** dalla sezione **stato client** aggiornato.
 
 Inoltre:
 
-- If the Azure Information Protection unified labeling client is still signed in with the old account after completing these steps, delete all cookies from Internet Explorer, and then repeat steps 1 and 2.
+- Se il client Azure Information Protection Unified Labeling è ancora connesso con l'account precedente dopo aver completato questi passaggi, eliminare tutti i cookie da Internet Explorer, quindi ripetere i passaggi 1 e 2.
 
-- Se si usa la funzione Single Sign-On, è necessario uscire da Windows e accedere con un account utente diverso dopo aver eliminato il file del token. The Azure Information Protection unified labeling client then automatically authenticates by using your currently signed in user account.
+- Se si usa la funzione Single Sign-On, è necessario uscire da Windows e accedere con un account utente diverso dopo aver eliminato il file del token. Il Azure Information Protection client per l'assegnazione di etichette unificata viene quindi autenticato automaticamente utilizzando l'account utente attualmente connesso.
 
 - Questa soluzione è supportata per l'accesso come utente diverso dallo stesso tenant. Non è supportata per l'accesso come utente diverso da un diverso tenant. Per testare Azure Information Protection con più tenant, usare computer diversi.
 
-- You can use the **Reset settings** option from **Help and Feedback** to sign out and delete the currently downloaded labels and policy settings from the Office 365 Security & Compliance Center, the Microsoft 365 Security center, or the Microsoft 365 Compliance center.
+- È possibile usare l'opzione **Reimposta impostazioni** da **Guida e commenti e suggerimenti** per disconnettersi ed eliminare le etichette e le impostazioni dei criteri attualmente scaricate dall'Centro sicurezza e conformità di Office 365, dal centro sicurezza Microsoft 365 o dal centro di conformità Microsoft 365.
 
 
 ## <a name="support-for-disconnected-computers"></a>Supporto per i computer disconnessi
 
 > [!IMPORTANT]
-> Disconnected computers are supported for the following labeling scenarios only: File Explorer, PowerShell, and the scanner. To label documents in your Office apps, you must have connectivity to the internet.
+> I computer disconnessi sono supportati solo per gli scenari di etichettatura seguenti: Esplora file, PowerShell e lo scanner. Per etichettare i documenti nelle app di Office, è necessario disporre della connettività a Internet.
 
-By default, the Azure Information Protection unified labeling client automatically tries to connect to the internet to download the labels and label policy settings from your labeling management center: The Office 365 Security & Compliance Center, the Microsoft 365 security center, or the Microsoft 365 compliance center. If you have computers that cannot connect to the internet for a period of time, you can export and copy files that manually manages the policy for the unified labeling client.
+Per impostazione predefinita, il client di Azure Information Protection Unified Labeling tenta automaticamente di connettersi a Internet per scaricare le etichette e le impostazioni dei criteri di etichetta dal centro di gestione delle etichette: il Centro sicurezza e conformità di Office 365, il Microsoft 365 Centro sicurezza o il centro di conformità Microsoft 365. Se si dispone di computer che non possono connettersi a Internet per un certo periodo di tempo, è possibile esportare e copiare i file che gestiscono manualmente i criteri per il client di etichettatura unificata.
 
-Instructions:
+Istruzioni
 
-1. Choose or create a user account in Azure AD that you will use to download labels and policy settings that you want to use on your disconnected computer.
+1. Scegliere o creare un account utente in Azure AD che si utilizzerà per scaricare le etichette e le impostazioni dei criteri che si desidera utilizzare nel computer disconnesso.
 
-2. As an additional label policy setting for this account, [disable sending audit data to Azure Information Protection analytics](#disable-sending-audit-data-to-azure-information-protection-analytics) by using the **EnableAudit** advanced setting.
+2. Come impostazione dei criteri di etichetta aggiuntiva per questo account, [disabilitare l'invio dei dati di controllo a Azure Information Protection Analytics](#disable-sending-audit-data-to-azure-information-protection-analytics) usando l'impostazione avanzata **EnableAudit** .
     
-    We recommend this step because if the disconnected computer does have periodic internet connectivity, it will send logging information to Azure Information Protection analytics that includes the user name from step 1. That user account might be different from the local account you're using on the disconnected computer.
+    Si consiglia di eseguire questo passaggio perché se il computer disconnesso presenta una connettività Internet periodica, invierà le informazioni di registrazione a Azure Information Protection Analytics che include il nome utente del passaggio 1. Tale account utente potrebbe essere diverso dall'account locale in uso nel computer disconnesso.
 
-3. From a computer with internet connectivity that has the unified labeling client installed and signed in with the user account from step 1, download the labels and policy settings.
+3. Da un computer con connettività Internet con il client Unified Labeling installato e connesso con l'account utente del passaggio 1, scaricare le etichette e le impostazioni dei criteri.
 
-4. From this computer, export the log files.
+4. Da questo computer esportare i file di log.
     
-    For example, run the [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs) cmdlet, or use the **Export Logs** option from the client's [Help and Feedback](clientv2-admin-guide.md#installing-and-supporting-the-azure-information-protection-unified-labeling-client) dialog box. 
+    Ad esempio, eseguire il cmdlet [Export-AIPLogs](https://docs.microsoft.com/powershell/module/azureinformationprotection/export-aiplogs) oppure usare l'opzione **Esporta log** dalla finestra di dialogo [Guida e commenti](clientv2-admin-guide.md#installing-and-supporting-the-azure-information-protection-unified-labeling-client) del client. 
     
-    The log files are exported as a single compressed file.
+    I file di log vengono esportati come un singolo file compresso.
 
-5.  Open the compressed file, and from the MSIP folder, copy any files that have a .xml file name extension.
+5.  Aprire il file compresso, quindi copiare i file con estensione XML dalla cartella MSIP.
 
-6. Paste these files into the **%localappdata%\Microsoft\MSIP** folder on the disconnected computer.
+6. Incollare questi file nella cartella **%LocalAppData%\Microsoft\MSIP** del computer disconnesso.
 
-7. If your chosen user account is one that usually connects to the internet, enable sending audit data again, by setting the **EnableAudit** value to **True**.
+7. Se l'account utente scelto è uno che in genere si connette a Internet, abilitare di nuovo l'invio dei dati di controllo, impostando il valore di **EnableAudit** su **true**.
 
-8. For the disconnected computer to protect files, reprotect files, remove protection from files, or to inspect protected files: On the disconnected computer, run the [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) cmdlet with the *DelegatedUser* parameter and specify the user account from step 1 to set the user context. Ad esempio:
+8. Affinché il computer disconnesso protegga i file, riproteggi i file, Rimuovi la protezione dai file o controlla i file protetti: nel computer disconnesso, eseguire il cmdlet [set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con il parametro *DelegatedUser* e specificare l'account utente del passaggio 1 per impostare il contesto utente. Ad esempio:
     
         Set-AIPAuthentication -TenantId "9c11c87a-ac8b-46a3-8d5c-f4d0b72ee29a" -DelegatedUser offlineuser@contoso.com
 
-Be aware that if a user on this computer selects the **Reset Settings** option from [Help and feedback](clientv2-admin-guide.md#help-and-feedback-section), this action deletes the policy files and renders the client inoperable until you manually replace the files or the client connects to the internet and downloads the files.
+Tenere presente che se un utente del computer seleziona l'opzione **Reimposta impostazioni** da [Guida e commenti e suggerimenti](clientv2-admin-guide.md#help-and-feedback-section), questa azione Elimina i file di criteri e rende il client inutilizzabile fino a quando non si sostituiscono manualmente i file o il client si connette a Internet e Scarica i file.
 
-If your disconnected computer is running the Azure Information Protection scanner, there are additional configuration steps you must take. For more information, see [Restriction: The scanner server cannot have internet connectivity](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity) from the scanner deployment instructions.
+Se il computer disconnesso esegue lo scanner Azure Information Protection, è necessario eseguire passaggi di configurazione aggiuntivi. Per altre informazioni, vedere [restrizione: il server dello scanner non può avere connettività Internet](../deploy-aip-scanner.md#restriction-the-scanner-server-cannot-have-internet-connectivity) dalle istruzioni per la distribuzione dello scanner.
 
 ## <a name="change-the-local-logging-level"></a>Modificare il livello di registrazione locale
 
-By default, the Azure Information Protection unified labeling client writes client log files to the **%localappdata%\Microsoft\MSIP** folder. Questi file sono destinati al supporto tecnico Microsoft per la risoluzione dei problemi.
+Per impostazione predefinita, il client di Azure Information Protection Unified Labeling scrive i file di log del client nella cartella **%LocalAppData%\Microsoft\MSIP** . Questi file sono destinati al supporto tecnico Microsoft per la risoluzione dei problemi.
  
-To change the logging level for these files, locate the following value name in the registry and set the value data to the required logging level:
+Per modificare il livello di registrazione per questi file, individuare il nome del valore seguente nel registro di sistema e impostare i dati del valore sul livello di registrazione richiesto:
 
-**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\LogLevel**
+**HKEY_CURRENT_USER \SOFTWARE\Microsoft\MSIP\LogLevel**
 
 Impostare il livello di registrazione su uno dei valori seguenti:
 
-- **Off**: No local logging.
+- **Disattivato**: nessuna registrazione locale.
 
-- **Error**: Errors only.
+- **Errore**: solo errori.
 
-- **Warn**: Errors and warnings.
+- **Avviso**: errori e avvisi.
 
-- **Info**: Minimum logging, which includes no event IDs (the default setting for the scanner).
+- **Info**: registrazione minima, che non include ID evento (impostazione predefinita per lo scanner).
 
-- **Debug**: Full information.
+- **Debug**: informazioni complete.
 
-- **Trace**: Detailed logging (the default setting for clients).
+- **Trace**: registrazione dettagliata (impostazione predefinita per i client).
 
-This registry setting does not change the information that's sent to Azure Information Protection for [central reporting](../reports-aip.md).
+Questa impostazione del registro di sistema non modifica le informazioni inviate a Azure Information Protection per la [creazione di report centrali](../reports-aip.md).
 
 ## <a name="next-steps"></a>Passaggi successivi
-Now that you've customized the Azure Information Protection unified labeling client, see the following resources for additional information that you might need to support this client:
+Ora che è stato personalizzato il client di etichettatura Azure Information Protection Unified, vedere le risorse seguenti per altre informazioni che potrebbero essere necessarie per supportare questo client:
 
 - [File del client e registrazione dell'utilizzo](client-admin-guide-files-and-logging.md)
 

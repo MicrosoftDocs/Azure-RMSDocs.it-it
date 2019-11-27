@@ -1,6 +1,6 @@
 ---
 title: Configurare i criteri di Azure Information Protection - AIP
-description: To configure classification, labeling, and protection for the Azure Information Protection client (classic), you must configure the Azure Information Protection policy.
+description: Per configurare la classificazione, l'assegnazione di etichette e la protezione per il client di Azure Information Protection (versione classica), è necessario configurare i criteri di Azure Information Protection.
 author: cabailey
 ms.author: cabailey
 ms.date: 11/25/2019
@@ -24,14 +24,14 @@ ms.locfileid: "74479137"
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Instructions for: [Azure Information Protection client for Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 > [!NOTE]
-> The Azure Information Protection policy applies to the Azure Information Protection client (classic) and not the Azure Information Protection unified labeling client. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
+> Il criterio di Azure Information Protection si applica al client di Azure Information Protection (classico) e non al client di etichettatura unificato Azure Information Protection. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 > 
-> If you are looking for information to configure sensitivity labels and policy settings for the unified labeling client, see [Overview of sensitivity labels](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) from the Office documentation.
+> Per informazioni su come configurare le etichette di riservatezza e le impostazioni dei criteri per il client di etichettatura unificata, vedere [Panoramica delle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) nella documentazione di Office.
 
-To configure classification, labeling, and protection for the classic client, you must configure the Azure Information Protection policy. Questi criteri vengono quindi scaricati nei computer in cui è installato il [client di Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
+Per configurare la classificazione, l'assegnazione di etichette e la protezione per il client classico, è necessario configurare i criteri di Azure Information Protection. Questi criteri vengono quindi scaricati nei computer in cui è installato il [client di Azure Information Protection](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
 I criteri contengono etichette e impostazioni:
 
@@ -65,34 +65,34 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
 
 - Usare il collegamento seguente: https://portal.azure.com
 
-- Use an Azure AD account that has one of the following [administrator roles](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
+- Usare un account Azure AD con uno dei seguenti ruoli di [amministratore](/azure/active-directory/active-directory-assign-admin-roles-azure-portal):
     
-    - **Azure Information Protection administrator**
+    - **Amministratore Azure Information Protection**
     
   - **Amministratore di conformità**
     
-  - **Compliance data administrator**
+  - **Amministratore dati di conformità**
     
   - **Amministratore della sicurezza**
     
-    **Security reader** - [Azure Information Protection analytics](reports-aip.md) only
+    **Reader** per la sicurezza - solo [Azure Information Protection Analytics](reports-aip.md)
     
-    **Global reader** - [Azure Information Protection analytics](reports-aip.md) only
+    **Global reader** - solo [Azure Information Protection Analytics](reports-aip.md)
     
   - **Amministratore globale**
     
     > [!NOTE] 
-    > If your tenant is on the [unified labeling platform](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform), the Azure Information Protection administrator role (formerly "Information Protection administrator"), the Security reader role, and the Global reader role are not supported for the Azure portal. [Altre informazioni](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
+    > Se il tenant si trova nella [piattaforma di assegnazione di etichette unificata](faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform), il ruolo di amministratore Azure Information Protection (denominato in precedenza "Information Protection Administrator"), il ruolo di lettura per la sicurezza e il ruolo di lettore globale non sono supportati per il portale di Azure. [Altre informazioni](configure-policy-migrate-labels.md#administrative-roles-that-support-the-unified-labeling-platform)
     
-    Microsoft accounts cannot manage Azure Information Protection.
+    Gli account Microsoft non possono gestire Azure Information Protection.
 
-## <a name="to-access-the-azure-information-protection-pane-for-the-first-time"></a>To access the Azure Information Protection pane for the first time
+## <a name="to-access-the-azure-information-protection-pane-for-the-first-time"></a>Per accedere al riquadro Azure Information Protection per la prima volta
 
 1. Accedere al portale di Azure.
 
 2. Selezionare **+ Crea una risorsa** e quindi nella casella di ricerca per il Marketplace digitare **Azure Information Protection**. 
     
-3. Selezionare **Azure Information Protection** nell'elenco dei risultati. On the **Azure Information Protection** pane, click **Create**.
+3. Selezionare **Azure Information Protection** nell'elenco dei risultati. Nel riquadro **Azure Information Protection** fare clic su **Crea**.
     
     > [!TIP] 
     > Facoltativamente, selezionare **Aggiungi al dashboard** per creare un riquadro **Azure Information Protection** nel dashboard, in modo da ignorare la ricerca del servizio al successivo accesso al portale.
@@ -101,15 +101,15 @@ Per accedere al portale di Azure per configurare e gestire Azure Information Pro
 
 4. Quando ci si connette al servizio per la prima volta viene visualizzata automaticamente la pagina **Avvio rapido**. Consultare le risorse suggerite o usare le altre opzioni di menu. Usare la procedura seguente per configurare le etichette selezionabili dagli utenti.
 
-Next time you access the **Azure Information Protection** pane, it automatically selects the **Labels** option so that you can view and configure labels for all users. È possibile tornare alla pagina **Avvio rapido** selezionandola nel menu **Generale**.
+La volta successiva che si accede al riquadro **Azure Information Protection** , viene selezionata automaticamente l'opzione **etichette** in modo che sia possibile visualizzare e configurare le etichette per tutti gli utenti. È possibile tornare alla pagina **Avvio rapido** selezionandola nel menu **Generale**.
 
 ## <a name="how-to-configure-the-azure-information-protection-policy"></a>Come configurare i criteri di Azure Information Protection
 
-1. Make sure that you are signed in to the Azure portal by using one of these administrative roles: Azure Information Protection administrator, Security administrator, or Global administration. Vedere la [sezione precedente](#signing-in-to-the-azure-portal) per altre informazioni su questi ruoli amministrativi.
+1. Assicurarsi di aver eseguito l'accesso al portale di Azure usando uno di questi ruoli amministrativi: Azure Information Protection amministratore, amministratore della sicurezza o amministrazione globale. Vedere la [sezione precedente](#signing-in-to-the-azure-portal) per altre informazioni su questi ruoli amministrativi.
 
-2. If necessary, navigate to the **Azure Information Protection** pane: For example, on the hub menu, click **All services** and start typing **Information Protection** in the Filter box. Selezionare **Azure Information Protection** nei risultati. 
+2. Se necessario, passare al riquadro **Azure Information Protection** : ad esempio, nel menu Hub fare clic su **tutti i servizi** e iniziare a digitare **Information Protection** nella casella filtro. Selezionare **Azure Information Protection** nei risultati. 
     
-    The **Azure Information Protection - Labels** pane automatically opens for you to view and edit the available labels. Le etichette possono essere rese disponibili per tutti gli utenti, per utenti selezionati o per nessun utente, aggiungendole o rimuovendole da un criterio.
+    Verrà aperto automaticamente il riquadro **etichette di Azure Information Protection** per visualizzare e modificare le etichette disponibili. Le etichette possono essere rese disponibili per tutti gli utenti, per utenti selezionati o per nessun utente, aggiungendole o rimuovendole da un criterio.
 
 3. Per visualizzare e modificare i criteri, selezionare **Criteri** nelle opzioni di menu. Per visualizzare e modificare il criterio ottenuto da tutti gli utenti, selezionare il criterio **Globale**. Per creare un criterio personalizzato per gli utenti selezionati, selezionare **Aggiungi un nuovo criterio**.
     
@@ -118,7 +118,7 @@ Next time you access the **Azure Information Protection** pane, it automatically
 
 È possibile creare qualsiasi numero di etichette. Tuttavia, se le etichette diventano troppo numerose e non consentono agli utenti di individuare e selezionare l'etichetta appropriata con facilità, creare criteri con ambito in modo che gli utenti visualizzino solo le etichette rilevanti. Il limite massimo di etichette per l'applicazione della protezione è 500.
 
-When you make any changes on an Azure Information Protection pane, click **Save** to save the changes, or click **Discard** to revert to the last saved settings. When you save changes in a policy, or make changes to labels that are added to policies, those changes are automatically published. Non è presente un'opzione di pubblicazione separata.
+Quando si apportano modifiche in un riquadro Azure Information Protection, fare clic su **Salva** per salvare le modifiche oppure su **Ignora** per ripristinare le ultime impostazioni salvate. Quando si salvano le modifiche in un criterio o si apportano modifiche alle etichette aggiunte ai criteri, tali modifiche vengono pubblicate automaticamente. Non è presente un'opzione di pubblicazione separata.
 
 Il client Azure Information Protection verifica la disponibilità di eventuali modifiche ogni volta che viene avviata un'applicazione di Office supportata e scarica le modifiche come criteri di Azure Information Protection più recenti. I criteri del client vengono aggiornati anche nei modi seguenti:
 
@@ -168,13 +168,13 @@ Usare le informazioni seguenti per configurare i criteri di Azure Information Pr
 
 Quando viene applicata un'etichetta a un documento o un messaggio di posta elettronica, l'etichetta viene archiviata nei metadati in modo che le applicazioni e i servizi possano leggerla:
 
-- In emails, this information is stored in the x-header: **msip_labels: MSIP_Label_\<GUID>_Enabled=True** 
+- Nei messaggi di posta elettronica queste informazioni vengono archiviate nell'intestazione x: **msip_labels: MSIP_Label_\<GUID > _Enabled = true** 
 
-- For Word documents (.doc and .docx), Excel spreadsheets (.xls and .xlsx), PowerPoint presentations (.ppt and .pptx), and PDF documents, this metadata is stored in the following custom property: **MSIP_Label_\<GUID>_Enabled=True**
+- Per i documenti di Word (doc e docx), i fogli di calcolo di Excel (xls e XLSX), le presentazioni di PowerPoint (con estensione ppt e pptx) e i documenti PDF, questi metadati vengono archiviati nella proprietà personalizzata seguente: **MSIP_Label_\<GUID > _Enabled = true**
 
-For emails, the label information is stored when the email is sent. For documents, the label information is stored when the file is saved. 
+Per i messaggi di posta elettronica, le informazioni sull'etichetta vengono archiviate al momento dell'invio del messaggio. Per i documenti, le informazioni sull'etichetta vengono archiviate quando il file viene salvato. 
 
-To identify the GUID for a label, locate the Label ID value on the **Label** pane in the Azure portal, when you view or configure the Azure Information Protection policy. Per i file a cui sono state applicate etichette, è anche possibile eseguire il cmdlet di PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) per identificare il GUID (MainLabelId o SubLabelId). Quando un'etichetta ha etichette secondarie, specificare sempre il GUID della sola etichetta secondaria e non dell'etichetta padre.
+Per identificare il GUID per un'etichetta, individuare il valore di ID etichetta nel riquadro **etichetta** nella portale di Azure quando si visualizzano o si configurano i criteri di Azure Information Protection. Per i file a cui sono state applicate etichette, è anche possibile eseguire il cmdlet di PowerShell [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) per identificare il GUID (MainLabelId o SubLabelId). Quando un'etichetta ha etichette secondarie, specificare sempre il GUID della sola etichetta secondaria e non dell'etichetta padre.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
@@ -184,5 +184,5 @@ Per esempi su come personalizzare i criteri di Azure Information Protection e os
 
 - [Configurare impostazioni dei criteri di Azure Information Protection che interagiscono tra loro](infoprotect-settings-tutorial.md)
 
-To see how your policy is performing, see [Central reporting for Azure Information Protection](reports-aip.md).
+Per informazioni sull'esecuzione dei criteri, vedere [Central Reporting per Azure Information Protection](reports-aip.md).
 
