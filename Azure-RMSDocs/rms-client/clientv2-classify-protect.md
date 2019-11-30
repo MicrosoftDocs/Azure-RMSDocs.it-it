@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 00ad46e033116b1a39421cbfbc04a316ee2d7da7
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 7eb4b4223f9fb8c53aec3ebe341384001175feda
+ms.sourcegitcommit: bc45a127fc4d5871f6e7b3bba8774bcfb194397a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73561185"
+ms.lasthandoff: 11/29/2019
+ms.locfileid: "74661839"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Guida dell'utente: classificare e proteggere con la Azure Information Protection Unified Labeling client
 
@@ -54,7 +54,7 @@ In alternativa, se è stata selezionata l'opzione **Mostra barra** dal pulsante 
 
 ![Esempio della barra di Azure Information Protection](../media/info-protect-barv2-not-set-callout.png)
 
-Per impostare un'etichetta, ad esempio "**confidential** \ **All Employees**", selezionare **Confidential** e quindi **All Employees**. Se non si è certi dell'etichetta da applicare al documento o al messaggio di posta elettronica corrente, usare le descrizioni comando delle etichette per altre informazioni su ogni etichetta e su quando applicarla.
+Per impostare un'etichetta, ad esempio "**riservato** \ **tutti i dipendenti**", selezionare **riservata** e quindi **tutti i dipendenti**. Se non si è certi dell'etichetta da applicare al documento o al messaggio di posta elettronica corrente, usare le descrizioni comando delle etichette per altre informazioni su ogni etichetta e su quando applicarla.
 
 Se al documento è già applicata un'etichetta e si desidera modificarla, è possibile selezionare un'etichetta diversa. Se è stata visualizzata la barra di Azure Information Protection e le etichette non sono visualizzate sulla barra da selezionare, fare prima clic sull'icona **Modifica etichetta** accanto al valore etichetta corrente.
 
@@ -91,9 +91,7 @@ Motivi possibili:
 
 Se si vogliono condividere documenti di Office tramite posta elettronica, è possibile allegare i documenti a messaggi di posta elettronica protetti. In questo modo ogni documento viene protetto automaticamente con le stesse restrizioni applicate al messaggio corrispondente. 
 
-Tuttavia, potrebbe essere necessario proteggere prima il documento e quindi collegarlo al messaggio di posta elettronica. Proteggere anche il messaggio se quest'ultimo contiene informazioni riservate. Un vantaggio della protezione del documento prima di collegarlo a un messaggio di posta elettronica:
-
-- Possibilità di applicare al documento autorizzazioni diverse da quelle applicate al messaggio di posta elettronica.
+Tuttavia, potrebbe essere necessario proteggere prima il documento e quindi collegarlo al messaggio di posta elettronica. Proteggere anche il messaggio se quest'ultimo contiene informazioni riservate. Un vantaggio della protezione del documento prima di collegarlo a un messaggio di posta elettronica è che è possibile applicare autorizzazioni diverse al documento anziché al messaggio di posta elettronica.
 
 ## <a name="using-file-explorer-to-classify-and-protect-files"></a>Uso di Esplora file per classificare e proteggere file
 
