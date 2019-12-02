@@ -12,12 +12,12 @@ metadata:
   ms.author: cabailey
   manager: rkarlin
   ms.date: 11/01/2019
-  ms.openlocfilehash: 433565965e0f3cdf8dfd94ed11769b547c75a01c
-  ms.sourcegitcommit: 260bf72bbc04e825c825805824546d203821f6c6
+  ms.openlocfilehash: da2c47f0e33f861a342f290f5a6edfccf72a7d66
+  ms.sourcegitcommit: bc45a127fc4d5871f6e7b3bba8774bcfb194397a
   ms.translationtype: HT
   ms.contentlocale: it-IT
-  ms.lasthandoff: 11/01/2019
-  ms.locfileid: "73428735"
+  ms.lasthandoff: 11/29/2019
+  ms.locfileid: "74661822"
 landingContent:
 - title: Informazioni su Azure Information Protection
   linkLists:
@@ -49,12 +49,12 @@ landingContent:
   linkLists:
   - linkListType: whats-new
     links:
-    - text: Aggiornamenti di ottobre della documentazione
-      url: https://techcommunity.microsoft.com/t5/Azure-Information-Protection/bg-p/AzureInformationProtectionBlog
-    - text: "Dettagli versione 2.5.33.0: client per l'etichettatura unificata"
-      url: ./rms-client/unifiedlabelingclient-version-release-history.md#version-25330
+    - text: Aggiornamenti di novembre della documentazione
+      url: https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Azure-Information-Protection-Documentation-Update-for-November/ba-p/1031924
     - text: Le 5 migliori sessioni su Ignite consigliate
       url: what-is-information-protection.md#microsoft-ignite
+    - text: "Dettagli versione 2.5.33.0: client per l'etichettatura unificata"
+      url: ./rms-client/unifiedlabelingclient-version-release-history.md#version-25330
 - title: Classificare e proteggere i dati negli archivi dati locali
   linkLists:
   - linkListType: how-to-guide
