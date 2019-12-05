@@ -4,7 +4,7 @@ description: Identificare i prerequisiti per distribuire Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/02/2019
+ms.date: 12/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3ad40af5706e588f71342716c34315818ea07ed0
-ms.sourcegitcommit: 17e562b102c077d2af0fa63ce1db77bf5c41c5b4
+ms.openlocfilehash: 6caa524dd993dcdfd8a3e19ebccaea313006657b
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923659"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74831695"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisiti per Azure Information Protection
 
@@ -28,7 +28,7 @@ Prima di distribuire Azure Information Protection per l'organizzazione, verifica
 
 ## <a name="subscription-for-azure-information-protection"></a>Sottoscrizione di Azure Information Protection
 
-**Per classificazione, assegnazione di etichette e protezione**: è necessario un [piano di Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). 
+**Per la classificazione, l'assegnazione di etichette e la protezione tramite il client Azure Information Protection (classica o unificata) o lo scanner**: è necessario disporre di un [piano di Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection/). 
 
 **Per la sola funzionalità di protezione**: è necessario un [piano di Office 365 che include Azure Information Protection](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf).
 
@@ -55,7 +55,7 @@ L'accesso Single Sign-On (SSO) è supportato per Azure Information Protection, i
 
 Multi-Factor Authentication (MFA) è supportato in Azure Information Protection quando si ha il software client richiesto e l'infrastruttura di supporto MFA è configurata correttamente.
 
-L'accesso condizionale è supportato in anteprima per i documenti protetti da Azure Information Protection. Per altre informazioni, vedere le seguenti domande frequenti: [Azure Information Protection è elencata come un'app cloud disponibile per l'accesso condizionale, come funziona?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
+L'accesso condizionale è supportato in anteprima per i documenti protetti da Azure Information Protection. Per altre informazioni, vedere la domanda seguente: [Azure Information Protection è elencata come un'app cloud disponibile per l'accesso condizionale, come funziona?](faqs.md#i-see-azure-information-protection-is-listed-as-an-available-cloud-app-for-conditional-accesshow-does-this-work)
 
 Per altre informazioni sui requisiti di autenticazione, vedere [Requisiti di Azure Active Directory per Azure Information Protection](requirements-azure-ad.md). 
 
@@ -83,9 +83,9 @@ I dispositivi seguenti supportano il client di Azure Information Protection Unif
 
 - Windows Server 2012 R2 e Windows Server 2012
 
-- Windows Server 2008 R2 
+- Windows Server 2008 R2 
 
-Oltre a installare il client di in computer fisici, è anche possibile installarlo nelle macchine virtuali. Verificare che il fornitore del software per la soluzione desktop virtuale disponga di configurazioni aggiuntive che potrebbero essere necessarie per eseguire la Azure Information Protection client di etichetta unificata o il client di Azure Information Protection. Per le soluzioni Citrix, ad esempio, potrebbe essere necessario [disabilitare i hook dell'API (Application Programming Interface) Citrix](https://support.citrix.com/article/CTX107825) per Office (Winword. exe, Excel. exe, Outlook. exe, Powerpnt. exe) e il file eseguibile per il Azure Information Protection unificato assegnazione di etichette a client o client Azure Information Protection (MSIP. app. exe, MSIP. Viewer. exe).
+Oltre a installare il client di in computer fisici, è anche possibile installarlo nelle macchine virtuali. Verificare che il fornitore del software per la soluzione desktop virtuale disponga di configurazioni aggiuntive che potrebbero essere necessarie per eseguire la Azure Information Protection client di etichetta unificata o il client di Azure Information Protection. Per le soluzioni Citrix, ad esempio, potrebbe essere necessario [disabilitare i hook dell'API (Application Programming Interface) Citrix](https://support.citrix.com/article/CTX107825) per Office (Winword. exe, Excel. exe, Outlook. exe, Powerpnt. exe) e il file eseguibile per il client Azure Information Protection Unified Labeling o il client di Azure Information Protection (MSIP. app. exe, MSIP. Viewer. exe).
 
 Per le versioni del server elencate:
 
@@ -97,9 +97,9 @@ Quando il Azure Information Protection client protegge i dati tramite il servizi
 
 I client di Azure Information Protection hanno prerequisiti aggiuntivi elencati nelle rispettive guide di amministrazione:
 
-- Client per l'etichettatura unificata di Azure Information Protection: [Prerequisiti](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
+- Azure Information Protection Unified Labeling client: [prerequisiti](./rms-client/clientv2-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-unified-labeling-client)
 
-- Client Azure Information Protection: [Prerequisiti](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
+- Client di Azure Information Protection: [prerequisiti](./rms-client/client-admin-guide-install.md#additional-prerequisites-for-the-azure-information-protection-client)
 
 ## <a name="applications"></a>Applicazioni
 
@@ -133,7 +133,7 @@ Se si ha un firewall o simili dispositivi di rete intermedi che devono essere co
 
 Oltre alle informazioni nell'articolo di Office, le istruzioni seguenti sono specifiche per Azure Information Protection:
 
-- Per il client Unified Labeling per scaricare etichette ed etichettare i criteri: Consentire l'URL * **. Protection.Outlook.com** su HTTPS.
+- Per il client di etichettatura unificata per scaricare etichette ed etichettare i criteri: consentire l'URL * **. Protection.Outlook.com** su HTTPS.
 
 - Se si usa un proxy Web che richiede l'autenticazione, configurarlo per l'uso dell'autenticazione integrata di Windows con le credenziali di accesso di Active Directory dell'utente.
 
