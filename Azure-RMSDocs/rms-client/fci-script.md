@@ -4,7 +4,7 @@ description: Script di esempio per copiare e modificare, come descritto nelle is
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,24 +13,24 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 22db2bd08d97b13ad69d9805a39c174698561eef
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: c8f82db12bc4de61b526426e8e05652cfac8db48
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71690000"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935249"
 ---
 # <a name="windows-powershell-script-for-azure-rms-protection-by-using-file-server-resource-manager-fci"></a>Script di Windows PowerShell per la protezione Azure RMS usando l'infrastruttura di classificazione file di Gestione risorse file server
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Questa pagina contiene lo script di esempio per copiare e modificare, come descritto nell'articolo [Protezione RMS con l'infrastruttura di classificazione file per Windows Server](configure-fci.md).
 
 Per questo script è necessaria almeno la versione **1.3.155.2** del modulo AzureInformationProtection. Eseguire il comando seguente per controllare la versione: `(Get-Module AzureInformationProtection -ListAvailable).Version` 
 
-*&#42;&#42;Dichiarazione di non responsabilità&#42;&#42;: Questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene reso disponibile "nello stato in cui si trova", senza alcun tipo di garanzia.*
+*&#42;&#42;Dichiarazione&#42;&#42;di non responsabilità: questo script di esempio non è supportato in alcun programma o servizio di supporto standard Microsoft. Questo script di esempio viene fornito senza garanzia di alcun tipo.*
 
 ```
 <#

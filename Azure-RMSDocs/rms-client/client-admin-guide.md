@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per gli amministratori in una rete aziend
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6a3792d8b69ebe7bf1f924fe618725a7cf286353
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 9169da03c020f07f2ad031efff80364658aa6b24
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73561289"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935266"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
@@ -69,7 +69,7 @@ Se si usa AD RMS e si vuole passare ad Azure Information Protection, vedere [Mig
 
 ## <a name="should-you-deploy-the-azure-information-protection-client"></a>È consigliabile distribuire il client Azure Information Protection?
 
-Distribuire il client di Azure Information Protection se non si usano le [etichette di riservatezza in Office 365 Centro sicurezza e conformità](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) ma usando le etichette Azure Information Protection scaricate da Azure e una qualsiasi delle seguenti applica
+Distribuire il client di Azure Information Protection se non si usano [le etichette di riservatezza in Office 365 Centro sicurezza e conformità](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) ma usando le etichette Azure Information Protection scaricate da Azure e si applica una delle seguenti condizioni:
 
 - Si vuole classificare (e, facoltativamente, proteggere) documenti e messaggi di posta elettronica selezionando etichette dalle applicazioni di Office (Word, Excel, PowerPoint, Outlook).
 
@@ -146,7 +146,7 @@ L'opzione **Ripristina le impostazioni** consente di disconnettere l'utente, eli
     
     - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
-    - Settings\Software\Microsoft\MSIPC HKEY_CURRENT_USER\SOFTWARE\Classes\Local    
+    - HKEY_CURRENT_USER \SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC    
 
 - L'utente connesso viene disconnesso.
 

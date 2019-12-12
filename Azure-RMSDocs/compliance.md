@@ -4,7 +4,7 @@ description: Informazioni di supporto per Azure Information Protection che inclu
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 12/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: b3a7127b-6d24-4439-bc4e-2a0a325e8ea3
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3d311a1055dc0973dee4b4e0f6b10c4ffcd0e537
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: 06ffea8f623e55eaa482020a9bc8d7583f8c84f7
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684248"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935232"
 ---
 # <a name="compliance-and-supporting-information-for-azureinformation-protection"></a>Informazioni su conformità e supporto per Azure Information Protection
 
@@ -41,9 +41,9 @@ Tuttavia, alcune informazioni rilevanti possono essere utili al consulente legal
 
 ## <a name="legal-and-privacy"></a>Note legali e privacy
 
-- Per Microsoft Azure informazioni sul contratto: [Contratto di Microsoft Azure](https://azure.microsoft.com/support/legal/subscription-agreement/)
+- Per informazioni sul contratto di Microsoft Azure: [Contratto di Microsoft Azure](https://azure.microsoft.com/support/legal/subscription-agreement/)
 
-- Per Microsoft Azure informazioni sulla privacy: [Informativa sulla privacy di Microsoft Azure](https://azure.microsoft.com/support/legal/privacy-statement/)
+- Per informazioni sulla privacy di Microsoft Azure: [Informativa sulla privacy di Microsoft Azure](https://azure.microsoft.com/support/legal/privacy-statement/)
 
 ## <a name="security-compliance-and-auditing"></a>Sicurezza, conformità e controllo
 
@@ -65,7 +65,7 @@ Per informazioni tecniche approfondite sul funzionamento della tecnologia di pro
 
 ## <a name="documentation"></a>Documentazione
 
-- Documentazione di Azure Active Directory: [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis)
+- Documentazione di Azure Active Directory: [Azure Active Directory](/azure/active-directory/fundamentals/active-directory-whatis)
 
-- Documentazione di Office 365 Enterprise: [Office 365](https://docs.microsoft.com/en-us/Office365/Enterprise/)
+- Documentazione di Office 365 Enterprise: [Office 365](https://docs.microsoft.com/Office365/Enterprise/)
 
