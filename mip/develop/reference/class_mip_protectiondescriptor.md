@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 34acc6109a5d3dfcbbaec37e81f3215dd30f5018
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73557730"
 ---
 # <a name="class-mipprotectiondescriptor"></a>Classe mip::ProtectionDescriptor 
@@ -28,7 +28,7 @@ public std::string GetLabelId() const  |  Ottiene l'ID etichetta, se presente.
 public std:: String GetContentId () const  |  Ottiene l'ID contenuto, se disponibile.
 public std:: Vector\<UserRights\> GetUserRights () const  |  Ottiene una raccolta di mapping dei diritti agli utenti.
 public std:: Vector\<UserRoles\> GetUserRoles () const  |  Ottiene una raccolta di mapping dei ruoli agli utenti.
-public bool DoesContentExpire () const  |  Verifica se il contenuto ha una data di scadenza.
+public bool DoesContentExpire() const  |  Verifica se il contenuto ha una data di scadenza.
 public std:: Chrono:: time_point\<std:: Chrono:: system_clock\> GetContentValidUntil () const  |  Ottiene l'ora di scadenza della protezione.
 public bool DoesAllowOfflineAccess() const  |  Ottiene un valore che indica se la protezione consente o meno l'accesso al contenuto offline.
 public std::string GetReferrer() const  |  Ottiene l'indirizzo del referrer della protezione.

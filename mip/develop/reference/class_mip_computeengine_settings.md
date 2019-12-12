@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: bc27cae6020034029712e96fa5ae500d7afebf9b
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73559382"
 ---
 # <a name="class-mipcomputeenginesettings"></a>Classe MIP:: ComputeEngine:: Settings 
@@ -18,7 +18,7 @@ ms.locfileid: "73559382"
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public Settings (const ApplicationInfo & applicationInfo, const std:: shared_ptr\<TelemetryDelegate\>& telemetryDelegate, const std:: shared_ptr\<LoggerDelegate\>& loggerDelegate, const std:: String & hostName, const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& customProperties, const std:: Vector\<LabelFilterType\>& labelFilter)  | Non ancora documentato.
+Impostazioni pubbliche (const ApplicationInfo & applicationInfo, const std:: shared_ptr\<TelemetryDelegate\>& telemetryDelegate, const std:: shared_ptr\<LoggerDelegate\>& loggerDelegate, const std:: String & hostName, const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& customProperties, const std:: Vector\<LabelFilterType\>& labelFilter  | Non ancora documentato.
 public const ApplicationInfo& GetApplicationInfo() const  | Non ancora documentato.
 public std:: shared_ptr\<TelemetryDelegate\> GetTelemetryDelegate () const  | Non ancora documentato.
 public std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate () const  | Non ancora documentato.

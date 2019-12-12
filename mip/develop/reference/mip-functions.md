@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 01/28/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 4479cd9419d51e841906e6268427e184d4e1b4d3
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73558009"
 ---
 # <a name="functions"></a>Funzioni
@@ -253,7 +253,7 @@ Ottiene l'identificatore della stringa per il diritto "export".
   
 **Restituisce**: identificatore della stringa per il diritto "export"
   
-### <a name="extract-function"></a>Estrai funzione
+### <a name="extract-function"></a>Extract - funzione
 Ottiene l'identificatore della stringa per il diritto "extract".
 
   
