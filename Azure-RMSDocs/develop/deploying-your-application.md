@@ -15,10 +15,10 @@ ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 2c8b3407f31819614605fb77fb86a86159a898fd
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68788533"
 ---
 # <a name="deploy-into-production"></a>Distribuire in ambiente di produzione
@@ -103,13 +103,13 @@ Se il client è presente, procedere con l'installazione dell'applicazione.
 
 > [!NOTE]
 > Se è stata eseguita la migrazione al nuovo modello di ADAL per l'autenticazione, non è necessario installare l'**Assistente per l'accesso ai Microsoft Online Services**. Per ulteriori informazioni, vedere [ADAL authentication for your RMS enabled application](adal-auth.md) (Autenticazione ADAL per l'applicazione abilitata per RMS).
-> È anche possibile **certificare l'applicazione per Windows 10**: aggiornando l'applicazione in modo da usare l'autenticazione ADAL anziché l'Assistente per l'accesso a Microsoft Online, l'utente e i suoi clienti saranno in grado di: Usare l'autenticazione a più fattori Installare RMS Client 2.1 senza che siano necessari privilegi amministrativi per il computer
+> Inoltre, è possibile **certificare l'applicazione per Windows 10**. Eseguendo l'aggiornamento dell'applicazione per l'uso dell'autenticazione ADAL anziché dell'Assistente per l'accesso a Microsoft Online, l'utente e i clienti potranno: Installare RMS Client 2.1 senza necessità di privilegi amministrativi sul computer
 
 Affinché l'utente finale possa sfruttare i vantaggi dei servizi Information Protection, è necessario distribuire l'*Assistente per l'accesso ai Microsoft Online Services*. Lo sviluppatore dell'applicazione non sa se l'utente finale userà Information Protection tramite RMS (in locale) o tramite Azure Information Protection.
 
 
 > [!IMPORTANT]
-> Se l'applicazione client verrà eseguita con RMS basato su Azure, sarà necessario creare i propri tenant. Per altre informazioni, vedere [Requisiti per Azure RMS: sottoscrizioni cloud che supportano Azure RMS](../requirements.md).
+> Se l'applicazione client verrà eseguita con RMS basato su Azure, sarà necessario creare i propri tenant. Per altre informazioni vedere [Azure RMS requirements: Cloud subscriptions that support Azure RMS](../requirements.md) (Requisiti per Azure RMS: sottoscrizioni cloud che supportano Azure RMS).
 > Per ulteriori informazioni sull'esecuzione con Azure RMS, vedere [Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md).
 
 -   Scaricare l'[Assistente per l'accesso ai Microsoft Online Services](https://www.microsoft.com/download/details.aspx?id=28177) dall'Area download Microsoft.

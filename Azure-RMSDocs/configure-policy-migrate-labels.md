@@ -4,7 +4,7 @@ description: Eseguire la migrazione di Azure Information Protection etichette a 
 author: cabailey
 ms.author: cabailey
 manager: rkarlin
-ms.date: 11/25/2019
+ms.date: 12/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 24cf337ac84155485d11c3822f6207b11f5b04e5
-ms.sourcegitcommit: da251904c2506a07ea28a820b0f49e7ba7007a04
+ms.openlocfilehash: 31140c7591f2846090a73627fe1f146bc5609cef
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74564494"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935028"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Come eseguire la migrazione di etichette di Azure Information Protection a etichette di riservatezza unificate
 
@@ -44,7 +44,7 @@ Prima di leggere le istruzioni per eseguire la migrazione delle etichette, è po
 
 Se si usano i ruoli di amministratore per l'amministrazione delegata nell'organizzazione, potrebbe essere necessario apportare alcune modifiche alla piattaforma di etichettatura unificata:
 
-I [ruoli Azure ad](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) di **Azure Information Protection Administrator** (in precedenza **Information Protection Administrator**) e **Global Reader** non sono supportati dalla piattaforma Unified labeling. Se uno di questi ruoli amministrativi viene utilizzato nell'organizzazione per gestire Azure Information Protection, aggiungere gli utenti che dispongono di questo ruolo ai ruoli Azure AD dell' **amministratore della conformità**, dell' **amministratore dati di conformità**o dell'amministratore della **sicurezza**. Se serve assistenza con questa procedura, vedere [Concedere agli utenti l'accesso al Centro sicurezza e conformità di Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center). È possibile assegnare questi ruoli anche nel portale di Azure AD, nel Centro sicurezza Microsoft 365 e nel Centro conformità Microsoft 365.
+Il [ruolo Azure ad](/azure/active-directory/active-directory-assign-admin-roles-azure-portal) di **Azure Information Protection Administrator** (in precedenza **Information Protection Administrator**) non è supportato dalla piattaforma Unified labeling. Se si utilizza questo ruolo amministrativo nell'organizzazione per gestire Azure Information Protection, aggiungere gli utenti che dispongono di questo ruolo ai ruoli Azure AD dell' **amministratore della conformità**, dell' **amministratore dati di conformità**o dell'amministratore della **sicurezza**. Se serve assistenza con questa procedura, vedere [Concedere agli utenti l'accesso al Centro sicurezza e conformità di Office 365](https://docs.microsoft.com/microsoft-365/security/office-365-security/grant-access-to-the-security-and-compliance-center). È possibile assegnare questi ruoli anche nel portale di Azure AD, nel Centro sicurezza Microsoft 365 e nel Centro conformità Microsoft 365.
 
 Come alternativa all'uso dei ruoli, nelle interfacce di amministrazione è possibile creare un nuovo gruppo di ruoli per questi utenti e aggiungere il ruolo **Sensitivity Label Administrator** (Amministratore etichette di riservatezza) o **Organization Configuration** (Configurazione organizzazione) a questo gruppo.
 
@@ -160,19 +160,29 @@ Le etichette di cui è stata eseguita correttamente la migrazione possono ora es
 > [!NOTE]
 > Questa opzione è in anteprima e soggetta a modifiche.
 
-Dopo aver eseguito la migrazione delle etichette, è possibile selezionare un'opzione per la copia dei criteri. Se si seleziona questa opzione, viene inviata una copia monouso dei criteri con le [impostazioni dei criteri](configure-policy-settings.md) e qualsiasi [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) all'interfaccia di amministrazione in cui si gestiscono le etichette: Office 365 Centro sicurezza e conformità, centro sicurezza Microsoft 365, Microsoft 365 conformità al centro.
+Dopo aver eseguito la migrazione delle etichette, è possibile selezionare un'opzione per la copia dei criteri. Se si seleziona questa opzione, viene inviata una copia monouso dei criteri con le [impostazioni dei criteri](configure-policy-settings.md) e qualsiasi [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#available-advanced-client-settings) all'interfaccia di amministrazione in cui si gestiscono le etichette: Office 365 Centro sicurezza e conformità, centro sicurezza Microsoft 365, Microsoft 365 conformità al centro. 
+
+I criteri copiati con le relative impostazioni ed etichette vengono quindi pubblicati automaticamente negli utenti e nei gruppi assegnati ai criteri nel portale di Azure. Si noti che per i criteri globali significa che tutti gli utenti. Se non si è pronti per la pubblicazione delle etichette migrate nei criteri copiati, dopo che i criteri sono stati copiati, è possibile rimuovere le etichette dai criteri delle etichette nel centro di amministrazione delle etichette.
 
 Prima di selezionare l'opzione **Copy Policies (Preview)** nel riquadro **Azure Information Protection-Unified Labeling** , tenere presente quanto segue:
 
-- Non è possibile scegliere in modo selettivo i criteri e le impostazioni da copiare. Vengono copiati tutti i criteri (i criteri **globali** e tutti i criteri con ambito) e vengono copiate tutte le impostazioni supportate come impostazioni dei criteri di etichetta. Se si dispone già di un criterio etichetta con lo stesso nome, verrà sovrascritto con le impostazioni dei criteri nel portale di Azure.
+- L'opzione **copia criteri (anteprima)** non è disponibile fino a quando non viene attivata l'etichetta unificata per il tenant.
+
+- Non è possibile scegliere in modo selettivo i criteri e le impostazioni da copiare. Tutti i criteri (i criteri **globali** e tutti i criteri con ambito) vengono selezionati automaticamente per la copia e vengono copiate tutte le impostazioni supportate come impostazioni dei criteri di etichetta. Se si dispone già di un criterio etichetta con lo stesso nome, verrà sovrascritto con le impostazioni dei criteri nel portale di Azure.
 
 - Alcune impostazioni client avanzate non vengono copiate perché per il client Azure Information Protection Unified Labeling sono supportate come *Impostazioni avanzate dell'etichetta* anziché come impostazioni dei criteri. È possibile configurare queste impostazioni avanzate di etichetta con [Office 365 Centro sicurezza e conformità PowerShell](./rms-client/clientv2-admin-guide-customizations.md#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell). Impostazioni client avanzate che non vengono copiate:
     - [LabelbyCustomProperty](./rms-client/client-admin-guide-customizations.md#migrate-labels-from-secure-islands-and-other-labeling-solutions)
     - [LabelToSMIME](./rms-client/client-admin-guide-customizations.md#configure-a-label-to-apply-smime-protection-in-outlook)
 
-- A differenza della migrazione delle etichette in cui vengono sincronizzate le successive modifiche alle etichette, l'azione copia criteri non sincronizza le modifiche successive ai criteri o alle impostazioni dei criteri. È possibile ripetere l'azione di copia dei criteri dopo aver apportato modifiche all'portale di Azure e tutti i criteri esistenti e le relative impostazioni verranno sovrascritti. In alternativa, usare i cmdlet Set-LabelPolicy o set-Label con il parametro *AdvancedSettings* di Office 365 Centro sicurezza e conformità PowerShell.
+- A differenza della migrazione delle etichette in cui vengono sincronizzate le successive modifiche alle etichette, l'azione **copia criteri** non sincronizza le modifiche successive ai criteri o alle impostazioni dei criteri. È possibile ripetere l'azione di copia dei criteri dopo aver apportato modifiche all'portale di Azure e tutti i criteri esistenti e le relative impostazioni verranno sovrascritti. In alternativa, usare i cmdlet Set-LabelPolicy o set-Label con il parametro *AdvancedSettings* di Office 365 Centro sicurezza e conformità PowerShell.
 
-- L'opzione **copia criteri (anteprima)** non è disponibile fino a quando non viene attivata l'etichetta unificata per il tenant.
+- L'azione **copia criteri** verifica quanto segue per ogni criterio prima di essere copiato:
+    
+    - Utenti e gruppi assegnati al criterio sono attualmente in Azure AD. Se uno o più account risultano mancanti, i criteri non vengono copiati. L'appartenenza al gruppo non è selezionata.
+    
+    - I criteri globali contengono almeno un'etichetta. Poiché i centri di assegnazione di etichette dell'amministratore non supportano i criteri di etichetta senza etichette, i criteri globali senza etichette non vengono copiati.
+
+- Se si copiano i criteri e quindi li si elimina dall'interfaccia utente di amministrazione, attendere almeno due ore prima di utilizzare di nuovo l'azione **copia criteri** per garantire tempo sufficiente per la replica dell'eliminazione.
 
 Per ulteriori informazioni sulla configurazione delle impostazioni dei criteri, le impostazioni client avanzate e le impostazioni delle etichette per il client Azure Information Protection Unified Labeling, vedere [configurazioni personalizzate per il Azure Information Protection client Unified Labeling](./rms-client/clientv2-admin-guide-customizations.md) dalla guida dell'amministratore.
 
@@ -216,4 +226,4 @@ Per ulteriori indicazioni e suggerimenti del team dell'esperienza clienti, veder
 
 Per altre informazioni sulle etichette migrate che possono ora essere configurate e pubblicate in uno dei centri di amministrazione, vedere [Panoramica delle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
 
-Se non è già stato fatto, installare il client di Azure Information Protection Unified labeling. Per informazioni sulla versione, una guida dell'amministratore e un manuale dell'utente, vedere [Azure Information Protection Unified Labeling client for Windows](./rms-client/aip-clientv2.md).
+Se non è già stato fatto, installare il client di Azure Information Protection Unified labeling. Per informazioni sulla versione, una guida dell'amministratore e un manuale dell'utente, vedere [Azure Information Protection client di etichetta unificata per Windows](./rms-client/aip-clientv2.md).

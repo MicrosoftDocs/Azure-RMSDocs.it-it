@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
+experimental: true
+experiment_id: priyamo-TableVsFlatList-20160805
 ms.openlocfilehash: 83dbafe17b5ef68735b404fdc819f485d8008c7f
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68791242"
 ---
-# <a name="how-to-use-built-in-rights"></a>Come fare per: Usare i diritti predefiniti
+# <a name="how-to-use-built-in-rights"></a>Procedura: Usare i diritti predefiniti
 
 Questo argomento descrive i diritti predefiniti specificati da Microsoft Rights Management SDK 4.2 e le restrizioni di utilizzo che un'app deve applicare e rispettare. Il codice seguente illustra i diritti predefiniti, i diritti comuni, i diritti di modifica del documento e i diritti sui messaggi di posta elettronica con la descrizione e il valore derivante dal sistema operativo.
 
@@ -31,7 +33,7 @@ Questo argomento descrive i diritti predefiniti specificati da Microsoft Rights 
 
 **Tutti**: una raccolta di tutti i diritti comuni.
 - Android: [CommonRights.All](https://msdn.microsoft.com/library/dn758258.aspx)
-- iOS e OS X: [MSCommonRights](https://msdn.microsoft.com/library/dn758314.aspx) - proprietario utente e visualizzazione per implementare **Tutti**
+- iOS e OS x: [MSCommonRights](https://msdn.microsoft.com/library/dn758314.aspx) (proprietario utente e visualizzazione per implementare **Tutti**)
 - Windows Store e Windows Phone: [CommonRights.All</strong>](https://msdn.microsoft.com/library/microsoft.rightsmanagement.commonrights.all.aspx)
 - Linux: [CommonRights::All](https://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1CommonRights.html)
 
@@ -54,7 +56,7 @@ Questo argomento descrive i diritti predefiniti specificati da Microsoft Rights 
 **Tutti**: una raccolta che contiene tutti i diritti di modifica del documento.
 - Android: [EditableDocumentRights.All](https://msdn.microsoft.com/library/dn758284.aspx)
 - iOS e OS X: [MSEditableDocumentRights all](https://msdn.microsoft.com/library/dn758318.aspx)
-- Windows Store e Windows Phone: [EditableDocumentRights.All](https://msdn.microsoft.com/library/microsoft.rightsmanagement.editabledocumentrights.all.aspx)
+- Windows Store e Windows Phone: [CommonRights.All](https://msdn.microsoft.com/library/microsoft.rightsmanagement.editabledocumentrights.all.aspx)
 - Linux: [EditableDocumentRights::All](https://azuread.github.io/rms-sdk-for-cpp/classrmscore_1_1modernapi_1_1EditableDocumentRights.html)
 
 **Commento**: il diritto per creare commenti sul documento.

@@ -4,7 +4,7 @@ description: Istruzioni per rimuovere etichette di classificazione e protezione 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 2d0053bbe6b3db3c29032d905dd34ce50ad66d55
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 06b5e447b776f046fba4a6a563213783b3931db4
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71690155"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933481"
 ---
-# <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Manuale dell'utente: Rimuovere etichette di classificazione e protezione da file e messaggi di posta elettronica etichettati tramite Azure Information Protection o protetti tramite Rights Management
+# <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection-or-protected-by-rights-management"></a>Guida dell'utente: Rimuovere etichette e protezione da file e messaggi di posta elettronica etichettati tramite Azure Information Protection o protetti tramite Rights Management
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Quando il [client Azure Information Protection viene installato nel computer](install-client-app.md), è possibile rimuovere etichette di classificazione e protezione da file e messaggi di posta elettronica.
 
@@ -35,7 +35,7 @@ Quando l'etichetta rimossa è configurata per l'applicazione della protezione, q
 
 Se si vuole scegliere un'altra etichetta o un set diverso di impostazioni di protezione, non è necessario rimuovere l'etichetta o la protezione. È invece possibile scegliere una nuova etichetta e, se necessario, definire autorizzazioni personalizzate, a condizione che questa configurazione sia autorizzata dall'amministratore. 
 
-È possibile rimuovere etichette e protezione da documenti e messaggi di posta elettronica di Office quando questi vengono ricreati o modificati nelle app desktop di Office: **Word**, **Excel**, **PowerPoint**, **Outlook**. 
+È possibile rimuovere etichette e protezione da documenti e messaggi di posta elettronica di Office quando questi vengono ricreati o modificati nelle app desktop di Office, come **Word**, **Excel**, **PowerPoint** e **Outlook**. 
 
 È anche possibile rimuovere etichette e protezione tramite **Esplora file**, che supporta altri tipi di file ed è un pratico strumento per rimuovere etichette e protezione da più file contemporaneamente.
 
@@ -54,7 +54,7 @@ Se l'icona **Elimina etichetta** non è ancora visualizzata, l'amministratore no
 > [!NOTE]
 > Se la barra di Information Protection non viene visualizzata nelle app di Office:
 >
-> - Se viene visualizzato un pulsante **Proteggi** nella barra multifunzione: selezionare **Proteggi** e quindi **Mostra barra**.
+> - Se viene visualizzato un pulsante **Proteggi** nella barra multifunzione: selezionare **Proteggi**, quindi selezionare **Mostra barra**.
 > 
 > - Il client Azure Information Protection potrebbe non essere [installato](install-client-app.md) oppure potrebbe essere in esecuzione in [modalità di sola protezione](client-protection-only-mode.md).
 
@@ -66,15 +66,15 @@ Quando si usa Esplora file, è possibile rimuovere rapidamente etichette e prote
 
 2. Per rimuovere un'etichetta: nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** fare clic su **Elimina l'etichetta**. Se l'etichetta è stata configurata per l'applicazione della protezione, la protezione viene automaticamente rimossa.
 
-3. Per rimuovere la protezione personalizzata da un singolo file: nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** deselezionare l'opzione **Proteggi con autorizzazioni personalizzate**. 
+3. Per rimuovere protezione personalizzata da un singolo file: nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** deselezionare l'opzione **Proteggi con autorizzazioni personalizzate**. 
     
     Se l'opzione **Proteggi con autorizzazioni personalizzate** non è visualizzata, l'amministratore non consente l'uso di questa opzione.
     
-4. Per rimuovere la protezione personalizzata da più file: nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** fare clic su **Rimuovi le autorizzazioni personalizzate**.
+4. Per rimuovere protezione personalizzata da più file: nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** fare clic su **Rimuovi le autorizzazioni personalizzate**.
     
     Se l'opzione **Rimuovi le autorizzazioni personalizzate** non è visualizzata, l'amministratore non consente l'uso di questa opzione.
 
-5. Fare clic su **Applica** e attendere la visualizzazione del messaggio **Operazione completata** per vedere i risultati. Fare clic su **Chiudi**.
+5. Fare clic su **Applica** e attendere la visualizzazione del messaggio **Operazione completata** per vedere i risultati. e quindi fare clic su **Chiudi**.
 
 
 ## <a name="other-instructions"></a>Altre istruzioni
@@ -85,5 +85,5 @@ Ulteriori procedure nella Guida per l'utente di Azure Information Protection:
 ## <a name="additional-information-for-administrators"></a>Informazioni aggiuntive per gli amministratori    
 Per istruzioni sulla configurazione per abilitare l'impostazione dei criteri **Make the custom permissions option available to users** (Rendi l'opzione delle autorizzazioni personalizzate disponibile per gli utenti), vedere [Come configurare le impostazioni dei criteri per Azure Information Protection](../configure-policy-settings.md).
 
-Altre istruzioni di configurazione: [Configurazione dei criteri di Azure Information Protection](../configure-policy.md).
+Altre istruzioni sulla configurazione: [Configurazione dei criteri di Azure Information Protection](../configure-policy.md).
 

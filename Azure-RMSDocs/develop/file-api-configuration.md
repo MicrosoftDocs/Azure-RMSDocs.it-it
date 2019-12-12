@@ -14,10 +14,10 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.openlocfilehash: d1181dfe1c495a334aaebd567df5db7e14649e25
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60178234"
 ---
 # <a name="file-api-configuration"></a>Configurazione dell'API file
@@ -38,15 +38,15 @@ Le sezioni seguenti descrivono le chiavi e valori chiave che controllano la crit
 
 ### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection`
 
-**Tipo**: Chiave
+**Tipo**: chiave
 
-**Description**: contiene la configurazione generale dell'API file.
+**Descrizione**: contiene la configurazione generale dell'API file.
 
 ### `HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\<EXT>`
 
-**Tipo**: Chiave
+**Tipo**: chiave
 
-**Description**: specifica le informazioni di configurazione di un'estensione file specifica, ad esempio, TXT, JPG e così via.
+**Descrizione**: specifica le informazioni di configurazione di un'estensione file specifica, ad esempio, TXT, JPG e così via.
 
 - Il carattere jolly "*" è consentito, ma l'impostazione con un'estensione specifica ha la precedenza sull'impostazione con il carattere jolly. Il carattere jolly non influisce sulle impostazioni dei file di Microsoft Office; questi devono essere disabilitati in modo esplicito per tipo di file.
 - Per specificare i file che non hanno un'estensione, usare “.”
@@ -59,16 +59,16 @@ Per specificare il comportamento di protezione, impostare il valore della **crit
 
 **Tipo**: REG_SZ
 
-**Description**: contiene uno dei tre valori:
+**Descrizione**: contiene uno dei tre valori:
 
 - **Off**: la crittografia è disabilitata.
 
 > [!Note]
 > Questa impostazione non è rilevante per la decrittografia. È possibile decrittografare qualsiasi file crittografato, se crittografato tramite la protezione nativa o Pfile, purché l'utente disponga del diritto di **ESTRAZIONE**.
 
-- **Native**:  viene usata la crittografia nativa. Per i file di Office, il file crittografato avrà la stessa estensione del file originale. Ad esempio, un file con estensione .docx sarà crittografato in un file con estensione .docx. Per altri file a cui può essere applicata la protezione nativa, il file sarà crittografato in un file con un'estensione del formato p*zzz*, dove *zzz* è l'estensione del file originale. Ad esempio i file con estensione txt vengono crittografati in un file con estensione ptxt. Di seguito viene fornito un elenco di estensioni di file a cui può essere applicata la protezione nativa.
+- **Nativa**: si usa la crittografia nativa. Per i file di Office, il file crittografato avrà la stessa estensione del file originale. Ad esempio, un file con estensione .docx sarà crittografato in un file con estensione .docx. Per altri file a cui può essere applicata la protezione nativa, il file sarà crittografato in un file con un'estensione del formato p*zzz*, dove *zzz* è l'estensione del file originale. Ad esempio i file con estensione txt vengono crittografati in un file con estensione ptxt. Di seguito viene fornito un elenco di estensioni di file a cui può essere applicata la protezione nativa.
 
-- **Pfile**: viene usata la crittografia PFile. All'estensione originale del file crittografato sarà aggiunto pfile. Dopo la crittografia, ad esempio, l'estensione di un file sarà .txt.pfile.
+- **Pfile**: si usa la crittografia PFile. All'estensione originale del file crittografato sarà aggiunto pfile. Dopo la crittografia, ad esempio, l'estensione di un file sarà .txt.pfile.
 
 
 > [!Note]
@@ -93,18 +93,18 @@ Se si tenta di crittografare un tipo di file bloccato, si verifica un errore [IP
 -   Estensioni di file: doc, dot, xla, xls, xlt, pps, ppt, docm, docx, dotm, dotx, xlam, xlsb, xlsm, xlsx, ppam, xltx, xps, potm, potx, ppsx, ppsm, pptm, pptx, thmx, vsdx, vsdm, vssx, vssm, vstx e vstm. 
 -   Tipo di protezione = Nativa (impostazione predefinita): sample.docx viene crittografato in sample.docx
 -   Tipo di protezione = Pfile: per i file Office ha lo stesso effetto della crittografia Nativa.
--   OFF: disabilita la crittografia.
+-   Off: Disabilita la crittografia.
 
 **File PDF**
 
 -   Tipo di protezione = Nativa: sample.pdf è crittografato e denominato sample.ppdf
 -   Tipo di protezione = Pfile: sample.pdf è crittografato e denominato sample.pdf.pfile.
--   OFF: disabilita la crittografia.
+-   Off: Disabilita la crittografia.
 
 **Tutti gli altri formati di file**
 
 -   Tipo di protezione = Pfile: sample.*zzz* è crittografato e denominato sample.*zzz*.pfile, dove *zzz* è l'estensione del file originale.
--   OFF: disabilita la crittografia.
+-   Off: Disabilita la crittografia.
 
 ### <a name="examples"></a>Esempi
 

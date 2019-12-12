@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 11/4/2019
 ms.openlocfilehash: aa544dfbd046ae8c3137cbc115d9af6ea219bc07
-ms.sourcegitcommit: 7a8eef5eb9d6440c6e2300cb3f264da31061b00d
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73591610"
 ---
 # <a name="structures"></a>Strutture
@@ -41,7 +41,7 @@ Informazioni fornite da un server per generare un token OAuth2
 
 | Campo | Description |
 |---|---|
-| Autorità | Autorità OAuth2  |
+| authority | Autorità OAuth2  |
 | risorse | Risorsa OAuth2  |
 | ambito | Ambito OAuth2  |
 
@@ -110,11 +110,11 @@ Richiesta HTTP
 |---|---|
 | ID | ID richiesta univoco: correlato con la stessa proprietà in mip_cc_http_response  |
 | tipo | Tipo di richiesta HTTP (ad esempio, GET e POST)  |
-| URL | URL della richiesta HTTP  |
+| url | URL della richiesta HTTP  |
 | bodySize | Dimensioni del corpo della richiesta HTTP in byte  |
-| corpo | Corpo della richiesta HTTP con memorizzazione nel buffer  |
+| body | Corpo della richiesta HTTP con memorizzazione nel buffer  |
 | headersCount | Numero di intestazioni di richiesta HTTP  |
-| Intestazioni | Buffer contenente intestazioni di richiesta HTTP  |
+| intestazioni | Buffer contenente intestazioni di richiesta HTTP  |
 
 
 ```c
@@ -139,9 +139,9 @@ Risposta HTTP
 | ID | ID richiesta univoco: correlato con la stessa proprietà in mip_cc_http_request  |
 | statusCode | Codice di stato della risposta HTTP  |
 | bodySize | Dimensione del corpo della risposta HTTP in byte  |
-| corpo | Corpo della risposta HTTP del buffer  |
+| body | Corpo della risposta HTTP del buffer  |
 | headersCount | Numero di intestazioni di risposta HTTP  |
-| Intestazioni | Buffer contenente intestazioni di risposta HTTP  |
+| intestazioni | Buffer contenente intestazioni di risposta HTTP  |
 
 
 ```c
@@ -162,7 +162,7 @@ Uno struct che include informazioni specifiche dell'applicazione
 
 | Campo | Description |
 |---|---|
-| Posta elettronica | Indirizzo di posta elettronica dell'utente  |
+| Posta elettronica | Indirizzo di posta elettronica utente  |
 
 
 ```c
@@ -178,7 +178,7 @@ Definisce lo stato abilitato/disabilitato di una singola funzionalità
 
 | Campo | Description |
 |---|---|
-| Funzionalità | Nome della funzionalità  |
+| Funzionalità di | Nome funzionalità  |
 | Valore | Stato abilitato/disabilitato  |
 
 
@@ -220,7 +220,7 @@ Un gruppo di utenti e i ruoli associati
 |---|---|
 | utenti | Elenco di utenti  |
 | usersCount | Numero di utenti  |
-| Ruoli | Elenco dei ruoli  |
+| roles | Elenco dei ruoli  |
 | rolesCount | Numero di ruoli  |
 
 
@@ -289,7 +289,7 @@ Rappresenta lo stato corrente di un documento in grado di riconoscere le etichet
 | Campo | Description |
 |---|---|
 | contentId | Descrizione del documento leggibile visibile nel portale di controllo dei tenant. Esempio per un file: [percorso\nomefile]; esempio per un messaggio di posta elettronica: [Subject: sender]. |
-| dataState | Stato dei dati del documento che interagisce con l'applicazione  |
+| DataState | Stato dei dati del documento che interagisce con l'applicazione  |
 | contentMetadataCallback | Callback dei metadati del documento  |
 | protectionDescriptor | Descrittore di protezione se il documento è attualmente protetto; in caso contrario, null  |
 | contentFormat | Formato del documento (file e indirizzo di posta elettronica)  |

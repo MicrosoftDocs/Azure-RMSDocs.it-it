@@ -7,11 +7,11 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: a29ea5be05d928f25b9a4255416d93acedcb1c0b
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73558923"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74840276"
 ---
 # <a name="class-mipcontentlabel"></a>Classe mip::ContentLabel 
 Astrazione per un'etichetta di Microsoft Information Protection applicata a un contenuto, in genere un documento.

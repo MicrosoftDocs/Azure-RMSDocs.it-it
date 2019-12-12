@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: cab28423de31e9d8fe3351f9c20d1c06275fa4c3
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68790735"
 ---
 # <a name="windows-store-setup"></a>Installazione per Windows Store
@@ -40,10 +40,10 @@ Nel sistema di sviluppo è necessario disporre del software seguente:
 -   Sistema operativo [Windows 8.1](https://windows.microsoft.com/windows-8/meet)
 -   [Windows SDK per Windows 8.1](https://msdn.microsoft.com/windows/desktop/bg162891.aspx)
 -   Microsoft [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/) o versione successiva o Visual Studio Express 2012, incluso in Windows SDK per Windows 8.0/8.1.
--   Il pacchetto di MS RMS SDK 4.2 per le applicazioni Windows Store. Per altre informazioni, vedere [Introduzione](get-started.md).
+-   Il pacchetto di MS RMS SDK 4.2 per le applicazioni Windows Store. Per ulteriori informazioni, vedere [Introduzione](get-started.md).
 -   Libreria di autenticazione: è consigliabile usare [Azure AD Authentication Library](https://msdn.microsoft.com/library/jj573266.aspx) e altre librerie di autenticazione.
 
-Leggere l'argomento relativo alle [novità](release-notes.md) per informazioni sugli aggiornamenti dell'API, indicazioni sul dispositivo e sull'ambiente, note sulla versione e domande frequenti (FAQ).
+Leggere l'argomento [Novità](release-notes.md) per informazioni sugli aggiornamenti dell'API, indicazioni sul dispositivo e sull'ambiente, note sulla versione e domande frequenti (FAQ).
 
 ## <a name="optional"></a>Facoltativo
 
@@ -53,7 +53,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabil
 
 
 -   Aprire Visual Studio.
--   Fare clic su **File**, **Nuovo** e quindi su **Progetto**.
+-   Fare clic su **File**, quindi su **Nuovo**e infine su **Progetto**.
 -   Nella finestra di dialogo **Nuovo progetto** fare clic su **Visual C\#** e selezionare **Applicazione vuota (Windows)** , quindi fare clic su **OK**.
 
     ![Creare un nuovo progetto](../media/winrtsetup-newproj.png)

@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: b61fba6a678ec625ac2dc7d78c2550cfba87bb60
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792127"
 ---
 # <a name="overview"></a>Panoramica
@@ -35,7 +35,7 @@ Di seguito sono riportati alcuni possibili scenari:
 -   I proprietari di una raccolta documenti online desiderano abilitare i diritti a visualizzare, stampare o modificare i documenti in base all'identità dell'utente quando gli stessi vengono scaricati su un dispositivo mobile.
 -   Un'azienda intende pubblicare informazioni riservate sui dipendenti in un sito Web interno che limiti la visualizzazione e la modifica dei privilegi a determinati utenti.
 
-MS RMS SDK 4.2 può essere scaricato, previa lettura e accettazione del relativo contratto di licenza, e distribuito liberamente con software di terze parti per consentire l'accesso client a contenuti protetti da diritti mediante l'uso e la distribuzione di server AD RMS nell'ambiente o di servizi Azure RMS. Per altre informazioni, vedere [Introduzione](get-started.md).
+MS RMS SDK 4.2 può essere scaricato, previa lettura e accettazione del relativo contratto di licenza, e distribuito liberamente con software di terze parti per consentire l'accesso client a contenuti protetti da diritti mediante l'uso e la distribuzione di server AD RMS nell'ambiente o di servizi Azure RMS. Per ulteriori informazioni, vedere [Introduzione](get-started.md).
 
 ## <a name="sdk-highlights"></a>Caratteristiche di SDK
 

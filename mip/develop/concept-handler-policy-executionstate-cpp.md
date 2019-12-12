@@ -9,10 +9,10 @@ ms.collection: M365-security-compliance
 ms.date: 11/01/2018
 ms.author: tommos
 ms.openlocfilehash: 34576337726e8974e65076bc1358d316ad32d9d2
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886161"
 ---
 # <a name="implement-executionstate"></a>Implementare ExecutionState
@@ -28,7 +28,7 @@ Il passaggio di informazioni a Microsoft Information Protection SDK per calcolar
 
 `ExecutionState` espone i membri virtuali seguenti. Ognuno di essi specifica un contesto per il motore dei criteri per restituire le informazioni sulle azioni che devono essere eseguite dall'applicazione. Inoltre, queste informazioni possono essere usate per specificare informazioni di controllo per la funzionalità di reporting di Azure Information Protection.
 
-| Member                                                                             | Valori di codice restituiti                                                                                                              |
+| Membro                                                                             | Returns                                                                                                              |
 | ---------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | `std::shared_ptr<mip::Label> GetNewLabel()`                                        | Restituisce l'etichetta da applicare all'oggetto.                                                                       |
 | `mip::DataState GetDataState()`                                                    | Restituisce il MIP::D ataState dell'oggetto.                                                                            |
@@ -66,7 +66,7 @@ struct ExecutionStateOptions {
 
 Ogni proprietà viene impostata dall'applicazione, quindi `ExecutionStateOptions` viene passato al costruttore della classe derivata da `mip::ExecutionState`. Queste informazioni vengono usate per determinare le azioni da eseguire. I dati disponibili in `mip::ExecutionState` vengono esposti anche nell'analitica di Azure Information Protection.
 
-### <a name="next-steps"></a>Fasi successive
+### <a name="next-steps"></a>Passaggi successivi
 
 - Informazioni su come determinare le [azioni di calcolo per un'etichetta nuova o esistente](concept-handler-policy-computeactions-cpp.md), in base allo stato corrente e desiderato.
 - Scaricare gli [esempi di API dei criteri da GitHub e provare l'API dei criteri](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)

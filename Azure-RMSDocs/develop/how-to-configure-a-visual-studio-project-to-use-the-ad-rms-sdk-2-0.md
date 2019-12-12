@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: d36938daf4dbcbe86331ec6852dfe4ecb04a2959
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792417"
 ---
 # <a name="configure-visual-studio"></a>Configurare Visual Studio
@@ -31,7 +31,7 @@ Questo argomento contiene le istruzioni di configurazione di un progetto di Visu
 
 **Istruzioni**
 
-### <a name="step-1-configure-a-visual-studio-project-to-use-rmssdk21"></a>Passaggio 1: Configurare un progetto di Visual Studio per usare RMS SDK 2.1
+### <a name="step-1-configure-a-visual-studio-project-to-use-rmssdk21"></a>Passaggio 1: configurare un progetto di Visual Studio per l'uso di RMS SDK 2,1
 
 Queste istruzioni sono specifiche per Microsoft Visual Studio 2010. Se si utilizza una versione diversa di Microsoft Visual Studio, le finestre di dialogo delle impostazioni possono apparire leggermente diverse.
 

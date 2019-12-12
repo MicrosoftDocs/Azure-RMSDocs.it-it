@@ -4,7 +4,7 @@ description: Informazioni sulle impostazioni del Registro di sistema sui server 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3b23908748ea9b0dba587530f249c6cdb7629b50
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 8424062fc95eebc6ea23ec9d0040a958eeaa0e1e
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689437"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933277"
 ---
 # <a name="registry-setting-for-the-rights-management-connector"></a>Impostazioni del Registro di sistema per il connettore Rights Management
 
@@ -35,7 +35,7 @@ Istruzioni per l'uso delle impostazioni:
 
     2.  Nell'output identificare il valore **LicensingIntranetDistributionPointUrl** .
 
-        Esempio: **LicensingIntranetDistributionPointUrl   : https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
+        Ad esempio: **LicensingIntranetDistributionPointUrl: https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
 
     3.  In questo valore rimuovere **/_wmcs/licensing** dalla stringa. La stringa rimanente corrisponde all'URL del servizio Azure Rights Management. Nell'esempio, l'URL del servizio Azure Rights Management è il valore seguente:
 
@@ -56,7 +56,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Predefinito
+**Valore:** predefinito
 
 **Dati:** https:// *\<YourTenantURL>* /_wmcs/certification
 
@@ -66,7 +66,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Predefinito
+**Valore:** predefinito
 
 **Data:** https:// *\<YourTenantURL>* /_wmcs/Licensing
 
@@ -79,7 +79,7 @@ Istruzioni per l'uso delle impostazioni:
 **Valore:** https:// *\<YourTenantURL>*
 
 
-**Dati:** Uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di Exchange al connettore RMS:
+**Dati:** uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di Exchange al connettore RMS:
 
 - http:// *<\ConnectorFQDN>*
 
@@ -94,7 +94,7 @@ Istruzioni per l'uso delle impostazioni:
 **Valore:** https:// *<\YourTenantURL>*
 
 
-**Dati:** Uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di Exchange al connettore RMS:
+**Dati:** uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di Exchange al connettore RMS:
 
 - http:// *<\ConnectorFQDN>*
 
@@ -107,7 +107,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Predefinito
+**Valore:** predefinito
 
 **Dati:** https:// *<\YourTenantURL>* /_wmcs/certification
 
@@ -117,7 +117,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Predefinito
+**Valore:** predefinito
 
 **Dati:** https:// *<\YourTenantURL>* /_wmcs/Licensing
 
@@ -129,7 +129,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Valore:** https:// *<\YourTenantURL>*
 
-**Dati:** Uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di Exchange al connettore RMS:
+**Dati:** uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di Exchange al connettore RMS:
 
 - http:// *<\ConnectorFQDN>*
 
@@ -143,7 +143,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Valore:** https:// *<\YourTenantURL>*
 
-**Dati:** Uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di Exchange al connettore RMS:
+**Dati:** uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di Exchange al connettore RMS:
 
 - http:// *<\ConnectorFQDN>*
 
@@ -159,7 +159,7 @@ Istruzioni per l'uso delle impostazioni:
 **Valore:** https:// *<\YourTenantURL>* /_wmcs/licensing
 
 
-**Dati:** Uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di SharePoint al connettore RMS:
+**Dati:** uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di SharePoint al connettore RMS:
 
 - http:// *<\ConnectorFQDN>* /_wmcs/licensing
 
@@ -171,9 +171,9 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Predefinito
+**Valore:** predefinito
 
-**Dati:** Uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di SharePoint al connettore RMS:
+**Dati:** uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di SharePoint al connettore RMS:
 
 - http:// *<\ConnectorFQDN>* /_wmcs/certification
 
@@ -185,10 +185,10 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Predefinito
+**Valore:** predefinito
 
 
-**Dati:** Uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di SharePoint al connettore RMS:
+**Dati:** uno dei seguenti, in base all'uso del protocollo HTTP o HTTPS per le comunicazioni dal server di SharePoint al connettore RMS:
 
 - http:// *<\ConnectorFQDN>* /_wmcs/licensing
 
@@ -203,7 +203,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Predefinito
+**Valore:** predefinito
 
 **Dati:** http:// *<\ConnectorFQDN>* /_wmcs/licensing
 
@@ -213,7 +213,7 @@ Istruzioni per l'uso delle impostazioni:
 
 **Tipo:** Reg_SZ
 
-**Valore:** Predefinito
+**Valore:** predefinito
 
 **Dati:** http:// *<\ConnectorFQDN>* /_wmcs/certification
 

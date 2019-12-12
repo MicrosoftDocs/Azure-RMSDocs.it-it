@@ -4,7 +4,7 @@ description: Dettagli tecnici sui tipi di file supportati, le estensioni di file
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/26/2019
+ms.date: 11/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 350f687a61899046346f26b5beb2944b9f3caf13
-ms.sourcegitcommit: 3464f9224b34dc54ad6fc1b7bc4dc11ad1ab8d59
+ms.openlocfilehash: 02f1e21b73f1d800e5e50918e6a5694402840474
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/28/2019
-ms.locfileid: "72984882"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935317"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-client"></a>Guida dell'amministratore: Tipi di file supportati dal client Azure Information Protection
 
@@ -165,7 +165,7 @@ Per configurare il client Azure Information Protection per l'applicazione della 
 
     - Per la versione a 32 bit di Windows: **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
 
-    - Per la versione a 64 bit di Windows: **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** e **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection**
+    - Per la versione a 64 bit di Windows: **HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\msipc\fileprotection** e **HKEY_LOCAL_MACHINE \software\microsoft\msipc\fileprotection**
 
 2. Nella nuova chiave aggiunta (ad esempio HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection\\\*), creare un nuovo valore stringa (REG_SZ) denominato **Encryption** con valore dati **Pfile**.
 
@@ -173,7 +173,7 @@ Per configurare il client Azure Information Protection per l'applicazione della 
 
 Queste due impostazioni hanno come risultato l'applicazione della protezione generica da parte del client Azure Information Protection a tutti i file dotati di estensione. Se è questo l'obiettivo, non è necessario eseguire altre configurazioni. È tuttavia possibile definire eccezioni per specifici tipi di file, in modo che vengano comunque protetti in modo nativo. A tale scopo, è necessario apportare 3 (per Windows a 32 bit) o 6 (per Windows a 64 bit) modifiche aggiuntive del Registro di sistema per ogni tipo di file:
 
-1. Per **HKEY_LOCAL_MACHINE\Software\Microsoft\MSIPC\FileProtection** e **HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\MSIPC\FileProtection** (se applicabile): aggiungere una nuova chiave con il nome dell'estensione di file (senza il periodo precedente).
+1. Per **HKEY_LOCAL_MACHINE \software\microsoft\msipc\fileprotection** e **HKEY_LOCAL_MACHINE \software\wow6432node\microsoft\msipc\fileprotection** (se applicabile): aggiungere una nuova chiave con il nome dell'estensione del nome file (senza il punto precedente).
 
     Ad esempio, i file con estensione del nome di file .docx, creano una chiave denominata **DOCX**.
 
@@ -271,7 +271,7 @@ Lo scanner di Azure Information Protection e il comando di PowerShell [Set-AIPFi
 
 1. Per il computer che esegue lo scanner o la sessione di PowerShell, installare [Office 2010 Filter Pack SP2](https://support.microsoft.com/en-us/help/2687447/description-of-office-2010-filter-pack-sp2).
 
-2. Per lo scanner: dopo aver individuato le informazioni riservate, se il file zip deve essere classificato e protetto con un'etichetta, aggiungere una voce del registro di sistema per questa estensione di file per la protezione generica (Pfile), come descritto in [modifiche del registro di sistema per modificare i tipi di file sono protette](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) dalle istruzioni per la distribuzione dello scanner.
+2. Per lo scanner: dopo aver trovato le informazioni riservate, se il file zip deve essere classificato e protetto con un'etichetta, aggiungere una voce del registro di sistema per questa estensione di file per la protezione generica (Pfile), come descritto in [modifiche del registro di sistema per modificare i tipi di file protetti](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) dalle istruzioni per la distribuzione dello scanner.
 
 Scenario di esempio dopo avere eseguito questi passaggi: 
 
@@ -283,7 +283,7 @@ Dopo aver controllato il file, lo scanner lo classifica come **Confidential \ Fi
 
 Lo scanner Azure Information Protection e il comando di PowerShell [Set-AIPFileClassification](/powershell/module/azureinformationprotection/set-aipfileclassification) possono anche usare una soluzione OCR (Optical Character Recognition) per esaminare immagini TIFF con estensione di file tiff quando si installa la funzionalità IFilter TIFF di Windows e quindi si configurano le [impostazioni IFilter TIFF di Windows](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-7/dd744701%28v%3dws.10%29) nel computer che esegue lo scanner o la sessione di PowerShell.
 
-Per lo scanner: dopo aver individuato le informazioni riservate, se il file con estensione TIFF deve essere classificato e protetto con un'etichetta, aggiungere una voce del registro di sistema per questa estensione di file in modo che disponga della protezione nativa, come descritto in [modifiche del registro di sistema per modificare i tipi di file protetto](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) dalle istruzioni per la distribuzione dello scanner.
+Per lo scanner: dopo aver individuato le informazioni riservate, se il file con estensione TIFF deve essere classificato e protetto con un'etichetta, aggiungere una voce del registro di sistema per questa estensione di file in modo che disponga della protezione nativa, come descritto in [modifiche del registro di sistema per modificare i tipi di file protetti](../deploy-aip-scanner.md#scanner-from-the-classic-client-use-the-registry-to-change-which-file-types-are-protected) dalle istruzioni per la distribuzione dello scanner.
 
 ## <a name="next-steps"></a>Passaggi successivi
 Dopo aver identificato i tipi di file supportati dal client di Azure Information Protection, vedere le risorse seguenti per altre informazioni che potrebbero essere necessarie per supportare il client:

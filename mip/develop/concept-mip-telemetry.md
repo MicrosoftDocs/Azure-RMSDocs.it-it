@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 10/01/2019
 ms.author: tommos
 ms.openlocfilehash: 3d97bdbf5307d7f0faefe6b6434b1df1ebc67798
-ms.sourcegitcommit: 487e681c9683b8adb7ae6fcfb374830bf0e5ad72
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74484854"
 ---
 # <a name="microsoft-information-protection-sdk---telemetry-configuration"></a>Microsoft Information Protection SDK-configurazione della telemetria
@@ -32,7 +32,7 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 
 #### <a name="event-heartbeat"></a>Evento: heartbeat
 
-| Nome                                 | Descrizione                                                                            | Pulitura |
+| Name                                 | Description                                                                            | Pulitura |
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
 | App. ApplicationId                    | Identificatore dell'applicazione fornito tramite MIP:: ApplicationInfo.                          | No       |
 | App. ApplicationName                  | Nome dell'applicazione fornito tramite MIP:: ApplicationInfo.                                | No       |
@@ -62,7 +62,7 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 
 #### <a name="event-discovery"></a>Evento: individuazione
 
-| Nome                                 | Descrizione                                                                            | Pulitura |
+| Name                                 | Description                                                                            | Pulitura |
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
 | ActionId                             | ID di azione univoco per questo evento, usato per la correlazione degli eventi.                           | No       |
 | App. ApplicationId                    | Identificatore dell'applicazione fornito tramite MIP:: ApplicationInfo.                          | No       |
@@ -71,7 +71,7 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 | ApplicationId                        | Versione dell'applicazione profided tramite MIP:: ApplicationInfo.                             | No       |
 | ApplicationName                      | Nome dell'applicazione fornito tramite MIP:: ApplicationInfo.                                | No       |
 | CreationTime                         | È stato generato l'evento Time.                                                              | No       |
-| dataState                            | Lo stato dei dati quando l'applicazione agisce su "REST", "MOTION", "USE".           | No       |
+| DataState                            | Lo stato dei dati quando l'applicazione agisce su "REST", "MOTION", "USE".           | No       |
 | DefaultLabel.Id                      | Identificatore di etichetta predefinito del tenant.                                                       | No       |
 | Motore. TenantId                      | GUID del tenant Home dell'utente autenticato.                                            | No       |
 | Motore. UserObjectId                  | Identificatore dell'oggetto utente in Azure Active Directory.                                      | No       |
@@ -98,7 +98,7 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 
 #### <a name="event-label-change"></a>Evento: modifica dell'etichetta
 
-| Nome                                 | Descrizione                                                                            | Pulitura |
+| Name                                 | Description                                                                            | Pulitura |
 | ------------------------------------ | -------------------------------------------------------------------------------------- | -------- |
 | ActionId                             | ID di azione univoco per questo evento, usato per la correlazione degli eventi.                           | No       |
 | ActionIdBefore                       | ID azione precedente. Utilizzato per concatenare al nuovo ID di azione.                                    | No       |
@@ -109,7 +109,7 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 | ApplicationId                        | ID applicazione fornito tramite MIP:: ApplicationInfo.                                  | No       |
 | ApplicationName                      | Nome dell'applicazione fornito tramite MIP:: ApplicationInfo.                                | No       |
 | CreationTime                         | Ora di generazione dell'evento.                                                          | No       |
-| dataState                            | Lo stato dei dati quando l'applicazione agisce su "REST", "MOTION", "USE".           | No       |
+| DataState                            | Lo stato dei dati quando l'applicazione agisce su "REST", "MOTION", "USE".           | No       |
 | DefaultLabel.Id                      | Identificatore di etichetta predefinito del tenant.                                                       | No       |
 | Motore. TenantId                      | GUID del tenant Home dell'utente autenticato.                                            | No       |
 | Motore. UserObjectId                  | Identificatore dell'oggetto utente in Azure Active Directory.                                      | No       |
@@ -129,7 +129,7 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 | OrganizationId                       | GUID del tenant Home dell'utente autenticato.                                            | No       |
 | Piattaforma                             | Versione del sistema operativo.                                                              | No       |
 | ProcessName                          | Nome del processo che utilizza l'SDK.                                                     | No       |
-| Versione prodotto                      |                                                                                        | No       |
+| Versione del prodotto                      |                                                                                        | No       |
 | Protetto                            | Bool che indica se il file è protetto o meno.                                       | No       |
 | Protetto prima                     | Bool che indica se il file è stato precedentemente protetto o meno.                           | No       |
 | Protection                           | Identificatore del modello di protezione.                                                    | No       |

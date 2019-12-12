@@ -4,7 +4,7 @@ description: Per preparare l'ambiente e per implementare e gestire Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/28/2019
+ms.date: 11/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c3dc822a9653aabc86a8f54ac16890700dca454d
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: bc7370507cce3b8ff783190cc82fcd8230329bf1
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559759"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934875"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Guida di orientamento per la distribuzione di Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "73559759"
 
 Usare le indicazioni della procedura che segue per preparare l'ambiente e per implementare e gestire Azure Information Protection per l'organizzazione.
 
-In alternativa 
+In alternativa: 
 
 - Cerchi istruzioni basate sullo scenario per Azure Information Protection? Vedere le [guide alle procedure per scenari comuni che usano Azure Information Protection](how-to-guides.md).
 

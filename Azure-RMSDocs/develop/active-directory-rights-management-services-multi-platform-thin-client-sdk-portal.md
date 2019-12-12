@@ -15,10 +15,10 @@ ms.reviewer: kartikk
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: dd357e74e71b9e5b296825b395ecd54b14c332d5
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68788685"
 ---
 # <a name="rights-management-sdk42"></a>Rights Management SDK 4.2
@@ -41,7 +41,7 @@ La versione RMS SDK 4.2 è disponibile per i sistemi operativi seguenti:
 - Windows Store
 - Portable C++ per sistemi operativi basati su Linux
 
-## <a name="sections"></a>Sezioni
+## <a name="sections"></a>Nelle sezioni
 
 [Panoramica](overview.md): Rights Management Services è una tecnologia che consente di proteggere le informazioni digitali da usi non autorizzati. Tramite le applicazioni abilitate all’uso di diritti, i proprietari del contenuto potranno definire gli utenti autorizzati ad aprire, modificare, stampare, inoltrare o eseguire altre operazioni con il relativo contenuto.
 

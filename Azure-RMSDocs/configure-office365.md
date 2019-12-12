@@ -4,7 +4,7 @@ description: Informazioni e istruzioni per gli amministratori per configurare i 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/23/2019
+ms.date: 11/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 625a838039edb3d1bdcc8a7f4c68b5ce9f5ba9dd
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 73e087934d6858bf7ce3644ac47b8c7f6e2327f9
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72446972"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935113"
 ---
 # <a name="office365-configuration-for-online-services-to-use-the-azure-rights-management-service"></a>Office 365: configurazione per Servizi online usare il servizio Rights Management di Azure
 
@@ -527,7 +527,7 @@ Anche se non è possibile configurare IRM per OneDrive for Business per gli uten
 > [!TIP]
 > È inoltre possibile usare questo script per configurare IRM per una libreria di SharePoint Online. Per questa configurazione, probabilmente si desidererà attivare l'opzione aggiuntiva **Non consentire il caricamento di documenti che non supportano IRM**, per assicurare che la libreria contenga solo documenti protetti.    A tale scopo, aggiungere il parametro `-IrmReject` per il comando Set-IrmConfiguration nello script.
 >
-> È anche necessario modificare la variabile `$webUrls` (ad esempio, **https: \//contoso. SharePoint. com**) e la variabile `$listTitle`, ad esempio **$Reports**.
+> È anche necessario modificare la variabile `$webUrls` (ad esempio, **https:\//contoso.SharePoint.com**) e `$listTitle` variabile (ad esempio, **$Reports**).
 
 Se è necessario disabilitare IRM per le librerie OneDrive for Business dell'utente, vedere la sezione [Script per disattivare IRM per OneDrive for Business](#script-to-disable-irm-for-onedrive-for-business).
 

@@ -15,13 +15,13 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: ef9e600f05d4935a03e105cca370a8afa82fa5d9
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792361"
 ---
-# <a name="get-started"></a>Attività iniziali
+# <a name="get-started"></a>Operazioni preliminari
 
 Per questa versione di Microsoft Rights Management SDK 4.2, l'approccio introduttivo alla prima applicazione si basa sulle guide all'installazione dell'ambiente di sviluppo per ciascuno dei sistemi operativi o delle piattaforme. Per iniziare a creare l'applicazione abilitata all'uso di diritti, seguire questa procedura:
 
@@ -50,7 +50,7 @@ Per questa versione di Microsoft Rights Management SDK 4.2, l'approccio introdut
 3. Consultare la [mappa panoramica sugli SDK](api-reference-4-2.md).
 4. Per importanti **note sulla versione** e per le **istruzioni per gli sviluppatori**, vedere l' argomento relativo alle [novità](release-notes.md).
 
-   |Argomento|Descrizione|
+   |Argomento|Description|
    |-----|-----------|
    |[Novità](release-notes.md)|MS RMS SDK 4.2 offre maggiore facilità e flessibilità nell'abilitazione di applicazioni RMS.|
    |[Configurare l'ambiente di sviluppo](setup-developer-environment.md)|Gli argomenti seguenti illustrano la configurazione dell'ambiente di sviluppo per il funzionamento con le API di AD RMS SDK per il sistema operativo in uso.|

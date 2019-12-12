@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 11/08/2018
 ms.author: tommos
 ms.openlocfilehash: 3ae27b1bf0b4f709e9621f00b1b3a16c2ba1882c
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886139"
 ---
 # <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK-metadati
@@ -34,11 +34,11 @@ Il GUID è un identificatore univoco per ogni etichetta in un'organizzazione.
 
 L'SDK MIP applica il seguente set di metadati.
 
-| Attributo | Tipo o valore                 | Descrizione                                                                                                                                                                                                                                        | Mandatory |
+| Attributo | Tipo o valore                 | Description                                                                                                                                                                                                                                        | Obbligatorio |
 |-----------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| **Abilitato**   | true o false                 | Questo attributo indica se la classificazione rappresentata da questo set di coppie chiave-valore è abilitata per l'elemento dati. In genere, i prodotti DLP convalidano l'esistenza di questa chiave per identificare l'etichetta di classificazione. | Sì       |
+| **Attivata**   | True o false                 | Questo attributo indica se la classificazione rappresentata da questo set di coppie chiave-valore è abilitata per l'elemento dati. In genere, i prodotti DLP convalidano l'esistenza di questa chiave per identificare l'etichetta di classificazione. | Yes       |
 | **SiteId**    | GUID                          | ID tenant Azure Active Directory                                                                                                                                                                                                                   | Yes       |
-| **ActionId**  | GUID                          | ActionID viene modificato ogni volta che viene impostata un'etichetta. I log di controllo includeranno sia vecchi che nuovi actionID per consentire il concatenamento dell'attività di assegnazione di etichette all'elemento di dati.                                                                                 | Sì       |
+| **ActionId**  | GUID                          | ActionID viene modificato ogni volta che viene impostata un'etichetta. I log di controllo includeranno sia vecchi che nuovi actionID per consentire il concatenamento dell'attività di assegnazione di etichette all'elemento di dati.                                                                                 | Yes       |
 | **Metodo**    | Standard o con privilegi        | Impostare tramite [MIP:: AssignmentMethod](reference/mip-enums-and-structs.md#assignmentmethod-enum). Standard implica che l'etichetta venga applicata per impostazione predefinita o automaticamente. Privileged implica che l'etichetta è stata selezionata manualmente.                                                                                                                                                                                                                 | No        |
 | **SetDate**   | Formato data ISO 8601 esteso | Timestamp del momento in cui è stata impostata l'etichetta.                                                                                                                                                                                                              | No        |
 | **Nome**      | string                        | Etichetta nome univoco all'interno del tenant. Non corrisponde necessariamente al nome visualizzato.                                                                                                                                                              | No      |
@@ -47,21 +47,21 @@ L'SDK MIP applica il seguente set di metadati.
 
 Quando viene applicato a un file, il risultato è simile alla tabella seguente.
 
-| Chiave                                                         | Value                                |
+| Codice                                                         | Value                                |
 |-------------------------------------------------------------|--------------------------------------|
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Enabled     | true                                 |
+| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Enabled     | True                                 |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SetDate     | 2018-11-08T21:13:16-0800             |
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Method      | Con privilegi                           |
-| MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_Name        | Confidential (Riservato)                         |
+| MSIP_Label_2096f6a2-d2f7-48be-B329-b73aaa526e5d_Method      | Con privilegi                           |
+| MSIP_Label_2096f6a2-d2f7-48be-B329-b73aaa526e5d_Name        | Confidential (Riservato)                         |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_SiteId      | cb46c030-1825-4e81-a295-151c039dbf02 |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_ContentBits | 2                                    |
 | MSIP_Label_2096f6a2-d2f7-48be-b329-b73aaa526e5d_ActionId    | 88124cf5-1340-457d-90e1-0000a9427c99 |
 
 ## <a name="extending-metadata-with-custom-attributes"></a>Estensione di metadati con attributi personalizzati
 
-I metadati personalizzati possono essere accodati tramite l'API di file e criteri. Gli attributi personalizzati devono mantenere il `MSIP_Label_GUID` prefisso di base. 
+I metadati personalizzati possono essere accodati tramite l'API di file e criteri. Gli attributi personalizzati devono mantenere il prefisso `MSIP_Label_GUID` di base. 
 
-Ad esempio, un'applicazione scritta da Contoso Corporation deve applicare i metadati indicanti il sistema che ha generato un file con etichetta. L'applicazione può creare una nuova etichetta con `MSIP_Label_GUID`prefisso. Il nome del fornitore del software e l'attributo personalizzato vengono aggiunti al prefisso per generare i metadati personalizzati.
+Ad esempio, un'applicazione scritta da Contoso Corporation deve applicare i metadati indicanti il sistema che ha generato un file con etichetta. L'applicazione può creare una nuova etichetta con prefisso `MSIP_Label_GUID`. Il nome del fornitore del software e l'attributo personalizzato vengono aggiunti al prefisso per generare i metadati personalizzati.
 
 ```
 MSIP_Label_f048e7b8-f3aa-4857-bf32-a317f4bc3f29_ContosoCorp_GeneratedBy = HRReportingSystem
@@ -78,7 +78,7 @@ Quando si sostituisce un attributo con una versione più recente, è necessario 
 
 `MSIP_Label_GUID_EnabledV2 = True | False | Condition`
 
-## <a name="email"></a>Email
+## <a name="email"></a>Posta elettronica
 
 I metadati applicati alla posta elettronica mantengono un formato di coppia chiave/valore simile a quello dei documenti. La differenza principale consiste nel fatto che tutti gli attributi vengono serializzati in una singola intestazione di messaggio di posta elettronica denominata **MSIP_Labels**. Le coppie chiave/valore sono delimitate da un punto e virgola e da uno spazio vuoto e inserite nella nuova intestazione.
 

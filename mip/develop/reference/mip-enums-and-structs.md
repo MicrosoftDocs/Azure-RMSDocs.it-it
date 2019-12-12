@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: a6e5fae2296fb6f966f5f7fb6b73facb867398a2
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560456"
 ---
 # <a name="enumerations-and-structures"></a>Enumerazioni e strutture
@@ -69,14 +69,14 @@ Allineamento per i contrassegni di contenuto (intestazione del contenuto o piè 
 --------------------------------|---------------------------------------------
 STANDARD            | Il metodo di assegnazione etichette è standard
 CON privilegi            | Il metodo di assegnazione etichetta è con privilegi
-Automatico            | Il metodo di assegnazione etichette è automatico
+AUTO            | Il metodo di assegnazione etichette è automatico
 Metodo di assegnazione dell'etichetta nel documento. Indica se l'assegnazione dell'etichetta è stata eseguita automaticamente, standard o come operazione con privilegi (equivalente a un'operazione di amministratore).
   
 #### <a name="actionsource-enum"></a>Enumerazione ActionSource
  Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
-Manuale            | Selezionato manualmente dall'utente
-Automatico            | Imposta da condizioni dei criteri
+MANUAL            | Selezionato manualmente dall'utente
+AUTOMATIC            | Imposta da condizioni dei criteri
 CONSIGLIABILE            | Impostato dall'utente dopo la raccomandazione dell'etichetta per le condizioni dei criteri
 DEFAULT            | Impostazione predefinita nei criteri
 definisce ciò che ha attivato l'evento di etichettatura
@@ -86,14 +86,14 @@ definisce ciò che ha attivato l'evento di etichettatura
 --------------------------------|---------------------------------------------
 REST            | Dati inattivi archiviati fisicamente in database/file/warehouse
 MOVIMENTO            | Dati che attraversano una rete o che risiedono temporaneamente nella memoria del computer per la lettura o l'aggiornamento
-USARE            | Dati attivi con modifiche costanti archiviati fisicamente in database/file/warehouse e così via
+USE            | Dati attivi con modifiche costanti archiviati fisicamente in database/file/warehouse e così via
 Definisce lo stato dei dati su cui si sta eseguendo l'applicazione.
   
 #### <a name="contentformat-enum"></a>Enumerazione ContentFormat
  Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
 DEFAULT            | Il formato del contenuto è il formato di file standard
-Posta elettronica            | Il formato del contenuto è formato posta elettronica
+E-MAIL            | Il formato del contenuto è formato posta elettronica
 Formato del contenuto.
   
 #### <a name="labelfiltertype-enum"></a>Enumerazione LabelFilterType
@@ -149,7 +149,7 @@ POLICY_SYNC_ERROR            | Tentativo di sincronizzare i dati dei criteri non
 NO_PERMISSIONS            | L'utente non è riuscito a ottenere l'accesso al contenuto, Ad esempio, nessuna autorizzazione, contenuto revocato
 NO_AUTH_TOKEN            | L'utente non è riuscito a ottenere l'accesso al contenuto a causa di un token di autenticazione vuoto.
 DISABLED_SERVICE            | L'utente non è riuscito a ottenere l'accesso al contenuto a causa della disabilitazione del servizio
-PROXY_AUTH_ERROR            | Autenticazione proxy non riuscita.
+PROXY_AUTH_ERROR            | Impossibile autenticare il proxy.
 NO_POLICY            | Nessun criterio configurato per l'utente/tenant
 OPERATION_CANCELLED            | Operazione annullata
 ADHOC_PROTECTION_REQUIRED            | È necessario impostare la protezione ad hoc per completare l'azione sul file
@@ -195,7 +195,7 @@ Tipo di richiesta HTTP.
  Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
 Trace            | 
-Informazioni            | 
+Info            | 
 Avviso            | 
 Errore di            | 
 Diversi livelli di log usati in MIP SDK.
@@ -215,7 +215,7 @@ ADD_CONTENT_HEADER            | Aggiunge un'intestazione contenuto al tipo di az
 ADD_WATERMARK            | Aggiunge una filigrana al tipo di azione dell'intero documento.
 PERSONALIZZATO            | Tipo di azione definito personalizzato.
 JUSTIFY            | Tipo di azione di allineamento.
-METADATI            | Tipo di azione di modifica dei metadati.
+METADATA            | Tipo di azione di modifica dei metadati.
 PROTECT_ADHOC            | Tipo di azione di protezione con criteri ad hoc.
 PROTECT_BY_TEMPLATE            | Tipo di azione di protezione con modello.
 PROTECT_DO_NOT_FORWARD            | Tipo di azione di protezione senza inoltro.
@@ -254,12 +254,12 @@ Sensibilità            |
  Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
 Header            | 
-Piè            | 
+Piè di pagina            | 
   
 #### <a name="labelactiondatatype-enum"></a>Enumerazione LabelActionDataType
  Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
-Consigliato            | 
+Raccomandazione            | 
 Applica            | 
   
 #### <a name="protectionactiontype-enum"></a>Enumerazione ProtectionActionType
@@ -420,7 +420,7 @@ Ottiene l'identificatore della stringa per il diritto "export".
   
 **Restituisce**: identificatore della stringa per il diritto "export"
   
-#### <a name="extract-function"></a>Estrai funzione
+#### <a name="extract-function"></a>Extract - funzione
 Ottiene l'identificatore della stringa per il diritto "extract".
 
   

@@ -14,10 +14,10 @@ ms.reviewer: lilukov
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: fb4167ecc6f4dca175fe478d085a228a044416a9
-ms.sourcegitcommit: da251904c2506a07ea28a820b0f49e7ba7007a04
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/27/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74564536"
 ---
 # <a name="central-reporting-for-azure-information-protection"></a>Reporting centralizzato per Azure Information Protection

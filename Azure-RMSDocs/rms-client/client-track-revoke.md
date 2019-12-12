@@ -4,7 +4,7 @@ description: Dopo aver protetto i documenti, è possibile tenere traccia del mod
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,18 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 39fa96ed1c355e0cef12dfd87950b9ab0c495c29
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 537318bd21ec27d91fc1868d4c9e4ef4b6a8fa35
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71690257"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935674"
 ---
-# <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Manuale dell'utente: Tenere traccia dei documenti e revocarli quando si usa Azure Information Protection
+# <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guida dell'utente: Rilevare i documenti e revocarne l'accesso quando si usa Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Dopo avere protetto i documenti con Azure Information Protection, è possibile tenere traccia del modo in cui tali documenti vengono usati dagli utenti. Se necessario, è anche possibile revocare l'accesso a questi documenti se gli utenti non dovranno più essere in grado di leggerli. A tale scopo usare il **sito di rilevamento dei documenti**. È possibile accedere al sito da computer Windows, Mac e anche da tablet e telefoni.
 
@@ -38,13 +38,13 @@ Azioni che è possibile eseguire nel sito di rilevamento dei documenti:
         
         ![Icona per la revoca dell'accesso nel sito di rilevamento dei documenti](../media/tracking-site-revoke-access-icon.png)
         
-- Per esportare in Excel, 
+- Se si desidera esportare in Excel: 
     
     - Fare clic su **Esporta in CSV**, in modo da poter modificare i dati e creare visualizzazioni e grafici personalizzati:
          
         ![Icona Esporta in CSV nel sito di rilevamento dei documenti](../media/tracking-site-export-icon.png)
          
-- Per configurare notifiche di posta elettronica, 
+- Se si desidera configurare notifiche tramite posta elettronica: 
      
     - Fare clic su **Impostazioni** e indicare se e in che modo ricevere una notifica di posta elettronica quando un utente accede al documento:
         
@@ -61,7 +61,7 @@ Azioni che è possibile eseguire nel sito di rilevamento dei documenti:
 A meno che non sia un amministratore, l'utente può rilevare e revocare solo i documenti che ha protetto. Non è possibile rilevare i messaggi di posta elettronica protetti usando il sito di rilevamento dei documenti.
 
 > [!NOTE] 
-> Se l'amministratore ha configurato controlli sulla privacy per il sito di rilevamento dei documenti, può non essere possibile vedere quando gli utenti dell'organizzazione accedono a un documento rilevato. Un amministratore può escludere tutti gli utenti o solo alcuni utenti. Tuttavia, è sempre possibile revocare l'accesso ai documenti rilevati.
+> Se l'amministratore ha configurato i controlli sulla privacy per il sito di rilevamento dei documenti, è possibile che non venga visualizzato quando gli utenti dell'organizzazione hanno eseguito l'accesso a un documento monitorato. Un amministratore può esentare tutti gli utenti o solo alcuni utenti. Tuttavia, è sempre possibile revocare l'accesso ai documenti rilevati.
 
 Per rilevare un documento protetto, è necessario usare il computer Windows per registrarlo con il sito di rilevamento dei documenti. A questo scopo, usare Esplora file o le app di Office.
 
@@ -102,17 +102,17 @@ Dopo aver registrato i documenti protetti tramite le app di Office o Esplora fil
 
 - Tramite il PC Windows, il computer Mac o il dispositivo mobile, visitare il [sito di rilevamento dei documenti](https://go.microsoft.com/fwlink/?LinkId=529562).
 
-    **Browser supportati**: Si consiglia di utilizzare Internet Explorer almeno la versione 10, ma è possibile utilizzare uno dei seguenti browser per utilizzare il sito di rilevamento dei documenti:
+    **Browser supportati**: è consigliabile usare Internet Explorer almeno la versione 10, ma è possibile usare uno dei seguenti browser per usare il sito di rilevamento dei documenti:
 
-    - Internet Explorer: Almeno la versione 10
+    - Internet Explorer: almeno la versione 10
 
-    - Internet Explorer 9 con almeno MS12-037: Aggiornamento cumulativo della sicurezza per Internet Explorer: 12 giugno 2012
+    - Internet Explorer 9 con almeno MS12-037: aggiornamento cumulativo della sicurezza per Internet Explorer: 12 giugno 2012
 
-    - Mozilla Firefox: Almeno la versione 12
+    - Mozilla Firefox: almeno la versione 12
 
-    - Apple Safari 5: Almeno la versione 5
+    - Apple Safari 5: almeno la versione 5
 
-    - Google Chrome: Almeno la versione 18
+    - Google Chrome: almeno la versione 18
 
 
 ## <a name="other-instructions"></a>Altre istruzioni

@@ -4,7 +4,7 @@ description: Informazioni per gli amministratori sulla distribuzione dei client 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,14 +12,14 @@ ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 17b15050ce012b5c81cece5537a34fb3a7402213
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: f91052c45a3246d3ed63ab9945e09a3dd7ab3789
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684189"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935164"
 ---
-# <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Client Azure Information Protection: Installazione e configurazione per i client
+# <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Client Azure Information Protection: installazione e configurazione per i client
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -31,21 +31,21 @@ Questi client sono consigliati anche per tutti i computer Windows perché instal
 
 Il client classico supporta inoltre un sito di rilevamento dei documenti che consente agli utenti di rilevare e revocare i file protetti.
 
-## <a name="the-azure-information-protection-client-for-windows-installation-and-configuration"></a>Client Azure Information Protection per Windows: Installazione e configurazione
+## <a name="the-azure-information-protection-client-for-windows-installation-and-configuration"></a>Client Azure Information Protection per Windows: installazione e configurazione
 
 Per un'installazione e una configurazione aziendali del client per Windows, vedere le guide di amministrazione seguenti:
 
-- Client di etichetta unificata: [Guida dell'amministratore client per le etichette unificate di Azure Information Protection](./rms-client/clientv2-admin-guide.md)] (./rms-client/client-admin-guide.md)
+- Client per l'assegnazione di etichette unificata: [Azure Information Protection guida dell'amministratore client Unified Labeling](./rms-client/clientv2-admin-guide.md)] (./RMS-client/client-admin-guide.MD)
 
-- Client classico: [Guida per l'amministratore del client di Azure Information Protection](./rms-client/client-admin-guide.md)
+- Client classico: [Guida dell'amministratore del client Azure Information Protection](./rms-client/client-admin-guide.md)
 
 Tuttavia, se si vuole installare e testare rapidamente questi client per un singolo computer, vedere le istruzioni seguenti dalle guide per gli utenti:
 
-- Client di etichetta unificata: [Scaricare e installare il client Azure Information Protection Unified Labeling](./rms-client/install-unifiedlabelingclient-app.md)
+- Client con etichetta unificata: [scaricare e installare il client di etichettatura unificata di Azure Information Protection](./rms-client/install-unifiedlabelingclient-app.md)
 
-- Client classico: [Scaricare e installare il client di Azure Information Protection](./rms-client/install-client-app.md) dal [manuale dell'utente di Azure Information Protection client](./rms-client/client-user-guide.md).
+- Client classico: [scaricare e installare il client di Azure Information Protection](./rms-client/install-client-app.md) dalla [Guida per l'utente del client Azure Information Protection](./rms-client/client-user-guide.md).
 
-## <a name="the-azure-information-protection-app-for-ios-and-android-installation-and-management"></a>App Azure Information Protection per iOS e Android: Installazione e gestione
+## <a name="the-azure-information-protection-app-for-ios-and-android-installation-and-management"></a>App Azure Information Protection per iOS e Android: installazione e gestione
 
 Per installare il Visualizzatore app Azure Information Protection per iOS e Android, usare i collegamenti nella [pagina Microsoft Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=303970). Nessuna configurazione richiesta.
 
@@ -68,7 +68,7 @@ Informazioni aggiuntive per l'aggiunta dell'app Azure Information Protection a I
 
 - Per iOS: cercare e aggiungere l'app da Intune.
 
-- Per Android: quando si aggiunge l'app, usare l'**URL di App Store** seguente:
+- Per Android: quando si aggiunge l'app, usare l' **URL AppStore**seguente:
         
         https://play.google.com/store/apps/details?id=com.microsoft.ipviewer
 

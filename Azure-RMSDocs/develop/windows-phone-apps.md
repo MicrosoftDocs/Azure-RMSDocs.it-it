@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 08981ab13862eed815609eaad4c6733ec205e0a1
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792083"
 ---
 # <a name="windows-phone-setup"></a>Installazione per Windows Phone
@@ -40,10 +40,10 @@ Nel sistema di sviluppo è necessario disporre del software seguente:
 -   Sistema operativo [Windows 8.1](https://windows.microsoft.com/windows-8/meet).
 -   [Strumenti di sviluppo (SDK) Windows Phone 8.1](https://developer.microsoft.com/windows/downloads/sdk-archive)
 -   Microsoft [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/) o versione successiva o Visual Studio Express 2012, incluso in Windows Phone SDK 8.0/8.1.
--   Pacchetto MS RMS SDK 4.2 per Windows Phone. Per altre informazioni, vedere [Introduzione](get-started.md).
+-   Pacchetto MS RMS SDK 4.2 per Windows Phone. Per ulteriori informazioni, vedere [Introduzione](get-started.md).
 -   Libreria di autenticazione: è consigliabile usare [Azure AD Authentication Library](https://msdn.microsoft.com/library/jj573266.aspx) e altre librerie di autenticazione.
 
-Leggere l'argomento relativo alle [novità](release-notes.md) per informazioni sugli aggiornamenti dell'API, indicazioni sul dispositivo e sull'ambiente, note sulla versione e domande frequenti (FAQ).
+Leggere l'argomento [Novità](release-notes.md) per informazioni sugli aggiornamenti dell'API, indicazioni sul dispositivo e sull'ambiente, note sulla versione e domande frequenti (FAQ).
 
 Esaminare le informazioni contenute nella guida relativa allo [sviluppo per Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/ff402535.aspx) reperibile in Windows Phone Dev Center.
 

@@ -14,10 +14,10 @@ ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 643715037716dcb30356b08c34e48047dd4f7074
-ms.sourcegitcommit: 487e681c9683b8adb7ae6fcfb374830bf0e5ad72
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74479178"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
@@ -48,7 +48,7 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 
 #### <a name="available-advanced-client-settings"></a>Impostazioni client avanzate disponibili
 
-|Impostazione|Scenario e istruzioni|
+|Impostazioni|Scenario e istruzioni|
 |----------------|---------------|
 |DisableDNF|[Nascondere o visualizzare il pulsante Non inoltrare in Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
 |DisableMandatoryInOutlook|[Esentare i messaggi di Outlook da un'etichetta obbligatoria](#exempt-outlook-messages-from-mandatory-labeling)|
@@ -670,7 +670,7 @@ Specificare un nome di regola di migrazione a propria scelta. Usare un nome desc
 
 Requisito: i documenti con un'etichetta di isole sicure "riservato" devono essere rietichettati come "riservati" da Azure Information Protection.
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di Azure Information Protection da usare è **Riservato** e ha l'ID etichetta **1ace2cc3-14bc-4142-9125-bf946a70542c**. 
 
@@ -679,7 +679,7 @@ Esempio:
 L'impostazione client avanzata è la seguente:
 
     
-|Nome|Value|
+|Name|Value|
 |---------------------|---------|
 |LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c, "L'etichetta Secure Islands è Riservato",Classificazione,Riservato|
 
@@ -687,7 +687,7 @@ L'impostazione client avanzata è la seguente:
 
 Requisito: i documenti contrassegnati come "sensibili" dalle isole sicure devono essere rietichettati come "riservatezza elevata" da Azure Information Protection.
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di Azure Information Protection da usare è **Riservatezza elevata** e ha l'ID etichetta **3e9df74d-3168-48af-8b11-037e3021813f**.
 
@@ -696,7 +696,7 @@ Esempio:
 L'impostazione client avanzata è la seguente:
 
     
-|Nome|Value|
+|Name|Value|
 |---------------------|---------|
 |LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f, "L'etichetta Secure Islands è Sensibile",Classificazione,Sensibile|
 
@@ -705,7 +705,7 @@ L'impostazione client avanzata è la seguente:
 
 Requisito: sono presenti due etichette di isole sicure che includono la parola "Internal" e si vuole che i documenti che contengono una di queste etichette di isole sicure vengano rietichettati come "generale" da Azure Information Protection.
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di Azure Information Protection da usare è **Generale** e ha l'ID etichetta **2beb8fe7-8293-444c-9768-7fdc6f75014d**.
 
@@ -714,7 +714,7 @@ Esempio:
 L'impostazione client avanzata è la seguente:
 
     
-|Nome|Value|
+|Name|Value|
 |---------------------|---------|
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d,"L'etichetta Secure Islands contiene Interno",Classificazione,.\*Interno.\*|
 
@@ -735,7 +735,7 @@ Poiché la corrispondenza dei criteri influiscono sulle prestazioni degli utenti
 
 - Valore: \<**tipi di applicazioni di Office WXP**> 
 
-Esempi:
+Di seguito sono riportati alcuni esempi.
 
 - Per eseguire la ricerca solo in documenti di Word, specificare **W**.
 
@@ -841,7 +841,7 @@ Usare queste chiavi e i valori corrispondenti per una sola proprietà personaliz
 
 Si supponga, ad esempio, di avere una colonna di SharePoint denominata **Classificazione** con i valori possibili **Pubblico**, **Generale** e **Riservatezza elevata\Tutti i dipendenti**. I documenti vengono archiviati in SharePoint, con i valori **Pubblico**, **Generale** o **Riservatezza elevata\Tutti i dipendenti** impostati per la proprietà Classificazione.
 
-Per etichettare un documento di Office con uno di questi valori di classificazione, impostare **SyncPropertyName** su **Classificazione** e **SyncPropertyState** a  **OneWay**. 
+Per etichettare un documento di Office con uno di questi valori di classificazione, impostare **SyncPropertyName** su **Classificazione** e **SyncPropertyState** a **OneWay**. 
 
 A questo punto, quando un utente apre e salva uno di questi documenti di Office, il documento viene etichettato come **Pubblico**, **Generale** o **Riservatezza elevata\Tutti i dipendenti** se sono presenti etichette con questi nomi nei criteri di Azure Information Protection. In assenza di etichette con questi nomi, il documento rimane senza etichetta.
 

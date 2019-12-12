@@ -15,13 +15,13 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 93524278a914ce38add95eed18f2f192f4dd684b
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792435"
 ---
-# <a name="how-to-enable-error-and-performance-logging"></a>Come fare per: Abilitare la registrazione delle prestazioni e degli errori
+# <a name="how-to-enable-error-and-performance-logging"></a>Procedura: Abilitare la registrazione delle prestazioni e dell'errore
 Microsoft Rights Management SDK 4.2 gestisce i log delle diagnosi e delle prestazioni caricati tramite una proprietà a dispositivo singolo.
 
 ## <a name="overview"></a>Panoramica ##
@@ -33,7 +33,7 @@ Microsoft Rights Management SDK 4.2 gestisce i log delle diagnosi e delle presta
 > [!NOTE]
 > Come esempio, ecco un messaggio standard usato da Microsoft per la notifica di registrazione: 
 >
-> *Attivando la registrazione degli errori e delle prestazioni, l’utente accetta l'invio di tali dati a Microsoft.  Microsoft raccoglie i dati sugli errori e sulle prestazioni tramite Internet ("Dati").  Microsoft usa questi dati per offrire e migliorare la qualità, la sicurezza e l'integrità dei prodotti e dei servizi Microsoft.  Vengono analizzate, ad esempio, prestazioni e affidabilità quali le funzionalità usate dagli utenti, la velocità di risposta delle funzionalità, le prestazioni del dispositivo, le interazioni con l'interfaccia utente e tutti i problemi che possono verificarsi durante l'uso del prodotto.  I Dati includono anche informazioni sulla configurazione del software, ad esempio la versione in esecuzione e l'indirizzo IP.*  
+> *Attivando la registrazione degli errori e delle prestazioni, si accetta di inviare i dati relativi a errori e prestazioni a Microsoft.  Microsoft raccoglierà i dati relativi a errori e prestazioni tramite Internet ("dati").  Microsoft usa questi dati per fornire e migliorare la qualità, la sicurezza e l'integrità dei prodotti e dei servizi Microsoft.  Si analizzino, ad esempio, le prestazioni e l'affidabilità, ad esempio le funzionalità usate, la velocità di risposta delle funzionalità, le prestazioni del dispositivo, le interazioni con l'interfaccia utente e tutti i problemi che si verificano con il prodotto.  I dati includono anche informazioni sulla configurazione del software, ad esempio il software attualmente in esecuzione e l'indirizzo IP.*  
 
 Il controllo della registrazione viene gestito tramite due proprietà.
 

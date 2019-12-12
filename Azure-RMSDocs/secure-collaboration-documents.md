@@ -4,7 +4,7 @@ description: Flusso di lavoro end-to-end per collaborare a documenti protetti da
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c988dd65f677d69d362fe59f6a5eb0d631b23faa
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: b3be1b1577277b31dd515f8343870de73e258770
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73561120"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934467"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configurazione della collaborazione per i documenti protetti con Azure Information Protection
 
@@ -47,11 +47,11 @@ Questo esempio descrive in modo dettagliato la configurazione di un'etichetta es
 
 Poiché lo scenario limita l'accesso a specifici utenti, non include l'impostazione per tutti gli utenti autenticati. Per un esempio di configurazione di un'etichetta con questa impostazione, vedere [Esempio 5: Etichetta che crittografa il contenuto, ma non limita chi può accedervi](configure-policy-protection.md#example-5-label-that-encrypts-content-but-doesnt-restrict-who-can-access-it).  
 
-1. Selezionare l'etichetta già inclusa nei criteri globali o in criteri con ambito. Nel riquadro **protezione** assicurarsi che sia selezionata l'opzione **Azure (chiave Cloud)** .
+1. Selezionare l'etichetta già inclusa nei criteri globali o in criteri con ambito. Nel riquadro **Protezione** verificare che sia selezionata l'opzione **Azure (chiave cloud)** .
     
 2. Verificare che sia selezionata l'opzione **Configura le autorizzazioni** e fare clic su **Aggiungi autorizzazioni**.
 
-3. Nel riquadro **Aggiungi autorizzazioni** : 
+3. Nel riquadro **Aggiungi autorizzazioni**: 
     
    - Per il gruppo interno: selezionare **Cerca nella directory** per selezionare il gruppo, che deve essere abilitato per la posta elettronica.
     
@@ -67,11 +67,11 @@ Poiché lo scenario limita l'accesso a specifici utenti, non include l'impostazi
         
     ![Configurazione delle autorizzazioni per la collaborazione sicura](./media/collaboration-permissions.png)
 
-5. Fare clic su **OK** nel riquadro **Aggiungi autorizzazioni** .
+5. Fare clic su **OK** nel riquadro **Aggiungi autorizzazioni**.
 
 6. Nel riquadro **protezione** fare clic su **OK**.
 
-7. Nel riquadro **etichetta** selezionare **Salva**. 
+7. Nel riquadro **Etichetta** selezionare **Salva**. 
 
 ## <a name="applying-the-label-that-supports-secure-collaboration"></a>Applicazione dell'etichetta che supporta la collaborazione sicura
 

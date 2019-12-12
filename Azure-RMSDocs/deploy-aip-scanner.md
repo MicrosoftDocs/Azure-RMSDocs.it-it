@@ -13,10 +13,10 @@ ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 0b53c721725f83b8e197552d4c1fa502583fc2f9
-ms.sourcegitcommit: fed1df1858f8316f7dd45e751c6910b444651a87
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74474368"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
@@ -67,7 +67,7 @@ Si noti che lo scanner non individua e non applica etichette in tempo reale. Eff
 ## <a name="prerequisites-for-the-azure-information-protection-scanner"></a>Prerequisiti per lo scanner di Azure Information Protection
 Prima di installare lo scanner di Azure Information Protection, verificare che i requisiti seguenti siano soddisfatti.
 
-|Requisito|Altre informazioni|
+|Requisito|Ulteriori informazioni|
 |---------------|--------------------|
 |Computer Windows Server per eseguire il servizio scanner:<br /><br />- 4 processori core<br /><br />- 8 GB di RAM<br /><br />- 10 GB di spazio libero (media) per i file temporanei|Windows Server 2019, Windows Server 2016 o Windows Server 2012 R2. <br /><br />Nota: per scopi di test o valutazione in un ambiente non di produzione, è possibile usare un sistema operativo client Windows [supportato dal client di Azure Information Protection](requirements.md#client-devices).<br /><br />Il computer può essere un computer fisico o virtuale con una connessione di rete veloce e affidabile agli archivi dati da analizzare.<br /><br /> Lo scanner richiede spazio su disco sufficiente a creare i file temporanei per ogni file analizzato, quattro file per core. Lo spazio su disco consigliato di 10 GB consente a 4 processori core di analizzare 16 file, ognuno con una dimensione di 625 MB. <br /><br /> Se la connettività Internet non è possibile a causa dei criteri dell'organizzazione, vedere la sezione [Deploying the scanner with alternative Configurations](#deploying-the-scanner-with-alternative-configurations) . In caso contrario, verificare che il computer disponga di connettività Internet che consenta gli URL seguenti tramite HTTPS (porta 443):<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com <br /> \*. protection.outlook.com (solo scanner dal client Unified Labeling)|
 |Account del servizio per eseguire il servizio scanner|Oltre a eseguire il servizio scanner nel computer Windows Server, questo account di Windows esegue l'autenticazione in Azure AD e scarica i criteri di Azure Information Protection. Questo account deve essere un account Active Directory ed essere sincronizzato con Azure AD. Se non è possibile sincronizzare questo account a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).<br /><br />I requisiti di questo account del servizio sono i seguenti:<br /><br />Assegnazione dei diritti utente per l'- **accesso locale**. Questo diritto è richiesto per l'installazione e la configurazione dello scanner, ma non per il funzionamento. È necessario concedere questo diritto all'account del servizio, ma è possibile rimuoverlo dopo avere verificato che lo scanner è in grado di individuare, classificare e proteggere i file. Se non è possibile concedere questo diritto neppure per un breve periodo a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).<br /><br />Assegnazione dei diritti utente per l'- **accesso come servizio**. Questo diritto viene concesso automaticamente all'account del servizio durante l'installazione dello scanner ed è richiesto per l'installazione, la configurazione e il funzionamento dello scanner. <br /><br />- Autorizzazioni per i repository di dati: è necessario concedere le autorizzazioni per la **lettura** e la **scrittura** per analizzare i file e quindi applicare la classificazione e la protezione ai file che soddisfano le condizioni indicate nei criteri di Azure Information Protection. Per eseguire lo scanner solo in modalità di individuazione, è sufficiente l'autorizzazione per la **lettura**.<br /><br />-Per le etichette che riproteggono o rimuovono la protezione: per assicurarsi che lo scanner abbia sempre accesso ai file protetti, rendere questo account un [utente con privilegi avanzati](configure-super-users.md) per Azure Information Protection e assicurarsi che la funzionalità per utenti con privilegi avanzati sia abilitata. Se inoltre sono stati implementati i [controlli di onboarding](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) per una distribuzione a fasi, verificare che questo account sia incluso nei controlli di onboarding configurati.|
@@ -133,7 +133,7 @@ Seguire le istruzioni riportate nelle guide di amministrazione per supportare un
     
     In questa configurazione, lo scanner dal client Unified Labeling può applicare la protezione, rimuovere la protezione ed esaminare i file protetti usando il parametro *DelegatedUser* con il cmdlet [set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) .
 
-A tale scopo, effettuare le operazioni seguenti:
+Procedere quindi come segue:
 
 1. Configurare lo scanner nel portale di Azure, creando un profilo dello scanner. Se occorre assistenza per questo passaggio, vedere [Configurare lo scanner nel portale di Azure](#configure-the-scanner-in-the-azure-portal).
 
@@ -202,7 +202,7 @@ Se i criteri dell'organizzazione proibiscono il diritto di **accesso locale** pe
 
 Prima di installare lo scanner o aggiornarlo da una versione di disponibilità generale precedente dello scanner, creare un profilo per lo scanner nella portale di Azure. Si configura il profilo per le impostazioni dello scanner e per i repository di dati da analizzare.
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al riquadro **Azure Information Protection**. 
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection**. 
     
     Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
     
@@ -250,7 +250,7 @@ Prima di installare lo scanner o aggiornarlo da una versione di disponibilità g
     
     I caratteri jolly e i percorsi WebDav non sono supportati.
     
-    Esempi:
+    Di seguito sono riportati alcuni esempi.
     
     - Per un percorso locale: `C:\Folder`
     
@@ -263,9 +263,9 @@ Prima di installare lo scanner o aggiornarlo da una versione di disponibilità g
     > [!TIP]
     > Se si aggiunge un percorso di SharePoint per "Documenti condivisi":
     >
-     >- Specificare **Documenti condivisi** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da Documenti condivisi. Ad esempio: `http://sp2013/Shared Documents`
+     >- Specificare **Documenti condivisi** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da Documenti condivisi. ad esempio `http://sp2013/Shared Documents`
      >
-     >- Specificare **Documenti** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da una sottocartella in Documenti condivisi. Ad esempio: `http://sp2013/Documents/Sales Reports`
+     >- Specificare **Documenti** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da una sottocartella in Documenti condivisi. ad esempio `http://sp2013/Documents/Sales Reports`
     
     Per le impostazioni rimanenti di questo riquadro, non modificarle per questa configurazione iniziale, ma mantenerle come **predefinite del profilo**. Questo significa che il repository dei dati eredita le impostazioni dal profilo dello scanner. 
     
@@ -563,7 +563,7 @@ Esistono tre scenari alternativi che lo scanner di Azure Information Protection 
     
     Applicabile allo scanner solo dal client Unified labeling. questa configurazione consente di rimuovere le etichette esistenti, che includono la protezione se è stata applicata con tale etichetta. La protezione applicata indipendentemente da un'etichetta viene mantenuta. Usare questa configurazione se è necessario rimuovere tutte le etichette dai file in un repository.
     
-    Configurare le seguenti impostazioni:
+    Configurare le impostazioni seguenti:
     - **Etichettare i file in base al contenuto**: **disattivato**
     - **Etichetta predefinita**: **None**
     - **Rietichettare i file**: **on** con la casella di controllo **Imponi etichetta predefinita** selezionata

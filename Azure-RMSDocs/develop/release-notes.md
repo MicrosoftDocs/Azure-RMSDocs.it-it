@@ -13,10 +13,10 @@ audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
 ms.openlocfilehash: d9fda9c7477c408e8003f48c85e6d35fec6a1884
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60176019"
 ---
 # <a name="whats-new-and-release-notes"></a>Novità e note sulla versione
@@ -41,7 +41,7 @@ Questo argomento descrive importanti modifiche e funzionalità in questa nuova v
 
 L'aggiornamento della versione di luglio comprende l'incremento del numero di revisione di SDK alla versione 4.2.5.
 
-- Android SDK: l'app può ora **impostare immediatamente il livello di registrazione** con Android SDK. Per altre informazioni, vedere [Procedura: Come abilitare la registrazione delle prestazioni e dell'errore](https://docs.microsoft.com/information-protection/develop/enabling-logging)
+- Android SDK: l'app può ora **impostare immediatamente il livello di registrazione** con Android SDK. Per altre informazioni, vedere [Procedura: Abilitare la registrazione delle prestazioni e dell'errore](https://docs.microsoft.com/information-protection/develop/enabling-logging)
 - Il livello di registrazione non è supportato da iOS SDK. 
 - In caso di token di accesso NULL, SDK ora restituisce un errore.
 
@@ -81,7 +81,7 @@ Con questa versione, è ora disponibile la versione 4.2 SDK RMS per i dispositiv
 
     [Metodo sincrono UserPolicy.acquire](https://msdn.microsoft.com/library/mt631384.aspx)
 
-    [Metodo sincrono UserPolicy.create (PolicyDescriptor…)**](https://msdn.microsoft.com/library/mt631385.aspx)
+    [Metodo sincrono UserPolicy.create (PolicyDescriptor…)** ](https://msdn.microsoft.com/library/mt631385.aspx)
 
     [Metodo sincrono UserPolicy.create (TemplateDescriptor...)](https://msdn.microsoft.com/library/mt631386.aspx)
 
@@ -95,7 +95,7 @@ Questa versione aggiunge gli aggiornamenti seguenti:
 
 -   SDK 4.1 RMS per piattaforme Linux
 
-    Per altre informazioni, vedere [Introduzione](get-started.md).
+    Per ulteriori informazioni, vedere [Introduzione](get-started.md).
 
 ### <a name="may-2015-update---adds-logging-control"></a>Aggiornamento di maggio 2015: aggiunta del controllo di registrazione
 
@@ -109,7 +109,7 @@ Questa versione aggiunge il supporto per gli aggiornamenti seguenti:
 
     Impostazioni di controllo a livello log abilitate.
 
-    Per altre informazioni, vedere [Procedura: Come abilitare la registrazione delle prestazioni e dell'errore](enabling-logging.md)
+    Per altre informazioni, vedere [Procedura: Abilitare la registrazione delle prestazioni e dell'errore](enabling-logging.md)
 
     Aggiunta del supporto di cancellazione della cache.
 
@@ -143,7 +143,7 @@ Questa sezione descrive le informazioni sulle versioni correnti e precedenti di 
 
 -   **Supporto per AD RMS**: gli amministratori IT possono usare le app con abilitazione per RMS sui dispositivi mobili con le nuove estensioni del dispositivo mobile del server AD RMS disponibili.
 -   **Uso offline**: gli utenti finali possono accedere ai dati protetti tramite RMS offline.
--   **Autenticazione separata**: gli sviluppatori possono usare la propria libreria di autenticazione per Azure RMS e AD RMS, o usare [Azure AD Authentication Library (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx), che è la scelta più consigliata.
+-   **Autenticazione separata**: gli sviluppatori possono usare la propria libreria di autenticazione per Azure RMS e AD RMS (o usare [Azure AD Authentication Library (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx) consigliata).
 -   **Interfaccia utente separata**: gli sviluppatori possono compilare la propria interfaccia utente per proteggere e usare documenti protetti RMS.
 -   **API riprogettata**: gli sviluppatori possono ora sfruttare una API di crittografia e decrittografia diretta e trasparente che offre comportamenti RMS ed esperienza utente coerenti con sforzo minimo.
 
@@ -200,9 +200,9 @@ Questa sezione descrive le informazioni sulle versioni correnti e precedenti di 
 
 **Tutte le piattaforme**
 
-**D**: Nel flusso di lavoro di protezione non è presente un'interfaccia utente per la selezione delle **autorizzazioni personalizzate**. Perché?
+**D**: nel flusso di lavoro di protezione non è presente un'interfaccia utente per la selezione delle **autorizzazioni personalizzate**. Perché?
 
-**R**: Si tratta di un problema noto e sarà risolto in un secondo momento.
+**R**: si tratta di un problema noto e sarà risolto in un secondo momento.
 
 **D**: Come si ottengono nuovi tenant dell'organizzazione per provare SDK e applicazioni di esempio?
 
@@ -210,7 +210,7 @@ Questa sezione descrive le informazioni sulle versioni correnti e precedenti di 
 
 **D**: Non sono visualizzate le informazioni dettagliate della gerarchia di test nella documentazione. Perché?
 
-**R**: Non esiste alcun concetto di gerarchia di test con i nuovi SDK AD RMS. Si userà sempre la gerarchia di produzione.
+**R**: non esiste alcun concetto di gerarchia test con i nuovi SDK AD RMS. Si userà sempre la gerarchia di produzione.
 
 **D**: Nella versione 2.1 di RMS SDK è necessario un manifesto generato per ogni applicazione che implementa la protezione delle informazioni. È un requisito ancora valido per la versione 4.0 e le versioni di SDK successive?
 
@@ -222,18 +222,18 @@ Questa sezione descrive le informazioni sulle versioni correnti e precedenti di 
 
 **R**: Eclipse Juno che usa Google API 15 e versioni successive.
 
-**D**: È possibile chiamare il metodo di annullamento cancel() dal thread dell'interfaccia utente?
-**R**: È necessario chiamare cancel() da un thread non dell'interfaccia utente, poiché si potrebbe interrompere una connessione di rete.
+**D**: è possibile chiamare Cancel () un metodo di annullamento dal thread dell'interfaccia utente?
+**R**: È necessario chiamare Cancel () da un thread non dell'interfaccia utente, poiché questo potrebbe interrompere una connessione di rete.
 
 **iOS**
 
-**D**: Quali piattaforme sono state verificate per lo sviluppo SDK?
+**D**: Quali piattaforme sono verificate per lo sviluppo SDK?
 
 **R**: Xcode 5.0 con iOS 7 e versioni successive.
 
-**D**: È stata eseguita la chiamata di un metodo cancel() per un'operazione ma si riceve comunque la notifica di completamento dell'operazione. Perché?
+**D**: È stata eseguita la chiamata di un metodo Cancel () su un'operazione, tuttavia è stata comunque ricevuta la notifica di completamento dell'operazione. Perché?
 
-**R**: Non tutte le operazioni possono essere annullate, quindi l'operazione di annullamento viene eseguita nel modo migliore possibile.
+**R**: Non è possibile annullare tutte le operazioni, pertanto un'operazione di annullamento viene eseguita nel modo migliore possibile.
 
 **OS X**
 

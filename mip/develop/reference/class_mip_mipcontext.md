@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: 9efbe9330014458a26f62e4dfac9ea24ad5d4475
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73561025"
 ---
 # <a name="class-mipmipcontext"></a>Classe MIP:: MipContext 
@@ -76,7 +76,7 @@ Ottiene l'implementazione del logger.
   
 **Restituisce**: logger
 
-### <a name="create-function"></a>Create (funzione)
+### <a name="create-function"></a>Funzione Create
 Creare una nuova istanza di MipContext da utilizzare durante l'inizializzazione dei profili.
 
 **Restituisce**: istanza di MipContext.

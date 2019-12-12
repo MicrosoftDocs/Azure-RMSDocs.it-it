@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: e39260036f1e4f4413b008e75cbbd761aea7d751
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560070"
 ---
 # <a name="class-mipprotectionprofilesettings"></a>Classe mip::ProtectionProfile::Settings 
@@ -19,7 +19,7 @@ Impostazioni utilizzate da ProtectionProfile durante la sua creazione e per tutt
 ## <a name="summary"></a>Riepilogo
  Membri                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-Impostazioni pubbliche (const std:: shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std:: shared_ptr\<AuthDelegate\>& authDelegate, const std:: shared_ptr\<ConsentDelegate\>& consentDelegate, const std:: shared_ptr\<ProtectionProfile:: Observer\>& Observer)  |  Costruttore ProtectionProfile:: Settings che specifica un Observer da usare per le operazioni asincrone.
+Impostazioni pubbliche (const std:: shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std:: shared_ptr\<AuthDelegate\>& AuthDelegate, const std:: shared_ptr\<ConsentDelegate\>& consentDelegate, const std:: shared_ptr\<ProtectionProfile:: Observer\>& Observer)  |  Costruttore ProtectionProfile:: Settings che specifica un Observer da usare per le operazioni asincrone.
 Impostazioni pubbliche (const std:: shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std:: shared_ptr\<AuthDelegate\>& authDelegate, const std:: shared_ptr\<ConsentDelegate\>& consentDelegate)  |  Costruttore ProtectionProfile:: Settings, usato per le operazioni sincrone.
 public CacheStorageType GetCacheStorageType () const  |  Ottiene un valore che indica se le cache sono archiviate in memoria o su disco.
 public std:: shared_ptr\<AuthDelegate\> GetAuthDelegate () const  |  Ottiene il delegato dell'autenticazione usato per l'acquisizione dei token di autenticazione.

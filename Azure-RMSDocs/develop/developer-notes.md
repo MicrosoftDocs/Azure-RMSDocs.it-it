@@ -15,17 +15,17 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 60cf2741ddec361e5913fe043ce6dec7ecf848c9
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792486"
 ---
 # <a name="developer-guidance"></a>Istruzioni per sviluppatori
 
 Questa sezione descrive le indicazioni specifiche per diversi scenari di sviluppo importanti, nonché informazioni generali sullo sviluppo con questo SDK. Gli scenari in questa sezione sono specifici per la versione corrente di Rights Management Services SDK 2.1 e possono subire modifiche nelle versioni successive.
 - [Procedura: Usare l'autenticazione ADAL](how-to-use-adal-authentication.md): autenticazione con Azure RMS per l'app usando Azure Active Directory Authentication Library (ADAL).
-- [Procedura: Aggiungere diritti espliciti di proprietario](add-explicit-owner-rights.md): l'applicazione deve aggiungere in modo esplicito i diritti di "proprietario" durante la creazione di una licenza da zero ([IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)).
+- [Procedura: Aggiungere diritti proprietario espliciti](add-explicit-owner-rights.md): l'applicazione deve aggiungere in modo esplicito i diritti "proprietario" durante la creazione di una licenza da zero ([IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx)).
 - [Procedura: Eseguire il debug dell'applicazione abilitata all'uso di diritti](debugging-applications-that-use-ad-rms.md): questo argomento illustra come eseguire il debug dell'applicazione e usare il Registro eventi di Windows.
 - [Procedura: Distribuire un'app nel tenant del cliente](how-to-deploy-app.md): illustra i passaggi per la distribuzione di un'app dal tenant Azure AD di sviluppo a un tenant Azure AD di produzione.
 - [Procedura: Abilitare il rilevamento e la revoca dei documenti](tracking-content.md): questo argomento illustra le linee guida di base per implementare il rilevamento del contenuto del documento, nonché un codice di esempio per aggiornare i metadati e per creare il pulsante **Rileva utilizzo** per l'app.
@@ -43,4 +43,4 @@ Questa sezione descrive le indicazioni specifiche per diversi scenari di svilupp
 
  
 ## <a name="related-topics"></a>Argomenti correlati
-* [Panoramica](ad-rms-overview.md)
+* [Informazioni generali](ad-rms-overview.md)

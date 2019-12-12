@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: c0b53c0f749427f785bf12afa6b3f8cda461947e
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792554"
 ---
 # <a name="how-to-debug-a-rights-enabled-application"></a>Procedura: Eseguire il debug dell'applicazione abilitata all'uso di diritti
@@ -29,7 +29,7 @@ L'argomento seguente illustra come eseguire il debug dell'applicazione e usare i
 
 In Rights Management Services SDK 2.1, nella versione per gli sviluppatori del runtime, i controlli anti-debug sono disabilitati.
 
-È possibile attivare la traccia del debug usando la chiave del Registro di sistema seguente. Per disattivare la traccia del debug, modificare il valore su 0. In questa versione non è necessaria nessun altra operazione per il debug.
+È possibile attivare la traccia del debug usando la chiave del Registro di sistema seguente. (Per disattivare la traccia di debug, impostare il valore su 0). Per il debug in questa versione non sono necessarie altre operazioni.
 
 
 ```

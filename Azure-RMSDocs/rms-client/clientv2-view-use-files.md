@@ -4,21 +4,21 @@ description: Istruzioni per visualizzare un file protetto per il quale è necess
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/17/2019
+ms.date: 11/17/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 6186c4ec5cfa52b1022a8dab416a24efd822aae2
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: d4c7ba70ab09c1fa4033babdf3dd5f5664e284ce
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71690052"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935538"
 ---
-# <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>Manuale dell'utente: Visualizzare i file protetti con il client di Azure Information Protection Unified Labeling
+# <a name="user-guide-view-protected-files-with-the-azure-information-protection-unified-labeling-client"></a>Guida dell'utente: visualizzare i file protetti con il client di Azure Information Protection Unified Labeling
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 >
@@ -57,7 +57,7 @@ Se l'organizzazione non può mettere a disposizione dell'utente un account basat
 
 1. Aprire il file protetto (ad esempio, facendo doppio clic sul file o sull'allegato oppure facendo clic sul collegamento al file). Se viene chiesto di selezionare un'app, selezionare l'app **Visualizzatore Azure Information Protection**. 
 
-2. Se viene visualizzata una pagina per **accedere** o **iscriversi**: fare clic su **Accedi** e immettere le proprie credenziali. Se il file protetto è stato inviato come allegato, assicurarsi di specificare lo stesso indirizzo di posta elettronica usato per l'invio del file.
+2. Se viene visualizzata una pagina di **accesso** o **iscrizione**: fare clic su **Accedi** e immettere le credenziali. Se il file protetto è stato inviato come allegato, assicurarsi di specificare lo stesso indirizzo di posta elettronica usato per l'invio del file.
     
     Se l'account specificato non viene accettato, vedere la sezione [Richieste di autorizzazione](#prompts-for-authentication) in questa pagina.
 
@@ -66,7 +66,7 @@ Se l'organizzazione non può mettere a disposizione dell'utente un account basat
 4. Per aprire altri file protetti, è possibile visualizzarli direttamente nel visualizzatore usando l'opzione **Apri**. Il file selezionato sostituisce il file originale nel visualizzatore. 
 
 > [!TIP]
-> Se il file protetto non si apre e nel sistema è installato il client di Azure Information Protection completo, provare con l'opzione **Ripristina le impostazioni**. Per accedere a questa opzione, da un'app di Office selezionare il pulsante Sensitivity ( **sensibilità** ) >**le impostazioni**della **Guida e** > della reimpostazione del feedback. 
+> Se il file protetto non si apre e nel sistema è installato il client di Azure Information Protection completo, provare con l'opzione **Ripristina le impostazioni**. Per accedere a questa opzione, da un'app di Office, selezionare il pulsante **sensibilità** > **Guida e commenti e suggerimenti** > **Reimposta impostazioni**. 
 > 
 > [Altre informazioni sull'opzione Ripristina le impostazioni](clientv2-admin-guide.md#more-information-about-the-reset-settings-option)
 

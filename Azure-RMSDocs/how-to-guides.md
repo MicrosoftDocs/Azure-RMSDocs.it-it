@@ -4,25 +4,25 @@ description: Identificare i casi di utilizzo che classificano e proteggono i dat
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4f42951ff93e5de259ce9b952f340c5e597e3418
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: f3bc3064aa4a3a723197dcb171eaba018bca6b3e
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689347"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933328"
 ---
 # <a name="how-to-guides-for-common-scenarios-that-use-azure-information-protection"></a>Guide procedurali per gli scenari comuni che usano Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 Esistono diversi modi in cui è possibile usare Azure Information Protection per classificare ed eventualmente proteggere documenti e messaggi di posta elettronica dell'organizzazione. 
 
@@ -30,10 +30,10 @@ Le distribuzioni più efficienti sono quelle in cui si identificano casi d'uso s
 
 ## <a name="common-scenarios"></a>Scenari comuni
 
-|Scenario: Opzione richiesta:|Istruzioni|
+|Scenario: Per...|Istruzioni|
 |----------------|---------------|
-|Trovare le informazioni riservate che la mia organizzazione archivia in locale|[Avvio rapido: trovare le informazioni riservate presenti nei file archiviati in locale](quickstart-findsensitiveinfo.md)|
-|Consentire agli utenti di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate|[Avvio rapido: configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate](quickstart-label-dnf-protectedemail.md)|
+|Trovare le informazioni riservate che la mia organizzazione archivia in locale|[Guida introduttiva: Trovare le informazioni riservate presenti nei file archiviati in locale](quickstart-findsensitiveinfo.md)|
+|Consentire agli utenti di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate|[Guida introduttiva: Configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate](quickstart-label-dnf-protectedemail.md)|
 |Consentire agli utenti di classificare i dati nel momento in cui vengono creati o modificati e proteggerli se contengono informazioni riservate| [Esercitazione: Modificare i criteri e creare una nuova etichetta](infoprotect-quick-start-tutorial.md)|
 |Consentire agli utenti di collaborare facilmente su un documento protetto|[Configurazione della collaborazione per i documenti protetti con Azure Information Protection](secure-collaboration-documents.md)|
 |Proteggere automaticamente i messaggi di posta elettronica degli utenti inviati all'esterno dell'organizzazione| [Configurazione delle regole del flusso di posta per le etichette di Azure Information Protection](configure-exo-rules.md)

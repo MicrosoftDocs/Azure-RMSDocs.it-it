@@ -8,15 +8,15 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: tommos
 ms.openlocfilehash: 37ab92e336d88d37d9e4e7631e108bbaaebdb977
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886183"
 ---
 # <a name="microsoft-information-protection-sdk---policy-handler-concepts"></a>Microsoft Information Protection SDK - Concetti relativi ai gestori di criteri
 
-Nell'API `mip::PolicyHandler` dei criteri espone le operazioni usate per calcolare le azioni dei criteri e inviare gli eventi di controllo.
+Nell'API dei criteri, `mip::PolicyHandler` espone le operazioni usate per calcolare le azioni dei criteri e inviare gli eventi di controllo.
 
 ## <a name="policy-handler-functions"></a>Funzioni di gestione criteri
 
@@ -34,7 +34,7 @@ La creazione di un elemento `PolicyHandler` richiede:
 - Un elemento `mip::MipContext`
 - Un elemento `mip::PolicyProfile`
 - Un elemento `mip::PolicyEngine` aggiunto a `mip::PolicyProfile`
-- Classe che implementa`mip::PolicyHandler::Observer`
+- Classe che implementa `mip::PolicyHandler::Observer`
 
 ## <a name="create-a-policy-handler"></a>Creare un gestore di criteri
 
@@ -56,7 +56,7 @@ auto handler = createPolicyHandlerFuture.get();
 
 Dopo aver correttamente creato l'oggetto `PolicyHandler`, le azioni possono essere calcolate e gli eventi di controllo inviati.
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
 Ora che si è appreso come creare un gestore dei criteri:
 

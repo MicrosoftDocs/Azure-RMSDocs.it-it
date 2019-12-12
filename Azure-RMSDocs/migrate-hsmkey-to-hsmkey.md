@@ -4,7 +4,7 @@ description: Istruzioni che fanno parte del percorso di migrazione da AD RMS a A
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/11/2019
+ms.date: 11/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d7594886d6dc3715d29e15a1a1133142f244ad1d
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: e83515d0e6764cab5af784b4d695b318daa42d8d
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559880"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935470"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave protetta tramite HSM a un'altra
 
@@ -51,7 +51,7 @@ Queste procedure vengono eseguite dall'amministratore di Insieme di credenziali 
 
    - Non eseguire la procedura per **generare la chiave del tenant**, perché ne esiste già una equivalente nella distribuzione di AD RMS. Al contrario, identificare le chiavi usate dal server AD RMS dall'installazione di nCipher e prepararle per il trasferimento, quindi trasferirle a Azure Key Vault. 
         
-        I file di chiave crittografati per nCipher sono denominati **key_ <<em>keyAppName</em>> _ <<em>identificatore</em>**  di chiave>localmente nel server. Ad esempio, `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54` Quando si esegue il comando KeyTransferRemote per creare una copia della chiave con autorizzazioni ridotte, sarà necessario il valore **MSCAPI** come keyAppName e il valore personalizzato per l'identificatore di chiave.
+        I file di chiave crittografati per nCipher sono denominati **key_ <<em>keyAppName</em>> _ <<em>identificatore</em> chiave>** localmente nel server. Ad esempio, `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54` Quando si esegue il comando KeyTransferRemote per creare una copia della chiave con autorizzazioni ridotte, sarà necessario il valore **MSCAPI** come keyAppName e il valore personalizzato per l'identificatore di chiave.
         
         Quando la chiave viene caricata in Insieme di credenziali delle chiavi di Azure, vengono visualizzate le proprietà della chiave visualizzata, incluso l'ID della chiave. Sarà simile a https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Prendere nota dell'URL perché è necessario all'amministratore di Azure Information Protection per indicare al servizio Azure Rights Management di usare questa chiave per la chiave del tenant.
 

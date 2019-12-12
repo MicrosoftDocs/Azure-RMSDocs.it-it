@@ -12,10 +12,10 @@ ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 2d26e7d80a37fd5ae8b52539a09fcbb9c924a13d
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73561201"
 ---
 # <a name="azure-information-protection-unified-labeling-client-administrator-guide"></a>Guida dell'amministratore client per l'assegnazione di etichette unificata Azure Information Protection
@@ -24,7 +24,7 @@ ms.locfileid: "73561201"
 >
 > *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Utilizzare le informazioni contenute in questa guida se si è responsabili del client Azure Information Protection Unified Labeling in una rete aziendale o se si desiderano informazioni più tecniche rispetto a quelle presenti nell' [Azure Information Protection utente client con etichetta unificata Guida](clientv2-user-guide.md). 
+Utilizzare le informazioni contenute in questa guida se si è responsabili del client Azure Information Protection Unified Labeling in una rete aziendale o se si desiderano informazioni più tecniche rispetto a quelle disponibili nella [Guida per l'utente del client di Azure Information Protection Unified Labeling](clientv2-user-guide.md). 
 
 Ad esempio:
 
@@ -134,7 +134,7 @@ Con le **impostazioni di reimpostazione** l'utente viene disconnesso, Elimina le
     
     - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Office\16.0\Common\DRM
     
-    - Settings\Software\Microsoft\MSIPC HKEY_CURRENT_USER\SOFTWARE\Classes\Local
+    - HKEY_CURRENT_USER \SOFTWARE\Classes\Local Settings\Software\Microsoft\MSIPC
 
 - L'utente connesso viene disconnesso.
 
@@ -225,7 +225,7 @@ Se è stato aggiornato lo scanner usando la versione di anteprima del client Uni
 
 3. In una sessione di PowerShell eseguire il comando Update-AIPScanner con il profilo dello scanner. Ad esempio: `Update-AIPScanner –Profile Europe`.
     
-    Con questo passaggio viene creato un nuovo database denominato **AIPScannerUL_\<profile_name >**
+    Questo passaggio consente di creare un nuovo database con il nome **AIPScannerUL_\<profile_name >**
 
 4. Riavviare il servizio dello scanner di Azure Information Protection **Scanner Azure Information Protection**.
 
@@ -267,7 +267,7 @@ Per disinstallare il client è possibile usare una delle opzioni seguenti:
 
 - Per disinstallare un programma, usare il Pannello di controllo: fare clic su **Microsoft Azure Information Protection** > **Disinstalla**
 
-- Eseguire nuovamente il file eseguibile (ad esempio, **AzInfoProtection_UL. exe**) e dalla pagina **Modifica installazione** fare clic su **Disinstalla**. 
+- Eseguire nuovamente il file eseguibile, ad esempio **AzInfoProtection_UL. exe**, e nella pagina **Modifica installazione** fare clic su **Disinstalla**. 
 
 - Eseguire l'eseguibile con **/uninstall**. ad esempio `AzInfoProtection.exe /uninstall`
 

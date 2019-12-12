@@ -4,7 +4,7 @@ description: Informazioni per fornire istruzioni a utenti, amministratori e adde
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/23/2019
+ms.date: 11/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 669764881af477e19ffcf9d63266fe19e1f26f92
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: b24319f4759c36190cd880335c19899401495608
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71683572"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933362"
 ---
 # <a name="helping-users-to-protect-files-by-using-the-azure-rights-management-service"></a>Consentire agli utenti di proteggere i file mediante il servizio Azure Rights Management
 
@@ -43,7 +43,7 @@ Dopo aver distribuito e configurato Azure Information Protection per l'organizza
     
 -   **Informazioni per il supporto tecnico**
     
-    Se gli utenti dispongono del client Azure Information Protection, gli operatori del supporto tecnico possono chiedere loro di usare l'opzione **Guida e commenti** per informazioni, ad esempio per sapere se l'edizione di Office in uso non è in grado di supportare la protezione e l'account utente attualmente connesso. Questa opzione può essere usata anche per raccogliere i file di log e reimpostare il client. Per altre informazioni, vedere la guida dell'amministratore: [Controlli aggiuntivi e risoluzione dei problemi](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting).
+    Se gli utenti dispongono del client Azure Information Protection, gli operatori del supporto tecnico possono chiedere loro di usare l'opzione **Guida e commenti** per informazioni, ad esempio per sapere se l'edizione di Office in uso non è in grado di supportare la protezione e l'account utente attualmente connesso. Questa opzione può essere usata anche per raccogliere i file di log e reimpostare il client. Per altre informazioni, vedere la sezione [Controlli aggiuntivi e risoluzione dei problemi](./rms-client/client-admin-guide.md#installation-checks-and-troubleshooting) della guida dell'amministratore.
     
     Se sono presenti richieste legittime per ottenere diritti completi di accesso ai documenti protetti, verificare che il help desk disponga di processi per richiedere l'accesso tramite la [funzionalità Azure Information Protection utente con privilegi avanzati](configure-super-users.md). Ad esempio, le richieste potrebbero provenire dall'ufficio legale o da un responsabile dopo che un dipendente ha lasciato l'organizzazione.
     
@@ -86,7 +86,7 @@ Se si sta usando il servizio Azure Rights Management e il client Azure Informati
 
 1.  Creare un documento in Microsoft Word.
 
-2.  Dal menu **File**: **Info** > **Proteggi documento** >  **Limita accesso**.
+2.  Dal menu **file** : **info** > **proteggere il documento** >  **limitare l'accesso**.
 
 3. Scegliere un modello per applicare rapidamente i diritti di utilizzo appropriati oppure selezionare **Limitazione accesso** e selezionare i diritti manualmente.
 
@@ -105,7 +105,7 @@ I diritti d'uso vengono visualizzati nella parte superiore del documento in un b
 
 1.  In Outlook creare un messaggio di posta elettronica indirizzato a un destinatario presente nell'organizzazione.
 
-2.  Dalla scheda **Opzioni**: **Autorizzazione** > selezionare un'opzione. Esempio: **Non inoltrare**, **\<Nome società> - Riservato** o **\<Nome società> - Solo visualizzazione riservata**.
+2.  Dalla scheda **Opzioni** : **autorizzazione** > selezionare un'opzione. Ad esempio: **Non inoltrare** o **\<Nome società>- Riservato** o **\<Nome società> - Solo visualizzazione riservata**.
 
 3.  Inviare il messaggio.
 
@@ -117,7 +117,7 @@ Ad esempio, se il messaggio di posta elettronica è stato protetto usando l'opzi
 
 1. In Outlook sul Web creare un messaggio di posta elettronica indirizzato a un destinatario presente nell'organizzazione.
 
-2. Selezionare **Proteggi**. A meno che l'impostazione predefinita non sia stata modificata da un amministratore, l'opzione **Non inoltrare** viene selezionata automaticamente. Se si desidera modificare il valore predefinito, selezionare **modifica autorizzazioni** e quindi selezionare un'opzione dall'elenco a discesa. Esempio: **Crittografare** oppure  **\<nome società > - Informazioni riservate**.
+2. Selezionare **Proteggi**. A meno che l'impostazione predefinita non sia stata modificata da un amministratore, l'opzione **Non inoltrare** viene selezionata automaticamente. Se si desidera modificare il valore predefinito, selezionare **modifica autorizzazioni** e quindi selezionare un'opzione dall'elenco a discesa. Ad esempio, **crittografare** o **\<nome della società >-Confidential**.
 
 3. Inviare il messaggio.
 

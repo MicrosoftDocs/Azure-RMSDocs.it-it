@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 24b94676e5a64de96b90a71422ea9405c2129de7
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792449"
 ---
 # <a name="how-to-add-explicit-owner-rights"></a>Procedura: Aggiungere diritti espliciti di proprietario
@@ -36,7 +36,7 @@ L'esempio di codice seguente illustra solo i passaggi da eseguire per la creazio
 
 ## <a name="instructions"></a>Istruzioni
  
-## <a name="step-1-example-scenario"></a>Passaggio 1: Scenario di esempio
+## <a name="step-1-example-scenario"></a>Passaggio 1: scenario di esempio
 
 In questo esempio i diritti necessari vengono aggiunti a una licenza creata con [IpcCreateLicenseFromScratch](https://msdn.microsoft.com/library/hh535256.aspx). L'esempio illustra la creazione e l'assegnazione dei diritti alla licenza tramite un elenco di diritti.
 

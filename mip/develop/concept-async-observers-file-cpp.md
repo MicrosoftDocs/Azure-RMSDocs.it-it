@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: baa62e34e10de3fb4cacc3eb7cb21c0b3e2ebf75
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175446"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-observers"></a>Microsoft Information Protection SDK - Osservatori dell'API File
@@ -29,9 +29,9 @@ Gli esempi seguenti illustrano il modello promise/future, usato anche dagli esem
 
 Nell'esempio seguente è stata creata una classe `ProfileObserver` derivata da `mip::FileProfile::Observer`. Le funzioni membro sono state sottoposte a override per sfruttare il modello promise/future usato in tutti gli esempi.
 
-**Nota**: Di seguito esempi sono implementati solo parzialmente e non includono le sostituzioni per il `mip::FileEngine` relativi osservatori.
+**Nota**: gli esempi di seguito sono implementati solo parzialmente e non includono gli override per gli osservatori correlati `mip::FileEngine`.
 
-### <a name="profileobserverh"></a>profile_observer.h
+### <a name="profile_observerh"></a>profile_observer.h
 
 Nell'intestazione si definisce `ProfileObserver`, che deriva da `mip::FileProfile::Observer`, quindi si esegue l'override di tutte le funzioni membro.
 
@@ -45,7 +45,7 @@ ProfileObserver() { }
 };
 ```
 
-### <a name="profileobservercpp"></a>profile_observer.cpp
+### <a name="profile_observercpp"></a>profile_observer.cpp
 
 Nell'implementazione stessa si definisce un'azione da eseguire per ogni funzione membro dell'osservatore.
 
@@ -83,7 +83,7 @@ Quando si crea un'istanza di qualsiasi classe dell'SDK o si usa una funzione che
 
 In modo analogo all'osservatore del profilo, `mip::FileHandler` implementa una classe `mip::FileHandler::Observers` per la gestione delle notifiche degli eventi asincroni durante le operazioni sui file. L'implementazione è simile a quella descritta in dettaglio in precedenza. L'implementazione `FileHandlerObserver` è definita parzialmente di seguito. 
 
-### <a name="filehandlerobserverh"></a>file_handler_observer.h
+### <a name="file_handler_observerh"></a>file_handler_observer.h
 
 ```cpp
 #include "mip/file/file_handler.h"
@@ -102,7 +102,7 @@ public:
 };
 ```
 
-### <a name="filehandlerobservercpp"></a>file_handler_observer.cpp
+### <a name="file_handler_observercpp"></a>file_handler_observer.cpp
 
 Questo esempio riguarda solo le prime due funzioni, ma le funzioni rimanenti usano un modello simile per queste implementazioni e per `ProfileObserver`.
 

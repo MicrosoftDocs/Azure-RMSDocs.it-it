@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 8a576565472327f0c090c3168662f16299d4b61f
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792659"
 ---
 # <a name="android-setup"></a>Installazione per Android
@@ -43,11 +43,11 @@ Nel sistema di sviluppo si consiglia di disporre del software seguente:
 
      
 
--   Pacchetto MS RMS SDK 4.2 per Android. Per altre informazioni, vedere [Introduzione](get-started.md).
+-   Pacchetto MS RMS SDK 4.2 per Android. Per ulteriori informazioni, vedere [Introduzione](get-started.md).
 
     Questo SDK consente di sviluppare per Android 4.0.3 (API livello 15) e versioni successive.
 
--   Libreria di autenticazione: è consigliabile usare [Azure Active Directory Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx). Tuttavia, è possibile usare anche altre librerie di autenticazione che supportano OAuth 2.0.
+-   Libreria di autenticazione: è consigliabile usare [Active Directory Authentication Library .NET](https://msdn.microsoft.com/library/jj573266.aspx). Tuttavia, è possibile usare anche altre librerie di autenticazione che supportano OAuth 2.0.
 
     Per altre informazioni, vedere [ADAL per Android](https://github.com/MSOpenTech/azure-activedirectory-library-for-android)
 
@@ -63,7 +63,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
 ## <a name="configuring-your-development-environment"></a>Configurazione dell'ambiente di sviluppo
 
-**Nota**  versione di anteprima di MS RMS SDK 4.2: in questa versione di anteprima, le schermate non sono state aggiornate per riflettere la modifica del nome del percorso da com/microsoft/protection a com/microsoft/rightsmanagment. Il testo, tuttavia, è stato aggiornato.
+**Nota**  versione di anteprima di MS RMS SDK 4,2: in questa versione di anteprima, le schermate non sono state aggiornate per mostrare la modifica nel nome dei percorsi da com/Microsoft/Protection a com/Microsoft/RightsManagement. Il testo, tuttavia, è stato aggiornato.
 
  
 -   Aprire l'ambiente di sviluppo Eclipse.

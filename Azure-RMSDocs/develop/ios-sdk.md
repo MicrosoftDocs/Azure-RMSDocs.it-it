@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: c69e34cce0241a289d75593e4a8a9500f88be433
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68791445"
 ---
 # <a name="ios-and-os-x-setup"></a>Installazione per iOS e OS X
@@ -37,7 +37,7 @@ Questo argomento illustra come impostare l'ambiente per la creazione di nuove ap
 
 ## <a name="prerequisites"></a>Prerequisiti
 
-Nel sistema di sviluppo è consigliabile disporre del software seguente:
+Nel sistema di sviluppo si consiglia di disporre del software seguente:
 
 -   Per tutti i progetti di sviluppo iOS è necessario OS X.
 -   Xcode versione 6.0 e successive
@@ -48,7 +48,7 @@ Nel sistema di sviluppo è consigliabile disporre del software seguente:
 
     Questo SDK consente di sviluppare per iOS 7.0 e OS X 10.8 e versioni successive.
 
--   Libreria di autenticazione: è consigliabile usare [Azure Active Directory Authentication Library (ADAL)](https://msdn.microsoft.com/library/jj573266.aspx). Tuttavia, è possibile usare anche altre librerie di autenticazione che supportano OAuth 2.0.
+-   Libreria di autenticazione: è consigliabile usare [Active Directory Authentication Library .NET](https://msdn.microsoft.com/library/jj573266.aspx). Tuttavia, è possibile usare anche altre librerie di autenticazione che supportano OAuth 2.0.
 
     Per altre informazioni, vedere [ADAL per iOS](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios) o [ADAL per OS X](https://github.com/MSOpenTech/azure-activedirectory-library-for-ios/tree/OSXUniversal)
 
@@ -85,7 +85,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabil
     ![Aggiungere un'aggregazione di risorse](../media/iOS-add-resource-bundle-02a.png)
 
 -   Come in precedenza per la copia del framework, selezionare il pulsante di opzione **Create groups for any added folders** e deselezionare la casella di controllo **Copy items into destination group’s folder (if needed)** .
--   L'SDK si basa su altri framework, tra cui: **CoreData**, **MessageUI**, **SystemConfiguration**, **Libresolv** e **Security**. Per aggiungere questi framework, passare alla sezione **Linked Frameworks and Libraries** del riquadro **Summary** di destinazione ed espandere tale sezione per aggiungerli.
+-   L’SDK si basa anche su altri framework, tra cui **CoreData**, **MessageUI**, **SystemConfiguration**, **Libresolv** e **Security**. Per aggiungere questi framework, passare alla sezione **Linked Frameworks and Libraries** del riquadro **Summary** di destinazione ed espandere tale sezione per aggiungerli.
 
     Sono necessari i framework **UIKit** e **Foundation**, in genere presenti per impostazione predefinita.
 

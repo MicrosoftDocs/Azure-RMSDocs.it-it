@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: b396d65b821f258d08e867bad8331b8603d8ccb9
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68788631"
 ---
 # <a name="server"></a>Server
@@ -34,17 +34,17 @@ Questo argomento descrive lo scopo e le funzioni del server RMS, per Azure e Win
 
 Tra i numerosi servizi Web installati, quelli indicati di seguito sono importanti per lo sviluppo di applicazioni per il server RMS in esecuzione su Windows Server.
 
-| Servizio | Descrizione |
+| Servizio | Description |
 |---------|-------------|
 | Administration | Ospita il sito Web di amministrazione che consente di gestire RMS. Il servizio viene eseguito nei server di certificazione radice e nei server licenze. È possibile usare l'API di script di Active Directory Rights Management Services per scrivere script di amministrazione.|
 | Certificazione account |Crea i certificati del computer che identificano i computer nella gerarchia di certificati RMS e i certificati per account con diritti che associano gli utenti a computer specifici. Per altre informazioni, vedere Attivazione di un computer e Attivazione di un utente.<p><p>Questo servizio viene eseguito nel server di certificazione radice. |
-|Licenze | Rilascia una *licenza per l'utente finale*. Il servizio viene eseguito nei server di certificazione radice e nei server licenze.|
+|Gestione licenze | Rilascia una *licenza per l'utente finale*. Il servizio viene eseguito nei server di certificazione radice e nei server licenze.|
 |Pubblicazione | Crea una *licenza di pubblicazione* che definisce i criteri che possono essere enumerati in una licenza per l'utente finale. Per altre informazioni, vedere l'articolo [Creating an Issuance License](https://msdn.microsoft.com/library/Aa362355) (Creazione di una licenza di pubblicazione).<p><p>Il servizio viene eseguito nei server di certificazione radice e nei server licenze.|
 |Pre-certificazione | Consente a un server di richiedere un *certificato per account con diritti* per conto di un utente. Il servizio viene eseguito nei server di certificazione radice e nei server licenze.|
 |Localizzatore servizi | Indica ad Active Directory l'URL dei servizi di licenza, pubblicazione e certificazione degli account, in modo che i client RMS possano rilevarli. Il servizio viene eseguito nei server di certificazione radice e nei server licenze.|
 
 ## <a name="related-topics"></a>Argomenti correlati ##
-* [Panoramica](ad-rms-overview.md)
+* [Informazioni generali](ad-rms-overview.md)
 * [Microsoft Internet Information Services](https://www.iis.net/overview)
 * [Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md)
 * [Microsoft Windows Rights Management Services con Service Pack 2](https://www.microsoft.com/download/details.aspx?id=4909)

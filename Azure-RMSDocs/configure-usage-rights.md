@@ -14,10 +14,10 @@ ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: dcab49ef780916ac5ddbcb0acba2a555da92ebbe
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73559727"
 ---
 # <a name="configuring-usage-rights-for-azure-information-protection"></a>Configurazione dei diritti di utilizzo per Azure Information Protection
@@ -191,4 +191,4 @@ Il periodo di validità della licenza d'uso predefinito per un tenant è di 30 g
 ## <a name="see-also"></a>Vedere anche
 [Configurazione e gestione dei modelli per Azure Information Protection](configure-policy-templates.md)
 
-[Configurazione di utenti con privilegi avanzati per servizi di Azure Information Protection e individuazione o per il ripristino dei dati](configure-super-users.md)
+[Configurazione degli utenti con privilegi avanzati per Azure Information Protection e servizi di individuazione o ripristino dei dati](configure-super-users.md)

@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: fc25c35c1aea9690c0ec696a41c2f7346b4d6b8a
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69885992"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-profile-concepts"></a>Microsoft Information Protection SDK - Concetti relativi al profilo dell'API Protezione
@@ -24,11 +24,11 @@ Dopo aver definito `ProtectionProfileObserverImpl` e `AuthDelegateImpl`, verrann
 
 ### <a name="protectionprofilesettings-parameters"></a>Parametri ProtectionProfile::Settings
 
-- `std::shared_ptr<MipContext>`: Oggetto `mip::MipContext` inizializzato per archiviare le informazioni sull'applicazione, il percorso di stato e così via.
-- `mip::CacheStorageType`: Definisce come archiviare lo stato: In memoria, su disco o su disco e crittografato.
-- `std::shared_ptr<mip::AuthDelegate>`: Puntatore condiviso della classe `mip::AuthDelegate`.
-- `std::shared_ptr<mip::ConsentDelegate>`: Puntatore condiviso della classe [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md).
-- `std::shared_ptr<mip::ProtectionProfile::Observer> observer`: Puntatore condiviso all'implementazione del profilo `Observer` (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)e [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
+- `std::shared_ptr<MipContext>`: oggetto `mip::MipContext` inizializzato per archiviare le informazioni sull'applicazione, il percorso di stato e così via.
+- `mip::CacheStorageType`: definisce come archiviare lo stato: in memoria, su disco o su disco e crittografato.
+- `std::shared_ptr<mip::AuthDelegate>`: puntatore condiviso della classe `mip::AuthDelegate`.
+- `std::shared_ptr<mip::ConsentDelegate>`: puntatore condiviso della classe [`mip::ConsentDelegate`](reference/class_mip_consentdelegate.md).
+- `std::shared_ptr<mip::ProtectionProfile::Observer> observer`: un puntatore condiviso all'implementazione del `Observer` del profilo (in [`PolicyProfile`](reference/class_mip_policyprofile_observer.md), [`ProtectionProfile`](reference/class_mip_protectionprofile_observer.md)e [`FileProfile`](reference/class_mip_fileprofile_observer.md)).
 
 I due esempi seguenti mostrano come creare l'oggetto profileSettings usando l'archiviazione locale o solo in memoria per l'archiviazione degli stati. Entrambi gli esempi partono dal presupposto che l'oggetto `authDelegateImpl` sia già stato creato.
 
@@ -122,7 +122,7 @@ int main()
 
 Il risultato finale è il caricamento corretto del profilo e l'archiviazione nell'oggetto denominato `profile`.
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
 Ora che il profilo è stato aggiunto, il passaggio successivo consiste nell'aggiungere un motore al profilo.
 

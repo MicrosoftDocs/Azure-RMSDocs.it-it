@@ -9,10 +9,10 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: tommos
 ms.openlocfilehash: df67886f53d697e47f6e812cdcbbac394acaa98d
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69884765"
 ---
 # <a name="auditing-in-the-mip-sdk-file-api"></a>Controllo nell'API File di MIP SDK
@@ -81,6 +81,6 @@ if(commitFuture.get()) {
 
 Gli eventi inviati alla pipeline di controllo di Azure Information Protection vengono visualizzati nei report in corrispondenza di https://portal.azure.com. 
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
 Per informazioni dettagliate sull'esperienza di controllo in Azure Information Protection, vedere il [Blog di annuncio dell'anteprima sulla Community Tech](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).

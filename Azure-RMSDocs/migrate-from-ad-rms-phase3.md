@@ -3,8 +3,8 @@ title: 'Eseguire la migrazione da AD RMS ad Azure Information Protection: fase 3
 description: Fase 3 della migrazione da AD RMS ad Azure Information Protection, che illustra il passaggio 7 della migrazione da AD RMS ad Azure Information Protection.
 author: cabailey
 ms.author: cabailey
-manager: barbkess
-ms.date: 09/03/2019
+manager: rkarlin
+ms.date: 12/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e723940e418b127a46405166368a96867784799c
-ms.sourcegitcommit: afc3b5a5823c79873c822ef9274db0d29ccd5c13
+ms.openlocfilehash: 613dcf3e6b35ed801fafc7718dbb0db8b664483c
+ms.sourcegitcommit: 07b518c780f5e63eb5a72d7499ec7cfa40a95628
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "71684568"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898926"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Fase 3 della migrazione: configurazione lato client
 
@@ -74,17 +74,19 @@ Questo metodo è adatto solo per i client Windows che eseguono app di Office 365
 
     a. In uno dei server AD RMS nel cluster avviare la console Gestione Internet Information Services (IIS).
 
-    b. Passare a **Sito Web predefinito** >  **_wmcs** > **licensing** > **licensing.asmx**
+    b. Passare a **sito Web predefinito** ed espandere **_wmcs**.
 
-    c. Fare clic con il pulsante destro del mouse su **licensing.asmx** > **Proprietà** > **Modifica**
+    c. Fare clic con il pulsante destro del mouse su **Gestione licenze** e scegliere **passa a visualizzazione contenuto**.
 
-    d. Nella finestra di dialogo **Autorizzazioni per licensing.asmx** selezionare **Utenti** se si vuole impostare il reindirizzamento per tutti gli utenti oppure fare clic su **Aggiungi** e quindi specificare un gruppo che contiene gli utenti da reindirizzare.
+    d. Nel riquadro dei dettagli fare clic con il pulsante destro del mouse su **License. asmx** > **Proprietà** > **modifica**
+
+    e. Nella finestra di dialogo **autorizzazioni per License. asmx** selezionare **utenti** se si desidera impostare il reindirizzamento per tutti gli utenti oppure fare clic su **Aggiungi** e quindi specificare un gruppo contenente gli utenti che si desidera reindirizzare.
     
     Anche se tutti gli utenti usano una versione di Office che supporta il reindirizzamento DNS, è preferibile specificare inizialmente un sottoinsieme di utenti per una migrazione graduale.
     
-    e. Per il gruppo selezionato, selezionare **Nega** per le autorizzazioni **Lettura ed esecuzione** e **Lettura**, quindi fare clic due volte su **OK**.
+    f. Per il gruppo selezionato, selezionare **Nega** per le autorizzazioni **Lettura ed esecuzione** e **Lettura**, quindi fare clic due volte su **OK**.
 
-    f. Per verificare che la configurazione funzioni come previsto, provare a connettersi al file licensing.asmx direttamente da un browser. Dovrebbe essere visualizzato il messaggio di errore seguente, che attiva il client che esegue app di Office 365 o Office 2019 o Office 2016 per la ricerca del record SRV:
+    g. Per verificare che la configurazione funzioni come previsto, provare a connettersi al file licensing.asmx direttamente da un browser. Dovrebbe essere visualizzato il messaggio di errore seguente, che attiva il client che esegue app di Office 365 o Office 2019 o Office 2016 per la ricerca del record SRV:
     
     **Error message 401.3: You do not have permissions to view this directory or page using the credentials you supplied (access denied due to Access Control Lists).** (Messaggio di errore 401.3: non si dispone delle autorizzazioni per visualizzare la directory o la pagina con le credenziali specificate (accesso negato a causa di elenchi di controllo di accesso)).
 

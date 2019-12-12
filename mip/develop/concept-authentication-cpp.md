@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 55bfba6da57fa07614165f4d5fcc5fba226cfca7
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886242"
 ---
 # <a name="microsoft-information-protection-sdk---authentication-concepts"></a>Microsoft Information Protection SDK - Concetti relativi all'autenticazione
@@ -24,13 +24,13 @@ L'autenticazione in MIP SDK viene eseguita estendendo la classe `mip::AuthDelega
 
 `mip::AuthDelegate::AcquireOAuth2Token` accetta i parametri seguenti e restituisce un valore booleano che indica se l'acquisizione del token ha avuto esito positivo:
 
-- `mip::Identity`: Identità dell'utente o del servizio da autenticare, se noto.
-- `mip::AuthDelegate::OAuth2Challenge`: Accetta quattro parametri, **Authority**, **Resource**, **Claims**e **Scopes**. **Authority** è il servizio per cui verrà generato il token. **Resource** è il servizio a cui si tenta di accedere. L'SDK gestirà il passaggio di questi parametri al delegato quando viene chiamato. Le attestazioni sono le attestazioni specifiche dell'etichetta richieste dal servizio di protezione. Gli ambiti sono gli ambiti di autorizzazione Azure ad necessari per accedere alla risorsa. 
+- `mip::Identity`: l'identità dell'utente o del servizio da autenticare, se nota.
+- `mip::AuthDelegate::OAuth2Challenge`: accetta quattro parametri, **Authority**, **Resource**, **Claims**e **Scopes**. **Authority** è il servizio per cui verrà generato il token. **Resource** è il servizio a cui si tenta di accedere. L'SDK gestirà il passaggio di questi parametri al delegato quando viene chiamato. Le **attestazioni** sono le attestazioni specifiche dell'etichetta richieste dal servizio di protezione. Gli **ambiti** sono gli ambiti di autorizzazione Azure ad necessari per accedere alla risorsa. 
 - `mip::AuthDelegate::OAuth2Token`: Il risultato del token viene scritto in questo oggetto. Verrà utilizzato dall'SDK quando viene caricato il motore. Al di fuori di questa implementazione dell'autenticazione non dovrebbe essere necessario ottenere o impostare questo valore in altre posizioni.
 
-**Importante:** Le applicazioni non `AcquireOAuth2Token` chiamano direttamente. L'SDK chiamerà questa funzione quando necessario.
+**Importante:** le applicazioni non chiamano `AcquireOAuth2Token` direttamente. L'SDK chiamerà questa funzione quando necessario.
 
-## <a name="consent"></a>Consenso
+## <a name="consent"></a>Consent
 
 Azure AD richiede di dare il consenso per un'applicazione, prima che le venga concessa l'autorizzazione per accedere alle risorse/API protette con l'identità di un account. Il consenso viene registrato come riconoscimento permanente dell'autorizzazione nel tenant dell'account, per l'account specifico (consenso dell'utente) o per tutti gli account (consenso dell'amministratore). Gli scenari per il consenso sono vari, a seconda dell'API a cui si accede e delle autorizzazioni che cerca l'applicazione, nonché dell'account usato per l'accesso: 
 
@@ -49,9 +49,9 @@ Quando un utente esegue un'operazione che richiede il consenso, l'SDK chiama il 
 
 ### <a name="consent-options"></a>Opzioni per il consenso
 
-- **AcceptAlways**: Acconsentire e ricordare la decisione.
-- **Accetta**: Consenso una volta.
-- **Rifiuta**: Non consentire.
+- **AcceptAlways**: fornisce il consenso e memorizza la decisione.
+- **Accept**: fornisce il consenso una sola volta.
+- **Reject**: non fornisce il consenso.
 
 Quando l'SDK richiede il consenso dell'utente con questo metodo, l'applicazione client deve presentare all'utente l'URL. Le applicazioni client devono offrire un modo per ottenere il consenso dell'utente e restituire l'enumerazione di consenso appropriata che corrisponde alla decisione dell'utente.
 
@@ -102,7 +102,7 @@ Consent ConsentDelegateImpl::GetUserConsent(const string& url) {
 }
 ```
 
-A scopo di test e sviluppo, è `ConsentDelegate` possibile implementare un semplice aspetto simile al seguente:
+A scopo di test e sviluppo, è possibile implementare un semplice `ConsentDelegate` simile al seguente:
 
 ```cpp
 Consent ConsentDelegateImpl::GetUserConsent(const string& url) {

@@ -13,10 +13,10 @@ ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 7898fd3ff15423c6a92eb2eabe6f5cb01007b076
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73561294"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
@@ -529,8 +529,8 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
 13. Nel riquadro **Aggiungi ambito** , specificare quanto segue, usando le stringhe suggerite come esempi, quindi selezionare **Aggiungi ambito**:
     - **Nome ambito**: `user-impersonation`
     - **Chi può acconsentire?** : **amministratori e utenti**
-    - **Nome visualizzato del consenso dell'amministratore**: `Access Azure Information Protection scanner`
-    - **Descrizione del consenso dell'amministratore**: `Allow the application to access the scanner for the signed-in user`
+    - **Nome visualizzato per il consenso amministratore**: `Access Azure Information Protection scanner`
+    - **Descrizione del consenso amministratore**: `Allow the application to access the scanner for the signed-in user`
     - **Nome visualizzato del consenso dell'utente**: `Access Azure Information Protection scanner`
     - **Descrizione del consenso dell'utente**: `Allow the application to access the scanner for the signed-in user`
     - **Stato**: **abilitato** (impostazione predefinita)

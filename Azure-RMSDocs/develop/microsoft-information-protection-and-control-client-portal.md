@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: f8d11222ec554c16ce1b3c0113d3bbe7cb291004
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68790921"
 ---
 # <a name="rights-management-services-sdk-21"></a>Rights Management Services SDK 2.1
@@ -37,10 +37,10 @@ Per le risposte alle domande più frequenti, vedere la sezione dedicata agli svi
 
 Per informazioni sui requisiti di runtime per un particolare elemento di programmazione, vedere la sezione Requisiti dell’argomento di riferimento relativo al dato elemento.
 
-|Argomento|DESCRIZIONE|
+|Argomento|Description|
 |-----|--------|
-|[Panoramica](ad-rms-overview.md)|Rights Management Services (RMS) è una tecnologia di protezione che consente di proteggere le informazioni digitali da usi non autorizzati.|
-|[Guida introduttiva](getting-started-with-ad-rms-2-0.md)|La piattaforma RMS SDK 2.1 consente agli sviluppatori di creare applicazioni che sfruttano la protezione delle informazioni RMS.|
+|[Informazioni generali](ad-rms-overview.md)|Rights Management Services (RMS) è una tecnologia di protezione che consente di proteggere le informazioni digitali da usi non autorizzati.|
+|[Guida introduttiva di Intune](getting-started-with-ad-rms-2-0.md)|La piattaforma RMS SDK 2.1 consente agli sviluppatori di creare applicazioni che sfruttano la protezione delle informazioni RMS.|
 |[Note sulla versione](release-notes-rtm.md)|Questo argomento contiene informazioni importanti su questa versione e le precedenti di RMS SDK 2.1.|
 |[Note per gli sviluppatori](developer-notes.md)|Questa sezione fornisce indicazioni specifiche per vari e importanti scenari di sviluppo.|
 |[Informazioni di riferimento sulle API](api-reference-2-1.md)|Questa sezione contiene argomenti che illustrano il materiale di riferimento per tutti gli elementi API.|

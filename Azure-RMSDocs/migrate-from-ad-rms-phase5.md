@@ -4,7 +4,7 @@ description: Fase 5 della migrazione da AD RMS ad Azure Information Protection c
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6be761f99415f3f8e2bfa9de6f27a924316de448
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: ee5ecddb5ba3c5c1add15b7e75fd2fe6f53a2271
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684491"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935487"
 ---
 # <a name="migration-phase-5---post-migration-tasks"></a>Fase 5 della migrazione: attività post-migrazione
 
@@ -66,7 +66,7 @@ Reindirizzamento tramite DNS:
 
 ## <a name="step-11-complete-client-migration-tasks"></a>Passaggio 11. Completare le attività di migrazione dei client
 
-Per i client di dispositivi mobili e i computer Mac: Rimuovere i record SRV in DNS creati al momento della distribuzione dell' [estensione per dispositivo mobile di AD RMS](https://technet.microsoft.com/library/dn673574.aspx).
+Per client dispositivo mobili e computer MAC: rimuovere i record DNS SRV creati al momento della distribuzione dell'[estensione per dispositivo mobile di AD RMS](https://technet.microsoft.com/library/dn673574.aspx).
 
 Dopo che queste modifiche DNS sono state propagate, questi client individueranno e inizieranno a usare automaticamente il servizio Azure Rights Management. I computer Mac che eseguono Mac Office memorizzano invece le informazioni nella cache di AD RMS. Per questi computer, questo processo può durare fino a 30 giorni. 
 
@@ -112,7 +112,7 @@ Per rimuovere i controlli di onboarding:
 
     Nell'output, **License** deve includere **False** e non c'è nessun GUID visualizzato in **SecurityGroupOjbectId**
 
-Infine, se si usa Office 2010 ed è stata abilitata l'attività **AD RMS Rights Policy Template Management (Automated)** (Gestione modelli di criteri per i diritti di utilizzo AD RMS - Automatizzata) nella libreria dell'Utilità di pianificazione di Windows, disabilitare questa attività perché non viene usata dal client Azure Information Protection. Questa attività viene in genere abilitata tramite Criteri di gruppo e supporta una distribuzione AD RMS. È possibile trovare questa attività nella posizione seguente: **Microsoft** > **Windows** > **Active Directory Rights Management Services Client**
+Infine, se si usa Office 2010 ed è stata abilitata l'attività **AD RMS Rights Policy Template Management (Automated)** (Gestione modelli di criteri per i diritti di utilizzo AD RMS - Automatizzata) nella libreria dell'Utilità di pianificazione di Windows, disabilitare questa attività perché non viene usata dal client Azure Information Protection. Questa attività viene in genere abilitata tramite Criteri di gruppo e supporta una distribuzione AD RMS. È possibile trovare questa attività nel seguente percorso: **Microsoft** > **Windows** > **Client Microsoft Active Directory Rights Management Services**
 
 ## <a name="step-12-rekey-your-azure-information-protection-tenant-key"></a>Passaggio 12. Reimpostare la chiave del tenant di Azure Information Protection
 
@@ -128,16 +128,16 @@ Il passaggio da una chiave all'altra non avviene immediatamente, ma richiede alc
 
 Per reimpostare la chiave del tenant di Azure Information Protection:
 
-- **Se la chiave del tenant è gestita da Microsoft**: Eseguire il cmdlet di PowerShell [set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) e specificare l'identificatore di chiave per la chiave creata automaticamente per il tenant. È possibile identificare il valore da specificare eseguendo il cmdlet [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) . La chiave creata automaticamente per il tenant porta la data di creazione meno recente, in modo da poterla identificare usando il comando seguente:
+- **Se la chiave del tenant è gestita da Microsoft**: eseguire il cmdlet di PowerShell [set-AipServiceKeyProperties](/powershell/module/aipservice/set-aipservicekeyproperties) e specificare l'identificatore di chiave per la chiave creata automaticamente per il tenant. È possibile identificare il valore da specificare eseguendo il cmdlet [Get-AipServiceKeys](/powershell/module/aipservice/get-aipservicekeys) . La chiave creata automaticamente per il tenant porta la data di creazione meno recente, in modo da poterla identificare usando il comando seguente:
     
         (Get-AipServiceKeys) | Sort-Object CreationTime | Select-Object -First 1
 
-- **Se la chiave del tenant è gestita dall'utente (BYOK)** : In Azure Key Vault ripetere il processo di creazione della chiave per il tenant di Azure Information Protection, quindi eseguire di nuovo il cmdlet [use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) per specificare l'URI per la nuova chiave. 
+- **Se la chiave del tenant è gestita dall'utente (BYOK)** : in Azure Key Vault, ripetere il processo di creazione della chiave per il tenant di Azure Information Protection, quindi eseguire di nuovo il cmdlet [use-AipServiceKeyVaultKey](/powershell/module/aipservice/use-aipservicekeyvaultkey) per specificare l'URI per la nuova chiave. 
 
 Per altre informazioni sulla gestione della chiave del tenant di Azure Information Protection, vedere [Operazioni relative alla chiave del tenant di Azure Information Protection](./operations-tenant-key.md).
 
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-Dopo aver completato la migrazione, rivedere la [guida di orientamento alla distribuzione](deployment-roadmap.md) per identificare eventuali altre attività di distribuzione che può essere necessario eseguire.
+Dopo aver completato la migrazione, rivedere la [Guida di orientamento per la distribuzione](deployment-roadmap.md) per identificare eventuali altre attività di distribuzione che può essere necessario eseguire.
 

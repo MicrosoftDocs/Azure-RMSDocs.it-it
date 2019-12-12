@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: e73a03b842b1216bcc4ef71941ca4bc0b0233945
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73559948"
 ---
 # <a name="class-miptaskdispatcherdelegate"></a>Classe MIP:: TaskDispatcherDelegate 
@@ -23,7 +23,7 @@ public void DispatchTask (const std:: String & taskId, std:: Function\<void ()\>
 public void DispatchTask (const std:: String & taskId, std:: Function\<void ()\> Task, int64_t delaySeconds)  |  Eseguire un'attività in un thread in background con il ritardo specificato.
 public void ExecuteTaskOnIndependentThread (const std:: String & taskId, std:: Function\<void ()\> attività)  |  Eseguire immediatamente un'attività su un thread indipendente.
 public bool CancelTask (const std:: String & taskId)  |  Annulla un'attività in background.
-public void CancelAllTasks ()  |  Annulla tutte le attività in background.
+public void CancelAllTasks()  |  Annulla tutte le attività in background.
   
 ## <a name="members"></a>Membri
   

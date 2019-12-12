@@ -4,7 +4,7 @@ description: Informazioni e istruzioni per gli amministratori per configurare le
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,14 +12,14 @@ ms.assetid: ec269afe-4e87-4cc1-9144-5fbb594b412e
 ms.subservice: azurerms
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6bde980df23bdfa11bd137966ab48221bdbe6512
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: fc190e6a7433457e0126976a66dbf5b04a47d140
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684211"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935147"
 ---
-# <a name="office-apps-configuration-for-clients-to-use-the-azure-rights-management-service"></a>Applicazioni di Office: configurazione per i client per l'uso del servizio Azure Rights Management
+# <a name="office-apps-configuration-for-clients-to-use-the-azure-rights-management-service"></a>Applicazioni di Office: configurazione per i client da usare con il servizio Azure Rights Management
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
@@ -31,20 +31,20 @@ Dal momento che queste ultime versioni di Office supportano in modo nativo il se
 
 ### <a name="user-instructions-for-office-for-mac"></a>Istruzioni per gli utenti di Office per Mac
 
-Gli utenti che hanno Office per Mac devono prima verificare le proprie credenziali prima di poter proteggere il contenuto. Esempio:
+Gli utenti che hanno Office per Mac devono prima verificare le proprie credenziali prima di poter proteggere il contenuto. Ad esempio:
 
 1. Aprire Outlook e creare un profilo mediante l'account aziendale o dell'istituto di istruzione di Office 365. 
 
 2. Creare un nuovo messaggio e nella scheda **Opzioni** selezionare **autorizzazioni**, quindi selezionare **Verifica credenziali**. Quando richiesto, specificare nuovamente il proprio account aziendale o dell'istituto di istruzione di Office 365 e selezionare **Accedi**.
     
-    Questa azione Scarica i modelli di Rights Management di Azure e verifica che le **credenziali** vengano sostituite con opzioni che **non includono restrizioni**, non **inoltri**e tutti i modelli di Rights Management di Azure pubblicati per il inquilino. 
+    Questa azione Scarica i modelli di Rights Management di Azure e verifica che le **credenziali** vengano ora sostituite con le opzioni che **non includono restrizioni**, non **inoltri**e tutti i modelli di Rights Management di Azure pubblicati per il tenant. 
 
 3. È ora possibile annullare questo nuovo messaggio.
 
-4. Per proteggere un messaggio di posta elettronica o un documento: Nella scheda **Opzioni** selezionare **autorizzazioni** e scegliere un'opzione o un modello che protegga la posta elettronica o il documento.
+4. Per proteggere un messaggio di posta elettronica o un documento: nella scheda **Opzioni** selezionare **autorizzazioni** e scegliere un'opzione o un modello che protegga la posta elettronica o il documento.
 
 ## <a name="office2010"></a>Office 2010
 Per poter usare il servizio Rights Management di Azure con Office 2010, i computer client devono avere il client di Azure Information Protection (versione classica). Non sono necessarie altre configurazioni. Per proteggere i file e usare quelli protetti da altri utenti è sufficiente accedere con le credenziali di Office 365.
 
-Per ulteriori informazioni sul client di Azure Information Protection (classico), vedere [Azure Information Protection client: installazione e configurazione dei client](configure-client.md).
+Per ulteriori informazioni sul client di Azure Information Protection (classico), vedere [Azure Information Protection client: installazione e configurazione per i client](configure-client.md).
 

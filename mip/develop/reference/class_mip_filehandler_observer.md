@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: d1c1a66ce3821bf3d552ee0daa0648940b645fcb
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73560268"
 ---
 # <a name="class-mipfilehandlerobserver"></a>Classe mip::FileHandler::Observer 
@@ -22,7 +22,7 @@ Tutti gli errori ereditano da MIP:: Error. I client non devono eseguire il callb
 --------------------------------|---------------------------------------------
 public virtual void OnCreateFileHandlerSuccess (const std:: shared_ptr\<FileHandler\>& FileHandler, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando il gestore è creato correttamente.
 public virtual void OnCreateFileHandlerFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando la creazione del gestore non è riuscita.
-public virtual void OnClassifySuccess (const std:: Vector\<std:: shared_ptr\<Action\>\>& actions, const std:: shared_ptr\<void\>& context)  |  Chiamato quando classifica l'esito positivo.
+public virtual void OnClassifySuccess (const std:: Vector\<std:: shared_ptr\<Action\>\>& azioni, const std:: shared_ptr\<void\>& context)  |  Chiamato quando classifica l'esito positivo.
 public virtual void OnClassifyFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Chiamato quando la classificazione non è riuscita.
 public virtual void OnGetDecryptedTemporaryFileSuccess (const std:: String & decryptedFilePath, const std:: shared_ptr\<void\>& context)  |  Chiamato quando il file temporaneo decrittografato riesce.
 public virtual void OnGetDecryptedTemporaryFileFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Chiamato quando il recupero del file temporaneo decrittografato non è riuscito.

@@ -9,15 +9,15 @@ ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
 ms.openlocfilehash: a678765835785dcb40aaf65e7f92e78fba67c73a
-ms.sourcegitcommit: 487e681c9683b8adb7ae6fcfb374830bf0e5ad72
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74479114"
 ---
 # <a name="microsoft-information-protection-mip-sdk-version-release-history-and-support-policy"></a>Cronologia delle versioni di Microsoft Information Protection (MIP) SDK e criteri di supporto
 
-## <a name="servicing"></a>Manutenzione 
+## <a name="servicing"></a>Servizio 
 
 Ogni versione disponibile a livello generale è supportata per sei mesi dopo il rilascio della versione GA successiva. La documentazione potrebbe non includere informazioni sulle versioni non supportate. Le correzioni e le nuove funzionalità sono applicabili solo alla versione GA più recente.
 
@@ -59,7 +59,7 @@ Questa versione introduce il supporto per l'API di protezione nel pacchetto .NET
 ### <a name="file-api"></a>API File
 
 - RPMSG
-  - Crittografia
+  - Encryption
   - Aggiunta del supporto per la decrittografia String8
 - Comportamento dell'estensione PFILE configurabile (impostazione predefinita, <EXT>. PFILE o P<EXT>)
   - ProtectionSettings::SetPFileExtensionBehavior
@@ -108,7 +108,7 @@ Questa versione introduce il supporto per l'API di protezione nel pacchetto .NET
 
 **Data di rilascio**: 22 agosto 2019
 
-### <a name="new-features"></a>Nuove funzionalità
+### <a name="new-features"></a>Nuove funzioni e caratteristiche
 
 - `mip::MipContext` è il nuovo oggetto di livello più alto.
 - Ora è supportata la decrittografia dei file MSG protetti.
@@ -139,7 +139,7 @@ Questa versione introduce il supporto per l'API di protezione nel pacchetto .NET
 
 **Data di rilascio**: 15 aprile 2019
 
-### <a name="new-features"></a>Nuove funzionalità
+### <a name="new-features"></a>Nuove funzioni e caratteristiche
 
  - Il componente di telemetria USA ora lo stesso stack HTTP come il resto del MIP, anche se l'applicazione client ne ha eseguito l'override con HttpDelegate.
  - Le applicazioni client possono controllare il comportamento di threading delle attività asincrone eseguendo l'override di TaskDispatcherDelegate nei profili.
@@ -205,7 +205,7 @@ Questa versione introduce il supporto per le piattaforme seguenti:
   - iOS SDK (API criteri)
   - Android SDK (API per i criteri e API di protezione)
 
-### <a name="new-features"></a>Nuove funzionalità
+### <a name="new-features"></a>Nuove funzioni e caratteristiche
 
 - Supporto di ADRMS
 - Le operazioni dell'API di protezione sono realmente asincrone (su Win32), consentendo operazioni di crittografia/decrittografia simultanee non bloccanti

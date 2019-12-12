@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 6f36ef984a6d6d10ce06ae690c98153524a7d301
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68791477"
 ---
 # <a name="overview"></a>Panoramica
@@ -37,7 +37,7 @@ Di seguito sono riportati solo alcuni degli scenari in cui è possibile usare le
 -   Gli sviluppatori di software di progettazione assistita da computer e di produzione desiderano limitare l'accesso ai disegni a un piccolo gruppo di utenti all'interno della divisione di ricerca senza richiedere l'utilizzo di password.
 -   I proprietari di un sito Web di progettazione grafica intendono utilizzare una singola licenza che consenta la visualizzazione gratuita di copie a bassa risoluzione delle proprie immagini, ma che richieda il pagamento per l'accesso alle versioni ad alta risoluzione.
 -   I proprietari di una raccolta documenti online desiderano abilitare i diritti a visualizzare, stampare o modificare i documenti in base all'identità dell'utente.
--   Un'azienda intende pubblicare informazioni riservate sui dipendenti in un sito Web interno limitando la visualizzazione e la modifica dei privilegi a determinati utenti.
+-   Un'azienda intende pubblicare informazioni riservate sui dipendenti in un sito Web interno che limiti la visualizzazione e la modifica dei privilegi a determinati utenti.
 
 Per altre informazioni sul server AD RMS, il client AD RMS e le relative funzionalità, vedere il contenuto del sito TechNet relativo alla [documentazione di AD RMS per i professionisti IT](https://TechNet.Microsoft.Com/library/cc771234.aspx).
 
@@ -45,7 +45,7 @@ Gli altri argomenti di questa sezione riguardano l'architettura di RMS e le rela
 
 ## <a name="in-this-section"></a>In questa sezione
 
-| Argomento | DESCRIZIONE |
+| Argomento | Description |
 |-------|-------------|
 |[Client](ad-rms-client.md) |Questo argomento descrive lo scopo e la funzione di Rights Management Service Client 2.1 |
 |[Server](ad-rms-server.md) | Questo argomento descrive lo scopo e le funzioni del server RMS, per Azure e Windows Server.|

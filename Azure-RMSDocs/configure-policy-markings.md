@@ -4,19 +4,19 @@ description: Quando si assegna un'etichetta a un documento o a un messaggio di p
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/24/2019
+ms.date: 11/24/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 982bc822b43d98f1019dd9f6bae53ace74068a4c
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 472bf634c1eb43e000b26fa1bb11387442ff91c1
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559713"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935045"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
@@ -61,13 +61,13 @@ Per i documenti, i contrassegni visivi vengono applicati come segue:
 
 - Quando a un documento viene applicata un'etichetta usando Esplora file, PowerShell o lo scanner di Azure Information Protection, i contrassegni visivi non vengono applicati subito, ma vengono applicati dal client di Azure Information Protection quando tale documento viene aperto in un'app di Office e salvato per la prima volta.
     
-    L'eccezione si verifica quando si usa il [salvataggio automatico](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) con le app di Office per i file salvati in SharePoint Online, OneDrive o OneDrive for business: quando il salvataggio automatico è acceso, i contrassegni visivi non vengono applicati a meno che non si configuri l' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) su attivare la classificazione per l'esecuzione continua in background. 
+    L'eccezione si verifica quando si usa il [salvataggio automatico](https://support.office.com/article/what-is-autosave-6d6bd723-ebfd-4e40-b5f6-ae6e8088f7a5) con le app di Office per i file salvati in SharePoint Online, OneDrive o OneDrive for business: quando il salvataggio automatico è acceso, i contrassegni visivi non vengono applicati a meno che non si configuri l' [impostazione client avanzata](./rms-client/client-admin-guide-customizations.md#turn-on-classification-to-run-continuously-in-the-background) per attivare la classificazione per l'esecuzione continua in background. 
 
 ## <a name="to-configure-visual-markings-for-a-label"></a>Per configurare i contrassegni visivi per un'etichetta
 
 Seguire le istruzioni seguenti per configurare i contrassegni visivi per un'etichetta.
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection** . 
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection**. 
     
     Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
 
@@ -145,7 +145,7 @@ Se il tipo di carattere specificato non è disponibile, il client torna a usare 
 
 È possibile scegliere un colore nell'elenco dei colori disponibile o specificare un colore personalizzato immettendo un codice tripletta esadecimale per i componenti rosso, verde e blu (RGB) del colore. Ad esempio, **#40e0d0** è il valore esadecimale RGB per il turchese. 
 
-Se è necessario un riferimento per questi codici, è possibile trovare una tabella utile dalla pagina di [> \<color](https://developer.mozilla.org/docs/Web/CSS/color_value) da MSDN Web docs. Questi codici sono disponibili anche in molte applicazioni che consentono di modificare le immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
+Se è necessario un riferimento per questi codici, è possibile trovare una tabella utile dalla pagina di [> dei colori\<](https://developer.mozilla.org/docs/Web/CSS/color_value) da MSDN Web docs. Questi codici sono disponibili anche in molte applicazioni che consentono di modificare le immagini. Ad esempio quando in Microsoft Paint si sceglie un colore personalizzato in una tavolozza vengono visualizzati automaticamente i valori RGB corrispondenti ed è possibile copiarli.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

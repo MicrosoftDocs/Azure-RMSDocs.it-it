@@ -4,7 +4,7 @@ description: Il servizio di protezione, Azure Rights Management, deve essere att
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4ef001b57f252d4b4c8736bb4b20e998cd6a756b
-ms.sourcegitcommit: 28c1de5f9d1426f160f0e0bafcf9f76769e662b6
+ms.openlocfilehash: 181320c5046137d96816723c9b9ae55979998453
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71679079"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934858"
 ---
 # <a name="activating-the-protection-service-from-azure-information-protection"></a>Attivazione del servizio di protezione da Azure Information Protection
 
@@ -40,7 +40,7 @@ Quanto Azure Rights Management è incluso in un piano di servizio, non è necess
 
 - **Se la sottoscrizione che include Azure Rights Management o Azure Information Protection risale alla fine di febbraio 2018 o a un periodo successivo:** il servizio viene attivato automaticamente. Non è necessario attivare il servizio, a meno che Azure Rights Management sia stato disattivato dall'utente o da un altro amministratore globale.
 
-- **Se la sottoscrizione che include Azure Rights Management o Azure Information Protection risale a febbraio 2018 o a un periodo precedente:** Microsoft sta iniziando ad attivare il servizio Azure Rights Management per le sottoscrizioni se il tenant usa Exchange Online. Per queste sottoscrizioni, l'implementazione dell'attivazione automatica inizierà l'1 agosto 2018 quando il servizio verrà automaticamente attivato a meno che **AutomaticServiceUpdateEnabled** non risulti impostato su **false** quando si esegue [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps). 
+- **Se la sottoscrizione che include Azure Rights Management o Azure Information Protection risale a febbraio 2018 o prima:** Microsoft sta iniziando ad attivare il servizio Azure Rights Management per queste sottoscrizioni se il tenant usa Exchange Online. Per queste sottoscrizioni, l'implementazione dell'attivazione automatica inizierà l'1 agosto 2018 quando il servizio verrà automaticamente attivato a meno che **AutomaticServiceUpdateEnabled** non risulti impostato su **false** quando si esegue [Get-IRMConfiguration](/powershell/module/exchange/encryption-and-certificates/get-irmconfiguration?view=exchange-ps). 
 
 Se nessuno degli scenari successivi è applicabile, è necessario attivare manualmente il servizio di protezione. 
 
@@ -106,9 +106,9 @@ Quando si usano questi controlli di selezione utenti, tutti gli utenti dell'orga
 
 
 ## <a name="next-steps"></a>Passaggi successivi
-Quando il servizio di protezione viene attivato per l'organizzazione, usare la Guida di orientamento per la [distribuzione di Azure Information Protection](deployment-roadmap.md) per verificare se potrebbero essere necessarie altre operazioni di configurazione prima di distribuire Azure Information Protection a utenti e amministratori. 
+Quando il servizio di protezione viene attivato per l'organizzazione, usare la Guida di orientamento per la [distribuzione Azure Information Protection](deployment-roadmap.md) per verificare se è necessario eseguire altri passaggi di configurazione prima di distribuire Azure Information Protection a utenti e amministratori. 
 
-Ad esempio, è possibile usare i [modelli](configure-policy-templates.md) per semplificare l'applicazione della protezione ai file da parte degli utenti, connettere i server locali per usare il servizio di protezione installando il [connettore Rights Management](deploy-rms-connector.md)e distribuire [Azure Information Protection client](./rms-client/aip-client.md) che supporta la protezione di tutti i tipi di file in tutti i dispositivi. 
+Ad esempio, è possibile usare i [modelli](configure-policy-templates.md) per semplificare l'applicazione della protezione ai file da parte degli utenti, connettere i server locali per usare il servizio di protezione installando il [connettore Rights Management](deploy-rms-connector.md)e distribuire il client di [Azure Information Protection](./rms-client/aip-client.md) che supporta la protezione di tutti i tipi di file in tutti i dispositivi. 
 
 I servizi di Office, ad esempio Exchange Online e SharePoint Online, richiedono operazioni di configurazione aggiuntive prima di poter usare le funzionalità di Information Rights Management (IRM). Per informazioni sul funzionamento delle applicazioni con il servizio di protezione, Azure Rights Management, vedere [come le applicazioni supportano il servizio azure Rights Management](applications-support.md).
 

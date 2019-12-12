@@ -4,7 +4,7 @@ description: Informazioni su Azure Rights Management (Azure RMS), la tecnologia 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -15,12 +15,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 0cc51afb848dc754d33e5f0d425741ef84eff453
-ms.sourcegitcommit: 28c1de5f9d1426f160f0e0bafcf9f76769e662b6
+ms.openlocfilehash: a09ee41507dae2aa54cf8cde326d70be143d403c
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71679184"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934077"
 ---
 # <a name="what-is-azure-rights-management"></a>Informazioni su Microsoft Azure Rights Management
 
@@ -52,7 +52,7 @@ Usare la tabella seguente per identificare i requisiti o i problemi che può dov
 |Protezione di più tipi di file|√ Nelle prime implementazioni di Rights Management era possibile proteggere, usando la protezione nativa, soltanto i file di Office. Ora, la **protezione generica**, inizialmente offerta dall'applicazione di condivisione Rights Management e ora dal client Azure Information Protection, consente il supporto per più [tipi di file](./rms-client/client-admin-guide-file-types.md).|
 |Protezione dei file in qualsiasi situazione|√ Quando un file è [protetto](./rms-client/client-classify-protect.md), la protezione rimane associata al file stesso anche se questo viene salvato o copiato in un'area di archiviazione non controllata dal reparto IT, ad esempio un servizio di archiviazione cloud.|
 |Condivisione sicura delle informazioni|√ Quando un file è [protetto](./rms-client/client-classify-protect.md), è possibile condividerlo con altri utenti in tutta sicurezza. Ciò accade, ad esempio, nel caso di un allegato a un messaggio di posta elettronica o un collegamento a un sito di SharePoint. Se le informazioni riservate si trovano all'interno di un messaggio di posta elettronica, è possibile proteggere il messaggio oppure semplicemente usare l'opzione Non inoltrare da Outlook. <br /><br />Il vantaggio di allegare un file protetto invece di proteggere l'intero messaggio di posta elettronica consiste nel fatto che il testo del messaggio di posta elettronica non è crittografato, quindi è possibile includere istruzioni per il primo utilizzo se il messaggio viene inviato all'esterno dell'organizzazione. Chiunque può leggere le istruzioni, ma poiché il documento allegato è protetto, solo gli utenti autorizzati potranno aprirlo, anche se il messaggio di posta elettronica o il documento viene inoltrato ad altre persone.|
-|Controllo e monitoraggio|√ È possibile [controllare e monitorare l'utilizzo](log-analyze-usage.md) dei file protetti, anche all'esterno dell'organizzazione.<br /><br />Si supponga, ad esempio, di essere un dipendente della società Contoso, Ltd e di lavorare a un progetto comune con tre persone della società Fabrikam, Inc. Si invia a queste tre persone un documento protetto e impostato come di sola lettura. La funzionalità di controllo di Azure Rights Management può fornire le informazioni seguenti:<br /><br />- Se e quando le persone specificate in Fabrikam hanno aperto il documento.<br /><br />- Se altre persone che non sono state specificate hanno tentato invano di aprire il documento, forse perché questo era stato inoltrato o salvato in una posizione condivisa e accessibile da altri utenti.<br /><br />- Se una delle persone specificate ha tentato invano di stampare o modificare il documento.<br /><br />Il [sito di rilevamento dei documenti](./rms-client/client-track-revoke.md), inoltre, consente a utenti e amministratori di monitorare e, se necessario, revocare l'accesso ai documenti protetti.|
+|Controllo e monitoraggio|√ È possibile [controllare e monitorare l'utilizzo](log-analyze-usage.md) dei file protetti, anche all'esterno dell'organizzazione.<br /><br />Ad esempio, si lavora per contoso, Ltd. Si sta lavorando a un progetto comune con tre persone di Fabrikam, Inc. Inviare tramite posta elettronica questi tre utenti un documento protetto e limitato alla sola lettura. La funzionalità di controllo di Azure Rights Management può fornire le informazioni seguenti:<br /><br />- Se e quando le persone specificate in Fabrikam hanno aperto il documento.<br /><br />- Se altre persone che non sono state specificate hanno tentato invano di aprire il documento, forse perché questo era stato inoltrato o salvato in una posizione condivisa e accessibile da altri utenti.<br /><br />- Se una delle persone specificate ha tentato invano di stampare o modificare il documento.<br /><br />Il [sito di rilevamento dei documenti](./rms-client/client-track-revoke.md), inoltre, consente a utenti e amministratori di monitorare e, se necessario, revocare l'accesso ai documenti protetti.|
 |Supporto di tutti i dispositivi di uso comune e non solo dei computer Windows|√ I  [dispositivi supportati](./requirements-client-devices.md) comprendono:<br /><br />- Computer e telefoni Windows<br /><br />- Computer Mac<br /><br />- Tablet e telefoni iOS<br /><br />- Tablet e telefoni Android|
 |Supporto della collaborazione business-to-business|√ Poiché Azure Rights Management è un servizio cloud, per poter condividere contenuti protetti con altre organizzazioni non è necessario configurare esplicitamente trust con queste ultime. Se queste organizzazioni dispongono già di una directory di Office 365 o di Azure AD, la collaborazione tra organizzazioni è supportata automaticamente. In caso contrario, gli utenti possono ottenere una sottoscrizione gratuita a [RMS per utenti singoli](rms-for-individuals.md) oppure usare un account Microsoft per le [applicazioni che supportano questo tipo di autenticazione per Azure Information Protection](secure-collaboration-documents.md#supported-scenarios-for-opening-protected-documents).|
 |Supporto per servizi locali e per Office 365|√ Oltre a garantire [facile integrazione con Office 365](office-apps-services-support.md), Azure Rights Management può essere usato anche con i servizi locali seguenti quando si distribuisce il [connettore RMS](deploy-rms-connector.md):<br /><br />- Exchange Server 2016<br /><br />- SharePoint Server<br /><br />- Windows Server con la funzionalità Infrastruttura di classificazione file|
@@ -67,7 +67,7 @@ Usare la tabella seguente per identificare i requisiti o i problemi che può dov
 ## <a name="security-compliance-and-regulatory-requirements"></a>Requisiti di sicurezza, conformità e normativi
 Azure Rights Management supporta i requisiti di sicurezza, conformità e normativi seguenti:
 
-√ Uso di crittografia standard del settore e supporto per FIPS 140-2. Per altre informazioni, vedere [Controlli crittografici usati in Azure RMS: Algoritmi e lunghezze delle chiavi](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
+√ Uso di crittografia standard del settore e supporto per FIPS 140-2. Per altre informazioni, vedere [Controlli crittografici usati in Azure RMS: algoritmi e lunghezze delle chiavi](how-does-it-work.md#cryptographic-controls-used-by-azure-rms-algorithms-and-key-lengths).
 
 √ Supporto per il modulo di protezione hardware nCipher nShield (HSM) per archiviare la chiave del tenant in Microsoft Azure Data Center. Azure Rights Management usa ambienti di sicurezza separati per i propri data center in America del Nord, nei paesi EMEA (Europa, Medio Oriente e Africa) e in Asia, così da limitare l'uso delle chiavi all'area pertinente.
 

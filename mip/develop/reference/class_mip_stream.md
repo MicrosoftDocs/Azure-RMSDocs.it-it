@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 10/29/2019
 ms.openlocfilehash: f1bd4220369d036c2071453412844e0691efb2ec
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73559967"
 ---
 # <a name="class-mipstream"></a>Classe mip::Stream 
@@ -65,7 +65,7 @@ Scarica il flusso.
   
 **Restituisce**: true se l'operazione ha esito positivo, in caso contrario false.
   
-### <a name="seek-function"></a>Funzione Seek
+### <a name="seek-function"></a>Seek (funzione)
 Cerca una posizione all'interno del flusso.
 
 Parametri:  

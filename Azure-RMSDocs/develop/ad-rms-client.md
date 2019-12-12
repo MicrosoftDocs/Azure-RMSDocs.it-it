@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 63876f55d38b3f97f41ad3a0b350ede8234202d3
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68788661"
 ---
 # <a name="client"></a>Client
@@ -35,6 +35,6 @@ Per altre informazioni, vedere [Note sulla distribuzione del client RMS](https:/
 
 ## <a name="related-topics"></a>Argomenti correlati
 
-* [Panoramica](ad-rms-overview.md)
+* [Informazioni generali](ad-rms-overview.md)
 * [Consentire all'applicazione di servizio di usare RMS basato su cloud](how-to-use-file-api-with-aadrm-cloud.md)
 * [Documentazione TechNet su RMS Client 2.1](https://technet.microsoft.com/library/jj159267(WS.10).aspx)

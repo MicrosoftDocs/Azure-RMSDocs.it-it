@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 03/05/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 78dc655d8244378fcc37b22030d3060fd291ef16
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175469"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Problemi noti e domande frequenti di Microsoft Information Protection (MIP) SDK
@@ -22,7 +22,7 @@ In questo articolo vengono fornite le risposte alle domande comuni e informazion
 
 ### <a name="sdk-string-handling"></a>Gestione delle stringhe SDK
 
-**Domanda**: In che modo il SDK gestisce le stringhe e il tipo di stringa è consigliabile usare nel codice?
+**Domanda**: in che modo l'SDK gestisce le stringhe e il tipo di stringa da usare nel codice?
 
 L'SDK è progettato per essere multipiattaforma e usa [UTF-8 (Unicode Transformation Format - 8 bit)](https://wikipedia.org/wiki/UTF-8) per la gestione delle stringhe. Le linee guida specifiche dipendono dalla piattaforma in uso:
 
@@ -36,32 +36,32 @@ L'SDK è progettato per essere multipiattaforma e usa [UTF-8 (Unicode Transforma
 
 ### <a name="error-file-format-not-supported"></a>Errore: "Formato di file non supportato"  
 
-**Domanda**: Il motivo per cui ottenere il seguente errore durante il tentativo di protezione o assegnare un'etichetta di un file con estensione PDF?
+**Domanda**: perché si verifica l'errore seguente quando si tenta di proteggere o etichettare un file PDF?
 
-> Formato di file non supportato
+> Formato file non supportato
 
-Questa eccezione risultante dal tentativo di proteggere o assegnare un'etichetta di un file PDF che è stato firmato digitalmente o protetto da password. Per altre informazioni sulla protezione e l'assegnazione di etichette a file PDF, vedere [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) (Nuovo supporto della crittografia PDF con Microsoft Azure Information Protection).
+Questa eccezione deriva dal tentativo di proteggere o etichettare un file PDF con firma digitale o protetto da password. Per altre informazioni sulla protezione e l'assegnazione di etichette a file PDF, vedere [New support for PDF encryption with Microsoft Information Protection](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/New-support-for-PDF-encryption-with-Microsoft-Information/ba-p/262757) (Nuovo supporto della crittografia PDF con Microsoft Azure Information Protection).
 
-### <a name="error-failed-to-parse-the-acquired-compliance-policy"></a>Errore: "Non è stato possibile analizzare il criterio di conformità acquisito"  
+### <a name="error-failed-to-parse-the-acquired-compliance-policy"></a>Errore: "Impossibile analizzare i criteri di conformità acquisiti"  
 
-**Domanda**: Perché viene visualizzato l'errore seguente dopo aver scaricato Microsoft Information Protection SDK e provare a usare il file di esempio per elencare tutte le etichette?
+**Domanda**: perché viene riportato l'errore seguente dopo il download dell'SDK MIP e viene effettuato un tentativo di usare l'esempio di file per elencare tutte le etichette?
 
-> È accaduto qualcosa non valida: Impossibile analizzare il criterio di conformità acquisito. Non è riuscita con: Tag [classe mip::CompliancePolicyParserException] non trovato: criteri, il tipo di nodo: 15, nome: No Name Found, Value: , Ancestors: <SyncFile><Content>, correlationId:[34668a40-blll-4ef8-b2af-00005aa674z9]
+> Si è verificato un errore: non è stato possibile analizzare i criteri di conformità acquisiti. Errore: [classe MIP:: CompliancePolicyParserException] tag non trovato: criterio, NodeType: 15, nome: nessun nome trovato, valore:, predecessori: <SyncFile><Content>, correlationId: [34668a40-blll-4ef8-B2AF-00005aa674z9]
 
-Ciò indica che non eseguita la migrazione le etichette di Azure Information Protection per l'assegnazione di etichette esperienza unificata. Vedere [Come eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365](/azure/information-protection/configure-policy-migrate-labels) per eseguire la migrazione delle etichette e quindi creare criteri per le etichette nel Centro sicurezza e conformità di Office 365. 
+Ciò indica che non è stata eseguita la migrazione delle etichette da Azure Information Protection all'esperienza unificata di assegnazione di etichette. Vedere [Come eseguire la migrazione di etichette di Azure Information Protection al Centro sicurezza e conformità di Office 365](/azure/information-protection/configure-policy-migrate-labels) per eseguire la migrazione delle etichette e quindi creare criteri per le etichette nel Centro sicurezza e conformità di Office 365. 
 
-### <a name="error-systemcomponentmodelwin32exception-loadlibrary-failed"></a>Errore: "System.ComponentModel.Win32Exception: LoadLibrary non riuscito"
+### <a name="error-systemcomponentmodelwin32exception-loadlibrary-failed"></a>Errore: "System. ComponentModel. Win32exception: LoadLibrary failed"
 
-**Domanda**: Il motivo per cui ottenere l'errore seguente quando si usa il Wrapper .NET di MIP SDK?
+**Domanda**: perché si verifica l'errore seguente quando si usa il wrapper .NET di MIP SDK?
 
-> System.ComponentModel.Win32Exception: LoadLibrary non è riuscita per: [sdk_wrapper_dotnet.dll] quando si chiama MIP. Initialize ().
+> System. ComponentModel. Win32exception: LoadLibrary non riuscito per: [sdk_wrapper_dotnet. dll] quando si chiama MIP. Inizializzare ().
 
-L'applicazione non è installato il runtime richiesto o non è stato compilato come versione. Visualizzare [assicurarsi che l'app ha il runtime richiesto](setup-configure-mip.md#ensure-your-app-has-the-required-runtime) per altre informazioni. 
+L'applicazione non dispone del runtime necessario o non è stata compilata come versione. Per ulteriori informazioni, vedere [verificare che l'applicazione disponga del runtime necessario](setup-configure-mip.md#ensure-your-app-has-the-required-runtime) . 
 
-### <a name="error-proxyautherror-exception"></a>Errore: "Eccezione ProxyAuthError"
+### <a name="error-proxyautherror-exception"></a>Errore: "eccezione ProxyAuthError"
 
-**Domanda**: Il motivo per cui ottenere l'errore seguente quando si usa il SDK di MIP?
+**Domanda**: perché si verifica l'errore seguente quando si usa l'SDK MIP?
 
-> "ProxyAuthenticatonError: Autenticazione proxy non è supportato"
+> "ProxyAuthenticatonError: autenticazione proxy non supportata"
 
-Microsoft Information Protection SDK non supporta l'uso dei proxy autenticato. Per correggere questo messaggio, gli amministratori di proxy devono impostare gli endpoint del servizio Microsoft Information Protection per ignorare il proxy. Un elenco di tali endpoint sono disponibili all'indirizzo il [intervalli di indirizzi IP e Office 365 URL](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges) pagina. Microsoft Information Protection SDK richiede che `*.protection.outlook.com` (riga 9) e gli endpoint del servizio Azure Information Protection (riga 73) ignorare l'autenticazione proxy.
+Il MIP SDK non supporta l'uso di proxy autenticati. Per correggere questo messaggio, gli amministratori del proxy devono impostare gli endpoint di servizio di Microsoft Information Protection per ignorare il proxy. Un elenco di tali endpoint è disponibile nella pagina [URL e intervalli di indirizzi IP di Office 365](https://docs.microsoft.com/office365/enterprise/urls-and-ip-address-ranges) . Per MIP SDK è necessario che `*.protection.outlook.com` (riga 9) e gli endpoint del servizio di Azure Information Protection (riga 73) ignorino l'autenticazione proxy.

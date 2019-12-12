@@ -14,10 +14,10 @@ ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 1fcab238281326ff8e885f655a936392e1519eb1
-ms.sourcegitcommit: fed1df1858f8316f7dd45e751c6910b444651a87
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "74474384"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
@@ -115,7 +115,7 @@ Le impostazioni avanzate dei criteri di etichetta vengono applicate in ordine in
 
 Usare il parametro *AdvancedSettings* con [New-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-labelpolicy?view=exchange-ps) e [set-LabelPolicy](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-labelpolicy?view=exchange-ps).
 
-|Impostazione|Scenario e istruzioni|
+|Impostazioni|Scenario e istruzioni|
 |----------------|---------------|
 |AttachmentAction|[Per i messaggi di posta elettronica con allegati, applica un'etichetta corrispondente alla classificazione più elevata di questi allegati](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments)
 |AttachmentActionTip|[Per i messaggi di posta elettronica con allegati, applica un'etichetta corrispondente alla classificazione più elevata di questi allegati](#for-email-messages-with-attachments-apply-a-label-that-matches-the-highest-classification-of-those-attachments) 
@@ -152,7 +152,7 @@ Esempio di comando di PowerShell per verificare le impostazioni dei criteri di e
 
 Usare il parametro *AdvancedSettings* con [New-Label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/new-label?view=exchange-ps) e [set-label](https://docs.microsoft.com/powershell/module/exchange/policy-and-compliance/set-label?view=exchange-ps).
 
-|Impostazione|Scenario e istruzioni|
+|Impostazioni|Scenario e istruzioni|
 |----------------|---------------|
 |colore|[Specificare un colore per l'etichetta](#specify-a-color-for-the-label)|
 |customPropertiesByLabel|[Applicare una proprietà personalizzata quando viene applicata un'etichetta](#apply-a-custom-property-when-a-label-is-applied)|
@@ -299,7 +299,7 @@ Per i criteri etichetta selezionati specificare le stringhe seguenti:
 
 - Valore: \<**tipi di applicazioni di Office WXP**> 
 
-Esempi:
+Di seguito sono riportati alcuni esempi.
 
 - Per eseguire la ricerca solo in documenti di Word, specificare **W**.
 
@@ -777,7 +777,7 @@ Si noti che questa impostazione non comporta la rimozione dell'etichetta origina
 
 Requisito: i documenti con un'etichetta di isole sicure "riservato" devono essere rietichettati come "riservati" da Azure Information Protection.
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di Secure Islands è **Riservato** ed è archiviata nella proprietà personalizzata denominata **Classificazione**.
 
@@ -795,7 +795,7 @@ Esempio di comando di PowerShell, in cui l'etichetta è denominata "Confidential
 
 Requisito: i documenti contrassegnati come "sensibili" dalle isole sicure devono essere rietichettati come "riservatezza elevata" da Azure Information Protection.
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di Secure Islands è **Sensibile** ed è archiviata nella proprietà personalizzata denominata **Classificazione**.
 
@@ -813,7 +813,7 @@ Esempio di comando di PowerShell, in cui l'etichetta è denominata "highly Confi
 
 Requisito: sono presenti due etichette di isole sicure che includono la parola "Internal" e si vuole che i documenti che contengono una di queste etichette di isole sicure vengano rietichettati come "General" dal client Azure Information Protection Unified labeling.
 
-Esempio:
+In questo esempio:
 
 - Le etichette di Secure Islands includono la parola **Interno** e sono archiviate nella proprietà personalizzata denominata **Classificazione**.
 
@@ -897,7 +897,7 @@ Per questa configurazione è necessario specificare un'impostazione avanzata den
 
 Requisito: i documenti etichettati come "riservati" dal client Azure Information Protection Unified Labeling devono avere la proprietà personalizzata aggiuntiva denominata "classificazione" con il valore "Secret".
 
-Esempio:
+In questo esempio:
 
 - L'etichetta di riservatezza è denominata **Confidential** e crea una proprietà personalizzata denominata **classificazione** con il valore **Secret**.
 
@@ -1012,7 +1012,7 @@ Inoltre:
 
 Per impostazione predefinita, il client di Azure Information Protection Unified Labeling tenta automaticamente di connettersi a Internet per scaricare le etichette e le impostazioni dei criteri di etichetta dal centro di gestione delle etichette: il Centro sicurezza e conformità di Office 365, il Microsoft 365 Centro sicurezza o il centro di conformità Microsoft 365. Se si dispone di computer che non possono connettersi a Internet per un certo periodo di tempo, è possibile esportare e copiare i file che gestiscono manualmente i criteri per il client di etichettatura unificata.
 
-Istruzioni
+Istruzioni:
 
 1. Scegliere o creare un account utente in Azure AD che si utilizzerà per scaricare le etichette e le impostazioni dei criteri che si desidera utilizzare nel computer disconnesso.
 
@@ -1048,7 +1048,7 @@ Per impostazione predefinita, il client di Azure Information Protection Unified 
  
 Per modificare il livello di registrazione per questi file, individuare il nome del valore seguente nel registro di sistema e impostare i dati del valore sul livello di registrazione richiesto:
 
-**HKEY_CURRENT_USER \SOFTWARE\Microsoft\MSIP\LogLevel**
+**HKEY_CURRENT_USER\SOFTWARE\Microsoft\MSIP\LogLevel**
 
 Impostare il livello di registrazione su uno dei valori seguenti:
 

@@ -4,7 +4,7 @@ description: Informazioni sulle etichette e le impostazioni in un criterio di Az
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/28/2019
+ms.date: 11/28/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8f7d05ec4696a8b3aa2e1daadc839187eabd9d1e
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: b000d36d3613f137ec788988e05da967e1837898
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72447712"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935402"
 ---
 # <a name="overview-of-the-azure-information-protection-policy"></a>Panoramica dei criteri di Azure Information Protection
 

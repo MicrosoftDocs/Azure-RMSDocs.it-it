@@ -14,11 +14,13 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
+experimental: true
+experiment_id: priyamo-test-20160729
 ms.openlocfilehash: cd70cecf84a6f346d3e88e3a7aa9cc28406fd265
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792026"
 ---
 # <a name="how-to-enable-document-tracking-and-revocation"></a>Procedura: Abilitare la revoca e il rilevamento dei documenti
@@ -35,7 +37,7 @@ I passaggi 1 e 2 consentono il rilevamento del documento. Il passaggio 3 consent
 
 Seguono i dettagli di implementazione per questi passaggi.
 
-## <a name="1-add-document-tracking-metadata"></a>1. Aggiungere i metadati associati al rilevamento dei documenti
+## <a name="1-add-document-tracking-metadata"></a>1. aggiungere i metadati di rilevamento dei documenti
 
 Rilevamento dei documenti è una funzionalità del sistema di Rights Management. L'aggiunta di metadati specifici durante il processo di protezione di un documento fa sì che si possa registrare il documento stesso con il portale del servizio di rilevamento, che fornisce quindi diverse opzioni per il rilevamento.
 
@@ -88,7 +90,7 @@ Infine, usare questa API per registrare il documento rilevato con il sistema di 
 - [IpcRegisterLicense](https://msdn.microsoft.com/library/dn974057.aspx)
 
 
-## <a name="2-register-the-document-with-the-rms-service"></a>2. Registrare il documento con il servizio RMS
+## <a name="2-register-the-document-with-the-rms-service"></a>2. registrare il documento con il servizio RMS
 
 Di seguito è riportato un frammento di codice che mostra un esempio di impostazione dei metadati di rilevamento del documento e la chiamata per la registrazione con il sistema di rilevamento.
 

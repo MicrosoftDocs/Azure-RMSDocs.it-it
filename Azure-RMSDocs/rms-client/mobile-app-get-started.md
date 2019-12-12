@@ -4,7 +4,7 @@ description: Visualizzare file o messaggi di posta elettronica con l'app Azure I
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 3d5d18d8-7b2e-456c-bb45-48da4eb55544
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: deca101aacd4d3026b0783581ccfe57be5a5dc7a
-ms.sourcegitcommit: 28c1de5f9d1426f160f0e0bafcf9f76769e662b6
+ms.openlocfilehash: cc22b2d655444039aee0283b465ee8f5c1a38f7c
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71679034"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933413"
 ---
 # <a name="get-started-with-the-microsoft-azure-information-protection-app-for-ios-and-android"></a>Introduzione all'app Microsoft Azure Information Protection per iOS e Android
 
@@ -32,15 +32,15 @@ La maggior parte degli utenti usa l'app Azure Information Protection per aprire 
 >
 > In modo analogo, accedere all'app solo dopo aver ricevuto la richiesta corrispondente.
 
-Per usare le istruzioni seguenti è necessario accedere dal dispositivo mobile a uno dei file supportati dall'app. Esempio:
+Per usare le istruzioni seguenti è necessario accedere dal dispositivo mobile a uno dei file supportati dall'app. Ad esempio:
 
-- **Un file con estensione rpmsg**: si tratta di un messaggio di posta elettronica protetto con RMS visualizzato come allegato in un messaggio di posta elettronica quando l'app di posta elettronica del dispositivo mobile non supporta la protezione dei dati con Rights Management in modo nativo. 
+- **Un file con estensione rpmsg**: si tratta di un messaggio di posta elettronica protetto da diritti visualizzato come allegato in un messaggio di posta elettronica quando l'app di posta elettronica del dispositivo mobile non supporta la protezione dei dati di gestione dei diritti in modo nativo. 
     
     Usare un altro dispositivo per inviare a se stessi un messaggio di posta elettronica protetto da diritti a cui è possibile accedere dal dispositivo mobile. Ad esempio, usare Outlook da un computer Windows. Per un elenco dei client di posta elettronica che supportano Rights Management in modo nativo, vedere la colonna **posta elettronica** della prima tabella in [applicazioni che supportano la pagina protezione dati di Azure Rights Management](../requirements-applications.md) .
 
-- **Un file PDF protetto con RMS**: Da un computer Windows, usare un client Azure Information Protection ( [classico](client-classify-protect.md) o [unificato client](clientv2-classify-protect.md)di etichettatura) per proteggere un file PDF e quindi inviare manualmente questo file PDF protetto da diritti come allegato nel messaggio di posta elettronica. In alternativa, caricare un file PDF in una raccolta protetta di SharePoint e condividerlo usando l'indirizzo di posta elettronica.
+- **Un file PDF protetto da diritti**: da un computer Windows, usare un client Azure Information Protection ( [classico](client-classify-protect.md) o [Unified Labeling client](clientv2-classify-protect.md)) per proteggere un file PDF e quindi inviare manualmente questo file PDF protetto da diritti come allegato nel messaggio di posta elettronica. In alternativa, caricare un file PDF in una raccolta protetta di SharePoint e condividerlo usando l'indirizzo di posta elettronica.
 
-- **Un file con estensione ptxt o pjpg o ppng**: Da un computer Windows, usare un client Azure Information Protection per proteggere un file di testo o di immagine e quindi inviare il file protetto come allegato di posta elettronica. Per l'elenco completo dei tipi di file che è possibile usare per il test, vedere la prima tabella nella sezione [Tipi di file supportati per la classificazione e la protezione](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) della Guida dell'amministratore del client Azure Information Protection. 
+- **A. ptxt o. pjpg o. ppng**: da un computer Windows, usare un client Azure Information Protection per proteggere un file di testo o di immagine e quindi inviare manualmente questo file protetto come allegato di posta elettronica. Per l'elenco completo dei tipi di file che è possibile usare per il test, vedere la prima tabella nella sezione [Tipi di file supportati per la classificazione e la protezione](client-admin-guide-file-types.md#supported-file-types-for-classification-and-protection) della Guida dell'amministratore del client Azure Information Protection. 
 
 Per visualizzare questi file nell'app visualizzatore Azure Information Protection, toccare l'allegato di posta elettronica o il collegamento. Quando viene chiesto di selezionare un'app per aprire i file, selezionare l'app visualizzatore **AIP**. Verrà quindi chiesto di accedere con l'account aziendale o dell'istituto di istruzione oppure di selezionare un certificato. Dopo l'autenticazione delle credenziali, l'app Azure Information Protection visualizza il messaggio di posta elettronica o il file da leggere.
 

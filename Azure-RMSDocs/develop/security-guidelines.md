@@ -12,10 +12,10 @@ ms.service: information-protection
 ms.suite: ems
 ms.reviewer: kartikk
 ms.openlocfilehash: eb550284cd10a3b0946bd188ca2f194edead86f0
-ms.sourcegitcommit: a5f595f8a453f220756fdc11fd5d466c71d51963
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 07/02/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "67521198"
 ---
 # <a name="security-best-practices-for-information-protection"></a>Procedure di sicurezza consigliate per Information Protection
@@ -51,7 +51,7 @@ Questi argomenti riguardano principalmente i problemi di fuga di dati. L'integri
 
 Microsoft non esegue test né analisi dei risultati dei test per verificare la conformità allo standard minimo. È responsabilità del partner verificare che siano soddisfatti gli standard minimi. Microsoft offre due livelli aggiuntivi di consigli per ridurre le minacce più comuni. In generale, si tratta di suggerimenti supplementari. Ad esempio, rispettare le indicazioni preferite presuppone che siano stati soddisfatti gli standard minimi, ove possibile, se non diversamente specificato.
 
-|Livello standard|Descrizione|
+|Livello standard|Description|
 |---|---|
 |Standard minimo| Un'applicazione che gestisce le informazioni protette deve rispettare lo standard minimo per poter essere firmata con il certificato di produzione ricevuto da Microsoft. I partner in genere usano il certificato di gerarchia di produzione al momento del rilascio della versione finale del software. I test interni di un partner vengono usati per verificare se l'applicazione soddisfa lo standard minimo. Soddisfare lo standard minimo non costituisce, né può essere interpretato come, una garanzia di sicurezza da parte di Microsoft. Microsoft non esegue test né analisi dei risultati dei test per verificare la conformità allo standard minimo. È responsabilità del partner verificare che siano soddisfatti i requisiti minimi.|
 |Standard consigliato| Le linee guida consigliate consentono di ottimizzare la sicurezza delle applicazioni e offrono un'indicazione di come l'SDK potrebbe evolvere con l'implementazione di altri criteri di sicurezza. I fornitori possono differenziare le proprie applicazioni creandole in base a questo livello più elevato di sicurezza.|
@@ -81,7 +81,7 @@ Se l'applicazione non interpreta né applica correttamente i diritti espressi ne
 
 ### <a name="azure-information-protection-aip"></a>Azure Information Protection (AIP)
 
-Il sistema di protezione delle informazioni organizza i diritti pochi raggruppamenti. Per altre informazioni, vedere [configurazione dei diritti di utilizzo per Azure Information Protection](../configure-usage-rights.md).
+Il sistema di protezione delle informazioni organizza alcuni raggruppamenti. Per ulteriori informazioni, vedere [configurazione dei diritti di utilizzo per Azure Information Protection](../configure-usage-rights.md).
 
 AIP consente a un utente di decrittografare o meno le informazioni. Le informazioni non hanno una protezione intrinseca. Se un utente ha il diritto di decrittografare le informazioni, l'API lo consente. L'applicazione è responsabile della gestione o della protezione delle informazioni dopo che sono state messe al sicuro. Un'applicazione è responsabile della gestione del proprio ambiente e dell'interfaccia per impedire l'uso non autorizzato delle informazioni. Ad esempio, nel caso in cui vengano disattivati i pulsanti **Stampa** e **Copia** e una licenza conceda solo il diritto di visualizzazione. Il gruppo di test dovrebbe verificare che l'applicazione agisca correttamente su tutti i diritti di licenza che riconosce.
 

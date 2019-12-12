@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 414ad04c062a81d374a9e46d170feabb15e0e6cc
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886219"
 ---
 # <a name="microsoft-information-protection-sdk---file-handler-concepts"></a>Microsoft Information Protection SDK - Concetti relativi ai gestori di file
@@ -51,9 +51,9 @@ Il primo passaggio necessario per la gestione di qualsiasi file nell'API File co
 
 Per creare `FileHandler` è sufficiente chiamare la funzione `CreateFileHandlerAsync` di `FileEngine` usando il modello promise/future.
 
-`CreateFileHandlerAsync`accetta tre parametri: Percorso del file che deve essere letto o modificato, `mip::FileHandler::Observer` per le notifiche degli eventi asincroni e per il suggerimento per l'oggetto. `FileHandler`
+`CreateFileHandlerAsync` accetta tre parametri: il percorso del file che deve essere letto o modificato, il `mip::FileHandler::Observer` per le notifiche degli eventi asincroni e la promessa per il `FileHandler`.
 
-**Nota:** La classe `mip::FileHandler::Observer` deve essere implementata in una classe derivata perché `CreateFileHandler` richiede l'oggetto `Observer`. 
+**Nota:** la classe `mip::FileHandler::Observer` deve essere implementata in una classe derivata perché `CreateFileHandler` richiede l'oggetto `Observer`. 
 
 ```cpp
 auto createFileHandlerPromise = std::make_shared<std::promise<std::shared_ptr<mip::FileHandler>>>();
@@ -62,7 +62,7 @@ fileEngine->CreateFileHandlerAsync(filePath, std::make_shared<FileHandlerObserve
 auto handler = createFileHandlerFuture.get();
 ```
 
-Dopo la creazione corretta dell'oggetto `FileHandler` è possibile eseguire operazioni sui file (recupero/impostazione/eliminazione/commit).
+Dopo la creazione corretta dell'oggetto `FileHandler` è possibile eseguire operazioni di file (get/set/delete/commit).
 
 ## <a name="read-a-label"></a>Leggere un'etichetta
 
@@ -94,11 +94,11 @@ I dati dell'etichetta possono essere letti dall'oggetto `label` e passati a qual
 
 ## <a name="set-a-label"></a>Impostare un'etichetta
 
-L'impostazione di un'etichetta è un processo costituito da due parti. Per prima cosa, dopo aver creato un gestore che punta al file in questione, l'etichetta può essere impostata `FileHandler->SetLabel()` chiamando con alcuni parametri `mip::Label`: `mip::LabelingOptions`, e `mip::ProtectionOptions`. In primo luogo, è necessario risolvere l'ID etichetta in un'etichetta e quindi definire le opzioni di etichettatura. 
+L'impostazione di un'etichetta è un processo costituito da due parti. Per prima cosa, dopo aver creato un gestore che punta al file in questione, è possibile impostare l'etichetta chiamando `FileHandler->SetLabel()` con alcuni parametri: `mip::Label`, `mip::LabelingOptions`e `mip::ProtectionOptions`. In primo luogo, è necessario risolvere l'ID etichetta in un'etichetta e quindi definire le opzioni di etichettatura. 
 
 ### <a name="resolve-label-id-to-miplabel"></a>Risolvere l'ID etichetta in MIP:: Label
 
-Il primo parametro della funzione selabel è un `mip::Label`oggetto. Spesso, l'applicazione utilizza identificatori di etichetta invece di etichette. L'identificatore di etichetta può essere risolto in `mip::Label` chiamando **GetLabelById** sul file o sul motore dei criteri:
+Il primo parametro della funzione **selabel** è un `mip::Label`. Spesso, l'applicazione utilizza identificatori di etichetta invece di etichette. È possibile risolvere l'identificatore di etichetta nel `mip::Label` chiamando **GetLabelById** nel motore dei criteri o del file:
 
 ```cpp
 mip::Label label = mEngine->GetLabelById(labelId);
@@ -113,7 +113,7 @@ Il secondo parametro necessario per impostare l'etichetta è `mip::LabelingOptio
 - `mip::AssignmentMethod` è semplicemente un enumeratore con tre valori: `STANDARD`, `PRIVILEGED` o `AUTO`. Per altri dettagli, vedere le informazioni di riferimento per `mip::AssignmentMethod`.
 - La giustificazione è obbligatoria solo se richiesta dai criteri di servizio *e* per l'abbassamento del livello di riservatezza *esistente* di un file.
 
-Questo snip Mostra come creare `mip::LabelingOptions` l'oggetto e impostare la giustificazione e il messaggio di downgrade.
+Questo snip Mostra come creare l'oggetto `mip::LabelingOptions` e impostare la giustificazione e il messaggio di downgrade.
 
 ```cpp
 auto labelingOptions = mip::LabelingOptions(mip::AssignmentMethod::STANDARD);
@@ -122,9 +122,9 @@ labelingOptions.SetDowngradeJustification(true, "Because I made an educated deci
 
 ### <a name="protection-settings"></a>Impostazioni di protezione
 
-Per alcune applicazioni potrebbe essere necessario eseguire operazioni per conto di un'identità utente delegato. La `mip::ProtectionSettings` classe consente all'applicazione di definire l'identità delegata *per ogni gestore*. In precedenza, la delega veniva eseguita dalle classi del motore. Si sono verificati svantaggi significativi nel sovraccarico dell'applicazione e nei round trip del servizio. Spostando le impostazioni dell'utente delegato in `mip::ProtectionSettings` e rendendola parte della classe del gestore, questo overhead viene eliminato, ottenendo prestazioni migliori per le applicazioni che eseguono molte operazioni per conto di diversi set di identità utente. 
+Per alcune applicazioni potrebbe essere necessario eseguire operazioni per conto di un'identità utente delegato. La classe `mip::ProtectionSettings` consente all'applicazione di definire l'identità delegata *per ogni gestore*. In precedenza, la delega veniva eseguita dalle classi del motore. Si sono verificati svantaggi significativi nel sovraccarico dell'applicazione e nei round trip del servizio. Spostando le impostazioni utente delegato in `mip::ProtectionSettings` e rendendola parte della classe handler, viene eliminato questo overhead, ottenendo prestazioni migliori per le applicazioni che eseguono molte operazioni per conto di diversi set di identità utente. 
 
-Se la delega non è necessaria, è `mip::ProtectionSettings()` sufficiente passare alla funzione di **etichetta** . Se la delega è obbligatoria, è possibile ottenerla creando un `mip::ProtectionSettings` oggetto e impostando l'indirizzo di posta elettronica delegato:
+Se la delega non è necessaria, passare semplicemente `mip::ProtectionSettings()` alla funzione di **etichetta** . Se la delega è obbligatoria, è possibile ottenerla creando un oggetto `mip::ProtectionSettings` e impostando l'indirizzo di posta elettronica delegato:
 
 ```cpp
 mip::ProtectionSettings protectionSettings; 
@@ -133,9 +133,9 @@ protectionSettings.SetDelegatedUserEmail("alice@contoso.com");
 
 ### <a name="set-the-label"></a>Imposta l'etichetta
 
-Dopo aver recuperato l' `mip::Label` oggetto dall'ID, avere impostato le opzioni per l'assegnazione di etichette e, facoltativamente, impostare le impostazioni di protezione, è ora possibile impostare l'etichetta.
+Dopo aver recuperato il `mip::Label` dall'ID, aver impostato le opzioni di etichettatura e, facoltativamente, aver impostato le impostazioni di protezione, è ora possibile impostare l'etichetta.
 
-Se non sono state impostate le impostazioni di protezione, impostare l' `SetLabel` etichetta chiamando sul gestore:
+Se non sono state impostate le impostazioni di protezione, impostare l'etichetta chiamando `SetLabel` sul gestore:
 
 ```cpp
 handler->SetLabel(label, labelingOptions, mip::ProtectionSettings());
@@ -155,7 +155,7 @@ Il passaggio finale per confermare qualsiasi modifica apportata a un file in MIP
 
 Per implementare la funzione di commit, si ritorna al modello promise/future creando una promessa per un `bool`. La funzione `CommitAsync()` restituirà true se l'operazione ha esito positivo o false se ha esito negativo per qualsiasi motivo. 
 
-Dopo la creazione `promise` di `future`e `CommitAsync()` , viene chiamato il metodo e vengono specificati due parametri: Il percorso del file di`std::string`output () e il suggerimento. Infine, il risultato viene ottenuto recuperando il valore dell'oggetto `future`.
+Dopo aver creato `promise` e `future`, viene chiamata la funzione `CommitAsync()` specificando due parametri: il percorso del file di output (`std::string`) e la promessa. Infine, il risultato viene ottenuto recuperando il valore dell'oggetto `future`.
 
 ```cpp
 auto commitPromise = std::make_shared<std::promise<bool>>();
@@ -164,7 +164,7 @@ handler->CommitAsync(outputFile, commitPromise);
 auto wasCommitted = commitFuture.get();
 ```
 
-**Importante:** `FileHandler` Non aggiornerà né sovrascriverà i file esistenti. Spetta allo sviluppatore implementare la **sostituzione** del file in corso di etichettatura. 
+**Importante:** il `FileHandler` non aggiornerà o sovrascriverà i file esistenti. Spetta allo sviluppatore implementare la **sostituzione** del file in corso di etichettatura. 
 
 Se si scrive un'etichetta in **FileA.docx**, verrà creata una copia del file, **FileB.docx**, con l'etichetta applicata. È necessario scrivere codice per rimuovere/rinominare **FileA.docx** e rinominare **FileB.docx**.
 

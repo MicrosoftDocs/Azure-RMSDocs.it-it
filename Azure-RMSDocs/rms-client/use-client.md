@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection offre una soluzione client-s
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 12/03/2019
+ms.date: 12/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: a7273f3ebb8a467d08e5897e0684b2ec2a3ffee2
-ms.sourcegitcommit: 1d89fb1c773c198c28b08230855d01d72f140dc0
+ms.openlocfilehash: 024e785faf06abde45177fe8049ae8c7c24294fd
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74780916"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933294"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -42,7 +42,7 @@ Laddove possibile, usare uno dei client di assegnazione di etichette perché le 
 La scelta di etichettare il client per i computer Windows potrebbe essere influenzata dal portale di gestione usato:
 
 - Il client di assegnazione di etichette predefinito di Office e le impostazioni dei criteri e delle etichette di Azure Information Protection per il download dei client con etichetta unificata dai centri di amministrazione seguenti: 
-    - Office 365 Centro sicurezza e conformità
+    - Centro sicurezza e conformità di Office 365
     - Centro sicurezza Microsoft 365
     - Centro conformità Microsoft 365
 
@@ -52,7 +52,9 @@ Poiché il client di etichettatura unificata e il client classico richiedono un'
 
 Quale client utilizzare?
 
-- Usare il **client di assegnazione di etichette incorporato in Office** per i computer Windows quando si dispone di app di Office 365 con una versione minima 1910, si vogliono usare le stesse etichette e le stesse impostazioni dei criteri che possono essere usate anche da MacOS, iOS e Android e non sono necessarie funzionalità nelle app di Office che richiedono il client di etichetta unificato o il client classico. Queste funzionalità includono la barra Information Protection sotto la barra multifunzione per semplificare la selezione e la visibilità delle etichette. Questo client supporta il cambio di account e, poiché non usa un componente aggiuntivo di Office, offre prestazioni migliori nelle app di Office rispetto all'uso di uno dei client Azure Information Protection.
+- Usare il **client di assegnazione di etichette incorporato in Office** per i computer Windows quando si dispone di app di Office 365 con una versione minima 1910, si vogliono usare le stesse etichette e le stesse impostazioni dei criteri che possono essere usate anche da MacOS, iOS e Android e non sono necessarie funzionalità nelle app di Office che richiedono il client di etichetta unificato o il client classico. Queste funzionalità includono la barra Information Protection sotto la barra multifunzione per semplificare la selezione e la visibilità delle etichette. 
+    
+    Questo client supporta il cambio di account e, poiché non usa un componente aggiuntivo di Office, offre prestazioni migliori nelle app di Office rispetto all'uso di uno dei client Azure Information Protection. Poiché l'assegnazione di etichette è incorporata in Office, non è prevista alcuna installazione e manutenzione separate per questo client di assegnazione di etichette. Inoltre, diversamente da un componente aggiuntivo di Office, non può essere disabilitato.
 
 - Usare la **Azure Information Protection client di assegnazione di etichette unificata** nei computer Windows per le etichette e le impostazioni dei criteri che possono essere usate anche da MacOS, iOS e Android, si vuole etichettare i file in modo indipendente dalle app di Office 365 e non sono necessarie funzionalità che sono supportate solo dal client classico. Queste funzionalità includono attualmente la protezione del contenuto con una chiave locale (HYOK) e una versione di disponibilità generale dello scanner per gli archivi dati locali.
 

@@ -9,10 +9,10 @@ ms.collection: M365-security-compliance
 ms.date: 11/07/2018
 ms.author: tommos
 ms.openlocfilehash: 729570c902ad3175b65ddd8167005c0cb4e4078c
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175225"
 ---
 # <a name="auditing-in-the-mip-sdk"></a>Controllo in MIP SDK
@@ -41,7 +41,7 @@ Questi eventi sono utili per rilevare nell'azienda le applicazioni che usano Mic
 
 Gli eventi di individuazione offrono indicazioni sulle informazioni con etichetta che vengono lette o usate dall'API Criteri. Questi eventi sono utili poiché indicano i dispositivi, la posizione e gli utenti che accedono alle informazioni nell'intera organizzazione.
 
-Eventi di rilevamento vengono generati nell'API di criterio, impostando un flag quando si crea il `mip::PolicyHandler` oggetto. Nell'esempio seguente, il valore per **isAuditDiscoveryEnabled** è impostata su `true`. Quando `mip::ExecutionState` viene passato a `ComputeActions()` o `GetSensitivityLabel()` (con metadati informazioni e i contenuti identificatore esistente), le informazioni di individuazione verranno inviate a Azure informazioni protezione Analitica.
+Gli eventi di individuazione vengono generati nell'API dei criteri, impostando un flag quando si crea l'oggetto `mip::PolicyHandler`. Nell'esempio seguente il valore di **isAuditDiscoveryEnabled** è impostato su `true`. Quando `mip::ExecutionState` viene passato a `ComputeActions()` o `GetSensitivityLabel()` (con le informazioni sui metadati e l'identificatore di contenuto esistenti), le informazioni di individuazione verranno inviate a Azure Information Protection Analytics.
 
 Il controllo di individuazione viene generato dopo che l'applicazione chiama `ComputeActions()` o `GetSensitivityLabel()` e specifica `mip::ExecutionState`. Questo evento viene generato una sola volta per ogni gestore.
 
@@ -72,10 +72,10 @@ handler->NotifyCommittedActions(*state);
 
 ## <a name="audit-dashboard"></a>Dashboard di controllo
 
-Gli eventi inviati alla pipeline di controllo di Azure Information Protection vengono visualizzati nei report in corrispondenza di https://portal.azure.com. Azure Analitica di protezione di informazioni è disponibile in anteprima pubblica e potrebbe cambiare caratteristiche e funzionalità.
+Gli eventi inviati alla pipeline di controllo di Azure Information Protection vengono visualizzati nei report in corrispondenza di https://portal.azure.com. Azure Information Protection Analytics è in anteprima pubblica e le funzionalità/funzionalità possono cambiare.
 
 ## <a name="next-steps"></a>Passaggi successivi
 
-- Per informazioni dettagliate sull'esperienza di controllo in Azure Information Protection, vedere la [annuncio sul blog sulla tecnologia della Community di anteprima](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
-- Scaricare il [esempi dell'API dei criteri da GitHub e provare l'API di criteri](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
+- Per informazioni dettagliate sull'esperienza di controllo in Azure Information Protection, vedere il [Blog dell'annuncio di anteprima sulla Community Tech](https://techcommunity.microsoft.com/t5/Azure-Information-Protection/Data-discovery-reporting-and-analytics-for-all-your-data-with/ba-p/253854).
+- Scaricare gli [esempi di API dei criteri da GitHub e provare l'API dei criteri](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)
 

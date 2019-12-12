@@ -15,13 +15,13 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 1e5efbf90bb4542d885e5ebe69eb71eeb2f74c03
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68791082"
 ---
-# <a name="getting-started"></a>Introduzione
+# <a name="getting-started"></a>Guida introduttiva
 
 La piattaforma Rights Management Services SDK 2.1 consente agli sviluppatori di creare applicazioni che sfruttano la protezione delle informazioni RMS tramite un server RMS o Azure RMS. La piattaforma gestisce procedure di sicurezza complesse, ad esempio la gestione delle chiavi e l’elaborazione delle operazioni di crittografia e decrittografia, e offre un'API semplificata per agevolare lo sviluppo delle applicazioni.
 
@@ -31,7 +31,7 @@ Questo argomento illustra il processo di configurazione ed esecuzione dell'appli
 
 ## <a name="in-this-sections"></a>Contenuto della sezione
 
-| Argomento | DESCRIZIONE |
+| Argomento | Description |
 |-------|-------------|
 | [Note sulla versione](release-notes-rtm.md) | Questo argomento contiene informazioni importanti su questa versione e le precedenti dell'SDK 2.1 RMS.|
 | [Installare l'SDK](install-the-rms-sdk.md) | Questo argomento descrive l'installazione degli strumenti per sviluppatori.|

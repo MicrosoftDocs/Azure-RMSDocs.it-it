@@ -12,10 +12,10 @@ ms.assetid: a53c2df2-a0a2-4f1f-995b-75ba55e4489b
 ms.suite: ems
 ms.reviewer: kartikk
 ms.openlocfilehash: d9f1a3578a5da4abec6d61aa849388573dec3fe1
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60179164"
 ---
 # <a name="azure-information-protection-developers-guide"></a>Guida per gli sviluppatori di Azure Information Protection
@@ -35,7 +35,7 @@ Le applicazioni di servizio forniscono funzionalità per proteggere le informazi
 
 - [IpcDIp](https://github.com/Azure-Samples/active-directory-dotnet-rms) è un'applicazione DLP abilitata per RMS di esempio che illustra i passaggi di base che devono essere eseguiti da un'applicazione DLP abilitata per RMS mediante l'API file di RMS per la protezione e l'utilizzo di contenuto con restrizioni.
 - [IpcAzureApp](https://github.com/Azure-Samples/active-directory-dotnet-rms) è un esempio che illustra come usare RMS SDK nelle applicazioni Azure per proteggere i dati in un'archiviazione BLOB di Azure.
-- [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) è un esempio che illustra come creare un'applicazione Windows che controlla le directory nel file system e applica i criteri di protezione RMS a ogni modifica, ad esempio per i file modificati o i file aggiunti.
+- [RmsFileWatcher](https://github.com/Azure-Samples/active-directory-dotnet-rms) è un esempio che illustra come creare un'applicazione Windows che controlla le directory nel file system e applica i criteri di protezione RMS a ogni modifica, ad esempio per i file modificati o aggiunti.
 - [ProtectFilesInDir](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/ProtectFilesInDir) è un esempio di applicazione console semplice che accetta una directory come input e consente di proteggere tutti i file solo in tale directory, senza ricorsione.
 
 ## <a name="powershell-guides"></a>Guide di PowerShell
@@ -57,7 +57,7 @@ La versione 4.2 è basata su client REST con API specifiche del sistema operativ
 
 - [AzureIP Test](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test) è un'applicazione console di esempio che consente di crittografare i documenti con un modello di Azure o un criterio ad hoc.
 - [IPCNotepad](https://github.com/Azure-Samples/Azure-Information-Protection-Samples/tree/master/AzureIP_Test) è un'applicazione abilitata per RMS di esempio che illustra i passaggi di base che devono essere eseguiti da ogni applicazione abilitata per RMS per la protezione e l'utilizzo di contenuto con restrizioni.
-- [RmsDocumentInspector](https://github.com/Azure-Samples/active-directory-dotnet-rms) è uno strumento in grado di fornire informazioni su qualsiasi file RMS protetto, ad esempio i diritti utente o l'id contenuto.
+- [RmsDocumentInspector](https://github.com/Azure-Samples/active-directory-dotnet-rms) è uno strumento in grado di fornire informazioni su qualsiasi file protetto da RMS, ad esempio per quanto riguarda i diritti utente o l'ID contenuto.
 
 ## <a name="development-environment-setup"></a>Configurazione dell'ambiente di sviluppo
 
@@ -74,7 +74,7 @@ Le guide seguenti illustrano i passaggi di configurazione specifici del sistema 
 
 Ognuno degli argomenti seguenti contiene indicazioni specifiche per un aspetto dell'implementazione di un'applicazione. Le applicazioni di servizio vengono create mediante RMS SDK 2.x. Le applicazioni utente vengono create mediante RMS SDK 4.x. Il collegamento dell'articolo viene definito con tipo di applicazione, servizio e utente.
 
-### <a name="general"></a>Generale
+### <a name="general"></a>Informazioni di carattere generale
 
 - [Procedura: Abilitare la revoca e il rilevamento dei documenti (servizio)](tracking-content.md)
 - [Come distribuire il client](../rms-client/client-deployment-notes.md)
@@ -125,7 +125,7 @@ Ognuno degli argomenti seguenti contiene indicazioni specifiche per un aspetto d
 - [Formato di file msg (parte 1)](https://blogs.msdn.microsoft.com/openspecification/2009/11/06/msg-file-format-part-1/)
 - [Formato di file msg (parte 2)](https://blogs.msdn.microsoft.com/openspecification/2010/06/20/msg-file-format-rights-managed-email-message-part-2/)
 
-### <a name="api-reference"></a>Informazioni di riferimento sulle API
+### <a name="api-reference"></a>Riferimento API
 
 - [Informazioni di riferimento sulle API di Windows](https://msdn.microsoft.com/library/hh535292.aspx)
   - [Codici di errore di Windows SDK](https://msdn.microsoft.com/library/hh535248.aspx)

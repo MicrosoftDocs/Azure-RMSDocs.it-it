@@ -4,7 +4,7 @@ description: Istruzioni per gli utenti per installare il client di Azure Informa
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,18 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 8cd249d34574d3b0a14554a4e66e28a917fcbaf7
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: a7f9b75cfcc139ac14241ba562d89caa60bc1f5f
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71689832"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933389"
 ---
-# <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>Manuale dell'utente: Scaricare e installare il client di Azure Information Protection
+# <a name="user-guide-download-and-install-the-azure-information-protection-client"></a>Guida dell'utente: Scaricare e installare il client Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 
 Se il client di Azure Information Protection non viene installato dall'amministratore, è possibile procedere autonomamente. Per installare questo client è necessario essere un amministratore locale del PC in modo che sia possibile assegnare etichette a documenti e messaggi di posta elettronica e proteggerli.
@@ -43,7 +43,7 @@ Inoltre:
 
 2. Individuare la sezione del **client Azure Information Protection** e fare clic sull'icona di Windows. Fare clic su **Download** e salvare il file **AzInfoProtection.exe**.     
 
-3. Eseguire il file eseguibile che è stato scaricato. Se viene richiesto di continuare, fare clic su **Sì**.    
+3. Eseguire il file eseguibile che è stato scaricato. Se viene chiesto di continuare, fare clic su **Sì**.    
 
 4. Nella pagina **Installare il client di Azure Information Protection**:     
     - Selezionare l'opzione per l'installazione di un criterio demo se non si riesce a connettersi al cloud, ma si vuole vedere e provare Azure Information Protection sul lato client usando un criterio locale per scopi dimostrativi. Quando il client si connette a un servizio di Azure Information Protection, questo criterio demo viene sostituito dai criteri di Azure Information Protection dell'organizzazione.    

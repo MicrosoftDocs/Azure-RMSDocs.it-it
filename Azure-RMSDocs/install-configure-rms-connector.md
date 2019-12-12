@@ -4,7 +4,7 @@ description: Informazioni sull'installazione e la configurazione del connettore 
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/26/2019
+ms.date: 12/05/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 8fc9425608f0ff2556ad83292607bb84912a427b
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 1b1f98a5d01d90cc25d6ffc378201ae90711eead
+ms.sourcegitcommit: d062ddf89fcb46e489f32f0d9f7aff73c3357a9b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559682"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74882053"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installazione e configurazione del connettore di Azure Rights Management
 
@@ -46,9 +46,9 @@ Prima di iniziare, assicurarsi di aver esaminato e controllato i [prerequisiti](
 
     -   Se per il connettore RMS si desidera usare lo strumento di configurazione server in modo da automatizzare la configurazione delle impostazioni del Registro di sistema sui server locali, scaricare anche il file GenConnectorConfig.ps1.
 
-3.  Eseguire il file **RMSConnectorSetup.exe** con privilegi di amministratore sul computer in cui si desidera installare il connettore RMS.
+3.  Nel computer in cui si vuole installare il connettore RMS eseguire **RMSConnectorSetup. exe** con privilegi di amministratore.
 
-4.  Nella home page della configurazione del connettore Microsoft Rights Management selezionare **Installa connettore Microsoft Rights Management sul computer**, quindi fare clic su **Avanti**.
+4.  Nella pagina iniziale del programma di installazione di Microsoft Rights Management Connector selezionare **installa Microsoft Rights Management Connector nel computer**, quindi fare clic su **Avanti**.
 
 5.  Leggere e accettare i termini del contratto di licenza del connettore RMS, quindi fare clic su **Avanti**.
 
@@ -57,9 +57,9 @@ Per continuare, immettere un account e una password per configurare il connettor
 ## <a name="entering-credentials"></a>Immissione delle credenziali
 Per poter configurare il connettore RMS, è necessario immettere le credenziali per un account dotato di privilegi sufficienti per la configurazione del connettore. È ad esempio possibile digitare <strong>admin@contoso.com</strong> e quindi specificare la password per questo account.
 
-Questo account non deve richiedere l'autenticazione a più fattori (MFA, Multi-Factor Authentication) perché lo strumento di amministrazione Microsoft Rights Management non supporta l'autenticazione MFA per questo account. Inoltre, se si usa Azure AD accesso condizionale, non [bloccare l'autenticazione legacy](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication) per questo account.
+Questo account non deve richiedere l'autenticazione a più fattori perché il programma di installazione di Microsoft Rights Management Connector non supporta l'autenticazione a più fattori. Inoltre, se si usa Azure AD accesso condizionale, non [bloccare l'autenticazione legacy](https://docs.microsoft.com/azure/active-directory/conditional-access/block-legacy-authentication) per questo account.
 
-Sono previste anche alcune limitazioni per i caratteri della password del connettore. Non è possibile usare una password che includa uno dei caratteri seguenti: e commerciale ( **&** ), parentesi quadra aperta ( **[** ), parentesi quadra chiusa ( **]** ), virgolette semplici ( **"** ) e apostrofo ( **'** ). Se la password include uno di questi caratteri non è possibile effettuare l'autenticazione per il connettore RMS e viene visualizzato il messaggio di errore **La combinazione nome utente e password specificata non è corretta**, anche se l'accesso con questo account e questa password funziona in altri scenari. Se si verifica questa situazione per la password in uso, scegliere un account diverso con una password che non include questi caratteri speciali oppure reimpostare la password in modo che non includa i caratteri speciali.
+La configurazione del connettore presenta anche alcune restrizioni relative ai caratteri per la password. Non è possibile usare una password che includa uno dei caratteri seguenti: e commerciale ( **&** ), parentesi quadra aperta ( **[** ), parentesi quadra chiusa ( **]** ), virgolette semplici ( **"** ) e apostrofo ( **'** ). Se la password include uno di questi caratteri, l'autenticazione non riesce per la configurazione del connettore RMS e viene visualizzato il messaggio di errore la **combinazione di nome utente e password non è corretta**, anche se è possibile accedere con questo account e la password per altri scenari. Se si verifica questa situazione per la password in uso, scegliere un account diverso con una password che non include questi caratteri speciali oppure reimpostare la password in modo che non includa i caratteri speciali.
 
 Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment), assicurarsi che l'account specificato sia in grado di proteggere il contenuto. Ad esempio, se è stata limitata la possibilità di proteggere il contenuto per il gruppo "Reparto IT", l'account specificato deve essere un membro del gruppo. In caso contrario, viene visualizzato il messaggio di errore: **tentativo di individuare la posizione del servizio di amministrazione e dell'organizzazione non riuscito. Verificare che il servizio Microsoft Rights Management sia abilitato per l'organizzazione.**
 
@@ -76,7 +76,7 @@ Inoltre, se sono stati implementati i [controlli di selezione utenti](activate-s
     > 
     > Per eseguire il connettore RMS con privilegi minimi, creare un account dedicato a questo scopo e assegnare a questo il ruolo di amministratore di connettore di Azure RMS tramite le operazioni seguenti:
     >
-    > 1.  Se non è già stato fatto, scaricare e installare il modulo AIPService di PowerShell. Per altre informazioni, vedere [installazione del modulo PowerShell AIPService](install-powershell.md).
+    > 1. Se non è già stato fatto, scaricare e installare il modulo AIPService di PowerShell. Per altre informazioni, vedere [installazione del modulo PowerShell AIPService](install-powershell.md).
     >
     >     Avviare Windows PowerShell con il comando **Esegui come amministratore** e connettersi al servizio di protezione usando il comando [Connect-AipService](/powershell/module/aipservice/connect-aipservice) :
     >

@@ -4,7 +4,7 @@ description: Informazioni sulle operazioni del ciclo di vita necessarie per la g
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/28/2019
+ms.date: 12/06/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: kms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 682ed03cfafa9dad1d9696d51e0b64c71dea6fa3
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: 0381e5d6368587a6e743caefd519fc4669c6183b
+ms.sourcegitcommit: 07b518c780f5e63eb5a72d7499ec7cfa40a95628
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445050"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898899"
 ---
 # <a name="customer-managed-tenant-key-life-cycle-operations"></a>Operazioni del ciclo di vita della chiave del tenant gestite dal cliente
 
@@ -27,7 +27,10 @@ ms.locfileid: "73445050"
 Se la chiave del tenant per Azure Information Protection viene gestita dall'utente (scenario "bring your own key" o BYOK), usare le sezioni seguenti per ottenere altre informazioni sulle operazioni del ciclo di vita rilevanti per questa topologia.
 
 ## <a name="revoke-your-tenant-key"></a>Revocare la chiave del tenant
-In Azure Key Vault è possibile modificare le autorizzazioni per l'insieme di credenziali delle chiavi contenente la chiave del tenant di Azure Information Protection in modo che il servizio Azure Rights Management non possa più accedere alla chiave. Tuttavia, se si esegue questa operazione, nessuno sarà successivamente in grado di aprire documenti e messaggi di posta elettronica precedentemente protetti con il servizio Azure Rights Management.
+
+Esistono pochissimi scenari in cui potrebbe essere necessario revocare la chiave invece di eseguire la reimpostazione. Quando si revoca la chiave, tutto il contenuto protetto dal tenant con tale chiave diventerà inaccessibile a tutti gli utenti (inclusi Microsoft, amministratori globali e utenti con privilegi avanzati), a meno che non si disponga di un backup della chiave che è possibile ripristinare. Dopo aver revocato la chiave, non sarà possibile proteggere il nuovo contenuto finché non verrà creata e configurata una nuova chiave del tenant per Azure Information Protection. 
+
+Per revocare la chiave del tenant gestita dal cliente, in Azure Key Vault modificare le autorizzazioni per l'insieme di credenziali delle chiavi che contiene la chiave del tenant di Azure Information Protection in modo che il servizio Azure Rights Management non possa più accedere alla chiave. Questa azione revoca efficacemente la chiave del tenant per Azure Information Protection.
 
 Quando si annulla la sottoscrizione di Azure Information Protection, l'uso della chiave del tenant in Azure Information Protection viene interrotto e non è necessaria alcuna azione da parte dell'utente.
 

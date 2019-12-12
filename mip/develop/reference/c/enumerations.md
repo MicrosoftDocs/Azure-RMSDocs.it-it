@@ -7,10 +7,10 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 11/4/2019
 ms.openlocfilehash: f1ad15819d10bcded670fe519db07667b7e7331e
-ms.sourcegitcommit: 7a8eef5eb9d6440c6e2300cb3f264da31061b00d
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "73591625"
 ---
 # <a name="enumerations"></a>Enumerazioni
@@ -140,7 +140,7 @@ Definisce nuove funzionalità in base al nome
 |  MIP_FLIGHTING_FEATURE_SERVICE_DISCOVERY = 0      | Utilizzare una chiamata HTTP separata per determinare gli endpoint di servizio RMS (impostazione predefinita false) |
 |  MIP_FLIGHTING_FEATURE_AUTH_INFO_CACHE = 1        | Memorizzare nella cache le richieste OAuth2 per dominio/tenant per ridurre le risposte 401 non necessarie. Disabilitare per le app/i servizi che gestiscono la propria autenticazione HTTP (valore predefinito true)  |
 |  MIP_FLIGHTING_FEATURE_LINUX_ENCRYPTED_CACHE = 2  | Abilita Caching crittografato per piattaforme Linux (impostazione predefinita false)  |
-|  MIP_FLIGHTING_FEATURE_SINGLE_DOMAIN_NAME = 3     | Abilitare il nome della singola società per la ricerca DNS. ad esempio https://corprights  |
+|  MIP_FLIGHTING_FEATURE_SINGLE_DOMAIN_NAME = 3     | Abilitare il nome della singola società per la ricerca DNS. Ad esempio: https://corprights  |
 |  MIP_FLIGHTING_FEATURE_POLICY_AUTH = 4            | Abilitare l'autenticazione HTTP automatica per le richieste inviate al servizio criteri. Disabilitare per le app/i servizi che gestiscono la propria autenticazione HTTP (valore predefinito true)  |
 
 
@@ -193,12 +193,12 @@ typedef enum {
 
 ## <a name="mip_cc_log_level"></a>mip_cc_log_level
 
-Livello di registrazione
+Livello log
 
 | Campo | Description |
 |---|---|
 |  MIP_LOG_LEVEL_TRACE = 0   | Trace  |
-|  MIP_LOG_LEVEL_INFO        | Informazioni  |
+|  MIP_LOG_LEVEL_INFO        | Info  |
 |  MIP_LOG_LEVEL_WARNING     | Avviso  |
 |  MIP_LOG_LEVEL_ERROR       | Errore di  |
 

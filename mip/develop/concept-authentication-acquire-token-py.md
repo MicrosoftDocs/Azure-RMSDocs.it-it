@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: b46f478dc38e9010cc2eb221f587f3d3ca3f60a2
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69884757"
 ---
 # <a name="acquire-an-access-token-python"></a>Acquisire un token di accesso (Python)
@@ -31,7 +31,7 @@ Questo codice non è destinato all'uso in produzione. Può essere utilizzato sol
 
 ## <a name="sampleauthacquiretoken"></a>sample::auth::AcquireToken()
 
-Nell'esempio di autenticazione semplice è stata illustrata una `AcquireToken()` semplice funzione che non ha accettato parametri e ha restituito un valore di token hardcoded. In questo esempio, si eseguirà l'overload di AcquireToken() per accettare i parametri di autenticazione e chiamare uno script Python esterno per restituire il token.
+Nell'esempio di autenticazione semplice è stata illustrata una semplice funzione `AcquireToken()` che non ha accettato parametri e ha restituito un valore di token hardcoded. In questo esempio, si eseguirà l'overload di AcquireToken() per accettare i parametri di autenticazione e chiamare uno script Python esterno per restituire il token.
 
 ### <a name="authh"></a>auth.h
 

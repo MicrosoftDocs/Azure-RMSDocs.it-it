@@ -15,10 +15,10 @@ ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
 ms.openlocfilehash: 00f056e5e8dae9721933e041a766f72da99bb380
-ms.sourcegitcommit: 9968a003865ff2456c570cf552f801a816b1db07
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "68792232"
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>Procedura: Consentire all'applicazione di servizio di usare RMS basato su cloud
@@ -26,7 +26,7 @@ ms.locfileid: "68792232"
 Questo argomento descrive i passaggi per la configurazione dell’applicazione di servizio per l’uso di Azure Rights Management. Per altre informazioni, vedere [Requisiti per Azure Rights Management](https://technet.microsoft.com/library/jj585016.aspx).
 
 **Importante**  
-Per usare l'applicazione di servizio Rights Management Services SDK 2.1 con Azure RMS, è necessario creare i propri tenant. Per altre informazioni, vedere [Requisiti per Azure RMS: sottoscrizioni cloud che supportano Azure RMS](../requirements.md)
+Per usare l'applicazione di servizio Rights Management Services SDK 2.1 con Azure RMS, è necessario creare i propri tenant. Per altre informazioni vedere [Requisiti per Azure RMS: sottoscrizioni cloud che supportano Azure RMS](../requirements.md)
 
 ## <a name="prerequisites"></a>Prerequisiti
 

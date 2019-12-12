@@ -4,19 +4,19 @@ description: Installare un lettore in iOS per documenti PDF etichettati per la c
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/22/2019
+ms.date: 12/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 6f492e46c02329747c2ba4b1eee5f64294e65f2d
-ms.sourcegitcommit: fbd1834eaacb17857e59421d7be0942a9a0eefb2
+ms.openlocfilehash: 8dfbc55af5a7613a3ec8ae2aaebeec0d32ac2a16
+ms.sourcegitcommit: 6f3379705e781fbba1755e34637c7f941da4559e
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/02/2019
-ms.locfileid: "73445147"
+ms.lasthandoff: 12/07/2019
+ms.locfileid: "74907423"
 ---
 # <a name="install-a-pdf-reader-for-ios"></a>Installare un lettore PDF per iOS
 

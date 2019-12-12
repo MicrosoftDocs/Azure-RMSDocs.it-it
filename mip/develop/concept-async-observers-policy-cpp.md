@@ -8,10 +8,10 @@ ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
 ms.openlocfilehash: e8f2e2c775270f81489778ced852a7bb26b5ad1c
-ms.sourcegitcommit: fff4c155c52c9ff20bc4931d5ac20c3ea6e2ff9e
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "60175497"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-observers"></a>Microsoft Information Protection SDK - Osservatori dell'API Criteri
@@ -28,9 +28,9 @@ Gli esempi seguenti illustrano il modello promise/future, usato anche dagli esem
 
 Nell'esempio seguente è stata creata una classe `ProfileObserver` derivata da `mip::Profile::Observer`. Le funzioni membro sono state sottoposte a override per sfruttare il modello promise/future usato in tutti gli esempi.
 
-**Nota**: Di seguito esempi sono implementati solo parzialmente e non includono le sostituzioni per il `mip::ProfileEngine` relativi osservatori.
+**Nota**: gli esempi di seguito sono implementati solo parzialmente e non includono gli override per gli osservatori correlati `mip::ProfileEngine`.
 
-### <a name="profileobserverh"></a>profile_observer.h
+### <a name="profile_observerh"></a>profile_observer.h
 
 Nell'intestazione si definisce `ProfileObserver`, che deriva da `mip::Profile::Observer`, quindi si esegue l'override di tutte le funzioni membro.
 
@@ -44,7 +44,7 @@ ProfileObserver() { }
 };
 ```
 
-### <a name="profileobservercpp"></a>profile_observer.cpp
+### <a name="profile_observercpp"></a>profile_observer.cpp
 
 Nell'implementazione stessa si definisce un'azione da eseguire per ogni funzione membro dell'osservatore.
 

@@ -4,7 +4,7 @@ description: Il Azure Information Protection client Unified Labeling per Windows
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 0e837b38cef24c8d540e5c6bd7a406ecf074f284
-ms.sourcegitcommit: 1e25e7a32cc0b2a3a6c9b80575927009d8a96838
+ms.openlocfilehash: 9223087642653b304a719a8f0cbe0125d5b3a741
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71690083"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74935555"
 ---
 # <a name="azure-information-protection-unified-labeling-user-guide"></a>Guida dell'utente per l'assegnazione di etichette unificata Azure Information Protection 
 
@@ -30,7 +30,7 @@ Il Azure Information Protection client Unified Labeling per Windows consente di 
 È sufficiente avere un computer che esegua almeno Windows 7 con Service Pack 1. Quindi scaricare e installare questo client gratuito da Microsoft.
 
 
-## <a name="what-do-you-want-to-do"></a>Come procedere
+## <a name="what-do-you-want-to-do"></a>Per saperne di più
 
 - [Scaricare e installare il client Azure Information Protection Unified Labeling](install-unifiedlabelingclient-app.md)
 
@@ -44,5 +44,5 @@ Il Azure Information Protection client Unified Labeling per Windows consente di 
 
 
 > [!NOTE]
-> Se si è un amministratore responsabile della Azure Information Protection client di etichetta unificata in una rete aziendale, vedere la [Guida dell'amministratore del client Azure Information Protection Unified Labeling](clientv2-admin-guide.md) per ulteriori informazioni tecniche informazioni. 
+> Se si è un amministratore responsabile della Azure Information Protection client di etichetta unificata in una rete aziendale, vedere la [Guida dell'amministratore client Azure Information Protection Unified Labeling](clientv2-admin-guide.md) per ulteriori informazioni tecniche. 
 

@@ -9,10 +9,10 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: tommos
 ms.openlocfilehash: 8ade287531ee9f1c18678d42ef5e51a4c70ee13f
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886210"
 ---
 # <a name="compute-an-action"></a>Calcolare un'azione
@@ -65,7 +65,7 @@ L'elemento `PolicyHandler` calcola le azioni e restituisce un elemento `std::vec
 
 ## <a name="compute-actions-with-an-existing-label"></a>Calcolare azioni con un'etichetta esistente
 
-Quando si usa l'API dei criteri, l'applicazione deve leggere i metadati dal contenuto. Questi metadati vengono offerti all'API come parte dell'elemento `mip::ExecutionState`. `ComputeActions()` può gestire operazioni più complesse dell'applicazione di una nuova etichetta a un documento senza etichetta. Nell'esempio seguente viene illustrato il downgrade di un'etichetta da un'etichetta più sensibile, a un'etichetta meno sensibile. Questo processo viene simulato leggendo una stringa di metadati con valori delimitati da virgole e fornendo all'API `mip::ExecutionState`tramite.
+Quando si usa l'API dei criteri, l'applicazione deve leggere i metadati dal contenuto. Questi metadati vengono offerti all'API come parte dell'elemento `mip::ExecutionState`. `ComputeActions()` può gestire operazioni più complesse dell'applicazione di una nuova etichetta a un documento senza etichetta. Nell'esempio seguente viene illustrato il downgrade di un'etichetta da un'etichetta più sensibile, a un'etichetta meno sensibile. Questo processo viene simulato leggendo una stringa di metadati con valori delimitati da virgole e fornendo all'API tramite `mip::ExecutionState`.
 
 > [!NOTE]
 > L'esempio usa una funzione di utilità chiamata `SplitString()`. Per un esempio, vedere [qui](https://github.com/Azure-Samples/mipsdk-policyapi-cpp-sample-basic/blob/master/mipsdk-policyapi-cpp-sample-basic/utils.cpp)
@@ -116,7 +116,7 @@ Remove: MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ContentBits
 Remove: MSIP_Label_d7b93a40-4df3-47e4-b2fd-7862fc6b095c_ActionId
 ```
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
 - Informazioni su come [passare gli eventi di controllo a Azure Information Protection Analytics](concept-handler-policy-auditing-cpp.md)
 - Scaricare gli [esempi di API dei criteri da GitHub e provare l'API dei criteri](https://azure.microsoft.com/resources/samples/?sort=0&term=mipsdk+policyapi)

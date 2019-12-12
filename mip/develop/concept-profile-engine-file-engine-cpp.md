@@ -8,21 +8,21 @@ ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 5cd54fb4d7b153ccdec3fdd6d7919b7595cfed96
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
+ms.lasthandoff: 12/05/2019
 ms.locfileid: "69886093"
 ---
 # <a name="microsoft-information-protection-sdk---file-api-engine-concepts"></a>Microsoft Information Protection SDK - Concetti relativi al motore dell'API File
 
 `mip::FileEngine` nell'API File di MIP SDK offre un'interfaccia per tutte le operazioni eseguite per conto di un'identità specificata. Verrà aggiunto un motore per ogni utente che accede all'applicazione e tutte le operazioni del motore verranno eseguite nel contesto di tale identità.
 
-`FileEngine` Ha due responsabilità principali: Elenco delle etichette per un utente autenticato e creazione di gestori di file per eseguire operazioni sui file per conto dell'utente. 
+`FileEngine` ha due responsabilità principali: elencare le etichette per un utente autenticato e creare i gestori di file per eseguire operazioni sui file per conto dell'utente. 
 
 - [`mip::FileEngine`](reference/class_mip_fileengine.md)
-- `ListSensitivityLabels()`: Ottiene l'elenco di etichette per il motore caricato.
-- `CreateFileHandler()`: Crea un `mip::FileHandler` oggetto per un file o un flusso specifico.
+- `ListSensitivityLabels()`: ottiene l'elenco di etichette per il motore caricato.
+- `CreateFileHandler()`: crea un `mip::FileHandler` per un flusso o un file specifico.
 
 ## <a name="add-a-file-engine"></a>Aggiungere un motore di file
 
@@ -32,7 +32,7 @@ Come descritto in [Oggetti profilo e motore](concept-profile-engine-cpp.md), un 
 
 Analogamente a un profilo, anche per il motore è necessario un oggetto impostazioni, `mip::FileEngine::Settings`. Questo oggetto archivia l'identificatore univoco del motore, i dati client personalizzabili che possono essere usati per il debug o la telemetria e, facoltativamente, le impostazioni locali.
 
-Qui viene creato un `FileEngine::Settings` oggetto denominato *engineSettings* usando l'identità dell'utente dell'applicazione.
+Qui viene creato un oggetto `FileEngine::Settings` denominato *engineSettings* usando l'identità dell'utente dell'applicazione.
 
 ```cpp
 FileEngine::Settings engineSettings(
@@ -119,6 +119,6 @@ for (const auto& label : labels) {
 
 La raccolta di `mip::Label` restituita da `GetSensitivityLabels()` può essere usata per visualizzare tutte le etichette disponibili per l'utente e quindi, se selezionata, per usare l'ID per applicare le etichette a un file.
 
-## <a name="next-steps"></a>Fasi successive
+## <a name="next-steps"></a>Passaggi successivi
 
 Ora che il profilo è caricato, il motore è stato aggiunto e sono disponibili etichette, è possibile aggiungere un gestore per iniziare a leggere, scrivere o rimuovere le etichette dai file. Vedere [Gestori di file in MIP SDK](concept-handler-file-cpp.md).

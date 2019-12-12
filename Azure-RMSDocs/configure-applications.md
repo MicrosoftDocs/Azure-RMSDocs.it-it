@@ -4,7 +4,7 @@ description: Istruzioni che consentono agli amministratori di configurare applic
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/30/2019
+ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d4fd33ee379660628a4a870e81d738e068f50482
-ms.sourcegitcommit: 319c0691509748e04aecf839adaeb3b5cac2d2cf
+ms.openlocfilehash: f361c96b3b1143b59d431124988eca84f66d8ec9
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71684241"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74933549"
 ---
 # <a name="configuring-applications-for-azure-rights-management"></a>Configurazione di applicazioni per Azure Rights Management
 
@@ -34,13 +34,13 @@ Dopo avere distribuito Azure Information Protection per l'organizzazione, usare 
 > [!IMPORTANT]
 > Per informazioni sulle versioni supportate e altri requisiti, vedere [requisiti per Azure Information Protection](requirements.md).
 
--   [Office 365: Configurazione per Servizi online](configure-office365.md)
+-   [Office 365: configurazione per Servizi online](configure-office365.md)
 
-    -   [Exchange Online: configurazione di IRM](configure-office365.md#exchangeonline-irm-configuration)
+    -   [Exchange Online: configurazione di IRM](configure-office365.md#exchangeonline-irm-configuration)
 
-    -   [SharePoint Online e OneDrive for Business: configurazione di IRM](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration)
+    -   [SharePoint Online e OneDrive for business: configurazione di IRM](configure-office365.md#sharepointonline-and-onedrive-for-business-irm-configuration)
 
-- [Applicazioni Office: configurazione dei client](configure-office-apps.md)
+- [Applicazioni di Office: configurazione dei client](configure-office-apps.md)
 
     -   [App Office 365, Office 2019, Office 2016 e Office 2013](configure-office-apps.md#office365-apps-office-2019-office-2016-and-office-2013)
 

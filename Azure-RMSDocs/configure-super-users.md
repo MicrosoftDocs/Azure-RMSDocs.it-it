@@ -4,7 +4,7 @@ description: Comprendere e implementare la funzionalità per utenti con privileg
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 09/03/2019
+ms.date: 11/03/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b7e8d2b2f510a97c01ecf02040a404b11ffdc9be
-ms.sourcegitcommit: 07ae7007c79c998bbf3b8cf37808daf0eec68ad1
+ms.openlocfilehash: 6121403dd5d384be5ec969a417c42dc41e90e69b
+ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72446998"
+ms.lasthandoff: 12/08/2019
+ms.locfileid: "74934960"
 ---
 # <a name="configuring-super-users-for-azure-information-protection-and-discovery-services-or-data-recovery"></a>Configurazione di utenti con privilegi avanzati per servizi di Azure Information Protection e individuazione o per il ripristino dei dati
 
@@ -42,7 +42,7 @@ Per i documenti e i messaggi di posta elettronica protetti dal tenant Azure Info
 
 Per impostazione predefinita, la funzionalità di utente con privilegi avanzati non è abilitata e non sono presenti utenti assegnati a questo ruolo. Viene abilitata automaticamente per l'utente se si configura il connettore Rights Management per Exchange, e non è necessaria per i servizi standard che eseguono Exchange Online, SharePoint Online o SharePoint Server.
 
-Se è necessario abilitare manualmente la funzionalità per utenti con privilegi avanzati, usare il cmdlet di PowerShell [Enable-AipServiceSuperUserFeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature)e quindi assegnare gli utenti (o gli account del servizio) in base alle esigenze usando il cmdlet [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser) o il [cmdlet Usare il cmdlet Set-AipServiceSuperUserGroup](/powershell/module/aipservice/set-aipservicesuperusergroup) e aggiungere utenti (o altri gruppi) in base alle esigenze di questo gruppo. 
+Se è necessario abilitare manualmente la funzionalità per utenti con privilegi avanzati, usare il cmdlet di PowerShell [Enable-AipServiceSuperUserFeature](/powershell/module/aipservice/enable-aipservicesuperuserfeature)e quindi assegnare gli utenti (o gli account del servizio) in base alle esigenze usando il cmdlet [Add-AipServiceSuperUser](/powershell/module/aipservice/add-aipservicesuperuser) o il cmdlet [set-AipServiceSuperUserGroup](/powershell/module/aipservice/set-aipservicesuperusergroup) e aggiungere utenti (o altri gruppi) in base alle esigenze del gruppo. 
 
 Anche se un gruppo per utenti con privilegi avanzati è più facile da gestire, tenere presente che, per motivi di prestazioni, Azure Rights Management [memorizza nella cache l'appartenenza ai gruppi](prepare.md#group-membership-caching-by-azure-information-protection). Se quindi è necessario assegnare un nuovo utente come utente con privilegi avanzati per decrittografare immediatamente il contenuto, aggiungere l'utente usando Add-AipServiceSuperUser, anziché aggiungere l'utente a un gruppo esistente configurato tramite set-AipServiceSuperUserGroup.
 
