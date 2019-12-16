@@ -4,18 +4,18 @@ description: Se l'organizzazione non ha familiarità con Azure Information Prote
 author: cabailey
 ms.author: cabailey
 manager: barbkess
-ms.date: 10/01/2019
+ms.date: 12/04/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 92bc55f99636d7a54cafc7c45c1588d2828974c7
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: d1734b5102b1305077ce3b84fb95521daeb69c23
+ms.sourcegitcommit: d062ddf89fcb46e489f32f0d9f7aff73c3357a9b
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73561383"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74882074"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Guida introduttiva: Introduzione ad Azure Information Protection nel portale di Azure
 
@@ -82,9 +82,11 @@ L'organizzazione potrebbe già disporre di etichette, in quanto create automatic
     
      ![Nessuna etichetta predefinita di Azure Information Protection](./media/info-protect-nodefaultlabels.png)
     
-    Se l'opzione per la generazione di etichette predefinite non è visualizzata, significa che si dispone già di etichette, probabilmente simili a quelle dell'immagine seguente, che sono le etichette predefinite di Azure Information Protection:
+    Se l'opzione per la generazione di etichette predefinite non è visualizzata, è possibile che siano già disponibili etichette, probabilmente simili a quelle dell'immagine seguente, che sono le etichette predefinite di Azure Information Protection:
     
     ![Etichette predefinite di Azure Information Protection](./media/info-protect-defaultlabels.png)
+    
+    Se questa opzione non viene visualizzata per generare etichette predefinite e non è possibile visualizzare alcuna etichetta, passare a **Gestisci** > **Etichettatura unificata** e visualizzare lo stato di **Etichettatura unificata**. Se viene visualizzato lo stato **Non attivato**, selezionare **Attiva** e tornare al riquadro **Classificazioni** > **Etichette**.
 
 2. Se non si dispone ancora di etichette, selezionare **Generate default labels** (Genera etichette predefinite).
 
