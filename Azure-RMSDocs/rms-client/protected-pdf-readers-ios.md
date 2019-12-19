@@ -20,7 +20,7 @@ ms.locfileid: "74907423"
 ---
 # <a name="install-a-pdf-reader-for-ios"></a>Installare un lettore PDF per iOS
 
-[icona ![iOS](../media/develop/ios-icon.png)](https://go.microsoft.com/fwlink/?LinkId=325338)
+[![iOS icona](../media/develop/ios-icon.png)](https://go.microsoft.com/fwlink/?LinkId=325338)
 
 Se è necessario aprire un documento PDF protetto sul dispositivo iOS, scaricare l' [app Azure Information Protection](https://go.microsoft.com/fwlink/?LinkId=325338) dall'App Store di Apple.
 

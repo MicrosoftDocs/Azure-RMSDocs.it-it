@@ -20,7 +20,7 @@ ms.locfileid: "74907424"
 ---
 # <a name="install-a-pdf-reader-for-macos"></a>Installare un lettore PDF per MacOS
 
-[icona ![iOS](../media/develop/ios-icon.png)](https://go.microsoft.com/fwlink/?linkid=2050049)
+[![iOS icona](../media/develop/ios-icon.png)](https://go.microsoft.com/fwlink/?linkid=2050049)
 
 Se è necessario aprire un documento PDF protetto nel computer Mac, installare il plug-in Adobe per Adobe Acrobat Reader.
 
