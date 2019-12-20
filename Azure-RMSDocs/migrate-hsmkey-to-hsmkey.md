@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: e83515d0e6764cab5af784b4d695b318daa42d8d
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: a8c52a86e3f19302c86c6022f734f222b0d1ce97
+ms.sourcegitcommit: d3169f307c9d8500dfd97ad65588db9bed111264
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935470"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75303592"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave protetta tramite HSM a un'altra
 
@@ -53,7 +53,7 @@ Queste procedure vengono eseguite dall'amministratore di Insieme di credenziali 
         
         I file di chiave crittografati per nCipher sono denominati **key_ <<em>keyAppName</em>> _ <<em>identificatore</em> chiave>** localmente nel server. Ad esempio, `C:\Users\All Users\nCipher\Key Management Data\local\key_mscapi_f829e3d888f6908521fe3d91de51c25d27116a54` Quando si esegue il comando KeyTransferRemote per creare una copia della chiave con autorizzazioni ridotte, sarà necessario il valore **MSCAPI** come keyAppName e il valore personalizzato per l'identificatore di chiave.
         
-        Quando la chiave viene caricata in Insieme di credenziali delle chiavi di Azure, vengono visualizzate le proprietà della chiave visualizzata, incluso l'ID della chiave. Sarà simile a https://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Prendere nota dell'URL perché è necessario all'amministratore di Azure Information Protection per indicare al servizio Azure Rights Management di usare questa chiave per la chiave del tenant.
+        Quando la chiave viene caricata in Insieme di credenziali delle chiavi di Azure, vengono visualizzate le proprietà della chiave visualizzata, incluso l'ID della chiave. L'aspetto sarà simile a https\://contosorms-kv.vault.azure.net/keys/contosorms-byok/aaaabbbbcccc111122223333. Prendere nota dell'URL perché è necessario all'amministratore di Azure Information Protection per indicare al servizio Azure Rights Management di usare questa chiave per la chiave del tenant.
 
 2. Nella workstation connessa a Internet, in una sessione di PowerShell, usare il cmdlet [set-AzKeyVaultAccessPolicy](/powershell/module/az.keyvault/set-azkeyvaultaccesspolicy) per autorizzare l'entità servizio Rights Management di Azure ad accedere all'insieme di credenziali delle chiavi in cui viene archiviata la chiave del tenant di Azure Information Protection. Le autorizzazioni necessarie sono decrypt, encrypt, unwrapkey, wrapkey, verify e sign.
     
