@@ -4,15 +4,14 @@ description: Microsoft Information Protection (MIP) riunisce i servizi di classi
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: overview
-ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: d8efb7ceef890d0c2a0ea72f64d3047e0cfb25a5
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 45d2e4fb96bb81d8eb7bb982502693e9d5ebf981
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60184944"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556062"
 ---
 # <a name="overview"></a>Panoramica
 
