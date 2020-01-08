@@ -1,10 +1,10 @@
 ---
 title: Installare il client Azure Information Protection per gli utenti
 description: Istruzioni e informazioni per gli amministratori per la distribuzione del client Azure Information Protection per Windows nelle reti aziendali.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/26/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,21 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b21e76e6c9d8db9df8f7b5877ed8451a4640f112
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
-ms.translationtype: MT
+ms.openlocfilehash: b9a3dd52317f6992a88ebb1f01af1e31e9cd98bd
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935283"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675789"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guida dell'amministratore: Installare il client Azure Information Protection per gli utenti
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012, windows Server 2008 R2*
 >
 > *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection client (versione classica)** e la **gestione delle etichette** nel portale di Azure verranno **deprecati** a partire dal **31 marzo 2021**. Questo intervallo di tempo consente a tutti i clienti correnti Azure Information Protection di passare alla soluzione di assegnazione di etichette unificata usando la piattaforma Microsoft Information Protection Unified labeling. Ulteriori informazioni sono disponibili nell' [avviso ufficiale di deprecazione](https://aka.ms/aipclassicsunset).
 
 Prima di installare il client Azure Information Protection nella rete aziendale, verificare che nei computer siano installate le versioni del sistema operativo e le applicazioni richieste per Azure Information Protection: [Requisiti per Azure Information Protection](../requirements.md). 
 
@@ -195,18 +198,18 @@ Se si usa Intune per il metodo di distribuzione del software, usare queste istru
 
 2. Per ogni computer che esegue il file con estensione msi è necessario verificare che siano soddisfatte le seguenti dipendenze software. Ad esempio, creare un pacchetto con le dipendenze e la versione MSI del client oppure distribuire solo ai computer che soddisfano queste dipendenze:
     
-    |Versione di Office|Sistema operativo|Software|Azione|
+    |Versione di Office|Sistema operativo|Software|Action|
     |--------------------|--------------|----------------|---------------------|
-    |Tutte le versioni, ad eccezione di Office 365 1902 o versione successiva|Solo Windows 10 versione 1809, build del sistema operativo precedenti alla build 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installa|
-    |Office 2013|Tutte le versioni supportate|64 bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Versione: 1.0|Installa|
-    |Office 2010|Tutte le versioni supportate|[Assistente per l'accesso ai Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Versione: 2.1|Installa|
-    |Office 2016|Tutte le versioni supportate|64 bit: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32 bit: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> Versione: 1.0|Installa|
-    |Office 2010|Tutte le versioni supportate|[Assistente per l'accesso ai Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Versione: 2.1|Installa|
+    |Tutte le versioni, ad eccezione di Office 365 1902 o versione successiva|Solo Windows 10 versione 1809, build del sistema operativo precedenti alla build 17763.348|[KB 4482887](https://support.microsoft.com/help/4482887/windows-10-update-kb4482887)|Installare|
+    |Office 2013|Tutte le versioni supportate|64 bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54992)<br /><br /> 32 bit: [KB3172523](https://www.microsoft.com/en-us/download/details.aspx?id=54979) <br /><br />Versione: 1.0|Installare|
+    |Office 2010|Tutte le versioni supportate|[Assistente per l'accesso ai Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Versione: 2.1|Installare|
+    |Office 2016|Tutte le versioni supportate|64 bit: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=55007)<br /><br />32 bit: [KB3178666](https://www.microsoft.com/en-us/download/details.aspx?id=54999)<br /><br /> Versione: 1.0|Installare|
+    |Office 2010|Tutte le versioni supportate|[Assistente per l'accesso ai Microsoft Online Services](https://www.microsoft.com/en-us/download/details.aspx?id=28177)<br /><br /> Versione: 2.1|Installare|
     |Office 2010|Windows 8.1 e Windows Server 2012 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numero di versione nel nome file: v3|Installare se non è installato KB2843630 o KB2919355|
-    |Office 2010|Windows 8 e Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numero di versione nel nome file: v3|Installa|
+    |Office 2010|Windows 8 e Windows Server 2012|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41708)<br /><br /> Numero di versione nel nome file: v3|Installare|
     |Office 2010|Windows 7 e Windows Server 2008 R2|[KB2843630](https://www.microsoft.com/en-us/download/details.aspx?id=41709)<br /><br /> Numero di versione nel nome file: v3|Installare se non è installato KB3125574|
-    |Not applicable|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Installa|
-    |Not applicable|Windows 7|KB2627273 <br /><br /> Numero di versione incluso nel nome file: v4|Uninstall|
+    |Not applicable|Windows 7|[vc_redist.x86.exe](https://www.microsoft.com/en-us/download/details.aspx?id=48145)|Installare|
+    |Not applicable|Windows 7|KB2627273 <br /><br /> Numero di versione incluso nel nome file: v4|Disinstallazione|
 
 3. Per un'installazione predefinita, eseguire il file MSI con **/quiet/** , ad esempio, `AzInfoProtection.msi /quiet`. Tuttavia, potrebbe essere necessario specificare parametri di installazione aggiuntivi che sono documentati nelle [istruzioni del programma di installazione eseguibile](#to-install-the-azure-information-protection-client-by-using-the-executable-installer) con un'unica eccezione:
     

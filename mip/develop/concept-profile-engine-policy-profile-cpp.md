@@ -4,15 +4,14 @@ description: Questo articolo aiuterà a comprendere i concetti relativi all'ogge
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 9b3b32464cae35560c74a05b28506ca60dc963d2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 9412fae0f14d615ba6d81c5610597affbb596df8
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886044"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555195"
 ---
 # <a name="microsoft-information-protection-sdk---policy-api-profile-concepts"></a>Microsoft Information Protection SDK - Concetti relativi al profilo dell'API Criteri
 

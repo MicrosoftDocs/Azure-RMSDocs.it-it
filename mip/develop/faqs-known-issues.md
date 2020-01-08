@@ -4,15 +4,14 @@ description: Domande frequenti e linee guida per la risoluzione dei problemi e d
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: troubleshooting
-ms.collection: M365-security-compliance
 ms.date: 03/05/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 78dc655d8244378fcc37b22030d3060fd291ef16
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: c599fdf5f44458aa390bade3736060919cb552e6
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60175469"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555331"
 ---
 # <a name="microsoft-information-protection-mip-sdk-faqs-and-issues"></a>Problemi noti e domande frequenti di Microsoft Information Protection (MIP) SDK
 

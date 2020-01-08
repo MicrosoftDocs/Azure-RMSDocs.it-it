@@ -1,9 +1,9 @@
 ---
 title: Tenere traccia di documenti e revocarli - Azure Information Protection
 description: Dopo aver protetto i documenti, è possibile tenere traccia del modo in cui tali documenti vengono usati dagli utenti. Se necessario, è anche possibile revocare l'accesso a questi documenti se gli utenti non dovranno più essere in grado di leggerli.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 537318bd21ec27d91fc1868d4c9e4ef4b6a8fa35
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 2fa57c099bcbc6730e649e9aef3adb7fa4176b03
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935674"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675670"
 ---
 # <a name="user-guide-track-and-revoke-your-documents-when-you-use-azure-information-protection"></a>Guida dell'utente: Rilevare i documenti e revocarne l'accesso quando si usa Azure Information Protection
 
@@ -44,7 +44,7 @@ Azioni che è possibile eseguire nel sito di rilevamento dei documenti:
          
         ![Icona Esporta in CSV nel sito di rilevamento dei documenti](../media/tracking-site-export-icon.png)
          
-- Se si desidera configurare notifiche tramite posta elettronica: 
+- Per configurare notifiche di posta elettronica, 
      
     - Fare clic su **Impostazioni** e indicare se e in che modo ricevere una notifica di posta elettronica quando un utente accede al documento:
         

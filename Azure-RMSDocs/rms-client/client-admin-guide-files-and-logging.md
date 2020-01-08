@@ -1,10 +1,10 @@
 ---
 title: File e registrazione dell'utilizzo del client Azure Information Protection
 description: Informazioni sui file e sulla registrazione dell'utilizzo per il client Azure Information Protection per Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/26/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,21 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9011a6b7fc282c1e170959c31ce1e01bc22aa9c5
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
-ms.translationtype: MT
+ms.openlocfilehash: 56214db01a603cde5a09de99d49868bc353c4ce6
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935300"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675721"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guida dell'amministratore: File e registrazione dell'utilizzo del client Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012, windows Server 2008 R2*
 >
 > *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection client (versione classica)** e la **gestione delle etichette** nel portale di Azure verranno **deprecati** a partire dal **31 marzo 2021**. Questo intervallo di tempo consente a tutti i clienti correnti Azure Information Protection di passare alla soluzione di assegnazione di etichette unificata usando la piattaforma Microsoft Information Protection Unified labeling. Ulteriori informazioni sono disponibili nell' [avviso ufficiale di deprecazione](https://aka.ms/aipclassicsunset).
 
 Dopo aver installato il client Azure Information Protection, potrebbe essere necessario individuare il percorso dei file e monitorare l'utilizzo del client.
 
@@ -82,7 +85,7 @@ Il client registra l'attività dell'utente nel registro eventi locale di Windows
     
     - Implementazione consigliata
     
-    - Automatico  
+    - Automatica  
     
     - Sistema (per l'accesso e il download dei criteri)
     

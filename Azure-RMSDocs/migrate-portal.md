@@ -1,10 +1,10 @@
 ---
 title: Migrazione dal portale di Azure classico - Azure Information Protection
 description: Panoramica delle attività di amministrazione nel portale di Azure che venivano precedentemente eseguite nel portale di Azure classico
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/03/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,19 @@ ms.assetid: 57a1073c-02e0-441b-bf49-c6b72fdba24f
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b4e4e093eacd7903a382ba779d0a4b5b7a2aa7ec
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
-ms.translationtype: MT
+ms.openlocfilehash: be25544e4fc5294491c2e339c496018d5692039a
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935453"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675942"
 ---
 # <a name="tasks-that-you-used-to-do-with-the-azure-classic-portal"></a>Attività che precedentemente venivano eseguite con il portale di Azure classico
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+
+> [!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection client (versione classica)** e la **gestione delle etichette** nel portale di Azure verranno **deprecati** a partire dal **31 marzo 2021**. Questo intervallo di tempo consente a tutti i clienti correnti Azure Information Protection di passare alla soluzione di assegnazione di etichette unificata usando la piattaforma Microsoft Information Protection Unified labeling. Ulteriori informazioni sono disponibili nell' [avviso ufficiale di deprecazione](https://aka.ms/aipclassicsunset).
 
 Questo articolo contiene suggerimenti per chi ha sempre usato il portale di Azure classico per la gestione del servizio Azure Rights Management e ora ha bisogno di aiuto per la transizione al portale di Azure.
 

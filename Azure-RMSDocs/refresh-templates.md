@@ -1,10 +1,10 @@
 ---
 title: Aggiornare i modelli di Azure RMS - AIP
 description: Quando si usa Azure Rights Management, i modelli vengono scaricati automaticamente nei computer client, in modo che gli utenti possano selezionarli dalle rispettive applicazioni. Può tuttavia essere necessario eseguire alcuni passaggi aggiuntivi se si apportano modifiche ai modelli.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/09/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,19 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bcd6a8cf37abc6e66fe272c7de794379efc9b49e
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
-ms.translationtype: MT
+ms.openlocfilehash: ef6299d13d1898a2d80ce52198970c505755ac2c
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73561353"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675874"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aggiornamento di modelli per utenti e servizi
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+
+> [!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection client (versione classica)** e la **gestione delle etichette** nel portale di Azure verranno **deprecati** a partire dal **31 marzo 2021**. Questo intervallo di tempo consente a tutti i clienti correnti Azure Information Protection di passare alla soluzione di assegnazione di etichette unificata usando la piattaforma Microsoft Information Protection Unified labeling. Ulteriori informazioni sono disponibili nell' [avviso ufficiale di deprecazione](https://aka.ms/aipclassicsunset).
 
 Quando si usa il servizio Rights Management di Azure da Azure Information Protection, i modelli di protezione vengono scaricati automaticamente nei computer client in modo che gli utenti possano selezionarli dalle rispettive applicazioni. Potrebbe tuttavia essere necessario effettuare alcuni passaggi aggiuntivi se si apportano modifiche ai modelli:
 
@@ -93,7 +96,7 @@ Modificando il Registro di sistema nei computer che eseguono app di Office 365, 
    > 
    > **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
-2. Eliminare la seguente cartella e tutti i file in essa contenuti: **%localappdata%\Microsoft\MSIPC\Templates**
+2. Eliminare la cartella seguente e tutti i file in essa contenuti: **%localappdata%\Microsoft\MSIPC\Templates**
 
 3. Riavviare le applicazioni di Office e le istanze di Esplora file.
 

@@ -1,9 +1,9 @@
 ---
 title: Lettori PDF protetti per MacOS
 description: Installare un lettore in computer Mac per documenti PDF etichettati per la classificazione e la protezione
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 12/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 1eb186053241fe86b70eeff82286d3e62801b015
-ms.sourcegitcommit: 6f3379705e781fbba1755e34637c7f941da4559e
+ms.openlocfilehash: edb58bdd93ff573015decb8edf3b68e4fecd212c
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/07/2019
-ms.locfileid: "74907424"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326457"
 ---
 # <a name="install-a-pdf-reader-for-macos"></a>Installare un lettore PDF per MacOS
 

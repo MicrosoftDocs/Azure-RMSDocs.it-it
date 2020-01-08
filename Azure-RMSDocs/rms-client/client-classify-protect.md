@@ -1,9 +1,9 @@
 ---
 title: Classificare & proteggere-Azure Information Protection client
 description: Istruzioni su come classificare e proteggere i documenti e i messaggi di posta elettronica quando si usa il client di Azure Information Protection per Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 9299ea40f42db36e37bed0bc5734e92d11e10433
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 143c274af102521702486be37fb94787e68b2011
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73561261"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675738"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-client"></a>Guida dell'utente: classificare e proteggere con il client di Azure Information Protection
 

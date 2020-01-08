@@ -1,10 +1,10 @@
 ---
 title: Configurazioni personalizzate-client Azure Information Protection
 description: Informazioni sulla personalizzazione del client Azure Information Protection per Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/27/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,18 +13,21 @@ ms.subservice: v1client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 643715037716dcb30356b08c34e48047dd4f7074
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
-ms.translationtype: MT
+ms.openlocfilehash: 70b9cd8abb01aae2654127a4e9b1c4424cd18e82
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74479178"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675806"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012, windows Server 2008 R2*
 >
 > *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection client (versione classica)** e la **gestione delle etichette** nel portale di Azure verranno **deprecati** a partire dal **31 marzo 2021**. Questo intervallo di tempo consente a tutti i clienti correnti Azure Information Protection di passare alla soluzione di assegnazione di etichette unificata usando la piattaforma Microsoft Information Protection Unified labeling. Ulteriori informazioni sono disponibili nell' [avviso ufficiale di deprecazione](https://aka.ms/aipclassicsunset).
 
 Usare le informazioni seguenti per le configurazioni avanzate che possono essere necessarie per scenari specifici o per un subset di utenti quando si gestisce il client di Azure Information Protection.
 
@@ -188,7 +191,7 @@ Quando si esportano i criteri dal portale di Azure, viene scaricato un file ZIP 
 
 1. Decomprimere il file e usare la tabella seguente per identificare il file di criteri necessario. 
     
-    |Nome file|Versione del client corrispondente|
+    |Nome del file|Versione del client corrispondente|
     |--------------------------|---------------------------------------------|
     |Policy1.1.msip |versione 1.2|
     |Policy1.2.msip |versione 1.3 - 1.7|
@@ -201,7 +204,7 @@ Se il computer disconnesso esegue la versione corrente di GA dello scanner di Az
 
 ## <a name="hide-or-show-the-do-not-forward-button-in-outlook"></a>Nascondere o visualizzare il pulsante Non inoltrare in Outlook
 
-Il metodo consigliato per configurare questa opzione è tramite l'[impostazione dei criteri](../configure-policy-settings.md) **Add the Do Not Forward button to the Outlook ribbon** (Aggiungi il pulsante Non inoltrare alla barra multifunzione di Outlook). Tuttavia, è possibile configurare questa opzione anche tramite un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) configurata nel portale di Azure.
+Il metodo consigliato per configurare questa opzione è tramite l' [impostazione dei criteri](../configure-policy-settings.md) **Aggiungi il pulsante non inviare alla barra multifunzione di Outlook**. Tuttavia, è possibile configurare questa opzione anche tramite un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) configurata nel portale di Azure.
 
 Quando è configurata, questa impostazione nasconde o visualizza il pulsante **Non inoltrare** sulla barra multifunzione in Outlook. Questa impostazione non influisce sull'opzione Non inoltrare nei menu di Office.
 
@@ -213,7 +216,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="make-the-custom-permissions-options-available-or-unavailable-to-users"></a>Rendere disponibili o non disponibili agli utenti le opzioni relative alle autorizzazioni personalizzate
 
-Il metodo consigliato per configurare questa opzione è tramite l'[impostazione dei criteri](../configure-policy-settings.md) **Make the custom permissions option available for users** (Rendi disponibile l'opzione per le autorizzazioni personalizzate). Tuttavia, è possibile configurare questa opzione anche tramite un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) configurata nel portale di Azure. 
+Il metodo consigliato per configurare questa opzione è tramite l' [impostazione criterio](../configure-policy-settings.md) **rendere disponibile l'opzione autorizzazioni personalizzate per gli utenti**. Tuttavia, è possibile configurare questa opzione anche tramite un'[impostazione client avanzata](#how-to-configure-advanced-client-configuration-settings-in-the-portal) configurata nel portale di Azure. 
 
 Quando si configura questa impostazione e si pubblicano i criteri per gli utenti, le opzioni per le autorizzazioni personalizzate diventano visibili per gli utenti in modo che possano selezionare impostazioni di protezione personali oppure sono nascoste e quindi gli utenti non possono selezionare impostazioni di protezione personali, se non richiesto.
 
@@ -227,7 +230,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Questa impostazione è in anteprima e potrebbe cambiare.
 
-Quando si configura l'[impostazione di criteri](../configure-policy-settings.md) **Rendi disponibile agli utenti l'opzione per le autorizzazioni personalizzate** o l'impostazione client avanzata equivalente nella sezione precedente, gli utenti non possono visualizzare o modificare le autorizzazioni personalizzate già impostate in un documento protetto. 
+Quando si configura l' [impostazione criterio](../configure-policy-settings.md) **rendere disponibile l'opzione autorizzazioni personalizzate per gli utenti** o l'impostazione client avanzata equivalente nella sezione precedente, gli utenti non sono in grado di visualizzare o modificare le autorizzazioni personalizzate già impostate in un documento protetto. 
 
 Quando si crea e configura questa impostazione client avanzata, gli utenti possono visualizzare e modificare le autorizzazioni personalizzate per un documento protetto quando usano Esplora file e fare clic con il pulsante destro del mouse sul file. L'opzione **Autorizzazioni personalizzate** del pulsante **Proteggi** sulla barra multifunzione di Office rimane nascosta.
 
@@ -239,7 +242,7 @@ Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
 
 ## <a name="permanently-hide-the-azure-information-protection-bar"></a>Nascondere in modo permanente la barra di Azure Information Protection
 
-Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Usarla solo quando l'[impostazione dei criteri](../configure-policy-settings.md) **Display the Information Protection bar in Office apps** (Visualizza la barra di Information Protection nelle app di Office) è impostata su **On** (Attiva).
+Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. Usare questa opzione solo quando l' [impostazione dei criteri](../configure-policy-settings.md) **visualizza la barra Information Protection nelle app di Office** è impostata **su on**.
 
 Per impostazione predefinita, se un utente cancella l'opzione **Mostra barra** dalla scheda **Pagina iniziale**, il gruppo **Protezione**, il pulsante **Proteggi**, la barra di Information Protection non viene più visualizzata in quell'app Office. La barra viene tuttavia automaticamente visualizzata di nuovo alla successiva apertura di un'app Office.
 
@@ -532,7 +535,7 @@ Se si vuole che l'etichetta sia visibile solo in Outlook, configurare l'etichett
 
 Questa configurazione usa un'[impostazione avanzata del client](#how-to-configure-advanced-client-configuration-settings-in-the-portal) che deve essere configurata nel Portale di Azure. 
 
-Se si usa l'[impostazione dei criteri](../configure-policy-settings.md) **Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**, agli utenti viene richiesto di selezionare un'etichetta quando salvano per la prima volta un documento di Office e quando inviano un messaggio di posta elettronica. Per i documenti, gli utenti possono selezionare **Non ora** per chiudere temporaneamente la richiesta di selezionare un'etichetta e tornare al documento. Non possono però chiudere il documento salvato senza etichettarlo. 
+Se si usa l'[impostazione dei criteri](../configure-policy-settings.md)**Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**, agli utenti viene richiesto di selezionare un'etichetta quando salvano per la prima volta un documento di Office e quando inviano un messaggio di posta elettronica. Per i documenti, gli utenti possono selezionare **Non ora** per chiudere temporaneamente la richiesta di selezionare un'etichetta e tornare al documento. Non possono però chiudere il documento salvato senza etichettarlo. 
 
 Quando si configura questa impostazione l'opzione **Non ora** viene rimossa. In questo modo, quando il documento viene salvato per la prima volta gli utenti sono obbligati a selezionare un'etichetta.
 
@@ -604,7 +607,7 @@ Per usare i comandi di PowerShell per convertire file con estensione ppdf esiste
     
    - Valore di **RMSTemplateId**. Se questo valore è **Accesso limitato**, un utente ha protetto il file usando autorizzazioni personalizzate anziché le impostazioni di protezione configurate per l'etichetta. Se si continua, tali autorizzazioni personalizzate verranno sovrascritte dalle impostazioni di protezione dell'etichetta. Decidere se continuare o chiedere all'utente (valore visualizzato per **RMSIssuer**) di rimuovere l'etichetta e riapplicarla, con le relative autorizzazioni personalizzate originali.
 
-3. Rimuovere l'etichetta usando [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) con il parametro *RemoveLabel*. Se si usa l'[impostazione criteri](../configure-policy-settings.md) **Gli utenti devono offrire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione**, è necessario specificare anche il parametro *Giustificazione* con il motivo. Ad esempio: 
+3. Rimuovere l'etichetta usando [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) con il parametro *RemoveLabel*. Se si usa l'[impostazione criteri](../configure-policy-settings.md)**Gli utenti devono offrire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione**, è necessario specificare anche il parametro *Giustificazione* con il motivo. Ad esempio: 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 
@@ -841,7 +844,7 @@ Usare queste chiavi e i valori corrispondenti per una sola proprietà personaliz
 
 Si supponga, ad esempio, di avere una colonna di SharePoint denominata **Classificazione** con i valori possibili **Pubblico**, **Generale** e **Riservatezza elevata\Tutti i dipendenti**. I documenti vengono archiviati in SharePoint, con i valori **Pubblico**, **Generale** o **Riservatezza elevata\Tutti i dipendenti** impostati per la proprietà Classificazione.
 
-Per etichettare un documento di Office con uno di questi valori di classificazione, impostare **SyncPropertyName** su **Classificazione** e **SyncPropertyState** a **OneWay**. 
+Per etichettare un documento di Office con uno di questi valori di classificazione, impostare **SyncPropertyName** su **Classificazione** e **SyncPropertyState** a  **OneWay**. 
 
 A questo punto, quando un utente apre e salva uno di questi documenti di Office, il documento viene etichettato come **Pubblico**, **Generale** o **Riservatezza elevata\Tutti i dipendenti** se sono presenti etichette con questi nomi nei criteri di Azure Information Protection. In assenza di etichette con questi nomi, il documento rimane senza etichetta.
 
