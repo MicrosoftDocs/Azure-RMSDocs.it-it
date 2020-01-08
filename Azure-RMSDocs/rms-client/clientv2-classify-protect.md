@@ -1,9 +1,9 @@
 ---
 title: Classificazione & proteggere-Azure Information Protection client di etichetta unificata
-description: Istruzioni su come classificare e proteggere i documenti e i messaggi di posta elettronica quando si usa il client di etichettatura unificato di Azure Information Protection per Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+description: Istruzioni per la classificazione e la protezione di documenti e messaggi di posta elettronica quando si usa il client di etichettatura unificato di Azure Information Protection per Windows.
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 7eb4b4223f9fb8c53aec3ebe341384001175feda
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 3181144a6bf8f36b2be8297d7371db2f079a2c9c
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74661839"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326610"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Guida dell'utente: classificare e proteggere con la Azure Information Protection Unified Labeling client
 

@@ -1,10 +1,10 @@
 ---
 title: Azure Information Protection & i criteri di supporto per la cronologia delle versioni client
 description: Informazioni sugli elementi nuovi o modificati in una versione del client di Azure Information Protection per Windows e sui criteri del ciclo di vita per il supporto.
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 10/23/2019
+ms.date: 1/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,20 +12,24 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 4a31e28e560325d3165f5b5e53906fa879664c7b
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: feaffa2397a016d8284075a2ab5bf38f468f5ae7
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73446008"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675415"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto
+
+> [!NOTE] 
+>Avviso di deprecazione del prodotto per **Azure Information Protection client (classico)** e la **gestione delle etichette** in portale di Azure.<br>
+>Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection client (versione classica)** e la **gestione delle etichette** nel portale di Azure verranno **deprecati** a partire dal **31 marzo 2021**. Questo intervallo di tempo consente a tutti i clienti correnti Azure Information Protection di passare alla soluzione di assegnazione di etichette unificata usando la piattaforma Microsoft Information Protection Unified labeling. Il passaggio a un'etichetta unificata consente ai clienti Azure Information Protection di applicare una strategia completa di protezione delle informazioni in tutte le applicazioni di Office su tutte le piattaforme e le applicazioni di produttività non Microsoft. Ulteriori informazioni su tutte le modifiche pianificate sono disponibili nell' [avviso ufficiale di deprecazione](https://aka.ms/aipclassicsunset).
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012, windows Server 2008 R2*
 >
 > *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Il team di Azure Information Protection aggiorna regolarmente il client di Azure Information Protection con correzioni e nuove funzionalità. 
+
 
 È possibile scaricare la versione disponibile a livello generale più recente e la versione di anteprima corrente (se disponibile) dall'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018). 
 
@@ -34,7 +38,7 @@ Dopo un breve ritardo di genere in un paio di settimane, la versione di disponib
 Per altre informazioni, vedere [Aggiornamento e gestione del client Azure Information Protection](client-admin-guide.md#upgrading-and-maintaining-the-azure-information-protection-client).
 
 > [!TIP]
-> Si è interessati all'uso del client Azure Information Protection Unified Labeling perché le etichette vengono pubblicate dalla Centro sicurezza e conformità di Office 365, dal centro sicurezza Microsoft 365 o da Microsoft 365 Compliance Center? Quando si scarica e si installa il client di etichettatura unificata dall'area download Microsoft, è possibile aggiornare il client di Azure Information Protection a questo [client di etichetta unificata](unifiedlabelingclient-version-release-history.md).
+> Si è interessati all'uso del client Azure Information Protection Unified Labeling perché le etichette vengono pubblicate dalla Centro sicurezza e conformità di Office 365, dal centro sicurezza Microsoft 365 o da Microsoft 365 Compliance Center? Quando si scarica e si installa il client di etichettatura unificata dall'area download Microsoft, è possibile aggiornare il client di Azure Information Protection al [client Unified Labeling](unifiedlabelingclient-version-release-history.md).
 
 ### <a name="servicing-information-and-timelines"></a>Informazioni e tempistiche di manutenzione
 
@@ -64,7 +68,7 @@ A partire da 6/2/2019, il servizio di assegnazione di etichette per Azure Inform
 
 Tutte le versioni client di 1.4.21.0 rilasciate 03/15/2017 supportano TLS 1,2. Le versioni client **1.3.155.2**, **1.2.4.0**e **1.1.23.0** non usano TLS 1,2 e pertanto non possono più scaricare i criteri di Azure Information Protection.
 
-### <a name="release-history"></a>Cronologia delle versioni
+### <a name="release-history"></a>Cronologia versioni
 
 Usare le informazioni seguenti per scoprire le novità o le modifiche per una versione supportata del client di Azure Information Protection per Windows. La versione più recente è elencata per prima.
 
@@ -72,6 +76,7 @@ Usare le informazioni seguenti per scoprire le novità o le modifiche per una ve
 > Dato che le correzioni di minore rilevanza non sono elencate, se si verifica un problema con il client di Azure Information Protection, è consigliabile controllare se tale problema è stato risolto con la versione disponibile a livello generale più recente. Se il problema persiste, controllare la versione di anteprima corrente (se disponibile).
 >  
 > Per il supporto tecnico, vedere le informazioni riportate in [Opzioni di supporto e risorse per la community](../information-support.md#support-options-and-community-resources). È anche possibile rivolgersi al team di Azure Information Protection nel [sito di Yammer](https://www.yammer.com/askipteam/).
+
 
 ## <a name="version-154330"></a>Versione 1.54.33.0
 
@@ -165,7 +170,7 @@ Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
 
 - Quando si usa l'impostazione client avanzata per impostare un'[etichetta predefinita per Outlook](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook), è possibile applicare un'etichetta padre con etichette secondarie quando tutte le etichette secondarie sono disabilitate per l'utente.
 
-- Quando si usa l'[impostazione di criteri](../configure-policy-settings.md) **Per i messaggi di posta elettronica con allegati, applicare un'etichetta corrispondente alla classificazione più elevata di questi allegati** e l'etichetta con la classificazione più elevata è configurata per le autorizzazioni definite dall'utente, accadeva che l'etichetta veniva applicata al messaggio di posta elettronica, senza che fosse applicata la protezione. Adesso:
+- Quando si usa l' [impostazione dei criteri](../configure-policy-settings.md) **per i messaggi di posta elettronica con allegati, applicare un'etichetta che corrisponda alla classificazione più elevata di tali allegati** e l'etichetta con la classificazione più alta è configurata per le autorizzazioni definite dall'utente, il risultato precedente era che l'etichetta era stata applicata al messaggio di posta elettronica, ma la protezione non lo era. Adesso:
     - Quando le autorizzazioni definite dall'utente dell'etichetta includono Outlook (non inoltrare): applicare tale etichetta e la relativa protezione non inoltrare al messaggio di posta elettronica.
     - Quando le autorizzazioni definite dall'utente dell'etichetta sono destinate solo a Word, Excel, PowerPoint ed Esplora file: non applicare l'etichetta né applicare alcuna protezione al messaggio di posta elettronica.
 
@@ -188,7 +193,7 @@ Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
 
 - Lo scanner di Azure Information Protection non esclude più i file ZIP per impostazione predefinita. Per esaminare ed etichettare i file ZIP, vedere la sezione [Per esaminare i file con estensione zip](client-admin-guide-file-types.md#to-inspect-zip-files) della guida dell'amministratore.
 
-- L'[impostazione dei criteri](../configure-policy-settings.md) **Gli utenti devono fornire una giustificazione per impostare un'etichetta di classificazione inferiore, rimuovere un'etichetta o rimuovere la protezione** non si applica più allo scanner. Lo scanner esegue queste azioni quando si configura l'impostazione modifica **etichette file** **su** in nel profilo scanner, quindi selezionare la casella di controllo **Consenti downgrade etichetta** .
+- L' [impostazione criterio](../configure-policy-settings.md) **gli utenti devono fornire una giustificazione per impostare un'etichetta di classificazione inferiore, rimuovere un'etichetta o rimuovere la protezione** non si applica più allo scanner. Lo scanner esegue queste azioni quando si configura l'impostazione modifica **etichette file** **su** in nel profilo scanner, quindi selezionare la casella di controllo **Consenti downgrade etichetta** .
 
 ## <a name="next-steps"></a>Passaggi successivi
 
