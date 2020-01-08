@@ -1,19 +1,18 @@
 ---
 title: Cronologia delle versioni di Microsoft Information Protection (MIP) SDK e criteri di supporto
-description: Cronologia delle versioni di versione e note sulle modifiche per il MIP SDK.
+description: Cronologia delle versioni e note sulle modifiche per il MIP SDK.
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
-ms.openlocfilehash: a678765835785dcb40aaf65e7f92e78fba67c73a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: c28ab93feedea4c27ef9fe032f889d17da078d49
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74479114"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555943"
 ---
 # <a name="microsoft-information-protection-mip-sdk-version-release-history-and-support-policy"></a>Cronologia delle versioni di Microsoft Information Protection (MIP) SDK e criteri di supporto
 
@@ -23,7 +22,7 @@ Ogni versione disponibile a livello generale è supportata per sei mesi dopo il 
 
 Le versioni di anteprima non devono essere distribuite nell'ambiente di produzione. Usare invece la versione di anteprima più recente per testare nuove funzionalità o correzioni che saranno disponibili nella prossima versione GA. È supportata solo la versione di anteprima più recente.
 
-## <a name="release-history"></a>Cronologia delle versioni
+## <a name="release-history"></a>Cronologia versioni
 
 Usare le informazioni seguenti per visualizzare le novità o le modifiche per una versione supportata. La versione più recente è elencata per prima. 
 

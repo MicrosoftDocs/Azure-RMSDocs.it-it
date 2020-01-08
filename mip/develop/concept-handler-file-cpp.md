@@ -4,15 +4,14 @@ description: Questo articolo illustra le modalità di creazione e uso dei gestor
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 414ad04c062a81d374a9e46d170feabb15e0e6cc
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: f94f885f77d15ec5c38894a4801b08908e65a166
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886219"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555807"
 ---
 # <a name="microsoft-information-protection-sdk---file-handler-concepts"></a>Microsoft Information Protection SDK - Concetti relativi ai gestori di file
 
@@ -37,9 +36,9 @@ In questo articolo verranno descritti i metodi seguenti:
 - `DeleteLabel()`
 - `CommitAsync()`
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>requisiti
 
-Per creare un `FileHandler` per lavorare con un file specifico esistono questi requisiti:
+La creazione `FileHandler` per lavorare con un file specifico richiede quanto segue:
 
 - Un elemento `FileProfile`
 - Un elemento `FileEngine` aggiunto a `FileProfile`

@@ -1,9 +1,9 @@
 ---
 title: Usare PowerShell con il client di etichettatura unificato Azure Information Protection
 description: Istruzioni e informazioni per gli amministratori per la gestione del client Azure Information Protection Unified Labeling usando PowerShell.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 10/23/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: da0d578d06081667e4d8a25be841c2feb2c1fbd5
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 44b30188cdae6e41f830afd283c22ca58e9afea2
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73561257"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675568"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-unified-client"></a>Guida dell'amministratore: uso di PowerShell con il client unificato di Azure Information Protection
 

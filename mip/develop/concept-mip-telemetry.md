@@ -4,15 +4,14 @@ description: Questo articolo consente di comprendere come rifiutare esplicitamen
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 10/01/2019
 ms.author: tommos
-ms.openlocfilehash: 3d97bdbf5307d7f0faefe6b6434b1df1ebc67798
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: e2c8d8726edc483b35c7b9931bc83a3ddb3b5a2c
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74484854"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556147"
 ---
 # <a name="microsoft-information-protection-sdk---telemetry-configuration"></a>Microsoft Information Protection SDK-configurazione della telemetria
 
@@ -58,7 +57,7 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 | SDKVersion                           | Uguale a MIP. Versione.                                                                   | No       |
 | UserId                               | Indirizzo di posta elettronica dell'utente.                                                             | **Sì**  |
 | UserObjectId                         | Azure AD ID oggetto dell'utente.                                                        | No       |
-| Versione                              | Schema della versione di controllo ("1,1").                                                          | No       |
+| Version                              | Schema della versione di controllo ("1,1").                                                          | No       |
 
 #### <a name="event-discovery"></a>Evento: individuazione
 
@@ -94,7 +93,7 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 | SDKVersion                           | Uguale a MIP. Versione.                                                                   | No       |
 | UserId                               | Indirizzo di posta elettronica dell'utente.                                                             | **Sì**  |
 | UserObjectId                         | Azure AD ID oggetto dell'utente.                                                        | No       |
-| Versione                              | Schema della versione di controllo ("1,1").                                                          | No       |
+| Version                              | Schema della versione di controllo ("1,1").                                                          | No       |
 
 #### <a name="event-label-change"></a>Evento: modifica dell'etichetta
 
@@ -141,7 +140,7 @@ Esaminare le tabelle seguenti per visualizzare esattamente gli eventi e i dati i
 | SDKVersion                           | Uguale a MIP. Versione.                                                                   | No       |
 | UserId                               | Indirizzo di posta elettronica dell'utente.                                                             | **Sì**  |
 | UserObjectId                         | Azure AD ID oggetto dell'utente.                                                        | No       |
-| Versione                              | Schema della versione di controllo ("1,1").                                                          | No       |
+| Version                              | Schema della versione di controllo ("1,1").                                                          | No       |
 
 
 ### <a name="opting-out-in-c"></a>Opt-out inC++

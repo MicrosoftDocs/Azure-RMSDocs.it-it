@@ -4,23 +4,22 @@ description: Questo articolo illustra le modalità di creazione e uso dei gestor
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: b00078ba82d22ce37263162b3d7bb3d1f7d3a903
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 892e492351d3779667629ff4522891bb527fd782
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886159"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556164"
 ---
 # <a name="microsoft-information-protection-sdk---protection-handler-concepts"></a>Microsoft Information Protection SDK - Concetti del gestore di protezione
 
 Nell'API di protezione del SDK MIP `mip::ProtectionHandler` espone funzioni per crittografare e decrittografare flussi protetti e buffer, eseguire controlli di accesso, ottenere la licenza di pubblicazione e recuperare attributi dalle informazioni protette.
 
-## <a name="requirements"></a>Requisiti
+## <a name="requirements"></a>requisiti
 
-Per creare un `ProtectionHandler` per lavorare con un file specifico esistono questi requisiti:
+La creazione `ProtectionHandler` per lavorare con un file specifico richiede quanto segue:
 
 - Un elemento `mip::MipContext`
 - Un elemento `mip::ProtectionProfile`

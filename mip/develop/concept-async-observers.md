@@ -4,15 +4,14 @@ description: MIP SDK è progettato per essere quasi interamente asincrono. Quest
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
-ms.openlocfilehash: e42b9996d737ace5b25988eb72fa02aa87230f13
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: bd709b75c5b98c4241bc80f4a8542de30f48ff66
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60175140"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555875"
 ---
 # <a name="microsoft-information-protection-sdk---observer-concepts"></a>Microsoft Information Protection SDK - Concetti relativi agli osservatori
 
@@ -31,7 +30,7 @@ Ad esempio, `FileProfile` supporta le due operazioni seguenti:
 - Può aggiungere un nuovo motore al profilo tramite `FileProfile::AddEngineAsync`. 
 - Può scaricare un motore dal profilo tramite `FileProfile::UnloadEngineAsync`.
 
-Dato che vengono implementate due funzioni `Observer` per ogni operazione asincrona, si può presupporre che esistano **quattro** metodi `Observer` associati a `FileProfile`: 
+Poiché due `Observer` funzioni vengono implementate per ogni operazione asincrona, si può presumere che ci siano **quattro** `Observer` metodi associati a `FileProfile`: 
 
 - `FileProfileObserver::OnAddEngineSuccess()`
 - `FileProfileObserver::OnAddEngineError()`

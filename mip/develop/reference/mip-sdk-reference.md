@@ -4,15 +4,14 @@ description: SDK MIP per C++ riferimento
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: f1e5e06332cac6c0f8beba089d92654781ff6f71
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 69896e60fcf8aa33b2181fd22aeda803ab35b1cf
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560429"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555994"
 ---
 # <a name="mip-sdk-for-c-reference"></a>SDK MIP per C++ riferimento
 
@@ -24,7 +23,7 @@ MIP SDK per C++ include:
 - [Funzioni](mip-functions.md)
 - Le classi seguenti:
 
- Classe                         | Description                                
+ Class                         | Description                                
 --------------------------------|---------------------------------------------
 [Classe MIP:: AccessDeniedError](class_mip_accessdeniederror.md)  |  L'utente non è riuscito a ottenere l'accesso al contenuto, ad esempio per mancanza di autorizzazioni o contenuto revocato.
 [Classe MIP:: Action](class_mip_action.md)  |  Interfaccia per un'azione. Ogni azione viene convertita in un passaggio che deve essere eseguito dall'applicazione per applicare l'etichetta (definita nei criteri)
@@ -139,4 +138,4 @@ MIP SDK per C++ include:
 [Classe MIP:: TemplateNotFoundError](class_mip_templatenotfounderror.md)  |  ID modello non riconosciuto dal servizio RMS.
 [Classe MIP:: TransientNetworkError](class_mip_transientnetworkerror.md)  |  Errore di rete temporaneo. Causato da un comportamento imprevisto quando si effettuano chiamate di rete agli endpoint di servizio. È possibile ripetere l'operazione dal momento che l'errore è temporaneo.
 [Classe MIP:: UserRights](class_mip_userrights.md)  |  Gruppo di utenti e diritti ad essi associati.
-[Classe MIP:: UserRoles](class_mip_userroles.md)  |  Gruppo di utenti e ruoli ad essi associati.
+[Classe MIP:: UserRoles](class_mip_userroles.md)  |  Un gruppo di utenti e i ruoli ad essi associati.

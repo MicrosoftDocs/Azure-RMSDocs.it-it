@@ -4,15 +4,14 @@ description: Questo articolo aiuterà a comprendere come usare Python per acquis
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: b46f478dc38e9010cc2eb221f587f3d3ca3f60a2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 7cb49e161b3718a54bcdb8601cc857a47b1e9f16
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69884757"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556249"
 ---
 # <a name="acquire-an-access-token-python"></a>Acquisire un token di accesso (Python)
 

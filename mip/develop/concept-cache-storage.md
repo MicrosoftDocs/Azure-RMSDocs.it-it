@@ -4,15 +4,14 @@ description: Questo articolo consente di comprendere i concetti relativi all'arc
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: tommos
-ms.openlocfilehash: a72ae5169e4a7ee9a201876afbef0f5d33fc9b89
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: ed6407e99677bbed293959e15720c4c7d418aa54
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69893753"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555824"
 ---
 # <a name="microsoft-information-protection-sdk---cache-storage"></a>Microsoft Information Protection SDK-archiviazione cache
 
@@ -26,7 +25,7 @@ Quando si carica il profilo come parte degli oggetti `FileProfileSettings`, `Pol
 
 A partire dalla versione 1,3 dell'SDK MIP, sono disponibili i seguenti tipi di cache di archiviazione.
 
-| Type            | Scopo                                                                                                                         |
+| Digitare            | Scopo                                                                                                                         |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------- |
 | InMemory        | Mantiene la cache di archiviazione in memoria nell'applicazione.                                                                       |
 | OnDisk          | Archivia il database su disco nella directory fornita nell'oggetto impostazioni. Il database è archiviato in testo non crittografato.              |
@@ -54,7 +53,7 @@ L'archiviazione della cache è importante per la gestione dell'accesso offline a
 
 ## <a name="supported-platforms-for-encryption"></a>Piattaforme supportate per la crittografia
 
-| Piattaforma          | Versione                | Note                                                                                                                               |
+| Piattaforma          | Version                | Note                                                                                                                               |
 | ----------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Microsoft Windows | Windows 8 e versioni successive    | Windows 7 supporta solo CacheStorageType:: ondisk                                                                                    |
 | macOS             | High Sierra e versioni successive  |                                                                                                                                     |
@@ -79,18 +78,18 @@ L'SDK MIP gestisce due database per la cache. Una è per le API di protezione e 
 | ConsentStore  | Archivia i risultati del consenso per ogni motore.                        | No        |
 | DnsInfoStore  | Archivia i risultati della ricerca DNS per le operazioni di protezione SDK        | No        |
 | EngineStore   | Archivia i dettagli del motore, l'utente associato e i dati client personalizzati | No        |
-| KeyStore      | Archivia le chiavi di crittografia simmetrica per ogni motore.              | Yes       |
-| LicenseStore  | Gli archivi utilizzano le informazioni sulle licenze per i dati decrittografati in precedenza.  | Yes       |
+| KeyStore      | Archivia le chiavi di crittografia simmetrica per ogni motore.              | sì       |
+| LicenseStore  | Gli archivi utilizzano le informazioni sulle licenze per i dati decrittografati in precedenza.  | sì       |
 | SdInfoStore   | Archivia i risultati dell'individuazione del servizio.                              | No        |
 
 ### <a name="policy-database"></a>Database dei criteri
 
 | Table           | Scopo                                                          | Crittografato |
 | --------------- | ---------------------------------------------------------------- | --------- |
-| KeyStore        | Archivia le chiavi di crittografia simmetrica per ogni motore.                | Yes       |
-| Criteri        | Archivia le informazioni sui criteri etichetta per ogni utente.                   | Yes       |
+| KeyStore        | Archivia le chiavi di crittografia simmetrica per ogni motore.                | sì       |
+| Criteri        | Archivia le informazioni sui criteri etichetta per ogni utente.                   | sì       |
 | PoliciesUrl     | Archivia l'URL del servizio criteri di back-end per un utente specifico.             | No        |
-| Sensibilità     | Archivia le regole di classificazione per un criterio utente specifico.          | Yes       |
+| Sensibilità     | Archivia le regole di classificazione per un criterio utente specifico.          | sì       |
 | SensitivityUrls | Archivia l'URL del servizio criteri di riservatezza backend per un utente specifico. | No        |
 
 ## <a name="database-size-considerations"></a>Considerazioni sulle dimensioni del database

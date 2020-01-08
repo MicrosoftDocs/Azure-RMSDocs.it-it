@@ -4,15 +4,14 @@ description: Questo articolo aiuterà a comprendere come vengono usate le etiche
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
-ms.openlocfilehash: e1101bd505a35e02fdeeed032d5dec61364bfb8d
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: b2be24e1703d4831a95feaa51012cf7469a481b7
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60175243"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556215"
 ---
 # <a name="microsoft-information-protection-sdk---classification-label-concepts"></a>Microsoft Information Protection SDK - Concetti relativi alle etichette di classificazione
 

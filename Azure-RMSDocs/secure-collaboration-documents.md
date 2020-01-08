@@ -1,10 +1,10 @@
 ---
 title: Configurazione della collaborazione per i documenti protetti con Azure Information Protection
 description: Flusso di lavoro end-to-end per collaborare a documenti protetti da Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/30/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b3be1b1577277b31dd515f8343870de73e258770
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
-ms.translationtype: MT
+ms.openlocfilehash: d62c2946fed73c3f7ac69182b9558ee233935b4a
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934467"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675585"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configurazione della collaborazione per i documenti protetti con Azure Information Protection
 
@@ -42,6 +42,9 @@ Un amministratore può configurare un'etichetta di Azure Information Protection 
 
 
 ## <a name="example-configuration-for-a-label-to-apply-protection-to-support-internal-and-external-collaboration"></a>Configurazione di esempio per un'etichetta per l'applicazione della protezione in modo da supportare la collaborazione interna ed esterna
+
+> [!NOTE] 
+> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection client (versione classica)** e la **gestione delle etichette** nel portale di Azure verranno **deprecati** a partire dal **31 marzo 2021**. Questo intervallo di tempo consente a tutti i clienti correnti Azure Information Protection di passare alla soluzione di assegnazione di etichette unificata usando la piattaforma Microsoft Information Protection Unified labeling. Per ulteriori informazioni, vedere l'avviso ufficiale di [deprecazione](https://aka.ms/aipclassicsunset)e seguire le [istruzioni in Microsoft 365 Centro sicurezza e conformità](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) per completare questa procedura. 
 
 Questo esempio descrive in modo dettagliato la configurazione di un'etichetta esistente per applicare la protezione in modo che gli utenti dell'organizzazione possano collaborare a documenti con tutti gli utenti di un'altra organizzazione che usa Office 365 o Azure AD, con un gruppo di un'organizzazione diversa che usa Office 365 o Azure AD e con un utente che non ha un account in Azure AD e che usa invece il proprio indirizzo di posta elettronica Gmail.
 
@@ -77,7 +80,7 @@ Poiché lo scenario limita l'accesso a specifici utenti, non include l'impostazi
 
 Dopo aver configurato l'etichetta, questa può essere applicata ai documenti in diversi modi, tra cui i seguenti:
 
-|Metodi diversi per l'applicazione dell'etichetta|Ulteriori informazioni|
+|Metodi diversi per l'applicazione dell'etichetta|Altre informazioni|
 |---------------|----------|
 |Un utente seleziona manualmente l'etichetta quando il documento viene creato nell'applicazione di Office.|Gli utenti selezionano l'etichetta tramite il pulsante **Proteggi** sulla barra multifunzione di Office oppure sulla barra di Azure Information Protection.|
 |Agli utenti viene richiesto di selezionare un'etichetta quando viene salvato un nuovo documento.|È stata configurata l'[impostazione di criteri](configure-policy-settings.md) di Azure Information Protection denominata **All documents and emails must have a label** (Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta).|

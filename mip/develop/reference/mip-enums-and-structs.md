@@ -4,15 +4,14 @@ description: Documentazione di riferimento per C++ gli struct e le enumerazioni 
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: reference
-ms.collection: M365-security-compliance
 ms.author: mbaldwin
 ms.date: 01/28/2019
-ms.openlocfilehash: a6e5fae2296fb6f966f5f7fb6b73facb867398a2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 2a641ace68d6999e3d452fa7f5c014ec1215556a
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560456"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556011"
 ---
 # <a name="enumerations-and-structures"></a>Enumerazioni e strutture
 
@@ -161,7 +160,7 @@ LABEL_DISABLED            | Label disabilitato o inattivo
 #### <a name="inspectortype-enum"></a>Enumerazione InspectorType
  Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
-Unknown            | Controllo file sconosciuto.
+Sconosciuto            | Controllo file sconosciuto.
 Msg            | Controllo file di tipo msg, basato su rpmsg/msg.
 Tipo di controllo correlato ai tipi di file supportati.
   
@@ -215,7 +214,7 @@ ADD_CONTENT_HEADER            | Aggiunge un'intestazione contenuto al tipo di az
 ADD_WATERMARK            | Aggiunge una filigrana al tipo di azione dell'intero documento.
 PERSONALIZZATO            | Tipo di azione definito personalizzato.
 JUSTIFY            | Tipo di azione di allineamento.
-METADATA            | Tipo di azione di modifica dei metadati.
+METADATI            | Tipo di azione di modifica dei metadati.
 PROTECT_ADHOC            | Tipo di azione di protezione con criteri ad hoc.
 PROTECT_BY_TEMPLATE            | Tipo di azione di protezione con modello.
 PROTECT_DO_NOT_FORWARD            | Tipo di azione di protezione senza inoltro.

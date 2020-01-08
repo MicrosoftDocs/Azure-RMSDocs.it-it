@@ -4,15 +4,14 @@ description: Questo articolo consente di comprendere i metadati generati da Micr
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 11/08/2018
 ms.author: tommos
-ms.openlocfilehash: 3ae27b1bf0b4f709e9621f00b1b3a16c2ba1882c
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 6713ba0d8b6727f3ed10e4b3846cbe2bb1b43f6e
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886139"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555688"
 ---
 # <a name="microsoft-information-protection-sdk---metadata"></a>Microsoft Information Protection SDK-metadati
 
@@ -36,12 +35,12 @@ L'SDK MIP applica il seguente set di metadati.
 
 | Attributo | Tipo o valore                 | Description                                                                                                                                                                                                                                        | Obbligatorio |
 |-----------|-------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------|
-| **Attivata**   | True o false                 | Questo attributo indica se la classificazione rappresentata da questo set di coppie chiave-valore è abilitata per l'elemento dati. In genere, i prodotti DLP convalidano l'esistenza di questa chiave per identificare l'etichetta di classificazione. | Yes       |
-| **SiteId**    | GUID                          | ID tenant Azure Active Directory                                                                                                                                                                                                                   | Yes       |
-| **ActionId**  | GUID                          | ActionID viene modificato ogni volta che viene impostata un'etichetta. I log di controllo includeranno sia vecchi che nuovi actionID per consentire il concatenamento dell'attività di assegnazione di etichette all'elemento di dati.                                                                                 | Yes       |
+| **Attivata**   | True o False                 | Questo attributo indica se la classificazione rappresentata da questo set di coppie chiave-valore è abilitata per l'elemento dati. In genere, i prodotti DLP convalidano l'esistenza di questa chiave per identificare l'etichetta di classificazione. | sì       |
+| **SiteId**    | GUID                          | ID tenant Azure Active Directory                                                                                                                                                                                                                   | sì       |
+| **ActionId**  | GUID                          | ActionID viene modificato ogni volta che viene impostata un'etichetta. I log di controllo includeranno sia vecchi che nuovi actionID per consentire il concatenamento dell'attività di assegnazione di etichette all'elemento di dati.                                                                                 | sì       |
 | **Metodo**    | Standard o con privilegi        | Impostare tramite [MIP:: AssignmentMethod](reference/mip-enums-and-structs.md#assignmentmethod-enum). Standard implica che l'etichetta venga applicata per impostazione predefinita o automaticamente. Privileged implica che l'etichetta è stata selezionata manualmente.                                                                                                                                                                                                                 | No        |
 | **SetDate**   | Formato data ISO 8601 esteso | Timestamp del momento in cui è stata impostata l'etichetta.                                                                                                                                                                                                              | No        |
-| **Nome**      | string                        | Etichetta nome univoco all'interno del tenant. Non corrisponde necessariamente al nome visualizzato.                                                                                                                                                              | No      |
+| **Nome**      | stringa                        | Etichetta nome univoco all'interno del tenant. Non corrisponde necessariamente al nome visualizzato.                                                                                                                                                              | No      |
 | **ContentBits** | integer | Maschera di maschera che descrive i tipi di contrassegno del contenuto da applicare a un file. CONTENT_HEADER = 0X1, CONTENT_FOOTER = 0X2, WATERMARK = 0X4, ENCRYPT = 0x8
  | No |
 

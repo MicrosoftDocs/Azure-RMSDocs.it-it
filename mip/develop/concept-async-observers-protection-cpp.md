@@ -4,15 +4,14 @@ description: MIP SDK è progettato per essere quasi interamente asincrono. Quest
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 09/27/2018
 ms.author: mbaldwin
-ms.openlocfilehash: 2d1cf81e20a317ecb1eb9e71b5b4e0ab32482877
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 559e6088edc4bab51867ac379451ae3feef5acd6
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60175548"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555926"
 ---
 # <a name="microsoft-information-protection-sdk---protection-api-observers"></a>Microsoft Information Protection SDK - Osservatori dell'API Protezione
 

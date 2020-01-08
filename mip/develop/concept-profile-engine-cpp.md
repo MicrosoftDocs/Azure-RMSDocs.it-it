@@ -4,15 +4,14 @@ description: Questo articolo aiuterà a comprendere i concetti fondamentali dell
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/29/2019
 ms.author: mbaldwin
-ms.openlocfilehash: a1112b3c35539654ac71b6c8c686f93e676ac5f3
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: de78ed0e5b3dfe7f9f5c1e2efa7edd77a0719986
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886115"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556130"
 ---
 # <a name="microsoft-information-protection-sdk---profile-and-engine-object-concepts"></a>Microsoft Information Protection SDK - Concetti relativi agli oggetti profilo e motore
 

@@ -1,9 +1,9 @@
 ---
 title: 'Tipi di file supportati: Azure Information Protection Unified Labeling client'
 description: Dettagli tecnici sui tipi di file supportati, le estensioni dei nomi di file e i livelli di protezione per gli amministratori che sono responsabili del Azure Information Protection client unificato per Windows.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/21/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9574d9e2089169878c44cb4827ac58e94f177f88
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: e27e89e2a4763eefa16abe3cc107279152528b16
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74666855"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675602"
 ---
 # <a name="admin-guide-file-types-supported-by-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: tipi di file supportati dal client di Azure Information Protection Unified Labeling
 
@@ -78,7 +78,7 @@ Di seguito sono riportati alcuni esempi.
 
 Il Azure Information Protection client di etichetta unificata supporta la protezione a due livelli diversi, come descritto nella tabella seguente.
 
-|Tipo di protezione|Nativo|Generica|
+|Tipo di protezione|Nativa|Generica|
 |----------------------|----------|-----------|
 |Description|Per file di testo e immagine, file di Microsoft Office (Word, Excel e PowerPoint), file con estensione pdf e altri tipi di file di applicazione che supportano un servizio Rights Management, la protezione nativa offre un forte livello di protezione che include crittografia e applicazione di diritti (autorizzazioni).|Per tutte le altre applicazioni e gli altri tipi di file, la protezione generica offre un livello di protezione che include funzionalità di incapsulamento dei file, usando il tipo di file pfile, e di autenticazione per verificare se un utente è autorizzato ad aprire il file.|
 |Protection|La protezione dei file viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che ricevono il file tramite posta elettronica o a cui viene concesso l'accesso al file tramite autorizzazioni di file o condivisione.<br /><br />- Vengono anche applicati tutti i diritti di utilizzo e i criteri impostati dal proprietario del contenuto al momento dell'applicazione della protezione ai file quando viene eseguito il rendering del contenuto nel visualizzatore Azure Information Protection (per i file di testo e immagine protetti) o nell'applicazione associata (per tutti gli altri tipi di file supportati).|La protezione dei file viene applicata nei modi seguenti:<br /><br />- Prima di eseguire il rendering del contenuto protetto, è necessario che venga eseguita l'autenticazione per coloro che sono autorizzati ad aprire il file e a cui viene concesso l'accesso al file. Se l'autorizzazione non riesce, il file non viene aperto.<br /><br />- Vengono visualizzati i diritti di utilizzo e i criteri impostati dal proprietario del contenuto per comunicare agli utenti autorizzati i criteri di utilizzo previsti.<br /><br />- Viene effettuata la registrazione di controllo dell'apertura di file e dell'accesso a questi da parte di utenti autorizzati. I diritti di utilizzo, tuttavia, non vengono applicati.|
@@ -121,7 +121,7 @@ Questi tipi di file vengono identificati separatamente perché quando sono prote
 
 |Estensione del file originale|Estensione dei file protetti|
 |--------------------------------|-------------------------------------|
-|.txt|ptxt|
+|txt|ptxt|
 |.xml|pxml|
 |.jpg|pjpg|
 |jpeg|pjpeg|

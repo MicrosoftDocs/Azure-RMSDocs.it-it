@@ -4,15 +4,14 @@ description: Questo articolo aiuterà a comprendere come implementare un delegat
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: e3436acdd6a2900f4a21bb50b283d12065cd659b
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 5f21c837c1bcd48fe23f3df2647d401390ee81f5
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "69886258"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556232"
 ---
 # <a name="microsoft-information-protection-sdk---implementing-an-authentication-delegate-c"></a>Microsoft Information Protection SDK - Implementazione di un delegato di autenticazione (C++)
 

@@ -4,15 +4,14 @@ description: Una rapida panoramica su come iniziare a usare il wrapper .NET di M
 author: tommoser
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 01/04/2019
 ms.author: tommos
-ms.openlocfilehash: 6b2f26a61cd491574fd9f4a1e74fbfab4752257a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 21fc590388615b2917ca62fdd848b3a63ce26912
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60175206"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556113"
 ---
 # <a name="getting-started-with-the-microsoft-information-protection-net-wrapper"></a>Introduzione con il wrapper Microsoft Information Protection .NET
 
@@ -43,7 +42,7 @@ Il wrapper .NET è un wrapper gestito generato da un [sorso](https://swig.org/) 
 
 Esistono alcune differenze fondamentali tra la C++ versione dell'SDK e il wrapper gestito.
 
-* Il wrapper .NET non richiede l'uso di osservatori per le operazioni asincrone. Tutte le operazioni asincrone vengono implementate tramite il [modello asincrono basato su attività](https://docs.microsoft.com/en-us/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
+* Il wrapper .NET non richiede l'uso di osservatori per le operazioni asincrone. Tutte le operazioni asincrone vengono implementate tramite il [modello asincrono basato su attività](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
 * Il wrapper .NET richiede i delegati che fanno parte dell' C++ SDK: AuthDelegate e ConsentDelegate. Questi delegati vengono implementati tramite le interfacce `IAuthDelegate` e `IConsentDelegate`
 
 ## <a name="next-steps"></a>Passaggi successivi

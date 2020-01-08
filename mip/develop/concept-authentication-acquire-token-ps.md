@@ -4,15 +4,14 @@ description: Questo articolo aiuterà a comprendere come usare PowerShell per ac
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: conceptual
-ms.collection: M365-security-compliance
 ms.date: 02/04/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 68ae6bc02f671f0a4d18c382ccde4f53873b2fd4
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: ddc962f97e6e7d6b0e7ff091821fa83063e9f068
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "60175310"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555858"
 ---
 # <a name="acquire-an-access-token-powershell"></a>Acquisire un token di accesso (PowerShell)
 
