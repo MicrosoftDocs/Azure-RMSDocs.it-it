@@ -1,9 +1,9 @@
 ---
 title: Script di PowerShell per Azure RMS e l'infrastruttura di classificazione file - AIP
 description: Script di esempio per copiare e modificare, come descritto nelle istruzioni per la protezione RMS con l'infrastruttura di classificazione file per Windows Server.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c8f82db12bc4de61b526426e8e05652cfac8db48
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 73ba9a365b38804c8caf0d9e9b06e8b53be8560a
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935249"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326491"
 ---
 # <a name="windows-powershell-script-for-azure-rms-protection-by-using-file-server-resource-manager-fci"></a>Script di Windows PowerShell per la protezione Azure RMS usando l'infrastruttura di classificazione file di Gestione risorse file server
 

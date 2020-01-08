@@ -1,9 +1,9 @@
 ---
 title: Scaricare & installare il client di Azure Information Protection Unified Labeling
 description: Istruzioni per consentire agli utenti di installare il client di Azure Information Protection Unified Labeling per Windows, in modo che sia possibile classificare e proteggere i documenti e i messaggi di posta elettronica.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 10/13/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 8f9cef00aa9320b88bb756027d646415eb27301c
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 949ba86c0f0327c3a6674c85f680a6a5c48aa970
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73445140"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326438"
 ---
 # <a name="user-guide-download-and-install-the-azure-information-protection-unified-labeling-client"></a>Guida dell'utente: scaricare e installare il client di Azure Information Protection Unified Labeling
 

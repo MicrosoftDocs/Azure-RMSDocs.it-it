@@ -1,9 +1,9 @@
 ---
 title: Guida dell'utente Azure Information Protection-assegnazione di etichette unificata
-description: Il Azure Information Protection client Unified Labeling per Windows consente di proteggere i documenti e i messaggi di posta elettronica importanti dagli utenti che non dovrebbero visualizzarli, anche se l'indirizzo di posta elettronica viene inviato o il documento viene salvato in un altro percorso.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+description: Azure Information Protection client di assegnazione unificata per Windows consente di proteggere i documenti e i messaggi di posta elettronica importanti dagli utenti che non dovrebbero visualizzarli, anche se l'indirizzo di posta elettronica viene inviato o il documento viene salvato in un altro percorso.
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 9223087642653b304a719a8f0cbe0125d5b3a741
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 8e4851da21542985c89ef22c50b9d6015e5a6835
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935555"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326517"
 ---
 # <a name="azure-information-protection-unified-labeling-user-guide"></a>Guida dell'utente per l'assegnazione di etichette unificata Azure Information Protection 
 
@@ -30,7 +30,7 @@ Il Azure Information Protection client Unified Labeling per Windows consente di 
 È sufficiente avere un computer che esegua almeno Windows 7 con Service Pack 1. Quindi scaricare e installare questo client gratuito da Microsoft.
 
 
-## <a name="what-do-you-want-to-do"></a>Per saperne di più
+## <a name="what-do-you-want-to-do"></a>Come procedere
 
 - [Scaricare e installare il client Azure Information Protection Unified Labeling](install-unifiedlabelingclient-app.md)
 

@@ -1,9 +1,9 @@
 ---
 title: Protezione di Azure RMS con l'infrastruttura di classificazione file per Windows Server - AIP
 description: Istruzioni per usare il client Rights Management (RMS) con il client Azure Information Protection per configurare Gestione risorse file server e la funzionalità Infrastruttura di classificazione file.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/30/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,14 +13,14 @@ ms.subservice: fci
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 265f6ee9fcf5e3fb3a4e658ab1c114a8e3ce7d4e
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 5d03aa523c22e66c79748cd378b67d7124686972
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935521"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326516"
 ---
-# <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protezione RMS con Infrastruttura di classificazione file per Windows Server
+# <a name="rms-protection-with-windows-server-file-classification-infrastructure-fci"></a>Protezione RMS con l'infrastruttura di classificazione file (FCI, File Classification Infrastructure) per Windows Server
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012, Windows Server 2012 R2*
 >
@@ -251,7 +251,7 @@ Quando si è completata la configurazione per la classificazione, si è pronti p
 
 1.  Eseguire la regola di classificazione:
 
-    1.  Fare clic su **Regole di classificazione** &gt; **Esegui classificazione con tutte le regole**.
+    1.  Fare clic su **regole di classificazione** &gt; **Esegui classificazione con tutte le regole ora**
 
     2.  Fare clic su **Attendi il completamento della classificazione**e quindi fare clic su **OK**.
 
@@ -259,7 +259,7 @@ Quando si è completata la configurazione per la classificazione, si è pronti p
 
 3.  Eseguire l'attività di gestione file:
 
-    1.  Fare clic su **Attività di gestione file** &gt; **Proteggi file con RMS** &gt; **Esegui attività di gestione file**.
+    1.  Fare clic su **attività di gestione file** &gt; **proteggere i file con RMS** &gt; **Esegui attività di gestione file adesso**
 
     2.  Fare clic su **Attendi il completamento dell'attività**e quindi fare clic su **OK**.
 

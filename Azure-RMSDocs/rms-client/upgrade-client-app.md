@@ -1,9 +1,9 @@
 ---
 title: Attività eseguite in precedenza con l'applicazione RMS sharing - AIP
 description: Istruzioni per utenti che hanno eseguito l'aggiornamento dall'applicazione RMS sharing al client Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/26/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 8ed4d110e3b6d0c1ced94d4bf0a08eec666caaea
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 08247cd524f6a8cabbe64cd341bdcd583f9ab8f2
+ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74933345"
+ms.lasthandoff: 12/22/2019
+ms.locfileid: "75326263"
 ---
 # <a name="user-guide-tasks-that-you-used-to-do-with-the-rms-sharing-application"></a>Guida dell'utente: Attività eseguite in precedenza con l'applicazione RMS sharing
 
