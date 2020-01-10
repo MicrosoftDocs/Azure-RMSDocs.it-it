@@ -1,28 +1,29 @@
 ---
 title: Configurare un'etichetta di Azure Information Protection per la protezione - AIP
 description: È possibile proteggere i documenti e i messaggi di posta elettronica più sensibili configurando un'etichetta per l'uso della protezione di Rights Management.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/28/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 7e455e54832113b1a4f67665ddad8455080b4970
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 84d72965d0438b17b23f194d4ec085765853608c
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74933770"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75742726"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
 
 > [!NOTE]
 > Queste istruzioni si applicano al client Azure Information Protection (classico) e non al client per l'etichettatura unificata di Azure Information Protection. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
@@ -79,7 +80,7 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
         
          - Se il contenuto era stato protetto in precedenza senza l'uso di un'etichetta, tale protezione viene mantenuta. 
          
-         - Se in precedenza il contenuto era stato protetto con un'etichetta, la protezione viene rimossa se l'utente che applica l'etichetta ha le autorizzazioni per rimuovere la protezione di Rights Management. Questo requisito significa che l'utente deve avere **Esporta** o **Controllo completo** come [diritto di utilizzo](configure-usage-rights.md) oppure essere il proprietario di Rights Management (che implica automaticamente il diritto di utilizzo Controllo completo) o un [utente con privilegi avanzati per Azure Rights Management](configure-super-users.md).
+         - Se in precedenza il contenuto era stato protetto con un'etichetta, la protezione viene rimossa se l'utente che applica l'etichetta ha le autorizzazioni per rimuovere la protezione di Rights Management. Questo requisito significa che l'utente deve avere **Esporta** o **Controllo completo** come [diritto di utilizzo](configure-usage-rights.md). oppure essere il proprietario di Rights Management (che implica automaticamente il diritto di utilizzo Controllo completo) o un [utente con privilegi avanzati per Azure Rights Management](configure-super-users.md).
              
              Se l'utente non ha le autorizzazioni per rimuovere la protezione, l'etichetta non può essere applicata e viene visualizzato il messaggio seguente: **Azure Information Protection non può applicare questa etichetta. Se il problema persiste, contattare l'amministratore**. 
     
@@ -89,7 +90,7 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
         
         Se la protezione è stata applicata con un'etichetta o un modello di protezione, le impostazioni di protezione configurate in precedenza vengono mantenute come un modello di protezione archiviato e verranno visualizzate di nuovo se si reimposta l'opzione su **Proteggi**. Questo modello non è visualizzato nel portale di Azure, ma è comunque possibile gestirlo con [PowerShell](configure-templates-with-powershell.md) se necessario. Questo comportamento indica che il contenuto rimane accessibile se ha questa etichetta con le impostazioni di protezione applicate in precedenza.
         
-        Si noti che, per applicare correttamente un'etichetta con questa opzione, l'utente deve avere le autorizzazioni per rimuovere la protezione di Rights Management. Questo requisito significa che l'utente deve avere **Esporta** o **Controllo completo** come [diritto di utilizzo](configure-usage-rights.md) oppure essere il proprietario di Rights Management (che implica automaticamente il diritto di utilizzo Controllo completo) o un [utente con privilegi avanzati per Azure Rights Management](configure-super-users.md). 
+        Si noti che, per applicare correttamente un'etichetta con questa opzione, l'utente deve avere le autorizzazioni per rimuovere la protezione di Rights Management. Questo requisito significa che l'utente deve avere **Esporta** o **Controllo completo** come [diritto di utilizzo](configure-usage-rights.md). oppure essere il proprietario di Rights Management (che implica automaticamente il diritto di utilizzo Controllo completo) o un [utente con privilegi avanzati per Azure Rights Management](configure-super-users.md). 
         
         Se l'utente che applica l'etichetta con questa impostazione non ha le autorizzazioni per rimuovere la protezione di Rights Management, l'etichetta non può essere applicata e viene visualizzato il messaggio seguente: **Azure Information Protection non può applicare questa etichetta. Se il problema persiste, contattare l'amministratore.**
 
@@ -217,7 +218,7 @@ Gli utenti digitano l'indirizzo di posta elettronica Gmail nella casella **A**. 
 
 4. Se selezionata, deselezionare l'opzione seguente: **In Word, Excel, PowerPoint e File Explorer richiedi all'utente le autorizzazioni personalizzate**.
 
-5. Fare clic su **OK** nel riquadro **Protezione** e quindi fare clic su **Salva** nel riquadro **Etichetta**.
+5. Fare clic su **OK** nel riquadro **Protezione** e quindi su **Salva** nel riquadro **Etichetta**.
 
 
 ### <a name="example-2-label-that-restricts-read-only-permission-to-all-users-in-another-organization-and-that-supports-immediate-revocation"></a>Esempio 2: etichetta che limita l'autorizzazione di sola lettura a tutti gli utenti di un'altra organizzazione e supporta la revoca immediata
@@ -238,7 +239,7 @@ Questa etichetta non è adatta per i messaggi di posta elettronica.
 
 6. Nel riquadro **Protezione** in **Consenti l'accesso offline** selezionare **Mai**.
 
-7. Fare clic su **OK** nel riquadro **Protezione** e quindi fare clic su **Salva** nel riquadro **Etichetta**.
+7. Fare clic su **OK** nel riquadro **Protezione** e quindi su **Salva** nel riquadro **Etichetta**.
 
 
 ### <a name="example-3-add-external-users-to-an-existing-label-that-protects-content"></a>Esempio 3: Aggiungere utenti esterni a un'etichetta esistente che protegge il contenuto
@@ -257,7 +258,7 @@ I nuovi utenti aggiunti potranno aprire i documenti e i messaggi di posta elettr
 
 6. Ripetere i passaggi 4 e 5 per ogni utente o gruppo che si vuole aggiungere a questa etichetta. Fare quindi clic su **OK**.
 
-7. Fare clic su **OK** nel riquadro **Protezione** e quindi fare clic su **Salva** nel riquadro **Etichetta**.
+7. Fare clic su **OK** nel riquadro **Protezione** e quindi su **Salva** nel riquadro **Etichetta**.
 
 ### <a name="example-4-label-for-protected-email-that-supports-less-restrictive-permissions-than-do-not-forward"></a>Esempio 4: Etichetta per la posta elettronica protetta che supporta autorizzazioni meno restrittive rispetto a Non inoltrare
 
