@@ -1,10 +1,10 @@
 ---
 title: Il client per Azure Information Protection-AIP
 description: Microsoft Azure Information Protection offre una soluzione client-server che consente di proteggere i dati di un'organizzazione. Il client (di Azure Information Protection o di Rights Management) si integra con le applicazioni che vengono eseguite su computer e dispositivi mobili.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 12/08/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,17 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 024e785faf06abde45177fe8049ae8c7c24294fd
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 24a0ee1b4627002284d5861287ec7a3133813902
+ms.sourcegitcommit: a38af4741017cd745efc011cf29a0fedb62f9be7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74933294"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75827554"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
 >*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012, windows Server 2008 R2*
+
 
 Azure Information Protection offre una soluzione client-server che consente di proteggere i documenti e i messaggi di posta elettronica di un'organizzazione:
 
@@ -84,7 +85,7 @@ Quando si dispone di un computer Windows che esegue le app di Office 365 che cor
 
 Usare la tabella seguente per confrontare le funzionalità supportate dai tre client di etichettatura per i computer Windows.
 
-Per confrontare le funzionalità di riservatezza predefinite di Office per le diverse piattaforme del sistema operativo (Windows, MacOS, iOS e Android) e per il Web, vedere la documentazione di Office, [quali funzionalità dell'etichetta di riservatezza sono supportate in Office oggi?](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#what-sensitivity-label-capabilities-are-supported-in-office-today)
+Per confrontare le funzionalità predefinite dell'etichetta di riservatezza di Office in diverse piattaforme del sistema operativo (Windows, MacOS, iOS e Android) e per il Web, vedere la documentazione di Office [supporto per le funzionalità di etichetta di riservatezza nelle app](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps).
 
 |Funzionalità|Client classico|Client di etichetta unificato|Client di assegnazione di etichette incorporato di Office|
 |:------|:------------:|:---------------------:|:-----------------------------:|
@@ -116,6 +117,7 @@ Per confrontare le funzionalità di riservatezza predefinite di Office per le di
 |Revocare i documenti protetti:| **Sì** | No | No |
 |Modalità di sola protezione (nessuna etichetta):| **Sì** | No | No |
 |Supporto per il cambio di account:| No | No | **Sì** |
+|Supporto per Servizi Desktop remoto:| **Sì** | **Sì** | **Sì** |
 |Supporto per AD RMS:| **Sì** | Nessun <sup>8</sup> | No |
 
 Note a piè di pagina:
@@ -155,8 +157,7 @@ Quando il client di Azure Information Protection (classico) e il Azure Informati
 |Richieste di giustificazione (se configurate) per ogni azione in Office: | Frequenza: per file <br /><br /> Riduzione del livello di riservatezza <br /><br /> Rimozione di un'etichetta<br /><br /> Rimozione della protezione | Frequenza: per sessione <br /><br /> Riduzione del livello di riservatezza<br /><br /> Rimozione di un'etichetta|
 |Azioni di rimozione di etichette applicate: | Viene chiesta conferma all'utente <br /><br />L'etichetta predefinita o l'etichetta automatica (se configurata) non viene applicata automaticamente alla successiva apertura del file nell'app Office  <br /><br />| Non viene chiesta conferma all'utente<br /><br /> L'etichetta predefinita o l'etichetta automatica (se configurata) viene applicata automaticamente alla successiva apertura del file nell'app Office|
 |Etichette automatiche e consigliate: | Configurata come [condizioni per le etichette](../configure-policy-classification.md) nel portale di Azure con i tipi di informazioni predefiniti e le condizioni personalizzate che usano frasi o espressioni regolari <br /><br />Le opzioni di configurazione possibili sono: <br /><br />- Conteggio univoco/non univoco <br /><br /> - Conteggio minimo| Configurata nei centri di amministrazione con i tipi di informazioni riservate predefiniti e i [tipi di informazioni personalizzati](https://docs.microsoft.com/microsoft-365/compliance/create-a-custom-sensitive-information-type)<br /><br />Le opzioni di configurazione possibili sono:  <br /><br />- Solo conteggio univoco <br /><br />- Conteggio minimo e massimo <br /><br />- Supporto di AND e OR con i tipi di informazioni <br /><br />- Dizionario di parole chiave<br /><br />- Livello di attendibilità e prossimità dei caratteri personalizzabili|
-|Suggerimento per i criteri personalizzabili per le etichette automatiche e consigliate: | Yes <br /><br />Usare il portale di Azure per sostituire il messaggio predefinito con gli utenti | No <br /><br /> Sebbene i centri di amministrazione dispongano di un'opzione per fornire un suggerimento personalizzato, questa opzione non è attualmente supportata dal client Unified Labeling|
-|Supporto degli ordini per le etichette secondarie sugli allegati: | Abilitato con un' [impostazione client avanzata](client-admin-guide-customizations.md##enable-order-support-for-sublabels-on-attachments) | Abilitata per impostazione predefinita, nessuna configurazione richiesta|
+|Supporto degli ordini per le etichette secondarie sugli allegati: | Abilitato con un' [impostazione client avanzata](client-admin-guide-customizations.md#enable-order-support-for-sublabels-on-attachments) | Abilitata per impostazione predefinita, nessuna configurazione richiesta|
 |Modificare il comportamento di protezione predefinito per i tipi di file: | È possibile utilizzare le [modifiche del registro di sistema](client-admin-guide-file-types.md#changing-the-default-protection-level-of-files) per eseguire l'override delle impostazioni predefinite di protezione nativa e generica | È possibile usare [PowerShell](clientv2-admin-guide-customizations.md#change-which-file-types-to-protect) per modificare i tipi di file che vengono protetti|
 
 Per un confronto dettagliato delle differenze di comportamento per specifiche impostazioni di protezione, vedere [confronto tra il comportamento delle impostazioni di protezione per un'etichetta](../configure-policy-migrate-labels.md#comparing-the-behavior-of-protection-settings-for-a-label).
@@ -175,7 +176,7 @@ Anche se il Azure Information Protection client di assegnazione unificata di eti
 
 - Protezione del documento PDF come formato ppdf
 
-- Visualizzazione del pulsante Non inoltrare in Outlook
+- Visualizzare il pulsante Non inoltrare in Outlook
 
 - Criteri demo
 
