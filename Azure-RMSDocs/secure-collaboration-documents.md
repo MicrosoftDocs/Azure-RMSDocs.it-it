@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d62c2946fed73c3f7ac69182b9558ee233935b4a
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
-ms.translationtype: HT
+ms.openlocfilehash: 57e40899f3c386b076a8642c17f019ea0767ab22
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675585"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743788"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configurazione della collaborazione per i documenti protetti con Azure Information Protection
 
@@ -43,8 +43,6 @@ Un amministratore può configurare un'etichetta di Azure Information Protection 
 
 ## <a name="example-configuration-for-a-label-to-apply-protection-to-support-internal-and-external-collaboration"></a>Configurazione di esempio per un'etichetta per l'applicazione della protezione in modo da supportare la collaborazione interna ed esterna
 
-> [!NOTE] 
-> Per offrire un'esperienza utente unificata e semplificata, **Azure Information Protection client (versione classica)** e la **gestione delle etichette** nel portale di Azure verranno **deprecati** a partire dal **31 marzo 2021**. Questo intervallo di tempo consente a tutti i clienti correnti Azure Information Protection di passare alla soluzione di assegnazione di etichette unificata usando la piattaforma Microsoft Information Protection Unified labeling. Per ulteriori informazioni, vedere l'avviso ufficiale di [deprecazione](https://aka.ms/aipclassicsunset)e seguire le [istruzioni in Microsoft 365 Centro sicurezza e conformità](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) per completare questa procedura. 
 
 Questo esempio descrive in modo dettagliato la configurazione di un'etichetta esistente per applicare la protezione in modo che gli utenti dell'organizzazione possano collaborare a documenti con tutti gli utenti di un'altra organizzazione che usa Office 365 o Azure AD, con un gruppo di un'organizzazione diversa che usa Office 365 o Azure AD e con un utente che non ha un account in Azure AD e che usa invece il proprio indirizzo di posta elettronica Gmail.
 
