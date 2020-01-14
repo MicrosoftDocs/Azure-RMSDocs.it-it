@@ -1,21 +1,21 @@
 ---
 title: 'Esercitazione: modificare i criteri di Azure Information Protection - AIP'
 description: Esercitazione introduttiva per la modifica dei criteri di Azure Information Protection per l'organizzazione. Il completamento dell'esercitazione richiede circa 15 minuti.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/01/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: c425fcc71f8400b945ec684f45f5c1622fedbbef
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 358308fe111eb1c3762d3e6a98fbea0d2e065bbc
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559219"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675517"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Esercitazione: configurare le impostazioni dei criteri di Azure Information Protection e creare una nuova etichetta
 
@@ -29,6 +29,9 @@ In questa esercitazione si apprenderà come:
 > * Creare una nuova etichetta 
 > * Configurare l'etichetta per contrassegni visivi, classificazione consigliata e protezione
 > * Vedere le impostazioni e le etichette in azione
+
+> [!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Come conseguenza di questa configurazione, gli utenti vedranno che viene applicata un'etichetta predefinita quando si crea un nuovo documento o messaggio di posta elettronica. Tuttavia, verrà chiesto loro di applicare la nuova etichetta quando vengono rilevate informazioni sulla carta di credito. Quando si applica la nuova etichetta, il contenuto viene riclassificato e protetto, con un piè di pagina e una filigrana corrispondenti. 
 
@@ -76,7 +79,7 @@ Tramite il portale di Azure, si procederà per prima cosa alla modifica di alcun
 
 1. Aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale. Passare quindi ad **Azure Information Protection**. 
     
-    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Informazioni** e selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Information** e selezionare **Azure Information Protection**.
     
     Se non si è l'amministratore globale, usare il collegamento seguente per i ruoli alternativi: [Accesso al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
@@ -164,7 +167,7 @@ Ora verrà creata una nuova etichetta secondaria per **Confidential** (Riservato
     
     Fare clic su **Salva** per tornare al riquadro **Etichetta secondaria**.
 
-10. Nel riquadro **Etichetta secondaria** si può osservare che **Numero carta di credito** è visualizzato come **nome della condizione** con **1** **occorrenza**:
+10. Nel riquadro **Etichetta secondaria** si può osservare che **Numero carta di credito** è visualizzato come **NOME DELLA CONDIZIONE** con **1** **OCCORRENZA**:
     
     ![Esercitazione di Azure Information Protection - Riepilogo della condizione della carta di credito](./media/step2-see-condition.png)
 

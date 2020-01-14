@@ -4,15 +4,14 @@ description: Questa guida introduttiva mostra come usare Microsoft Information P
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.collection: M365-security-compliance
 ms.date: 01/18/2019
 ms.author: mbaldwin
-ms.openlocfilehash: e20b66062788632f3fc519e498761500ee78d68c
-ms.sourcegitcommit: fe23bc3e24eb09b7450548dc32b4ef09c8970615
+ms.openlocfilehash: 330ceb37e0c8324a083bf5c5d7240035b9b86a0a
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 05/27/2019
-ms.locfileid: "60184995"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556045"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Guida introduttiva: Elencare le etichette di riservatezza (C++)
 
@@ -128,7 +127,7 @@ Infine, compilare e testare l'applicazione client.
 | Riepilogo | Messaggio di errore | Soluzione |
 |---------|---------------|----------|
 | URI di reindirizzamento non corretto nella registrazione dell'applicazione o nello script di PowerShell (AADSTS50011) |*AADSTS50011: L'URL di risposta specificato nella richiesta non corrisponde agli URL di risposta configurati per l'applicazione: 'ac6348d6-0d2f-4786-af33-07ad46e69bfc'.* | Verificare l'URI di reindirizzamento usato, eseguendo uno dei passaggi seguenti:<br><br><li>Aggiornare l'URI di reindirizzamento nella configurazione dell'applicazione in Azure AD, in modo che corrisponda allo script di PowerShell. Vedere [Installazione e configurazione di MIP SDK](setup-configure-mip.md#register-a-client-application-with-azure-active-directory) per verificare che sia stata configurata correttamente la proprietà URI di reindirizzamento.<br><li>Aggiornare la variabile `redirectUri` nello script di PowerShell, in modo che corrisponda alla registrazione dell'applicazione. |
-| Account di accesso non corretto (AADSTS50020) | *AADSTS50020: L'account utente 'user@domain.com' del provider di identità 'https://sts.windows.net/72f988bl-86f1-41af-91ab-2d7cd011db47/' non esiste nel tenant 'nome organizzazione' e non è possibile accedere all'applicazione '0edbblll-8773-44de-b87c-b8c6276d41eb' in questo tenant.* | Eseguire una delle operazioni seguenti:<br><br><li>Eseguire nuovamente lo script di PowerShell, ma assicurarsi di usare un account dello stesso tenant in cui è registrata l'applicazione Azure AD.<br><li>Se l'account di accesso era corretto, è possibile che la sessione host di PowerShell sia già autenticata con un account diverso. In questo caso, uscire dall'host dello script e quindi riprovare a eseguirlo.<br><li>Se si usa questa guida introduttiva con un'app Web (anziché nativa) ed è necessario accedere con un account da un tenant diverso, assicurarsi che la registrazione dell'applicazione Azure AD sia abilitata per l'uso multi-tenant. È possibile eseguire questa verifica usando la funzionalità "Modifica manifesto" nella registrazione dell'applicazione e verificare che specifichi `"availableToOtherTenants": true,`. |
+| Account di accesso non corretto (AADSTS50020) | *AADSTS50020: L'account utente 'user@domain.com' del provider di identità 'https://sts.windows.net/72f988bl-86f1-41af-91ab-2d7cd011db47/ ' non esiste nel tenant 'nome organizzazione' e non è possibile accedere all'applicazione '0edbblll-8773-44de-b87c-b8c6276d41eb' in questo tenant.* | Eseguire una delle operazioni seguenti:<br><br><li>Eseguire nuovamente lo script di PowerShell, ma assicurarsi di usare un account dello stesso tenant in cui è registrata l'applicazione Azure AD.<br><li>Se l'account di accesso era corretto, è possibile che la sessione host di PowerShell sia già autenticata con un account diverso. In questo caso, uscire dall'host dello script e quindi riprovare a eseguirlo.<br><li>Se si usa questa guida introduttiva con un'app Web (anziché nativa) ed è necessario accedere con un account da un tenant diverso, assicurarsi che la registrazione dell'applicazione Azure AD sia abilitata per l'uso multi-tenant. È possibile eseguire questa verifica usando la funzionalità "Modifica manifesto" nella registrazione dell'applicazione e verificare che specifichi `"availableToOtherTenants": true,`. |
 | Autorizzazioni non corrette nella registrazione dell'applicazione (AADSTS65005) | *AADSTS65005: Risorsa non valida. Il client ha richiesto l'accesso a una risorsa, che non è elencata nelle autorizzazioni richieste nella registrazione dell'applicazione del client. ID app client: 0edbblll-8773-44de-b87c-b8c6276d41eb. Valore della risorsa dalla richiesta: https://syncservice.o365syncservice.com/. ID app della risorsa: 870c4f2e-85b6-4d43-bdda-6ed9a579b725. Elenco delle risorse valide dalla registrazione dell'app: 00000002-0000-0000-c000-000000000000.* | Aggiornare le richieste di autorizzazione nella configurazione dell'applicazione Azure AD. Vedere [Installazione e configurazione di MIP SDK](setup-configure-mip.md#register-a-client-application-with-azure-active-directory) per verificare di aver configurato correttamente le richieste di autorizzazione nella registrazione dell'applicazione. |
 
 ### <a name="problems-during-execution-of-c-application"></a>Problemi durante l'esecuzione dell'applicazione C++

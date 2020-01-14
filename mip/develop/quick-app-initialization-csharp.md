@@ -4,15 +4,14 @@ description: Avvio rapido che illustra come scrivere la logica di inizializzazio
 author: tommoser
 ms.service: information-protection
 ms.topic: quickstart
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: tommos
-ms.openlocfilehash: 156d7bb4c41a6ce593e66add3aea0a290a9b73ac
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.openlocfilehash: 637e2474f0f40ec776cf21bf22d41821f0f9fbb6
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69886011"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555399"
 ---
 # <a name="quickstart-client-application-initialization-c"></a>Guida introduttiva: Inizializzazione dell'applicazione client (C#)
 

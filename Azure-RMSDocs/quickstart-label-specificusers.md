@@ -1,27 +1,30 @@
 ---
 title: 'Guida di avvio rapido: nuova etichetta di Azure Information Protection per utenti specifici - AIP'
 description: Creare e configurare una nuova etichetta che consenta di classificare documenti e messaggi di posta elettronica per un subset di utenti usando criteri con ambito.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/28/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 3e69706b786227cd41e215bc48c6caf9fab250bb
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: a321d0034760e4daf67154f09d843302f1fb9974
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935368"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675891"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Guida introduttiva: Creare una nuova etichetta di Azure Information Protection per utenti specifici
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+> [!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 In questa guida introduttiva si creerà una nuova etichetta di Azure Information Protection che solo determinati utenti possono vedere e applicare per classificare e proteggere documenti e messaggi di posta elettronica.
 
@@ -57,9 +60,9 @@ Per un elenco completo dei prerequisiti per l'uso di Azure Information Protectio
 
 Per prima cosa, creare la nuova etichetta.
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e accedere al [portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al riquadro **Azure Information Protection**.
+1. Se non è già stato fatto, aprire una nuova finestra del browser e accedere al [portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection**.
     
-    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Informazioni** e selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Information** e selezionare **Azure Information Protection**.
     
     Se non si è l'amministratore globale, usare il collegamento seguente per i ruoli alternativi: [Accesso al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
@@ -69,7 +72,7 @@ Per prima cosa, creare la nuova etichetta.
     
     - **Nome visualizzato dell'etichetta**: il nome della nuova etichetta che sarà visibile agli utenti e che identifica la classificazione del contenuto. Ad esempio: `Sales - Restricted`.
     
-    - **Description**: una descrizione comando che consenta agli utenti di capire quando è opportuno selezionare questa nuova etichetta. ad esempio `Business data that is restricted to the Sales Team.`
+    - **Descrizione**: una descrizione comando che consenta agli utenti di capire quando è opportuno selezionare questa nuova etichetta. ad esempio `Business data that is restricted to the Sales Team.`
 
 4. Assicurarsi che l'opzione **Abilitato** sia impostata su **Sì** (impostazione predefinita) e selezionare **Salva**.
 

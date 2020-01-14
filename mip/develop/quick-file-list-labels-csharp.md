@@ -4,15 +4,14 @@ description: Questa procedura di avvio rapido illustra come usare il wrapper C# 
 author: msmbaldwin
 ms.service: information-protection
 ms.topic: quickstart
-ms.collection: M365-security-compliance
 ms.date: 07/30/2019
 ms.author: mbaldwin
-ms.openlocfilehash: 3a26352f7b8e23e2de55eb21846e20feca7096ff
-ms.sourcegitcommit: fcde8b31f8685023f002044d3a1d1903e548d207
+ms.openlocfilehash: 9f12ff856e7d70c76e3c89700d05aeb653d030cd
+ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 08/21/2019
-ms.locfileid: "69885980"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75555280"
 ---
 # <a name="quickstart-list-sensitivity-labels-c"></a>Guida introduttiva: Elencare le etichette di riservatezza (C#)
 

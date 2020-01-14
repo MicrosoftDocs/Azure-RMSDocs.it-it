@@ -1,21 +1,21 @@
 ---
 title: Esercitazione - Usare Azure Information Protection per il controllo dell'oversharing - AIP
 description: Esercitazione introduttiva per configurare e vedere in azione le impostazioni avanzate con le quali il client di Azure Information Protection mostra un avviso, chiede una giustificazione o blocca l'invio di messaggi da Outlook.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 10/01/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/06/2020
 ms.topic: tutorial
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: ef93a0ee7bdcfd2caf2216bed15bd2d1d9e5436e
-ms.sourcegitcommit: f5d8cf4440a35afaa1ff1a58b2a022740ed85ffd
+ms.openlocfilehash: 52d47fb119a94054022cc14edc4e2bd07ddef33a
+ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/04/2019
-ms.locfileid: "73559361"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75675364"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Esercitazione: configurare Azure Information Protection per il controllo dell'oversharing delle informazioni con Outlook
 
@@ -28,6 +28,9 @@ In questa esercitazione si apprenderà come:
 > * Configurare le impostazioni che implementano messaggi di avviso, giustificazione o di blocco popup in Outlook
 > * Vedere le impostazioni in azione
 > * Esaminare i messaggi utente e le azioni registrati nel log eventi 
+
+> [!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 La posta elettronica è uno dei metodi più comuni con cui gli utenti condividono informazioni in modo inappropriato, sia nel messaggio in sé che negli allegati. È possibile usare soluzioni di prevenzione della perdita di dati (DLP) in grado di identificare informazioni sensibili note e impedire che escano dai confini dell'organizzazione. È tuttavia anche possibile usare il client di Azure Information Protection con alcune impostazioni avanzate del client per prevenire l'oversharing e anche per istruire gli utenti con messaggi interattivi che forniscono feedback in tempo reale.
 
@@ -70,7 +73,7 @@ Per specificare un'etichetta è necessario conoscerne l'ID, individuabile nel po
 
 1. Aprire una nuova finestra del browser e accedere al [portale di Azure](https://portal.azure.com) come amministratore globale. Passare quindi ad **Azure Information Protection**. 
     
-    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Informazioni** e selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Information** e selezionare **Azure Information Protection**.
     
     Se non si è l'amministratore globale, usare il collegamento seguente per i ruoli alternativi: [Accesso al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal)
 
