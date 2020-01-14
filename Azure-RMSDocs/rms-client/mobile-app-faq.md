@@ -4,7 +4,7 @@ description: Alcune domande frequenti riguardanti l'uso dell'app Azure Informati
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/17/2019
+ms.date: 1/12/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 539b4ff8-5d3b-4c4d-9c84-c14da83ff76d
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: e96698cdebf37a18b2e089ed9b51c09bf55e4966
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: cd8cef4bae59fbffa66ce18737558888f101ef47
+ms.sourcegitcommit: 2d75192e7cd2e322ab422fc2115aa063e8dda18b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326397"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75913264"
 ---
 # <a name="faqs-for-microsoft-azure-information-protection-app-for-ios-and-android"></a>Domande frequenti sull'app Microsoft Azure Information Protection per iOS e Android
 
@@ -39,7 +39,7 @@ Questa app può anche aprire i file PDF protetti all'esterno di SharePoint e One
 
 ## <a name="can-my-mobile-device-run-the-azure-information-protection-app"></a>È possibile eseguire l'app Azure Information Protection in un dispositivo mobile?
 
-L'app Azure Information Protection richiede una versione minima di **iOS 11** o **Android 6,0**.
+L'app Azure Information Protection richiede una versione minima di **iOS 11** o **Android 6,0**. Si noti che l'app Azure Information Protection **non può essere** eseguita su CPU Intel. 
 
 Se sono disponibili queste versioni o versioni successive, è possibile installare l'app per eseguirla nel dispositivo mobile:
 
