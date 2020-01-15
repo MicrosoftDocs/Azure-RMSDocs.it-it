@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 52d47fb119a94054022cc14edc4e2bd07ddef33a
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: 7f4ed4ba4962246bc6466807f492c8ac18f18cc2
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675364"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743552"
 ---
 # <a name="tutorial-configure-azure-information-protection-to-control-oversharing-of-information-using-outlook"></a>Esercitazione: configurare Azure Information Protection per il controllo dell'oversharing delle informazioni con Outlook
 
@@ -29,8 +29,6 @@ In questa esercitazione si apprenderà come:
 > * Vedere le impostazioni in azione
 > * Esaminare i messaggi utente e le azioni registrati nel log eventi 
 
-> [!NOTE] 
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 La posta elettronica è uno dei metodi più comuni con cui gli utenti condividono informazioni in modo inappropriato, sia nel messaggio in sé che negli allegati. È possibile usare soluzioni di prevenzione della perdita di dati (DLP) in grado di identificare informazioni sensibili note e impedire che escano dai confini dell'organizzazione. È tuttavia anche possibile usare il client di Azure Information Protection con alcune impostazioni avanzate del client per prevenire l'oversharing e anche per istruire gli utenti con messaggi interattivi che forniscono feedback in tempo reale.
 

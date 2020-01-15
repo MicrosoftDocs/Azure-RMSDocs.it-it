@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c260767d29ecf6b56b101f57f40192177cf7242c
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 6aae4636fe717bdaf81ae3e2461e56e17751c2f9
+ms.sourcegitcommit: 68cf1e0fda06c6f20cbd829dc4fbc8c12686947b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743870"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75952974"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aggiornamento di modelli per utenti e servizi
 
@@ -37,7 +37,7 @@ Quando si usa il servizio Rights Management di Azure da Azure Information Protec
 |Exchange locale con il connettore di Rights Management<br /><br />Applicabile per regole di trasporto e Outlook Web App|I modelli vengono aggiornati automaticamente e non sono necessari altri passaggi. Tuttavia, Outlook Web App memorizza nella cache l'interfaccia utente per un giorno.|
 |Office 2019 per Mac e Office 2016 per Mac|Aggiornamento automatico quando si apre il contenuto protetto. Per forzare un aggiornamento, vedere la sezione seguente [office 2019 per Mac e office 2016 per Mac: come forzare un aggiornamento per i modelli](#office-2019-for-mac-and-office-2016-for-mac-how-to-force-a-refresh-for-templates).|
 |App RMS sharing per computer Mac|I modelli vengono aggiornati automaticamente e non sono necessari altri passaggi.|
-|Le app di Office che [supportano la funzionalità Riservatezza](https://support.office.com/article/apply-sensitivity-labels-to-your-documents-and-email-within-office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9?ad=US&ui=en-US&rs=en-US#bkmk_whereavailable)|Questi client non scaricano i modelli ma vi accedono online - non sono necessari passaggi aggiuntivi.|
+|App Office 365 ProPlus con [etichetta predefinita](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps)|Questo client di assegnazione di etichette incorporato non Scarica i modelli ma vi accede online senza ulteriori passaggi necessari.|
 
 Quando le applicazioni client devono scaricare i modelli (inizialmente o aggiornati per le modifiche), prepararsi ad attendere fino a 30 minuti prima che il download sia completo e che i modelli nuovi o aggiornati siano completamente operativi. Il tempo effettivo varia a seconda di fattori quali le dimensioni e la complessità della configurazione dei modelli e la connettività di rete. 
 

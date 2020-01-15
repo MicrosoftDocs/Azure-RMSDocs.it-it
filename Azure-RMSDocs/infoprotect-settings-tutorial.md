@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: edc6fe02c5b11624e88e393dbaff20bb8ed1a620
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: 0c1e008185fb279964c56f508ee9daa6822718e4
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675500"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743531"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Esercitazione: Configurare impostazioni dei criteri di Azure Information Protection che interagiscono tra loro
 
@@ -28,8 +28,6 @@ In questa esercitazione si apprenderà come:
 > * Configurare impostazioni dei criteri che interagiscono tra loro
 > * Vedere le impostazioni in azione
 
-> [!NOTE] 
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Invece di affidare agli utenti il compito di etichettare manualmente documenti e messaggi di posta elettronica, è possibile usare le impostazioni dei criteri di Azure Information Protection per:
 

@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 358308fe111eb1c3762d3e6a98fbea0d2e065bbc
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: c684bc08faaab4317df0588ccc9350199c62049d
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675517"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743686"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Esercitazione: configurare le impostazioni dei criteri di Azure Information Protection e creare una nuova etichetta
 
@@ -30,8 +30,6 @@ In questa esercitazione si apprenderà come:
 > * Configurare l'etichetta per contrassegni visivi, classificazione consigliata e protezione
 > * Vedere le impostazioni e le etichette in azione
 
-> [!NOTE] 
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Come conseguenza di questa configurazione, gli utenti vedranno che viene applicata un'etichetta predefinita quando si crea un nuovo documento o messaggio di posta elettronica. Tuttavia, verrà chiesto loro di applicare la nuova etichetta quando vengono rilevate informazioni sulla carta di credito. Quando si applica la nuova etichetta, il contenuto viene riclassificato e protetto, con un piè di pagina e una filigrana corrispondenti. 
 

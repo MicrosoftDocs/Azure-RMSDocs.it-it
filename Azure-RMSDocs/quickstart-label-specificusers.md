@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: a321d0034760e4daf67154f09d843302f1fb9974
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: b2ae9852ec1603c0fa3ab5009ea94f6f49bb2714
+ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675891"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75743881"
 ---
 # <a name="quickstart-create-a-new-azure-information-protection-label-for-specific-users"></a>Guida introduttiva: Creare una nuova etichetta di Azure Information Protection per utenti specifici
 
@@ -23,8 +23,6 @@ ms.locfileid: "75675891"
 >
 > *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-> [!NOTE] 
-> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 In questa guida introduttiva si creerà una nuova etichetta di Azure Information Protection che solo determinati utenti possono vedere e applicare per classificare e proteggere documenti e messaggi di posta elettronica.
 
