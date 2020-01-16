@@ -4,7 +4,7 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/05/2020
+ms.date: 1/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 021919bbc683c47edd778b98a2a5685419515b8e
-ms.sourcegitcommit: 2d75192e7cd2e322ab422fc2115aa063e8dda18b
+ms.openlocfilehash: d7c1ab927bf6f2f8e730b81c6f711bda45848030
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75913352"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960691"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto
 
@@ -47,6 +47,7 @@ Le versioni di anteprima non devono essere distribuite agli utenti finali nelle 
 
 |Versione client|Data di rilascio|
 |--------------|-------------|
+|1.48.204.0|04/16/2019|
 |1.41.51.0|27/11/2018|
 |1.37.19.0|17/09/2018|
 |1.29.5.0|26/06/2018|
@@ -74,6 +75,23 @@ Usare le informazioni seguenti per scoprire le novità o le modifiche per una ve
 >  
 > Per il supporto tecnico, vedere le informazioni riportate in [Opzioni di supporto e risorse per la community](../information-support.md#support-options-and-community-resources). È anche possibile rivolgersi al team di Azure Information Protection nel [sito di Yammer](https://www.yammer.com/askipteam/).
 
+## <a name="version-154590"></a>Versione 1.54.59.0
+
+**Rilasciata**: 1/29/2020
+
+**Correzioni**:
+
+- Si è verificato un problema per cui i file protetti da IQP visualizzavano le opzioni **Ripristina** e/o **Salva con nome dopo la** rimozione della protezione. 
+
+- Molti testi della descrizione comando della funzionalità del prodotto sono stati migliorati per chiarezza e facilità di comprensione. 
+
+- Problemi relativi alla stabilità dei client quando si lavora con i file PDF protetti vengono risolti. 
+
+- I file temporanei decrittografati non sono più accessibili agli utenti dalla cartella Temp. 
+
+- Le etichette di protezione vengono ora rimosse come previsto se l'etichetta viene eliminata nel messaggio di posta elettronica durante il processo di creazione della posta elettronica. 
+
+Questa versione include anche correzioni generali per la stabilità e le prestazioni.
 
 ## <a name="version-154330"></a>Versione 1.54.33.0
 
@@ -106,91 +124,6 @@ Questa versione include MSIPC versione 1.0.3889.0419 del client RMS.
 - Nello scenario seguente un utente non vede più nella descrizione comando dell'etichetta che l'etichetta è stata impostata automaticamente: un utente riceve un messaggio di posta elettronica protetto con un documento collegato che non è etichettato, ma protetto automaticamente. Quando l'utente della stessa organizzazione del mittente apre il documento, al documento viene applicata l'etichetta corrispondente per le impostazioni di protezione.
 
 - Il [diritto di utilizzo](../configure-usage-rights.md#usage-rights-and-descriptions) minimo per eseguire il cmdlet [Unprotect-RMSFile](/powershell/module/azureinformationprotection/unprotect-rmsfile) è ora **Salva con nome, Esporta** (esportazione) anziché **copia** (estrazione).
-
-## <a name="version-1482040"></a>Versione 1.48.204.0
-
-**Rilasciata**: 04/16/2019
-
-Supportato tramite 01/15/2020
-
-Questa versione include MSIPC versione 1.0.3592.627 del client RMS.
-
-**Nuove funzionalità:**
-
-- Il Azure Information Protection scanner è ora configurato dal portale di Azure, anziché tramite PowerShell.
-    
-    Se si esegue l'aggiornamento da una versione disponibile a livello generare dello scanner, il processo di aggiornamento è diverso dalle versioni precedenti, quindi assicurarsi di leggere [Aggiornamento dello scanner di Azure Information Protection](client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
-
-- Lo scanner supporta ora più database di configurazione nella stessa istanza di SQL Server quando si specifica un nome di profilo.
-
-- Supporto per i tipi di informazioni sensibili seguenti, che consente di identificare la presenza di credenziali nei documenti e nei messaggi di posta elettronica:
-    - Stringa di connessione del bus di servizio di Azure
-    - Stringa di connessione di Azure IoT
-    - Account di archiviazione di Azure
-    - Stringa di connessione del database IaaS di Azure e stringa di connessione di SQL di Azure
-    - Stringa di connessione di Cache Redis di Azure
-    - Azure SAS
-    - Stringa di connessione di SQL Server
-    - Chiave di autenticazione di Azure DocumentDB
-    - Password delle impostazioni di pubblicazione di Azure
-    - Chiave dell'account di archiviazione di Azure (generico)
-
-- Supporto per l'individuazione di endpoint per [Azure Information Protection Analytics](../reports-aip.md), per segnalare le informazioni riservate trovate quando gli utenti salvano per la prima volta un documento di Office (usando le app desktop per Word, Excel e PowerPoint):
-    - Per individuare queste informazioni, non è necessario etichettare i documenti.
-    - Le informazioni riservate sono identificate da tipi di informazioni predefiniti e personalizzati.
-    - Se non si desidera che i tipi di informazioni riservate vengano inviati a Azure Information Protection Analytics, è possibile disabilitare l'individuazione degli endpoint con un' [impostazione client avanzata](client-admin-guide-customizations.md#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics).
-
-- Nuove impostazioni client avanzate che implementano messaggi popup in Outlook che possono avvisare, giustificare o bloccare l'invio di messaggi di posta elettronica. [Altre informazioni](client-admin-guide-customizations.md#implement-pop-up-messages-in-outlook-that-warn-justify-or-block-emails-being-sent)
-    
-    Si noti che se è stata configurata la proprietà Advanced client di OutlookCollaborationTrustedDomains per la versione di anteprima, questa impostazione viene ora sostituita da tre nuove impostazioni, in modo che i domini possano essere esentati per azione: OutlookWarnTrustedDomains, OutlookJustifyTrustedDomains e OutlookBlockTrustedDomains.
-
-- Se si etichettano e proteggono i file usando il cmdlet [Set-AIPFileLabel](/powershell/azureinformationprotection/vlatest/set-aipfilelabel), è possibile usare il parametro *EnableTracking* per registrare il file nel sito di rilevamento dei documenti. [Altre informazioni](client-admin-guide-document-tracking.md#using-powershell-to-register-labeled-documents-with-the-document-tracking-site)
-
-- Una nuova impostazione client avanzata per [Azure Information Protection Analytics](../reports-aip.md), per impedire l'invio di corrispondenze dei tipi di informazioni per un subset di utenti dopo aver selezionato la casella di controllo nella portale di Azure che consente di ottenere analisi più approfondite nei dati sensibili. Questa impostazione è applicabile per il client e lo scanner. [Altre informazioni](client-admin-guide-customizations.md#disable-sending-information-type-matches-for-a-subset-of-users)
-
-- Nuova impostazione client avanzata applicabile solo quando si configura l'impostazione dei criteri in modo da non visualizzare autorizzazioni personalizzate: quando è presente un file protetto con autorizzazioni personalizzate, visualizzare l'opzione autorizzazioni personalizzate in Esplora file in modo che gli utenti possano vedere e modificarle (se dispongono delle autorizzazioni per modificare le impostazioni di protezione). [Altre informazioni](client-admin-guide-customizations.md#for-files-protected-with-custom-permissions-always-display-custom-permissions-to-users-in-file-explorer)
-
-
-**Correzioni**:
-
-- Per i percorsi e i nomi di file non vengono visualizzano punti interrogativi ( **?** ) invece dei caratteri non ASCII nell'analisi di Azure Information Protection con le impostazioni locali inglesi per il sistema operativo di invio.
-
-- vengono applicati in modo coerente nuovi contrassegni visivi quando un utente aggiunge nuove sezioni a un documento di Word e quindi etichetta di nuovo il documento.
-
-- Il client Azure Information Protection rimuove correttamente la protezione da un documento PDF protetto dall'applicazione RMS sharing.
-
-- Le etichette secondarie vengono applicate correttamente da PowerShell e dallo scanner quando viene configurata l'etichetta padre per le autorizzazioni definite dall'utente.
-
-- Il client Azure Information Protection consente di visualizzare correttamente le etichette applicate dai [client che supportano l'etichettatura unificata](../configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling).
-
-- I documenti vengono aperti in modo corretto in Office senza un messaggio di ripristino dopo la rimozione della protezione con Esplora file e clic sul pulsante destro del mouse, PowerShell e lo scanner.
-
-- Quando si usa l'impostazione client avanzata per impostare un'[etichetta predefinita per Outlook](client-admin-guide-customizations.md#set-a-different-default-label-for-outlook), è possibile applicare un'etichetta padre con etichette secondarie quando tutte le etichette secondarie sono disabilitate per l'utente.
-
-- Quando si usa l' [impostazione dei criteri](../configure-policy-settings.md) **per i messaggi di posta elettronica con allegati, applicare un'etichetta che corrisponda alla classificazione più elevata di tali allegati** e l'etichetta con la classificazione più alta è configurata per le autorizzazioni definite dall'utente, il risultato precedente era che l'etichetta era stata applicata al messaggio di posta elettronica, ma la protezione non lo era. Adesso:
-    - Quando le autorizzazioni definite dall'utente dell'etichetta includono Outlook (non inoltrare): applicare tale etichetta e la relativa protezione non inoltrare al messaggio di posta elettronica.
-    - Quando le autorizzazioni definite dall'utente dell'etichetta sono destinate solo a Word, Excel, PowerPoint ed Esplora file: non applicare l'etichetta né applicare alcuna protezione al messaggio di posta elettronica.
-
-**Modifiche aggiuntive:**
-
-- I tipi di informazioni sensibili seguenti [non sono più supportati](../configure-policy-classification.md#sensitive-information-types-that-require-a-minimum-version-of-the-client) per le etichette configurate per la classificazione automatica o consigliata:
-    - Numero di telefono EU
-    - Coordinate GPS EU
-
-- Poiché lo scanner di Azure Information Protection viene configurato dal portale di Azure, i cmdlet seguenti sono ora deprecati e non possono essere usati per configurare i repository di dati o l'elenco dei tipi di file:
-    - Add-AIPScannerRepository
-    - Add-AIPScannerScannedFileTypes
-    - Get-AIPScannerRepository
-    - Remove-AIPScannerRepository
-    - Remove-AIPScannerScannedFileTypes
-    - Set-AIPScannerRepository
-    - Set-AIPScannerScannedFileTypes
-
-- Un nuovo cmdlet di PowerShell [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration), per gli scenari in cui lo scanner di Azure Information Protection non può scaricare la configurazione dal portale di Azure.
-
-- Lo scanner di Azure Information Protection non esclude più i file ZIP per impostazione predefinita. Per esaminare ed etichettare i file ZIP, vedere la sezione [Per esaminare i file con estensione zip](client-admin-guide-file-types.md#to-inspect-zip-files) della guida dell'amministratore.
-
-- L' [impostazione criterio](../configure-policy-settings.md) **gli utenti devono fornire una giustificazione per impostare un'etichetta di classificazione inferiore, rimuovere un'etichetta o rimuovere la protezione** non si applica più allo scanner. Lo scanner esegue queste azioni quando si configura l'impostazione modifica **etichette file** **su** in nel profilo scanner, quindi selezionare la casella di controllo **Consenti downgrade etichetta** .
 
 ## <a name="next-steps"></a>Passaggi successivi
 

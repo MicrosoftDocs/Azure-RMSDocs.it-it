@@ -12,16 +12,16 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 24a0ee1b4627002284d5861287ec7a3133813902
-ms.sourcegitcommit: a38af4741017cd745efc011cf29a0fedb62f9be7
+ms.openlocfilehash: 221623101c75a5834947c7f29a4f4df4f8d68a35
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75827554"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960756"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
->*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012, windows Server 2008 R2*
+>*Si applica a: Active Directory Rights Management Services, [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012, windows Server 2008 R2*
 
 
 Azure Information Protection offre una soluzione client-server che consente di proteggere i documenti e i messaggi di posta elettronica di un'organizzazione:
@@ -102,23 +102,23 @@ Per confrontare le funzionalità predefinite dell'etichetta di riservatezza di O
 |Autorizzazioni personalizzate impostate in modo indipendente da un'etichetta:| **Sì** | **Sì** <sup>3</sup>| No |
 |Barra di Information Protection nelle app Office:| **Sì** | **Sì**| No |
 |Contrassegni visivi come azione etichetta (intestazione, piè di pagina, filigrana):| **Sì** | **Sì** | **Sì**|
-|Contrassegni visivi per app:| **Sì** | No | No |
-|Contrassegni visivi dinamici con variabili:| **Sì** | No | No |
+|Contrassegni visivi per app:| **Sì** | **Yes* | No |
+|Contrassegni visivi dinamici con variabili:| **Sì** | **** | No |
 |Etichetta con Esplora file:| **Sì** | **Sì** | No |
 |Un visualizzatore per i file protetti (testo, immagini, PDF, Pfile):| **Sì** | **Sì** | No|
 |Supporto di PPDF per l'applicazione di etichette:| **Sì** | No | No |
 |Cmdlet per l'assegnazione di etichette di PowerShell:| **Sì** | **Sì** <sup>4</sup> | No |
 |Supporto offline per le azioni di protezione:| **Sì** | **Sì** <sup>5</sup> | **Sì** |
-|Gestione manuale dei file di criteri per i computer disconnessi:| **Sì** |**Sì** <sup>6</sup>| No |
+|Gestione manuale dei file di criteri per i computer disconnessi:| **Sì** |**Sì**| No |
 |Supporto HYOK:| **Sì** | No | No |
 |Registrazione dell'utilizzo in Visualizzatore eventi:| **Sì** | No |No |
 |Visualizzare il pulsante non trasmettere in Outlook:| **Sì** | No | No |
-|Traccia documentata protetta:| **Sì** | **Sì** <sup>7</sup> | No |
+|Traccia documentata protetta:| **Sì** | **Sì** <sup>6</sup> | No |
 |Revocare i documenti protetti:| **Sì** | No | No |
 |Modalità di sola protezione (nessuna etichetta):| **Sì** | No | No |
 |Supporto per il cambio di account:| No | No | **Sì** |
 |Supporto per Servizi Desktop remoto:| **Sì** | **Sì** | **Sì** |
-|Supporto per AD RMS:| **Sì** | Nessun <sup>8</sup> | No |
+|Supporto per AD RMS:| **Sì** | N. <sup>7</sup> | No |
 
 Note a piè di pagina:
 
@@ -128,15 +128,13 @@ Note a piè di pagina:
 
 <sup>3</sup> supportato da Esplora file e PowerShell. Nelle app di Office gli utenti possono selezionare **informazioni sul File** > proteggere il **documento** > **limitare l'accesso**.
 
-<sup>4</sup> nessun supporto per rimuovere la protezione dai file contenitore (zip,. rar,. 7z,. msg e. pst).
+<sup>4</sup> nessun supporto per rimuovere la protezione dai file contenitore (zip).
 
 <sup>5</sup> per i comandi di Esplora file e PowerShell, l'utente deve essere connesso a Internet per proteggere i file.
 
-<sup>6</sup> supportato per l'assegnazione di etichette con Esplora file, PowerShell e lo scanner. Non supportato per l'assegnazione di etichette nelle app di Office.
+<sup>6</sup> il sito di rilevamento dei documenti supportato dal client classico non è supportato dal client di etichettatura unificata. Tuttavia, senza la necessità di registrare il documento per il rilevamento, gli amministratori possono utilizzare la funzionalità di [creazione di rapporti centrale](../reports-aip.md) per identificare se l'accesso a documenti protetti viene eseguito da computer Windows e se l'accesso è stato concesso o negato. 
 
-<sup>7</sup> il sito di rilevamento dei documenti supportato dal client classico non è supportato dal client di etichettatura unificata. Tuttavia, senza la necessità di registrare il documento per il rilevamento, gli amministratori possono utilizzare la funzionalità di [creazione di rapporti centrale](../reports-aip.md) per identificare se l'accesso a documenti protetti viene eseguito da computer Windows e se l'accesso è stato concesso o negato. 
-
-<sup>8</sup> le azioni di assegnazione di etichette e protezione non sono supportate. Tuttavia, per una distribuzione AD RMS, il visualizzatore può aprire i documenti protetti quando si usa l' [estensione Active Directory Rights Management Services Mobile Device](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
+<sup>7</sup> le azioni di assegnazione di etichette e protezione non sono supportate. Tuttavia, per una distribuzione AD RMS, il visualizzatore può aprire i documenti protetti quando si usa l' [estensione Active Directory Rights Management Services Mobile Device](/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574\(v=ws.11\)).
 
 
 ### <a name="detailed-comparisons-for-the-azure-information-protection-clients"></a>Confronti dettagliati per i client di Azure Information Protection

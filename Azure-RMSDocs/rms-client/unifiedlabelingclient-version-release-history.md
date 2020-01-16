@@ -4,7 +4,7 @@ description: Vedere le informazioni sulla versione del client per l'etichettatur
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/02/2019
+ms.date: 1/08/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,16 +12,16 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c7291b63971d34e7dd7e3e369cd13dfca7e44729
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: 9298022feecc4be60b3e528e5195fcec485502b2
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326387"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960814"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012, windows Server 2008 R2*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012, windows Server 2008 R2*
 >
 > *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -42,6 +42,7 @@ Le versioni di anteprima non devono essere distribuite agli utenti finali nelle 
 
 |Versione client|Data di rilascio|
 |--------------|-------------|
+|2.0.779.0|05/01/2019|
 |2.0.778.0|04/16/2019|
 
 Il formato della data usato in questa pagina è *mese/giorno/anno*.
@@ -57,6 +58,42 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche apport
 > Per il supporto tecnico, vedere le informazioni riportate in [Opzioni di supporto e risorse per la community](../information-support.md#support-options-and-community-resources). È anche possibile rivolgersi al team di Azure Information Protection nel [sito di Yammer](https://www.yammer.com/askipteam/).
 
 Il client sta sostituendo il client di Azure Information Protection (classico). Per confrontare caratteristiche e funzionalità con il client classico, vedere [confrontare i client di assegnazione di etichette per i computer Windows](use-client.md#compare-the-labeling-clients-for-windows-computers).
+
+## <a name="version-261010"></a>Versione 2.6.101.0
+
+**Rilasciato** 1/15/2020
+
+**Nuove funzionalità:**
+
+- La modifica del cmdlet di [PowerShell](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-powershell) **set-AIPFileLabel** consente di rimuovere la protezione dai file PST, rar, 7zip e msg. 
+
+- È stata aggiunta la possibilità per gli amministratori di Azure Information Protection di controllare quando vengono usate le estensioni. Pfile per i file. Altre informazioni sulla [modifica dei tipi di file protetti](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#change-which-file-types-to-protect). 
+
+- Aggiunto supporto del contrassegno visivo dinamico per le applicazioni e le variabili. Altre informazioni su come [configurare le etichette per i contrassegni visivi](https://docs.microsoft.com/azure/information-protection/configure-policy-markings). 
+
+- Miglioramenti apportati ai [Suggerimenti per i criteri personalizzabili per le etichette automatiche e consigliate](use-client.md).   
+
+- Aggiunto il supporto per la [funzionalità di assegnazione di etichette offline](https://docs.microsoft.com/azure/information-protection/rms-client/clientv2-admin-guide-customizations#support-for-disconnected-computers) con le app di Office nel client Unified labeling.
+
+- La nuova proprietà avanzata **WordShapeNameToRemove** consente la rimozione del contrassegno di contenuto nei documenti di Word creati da applicazioni di terze parti. Altre informazioni su come [identificare i nomi delle forme esistenti e definirli per la rimozione usando **WordShapeNameToRemove**](https://docs.microsoft.com/azure/information-protection/clientv2-admin-guide-customizations#remove-headers-and-footers-from-other-labeling-solutions). 
+
+- Funzionalità correlate allo [scanner](../deploy-aip-scanner.md) :
+    - [Individuazione più semplice in locale e nel sito secondario di SharePoint](https://docs.microsoft.com/azure/information-protection/quickstart-findsensitiveinfo.md#permission-users-to-scan-sharepoint-repositories). L'impostazione di ciascun sito specifico non è più necessaria. 
+    - Proprietà avanzata per il [ridimensionamento del blocco SQL](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#storage-requirements-and-capacity-planning-for-sql-server) aggiunto.
+    - Gli amministratori hanno ora la possibilità di [arrestare le analisi esistenti ed eseguire una nuova analisi](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#stop-a-scan) se è stata apportata una modifica all'etichetta predefinita.
+    - Per impostazione predefinita, lo scanner ora imposta la telemetria minima per le analisi più veloci e le dimensioni ridotte del log e i tipi di informazioni sono ora memorizzati nella cache nel database Altre informazioni sull' [ottimizzazione dello scanner](https://docs.microsoft.com/azure/information-protection/deploy-aip-scanner#optimizing-the-performance-of-the-scanner). 
+
+**Correzioni**
+
+- Lo scanner supporta ora distribuzioni separate per il database e il servizio, mentre i diritti **sysadmin** sono necessari solo per la distribuzione del database. 
+- Nei casi in cui gli utenti hanno tentato di aprire i file TIFF protetti e i file TIFF creati da RightFax, i file TIFF sono ora aperti e rimangono stabili come previsto.  
+- Sono stati risolti i danneggiamenti precedenti dei file txt e PDF protetti.
+- È stata corretta l'assegnazione di etichette incoerenti tra **automatico** e **manuale** in log Analytics. 
+- Sono stati risolti problemi di ereditarietà imprevisti identificati tra i nuovi messaggi di posta elettronica e l'ultimo messaggio di posta elettronica aperto.  
+- La protezione dei file con estensione msg come. msg. Pfile ora funziona come previsto. 
+- Le autorizzazioni di comproprietario aggiunte dalle impostazioni definite dall'utente di Office sono ora applicate come previsto. 
+- Quando si immette la giustificazione del downgrade delle autorizzazioni, non è più possibile immettere il testo quando sono già selezionate altre opzioni. 
+
 
 ## <a name="version-25330"></a>Versione 2.5.33.0
 
@@ -197,14 +234,6 @@ Supportato tramite 02/06/2020
 - Quando viene configurata l'assegnazione automatica di etichette, l'etichetta viene applicata la prima volta che un documento viene salvato.
 
 - L'etichetta predefinita supporta le etichette secondarie.
-
-## <a name="version-207790"></a>Versione 2.0.779.0
-
-**Rilasciata**: 05/01/2019
-
-Supportato tramite 02/15/2020
-
-Questa versione include una singola correzione per risolvere un problema di race condition in cui talvolta non vengono visualizzate etichette nelle app di Office o in Esplora file.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b061ac3e067184d1af8b55756a7b3ac3fc0c8a35
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: eb50c150ee908c14c04e0786c57b4ae53e2599a0
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743540"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960577"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -156,9 +156,19 @@ Se non è possibile concedere il ruolo sysadmin anche temporaneamente, è necess
 
 In genere, si usa lo stesso account utente per installare e configurare lo scanner, ma, se si usano account diversi, entrambi richiedono il ruolo db_owner per il database di configurazione dello scanner:
 
-- Se non si specifica il nome del proprio profilo per lo scanner (solo client classico), il database di configurazione è denominato **AIPScanner_\<computer_name >** . 
+- Per il client classico:
 
-- Se si specifica il nome del proprio profilo, il database di configurazione è denominato **AIPScanner_\<profile_name >** (client classico **) o AIPScannerUL_\<profile_name** > (Unified Labeling client).
+    Se non si specifica il nome del proprio profilo per lo scanner, il database di configurazione viene denominato **AIPScanner_\<computer_name >** (solo client classico). Continuare con il passaggio seguente per la creazione di un utente e la concessione dei diritti di db_owner per il database. 
+
+- Per il client per l'etichettatura unificata:
+    
+    Se si specifica il nome del proprio profilo, il database di configurazione viene denominato **AIPScannerUL_ < profile_name >** (Unified Labeling client).
+    
+    Popolare il database utilizzando lo script seguente: 
+
+
+
+    Se non esiste (Select * from master. sys. server_principals in cui SID = SUSER_SID (' dominio\utente ')) inizia a dichiarare @T nvarchar (500) set @T =' CREATE LOGIN ' + QUOTENAME (' dominio\utente ') +' da WINDOWS ' exec (@T) END 
 
 Per creare un utente e concedere diritti di db_owner per questo database, rivolgersi al sysadmin per eseguire il seguente script SQL due volte. La prima volta, per l'account del servizio che esegue lo scanner e per la seconda volta è necessario installare e gestire lo scanner. Prima di eseguire lo script:
 1. Sostituire *dominio\utente* con il nome di dominio e il nome dell'account utente dell'account del servizio o dell'account utente.
@@ -404,6 +414,16 @@ Se si seguono queste istruzioni, lo scanner viene eseguito una volta e solo ai f
     Controllare quindi i report per visualizzare i dettagli dei file etichettati, la classificazione applicata a ogni file e se la protezione è stata applicata. In alternativa, usare il portale di Azure per visualizzare più facilmente queste informazioni.
 
 Poiché la pianificazione è stata configurata in modo da essere eseguita continuamente, quando lo scanner ha completato l'analisi di tutti i file, avvia un nuovo ciclo automaticamente per individuare eventuali file nuovi e modificati.
+
+## <a name="stop-a-scan"></a>Arrestare un'analisi 
+
+Per arrestare un'analisi precedentemente avviata prima del completamento, utilizzare l'opzione **Interrompi analisi** dall'interfaccia oppure
+ 
+![Arrestare un'analisi per lo scanner Azure Information Protection](./media/scanner-stop-scan.png)
+    
+In alternativa, è possibile eseguire il comando seguente nella sessione di PowerShell:
+    
+        Stop-AIPScan 
 
 ## <a name="how-files-are-scanned"></a>Modalità di analisi dei file
 

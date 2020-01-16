@@ -4,19 +4,19 @@ description: Installare un lettore in Windows per documenti PDF etichettati per 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 12/05/2019
+ms.date: 1/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.reviewer: kartikka
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: a2e62bfb199d9531c08db8e956a2a25db4d2b82f
-ms.sourcegitcommit: 40693000ce86110e14ffce3b553e42149d6b7dc2
+ms.openlocfilehash: a027b6200fb3bd728aca8fe1a92e7c61aeeeef87
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/22/2019
-ms.locfileid: "75326321"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960860"
 ---
 # <a name="install-a-pdf-reader-for-windows"></a>Installare un lettore PDF per Windows
 
@@ -24,7 +24,7 @@ ms.locfileid: "75326321"
 
 Se è necessario aprire un documento PDF protetto nel computer Windows, installare il plug-in Adobe per Adobe Acrobat Reader.
 
-**Versioni supportate**: Windows 10 e versioni precedenti tramite Windows 7 Service Pack 1
+**Versioni supportate**: Windows 10 e versioni precedenti attraverso Windows 8
 
 Istruzioni: 
 
