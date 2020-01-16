@@ -4,7 +4,7 @@ description: Informazioni sulla personalizzazione del client di Azure Informatio
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 11/24/2019
+ms.date: 1/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,16 +13,16 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9428f682c9046f3b9f0e7b9dd9af498db7fd2d4c
-ms.sourcegitcommit: d0012de76c9156dd9239f7ba09c044a4b42ffc71
+ms.openlocfilehash: 74ff92fd76ca12fd77e0eb29d4e22c1dfacde084
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75675619"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75959996"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, Windows 7 con SP1, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012, windows Server 2008 R2*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows 10, Windows 8.1, Windows 8, windows server 2019, windows server 2016, windows Server 2012 R2, windows Server 2012, windows Server 2008 R2*
 >
 > *Istruzioni per: [Azure Information Protection client di etichetta unificata per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
@@ -285,7 +285,43 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 
 Questa configurazione USA [le impostazioni avanzate](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
 
-Le impostazioni consentono di rimuovere o sostituire le intestazioni o i piè di pagina basati su testo nei documenti, quando questi contrassegni visivi sono stati applicati da un'altra soluzione di etichettatura. Il piè di pagina precedente, ad esempio, contiene il nome di una vecchia etichetta a cui è stata eseguita la migrazione in etichette di riservatezza per usare un nuovo nome di etichetta e il relativo piè di pagina.
+Esistono due metodi che possono essere usati per rimuovere le classificazioni da altre soluzioni di assegnazione di etichette. Il primo metodo rimuove qualsiasi forma da documenti di Word in cui il nome della forma corrisponde al nome definito nella proprietà avanzata **WordShapeNameToRemove**, il secondo metodo consente di rimuovere o sostituire intestazioni o piè di pagina basati su testo da documenti di Word, Excel e PowerPoint come definito nella proprietà avanzata **RemoveExternalContentMarkingInApp** . 
+
+### <a name="use-the-wordshapenametoremove-advanced-property-preview"></a>Usare la proprietà avanzata WordShapeNameToRemove (anteprima)
+
+*La proprietà avanzata **WordShapeNameToRemove** è supportata dalla versione 2.6.101.0 e successive*
+
+Questa impostazione consente di rimuovere o sostituire etichette basate su forme da documenti di Word quando tali contrassegni visivi sono stati applicati da un'altra soluzione di assegnazione di etichette. Ad esempio, la forma contiene il nome di un'etichetta precedente a cui è stata eseguita la migrazione in etichette di riservatezza per usare un nuovo nome di etichetta e la relativa forma.
+
+Per usare questa proprietà avanzata, è necessario trovare il nome della forma nel documento di Word e quindi definirli nell'elenco delle proprietà avanzate **WordShapeNameToRemove** di forme. Il servizio rimuoverà qualsiasi forma in Word che inizia con un nome definito nell'elenco di forme in questa proprietà avanzata.
+
+Evitare di rimuovere le forme che contengono il testo che si desidera ignorare, definendo il nome di tutte le forme da rimuovere ed evitando di controllare il testo in tutte le forme, ovvero un processo che richiede un utilizzo intensivo delle risorse.
+
+Se non si specificano le forme parola in questa impostazione aggiuntiva di proprietà avanzata e Word viene incluso nel valore della chiave **RemoveExternalContentMarkingInApp** , verranno controllate tutte le forme per il testo specificato nel valore **ExternalContentMarkingToRemove** . 
+
+Per trovare il nome della forma che si sta utilizzando e si desidera escludere:
+
+1. In Word visualizzare il riquadro di **selezione** : **scheda Home** > gruppo di **modifica** > **selezionare** l'opzione > riquadro di **selezione**.
+
+2. Selezionare la forma nella pagina che si desidera contrassegnare per la rimozione. Il nome della forma contrassegnata è ora evidenziato nel riquadro di **selezione** .
+
+Usare il nome della forma per specificare un valore stringa per la chiave * * * * WordShapeNameToRemove * * * *. 
+
+Esempio: il nome della forma è **DC**. Per rimuovere la forma con questo nome, specificare il valore: `dc`.
+
+- Chiave: **WordShapeNameToRemove**
+
+- Valore: \<**nome della forma Word**> 
+
+Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
+
+    Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
+
+Quando si dispone di più di una forma di parola da rimuovere, specificare tutti i valori disponibili per la rimozione delle forme.
+
+
+### <a name="use-the-removeexternalcontentmarkinginapp-advanced-property"></a>Usare la proprietà avanzata RemoveExternalContentMarkingInApp
+Questa impostazione consente di rimuovere o sostituire intestazioni o piè di pagina basati su testo da documenti quando tali contrassegni visivi sono stati applicati da un'altra soluzione di assegnazione di etichette. Il piè di pagina precedente, ad esempio, contiene il nome di una vecchia etichetta a cui è stata eseguita la migrazione in etichette di riservatezza per usare un nuovo nome di etichetta e il relativo piè di pagina.
 
 Quando il client di etichettatura unificata ottiene questa configurazione nel criterio, le intestazioni e i piè di pagina precedenti vengono rimossi o sostituiti quando il documento viene aperto nell'app di Office ed è applicata qualsiasi etichetta di riservatezza al documento.
 
@@ -1008,7 +1044,7 @@ Inoltre:
 ## <a name="support-for-disconnected-computers"></a>Supporto per i computer disconnessi
 
 > [!IMPORTANT]
-> I computer disconnessi sono supportati solo per gli scenari di etichettatura seguenti: Esplora file, PowerShell e lo scanner. Per etichettare i documenti nelle app di Office, è necessario disporre della connettività a Internet.
+> I computer disconnessi sono supportati per gli scenari di assegnazione di etichette seguenti: Esplora file, PowerShell, le app di Office e lo scanner.
 
 Per impostazione predefinita, il client di Azure Information Protection Unified Labeling tenta automaticamente di connettersi a Internet per scaricare le etichette e le impostazioni dei criteri di etichetta dal centro di gestione delle etichette: il Centro sicurezza e conformità di Office 365, il Microsoft 365 Centro sicurezza o il centro di conformità Microsoft 365. Se si dispone di computer che non possono connettersi a Internet per un certo periodo di tempo, è possibile esportare e copiare i file che gestiscono manualmente i criteri per il client di etichettatura unificata.
 

@@ -4,7 +4,7 @@ description: Quando si usa Azure Rights Management, i modelli vengono scaricati 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 1/15/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 6aae4636fe717bdaf81ae3e2461e56e17751c2f9
-ms.sourcegitcommit: 68cf1e0fda06c6f20cbd829dc4fbc8c12686947b
+ms.openlocfilehash: 52d00883b19c2c595dd098a9be6d79d3b3183355
+ms.sourcegitcommit: 800339fed1c516d627dbb91ed804a7c7d5b892a4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75952974"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031449"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aggiornamento di modelli per utenti e servizi
 
@@ -31,7 +31,7 @@ Quando si usa il servizio Rights Management di Azure da Azure Information Protec
 |--------------------------|---------------------------------------------|
 |Exchange Online<br /><br />Applicabile per regole di trasporto e Outlook Web App |Vengono aggiornati automaticamente in un'ora e non sono necessari altri passaggi.|
 |Client Azure Information Protection|I modelli vengono aggiornati automaticamente ogni volta che si aggiornano i criteri di Azure Information Protection nel client:<br /><br /> - Quando viene aperta un'applicazione di Office che supporta la barra di Azure Information Protection. <br /><br /> - Quando si fa clic con il pulsante destro del mouse per classificare e proteggere un file o una cartella. <br /><br /> - Quando si eseguono i cmdlet di PowerShell per l'assegnazione di etichette e la protezione (Get-AIPFileStatus e Set-AIPFileLabel).<br /><br /> - Quando il servizio scanner di Azure Information Protection viene avviato e i criteri locali risalgono a più di un'ora prima. Il servizio scanner verifica le modifiche ogni ora e usa tali modifiche per il ciclo di analisi successivo.<br /><br /> - Ogni 24 ore.<br /><br /> Inoltre, poiché il client è strettamente integrato con Office, i modelli aggiornati per app di Office 365, Office 2019, Office 2016 o Office 2013 verranno aggiornati anche per il client Azure Information Protection.|
-|Client per l'etichettatura unificata di Azure Information Protection|Aggiornamento automatico ogni 4 ore, per ogni app di Office.<br /><br /> Inoltre, poiché il client è strettamente integrato con Office, i modelli aggiornati per app di Office 365, Office 2019, Office 2016 o Office 2013 verranno aggiornati anche per il client di etichettatura unificata Azure Information Protection.|
+|Client per l'etichettatura unificata di Azure Information Protection|Per le app di Office, i modelli vengono aggiornati automaticamente ogni volta che l'app viene aperta.<br /><br /> Inoltre, poiché il client è strettamente integrato con Office, i modelli aggiornati per app di Office 365, Office 2019, Office 2016 o Office 2013 verranno aggiornati anche per il client di etichettatura unificata Azure Information Protection.<br /><br /> Per Esplora file, PowerShell e lo scanner, il client non Scarica i modelli ma li accede online senza ulteriori passaggi necessari.|
 |App di Office 365, Office 2019, Office 2016 e Office 2013|I modelli vengono aggiornati automaticamente in base a una pianificazione:<br /><br />- Per le versioni più recenti di Office: l'intervallo di aggiornamento predefinito è di 7 giorni.<br /><br />Per forzare un aggiornamento prima della pianificazione, vedere la sezione seguente, [app di office 365, office 2019, office 2016 e office 2013: come forzare un aggiornamento per i modelli](#office-365-apps-office-2019-office-2016-and-office-2013-how-to-force-a-refresh-for-templates).|
 |Office 2010|I modelli vengono aggiornati automaticamente quando gli utenti si disconnettono da Windows, eseguono nuovamente l'accesso e attendono al massimo un'ora.|
 |Exchange locale con il connettore di Rights Management<br /><br />Applicabile per regole di trasporto e Outlook Web App|I modelli vengono aggiornati automaticamente e non sono necessari altri passaggi. Tuttavia, Outlook Web App memorizza nella cache l'interfaccia utente per un giorno.|
