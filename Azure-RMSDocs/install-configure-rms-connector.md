@@ -13,16 +13,16 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 1b1f98a5d01d90cc25d6ffc378201ae90711eead
-ms.sourcegitcommit: d062ddf89fcb46e489f32f0d9f7aff73c3357a9b
+ms.openlocfilehash: 4d4ba8a3093e1bef32e42b562c93e787e603614b
+ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74882053"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76117987"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installazione e configurazione del connettore di Azure Rights Management
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2016, windows Server 2012 R2, windows Server 2012*
 
 Nelle sezioni seguenti vengono fornite informazioni sull’installazione e la configurazione del connettore RMS di Azure Rights Management (RMS). Queste procedure illustrano i passaggi da 1 a 4 di [Distribuzione del connettore di Azure Rights Management](deploy-rms-connector.md).
 
@@ -225,7 +225,7 @@ Se i server del connettore sono installati in una rete che non dispone di connet
 ## <a name="installing-the-rms-connector-administration-tool-on-administrative-computers"></a>Installazione dello strumento di amministrazione di connettore RMS su computer amministrativi
 È possibile eseguire lo strumento di amministrazione di connettore RMS da un computer in cui non è installato tale connettore se il computer soddisfa i requisiti seguenti:
 
--   Un computer fisico o virtuale che esegue Windows Server 2012 o Windows Server 2012 R2 (tutte le edizioni), Windows Server 2008 R2 o Windows Server 2008 R2 Service Pack 1 (tutte le edizioni), Windows 8.1, Windows 8 o Windows 7.
+-   Un computer fisico o virtuale che esegue Windows Server 2012 o Windows Server 2012 R2 (tutte le edizioni), Windows 8.1, Windows 8.
 
 -   Almeno 1 GB di RAM.
 

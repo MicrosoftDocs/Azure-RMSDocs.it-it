@@ -1,10 +1,10 @@
 ---
 title: Eseguire la migrazione da AD RMS ad Azure Information Protection
 description: Istruzioni per la migrazione della distribuzione di Active Directory Rights Management Services (AD RMS) ad Azure Information Protection. Dopo la migrazione, gli utenti hanno ancora accesso ai documenti e ai messaggi di posta elettronica che l'organizzazione ha protetto usando AD RMS.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/25/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 978feb26639a3c8f05ac2576a2e922c744cae9cf
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 0d78151a9eb2ecc64a21ed1076095b6a6f56278a
+ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74474305"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76117970"
 ---
 # <a name="migrating-from-ad-rms-to-azure-information-protection"></a>Migrazione da AD RMS ad Azure Information Protection
 
@@ -53,9 +53,7 @@ Prima di iniziare il processo di migrazione ad Azure Information Protection, ver
 - **Distribuzione di RMS supportata:**
     
   - Le versioni seguenti di AD RMS supportano una migrazione ad Azure Information Protection:
-    
-      - Windows Server 2008 R2 (x64)
-        
+           
       - Windows Server 2012 (x64)
         
       - Windows Server 2012 R2 (x64)
@@ -109,8 +107,6 @@ Se il cluster AD RMS è attualmente in modalità crittografia 1, non aggiornare 
 Per verificare la modalità di crittografia AD RMS:
  
 - Per Windows Server 2012 R2 e Windows 2012: proprietà del cluster AD RMS > scheda **Generale**. 
-
-- Per Windows Server 2008 R2: verificare che sia installato l'hotfix relativo alla [lunghezza della chiave RSA aumentata a 2048 bit per AD RMS in Windows Server 2008 R2 e in Windows Server 2008](https://support.microsoft.com/help/2627272/rsa-key-length-is-increased-to-2048-bits-for-ad-rms-in-windows-server ). In caso contrario, il cluster AD RMS viene eseguito in modalità crittografia 1.
 
 ### <a name="migration-limitations"></a>Limitazioni della migrazione
 

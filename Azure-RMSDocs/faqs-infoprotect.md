@@ -12,12 +12,12 @@ ms.assetid: 4b595b6a-7eb0-4438-b49a-686431f95ddd
 ms.reviewer: adhall
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ba1aa80dc667e28530ca8f73344f9a6dce35dd26
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 8278395afacca4d30b67f88d82e98779dcda8871
+ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743622"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76117577"
 ---
 # <a name="frequently-asked-questions-about-classification-and-labeling-in-azure-information-protection"></a>Domande frequenti sulla classificazione e l'assegnazione di etichette in Azure Information Protection
 
@@ -38,14 +38,15 @@ Si consiglia di eseguire il test con il client di etichettatura unificata se il 
 
 Per altre informazioni, inclusa una tabella per il confronto di funzioni e funzionalità, vedere [Scegliere il client Azure Information Protection da usare](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
-## <a name="where-can-i-find-information-about-using-sensitivity-labels-in-office"></a>Dove è possibile reperire informazioni sull'uso delle etichette di riservatezza in Office?
+## <a name="where-can-i-find-information-about-using-sensitivity-labels-for-office-apps"></a>Dove è possibile reperire informazioni sull'uso delle etichette di riservatezza per le app di Office?
 
-Vedere le risorse seguenti dalla documentazione di Office:
+Vedere le risorse di documentazione seguenti:
 
-- [Funzionamento delle etichette di riservatezza nelle app di Office](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
+- [Panoramica delle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) 
+
+- [Etichette di riservatezza nelle app di Office](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps)
 
 - [Applicare le etichette di riservatezza ai documenti e ai messaggi di posta elettronica in Office](https://support.office.com/article/Apply-sensitivity-labels-to-your-documents-and-email-within-Office-2f96e7cd-d5a4-403b-8bd7-4cc636bae0f9#ID0EBFAAA=Office_365)
-
 
 ## <a name="can-a-file-have-more-than-one-classification"></a>Un file può avere più di una classificazione?
 

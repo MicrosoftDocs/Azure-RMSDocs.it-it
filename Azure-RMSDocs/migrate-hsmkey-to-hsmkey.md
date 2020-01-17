@@ -1,9 +1,9 @@
 ---
 title: Eseguire la migrazione da una chiave protetta tramite HSM a un'altra - AIP
 description: Istruzioni che fanno parte del percorso di migrazione da AD RMS a Azure Information Protection e applicabili solo se la chiave di AD RMS è protetta tramite HSM e si vuole eseguire la migrazione a Azure Information Protection con una chiave del tenant protetta tramite HSM in Azure Key Vault.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 11/11/2019
 ms.topic: conceptual
 ms.collection: M365-security-compliance
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: a8c52a86e3f19302c86c6022f734f222b0d1ce97
-ms.sourcegitcommit: d3169f307c9d8500dfd97ad65588db9bed111264
+ms.openlocfilehash: 888da129f3b6897303cb2731d23afc52f6261cce
+ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75303592"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76117953"
 ---
 # <a name="step-2-hsm-protected-key-to-hsm-protected-key-migration"></a>Passaggio 2: Migrazione da una chiave protetta tramite HSM a un'altra
 

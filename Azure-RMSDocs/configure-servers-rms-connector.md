@@ -13,16 +13,16 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 86c908f2c53ed66853b7f3b16e02a406748055be
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: bdcc6b77e5f75b67e69f39c4c5c260f44850f62e
+ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934977"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76117621"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configurazione dei server per il connettore di Azure Rights Management
 
->*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, Windows Server 2008 R2*
+>*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2016, windows Server 2012 R2, windows Server 2012*
 
 
 Usare le informazioni seguenti per configurare il server locale che sfrutterà il connettore di Azure Rights Management (RMS). Queste procedure illustrano il passaggio 5 di [Distribuzione del connettore di Azure Rights Management](deploy-rms-connector.md).
@@ -145,11 +145,6 @@ Per usare un connettore RMS, è necessario che i server di Exchange eseguano una
 
 È anche necessario che sui server sia disponibile una versione 1 del client RMS (noto anche come MSDRM) con supporto per la modalità di crittografia RMS 2. Il client MSDRM è incluso in tutti i sistemi operativi Windows, ma le prime versioni del client non supportano la modalità di crittografia 2. Se i server Exchange in uso eseguono Windows Server 2012 o versioni successive, non sono necessarie azioni aggiuntive poiché il client RMS installato in questi sistemi operativi supporta in modo nativo la modalità di crittografia 2. 
 
-Se i server Exchange in uso eseguono invece una versione precedente del sistema operativo, verificare che la versione installata del client RMS supporti la modalità di crittografia 2. In particolare, controllare la versione installata del file Windows\System32\Msdrm.dll rispetto ai numeri di versione elencati nei seguenti articoli della Knowledge Base. Se il numero della versione installata è uguale o maggiore rispetto ai numeri di versione elencati, non sono necessarie azioni aggiuntive. Se invece il numero è inferiore, scaricare e installare l'aggiornamento rapido dall'articolo.
-
-- Windows Server 2008: [https://support.microsoft.com/kb/2627272](https://support.microsoft.com/kb/2627272) 
-
-- Windows Server 2008 R2: [https://support.microsoft.com/kb/2627273](https://support.microsoft.com/kb/2627273)
 
 > [!IMPORTANT]
 > Se non sono state installate queste versioni (o versioni successive) di Exchange e del client MSDRM, non sarà possibile configurare Exchange per l'uso del connettore. Prima di continuare, verificare che siano state installate le versioni corrette.
@@ -193,7 +188,7 @@ Per usare un connettore RMS, è necessario che i server di SharePoint eseguano u
 >
 > È possibile verificare la versione del client controllando il numero di versione di MSIPC.dll, disponibile in **\Programmi\Active Directory Rights Management Services Client 2.1**. La finestra di dialogo delle proprietà indica il numero di versione del client MSIPC 2.1.
 
-È necessario che nei server che eseguono SharePoint 2010 sia installata una versione del client MSDRM che includa il supporto della Modalità crittografia 2 di RMS. La versione minima supportata in Windows Server 2008 è inclusa nell'hotfix scaricabile dalla pagina dell'articolo relativo alla [lunghezza della chiave RSA aumentata a 2048 bit per AD RMS in Windows Server 2008 R2 e in Windows Server 2048](https://support.microsoft.com/kb/2627272), mentre la versione minima per Windows Server 7 R2 può essere scaricata dalla pagina dell'articolo relativo alla [lunghezza della chiave RSA aumentata a 2048 bit per AD RMS in Windows 7 o Windows Server 2008 R2](https://support.microsoft.com/kb/2627273). Windows Server 2012 e Windows Server 2012 R2 offrono supporto nativo per la modalità di crittografia 2.
+È necessario che nei server che eseguono SharePoint 2010 sia installata una versione del client MSDRM che includa il supporto della Modalità crittografia 2 di RMS. Windows Server 2012 e Windows Server 2012 R2 offrono supporto nativo per la modalità di crittografia 2.
 
 ### <a name="to-configure-sharepoint-servers-to-use-the-connector"></a>Per configurare server di SharePoint per l'uso del connettore
 
@@ -211,7 +206,7 @@ Per usare un connettore RMS, è necessario che i server di SharePoint eseguano u
 
     -   Se si usa SharePoint 2016 o SharePoint 2013, modificare manualmente il Registro di sistema usando le informazioni disponibili in [Impostazioni del Registro di sistema per il connettore RMS](rms-connector-registry-settings.md) per aggiungere manualmente le impostazioni di registro nei server. 
 
-3.  Abilitare IRM in SharePoint. Per altre informazioni, vedere [Configurare Information Rights Management (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) nella libreria di SharePoint.
+3.  Abilitare IRM in SharePoint. Per ulteriori informazioni, vedere [Configurare Information Rights Management (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) nella libreria di SharePoint.
 
     Quando si seguono queste istruzioni, è necessario configurare SharePoint per l'uso del connettore. A questo scopo, specificare l'opzione **Usa il server RMS seguente** e immettere l'URL del connettore di bilanciamento del carico configurato. Immettere il prefisso del protocollo (HTTP:// o HTTPS://) e il nome del connettore definito nel DNS per l'indirizzo di bilanciamento del carico del connettore stesso, Ad esempio, se il nome del connettore è https:\//connector.contoso.com, la configurazione sarà simile all'immagine seguente:
 
@@ -225,7 +220,7 @@ Per usare il connettore RMS e la funzionalità Infrastruttura di classificazione
 
 - Windows Server 2016
 
-- R2 per Windows Server 2012
+- Windows Server 2012 R2
 
 - Windows Server 2012
 

@@ -13,12 +13,12 @@ ms.subservice: prereqs
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ecde2ec34dd27cb3bd2a176e8d205de6ee865421
-ms.sourcegitcommit: 2d75192e7cd2e322ab422fc2115aa063e8dda18b
+ms.openlocfilehash: e639a94bde4daf481fc0a715492edeb702ba2ddd
+ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/13/2020
-ms.locfileid: "75913269"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76117885"
 ---
 # <a name="requirements-for-azure-information-protection"></a>Requisiti per Azure Information Protection
 
@@ -81,7 +81,6 @@ I dispositivi seguenti supportano il client di Azure Information Protection Unif
 
 - Windows Server 2012 R2 e Windows Server 2012
 
-- Windows Server 2008 R2 
 
 Per informazioni sulle opzioni di supporto per le versioni precedenti di Windows, contattare il account Microsoft o il rappresentante del supporto tecnico.   
 Oltre a installare il client di in computer fisici, è anche possibile installarlo nelle macchine virtuali. Verificare che il fornitore del software per la soluzione desktop virtuale disponga di configurazioni aggiuntive che potrebbero essere necessarie per eseguire la Azure Information Protection client di etichetta unificata o il client di Azure Information Protection. Per le soluzioni Citrix, ad esempio, potrebbe essere necessario [disabilitare i hook dell'API (Application Programming Interface) Citrix](https://support.citrix.com/article/CTX107825) per Office (Winword. exe, Excel. exe, Outlook. exe, Powerpnt. exe) e il file eseguibile per il client Azure Information Protection Unified Labeling o il client di Azure Information Protection (MSIP. app. exe, MSIP. Viewer. exe).
