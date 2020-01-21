@@ -4,7 +4,7 @@ description: Eseguire la migrazione di Azure Information Protection etichette a 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 1/18/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 60f1ea855d2ec666f2d22bb53d8856a6461157dc
-ms.sourcegitcommit: a38af4741017cd745efc011cf29a0fedb62f9be7
+ms.openlocfilehash: 45802279809a73c7338ff622fcd545e6e9eab7e7
+ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75827537"
+ms.lasthandoff: 01/20/2020
+ms.locfileid: "76281582"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Come eseguire la migrazione di etichette di Azure Information Protection a etichette di riservatezza unificate
 
@@ -151,7 +151,7 @@ Per eseguire la migrazione delle etichette, è necessario essere un amministrato
     
     Se l'opzione per l'attivazione non è disponibile, controllare lo **stato di etichettatura unificata**: se viene visualizzato **attivato**, il tenant usa già l'archivio di etichette unificato e non è necessario eseguire la migrazione delle etichette.
 
-Le etichette di cui è stata eseguita correttamente la migrazione possono ora essere usate dai [client e servizi che supportano l'etichettatura unificata](#clients-and-services-that-support-unified-labeling). Tuttavia, è necessario prima pubblicare queste etichette in uno dei centri di amministrazione: Office 365 Centro sicurezza e conformità, Microsoft 365 Centro sicurezza o Microsoft 365 Compliance Center.
+Le etichette di cui è stata eseguita correttamente la migrazione possono ora essere usate dai [client e servizi che supportano l'etichettatura unificata](#clients-and-services-that-support-unified-labeling). Tuttavia, è necessario prima [pubblicare queste etichette](/microsoft-365/compliance/create-sensitivity-labels#publish-sensitivity-labels-by-creating-a-label-policy) in uno dei centri di amministrazione: Office 365 Centro sicurezza e conformità, Microsoft 365 Centro sicurezza o Microsoft 365 Compliance Center.
 
 > [!IMPORTANT]
 > Se si modificano le etichette al di fuori dell'portale di Azure, per Azure Information Protection client (versione classica) tornare a questo riquadro **Azure Information Protection-Unified Labeling** e selezionare **pubblica**.
@@ -229,6 +229,6 @@ Per ulteriori indicazioni e suggerimenti del team dell'esperienza clienti, veder
 
 - Webinar: [registrazione Webinar Unified Labeling](https://aka.ms/AIP-UL-Webinar-Join1)
 
-Per altre informazioni sulle etichette migrate che ora possono essere configurate e pubblicate in uno dei centri di amministrazione con etichette, vedere [Panoramica delle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
+Per altre informazioni sulle etichette migrate che ora possono essere configurate e pubblicate in uno dei centri di amministrazione con etichette, vedere [Panoramica delle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels) e [creare e configurare etichette di riservatezza e criteri](https://docs.microsoft.com/microsoft-365/compliance/create-sensitivity-labels).
 
 Se non è già stato fatto, installare il client di Azure Information Protection Unified labeling. Per informazioni sulla versione, una guida dell'amministratore e un manuale dell'utente, vedere [Azure Information Protection client di etichetta unificata per Windows](./rms-client/aip-clientv2.md).

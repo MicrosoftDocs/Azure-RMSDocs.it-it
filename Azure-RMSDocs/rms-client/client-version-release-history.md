@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 7325f81ff67cf8fe23548a966c55ef42a1cf00f3
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: c3babbe6a0470df498567f6614362e87c14a24cf
+ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117732"
+ms.lasthandoff: 01/20/2020
+ms.locfileid: "76281599"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto
 
@@ -75,23 +75,6 @@ Usare le informazioni seguenti per scoprire le novità o le modifiche per una ve
 >  
 > Per il supporto tecnico, vedere le informazioni riportate in [Opzioni di supporto e risorse per la community](../information-support.md#support-options-and-community-resources). È anche possibile rivolgersi al team di Azure Information Protection nel [sito di Yammer](https://www.yammer.com/askipteam/).
 
-## <a name="version-154590"></a>Versione 1.54.59.0
-
-**Rilasciata**: 1/29/2020
-
-**Correzioni**:
-
-- Si è verificato un problema per cui i file protetti da IQP visualizzavano le opzioni **Ripristina** e/o **Salva con nome dopo la** rimozione della protezione. 
-
-- Molti testi della descrizione comando della funzionalità del prodotto sono stati migliorati per chiarezza e facilità di comprensione. 
-
-- Problemi relativi alla stabilità dei client quando si lavora con i file PDF protetti vengono risolti. 
-
-- I file temporanei decrittografati non sono più accessibili agli utenti dalla cartella Temp. 
-
-- Le etichette di protezione vengono ora rimosse come previsto se l'etichetta viene eliminata nel messaggio di posta elettronica durante il processo di creazione della posta elettronica. 
-
-Questa versione include anche correzioni generali per la stabilità e le prestazioni.
 
 ## <a name="version-154330"></a>Versione 1.54.33.0
 

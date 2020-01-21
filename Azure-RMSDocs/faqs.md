@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 2b473c242cdddd09c9902c56bd183e19c0a62267
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 90fb51a4b17ccf8f6b0689d41b86dbee284da024
+ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743618"
+ms.lasthandoff: 01/20/2020
+ms.locfileid: "76281650"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
@@ -90,7 +90,7 @@ Per ulteriori informazioni e istruzioni, vedere [How to migrate Azure Informatio
 
 Dopo aver eseguito la migrazione delle etichette nel portale di Azure:
 
-- Se [i client e i servizi sono stati unificati](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), passare a uno dei centri di amministrazione (Office 365 Centro sicurezza e conformità, Microsoft 365 Centro sicurezza o Microsoft 365 Compliance Center) per pubblicare queste etichette e per configurare le impostazioni dei criteri. Per le modifiche delle etichette, da ora in poi usare uno di questi centri di amministrazione. I client di etichettatura unificata scaricano le etichette e le impostazioni dei criteri da uno di questi centri di amministrazione.
+- Se [i client e i servizi sono stati unificati](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling), passare a uno dei centri di amministrazione (Office 365 Centro sicurezza e conformità, Microsoft 365 Centro sicurezza o Microsoft 365 Compliance Center) per pubblicare queste etichette e per configurare le impostazioni dei criteri. Per le modifiche delle etichette, da ora in poi usare uno di questi centri di amministrazione. I client di etichettatura unificata scaricano le etichette e le impostazioni dei criteri da uno di questi centri di amministrazione. Per istruzioni, vedere [creare e configurare etichette di riservatezza e i relativi criteri](/microsoft-365/compliance/create-sensitivity-labels).
 
 - Se si dispone del [client di Azure Information Protection (classico)](./rms-client/aip-client.md), continuare a usare il portale di Azure per modificare le etichette e le impostazioni dei criteri. Il client classico continua a scaricare le etichette e le impostazioni dei criteri da Azure.
 
