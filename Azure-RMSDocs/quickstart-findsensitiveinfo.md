@@ -1,34 +1,34 @@
 ---
 title: Avvio rapido - Trovare le informazioni riservate con lo scanner di Azure Information Protection
 description: Usare lo scanner di Azure Information Protection per trovare le informazioni riservate presenti nei file archiviati in locale.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/12/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 1/13/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 22bd446f940e176c3cae82f7e629cb93f2456bc1
-ms.sourcegitcommit: 6393b971f56a1c666f82777d38ea3ca853c60342
+ms.openlocfilehash: 6cb4739d0da222f8748c4f4684290b7193093bcc
+ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73979988"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75960491"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Guida introduttiva: Trovare le informazioni riservate presenti nei file archiviati in locale
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 
-In questa guida introduttiva verrà installato e configurato lo scanner di Azure Information Protection per trovare le informazioni riservate presenti nei file archiviati in un archivio dati locale, ad esempio una cartella locale, una condivisione di rete o SharePoint Server.
+Questa guida di avvio rapido illustra come autorizzare SharePoint a consentire la scansione, quindi come installare e configurare lo scanner di Azure Information Protection per trovare le informazioni riservate presenti nei file archiviati in un archivio dati locale, ad esempio una cartella locale, una condivisione di rete o SharePoint Server.
 
 > [!NOTE]
 > È possibile usare questa guida di avvio rapido con la versione disponibile a livello generale corrente del client Azure Information Protection (classico) o la versione disponibile a livello generale corrente del client di etichettatura unificata di Azure Information Protection che include una versione di anteprima dello scanner.
 >  
 > Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 
-È possibile completare questa configurazione in meno di 10 minuti.
+È possibile completare questa configurazione in meno di 15 minuti.
 
 ## <a name="prerequisites"></a>Prerequisiti
 
@@ -52,6 +52,8 @@ Per completare questa guida introduttiva, è necessario:
 
 Per un elenco completo dei prerequisiti per l'uso di Azure Information Protection, vedere [Requisiti per Azure Information Protection](requirements.md).
 
+5. Accesso alle autorizzazioni dei criteri di SharePoint se si sceglie di concedere autorizzazioni per un'analisi di SharePoint.
+
 ## <a name="prepare-a-test-folder-and-file"></a>Preparare una cartella e un file di test
 
 Per un test iniziale per confermare il funzionamento dello scanner:
@@ -59,6 +61,29 @@ Per un test iniziale per confermare il funzionamento dello scanner:
 1. Creare una cartella locale nel computer, ad esempio **TestScanner** nell'unità C locale.
 
 2. Creare e salvare un documento di Word in tale cartella, con il testo **Credit card: 4242-4242-4242-4242**.
+
+## <a name="permission-users-to-scan-sharepoint-repositories"></a>Consentire agli utenti di analizzare i repository SharePoint
+
+È possibile usare lo scanner nei repository SharePoint specificando l'URL del sito; Azure Information Protection individuerà e analizzerà tutti i siti corrispondenti all'URL.
+
+Per abilitare le analisi tra i repository, aggiungere le seguenti autorizzazioni SharePoint per l'utente da usare per l'analisi:
+
+1. Aprire SharePoint e selezionare **Criteri di autorizzazione** e selezionare **Aggiungi livello di criteri di autorizzazione**. 
+
+    ![Creare un nuovo livello di criteri di autorizzazione per un utente specifico](./media/aip-quick-set-sp-permissions.png)
+
+
+2. In **Autorizzazioni raccolta siti** selezionare l'opzione **Controllore raccolta siti**.   
+
+3. In **Autorizzazione** selezionare **Concedi** per l'opzione **Visualizzazione pagine applicazione** e scegliere **Salva** per salvare le modifiche.  
+
+    ![Selezionare Controllore raccolta siti e le opzioni delle autorizzazioni per un utente specifico](./media/aip-quick-set-site-permissions.png)
+
+4. Dopo aver confermato le modifiche fare clic su **OK** nell'avviso **Criteri per l'applicazione Web** che viene visualizzato.   
+
+5. Nella pagina **Aggiungi utenti** aggiungere l'utente che si vuole usare per l'analisi nel campo **Scegli utenti**. In **Selezione autorizzazioni** selezionare l'opzione **Raccolta siti** e fare clic su **Fine** per applicare le autorizzazioni create all'utente aggiunto o selezionato. 
+
+    ![Aggiungere l'utente alle nuove opzioni di autorizzazioni](./media/aip-quick-set-user-permissions.png)
 
 ## <a name="configure-a-profile-for-the-scanner"></a>Configurare un profilo per lo scanner
 
