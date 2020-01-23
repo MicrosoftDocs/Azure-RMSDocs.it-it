@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 32d0ac2669e0cc304d0f06c603f64d623c216c68
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: f9e25f0fc43d5aa6f7c94cc0aefea1595ba0eef4
+ms.sourcegitcommit: 9bac5032d7251057f84a0e3ab0aba0e48a77b5f8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117654"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76517661"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -59,7 +59,7 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche apport
 
 Il client sta sostituendo il client di Azure Information Protection (classico). Per confrontare caratteristiche e funzionalità con il client classico, vedere [confrontare i client di assegnazione di etichette per i computer Windows](use-client.md#compare-the-labeling-clients-for-windows-computers).
 
-## <a name="version-261010"></a>Versione 2.6.101.0
+## <a name="version-261010-preview"></a>Versione 2.6.101.0 (anteprima)
 
 **Rilasciato** 1/15/2020
 
