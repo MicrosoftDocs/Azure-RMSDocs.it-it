@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection offre una soluzione client-s
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/09/2020
+ms.date: 1/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: b452dcd3e212316d73c75e4075b471c5e363a86a
-ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
+ms.openlocfilehash: 3e0ed6d49a49604cfc666e1cda5390c480dc192f
+ms.sourcegitcommit: 46dbd8ea769c0c5549a008d7464c17032a1f7130
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2020
-ms.locfileid: "76281616"
+ms.lasthandoff: 01/26/2020
+ms.locfileid: "76755800"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -43,7 +43,7 @@ Laddove possibile, usare uno dei client di assegnazione di etichette perché le 
 La scelta di etichettare il client per i computer Windows potrebbe essere influenzata dal portale di gestione usato:
 
 - Il client di assegnazione di etichette predefinito di Office e le impostazioni dei criteri e delle etichette di Azure Information Protection per il download dei client con etichetta unificata dai centri di amministrazione seguenti: 
-    - Centro sicurezza e conformità di Office 365
+    - Office 365 Centro sicurezza e conformità
     - Centro sicurezza Microsoft 365
     - Centro conformità Microsoft 365
 
@@ -85,15 +85,17 @@ Quando si dispone di un computer Windows che esegue le app di Office 365 che cor
 
 Usare la tabella seguente per confrontare le funzionalità supportate dai tre client di etichettatura per i computer Windows.
 
-Per confrontare le funzionalità predefinite dell'etichetta di riservatezza di Office in diverse piattaforme del sistema operativo (Windows, MacOS, iOS e Android) e per il Web, vedere la documentazione di Office [supporto per le funzionalità di etichetta di riservatezza nelle app](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps).
+Per confrontare le funzionalità di riservatezza predefinite di Office in diverse piattaforme del sistema operativo (Windows, MacOS, iOS e Android) e per il Web, vedere la documentazione relativa alla conformità del Microsoft 365, [supporto per le funzionalità di etichetta di riservatezza nelle app](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). Questa documentazione include anche i numeri di build di Office o le informazioni sul canale di aggiornamento di Office per le funzionalità supportate.
 
 |Funzionalità|Client classico|Client di etichetta unificato|Client di assegnazione di etichette incorporato di Office|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Etichettatura manuale:| **Sì** | **Sì** |**Sì** |
 |Etichetta predefinita:| **Sì** | **Sì** | **Sì** |
-|Etichettatura consigliata o automatica:| **Sì** | **Sì** | No |
+|Etichettatura consigliata o automatica: <br />-Per Word, Excel, PowerPoint| **Sì** | **Sì** | **Sì** |
+|Etichettatura consigliata o automatica:<br />-Per Outlook| **Sì** | **Sì** | No |
 |Etichettatura obbligatoria:| **Sì** | **Sì** | No |
-|Autorizzazioni definite dall'utente per un'etichetta:<br />-Non trasmettere per i messaggi di posta elettronica<br />-Autorizzazioni personalizzate per Word, Excel, PowerPoint, Esplora file| **Sì** | **Sì** | No |
+|Autorizzazioni definite dall'utente per un'etichetta: <br />-Non trasmettere per i messaggi di posta elettronica| **Sì** | **Sì** | **Sì** |
+|Autorizzazioni definite dall'utente per un'etichetta: <br />-Autorizzazioni personalizzate per Word, Excel, PowerPoint, Esplora file| **Sì** | **Sì** | No |
 |Supporto multilingue per le etichette:| **Sì** | **Sì** |**Sì** |
 |Ereditarietà delle etichette dagli allegati di posta elettronica:| **Sì** | **Sì**  |No |
 |Personalizzazioni che includono:<br />- Etichetta predefinita per la posta elettronica<br />-Messaggi popup in Outlook <br />- Supporto S/MIME<br />- Opzione Segnala un problema| **Sì** <sup>1</sup> | **Sì** <sup>2</sup> | No |
@@ -102,7 +104,7 @@ Per confrontare le funzionalità predefinite dell'etichetta di riservatezza di O
 |Autorizzazioni personalizzate impostate in modo indipendente da un'etichetta:| **Sì** | **Sì** <sup>3</sup>| No |
 |Barra di Information Protection nelle app Office:| **Sì** | **Sì**| No |
 |Contrassegni visivi come azione etichetta (intestazione, piè di pagina, filigrana):| **Sì** | **Sì** | **Sì**|
-|Contrassegni visivi per app:| **Sì** | **Yes* | No |
+|Contrassegni visivi per app:| **Sì** | **Sì* | No |
 |Contrassegni visivi dinamici con variabili:| **Sì** | **** | No |
 |Etichetta con Esplora file:| **Sì** | **Sì** | No |
 |Un visualizzatore per i file protetti (testo, immagini, PDF, Pfile):| **Sì** | **Sì** | No|
