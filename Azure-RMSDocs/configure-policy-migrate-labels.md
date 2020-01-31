@@ -4,7 +4,7 @@ description: Eseguire la migrazione di Azure Information Protection etichette a 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/21/2020
+ms.date: 1/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: labelmigrate
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 382688a769513ba8540f844b86906ef078cee754
-ms.sourcegitcommit: 9bac5032d7251057f84a0e3ab0aba0e48a77b5f8
+ms.openlocfilehash: a62fbe465eda5dec253da938878f343bb00b8173
+ms.sourcegitcommit: 200c710a675180cc0488defff299f2cc3c66922f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76517644"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76812586"
 ---
 # <a name="how-to-migrate-azure-information-protection-labels-to-unified-sensitivity-labels"></a>Come eseguire la migrazione di etichette di Azure Information Protection a etichette di riservatezza unificate
 
@@ -215,9 +215,9 @@ Per verificare se i client e i servizi usati supportano l'assegnazione di etiche
     
     Questo servizio supporta le etichette sia prima che dopo la migrazione all'archivio di etichettatura unificata secondo la logica seguente:
     
-    - Se i centri di amministrazione hanno le stesse etichette dei portale di Azure: le etichette unificate vengono recuperate dai centri di amministrazione. Per selezionare tali etichette in Cloud App Security, è necessario pubblicare almeno un'etichetta in almeno un utente.
+    - Se i centri di amministrazione hanno etichette di riservatezza, queste etichette vengono recuperate dai centri di amministrazione. Per selezionare tali etichette in Cloud App Security, è necessario pubblicare almeno un'etichetta in almeno un utente.
     
-    - Se i centri di amministrazione non hanno le stesse etichette di quelle presenti nel portale di Azure: le etichette unificate non vengono usate dai centri di amministrazione e, al contrario, le etichette vengono recuperate dall'portale di Azure.
+    - Se i centri di amministrazione non hanno etichette di riservatezza, Azure Information Protection le etichette vengono recuperate dalla portale di Azure.
 
 - Servizi da fornitori e sviluppatori di software che usano [Microsoft Information Protection SDK](https://docs.microsoft.com/information-protection/develop/overview).
 
