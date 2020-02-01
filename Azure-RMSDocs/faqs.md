@@ -4,7 +4,7 @@ description: Alcune domande frequenti su Azure Information Protection e il relat
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 1/29/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 90fb51a4b17ccf8f6b0689d41b86dbee284da024
-ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
+ms.openlocfilehash: c690329492732cbc446575335f57e9dae83979f5
+ms.sourcegitcommit: 17c327d58aa1695e59fb2cd8aea3b3cfc65f60b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2020
-ms.locfileid: "76281650"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76913011"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
@@ -50,13 +50,17 @@ Per ulteriori informazioni sulla migrazione delle etichette esistenti, vedere [H
 
 ## <a name="how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform"></a>Come è possibile determinare se il tenant si trova nella piattaforma di etichettatura unificata?
 
-Quando il tenant si trova nella piattaforma di etichettatura unificata, le etichette di riservatezza possono essere usate dai [client e dai servizi che supportano l'assegnazione di etichette unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling). Se è stata ottenuta la sottoscrizione per Azure Information Protection nel 2019 giugno o versione successiva, il tenant si trova automaticamente nella piattaforma di assegnazione di etichette unificata e non è necessaria alcuna azione aggiuntiva. Il tenant potrebbe anche trovarsi su questa piattaforma perché qualcuno ha eseguito la migrazione delle etichette Azure Information Protection.
+Quando il tenant si trova nella piattaforma di etichettatura unificata, supporta le etichette di riservatezza che possono essere usate dai [client e dai servizi che supportano l'assegnazione di etichette unificata](configure-policy-migrate-labels.md#clients-and-services-that-support-unified-labeling). Se è stata ottenuta la sottoscrizione per Azure Information Protection nel 2019 giugno o versione successiva, il tenant si trova automaticamente nella piattaforma di assegnazione di etichette unificata e non è necessaria alcuna azione aggiuntiva. Il tenant potrebbe anche trovarsi su questa piattaforma perché qualcuno ha eseguito la migrazione delle etichette Azure Information Protection.
 
-Per controllare lo stato, nella portale di Azure passare a **Azure Information Protection** > **Gestisci** > **etichetta unificata**e visualizzare lo stato dell' **etichettatura unificata**:
+Se il tenant non è presente nella piattaforma di assegnazione portale di Azure di etichette unificata, nel riquadro dei **Azure Information Protection** verrà visualizzato il banner informativo seguente:
 
-- Se viene visualizzato **attivato**, il tenant si trova nella piattaforma di etichettatura unificata.
+![Banner informazioni sulla migrazione](media/migration-status-banner.png)
 
-- Se la visualizzazione **non è attivata**, il tenant non si trova nella piattaforma di assegnazione di etichette unificata. Per istruzioni sulla migrazione, vedere [How to migrate Azure Information Protection labels to Unified Sensitivity labels](configure-policy-migrate-labels.md).
+È anche possibile selezionare **Azure Information Protection** > **Gestisci** > **etichetta unificata**e visualizzare lo stato dell' **etichettatura unificata**:
+
+- Se viene visualizzato **attivato**, il tenant si trova nella piattaforma di etichettatura unificata ed è possibile [creare, configurare e pubblicare etichette](/microsoft-365/compliance/create-sensitivity-labels) da Microsoft 365 Compliance Center.
+
+- Se la visualizzazione **non è attivata**, il tenant non si trova nella piattaforma di assegnazione di etichette unificata. Per istruzioni e indicazioni sulla migrazione, vedere [How to migrate Azure Information Protection labels to Unified Sensitivity labels](configure-policy-migrate-labels.md).
 
 ## <a name="whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Qual è la differenza tra il client Azure Information Protection e il client di Azure Information Protection Unified Labeling?
 

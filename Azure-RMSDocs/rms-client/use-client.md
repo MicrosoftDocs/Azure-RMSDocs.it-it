@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 3e0ed6d49a49604cfc666e1cda5390c480dc192f
-ms.sourcegitcommit: 46dbd8ea769c0c5549a008d7464c17032a1f7130
+ms.openlocfilehash: 93cc71a60c1037e5e59338b1bde096b8d74ae2e4
+ms.sourcegitcommit: 17c327d58aa1695e59fb2cd8aea3b3cfc65f60b8
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/26/2020
-ms.locfileid: "76755800"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912964"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -166,15 +166,15 @@ Per un confronto dettagliato delle differenze di comportamento per specifiche im
 
 Anche se il Azure Information Protection client di assegnazione unificata di etichette è ancora in fase di sviluppo, le seguenti funzionalità e differenze di comportamento rispetto al client classico non sono attualmente pianificate per essere disponibili nelle versioni future per il client Unified Labeling: 
 
-- Autorizzazioni personalizzate come opzione separata che gli utenti possono selezionare nelle app di Office: Word, Excel e PowerPoint
+- Autorizzazioni personalizzate come [opzione separata che gli utenti possono selezionare nelle app di Office: Word, Excel e PowerPoint](client-classify-protect.md#set-custom-permissions-for-a-document)
 
-- Rilevamento e revoca da app di Office ed Esplora file
+- [Rilevare e revocare le](client-track-revoke.md) opzioni dalle app di Office e da Esplora file
 
 - Titolo e descrizione comando della barra di Information Protection
 
-- Modalità di sola protezione (nessuna etichetta) tramite i modelli
+- [Modalità di sola protezione](client-protection-only-mode.md) (nessuna etichetta) tramite i modelli
 
-- Protezione del documento PDF come formato ppdf
+- Proteggi documento PDF come file con [estensione Ppdf (formato precedente)](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)
 
 - Visualizzare il pulsante Non inoltrare in Outlook
 
