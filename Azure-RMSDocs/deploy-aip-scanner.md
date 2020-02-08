@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire la versione corr
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 2/06/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: eb50c150ee908c14c04e0786c57b4ae53e2599a0
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 272e5898859efd29033b8dc3430bb4a2d193fa75
+ms.sourcegitcommit: d9465ec12b78c24d4d630295d4e5ffae0ba8d647
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960577"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77044980"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -130,11 +130,11 @@ Seguire le istruzioni riportate nelle guide di amministrazione per supportare un
     
     In questa configurazione, lo scanner del client classico non può applicare la protezione, rimuovere la protezione o ispezionare i file protetti usando la chiave basata sul cloud dell'organizzazione. Lo scanner è invece limitato all'uso di etichette che applicano solo la classificazione o applicano la protezione che usa [HYOK](configure-adrms-restrictions.md)
 
-- Per il client Unified Labeling: [supporto per i computer disconnessi](./rms-client/clientv2-admin-guide-customizations.md#support-for-disconnected-computers)
+- Per il client Unified Labeling: il client Unified Labeling non può applicare la protezione senza una connessione online. 
     
-    In questa configurazione, lo scanner dal client Unified Labeling può applicare la protezione, rimuovere la protezione ed esaminare i file protetti usando il parametro *DelegatedUser* con il cmdlet [set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) .
+    Lo scanner dal client Unified Labeling può applicare le etichette in base ai criteri importati con il cmdlet [Import-AIPScannerConfiguration](https://docs.microsoft.com/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration?view=azureipps) .
 
-Procedere quindi come segue:
+A tale scopo, effettuare le operazioni seguenti:
 
 1. Configurare lo scanner nel portale di Azure, creando un profilo dello scanner. Se occorre assistenza per questo passaggio, vedere [Configurare lo scanner nel portale di Azure](#configure-the-scanner-in-the-azure-portal).
 
@@ -213,7 +213,7 @@ Se i criteri dell'organizzazione proibiscono il diritto di **accesso locale** pe
 
 Prima di installare lo scanner o aggiornarlo da una versione di disponibilità generale precedente dello scanner, creare un profilo per lo scanner nella portale di Azure. Si configura il profilo per le impostazioni dello scanner e per i repository di dati da analizzare.
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al riquadro **Azure Information Protection**. 
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection**. 
     
     Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
     
@@ -261,7 +261,7 @@ Prima di installare lo scanner o aggiornarlo da una versione di disponibilità g
     
     I caratteri jolly e i percorsi WebDav non sono supportati.
     
-    Di seguito sono riportati alcuni esempi.
+    Esempi:
     
     - Per un percorso locale: `C:\Folder`
     
@@ -274,9 +274,9 @@ Prima di installare lo scanner o aggiornarlo da una versione di disponibilità g
     > [!TIP]
     > Se si aggiunge un percorso di SharePoint per "Documenti condivisi":
     >
-     >- Specificare **Documenti condivisi** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da Documenti condivisi. ad esempio `http://sp2013/Shared Documents`
+     >- Specificare **Documenti condivisi** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da Documenti condivisi. Ad esempio: `http://sp2013/Shared Documents`
      >
-     >- Specificare **Documenti** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da una sottocartella in Documenti condivisi. ad esempio `http://sp2013/Documents/Sales Reports`
+     >- Specificare **Documenti** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da una sottocartella in Documenti condivisi. Ad esempio: `http://sp2013/Documents/Sales Reports`
     
     Per le impostazioni rimanenti di questo riquadro, non modificarle per questa configurazione iniziale, ma mantenerle come **predefinite del profilo**. Questo significa che il repository dei dati eredita le impostazioni dal profilo dello scanner. 
     
@@ -584,7 +584,7 @@ Esistono tre scenari alternativi che lo scanner di Azure Information Protection 
     
     Applicabile allo scanner solo dal client Unified labeling. questa configurazione consente di rimuovere le etichette esistenti, che includono la protezione se è stata applicata con tale etichetta. La protezione applicata indipendentemente da un'etichetta viene mantenuta. Usare questa configurazione se è necessario rimuovere tutte le etichette dai file in un repository.
     
-    Configurare le impostazioni seguenti:
+    Configurare le seguenti impostazioni:
     - **Etichettare i file in base al contenuto**: **disattivato**
     - **Etichetta predefinita**: **None**
     - **Rietichettare i file**: **on** con la casella di controllo **Imponi etichetta predefinita** selezionata
@@ -641,7 +641,7 @@ Altri fattori che influenzano le prestazioni dello scanner:
 
 - La costruzione di espressioni regex per condizioni personalizzate
     
-    Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. Ad esempio:
+    Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. Ad esempio,
     
     - Evitare [quantificatori greedy](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)
     
