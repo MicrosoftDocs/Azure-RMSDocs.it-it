@@ -177,10 +177,10 @@ Enumeratore del tipo di corpo.
  Valori                         | Descrizioni                                
 --------------------------------|---------------------------------------------
 ServiceDiscovery            | Utilizzare una chiamata HTTP separata per determinare gli endpoint di servizio RMS
-AuthInfoCache            | Memorizzare nella cache le richieste OAuth2 per dominio/tenant per ridurre le risposte 401 non necessarie. Disabilitare per app/servizi che gestiscono la propria autenticazione HTTP (ad esempio, SPO, Edge)
+AuthInfoCache            | Memorizzare nella cache le richieste OAuth2 per dominio/tenant per ridurre le risposte 401 non necessarie. Disabilitare per app/servizi che gestiscono la propria autenticazione HTTP (ad esempio, SPO, Microsoft Edge)
 LinuxEncryptedCache            | Abilitare la memorizzazione nella cache crittografata per le piattaforme Linux (leggere i prerequisiti per questa funzionalità)
 SingleDomainName            | Abilitare il nome della singola società per la ricerca DNS. ad esempio [https://corprights](https://corprights)
-PolicyAuth            | Abilitare l'autenticazione HTTP automatica per le richieste inviate al servizio criteri. Disabilitare per app/servizi che gestiscono la propria autenticazione HTTP (ad esempio, SPO, Edge)
+PolicyAuth            | Abilitare l'autenticazione HTTP automatica per le richieste inviate al servizio criteri. Disabilitare per app/servizi che gestiscono la propria autenticazione HTTP (ad esempio, SPO, Microsoft Edge)
 Definisce nuove funzionalità in base al nome.
   
 #### <a name="httprequesttype-enum"></a>Enumerazione HttpRequestType
