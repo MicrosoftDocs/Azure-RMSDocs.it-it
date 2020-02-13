@@ -4,7 +4,7 @@ description: Informazioni sugli elementi nuovi o modificati in una versione del 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/08/2020
+ms.date: 02/12/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v1client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: c3babbe6a0470df498567f6614362e87c14a24cf
-ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
+ms.openlocfilehash: abb96a7d86bddea671230fbd033d9c940cf982a3
+ms.sourcegitcommit: 6db47d691974b5450b80c58a49b2913ec1a99802
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2020
-ms.locfileid: "76281599"
+ms.lasthandoff: 02/12/2020
+ms.locfileid: "77155926"
 ---
 # <a name="azure-information-protection-client-version-release-history-and-support-policy"></a>Client di Azure Information Protection: cronologia delle versioni e criteri per il supporto
 
@@ -55,9 +55,9 @@ Le versioni di anteprima non devono essere distribuite agli utenti finali nelle 
 |1.26.6.0|04/17/2018|
 |1.10.56.0|09/18/2017|
 |1.7.210.0|06/06/2017|
-|1.4.21.0|15/03/2017|
+|1.4.21.0|03/15/2017|
 |1.3.155.2|02/08/2017|
-|1.2.4.0.0|27/10/2016|
+|1.2.4.0.0|10/27/2016|
 |1.1.23.0|10/01/2016|
 
 Il formato della data usato in questa pagina è *mese/giorno/anno*.
@@ -75,10 +75,27 @@ Usare le informazioni seguenti per scoprire le novità o le modifiche per una ve
 >  
 > Per il supporto tecnico, vedere le informazioni riportate in [Opzioni di supporto e risorse per la community](../information-support.md#support-options-and-community-resources). È anche possibile rivolgersi al team di Azure Information Protection nel [sito di Yammer](https://www.yammer.com/askipteam/).
 
+## <a name="version-154590"></a>Versione 1.54.59.0
+
+**Rilasciata**: 12/02/2020
+
+Questa versione include solo correzioni. 
+
+**Correzioni**:
+
+- Viene risolto il problema per cui i file protetti da IQP visualizzano le opzioni **Ripristina** e/o **Salva con nome dopo la** rimozione della protezione. 
+
+- Molti testi della descrizione comando della funzionalità del prodotto sono stati migliorati per chiarezza e facilità di comprensione. 
+
+- Problemi relativi alla stabilità dei client quando si lavora con i file PDF protetti vengono risolti. 
+
+- Le etichette di protezione vengono ora rimosse come previsto se l'etichetta viene eliminata nel messaggio di posta elettronica durante il processo di creazione della posta elettronica. 
 
 ## <a name="version-154330"></a>Versione 1.54.33.0
 
 **Rilasciata**: 10/23/2019
+
+Supportato tramite 08/12/2020
 
 Questa versione include MSIPC versione 1.0.4008.0813 del client RMS.
 
