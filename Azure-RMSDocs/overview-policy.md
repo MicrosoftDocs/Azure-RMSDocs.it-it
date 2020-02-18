@@ -12,12 +12,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b000d36d3613f137ec788988e05da967e1837898
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: fe9776e53f2f6c5a0c52bbc00cc0e886dfeb3bf0
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74935402"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423132"
 ---
 # <a name="overview-of-the-azure-information-protection-policy"></a>Panoramica dei criteri di Azure Information Protection
 
@@ -28,7 +28,7 @@ ms.locfileid: "74935402"
 > [!NOTE]
 > Il criterio di Azure Information Protection si applica al client di Azure Information Protection (classico) e non al client di etichettatura unificato Azure Information Protection. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 > 
-> Per informazioni sulle etichette di riservatezza, vedere la documentazione di Office. Ad esempio, [Panoramica delle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
+> Per informazioni sulle etichette di riservatezza, vedere la documentazione sulla conformità del Microsoft 365. Ad esempio, informazioni [sulle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
 
 Un criterio di Azure Information Protection contiene gli elementi seguenti che è possibile configurare:
     

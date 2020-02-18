@@ -12,19 +12,19 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: c690329492732cbc446575335f57e9dae83979f5
-ms.sourcegitcommit: 17c327d58aa1695e59fb2cd8aea3b3cfc65f60b8
+ms.openlocfilehash: 09c83a38d08efa6be464124ae1bfdae45d4fdbdc
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76913011"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423171"
 ---
 # <a name="frequently-asked-questions-for-azure-information-protection"></a>Domande frequenti su Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
-Di seguito sono riportate alcune possibili domande su Azure Information Protection o sul servizio Azure Rights Management (Azure RMS) e le relative risposte.
+Di seguito sono riportate alcune possibili domande su Azure Information Protection o sul servizio Azure Rights Management (Azure RMS) e relative risposte.
 
 La pagina delle domande frequenti viene aggiornata periodicamente e le nuove aggiunte vengono pubblicate negli annunci mensili di aggiornamento della documentazione nel [blog tecnico di Azure Information Protection](https://aka.ms/AIPblog).
 
@@ -66,7 +66,7 @@ Se il tenant non è presente nella piattaforma di assegnazione portale di Azure 
 
 Il **client Azure Information Protection (classico)** è stato reso disponibile dal momento in cui Azure Information Protection stato annunciato per la prima volta come nuovo servizio per la classificazione e la protezione di file e messaggi di posta elettronica. Questo client Scarica le etichette e le impostazioni dei criteri da Azure e configura i criteri di Azure Information Protection dalla portale di Azure. Per ulteriori informazioni, vedere [Panoramica dei criteri di Azure Information Protection](overview-policy.md). 
 
-Il **Azure Information Protection client di etichetta unificata** è un'aggiunta più recente, per supportare l'archivio di etichette unificato supportato da più applicazioni e servizi. Questo client Scarica le etichette di riservatezza e le impostazioni dei criteri dai centri di amministrazione seguenti: il Centro sicurezza e conformità di Office 365, il Centro sicurezza Microsoft 365 e la Microsoft 365 Compliance Center. Per altre informazioni, vedere [Panoramica delle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
+Il **Azure Information Protection client di etichetta unificata** è un'aggiunta più recente, per supportare l'archivio di etichette unificato supportato da più applicazioni e servizi. Questo client Scarica le etichette di riservatezza e le impostazioni dei criteri dai centri di amministrazione seguenti: il Centro sicurezza e conformità di Office 365, il Centro sicurezza Microsoft 365 e la Microsoft 365 Compliance Center. Per ulteriori informazioni, vedere informazioni [sulle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
 
 Se non si è certi del client da usare, vedere [scegliere il client Azure Information Protection da usare](./rms-client/use-client.md#choose-which-labeling-client-to-use-for-windows-computers).
 
@@ -217,7 +217,7 @@ Le differenze principali tra queste due soluzioni sono le seguenti:
 
 |Infrastruttura di classificazione file di Windows Server|Scanner di Azure Information Protection|
 |--------------------------------|-------------------------------------|
-|Archivi dati supportati: <br /><br />- Cartelle locali in Windows Server|Archivi dati supportati: <br /><br />- Cartelle locali in Windows Server<br /><br />- Condivisione file di Windows e NAS (Network-Attached Storage)<br /><br />- SharePoint Server 2016 e SharePoint Server 2013. Anche SharePoint Server 2010 è supportato per i clienti che dispongono del [supporto "Extended" per questa versione di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).|
+|Archivi dati supportati: <br /><br />- Cartelle locali in Windows Server|Archivi dati supportati: <br /><br />- Cartelle locali in Windows Server<br /><br />- Condivisione file di Windows e NAS (Network-Attached Storage)<br /><br />- SharePoint Server 2016 e SharePoint Server 2013. Anche SharePoint Server 2010 è supportato per i clienti che dispongono del [supporto "Extended" per la versione corrente di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).|
 |Modalità operativa: <br /><br />- Tempo reale|Modalità operativa: <br /><br />- Ricerca per indicizzazione sistematica degli archivi dati, con esecuzione una tantum o ripetuta del ciclo|
 |Supporto per i tipi di file: <br /><br />- Per impostazione predefinita, sono protetti tutti i tipi di file <br /><br />- Specifici tipi di file possono essere esclusi dalla protezione modificando il Registro di sistema|Supporto per i tipi di file: <br /><br />- I tipi di file Office e i documenti PDF sono protetti per impostazione predefinita <br /><br />- Altri tipi di file possono essere inclusi nella protezione modificando il Registro di sistema|
 

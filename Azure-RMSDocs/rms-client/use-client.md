@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 93cc71a60c1037e5e59338b1bde096b8d74ae2e4
-ms.sourcegitcommit: 17c327d58aa1695e59fb2cd8aea3b3cfc65f60b8
+ms.openlocfilehash: 8585245243813977c6c7442fab4d5687e89882c1
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912964"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422855"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -65,7 +65,7 @@ La versione più recente del client Unified Labeling consente di chiudere la par
 
 È possibile utilizzare client diversi nello stesso ambiente per supportare requisiti aziendali diversi, come illustrato nel seguente esempio di distribuzione. In un ambiente client misto è consigliabile usare le etichette unificate in modo che i client condividano lo stesso set di etichette per semplificare l'amministrazione. Per impostazione predefinita, i nuovi clienti hanno etichette unificate, perché i tenant si trovano nella piattaforma di etichettatura unificata. Per ulteriori informazioni, vedere [come è possibile determinare se il tenant si trova nella piattaforma di etichettatura unificata?](../faqs.md#how-can-i-determine-if-my-tenant-is-on-the-unified-labeling-platform)
 
-Quando si dispone di un computer Windows che esegue le app di Office 365 che corrispondono alla versione minima 1910 e uno dei client di Azure Information Protection è installato, per impostazione predefinita il client di assegnazione di etichette incorporato è disabilitato nelle app di Office. Tuttavia, è possibile modificare questo comportamento per usare il client di assegnazione di etichette incorporato solo per le app di Office. Con questa configurazione, il client di Azure Information Protection (classica o unificata) rimane disponibile per l'assegnazione di etichette in Esplora file, PowerShell e lo scanner. Per istruzioni su come disabilitare il client Azure Information Protection nelle app di Office 365, vedere la sezione le [etichette di riservatezza vengono eseguite insieme al client di Azure Information Protection in Office per Windows?](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#can-sensitivity-labels-run-alongside-the-azure-information-protection-client-in-office-for-windows) dalla documentazione di Office.
+Quando si dispone di un computer Windows che esegue le app di Office 365 che corrispondono alla versione minima 1910 e uno dei client di Azure Information Protection è installato, per impostazione predefinita il client di assegnazione di etichette incorporato è disabilitato nelle app di Office. Tuttavia, è possibile modificare questo comportamento per usare il client di assegnazione di etichette incorporato solo per le app di Office. Con questa configurazione, il client di Azure Information Protection (classica o unificata) rimane disponibile per l'assegnazione di etichette in Esplora file, PowerShell e lo scanner. Per istruzioni su come disabilitare il client Azure Information Protection nelle app di Office 365, vedere la sezione [Office built-in etichettating client and the Azure Information Protection client](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#office-built-in-labeling-client-and-the-azure-information-protection-client) dalla documentazione di Microsoft 365 Compliance.
 
 ##### <a name="example-deployment-strategy"></a>Strategia di distribuzione di esempio:
 
@@ -176,7 +176,7 @@ Anche se il Azure Information Protection client di assegnazione unificata di eti
 
 - Proteggi documento PDF come file con [estensione Ppdf (formato precedente)](client-admin-guide-customizations.md#dont-protect-pdf-files-by-using-the-iso-standard-for-pdf-encryption)
 
-- Visualizzare il pulsante Non inoltrare in Outlook
+- Visualizzazione del pulsante Non inoltrare in Outlook
 
 - Criteri demo
 

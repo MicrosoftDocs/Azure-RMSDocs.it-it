@@ -1,6 +1,6 @@
 ---
 title: Criteri predefiniti per Azure Information Protection - AIP
-description: Informazioni sulla configurazione dei criteri predefiniti per Azure Information Protection. Se si modificano i criteri predefiniti, è possibile fare riferimento a questi valori per ripristinare le impostazioni predefinite dei criteri.
+description: Informazioni sulla configurazione dei criteri predefiniti per Azure Information Protection. Se si modifica il criterio predefinito, è possibile fare riferimento a questi valori per ripristinare le impostazioni predefinite del proprio criterio.
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
@@ -10,14 +10,14 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 31d2a86316d8208f46469220a95658dcc6d34c12
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: dfd8aa4d68d792b67c3dee7dd823ecb71b81c01e
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742928"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422746"
 ---
-# <a name="the-default-azure-information-protection-policy"></a>Criteri predefiniti di Azure Information Protection
+# <a name="the-default-azure-information-protection-policy"></a>Criterio predefinito di Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
@@ -27,7 +27,7 @@ ms.locfileid: "75742928"
 > [!NOTE]
 > Il criterio di Azure Information Protection si applica al client di Azure Information Protection (classico) e non al client di etichettatura unificato Azure Information Protection. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 > 
-> Per informazioni su come configurare le etichette di riservatezza e le impostazioni dei criteri per il client di etichettatura unificata, vedere [Panoramica delle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) nella documentazione di Office.
+> Per informazioni su come configurare le etichette di riservatezza e le impostazioni dei criteri per il client di etichettatura unificata, vedere informazioni [sulle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels) dalla documentazione sulla conformità del Microsoft 365.
 
 Le informazioni seguenti sono utili per comprendere come viene configurato il criterio predefinito per Azure Information Protection.
 
@@ -76,7 +76,7 @@ Quando gli utenti selezionano questa etichetta, l'opzione Non inoltrare di Outlo
 
 |Label|Descrizione comando|Impostazioni|
 |-------------------------------|---------------------------|-----------------|
-|Personale|Dati non business, solo per uso personale.|**Abilitato**: on <br /><br />**Colore**: verde chiaro<br /><br />**Contrassegni visivi**: off <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
+|Personal|Dati non business, solo per uso personale.|**Abilitato**: on <br /><br />**Colore**: verde chiaro<br /><br />**Contrassegni visivi**: off <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 |Pubblico|Dati business appositamente preparati e approvati per l'uso pubblico.|**Abilitato**: on <br /><br />**Colore**: verde<br /><br />**Contrassegni visivi**: off<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 |Informazioni di carattere generale|Dati business non sono destinati a uso pubblico. Questi dati possono tuttavia essere condivisi con partner esterni, se necessario. Ad esempio, un elenco telefonico interno della società, organigrammi, standard interni e la maggior parte delle comunicazioni interne.|**Abilitato**: on <br /><br />**Colore**: blu <br /><br />**Contrassegni visivi**: off<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 |Confidential (Riservato)|Dati aziendali riservati che potrebbero causare danni all'azienda se condivisi con utenti non autorizzati. Sono esempi di questo tipo di contenuto i contratti, i report sulla sicurezza, i riepiloghi previsionali e i dati sulle vendite.|**Abilitato**: on <br /><br />**Colore**: arancione<br /><br />**Contrassegni visivi**: off<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
@@ -103,9 +103,9 @@ Le autorizzazioni di protezione corrispondono a quelle del [modello predefinito]
 
 ### <a name="information-protection-bar"></a>Barra Information Protection
 
-|Impostazioni|Value|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
-|Title|Sensibilità|
+|Titolo|Sensibilità|
 |Descrizione comando|Etichetta corrente per questo contenuto. Questa impostazione identifica il rischio per l'azienda se questo contenuto è condiviso con persone non autorizzate all'interno o all'esterno dell'organizzazione.|
 
 
@@ -113,7 +113,7 @@ Le autorizzazioni di protezione corrispondono a quelle del [modello predefinito]
 
 Alcune impostazioni sono state aggiunte dopo il 31 luglio 2017.
 
-|Impostazioni|Value|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
 |Selezionare l'etichetta predefinita|Nessuno|
 |Invia i dati di controllo alle analisi di Azure Information Protection|Off|
@@ -134,7 +134,7 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 
 |Label|Descrizione comando|Impostazioni|
 |-------------------------------|---------------------------|-----------------|
-|Personale|Dati non business, solo per uso personale.|**Abilitato**: on <br /><br />**Colore**: verde chiaro<br /><br />**Contrassegni visivi**: off <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
+|Personal|Dati non business, solo per uso personale.|**Abilitato**: on <br /><br />**Colore**: verde chiaro<br /><br />**Contrassegni visivi**: off <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 |Pubblico|Dati business appositamente preparati e approvati per l'uso pubblico.|**Abilitato**: on <br /><br />**Colore**: verde<br /><br />**Contrassegni visivi**: off<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 |Informazioni di carattere generale|Dati business non sono destinati a uso pubblico. Questi dati possono tuttavia essere condivisi con partner esterni, se necessario. Ad esempio, un elenco telefonico interno della società, organigrammi, standard interni e la maggior parte delle comunicazioni interne.|**Abilitato**: on <br /><br />**Colore**: blu <br /><br />**Contrassegni visivi**: off<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 |Confidential (Riservato)|Dati aziendali riservati che potrebbero causare danni all'azienda se condivisi con utenti non autorizzati. Sono esempi di questo tipo di contenuto i contratti, i report sulla sicurezza, i riepiloghi previsionali e i dati sulle vendite.|**Abilitato**: on <br /><br />**Colore**: arancione<br /><br />**Contrassegni visivi**: off<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
@@ -152,15 +152,15 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 
 ### <a name="information-protection-bar"></a>Barra Information Protection
 
-|Impostazioni|Value|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
-|Title|Sensibilità|
+|Titolo|Sensibilità|
 |Descrizione comando|Etichetta corrente per questo contenuto. Questa impostazione identifica il rischio per l'azienda se questo contenuto è condiviso con persone non autorizzate all'interno o all'esterno dell'organizzazione.|
 
 
 ### <a name="settings"></a>Impostazioni
 
-|Impostazioni|Value|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
 |Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta applicata automaticamente o dagli utenti|Off|
 |Selezionare l'etichetta predefinita|Nessuno|
@@ -174,9 +174,9 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 
 |Label|Descrizione comando|Impostazioni|
 |-------------------------------|---------------------------|-----------------|
-|Personale|Solo per uso personale. I dati verranno monitorati dall'organizzazione. Le informazioni personali non devono includere dati aziendali.|**Abilitato**: on <br /><br />**Colore**: verde chiaro<br /><br />**Contrassegni visivi**: off <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
+|Personal|Solo per uso personale. I dati verranno monitorati dall'organizzazione. Le informazioni personali non devono includere dati aziendali.|**Abilitato**: on <br /><br />**Colore**: verde chiaro<br /><br />**Contrassegni visivi**: off <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 |Pubblico|Queste informazioni sono interne e possono essere usate da tutti gli utenti all'interno o all'esterno dell'azienda.|**Abilitato**: on <br /><br />**Colore**: verde<br /><br />**Contrassegni visivi**: off<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
-|Internal|Queste informazioni includono un'ampia gamma di dati aziendali interni che possono essere usati da tutti i dipendenti e possono essere condivisi con i clienti e partner commerciali autorizzati. Esempi di informazioni interne sono i criteri aziendali e la maggior parte delle comunicazioni interne.|**Abilitato**: on <br /><br />**Colore**: blu <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica): <br /><br />Riservatezza: Internal<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
+|Interna|Queste informazioni includono un'ampia gamma di dati aziendali interni che possono essere usati da tutti i dipendenti e possono essere condivisi con i clienti e partner commerciali autorizzati. Esempi di informazioni interne sono i criteri aziendali e la maggior parte delle comunicazioni interne.|**Abilitato**: on <br /><br />**Colore**: blu <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica): <br /><br />Riservatezza: Internal<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 |Confidential (Riservato)|Questi dati includono informazioni aziendali riservate. L'esposizione di questi dati a utenti non autorizzati potrebbe arrecare un danno all'organizzazione. Esempi di informazioni riservate sono i dati relativi ai dipendenti, progetti o contratti di singoli clienti e i dati degli account di vendita.|**Abilitato**: on <br /><br />**Colore**: arancione<br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica):<br /><br /> Riservatezza: Confidential (Riservato)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 |Secret (Segreto)|Questi dati includono informazioni estremamente riservate dell'azienda, che devono essere protette. L'esposizione dei dati segreti a utenti non autorizzati potrebbe arrecare un grave danno all'organizzazione. Sono informazioni segrete, ad esempio, i dati di identificazione personale, i record dei clienti, il codice sorgente e i rendiconti finanziari annunciati in anticipo.|**Abilitato**: on <br /><br />**Colore**: rosso<br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica):<br /><br /> Riservatezza: Secret (Segreto)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 
@@ -190,15 +190,15 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 
 ### <a name="information-protection-bar"></a>Barra Information Protection
 
-|Impostazioni|Value|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
-|Title|Sensibilità|
+|Titolo|Sensibilità|
 |Descrizione comando|La riservatezza delle informazioni è suddivisa in quattro livelli, ovvero Public (Pubblico), Internal (Interno), Confidential (Riservato) e Secret (Segreto), che consentono di identificare il rischio derivante dall'esposizione delle informazioni a utenti non autorizzati all'interno o all'esterno dell'azienda.|
 
 
 ### <a name="settings"></a>Impostazioni
 
-|Impostazioni|Value|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
 |Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta applicata automaticamente o dagli utenti|Off|
 |Selezionare l'etichetta predefinita|Nessuno|

@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire la versione corr
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 2/06/2020
+ms.date: 2/14/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 977dca2ab04071e0f58847d3a1d045e95a6c3a4f
-ms.sourcegitcommit: 6db47d691974b5450b80c58a49b2913ec1a99802
+ms.openlocfilehash: 03ec95f3e53bd522c1d1775e54dfae7305a578e3
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/12/2020
-ms.locfileid: "77155943"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423195"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -166,19 +166,27 @@ In genere, si usa lo stesso account utente per installare e configurare lo scann
     
     Popolare il database utilizzando lo script seguente: 
 
-
-
     Se non esiste (Select * from master. sys. server_principals in cui SID = SUSER_SID (' dominio\utente ')) inizia a dichiarare @T nvarchar (500) set @T =' CREATE LOGIN ' + QUOTENAME (' dominio\utente ') +' da WINDOWS ' exec (@T) END 
 
-Per creare un utente e concedere diritti di db_owner per questo database, rivolgersi al sysadmin per eseguire il seguente script SQL due volte. La prima volta, per l'account del servizio che esegue lo scanner e per la seconda volta è necessario installare e gestire lo scanner. Prima di eseguire lo script:
-1. Sostituire *dominio\utente* con il nome di dominio e il nome dell'account utente dell'account del servizio o dell'account utente.
-2. Sostituire *dbname* con il nome del database di configurazione dello scanner.
+Per creare un utente e concedere diritti di db_owner per il database, rivolgersi al sysadmin per eseguire le operazioni seguenti:
+
+1. Creare un database per lo scanner: <br>
+    **Create database AIPScannerUL_ [ProfileName]** **ALTER database AIPScannerUL_ [ProfileName] set Trustworthy on**
+    - Questo passaggio è facoltativo, ma consente il supporto per la risoluzione dei problemi più agevole, se necessario.
+
+2. Concedere i diritti all'utente che esegue il comando di installazione e che viene usato per eseguire i comandi di gestione dello scanner:
 
 Script SQL:
 
     if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
     USE DBName IF NOT EXISTS (select * from sys.database_principals where sid = SUSER_SID('domain\user')) BEGIN declare @X nvarchar(500) Set @X = 'CREATE USER ' + quotename('domain\user') + ' FROM LOGIN ' + quotename('domain\user'); exec sp_addrolemember 'db_owner', 'domain\user' exec(@X) END
 
+3. Concedere i diritti per l'account del servizio scanner:
+
+Script SQL:
+
+    if not exists(select * from master.sys.server_principals where sid = SUSER_SID('domain\user')) BEGIN declare @T nvarchar(500) Set @T = 'CREATE LOGIN ' + quotename('domain\user') + ' FROM WINDOWS ' exec(@T) END
+    
 Inoltre:
 
 - È necessario essere un amministratore locale nel server che eseguirà lo scanner
@@ -274,9 +282,9 @@ Prima di installare lo scanner o aggiornarlo da una versione di disponibilità g
     > [!TIP]
     > Se si aggiunge un percorso di SharePoint per "Documenti condivisi":
     >
-     >- Specificare **Documenti condivisi** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da Documenti condivisi. Ad esempio: `http://sp2013/Shared Documents`
+     >- Specificare **Documenti condivisi** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da Documenti condivisi. ad esempio `http://sp2013/Shared Documents`
      >
-     >- Specificare **Documenti** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da una sottocartella in Documenti condivisi. Ad esempio: `http://sp2013/Documents/Sales Reports`
+     >- Specificare **Documenti** nel percorso quando si vogliono analizzare tutti i documenti e tutte le cartelle da una sottocartella in Documenti condivisi. ad esempio `http://sp2013/Documents/Sales Reports`
     
     Per le impostazioni rimanenti di questo riquadro, non modificarle per questa configurazione iniziale, ma mantenerle come **predefinite del profilo**. Questo significa che il repository dei dati eredita le impostazioni dal profilo dello scanner. 
     
@@ -641,7 +649,7 @@ Altri fattori che influenzano le prestazioni dello scanner:
 
 - La costruzione di espressioni regex per condizioni personalizzate
     
-    Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. Ad esempio,
+    Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. Ad esempio:
     
     - Evitare [quantificatori greedy](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)
     

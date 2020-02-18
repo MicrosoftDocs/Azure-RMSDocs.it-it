@@ -12,12 +12,12 @@ ms.assetid: ''
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: dd65c04165b125df6239792e528f28586a75e78f
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 0c6d9de295be95fde6459849d4e9abb5161cf998
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75959860"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422838"
 ---
 # <a name="user-guide-remove-labels-and-protection-from-files-and-emails-that-have-been-labeled-by-azure-information-protection"></a>Guida dell'utente: rimuovere etichette e protezione da file e messaggi di posta elettronica che sono stati etichettati da Azure Information Protection
 
@@ -64,7 +64,7 @@ Quando si usa Esplora file, è possibile rimuovere rapidamente etichette e prote
 
 4. Per rimuovere protezione personalizzata da più file: nella finestra di dialogo **Classifica e proteggi - Azure Information Protection** fare clic su **Rimuovi le autorizzazioni personalizzate**.
 
-5. Fare clic su **Applica** e attendere la visualizzazione del messaggio **Operazione completata** per vedere i risultati. e quindi fare clic su **Chiudi**.
+5. Fare clic su **Applica** e attendere la visualizzazione del messaggio **Operazione completata** per vedere i risultati. Fare clic su **Chiudi**.
 
 
 ## <a name="other-instructions"></a>Altre istruzioni
@@ -74,5 +74,5 @@ Ulteriori procedure nella Guida per l'utente di Azure Information Protection:
 
 ## <a name="additional-information-for-administrators"></a>Informazioni aggiuntive per gli amministratori    
 
-Vedere [Panoramica delle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
+Vedere [informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
 

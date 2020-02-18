@@ -12,12 +12,12 @@ ms.assetid: 086600c2-c5d8-47ec-a4c0-c782e1797486
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bc7370507cce3b8ff783190cc82fcd8230329bf1
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 58567d3a8d76da4f872558a7aeea102562c7c3cf
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934875"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423161"
 ---
 # <a name="azure-information-protection-deployment-roadmap"></a>Guida di orientamento per la distribuzione di Azure Information Protection
 
@@ -25,7 +25,7 @@ ms.locfileid: "74934875"
 
 Usare le indicazioni della procedura che segue per preparare l'ambiente e per implementare e gestire Azure Information Protection per l'organizzazione.
 
-In alternativa: 
+In alternativa 
 
 - Cerchi istruzioni basate sullo scenario per Azure Information Protection? Vedere le [guide alle procedure per scenari comuni che usano Azure Information Protection](how-to-guides.md).
 
@@ -78,7 +78,7 @@ Riconfigurare le etichette per apportare le modifiche necessarie per supportare 
 
 - Etichette di Azure Information Protection per il client classico: [configurazione dei criteri di Azure Information Protection](./configure-policy.md)
 
-- Etichette di riservatezza per il client Unified Labeling: [Panoramica delle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)
+- Etichette di riservatezza per il client Unified Labeling: [informazioni sulle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels)
 
 Distribuire quindi il client di Azure Information Protection (versione classica) o il client per l'assegnazione di etichette unificata Azure Information Protection per gli utenti. Fornire formazione per gli utenti e istruzioni specifiche per la selezione delle etichette. Per ulteriori informazioni sull'installazione e sul supporto dei client, vedere le guide di amministrazione:
 

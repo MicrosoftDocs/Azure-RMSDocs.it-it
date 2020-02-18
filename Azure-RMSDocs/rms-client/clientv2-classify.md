@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: 0735bb20a02be6471c519bf17c46cd1354d9380b
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: bceeffc8c4c34d913cfd1f76f4f28d9f06d9169a
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75959490"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422861"
 ---
 # <a name="user-guide-classify-a-file-or-email-by-using-the-azure-information-protection-unified-labeling-client-for-windows"></a>Guida dell'utente: classificare un file o un messaggio di posta elettronica usando il client di etichettatura unificato di Azure Information Protection per Windows
 
@@ -92,7 +92,7 @@ La guida dell'amministratore include l'elenco completo dei tipi di file che supp
 
 3. Se è stato selezionato un file non supporta la classificazione, fare clic su **Chiudi**. Non è possibile classificare il file senza proteggerlo.
     
-    Se è stata selezionata un'etichetta, fare clic su **Applica** e attendere la visualizzazione del messaggio **Operazione completata** per vedere i risultati. e quindi fare clic su **Chiudi**.
+    Se è stata selezionata un'etichetta, fare clic su **Applica** e attendere la visualizzazione del messaggio **Operazione completata** per vedere i risultati. Fare clic su **Chiudi**.
 
 Se si vuole cambiare selezionare un'altra etichetta, ripetere la procedura e scegliere un'etichetta diversa.
 
@@ -106,5 +106,5 @@ Ulteriori istruzioni sulle procedure sono disponibili nel manuale dell'utente pe
 
 ## <a name="additional-information-for-administrators"></a>Informazioni aggiuntive per gli amministratori
 
-Vedere [Panoramica delle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
+Vedere [informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
 

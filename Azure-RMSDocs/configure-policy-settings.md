@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 0aa45184d927d673f225a71301770e1c9430662d
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: b6919c45441c5a6b2e3e9cc8cccc470b422d9b8c
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743496"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422778"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Come configurare le impostazioni dei criteri per Azure Information Protection
 
@@ -28,7 +28,7 @@ ms.locfileid: "75743496"
 > [!NOTE]
 > Queste istruzioni si applicano al client Azure Information Protection (classico) e non al client per l'etichettatura unificata di Azure Information Protection. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 > 
-> Per informazioni sulla configurazione delle impostazioni dei criteri per il client Unified Labeling, vedere la documentazione di Office. Ad esempio, [Panoramica delle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
+> Per informazioni sulla configurazione delle impostazioni dei criteri per il client Unified Labeling, vedere la documentazione relativa alla conformità del Microsoft 365. Ad esempio, informazioni [sulle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
 
 Oltre al titolo della barra e alla descrizione comando di Information Protection, nei criteri di Azure Information Protection sono disponibili alcune impostazioni che è possibile configurare indipendentemente dalle etichette:
 
@@ -38,7 +38,7 @@ Si noti che le impostazioni dei criteri potrebbero avere valori predefiniti dive
 
 ## <a name="to-configure-the-policy-settings"></a>Per configurare le impostazioni dei criteri
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al riquadro **Azure Information Protection**.
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection**.
     
     Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
 
@@ -48,7 +48,7 @@ Si noti che le impostazioni dei criteri potrebbero avere valori predefiniti dive
 
 3. Nel riquadro **criteri** configurare le impostazioni:
     
-   - **Select the default label** (Selezionare l'etichetta predefinita): quando si seleziona questa opzione, selezionare l'etichetta da assegnare ai documenti e ai messaggi di posta elettronica che non hanno un'etichetta. Non è possibile impostare un'etichetta come predefinita se contiene etichette secondarie.
+   - **Selezionare l'etichetta predefinita**: quando si seleziona questa opzione, selezionare l'etichetta da assegnare ai documenti e ai messaggi di posta elettronica che non hanno un'etichetta. Non è possibile impostare un'etichetta come predefinita se contiene etichette secondarie.
         
         Questa impostazione si applica alle app di Office e allo scanner. Non è applicabile a Esplora file o PowerShell.
     
@@ -56,7 +56,7 @@ Si noti che le impostazioni dei criteri potrebbero avere valori predefiniti dive
         
         Quando l'impostazione è impostata **su on**, i client che supportano il reporting centrale inviano i dati al servizio Azure Information Protection. Queste informazioni includono le etichette applicate e quando un utente seleziona un'etichetta con una classificazione più bassa o rimuove un'etichetta. Per ulteriori informazioni sulle informazioni inviate e archiviate, vedere la sezione [informazioni raccolte e inviate a Microsoft](reports-aip.md#information-collected-and-sent-to-microsoft) nella documentazione relativa al reporting centrale. Impostare questa impostazione criterio su **disattivato** per impedire l'invio di questi dati.
     
-    - **All documents and emails must have a label** (Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta): quando si imposta questa opzione su **Sì**, a tutti i documenti e messaggi di posta elettronica inviati deve essere applicata un'etichetta. L'etichetta può essere assegnata manualmente da un utente, automaticamente o come risultato di una [condizione](configure-policy-classification.md) oppure per impostazione predefinita selezionando l'opzione **Select the default label** (Selezionare l'etichetta predefinita).
+    - **Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**: quando si imposta questa opzione su **Sì**, a tutti i documenti e messaggi di posta elettronica inviati deve essere applicata un'etichetta. L'etichetta può essere assegnata manualmente da un utente, automaticamente o come risultato di una [condizione](configure-policy-classification.md) oppure per impostazione predefinita selezionando l'opzione **Selezionare l'etichetta predefinita**.
         
        Se al momento del salvataggio di un documento o dell'invio di un messaggio di posta elettronica non è assegnata un'etichetta, viene chiesto all'utente di selezionarne una. Ad esempio:
         
