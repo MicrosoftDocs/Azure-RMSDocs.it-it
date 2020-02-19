@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: c684bc08faaab4317df0588ccc9350199c62049d
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 4f816190cd240fb4dee90c67167de791b3a46d52
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743686"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423220"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-and-create-a-new-label"></a>Esercitazione: configurare le impostazioni dei criteri di Azure Information Protection e creare una nuova etichetta
 
@@ -49,7 +49,7 @@ Per completare questa esercitazione, è necessario:
 
 3. Deve essere installato il client Azure Information Protection (versione classica) nel computer in uso con Windows (almeno Windows 7 con Service Pack 1). 
     
-    È possibile installare la versione classica del client accedendo all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricando **AzInfoProtection.exe** dalla pagina di Azure Information Protection. Se si usa un client di assegnazione di etichette diverso per la versione classica del client, vedere la [documentazione di Office](/microsoft-365/compliance/sensitivity-labels) per istruzioni equivalenti a questa esercitazione.
+    È possibile installare la versione classica del client accedendo all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricando **AzInfoProtection.exe** dalla pagina di Azure Information Protection. Se si usa un client di assegnazione di etichette diverso per la versione classica del client, vedere la [documentazione sulla conformità di Microsoft 365](/microsoft-365/compliance/sensitivity-labels) per istruzioni equivalenti a questa esercitazione.
 
 4. È stato eseguito l'accesso alle app di Office da una delle seguenti categorie:
     

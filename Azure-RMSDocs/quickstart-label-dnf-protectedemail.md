@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: d22ba5ffe36ea97801149a53d1c500c6d9df0208
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: ec4271250f010156b60ff8da248ea5fcdd7e5f64
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743758"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423117"
 ---
 # <a name="quickstart-configure-a-label-for-users-to-easily-protect-emails-that-contain-sensitive-information"></a>Guida introduttiva: configurare un'etichetta che consente di proteggere facilmente i messaggi di posta elettronica contenenti informazioni riservate
 
@@ -56,7 +56,7 @@ Per completare questa guida introduttiva, è necessario:
     
     È possibile installare la versione classica del client accedendo all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricando **AzInfoProtection.exe** dalla pagina di Azure Information Protection.
     
-    Se si usa un client di assegnazione di etichette diverso per la versione classica del client, vedere la documentazione di Office per istruzioni equivalenti a questa esercitazione. Ad esempio, [Panoramica delle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
+    Se si usa un client di assegnazione di etichette diverso per la versione classica del client, vedere la documentazione sulla conformità di Microsoft 365 per istruzioni equivalenti a questa esercitazione. Ad esempio, [Informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
 
 5. Per testare la nuova etichetta: Disporre di un computer con Windows (versione minima Windows 7 con Service Pack 1), in cui è stato eseguito l'accesso alle app di Office da una delle categorie seguenti:
     

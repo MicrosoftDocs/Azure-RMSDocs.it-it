@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 84d72965d0438b17b23f194d4ec085765853608c
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: f91e194eb6e7d7dd9623d6467de5466b64ec2b9e
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742726"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77422562"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
@@ -28,7 +28,7 @@ ms.locfileid: "75742726"
 > [!NOTE]
 > Queste istruzioni si applicano al client Azure Information Protection (classico) e non al client per l'etichettatura unificata di Azure Information Protection. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 > 
-> Per informazioni sulla configurazione di un'etichetta di riservatezza per applicare la protezione Rights Management, vedere la documentazione di Office. Ad esempio, [Limitare l'accesso al contenuto usando la crittografia nelle etichette di riservatezza](/microsoft-365/compliance/encryption-sensitivity-labels).
+> Per informazioni sulla configurazione di un'etichetta di riservatezza per applicare la protezione Rights Management, vedere la documentazione su Conformità Microsoft 365. Ad esempio, [Limitare l'accesso al contenuto usando la crittografia nelle etichette di riservatezza](/microsoft-365/compliance/encryption-sensitivity-labels).
 
 Non è possibile proteggere i documenti e i messaggi di posta elettronica più sensibili usando un servizio Rights Management. Questo servizio usa la crittografia, l'identità e i criteri di autorizzazione per prevenire la perdita di dati. Questa protezione viene applicata con un'etichetta configurata per l'uso della protezione Rights Management per documenti e messaggi di posta elettronica. Gli utenti possono anche selezionare il pulsante **Non inoltrare** in Outlook.
 

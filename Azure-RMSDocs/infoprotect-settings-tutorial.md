@@ -10,12 +10,12 @@ ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 0c1e008185fb279964c56f508ee9daa6822718e4
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 266f796d6d3abc594a1447995d09687eaabb1ad7
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743531"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423201"
 ---
 # <a name="tutorial-configure-azure-information-protection-policy-settings-that-work-together"></a>Esercitazione: Configurare impostazioni dei criteri di Azure Information Protection che interagiscono tra loro
 
@@ -53,7 +53,7 @@ Per completare questa esercitazione, è necessario:
     
     È possibile installare la versione classica del client accedendo all'[Area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018) e scaricando **AzInfoProtection.exe** dalla pagina di Azure Information Protection. 
     
-    Se si usa un client di assegnazione di etichette diverso per la versione classica del client, vedere la documentazione di Office per informazioni sulle impostazioni dei criteri per le etichette di riservatezza. Ad esempio, [Panoramica delle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
+    Se si usa un client di assegnazione di etichette diverso per la versione classica del client, vedere la documentazione sulla conformità di Microsoft 365 per informazioni sulle impostazioni dei criteri per le etichette di riservatezza. Ad esempio, [Informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels).
 
 4. È stato eseguito l'accesso alle app di Office da una delle seguenti categorie:
     

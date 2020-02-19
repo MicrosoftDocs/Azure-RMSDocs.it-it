@@ -1,21 +1,21 @@
 ---
 title: Avvio rapido - Visualizzare Azure Information Protection nel portale di Azure - AIP
 description: Se l'organizzazione non ha familiarità con Azure Information Protection, iniziare da qui per aggiungere il servizio al portale di Azure, verificare che il servizio di protezione sia attivato e pubblicare le etichette e le impostazioni dei criteri.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
 ms.date: 12/04/2019
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: d1734b5102b1305077ce3b84fb95521daeb69c23
-ms.sourcegitcommit: d062ddf89fcb46e489f32f0d9f7aff73c3357a9b
+ms.openlocfilehash: c3c38ea55406b85dabda3e94101d268a9505c085
+ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74882074"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77423097"
 ---
 # <a name="quickstart-get-started-with-azure-information-protection-in-the-azure-portal"></a>Guida introduttiva: Introduzione ad Azure Information Protection nel portale di Azure
 
@@ -147,6 +147,6 @@ Se si usa la versione classica del client:
 
 Se si usa il client di etichettatura unificato:
 
-- Vedere [Panoramica delle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels) dalla documentazione di Office.
+- Vedere [Informazioni sulle etichette di riservatezza](/microsoft-365/compliance/sensitivity-labels) nella documentazione sulla conformità di Microsoft 365.
 
 Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
