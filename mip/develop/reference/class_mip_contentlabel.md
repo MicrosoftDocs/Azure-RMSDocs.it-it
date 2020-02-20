@@ -1,24 +1,24 @@
 ---
 title: Classe mip::ContentLabel
 description: 'Documenta la classe MIP:: contentlabel di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: a29ea5be05d928f25b9a4255416d93acedcb1c0b
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: f131885572ab5ad3a2664a6b50162a011529bfbb
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74840276"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490337"
 ---
 # <a name="class-mipcontentlabel"></a>Classe mip::ContentLabel 
 Astrazione per un'etichetta di Microsoft Information Protection applicata a un contenuto, in genere un documento.
 Contiene inoltre le proprietà per un'istanza specifica dell'etichetta applicata.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std:: Chrono:: time_point\<std:: Chrono:: system_clock\> GetCreationTime () const  |  Ottiene l'ora di creazione dell'etichetta.
 public AssignmentMethod GetAssignmentMethod() const  |  Ottiene il metodo di assegnazione dell'etichetta.
@@ -26,7 +26,7 @@ public const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& getextend
 public bool IsProtectionAppliedFromLabel() const  |  Ottiene un valore che indica se è stata applicata o meno la protezione da parte dell'etichetta.
 public std:: shared_ptr\<label\> GetLabel () const  |  Ottiene l'effettivo oggetto etichetta applicato al contenuto.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getcreationtime-function"></a>GetCreationTime (funzione)
 Ottiene l'ora di creazione dell'etichetta.

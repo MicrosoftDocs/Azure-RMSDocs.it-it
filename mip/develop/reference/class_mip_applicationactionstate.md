@@ -1,22 +1,22 @@
 ---
 title: 'Classe MIP:: ApplicationActionState'
 description: 'Documenta la classe MIP:: applicationactionstate di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: a3a5bde734c62859d2f2a03967a61d9ec14a2056
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 70128f67f758145be2b03954d3385a8428d63fe9
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559439"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490643"
 ---
 # <a name="class-mipapplicationactionstate"></a>Classe MIP:: ApplicationActionState 
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public LabelState GetNewLabelState () const  |  Ottiene il nuovo stato dell'etichetta.
 public std:: shared_ptr\<label\> GetNewLabel () const  |  Ottiene l'ID dell'etichetta di riservatezza da applicare al documento.
@@ -26,7 +26,7 @@ public virtual std:: Vector\<std::p Air\<std:: String, std:: String\>\> GetNewLa
 public ActionType GetSupportedActions() const  |  Ottiene un'enumerazione mascherata che descrive tutti i tipi di azioni supportati.
 public bool IsRecommendationEnabled () const  |  Ottenere un valore bool che indica che l'azione consigliata restituirà. per impostazione predefinita deve essere true, a meno che l'utente non specifichi else.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getnewlabelstate-function"></a>GetNewLabelState (funzione)
 Ottiene il nuovo stato dell'etichetta.

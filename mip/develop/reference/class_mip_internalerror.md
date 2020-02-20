@@ -1,24 +1,24 @@
 ---
 title: Classe mip::InternalError
 description: 'Documenta la classe MIP:: InternalError di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 55b241d38a04e0c42f7e6d68479843af87fbab18
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 84f9e878cac286726d305d08a605ff9432341acf
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558762"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489963"
 ---
 # <a name="class-mipinternalerror"></a>Classe mip::InternalError 
 Si è verificato un errore interno. Questo errore viene generato quando un evento imprevisto si verifica durante l'esecuzione.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 _Non ancora documentato._

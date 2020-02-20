@@ -1,31 +1,31 @@
 ---
 title: 'Classe MIP:: AddWatermarkActionData'
 description: 'Documenta la classe MIP:: addwatermarkactiondata di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 8ced12000bace295be4571158ae0f05364c5aec7
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 719d376cdf2b8b9d2d38de08ba74a654d562b605
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559488"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490694"
 ---
 # <a name="class-mipaddwatermarkactiondata"></a>Classe MIP:: AddWatermarkActionData 
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std::string& GetText() const  | Non ancora documentato.
-public const std::string& GetFontName() const  | Non ancora documentato.
-public const std::string& GetFontColor() const  | Non ancora documentato.
-public int GetFontSize() const  | Non ancora documentato.
-public WatermarkLayout GetWatermarkLayout () const  | Non ancora documentato.
-public virtual ~ AddWatermarkActionData ()  | Non ancora documentato.
+public const std::string& GetText() const  | _Non ancora documentato._
+public const std::string& GetFontName() const  | _Non ancora documentato._
+public const std::string& GetFontColor() const  | _Non ancora documentato._
+public int GetFontSize() const  | _Non ancora documentato._
+public WatermarkLayout GetWatermarkLayout () const  | _Non ancora documentato._
+public virtual ~ AddWatermarkActionData ()  | _Non ancora documentato._
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="gettext-function"></a>Funzione gettext
 _Non ancora documentato._

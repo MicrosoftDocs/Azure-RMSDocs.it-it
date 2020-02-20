@@ -1,24 +1,24 @@
 ---
 title: Classe mip::FileHandler::Observer
 description: "Documenta la classe MIP:: FileHandler dell'SDK Microsoft Information Protection (MIP)."
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: d1c1a66ce3821bf3d552ee0daa0648940b645fcb
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 86043ab5fdcc22884ce3c483d43947d46e51ac9c
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560268"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490014"
 ---
 # <a name="class-mipfilehandlerobserver"></a>Classe mip::FileHandler::Observer 
 Interfaccia Observer che consente ai client di ottenere gli eventi di notifica correlati al gestore di file.
 Tutti gli errori ereditano da MIP:: Error. I client non devono eseguire il callback del motore sul thread che chiama l'observer.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public virtual void OnCreateFileHandlerSuccess (const std:: shared_ptr\<FileHandler\>& FileHandler, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando il gestore è creato correttamente.
 public virtual void OnCreateFileHandlerFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando la creazione del gestore non è riuscita.
@@ -33,7 +33,7 @@ public virtual void OnCommitFailure (const std:: exception_ptr & Error, const st
 public virtual void OnInspectSuccess (const std:: shared_ptr\<fileinspector\>& fileinspector, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando il controllo ha esito positivo.
 public virtual void OnInspectFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Chiamato quando il controllo non è riuscito.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="oncreatefilehandlersuccess-function"></a>OnCreateFileHandlerSuccess (funzione)
 Viene chiamato quando il gestore è creato correttamente.

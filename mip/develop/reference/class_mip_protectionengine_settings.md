@@ -1,23 +1,23 @@
 ---
 title: Classe mip::ProtectionEngine::Settings
 description: Documenta la classe MIP::p rotectionengine dell'SDK Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 746309afc21637c85ec53dd9af7214151c5bb75a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 71f428667bf485d0abd4f953aa2d94181b1bd8f1
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73557670"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77486886"
 ---
 # <a name="class-mipprotectionenginesettings"></a>Classe mip::ProtectionEngine::Settings 
 Impostazioni utilizzate da ProtectionEngine durante la sua creazione e per tutta la sua durata.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public Settings(const Identity& identity, const std::string& clientData, const std::string& locale)  |  Costruttore ProtectionEngine:: Settings per la creazione di un nuovo motore.
 public Settings(const std::string& engineId, const std::string& clientData, const std::string& locale)  |  Costruttore ProtectionEngine:: Settings per il caricamento di un motore esistente.
@@ -35,7 +35,7 @@ public const std::string& GetSessionId() const  |  Ottiene l'ID sessione del mot
 public void SetCloudEndpointBaseUrl(const std::string& cloudEndpointBaseUrl)  |  Facoltativamente, imposta l'URL di base dell'endpoint cloud.
 public const std::string& GetCloudEndpointBaseUrl() const  |  Ottiene l'URL di base del cloud usato da tutte le richieste di servizio, se specificato.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="settings-function"></a>Funzione Settings
 Costruttore ProtectionEngine:: Settings per la creazione di un nuovo motore.

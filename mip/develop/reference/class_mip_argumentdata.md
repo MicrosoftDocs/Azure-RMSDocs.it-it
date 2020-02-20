@@ -1,29 +1,29 @@
 ---
 title: 'Classe MIP:: ArgumentData'
 description: 'Documenta la classe MIP:: argumentdata di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 67548522a3516871ceb06fdf604a55ad355ae18a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 1090ffaa68e1dbf83a198b2b193a07c9dfa1a58a
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559433"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490626"
 ---
 # <a name="class-mipargumentdata"></a>Classe MIP:: ArgumentData 
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std:: String & GetValue () const  | Non ancora documentato.
-public const std:: String & GetKey () const  | Non ancora documentato.
-public const std:: Vector\<std:: String\>& GetValues () const  | Non ancora documentato.
-public virtual ~ ArgumentData ()  | Non ancora documentato.
+public const std:: String & GetValue () const  | _Non ancora documentato._
+public const std:: String & GetKey () const  | _Non ancora documentato._
+public const std:: Vector\<std:: String\>& GetValues () const  | _Non ancora documentato._
+public virtual ~ ArgumentData ()  | _Non ancora documentato._
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getvalue-function"></a>Funzione GetValue
 _Non ancora documentato._

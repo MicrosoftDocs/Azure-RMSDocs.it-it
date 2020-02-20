@@ -1,29 +1,29 @@
 ---
 title: Classe mip::ProtectionHandler::Observer
 description: Documenta la classe MIP::p rotectionhandler dell'SDK Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 8b48d6e5aacacb6f678fc7d5aea2aee531da88fa
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 8f661f3ebf9bc657a4dd6f6356b26cd582d4aa2e
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560096"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77486818"
 ---
 # <a name="class-mipprotectionhandlerobserver"></a>Classe mip::ProtectionHandler::Observer 
 Interfaccia che riceve le notifiche correlate a ProtectionHandler.
 Questa interfaccia deve essere implementata dalle applicazioni che usano l'SDK di protezione
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public virtual void OnCreateProtectionHandlerSuccess (const std:: shared_ptr\<ProtectionHandler\>& protectionHandler, const std:: shared_ptr\<void\>& context)  |  Chiamato quando ProtectionHandler è stato creato correttamente.
 public virtual void OnCreateProtectionHandlerFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Chiamato quando la creazione del ProtectionHandler non è riuscita.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="oncreateprotectionhandlersuccess-function"></a>OnCreateProtectionHandlerSuccess (funzione)
 Chiamato quando ProtectionHandler è stato creato correttamente.

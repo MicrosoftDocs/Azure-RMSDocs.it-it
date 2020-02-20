@@ -1,23 +1,23 @@
 ---
 title: Classe mip::FileProfile::Settings
 description: "Documenta la classe MIP:: fileprofile dell'SDK Microsoft Information Protection (MIP)."
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 21bbda3424f5c436324ce97137082200ee8d9837
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 4987919875c297ace2246e77eadab279238cc205
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73561093"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490031"
 ---
 # <a name="class-mipfileprofilesettings"></a>Classe mip::FileProfile::Settings 
 Impostazioni utilizzate da fileprofile durante la sua creazione e per tutta la sua durata.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 Impostazioni pubbliche (const std:: shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, std:: shared_ptr\<AuthDelegate\> authDelegate, std:: shared_ptr\<ConsentDelegate\> consentDelegate, std:: shared_ptr\<Observer\> Observer)  |  Costruttore fileprofile:: Settings.
 public CacheStorageType GetCacheStorageType () const  |  Ottiene un valore che indica se le cache sono archiviate in memoria o su disco.
@@ -34,7 +34,7 @@ public const std::string& GetSessionId() const  |  Ottiene l'ID sessione.
 public void SetCanCacheLicenses (bool canCacheLicenses)  |  Configura se le licenze dell'utente finale (contratti) verranno memorizzate nella cache locale.
 public bool CanCacheLicenses () const  |  Ottiene un valore che indica se le licenze dell'utente finale (contratti) sono memorizzate nella cache locale.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="settings-function"></a>Funzione Settings
 Costruttore fileprofile:: Settings.

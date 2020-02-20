@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: reference
 ms.date: 01/28/2019
 ms.author: mbaldwin
-ms.openlocfilehash: fb6c857d06da7a68d01d095db556216fee990dc6
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 6fd93191ef95e4a019b59ca0f318db366b5e5874
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555977"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489249"
 ---
 # <a name="functions"></a>Funzioni
 
@@ -30,6 +30,8 @@ public const std:: String & GetCustomSettingSensitivityTypesDataName ()       | 
 public const std::string& GetCustomSettingPolicyDataFile()       |  Nome dell'impostazione per specificare in modo esplicito il percorso del file di dati dei criteri.
 public const std:: String & GetCustomSettingSensitivityTypesDataFile ()       |  Nome dell'impostazione per specificare in modo esplicito il percorso del file di dati dei tipi di riservatezza.
 public const std:: String & GetCustomSettingLabelCustomPropertiesSyncEnabled ()       |  Nome dell'impostazione che consente di abilitare l'etichetta in base alle proprietà personalizzate e alle proprietà personalizzate tramite le funzionalità di etichetta.
+public const std:: String & GetCustomSettingPolicyTtlDays ()       |  Nome dell'impostazione che Abilita l'override della durata (TTL) dei criteri in giorni, per impostazione predefinita sarà 30 giorni. I valori devono essere impostati come interi stringa i < 0 indica una durata infinita.
+public const std:: String & GetCustomSettingSensitivityPolicyTtlDays ()       |  Nome dell'impostazione che Abilita l'override della durata (TTL) dei criteri di riservatezza per impostazione predefinita, il valore predefinito sarà 30 giorni. I valori devono essere impostati come interi stringa i < 0 indica una durata infinita.
 public const std:: Map\<FlightingFeature, bool\>& GetDefaultFeatureSettings ()       |  Ottiene un valore che indica se una funzionalità è abilitata per impostazione predefinita.
 public MIP_API std:: shared_ptr\<MIP:: Stream\> CreateStreamFromStdStream (const std:: shared_ptr\<std:: IStream\>& stdIStream)       |  Crea un flusso da un std:: IStream.
 public MIP_API std:: shared_ptr\<MIP:: Stream\> CreateStreamFromStdStream (const std:: shared_ptr\<std:: ostream\>& stdOStream)       |  Crea un flusso da un oggetto std:: ostream.
@@ -46,8 +48,6 @@ Parametri:
 * **Metodo**: metodo di assegnazione. 
 
 
-
-  
 **Restituisce**: una descrizione di stringa del metodo di assegnazione.
   
 ### <a name="getactionsourcestring-function"></a>GetActionSourceString (funzione)
@@ -56,9 +56,6 @@ Ottenere il nome dell'origine dell'azione.
 Parametri:  
 * **actionSource**: origine dell'azione. 
 
-
-
-  
 **Returns**: rappresentazione di stringa dell'origine dell'azione.
   
 ### <a name="getdatastatestring-function"></a>GetDataStateString (funzione)
@@ -104,6 +101,18 @@ Nome dell'impostazione per specificare in modo esplicito il percorso del file di
   
 ### <a name="getcustomsettinglabelcustompropertiessyncenabled-function"></a>GetCustomSettingLabelCustomPropertiesSyncEnabled (funzione)
 Nome dell'impostazione che consente di abilitare l'etichetta in base alle proprietà personalizzate e alle proprietà personalizzate tramite le funzionalità di etichetta.
+
+  
+**Restituisce**: chiave delle impostazioni personalizzate.
+  
+### <a name="getcustomsettingpolicyttldays-function"></a>GetCustomSettingPolicyTtlDays (funzione)
+Nome dell'impostazione che Abilita l'override della durata (TTL) dei criteri in giorni, per impostazione predefinita sarà 30 giorni. I valori devono essere impostati come interi stringa i < 0 indica una durata infinita.
+
+  
+**Restituisce**: chiave delle impostazioni personalizzate.
+  
+### <a name="getcustomsettingsensitivitypolicyttldays-function"></a>GetCustomSettingSensitivityPolicyTtlDays (funzione)
+Nome dell'impostazione che Abilita l'override della durata (TTL) dei criteri di riservatezza per impostazione predefinita, il valore predefinito sarà 30 giorni. I valori devono essere impostati come interi stringa i < 0 indica una durata infinita.
 
   
 **Restituisce**: chiave delle impostazioni personalizzate.
@@ -180,12 +189,12 @@ Operatore XOR (^) per l'enumerazione del tipo di azione.
 
 ## <a name="namespace-mipauditmetadatakeys"></a>spazio dei nomi MIP:: auditmetadatakeys
 
- Membri                        | Descrizioni                                
+Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std:: String sender ()       |  Controllare le chiavi dei metadati nella rappresentazione di stringa.
-Destinatari std:: String pubblici ()       | Non ancora documentato.
-public std:: String LastModifiedBy ()       | Non ancora documentato.
-public std:: String LastModifiedDate ()       | Non ancora documentato.
+Destinatari std:: String pubblici ()       | _Non ancora documentato._
+public std:: String LastModifiedBy ()       | _Non ancora documentato._
+public std:: String LastModifiedDate ()       | _Non ancora documentato._
   
 ### <a name="sender-function"></a>Funzione sender
 Controllare le chiavi dei metadati nella rappresentazione di stringa.
@@ -204,7 +213,7 @@ _Non ancora documentato._
 
 ## <a name="namespace-miprights"></a>`mip::rights` dello spazio dei nomi 
   
- Membri                        | Descrizioni                                
+Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std::string Owner()       |  Ottiene l'identificatore della stringa per il diritto "owner".
 public std::string View()       |  Ottiene l'identificatore della stringa per il diritto "view".
@@ -221,7 +230,6 @@ public std:: Vector\<std:: String\> EmailRights ()       |  Ottiene un elenco di
 public std:: Vector\<std:: String\> EditableDocumentRights ()       |  Ottiene un elenco di diritti che si applicano ai documenti.
 public std:: Vector\<std:: String\> CommonRights ()       |  Ottiene un elenco di diritti che si applicano in tutti gli scenari.
   
-
 ### <a name="owner-function"></a>Funzione Owner
 Ottiene l'identificatore della stringa per il diritto "owner".
 
@@ -306,9 +314,9 @@ Ottiene un elenco di diritti che si applicano in tutti gli scenari.
   
 **Restituisce**: elenco di diritti che si applicano in tutti gli scenari
 
-## <a name="namespace-miproles"></a>spazio dei nomi MIP:: Roles
+## <a name="namespace-miproles"></a>`mip::roles` dello spazio dei nomi 
   
- Membri                        | Descrizioni                                
+Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std::string Viewer()       |  Ottiene l'identificatore della stringa per il ruolo "viewer".
 public std::string Reviewer()       |  Ottiene l'identificatore della stringa per il ruolo "reviewer".
@@ -338,4 +346,3 @@ Ottiene l'identificatore della stringa per il ruolo "co-owner".
 
   
 **Restituisce**: identificatore della stringa per il ruolo "co-owner". Un comproprietario ha tutte le autorizzazioni
-

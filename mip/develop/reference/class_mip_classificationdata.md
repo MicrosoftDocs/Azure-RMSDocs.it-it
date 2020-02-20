@@ -1,32 +1,32 @@
 ---
 title: 'Classe MIP:: ClassificationData'
 description: 'Documenta la classe MIP:: classificationdata di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 273b095ca0d6dc97ce440c4645bc2d07e6e760d4
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: d609dbbfc86e58b172e4cd5ee4d532be65ee0a8d
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74840293"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490422"
 ---
 # <a name="class-mipclassificationdata"></a>Classe MIP:: ClassificationData 
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std:: String & GetClassificationId () const  | Non ancora documentato.
-public const std:: String & GetRulePackageId () const  | Non ancora documentato.
-public int GetMaxCount () const  | Non ancora documentato.
-public int GetMinCount () const  | Non ancora documentato.
-public int GetMinConfidence () const  | Non ancora documentato.
-public int GetMaxConfidence () const  | Non ancora documentato.
-public virtual ~ ClassificationData ()  | Non ancora documentato.
+public const std:: String & GetClassificationId () const  | _Non ancora documentato._
+public const std:: String & GetRulePackageId () const  | _Non ancora documentato._
+public int GetMaxCount () const  | _Non ancora documentato._
+public int GetMinCount () const  | _Non ancora documentato._
+public int GetMinConfidence () const  | _Non ancora documentato._
+public int GetMaxConfidence () const  | _Non ancora documentato._
+public virtual ~ ClassificationData ()  | _Non ancora documentato._
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getclassificationid-function"></a>GetClassificationId (funzione)
 _Non ancora documentato._

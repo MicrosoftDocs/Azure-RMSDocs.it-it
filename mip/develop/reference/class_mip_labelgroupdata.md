@@ -1,46 +1,48 @@
 ---
 title: 'Classe MIP:: LabelGroupData'
 description: 'Documenta la classe MIP:: labelgroupdata di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: e67c2122314d33a6b49f6696f1f13d6f0bbde920
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: a780ac706b547049a6b1de9adce237b405fea711
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558706"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489946"
 ---
 # <a name="class-miplabelgroupdata"></a>Classe MIP:: LabelGroupData 
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std::string& GetLabelId() const  | Non ancora documentato.
-public const std:: Vector\<std:: unique_ptr\<LabelGroupData\>\>& GetLabelGroupData () const  | Non ancora documentato.
-public int GetOrder () const  | Non ancora documentato.
-public const std::p Air\<std:: String, std:: String\>& GetColor () const  | Non ancora documentato.
-public const std::p Air\<std:: String, std:: String\>& GetName () const  | Non ancora documentato.
-public const std::p Air\<std:: String, std:: String\>& GetDescription () const  | Non ancora documentato.
-public const std::string& GetTemplateId() const  | Non ancora documentato.
-public const std:: String & GetInvariantName () const  | Non ancora documentato.
-public const std::p Air\<std:: String, std:: String\>& GetToolTip () const  | Non ancora documentato.
-public const std::p Air\<std:: String, std:: String\>& GetAutoTooltip () const  | Non ancora documentato.
-public bool IsEnabled () const  | Non ancora documentato.
-public bool IsDowngradeJustificationRequired () const  | Non ancora documentato.
-public const std:: String & GetDefaultLabelId () const  | Non ancora documentato.
-public const std::p Air\<std:: String, std:: String\>& GetMoreInfoUrl () const  | Non ancora documentato.
-public bool unobbligatoria () const  | Non ancora documentato.
-public const std:: Vector\<ProtectionActionType\>& GetProtectionActionTypes () const  | Non ancora documentato.
-public bool IsAuditEnabled () const  | Non ancora documentato.
-public const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& GetCustomSettings () const  | Non ancora documentato.
-public const std:: Vector\<std:: String\>& GetLabelByCustomProperties () const  | Non ancora documentato.
-public const std:: Vector\<std:: String\>& GetCustomPropertiesByLabel () const  | Non ancora documentato.
-public virtual ~ LabelGroupData ()  | Non ancora documentato.
+public const std::string& GetLabelId() const  | _Non ancora documentato._
+public const std:: Vector\<std:: unique_ptr\<LabelGroupData\>\>& GetLabelGroupData () const  | _Non ancora documentato._
+public int GetOrder () const  | _Non ancora documentato._
+public const std::p Air\<std:: String, std:: String\>& GetColor () const  | _Non ancora documentato._
+public const std::p Air\<std:: String, std:: String\>& GetName () const  | _Non ancora documentato._
+public const std::p Air\<std:: String, std:: String\>& GetDescription () const  | _Non ancora documentato._
+public const std::string& GetTemplateId() const  | _Non ancora documentato._
+public const std:: String & GetInvariantName () const  | _Non ancora documentato._
+public const std::p Air\<std:: String, std:: String\>& GetToolTip () const  | _Non ancora documentato._
+public const std::p Air\<std:: String, std:: String\>& GetAutoTooltip () const  | _Non ancora documentato._
+public bool IsEnabled () const  | _Non ancora documentato._
+public bool IsDowngradeJustificationRequired () const  | _Non ancora documentato._
+public const std:: String & GetDefaultLabelId () const  | _Non ancora documentato._
+public const std::p Air\<std:: String, std:: String\>& GetMoreInfoUrl () const  | _Non ancora documentato._
+public bool unobbligatoria () const  | _Non ancora documentato._
+public const std:: Vector\<std:: shared_ptr\<ProtectionActionData\>\>& GetProtectionActionData () const  | _Non ancora documentato._
+public bool IsAuditEnabled () const  | _Non ancora documentato._
+public const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& GetCustomSettings () const  | _Non ancora documentato._
+public const std:: Vector\<std:: String\>& GetLabelByCustomProperties () const  | _Non ancora documentato._
+public const std:: Vector\<std:: String\>& GetCustomPropertiesByLabel () const  | _Non ancora documentato._
+public std:: Vector\<std::p Air\<std:: String, std:: String\>\> GetParsedCustomPropertiesByLabel () const  | _Non ancora documentato._
+public std:: Vector\<std:: Tuple\<std:: String, std:: String, std:: String\>\> GetLabelByCustomPropertiesSettings () const  | _Non ancora documentato._
+public virtual ~ LabelGroupData ()  | _Non ancora documentato._
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getlabelid-function"></a>GetLabelId (funzione)
 _Non ancora documentato._
@@ -102,7 +104,7 @@ _Non ancora documentato._
 _Non ancora documentato._
 
   
-### <a name="getprotectionactiontypes-function"></a>GetProtectionActionTypes (funzione)
+### <a name="getprotectionactiondata-function"></a>GetProtectionActionData (funzione)
 _Non ancora documentato._
 
   
@@ -119,6 +121,14 @@ _Non ancora documentato._
 
   
 ### <a name="getcustompropertiesbylabel-function"></a>GetCustomPropertiesByLabel (funzione)
+_Non ancora documentato._
+
+  
+### <a name="getparsedcustompropertiesbylabel-function"></a>GetParsedCustomPropertiesByLabel (funzione)
+_Non ancora documentato._
+
+  
+### <a name="getlabelbycustompropertiessettings-function"></a>GetLabelByCustomPropertiesSettings (funzione)
 _Non ancora documentato._
 
   

@@ -1,33 +1,33 @@
 ---
 title: 'Classe MIP:: ContentMarkingActionData'
 description: 'Documenta la classe MIP:: contentmarkingactiondata di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: ee5dd72a9e001e2effce81aad28b7ae36907b098
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 6652cf38163a461af49675c5009dba6461ffa544
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559307"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77488909"
 ---
 # <a name="class-mipcontentmarkingactiondata"></a>Classe MIP:: ContentMarkingActionData 
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std::string& GetText() const  | Non ancora documentato.
-public const std::string& GetFontName() const  | Non ancora documentato.
-public const std::string& GetFontColor() const  | Non ancora documentato.
-public ContentMarkAlignment GetContentMarkAlignment () const  | Non ancora documentato.
-public int GetFontSize() const  | Non ancora documentato.
-public int GetMargin() const  | Non ancora documentato.
-public ContentMarkPlacement GetContentMarkPlacement () const  | Non ancora documentato.
-public virtual ~ ContentMarkingActionData ()  | Non ancora documentato.
+public const std::string& GetText() const  | _Non ancora documentato._
+public const std::string& GetFontName() const  | _Non ancora documentato._
+public const std::string& GetFontColor() const  | _Non ancora documentato._
+public ContentMarkAlignment GetContentMarkAlignment () const  | _Non ancora documentato._
+public int GetFontSize() const  | _Non ancora documentato._
+public int GetMargin() const  | _Non ancora documentato._
+public ContentMarkPlacement GetContentMarkPlacement () const  | _Non ancora documentato._
+public virtual ~ ContentMarkingActionData ()  | _Non ancora documentato._
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="gettext-function"></a>Funzione gettext
 _Non ancora documentato._

@@ -1,23 +1,23 @@
 ---
 title: Classe mip::Label
 description: "Documenta la classe MIP:: label dell'SDK Microsoft Information Protection (MIP)."
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 5bdc88746a8921f306d9d52dbe75f3c2b826a5b6
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: a108cdccef1747ec2b06a981f993fa8ad438d011
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560146"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77487991"
 ---
 # <a name="class-miplabel"></a>Classe mip::Label 
 Astrazione per una singola etichetta di Microsoft Information Protection.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Ottiene l'ID dell'etichetta.
 public const std::string& GetName() const  |  Ottiene il nome dell'etichetta.
@@ -32,7 +32,7 @@ public const std:: Vector\<std:: shared_ptr\<label\>\>& GetChildren () const  | 
 public const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& GetCustomSettings () const  |  Ottiene le impostazioni personalizzate di un'etichetta.
 public ActionSource GetActionSource() const  |  Ottiene l'origine dell'azione dell'etichetta.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getid-function"></a>GetId (funzione)
 Ottiene l'ID dell'etichetta.

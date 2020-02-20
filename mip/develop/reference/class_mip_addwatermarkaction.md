@@ -1,23 +1,23 @@
 ---
 title: Classe mip::AddWatermarkAction
 description: 'Documenta la classe MIP:: addwatermarkaction di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: e3f5675404ed87ba1d06ad3b42cb57524e94980d
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 80ae66e54fe00ad96652b3568d49e256211dffc4
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560388"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490711"
 ---
 # <a name="class-mipaddwatermarkaction"></a>Classe mip::AddWatermarkAction 
 Classe di azione che specifica l'aggiunta di una filigrana.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const std::string& GetUIElementName()  |  API usata per contrassegnare l'elemento filigrana.
 public WatermarkLayout GetLayout() const  |  API usata per ottenere il layout della filigrana.
@@ -26,7 +26,7 @@ public const std::string& GetFontName() const  |  Ottiene il nome del tipo di ca
 public int GetFontSize() const  |  Ottiene le dimensioni del carattere usate per visualizzare la filigrana.
 public const std::string& GetFontColor() const  |  Ottiene il colore del carattere usato per visualizzare la filigrana.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getuielementname-function"></a>Funzione getuielementname
 API usata per contrassegnare l'elemento filigrana.

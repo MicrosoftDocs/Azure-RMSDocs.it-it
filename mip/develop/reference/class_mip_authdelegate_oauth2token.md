@@ -1,39 +1,41 @@
 ---
 title: 'Classe MIP:: AuthDelegate:: OAuth2Token'
 description: 'Documenta la classe MIP:: authdelegate di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: d8bce56e02778d48e6e3c0cfdb02f1c3f1f4054a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 6053a282d162dc2b0f316b265fe6878a4c535a7f
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560339"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490439"
 ---
 # <a name="class-mipauthdelegateoauth2token"></a>Classe MIP:: AuthDelegate:: OAuth2Token 
-Classe che definisce il modo in cui l'SDK MIP prevede che il token OAuth2 venga passato nuovamente all'SDK.
+Classe che contiene le informazioni sul token di accesso fornite da un'applicazione.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public OAuth2Token ()  |  Costruisce un nuovo oggetto OAuth2Token.
-public OAuth2Token (const std:: String & accessToken)  |  Costruisce un nuovo oggetto OAuth2Token da un accessToken.
+public OAuth2Token (const std:: String & accessToken)  |  Costruire un nuovo oggetto OAuth2Token dal token di accesso JWT.
 public const std:: String & GetAccessToken () const  |  Ottenere la stringa del token di accesso.
 public void SetAccessToken (const std:: String & accessToken)  |  Impostare la stringa del token di accesso.
+public const std:: String & GetErrorMessage () const  |  Ottenere il messaggio di errore, se presente.
+public void SetErrorMessage (const std:: String & errorMessage)  |  Imposta il messaggio di errore.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="oauth2token-function"></a>OAuth2Token (funzione)
 Costruisce un nuovo oggetto OAuth2Token.
   
 ### <a name="oauth2token-function"></a>OAuth2Token (funzione)
-Costruisce un nuovo oggetto OAuth2Token da un accessToken.
+Costruire un nuovo oggetto OAuth2Token dal token di accesso JWT.
 
 Parametri:  
-* **AccessToken**: il token di accesso effettivo passato nell'SDK.
+* **AccessToken**: JWT token di accesso.
 
 
   
@@ -41,11 +43,25 @@ Parametri:
 Ottenere la stringa del token di accesso.
 
   
-**Returns**: stringa del token di accesso.
+**Restituisce**: stringa del token di accesso.
   
 ### <a name="setaccesstoken-function"></a>SetAccessToken (funzione)
 Impostare la stringa del token di accesso.
 
 Parametri:  
 * **AccessToken**: stringa del token di accesso.
+
+
+  
+### <a name="geterrormessage-function"></a>GetErrorMessage (funzione)
+Ottenere il messaggio di errore, se presente.
+
+  
+**Restituisce**: messaggio di errore.
+  
+### <a name="seterrormessage-function"></a>SetErrorMessage (funzione)
+Imposta il messaggio di errore.
+
+Parametri:  
+* **ErrorMessage**: messaggio di errore.
 

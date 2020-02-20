@@ -1,23 +1,23 @@
 ---
 title: Classe mip::ProtectionDescriptor
 description: Documenta la classe MIP::p rotectiondescriptor dell'SDK Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 34acc6109a5d3dfcbbaec37e81f3215dd30f5018
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 43871eeae67cd55cc85b06f22c5dd6e76fb91f2f
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73557730"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77487039"
 ---
 # <a name="class-mipprotectiondescriptor"></a>Classe mip::ProtectionDescriptor 
 Descrizione della protezione associata a una parte del contenuto.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public ProtectionType GetProtectionType() const  |  Ottiene il tipo di protezione, indipendentemente dal fatto che abbia avuto origine da un modello di SDK di protezione o meno.
 public std::string GetOwner() const  |  Ottiene il proprietario per la protezione.
@@ -35,7 +35,7 @@ public std::string GetReferrer() const  |  Ottiene l'indirizzo del referrer dell
 public std:: Map\<std:: String, std:: String\> GetEncryptedAppData () const  |  Ottiene i dati specifici dell'app che sono stati crittografati.
 public std:: Map\<std:: String, std:: String\> GetSignedAppData () const  |  Ottiene i dati specifici dell'app che sono stati firmati.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getprotectiontype-function"></a>GetProtectionType (funzione)
 Ottiene il tipo di protezione, indipendentemente dal fatto che abbia avuto origine da un modello di SDK di protezione o meno.

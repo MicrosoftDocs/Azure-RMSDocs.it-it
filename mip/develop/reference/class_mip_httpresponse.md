@@ -1,30 +1,30 @@
 ---
 title: Classe mip::HttpResponse
 description: 'Documenta la classe MIP:: HttpResponse di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 876de8047abc4e2f13ee8e103cdfa1648738aa84
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: e24eef471b11daffadb84235edbc93ff14696c25
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558752"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77488059"
 ---
 # <a name="class-miphttpresponse"></a>Classe mip::HttpResponse 
 Interfaccia che descrive una singola risposta HTTP, implementata dall'app client quando si esegue l'override di HttpDelegate.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const std::string& GetId() const  |  Ottiene l'ID risposta.
 public int32_t GetStatusCode() const  |  Ottiene il codice di stato della risposta.
 public const std:: Vector\<uint8_t\>& GetBody () const  |  Ottiene il corpo della richiesta.
 public const std:: Map\<std:: String, std:: String, CaseInsensitiveComparator\>& GetHeaders () const  |  Ottiene le intestazioni della richiesta.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getid-function"></a>GetId (funzione)
 Ottiene l'ID risposta.

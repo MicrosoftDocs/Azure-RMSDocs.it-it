@@ -1,22 +1,22 @@
 ---
 title: Classe mip::FileEngine::Settings
 description: "Documenta la classe MIP:: fileengine dell'SDK Microsoft Information Protection (MIP)."
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 387d3819e8abe9fb24283cd0f62a78c15ce27b49
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 6105a542c3c01b31598796912211f97562b25f08
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558843"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77488790"
 ---
 # <a name="class-mipfileenginesettings"></a>Classe mip::FileEngine::Settings 
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 Impostazioni pubbliche (const std:: String & engineId, const std:: String & clientData, const std:: String & locale, bool loadSensitivityTypes)  |  Costruttore fileengine:: Settings per il caricamento di un motore esistente.
 Impostazioni pubbliche (const Identity & Identity, const std:: String & clientData, const std:: String & locale, bool loadSensitivityTypes)  |  Costruttore fileprofile:: Settings per la creazione di un nuovo motore.
@@ -44,7 +44,7 @@ public const std:: String & GetDelegatedUserEmail () const  |  Ottiene l'utente 
 public void SetLabelFilter (const std:: Vector\<LabelFilterType\>& labelFilter)  |  Imposta il filtro delle etichette.
 public const std:: Vector\<LabelFilterType\>& GetLabelFilter () const  |  Ottiene il filtro dell'etichetta.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="settings-function"></a>Funzione Settings
 Costruttore fileengine:: Settings per il caricamento di un motore esistente.

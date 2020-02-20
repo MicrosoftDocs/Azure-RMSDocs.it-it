@@ -1,23 +1,23 @@
 ---
 title: 'Classe MIP:: AuthDelegate:: OAuth2Challenge'
 description: 'Documenta la classe MIP:: authdelegate di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 8205d207a48d90832b5961b14d37c7a7226293a2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 8e3119e18d465c9ad66dd1cbbece003b96d1a3b7
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559027"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489062"
 ---
 # <a name="class-mipauthdelegateoauth2challenge"></a>Classe MIP:: AuthDelegate:: OAuth2Challenge 
 classe che contiene tutte le informazioni richieste dall'applicazione chiamante per generare un token OAuth2.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public OAuth2Challenge (const std:: String & Authority, const std:: String & Resource, const std:: String & scope, const std:: String & Claims)  |  Costruisce un nuovo oggetto OAuth2Challenge.
 public const std:: String & getauthority () const  |  Ottenere la stringa dell'autorità.
@@ -25,7 +25,7 @@ public const std:: String & GetResource () const  |  Ottenere la stringa di riso
 public const std:: String & GetScope () const  |  Ottenere la stringa dell'ambito.
 public const std:: String & getclaims () const  |  Ottenere la stringa delle attestazioni.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="oauth2challenge-function"></a>OAuth2Challenge (funzione)
 Costruisce un nuovo oggetto OAuth2Challenge.

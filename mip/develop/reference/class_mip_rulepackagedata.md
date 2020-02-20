@@ -1,29 +1,29 @@
 ---
 title: 'Classe MIP:: RulePackageData'
 description: 'Documenta la classe MIP:: rulepackagedata di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 5cc04f5082ca0ac6e3cd9153834064794b9eaf12
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: ace2e5c8eb1b5d72c8d9410ba9b5e7fd3f008049
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560565"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489470"
 ---
 # <a name="class-miprulepackagedata"></a>Classe MIP:: RulePackageData 
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-Public Const PolicyRuleData * GetRuleData () const  | Non ancora documentato.
-public const std::p Air\<std:: String, std:: String\>& GetLabelToTemplateId () const  | Non ancora documentato.
-public const std::p Air\<std:: String, ProtectionActionType\>& GetLabelToProtectionType () const  | Non ancora documentato.
-public virtual ~ RulePackageData ()  | Non ancora documentato.
+Public Const PolicyRuleData * GetRuleData () const  | _Non ancora documentato._
+public const std::p Air\<std:: String, std:: String\>& GetLabelToTemplateId () const  | _Non ancora documentato._
+public const std::p Air\<std:: String, std:: shared_ptr\<ProtectionActionData\>\>& GetLabelToProtectionType () const  | _Non ancora documentato._
+public virtual ~ RulePackageData ()  | _Non ancora documentato._
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getruledata-function"></a>GetRuleData (funzione)
 _Non ancora documentato._

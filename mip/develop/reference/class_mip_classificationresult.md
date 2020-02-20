@@ -1,23 +1,23 @@
 ---
 title: Classe mip::ClassificationResult
 description: 'Documenta la classe MIP:: classificationresult di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 6f4b1147ef6831ca622d095c0cada67b9f0cf023
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: a245cd4d9505de8adbf3cc1a2de6d2fa20369ce7
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559390"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77490405"
 ---
 # <a name="class-mipclassificationresult"></a>Classe mip::ClassificationResult 
 Classe contenente il risultato di una chiamata di classificazione sullo stato di esecuzione.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std::string GetId() const  |  Ottiene l'ID dei criteri di classificazione.
 public std::string GetName() const  |  Ottenere il nome dei criteri di classificazione.
@@ -25,7 +25,7 @@ public int GetCount() const  |  Ottiene il numero di istanze.
 public int GetConfidenceLevel() const  |  Ottiene l'attendibilità del risultato.
 public std:: String GetSensitiveInformationDetections () const  |  Ottenere i rilevamenti sensibili delle informazioni.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getid-function"></a>GetId (funzione)
 Ottiene l'ID dei criteri di classificazione.
@@ -52,4 +52,4 @@ Ottiene l'attendibilità del risultato.
 Ottenere i rilevamenti sensibili delle informazioni.
 
   
-**Restituisce**: stringa JSON di tutti i rilevamenti di informazioni sensibili.
+**Restituisce**: stringa JSON di tutti i rilevamenti di informazioni sensibili. Se non è vuoto, deve essere un formato JSON valido.
