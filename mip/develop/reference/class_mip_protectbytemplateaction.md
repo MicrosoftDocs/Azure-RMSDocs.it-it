@@ -1,27 +1,27 @@
 ---
 title: Classe mip::ProtectByTemplateAction
 description: Documenta la classe MIP::p rotectbytemplateaction dell'SDK Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: f03c06df069406f9a97bf7b321a14ab79cab16a4
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 77cb891c494c3c853f9e683b597bed9c685c6d40
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560813"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489725"
 ---
 # <a name="class-mipprotectbytemplateaction"></a>Classe mip::ProtectByTemplateAction 
 Classe di azione che specifica l'aggiunta della protezione basata su modello al documento.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const std::string& GetTemplateId() const  |  Ottiene l'ID modello di protezione associato all'azione.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="gettemplateid-function"></a>GetTemplateId (funzione)
 Ottiene l'ID modello di protezione associato all'azione.

@@ -1,23 +1,23 @@
 ---
 title: Classe mip::PolicyProfile::Settings
 description: Documenta la classe MIP::p olicyprofile dell'SDK Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 324b31a9589cff75a758da2936a3aba242fd63c2
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 6c2d7f26e12f03bd886f2a3fedab8e0a3d976c45
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560878"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489759"
 ---
 # <a name="class-mippolicyprofilesettings"></a>Classe mip::PolicyProfile::Settings 
 Impostazioni utilizzate da PolicyProfile durante la sua creazione e per tutta la sua durata.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 Impostazioni pubbliche (const std:: shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std:: shared_ptr\<AuthDelegate\>& authDelegate, const std:: shared_ptr\<PolicyProfile:: Observer\>& Observer)  |  Interfaccia per la configurazione del profilo.
 public CacheStorageType GetCacheStorageType () const  |  Ottiene un valore che indica se le cache sono archiviate in memoria o su disco.
@@ -27,14 +27,14 @@ public std:: shared_ptr\<MipContext\> GetMipContext () const  |  Ottiene il cont
 public std:: shared_ptr\<HttpDelegate\> GetHttpDelegate () const  |  Ottiene il delegato HTTP (se disponibile) specificato dall'applicazione.
 public void SetHttpDelegate (const std:: shared_ptr\<HttpDelegate\>& httpDelegate)  |  Esegue l'override dello stack HTTP predefinito con quello del client.
 public std:: shared_ptr\<TaskDispatcherDelegate\> GetTaskDispatcherDelegate () const  |  Ottenere il delegato TaskDispatcher (se presente) fornito dall'applicazione.
-public void SetTaskDispatcherDelegate (const std:: shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Eseguire l'override della gestione delle attività modo asincrono rispetto predefinite con il client.
-public void SetSessionId(const std::string& sessionId)  | Non ancora documentato.
-public const std::string& GetSessionId() const  | Non ancora documentato.
+public void SetTaskDispatcherDelegate (const std:: shared_ptr\<TaskDispatcherDelegate\>& taskDispatcherDelegate)  |  Esegue l'override della gestione predefinita dell'invio delle attività asincrone con il proprio client.
+public void SetSessionId(const std::string& sessionId)  | _Non ancora documentato._
+public const std::string& GetSessionId() const  | _Non ancora documentato._
 public void SetCustomSettings (const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& customSettings)  |  Imposta le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
 public const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& GetCustomSettings () const  |  Ottiene le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
-public ~Settings()  | Non ancora documentato.
+public ~Settings()  | _Non ancora documentato._
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="settings-function"></a>Funzione Settings
 Interfaccia per la configurazione del profilo.
@@ -98,7 +98,7 @@ Ottenere il delegato TaskDispatcher (se presente) fornito dall'applicazione.
 **Restituisce**: delegato TaskDispatcher da usare per l'esecuzione di attività asincrone
   
 ### <a name="settaskdispatcherdelegate-function"></a>SetTaskDispatcherDelegate (funzione)
-Eseguire l'override della gestione delle attività modo asincrono rispetto predefinite con il client.
+Esegue l'override della gestione predefinita dell'invio delle attività asincrone con il proprio client.
 
 Parametri:  
 * **taskDispatcherDelegate**: interfaccia di callback di invio dell'attività implementata dall'applicazione client

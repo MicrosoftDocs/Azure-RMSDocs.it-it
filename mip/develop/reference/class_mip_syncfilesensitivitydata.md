@@ -1,31 +1,41 @@
 ---
 title: 'Classe MIP:: SyncFileSensitivityData'
 description: 'Documenta la classe MIP:: syncfilesensitivitydata di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 702e56461f61374956f95a01799a8bc81ae32557
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: ab7b3286080d21bc09db12b39a470694cee9bb79
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560508"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489368"
 ---
 # <a name="class-mipsyncfilesensitivitydata"></a>Classe MIP:: SyncFileSensitivityData 
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std:: Vector\<std:: shared_ptr\<SensitivityTypesRulePackage\>\>& GetSensitivityTypesRulePackages () const  | Non ancora documentato.
-public virtual ~ SyncFileSensitivityData ()  | Non ancora documentato.
+public const std:: Vector\<std:: shared_ptr\<SensitivityTypesRulePackage\>\>& GetSensitivityTypesRulePackages () const  | _Non ancora documentato._
+public virtual ~ SyncFileSensitivityData ()  | _Non ancora documentato._
+public const std:: String & GetFileId () const  | _Non ancora documentato._
+public const std:: String & GetTenantId () const  | _Non ancora documentato._
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getsensitivitytypesrulepackages-function"></a>GetSensitivityTypesRulePackages (funzione)
 _Non ancora documentato._
 
   
 ### <a name="syncfilesensitivitydata-function"></a>~ SyncFileSensitivityData (funzione)
+_Non ancora documentato._
+
+  
+### <a name="getfileid-function"></a>GetFileId (funzione)
+_Non ancora documentato._
+
+  
+### <a name="gettenantid-function"></a>GetTenantId (funzione)
 _Non ancora documentato._

@@ -1,24 +1,24 @@
 ---
 title: 'Classe MIP:: NoPolicyError'
 description: 'Documenta la classe MIP:: nopolicyerror di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: ccc97d9a8c7fcd9dd9e3ec0eea35f2bb4af8a6b0
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 513fdd196c31f32809e7f2238b1993fb4aeeccd0
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73559245"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489844"
 ---
 # <a name="class-mipnopolicyerror"></a>Classe MIP:: NoPolicyError 
 I criteri del tenant non sono configurati per la classificazione o le etichette.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
 _Non ancora documentato._

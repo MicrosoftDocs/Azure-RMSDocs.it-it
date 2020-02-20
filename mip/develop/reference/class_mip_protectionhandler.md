@@ -1,23 +1,23 @@
 ---
 title: Classe mip::ProtectionHandler
 description: Documenta la classe MIP::p rotectionhandler dell'SDK Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 6b5468986d62c01d2d3f0b55a57946d5fa06bab3
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 4b245ea2a579aa3d9a0fddfb503830d75577c2b7
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560107"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489657"
 ---
 # <a name="class-mipprotectionhandler"></a>Classe mip::ProtectionHandler 
 Gestisce azioni correlate alla protezione per una configurazione di protezione specifica.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public std:: shared_ptr\<Stream\> CreateProtectedStream (const std:: shared_ptr\<Stream\>& backingStream, int64_t contentStartPosition, int64_t contentSize)  |  Crea un flusso protetto che consentirà la crittografia/decrittografia del contenuto.
 public int64_t EncryptBuffer(int64_t offsetFromStart, const uint8_t* inputBuffer, int64_t inputBufferSize, uint8_t* outputBuffer, int64_t outputBufferSize, bool isFinal)  |  Crittografa un buffer.
@@ -35,7 +35,7 @@ public bool DoesUseDeprecatedAlgorithms()  |  Ottiene un valore che indica se il
 public bool IsAuditedExtractAllowed()  |  Ottiene un valore che indica se il gestore di protezione concede o meno all'utente il diritto 'audited extract'.
 public const std:: Vector\<uint8_t\> GetSerializedPublishingLicense ()  |  Serializzare ProtectionHandler in una licenza di pubblicazione (PL)
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="createprotectedstream-function"></a>CreateProtectedStream (funzione)
 Crea un flusso protetto che consentirà la crittografia/decrittografia del contenuto.

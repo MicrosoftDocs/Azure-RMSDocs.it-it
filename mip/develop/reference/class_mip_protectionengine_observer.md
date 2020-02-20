@@ -1,37 +1,39 @@
 ---
 title: Classe mip::ProtectionEngine::Observer
 description: Documenta la classe MIP::p rotectionengine dell'SDK Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: e5196535dc474d2649c084b55c55a80c3af349b9
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 688bc59b992e885b2b9724111c19f69f860badd9
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560750"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489674"
 ---
 # <a name="class-mipprotectionengineobserver"></a>Classe mip::ProtectionEngine::Observer 
 Interfaccia che riceve le notifiche correlate a ProtectionEngine.
 Questa interfaccia deve essere implementata dalle applicazioni che usano l'SDK di protezione
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public virtual void OnGetTemplatesSuccess (const std:: shared_ptr\<std:: Vector\<std:: String\>\>& templateIds, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando i modelli vengono recuperati correttamente.
+public virtual void OnGetTemplatesSuccess (const std:: Vector\<std:: shared_ptr\<TemplateDescriptor\>\>& templateDescriptors, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando i modelli vengono recuperati correttamente.
 public virtual void OnGetTemplatesFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando il recupero dei modelli genera un errore.
 public virtual void OnGetRightsForLabelIdSuccess (const std:: shared_ptr\<std:: Vector\<std:: String\>\>& Rights, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando i diritti vengono recuperati correttamente.
 public virtual void OnGetRightsForLabelIdFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Viene chiamato quando si recuperano i diritti per un ID etichetta per l'utente.
+public virtual void OnLoadUserCertSuccess (const std:: shared_ptr\<void\>& context)  |  Chiamato quando il certificato utente viene caricato correttamente.
+public virtual void OnLoadUserCertFailure (const std:: exception_ptr & Error, const std:: shared_ptr\<void\>& context)  |  Chiamato quando il certificato utente è stato caricato.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="ongettemplatessuccess-function"></a>OnGetTemplatesSuccess (funzione)
 Viene chiamato quando i modelli vengono recuperati correttamente.
 
 Parametri:  
-* **templateIds**: riferimento all'elenco di modelli recuperati 
+* **templateDescriptors**: riferimento all'elenco di descrittori di modelli 
 
 
 * **context**: lo stesso contesto passato a ProtectionEngine:: GetTemplatesAsync
@@ -74,3 +76,24 @@ Parametri:
 
 
 Un'applicazione può passare qualsiasi tipo di contesto (ad esempio, std::p romise, std:: Function) a ProtectionEngine:: GetRightsForLabelIdAsync e lo stesso contesto verrà inoltrato così com'è a ProtectionEngine:: Observer:: OnGetRightsForLabelIdSuccess o ProtectionEngine:: Observer:: OnGetRightsForLabelIdFailure
+  
+### <a name="onloadusercertsuccess-function"></a>OnLoadUserCertSuccess (funzione)
+Chiamato quando il certificato utente viene caricato correttamente.
+
+Parametri:  
+* **context**: lo stesso contesto passato a ProtectionEngine:: LoadUserCert
+
+
+Un'applicazione può passare qualsiasi tipo di contesto (ad esempio, std::p romise, std:: Function) a ProtectionEngine:: LoadUserCertAsync e lo stesso contesto verrà inoltrato così com'è a ProtectionEngine:: Observer:: OnLoadUserCertSuccess o ProtectionEngine:: O bserver:: OnLoadUserCertFailure
+  
+### <a name="onloadusercertfailure-function"></a>OnLoadUserCertFailure (funzione)
+Chiamato quando il certificato utente è stato caricato.
+
+Parametri:  
+* **errore**: errore che si è verificato durante il recupero dei diritti 
+
+
+* **context**: lo stesso contesto passato a ProtectionEngine:: LoadUserCert
+
+
+Un'applicazione può passare qualsiasi tipo di contesto (ad esempio, std::p romise, std:: Function) a ProtectionEngine:: LoadUserCertAsync e lo stesso contesto verrà inoltrato così com'è a ProtectionEngine:: Observer:: OnLoadUserCertSuccess o ProtectionEngine:: O bserver:: OnLoadUserCertFailure

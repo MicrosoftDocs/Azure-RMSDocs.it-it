@@ -1,28 +1,28 @@
 ---
 title: Classe MIP::P ropertyData
 description: Documenta la classe MIP::p ropertydata dell'SDK Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 66eea2b65ab81ed561ac45b6e3284ab9f1ce32f3
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: fd345d41d2f8c80267dd420f351b3b2c5eb1cb57
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560829"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489742"
 ---
 # <a name="class-mippropertydata"></a>Classe MIP::P ropertyData 
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
-public const std::string& GetId() const  | Non ancora documentato.
-public const std::string& GetName() const  | Non ancora documentato.
-public virtual ~ PropertyData ()  | Non ancora documentato.
+public const std::string& GetId() const  | _Non ancora documentato._
+public const std::string& GetName() const  | _Non ancora documentato._
+public virtual ~ PropertyData ()  | _Non ancora documentato._
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getid-function"></a>GetId (funzione)
 _Non ancora documentato._

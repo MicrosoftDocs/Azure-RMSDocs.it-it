@@ -1,23 +1,23 @@
 ---
 title: Classe mip::ProtectionDescriptorBuilder
 description: Documenta la classe MIP::p rotectiondescriptorbuilder dell'SDK Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: cdc72fd45a4b82611aa02d0a9182cd829b6d8a9e
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: ed9d7085f7406e5c921843d32069f2f6af9f5807
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560779"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489691"
 ---
 # <a name="class-mipprotectiondescriptorbuilder"></a>Classe mip::ProtectionDescriptorBuilder 
 Costruisce un ProtectionDescriptor che descrive la protezione associata a una porzione di contenuto.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public MIP_API std:: shared_ptr\<ProtectionDescriptor\> Build ()  |  Crea un ProtectionDescriptor le cui autorizzazioni di accesso sono definite da questa istanza di ProtectionDescriptorBuilder.
 public void SetName(const std::string& value)  |  Imposta il nome dei criteri di protezione.
@@ -27,12 +27,9 @@ public void SetAllowOfflineAccess(bool value)  |  Imposta un valore che indica s
 public void SetReferrer(const std::string& uri)  |  Imposta l'indirizzo del referrer dei criteri di protezione.
 public void SetEncryptedAppData (const std:: Map\<std:: String, std:: String\>& value)  |  Imposta i dati specifici dell'app da crittografare.
 public void SetSignedAppData (const std:: Map\<std:: String, std:: String\>& value)  |  Imposta i dati specifici dell'app da firmare.
-public virtual ~ProtectionDescriptorBuilder()  | Non ancora documentato.
-public static MIP_API std:: shared_ptr&lt;ProtectionDescriptorBuilder&gt; MIP::P rotectionDescriptorBuilder:: CreateFromUserRights | Crea un ProtectionDescriptorBuilder le cui autorizzazioni di accesso sono definite da utenti e diritti.
-public static MIP_API std:: shared_ptr&lt;ProtectionDescriptorBuilder&gt; MIP::P rotectionDescriptorBuilder:: CreateFromUserRoles | Crea un ProtectionDescriptorBuilder le cui autorizzazioni di accesso sono definite da utenti e ruoli.
-public static MIP_API std:: shared_ptr&lt;ProtectionDescriptorBuilder&gt; MIP::P rotectionDescriptorBuilder:: CreateFromTemplate | Crea un ProtectionDescriptorBuilder le cui autorizzazioni di accesso sono definite dal modello di protezione. 
-
-## <a name="members"></a>Membri
+public virtual ~ProtectionDescriptorBuilder()  | _Non ancora documentato._
+  
+## <a name="members"></a>Members
   
 ### <a name="build-function"></a>Funzione di compilazione
 Crea un ProtectionDescriptor le cui autorizzazioni di accesso sono definite da questa istanza di ProtectionDescriptorBuilder.
@@ -101,27 +98,3 @@ Un'applicazione può specificare un dizionario di dati specifici dell'app che sa
   
 ### <a name="protectiondescriptorbuilder-function"></a>~ ProtectionDescriptorBuilder (funzione)
 _Non ancora documentato._
-
-### <a name="createfromuserrights-function"></a>CreateFromUserRights (funzione)
-Crea un ProtectionDescriptorBuilder le cui autorizzazioni di accesso sono definite da utenti e diritti.
-
-Parametri:
-* **usersAndRights**: raccolta di mapping tra utenti e diritti.
-
-**Restituisce**: nuova istanza di [ProtectionDescriptor](class_mip_protectiondescriptor.md) 
-
-### <a name="createfromuserroles-function"></a>CreateFromUserRoles (funzione)
-Crea un ProtectionDescriptorBuilder le cui autorizzazioni di accesso sono definite da utenti e ruoli.
-
-Parametri:
-* **usersAndRoles**: raccolta di mapping tra utenti e ruoli.
-
-**Returns**: crea un [ProtectionDescriptor](class_mip_protectiondescriptor.md) le cui autorizzazioni di accesso sono definite da utenti e ruoli.
-
-### <a name="createfromtemplate-function"></a>CreateFromTemplate (funzione)
-Crea un ProtectionDescriptorBuilder le cui autorizzazioni di accesso sono definite dal modello di protezione. 
-
-Parametri:
-* **TemplateID**: ID modello di protezione.
-
-**Restituisce**: nuova istanza di [ProtectionDescriptor](class_mip_protectiondescriptor.md) .

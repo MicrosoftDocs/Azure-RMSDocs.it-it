@@ -1,23 +1,23 @@
 ---
 title: Classe mip::PolicyEngine
 description: Documenta la classe MIP::p olicyengine dell'SDK Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: a1938601e036f7fb4d84a9a5815016dbda4509b7
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 114b8dedb46a0e86eb73ff1f6fa58de81927b60e
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73558513"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489827"
 ---
 # <a name="class-mippolicyengine"></a>Classe mip::PolicyEngine 
 Questa classe fornisce un'interfaccia per tutte le funzioni del motore.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 public const Settings& GetSettings() const  |  Ottenere le impostazioni del motore dei criteri.
 public const std:: Vector\<std:: shared_ptr\<label\>\>& ListSensitivityLabels ()  |  Elenca le etichette di riservatezza associate al motore dei criteri.
@@ -36,7 +36,7 @@ public const std:: String & GetSensitivityFileId () const  |  Ottiene l'ID del f
 public bool HasClassificationRules () const  |  Ottiene se il criterio ha regole automatiche o di raccomandazione.
 public std:: Chrono:: time_point\<std:: Chrono:: system_clock\> GetLastPolicyFetchTime () const  |  Ottiene l'ora dell'ultimo recupero dei criteri.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="getsettings-function"></a>GetSettings (funzione)
 Ottenere le impostazioni del motore dei criteri.

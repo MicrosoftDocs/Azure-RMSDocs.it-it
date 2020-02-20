@@ -1,23 +1,23 @@
 ---
 title: Classe mip::ProtectionProfile::Settings
 description: Documenta la classe MIP::p rotectionprofile dell'SDK Microsoft Information Protection (MIP).
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: e39260036f1e4f4413b008e75cbbd761aea7d751
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 0622f4db00c2f4baca7845aa0ca061bf2ccf294b
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73560070"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489606"
 ---
 # <a name="class-mipprotectionprofilesettings"></a>Classe mip::ProtectionProfile::Settings 
 Impostazioni utilizzate da ProtectionProfile durante la sua creazione e per tutta la sua durata.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 Impostazioni pubbliche (const std:: shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std:: shared_ptr\<AuthDelegate\>& AuthDelegate, const std:: shared_ptr\<ConsentDelegate\>& consentDelegate, const std:: shared_ptr\<ProtectionProfile:: Observer\>& Observer)  |  Costruttore ProtectionProfile:: Settings che specifica un Observer da usare per le operazioni asincrone.
 Impostazioni pubbliche (const std:: shared_ptr\<MipContext\>& mipContext, CacheStorageType cacheStorageType, const std:: shared_ptr\<AuthDelegate\>& authDelegate, const std:: shared_ptr\<ConsentDelegate\>& consentDelegate)  |  Costruttore ProtectionProfile:: Settings, usato per le operazioni sincrone.
@@ -37,7 +37,7 @@ public bool CanCacheLicenses () const  |  Ottiene un valore che indica se le lic
 public void SetCustomSettings (const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& customSettings)  |  Imposta le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
 public const std:: Vector\<std::p Air\<std:: String, std:: String\>\>& GetCustomSettings () const  |  Ottiene le impostazioni personalizzate, usate a scopi di controllo e test delle funzionalità.
   
-## <a name="members"></a>Membri
+## <a name="members"></a>Members
   
 ### <a name="settings-function"></a>Funzione Settings
 Costruttore ProtectionProfile:: Settings che specifica un Observer da usare per le operazioni asincrone.

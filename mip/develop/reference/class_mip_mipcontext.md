@@ -1,35 +1,34 @@
 ---
 title: 'Classe MIP:: MipContext'
 description: 'Documenta la classe MIP:: mipcontext di Microsoft Information Protection (MIP) SDK.'
-author: msmbaldwin
+author: BryanLa
 ms.service: information-protection
 ms.topic: reference
-ms.author: mbaldwin
-ms.date: 10/29/2019
-ms.openlocfilehash: 9efbe9330014458a26f62e4dfac9ea24ad5d4475
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.author: bryanla
+ms.date: 02/14/2020
+ms.openlocfilehash: 82c39cd6f716bde9232f6a5a461b2ffbfbae1dd0
+ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73561025"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77489912"
 ---
 # <a name="class-mipmipcontext"></a>Classe MIP:: MipContext 
 MipContext rappresenta lo stato condiviso tra tutti i profili, i motori e i gestori.
   
 ## <a name="summary"></a>Riepilogo
- Membri                        | Descrizioni                                
+ Members                        | Descrizioni                                
 --------------------------------|---------------------------------------------
 blocco public void ShutDown ()  |  Terminare MIP.
 public bool IsFeatureEnabled (funzionalità FlightingFeature) const  |  Ottiene un valore che indica se una funzionalità è abilitata o meno.
 public const ApplicationInfo& GetApplicationInfo() const  |  Ottenere la descrizione dell'applicazione.
 public const std:: String & GetMipPath () const  |  Ottenere il percorso del file per log, cache e così via.
 public bool IsOfflineOnly ()  |  Ottiene l'impostazione solo offline.
+public LogLevel GetThresholdLogLevel () const  |  Ottenere il livello di registrazione della soglia.
 public std:: shared_ptr\<LoggerDelegate\> GetLoggerDelegate ()  |  Ottiene l'implementazione del logger.
 public LoggerDelegate * GetRawLoggerDelegate ()  |  Ottiene l'implementazione del logger.
-public static MIP_API std:: shared_ptr&lt;MipContext&gt; __CDECL MIP:: MipContext:: create | Creare una nuova istanza di MipContext da utilizzare durante l'inizializzazione dei profili.
-public static MIP_API std:: shared_ptr&lt;MipContext&gt; __CDECL MIP:: MipContext:: CreateWithCustomFeatureSettings | Creare una nuova istanza di MipContext con le impostazioni delle funzionalità personalizzate.
-
-## <a name="members"></a>Membri
+  
+## <a name="members"></a>Members
   
 ### <a name="shutdown-function"></a>Funzione ShutDown
 Terminare MIP.
@@ -64,6 +63,12 @@ Ottiene l'impostazione solo offline.
   
 **Restituisce**: indipendentemente dal fatto che l'applicazione sia in esecuzione in modalità solo offline
   
+### <a name="getthresholdloglevel-function"></a>GetThresholdLogLevel (funzione)
+Ottenere il livello di registrazione della soglia.
+
+  
+**Restituisce**: livello di log soglia
+  
 ### <a name="getloggerdelegate-function"></a>GetLoggerDelegate (funzione)
 Ottiene l'implementazione del logger.
 
@@ -75,13 +80,3 @@ Ottiene l'implementazione del logger.
 
   
 **Restituisce**: logger
-
-### <a name="create-function"></a>Funzione Create
-Creare una nuova istanza di MipContext da utilizzare durante l'inizializzazione dei profili.
-
-**Restituisce**: istanza di MipContext.
-
-### <a name="createwithcustomfeaturesettings-function"></a>CreateWithCustomFeatureSettings (funzione)
-Creare una nuova istanza di MipContext con le impostazioni delle funzionalità personalizzate.
-
-**Restituisce**: istanza di MipContext.
