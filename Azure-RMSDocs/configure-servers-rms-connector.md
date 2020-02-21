@@ -1,10 +1,10 @@
 ---
 title: Configurare i server per il connettore di Rights Management - AIP
 description: Informazioni per configurare i server locali che sfrutteranno il connettore di Azure Rights Management (RMS). Queste procedure illustrano il passaggio 5 di Distribuzione del connettore di Azure Rights Management.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/30/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: bdcc6b77e5f75b67e69f39c4c5c260f44850f62e
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: 96e8c633201731796c7aecfdda0ef513fc2e261d
+ms.sourcegitcommit: 2abde0336bffda66ba7c629bfb5f0525264c3730
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117621"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77494871"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configurazione dei server per il connettore di Azure Rights Management
 
@@ -175,6 +175,8 @@ I seguenti ruoli di SharePoint comunicano con il connettore RMS:
 
 Per usare un connettore RMS, è necessario che i server di SharePoint eseguano una delle versioni seguenti del software:
 
+-   SharePoint Server 2019
+
 -   SharePoint Server 2016
 
 -   SharePoint Server 2013
@@ -206,7 +208,7 @@ Per usare un connettore RMS, è necessario che i server di SharePoint eseguano u
 
     -   Se si usa SharePoint 2016 o SharePoint 2013, modificare manualmente il Registro di sistema usando le informazioni disponibili in [Impostazioni del Registro di sistema per il connettore RMS](rms-connector-registry-settings.md) per aggiungere manualmente le impostazioni di registro nei server. 
 
-3.  Abilitare IRM in SharePoint. Per ulteriori informazioni, vedere [Configurare Information Rights Management (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) nella libreria di SharePoint.
+3.  Abilitare IRM in SharePoint. Per altre informazioni, vedere [Configurare Information Rights Management (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) nella libreria di SharePoint.
 
     Quando si seguono queste istruzioni, è necessario configurare SharePoint per l'uso del connettore. A questo scopo, specificare l'opzione **Usa il server RMS seguente** e immettere l'URL del connettore di bilanciamento del carico configurato. Immettere il prefisso del protocollo (HTTP:// o HTTPS://) e il nome del connettore definito nel DNS per l'indirizzo di bilanciamento del carico del connettore stesso, Ad esempio, se il nome del connettore è https:\//connector.contoso.com, la configurazione sarà simile all'immagine seguente:
 
@@ -220,7 +222,7 @@ Per usare il connettore RMS e la funzionalità Infrastruttura di classificazione
 
 - Windows Server 2016
 
-- Windows Server 2012 R2
+- R2 per Windows Server 2012
 
 - Windows Server 2012
 

@@ -7,16 +7,16 @@ ms.topic: conceptual
 ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
-ms.openlocfilehash: c28ab93feedea4c27ef9fe032f889d17da078d49
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.openlocfilehash: 89536031de20349e070c2577d958868b33a33b09
+ms.sourcegitcommit: df503528b19351a5257a8c72ac3fcb2674494d29
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75555943"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77521091"
 ---
-# <a name="microsoft-information-protection-mip-sdk-version-release-history-and-support-policy"></a>Cronologia delle versioni di Microsoft Information Protection (MIP) SDK e criteri di supporto
+# <a name="microsoft-information-protection-mip-software-development-kit-sdk-version-release-history-and-support-policy"></a>Cronologia delle versioni di Microsoft Information Protection (MIP) Software Development Kit (SDK) e criteri di supporto
 
-## <a name="servicing"></a>Servizio 
+## <a name="servicing"></a>Manutenzione 
 
 Ogni versione disponibile a livello generale è supportata per sei mesi dopo il rilascio della versione GA successiva. La documentazione potrebbe non includere informazioni sulle versioni non supportate. Le correzioni e le nuove funzionalità sono applicabili solo alla versione GA più recente.
 
@@ -31,17 +31,118 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche per un
 >  
 > Per il supporto tecnico, visitare il [forum stack overflow Microsoft Information Protection](https://stackoverflow.com/questions/tagged/microsoft-information-protection). 
 
+## <a name="version-15117"></a>Versione 1.5.117
+
+**Data di rilascio**: 20 febbraio 2020
+
+### <a name="general-sdk-changes"></a>Modifiche generali dell'SDK
+
+- API Java (solo Windows)
+- Annullamento di attività MIP asincrone
+  - Tutte le chiamate asincrone restituiscono l'oggetto MIP:: AsyncControl con un metodo Cancel ()
+- Caricamento ritardato dei file binari dipendenti
+- Facoltativamente, mascherare le proprietà di telemetria/controllo specifiche
+   - Configurabile tramite MIP:: TelemetryConfiguration:: maskedProperties
+- Eccezioni migliorate:
+  - Tutti gli errori includono ID di correlazione di utilità pratica nella stringa di descrizione
+  - Errore di rete con campi ' Category ',' BaseUrl ',' RequestId ' è StatusCode '
+- Miglioramento del risultato dell'API C/dettagli dell'errore
+
+### <a name="file-sdk"></a>SDK file
+
+- Verifica senza rete se il file è con etichetta o protetto
+  - MIP:: FileHandler:: IsLabeledOrProtected ()
+  - Rischio minore di falsi positivi (ad esempio se il file contiene metadati dell'etichetta zombie)
+- Filtrare le etichette associate a tipi specifici di protezione
+  - Configurabile tramite MIP:: fileengine:: Settings:: SetLabelFilter ()
+- Esporre i dati dei criteri all'API file
+  - MIP:: fileengine:: GetPolicyDataXml ()
+
+### <a name="policy-sdk"></a>SDK criteri
+
+- Contrassegno del contenuto dinamico per le azioni filigrana/intestazione/piè di pagina:
+  - I campi come $ {Item. Label}, $ {Item.Name}, $ {User.Name}, $ {Event. DateTime} verranno popolati automaticamente da MIP
+  - MIP:: Identity può essere costruito con un campo "nome" descrittivo usato dal contrassegno di contenuto dinamico
+  - Configurabile tramite MIP::P olicyEngine:: Settings:: SetVariableTextMarkingType ()
+- Verifica senza rete se il contenuto è etichettato
+  - MIP::P olicyHandler:: etichettato ()
+  - Rischio minore di falsi positivi (ad esempio se il contenuto contiene metadati dell'etichetta zombie)
+- Valore TTL cache criteri etichetta
+  - Impostazione predefinita: 30 giorni
+  - Configurabile tramite MIP::P olicyProfile:: SetCustomSettings ()
+- **Modifica di rilievo**
+  - Aggiornamento di PolicyEngine. Settings. LabelFilter dall'elenco di enumerazioni a Nullable bit.
+
+### <a name="protection-sdk"></a>SDK di protezione
+
+- Pre-licenza
+  - L'esistenza di una pre-licenza insieme al contenuto crittografato, insieme a un certificato utente recuperato in precedenza, consente la decrittografia offline del contenuto
+  - MIP::P rotectionHandler:: ConsumptionSettings può essere costruito con una licenza preliminare
+  - MIP::P rotectionEngine:: LoadUserCert | Async () Recupera il certificato utente archiviato in base a MIP::P criteri di memorizzazione nella cache di rotectionProfile
+- Verifica delle funzionalità specifiche del server
+  - Verifica se il tenant dell'utente supporta la funzionalità "solo crittografia" (disponibile solo in Azure RMS)
+  - MIP::P rotectionEngine:: IsFeatureSupported ()
+- Dettagli più completi durante il recupero dei modelli RMS
+- **Modifiche di rilievo**
+  - MIP::P rotectionEngine:: gettemplates () Vector < shared_ptr<string>> valore restituito sostituito con Vector < shared_ptr < MIP:: TemplateDescriptor > > (C++)
+  - MIP::P rotectionEngine:: Observer:: OnGetTemplatesSuccess () callback shared_ptr < Vector<string>>
+    parametro sostituito con Vector < shared_ptr < MIP:: TemplateDescriptor > > (C++)
+  - IProtectionEngine. gettemplates | L'elenco di valori restituiti Async ()<string> sostituito con<TemplateDescriptor>elenco. (C#)
+  - MIP_CC_ProtectionEngine_GetTemplates () mip_cc_guid * param sostituito con mip_cc_template_descriptor * (API C)
+
+### <a name="c-api"></a>API C
+
+- **Modifiche di rilievo**: la maggior parte delle funzioni per includere mip_cc_error * parametro può essere null
+  
+
+### <a name="errorexception-updates"></a>Aggiornamenti errori/eccezioni
+
+- Riepilogo gestione errori:
+  - AccessDeniedError: all'utente non sono stati concessi i diritti per accedere al contenuto
+      - NoAuthTokenError: l'app non ha fornito il token di autenticazione
+      - NoPermissionsError: all'utente non sono stati concessi i diritti per contenuto specifico, ma è disponibile un referrer/un proprietario
+      - ServiceDisabledError: il servizio è disabilitato per utente/dispositivo/piattaforma/tenant
+  - AdhocProtectionRequiredError: è necessario impostare la protezione ad hoc prima di impostare un'etichetta
+  - BadInputError: input non valido da utente/app
+      - InsufficientBufferError: input del buffer non valido da utente/app
+      - LabelDisabledError: l'ID etichetta è riconosciuto ma disabilitato per l'uso
+      - LabelNotFoundError: ID etichetta non riconosciuto
+      - TemplateNotFoundError: ID modello non riconosciuto
+  - ConsentDeniedError: non è stato concesso il consenso a un'operazione che richiede il consenso dell'utente o dell'app
+  - DeprecatedApiError: questa API è stata deprecata
+  - FileIOError: non è stato possibile leggere/scrivere il file
+  - InternalError: errore interno imprevisto
+  - NetworkError
+      - ProxyAuthenticationError: è richiesta l'autenticazione proxy
+    - Category = BadResponse: il server ha restituito una risposta HTTP illeggibile (il tentativo potrebbe avere esito positivo)
+    - Categoria = annullata: non è stato possibile stabilire una connessione HTTP perché l'operazione è stata annullata dall'utente o dall'app.
+    - Category = FailureResponseCode: il server ha restituito una risposta di errore generico (il tentativo potrebbe avere esito positivo)
+    - Categoria = NOCONNECTION: non è stato possibile stabilire la connessione HTTP (il tentativo potrebbe avere esito positivo)
+    - Categoria = offline: non è stato possibile stabilire la connessione HTTP perché l'applicazione è in modalità offline (il tentativo non riesce)
+    - Categoria = proxy: non è stato possibile stabilire una connessione HTTP a causa di un problema del proxy (il tentativo potrebbe probabilmente non riuscire)
+    - Categoria = SSL: non è stato possibile stabilire una connessione HTTP a causa di un problema SSL (probabilmente il tentativo non riuscirà)
+    - Categoria = limitato: il server ha restituito una risposta "limitata" (backoff/Retry avrà probabilmente esito positivo)
+    - Categoria = timeout: non è stato possibile stabilire una connessione HTTP dopo il timeout (il tentativo avrà probabilmente esito positivo)
+    - Category = UnexpectedResponse: il server ha restituito dati imprevisti (il tentativo potrebbe avere esito positivo)
+  - NoPolicyError: il tenant o l'utente non è configurato per le etichette
+  - NotSupportedError: operazione non supportata nello stato corrente
+  - OperationCancelledError: operazione annullata
+  - PrivilegedRequiredError: non è possibile modificare l'etichetta a meno che il metodo di assegnazione = privilegiato
+- Modifiche
+  - Rimossi PolicySyncError inutilizzati. Sostituito da NetworkError
+  - Rimossi TransientNetworkError inutilizzati. Sostituito da categorie NetworkError
+
 ## <a name="version-140"></a>Versione 1.4.0 
 
 **Data di rilascio**: 6 novembre 2019
 
-Questa versione introduce il supporto per l'API di protezione nel pacchetto .NET (Microsoft. InformationProtection. file).
+Questa versione introduce il supporto per l'SDK di protezione nel pacchetto .NET (Microsoft. InformationProtection. file).
 
 ### <a name="sdk-changes"></a>Modifiche dell'SDK
 - Miglioramenti delle prestazioni e correzioni di bug
 - Enumerazione StorageType rinominata in CacheStorageType
 - Collegamenti Android a libc + + anziché gnustl
-- Sono state rimosse le API deprecate in precedenza
+- API previouslydeprecated rimosse
   - File/criteri/profilo:: le impostazioni devono essere inizializzate con un MipContext
   - File/criteri/profilo:: impostazioni, percorso, informazioni sull'applicazione, delegato del logger, telemetria e getter/setter del livello di log sono stati rimossi. Queste proprietà sono gestite da MipContext
 - Migliore supporto della libreria statica sulle piattaforme Apple
@@ -55,23 +156,23 @@ Questa versione introduce il supporto per l'API di protezione nel pacchetto .NET
     - libssl. a
 - Rimosso mip_telemetry. dll (Unito in mip_core. dll)
 
-### <a name="file-api"></a>API File
+### <a name="file-sdk"></a>SDK file
 
 - RPMSG
-  - Encryption
+  - Crittografia
   - Aggiunta del supporto per la decrittografia String8
 - Comportamento dell'estensione PFILE configurabile (impostazione predefinita, <EXT>. PFILE o P<EXT>)
   - ProtectionSettings::SetPFileExtensionBehavior
 
-### <a name="policy-api"></a>API Criteri
+### <a name="policy-sdk"></a>SDK criteri
 
 - API C completa
 - Configurare il filtraggio delle etichette associate alla protezione
   - PolicyEngine:: impostazioni:: SetLabelFilter ()
 
-### <a name="protection-api"></a>API Protezione
+### <a name="protection-sdk"></a>SDK di protezione
 
-- Sono state rimosse le API deprecate in precedenza
+- API previouslydeprecated rimosse
   - Rimozione di ProtectionEngine:: CreateProtectionHandlerFromDescriptor [async] (usare ProtectionEngine:: CreateProtectionHandlerForPublishing [async])
   - Rimozione di ProtectionEngine:: CreateProtectionHandlerFromPublishingLicense [async] (usare ProtectionEngine:: CreateProtectionHandlerForConsumption [async])
 - API C# completa
@@ -113,7 +214,7 @@ Questa versione introduce il supporto per l'API di protezione nel pacchetto .NET
 - Ora è supportata la decrittografia dei file MSG protetti.
 - Il controllo dei file Message. rpmsg è supportato tramite `mip::FileInspector` e `mip::FileHandler::InspectAsync()`.
 - È ora possibile crittografare facoltativamente la cache su disco.
-- L'API di protezione ora supporta il cloud sovrano Cina.
+- Protection SDK supporta ora il cloud sovrano Cina.
 - Supporto di Arm64 in Android.
 - Supporto di Arm64e in iOS.
 - È ora possibile disabilitare la cache del contratto di licenza con l'utente finale.
@@ -182,7 +283,7 @@ Questa versione introduce il supporto per l'API di protezione nel pacchetto .NET
 ### <a name="new-requirements"></a>Nuovi requisiti
  - MIP:: ReleaseAllResources deve essere chiamato prima della terminazione del processo (dopo la cancellazione dei riferimenti a tutti i profili, motori e gestori)
  - (Interface) MIP:: ExecutionState:: GetClassificationResults tipo restituito e il parametro "classificationIds" è stato modificato
- - (Interface) MIP:: FileExecutionState:: GetAuditMetadata può essere implementato dalle applicazioni per specificare informazioni dettagliate per la superficie del dashboard di controllo di un amministratore tenant, ad esempio mittente, destinatari, Ultima modifica e così via.
+ - (Interface) MIP:: FileExecutionState:: GetAuditMetadata può essere implementato dalle applicazioni per specificare informazioni dettagliate per la superficie del dashboard di controllo di un amministratore tenant (ad esempio, mittente, destinatari, Ultima modifica e così via)
  - (Interface) MIP:: FileExecutionState:: GetClassificationResults tipo restituito è stato modificato e ora richiede un parametro FileHandler
  - (Interface) MIP:: FileExecutionState:: GetDataState deve essere implementato dalle applicazioni per specificare la modalità di interazione di un'applicazione con contentIdentifier
  - (interfaccia) MIP:: HttpDelegate l'interfaccia richiede i metodi ' CancelOperation ' è CancelAllOperations '
@@ -194,20 +295,20 @@ Questa versione introduce il supporto per l'API di protezione nel pacchetto .NET
  - MIP::P olicyHandler:: NotifyCommitedActions rinominato in MIP::P olicyHandler:: NotifyCommittedActions
 
 
-## <a name="version-110"></a>Versione 1.1.0
+## <a name="version-110"></a>Versione 1.1.0 
 
 **Data di rilascio**: 15 gennaio 2019
 
 Questa versione introduce il supporto per le piattaforme seguenti:
 
   - .NET
-  - iOS SDK (API criteri)
-  - Android SDK (API per i criteri e API di protezione)
+  - iOS SDK (Policy SDK)
+  - Android SDK (Policy SDK and Protection SDK)
 
 ### <a name="new-features"></a>Nuove funzioni e caratteristiche
 
 - Supporto di ADRMS
-- Le operazioni dell'API di protezione sono realmente asincrone (su Win32), consentendo operazioni di crittografia/decrittografia simultanee non bloccanti
+- Le operazioni di Protection SDK sono realmente asincrone (su Win32), consentendo operazioni di crittografia/decrittografia simultanee non bloccanti
   - I callback dell'applicazione (AuthDelegate, HTTPDelegate e così via) possono ora essere richiamati in qualsiasi thread in background
 - È ora possibile leggere le proprietà personalizzate dell'etichetta impostate dagli amministratori IT tramite MIP:: Label:: GetCustomSettings
 - È ora possibile recuperare la licenza di pubblicazione serializzata direttamente da un file senza operazioni HTTP tramite MIP:: FileHandler:: GetSerializedPublishingLicense

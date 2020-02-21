@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection offre una soluzione client-s
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/23/2020
+ms.date: 02/20/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 8585245243813977c6c7442fab4d5687e89882c1
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.openlocfilehash: 96a1af247d9c65077be3dc7706cc1976850540fd
+ms.sourcegitcommit: 2abde0336bffda66ba7c629bfb5f0525264c3730
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422855"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77494877"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -105,7 +105,7 @@ Per confrontare le funzionalità di riservatezza predefinite di Office in divers
 |Barra di Information Protection nelle app Office:| **Sì** | **Sì**| No |
 |Contrassegni visivi come azione etichetta (intestazione, piè di pagina, filigrana):| **Sì** | **Sì** | **Sì**|
 |Contrassegni visivi per app:| **Sì** | **Sì* | No |
-|Contrassegni visivi dinamici con variabili:| **Sì** | **** | No |
+|Contrassegni visivi dinamici con variabili:| **Sì** | **Sì** (anteprima) | No |
 |Etichetta con Esplora file:| **Sì** | **Sì** | No |
 |Un visualizzatore per i file protetti (testo, immagini, PDF, Pfile):| **Sì** | **Sì** | No|
 |Supporto di PPDF per l'applicazione di etichette:| **Sì** | No | No |
