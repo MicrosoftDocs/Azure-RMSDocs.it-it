@@ -4,19 +4,19 @@ description: Quando si assegna un'etichetta a un documento o a un messaggio di p
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/25/2020
+ms.date: 02/26/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: c1f1e674f8937de23b37a8f0273e57c4a44e4d64
-ms.sourcegitcommit: 2821e8a48cea3abdb8af91cdde02380126d00630
+ms.openlocfilehash: 33bb27b5b1d79236d1a1c65bdb109b9697a73302
+ms.sourcegitcommit: 2964d0c06033a0933ea569c11475de5abf95cf92
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77600684"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77629454"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
@@ -112,7 +112,7 @@ Esempio: se si specifica la stringa `Document: ${item.name}  Classification: ${i
 
 Per impostazione predefinita, i contrassegni visivi specificati vengono applicati a Word, Excel, PowerPoint e Outlook. Tuttavia, è possibile specificare i contrassegni visivi per tipo di applicazione di Office quando si usa un'istruzione con variabile "If.App" nella stringa di testo e identificare il tipo di applicazione usando i valori **Word**, **Excel**, **PowerPoint**, o **Outlook**. È anche possibile abbreviare questi valori, operazione necessaria se si desidera specificarne più di uno nella stessa istruzione If.App.
 
-Usare la sintassi seguente:
+Utilizzare la seguente sintassi:
 
     ${If.App.<application type>}<your visual markings text> ${If.End}
 
@@ -139,7 +139,7 @@ Esempi:
     In Word e PowerPoint l'etichetta applica il testo della filigrana "Questo contenuto è riservato". In Excel, l'etichetta applica il testo della filigrana "Riservato". In Outlook, l'etichetta non applica alcun testo della filigrana perché le filigrane come contrassegni visivi non sono supportate per Outlook.
 
 > [!NOTE]
-> Quando si usa il client di etichettatura unificato di Azure Information Protection, è possibile impostare i valori per il **nome del carattere** e/o il **colore del carattere** solo tramite il portale di Azure Information Protection. 
+> Quando si usa il client Azure Information Protection Unified Labeling, l'impostazione dei valori per il **nome del tipo di carattere** è possibile solo tramite il portale di Azure Information Protection. Quando si impostano i valori per il **colore del carattere** oltre uno dei cinque valori predefiniti, è possibile usare anche il portale di Azure Information Protection.
 
 ### <a name="setting-the-font-name"></a>Impostazione del nome del tipo di carattere
 
