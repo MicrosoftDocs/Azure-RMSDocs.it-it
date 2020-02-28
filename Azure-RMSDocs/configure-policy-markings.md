@@ -4,19 +4,19 @@ description: Quando si assegna un'etichetta a un documento o a un messaggio di p
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/26/2020
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 33bb27b5b1d79236d1a1c65bdb109b9697a73302
-ms.sourcegitcommit: 2964d0c06033a0933ea569c11475de5abf95cf92
+ms.openlocfilehash: c9aca3acb5d047a6d1b24dd453b0f2126ce4ce37
+ms.sourcegitcommit: 275d31ef762c702b6c63025cbba0a45ca9528ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77629454"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77778603"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
@@ -100,7 +100,7 @@ Nella stringa di testo è possibile usare le variabili seguenti per l'intestazio
 
 - `${Event.DateTime}` per la data e l'ora in cui è stata impostata l'etichetta selezionata. Ad esempio: 16/8/2016 13:30
 
-Esempio: se si specifica la stringa `Document: ${item.name}  Classification: ${item.label}` per il piè di pagina dell'etichetta **General**, il testo del piè di pagina applicato a un documento denominato project.docx sarà **Document: project.docx  Classification: General** (Documento: project.docx Classificazione: Generale).
+Esempio: se si specifica la stringa `Document: ${Item.name}  Classification: ${Item.label}` per il piè di pagina dell'etichetta **General**, il testo del piè di pagina applicato a un documento denominato project.docx sarà **Document: project.docx  Classification: General** (Documento: project.docx Classificazione: Generale).
 
 > [!NOTE]
 > L'uso della variabile `${User.Name}` e/o di `${User.PrincipalName}` non è attualmente supportato dal client Azure Information Protection Unified labeling. 
@@ -112,7 +112,7 @@ Esempio: se si specifica la stringa `Document: ${item.name}  Classification: ${i
 
 Per impostazione predefinita, i contrassegni visivi specificati vengono applicati a Word, Excel, PowerPoint e Outlook. Tuttavia, è possibile specificare i contrassegni visivi per tipo di applicazione di Office quando si usa un'istruzione con variabile "If.App" nella stringa di testo e identificare il tipo di applicazione usando i valori **Word**, **Excel**, **PowerPoint**, o **Outlook**. È anche possibile abbreviare questi valori, operazione necessaria se si desidera specificarne più di uno nella stessa istruzione If.App.
 
-Utilizzare la seguente sintassi:
+Usare la sintassi seguente:
 
     ${If.App.<application type>}<your visual markings text> ${If.End}
 

@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire la versione corr
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/20/2020
+ms.date: 02/27/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 54d5a7d1d458aeec718a0447b7d5aa138122b0e0
-ms.sourcegitcommit: adbbfae6a94f43792a5a732c7eca5078c1fdc95f
+ms.openlocfilehash: cc2c9a134c222ad9ec8463e94dc5b355ade20d91
+ms.sourcegitcommit: 275d31ef762c702b6c63025cbba0a45ca9528ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77599863"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77778654"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
@@ -77,7 +77,8 @@ Prima di installare lo scanner di Azure Information Protection, verificare che i
 |Etichette configurate che applicano la classificazione automatica e, facoltativamente, la protezione|Per istruzioni per il client classico per configurare un'etichetta per le condizioni e per applicare la protezione:<br /> - [Come configurare le condizioni per la classificazione automatica e consigliata](configure-policy-classification.md)<br /> - [Come configurare un'etichetta per la protezione di Rights Management](configure-policy-protection.md) <br /><br />Suggerimento: è possibile usare le istruzioni dell' [esercitazione](infoprotect-quick-start-tutorial.md) per testare lo scanner con un'etichetta che cerca i numeri di carta di credito in un documento di Word preparato. Tuttavia, sarà necessario modificare la configurazione dell'etichetta in modo che l'opzione **Specificare se l'etichetta viene applicata automaticamente o se viene consigliata all'utente** sia impostata su **Automatico** anziché su **Consigliato**. Rimuovere quindi l'etichetta dal documento (se applicata) e copiare il file in un repository di dati per lo scanner. Per eseguire test velocemente, è possibile copiare il file in una cartella locale nel computer dello scanner.<br /><br /> Per istruzioni sul client Unified Labeling per configurare un'etichetta per l'etichettatura automatica e per applicare la protezione:<br /> - [applicare automaticamente un'etichetta di riservatezza al contenuto](https://docs.microsoft.com/microsoft-365/compliance/apply-sensitivity-label-automatically)<br /> - [limitare l'accesso al contenuto usando la crittografia in etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/encryption-sensitivity-labels)<br /><br /> nonostante sia possibile eseguire lo scanner anche se non sono state configurate etichette che applicano la classificazione automatica, questo scenario non è illustrato in queste istruzioni. [Altre informazioni](#using-the-scanner-with-alternative-configurations)|
 |Per le cartelle e le raccolte documenti di SharePoint da analizzare:<br /><br />- SharePoint 2019<br /><br />- SharePoint 2016<br /><br />- SharePoint 2013<br /><br />- SharePoint 2010|Altre versioni di SharePoint non sono supportate per lo scanner.<br /><br />Quando si usa il [controllo delle versioni](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning), lo scanner controlla ed etichetta l'ultima versione pubblicata. Se le etichette dello scanner sono obbligatorie per un file e l' [approvazione del contenuto](https://docs.microsoft.com/sharepoint/governance/versioning-content-approval-and-check-out-planning#plan-content-approval) , è necessario approvare il file con etichetta in modo che sia disponibile per gli utenti. <br /><br />Per le farm SharePoint di grandi dimensioni, controllare se è necessario aumentare la soglia della visualizzazione elenco (per impostazione predefinita, 5.000) per lo scanner al fine di accedere a tutti i file. Per ulteriori informazioni, vedere la documentazione di SharePoint seguente: [gestire elenchi e librerie di grandi dimensioni in SharePoint](https://support.office.com/article/manage-large-lists-and-libraries-in-sharepoint-b8588dae-9387-48c2-9248-c24122f07c59#__bkmkchangelimit&ID0EAABAAA=Server)|
 |Per i documenti di Office da analizzare:<br /><br />- Formati di file 97-2003 e formati Office Open XML per Word, Excel e PowerPoint|Per ulteriori informazioni sui tipi di file supportati dallo scanner per questi formati di file, vedere le seguenti informazioni: <br />-Client classico: [tipi di file supportati dal client di Azure Information Protection](./rms-client/client-admin-guide-file-types.md)<br />-Unified Labeling client: [tipi di file supportati dal client di Azure Information Protection Unified Labeling](./rms-client/clientv2-admin-guide-file-types.md)|
-|Per i percorsi lunghi:<br /><br />- Massimo 260 caratteri, salvo se lo scanner è installato in Windows 2016 e il computer è configurato per il supporto dei percorsi lunghi|Windows 10 e Windows Server 2016 supportano lunghezze maggiori di 260 caratteri con le seguenti impostazioni di [criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): **criteri del computer locale** > **Configurazione computer** > **modelli amministrativi** > **tutte le impostazioni** > **Abilita percorsi lunghi Win32**<br /><br /> Per altre informazioni sul supporto dei percorsi di file lunghi, vedere la sezione [Maximum Path Length Limitation](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) (Limite massimo lunghezza del percorso) nella documentazione per sviluppatori di Windows 10.
+|Per i percorsi lunghi:<br /><br />- Massimo 260 caratteri, salvo se lo scanner è installato in Windows 2016 e il computer è configurato per il supporto dei percorsi lunghi|Windows 10 e Windows Server 2016 supportano lunghezze maggiori di 260 caratteri con le seguenti impostazioni di [criteri di gruppo](https://blogs.msdn.microsoft.com/jeremykuhne/2016/07/30/net-4-6-2-and-long-paths-on-windows-10/): **criteri del computer locale** > **Configurazione computer** > **modelli amministrativi** > **tutte le impostazioni** > **Abilita percorsi lunghi Win32**<br /><br /> Per altre informazioni sul supporto dei percorsi di file lunghi, vedere la sezione [Maximum Path Length Limitation](https://docs.microsoft.com/windows/desktop/FileIO/naming-a-file#maximum-path-length-limitation) (Limite massimo lunghezza del percorso) nella documentazione per sviluppatori di Windows 10.|
+|Statistiche di utilizzo|Assicurarsi di disabilitare l'opzione di invio delle statistiche di utilizzo a Microsoft impostando il parametro [AllowTelemetry](https://docs.microsoft.com/azure/information-protection/rms-client/client-admin-guide-install#to-install-the-azure-information-protection-client-by-using-the-executable-installer) su 0 o assicurarsi che l'opzione **migliora Azure Information Protection inviando le statistiche di utilizzo a Microsoft** rimanga deselezionata durante il processo di installazione dello scanner.| 
 
 Se non è possibile soddisfare tutti i requisiti della tabella perché non sono consentiti dai criteri dell'organizzazione, vedere la sezione [configurazioni alternative](#deploying-the-scanner-with-alternative-configurations) .
 
@@ -103,9 +104,9 @@ Per ulteriori informazioni, vedere la sezione [ottimizzazione delle prestazioni 
     
     Ad esempio, per analizzare 1 milione file con una lunghezza media del nome file di 250 byte, allocare 2 GB di spazio su disco.
 
-- **Per più scanner, fino a 12**: 4 processori Core; 8 GB di RAM consigliati (minimo 4 GB).
+- **Per più scanner, fino a 10**processori Core: 8 GB di RAM consigliata.
 
-- **Per più scanner più di 12 (massimo 40)** : 8 processi principali; 16 GB di RAM consigliati (minimo 8 GB).
+- **Per più scanner più di 10 (massimo 40)** : 8 processi principali; 16 GB di RAM consigliati.
 
 ### <a name="deploying-the-scanner-with-alternative-configurations"></a>Distribuzione dello scanner con configurazioni alternative
 

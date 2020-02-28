@@ -12,19 +12,19 @@ ms.assetid: 90df11c5-355c-4ae6-a762-351b05d0fbed
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: ab013cb0e5ed4656eeb0d8c1a50cb13e9c5a2a80
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 184d1b69c7256d85e162edc5a2993b1bff066500
+ms.sourcegitcommit: 275d31ef762c702b6c63025cbba0a45ca9528ce5
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743569"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77778637"
 ---
 # <a name="frequently-asked-questions-about-data-protection-in-azure-information-protection"></a>Domande frequenti sulla protezione dei dati in Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
 
-Di seguito sono riportate alcune possibili domande sul servizio di protezione dei dati, Azure Rights Management, di Azure Information Protection e le relative risposte.
+Di seguito sono riportate alcune possibili domande sul servizio di protezione dei dati, Azure Rights Management, di Azure Information Protection e relative risposte.
 
 ## <a name="do-files-have-to-be-in-the-cloud-to-be-protected-by-azure-rights-management"></a>Per essere protetti da Azure Rights Management, i file devono trovarsi sul cloud?
 No, questo è un malinteso comune. Il servizio Azure Rights Management e Microsoft non visualizzano né archiviano i dati dell'utente come parte del processo di protezione delle informazioni. Le informazioni protette non vengono mai inviate o archiviate in Azure, a meno di archiviarle in modo esplicito in Azure o di usare un altro servizio cloud che le archivia in Azure.
@@ -157,7 +157,7 @@ Aprire Outlook e creare un profilo mediante l'account aziendale o dell'istituto 
 
 Per proteggere un messaggio di posta elettronica o un documento: nella scheda **Opzioni** fare clic su **Autorizzazioni** e scegliere un'opzione o un modello che protegge il messaggio di posta elettronica o il documento.
 
-Per tenere traccia di un documento dopo averlo protetto: da un computer Windows nel quale è installato il client Azure Information Protection, registrare il documento con il sito di rilevamento dei documenti tramite un'applicazione di Office o Esplora file. Per le relative istruzioni, vedere [Tenere traccia dei documenti e revocarli](./rms-client/client-track-revoke.md). Dal computer Mac ora è possibile usare il Web browser e accedere al sito di rilevamento dei documenti (https://track.azurerms.com) ) per rilevare e revocare il documento.
+Per tenere traccia di un documento dopo averlo protetto: da un computer Windows nel quale è installato il client Azure Information Protection, registrare il documento con il sito di rilevamento dei documenti tramite un'applicazione di Office o Esplora file. Per le relative istruzioni, vedere [Tenere traccia dei documenti e revocarli](./rms-client/client-track-revoke.md). Dal computer Mac ora è possibile usare il Web browser e accedere al sito di rilevamento dei documenti (https://track.azurerms.com)) per rilevare e revocare il documento.
 
 ## <a name="when-i-open-an-rms-protected-office-document-does-the-associated-temporary-file-become-rms-protected-as-well"></a>Quando si apre un documento di Office protetto da RMS, anche il file temporaneo associato è protetto da RMS?
 No. In questo scenario, il file temporaneo associato non contiene i dati del documento originale, ma solo i dati immessi dall'utente mentre il file è aperto. A differenza del file originale, il file temporaneo non è destinato alla condivisione e rimarrà disponibile nel dispositivo, protetto dai controlli di protezione locali, ad esempio BitLocker ed EFS.
@@ -200,5 +200,5 @@ Come illustrato da questi esempi, anche se tutte le piattaforme e tutto il softw
 
 ## <a name="whats-the-difference-between-a-user-protecting-an-email-with-do-not-forward-and-a-template-that-doesnt-include-the-forward-right"></a>Qual è la differenza tra un utente che protegge un messaggio di posta elettronica con l'opzione Non inoltrare e un modello che non include il diritto di inoltro?
 
-Nonostante il nome e l'aspetto, l'opzione **Non inoltrare** non è il contrario del diritto Inoltra e neanche un modello. Si tratta in realtà di un insieme di diritti che limitano la copia, la stampa, il salvataggio di allegati e l'inoltro dei messaggi di posta elettronica. I diritti vengono applicati dinamicamente agli utenti tramite i destinatari scelti anziché in modo statico in base alle assegnazioni dall'amministratore. Per ulteriori informazioni, vedere la sezione non [inviare l'opzione per i messaggi di posta elettronica](configure-usage-rights.md#do-not-forward-option-for-emails) in [configurazione dei diritti di utilizzo per Azure Information Protection](configure-usage-rights.md).
+Nonostante il nome e l'aspetto, l'opzione **Non inoltrare** non è il contrario del diritto Inoltra e neanche un modello. Si tratta in realtà di un set di diritti che includono la limitazione della copia, della stampa e del salvataggio del messaggio di posta elettronica all'esterno della cassetta postale, oltre a limitare l'inoltro dei messaggi di posta elettronica. I diritti vengono applicati dinamicamente agli utenti tramite i destinatari scelti anziché in modo statico in base alle assegnazioni dall'amministratore. Per ulteriori informazioni, vedere la sezione non [inviare l'opzione per i messaggi di posta elettronica](configure-usage-rights.md#do-not-forward-option-for-emails) in [configurazione dei diritti di utilizzo per Azure Information Protection](configure-usage-rights.md).
 
