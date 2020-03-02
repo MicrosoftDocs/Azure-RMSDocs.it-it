@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: f91e194eb6e7d7dd9623d6467de5466b64ec2b9e
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.openlocfilehash: 0f98ea44bc223f3b484836fdcf53ecd452b352ce
+ms.sourcegitcommit: 275d31ef762c702b6c63025cbba0a45ca9528ce5
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422562"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77778552"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
@@ -208,7 +208,7 @@ Per ogni esempio seguente, nel riquadro \<*nome etichetta*> selezionare **Proteg
 
 Questa etichetta è disponibile solo in Outlook ed è appropriata quando Exchange Online è configurato per le [nuove funzionalità di Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Indicare agli utenti di selezionare l'etichetta quando devono inviare un messaggio protetto a destinatari che usano un account Gmail (o qualsiasi altro account di posta elettronica esterno all'organizzazione). 
 
-Gli utenti digitano l'indirizzo di posta elettronica Gmail nella casella **A**.  Gli utenti selezionano quindi l'etichetta e l'opzione Non inoltrare viene aggiunta automaticamente al messaggio di posta elettronica. Il risultato è che i destinatari non possono inoltrare il messaggio di posta elettronica, stamparlo, copiarne il contenuto, salvare gli allegati o salvare il messaggio di posta elettronica con un nome diverso. 
+Gli utenti digitano l'indirizzo di posta elettronica Gmail nella casella **A**.  Gli utenti selezionano quindi l'etichetta e l'opzione Non inoltrare viene aggiunta automaticamente al messaggio di posta elettronica. Il risultato è che i destinatari non possono inoltrare il messaggio di posta elettronica, stamparlo, copiarne il contenuto o salvare il messaggio all'esterno della cassetta postale usando l'opzione **Salva con nome**. 
 
 1. Nel riquadro **Protezione** verificare che l'opzione **Azure (chiave cloud)** sia selezionata.
     
