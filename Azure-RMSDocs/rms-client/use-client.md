@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection offre una soluzione client-s
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/20/2020
+ms.date: 03/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: 96a1af247d9c65077be3dc7706cc1976850540fd
-ms.sourcegitcommit: 2abde0336bffda66ba7c629bfb5f0525264c3730
+ms.openlocfilehash: fd48222d2b137c8c823e3d233562905da4d4ddc2
+ms.sourcegitcommit: 94a93275f61a2f46c995a3b7c18bae85f3f302f1
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77494877"
+ms.lasthandoff: 03/02/2020
+ms.locfileid: "78215762"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -95,7 +95,7 @@ Per confrontare le funzionalità di riservatezza predefinite di Office in divers
 |Etichettatura consigliata o automatica:<br />-Per Outlook| **Sì** | **Sì** | No |
 |Etichettatura obbligatoria:| **Sì** | **Sì** | No |
 |Autorizzazioni definite dall'utente per un'etichetta: <br />-Non trasmettere per i messaggi di posta elettronica| **Sì** | **Sì** | **Sì** |
-|Autorizzazioni definite dall'utente per un'etichetta: <br />-Autorizzazioni personalizzate per Word, Excel, PowerPoint, Esplora file| **Sì** | **Sì** | No |
+|Autorizzazioni definite dall'utente per un'etichetta: <br />-Autorizzazioni personalizzate per Word, Excel, PowerPoint, Esplora file| **Sì** | **Sì** | **Sì** |
 |Supporto multilingue per le etichette:| **Sì** | **Sì** |**Sì** |
 |Ereditarietà delle etichette dagli allegati di posta elettronica:| **Sì** | **Sì**  |No |
 |Personalizzazioni che includono:<br />- Etichetta predefinita per la posta elettronica<br />-Messaggi popup in Outlook <br />- Supporto S/MIME<br />- Opzione Segnala un problema| **Sì** <sup>1</sup> | **Sì** <sup>2</sup> | No |
