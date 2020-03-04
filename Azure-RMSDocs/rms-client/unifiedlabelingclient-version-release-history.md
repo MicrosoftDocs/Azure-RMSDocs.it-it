@@ -4,7 +4,7 @@ description: Vedere le informazioni sulla versione del client per l'etichettatur
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/20/2020
+ms.date: 03/03/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: v2client
 ms.reviewer: elkamins
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 3960ab26aabd89c41707c6cf96917253174f8cab
-ms.sourcegitcommit: adbbfae6a94f43792a5a732c7eca5078c1fdc95f
+ms.openlocfilehash: 543fd7af43dc235fbe8faca2f0dae332b0b493f1
+ms.sourcegitcommit: 1eed9a57596b67255c45a604595cc77a56350557
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77599846"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238631"
 ---
 # <a name="azure-information-protection-unified-labeling-client---version-release-history-and-support-policy"></a>Azure Information Protection l'assegnazione di etichette unificata client-versione e criteri di supporto
 
@@ -42,6 +42,7 @@ Le versioni di anteprima non devono essere distribuite agli utenti finali nelle 
 
 |Versione client|Data di rilascio|
 |--------------|-------------|
+|2.2.19.0|08/06/2019|
 |2.2.14.0|07/15/2019|
 |2.0.779.0|05/01/2019|
 |2.0.778.0|04/16/2019|
@@ -170,18 +171,6 @@ Supportato tramite 04/23/2020
 - Quando si usa l'impostazione avanzata [OutlookDefaultLabel](clientv2-admin-guide-customizations.md#set-a-different-default-label-for-outlook) per impostare un'etichetta predefinita diversa per Outlook e l'etichetta specificata non include etichette secondarie per i criteri di etichetta, l'etichetta viene applicata correttamente.
 
 - Quando il client di Azure Information Protection viene usato in un'app di Office, un utente con un account Active Directory non configurato per Single Sign-On viene richiesto di eseguire l'autenticazione per Azure Information Protection. Una volta eseguita l'autenticazione, lo stato del client passa correttamente a online, che consente la funzionalità di etichettatura.
-
-## <a name="version-22190"></a>Versione 2.2.19.0
-
-**Rilasciata**: 08/06/2019
-
-Supportato tramite 03/03/2020
-
-**Correzioni**
-
-- Il client può scaricare il proprio criterio e visualizzare le etichette di riservatezza correnti. Questa correzione è necessaria dopo l'aggiornamento da una versione precedente e non sono stati configurati tipi di informazioni personalizzate nell'etichettatura Center.
-
-- Miglioramenti di prestazioni e stabilità generali.
 
 ## <a name="next-steps"></a>Passaggi successivi
 

@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.date: 11/25/2019
 ms.author: mbaldwin
 manager: barbkess
-ms.openlocfilehash: 89536031de20349e070c2577d958868b33a33b09
-ms.sourcegitcommit: df503528b19351a5257a8c72ac3fcb2674494d29
+ms.openlocfilehash: 06a57fa7510722da9ed119c573abe2ef0db09407
+ms.sourcegitcommit: 63ce6f2a405d8b649c7a74194beec0a8855a5441
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77521091"
+ms.lasthandoff: 03/03/2020
+ms.locfileid: "78238481"
 ---
 # <a name="microsoft-information-protection-mip-software-development-kit-sdk-version-release-history-and-support-policy"></a>Cronologia delle versioni di Microsoft Information Protection (MIP) Software Development Kit (SDK) e criteri di supporto
 
@@ -31,9 +31,9 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche per un
 >  
 > Per il supporto tecnico, visitare il [forum stack overflow Microsoft Information Protection](https://stackoverflow.com/questions/tagged/microsoft-information-protection). 
 
-## <a name="version-15117"></a>Versione 1.5.117
+## <a name="version-15124"></a>Versione 1.5.124
 
-**Data di rilascio**: 20 febbraio 2020
+**Data di rilascio**: 2 marzo 2020
 
 ### <a name="general-sdk-changes"></a>Modifiche generali dell'SDK
 
@@ -84,10 +84,9 @@ Usare le informazioni seguenti per visualizzare le novità o le modifiche per un
   - MIP::P rotectionEngine:: IsFeatureSupported ()
 - Dettagli più completi durante il recupero dei modelli RMS
 - **Modifiche di rilievo**
-  - MIP::P rotectionEngine:: gettemplates () Vector < shared_ptr<string>> valore restituito sostituito con Vector < shared_ptr < MIP:: TemplateDescriptor > > (C++)
-  - MIP::P rotectionEngine:: Observer:: OnGetTemplatesSuccess () callback shared_ptr < Vector<string>>
-    parametro sostituito con Vector < shared_ptr < MIP:: TemplateDescriptor > > (C++)
-  - IProtectionEngine. gettemplates | L'elenco di valori restituiti Async ()<string> sostituito con<TemplateDescriptor>elenco. (C#)
+  - `mip::ProtectionEngine::GetTemplates()` `vector<shared_ptr<string>>` valore restituito sostituito con `vector<shared_ptr<mip::TemplateDescriptor>>` (C++)
+  - `mip::ProtectionEngine::Observer::OnGetTemplatesSuccess()` parametro `shared_ptr<vector<string>>` callback sostituito con `vector<shared_ptr<mip::TemplateDescriptor>>` (C++)
+  - IProtectionEngine. gettemplates | Il valore restituito Async () `List<string>` sostituito con `List<TemplateDescriptor>`. (C#)
   - MIP_CC_ProtectionEngine_GetTemplates () mip_cc_guid * param sostituito con mip_cc_template_descriptor * (API C)
 
 ### <a name="c-api"></a>API C
