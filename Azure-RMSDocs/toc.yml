@@ -18,7 +18,7 @@
           href: requirements-applications.md
         - name: Supporto di server locali per la protezione
           href: requirements-servers.md
-- name: Guida introduttiva
+- name: Guide introduttive
   expanded: true
   items:
     - name: Attività iniziali nel portale di Azure
@@ -45,7 +45,7 @@
       items:
         - name: Panoramica
           href: what-is-azure-rms.md
-        - name: Come funziona BitLocker?
+        - name: Funzionamento
           href: how-does-it-work.md
         - name: Supporto della protezione Azure Rights Management da parte delle applicazioni
           items:
@@ -139,7 +139,7 @@
               href: configure-policy-delete-reorder.md
             - name: Modificare un'etichetta
               href: configure-policy-change-label.md
-            - name: Configurazione della protezione dati
+            - name: Configurare la protezione
               items:
                 - name: Panoramica
                   href: configure-policy-protection.md
@@ -323,6 +323,8 @@
         - name: Rights Management SDK 4.2
           href: ./develop/active-directory-rights-management-services-multi-platform-thin-client-sdk-portal.md
           items:
+            - name: Avviso di deprecazione
+              href: ./develop/deprecation-notice.md
             - name: Panoramica
               href: ./develop/overview.md
             - name: Operazioni preliminari

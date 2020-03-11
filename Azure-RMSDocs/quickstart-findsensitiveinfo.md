@@ -4,18 +4,18 @@ description: Usare lo scanner di Azure Information Protection per trovare le inf
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 03/09/2020
 ms.topic: quickstart
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.custom: admin
 ms.subservice: aiplabels
-ms.openlocfilehash: 6cb4739d0da222f8748c4f4684290b7193093bcc
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.openlocfilehash: 126ef492f090a578443a0bea0ee7c747554d6eb2
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960491"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973183"
 ---
 # <a name="quickstart-find-what-sensitive-information-you-have-in-files-stored-on-premises"></a>Guida introduttiva: Trovare le informazioni riservate presenti nei file archiviati in locale
 
@@ -24,7 +24,7 @@ ms.locfileid: "75960491"
 Questa guida di avvio rapido illustra come autorizzare SharePoint a consentire la scansione, quindi come installare e configurare lo scanner di Azure Information Protection per trovare le informazioni riservate presenti nei file archiviati in un archivio dati locale, ad esempio una cartella locale, una condivisione di rete o SharePoint Server.
 
 > [!NOTE]
-> È possibile usare questa guida di avvio rapido con la versione disponibile a livello generale corrente del client Azure Information Protection (classico) o la versione disponibile a livello generale corrente del client di etichettatura unificata di Azure Information Protection che include una versione di anteprima dello scanner.
+> È possibile usare questa guida di avvio rapido con la versione disponibile a livello generale corrente del client Azure Information Protection (classico) o la versione disponibile a livello generale corrente del client di etichettatura unificata di Azure Information Protection che include lo scanner.
 >  
 > Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 
