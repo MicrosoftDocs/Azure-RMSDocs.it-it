@@ -4,19 +4,19 @@ description: Azure Information Protection offre etichette predefinite personaliz
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 1b45faa5-0c9c-40d6-910a-f117e7b6e8a3
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 36bb406cf06bd4401067920a64258fe5cf8b142c
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 6da2f54fbd3b3e22d93438b8b369c2d0fe145521
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743402"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972587"
 ---
 # <a name="how-to-create-a-new-label-for-azure-information-protection"></a>Come creare una nuova etichetta per Azure Information Protection
 
@@ -24,6 +24,8 @@ ms.locfileid: "75743402"
 >
 > *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Azure Information Protection offre etichette predefinite personalizzabili, ma è anche possibile creare etichette proprie.
 
@@ -35,13 +37,13 @@ Seguire queste istruzioni per aggiungere una nuova etichetta che sarà poi possi
 
 ## <a name="to-create-a-new-label"></a>Per creare una nuova etichetta
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al riquadro **Azure Information Protection**.
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection**.
     
     Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
 
 2. Dall'opzione di menu **classificazioni** > **etichette** : nel riquadro **etichette Azure Information Protection** eseguire una delle operazioni seguenti:
     
-    - Per creare una nuova etichetta, fare clic su **Aggiungi una nuova etichetta**.
+    - Per creare una nuova etichetta, fare clic su **Add a new label** (Aggiungi nuova etichetta).
     
     - Per creare una nuova etichetta secondaria, fare clic con il pulsante destro del mouse o selezionare il menu di scelta rapida ( **...** ) per l'etichetta per cui si vuole creare un'etichetta secondaria, quindi scegliere **Aggiungi un'etichetta secondaria**.
 

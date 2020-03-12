@@ -4,24 +4,27 @@ description: Quando si assegna un'etichetta a un documento o a un messaggio di p
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/02/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: df2676eeb062-f25a-4cf8-a782-e59664427d54
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 66e209340ada675a2a91b72e3553d98dc309c96b
-ms.sourcegitcommit: 63ce6f2a405d8b649c7a74194beec0a8855a5441
+ms.openlocfilehash: 6492c4dcbe9ba408d2d4efd9c751933a6eefe6b4
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/03/2020
-ms.locfileid: "78238501"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972797"
 ---
 # <a name="how-to-configure-a-label-for-visual-markings-for-azure-information-protection"></a>Come configurare un'etichetta per i contrassegni visivi per Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
+
+>[!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Quando si assegna un'etichetta a un documento o a un messaggio di posta elettronica, è possibile selezionare diverse opzioni per rendere facilmente visibile la classificazione scelta. Questi contrassegni visivi sono un'intestazione, un piè di pagina e una filigrana. 
 
@@ -100,23 +103,27 @@ Nella stringa di testo è possibile usare le variabili seguenti per l'intestazio
 
 - `${Event.DateTime}` per la data e l'ora in cui è stata impostata l'etichetta selezionata. Ad esempio: 16/8/2016 13:30
 
+> [!NOTE]
+>Questa sintassi distingue tra maiuscole e minuscole.
+
 Esempio: se si specifica la stringa `Document: ${Item.Name}  Classification: ${Item.Label}` per il piè di pagina dell'etichetta **General**, il testo del piè di pagina applicato a un documento denominato project.docx sarà **Document: project.docx  Classification: General** (Documento: project.docx Classificazione: Generale).
 
 > [!NOTE]
 > L'uso della variabile `${User.Name}` e/o di `${User.PrincipalName}` non è attualmente supportato dal client Azure Information Protection Unified labeling. 
 
 >[!TIP]
-> È anche possibile usare un [codice di campo per inserire il nome dell'etichetta](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) in un documento o modello.
+> È anche possibile usare un [codice campo per inserire il nome dell'etichetta](faqs-infoprotect.md#can-i-create-a-document-template-that-automatically-includes-the-classification) in un documento o in un modello.
 
 ## <a name="setting-different-visual-markings-for-word-excel-powerpoint-and-outlook"></a>Impostazione di contrassegni visivi diversi per Word, Excel, PowerPoint e Outlook
 
 Per impostazione predefinita, i contrassegni visivi specificati vengono applicati a Word, Excel, PowerPoint e Outlook. Tuttavia, è possibile specificare i contrassegni visivi per tipo di applicazione di Office quando si usa un'istruzione con variabile "If.App" nella stringa di testo e identificare il tipo di applicazione usando i valori **Word**, **Excel**, **PowerPoint**, o **Outlook**. È anche possibile abbreviare questi valori, operazione necessaria se si desidera specificarne più di uno nella stessa istruzione If.App.
 
-Utilizzare la seguente sintassi:
+Usare la sintassi seguente:
 
     ${If.App.<application type>}<your visual markings text> ${If.End}
 
-La distinzione in questa istruzione supporta la distinzione tra maiuscole e minuscole.
+> [!NOTE]
+>La distinzione in questa istruzione supporta la distinzione tra maiuscole e minuscole.
 
 Esempi:
 

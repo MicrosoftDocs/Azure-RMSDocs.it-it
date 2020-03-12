@@ -4,19 +4,19 @@ description: È possibile aggiungere il supporto di varie lingue per le etichett
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/18/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: a0e89fd0-795b-4e7a-aea9-ff6fc9163bde
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 3ffb6b844d73d1b2b7f21651123f10599aeef562
-ms.sourcegitcommit: 10cefe41b0c888ef237511cddeb23f9a54b3c07d
+ms.openlocfilehash: 21b4cf65be0b4f31a1b98df58f0578aaf41b797c
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/20/2020
-ms.locfileid: "76281633"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972606"
 ---
 # <a name="how-to-configure-labels-and-templates-for-different-languages-in-azure-information-protection"></a>Come configurare etichette e modelli per varie lingue in Azure Information Protection
 
@@ -24,6 +24,8 @@ ms.locfileid: "76281633"
 >
 > *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 > [!NOTE]
 > Queste istruzioni si applicano al client Azure Information Protection (classico) e non al client per l'etichettatura unificata di Azure Information Protection. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
@@ -50,7 +52,7 @@ Selezionare le lingue che corrispondono alle impostazioni lingua degli utenti pe
 
 ## <a name="to-configure-labels-and-templates-for-different-languages"></a>Per configurare etichette e modelli per lingue diverse
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al riquadro **Azure Information Protection**.
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection**.
     
     Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
 

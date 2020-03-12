@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: b61fba6a678ec625ac2dc7d78c2550cfba87bb60
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: b7cac0f97c40aa760d7f38d6a190be39f14bae24
+ms.sourcegitcommit: fc0499f182e9203ccbd4a8685dd880d1311845ad
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792127"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79084753"
 ---
 # <a name="overview"></a>Panoramica
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Microsoft Rights Management SDK 4.2 è una tecnologia di protezione delle informazioni disponibile per diverse piattaforme.  È un kit per sviluppatori (SDK, Software Developer Kit) o framework progettato per i computer client e i dispositivi. La sua funzione è quella di proteggere l'accesso e l'utilizzo di informazioni che passano attraverso le applicazioni abilitate all'uso di diritti. Gli SDK per queste piattaforme offrono una API semplice per gli sviluppatori di applicazioni per proteggere o utilizzare il contenuto digitale, recuperare modelli, acquisire criteri da un server e altre attività di gestione dei diritti correlate.
 
@@ -35,7 +37,7 @@ Di seguito sono riportati alcuni possibili scenari:
 -   I proprietari di una raccolta documenti online desiderano abilitare i diritti a visualizzare, stampare o modificare i documenti in base all'identità dell'utente quando gli stessi vengono scaricati su un dispositivo mobile.
 -   Un'azienda intende pubblicare informazioni riservate sui dipendenti in un sito Web interno che limiti la visualizzazione e la modifica dei privilegi a determinati utenti.
 
-MS RMS SDK 4.2 può essere scaricato, previa lettura e accettazione del relativo contratto di licenza, e distribuito liberamente con software di terze parti per consentire l'accesso client a contenuti protetti da diritti mediante l'uso e la distribuzione di server AD RMS nell'ambiente o di servizi Azure RMS. Per ulteriori informazioni, vedere [Introduzione](get-started.md).
+MS RMS SDK 4.2 può essere scaricato, previa lettura e accettazione del relativo contratto di licenza, e distribuito liberamente con software di terze parti per consentire l'accesso client a contenuti protetti da diritti mediante l'uso e la distribuzione di server AD RMS nell'ambiente o di servizi Azure RMS. Per altre informazioni, vedere [Introduzione](get-started.md).
 
 ## <a name="sdk-highlights"></a>Caratteristiche di SDK
 

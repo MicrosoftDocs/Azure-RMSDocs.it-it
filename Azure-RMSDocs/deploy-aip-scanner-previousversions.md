@@ -12,18 +12,21 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f05d2ab1050f1a14a60debe083bec1e670e3cb7a
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: 986a9cfb4376f17d2a53aa78b512bb8ab16f2243
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934943"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973255"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-scanner"></a>Distribuzione di versioni precedenti dello scanner Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, windows server 2016, windows Server 2012 R2*
 >
 > *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+>[!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 > [!NOTE]
 > Questo articolo è per le versioni di Azure Information Protection scanner precedenti alla versione **1.48.204.0** ma ancora in supporto. Per aggiornare le versioni precedenti alla versione corrente, vedere [aggiornamento dello scanner Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner).
@@ -60,7 +63,7 @@ Si noti che lo scanner non individua e non applica etichette in tempo reale. Eff
 ## <a name="prerequisites-for-the-azure-information-protection-scanner"></a>Prerequisiti per lo scanner di Azure Information Protection
 Prima di installare lo scanner di Azure Information Protection, verificare che i requisiti seguenti siano soddisfatti.
 
-|Requisito|Ulteriori informazioni|
+|Requisito|Altre informazioni|
 |---------------|--------------------|
 |Computer Windows Server per eseguire il servizio scanner:<br /><br />- 4 processori core<br /><br />- 8 GB di RAM<br /><br />- 10 GB di spazio libero (media) per i file temporanei|Windows Server 2019, Windows Server 2016 o Windows Server 2012 R2. <br /><br />**Nota**: a scopo di test o valutazione in un ambiente non di produzione, è possibile usare un sistema operativo client Windows [supportato dal client di Azure Information Protection](requirements.md#client-devices).<br /><br />Il computer può essere un computer fisico o virtuale con una connessione di rete veloce e affidabile agli archivi dati da analizzare.<br /><br /> Lo scanner richiede spazio su disco sufficiente a creare i file temporanei per ogni file analizzato, quattro file per core. Lo spazio su disco consigliato di 10 GB consente a 4 processori core di analizzare 16 file, ognuno con una dimensione di 625 MB. <br /><br />Se la connettività Internet non è possibile a causa dei criteri dell'organizzazione, vedere la sezione [Deploying the scanner with alternative Configurations](#deploying-the-scanner-with-alternative-configurations) . In caso contrario, verificare che il computer disponga di connettività Internet che consenta gli URL seguenti tramite HTTPS (porta 443):<br /> \*.aadrm.com <br /> \*.azurerms.com<br /> \*.informationprotection.azure.com <br /> informationprotection.hosting.portal.azure.net <br /> \*.aria.microsoft.com|
 |Account del servizio per eseguire il servizio scanner |Oltre a eseguire il servizio scanner nel computer Windows Server, questo account di Windows esegue l'autenticazione in Azure AD e scarica i criteri di Azure Information Protection. Questo account deve essere un account Active Directory ed essere sincronizzato con Azure AD. Se non è possibile sincronizzare questo account a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).<br /><br />I requisiti di questo account del servizio sono i seguenti:<br /><br />Assegnazione dei diritti utente per l'- **accesso locale**. Questo diritto è richiesto per l'installazione e la configurazione dello scanner, ma non per il funzionamento. È necessario concedere questo diritto all'account del servizio, ma è possibile rimuoverlo dopo avere verificato che lo scanner è in grado di individuare, classificare e proteggere i file. Se non è possibile concedere questo diritto neppure per un breve periodo a causa dei criteri dell'organizzazione, vedere la sezione [Distribuzione dello scanner con configurazioni alternative](#deploying-the-scanner-with-alternative-configurations).<br /><br />Assegnazione dei diritti utente per l'- **accesso come servizio**. Questo diritto viene concesso automaticamente all'account del servizio durante l'installazione dello scanner ed è richiesto per l'installazione, la configurazione e il funzionamento dello scanner. <br /><br />-Autorizzazioni per i repository di dati: per i repository di dati in SharePoint locale, concedere sempre l'autorizzazione di **modifica** se si seleziona **Aggiungi e Personalizza pagine** per il sito o se si concede l'autorizzazione di **progettazione** . Per gli altri repository di dati, concedere le autorizzazioni di **lettura** e **scrittura** per l'analisi dei file e quindi applicare la classificazione e la protezione ai file che soddisfano le condizioni nei criteri di Azure Information Protection. Per eseguire lo scanner solo in modalità di individuazione per questi altri repository di dati, è sufficiente l'autorizzazione di **lettura** .<br /><br />- Per le etichette che riproteggono o rimuovono la protezione: per garantire che lo scanner abbia sempre accesso ai file protetti, trasformare l'account in un [utente con privilegi avanzati](configure-super-users.md) per il servizio Azure Rights Management e verificare che sia abilitata la funzionalità per utenti con privilegi avanzati. Per altre informazioni sui requisiti dell'account per l'applicazione della protezione, vedere [Preparazione di utenti e gruppi per Azure Information Protection](prepare.md). Se inoltre sono stati implementati i [controlli di onboarding](activate-service.md#configuring-onboarding-controls-for-a-phased-deployment) per una distribuzione a fasi, verificare che questo account sia incluso nei controlli di onboarding configurati.|
@@ -150,7 +153,7 @@ Se i criteri dell'organizzazione non consentono il diritto **Log on locally** (A
     Install-AIPScanner -SqlServerInstance <name>
     ```
     
-    Di seguito sono riportati alcuni esempi.
+    Esempi:
     
     Per un'istanza predefinita: `Install-AIPScanner -SqlServerInstance SQLSERVER1`
     
@@ -192,13 +195,13 @@ A questo punto si è pronti a specificare gli archivi dati da analizzare.
 
 Usare il cmdlet **Add-AIPScannerRepository** per specificare gli archivi dati che devono essere analizzati dallo scanner di Azure Information Protection. È possibile specificare le cartelle locali, i percorsi UNC e gli URL di SharePoint Server per le cartelle e le raccolte documenti di SharePoint. 
 
-Versioni supportate per SharePoint: SharePoint Server 2019, SharePoint Server 2016 e SharePoint Server 2013. Anche SharePoint Server 2010 è supportato per i clienti che dispongono del [supporto "Extended" per questa versione di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
+Versioni supportate per SharePoint: SharePoint Server 2019, SharePoint Server 2016 e SharePoint Server 2013. Anche SharePoint Server 2010 è supportato per i clienti che dispongono del [supporto "Extended" per la versione corrente di SharePoint](https://support.microsoft.com/lifecycle/search?alpha=SharePoint%20Server%202010).
 
 1. Dallo stesso computer Windows Server, nella sessione di PowerShell, aggiungere il primo archivio dati eseguendo il comando seguente:
     
         Add-AIPScannerRepository -Path <path>
     
-    ad esempio `Add-AIPScannerRepository -Path \\NAS\Documents`
+    Ad esempio: `Add-AIPScannerRepository -Path \\NAS\Documents`
     
     Per altri esempi, utilizzare il comando della Guida di PowerShell `Get-Help Add-AIPScannerRepository -examples` per questo cmdlet.
 
@@ -514,6 +517,6 @@ Se lo scanner è stato configurato per l'esecuzione manuale anziché continua, p
 
 Se si è interessati a scoprire come è stato implementato questo scanner dai team Microsoft Core Services Engineering e Operations,  leggere il case study tecnico: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner) (Automatizzazione della protezione dei dati con lo scanner di Azure Information Protection).
 
-Scoprire [Qual è la differenza tra Infrastruttura di classificazione file di Windows Server e lo scanner di Azure Information Protection](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner).
+Ci si potrebbe chiedere: [Qual è la differenza tra il cluster di failover di Windows Server e il Azure Information Protection scanner?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 È anche possibile usare PowerShell per classificare e proteggere in modo interattivo i file dal computer desktop. Per altre informazioni su questo e altri scenari che usano PowerShell, vedere [Uso di PowerShell con il client Azure Information Protection](./rms-client/client-admin-guide-powershell.md).

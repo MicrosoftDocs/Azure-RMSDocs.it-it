@@ -4,7 +4,7 @@ description: Risorse informative per il client di Azure Information Protection (
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: f9b61b6b-05ba-4422-b8b0-cd20af774a2b
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 726d6d23eed218bdaead585f17625193f56800ff
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: a42c504c744d1033d55e7a196defe286049e3e00
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117919"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973115"
 ---
 # <a name="azure-information-protection-client-for-windows"></a>Client Azure Information Protection per Windows
 
@@ -25,7 +25,10 @@ ms.locfileid: "76117919"
 >
 > *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
-Il client di Azure Information Protection (classico) è il client scaricabile originale per le organizzazioni che usano [Azure Information Protection](../what-is-information-protection.md) per classificare e proteggere documenti e messaggi di posta elettronica oppure usare un servizio Rights Management per proteggere i dati. Il client include anche un visualizzatore per le organizzazioni prive di un'infrastruttura di protezione propria, ma che vogliono usare contenuto protetto da altre organizzazioni che usano un servizio Rights Management di Microsoft.
+>[!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
+
+Il client di Azure Information Protection (classico) è il client scaricabile originale per le organizzazioni che usano [Azure Information Protection](../what-is-information-protection.md) per classificare e proteggere documenti e messaggi di posta elettronica oppure usare un servizio Rights Management per proteggere i dati. Questo client dispone anche di un visualizzatore per le organizzazioni che non dispongono di una propria infrastruttura di protezione delle informazioni, ma che desiderano utilizzare il contenuto protetto da altre organizzazioni che utilizzano un servizio di Rights Management Microsoft.
 
 > [!NOTE]
 > Questo client, noto anche come client classico, viene sostituito dal client di Azure Information Protection Unified labeling. Se non si è certi del client da usare, vedere [scegliere il client di assegnazione di etichette da usare per i computer Windows](use-client.md#choose-which-labeling-client-to-use-for-windows-computers).

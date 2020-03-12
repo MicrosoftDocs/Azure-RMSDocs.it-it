@@ -4,7 +4,7 @@ description: Quando si usa Azure Rights Management, i modelli vengono scaricati 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/15/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,17 +13,19 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 52d00883b19c2c595dd098a9be6d79d3b3183355
-ms.sourcegitcommit: 800339fed1c516d627dbb91ed804a7c7d5b892a4
+ms.openlocfilehash: fcbfd0db4da98f6f59131e652d1ef34f3519d92e
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031449"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973122"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aggiornamento di modelli per utenti e servizi
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
+>[!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Quando si usa il servizio Rights Management di Azure da Azure Information Protection, i modelli di protezione vengono scaricati automaticamente nei computer client in modo che gli utenti possano selezionarli dalle rispettive applicazioni. Potrebbe tuttavia essere necessario effettuare alcuni passaggi aggiuntivi se si apportano modifiche ai modelli:
 
@@ -94,7 +96,7 @@ Modificando il Registro di sistema nei computer che eseguono app di Office 365, 
    > 
    > **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
-2. Eliminare la cartella seguente e tutti i file in essa contenuti: **%localappdata%\Microsoft\MSIPC\Templates**
+2. Eliminare la seguente cartella e tutti i file in essa contenuti: **%localappdata%\Microsoft\MSIPC\Templates**
 
 3. Riavviare le applicazioni di Office e le istanze di Esplora file.
 

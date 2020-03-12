@@ -4,7 +4,7 @@ description: Configurare e gestire i modelli di protezione, noti anche come mode
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 09e8358493e80099b38294c472f134cb0632943f
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 63c6857794730dc0b6532d39c6ae7b8a2d572671
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75743459"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973303"
 ---
 # <a name="configuring-and-managing-templates-for-azure-information-protection"></a>Configurazione e gestione dei modelli per Azure Information Protection
 
@@ -26,6 +26,8 @@ ms.locfileid: "75743459"
 >
 > *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 I modelli di protezione, noti anche come modelli di Rights Management, sono un raggruppamento di impostazioni di protezione definite dall'amministratore per Azure Information Protection. Queste impostazioni includono i [diritti di utilizzo](configure-usage-rights.md) scelti per gli utenti autorizzati e i controlli di accesso per l'accesso con scadenza e offline. Questi modelli sono ora integrati con i criteri di Azure Information Protection: 
 

@@ -4,19 +4,19 @@ description: Aggiungere o rimuovere un'etichetta di Azure Information Protection
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 0546cc11-67a5-4194-8c54-f3ac8ce9ebe1
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 327d8902ecb7abab96b8ff7d05eb6b845eef2199
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: c000716ac89b3a931240e0f17d2e25819d63e17c
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742906"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972661"
 ---
 # <a name="add-or-remove-a-label-to-or-from-an-azure-information-protection-policy"></a>Aggiungere o rimuovere un'etichetta a o da un criterio di Azure Information Protection
 
@@ -24,6 +24,8 @@ ms.locfileid: "75742906"
 >
 > *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Dopo aver creato un'etichetta di Azure Information Protection, è possibile aggiungerla a un criterio in modo da renderla disponibile per gli utenti. Se l'etichetta è per tutti gli utenti, aggiungerla ai criteri globali. Se l'etichetta è per un subset di utenti, aggiungerla a un criterio con ambito. Un'etichetta può essere aggiunta a un solo criterio. 
 
@@ -37,7 +39,7 @@ Se è necessario creare un criterio con ambito in modo che l'etichetta si applic
 
 ## <a name="to-add-or-remove-a-label-to-or-from-a-policy"></a>Per aggiungere o rimuovere un'etichetta a o da un criterio
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al riquadro **Azure Information Protection**.
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection**.
     
     Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
 

@@ -11,12 +11,12 @@ ms.service: information-protection
 ms.assetid: e3b6d95f-334b-4d17-80a9-7d5487ab5d32
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 4530f365f63756c61a7ad97936cffb64cc22d1b8
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 4fbe251f6bc56d82c9ec9ef92359efc540f53634
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742859"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78971528"
 ---
 # <a name="how-to-change-or-customize-an-existing-label-for-azure-information-protection"></a>Come modificare o personalizzare un'etichetta esistente per Azure Information Protection
 
@@ -24,6 +24,8 @@ ms.locfileid: "75742859"
 >
 > *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 È possibile modificare o affinare qualsiasi etichetta visualizzata sulla barra di Information Protection o dal pulsante **Proteggi** sulla barra multifunzione di Office configurando le etichette nel portale di Azure.
 
@@ -31,7 +33,7 @@ Ad esempio, si può cambiare il nome, la descrizione comando, il colore e l'ordi
 
 Per modificare un'etichetta, seguire queste istruzioni:
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al riquadro **Azure Information Protection**. 
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection**. 
     
     Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
 
@@ -43,7 +45,7 @@ Per modificare un'etichetta, seguire queste istruzioni:
     
     Quando fa clic su **Salva**, le modifiche diventano automaticamente disponibili per utenti e servizi. Non è più presente un'opzione di pubblicazione separata.
 
-4. Se il nome visualizzato dell'etichetta e la descrizione sono stati modificati e configurati per le lingue aggiuntive, esportare di nuovo i criteri di Azure Information Protection, specificare nuove traduzioni e importare le modifiche. Per altre informazioni, vedere [How to configure labels for different languages](configure-policy-languages.md) (Come configurare le etichette per lingue diverse).
+4. Se il nome visualizzato dell'etichetta e la descrizione sono stati modificati e configurati per le lingue aggiuntive, esportare di nuovo i criteri di Azure Information Protection, specificare nuove traduzioni e importare le modifiche. Per altre informazioni, vedere [How to configure labels for different languages](configure-policy-languages.md) (Come configurare etichette per lingue diverse).
 
 > [!TIP]
 >Per ripristinare i valori predefiniti per una delle etichette predefinite, usare le informazioni fornite in [Criterio predefinito di Information Protection](configure-policy-default.md).

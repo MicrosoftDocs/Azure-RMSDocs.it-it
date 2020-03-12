@@ -4,19 +4,19 @@ description: È possibile eliminare o riordinare le etichette di Azure Informati
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: ae0f603f-a632-4ac5-a3f7-6358d4255eff
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 5d15bf43294e634844dee2d856b9fe67cccd78ee
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 3edb56da95274608dae79e3e0694eda67737228c
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742982"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972559"
 ---
 # <a name="how-to-delete-or-reorder-a-label-for-azure-information-protection"></a>Come eliminare o riordinare un'etichetta per Azure Information Protection
 
@@ -24,6 +24,8 @@ ms.locfileid: "75742982"
 >
 > *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 È possibile eliminare o riordinare le etichette di Azure Information Protection che gli utenti vedono nelle applicazioni di Office selezionando le azioni corrispondenti per le etichette.
 
@@ -57,7 +59,7 @@ Ordinare le etichette in modo che gli utenti le vedano in una progressione logic
 
 Per apportare le modifiche, seguire queste istruzioni.
 
-1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Quindi passare al riquadro **Azure Information Protection**. 
+1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection**. 
     
     Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
 

@@ -4,25 +4,28 @@ description: Panoramica della protezione HYOK (AD RMS) con Azure Information Pro
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: 8ae21a207dd122066fc4dac659bd1e2e9e7c243f
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: a2a4bd0f438bea68d63779eb661ec2537cb870c8
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742766"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972706"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Protezione HYOK (hold your own key) per Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
 > *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+
+>[!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 
 Le informazioni che seguono consentono di capire che cos'è la protezione HYOK (hold your own key) per Azure Information Protection e in che cosa differisce rispetto alla protezione predefinita basata su cloud. Prima di usare la protezione HYOK, verificare di avere compreso quando deve essere usata e quali sono gli scenari supportati, i requisiti e le limitazioni. 
@@ -69,7 +72,7 @@ Per applicare la protezione HYOK, usare le etichette di Azure Information Protec
 
 Nella tabella seguente sono riportati gli scenari supportati per la protezione del contenuto con le etichette configurate per HYOK e per l'apertura e l'uso del contenuto protetto da HYOK.
 
-|Piattaforma|Applicazioni|Funzionalità supportata|
+|Piattaforma|Applicazione|Supportato|
 |----------------------|----------|-----------|
 |Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Word, Excel, PowerPoint|Protezione: sì<br /><br />Consumo: sì|
 |Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Outlook|Protezione: sì<br /><br />Consumo: sì|
@@ -89,7 +92,7 @@ Nella tabella seguente sono riportati gli scenari supportati per la protezione d
 |Android|Visualizzatore di Azure Information Protection|Protezione: non applicabile<br /><br />Consumo: sì|
 |Web|Outlook sul Web|Protezione: no<br /><br />Consumo: no|
 |Web|Office per il Web<br /><br />- Word, Excel, PowerPoint|Protezione: no<br /><br />Consumo: no|
-|Universale|App universali di Office<br /><br />- Word, Excel, PowerPoint|Protezione: no<br /><br />Consumo: no|
+|Universal|App universali di Office<br /><br />- Word, Excel, PowerPoint|Protezione: no<br /><br />Consumo: no|
 
 
 ## <a name="additional-limitations-when-using-hyok"></a>Limitazioni aggiuntive durante l'uso di HYOK
@@ -192,7 +195,7 @@ I valori del GUID del modello e dell'URL sono disponibili nella console di Activ
 
 - Per individuare il GUID di un modello, espandere il cluster e fare clic su **Modelli di criteri per i diritti di utilizzo**. In **Modelli di criteri per i diritti di utilizzo distribuiti** è quindi possibile copiare il GUID del modello che si vuole usare. Ad esempio: 82bf3474-6efe-4fa1-8827-d1bd93339119
 
-- Per individuare l'URL di gestione licenze: fare clic sul nome del cluster. In **Dettagli cluster** copiare il valore **Gestione licenze** ad eccezione della stringa **/_wmcs/licensing**. ad esempio https://rmscluster.contoso.com 
+- Per individuare l'URL di gestione licenze: fare clic sul nome del cluster. In **Dettagli cluster** copiare il valore **Gestione licenze** ad eccezione della stringa **/_wmcs/licensing**. Ad esempio: https://rmscluster.contoso.com 
     
     Se sono presenti un valore di gestione licenze Extranet e un valore di gestione licenze Intranet diversi tra loro: specificare il valore Extranet solo se si condividono documenti o messaggi di posta elettronica protetti con partner definiti mediante relazioni di trust esplicite da punto a punto. In caso contrario, usare il valore Intranet e assicurarsi che tutti i computer client che usano la protezione di AD RMS con Azure Information Protection si connettano tramite una connessione Intranet (ad esempio, i computer remoti devono usare una connessione VPN).
 

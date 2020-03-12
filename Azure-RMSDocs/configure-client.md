@@ -4,7 +4,7 @@ description: Informazioni per gli amministratori sulla distribuzione dei client 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,17 +12,19 @@ ms.assetid: b1a19ae7-db26-40da-9e21-6620af3d0b02
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 43850c44b4dbce0e9aeac68939c9d2fe915faa78
-ms.sourcegitcommit: 3b50727cb50a612b12f248a5d18b00175aa775f7
+ms.openlocfilehash: 180e6c29580c87ebdf813df0dc6aae40007f1d86
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75742684"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972761"
 ---
 # <a name="azure-information-protection-client-installation-and-configuration-for-clients"></a>Client Azure Information Protection: installazione e configurazione per i client
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
 
+>[!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 I computer che eseguono Office 2010 richiedono il client di Azure Information Protection (classico) o il Azure Information Protection client di etichetta unificata per l'autenticazione al servizio di Azure Information Protection.
 

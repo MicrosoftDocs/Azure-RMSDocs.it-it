@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per amministratori per configurare e usar
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: doctrack
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 9a04156d41bd062f4f182fd4133d938c189157e5
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.openlocfilehash: e4537e9a84f83eaf3865e01dbf4c5b702a8bbc50
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117834"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973083"
 ---
 # <a name="admin-guide-configuring-and-using-document-tracking-for-azure-information-protection"></a>Guida dell'amministratore: Configurazione e uso del rilevamento dei documenti per Azure Information Protection
 
@@ -26,8 +26,10 @@ ms.locfileid: "76117834"
 >
 > *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
-Se si dispone di una [sottoscrizione che supporta il rilevamento dei documenti](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), il sito di rilevamento dei documenti è abilitato per impostazione predefinita per tutti gli utenti dell'organizzazione. Il rilevamento dei documenti consente di indicare a utenti e amministratori quando è stato eseguito l'accesso a un documento protetto e, se necessario, se è possibile revocare un documento rilevato.
+Se si dispone di una sottoscrizione [che supporta il rilevamento dei documenti](https://www.microsoft.com/en-us/cloud-platform/azure-information-protection-features), il sito di rilevamento dei documenti è abilitato per impostazione predefinita per tutti gli utenti dell'organizzazione. Il rilevamento dei documenti consente di indicare a utenti e amministratori quando è stato eseguito l'accesso a un documento protetto e, se necessario, se è possibile revocare un documento rilevato.
 
 ## <a name="using-powershell-to-manage-the-document-tracking-site"></a>Uso di PowerShell per gestire il sito di rilevamento dei documenti
 

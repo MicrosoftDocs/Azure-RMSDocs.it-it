@@ -4,19 +4,19 @@ description: Configurare le impostazioni nei criteri di Azure Information Protec
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/06/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: b6919c45441c5a6b2e3e9cc8cccc470b422d9b8c
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.openlocfilehash: d8afb466a119bdedb03082d6a2d59c59fad4564c
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77422778"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78972725"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Come configurare le impostazioni dei criteri per Azure Information Protection
 
@@ -24,11 +24,13 @@ ms.locfileid: "77422778"
 >
 > *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 > [!NOTE]
 > Queste istruzioni si applicano al client Azure Information Protection (classico) e non al client per l'etichettatura unificata di Azure Information Protection. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
 > 
-> Per informazioni sulla configurazione delle impostazioni dei criteri per il client Unified Labeling, vedere la documentazione relativa alla conformità del Microsoft 365. Ad esempio, informazioni [sulle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
+> Per informazioni sulla configurazione delle impostazioni dei criteri per il client Unified Labeling, vedere la documentazione relativa alla conformità del Microsoft 365. Ad esempio, [Informazioni sulle etichette di riservatezza](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels).
 
 Oltre al titolo della barra e alla descrizione comando di Information Protection, nei criteri di Azure Information Protection sono disponibili alcune impostazioni che è possibile configurare indipendentemente dalle etichette:
 

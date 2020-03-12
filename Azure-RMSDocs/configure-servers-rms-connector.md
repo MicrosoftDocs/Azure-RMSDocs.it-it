@@ -4,7 +4,7 @@ description: Informazioni per configurare i server locali che sfrutteranno il co
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/20/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: connector
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 96e8c633201731796c7aecfdda0ef513fc2e261d
-ms.sourcegitcommit: 2abde0336bffda66ba7c629bfb5f0525264c3730
+ms.openlocfilehash: 0411b0360607da80dcabf5dfb8117957a5c67cf6
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77494871"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973282"
 ---
 # <a name="configuring-servers-for-the-azure-rights-management-connector"></a>Configurazione dei server per il connettore di Azure Rights Management
 
@@ -87,7 +87,7 @@ Dopo aver apportato modifiche alla configurazione di questi server, è necessari
 
 ### <a name="how-to-use-the-server-configuration-tool-for-microsoft-rms-connector"></a>Come usare lo strumento di configurazione server per il connettore Microsoft RMS
 
-1.  Se non è stato già scaricato lo script per lo strumento di configurazione del server per il connettore Microsoft RMS (Genconnectorconfig.ps1), scaricarlo dall' [Area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=314106).
+1.  Se non è stato ancora scaricato lo script per lo strumento di configurazione server per il connettore Microsoft RMS (GenConnectorConfig. ps1), scaricarlo dall' [area download Microsoft](https://go.microsoft.com/fwlink/?LinkId=314106).
 
 2.  Salvare il file GenConnectorConfig.ps1 sul computer su cui verrà eseguito lo strumento. Se lo strumento viene eseguito localmente, il file deve essere salvato sul server che si desidera configurare per comunicare con il connettore RMS. In caso contrario, è possibile salvare il file su qualsiasi computer.
 
@@ -124,7 +124,7 @@ Nelle sezioni seguenti sono disponibili informazioni specifiche per ciascun tipo
 > [!NOTE]
 > Dopo aver configurato questi server per l'uso del connettore, è possibile che le applicazioni client installate in locale su tali server non siano in grado di funzionare con RMS. Questo inconveniente si verifica perché le applicazioni tentano di usare il connettore anziché usare direttamente RMS.
 >
-> Inoltre, se Office 2010 è installato in locale su un server di Exchange, dopo la configurazione del server per l'uso del connettore è possibile che le funzionalità IRM delle app client non funzionino correttamente sul computer.
+> Inoltre, se Office 2010 è installato localmente in un server Exchange, le funzionalità IRM dell'app client potrebbero funzionare da tale computer dopo che il server è stato configurato per l'uso del connettore, ma questa operazione non è supportata.
 >
 > In entrambi gli scenari, è necessario installare le applicazioni client in computer separati non configurati per l'uso del connettore. Tali computer useranno quindi RMS direttamente.
 
@@ -183,7 +183,7 @@ Per usare un connettore RMS, è necessario che i server di SharePoint eseguano u
 
 -   SharePoint Server 2010
 
-È necessario che un server che esegue SharePoint 2016 o SharePoint 2013 esegua anche una versione del client MSIPC 2.1 supportata con il connettore RMS. Per assicurarsi che sia disponibile la versione supportata, scaricare il client più recente da [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=38396).
+Un server che esegue SharePoint 2019, 2016 o SharePoint 2013 deve eseguire anche una versione del client MSIPC 2,1 supportata con il connettore RMS. Per assicurarsi che sia disponibile la versione supportata, scaricare il client più recente da [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=38396).
 
 > [!WARNING]
 > Sono disponibili più versioni del client MSIPC 2.1. Assicurarsi quindi di avere la versione 1.0.2004.0 o successiva.
@@ -200,13 +200,13 @@ Per usare un connettore RMS, è necessario che i server di SharePoint eseguano u
 
     -   Eseguire lo strumento di configurazione server per il connettore Microsoft RMS. Per ulteriori informazioni, vedere [Come usare lo strumento di configurazione server per il connettore Microsoft RMS](#how-to-use-the-server-configuration-tool-for-microsoft-rms-connector) in questo articolo.
 
-        Ad esempio, per eseguire lo strumento in locale per configurare un server che esegue SharePoint 2016 o SharePoint 2013:
+        Ad esempio, per eseguire lo strumento localmente per configurare un server che esegue SharePoint 2019, 2016 o SharePoint 2013:
 
         ```
         .\GenConnectorConfig.ps1 -ConnectorUri https://rmsconnector.contoso.com -SetSharePoint2013
         ```
 
-    -   Se si usa SharePoint 2016 o SharePoint 2013, modificare manualmente il Registro di sistema usando le informazioni disponibili in [Impostazioni del Registro di sistema per il connettore RMS](rms-connector-registry-settings.md) per aggiungere manualmente le impostazioni di registro nei server. 
+    -   Se si usa SharePoint 2019, 2016 o SharePoint 2013, apportare modifiche manuali al registro di sistema usando le informazioni contenute in [impostazioni del registro di sistema per il connettore RMS](rms-connector-registry-settings.md) per aggiungere manualmente le impostazioni del registro di sistema nei server. 
 
 3.  Abilitare IRM in SharePoint. Per altre informazioni, vedere [Configurare Information Rights Management (SharePoint Server 2010)](https://technet.microsoft.com/library/hh545607%28v=office.14%29.aspx) nella libreria di SharePoint.
 
@@ -222,7 +222,7 @@ Per usare il connettore RMS e la funzionalità Infrastruttura di classificazione
 
 - Windows Server 2016
 
-- R2 per Windows Server 2012
+- Windows Server 2012 R2
 
 - Windows Server 2012
 

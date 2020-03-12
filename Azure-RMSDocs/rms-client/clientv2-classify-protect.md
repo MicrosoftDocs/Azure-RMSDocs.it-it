@@ -4,19 +4,19 @@ description: Istruzioni per la classificazione e la protezione di documenti e me
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 1/13/2020
+ms.date: 03/08/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: v2client
 ms.suite: ems
 ms.custom: user
-ms.openlocfilehash: f51d3a901808a4689e651c6736c6ac8294e1e602
-ms.sourcegitcommit: 98d539901b2e5829a2aad685d10fb13fd8d7dec4
+ms.openlocfilehash: 06ac8dd5923fb4275aeaa833bf40f0ac660e1c26
+ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77423067"
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "78973081"
 ---
 # <a name="user-guide-classify-and-protect-with-the-azure-information-protection-unified-labeling-client"></a>Guida dell'utente: classificare e proteggere con la Azure Information Protection Unified Labeling client
 
@@ -31,7 +31,7 @@ Il modo più semplice per classificare e proteggere i documenti e i messaggi di 
 
 Tuttavia, è anche possibile classificare e proteggere i file tramite **Esplora file**. Questo metodo supporta altri tipi di file ed è un modo pratico per classificare e proteggere più file contemporaneamente. Questo metodo supporta la protezione di documenti di Office, file PDF, file di testo e immagine e un'ampia gamma di altri file. 
 
-Se l'etichetta applica la protezione a un documento, il documento protetto potrebbe non essere adatto per essere salvato in SharePoint o in OneDrive. Controllare se l'amministratore ha [abilitato le etichette di riservatezza per i file di Office in SharePoint e OneDrive (anteprima pubblica)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
+Se l'etichetta applica la protezione a un documento, il documento protetto potrebbe non essere adatto per essere salvato in SharePoint o in OneDrive. Controllare se l'amministratore ha [abilitato le etichette di riservatezza per i file di Office in SharePoint e OneDrive](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
 
 ### <a name="safely-share-a-file-with-people-outside-your-organization"></a>Condividere in modo sicuro un file con utenti esterni all'organizzazione
 
