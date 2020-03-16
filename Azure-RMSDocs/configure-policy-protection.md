@@ -12,17 +12,17 @@ ms.assetid: df26430b-315a-4012-93b5-8f5f42e049cc
 ms.subservice: aiplabels
 ms.custom: admin
 ms.openlocfilehash: 0f98ea44bc223f3b484836fdcf53ecd452b352ce
-ms.sourcegitcommit: 275d31ef762c702b6c63025cbba0a45ca9528ce5
-ms.translationtype: HT
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/27/2020
-ms.locfileid: "77778552"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404454"
 ---
 # <a name="how-to-configure-a-label-for-rights-management-protection"></a>Come configurare un'etichetta per la protezione di Rights Management
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection)*
 >
-> *Istruzioni per: [Client Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
+> *Istruzioni per: [client di Azure Information Protection per Windows](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
 
 > [!NOTE]
@@ -51,7 +51,7 @@ Per altre informazioni sulla tecnologia di protezione Azure Rights Management e 
 > [!IMPORTANT]
 > Per configurare un'etichetta in modo da applicare questa protezione, è necessario che il servizio Azure Rights Management sia attivo per l'organizzazione. Per altre informazioni, vedere [Attivazione del servizio di protezione da Azure Information Protection](activate-service.md).
 
-Quando l'etichetta applica la protezione, un documento protetto non è adatto per essere salvato in OneDrive o SharePoint. Questi percorsi non supportano le funzionalità seguenti per i file protetti: creazione condivisa, Office per il Web, ricerca, anteprima di documenti, anteprima, eDiscovery e prevenzione della perdita dei dati.
+Quando l'etichetta applica la protezione, un documento protetto non è adatto per essere salvato in OneDrive o SharePoint. Questi percorsi non supportano le funzionalità seguenti per i file protetti: creazione condivisa, Office per il Web, ricerca, anteprima dei documenti, anteprima, eDiscovery e prevenzione della perdita dei dati (DLP).
 
 > [!TIP]
 > Quando si [esegue la migrazione delle etichette](configure-policy-migrate-labels.md) a etichette di riservatezza unificate e le si pubblica da uno dei centri di amministrazione dell'etichettatura, ad esempio il centro conformità di Microsoft 365, le etichette che applicano la protezione sono quindi supportate per queste posizioni. Per altre informazioni, vedere [Abilitare le etichette di riservatezza per i file di Office in SharePoint e OneDrive (anteprima pubblica)](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-sharepoint-onedrive-files).
@@ -66,9 +66,9 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
 
 1. Se non è già stato fatto, aprire una nuova finestra del browser e [accedere al portale di Azure](configure-policy.md#signing-in-to-the-azure-portal). Passare quindi al riquadro **Azure Information Protection**. 
     
-    Ad esempio, nella casella di ricerca di risorse, servizi e documentazione: iniziare a digitare **Information** e selezionare **Azure Information Protection**.
+    Ad esempio, nella casella di ricerca per risorse, servizi e documenti: iniziare a digitare **informazioni** e selezionare **Azure Information Protection**.
 
-2. Dall'opzione di menu **Classificazioni** > **Etichette**: nel riquadro **Azure Information Protection - Etichette** selezionare l'etichetta che si vuole modificare. 
+2. Dall'opzione di menu **classificazioni** > **etichette** : nel riquadro **etichette Azure Information Protection** selezionare l'etichetta che si desidera modificare. 
 
 3. Nel riquadro **Etichetta** individuare la sezione **Configurare le autorizzazioni per documenti e messaggi di posta elettronica contenenti questa etichetta** e selezionare una delle opzioni seguenti:
     
@@ -82,7 +82,7 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
          
          - Se in precedenza il contenuto era stato protetto con un'etichetta, la protezione viene rimossa se l'utente che applica l'etichetta ha le autorizzazioni per rimuovere la protezione di Rights Management. Questo requisito significa che l'utente deve avere **Esporta** o **Controllo completo** come [diritto di utilizzo](configure-usage-rights.md). oppure essere il proprietario di Rights Management (che implica automaticamente il diritto di utilizzo Controllo completo) o un [utente con privilegi avanzati per Azure Rights Management](configure-super-users.md).
              
-             Se l'utente non ha le autorizzazioni per rimuovere la protezione, l'etichetta non può essere applicata e viene visualizzato il messaggio seguente: **Azure Information Protection non può applicare questa etichetta. Se il problema persiste, contattare l'amministratore**. 
+             Se l'utente non dispone delle autorizzazioni per rimuovere la protezione, l'etichetta non può essere applicata e viene visualizzato il messaggio seguente: **Azure Information Protection non può applicare questa etichetta. Se il problema persiste, contattare l'amministratore**. 
     
     - **Proteggi**: selezionare questa opzione per applicare la protezione e quindi procedere con il passaggio 4.
     
@@ -92,7 +92,7 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
         
         Si noti che, per applicare correttamente un'etichetta con questa opzione, l'utente deve avere le autorizzazioni per rimuovere la protezione di Rights Management. Questo requisito significa che l'utente deve avere **Esporta** o **Controllo completo** come [diritto di utilizzo](configure-usage-rights.md). oppure essere il proprietario di Rights Management (che implica automaticamente il diritto di utilizzo Controllo completo) o un [utente con privilegi avanzati per Azure Rights Management](configure-super-users.md). 
         
-        Se l'utente che applica l'etichetta con questa impostazione non ha le autorizzazioni per rimuovere la protezione di Rights Management, l'etichetta non può essere applicata e viene visualizzato il messaggio seguente: **Azure Information Protection non può applicare questa etichetta. Se il problema persiste, contattare l'amministratore.**
+        Se l'utente che applica l'etichetta con questa impostazione non dispone delle autorizzazioni per rimuovere la protezione Rights Management, l'etichetta non può essere applicata e viene visualizzato il messaggio seguente: **Azure Information Protection non può applicare questa etichetta. Se il problema persiste, contattare l'amministratore.**
 
 4. Se si è selezionato **Proteggi**, il riquadro **Protezione** si aprirà automaticamente se è stata selezionata una delle altre opzioni precedentemente selezionate. Se questo nuovo riquadro non si apre automaticamente, selezionare **Protezione**:
     
@@ -106,11 +106,11 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
     
    - **Configura le autorizzazioni**: consente di definire nuove impostazioni di protezione nel portale.
     
-   - **Configura le autorizzazioni definite dall'utente (anteprima)** : per consentire agli utenti di specificare a chi vengono concesse autorizzazioni e quali sono queste autorizzazioni. È quindi possibile completare l'impostazione dell'opzione e scegliere solo Outlook oppure Word, Excel, PowerPoint e File Explorer. Questa opzione non è supportata e non funziona quando viene configurata un'etichetta per la [classificazione automatica](configure-policy-classification.md).
+   - **Configura le autorizzazioni definite dall'utente (anteprima)** : consente agli utenti di specificare a chi vengono concesse autorizzazioni e quali sono queste autorizzazioni. È quindi possibile completare l'impostazione dell'opzione e scegliere solo Outlook oppure Word, Excel, PowerPoint e File Explorer. Questa opzione non è supportata e non funziona quando viene configurata un'etichetta per la [classificazione automatica](configure-policy-classification.md).
         
        Se si sceglie l'opzione per Outlook l'etichetta viene visualizzata in Outlook e il comportamento quando gli utenti applicano l'etichetta è uguale a quello generato dall'opzione [Non inoltrare](configure-usage-rights.md#do-not-forward-option-for-emails).
         
-       Se si sceglie l'opzione per Word, Excel, PowerPoint ed Esplora file, l'etichetta viene visualizzata in queste applicazioni. Quando gli utenti applicano l'etichetta viene visualizzata la finestra di dialogo che consente loro di selezionare le autorizzazioni personalizzate. In questa finestra di dialogo gli utenti possono scegliere uno dei [livelli di autorizzazione predefiniti](configure-usage-rights.md#rights-included-in-permissions-levels), passare a o specificare utenti o gruppi e, facoltativamente, impostare una data di scadenza. Verificare che gli utenti dispongano di istruzioni e linee guida per specificare questi valori.
+       Se si sceglie l'opzione per Word, Excel, PowerPoint e File Explorer, quando l'opzione è impostata l'etichetta viene visualizzata in queste applicazioni. Quando gli utenti applicano l'etichetta viene visualizzata la finestra di dialogo che consente loro di selezionare le autorizzazioni personalizzate. In questa finestra di dialogo gli utenti possono scegliere uno dei [livelli di autorizzazione predefiniti](configure-usage-rights.md#rights-included-in-permissions-levels), passare a o specificare utenti o gruppi e, facoltativamente, impostare una data di scadenza. Verificare che gli utenti dispongano di istruzioni e linee guida per specificare questi valori.
     
    - **Seleziona un modello predefinito**: per usare uno dei modelli predefiniti o un modello personalizzato che è stato configurato. Si noti che questa opzione non viene visualizzata per le nuove etichette o se si sta modificando un'etichetta che in precedenza usava l'opzione **Configura le autorizzazioni**.
     
@@ -120,7 +120,7 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
 
 7. Se si è selezionato **Impostazione autorizzazioni** per **Azure (chiave cloud)** , questa opzione consente di selezionare utenti e diritti di utilizzo. 
     
-    Se non si selezionano utenti e si seleziona **OK** in questo riquadro, quindi **Salva** nel riquadro **Etichetta**: l'etichetta viene configurata per applicare la protezione in modo che solo la persona che applica l'etichetta possa aprire il documento o il messaggio di posta elettronica senza restrizioni. Questa configurazione è anche nota come "Solo per me" e potrebbe essere questo il risultato richiesto, in modo che un utente possa salvare un file in qualsiasi posizione ed essere certo che nessun altro possa aprirlo. Se questo risultato corrisponde al requisito e non è necessario che altri utenti collaborino al contenuto protetto, non selezionare **Aggiungi autorizzazioni**. Dopo aver salvato l'etichetta, all'apertura successiva di questo riquadro **Protezione** viene visualizzato **IPC_USER_ID_OWNER** per **Utenti** e **Comproprietario** per **Autorizzazioni** in base a questa configurazione.
+    Se non si seleziona alcun utente e si seleziona **OK** in questo riquadro, seguito da **Salva** nel riquadro **etichetta** : l'etichetta è configurata per applicare la protezione in modo che solo la persona che applica l'etichetta possa aprire il documento o il messaggio di posta elettronica senza restrizioni. Questa configurazione è anche nota come "Solo per me" e potrebbe essere questo il risultato richiesto, in modo che un utente possa salvare un file in qualsiasi posizione ed essere certo che nessun altro possa aprirlo. Se questo risultato corrisponde al requisito e non è necessario che altri utenti collaborino al contenuto protetto, non selezionare **Aggiungi autorizzazioni**. Dopo aver salvato l'etichetta, all'apertura successiva di questo riquadro **Protezione** viene visualizzato **IPC_USER_ID_OWNER** per **Utenti** e **Comproprietario** per **Autorizzazioni** in base a questa configurazione.
     
     Per specificare gli utenti che possono aprire i documenti e i messaggi di posta elettronica protetti, selezionare **Aggiungi autorizzazioni**. Nel riquadro **Aggiungi autorizzazioni** selezionare quindi il primo set di utenti e gruppi che avranno il diritto di usare il contenuto che verrà protetto dall'etichetta selezionata:
     
@@ -179,7 +179,7 @@ Non è necessario configurare Exchange per Azure Information Protection per perm
     
     Se si sceglie l'opzione per Outlook l'etichetta viene visualizzata in Outlook e il comportamento quando gli utenti applicano l'etichetta è uguale a quello generato dall'opzione [Non inoltrare](configure-usage-rights.md#do-not-forward-option-for-emails).
     
-    Se si sceglie l'opzione per Word, Excel, PowerPoint ed Esplora file, l'etichetta viene visualizzata in queste applicazioni. Quando gli utenti applicano l'etichetta viene visualizzata la finestra di dialogo che consente loro di selezionare le autorizzazioni personalizzate. In questa finestra di dialogo gli utenti possono scegliere uno dei [livelli di autorizzazione predefiniti](configure-usage-rights.md#rights-included-in-permissions-levels), passare a o specificare utenti o gruppi e, facoltativamente, impostare una data di scadenza. Verificare che gli utenti dispongano di istruzioni e linee guida per specificare questi valori.
+    Se si sceglie l'opzione per Word, Excel, PowerPoint e File Explorer, quando l'opzione è impostata l'etichetta viene visualizzata in queste applicazioni. Quando gli utenti applicano l'etichetta viene visualizzata la finestra di dialogo che consente loro di selezionare le autorizzazioni personalizzate. In questa finestra di dialogo gli utenti possono scegliere uno dei [livelli di autorizzazione predefiniti](configure-usage-rights.md#rights-included-in-permissions-levels), passare a o specificare utenti o gruppi e, facoltativamente, impostare una data di scadenza. Verificare che gli utenti dispongano di istruzioni e linee guida per specificare questi valori.
 
 10. Fare clic su **OK** per chiudere il riquadro **Protezione** e visualizzare la scelta **Definito dall'utente** o il modello selezionato per l'opzione **Protezione** nel riquadro **Etichetta**.
 
@@ -208,17 +208,17 @@ Per ogni esempio seguente, nel riquadro \<*nome etichetta*> selezionare **Proteg
 
 Questa etichetta è disponibile solo in Outlook ed è appropriata quando Exchange Online è configurato per le [nuove funzionalità di Office 365 Message Encryption](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e). Indicare agli utenti di selezionare l'etichetta quando devono inviare un messaggio protetto a destinatari che usano un account Gmail (o qualsiasi altro account di posta elettronica esterno all'organizzazione). 
 
-Gli utenti digitano l'indirizzo di posta elettronica Gmail nella casella **A**.  Gli utenti selezionano quindi l'etichetta e l'opzione Non inoltrare viene aggiunta automaticamente al messaggio di posta elettronica. Il risultato è che i destinatari non possono inoltrare il messaggio di posta elettronica, stamparlo, copiarne il contenuto o salvare il messaggio all'esterno della cassetta postale usando l'opzione **Salva con nome**. 
+Gli utenti digitano l'indirizzo di posta elettronica Gmail nella casella **A**.  Gli utenti selezionano quindi l'etichetta e l'opzione Non inoltrare viene aggiunta automaticamente al messaggio di posta elettronica. Il risultato è che i destinatari non possono inviare il messaggio di posta elettronica, stamparlo, copiarlo o salvarlo all'esterno della cassetta postale usando l'opzione **Salva con nome** . 
 
 1. Nel riquadro **Protezione** verificare che l'opzione **Azure (chiave cloud)** sia selezionata.
     
 2. Selezionare **Configura le autorizzazioni definite dall'utente (anteprima)** .
 
-3. Assicurarsi che sia selezionata l'opzione seguente: **In Outlook applica Non inoltrare**.
+3. Verificare che sia selezionata l'opzione **In Outlook applica Non inoltrare**.
 
-4. Se selezionata, deselezionare l'opzione seguente: **In Word, Excel, PowerPoint e File Explorer richiedi all'utente le autorizzazioni personalizzate**.
+4. Se è selezionata, deselezionare l'opzione **In Word, Excel, PowerPoint e File Explorer richiedi all'utente le autorizzazioni personalizzate**.
 
-5. Fare clic su **OK** nel riquadro **Protezione** e quindi su **Salva** nel riquadro **Etichetta**.
+5. Fare clic su **OK** nel riquadro **Protezione** e quindi fare clic su **Salva** nel riquadro **Etichetta**.
 
 
 ### <a name="example-2-label-that-restricts-read-only-permission-to-all-users-in-another-organization-and-that-supports-immediate-revocation"></a>Esempio 2: etichetta che limita l'autorizzazione di sola lettura a tutti gli utenti di un'altra organizzazione e supporta la revoca immediata
@@ -239,7 +239,7 @@ Questa etichetta non è adatta per i messaggi di posta elettronica.
 
 6. Nel riquadro **Protezione** in **Consenti l'accesso offline** selezionare **Mai**.
 
-7. Fare clic su **OK** nel riquadro **Protezione** e quindi su **Salva** nel riquadro **Etichetta**.
+7. Fare clic su **OK** nel riquadro **Protezione** e quindi fare clic su **Salva** nel riquadro **Etichetta**.
 
 
 ### <a name="example-3-add-external-users-to-an-existing-label-that-protects-content"></a>Esempio 3: Aggiungere utenti esterni a un'etichetta esistente che protegge il contenuto
@@ -256,11 +256,11 @@ I nuovi utenti aggiunti potranno aprire i documenti e i messaggi di posta elettr
 
 5. Selezionare le autorizzazioni per l'utente o il gruppo.
 
-6. Ripetere i passaggi 4 e 5 per ogni utente o gruppo che si vuole aggiungere a questa etichetta. Fare quindi clic su **OK**.
+6. Ripetere i passaggi 4 e 5 per ogni utente o gruppo che si vuole aggiungere a questa etichetta. Fare quindi clic su **OK**,
 
-7. Fare clic su **OK** nel riquadro **Protezione** e quindi su **Salva** nel riquadro **Etichetta**.
+7. Fare clic su **OK** nel riquadro **Protezione** e quindi fare clic su **Salva** nel riquadro **Etichetta**.
 
-### <a name="example-4-label-for-protected-email-that-supports-less-restrictive-permissions-than-do-not-forward"></a>Esempio 4: Etichetta per la posta elettronica protetta che supporta autorizzazioni meno restrittive rispetto a Non inoltrare
+### <a name="example-4-label-for-protected-email-that-supports-less-restrictive-permissions-than-do-not-forward"></a>Esempio 4: etichetta per la posta elettronica protetta che supporta autorizzazioni meno restrittive rispetto a Non inoltrare
 
 Questa etichetta non può essere limitata a Outlook ma fornisce controlli meno restrittivi rispetto all'uso di Non inoltrare. Ad esempio, se si vuole che i destinatari possano copiare dati dal messaggio di posta elettronica o da un allegato oppure che possano salvare e modificare un allegato.
 
@@ -280,7 +280,7 @@ Quando gli utenti specificano gli indirizzi di posta elettronica nella casella *
     
 2. Verificare che sia selezionata l'opzione **Configura le autorizzazioni** e fare clic su **Aggiungi autorizzazioni**.
 
-3. Nel riquadro **Aggiungi autorizzazioni**: per concedere le autorizzazioni agli utenti dell'organizzazione selezionare **Aggiungi \<nome organizzazione> - Tutti i membri** per selezionare tutti gli utenti nel tenant. Questa impostazione consente di escludere gli account guest. In alternativa, selezionare **Cerca nella directory** per selezionare un gruppo specifico. Per concedere autorizzazioni a utenti esterni o se si preferisce digitare l'indirizzo di posta elettronica, selezionare **Immettere i dettagli** e digitare l'indirizzo di posta elettronica dell'utente o del gruppo di Azure AD o il nome di dominio.
+3. Nel riquadro **Aggiungi autorizzazioni** : per concedere le autorizzazioni agli utenti dell'organizzazione, selezionare **Aggiungi \<nome organizzazione >-tutti i membri** per selezionare tutti gli utenti nel tenant. Questa impostazione consente di escludere gli account guest. In alternativa, selezionare **Cerca nella directory** per selezionare un gruppo specifico. Per concedere autorizzazioni a utenti esterni o se si preferisce digitare l'indirizzo di posta elettronica, selezionare **Immettere i dettagli** e digitare l'indirizzo di posta elettronica dell'utente o del gruppo di Azure AD o il nome di dominio.
     
     Ripetere questo passaggio per specificare gli altri utenti che avranno le stesse autorizzazioni.
 
@@ -314,9 +314,9 @@ Questa configurazione offre il vantaggio che non è necessario specificare utent
 6. Nel riquadro **Etichetta** selezionare **Salva**.
 
 
-### <a name="example-6-label-that-applies-just-for-me-protection"></a>Esempio 6: etichetta che applica la protezione "Solo per me"
+### <a name="example-6-label-that-applies-just-for-me-protection"></a>Esempio 6: etichetta che applica la protezione "Just for me"
 
-Questa configurazione offre l'opposto della collaborazione sicura per i documenti: Ad eccezione di un [utente con privilegi avanzati](configure-super-users.md), solo la persona che applica l'etichetta può aprire il contenuto protetto, senza restrizioni. Questa configurazione è spesso definita protezione "Solo per me". È adatta quando un utente vuole salvare un file in una posizione qualsiasi ed essere certo che nessun altro potrà aprirlo.
+Questa configurazione offre l'opposto della collaborazione sicura per i documenti: ad eccezione di un [utente con privilegi avanzati](configure-super-users.md), solo la persona che applica l'etichetta può aprire il contenuto protetto, senza alcuna restrizione. Questa configurazione è spesso definita protezione "Solo per me". È adatta quando un utente vuole salvare un file in una posizione qualsiasi ed essere certo che nessun altro potrà aprirlo.
 
 La configurazione dell'etichetta è apparentemente semplice:
 

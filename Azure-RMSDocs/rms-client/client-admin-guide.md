@@ -14,11 +14,11 @@ ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 34aa244534f701fc316020b5c433508ec8e3f481
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117749"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404029"
 ---
 # <a name="azure-information-protection-client-administrator-guide"></a>Guida dell'amministratore del client Azure Information Protection
 
@@ -29,7 +29,7 @@ ms.locfileid: "76117749"
 
 Usare le informazioni di questa guida se si è responsabili del client Azure Information Protection in una rete aziendale o se sono necessarie maggiori informazioni rispetto a quelle disponibili nella [Guida per l'utente del client Azure Information Protection](client-user-guide.md). 
 
-Ad esempio:
+Ad esempio,
 
 - Comprendere i diversi componenti di questo client e se è necessario installarlo
 
@@ -173,7 +173,7 @@ Tuttavia, i nomi e le descrizioni delle etichette specificati non vengono automa
 
 ## <a name="post-installation-tasks"></a>Attività post-installazione
 
-Dopo aver installato il client Azure Information Protection, accertarsi di fornire agli utenti istruzioni per etichettare i documenti e i messaggi di posta elettronica, oltre a linee guida per le etichette da scegliere per scenari specifici. Ad esempio:
+Dopo aver installato il client Azure Information Protection, accertarsi di fornire agli utenti istruzioni per etichettare i documenti e i messaggi di posta elettronica, oltre a linee guida per le etichette da scegliere per scenari specifici. Ad esempio,
 
 - Istruzioni per gli utenti online: [Guida per l'utente di Azure Information Protection](client-user-guide.md)
 
@@ -216,7 +216,7 @@ Sebbene sia possibile aggiornare lo scanner in un ordine diverso, è consigliabi
 
 3. Aggiornare il client di Azure Information Protection installando la versione di disponibilità generale corrente dall' [area download Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=53018).
 
-4. In una sessione di PowerShell eseguire il comando Update-AIPScanner con lo stesso nome di profilo specificato nel passaggio 1. ad esempio `Update-AIPScanner –Profile Europe`
+4. In una sessione di PowerShell eseguire il comando Update-AIPScanner con lo stesso nome di profilo specificato nel passaggio 1. Ad esempio: `Update-AIPScanner –Profile Europe`
 
 5. Solo se lo scanner è in esecuzione in un computer disconnesso: ora eseguire [Import-AIPScannerConfiguration](/powershell/module/azureinformationprotection/Import-AIPScannerConfiguration) e specificare il file che contiene le impostazioni esportate.
 
@@ -259,7 +259,7 @@ Per disinstallare il client è possibile usare una delle opzioni seguenti:
 
 - Rieseguire l'eseguibile, ad esempio **AzInfoProtection.exe**, e fare clic su **Disinstalla** nella pagina **Modifica installazione**. 
 
-- Eseguire l'eseguibile con **/uninstall**. ad esempio `AzInfoProtection.exe /uninstall`
+- Eseguire l'eseguibile con **/uninstall**. Ad esempio: `AzInfoProtection.exe /uninstall`
 
 ## <a name="next-steps"></a>Passaggi successivi
 Per installare il client, vedere [Installare il client Azure Information Protection per gli utenti](client-admin-guide-install.md).

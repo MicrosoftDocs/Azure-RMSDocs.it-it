@@ -4,7 +4,7 @@ description: Microsoft Azure Information Protection offre una soluzione client-s
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/02/2020
+ms.date: 03/09/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.suite: ems
 ms.custom: admin
 search.appverid:
 - MET150
-ms.openlocfilehash: fd48222d2b137c8c823e3d233562905da4d4ddc2
-ms.sourcegitcommit: 94a93275f61a2f46c995a3b7c18bae85f3f302f1
+ms.openlocfilehash: a4e7206bb02c29649d6e5807a445bb3970f35ca6
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/02/2020
-ms.locfileid: "78215762"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404879"
 ---
 # <a name="the-client-side-of-azure-information-protection"></a>Lato client di Azure Information Protection
 
@@ -73,7 +73,7 @@ Quando si dispone di un computer Windows che esegue le app di Office 365 che cor
     
     Per questi utenti, la loro esperienza di etichettatura è molto simile in Windows, Mac, iOS e Android, perché hanno le stesse etichette pubblicate e le stesse impostazioni dei criteri. In qualità di amministratore, le etichette e le impostazioni dei criteri vengono gestite nello stesso centro di gestione.
 
-- Si installa anche il client di assegnazione di etichette unificato per testare la versione di anteprima dello scanner Azure Information Protection.
+- Si installa anche il client di assegnazione di etichette unificato per testare lo scanner Azure Information Protection.
 
 - Per un subset di utenti, si distribuisce il client classico perché questi utenti richiedono etichette che applicano la protezione HYOK (Holding your own key).
     
@@ -87,7 +87,7 @@ Usare la tabella seguente per confrontare le funzionalità supportate dai tre cl
 
 Per confrontare le funzionalità di riservatezza predefinite di Office in diverse piattaforme del sistema operativo (Windows, MacOS, iOS e Android) e per il Web, vedere la documentazione relativa alla conformità del Microsoft 365, [supporto per le funzionalità di etichetta di riservatezza nelle app](https://docs.microsoft.com/microsoft-365/compliance/sensitivity-labels-office-apps#support-for-sensitivity-label-capabilities-in-apps). Questa documentazione include anche i numeri di build di Office o le informazioni sul canale di aggiornamento di Office per le funzionalità supportate.
 
-|Funzionalità|Client classico|Client di etichetta unificato|Client di assegnazione di etichette incorporato di Office|
+|Caratteristica|Client classico|Client di etichetta unificato|Client di assegnazione di etichette incorporato di Office|
 |:------|:------------:|:---------------------:|:-----------------------------:|
 |Etichettatura manuale:| **Sì** | **Sì** |**Sì** |
 |Etichetta predefinita:| **Sì** | **Sì** | **Sì** |
@@ -99,13 +99,13 @@ Per confrontare le funzionalità di riservatezza predefinite di Office in divers
 |Supporto multilingue per le etichette:| **Sì** | **Sì** |**Sì** |
 |Ereditarietà delle etichette dagli allegati di posta elettronica:| **Sì** | **Sì**  |No |
 |Personalizzazioni che includono:<br />- Etichetta predefinita per la posta elettronica<br />-Messaggi popup in Outlook <br />- Supporto S/MIME<br />- Opzione Segnala un problema| **Sì** <sup>1</sup> | **Sì** <sup>2</sup> | No |
-|Scanner per gli archivi dati locali:| **Sì** | **Sì <br />(anteprima)** | No |
+|Scanner per gli archivi dati locali:| **Sì** | **Sì <br />** | No |
 |Creazione di report centrale (analisi):| **Sì** | **Sì** | No |
 |Autorizzazioni personalizzate impostate in modo indipendente da un'etichetta:| **Sì** | **Sì** <sup>3</sup>| No |
 |Barra di Information Protection nelle app Office:| **Sì** | **Sì**| No |
 |Contrassegni visivi come azione etichetta (intestazione, piè di pagina, filigrana):| **Sì** | **Sì** | **Sì**|
-|Contrassegni visivi per app:| **Sì** | **Sì* | No |
-|Contrassegni visivi dinamici con variabili:| **Sì** | **Sì** (anteprima) | No |
+|Contrassegni visivi per app:| **Sì** | **Sì** | No |
+|Contrassegni visivi dinamici con variabili:| **Sì** | **Sì** | No |
 |Etichetta con Esplora file:| **Sì** | **Sì** | No |
 |Un visualizzatore per i file protetti (testo, immagini, PDF, Pfile):| **Sì** | **Sì** | No|
 |Supporto di PPDF per l'applicazione di etichette:| **Sì** | No | No |
@@ -179,8 +179,6 @@ Anche se il Azure Information Protection client di assegnazione unificata di eti
 - Visualizzazione del pulsante Non inoltrare in Outlook
 
 - Criteri demo
-
-- Giustificazione per la rimozione della protezione
 
 - Richiesta **di conferma eliminare questa etichetta?** per gli utenti se non si usa l'impostazione dei criteri per la giustificazione
 

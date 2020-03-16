@@ -4,7 +4,7 @@ description: Informazioni sulla personalizzazione del client di Azure Informatio
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/20/2020
+ms.date: 03/11/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b4ddfa8a7746de36030cb38b726949a19eebf73d
-ms.sourcegitcommit: dd3143537e37951179b932993055a868191719b5
+ms.openlocfilehash: 76109514c88b90826d2f258f86f2bc97dc7cbce1
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77507706"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404947"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -32,12 +32,12 @@ Per queste impostazioni è necessario modificare il registro di sistema o specif
 
 ### <a name="how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell"></a>Come configurare le impostazioni avanzate per il client usando Office 365 Centro sicurezza e conformità PowerShell
 
-Quando si usa Office 365 Centro sicurezza e conformità PowerShell, è possibile configurare le impostazioni avanzate che supportano le personalizzazioni per i criteri etichette e le etichette. Ad esempio:
+Quando si usa Office 365 Centro sicurezza e conformità PowerShell, è possibile configurare le impostazioni avanzate che supportano le personalizzazioni per i criteri etichette e le etichette. Ad esempio,
 
 - L'impostazione per visualizzare la barra di Information Protection nelle app di Office è un' ***impostazione avanzata dei criteri***per le etichette.
 - L'impostazione per specificare un colore dell'etichetta è un' ***impostazione avanzata etichetta***.
 
-In entrambi i casi, dopo la [connessione a Office 365 Centro sicurezza e conformità PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps), specificare il parametro *AdvancedSettings* con l'identità (nome o GUID) del criterio o dell'etichetta e specificare le coppie chiave/valore in una [tabella hash](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). Usare la sintassi seguente:
+In entrambi i casi, dopo la [connessione a Office 365 Centro sicurezza e conformità PowerShell](https://docs.microsoft.com/powershell/exchange/office-365-scc/connect-to-scc-powershell/connect-to-scc-powershell?view=exchange-ps), specificare il parametro *AdvancedSettings* con l'identità (nome o GUID) del criterio o dell'etichetta e specificare le coppie chiave/valore in una [tabella hash](https://docs.microsoft.com/powershell/module/microsoft.powershell.core/about/about_hash_tables). Utilizzare la seguente sintassi:
 
 Per un'impostazione dei criteri di etichetta, valore stringa singola:
 
@@ -146,6 +146,7 @@ Usare il parametro *AdvancedSettings* con [New-LabelPolicy](https://docs.microso
 |RemoveExternalContentMarkingInApp|[Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette](#remove-headers-and-footers-from-other-labeling-solutions)|
 |ReportAnIssueLink|[Aggiungere "Segnala un problema" per gli utenti](#add-report-an-issue-for-users)|
 |RunAuditInformationTypesDiscovery|[Disabilitare l'invio di informazioni riservate individuate nei documenti a Azure Information Protection Analytics](#disable-sending-discovered-sensitive-information-in-documents-to-azure-information-protection-analytics)|
+|RunPolicyInBackground|[Attivare l'esecuzione continua della classificazione in background](#turn-on-classification-to-run-continuously-in-the-background)
 |ScannerConcurrencyLevel|[Limitare il numero di thread usati dallo scanner](#limit-the-number-of-threads-used-by-the-scanner)|
 
 Esempio di comando di PowerShell per verificare le impostazioni dei criteri di etichetta attive per un criterio etichetta denominato "globale":
@@ -305,7 +306,7 @@ Questa configurazione USA [le impostazioni avanzate](#how-to-configure-advanced-
 
 Esistono due metodi che possono essere usati per rimuovere le classificazioni da altre soluzioni di assegnazione di etichette. Il primo metodo rimuove qualsiasi forma da documenti di Word in cui il nome della forma corrisponde al nome definito nella proprietà avanzata **WordShapeNameToRemove**, il secondo metodo consente di rimuovere o sostituire intestazioni o piè di pagina basati su testo da documenti di Word, Excel e PowerPoint come definito nella proprietà avanzata **RemoveExternalContentMarkingInApp** . 
 
-### <a name="use-the-wordshapenametoremove-advanced-property-preview"></a>Usare la proprietà avanzata WordShapeNameToRemove (anteprima)
+### <a name="use-the-wordshapenametoremove-advanced-property"></a>Usare la proprietà avanzata WordShapeNameToRemove
 
 *La proprietà avanzata **WordShapeNameToRemove** è supportata dalla versione 2.6.101.0 e successive*
 
@@ -756,7 +757,7 @@ Per modificare questo comportamento in modo che i tipi di informazioni riservate
 
 Se si imposta questa impostazione client avanzata, le informazioni di controllo possono comunque essere inviate dal client, ma le informazioni sono limitate alla segnalazione quando un utente ha eseguito l'accesso al contenuto con etichetta.
 
-Ad esempio:
+Ad esempio,
 
 - Con questa impostazione è possibile vedere che un utente ha eseguito l'accesso a Financial. docx con etichetta **Confidential \ Sales**.
 
@@ -925,7 +926,7 @@ Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced
 
 Potrebbero essere presenti alcuni scenari in cui si desidera applicare una o più proprietà personalizzate a un documento o a un messaggio di posta elettronica oltre ai metadati applicati da un'etichetta di riservatezza.
 
-Ad esempio:
+Ad esempio,
 
 - È in corso la [migrazione da un'altra soluzione di assegnazione di etichette](#migrate-labels-from-secure-islands-and-other-labeling-solutions), ad esempio le isole sicure. Per l'interoperabilità durante la migrazione, si desidera che le etichette di riservatezza applichino anche una proprietà personalizzata utilizzata dall'altra soluzione di assegnazione di etichette.
 
@@ -1018,6 +1019,29 @@ Esempio di comando di PowerShell, in cui l'etichetta padre è denominata "Confid
 
     Set-Label -Identity "Confidential" -AdvancedSettings @{DefaultSubLabelId="8faca7b8-8d20-48a3-8ea2-0f96310a848e"}
 
+## <a name="turn-on-classification-to-run-continuously-in-the-background"></a>Attivare l'esecuzione continua della classificazione in background
+
+Questa configurazione usa un' [impostazione avanzata](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) delle etichette che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell. Questa impostazione è in anteprima e potrebbe cambiare.
+
+Quando si configura questa impostazione, viene modificato il comportamento predefinito del client di Azure Information Protection Unified labeling che applica le etichette automatiche e consigliate ai documenti:
+
+Per Word, Excel e PowerPoint, la classificazione automatica viene eseguita in modo continuo in background.
+
+Il comportamento rimane invariato per Outlook.
+Quando la Azure Information Protection client di assegnazione unificata dei documenti controlla periodicamente i documenti per le regole di condizione specificate, questo comportamento Abilita la classificazione automatica e consigliata e la protezione dei documenti archiviati in SharePoint Online. I file di grandi dimensioni vengono salvati più rapidamente perché le regole di condizione sono già state eseguite.
+
+Le regole di condizione non vengono eseguite in tempo reale durante la digitazione. Vengono eseguite periodicamente come attività in background se il documento viene modificato.
+
+Per configurare questa impostazione avanzata, immettere le stringhe seguenti:
+
+- Chiave: **RunPolicyInBackground**
+- Valore: **True**
+
+
+
+Esempio di comando di PowerShell: 
+
+    Set-LabelPolicy -Identity PolicyName -AdvancedSettings @{RunPolicyInBackground = "true"}
 
 ## <a name="specify-a-color-for-the-label"></a>Specificare un colore per l'etichetta
 
@@ -1037,7 +1061,7 @@ Esempio di comando di PowerShell, in cui l'etichetta è denominata "public":
 
     Set-Label -Identity Public -AdvancedSettings @{color="#40e0d0"}
 
-## <a name="sign-in-as-a-different-user"></a>Accedere come utente diverso
+## <a name="sign-in-as-a-different-user"></a>Accedi con un altro nome utente
 
 In un ambiente di produzione, gli utenti in genere non devono eseguire l'accesso come utente diverso quando usano il client di Azure Information Protection Unified labeling. Per un amministratore, tuttavia, può essere necessario accedere con le credenziali di un altro utente durante una fase di testing. 
 

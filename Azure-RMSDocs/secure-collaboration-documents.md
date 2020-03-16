@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 90c49b8222e379094ee5f5d00c5bd37c7dd0377d
-ms.sourcegitcommit: 03dc2eb973b20897b30659c2ac6cb43ce0a40e71
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75960891"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79403723"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configurazione della collaborazione per i documenti protetti con Azure Information Protection
 
@@ -96,7 +96,7 @@ Condividere il documento protetto allegandolo a un messaggio di posta elettronic
 
 ## <a name="opening-and-editing-the-protected-document"></a>Apertura e modifica del documento protetto
 
-Quando gli utenti autorizzati aprono il documento per la modifica, il documento viene aperto con un banner informativo che indica che le autorizzazioni sono limitate. Ad esempio:
+Quando gli utenti autorizzati aprono il documento per la modifica, il documento viene aperto con un banner informativo che indica che le autorizzazioni sono limitate. Ad esempio,
 
 ![Banner informativo di esempio sulle autorizzazioni di Azure Information Protection](./media/example-restricted-access-banner.png)
 
@@ -135,7 +135,7 @@ Anche gli scenari seguenti supportano la visualizzazione di documenti:
 
 |Piattaforme per la visualizzazione e la modifica di documenti: <br />Word, Excel, PowerPoint|Metodo di autenticazione:<br />Azure AD|Metodo di autenticazione:<br />Account Microsoft|
 |---------------|----------|-----------|-----------|
-|Windows|Sì [[1]](#footnote-1)|Sì [[2]](#footnote-2)|
+|WINDOWS|Sì [[1]](#footnote-1)|Sì [[2]](#footnote-2)|
 |iOS|Sì [[1]](#footnote-1)|No|
 |Android|Sì [[1]](#footnote-1)|No|
 |MacOS|Sì [[1]](#footnote-1)|No|

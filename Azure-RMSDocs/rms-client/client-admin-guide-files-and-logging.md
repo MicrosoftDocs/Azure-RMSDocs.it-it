@@ -14,11 +14,11 @@ ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 21d7bd36101ed2b1cfe38c3501801a06839b027b
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117800"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404080"
 ---
 # <a name="admin-guide-azure-information-protection-client-files-and-client-usage-logging"></a>Guida dell'amministratore: File e registrazione dell'utilizzo del client Azure Information Protection
 
@@ -50,7 +50,7 @@ Il client registra l'attività dell'utente nel registro eventi locale di Windows
 
 - Nome file e percorso
 
-- Action:
+- Azione:
 
     - Imposta etichetta: ID informazioni 101
     
@@ -78,15 +78,15 @@ Il client registra l'attività dell'utente nel registro eventi locale di Windows
     
 - Origine azione:
     
-    - Manual 
+    - Manuale 
     
-    - Implementazione consigliata
+    - Consigliato
     
-    - Automatica  
+    - Automatico  
     
     - Sistema (per l'accesso e il download dei criteri)
     
-    - Valore predefinito
+    - Default
     
 - Etichetta prima e dopo l'azione 
     

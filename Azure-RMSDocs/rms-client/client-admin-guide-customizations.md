@@ -14,11 +14,11 @@ ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 999f5548d679d6599c283ce6eff284a9b0f0dcea
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117868"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404896"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-client"></a>Guida dell'amministratore: Configurazioni personalizzate per il client Azure Information Protection
 
@@ -48,7 +48,7 @@ Alcune di queste impostazioni richiedono la modifica del Registro di sistema e a
 
 #### <a name="available-advanced-client-settings"></a>Impostazioni client avanzate disponibili
 
-|Impostazioni|Scenario e istruzioni|
+|Impostazione|Scenario e istruzioni|
 |----------------|---------------|
 |DisableDNF|[Nascondere o visualizzare il pulsante Non inoltrare in Outlook](#hide-or-show-the-do-not-forward-button-in-outlook)|
 |DisableMandatoryInOutlook|[Esentare i messaggi di Outlook da un'etichetta obbligatoria](#exempt-outlook-messages-from-mandatory-labeling)|
@@ -94,7 +94,7 @@ Per impostazione predefinita, il client Azure Information Protection prova autom
 
 Indipendentemente da questa impostazione, il client Azure Information Protection segue comunque il [processo standard di individuazione del servizio RMS](client-deployment-notes.md#rms-service-discovery) per trovare il proprio cluster AD RMS.
 
-## <a name="sign-in-as-a-different-user"></a>Accedere come utente diverso
+## <a name="sign-in-as-a-different-user"></a>Accedi con un altro nome utente
 
 In un ambiente di produzione, in genere gli utenti non hanno bisogno di accedere con un nome utente diverso quando usano il client Azure Information Protection. Per un amministratore, tuttavia, può essere necessario accedere con le credenziali di un altro utente durante una fase di testing. 
 
@@ -188,7 +188,7 @@ Quando si esportano i criteri dal portale di Azure, viene scaricato un file ZIP 
 
 1. Decomprimere il file e usare la tabella seguente per identificare il file di criteri necessario. 
     
-    |Nome del file|Versione del client corrispondente|
+    |Nome file|Versione del client corrispondente|
     |--------------------------|---------------------------------------------|
     |Policy1.1.msip |versione 1.2|
     |Policy1.2.msip |versione 1.3 - 1.7|
@@ -592,7 +592,7 @@ Inoltre quando l'utente usa queste istruzioni per file protetti da altri utenti,
 
 Per usare i comandi di PowerShell per convertire file con estensione ppdf esistenti in file con estensione pdf protetti che usano lo standard ISO per la crittografia PDF:
 
-1. Usare [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) con il file con estensione ppdf. Ad esempio:
+1. Usare [Get-AIPFileStatus](/powershell/module/azureinformationprotection/get-aipfilestatus) con il file con estensione ppdf. Ad esempio,
     
         Get-AIPFileStatus -Path \\Finance\Projectx\sales.ppdf
 
@@ -604,11 +604,11 @@ Per usare i comandi di PowerShell per convertire file con estensione ppdf esiste
     
    - Valore di **RMSTemplateId**. Se questo valore è **Accesso limitato**, un utente ha protetto il file usando autorizzazioni personalizzate anziché le impostazioni di protezione configurate per l'etichetta. Se si continua, tali autorizzazioni personalizzate verranno sovrascritte dalle impostazioni di protezione dell'etichetta. Decidere se continuare o chiedere all'utente (valore visualizzato per **RMSIssuer**) di rimuovere l'etichetta e riapplicarla, con le relative autorizzazioni personalizzate originali.
 
-3. Rimuovere l'etichetta usando [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) con il parametro *RemoveLabel*. Se si usa l'[impostazione criteri](../configure-policy-settings.md)**Gli utenti devono offrire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione**, è necessario specificare anche il parametro *Giustificazione* con il motivo. Ad esempio: 
+3. Rimuovere l'etichetta usando [Set-AIPFileLabel](/powershell/module/azureinformationprotection/set-aipfilelabel) con il parametro *RemoveLabel*. Se si usa l'[impostazione criteri](../configure-policy-settings.md)**Gli utenti devono offrire una giustificazione per la configurazione di un'etichetta di classificazione più bassa, la rimozione di un'etichetta o la rimozione della protezione**, è necessario specificare anche il parametro *Giustificazione* con il motivo. Ad esempio, 
     
         Set-AIPFileLabel \\Finance\Projectx\sales.ppdf -RemoveLabel -JustificationMessage 'Removing .ppdf protection to replace with .pdf ISO standard'
 
-4. Riapplicare l'etichetta originale, specificando il valore dell'etichetta identificato nel passaggio 1. Ad esempio:
+4. Riapplicare l'etichetta originale, specificando il valore dell'etichetta identificato nel passaggio 1. Ad esempio,
     
         Set-AIPFileLabel \\Finance\Projectx\sales.pdf -LabelId d9f23ae3-1234-1234-1234-f515f824c57b
 
@@ -679,7 +679,7 @@ In questo esempio:
 L'impostazione client avanzata è la seguente:
 
     
-|Name|Value|
+|Name|Valore|
 |---------------------|---------|
 |LabelbyCustomProperty|1ace2cc3-14bc-4142-9125-bf946a70542c, "L'etichetta Secure Islands è Riservato",Classificazione,Riservato|
 
@@ -696,7 +696,7 @@ In questo esempio:
 L'impostazione client avanzata è la seguente:
 
     
-|Name|Value|
+|Name|Valore|
 |---------------------|---------|
 |LabelbyCustomProperty|3e9df74d-3168-48af-8b11-037e3021813f, "L'etichetta Secure Islands è Sensibile",Classificazione,Sensibile|
 
@@ -714,7 +714,7 @@ In questo esempio:
 L'impostazione client avanzata è la seguente:
 
     
-|Name|Value|
+|Name|Valore|
 |---------------------|---------|
 |LabelbyCustomProperty|2beb8fe7-8293-444c-9768-7fdc6f75014d,"L'etichetta Secure Islands contiene Interno",Classificazione,.\*Interno.\*|
 
@@ -735,7 +735,7 @@ Poiché la corrispondenza dei criteri influiscono sulle prestazioni degli utenti
 
 - Valore: \<**tipi di applicazioni di Office WXP**> 
 
-Di seguito sono riportati alcuni esempi.
+Esempi:
 
 - Per eseguire la ricerca solo in documenti di Word, specificare **W**.
 
@@ -841,7 +841,7 @@ Usare queste chiavi e i valori corrispondenti per una sola proprietà personaliz
 
 Si supponga, ad esempio, di avere una colonna di SharePoint denominata **Classificazione** con i valori possibili **Pubblico**, **Generale** e **Riservatezza elevata\Tutti i dipendenti**. I documenti vengono archiviati in SharePoint, con i valori **Pubblico**, **Generale** o **Riservatezza elevata\Tutti i dipendenti** impostati per la proprietà Classificazione.
 
-Per etichettare un documento di Office con uno di questi valori di classificazione, impostare **SyncPropertyName** su **Classificazione** e **SyncPropertyState** a  **OneWay**. 
+Per etichettare un documento di Office con uno di questi valori di classificazione, impostare **SyncPropertyName** su **Classificazione** e **SyncPropertyState** a **OneWay**. 
 
 A questo punto, quando un utente apre e salva uno di questi documenti di Office, il documento viene etichettato come **Pubblico**, **Generale** o **Riservatezza elevata\Tutti i dipendenti** se sono presenti etichette con questi nomi nei criteri di Azure Information Protection. In assenza di etichette con questi nomi, il documento rimane senza etichetta.
 
@@ -859,7 +859,7 @@ La configurazione che controlla se il client invia le informazioni di controllo 
 
 Se si imposta questa impostazione client avanzata, le informazioni di controllo possono comunque essere inviate dal client, ma le informazioni sono limitate all'attività di assegnazione di etichette.
 
-Ad esempio:
+Ad esempio,
 
 - Con questa impostazione è possibile vedere che un utente ha eseguito l'accesso a Financial. docx con etichetta **Confidential \ Sales**.
 
@@ -982,11 +982,11 @@ Per ottenere questa soluzione:
 
 2. Creare una regola del flusso di posta di Exchange per ogni etichetta: applicare la regola quando le proprietà del messaggio includono la classificazione configurata e modificare le proprietà del messaggio per impostare un'intestazione del messaggio. 
 
-     Per l'intestazione del messaggio, è possibile trovare le informazioni da specificare controllando le intestazioni Internet di un messaggio di posta elettronica inviato e classificato tramite l'etichetta Azure Information Protection. Cercare l'intestazione **msip_labels** e la stringa che segue immediatamente, fino ed escludendo il punto e virgola. Ad esempio:
+     Per l'intestazione del messaggio, è possibile trovare le informazioni da specificare controllando le intestazioni Internet di un messaggio di posta elettronica inviato e classificato tramite l'etichetta Azure Information Protection. Cercare l'intestazione **msip_labels** e la stringa che segue immediatamente, fino ed escludendo il punto e virgola. Ad esempio,
     
     **msip_labels: MSIP_Label_0e421e6d-ea17-4FDB-8f01-93a3e71333b8_Enabled = true**
     
-    Quindi, per l'intestazione del messaggio nella regola, specificare **msip_labels** per l'intestazione e la parte rimanente della stringa per il valore dell'intestazione. Ad esempio:
+    Quindi, per l'intestazione del messaggio nella regola, specificare **msip_labels** per l'intestazione e la parte rimanente della stringa per il valore dell'intestazione. Ad esempio,
     
     ![Regola del flusso di posta di Exchange Online di esempio che imposta l'intestazione del messaggio per un'etichetta di Azure Information Protection specifica](../media/exchange-rule-for-message-header.png)
     
