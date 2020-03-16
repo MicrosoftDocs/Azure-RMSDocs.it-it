@@ -7,11 +7,11 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 01/28/2019
 ms.openlocfilehash: 2ee3c660a14df74f432870d364002cee86a5ce27
-ms.sourcegitcommit: 2d3c638fb576f3f074330a33d077db0cf0e7d4e7
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77489266"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79405015"
 ---
 # <a name="enumerations-and-structures"></a>Enumerazioni e strutture
 
@@ -84,7 +84,7 @@ Automatico            | Imposta da condizioni dei criteri
 CONSIGLIABILE            | Impostato dall'utente dopo la raccomandazione dell'etichetta per le condizioni dei criteri
 PREDEFINITA            | Impostazione predefinita nei criteri
 
-Definisce ciò che ha attivato l'evento di etichettatura
+definisce ciò che ha attivato l'evento di etichettatura
   
 #### <a name="datastate-enum"></a>Enum di DataState
 Valori                         | Descrizioni                                
@@ -131,7 +131,7 @@ Default            | I contrassegni noti vengono convertiti con contrassegno sco
 Pass-through            | I contrassegni noti vengono convertiti con contrassegno sconosciuto vengono passati
 None            | Tutti i contrassegni vengono passati attraverso
 
-È possibile impostare vari campi dinamici nel messaggio di testo dell'applicazione: $ {Item. Label} $ {Item.Name} $ {Item. location} $ {User.Name} $ {User. PrincipalName} $ {Event. DateTime} other non sono ancora definiti: l'SDK li sostituirà con la correzione valori che utilizzano questi flag di controllo.
+è possibile impostare vari campi dinamici nel messaggio di testo dell'applicazione: $ {Item. Label} $ {Item.Name} $ {Item. location} $ {User.Name} $ {User. PrincipalName} $ {Event. DateTime} other non sono ancora definiti: l'SDK li sostituirà con la correzione valori che utilizzano questi flag di controllo.
   
 #### <a name="consent-enum"></a>Enum di consenso
 Valori                         | Descrizioni                                

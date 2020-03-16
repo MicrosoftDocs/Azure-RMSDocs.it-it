@@ -13,11 +13,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 56a61e558f72812517d21201aa6e4215624d903d
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934586"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404981"
 ---
 # <a name="preparing-users-and-groups-for-azure-information-protection"></a>Preparazione di utenti e gruppi per Azure Information Protection
 
@@ -150,7 +150,7 @@ Controllare quindi se la colonna **ProxyAddresses** è popolata. In caso afferma
 
 Se la colonna **ProxyAddresses** non è popolata, l'autorizzazione dell'utente per il servizio Azure Rights Management viene effettuata con il valore presente in **UserPrincipalName**.
 
-Ad esempio:
+Ad esempio,
 
 
 |  Nome visualizzato   |     UserPrincipalName      |                            ProxyAddresses                             |
@@ -177,7 +177,7 @@ Nella maggior parte dei casi il valore di UserPrincipalName corrisponde a uno de
 > [!TIP]
 > Per una gestione più semplice, ad esempio per eseguire ricerche e modifiche in blocco per l'importazione, è possibile usare il cmdlet Export-Csv per esportare i risultati in un foglio di calcolo.
 >
-> ad esempio `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
+> Ad esempio: `Get-MsolGroup | select DisplayName, ProxyAddresses | Export-Csv -Path UserAccounts.csv`
 
 ### <a name="confirm-group-accounts-are-ready-for-azure-information-protection"></a>Confermare che gli account di gruppo sono pronti per Azure Information Protection
 

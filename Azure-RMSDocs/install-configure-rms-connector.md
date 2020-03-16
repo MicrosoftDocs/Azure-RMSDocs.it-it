@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 4d4ba8a3093e1bef32e42b562c93e787e603614b
-ms.sourcegitcommit: ad3e55f8dfccf1bc263364990c1420459c78423b
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76117987"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404148"
 ---
 # <a name="installing-and-configuring-the-azure-rights-management-connector"></a>Installazione e configurazione del connettore di Azure Rights Management
 
@@ -108,14 +108,14 @@ Durante il processo di installazione del connettore RMS, vengono eseguite la con
 
 Nella pagina finale della procedura guidata, eseguire le operazioni indicate di seguito e fare clic su **Fine**:
 
--   Se si è installato il primo connettore, non selezionare l'opzione **Avvia console di amministrazione del connettore per autorizzare i server** . Questa opzione, infatti, deve essere selezionata dopo l'installazione del secondo (o dell'ultimo) connettore RMS. È invece necessario eseguire di nuovo la procedura guidata su almeno un altro computer. Installare almeno due connettori.
+-   Se si è installato il primo connettore, non selezionare l'opzione **Avvia la console di amministrazione del connettore per autorizzare i server**. Questa opzione, infatti, deve essere selezionata dopo l'installazione del secondo (o dell'ultimo) connettore RMS. È invece necessario eseguire di nuovo la procedura guidata su almeno un altro computer. Installare almeno due connettori.
 
--   Se si è installato il secondo (o l'ultimo) connettore, selezionare l'opzione **Avvia console di amministrazione del connettore per autorizzare i server**.
+-   Se si è installato il secondo (o l'ultimo) connettore, selezionare l'opzione **Avvia la console di amministrazione del connettore per autorizzare i server**.
 
 > [!TIP]
 > A questo punto, è possibile eseguire un test di verifica per testare l'operatività dei servizi Web per il connettore RMS:
 >
-> -   Da un Web browser, connettersi a **http://&lt;indirizzoconnettore&gt;/_wmcs/certification/servercertification.asmx**, sostituendo *&lt;indirizzoconnettore&gt;* con l'indirizzo o il nome del server in cui è installato il connettore RMS. Se la connessione ha esito positivo, viene visualizzata una pagina **ServerCertificationWebService** .
+> -   Da un Web browser, connettersi a **http://&lt;indirizzoconnettore&gt;/_wmcs/certification/servercertification.asmx**, sostituendo *&lt;indirizzoconnettore&gt;* con l'indirizzo o il nome del server in cui è installato il connettore RMS. Se la connessione ha esito positivo, viene visualizzata una pagina **ServerCertificationWebService**.
 
 Se è necessario disinstallare il connettore RMS, eseguire di nuovo la procedura guidata e selezionare l'opzione per la disinstallazione.
 
@@ -126,7 +126,7 @@ Ad esempio, il log di installazione potrebbe essere simile a C:\Users\Administra
 ## <a name="authorizing-servers-to-use-the-rms-connector"></a>Autorizzazione dei server all'uso del connettore RMS
 Dopo aver installato il connettore RMS in almeno due computer, è possibile autorizzare all'uso del connettore i server e i servizi desiderati, ad esempio i server che eseguono Exchange Server 2013 o SharePoint Server 2013.
 
-Per definire tali server, eseguire lo strumento di amministrazione di connettore RMS e aggiungerli all'elenco dei server autorizzati. È possibile eseguire questo strumento quando si seleziona **Avvia console di amministrazione del connettore per autorizzare i server** al termine dell'installazione guidata del connettore Microsoft Rights Management. In alternativa, è possibile eseguirlo in modo separato dalla procedura guidata.
+Per definire tali server, eseguire lo strumento di amministrazione di connettore RMS e aggiungerli all'elenco dei server autorizzati. È possibile eseguire questo strumento quando si seleziona **Avvia la console di amministrazione del connettore per autorizzare i server** al termine dell'installazione guidata del connettore Microsoft Rights Management. In alternativa, è possibile eseguirlo in modo separato dalla procedura guidata.
 
 Quando si autorizzano i server, tenere presente quanto segue:
 
@@ -134,7 +134,7 @@ Quando si autorizzano i server, tenere presente quanto segue:
 
 - È possibile aggiungere più server all'elenco come voce singola specificando un gruppo di Active Directory di sicurezza o di distribuzione oppure un account del servizio usato da più di un server. Se si usa questa configurazione i server del gruppo condividono gli stessi certificati RMS e sono considerati tutti proprietari del contenuto protetto da ognuno di essi. Per ridurre il sovraccarico amministrativo, per autorizzare i server di Exchange dell'organizzazione o una server farm di SharePoint si consiglia di usare la configurazione di un gruppo anziché singoli server.
 
-Nella pagina **Server a cui è consentito l'uso del connettore** , fare clic su **Aggiungi**.
+Nella pagina **Server autorizzati all'uso del connettore** fare clic su **Aggiungi**.
 
 > [!NOTE]
 > L’autorizzazione dei server in Azure RMS è la configurazione equivalente alla configurazione di AD RMS quando si applicano manualmente i diritti NTFS a ServerCertification.asmx per gli account di servizio o del computer server e si concedono manualmente diritti di utente con privilegi avanzati agli account di Exchange. L'applicazione dei diritti NTFS a ServerCertification.asmx non è necessaria per il connettore.
@@ -184,7 +184,7 @@ Usare le impostazioni seguenti per configurare il cluster di Bilanciamento caric
 
     Per altre informazioni sull'uso di HTTP o HTTPS, vedere la sezione successiva.
 
--   Gruppo di affinità: Nessuno
+-   Affinità: nessuna
 
 -   Metodo di distribuzione: Uguale
 
@@ -214,7 +214,7 @@ Se i server del connettore sono installati in una rete che non dispone di connet
 
 1.  Su ogni server che esegue il connettore RMS aprire un editor del Registro di sistema, ad esempio Regedit.
 
-2.  Passare a **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\AADRM\Connector**
+2.  Spostarsi in **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\AADRM\Connector**
 
 3.  Aggiungere il valore stringa **ProxyAddress**, quindi impostare i dati di questo valore su **http://&lt;MyProxyDomainOrIPaddress&gt;:&lt;MyProxyPort&gt;**
 

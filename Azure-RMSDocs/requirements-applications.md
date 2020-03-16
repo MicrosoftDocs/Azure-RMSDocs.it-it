@@ -14,11 +14,11 @@ ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 81c95640f22e6234a3cc6d3487db6c12345a57b8
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73710244"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404114"
 ---
 # <a name="applications-that-support-azure-rights-management-data-protection"></a>Applicazioni che supportano la protezione dati di Azure Rights Management
 
@@ -56,7 +56,7 @@ Informazioni sulle colonne della tabella:
 |**Blackberry 10**|Web browser [[3]](#footnote-3)|Posta elettronica Blackberry [[5]](#footnote-5) <br /><br />Web browser [[4]](#footnote-4)|Non supportato|
 
 ###### <a name="footnote-1"></a>Nota 1
-Include: 
+Componente: 
 - App di Office con versione minima 1805, build 9330.2078 da Office 365 Business o Microsoft 365 Business quando all'utente viene assegnata una licenza per Azure Rights Management (nota anche come Azure Information Protection per Office 365)
 - App di Office 365 ProPlus
 
@@ -137,7 +137,7 @@ Per altre informazioni su come usare l'app, vedere [Domande frequenti sull'app A
 
 ### <a name="more-information-about-the-azure-information-protection-client-for-windows"></a>Altre informazioni sul client Azure Information Protection per Windows
 
-Per altre informazioni, vedere le risorse seguenti:
+Per ulteriori informazioni, vedere le seguenti risorse:
 
 - Azure Information Protection le guide di amministrazione client:
     - [Client di etichetta unificato](./rms-client/clientv2-admin-guide.md)
@@ -155,7 +155,7 @@ Per scaricare l'app desiderata, fare clic sul collegamento corrispondente nella 
 
 Per i computer Mac, l'app di condivisione Rights Management offre un visualizzatore per file PDF (con estensione ppdf) protetti, immagini con testo protetto e file protetti in modo generico. Consente anche di proteggere i file di immagine, ma non altri file. Per proteggere i file di Office in questi computer, usare Office per Mac oppure Office 365 ProPlus. 
 
-Per altre informazioni, vedere le risorse seguenti:
+Per ulteriori informazioni, vedere le seguenti risorse:
 
 -   [Domande frequenti sull'applicazione di condivisione Microsoft Rights Management per piattaforme mobili](https://technet.microsoft.com/dn451248)
 

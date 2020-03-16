@@ -7,11 +7,11 @@ ms.topic: reference
 ms.author: mbaldwin
 ms.date: 11/4/2019
 ms.openlocfilehash: cfc80ab9e4704c9efa5d3105f36c668bce26a6b9
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "73591633"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404573"
 ---
 # <a name="functions"></a>Funzioni
 
@@ -19,11 +19,11 @@ ms.locfileid: "73591633"
 
 definizione della funzione di callback per l'acquisizione del token OAuth2
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| autenticazione | Indirizzo di posta elettronica per il quale verrà acquisito il token |
+| identity | Indirizzo di posta elettronica per il quale verrà acquisito il token |
 | challenge | OAuth2 Challenge |
 | context | Contesto dell'applicazione opaco passato all'API MIP che ha generato questo callback di autenticazione |
 | tokenBuffer | Output Buffer in cui verrà copiato il token. Se null,' actualTokenSize ' verrà popolato, ma |
@@ -47,9 +47,9 @@ MIP_CC_CALLBACK(mip_cc_auth_callback,
 
 definizione della funzione di callback per il consenso dell'utente per l'accesso all'endpoint del servizio esterno
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | url | URL per cui l'SDK richiede il consenso dell'utente |
 
@@ -65,13 +65,13 @@ MIP_CC_CALLBACK(mip_cc_consent_callback,
 
 Creare un dizionario di chiavi/valori stringa
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | entries | Matrice di coppie chiave/valore |
 | count | Numero di coppie chiave/valore |
-| dictionary | Output Dizionario appena creato |
+| dizionario | Output Dizionario appena creato |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -88,11 +88,11 @@ mip_cc_result MIP_CC_CreateDictionary(
 
 Ottenere le coppie chiave/valore che compongono un dizionario
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| dictionary | Dizionario di origine |
+| dizionario | Dizionario di origine |
 | entries | Output Matrice di coppie chiave/valore, memoria di proprietà dell'oggetto mip_cc_dictionary |
 | count | Output Numero di coppie chiave/valore |
 
@@ -111,11 +111,11 @@ mip_cc_result MIP_CC_Dictionary_GetEntries(
 
 Rilasciare le risorse associate a un dizionario
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| dictionary | Dizionario da rilasciare |
+| dizionario | Dizionario da rilasciare |
 
 ```c
 void MIP_CC_ReleaseDictionary(mip_cc_dictionary dictionary);
@@ -125,9 +125,9 @@ void MIP_CC_ReleaseDictionary(mip_cc_dictionary dictionary);
 
 Definizione della funzione di callback per l'emissione di una richiesta HTTP
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | richiesta | Richiesta HTTP che deve essere eseguita dall'applicazione |
 | context | Lo stesso contesto opaco passato alla chiamata API MIP che ha generato questa richiesta HTTP |
@@ -143,9 +143,9 @@ MIP_CC_CALLBACK(mip_cc_http_send_callback_fn,
 
 Definizione della funzione di callback per l'annullamento di una richiesta HTTP
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | IDRichiesta | ID della richiesta HTTP da annullare. |
 
@@ -159,9 +159,9 @@ MIP_CC_CALLBACK(mip_cc_http_cancel_callback_fn,
 
 Crea un delegato HTTP che può essere usato per eseguire l'override dello stack HTTP predefinito di MIP
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | sendCallback | Puntatore a funzione per l'emissione di richieste HTTP |
 | cancelCallback | Puntatore a funzione per l'annullamento delle richieste HTTP |
@@ -180,9 +180,9 @@ mip_cc_result MIP_CC_CreateHttpDelegate(
 
 Notifica a un delegato HTTP che una risposta HTTP è pronta
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | httpDelegate | Handle per oggetto delegato HTTP |
 | IDRichiesta | ID della richiesta HTTP associata a questa operazione |
@@ -203,9 +203,9 @@ void MIP_CC_NotifyHttpDelegateResponse(
 
 Rilasciare le risorse associate a un handle del delegato HTTP
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | httpDelegate | Delegato HTTP da rilasciare |
 
@@ -217,9 +217,9 @@ void MIP_CC_ReleaseHttpDelegate(mip_cc_http_delegate httpDelegate);
 
 Definizione della funzione di callback per l'inizializzazione del logger
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | storagePath | Percorso del file in cui è possibile archiviare i log |
 
@@ -233,15 +233,15 @@ MIP_CC_CALLBACK(mip_cc_logger_init_callback_fn,
 
 Definizione della funzione di callback per la scrittura di un'istruzione log
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| livello | livello di registrazione per l'istruzione log. |
-| messaggio | messaggio per l'istruzione log. |
-| funzione | nome della funzione per l'istruzione log. |
+| level | livello di registrazione per l'istruzione log. |
+| message | messaggio per l'istruzione log. |
+| Funzione | nome della funzione per l'istruzione log. |
 | file | nome del file in cui è stata generata l'istruzione log. |
-| linea | numero di riga in cui è stata generata l'istruzione log. |
+| riga | numero di riga in cui è stata generata l'istruzione log. |
 
 ```c
 MIP_CC_CALLBACK(mip_cc_logger_write_callback_fn,
@@ -257,9 +257,9 @@ MIP_CC_CALLBACK(mip_cc_logger_write_callback_fn,
 
 Crea un delegato del logger che può essere usato per eseguire l'override del logger predefinito di MIP
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | initCallback | Puntatore a funzione per l'inizializzazione |
 | flushCallback | Puntatore a funzione per lo scaricamento dei log |
@@ -280,9 +280,9 @@ mip_cc_result MIP_CC_CreateLoggerDelegate(
 
 Rilasciare le risorse associate a un handle del delegato del logger
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | loggerDelegate | Delegato del logger da rilasciare |
 
@@ -294,9 +294,9 @@ void MIP_CC_ReleaseLoggerDelegate(mip_cc_logger_delegate loggerDelegate);
 
 Creare un contesto MIP per gestire lo stato condiviso tra tutte le istanze del profilo
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | applicationInfo | Informazioni sull'applicazione che utilizza l'SDK di protezione |
 | path | Percorso del file in cui sono archiviati i dati di registrazione, telemetria e altro materiale collaterale per la protezione |
@@ -323,9 +323,9 @@ mip_cc_result MIP_CC_CreateMipContext(
 
 Creare un contesto MIP per gestire lo stato condiviso tra tutte le istanze del profilo
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | applicationInfo | Informazioni sull'applicazione che utilizza l'SDK di protezione |
 | path | Percorso del file in cui sono archiviati i dati di registrazione, telemetria e altro materiale collaterale per la protezione |
@@ -356,9 +356,9 @@ mip_cc_result MIP_CC_CreateMipContextWithCustomFeatureSettings(
 
 Rilascia le risorse associate a un contesto MIP
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | mipContext | Contesto MIP da rilasciare |
 
@@ -370,12 +370,12 @@ void MIP_CC_ReleaseMipContext(mip_cc_mip_context mipContext);
 
 Ottiene il tipo di protezione, indipendentemente dal fatto che sia definito da un modello RMS
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
-| ProtectionType | Output Tipo di protezione |
+| protectionType | Output Tipo di protezione |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -389,9 +389,9 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetProtectionType(
 
 Ottiene le dimensioni del buffer necessarie per archiviare il proprietario
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | ownerSize | Output Dimensioni del buffer per il possesso del proprietario (in numero di caratteri) |
@@ -408,9 +408,9 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetOwnerSize(
 
 Ottiene il proprietario della protezione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | ownerBuffer | Output Buffer in cui verrà copiato il proprietario. |
@@ -433,9 +433,9 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetOwner(
 
 Ottiene le dimensioni del buffer necessarie per archiviare il nome
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | nameSize | Output Dimensione del buffer in cui memorizzare il nome (in numero di caratteri) |
@@ -452,9 +452,9 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetNameSize(
 
 Ottiene il nome della protezione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | nameBuffer | Output Buffer in cui verrà copiato il nome. |
@@ -477,9 +477,9 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetName(
 
 Ottiene la dimensione del buffer necessaria per archiviare la descrizione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | descriptionSize | Output Dimensione del buffer in cui memorizzare la descrizione (in numero di caratteri) |
@@ -496,9 +496,9 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDescriptionSize(
 
 Ottiene la descrizione della protezione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | descriptionBuffer | Output Buffer in cui verrà copiata la descrizione. |
@@ -521,9 +521,9 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetDescription(
 
 Ottiene l'ID modello
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | templateId | Output ID modello associato alla protezione |
@@ -540,12 +540,12 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetTemplateId(
 
 Ottiene l'ID etichetta
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
-| LabelId | Output ID etichetta associato alla protezione |
+| labelId | Output ID etichetta associato alla protezione |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -559,9 +559,9 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetLabelId(
 
 Ottiene l'ID contenuto
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | contentId | Output ID contenuto associato alla protezione |
@@ -578,9 +578,9 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetContentId(
 
 Ottiene un valore che indica se il contenuto ha una data di scadenza
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | doesContentExpire | Output Indica se il contenuto scade |
@@ -597,9 +597,9 @@ mip_cc_result MIP_CC_ProtectionDescriptor_DoesContentExpire(
 
 Ottiene l'ora di scadenza della protezione (in secondi da Epoch)
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | contentValidUntil | Output Data di scadenza del contenuto (in secondi da Epoch) |
@@ -616,9 +616,9 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetContentValidUntil(
 
 Ottiene un valore che indica se è consentito o meno l'accesso offline
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | doesAllowOfflineAccess | Output Indica se è consentito o meno l'accesso offline |
@@ -635,9 +635,9 @@ mip_cc_result MIP_CC_ProtectionDescriptor_DoesAllowOfflineAccess(
 
 Ottiene le dimensioni del buffer necessarie per archiviare il referrer
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | referrerSize | Output Dimensione del buffer in cui memorizzare il referrer (in numero di caratteri) |
@@ -654,9 +654,9 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetReferrerSize(
 
 Ottiene il referrer di protezione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore associato al contenuto protetto |
 | referrerBuffer | Output Buffer in cui verrà copiato il referrer. |
@@ -679,9 +679,9 @@ mip_cc_result MIP_CC_ProtectionDescriptor_GetReferrer(
 
 Rilascia le risorse associate a un descrittore di protezione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | protectionDescriptor | Descrittore di protezione da rilasciare |
 
@@ -693,9 +693,9 @@ void MIP_CC_ReleaseProtectionDescriptor(mip_cc_protection_descriptor protectionD
 
 Creare un elenco di stringhe
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | stringhe | Matrice di stringhe |
 | count | Numero di stringhe |
@@ -716,9 +716,9 @@ mip_cc_result MIP_CC_CreateStringList(
 
 Ottenere stringhe che compongono un elenco di stringhe
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | stringList | Elenco di stringhe di origine |
 | stringhe | Output Matrice di stringhe, memoria di proprietà dell'oggetto mip_cc_string_list |
@@ -739,9 +739,9 @@ mip_cc_result MIP_CC_StringList_GetStrings(
 
 Rilasciare le risorse associate a un elenco di stringhe
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | stringList | Elenco di stringhe da rilasciare |
 
@@ -753,9 +753,9 @@ void MIP_CC_ReleaseStringList(mip_cc_string_list stringList);
 
 Definizione della funzione di callback per l'invio di un'attività asincrona
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | taskId | Identificatore univoco dell'attività |
 
@@ -769,9 +769,9 @@ MIP_CC_CALLBACK(mip_cc_dispatch_task_callback_fn,
 
 Funzione di callback per l'annullamento di un'attività in background
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | taskId | Identificatore univoco dell'attività |
 
@@ -787,9 +787,9 @@ MIP_CC_CALLBACK(mip_cc_cancel_task_callback_fn,
 
 Crea un delegato del dispatcher di attività che può essere usato per eseguire l'override della gestione delle attività asincrone predefinite di MIP
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | dispatchTaskCallback | Puntatore a funzione per l'invio di attività asincrone |
 | cancelTaskCallback | Puntatore a funzione per l'annullamento delle attività in background |
@@ -810,9 +810,9 @@ mip_cc_result MIP_CC_CreateTaskDispatcherDelegate(
 
 Notifica a un delegato TaskDispatcher che un'attività è pianificata per l'esecuzione nel thread corrente
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | taskDispatcher | Handle per l'oggetto delegato del dispatcher attività |
 | taskId | ID dell'attività asincrona associata a questa operazione |
@@ -827,9 +827,9 @@ void MIP_CC_ExecuteDispatchedTask(const mip_cc_task_dispatcher_delegate taskDisp
 
 Rilasciare le risorse associate a un handle del delegato del dispatcher attività
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | taskDispatcher | Delegato Dispatcher attività da rilasciare |
 
@@ -841,12 +841,12 @@ void MIP_CC_ReleaseTaskDispatcherDelegate(mip_cc_task_dispatcher_delegate taskDi
 
 Impostare un nome host di telemetria che sostituirà le impostazioni di telemetria interne
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | telemetryConfig | Configurazione della telemetria |
-| hostName | Nome dell'host |
+| Nome host | Nome dell'host |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -862,9 +862,9 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetHostName(
 
 Impostare un override della libreria condivisa di telemetria
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | telemetryConfig | Configurazione della telemetria |
 | NomeLibreria | Nome della DLL che implementa l'API C di aria/1DS SDK |
@@ -883,9 +883,9 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetLibraryName(
 
 Esegui override dello stack HTTP di telemetria predefinito con il proprio client
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | telemetryConfig | Configurazione della telemetria |
 | httpDelegate | Istanza di callback HTTP implementata dall'applicazione client |
@@ -904,9 +904,9 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetHttpDelegate(
 
 Indica se il componente di telemetria è autorizzato a eseguire il ping dello stato della rete in un thread in background
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | telemetryConfig | Configurazione della telemetria |
 | isCachingEnabled | Indica se il componente di telemetria è autorizzato a eseguire il ping dello stato della rete in un thread in background |
@@ -925,9 +925,9 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsNetworkDetectionEnabled(
 
 Imposta un valore che indica se il componente di telemetria può scrivere le cache sul disco
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | telemetryConfig | Configurazione della telemetria |
 | isCachingEnabled | Indica se il componente di telemetria può scrivere cache sul disco |
@@ -946,9 +946,9 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsLocalCachingEnabled(
 
 Imposta un valore che indica se il componente di telemetria può scrivere i log su disco
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | telemetryConfig | Configurazione della telemetria |
 | isTraceLoggingEnabled | Indica se il componente di telemetria è autorizzato a scrivere log su disco |
@@ -967,9 +967,9 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsTraceLoggingEnabled(
 
 Imposta un valore che indica se un'applicazione o un utente ha rifiutato la telemetria facoltativa
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | telemetryConfig | Configurazione della telemetria |
 | isTelemetryOptedOut | Se un'applicazione o un utente non ha rifiutato la telemetria facoltativa |
@@ -988,9 +988,9 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetIsTelemetryOptedOut(
 
 Imposta le impostazioni di telemetria personalizzate
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | telemetryConfig | Configurazione della telemetria |
 | customSettings | Impostazioni di telemetria personalizzate |
@@ -1007,9 +1007,9 @@ mip_cc_result MIP_CC_TelemetryConfiguration_SetCustomSettings(
 
 Rilascia le risorse associate a impostazioni del profilo di protezione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | profileSettings | Impostazioni del profilo di protezione da rilasciare |
 
@@ -1021,9 +1021,9 @@ void MIP_CC_ReleaseTelemetryConfiguration(mip_cc_telemetry_configuration telemet
 
 Rilasciare le risorse associate a un motore di protezione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore di protezione da rilasciare |
 
@@ -1035,14 +1035,14 @@ void MIP_CC_ReleaseProtectionEngine(mip_cc_protection_engine engine);
 
 Crea un gestore protezione per la pubblicazione di nuovo contenuto
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore in cui verrà creato un gestore |
 | impostazioni | Impostazioni del gestore protezione |
 | context | Contesto client che verrà passato in modo opaco a HttpDelegate e AuthDelegate |
-| gestore | Output Istanza del gestore protezione appena creata |
+| handler | Output Istanza del gestore protezione appena creata |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1058,14 +1058,14 @@ mip_cc_result MIP_CC_ProtectionEngine_CreateProtectionHandlerForPublishing(
 
 Crea un gestore protezione per l'utilizzo del contenuto esistente
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore in cui verrà creato un gestore |
 | impostazioni | Impostazioni del gestore protezione |
 | context | Contesto client che verrà passato in modo opaco a HttpDelegate e AuthDelegate |
-| gestore | Output Istanza del gestore protezione appena creata |
+| handler | Output Istanza del gestore protezione appena creata |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1081,9 +1081,9 @@ mip_cc_result MIP_CC_ProtectionEngine_CreateProtectionHandlerForConsumption(
 
 Ottiene le dimensioni del buffer necessario per l'ID del motore
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore di protezione |
 | idSize | Output Dimensione del buffer in cui memorizzare l'ID del motore (in numero di caratteri) |
@@ -1100,9 +1100,9 @@ mip_cc_result MIP_CC_ProtectionEngine_GetEngineIdSize(
 
 Ottiene l'ID del motore
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore di protezione |
 | idBuffer | Output Buffer in cui verrà copiato l'ID. |
@@ -1125,9 +1125,9 @@ mip_cc_result MIP_CC_ProtectionEngine_GetEngineId(
 
 Ottiene il numero di modelli RMS associati a un motore di protezione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore di protezione |
 | context | Contesto client che verrà passato in modo opaco a HttpDelegate e AuthDelegate |
@@ -1148,9 +1148,9 @@ mip_cc_result MIP_CC_ProtectionEngine_GetTemplatesSize(
 
 Ottenere la raccolta di modelli disponibili per un utente
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore di protezione |
 | context | Contesto client che verrà passato in modo opaco a HttpDelegate e AuthDelegate |
@@ -1175,14 +1175,14 @@ mip_cc_result MIP_CC_ProtectionEngine_GetTemplates(
 
 Ottiene l'elenco dei diritti concessi a un utente per un ID etichetta
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore di protezione |
 | context | Contesto client che verrà passato in modo opaco a HttpDelegate e AuthDelegate |
 | documentId | ID documento assegnato al documento |
-| LabelId | ID etichetta applicato al documento |
+| labelId | ID etichetta applicato al documento |
 | ownerEmail | Proprietario del documento |
 | delagedUserEmail | Messaggio di posta elettronica dell'utente se l'utente o l'applicazione di autenticazione agisce per conto di un altro utente, vuoto se non è presente alcun valore |
 | diritti | Output Elenco dei diritti concessi a un utente, memoria di proprietà del chiamante |
@@ -1206,9 +1206,9 @@ mip_cc_result MIP_CC_ProtectionEngine_GetRightsForLabelId(
 
 Ottiene le dimensioni dei dati client associati a un motore di protezione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore di protezione |
 | clientDataSize | Output Dimensioni dei dati client (in numero di caratteri) |
@@ -1225,9 +1225,9 @@ mip_cc_result MIP_CC_ProtectionEngine_GetClientDataSize(
 
 Ottenere i dati client associati a un motore di protezione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore di protezione |
 | clientDataBuffer | Output Buffer in cui verranno copiati i dati client |
@@ -1250,13 +1250,13 @@ mip_cc_result MIP_CC_ProtectionEngine_GetClientData(
 
 Creare un oggetto impostazioni usato per creare un nuovo motore di protezione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| autenticazione | Identità che verrà associata a ProtectionEngine |
+| identity | Identità che verrà associata a ProtectionEngine |
 | clientData | Dati client personalizzabili archiviati insieme al motore |
-| impostazioni locali | Impostazioni locali in cui vengono restituiti i risultati del testo |
+| locale | Impostazioni locali in cui vengono restituiti i risultati del testo |
 | engineSettings | Output Istanza di impostazioni appena creata |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -1273,9 +1273,9 @@ mip_cc_result MIP_CC_CreateProtectionEngineSettingsWithIdentity(
 
 Imposta i dati client che verranno archiviati in maniera opaca insieme a questo motore e mantengono tra le sessioni
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni motore |
 | clientData | Dati client |
@@ -1292,9 +1292,9 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetClientData(
 
 Configura le impostazioni personalizzate, usate per il controllo e il controllo delle funzionalità.
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | engineSettings | Impostazioni motore |
 | customSettings | Coppie chiave/valore di impostazioni personalizzate |
@@ -1311,12 +1311,12 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetCustomSettings(
 
 Imposta l'ID di sessione che può essere usato per correlare i log e i dati di telemetria
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni motore |
-| sessionID | ID sessione che rappresenta la durata di un motore di protezione |
+| sessionId | ID sessione che rappresenta la durata di un motore di protezione |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1330,12 +1330,12 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetSessionId(
 
 Imposta l'URL di base per tutte le richieste di servizio
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni motore |
-| cloudEndpointBaseUrl | URL di base (ad esempio 'https://api.aadrm.com ') |
+| cloudEndpointBaseUrl | URL di base (ad esempio 'https://api.aadrm.com') |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1349,9 +1349,9 @@ mip_cc_result MIP_CC_ProtectionEngineSettings_SetCloudEndpointBaseUrl(
 
 Rilasciare le risorse associate a impostazioni del motore di protezione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | engineSettings | Impostazioni del motore di protezione da rilasciare |
 
@@ -1363,9 +1363,9 @@ void MIP_CC_ReleaseProtectionEngineSettings(mip_cc_protection_engine_settings en
 
 Creare un oggetto impostazioni utilizzato per creare un gestore protezione per la pubblicazione di nuovo contenuto
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | descrittore | Dettagli sulla protezione |
 | impostazioni | Output Istanza di impostazioni appena creata |
@@ -1382,9 +1382,9 @@ mip_cc_result MIP_CC_CreateProtectionHandlerPublishingSettings(
 
 Imposta un valore che indica se è preferibile un algoritmo di crittografia deprecato (BCE) per la compatibilità con le versioni precedenti
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni del gestore protezione |
 | isDeprecatedAlgorithmPreferred | Indica se è preferibile l'algoritmo deprecato |
@@ -1401,9 +1401,9 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsDeprecatedAlgorith
 
 Imposta un valore che indica se le applicazioni non compatibili con MIP possono aprire contenuto protetto
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni del gestore protezione |
 | isAuditedExtractionAllowed | Indica se le applicazioni non compatibili con MIP possono aprire contenuto protetto |
@@ -1420,9 +1420,9 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsAuditedExtractionA
 
 Imposta un valore che indica se PL è in formato JSON (il valore predefinito è XML)
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni del gestore protezione |
 | isPublishingFormatJson | Indica se il PL risultante deve essere in formato JSON |
@@ -1439,9 +1439,9 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetIsPublishingFormatJs
 
 Imposta l'utente delegato
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni del gestore protezione |
 | delegatedUserEmail | Indirizzo di posta elettronica dell'utente delegato |
@@ -1460,9 +1460,9 @@ mip_cc_result MIP_CC_ProtectionHandlerPublishingSettings_SetDelegatedUserEmail(
 
 Creare un oggetto impostazioni utilizzato per creare un gestore protezione per l'utilizzo del contenuto esistente
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | publishingLicenseBuffer | Buffer contenente la licenza di pubblicazione non elaborata |
 | publishingLicenseBufferSize | Dimensioni del buffer delle licenze di pubblicazione |
@@ -1483,9 +1483,9 @@ mip_cc_result MIP_CC_CreateProtectionHandlerConsumptionSettings(
 
 Imposta un valore che indica se la creazione del gestore protezione consente operazioni HTTP online
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni del gestore protezione |
 | isOfflineOnly | True se le operazioni HTTP sono proibite, altrimenti false |
@@ -1504,9 +1504,9 @@ mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetIsOfflineOnly(
 
 Imposta l'utente delegato
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni del gestore protezione |
 | delegatedUserEmail | Indirizzo di posta elettronica dell'utente delegato |
@@ -1525,11 +1525,11 @@ mip_cc_result MIP_CC_ProtectionHandlerConsumptionSettings_SetDelegatedUserEmail(
 
 Ottiene le dimensioni della licenza di pubblicazione (in byte)
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| gestore | Gestore che rappresenta il contenuto protetto |
+| handler | Gestore che rappresenta il contenuto protetto |
 | publishingLicenseBufferSize | Output Dimensioni della licenza di pubblicazione (in byte) |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -1544,11 +1544,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPublishingLicenseSize(
 
 Ottiene la licenza di pubblicazione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| gestore | Gestore che rappresenta il contenuto protetto |
+| handler | Gestore che rappresenta il contenuto protetto |
 | publishingLicenseBuffer | Output Buffer in cui verrà scritta la licenza di pubblicazione |
 | publishingLicenseBufferSize | Dimensioni del buffer delle licenze di pubblicazione |
 | actualPublishingLicenseSize | Output Dimensioni effettive della licenza di pubblicazione (in byte) |
@@ -1569,11 +1569,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetSerializedPublishingLicense(
 
 Ottiene il descrittore di protezione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| gestore | Gestore che rappresenta il contenuto protetto |
+| handler | Gestore che rappresenta il contenuto protetto |
 | descrittore | Output Descrittore di protezione |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -1588,11 +1588,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetProtectionDescriptor(
 
 Ottiene l'elenco dei diritti concessi a un utente
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| gestore | Gestore che rappresenta il contenuto protetto |
+| handler | Gestore che rappresenta il contenuto protetto |
 | diritti | Output Elenco dei diritti concessi a un utente, memoria di proprietà del chiamante |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -1609,11 +1609,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetRights(
 
 Calcola le dimensioni del contenuto protetto, il factoring nella spaziatura interna e così via.
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| gestore | Gestore che rappresenta il contenuto protetto |
+| handler | Gestore che rappresenta il contenuto protetto |
 | unprotectedSize | Dimensioni del contenuto non protetto/non crittografato (in byte) |
 | includesFinalBlock | Descrive se il contenuto non protetto in questione include il blocco finale o meno. |
 | protectedSize | Output Dimensioni del contenuto protetto |
@@ -1632,11 +1632,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetProtectedContentSize(
 
 Ottiene la dimensione del blocco (in byte) per la modalità di crittografia utilizzata da un gestore di protezione.
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| gestore | Gestore che rappresenta il contenuto protetto |
+| handler | Gestore che rappresenta il contenuto protetto |
 | blockSize | Output Dimensioni blocco (in byte) |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -1651,11 +1651,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetBlockSize(
 
 Ottiene le dimensioni del buffer necessarie per archiviare l'utente a cui è stato concesso l'accesso al contenuto protetto
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| gestore | Gestore che rappresenta il contenuto protetto |
+| handler | Gestore che rappresenta il contenuto protetto |
 | issuedUserSize | Output Dimensioni del buffer per l'utente rilasciato (in numero di caratteri) |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -1670,11 +1670,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetIssuedUserSize(
 
 Ottiene l'utente a cui è stato concesso l'accesso al contenuto protetto
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| gestore | Gestore che rappresenta il contenuto protetto |
+| handler | Gestore che rappresenta il contenuto protetto |
 | issuedUserBuffer | Output Buffer in cui verrà copiato l'utente emesso. |
 | issuedUserBufferSize | Dimensioni (in numero di caratteri) di issuedUserBuffer. |
 | actualIssuedUserSize | Output Numero di caratteri scritti nel buffer |
@@ -1695,11 +1695,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetIssuedUser(
 
 Ottiene le dimensioni del buffer necessarie per archiviare il proprietario del contenuto protetto
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| gestore | Gestore che rappresenta il contenuto protetto |
+| handler | Gestore che rappresenta il contenuto protetto |
 | ownerSize | Output Dimensioni del buffer per l'utente rilasciato (in numero di caratteri) |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -1714,11 +1714,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetOwnerSize(
 
 Ottiene il proprietario del contenuto protetto
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| gestore | Gestore che rappresenta il contenuto protetto |
+| handler | Gestore che rappresenta il contenuto protetto |
 | ownerBuffer | Output Buffer in cui verrà copiato l'utente emesso. |
 | ownerBufferSize | Dimensioni (in numero di caratteri) di ownerBuffer. |
 | actualOwnerSize | Output Numero di caratteri scritti nel buffer |
@@ -1739,11 +1739,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetOwner(
 
 Ottiene il contenuto di IE del contenuto protetto
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| gestore | Gestore che rappresenta il contenuto protetto |
+| handler | Gestore che rappresenta il contenuto protetto |
 | contentId | Output ID contenuto |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -1758,11 +1758,11 @@ mip_cc_result MIP_CC_ProtectionHandler_GetContentId(
 
 Ottiene un valore che indica se il gestore della protezione utilizza un algoritmo di crittografia deprecato (BCE) per la compatibilità con le versioni precedenti
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| gestore | Gestore che rappresenta il contenuto protetto |
+| handler | Gestore che rappresenta il contenuto protetto |
 | doesUseDeprecatedAlgorithm | Output Indica se il gestore della protezione usa un algoritmo di crittografia deprecato |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -1777,9 +1777,9 @@ mip_cc_result MIP_CC_ProtectionHandler_DoesUseDeprecatedAlgorithm(
 
 Decrittografare un buffer
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | offsetFromStart | Posizione relativa di inputBuffer dall'inizio del contenuto crittografato |
 | inputBuffer | Buffer di contenuto crittografato che verrà decrittografato |
@@ -1807,9 +1807,9 @@ mip_cc_result MIP_CC_ProtectionHandler_DecryptBuffer(
 
 Rilasciare le risorse associate a impostazioni del gestore protezione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni del gestore di protezione da rilasciare |
 
@@ -1821,9 +1821,9 @@ void MIP_CC_ReleaseProtectionHandlerPublishingSettings(mip_cc_protection_handler
 
 Rilasciare le risorse associate a impostazioni del gestore protezione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni del gestore di protezione da rilasciare |
 
@@ -1835,11 +1835,11 @@ void MIP_CC_ReleaseProtectionHandlerConsumptionSettings(mip_cc_protection_handle
 
 Rilasciare le risorse associate a un gestore protezione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| gestore | Gestore di protezione da rilasciare |
+| handler | Gestore di protezione da rilasciare |
 
 ```c
 void MIP_CC_ReleaseProtectionHandler(mip_cc_protection_handler handler);
@@ -1849,12 +1849,12 @@ void MIP_CC_ReleaseProtectionHandler(mip_cc_protection_handler handler);
 
 Carica un profilo
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del profilo |
-| profile | Output Istanza del profilo di protezione appena creata |
+| impostazioni | Impostazioni profilo |
+| profilo | Output Istanza del profilo di protezione appena creata |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1868,11 +1868,11 @@ mip_cc_result MIP_CC_LoadProtectionProfile(
 
 Rilascia le risorse associate a un profilo di protezione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| profile | Profilo di protezione da rilasciare |
+| profilo | Profilo di protezione da rilasciare |
 
 ```c
 void MIP_CC_ReleaseProtectionProfile(mip_cc_protection_profile profile);
@@ -1882,12 +1882,12 @@ void MIP_CC_ReleaseProtectionProfile(mip_cc_protection_profile profile);
 
 Imposta l'ID di sessione che può essere usato per correlare i log e i dati di telemetria
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del profilo |
-| sessionID | ID sessione che rappresenta la durata di un profilo di protezione |
+| impostazioni | Impostazioni profilo |
+| sessionId | ID sessione che rappresenta la durata di un profilo di protezione |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -1901,11 +1901,11 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetSessionId(
 
 Configura se le licenze dell'utente finale (contratti) verranno memorizzate nella cache localmente
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del profilo |
+| impostazioni | Impostazioni profilo |
 | canCacheLicenses | Indica se il motore deve memorizzare nella cache una licenza quando apre il contenuto protetto |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -1920,9 +1920,9 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetCanCacheLicenses(
 
 Esegui override dello stack HTTP predefinito con il proprio client
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni del profilo a cui verrà assegnato il delegato HTTP |
 | httpDelegate | Istanza di callback HTTP implementata dall'applicazione client |
@@ -1939,9 +1939,9 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetHttpDelegate(
 
 Esegui override del dispatcher attività asincrono predefinito con il proprio client
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni del profilo a cui verrà assegnato il delegato del dispatcher attività |
 | taskDispatcherDelegate | Istanza di callback Dispatcher attività implementata dall'applicazione client |
@@ -1958,11 +1958,11 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetTaskDispatcherDelegate(
 
 Configura le impostazioni personalizzate, usate per il controllo e il controllo delle funzionalità.
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del profilo |
+| impostazioni | Impostazioni profilo |
 | customSettings | Coppie chiave/valore di impostazioni personalizzate |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -1977,9 +1977,9 @@ mip_cc_result MIP_CC_ProtectionProfileSettings_SetCustomSettings(
 
 Rilascia le risorse associate a impostazioni del profilo di protezione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni del profilo di protezione da rilasciare |
 
@@ -1991,9 +1991,9 @@ void MIP_CC_ReleaseProtectionProfileSettings(mip_cc_protection_profile_settings 
 
 Ottiene il tipo di un'azione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | Azione |
 | actionType | Output Tipo di azione |
@@ -2010,12 +2010,12 @@ mip_cc_result MIP_CC_Action_GetType(
 
 Ottiene l'ID di un'azione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | Azione |
-| ID | Output ID azione univoco |
+| id | Output ID azione univoco |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2029,9 +2029,9 @@ mip_cc_result MIP_CC_Action_GetId(
 
 Ottenere azioni che compongono il risultato di un'azione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | actionResult | Risultato dell'azione di origine |
 | azioni | Output Matrice di azioni, memoria di proprietà dell'oggetto mip_cc_action_result |
@@ -2052,9 +2052,9 @@ mip_cc_result MIP_CC_ActionResult_GetActions(
 
 Rilasciare le risorse associate al risultato di un'azione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | actionResult | Risultato dell'azione da rilasciare |
 
@@ -2066,9 +2066,9 @@ void MIP_CC_ReleaseActionResult(mip_cc_action_result actionResult);
 
 Ottiene le dimensioni del buffer necessarie per archiviare il nome dell'elemento dell'interfaccia utente dell'azione "Aggiungi piè di pagina contenuto"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi piè di pagina contenuto" |
 | nameSize | Output Dimensione del buffer in cui memorizzare il nome dell'elemento dell'interfaccia utente (in numero di caratteri) |
@@ -2085,9 +2085,9 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetUIElementNameSize(
 
 Ottiene il nome dell'elemento dell'interfaccia utente dell'azione "Aggiungi piè di pagina contenuto"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi piè di pagina contenuto" |
 | nameBuffer | Output Buffer in cui verrà copiato il nome dell'elemento dell'interfaccia utente. |
@@ -2110,9 +2110,9 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetUIElementName(
 
 Ottiene le dimensioni del buffer necessarie per archiviare un testo dell'azione "Aggiungi piè di pagina contenuto"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi piè di pagina contenuto" |
 | nameSize | Output Dimensioni del buffer per il mantenimento del testo (in numero di caratteri) |
@@ -2129,9 +2129,9 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetTextSize(
 
 Ottiene il testo dell'azione "Aggiungi piè di pagina contenuto"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi piè di pagina contenuto" |
 | textBuffer | Output Buffer in cui verrà copiato il testo. |
@@ -2154,9 +2154,9 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetText(
 
 Ottiene le dimensioni del buffer necessarie per archiviare il nome del tipo di carattere dell'azione "Aggiungi piè di pagina contenuto"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi piè di pagina contenuto" |
 | nameSize | Output Dimensione del buffer in cui memorizzare il nome del tipo di carattere (in numero di caratteri) |
@@ -2173,9 +2173,9 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontNameSize(
 
 Ottiene il nome del tipo di carattere dell'azione "Aggiungi piè di pagina contenuto"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi piè di pagina contenuto" |
 | nameBuffer | Output Buffer in cui verrà copiato il nome del tipo di carattere. |
@@ -2198,9 +2198,9 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontName(
 
 Ottiene le dimensioni del carattere Integer
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi piè di pagina contenuto" |
 | fontSize | Output Dimensioni carattere |
@@ -2217,9 +2217,9 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontSize(
 
 Ottiene le dimensioni del buffer necessarie per archiviare il colore del carattere dell'azione "Aggiungi piè di pagina contenuto"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi piè di pagina contenuto" |
 | colorSize | Output Dimensioni del buffer per mantenere il colore del carattere (in numero di caratteri) |
@@ -2236,9 +2236,9 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontColorSize(
 
 Ottiene il colore del carattere dell'azione "Aggiungi piè di pagina contenuto" (ad esempio, "#000000")
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi piè di pagina contenuto" |
 | colorBuffer | Output Buffer in cui verrà copiato il colore del carattere. |
@@ -2261,9 +2261,9 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetFontColor(
 
 Ottiene l'allineamento
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi piè di pagina contenuto" |
 | allineamento | Output Allineamento |
@@ -2280,9 +2280,9 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetAlignment(
 
 Ottiene le dimensioni del margine
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi piè di pagina contenuto" |
 | marginSize | Output Dimensioni margine (in mm) |
@@ -2299,9 +2299,9 @@ mip_cc_result MIP_CC_AddContentFooterAction_GetMargin(
 
 Ottiene le dimensioni del buffer necessarie per archiviare il nome dell'elemento dell'interfaccia utente dell'azione "Aggiungi intestazione contenuto"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi intestazione contenuto" |
 | nameSize | Output Dimensione del buffer in cui memorizzare il nome dell'elemento dell'interfaccia utente (in numero di caratteri) |
@@ -2318,9 +2318,9 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetUIElementNameSize(
 
 Ottiene il nome dell'elemento dell'interfaccia utente dell'azione "Aggiungi intestazione contenuto"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi intestazione contenuto" |
 | nameBuffer | Output Buffer in cui verrà copiato il nome dell'elemento dell'interfaccia utente. |
@@ -2343,9 +2343,9 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetUIElementName(
 
 Ottiene le dimensioni del buffer necessarie per archiviare il testo dell'azione "Aggiungi intestazione contenuto"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi intestazione contenuto" |
 | nameSize | Output Dimensioni del buffer per il mantenimento del testo (in numero di caratteri) |
@@ -2362,9 +2362,9 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetTextSize(
 
 Ottiene il testo dell'azione "Aggiungi intestazione contenuto"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi intestazione contenuto" |
 | textBuffer | Output Buffer in cui verrà copiato il testo. |
@@ -2387,9 +2387,9 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetText(
 
 Ottiene le dimensioni del buffer necessarie per archiviare il nome del tipo di carattere dell'azione "Aggiungi intestazione contenuto"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi intestazione contenuto" |
 | nameSize | Output Dimensione del buffer in cui memorizzare il nome del tipo di carattere (in numero di caratteri) |
@@ -2406,9 +2406,9 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontNameSize(
 
 Ottiene il nome del tipo di carattere dell'azione "Aggiungi intestazione contenuto"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi intestazione contenuto" |
 | nameBuffer | Output Buffer in cui verrà copiato il nome del tipo di carattere. |
@@ -2431,9 +2431,9 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontName(
 
 Ottiene le dimensioni del carattere Integer
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi intestazione contenuto" |
 | fontSize | Output Dimensioni carattere |
@@ -2450,9 +2450,9 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontSize(
 
 Ottiene le dimensioni del buffer necessarie per archiviare il colore del carattere dell'azione "Aggiungi intestazione contenuto"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi intestazione contenuto" |
 | colorSize | Output Dimensioni del buffer per mantenere il colore del carattere (in numero di caratteri) |
@@ -2469,9 +2469,9 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontColorSize(
 
 Ottiene il colore del carattere dell'azione "Aggiungi intestazione contenuto", ad esempio "#000000".
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi intestazione contenuto" |
 | colorBuffer | Output Buffer in cui verrà copiato il colore del carattere. |
@@ -2494,9 +2494,9 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetFontColor(
 
 Ottiene l'allineamento
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi intestazione contenuto" |
 | allineamento | Output Allineamento |
@@ -2513,9 +2513,9 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetAlignment(
 
 Ottiene le dimensioni del margine
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi intestazione contenuto" |
 | marginSize | Output Dimensioni margine (in mm) |
@@ -2532,9 +2532,9 @@ mip_cc_result MIP_CC_AddContentHeaderAction_GetMargin(
 
 Ottiene le dimensioni del buffer necessarie per archiviare il nome dell'elemento dell'interfaccia utente dell'azione "add watermark"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi filigrana" |
 | nameSize | Output Dimensione del buffer in cui memorizzare il nome dell'elemento dell'interfaccia utente (in numero di caratteri) |
@@ -2551,9 +2551,9 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetUIElementNameSize(
 
 Ottiene il nome dell'elemento dell'interfaccia utente dell'azione "Aggiungi filigrana"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi filigrana" |
 | nameBuffer | Output Buffer in cui verrà copiato il nome dell'elemento dell'interfaccia utente. |
@@ -2576,9 +2576,9 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetUIElementName(
 
 Ottiene il layout della filigrana
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi filigrana" |
 | layout | Output Layout filigrana |
@@ -2595,9 +2595,9 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetLayout(
 
 Ottiene le dimensioni del buffer necessarie per archiviare il testo dell'azione "Aggiungi filigrana"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi filigrana" |
 | nameSize | Output Dimensioni del buffer per il mantenimento del testo (in numero di caratteri) |
@@ -2614,9 +2614,9 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetTextSize(
 
 Ottiene il testo dell'azione "Aggiungi filigrana"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi filigrana" |
 | textBuffer | Output Buffer in cui verrà copiato il testo. |
@@ -2639,9 +2639,9 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetText(
 
 Ottiene le dimensioni del buffer necessarie per archiviare il nome del tipo di carattere dell'azione "Aggiungi filigrana"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi filigrana" |
 | nameSize | Output Dimensione del buffer in cui memorizzare il nome del tipo di carattere (in numero di caratteri) |
@@ -2658,9 +2658,9 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontNameSize(
 
 Ottiene il nome del tipo di carattere dell'azione "Aggiungi filigrana"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi filigrana" |
 | nameBuffer | Output Buffer in cui verrà copiato il nome del tipo di carattere. |
@@ -2683,9 +2683,9 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontName(
 
 Ottiene le dimensioni del carattere Integer
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi filigrana" |
 | fontSize | Output Dimensioni carattere |
@@ -2702,9 +2702,9 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontSize(
 
 Ottiene le dimensioni del buffer necessarie per archiviare il colore del carattere dell'azione "Aggiungi filigrana"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi filigrana" |
 | colorSize | Output Dimensioni del buffer per mantenere il colore del carattere (in numero di caratteri) |
@@ -2721,9 +2721,9 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontColorSize(
 
 Ottiene il colore del carattere dell'azione "Aggiungi filigrana" (ad esempio, "#000000")
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Aggiungi filigrana" |
 | colorBuffer | Output Buffer in cui verrà copiato il colore del carattere. |
@@ -2746,9 +2746,9 @@ mip_cc_result MIP_CC_AddWatermarkAction_GetFontColor(
 
 Rilasciare le risorse associate a un'etichetta di contenuto
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | contentLabel | Etichetta da rilasciare |
 
@@ -2760,11 +2760,11 @@ void MIP_CC_ReleaseContentLabel(mip_cc_content_label contentLabel);
 
 Ottiene l'ora in cui è stata applicata l'etichetta
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| contentLabel | Label |
+| contentLabel | Etichetta |
 | creationTime | Output Ora di applicazione dell'etichetta al documento (in secondi da Epoch) |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -2779,11 +2779,11 @@ mip_cc_result MIP_CC_ContentLabel_GetCreationTime(
 
 Ottiene il metodo di assegnazione dell'etichetta
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| contentLabel | Label |
+| contentLabel | Etichetta |
 | assignmentMethod | Output Metodo di assegnazione (ad esempio ' standard ' o ' privileged ') |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -2798,12 +2798,12 @@ mip_cc_result MIP_CC_ContentLabel_GetAssignmentMethod(
 
 Ottiene le proprietà estese
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| contentLabel | Label |
-| proprietà | Output Dizionario di proprietà estese, memoria di proprietà del chiamante |
+| contentLabel | Etichetta |
+| connessione | Output Dizionario di proprietà estese, memoria di proprietà del chiamante |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2819,11 +2819,11 @@ mip_cc_result MIP_CC_ContentLabel_GetExtendedProperties(
 
 Ottiene un valore che indica se una protezione è stata applicata da un'etichetta.
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| contentLabel | Label |
+| contentLabel | Etichetta |
 | isProtectionAppliedByLabel | Output Se il documento è protetto e la protezione è stata applicata in modo esplicito da questa etichetta. |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -2838,12 +2838,12 @@ mip_cc_result MIP_CC_ContentLabel_IsProtectionAppliedFromLabel(
 
 Ottiene le proprietà dell'etichetta generica da un'istanza dell'etichetta di contenuto
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| contentLabel | Label |
-| etichetta | Output Etichetta generica, memoria di proprietà del chiamante |
+| contentLabel | Etichetta |
+| label | Output Etichetta generica, memoria di proprietà del chiamante |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2859,9 +2859,9 @@ mip_cc_result MIP_CC_ContentLabel_GetLabel(
 
 Ottiene le dimensioni del buffer necessarie per archiviare il nome di un'azione "personalizzata"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "personalizzata" |
 | nameSize | Output Dimensione del buffer in cui memorizzare il nome (in numero di caratteri) |
@@ -2878,9 +2878,9 @@ mip_cc_result MIP_CC_CustomAction_GetNameSize(
 
 Ottiene il nome di un'azione "personalizzata"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "personalizzata" |
 | nameBuffer | Output Buffer in cui verrà copiato il nome. |
@@ -2903,12 +2903,12 @@ mip_cc_result MIP_CC_CustomAction_GetName(
 
 Ottiene le proprietà di un'azione "personalizzata".
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "personalizzata" |
-| proprietà | Output Dizionario di proprietà, memoria di proprietà del chiamante |
+| connessione | Output Dizionario di proprietà, memoria di proprietà del chiamante |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2924,16 +2924,16 @@ mip_cc_result MIP_CC_CustomAction_GetProperties(
 
 Definizione della funzione di callback per recuperare il documento metatdata, filtrato in base al nome e al prefisso
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| Nomi | Matrice di nomi di chiavi di metadati da includere nel risultato |
+| nomi | Matrice di nomi di chiavi di metadati da includere nel risultato |
 | namesSize | Numero di valori nella matrice ' names ' |
 | namePrefixes | Matrice di prefissi dei nomi di chiave dei metadati da includere nel risultato |
 | namePrefixesSize | Numero di valori nella matrice ' namesPrefixes ' |
 | context | Il contesto dell'applicazione è stato passato in modo opaco dalla chiamata API al callback |
-| metadati | Output Dizionario della chiave/valori dei metadati, creato dall'applicazione client. Questo dizionario verrà rilasciato da MIP. |
+| metadata | Output Dizionario della chiave/valori dei metadati, creato dall'applicazione client. Questo dizionario verrà rilasciato da MIP. |
 
 ```c
 MIP_CC_CALLBACK(mip_cc_metadata_callback,
@@ -2950,11 +2950,11 @@ MIP_CC_CALLBACK(mip_cc_metadata_callback,
 
 Rilasciare le risorse associate a un'etichetta
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| etichetta | Etichetta da rilasciare |
+| label | Etichetta da rilasciare |
 
 ```c
 void MIP_CC_ReleaseLabel(mip_cc_label label);
@@ -2964,12 +2964,12 @@ void MIP_CC_ReleaseLabel(mip_cc_label label);
 
 Ottiene l'ID etichetta
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| etichetta | Label |
-| LabelId | Output ID etichetta |
+| label | Etichetta |
+| labelId | Output ID etichetta |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -2983,11 +2983,11 @@ mip_cc_result MIP_CC_Label_GetId(
 
 Ottiene le dimensioni del buffer necessarie per archiviare il nome
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| etichetta | Label |
+| label | Etichetta |
 | nameSize | Output Dimensione del buffer in cui memorizzare il nome (in numero di caratteri) |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -3002,11 +3002,11 @@ mip_cc_result MIP_CC_Label_GetNameSize(
 
 Ottiene il nome dell'etichetta
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| etichetta | Label |
+| label | Etichetta |
 | nameBuffer | Output Buffer in cui verrà copiato il nome. |
 | nameBufferSize | Dimensioni (in numero di caratteri) di nameBuffer. |
 | actualNameSize | Output Numero di caratteri scritti nel buffer |
@@ -3027,11 +3027,11 @@ mip_cc_result MIP_CC_Label_GetName(
 
 Ottiene la dimensione del buffer necessaria per archiviare la descrizione
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| etichetta | Label |
+| label | Etichetta |
 | descriptionSize | Output Dimensione del buffer in cui memorizzare la descrizione (in numero di caratteri) |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -3046,11 +3046,11 @@ mip_cc_result MIP_CC_Label_GetDescriptionSize(
 
 Ottiene la descrizione dell'etichetta
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| etichetta | Label |
+| label | Etichetta |
 | descriptionBuffer | Output Buffer in cui verrà copiata la descrizione. |
 | descriptionBufferSize | Dimensioni (in numero di caratteri) di descriptionBuffer. |
 | actualDescriptionSize | Output Numero di caratteri scritti nel buffer |
@@ -3071,11 +3071,11 @@ mip_cc_result MIP_CC_Label_GetDescription(
 
 Ottiene le dimensioni del buffer necessarie per archiviare il colore
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| etichetta | Label |
+| label | Etichetta |
 | colorSize | Output Dimensione del buffer in cui mantenere il colore (in numero di caratteri) |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -3090,11 +3090,11 @@ mip_cc_result MIP_CC_Label_GetColorSize(
 
 Ottiene il colore dell'etichetta
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| etichetta | Label |
+| label | Etichetta |
 | colorBuffer | Output Buffer in cui verrà copiato il colore (in #RRGGBB formato). |
 | colorBufferSize | Dimensioni (in numero di caratteri) di colorBuffer. |
 | actualColorSize | Output Numero di caratteri scritti nel buffer |
@@ -3115,11 +3115,11 @@ mip_cc_result MIP_CC_Label_GetColor(
 
 Ottiene il livello di sensibilità dell'etichetta. Un valore più alto significa più sensibile.
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| etichetta | Label |
+| label | Etichetta |
 | sensitivity | Output Livello di riservatezza |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -3134,11 +3134,11 @@ mip_cc_result MIP_CC_Label_GetSensitivity(
 
 Ottiene le dimensioni del buffer necessarie per archiviare la descrizione comando
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| etichetta | Label |
+| label | Etichetta |
 | tooltipSize | Output Dimensione del buffer in cui memorizzare la descrizione comando (in numero di caratteri) |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -3153,11 +3153,11 @@ mip_cc_result MIP_CC_Label_GetTooltipSize(
 
 Ottiene la descrizione comando dell'etichetta
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| etichetta | Label |
+| label | Etichetta |
 | tooltipBuffer | Output Buffer in cui verrà copiata la descrizione comando. |
 | tooltipBufferSize | Dimensioni (in numero di caratteri) di tooltipBuffer. |
 | actualTooltipSize | Output Numero di caratteri scritti nel buffer |
@@ -3178,11 +3178,11 @@ mip_cc_result MIP_CC_Label_GetTooltip(
 
 Ottiene la dimensione del buffer necessaria per archiviare la descrizione comando di classificazione automatica
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| etichetta | Label |
+| label | Etichetta |
 | tooltipSize | Output Dimensione del buffer in cui memorizzare la descrizione comando (in numero di caratteri) |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -3197,11 +3197,11 @@ mip_cc_result MIP_CC_Label_GetAutoTooltipSize(
 
 Ottiene la descrizione comando per la classificazione automatica delle etichette
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| etichetta | Label |
+| label | Etichetta |
 | tooltipBuffer | Output Buffer in cui verrà copiata la descrizione comando. |
 | tooltipBufferSize | Dimensioni (in numero di caratteri) di tooltipBuffer. |
 | actualTooltipSize | Output Numero di caratteri scritti nel buffer |
@@ -3222,11 +3222,11 @@ mip_cc_result MIP_CC_Label_GetAutoTooltip(
 
 Ottiene un valore che indica se un'etichetta è attiva o meno.
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| etichetta | Label |
+| label | Etichetta |
 | isActive | Output Indica se un'etichetta è considerata attiva. |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -3243,11 +3243,11 @@ mip_cc_result MIP_CC_Label_IsActive(
 
 Ottiene l'etichetta padre, se disponibile.
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| etichetta | Label |
+| label | Etichetta |
 | padre | Output Etichetta padre, se presente, else null |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -3262,11 +3262,11 @@ mip_cc_result MIP_CC_Label_GetParent(
 
 Ottiene il numero di etichette figlio
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| etichetta | Label |
+| label | Etichetta |
 | bambiniDimensione | Output Numero di elementi figlio |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -3281,11 +3281,11 @@ mip_cc_result MIP_CC_Label_GetChildrenSize(
 
 Ottiene le etichette figlio
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| etichetta | Label |
+| label | Etichetta |
 | childrenBuffer | Output Buffer in cui verranno copiate le etichette figlio. Etichette figlio |
 | childrenBufferSize | Dimensioni (in numero di etichette) di childrenBuffer. |
 | actualChildrenSize | Output Numero di etichette figlio scritte nel buffer |
@@ -3306,11 +3306,11 @@ mip_cc_result MIP_CC_Label_GetChildren(
 
 Ottiene le impostazioni personalizzate definite dal criterio di un'etichetta
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| etichetta | Label |
+| label | Etichetta |
 | impostazioni | Output Dizionario di impostazioni, di proprietà del chiamante |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -3327,9 +3327,9 @@ mip_cc_result MIP_CC_Label_GetCustomSettings(
 
 Ottiene i metadati dell'azione "Metadata" da rimuovere
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "metadati" |
 | metadataNames | Output Nomi chiave dei metadati da rimuovere, memoria di proprietà del chiamante |
@@ -3348,12 +3348,12 @@ mip_cc_result MIP_CC_MetadataAction_GetMetadataToRemove(
 
 Ottiene i metadati dell'azione "Metadata" da aggiungere
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "metadati" |
-| metadati | Output Coppie chiave/valore di metadati da aggiungere, memoria di proprietà del chiamante |
+| metadata | Output Coppie chiave/valore di metadati da aggiungere, memoria di proprietà del chiamante |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3369,9 +3369,9 @@ mip_cc_result MIP_CC_MetadataAction_GetMetadataToAdd(
 
 Rilasciare le risorse associate a un motore dei criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri da rilasciare |
 
@@ -3383,9 +3383,9 @@ void MIP_CC_ReleasePolicyEngine(mip_cc_policy_engine engine);
 
 Ottiene le dimensioni del buffer necessario per l'ID del motore
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | idSize | Output Dimensione del buffer in cui memorizzare l'ID del motore (in numero di caratteri) |
@@ -3402,9 +3402,9 @@ mip_cc_result MIP_CC_PolicyEngine_GetEngineIdSize(
 
 Ottiene l'ID del motore
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | idBuffer | Output Buffer in cui verrà copiato l'ID. |
@@ -3427,9 +3427,9 @@ mip_cc_result MIP_CC_PolicyEngine_GetEngineId(
 
 Ottiene le dimensioni dei dati client associati a un motore di criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | moreInfoUrlSize | Output Dimensioni dei dati client (in numero di caratteri) |
@@ -3446,9 +3446,9 @@ mip_cc_result MIP_CC_PolicyEngine_GetMoreInfoUrlSize(
 
 Ottenere i dati client associati a un motore dei criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | moreInfoUrlBuffer | Output Buffer in cui verranno copiati i dati client |
@@ -3471,9 +3471,9 @@ mip_cc_result MIP_CC_PolicyEngine_GetMoreInfoUrl(
 
 Ottiene un valore che indica se i criteri stabiliscono che è necessario etichettare un documento.
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | isLabelingRequired | Output Indica se i criteri stabiliscono che è necessario etichettare un documento |
@@ -3490,9 +3490,9 @@ mip_cc_result MIP_CC_PolicyEngine_IsLabelingRequired(
 
 Ottiene le dimensioni dei dati client associati a un motore di criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | policyFileIdSize | Output Dimensioni dei dati client (in numero di caratteri) |
@@ -3509,9 +3509,9 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyFileIdSize(
 
 Ottenere i dati client associati a un motore dei criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | policyFileIdBuffer | Output Buffer in cui verranno copiati i dati client |
@@ -3534,9 +3534,9 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyFileId(
 
 Ottiene le dimensioni dei dati client associati a un motore di criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | sensitivityFileIdSize | Output Dimensioni dei dati client (in numero di caratteri) |
@@ -3553,9 +3553,9 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityFileIdSize(
 
 Ottenere i dati client associati a un motore dei criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | sensitivityFileIdBuffer | Output Buffer in cui verranno copiati i dati client |
@@ -3578,9 +3578,9 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityFileId(
 
 Ottiene un valore che indica se il criterio ha regole automatiche o consigliate
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | hasClassificationRules | Output Indica se i criteri hanno regole automatiche o di raccomandazione |
@@ -3597,9 +3597,9 @@ mip_cc_result MIP_CC_PolicyEngine_HasClassificationRules(
 
 Ottiene l'ora dell'ultimo recupero dei criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | lastPolicyFetchTime | Output Ora dell'ultimo recupero dei criteri (in secondi da Epoch) |
@@ -3616,9 +3616,9 @@ mip_cc_result MIP_CC_PolicyEngine_GetLastPolicyFetchTime(
 
 Ottiene il numero di etichette di riservatezza associate al motore dei criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | labelsSize | Output Numero di etichette |
@@ -3635,9 +3635,9 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityLabelsSize(
 
 Ottiene le etichette di riservatezza associate al motore dei criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | labelBuffer | Output Buffer in cui verranno copiate le etichette. Le etichette sono di proprietà del client |
@@ -3660,13 +3660,13 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityLabels(
 
 Ottiene l'etichetta di riservatezza in base all'ID
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
-| LabelId | ID etichetta |
-| etichetta | Output Etichetta di riservatezza. Questo valore è di proprietà del chiamante e deve essere rilasciato con MIP_CC_ReleaseLabel. |
+| labelId | ID etichetta |
+| label | Output Etichetta di riservatezza. Questo valore è di proprietà del chiamante e deve essere rilasciato con MIP_CC_ReleaseLabel. |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3681,9 +3681,9 @@ mip_cc_result MIP_CC_PolicyEngine_GetLabelById(
 
 Ottiene il numero di tipi di riservatezza associati al motore dei criteri.
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | sensitivityTypesSize | Output Numero di tipi di riservatezza |
@@ -3700,9 +3700,9 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesSize(
 
 Ottiene i tipi di riservatezza associati al motore dei criteri.
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | sensitivityTypeBuffer | Output Buffer in cui verranno copiati i tipi di riservatezza. Sensibilità |
@@ -3725,13 +3725,13 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypes(
 
 Creazione di un gestore dei criteri per l'esecuzione di funzioni correlate ai criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | isAuditDiscoveryEnabled | Indica se l'individuazione del controllo è abilitata |
-| gestore | Output Istanza del gestore criteri appena creata |
+| handler | Output Istanza del gestore criteri appena creata |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3746,11 +3746,11 @@ mip_cc_result MIP_CC_PolicyEngine_CreatePolicyHandler(
 
 Registra un evento specifico dell'applicazione nella pipeline di controllo
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| livello | Livello dell'evento: info/Error/Warning |
+| level | Livello dell'evento: info/Error/Warning |
 | eventType | Descrizione del tipo di evento |
 | eventData | Dati associati all'evento. |
 
@@ -3768,9 +3768,9 @@ mip_cc_result MIP_CC_PolicyEngine_SendApplicationAuditEvent(
 
 Ottiene le dimensioni del codice XML dei dati dei criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | XmlSize | Output Dimensioni del codice XML dei dati dei criteri (in numero di caratteri) |
@@ -3787,9 +3787,9 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyDataXmlSize(
 
 Ottiene il codice XML dei dati dei criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | XmlBuffer | Output Buffer in cui verrà copiato il codice XML. |
@@ -3812,9 +3812,9 @@ mip_cc_result MIP_CC_PolicyEngine_GetPolicyDataXml(
 
 Ottiene le dimensioni dei dati XML dei tipi di riservatezza
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | XmlSize | Output Dimensioni del codice XML dei dati dei criteri (in numero di caratteri) |
@@ -3831,9 +3831,9 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesDataXmlSize(
 
 Ottiene il codice XML di dati dei tipi di riservatezza
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | XmlBuffer | Output Buffer in cui verrà copiato il codice XML. |
@@ -3856,9 +3856,9 @@ mip_cc_result MIP_CC_PolicyEngine_GetSensitivityTypesDataXml(
 
 Ottiene le dimensioni dei dati client associati a un motore di criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | clientDataSize | Output Dimensioni dei dati client (in numero di caratteri) |
@@ -3875,9 +3875,9 @@ mip_cc_result MIP_CC_PolicyEngine_GetClientDataSize(
 
 Ottenere i dati client associati a un motore dei criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | motore | Motore dei criteri |
 | clientDataBuffer | Output Buffer in cui verranno copiati i dati client |
@@ -3900,13 +3900,13 @@ mip_cc_result MIP_CC_PolicyEngine_GetClientData(
 
 Creare un oggetto impostazioni usato per creare un nuovo motore dei criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| autenticazione | Identità che verrà associata a PolicyEngine |
+| identity | Identità che verrà associata a PolicyEngine |
 | clientData | Dati client personalizzabili archiviati insieme al motore |
-| impostazioni locali | Impostazioni locali in cui vengono restituiti i risultati del testo |
+| locale | Impostazioni locali in cui vengono restituiti i risultati del testo |
 | loadSensitivityTypes | Se è necessario caricare anche i dati dei tipi di riservatezza (per la classificazione) |
 | impostazioni | Output Istanza di impostazioni appena creata |
 
@@ -3927,9 +3927,9 @@ mip_cc_result MIP_CC_CreatePolicyEngineSettingsWithIdentity(
 
 Imposta i dati client che verranno archiviati in maniera opaca insieme a questo motore e mantengono tra le sessioni
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni motore |
 | clientData | Dati client |
@@ -3946,9 +3946,9 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetClientData(
 
 Configura le impostazioni personalizzate, usate per il controllo e il controllo delle funzionalità.
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni motore |
 | customSettings | Coppie chiave/valore di impostazioni personalizzate |
@@ -3965,12 +3965,12 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetCustomSettings(
 
 Imposta l'ID di sessione che può essere usato per correlare i log e i dati di telemetria
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni motore |
-| sessionID | ID di sessione che rappresenta la durata di un motore dei criteri |
+| sessionId | ID di sessione che rappresenta la durata di un motore dei criteri |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -3984,12 +3984,12 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetSessionId(
 
 Imposta l'URL di base per tutte le richieste di servizio
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni motore |
-| cloudEndpointBaseUrl | URL di base (ad esempio 'https://api.aadrm.com ') |
+| cloudEndpointBaseUrl | URL di base (ad esempio 'https://api.aadrm.com') |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -4003,9 +4003,9 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetCloudEndpointBaseUrl(
 
 Imposta l'utente delegato
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni motore |
 | delegatedUserEmail | Indirizzo di posta elettronica dell'utente delegato |
@@ -4024,9 +4024,9 @@ mip_cc_result MIP_CC_PolicyEngineSettings_SetDelegatedUserEmail(
 
 Rilasciare le risorse associate a impostazioni del motore dei criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni del motore dei criteri da rilasciare |
 
@@ -4038,11 +4038,11 @@ void MIP_CC_ReleasePolicyEngineSettings(mip_cc_policy_engine_settings settings);
 
 Rilasciare le risorse associate a un gestore dei criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| gestore | Gestore dei criteri da rilasciare |
+| handler | Gestore dei criteri da rilasciare |
 
 ```c
 void MIP_CC_ReleasePolicyHandler(mip_cc_policy_handler handler);
@@ -4052,11 +4052,11 @@ void MIP_CC_ReleasePolicyHandler(mip_cc_policy_handler handler);
 
 Ottiene l'etichetta corrente di un documento
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| gestore | Gestore criteri |
+| handler | Gestore criteri |
 | documentState | Stato del documento |
 | context | Il contesto dell'applicazione viene trasmesso in modo opaco a qualsiasi callback |
 | contentLabel | Etichetta attualmente applicata a un documento |
@@ -4075,11 +4075,11 @@ mip_cc_result MIP_CC_PolicyHandler_GetSensitivityLabel(
 
 Esegue le regole dei criteri in base allo stato fornito e determina le azioni corrispondenti
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| gestore | Gestore criteri |
+| handler | Gestore criteri |
 | documentState | Stato del documento |
 | applicationState | Stato azione applicazione |
 | context | Il contesto dell'applicazione viene trasmesso in modo opaco a qualsiasi callback |
@@ -4102,11 +4102,11 @@ mip_cc_result MIP_CC_PolicyHandler_ComputeActions(
 
 Chiamata eseguita dall'applicazione dopo l'applicazione delle azioni calcolate e i dati di cui è stato eseguito il commit su disco
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| gestore | Gestore criteri |
+| handler | Gestore criteri |
 | documentState | Stato del documento |
 | applicationState | Stato azione applicazione |
 | context | Il contesto dell'applicazione viene trasmesso in modo opaco a qualsiasi callback |
@@ -4127,12 +4127,12 @@ mip_cc_result MIP_CC_PolicyHandler_NotifyCommittedActions(
 
 Carica un profilo
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del profilo |
-| profile | Output Istanza del profilo criteri appena creata |
+| impostazioni | Impostazioni profilo |
+| profilo | Output Istanza del profilo criteri appena creata |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -4146,11 +4146,11 @@ mip_cc_result MIP_CC_LoadPolicyProfile(
 
 Rilasciare le risorse associate a un profilo criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| profile | Profilo criteri da rilasciare |
+| profilo | Profilo criteri da rilasciare |
 
 ```c
 void MIP_CC_ReleasePolicyProfile(mip_cc_policy_profile profile);
@@ -4160,12 +4160,12 @@ void MIP_CC_ReleasePolicyProfile(mip_cc_policy_profile profile);
 
 Imposta l'ID di sessione che può essere usato per correlare i log e i dati di telemetria
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del profilo |
-| sessionID | ID di sessione che rappresenta la durata di un profilo di criteri |
+| impostazioni | Impostazioni profilo |
+| sessionId | ID di sessione che rappresenta la durata di un profilo di criteri |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -4179,9 +4179,9 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetSessionId(
 
 Esegui override dello stack HTTP predefinito con il proprio client
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni del profilo a cui verrà assegnato il delegato HTTP |
 | httpDelegate | Istanza di callback HTTP implementata dall'applicazione client |
@@ -4198,9 +4198,9 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetHttpDelegate(
 
 Esegui override del dispatcher attività asincrono predefinito con il proprio client
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni del profilo a cui verrà assegnato il delegato del dispatcher attività |
 | taskDispatcherDelegate | Istanza di callback Dispatcher attività implementata dall'applicazione client |
@@ -4217,11 +4217,11 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetTaskDispatcherDelegate(
 
 Configura le impostazioni personalizzate, usate per il controllo e il controllo delle funzionalità.
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
-| impostazioni | Impostazioni del profilo |
+| impostazioni | Impostazioni profilo |
 | customSettings | Coppie chiave/valore di impostazioni personalizzate |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
@@ -4236,9 +4236,9 @@ mip_cc_result MIP_CC_PolicyProfileSettings_SetCustomSettings(
 
 Rilasciare le risorse associate a impostazioni del profilo criteri
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | impostazioni | Impostazioni del profilo dei criteri da rilasciare |
 
@@ -4250,9 +4250,9 @@ void MIP_CC_ReleasePolicyProfileSettings(mip_cc_policy_profile_settings profilse
 
 Ottiene l'ID modello dell'azione "Proteggi per modello"
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Proteggi per modello" |
 | templateId | Output ID del modello che definisce le protezioni |
@@ -4269,12 +4269,12 @@ mip_cc_result MIP_CC_ProtectByTemplateAction_GetTemplateId(
 
 Ottiene i nomi degli elementi dell'interfaccia utente dell'azione "Rimuovi piè di pagina contenuto" da rimuovere
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Rimuovi piè di pagina contenuto" |
-| Nomi | Output Nomi degli elementi dell'interfaccia utente da rimuovere, memoria di proprietà del chiamante |
+| nomi | Output Nomi degli elementi dell'interfaccia utente da rimuovere, memoria di proprietà del chiamante |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -4290,12 +4290,12 @@ mip_cc_result MIP_CC_RemoveContentFooterAction_GetUIElementNames(
 
 Ottiene i nomi degli elementi dell'interfaccia utente dell'azione "Rimuovi intestazione contenuto" da rimuovere
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Rimuovi intestazione contenuto" |
-| Nomi | Output Nomi degli elementi dell'interfaccia utente da rimuovere, memoria di proprietà del chiamante |
+| nomi | Output Nomi degli elementi dell'interfaccia utente da rimuovere, memoria di proprietà del chiamante |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -4311,12 +4311,12 @@ mip_cc_result MIP_CC_RemoveContentHeaderAction_GetUIElementNames(
 
 Ottiene i nomi degli elementi dell'interfaccia utente dell'azione "Rimuovi filigrana" da rimuovere
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | action | azione "Rimuovi piè di pagina filigrana" |
-| Nomi | Output Nomi degli elementi dell'interfaccia utente da rimuovere, memoria di proprietà del chiamante |
+| nomi | Output Nomi degli elementi dell'interfaccia utente da rimuovere, memoria di proprietà del chiamante |
 
 **Return**: codice risultato che indica l'esito positivo o negativo
 
@@ -4332,9 +4332,9 @@ mip_cc_result MIP_CC_RemoveWatermarkAction_GetUIElementNames(
 
 Rilasciare le risorse associate a un tipo di riservatezza
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | sensitivityType | Tipo di riservatezza da rilasciare |
 
@@ -4346,9 +4346,9 @@ void MIP_CC_ReleaseSensitivityType(mip_cc_sensitivity_type sensitivityType);
 
 Ottiene le dimensioni del buffer necessarie per archiviare l'ID del pacchetto di regole del tipo di riservatezza
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | sensitivityType | Tipo di riservatezza |
 | idSize | Output Dimensioni del buffer per l'ID del pacchetto della regola (in numero di caratteri) |
@@ -4365,9 +4365,9 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageIdSize(
 
 Ottiene l'ID del pacchetto di regole del tipo di riservatezza
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | sensitivityType | Tipo di riservatezza |
 | idBuffer | Output Buffer in cui verrà copiato l'ID. |
@@ -4390,9 +4390,9 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageId(
 
 Ottiene le dimensioni del buffer necessarie per archiviare il pacchetto di regole di un tipo di riservatezza
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | sensitivityType | Tipo di riservatezza |
 | rulePackageSize | Output Dimensioni del buffer per il mantenimento del pacchetto di regole (in numero di caratteri) |
@@ -4409,9 +4409,9 @@ mip_cc_result MIP_CC_SensitivityType_GetRulePackageSize(
 
 Ottiene il pacchetto di regole del tipo di riservatezza
 
-**Parameters**
+**Parametri**
 
-Parametro | Description
+Parametro | Descrizione
 |---|---|
 | sensitivityType | Tipo di riservatezza |
 | rulePackageBuffer | Output Buffer in cui verrà copiato il pacchetto di regole. |

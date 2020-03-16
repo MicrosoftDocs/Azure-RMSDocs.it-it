@@ -13,11 +13,11 @@ ms.subservice: prereqs
 ms.suite: ems
 ms.custom: admin
 ms.openlocfilehash: 6a3ed3272eecd25bd403d6a45a82f937fe26a03a
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "72890278"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79404641"
 ---
 # <a name="azure-active-directory-requirements-for-azure-information-protection"></a>Requisiti di Azure Active Directory per Azure Information Protection
 
@@ -74,13 +74,13 @@ Quindi, configurare la soluzione MFA:
 
     - Configurare Azure MFA per forzare l'autenticazione a più fattori per gli utenti. Per istruzioni, vedere [Introduzione ad Azure Multi-Factor Authentication nel cloud](/multi-factor-authentication/multi-factor-authentication-get-started-cloud) nella documentazione di Multi-factor Authentication.
 
-        Per altre informazioni su Azure MFA, vedere [Informazioni su Azure Multi-Factor Authentication](/multi-factor-authentication/multi-factor-authentication).
+        Per ulteriori informazioni su Azure MFA, vedere [Che cos'è Multi-Factor Authentication di Azure?](/multi-factor-authentication/multi-factor-authentication)
 
 - Per i tenant federativi (si gestiscono i server in locale):
 
     - Configurare i server federativi per Azure Active Directory o Office 365. Se ad esempio si usa AD FS, vedere [configurare metodi di autenticazione aggiuntivi per ad FS](/windows-server/identity/ad-fs/operations/configure-additional-authentication-methods-for-ad-fs).
 
-        Per altre informazioni su questo scenario, vedere il post relativo al [programma di gestione delle identità per Office 365](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) sul blog di Office.
+        Per ulteriori informazioni su questo scenario, vedere [Lavorare con Office 365, programma identità ora semplificato](https://blogs.office.com/2014/01/30/the-works-with-office-365-identity-program-now-streamlined/) sul blog di Office.
 
 Il connettore Rights Management e lo scanner di Azure Information Protection non supportano l'autenticazione a più fattori. Se si distribuisce il connettore o lo scanner, gli account seguenti non richiedono l'autenticazione a più fattori:
 

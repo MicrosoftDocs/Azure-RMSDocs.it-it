@@ -16,11 +16,11 @@ ms.custom: admin
 search.appverid:
 - MET150
 ms.openlocfilehash: a09ee41507dae2aa54cf8cde326d70be143d403c
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934077"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79403536"
 ---
 # <a name="what-is-azure-rights-management"></a>Informazioni su Microsoft Azure Rights Management
 
