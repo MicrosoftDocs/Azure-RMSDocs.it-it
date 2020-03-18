@@ -4,7 +4,7 @@ description: Istruzioni per installare, configurare ed eseguire la versione corr
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 02/27/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,20 +12,22 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: cc2c9a134c222ad9ec8463e94dc5b355ade20d91
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 0e8d1e570b09e406ee20fcb14a0f5bf13cb8e760
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404318"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79483219"
 ---
 # <a name="deploying-the-azure-information-protection-scanner-to-automatically-classify-and-protect-files"></a>Distribuzione dello scanner di Azure Information Protection per classificare e proteggere automaticamente i file
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), windows server 2019, windows server 2016, windows Server 2012 R2*
 
+>[!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 > [!NOTE]
-> Questo articolo è per la versione di disponibilità generale corrente dello scanner di Azure Information Protection con il client di Azure Information Protection (classico) e la versione di anteprima dello scanner per la versione di disponibilità generale corrente di Azure Information Protection client di etichetta unificata.
+> Questo articolo è per la versione di disponibilità generale corrente del Azure Information Protection scanner con il client di Azure Information Protection (classico) e la versione di disponibilità generale del client Azure Information Protection Unified labeling.
 > 
 > Se in precedenza è stato installato lo scanner e si vuole aggiornarlo, usare le istruzioni di aggiornamento seguenti e quindi usare le istruzioni in questa pagina, omettendo il passaggio per installare lo scanner:
 > - Per il client classico: [aggiornamento dello scanner Azure Information Protection](./rms-client/client-admin-guide.md#upgrading-the-azure-information-protection-scanner)
@@ -755,7 +757,7 @@ Se lo scanner è stato configurato per l'esecuzione manuale anziché continuativ
 
 Se si è interessati a scoprire come è stato implementato questo scanner dai team Microsoft Core Services Engineering e Operations,  leggere il case study tecnico: [Automating data protection with Azure Information Protection scanner](https://www.microsoft.com/itshowcase/Article/Content/1070/Automating-data-protection-with-Azure-Information-Protection-scanner) (Automatizzazione della protezione dei dati con lo scanner di Azure Information Protection).
 
-Scoprire [Qual è la differenza tra Infrastruttura di classificazione file di Windows Server e lo scanner di Azure Information Protection](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner).
+Ci si potrebbe chiedere: [Qual è la differenza tra il cluster di failover di Windows Server e il Azure Information Protection scanner?](faqs.md#whats-the-difference-between-windows-server-fci-and-the-azure-information-protection-scanner)
 
 È anche possibile usare PowerShell per classificare e proteggere in modo interattivo i file dal computer desktop. Per ulteriori informazioni su questo e altri scenari in cui viene utilizzato PowerShell, vedere le sezioni seguenti dalle guide di amministrazione:
 

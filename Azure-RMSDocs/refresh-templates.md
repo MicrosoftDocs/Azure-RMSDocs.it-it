@@ -4,7 +4,7 @@ description: Quando si usa Azure Rights Management, i modelli vengono scaricati 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: azurerms
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: fcbfd0db4da98f6f59131e652d1ef34f3519d92e
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 00ddb823fca83f09d40ad30c8242b3a8e5ce71a8
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78973122"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79483049"
 ---
 # <a name="refreshing-templates-for-users-and-services"></a>Aggiornamento di modelli per utenti e servizi
 
@@ -75,7 +75,7 @@ Modificando il Registro di sistema nei computer che eseguono app di Office 365, 
 
 ### <a name="to-force-an-immediate-refresh"></a>Per forzare un aggiornamento immediato
 
-1. Utilizzando un editor del Registro di sistema, eliminare i dati per il valore **LastUpdatedTime** . Ad esempio, i dati possono visualizzare **2015-04-20T15:52**; eliminare 2015-04-20T15:52 in modo che non vengano visualizzati dati. Usare le informazioni seguenti per individuare il percorso del Registro di sistema per eliminare i dati con questo valore di registro.
+1. Utilizzando un editor del Registro di sistema, eliminare i dati per il valore **LastUpdatedTime**. Ad esempio, i dati possono visualizzare **2015-04-20T15:52**; eliminare 2015-04-20T15:52 in modo che non vengano visualizzati dati. Usare le informazioni seguenti per individuare il percorso del Registro di sistema per eliminare i dati con questo valore di registro.
 
    **Percorso del Registro di sistema:** HKEY_CURRENT_USER\Software\Classes\Local Settings\Software\Microsoft\MSIPC\\<*MicrosoftRMS_FQDN*>\Template\\<*user_alias*>
 
@@ -88,11 +88,11 @@ Modificando il Registro di sistema nei computer che eseguono app di Office 365, 
    > 
    > Eseguire il cmdlet [Get-AipServiceConfiguration](/powershell/module/aipservice/get-aipserviceconfiguration) per Azure Information Protection. Se non è stato ancora installato il modulo AIPService di PowerShell, vedere [installazione del modulo PowerShell di AIPService](install-powershell.md).
    > 
-   > Nell'output identificare il valore **LicensingIntranetDistributionPointUrl** .
+   > Nell'output identificare il valore **LicensingIntranetDistributionPointUrl**.
    > 
    > Ad esempio: **LicensingIntranetDistributionPointUrl: https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com/_wmcs/licensing**
    > 
-   > In questo valore rimuovere **https://** e **/_wmcs/licensing** da questa stringa. Il valore rimanente è l’FQDN del servizio Microsoft RMS. Nell'esempio, il valore dell'FQDN di Microsoft RMS è il seguente:
+   > Da questo valore rimuovere **https://** e **/_wmcs/licensing** da questa stringa. Il valore rimanente è l’FQDN del servizio Microsoft RMS. Nell'esempio, il valore dell'FQDN di Microsoft RMS è il seguente:
    > 
    > **5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 

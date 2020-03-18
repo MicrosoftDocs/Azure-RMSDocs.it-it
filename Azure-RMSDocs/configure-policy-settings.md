@@ -4,19 +4,19 @@ description: Configurare le impostazioni nei criteri di Azure Information Protec
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 629815c0-457d-4697-a4cc-df0e6cc0c1a6
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: d8afb466a119bdedb03082d6a2d59c59fad4564c
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: d63faa1d40768927c064eb40092c7a9d0668fae8
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78972725"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79482777"
 ---
 # <a name="how-to-configure-the-policy-settings-for-azure-information-protection"></a>Come configurare le impostazioni dei criteri per Azure Information Protection
 
@@ -60,7 +60,7 @@ Si noti che le impostazioni dei criteri potrebbero avere valori predefiniti dive
     
     - **Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta**: quando si imposta questa opzione su **Sì**, a tutti i documenti e messaggi di posta elettronica inviati deve essere applicata un'etichetta. L'etichetta può essere assegnata manualmente da un utente, automaticamente o come risultato di una [condizione](configure-policy-classification.md) oppure per impostazione predefinita selezionando l'opzione **Selezionare l'etichetta predefinita**.
         
-       Se al momento del salvataggio di un documento o dell'invio di un messaggio di posta elettronica non è assegnata un'etichetta, viene chiesto all'utente di selezionarne una. Ad esempio:
+       Se al momento del salvataggio di un documento o dell'invio di un messaggio di posta elettronica non è assegnata un'etichetta, viene chiesto all'utente di selezionarne una. Ad esempio,
         
        ![Prompt di Azure Information Protection se è impostata l'assegnazione di etichette](./media/info-protect-enforce-labelv2.png)
         

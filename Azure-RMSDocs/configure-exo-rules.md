@@ -4,7 +4,7 @@ description: Istruzioni ed esempi per configurare le regole del flusso di posta 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,23 +12,20 @@ ms.assetid: ba4e4a4d-5280-4e97-8f5c-303907db1bf5
 ms.reviewer: shakella
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b48e2a041baa9e9e782a2021fdbcd1e5da3e379a
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 1f1d232a056299349691c2cd38dc3068936b3f32
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78972544"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79482642"
 ---
 # <a name="configuring-exchange-online-mail-flow-rules-for-azure-information-protection-labels"></a>Configurazione delle regole del flusso di posta di Exchange Online per le etichette di Azure Information Protection
-
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
-
 
 >[!NOTE] 
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
-
-Usare le informazioni seguenti per configurare le regole del flusso di posta in Exchange Online per usare le etichette di Azure Information Protection e per applicare una protezione aggiuntiva per scenari specifici. Ad esempio:
+Usare le informazioni seguenti per configurare le regole del flusso di posta in Exchange Online per usare le etichette di Azure Information Protection e per applicare una protezione aggiuntiva per scenari specifici. Ad esempio,
 
 - L'etichetta predefinita è **Generale**, che non applica la protezione. Per i messaggi di posta elettronica con questa etichetta inviati all'esterno, applicare l'azione di protezione aggiuntiva Non inoltrare.
 

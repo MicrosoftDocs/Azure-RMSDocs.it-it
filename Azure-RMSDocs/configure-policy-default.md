@@ -4,18 +4,18 @@ description: Informazioni sulla configurazione dei criteri predefiniti per Azure
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.subservice: aiplabels
 ms.custom: admin
-ms.openlocfilehash: 315b61c3efe5a591848cb82e7ad27991cb17eb8f
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 766259cf25be40ae74d64fdb763514f8385a4971
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78972653"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79482369"
 ---
 # <a name="the-default-azure-information-protection-policy"></a>Criterio predefinito di Azure Information Protection
 
@@ -25,7 +25,6 @@ ms.locfileid: "78972653"
 
 >[!NOTE] 
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
-
 
 > [!NOTE]
 > Il criterio di Azure Information Protection si applica al client di Azure Information Protection (classico) e non al client di etichettatura unificato Azure Information Protection. Non si è certi della differenza tra questi client? Vedere queste [domande frequenti](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client).
@@ -77,7 +76,7 @@ Quando gli utenti selezionano questa etichetta, l'opzione Non inoltrare di Outlo
 
 ### <a name="labels"></a>Etichette
 
-|Label|Descrizione comando|Impostazioni|
+|Etichetta|Descrizione comando|Impostazioni|
 |-------------------------------|---------------------------|-----------------|
 |Personal|Dati non business, solo per uso personale.|**Abilitato**: on <br /><br />**Colore**: verde chiaro<br /><br />**Contrassegni visivi**: off <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 |Pubblico|Dati business appositamente preparati e approvati per l'uso pubblico.|**Abilitato**: on <br /><br />**Colore**: verde<br /><br />**Contrassegni visivi**: off<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
@@ -88,7 +87,7 @@ Quando gli utenti selezionano questa etichetta, l'opzione Non inoltrare di Outlo
 
 ### <a name="sublabels"></a>Etichette secondarie
 
-|Label|Descrizione comando|Impostazioni|
+|Etichetta|Descrizione comando|Impostazioni|
 |-------------------------------|---------------------------|-----------------|
 |Confidential \ All Employees (Riservato \ Tutti i dipendenti)|Dati riservati che richiedono protezione, ma che garantiscono autorizzazioni complete a tutti i dipendenti. I proprietari dei dati possono tenere traccia e revocare il relativo contenuto.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />Classified as Confidential (Classificato come riservato)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: Azure (chiave cloud) [[1]](#footnote-1)|
 |Confidential \ Anyone (not protected) (Riservato \ Chiunque (senza protezione))|Dati che non richiedono protezione. Usare questa opzione con cautela e giustificazione aziendale appropriata.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />Classified as Confidential (Classificato come riservato) <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
@@ -106,7 +105,7 @@ Le autorizzazioni di protezione corrispondono a quelle del [modello predefinito]
 
 ### <a name="information-protection-bar"></a>Barra Information Protection
 
-|Impostazione|Value|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
 |Titolo|Sensibilità|
 |Descrizione comando|Etichetta corrente per questo contenuto. Questa impostazione identifica il rischio per l'azienda se questo contenuto è condiviso con persone non autorizzate all'interno o all'esterno dell'organizzazione.|
@@ -116,16 +115,16 @@ Le autorizzazioni di protezione corrispondono a quelle del [modello predefinito]
 
 Alcune impostazioni sono state aggiunte dopo il 31 luglio 2017.
 
-|Impostazione|Value|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
-|Selezionare l'etichetta predefinita|Nessuna|
-|Invia i dati di controllo alle analisi di Azure Information Protection|Off|
-|Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta applicata automaticamente o dagli utenti|Off|
-|Gli utenti devono fornire una giustificazione per impostare un'etichetta di classificazione inferiore, rimuovere un'etichetta o rimuovere la protezione|Off|
-|For email messages with attachments, apply a label that matches the highest classification of those attachments (Per i messaggi di posta elettronica con allegati, applica un'etichetta che corrisponda alla classificazione più elevata di tali allegati)|Off|
-|Visualizza la barra di Information Protection nelle app Office|Off|
-|Aggiungi il pulsante Non inoltrare alla barra multifunzione di Outlook|Off|
-|Rendi disponibile agli utenti l'opzione per le autorizzazioni personalizzate|Off|
+|Selezionare l'etichetta predefinita|None|
+|Invia i dati di controllo alle analisi di Azure Information Protection|Disattivata|
+|Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta applicata automaticamente o dagli utenti|Disattivata|
+|Gli utenti devono fornire una giustificazione per impostare un'etichetta di classificazione inferiore, rimuovere un'etichetta o rimuovere la protezione|Disattivata|
+|For email messages with attachments, apply a label that matches the highest classification of those attachments (Per i messaggi di posta elettronica con allegati, applica un'etichetta che corrisponda alla classificazione più elevata di tali allegati)|Disattivata|
+|Visualizza la barra di Information Protection nelle app Office|Disattivata|
+|Aggiungi il pulsante Non inoltrare alla barra multifunzione di Outlook|Disattivata|
+|Rendi disponibile agli utenti l'opzione per le autorizzazioni personalizzate|Disattivata|
 |Provide a custom URL for the Azure Information Protection client "Tell me more" web page (Specifica un URL personalizzato per la pagina Web "Ulteriori informazioni" del client di Azure Information Protection)|Vuoto|
 
 ## <a name="default-policy-before-july-31-2017"></a>Criteri predefiniti prima del 31 luglio 2017
@@ -135,7 +134,7 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 
 ### <a name="labels"></a>Etichette
 
-|Label|Descrizione comando|Impostazioni|
+|Etichetta|Descrizione comando|Impostazioni|
 |-------------------------------|---------------------------|-----------------|
 |Personal|Dati non business, solo per uso personale.|**Abilitato**: on <br /><br />**Colore**: verde chiaro<br /><br />**Contrassegni visivi**: off <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 |Pubblico|Dati business appositamente preparati e approvati per l'uso pubblico.|**Abilitato**: on <br /><br />**Colore**: verde<br /><br />**Contrassegni visivi**: off<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
@@ -146,7 +145,7 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 
 ### <a name="sublabels"></a>Etichette secondarie
 
-|Label|Descrizione comando|Impostazioni|
+|Etichetta|Descrizione comando|Impostazioni|
 |-------------------------------|---------------------------|-----------------|
 |Confidential \ All Employees (Riservato \ Tutti i dipendenti)|Dati riservati che richiedono protezione, ma che garantiscono autorizzazioni complete a tutti i dipendenti. I proprietari dei dati possono tenere traccia e revocare il relativo contenuto.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />Classified as Confidential (Classificato come riservato)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 |Confidential \ Anyone (not protected) (Riservato \ Chiunque (senza protezione))|Dati che non richiedono protezione. Usare questa opzione con cautela e giustificazione aziendale appropriata.|**Abilitato**: on <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica)<br /><br />Classified as Confidential (Classificato come riservato) <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
@@ -155,7 +154,7 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 
 ### <a name="information-protection-bar"></a>Barra Information Protection
 
-|Impostazione|Value|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
 |Titolo|Sensibilità|
 |Descrizione comando|Etichetta corrente per questo contenuto. Questa impostazione identifica il rischio per l'azienda se questo contenuto è condiviso con persone non autorizzate all'interno o all'esterno dell'organizzazione.|
@@ -163,37 +162,37 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 
 ### <a name="settings"></a>Impostazioni
 
-|Impostazione|Value|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
-|Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta applicata automaticamente o dagli utenti|Off|
-|Selezionare l'etichetta predefinita|Nessuna|
-|Gli utenti devono fornire una giustificazione per impostare un'etichetta di classificazione inferiore, rimuovere un'etichetta o rimuovere la protezione|Off|
-|For email messages with attachments, apply a label that matches the highest classification of those attachments (Per i messaggi di posta elettronica con allegati, applica un'etichetta che corrisponda alla classificazione più elevata di tali allegati)|Off|
+|Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta applicata automaticamente o dagli utenti|Disattivata|
+|Selezionare l'etichetta predefinita|None|
+|Gli utenti devono fornire una giustificazione per impostare un'etichetta di classificazione inferiore, rimuovere un'etichetta o rimuovere la protezione|Disattivata|
+|For email messages with attachments, apply a label that matches the highest classification of those attachments (Per i messaggi di posta elettronica con allegati, applica un'etichetta che corrisponda alla classificazione più elevata di tali allegati)|Disattivata|
 |Provide a custom URL for the Azure Information Protection client "Tell me more" web page (Specifica un URL personalizzato per la pagina Web "Ulteriori informazioni" del client di Azure Information Protection)|Vuoto|
 
 ## <a name="default-policy-before-march-21-2017"></a>Criteri predefiniti prima del 21 marzo 2017
 
 ### <a name="labels"></a>Etichette
 
-|Label|Descrizione comando|Impostazioni|
+|Etichetta|Descrizione comando|Impostazioni|
 |-------------------------------|---------------------------|-----------------|
 |Personal|Solo per uso personale. I dati verranno monitorati dall'organizzazione. Le informazioni personali non devono includere dati aziendali.|**Abilitato**: on <br /><br />**Colore**: verde chiaro<br /><br />**Contrassegni visivi**: off <br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 |Pubblico|Queste informazioni sono interne e possono essere usate da tutti gli utenti all'interno o all'esterno dell'azienda.|**Abilitato**: on <br /><br />**Colore**: verde<br /><br />**Contrassegni visivi**: off<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 |Interna|Queste informazioni includono un'ampia gamma di dati aziendali interni che possono essere usati da tutti i dipendenti e possono essere condivisi con i clienti e partner commerciali autorizzati. Esempi di informazioni interne sono i criteri aziendali e la maggior parte delle comunicazioni interne.|**Abilitato**: on <br /><br />**Colore**: blu <br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica): <br /><br />Riservatezza: Internal<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 |Confidential (Riservato)|Questi dati includono informazioni aziendali riservate. L'esposizione di questi dati a utenti non autorizzati potrebbe arrecare un danno all'organizzazione. Esempi di informazioni riservate sono i dati relativi ai dipendenti, progetti o contratti di singoli clienti e i dati degli account di vendita.|**Abilitato**: on <br /><br />**Colore**: arancione<br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica):<br /><br /> Riservatezza: Confidential (Riservato)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
-|`Secret`|Questi dati includono informazioni estremamente riservate dell'azienda, che devono essere protette. L'esposizione dei dati segreti a utenti non autorizzati potrebbe arrecare un grave danno all'organizzazione. Sono informazioni segrete, ad esempio, i dati di identificazione personale, i record dei clienti, il codice sorgente e i rendiconti finanziari annunciati in anticipo.|**Abilitato**: on <br /><br />**Colore**: rosso<br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica):<br /><br /> Riservatezza: Secret (Segreto)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
+|Secret (Segreto)|Questi dati includono informazioni estremamente riservate dell'azienda, che devono essere protette. L'esposizione dei dati segreti a utenti non autorizzati potrebbe arrecare un grave danno all'organizzazione. Sono informazioni segrete, ad esempio, i dati di identificazione personale, i record dei clienti, il codice sorgente e i rendiconti finanziari annunciati in anticipo.|**Abilitato**: on <br /><br />**Colore**: rosso<br /><br />**Contrassegni visivi**: piè di pagina (documenti e messaggi di posta elettronica):<br /><br /> Riservatezza: Secret (Segreto)<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 
 
 ### <a name="sublabels"></a>Etichette secondarie
 
-|Label|Descrizione comando|Impostazioni|
+|Etichetta|Descrizione comando|Impostazioni|
 |-------------------------------|---------------------------|-----------------|
 |Secret (Segreto) \ All Company (Tutta la società)|Questi dati includono informazioni aziendali riservate, cui possono accedere tutti i dipendenti della società.|**Abilitato**: on <br /><br />**Contrassegni visivi**: off<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 |Secret (Segreto) \ My Group (Gruppo personale)|Questi dati includono informazioni aziendali riservate, cui possono accedere solo determinati gruppi di dipendenti.|**Abilitato**: on <br /><br />**Contrassegni visivi**: off<br /><br />**Condizioni**: nessuna<br /><br />**Protezione**: nessuna|
 
 ### <a name="information-protection-bar"></a>Barra Information Protection
 
-|Impostazione|Value|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
 |Titolo|Sensibilità|
 |Descrizione comando|La riservatezza delle informazioni è suddivisa in quattro livelli, ovvero Public (Pubblico), Internal (Interno), Confidential (Riservato) e Secret (Segreto), che consentono di identificare il rischio derivante dall'esposizione delle informazioni a utenti non autorizzati all'interno o all'esterno dell'azienda.|
@@ -201,11 +200,11 @@ Si noti che le descrizioni in questi criteri fanno riferimento ai dati che richi
 
 ### <a name="settings"></a>Impostazioni
 
-|Impostazione|Value|
+|Impostazione|Valore|
 |-------------------------------|---------------------------|
-|Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta applicata automaticamente o dagli utenti|Off|
-|Selezionare l'etichetta predefinita|Nessuna|
-|Gli utenti devono fornire una giustificazione per impostare un'etichetta di classificazione inferiore, rimuovere un'etichetta o rimuovere la protezione|Off|
+|Tutti i documenti e i messaggi di posta elettronica devono avere un'etichetta applicata automaticamente o dagli utenti|Disattivata|
+|Selezionare l'etichetta predefinita|None|
+|Gli utenti devono fornire una giustificazione per impostare un'etichetta di classificazione inferiore, rimuovere un'etichetta o rimuovere la protezione|Disattivata|
 |Provide a custom URL for the Azure Information Protection client "Tell me more" web page (Specifica un URL personalizzato per la pagina Web "Ulteriori informazioni" del client di Azure Information Protection)|Vuoto|
 
 

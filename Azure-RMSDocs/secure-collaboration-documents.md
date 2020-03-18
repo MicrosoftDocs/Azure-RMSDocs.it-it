@@ -13,16 +13,19 @@ ms.subservice: aiplabels
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 90c49b8222e379094ee5f5d00c5bd37c7dd0377d
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 61567869b889ba72c61e736804c313fd4e0bfbb0
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79403723"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79483389"
 ---
 # <a name="configuring-secure-document-collaboration-by-using-azure-information-protection"></a>Configurazione della collaborazione per i documenti protetti con Azure Information Protection
 
 >*Si applica a: [Azure Information Protection](https://azure.microsoft.com/pricing/details/information-protection), [Office 365](https://download.microsoft.com/download/E/C/F/ECF42E71-4EC0-48FF-AA00-577AC14D5B5C/Azure_Information_Protection_licensing_datasheet_EN-US.pdf)*
+
+>[!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Quando si usa Azure Information Protection, è possibile proteggere i documenti senza sacrificare la collaborazione per gli utenti autorizzati. La maggior parte dei documenti creati da un utente e quindi condivisi con altri per la visualizzazione e la modifica è costituita da documenti di Office Word, Excel e PowerPoint. Questi documenti supportano la protezione nativa, ovvero oltre alle funzionalità di protezione di autorizzazione e crittografia, supportano anche l'autorizzazione limitata per un controllo più granulare. 
 

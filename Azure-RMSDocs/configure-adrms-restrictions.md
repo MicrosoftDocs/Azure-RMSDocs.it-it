@@ -4,19 +4,19 @@ description: Panoramica della protezione HYOK (AD RMS) con Azure Information Pro
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
 ms.assetid: 7667b5b0-c2e9-4fcf-970f-05577ba51126
 ms.subservice: hyok
 ms.custom: admin
-ms.openlocfilehash: a2a4bd0f438bea68d63779eb661ec2537cb870c8
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 4fb1018d75717faeb2e19a1ac63bc74b9cb44b07
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78972706"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79482692"
 ---
 # <a name="hold-your-own-key-hyok-protection-for-azure-information-protection"></a>Protezione HYOK (hold your own key) per Azure Information Protection
 
@@ -26,7 +26,6 @@ ms.locfileid: "78972706"
 
 >[!NOTE] 
 > Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
-
 
 Le informazioni che seguono consentono di capire che cos'è la protezione HYOK (hold your own key) per Azure Information Protection e in che cosa differisce rispetto alla protezione predefinita basata su cloud. Prima di usare la protezione HYOK, verificare di avere compreso quando deve essere usata e quali sono gli scenari supportati, i requisiti e le limitazioni. 
 
@@ -72,15 +71,15 @@ Per applicare la protezione HYOK, usare le etichette di Azure Information Protec
 
 Nella tabella seguente sono riportati gli scenari supportati per la protezione del contenuto con le etichette configurate per HYOK e per l'apertura e l'uso del contenuto protetto da HYOK.
 
-|Piattaforma|Applicazione|Supportato|
+|Platform|Applicazione|Supportato|
 |----------------------|----------|-----------|
-|Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Word, Excel, PowerPoint|Protezione: sì<br /><br />Consumo: sì|
-|Windows|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Outlook|Protezione: sì<br /><br />Consumo: sì|
-|Windows|Client di Azure Information Protection|Protezione: sì <br /><br />Consumo: sì|
-|Windows|Visualizzatore di Azure Information Protection|Protezione: non applicabile<br /><br />Consumo: sì|
-|Windows|Client di Azure Information Protection con cmdlet per le etichette di PowerShell|Protezione: sì<br /><br />Consumo: sì|
-|Windows|Scanner di Azure Information Protection|Protezione: sì<br /><br />Consumo: sì|
-|Windows|Applicazione di condivisione Rights Management|Protezione: no<br /><br />Consumo: sì|
+|WINDOWS|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Word, Excel, PowerPoint|Protezione: sì<br /><br />Consumo: sì|
+|WINDOWS|Client di Azure Information Protection con app di Office 365, Office 2019, Office 2016 e Office 2013 <br /><br />- Outlook|Protezione: sì<br /><br />Consumo: sì|
+|WINDOWS|Client di Azure Information Protection|Protezione: sì <br /><br />Consumo: sì|
+|WINDOWS|Visualizzatore di Azure Information Protection|Protezione: non applicabile<br /><br />Consumo: sì|
+|WINDOWS|Client di Azure Information Protection con cmdlet per le etichette di PowerShell|Protezione: sì<br /><br />Consumo: sì|
+|WINDOWS|Scanner di Azure Information Protection|Protezione: sì<br /><br />Consumo: sì|
+|WINDOWS|Applicazione di condivisione Rights Management|Protezione: no<br /><br />Consumo: sì|
 |MacOS|Office per Mac <br /><br /> - Word, Excel, PowerPoint|Protezione: no<br /><br />Consumo: sì|
 |MacOS|Office per Mac<br /><br />- Outlook|Protezione: no<br /><br />Consumo: sì|
 |MacOS|Applicazione di condivisione Rights Management|Protezione: no<br /><br />Consumo: sì|

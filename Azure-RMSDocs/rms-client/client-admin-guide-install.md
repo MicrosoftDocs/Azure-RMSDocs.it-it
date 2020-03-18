@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per gli amministratori per la distribuzio
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/15/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v1client
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 22fba73024ac9c20051742246c96f5c2807a5c4f
-ms.sourcegitcommit: 03c9f8d24c65bffc14b9701ea83a2ac05b681023
+ms.openlocfilehash: e8a2b3fbf25dcf3952c232e12998af1c004493cc
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416396"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79483270"
 ---
 # <a name="admin-guide-install-the-azure-information-protection-client-for-users"></a>Guida dell'amministratore: Installare il client Azure Information Protection per gli utenti
 
@@ -26,6 +26,8 @@ ms.locfileid: "79416396"
 >
 > *Istruzioni per: [client di Azure Information Protection per Windows](../faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)*
 
+>[!NOTE] 
+> Per offrire un'esperienza per i clienti unificata e semplificata, il **client di Azure Information Protection client (versione classica)** e la **Gestione etichette** nel portale di Azure vengono **deprecati** a partire dal **31 marzo 2021**. In questo intervallo di tempo tutti i clienti correnti di Azure Information Protection possono passare alla soluzione di etichettatura unificata usando la piattaforma di etichettatura unificata di Microsoft Information Protection. Altre informazioni nell'[avviso ufficiale sulla deprecazione](https://aka.ms/aipclassicsunset).
 
 Prima di installare il client Azure Information Protection nella rete aziendale, verificare che nei computer siano installate le versioni del sistema operativo e le applicazioni richieste per Azure Information Protection: [Requisiti per Azure Information Protection](../requirements.md). 
 
@@ -155,7 +157,7 @@ Usare la procedura seguente per identificare il valore da specificare per il par
 
 3. In questo valore rimuovere **/_wmcs/licensing** dalla stringa. Ad esempio: **https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com**
 
-    La stringa rimanente è il valore da specificare per il parametro ServiceLocation.
+    La stringa remainin'è il valore da specificare per il parametro ServiceLocation.
 
 Esempio per installare il client in modo invisibile all'utente per Office 2010 e Azure RMS: `AzInfoProtection.exe /quiet ServiceLocation=https://5c6bb73b-1038-4eec-863d-49bded473437.rms.na.aadrm.com`
 

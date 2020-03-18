@@ -4,7 +4,7 @@ description: Per configurare impostazioni ed etichette diverse per utenti specif
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/09/2020
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: aiplabels
 ms.reviewer: eymanor
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: d0a370950bb5853453106e59af3da9c9a2f8f463
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 1922348a9d6075eb9843588515a24a5896fc41cf
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78972879"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79482726"
 ---
 # <a name="how-to-configure-the-azure-information-protection-policy-for-specific-users-by-using-scoped-policies"></a>Come configurare i criteri di Azure Information Protection per utenti specifici con i criteri con ambito
 
@@ -56,6 +56,9 @@ Se ad esempio si ha un'etichetta denominata **Confidential** nei criteri globali
 3. Specificare un nome e una descrizione per il criterio visibile solo agli amministratori nel portale di Azure. Il nome deve essere univoco nel tenant. Selezionare quindi **specificare gli utenti o i gruppi che ottengono questo criterio**e nei riquadri successivi è possibile cercare e selezionare gli utenti e i gruppi per questo criterio. Le etichette e le impostazioni configurate in questo criterio con ambito verranno applicate solo a tali utenti.
     
     Per motivi di prestazioni, l'appartenenza ai gruppi per i criteri con ambito è [memorizzata nella cache](prepare.md#group-membership-caching-by-azure-information-protection).
+
+    > [!NOTE]
+    > Selezionare un massimo di 200 utenti o gruppi. Se sono necessari più di 200 utenti per ottenere i criteri con ambito, creare un nuovo gruppo, aggiungere utenti rilevanti al gruppo e quindi impostare l'ambito dei criteri sul nuovo gruppo. 
 
 4. A questo punto aggiungere nuove etichette o configurare le impostazioni dei criteri con ambito. I criteri globali vengono sempre applicati per primi, pertanto è possibile integrare i criteri globali con nuove etichette ed eseguire l'override delle impostazioni globali. Ad esempio, i criteri globali potrebbero non avere alcuna etichetta predefinita specificata ed è possibile configurare un'etichetta predefinita diversa in criteri con ambito diversi per reparti specifici.
 

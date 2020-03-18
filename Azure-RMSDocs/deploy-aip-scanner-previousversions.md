@@ -1,10 +1,10 @@
 ---
 title: Distribuire il Azure Information Protection scanner-versioni precedenti
 description: Istruzioni per la distribuzione per le versioni dello scanner Azure Information Protection precedenti alla versione di disponibilità generale corrente.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/28/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 03/16/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.subservice: scanner
 ms.reviewer: demizets
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 986a9cfb4376f17d2a53aa78b512bb8ab16f2243
-ms.sourcegitcommit: b66b249ab5681d02ec3b5af0b820eda262d5976a
+ms.openlocfilehash: 8e1dd6ba7076a62b8b5c65b89fe49a0cb3b4fb8c
+ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "78973255"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79483100"
 ---
 # <a name="deploying-previous-versions-of-the-azure-information-protection-scanner"></a>Distribuzione di versioni precedenti dello scanner Azure Information Protection
 
@@ -424,7 +424,7 @@ Altri fattori che influenzano le prestazioni dello scanner:
 
 - La costruzione di espressioni regex per condizioni personalizzate
     
-    Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. Ad esempio:
+    Per evitare un consumo intenso di memoria e il rischio di timeout (15 minuti per ogni file), rivedere le espressioni regex per assicurarsi che usino criteri di ricerca efficienti. Ad esempio,
     
     - Evitare [quantificatori greedy](https://docs.microsoft.com/dotnet/standard/base-types/quantifiers-in-regular-expressions)
     
