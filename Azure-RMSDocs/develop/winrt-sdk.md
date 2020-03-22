@@ -14,21 +14,23 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: cab28423de31e9d8fe3351f9c20d1c06275fa4c3
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 41ae437f06a3d90f391ead9dc843e86c1b54fcd8
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68790735"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068671"
 ---
 # <a name="windows-store-setup"></a>Installazione per Windows Store
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Le applicazioni Windows Store possono usare Microsoft Rights Management SDK 4.2 per abilitare la protezione integrata delle informazioni nella propria applicazione con Azure Active Directory Rights Management (AAD RM).
 
 Questo argomento illustra come impostare l'ambiente per la creazione di nuove applicazioni personalizzate.
 
 -   [Prerequisiti](#prerequisites)
--   [Facoltativo](#optional)
+-   [Facoltativa](#optional)
 -   [Configurazione dell'ambiente di sviluppo](#configuring-your-development-environment)
 -   [Vedere anche](#see-also)
 
@@ -40,20 +42,20 @@ Nel sistema di sviluppo è necessario disporre del software seguente:
 -   Sistema operativo [Windows 8.1](https://windows.microsoft.com/windows-8/meet)
 -   [Windows SDK per Windows 8.1](https://msdn.microsoft.com/windows/desktop/bg162891.aspx)
 -   Microsoft [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/) o versione successiva o Visual Studio Express 2012, incluso in Windows SDK per Windows 8.0/8.1.
--   Il pacchetto di MS RMS SDK 4.2 per le applicazioni Windows Store. Per ulteriori informazioni, vedere [Introduzione](get-started.md).
+-   Il pacchetto di MS RMS SDK 4.2 per le applicazioni Windows Store. Per altre informazioni, vedere [Introduzione](get-started.md).
 -   Libreria di autenticazione: è consigliabile usare [Azure AD Authentication Library](https://msdn.microsoft.com/library/jj573266.aspx) e altre librerie di autenticazione.
 
-Leggere l'argomento [Novità](release-notes.md) per informazioni sugli aggiornamenti dell'API, indicazioni sul dispositivo e sull'ambiente, note sulla versione e domande frequenti (FAQ).
+Leggere l'argomento relativo alle [novità](release-notes.md) per informazioni sugli aggiornamenti dell'API, indicazioni sul dispositivo e sull'ambiente, note sulla versione e domande frequenti (FAQ).
 
-## <a name="optional"></a>Facoltativo
+## <a name="optional"></a>Facoltativa
 
 La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabile per le operazioni di consumo e protezione per gli sviluppatori che non vogliono creare la propria interfaccia utente personalizzata - [Libreria dell'interfaccia utente per app Windows Store](https://github.com/AzureAD/rms-sdk-ui-for-windowsstore). È inoltre possibile usare un'applicazione di esempio di app Windows Store - [Applicazione di esempio RMS per Windows Store](https://github.com/AzureADSamples/rms-samples-for-windowsstore).
 
 ## <a name="configuring-your-development-environment"></a>Configurazione dell'ambiente di sviluppo
 
 
--   Aprire Visual Studio.
--   Fare clic su **File**, quindi su **Nuovo**e infine su **Progetto**.
+-   Apri Visual Studio.
+-   Fare clic su **File**, quindi su **Nuovo** e infine su **Progetto**.
 -   Nella finestra di dialogo **Nuovo progetto** fare clic su **Visual C\#** e selezionare **Applicazione vuota (Windows)** , quindi fare clic su **OK**.
 
     ![Creare un nuovo progetto](../media/winrtsetup-newproj.png)

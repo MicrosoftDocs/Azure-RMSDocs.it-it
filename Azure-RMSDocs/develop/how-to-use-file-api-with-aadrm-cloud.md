@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 00f056e5e8dae9721933e041a766f72da99bb380
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 47107a9cbe9c7ba941475f83798a323cb4ff74d9
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792232"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068220"
 ---
 # <a name="how-to-enable-your-service-application-to-work-with-cloud-based-rms"></a>Procedura: Consentire all'applicazione di servizio di usare RMS basato su cloud
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Questo argomento descrive i passaggi per la configurazione dell’applicazione di servizio per l’uso di Azure Rights Management. Per altre informazioni, vedere [Requisiti per Azure Rights Management](https://technet.microsoft.com/library/jj585016.aspx).
 
@@ -49,7 +51,7 @@ Per usare l'applicazione di servizio Rights Management Services SDK 2.1 con Azur
 -   La procedura seguente indica come creare un'istanza di una struttura [IPC\_PROMPT\_CTX](https://msdn.microsoft.com/library/hh535278.aspx) con il membro *pcCredential*  ([IPC\_CREDENTIAL](https://msdn.microsoft.com/library/hh535275.aspx)) popolato con le informazioni di connessione ottenute dal servizio Azure Rights Management.
 -   Usare le informazioni ottenute dalla creazione dell'identità del servizio tramite chiave simmetrica (vedere i prerequisiti riportati in precedenza in questo argomento) per impostare i parametri *wszServicePrincipal*, *wszBposTenantId* e *cbKey* quando si crea l'istanza di una struttura [IPC\_CREDENTIAL\_SYMMETRIC\_KEY](https://msdn.microsoft.com/library/dn133062.aspx).
 
-**Nota**: a causa di una condizione esistente con il servizio di individuazione, vengono accettate le credenziali tramite chiave simmetrica solo se provenienti dall'America del Nord, per cui è necessario specificare direttamente l'URL del tenant. Questa operazione viene eseguita tramite il tipo [IPC\_CONNECTION\_INFO](https://msdn.microsoft.com/library/hh535274.aspx) del parametro *pConnectionInfo* in [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) o [IpcGetTemplateIssuerList](https://msdn.microsoft.com/library/hh535266.aspx).
+**Nota**: a causa di una condizione esistente con il servizio di individuazione, vengono accettate le credenziali tramite chiave simmetrica solo se provenienti dall'America del Nord, per cui è necessario specificare direttamente l'URL del tenant. Questa operazione viene eseguita tramite il tipo *IPC*CONNECTION[INFO\_ del parametro \_pConnectionInfo](https://msdn.microsoft.com/library/hh535274.aspx) in [IpcGetTemplateList](https://msdn.microsoft.com/library/hh535267.aspx) o [IpcGetTemplateIssuerList](https://msdn.microsoft.com/library/hh535266.aspx).
 
 ## <a name="generate-a-symmetric-key-and-collect-the-needed-information"></a>Generare una chiave simmetrica e raccogliere le informazioni necessarie
 

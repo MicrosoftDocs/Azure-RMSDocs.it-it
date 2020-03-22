@@ -14,13 +14,15 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 5141730ce75e075a08321e9fea6639848535252d
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: dc52e9cb5fc2fc6a7cb868f4dd1a4bfe2eced78e
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792179"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068557"
 ---
 # <a name="linux-api-reference"></a>Informazioni di riferimento sulle API di Linux
 
-Le informazioni di riferimento sulle API per il supporto per la versione Linux del sistema operativo sono ospitate in Github - [RMS SDK per C++](https://azuread.github.io/rms-sdk-for-cpp/annotated.html). Per ulteriori informazioni, vedere [Introduzione](get-started.md).
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
+
+Le informazioni di riferimento sulle API per il supporto per la versione Linux del sistema operativo sono ospitate in Github - [RMS SDK per C++](https://azuread.github.io/rms-sdk-for-cpp/annotated.html). Per altre informazioni, vedere [Introduzione](get-started.md).

@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: c69e34cce0241a289d75593e4a8a9500f88be433
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 8de5db2af71b16ed60f81a6ec432d0841d125475
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791445"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068559"
 ---
 # <a name="ios-and-os-x-setup"></a>Installazione per iOS e OS X
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Le applicazioni iOS e OS X possono usare Microsoft Rights Management SDK 4.2 per abilitare la protezione integrata delle informazioni nella propria applicazione con Azure Rights Management (Azure RMS).
 
@@ -31,7 +33,7 @@ Questo argomento illustra come impostare l'ambiente per la creazione di nuove ap
 
 
 -   [Prerequisiti](#prerequisites)
--   [Facoltativo](#optional)
+-   [Facoltativa](#optional)
 -   [Configurazione dell'ambiente di sviluppo](#configuring-your-development-environment)
 -   [Vedere anche](#see-also)
 
@@ -54,7 +56,7 @@ Nel sistema di sviluppo si consiglia di disporre del software seguente:
 
 Leggere l'argomento [Novità](release-notes.md) per informazioni sugli aggiornamenti delle API, note sulla versione e domande frequenti (FAQ).
 
-## <a name="optional"></a>Facoltativo
+## <a name="optional"></a>Facoltativa
 
 La libreria dell'interfaccia utente fornisce un'interfaccia utente riutilizzabile per le operazioni di consumo e protezione per gli sviluppatori che non intendono creare un’interfaccia utente personalizzata - [Libreria dell'interfaccia utente e app di esempio per iOS](https://github.com/AzureAD/rms-sdk-ui-for-ios).
 

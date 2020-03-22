@@ -14,21 +14,23 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 8a576565472327f0c090c3168662f16299d4b61f
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 9a876f2dee6f3dcaccbae364d9839ab082146f04
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792659"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068435"
 ---
 # <a name="android-setup"></a>Installazione per Android
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Le applicazioni Android possono usare SDK 4.2 Microsoft Rights Management per abilitare la protezione integrata delle informazioni nelle proprie applicazioni con Azure Active Directory Rights Management (AAD RM).
 
 Questo argomento illustra come impostare l'ambiente per la creazione di nuove applicazioni personalizzate.
 
 -   [Prerequisiti](#prerequisites)
--   [Facoltativo](#optional)
+-   [Facoltativa](#optional)
 -   [Configurazione dell'ambiente di sviluppo](#configuring-your-development-environment)
 -   [Vedere anche](#see-also)
 
@@ -43,7 +45,7 @@ Nel sistema di sviluppo si consiglia di disporre del software seguente:
 
      
 
--   Pacchetto MS RMS SDK 4.2 per Android. Per ulteriori informazioni, vedere [Introduzione](get-started.md).
+-   Pacchetto MS RMS SDK 4.2 per Android. Per altre informazioni, vedere [Introduzione](get-started.md).
 
     Questo SDK consente di sviluppare per Android 4.0.3 (API livello 15) e versioni successive.
 
@@ -57,7 +59,7 @@ Nel sistema di sviluppo si consiglia di disporre del software seguente:
 
 Leggere l'argomento [Novità](release-notes.md) per informazioni sugli aggiornamenti delle API, note sulla versione e domande frequenti (FAQ).
 
-## <a name="optional"></a>Facoltativo
+## <a name="optional"></a>Facoltativa
 
 La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per le operazioni di uso e protezione per gli sviluppatori che non intendono creare la propria interfaccia utente personalizzata - [Libreria dell'interfaccia utente e app di esempio per Android](https://github.com/AzureAD/rms-sdk-ui-for-android).
 
@@ -99,7 +101,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 - Passare alla cartella in cui è stato estratto il file *adrms\_android\_sdk.zip*. Nella cartella "SDK > com > microsoft > rightsmanagement", assicurarsi che i file *.classpath*, *.project* e *project.properties* non siano contrassegnati come di sola lettura.
 - Per fare riferimento all'SDK, è necessario importarlo nell'area di lavoro.
 
-  In Eclipse, fare clic su **File**. Fare clic su **Importa** dal menu **File**. Nella finestra di dialogo **Importa**, selezionare **Android / Codice Android esistente nell'area di lavoro**.
+  In Eclipse, fare clic su **File**. Scegliere **Importa** dal menu **File**. Nella finestra di dialogo **Importa**, selezionare **Android / Codice Android esistente nell'area di lavoro**.
 
   ![Importare l'SDK nell'area di lavoro](../media/Android-setup-07.png)
 
@@ -123,7 +125,7 @@ La libreria dell'interfaccia utente fornisce un'interfaccia utente riusabile per
 
   Per aggiungere le autorizzazioni, fare clic su **Aggiungi** e quindi selezionare **Usa autorizzazioni**.
 
-  ![Aggiungere le autorizzazioni](../media/Android-setup-11d.jpg)
+  ![aggiungere le autorizzazioni](../media/Android-setup-11d.jpg)
 
 - È possibile verificare il passaggio manifesto visualizzando il manifesto nell'editor di testo. Assicurarsi che vengano visualizzate le righe seguenti:
 

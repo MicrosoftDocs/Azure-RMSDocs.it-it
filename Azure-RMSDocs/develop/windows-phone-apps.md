@@ -14,15 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 08981ab13862eed815609eaad4c6733ec205e0a1
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 8c36466511749b6148f58c439702c8cd0f252a64
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792083"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068518"
 ---
 # <a name="windows-phone-setup"></a>Installazione per Windows Phone
 
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Nelle applicazioni Windows Phone è possibile usare Microsoft Rights Management SDK 4.2 per abilitare la protezione integrata delle informazioni nella propria applicazione con Azure Active Directory Rights Management (AAD RM).
 
@@ -40,10 +41,10 @@ Nel sistema di sviluppo è necessario disporre del software seguente:
 -   Sistema operativo [Windows 8.1](https://windows.microsoft.com/windows-8/meet).
 -   [Strumenti di sviluppo (SDK) Windows Phone 8.1](https://developer.microsoft.com/windows/downloads/sdk-archive)
 -   Microsoft [Visual Studio 2012](https://visualstudio.microsoft.com/vs/older-downloads/) o versione successiva o Visual Studio Express 2012, incluso in Windows Phone SDK 8.0/8.1.
--   Pacchetto MS RMS SDK 4.2 per Windows Phone. Per ulteriori informazioni, vedere [Introduzione](get-started.md).
+-   Pacchetto MS RMS SDK 4.2 per Windows Phone. Per altre informazioni, vedere [Introduzione](get-started.md).
 -   Libreria di autenticazione: è consigliabile usare [Azure AD Authentication Library](https://msdn.microsoft.com/library/jj573266.aspx) e altre librerie di autenticazione.
 
-Leggere l'argomento [Novità](release-notes.md) per informazioni sugli aggiornamenti dell'API, indicazioni sul dispositivo e sull'ambiente, note sulla versione e domande frequenti (FAQ).
+Leggere l'argomento relativo alle [novità](release-notes.md) per informazioni sugli aggiornamenti dell'API, indicazioni sul dispositivo e sull'ambiente, note sulla versione e domande frequenti (FAQ).
 
 Esaminare le informazioni contenute nella guida relativa allo [sviluppo per Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/ff402535.aspx) reperibile in Windows Phone Dev Center.
 
@@ -51,7 +52,7 @@ Esaminare le informazioni contenute nella guida relativa allo [sviluppo per Wind
 
 
 -   Aprire *Visual Studio*.
--   Fare clic su **File**. Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.
+-   Fare clic su **File**, Scegliere **Nuovo** dal menu **File**, quindi fare clic su **Progetto**.
 -   Nella finestra di dialogo **Nuovo progetto** selezionare **Visual C\#** , quindi **App vuota (Windows Phone)** e fare clic su **OK**.
 
     ![Creare un nuovo progetto](../media/wpsetup-newproj.png)

@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: eada5335d234b080dcb7be882eddfc4437a59370
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 34e7a531d117daaef54480c027effedb56c97137
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68792225"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068391"
 ---
 # <a name="iosos-x-code-examples"></a>Esempi di codice iOS/OS X
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Questo argomento presenta importanti elementi di codice per la versione iOS/OS X di RMS SDK.
 
@@ -55,7 +57,7 @@ Di seguito sono riportati esempi di codice **Objective C** tratti da un'applicaz
             }];
         }
 
-- **Passaggio 2**: Configurare l’autenticazione usando Active Directory Authentication Library (ADAL).
+- **Passaggio 2**: Configurare l'autenticazione usando Active Directory Authentication Library (ADAL).
 
   **Descrizione**: in questo passaggio viene illustrato l'uso di ADAL per implementare [MSAuthenticationCallback](https://msdn.microsoft.com/library/dn758312.aspx) con parametri di autenticazione di esempio. Per altre informazioni sull'uso di ADAL, vedere Azure AD Authentication Library (ADAL).
 
@@ -155,7 +157,7 @@ Questo scenario inizia con il recupero di un elenco di modelli, [MSTemplateDescr
             }];
         }
 
-### <a name="scenario-open-a-custom-protected-file"></a>Scenario: aprire di un file protetto personalizzato
+### <a name="scenario-open-a-custom-protected-file"></a>Scenario: apertura di un file protetto personalizzato
 
 
 -   **Passaggio 1**: Creare una classe [MSUserPolicy](https://msdn.microsoft.com/library/dn790796.aspx) da *serializedContentPolicy*.

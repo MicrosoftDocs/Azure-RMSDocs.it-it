@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: b86572fe0f981b4c5a93c67553ccd42358f47c16
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: 5d8d1a6cf1950be8abc90180044126d0c984bfb2
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791332"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068379"
 ---
 # <a name="android-code-examples"></a>Esempi di codice Android
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 Questo articolo mostra come scrivere il codice degli elementi per la versione Android di RMS SDK.
 
@@ -359,7 +361,7 @@ Questo scenario inizia con il recupero di un elenco di modelli e la selezione de
     ```
 
 
-### <a name="scenario-open-a-custom-protected-file"></a>Scenario: aprire di un file protetto personalizzato
+### <a name="scenario-open-a-custom-protected-file"></a>Scenario: apertura di un file protetto personalizzato
 
 - **Passaggio 1**: Creare un oggetto[UserPolicy](https://msdn.microsoft.com/library/dn790887.aspx) da *serializedContentPolicy*.
 

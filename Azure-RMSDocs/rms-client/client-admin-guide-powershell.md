@@ -4,7 +4,7 @@ description: Istruzioni e informazioni per amministratori per gestire il client 
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/16/2020
+ms.date: 03/19/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -12,12 +12,12 @@ ms.assetid: 4f9d2db7-ef27-47e6-b2a8-d6c039662d3c
 ms.subservice: v1client
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: f343194884ba299f0a003a975581b90fe423bcf9
-ms.sourcegitcommit: 8c39347d9b7a120014120860fff89c5616641933
+ms.openlocfilehash: ef86511649f16740c4611766103b6985f350fdc9
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79482964"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068369"
 ---
 # <a name="admin-guide-using-powershell-with-the-azure-information-protection-client"></a>Guida dell'amministratore: Uso di PowerShell con il client Azure Information Protection
 
@@ -538,36 +538,47 @@ Dopo aver eseguito il cmdlet, è possibile eseguire i cmdlet di assegnazione di 
     - **Descrizione del consenso dell'utente**: `Allow the application to access the scanner for the signed-in user`
     - **Stato**: **abilitato** (impostazione predefinita)
 
+
 14. Tornare al riquadro **AIPOnBehalfOf-esporre un'API** , chiudere il riquadro.
 
-15. Nel riquadro **registrazioni app** selezionare **+ registrazione nuova applicazione** per creare ora l'applicazione nativa.
+15. Selezionare **autorizzazioni API**.
 
-16. Nel riquadro **registra un'applicazione** specificare le impostazioni seguenti e quindi selezionare **registra**:
+16. Nel riquadro autorizzazioni dell' **API** | **AIPOnBehalfOf** selezionare **+ Aggiungi un'autorizzazione**.
+
+17. Scegliere **gestione di Azure right**, selezionare **autorizzazioni delegate** e quindi selezionare **Crea e accedi a contenuto protetto per gli utenti**.
+
+18. Fare clic su **Aggiungi un'autorizzazione**.
+
+19. Tornare al riquadro **autorizzazioni API** , nella sezione **consenso della concessione** Selezionare Concedi il **consenso dell'amministratore per <your tenant name>** e selezionare **Sì** per la richiesta di conferma.
+
+20. Nel riquadro **registrazioni app** selezionare **+ registrazione nuova applicazione** per creare ora l'applicazione nativa.
+
+21. Nel riquadro **registra un'applicazione** specificare le impostazioni seguenti e quindi selezionare **registra**:
     - **Nome**: `AIPClient`
     - **Tipi di account supportati**: **solo account in questa directory organizzativa**
     - **URI di reindirizzamento (facoltativo)** : **client pubblico (Mobile & desktop)** e `http://localhost`
 
-17. Nel riquadro **AIPClient** , copiare il valore dell' **ID applicazione (client)** . Il valore ha un aspetto simile all'esempio seguente: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
+22. Nel riquadro **AIPClient** , copiare il valore dell' **ID applicazione (client)** . Il valore ha un aspetto simile all'esempio seguente: `8ef1c873-9869-4bb1-9c11-8313f9d7f76f`. 
     
     Questo valore viene usato per il parametro NativeAppId quando si esegue il cmdlet Set-AIPAuthentication. Incollare e salvare il valore per riferimento successivo.
 
-18. Sempre nel riquadro **AIPClient** scegliere **autenticazione**dal menu **Gestisci** .
+23. Sempre nel riquadro **AIPClient** scegliere **autenticazione**dal menu **Gestisci** .
 
-19. Nel riquadro **AIPClient-Authentication** specificare gli elementi seguenti e quindi selezionare Save ( **Salva**):
+24. Nel riquadro **AIPClient-Authentication** specificare gli elementi seguenti e quindi selezionare Save ( **Salva**):
     - Nella sezione **Impostazioni avanzate** selezionare **token ID**.
     - Nella sezione **tipo di client predefinito** selezionare **Sì**.
 
-20. Sempre nel riquadro **AIPClient-Authentication** scegliere **autorizzazioni API**dal menu **Gestisci** .
+25. Sempre nel riquadro **AIPClient-Authentication** scegliere **autorizzazioni API**dal menu **Gestisci** .
 
-21. Nel riquadro **AIPClient-autorizzazioni** selezionare **+ Aggiungi un'autorizzazione**.
+26. Nel riquadro **AIPClient-autorizzazioni** selezionare **+ Aggiungi un'autorizzazione**.
 
-22. Nel riquadro **autorizzazioni API richiesta** selezionare **API personali**.
+27. Nel riquadro **autorizzazioni API richiesta** selezionare **API personali**.
 
-23. Nella sezione **selezionare un'API** selezionare **APIOnBehalfOf**, quindi selezionare la casella di controllo per la **rappresentazione utente**come autorizzazione. Selezionare **Aggiungi autorizzazioni**. 
+28. Nella sezione **selezionare un'API** selezionare **APIOnBehalfOf**, quindi selezionare la casella di controllo per la **rappresentazione utente**come autorizzazione. Selezionare **Aggiungi autorizzazioni**. 
 
-24. Tornare al riquadro **autorizzazioni API** , nella sezione **consenso della concessione** , selezionare **concedi il consenso dell'amministratore per \<*il nome del tenant*>** e selezionare **Sì** per la richiesta di conferma.
+29. Tornare al riquadro **autorizzazioni API** , nella sezione **consenso della concessione** , selezionare **concedi il consenso dell'amministratore per \<*il nome del tenant*>** e selezionare **Sì** per la richiesta di conferma.
 
-La configurazione delle due app è stata completata e i valori necessari per eseguire [Set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con i parametri *WebAppId*, *WebAppKey* e *NativeAppId* sono disponibili. Dagli esempi seguenti:
+A questo punto è stata completata la configurazione delle due app e sono disponibili i valori necessari per eseguire [set-AIPAuthentication](/powershell/module/azureinformationprotection/set-aipauthentication) con i parametri *webappid*, *WebAppKey* e *NativeAppId*. Dagli esempi seguenti:
 
 `Set-AIPAuthentication -WebAppId "57c3c1c3-abf9-404e-8b2b-4652836c8c66" -WebAppKey "+LBkMvddz?WrlNCK5v0e6_=meM59sSAn" -NativeAppId "8ef1c873-9869-4bb1-9c11-8313f9d7f76f"`
 

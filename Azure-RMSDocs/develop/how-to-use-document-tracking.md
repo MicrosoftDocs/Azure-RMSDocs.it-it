@@ -14,14 +14,16 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: b0a888a87da2dcfdd24703c821abe36c0135ca7f
-ms.sourcegitcommit: 474cd033de025bab280cb7a9721ac7ffc2d60b55
+ms.openlocfilehash: c29dd3c364cdc1df506494819e5d0b5abe1f5454
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "68791054"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068492"
 ---
 # <a name="how-to-use-document-tracking"></a>Procedura: Usare il rilevamento dei documenti
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 L'uso della funzionalità di rilevamento dei documenti richiede la comprensione di alcuni aspetti semplici relativi alla gestione dei metadati associati e alla registrazione con il servizio.
 

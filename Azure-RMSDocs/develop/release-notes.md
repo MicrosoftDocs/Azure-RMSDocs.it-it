@@ -12,14 +12,16 @@ ms.assetid: 4fa1c686-b00b-4734-9abb-141ce582a6af
 audience: developer
 ms.reviewer: kartikk
 ms.suite: ems
-ms.openlocfilehash: a4cfb05e45f1c3726bd5722c2c084a332eb5ce03
-ms.sourcegitcommit: d3169f307c9d8500dfd97ad65588db9bed111264
+ms.openlocfilehash: 2a3ef40991e2ba4fd5bac9c9eca947f269a77f47
+ms.sourcegitcommit: 5390bd1e0e4851b81a59094e80202f0761b7810f
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75303622"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80068314"
 ---
 # <a name="whats-new-and-release-notes"></a>Novità e note sulla versione
+
+[!INCLUDE [deprecation notice](../includes/deprecation-warning.md)]
 
 ## <a name="whats-new"></a>Novità
 
@@ -55,7 +57,7 @@ L'aggiornamento della versione di luglio comprende l'incremento del numero di re
 - **Supporto per l'autenticazione moderna**: consente l'accesso basato su Active Directory Authentication Library (ADAL) alle app con il supporto predefinito per RMS. Abilita funzionalità di accesso come Multi-Factor Authentication (MFA), provider di identità di terze parti basati su SAML con applicazioni client RMS, autenticazione basata su smart card e certificati ed elimina la necessità per le app con il supporto predefinito per RMS di usare il protocollo di autenticazione di base.
 - **Supporto del rilevamento dei documenti**: ora gli sviluppatori possono abilitare il rilevamento di documenti quando attivano la protezione dei documenti nelle app
 - Miglioramenti delle prestazioni
-- Correzione di bug
+- Correzioni di bug
 
 ### <a name="december-2015-update"></a>Aggiornamento di dicembre 2015
 
@@ -81,7 +83,7 @@ Con questa versione, è ora disponibile la versione 4.2 SDK RMS per i dispositiv
 
     [Metodo sincrono UserPolicy.acquire](https://msdn.microsoft.com/library/mt631384.aspx)
 
-    [Metodo sincrono UserPolicy.create (PolicyDescriptor…)** ](https://msdn.microsoft.com/library/mt631385.aspx)
+    [Metodo sincrono UserPolicy.create (PolicyDescriptor…)**](https://msdn.microsoft.com/library/mt631385.aspx)
 
     [Metodo sincrono UserPolicy.create (TemplateDescriptor...)](https://msdn.microsoft.com/library/mt631386.aspx)
 
@@ -95,7 +97,7 @@ Questa versione aggiunge gli aggiornamenti seguenti:
 
 -   SDK 4.1 RMS per piattaforme Linux
 
-    Per ulteriori informazioni, vedere [Introduzione](get-started.md).
+    Per altre informazioni, vedere [Introduzione](get-started.md).
 
 ### <a name="may-2015-update---adds-logging-control"></a>Aggiornamento di maggio 2015: aggiunta del controllo di registrazione
 
@@ -143,7 +145,7 @@ Questa sezione descrive le informazioni sulle versioni correnti e precedenti di 
 
 -   **Supporto per AD RMS**: gli amministratori IT possono usare le app con abilitazione per RMS sui dispositivi mobili con le nuove estensioni del dispositivo mobile del server AD RMS disponibili.
 -   **Uso offline**: gli utenti finali possono accedere ai dati protetti tramite RMS offline.
--   **Autenticazione separata**: gli sviluppatori possono usare la propria libreria di autenticazione per Azure RMS e AD RMS (o usare [Azure AD Authentication Library (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx) consigliata).
+-   **Autenticazione separata**: gli sviluppatori possono usare la propria libreria di autenticazione per Azure RMS e AD RMS, o usare [Azure AD Authentication Library (ADAL)](https://MSDN.Microsoft.Com/library/jj573266.aspx), che è la scelta più consigliata.
 -   **Interfaccia utente separata**: gli sviluppatori possono compilare la propria interfaccia utente per proteggere e usare documenti protetti RMS.
 -   **API riprogettata**: gli sviluppatori possono ora sfruttare una API di crittografia e decrittografia diretta e trasparente che offre comportamenti RMS ed esperienza utente coerenti con sforzo minimo.
 
