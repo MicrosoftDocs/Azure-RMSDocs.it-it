@@ -4,7 +4,7 @@ description: Informazioni sulla personalizzazione del client di Azure Informatio
 author: mlottner
 ms.author: mlottner
 manager: rkarlin
-ms.date: 03/11/2020
+ms.date: 03/23/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: v2client
 ms.reviewer: maayan
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 76109514c88b90826d2f258f86f2bc97dc7cbce1
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: d28386d43df47ff0aaacf039d6649e622077b6ed
+ms.sourcegitcommit: f7053f57363d50f236e16732b4be09744e00d29d
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404947"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80138318"
 ---
 # <a name="admin-guide-custom-configurations-for-the-azure-information-protection-unified-labeling-client"></a>Guida dell'amministratore: configurazioni personalizzate per il client di Azure Information Protection Unified Labeling
 
@@ -302,158 +302,8 @@ Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "gl
 
 ## <a name="remove-headers-and-footers-from-other-labeling-solutions"></a>Rimuovere intestazioni e piè di pagina da altre soluzioni di assegnazione etichette
 
-Questa configurazione USA [le impostazioni avanzate](#how-to-configure-advanced-settings-for-the-client-by-using-office-365-security--compliance-center-powershell) dei criteri che è necessario configurare usando Office 365 Centro sicurezza e conformità PowerShell.
-
-Esistono due metodi che possono essere usati per rimuovere le classificazioni da altre soluzioni di assegnazione di etichette. Il primo metodo rimuove qualsiasi forma da documenti di Word in cui il nome della forma corrisponde al nome definito nella proprietà avanzata **WordShapeNameToRemove**, il secondo metodo consente di rimuovere o sostituire intestazioni o piè di pagina basati su testo da documenti di Word, Excel e PowerPoint come definito nella proprietà avanzata **RemoveExternalContentMarkingInApp** . 
-
-### <a name="use-the-wordshapenametoremove-advanced-property"></a>Usare la proprietà avanzata WordShapeNameToRemove
-
-*La proprietà avanzata **WordShapeNameToRemove** è supportata dalla versione 2.6.101.0 e successive*
-
-Questa impostazione consente di rimuovere o sostituire etichette basate su forme da documenti di Word quando tali contrassegni visivi sono stati applicati da un'altra soluzione di assegnazione di etichette. Ad esempio, la forma contiene il nome di un'etichetta precedente a cui è stata eseguita la migrazione in etichette di riservatezza per usare un nuovo nome di etichetta e la relativa forma.
-
-Per usare questa proprietà avanzata, è necessario trovare il nome della forma nel documento di Word e quindi definirli nell'elenco delle proprietà avanzate **WordShapeNameToRemove** di forme. Il servizio rimuoverà qualsiasi forma in Word che inizia con un nome definito nell'elenco di forme in questa proprietà avanzata.
-
-Evitare di rimuovere le forme che contengono il testo che si desidera ignorare, definendo il nome di tutte le forme da rimuovere ed evitando di controllare il testo in tutte le forme, ovvero un processo che richiede un utilizzo intensivo delle risorse.
-
-Se non si specificano le forme parola in questa impostazione aggiuntiva di proprietà avanzata e Word viene incluso nel valore della chiave **RemoveExternalContentMarkingInApp** , verranno controllate tutte le forme per il testo specificato nel valore **ExternalContentMarkingToRemove** . 
-
-Per trovare il nome della forma che si sta utilizzando e si desidera escludere:
-
-1. In Word visualizzare il riquadro di **selezione** : **scheda Home** > gruppo di **modifica** > **selezionare** l'opzione > riquadro di **selezione**.
-
-2. Selezionare la forma nella pagina che si desidera contrassegnare per la rimozione. Il nome della forma contrassegnata è ora evidenziato nel riquadro di **selezione** .
-
-Usare il nome della forma per specificare un valore stringa per la chiave * * * * WordShapeNameToRemove * * * *. 
-
-Esempio: il nome della forma è **DC**. Per rimuovere la forma con questo nome, specificare il valore: `dc`.
-
-- Chiave: **WordShapeNameToRemove**
-
-- Valore: \<**nome della forma Word**> 
-
-Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{WordShapeNameToRemove="dc"}
-
-Quando si dispone di più di una forma di parola da rimuovere, specificare tutti i valori disponibili per la rimozione delle forme.
-
-
-### <a name="use-the-removeexternalcontentmarkinginapp-advanced-property"></a>Usare la proprietà avanzata RemoveExternalContentMarkingInApp
-Questa impostazione consente di rimuovere o sostituire intestazioni o piè di pagina basati su testo da documenti quando tali contrassegni visivi sono stati applicati da un'altra soluzione di assegnazione di etichette. Il piè di pagina precedente, ad esempio, contiene il nome di una vecchia etichetta a cui è stata eseguita la migrazione in etichette di riservatezza per usare un nuovo nome di etichetta e il relativo piè di pagina.
-
-Quando il client di etichettatura unificata ottiene questa configurazione nel criterio, le intestazioni e i piè di pagina precedenti vengono rimossi o sostituiti quando il documento viene aperto nell'app di Office ed è applicata qualsiasi etichetta di riservatezza al documento.
-
-Questa configurazione non è supportata per Outlook e tenere presente che quando viene usata con Word, Excel e PowerPoint, può influire negativamente sulle prestazioni di queste app per gli utenti. La configurazione consente di definire le impostazioni per ogni applicazione, ad esempio la ricerca di testo nelle intestazioni e nei piè di pagina di documenti di Word, ma non nei fogli di calcolo di Excel o nelle presentazioni di PowerPoint.
-
-Poiché la corrispondenza dei criteri influiscono sulle prestazioni degli utenti, è consigliabile limitare i tipi di applicazioni di Office (**W**Ord, E**X**cel, **P**owerPoint) solo a quelli che devono essere cercati.
-
-Per i criteri etichetta selezionati specificare le stringhe seguenti:
-
-- Chiave: **RemoveExternalContentMarkingInApp**
-
-- Valore: \<**tipi di applicazioni di Office WXP**> 
-
-Esempi:
-
-- Per eseguire la ricerca solo in documenti di Word, specificare **W**.
-
-- Per eseguire la ricerca in documenti di Word e presentazioni di PowerPoint, specificare **WP**.
-
-Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInApp="WX"}
-
-Sarà necessaria almeno un'altra impostazione client avanzata, **ExternalContentMarkingToRemove**, per specificare il contenuto dell'intestazione o del piè di pagina e il modo in cui rimuoverlo o sostituirlo.
-
-### <a name="how-to-configure-externalcontentmarkingtoremove"></a>Come configurare ExternalContentMarkingToRemove
-
-Quando si specifica il valore stringa per la chiave **ExternalContentMarkingToRemove**, sono disponibili tre opzioni che usano le espressioni regolari:
-
-- Corrispondenza parziale per rimuovere tutto il contenuto dell'intestazione o del piè di pagina.
-    
-    Esempio: le intestazioni o i piè di pagina contengono la stringa **TEXT TO REMOVE**. Per rimuovere completamente le intestazioni o i piè di pagina, specificare il valore: `*TEXT*`.
-
-- Corrispondenza completa per rimuovere solo determinate parole nell'intestazione o nel piè di pagina.
-    
-    Esempio: le intestazioni o i piè di pagina contengono la stringa **TEXT TO REMOVE**. Per rimuovere solo la parola **TEXT**, lasciando la stringa **TO REMOVE** nell'intestazione o nel piè di pagina, specificare il valore: `TEXT `.
-
-- Corrispondenza completa per rimuovere tutto il contenuto dell'intestazione o del piè di pagina.
-    
-    Esempio: le intestazioni o i piè di pagina contengono la stringa **TEXT TO REMOVE**. Per rimuovere le intestazioni o i piè di pagina che contengono esattamente questa stringa, specificare il valore: `^TEXT TO REMOVE$`.
-    
-
-I criteri di ricerca per la stringa specificata non fanno distinzione tra maiuscole e minuscole. La lunghezza massima della stringa è di 255 caratteri e non può contenere spazi vuoti. 
-
-Poiché alcuni documenti potrebbero includere caratteri invisibili o tipi diversi di spazi o tabulazioni, la stringa specificata per una frase potrebbe non essere rilevata. Quando possibile, specificare una singola parola distintiva per il valore e assicurarsi di testare i risultati prima della distribuzione nell'ambiente di produzione.
-
-Per gli stessi criteri di etichetta specificare le stringhe seguenti:
-
-- Chiave: **ExternalContentMarkingToRemove**
-
-- Valore: \<**stringa da confrontare, definita come espressione regolare**> 
-
-Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*TEXT*"}
-
-#### <a name="multiline-headers-or-footers"></a>Intestazioni o piè di pagina su più righe
-
-Se il testo di un'intestazione o un piè di pagina è su più righe, creare una chiave e un valore per ogni riga. Si supponga, ad esempio, di avere il piè di pagina seguente con due righe:
-
-**The file is classified as Confidential**
-
-**Label applied manually**
-
-Per rimuovere il piè di pagina su più righe, creare le due voci seguenti per gli stessi criteri di etichetta:
-
-- Chiave: **ExternalContentMarkingToRemove**
-
-- Valore chiave 1: **\*Confidential***
-
-- Valore chiave 2: **\*Label applied*** 
-
-Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{ExternalContentMarkingToRemove="*Confidential*,*Label applied*"}
-
-
-#### <a name="optimization-for-powerpoint"></a>Ottimizzazione per PowerPoint
-
-I piè di pagina in PowerPoint vengono implementati come forme. Per evitare la rimozione di forme che contengono il testo specificato ma non sono intestazioni o piè di pagina, usare un'impostazione client avanzata aggiuntiva denominata **PowerPointShapeNameToRemove**. È consigliabile usare questa impostazione anche per evitare di controllare il testo in tutte le forme, essendo un processo a elevato utilizzo di risorse.
-
-Se non si specifica questa impostazione client avanzata aggiuntiva e PowerPoint è incluso nel valore della chiave **RemoveExternalContentMarkingInApp**, il testo specificato nel valore **ExternalContentMarkingToRemove** verrà ricercato in tutte le forme. 
-
-Per trovare il nome della forma usata come intestazione o piè di pagina:
-
-1. In PowerPoint visualizzare il riquadro **Selezione**: scheda **Formato** > gruppo **Disponi** > **Riquadro di selezione**.
-
-2. Selezionare la forma sulla diapositiva contenente l'intestazione o il piè di pagina. Il nome della forma selezionata viene evidenziato nel riquadro **Selezione**.
-
-Usare il nome della forma per specificare un valore stringa per la chiave **PowerPointShapeNameToRemove**. 
-
-Esempio: il nome della forma è **fc**. Per rimuovere la forma con questo nome, specificare il valore: `fc`.
-
-- Chiave: **PowerPointShapeNameToRemove**
-
-- Valore: \<**nome delle forma di PowerPoint**> 
-
-Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{PowerPointShapeNameToRemove="fc"}
-
-Quando si dispone di più di una forma di PowerPoint da rimuovere, specificare tutti i valori disponibili per le forme da rimuovere.
-
-Per impostazione predefinita, il testo delle intestazioni e dei piè di pagina viene cercato solo negli schemi diapositiva. Per estendere la ricerca a tutte le diapositive, che è un processo con un utilizzo maggiore di risorse, usare un'impostazione client avanzata aggiuntiva denominata **RemoveExternalContentMarkingInAllSlides**:
-
-- Chiave: **RemoveExternalContentMarkingInAllSlides**
-
-- Valore: **True**
-
-Esempio di comando di PowerShell, in cui il criterio etichetta è denominato "globale":
-
-    Set-LabelPolicy -Identity Global -AdvancedSettings @{RemoveExternalContentMarkingInAllSlides="True"}
-
+> [!NOTE]
+> Questa configurazione presenta attualmente un limite noto e verrà rilasciata in una versione futura. 
 
 ## <a name="disable-custom-permissions-in-file-explorer"></a>Disabilitare le autorizzazioni personalizzate in Esplora file
 
