@@ -12,12 +12,12 @@ audience: developer
 ms.reviewer: shubhamp
 ms.suite: ems
 ms.custom: dev
-ms.openlocfilehash: 7a590457f04daf57bd8143883a6a29c9dd0e7219
-ms.sourcegitcommit: e36c2dba68caac6e3d2b094bd38a67758665ca76
+ms.openlocfilehash: 81c1ae66ebe1580255469c7008996ea633ca358d
+ms.sourcegitcommit: 005307a9a2d51f230f65a902325bac0a7eff29fb
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/09/2020
-ms.locfileid: "78934440"
+ms.lasthandoff: 03/28/2020
+ms.locfileid: "80375603"
 ---
 # <a name="rms-sdk-42-deprecation-notice"></a>RMS SDK 4,2-avviso di deprecazione 
 
@@ -33,7 +33,7 @@ Le versioni precedenti del RMS SDK usano l'aggiunta di certificati per garantire
 
 I browser moderni usano i registri di trasparenza dei certificati per verificare che i certificati siano stati rilasciati ai proprietari di dominio legittimi e che i certificati vengano emessi da autorità di certificazione radice attendibili.  
 
-Per supportare al meglio i browser moderni, il 15 settembre 2020, Microsoft aggiornerà il certificato per https://api.aadrm.com a un nuovo certificato emesso da un'autorità di certificazione radice attendibile a livello globale che segnala i certificati emessi ai log di trasparenza certificati attendibili dai browser moderni. Al termine di questa modifica, le versioni legacy di RMS SDK il tentativo di eseguire l'aggiunta del certificato al certificato radice previsto non riuscirà a trovare il certificato e non riuscirà a connettersi.  
+Per supportare al meglio i browser moderni, il 15 settembre 2020, Microsoft aggiornerà il certificato per `https://api.aadrm.com` a un nuovo certificato emesso da un'autorità di certificazione radice attendibile a livello globale che segnala i certificati emessi ai log di trasparenza certificati attendibili dai browser moderni. Al termine di questa modifica, le versioni legacy di RMS SDK il tentativo di eseguire l'aggiunta del certificato al certificato radice previsto non riuscirà a trovare il certificato e non riuscirà a connettersi.  
 
 ## <a name="client-impact"></a>Effetto client 
 
