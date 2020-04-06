@@ -1,10 +1,10 @@
 ---
 title: 'Eseguire la migrazione da AD RMS ad Azure Information Protection: fase 3'
 description: Fase 3 della migrazione da AD RMS ad Azure Information Protection, che illustra il passaggio 7 della migrazione da AD RMS ad Azure Information Protection.
-author: cabailey
-ms.author: cabailey
+author: mlottner
+ms.author: mlottner
 manager: rkarlin
-ms.date: 12/06/2019
+ms.date: 04/05/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: b2c206885b2449edc73948a3c0e3c815634c93de
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 329fa5594a1bf58b4acbeae10cda8202f35df4c6
+ms.sourcegitcommit: c0fd00b057d155d6f2ed3a3ef5942d593b5be5c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79405032"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80670245"
 ---
 # <a name="migration-phase-3---client-side-configuration"></a>Fase 3 della migrazione: configurazione lato client
 
@@ -93,7 +93,7 @@ Questo metodo è adatto solo per i client Windows che eseguono app di Office 365
 
 ## <a name="client-reconfiguration-by-using-registry-edits"></a>Riconfigurazione di client tramite modifiche del Registro di sistema
 
-Questo metodo è adatto per tutti i client Windows e deve essere usato se non eseguono app di Office 365, o Office 2016 (o versione successiva). Questo metodo usa due script di migrazione per riconfigurare i client AD RMS:
+Questo metodo è adatto per tutti i client Windows e deve essere usato se non eseguono app di Office 365 o Office 2016 (o versione successiva). Questo metodo usa due script di migrazione per riconfigurare i client AD RMS:
 
 - Migrate-Client.cmd
 
@@ -131,7 +131,7 @@ Se non è possibile migrare tutti i client di Windows in una sola volta, eseguir
 
 1. Tornare agli script di migrazione **Migrate-Client.cmd** e **Migrate-User.cmd** che sono stati precedentemente estratti durante il download di questi script nella [fase di preparazione](migrate-from-ad-rms-phase1.md#step-2-prepare-for-client-migration).
 
-2. Seguire le istruzioni in **Migrate-Client.cmd** per modificare lo script in modo che contenga l'URL del servizio Azure Rights Management del tenant e i nomi server dell'URL di gestione licenze Extranet del cluster AD RMS e dell'URL di gestione licenze Intranet. A questo punto incrementare la versione dello script, come spiegato in precedenza. Per tener traccia delle versioni degli script, è consigliabile usare la data corrente nel formato seguente: AAAAMMGG
+2. Seguire le istruzioni in **Migrate-Client.cmd** per modificare lo script in modo che contenga l'URL del servizio Azure Rights Management del tenant e i nomi server dell'URL di gestione licenze Extranet del cluster AD RMS e dell'URL di gestione licenze Intranet. A questo punto incrementare la versione dello script, come spiegato in precedenza. Per tenere traccia delle versioni degli script, è consigliabile usare la data odierna nel formato seguente: AAAAMMGG
     
    > [!IMPORTANT]
    > Come in precedenza, prestare attenzione a non introdurre spazi aggiuntivi prima o dopo gli indirizzi.

@@ -1,10 +1,10 @@
 ---
 title: Eseguire la migrazione da AD RMS ad Azure Information Protection - Fase 2
 description: Fase 2 della migrazione da AD RMS ad Azure Information Protection, che include i passaggi da 4 a 6 della migrazione da AD RMS ad Azure Information Protection.
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/03/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: dd6e307283e010409b5359ff13a229df12b4daf5
-ms.sourcegitcommit: 2917e822a5d1b21bf465f2cb93cfe46937b1faa7
+ms.openlocfilehash: 1fbe3fd2f91b63e7111b4de92e95ec4cad20fa4f
+ms.sourcegitcommit: c0fd00b057d155d6f2ed3a3ef5942d593b5be5c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79404046"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80670153"
 ---
 # <a name="migration-phase-2---server-side-configuration-for-ad-rms"></a>Fase 2 della migrazione: configurazione lato server per AD RMS
 
@@ -54,7 +54,7 @@ Eseguire le operazioni seguenti in tutti i cluster AD RMS, per tutti i domini di
 
     - Non selezionare la casella di controllo per salvare il file di dominio trusted in RMS versione 1.0.
 
-Dopo l'esportazione di tutti i domini di pubblicazione trusted, sarà possibile avviare la procedura di importazione dei dati in Azure Information Protection.
+Dopo aver esportato tutti i domini di pubblicazione trusted, è possibile avviare la procedura per importare i dati in Azure Information Protection.
 
 Si noti che i domini di pubblicazione trusted includono le chiavi del certificato concessore licenze server per decrittografare i file protetti in precedenza, quindi è importante esportare (e successivamente importare in Azure) tutti i domini di pubblicazione trusted e non solo quello attualmente attivo.
 
@@ -77,7 +77,7 @@ La distribuzione corrente di AD RMS usa una delle seguenti configurazioni per la
 > [!NOTE]
 > Per altre informazioni sull'uso di moduli di protezione hardware con AD RMS, vedere [Uso di AD RMS con moduli di protezione hardware](https://technet.microsoft.com/library/jj651024.aspx).
 
-Per la topologia della chiave del tenant di Azure Information Protection esistono due opzioni: la chiave viene gestita da Microsoft (**gestione di Microsoft**) oppure dall'utente (**gestione del cliente**) in Insieme di credenziali delle chiavi di Azure. Quando la chiave del tenant di Azure Information Protection è gestita dall'utente, viene a volte definita BYOK (Bring Your Own Key). Per altre informazioni, vedere l'articolo [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md).
+Per la topologia della chiave del tenant di Azure Information Protection esistono due opzioni: la chiave viene gestita da Microsoft (**gestione di Microsoft**) oppure dall'utente (**gestione del cliente**) in Insieme di credenziali delle chiavi di Azure. Quando si gestisce la propria chiave del tenant Azure Information Protection, viene a volte definita "Bring your own key" (BYOK). Per altre informazioni, vedere l'articolo [Pianificazione e implementazione della chiave del tenant di Azure Information Protection](plan-implement-tenant-key.md).
 
 Usare la tabella seguente per identificare la procedura da eseguire per la migrazione. 
 

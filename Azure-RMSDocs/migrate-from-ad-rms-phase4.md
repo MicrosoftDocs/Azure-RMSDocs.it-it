@@ -1,10 +1,10 @@
 ---
 title: 'Eseguire la migrazione da AD RMS ad Azure Information Protection: Fase 4'
 description: Fase 4 della migrazione da AD RMS ad Azure Information Protection che include i passaggi 8 e 9 della migrazione da AD RMS ad Azure Information Protection
-author: cabailey
-ms.author: cabailey
-manager: barbkess
-ms.date: 11/30/2019
+author: mlottner
+ms.author: mlottner
+manager: rkarlin
+ms.date: 04/02/2020
 ms.topic: conceptual
 ms.collection: M365-security-compliance
 ms.service: information-protection
@@ -13,12 +13,12 @@ ms.subservice: migration
 ms.reviewer: esaggese
 ms.suite: ems
 ms.custom: admin
-ms.openlocfilehash: 61a17f9d4b80dcc5ada82adeab4e215fc17b0963
-ms.sourcegitcommit: c20c7f114ae58ed6966785d8772d0bf1c1d39cce
+ms.openlocfilehash: b17f87f569b613a1583b82060b05bcbdeb943284
+ms.sourcegitcommit: c0fd00b057d155d6f2ed3a3ef5942d593b5be5c9
 ms.translationtype: MT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/08/2019
-ms.locfileid: "74934671"
+ms.lasthandoff: 04/05/2020
+ms.locfileid: "80670213"
 ---
 # <a name="migration-phase-4---supporting-services-configuration"></a>Fase 4 della migrazione: configurazione dei servizi di supporto
 
@@ -34,7 +34,7 @@ Usare le informazioni seguenti per la fase 4 della migrazione da AD RMS ad Azure
 
 Indipendentemente dalla topologia di chiave del tenant di Azure Information Protection scelta, eseguire le operazioni seguenti:
 
-1. Per decrittografare i messaggi di posta elettronica protetti da AD RMS, Exchange Online deve sapere che l'URL di AD RMS per il cluster corrisponde alla chiave disponibile nel tenant. Questa operazione viene eseguita con il record DNS SRV per il cluster di AD RMS che viene usato anche per riconfigurare i client di Office per l'uso di Azure Information Protection. Se non è stato creato il record DNS SRV per la riconfigurazione dei client nel passaggio 7, è possibile creare ora questo record per il supporto di Exchange Online. [Istruzioni](migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection)
+1. Per consentire a Exchange Online di decrittografare i messaggi di posta elettronica protetti da AD RMS, è necessario che l'URL del AD RMS per il cluster corrisponda alla chiave disponibile nel tenant. Questa operazione viene eseguita con il record DNS SRV per il cluster di AD RMS che viene usato anche per riconfigurare i client di Office per l'uso di Azure Information Protection. Se non è stato creato il record DNS SRV per la riconfigurazione dei client nel passaggio 7, è possibile creare ora questo record per il supporto di Exchange Online. [Istruzioni](migrate-from-ad-rms-phase3.md#client-reconfiguration-by-using-dns-redirection)
     
     Quando questo record DNS è applicato, gli utenti che usano Outlook nei client di posta elettronica Web e per dispositivi mobili potranno visualizzare i messaggi di posta elettronica protetti da AD RMS in tali app ed Exchange potrà usare la chiave importata da AD RMS per decrittografare, indicizzare, registrare e proteggere il contenuto protetto da AD RMS.  
 
@@ -46,7 +46,7 @@ Indipendentemente dalla topologia di chiave del tenant di Azure Information Prot
     
     - Se AzureRMSLicensingEnabled è impostato su **False**, eseguire `Set-IRMConfiguration -AzureRMSLicensingEnabled $true` e quindi seguire i passaggi per la verifica descritti in [Set up new Office 365 Message Encryption capabilities built on top of Azure Information Protection](https://support.office.com/article/7ff0c040-b25c-4378-9904-b1b50210d00e) (Impostare le nuove funzionalità di Office 365 Message Encryption basate su Azure Information Protection) per verificare che Exchange Online sia pronto per usare il servizio Azure Rights Management. 
 
-## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>Passaggio 9: Configurare l'integrazione IRM per Exchange Server e SharePoint Server
+## <a name="step-9-configure-irm-integration-for-exchange-server-and-sharepoint-server"></a>Passaggio 9. Configurare l'integrazione IRM per Exchange Server e SharePoint Server
 
 Se è stata usata la funzionalità Information Rights Management (IRM) di Exchange Server o di SharePoint Server con AD RMS, è necessario distribuire il connettore di Rights Management (RMS), che funge da interfaccia di comunicazione (inoltro) tra i server locali e il servizio di protezione per Azure Information Protection.
 
@@ -103,11 +103,11 @@ Usare le istruzioni incluse nell'articolo [Distribuzione del connettore di Azure
 
 1.  Assicurarsi che non ci siano documenti estratti da librerie protetti da RMS. In tal caso, non saranno più accessibili alla fine di questa procedura.
 
-2.  Nel sito Web di Amministrazione centrale SharePoint, nella sezione **Avvio veloce** fare clic su **Sicurezza**.
+2.  Nella sezione **Avvio veloce** del sito Web Amministrazione centrale SharePoint fare clic su **Sicurezza**.
 
-3.  Nella pagina **Sicurezza** , nella sezione **Criteri informazioni** fare clic su **Configura Information Rights Management**.
+3.  Nella pagina **Sicurezza**, nella sezione **Criteri informazioni** fare clic su **Configura Information Rights Management**.
 
-4.  Nella pagina **Information Rights Management** , nella sezione **Information Rights Management** selezionare **Non utilizzare IRM in questo server**, quindi fare clic su **OK**.
+4.  Nella pagina **Information Rights Management**, nella sezione **Information Rights Management** selezionare **Non utilizzare IRM in questo server**, quindi fare clic su **OK**.
 
 5.  In ogni computer che esegue SharePoint Server eliminare il contenuto della cartella \ProgramData\Microsoft\MSIPC\Server\\<*SID dell'account che esegue SharePoint Server>* .
 
