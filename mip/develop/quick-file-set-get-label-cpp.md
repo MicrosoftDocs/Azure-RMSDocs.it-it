@@ -8,13 +8,13 @@ ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 6923bdf83f76a3e2a30e49bae27e9f7be963a623
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "75556028"
 ---
-# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Guida introduttiva: Impostare e ottenere un'etichetta di riservatezza (C++)
+# <a name="quickstart-set-and-get-a-sensitivity-label-c"></a>Avvio rapido: Impostare e ottenere un'etichetta di riservatezza (C++)
 
 Questo Avvio rapido illustra come usare altre API dei file di MIP. Con una delle etichette di riservatezza elencate nell'Avvio rapido precedente, si usa un gestore di file per impostare/ottenere l'etichetta su un file. La classe del gestore di file dispone di varie operazioni per l'impostazione e l'ottenimento di etichette o della protezione per i tipi di file supportati.
 
@@ -23,7 +23,7 @@ Questo Avvio rapido illustra come usare altre API dei file di MIP. Con una delle
 Se non è già stato fatto, completare i prerequisiti seguenti prima di continuare:
 
 - In primo luogo completare [Avvio rapido: Elencare le etichette di riservatezza (C++)](quick-file-list-labels-cpp.md), che crea una soluzione Visual Studio iniziale, per creare un elenco delle etichette di riservatezza di un'organizzazione. Il presente Avvio rapido "Impostare e ottenere un'etichetta di riservatezza" è basato su quello precedente.
-- Facoltativamente: rivedere i concetti esposti in [Gestori di file in MIP SDK](concept-handler-file-cpp.md).
+- Facoltativo: rivedere i concetti esposti in [File handlers in the MIP SDK](concept-handler-file-cpp.md) (Gestori file nel SDK MIP).
 
 ## <a name="implement-an-observer-class-to-monitor-the-file-handler-object"></a>Implementare una classe observer per monitorare l'oggetto gestore file
 
@@ -31,9 +31,9 @@ Come nel caso dell'observer implementato per il profilo e il motore file nell'Av
 
 Creare un'implementazione di base per un observer Handle di file mediante l'estensione della classe `mip::FileHandler::Observer` del SDK. Viene creata un'istanza di observer che viene usata in seguito per il monitoraggio delle operazioni gestore di file.
 
-1. Aprire la soluzione Visual Studio sulla quale si è lavorato nell'articolo precedente "Avvio rapido: Elencare le etichette di riservatezza (C++).
+1. Aprire la soluzione Visual Studio sulla quale si è lavorato nell'articolo precedente "Quickstart: List sensitivity labels (C++)" (Avvio rapido: Elencare le etichette di riservatezza (C++)).
 
-2. Aggiungere una nuova classe al progetto, che genera automaticamente i file di intestazione (.h) e di implementazione (.cpp):
+2. Aggiungere una nuova classe al progetto, che genera automaticamente i file header/.h e implementation/.cpp:
 
    - In **Esplora soluzioni** fare di nuovo clic con il pulsante destro del mouse sul nodo del progetto e scegliere **Aggiungi**, quindi scegliere **Classe**.
    - Nella finestra di dialogo **Aggiungi classe**:
@@ -60,7 +60,7 @@ Creare un'implementazione di base per un observer Handle di file mediante l'este
      };
      ```
 
-   - Aggiornare "filehandler_observer.cpp", selezionando ed eliminando l'implementazione della classe `filehandler_observer` generata. **Non** rimuovere le direttive del preprocessore generate nel passaggio precedente (#pragma, #include). Quindi copiare e incollare il codice seguente nel file, dopo le eventuali direttive del preprocessore esistenti:
+   - Aggiornare "filehandler_observer.cpp", selezionando ed eliminando l'implementazione della classe `filehandler_observer` generata. **Non** rimuovere le direttive del preprocessore generate nel passaggio precedente (#pragma, #include). Quindi copiare e incollare la seguente origine nel file, dopo le eventuali direttive del preprocessore esistenti:
 
      ```cpp
      void FileHandlerObserver::OnCreateFileHandlerSuccess(const std::shared_ptr<mip::FileHandler>& fileHandler, const std::shared_ptr<void>& context) {
@@ -90,7 +90,7 @@ Creare un'implementazione di base per un observer Handle di file mediante l'este
 
 Aggiungere codice per impostare e ottenere un'etichetta di riservatezza su un file mediante l'oggetto file engine. 
 
-1. Usare **Esplora soluzioni** per aprire il file con estensione cpp del progetto che contiene l'implementazione del metodo `main()`. Per impostazione predefinita il file assume lo stesso nome del progetto che lo contiene, specificato dall'utente durante la creazione del progetto. 
+1. Usare **Esplora soluzioni** per aprire il file con estensione cpp nel progetto che contiene l'implementazione del metodo `main()`. Per impostazione predefinita il file assume lo stesso nome del progetto che lo contiene, specificato dall'utente durante la creazione del progetto. 
 
 2. Aggiungere le seguenti direttive `#include` e `using` sotto le direttive esistenti corrispondenti, nella parte superiore del file:
 

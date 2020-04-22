@@ -7,13 +7,13 @@ ms.topic: quickstart
 ms.date: 07/30/2019
 ms.author: mbaldwin
 ms.openlocfilehash: 49a0588f4f4d91879899fc0ccd906490906250c0
-ms.sourcegitcommit: 99eccfe44ca1ac0606952543f6d3d767088de425
+ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "75556079"
 ---
-# <a name="quickstart-client-application-initialization-c"></a>Guida introduttiva: Inizializzazione dell'applicazione client (C++)
+# <a name="quickstart-client-application-initialization-c"></a>Guida introduttiva: Inizializzazione delle applicazioni client (C++)
 
 Questo avvio rapido spiega come implementare il modello di inizializzazione client usato dal SDK C++ di MIP in fase di esecuzione. 
 
@@ -56,7 +56,7 @@ Verranno prima di tutto creati e configurati la soluzione e il progetto iniziali
 
 Creare ora un'implementazione di base per una classe osservatore per il profilo File mediante l'estensione della classe `mip::FileProfile::Observer` dell'SDK. In seguito si creerà e userà un'istanza dell'osservatore per monitorare il caricamento dell'oggetto profilo File e l'aggiunta dell'oggetto motore al profilo.
 
-1. Aggiungere una nuova classe al progetto, che genera automaticamente i file di intestazione (.h) e di implementazione (.cpp):
+1. Aggiungere una nuova classe al progetto, che genera automaticamente i file header/.h e implementation/.cpp:
 
    - In **Esplora soluzioni** fare di nuovo clic con il pulsante destro del mouse sul nodo del progetto e scegliere **Aggiungi**, quindi scegliere **Classe**.
    - Nella finestra di dialogo **Aggiungi classe**:
@@ -65,9 +65,9 @@ Creare ora un'implementazione di base per una classe osservatore per il profilo 
 
      [![Aggiunta della classe in Visual Studio](media/quick-app-initialization-cpp/add-class.png)](media/quick-app-initialization-cpp/add-class.png#lightbox)
 
-2. Dopo la generazione dei file con estensione h e cpp per la classe, entrambi i file vengono aperti nelle schede Editor gruppo. A questo punto aggiornare ogni file per implementare la nuova classe osservatore:
+2. Dopo la generazione dei file con estensione h e cpp per la classe, entrambi i file vengono aperti nelle schede Editor gruppo. A questo punto aggiornare ogni file per implementare la nuova classe observer:
 
-   - Aggiornare "profile_observer.h" selezionando ed eliminando la classe `profile_observer` generata. **Non** rimuovere le direttive del preprocessore generate nel passaggio precedente (#pragma, #include). Quindi copiare e incollare il codice seguente nel file, dopo le eventuali direttive del preprocessore esistenti:
+   - Aggiornare "profile_observer.h" selezionando ed eliminando la classe `profile_observer` generata. **Non** rimuovere le direttive del preprocessore generate nel passaggio precedente (#pragma, #include). Quindi copiare e incollare la seguente origine nel file, dopo le eventuali direttive del preprocessore esistenti:
 
      ```cpp
      #include <memory>
@@ -83,7 +83,7 @@ Creare ora un'implementazione di base per una classe osservatore per il profilo 
      };
      ```
 
-   - Aggiornare "profile_observer.cpp", selezionando ed eliminando l'implementazione della classe `profile_observer` generata. **Non** rimuovere le direttive del preprocessore generate nel passaggio precedente (#pragma, #include). Quindi copiare e incollare il codice seguente nel file, dopo le eventuali direttive del preprocessore esistenti:
+   - Aggiornare "profile_observer.cpp", selezionando ed eliminando l'implementazione della classe `profile_observer` generata. **Non** rimuovere le direttive del preprocessore generate nel passaggio precedente (#pragma, #include). Quindi copiare e incollare la seguente origine nel file, dopo le eventuali direttive del preprocessore esistenti:
 
      ```cpp
      #include <future>
@@ -240,7 +240,7 @@ Si creerà ora un'implementazione per un delegato di consenso mediante l'estensi
 
 Come detto, gli oggetti profilo e motore sono necessari per i client del SDK che usano API MIP. Completare la parte di scrittura del codice di questa guida introduttiva, aggiungendo il codice per creare un'istanza degli oggetti profilo e motore: 
 
-1. Da **Esplora soluzioni** aprire il file con estensione cpp del progetto che contiene l'implementazione del metodo `main()`. Per impostazione predefinita il file ha lo stesso nome del progetto che lo contiene, specificato durante la creazione del progetto.
+1. Da **Esplora soluzioni** aprire il file con estensione cpp del progetto che contiene l'implementazione del metodo `main()`. Per impostazione predefinita il file assume lo stesso nome del progetto che lo contiene, specificato dall'utente durante la creazione del progetto.
 
 2. Rimuovere l'implementazione generata di `main()`. **Non** rimuovere le direttive del preprocessore generate da Visual Studio durante la creazione del progetto (#pragma, #include). Aggiungere il codice seguente dopo eventuali direttive del preprocessore:
 
