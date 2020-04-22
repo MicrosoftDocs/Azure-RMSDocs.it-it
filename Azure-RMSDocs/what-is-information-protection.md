@@ -13,10 +13,10 @@ ms.custom: admin
 search.appverid:
 - MET150
 ms.openlocfilehash: 97008a7ecb7979780454bee990ae905d87655f45
-ms.sourcegitcommit: 6393b971f56a1c666f82777d38ea3ca853c60342
+ms.sourcegitcommit: a3f901e479abbe056f8936a96b7253f0826d1415
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 04/21/2020
 ms.locfileid: "73979960"
 ---
 # <a name="what-is-azure-information-protection"></a>Che cos'è Azure Information Protection?
@@ -29,7 +29,7 @@ L'immagine seguente mostra un esempio di Azure Information Protection in azione 
 
 ![Esempio di classificazione consigliata per Azure Information Protection](./media/info-protect-recommend-calloutsv2.png)
 
-###### <a name="screenshot-from-the-azure-information-protection-client-classicfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Screenshot dal [client di Azure Information Protection (classico)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+###### <a name="screenshot-from-the-azure-information-protection-client-classic"></a>Screenshot dal [client di Azure Information Protection (classico)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 Dopo che il contenuto è stato classificato (e facoltativamente protetto), è possibile rilevare e controllare come viene usato. È possibile analizzare i flussi di dati per ottenere informazioni sulle attività aziendali, rilevare comportamenti a rischio e adottare misure correttive, tenere traccia dell'accesso ai documenti, impedire la perdita o l'uso improprio di dati e così via.
 
@@ -41,7 +41,7 @@ Ad esempio il messaggio di posta elettronica seguente è stato classificato come
 
 ![Piè di pagina e intestazioni del messaggio di posta elettronica di esempio che mostrano la classificazione di Azure Information Protection](./media/example-email-footerv2.png)
 
-###### <a name="screenshot-from-the-azure-information-protection-client-classicfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Screenshot dal [client di Azure Information Protection (classico)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+###### <a name="screenshot-from-the-azure-information-protection-client-classic"></a>Screenshot dal [client di Azure Information Protection (classico)](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 ## <a name="how-data-is-protected"></a>Modalità di protezione dei dati
 
@@ -71,7 +71,7 @@ Azure Information Protection si integra con i flussi di lavoro esistenti degli u
 
 ![Esempio di barra di Azure Information Protection in Excel](./media/excelproplus-infoprotect-bar.png)
 
-###### <a name="screenshot-from-the-azure-information-protection-unified-labeling-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Screenshot dal [client per l'etichettatura unificata Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) 
+###### <a name="screenshot-from-the-azure-information-protection-unified-labeling-client"></a>Screenshot dal [client per l'etichettatura unificata Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client) 
 
 La barra di Information Protection rende più semplice per gli utenti finali la selezione delle etichette per la classificazione corretta. Se necessario è anche possibile applicare automaticamente le etichette, per eliminare le possibilità di errori o per garantire la conformità con i criteri dell'organizzazione.
 
@@ -103,7 +103,7 @@ Per gli utenti che inviano il messaggio di posta elettronica, il flusso di lavor
 
 ![Selezione di un'etichetta configurata per Non inoltrare](./media/recipients-only-label2.png)
 
-###### <a name="screenshot-from-the-azure-information-protection-unified-labeling-clientfaqsmdwhats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client"></a>Screenshot dal [client per l'etichettatura unificata Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
+###### <a name="screenshot-from-the-azure-information-protection-unified-labeling-client"></a>Screenshot dal [client per l'etichettatura unificata Azure Information Protection](faqs.md#whats-the-difference-between-the-azure-information-protection-client-and-the-azure-information-protection-unified-labeling-client)
 
 In alternativa, è possibile fornire automaticamente protezione agli utenti, usando regole del flusso di posta elettronica che applicano la protezione dei diritti. 
 
