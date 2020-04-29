@@ -6,12 +6,12 @@ ms.service: information-protection
 ms.topic: quickstart
 ms.date: 04/17/2019
 ms.author: tommos
-ms.openlocfilehash: 32e2cc1cb3924c5a4181bd4cafaaf3f53f085c00
-ms.sourcegitcommit: f54920bf017902616589aca30baf6b64216b6913
+ms.openlocfilehash: eafcf65b9478cc8a2d2c104c3e98194c40e9c941
+ms.sourcegitcommit: 80d7c1a1afb3e54fac434f10a7dca4f8076384a8
 ms.translationtype: HT
 ms.contentlocale: it-IT
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81764226"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82255606"
 ---
 # <a name="quickstart-active-directory-rights-management-server-ad-rms-protection"></a>Guida introduttiva: Protezione del server AD RMS (Active Directory Rights Management Server)
 
@@ -26,12 +26,12 @@ Se non è già stato fatto, assicurarsi di:
 
 - In primo luogo completare [Avvio rapido: Inizializzazione delle applicazioni client (C++)](quick-app-initialization-cpp.md) per creare una soluzione Visual Studio iniziale.
 - In primo luogo completare [Avvio rapido: Elencare le etichette di riservatezza (C++)](quick-file-list-labels-cpp.md) o [Avvio rapido: Elencare le etichette di riservatezza (C#)](quick-file-list-labels-csharp.md)
-- Distribuire AD RMS con l'[estensione per dispositivi mobili](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn673574(v=ws.11)).
-- Facoltativamente, assicurarsi che il [record SRV DNS per l'estensione per dispositivi mobili di AD RMS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn673574(v%3dws.11)#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension) sia pubblicato.
+- Distribuire AD RMS con l'[estensione per dispositivi mobili](https://docs.microsoft.com/en-us/azure/information-protection/active-directory-rights-manage-mobile-device).
+- Facoltativamente, assicurarsi che il [record SRV DNS per l'estensione per dispositivi mobili di AD RMS](https://docs.microsoft.com/en-us/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension) sia pubblicato.
 
 ## <a name="service-discovery"></a>Individuazione dei servizi
 
-L'SDK esegue l'individuazione dei servizi in base all'elemento `mip::Identity` fornito tramite `FileEngineSettings` o `ProtectionEngineSettings` usando il suffisso UPN o dell'indirizzo di posta. Prima di tutto cerca nella gerarchia di domini il record *_rmsdisco* per l'estensione per dispositivi mobili. Per altri dettagli su tale processo, vedere [Specifica del record SRV DNS per l'estensione per dispositivi mobili di AD RMS](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn673574(v%3dws.11)#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension). Se tale record SRV DNS non viene trovato, per impostazione predefinita usa il servizio Azure Information Protection come posizione del servizio.
+L'SDK esegue l'individuazione dei servizi in base all'elemento `mip::Identity` fornito tramite `FileEngineSettings` o `ProtectionEngineSettings` usando il suffisso UPN o dell'indirizzo di posta. Prima di tutto cerca nella gerarchia di domini il record *_rmsdisco* per l'estensione per dispositivi mobili. Per altri dettagli su tale processo, vedere [Specifica del record SRV DNS per l'estensione per dispositivi mobili di AD RMS](https://docs.microsoft.com/en-us/azure/information-protection/active-directory-rights-manage-mobile-device#specifying-the-dns-srv-records-for-the-ad-rms-mobile-device-extension). Se tale record SRV DNS non viene trovato, per impostazione predefinita usa il servizio Azure Information Protection come posizione del servizio.
 
 Se un'identità non è disponibile o se il record SRV DNS per l'estensione per dispositivi mobili non è stato pubblicato, è possibile eseguire l'override del processo di individuazione dei servizi impostando in modo esplicito l'[URL dell'endpoint cloud](https://docs.microsoft.com/information-protection/develop/reference/class_mip_fileengine_settings#setpolicycloudendpointbaseurl-function).
 
